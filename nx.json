@@ -2,14 +2,15 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "npmScope": "designsystemet",
   "affected": {
-    "defaultBase": "main"
+    "defaultBase": "master"
   },
   "implicitDependencies": {
     "package.json": {
       "dependencies": "*",
       "devDependencies": "*"
     },
-    ".eslintrc.json": "*"
+    ".eslintrc.json": "*",
+    "libs/**/*": ["designsystemet-dokumentasjon"]
   },
   "tasksRunnerOptions": {
     "default": {

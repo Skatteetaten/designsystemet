@@ -21,11 +21,11 @@ module.exports = {
     }
 
     // add your own webpack tweaks if needed
-    config.plugins.push(
-      new BundleAnalyzerPlugin({analyzerMode: "static",
-     generateStatsFile: true}))
-
-
+    if(process.env.STORYBOOK_WEBPACK_STATS === "true") {
+      config.plugins.push(
+        new BundleAnalyzerPlugin({analyzerMode: "static",
+          generateStatsFile: true}))
+    }
     return config;
   },
 };
