@@ -5,6 +5,7 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
+    "build:analyze": "STORYBOOK_WEBPACK_STATS=true nx build",
     "test": "nx test"
   },
   "private": true,
