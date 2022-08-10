@@ -1,15 +1,16 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "designsystemet",
+  "npmScope": "skatteetaten",
   "affected": {
-    "defaultBase": "main"
+    "defaultBase": "master"
   },
   "implicitDependencies": {
     "package.json": {
       "dependencies": "*",
       "devDependencies": "*"
     },
-    ".eslintrc.json": "*"
+    ".eslintrc.json": "*",
+    "libs/**/*": ["designsystem-playground"]
   },
   "tasksRunnerOptions": {
     "default": {
@@ -46,5 +47,5 @@
       }
     }
   },
-  "defaultProject": "designsystemet-dokumentasjon"
+  "defaultProject": "designsystem-playground"
 }

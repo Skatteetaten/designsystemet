@@ -2,9 +2,9 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "button": "libs/button",
-    "designsystemet-dokumentasjon": "apps/designsystemet-dokumentasjon",
-    "designsystemet-dokumentasjon-e2e": "apps/designsystemet-dokumentasjon-e2e",
-    "text-field": "libs/text-field"
+    "designsystem-buttons": "libs/designsystem-buttons",
+    "designsystem-playground": "apps/designsystem-playground",
+    "designsystem-playground-e2e": "apps/designsystem-playground-e2e",
+    "designsystem-text-field": "libs/designsystem-text-field"
   }
 }
