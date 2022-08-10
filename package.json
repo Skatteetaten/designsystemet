@@ -5,8 +5,12 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
+    "build:all": "nx run-many --target=build",
     "build:analyze": "STORYBOOK_WEBPACK_STATS=true nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "test:all": "nx run-many --target=test",
+    "lint": "nx run-many --target=lint",
+    "lint:affected": "nx affected --target=lint"
   },
   "private": true,
   "dependencies": {

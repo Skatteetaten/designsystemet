@@ -15,8 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@skatteetaten/designsystemet-button": ["libs/button/src/index.ts"],
-      "@skatteetaten/designsystemet-textfield": ["libs/text-field/src/index.ts"]
+      "@skatteetaten/designsystem-buttons": [
+        "libs/designsystem-buttons/src/index.ts"
+      ],
+      "@skatteetaten/designsystem-text-field": [
+        "libs/designsystem-text-field/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
