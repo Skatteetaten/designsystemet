@@ -1,0 +1,92 @@
+env:
+    browser: true
+    node: true
+extends:
+    - 'eslint:recommended'
+    - 'plugin:react/recommended'
+    - 'plugin:jest/recommended'
+    - 'plugin:jest/style'
+    - 'plugin:jest-dom/recommended'
+    - 'plugin:testing-library/react'
+    - 'plugin:sonarjs/recommended'
+    - 'plugin:@nrwl/nx/react'
+    - prettier # has to be last in order to overwrite other configs
+
+
+overrides:
+    - files: ["*.ts", "*.tsx"]
+      extends: ["plugin:@typescript-eslint/recommended", "plugin:@nrwl/nx/typescript"]
+      rules:
+          '@typescript-eslint/no-namespace': off # namespace er nødvendig for å utvide JSX.IntrinsicElements med custom-elements
+          '@typescript-eslint/explicit-function-return-type': error
+          '@typescript-eslint/no-unused-vars':
+              - 'error'
+              - 'argsIgnorePattern': '^_'
+                'ignoreRestSiblings': true
+
+    #- files: ["*.js", "*.jsx"]
+    #  extends: ["plugin:@nrwl/nx/javascript"]
+
+
+parser: '@typescript-eslint/parser'
+parserOptions:
+    ecmaFeatures:
+        jsx: true
+        impliedStrict: true
+    ecmaVersion: 12
+    sourceType: module
+
+plugins:
+    - react
+    - sonarjs
+    - jest
+    - jest-dom
+    - testing-library
+    - '@typescript-eslint'
+    - import
+settings:
+    react:
+        version: detect
+    jest:
+        version: 27
+rules:
+    react/jsx-boolean-value: 2 # forhindrer setting av values for boolean props
+    react/jsx-curly-brace-presence:
+        - 'error'
+        - props: 'always'
+          children: 'always'
+    react/jsx-sort-props:
+        - 2
+        - shorthandLast: true
+          reservedFirst: true
+          ignoreCase: true
+          noSortAlphabetically: true
+    prefer-template: 1
+    react/prop-types: off # react prop-types is not needed when typescript is used
+    react/react-in-jsx-scope: off # irrelevant when jsx: react-jsx is set in tsconfig.json
+    no-restricted-imports:
+        - 1
+        - patterns:
+              - group:
+                    - 'index'
+                message: 'Unnecessary use of index in import'
+    import/order:
+        - warn
+        - groups:
+              - external
+              - internal
+              - builtin
+              - index
+          pathGroups:
+              - pattern: '{react*,redux*}'
+                group: external
+                position: before
+              - pattern: ./*.scss
+                group: sibling
+                position: after
+          pathGroupsExcludedImportTypes:
+              - react
+          alphabetize:
+              order: asc
+              caseInsensitive: true
+          newlines-between: always
