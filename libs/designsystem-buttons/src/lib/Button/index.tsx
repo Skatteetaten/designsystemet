@@ -1,12 +1,9 @@
 import styles from './button.module.scss';
 
-/* eslint-disable-next-line */
-export interface ButtonProps {}
-
-export function Button(props: ButtonProps) {
+export function Button(): JSX.Element {
   return (
     <div className={styles['container']}>
-      <h1>Welcome to awesome Button!</h1>
+      <h1>{'Welcome to awesome Button!'}</h1>
     </div>
   );
 }

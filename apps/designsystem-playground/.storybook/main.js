@@ -1,5 +1,6 @@
 const BundleAnalyzerPlugin =
   require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 const rootMain = require('../../../.storybook/main');
 
 module.exports = {
