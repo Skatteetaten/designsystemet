@@ -1,0 +1,10 @@
+pre-commit:
+    parallel: true
+    commands:
+        #linter:
+        #    files: git diff --name-only @{push}
+        #    glob: "*.{js,ts,jsx,tsx}"
+        #    run: npx eslint {files}
+
+        linter:
+            run: nx affected --target=lint --uncommitted
