@@ -4,10 +4,10 @@ import TextField from './text-field';
 
 export default {
   component: TextField,
-  title: 'textField',
+  title: 'textField'
 } as ComponentMeta<typeof TextField>;
 
-const Template: ComponentStory<typeof TextField> = (args) => (
+const Template: ComponentStory<typeof TextField> = args => (
   <TextField {...args} />
 );
 
