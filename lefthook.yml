@@ -7,4 +7,4 @@ pre-commit:
         #    run: npx eslint {files}
 
         linter:
-            run: nx affected --target=lint --uncommitted
+            run: npx nx affected --target=lint --uncommitted
