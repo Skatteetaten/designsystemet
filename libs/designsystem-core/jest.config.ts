@@ -3,8 +3,8 @@ export default {
   displayName: 'designsystem-core',
   preset: '../../jest.preset.js',
   transform: {
-    '^.+\\.[tj]sx?$': 'babel-jest'
+    '^.+\\.[tj]sx?$': 'babel-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/libs/designsystem-core'
+  coverageDirectory: '../../coverage/libs/designsystem-core',
 };

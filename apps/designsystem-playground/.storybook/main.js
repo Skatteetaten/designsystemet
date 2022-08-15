@@ -13,7 +13,7 @@ module.exports = {
     '../src/app/**/*.stories.mdx',
     '../src/app/**/*.stories.@(js|jsx|ts|tsx)',
     '../../../libs/**/*.stories.mdx',
-    '../../../libs/**/*.stories.@(js|jsx|ts|tsx)'
+    '../../../libs/**/*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [...rootMain.addons, '@nrwl/react/plugins/storybook'],
   webpackFinal: async (config, { configType }) => {
@@ -27,10 +27,10 @@ module.exports = {
       config.plugins.push(
         new BundleAnalyzerPlugin({
           analyzerMode: 'static',
-          generateStatsFile: true
+          generateStatsFile: true,
         })
       );
     }
     return config;
-  }
+  },
 };

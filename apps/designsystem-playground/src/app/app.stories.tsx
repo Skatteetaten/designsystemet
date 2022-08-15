@@ -4,7 +4,7 @@ import { App } from './app';
 
 export default {
   component: App,
-  title: 'App'
+  title: 'App',
 } as ComponentMeta<typeof App>;
 
 const Template: ComponentStory<typeof App> = args => <App {...args} />;

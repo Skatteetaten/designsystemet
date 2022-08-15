@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 export default {
   component: ActionButton,
-  title: 'ActionButton'
+  title: 'ActionButton',
 } as ComponentMeta<typeof ActionButton>;
 
 const Template: ComponentStory<typeof ActionButton> = args => (
