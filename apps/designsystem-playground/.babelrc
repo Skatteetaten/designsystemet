@@ -1,4 +1,5 @@
 {
+  "extends": "../../libs/designsystem-core/config/designsystem-babelrc.json",
   "presets": [
     [
       "@nrwl/react/babel",
