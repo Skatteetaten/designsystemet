@@ -65,6 +65,7 @@
     "nx": "14.5.4",
     "prettier": "2.6.2",
     "react-test-renderer": "18.2.0",
+    "storybook-addon-designs": "6.3.1",
     "ts-jest": "27.1.4",
     "ts-node": "10.8.2",
     "typescript": "4.7.2",

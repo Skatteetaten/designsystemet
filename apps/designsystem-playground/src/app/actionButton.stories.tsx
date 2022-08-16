@@ -12,3 +12,10 @@ const Template: ComponentStory<typeof ActionButton> = args => (
 
 export const Primary = Template.bind({});
 Primary.args = {};
+
+Primary.parameters = {
+  design: {
+    type: 'figma',
+    url: 'https://www.figma.com/file/nMR5vipCwTyVnq9KRAbhFL/Designsystemet---delte-komponenter?node-id=8%3A25',
+  },
+};
