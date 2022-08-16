@@ -7,7 +7,7 @@ export default {
   title: 'NxWelcome',
 } as ComponentMeta<typeof NxWelcome>;
 
-const Template: ComponentStory<typeof NxWelcome> = args => (
+const Template: ComponentStory<typeof NxWelcome> = (args) => (
   <NxWelcome {...args} />
 );
 
