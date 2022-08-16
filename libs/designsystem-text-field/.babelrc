@@ -1,3 +1,3 @@
 {
-  "extends": "../designsystem-core/config/designsystem-babelrc.json"
+  "extends": "../../.babelrc"
 }
