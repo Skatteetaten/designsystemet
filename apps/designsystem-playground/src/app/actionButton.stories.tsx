@@ -6,7 +6,7 @@ export default {
   title: 'ActionButton',
 } as ComponentMeta<typeof ActionButton>;
 
-const Template: ComponentStory<typeof ActionButton> = args => (
+const Template: ComponentStory<typeof ActionButton> = (args) => (
   <ActionButton {...args} />
 );
 

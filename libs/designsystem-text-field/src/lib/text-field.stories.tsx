@@ -7,7 +7,7 @@ export default {
   title: 'textField',
 } as ComponentMeta<typeof TextField>;
 
-const Template: ComponentStory<typeof TextField> = args => (
+const Template: ComponentStory<typeof TextField> = (args) => (
   <TextField {...args} />
 );
 
