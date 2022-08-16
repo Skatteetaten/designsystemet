@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "designsystem-buttons": "libs/designsystem-buttons",
+    "designsystem-core": "libs/designsystem-core",
     "designsystem-playground": "apps/designsystem-playground",
     "designsystem-playground-e2e": "apps/designsystem-playground-e2e",
     "designsystem-text-field": "libs/designsystem-text-field"

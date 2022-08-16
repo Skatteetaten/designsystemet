@@ -1,12 +1,14 @@
 import styles from './text-field.module.scss';
 
-/* eslint-disable-next-line */
-export interface TextFieldProps {}
+export interface TextFieldProps {
+  message: string;
+}
 
-export function TextField(props: TextFieldProps) {
+export function TextField(props: TextFieldProps): JSX.Element {
   return (
     <div className={styles['container']}>
-      <h1>Welcome to TextField!</h1>
+      <h1>{'Welcome to TextField!'}</h1>
+      <p>{props.message}</p>
     </div>
   );
 }

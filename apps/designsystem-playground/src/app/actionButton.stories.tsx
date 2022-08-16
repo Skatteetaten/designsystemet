@@ -1,5 +1,5 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ActionButton } from '@skatteetaten/designsystem-buttons';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 export default {
   component: ActionButton,

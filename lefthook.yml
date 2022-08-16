@@ -1,0 +1,13 @@
+pre-commit:
+  parallel: true
+  commands:
+    #linter:
+    #    files: git diff --name-only @{push}
+    #    glob: "*.{js,ts,jsx,tsx}"
+    #    run: npx eslint {files}
+
+    linter: # lint using eslint
+      run: npx nx affected --target=lint --uncommitted
+
+    formatter: # check formatting using prettier
+      run: npx nx format:check --uncommitted

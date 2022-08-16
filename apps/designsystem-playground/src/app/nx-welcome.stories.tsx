@@ -1,4 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+
 import { NxWelcome } from './nx-welcome';
 
 export default {

@@ -18,6 +18,9 @@
       "@skatteetaten/designsystem-buttons": [
         "libs/designsystem-buttons/src/index.ts"
       ],
+      "@skatteetaten/designsystem-core": [
+        "libs/designsystem-core/src/index.ts"
+      ],
       "@skatteetaten/designsystem-text-field": [
         "libs/designsystem-text-field/src/index.ts"
       ]
