@@ -8,4 +8,5 @@ export default {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   coverageDirectory: '../../coverage/apps/designsystem-playground',
+  setupFilesAfterEnv: ['../../jest-setup.js'],
 };

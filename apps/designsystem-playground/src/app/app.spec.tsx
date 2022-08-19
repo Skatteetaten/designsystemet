@@ -14,7 +14,6 @@ describe('App', () => {
 
     expect(
       screen.getByText(/Welcome designsystemet-dokumentasjon/i)
-      // eslint-disable-next-line
-    ).toBeDefined(); //TODO fiks testing-library/jest-dom for .toBeInTheDocument osv
+    ).toBeInTheDocument();
   });
 });
