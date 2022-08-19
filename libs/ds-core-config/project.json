@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/designsystem-text-field/src",
+  "sourceRoot": "libs/ds-core-config/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -8,18 +8,23 @@
       "executor": "@nrwl/web:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/designsystem-text-field",
-        "tsConfig": "libs/designsystem-text-field/tsconfig.lib.json",
-        "project": "libs/designsystem-text-field/package.json",
-        "entryFile": "libs/designsystem-text-field/src/index.ts",
+        "outputPath": "dist/libs/ds-core-config",
+        "tsConfig": "libs/ds-core-config/tsconfig.lib.json",
+        "project": "libs/ds-core-config/package.json",
+        "entryFile": "libs/ds-core-config/src/index.ts",
         "external": ["react/jsx-runtime"],
         "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
         "compiler": "babel",
         "assets": [
           {
-            "glob": "libs/designsystem-text-field/README.md",
+            "glob": "libs/ds-core-config/README.md",
             "input": ".",
             "output": "."
+          },
+          {
+            "glob": "**/*",
+            "input": "libs/ds-core-config/config",
+            "output": "config"
           }
         ]
       }
@@ -28,16 +33,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "libs/designsystem-text-field/**/*.{ts,tsx,js,jsx}"
-        ]
+        "lintFilePatterns": ["libs/ds-core-config/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/designsystem-text-field"],
+      "outputs": ["coverage/libs/ds-core-config"],
       "options": {
-        "jestConfig": "libs/designsystem-text-field/jest.config.ts",
+        "jestConfig": "libs/ds-core-config/jest.config.ts",
         "passWithNoTests": true
       }
     }

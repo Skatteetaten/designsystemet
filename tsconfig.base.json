@@ -15,15 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@skatteetaten/designsystem-buttons": [
-        "libs/designsystem-buttons/src/index.ts"
-      ],
-      "@skatteetaten/designsystem-core": [
-        "libs/designsystem-core/src/index.ts"
-      ],
-      "@skatteetaten/designsystem-text-field": [
-        "libs/designsystem-text-field/src/index.ts"
-      ]
+      "@skatteetaten/ds-buttons": ["libs/ds-buttons/src/index.ts"],
+      "@skatteetaten/ds-core-config": ["libs/ds-core-config/src/index.ts"],
+      "@skatteetaten/ds-forms": ["libs/ds-forms/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

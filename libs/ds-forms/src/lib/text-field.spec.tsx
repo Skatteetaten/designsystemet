@@ -4,7 +4,7 @@ import TextField from './text-field';
 
 describe('TextField', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<TextField />);
+    const { baseElement } = render(<TextField message={'hei'} />);
     expect(baseElement).toBeTruthy();
   });
 });

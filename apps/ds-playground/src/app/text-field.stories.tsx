@@ -1,4 +1,4 @@
-import { TextField } from '@skatteetaten/designsystem-text-field';
+import { TextField } from '@skatteetaten/ds-forms';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 export default {

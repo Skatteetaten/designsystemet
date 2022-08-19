@@ -1,4 +1,4 @@
-import { ActionButton } from '@skatteetaten/designsystem-buttons';
+import { ActionButton } from '@skatteetaten/ds-buttons';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 export default {

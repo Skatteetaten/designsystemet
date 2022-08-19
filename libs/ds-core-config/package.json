@@ -1,5 +1,5 @@
 {
-  "name": "@skatteetaten/designsystem-core",
+  "name": "@skatteetaten/ds-core-config",
   "version": "0.0.1",
   "peerDependencies": {
     "@nrwl/eslint-plugin-nx": "14.5.4"

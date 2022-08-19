@@ -1,10 +1,10 @@
 /* eslint-disable */
 export default {
-  displayName: 'designsystem-text-field',
+  displayName: 'ds-forms',
   preset: '../../jest.preset.js',
   transform: {
     '^.+\\.[tj]sx?$': 'babel-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/libs/designsystem-text-field',
+  coverageDirectory: '../../coverage/libs/ds-forms',
 };

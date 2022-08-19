@@ -1,5 +1,5 @@
 {
-  "extends": ["./libs/designsystem-core/config/designsystem-eslintrc.yml"],
+  "extends": ["./libs/ds-core-config/config/designsystem-eslintrc.yml"],
   "root": true,
   "ignorePatterns": ["**/*"],
   "plugins": ["@nrwl/nx"],

@@ -6,10 +6,7 @@ import { resolve } from 'path';
 
 const storybookUrl =
   process.env['STORYSHOTS_MODE'] === 'static'
-    ? `file://${resolve(
-        __dirname,
-        '../../dist/storybook/designsystem-playground'
-      )}`
+    ? `file://${resolve(__dirname, '../../dist/storybook/ds-playground')}`
     : 'http://localhost:4400';
 
 initStoryshots({

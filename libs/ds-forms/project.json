@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/designsystem-buttons/src",
+  "sourceRoot": "libs/ds-forms/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -8,16 +8,16 @@
       "executor": "@nrwl/web:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/designsystem-buttons",
-        "tsConfig": "libs/designsystem-buttons/tsconfig.lib.json",
-        "project": "libs/designsystem-buttons/package.json",
-        "entryFile": "libs/designsystem-buttons/src/index.ts",
+        "outputPath": "dist/libs/ds-forms",
+        "tsConfig": "libs/ds-forms/tsconfig.lib.json",
+        "project": "libs/ds-forms/package.json",
+        "entryFile": "libs/ds-forms/src/index.ts",
         "external": ["react/jsx-runtime"],
         "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
         "compiler": "babel",
         "assets": [
           {
-            "glob": "libs/designsystem-buttons/README.md",
+            "glob": "libs/ds-forms/README.md",
             "input": ".",
             "output": "."
           }
@@ -28,14 +28,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/designsystem-buttons/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["libs/ds-forms/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/designsystem-buttons"],
+      "outputs": ["coverage/libs/ds-forms"],
       "options": {
-        "jestConfig": "libs/designsystem-buttons/jest.config.ts",
+        "jestConfig": "libs/ds-forms/jest.config.ts",
         "passWithNoTests": true
       }
     }

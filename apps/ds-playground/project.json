@@ -1,22 +1,20 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/designsystem-playground/src",
+  "sourceRoot": "apps/ds-playground/src",
   "projectType": "application",
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "apps/designsystem-playground/**/*.{ts,tsx,js,jsx}"
-        ]
+        "lintFilePatterns": ["apps/ds-playground/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/designsystem-playground"],
+      "outputs": ["coverage/apps/ds-playground"],
       "options": {
-        "jestConfig": "apps/designsystem-playground/jest.config.ts",
+        "jestConfig": "apps/ds-playground/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -26,7 +24,7 @@
         "uiFramework": "@storybook/react",
         "port": 4400,
         "config": {
-          "configFolder": "apps/designsystem-playground/.storybook"
+          "configFolder": "apps/ds-playground/.storybook"
         }
       },
       "configurations": {
@@ -40,9 +38,9 @@
       "outputs": ["{options.outputPath}"],
       "options": {
         "uiFramework": "@storybook/react",
-        "outputPath": "dist/storybook/designsystem-playground",
+        "outputPath": "dist/storybook/ds-playground",
         "config": {
-          "configFolder": "apps/designsystem-playground/.storybook"
+          "configFolder": "apps/ds-playground/.storybook"
         }
       },
       "configurations": {

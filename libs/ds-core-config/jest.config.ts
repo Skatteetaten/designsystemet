@@ -1,10 +1,10 @@
 /* eslint-disable */
 export default {
-  displayName: 'designsystem-core',
+  displayName: 'ds-core-config',
   preset: '../../jest.preset.js',
   transform: {
     '^.+\\.[tj]sx?$': 'babel-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/libs/designsystem-core',
+  coverageDirectory: '../../coverage/libs/ds-core-config',
 };
