@@ -10,7 +10,7 @@
       "devDependencies": "*"
     },
     ".eslintrc.json": "*",
-    "libs/**/*": ["designsystem-playground"]
+    "libs/**/*": ["ds-playground"]
   },
   "tasksRunnerOptions": {
     "default": {
@@ -47,5 +47,5 @@
       }
     }
   },
-  "defaultProject": "designsystem-playground"
+  "defaultProject": "ds-playground"
 }

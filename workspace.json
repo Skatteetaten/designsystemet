@@ -2,10 +2,10 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "designsystem-buttons": "libs/designsystem-buttons",
-    "designsystem-core": "libs/designsystem-core",
-    "designsystem-playground": "apps/designsystem-playground",
-    "designsystem-playground-e2e": "apps/designsystem-playground-e2e",
-    "designsystem-text-field": "libs/designsystem-text-field"
+    "ds-buttons": "libs/ds-buttons",
+    "ds-core-config": "libs/ds-core-config",
+    "ds-forms": "libs/ds-forms",
+    "ds-playground": "apps/ds-playground",
+    "ds-playground-e2e": "apps/ds-playground-e2e"
   }
 }
