@@ -10,7 +10,8 @@
       "devDependencies": "*"
     },
     ".eslintrc.json": "*",
-    "libs/**/*": ["ds-playground"]
+    "libs/**/*": ["ds-playground"],
+    ".stylelintrc.json": "*"
   },
   "tasksRunnerOptions": {
     "default": {
@@ -21,7 +22,8 @@
           "lint",
           "test",
           "e2e",
-          "build-storybook"
+          "build-storybook",
+          "stylelint"
         ]
       }
     }

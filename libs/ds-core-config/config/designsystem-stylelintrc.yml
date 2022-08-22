@@ -1,0 +1,12 @@
+extends:
+  - stylelint-config-standard-scss
+  - stylelint-config-idiomatic-order
+  - stylelint-config-prettier # has to be last in order to overwrite other configs
+plugins:
+  - stylelint-scss
+rules:
+  at-rule-no-unknown: null
+  scss/at-rule-no-unknown: true
+  selector-pseudo-class-no-unknown:
+    - true
+    - ignorePseudoClasses: global
