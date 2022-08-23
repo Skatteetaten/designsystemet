@@ -35,4 +35,17 @@
   --palette-ink-10: '#e5e5e5';
   --palette-ink-5: '#f4f4f4';
   --palette-white: '#ffffff';
+
+  --semantic-page-foreground: var(--palette-ink-100);
+  --semantic-page-background: var(--palette-white);
+  --semantic-danger-foreground: #a82e39;
+  --semantic-danger-background: var(palette-burgundy-10);
+  --semantic-warning-foreground: #9f7509;
+  --semantic-warning-background: var(--palette-ochre-10);
+  --semantic-success-foreground: #316f2a;
+  --semantic-success-background: var(--palette-forest-10);
+
+  --semantic-interactive: var(--palette-azure-70);
+  --semantic-interactive-foreground: var(--palette-azure-100);
+  --semantic-interactive-background: var(--palette-azure-10);
 }
