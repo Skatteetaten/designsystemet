@@ -4,8 +4,9 @@
   "projects": {
     "ds-buttons": "libs/ds-buttons",
     "ds-core-config": "libs/ds-core-config",
+    "ds-core-designtokens": "libs/ds-core-designtokens",
     "ds-forms": "libs/ds-forms",
-    "ds-playground": "apps/ds-playground",
-    "ds-playground-e2e": "apps/ds-playground-e2e"
+
+    "ds-playground": "apps/ds-playground"
   }
 }
