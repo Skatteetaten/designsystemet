@@ -2,10 +2,10 @@ import { FC } from 'react';
 
 import styles from './ActionButton.module.scss';
 
-export const ActionButton: FC = () => {
+export const ActionButton: FC = (): any => {
   return (
-    <div className={styles.actionButtonTest}>
-      <button className={styles.actionButton}>{'Action!'}</button>
+    <div>
+      <button className={styles['actionButton']}>{'Action!'}</button>
     </div>
   );
 };
