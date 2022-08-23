@@ -53,6 +53,7 @@
     "babel-jest": "27.5.1",
     "babel-loader": "8.1.0",
     "cypress": "10.2.0",
+    "dts-css-modules-loader": "2.0.1",
     "eslint": "8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "2.12.1",

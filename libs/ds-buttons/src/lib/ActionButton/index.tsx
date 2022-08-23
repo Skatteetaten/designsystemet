@@ -4,8 +4,8 @@ import styles from './ActionButton.module.scss';
 
 export const ActionButton: FC = () => {
   return (
-    <div>
-      <button className={styles['actionButton']}>{'Action!'}</button>
+    <div className={styles.actionButtonTest}>
+      <button className={styles.actionButton}>{'Action!'}</button>
     </div>
   );
 };
