@@ -48,6 +48,16 @@
           "quiet": true
         }
       }
+    },
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/ds-playground/**/*.css",
+          "apps/ds-playground/**/*.scss"
+        ]
+      }
     }
   },
   "tags": []
