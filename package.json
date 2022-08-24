@@ -5,7 +5,7 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx run-many --target=build",
-    "build:playground": "nx build",
+    "build:playground": "nx build ds-core-designtokens && nx build",
     "build:analyze": "STORYBOOK_WEBPACK_STATS=true nx build",
     "test": "nx run-many --target=test",
     "test:playground": "nx test",
