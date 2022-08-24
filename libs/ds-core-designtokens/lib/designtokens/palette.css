@@ -28,12 +28,12 @@
   --palette-azure-70: '#1362ae';
   --palette-azure-30: '#9ccff2';
   --palette-azure-10: '#cde1f9';
-  --palette-ink-100: '#1a1a1a';
-  --palette-ink-70: '#4d4d4d';
-  --palette-ink-50: '#808080';
-  --palette-ink-30: '#b2b2b2';
-  --palette-ink-10: '#e5e5e5';
-  --palette-ink-5: '#f4f4f4';
+  --palette-graphite-100: '#1a1a1a';
+  --palette-graphite-70: '#4d4d4d';
+  --palette-graphite-50: '#808080';
+  --palette-graphite-30: '#b2b2b2';
+  --palette-graphite-10: '#e5e5e5';
+  --palette-graphite-5: '#f4f4f4';
   --palette-white: '#ffffff';
 
   --semantic-page-foreground: var(--palette-ink-100);
