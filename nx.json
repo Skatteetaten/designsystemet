@@ -10,13 +10,21 @@
       "devDependencies": "*"
     },
     ".eslintrc.json": "*",
-    "libs/**/*": ["ds-playground"]
+    "libs/**/*": ["ds-playground"],
+    ".stylelintrc.json": "*"
   },
   "tasksRunnerOptions": {
     "default": {
       "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "build-storybook"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e",
+          "build-storybook",
+          "stylelint"
+        ]
       }
     }
   },

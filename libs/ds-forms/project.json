@@ -38,6 +38,16 @@
         "jestConfig": "libs/ds-forms/jest.config.ts",
         "passWithNoTests": true
       }
+    },
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/ds-forms/**/*.css",
+          "libs/ds-forms/**/*.scss"
+        ]
+      }
     }
   }
 }
