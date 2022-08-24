@@ -36,7 +36,7 @@
   --palette-graphite-5: '#f4f4f4';
   --palette-white: '#ffffff';
 
-  --semantic-page-foreground: var(--palette-ink-100);
+  --semantic-page-foreground: var(--palette-graphite-100);
   --semantic-page-background: var(--palette-white);
   --semantic-danger-foreground: #a82e39;
   --semantic-danger-background: var(palette-burgundy-10);
