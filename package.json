@@ -14,7 +14,8 @@
     "lint:fix": "nx run-many --target=lint -- --fix",
     "lint:affected": "nx affected --target=lint",
     "stylelint": "nx run-many --target=stylelint",
-    "stylelint:fix": "nx run-many --target=stylelint --fix"
+    "stylelint:fix": "nx run-many --target=stylelint --fix",
+    "prepare": "lefthook install -a"
   },
   "private": true,
   "dependencies": {
