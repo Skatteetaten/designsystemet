@@ -1,1 +1,4 @@
-// WIP
+:root,
+:host {
+  --random-variable: none;
+}
