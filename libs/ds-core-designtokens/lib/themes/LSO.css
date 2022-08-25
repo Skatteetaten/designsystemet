@@ -1,0 +1,5 @@
+:root,
+:host {
+  --theme-primary: --palette-ink-100;
+  --theme-secondary: --palette-ink-30;
+}

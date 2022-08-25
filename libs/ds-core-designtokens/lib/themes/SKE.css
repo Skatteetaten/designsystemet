@@ -1,0 +1,5 @@
+:root,
+:host {
+  --theme-primary: --palette-burgundy-100;
+  --theme-secondary: --palette-burgundy-30;
+}
