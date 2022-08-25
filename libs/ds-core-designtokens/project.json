@@ -1,0 +1,48 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ds-core-designtokens/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ds-core-designtokens",
+        "tsConfig": "libs/ds-core-designtokens/tsconfig.lib.json",
+        "project": "libs/ds-core-designtokens/package.json",
+        "entryFile": "libs/ds-core-designtokens/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/ds-core-designtokens/README.md",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "*",
+            "input": "libs/ds-core-designtokens/lib",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ds-core-designtokens/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ds-core-designtokens"],
+      "options": {
+        "jestConfig": "libs/ds-core-designtokens/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

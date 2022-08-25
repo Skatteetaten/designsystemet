@@ -7,17 +7,12 @@
   },
   "include": [
     "jest.config.ts",
-    "**/*.test.ts",
-    "**/*.spec.ts",
-    "**/*.test.tsx",
-    "**/*.spec.tsx",
-    "**/*.test.js",
-    "**/*.spec.js",
-    "**/*.test.jsx",
-    "**/*.spec.jsx",
+    "**/__tests__/*.test.ts",
+    "**/__tests__/*.test.tsx",
     "**/*.d.ts",
     "../../jest-setup.js"
-  ],
+  ]
+  
   "files": [
     "../../node_modules/@nrwl/react/typings/cssmodule.d.ts",
     "../../node_modules/@nrwl/react/typings/image.d.ts"
