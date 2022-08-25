@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import Button from './';
+import TextField from '../text-field';
 
-describe('Button', () => {
+describe('TextField', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Button />);
+    const { baseElement } = render(<TextField message={'hei'} />);
     expect(baseElement).toBeTruthy();
   });
 });
