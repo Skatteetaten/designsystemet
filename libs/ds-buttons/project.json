@@ -31,6 +31,12 @@
         "lintFilePatterns": ["libs/ds-buttons/**/*.{ts,tsx,js,jsx}"]
       }
     },
+    "tsc": {
+      "executor": "@webpro/nx-tsc:tsc",
+      "options": {
+        "tsConfig": ["tsconfig.lib.json", "tsconfig.spec.json"]
+      }
+    },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/ds-buttons"],

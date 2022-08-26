@@ -5,17 +5,21 @@
   "scripts": {
     "start": "nx build ds-core-designtokens && nx serve",
     "prepare": "lefthook install -a",
+    "prebuild": "npm-run-all lint stylelint prettier typecheck",
     "build": "nx run-many --target=build",
     "build:playground": "nx build ds-core-designtokens && nx build",
     "build:analyze": "STORYBOOK_WEBPACK_STATS=true nx build",
     "test": "nx run-many --target=test",
     "test:playground": "nx test",
     "test:coverage": "STORYSHOTS_MODE=static nx test --coverage",
+    "typecheck": "nx run-many --target=tsc",
     "lint": "nx run-many --target=lint",
     "lint:fix": "nx run-many --target=lint -- --fix",
     "lint:affected": "nx affected --target=lint",
     "stylelint": "nx run-many --target=stylelint",
-    "stylelint:fix": "nx run-many --target=stylelint --fix"
+    "stylelint:fix": "nx run-many --target=stylelint --fix",
+    "prettier": "nx format:check",
+    "prettier:fix": "nx format"
   },
   "private": true,
   "dependencies": {
@@ -55,6 +59,7 @@
     "@types/react-dom": "18.0.6",
     "@typescript-eslint/eslint-plugin": "5.32.0",
     "@typescript-eslint/parser": "5.32.0",
+    "@webpro/nx-tsc": "0.0.1",
     "babel-jest": "27.5.1",
     "babel-loader": "8.1.0",
     "cypress": "10.2.0",
@@ -72,6 +77,7 @@
     "eslint-plugin-testing-library": "5.6.0",
     "jest": "27.5.1",
     "lefthook": "1.0.5",
+    "npm-run-all": "4.1.5",
     "nx": "14.5.4",
     "nx-stylelint": "13.5.2",
     "prettier": "2.6.2",
