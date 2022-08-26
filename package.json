@@ -4,6 +4,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "start": "nx build ds-core-designtokens && nx serve",
+    "prepare": "lefthook install -a",
     "build": "nx run-many --target=build",
     "build:playground": "nx build ds-core-designtokens && nx build",
     "build:analyze": "STORYBOOK_WEBPACK_STATS=true nx build",
@@ -14,8 +15,7 @@
     "lint:fix": "nx run-many --target=lint -- --fix",
     "lint:affected": "nx affected --target=lint",
     "stylelint": "nx run-many --target=stylelint",
-    "stylelint:fix": "nx run-many --target=stylelint --fix",
-    "prepare": "lefthook install -a"
+    "stylelint:fix": "nx run-many --target=stylelint --fix"
   },
   "private": true,
   "dependencies": {
