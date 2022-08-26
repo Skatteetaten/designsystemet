@@ -39,7 +39,7 @@
   --semantic-page-foreground: var(--palette-graphite-100);
   --semantic-page-background: var(--palette-white);
   --semantic-danger-foreground: #a82e39;
-  --semantic-danger-background: var(palette-burgundy-10);
+  --semantic-danger-background: var(--palette-burgundy-10);
   --semantic-warning-foreground: #9f7509;
   --semantic-warning-background: var(--palette-ochre-10);
   --semantic-success-foreground: #316f2a;
