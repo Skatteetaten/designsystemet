@@ -6,5 +6,5 @@
 @import 'designtokens/palette.css';
 @import 'designtokens/spacing.css';
 
-@import 'default.css';
+@import '_default.css';
 @import 'themes/SKE.css';
