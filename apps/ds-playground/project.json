@@ -4,7 +4,7 @@
   "projectType": "application",
   "targets": {
     "tsc": {
-      "executor": "@webpro/nx-tsc:tsc",
+      "executor": "./tools/executors/tsCheck:tsCheck",
       "options": {
         "tsConfig": [
           "tsconfig.app.json",

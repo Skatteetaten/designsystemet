@@ -32,7 +32,7 @@
       }
     },
     "tsc": {
-      "executor": "@webpro/nx-tsc:tsc",
+      "executor": "./tools/executors/tsCheck:tsCheck",
       "options": {
         "tsConfig": ["tsconfig.lib.json", "tsconfig.spec.json"]
       }
