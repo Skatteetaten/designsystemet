@@ -25,6 +25,22 @@ module.exports = {
     if (rootMain.webpackFinal) {
       config = await rootMain.webpackFinal(config, { configType });
     }
+    const outerIndex = config.module.rules.findIndex(
+      (rule) =>
+        rule.test.toString() === '/\\.css$|\\.scss$|\\.sass$|\\.less$|\\.styl$/'
+    );
+    const innerIndex = config.module.rules[outerIndex].oneOf.findIndex(
+      (rule) => rule.test.toString() === '/\\.module\\.(scss|sass)$/'
+    );
+
+    //rekkefølge på loaders er viktig. Derfor splice slik at den plasseres mellom style-loader og css-loader
+    config.module.rules[outerIndex].oneOf[innerIndex].use.splice(1, 0, {
+      loader: 'dts-css-modules-loader',
+      options: {
+        banner: '/* automatisk genererte types */',
+        namedExport: true,
+      },
+    });
 
     // add your own webpack tweaks if needed
     if (process.env.STORYBOOK_WEBPACK_STATS === 'true') {
