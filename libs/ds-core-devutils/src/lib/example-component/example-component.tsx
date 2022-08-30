@@ -3,10 +3,11 @@ import React from 'react';
 import { BaseProps } from '../base-props.types';
 import { MyExampleComponentCustomProps } from './example-component.types';
 
-interface MyExampleComponentProps
+export interface MyExampleComponentProps
   extends BaseProps,
     MyExampleComponentCustomProps {}
 
+// Example without HOC
 export const MyExampleComponent = React.forwardRef<
   HTMLButtonElement,
   MyExampleComponentProps

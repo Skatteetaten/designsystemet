@@ -1,44 +1,61 @@
-import React, { useRef } from 'react';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import React from 'react';
 
-import { MyExampleComponent } from './example-component';
+import { MyExampleComponentProps } from './example-component';
 
-export interface WithRouterProps {
-  location: ReturnType<typeof useLocation>;
-  params: Record<string, string>;
-  navigate: ReturnType<typeof useNavigate>;
+export interface WhateverHOCProps {
+  propFromHOC: string;
 }
 
-export const withRouter = <T extends WithRouterProps>(
+export interface IncomingRefProp {
+  incomingRef: React.Ref<HTMLButtonElement>;
+}
+
+// Dummy HOC for example only
+const whateverHOC = <T extends WhateverHOCProps>(
   Component: React.ComponentType<T>
 ) => {
-  return function Test(props: Omit<T, keyof WithRouterProps>): JSX.Element {
-    const location = useLocation();
-    const params = useParams();
-    const navigate = useNavigate();
+  return function Test(props: Omit<T, keyof WhateverHOCProps>): JSX.Element {
+    const propFromHOC = 'random-string';
 
-    return (
-      <Component
-        {...(props as T)}
-        location={location}
-        params={params}
-        navigate={navigate}
-      />
-    );
+    return <Component {...(props as T)} propFromHOC={propFromHOC} />;
   };
 };
 
-// Lage et eksempel med forwardRef ytterst + withRouter inne
+// Example with HOC and Ref supported in the outter element
+export const MyExampleComponentWithoutRef = whateverHOC(
+  ({
+    incomingRef,
+    propFromHOC,
+    id,
+    variant = 'primary',
+    className,
+    dataTestId = `testid-${id}`,
+    onClick,
+    children,
+  }: MyExampleComponentProps &
+    WhateverHOCProps &
+    IncomingRefProp): JSX.Element => {
+    return (
+      <button
+        ref={incomingRef}
+        data-testid={dataTestId}
+        className={className}
+        onClick={onClick}
+      >
+        <span>
+          <span>{`I am ${variant}`}</span>
+          <span>{propFromHOC}</span>
+          <span>{children}</span>
+        </span>
+      </button>
+    );
+  }
+);
+
+export default React.forwardRef<HTMLButtonElement, MyExampleComponentProps>(
+  function MyExampleComponent(props, ref) {
+    return <MyExampleComponentWithoutRef {...props} incomingRef={ref} />;
+  }
+);
+
 // Lage et eksempel med Root props component
-
-export const MyExampleComponentWithHOC = (): JSX.Element => {
-  const myRef = useRef<HTMLButtonElement>(null);
-
-  return (
-    <MyExampleComponent ref={myRef} id={'123'}>
-      {'lorem'}
-    </MyExampleComponent>
-  );
-};
-
-export const Test = withRouter(MyExampleComponentWithHOC);
