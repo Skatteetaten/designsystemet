@@ -3,7 +3,9 @@
   "overrides": [
     {
       "files": ["**/*.css"],
-      "extends": ["./libs/ds-core-config/config/designsystem-stylelintrc.yml"],
+      "extends": [
+        "./libs/ds-core-config/config/designsystem-stylelintrc-css.yml"
+      ],
       "rules": {}
     },
     {

@@ -46,4 +46,10 @@
   --semantic-interactive: var(--palette-azure-70);
   --semantic-interactive-foreground: var(--palette-azure-100);
   --semantic-interactive-background: var(--palette-azure-10);
+
+  /* Gjelder tabellheader, inputfelt, Accordion-rader */
+  --semantic-divider-100: var(--palette-graphite-100);
+
+  /* Gjelder tabellrader, Accordions, StepList */
+  --semantic-divider-30: var(--palette-graphite-30);
 }
