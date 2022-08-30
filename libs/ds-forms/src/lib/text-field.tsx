@@ -6,7 +6,7 @@ export interface TextFieldProps {
 
 export function TextField(props: TextFieldProps): JSX.Element {
   return (
-    <div className={styles['container']}>
+    <div className={styles.container}>
       <h1>{'Welcome to TextField!'}</h1>
       <p>{props.message}</p>
     </div>

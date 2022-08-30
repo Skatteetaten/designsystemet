@@ -1,0 +1,9 @@
+{
+  "executors": {
+    "tsCheck": {
+      "implementation": "./tsCheck.js",
+      "schema": "./schema.json",
+      "description": "Runs `tsc --noEmit -p` on the provided TypeScript configurations (tsconfig.json)"
+    }
+  }
+}
