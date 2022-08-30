@@ -1,13 +1,16 @@
 :root,
 :host {
+  background: var(--semantic-page-background);
+  color: var(--semantic-page-foreground);
   font-family: 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans',
     'Nimbus Sans L', sans-serif;
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-regular);
+
+  /* stylelint-disable */
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  color: var(--semantic-page-foreground);
-  background: var(--semantic-page-background);
+  /* stylelint-enable */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,13 +18,5 @@
   :host {
     --semantic-page-foreground: var(--palette-graphite-5);
     --semantic-page-background: var(--palette-graphite-100);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root,
-  :host {
-    --semantic-page-foreground: var(--palette-graphite-100);
-    --semantic-page-background: var(--palette-white);
   }
 }
