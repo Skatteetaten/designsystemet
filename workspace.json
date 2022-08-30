@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "ds-core-devutils": "libs/ds-core-devutils",
     "ds-buttons": "libs/ds-buttons",
     "ds-core-config": "libs/ds-core-config",
     "ds-core-designtokens": "libs/ds-core-designtokens",
