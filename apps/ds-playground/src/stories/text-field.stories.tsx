@@ -1,6 +1,5 @@
+import { TextField } from '@skatteetaten/ds-forms';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import TextField from './text-field';
 
 export default {
   component: TextField,

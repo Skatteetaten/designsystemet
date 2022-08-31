@@ -3,6 +3,16 @@
   "sourceRoot": "apps/ds-playground/src",
   "projectType": "application",
   "targets": {
+    "tsc": {
+      "executor": "./tools/executors/tsCheck:tsCheck",
+      "options": {
+        "tsConfig": [
+          "tsconfig.app.json",
+          "tsconfig.spec.json",
+          ".storybook/tsconfig.json"
+        ]
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
