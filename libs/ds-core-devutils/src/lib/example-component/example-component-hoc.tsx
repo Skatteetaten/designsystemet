@@ -22,7 +22,8 @@ const whateverHOC = <T extends WhateverHOCProps>(
 };
 
 // Example with HOC and Ref supported in the outter element
-export const MyExampleComponentWithoutRef = whateverHOC(
+// Denne komponenten skal ikke eksporteres
+const MyExampleComponentWithoutRef = whateverHOC(
   ({
     incomingRef,
     propFromHOC,
