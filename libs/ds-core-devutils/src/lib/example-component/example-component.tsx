@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 import { BaseProps } from '../base-props.types';
-import { MyExampleComponentCustomProps } from './example-component.types';
 
-export interface MyExampleComponentProps
-  extends BaseProps,
-    MyExampleComponentCustomProps {}
+// Here I pick manually all the native html attributes that I wanna do smthg with
+type MyExampleComponentPropsHTMLAttributes = Pick<
+  React.ComponentPropsWithoutRef<'button'>,
+  'title' | 'onClick' | 'children'
+>;
 
-// Example without HOC
+// Here are all my custom props
+// And I can also overwrite the types from html attribute that I want to limit
+interface MyExampleComponentCustomProps
+  extends MyExampleComponentPropsHTMLAttributes {
+  variant?: 'primary' | 'secondary' | 'tertiary';
+  children: string;
+}
+
+export type MyExampleComponentProps = MyExampleComponentCustomProps & BaseProps;
+
 export const MyExampleComponent = React.forwardRef<
   HTMLButtonElement,
   MyExampleComponentProps
@@ -40,3 +50,12 @@ export const MyExampleComponent = React.forwardRef<
 );
 
 MyExampleComponent.displayName = 'MyExampleComponent';
+
+export const UsageOfMyComponent = (): JSX.Element => {
+  const myRef = useRef<HTMLButtonElement>(null);
+  return (
+    <MyExampleComponent ref={myRef} id={'123'}>
+      {'My test'}
+    </MyExampleComponent>
+  );
+};

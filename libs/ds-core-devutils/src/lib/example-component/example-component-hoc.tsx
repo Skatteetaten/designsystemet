@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 import { MyExampleComponentProps } from './example-component';
 
@@ -52,10 +52,18 @@ export const MyExampleComponentWithoutRef = whateverHOC(
   }
 );
 
-export default React.forwardRef<HTMLButtonElement, MyExampleComponentProps>(
-  function MyExampleComponent(props, ref) {
-    return <MyExampleComponentWithoutRef {...props} incomingRef={ref} />;
-  }
-);
+export const MyExampleComponentWithHOC = React.forwardRef<
+  HTMLButtonElement,
+  MyExampleComponentProps
+>(function MyExampleComponent(props, ref) {
+  return <MyExampleComponentWithoutRef {...props} incomingRef={ref} />;
+});
 
-// Lage et eksempel med Root props component
+export const UsageOfMyComponent = (): JSX.Element => {
+  const myRef = useRef<HTMLButtonElement>(null);
+  return (
+    <MyExampleComponentWithHOC ref={myRef} id={'123'}>
+      {'My test'}
+    </MyExampleComponentWithHOC>
+  );
+};
