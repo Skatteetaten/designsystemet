@@ -18,6 +18,16 @@
         "jestConfig": "libs/ds-core-devutils/jest.config.ts",
         "passWithNoTests": true
       }
+    },
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/ds-core-devutils/**/*.css",
+          "libs/ds-core-devutils/**/*.scss"
+        ]
+      }
     }
   }
 }
