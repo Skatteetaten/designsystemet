@@ -20,6 +20,7 @@
       "@skatteetaten/ds-core-designtokens": [
         "libs/ds-core-designtokens/src/index.ts"
       ],
+      "@skatteetaten/ds-core-devutils": ["libs/ds-core-devutils/src/index.ts"],
       "@skatteetaten/ds-forms": ["libs/ds-forms/src/index.ts"]
     }
   },
