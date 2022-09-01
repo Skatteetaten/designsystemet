@@ -10,7 +10,6 @@ export interface IncomingRefProp {
   incomingRef: React.Ref<HTMLButtonElement>;
 }
 
-// Dummy HOC for example only
 const whateverHOC = <T extends WhateverHOCProps>(
   Component: React.ComponentType<T>
 ) => {
@@ -21,7 +20,7 @@ const whateverHOC = <T extends WhateverHOCProps>(
   };
 };
 
-// Example with HOC and Ref supported in the outter element
+// Eksempel med HOC og Ref i et "outer-element"
 // Denne komponenten skal ikke eksporteres
 const MyExampleComponentWithoutRef = whateverHOC(
   ({
@@ -53,6 +52,7 @@ const MyExampleComponentWithoutRef = whateverHOC(
   }
 );
 
+// Dette er komponeneten som eksporteres, da den har fått forwardref på seg i lik linje som de andre
 export const MyExampleComponentWithHOC = React.forwardRef<
   HTMLButtonElement,
   MyExampleComponentProps
@@ -60,6 +60,7 @@ export const MyExampleComponentWithHOC = React.forwardRef<
   return <MyExampleComponentWithoutRef {...props} incomingRef={ref} />;
 });
 
+// Eksempel på hvordan man bruker komponenten
 export const UsageOfMyComponent = (): JSX.Element => {
   const myRef = useRef<HTMLButtonElement>(null);
   return (

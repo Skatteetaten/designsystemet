@@ -2,20 +2,20 @@ import React, { forwardRef, useRef } from 'react';
 
 import { BaseProps } from '../base-props.types';
 
-// Here I pick manually all the native html attributes that I wanna do smthg with
+// Her plukker man manuelt hvilke html-attributer skal eksponeres som property.
+// Vi tar utgangspunkt i interfacet HTMLOrSVGElement fordi vi ikke vet hvilket html tag skal outputes
 type MyExampleComponentPropsHTMLAttributes = Pick<
   React.HTMLAttributes<HTMLOrSVGElement>,
   'title' | 'onClick' | 'children'
 >;
 
-// Here are all my custom props
-// And I can also overwrite the types from html attribute that I want to limit
 export interface MyExampleComponentCustomProps
   extends MyExampleComponentPropsHTMLAttributes {
   as?: 'button' | 'div';
   children?: string;
 }
 
+// Her samler jeg interfacet med BaseProps som er et set med properties som alle komponentene våre skal tilby
 type MyExampleComponentProps = MyExampleComponentCustomProps & BaseProps;
 
 export const MyExampleComponentWithDynamicHtmlTag = forwardRef<

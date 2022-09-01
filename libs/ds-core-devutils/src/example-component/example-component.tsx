@@ -2,20 +2,21 @@ import React, { useRef } from 'react';
 
 import { BaseProps } from '../base-props.types';
 
-// Here I pick manually all the native html attributes that I wanna do smthg with
+// Her plukker man manuelt hvilke html-attributer skal eksponeres som property
 type MyExampleComponentPropsHTMLAttributes = Pick<
   React.ComponentPropsWithoutRef<'button'>,
   'title' | 'onClick' | 'children'
 >;
 
-// Here are all my custom props
-// And I can also overwrite the types from html attribute that I want to limit
+// Her er alle de custom propsene
+// Så kan typene fra html-attribute overskrives når man f.eks ønsker å begrense type på dem
 interface MyExampleComponentCustomProps
   extends MyExampleComponentPropsHTMLAttributes {
   variant?: 'primary' | 'secondary' | 'tertiary';
   children: string;
 }
 
+// Her samler jeg interfacet med BaseProps som er et set med properties som alle komponentene våre skal tilby
 export type MyExampleComponentProps = MyExampleComponentCustomProps & BaseProps;
 
 export const MyExampleComponent = React.forwardRef<
@@ -51,6 +52,7 @@ export const MyExampleComponent = React.forwardRef<
 
 MyExampleComponent.displayName = 'MyExampleComponent';
 
+// Eksempel på hvordan man bruker komponenten
 export const UsageOfMyComponent = (): JSX.Element => {
   const myRef = useRef<HTMLButtonElement>(null);
   return (
