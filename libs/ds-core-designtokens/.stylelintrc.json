@@ -1,0 +1,20 @@
+{
+  "extends": ["../../.stylelintrc.json"],
+  "ignoreFiles": ["!**/*"],
+  "overrides": [
+    {
+      "files": ["**/*.css"],
+      "rules": {}
+    },
+    {
+      "files": ["**/_reset.css"],
+      "rules": {
+        "property-no-vendor-prefix": null
+      }
+    },
+    {
+      "files": ["**/*.scss"],
+      "rules": {}
+    }
+  ]
+}

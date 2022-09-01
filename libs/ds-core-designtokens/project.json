@@ -43,6 +43,16 @@
         "jestConfig": "libs/ds-core-designtokens/jest.config.ts",
         "passWithNoTests": true
       }
+    },
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/ds-core-designtokens/**/*.css",
+          "libs/ds-core-designtokens/**/*.scss"
+        ]
+      }
     }
   }
 }

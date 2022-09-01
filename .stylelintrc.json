@@ -3,7 +3,9 @@
   "overrides": [
     {
       "files": ["**/*.css"],
-      "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+      "extends": [
+        "./libs/ds-core-config/config/designsystem-stylelintrc-css.yml"
+      ],
       "rules": {}
     },
     {
