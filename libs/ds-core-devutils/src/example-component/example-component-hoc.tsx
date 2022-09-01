@@ -30,7 +30,7 @@ const MyExampleComponentWithoutRef = whateverHOC(
     id,
     variant = 'primary',
     className,
-    dataTestId = `testid-${id}`,
+    'data-testid': dataTestId = `testid-${id}`,
     onClick,
     children,
   }: MyExampleComponentProps &

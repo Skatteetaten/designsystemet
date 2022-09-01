@@ -27,7 +27,7 @@ export const MyExampleComponent = React.forwardRef<
       id,
       variant = 'primary',
       className,
-      dataTestId = `testid-${id}`,
+      'data-testid': dataTestId = `testid-${id}`,
       onClick,
       children,
     },

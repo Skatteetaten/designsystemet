@@ -2,5 +2,5 @@
 export interface BaseProps {
   id: string;
   className?: string;
-  dataTestId?: string;
+  'data-testid'?: string;
 }

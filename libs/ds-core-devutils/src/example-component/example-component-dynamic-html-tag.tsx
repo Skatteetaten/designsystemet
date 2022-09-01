@@ -27,7 +27,7 @@ export const MyExampleComponentWithDynamicHtmlTag = forwardRef<
       as: Root = 'button',
       id,
       className,
-      dataTestId = `testid-${id}`,
+      'data-testid': dataTestId = `testid-${id}`,
       onClick,
       children,
     },
