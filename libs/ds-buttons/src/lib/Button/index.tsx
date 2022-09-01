@@ -1,11 +1,6 @@
-//import { BaseProps } from '@skatteetaten/ds-core-devutils';
+import { BaseProps } from '@skatteetaten/ds-core-devutils';
 
 import styles from './button.module.scss';
-
-interface BaseProps {
-  id?: string;
-  dataTestId?: string;
-}
 
 export function Button({ id, dataTestId }: BaseProps): JSX.Element {
   return (

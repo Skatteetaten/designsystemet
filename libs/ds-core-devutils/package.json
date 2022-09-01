@@ -1,9 +1,4 @@
 {
   "name": "@skatteetaten/ds-core-devutils",
-  "version": "0.0.1",
-  "devDependencies": {
-    "@types/react-router": "^5.1.18",
-    "react-router": "^6.3.0",
-    "react-router-dom": "^6.3.0"
-  }
+  "version": "0.0.1"
 }

@@ -15,14 +15,14 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@skatteetaten/ds-core-devutils": ["libs/ds-core-devutils/src/index.ts"],
       "@skatteetaten/ds-buttons": ["libs/ds-buttons/src/index.ts"],
       "@skatteetaten/ds-core-config": ["libs/ds-core-config/src/index.ts"],
       "@skatteetaten/ds-core-designtokens": [
         "libs/ds-core-designtokens/src/index.ts"
       ],
       "@skatteetaten/ds-core-devutils": ["libs/ds-core-devutils/src/index.ts"],
-      "@skatteetaten/ds-forms": ["libs/ds-forms/src/index.ts"]
+      "@skatteetaten/ds-forms": ["libs/ds-forms/src/index.ts"],
+      "@skatteetaten/ds-mylib": ["libs/ds-mylib/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
