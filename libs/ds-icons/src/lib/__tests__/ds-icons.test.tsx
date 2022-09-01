@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import DsIcons from './ds-icons';
+import DsIcons from '../ds-icons';
 
 describe('DsIcons', () => {
   it('should render successfully', () => {
