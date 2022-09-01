@@ -76,6 +76,8 @@ rules:
         - pattern: '{react*,redux*}'
           group: external
           position: before
+        - pattern: '{@designsystem/**}'
+          group: internal
         - pattern: ./*.scss
           group: sibling
           position: after

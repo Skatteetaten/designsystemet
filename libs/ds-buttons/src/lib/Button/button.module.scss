@@ -1,11 +1,29 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+.common {
+  font-family: var(--font-family);
+  border-radius: 44px;
+  border-width: 3px;
+  border-style: solid;
+}
 
-.test {
-  font-size: 20px;
+.fontDefault {
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-default);
+}
+
+.primary {
+  @extend .common;
+  @extend .fontDefault;
+  background-color: var(--palette-azure-70);
+  color: var(--palette-white);
+  font-family: var(--font-family);
+}
+.secondary {
+  color: var(--palette-azure-70);
+  background-color: var(--palette-white);
+}
+.tertiary {
+  background-color: orange;
+}
+.danger {
+  background-color: var(--semantic-danger-background);
 }

@@ -1,4 +1,6 @@
 :root,
 :host {
   --random-variable: none;
+  --font-family-default: Helvetica, Arial, 'Times New Roman';
+  --font-size-base: 16px;
 }

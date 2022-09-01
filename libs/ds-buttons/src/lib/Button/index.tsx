@@ -1,11 +1,30 @@
+import ButtonProps from './Button.types';
+
 import styles from './button.module.scss';
 
-export function Button(): JSX.Element {
+export const Button = ({
+  knappetekst = 'Knappetekst',
+  buttonStyle,
+}: ButtonProps): JSX.Element => {
+  // const BStyle = buttonStyle ? styles[buttonStyle] : '';
   return (
-    <div className={styles.test}>
-      <h1>{'Welcome to awesome Button!'}</h1>
-    </div>
+    <>
+      <button className={buttonStyle ? styles[buttonStyle] : ''}>
+        {knappetekst}
+      </button>
+      {/* Start debuginfo during developmend */}
+      <hr />
+      {'Valgt buttonStyle :'} {buttonStyle}
+      <br />
+      {buttonStyle ? styles[buttonStyle] : ''}
+      {/* End debuginfo during developmend */}
+    </>
   );
-}
+};
+
+Button.defaultProps = {
+  knappetekst: 'StandardKnappTekst',
+  icon: 'checkbox',
+};
 
 export default Button;
