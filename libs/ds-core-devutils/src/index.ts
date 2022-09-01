@@ -1,1 +1,1 @@
-export * from './lib/example-component/example-component';
+export * from './base-props.types';
