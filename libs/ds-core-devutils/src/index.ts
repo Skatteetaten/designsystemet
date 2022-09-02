@@ -1,1 +1,1 @@
-export * from './lib/ds-core-devutils';
+export * from './base-props.types';
