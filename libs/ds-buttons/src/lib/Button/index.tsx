@@ -8,22 +8,14 @@ export const Button = ({
 }: ButtonProps): JSX.Element => {
   // const BStyle = buttonStyle ? styles[buttonStyle] : '';
   return (
-    <>
-      <button className={buttonStyle ? styles[buttonStyle] : ''}>
-        {knappetekst}
-      </button>
-      {/* Start debuginfo during developmend */}
-      <hr />
-      {'Valgt buttonStyle :'} {buttonStyle}
-      <br />
-      {buttonStyle ? styles[buttonStyle] : ''}
-      {/* End debuginfo during developmend */}
-    </>
+    <button className={buttonStyle ? styles[buttonStyle] : ''}>
+      {knappetekst}
+    </button>
   );
 };
 
 Button.defaultProps = {
-  knappetekst: 'StandardKnappTekst',
+  knappetekst: 'Standardtekst på knapp',
   icon: 'checkbox',
 };
 
