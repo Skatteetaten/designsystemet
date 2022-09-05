@@ -21,7 +21,8 @@
         "libs/ds-core-designtokens/src/index.ts"
       ],
       "@skatteetaten/ds-core-devutils": ["libs/ds-core-devutils/src/index.ts"],
-      "@skatteetaten/ds-forms": ["libs/ds-forms/src/index.ts"]
+      "@skatteetaten/ds-forms": ["libs/ds-forms/src/index.ts"],
+      "@skatteetaten/ds-icons": ["libs/ds-icons/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

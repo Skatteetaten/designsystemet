@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/ds-core-devutils/src",
+  "sourceRoot": "libs/ds-icons/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -8,16 +8,16 @@
       "executor": "@nrwl/web:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/ds-core-devutils",
-        "tsConfig": "libs/ds-core-devutils/tsconfig.lib.json",
-        "project": "libs/ds-core-devutils/package.json",
-        "entryFile": "libs/ds-core-devutils/src/index.ts",
+        "outputPath": "dist/libs/ds-icons",
+        "tsConfig": "libs/ds-icons/tsconfig.lib.json",
+        "project": "libs/ds-icons/package.json",
+        "entryFile": "libs/ds-icons/src/index.ts",
         "external": ["react/jsx-runtime"],
         "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
         "compiler": "babel",
         "assets": [
           {
-            "glob": "libs/ds-core-devutils/README.md",
+            "glob": "libs/ds-icons/README.md",
             "input": ".",
             "output": "."
           }
@@ -28,7 +28,7 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/ds-core-devutils/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["libs/ds-icons/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "tsc": {
@@ -39,9 +39,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/ds-core-devutils"],
+      "outputs": ["coverage/libs/ds-icons"],
       "options": {
-        "jestConfig": "libs/ds-core-devutils/jest.config.ts",
+        "jestConfig": "libs/ds-icons/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -50,8 +50,8 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
-          "libs/ds-core-devutils/**/*.css",
-          "libs/ds-core-devutils/**/*.scss"
+          "libs/ds-itons/**/*.css",
+          "libs/ds-icons/**/*.scss"
         ]
       }
     }

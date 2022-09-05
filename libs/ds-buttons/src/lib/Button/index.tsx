@@ -2,17 +2,22 @@ import ButtonProps from './Button.types';
 
 import styles from './button.module.scss';
 
-export const Button = ({
+export function Button({
+  id,
+  'data-testid': dataTestId,
   knappetekst = 'Knappetekst',
   buttonStyle,
-}: ButtonProps): JSX.Element => {
-  // const BStyle = buttonStyle ? styles[buttonStyle] : '';
+}: ButtonProps): JSX.Element {
   return (
-    <button className={buttonStyle ? styles[buttonStyle] : ''}>
+    <button
+      className={buttonStyle ? styles[buttonStyle] : ''}
+      id={id}
+      data-testid={dataTestId}
+    >
       {knappetekst}
     </button>
   );
-};
+}
 
 Button.defaultProps = {
   knappetekst: 'Standardtekst på knapp',
