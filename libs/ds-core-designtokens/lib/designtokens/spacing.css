@@ -1,4 +1,14 @@
 :root,
 :host {
-  --random-variable: none;
+  --spacing-xxs: 0.125rem;
+  --spacing-xs: 0.25rem;
+  --spacing-s: 0.5rem;
+  --spacing-m: 1rem;
+  --spacing-l: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+  --spacing-mega: 4rem;
+
+  /* Semantic spacing */
+  --semantic-spacing-default: var(--spacing-m);
 }
