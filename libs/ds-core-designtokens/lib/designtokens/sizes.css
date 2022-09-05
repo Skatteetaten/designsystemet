@@ -2,10 +2,9 @@
 :host {
   --size-extra-small: 0.875rem;
   --size-small: 1rem;
-  --size-medium: 1.125rem;
-  --size-large: 1.25rem;
-  --size-extra-large: 1.5rem;
-  --size-mega: 2.5rem;
+  --size-medium: 1.25rem;
+  --size-large: 1.5rem;
+  --size-extra-large: 2.5rem;
 
   /* Semantic sizes */
   --semantic-size-default: var(--size-small);
