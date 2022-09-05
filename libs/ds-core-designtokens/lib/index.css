@@ -4,6 +4,7 @@
 @import 'designtokens/containers.css';
 @import 'designtokens/font.css';
 @import 'designtokens/palette.css';
+@import 'designtokens/size.css';
 @import 'designtokens/spacing.css';
 
 @import '_default.css';
