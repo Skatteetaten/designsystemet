@@ -1,17 +1,17 @@
 import { Button } from '@skatteetaten/ds-buttons';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
+import ItemStory from './item.stories';
+
 export default {
   component: Button,
   title: 'Button',
   argTypes: {
     icon: {
-      options: ['warning', 'information', 'arrow'],
+      options: ['warning', 'notinuse', 'arrow'],
       control: { type: 'radio' },
     },
   },
-  knappetekst: 'Klikk meg',
-  children: 'barn',
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
@@ -21,29 +21,16 @@ export const Secondary = Template.bind({});
 export const Tertiary = Template.bind({});
 export const Danger = Template.bind({});
 
+const baseArgs = {
+  icon: 'arrow',
+};
+
 Primary.args = {
-  icon: 'arrow',
+  ...baseArgs,
   buttonStyle: 'primary',
+  children: <ItemStory {...ItemStory.args} />,
 };
-
-Secondary.args = {
-  knappetekst: 'Knapp',
-  icon: 'arrow',
-  buttonStyle: 'secondary',
-};
-
-Tertiary.args = {
-  knappetekst: 'Knapp',
-  icon: 'arrow',
-  buttonStyle: 'tertiary',
-};
-
-Danger.args = {
-  knappetekst: 'Knapp',
-  icon: 'warning',
-  buttonStyle: 'danger',
-};
-
+Primary.storyName = 'Dette er Primary';
 Primary.parameters = {
   design: [
     {
@@ -57,4 +44,42 @@ Primary.parameters = {
       url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=4196%3A11211',
     },
   ],
+  backgrounds: {
+    values: [
+      { name: 'white', value: '#000' },
+      { name: 'black', value: '#fff' },
+    ],
+  },
 };
+
+Secondary.args = {
+  ...baseArgs,
+  buttonStyle: 'secondary',
+};
+/* Secondary.parameters = {
+  {
+    ...Primary.parameters,
+    design: {}
+  }
+}; */
+
+Tertiary.args = {
+  ...baseArgs,
+  knappetekst: 'Knapp Tertiary',
+  buttonStyle: 'tertiary',
+};
+
+Danger.args = {
+  ...baseArgs,
+  knappetekst: 'Knapp',
+  buttonStyle: 'danger',
+};
+
+/* export const Main = Template.bind({});
+Main.args = {
+  buttonStyle: [
+    { ...actionButtonStories.primary.args },
+    { ...actionButtonStories.Secondary.args },
+  ],
+  orientation: 'horizontal',
+}; */

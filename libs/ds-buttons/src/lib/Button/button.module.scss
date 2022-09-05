@@ -13,30 +13,37 @@
   background-color: var(--palette-azure-70);
   border-color: var(--palette-azure-70);
   color: var(--palette-white);
-  &:focus {
+  &:focus,
+  &__focus {
     outline: var(--palette-azure-70) solid 2px;
     outline-offset: 2px;
-    &:hover {
-      background-color: var(--palette-azure-100);
-      border-color: var(--palette-azure-100);
-      outline: var(--palette-azure-100) solid 2px;
-    }
-    &:active {
-      background-color: var(--palette-azure-100);
-      border-color: var(--palette-azure-100);
-      outline: var(--palette-azure-100) solid 2px;
-    }
+    // &:hover {
+    //   background-color: var(--palette-azure-100);
+    //   border-color: var(--palette-azure-100);
+    //   outline-width: 0;
+    // }
+    // &:active {
+    //   background-color: var(--palette-azure-100);
+    //   border-color: var(--palette-azure-100);
+    // }
   }
-  &:active {
+  &:hover,
+  &__hover {
+    background-color: var(--palette-azure-100);
+    border-color: var(--palette-azure-100);
+  }
+  &:active,
+  &__active {
     background-color: var(--palette-azure-100);
     border-color: var(--palette-azure-100);
     box-shadow: none;
     transform: translateY(2px);
     transition-timing-function: ease;
   }
-  &:hover {
-    background-color: var(--palette-azure-100);
-    border-color: var(--palette-azure-100);
+  &:disabled,
+  &__disabled {
+    background-color: var(--palette/graphite/10);
+    border-color: var(--palette/graphite/50);
   }
 }
 
@@ -45,11 +52,20 @@
   background-color: var(--palette-white);
   border-color: var(--palette-azure-70);
   @extend %common;
+  &:hover {
+    background-color: var(--palette-azure-10);
+    border-color: var(--palette-azure-70);
+  }
+  &:focus {
+    outline: var(--palette-azure-70) solid 2px;
+    outline-offset: 2px;
+  }
   &:active {
+    background-color: var(--palette-azure-10);
+    border-color: var(--palette-azure-70);
     box-shadow: none;
     transform: translateY(2px);
     transition-timing-function: ease;
-    border-color: var(--palette-azure-10);
   }
 }
 .tertiary {

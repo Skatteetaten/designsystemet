@@ -7,12 +7,14 @@ export function Button({
   'data-testid': dataTestId,
   knappetekst = 'Knappetekst',
   buttonStyle,
+  disabled,
 }: ButtonProps): JSX.Element {
   return (
     <button
       className={buttonStyle ? styles[buttonStyle] : ''}
       id={id}
       data-testid={dataTestId}
+      disabled={disabled}
     >
       {knappetekst}
     </button>
@@ -22,6 +24,7 @@ export function Button({
 Button.defaultProps = {
   knappetekst: 'Standardtekst på knapp',
   icon: 'checkbox',
+  disabled: false,
 };
 
 export default Button;

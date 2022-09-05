@@ -4,8 +4,9 @@ import { BaseProps } from '@skatteetaten/ds-core-devutils';
 export default interface ButtonProps extends BaseProps {
   icon?: string | Component;
   buttonStyle?: 'primary' | 'secondary' | 'tertiary' | 'danger';
-  children: string;
+  children: any | string;
   knappetekst: string;
+  disabled?: boolean;
 }
 
 /* export default interface ButtonProps
