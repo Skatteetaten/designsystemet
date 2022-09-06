@@ -1,47 +1,85 @@
 import { Button } from '@skatteetaten/ds-buttons';
+import { action } from '@storybook/addon-actions';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import ItemStory from './item.stories';
+// import ButtonDocs from '../docs/button.mdx';
 
 export default {
   component: Button,
-  title: 'Button',
+  title: 'Designsystem/Button',
   argTypes: {
     icon: {
-      options: ['warning', 'notinuse', 'arrow'],
-      control: { type: 'radio' },
+      name: 'icon',
+      description: 'Alternativt ikon',
+      control: {
+        type: 'text',
+      },
+    },
+    variant: {
+      description: 'Button variant (primary | secondary | tertiary | danger)',
+      options: ['primary', 'secondary', 'tertiary', 'danger'],
+      control: {
+        type: 'radio',
+      },
+    },
+    disabled: {
+      control: {
+        type: 'boolean',
+      },
+    },
+    children: {
+      description: 'Tekst på knapp',
+      control: {
+        type: 'text',
+      },
     },
   },
 } as ComponentMeta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const TemplateDefault: ComponentStory<typeof Button> = (args) => (
+  <Button {...args} variant={args.variant}>
+    {args.children}
+  </Button>
+);
 
-export const Primary = Template.bind({});
-export const Secondary = Template.bind({});
-export const Tertiary = Template.bind({});
-export const Danger = Template.bind({});
+const TemplateVariant: ComponentStory<typeof Button> = (args) => (
+  <>
+    <Button
+      {...args}
+      variant={'primary'}
+      onClick={action('KlikkEvent primary')}
+    />
+    <Button
+      {...args}
+      variant={'secondary'}
+      onClick={action('KlikkEvent secondary')}
+    />
+    <Button
+      {...args}
+      variant={'tertiary'}
+      onClick={action('KlikkEvent tertiary')}
+    />
+    <Button {...args} variant={'danger'} onClick={action('danger')} />
+  </>
+);
 
-const baseArgs = {
-  icon: 'arrow',
-};
+export const Default = TemplateDefault.bind({});
+export const Primary = TemplateVariant.bind({});
+export const Secondary = TemplateVariant.bind({});
 
-Primary.args = {
+const baseArgs = {};
+
+Default.args = {
   ...baseArgs,
-  buttonStyle: 'primary',
-  children: <ItemStory {...ItemStory.args} />,
+  variant: 'primary',
 };
-Primary.storyName = 'Dette er Primary';
-Primary.parameters = {
+Default.storyName = 'Standard';
+Default.parameters = {
   design: [
     {
       name: 'Varianter',
       type: 'figma',
-      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=4018%3A9627',
-    },
-    {
-      name: 'Luft og font',
-      type: 'figma',
-      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=4196%3A11211',
+      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1765%3A8640',
     },
   ],
   backgrounds: {
@@ -52,34 +90,15 @@ Primary.parameters = {
   },
 };
 
+Primary.storyName = 'Button';
+Primary.args = {
+  ...baseArgs,
+  variant: 'primary',
+};
+
+Secondary.storyName = 'Button og Icon';
 Secondary.args = {
   ...baseArgs,
-  buttonStyle: 'secondary',
+  variant: 'secondary',
+  icon: 'arrow',
 };
-/* Secondary.parameters = {
-  {
-    ...Primary.parameters,
-    design: {}
-  }
-}; */
-
-Tertiary.args = {
-  ...baseArgs,
-  knappetekst: 'Knapp Tertiary',
-  buttonStyle: 'tertiary',
-};
-
-Danger.args = {
-  ...baseArgs,
-  knappetekst: 'Knapp',
-  buttonStyle: 'danger',
-};
-
-/* export const Main = Template.bind({});
-Main.args = {
-  buttonStyle: [
-    { ...actionButtonStories.primary.args },
-    { ...actionButtonStories.Secondary.args },
-  ],
-  orientation: 'horizontal',
-}; */

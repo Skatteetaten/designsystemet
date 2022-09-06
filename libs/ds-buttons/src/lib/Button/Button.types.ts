@@ -1,20 +1,20 @@
 import { Component } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-devutils';
-export default interface ButtonProps extends BaseProps {
+
+type cmponentPropsHTMLAttributes = Pick<
+  React.ComponentPropsWithoutRef<'button'>,
+  'onClick' | 'children'
+>;
+
+export interface ButtonComponentProps extends cmponentPropsHTMLAttributes {
+  // TODO Hvordan ikonet skal provides må vurderes
   icon?: string | Component;
-  buttonStyle?: 'primary' | 'secondary' | 'tertiary' | 'danger';
-  children: any | string;
-  knappetekst: string;
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'danger';
+  children: string;
   disabled?: boolean;
 }
 
-/* export default interface ButtonProps
-  extends React.AllHTMLAttributes<
-    HTMLAnchorElement | HTMLButtonElement | HTMLDivElement | HTMLSpanElement
-  > {
-  icon?: string | Component;
-  buttonStyle?: 'primary' | 'secondary' | 'tertiary' | 'danger';
-  children: string;
-  knappetekst: string;
-} */
+type ButtonProps = ButtonComponentProps & BaseProps;
+
+export default ButtonProps;
