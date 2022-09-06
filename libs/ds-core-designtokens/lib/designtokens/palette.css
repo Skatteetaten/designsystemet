@@ -35,21 +35,27 @@
   --palette-graphite-10: #e5e5e5;
   --palette-graphite-5: #f4f4f4;
   --palette-white: #ffffff;
+
+  /* Vanlig tekstinnhold: foreground / background */
   --semantic-page-foreground: var(--palette-graphite-100);
   --semantic-page-background: var(--palette-white);
+
+  /* Variant "danger"/"warning"/"success": foreground / background */
   --semantic-danger-foreground: #a82e39;
   --semantic-danger-background: var(--palette-burgundy-10);
   --semantic-warning-foreground: #9f7509;
   --semantic-warning-background: var(--palette-ochre-10);
   --semantic-success-foreground: #316f2a;
   --semantic-success-background: var(--palette-forest-10);
+
+  /* Interaktive farger: :active / :hoved / :focus */
   --semantic-interactive: var(--palette-azure-70);
   --semantic-interactive-foreground: var(--palette-azure-100);
   --semantic-interactive-background: var(--palette-azure-10);
 
-  /* Gjelder tabellheader, inputfelt, Accordion-rader */
+  /* <hr /> Gjelder tabellheader, inputfelt, Accordion-rader */
   --semantic-divider-100: var(--palette-graphite-100);
 
-  /* Gjelder tabellrader, Accordions, StepList */
+  /* <hr /> Gjelder tabellrader, Accordions, StepList */
   --semantic-divider-30: var(--palette-graphite-30);
 }

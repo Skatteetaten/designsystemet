@@ -1,4 +1,8 @@
 :root,
 :host {
-  --random-variable: none;
+  --breakpoint-xs: 480px;
+  --breakpoint-s: 640px;
+  --breakpoint-m: 1024px;
+  --breakpoint-l: 1366px;
+  --breakpoint-xl: 1920px;
 }
