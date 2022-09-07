@@ -1,4 +1,4 @@
-import { MyIcon } from '@skatteetaten/ds-icons';
+import { AccountChildIcon } from '@skatteetaten/ds-icons';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ElementHandle } from 'puppeteer';
 
@@ -7,13 +7,13 @@ import '../icon.css';
 /* eslint-disable jest/no-standalone-expect */
 //TODO FRONT-826 eslint regel bør legges inn jest/no-standalone-expect
 export default {
-  component: MyIcon,
+  component: AccountChildIcon,
   title: 'Tests/Icon',
-} as ComponentMeta<typeof MyIcon>;
+} as ComponentMeta<typeof AccountChildIcon>;
 
-const Template: ComponentStory<typeof MyIcon> = (args) => (
+const Template: ComponentStory<typeof AccountChildIcon> = (args) => (
   <div style={{ width: '150px' }} data-test-block>
-    <MyIcon {...args} />
+    <AccountChildIcon {...args} />
   </div>
 );
 
