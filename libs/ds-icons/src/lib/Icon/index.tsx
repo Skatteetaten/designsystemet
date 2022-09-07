@@ -2,7 +2,7 @@
 
 import { BaseProps, Size } from '@skatteetaten/ds-core-devutils';
 
-// TO-DO, bør vi tilby color? Bør vi tilby tab-index, viewBox?
+// TODO, bør vi tilby color? Bør vi tilby tab-index, viewBox?
 /**
  * aria-label (optional): Hvis svg-en er meningsbærende og ikke bare pynt/dekor skal tag'en ha aria-label="beskrivelse".
  * role (optional): Hvis svg-en er meningsbærende og ikke bare pynt/dekor skal tag'en ha role="img". Er role undefined vil svg automatisk anses som pynt og få aria-hidden="true".
