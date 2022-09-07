@@ -1,1 +1,1 @@
-export * from './lib/text-field';
+export * from './lib/Textfield';
