@@ -53,7 +53,7 @@ IconDefaults.parameters = {
   },
 };
 
-//TO-DO FRONT-842 jobbe videre med disse testene:
+//TODO FRONT-842 jobbe videre med disse testene:
 export const IconWithTitleAndClassName = Template.bind({});
 IconWithTitleAndClassName.args = {
   title: 'Some title',
