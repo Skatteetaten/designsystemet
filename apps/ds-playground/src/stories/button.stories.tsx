@@ -6,7 +6,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 export default {
   component: Button,
-  title: 'Designsystem/Button',
+  title: 'Design System/Button',
   argTypes: {
     icon: {
       name: 'icon',

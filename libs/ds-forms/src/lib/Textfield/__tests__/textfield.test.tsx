@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import DsIcons from '../ds-icons';
+import Textfield from '..';
 
-describe('DsIcons', () => {
+describe('Textfield', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<DsIcons />);
+    const { baseElement } = render(<Textfield message={'hei'} />);
     expect(baseElement).toBeTruthy();
   });
 });

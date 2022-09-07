@@ -1,1 +1,2 @@
-export * from './lib/ds-icons';
+export * from './lib/Icon';
+export * from './lib/MyIcon';
