@@ -7,6 +7,10 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 export default {
   component: Button,
   title: 'Design System/Button',
+  decorators: [
+    // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+    (Story) => <div style={{ margin: '1em' }}>{Story()}</div>,
+  ],
   argTypes: {
     icon: {
       name: 'icon',
@@ -23,6 +27,8 @@ export default {
       },
     },
     disabled: {
+      description:
+        'Hvis knapp er disabled så overskrives variant stilene med :disable stil',
       control: {
         type: 'boolean',
       },
@@ -33,6 +39,18 @@ export default {
         type: 'text',
       },
     },
+    className: {
+      description:
+        'Verdien til blir satt etter designsystemets stilsett for komponent',
+      control: {
+        type: 'text',
+      },
+    },
+    role: {
+      description: 'Ikke sett role hvis du ønsker role=button',
+      control: 'text',
+    },
+    ariaLabel: { control: 'text' },
   },
 } as ComponentMeta<typeof Button>;
 
@@ -44,22 +62,30 @@ const TemplateDefault: ComponentStory<typeof Button> = (args) => (
 
 const TemplateVariant: ComponentStory<typeof Button> = (args) => (
   <>
-    <Button
-      {...args}
-      variant={'primary'}
-      onClick={action('KlikkEvent primary')}
-    />
-    <Button
-      {...args}
-      variant={'secondary'}
-      onClick={action('KlikkEvent secondary')}
-    />
-    <Button
-      {...args}
-      variant={'tertiary'}
-      onClick={action('KlikkEvent tertiary')}
-    />
-    <Button {...args} variant={'danger'} onClick={action('danger')} />
+    <div style={{ marginBottom: '1em' }}>
+      <Button
+        {...args}
+        variant={'primary'}
+        onClick={action('KlikkEvent primary')}
+      />
+    </div>
+    <div style={{ marginBottom: '1em' }}>
+      <Button
+        {...args}
+        variant={'secondary'}
+        onClick={action('KlikkEvent secondary')}
+      />
+    </div>
+    <div style={{ marginBottom: '1em' }}>
+      <Button
+        {...args}
+        variant={'tertiary'}
+        onClick={action('KlikkEvent tertiary')}
+      />
+    </div>
+    <div style={{ marginBottom: '1em' }}>
+      <Button {...args} variant={'danger'} onClick={action('danger')} />
+    </div>
   </>
 );
 
@@ -75,6 +101,7 @@ Default.args = {
 };
 Default.storyName = 'Standard';
 Default.parameters = {
+  displayName: 'Hei verden',
   design: [
     {
       name: 'Varianter',
@@ -84,8 +111,8 @@ Default.parameters = {
   ],
   backgrounds: {
     values: [
-      { name: 'white', value: '#000' },
-      { name: 'black', value: '#fff' },
+      { name: 'Svart', value: '#000' },
+      { name: 'Hvit', value: '#fff' },
     ],
   },
 };
@@ -95,10 +122,28 @@ Primary.args = {
   ...baseArgs,
   variant: 'primary',
 };
+Primary.parameters = {
+  design: [
+    {
+      name: 'Varianter',
+      type: 'figma',
+      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1765%3A8640',
+    },
+  ],
+};
 
-Secondary.storyName = 'Button og Icon';
+Secondary.storyName = 'Button og Icon (wip)';
 Secondary.args = {
   ...baseArgs,
   variant: 'secondary',
   icon: 'arrow',
+};
+Secondary.parameters = {
+  design: [
+    {
+      name: 'Varianter',
+      type: 'figma',
+      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1765%3A8640',
+    },
+  ],
 };

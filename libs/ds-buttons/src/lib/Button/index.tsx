@@ -9,27 +9,33 @@ export const Button: React.ForwardRefExoticComponent<
 > = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
+      //TODO Gjennomgang av properties vil skal tilby
       id,
-      'data-testid': dataTestId = `testid-${id}`,
+      'data-testid': dataTestId = `testid-${id ? id : 'noid'}`,
+      'aria-label': ariaLabel,
+      'aria-hidden': ariaHidden,
       children,
       variant,
       disabled = false,
       icon,
       onClick,
+      className = '',
     },
     ref
   ): JSX.Element => {
     return (
       <button
         ref={ref}
-        className={variant ? styles[variant] : ''}
+        className={`${variant ? styles[variant] : ''} ${className}`}
         id={id}
         data-testid={dataTestId}
         disabled={disabled}
         onClick={onClick}
+        aria-label={ariaLabel}
+        aria-hidden={ariaHidden}
       >
         {/* TODO implementere visning av ikoner */}
-        {icon && <span className={styles.dsicon}>{'(I)'}</span>}
+        {icon && <span className={styles.dsicon}>{'\u262F'}</span>}
         {children}
       </button>
     );
