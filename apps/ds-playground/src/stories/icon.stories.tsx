@@ -22,26 +22,40 @@ const Template: ComponentStory<typeof DefaultIcon> = (args) => (
 
 export const Icon = Template.bind({});
 
+const svgPaths = {
+  AccountChildSVGpath,
+  AccountEnkSVGpath,
+  AccountMultipleSVGpath,
+};
+
 Icon.argTypes = {
   className: { control: 'select', options: ['myIconClassname'] },
   title: { control: 'text' },
   'aria-label': { control: 'text' },
   role: { control: 'text' },
   viewBox: { control: 'text' },
-  size: { control: 'select', options: sizeArr },
+  size: { control: 'select', options: sizeArr, default: 'small' },
   svgPath: {
-    name: 'icon',
-    options: ['AccountChild', 'AccountEnk', 'AccountMultiple'],
-    control: { type: 'select' },
-    mapping: {
-      AccountChild: AccountChildSVGpath,
-      AccountEnk: AccountEnkSVGpath,
-      AccountMultiple: AccountMultipleSVGpath,
+    options: Object.keys(svgPaths),
+    mapping: svgPaths,
+    control: {
+      type: 'select',
+      labels: {
+        AccountChildSVGpath: 'AccountChild',
+        AccountEnkSVGpath: 'AccountEnkSVG',
+        AccountMultipleSVGpath: 'AccountMultiple',
+      },
+    },
+    table: {
+      type: { summary: 'select' },
+      defaultValue: { summary: 'AccountChild' },
     },
   },
 };
 
 Icon.args = {
+  ...DefaultIcon.defaultProps,
   title: 'Default title',
   viewBox: '0 0 24 24',
+  svgPath: AccountChildSVGpath,
 };

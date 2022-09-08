@@ -1,20 +1,22 @@
+import React from 'react';
+
 import { BaseProps, Size } from '@skatteetaten/ds-core-devutils';
 
 import styles from './icon.module.scss';
 
 /**
  * aria-label (optional): Hvis svg-en er meningsbærende og ikke bare pynt/dekor skal tag'en ha aria-label="beskrivelse". Merk at aria-label vises kun når title ikke allerede er angitt.
+ * role (optional): Mulighet til å overskrive role. Merk at når title eller aria-label er angitt anses ikonet som meningsbærende og vises med role="img". Alternativt vises den uten role og med aria-hidden="true".
  * tabIndex (optional): Styrer focus. Oversatt til tab-index.
- * role (optional): Mulighet til å overskrive role. Merk at når title eller aria-label er angitt anses ikonet som meningsbærende og vises med role="img" og beskrivelse. Alternativt vises den uten role og med aria-hidden="true".
  * viewBox (optional): definerer størrelsen på svg viewBox'en. Default er 0 0 24 24.
  */
 type IconPropsHTMLAttributes = Pick<
   React.SVGAttributes<Record<string, never>>,
-  'aria-label' | 'tabIndex' | 'role' | 'viewBox'
+  'aria-label' | 'role' | 'viewBox' | 'tabIndex'
 >;
 
 /**
- * title (optional): Oppretter en <title> tag nested i svg. Dette medfører tooltip for brukeren.
+ * title (optional): Oppretter en <title> tag nested i svg. Dette medfører tooltip.
  * size: Setter width og height på selve ikonet basert på Size verdier
  * svgPath: selve <path> som tegner ikoner
  */
@@ -26,38 +28,46 @@ interface IconCustomProps extends IconPropsHTMLAttributes {
 
 export type IconProps = IconCustomProps & BaseProps;
 
+// TODO utvide skript til å opprette mappe .nyc_output
 // TODO FRONT-842 Bør tilby TemaIcon
-export function Icon({
-  'aria-label': ariaLabel,
-  'data-testid': dataTestId,
-  tabIndex,
-  id,
-  className,
-  role,
-  title,
-  size = 'medium',
-  viewBox = '0 0 24 24',
-  svgPath,
-}: IconProps): JSX.Element {
-  const sizeClassName = styles[`icon_${size}`];
-  const defaultRole = title || ariaLabel ? 'img' : undefined;
+export const Icon = React.forwardRef<SVGSVGElement, IconProps>(
+  (
+    {
+      id,
+      className,
+      'data-testid': dataTestId,
+      title,
+      size = 'medium',
+      svgPath,
+      'aria-label': ariaLabel,
+      role = title || ariaLabel ? 'img' : undefined,
+      viewBox = '0 0 24 24',
+      tabIndex,
+    },
+    ref
+  ): JSX.Element => {
+    const sizeClassName = styles[`icon_${size}`];
+    const titleId = `${id}-svgtitle`;
 
-  return (
-    <svg
-      id={id}
-      viewBox={viewBox}
-      aria-label={!title ? ariaLabel : undefined}
-      aria-hidden={!title && !ariaLabel}
-      data-testid={dataTestId}
-      className={className ? `${sizeClassName} ${className}` : sizeClassName}
-      role={role ?? defaultRole}
-      focusable={false}
-      tabIndex={tabIndex}
-    >
-      {title && <title>{title}</title>}
-      {svgPath}
-    </svg>
-  );
-}
+    return (
+      <svg
+        ref={ref}
+        id={id}
+        className={className ? `${sizeClassName} ${className}` : sizeClassName}
+        data-testid={dataTestId}
+        aria-label={!title ? ariaLabel : undefined}
+        role={role}
+        viewBox={viewBox}
+        tabIndex={tabIndex}
+        aria-labelledby={titleId}
+        aria-hidden={!title && !ariaLabel}
+        focusable={false}
+      >
+        {title && <title id={titleId}>{title}</title>}
+        {svgPath}
+      </svg>
+    );
+  }
+);
 
-export default Icon;
+Icon.displayName = 'Icon';

@@ -11,5 +11,5 @@ export const AccountMultipleSVGpath = (
 );
 
 export default function AccountMultipleIcon(props: IconProps): JSX.Element {
-  return <Icon {...props} icon={AccountMultipleSVGpath} />;
+  return <Icon {...props} svgPath={AccountMultipleSVGpath} />;
 }
