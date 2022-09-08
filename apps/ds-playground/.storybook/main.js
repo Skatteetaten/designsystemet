@@ -5,9 +5,7 @@ const rootMain = require('../../../.storybook/main');
 
 module.exports = {
   ...rootMain,
-
   core: { ...rootMain.core, builder: 'webpack5' },
-
   stories: [
     ...rootMain.stories,
     '../src/stories/**/*.stories.mdx',
@@ -42,7 +40,20 @@ module.exports = {
       },
     });
 
-    // add your own webpack tweaks if needed
+    config.module.rules.push({
+      test: /\.(ts|tsx)$/,
+      use: [
+        '@jsdevtools/coverage-istanbul-loader',
+        {
+          loader: require.resolve('ts-loader'),
+        },
+      ],
+    });
+
+    config.resolve.extensions.push('.ts', '.tsx');
+    config.mode = 'development';
+    config.devtool = 'source-map';
+
     if (process.env.STORYBOOK_WEBPACK_STATS === 'true') {
       config.plugins.push(
         new BundleAnalyzerPlugin({

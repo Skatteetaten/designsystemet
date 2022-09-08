@@ -49,5 +49,10 @@
       }
     }
   },
+  "pluginsConfig": {
+    "@nrwl/js": {
+      "analyzeSourceFiles": true
+    }
+  },
   "defaultProject": "ds-playground"
 }

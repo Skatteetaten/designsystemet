@@ -1,8 +1,10 @@
 import initStoryshots from '@storybook/addon-storyshots';
-import { imageSnapshot } from '@storybook/addon-storyshots-puppeteer';
-import { render } from '@testing-library/react';
+import { puppeteerTest } from '@storybook/addon-storyshots-puppeteer';
+import { toMatchImageSnapshot } from 'jest-image-snapshot';
 
+import fs from 'fs';
 import { resolve } from 'path';
+expect.extend({ toMatchImageSnapshot });
 
 const storybookUrl =
   process.env['STORYSHOTS_MODE'] === 'static'
@@ -11,10 +13,27 @@ const storybookUrl =
 
 initStoryshots({
   suite: 'Image storyshots',
-  test: imageSnapshot({
+  framework: 'react',
+  test: puppeteerTest({
     storybookUrl,
+    async testBody(page, options) {
+      const testResult = options.context.parameters.puppeteerTest
+        ? options.context.parameters.puppeteerTest(page, options)
+        : null;
+      if (options.context.parameters.fileName.includes('__tests__')) {
+        const coverage = await page.evaluate('window.__coverage__');
+        const outputFile = `./.nyc_output/${options.context.parameters.__id}.json`;
+        await fs.promises.writeFile(
+          outputFile,
+          JSON.stringify(coverage, null, 2),
+          {
+            flag: 'w',
+            encoding: 'utf-8',
+          }
+        );
+      }
+      return testResult;
+    },
   }),
   configPath: resolve(__dirname, './.storybook'),
-  framework: 'react',
-  renderer: render,
 });

@@ -50,7 +50,7 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
-          "libs/ds-itons/**/*.css",
+          "libs/ds-icons/**/*.css",
           "libs/ds-icons/**/*.scss"
         ]
       }
