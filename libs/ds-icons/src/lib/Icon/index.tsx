@@ -3,9 +3,9 @@ import { BaseProps, Size } from '@skatteetaten/ds-core-devutils';
 import styles from './icon.module.scss';
 
 /**
- * aria-label (optional): Hvis svg-en er meningsbærende og ikke bare pynt/dekor skal tag'en ha aria-label="beskrivelse".
+ * aria-label (optional): Hvis svg-en er meningsbærende og ikke bare pynt/dekor skal tag'en ha aria-label="beskrivelse". Merk at aria-label vises kun når title ikke allerede er angitt.
  * tabIndex (optional): Styrer focus. Oversatt til tab-index.
- * role (optional): Hvis svg-en er meningsbærende og ikke bare pynt/dekor skal tag'en ha role="img". Er role undefined vil svg automatisk anses som pynt og få aria-hidden="true".
+ * role (optional): Mulighet til å overskrive role. Merk at når title eller aria-label er angitt anses ikonet som meningsbærende og vises med role="img" og beskrivelse. Alternativt vises den uten role og med aria-hidden="true".
  * viewBox (optional): definerer størrelsen på svg viewBox'en. Default er 0 0 24 24.
  */
 type IconPropsHTMLAttributes = Pick<
@@ -40,15 +40,17 @@ export function Icon({
   svgPath,
 }: IconProps): JSX.Element {
   const sizeClassName = styles[`icon_${size}`];
+  const defaultRole = title || ariaLabel ? 'img' : undefined;
+
   return (
     <svg
       id={id}
       viewBox={viewBox}
-      aria-label={ariaLabel}
-      aria-hidden={!title}
+      aria-label={!title ? ariaLabel : undefined}
+      aria-hidden={!title && !ariaLabel}
       data-testid={dataTestId}
       className={className ? `${sizeClassName} ${className}` : sizeClassName}
-      role={role}
+      role={role ?? defaultRole}
       focusable={false}
       tabIndex={tabIndex}
     >
