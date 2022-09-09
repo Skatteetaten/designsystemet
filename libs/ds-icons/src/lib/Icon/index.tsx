@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useId } from 'react';
 
 import { BaseProps, Size } from '@skatteetaten/ds-core-devutils';
 
@@ -17,7 +17,7 @@ type IconPropsHTMLAttributes = Pick<
 
 /**
  * title (optional): Oppretter en <title> tag nested i svg. Dette medfører tooltip.
- * size: Setter width og height på selve ikonet basert på Size verdier
+ * size (optional): Setter width og height på selve ikonet basert på Size verdier. Default er 'small'.
  * svgPath: selve <path> som tegner ikoner
  */
 interface IconCustomProps extends IconPropsHTMLAttributes {
@@ -46,8 +46,9 @@ export const Icon = React.forwardRef<SVGSVGElement, IconProps>(
     },
     ref
   ): JSX.Element => {
+    const uniqueId = useId();
     const sizeClassName = styles[`icon_${size}`];
-    const titleId = `${id}-svgtitle`;
+    const titleId = `svgtitle-${id ?? uniqueId}`;
 
     return (
       <svg
@@ -59,7 +60,7 @@ export const Icon = React.forwardRef<SVGSVGElement, IconProps>(
         role={role}
         viewBox={viewBox}
         tabIndex={tabIndex}
-        aria-labelledby={titleId}
+        aria-labelledby={title ? titleId : undefined}
         aria-hidden={!title && !ariaLabel}
         focusable={false}
       >
