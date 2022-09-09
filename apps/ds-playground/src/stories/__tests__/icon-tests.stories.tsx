@@ -53,7 +53,6 @@ IconDefaults.parameters = {
   },
 };
 
-//TODO FRONT-842 jobbe videre med disse testene
 //Legge til test med Ref
 export const IconWithClassName = Template.bind({});
 IconWithClassName.args = {
