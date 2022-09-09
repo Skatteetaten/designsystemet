@@ -1,6 +1,7 @@
 import * as React from 'react';
 
-import Icon, { IconProps } from './Icon';
+import Icon from './Icon';
+import { IconProps } from './Icon/icon.types';
 
 export const AccountEnkSVGpath = (
   <path

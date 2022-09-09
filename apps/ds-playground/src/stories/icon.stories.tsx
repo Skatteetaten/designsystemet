@@ -54,7 +54,7 @@ Icon.argTypes = {
 };
 
 Icon.args = {
-  ...DefaultIcon.defaultProps,
+  ...{ ...DefaultIcon.defaultProps, 'aria-label': undefined },
   title: 'Default title',
   viewBox: '0 0 24 24',
   svgPath: AccountChildSVGpath,

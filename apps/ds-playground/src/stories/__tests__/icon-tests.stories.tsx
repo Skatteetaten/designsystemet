@@ -69,12 +69,6 @@ IconWithAriaLabel.args = {
   'aria-label': 'min custom aria-label beskrivelse',
 };
 
-export const IconWithTitleAndAriaLabel = Template.bind({});
-IconWithTitleAndAriaLabel.args = {
-  title: 'min custom title beskrivelse',
-  'aria-label': 'min custom aria-label beskrivelse',
-};
-
 export const IconWithRole = Template.bind({});
 IconWithRole.args = { role: 'img' };
 
