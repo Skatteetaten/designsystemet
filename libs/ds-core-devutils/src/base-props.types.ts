@@ -4,5 +4,19 @@ export interface BaseProps {
   'data-testid'?: string;
 }
 
-export type Variant = 'primary' | 'secondary' | 'tertiary';
-export type Size = 'extraSmall' | 'small' | 'medium' | 'large' | 'extraLarge';
+export const variantArr = [
+  'primary',
+  'secondary',
+  'tertiary',
+  'danger',
+] as const;
+export type Variant = typeof variantArr[number];
+
+export const sizeArr = [
+  'extraSmall',
+  'small',
+  'medium',
+  'large',
+  'extraLarge',
+] as const;
+export type Size = typeof sizeArr[number];

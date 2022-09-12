@@ -23,13 +23,12 @@ initStoryshots({
       if (options.context.parameters.fileName.includes('__tests__')) {
         const coverage = await page.evaluate('window.__coverage__');
         const outputFile = `./.nyc_output/${options.context.parameters.__id}.json`;
-        await fs.promises.writeFile(
-          outputFile,
-          JSON.stringify(coverage, null, 2),
-          {
+
+        await fs.promises.mkdir('./.nyc_output', { recursive: true }).then(() =>
+          fs.promises.writeFile(outputFile, JSON.stringify(coverage, null, 2), {
             flag: 'w',
             encoding: 'utf-8',
-          }
+          })
         );
       }
       return testResult;
