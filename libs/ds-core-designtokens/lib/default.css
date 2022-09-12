@@ -1,9 +1,0 @@
-:root,
-:host {
-  color: var(--palette-graphite-100);
-  background: var(--palette-white);
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans',
-    'Nimbus Sans L', sans-serif;
-  font-size: var(--font-size-m);
-  font-weight: var(--font-weight-regular);
-}

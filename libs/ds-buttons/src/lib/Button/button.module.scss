@@ -1,21 +1,12 @@
-/* TODO - verifisere at margin, padding, font og line-height er korrekt */
-%common,
-button {
-  border-radius: 200px;
-  border-width: 3px;
-  border-style: solid;
-  padding: 4px 16px;
-  font-weight: var(--font-weight-medium);
-  transition: 0.15s;
-}
+/* TODO - verifisere at margin, padding, font og line-height er korrekt ja */
 
 %disabled {
-  background-color: var(--palette-graphite-10);
   border-color: var(--palette-graphite-50);
+  background-color: var(--palette-graphite-10);
   color: var(--palette-graphite-50);
   cursor: not-allowed;
-  transform: none;
   text-decoration: none;
+  transform: none;
 }
 
 %focus {
@@ -25,104 +16,132 @@ button {
 
 %active {
   box-shadow: none;
+  outline: none;
   transform: translateY(2px);
   transition-timing-function: ease;
-  outline: none;
 }
 
-.primary {
-  background-color: var(--palette-azure-70);
-  border-color: var(--palette-azure-70);
-  color: var(--palette-white);
-  &:hover {
-    background-color: var(--palette-azure-100);
-    border-color: var(--palette-azure-100);
-  }
-  &:focus {
-    @extend %focus;
-  }
-  &:active {
-    background-color: var(--palette-azure-100);
-    border-color: var(--palette-azure-100);
-    @extend %active;
-  }
-  &:disabled,
-  &:disabled:hover,
-  &:disabled:active {
-    @extend %disabled;
-  }
-}
+.button {
+  padding: 4px 16px;
+  border: 3px solid;
+  border-radius: 44px;
+  cursor: pointer;
+  font-weight: var(--font-weight-normal);
+  transition: 0.15s;
 
-.secondary {
-  color: var(--palette-azure-70);
-  background-color: var(--palette-white);
-  border-color: var(--palette-azure-70);
-  &:hover {
-    background-color: var(--palette-azure-10);
+  &_primary {
     border-color: var(--palette-azure-70);
-  }
-  &:focus {
-    @extend %focus;
-  }
-  &:active {
-    background-color: var(--palette-azure-10);
-    border-color: var(--palette-azure-70);
-    @extend %active;
-  }
-  &:disabled,
-  &:disabled:hover,
-  &:disabled:active {
-    @extend %disabled;
-  }
-}
-.tertiary {
-  background-color: var(--palette-white);
-  border-color: var(--palette-white);
-  color: var(--palette-azure-70);
-  text-decoration: underline;
-  &:hover {
-    background-color: var(--palette-azure-10);
-    border-color: var(--palette-azure-70);
-  }
-  &:focus {
-    @extend %focus;
-  }
-  &:active {
-    background-color: var(--palette-azure-10);
-    border-color: var(--palette-azure-70);
-    text-decoration: none;
-    @extend %active;
-  }
-  &:disabled,
-  &:disabled:hover,
-  &:disabled:active {
-    @extend %disabled;
-  }
-}
-.danger {
-  background-color: var(--semantic-danger-background);
-  border-color: var(--palette-burgundy-50);
-  color: var(--palette-graphite-100);
-  &:hover {
-    background-color: var(--palette-burgundy-50);
+    background-color: var(--palette-azure-70);
     color: var(--palette-white);
+
+    &:hover {
+      border-color: var(--palette-azure-100);
+      background-color: var(--palette-azure-100);
+    }
+
+    &:focus {
+      @extend %focus;
+    }
+
+    &:active {
+      border-color: var(--palette-azure-100);
+      background-color: var(--palette-azure-100);
+      @extend %active;
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &:disabled:active {
+      @extend %disabled;
+    }
   }
-  &:focus {
-    @extend %focus;
+
+  &_secondary {
+    border-color: var(--palette-azure-70);
+    background-color: var(--palette-white);
+    color: var(--palette-azure-70);
+
+    &:hover {
+      border-color: var(--palette-azure-70);
+      background-color: var(--palette-azure-10);
+    }
+
+    &:focus {
+      @extend %focus;
+    }
+
+    &:active {
+      border-color: var(--palette-azure-70);
+      background-color: var(--palette-azure-10);
+      @extend %active;
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &:disabled:active {
+      @extend %disabled;
+    }
   }
-  &:active {
-    background-color: var(--palette-burgundy-50);
-    color: var(--palette-white);
-    @extend %active;
+
+  &_tertiary {
+    border-color: var(--palette-white);
+    background-color: var(--palette-white);
+    color: var(--palette-azure-70);
+    text-decoration: underline;
+
+    &:hover {
+      border-color: var(--palette-azure-70);
+      background-color: var(--palette-azure-10);
+    }
+
+    &:focus {
+      @extend %focus;
+    }
+
+    &:active {
+      border-color: var(--palette-azure-70);
+      background-color: var(--palette-azure-10);
+      text-decoration: none;
+      @extend %active;
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &:disabled:active {
+      @extend %disabled;
+    }
   }
-  &:disabled,
-  &:disabled:hover,
-  &:disabled:active {
-    @extend %disabled;
+
+  &_danger {
+    border-color: var(--palette-burgundy-50);
+    background-color: var(--semantic-danger-background);
+    color: var(--palette-graphite-100);
+
+    &:hover {
+      background-color: var(--palette-burgundy-50);
+      color: var(--palette-white);
+    }
+
+    &:focus {
+      @extend %focus;
+    }
+
+    &:active {
+      background-color: var(--palette-burgundy-50);
+      color: var(--palette-white);
+      @extend %active;
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &:disabled:active {
+      @extend %disabled;
+    }
   }
 }
 
+// TODO Fjernes - Den er tilstede mens vi venter på iconer
 .dsicon {
-  margin: 0 5px 0 5px;
+  margin: 0 5px;
   font-weight: 600;
 }

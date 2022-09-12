@@ -4,35 +4,45 @@ import ButtonProps from './Button.types';
 
 import styles from './button.module.scss';
 
-export const Button: React.ForwardRefExoticComponent<
-  ButtonProps & React.RefAttributes<HTMLButtonElement>
-> = forwardRef<HTMLButtonElement, ButtonProps>(
+// type SType = keyof typeof styles;
+
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
-      //TODO Gjennomgang av properties vil skal tilby
+      //TODO Gjennomgang av properties
       id,
-      'data-testid': dataTestId = `testid-${id ? id : 'noid'}`,
-      'aria-label': ariaLabel,
-      'aria-hidden': ariaHidden,
-      children,
-      variant,
+      className = '',
+      children = 'Klikk her',
+      variant = 'primary',
       disabled = false,
       icon,
       onClick,
-      className = '',
+      tabIndex,
+      'data-testid': dataTestId = `testid-${id ? id : 'noid'}`,
+      'aria-label': ariaLabel,
+      'aria-labelledby': ariaLabelledby,
+      'aria-describedby': ariaDescribedby,
+      'aria-hidden': ariaHidden,
     },
     ref
   ): JSX.Element => {
+    // const fullStyleName = `button_${variant}` as SType; // Brukt med styles[fullStyleName]
+    const cssName = `${styles.button} ${
+      styles[`button_${variant}`]
+    } ${className}`;
     return (
       <button
         ref={ref}
-        className={`${variant ? styles[variant] : ''} ${className}`}
         id={id}
+        className={cssName}
         data-testid={dataTestId}
         disabled={disabled}
         onClick={onClick}
         aria-label={ariaLabel}
         aria-hidden={ariaHidden}
+        aria-labelledby={ariaLabelledby}
+        aria-describedby={ariaDescribedby}
+        tabIndex={tabIndex}
       >
         {/* TODO implementere visning av ikoner */}
         {icon && <span className={styles.dsicon}>{'\u262F'}</span>}
@@ -43,10 +53,5 @@ export const Button: React.ForwardRefExoticComponent<
 );
 
 Button.displayName = 'Button';
-Button.defaultProps = {
-  children: 'Standardtekst på knapp',
-  disabled: false,
-  variant: 'primary',
-};
 
 export default Button;

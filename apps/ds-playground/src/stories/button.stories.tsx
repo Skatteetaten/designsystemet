@@ -12,45 +12,37 @@ export default {
     (Story) => <div style={{ margin: '1em' }}>{Story()}</div>,
   ],
   argTypes: {
-    icon: {
-      name: 'icon',
-      description: 'Alternativt ikon',
-      control: {
-        type: 'text',
-      },
-    },
     variant: {
       description: 'Button variant (primary | secondary | tertiary | danger)',
       options: ['primary', 'secondary', 'tertiary', 'danger'],
-      control: {
-        type: 'radio',
-      },
+      control: 'radio',
+    },
+    icon: {
+      name: 'icon',
+      description: 'Alternativt ikon',
+      control: 'text',
     },
     disabled: {
       description:
-        'Hvis knapp er disabled så overskrives variant stilene med :disable stil',
-      control: {
-        type: 'boolean',
-      },
+        'Hvis knapp er disabled så overskrives variant-stilene med :disable stil',
+      control: 'boolean',
     },
     children: {
       description: 'Tekst på knapp',
-      control: {
-        type: 'text',
-      },
+      control: 'text',
     },
     className: {
       description:
         'Verdien til blir satt etter designsystemets stilsett for komponent',
-      control: {
-        type: 'text',
-      },
-    },
-    role: {
-      description: 'Ikke sett role hvis du ønsker role=button',
       control: 'text',
     },
-    ariaLabel: { control: 'text' },
+    tabIndex: {
+      control: 'text',
+    },
+    'aria-label': { control: 'text' },
+    'aria-hidden': { control: 'boolean' },
+    'aria-labelledby': { control: 'text' },
+    'aria-describedby': { control: 'text' },
   },
 } as ComponentMeta<typeof Button>;
 
@@ -67,24 +59,34 @@ const TemplateVariant: ComponentStory<typeof Button> = (args) => (
         {...args}
         variant={'primary'}
         onClick={action('KlikkEvent primary')}
-      />
+        /* Overskriver aria-label satt i Primary.args.['aria-label'] */
+        aria-label={'Erstatningslabel satt direkte i komponenten som props'}
+      >
+        {'Primary knapp'}
+      </Button>
     </div>
     <div style={{ marginBottom: '1em' }}>
       <Button
         {...args}
         variant={'secondary'}
         onClick={action('KlikkEvent secondary')}
-      />
+      >
+        {'Secondary knapp'}
+      </Button>
     </div>
     <div style={{ marginBottom: '1em' }}>
       <Button
         {...args}
         variant={'tertiary'}
         onClick={action('KlikkEvent tertiary')}
-      />
+      >
+        {'Tertiary knapp'}
+      </Button>
     </div>
     <div style={{ marginBottom: '1em' }}>
-      <Button {...args} variant={'danger'} onClick={action('danger')} />
+      <Button {...args} variant={'danger'} onClick={action('danger')}>
+        {'Danger variant'}
+      </Button>
     </div>
   </>
 );
@@ -94,6 +96,8 @@ export const Primary = TemplateVariant.bind({});
 export const Secondary = TemplateVariant.bind({});
 
 const baseArgs = {};
+const designUrl =
+  'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1765%3A8640';
 
 Default.args = {
   ...baseArgs,
@@ -106,7 +110,7 @@ Default.parameters = {
     {
       name: 'Varianter',
       type: 'figma',
-      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1765%3A8640',
+      url: designUrl,
     },
   ],
   backgrounds: {
@@ -120,22 +124,24 @@ Default.parameters = {
 Primary.storyName = 'Button';
 Primary.args = {
   ...baseArgs,
-  variant: 'primary',
+  'aria-label':
+    'Alternativ tekst i aria-label satt som props i story for alle Primary-buttons',
+  'aria-describedby': 'jaj',
+  variant: 'secondary',
 };
 Primary.parameters = {
   design: [
     {
       name: 'Varianter',
       type: 'figma',
-      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1765%3A8640',
+      url: designUrl,
     },
   ],
 };
 
-Secondary.storyName = 'Button og Icon (wip)';
+Secondary.storyName = 'Button med Icon';
 Secondary.args = {
   ...baseArgs,
-  variant: 'secondary',
   icon: 'arrow',
 };
 Secondary.parameters = {
@@ -143,7 +149,7 @@ Secondary.parameters = {
     {
       name: 'Varianter',
       type: 'figma',
-      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1765%3A8640',
+      url: designUrl,
     },
   ],
 };

@@ -2,20 +2,24 @@ import { Component } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-devutils';
 
-type cmponentPropsHTMLAttributes = Pick<
+type buttonPropsHTMLAttributes = Pick<
   React.ComponentPropsWithoutRef<'button'>,
-  'onClick' | 'children' | 'aria-label' | 'tabIndex' | 'role' | 'aria-hidden'
+  | 'onClick'
+  | 'children'
+  | 'tabIndex'
+  | 'disabled'
+  | 'aria-label'
+  | 'aria-hidden'
+  | 'aria-labelledby'
+  | 'aria-describedby'
 >;
 
-export interface ButtonComponentProps extends cmponentPropsHTMLAttributes {
+export interface ButtonComponentProps extends buttonPropsHTMLAttributes {
   // TODO Hvordan ikonet skal provides må vurderes
   icon?: string | Component;
   variant?: 'primary' | 'secondary' | 'tertiary' | 'danger';
   children: string;
-  disabled?: boolean;
   className?: string;
-  ariaLabel?: string;
-  role?: string;
 }
 
 type ButtonProps = ButtonComponentProps & BaseProps;
