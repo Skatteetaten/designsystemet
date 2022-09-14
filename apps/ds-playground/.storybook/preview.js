@@ -3,8 +3,12 @@ import React from 'react';
 import '@skatteetaten/ds-core-designtokens/index.css';
 export const decorators = [(Story) => <Story />];
 
-const getBreakPoint = (point) =>
-  getComputedStyle(document.documentElement).getPropertyValue(point);
+const getBreakPoint = (point) => {
+  const pointPx = getComputedStyle(document.documentElement).getPropertyValue(
+    point
+  );
+  return `${parseInt(pointPx) + 1}px`;
+};
 
 const makeViewPort = (dsbreakpoint) => {
   return {

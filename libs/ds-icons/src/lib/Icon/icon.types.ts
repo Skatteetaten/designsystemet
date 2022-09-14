@@ -27,6 +27,5 @@ interface IconCustomPropsWithAriaLabel extends IconPropsHTMLAttributes {
  * svgPath: selve <path> som tegner ikoner
  * tabIndex (optional): Styrer focus. Oversatt til tab-index.
  */
-export type IconProps =
-  | (IconCustomPropsWithTitle & BaseProps)
-  | (IconCustomPropsWithAriaLabel & BaseProps);
+export type IconProps = BaseProps &
+  (IconCustomPropsWithTitle | IconCustomPropsWithAriaLabel);

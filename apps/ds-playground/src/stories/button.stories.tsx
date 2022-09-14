@@ -1,8 +1,21 @@
 import { Button } from '@skatteetaten/ds-buttons';
+import {
+  AccountChildIcon,
+  AccountEnkIcon,
+  Icon as DefaultIcon,
+  AccountMultipleIcon,
+} from '@skatteetaten/ds-icons';
 import { action } from '@storybook/addon-actions';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
+import './button.stories.css';
 // import ButtonDocs from '../docs/button.mdx';
+
+const iconList = {
+  AccountChildIcon: <AccountChildIcon {...DefaultIcon.arguments} />,
+  AccountEnkIcon: <AccountEnkIcon {...DefaultIcon.arguments} />,
+  AccountMultipleIcon: <AccountMultipleIcon {...DefaultIcon.arguments} />,
+};
 
 export default {
   component: Button,
@@ -16,33 +29,53 @@ export default {
       description: 'Button variant (primary | secondary | tertiary | danger)',
       options: ['primary', 'secondary', 'tertiary', 'danger'],
       control: 'radio',
+      table: { defaultValue: { summary: 'primary' } },
     },
     icon: {
-      name: 'icon',
-      description: 'Alternativt ikon',
-      control: 'text',
+      options: [''].concat(Object.keys(iconList)),
+      control: 'select',
+      mapping: iconList,
+      description: 'Icon-komponent (optional)',
+      table: { defaultValue: { summary: 'undefined' } },
     },
     disabled: {
       description:
         'Hvis knapp er disabled så overskrives variant-stilene med :disable stil',
       control: 'boolean',
+      table: { defaultValue: { summary: 'false' } },
     },
     children: {
       description: 'Tekst på knapp',
       control: 'text',
+      table: { defaultValue: { summary: '' } },
     },
     className: {
+      control: 'select',
+      options: ['', 'buttonClassnameDark', 'buttonClassnameLight'],
       description:
-        'Verdien til blir satt etter designsystemets stilsett for komponent',
-      control: 'text',
+        'Verdien appended til designsystemets stilsett for komponent',
+      table: { defaultValue: { summary: '' } },
     },
     tabIndex: {
       control: 'text',
+      table: { defaultValue: { summary: '' } },
     },
-    'aria-label': { control: 'text' },
-    'aria-hidden': { control: 'boolean' },
-    'aria-labelledby': { control: 'text' },
-    'aria-describedby': { control: 'text' },
+    'aria-label': {
+      control: 'text',
+      table: { defaultValue: { summary: '' } },
+    },
+    'aria-hidden': {
+      control: 'boolean',
+      table: { defaultValue: { summary: '' } },
+    },
+    'aria-labelledby': {
+      control: 'text',
+      table: { defaultValue: { summary: '' } },
+    },
+    'aria-describedby': {
+      control: 'text',
+      table: { defaultValue: { summary: '' } },
+    },
   },
 } as ComponentMeta<typeof Button>;
 
@@ -61,6 +94,14 @@ const TemplateVariant: ComponentStory<typeof Button> = (args) => (
         onClick={action('KlikkEvent primary')}
         /* Overskriver aria-label satt i Primary.args.['aria-label'] */
         aria-label={'Erstatningslabel satt direkte i komponenten som props'}
+        icon={
+          args.icon ? (
+            <AccountEnkIcon
+              /* NB. DefautlIcon.arguments er viktig. */
+              {...DefaultIcon.arguments}
+            />
+          ) : undefined
+        }
       >
         {'Primary knapp'}
       </Button>
@@ -70,6 +111,9 @@ const TemplateVariant: ComponentStory<typeof Button> = (args) => (
         {...args}
         variant={'secondary'}
         onClick={action('KlikkEvent secondary')}
+        icon={
+          args.icon ? <AccountEnkIcon {...DefaultIcon.arguments} /> : undefined
+        }
       >
         {'Secondary knapp'}
       </Button>
@@ -79,12 +123,22 @@ const TemplateVariant: ComponentStory<typeof Button> = (args) => (
         {...args}
         variant={'tertiary'}
         onClick={action('KlikkEvent tertiary')}
+        icon={
+          args.icon ? <AccountEnkIcon {...DefaultIcon.arguments} /> : undefined
+        }
       >
         {'Tertiary knapp'}
       </Button>
     </div>
     <div style={{ marginBottom: '1em' }}>
-      <Button {...args} variant={'danger'} onClick={action('danger')}>
+      <Button
+        {...args}
+        variant={'danger'}
+        onClick={action('danger')}
+        icon={
+          args.icon ? <AccountEnkIcon {...DefaultIcon.arguments} /> : undefined
+        }
+      >
         {'Danger variant'}
       </Button>
     </div>
@@ -126,7 +180,7 @@ Primary.args = {
   ...baseArgs,
   'aria-label':
     'Alternativ tekst i aria-label satt som props i story for alle Primary-buttons',
-  'aria-describedby': 'jaj',
+  'aria-describedby': 'elementid satt i story',
   variant: 'secondary',
 };
 Primary.parameters = {
@@ -142,7 +196,7 @@ Primary.parameters = {
 Secondary.storyName = 'Button med Icon';
 Secondary.args = {
   ...baseArgs,
-  icon: 'arrow',
+  icon: true,
 };
 Secondary.parameters = {
   design: [

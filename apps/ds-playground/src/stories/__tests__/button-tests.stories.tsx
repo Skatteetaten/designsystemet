@@ -1,7 +1,6 @@
 import { Button } from '@skatteetaten/ds-buttons';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ElementHandle } from 'puppeteer';
-import './css-for-test.css';
 
 const wrapper = '[data-test-block]';
 const defaultButtonText = 'Standardtekst på knapp';
@@ -109,14 +108,3 @@ ButtonTertiary.parameters = {
     expect(image).toMatchImageSnapshot();
   },
 };
-
-//TODO FRONT-842 jobbe videre med disse testene:
-/* export const IconWithTitleAndClassName = Template.bind({});
-IconWithTitleAndClassName.args = {
-  title: 'Some title',
-  className: 'myIconClassname',
-};
-
-export const IconWithRole = Template.bind({});
-IconWithRole.args = { role: 'img' };
-*/

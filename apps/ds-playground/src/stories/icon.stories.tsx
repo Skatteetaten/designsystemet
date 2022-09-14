@@ -7,7 +7,7 @@ import {
 } from '@skatteetaten/ds-icons';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import './icon.css';
+import './icon.stories.css';
 
 export default {
   component: DefaultIcon,

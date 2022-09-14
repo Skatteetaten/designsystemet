@@ -22,17 +22,35 @@
 }
 
 .button {
-  padding: 4px 16px;
+  /* padding: 4px 16px; */
+  // TODO Endre px-verdier til Rem hvis mulig
+  padding: var(--spacing-xs) var(--spacing-m);
   border: 3px solid;
   border-radius: 44px;
   cursor: pointer;
+  font-size: var(--font-size-m);
   font-weight: var(--font-weight-normal);
   transition: 0.15s;
+
+  .icon svg {
+    // TODO Må gjøre en korrigering på width og height.
+    // Figma skisser for knapper viser ikoner i størrelse 18.33px...
+    // Vi importerer ikon fra Icon-komponenten og den bruker størrelser satt med design-token sizes.
+    // Se bort i fra ikonstørrelse i code review. Må avklares
+    width: var(--size-small);
+    height: var(--size-small);
+    margin-right: var(--spacing-s);
+    background-color: inherit;
+  }
 
   &_primary {
     border-color: var(--palette-azure-70);
     background-color: var(--palette-azure-70);
     color: var(--palette-white);
+
+    & .icon svg {
+      fill: var(--palette-white);
+    }
 
     &:hover {
       border-color: var(--palette-azure-100);
@@ -44,15 +62,18 @@
     }
 
     &:active {
+      @extend %active;
+
       border-color: var(--palette-azure-100);
       background-color: var(--palette-azure-100);
-      @extend %active;
     }
 
     &:disabled,
     &:disabled:hover,
     &:disabled:active {
       @extend %disabled;
+
+      // TODO fiks farge på icon hvis disabled.
     }
   }
 
@@ -61,6 +82,10 @@
     background-color: var(--palette-white);
     color: var(--palette-azure-70);
 
+    & .icon svg {
+      fill: var(--palette-azure-70);
+    }
+
     &:hover {
       border-color: var(--palette-azure-70);
       background-color: var(--palette-azure-10);
@@ -71,9 +96,10 @@
     }
 
     &:active {
+      @extend %active;
+
       border-color: var(--palette-azure-70);
       background-color: var(--palette-azure-10);
-      @extend %active;
     }
 
     &:disabled,
@@ -89,6 +115,10 @@
     color: var(--palette-azure-70);
     text-decoration: underline;
 
+    & .icon svg {
+      fill: var(--palette-azure-70);
+    }
+
     &:hover {
       border-color: var(--palette-azure-70);
       background-color: var(--palette-azure-10);
@@ -99,10 +129,11 @@
     }
 
     &:active {
+      @extend %active;
+
       border-color: var(--palette-azure-70);
       background-color: var(--palette-azure-10);
       text-decoration: none;
-      @extend %active;
     }
 
     &:disabled,
@@ -117,9 +148,17 @@
     background-color: var(--semantic-danger-background);
     color: var(--palette-graphite-100);
 
+    & .icon svg {
+      fill: var(--palette-graphite-100);
+    }
+
     &:hover {
       background-color: var(--palette-burgundy-50);
       color: var(--palette-white);
+
+      & .icon svg {
+        fill: var(--palette-white);
+      }
     }
 
     &:focus {
@@ -127,9 +166,14 @@
     }
 
     &:active {
+      @extend %active;
+
       background-color: var(--palette-burgundy-50);
       color: var(--palette-white);
-      @extend %active;
+
+      & .icon svg {
+        fill: var(--palette-white);
+      }
     }
 
     &:disabled,
@@ -138,10 +182,4 @@
       @extend %disabled;
     }
   }
-}
-
-// TODO Fjernes - Den er tilstede mens vi venter på iconer
-.dsicon {
-  margin: 0 5px;
-  font-weight: 600;
 }

@@ -1,10 +1,8 @@
-import { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 
 import ButtonProps from './Button.types';
 
 import styles from './button.module.scss';
-
-// type SType = keyof typeof styles;
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
@@ -17,8 +15,10 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       disabled = false,
       icon,
       onClick,
+      onBlur,
+      onFocus,
       tabIndex,
-      'data-testid': dataTestId = `testid-${id ? id : 'noid'}`,
+      'data-testid': dataTestId,
       'aria-label': ariaLabel,
       'aria-labelledby': ariaLabelledby,
       'aria-describedby': ariaDescribedby,
@@ -26,7 +26,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ): JSX.Element => {
-    // const fullStyleName = `button_${variant}` as SType; // Brukt med styles[fullStyleName]
     const cssName = `${styles.button} ${
       styles[`button_${variant}`]
     } ${className}`;
@@ -38,14 +37,15 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         data-testid={dataTestId}
         disabled={disabled}
         onClick={onClick}
+        onBlur={onBlur}
+        onFocus={onFocus}
         aria-label={ariaLabel}
         aria-hidden={ariaHidden}
         aria-labelledby={ariaLabelledby}
         aria-describedby={ariaDescribedby}
         tabIndex={tabIndex}
       >
-        {/* TODO implementere visning av ikoner */}
-        {icon && <span className={styles.dsicon}>{'\u262F'}</span>}
+        {icon && <span className={styles.icon}>{icon}</span>}
         {children}
       </button>
     );
