@@ -1,19 +1,19 @@
-import { MyIcon } from '@skatteetaten/ds-icons';
+import { Icon, AccountChildSVGpath } from '@skatteetaten/ds-icons';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ElementHandle } from 'puppeteer';
 
 import '../icon.css';
 
 /* eslint-disable jest/no-standalone-expect */
-//TODO FRONT-826 eslint regel bør legges inn jest/no-standalone-expect
+//TODO fjernes når eslint-PR er inne
 export default {
-  component: MyIcon,
+  component: Icon,
   title: 'Tests/Icon',
-} as ComponentMeta<typeof MyIcon>;
+} as ComponentMeta<typeof Icon>;
 
-const Template: ComponentStory<typeof MyIcon> = (args) => (
+const Template: ComponentStory<typeof Icon> = (args) => (
   <div style={{ width: '150px' }} data-test-block>
-    <MyIcon {...args} />
+    <Icon {...args} svgPath={AccountChildSVGpath} />
   </div>
 );
 
@@ -53,21 +53,27 @@ IconDefaults.parameters = {
   },
 };
 
-//TODO FRONT-842 jobbe videre med disse testene:
-export const IconWithTitleAndClassName = Template.bind({});
-IconWithTitleAndClassName.args = {
-  title: 'Some title',
+//Legge til test med Ref
+export const IconWithClassName = Template.bind({});
+IconWithClassName.args = {
   className: 'myIconClassname',
+};
+
+export const IconWithTitle = Template.bind({});
+IconWithTitle.args = {
+  title: 'min custom title beskrivelse',
+};
+
+export const IconWithAriaLabel = Template.bind({});
+IconWithAriaLabel.args = {
+  'aria-label': 'min custom aria-label beskrivelse',
 };
 
 export const IconWithRole = Template.bind({});
 IconWithRole.args = { role: 'img' };
 
-export const IconWithAriaLabel = Template.bind({});
-IconWithAriaLabel.args = { 'aria-label': 'Some aria-label' };
-
 export const IconWithViewbox = Template.bind({});
 IconWithViewbox.args = { viewBox: '0 0 48 48' };
 
 export const IconWithSize = Template.bind({});
-IconWithSize.args = { size: 'small' };
+IconWithSize.args = { size: 'extraLarge' };
