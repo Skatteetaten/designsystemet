@@ -53,6 +53,20 @@
           "libs/ds-core-designtokens/**/*.scss"
         ]
       }
+    },
+    "set-version": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm version {args.packageVersion} --no-git-tag",
+        "cwd": "libs/ds-core-designtokens"
+      }
+    },
+    "publish": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm publish {args.switches}",
+        "cwd": "dist/libs/ds-core-designtokens"
+      }
     }
   }
 }

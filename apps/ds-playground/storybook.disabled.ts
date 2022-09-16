@@ -17,12 +17,12 @@ initStoryshots({
   test: puppeteerTest({
     storybookUrl,
     async testBody(page, options) {
-      const testResult = options.context.parameters.puppeteerTest
-        ? options.context.parameters.puppeteerTest(page, options)
+      const testResult = options.context.parameters['puppeteerTest']
+        ? options.context.parameters['puppeteerTest'](page, options)
         : null;
-      if (options.context.parameters.fileName.includes('__tests__')) {
+      if (options.context.parameters['fileName'].includes('__tests__')) {
         const coverage = await page.evaluate('window.__coverage__');
-        const outputFile = `./.nyc_output/${options.context.parameters.__id}.json`;
+        const outputFile = `./.nyc_output/${options.context.parameters['__id']}.json`;
 
         await fs.promises.mkdir('./.nyc_output', { recursive: true }).then(() =>
           fs.promises.writeFile(outputFile, JSON.stringify(coverage, null, 2), {
