@@ -4,7 +4,9 @@ import ButtonProps from './Button.types';
 
 import styles from './button.module.scss';
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button: React.ForwardRefExoticComponent<
+  ButtonProps & React.RefAttributes<HTMLButtonElement>
+> = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       //TODO Gjennomgang av properties
@@ -53,5 +55,5 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 );
 
 Button.displayName = 'Button';
-
+// TODO sjekk default / named
 export default Button;
