@@ -1,4 +1,8 @@
 {
   "name": "@skatteetaten/ds-buttons",
-  "version": "0.0.1"
+  "groupId": "no.skatteetaten.aurora",
+  "version": "0.0.6",
+  "publishConfig": {
+    "registry": "https://nexus.sits.no/repository/npm-internal/"
+  }
 }

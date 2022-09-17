@@ -1,7 +1,20 @@
 {
-  "name": "designsystemet",
-  "version": "0.0.0",
+  "name": "@skatteetaten/designsystemet",
+  "groupId": "no.skatteetaten.aurora",
+  "version": "0.0.6",
   "license": "Apache-2.0",
+  "private": false,
+  "author": {
+    "name": "Skatteetaten"
+  },
+  "files": [
+    "dist",
+    "metadata",
+    "git-properties.json"
+  ],
+  "publishConfig": {
+    "registry": "https://nexus.sits.no/repository/npm-internal/"
+  },
   "scripts": {
     "start": "nx build ds-core-designtokens && nx serve",
     "prepare": "lefthook install -a",
@@ -12,7 +25,8 @@
     "test": "rimraf .nyc_output/* && nx run-many --target=test",
     "test:playground": "nx test",
     "test:update": "rimraf .nyc_output/* && nx run-many --target=test -- -u",
-    "generate:coverage": "nyc report --report-dir=coverage/apps/stories --reporter=html",
+    "generate:coverage": "nyc report --report-dir=coverage/apps/stories --reporter=html --reporter=lcov",
+    "test:coverage": "CI=true STORYSHOTS_MODE=static npm-run-all test",
     "typecheck": "nx run-many --target=tsc",
     "clean": "nx clear-cache",
     "lint": "nx run-many --target=lint",
@@ -21,9 +35,9 @@
     "stylelint": "nx run-many --target=stylelint",
     "stylelint:fix": "nx run-many --target=stylelint --fix",
     "prettier": "nx format:check",
-    "prettier:fix": "nx format"
+    "prettier:fix": "nx format",
+    "sonarqube": "sonar-scanner"
   },
-  "private": true,
   "dependencies": {
     "@skatteetaten/ds-core-designtokens": "file:dist/libs/ds-core-designtokens",
     "core-js": "3.24.1",
@@ -46,6 +60,7 @@
     "@nrwl/storybook": "14.5.4",
     "@nrwl/web": "14.5.4",
     "@nrwl/workspace": "14.5.4",
+    "@skatteetaten/ci-scripts": "2.0.9",
     "@storybook/addon-essentials": "6.5.9",
     "@storybook/addon-storyshots": "6.5.9",
     "@storybook/addon-storyshots-puppeteer": "6.5.10",
@@ -86,6 +101,7 @@
     "prettier": "2.6.2",
     "puppeteer": "16.1.1",
     "react-test-renderer": "18.2.0",
+    "sonarqube-scanner": "2.8.1",
     "storybook-addon-designs": "6.3.1",
     "stylelint": "14.10.0",
     "stylelint-config-idiomatic-order": "8.1.0",

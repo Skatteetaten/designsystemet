@@ -1,0 +1,18 @@
+{
+  "docker": {
+    "maintainer": "Aurora OpenShift Utvikling <utvpaas@skatteetaten.no>",
+    "labels": {
+      "io.k8s.description": "Skatteetatens designsystem",
+      "io.openshift.tags": "openshift,react,nodejs"
+    }
+  },
+  "web": {
+    "webapp": {
+      "content": "dist/storybook/ds-playground",
+      "path": "/designsystemet/",
+      "headers": {
+        "Cache-Control": "no-cache"
+      }
+    }
+  }
+}
