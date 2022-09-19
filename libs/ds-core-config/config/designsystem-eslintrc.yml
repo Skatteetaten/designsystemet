@@ -10,6 +10,7 @@ extends:
   - 'plugin:testing-library/react'
   - 'plugin:sonarjs/recommended'
   - 'plugin:@nrwl/nx/react'
+  - 'plugin:jsdoc/recommended'
   - prettier # has to be last in order to overwrite other configs
 overrides:
   - files: ['*.ts', '*.tsx']
@@ -87,3 +88,4 @@ rules:
         order: asc
         caseInsensitive: true
       newlines-between: always
+  jsdoc/require-jsdoc: off
