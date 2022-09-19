@@ -2,7 +2,7 @@ import React from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-devutils';
 
-type buttonPropsHTMLAttributes = Pick<
+type ButtonPropsHTMLAttributes = Pick<
   React.ComponentPropsWithoutRef<'button'>,
   | 'children'
   | 'tabIndex'
@@ -16,17 +16,15 @@ type buttonPropsHTMLAttributes = Pick<
   | 'aria-describedby'
 >;
 
-interface ButtonComponentProps extends buttonPropsHTMLAttributes {
+interface ButtonComponentProps extends ButtonPropsHTMLAttributes {
   /**
-   * @param {ButtonComponentProps.variant} variant Optional variant type
-   * @param {React.ReactNode} icon Icon-komponent. Default: primary
-   * @param {string} children - Tekst på knapp
+   * @param {ButtonComponentProps.variant} variant - (Optional) Variant type.
+   * @param {React.ReactNode} icon - (Default: primary) Icon-komponent.
+   * @param {string} children - Tekst på knapp.
    */
   icon?: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'tertiary' | 'danger';
   children: string;
 }
 
-type ButtonProps = ButtonComponentProps & BaseProps;
-
-export default ButtonProps;
+export type ButtonProps = BaseProps & ButtonComponentProps;
