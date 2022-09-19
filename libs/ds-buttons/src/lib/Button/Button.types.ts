@@ -16,7 +16,7 @@ type ButtonPropsHTMLAttributes = Pick<
   | 'aria-describedby'
 >;
 
-interface ButtonComponentProps extends ButtonPropsHTMLAttributes {
+export interface ButtonComponentProps extends ButtonPropsHTMLAttributes {
   /**
    * @param {ButtonComponentProps.variant} variant - (Optional) Variant type.
    * @param {React.ReactNode} icon - (Default: primary) Icon-komponent.
