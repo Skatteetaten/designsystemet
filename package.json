@@ -1,7 +1,7 @@
 {
   "name": "@skatteetaten/designsystemet",
   "groupId": "no.skatteetaten.aurora",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "Apache-2.0",
   "private": false,
   "author": {
@@ -17,7 +17,6 @@
   },
   "scripts": {
     "start": "nx build ds-core-designtokens && nx serve",
-    "prepare": "lefthook install -a",
     "prebuild": "npm-run-all lint stylelint prettier typecheck",
     "build": "nx run-many --target=build",
     "build:playground": "nx build ds-core-designtokens && nx build",

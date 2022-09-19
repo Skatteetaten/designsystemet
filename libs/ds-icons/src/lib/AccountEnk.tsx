@@ -11,6 +11,10 @@ export const AccountEnkSVGpath = (
   />
 );
 
+//TODO Komponenten AccountEnkIcon kan nå ikke kalles uten svgPath som prop da den prop'en er
+// required i type deklarasjonen.
+// Dette selv om vi fastsetter svgPath i funksjonen som eksporteres.
+// Endre sånn at AccountEnkIcon kan kalles ute at konsument provider en svgPath
 export function AccountEnkIcon(props: IconProps): JSX.Element {
   return <Icon {...props} svgPath={AccountEnkSVGpath} />;
 }

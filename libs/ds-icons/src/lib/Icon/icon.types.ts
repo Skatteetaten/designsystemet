@@ -19,14 +19,13 @@ interface IconCustomPropsWithAriaLabel extends IconPropsHTMLAttributes {
 }
 
 /**
- * title (optional): Oppretter en <title> tag nested i svg. Dette medfører tooltip.
- * aria-label (optional): Hvis svg-en er meningsbærende og ikke bare pynt/dekor skal tag'en ha aria-label="beskrivelse". Merk at aria-label vises kun når title ikke allerede er angitt.
- * role (optional): Mulighet til å overskrive role. Default er "img".
- * viewBox (optional): definerer størrelsen på svg viewBox'en. Default er 0 0 24 24.
- * size (optional): Setter width og height på selve ikonet basert på Size verdier. Default er 'small'.
- * svgPath: selve <path> som tegner ikoner
- * tabIndex (optional): Styrer focus. Oversatt til tab-index.
+ * @param {IconCustomPropsWithTitle.title} title - (Optional) Oppretter en <title> tag nested i svg. Dette medfører tooltip.
+ * @param {IconCustomPropsWithAriaLabel.aria-label} aria-label - (Optional): Hvis svg-en er meningsbærende og ikke bare pynt/dekor skal tag'en ha aria-label="beskrivelse". Merk at aria-label vises kun når title ikke allerede er angitt.
+ * @param {IconPropsHTMLAttributes.role} role - (Default: "img") Mulighet til å overskrive role.
+ * @param {IconPropsHTMLAttributes.viewBox} viewBox - (Optional) definerer størrelsen på svg viewBox'en. Default er 0 0 24 24.
+ * @param {IconCustomPropsWithTitle.size} size - (Default: small) Setter width og height på selve ikonet basert på Size verdier.
+ * @param {IconCustomPropsWithTitle.svgPath} svgPath - selve <path> som tegner ikoner
+ * @param {IconPropsHTMLAttributes.tabIndex} tabIndex - (Optional) Styrer focus. Oversatt til tab-index.
  */
-export type IconProps =
-  | (IconCustomPropsWithTitle & BaseProps)
-  | (IconCustomPropsWithAriaLabel & BaseProps);
+export type IconProps = BaseProps &
+  (IconCustomPropsWithTitle | IconCustomPropsWithAriaLabel);

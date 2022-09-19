@@ -2,7 +2,7 @@ import { Icon, AccountChildSVGpath } from '@skatteetaten/ds-icons';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ElementHandle } from 'puppeteer';
 
-import '../icon.css';
+import '../icon.stories.css';
 
 /* eslint-disable jest/no-standalone-expect */
 //TODO fjernes når eslint-PR er inne
