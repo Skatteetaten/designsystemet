@@ -4,6 +4,7 @@ import {
   AccountEnkIcon,
   Icon as DefaultIcon,
   AccountMultipleIcon,
+  SendIcon,
 } from '@skatteetaten/ds-icons';
 import { action } from '@storybook/addon-actions';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
@@ -15,6 +16,7 @@ const iconList = {
   AccountChildIcon: <AccountChildIcon {...DefaultIcon.arguments} />,
   AccountEnkIcon: <AccountEnkIcon {...DefaultIcon.arguments} />,
   AccountMultipleIcon: <AccountMultipleIcon {...DefaultIcon.arguments} />,
+  SendIcon: <SendIcon {...DefaultIcon.arguments} size={'medium'} />,
 };
 
 export default {
@@ -51,7 +53,7 @@ export default {
     },
     className: {
       control: 'select',
-      options: ['', 'buttonClassnameDark', 'buttonClassnameLight'],
+      options: ['', 'buttonClassnameGreen', 'buttonClassnameBlue'],
       description:
         'Verdien appended til designsystemets stilsett for komponent',
       table: { defaultValue: { summary: '' } },
@@ -66,10 +68,6 @@ export default {
     },
     'aria-hidden': {
       control: 'boolean',
-      table: { defaultValue: { summary: '' } },
-    },
-    'aria-labelledby': {
-      control: 'text',
       table: { defaultValue: { summary: '' } },
     },
     'aria-describedby': {
@@ -149,13 +147,16 @@ export const Default = TemplateDefault.bind({});
 export const Primary = TemplateVariant.bind({});
 export const Secondary = TemplateVariant.bind({});
 
-const baseArgs = {};
+const baseArgs = {
+  children: 'Klikk',
+};
 const designUrl =
   'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1765%3A8640';
 
 Default.args = {
   ...baseArgs,
   variant: 'primary',
+  disabled: false,
 };
 Default.storyName = 'Standard';
 Default.parameters = {

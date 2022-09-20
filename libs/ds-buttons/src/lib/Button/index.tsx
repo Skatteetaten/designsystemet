@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 
 import { ButtonProps } from './Button.types';
 
@@ -7,7 +7,6 @@ import styles from './button.module.scss';
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
-      //TODO Gjennomgang av properties
       id,
       className = '',
       children = 'Klikk her',
@@ -20,15 +19,15 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       tabIndex,
       'data-testid': dataTestId,
       'aria-label': ariaLabel,
-      'aria-labelledby': ariaLabelledby,
       'aria-describedby': ariaDescribedby,
       'aria-hidden': ariaHidden,
     },
     ref
   ): JSX.Element => {
+    const withicon = icon ? `${styles.button_withicon}` : '';
     const cssName = `${styles.button} ${
       styles[`button_${variant}`]
-    } ${className}`;
+    } ${withicon} ${className}`;
     return (
       <button
         ref={ref}
@@ -41,7 +40,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         onFocus={onFocus}
         aria-label={ariaLabel}
         aria-hidden={ariaHidden}
-        aria-labelledby={ariaLabelledby}
         aria-describedby={ariaDescribedby}
         tabIndex={tabIndex}
       >

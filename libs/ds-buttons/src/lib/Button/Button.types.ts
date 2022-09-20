@@ -17,14 +17,14 @@ type ButtonPropsHTMLAttributes = Pick<
 >;
 
 export interface ButtonComponentProps extends ButtonPropsHTMLAttributes {
-  /**
-   * @param {ButtonComponentProps.variant} variant - (Optional) Variant type.
-   * @param {React.ReactNode} icon - (Default: primary) Icon-komponent.
-   * @param {string} children - Tekst på knapp.
-   */
   icon?: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'tertiary' | 'danger';
   children: string;
 }
 
+/**
+ * @param {ButtonComponentProps.variant} variant - (Optional) Default "primary" variant av type enum.
+ * @param {React.ReactNode} icon - (Optional) Icon-komponent.
+ * @param {string} children - Tekst på knapp.
+ */
 export type ButtonProps = BaseProps & ButtonComponentProps;

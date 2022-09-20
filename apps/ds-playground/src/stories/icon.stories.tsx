@@ -32,7 +32,15 @@ Icon.argTypes = {
   className: { control: 'select', options: ['myIconClassname'] },
   title: { control: 'text' },
   'aria-label': { control: 'text' },
-  role: { control: 'text' },
+  role: {
+    control: 'text',
+    table: {
+      defaultValue: {
+        /* (args: TArgs, context: StoryContext<TFramework, TArgs>) */
+        summary: `noe ${JSON.stringify(DefaultIcon.defaultProps)}`,
+      },
+    },
+  },
   viewBox: { control: 'text' },
   size: { control: 'select', options: sizeArr, default: 'small' },
   svgPath: {
@@ -55,7 +63,6 @@ Icon.argTypes = {
 
 Icon.args = {
   ...{ ...DefaultIcon.defaultProps, 'aria-label': undefined },
-  title: 'Default title',
-  viewBox: '0 0 24 24',
+  title: 'testingr',
   svgPath: AccountChildSVGpath,
 };

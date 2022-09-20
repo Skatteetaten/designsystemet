@@ -7,11 +7,27 @@
   cursor: not-allowed;
   text-decoration: none;
   transform: none;
+
+  & .icon svg {
+    fill: var(--palette-graphite-50);
+  }
 }
 
 %focus {
-  outline: var(--palette-azure-70) solid 2px;
-  outline-offset: 2px;
+  /*   outline: var(--palette-azure-70) solid 2px;
+  outline-offset: 2px; */
+  outline: none;
+
+  &::before {
+    position: absolute;
+    top: -7px; // border: 2px + offset: 1px
+    right: -7px; // border: 2px + offset: 1px
+    bottom: -7px; // border: 2px + offset: 1px
+    left: -7px; // border: 2px + offset: 1px
+    border: 2px solid var(--palette-azure-70);
+    border-radius: 12rem; // border—radius: 6px + offset: 1px
+    content: '';
+  }
 }
 
 %active {
@@ -22,25 +38,31 @@
 }
 
 .button {
-  /* padding: 4px 16px; */
-  // TODO Endre px-verdier til Rem hvis mulig
+  position: relative;
+  display: inline-flex;
+  align-items: center;
   padding: var(--spacing-xs) var(--spacing-m);
-  border: 3px solid;
-  border-radius: 44px;
+  border: 0.18rem solid;
+  border-radius: 2.75rem;
   cursor: pointer;
   font-size: var(--font-size-m);
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--semantic-line-height-buttons);
+  text-align: center;
   transition: 0.15s;
 
-  .icon svg {
-    // TODO Må gjøre en korrigering på width og height.
-    // Figma skisser for knapper viser ikoner i størrelse 18.33px...
-    // Vi importerer ikon fra Icon-komponenten og den bruker størrelser satt med design-token sizes.
-    // Se bort i fra ikonstørrelse i code review. Må avklares
-    width: var(--size-small);
-    height: var(--size-small);
-    margin-right: var(--spacing-s);
-    background-color: inherit;
+  &_withicon {
+    padding-right: var(--spacing-l);
+    text-align: left;
+  }
+
+  .icon {
+    display: flex;
+
+    & svg {
+      margin-right: var(--spacing-xs);
+      background-color: inherit;
+    }
   }
 
   &_primary {
@@ -170,16 +192,16 @@
 
       background-color: var(--palette-burgundy-50);
       color: var(--palette-white);
-
-      & .icon svg {
-        fill: var(--palette-white);
-      }
     }
 
     &:disabled,
     &:disabled:hover,
     &:disabled:active {
       @extend %disabled;
+
+      & .icon svg {
+        fill: var(--palette-graphite-50);
+      }
     }
   }
 }
