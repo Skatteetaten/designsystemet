@@ -4,34 +4,32 @@ import { IconProps } from './icon.types';
 
 import styles from './icon.module.scss';
 
-// TODO utvide skript til å opprette mappe .nyc_output
-// TODO FRONT-842 Bør tilby TemaIcon
 export const Icon = React.forwardRef<SVGSVGElement, IconProps>(
   (
     {
       id,
-      className,
+      className = '',
       'data-testid': dataTestId,
       title,
       'aria-label': ariaLabel,
       role = title || ariaLabel ? 'img' : undefined,
-      viewBox = '0 0 24 24',
+      variant = 'systemIcon',
+      viewBox = variant === 'systemIcon' ? '0 0 24 24' : '0 0 48 48',
       size = 'medium',
       svgPath,
-
       tabIndex,
     }: IconProps,
     ref
   ): JSX.Element => {
     const uniqueId = useId();
-    const sizeClassName = styles[`icon_${size}`];
+    const sizeClassName = styles[`${variant}_${size}`];
     const titleId = `svgtitle-${id ?? uniqueId}`;
 
     return (
       <svg
         ref={ref}
         id={id}
-        className={className ? `${sizeClassName} ${className}` : sizeClassName}
+        className={`${styles[variant]} ${sizeClassName} ${className}`}
         data-testid={dataTestId}
         aria-label={!title ? ariaLabel : undefined}
         role={role}

@@ -4,6 +4,7 @@ import {
   AccountChildSVGpath,
   AccountEnkSVGpath,
   AccountMultipleSVGpath,
+  AndreForholdSVGpath,
 } from '@skatteetaten/ds-icons';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
@@ -11,7 +12,7 @@ import './icon.stories.css';
 
 export default {
   component: DefaultIcon,
-  title: 'Design System',
+  title: 'Design System/Icon',
 } as ComponentMeta<typeof DefaultIcon>;
 
 const Template: ComponentStory<typeof DefaultIcon> = (args) => (
@@ -20,24 +21,37 @@ const Template: ComponentStory<typeof DefaultIcon> = (args) => (
   </div>
 );
 
-export const Icon = Template.bind({});
+export const SystemIcon = Template.bind({});
+export const ThemeIcon = Template.bind({});
 
-const svgPaths = {
+const SystemIconSVGPaths = {
   AccountChildSVGpath,
   AccountEnkSVGpath,
   AccountMultipleSVGpath,
 };
 
-Icon.argTypes = {
+const ThemeIconSVGPaths = {
+  AndreForholdSVGpath,
+};
+
+const commonArgTypes = {
   className: { control: 'select', options: ['myIconClassname'] },
   title: { control: 'text' },
   'aria-label': { control: 'text' },
   role: { control: 'text' },
   viewBox: { control: 'text' },
-  size: { control: 'select', options: sizeArr, default: 'small' },
+  variant: {
+    control: { type: 'text' },
+    table: { disable: true },
+  },
+};
+
+SystemIcon.argTypes = {
+  ...commonArgTypes,
+  size: { control: 'select', options: sizeArr, default: 'medium' },
   svgPath: {
-    options: Object.keys(svgPaths),
-    mapping: svgPaths,
+    options: Object.keys(SystemIconSVGPaths),
+    mapping: SystemIconSVGPaths,
     control: {
       type: 'select',
       labels: {
@@ -53,9 +67,41 @@ Icon.argTypes = {
   },
 };
 
-Icon.args = {
-  ...{ ...DefaultIcon.defaultProps, 'aria-label': undefined },
+SystemIcon.args = {
   title: 'Default title',
+  variant: 'systemIcon',
   viewBox: '0 0 24 24',
+  size: 'medium',
   svgPath: AccountChildSVGpath,
+};
+
+ThemeIcon.argTypes = {
+  ...commonArgTypes,
+  size: {
+    control: 'select',
+    options: [sizeArr[2], sizeArr[3]],
+    default: 'medium',
+  },
+  svgPath: {
+    options: Object.keys(ThemeIconSVGPaths),
+    mapping: ThemeIconSVGPaths,
+    control: {
+      type: 'select',
+      labels: {
+        AndreForholdSVGpath: 'AndreForhold',
+      },
+    },
+    table: {
+      type: { summary: 'select' },
+      defaultValue: { summary: 'AndreForhold' },
+    },
+  },
+};
+
+ThemeIcon.args = {
+  title: 'Default title',
+  variant: 'themeIcon',
+  viewBox: '0 0 48 48',
+  size: 'medium',
+  svgPath: AndreForholdSVGpath,
 };

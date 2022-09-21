@@ -12,6 +12,9 @@ export const variantArr = [
 ] as const;
 export type Variant = typeof variantArr[number];
 
+export const iconVariantArr = ['systemIcon', 'themeIcon'] as const;
+export type IconVariant = typeof iconVariantArr[number];
+
 export const sizeArr = [
   'extraSmall',
   'small',

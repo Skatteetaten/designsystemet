@@ -4,6 +4,8 @@ import { ElementHandle } from 'puppeteer';
 
 import '../icon.stories.css';
 
+/* eslint-disable jest/no-standalone-expect */
+//TODO fjernes når eslint-PR er inne
 export default {
   component: Icon,
   title: 'Tests/Icon',

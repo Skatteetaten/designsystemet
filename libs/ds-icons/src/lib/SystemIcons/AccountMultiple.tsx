@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import Icon from './Icon';
-import { IconProps } from './Icon/icon.types';
+import Icon from '../Icon';
+import { IconProps } from '../Icon/icon.types';
 
 export const AccountMultipleSVGpath = (
   <path
