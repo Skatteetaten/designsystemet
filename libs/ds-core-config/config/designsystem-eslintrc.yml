@@ -53,10 +53,7 @@ rules:
   react/jsx-sort-props:
     - 2
     - shorthandLast: true
-      callbacksLast: true
-      reservedFirst: # reservedFirst kan kun inneholde React reserved props. Derfor kan vi ikke sjekke at f.eks id skal være først
-        - 'key'
-        - 'ref'
+      reservedFirst: true
       ignoreCase: true
       noSortAlphabetically: true
   prefer-template: 1

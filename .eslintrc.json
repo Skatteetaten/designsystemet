@@ -5,12 +5,6 @@
   "plugins": ["@nrwl/nx"],
   "overrides": [
     {
-      "files": ["*.stories.tsx"],
-      "rules": {
-        "jest/no-standalone-expect": "off"
-      }
-    },
-    {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
         "@nrwl/nx/enforce-module-boundaries": [

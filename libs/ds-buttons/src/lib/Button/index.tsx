@@ -36,14 +36,14 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         className={cssName}
         data-testid={dataTestId}
         disabled={disabled}
+        onClick={onClick}
+        onBlur={onBlur}
+        onFocus={onFocus}
         aria-label={ariaLabel}
         aria-hidden={ariaHidden}
         aria-labelledby={ariaLabelledby}
         aria-describedby={ariaDescribedby}
         tabIndex={tabIndex}
-        onClick={onClick}
-        onBlur={onBlur}
-        onFocus={onFocus}
       >
         {icon && <span className={styles.icon}>{icon}</span>}
         {children}

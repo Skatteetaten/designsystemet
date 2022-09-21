@@ -1,4 +1,6 @@
-.icon {
+.systemIcon {
+  fill: var(--semantic-page-foreground);
+
   &_extraSmall {
     width: var(--size-extra-small);
     height: var(--size-extra-small);
@@ -22,5 +24,26 @@
   &_extraLarge {
     width: var(--size-extra-large);
     height: var(--size-extra-large);
+  }
+}
+
+.themeIcon {
+  fill: var(--semantic-page-foreground);
+
+  &_extraSmall,
+  &_small,
+  &_extraLarge {
+    /* Dette er ikke noe tillatt størrelse for Tema ikoner */
+    display: none;
+  }
+
+  &_medium {
+    width: var(--size-extra-large);
+    height: var(--size-extra-large);
+  }
+
+  &_large {
+    width: 3rem;
+    height: 3rem;
   }
 }
