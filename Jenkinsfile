@@ -6,9 +6,9 @@ def publishToNpmOverride = { Map<String, Object> props  ->
   if (props.publishToNpm) {
     if (props.nodeVersion == '16') {
       echo 'The registry is specified as a workaround for https://github.com/npm/cli/issues/2453'
-      sh "npx nx affected --base=${props.scmVars.GIT_PREVIOUS_SUCCESSFUL_COMMIT ?: 'HEAD~1'} --target=publish --switches='--registry https://nexus.sits.no/repository/npm-internal/'"
+      sh "npx nx affected --head=HEAD --base=${props.scmVars.GIT_PREVIOUS_SUCCESSFUL_COMMIT ?: 'HEAD~1'} --target=publish --switches='--registry https://nexus.sits.no/repository/npm-internal/'"
     } else {
-      sh "npx nx affected --base=${props.scmVarsenv.GIT_PREVIOUS_SUCCESSFUL_COMMIT ?: 'HEAD~1'} --target=publish --switches=''"
+      sh "npx nx affected --head=HEAD --base=${props.scmVars.GIT_PREVIOUS_SUCCESSFUL_COMMIT ?: 'HEAD~1'} --target=publish --switches=''"
     }
   }
 }
@@ -18,9 +18,9 @@ def publishSnapshotToNpmOverride = { Map<String, Object> props  ->
   if (props.publishSnapshotToNpm) {
     if (props.nodeVersion == '16') {
       echo 'The registry is specified as a workaround for https://github.com/npm/cli/issues/2453'
-      sh "npx nx affected --base origin/master --target=publish --switches='--tag ${props.branchVersion} --registry https://nexus.sits.no/repository/npm-internal/'"
+      sh "npx nx affected --head=HEAD --base origin/master --target=publish --switches='--tag ${props.branchVersion} --registry https://nexus.sits.no/repository/npm-internal/'"
     } else {
-      sh "npx nx affected --base origin/master --target=publish --switches='--tag ${props.branchVersion}'"
+      sh "npx nx affected --head=HEAD --base origin/master --target=publish --switches='--tag ${props.branchVersion}'"
     }
   }
 }
@@ -28,7 +28,7 @@ def publishSnapshotToNpmOverride = { Map<String, Object> props  ->
 def preCompile = { Map<String, Object> props  ->
   sh "echo preCallback"
   if (!props.isReleaseBuild && props.publishSnapshotToNpm) {
-    sh "npx nx affected --base origin/master --target=set-version --packageVersion=${props.npmSnapshotVersion}"
+    sh "npx nx affected --head=HEAD --base origin/master --target=set-version --packageVersion=${props.npmSnapshotVersion}"
   }
 }
 

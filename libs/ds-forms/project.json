@@ -31,12 +31,6 @@
         "lintFilePatterns": ["libs/ds-forms/**/*.{ts,tsx,js,jsx}"]
       }
     },
-    "tsc": {
-      "executor": "./tools/executors/tsCheck:tsCheck",
-      "options": {
-        "tsConfig": ["tsconfig.lib.json", "tsconfig.spec.json"]
-      }
-    },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/ds-forms"],
@@ -53,6 +47,12 @@
           "libs/ds-forms/**/*.css",
           "libs/ds-forms/**/*.scss"
         ]
+      }
+    },
+    "tsc": {
+      "executor": "./tools/executors/tsCheck:tsCheck",
+      "options": {
+        "tsConfig": ["tsconfig.lib.json", "tsconfig.spec.json"]
       }
     },
     "set-version": {

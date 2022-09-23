@@ -3,31 +3,6 @@
   "sourceRoot": "apps/ds-playground/src",
   "projectType": "application",
   "targets": {
-    "tsc": {
-      "executor": "./tools/executors/tsCheck:tsCheck",
-      "options": {
-        "tsConfig": [
-          "tsconfig.app.json",
-          "tsconfig.spec.json",
-          ".storybook/tsconfig.json"
-        ]
-      }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["apps/ds-playground/**/*.{ts,tsx,js,jsx}"]
-      }
-    },
-    "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/ds-playground"],
-      "options": {
-        "jestConfig": "apps/ds-playground/jest.config.ts",
-        "passWithNoTests": true
-      }
-    },
     "serve": {
       "executor": "@nrwl/storybook:storybook",
       "options": {
@@ -59,6 +34,21 @@
         }
       }
     },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/ds-playground/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/ds-playground"],
+      "options": {
+        "jestConfig": "apps/ds-playground/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
     "stylelint": {
       "executor": "nx-stylelint:lint",
       "outputs": ["{options.outputFile}"],
@@ -66,6 +56,16 @@
         "lintFilePatterns": [
           "apps/ds-playground/**/*.css",
           "apps/ds-playground/**/*.scss"
+        ]
+      }
+    },
+    "tsc": {
+      "executor": "./tools/executors/tsCheck:tsCheck",
+      "options": {
+        "tsConfig": [
+          "tsconfig.app.json",
+          "tsconfig.spec.json",
+          ".storybook/tsconfig.json"
         ]
       }
     },
