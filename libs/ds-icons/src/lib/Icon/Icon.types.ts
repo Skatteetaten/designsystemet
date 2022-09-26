@@ -1,4 +1,4 @@
-import { BaseProps, Size, IconVariant } from '@skatteetaten/ds-core-devutils';
+import { BaseProps, Size, IconVariant } from '@skatteetaten/ds-core-utils';
 
 type IconPropsHTMLAttributes = Pick<
   React.SVGAttributes<Record<string, never>>,

@@ -14,15 +14,15 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       variant = 'primary',
       disabled = false,
       icon,
-      onClick,
-      onBlur,
-      onFocus,
       tabIndex,
       'data-testid': dataTestId,
       'aria-label': ariaLabel,
       'aria-labelledby': ariaLabelledby,
       'aria-describedby': ariaDescribedby,
       'aria-hidden': ariaHidden,
+      onClick,
+      onBlur,
+      onFocus,
     },
     ref
   ): JSX.Element => {
@@ -36,14 +36,14 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         className={cssName}
         data-testid={dataTestId}
         disabled={disabled}
-        onClick={onClick}
-        onBlur={onBlur}
-        onFocus={onFocus}
         aria-label={ariaLabel}
         aria-hidden={ariaHidden}
         aria-labelledby={ariaLabelledby}
         aria-describedby={ariaDescribedby}
         tabIndex={tabIndex}
+        onClick={onClick}
+        onBlur={onBlur}
+        onFocus={onFocus}
       >
         {icon && <span className={styles.icon}>{icon}</span>}
         {children}

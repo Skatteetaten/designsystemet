@@ -1,4 +1,4 @@
-import { sizeArr } from '@skatteetaten/ds-core-devutils';
+import { sizeArr } from '@skatteetaten/ds-core-utils';
 import {
   Icon as DefaultIcon,
   AccountChildSVGpath,

@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/ds-core-devutils/src",
+  "sourceRoot": "libs/ds-core-utils/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -8,16 +8,16 @@
       "executor": "@nrwl/web:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/ds-core-devutils",
-        "tsConfig": "libs/ds-core-devutils/tsconfig.lib.json",
-        "project": "libs/ds-core-devutils/package.json",
-        "entryFile": "libs/ds-core-devutils/src/index.ts",
+        "outputPath": "dist/libs/ds-core-utils",
+        "tsConfig": "libs/ds-core-utils/tsconfig.lib.json",
+        "project": "libs/ds-core-utils/package.json",
+        "entryFile": "libs/ds-core-utils/src/index.ts",
         "external": ["react/jsx-runtime"],
         "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
         "compiler": "babel",
         "assets": [
           {
-            "glob": "libs/ds-core-devutils/README.md",
+            "glob": "libs/ds-core-utils/README.md",
             "input": ".",
             "output": "."
           }
@@ -28,14 +28,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/ds-core-devutils/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["libs/ds-core-utils/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/ds-core-devutils"],
+      "outputs": ["coverage/libs/ds-core-utils"],
       "options": {
-        "jestConfig": "libs/ds-core-devutils/jest.config.ts",
+        "jestConfig": "libs/ds-core-utils/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -44,8 +44,8 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
-          "libs/ds-core-devutils/**/*.css",
-          "libs/ds-core-devutils/**/*.scss"
+          "libs/ds-core-utils/**/*.css",
+          "libs/ds-core-utils/**/*.scss"
         ]
       }
     },
@@ -59,14 +59,14 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "npm version {args.packageVersion} --no-git-tag",
-        "cwd": "libs/ds-core-devutils"
+        "cwd": "libs/ds-core-utils"
       }
     },
     "publish": {
       "executor": "nx:run-commands",
       "options": {
         "command": "npm publish {args.switches}",
-        "cwd": "dist/libs/ds-core-devutils"
+        "cwd": "dist/libs/ds-core-utils"
       }
     }
   }
