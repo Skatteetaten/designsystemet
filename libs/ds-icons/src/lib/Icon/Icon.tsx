@@ -1,10 +1,10 @@
-import React, { useId } from 'react';
+import { forwardRef, useId } from 'react';
 
 import { IconProps } from './Icon.types';
 
 import styles from './Icon.module.scss';
 
-export const Icon = React.forwardRef<SVGSVGElement, IconProps>(
+export const Icon = forwardRef<SVGSVGElement, IconProps>(
   (
     {
       id,

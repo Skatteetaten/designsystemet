@@ -7,6 +7,8 @@ plugins:
 
 rules:
   color-hex-length: long
+  scss/at-import-partial-extension: null
+  color-function-notation: null
   selector-class-pattern:
     - '^[a-z][a-zA-Z0-9]+(_[a-z][a-zA-Z0-9]+)?$' # Denne sørger for at class selectors følger etablert konvensjon .lowerCamelCase_modifier
     - resolveNestedSelectors: true
