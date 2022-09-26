@@ -1,8 +1,8 @@
 import React, { useId } from 'react';
 
-import { IconProps } from './icon.types';
+import { IconProps } from './Icon.types';
 
-import styles from './icon.module.scss';
+import styles from './Icon.module.scss';
 
 export const Icon = React.forwardRef<SVGSVGElement, IconProps>(
   (

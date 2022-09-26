@@ -1,11 +1,6 @@
 .systemIcon {
   fill: var(--semantic-page-foreground);
 
-  &_extraSmall {
-    width: var(--size-extra-small);
-    height: var(--size-extra-small);
-  }
-
   &_small {
     width: var(--size-small);
     height: var(--size-small);
@@ -30,7 +25,6 @@
 .themeIcon {
   fill: var(--semantic-page-foreground);
 
-  &_extraSmall,
   &_small,
   &_extraLarge {
     /* Dette er ikke noe tillatt størrelse for Tema ikoner */

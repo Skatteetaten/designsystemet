@@ -48,7 +48,11 @@ const commonArgTypes = {
 
 SystemIcon.argTypes = {
   ...commonArgTypes,
-  size: { control: 'select', options: sizeArr, default: 'medium' },
+  size: {
+    control: 'select',
+    options: [...sizeArr].slice(1),
+    default: 'medium',
+  },
   svgPath: {
     options: Object.keys(SystemIconSVGPaths),
     mapping: SystemIconSVGPaths,
