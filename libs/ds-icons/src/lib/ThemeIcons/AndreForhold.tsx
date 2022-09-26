@@ -1,7 +1,5 @@
-import * as React from 'react';
-
-import Icon from '../Icon';
-import { IconProps } from '../Icon/icon.types';
+import Icon from '../Icon/Icon';
+import { IconProps } from '../Icon/Icon.types';
 
 export const AndreForholdSVGpath = (
   <path

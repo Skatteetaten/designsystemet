@@ -21,7 +21,7 @@ export interface IconCustomPropsWithAriaLabel extends IconPropsHTMLAttributes {
 export type VariantCustomProps =
   | {
       variant: Extract<IconVariant, 'systemIcon'>;
-      size?: Size;
+      size?: Exclude<Size, 'extraSmall'>;
     }
   | {
       variant: Extract<IconVariant, 'themeIcon'>;
