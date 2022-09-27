@@ -54,6 +54,12 @@
         ]
       }
     },
+    "tsc": {
+      "executor": "./tools/executors/tsCheck:tsCheck",
+      "options": {
+        "tsConfig": ["tsconfig.lib.json", "tsconfig.spec.json"]
+      }
+    },
     "set-version": {
       "executor": "nx:run-commands",
       "options": {

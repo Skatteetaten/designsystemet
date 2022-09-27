@@ -31,12 +31,6 @@
         "lintFilePatterns": ["libs/ds-icons/**/*.{ts,tsx,js,jsx}"]
       }
     },
-    "tsc": {
-      "executor": "./tools/executors/tsCheck:tsCheck",
-      "options": {
-        "tsConfig": ["tsconfig.lib.json", "tsconfig.spec.json"]
-      }
-    },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/ds-icons"],
@@ -53,6 +47,26 @@
           "libs/ds-icons/**/*.css",
           "libs/ds-icons/**/*.scss"
         ]
+      }
+    },
+    "tsc": {
+      "executor": "./tools/executors/tsCheck:tsCheck",
+      "options": {
+        "tsConfig": ["tsconfig.lib.json", "tsconfig.spec.json"]
+      }
+    },
+    "set-version": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm version {args.packageVersion} --no-git-tag",
+        "cwd": "libs/ds-icons"
+      }
+    },
+    "publish": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm publish {args.switches}",
+        "cwd": "dist/libs/ds-icons"
       }
     }
   }

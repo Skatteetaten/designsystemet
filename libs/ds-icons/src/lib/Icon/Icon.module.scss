@@ -1,0 +1,43 @@
+.systemIcon {
+  fill: var(--semantic-page-foreground);
+
+  &_small {
+    width: var(--size-small);
+    height: var(--size-small);
+  }
+
+  &_medium {
+    width: var(--size-medium);
+    height: var(--size-medium);
+  }
+
+  &_large {
+    width: var(--size-large);
+    height: var(--size-large);
+  }
+
+  &_extraLarge {
+    width: var(--size-extra-large);
+    height: var(--size-extra-large);
+  }
+}
+
+.themeIcon {
+  fill: var(--semantic-page-foreground);
+
+  &_small,
+  &_extraLarge {
+    /* Dette er ikke noe tillatt størrelse for Tema ikoner */
+    display: none;
+  }
+
+  &_medium {
+    width: var(--size-extra-large);
+    height: var(--size-extra-large);
+  }
+
+  &_large {
+    width: 3rem;
+    height: 3rem;
+  }
+}

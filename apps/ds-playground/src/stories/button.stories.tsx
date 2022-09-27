@@ -89,7 +89,6 @@ const TemplateVariant: ComponentStory<typeof Button> = (args) => (
       <Button
         {...args}
         variant={'primary'}
-        onClick={action('KlikkEvent primary')}
         /* Overskriver aria-label satt i Primary.args.['aria-label'] */
         aria-label={'Erstatningslabel satt direkte i komponenten som props'}
         icon={
@@ -100,6 +99,7 @@ const TemplateVariant: ComponentStory<typeof Button> = (args) => (
             />
           ) : undefined
         }
+        onClick={action('KlikkEvent primary')}
       >
         {'Primary knapp'}
       </Button>
@@ -108,10 +108,10 @@ const TemplateVariant: ComponentStory<typeof Button> = (args) => (
       <Button
         {...args}
         variant={'secondary'}
-        onClick={action('KlikkEvent secondary')}
         icon={
           args.icon ? <AccountEnkIcon {...DefaultIcon.arguments} /> : undefined
         }
+        onClick={action('KlikkEvent secondary')}
       >
         {'Secondary knapp'}
       </Button>
@@ -120,10 +120,10 @@ const TemplateVariant: ComponentStory<typeof Button> = (args) => (
       <Button
         {...args}
         variant={'tertiary'}
-        onClick={action('KlikkEvent tertiary')}
         icon={
           args.icon ? <AccountEnkIcon {...DefaultIcon.arguments} /> : undefined
         }
+        onClick={action('KlikkEvent tertiary')}
       >
         {'Tertiary knapp'}
       </Button>
@@ -132,10 +132,10 @@ const TemplateVariant: ComponentStory<typeof Button> = (args) => (
       <Button
         {...args}
         variant={'danger'}
-        onClick={action('danger')}
         icon={
           args.icon ? <AccountEnkIcon {...DefaultIcon.arguments} /> : undefined
         }
+        onClick={action('danger')}
       >
         {'Danger variant'}
       </Button>

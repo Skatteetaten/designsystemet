@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "ds-library",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Library name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "importPath": {
+      "type": "string",
+      "description": "The library name used to import it, like `@myorg/my-awesome-lib`."
+    },
+    "publishable": {
+      "type": "boolean",
+      "description": "Create a publishable library."
+    }
+  },
+  "required": ["name"]
+}

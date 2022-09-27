@@ -5,6 +5,23 @@
   "plugins": ["@nrwl/nx"],
   "overrides": [
     {
+      "files": ["*.stories.tsx"],
+      "rules": {
+        "jest/no-standalone-expect": "off"
+      }
+    },
+    {
+      "files": [
+        "**/__tests__/*.test.ts",
+        "**/__tests__/*.test.tsx",
+        "**/__tests__/*.test.stories.tsx",
+        "**/__tests__/*.test.storiesof.stories.tsx"
+      ],
+      "rules": {
+        "sonarjs/no-duplicate-string": "off"
+      }
+    },
+    {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
         "@nrwl/nx/enforce-module-boundaries": [

@@ -1,19 +1,19 @@
 import React from 'react';
 
-import { BaseProps } from '@skatteetaten/ds-core-devutils';
+import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 type ButtonPropsHTMLAttributes = Pick<
   React.ComponentPropsWithoutRef<'button'>,
   | 'children'
   | 'tabIndex'
   | 'disabled'
-  | 'onClick'
-  | 'onBlur'
-  | 'onFocus'
   | 'aria-label'
   | 'aria-hidden'
   | 'aria-labelledby'
   | 'aria-describedby'
+  | 'onClick'
+  | 'onBlur'
+  | 'onFocus'
 >;
 
 export interface ButtonComponentProps extends ButtonPropsHTMLAttributes {

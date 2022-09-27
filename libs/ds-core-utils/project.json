@@ -1,0 +1,73 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ds-core-utils/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ds-core-utils",
+        "tsConfig": "libs/ds-core-utils/tsconfig.lib.json",
+        "project": "libs/ds-core-utils/package.json",
+        "entryFile": "libs/ds-core-utils/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/ds-core-utils/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ds-core-utils/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ds-core-utils"],
+      "options": {
+        "jestConfig": "libs/ds-core-utils/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/ds-core-utils/**/*.css",
+          "libs/ds-core-utils/**/*.scss"
+        ]
+      }
+    },
+    "tsc": {
+      "executor": "./tools/executors/tsCheck:tsCheck",
+      "options": {
+        "tsConfig": ["tsconfig.lib.json", "tsconfig.spec.json"]
+      }
+    },
+    "set-version": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm version {args.packageVersion} --no-git-tag",
+        "cwd": "libs/ds-core-utils"
+      }
+    },
+    "publish": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm publish {args.switches}",
+        "cwd": "dist/libs/ds-core-utils"
+      }
+    }
+  }
+}

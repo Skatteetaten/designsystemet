@@ -1,0 +1,22 @@
+.layout {
+  max-width: var(--semantic-responsive-container);
+  padding: var(--semantic-responsive-container-padding);
+  margin: 0 auto;
+
+  /* Styling brukt for dette eksempelet */
+  background: linear-gradient(
+    90deg,
+    var(--palette-burgundy-30) 0%,
+    var(--palette-burgundy-10) 50%,
+    var(--palette-burgundy-30) 100%
+  );
+  color: var(--palette-black);
+  text-align: left;
+}
+
+.article {
+  max-width: var(--semantic-responsive-article);
+  margin: 0 auto;
+  background: var(--palette-forest-50);
+  text-align: center;
+}
