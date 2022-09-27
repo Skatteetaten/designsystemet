@@ -7,7 +7,7 @@ import {
 } from '@skatteetaten/ds-icons';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import './icon.stories.css';
+import './icon.css';
 
 export default {
   component: DefaultIcon,
@@ -32,15 +32,7 @@ Icon.argTypes = {
   className: { control: 'select', options: ['myIconClassname'] },
   title: { control: 'text' },
   'aria-label': { control: 'text' },
-  role: {
-    control: 'text',
-    table: {
-      defaultValue: {
-        /* (args: TArgs, context: StoryContext<TFramework, TArgs>) */
-        summary: `noe ${JSON.stringify(DefaultIcon.defaultProps)}`,
-      },
-    },
-  },
+  role: { control: 'text' },
   viewBox: { control: 'text' },
   size: { control: 'select', options: sizeArr, default: 'small' },
   svgPath: {
@@ -63,6 +55,7 @@ Icon.argTypes = {
 
 Icon.args = {
   ...{ ...DefaultIcon.defaultProps, 'aria-label': undefined },
-  title: 'testingr',
+  title: 'Default title',
+  viewBox: '0 0 24 24',
   svgPath: AccountChildSVGpath,
 };
