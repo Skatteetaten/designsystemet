@@ -4,7 +4,6 @@ import {
   AccountEnkIcon,
   Icon as DefaultIcon,
   AccountMultipleIcon,
-  SendIcon,
 } from '@skatteetaten/ds-icons';
 import { action } from '@storybook/addon-actions';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
@@ -16,7 +15,6 @@ const iconList = {
   AccountChildIcon: <AccountChildIcon {...DefaultIcon.arguments} />,
   AccountEnkIcon: <AccountEnkIcon {...DefaultIcon.arguments} />,
   AccountMultipleIcon: <AccountMultipleIcon {...DefaultIcon.arguments} />,
-  SendIcon: <SendIcon {...DefaultIcon.arguments} size={'medium'} />,
 };
 
 export default {

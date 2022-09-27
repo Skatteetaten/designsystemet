@@ -1,5 +1,5 @@
 import { Button } from '@skatteetaten/ds-buttons';
-import { Icon as DefaultIcon, SendIcon } from '@skatteetaten/ds-icons';
+import { Icon as DefaultIcon, AndreForholdIcon } from '@skatteetaten/ds-icons';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ElementHandle } from 'puppeteer';
 
@@ -126,7 +126,7 @@ ButtonWithChildren.parameters = {
 
 export const ButtonWithIcon = Template.bind({});
 ButtonWithIcon.args = {
-  icon: <SendIcon {...DefaultIcon.arguments} />,
+  icon: <AndreForholdIcon {...DefaultIcon.arguments} />,
 };
 ButtonWithIcon.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -143,7 +143,7 @@ ButtonWithIcon.parameters = {
 
 export const ButtonDisabledWithIcon = Template.bind({});
 ButtonDisabledWithIcon.args = {
-  icon: <SendIcon {...DefaultIcon.arguments} />,
+  icon: <AndreForholdIcon {...DefaultIcon.arguments} />,
   disabled: true,
 };
 ButtonDisabledWithIcon.parameters = {
