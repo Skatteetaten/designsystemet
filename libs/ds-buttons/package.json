@@ -4,5 +4,8 @@
   "version": "0.0.7",
   "publishConfig": {
     "registry": "https://nexus.sits.no/repository/npm-internal/"
+  },
+  "peerDependencies": {
+    "react": ">=17"
   }
 }
