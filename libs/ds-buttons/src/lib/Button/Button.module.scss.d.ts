@@ -1,4 +1,4 @@
-/* automatisk genererte typesja */
+/* automatisk genererte types */
 export const button_danger: string;
 export const button_tertiary: string;
 export const button_secondary: string;
