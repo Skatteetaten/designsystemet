@@ -2,14 +2,14 @@ import { forwardRef } from 'react';
 
 import { ButtonProps } from './Button.types';
 
-import styles from './button.module.scss';
+import styles from './Button.module.scss';
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       id,
       className = '',
-      children = 'Klikk her',
+      children,
       variant = 'primary',
       disabled = false,
       icon,
@@ -51,5 +51,5 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 );
 
 Button.displayName = 'Button';
-// TODO sjekk default / named
+// TODO FRONT-918 Avklare bruk av default / named exports
 export default Button;

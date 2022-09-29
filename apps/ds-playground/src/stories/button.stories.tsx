@@ -9,7 +9,6 @@ import { action } from '@storybook/addon-actions';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import './button.stories.css';
-// import ButtonDocs from '../docs/button.mdx';
 
 const iconList = {
   AccountChildIcon: <AccountChildIcon {...DefaultIcon.arguments} />,
@@ -20,10 +19,6 @@ const iconList = {
 export default {
   component: Button,
   title: 'Design System/Button',
-  decorators: [
-    // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-    (Story) => <div style={{ margin: '1em' }}>{Story()}</div>,
-  ],
   argTypes: {
     variant: {
       description: 'Button variant (primary | secondary | tertiary | danger)',
@@ -36,7 +31,7 @@ export default {
       control: 'select',
       mapping: iconList,
       description: 'Icon-komponent (optional)',
-      table: { defaultValue: { summary: 'undefined' } },
+      table: { defaultValue: { summary: undefined } },
     },
     disabled: {
       description:
@@ -142,8 +137,6 @@ const TemplateVariant: ComponentStory<typeof Button> = (args) => (
 );
 
 export const Default = TemplateDefault.bind({});
-export const Primary = TemplateVariant.bind({});
-export const Secondary = TemplateVariant.bind({});
 
 const baseArgs = {
   children: 'Klikk',
@@ -156,7 +149,6 @@ Default.args = {
   variant: 'primary',
   disabled: false,
 };
-Default.storyName = 'Standard';
 Default.parameters = {
   displayName: 'Hei verden',
   design: [
@@ -174,15 +166,16 @@ Default.parameters = {
   },
 };
 
-Primary.storyName = 'Button';
-Primary.args = {
+export const ButtonNormal = TemplateVariant.bind({});
+ButtonNormal.args = {
   ...baseArgs,
   'aria-label':
     'Alternativ tekst i aria-label satt som props i story for alle Primary-buttons',
   'aria-describedby': 'elementid satt i story',
   variant: 'secondary',
 };
-Primary.parameters = {
+ButtonNormal.parameters = {
+  controls: { include: ['disabled', 'className'] },
   design: [
     {
       name: 'Varianter',
@@ -192,12 +185,13 @@ Primary.parameters = {
   ],
 };
 
-Secondary.storyName = 'Button med Icon';
-Secondary.args = {
+export const ButtonWithIcon = TemplateVariant.bind({});
+ButtonWithIcon.args = {
   ...baseArgs,
   icon: true,
 };
-Secondary.parameters = {
+ButtonWithIcon.parameters = {
+  controls: { include: ['disabled', 'className'] },
   design: [
     {
       name: 'Varianter',
