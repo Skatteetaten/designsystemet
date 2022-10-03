@@ -1,5 +1,7 @@
 import { forwardRef } from 'react';
 
+import { Icon } from '@skatteetaten/ds-icons';
+
 import { ButtonProps } from './Button.types';
 
 import styles from './Button.module.scss';
@@ -43,7 +45,17 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         onBlur={onBlur}
         onFocus={onFocus}
       >
-        {icon && <span className={styles.icon}>{icon}</span>}
+        {icon && (
+          <span className={styles.icon}>
+            <Icon
+              {...icon}
+              variant={'systemIcon'}
+              aria-hidden={'true'}
+              title={undefined}
+              aria-label={ariaLabel ? ariaLabel : undefined}
+            />
+          </span>
+        )}
         {children}
       </button>
     );

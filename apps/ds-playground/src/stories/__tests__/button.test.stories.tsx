@@ -1,5 +1,7 @@
+import { useState } from 'react';
+
 import { Button } from '@skatteetaten/ds-buttons';
-import { Icon as DefaultIcon, AccountChildIcon } from '@skatteetaten/ds-icons';
+import { AccountChildSVGpath } from '@skatteetaten/ds-icons';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ElementHandle, ScreenshotOptions } from 'puppeteer';
 
@@ -18,11 +20,7 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => (
   <div style={{ margin: '1em' }} data-test-block>
-    <Button
-      {...args}
-      variant={args.variant}
-      icon={args.icon ? args.icon : undefined}
-    >
+    <Button {...args} variant={args.variant} icon={args.icon}>
       {args.children}
     </Button>
   </div>
@@ -76,16 +74,30 @@ ButtonWithVariantSecondary.args = {
 };
 ButtonWithVariantSecondary.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
-    const element = await page.$(wrapper);
+    const buttonElement = await page.$(`${wrapper} > button`);
+    expect(buttonElement).toMatchSnapshot();
+
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
 
-    const textContent = await element?.getProperty('textContent');
+    const textContent = await buttonElement?.getProperty('textContent');
     const text = await textContent?.jsonValue();
     expect(text).toBe(defaultButtonText);
 
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
+    await buttonElement?.focus();
+    const imageFocused = await page.screenshot(screenShotOptions);
+    expect(imageFocused).toMatchImageSnapshot();
+
+    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
+
+    await buttonElement?.hover();
+    const imageHovered = await page.screenshot(screenShotOptions);
+    expect(imageHovered).toMatchImageSnapshot();
+
+    await buttonElement?.click();
+    await page.waitForSelector(`${wrapper} > button:focus`);
+    const imageClicked = await page.screenshot(screenShotOptions);
+    expect(imageClicked).toMatchImageSnapshot();
   },
 };
 
@@ -97,11 +109,29 @@ ButtonWithVariantTertiary.args = {
 };
 ButtonWithVariantTertiary.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
+    const buttonElement = await page.$(`${wrapper} > button`);
+    expect(buttonElement).toMatchSnapshot();
+
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
 
     const image = await page.screenshot(screenShotOptions);
     expect(image).toMatchImageSnapshot();
+
+    await buttonElement?.focus();
+    const imageFocused = await page.screenshot(screenShotOptions);
+    expect(imageFocused).toMatchImageSnapshot();
+
+    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
+
+    await buttonElement?.hover();
+    const imageHovered = await page.screenshot(screenShotOptions);
+    expect(imageHovered).toMatchImageSnapshot();
+
+    await buttonElement?.click();
+    await page.waitForSelector(`${wrapper} > button`);
+    const imageClicked = await page.screenshot(screenShotOptions);
+    expect(imageClicked).toMatchImageSnapshot();
   },
 };
 
@@ -110,11 +140,29 @@ export const ButtonWithVariantDanger = Template.bind({});
 ButtonWithVariantDanger.args = { ...ButtonDefaults.args, variant: 'danger' };
 ButtonWithVariantDanger.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
+    const buttonElement = await page.$(`${wrapper} > button`);
+    expect(buttonElement).toMatchSnapshot();
+
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
 
     const image = await page.screenshot(screenShotOptions);
     expect(image).toMatchImageSnapshot();
+
+    await buttonElement?.focus();
+    const imageFocused = await page.screenshot(screenShotOptions);
+    expect(imageFocused).toMatchImageSnapshot();
+
+    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
+
+    await buttonElement?.hover();
+    const imageHovered = await page.screenshot(screenShotOptions);
+    expect(imageHovered).toMatchImageSnapshot();
+
+    await buttonElement?.click();
+    await page.waitForSelector(`${wrapper} > button:focus`);
+    const imageClicked = await page.screenshot(screenShotOptions);
+    expect(imageClicked).toMatchImageSnapshot();
   },
 };
 
@@ -140,12 +188,10 @@ ButtonWithChildren.parameters = {
 export const ButtonWithIcon = Template.bind({});
 ButtonWithIcon.args = {
   ...ButtonDefaults.args,
-  icon: (
-    <AccountChildIcon
-      {...DefaultIcon.arguments}
-      aria-label={'min custom aria-label beskrivelse'}
-    />
-  ),
+  icon: {
+    svgPath: AccountChildSVGpath,
+    'aria-label': 'min custom aria-label beskrivelse',
+  },
 };
 ButtonWithIcon.argTypes = {
   ...ButtonWithIcon.argTypes,
@@ -199,7 +245,7 @@ ButtonDisabled.parameters = {
 export const ButtonDisabledWithIcon = Template.bind({});
 ButtonDisabledWithIcon.args = {
   ...ButtonDefaults.args,
-  icon: <AccountChildIcon {...DefaultIcon.arguments} />,
+  icon: { svgPath: AccountChildSVGpath },
   disabled: true,
 };
 ButtonDisabledWithIcon.argTypes = {
@@ -333,9 +379,9 @@ ButtonWithTabindex.parameters = {
 export const ButtonWithLongTextAndIcon = Template.bind({});
 ButtonWithLongTextAndIcon.args = {
   ...ButtonDefaults.args,
-  icon: <AccountChildIcon {...DefaultIcon.arguments} />,
+  icon: { svgPath: AccountChildSVGpath },
   children:
-    'Denne knappen har en veldig lang tekst. Så lang at den må brekke. Icon skal da vertikaljusteres',
+    'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres.',
 };
 ButtonWithLongTextAndIcon.argTypes = {
   ...ButtonWithLongTextAndIcon.argTypes,
@@ -348,5 +394,61 @@ ButtonWithLongTextAndIcon.parameters = {
 
     const image = await page.screenshot(screenShotOptions);
     expect(image).toMatchImageSnapshot();
+  },
+};
+
+// Når Button har en veldig lang tekst så skal tekst venstrejusteres
+export const ButtonWithLongText = Template.bind({});
+ButtonWithLongText.args = {
+  ...ButtonDefaults.args,
+  children:
+    'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles',
+};
+ButtonWithLongText.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+  },
+};
+
+// Testing onClick på knapp. onClick-event endrer teksten på knappen
+const OnClickTemplate: ComponentStory<typeof Button> = (args) => {
+  const [buttText, setButtText] = useState('Initiell knappetekst');
+  return (
+    <div style={{ margin: '1em' }} data-test-block>
+      <Button
+        {...args}
+        variant={args.variant}
+        onClick={(): void => setButtText('Endret Tekst på Knapp')}
+      >
+        {buttText}
+      </Button>
+    </div>
+  );
+};
+export const ButtonOnClick = OnClickTemplate.bind({});
+ButtonOnClick.args = {
+  ...ButtonDefaults.args,
+  variant: 'secondary',
+};
+ButtonOnClick.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const buttonElement = await page.$(`${wrapper} > button`);
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+
+    await buttonElement?.click();
+
+    const imageClicked = await page.screenshot(screenShotOptions);
+    expect(imageClicked).toMatchImageSnapshot();
+
+    await page.waitForSelector(`${wrapper} > button`);
+    const element = await page.$(`${wrapper} > button`);
+    const textContent = await element?.getProperty('textContent');
+    const text = await textContent?.jsonValue();
+    expect(text).toBe('Endret Tekst på Knapp');
   },
 };

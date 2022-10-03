@@ -1,9 +1,9 @@
+import React from 'react';
 import { Button } from '@skatteetaten/ds-buttons';
 import {
-  AccountChildIcon,
-  AccountEnkIcon,
-  Icon as DefaultIcon,
-  AccountMultipleIcon,
+  AccountChildSVGpath,
+  AccountEnkSVGpath,
+  AccountMultipleSVGpath,
 } from '@skatteetaten/ds-icons';
 import { action } from '@storybook/addon-actions';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
@@ -11,9 +11,9 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import './button.stories.css';
 
 const iconList = {
-  AccountChildIcon: <AccountChildIcon {...DefaultIcon.arguments} />,
-  AccountEnkIcon: <AccountEnkIcon {...DefaultIcon.arguments} />,
-  AccountMultipleIcon: <AccountMultipleIcon {...DefaultIcon.arguments} />,
+  AccountChild: { svgPath: AccountChildSVGpath },
+  AccountEnk: { svgPath: AccountEnkSVGpath },
+  AccountMultiple: { svgPath: AccountMultipleSVGpath },
 };
 
 export default {
@@ -84,15 +84,8 @@ const TemplateVariant: ComponentStory<typeof Button> = (args) => (
         variant={'primary'}
         /* Overskriver aria-label satt i Primary.args.['aria-label'] */
         aria-label={'Erstatningslabel satt direkte i komponenten som props'}
-        icon={
-          args.icon ? (
-            <AccountEnkIcon
-              /* NB. DefautlIcon.arguments er viktig. */
-              {...DefaultIcon.arguments}
-            />
-          ) : undefined
-        }
-        onClick={action('KlikkEvent primary')}
+        icon={args.icon}
+        onClick={action('Button story klikk på primary')}
       >
         {'Primary knapp'}
       </Button>
@@ -101,10 +94,8 @@ const TemplateVariant: ComponentStory<typeof Button> = (args) => (
       <Button
         {...args}
         variant={'secondary'}
-        icon={
-          args.icon ? <AccountEnkIcon {...DefaultIcon.arguments} /> : undefined
-        }
-        onClick={action('KlikkEvent secondary')}
+        icon={args.icon}
+        onClick={action('Button story klikk på secondary')}
       >
         {'Secondary knapp'}
       </Button>
@@ -113,30 +104,21 @@ const TemplateVariant: ComponentStory<typeof Button> = (args) => (
       <Button
         {...args}
         variant={'tertiary'}
-        icon={
-          args.icon ? <AccountEnkIcon {...DefaultIcon.arguments} /> : undefined
-        }
-        onClick={action('KlikkEvent tertiary')}
+        icon={args.icon}
+        onClick={action('Button story klikk på tertiary')}
       >
         {'Tertiary knapp'}
       </Button>
     </div>
     <div style={{ marginBottom: '1em' }}>
-      <Button
-        {...args}
-        variant={'danger'}
-        icon={
-          args.icon ? <AccountEnkIcon {...DefaultIcon.arguments} /> : undefined
-        }
-        onClick={action('danger')}
-      >
+      <Button {...args} variant={'danger'} icon={args.icon}>
         {'Danger variant'}
       </Button>
     </div>
   </>
 );
 
-export const Default = TemplateDefault.bind({});
+export const ButtonDefault = TemplateDefault.bind({});
 
 const baseArgs = {
   children: 'Klikk',
@@ -144,12 +126,12 @@ const baseArgs = {
 const designUrl =
   'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1765%3A8640';
 
-Default.args = {
+ButtonDefault.args = {
   ...baseArgs,
   variant: 'primary',
   disabled: false,
 };
-Default.parameters = {
+ButtonDefault.parameters = {
   displayName: 'Hei verden',
   design: [
     {
@@ -166,15 +148,15 @@ Default.parameters = {
   },
 };
 
-export const ButtonNormal = TemplateVariant.bind({});
-ButtonNormal.args = {
+export const ButtonVariants = TemplateVariant.bind({});
+ButtonVariants.args = {
   ...baseArgs,
   'aria-label':
     'Alternativ tekst i aria-label satt som props i story for alle Primary-buttons',
   'aria-describedby': 'elementid satt i story',
   variant: 'secondary',
 };
-ButtonNormal.parameters = {
+ButtonVariants.parameters = {
   controls: { include: ['disabled', 'className'] },
   design: [
     {
@@ -185,12 +167,12 @@ ButtonNormal.parameters = {
   ],
 };
 
-export const ButtonWithIcon = TemplateVariant.bind({});
-ButtonWithIcon.args = {
+export const ButtonVariantsWithIcon = TemplateVariant.bind({});
+ButtonVariantsWithIcon.args = {
   ...baseArgs,
-  icon: true,
+  icon: { svgPath: AccountEnkSVGpath },
 };
-ButtonWithIcon.parameters = {
+ButtonVariantsWithIcon.parameters = {
   controls: { include: ['disabled', 'className'] },
   design: [
     {
