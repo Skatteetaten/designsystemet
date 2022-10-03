@@ -1,5 +1,5 @@
 import { Icon } from '@skatteetaten/ds-icons';
-import '../icon.stories.css';
+import '../classnames.stories.css';
 import { storiesOf } from '@storybook/react';
 import { ElementHandle, ScreenshotOptions } from 'puppeteer';
 
