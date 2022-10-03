@@ -25,6 +25,11 @@
             "glob": "**/*",
             "input": "libs/ds-core-config/config",
             "output": "config"
+          },
+          {
+            "glob": "**/*",
+            "input": "libs/ds-core-config/build",
+            "output": "build"
           }
         ]
       }
