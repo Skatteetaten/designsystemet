@@ -98,7 +98,21 @@ export default async function (tree: Tree, schema: Schema) {
     return tsconfigSpec;
   });
 
-  //TODO FRONT-897 rollupConfig for css bundling. Fikses etter at vi har landet hvordan det skal være
+  const projectConfigWithRollupOptions = {
+    ...projectConfig,
+    targets: {
+      ...projectConfig?.targets,
+      build: {
+        ...projectConfig?.targets.build,
+        options: {
+          ...projectConfig?.targets.build.options,
+          rollupConfig: [`libs/${projectName}/rollup.config.js`],
+        },
+      },
+    },
+  };
+
+  updateProjectConfiguration(tree, projectName, projectConfigWithRollupOptions);
 
   await formatFiles(tree);
   return () => {
