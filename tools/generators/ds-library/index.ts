@@ -7,6 +7,7 @@ import {
   Tree,
   updateJson,
   updateProjectConfiguration,
+  generateFiles,
 } from '@nrwl/devkit';
 import { libraryGenerator } from '@nrwl/react';
 import { Schema } from './schema';
@@ -113,6 +114,8 @@ export default async function (tree: Tree, schema: Schema) {
   };
 
   updateProjectConfiguration(tree, projectName, projectConfigWithRollupOptions);
+  const templateDir = joinPathFragments(__dirname, './templates');
+  generateFiles(tree, templateDir, projectConfig.root, schema);
 
   await formatFiles(tree);
   return () => {
