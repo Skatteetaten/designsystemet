@@ -1,7 +1,5 @@
-import * as React from 'react';
-
 import Icon from '../Icon/Icon';
-import { IconProps } from '../Icon/Icon.types';
+import { IconPropsWithoutSvgPath } from '../Icon/Icon.types';
 
 export const AccountChildSVGpath = (
   <path
@@ -11,6 +9,6 @@ export const AccountChildSVGpath = (
   />
 );
 
-export function AccountChildIcon(props: IconProps): JSX.Element {
+export function AccountChildIcon(props: IconPropsWithoutSvgPath): JSX.Element {
   return <Icon {...props} svgPath={AccountChildSVGpath} />;
 }

@@ -1,5 +1,5 @@
 import Icon from '../Icon/Icon';
-import { IconProps } from '../Icon/Icon.types';
+import { IconPropsWithoutSvgPath } from '../Icon/Icon.types';
 
 export const AndreForholdSVGpath = (
   <path
@@ -9,6 +9,6 @@ export const AndreForholdSVGpath = (
   />
 );
 
-export function AndreForholdIcon(props: IconProps): JSX.Element {
+export function AndreForholdIcon(props: IconPropsWithoutSvgPath): JSX.Element {
   return <Icon {...props} svgPath={AndreForholdSVGpath} />;
 }

@@ -11,6 +11,10 @@ export default {
   title: 'Tests/Icon',
 } as ComponentMeta<typeof Icon>;
 
+const ariaLabel = 'aria-label';
+const ariaLabelledby = 'aria-labelledby';
+const ariaHidden = 'aria-hidden';
+
 const Template: ComponentStory<typeof Icon> = (args) => (
   <div style={{ width: '150px' }} data-test-block>
     <Icon {...args} svgPath={AccountChildSVGpath} />
@@ -26,15 +30,19 @@ IconDefaults.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
 
-    const ariaAttributes = await page.$eval('svg', (el) => {
-      return {
-        viewBox: el.getAttribute('viewBox'),
-        role: el.getAttribute('role'),
-        ariaLabel: el.getAttribute('aria-label'),
-        ariaLabelledBy: el.getAttribute('aria-labelledby'),
-        ariaHidden: el.getAttribute('aria-hidden'),
-      };
-    });
+    const ariaAttributes = await page.$eval(
+      'svg',
+      (el, { ariaLabel, ariaLabelledby, ariaHidden }) => {
+        return {
+          viewBox: el.getAttribute('viewBox'),
+          role: el.getAttribute('role'),
+          ariaLabel: el.getAttribute(ariaLabel),
+          ariaLabelledBy: el.getAttribute(ariaLabelledby),
+          ariaHidden: el.getAttribute(ariaHidden),
+        };
+      },
+      { ariaLabel, ariaLabelledby, ariaHidden }
+    );
 
     expect(ariaAttributes.viewBox).toBe('0 0 24 24');
     expect(ariaAttributes.role).toBeNull();
@@ -108,15 +116,19 @@ IconWithTitle.parameters = {
     const text = await textContent?.jsonValue();
     expect(text).toBe('Min custom title beskrivelse');
 
-    const ariaAttributes = await page.$eval('svg', (el) => {
-      return {
-        role: el.getAttribute('role'),
-        ariaLabel: el.getAttribute('aria-label'),
-        ariaLabelledBy: el.getAttribute('aria-labelledby'),
-        ariaHidden: el.getAttribute('aria-hidden'),
-        titleId: el.querySelector('title')?.getAttribute('id'),
-      };
-    });
+    const ariaAttributes = await page.$eval(
+      'svg',
+      (el, { ariaLabel, ariaLabelledby, ariaHidden }) => {
+        return {
+          role: el.getAttribute('role'),
+          ariaLabel: el.getAttribute(ariaLabel),
+          ariaLabelledBy: el.getAttribute(ariaLabelledby),
+          ariaHidden: el.getAttribute(ariaHidden),
+          titleId: el.querySelector('title')?.getAttribute('id'),
+        };
+      },
+      { ariaLabel, ariaLabelledby, ariaHidden }
+    );
 
     expect(ariaAttributes.role).toBe('img');
     expect(ariaAttributes.ariaHidden).toBe('false');
@@ -135,14 +147,18 @@ IconWithAriaLabel.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
 
-    const ariaAttributes = await page.$eval('svg', (el) => {
-      return {
-        role: el.getAttribute('role'),
-        ariaLabel: el.getAttribute('aria-label'),
-        ariaLabelledBy: el.getAttribute('aria-labelledby'),
-        ariaHidden: el.getAttribute('aria-hidden'),
-      };
-    });
+    const ariaAttributes = await page.$eval(
+      'svg',
+      (el, { ariaLabel, ariaLabelledby, ariaHidden }) => {
+        return {
+          role: el.getAttribute('role'),
+          ariaLabel: el.getAttribute(ariaLabel),
+          ariaLabelledBy: el.getAttribute(ariaLabelledby),
+          ariaHidden: el.getAttribute(ariaHidden),
+        };
+      },
+      { ariaLabel, ariaLabelledby, ariaHidden }
+    );
 
     expect(ariaAttributes.role).toBe('img');
     expect(ariaAttributes.ariaHidden).toBe('false');
