@@ -113,6 +113,7 @@ export default async function (tree: Tree, schema: Schema) {
 
   const projectConfigWithRollupOptions = {
     ...projectConfig,
+    implicitDependencies: ['!ds-dev-config'],
     targets: {
       ...projectConfig?.targets,
       build: {

@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/ds-core-config/src",
+  "sourceRoot": "libs/ds-dev-config/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -8,27 +8,27 @@
       "executor": "@nrwl/web:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/ds-core-config",
-        "tsConfig": "libs/ds-core-config/tsconfig.lib.json",
-        "project": "libs/ds-core-config/package.json",
-        "entryFile": "libs/ds-core-config/src/index.ts",
+        "outputPath": "dist/libs/ds-dev-config",
+        "tsConfig": "libs/ds-dev-config/tsconfig.lib.json",
+        "project": "libs/ds-dev-config/package.json",
+        "entryFile": "libs/ds-dev-config/src/index.ts",
         "external": ["react/jsx-runtime"],
         "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
         "compiler": "babel",
         "assets": [
           {
-            "glob": "libs/ds-core-config/README.md",
+            "glob": "libs/ds-dev-config/README.md",
             "input": ".",
             "output": "."
           },
           {
             "glob": "**/*",
-            "input": "libs/ds-core-config/config",
+            "input": "libs/ds-dev-config/config",
             "output": "config"
           },
           {
             "glob": "**/*",
-            "input": "libs/ds-core-config/build",
+            "input": "libs/ds-dev-config/build",
             "output": "build"
           }
         ]
@@ -38,14 +38,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/ds-core-config/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["libs/ds-dev-config/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/ds-core-config"],
+      "outputs": ["coverage/libs/ds-dev-config"],
       "options": {
-        "jestConfig": "libs/ds-core-config/jest.config.ts",
+        "jestConfig": "libs/ds-dev-config/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -59,14 +59,14 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "npm version {args.packageVersion} --no-git-tag",
-        "cwd": "libs/ds-core-config"
+        "cwd": "libs/ds-dev-config"
       }
     },
     "publish": {
       "executor": "nx:run-commands",
       "options": {
         "command": "npm publish {args.switches}",
-        "cwd": "dist/libs/ds-core-config"
+        "cwd": "dist/libs/ds-dev-config"
       }
     }
   }

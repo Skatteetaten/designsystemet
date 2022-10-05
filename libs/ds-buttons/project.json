@@ -3,6 +3,7 @@
   "sourceRoot": "libs/ds-buttons/src",
   "projectType": "library",
   "tags": [],
+  "implicitDependencies": ["!ds-dev-config"],
   "targets": {
     "build": {
       "executor": "@nrwl/web:rollup",
