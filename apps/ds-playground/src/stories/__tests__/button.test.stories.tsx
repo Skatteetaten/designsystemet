@@ -213,9 +213,10 @@ WithIcon.parameters = {
         viewBox: el.getAttribute('viewBox'),
       };
     });
-    expect(svgAttributes.role).toBe('img');
-    expect(svgAttributes.ariaHidden).toBe('false');
-    expect(svgAttributes.ariaLabel).toBe('min custom aria-label beskrivelse');
+    // TODO Alternativt gjeninnføre tester etter avklaring rundt aria-attributter for icon i knapp
+    // expect(svgAttributes.role).toBe('img');
+    // expect(svgAttributes.ariaHidden).toBe('false');
+    // expect(svgAttributes.ariaLabel).toBe('min custom aria-label beskrivelse');
     expect(svgAttributes.ariaLabelledBy).toBeNull();
     expect(svgAttributes.viewBox).toBe(systemIconViewBox);
 

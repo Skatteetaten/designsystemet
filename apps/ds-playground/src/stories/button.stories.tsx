@@ -171,7 +171,7 @@ Variants.parameters = {
 export const VariantsWithIcon = TemplateVariant.bind({});
 VariantsWithIcon.args = {
   ...baseArgs,
-  iconProps: { svgPath: AccountEnkSVGpath },
+  iconProps: { svgPath: SendSVGpath },
 };
 VariantsWithIcon.parameters = {
   controls: { include: ['disabled', 'className'] },
