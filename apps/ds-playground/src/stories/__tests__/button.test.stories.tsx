@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { AccountChildSVGpath } from '@skatteetaten/ds-icons';
+import { SendSVGpath } from '@skatteetaten/ds-icons';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ElementHandle, ScreenshotOptions } from 'puppeteer';
 
@@ -28,6 +28,7 @@ const Template: ComponentStory<typeof Button> = (args) => (
 
 // Når Button instansieres, får den default variant primary
 export const ButtonDefaults = Template.bind({});
+ButtonDefaults.storyName = 'Defaults';
 ButtonDefaults.args = {
   children: defaultButtonText,
 };
@@ -47,8 +48,8 @@ ButtonDefaults.parameters = {
 };
 
 // Når Button har en ref, så får dom button elementet ref forwarded
-export const ButtonWithRef = Template.bind({});
-ButtonWithRef.args = {
+export const WithRef = Template.bind({});
+WithRef.args = {
   ref: (instance: HTMLButtonElement | null): void => {
     if (instance) {
       instance.id = 'dummyIdForwardedFromRef';
@@ -56,7 +57,7 @@ ButtonWithRef.args = {
   },
   children: defaultButtonText,
 };
-ButtonWithRef.parameters = {
+WithRef.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const refId = await page.$eval(`${wrapper} > button`, (el) => el.id);
     expect(refId).toBe('dummyIdForwardedFromRef');
@@ -67,12 +68,12 @@ ButtonWithRef.parameters = {
 };
 
 // Når Button har en variant, så vises stilsett for varianten (secondary)
-export const ButtonWithVariantSecondary = Template.bind({});
-ButtonWithVariantSecondary.args = {
+export const VariantSecondary = Template.bind({});
+VariantSecondary.args = {
   ...ButtonDefaults.args,
   variant: 'secondary',
 };
-ButtonWithVariantSecondary.parameters = {
+VariantSecondary.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const buttonElement = await page.$(`${wrapper} > button`);
     expect(buttonElement).toMatchSnapshot();
@@ -102,12 +103,12 @@ ButtonWithVariantSecondary.parameters = {
 };
 
 // Når Button har en variant, så vises stilsett for varianten (tertiary)
-export const ButtonWithVariantTertiary = Template.bind({});
-ButtonWithVariantTertiary.args = {
+export const VariantTertiary = Template.bind({});
+VariantTertiary.args = {
   ...ButtonDefaults.args,
   variant: 'tertiary',
 };
-ButtonWithVariantTertiary.parameters = {
+VariantTertiary.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const buttonElement = await page.$(`${wrapper} > button`);
     expect(buttonElement).toMatchSnapshot();
@@ -136,9 +137,9 @@ ButtonWithVariantTertiary.parameters = {
 };
 
 // Når Button har en variant, så vises stilsett for varianten (danger)
-export const ButtonWithVariantDanger = Template.bind({});
-ButtonWithVariantDanger.args = { ...ButtonDefaults.args, variant: 'danger' };
-ButtonWithVariantDanger.parameters = {
+export const VariantDanger = Template.bind({});
+VariantDanger.args = { ...ButtonDefaults.args, variant: 'danger' };
+VariantDanger.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const buttonElement = await page.$(`${wrapper} > button`);
     expect(buttonElement).toMatchSnapshot();
@@ -167,9 +168,9 @@ ButtonWithVariantDanger.parameters = {
 };
 
 // Når Button har en tekst, så vises teksten
-export const ButtonWithChildren = Template.bind({});
-ButtonWithChildren.args = { children: 'Button with children' };
-ButtonWithChildren.parameters = {
+export const WithChildren = Template.bind({});
+WithChildren.args = { children: 'Button with children' };
+WithChildren.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -185,19 +186,19 @@ ButtonWithChildren.parameters = {
 };
 
 // Når Button har ett ikon, så vises ikonet. tester også for riktig aria, role og viewbox for systemIcon som er brukt
-export const ButtonWithIcon = Template.bind({});
-ButtonWithIcon.args = {
+export const WithIcon = Template.bind({});
+WithIcon.args = {
   ...ButtonDefaults.args,
   icon: {
-    svgPath: AccountChildSVGpath,
+    svgPath: SendSVGpath,
     'aria-label': 'min custom aria-label beskrivelse',
   },
 };
-ButtonWithIcon.argTypes = {
-  ...ButtonWithIcon.argTypes,
+WithIcon.argTypes = {
+  ...WithIcon.argTypes,
   icon: { control: false },
 };
-ButtonWithIcon.parameters = {
+WithIcon.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const systemIconViewBox = '0 0 24 24';
     const svgAttributes = await page.$eval(`${wrapper} > button svg`, (el) => {
@@ -223,12 +224,12 @@ ButtonWithIcon.parameters = {
   },
 };
 
-export const ButtonDisabled = Template.bind({});
-ButtonDisabled.args = {
+export const Disabled = Template.bind({});
+Disabled.args = {
   ...ButtonDefaults.args,
   disabled: true,
 };
-ButtonDisabled.parameters = {
+Disabled.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
     expect(isDisabled).toBeTruthy();
@@ -242,17 +243,17 @@ ButtonDisabled.parameters = {
 };
 
 // Når Button har et ikon og er disabled, så vises iconet og knapp er disabled
-export const ButtonDisabledWithIcon = Template.bind({});
-ButtonDisabledWithIcon.args = {
+export const DisabledWithIcon = Template.bind({});
+DisabledWithIcon.args = {
   ...ButtonDefaults.args,
-  icon: { svgPath: AccountChildSVGpath },
+  icon: { svgPath: SendSVGpath },
   disabled: true,
 };
-ButtonDisabledWithIcon.argTypes = {
-  ...ButtonDisabledWithIcon.argTypes,
+DisabledWithIcon.argTypes = {
+  ...DisabledWithIcon.argTypes,
   icon: { control: false },
 };
-ButtonDisabledWithIcon.parameters = {
+DisabledWithIcon.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -266,14 +267,14 @@ ButtonDisabledWithIcon.parameters = {
 };
 
 // Når Button har en custom CSS, så vises custom stil
-export const ButtonClassNameChange = Template.bind({});
-ButtonClassNameChange.args = {
+export const ClassNameChange = Template.bind({});
+ClassNameChange.args = {
   ...ButtonDefaults.args,
   variant: 'secondary',
   className: 'buttonClassnameGreen',
 };
-ButtonClassNameChange.argTypes = {
-  ...ButtonClassNameChange.argTypes,
+ClassNameChange.argTypes = {
+  ...ClassNameChange.argTypes,
   className: {
     control: 'select',
     options: ['', 'buttonClassnameGreen', 'buttonClassnameBlue'],
@@ -282,7 +283,7 @@ ButtonClassNameChange.argTypes = {
   },
   variant: { control: false },
 };
-ButtonClassNameChange.parameters = {
+ClassNameChange.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const classNameAttribute = await page.$eval(`${wrapper}> button`, (el) =>
       el.getAttribute('class')
@@ -298,14 +299,14 @@ ButtonClassNameChange.parameters = {
 };
 
 // Når Button har en custom CSS og er disabled, så vises disabled stil med overskrivinger fra customCSS
-export const ButtonCustomCssAndDisabled = Template.bind({});
-ButtonCustomCssAndDisabled.args = {
+export const CustomCssAndDisabled = Template.bind({});
+CustomCssAndDisabled.args = {
   ...ButtonDefaults.args,
   disabled: true,
   className: 'buttonClassnameGreen',
 };
-ButtonCustomCssAndDisabled.argTypes = {
-  ...ButtonCustomCssAndDisabled.argTypes,
+CustomCssAndDisabled.argTypes = {
+  ...CustomCssAndDisabled.argTypes,
   className: {
     control: 'select',
     options: ['', 'buttonClassnameGreen', 'buttonClassnameBlue'],
@@ -313,7 +314,7 @@ ButtonCustomCssAndDisabled.argTypes = {
     table: { defaultValue: { summary: '' } },
   },
 };
-ButtonCustomCssAndDisabled.parameters = {
+CustomCssAndDisabled.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
     expect(isDisabled).toBeTruthy();
@@ -332,14 +333,14 @@ ButtonCustomCssAndDisabled.parameters = {
 };
 
 // Når Button har aria attributer, så har button element aria-* satt
-export const ButtonWithArias = Template.bind({});
-ButtonWithArias.args = {
+export const WithArias = Template.bind({});
+WithArias.args = {
   ...ButtonDefaults.args,
   'aria-hidden': true,
   'aria-label': 'Knapp aria-label',
   'aria-describedby': 'Knapp aria-describedby',
 };
-ButtonWithArias.parameters = {
+WithArias.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const ariaAttributes = await page.$eval(`${wrapper} > button`, (el) => {
       return {
@@ -358,12 +359,12 @@ ButtonWithArias.parameters = {
 };
 
 // Når Button har en tabIndex, så har button-element tabIndex
-export const ButtonWithTabindex = Template.bind({});
-ButtonWithTabindex.args = {
+export const WithTabindex = Template.bind({});
+WithTabindex.args = {
   ...ButtonDefaults.args,
   tabIndex: -1,
 };
-ButtonWithTabindex.parameters = {
+WithTabindex.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const tabIndex = await page.$eval(`${wrapper} > button`, (el) =>
       el.getAttribute('tabIndex')
@@ -376,18 +377,18 @@ ButtonWithTabindex.parameters = {
 };
 
 // Når Button har en veldig lang tekst og det er et ikon så skal tekst venstrejusteres
-export const ButtonWithLongTextAndIcon = Template.bind({});
-ButtonWithLongTextAndIcon.args = {
+export const WithLongTextAndIcon = Template.bind({});
+WithLongTextAndIcon.args = {
   ...ButtonDefaults.args,
-  icon: { svgPath: AccountChildSVGpath },
+  icon: { svgPath: SendSVGpath },
   children:
     'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres.',
 };
-ButtonWithLongTextAndIcon.argTypes = {
-  ...ButtonWithLongTextAndIcon.argTypes,
+WithLongTextAndIcon.argTypes = {
+  ...WithLongTextAndIcon.argTypes,
   icon: { control: false },
 };
-ButtonWithLongTextAndIcon.parameters = {
+WithLongTextAndIcon.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -398,13 +399,13 @@ ButtonWithLongTextAndIcon.parameters = {
 };
 
 // Når Button har en veldig lang tekst så skal tekst venstrejusteres
-export const ButtonWithLongText = Template.bind({});
-ButtonWithLongText.args = {
+export const WithLongText = Template.bind({});
+WithLongText.args = {
   ...ButtonDefaults.args,
   children:
     'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles',
 };
-ButtonWithLongText.parameters = {
+WithLongText.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -430,12 +431,12 @@ const OnClickTemplate: ComponentStory<typeof Button> = (args) => {
     </div>
   );
 };
-export const ButtonOnClick = OnClickTemplate.bind({});
-ButtonOnClick.args = {
+export const WithOnClick = OnClickTemplate.bind({});
+WithOnClick.args = {
   ...ButtonDefaults.args,
   variant: 'secondary',
 };
-ButtonOnClick.parameters = {
+WithOnClick.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const buttonElement = await page.$(`${wrapper} > button`);
     const image = await page.screenshot(screenShotOptions);

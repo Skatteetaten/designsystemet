@@ -4,6 +4,7 @@ import {
   AccountChildSVGpath,
   AccountEnkSVGpath,
   AccountMultipleSVGpath,
+  SendSVGpath,
 } from '@skatteetaten/ds-icons';
 import { action } from '@storybook/addon-actions';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
@@ -11,6 +12,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import './button.stories.css';
 
 const iconList = {
+  Send: { svgPath: SendSVGpath },
   AccountChild: { svgPath: AccountChildSVGpath },
   AccountEnk: { svgPath: AccountEnkSVGpath },
   AccountMultiple: { svgPath: AccountMultipleSVGpath },
@@ -119,7 +121,7 @@ const TemplateVariant: ComponentStory<typeof Button> = (args) => (
 );
 
 export const ButtonDefault = TemplateDefault.bind({});
-
+ButtonDefault.storyName = 'Default';
 const baseArgs = {
   children: 'Klikk',
 };
@@ -148,15 +150,15 @@ ButtonDefault.parameters = {
   },
 };
 
-export const ButtonVariants = TemplateVariant.bind({});
-ButtonVariants.args = {
+export const Variants = TemplateVariant.bind({});
+Variants.args = {
   ...baseArgs,
   'aria-label':
     'Alternativ tekst i aria-label satt som props i story for alle Primary-buttons',
   'aria-describedby': 'elementid satt i story',
   variant: 'secondary',
 };
-ButtonVariants.parameters = {
+Variants.parameters = {
   controls: { include: ['disabled', 'className'] },
   design: [
     {
@@ -167,12 +169,12 @@ ButtonVariants.parameters = {
   ],
 };
 
-export const ButtonVariantsWithIcon = TemplateVariant.bind({});
-ButtonVariantsWithIcon.args = {
+export const VariantsWithIcon = TemplateVariant.bind({});
+VariantsWithIcon.args = {
   ...baseArgs,
   icon: { svgPath: AccountEnkSVGpath },
 };
-ButtonVariantsWithIcon.parameters = {
+VariantsWithIcon.parameters = {
   controls: { include: ['disabled', 'className'] },
   design: [
     {

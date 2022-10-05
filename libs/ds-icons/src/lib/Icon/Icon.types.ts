@@ -43,3 +43,7 @@ export type IconProps = BaseProps &
   IconComponentCommonProps &
   VariantCustomProps &
   (IconCustomPropsWithTitle | IconCustomPropsWithAriaLabel);
+
+export type IconPropsWithoutSvgPath = BaseProps &
+  VariantCustomProps &
+  (IconCustomPropsWithTitle | IconCustomPropsWithAriaLabel);
