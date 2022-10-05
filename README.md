@@ -1,5 +1,9 @@
 # Designsystem
 
+Kom i gang: https://wiki.sits.no/display/DDS/Bygg%2C+test+og+start
+
+---
+
 This project was generated using [Nx](https://nx.dev).
 
 <p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>

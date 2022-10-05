@@ -99,6 +99,18 @@ export default async function (tree: Tree, schema: Schema) {
     return tsconfigSpec;
   });
 
+  const packageJsonPath = joinPathFragments(projectConfig.root, 'package.json');
+  updateJson(tree, packageJsonPath, (packageJson): object => {
+    packageJson.groupId = 'no.skatteetaten.aurora';
+    packageJson.publishConfig = {
+      registry: 'https://nexus.sits.no/repository/npm-internal/',
+    };
+    packageJson.peerDependencies = {
+      react: '>=17',
+    };
+    return packageJson;
+  });
+
   const projectConfigWithRollupOptions = {
     ...projectConfig,
     targets: {
