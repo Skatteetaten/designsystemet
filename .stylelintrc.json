@@ -4,13 +4,13 @@
     {
       "files": ["**/*.css"],
       "extends": [
-        "./libs/ds-core-config/config/designsystem-stylelintrc-css.yml"
+        "./libs/ds-dev-config/config/designsystem-stylelintrc-css.yml"
       ],
       "rules": {}
     },
     {
       "files": ["**/*.scss"],
-      "extends": ["./libs/ds-core-config/config/designsystem-stylelintrc.yml"],
+      "extends": ["./libs/ds-dev-config/config/designsystem-stylelintrc.yml"],
       "rules": {}
     }
   ],

@@ -3,7 +3,7 @@
   "version": 2,
   "projects": {
     "ds-buttons": "libs/ds-buttons",
-    "ds-core-config": "libs/ds-core-config",
+    "ds-dev-config": "libs/ds-dev-config",
     "ds-core-designtokens": "libs/ds-core-designtokens",
     "ds-core-utils": "libs/ds-core-utils",
     "ds-forms": "libs/ds-forms",
