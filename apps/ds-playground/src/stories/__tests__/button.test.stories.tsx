@@ -214,7 +214,7 @@ WithIcon.parameters = {
       };
     });
     // TODO Alternativt gjeninnføre tester etter avklaring rundt aria-attributter for icon i knapp
-    // expect(svgAttributes.role).toBe('img');
+    expect(svgAttributes.role).toBe('img');
     // expect(svgAttributes.ariaHidden).toBe('false');
     // expect(svgAttributes.ariaLabel).toBe('min custom aria-label beskrivelse');
     expect(svgAttributes.ariaLabelledBy).toBeNull();
@@ -422,7 +422,9 @@ WithLongText.parameters = {
 // Testing onClick på knapp. onClick-event endrer teksten på knappen.
 // Egen template for å kunne bruke useState som lar oss synliggjøre resultatet av en event
 const OnClickTemplate: ComponentStory<typeof Button> = (args) => {
-  const [buttText, setButtText] = useState('Initiell knappetekst');
+  const [buttText, setButtText] = useState(
+    'Klikk på knapp for å teste onClick event'
+  );
   return (
     <div style={{ margin: '1em' }} data-test-block>
       <Button
@@ -439,6 +441,11 @@ export const WithOnClick = OnClickTemplate.bind({});
 WithOnClick.args = {
   ...ButtonDefaults.args,
   variant: 'secondary',
+};
+WithOnClick.argTypes = {
+  ...WithOnClick.argTypes,
+  children: { control: false },
+  variant: { control: false },
 };
 WithOnClick.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {

@@ -45,7 +45,7 @@ IconDefaults.parameters = {
     );
 
     expect(ariaAttributes.viewBox).toBe('0 0 24 24');
-    expect(ariaAttributes.role).toBeNull();
+    expect(ariaAttributes.role).toBe('img');
     expect(ariaAttributes.ariaHidden).toBe('true');
     expect(ariaAttributes.ariaLabel).toBeNull();
     expect(ariaAttributes.ariaLabelledBy).toBeNull();

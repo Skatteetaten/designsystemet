@@ -1,9 +1,8 @@
 import { Button } from '@skatteetaten/ds-buttons';
 import {
-  AccountChildSVGpath,
-  AccountEnkSVGpath,
-  AccountMultipleSVGpath,
+  EditSVGpath,
   SendSVGpath,
+  AddOutlineSVGpath,
 } from '@skatteetaten/ds-icons';
 import { action } from '@storybook/addon-actions';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
@@ -12,9 +11,8 @@ import './button.stories.css';
 
 const iconList = {
   Send: { svgPath: SendSVGpath },
-  AccountChild: { svgPath: AccountChildSVGpath },
-  AccountEnk: { svgPath: AccountEnkSVGpath },
-  AccountMultiple: { svgPath: AccountMultipleSVGpath },
+  Edit: { svgPath: EditSVGpath },
+  AddOutlineSVGpath: { svgPath: AddOutlineSVGpath },
 };
 
 export default {
