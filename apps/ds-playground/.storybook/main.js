@@ -3,6 +3,18 @@ const BundleAnalyzerPlugin =
 
 const rootMain = require('../../../.storybook/main');
 
+function webpackConfigNoChunkTilde(config) {
+  if (config.optimization.runtimeChunk) {
+    config.optimization.runtimeChunk = {
+      name: ({ name }) => `runtime-${name}`,
+    };
+  }
+  if (config.optimization.splitChunks) {
+    config.optimization.splitChunks.automaticNameDelimiter = '-';
+  }
+  return config;
+}
+
 module.exports = {
   ...rootMain,
   core: { ...rootMain.core, builder: 'webpack5' },
@@ -62,6 +74,9 @@ module.exports = {
         })
       );
     }
-    return config;
+    return webpackConfigNoChunkTilde(config);
+  },
+  managerWebpack: (config) => {
+    return webpackConfigNoChunkTilde(config);
   },
 };

@@ -414,7 +414,8 @@ ButtonWithLongText.parameters = {
   },
 };
 
-// Testing onClick på knapp. onClick-event endrer teksten på knappen
+// Testing onClick på knapp. onClick-event endrer teksten på knappen.
+// Egen template for å kunne bruke useState som lar oss synliggjøre resultatet av en event
 const OnClickTemplate: ComponentStory<typeof Button> = (args) => {
   const [buttText, setButtText] = useState('Initiell knappetekst');
   return (

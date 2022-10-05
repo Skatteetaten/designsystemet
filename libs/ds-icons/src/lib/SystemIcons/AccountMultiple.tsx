@@ -1,5 +1,5 @@
 import Icon from '../Icon/Icon';
-import { IconProps } from '../Icon/Icon.types';
+import { IconPropsWithoutSvgPath } from '../Icon/Icon.types';
 
 export const AccountMultipleSVGpath = (
   <path
@@ -9,6 +9,8 @@ export const AccountMultipleSVGpath = (
   />
 );
 
-export function AccountMultipleIcon(props: IconProps): JSX.Element {
+export function AccountMultipleIcon(
+  props: IconPropsWithoutSvgPath
+): JSX.Element {
   return <Icon {...props} svgPath={AccountMultipleSVGpath} />;
 }

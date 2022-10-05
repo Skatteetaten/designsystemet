@@ -26,16 +26,10 @@ def publishSnapshotToNpmOverride = { Map<String, Object> props  ->
 }
 
 def preCompile = { Map<String, Object> props  ->
-  sh "echo preCallback"
   if (!props.isReleaseBuild && props.publishSnapshotToNpm) {
     sh "npx nx affected --head=HEAD --base origin/master --target=set-version --packageVersion=${props.npmSnapshotVersion}"
   }
 }
-//Vi trenger ikke å kjøre prepare scriptet med lefthook install på jenkins
-def preCallback = {
-  sh "npm pkg delete scripts.prepare"
-}
-
 
 def overrides = [
     scriptVersion                : 'v7',
@@ -62,4 +56,4 @@ fileLoader.withGit('https://git.aurora.skead.no/scm/auf/designsystemet.git', "FR
   jenkinsfile = fileLoader.load('jenkins/template.groovy')
 }
 
-jenkinsfile.run(overrides.scriptVersion, overrides, preCallback)
+jenkinsfile.run(overrides.scriptVersion, overrides)
