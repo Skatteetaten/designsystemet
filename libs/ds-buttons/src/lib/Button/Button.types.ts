@@ -18,14 +18,14 @@ type ButtonPropsHTMLAttributes = Pick<
 >;
 
 export interface ButtonComponentProps extends ButtonPropsHTMLAttributes {
-  icon?: IconProps;
+  iconProps?: IconProps;
   variant?: 'primary' | 'secondary' | 'tertiary' | 'danger';
   children: string;
 }
 
 /**
- * @param {ButtonComponentProps.variant} variant - (Optional) Default "primary" variant av type enum.
- * @param {IconProps} icon - (Optional) Icon-komponent.
+ * @param {ButtonComponentProps["variant"]} variant - (Optional) Default "primary" variant av type enum.
+ * @param {IconProps} iconProps - (Optional) Icon-props som sendes videre til Icon-komponent.
  * @param {string} children - Tekst på knapp.
  */
 export type ButtonProps = BaseProps & ButtonComponentProps;

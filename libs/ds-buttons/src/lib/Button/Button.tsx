@@ -14,7 +14,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       children,
       variant = 'primary',
       disabled = false,
-      icon,
+      iconProps,
       tabIndex,
       'data-testid': dataTestId,
       'aria-label': ariaLabel,
@@ -26,7 +26,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ): JSX.Element => {
-    const withicon = icon ? `${styles.button_withicon}` : '';
+    const withicon = iconProps ? `${styles.button_withicon}` : '';
     const cssName = `${styles.button} ${
       styles[`button_${variant}`]
     } ${withicon} ${className}`;
@@ -45,15 +45,9 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         onBlur={onBlur}
         onFocus={onFocus}
       >
-        {icon && (
+        {iconProps && (
           <span className={styles.icon}>
-            <Icon
-              {...icon}
-              variant={'systemIcon'}
-              aria-hidden={'true'}
-              title={undefined}
-              aria-label={ariaLabel ? ariaLabel : undefined}
-            />
+            <Icon {...iconProps} aria-label={undefined} />
           </span>
         )}
         {children}

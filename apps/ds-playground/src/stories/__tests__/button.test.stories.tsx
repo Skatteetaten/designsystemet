@@ -20,7 +20,7 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => (
   <div style={{ margin: '1em' }} data-test-block>
-    <Button {...args} variant={args.variant} icon={args.icon}>
+    <Button {...args} variant={args.variant} iconProps={args.iconProps}>
       {args.children}
     </Button>
   </div>
@@ -89,6 +89,7 @@ VariantSecondary.parameters = {
     const imageFocused = await page.screenshot(screenShotOptions);
     expect(imageFocused).toMatchImageSnapshot();
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
 
     await buttonElement?.hover();
@@ -123,6 +124,7 @@ VariantTertiary.parameters = {
     const imageFocused = await page.screenshot(screenShotOptions);
     expect(imageFocused).toMatchImageSnapshot();
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
 
     await buttonElement?.hover();
@@ -154,6 +156,7 @@ VariantDanger.parameters = {
     const imageFocused = await page.screenshot(screenShotOptions);
     expect(imageFocused).toMatchImageSnapshot();
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
 
     await buttonElement?.hover();
@@ -189,14 +192,14 @@ WithChildren.parameters = {
 export const WithIcon = Template.bind({});
 WithIcon.args = {
   ...ButtonDefaults.args,
-  icon: {
+  iconProps: {
     svgPath: SendSVGpath,
     'aria-label': 'min custom aria-label beskrivelse',
   },
 };
 WithIcon.argTypes = {
   ...WithIcon.argTypes,
-  icon: { control: false },
+  iconProps: { control: false },
 };
 WithIcon.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -246,12 +249,12 @@ Disabled.parameters = {
 export const DisabledWithIcon = Template.bind({});
 DisabledWithIcon.args = {
   ...ButtonDefaults.args,
-  icon: { svgPath: SendSVGpath },
+  iconProps: { svgPath: SendSVGpath },
   disabled: true,
 };
 DisabledWithIcon.argTypes = {
   ...DisabledWithIcon.argTypes,
-  icon: { control: false },
+  iconProps: { control: false },
 };
 DisabledWithIcon.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -380,13 +383,13 @@ WithTabindex.parameters = {
 export const WithLongTextAndIcon = Template.bind({});
 WithLongTextAndIcon.args = {
   ...ButtonDefaults.args,
-  icon: { svgPath: SendSVGpath },
+  iconProps: { svgPath: SendSVGpath },
   children:
     'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres.',
 };
 WithLongTextAndIcon.argTypes = {
   ...WithLongTextAndIcon.argTypes,
-  icon: { control: false },
+  iconProps: { control: false },
 };
 WithLongTextAndIcon.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button } from '@skatteetaten/ds-buttons';
 import {
   AccountChildSVGpath,
@@ -28,7 +27,7 @@ export default {
       control: 'radio',
       table: { defaultValue: { summary: 'primary' } },
     },
-    icon: {
+    iconProps: {
       options: [''].concat(Object.keys(iconList)),
       control: 'select',
       mapping: iconList,
@@ -86,7 +85,7 @@ const TemplateVariant: ComponentStory<typeof Button> = (args) => (
         variant={'primary'}
         /* Overskriver aria-label satt i Primary.args.['aria-label'] */
         aria-label={'Erstatningslabel satt direkte i komponenten som props'}
-        icon={args.icon}
+        iconProps={args.iconProps}
         onClick={action('Button story klikk på primary')}
       >
         {'Primary knapp'}
@@ -96,7 +95,7 @@ const TemplateVariant: ComponentStory<typeof Button> = (args) => (
       <Button
         {...args}
         variant={'secondary'}
-        icon={args.icon}
+        iconProps={args.iconProps}
         onClick={action('Button story klikk på secondary')}
       >
         {'Secondary knapp'}
@@ -106,14 +105,14 @@ const TemplateVariant: ComponentStory<typeof Button> = (args) => (
       <Button
         {...args}
         variant={'tertiary'}
-        icon={args.icon}
+        iconProps={args.iconProps}
         onClick={action('Button story klikk på tertiary')}
       >
         {'Tertiary knapp'}
       </Button>
     </div>
     <div style={{ marginBottom: '1em' }}>
-      <Button {...args} variant={'danger'} icon={args.icon}>
+      <Button {...args} variant={'danger'} iconProps={args.iconProps}>
         {'Danger variant'}
       </Button>
     </div>
@@ -172,7 +171,7 @@ Variants.parameters = {
 export const VariantsWithIcon = TemplateVariant.bind({});
 VariantsWithIcon.args = {
   ...baseArgs,
-  icon: { svgPath: AccountEnkSVGpath },
+  iconProps: { svgPath: AccountEnkSVGpath },
 };
 VariantsWithIcon.parameters = {
   controls: { include: ['disabled', 'className'] },
