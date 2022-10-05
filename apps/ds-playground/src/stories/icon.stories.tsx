@@ -1,12 +1,13 @@
 import { sizeArr } from '@skatteetaten/ds-core-utils';
+import { Icon as DefaultIcon } from '@skatteetaten/ds-icons';
 import {
-  Icon as DefaultIcon,
-  AccountChildSVGpath,
-  AccountEnkSVGpath,
-  AccountMultipleSVGpath,
-  AndreForholdSVGpath,
+  SystemSVGPathsAndIcons,
+  ThemeSVGPathsAndIcons,
 } from '@skatteetaten/ds-icons';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+
+import { SystemIconLabels, SystemSVGPaths } from './utils/icon.systems';
+import { ThemeIconLabels, ThemeSVGPaths } from './utils/icon.themes';
 
 import './icon.stories.css';
 
@@ -23,16 +24,6 @@ const Template: ComponentStory<typeof DefaultIcon> = (args) => (
 
 export const SystemIcon = Template.bind({});
 export const ThemeIcon = Template.bind({});
-
-const SystemIconSVGPaths = {
-  AccountChildSVGpath,
-  AccountEnkSVGpath,
-  AccountMultipleSVGpath,
-};
-
-const ThemeIconSVGPaths = {
-  AndreForholdSVGpath,
-};
 
 const commonArgTypes = {
   className: { control: 'select', options: ['myIconClassname'] },
@@ -54,15 +45,11 @@ SystemIcon.argTypes = {
     default: 'medium',
   },
   svgPath: {
-    options: Object.keys(SystemIconSVGPaths),
-    mapping: SystemIconSVGPaths,
+    options: Object.keys(SystemSVGPaths),
+    mapping: SystemSVGPaths,
     control: {
       type: 'select',
-      labels: {
-        AccountChildSVGpath: 'AccountChild',
-        AccountEnkSVGpath: 'AccountEnkSVG',
-        AccountMultipleSVGpath: 'AccountMultiple',
-      },
+      labels: SystemIconLabels,
     },
     table: {
       type: { summary: 'select' },
@@ -76,7 +63,7 @@ SystemIcon.args = {
   variant: 'systemIcon',
   viewBox: '0 0 24 24',
   size: 'medium',
-  svgPath: AccountChildSVGpath,
+  svgPath: SystemSVGPathsAndIcons.AccountChildSVGpath,
 };
 
 ThemeIcon.argTypes = {
@@ -87,13 +74,11 @@ ThemeIcon.argTypes = {
     default: 'medium',
   },
   svgPath: {
-    options: Object.keys(ThemeIconSVGPaths),
-    mapping: ThemeIconSVGPaths,
+    options: Object.keys(ThemeSVGPaths),
+    mapping: ThemeSVGPaths,
     control: {
       type: 'select',
-      labels: {
-        AndreForholdSVGpath: 'AndreForhold',
-      },
+      labels: ThemeIconLabels,
     },
     table: {
       type: { summary: 'select' },
@@ -107,5 +92,5 @@ ThemeIcon.args = {
   variant: 'themeIcon',
   viewBox: '0 0 48 48',
   size: 'medium',
-  svgPath: AndreForholdSVGpath,
+  svgPath: ThemeSVGPathsAndIcons.AndreForholdSVGpath,
 };

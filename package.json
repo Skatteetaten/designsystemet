@@ -36,7 +36,8 @@
     "stylelint:fix": "nx run-many --target=stylelint --fix",
     "prettier": "nx format:check",
     "prettier:fix": "nx format",
-    "sonarqube": "sonar-scanner"
+    "sonarqube": "sonar-scanner",
+    "generate:iconIndexFiles": "node ./libs/ds-icons/src/createIconIndexFiles.js"
   },
   "dependencies": {
     "@skatteetaten/ds-core-designtokens": "file:dist/libs/ds-core-designtokens",
