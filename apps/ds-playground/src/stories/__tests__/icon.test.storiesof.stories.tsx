@@ -79,5 +79,3 @@ iconsWithSize.forEach(function (icon) {
       }
     );
 });
-
-// TODO FRONT-898 Loop gjennom alle ikonene og ta imageSnapshot. I Egen fil?
