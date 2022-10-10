@@ -16,11 +16,11 @@
     "baseUrl": ".",
     "paths": {
       "@skatteetaten/ds-buttons": ["libs/ds-buttons/src/index.ts"],
-      "@skatteetaten/ds-dev-config": ["libs/ds-dev-config/src/index.ts"],
       "@skatteetaten/ds-core-designtokens": [
         "libs/ds-core-designtokens/src/index.ts"
       ],
       "@skatteetaten/ds-core-utils": ["libs/ds-core-utils/src/index.ts"],
+      "@skatteetaten/ds-dev-config": ["libs/ds-dev-config/src/index.ts"],
       "@skatteetaten/ds-forms": ["libs/ds-forms/src/index.ts"],
       "@skatteetaten/ds-icons": ["libs/ds-icons/src/index.ts"]
     }
