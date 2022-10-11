@@ -426,7 +426,7 @@ const OnClickTemplate: ComponentStory<typeof Button> = (args) => {
     'Klikk på knapp for å teste onClick event'
   );
   return (
-    <div style={{ margin: '1em' }} data-test-block>
+    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
       <Button
         {...args}
         variant={args.variant}
