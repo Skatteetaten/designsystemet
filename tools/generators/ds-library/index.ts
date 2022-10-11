@@ -7,6 +7,7 @@ import {
   Tree,
   updateJson,
   updateProjectConfiguration,
+  generateFiles,
 } from '@nrwl/devkit';
 import { libraryGenerator } from '@nrwl/react';
 import { Schema } from './schema';
@@ -110,7 +111,24 @@ export default async function (tree: Tree, schema: Schema) {
     return packageJson;
   });
 
-  //TODO FRONT-897 rollupConfig for css bundling. Fikses etter at vi har landet hvordan det skal være
+  const projectConfigWithRollupOptions = {
+    ...projectConfig,
+    implicitDependencies: ['!ds-dev-config'],
+    targets: {
+      ...projectConfig?.targets,
+      build: {
+        ...projectConfig?.targets.build,
+        options: {
+          ...projectConfig?.targets.build.options,
+          rollupConfig: [`libs/${projectName}/rollup.config.js`],
+        },
+      },
+    },
+  };
+
+  updateProjectConfiguration(tree, projectName, projectConfigWithRollupOptions);
+  const templateDir = joinPathFragments(__dirname, './templates');
+  generateFiles(tree, templateDir, projectConfig.root, schema);
 
   await formatFiles(tree);
   return () => {

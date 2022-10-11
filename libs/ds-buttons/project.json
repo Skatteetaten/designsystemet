@@ -3,6 +3,7 @@
   "sourceRoot": "libs/ds-buttons/src",
   "projectType": "library",
   "tags": [],
+  "implicitDependencies": ["!ds-dev-config"],
   "targets": {
     "build": {
       "executor": "@nrwl/web:rollup",
@@ -13,7 +14,7 @@
         "project": "libs/ds-buttons/package.json",
         "entryFile": "libs/ds-buttons/src/index.ts",
         "external": ["react/jsx-runtime"],
-        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "rollupConfig": ["libs/ds-buttons/rollup.config.js"],
         "compiler": "babel",
         "assets": [
           {
