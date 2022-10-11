@@ -32,3 +32,7 @@ export const findSVGPathElements = function (
 
   return elements;
 };
+
+export const iconName = function (svgPathName: string): string {
+  return svgPathName.replace('SVGpath', '');
+};
