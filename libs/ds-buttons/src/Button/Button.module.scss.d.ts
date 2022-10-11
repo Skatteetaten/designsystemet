@@ -5,4 +5,4 @@ export const button_secondary: string;
 export const button_primary: string;
 export const icon: string;
 export const button: string;
-export const button_withicon: string;
+export const button_withIcon: string;

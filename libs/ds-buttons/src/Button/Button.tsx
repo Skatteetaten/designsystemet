@@ -26,7 +26,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ): JSX.Element => {
-    const withicon = iconProps ? `${styles.button_withicon}` : '';
+    const withicon = iconProps ? `${styles.button_withIcon}` : '';
     const cssName = `${styles.button} ${
       styles[`button_${variant}`]
     } ${withicon} ${className}`;
