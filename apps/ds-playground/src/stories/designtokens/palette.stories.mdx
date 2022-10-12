@@ -1,0 +1,47 @@
+<!-- palette.mdx -->
+
+import {
+  Meta,
+  Story,
+  Canvas,
+  ColorPalette,
+  ColorItem,
+} from '@storybook/addon-docs';
+import { TokensList } from './TokensList';
+import { PaletteTokenExamplesGenerator } from './PaletteTokenExamplesGenerator';
+
+# Palette
+
+<Meta title="Designtokens" />
+
+## Enkelte farger
+
+<PaletteTokenExamplesGenerator paletteType={'color'} />
+
+## Semantiske farger
+
+<PaletteTokenExamplesGenerator paletteType={'semantic'} />
+
+<Canvas>
+  <Story
+    name="Palette"
+    parameters={{
+      design: [
+        {
+          name: 'TODO 908 add figma url',
+          type: 'figma',
+          url: 'https://www.figma.com/file/nMR5vipCwTyVnq9KRAbhFL/Designsystemet---delte-komponenter?node-id=8%3A25',
+        },
+      ],
+    }}
+  >
+    {() => {
+      return (
+        <>
+          <p>{'Klikk på Docs tab for en visuell visning av palette'}</p>
+          <TokensList tokenType={'palette'} />
+        </>
+      );
+    }}
+  </Story>
+</Canvas>

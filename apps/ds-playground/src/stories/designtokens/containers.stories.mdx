@@ -1,0 +1,45 @@
+<!-- palette.mdx -->
+
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { TokensList } from './TokensList';
+import { ExternalLayout, InternalLayout } from '@skatteetaten/ds-core-utils';
+
+# Containers
+
+## External layout
+
+<div style={{ backgroundColor: 'var(--palette-burgundy-10)' }}>
+  <ExternalLayout />
+</div>
+
+## Internal layout
+
+<div style={{ backgroundColor: 'var(--palette-burgundy-10)' }}>
+  <InternalLayout />
+</div>
+
+<Meta title="Designtokens" />
+
+<Canvas>
+  <Story
+    name="Containers"
+    parameters={{
+      design: [
+        {
+          name: 'TODO 908 add figma url',
+          type: 'figma',
+          url: 'https://www.figma.com/file/nMR5vipCwTyVnq9KRAbhFL/Designsystemet---delte-komponenter?node-id=8%3A25',
+        },
+      ],
+    }}
+  >
+    {() => {
+      return (
+        <>
+          <p>{'Klikk på Docs tab for en visuell visning av containers'}</p>
+          <TokensList tokenType={'containers'} />
+        </>
+      );
+    }}
+  </Story>
+</Canvas>

@@ -1,0 +1,31 @@
+<!-- palette.mdx -->
+
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { TokensList } from './TokensList';
+
+# Breakpoints
+
+<Meta title="Designtokens" />
+
+<Canvas>
+  <Story
+    name="Breakpoints"
+    parameters={{
+      design: [
+        {
+          name: 'TODO 908 add figma url',
+          type: 'figma',
+          url: 'https://www.figma.com/file/nMR5vipCwTyVnq9KRAbhFL/Designsystemet---delte-komponenter?node-id=8%3A25',
+        },
+      ],
+    }}
+  >
+    {() => {
+      return (
+        <>
+          <TokensList tokenType={'breakpoints'} />
+        </>
+      );
+    }}
+  </Story>
+</Canvas>

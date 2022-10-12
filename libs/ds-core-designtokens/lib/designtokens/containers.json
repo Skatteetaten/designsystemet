@@ -1,0 +1,43 @@
+{
+  ":root,\n:host": {
+    "--container-xs": "100%",
+    "--container-s": "560px",
+    "--container-m": "960px",
+    "--container-l": "1160px",
+    "--container-aside": "380px",
+    "--container-wide-content": "760px \n    ",
+    "--semantic-responsive-container": "var(--container-xs)",
+    "--semantic-responsive-container-padding": "0 var(--spacing-m)",
+    "--semantic-responsive-article": "var(--container-xs)",
+    "--semantic-responsive-internal-container-display": "block",
+    "--semantic-responsive-internal-container-padding": "0 var(--spacing-m)",
+    "--semantic-responsive-internal-aside": "var(--container-xs)",
+    "--semantic-responsive-wide-content": "var(--container-xs)"
+  },
+  "@media (min-width: 480px)": {
+    ":root,\n  :host": {
+      "--semantic-responsive-container-padding": "0",
+      "--semantic-responsive-wide-content": "var(--container-s)"
+    }
+  },
+  "@media (min-width: 640px)": {
+    ":root,\n  :host": {
+      "--semantic-responsive-container": "var(--container-s)",
+      "--semantic-responsive-article": "var(--container-s)",
+      "--semantic-responsive-wide-content": "var(--container-wide-content)"
+    }
+  },
+  "@media (min-width: 1024px)": {
+    ":root,\n  :host": {
+      "--semantic-responsive-container": "var(--container-m)",
+      "--semantic-responsive-internal-container-display": "grid",
+      "--semantic-responsive-internal-container-padding": "0 var(--spacing-xl)",
+      "--semantic-responsive-internal-aside": "var(--container-aside)"
+    }
+  },
+  "@media (min-width: 1366px)": {
+    ":root,\n  :host": {
+      "--semantic-responsive-container": "var(--container-l)"
+    }
+  }
+}

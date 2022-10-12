@@ -1,0 +1,18 @@
+/* Dette er i titlene i Docs fanen */
+h1.sbdocs-h1,
+h2.sbdocs-h2 {
+  color: var(--semantic-page-foreground);
+}
+/* Dette er i sub-titlene i Docs Palette fanen */
+div.css-bp0xxt,
+div.css-1rr4qq7,
+div.css-1cic1f4,
+div.css-1nkxwxu,
+div.css-1xrb7qh {
+  color: var(--semantic-page-foreground);
+}
+/* Dette er bakgrunnen og preview området i Docs fanen */
+div.css-zgt7u1,
+div.css-tmvzag {
+  background: var(--semantic-page-background);
+}
