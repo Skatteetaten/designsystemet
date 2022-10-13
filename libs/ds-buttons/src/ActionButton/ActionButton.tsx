@@ -9,5 +9,3 @@ export const ActionButton: FC = (): JSX.Element => {
     </div>
   );
 };
-
-export default ActionButton;

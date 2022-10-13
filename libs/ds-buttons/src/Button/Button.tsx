@@ -57,5 +57,3 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 );
 
 Button.displayName = 'Button';
-// TODO FRONT-918 Avklare bruk av default / named exports
-export default Button;
