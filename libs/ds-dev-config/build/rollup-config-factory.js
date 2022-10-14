@@ -2,7 +2,6 @@ const nrwlConfig = require('@nrwl/react/plugins/bundle-rollup');
 const autoprefixer = require('autoprefixer');
 const glob = require('glob');
 const postcss = require('rollup-plugin-postcss');
-const typescript = require('rollup-plugin-typescript2');
 
 const fs = require('fs');
 const path = require('path');
@@ -26,7 +25,7 @@ const getRollupInputs = (sourcePath) => {
       const subdirectoryName = srcSubdirectories[i];
       inputNamesAndPaths[
         `${subdirectoryName}/index`
-      ] = `${sourcePath}/${subdirectoryName}/index.tsx`;
+      ] = `${sourcePath}/${subdirectoryName}/${subdirectoryName}.tsx`;
       i++;
     }
   } catch (e) {
@@ -67,38 +66,18 @@ const createRollupConfig = (
   nrwlConfig(config);
   const plugins = config.plugins;
   const [postcssPluginName] = [postcss().name];
-  const [typescriptPluginName] = [typescript().name];
 
   let postCssPluginIndex;
-  let typescriptPluginIndex;
 
   for (const index of plugins.keys()) {
     if (plugins[index].name === postcssPluginName) {
       postCssPluginIndex = index;
     }
-    if (plugins[index].name === typescriptPluginName) {
-      typescriptPluginIndex = index;
-    }
   }
-
-  const typescriptPlugin = typescript({
-    declaration: true,
-    useTsconfigDeclarationDir: true,
-    check: true,
-    tsconfig: pathToTsConfig,
-    tsconfigOverride: {
-      compilerOptions: {
-        declarationDir: outputDir,
-        rootDir: srcDir,
-        allowJs: false,
-        declaration: true,
-      },
-    },
-  });
 
   const postCssPlugins = bundleCss(pathToCSS, outputDir);
   plugins.splice(postCssPluginIndex, 1);
-  plugins.splice(typescriptPluginIndex, 1, typescriptPlugin);
+
   return {
     ...config,
     input: {

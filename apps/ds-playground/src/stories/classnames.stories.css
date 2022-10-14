@@ -1,0 +1,21 @@
+.myIconClassname {
+  fill: var(--palette-denim-100);
+}
+
+.buttonClassnameDark {
+  background-color: black;
+}
+
+.buttonClassnameDark:disabled {
+  background-color: black;
+}
+
+.buttonClassnameLight {
+  background-color: white;
+  color: brown;
+}
+
+.buttonClassnameLight:disabled {
+  background-color: white;
+  color: brown;
+}
