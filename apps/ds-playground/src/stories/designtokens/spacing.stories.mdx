@@ -1,0 +1,35 @@
+<!-- palette.mdx -->
+
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { TokensList } from './TokensList';
+import { SpacingTokenExamplesGenerator } from './SpacingTokenExamplesGenerator';
+
+# Spacing
+
+<SpacingTokenExamplesGenerator />
+
+<Meta title="Designtokens" />
+
+<Canvas>
+  <Story
+    name="Spacing"
+    parameters={{
+      design: [
+        {
+          name: 'Spacing',
+          type: 'figma',
+          url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=3254%3A9042',
+        },
+      ],
+    }}
+  >
+    {() => {
+      return (
+        <>
+          <p>{'Klikk på Docs tab for en visuell visning av spacing'}</p>
+          <TokensList tokenType={'spacing'} />
+        </>
+      );
+    }}
+  </Story>
+</Canvas>

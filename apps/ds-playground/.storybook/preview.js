@@ -1,6 +1,8 @@
 import React from 'react';
 
 import '@skatteetaten/ds-core-designtokens/index.css';
+import './playground.css';
+
 export const decorators = [(Story) => <Story />];
 
 const getBreakPoint = (point) => {

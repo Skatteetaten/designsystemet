@@ -7,16 +7,23 @@ export const ExternalLayout: (props: BaseProps) => JSX.Element = ({
   className = '',
   'data-testid': dataTestId,
 }) => {
+  const storyBookCSSOverride = `
+  div.css-1gh4yjl { max-width: none}
+  `;
   return (
     <div
       id={id}
       data-testid={dataTestId}
       className={`${styles.layout} ${className}`}
     >
-      <p>{'Responsive container'}</p>
-
+      <style>{storyBookCSSOverride}</style>
+      <p>
+        <strong>{'Responsive container'}</strong>
+      </p>
       <article className={styles.article}>
-        <p>{'Responsive article'}</p>
+        <p>
+          <strong>{'Responsive article'}</strong>
+        </p>
         <p>{'(uses --semantic-responsive-article)'}</p>
       </article>
       <p>{'(uses --semantic-responsive-container)'}</p>
