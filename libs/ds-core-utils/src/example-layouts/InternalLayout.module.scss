@@ -5,31 +5,22 @@
   grid-template-columns: var(--semantic-responsive-internal-aside) auto;
 }
 
-.aside {
-  background: linear-gradient(
-    90deg,
-    var(--palette-burgundy-30) 0%,
-    var(--palette-burgundy-10) 50%,
-    var(--palette-burgundy-30) 100%
-  );
+.aside,
+.main {
+  border: 3px solid var(--palette-burgundy-30);
+  background: var(--palette-graphite-0);
 }
 
-.main {
-  /* Styling brukt for dette eksempelet */
-  background: linear-gradient(
-    90deg,
-    var(--palette-burgundy-30) 0%,
-    var(--palette-burgundy-10) 50%,
-    var(--palette-burgundy-30) 100%
-  );
+.article,
+.wideContent {
+  border: 3px solid var(--palette-forest-30);
+  background: var(--palette-forest-10);
 }
 
 .article {
   max-width: var(--semantic-responsive-article);
-  background: var(--palette-forest-50);
 }
 
 .wideContent {
   max-width: var(--semantic-responsive-wide-content);
-  background: var(--palette-forest-50);
 }

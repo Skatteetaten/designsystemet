@@ -1,0 +1,10 @@
+{
+  ":root,\n:host": {
+    "--size-extra-small": "0.75rem",
+    "--size-small": "1rem",
+    "--size-medium": "1.25rem",
+    "--size-large": "1.5rem",
+    "--size-extra-large": "2.5rem",
+    "--semantic-size-default": "var(--size-small)"
+  }
+}

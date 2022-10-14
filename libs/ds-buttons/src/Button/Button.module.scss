@@ -1,6 +1,6 @@
 %disabled {
   border-color: var(--palette-graphite-50);
-  background-color: var(--palette-graphite-10);
+  background-color: var(--semantic-interactive-background);
   color: var(--palette-graphite-50);
   cursor: not-allowed;
   text-decoration: none;
@@ -64,10 +64,10 @@
   &_primary {
     border-color: var(--palette-azure-70);
     background-color: var(--palette-azure-70);
-    color: var(--palette-white);
+    color: var(--palette-graphite-0);
 
     & .icon svg {
-      fill: var(--palette-white);
+      fill: var(--palette-graphite-0);
     }
 
     &:hover {
@@ -95,7 +95,7 @@
 
   &_secondary {
     border-color: var(--palette-azure-70);
-    background-color: var(--palette-white);
+    background-color: var(--palette-graphite-0);
     color: var(--palette-azure-70);
 
     & .icon svg {
@@ -126,8 +126,8 @@
   }
 
   &_tertiary {
-    border-color: var(--palette-white);
-    background-color: var(--palette-white);
+    border-color: var(--palette-graphite-0);
+    background-color: var(--palette-graphite-0);
     color: var(--palette-azure-70);
     text-decoration: underline;
 
@@ -170,10 +170,10 @@
 
     &:hover {
       background-color: var(--palette-burgundy-50);
-      color: var(--palette-white);
+      color: var(--palette-graphite-0);
 
       & .icon svg {
-        fill: var(--palette-white);
+        fill: var(--palette-graphite-0);
       }
     }
 
@@ -185,11 +185,11 @@
       @extend %active;
 
       & .icon svg {
-        fill: var(--palette-white);
+        fill: var(--palette-graphite-0);
       }
 
       background-color: var(--palette-burgundy-50);
-      color: var(--palette-white);
+      color: var(--palette-graphite-0);
     }
 
     &:disabled,

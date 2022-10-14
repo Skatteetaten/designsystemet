@@ -1,3 +1,4 @@
+/* NB! Denne filen er utgangspunktet for den autogenerert .json fil, vennligst ikke gjør manuelle endringer i json. Skriv her og kjør kommandonavn generate:designtokens for å generere json. */
 :root,
 :host {
   --container-xs: 100%; /* Brukes som default */
