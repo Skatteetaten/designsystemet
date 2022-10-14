@@ -4,7 +4,7 @@ import { Icon, AccountChildSVGpath } from '@skatteetaten/ds-icons';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ElementHandle } from 'puppeteer';
 
-import '../icon.stories.css';
+import '../classnames.stories.css';
 
 export default {
   component: Icon,

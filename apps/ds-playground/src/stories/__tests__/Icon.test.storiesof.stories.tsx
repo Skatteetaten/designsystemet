@@ -8,7 +8,7 @@ import {
 import { storiesOf } from '@storybook/react';
 import { ElementHandle } from 'puppeteer';
 
-import '../icon.stories.css';
+import '../classnames.stories.css';
 
 const iconsWithSize = [
   {

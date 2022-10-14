@@ -7,7 +7,8 @@ import {
 import { action } from '@storybook/addon-actions';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import './button.stories.css';
+import './classnames.stories.css';
+// import ButtonDocs from '../docs/button.mdx';
 
 const iconList = {
   Send: { svgPath: SendSVGpath },
@@ -30,7 +31,7 @@ export default {
       control: 'select',
       mapping: iconList,
       description: 'Icon-komponent (optional)',
-      table: { defaultValue: { summary: undefined } },
+      table: { defaultValue: { summary: 'undefined' } },
     },
     disabled: {
       description:
