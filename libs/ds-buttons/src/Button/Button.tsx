@@ -1,23 +1,23 @@
 import { forwardRef } from 'react';
 
+import { Icon } from '@skatteetaten/ds-icons';
+
 import { ButtonProps } from './Button.types';
 
-import styles from './button.module.scss';
+import styles from './Button.module.scss';
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
-      //TODO Gjennomgang av properties
       id,
       className = '',
-      children = 'Klikk her',
+      children,
       variant = 'primary',
       disabled = false,
-      icon,
+      iconProps,
       tabIndex,
       'data-testid': dataTestId,
       'aria-label': ariaLabel,
-      'aria-labelledby': ariaLabelledby,
       'aria-describedby': ariaDescribedby,
       'aria-hidden': ariaHidden,
       onClick,
@@ -26,9 +26,10 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ): JSX.Element => {
+    const withicon = iconProps ? `${styles.button_withIcon}` : '';
     const cssName = `${styles.button} ${
       styles[`button_${variant}`]
-    } ${className}`;
+    } ${withicon} ${className}`;
     return (
       <button
         ref={ref}
@@ -38,14 +39,17 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={disabled}
         aria-label={ariaLabel}
         aria-hidden={ariaHidden}
-        aria-labelledby={ariaLabelledby}
         aria-describedby={ariaDescribedby}
         tabIndex={tabIndex}
         onClick={onClick}
         onBlur={onBlur}
         onFocus={onFocus}
       >
-        {icon && <span className={styles.icon}>{icon}</span>}
+        {iconProps && (
+          <span className={styles.icon}>
+            <Icon {...iconProps} />
+          </span>
+        )}
         {children}
       </button>
     );
@@ -53,5 +57,3 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 );
 
 Button.displayName = 'Button';
-// TODO sjekk default / named
-export default Button;

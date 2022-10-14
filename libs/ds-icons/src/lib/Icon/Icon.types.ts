@@ -2,7 +2,7 @@ import { BaseProps, Size, IconVariant } from '@skatteetaten/ds-core-utils';
 
 type IconPropsHTMLAttributes = Pick<
   React.SVGAttributes<Record<string, never>>,
-  'aria-label' | 'role' | 'viewBox' | 'tabIndex'
+  'role' | 'viewBox' | 'tabIndex'
 >;
 
 interface IconComponentCommonProps {
@@ -15,8 +15,8 @@ interface IconCustomPropsWithTitle extends IconPropsHTMLAttributes {
 }
 
 export interface IconCustomPropsWithAriaLabel extends IconPropsHTMLAttributes {
-  title?: never;
   'aria-label'?: string;
+  title?: never;
 }
 
 export type VariantCustomProps =

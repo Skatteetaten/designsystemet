@@ -18,7 +18,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       size = 'medium',
       svgPath,
       tabIndex,
-    }: IconProps,
+    },
     ref
   ): JSX.Element => {
     const uniqueId = useId();
