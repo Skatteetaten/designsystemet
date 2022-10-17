@@ -12,13 +12,13 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       'data-testid': dataTestId,
       title,
       'aria-label': ariaLabel,
-      role = title || ariaLabel ? 'img' : undefined,
+      role = 'img',
       variant = 'systemIcon',
       viewBox = variant === 'systemIcon' ? '0 0 24 24' : '0 0 48 48',
       size = 'medium',
       svgPath,
       tabIndex,
-    }: IconProps,
+    },
     ref
   ): JSX.Element => {
     const uniqueId = useId();

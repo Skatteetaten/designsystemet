@@ -9,7 +9,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { SystemIconLabels, SystemSVGPaths } from './utils/icon.systems';
 import { ThemeIconLabels, ThemeSVGPaths } from './utils/icon.themes';
 
-import './icon.stories.css';
+import './classnames.stories.css';
 
 export default {
   component: DefaultIcon,

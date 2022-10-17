@@ -7,6 +7,9 @@ export const InternalLayout: (props: BaseProps) => JSX.Element = ({
   className = '',
   'data-testid': dataTestId,
 }) => {
+  const storyBookCSSOverride = `
+  div.css-1gh4yjl { max-width: none}
+  `;
   return (
     <>
       <div
@@ -14,18 +17,29 @@ export const InternalLayout: (props: BaseProps) => JSX.Element = ({
         data-testid={dataTestId}
         className={`${styles.layout} ${className}`}
       >
+        <style>{storyBookCSSOverride}</style>
         <div className={`${styles.aside}`}>
-          <p>{'Aside area'}</p>
+          <p>
+            <strong>{'Aside area'}</strong>
+          </p>
         </div>
         <div className={`${styles.main}`}>
-          <p>{'Main area'}</p>
+          <p>
+            <strong>{'Main area'}</strong>
+          </p>
           <article className={styles.article}>
-            <p>{'Responsive article'}</p>
-            <p>{'(uses --semantic-responsive-article)'}</p>
+            <p>
+              <strong>{'Responsive article'}</strong>
+              <br />
+              {'(uses --semantic-responsive-article)'}
+            </p>
           </article>
           <section className={styles.wideContent}>
-            {'Responsive wide-content'}
-            <p>{'(uses --semantic-responsive-wide-content)'}</p>
+            <p>
+              <strong>{'Responsive wide-content'}</strong>
+              <br />
+              {'(uses --semantic-responsive-wide-content)'}
+            </p>
           </section>
           <p>{'...'}</p>
         </div>

@@ -33,6 +33,10 @@ export const findSVGPathElements = function (
   return elements;
 };
 
+export const iconName = function (svgPathName: string): string {
+  return svgPathName.replace('SVGpath', '');
+};
+
 export const getListOfAllSystemIcons = function (
   SVGPathElements: Record<SVGPathAndIconKey, SVGPathAndIconType>,
   SVGPathAndIconElements: Record<SVGPathAndIconKey, SVGPathAndIconType>

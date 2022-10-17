@@ -1,0 +1,29 @@
+{
+  ":root,\n:host": {
+    "--font-size-reference": "16px",
+    "--font-size-xxs": "0.625rem",
+    "--font-size-xs": "0.75rem",
+    "--font-size-s": "0.875rem",
+    "--font-size-m": "1rem",
+    "--font-size-l": "1.125rem",
+    "--font-size-xl": "1.375rem",
+    "--font-size-xxl": "1.875rem",
+    "--font-size-mega": "2.625rem",
+    "--font-weight-light": "100",
+    "--font-weight-regular": "400",
+    "--font-weight-medium": "500",
+    "--font-weight-semibold": "600",
+    "--font-weight-bold": "700",
+    "--semantic-font-size-default": "var(--font-size-m)",
+    "--semantic-font-weight-default": "var(--font-weight-regular)",
+    "--semantic-line-height-default": "1.5",
+    "--semantic-line-height-heading1": "1.333",
+    "--semantic-line-height-heading2": "1.333",
+    "--semantic-line-height-heading3": "var(--semantic-line-height-default)",
+    "--semantic-line-height-heading4": "1.666",
+    "--semantic-line-height-buttons": "1.666",
+    "--semantic-line-height-article": "1.666",
+    "--semantic-line-height-input": "var(--semantic-line-height-default)",
+    "--semantic-line-height-table": "var(--semantic-line-height-default)"
+  }
+}

@@ -1,3 +1,4 @@
-export * from './Button';
-export * from './ActionButton';
-export * from './IconButton';
+export * from './Button/Button';
+export * from './ActionButton/ActionButton';
+export * from './MegaButton/MegaButton';
+export * from './IconButton/IconButton';

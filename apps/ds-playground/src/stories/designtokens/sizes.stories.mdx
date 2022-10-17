@@ -1,0 +1,35 @@
+<!-- palette.mdx -->
+
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { TokensList } from './TokensList';
+import { SizesTokenExamplesGenerator } from './SizesTokenExamplesGenerator';
+
+# Sizes
+
+<SizesTokenExamplesGenerator />
+
+<Meta title="Designtokens" />
+
+<Canvas>
+  <Story
+    name="Sizes"
+    parameters={{
+      design: [
+        {
+          name: 'Sizes',
+          type: 'figma',
+          url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=16067%3A25342',
+        },
+      ],
+    }}
+  >
+    {() => {
+      return (
+        <>
+          <p>{'Klikk på Docs tab for en visuell visning av sizes'}</p>
+          <TokensList tokenType={'sizes'} />
+        </>
+      );
+    }}
+  </Story>
+</Canvas>

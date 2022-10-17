@@ -5,6 +5,7 @@ import {
   makeLabelsFromSVGPathElements,
   SVGPathAndIconType,
   SVGPathAndIconKey,
+  iconName,
   getListOfAllSystemIcons,
 } from '../icon.utils';
 
@@ -42,6 +43,14 @@ describe('Icon utils', () => {
       AddSVGpath: 'Add',
     };
     expect(labels).toEqual(expectedLabels);
+  });
+
+  it('Returnerer riktig ikonnavn fra SVGPathName', () => {
+    const svgPathName = 'AddSVGpath';
+
+    const name = iconName(svgPathName);
+
+    expect(name).toBe('Add');
   });
 
   it('Returnerer liste med systemikonnavn og svgPath', () => {
