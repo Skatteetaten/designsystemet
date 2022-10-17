@@ -38,6 +38,38 @@ exports[`Image storyshots Tests / Button With Ref 1`] = `"<button class=\\"Butto
 
 exports[`Image storyshots Tests / Button With Tabindex 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP  \\" tabindex=\\"-1\\">Klikk her</button>"`;
 
+exports[`Image storyshots Tests / InlineButton Defaults 1`] = `"<button class=\\"InlineButton_button__2taCK  undefined\\">Legg til rapport</button>"`;
+
+exports[`Image storyshots Tests / InlineButton Disabled 1`] = `"<button class=\\"InlineButton_button__2taCK  undefined\\" disabled=\\"\\">Legg til rapport</button>"`;
+
+exports[`Image storyshots Tests / InlineButton Disabled With Icon 1`] = `"<button class=\\"InlineButton_button__2taCK InlineButton_button_withIconLeft__3Y66a undefined\\" disabled=\\"\\"><span class=\\"InlineButton_icon__GHhTr\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 \\" role=\\"img\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path d=\\"M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z\\"></path></svg></span>Legg til rapport</button>"`;
+
+exports[`Image storyshots Tests / InlineButton With Access Key 1`] = `"<button class=\\"InlineButton_button__2taCK  undefined\\" accesskey=\\"a\\">Legg til rapport</button>"`;
+
+exports[`Image storyshots Tests / InlineButton With Aria Describedby 1`] = `"<button class=\\"InlineButton_button__2taCK  undefined\\" aria-describedby=\\"dummyId\\">Legg til rapport</button>"`;
+
+exports[`Image storyshots Tests / InlineButton With Class Name 1`] = `"<button class=\\"InlineButton_button__2taCK  dummyClassName\\">Legg til rapport</button>"`;
+
+exports[`Image storyshots Tests / InlineButton With Class Name And Disabled 1`] = `"<button class=\\"InlineButton_button__2taCK  dummyClassName\\" disabled=\\"\\">Legg til rapport</button>"`;
+
+exports[`Image storyshots Tests / InlineButton With Icon Left 1`] = `"<button class=\\"InlineButton_button__2taCK InlineButton_button_withIconLeft__3Y66a undefined\\"><span class=\\"InlineButton_icon__GHhTr\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 \\" role=\\"img\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path d=\\"M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z\\"></path></svg></span>Legg til rapport</button>"`;
+
+exports[`Image storyshots Tests / InlineButton With Icon Right 1`] = `"<button class=\\"InlineButton_button__2taCK InlineButton_button_withIconRight__3d8PZ undefined\\">Legg til rapport<span class=\\"InlineButton_icon__GHhTr\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 \\" role=\\"img\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path d=\\"M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z\\"></path></svg></span></button>"`;
+
+exports[`Image storyshots Tests / InlineButton With Id 1`] = `"<button id=\\"dummyId\\" class=\\"InlineButton_button__2taCK  undefined\\">Legg til rapport</button>"`;
+
+exports[`Image storyshots Tests / InlineButton With Long Text 1`] = `"<button class=\\"InlineButton_button__2taCK  undefined\\">Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Når ikke ikon så skal teksten være venstrejusteres.</button>"`;
+
+exports[`Image storyshots Tests / InlineButton With Long Text And Icon 1`] = `"<button class=\\"InlineButton_button__2taCK InlineButton_button_withIconLeft__3Y66a undefined\\"><span class=\\"InlineButton_icon__GHhTr\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 \\" role=\\"img\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path d=\\"M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z\\"></path></svg></span>Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres for ikon med posisjon left.</button>"`;
+
+exports[`Image storyshots Tests / InlineButton With Ref 1`] = `"<button class=\\"InlineButton_button__2taCK  undefined\\" id=\\"dummyId\\">Legg til rapport</button>"`;
+
+exports[`Image storyshots Tests / InlineButton With Tabindex 1`] = `"<button class=\\"InlineButton_button__2taCK  undefined\\" tabindex=\\"-1\\">Legg til rapport</button>"`;
+
+exports[`Image storyshots Tests / MegaButton Mega Button As External Link 1`] = `"<a class=\\"MegaButton_button__1aSH0 \\" role=\\"button\\" href=\\"https://www.skatteetaten.no\\">Klikk her<span class=\\"MegaButton_icon__3cuzU\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 MegaButton_svg__2I3wW\\" role=\\"img\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path d=\\"M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7Zm5 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z\\"></path></svg></span></a>"`;
+
+exports[`Image storyshots Tests / MegaButton Mega Button As Link 1`] = `"<a class=\\"MegaButton_button__1aSH0 \\" role=\\"button\\" href=\\"https://www.skatteetaten.no\\">Klikk her</a>"`;
+
 exports[`Image storyshots Tests / MegaButton Mega Button Class Name Change 1`] = `"<button class=\\"MegaButton_button__1aSH0 buttonClassnameLight \\">Klikk her</button>"`;
 
 exports[`Image storyshots Tests / MegaButton Mega Button Custom Css And Disabled 1`] = `"<button class=\\"MegaButton_button__1aSH0 buttonClassnameLight\\" disabled=\\"\\">Klikk her</button>"`;
@@ -48,7 +80,7 @@ exports[`Image storyshots Tests / MegaButton Mega Button Disabled 1`] = `"<butto
 
 exports[`Image storyshots Tests / MegaButton Mega Button Disabled With Icon 1`] = `"<button class=\\"MegaButton_button__1aSH0 \\" disabled=\\"\\">Klikk her<span class=\\"MegaButton_icon__3cuzU\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 MegaButton_svg__2I3wW\\" role=\\"img\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path d=\\"M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7Zm5 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z\\"></path></svg></span></button>"`;
 
-exports[`Image storyshots Tests / MegaButton Mega Button With Arias 1`] = `"<button class=\\"MegaButton_button__1aSH0 \\" aria-label=\\"Knapp aria-label\\" aria-hidden=\\"true\\" aria-labelledby=\\"Knapp aria-labelledby\\" aria-describedby=\\"Knapp aria-describedby\\">Klikk her</button>"`;
+exports[`Image storyshots Tests / MegaButton Mega Button With Arias 1`] = `"<button class=\\"MegaButton_button__1aSH0 \\" aria-describedby=\\"testid1234\\">Klikk her</button>"`;
 
 exports[`Image storyshots Tests / MegaButton Mega Button With Icon 1`] = `"<button class=\\"MegaButton_button__1aSH0 \\">Klikk her<span class=\\"MegaButton_icon__3cuzU\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 MegaButton_svg__2I3wW\\" role=\\"img\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path d=\\"M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7Zm5 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z\\"></path></svg></span></button>"`;
 
