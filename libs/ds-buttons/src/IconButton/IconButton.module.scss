@@ -1,0 +1,94 @@
+.button {
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    box-sizing: content-box;
+    cursor: pointer;
+
+    > svg {
+        display: block;
+        fill: var(--palette-azure-70);
+    }
+
+    &_small {
+        padding: var(--spacing-xxs) var(--spacing-xxs);
+
+        > svg {
+            height: var(--size-extra-small);
+            width: var(--size-extra-small);
+        }
+    }
+
+    &_medium {
+        padding: var(--spacing-xxs) var(--spacing-xxs);
+
+        > svg {
+            height: var(--size-small);
+            width: var(--size-small);
+        }
+    }
+
+    &_large {
+        padding: var(--spacing-s) var(--spacing-s);
+
+        > svg {
+            height: var(--size-medium);
+            width: var(--size-medium);
+        }
+    }
+
+    &:hover {
+        background-color: var(--palette-azure-10);
+        border-color: var(--palette-azure-10);
+    }
+    
+    &:active {
+        background-color: var(--palette-azure-10);
+        border-color: var(--palette-azure-100);
+        outline: none;
+        transform: translateY(2px);
+        transition: 0.15s;
+
+        > svg {
+            fill: var(--palette-azure-100);
+        }
+    }
+    
+    &:focus {
+        border-color: transparent;
+        outline: var(--palette-azure-70) solid 2px;
+        outline-offset: 2px;
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &:disabled:active {
+        background-color: transparent;
+        border-color: transparent;
+        cursor: not-allowed;
+        transform: none;
+
+        > svg {
+            fill: var(--palette-graphite-50);
+        }
+    }
+
+    &_outlined {
+        border-color: var(--palette-azure-70);
+    
+        &:hover {
+            border-color: var(--palette-azure-70);
+        }
+
+        &:active {
+            border-color: var(--palette-azure-100);
+        }
+    
+        &:disabled,
+        &:disabled:hover,
+        &:disabled:active {
+            border-color: var(--palette-graphite-50);
+        }
+    }
+}
+  
