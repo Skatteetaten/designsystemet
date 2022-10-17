@@ -5,16 +5,20 @@ import { IconProps } from '@skatteetaten/ds-icons';
 type IconButtonPropsHTMLAttributes = Pick<
   React.ComponentPropsWithoutRef<'button'>,
   | 'tabIndex'
-  | 'aria-label'
-  | 'aria-hidden'
-  | 'aria-describedby'
+  | 'accessKey'
   | 'disabled'
   | 'onClick'
   | 'onBlur'
   | 'onFocus'
 >;
 
-export interface IconButtonComponentProps extends IconButtonPropsHTMLAttributes {
+interface IconButtonCustomProps extends IconButtonPropsHTMLAttributes {
+  ariaLabel: string;
+  ariaDescribedBy: string;
+  accessKey: string;
+}
+
+export interface IconButtonComponentProps {
   iconProps: IconProps;
   buttonSize?: Extract<Size,  'small' | 'medium' | 'large'>;
   isOutlined?: boolean;
@@ -26,6 +30,7 @@ export interface IconButtonComponentProps extends IconButtonPropsHTMLAttributes 
  * @param {boolean} isOutlined - (Default: false) ramme rundt knappen
  * @param {number} tabIndex - 
  * @param {boolean} disabled - (Default: false) disable knappen
+ * @param {string} ariaLabel - 
  */
 
-export type IconButtonProps = BaseProps & IconButtonComponentProps;
+export type IconButtonProps = BaseProps & IconButtonCustomProps & IconButtonComponentProps;

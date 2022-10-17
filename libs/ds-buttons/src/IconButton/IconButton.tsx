@@ -1,39 +1,46 @@
 import { forwardRef } from 'react';
+
 import { Icon } from '@skatteetaten/ds-icons';
+
 import { IconButtonProps } from './IconButton.types';
+
 import styles from './IconButton.module.scss';
+
+import { getClassNameDefault, getOutlinedDefault, getSizeDefault } from './defaults';
 
 export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
   (
     {
       id,
-      className = '',
+      className = getClassNameDefault(),
       'data-testid': dataTestId,
       tabIndex,
-      'aria-label': ariaLabel,
-      'aria-describedby': ariaDescribedby,
-      'aria-hidden': ariaHidden,
-      buttonSize = 'medium',
+      accessKey: accessKey,
+      ariaLabel: ariaLabel,
+      ariaDescribedBy: ariaDescribedBy,
+      buttonSize = getSizeDefault(),
       iconProps,
-      isOutlined = false,
-      disabled = false,
+      isOutlined = getOutlinedDefault(),
+      disabled = getOutlinedDefault(),
       onClick,
       onBlur,
       onFocus,
     },
     ref
   ): JSX.Element => {
+    const sizeClassName = styles[`button_${buttonSize}`];
+    const outlineClassName = isOutlined ? styles[`button_outlined`] : '';
     return (
       <button
         ref={ref}
         id={id}
-        className={`${styles.button} ${styles[`button_${buttonSize}`]} ${isOutlined ? styles[`button_outlined`] : ''} ${className}`}
+        className={`${styles.button} ${sizeClassName} ${outlineClassName} ${className}`}
         data-testid={dataTestId}
         disabled={disabled}
-        aria-label={ariaLabel}
-        aria-hidden={ariaHidden}
-        aria-describedby={ariaDescribedby}
         tabIndex={tabIndex}
+        accessKey={accessKey}
+        aria-label={ariaLabel}
+        aria-describedby={ariaDescribedBy}
         onClick={onClick}
         onBlur={onBlur}
         onFocus={onFocus}
@@ -45,4 +52,3 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
 );
 
 IconButton.displayName = 'IconButton';
-export default IconButton;

@@ -1,6 +1,5 @@
-import { useState } from 'react';
 import { IconButton } from '@skatteetaten/ds-buttons';
-import { SendSVGpath, SystemSVGPathsAndIcons } from '@skatteetaten/ds-icons';
+import { SendSVGpath } from '@skatteetaten/ds-icons';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ElementHandle, ScreenshotOptions } from 'puppeteer';
 
@@ -9,9 +8,6 @@ const screenShotOptions: ScreenshotOptions = {
   encoding: 'base64',
 };
 const wrapper = '[data-test-block]';
-const ariaLabel = 'aria-label';
-const ariaLabelledby = 'aria-labelledby';
-const ariaHidden = 'aria-hidden';
 
 export default {
   component: IconButton,
@@ -103,7 +99,6 @@ IconButtonWithIcon.args = {
 };
 IconButtonWithIcon.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
-    const systemIconViewBox = '0 0 24 24';
     const svgAttributes = await page.$eval(`${wrapper} > button svg`, (el) => {
       return {
         role: el.getAttribute('role'),
@@ -270,20 +265,17 @@ CustomCssAndDisabled.parameters = {
 export const IconButtonWithArias = Template.bind({});
 IconButtonWithArias.args = {
   ...IconButtonDefaults.args,
-  'aria-hidden': true,
-  'aria-label': 'Knapp aria-label',
-  'aria-describedby': 'Knapp aria-describedby',
+  ariaLabel: 'Knapp aria-label',
+  ariaDescribedBy: 'Knapp aria-describedby',
 };
 IconButtonWithArias.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const ariaAttributes = await page.$eval(`${wrapper} > button`, (el) => {
       return {
-        ariaHidden: el.getAttribute('aria-hidden'),
         ariaLabel: el.getAttribute('aria-label'),
         ariaDescribedBy: el.getAttribute('aria-describedby'),
       };
     });
-    expect(ariaAttributes.ariaHidden).toBe('true');
     expect(ariaAttributes.ariaLabel).toBe('Knapp aria-label');
     expect(ariaAttributes.ariaDescribedBy).toBe('Knapp aria-describedby');
 

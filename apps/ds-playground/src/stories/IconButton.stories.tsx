@@ -1,6 +1,9 @@
 import { IconButton } from '@skatteetaten/ds-buttons';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { sizeArr } from '@skatteetaten/ds-core-utils';
 import { action } from '@storybook/addon-actions';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { getDisabledDefault, getOutlinedDefault, getSizeDefault } from 'libs/ds-buttons/src/IconButton/defaults';
+
 import { SystemIconLabels, SystemSVGPaths } from './utils/icon.systems';
 import { getListOfAllSystemIcons } from './utils/icon.utils';
 
@@ -16,7 +19,7 @@ export default {
           control: 'select',
         },
         buttonSize: {
-            options: ['small', 'medium', 'large'],
+            options: [...sizeArr].slice(1, 4),
             control: 'radio',
         },
         isOutlined: {
@@ -26,18 +29,19 @@ export default {
           control: 'boolean',
         },
         className: {
-          control: 'text',
+          control: 'select',
+          options: ['', 'buttonClassnameDark', 'buttonClassnameLight'],
         },
         tabIndex: {
           control: 'number',
         },
-        'aria-label': {
+        accessKey: {
           control: 'text',
         },
-        'aria-hidden': {
-          control: 'boolean',
+        ariaLabel: {
+          control: 'text',
         },
-        'aria-describedby': {
+        ariaDescribedBy: {
           control: 'text',
         },
     },
@@ -52,9 +56,9 @@ IconButtonDefault.storyName = 'Default';
 
 IconButtonDefault.args = {
   iconProps: { svgPath: Object.values(SystemSVGPaths)[14] }, // Bell icon
-  buttonSize: 'medium',
-  isOutlined: false,
-  disabled: false,
+  buttonSize: getSizeDefault(),
+  isOutlined: getOutlinedDefault(),
+  disabled: getDisabledDefault(),
 };
 
 IconButtonDefault.parameters = {
