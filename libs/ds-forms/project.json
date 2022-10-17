@@ -13,7 +13,7 @@
         "project": "libs/ds-forms/package.json",
         "entryFile": "libs/ds-forms/src/index.ts",
         "external": ["react/jsx-runtime"],
-        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "rollupConfig": ["libs/ds-forms/rollup.config.js"],
         "compiler": "babel",
         "assets": [
           {

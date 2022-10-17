@@ -23,9 +23,10 @@ const getRollupInputs = (sourcePath) => {
       len = srcSubdirectories.length;
     while (i < len) {
       const subdirectoryName = srcSubdirectories[i];
-      inputNamesAndPaths[
-        `${subdirectoryName}/index`
-      ] = `${sourcePath}/${subdirectoryName}/${subdirectoryName}.tsx`;
+      const subEntryPath = `${sourcePath}/${subdirectoryName}/${subdirectoryName}.tsx`;
+      if (fs.existsSync(subEntryPath)) {
+        inputNamesAndPaths[`${subdirectoryName}/index`] = subEntryPath;
+      }
       i++;
     }
   } catch (e) {

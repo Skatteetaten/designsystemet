@@ -32,5 +32,6 @@ const DSViewports = {
   ...makeViewPort('--breakpoint-xl'),
 };
 export const parameters = {
+  controls: { sort: 'alpha' },
   viewport: { viewports: DSViewports },
 };
