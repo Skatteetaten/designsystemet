@@ -67,6 +67,24 @@ WithRef.parameters = {
   },
 };
 
+// Når Button har en id, så har button-element id
+export const WithId = Template.bind({});
+WithId.args = {
+  ...ButtonDefaults.args,
+  id: 'htmlid',
+};
+WithId.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const elementid = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('id')
+    );
+    expect(elementid).toBe('htmlid');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
 // Når Button har en variant, så vises stilsett for varianten (secondary)
 export const VariantSecondary = Template.bind({});
 VariantSecondary.args = {
@@ -346,24 +364,6 @@ WithTabindex.parameters = {
       el.getAttribute('tabIndex')
     );
     expect(tabIndex).toBe('-1');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-  },
-};
-
-// Når Button har en id, så har button-element id
-export const WithId = Template.bind({});
-WithId.args = {
-  ...ButtonDefaults.args,
-  id: 'htmlid',
-};
-WithId.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const elementid = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('id')
-    );
-    expect(elementid).toBe('htmlid');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();

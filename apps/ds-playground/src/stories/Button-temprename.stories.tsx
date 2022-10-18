@@ -4,7 +4,7 @@ import {
   getVariantDefault,
   getDisabledDefault,
   getClassNameDefault,
-  getIconProps,
+  getIconPropsDefault,
 } from '@skatteetaten/ds-buttons';
 import {
   EditSVGpath,
@@ -35,7 +35,7 @@ export default {
       options: [''].concat(Object.keys(iconList)),
       control: 'select',
       mapping: iconList,
-      table: { defaultValue: { summary: getIconProps() } },
+      table: { defaultValue: { summary: getIconPropsDefault() } },
     },
     disabled: {
       control: 'boolean',
