@@ -57,4 +57,3 @@ export const MegaButton = forwardRef<HTMLButtonElement, MegaButtonProps>(
 );
 
 MegaButton.displayName = 'MegaButton';
-// TODO sjekk default / named
