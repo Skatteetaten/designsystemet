@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BaseProps } from '@skatteetaten/ds-core-utils';
+import { BaseProps, Variant } from '@skatteetaten/ds-core-utils';
 import { IconProps } from '@skatteetaten/ds-icons';
 
 type ButtonPropsHTMLAttributes = Pick<
@@ -8,6 +8,7 @@ type ButtonPropsHTMLAttributes = Pick<
   | 'children'
   | 'tabIndex'
   | 'disabled'
+  | 'accessKey'
   | 'aria-label'
   | 'aria-hidden'
   | 'aria-labelledby'
@@ -18,14 +19,12 @@ type ButtonPropsHTMLAttributes = Pick<
 >;
 
 export interface ButtonComponentProps extends ButtonPropsHTMLAttributes {
+  /** (Optional) Icon-props som sendes videre til Icon-komponent. */
   iconProps?: IconProps;
-  variant?: 'primary' | 'secondary' | 'tertiary' | 'danger';
+  /** (Optional) Default "primary" variant av type enum. */
+  variant?: Variant;
+  /** Tekst på knapp. */
   children: string;
 }
 
-/**
- * @param {ButtonComponentProps["variant"]} variant - (Optional) Default "primary" variant av type enum.
- * @param {IconProps} iconProps - (Optional) Icon-props som sendes videre til Icon-komponent.
- * @param {string} children - Tekst på knapp.
- */
 export type ButtonProps = BaseProps & ButtonComponentProps;

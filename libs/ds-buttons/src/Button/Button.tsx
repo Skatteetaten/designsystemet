@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/no-access-key */
 import { forwardRef } from 'react';
 
 import { Icon } from '@skatteetaten/ds-icons';
 
 import { ButtonProps } from './Button.types';
+import { getVariantDefault, getDisabledDefault } from './defaults';
 
 import styles from './Button.module.scss';
 
@@ -12,12 +14,12 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       id,
       className = '',
       children,
-      variant = 'primary',
-      disabled = false,
+      variant = getVariantDefault(),
+      disabled = getDisabledDefault(),
       iconProps,
       tabIndex,
+      accessKey,
       'data-testid': dataTestId,
-      'aria-label': ariaLabel,
       'aria-describedby': ariaDescribedby,
       'aria-hidden': ariaHidden,
       onClick,
@@ -37,9 +39,9 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         className={cssName}
         data-testid={dataTestId}
         disabled={disabled}
-        aria-label={ariaLabel}
         aria-hidden={ariaHidden}
         aria-describedby={ariaDescribedby}
+        accessKey={accessKey}
         tabIndex={tabIndex}
         onClick={onClick}
         onBlur={onBlur}

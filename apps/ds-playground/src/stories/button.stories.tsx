@@ -1,14 +1,18 @@
-import { Button } from '@skatteetaten/ds-buttons';
+import {
+  Button,
+  ButtonProps,
+  getVariantDefault,
+  getDisabledDefault,
+} from '@skatteetaten/ds-buttons';
 import {
   EditSVGpath,
   SendSVGpath,
   AddOutlineSVGpath,
 } from '@skatteetaten/ds-icons';
 import { action } from '@storybook/addon-actions';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Story, Meta } from '@storybook/react';
 
 import './classnames.stories.css';
-// import ButtonDocs from '../docs/button.mdx';
 
 const iconList = {
   Send: { svgPath: SendSVGpath },
@@ -21,10 +25,10 @@ export default {
   title: 'Design System/Button',
   argTypes: {
     variant: {
-      description: 'Button variant (primary | secondary | tertiary | danger)',
+      /*       description: 'Button variant (primary | secondary | tertiary | danger)', */
       options: ['primary', 'secondary', 'tertiary', 'danger'],
       control: 'radio',
-      table: { defaultValue: { summary: 'primary' } },
+      table: { defaultValue: { summary: getVariantDefault() } },
     },
     iconProps: {
       options: [''].concat(Object.keys(iconList)),
@@ -34,10 +38,10 @@ export default {
       table: { defaultValue: { summary: 'undefined' } },
     },
     disabled: {
-      description:
-        'Hvis knapp er disabled så overskrives variant-stilene med :disable stil',
+      /* description:
+        'Hvis knapp er disabled så overskrives variant-stilene med :disable stil', */
       control: 'boolean',
-      table: { defaultValue: { summary: 'false' } },
+      table: { defaultValue: { summary: getDisabledDefault() } },
     },
     children: {
       description: 'Tekst på knapp',
@@ -68,15 +72,15 @@ export default {
       table: { defaultValue: { summary: '' } },
     },
   },
-} as ComponentMeta<typeof Button>;
+} as Meta<ButtonProps>;
 
-const TemplateDefault: ComponentStory<typeof Button> = (args) => (
+const TemplateDefault: Story<ButtonProps> = (args) => (
   <Button {...args} variant={args.variant}>
     {args.children}
   </Button>
 );
 
-const TemplateVariant: ComponentStory<typeof Button> = (args) => (
+const TemplateVariant: Story<ButtonProps> = (args) => (
   <>
     <div style={{ marginBottom: '1em' }}>
       <Button
@@ -118,7 +122,7 @@ const TemplateVariant: ComponentStory<typeof Button> = (args) => (
   </>
 );
 
-export const ButtonDefault = TemplateDefault.bind({});
+export const ButtonDefault: Story<ButtonProps> = TemplateDefault.bind({});
 ButtonDefault.storyName = 'Default';
 const baseArgs = {
   children: 'Klikk',
@@ -148,7 +152,7 @@ ButtonDefault.parameters = {
   },
 };
 
-export const Variants = TemplateVariant.bind({});
+export const Variants: Story<ButtonProps> = TemplateVariant.bind({});
 Variants.args = {
   ...baseArgs,
   'aria-label':
@@ -167,7 +171,7 @@ Variants.parameters = {
   ],
 };
 
-export const VariantsWithIcon = TemplateVariant.bind({});
+export const VariantsWithIcon: Story<ButtonProps> = TemplateVariant.bind({});
 VariantsWithIcon.args = {
   ...baseArgs,
   iconProps: { svgPath: SendSVGpath },

@@ -12,7 +12,6 @@ const screenShotOptions: ScreenshotOptions = {
   encoding: 'base64',
 };
 
-/* eslint-disable jest/no-standalone-expect */
 export default {
   component: Button,
   title: 'Tests / Button',
@@ -26,7 +25,8 @@ const Template: ComponentStory<typeof Button> = (args) => (
   </div>
 );
 
-// Når Button instansieres, får den default variant primary
+// Når Button instansieres, får den default variant primary.
+// Knapp må også ha tekst/children
 export const ButtonDefaults = Template.bind({});
 ButtonDefaults.storyName = 'Defaults';
 ButtonDefaults.args = {
@@ -170,31 +170,13 @@ VariantDanger.parameters = {
   },
 };
 
-// Når Button har en tekst, så vises teksten
-export const WithChildren = Template.bind({});
-WithChildren.args = { children: 'Button with children' };
-WithChildren.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const element = await page.$(wrapper);
-    const textContent = await element?.getProperty('textContent');
-    const text = await textContent?.jsonValue();
-    expect(text).toBe('Button with children');
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
-};
-
 // Når Button har ett ikon, så vises ikonet. tester også for riktig aria, role og viewbox for systemIcon som er brukt
 export const WithIcon = Template.bind({});
 WithIcon.args = {
   ...ButtonDefaults.args,
   iconProps: {
     svgPath: SendSVGpath,
-    'aria-label': 'min custom aria-label beskrivelse',
+    'aria-label': 'Skal ikke bli satt',
   },
 };
 WithIcon.argTypes = {
@@ -213,10 +195,9 @@ WithIcon.parameters = {
         viewBox: el.getAttribute('viewBox'),
       };
     });
-    // TODO Alternativt gjeninnføre tester etter avklaring rundt aria-attributter for icon i knapp
     expect(svgAttributes.role).toBe('img');
-    // expect(svgAttributes.ariaHidden).toBe('false');
-    // expect(svgAttributes.ariaLabel).toBe('min custom aria-label beskrivelse');
+    expect(svgAttributes.ariaHidden).toBe('true');
+    expect(svgAttributes.ariaLabel).toBeNull();
     expect(svgAttributes.ariaLabelledBy).toBeNull();
     expect(svgAttributes.viewBox).toBe(systemIconViewBox);
 
@@ -342,7 +323,7 @@ WithArias.args = {
   ...ButtonDefaults.args,
   'aria-hidden': true,
   'aria-label': 'Knapp aria-label',
-  'aria-describedby': 'Knapp aria-describedby',
+  'aria-describedby': 'id1',
 };
 WithArias.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -355,7 +336,7 @@ WithArias.parameters = {
     });
     expect(ariaAttributes.ariaHidden).toBe('true');
     expect(ariaAttributes.ariaLabel).toBe('Knapp aria-label');
-    expect(ariaAttributes.ariaDescribedBy).toBe('Knapp aria-describedby');
+    expect(ariaAttributes.ariaDescribedBy).toBe('id1');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -374,6 +355,42 @@ WithTabindex.parameters = {
       el.getAttribute('tabIndex')
     );
     expect(tabIndex).toBe('-1');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
+// Når Button har en id, så har button-element id
+export const WithId = Template.bind({});
+WithId.args = {
+  ...ButtonDefaults.args,
+  id: 'htmlid',
+};
+WithId.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const elementid = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('id')
+    );
+    expect(elementid).toBe('htmlid');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
+// Når Button har satt accessKey, så har accessKey en verdi
+export const WithAccesskey = Template.bind({});
+WithAccesskey.args = {
+  ...ButtonDefaults.args,
+  accessKey: 's',
+};
+WithAccesskey.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const accesskey = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('accesskey')
+    );
+    expect(accesskey).toBe('s');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
