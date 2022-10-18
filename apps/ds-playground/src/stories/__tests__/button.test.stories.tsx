@@ -189,7 +189,6 @@ WithIcon.parameters = {
       return {
         role: el.getAttribute('role'),
         ariaLabel: el.getAttribute('aria-label'),
-        ariaLabelledBy: el.getAttribute('aria-labelledby'),
         ariaHidden: el.getAttribute('aria-hidden'),
         viewBox: el.getAttribute('viewBox'),
       };
@@ -197,7 +196,6 @@ WithIcon.parameters = {
     expect(svgAttributes.role).toBe('img');
     expect(svgAttributes.ariaHidden).toBe('true');
     expect(svgAttributes.ariaLabel).toBeNull();
-    expect(svgAttributes.ariaLabelledBy).toBeNull();
     expect(svgAttributes.viewBox).toBe(systemIconViewBox);
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
@@ -320,18 +318,15 @@ CustomCssAndDisabled.parameters = {
 export const WithArias = Template.bind({});
 WithArias.args = {
   ...ButtonDefaults.args,
-  'aria-hidden': true,
   'aria-describedby': 'id1',
 };
 WithArias.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const ariaAttributes = await page.$eval(`${wrapper} > button`, (el) => {
       return {
-        ariaHidden: el.getAttribute('aria-hidden'),
         ariaDescribedBy: el.getAttribute('aria-describedby'),
       };
     });
-    expect(ariaAttributes.ariaHidden).toBe('true');
     expect(ariaAttributes.ariaDescribedBy).toBe('id1');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);

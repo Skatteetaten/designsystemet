@@ -55,11 +55,6 @@ export default {
       control: 'text',
       table: { defaultValue: { summary: '' } },
     },
-    'aria-hidden': {
-      control: 'boolean',
-      table: { defaultValue: { summary: '' } },
-    },
-
     onClick: {
       control: false,
     },
@@ -84,8 +79,6 @@ const TemplateVariant: Story<ButtonProps> = (args) => (
       <Button
         {...args}
         variant={'primary'}
-        /* Overskriver aria-label satt i Primary.args.['aria-label'] */
-        aria-label={'Erstatningslabel satt direkte i komponenten som props'}
         iconProps={args.iconProps}
         onClick={action('Button story klikk på primary')}
       >

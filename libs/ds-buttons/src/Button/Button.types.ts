@@ -10,7 +10,6 @@ type ButtonHTMLAttributes = Pick<
   | 'className'
   | 'accessKey'
   | 'aria-hidden'
-  | 'aria-labelledby'
   | 'aria-describedby'
   | 'onClick'
   | 'onBlur'
@@ -32,8 +31,6 @@ interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
   'aria-hidden'?: Booleanish;
   /** id til tilleggsbeskrivelse */
   'aria-describedby'?: string;
-  /**  id til html-element */
-  'aria-labelledby'?: string;
   /** Event handler for onClick */
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   /** Når button-element får focus */
