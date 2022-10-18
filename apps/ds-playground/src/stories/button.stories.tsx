@@ -3,6 +3,8 @@ import {
   ButtonProps,
   getVariantDefault,
   getDisabledDefault,
+  getClassNameDefault,
+  getIconProps,
 } from '@skatteetaten/ds-buttons';
 import {
   EditSVGpath,
@@ -25,7 +27,6 @@ export default {
   title: 'Design System/Button',
   argTypes: {
     variant: {
-      /*       description: 'Button variant (primary | secondary | tertiary | danger)', */
       options: ['primary', 'secondary', 'tertiary', 'danger'],
       control: 'radio',
       table: { defaultValue: { summary: getVariantDefault() } },
@@ -34,12 +35,9 @@ export default {
       options: [''].concat(Object.keys(iconList)),
       control: 'select',
       mapping: iconList,
-      description: 'Icon-komponent (optional)',
-      table: { defaultValue: { summary: 'undefined' } },
+      table: { defaultValue: { summary: getIconProps() } },
     },
     disabled: {
-      /* description:
-        'Hvis knapp er disabled så overskrives variant-stilene med :disable stil', */
       control: 'boolean',
       table: { defaultValue: { summary: getDisabledDefault() } },
     },
@@ -51,15 +49,9 @@ export default {
     className: {
       control: 'select',
       options: ['', 'buttonClassnameGreen', 'buttonClassnameBlue'],
-      description:
-        'Verdien appended til designsystemets stilsett for komponent',
-      table: { defaultValue: { summary: '' } },
+      table: { defaultValue: { summary: getClassNameDefault() } },
     },
     tabIndex: {
-      control: 'text',
-      table: { defaultValue: { summary: '' } },
-    },
-    'aria-label': {
       control: 'text',
       table: { defaultValue: { summary: '' } },
     },
@@ -67,9 +59,15 @@ export default {
       control: 'boolean',
       table: { defaultValue: { summary: '' } },
     },
-    'aria-describedby': {
-      control: 'text',
-      table: { defaultValue: { summary: '' } },
+
+    onClick: {
+      control: false,
+    },
+    onFocus: {
+      control: false,
+    },
+    onBlur: {
+      control: false,
     },
   },
 } as Meta<ButtonProps>;
@@ -155,28 +153,10 @@ ButtonDefault.parameters = {
 export const Variants: Story<ButtonProps> = TemplateVariant.bind({});
 Variants.args = {
   ...baseArgs,
-  'aria-label':
-    'Alternativ tekst i aria-label satt som props i story for alle Primary-buttons',
-  'aria-describedby': 'elementid satt i story',
+  'aria-describedby': 'elementid-satt-i-story',
   variant: 'secondary',
 };
 Variants.parameters = {
-  controls: { include: ['disabled', 'className'] },
-  design: [
-    {
-      name: 'Varianter',
-      type: 'figma',
-      url: designUrl,
-    },
-  ],
-};
-
-export const VariantsWithIcon: Story<ButtonProps> = TemplateVariant.bind({});
-VariantsWithIcon.args = {
-  ...baseArgs,
-  iconProps: { svgPath: SendSVGpath },
-};
-VariantsWithIcon.parameters = {
   controls: { include: ['disabled', 'className'] },
   design: [
     {

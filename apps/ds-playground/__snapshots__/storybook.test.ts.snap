@@ -2,13 +2,13 @@
 
 exports[`Image storyshots Tests / Button Class Name Change 1`] = `"<button class=\\"Button_button__1zTCG Button_button_secondary__E8eKQ  buttonClassnameGreen\\">Klikk her</button>"`;
 
-exports[`Image storyshots Tests / Button Custom Css And Disabled 1`] = `"<button class=\\"Button_button__1zTCG Button_button_secondary__E8eKQ  buttonClassnameGreen\\" disabled=\\"\\">Klikk her</button>"`;
+exports[`Image storyshots Tests / Button Custom Css And Disabled 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP  buttonClassnameGreen\\" disabled=\\"\\">Klikk her</button>"`;
 
-exports[`Image storyshots Tests / Button Defaults 1`] = `"<button class=\\"Button_button__1zTCG Button_button_secondary__E8eKQ  \\">Klikk her</button>"`;
+exports[`Image storyshots Tests / Button Defaults 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP  \\">Klikk her</button>"`;
 
-exports[`Image storyshots Tests / Button Disabled 1`] = `"<button class=\\"Button_button__1zTCG Button_button_secondary__E8eKQ  \\" disabled=\\"\\">Klikk her</button>"`;
+exports[`Image storyshots Tests / Button Disabled 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP  \\" disabled=\\"\\">Klikk her</button>"`;
 
-exports[`Image storyshots Tests / Button Disabled With Icon 1`] = `"<button class=\\"Button_button__1zTCG Button_button_secondary__E8eKQ Button_button_withIcon__2G3uN \\" disabled=\\"\\"><span class=\\"Button_icon__Fgskl\\"><svg class=\\"Icon_systemIcon__1mAoB Icon_systemIcon_medium__2uqME \\" role=\\"img\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path d=\\"M2 3v7l15 2-15 2v7l21-9L2 3Z\\"></path></svg></span>Klikk her</button>"`;
+exports[`Image storyshots Tests / Button Disabled With Icon 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP Button_button_withIcon__2G3uN \\" disabled=\\"\\"><span class=\\"Button_icon__Fgskl\\"><svg class=\\"Icon_systemIcon__1mAoB Icon_systemIcon_medium__2uqME \\" role=\\"img\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path d=\\"M2 3v7l15 2-15 2v7l21-9L2 3Z\\"></path></svg></span>Klikk her</button>"`;
 
 exports[`Image storyshots Tests / Button Variant Danger 1`] = `ElementHandle {}`;
 
@@ -22,21 +22,21 @@ exports[`Image storyshots Tests / Button Variant Tertiary 1`] = `ElementHandle {
 
 exports[`Image storyshots Tests / Button Variant Tertiary 2`] = `"<button class=\\"Button_button__1zTCG Button_button_tertiary__1XbyX  \\">Klikk her</button>"`;
 
-exports[`Image storyshots Tests / Button With Accesskey 1`] = `"<button class=\\"Button_button__1zTCG Button_button_secondary__E8eKQ  \\" accesskey=\\"s\\">Klikk her</button>"`;
+exports[`Image storyshots Tests / Button With Accesskey 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP  \\" accesskey=\\"s\\">Klikk her</button>"`;
 
-exports[`Image storyshots Tests / Button With Arias 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP  \\" aria-label=\\"Knapp aria-label\\" aria-hidden=\\"true\\" aria-describedby=\\"Knapp aria-describedby\\">Klikk her</button>"`;
+exports[`Image storyshots Tests / Button With Arias 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP  \\" aria-hidden=\\"true\\" aria-describedby=\\"id1\\">Klikk her</button>"`;
 
-exports[`Image storyshots Tests / Button With Icon 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP Button_button_withIcon__2G3uN \\"><span class=\\"Button_icon__Fgskl\\"><svg class=\\"Icon_systemIcon__1mAoB Icon_systemIcon_medium__2uqME \\" aria-label=\\"min custom aria-label beskrivelse\\" role=\\"img\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"false\\" focusable=\\"false\\"><path d=\\"M2 3v7l15 2-15 2v7l21-9L2 3Z\\"></path></svg></span>Klikk her</button>"`;
+exports[`Image storyshots Tests / Button With Icon 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP Button_button_withIcon__2G3uN \\"><span class=\\"Button_icon__Fgskl\\"><svg class=\\"Icon_systemIcon__1mAoB Icon_systemIcon_medium__2uqME \\" role=\\"img\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path d=\\"M2 3v7l15 2-15 2v7l21-9L2 3Z\\"></path></svg></span>Klikk her</button>"`;
 
-exports[`Image storyshots Tests / Button With Id 1`] = `"<button id=\\"htmlid\\" class=\\"Button_button__1zTCG Button_button_secondary__E8eKQ  \\">Klikk her</button>"`;
+exports[`Image storyshots Tests / Button With Id 1`] = `"<button id=\\"htmlid\\" class=\\"Button_button__1zTCG Button_button_primary__1O4RP  \\">Klikk her</button>"`;
 
-exports[`Image storyshots Tests / Button With Long Text 1`] = `"<button class=\\"Button_button__1zTCG Button_button_secondary__E8eKQ  \\">Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles</button>"`;
+exports[`Image storyshots Tests / Button With Long Text 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP  \\">Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles</button>"`;
 
-exports[`Image storyshots Tests / Button With Long Text And Icon 1`] = `"<button class=\\"Button_button__1zTCG Button_button_secondary__E8eKQ Button_button_withIcon__2G3uN \\"><span class=\\"Button_icon__Fgskl\\"><svg class=\\"Icon_systemIcon__1mAoB Icon_systemIcon_medium__2uqME \\" role=\\"img\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path d=\\"M2 3v7l15 2-15 2v7l21-9L2 3Z\\"></path></svg></span>Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres.</button>"`;
+exports[`Image storyshots Tests / Button With Long Text And Icon 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP Button_button_withIcon__2G3uN \\"><span class=\\"Button_icon__Fgskl\\"><svg class=\\"Icon_systemIcon__1mAoB Icon_systemIcon_medium__2uqME \\" role=\\"img\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path d=\\"M2 3v7l15 2-15 2v7l21-9L2 3Z\\"></path></svg></span>Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres.</button>"`;
 
-exports[`Image storyshots Tests / Button With Ref 1`] = `"<button class=\\"Button_button__1zTCG Button_button_secondary__E8eKQ  \\" id=\\"dummyIdForwardedFromRef\\">Klikk her</button>"`;
+exports[`Image storyshots Tests / Button With Ref 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP  \\" id=\\"dummyIdForwardedFromRef\\">Klikk her</button>"`;
 
-exports[`Image storyshots Tests / Button With Tabindex 1`] = `"<button class=\\"Button_button__1zTCG Button_button_secondary__E8eKQ  \\" tabindex=\\"-1\\">Klikk her</button>"`;
+exports[`Image storyshots Tests / Button With Tabindex 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP  \\" tabindex=\\"-1\\">Klikk her</button>"`;
 
 exports[`Image storyshots Tests / MegaButton Mega Button Class Name Change 1`] = `"<button class=\\"MegaButton_button__1aSH0 buttonClassnameLight \\">Klikk her</button>"`;
 

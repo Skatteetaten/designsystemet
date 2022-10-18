@@ -4,7 +4,11 @@ import { forwardRef } from 'react';
 import { Icon } from '@skatteetaten/ds-icons';
 
 import { ButtonProps } from './Button.types';
-import { getVariantDefault, getDisabledDefault } from './defaults';
+import {
+  getVariantDefault,
+  getDisabledDefault,
+  getClassNameDefault,
+} from './defaults';
 
 import styles from './Button.module.scss';
 
@@ -12,7 +16,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       id,
-      className = '',
+      className = getClassNameDefault(),
       children,
       variant = getVariantDefault(),
       disabled = getDisabledDefault(),

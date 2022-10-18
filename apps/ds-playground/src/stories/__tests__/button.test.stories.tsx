@@ -176,7 +176,6 @@ WithIcon.args = {
   ...ButtonDefaults.args,
   iconProps: {
     svgPath: SendSVGpath,
-    'aria-label': 'Skal ikke bli satt',
   },
 };
 WithIcon.argTypes = {
@@ -322,7 +321,6 @@ export const WithArias = Template.bind({});
 WithArias.args = {
   ...ButtonDefaults.args,
   'aria-hidden': true,
-  'aria-label': 'Knapp aria-label',
   'aria-describedby': 'id1',
 };
 WithArias.parameters = {
@@ -330,12 +328,10 @@ WithArias.parameters = {
     const ariaAttributes = await page.$eval(`${wrapper} > button`, (el) => {
       return {
         ariaHidden: el.getAttribute('aria-hidden'),
-        ariaLabel: el.getAttribute('aria-label'),
         ariaDescribedBy: el.getAttribute('aria-describedby'),
       };
     });
     expect(ariaAttributes.ariaHidden).toBe('true');
-    expect(ariaAttributes.ariaLabel).toBe('Knapp aria-label');
     expect(ariaAttributes.ariaDescribedBy).toBe('id1');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
