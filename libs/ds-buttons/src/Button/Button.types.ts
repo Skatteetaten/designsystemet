@@ -9,14 +9,11 @@ type ButtonHTMLAttributes = Pick<
   | 'disabled'
   | 'className'
   | 'accessKey'
-  | 'aria-hidden'
   | 'aria-describedby'
   | 'onClick'
   | 'onBlur'
   | 'onFocus'
 >;
-
-type Booleanish = boolean | 'true' | 'false';
 
 interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
   /** tabIndex som kan settes på button-element */
@@ -27,8 +24,6 @@ interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
   className?: string;
   /** accesskey er html-attribute */
   accessKey?: string;
-  /** typeof Booleanish = boolean | 'true' | 'false' */
-  'aria-hidden'?: Booleanish;
   /** id til tilleggsbeskrivelse */
   'aria-describedby'?: string;
   /** Event handler for onClick */

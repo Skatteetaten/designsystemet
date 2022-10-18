@@ -25,7 +25,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       accessKey,
       'data-testid': dataTestId,
       'aria-describedby': ariaDescribedby,
-      'aria-hidden': ariaHidden,
       onClick,
       onBlur,
       onFocus,
@@ -43,7 +42,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         className={cssName}
         data-testid={dataTestId}
         disabled={disabled}
-        aria-hidden={ariaHidden}
         aria-describedby={ariaDescribedby}
         accessKey={accessKey}
         tabIndex={tabIndex}
