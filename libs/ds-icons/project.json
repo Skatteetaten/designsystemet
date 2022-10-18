@@ -13,7 +13,7 @@
         "project": "libs/ds-icons/package.json",
         "entryFile": "libs/ds-icons/src/index.ts",
         "external": ["react/jsx-runtime"],
-        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "rollupConfig": ["libs/ds-icons/rollup.config.js"],
         "compiler": "babel",
         "assets": [
           {
