@@ -18,7 +18,7 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => (
-  <div style={{ margin: '1em' }} data-test-block>
+  <div style={{ margin: '1em' }} className={'noTranstion'} data-test-block>
     <Button {...args} variant={args.variant} iconProps={args.iconProps}>
       {args.children}
     </Button>
@@ -224,6 +224,7 @@ WithIcon.parameters = {
   },
 };
 
+// Når Button har prop disabled, så er knapp disabled og stil er satt til disabled
 export const Disabled = Template.bind({});
 Disabled.args = {
   ...ButtonDefaults.args,
@@ -242,7 +243,7 @@ Disabled.parameters = {
   },
 };
 
-// Når Button har et ikon og er disabled, så vises iconet og knapp er disabled
+// Når Button har prop disabled og ikon er satt, så vises ikonet og knapp er disabled og stil er satt til disabled
 export const DisabledWithIcon = Template.bind({});
 DisabledWithIcon.args = {
   ...ButtonDefaults.args,
@@ -267,14 +268,14 @@ DisabledWithIcon.parameters = {
 };
 
 // Når Button har en custom CSS, så vises custom stil
-export const ClassNameChange = Template.bind({});
-ClassNameChange.args = {
+export const WithCustomCss = Template.bind({});
+WithCustomCss.args = {
   ...ButtonDefaults.args,
   variant: 'secondary',
   className: 'buttonClassnameGreen',
 };
-ClassNameChange.argTypes = {
-  ...ClassNameChange.argTypes,
+WithCustomCss.argTypes = {
+  ...WithCustomCss.argTypes,
   className: {
     control: 'select',
     options: ['', 'buttonClassnameGreen', 'buttonClassnameBlue'],
@@ -283,7 +284,7 @@ ClassNameChange.argTypes = {
   },
   variant: { control: false },
 };
-ClassNameChange.parameters = {
+WithCustomCss.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const classNameAttribute = await page.$eval(`${wrapper}> button`, (el) =>
       el.getAttribute('class')
@@ -299,14 +300,14 @@ ClassNameChange.parameters = {
 };
 
 // Når Button har en custom CSS og er disabled, så vises disabled stil med overskrivinger fra customCSS
-export const CustomCssAndDisabled = Template.bind({});
-CustomCssAndDisabled.args = {
+export const WithCustomCssAndDisabled = Template.bind({});
+WithCustomCssAndDisabled.args = {
   ...ButtonDefaults.args,
   disabled: true,
   className: 'buttonClassnameGreen',
 };
-CustomCssAndDisabled.argTypes = {
-  ...CustomCssAndDisabled.argTypes,
+WithCustomCssAndDisabled.argTypes = {
+  ...WithCustomCssAndDisabled.argTypes,
   className: {
     control: 'select',
     options: ['', 'buttonClassnameGreen', 'buttonClassnameBlue'],
@@ -314,7 +315,7 @@ CustomCssAndDisabled.argTypes = {
     table: { defaultValue: { summary: '' } },
   },
 };
-CustomCssAndDisabled.parameters = {
+WithCustomCssAndDisabled.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
     expect(isDisabled).toBeTruthy();
@@ -338,7 +339,7 @@ WithAriaDescribedby.args = {
   ...ButtonDefaults.args,
   'aria-describedby': 'id1',
 };
-WithArias.parameters = {
+WithAriaDescribedby.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const ariaAttributes = await page.$eval(`${wrapper} > button`, (el) => {
       return {
@@ -361,7 +362,7 @@ WithTabindex.args = {
 WithTabindex.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const tabIndex = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('tabIndex')
+      el.getAttribute('tabindex')
     );
     expect(tabIndex).toBe('-1');
 
@@ -388,6 +389,23 @@ WithAccesskey.parameters = {
   },
 };
 
+// Når Button har en veldig lang tekst så skal tekst venstrejusteres
+export const WithLongText = Template.bind({});
+WithLongText.args = {
+  ...ButtonDefaults.args,
+  children:
+    'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles',
+};
+WithLongText.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+  },
+};
+
 // Når Button har en veldig lang tekst og det er et ikon så skal tekst venstrejusteres
 export const WithLongTextAndIcon = Template.bind({});
 WithLongTextAndIcon.args = {
@@ -410,25 +428,8 @@ WithLongTextAndIcon.parameters = {
   },
 };
 
-// Når Button har en veldig lang tekst så skal tekst venstrejusteres
-export const WithLongText = Template.bind({});
-WithLongText.args = {
-  ...ButtonDefaults.args,
-  children:
-    'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles',
-};
-WithLongText.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
-};
-
-// Testing onClick på knapp. onClick-event endrer teksten på knappen.
-// Egen template for å kunne bruke useState som lar oss synliggjøre resultatet av en event
+// Når brukeren klikker på knappen, så kalles funksjonen i onClick prop.
+// onClick-event endrer teksten på knappen.
 const OnClickTemplate: ComponentStory<typeof Button> = (args) => {
   const [buttText, setButtText] = useState(
     'Klikk på knapp for å teste onClick event'
@@ -438,7 +439,7 @@ const OnClickTemplate: ComponentStory<typeof Button> = (args) => {
       <Button
         {...args}
         variant={args.variant}
-        onClick={(): void => setButtText('Endret Tekst på Knapp')}
+        onClick={(): void => setButtText('Knapp er klikket')}
       >
         {buttText}
       </Button>
@@ -448,7 +449,6 @@ const OnClickTemplate: ComponentStory<typeof Button> = (args) => {
 export const WithOnClick = OnClickTemplate.bind({});
 WithOnClick.args = {
   ...ButtonDefaults.args,
-  variant: 'secondary',
 };
 WithOnClick.argTypes = {
   ...WithOnClick.argTypes,
@@ -462,14 +462,100 @@ WithOnClick.parameters = {
     expect(image).toMatchImageSnapshot();
 
     await buttonElement?.click();
-
     const imageClicked = await page.screenshot(screenShotOptions);
     expect(imageClicked).toMatchImageSnapshot();
 
-    await page.waitForSelector(`${wrapper} > button`);
     const element = await page.$(`${wrapper} > button`);
     const textContent = await element?.getProperty('textContent');
     const text = await textContent?.jsonValue();
-    expect(text).toBe('Endret Tekst på Knapp');
+    expect(text).toBe('Knapp er klikket');
+  },
+};
+
+// Når brukeren setter focus på knappen, så kalles funksjonen i onFocus prop.
+// onFocus-event endrer teksten på knappen.
+const OnFocusTemplate: ComponentStory<typeof Button> = (args) => {
+  const [buttText, setButtText] = useState(
+    'Klikk på knapp for å teste onFocus event'
+  );
+  return (
+    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+      <Button
+        {...args}
+        variant={args.variant}
+        onFocus={(): void => setButtText('Knapp har fått fokus')}
+      >
+        {buttText}
+      </Button>
+    </div>
+  );
+};
+export const WithOnFocus = OnFocusTemplate.bind({});
+WithOnFocus.args = {
+  ...ButtonDefaults.args,
+};
+WithOnFocus.argTypes = {
+  ...WithOnFocus.argTypes,
+  children: { control: false },
+  variant: { control: false },
+};
+WithOnFocus.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const buttonElement = await page.$(`${wrapper} > button`);
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+
+    await buttonElement?.focus();
+    const imageFocused = await page.screenshot(screenShotOptions);
+    expect(imageFocused).toMatchImageSnapshot();
+    const element = await page.$(`${wrapper} > button`);
+    const textContent = await element?.getProperty('textContent');
+    const text = await textContent?.jsonValue();
+    expect(text).toBe('Knapp har fått fokus');
+  },
+};
+
+// Når brukeren blurer knappen, så kalles funksjonen i onBlur prop.
+// onBlur-event endrer teksten på knappen.
+const OnBlurTemplate: ComponentStory<typeof Button> = (args) => {
+  const [buttText, setButtText] = useState(
+    'Klikk på knapp for å teste onBlur event'
+  );
+  return (
+    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+      <Button
+        {...args}
+        variant={args.variant}
+        onBlur={(): void => setButtText('Knapp er bluret')}
+      >
+        {buttText}
+      </Button>
+    </div>
+  );
+};
+export const WithOnBlur = OnBlurTemplate.bind({});
+WithOnBlur.args = {
+  ...ButtonDefaults.args,
+};
+WithOnBlur.argTypes = {
+  ...WithOnBlur.argTypes,
+  children: { control: false },
+  variant: { control: false },
+};
+WithOnBlur.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const buttonElement = await page.$(`${wrapper} > button`);
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+
+    await buttonElement?.focus();
+    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
+    const imageBlured = await page.screenshot(screenShotOptions);
+    expect(imageBlured).toMatchImageSnapshot();
+
+    const element = await page.$(`${wrapper} > button`);
+    const textContent = await element?.getProperty('textContent');
+    const text = await textContent?.jsonValue();
+    expect(text).toBe('Knapp er bluret');
   },
 };

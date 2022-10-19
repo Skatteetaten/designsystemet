@@ -1,9 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Image storyshots Tests / Button Class Name Change 1`] = `"<button class=\\"Button_button__1zTCG Button_button_secondary__E8eKQ  buttonClassnameGreen\\">Klikk her</button>"`;
-
-exports[`Image storyshots Tests / Button Custom Css And Disabled 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP  buttonClassnameGreen\\" disabled=\\"\\">Klikk her</button>"`;
-
 exports[`Image storyshots Tests / Button Defaults 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP  \\">Klikk her</button>"`;
 
 exports[`Image storyshots Tests / Button Disabled 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP  \\" disabled=\\"\\">Klikk her</button>"`;
@@ -24,7 +20,11 @@ exports[`Image storyshots Tests / Button Variant Tertiary 2`] = `"<button class=
 
 exports[`Image storyshots Tests / Button With Accesskey 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP  \\" accesskey=\\"s\\">Klikk her</button>"`;
 
-exports[`Image storyshots Tests / Button With Arias 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP  \\" aria-describedby=\\"id1\\">Klikk her</button>"`;
+exports[`Image storyshots Tests / Button With Aria Describedby 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP  \\" aria-describedby=\\"id1\\">Klikk her</button>"`;
+
+exports[`Image storyshots Tests / Button With Custom Css 1`] = `"<button class=\\"Button_button__1zTCG Button_button_secondary__E8eKQ  buttonClassnameGreen\\">Klikk her</button>"`;
+
+exports[`Image storyshots Tests / Button With Custom Css And Disabled 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP  buttonClassnameGreen\\" disabled=\\"\\">Klikk her</button>"`;
 
 exports[`Image storyshots Tests / Button With Icon 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP Button_button_withIcon__2G3uN \\"><span class=\\"Button_icon__Fgskl\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 \\" role=\\"img\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path d=\\"M2 3v7l15 2-15 2v7l21-9L2 3Z\\"></path></svg></span>Klikk her</button>"`;
 

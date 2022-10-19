@@ -16,17 +16,15 @@ type ButtonHTMLAttributes = Pick<
 >;
 
 interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
-  /** tabIndex som kan settes på button-element */
+  /** tabIndex-attributt som settes på button-element */
   tabIndex?: number;
-  /** disabled er html-attribute */
+  /** disabled-attributt som settes på button-element */
   disabled?: boolean;
-  /** Verdien appended til designsystemets stilsett for komponent */
-  className?: string;
-  /** accesskey er html-attribute */
+  /** accesskey-attributt som settes på button-element */
   accessKey?: string;
-  /** id til tilleggsbeskrivelse */
+  /** aria-attributt som henviser til id som har tilleggsbeskrivelse */
   'aria-describedby'?: string;
-  /** Event handler for onClick */
+  /** Når det klikkes på button-element  */
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   /** Når button-element får focus */
   onFocus?: React.FocusEventHandler<HTMLButtonElement>;
@@ -41,7 +39,7 @@ export interface ButtonProps extends ButtonPropsHTMLAttributes, BaseProps {
    * Se icon-komponent for gyldige props
    */
   iconProps?: IconProps;
-  /** "primary" er standardverdi. variant en en av  (primary | secondary | tertiary | danger). */
+  /** Definerer stilen til knappen. */
   variant?: Variant;
   /** Tekst på knapp. */
   children: string;

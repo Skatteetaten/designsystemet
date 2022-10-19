@@ -16,6 +16,7 @@ import { Story, Meta } from '@storybook/react';
 
 import './classnames.stories.css';
 
+// TODO FRONT-935 Endre fra iconProps til svgPath.
 const iconList = {
   Send: { svgPath: SendSVGpath },
   Edit: { svgPath: EditSVGpath },
@@ -41,19 +42,10 @@ export default {
       control: 'boolean',
       table: { defaultValue: { summary: getDisabledDefault() } },
     },
-    children: {
-      description: 'Tekst på knapp',
-      control: 'text',
-      table: { defaultValue: { summary: '' } },
-    },
     className: {
       control: 'select',
       options: ['', 'buttonClassnameGreen', 'buttonClassnameBlue'],
       table: { defaultValue: { summary: getClassNameDefault() } },
-    },
-    tabIndex: {
-      control: 'text',
-      table: { defaultValue: { summary: '' } },
     },
     onClick: {
       control: false,
@@ -118,6 +110,7 @@ ButtonDefault.storyName = 'Default';
 const baseArgs = {
   children: 'Klikk',
 };
+// TODO Endre url til riktig side i Figma på Button sin design-fane
 const designUrl =
   'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1765%3A8640';
 

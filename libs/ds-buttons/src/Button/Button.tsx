@@ -8,6 +8,7 @@ import {
   getVariantDefault,
   getDisabledDefault,
   getClassNameDefault,
+  getIconPropsDefault,
 } from './defaults';
 
 import styles from './Button.module.scss';
@@ -31,15 +32,15 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ): JSX.Element => {
-    const withicon = iconProps ? `${styles.button_withIcon}` : '';
-    const cssName = `${styles.button} ${
+    const withIconClassName = iconProps ? `${styles.button_withIcon}` : '';
+    const concatenatedClassName = `${styles.button} ${
       styles[`button_${variant}`]
-    } ${withicon} ${className}`;
+    } ${withIconClassName} ${className}`;
     return (
       <button
         ref={ref}
         id={id}
-        className={cssName}
+        className={concatenatedClassName}
         data-testid={dataTestId}
         disabled={disabled}
         aria-describedby={ariaDescribedby}
@@ -59,5 +60,11 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     );
   }
 );
-
 Button.displayName = 'Button';
+
+export {
+  getVariantDefault,
+  getDisabledDefault,
+  getClassNameDefault,
+  getIconPropsDefault,
+};
