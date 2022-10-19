@@ -334,7 +334,7 @@ CustomCssAndDisabled.parameters = {
 
 // Når Button har aria attributer, så har button element aria-* satt
 export const WithArias = Template.bind({});
-WithArias.args = {
+WithAriaDescribedby.args = {
   ...ButtonDefaults.args,
   'aria-describedby': 'id1',
 };
