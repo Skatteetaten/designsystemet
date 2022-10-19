@@ -1,8 +1,8 @@
 .button {
-    background-color: transparent;
-    border: 2px solid transparent;
-    border-radius: 50%;
     box-sizing: content-box;
+    border: 2px solid transparent;
+    background-color: transparent;
+    border-radius: 50%;
     cursor: pointer;
 
     > svg {
@@ -12,10 +12,11 @@
 
     &_small {
         padding: var(--spacing-xxs) var(--spacing-xxs);
+        border-width: 1px;
 
         > svg {
-            height: var(--size-extra-small);
             width: var(--size-extra-small);
+            height: var(--size-extra-small);
         }
     }
 
@@ -23,8 +24,8 @@
         padding: var(--spacing-xxs) var(--spacing-xxs);
 
         > svg {
-            height: var(--size-small);
             width: var(--size-small);
+            height: var(--size-small);
         }
     }
 
@@ -32,19 +33,26 @@
         padding: var(--spacing-s) var(--spacing-s);
 
         > svg {
-            height: var(--size-medium);
             width: var(--size-medium);
+            height: var(--size-medium);
         }
     }
 
     &:hover {
-        background-color: var(--semantic-interactive-background);
         border-color: var(--semantic-interactive-background);
+        background-color: var(--semantic-interactive-background);
+    }
+
+    &:focus {
+        border-color: transparent;
+        background-color: transparent;
+        outline: var(--semantic-interactive-main) solid 2px;
+        outline-offset: 2px;
     }
     
     &:active {
-        background-color: var(--semantic-interactive-background);
         border-color: var(--semantic-interactive-foreground);
+        background-color: var(--semantic-interactive-background);
         outline: none;
         transform: translateY(2px);
         transition: 0.15s;
@@ -53,18 +61,12 @@
             fill: var(--semantic-interactive-foreground);
         }
     }
-    
-    &:focus {
-        border-color: transparent;
-        outline: var(--semantic-interactive-main) solid 2px;
-        outline-offset: 2px;
-    }
 
     &:disabled,
     &:disabled:hover,
     &:disabled:active {
-        background-color: transparent;
         border-color: transparent;
+        background-color: transparent;
         cursor: not-allowed;
         transform: none;
 
@@ -73,10 +75,20 @@
         }
     }
 
+    &:focus:active {
+        border-color: var(--semantic-interactive-background);
+        outline: var(--semantic-interactive-main) solid 2px;
+        outline-offset: 2px;
+    }
+
     &_outlined {
         border-color: var(--palette-azure-70);
     
         &:hover {
+            border-color: var(--semantic-interactive-main);
+        }
+
+        &:focus {
             border-color: var(--semantic-interactive-main);
         }
 
@@ -88,6 +100,10 @@
         &:disabled:hover,
         &:disabled:active {
             border-color: var(--palette-graphite-50);
+        }
+
+        &:focus:active {
+            border-color: var(--semantic-interactive-foreground);
         }
     }
 }

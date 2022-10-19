@@ -5,7 +5,7 @@ type IconPropsHTMLAttributes = Pick<
   'role' | 'viewBox' | 'tabIndex'
 >;
 
-interface IconComponentCommonProps {
+export interface IconComponentCommonProps {
   svgPath: React.ReactElement;
 }
 

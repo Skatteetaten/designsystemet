@@ -2,11 +2,10 @@ import { forwardRef } from 'react';
 
 import { Icon } from '@skatteetaten/ds-icons';
 
+import { getClassNameDefault, getDisabledDefault, getIsOutlinedDefault, getSizeDefault } from './defaults';
 import { IconButtonProps } from './IconButton.types';
 
 import styles from './IconButton.module.scss';
-
-import { getClassNameDefault, getOutlinedDefault, getSizeDefault } from './defaults';
 
 export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
   (
@@ -15,20 +14,20 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
       className = getClassNameDefault(),
       'data-testid': dataTestId,
       tabIndex,
-      accessKey: accessKey,
-      ariaLabel: ariaLabel,
-      ariaDescribedBy: ariaDescribedBy,
-      buttonSize = getSizeDefault(),
-      iconProps,
-      isOutlined = getOutlinedDefault(),
-      disabled = getOutlinedDefault(),
+      accessKey,
+      ariaLabel,
+      ariaDescribedBy,
+      size = getSizeDefault(),
+      svgPath,
+      isOutlined = getIsOutlinedDefault(),
+      disabled = getDisabledDefault(),
       onClick,
       onBlur,
       onFocus,
     },
     ref
   ): JSX.Element => {
-    const sizeClassName = styles[`button_${buttonSize}`];
+    const sizeClassName = styles[`button_${size}`];
     const outlineClassName = isOutlined ? styles[`button_outlined`] : '';
     return (
       <button
@@ -45,7 +44,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
         onBlur={onBlur}
         onFocus={onFocus}
       >
-        <Icon {...iconProps} />
+        <Icon svgPath={svgPath} />
       </button>
     );
   }
