@@ -1,110 +1,109 @@
 .button {
-    box-sizing: content-box;
-    border: 2px solid transparent;
-    background-color: transparent;
-    border-radius: 50%;
-    cursor: pointer;
+  box-sizing: content-box;
+  border: 2px solid transparent;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+
+  > svg {
+    display: block;
+    fill: var(--palette-azure-70);
+  }
+
+  &_small {
+    padding: var(--spacing-xxs) var(--spacing-xxs);
+    border-width: 1px;
 
     > svg {
-        display: block;
-        fill: var(--palette-azure-70);
+      width: var(--size-extra-small);
+      height: var(--size-extra-small);
     }
+  }
 
-    &_small {
-        padding: var(--spacing-xxs) var(--spacing-xxs);
-        border-width: 1px;
+  &_medium {
+    padding: var(--spacing-xxs) var(--spacing-xxs);
 
-        > svg {
-            width: var(--size-extra-small);
-            height: var(--size-extra-small);
-        }
+    > svg {
+      width: var(--size-small);
+      height: var(--size-small);
     }
+  }
 
-    &_medium {
-        padding: var(--spacing-xxs) var(--spacing-xxs);
+  &_large {
+    padding: var(--spacing-s) var(--spacing-s);
 
-        > svg {
-            width: var(--size-small);
-            height: var(--size-small);
-        }
+    > svg {
+      width: var(--size-medium);
+      height: var(--size-medium);
     }
+  }
 
-    &_large {
-        padding: var(--spacing-s) var(--spacing-s);
+  &:hover {
+    border-color: var(--semantic-interactive-background);
+    background-color: var(--semantic-interactive-background);
+  }
 
-        > svg {
-            width: var(--size-medium);
-            height: var(--size-medium);
-        }
+  &:focus {
+    border-color: transparent;
+    background-color: transparent;
+    outline: var(--semantic-interactive-main) solid 2px;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    border-color: var(--semantic-interactive-foreground);
+    background-color: var(--semantic-interactive-background);
+    outline: none;
+    transform: translateY(2px);
+    transition: 0.15s;
+
+    > svg {
+      fill: var(--semantic-interactive-foreground);
     }
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:active {
+    border-color: transparent;
+    background-color: transparent;
+    cursor: not-allowed;
+    transform: none;
+
+    > svg {
+      fill: var(--palette-graphite-50);
+    }
+  }
+
+  &:focus:active {
+    border-color: var(--semantic-interactive-background);
+    outline: var(--semantic-interactive-main) solid 2px;
+    outline-offset: 2px;
+  }
+
+  &_outlined {
+    border-color: var(--palette-azure-70);
 
     &:hover {
-        border-color: var(--semantic-interactive-background);
-        background-color: var(--semantic-interactive-background);
+      border-color: var(--semantic-interactive-main);
     }
 
     &:focus {
-        border-color: transparent;
-        background-color: transparent;
-        outline: var(--semantic-interactive-main) solid 2px;
-        outline-offset: 2px;
+      border-color: var(--semantic-interactive-main);
     }
-    
-    &:active {
-        border-color: var(--semantic-interactive-foreground);
-        background-color: var(--semantic-interactive-background);
-        outline: none;
-        transform: translateY(2px);
-        transition: 0.15s;
 
-        > svg {
-            fill: var(--semantic-interactive-foreground);
-        }
+    &:active {
+      border-color: var(--semantic-interactive-foreground);
     }
 
     &:disabled,
     &:disabled:hover,
     &:disabled:active {
-        border-color: transparent;
-        background-color: transparent;
-        cursor: not-allowed;
-        transform: none;
-
-        > svg {
-            fill: var(--palette-graphite-50);
-        }
+      border-color: var(--palette-graphite-50);
     }
 
     &:focus:active {
-        border-color: var(--semantic-interactive-background);
-        outline: var(--semantic-interactive-main) solid 2px;
-        outline-offset: 2px;
+      border-color: var(--semantic-interactive-foreground);
     }
-
-    &_outlined {
-        border-color: var(--palette-azure-70);
-    
-        &:hover {
-            border-color: var(--semantic-interactive-main);
-        }
-
-        &:focus {
-            border-color: var(--semantic-interactive-main);
-        }
-
-        &:active {
-            border-color: var(--semantic-interactive-foreground);
-        }
-    
-        &:disabled,
-        &:disabled:hover,
-        &:disabled:active {
-            border-color: var(--palette-graphite-50);
-        }
-
-        &:focus:active {
-            border-color: var(--semantic-interactive-foreground);
-        }
-    }
+  }
 }
-  

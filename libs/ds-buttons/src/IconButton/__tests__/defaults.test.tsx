@@ -1,4 +1,9 @@
-import { getClassNameDefault, getIsOutlinedDefault, getSizeDefault, getDisabledDefault } from '../defaults';
+import {
+  getClassNameDefault,
+  getIsOutlinedDefault,
+  getSizeDefault,
+  getDisabledDefault,
+} from '../defaults';
 
 describe('IconButton defaults', () => {
   it('Når getClassNameDefault kalles, så returnerer den riktig verdi', () => {

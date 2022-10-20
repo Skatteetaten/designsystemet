@@ -23,11 +23,11 @@ const Template: ComponentStory<typeof IconButton> = (args) => (
 );
 
 // Når IconButton instansieres, får den riktige default-verdier og rendrer riktig i ulike tilstander
-export const IconButtonDefaults = Template.bind({});
-IconButtonDefaults.args = {
+export const Defaults = Template.bind({});
+Defaults.args = {
   svgPath: defaultSVGPath,
 };
-IconButtonDefaults.parameters = {
+Defaults.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     const image = await page.screenshot(screenShotOptions);
@@ -55,13 +55,13 @@ IconButtonDefaults.parameters = {
   },
 };
 
-// Når IconButton har size small, så vises en liten knapp som rendrer riktig i ulike tilstander
-export const IconButtonSmall = Template.bind({});
-IconButtonSmall.args = {
+// Når IconButton har size small, så vises en liten knapp uten ramme som rendrer riktig i ulike tilstander
+export const Small = Template.bind({});
+Small.args = {
   svgPath: defaultSVGPath,
   size: 'small',
 };
-IconButtonSmall.parameters = {
+Small.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     const image = await page.screenshot(screenShotOptions);
@@ -89,13 +89,13 @@ IconButtonSmall.parameters = {
   },
 };
 
-// Når IconButton har size large, så vises en stor knapp som rendrer riktig i ulike tilstander
-export const IconButtonLarge = Template.bind({});
-IconButtonLarge.args = {
+// Når IconButton har size large, så vises en stor knapp uten ramme som rendrer riktig i ulike tilstander
+export const Large = Template.bind({});
+Large.args = {
   svgPath: defaultSVGPath,
   size: 'large',
 };
-IconButtonLarge.parameters = {
+Large.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     const image = await page.screenshot(screenShotOptions);
@@ -124,12 +124,12 @@ IconButtonLarge.parameters = {
 };
 
 // Når IconButton er outlined, så vises knappen med ramme og rendrer riktig i ulike tilstander
-export const IconButtonWithOutline = Template.bind({});
-IconButtonWithOutline.args = {
+export const WithOutline = Template.bind({});
+WithOutline.args = {
   svgPath: defaultSVGPath,
   isOutlined: true,
 };
-IconButtonWithOutline.parameters = {
+WithOutline.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     const image = await page.screenshot(screenShotOptions);
@@ -158,13 +158,13 @@ IconButtonWithOutline.parameters = {
 };
 
 // Når IconButton har size small og er outlined, så vises en liten knapp med ramme som rendrer riktig i ulike tilstander
-export const IconButtonSmallWithOutline = Template.bind({});
-IconButtonSmallWithOutline.args = {
+export const SmallWithOutline = Template.bind({});
+SmallWithOutline.args = {
   svgPath: defaultSVGPath,
   size: 'small',
   isOutlined: true,
 };
-IconButtonSmallWithOutline.parameters = {
+SmallWithOutline.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     const image = await page.screenshot(screenShotOptions);
@@ -193,13 +193,13 @@ IconButtonSmallWithOutline.parameters = {
 };
 
 // Når IconButton har size large og er outlined, så vises en stor knapp med ramme som rendrer riktig i ulike tilstander
-export const IconButtonLargeWithOutline = Template.bind({});
-IconButtonLargeWithOutline.args = {
+export const LargeWithOutline = Template.bind({});
+LargeWithOutline.args = {
   svgPath: defaultSVGPath,
   size: 'large',
   isOutlined: true,
 };
-IconButtonLargeWithOutline.parameters = {
+LargeWithOutline.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     const image = await page.screenshot(screenShotOptions);
@@ -227,13 +227,13 @@ IconButtonLargeWithOutline.parameters = {
   },
 };
 
-// Når IconButton er disabled, så vises knappen i disabled stil
-export const IconButtonDisabled = Template.bind({});
-IconButtonDisabled.args = {
+// Når IconButton er disabled, så vises knappen uten ramme i disabled stil
+export const Disabled = Template.bind({});
+Disabled.args = {
   svgPath: defaultSVGPath,
   disabled: true,
 };
-IconButtonDisabled.parameters = {
+Disabled.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
     expect(isDisabled).toBeTruthy();
@@ -246,14 +246,14 @@ IconButtonDisabled.parameters = {
   },
 };
 
-// Når IconButton har size small og er disabled, så vises en liten knapp i disabled stil
-export const IconButtonSmallAndDisabled = Template.bind({});
-IconButtonSmallAndDisabled.args = {
+// Når IconButton har size small og er disabled, så vises en liten knapp uten ramme i disabled stil
+export const SmallAndDisabled = Template.bind({});
+SmallAndDisabled.args = {
   svgPath: defaultSVGPath,
   size: 'small',
   disabled: true,
 };
-IconButtonSmallAndDisabled.parameters = {
+SmallAndDisabled.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
     expect(isDisabled).toBeTruthy();
@@ -266,14 +266,14 @@ IconButtonSmallAndDisabled.parameters = {
   },
 };
 
-// Når IconButton har size large og er disabled, så vises en stor knapp i disabled stil
-export const IconButtonLargeAndDisabled = Template.bind({});
-IconButtonLargeAndDisabled.args = {
+// Når IconButton har size large og er disabled, så vises en stor knapp uten ramme i disabled stil
+export const LargeAndDisabled = Template.bind({});
+LargeAndDisabled.args = {
   svgPath: defaultSVGPath,
   size: 'large',
   disabled: true,
 };
-IconButtonLargeAndDisabled.parameters = {
+LargeAndDisabled.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
     expect(isDisabled).toBeTruthy();
@@ -286,14 +286,14 @@ IconButtonLargeAndDisabled.parameters = {
   },
 };
 
-// Når IconButton er disabled og outlined, så vises knappen i disabled stil med ramme
-export const IconButtonDisabledWithOutline = Template.bind({});
-IconButtonDisabledWithOutline.args = {
+// Når IconButton er disabled og outlined, så vises knappen med ramme i disabled stil
+export const DisabledWithOutline = Template.bind({});
+DisabledWithOutline.args = {
   svgPath: defaultSVGPath,
   isOutlined: true,
   disabled: true,
 };
-IconButtonDisabledWithOutline.parameters = {
+DisabledWithOutline.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
     expect(isDisabled).toBeTruthy();
@@ -306,15 +306,15 @@ IconButtonDisabledWithOutline.parameters = {
   },
 };
 
-// Når IconButton er small og disabled og outlined, så vises en liten knapp i disabled stil med ramme
-export const IconButtonSmallDisabledWithOutline = Template.bind({});
-IconButtonSmallDisabledWithOutline.args = {
+// Når IconButton er small og disabled og outlined, så vises en liten knapp med ramme i disabled stil
+export const SmallDisabledWithOutline = Template.bind({});
+SmallDisabledWithOutline.args = {
   svgPath: defaultSVGPath,
   size: 'small',
   isOutlined: true,
   disabled: true,
 };
-IconButtonSmallDisabledWithOutline.parameters = {
+SmallDisabledWithOutline.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
     expect(isDisabled).toBeTruthy();
@@ -327,15 +327,15 @@ IconButtonSmallDisabledWithOutline.parameters = {
   },
 };
 
-// Når IconButton er large og disabled og outlined, så vises en stor knapp i disabled stil med ramme
-export const IconButtonLargeDisabledWithOutline = Template.bind({});
-IconButtonLargeDisabledWithOutline.args = {
+// Når IconButton er large og disabled og outlined, så vises en stor knapp med ramme i disabled stil
+export const LargeDisabledWithOutline = Template.bind({});
+LargeDisabledWithOutline.args = {
   svgPath: defaultSVGPath,
   size: 'large',
   isOutlined: true,
   disabled: true,
 };
-IconButtonLargeDisabledWithOutline.parameters = {
+LargeDisabledWithOutline.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
     expect(isDisabled).toBeTruthy();
@@ -349,11 +349,11 @@ IconButtonLargeDisabledWithOutline.parameters = {
 };
 
 // Når IconButton har et custom ikon, så vises dette ikonet
-export const IconButtonWithCustomSVGPath = Template.bind({});
-IconButtonWithCustomSVGPath.args = {
-  svgPath: <path d={'M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z'}/>
+export const WithCustomSVGPath = Template.bind({});
+WithCustomSVGPath.args = {
+  svgPath: <path d={'M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z'} />,
 };
-IconButtonWithCustomSVGPath.parameters = {
+WithCustomSVGPath.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -364,18 +364,18 @@ IconButtonWithCustomSVGPath.parameters = {
 };
 
 // Når IconButton har en custom CSS, så vises custom stil
-export const IconButtonWithCustomCss = Template.bind({});
-IconButtonWithCustomCss.args = {
+export const WithCustomCss = Template.bind({});
+WithCustomCss.args = {
   svgPath: defaultSVGPath,
   className: 'buttonClassnameDark',
 };
-IconButtonWithCustomCss.argTypes = {
+WithCustomCss.argTypes = {
   className: {
     control: 'select',
     options: ['', 'buttonClassnameDark', 'buttonClassnameGreen'],
   },
 };
-IconButtonWithCustomCss.parameters = {
+WithCustomCss.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const classNameAttribute = await page.$eval(`${wrapper}> button`, (el) =>
       el.getAttribute('class')
@@ -391,20 +391,19 @@ IconButtonWithCustomCss.parameters = {
 };
 
 // Når IconButton har en custom CSS og er disabled, så vises disabled stil med overskrivinger fra custom CSS
-export const IconButtonWithCustomCssAndDisabled = Template.bind({});
-IconButtonWithCustomCssAndDisabled.args = {
+export const WithCustomCssAndDisabled = Template.bind({});
+WithCustomCssAndDisabled.args = {
   svgPath: defaultSVGPath,
   disabled: true,
   className: 'buttonClassnameDark',
 };
-IconButtonWithCustomCssAndDisabled.argTypes = {
-  ...IconButtonWithCustomCssAndDisabled.argTypes,
+WithCustomCssAndDisabled.argTypes = {
   className: {
     control: 'select',
     options: ['', 'buttonClassnameDark', 'buttonClassnameGreen'],
   },
 };
-IconButtonWithCustomCssAndDisabled.parameters = {
+WithCustomCssAndDisabled.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
     expect(isDisabled).toBeTruthy();
@@ -423,13 +422,13 @@ IconButtonWithCustomCssAndDisabled.parameters = {
 };
 
 // Når IconButton har aria attributer, så har button-elementet aria-* satt
-export const IconButtonWithArias = Template.bind({});
-IconButtonWithArias.args = {
+export const WithArias = Template.bind({});
+WithArias.args = {
   svgPath: defaultSVGPath,
   ariaLabel: 'Knapp ariaLabel',
   ariaDescribedBy: 'Knapp ariaDescribedBy',
 };
-IconButtonWithArias.parameters = {
+WithArias.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const ariaAttributes = await page.$eval(`${wrapper} > button`, (el) => {
       return {
@@ -446,12 +445,12 @@ IconButtonWithArias.parameters = {
 };
 
 // Når IconButton har en tabIndex, så har button-elementet tabIndex satt
-export const IconButtonWithTabindex = Template.bind({});
-IconButtonWithTabindex.args = {
+export const WithTabindex = Template.bind({});
+WithTabindex.args = {
   svgPath: defaultSVGPath,
   tabIndex: -1,
 };
-IconButtonWithTabindex.parameters = {
+WithTabindex.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const tabIndex = await page.$eval(`${wrapper} > button`, (el) =>
       el.getAttribute('tabIndex')
@@ -464,12 +463,12 @@ IconButtonWithTabindex.parameters = {
 };
 
 // Når IconButton har en id, så har button-elementet id'en satt
-export const IconButtonWithId = Template.bind({});
-IconButtonWithId.args = {
+export const WithId = Template.bind({});
+WithId.args = {
   svgPath: defaultSVGPath,
   id: '123',
 };
-IconButtonWithId.parameters = {
+WithId.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const id = await page.$eval(`${wrapper} > button`, (el) =>
       el.getAttribute('id')
@@ -482,12 +481,12 @@ IconButtonWithId.parameters = {
 };
 
 // Når IconButton har en accessKey, så har button-elementet accessKey satt
-export const IconButtonWithAccessKey = Template.bind({});
-IconButtonWithAccessKey.args = {
+export const WithAccessKey = Template.bind({});
+WithAccessKey.args = {
   svgPath: defaultSVGPath,
   accessKey: 'The bell is ringing',
 };
-IconButtonWithAccessKey.parameters = {
+WithAccessKey.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const accessKey = await page.$eval(`${wrapper} > button`, (el) =>
       el.getAttribute('accessKey')
@@ -500,12 +499,12 @@ IconButtonWithAccessKey.parameters = {
 };
 
 // Når IconButton har dataTestId, så har button-elementet data-testid satt
-export const IconButtonWithDataTestId = Template.bind({});
-IconButtonWithDataTestId.args = {
+export const WithDataTestId = Template.bind({});
+WithDataTestId.args = {
   svgPath: defaultSVGPath,
-  "data-testid": '123 bell svg',
+  'data-testid': '123 bell svg',
 };
-IconButtonWithDataTestId.parameters = {
+WithDataTestId.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const dataTestId = await page.$eval(`${wrapper} > button`, (el) =>
       el.getAttribute('data-testid')
@@ -518,8 +517,8 @@ IconButtonWithDataTestId.parameters = {
 };
 
 // Når IconButton har en ref, så får dom button elementet ref forwarded
-export const IconButtonWithRef = Template.bind({});
-IconButtonWithRef.args = {
+export const WithRef = Template.bind({});
+WithRef.args = {
   ref: (instance: HTMLButtonElement | null): void => {
     if (instance) {
       instance.id = 'dummyIdForwardedFromRef';
@@ -527,7 +526,7 @@ IconButtonWithRef.args = {
   },
   svgPath: defaultSVGPath,
 };
-IconButtonWithRef.parameters = {
+WithRef.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const refId = await page.$eval(`${wrapper} > button`, (el) => el.id);
     expect(refId).toBe('dummyIdForwardedFromRef');

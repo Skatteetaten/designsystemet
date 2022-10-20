@@ -2,7 +2,12 @@ import { forwardRef } from 'react';
 
 import { Icon } from '@skatteetaten/ds-icons';
 
-import { getClassNameDefault, getDisabledDefault, getIsOutlinedDefault, getSizeDefault } from './defaults';
+import {
+  getClassNameDefault,
+  getDisabledDefault,
+  getIsOutlinedDefault,
+  getSizeDefault,
+} from './defaults';
 import { IconButtonProps } from './IconButton.types';
 
 import styles from './IconButton.module.scss';
@@ -51,3 +56,10 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
 );
 
 IconButton.displayName = 'IconButton';
+
+export {
+  getClassNameDefault,
+  getDisabledDefault,
+  getIsOutlinedDefault,
+  getSizeDefault,
+};

@@ -77,7 +77,10 @@ describe('Icon utils', () => {
       Add: { svgPath: SystemSVGPathsAndIcons.AddSVGpath },
     };
 
-    const iconList = getListOfAllSystemIcons(SVGPathElements, SVGPathAndIconElements);
+    const iconList = getListOfAllSystemIcons(
+      SVGPathElements,
+      SVGPathAndIconElements
+    );
 
     expect(iconList).toEqual(expectedIconList);
   });

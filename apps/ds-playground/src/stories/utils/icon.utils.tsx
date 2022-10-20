@@ -44,5 +44,11 @@ export const getListOfAllSystemIcons = function (
   const systemIconLabels = makeLabelsFromSVGPathElements(SVGPathElements);
   const systemSVGPaths = findSVGPathElements(SVGPathAndIconElements);
 
-  return Object.values(systemIconLabels).reduce((o, key, index) => ({ ...o, [key]: { svgPath: Object.values(systemSVGPaths)[index] }}), {});
+  return Object.values(systemIconLabels).reduce(
+    (o, key, index) => ({
+      ...o,
+      [key]: { svgPath: Object.values(systemSVGPaths)[index] },
+    }),
+    {}
+  );
 };
