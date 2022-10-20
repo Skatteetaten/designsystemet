@@ -205,7 +205,7 @@ WithVariant.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
 
-    const ariaAttributes = await page.$eval('svg', (el) => {
+    const elementAttributes = await page.$eval('svg', (el) => {
       return {
         viewBox: el.getAttribute('viewBox'),
         className: el.getAttribute('class'),
