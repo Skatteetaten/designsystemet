@@ -48,7 +48,7 @@ const commonArgTypes = {
   title: {
     control: 'text',
   },
-  'aria-label': { control: 'text' },
+  ariaLabel: { control: 'text' },
   role: {
     control: 'text',
     table: {

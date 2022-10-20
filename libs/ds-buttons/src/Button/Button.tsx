@@ -17,9 +17,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       iconProps,
       tabIndex,
       'data-testid': dataTestId,
-      'aria-label': ariaLabel,
-      'aria-describedby': ariaDescribedby,
-      'aria-hidden': ariaHidden,
+      ariaDescribedby,
       onClick,
       onBlur,
       onFocus,
@@ -37,8 +35,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         className={cssName}
         data-testid={dataTestId}
         disabled={disabled}
-        aria-label={ariaLabel}
-        aria-hidden={ariaHidden}
         aria-describedby={ariaDescribedby}
         tabIndex={tabIndex}
         onClick={onClick}

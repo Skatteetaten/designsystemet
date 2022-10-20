@@ -4,16 +4,7 @@ import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 type ButtonPropsHTMLAttributes = Pick<
   React.ComponentPropsWithoutRef<'button'>,
-  | 'children'
-  | 'tabIndex'
-  | 'disabled'
-  | 'aria-label'
-  | 'aria-hidden'
-  | 'aria-labelledby'
-  | 'aria-describedby'
-  | 'onClick'
-  | 'onBlur'
-  | 'onFocus'
+  'children' | 'tabIndex' | 'disabled' | 'onClick' | 'onBlur' | 'onFocus'
 >;
 
 export interface MegaButtonComponentProps extends ButtonPropsHTMLAttributes {
@@ -23,6 +14,8 @@ export interface MegaButtonComponentProps extends ButtonPropsHTMLAttributes {
    */
   isExternal?: boolean;
   children: string;
+  /** id-attribute til beskrivende (en eller flere) html-elementer */
+  ariaDescribedby?: string;
 }
 
 export type MegaButtonProps = BaseProps & MegaButtonComponentProps;

@@ -18,7 +18,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       className = getClassNameDefault(),
       'data-testid': dataTestId,
       title,
-      'aria-label': ariaLabel,
+      ariaLabel,
       role = getRoleDefault(),
       variant = getVariantDefault(),
       viewBox = getViewBoxDefault(variant),

@@ -11,7 +11,7 @@ export default {
   title: 'Tests/Icon',
 } as ComponentMeta<typeof Icon>;
 
-const ariaLabel = 'aria-label';
+const ariaLabel = 'ariaLabel';
 const ariaLabelledby = 'aria-labelledby';
 const ariaHidden = 'aria-hidden';
 
@@ -141,7 +141,7 @@ IconWithTitle.parameters = {
 // Når Icon har en aria-label, får den ikke noe <title> tag, og riktig role og aria attributer
 export const IconWithAriaLabel = Template.bind({});
 IconWithAriaLabel.args = {
-  'aria-label': 'min custom aria-label beskrivelse',
+  ariaLabel: 'min custom aria-label beskrivelse',
 };
 IconWithAriaLabel.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {

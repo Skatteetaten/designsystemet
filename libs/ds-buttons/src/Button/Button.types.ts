@@ -5,22 +5,15 @@ import { IconProps } from '@skatteetaten/ds-icons';
 
 type ButtonPropsHTMLAttributes = Pick<
   React.ComponentPropsWithoutRef<'button'>,
-  | 'children'
-  | 'tabIndex'
-  | 'disabled'
-  | 'aria-label'
-  | 'aria-hidden'
-  | 'aria-labelledby'
-  | 'aria-describedby'
-  | 'onClick'
-  | 'onBlur'
-  | 'onFocus'
+  'children' | 'tabIndex' | 'disabled' | 'onClick' | 'onBlur' | 'onFocus'
 >;
 
 export interface ButtonComponentProps extends ButtonPropsHTMLAttributes {
   iconProps?: IconProps;
   variant?: 'primary' | 'secondary' | 'tertiary' | 'danger';
   children: string;
+  /** id-attribute til beskrivende (en eller flere) html-elementer */
+  ariaDescribedby?: string;
 }
 
 /**

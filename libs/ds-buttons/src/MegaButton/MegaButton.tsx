@@ -17,10 +17,7 @@ export const MegaButton = forwardRef<HTMLButtonElement, MegaButtonProps>(
       isExternal,
       tabIndex,
       'data-testid': dataTestId,
-      'aria-label': ariaLabel,
-      'aria-labelledby': ariaLabelledby,
-      'aria-describedby': ariaDescribedby,
-      'aria-hidden': ariaHidden,
+      ariaDescribedby,
       onClick,
       onBlur,
       onFocus,
@@ -36,9 +33,6 @@ export const MegaButton = forwardRef<HTMLButtonElement, MegaButtonProps>(
         className={cssName}
         data-testid={dataTestId}
         disabled={disabled}
-        aria-label={ariaLabel}
-        aria-hidden={ariaHidden}
-        aria-labelledby={ariaLabelledby}
         aria-describedby={ariaDescribedby}
         tabIndex={tabIndex}
         onClick={onClick}

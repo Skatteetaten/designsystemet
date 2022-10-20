@@ -55,15 +55,7 @@ export default {
       control: 'text',
       table: { defaultValue: { summary: '' } },
     },
-    'aria-label': {
-      control: 'text',
-      table: { defaultValue: { summary: '' } },
-    },
-    'aria-hidden': {
-      control: 'boolean',
-      table: { defaultValue: { summary: '' } },
-    },
-    'aria-describedby': {
+    ariaDescribedby: {
       control: 'text',
       table: { defaultValue: { summary: '' } },
     },
@@ -82,8 +74,6 @@ const TemplateVariant: ComponentStory<typeof Button> = (args) => (
       <Button
         {...args}
         variant={'primary'}
-        /* Overskriver aria-label satt i Primary.args.['aria-label'] */
-        aria-label={'Erstatningslabel satt direkte i komponenten som props'}
         iconProps={args.iconProps}
         onClick={action('Button story klikk på primary')}
       >
@@ -151,8 +141,6 @@ ButtonDefault.parameters = {
 export const Variants = TemplateVariant.bind({});
 Variants.args = {
   ...baseArgs,
-  'aria-label':
-    'Alternativ tekst i aria-label satt som props i story for alle Primary-buttons',
   'aria-describedby': 'elementid satt i story',
   variant: 'secondary',
 };

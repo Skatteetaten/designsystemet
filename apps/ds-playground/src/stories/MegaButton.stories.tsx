@@ -40,18 +40,6 @@ export default {
       control: 'text',
       table: { defaultValue: { summary: '' } },
     },
-    'aria-label': {
-      control: 'text',
-      table: { defaultValue: { summary: '' } },
-    },
-    'aria-hidden': {
-      control: 'boolean',
-      table: { defaultValue: { summary: '' } },
-    },
-    'aria-labelledby': {
-      control: 'text',
-      table: { defaultValue: { summary: '' } },
-    },
     'aria-describedby': {
       control: 'text',
       table: { defaultValue: { summary: '' } },

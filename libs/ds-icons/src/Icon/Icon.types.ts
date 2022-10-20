@@ -4,7 +4,7 @@ import { BaseProps, Size, IconVariant } from '@skatteetaten/ds-core-utils';
 
 type SvgHTMLAttributes = Pick<
   React.SVGAttributes<Record<string, never>>,
-  'aria-label' | 'role' | 'viewBox' | 'tabIndex'
+  'role' | 'viewBox' | 'tabIndex'
 >;
 
 // Dette er en ekstend kun for å kunne legge til JSdoc beskrivelser
@@ -27,13 +27,13 @@ export type IconDiscriminatedTitleProps =
       /** Oppretter et title-element nested i svg. Dette medfører tooltip. */
       title?: string;
       /** Hvis svg-en er meningsbærende og ikke bare pynt/dekor skal elementet ha aria-label="beskrivelse". Merk at aria-label vises kun når "title"-prop ikke allerede er angitt. */
-      'aria-label'?: never;
+      ariaLabel?: never;
     }
   | {
       /** Oppretter en title-tag nested i svg. Dette medfører tooltip. */
       title?: never;
-      /** Hvis svg-en er meningsbærende og ikke bare pynt/dekor skal elementet ha aria-label="beskrivelse". Merk at aria-label vises kun når "title"-prop ikke allerede er oppgitt. */
-      'aria-label'?: string;
+      /** Hvis svg-en er meningsbærende og ikke bare pynt/dekor skal elementet ha ariaLabel="beskrivelse". Merk at aria-label vises kun når "title"-prop ikke allerede er oppgitt. */
+      ariaLabel?: string;
     };
 export type IconDiscriminatedVariantProps =
   | {
