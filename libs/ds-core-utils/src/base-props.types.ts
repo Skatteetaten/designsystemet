@@ -23,3 +23,6 @@ export const sizeArr = [
   'extraLarge',
 ] as const;
 export type Size = typeof sizeArr[number];
+
+export const positionArr = ['left', 'right'] as const;
+export type Positon = typeof positionArr[number];

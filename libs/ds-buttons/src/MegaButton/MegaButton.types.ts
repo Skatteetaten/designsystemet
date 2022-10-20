@@ -9,12 +9,12 @@ type ButtonPropsHTMLAttributes = Pick<
 
 export interface MegaButtonComponentProps extends ButtonPropsHTMLAttributes {
   /**
-   * @param {boolean} external - (Default: false) Ikon som indikerer ekstern lenke.
+   * @param {boolean} external - Ikon som indikerer ekstern lenke.
    * @param {string} children - Tekst på knapp.
    */
   isExternal?: boolean;
   children: string;
-  /** id-attribute til beskrivende (en eller flere) html-elementer */
+  /** id-attribute til tilleggstekst (en eller flere) html-elementer */
   ariaDescribedby?: string;
 }
 

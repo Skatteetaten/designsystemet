@@ -11,7 +11,7 @@ export default {
   title: 'Tests/Icon',
 } as ComponentMeta<typeof Icon>;
 
-const ariaLabel = 'ariaLabel';
+const ariaLabel = 'aria-label';
 const ariaLabelledby = 'aria-labelledby';
 const ariaHidden = 'aria-hidden';
 
