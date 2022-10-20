@@ -212,7 +212,7 @@ WithVariant.parameters = {
       };
     });
 
-    expect(ariaAttributes.viewBox).toBe('0 0 48 48');
+    expect(elementAttributes.viewBox).toBe('0 0 48 48');
     expect(ariaAttributes.className).toContain('Icon_themeIcon_medium');
 
     const image = await page.screenshot({
