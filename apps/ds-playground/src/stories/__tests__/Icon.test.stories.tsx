@@ -213,7 +213,7 @@ WithVariant.parameters = {
     });
 
     expect(elementAttributes.viewBox).toBe('0 0 48 48');
-    expect(ariaAttributes.className).toContain('Icon_themeIcon_medium');
+    expect(elementAttributes.className).toContain('Icon_themeIcon_medium');
 
     const image = await page.screenshot({
       fullPage: true,
