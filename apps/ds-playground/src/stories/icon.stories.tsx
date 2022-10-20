@@ -3,9 +3,7 @@ import {
   Icon,
   IconProps,
   getClassNameDefault,
-  getRoleDefault,
   getVariantDefault,
-  getViewBoxDefault,
   getSizeDefault,
   SystemSVGPathsAndIcons,
   ThemeSVGPathsAndIcons,
@@ -49,12 +47,6 @@ const commonArgTypes = {
     control: 'text',
   },
   'aria-label': { control: 'text' },
-  role: {
-    control: 'text',
-    table: {
-      defaultValue: { summary: getRoleDefault() },
-    },
-  },
 };
 
 const defaultSystemIconVariant = getVariantDefault();
@@ -62,16 +54,10 @@ const defaultSystemIconVariant = getVariantDefault();
 SystemIcon.argTypes = {
   ...commonArgTypes,
   variant: {
-    control: { type: 'text' },
+    name: 'variant ("systemIcon")',
+    control: { type: null },
     table: {
-      disable: true,
       defaultValue: { summary: defaultSystemIconVariant },
-    },
-  },
-  viewBox: {
-    control: 'text',
-    table: {
-      defaultValue: { summary: getViewBoxDefault(defaultSystemIconVariant) },
     },
   },
   size: {
@@ -93,9 +79,7 @@ SystemIcon.argTypes = {
 
 SystemIcon.args = {
   className: getClassNameDefault(),
-  role: getRoleDefault(),
   variant: defaultSystemIconVariant,
-  viewBox: getViewBoxDefault(defaultSystemIconVariant),
   size: getSizeDefault(),
   svgPath: SystemSVGPathsAndIcons.AccountChildSVGpath,
 };
@@ -103,16 +87,10 @@ SystemIcon.args = {
 ThemeIcon.argTypes = {
   ...commonArgTypes,
   variant: {
-    control: { type: 'text' },
+    name: 'variant ("themeIcon")',
+    control: { type: null },
     table: {
-      disable: true,
       defaultValue: { summary: 'themeIcon' },
-    },
-  },
-  viewBox: {
-    control: 'text',
-    table: {
-      defaultValue: { summary: getViewBoxDefault('themeIcon') },
     },
   },
   size: {
@@ -133,9 +111,7 @@ ThemeIcon.argTypes = {
 
 ThemeIcon.args = {
   className: getClassNameDefault(),
-  role: getRoleDefault(),
   variant: 'themeIcon',
-  viewBox: getViewBoxDefault('themeIcon'),
   size: getSizeDefault(),
   svgPath: ThemeSVGPathsAndIcons.AndreForholdSVGpath,
 };
