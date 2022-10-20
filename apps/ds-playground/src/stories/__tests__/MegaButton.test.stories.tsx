@@ -243,25 +243,16 @@ MegaButtonCustomCssAndDisabled.parameters = {
 export const MegaButtonWithArias = Template.bind({});
 MegaButtonWithArias.args = {
   ...MegaButtonDefaults.args,
-  'aria-hidden': true,
-  'aria-label': 'Knapp aria-label',
-  'aria-labelledby': 'Knapp aria-labelledby',
-  'aria-describedby': 'Knapp aria-describedby',
+  ariaDescribedby: 'Knapp aria-describedby',
 };
 MegaButtonWithArias.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const ariaAttributes = await page.$eval(`${wrapper} > button`, (el) => {
       return {
-        ariaHidden: el.getAttribute('aria-hidden'),
-        ariaLabel: el.getAttribute('aria-label'),
-        ariaLabelledBy: el.getAttribute('aria-labelledby'),
         ariaDescribedBy: el.getAttribute('aria-describedby'),
       };
     });
-    expect(ariaAttributes.ariaHidden).toBe('true');
-    expect(ariaAttributes.ariaLabel).toBe('Knapp aria-label');
     expect(ariaAttributes.ariaDescribedBy).toBe('Knapp aria-describedby');
-    expect(ariaAttributes.ariaLabelledBy).toBe('Knapp aria-labelledby');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();

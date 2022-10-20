@@ -194,7 +194,6 @@ WithIcon.args = {
   ...ButtonDefaults.args,
   iconProps: {
     svgPath: SendSVGpath,
-    'aria-label': 'min custom aria-label beskrivelse',
   },
 };
 WithIcon.argTypes = {
@@ -213,10 +212,8 @@ WithIcon.parameters = {
         viewBox: el.getAttribute('viewBox'),
       };
     });
-    // TODO Alternativt gjeninnføre tester etter avklaring rundt aria-attributter for icon i knapp
+
     expect(svgAttributes.role).toBe('img');
-    // expect(svgAttributes.ariaHidden).toBe('false');
-    // expect(svgAttributes.ariaLabel).toBe('min custom aria-label beskrivelse');
     expect(svgAttributes.ariaLabelledBy).toBeNull();
     expect(svgAttributes.viewBox).toBe(systemIconViewBox);
 
@@ -340,9 +337,7 @@ CustomCssAndDisabled.parameters = {
 export const WithArias = Template.bind({});
 WithArias.args = {
   ...ButtonDefaults.args,
-  'aria-hidden': true,
-  'aria-label': 'Knapp aria-label',
-  'aria-describedby': 'Knapp aria-describedby',
+  ariaDescribedby: 'Knapp aria-describedby',
 };
 WithArias.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
