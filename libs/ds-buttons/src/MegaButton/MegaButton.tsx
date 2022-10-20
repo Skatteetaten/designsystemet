@@ -6,21 +6,22 @@ import { MegaButtonProps } from './MegaButton.types';
 
 import styles from './MegaButton.module.scss';
 
-export const MegaButton = forwardRef<HTMLButtonElement, MegaButtonProps>(
+export const MegaButton = forwardRef<
+  HTMLButtonElement | HTMLAnchorElement,
+  MegaButtonProps
+>(
   (
     {
-      //TODO Gjennomgang av properties
       id,
       className = '',
       children,
-      disabled = false,
-      isExternal,
       tabIndex,
+      href,
+      accessKey,
       'data-testid': dataTestId,
-      'aria-label': ariaLabel,
-      'aria-labelledby': ariaLabelledby,
       'aria-describedby': ariaDescribedby,
-      'aria-hidden': ariaHidden,
+      isExternal,
+      disabled,
       onClick,
       onBlur,
       onFocus,
@@ -29,18 +30,23 @@ export const MegaButton = forwardRef<HTMLButtonElement, MegaButtonProps>(
   ): JSX.Element => {
     const cssName = `${styles.button} ${className}`;
 
+    const Tag = href ? 'a' : 'button';
     return (
-      <button
-        ref={ref}
+      <Tag
+        ref={
+          ref as (
+            instance: HTMLButtonElement | HTMLAnchorElement | null
+          ) => void
+        }
         id={id}
         className={cssName}
         data-testid={dataTestId}
-        disabled={disabled}
-        aria-label={ariaLabel}
-        aria-hidden={ariaHidden}
-        aria-labelledby={ariaLabelledby}
+        role={href ? 'button' : undefined}
+        href={href}
+        accessKey={accessKey}
         aria-describedby={ariaDescribedby}
         tabIndex={tabIndex}
+        disabled={disabled}
         onClick={onClick}
         onBlur={onBlur}
         onFocus={onFocus}
@@ -51,10 +57,9 @@ export const MegaButton = forwardRef<HTMLButtonElement, MegaButtonProps>(
             <ExternalIcon className={styles.svg} />
           </span>
         )}
-      </button>
+      </Tag>
     );
   }
 );
 
 MegaButton.displayName = 'MegaButton';
-// TODO sjekk default / named

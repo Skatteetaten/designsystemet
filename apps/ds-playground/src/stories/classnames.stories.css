@@ -38,3 +38,14 @@
 .buttonClassnameBlue:focus {
   background-color: rgb(36 39 94);
 }
+
+.dummyClassName {
+  background-color: indianred;
+  color: black;
+}
+
+.dummyClassName:disabled,
+.dummyClassName:hover {
+  background-color: darksalmon;
+  color: white;
+}

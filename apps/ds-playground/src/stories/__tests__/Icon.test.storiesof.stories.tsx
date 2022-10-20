@@ -3,7 +3,7 @@ import {
   IconProps,
   AccountChildSVGpath,
   AndreForholdSVGpath,
-  VariantCustomProps,
+  IconDiscriminatedVariantProps,
 } from '@skatteetaten/ds-icons';
 import { storiesOf } from '@storybook/react';
 import { ElementHandle } from 'puppeteer';
@@ -48,7 +48,7 @@ iconsWithSize.forEach(function (icon) {
   const variantArgs = {
     variant: icon.variant,
     size: icon.size,
-  } as VariantCustomProps;
+  } as IconDiscriminatedVariantProps;
 
   const iconArgs = {
     ...variantArgs,

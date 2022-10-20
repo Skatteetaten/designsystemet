@@ -2,18 +2,12 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 
-const themeIconPath = path.join(__dirname, './lib/ThemeIcons/');
-const systemIconPath = path.join(__dirname, '/lib/SystemIcons/');
-
-createIndexFile(themeIconPath);
-createIndexFile(systemIconPath);
-
-function createIndexFile(iconPath) {
+function createIndexFile(iconSubPath) {
   try {
     const endOfLine = os.EOL;
+    const iconPath = path.join(__dirname, `./${iconSubPath}/`);
     const files = fs.readdirSync(iconPath);
-
-    const writeStream = fs.createWriteStream(`${iconPath}index.ts`);
+    const writeStream = fs.createWriteStream(`${iconPath}index.tsx`);
     writeStream.write(
       `/* NB! Dette er en autogenerert fil, vennligst ikke gjør manuelle endringer i den.${endOfLine}`
     );
@@ -33,3 +27,6 @@ function createIndexFile(iconPath) {
     throw err;
   }
 }
+
+createIndexFile('SystemIcons');
+createIndexFile('ThemeIcons');

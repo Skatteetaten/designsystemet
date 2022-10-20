@@ -1,11 +1,13 @@
 import {
   IconButton,
-  getClassNameDefault,
-  getDisabledDefault,
   getIsOutlinedDefault,
   getSizeDefault,
 } from '@skatteetaten/ds-buttons';
-import { sizeArr } from '@skatteetaten/ds-core-utils';
+import {
+  getClassNameDefault,
+  getDisabledDefault,
+  sizeArr,
+} from '@skatteetaten/ds-core-utils';
 import { action } from '@storybook/addon-actions';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 

@@ -1,6 +1,7 @@
-export * from './lib/Icon/Icon';
-export * from './lib/Icon/Icon.types';
-export * from './lib/SystemIcons';
-export * from './lib/ThemeIcons';
-export * as SystemSVGPathsAndIcons from './lib/SystemIcons';
-export * as ThemeSVGPathsAndIcons from './lib/ThemeIcons';
+export * from './Icon/Icon';
+export * from './Icon/Icon.types';
+export * from './Icon/defaults';
+export * from './SystemIcons';
+export * from './ThemeIcons';
+export * as SystemSVGPathsAndIcons from './SystemIcons';
+export * as ThemeSVGPathsAndIcons from './ThemeIcons';

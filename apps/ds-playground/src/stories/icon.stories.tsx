@@ -1,10 +1,16 @@
 import { sizeArr } from '@skatteetaten/ds-core-utils';
-import { Icon as DefaultIcon } from '@skatteetaten/ds-icons';
 import {
+  Icon,
+  IconProps,
+  getClassNameDefault,
+  getRoleDefault,
+  getVariantDefault,
+  getViewBoxDefault,
+  getSizeDefault,
   SystemSVGPathsAndIcons,
   ThemeSVGPathsAndIcons,
 } from '@skatteetaten/ds-icons';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Story, Meta } from '@storybook/react';
 
 import { SystemIconLabels, SystemSVGPaths } from './utils/icon.systems';
 import { ThemeIconLabels, ThemeSVGPaths } from './utils/icon.themes';
@@ -12,85 +18,124 @@ import { ThemeIconLabels, ThemeSVGPaths } from './utils/icon.themes';
 import './classnames.stories.css';
 
 export default {
-  component: DefaultIcon,
+  component: Icon,
   title: 'Design System/Icon',
-} as ComponentMeta<typeof DefaultIcon>;
+} as Meta<IconProps>;
 
-const Template: ComponentStory<typeof DefaultIcon> = (args) => (
+const Template: Story<IconProps> = (args) => (
   <div style={{ width: '150px' }}>
-    <DefaultIcon {...args} />
+    <Icon {...args} />
   </div>
 );
 
-export const SystemIcon = Template.bind({});
-export const ThemeIcon = Template.bind({});
+export const SystemIcon: Story<IconProps> = Template.bind({});
+export const ThemeIcon: Story<IconProps> = Template.bind({});
 
 const commonArgTypes = {
-  className: { control: 'select', options: ['myIconClassname'] },
-  title: { control: 'text' },
+  id: {
+    control: 'text',
+  },
+  'data-testid': {
+    control: 'text',
+  },
+  className: {
+    control: 'select',
+    options: ['myIconClassname'],
+    table: {
+      defaultValue: { summary: getClassNameDefault() },
+    },
+  },
+  title: {
+    control: 'text',
+  },
   'aria-label': { control: 'text' },
-  role: { control: 'text' },
-  viewBox: { control: 'text' },
-  variant: {
-    control: { type: 'text' },
-    table: { disable: true },
+  role: {
+    control: 'text',
+    table: {
+      defaultValue: { summary: getRoleDefault() },
+    },
   },
 };
 
+const defaultSystemIconVariant = getVariantDefault();
+
 SystemIcon.argTypes = {
   ...commonArgTypes,
+  variant: {
+    control: { type: 'text' },
+    table: {
+      disable: true,
+      defaultValue: { summary: defaultSystemIconVariant },
+    },
+  },
+  viewBox: {
+    control: 'text',
+    table: {
+      defaultValue: { summary: getViewBoxDefault(defaultSystemIconVariant) },
+    },
+  },
   size: {
     control: 'select',
     options: [...sizeArr].slice(1),
-    default: 'medium',
+    table: {
+      defaultValue: { summary: getSizeDefault() },
+    },
   },
   svgPath: {
-    options: Object.keys(SystemSVGPaths),
-    mapping: SystemSVGPaths,
     control: {
       type: 'select',
       labels: SystemIconLabels,
     },
-    table: {
-      type: { summary: 'select' },
-      defaultValue: { summary: 'AccountChild' },
-    },
+    options: Object.keys(SystemSVGPaths),
+    mapping: SystemSVGPaths,
   },
 };
 
 SystemIcon.args = {
-  title: 'Default title',
-  variant: 'systemIcon',
-  viewBox: '0 0 24 24',
-  size: 'medium',
+  className: getClassNameDefault(),
+  role: getRoleDefault(),
+  variant: defaultSystemIconVariant,
+  viewBox: getViewBoxDefault(defaultSystemIconVariant),
+  size: getSizeDefault(),
   svgPath: SystemSVGPathsAndIcons.AccountChildSVGpath,
 };
 
 ThemeIcon.argTypes = {
   ...commonArgTypes,
+  variant: {
+    control: { type: 'text' },
+    table: {
+      disable: true,
+      defaultValue: { summary: 'themeIcon' },
+    },
+  },
+  viewBox: {
+    control: 'text',
+    table: {
+      defaultValue: { summary: getViewBoxDefault('themeIcon') },
+    },
+  },
   size: {
     control: 'select',
     options: [sizeArr[2], sizeArr[3]],
-    default: 'medium',
+    table: {
+      defaultValue: { summary: getSizeDefault() },
+    },
   },
   svgPath: {
     options: Object.keys(ThemeSVGPaths),
     mapping: ThemeSVGPaths,
     control: {
-      type: 'select',
       labels: ThemeIconLabels,
-    },
-    table: {
-      type: { summary: 'select' },
-      defaultValue: { summary: 'AndreForhold' },
     },
   },
 };
 
 ThemeIcon.args = {
-  title: 'Default title',
+  className: getClassNameDefault(),
+  role: getRoleDefault(),
   variant: 'themeIcon',
-  viewBox: '0 0 48 48',
-  size: 'medium',
+  viewBox: getViewBoxDefault('themeIcon'),
+  size: getSizeDefault(),
   svgPath: ThemeSVGPathsAndIcons.AndreForholdSVGpath,
 };

@@ -30,25 +30,22 @@ export default {
         'Verdien appended til designsystemets stilsett for komponent',
       table: { defaultValue: { summary: '' } },
     },
+    href: {
+      description: 'Gjør det mulig å bruke knappen som en lenke',
+      control: 'text',
+      table: { defaultValue: { summary: '' } },
+    },
     isExternal: {
       defaultValue: false,
       control: 'boolean',
       description:
-        'Viser ikon som indikerer at knappen åpner en ekstern tjeneste.',
+        'Viser ikon som indikerer at knappen åpner en ekstern tjeneste. Brukes hvis knappen  er en lenke til en side på et annet domene.',
     },
     tabIndex: {
       control: 'text',
       table: { defaultValue: { summary: '' } },
     },
-    'aria-label': {
-      control: 'text',
-      table: { defaultValue: { summary: '' } },
-    },
-    'aria-hidden': {
-      control: 'boolean',
-      table: { defaultValue: { summary: '' } },
-    },
-    'aria-labelledby': {
+    accessKey: {
       control: 'text',
       table: { defaultValue: { summary: '' } },
     },
