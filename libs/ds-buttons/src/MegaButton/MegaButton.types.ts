@@ -2,12 +2,31 @@ import React from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-type ButtonPropsHTMLAttributes = Pick<
+type ButtonHTMLAttributes = Pick<
   React.ComponentPropsWithoutRef<'button'>,
-  'children' | 'tabIndex' | 'disabled' | 'onClick' | 'onBlur' | 'onFocus'
+  'children' | 'tabIndex' | 'onClick' | 'onBlur' | 'onFocus' | 'accessKey'
 >;
 
-export interface MegaButtonComponentProps extends ButtonPropsHTMLAttributes {
+type AnchorHTMLAttributes = Pick<
+  React.ComponentPropsWithoutRef<'a'>,
+  'children' | 'tabIndex' | 'onClick' | 'onBlur' | 'onFocus' | 'accessKey'
+>;
+
+type MegaButtonPropsWithHref = Pick<
+  React.ComponentPropsWithoutRef<'a'>,
+  'href'
+> & { disabled?: never };
+
+export type MegaButtonPropsWithDisabled = Pick<
+  React.ComponentPropsWithoutRef<'button'>,
+  'disabled'
+> & { href?: never };
+
+export type MegaButtonPropsHTMLAttributes = ButtonHTMLAttributes &
+  AnchorHTMLAttributes;
+
+export interface MegaButtonComponentProps
+  extends MegaButtonPropsHTMLAttributes {
   /**
    * @param {boolean} external - Ikon som indikerer ekstern lenke.
    * @param {string} children - Tekst på knapp.
@@ -18,4 +37,6 @@ export interface MegaButtonComponentProps extends ButtonPropsHTMLAttributes {
   ariaDescribedby?: string;
 }
 
-export type MegaButtonProps = BaseProps & MegaButtonComponentProps;
+export type MegaButtonProps = BaseProps &
+  MegaButtonComponentProps &
+  (MegaButtonPropsWithDisabled | MegaButtonPropsWithHref);

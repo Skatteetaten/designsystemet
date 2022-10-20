@@ -1,6 +1,9 @@
 import { useState } from 'react';
 
-import { MegaButton } from '@skatteetaten/ds-buttons';
+import {
+  MegaButton,
+  MegaButtonPropsWithDisabled,
+} from '@skatteetaten/ds-buttons';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ElementHandle, Page, ScreenshotOptions } from 'puppeteer';
 
@@ -28,7 +31,7 @@ const Template: ComponentStory<typeof MegaButton> = (args) => (
 export const MegaButtonDefaults = Template.bind({});
 MegaButtonDefaults.args = {
   children: defaultMegaButtonText,
-};
+} as MegaButtonPropsWithDisabled;
 MegaButtonDefaults.parameters = {
   async puppeteerTest(page: Page): Promise<void> {
     const element = await page.$(wrapper);
@@ -208,7 +211,7 @@ MegaButtonClassNameChange.parameters = {
 // Når MegaButton har en custom CSS og er disabled, så vises disabled stil med overskrivinger fra customCSS
 export const MegaButtonCustomCssAndDisabled = Template.bind({});
 MegaButtonCustomCssAndDisabled.args = {
-  ...MegaButtonDefaults.args,
+  children: defaultMegaButtonText,
   disabled: true,
   className: 'buttonClassnameLight',
 };
@@ -243,7 +246,7 @@ MegaButtonCustomCssAndDisabled.parameters = {
 export const MegaButtonWithArias = Template.bind({});
 MegaButtonWithArias.args = {
   ...MegaButtonDefaults.args,
-  ariaDescribedby: 'Knapp aria-describedby',
+  ariaDescribedby: 'testid1234',
 };
 MegaButtonWithArias.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -252,7 +255,7 @@ MegaButtonWithArias.parameters = {
         ariaDescribedBy: el.getAttribute('aria-describedby'),
       };
     });
-    expect(ariaAttributes.ariaDescribedBy).toBe('Knapp aria-describedby');
+    expect(ariaAttributes.ariaDescribedBy).toBe('testid1234');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -352,5 +355,69 @@ WithOnClick.parameters = {
     const textContent = await element?.getProperty('textContent');
     const text = await textContent?.jsonValue();
     expect(text).toBe('Endret Tekst på Knapp');
+  },
+};
+
+// Når MegaButton har en href, så rendres den som en a
+export const MegaButtonAsLink = Template.bind({});
+MegaButtonAsLink.args = {
+  href: 'https://www.skatteetaten.no',
+  children: defaultMegaButtonText,
+};
+MegaButtonAsLink.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+  },
+};
+// Når MegaButton har en href, så rendres den som en a
+export const MegaButtonAsExternalLink = Template.bind({});
+MegaButtonAsExternalLink.args = {
+  href: 'https://www.skatteetaten.no',
+  isExternal: true,
+  children: defaultMegaButtonText,
+};
+MegaButtonAsExternalLink.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+
+    const megaButtonElement = await page.$(`${wrapper} > a`);
+    const role = await (
+      await megaButtonElement?.getProperty('role')
+    )?.jsonValue();
+    expect(role).toBe('button');
+
+    await megaButtonElement?.focus();
+    const imageFocused = await page.screenshot(screenShotOptions);
+    expect(imageFocused).toMatchImageSnapshot();
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    await page.$eval(`${wrapper} > a`, (el: any) => el.blur());
+    await megaButtonElement?.hover();
+    const imageHovered = await page.screenshot(screenShotOptions);
+    expect(imageHovered).toMatchImageSnapshot();
+  },
+};
+
+// Når MegaButton har en accessKey, så settes den som forventet
+export const withAccessKey = Template.bind({});
+withAccessKey.args = {
+  children: defaultMegaButtonText,
+  accessKey: 'j',
+};
+withAccessKey.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const megaButtonElement = await page.$(`${wrapper} > button`);
+    const accessKey = await (
+      await megaButtonElement?.getProperty('accessKey')
+    )?.jsonValue();
+    expect(accessKey).toBe('j');
   },
 };
