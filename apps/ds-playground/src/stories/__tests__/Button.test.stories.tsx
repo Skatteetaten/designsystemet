@@ -12,21 +12,21 @@ const screenShotOptions: ScreenshotOptions = {
   encoding: 'base64',
 };
 
-/* eslint-disable jest/no-standalone-expect */
 export default {
   component: Button,
   title: 'Tests / Button',
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => (
-  <div style={{ margin: '1em' }} data-test-block>
+  <div style={{ margin: '1em' }} className={'noTranstion'} data-test-block>
     <Button {...args} variant={args.variant} iconProps={args.iconProps}>
       {args.children}
     </Button>
   </div>
 );
 
-// Når Button instansieres, får den default variant primary
+// Når Button instansieres, får den default variant primary.
+// Knapp må også ha tekst/children
 export const ButtonDefaults = Template.bind({});
 ButtonDefaults.storyName = 'Defaults';
 ButtonDefaults.args = {
@@ -61,6 +61,24 @@ WithRef.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const refId = await page.$eval(`${wrapper} > button`, (el) => el.id);
     expect(refId).toBe('dummyIdForwardedFromRef');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
+// Når Button har en id, så har button-element id
+export const WithId = Template.bind({});
+WithId.args = {
+  ...ButtonDefaults.args,
+  id: 'htmlid',
+};
+WithId.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const elementid = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('id')
+    );
+    expect(elementid).toBe('htmlid');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -170,31 +188,12 @@ VariantDanger.parameters = {
   },
 };
 
-// Når Button har en tekst, så vises teksten
-export const WithChildren = Template.bind({});
-WithChildren.args = { children: 'Button with children' };
-WithChildren.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const element = await page.$(wrapper);
-    const textContent = await element?.getProperty('textContent');
-    const text = await textContent?.jsonValue();
-    expect(text).toBe('Button with children');
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
-};
-
 // Når Button har ett ikon, så vises ikonet. tester også for riktig aria, role og viewbox for systemIcon som er brukt
 export const WithIcon = Template.bind({});
 WithIcon.args = {
   ...ButtonDefaults.args,
   iconProps: {
     svgPath: SendSVGpath,
-    'aria-label': 'min custom aria-label beskrivelse',
   },
 };
 WithIcon.argTypes = {
@@ -208,16 +207,13 @@ WithIcon.parameters = {
       return {
         role: el.getAttribute('role'),
         ariaLabel: el.getAttribute('aria-label'),
-        ariaLabelledBy: el.getAttribute('aria-labelledby'),
         ariaHidden: el.getAttribute('aria-hidden'),
         viewBox: el.getAttribute('viewBox'),
       };
     });
-    // TODO Alternativt gjeninnføre tester etter avklaring rundt aria-attributter for icon i knapp
     expect(svgAttributes.role).toBe('img');
-    // expect(svgAttributes.ariaHidden).toBe('false');
-    // expect(svgAttributes.ariaLabel).toBe('min custom aria-label beskrivelse');
-    expect(svgAttributes.ariaLabelledBy).toBeNull();
+    expect(svgAttributes.ariaHidden).toBe('true');
+    expect(svgAttributes.ariaLabel).toBeNull();
     expect(svgAttributes.viewBox).toBe(systemIconViewBox);
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
@@ -228,6 +224,7 @@ WithIcon.parameters = {
   },
 };
 
+// Når Button har prop disabled, så er knapp disabled og stil er satt til disabled
 export const Disabled = Template.bind({});
 Disabled.args = {
   ...ButtonDefaults.args,
@@ -246,7 +243,7 @@ Disabled.parameters = {
   },
 };
 
-// Når Button har et ikon og er disabled, så vises iconet og knapp er disabled
+// Når Button har prop disabled og ikon er satt, så vises ikonet og knapp er disabled og stil er satt til disabled
 export const DisabledWithIcon = Template.bind({});
 DisabledWithIcon.args = {
   ...ButtonDefaults.args,
@@ -271,14 +268,14 @@ DisabledWithIcon.parameters = {
 };
 
 // Når Button har en custom CSS, så vises custom stil
-export const ClassNameChange = Template.bind({});
-ClassNameChange.args = {
+export const WithCustomCss = Template.bind({});
+WithCustomCss.args = {
   ...ButtonDefaults.args,
   variant: 'secondary',
   className: 'buttonClassnameGreen',
 };
-ClassNameChange.argTypes = {
-  ...ClassNameChange.argTypes,
+WithCustomCss.argTypes = {
+  ...WithCustomCss.argTypes,
   className: {
     control: 'select',
     options: ['', 'buttonClassnameGreen', 'buttonClassnameBlue'],
@@ -287,7 +284,7 @@ ClassNameChange.argTypes = {
   },
   variant: { control: false },
 };
-ClassNameChange.parameters = {
+WithCustomCss.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const classNameAttribute = await page.$eval(`${wrapper}> button`, (el) =>
       el.getAttribute('class')
@@ -303,14 +300,14 @@ ClassNameChange.parameters = {
 };
 
 // Når Button har en custom CSS og er disabled, så vises disabled stil med overskrivinger fra customCSS
-export const CustomCssAndDisabled = Template.bind({});
-CustomCssAndDisabled.args = {
+export const WithCustomCssAndDisabled = Template.bind({});
+WithCustomCssAndDisabled.args = {
   ...ButtonDefaults.args,
   disabled: true,
   className: 'buttonClassnameGreen',
 };
-CustomCssAndDisabled.argTypes = {
-  ...CustomCssAndDisabled.argTypes,
+WithCustomCssAndDisabled.argTypes = {
+  ...WithCustomCssAndDisabled.argTypes,
   className: {
     control: 'select',
     options: ['', 'buttonClassnameGreen', 'buttonClassnameBlue'],
@@ -318,7 +315,7 @@ CustomCssAndDisabled.argTypes = {
     table: { defaultValue: { summary: '' } },
   },
 };
-CustomCssAndDisabled.parameters = {
+WithCustomCssAndDisabled.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
     expect(isDisabled).toBeTruthy();
@@ -337,25 +334,19 @@ CustomCssAndDisabled.parameters = {
 };
 
 // Når Button har aria attributer, så har button element aria-* satt
-export const WithArias = Template.bind({});
-WithArias.args = {
+export const WithAriaDescribedby = Template.bind({});
+WithAriaDescribedby.args = {
   ...ButtonDefaults.args,
-  'aria-hidden': true,
-  'aria-label': 'Knapp aria-label',
-  'aria-describedby': 'Knapp aria-describedby',
+  'aria-describedby': 'id1',
 };
-WithArias.parameters = {
+WithAriaDescribedby.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const ariaAttributes = await page.$eval(`${wrapper} > button`, (el) => {
       return {
-        ariaHidden: el.getAttribute('aria-hidden'),
-        ariaLabel: el.getAttribute('aria-label'),
         ariaDescribedBy: el.getAttribute('aria-describedby'),
       };
     });
-    expect(ariaAttributes.ariaHidden).toBe('true');
-    expect(ariaAttributes.ariaLabel).toBe('Knapp aria-label');
-    expect(ariaAttributes.ariaDescribedBy).toBe('Knapp aria-describedby');
+    expect(ariaAttributes.ariaDescribedBy).toBe('id1');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -371,12 +362,47 @@ WithTabindex.args = {
 WithTabindex.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const tabIndex = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('tabIndex')
+      el.getAttribute('tabindex')
     );
     expect(tabIndex).toBe('-1');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
+  },
+};
+
+// Når Button har satt accessKey, så har accessKey en verdi
+export const WithAccesskey = Template.bind({});
+WithAccesskey.args = {
+  ...ButtonDefaults.args,
+  accessKey: 's',
+};
+WithAccesskey.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const accesskey = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('accesskey')
+    );
+    expect(accesskey).toBe('s');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
+// Når Button har en veldig lang tekst så skal tekst venstrejusteres
+export const WithLongText = Template.bind({});
+WithLongText.args = {
+  ...ButtonDefaults.args,
+  children:
+    'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles',
+};
+WithLongText.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
   },
 };
 
@@ -402,25 +428,8 @@ WithLongTextAndIcon.parameters = {
   },
 };
 
-// Når Button har en veldig lang tekst så skal tekst venstrejusteres
-export const WithLongText = Template.bind({});
-WithLongText.args = {
-  ...ButtonDefaults.args,
-  children:
-    'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles',
-};
-WithLongText.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
-};
-
-// Testing onClick på knapp. onClick-event endrer teksten på knappen.
-// Egen template for å kunne bruke useState som lar oss synliggjøre resultatet av en event
+// Når brukeren klikker på knappen, så kalles funksjonen i onClick prop.
+// onClick-event endrer teksten på knappen.
 const OnClickTemplate: ComponentStory<typeof Button> = (args) => {
   const [buttText, setButtText] = useState(
     'Klikk på knapp for å teste onClick event'
@@ -430,7 +439,7 @@ const OnClickTemplate: ComponentStory<typeof Button> = (args) => {
       <Button
         {...args}
         variant={args.variant}
-        onClick={(): void => setButtText('Endret Tekst på Knapp')}
+        onClick={(): void => setButtText('Knapp er klikket')}
       >
         {buttText}
       </Button>
@@ -440,7 +449,6 @@ const OnClickTemplate: ComponentStory<typeof Button> = (args) => {
 export const WithOnClick = OnClickTemplate.bind({});
 WithOnClick.args = {
   ...ButtonDefaults.args,
-  variant: 'secondary',
 };
 WithOnClick.argTypes = {
   ...WithOnClick.argTypes,
@@ -454,14 +462,100 @@ WithOnClick.parameters = {
     expect(image).toMatchImageSnapshot();
 
     await buttonElement?.click();
-
     const imageClicked = await page.screenshot(screenShotOptions);
     expect(imageClicked).toMatchImageSnapshot();
 
-    await page.waitForSelector(`${wrapper} > button`);
     const element = await page.$(`${wrapper} > button`);
     const textContent = await element?.getProperty('textContent');
     const text = await textContent?.jsonValue();
-    expect(text).toBe('Endret Tekst på Knapp');
+    expect(text).toBe('Knapp er klikket');
+  },
+};
+
+// Når brukeren setter focus på knappen, så kalles funksjonen i onFocus prop.
+// onFocus-event endrer teksten på knappen.
+const OnFocusTemplate: ComponentStory<typeof Button> = (args) => {
+  const [buttText, setButtText] = useState(
+    'Klikk på knapp for å teste onFocus event'
+  );
+  return (
+    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+      <Button
+        {...args}
+        variant={args.variant}
+        onFocus={(): void => setButtText('Knapp har fått fokus')}
+      >
+        {buttText}
+      </Button>
+    </div>
+  );
+};
+export const WithOnFocus = OnFocusTemplate.bind({});
+WithOnFocus.args = {
+  ...ButtonDefaults.args,
+};
+WithOnFocus.argTypes = {
+  ...WithOnFocus.argTypes,
+  children: { control: false },
+  variant: { control: false },
+};
+WithOnFocus.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const buttonElement = await page.$(`${wrapper} > button`);
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+
+    await buttonElement?.focus();
+    const imageFocused = await page.screenshot(screenShotOptions);
+    expect(imageFocused).toMatchImageSnapshot();
+    const element = await page.$(`${wrapper} > button`);
+    const textContent = await element?.getProperty('textContent');
+    const text = await textContent?.jsonValue();
+    expect(text).toBe('Knapp har fått fokus');
+  },
+};
+
+// Når brukeren blurer knappen, så kalles funksjonen i onBlur prop.
+// onBlur-event endrer teksten på knappen.
+const OnBlurTemplate: ComponentStory<typeof Button> = (args) => {
+  const [buttText, setButtText] = useState(
+    'Klikk på knapp for å teste onBlur event'
+  );
+  return (
+    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+      <Button
+        {...args}
+        variant={args.variant}
+        onBlur={(): void => setButtText('Knapp er bluret')}
+      >
+        {buttText}
+      </Button>
+    </div>
+  );
+};
+export const WithOnBlur = OnBlurTemplate.bind({});
+WithOnBlur.args = {
+  ...ButtonDefaults.args,
+};
+WithOnBlur.argTypes = {
+  ...WithOnBlur.argTypes,
+  children: { control: false },
+  variant: { control: false },
+};
+WithOnBlur.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const buttonElement = await page.$(`${wrapper} > button`);
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+
+    await buttonElement?.focus();
+    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
+    const imageBlured = await page.screenshot(screenShotOptions);
+    expect(imageBlured).toMatchImageSnapshot();
+
+    const element = await page.$(`${wrapper} > button`);
+    const textContent = await element?.getProperty('textContent');
+    const text = await textContent?.jsonValue();
+    expect(text).toBe('Knapp er bluret');
   },
 };
