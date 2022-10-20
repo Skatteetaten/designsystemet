@@ -141,7 +141,7 @@ ButtonDefault.parameters = {
 export const Variants = TemplateVariant.bind({});
 Variants.args = {
   ...baseArgs,
-  'aria-describedby': 'elementid satt i story',
+  ariaDescribedby: 'elementid satt i story',
   variant: 'secondary',
 };
 Variants.parameters = {
