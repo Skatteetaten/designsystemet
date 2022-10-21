@@ -1,7 +1,10 @@
 /* eslint-disable jsx-a11y/no-access-key */
 import { forwardRef } from 'react';
 
-import { getCommonDisabledDefault } from '@skatteetaten/ds-core-utils';
+import {
+  getCommonDisabledDefault,
+  getCommonClassNameDefault,
+} from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
 import { getInlineButtonPositionDefault } from './defaults';
@@ -13,15 +16,15 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
   (
     {
       id,
-      className,
+      className = getCommonClassNameDefault(),
+      'data-testid': dataTestId,
       children,
       disabled = getCommonDisabledDefault(),
       svgPath,
       iconPosition = getInlineButtonPositionDefault(),
-      'data-testid': dataTestId,
-      ariaDescribedby,
       accessKey,
       tabIndex,
+      ariaDescribedby,
       onClick,
       onBlur,
       onFocus,
@@ -45,9 +48,9 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
         className={concatenatedClassName}
         data-testid={dataTestId}
         disabled={disabled}
-        aria-describedby={ariaDescribedby}
         accessKey={accessKey}
         tabIndex={tabIndex}
+        aria-describedby={ariaDescribedby}
         onClick={onClick}
         onBlur={onBlur}
         onFocus={onFocus}

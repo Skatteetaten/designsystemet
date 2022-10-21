@@ -16,7 +16,6 @@ export const MegaButton = forwardRef<
 >(
   (
     {
-      // TODO jevne ut rekkefølgen på props på tvers
       id,
       className = getCommonClassNameDefault(),
       'data-testid': dataTestId,
@@ -46,12 +45,12 @@ export const MegaButton = forwardRef<
         id={id}
         className={cssName}
         data-testid={dataTestId}
-        role={href ? 'button' : undefined}
         href={href}
         accessKey={accessKey}
-        aria-describedby={ariaDescribedby}
         tabIndex={tabIndex}
         disabled={disabled}
+        aria-describedby={ariaDescribedby}
+        role={href ? 'button' : undefined}
         onClick={onClick}
         onBlur={onBlur}
         onFocus={onFocus}

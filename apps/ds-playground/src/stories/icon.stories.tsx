@@ -1,10 +1,10 @@
 import { sizeArr } from '@skatteetaten/ds-core-utils';
+import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import {
   Icon,
   IconProps,
-  getClassNameDefault,
-  getVariantDefault,
-  getSizeDefault,
+  getIconVariantDefault,
+  getIconSizeDefault,
   SystemSVGPathsAndIcons,
   ThemeSVGPathsAndIcons,
 } from '@skatteetaten/ds-icons';
@@ -40,7 +40,7 @@ const commonArgTypes = {
     control: 'select',
     options: ['', 'dummyClassname'],
     table: {
-      defaultValue: { summary: getClassNameDefault() },
+      defaultValue: { summary: getCommonClassNameDefault() },
     },
   },
   title: {
@@ -49,7 +49,7 @@ const commonArgTypes = {
   ariaLabel: { control: 'text' },
 };
 
-const defaultSystemIconVariant = getVariantDefault();
+const defaultSystemIconVariant = getIconVariantDefault();
 
 SystemIcon.argTypes = {
   ...commonArgTypes,
@@ -64,7 +64,7 @@ SystemIcon.argTypes = {
     control: 'select',
     options: [...sizeArr].slice(1),
     table: {
-      defaultValue: { summary: getSizeDefault() },
+      defaultValue: { summary: getIconSizeDefault() },
     },
   },
   svgPath: {
@@ -78,9 +78,9 @@ SystemIcon.argTypes = {
 };
 
 SystemIcon.args = {
-  className: getClassNameDefault(),
+  className: getCommonClassNameDefault(),
   variant: defaultSystemIconVariant,
-  size: getSizeDefault(),
+  size: getIconSizeDefault(),
   svgPath: SystemSVGPathsAndIcons.AccountChildSVGpath,
 };
 
@@ -97,7 +97,7 @@ ThemeIcon.argTypes = {
     control: 'select',
     options: [sizeArr[2], sizeArr[3]],
     table: {
-      defaultValue: { summary: getSizeDefault() },
+      defaultValue: { summary: getIconSizeDefault() },
     },
   },
   svgPath: {
@@ -110,8 +110,8 @@ ThemeIcon.argTypes = {
 };
 
 ThemeIcon.args = {
-  className: getClassNameDefault(),
+  className: getCommonClassNameDefault(),
   variant: 'themeIcon',
-  size: getSizeDefault(),
+  size: getIconSizeDefault(),
   svgPath: ThemeSVGPathsAndIcons.AndreForholdSVGpath,
 };

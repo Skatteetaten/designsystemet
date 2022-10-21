@@ -36,7 +36,11 @@ export type IconDiscriminatedVariantProps =
       size?: Exclude<Size, 'extraSmall'>;
     }
   | {
-      /** Definerer detaljnivå på et ikon. De tilgjengelige størrelsene under "size" prop er avhengig av variant. */
+      /**
+       * Definerer detaljnivå på et ikon.
+       * "systemIcon" har en viewBox på 0 0 24 24, mens "themeIcon" har en viewBox på 0 0 48 48
+       * De tilgjengelige størrelsene under "size" prop er avhengig av variant.
+       */
       variant?: Extract<IconVariant, 'themeIcon'>;
       /** Subset av Size-type avhengig av "variant"-prop. Setter width og height på selve ikonet basert på Size verdi. */
       size?: Extract<Size, 'medium' | 'large'>;

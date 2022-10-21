@@ -1,10 +1,8 @@
 import { forwardRef, useId } from 'react';
 
-import {
-  getClassNameDefault,
-  getVariantDefault,
-  getSizeDefault,
-} from './defaults';
+import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+
+import { getIconVariantDefault, getIconSizeDefault } from './defaults';
 import { IconProps } from './Icon.types';
 
 import styles from './Icon.module.scss';
@@ -13,11 +11,11 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
   (
     {
       id,
-      className = getClassNameDefault(),
+      className = getCommonClassNameDefault(),
       'data-testid': dataTestId,
       title,
-      variant = getVariantDefault(),
-      size = getSizeDefault(),
+      variant = getIconVariantDefault(),
+      size = getIconSizeDefault(),
       svgPath,
       tabIndex,
       ariaLabel,
@@ -36,11 +34,11 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
         data-testid={dataTestId}
         viewBox={variant === 'systemIcon' ? '0 0 24 24' : '0 0 48 48'}
         tabIndex={tabIndex}
+        focusable={false}
         aria-label={!title ? ariaLabel : undefined}
         aria-labelledby={title ? titleId : undefined}
         aria-hidden={!title && !ariaLabel}
         role={'img'}
-        focusable={false}
       >
         {title && <title id={titleId}>{title}</title>}
         {svgPath}
@@ -51,4 +49,4 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
 
 Icon.displayName = 'Icon';
 
-export { getClassNameDefault, getVariantDefault, getSizeDefault };
+export { getIconVariantDefault, getIconSizeDefault };

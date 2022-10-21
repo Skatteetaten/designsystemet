@@ -4,12 +4,12 @@ import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 type ButtonHTMLAttributes = Pick<
   React.ComponentPropsWithoutRef<'button'>,
-  'children' | 'tabIndex' | 'onClick' | 'onBlur' | 'onFocus' | 'accessKey'
+  'tabIndex' | 'onClick' | 'onBlur' | 'onFocus' | 'accessKey'
 >;
 
 type AnchorHTMLAttributes = Pick<
   React.ComponentPropsWithoutRef<'a'>,
-  'children' | 'tabIndex' | 'onClick' | 'onBlur' | 'onFocus' | 'accessKey'
+  'tabIndex' | 'onClick' | 'onBlur' | 'onFocus' | 'accessKey'
 >;
 
 type MegaButtonPropsWithHref = Pick<

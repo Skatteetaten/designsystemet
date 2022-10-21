@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import {
   Button,
   ButtonProps,
@@ -31,32 +32,60 @@ export default {
     variant: {
       options: ['primary', 'secondary', 'tertiary', 'danger'],
       control: 'radio',
-      table: { defaultValue: { summary: getButtonVariantDefault() } },
+      table: {
+        category: 'Props',
+        defaultValue: { summary: getButtonVariantDefault() },
+      },
     },
-    iconProps: {
+    svgPath: {
       options: [''].concat(Object.keys(iconList)),
       control: 'select',
       mapping: iconList,
-      table: { defaultValue: { summary: '' } },
+      table: { category: 'Props', defaultValue: { summary: '' } },
     },
     disabled: {
       control: 'boolean',
-      table: { defaultValue: { summary: getCommonDisabledDefault() } },
+      table: {
+        category: 'HTML-attributt',
+        defaultValue: { summary: getCommonDisabledDefault() },
+      },
     },
     className: {
       control: 'select',
       options: ['', 'dummyClassname'],
-      table: { defaultValue: { summary: getCommonClassNameDefault() } },
+      table: {
+        category: 'HTML-attributt',
+        defaultValue: { summary: getCommonClassNameDefault() },
+      },
     },
     onClick: {
+      table: { category: 'Event' },
       control: false,
     },
     onFocus: {
+      table: { category: 'Event' },
       control: false,
     },
     onBlur: {
+      table: { category: 'Event' },
       control: false,
     },
+    // TODO Test av gruppering
+    /* Vi tester med gruppering.
+    påfølgende argTypes blir lagt til for å få satt riktig gruppe.
+    Hvis OK så må det jobbes med hvordan dette gjøres.
+    F.eks så skal HTML-attributer kunne være default. 
+    I teorien skal det kunne gå ann å definere Global argTypes i preview.js 
+    Ref https://storybook.js.org/docs/react/api/argtypes#global-argtypes
+        export const argTypes = { table: { category: 'HTML-attributt' } };
+    */
+    key: { table: { category: 'Props' } },
+    ref: { table: { category: 'HTML-attributt' } },
+    id: { table: { category: 'HTML-attributt' } },
+    tabIndex: { table: { category: 'HTML-attributt' } },
+    children: { table: { category: 'Props' } },
+    accessKey: { table: { category: 'HTML-attributt' } },
+    ariaDescribedby: { table: { category: 'HTML-attributt' } },
   },
 } as Meta<ButtonProps>;
 

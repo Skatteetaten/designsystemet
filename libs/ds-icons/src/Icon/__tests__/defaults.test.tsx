@@ -1,20 +1,12 @@
-import {
-  getClassNameDefault,
-  getVariantDefault,
-  getSizeDefault,
-} from '../defaults';
+import { getIconVariantDefault, getIconSizeDefault } from '../defaults';
 
 describe('Icon defaults', () => {
-  it('Når getClassNameDefault kalles, Så returnerer den riktig verdi', () => {
-    const renderedDefault = getClassNameDefault();
-    expect(renderedDefault).toBe('');
-  });
   it('Når getVariantDefault kalles, Så returnerer den riktig verdi', () => {
-    const renderedDefault = getVariantDefault();
+    const renderedDefault = getIconVariantDefault();
     expect(renderedDefault).toBe('systemIcon');
   });
-  it('Når getSizeDefault kalles, Så returnerer den riktig verdi', () => {
-    const renderedDefault = getSizeDefault();
+  it('Når getIconSizeDefault kalles, Så returnerer den riktig verdi', () => {
+    const renderedDefault = getIconSizeDefault();
     expect(renderedDefault).toBe('medium');
   });
 });
