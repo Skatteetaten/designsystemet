@@ -2,19 +2,17 @@ import { AriaRole } from 'react';
 
 import { BaseProps, Size, IconVariant } from '@skatteetaten/ds-core-utils';
 
-/* type SvgHTMLAttributes = Pick<
+type SvgHTMLAttributes = Pick<
   React.SVGAttributes<Record<string, never>>,
   'role' | 'viewBox' | 'tabIndex'
->; */
+>;
 
 // Dette er en ekstend kun for å kunne legge til JSdoc beskrivelser
-interface IconPropsHTMLAttributes {
+interface IconPropsHTMLAttributes extends SvgHTMLAttributes {
   /** role-attributt som settes på svg-element */
   role?: AriaRole;
   /** viewbox-attributt som settes på svg-element. Default-verdien er avhengig av "variant"-prop som er oppgitt  */
   viewBox?: string;
-  /**  tabIndex-attributt som settes på svg-element*/
-  tabIndex?: number;
 }
 
 interface IconComponentCommonProps extends IconPropsHTMLAttributes, BaseProps {
@@ -22,7 +20,7 @@ interface IconComponentCommonProps extends IconPropsHTMLAttributes, BaseProps {
   svgPath: React.ReactElement;
 }
 
-type IconDiscriminatedTitleProps =
+export type IconDiscriminatedTitleProps =
   | {
       /** Oppretter et title-element nested i svg. Dette medfører tooltip. */
       title?: string;
@@ -35,7 +33,7 @@ type IconDiscriminatedTitleProps =
       /** Hvis svg-en er meningsbærende og ikke bare pynt/dekor skal elementet ha ariaLabel. Merk at aria-label vises kun når "title"-prop ikke allerede er oppgitt. */
       ariaLabel?: string;
     };
-type IconDiscriminatedVariantProps =
+export type IconDiscriminatedVariantProps =
   | {
       /** Definerer detaljnivå på et ikon. De tilgjengelige størrelsene under "size" prop er avhengig av variant. */
       variant?: Extract<IconVariant, 'systemIcon'>;

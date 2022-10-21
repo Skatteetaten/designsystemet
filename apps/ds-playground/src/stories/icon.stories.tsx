@@ -40,7 +40,7 @@ const commonArgTypes = {
   },
   className: {
     control: 'select',
-    options: ['myIconClassname'],
+    options: ['', 'dummyClassname'],
     table: {
       defaultValue: { summary: getClassNameDefault() },
     },

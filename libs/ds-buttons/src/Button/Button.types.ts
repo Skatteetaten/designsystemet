@@ -8,8 +8,6 @@ type ButtonHTMLAttributes = Pick<
 >;
 
 interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
-  /** tabIndex-attributt som settes på button-element */
-  tabIndex?: number;
   /** disabled-attributt som settes på button-element */
   disabled?: boolean;
   /** accesskey-attributt som settes på button-element */
@@ -30,5 +28,5 @@ export interface ButtonProps extends ButtonPropsHTMLAttributes, BaseProps {
   /** Definerer stilen til knappen. */
   variant?: Variant;
   /** Tekst på knapp. */
-  children: React.ReactNode;
+  children: string;
 }

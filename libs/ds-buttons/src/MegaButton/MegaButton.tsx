@@ -1,5 +1,9 @@
 import React, { forwardRef } from 'react';
 
+import {
+  getCommonClassNameDefault,
+  getCommonDisabledDefault,
+} from '@skatteetaten/ds-core-utils';
 import { ExternalIcon } from '@skatteetaten/ds-icons';
 
 import { MegaButtonProps } from './MegaButton.types';
@@ -14,15 +18,15 @@ export const MegaButton = forwardRef<
     {
       // TODO jevne ut rekkefølgen på props på tvers
       id,
-      className = '',
-      children,
-      tabIndex,
-      href,
-      accessKey,
+      className = getCommonClassNameDefault(),
       'data-testid': dataTestId,
+      children,
+      href,
+      tabIndex,
+      disabled = getCommonDisabledDefault(),
+      accessKey,
       ariaDescribedby,
       isExternal,
-      disabled,
       onClick,
       onBlur,
       onFocus,

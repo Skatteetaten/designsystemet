@@ -2,33 +2,18 @@
   fill: var(--palette-denim-100);
 }
 
-.buttonClassnameDark {
-  background-color: black;
-}
-
-.buttonClassnameDark:disabled {
-  background-color: black;
-}
-
-.buttonClassnameLight {
-  background-color: white;
-  color: brown;
-}
-
-.buttonClassnameLight:disabled {
-  background-color: white;
-  color: brown;
-}
-
-.dummyClassName {
-  background-color: indianred;
+.dummyClassname {
   color: black;
   fill: indianred;
 }
 
-.dummyClassName:disabled,
-.dummyClassName:hover,
-.dummyClassName:focus {
+.dummyClassname:not(svg) {
+  background-color: indianred;
+}
+
+.dummyClassname:disabled,
+.dummyClassname:hover,
+.dummyClassname:focus {
   background-color: darksalmon;
   color: white;
 }
