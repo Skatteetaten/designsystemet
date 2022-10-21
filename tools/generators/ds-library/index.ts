@@ -40,7 +40,7 @@ export default async function (tree: Tree, schema: Schema) {
   const projectConfig = readProjectConfiguration(tree, projectName);
 
   const tsc: TargetConfiguration = {
-    executor: './tools/executors/tsCheck:tsCheck',
+    executor: '@skatteetaten/ds-dev-config:tsCheck',
     options: {
       tsConfig: ['tsconfig.lib.json', 'tsconfig.spec.json'],
     },

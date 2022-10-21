@@ -5,7 +5,7 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@nrwl/web:rollup",
+      "executor": "@nrwl/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/ds-forms",
@@ -33,7 +33,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/ds-forms"],
+      "outputs": ["{workspaceRoot}/coverage/libs/ds-forms"],
       "options": {
         "jestConfig": "libs/ds-forms/jest.config.ts",
         "passWithNoTests": true
@@ -50,7 +50,7 @@
       }
     },
     "tsc": {
-      "executor": "./tools/executors/tsCheck:tsCheck",
+      "executor": "@skatteetaten/ds-dev-config:tsCheck",
       "options": {
         "tsConfig": ["tsconfig.lib.json", "tsconfig.spec.json"]
       }
