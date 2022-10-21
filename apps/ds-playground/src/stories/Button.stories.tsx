@@ -43,7 +43,7 @@ export default {
     },
     className: {
       control: 'select',
-      options: ['', 'buttonClassnameGreen', 'buttonClassnameBlue'],
+      options: ['', 'dummyClassname'],
       table: { defaultValue: { summary: getCommonClassNameDefault() } },
     },
     onClick: {

@@ -25,7 +25,7 @@ export default {
     },
     className: {
       control: 'select',
-      options: ['', 'buttonClassnameDark', 'buttonClassnameLight'],
+      options: ['', 'dummyClassname'],
       description:
         'Verdien appended til designsystemets stilsett for komponent',
       table: { defaultValue: { summary: '' } },

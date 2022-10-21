@@ -2,13 +2,13 @@
 import { forwardRef } from 'react';
 
 import {
-  getButtonVariantDefault,
   getCommonDisabledDefault,
   getCommonClassNameDefault,
 } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
 import { ButtonProps } from './Button.types';
+import { getButtonVariantDefault } from './defaults';
 
 import styles from './Button.module.scss';
 

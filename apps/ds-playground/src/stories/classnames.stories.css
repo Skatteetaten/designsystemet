@@ -20,32 +20,15 @@
   color: brown;
 }
 
-.buttonClassnameGreen {
-  background-color: rgb(203 241 180);
-}
-
-.buttonClassnameGreen:disabled,
-.buttonClassnameGreen:focus {
-  background-color: darkslategrey;
-}
-
-.buttonClassnameBlue {
-  background-color: white;
-  color: rgb(203 189 247);
-}
-
-.buttonClassnameBlue:disabled,
-.buttonClassnameBlue:focus {
-  background-color: rgb(36 39 94);
-}
-
 .dummyClassName {
   background-color: indianred;
   color: black;
+  fill: indianred;
 }
 
 .dummyClassName:disabled,
-.dummyClassName:hover {
+.dummyClassName:hover,
+.dummyClassName:focus {
   background-color: darksalmon;
   color: white;
 }

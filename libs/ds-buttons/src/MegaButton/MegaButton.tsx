@@ -12,6 +12,7 @@ export const MegaButton = forwardRef<
 >(
   (
     {
+      // TODO jevne ut rekkefølgen på props på tvers
       id,
       className = '',
       children,
