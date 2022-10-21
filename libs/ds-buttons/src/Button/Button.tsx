@@ -61,8 +61,4 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 );
 Button.displayName = 'Button';
 
-export {
-  getButtonVariantDefault,
-  getCommonDisabledDefault,
-  getCommonClassNameDefault,
-};
+export { getButtonVariantDefault };

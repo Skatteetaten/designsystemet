@@ -1,8 +1,8 @@
 import {
   InlineButton,
-  getCommonDisabledDefault,
   getInlineButtonPositionDefault,
 } from '@skatteetaten/ds-buttons';
+import { getCommonDisabledDefault } from '@skatteetaten/ds-core-utils';
 import {
   AddOutlineSVGpath,
   BellSVGpath,
@@ -14,7 +14,6 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import './classnames.stories.css';
 
 // TODO FRONT-893 - legge på figma-lenker
-
 // TODO FRONT-893 - komplett list med ikoner
 const iconList = {
   AddOutline: { svgPath: AddOutlineSVGpath },

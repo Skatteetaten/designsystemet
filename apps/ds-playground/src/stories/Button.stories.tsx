@@ -1,10 +1,12 @@
 import {
   Button,
   ButtonProps,
-  getCommonClassNameDefault,
-  getCommonDisabledDefault,
   getButtonVariantDefault,
 } from '@skatteetaten/ds-buttons';
+import {
+  getCommonClassNameDefault,
+  getCommonDisabledDefault,
+} from '@skatteetaten/ds-core-utils';
 import {
   EditSVGpath,
   SendSVGpath,

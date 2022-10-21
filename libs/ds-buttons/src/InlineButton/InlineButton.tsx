@@ -70,4 +70,4 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
 
 InlineButton.displayName = 'InlineButton';
 
-export { getCommonDisabledDefault, getInlineButtonPositionDefault };
+export { getInlineButtonPositionDefault };
