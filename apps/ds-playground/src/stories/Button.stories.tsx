@@ -1,10 +1,9 @@
 import {
   Button,
   ButtonProps,
-  getVariantDefault,
-  getDisabledDefault,
-  getClassNameDefault,
-  getIconPropsDefault,
+  getCommonClassNameDefault,
+  getCommonDisabledDefault,
+  getButtonVariantDefault,
 } from '@skatteetaten/ds-buttons';
 import {
   EditSVGpath,
@@ -18,9 +17,9 @@ import './classnames.stories.css';
 
 // TODO FRONT-935 Endre fra iconProps til svgPath.
 const iconList = {
-  Send: { svgPath: SendSVGpath },
-  Edit: { svgPath: EditSVGpath },
-  AddOutlineSVGpath: { svgPath: AddOutlineSVGpath },
+  Send: SendSVGpath,
+  Edit: EditSVGpath,
+  AddOutlineSVGpath: AddOutlineSVGpath,
 };
 
 export default {
@@ -30,22 +29,22 @@ export default {
     variant: {
       options: ['primary', 'secondary', 'tertiary', 'danger'],
       control: 'radio',
-      table: { defaultValue: { summary: getVariantDefault() } },
+      table: { defaultValue: { summary: getButtonVariantDefault() } },
     },
     iconProps: {
       options: [''].concat(Object.keys(iconList)),
       control: 'select',
       mapping: iconList,
-      table: { defaultValue: { summary: getIconPropsDefault() } },
+      table: { defaultValue: { summary: '' } },
     },
     disabled: {
       control: 'boolean',
-      table: { defaultValue: { summary: getDisabledDefault() } },
+      table: { defaultValue: { summary: getCommonDisabledDefault() } },
     },
     className: {
       control: 'select',
       options: ['', 'buttonClassnameGreen', 'buttonClassnameBlue'],
-      table: { defaultValue: { summary: getClassNameDefault() } },
+      table: { defaultValue: { summary: getCommonClassNameDefault() } },
     },
     onClick: {
       control: false,
@@ -71,7 +70,7 @@ const TemplateVariant: Story<ButtonProps> = (args) => (
       <Button
         {...args}
         variant={'primary'}
-        iconProps={args.iconProps}
+        svgPath={args.svgPath}
         onClick={action('Button story klikk på primary')}
       >
         {'Primary knapp'}
@@ -81,7 +80,7 @@ const TemplateVariant: Story<ButtonProps> = (args) => (
       <Button
         {...args}
         variant={'secondary'}
-        iconProps={args.iconProps}
+        svgPath={args.svgPath}
         onClick={action('Button story klikk på secondary')}
       >
         {'Secondary knapp'}
@@ -91,14 +90,14 @@ const TemplateVariant: Story<ButtonProps> = (args) => (
       <Button
         {...args}
         variant={'tertiary'}
-        iconProps={args.iconProps}
+        svgPath={args.svgPath}
         onClick={action('Button story klikk på tertiary')}
       >
         {'Tertiary knapp'}
       </Button>
     </div>
     <div style={{ marginBottom: '1em' }}>
-      <Button {...args} variant={'danger'} iconProps={args.iconProps}>
+      <Button {...args} variant={'danger'} svgPath={args.svgPath}>
         {'Danger variant'}
       </Button>
     </div>
@@ -139,7 +138,7 @@ ButtonDefault.parameters = {
 export const Variants: Story<ButtonProps> = TemplateVariant.bind({});
 Variants.args = {
   ...baseArgs,
-  'aria-describedby': 'elementid-satt-i-story',
+  ariaDescribedby: 'elementid-satt-i-story',
   variant: 'secondary',
 };
 Variants.parameters = {

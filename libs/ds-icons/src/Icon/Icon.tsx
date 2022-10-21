@@ -16,7 +16,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       className = getClassNameDefault(),
       'data-testid': dataTestId,
       title,
-      'aria-label': ariaLabel,
+      ariaLabel,
       variant = getVariantDefault(),
       size = getSizeDefault(),
       svgPath,

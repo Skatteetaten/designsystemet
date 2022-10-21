@@ -4,24 +4,12 @@ import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 type ButtonHTMLAttributes = Pick<
   React.ComponentPropsWithoutRef<'button'>,
-  | 'children'
-  | 'tabIndex'
-  | 'aria-describedby'
-  | 'onClick'
-  | 'onBlur'
-  | 'onFocus'
-  | 'accessKey'
+  'children' | 'tabIndex' | 'onClick' | 'onBlur' | 'onFocus' | 'accessKey'
 >;
 
 type AnchorHTMLAttributes = Pick<
   React.ComponentPropsWithoutRef<'a'>,
-  | 'children'
-  | 'tabIndex'
-  | 'aria-describedby'
-  | 'onClick'
-  | 'onBlur'
-  | 'onFocus'
-  | 'accessKey'
+  'children' | 'tabIndex' | 'onClick' | 'onBlur' | 'onFocus' | 'accessKey'
 >;
 
 type MegaButtonPropsWithHref = Pick<
@@ -40,11 +28,13 @@ export type MegaButtonPropsHTMLAttributes = ButtonHTMLAttributes &
 export interface MegaButtonComponentProps
   extends MegaButtonPropsHTMLAttributes {
   /**
-   * @param {boolean} external - (Default: false) Ikon som indikerer ekstern lenke.
+   * @param {boolean} external - Ikon som indikerer ekstern lenke.
    * @param {string} children - Tekst på knapp.
    */
   isExternal?: boolean;
   children: string;
+  /** id-attribute til tilleggstekst (en eller flere) html-elementer */
+  ariaDescribedby?: string;
 }
 
 export type MegaButtonProps = BaseProps &

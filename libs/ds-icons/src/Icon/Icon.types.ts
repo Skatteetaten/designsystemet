@@ -5,13 +5,7 @@ type SvgHTMLAttributes = Pick<
   'tabIndex'
 >;
 
-// Dette er en ekstend kun for å kunne legge til JSdoc beskrivelser
-interface IconPropsHTMLAttributes extends SvgHTMLAttributes {
-  /**  tabIndex-attributt som settes på svg-element */
-  tabIndex?: number;
-}
-
-interface IconComponentCommonProps extends IconPropsHTMLAttributes, BaseProps {
+interface IconComponentCommonProps extends SvgHTMLAttributes, BaseProps {
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
   svgPath: React.ReactElement;
 }
@@ -21,14 +15,14 @@ export type IconDiscriminatedTitleProps =
   | {
       /** Oppretter et title-element nested i svg. Dette medfører tooltip. */
       title?: string;
-      /** Hvis svg-en er meningsbærende og ikke bare pynt/dekor skal elementet ha aria-label="beskrivelse". Merk at aria-label vises kun når "title"-prop ikke allerede er angitt. */
-      'aria-label'?: never;
+      /** Hvis svg-en er meningsbærende og ikke bare pynt/dekor skal elementet ha aria-label. Merk at aria-label vises kun når "title"-prop ikke allerede er angitt. */
+      ariaLabel?: never;
     }
   | {
       /** Oppretter en title-tag nested i svg. Dette medfører tooltip. */
       title?: never;
-      /** Hvis svg-en er meningsbærende og ikke bare pynt/dekor skal elementet ha aria-label="beskrivelse". Merk at aria-label vises kun når "title"-prop ikke allerede er oppgitt. */
-      'aria-label'?: string;
+      /** Hvis svg-en er meningsbærende og ikke bare pynt/dekor skal elementet ha ariaLabel. Merk at aria-label vises kun når "title"-prop ikke allerede er oppgitt. */
+      ariaLabel?: string;
     };
 export type IconDiscriminatedVariantProps =
   | {
@@ -49,7 +43,6 @@ export type IconDiscriminatedVariantProps =
     };
 
 export type IconPropsWithoutSvgPath = BaseProps &
-  IconPropsHTMLAttributes &
   IconDiscriminatedVariantProps &
   IconDiscriminatedTitleProps;
 

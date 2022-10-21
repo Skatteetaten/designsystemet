@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { BaseProps, Variant } from '@skatteetaten/ds-core-utils';
-import { IconProps } from '@skatteetaten/ds-icons';
 
 type ButtonHTMLAttributes = Pick<
   React.ComponentPropsWithoutRef<'button'>,
@@ -9,7 +8,6 @@ type ButtonHTMLAttributes = Pick<
   | 'disabled'
   | 'className'
   | 'accessKey'
-  | 'aria-describedby'
   | 'onClick'
   | 'onBlur'
   | 'onFocus'
@@ -23,7 +21,7 @@ interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
   /** accesskey-attributt som settes på button-element */
   accessKey?: string;
   /** aria-attributt som henviser til id som har tilleggsbeskrivelse */
-  'aria-describedby'?: string;
+  ariaDescribedby?: string;
   /** Når det klikkes på button-element  */
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   /** Når button-element får focus */
@@ -33,14 +31,12 @@ interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
 }
 
 export interface ButtonProps extends ButtonPropsHTMLAttributes, BaseProps {
-  /**
-   * Icon-props som sendes videre til Icon-komponent.
-   * Som regel bare svgPath from sendes videre
-   * Se icon-komponent for gyldige props
-   */
-  iconProps?: IconProps;
+  /** Ikon på knappen (Kan være et systemikon eller egendefinert). */
+  svgPath?: React.ReactElement;
   /** Definerer stilen til knappen. */
   variant?: Variant;
   /** Tekst på knapp. */
   children: string;
+  /** id-attribute til beskrivende (en eller flere) html-elementer */
+  ariaDescribedby?: string;
 }

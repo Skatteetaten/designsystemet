@@ -49,7 +49,7 @@ export default {
       control: 'text',
       table: { defaultValue: { summary: '' } },
     },
-    'aria-describedby': {
+    ariaDescribedby: {
       control: 'text',
       table: { defaultValue: { summary: '' } },
     },

@@ -7,7 +7,6 @@ type ButtonPropsHTMLAttributes = Pick<
   | 'children'
   | 'disabled'
   // TODO FRONT-930 skrive om aria-* til camelCase
-  | 'aria-describedby'
   | 'accessKey'
   | 'tabIndex'
   | 'onClick'
@@ -16,16 +15,15 @@ type ButtonPropsHTMLAttributes = Pick<
 >;
 
 export interface InlineButtonComponentProps extends ButtonPropsHTMLAttributes {
+  /** Tekst på knappen. */
   children: string;
+  /** Ikon på knappen (Kan være et systemikon eller egendefinert). */
   svgPath?: React.ReactElement;
+  /** Posisjonen til ikonet: left, right. */
   iconPosition?: Positon;
+  /** aria-attributt som henviser til id som har tilleggsbeskrivelse */
+  ariaDescribedby?: string;
 }
 
 // TODO FRONT-893 - legge på flere props beskrivelser
-/**
- * @param {string} children - Tekst på knappen.
- * @param {ReactElement} svgPath - (Optional) Ikon på knappen (Kan være et systemikon eller egendefinert).
- * @param {string} iconPosition - (Optional) Posisjonen til ikonet: left, right. (Default: left)
- * @param {tabIndex} tabIndex - (Optional)
- */
 export type InlineButtonProps = BaseProps & InlineButtonComponentProps;

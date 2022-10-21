@@ -19,7 +19,7 @@ export const MegaButton = forwardRef<
       href,
       accessKey,
       'data-testid': dataTestId,
-      'aria-describedby': ariaDescribedby,
+      ariaDescribedby,
       isExternal,
       disabled,
       onClick,

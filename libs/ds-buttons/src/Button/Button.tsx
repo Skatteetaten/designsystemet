@@ -1,15 +1,14 @@
 /* eslint-disable jsx-a11y/no-access-key */
 import { forwardRef } from 'react';
 
+import {
+  getButtonVariantDefault,
+  getCommonDisabledDefault,
+  getCommonClassNameDefault,
+} from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
 import { ButtonProps } from './Button.types';
-import {
-  getVariantDefault,
-  getDisabledDefault,
-  getClassNameDefault,
-  getIconPropsDefault,
-} from './defaults';
 
 import styles from './Button.module.scss';
 
@@ -17,22 +16,22 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       id,
-      className = getClassNameDefault(),
+      className = getCommonClassNameDefault(),
       children,
-      variant = getVariantDefault(),
-      disabled = getDisabledDefault(),
-      iconProps,
+      variant = getButtonVariantDefault(),
+      disabled = getCommonDisabledDefault(),
+      svgPath,
       tabIndex,
       accessKey,
       'data-testid': dataTestId,
-      'aria-describedby': ariaDescribedby,
+      ariaDescribedby,
       onClick,
       onBlur,
       onFocus,
     },
     ref
   ): JSX.Element => {
-    const withIconClassName = iconProps ? `${styles.button_withIcon}` : '';
+    const withIconClassName = svgPath ? `${styles.button_withIcon}` : '';
     const concatenatedClassName = `${styles.button} ${
       styles[`button_${variant}`]
     } ${withIconClassName} ${className}`;
@@ -50,9 +49,9 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         onBlur={onBlur}
         onFocus={onFocus}
       >
-        {iconProps && (
+        {svgPath && (
           <span className={styles.icon}>
-            <Icon {...iconProps} />
+            <Icon svgPath={svgPath} />
           </span>
         )}
         {children}
@@ -63,8 +62,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = 'Button';
 
 export {
-  getVariantDefault,
-  getDisabledDefault,
-  getClassNameDefault,
-  getIconPropsDefault,
+  getButtonVariantDefault,
+  getCommonDisabledDefault,
+  getCommonClassNameDefault,
 };

@@ -246,7 +246,7 @@ MegaButtonCustomCssAndDisabled.parameters = {
 export const MegaButtonWithArias = Template.bind({});
 MegaButtonWithArias.args = {
   ...MegaButtonDefaults.args,
-  'aria-describedby': 'testid1234',
+  ariaDescribedby: 'testid1234',
 };
 MegaButtonWithArias.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {

@@ -156,8 +156,9 @@ WithTitle.parameters = {
 
 // Når Icon har en aria-label, får den ikke noe <title> tag, og riktig aria attributer
 export const WithAriaLabel = Template.bind({});
+
 WithAriaLabel.args = {
-  'aria-label': 'min custom aria-label beskrivelse',
+  ariaLabel: 'min custom aria-label beskrivelse',
 };
 WithAriaLabel.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {

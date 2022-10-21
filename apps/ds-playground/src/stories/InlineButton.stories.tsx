@@ -1,7 +1,7 @@
 import {
   InlineButton,
-  getDisabledDefault,
-  getPositionDefault,
+  getCommonDisabledDefault,
+  getInlineButtonPositionDefault,
 } from '@skatteetaten/ds-buttons';
 import {
   AddOutlineSVGpath,
@@ -39,7 +39,7 @@ export default {
     },
     disabled: {
       control: 'boolean',
-      table: { defaultValue: { summary: getDisabledDefault() } },
+      table: { defaultValue: { summary: getCommonDisabledDefault() } },
     },
     svgPath: {
       options: [''].concat(Object.keys(iconList)),
@@ -49,7 +49,7 @@ export default {
     iconPosition: {
       control: 'select',
       options: ['left', 'right'],
-      table: { defaultValue: { summary: getPositionDefault() } },
+      table: { defaultValue: { summary: getInlineButtonPositionDefault() } },
     },
     'aria-describedby': {
       control: 'text',

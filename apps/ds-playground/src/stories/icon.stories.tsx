@@ -46,7 +46,7 @@ const commonArgTypes = {
   title: {
     control: 'text',
   },
-  'aria-label': { control: 'text' },
+  ariaLabel: { control: 'text' },
 };
 
 const defaultSystemIconVariant = getVariantDefault();
