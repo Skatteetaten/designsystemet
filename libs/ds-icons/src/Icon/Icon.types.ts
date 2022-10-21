@@ -1,25 +1,16 @@
-import { AriaRole } from 'react';
-
 import { BaseProps, Size, IconVariant } from '@skatteetaten/ds-core-utils';
 
 type SvgHTMLAttributes = Pick<
   React.SVGAttributes<Record<string, never>>,
-  'role' | 'viewBox' | 'tabIndex'
+  'tabIndex'
 >;
 
-// Dette er en ekstend kun for å kunne legge til JSdoc beskrivelser
-interface IconPropsHTMLAttributes extends SvgHTMLAttributes {
-  /** role-attributt som settes på svg-element */
-  role?: AriaRole;
-  /** viewbox-attributt som settes på svg-element. Default-verdien er avhengig av "variant"-prop som er oppgitt  */
-  viewBox?: string;
-}
-
-interface IconComponentCommonProps extends IconPropsHTMLAttributes, BaseProps {
+interface IconComponentCommonProps extends SvgHTMLAttributes, BaseProps {
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
   svgPath: React.ReactElement;
 }
 
+// TODO FRONT-930 skrive om aria-* til camelCase
 export type IconDiscriminatedTitleProps =
   | {
       /** Oppretter et title-element nested i svg. Dette medfører tooltip. */
@@ -35,7 +26,11 @@ export type IconDiscriminatedTitleProps =
     };
 export type IconDiscriminatedVariantProps =
   | {
-      /** Definerer detaljnivå på et ikon. De tilgjengelige størrelsene under "size" prop er avhengig av variant. */
+      /**
+       * Definerer detaljnivå på et ikon.
+       * "systemIcon" har en viewBox på 0 0 24 24, mens "themeIcon" har en viewBox på 0 0 48 48
+       * De tilgjengelige størrelsene under "size" prop er avhengig av variant.
+       */
       variant?: Extract<IconVariant, 'systemIcon'>;
       /** Subset av Size-type avhengig av "variant"-prop. Setter width og height på selve ikonet basert på Size verdi. */
       size?: Exclude<Size, 'extraSmall'>;
@@ -48,7 +43,6 @@ export type IconDiscriminatedVariantProps =
     };
 
 export type IconPropsWithoutSvgPath = BaseProps &
-  IconPropsHTMLAttributes &
   IconDiscriminatedVariantProps &
   IconDiscriminatedTitleProps;
 

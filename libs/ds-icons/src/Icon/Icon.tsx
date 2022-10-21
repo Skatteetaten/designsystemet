@@ -2,9 +2,7 @@ import { forwardRef, useId } from 'react';
 
 import {
   getClassNameDefault,
-  getRoleDefault,
   getVariantDefault,
-  getViewBoxDefault,
   getSizeDefault,
 } from './defaults';
 import { IconProps } from './Icon.types';
@@ -19,12 +17,10 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       'data-testid': dataTestId,
       title,
       variant = getVariantDefault(),
-      viewBox = getViewBoxDefault(variant),
       size = getSizeDefault(),
       svgPath,
       tabIndex,
       ariaLabel,
-      role = getRoleDefault(),
     },
     ref
   ): JSX.Element => {
@@ -38,12 +34,12 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
         id={id}
         className={`${styles[variant]} ${sizeClassName} ${className}`}
         data-testid={dataTestId}
-        viewBox={viewBox}
+        viewBox={variant === 'systemIcon' ? '0 0 24 24' : '0 0 48 48'}
         tabIndex={tabIndex}
         aria-label={!title ? ariaLabel : undefined}
         aria-labelledby={title ? titleId : undefined}
         aria-hidden={!title && !ariaLabel}
-        role={role}
+        role={'img'}
         focusable={false}
       >
         {title && <title id={titleId}>{title}</title>}
@@ -54,3 +50,5 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
 );
 
 Icon.displayName = 'Icon';
+
+export { getClassNameDefault, getVariantDefault, getSizeDefault };
