@@ -7,13 +7,6 @@ type ButtonHTMLAttributes = Pick<
   'children' | 'tabIndex' | 'onClick' | 'onBlur' | 'onFocus' | 'accessKey'
 >;
 
-interface MegaButtonComponentCommonProps
-  extends ButtonHTMLAttributes,
-    BaseProps {
-  /** Tabindex */
-  tabIndex?: number;
-}
-
 type AnchorHTMLAttributes = Pick<
   React.ComponentPropsWithoutRef<'a'>,
   'children' | 'tabIndex' | 'onClick' | 'onBlur' | 'onFocus' | 'accessKey'
@@ -29,7 +22,7 @@ export type MegaButtonPropsWithDisabled = Pick<
   'disabled'
 > & { href?: never };
 
-export type MegaButtonPropsHTMLAttributes = MegaButtonComponentCommonProps &
+export type MegaButtonPropsHTMLAttributes = ButtonHTMLAttributes &
   AnchorHTMLAttributes;
 
 export interface MegaButtonComponentProps
@@ -44,5 +37,4 @@ export interface MegaButtonComponentProps
 
 export type MegaButtonProps = BaseProps &
   MegaButtonComponentProps &
-  MegaButtonPropsWithDisabled &
-  MegaButtonPropsWithHref;
+  (MegaButtonPropsWithDisabled | MegaButtonPropsWithHref);
