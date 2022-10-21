@@ -1,12 +1,10 @@
 /* eslint-disable jsx-a11y/no-access-key */
 import { forwardRef } from 'react';
 
-import {
-  getCommonDisabledDefault,
-  getInlineButtonPositionDefault,
-} from '@skatteetaten/ds-core-utils';
+import { getCommonDisabledDefault } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
+import { getInlineButtonPositionDefault } from './defaults';
 import { InlineButtonProps } from './InlineButton.types';
 
 import styles from './InlineButton.module.scss';

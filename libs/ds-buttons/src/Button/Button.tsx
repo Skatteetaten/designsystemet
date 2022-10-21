@@ -2,13 +2,13 @@
 import { forwardRef } from 'react';
 
 import {
-  getButtonVariantDefault,
   getCommonDisabledDefault,
   getCommonClassNameDefault,
 } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
 import { ButtonProps } from './Button.types';
+import { getButtonVariantDefault } from './defaults';
 
 import styles from './Button.module.scss';
 
@@ -17,13 +17,13 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     {
       id,
       className = getCommonClassNameDefault(),
+      'data-testid': dataTestId,
       children,
       variant = getButtonVariantDefault(),
-      disabled = getCommonDisabledDefault(),
       svgPath,
       tabIndex,
+      disabled = getCommonDisabledDefault(),
       accessKey,
-      'data-testid': dataTestId,
       ariaDescribedby,
       onClick,
       onBlur,
@@ -41,10 +41,10 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         id={id}
         className={concatenatedClassName}
         data-testid={dataTestId}
+        tabIndex={tabIndex}
         disabled={disabled}
         aria-describedby={ariaDescribedby}
         accessKey={accessKey}
-        tabIndex={tabIndex}
         onClick={onClick}
         onBlur={onBlur}
         onFocus={onFocus}

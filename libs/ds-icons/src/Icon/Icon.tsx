@@ -16,11 +16,11 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       className = getClassNameDefault(),
       'data-testid': dataTestId,
       title,
-      ariaLabel,
       variant = getVariantDefault(),
       size = getSizeDefault(),
       svgPath,
       tabIndex,
+      ariaLabel,
     },
     ref
   ): JSX.Element => {
@@ -34,12 +34,12 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
         id={id}
         className={`${styles[variant]} ${sizeClassName} ${className}`}
         data-testid={dataTestId}
-        aria-label={!title ? ariaLabel : undefined}
-        role={'img'}
         viewBox={variant === 'systemIcon' ? '0 0 24 24' : '0 0 48 48'}
         tabIndex={tabIndex}
+        aria-label={!title ? ariaLabel : undefined}
         aria-labelledby={title ? titleId : undefined}
         aria-hidden={!title && !ariaLabel}
+        role={'img'}
         focusable={false}
       >
         {title && <title id={titleId}>{title}</title>}

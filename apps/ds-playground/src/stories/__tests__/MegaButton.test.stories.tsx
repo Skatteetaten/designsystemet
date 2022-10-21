@@ -182,13 +182,13 @@ MegaButtonDisabledWithIcon.parameters = {
 export const MegaButtonClassNameChange = Template.bind({});
 MegaButtonClassNameChange.args = {
   ...MegaButtonDefaults.args,
-  className: 'buttonClassnameLight ',
+  className: 'dummyClassname ',
 };
 MegaButtonClassNameChange.argTypes = {
   ...MegaButtonClassNameChange.argTypes,
   className: {
     control: 'select',
-    options: ['', 'buttonClassnameDark', 'buttonClassnameLight'],
+    options: ['', 'dummyClassname'],
     description: 'Verdien appended til designsystemets stilsett for komponent',
     table: { defaultValue: { summary: '' } },
   },
@@ -198,7 +198,7 @@ MegaButtonClassNameChange.parameters = {
     const classNameAttribute = await page.$eval(`${wrapper}> button`, (el) =>
       el.getAttribute('class')
     );
-    expect(classNameAttribute).toContain('buttonClassnameLight');
+    expect(classNameAttribute).toContain('dummyClassname');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -213,13 +213,13 @@ export const MegaButtonCustomCssAndDisabled = Template.bind({});
 MegaButtonCustomCssAndDisabled.args = {
   children: defaultMegaButtonText,
   disabled: true,
-  className: 'buttonClassnameLight',
+  className: 'dummyClassname',
 };
 MegaButtonCustomCssAndDisabled.argTypes = {
   ...MegaButtonCustomCssAndDisabled.argTypes,
   className: {
     control: 'select',
-    options: ['', 'buttonClassnameLight', 'buttonClassnameDark'],
+    options: ['', 'dummyClassname'],
     description: 'Verdien appended til designsystemets stilsett for komponent',
     table: { defaultValue: { summary: '' } },
   },
@@ -232,7 +232,7 @@ MegaButtonCustomCssAndDisabled.parameters = {
     const classNameAttribute = await page.$eval(`${wrapper} > button`, (el) =>
       el.getAttribute('class')
     );
-    expect(classNameAttribute).toContain('buttonClassnameLight');
+    expect(classNameAttribute).toContain('dummyClassname');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();

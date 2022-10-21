@@ -2,50 +2,18 @@
   fill: var(--palette-denim-100);
 }
 
-.buttonClassnameDark {
-  background-color: black;
-}
-
-.buttonClassnameDark:disabled {
-  background-color: black;
-}
-
-.buttonClassnameLight {
-  background-color: white;
-  color: brown;
-}
-
-.buttonClassnameLight:disabled {
-  background-color: white;
-  color: brown;
-}
-
-.buttonClassnameGreen {
-  background-color: rgb(203 241 180);
-}
-
-.buttonClassnameGreen:disabled,
-.buttonClassnameGreen:focus {
-  background-color: darkslategrey;
-}
-
-.buttonClassnameBlue {
-  background-color: white;
-  color: rgb(203 189 247);
-}
-
-.buttonClassnameBlue:disabled,
-.buttonClassnameBlue:focus {
-  background-color: rgb(36 39 94);
-}
-
-.dummyClassName {
-  background-color: indianred;
+.dummyClassname {
   color: black;
+  fill: indianred;
 }
 
-.dummyClassName:disabled,
-.dummyClassName:hover {
+.dummyClassname:not(svg) {
+  background-color: indianred;
+}
+
+.dummyClassname:disabled,
+.dummyClassname:hover,
+.dummyClassname:focus {
   background-color: darksalmon;
   color: white;
 }

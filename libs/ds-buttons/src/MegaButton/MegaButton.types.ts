@@ -27,11 +27,9 @@ export type MegaButtonPropsHTMLAttributes = ButtonHTMLAttributes &
 
 export interface MegaButtonComponentProps
   extends MegaButtonPropsHTMLAttributes {
-  /**
-   * @param {boolean} external - Ikon som indikerer ekstern lenke.
-   * @param {string} children - Tekst på knapp.
-   */
+  /** Ikon som indikerer ekstern lenke. */
   isExternal?: boolean;
+  /** Tekst på knapp. */
   children: string;
   /** id-attribute til tilleggstekst (en eller flere) html-elementer */
   ariaDescribedby?: string;

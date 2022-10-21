@@ -272,13 +272,13 @@ export const WithCustomCss = Template.bind({});
 WithCustomCss.args = {
   ...ButtonDefaults.args,
   variant: 'secondary',
-  className: 'buttonClassnameGreen',
+  className: 'dummyClassname',
 };
 WithCustomCss.argTypes = {
   ...WithCustomCss.argTypes,
   className: {
     control: 'select',
-    options: ['', 'buttonClassnameGreen', 'buttonClassnameBlue'],
+    options: ['', 'dummyClassname'],
     description: 'Verdien appended til designsystemets stilsett for komponent',
     table: { defaultValue: { summary: '' } },
   },
@@ -289,7 +289,7 @@ WithCustomCss.parameters = {
     const classNameAttribute = await page.$eval(`${wrapper}> button`, (el) =>
       el.getAttribute('class')
     );
-    expect(classNameAttribute).toContain('buttonClassnameGreen');
+    expect(classNameAttribute).toContain('dummyClassname');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -304,13 +304,13 @@ export const WithCustomCssAndDisabled = Template.bind({});
 WithCustomCssAndDisabled.args = {
   ...ButtonDefaults.args,
   disabled: true,
-  className: 'buttonClassnameGreen',
+  className: 'dummyClassname',
 };
 WithCustomCssAndDisabled.argTypes = {
   ...WithCustomCssAndDisabled.argTypes,
   className: {
     control: 'select',
-    options: ['', 'buttonClassnameGreen', 'buttonClassnameBlue'],
+    options: ['', 'dummyClassname'],
     description: 'Verdien appended til designsystemets stilsett for komponent',
     table: { defaultValue: { summary: '' } },
   },
@@ -323,7 +323,7 @@ WithCustomCssAndDisabled.parameters = {
     const classNameAttribute = await page.$eval(`${wrapper} > button`, (el) =>
       el.getAttribute('class')
     );
-    expect(classNameAttribute).toContain('buttonClassnameGreen');
+    expect(classNameAttribute).toContain('dummyClassname');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();

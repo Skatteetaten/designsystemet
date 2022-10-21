@@ -11,6 +11,8 @@ import {
 import { action } from '@storybook/addon-actions';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
+import './classnames.stories.css';
+
 // TODO FRONT-893 - legge på figma-lenker
 
 // TODO FRONT-893 - komplett list med ikoner
@@ -34,7 +36,7 @@ export default {
     },
     className: {
       control: 'select',
-      options: ['', 'buttonClassnameDark', 'buttonClassnameLight'],
+      options: ['', 'dummyClassname'],
       table: { defaultValue: { summary: '' } },
     },
     disabled: {
@@ -51,7 +53,7 @@ export default {
       options: ['left', 'right'],
       table: { defaultValue: { summary: getInlineButtonPositionDefault() } },
     },
-    'aria-describedby': {
+    ariaDescribedby: {
       control: 'text',
       table: { defaultValue: { summary: '' } },
     },

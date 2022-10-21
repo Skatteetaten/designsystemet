@@ -4,18 +4,10 @@ import { BaseProps, Variant } from '@skatteetaten/ds-core-utils';
 
 type ButtonHTMLAttributes = Pick<
   React.ComponentPropsWithoutRef<'button'>,
-  | 'tabIndex'
-  | 'disabled'
-  | 'className'
-  | 'accessKey'
-  | 'onClick'
-  | 'onBlur'
-  | 'onFocus'
+  'tabIndex' | 'disabled' | 'accessKey' | 'onClick' | 'onBlur' | 'onFocus'
 >;
 
 interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
-  /** tabIndex-attributt som settes på button-element */
-  tabIndex?: number;
   /** disabled-attributt som settes på button-element */
   disabled?: boolean;
   /** accesskey-attributt som settes på button-element */
@@ -31,12 +23,10 @@ interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
 }
 
 export interface ButtonProps extends ButtonPropsHTMLAttributes, BaseProps {
-  /** Ikon på knappen (Kan være et systemikon eller egendefinert). */
+  /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
   svgPath?: React.ReactElement;
   /** Definerer stilen til knappen. */
   variant?: Variant;
   /** Tekst på knapp. */
   children: string;
-  /** id-attribute til beskrivende (en eller flere) html-elementer */
-  ariaDescribedby?: string;
 }
