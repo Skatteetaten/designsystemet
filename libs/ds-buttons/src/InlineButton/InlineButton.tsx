@@ -2,7 +2,8 @@ import { forwardRef } from 'react';
 
 import { Icon } from '@skatteetaten/ds-icons';
 
-import { getDisabledDefault, getPositionDefault } from './defaults';
+import { getDisabledDefault } from '../Button/defaults';
+import { getPositionDefault } from './defaults';
 import { InlineButtonProps } from './InlineButton.types';
 
 import styles from './InlineButton.module.scss';
@@ -68,4 +69,4 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
 
 InlineButton.displayName = 'InlineButton';
 
-export { getDisabledDefault, getPositionDefault } from './defaults';
+export { getPositionDefault } from './defaults';
