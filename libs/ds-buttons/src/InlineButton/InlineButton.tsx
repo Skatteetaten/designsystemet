@@ -18,28 +18,27 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
       id,
       className = getCommonClassNameDefault(),
       'data-testid': dataTestId,
-      children,
-      disabled = getCommonDisabledDefault(),
-      svgPath,
       iconPosition = getInlineButtonPositionDefault(),
+      svgPath,
       accessKey,
+      disabled = getCommonDisabledDefault(),
       tabIndex,
       ariaDescribedby,
-      onClick,
       onBlur,
+      onClick,
       onFocus,
+      children,
     },
     ref
   ): JSX.Element => {
     const hasIconLeft = svgPath && iconPosition === 'left';
     const hasIconRight = svgPath && iconPosition === 'right';
-
-    const withIconClassName = hasIconLeft
-      ? `${styles.button_withIconLeft}`
-      : hasIconRight
-      ? `${styles.button_withIconRight}`
+    const withIconLeftClassName = hasIconLeft ? styles.button_withIconLeft : '';
+    const withIconRightClassName = hasIconRight
+      ? styles.button_withIconRight
       : '';
-    const concatenatedClassName = `${styles.button} ${withIconClassName} ${className}`;
+
+    const concatenatedClassName = `${styles.button} ${withIconLeftClassName} ${withIconRightClassName} ${className}`;
 
     return (
       <button
@@ -47,12 +46,12 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
         id={id}
         className={concatenatedClassName}
         data-testid={dataTestId}
-        disabled={disabled}
         accessKey={accessKey}
+        disabled={disabled}
         tabIndex={tabIndex}
         aria-describedby={ariaDescribedby}
-        onClick={onClick}
         onBlur={onBlur}
+        onClick={onClick}
         onFocus={onFocus}
       >
         {hasIconLeft && (

@@ -11,7 +11,7 @@ import {
 import { action } from '@storybook/addon-actions';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import { category, storyDefault } from '../../.storybook/helpers';
+import { category, htmlEventDescription } from '../../.storybook/helpers';
 import './classnames.stories.css';
 
 // TODO FRONT-893 - komplett list med ikoner
@@ -25,28 +25,8 @@ export default {
   component: InlineButton,
   title: 'Design System / InlineButton',
   argTypes: {
-    accessKey: {
-      control: 'text',
-      table: {
-        category: category.htmlAttribute,
-        defaultValue: { summary: '' },
-      },
-    },
-    ariaDescribedby: { table: { category: category.aria } },
-    id: { ...storyDefault.id },
-    key: { ...storyDefault.key },
-    onClick: { ...storyDefault.onEvent },
-    onFocus: { ...storyDefault.onEvent },
-    onBlur: { ...storyDefault.onEvent },
+    // Props
     children: { table: { category: category.props } },
-    className: { ...storyDefault.className },
-    disabled: {
-      control: 'boolean',
-      table: {
-        category: category.htmlAttribute,
-        defaultValue: { summary: getCommonDisabledDefault() },
-      },
-    },
     iconPosition: {
       control: 'select',
       options: ['left', 'right'],
@@ -55,14 +35,34 @@ export default {
         defaultValue: { summary: getInlineButtonPositionDefault() },
       },
     },
-    ref: { ...storyDefault.ref },
     svgPath: {
       options: [''].concat(Object.keys(iconList)),
       control: 'select',
       mapping: iconList,
       table: { category: category.props },
     },
+    // HTML
+    accessKey: {
+      control: 'text',
+      table: {
+        category: category.htmlAttribute,
+        defaultValue: { summary: '' },
+      },
+    },
+    disabled: {
+      control: 'boolean',
+      table: {
+        category: category.htmlAttribute,
+        defaultValue: { summary: getCommonDisabledDefault() },
+      },
+    },
     tabIndex: { table: { category: category.htmlAttribute } },
+    // Aria
+    ariaDescribedby: { table: { category: category.aria } },
+    // Events
+    onClick: { ...htmlEventDescription },
+    onFocus: { ...htmlEventDescription },
+    onBlur: { ...htmlEventDescription },
   },
 } as ComponentMeta<typeof InlineButton>;
 

@@ -19,16 +19,16 @@ export const MegaButton = forwardRef<
       id,
       className = getCommonClassNameDefault(),
       'data-testid': dataTestId,
-      children,
       href,
-      tabIndex,
+      isExternal,
       disabled = getCommonDisabledDefault(),
+      tabIndex,
       accessKey,
       ariaDescribedby,
-      isExternal,
-      onClick,
       onBlur,
+      onClick,
       onFocus,
+      children,
     },
     ref
   ): JSX.Element => {
@@ -47,12 +47,12 @@ export const MegaButton = forwardRef<
         data-testid={dataTestId}
         href={href}
         accessKey={accessKey}
-        tabIndex={tabIndex}
         disabled={disabled}
+        tabIndex={tabIndex}
         aria-describedby={ariaDescribedby}
         role={href ? 'button' : undefined}
-        onClick={onClick}
         onBlur={onBlur}
+        onClick={onClick}
         onFocus={onFocus}
       >
         {children}

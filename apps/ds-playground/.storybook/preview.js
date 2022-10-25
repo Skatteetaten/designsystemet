@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+
 import { category } from './helpers';
 import '@skatteetaten/ds-core-designtokens/index.css';
 import './playground.css';
@@ -38,9 +40,17 @@ export const parameters = {
 };
 
 export const argTypes = {
-  id: { table: { category: category.htmlAttribute } },
-  ref: { table: { category: category.htmlAttribute } },
-  className: { table: { category: category.htmlAttribute } },
-  key: { table: { category: category.props } },
-  'data-testid': { table: { category: category.htmlAttribute } },
+  key: { table: { category: category.baseProps } },
+  ref: { table: { category: category.baseProps } },
+  className: {
+    control: 'select',
+    options: ['', 'dummyClassname'],
+    description: 'Verdien appended til designsystemets stilsett for komponent',
+    table: {
+      category: category.baseProps,
+      defaultValue: { summary: getCommonClassNameDefault() },
+    },
+  },
+  'data-testid': { table: { category: category.baseProps } },
+  id: { table: { category: category.baseProps } },
 };

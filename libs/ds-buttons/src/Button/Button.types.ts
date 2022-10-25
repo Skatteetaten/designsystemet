@@ -8,19 +8,19 @@ type ButtonHTMLAttributes = Pick<
 >;
 // React.SVGAttributes<Record<string, never>>,
 interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
-  /** disabled-attributt som settes på button-element */
-  disabled?: boolean;
   /** accesskey-attributt som settes på button-element */
   accessKey?: string;
+  /** disabled-attributt som settes på button-element */
+  disabled?: boolean;
   tabIndex?: number;
   /** aria-attributt som henviser til id som har tilleggsbeskrivelse */
   ariaDescribedby?: string;
+  /** Når button-element mister focus */
+  onBlur?: React.FocusEventHandler<HTMLButtonElement>;
   /** Når det klikkes på button-element  */
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   /** Når button-element får focus */
   onFocus?: React.FocusEventHandler<HTMLButtonElement>;
-  /** Når button-element mister focus */
-  onBlur?: React.FocusEventHandler<HTMLButtonElement>;
 }
 
 export interface ButtonProps extends ButtonPropsHTMLAttributes, BaseProps {

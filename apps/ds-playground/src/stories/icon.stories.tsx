@@ -1,5 +1,4 @@
 import { sizeArr } from '@skatteetaten/ds-core-utils';
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import {
   Icon,
   IconProps,
@@ -10,7 +9,7 @@ import {
 } from '@skatteetaten/ds-icons';
 import { Story, Meta } from '@storybook/react';
 
-import { category, storyDefault } from '../../.storybook/helpers';
+import { category } from '../../.storybook/helpers';
 import { SystemIconLabels, SystemSVGPaths } from './utils/icon.systems';
 import { ThemeIconLabels, ThemeSVGPaths } from './utils/icon.themes';
 
@@ -31,12 +30,7 @@ export const SystemIcon: Story<IconProps> = Template.bind({});
 export const ThemeIcon: Story<IconProps> = Template.bind({});
 
 const commonArgTypes = {
-  ariaLabel: { table: { category: category.aria } },
-  className: { ...storyDefault.className },
-  id: { ...storyDefault.id },
-  'data-testid': {
-    control: 'text',
-  },
+  // HTML
   tabIndex: { table: { category: category.htmlAttribute } },
   title: {
     control: 'text',
@@ -44,6 +38,8 @@ const commonArgTypes = {
       category: category.props,
     },
   },
+  // Aria
+  ariaLabel: { table: { category: category.aria } },
 };
 
 const iconDefaultParameters = {
@@ -64,14 +60,6 @@ const defaultSystemIconVariant = getIconVariantDefault();
 
 SystemIcon.argTypes = {
   ...commonArgTypes,
-  variant: {
-    name: 'variant ("systemIcon")',
-    control: { type: null },
-    table: {
-      category: category.props,
-      defaultValue: { summary: defaultSystemIconVariant },
-    },
-  },
   size: {
     control: 'select',
     options: [...sizeArr].slice(1),
@@ -89,26 +77,25 @@ SystemIcon.argTypes = {
     mapping: SystemSVGPaths,
     table: { category: category.props },
   },
+  variant: {
+    name: 'variant ("systemIcon")',
+    control: { type: null },
+    table: {
+      category: category.props,
+      defaultValue: { summary: defaultSystemIconVariant },
+    },
+  },
 };
 
 SystemIcon.args = {
-  className: getCommonClassNameDefault(),
-  variant: defaultSystemIconVariant,
   size: getIconSizeDefault(),
   svgPath: SystemSVGPathsAndIcons.AccountChildSVGpath,
+  variant: defaultSystemIconVariant,
 };
 SystemIcon.parameters = iconDefaultParameters;
 
 ThemeIcon.argTypes = {
   ...commonArgTypes,
-  variant: {
-    name: 'variant ("themeIcon")',
-    control: { type: null },
-    table: {
-      category: category.props,
-      defaultValue: { summary: 'themeIcon' },
-    },
-  },
   size: {
     control: 'select',
     options: [sizeArr[2], sizeArr[3]],
@@ -125,12 +112,19 @@ ThemeIcon.argTypes = {
     },
     table: { category: category.props },
   },
+  variant: {
+    name: 'variant ("themeIcon")',
+    control: { type: null },
+    table: {
+      category: category.props,
+      defaultValue: { summary: 'themeIcon' },
+    },
+  },
 };
 
 ThemeIcon.args = {
-  className: getCommonClassNameDefault(),
-  variant: 'themeIcon',
   size: getIconSizeDefault(),
   svgPath: ThemeSVGPathsAndIcons.AndreForholdSVGpath,
+  variant: 'themeIcon',
 };
 ThemeIcon.parameters = iconDefaultParameters;

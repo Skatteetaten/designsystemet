@@ -18,16 +18,16 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       id,
       className = getCommonClassNameDefault(),
       'data-testid': dataTestId,
-      children,
-      variant = getButtonVariantDefault(),
       svgPath,
-      tabIndex,
-      disabled = getCommonDisabledDefault(),
+      variant = getButtonVariantDefault(),
       accessKey,
+      disabled = getCommonDisabledDefault(),
+      tabIndex,
       ariaDescribedby,
-      onClick,
       onBlur,
+      onClick,
       onFocus,
+      children,
     },
     ref
   ): JSX.Element => {
@@ -42,11 +42,11 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         className={concatenatedClassName}
         data-testid={dataTestId}
         tabIndex={tabIndex}
-        disabled={disabled}
         accessKey={accessKey}
+        disabled={disabled}
         aria-describedby={ariaDescribedby}
-        onClick={onClick}
         onBlur={onBlur}
+        onClick={onClick}
         onFocus={onFocus}
       >
         {svgPath && (

@@ -27,12 +27,12 @@ export type MegaButtonPropsHTMLAttributes = ButtonHTMLAttributes &
 
 export interface MegaButtonComponentProps
   extends MegaButtonPropsHTMLAttributes {
-  /** Ikon som indikerer ekstern lenke. */
-  isExternal?: boolean;
-  /** Tekst på knapp. */
-  children: string;
   /** id-attribute til tilleggstekst (en eller flere) html-elementer */
   ariaDescribedby?: string;
+  /** Ikon som indikerer ekstern lenke */
+  isExternal?: boolean;
+  /** Tekst på knapp */
+  children: string;
 }
 
 // TODO Endre fra typescript intersection slik at de dukker opp riktig under Storybook Docs.

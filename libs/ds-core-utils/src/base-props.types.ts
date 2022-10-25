@@ -1,10 +1,15 @@
-import { HTMLAttributes } from 'react';
+//import { HTMLAttributes } from 'react';
 
-type BasePropsHTMLAttributes = Pick<
-  HTMLAttributes<Record<string, never>>,
-  'className' | 'id'
->;
-export interface BaseProps extends BasePropsHTMLAttributes {
+// type BasePropsHTMLAttributes = Pick<
+//   HTMLAttributes<Record<string, never>>,
+//   'className' | 'id'
+// >;
+export interface BaseProps {
+  /**  Dummy description */
+  id?: string;
+  /**  Dummy description */
+  className?: string;
+  /**  Dummy description */
   'data-testid'?: string;
 }
 
