@@ -16,13 +16,14 @@ import { configurationGenerator, scssGenerator } from 'nx-stylelint';
 
 export default async function (tree: Tree, schema: Schema) {
   const projectName = schema.name;
+
   await libraryGenerator(tree, {
-    linter: Linter.EsLint,
-    skipFormat: false,
-    skipTsConfig: false,
-    unitTestRunner: 'jest',
     name: projectName,
     style: 'scss',
+    skipTsConfig: false,
+    skipFormat: false,
+    unitTestRunner: 'jest',
+    linter: Linter.EsLint,
     publishable: schema.publishable,
     importPath: schema.importPath,
     strict: true,
@@ -127,8 +128,9 @@ export default async function (tree: Tree, schema: Schema) {
   };
 
   updateProjectConfiguration(tree, projectName, projectConfigWithRollupOptions);
+
   const templateDir = joinPathFragments(__dirname, './templates');
-  generateFiles(tree, templateDir, projectConfig.root, schema);
+  generateFiles(tree, templateDir, projectConfig.root, { tmpl: '', ...schema });
 
   await formatFiles(tree);
   return () => {

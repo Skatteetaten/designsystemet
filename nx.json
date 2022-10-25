@@ -69,5 +69,8 @@
       "!{projectRoot}/**/*.stories.@(js|jsx|ts|tsx|mdx)"
     ],
     "projectSpecificFiles": []
+  },
+  "implicitDependencies": {
+    ".stylelintrc.json": "*"
   }
 }
