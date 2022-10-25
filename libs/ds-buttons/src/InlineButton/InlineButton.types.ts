@@ -10,9 +10,6 @@ type ButtonPropsHTMLAttributes = Pick<
 interface InlineButtonComponentProps extends ButtonPropsHTMLAttributes {
   /** Tekst på knappen. */
   children: string;
-  id?: string;
-  accessKey?: string;
-  tabIndex?: number;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
   svgPath?: React.ReactElement;
   /** Posisjonen til ikonet: left, right. */

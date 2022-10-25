@@ -4,6 +4,7 @@ type BasePropsHTMLAttributes = Pick<
   HTMLAttributes<Record<string, never>>,
   'className' | 'id'
 >;
+
 export interface BaseProps extends BasePropsHTMLAttributes {
   'data-testid'?: string;
 }

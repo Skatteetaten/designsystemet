@@ -8,11 +8,6 @@ type ButtonHTMLAttributes = Pick<
 >;
 // React.SVGAttributes<Record<string, never>>,
 interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
-  /** accesskey-attributt som settes på button-element */
-  accessKey?: string;
-  /** disabled-attributt som settes på button-element */
-  disabled?: boolean;
-  tabIndex?: number;
   /** aria-attributt som henviser til id som har tilleggsbeskrivelse */
   ariaDescribedby?: string;
   /** Når button-element mister focus */
