@@ -3,6 +3,7 @@
   "sourceRoot": "libs/ds-forms/src",
   "projectType": "library",
   "tags": [],
+  "implicitDependencies": ["!ds-dev-config"],
   "targets": {
     "build": {
       "executor": "@nrwl/rollup:rollup",

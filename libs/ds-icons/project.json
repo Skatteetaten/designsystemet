@@ -3,6 +3,7 @@
   "sourceRoot": "libs/ds-icons/src",
   "projectType": "library",
   "tags": [],
+  "implicitDependencies": ["!ds-dev-config"],
   "targets": {
     "build": {
       "executor": "@nrwl/rollup:rollup",
