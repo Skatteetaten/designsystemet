@@ -35,6 +35,7 @@ export interface MegaButtonComponentProps
   ariaDescribedby?: string;
 }
 
+// TODO Endre fra typescript intersection slik at de dukker opp riktig under Storybook Docs.
 export type MegaButtonProps = BaseProps &
   MegaButtonComponentProps &
   (MegaButtonPropsWithDisabled | MegaButtonPropsWithHref);

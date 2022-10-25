@@ -1,58 +1,55 @@
 import { MegaButton } from '@skatteetaten/ds-buttons';
+import { getCommonDisabledDefault } from '@skatteetaten/ds-core-utils';
 import { action } from '@storybook/addon-actions';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
+import { category, storyDefault } from '../../.storybook/helpers';
 import './classnames.stories.css';
 
 export default {
   component: MegaButton,
   title: 'Design System/MegaButton',
-  decorators: [
-    // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-    (Story) => <div style={{ margin: '1em' }}>{Story()}</div>,
-  ],
   argTypes: {
+    accessKey: {
+      control: 'text',
+      table: {
+        category: category.htmlAttribute,
+        defaultValue: { summary: '' },
+      },
+    },
+    ariaDescribedby: { table: { category: category.aria } },
+    children: { table: { category: category.props } },
+    className: { ...storyDefault.className },
     disabled: {
       description:
         'Hvis knapp er disabled så overskrives variant-stilene med :disable stil',
       control: 'boolean',
-      table: { defaultValue: { summary: 'false' } },
-    },
-    children: {
-      description: 'Tekst på knapp',
-      control: 'text',
-      table: { defaultValue: { summary: '' } },
-    },
-    className: {
-      control: 'select',
-      options: ['', 'dummyClassname'],
-      description:
-        'Verdien appended til designsystemets stilsett for komponent',
-      table: { defaultValue: { summary: '' } },
+      table: {
+        category: category.htmlAttribute,
+        defaultValue: { summary: getCommonDisabledDefault() },
+      },
     },
     href: {
       description: 'Gjør det mulig å bruke knappen som en lenke',
       control: 'text',
-      table: { defaultValue: { summary: '' } },
+      table: { category: category.props },
     },
+    id: { ...storyDefault.id },
     isExternal: {
       defaultValue: false,
       control: 'boolean',
       description:
         'Viser ikon som indikerer at knappen åpner en ekstern tjeneste. Brukes hvis knappen  er en lenke til en side på et annet domene.',
+      table: {
+        category: category.props,
+      },
     },
-    tabIndex: {
-      control: 'text',
-      table: { defaultValue: { summary: '' } },
-    },
-    accessKey: {
-      control: 'text',
-      table: { defaultValue: { summary: '' } },
-    },
-    ariaDescribedby: {
-      control: 'text',
-      table: { defaultValue: { summary: '' } },
-    },
+    key: { ...storyDefault.key },
+    onClick: { ...storyDefault.onEvent },
+    onFocus: { ...storyDefault.onEvent },
+    onBlur: { ...storyDefault.onEvent },
+    ref: { ...storyDefault.ref },
+    tabIndex: { table: { category: category.htmlAttribute } },
   },
 } as ComponentMeta<typeof MegaButton>;
 

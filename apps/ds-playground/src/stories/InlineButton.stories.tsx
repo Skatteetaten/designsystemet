@@ -11,6 +11,7 @@ import {
 import { action } from '@storybook/addon-actions';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
+import { category, storyDefault } from '../../.storybook/helpers';
 import './classnames.stories.css';
 
 // TODO FRONT-893 - legge på figma-lenker
@@ -25,45 +26,44 @@ export default {
   component: InlineButton,
   title: 'Design System / InlineButton',
   argTypes: {
-    id: {
+    accessKey: {
       control: 'text',
-      table: { defaultValue: { summary: '' } },
+      table: {
+        category: category.htmlAttribute,
+        defaultValue: { summary: '' },
+      },
     },
-    children: {
-      control: 'text',
-      table: { defaultValue: { summary: '' } },
-    },
-    className: {
-      control: 'select',
-      options: ['', 'dummyClassname'],
-      table: { defaultValue: { summary: '' } },
-    },
+    ariaDescribedby: { table: { category: category.aria } },
+    id: { ...storyDefault.id },
+    key: { ...storyDefault.key },
+    onClick: { ...storyDefault.onEvent },
+    onFocus: { ...storyDefault.onEvent },
+    onBlur: { ...storyDefault.onEvent },
+    children: { table: { category: category.props } },
+    className: { ...storyDefault.className },
     disabled: {
       control: 'boolean',
-      table: { defaultValue: { summary: getCommonDisabledDefault() } },
-    },
-    svgPath: {
-      options: [''].concat(Object.keys(iconList)),
-      control: 'select',
-      mapping: iconList,
+      table: {
+        category: category.htmlAttribute,
+        defaultValue: { summary: getCommonDisabledDefault() },
+      },
     },
     iconPosition: {
       control: 'select',
       options: ['left', 'right'],
-      table: { defaultValue: { summary: getInlineButtonPositionDefault() } },
+      table: {
+        category: category.props,
+        defaultValue: { summary: getInlineButtonPositionDefault() },
+      },
     },
-    ariaDescribedby: {
-      control: 'text',
-      table: { defaultValue: { summary: '' } },
+    ref: { ...storyDefault.ref },
+    svgPath: {
+      options: [''].concat(Object.keys(iconList)),
+      control: 'select',
+      mapping: iconList,
+      table: { category: category.props },
     },
-    accessKey: {
-      control: 'text',
-      table: { defaultValue: { summary: '' } },
-    },
-    tabIndex: {
-      control: 'text',
-      table: { defaultValue: { summary: '' } },
-    },
+    tabIndex: { table: { category: category.htmlAttribute } },
   },
 } as ComponentMeta<typeof InlineButton>;
 

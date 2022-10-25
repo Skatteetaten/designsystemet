@@ -4,10 +4,7 @@ import {
   ButtonProps,
   getButtonVariantDefault,
 } from '@skatteetaten/ds-buttons';
-import {
-  getCommonClassNameDefault,
-  getCommonDisabledDefault,
-} from '@skatteetaten/ds-core-utils';
+import { getCommonDisabledDefault } from '@skatteetaten/ds-core-utils';
 import {
   EditSVGpath,
   SendSVGpath,
@@ -16,9 +13,9 @@ import {
 import { action } from '@storybook/addon-actions';
 import { Story, Meta } from '@storybook/react';
 
+import { category, storyDefault } from '../../.storybook/helpers';
 import './classnames.stories.css';
 
-// TODO FRONT-935 Endre fra iconProps til svgPath.
 const iconList = {
   Send: SendSVGpath,
   Edit: EditSVGpath,
@@ -29,63 +26,44 @@ export default {
   component: Button,
   title: 'Design System/Button',
   argTypes: {
-    variant: {
-      options: ['primary', 'secondary', 'tertiary', 'danger'],
-      control: 'radio',
+    accessKey: {
+      control: 'text',
       table: {
-        category: 'Props',
-        defaultValue: { summary: getButtonVariantDefault() },
+        category: category.htmlAttribute,
+        defaultValue: { summary: '' },
       },
     },
+    ariaDescribedby: { table: { category: category.aria } },
+    children: { table: { category: category.props } },
+    className: { ...storyDefault.className },
+    disabled: {
+      control: 'boolean',
+      table: {
+        category: category.htmlAttribute,
+        defaultValue: { summary: getCommonDisabledDefault() },
+      },
+    },
+    id: { ...storyDefault.id },
+    key: { ...storyDefault.key },
+    onClick: { ...storyDefault.onEvent },
+    onFocus: { ...storyDefault.onEvent },
+    onBlur: { ...storyDefault.onEvent },
+    ref: { ...storyDefault.ref },
     svgPath: {
       options: [''].concat(Object.keys(iconList)),
       control: 'select',
       mapping: iconList,
-      table: { category: 'Props', defaultValue: { summary: '' } },
+      table: { category: category.props },
     },
-    disabled: {
-      control: 'boolean',
+    tabIndex: { table: { category: category.htmlAttribute } },
+    variant: {
+      options: ['primary', 'secondary', 'tertiary', 'danger'],
+      control: 'radio',
       table: {
-        category: 'HTML-attributt',
-        defaultValue: { summary: getCommonDisabledDefault() },
+        category: category.props,
+        defaultValue: { summary: getButtonVariantDefault() },
       },
     },
-    className: {
-      control: 'select',
-      options: ['', 'dummyClassname'],
-      table: {
-        category: 'HTML-attributt',
-        defaultValue: { summary: getCommonClassNameDefault() },
-      },
-    },
-    onClick: {
-      table: { category: 'Event' },
-      control: false,
-    },
-    onFocus: {
-      table: { category: 'Event' },
-      control: false,
-    },
-    onBlur: {
-      table: { category: 'Event' },
-      control: false,
-    },
-    // TODO Test av gruppering
-    /* Vi tester med gruppering.
-    påfølgende argTypes blir lagt til for å få satt riktig gruppe.
-    Hvis OK så må det jobbes med hvordan dette gjøres.
-    F.eks så skal HTML-attributer kunne være default. 
-    I teorien skal det kunne gå ann å definere Global argTypes i preview.js 
-    Ref https://storybook.js.org/docs/react/api/argtypes#global-argtypes
-        export const argTypes = { table: { category: 'HTML-attributt' } };
-    */
-    key: { table: { category: 'Props' } },
-    ref: { table: { category: 'HTML-attributt' } },
-    id: { table: { category: 'HTML-attributt' } },
-    tabIndex: { table: { category: 'HTML-attributt' } },
-    children: { table: { category: 'Props' } },
-    accessKey: { table: { category: 'HTML-attributt' } },
-    ariaDescribedby: { table: { category: 'HTML-attributt' } },
   },
 } as Meta<ButtonProps>;
 

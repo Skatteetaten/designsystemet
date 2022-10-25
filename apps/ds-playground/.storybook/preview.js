@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { category } from './helpers';
 import '@skatteetaten/ds-core-designtokens/index.css';
 import './playground.css';
 
@@ -34,4 +35,12 @@ const DSViewports = {
 export const parameters = {
   controls: { sort: 'alpha' },
   viewport: { viewports: DSViewports },
+};
+
+export const argTypes = {
+  id: { table: { category: category.htmlAttribute } },
+  ref: { table: { category: category.htmlAttribute } },
+  className: { table: { category: category.htmlAttribute } },
+  key: { table: { category: category.props } },
+  'data-testid': { table: { category: category.htmlAttribute } },
 };

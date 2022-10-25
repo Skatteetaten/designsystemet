@@ -1,6 +1,10 @@
-export interface BaseProps {
-  id?: string;
-  className?: string;
+import { HTMLAttributes } from 'react';
+
+type BasePropsHTMLAttributes = Pick<
+  HTMLAttributes<Record<string, never>>,
+  'className' | 'id'
+>;
+export interface BaseProps extends BasePropsHTMLAttributes {
   'data-testid'?: string;
 }
 

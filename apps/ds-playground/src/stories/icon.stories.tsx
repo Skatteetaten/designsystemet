@@ -10,6 +10,7 @@ import {
 } from '@skatteetaten/ds-icons';
 import { Story, Meta } from '@storybook/react';
 
+import { category, storyDefault } from '../../.storybook/helpers';
 import { SystemIconLabels, SystemSVGPaths } from './utils/icon.systems';
 import { ThemeIconLabels, ThemeSVGPaths } from './utils/icon.themes';
 
@@ -30,23 +31,19 @@ export const SystemIcon: Story<IconProps> = Template.bind({});
 export const ThemeIcon: Story<IconProps> = Template.bind({});
 
 const commonArgTypes = {
-  id: {
-    control: 'text',
-  },
+  ariaLabel: { table: { category: category.aria } },
+  className: { ...storyDefault.className },
+  id: { ...storyDefault.id },
   'data-testid': {
     control: 'text',
   },
-  className: {
-    control: 'select',
-    options: ['', 'dummyClassname'],
-    table: {
-      defaultValue: { summary: getCommonClassNameDefault() },
-    },
-  },
+  tabIndex: { table: { category: category.htmlAttribute } },
   title: {
     control: 'text',
+    table: {
+      category: category.props,
+    },
   },
-  ariaLabel: { control: 'text' },
 };
 
 const defaultSystemIconVariant = getIconVariantDefault();
@@ -57,6 +54,7 @@ SystemIcon.argTypes = {
     name: 'variant ("systemIcon")',
     control: { type: null },
     table: {
+      category: category.props,
       defaultValue: { summary: defaultSystemIconVariant },
     },
   },
@@ -64,6 +62,7 @@ SystemIcon.argTypes = {
     control: 'select',
     options: [...sizeArr].slice(1),
     table: {
+      category: category.props,
       defaultValue: { summary: getIconSizeDefault() },
     },
   },
@@ -74,6 +73,7 @@ SystemIcon.argTypes = {
     },
     options: Object.keys(SystemSVGPaths),
     mapping: SystemSVGPaths,
+    table: { category: category.props },
   },
 };
 
@@ -90,6 +90,7 @@ ThemeIcon.argTypes = {
     name: 'variant ("themeIcon")',
     control: { type: null },
     table: {
+      category: category.props,
       defaultValue: { summary: 'themeIcon' },
     },
   },
@@ -97,6 +98,7 @@ ThemeIcon.argTypes = {
     control: 'select',
     options: [sizeArr[2], sizeArr[3]],
     table: {
+      category: category.props,
       defaultValue: { summary: getIconSizeDefault() },
     },
   },
@@ -106,6 +108,7 @@ ThemeIcon.argTypes = {
     control: {
       labels: ThemeIconLabels,
     },
+    table: { category: category.props },
   },
 };
 
