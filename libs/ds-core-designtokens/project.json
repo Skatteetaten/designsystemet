@@ -5,7 +5,7 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@nrwl/web:rollup",
+      "executor": "@nrwl/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/ds-core-designtokens",
@@ -38,7 +38,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/ds-core-designtokens"],
+      "outputs": ["{workspaceRoot}/coverage/libs/ds-core-designtokens"],
       "options": {
         "jestConfig": "libs/ds-core-designtokens/jest.config.ts",
         "passWithNoTests": true
@@ -55,7 +55,7 @@
       }
     },
     "tsc": {
-      "executor": "./tools/executors/tsCheck:tsCheck",
+      "executor": "@skatteetaten/ds-dev-config:tsCheck",
       "options": {
         "tsConfig": ["tsconfig.lib.json", "tsconfig.spec.json"]
       }

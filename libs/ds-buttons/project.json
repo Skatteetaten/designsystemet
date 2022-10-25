@@ -6,7 +6,7 @@
   "implicitDependencies": ["!ds-dev-config"],
   "targets": {
     "build": {
-      "executor": "@nrwl/web:rollup",
+      "executor": "@nrwl/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/ds-buttons",
@@ -34,7 +34,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/ds-buttons"],
+      "outputs": ["{workspaceRoot}/coverage/libs/ds-buttons"],
       "options": {
         "jestConfig": "libs/ds-buttons/jest.config.ts",
         "passWithNoTests": true
@@ -51,7 +51,7 @@
       }
     },
     "tsc": {
-      "executor": "./tools/executors/tsCheck:tsCheck",
+      "executor": "@skatteetaten/ds-dev-config:tsCheck",
       "options": {
         "tsConfig": ["tsconfig.lib.json", "tsconfig.spec.json"]
       }
