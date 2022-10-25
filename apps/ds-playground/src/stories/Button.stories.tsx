@@ -113,36 +113,33 @@ const TemplateVariant: Story<ButtonProps> = (args) => (
   </>
 );
 
+const buttonDefaultParameters = {
+  design: [
+    {
+      name: 'Varianter og tilstander',
+      type: 'figma',
+      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1765%3A8640',
+    },
+    {
+      name: 'Luft og fontstørrelser',
+      type: 'figma',
+      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=123%3A1494',
+    },
+  ],
+};
+
 export const ButtonDefault: Story<ButtonProps> = TemplateDefault.bind({});
 ButtonDefault.storyName = 'Default';
 const baseArgs = {
   children: 'Klikk',
 };
-// TODO Endre url til riktig side i Figma på Button sin design-fane
-const designUrl =
-  'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1765%3A8640';
 
 ButtonDefault.args = {
   ...baseArgs,
   variant: 'primary',
   disabled: false,
 };
-ButtonDefault.parameters = {
-  displayName: 'Hei verden',
-  design: [
-    {
-      name: 'Varianter',
-      type: 'figma',
-      url: designUrl,
-    },
-  ],
-  backgrounds: {
-    values: [
-      { name: 'Svart', value: '#000' },
-      { name: 'Hvit', value: '#fff' },
-    ],
-  },
-};
+ButtonDefault.parameters = buttonDefaultParameters;
 
 export const Variants: Story<ButtonProps> = TemplateVariant.bind({});
 Variants.args = {
@@ -150,13 +147,4 @@ Variants.args = {
   ariaDescribedby: 'elementid-satt-i-story',
   variant: 'secondary',
 };
-Variants.parameters = {
-  controls: { include: ['disabled', 'className'] },
-  design: [
-    {
-      name: 'Varianter',
-      type: 'figma',
-      url: designUrl,
-    },
-  ],
-};
+Variants.parameters = buttonDefaultParameters;

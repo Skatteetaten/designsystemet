@@ -77,11 +77,33 @@ const baseArgs = {
   children: 'Legg til rapport',
 };
 
+const buttonDefaultParameters = {
+  design: [
+    {
+      name: 'Varianter og tilstander',
+      type: 'figma',
+      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=4018%3A9627',
+    },
+    {
+      name: 'Luft og fontstørrelser',
+      type: 'figma',
+      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1210%3A7396',
+    },
+  ],
+  backgrounds: {
+    values: [
+      { name: 'Svart', value: '#000' },
+      { name: 'Hvit', value: '#fff' },
+    ],
+  },
+};
+
 export const InlineButtonDefault = TemplateDefault.bind({});
 InlineButtonDefault.storyName = 'Default';
 InlineButtonDefault.args = {
   ...baseArgs,
 };
+InlineButtonDefault.parameters = buttonDefaultParameters;
 
 export const InlineButtonIcon = TemplateDefault.bind({});
 InlineButtonIcon.storyName = 'With icon';
@@ -89,3 +111,4 @@ InlineButtonIcon.args = {
   ...baseArgs,
   svgPath: AddOutlineSVGpath,
 };
+InlineButtonIcon.parameters = buttonDefaultParameters;

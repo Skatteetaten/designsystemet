@@ -46,6 +46,20 @@ const commonArgTypes = {
   },
 };
 
+const iconDefaultParameters = {
+  design: [
+    {
+      name: 'Oversikt',
+      type: 'figma',
+      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1124%3A6643',
+    },
+    {
+      name: 'Størrelser og avstander',
+      type: 'figma',
+      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1124%3A6642',
+    },
+  ],
+};
 const defaultSystemIconVariant = getIconVariantDefault();
 
 SystemIcon.argTypes = {
@@ -83,6 +97,7 @@ SystemIcon.args = {
   size: getIconSizeDefault(),
   svgPath: SystemSVGPathsAndIcons.AccountChildSVGpath,
 };
+SystemIcon.parameters = iconDefaultParameters;
 
 ThemeIcon.argTypes = {
   ...commonArgTypes,
@@ -118,3 +133,4 @@ ThemeIcon.args = {
   size: getIconSizeDefault(),
   svgPath: ThemeSVGPathsAndIcons.AndreForholdSVGpath,
 };
+ThemeIcon.parameters = iconDefaultParameters;
