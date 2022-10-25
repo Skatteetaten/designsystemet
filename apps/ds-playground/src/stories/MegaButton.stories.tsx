@@ -6,7 +6,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { category, htmlEventDescription } from '../../.storybook/helpers';
 import './classnames.stories.css';
 
-export default {
+const MBStory = {
   component: MegaButton,
   title: 'Design System/MegaButton',
   argTypes: {
@@ -50,7 +50,8 @@ export default {
     onFocus: { ...htmlEventDescription },
     onBlur: { ...htmlEventDescription },
   },
-} as ComponentMeta<typeof MegaButton>;
+};
+export default MBStory as ComponentMeta<typeof MegaButton>;
 
 const TemplateDefault: ComponentStory<typeof MegaButton> = (args) => (
   <MegaButton {...args} onClick={action('KlikkEvent MegaButton')}>
@@ -60,8 +61,51 @@ const TemplateDefault: ComponentStory<typeof MegaButton> = (args) => (
 
 export const Default = TemplateDefault.bind({});
 
+const firstWithCategory = ({
+  storyProps,
+  category,
+}: {
+  storyProps: any;
+  category: string;
+}): string => {
+  const ret = Object.entries(storyProps.argTypes).find(([, value]) => {
+    return value?.table.category === category;
+  });
+  console.log(ret);
+  if (ret) return ret[0];
+  else {
+    return '';
+  }
+};
+/* 
+export const category = {
+  baseProps: 'BaseProps',
+  props: 'Props',
+  htmlAttribute: 'HTML-attribute',
+  aria: 'Aria-attribute',
+  event: 'Event',
+}; */
+
 const baseArgs = {
+  [firstWithCategory({
+    category: category.props,
+    storyProps: MBStory,
+  })]: undefined,
+  [firstWithCategory({
+    category: category.htmlAttribute,
+    storyProps: MBStory,
+  })]: undefined,
+  [firstWithCategory({
+    category: category.aria,
+    storyProps: MBStory,
+  })]: undefined,
+  [firstWithCategory({
+    category: category.event,
+    storyProps: MBStory,
+  })]: undefined,
   children: 'Klikk her',
+  /*   tabIndex: undefined,
+  ariaDescribedby: undefined, */
 };
 const designUrlTilstander =
   'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1717%3A8893';
