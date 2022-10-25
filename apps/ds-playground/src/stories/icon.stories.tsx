@@ -35,7 +35,7 @@ const commonArgTypes = {
   title: {
     control: 'text',
     table: {
-      category: category.props,
+      category: category.htmlAttribute,
     },
   },
   // Aria

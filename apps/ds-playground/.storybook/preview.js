@@ -40,17 +40,34 @@ export const parameters = {
 };
 
 export const argTypes = {
-  key: { table: { category: category.baseProps } },
-  ref: { table: { category: category.baseProps } },
+  key: {
+    description:
+      'Spesielt string attributt som brukes for å iterere gjennom elementer',
+    table: { type: { summary: 'string' }, category: category.baseProps },
+  },
+  ref: {
+    description: 'React ref sendt gjennom React.forwardeef',
+    table: {
+      type: { summary: 'React.ForwardedRef' },
+      category: category.baseProps,
+    },
+  },
   className: {
     control: 'select',
     options: ['', 'dummyClassname'],
     description: 'Verdien appended til designsystemets stilsett for komponent',
     table: {
+      type: { summary: 'string' },
       category: category.baseProps,
       defaultValue: { summary: getCommonClassNameDefault() },
     },
   },
-  'data-testid': { table: { category: category.baseProps } },
-  id: { table: { category: category.baseProps } },
+  'data-testid': {
+    description: 'data attribute som brukes for tester',
+    table: { type: { summary: 'string' }, category: category.baseProps },
+  },
+  id: {
+    description: 'id attribute',
+    table: { type: { summary: 'string' }, category: category.baseProps },
+  },
 };
