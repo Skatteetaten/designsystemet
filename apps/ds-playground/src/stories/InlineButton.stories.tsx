@@ -14,7 +14,6 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { category, storyDefault } from '../../.storybook/helpers';
 import './classnames.stories.css';
 
-// TODO FRONT-893 - legge på figma-lenker
 // TODO FRONT-893 - komplett list med ikoner
 const iconList = {
   AddOutline: { svgPath: AddOutlineSVGpath },

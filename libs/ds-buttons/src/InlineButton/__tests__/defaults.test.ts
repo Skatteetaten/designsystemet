@@ -1,8 +1,8 @@
 import { getInlineButtonPositionDefault } from '../defaults';
 
-describe('Button defaults', () => {
+describe('InlineButton defaults', () => {
   it('Når getInlineButtonPositionDefault kalles, så returnerer den riktig verdi', () => {
     const renderDefault = getInlineButtonPositionDefault();
-    expect(renderDefault).toBe('primary');
+    expect(renderDefault).toBe('left');
   });
 });
