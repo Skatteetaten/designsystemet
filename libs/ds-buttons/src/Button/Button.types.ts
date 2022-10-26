@@ -2,19 +2,18 @@ import React from 'react';
 
 import { BaseProps, Variant } from '@skatteetaten/ds-core-utils';
 
-type ButtonHTMLAttributes = Pick<
-  React.ComponentPropsWithoutRef<'button'>,
-  'tabIndex' | 'disabled' | 'accessKey' | 'onClick' | 'onBlur' | 'onFocus'
+type RequiredButtonHTMLAttributes = Pick<
+  React.HTMLProps<HTMLButtonElement>,
+  'accessKey' | 'disabled' | 'tabIndex' | 'onBlur' | 'onClick' | 'onFocus'
 >;
-// React.SVGAttributes<Record<string, never>>,
+
+// TODO FRONT-930 - Pick or Partial is failing to get the correct type through - requires override in story
+type ButtonHTMLAttributes = Partial<RequiredButtonHTMLAttributes>;
+
 interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
-  /** aria-attributt som henviser til id som har tilleggsbeskrivelse */
   ariaDescribedby?: string;
-  /** Når button-element mister focus */
   onBlur?: React.FocusEventHandler<HTMLButtonElement>;
-  /** Når det klikkes på button-element  */
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
-  /** Når button-element får focus */
   onFocus?: React.FocusEventHandler<HTMLButtonElement>;
 }
 

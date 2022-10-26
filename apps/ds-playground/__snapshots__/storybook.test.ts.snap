@@ -38,33 +38,33 @@ exports[`Image storyshots Tests / Button With Ref 1`] = `"<button class=\\"Butto
 
 exports[`Image storyshots Tests / Button With Tabindex 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP  \\" tabindex=\\"-1\\">Klikk her</button>"`;
 
-exports[`Image storyshots Tests / InlineButton Defaults 1`] = `"<button class=\\"InlineButton_button__2taCK  \\">Legg til rapport</button>"`;
+exports[`Image storyshots Tests / InlineButton Defaults 1`] = `"<button class=\\"InlineButton_button__2taCK   \\">Legg til rapport</button>"`;
 
-exports[`Image storyshots Tests / InlineButton Disabled 1`] = `"<button class=\\"InlineButton_button__2taCK  \\" disabled=\\"\\">Legg til rapport</button>"`;
+exports[`Image storyshots Tests / InlineButton Disabled 1`] = `"<button class=\\"InlineButton_button__2taCK   \\" disabled=\\"\\">Legg til rapport</button>"`;
 
-exports[`Image storyshots Tests / InlineButton Disabled With Icon 1`] = `"<button class=\\"InlineButton_button__2taCK InlineButton_button_withIconLeft__3Y66a \\" disabled=\\"\\"><span class=\\"InlineButton_icon__GHhTr\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 \\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\" role=\\"img\\"><path d=\\"M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z\\"></path></svg></span>Legg til rapport</button>"`;
+exports[`Image storyshots Tests / InlineButton Disabled With Icon 1`] = `"<button class=\\"InlineButton_button__2taCK InlineButton_button_withIconLeft__3Y66a  \\" disabled=\\"\\"><span class=\\"InlineButton_icon__GHhTr\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 \\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\" role=\\"img\\"><path d=\\"M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z\\"></path></svg></span>Legg til rapport</button>"`;
 
-exports[`Image storyshots Tests / InlineButton With Access Key 1`] = `"<button class=\\"InlineButton_button__2taCK  \\" accesskey=\\"a\\">Legg til rapport</button>"`;
+exports[`Image storyshots Tests / InlineButton With Access Key 1`] = `"<button class=\\"InlineButton_button__2taCK   \\" accesskey=\\"a\\">Legg til rapport</button>"`;
 
-exports[`Image storyshots Tests / InlineButton With Aria Describedby 1`] = `"<button class=\\"InlineButton_button__2taCK  \\" aria-describedby=\\"dummyId\\">Legg til rapport</button>"`;
+exports[`Image storyshots Tests / InlineButton With Aria Describedby 1`] = `"<button class=\\"InlineButton_button__2taCK   \\" aria-describedby=\\"dummyId\\">Legg til rapport</button>"`;
 
-exports[`Image storyshots Tests / InlineButton With Class Name 1`] = `"<button class=\\"InlineButton_button__2taCK  dummyClassName\\">Legg til rapport</button>"`;
+exports[`Image storyshots Tests / InlineButton With Class Name 1`] = `"<button class=\\"InlineButton_button__2taCK   dummyClassName\\">Legg til rapport</button>"`;
 
-exports[`Image storyshots Tests / InlineButton With Class Name And Disabled 1`] = `"<button class=\\"InlineButton_button__2taCK  dummyClassName\\" disabled=\\"\\">Legg til rapport</button>"`;
+exports[`Image storyshots Tests / InlineButton With Class Name And Disabled 1`] = `"<button class=\\"InlineButton_button__2taCK   dummyClassName\\" disabled=\\"\\">Legg til rapport</button>"`;
 
-exports[`Image storyshots Tests / InlineButton With Icon Left 1`] = `"<button class=\\"InlineButton_button__2taCK InlineButton_button_withIconLeft__3Y66a \\"><span class=\\"InlineButton_icon__GHhTr\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 \\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\" role=\\"img\\"><path d=\\"M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z\\"></path></svg></span>Legg til rapport</button>"`;
+exports[`Image storyshots Tests / InlineButton With Icon Left 1`] = `"<button class=\\"InlineButton_button__2taCK InlineButton_button_withIconLeft__3Y66a  \\"><span class=\\"InlineButton_icon__GHhTr\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 \\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\" role=\\"img\\"><path d=\\"M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z\\"></path></svg></span>Legg til rapport</button>"`;
 
-exports[`Image storyshots Tests / InlineButton With Icon Right 1`] = `"<button class=\\"InlineButton_button__2taCK InlineButton_button_withIconRight__3d8PZ \\">Legg til rapport<span class=\\"InlineButton_icon__GHhTr\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 \\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\" role=\\"img\\"><path d=\\"M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z\\"></path></svg></span></button>"`;
+exports[`Image storyshots Tests / InlineButton With Icon Right 1`] = `"<button class=\\"InlineButton_button__2taCK  InlineButton_button_withIconRight__3d8PZ \\">Legg til rapport<span class=\\"InlineButton_icon__GHhTr\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 \\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\" role=\\"img\\"><path d=\\"M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z\\"></path></svg></span></button>"`;
 
-exports[`Image storyshots Tests / InlineButton With Id 1`] = `"<button id=\\"dummyId\\" class=\\"InlineButton_button__2taCK  \\">Legg til rapport</button>"`;
+exports[`Image storyshots Tests / InlineButton With Id 1`] = `"<button id=\\"dummyId\\" class=\\"InlineButton_button__2taCK   \\">Legg til rapport</button>"`;
 
-exports[`Image storyshots Tests / InlineButton With Long Text 1`] = `"<button class=\\"InlineButton_button__2taCK  \\">Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Når ikke ikon så skal teksten være venstrejusteres.</button>"`;
+exports[`Image storyshots Tests / InlineButton With Long Text 1`] = `"<button class=\\"InlineButton_button__2taCK   \\">Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Når ikke ikon så skal teksten være venstrejusteres.</button>"`;
 
-exports[`Image storyshots Tests / InlineButton With Long Text And Icon 1`] = `"<button class=\\"InlineButton_button__2taCK InlineButton_button_withIconLeft__3Y66a \\"><span class=\\"InlineButton_icon__GHhTr\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 \\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\" role=\\"img\\"><path d=\\"M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z\\"></path></svg></span>Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres for ikon med posisjon left.</button>"`;
+exports[`Image storyshots Tests / InlineButton With Long Text And Icon 1`] = `"<button class=\\"InlineButton_button__2taCK InlineButton_button_withIconLeft__3Y66a  \\"><span class=\\"InlineButton_icon__GHhTr\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 \\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\" role=\\"img\\"><path d=\\"M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z\\"></path></svg></span>Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres for ikon med posisjon left.</button>"`;
 
-exports[`Image storyshots Tests / InlineButton With Ref 1`] = `"<button class=\\"InlineButton_button__2taCK  \\" id=\\"dummyId\\">Legg til rapport</button>"`;
+exports[`Image storyshots Tests / InlineButton With Ref 1`] = `"<button class=\\"InlineButton_button__2taCK   \\" id=\\"dummyId\\">Legg til rapport</button>"`;
 
-exports[`Image storyshots Tests / InlineButton With Tabindex 1`] = `"<button class=\\"InlineButton_button__2taCK  \\" tabindex=\\"-1\\">Legg til rapport</button>"`;
+exports[`Image storyshots Tests / InlineButton With Tabindex 1`] = `"<button class=\\"InlineButton_button__2taCK   \\" tabindex=\\"-1\\">Legg til rapport</button>"`;
 
 exports[`Image storyshots Tests / MegaButton Mega Button As External Link 1`] = `"<a class=\\"MegaButton_button__1aSH0 \\" href=\\"https://www.skatteetaten.no\\" role=\\"button\\">Klikk her<span class=\\"MegaButton_icon__3cuzU\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 MegaButton_svg__2I3wW\\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\" role=\\"img\\"><path d=\\"M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7Zm5 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z\\"></path></svg></span></a>"`;
 

@@ -2,40 +2,41 @@ import React from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-type ButtonHTMLAttributes = Pick<
-  React.ComponentPropsWithoutRef<'button'>,
-  'tabIndex' | 'onClick' | 'onBlur' | 'onFocus' | 'accessKey'
+export type RequiredMegaButtonHTMLAttributes = Pick<
+  React.HTMLProps<HTMLButtonElement | HTMLAnchorElement>,
+  'accessKey' | 'tabIndex' | 'onBlur' | 'onClick' | 'onFocus'
 >;
 
-type AnchorHTMLAttributes = Pick<
-  React.ComponentPropsWithoutRef<'a'>,
-  'tabIndex' | 'onClick' | 'onBlur' | 'onFocus' | 'accessKey'
->;
+// TODO FRONT-930 - Pick or Partial is failing to get the correct type through - requires override in story
+type MegaButtonHTMLAttributes = Partial<RequiredMegaButtonHTMLAttributes>;
 
-type MegaButtonPropsWithHref = Pick<
-  React.ComponentPropsWithoutRef<'a'>,
-  'href'
-> & { disabled?: never };
-
-export type MegaButtonPropsWithDisabled = Pick<
-  React.ComponentPropsWithoutRef<'button'>,
-  'disabled'
-> & { href?: never };
-
-export type MegaButtonPropsHTMLAttributes = ButtonHTMLAttributes &
-  AnchorHTMLAttributes;
-
-export interface MegaButtonComponentProps
-  extends MegaButtonPropsHTMLAttributes {
-  /** id-attribute til tilleggstekst (en eller flere) html-elementer */
+interface MegaButtonPropsHTMLAttributes extends MegaButtonHTMLAttributes {
   ariaDescribedby?: string;
-  /** Ikon som indikerer ekstern lenke */
+  onBlur?: React.FocusEventHandler<HTMLButtonElement>;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  onFocus?: React.FocusEventHandler<HTMLButtonElement>;
+}
+
+export type MegaButtonDiscriminatedProp =
+  | {
+      /** Hvis det er ønskelig å vise knappen som en lenke. Setter strengen til href attributtet på lenken. */
+      href?: string;
+      disabled?: never;
+    }
+  | {
+      disabled?: boolean;
+      /** Hvis det er ønskelig å vise knappen som en lenke. Setter strengen til href attributtet på lenken. */
+      href?: never;
+    };
+
+interface MegaButtonComponentCommonProps
+  extends MegaButtonPropsHTMLAttributes,
+    BaseProps {
+  /** Viser ikon som indikerer at knappen åpner en ekstern tjeneste. Brukes hvis knappen er en lenke til en side på et annet domene. */
   isExternal?: boolean;
   /** Tekst på knapp */
   children: string;
 }
 
-// TODO Endre fra typescript intersection slik at de dukker opp riktig under Storybook Docs.
-export type MegaButtonProps = BaseProps &
-  MegaButtonComponentProps &
-  (MegaButtonPropsWithDisabled | MegaButtonPropsWithHref);
+export type MegaButtonProps = MegaButtonComponentCommonProps &
+  MegaButtonDiscriminatedProp;

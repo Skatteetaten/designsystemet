@@ -30,14 +30,15 @@ export const SystemIcon: Story<IconProps> = Template.bind({});
 export const ThemeIcon: Story<IconProps> = Template.bind({});
 
 const commonArgTypes = {
-  // HTML
-  tabIndex: { table: { category: category.htmlAttribute } },
+  // Props
   title: {
     control: 'text',
     table: {
-      category: category.htmlAttribute,
+      category: category.props,
     },
   },
+  // HTML
+  tabIndex: { table: { category: category.htmlAttribute } },
   // Aria
   ariaLabel: { table: { category: category.aria } },
 };
@@ -78,7 +79,7 @@ SystemIcon.argTypes = {
     table: { category: category.props },
   },
   variant: {
-    name: 'variant ("systemIcon")',
+    name: 'variant',
     control: { type: null },
     table: {
       category: category.props,
@@ -113,7 +114,7 @@ ThemeIcon.argTypes = {
     table: { category: category.props },
   },
   variant: {
-    name: 'variant ("themeIcon")',
+    name: 'variant',
     control: { type: null },
     table: {
       category: category.props,

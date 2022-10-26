@@ -2,29 +2,28 @@ import React from 'react';
 
 import { BaseProps, Positon } from '@skatteetaten/ds-core-utils';
 
-type ButtonPropsHTMLAttributes = Pick<
-  React.ComponentPropsWithoutRef<'button'>,
-  'children' | 'disabled' | 'accessKey' | 'tabIndex' | 'onClick' | 'onBlur'
+// TODO FRONT-893 mangler onFocus
+type RequiredMegaButtonHTMLAttributes = Pick<
+  React.HTMLProps<HTMLButtonElement>,
+  'accessKey' | 'disabled' | 'tabIndex' | 'onBlur' | 'onClick' | 'onFocus'
 >;
+// TODO FRONT-930 - Pick or Partial is failing to get the correct type through - requires override in story
+type InlineButtonHTMLAttributes = Partial<RequiredMegaButtonHTMLAttributes>;
 
-interface InlineButtonComponentProps extends ButtonPropsHTMLAttributes {
-  /** Tekst på knappen. */
-  children: string;
-  /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
-  svgPath?: React.ReactElement;
-  /** Posisjonen til ikonet: left, right. */
-  iconPosition?: Positon;
-  /** aria-attributt som henviser til id som har tilleggsbeskrivelse */
+interface InlineButtonPropsHTMLAttributes extends InlineButtonHTMLAttributes {
   ariaDescribedby?: string;
-  /** Når det klikkes på button-element  */
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
-  /** Når button-element får focus */
-  onFocus?: React.FocusEventHandler<HTMLButtonElement>;
-  /** Når button-element mister focus */
   onBlur?: React.FocusEventHandler<HTMLButtonElement>;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  onFocus?: React.FocusEventHandler<HTMLButtonElement>;
 }
 
-// TODO FRONT-893 - legge på flere props beskrivelser
 export interface InlineButtonProps
-  extends BaseProps,
-    InlineButtonComponentProps {}
+  extends InlineButtonPropsHTMLAttributes,
+    BaseProps {
+  /** Posisjonen til ikonet: 'left', 'right'. */
+  iconPosition?: Positon;
+  /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
+  svgPath?: React.ReactElement;
+  /** Tekst på knapp. */
+  children: string;
+}

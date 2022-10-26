@@ -43,20 +43,23 @@ export default {
     },
     // HTML
     accessKey: {
-      control: 'text',
       table: {
+        type: { summary: 'string' },
         category: category.htmlAttribute,
         defaultValue: { summary: '' },
       },
     },
     disabled: {
-      control: 'boolean',
+      control: 'radio',
       table: {
+        type: { summary: 'boolean' },
         category: category.htmlAttribute,
         defaultValue: { summary: getCommonDisabledDefault() },
       },
     },
-    tabIndex: { table: { category: category.htmlAttribute } },
+    tabIndex: {
+      table: { type: { summary: 'number' }, category: category.htmlAttribute },
+    },
     // Aria
     ariaDescribedby: { table: { category: category.aria } },
     // Events
@@ -104,6 +107,7 @@ InlineButtonDefault.args = {
 };
 InlineButtonDefault.parameters = buttonDefaultParameters;
 
+// TODO FRONT-893 with icon trenger ikke å være egen story - denne controllen kan gis i default story
 export const InlineButtonIcon = TemplateDefault.bind({});
 InlineButtonIcon.storyName = 'With icon';
 InlineButtonIcon.args = {

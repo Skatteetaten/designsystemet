@@ -16,6 +16,7 @@ import { Story, Meta } from '@storybook/react';
 import { category, htmlEventDescription } from '../../.storybook/helpers';
 import './classnames.stories.css';
 
+// TODO FRONT-893 - komplett list med ikoner
 const iconList = {
   Send: SendSVGpath,
   Edit: EditSVGpath,
@@ -44,8 +45,8 @@ export default {
     },
     // HTML
     accessKey: {
-      control: 'text',
       table: {
+        type: { summary: 'string' },
         category: category.htmlAttribute,
         defaultValue: { summary: '' },
       },
@@ -53,11 +54,14 @@ export default {
     disabled: {
       control: 'boolean',
       table: {
+        type: { summary: 'boolean' },
         category: category.htmlAttribute,
         defaultValue: { summary: getCommonDisabledDefault() },
       },
     },
-    tabIndex: { table: { category: category.htmlAttribute } },
+    tabIndex: {
+      table: { type: { summary: 'number' }, category: category.htmlAttribute },
+    },
     // Aria
     ariaDescribedby: { table: { category: category.aria } },
     // Events

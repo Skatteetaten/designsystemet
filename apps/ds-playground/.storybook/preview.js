@@ -34,6 +34,8 @@ const DSViewports = {
   ...makeViewPort('--breakpoint-l'),
   ...makeViewPort('--breakpoint-xl'),
 };
+
+// TODO FRONT-930 - se etter mulighet til å ha fast sortering på "categories" i argsTable
 export const parameters = {
   controls: { sort: 'alpha' },
   viewport: { viewports: DSViewports },
@@ -41,12 +43,13 @@ export const parameters = {
 
 export const argTypes = {
   key: {
+    control: 'text',
     description:
       'Spesielt string attributt som brukes for å iterere gjennom elementer',
     table: { type: { summary: 'string' }, category: category.baseProps },
   },
   ref: {
-    description: 'React ref sendt gjennom React.forwardeef',
+    description: 'React ref sendt gjennom React.forwardref',
     table: {
       type: { summary: 'React.ForwardedRef' },
       category: category.baseProps,
@@ -55,7 +58,7 @@ export const argTypes = {
   className: {
     control: 'select',
     options: ['', 'dummyClassname'],
-    description: 'Verdien appended til designsystemets stilsett for komponent',
+    description: 'html class til noden',
     table: {
       type: { summary: 'string' },
       category: category.baseProps,
@@ -63,11 +66,13 @@ export const argTypes = {
     },
   },
   'data-testid': {
+    control: 'text',
     description: 'data attribute som brukes for tester',
     table: { type: { summary: 'string' }, category: category.baseProps },
   },
   id: {
-    description: 'id attribute',
+    control: 'text',
+    description: 'unik id attribute',
     table: { type: { summary: 'string' }, category: category.baseProps },
   },
 };

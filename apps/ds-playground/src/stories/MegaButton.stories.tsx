@@ -13,40 +13,36 @@ export default {
     // Props
     children: { table: { category: category.props } },
     isExternal: {
-      defaultValue: false,
       control: 'boolean',
-      description:
-        'Viser ikon som indikerer at knappen åpner en ekstern tjeneste. Brukes hvis knappen  er en lenke til en side på et annet domene.',
       table: {
         category: category.props,
       },
     },
     // HTML
     accessKey: {
-      control: 'text',
       table: {
+        type: { summary: 'string' },
         category: category.htmlAttribute,
         defaultValue: { summary: '' },
       },
     },
     disabled: {
-      description:
-        'Hvis knapp er disabled så overskrives variant-stilene med :disable stil',
       control: 'boolean',
       table: {
+        type: { summary: 'boolean' },
         category: category.htmlAttribute,
         defaultValue: { summary: getCommonDisabledDefault() },
       },
     },
     href: {
-      description: 'Gjør det mulig å bruke knappen som en lenke',
       control: 'text',
-      table: { category: category.props },
+      table: { category: category.htmlAttribute },
     },
-    tabIndex: { table: { category: category.htmlAttribute } },
+    tabIndex: {
+      table: { type: { summary: 'number' }, category: category.htmlAttribute },
+    },
     // Aria
     ariaDescribedby: { table: { category: category.aria } },
-
     // Events
     onClick: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },

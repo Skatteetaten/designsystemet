@@ -10,7 +10,6 @@ interface IconComponentCommonProps extends SvgHTMLAttributes, BaseProps {
   svgPath: React.ReactElement;
 }
 
-// TODO FRONT-930 skrive om aria-* til camelCase
 export type IconDiscriminatedTitleProps =
   | {
       /** Oppretter et title-element nested i svg. Dette medfører tooltip. */
@@ -24,6 +23,7 @@ export type IconDiscriminatedTitleProps =
       /** Hvis svg-en er meningsbærende og ikke bare pynt/dekor skal elementet ha ariaLabel. Merk at aria-label vises kun når "title"-prop ikke allerede er oppgitt. */
       ariaLabel?: string;
     };
+
 export type IconDiscriminatedVariantProps =
   | {
       /**
