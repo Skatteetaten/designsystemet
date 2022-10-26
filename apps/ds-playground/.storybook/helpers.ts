@@ -30,6 +30,14 @@ export const htmlEventDescription = {
 };
  */
 
-export const getArgsWithCategory = (): { [key: string]: undefined } => {
+interface ReturnedInterface {
+  [key: string]: string | undefined;
+}
+
+export const getArgsWithCategory = <T>(args: {
+  categories: Array<string>;
+  storyProps: T;
+}): ReturnedInterface => {
+  console.log('args', args);
   return { ettellerannet: undefined };
 };

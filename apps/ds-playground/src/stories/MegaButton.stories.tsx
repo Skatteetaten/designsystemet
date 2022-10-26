@@ -71,17 +71,18 @@ const TemplateDefault: ComponentStory<typeof MegaButton> = (args) => (
 
 export const Default = TemplateDefault.bind({});
 
+const myResult = getArgsWithCategory<StoryType>({
+  categories: [
+    category.props,
+    category.htmlAttribute,
+    category.aria,
+    category.event,
+  ],
+  storyProps: MegaButtonStory,
+});
 console.log(Default.args);
 const baseArgs = {
-  ...getArgsWithCategory<StoryType>({
-    categories: [
-      category.props,
-      category.htmlAttribute,
-      category.aria,
-      category.event,
-    ],
-    storyProps: MegaButtonStory,
-  }),
+  ...myResult,
   children: 'Klikk her',
 };
 
