@@ -141,7 +141,6 @@ const baseArgs = {
 ButtonDefault.args = {
   ...baseArgs,
   variant: 'primary',
-  disabled: false,
 };
 ButtonDefault.parameters = buttonDefaultParameters;
 

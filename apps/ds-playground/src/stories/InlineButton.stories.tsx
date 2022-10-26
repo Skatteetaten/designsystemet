@@ -50,7 +50,7 @@ export default {
       },
     },
     disabled: {
-      control: 'radio',
+      control: 'boolean',
       table: {
         type: { summary: 'boolean' },
         category: category.htmlAttribute,
