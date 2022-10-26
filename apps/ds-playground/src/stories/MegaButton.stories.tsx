@@ -80,13 +80,11 @@ const myResult = getArgsWithCategory({
   ],
   storyProps: MegaButtonStory as StoryPropsPartialInterface,
 });
-console.log(Default.args);
 const baseArgs = {
   ...myResult,
   children: 'Klikk her',
 };
 
-// console.log('baseArgs er  ' + JSON.stringify(baseArgs));
 const designUrlTilstander =
   'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1717%3A8893';
 const designUrlLuft =
