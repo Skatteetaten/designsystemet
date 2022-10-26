@@ -43,6 +43,7 @@ export default {
     },
     // HTML
     accessKey: {
+      control: 'text',
       table: {
         type: { summary: 'string' },
         category: category.htmlAttribute,
@@ -58,6 +59,7 @@ export default {
       },
     },
     tabIndex: {
+      control: 'text',
       table: { type: { summary: 'number' }, category: category.htmlAttribute },
     },
     // Aria
