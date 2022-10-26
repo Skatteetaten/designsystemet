@@ -2,12 +2,11 @@ import React from 'react';
 
 import { BaseProps, Positon } from '@skatteetaten/ds-core-utils';
 
-// TODO FRONT-893 mangler onFocus
 type RequiredMegaButtonHTMLAttributes = Pick<
   React.HTMLProps<HTMLButtonElement>,
   'accessKey' | 'disabled' | 'tabIndex' | 'onBlur' | 'onClick' | 'onFocus'
 >;
-// TODO FRONT-930 - Pick or Partial is failing to get the correct type through - requires override in story
+
 type InlineButtonHTMLAttributes = Partial<RequiredMegaButtonHTMLAttributes>;
 
 interface InlineButtonPropsHTMLAttributes extends InlineButtonHTMLAttributes {

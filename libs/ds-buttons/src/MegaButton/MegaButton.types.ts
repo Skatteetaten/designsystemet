@@ -7,7 +7,6 @@ export type RequiredMegaButtonHTMLAttributes = Pick<
   'accessKey' | 'tabIndex' | 'onBlur' | 'onClick' | 'onFocus'
 >;
 
-// TODO FRONT-930 - Pick or Partial is failing to get the correct type through - requires override in story
 type MegaButtonHTMLAttributes = Partial<RequiredMegaButtonHTMLAttributes>;
 
 interface MegaButtonPropsHTMLAttributes extends MegaButtonHTMLAttributes {
@@ -29,7 +28,7 @@ export type MegaButtonDiscriminatedProp =
       href?: never;
     };
 
-interface MegaButtonComponentCommonProps
+export interface MegaButtonComponentCommonProps
   extends MegaButtonPropsHTMLAttributes,
     BaseProps {
   /** Viser ikon som indikerer at knappen åpner en ekstern tjeneste. Brukes hvis knappen er en lenke til en side på et annet domene. */

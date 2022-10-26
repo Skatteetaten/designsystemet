@@ -7,7 +7,6 @@ type RequiredButtonHTMLAttributes = Pick<
   'accessKey' | 'disabled' | 'tabIndex' | 'onBlur' | 'onClick' | 'onFocus'
 >;
 
-// TODO FRONT-930 - Pick or Partial is failing to get the correct type through - requires override in story
 type ButtonHTMLAttributes = Partial<RequiredButtonHTMLAttributes>;
 
 interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
