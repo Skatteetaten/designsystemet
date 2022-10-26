@@ -1,16 +1,17 @@
-import { MegaButton } from '@skatteetaten/ds-buttons';
+import { MegaButton, MegaButtonProps } from '@skatteetaten/ds-buttons';
 import { getCommonDisabledDefault } from '@skatteetaten/ds-core-utils';
 import { action } from '@storybook/addon-actions';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentStory, ComponentMeta, Meta } from '@storybook/react';
 
 import {
   category,
   htmlEventDescription,
   getArgsWithCategory,
+  DefaultArgTypes,
 } from '../../.storybook/helpers';
 import './classnames.stories.css';
 
-const MegaButtonStory = {
+const MegaButtonStory: Meta<MegaButtonProps> = {
   component: MegaButton,
   title: 'Design System/MegaButton',
   argTypes: {
@@ -60,7 +61,6 @@ const MegaButtonStory = {
     id: undefined,
   },
 };
-export type StoryType = typeof MegaButtonStory;
 export default MegaButtonStory as ComponentMeta<typeof MegaButton>;
 
 const TemplateDefault: ComponentStory<typeof MegaButton> = (args) => (
@@ -71,7 +71,7 @@ const TemplateDefault: ComponentStory<typeof MegaButton> = (args) => (
 
 export const Default = TemplateDefault.bind({});
 
-const myResult = getArgsWithCategory<StoryType>({
+const myResult = getArgsWithCategory<MegaButtonProps & DefaultArgTypes>({
   categories: [
     category.props,
     category.htmlAttribute,

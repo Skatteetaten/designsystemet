@@ -1,3 +1,5 @@
+import { AnyFramework, BaseAnnotations } from '@storybook/csf';
+import { Meta, ArgTypes } from '@storybook/react';
 export const category = {
   baseProps: 'BaseProps',
   props: 'Props',
@@ -5,39 +7,45 @@ export const category = {
   aria: 'Aria-attribute',
   event: 'Event',
 };
-export const htmlEventDescription = {
+
+export type DefaultArgTypes = {
+  table?: {
+    category: string;
+  };
+  control?: boolean;
+};
+
+export const htmlEventDescription: DefaultArgTypes = {
   table: { category: category.event },
   control: false,
 };
-
-/* export const getArgsWithCategory = <T>({
-  storyProps,
-  categories,
-}: {
-  storyProps: any;
-  categories: string[];
-}): { [key: string]: undefined } => {
-  const argsObj: { [key: string]: undefined } = {};
-  categories.forEach((e) => {
-    const foundcategory = Object.entries(storyProps.argTypes).find(
-      ([, value]) => {
-        return value.table.category === e;
-      }
-    );
-    if (foundcategory) argsObj[foundcategory[0]] = undefined;
-  });
-  return argsObj;
-};
- */
 
 interface ReturnedInterface {
   [key: string]: string | undefined;
 }
 
-export const getArgsWithCategory = <T>(args: {
+export const getArgsWithCategory = <T extends DefaultArgTypes>(args: {
   categories: Array<string>;
-  storyProps: T;
+  storyProps: Meta<T>;
 }): ReturnedInterface => {
-  console.log('args', args);
-  return { ettellerannet: undefined };
+  const typedStoryProps = args.storyProps as BaseAnnotations<AnyFramework, T>;
+
+  const entries = typedStoryProps['argTypes']
+    ? Object.entries(typedStoryProps['argTypes'])
+    : [];
+
+  const argsObj: ReturnedInterface = {};
+  args.categories.forEach((category) => {
+    const foundcategory = entries.find(([, value]) => {
+      if ((value as Partial<ArgTypes<T>>).table) {
+        return value?.table.category === category;
+      } else {
+        return false;
+      }
+    });
+    if (foundcategory) {
+      argsObj[foundcategory[0]] = undefined;
+    }
+  });
+  return argsObj;
 };
