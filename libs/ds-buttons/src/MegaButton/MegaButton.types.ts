@@ -12,9 +12,9 @@ type MegaButtonHTMLAttributes = Partial<RequiredMegaButtonHTMLAttributes>;
 
 interface MegaButtonPropsHTMLAttributes extends MegaButtonHTMLAttributes {
   ariaDescribedby?: string;
-  onBlur?: React.FocusEventHandler<HTMLButtonElement>;
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
-  onFocus?: React.FocusEventHandler<HTMLButtonElement>;
+  onBlur?: React.FocusEventHandler<HTMLButtonElement | HTMLAnchorElement>;
+  onClick?: React.MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>;
+  onFocus?: React.FocusEventHandler<HTMLButtonElement | HTMLAnchorElement>;
 }
 
 export type MegaButtonDiscriminatedProp =
