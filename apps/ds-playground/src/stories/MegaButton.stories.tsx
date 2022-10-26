@@ -7,7 +7,7 @@ import {
   category,
   htmlEventDescription,
   getArgsWithCategory,
-  DefaultArgTypes,
+  StoryPropsPartialInterface,
 } from '../../.storybook/helpers';
 import './classnames.stories.css';
 
@@ -71,14 +71,14 @@ const TemplateDefault: ComponentStory<typeof MegaButton> = (args) => (
 
 export const Default = TemplateDefault.bind({});
 
-const myResult = getArgsWithCategory<MegaButtonProps & DefaultArgTypes>({
+const myResult = getArgsWithCategory({
   categories: [
     category.props,
     category.htmlAttribute,
     category.aria,
     category.event,
   ],
-  storyProps: MegaButtonStory,
+  storyProps: MegaButtonStory as StoryPropsPartialInterface,
 });
 console.log(Default.args);
 const baseArgs = {
