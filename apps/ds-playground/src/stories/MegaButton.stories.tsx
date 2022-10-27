@@ -1,58 +1,54 @@
 import { MegaButton } from '@skatteetaten/ds-buttons';
+import { getCommonDisabledDefault } from '@skatteetaten/ds-core-utils';
 import { action } from '@storybook/addon-actions';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
+import { category, htmlEventDescription } from '../../.storybook/helpers';
 import './classnames.stories.css';
 
 export default {
   component: MegaButton,
   title: 'Design System/MegaButton',
-  decorators: [
-    // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-    (Story) => <div style={{ margin: '1em' }}>{Story()}</div>,
-  ],
   argTypes: {
-    disabled: {
-      description:
-        'Hvis knapp er disabled så overskrives variant-stilene med :disable stil',
+    // Props
+    children: { table: { category: category.props } },
+    isExternal: {
       control: 'boolean',
-      table: { defaultValue: { summary: 'false' } },
+      table: {
+        category: category.props,
+      },
     },
-    children: {
-      description: 'Tekst på knapp',
+    // HTML
+    accessKey: {
       control: 'text',
-      table: { defaultValue: { summary: '' } },
+      table: {
+        type: { summary: 'string' },
+        category: category.htmlAttribute,
+        defaultValue: { summary: '' },
+      },
     },
-    className: {
-      control: 'select',
-      options: ['', 'buttonClassnameDark', 'buttonClassnameLight'],
-      description:
-        'Verdien appended til designsystemets stilsett for komponent',
-      table: { defaultValue: { summary: '' } },
+    disabled: {
+      control: 'boolean',
+      table: {
+        type: { summary: 'boolean' },
+        category: category.htmlAttribute,
+        defaultValue: { summary: getCommonDisabledDefault() },
+      },
     },
     href: {
-      description: 'Gjør det mulig å bruke knappen som en lenke',
       control: 'text',
-      table: { defaultValue: { summary: '' } },
-    },
-    isExternal: {
-      defaultValue: false,
-      control: 'boolean',
-      description:
-        'Viser ikon som indikerer at knappen åpner en ekstern tjeneste. Brukes hvis knappen  er en lenke til en side på et annet domene.',
+      table: { category: category.htmlAttribute },
     },
     tabIndex: {
       control: 'text',
-      table: { defaultValue: { summary: '' } },
+      table: { type: { summary: 'number' }, category: category.htmlAttribute },
     },
-    accessKey: {
-      control: 'text',
-      table: { defaultValue: { summary: '' } },
-    },
-    'aria-describedby': {
-      control: 'text',
-      table: { defaultValue: { summary: '' } },
-    },
+    // Aria
+    ariaDescribedby: { table: { category: category.aria } },
+    // Events
+    onClick: { ...htmlEventDescription },
+    onFocus: { ...htmlEventDescription },
+    onBlur: { ...htmlEventDescription },
   },
 } as ComponentMeta<typeof MegaButton>;
 
@@ -67,6 +63,7 @@ export const Default = TemplateDefault.bind({});
 const baseArgs = {
   children: 'Klikk her',
 };
+
 const designUrlTilstander =
   'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1717%3A8893';
 const designUrlLuft =

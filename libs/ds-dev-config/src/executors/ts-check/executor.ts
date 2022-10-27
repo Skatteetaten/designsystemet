@@ -1,13 +1,20 @@
-const { spawn } = require('child_process');
-const { resolve, join } = require('path');
+import type { ExecutorContext } from '@nrwl/devkit';
+
+import { spawn } from 'child_process';
+import { resolve, join } from 'path';
+
+import { TsCheckExecutorSchema } from './schema';
 
 const executable = resolve('node_modules', '.bin', 'tsc');
 
-async function tscExecutor(options, context) {
+export default async function runExecutor(
+  options: TsCheckExecutorSchema,
+  context: ExecutorContext
+): Promise<{ success: boolean }> {
   const tsConfigs = Array.isArray(options.tsConfig)
     ? options.tsConfig
     : [options.tsConfig];
-  const libRoot = context.workspace.projects[context.projectName].root;
+  const libRoot = context.workspace.projects[context.projectName ?? ''].root;
 
   const executionCodes = await Promise.all(
     tsConfigs.map(
@@ -32,5 +39,3 @@ async function tscExecutor(options, context) {
 
   return { success };
 }
-
-exports.default = tscExecutor;

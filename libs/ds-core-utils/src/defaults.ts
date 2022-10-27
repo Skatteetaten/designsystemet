@@ -1,2 +1,2 @@
-export const getClassNameDefault = (): string => '';
-export const getDisabledDefault = (): boolean => false;
+export const getCommonClassNameDefault = (): string => '';
+export const getCommonDisabledDefault = (): boolean => false;

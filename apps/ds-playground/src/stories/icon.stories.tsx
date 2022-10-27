@@ -2,16 +2,14 @@ import { sizeArr } from '@skatteetaten/ds-core-utils';
 import {
   Icon,
   IconProps,
-  getClassNameDefault,
-  getRoleDefault,
-  getVariantDefault,
-  getViewBoxDefault,
-  getSizeDefault,
+  getIconVariantDefault,
+  getIconSizeDefault,
   SystemSVGPathsAndIcons,
   ThemeSVGPathsAndIcons,
 } from '@skatteetaten/ds-icons';
 import { Story, Meta } from '@storybook/react';
 
+import { category } from '../../.storybook/helpers';
 import { SystemIconLabels, SystemSVGPaths } from './utils/icon.systems';
 import { ThemeIconLabels, ThemeSVGPaths } from './utils/icon.themes';
 
@@ -32,53 +30,43 @@ export const SystemIcon: Story<IconProps> = Template.bind({});
 export const ThemeIcon: Story<IconProps> = Template.bind({});
 
 const commonArgTypes = {
-  id: {
-    control: 'text',
-  },
-  'data-testid': {
-    control: 'text',
-  },
-  className: {
-    control: 'select',
-    options: ['myIconClassname'],
-    table: {
-      defaultValue: { summary: getClassNameDefault() },
-    },
-  },
+  // Props
   title: {
     control: 'text',
-  },
-  'aria-label': { control: 'text' },
-  role: {
-    control: 'text',
     table: {
-      defaultValue: { summary: getRoleDefault() },
+      category: category.props,
     },
   },
+  // HTML
+  tabIndex: { table: { category: category.htmlAttribute } },
+  // Aria
+  ariaLabel: { table: { category: category.aria } },
 };
 
-const defaultSystemIconVariant = getVariantDefault();
+const iconDefaultParameters = {
+  design: [
+    {
+      name: 'Oversikt',
+      type: 'figma',
+      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1124%3A6643',
+    },
+    {
+      name: 'Størrelser og avstander',
+      type: 'figma',
+      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1124%3A6642',
+    },
+  ],
+};
+const defaultSystemIconVariant = getIconVariantDefault();
 
 SystemIcon.argTypes = {
   ...commonArgTypes,
-  variant: {
-    control: { type: 'text' },
-    table: {
-      disable: true,
-      defaultValue: { summary: defaultSystemIconVariant },
-    },
-  },
-  viewBox: {
-    control: 'text',
-    table: {
-      defaultValue: { summary: getViewBoxDefault(defaultSystemIconVariant) },
-    },
-  },
   size: {
     control: 'select',
     options: [...sizeArr].slice(1),
     table: {
-      defaultValue: { summary: getSizeDefault() },
+      category: category.props,
+      defaultValue: { summary: getIconSizeDefault() },
     },
   },
   svgPath: {
@@ -88,38 +76,33 @@ SystemIcon.argTypes = {
     },
     options: Object.keys(SystemSVGPaths),
     mapping: SystemSVGPaths,
+    table: { category: category.props },
+  },
+  variant: {
+    name: 'variant',
+    control: { type: null },
+    table: {
+      category: category.props,
+      defaultValue: { summary: defaultSystemIconVariant },
+    },
   },
 };
 
 SystemIcon.args = {
-  className: getClassNameDefault(),
-  role: getRoleDefault(),
-  variant: defaultSystemIconVariant,
-  viewBox: getViewBoxDefault(defaultSystemIconVariant),
-  size: getSizeDefault(),
+  size: getIconSizeDefault(),
   svgPath: SystemSVGPathsAndIcons.AccountChildSVGpath,
+  variant: defaultSystemIconVariant,
 };
+SystemIcon.parameters = iconDefaultParameters;
 
 ThemeIcon.argTypes = {
   ...commonArgTypes,
-  variant: {
-    control: { type: 'text' },
-    table: {
-      disable: true,
-      defaultValue: { summary: 'themeIcon' },
-    },
-  },
-  viewBox: {
-    control: 'text',
-    table: {
-      defaultValue: { summary: getViewBoxDefault('themeIcon') },
-    },
-  },
   size: {
     control: 'select',
     options: [sizeArr[2], sizeArr[3]],
     table: {
-      defaultValue: { summary: getSizeDefault() },
+      category: category.props,
+      defaultValue: { summary: getIconSizeDefault() },
     },
   },
   svgPath: {
@@ -128,14 +111,21 @@ ThemeIcon.argTypes = {
     control: {
       labels: ThemeIconLabels,
     },
+    table: { category: category.props },
+  },
+  variant: {
+    name: 'variant',
+    control: { type: null },
+    table: {
+      category: category.props,
+      defaultValue: { summary: 'themeIcon' },
+    },
   },
 };
 
 ThemeIcon.args = {
-  className: getClassNameDefault(),
-  role: getRoleDefault(),
-  variant: 'themeIcon',
-  viewBox: getViewBoxDefault('themeIcon'),
-  size: getSizeDefault(),
+  size: getIconSizeDefault(),
   svgPath: ThemeSVGPathsAndIcons.AndreForholdSVGpath,
+  variant: 'themeIcon',
 };
+ThemeIcon.parameters = iconDefaultParameters;

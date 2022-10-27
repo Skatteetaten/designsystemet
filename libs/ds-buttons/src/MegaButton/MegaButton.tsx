@@ -1,5 +1,9 @@
 import React, { forwardRef } from 'react';
 
+import {
+  getCommonClassNameDefault,
+  getCommonDisabledDefault,
+} from '@skatteetaten/ds-core-utils';
 import { ExternalIcon } from '@skatteetaten/ds-icons';
 
 import { MegaButtonProps } from './MegaButton.types';
@@ -13,18 +17,18 @@ export const MegaButton = forwardRef<
   (
     {
       id,
-      className = '',
-      children,
-      tabIndex,
-      href,
-      accessKey,
+      className = getCommonClassNameDefault(),
       'data-testid': dataTestId,
-      'aria-describedby': ariaDescribedby,
+      href,
       isExternal,
-      disabled,
-      onClick,
+      disabled = getCommonDisabledDefault(),
+      tabIndex,
+      accessKey,
+      ariaDescribedby,
       onBlur,
+      onClick,
       onFocus,
+      children,
     },
     ref
   ): JSX.Element => {
@@ -41,14 +45,14 @@ export const MegaButton = forwardRef<
         id={id}
         className={cssName}
         data-testid={dataTestId}
-        role={href ? 'button' : undefined}
         href={href}
         accessKey={accessKey}
-        aria-describedby={ariaDescribedby}
-        tabIndex={tabIndex}
         disabled={disabled}
-        onClick={onClick}
+        tabIndex={tabIndex}
+        aria-describedby={ariaDescribedby}
+        role={href ? 'button' : undefined}
         onBlur={onBlur}
+        onClick={onClick}
         onFocus={onFocus}
       >
         {children}

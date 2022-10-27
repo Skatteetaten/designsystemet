@@ -2,30 +2,27 @@ import React from 'react';
 
 import { BaseProps, Positon } from '@skatteetaten/ds-core-utils';
 
-type ButtonPropsHTMLAttributes = Pick<
-  React.ComponentPropsWithoutRef<'button'>,
-  | 'children'
-  | 'disabled'
-  // TODO FRONT-930 skrive om aria-* til camelCase
-  | 'aria-describedby'
-  | 'accessKey'
-  | 'tabIndex'
-  | 'onClick'
-  | 'onBlur'
-  | 'onFocus'
+type RequiredMegaButtonHTMLAttributes = Pick<
+  React.HTMLProps<HTMLButtonElement>,
+  'accessKey' | 'disabled' | 'tabIndex' | 'onBlur' | 'onClick' | 'onFocus'
 >;
 
-export interface InlineButtonComponentProps extends ButtonPropsHTMLAttributes {
-  children: string;
-  svgPath?: React.ReactElement;
-  iconPosition?: Positon;
+type InlineButtonHTMLAttributes = Partial<RequiredMegaButtonHTMLAttributes>;
+
+interface InlineButtonPropsHTMLAttributes extends InlineButtonHTMLAttributes {
+  ariaDescribedby?: string;
+  onBlur?: React.FocusEventHandler<HTMLButtonElement>;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  onFocus?: React.FocusEventHandler<HTMLButtonElement>;
 }
 
-// TODO FRONT-893 - legge på flere props beskrivelser
-/**
- * @param {string} children - Tekst på knappen.
- * @param {ReactElement} svgPath - (Optional) Ikon på knappen (Kan være et systemikon eller egendefinert).
- * @param {string} iconPosition - (Optional) Posisjonen til ikonet: left, right. (Default: left)
- * @param {tabIndex} tabIndex - (Optional)
- */
-export type InlineButtonProps = BaseProps & InlineButtonComponentProps;
+export interface InlineButtonProps
+  extends InlineButtonPropsHTMLAttributes,
+    BaseProps {
+  /** Posisjonen til ikonet: 'left', 'right'. */
+  iconPosition?: Positon;
+  /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
+  svgPath?: React.ReactElement;
+  /** Tekst på knapp. */
+  children: string;
+}

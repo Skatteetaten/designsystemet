@@ -2,51 +2,40 @@ import React from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-type ButtonHTMLAttributes = Pick<
-  React.ComponentPropsWithoutRef<'button'>,
-  | 'children'
-  | 'tabIndex'
-  | 'aria-describedby'
-  | 'onClick'
-  | 'onBlur'
-  | 'onFocus'
-  | 'accessKey'
+export type RequiredMegaButtonHTMLAttributes = Pick<
+  React.HTMLProps<HTMLButtonElement | HTMLAnchorElement>,
+  'accessKey' | 'tabIndex' | 'onBlur' | 'onClick' | 'onFocus'
 >;
 
-type AnchorHTMLAttributes = Pick<
-  React.ComponentPropsWithoutRef<'a'>,
-  | 'children'
-  | 'tabIndex'
-  | 'aria-describedby'
-  | 'onClick'
-  | 'onBlur'
-  | 'onFocus'
-  | 'accessKey'
->;
+type MegaButtonHTMLAttributes = Partial<RequiredMegaButtonHTMLAttributes>;
 
-type MegaButtonPropsWithHref = Pick<
-  React.ComponentPropsWithoutRef<'a'>,
-  'href'
-> & { disabled?: never };
+interface MegaButtonPropsHTMLAttributes extends MegaButtonHTMLAttributes {
+  ariaDescribedby?: string;
+  onBlur?: React.FocusEventHandler<HTMLButtonElement | HTMLAnchorElement>;
+  onClick?: React.MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>;
+  onFocus?: React.FocusEventHandler<HTMLButtonElement | HTMLAnchorElement>;
+}
 
-export type MegaButtonPropsWithDisabled = Pick<
-  React.ComponentPropsWithoutRef<'button'>,
-  'disabled'
-> & { href?: never };
+export type MegaButtonDiscriminatedProp =
+  | {
+      /** Hvis det er ønskelig å vise knappen som en lenke. Setter strengen til href attributtet på lenken. */
+      href?: string;
+      disabled?: never;
+    }
+  | {
+      disabled?: boolean;
+      /** Hvis det er ønskelig å vise knappen som en lenke. Setter strengen til href attributtet på lenken. */
+      href?: never;
+    };
 
-export type MegaButtonPropsHTMLAttributes = ButtonHTMLAttributes &
-  AnchorHTMLAttributes;
-
-export interface MegaButtonComponentProps
-  extends MegaButtonPropsHTMLAttributes {
-  /**
-   * @param {boolean} external - (Default: false) Ikon som indikerer ekstern lenke.
-   * @param {string} children - Tekst på knapp.
-   */
+export interface MegaButtonComponentCommonProps
+  extends MegaButtonPropsHTMLAttributes,
+    BaseProps {
+  /** Viser ikon som indikerer at knappen åpner en ekstern tjeneste. Brukes hvis knappen er en lenke til en side på et annet domene. */
   isExternal?: boolean;
+  /** Tekst på knapp */
   children: string;
 }
 
-export type MegaButtonProps = BaseProps &
-  MegaButtonComponentProps &
-  (MegaButtonPropsWithDisabled | MegaButtonPropsWithHref);
+export type MegaButtonProps = MegaButtonComponentCommonProps &
+  MegaButtonDiscriminatedProp;
