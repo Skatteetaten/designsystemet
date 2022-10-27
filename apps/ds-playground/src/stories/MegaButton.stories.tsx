@@ -1,17 +1,12 @@
-import { MegaButton, MegaButtonProps } from '@skatteetaten/ds-buttons';
+import { MegaButton } from '@skatteetaten/ds-buttons';
 import { getCommonDisabledDefault } from '@skatteetaten/ds-core-utils';
 import { action } from '@storybook/addon-actions';
-import { ComponentStory, ComponentMeta, Meta } from '@storybook/react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import {
-  category,
-  htmlEventDescription,
-  getArgsWithCategory,
-  StoryPropsPartialInterface,
-} from '../../.storybook/helpers';
+import { category, htmlEventDescription } from '../../.storybook/helpers';
 import './classnames.stories.css';
 
-const MegaButtonStory: Meta<MegaButtonProps> = {
+export default {
   component: MegaButton,
   title: 'Design System/MegaButton',
   argTypes: {
@@ -55,12 +50,7 @@ const MegaButtonStory: Meta<MegaButtonProps> = {
     onFocus: { ...htmlEventDescription },
     onBlur: { ...htmlEventDescription },
   },
-  args: {
-    // Assigner id som første verdi til args-objektet fordi vi ønsker baseProps vist først i tabellen
-    id: undefined,
-  },
-};
-export default MegaButtonStory as ComponentMeta<typeof MegaButton>;
+} as ComponentMeta<typeof MegaButton>;
 
 const TemplateDefault: ComponentStory<typeof MegaButton> = (args) => (
   <MegaButton {...args} onClick={action('KlikkEvent MegaButton')}>
@@ -70,17 +60,7 @@ const TemplateDefault: ComponentStory<typeof MegaButton> = (args) => (
 
 export const Default = TemplateDefault.bind({});
 
-const myResult = getArgsWithCategory({
-  categories: [
-    category.props,
-    category.htmlAttribute,
-    category.aria,
-    category.event,
-  ],
-  storyProps: MegaButtonStory as StoryPropsPartialInterface,
-});
 const baseArgs = {
-  ...myResult,
   children: 'Klikk her',
 };
 

@@ -35,7 +35,7 @@ const DSViewports = {
   ...makeViewPort('--breakpoint-xl'),
 };
 
-// TODO FRONT-930 - se etter mulighet til å ha fast sortering på "categories" i argsTable
+// TODO FRONT-930 - sortering på prop-kategorier i argsTable
 export const parameters = {
   controls: { sort: 'alpha' },
   viewport: { viewports: DSViewports },
