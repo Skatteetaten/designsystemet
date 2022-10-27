@@ -1,15 +1,14 @@
 /* eslint-disable jsx-a11y/no-access-key */
 import { forwardRef } from 'react';
 
+import {
+  getCommonDisabledDefault,
+  getCommonClassNameDefault,
+} from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
 import { ButtonProps } from './Button.types';
-import {
-  getVariantDefault,
-  getDisabledDefault,
-  getClassNameDefault,
-  getIconPropsDefault,
-} from './defaults';
+import { getButtonVariantDefault } from './defaults';
 
 import styles from './Button.module.scss';
 
@@ -17,22 +16,22 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       id,
-      className = getClassNameDefault(),
-      children,
-      variant = getVariantDefault(),
-      disabled = getDisabledDefault(),
-      iconProps,
-      tabIndex,
-      accessKey,
+      className = getCommonClassNameDefault(),
       'data-testid': dataTestId,
-      'aria-describedby': ariaDescribedby,
-      onClick,
+      svgPath,
+      variant = getButtonVariantDefault(),
+      accessKey,
+      disabled = getCommonDisabledDefault(),
+      tabIndex,
+      ariaDescribedby,
       onBlur,
+      onClick,
       onFocus,
+      children,
     },
     ref
   ): JSX.Element => {
-    const withIconClassName = iconProps ? `${styles.button_withIcon}` : '';
+    const withIconClassName = svgPath ? `${styles.button_withIcon}` : '';
     const concatenatedClassName = `${styles.button} ${
       styles[`button_${variant}`]
     } ${withIconClassName} ${className}`;
@@ -42,17 +41,17 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         id={id}
         className={concatenatedClassName}
         data-testid={dataTestId}
+        tabIndex={tabIndex}
+        accessKey={accessKey}
         disabled={disabled}
         aria-describedby={ariaDescribedby}
-        accessKey={accessKey}
-        tabIndex={tabIndex}
-        onClick={onClick}
         onBlur={onBlur}
+        onClick={onClick}
         onFocus={onFocus}
       >
-        {iconProps && (
+        {svgPath && (
           <span className={styles.icon}>
-            <Icon {...iconProps} />
+            <Icon svgPath={svgPath} />
           </span>
         )}
         {children}
@@ -62,9 +61,4 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 );
 Button.displayName = 'Button';
 
-export {
-  getVariantDefault,
-  getDisabledDefault,
-  getClassNameDefault,
-  getIconPropsDefault,
-};
+export { getButtonVariantDefault };

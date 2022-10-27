@@ -275,7 +275,7 @@ WithClassNameAndDisabled.parameters = {
 export const WithAriaDescribedby = Template.bind({});
 WithAriaDescribedby.args = {
   ...InlineButtonDefaults.args,
-  'aria-describedby': elementId,
+  ariaDescribedby: elementId,
 };
 WithAriaDescribedby.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {

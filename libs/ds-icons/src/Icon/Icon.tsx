@@ -1,12 +1,8 @@
 import { forwardRef, useId } from 'react';
 
-import {
-  getClassNameDefault,
-  getRoleDefault,
-  getVariantDefault,
-  getViewBoxDefault,
-  getSizeDefault,
-} from './defaults';
+import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+
+import { getIconVariantDefault, getIconSizeDefault } from './defaults';
 import { IconProps } from './Icon.types';
 
 import styles from './Icon.module.scss';
@@ -15,16 +11,14 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
   (
     {
       id,
-      className = getClassNameDefault(),
+      className = getCommonClassNameDefault(),
       'data-testid': dataTestId,
       title,
-      'aria-label': ariaLabel,
-      role = getRoleDefault(),
-      variant = getVariantDefault(),
-      viewBox = getViewBoxDefault(variant),
-      size = getSizeDefault(),
+      variant = getIconVariantDefault(),
+      size = getIconSizeDefault(),
       svgPath,
       tabIndex,
+      ariaLabel,
     },
     ref
   ): JSX.Element => {
@@ -38,13 +32,13 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
         id={id}
         className={`${styles[variant]} ${sizeClassName} ${className}`}
         data-testid={dataTestId}
-        aria-label={!title ? ariaLabel : undefined}
-        role={role}
-        viewBox={viewBox}
+        viewBox={variant === 'systemIcon' ? '0 0 24 24' : '0 0 48 48'}
         tabIndex={tabIndex}
+        focusable={false}
+        aria-label={!title ? ariaLabel : undefined}
         aria-labelledby={title ? titleId : undefined}
         aria-hidden={!title && !ariaLabel}
-        focusable={false}
+        role={'img'}
       >
         {title && <title id={titleId}>{title}</title>}
         {svgPath}
@@ -54,3 +48,5 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
 );
 
 Icon.displayName = 'Icon';
+
+export { getIconVariantDefault, getIconSizeDefault };

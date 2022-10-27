@@ -1,6 +1,10 @@
 import React from 'react';
 
-import { Icon, AccountChildSVGpath } from '@skatteetaten/ds-icons';
+import {
+  Icon,
+  AccountChildSVGpath,
+  AndreForholdSVGpath,
+} from '@skatteetaten/ds-icons';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ElementHandle } from 'puppeteer';
 
@@ -23,10 +27,9 @@ const Template: ComponentStory<typeof Icon> = (args) => (
 
 const wrapper = '[data-test-block]';
 
-export const IconDefaults = Template.bind({});
-
 // Når Icon instansieres, får den riktig defaults
-IconDefaults.parameters = {
+export const Defaults = Template.bind({});
+Defaults.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
 
@@ -61,15 +64,15 @@ IconDefaults.parameters = {
 };
 
 // Når Icon har en ref, så får svg elementet ref forwarded
-export const IconWithRef = Template.bind({});
-IconWithRef.args = {
+export const WithRef = Template.bind({});
+WithRef.args = {
   ref: (instance: SVGSVGElement | null): void => {
     if (instance) {
       instance.id = 'dummyIdForwardedFromRef';
     }
   },
 };
-IconWithRef.parameters = {
+WithRef.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const idAttribute = await page.$eval('svg', (el) => el.getAttribute('id'));
     expect(idAttribute).toBe('dummyIdForwardedFromRef');
@@ -79,12 +82,27 @@ IconWithRef.parameters = {
   },
 };
 
+// Når Icon har en id, så får svg elementet id forwarded
+export const WithId = Template.bind({});
+WithId.args = {
+  id: 'htmlid',
+};
+WithId.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const elementid = await page.$eval('svg', (el) => el.getAttribute('id'));
+    expect(elementid).toBe('htmlid');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
 // Når Icon har en custom className, får den riktig class attribute i tillegg til andre classer og stilen forandret seg
-export const IconWithClassname = Template.bind({});
-IconWithClassname.args = {
+export const WithClassname = Template.bind({});
+WithClassname.args = {
   className: 'myIconClassname',
 };
-IconWithClassname.parameters = {
+WithClassname.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const classNameAttribute = await page.$eval('svg', (el) =>
       el.getAttribute('class')
@@ -102,12 +120,12 @@ IconWithClassname.parameters = {
   },
 };
 
-// Når Icon har en title, får den riktig <title> tag, role og aria attributer
-export const IconWithTitle = Template.bind({});
-IconWithTitle.args = {
+// Når Icon har en title, får den riktig <title> tag og aria attributer
+export const WithTitle = Template.bind({});
+WithTitle.args = {
   title: 'Min custom title beskrivelse',
 };
-IconWithTitle.parameters = {
+WithTitle.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const element = await page.$(wrapper);
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
@@ -120,7 +138,6 @@ IconWithTitle.parameters = {
       'svg',
       (el, { ariaLabel, ariaLabelledby, ariaHidden }) => {
         return {
-          role: el.getAttribute('role'),
           ariaLabel: el.getAttribute(ariaLabel),
           ariaLabelledBy: el.getAttribute(ariaLabelledby),
           ariaHidden: el.getAttribute(ariaHidden),
@@ -130,7 +147,6 @@ IconWithTitle.parameters = {
       { ariaLabel, ariaLabelledby, ariaHidden }
     );
 
-    expect(ariaAttributes.role).toBe('img');
     expect(ariaAttributes.ariaHidden).toBe('false');
     expect(ariaAttributes.ariaLabel).toBeNull();
     expect(ariaAttributes.ariaLabelledBy).toBe(ariaAttributes.titleId);
@@ -138,20 +154,21 @@ IconWithTitle.parameters = {
   },
 };
 
-// Når Icon har en aria-label, får den ikke noe <title> tag, og riktig role og aria attributer
-export const IconWithAriaLabel = Template.bind({});
-IconWithAriaLabel.args = {
-  'aria-label': 'min custom aria-label beskrivelse',
+// Når Icon har en aria-label, får den ikke noe <title> tag, og riktig aria attributer
+export const WithAriaLabel = Template.bind({});
+
+WithAriaLabel.args = {
+  ariaLabel: 'min custom aria-label beskrivelse',
 };
-IconWithAriaLabel.parameters = {
+WithAriaLabel.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
+    const element = await page.$(wrapper);
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
 
     const ariaAttributes = await page.$eval(
       'svg',
       (el, { ariaLabel, ariaLabelledby, ariaHidden }) => {
         return {
-          role: el.getAttribute('role'),
           ariaLabel: el.getAttribute(ariaLabel),
           ariaLabelledBy: el.getAttribute(ariaLabelledby),
           ariaHidden: el.getAttribute(ariaHidden),
@@ -160,7 +177,10 @@ IconWithAriaLabel.parameters = {
       { ariaLabel, ariaLabelledby, ariaHidden }
     );
 
-    expect(ariaAttributes.role).toBe('img');
+    const textContent = await element?.getProperty('textContent');
+    const text = await textContent?.jsonValue();
+    expect(text).toBe('');
+
     expect(ariaAttributes.ariaHidden).toBe('false');
     expect(ariaAttributes.ariaLabel).toBe('min custom aria-label beskrivelse');
     expect(ariaAttributes.ariaLabelledBy).toBeNull();
@@ -168,18 +188,9 @@ IconWithAriaLabel.parameters = {
   },
 };
 
-export const IconWithRole = Template.bind({});
-IconWithRole.args = { role: 'custom-role' };
-IconWithRole.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const role = await page.$eval('svg', (el) => el.getAttribute('role'));
-    expect(role).toBe('custom-role');
-  },
-};
-
-export const IconWithTabIndex = Template.bind({});
-IconWithTabIndex.args = { tabIndex: -1 };
-IconWithTabIndex.parameters = {
+export const WithTabIndex = Template.bind({});
+WithTabIndex.args = { tabIndex: -1 };
+WithTabIndex.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const tabIndex = await page.$eval('svg', (el) =>
       el.getAttribute('tabindex')
@@ -188,11 +199,29 @@ IconWithTabIndex.parameters = {
   },
 };
 
-export const IconWithViewbox = Template.bind({});
-IconWithViewbox.args = { viewBox: '0 0 56 56' };
-IconWithViewbox.parameters = {
+// Når Icon instansieres med variant="themeIcon", får den riktig viewBox og className
+export const WithVariant = Template.bind({});
+WithVariant.args = { variant: 'themeIcon', svgPath: AndreForholdSVGpath };
+WithVariant.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
-    const viewBox = await page.$eval('svg', (el) => el.getAttribute('viewBox'));
-    expect(viewBox).toBe('0 0 56 56');
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+
+    const elementAttributes = await page.$eval('svg', (el) => {
+      return {
+        viewBox: el.getAttribute('viewBox'),
+        className: el.getAttribute('class'),
+      };
+    });
+
+    expect(elementAttributes.viewBox).toBe('0 0 48 48');
+    expect(elementAttributes.className).toContain('Icon_themeIcon_medium');
+
+    const image = await page.screenshot({
+      fullPage: true,
+      encoding: 'base64',
+    });
+
+    expect(innerHtml).toMatchSnapshot();
+    expect(image).toMatchImageSnapshot();
   },
 };

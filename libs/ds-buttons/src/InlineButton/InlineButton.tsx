@@ -1,9 +1,13 @@
+/* eslint-disable jsx-a11y/no-access-key */
 import { forwardRef } from 'react';
 
+import {
+  getCommonDisabledDefault,
+  getCommonClassNameDefault,
+} from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
-import { getDisabledDefault } from '../Button/defaults';
-import { getPositionDefault } from './defaults';
+import { getInlineButtonPositionDefault } from './defaults';
 import { InlineButtonProps } from './InlineButton.types';
 
 import styles from './InlineButton.module.scss';
@@ -12,30 +16,29 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
   (
     {
       id,
-      className,
-      children,
-      disabled = getDisabledDefault(),
-      svgPath,
-      iconPosition = getPositionDefault(),
+      className = getCommonClassNameDefault(),
       'data-testid': dataTestId,
-      'aria-describedby': ariaDescribedby,
+      iconPosition = getInlineButtonPositionDefault(),
+      svgPath,
       accessKey,
+      disabled = getCommonDisabledDefault(),
       tabIndex,
-      onClick,
+      ariaDescribedby,
       onBlur,
+      onClick,
       onFocus,
+      children,
     },
     ref
   ): JSX.Element => {
     const hasIconLeft = svgPath && iconPosition === 'left';
     const hasIconRight = svgPath && iconPosition === 'right';
-
-    const withIconClassName = hasIconLeft
-      ? `${styles.button_withIconLeft}`
-      : hasIconRight
-      ? `${styles.button_withIconRight}`
+    const withIconLeftClassName = hasIconLeft ? styles.button_withIconLeft : '';
+    const withIconRightClassName = hasIconRight
+      ? styles.button_withIconRight
       : '';
-    const concatenatedClassName = `${styles.button} ${withIconClassName} ${className}`;
+
+    const concatenatedClassName = `${styles.button} ${withIconLeftClassName} ${withIconRightClassName} ${className}`;
 
     return (
       <button
@@ -43,12 +46,12 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
         id={id}
         className={concatenatedClassName}
         data-testid={dataTestId}
-        disabled={disabled}
-        aria-describedby={ariaDescribedby}
         accessKey={accessKey}
+        disabled={disabled}
         tabIndex={tabIndex}
-        onClick={onClick}
+        aria-describedby={ariaDescribedby}
         onBlur={onBlur}
+        onClick={onClick}
         onFocus={onFocus}
       >
         {hasIconLeft && (
@@ -69,4 +72,4 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
 
 InlineButton.displayName = 'InlineButton';
 
-export { getPositionDefault } from './defaults';
+export { getInlineButtonPositionDefault };

@@ -2,7 +2,8 @@ import { useState } from 'react';
 
 import {
   MegaButton,
-  MegaButtonPropsWithDisabled,
+  MegaButtonComponentCommonProps,
+  MegaButtonDiscriminatedProp,
 } from '@skatteetaten/ds-buttons';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ElementHandle, Page, ScreenshotOptions } from 'puppeteer';
@@ -27,11 +28,15 @@ const Template: ComponentStory<typeof MegaButton> = (args) => (
   </div>
 );
 
+const defaultArgs: MegaButtonComponentCommonProps = {
+  children: defaultMegaButtonText,
+};
+
 // Når MegaButton instansieres, så får den riktige default-verdier og rendrer riktig i ulike tilstander
 export const MegaButtonDefaults = Template.bind({});
 MegaButtonDefaults.args = {
-  children: defaultMegaButtonText,
-} as MegaButtonPropsWithDisabled;
+  ...defaultArgs,
+};
 MegaButtonDefaults.parameters = {
   async puppeteerTest(page: Page): Promise<void> {
     const element = await page.$(wrapper);
@@ -110,7 +115,7 @@ MegaButtonWithRef.parameters = {
 // Når MegaButton har isExternal, så vises riktig ikon. tester også for riktig aria, role og viewbox for systemIcon som er brukt
 export const MegaButtonWithIcon = Template.bind({});
 MegaButtonWithIcon.args = {
-  ...MegaButtonDefaults.args,
+  ...defaultArgs,
   isExternal: true,
 };
 
@@ -141,9 +146,13 @@ MegaButtonWithIcon.parameters = {
 };
 
 export const MegaButtonDisabled = Template.bind({});
-MegaButtonDisabled.args = {
-  ...MegaButtonDefaults.args,
+const discriminatedProps: MegaButtonDiscriminatedProp = {
+  href: undefined,
   disabled: true,
+};
+MegaButtonDisabled.args = {
+  ...defaultArgs,
+  ...discriminatedProps,
 };
 MegaButtonDisabled.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -160,10 +169,11 @@ MegaButtonDisabled.parameters = {
 
 // Når MegaButton har et ikon og er disabled, så vises iconet og knapp er disabled
 export const MegaButtonDisabledWithIcon = Template.bind({});
+
 MegaButtonDisabledWithIcon.args = {
-  ...MegaButtonDefaults.args,
+  ...defaultArgs,
   isExternal: true,
-  disabled: true,
+  ...discriminatedProps,
 };
 MegaButtonDisabledWithIcon.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -181,14 +191,14 @@ MegaButtonDisabledWithIcon.parameters = {
 // Når MegaButton har en custom CSS, så vises custom stil
 export const MegaButtonClassNameChange = Template.bind({});
 MegaButtonClassNameChange.args = {
-  ...MegaButtonDefaults.args,
-  className: 'buttonClassnameLight ',
+  ...defaultArgs,
+  className: 'dummyClassname ',
 };
 MegaButtonClassNameChange.argTypes = {
   ...MegaButtonClassNameChange.argTypes,
   className: {
     control: 'select',
-    options: ['', 'buttonClassnameDark', 'buttonClassnameLight'],
+    options: ['', 'dummyClassname'],
     description: 'Verdien appended til designsystemets stilsett for komponent',
     table: { defaultValue: { summary: '' } },
   },
@@ -198,7 +208,7 @@ MegaButtonClassNameChange.parameters = {
     const classNameAttribute = await page.$eval(`${wrapper}> button`, (el) =>
       el.getAttribute('class')
     );
-    expect(classNameAttribute).toContain('buttonClassnameLight');
+    expect(classNameAttribute).toContain('dummyClassname');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -213,13 +223,13 @@ export const MegaButtonCustomCssAndDisabled = Template.bind({});
 MegaButtonCustomCssAndDisabled.args = {
   children: defaultMegaButtonText,
   disabled: true,
-  className: 'buttonClassnameLight',
+  className: 'dummyClassname',
 };
 MegaButtonCustomCssAndDisabled.argTypes = {
   ...MegaButtonCustomCssAndDisabled.argTypes,
   className: {
     control: 'select',
-    options: ['', 'buttonClassnameLight', 'buttonClassnameDark'],
+    options: ['', 'dummyClassname'],
     description: 'Verdien appended til designsystemets stilsett for komponent',
     table: { defaultValue: { summary: '' } },
   },
@@ -232,7 +242,7 @@ MegaButtonCustomCssAndDisabled.parameters = {
     const classNameAttribute = await page.$eval(`${wrapper} > button`, (el) =>
       el.getAttribute('class')
     );
-    expect(classNameAttribute).toContain('buttonClassnameLight');
+    expect(classNameAttribute).toContain('dummyClassname');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -245,8 +255,8 @@ MegaButtonCustomCssAndDisabled.parameters = {
 // Når MegaButton har aria attributer, så har button element aria-* satt
 export const MegaButtonWithArias = Template.bind({});
 MegaButtonWithArias.args = {
-  ...MegaButtonDefaults.args,
-  'aria-describedby': 'testid1234',
+  ...defaultArgs,
+  ariaDescribedby: 'testid1234',
 };
 MegaButtonWithArias.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -265,7 +275,7 @@ MegaButtonWithArias.parameters = {
 // Når MegaButton har en tabIndex, så har button-element tabIndex
 export const MegaButtonWithTabindex = Template.bind({});
 MegaButtonWithTabindex.args = {
-  ...MegaButtonDefaults.args,
+  ...defaultArgs,
   tabIndex: -1,
 };
 MegaButtonWithTabindex.parameters = {
@@ -282,7 +292,7 @@ MegaButtonWithTabindex.parameters = {
 
 export const MegaButtonWithLongText = Template.bind({});
 MegaButtonWithLongText.args = {
-  ...MegaButtonDefaults.args,
+  ...defaultArgs,
   children: 'Denne knappen har en veldig lang tekst. Så lang at den må brekke.',
 };
 MegaButtonWithLongText.parameters = {
@@ -299,7 +309,7 @@ MegaButtonWithLongText.parameters = {
 // og når det er et ikon skal ikonet plasseres løpende etter teksten
 export const MegaButtonWithLongTextAndIcon = Template.bind({});
 MegaButtonWithLongTextAndIcon.args = {
-  ...MegaButtonDefaults.args,
+  ...defaultArgs,
   isExternal: true,
   children:
     'Denne knappen har en veldig lang tekst. Icon skal da plasseres løpende etter tekster på siste linje',
@@ -332,7 +342,7 @@ const OnClickTemplate: ComponentStory<typeof MegaButton> = (args) => {
 };
 export const WithOnClick = OnClickTemplate.bind({});
 WithOnClick.args = {
-  ...MegaButtonDefaults.args,
+  ...defaultArgs,
 };
 WithOnClick.argTypes = {
   ...WithOnClick.argTypes,
