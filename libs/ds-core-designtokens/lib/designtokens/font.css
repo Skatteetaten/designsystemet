@@ -15,10 +15,8 @@
   --font-size-mega: 2.625rem;
 
   /* Font-weight */
-  --font-weight-light: 100;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
-  --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
   /* Default gjelder for unstyled innhold og scenarier vi ikke er klar over */
