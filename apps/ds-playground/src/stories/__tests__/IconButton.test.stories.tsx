@@ -54,14 +54,51 @@ Defaults.parameters = {
     expect(imageClicked).toMatchImageSnapshot();
   },
 };
+// Når IconButton har en ref, så får dom button elementet ref forwarded
+export const WithRef = Template.bind({});
+WithRef.args = {
+  ref: (instance: HTMLButtonElement | null): void => {
+    if (instance) {
+      instance.id = 'dummyIdForwardedFromRef';
+    }
+  },
+  svgPath: defaultSVGPath,
+};
+WithRef.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const refId = await page.$eval(`${wrapper} > button`, (el) => el.id);
+    expect(refId).toBe('dummyIdForwardedFromRef');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
+// Når IconButton har en id, så har button-elementet id'en satt
+export const WithId = Template.bind({});
+WithId.args = {
+  svgPath: defaultSVGPath,
+  id: '123',
+};
+WithId.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const id = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('id')
+    );
+    expect(id).toBe('123');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
 
 // Når IconButton har size small, så vises en liten knapp uten ramme som rendrer riktig i ulike tilstander
-export const Small = Template.bind({});
-Small.args = {
+export const SizeSmall = Template.bind({});
+SizeSmall.args = {
   svgPath: defaultSVGPath,
   size: 'small',
 };
-Small.parameters = {
+SizeSmall.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     const image = await page.screenshot(screenShotOptions);
@@ -90,12 +127,12 @@ Small.parameters = {
 };
 
 // Når IconButton har size large, så vises en stor knapp uten ramme som rendrer riktig i ulike tilstander
-export const Large = Template.bind({});
-Large.args = {
+export const SizeLarge = Template.bind({});
+SizeLarge.args = {
   svgPath: defaultSVGPath,
   size: 'large',
 };
-Large.parameters = {
+SizeLarge.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     const image = await page.screenshot(screenShotOptions);
@@ -246,46 +283,6 @@ Disabled.parameters = {
   },
 };
 
-// Når IconButton har size small og er disabled, så vises en liten knapp uten ramme i disabled stil
-export const SmallAndDisabled = Template.bind({});
-SmallAndDisabled.args = {
-  svgPath: defaultSVGPath,
-  size: 'small',
-  disabled: true,
-};
-SmallAndDisabled.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const isDisabled = await page.$(`${wrapper} > button[disabled]`);
-    expect(isDisabled).toBeTruthy();
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
-};
-
-// Når IconButton har size large og er disabled, så vises en stor knapp uten ramme i disabled stil
-export const LargeAndDisabled = Template.bind({});
-LargeAndDisabled.args = {
-  svgPath: defaultSVGPath,
-  size: 'large',
-  disabled: true,
-};
-LargeAndDisabled.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const isDisabled = await page.$(`${wrapper} > button[disabled]`);
-    expect(isDisabled).toBeTruthy();
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
-};
-
 // Når IconButton er disabled og outlined, så vises knappen med ramme i disabled stil
 export const DisabledWithOutline = Template.bind({});
 DisabledWithOutline.args = {
@@ -306,15 +303,55 @@ DisabledWithOutline.parameters = {
   },
 };
 
+// Når IconButton har size small og er disabled, så vises en liten knapp uten ramme i disabled stil
+export const SizeSmallAndDisabled = Template.bind({});
+SizeSmallAndDisabled.args = {
+  svgPath: defaultSVGPath,
+  size: 'small',
+  disabled: true,
+};
+SizeSmallAndDisabled.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const isDisabled = await page.$(`${wrapper} > button[disabled]`);
+    expect(isDisabled).toBeTruthy();
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+  },
+};
+
+// Når IconButton har size large og er disabled, så vises en stor knapp uten ramme i disabled stil
+export const SizeLargeAndDisabled = Template.bind({});
+SizeLargeAndDisabled.args = {
+  svgPath: defaultSVGPath,
+  size: 'large',
+  disabled: true,
+};
+SizeLargeAndDisabled.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const isDisabled = await page.$(`${wrapper} > button[disabled]`);
+    expect(isDisabled).toBeTruthy();
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+  },
+};
+
 // Når IconButton er small og disabled og outlined, så vises en liten knapp med ramme i disabled stil
-export const SmallDisabledWithOutline = Template.bind({});
-SmallDisabledWithOutline.args = {
+export const SizeSmallDisabledWithOutline = Template.bind({});
+SizeSmallDisabledWithOutline.args = {
   svgPath: defaultSVGPath,
   size: 'small',
   isOutlined: true,
   disabled: true,
 };
-SmallDisabledWithOutline.parameters = {
+SizeSmallDisabledWithOutline.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
     expect(isDisabled).toBeTruthy();
@@ -328,14 +365,14 @@ SmallDisabledWithOutline.parameters = {
 };
 
 // Når IconButton er large og disabled og outlined, så vises en stor knapp med ramme i disabled stil
-export const LargeDisabledWithOutline = Template.bind({});
-LargeDisabledWithOutline.args = {
+export const SizeLargeDisabledWithOutline = Template.bind({});
+SizeLargeDisabledWithOutline.args = {
   svgPath: defaultSVGPath,
   size: 'large',
   isOutlined: true,
   disabled: true,
 };
-LargeDisabledWithOutline.parameters = {
+SizeLargeDisabledWithOutline.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
     expect(isDisabled).toBeTruthy();
@@ -462,24 +499,6 @@ WithTabindex.parameters = {
   },
 };
 
-// Når IconButton har en id, så har button-elementet id'en satt
-export const WithId = Template.bind({});
-WithId.args = {
-  svgPath: defaultSVGPath,
-  id: '123',
-};
-WithId.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const id = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('id')
-    );
-    expect(id).toBe('123');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-  },
-};
-
 // Når IconButton har en accessKey, så har button-elementet accessKey satt
 export const WithAccessKey = Template.bind({});
 WithAccessKey.args = {
@@ -510,26 +529,6 @@ WithDataTestId.parameters = {
       el.getAttribute('data-testid')
     );
     expect(dataTestId).toBe('123 bell svg');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-  },
-};
-
-// Når IconButton har en ref, så får dom button elementet ref forwarded
-export const WithRef = Template.bind({});
-WithRef.args = {
-  ref: (instance: HTMLButtonElement | null): void => {
-    if (instance) {
-      instance.id = 'dummyIdForwardedFromRef';
-    }
-  },
-  svgPath: defaultSVGPath,
-};
-WithRef.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const refId = await page.$eval(`${wrapper} > button`, (el) => el.id);
-    expect(refId).toBe('dummyIdForwardedFromRef');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();

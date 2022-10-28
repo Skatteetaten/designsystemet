@@ -353,24 +353,6 @@ WithAriaDescribedby.parameters = {
   },
 };
 
-// Når Button har en tabIndex, så har button-element tabIndex
-export const WithTabindex = Template.bind({});
-WithTabindex.args = {
-  ...ButtonDefaults.args,
-  tabIndex: -1,
-};
-WithTabindex.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const tabIndex = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('tabindex')
-    );
-    expect(tabIndex).toBe('-1');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-  },
-};
-
 // Når Button har satt accessKey, så har accessKey en verdi
 export const WithAccesskey = Template.bind({});
 WithAccesskey.args = {
@@ -383,6 +365,24 @@ WithAccesskey.parameters = {
       el.getAttribute('accesskey')
     );
     expect(accesskey).toBe('s');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
+// Når Button har en tabIndex, så har button-element tabIndex
+export const WithTabindex = Template.bind({});
+WithTabindex.args = {
+  ...ButtonDefaults.args,
+  tabIndex: -1,
+};
+WithTabindex.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const tabIndex = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('tabindex')
+    );
+    expect(tabIndex).toBe('-1');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -425,6 +425,52 @@ WithLongTextAndIcon.parameters = {
 
     const image = await page.screenshot(screenShotOptions);
     expect(image).toMatchImageSnapshot();
+  },
+};
+
+// Når brukeren blurer knappen, så kalles funksjonen i onBlur prop.
+// onBlur-event endrer teksten på knappen.
+const OnBlurTemplate: ComponentStory<typeof Button> = (args) => {
+  const [buttText, setButtText] = useState(
+    'Klikk på knapp for å teste onBlur event'
+  );
+  return (
+    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+      <Button
+        {...args}
+        variant={args.variant}
+        onBlur={(): void => setButtText('Knapp er bluret')}
+      >
+        {buttText}
+      </Button>
+    </div>
+  );
+};
+export const WithOnBlur = OnBlurTemplate.bind({});
+WithOnBlur.args = {
+  ...ButtonDefaults.args,
+};
+WithOnBlur.argTypes = {
+  ...WithOnBlur.argTypes,
+  children: { control: false },
+  variant: { control: false },
+};
+WithOnBlur.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const buttonElement = await page.$(`${wrapper} > button`);
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+
+    await buttonElement?.focus();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
+    const imageBlured = await page.screenshot(screenShotOptions);
+    expect(imageBlured).toMatchImageSnapshot();
+
+    const element = await page.$(`${wrapper} > button`);
+    const textContent = await element?.getProperty('textContent');
+    const text = await textContent?.jsonValue();
+    expect(text).toBe('Knapp er bluret');
   },
 };
 
@@ -512,51 +558,5 @@ WithOnFocus.parameters = {
     const textContent = await element?.getProperty('textContent');
     const text = await textContent?.jsonValue();
     expect(text).toBe('Knapp har fått fokus');
-  },
-};
-
-// Når brukeren blurer knappen, så kalles funksjonen i onBlur prop.
-// onBlur-event endrer teksten på knappen.
-const OnBlurTemplate: ComponentStory<typeof Button> = (args) => {
-  const [buttText, setButtText] = useState(
-    'Klikk på knapp for å teste onBlur event'
-  );
-  return (
-    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
-      <Button
-        {...args}
-        variant={args.variant}
-        onBlur={(): void => setButtText('Knapp er bluret')}
-      >
-        {buttText}
-      </Button>
-    </div>
-  );
-};
-export const WithOnBlur = OnBlurTemplate.bind({});
-WithOnBlur.args = {
-  ...ButtonDefaults.args,
-};
-WithOnBlur.argTypes = {
-  ...WithOnBlur.argTypes,
-  children: { control: false },
-  variant: { control: false },
-};
-WithOnBlur.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const buttonElement = await page.$(`${wrapper} > button`);
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-
-    await buttonElement?.focus();
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
-    const imageBlured = await page.screenshot(screenShotOptions);
-    expect(imageBlured).toMatchImageSnapshot();
-
-    const element = await page.$(`${wrapper} > button`);
-    const textContent = await element?.getProperty('textContent');
-    const text = await textContent?.jsonValue();
-    expect(text).toBe('Knapp er bluret');
   },
 };

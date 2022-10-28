@@ -11,9 +11,9 @@ type IconButtonHTMLAttributes = Partial<RequiredIconButtonHTMLAttributes>;
 interface IconButtonPropsHTMLAttributes extends IconButtonHTMLAttributes {
   ariaLabel: string;
   ariaDescribedBy?: string;
-  onBlur?: FocusEventHandler<HTMLButtonElement | HTMLAnchorElement>;
-  onClick?: MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>;
-  onFocus?: FocusEventHandler<HTMLButtonElement | HTMLAnchorElement>;
+  onBlur?: FocusEventHandler<HTMLButtonElement>;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+  onFocus?: FocusEventHandler<HTMLButtonElement>;
 }
 
 export interface IconButtonProps
@@ -21,8 +21,8 @@ export interface IconButtonProps
     BaseProps {
   /** Om knappen har en ramme/sirkel. */
   isOutlined?: boolean;
-  /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
-  svgPath: ReactElement;
   /** Størrelse på knappen. */
   size?: Extract<Size, 'small' | 'medium' | 'large'>;
+  /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
+  svgPath: ReactElement;
 }

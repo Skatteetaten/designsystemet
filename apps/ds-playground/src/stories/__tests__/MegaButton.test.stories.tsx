@@ -34,6 +34,7 @@ const defaultArgs: MegaButtonComponentCommonProps = {
 
 // Når MegaButton instansieres, så får den riktige default-verdier og rendrer riktig i ulike tilstander
 export const MegaButtonDefaults = Template.bind({});
+MegaButtonDefaults.storyName = 'Defaults';
 MegaButtonDefaults.args = {
   ...defaultArgs,
 };
@@ -86,15 +87,14 @@ MegaButtonDefaults.parameters = {
       forcedPseudoClasses: ['active'],
     });
 
-    //await page.waitForTimeout(300);
     const imageActive = await page.screenshot(screenShotOptions);
     expect(imageActive).toMatchImageSnapshot();
   },
 };
 
 // Når MegaButton har en ref, så får dom button elementet ref forwarded
-export const MegaButtonWithRef = Template.bind({});
-MegaButtonWithRef.args = {
+export const WithRef = Template.bind({});
+WithRef.args = {
   ref: (instance: HTMLButtonElement | null): void => {
     if (instance) {
       instance.id = 'dummyIdForwardedFromRef';
@@ -102,7 +102,7 @@ MegaButtonWithRef.args = {
   },
   children: defaultMegaButtonText,
 };
-MegaButtonWithRef.parameters = {
+WithRef.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const refId = await page.$eval(`${wrapper} > button`, (el) => el.id);
     expect(refId).toBe('dummyIdForwardedFromRef');
@@ -112,14 +112,32 @@ MegaButtonWithRef.parameters = {
   },
 };
 
+// Når Button har en id, så har button-element id
+export const WithId = Template.bind({});
+WithId.args = {
+  ...MegaButtonDefaults.args,
+  id: 'htmlid',
+};
+WithId.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const elementid = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('id')
+    );
+    expect(elementid).toBe('htmlid');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
 // Når MegaButton har isExternal, så vises riktig ikon. tester også for riktig aria, role og viewbox for systemIcon som er brukt
-export const MegaButtonWithIcon = Template.bind({});
-MegaButtonWithIcon.args = {
+export const WithIcon = Template.bind({});
+WithIcon.args = {
   ...defaultArgs,
   isExternal: true,
 };
 
-MegaButtonWithIcon.parameters = {
+WithIcon.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const systemIconViewBox = '0 0 24 24';
     const svgAttributes = await page.$eval(`${wrapper} > button svg`, (el) => {
@@ -145,16 +163,16 @@ MegaButtonWithIcon.parameters = {
   },
 };
 
-export const MegaButtonDisabled = Template.bind({});
+export const Disabled = Template.bind({});
 const discriminatedProps: MegaButtonDiscriminatedProp = {
   href: undefined,
   disabled: true,
 };
-MegaButtonDisabled.args = {
+Disabled.args = {
   ...defaultArgs,
   ...discriminatedProps,
 };
-MegaButtonDisabled.parameters = {
+Disabled.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
     expect(isDisabled).toBeTruthy();
@@ -168,14 +186,14 @@ MegaButtonDisabled.parameters = {
 };
 
 // Når MegaButton har et ikon og er disabled, så vises iconet og knapp er disabled
-export const MegaButtonDisabledWithIcon = Template.bind({});
+export const DisabledWithIcon = Template.bind({});
 
-MegaButtonDisabledWithIcon.args = {
+DisabledWithIcon.args = {
   ...defaultArgs,
   isExternal: true,
   ...discriminatedProps,
 };
-MegaButtonDisabledWithIcon.parameters = {
+DisabledWithIcon.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -189,13 +207,13 @@ MegaButtonDisabledWithIcon.parameters = {
 };
 
 // Når MegaButton har en custom CSS, så vises custom stil
-export const MegaButtonClassNameChange = Template.bind({});
-MegaButtonClassNameChange.args = {
+export const WithCustomCSS = Template.bind({});
+WithCustomCSS.args = {
   ...defaultArgs,
   className: 'dummyClassname ',
 };
-MegaButtonClassNameChange.argTypes = {
-  ...MegaButtonClassNameChange.argTypes,
+WithCustomCSS.argTypes = {
+  ...WithCustomCSS.argTypes,
   className: {
     control: 'select',
     options: ['', 'dummyClassname'],
@@ -203,7 +221,7 @@ MegaButtonClassNameChange.argTypes = {
     table: { defaultValue: { summary: '' } },
   },
 };
-MegaButtonClassNameChange.parameters = {
+WithCustomCSS.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const classNameAttribute = await page.$eval(`${wrapper}> button`, (el) =>
       el.getAttribute('class')
@@ -219,14 +237,14 @@ MegaButtonClassNameChange.parameters = {
 };
 
 // Når MegaButton har en custom CSS og er disabled, så vises disabled stil med overskrivinger fra customCSS
-export const MegaButtonCustomCssAndDisabled = Template.bind({});
-MegaButtonCustomCssAndDisabled.args = {
+export const WithCustomCSSAndDisabled = Template.bind({});
+WithCustomCSSAndDisabled.args = {
   children: defaultMegaButtonText,
   disabled: true,
   className: 'dummyClassname',
 };
-MegaButtonCustomCssAndDisabled.argTypes = {
-  ...MegaButtonCustomCssAndDisabled.argTypes,
+WithCustomCSSAndDisabled.argTypes = {
+  ...WithCustomCSSAndDisabled.argTypes,
   className: {
     control: 'select',
     options: ['', 'dummyClassname'],
@@ -234,7 +252,7 @@ MegaButtonCustomCssAndDisabled.argTypes = {
     table: { defaultValue: { summary: '' } },
   },
 };
-MegaButtonCustomCssAndDisabled.parameters = {
+WithCustomCSSAndDisabled.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
     expect(isDisabled).toBeTruthy();
@@ -253,12 +271,12 @@ MegaButtonCustomCssAndDisabled.parameters = {
 };
 
 // Når MegaButton har aria attributer, så har button element aria-* satt
-export const MegaButtonWithArias = Template.bind({});
-MegaButtonWithArias.args = {
+export const WithAriaDescribedby = Template.bind({});
+WithAriaDescribedby.args = {
   ...defaultArgs,
   ariaDescribedby: 'testid1234',
 };
-MegaButtonWithArias.parameters = {
+WithAriaDescribedby.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const ariaAttributes = await page.$eval(`${wrapper} > button`, (el) => {
       return {
@@ -272,13 +290,29 @@ MegaButtonWithArias.parameters = {
   },
 };
 
+// Når MegaButton har en accessKey, så settes den som forventet
+export const withAccessKey = Template.bind({});
+withAccessKey.args = {
+  children: defaultMegaButtonText,
+  accessKey: 'j',
+};
+withAccessKey.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const megaButtonElement = await page.$(`${wrapper} > button`);
+    const accessKey = await (
+      await megaButtonElement?.getProperty('accessKey')
+    )?.jsonValue();
+    expect(accessKey).toBe('j');
+  },
+};
+
 // Når MegaButton har en tabIndex, så har button-element tabIndex
-export const MegaButtonWithTabindex = Template.bind({});
-MegaButtonWithTabindex.args = {
+export const WithTabindex = Template.bind({});
+WithTabindex.args = {
   ...defaultArgs,
   tabIndex: -1,
 };
-MegaButtonWithTabindex.parameters = {
+WithTabindex.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const tabIndex = await page.$eval(`${wrapper} > button`, (el) =>
       el.getAttribute('tabIndex')
@@ -290,12 +324,12 @@ MegaButtonWithTabindex.parameters = {
   },
 };
 
-export const MegaButtonWithLongText = Template.bind({});
-MegaButtonWithLongText.args = {
+export const WithLongText = Template.bind({});
+WithLongText.args = {
   ...defaultArgs,
   children: 'Denne knappen har en veldig lang tekst. Så lang at den må brekke.',
 };
-MegaButtonWithLongText.parameters = {
+WithLongText.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -307,14 +341,14 @@ MegaButtonWithLongText.parameters = {
 
 // Når MegaButton har en veldig lang tekst så skal teksten brytes over flere linjer
 // og når det er et ikon skal ikonet plasseres løpende etter teksten
-export const MegaButtonWithLongTextAndIcon = Template.bind({});
-MegaButtonWithLongTextAndIcon.args = {
+export const WithLongTextAndIcon = Template.bind({});
+WithLongTextAndIcon.args = {
   ...defaultArgs,
   isExternal: true,
   children:
     'Denne knappen har en veldig lang tekst. Icon skal da plasseres løpende etter tekster på siste linje',
 };
-MegaButtonWithLongTextAndIcon.parameters = {
+WithLongTextAndIcon.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -323,58 +357,14 @@ MegaButtonWithLongTextAndIcon.parameters = {
     expect(image).toMatchImageSnapshot();
   },
 };
-// Testing onClick på knapp. onClick-event endrer teksten på knappen.
-// Egen template for å kunne bruke useState som lar oss synliggjøre resultatet av en event
-const OnClickTemplate: ComponentStory<typeof MegaButton> = (args) => {
-  const [buttText, setButtText] = useState(
-    'Klikk på knapp for å teste onClick event'
-  );
-  return (
-    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
-      <MegaButton
-        {...args}
-        onClick={(): void => setButtText('Endret Tekst på Knapp')}
-      >
-        {buttText}
-      </MegaButton>
-    </div>
-  );
-};
-export const WithOnClick = OnClickTemplate.bind({});
-WithOnClick.args = {
-  ...defaultArgs,
-};
-WithOnClick.argTypes = {
-  ...WithOnClick.argTypes,
-  children: { control: false },
-};
 
-WithOnClick.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const buttonElement = await page.$(`${wrapper} > button`);
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-
-    await buttonElement?.click();
-
-    const imageClicked = await page.screenshot(screenShotOptions);
-    expect(imageClicked).toMatchImageSnapshot();
-
-    await page.waitForSelector(`${wrapper} > button:active`, { hidden: true });
-    const element = await page.$(`${wrapper} > button`);
-    const textContent = await element?.getProperty('textContent');
-    const text = await textContent?.jsonValue();
-    expect(text).toBe('Endret Tekst på Knapp');
-  },
-};
-
-// Når MegaButton har en href, så rendres den som en a
-export const MegaButtonAsLink = Template.bind({});
-MegaButtonAsLink.args = {
+// Når MegaButton har en href og er eksternlink, så rendres den som en a og det vises eksternlink-ikon
+export const AsLink = Template.bind({});
+AsLink.args = {
   href: 'https://www.skatteetaten.no',
   children: defaultMegaButtonText,
 };
-MegaButtonAsLink.parameters = {
+AsLink.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -383,14 +373,15 @@ MegaButtonAsLink.parameters = {
     expect(image).toMatchImageSnapshot();
   },
 };
+
 // Når MegaButton har en href, så rendres den som en a
-export const MegaButtonAsExternalLink = Template.bind({});
-MegaButtonAsExternalLink.args = {
+export const AsLinkExternal = Template.bind({});
+AsLinkExternal.args = {
   href: 'https://www.skatteetaten.no',
   isExternal: true,
   children: defaultMegaButtonText,
 };
-MegaButtonAsExternalLink.parameters = {
+AsLinkExternal.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -416,18 +407,46 @@ MegaButtonAsExternalLink.parameters = {
   },
 };
 
-// Når MegaButton har en accessKey, så settes den som forventet
-export const withAccessKey = Template.bind({});
-withAccessKey.args = {
-  children: defaultMegaButtonText,
-  accessKey: 'j',
+// Testing onClick på knapp. onClick-event endrer teksten på knappen.
+// Egen template for å kunne bruke useState som lar oss synliggjøre resultatet av en event
+const OnClickTemplate: ComponentStory<typeof MegaButton> = (args) => {
+  const [buttText, setButtText] = useState(
+    'Klikk på knapp for å teste onClick event'
+  );
+  return (
+    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+      <MegaButton
+        {...args}
+        onClick={(): void => setButtText('Endret Tekst på Knapp')}
+      >
+        {buttText}
+      </MegaButton>
+    </div>
+  );
 };
-withAccessKey.parameters = {
+export const WithOnClick = OnClickTemplate.bind({});
+WithOnClick.args = {
+  ...defaultArgs,
+};
+WithOnClick.argTypes = {
+  ...WithOnClick.argTypes,
+  children: { control: false },
+};
+WithOnClick.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
-    const megaButtonElement = await page.$(`${wrapper} > button`);
-    const accessKey = await (
-      await megaButtonElement?.getProperty('accessKey')
-    )?.jsonValue();
-    expect(accessKey).toBe('j');
+    const buttonElement = await page.$(`${wrapper} > button`);
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+
+    await buttonElement?.click();
+
+    const imageClicked = await page.screenshot(screenShotOptions);
+    expect(imageClicked).toMatchImageSnapshot();
+
+    await page.waitForSelector(`${wrapper} > button:active`, { hidden: true });
+    const element = await page.$(`${wrapper} > button`);
+    const textContent = await element?.getProperty('textContent');
+    const text = await textContent?.jsonValue();
+    expect(text).toBe('Endret Tekst på Knapp');
   },
 };
