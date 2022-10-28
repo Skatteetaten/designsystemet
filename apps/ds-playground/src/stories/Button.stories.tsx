@@ -43,7 +43,6 @@ export default {
     disabled: {
       control: 'boolean',
       table: {
-        type: { summary: 'boolean' },
         category: category.htmlAttribute,
         defaultValue: { summary: getCommonDisabledDefault() },
       },
