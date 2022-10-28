@@ -4,7 +4,7 @@ import { ElementHandle, ScreenshotOptions } from 'puppeteer';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
 
-// TODO test onClick, onBlur and onFocus
+// TODO FRONT-955 test onClick, onBlur and onFocus
 
 const wrapper = '[data-test-block]';
 const defaultSVGPath = Object.values(SystemSVGPaths)[14];

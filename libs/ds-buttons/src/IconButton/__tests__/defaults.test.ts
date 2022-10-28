@@ -1,12 +1,15 @@
-import { getIsOutlinedDefault, getSizeDefault } from '../defaults';
+import {
+  getIconButtonIsOutlinedDefault,
+  getIconButtonSizeDefault,
+} from '../defaults';
 
 describe('IconButton defaults', () => {
   it('Når getSizeDefault kalles, så returnerer den riktig verdi', () => {
-    const renderDefault = getSizeDefault();
+    const renderDefault = getIconButtonSizeDefault();
     expect(renderDefault).toBe('medium');
   });
   it('Når getIsOutlinedDefault kalles, så returnerer den riktig verdi', () => {
-    const renderDefault = getIsOutlinedDefault();
+    const renderDefault = getIconButtonIsOutlinedDefault();
     expect(renderDefault).toBe(false);
   });
 });

@@ -11,18 +11,18 @@ type InlineButtonHTMLAttributes = Partial<RequiredMegaButtonHTMLAttributes>;
 
 interface InlineButtonPropsHTMLAttributes extends InlineButtonHTMLAttributes {
   ariaDescribedby?: string;
-  onBlur?: FocusEventHandler<HTMLButtonElement | HTMLAnchorElement>;
-  onClick?: MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>;
-  onFocus?: FocusEventHandler<HTMLButtonElement | HTMLAnchorElement>;
+  onBlur?: FocusEventHandler<HTMLButtonElement>;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+  onFocus?: FocusEventHandler<HTMLButtonElement>;
 }
 
 export interface InlineButtonProps
   extends InlineButtonPropsHTMLAttributes,
     BaseProps {
+  /** Tekst på knapp. */
+  children: string;
   /** Posisjonen til ikonet: 'left', 'right'. */
   iconPosition?: Positon;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
   svgPath?: ReactElement;
-  /** Tekst på knapp. */
-  children: string;
 }

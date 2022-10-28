@@ -19,10 +19,10 @@ interface IconButtonPropsHTMLAttributes extends IconButtonHTMLAttributes {
 export interface IconButtonProps
   extends IconButtonPropsHTMLAttributes,
     BaseProps {
+  /** Om knappen har en ramme/sirkel. */
+  isOutlined?: boolean;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
   svgPath: ReactElement;
   /** Størrelse på knappen. */
   size?: Extract<Size, 'small' | 'medium' | 'large'>;
-  /** Om knappen har en ramme/sirkel. */
-  isOutlined?: boolean;
 }

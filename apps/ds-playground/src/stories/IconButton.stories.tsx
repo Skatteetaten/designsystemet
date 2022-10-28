@@ -1,7 +1,7 @@
 import {
   IconButton,
-  getIsOutlinedDefault,
-  getSizeDefault,
+  getIconButtonIsOutlinedDefault,
+  getIconButtonSizeDefault,
 } from '@skatteetaten/ds-buttons';
 import { getCommonDisabledDefault, sizeArr } from '@skatteetaten/ds-core-utils';
 import { action } from '@storybook/addon-actions';
@@ -19,7 +19,7 @@ export default {
       control: 'boolean',
       table: {
         category: category.props,
-        defaultValue: { summary: getIsOutlinedDefault() },
+        defaultValue: { summary: getIconButtonIsOutlinedDefault() },
       },
     },
     size: {
@@ -27,13 +27,12 @@ export default {
       control: 'radio',
       table: {
         category: category.props,
-        defaultValue: { summary: getSizeDefault() },
+        defaultValue: { summary: getIconButtonSizeDefault() },
       },
     },
     svgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
-      control: 'select',
       table: { category: category.props },
     },
     // HTML
@@ -49,8 +48,8 @@ export default {
       },
     },
     tabIndex: {
-      control: 'number',
-      table: { category: category.htmlAttribute },
+      control: 'text',
+      table: { type: { summary: 'number' }, category: category.htmlAttribute },
     },
     // Aria
     ariaDescribedBy: { table: { category: category.aria } },
@@ -71,8 +70,8 @@ IconButtonDefault.storyName = 'Default';
 
 IconButtonDefault.args = {
   svgPath: Object.values(SystemSVGPaths)[14], // Bell icon
-  size: getSizeDefault(),
-  isOutlined: getIsOutlinedDefault(),
+  size: getIconButtonSizeDefault(),
+  isOutlined: getIconButtonIsOutlinedDefault(),
 };
 
 IconButtonDefault.parameters = {

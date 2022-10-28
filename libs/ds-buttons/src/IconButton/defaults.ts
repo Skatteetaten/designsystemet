@@ -1,4 +1,4 @@
 import { Size } from '@skatteetaten/ds-core-utils';
 
-export const getSizeDefault = (): Extract<Size, 'medium'> => 'medium';
-export const getIsOutlinedDefault = (): boolean => false;
+export const getIconButtonSizeDefault = (): Extract<Size, 'medium'> => 'medium';
+export const getIconButtonIsOutlinedDefault = (): boolean => false;

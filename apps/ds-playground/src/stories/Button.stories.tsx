@@ -34,11 +34,7 @@ export default {
     // HTML
     accessKey: {
       control: 'text',
-      table: {
-        type: { summary: 'string' },
-        category: category.htmlAttribute,
-        defaultValue: { summary: '' },
-      },
+      table: { category: category.htmlAttribute },
     },
     disabled: {
       control: 'boolean',

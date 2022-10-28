@@ -6,7 +6,10 @@ import {
 } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
-import { getIsOutlinedDefault, getSizeDefault } from './defaults';
+import {
+  getIconButtonIsOutlinedDefault,
+  getIconButtonSizeDefault,
+} from './defaults';
 import { IconButtonProps } from './IconButton.types';
 
 import styles from './IconButton.module.scss';
@@ -21,9 +24,9 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
       accessKey,
       ariaLabel,
       ariaDescribedBy,
-      size = getSizeDefault(),
+      size = getIconButtonSizeDefault(),
       svgPath,
-      isOutlined = getIsOutlinedDefault(),
+      isOutlined = getIconButtonIsOutlinedDefault(),
       disabled = getCommonDisabledDefault(),
       onClick,
       onBlur,
@@ -56,4 +59,4 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
 
 IconButton.displayName = 'IconButton';
 
-export { getIsOutlinedDefault, getSizeDefault };
+export { getIconButtonIsOutlinedDefault, getIconButtonSizeDefault };
