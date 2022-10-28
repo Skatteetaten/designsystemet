@@ -1,10 +1,10 @@
 import { forwardRef } from 'react';
 
-import { Icon } from '@skatteetaten/ds-icons';
 import {
-  getClassNameDefault,
-  getDisabledDefault,
+  getCommonDisabledDefault,
+  getCommonClassNameDefault,
 } from '@skatteetaten/ds-core-utils';
+import { Icon } from '@skatteetaten/ds-icons';
 
 import { getIsOutlinedDefault, getSizeDefault } from './defaults';
 import { IconButtonProps } from './IconButton.types';
@@ -15,7 +15,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
   (
     {
       id,
-      className = getClassNameDefault(),
+      className = getCommonClassNameDefault(),
       'data-testid': dataTestId,
       tabIndex,
       accessKey,
@@ -24,7 +24,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
       size = getSizeDefault(),
       svgPath,
       isOutlined = getIsOutlinedDefault(),
-      disabled = getDisabledDefault(),
+      disabled = getCommonDisabledDefault(),
       onClick,
       onBlur,
       onFocus,
@@ -42,10 +42,10 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
         disabled={disabled}
         tabIndex={tabIndex}
         accessKey={accessKey}
-        aria-label={ariaLabel}
         aria-describedby={ariaDescribedBy}
-        onClick={onClick}
+        aria-label={ariaLabel}
         onBlur={onBlur}
+        onClick={onClick}
         onFocus={onFocus}
       >
         <Icon svgPath={svgPath} />

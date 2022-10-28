@@ -3,58 +3,62 @@ import {
   getIsOutlinedDefault,
   getSizeDefault,
 } from '@skatteetaten/ds-buttons';
-import {
-  getClassNameDefault,
-  getDisabledDefault,
-  sizeArr,
-} from '@skatteetaten/ds-core-utils';
+import { getCommonDisabledDefault, sizeArr } from '@skatteetaten/ds-core-utils';
 import { action } from '@storybook/addon-actions';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { SystemIconLabels, SystemSVGPaths } from './utils/icon.systems';
-import { getListOfAllSystemIcons } from './utils/icon.utils';
-
-const iconList = getListOfAllSystemIcons(SystemIconLabels, SystemSVGPaths);
+import { category, htmlEventDescription } from '../../.storybook/helpers';
+import { SystemSVGPaths } from './utils/icon.systems';
 
 export default {
   component: IconButton,
   title: 'Design System/IconButton',
   argTypes: {
-    svgPath: {
-      options: Object.keys(iconList),
-      mapping: iconList,
-      control: 'select',
+    // Props
+    isOutlined: {
+      control: 'boolean',
+      table: {
+        category: category.props,
+        defaultValue: { summary: getIsOutlinedDefault() },
+      },
     },
     size: {
       options: [...sizeArr].slice(1, 4),
       control: 'radio',
-      table: { defaultValue: { summary: getSizeDefault() } },
+      table: {
+        category: category.props,
+        defaultValue: { summary: getSizeDefault() },
+      },
     },
-    isOutlined: {
-      control: 'boolean',
-      table: { defaultValue: { summary: getIsOutlinedDefault() } },
+    svgPath: {
+      options: Object.keys(SystemSVGPaths),
+      mapping: SystemSVGPaths,
+      control: 'select',
+      table: { category: category.props },
+    },
+    // HTML
+    accessKey: {
+      control: 'text',
+      table: { category: category.htmlAttribute },
     },
     disabled: {
       control: 'boolean',
-      table: { defaultValue: { summary: getDisabledDefault() } },
-    },
-    className: {
-      control: 'select',
-      options: ['', 'buttonClassnameDark', 'buttonClassnameLight'],
-      table: { defaultValue: { summary: getClassNameDefault() } },
+      table: {
+        category: category.htmlAttribute,
+        defaultValue: { summary: getCommonDisabledDefault() },
+      },
     },
     tabIndex: {
       control: 'number',
+      table: { category: category.htmlAttribute },
     },
-    accessKey: {
-      control: 'text',
-    },
-    ariaLabel: {
-      control: 'text',
-    },
-    ariaDescribedBy: {
-      control: 'text',
-    },
+    // Aria
+    ariaDescribedBy: { table: { category: category.aria } },
+    ariaLabel: { table: { category: category.aria } },
+    // Events
+    onBlur: { ...htmlEventDescription },
+    onClick: { ...htmlEventDescription },
+    onFocus: { ...htmlEventDescription },
   },
 } as ComponentMeta<typeof IconButton>;
 
@@ -69,8 +73,6 @@ IconButtonDefault.args = {
   svgPath: Object.values(SystemSVGPaths)[14], // Bell icon
   size: getSizeDefault(),
   isOutlined: getIsOutlinedDefault(),
-  disabled: getDisabledDefault(),
-  className: getClassNameDefault(),
 };
 
 IconButtonDefault.parameters = {

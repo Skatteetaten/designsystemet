@@ -3,23 +3,12 @@ import {
   getInlineButtonPositionDefault,
 } from '@skatteetaten/ds-buttons';
 import { getCommonDisabledDefault } from '@skatteetaten/ds-core-utils';
-import {
-  AddOutlineSVGpath,
-  BellSVGpath,
-  ChatbotSVGpath,
-} from '@skatteetaten/ds-icons';
 import { action } from '@storybook/addon-actions';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../.storybook/helpers';
+import { SystemSVGPaths } from './utils/icon.systems';
 import './classnames.stories.css';
-
-// TODO FRONT-893 - komplett list med ikoner
-const iconList = {
-  AddOutline: { svgPath: AddOutlineSVGpath },
-  Bell: { svgPath: BellSVGpath },
-  Chatbot: { svgPath: ChatbotSVGpath },
-};
 
 export default {
   component: InlineButton,
@@ -36,9 +25,9 @@ export default {
       },
     },
     svgPath: {
-      options: [''].concat(Object.keys(iconList)),
+      options: Object.keys(SystemSVGPaths),
+      mapping: SystemSVGPaths,
       control: 'select',
-      mapping: iconList,
       table: { category: category.props },
     },
     // HTML
@@ -108,12 +97,3 @@ InlineButtonDefault.args = {
   ...baseArgs,
 };
 InlineButtonDefault.parameters = buttonDefaultParameters;
-
-// TODO FRONT-893 with icon trenger ikke å være egen story - denne controllen kan gis i default story
-export const InlineButtonIcon = TemplateDefault.bind({});
-InlineButtonIcon.storyName = 'With icon';
-InlineButtonIcon.args = {
-  ...baseArgs,
-  svgPath: AddOutlineSVGpath,
-};
-InlineButtonIcon.parameters = buttonDefaultParameters;
