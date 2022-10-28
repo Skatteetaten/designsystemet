@@ -3,7 +3,7 @@ import './designtokens.css';
 const fontJson = require('@skatteetaten/ds-core-designtokens/designtokens/font.json');
 
 interface FontTokenExamplesGeneratorProps {
-  propertyType: 'size' | 'font-weight' | 'line-height';
+  propertyType: 'font-size' | 'font-weight' | 'line-height';
   sampleText: string;
 }
 
@@ -30,7 +30,7 @@ export const FontTokenExamplesGenerator = ({
             }`}
             style={{
               fontSize:
-                propertyType === 'size'
+                propertyType === 'font-size'
                   ? fontTokens[tokens[index]]
                   : 'var(--semantic-font-size-default)',
               fontWeight:
