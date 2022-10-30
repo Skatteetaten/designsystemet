@@ -77,11 +77,6 @@ export const argTypes = {
       defaultValue: { summary: getCommonClassNameDefault() },
     },
   },
-  'data-testid': {
-    control: 'text',
-    description: 'data attribute som brukes for tester',
-    table: { type: { summary: 'string' }, category: category.baseProps },
-  },
   id: {
     control: 'text',
     description: 'unik id attribute',
@@ -90,6 +85,11 @@ export const argTypes = {
   lang: {
     control: 'text',
     description: 'html lang attribute',
+    table: { type: { summary: 'string' }, category: category.baseProps },
+  },
+  'data-testid': {
+    control: 'text',
+    description: 'data attribute som brukes for tester',
     table: { type: { summary: 'string' }, category: category.baseProps },
   },
 };
