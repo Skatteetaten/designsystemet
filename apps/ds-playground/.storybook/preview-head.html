@@ -2,4 +2,21 @@
   .noTransition > * {
     transition: none !important;
   }
+
+  /* slik at hele ikonnavnet vises */
+  .docblock-icongallery .css-ngu85f {
+    min-width: 220px;
+  }
+
+  /* slik at tema-ikon får riktig default størrelse */
+  .docblock-icongallery .css-ngu85f svg[viewBox='0 0 48 48'] {
+    width: var(--size-extra-large);
+    height: var(--size-extra-large);
+  }
+
+  /* slik at system-ikon får riktig default størrelse */
+  .docblock-icongallery .css-ngu85f svg[viewBox='0 0 24 24'] {
+    width: var(--size-medium);
+    height: var(--size-medium);
+  }
 </style>
