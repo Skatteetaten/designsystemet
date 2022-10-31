@@ -17,7 +17,7 @@ export default {
     // Props
     children: { table: { category: category.props } },
     iconPosition: {
-      control: 'select',
+      control: 'radio',
       options: ['left', 'right'],
       table: {
         category: category.props,
@@ -25,9 +25,8 @@ export default {
       },
     },
     svgPath: {
-      options: Object.keys(SystemSVGPaths),
+      options: [''].concat(Object.keys(SystemSVGPaths)),
       mapping: SystemSVGPaths,
-      control: 'select',
       table: { category: category.props },
     },
     // HTML
@@ -61,10 +60,6 @@ const TemplateDefault: ComponentStory<typeof InlineButton> = (args) => (
   </InlineButton>
 );
 
-const baseArgs = {
-  children: 'Legg til rapport',
-};
-
 const buttonDefaultParameters = {
   design: [
     {
@@ -88,6 +83,10 @@ const buttonDefaultParameters = {
 
 export const InlineButtonDefault = TemplateDefault.bind({});
 InlineButtonDefault.storyName = 'Default';
+const baseArgs = {
+  children: 'Legg til rapport',
+};
+
 InlineButtonDefault.args = {
   ...baseArgs,
 };
