@@ -5,23 +5,12 @@ import {
   getButtonVariantDefault,
 } from '@skatteetaten/ds-buttons';
 import { getCommonDisabledDefault } from '@skatteetaten/ds-core-utils';
-import {
-  EditSVGpath,
-  SendSVGpath,
-  AddOutlineSVGpath,
-} from '@skatteetaten/ds-icons';
 import { action } from '@storybook/addon-actions';
 import { Story, Meta } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../.storybook/helpers';
+import { SystemSVGPaths } from './utils/icon.systems';
 import './classnames.stories.css';
-
-// TODO FRONT-893 - komplett list med ikoner
-const iconList = {
-  Send: SendSVGpath,
-  Edit: EditSVGpath,
-  AddOutlineSVGpath: AddOutlineSVGpath,
-};
 
 export default {
   component: Button,
@@ -30,9 +19,8 @@ export default {
     // Props
     children: { table: { category: category.props } },
     svgPath: {
-      options: [''].concat(Object.keys(iconList)),
-      control: 'select',
-      mapping: iconList,
+      options: Object.keys(SystemSVGPaths),
+      mapping: SystemSVGPaths,
       table: { category: category.props },
     },
     variant: {
@@ -46,16 +34,11 @@ export default {
     // HTML
     accessKey: {
       control: 'text',
-      table: {
-        type: { summary: 'string' },
-        category: category.htmlAttribute,
-        defaultValue: { summary: '' },
-      },
+      table: { category: category.htmlAttribute },
     },
     disabled: {
       control: 'boolean',
       table: {
-        type: { summary: 'boolean' },
         category: category.htmlAttribute,
         defaultValue: { summary: getCommonDisabledDefault() },
       },

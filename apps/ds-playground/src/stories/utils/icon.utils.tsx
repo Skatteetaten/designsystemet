@@ -36,3 +36,19 @@ export const findSVGPathElements = function (
 export const iconName = function (svgPathName: string): string {
   return svgPathName.replace('SVGpath', '');
 };
+
+export const getListOfAllSystemIcons = function (
+  SVGPathElements: Record<SVGPathAndIconKey, SVGPathAndIconType>,
+  SVGPathAndIconElements: Record<SVGPathAndIconKey, SVGPathAndIconType>
+): Record<string, Record<string, SVGPathAndIconType[SVGPathAndIconKey]>> {
+  const systemIconLabels = makeLabelsFromSVGPathElements(SVGPathElements);
+  const systemSVGPaths = findSVGPathElements(SVGPathAndIconElements);
+
+  return Object.values(systemIconLabels).reduce(
+    (o, key, index) => ({
+      ...o,
+      [key]: { svgPath: Object.values(systemSVGPaths)[index] },
+    }),
+    {}
+  );
+};

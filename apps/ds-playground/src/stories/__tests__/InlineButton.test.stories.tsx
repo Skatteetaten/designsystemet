@@ -212,20 +212,20 @@ DisabledWithIcon.parameters = {
 };
 
 const dummyClassName = 'dummyClassName';
-export const withClassName = Template.bind({});
-withClassName.args = {
+export const withCustomCSS = Template.bind({});
+withCustomCSS.args = {
   ...InlineButtonDefaults.args,
   className: dummyClassName,
 };
-withClassName.argTypes = {
-  ...withClassName.argTypes,
+withCustomCSS.argTypes = {
+  ...withCustomCSS.argTypes,
   className: {
     control: 'select',
     options: [' ', dummyClassName],
     table: { defaultValue: { summary: '' } },
   },
 };
-withClassName.parameters = {
+withCustomCSS.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const classNameAttribute = await page.$eval(`${wrapper}> button`, (el) =>
       el.getAttribute('class')
@@ -240,21 +240,21 @@ withClassName.parameters = {
   },
 };
 
-export const WithClassNameAndDisabled = Template.bind({});
-WithClassNameAndDisabled.args = {
+export const WithCustomCSSAndDisabled = Template.bind({});
+WithCustomCSSAndDisabled.args = {
   ...InlineButtonDefaults.args,
   disabled: true,
   className: dummyClassName,
 };
-WithClassNameAndDisabled.argTypes = {
-  ...WithClassNameAndDisabled.argTypes,
+WithCustomCSSAndDisabled.argTypes = {
+  ...WithCustomCSSAndDisabled.argTypes,
   className: {
     control: 'select',
     options: [' ', dummyClassName],
     table: { defaultValue: { summary: '' } },
   },
 };
-WithClassNameAndDisabled.parameters = {
+WithCustomCSSAndDisabled.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
     expect(isDisabled).toBeTruthy();

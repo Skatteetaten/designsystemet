@@ -6,6 +6,7 @@ import {
   SVGPathAndIconType,
   SVGPathAndIconKey,
   iconName,
+  getListOfAllSystemIcons,
 } from '../icon.utils';
 
 describe('Icon utils', () => {
@@ -50,5 +51,37 @@ describe('Icon utils', () => {
     const name = iconName(svgPathName);
 
     expect(name).toBe('Add');
+  });
+
+  it('Returnerer liste med systemikonnavn og svgPath', () => {
+    const SVGPathElements: Record<SVGPathAndIconKey, SVGPathAndIconType> = {
+      SendSVGpath: SystemSVGPathsAndIcons.SendSVGpath,
+      EditSVGpath: SystemSVGPathsAndIcons.EditSVGpath,
+      AddSVGpath: SystemSVGPathsAndIcons.AddSVGpath,
+    };
+    const SVGPathAndIconElements: Record<
+      SVGPathAndIconKey,
+      SVGPathAndIconType
+    > = {
+      SendSVGpath: SystemSVGPathsAndIcons.SendSVGpath,
+      SendIcon: SystemSVGPathsAndIcons.SendIcon,
+      EditSVGpath: SystemSVGPathsAndIcons.EditSVGpath,
+      EditIcon: SystemSVGPathsAndIcons.EditIcon,
+      AddSVGpath: SystemSVGPathsAndIcons.AddSVGpath,
+      AddIcon: SystemSVGPathsAndIcons.AddIcon,
+    };
+
+    const expectedIconList = {
+      Send: { svgPath: SystemSVGPathsAndIcons.SendSVGpath },
+      Edit: { svgPath: SystemSVGPathsAndIcons.EditSVGpath },
+      Add: { svgPath: SystemSVGPathsAndIcons.AddSVGpath },
+    };
+
+    const iconList = getListOfAllSystemIcons(
+      SVGPathElements,
+      SVGPathAndIconElements
+    );
+
+    expect(iconList).toEqual(expectedIconList);
   });
 });
