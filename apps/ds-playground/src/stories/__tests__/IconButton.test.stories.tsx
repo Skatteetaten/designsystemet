@@ -19,7 +19,7 @@ export default {
 } as ComponentMeta<typeof IconButton>;
 
 const Template: ComponentStory<typeof IconButton> = (args) => (
-  <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+  <div style={{ margin: '1em' }} className={'noTranstion'} data-test-block>
     <IconButton {...args} />
   </div>
 );
