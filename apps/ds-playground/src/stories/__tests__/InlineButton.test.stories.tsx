@@ -324,6 +324,7 @@ WithTabindex.parameters = {
   },
 };
 
+// Når InlineButton har en veldig lang tekst uten breaking space så skal det brekke over flere linjer
 export const WithLongText = Template.bind({});
 WithLongText.args = {
   ...InlineButtonDefaults.args,
@@ -331,6 +332,22 @@ WithLongText.args = {
     'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Når ikke ikon så skal teksten være venstrejusteres.',
 };
 WithLongText.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+  },
+};
+
+export const WithLongTextBreaking = Template.bind({});
+WithLongTextBreaking.args = {
+  ...InlineButtonDefaults.args,
+  children:
+    'Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Nårikkeikonsåskaltekstenværevenstrejusteres.',
+};
+WithLongTextBreaking.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
