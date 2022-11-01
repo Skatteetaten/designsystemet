@@ -10,7 +10,8 @@ import '../classnames.stories.css';
 // TODO FRONT-893 legge til snapshot når det fungerer for linux
 
 const wrapper = '[data-test-block]';
-const defaultText = 'Legg til rapport';
+const elementId = 'dummyId';
+const defaultButtonText = 'Legg til rapport';
 const screenShotOptions: ScreenshotOptions = {
   fullPage: true,
   encoding: 'base64',
@@ -22,49 +23,40 @@ export default {
 } as ComponentMeta<typeof InlineButton>;
 
 const Template: ComponentStory<typeof InlineButton> = (args) => (
-  <div data-test-block>
+  <div
+    style={{ margin: '1em', maxWidth: '200px' }}
+    className={'noTranstion'}
+    data-test-block
+  >
     <InlineButton {...args} svgPath={args.svgPath}>
       {args.children}
     </InlineButton>
   </div>
 );
 
+// Når InlineButton instansieres, får den default iconPosition left
+// Knapp må også ha tekst/children
 export const InlineButtonDefaults = Template.bind({});
 InlineButtonDefaults.storyName = 'Defaults';
 InlineButtonDefaults.args = {
-  children: defaultText,
+  children: defaultButtonText,
 };
 InlineButtonDefaults.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
+    const element = await page.$(wrapper);
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
+
+    const textContent = await element?.getProperty('textContent');
+    const text = await textContent?.jsonValue();
+    expect(text).toBe(defaultButtonText);
 
     const image = await page.screenshot(screenShotOptions);
+    expect(innerHtml).toMatchSnapshot();
     expect(image).toMatchImageSnapshot();
-
-    const buttonElement = await page.$(`${wrapper} > button`);
-    const textContent = await buttonElement?.getProperty('textContent');
-    const text = await textContent?.jsonValue();
-    expect(text).toBe(defaultText);
-
-    await buttonElement?.focus();
-    const imageFocused = await page.screenshot(screenShotOptions);
-    expect(imageFocused).toMatchImageSnapshot();
-
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
-
-    await buttonElement?.hover();
-    const imageHovered = await page.screenshot(screenShotOptions);
-    expect(imageHovered).toMatchImageSnapshot();
-
-    await buttonElement?.click();
-    await page.waitForSelector(`${wrapper} > button:focus`);
-    const imageClicked = await page.screenshot(screenShotOptions);
-    expect(imageClicked).toMatchImageSnapshot();
   },
 };
 
+// Når InlineButton har en ref, så får dom button elementet ref forwarded
 const forwardedFromRefId = 'dummyId';
 export const WithRef = Template.bind({});
 WithRef.args = {
@@ -73,7 +65,7 @@ WithRef.args = {
       instance.id = forwardedFromRefId;
     }
   },
-  children: defaultText,
+  children: defaultButtonText,
 };
 WithRef.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -85,7 +77,7 @@ WithRef.parameters = {
   },
 };
 
-const elementId = 'dummyId';
+// Når InlineButton har satt id, så har id en verdi
 export const WithId = Template.bind({});
 WithId.args = {
   ...InlineButtonDefaults.args,
@@ -103,29 +95,81 @@ WithId.parameters = {
   },
 };
 
-export const WithIconLeft = Template.bind({});
-WithIconLeft.args = {
+// Når InlineButton har en custom CSS, så vises custom stil
+const dummyClassName = 'dummyClassName';
+export const withCustomCss = Template.bind({});
+withCustomCss.args = {
+  ...InlineButtonDefaults.args,
+  className: dummyClassName,
+};
+withCustomCss.argTypes = {
+  ...withCustomCss.argTypes,
+  className: {
+    control: 'select',
+    options: [' ', dummyClassName],
+    table: { defaultValue: { summary: '' } },
+  },
+};
+withCustomCss.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const classNameAttribute = await page.$eval(`${wrapper}> button`, (el) =>
+      el.getAttribute('class')
+    );
+    expect(classNameAttribute).toContain(dummyClassName);
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+  },
+};
+
+// Når InlineButton har satt dataTestid, så har dataTestId en verdi
+export const WithDataTestid = Template.bind({});
+WithDataTestid.args = {
+  ...InlineButtonDefaults.args,
+  'data-testid': elementId,
+};
+WithDataTestid.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const id = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('data-testid')
+    );
+    expect(id).toBe(elementId);
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
+// Når InlineButton har ett ikon uten posisjon oppgitt, så vises dette ikonet på venstre side (default).
+// Tester også for riktig aria, role og viewbox for systemIcon som er brukt
+export const WithSystemIcon = Template.bind({});
+WithSystemIcon.args = {
   ...InlineButtonDefaults.args,
   svgPath: AddOutlineSVGpath,
 };
-WithIconLeft.argTypes = {
-  ...WithIconLeft.argTypes,
+WithSystemIcon.argTypes = {
+  ...WithSystemIcon.argTypes,
   svgPath: { control: false },
 };
-WithIconLeft.parameters = {
+WithSystemIcon.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const systemIconViewBox = '0 0 24 24';
     const svgAttributes = await page.$eval(`${wrapper} > button svg`, (el) => {
       return {
         role: el.getAttribute('role'),
         ariaLabel: el.getAttribute('aria-label'),
+        ariaLabelledBy: el.getAttribute('aria-labelledby'),
         ariaHidden: el.getAttribute('aria-hidden'),
         viewBox: el.getAttribute('viewBox'),
       };
     });
     expect(svgAttributes.role).toBe('img');
-    expect(svgAttributes.ariaHidden).toBe('true');
     expect(svgAttributes.ariaLabel).toBeNull();
+    expect(svgAttributes.ariaLabelledBy).toBeNull();
+    expect(svgAttributes.ariaHidden).toBe('true');
     expect(svgAttributes.viewBox).toBe(systemIconViewBox);
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
@@ -136,6 +180,29 @@ WithIconLeft.parameters = {
   },
 };
 
+// Når InlineButton har et custom ikon, så vises dette ikonet
+export const WithCustomIcon = Template.bind({});
+WithCustomIcon.args = {
+  ...InlineButtonDefaults.args,
+  svgPath: (
+    <path
+      d={
+        'M20.18,8.63v-1.27h-1.24v-1.37h-1.24v-1.27h-1.45v-1.37h-1.24v-1.37h-6.52v1.37h-1.35v1.37h-1.34v1.27h-1.24v1.37h-1.35v1.27H1.86v6.73h1.34v1.27h1.35v1.37h1.24v1.27h1.34v1.37h1.35v1.37h6.52v-1.37h1.35v-1.37h1.34v-1.27h1.24v-1.37h1.34v-1.27h1.58v-6.73h-1.68Zm-5.21,5.38h-1.3v1.33h-3.93v-1.33h-1.3v-3.98h1.3v-1.33h3.93v1.33h1.3v3.98Zm3.27-3.98h-1.31v-1.33h-1.3v-1.33h-1.31v-1.33h1.31v1.33h1.3v1.33h1.31v1.33Z'
+      }
+    />
+  ),
+};
+WithCustomIcon.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+  },
+};
+
+// Når InlineButton har ett ikon med posisjon right, så vises dette ikonet på høyre side.
 export const WithIconRight = Template.bind({});
 WithIconRight.args = {
   ...InlineButtonDefaults.args,
@@ -148,20 +215,6 @@ WithIconRight.argTypes = {
 };
 WithIconRight.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
-    const systemIconViewBox = '0 0 24 24';
-    const svgAttributes = await page.$eval(`${wrapper} > button svg`, (el) => {
-      return {
-        role: el.getAttribute('role'),
-        ariaLabel: el.getAttribute('aria-label'),
-        ariaHidden: el.getAttribute('aria-hidden'),
-        viewBox: el.getAttribute('viewBox'),
-      };
-    });
-    expect(svgAttributes.role).toBe('img');
-    expect(svgAttributes.ariaHidden).toBe('true');
-    expect(svgAttributes.ariaLabel).toBeNull();
-    expect(svgAttributes.viewBox).toBe(systemIconViewBox);
-
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
 
@@ -170,6 +223,7 @@ WithIconRight.parameters = {
   },
 };
 
+// Når InlineButton har prop disabled, så er knapp disabled og stil er satt til disabled
 export const Disabled = Template.bind({});
 Disabled.args = {
   ...InlineButtonDefaults.args,
@@ -188,6 +242,7 @@ Disabled.parameters = {
   },
 };
 
+// Når InlineButton har prop disabled og ikon er satt, så vises ikonet og knapp er disabled og stil er satt til disabled
 export const DisabledWithIcon = Template.bind({});
 DisabledWithIcon.args = {
   ...InlineButtonDefaults.args,
@@ -211,67 +266,7 @@ DisabledWithIcon.parameters = {
   },
 };
 
-const dummyClassName = 'dummyClassName';
-export const withCustomCSS = Template.bind({});
-withCustomCSS.args = {
-  ...InlineButtonDefaults.args,
-  className: dummyClassName,
-};
-withCustomCSS.argTypes = {
-  ...withCustomCSS.argTypes,
-  className: {
-    control: 'select',
-    options: [' ', dummyClassName],
-    table: { defaultValue: { summary: '' } },
-  },
-};
-withCustomCSS.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const classNameAttribute = await page.$eval(`${wrapper}> button`, (el) =>
-      el.getAttribute('class')
-    );
-    expect(classNameAttribute).toContain(dummyClassName);
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
-};
-
-export const WithCustomCSSAndDisabled = Template.bind({});
-WithCustomCSSAndDisabled.args = {
-  ...InlineButtonDefaults.args,
-  disabled: true,
-  className: dummyClassName,
-};
-WithCustomCSSAndDisabled.argTypes = {
-  ...WithCustomCSSAndDisabled.argTypes,
-  className: {
-    control: 'select',
-    options: [' ', dummyClassName],
-    table: { defaultValue: { summary: '' } },
-  },
-};
-WithCustomCSSAndDisabled.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const isDisabled = await page.$(`${wrapper} > button[disabled]`);
-    expect(isDisabled).toBeTruthy();
-
-    const classNameAttribute = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('class')
-    );
-    expect(classNameAttribute).toContain(dummyClassName);
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
-};
-
+// Når InlineButton har aria-describedby, så har button-element aria-describedby
 export const WithAriaDescribedby = Template.bind({});
 WithAriaDescribedby.args = {
   ...InlineButtonDefaults.args,
@@ -289,6 +284,7 @@ WithAriaDescribedby.parameters = {
   },
 };
 
+// Når InlineButton har satt accessKey, så har accessKey en verdi
 const accessKeyValue = 'a';
 export const WithAccessKey = Template.bind({});
 WithAccessKey.args = {
@@ -307,6 +303,7 @@ WithAccessKey.parameters = {
   },
 };
 
+// Når InlineButton har en tabIndex, så har button-element tabIndex
 export const WithTabindex = Template.bind({});
 WithTabindex.args = {
   ...InlineButtonDefaults.args,
@@ -324,12 +321,12 @@ WithTabindex.parameters = {
   },
 };
 
-// Når InlineButton har en veldig lang tekst uten breaking space så skal det brekke over flere linjer
+// Når InlineButton har en veldig lang tekst så skal tekst venstrejusteres
 export const WithLongText = Template.bind({});
 WithLongText.args = {
   ...InlineButtonDefaults.args,
   children:
-    'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Når ikke ikon så skal teksten være venstrejusteres.',
+    'Denne knappen har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert.',
 };
 WithLongText.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -341,6 +338,7 @@ WithLongText.parameters = {
   },
 };
 
+// Når InlineButton har en veldig lang tekst uten breaking space så skal det brekke over flere linjer
 export const WithLongTextBreaking = Template.bind({});
 WithLongTextBreaking.args = {
   ...InlineButtonDefaults.args,
@@ -357,12 +355,13 @@ WithLongTextBreaking.parameters = {
   },
 };
 
+// Når InlineButton har en veldig lang tekst og det er et ikon med position right så skal tekst høyrejusteres
 export const WithLongTextAndIcon = Template.bind({});
 WithLongTextAndIcon.args = {
   ...InlineButtonDefaults.args,
   svgPath: AddOutlineSVGpath,
   children:
-    'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres for ikon med posisjon left.',
+    'Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert.',
 };
 WithLongTextAndIcon.argTypes = {
   ...WithLongTextAndIcon.argTypes,
@@ -378,15 +377,60 @@ WithLongTextAndIcon.parameters = {
   },
 };
 
-const knappeText = 'Ny tekst på knapp slik at vi ser at event fungerte';
-// Egen template for å kunne bruke useState som lar oss synliggjøre resultatet av en onClick event
+const nyTekstPaaKnapp = 'Ny tekst på knapp slik at vi ser at event fungerte';
+// Når brukeren blurer knappen, så kalles funksjonen i onBlur prop.
+// onBlur-event endrer teksten på knappen.
+const OnBlurTemplate: ComponentStory<typeof InlineButton> = (args) => {
+  const [buttText, setButtText] = useState(
+    'Klikk på knapp for å teste at onClick virker'
+  );
+  return (
+    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+      <InlineButton {...args} onBlur={(): void => setButtText(nyTekstPaaKnapp)}>
+        {buttText}
+      </InlineButton>
+    </div>
+  );
+};
+export const WithOnBlur = OnBlurTemplate.bind({});
+WithOnBlur.args = {
+  ...InlineButtonDefaults.args,
+};
+WithOnBlur.argTypes = {
+  ...WithOnBlur.argTypes,
+  children: { control: false },
+};
+WithOnBlur.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const buttonElement = await page.$(`${wrapper} > button`);
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+
+    await buttonElement?.focus();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
+    const imageBlured = await page.screenshot(screenShotOptions);
+    expect(imageBlured).toMatchImageSnapshot();
+
+    const element = await page.$(`${wrapper} > button`);
+    const textContent = await element?.getProperty('textContent');
+    const text = await textContent?.jsonValue();
+    expect(text).toBe(nyTekstPaaKnapp);
+  },
+};
+
+// Når brukeren klikker på knappen, så kalles funksjonen i onClick prop.
+// onClick-event endrer teksten på knappen.
 const OnClickTemplate: ComponentStory<typeof InlineButton> = (args) => {
   const [buttText, setButtText] = useState(
     'Klikk på knapp for å teste at onClick virker'
   );
   return (
     <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
-      <InlineButton {...args} onClick={(): void => setButtText(knappeText)}>
+      <InlineButton
+        {...args}
+        onClick={(): void => setButtText(nyTekstPaaKnapp)}
+      >
         {buttText}
       </InlineButton>
     </div>
@@ -415,20 +459,22 @@ WithOnClick.parameters = {
     const element = await page.$(`${wrapper} > button`);
     const textContent = await element?.getProperty('textContent');
     const text = await textContent?.jsonValue();
-    expect(text).toBe(knappeText);
+    expect(text).toBe(nyTekstPaaKnapp);
   },
 };
 
-// TODO FRONT-893 - test onBlur - vet ikke hvordan siden elementHandler ikke har blur()
-
-// Egen template for å kunne bruke useState som lar oss synliggjøre resultatet av en onFocus event
+// Når brukeren setter focus på knappen, så kalles funksjonen i onFocus prop.
+// onFocus-event endrer teksten på knappen.
 const OnFocusTemplate: ComponentStory<typeof InlineButton> = (args) => {
   const [buttText, setButtText] = useState(
     'Gi knapp fokus for å teste at onFocus virker'
   );
   return (
     <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
-      <InlineButton {...args} onFocus={(): void => setButtText(knappeText)}>
+      <InlineButton
+        {...args}
+        onFocus={(): void => setButtText(nyTekstPaaKnapp)}
+      >
         {buttText}
       </InlineButton>
     </div>
@@ -457,6 +503,6 @@ WithOnFocus.parameters = {
     const element = await page.$(`${wrapper} > button`);
     const textContent = await element?.getProperty('textContent');
     const text = await textContent?.jsonValue();
-    expect(text).toBe(knappeText);
+    expect(text).toBe(nyTekstPaaKnapp);
   },
 };
