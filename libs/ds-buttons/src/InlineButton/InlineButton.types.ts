@@ -4,7 +4,7 @@ import { BaseProps, Positon } from '@skatteetaten/ds-core-utils';
 
 type RequiredMegaButtonHTMLAttributes = Pick<
   React.HTMLProps<HTMLButtonElement>,
-  'accessKey' | 'disabled' | 'tabIndex' | 'onBlur' | 'onClick' | 'onFocus'
+  'accessKey' | 'disabled' | 'onBlur' | 'onClick' | 'onFocus'
 >;
 
 type InlineButtonHTMLAttributes = Partial<RequiredMegaButtonHTMLAttributes>;

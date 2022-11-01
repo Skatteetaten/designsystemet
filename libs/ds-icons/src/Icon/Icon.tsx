@@ -17,7 +17,6 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       variant = getIconVariantDefault(),
       size = getIconSizeDefault(),
       svgPath,
-      tabIndex,
       ariaLabel,
     },
     ref
@@ -33,7 +32,6 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
         className={`${styles[variant]} ${sizeClassName} ${className}`}
         data-testid={dataTestId}
         viewBox={variant === 'systemIcon' ? '0 0 24 24' : '0 0 48 48'}
-        tabIndex={tabIndex}
         focusable={false}
         aria-label={!title ? ariaLabel : undefined}
         aria-labelledby={title ? titleId : undefined}

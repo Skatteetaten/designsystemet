@@ -22,7 +22,6 @@ export const MegaButton = forwardRef<
       href,
       isExternal,
       disabled = getCommonDisabledDefault(),
-      tabIndex,
       accessKey,
       ariaDescribedby,
       onBlur,
@@ -48,7 +47,6 @@ export const MegaButton = forwardRef<
         href={href}
         accessKey={accessKey}
         disabled={disabled}
-        tabIndex={tabIndex}
         aria-describedby={ariaDescribedby}
         role={href ? 'button' : undefined}
         onBlur={onBlur}

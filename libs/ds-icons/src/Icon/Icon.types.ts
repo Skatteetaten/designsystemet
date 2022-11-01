@@ -1,11 +1,6 @@
 import { BaseProps, Size, IconVariant } from '@skatteetaten/ds-core-utils';
 
-type SvgHTMLAttributes = Pick<
-  React.SVGAttributes<Record<string, never>>,
-  'tabIndex'
->;
-
-interface IconComponentCommonProps extends SvgHTMLAttributes, BaseProps {
+interface IconComponentCommonProps extends BaseProps {
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
   svgPath: React.ReactElement;
 }

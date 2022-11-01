@@ -39,10 +39,6 @@ export default {
       control: 'text',
       table: { category: category.htmlAttribute },
     },
-    tabIndex: {
-      control: 'text',
-      table: { type: { summary: 'number' }, category: category.htmlAttribute },
-    },
     // Aria
     ariaDescribedby: { table: { category: category.aria } },
     // Events
