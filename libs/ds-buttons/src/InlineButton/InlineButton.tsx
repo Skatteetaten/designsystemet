@@ -22,7 +22,6 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
       svgPath,
       accessKey,
       disabled = getCommonDisabledDefault(),
-      tabIndex,
       ariaDescribedby,
       onBlur,
       onClick,
@@ -48,7 +47,6 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
         data-testid={dataTestId}
         accessKey={accessKey}
         disabled={disabled}
-        tabIndex={tabIndex}
         aria-describedby={ariaDescribedby}
         onBlur={onBlur}
         onClick={onClick}

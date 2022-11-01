@@ -371,24 +371,6 @@ WithAccesskey.parameters = {
   },
 };
 
-// Når Button har en tabIndex, så har button-element tabIndex
-export const WithTabindex = Template.bind({});
-WithTabindex.args = {
-  ...ButtonDefaults.args,
-  tabIndex: -1,
-};
-WithTabindex.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const tabIndex = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('tabindex')
-    );
-    expect(tabIndex).toBe('-1');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-  },
-};
-
 // Når Button har en veldig lang tekst så skal tekst venstrejusteres
 export const WithLongText = Template.bind({});
 WithLongText.args = {

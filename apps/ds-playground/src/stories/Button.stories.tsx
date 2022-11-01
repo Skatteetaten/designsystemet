@@ -43,10 +43,6 @@ export default {
         defaultValue: { summary: getCommonDisabledDefault() },
       },
     },
-    tabIndex: {
-      control: 'text',
-      table: { type: { summary: 'number' }, category: category.htmlAttribute },
-    },
     // Aria
     ariaDescribedby: { table: { category: category.aria } },
     // Events

@@ -20,7 +20,6 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
       id,
       className = getCommonClassNameDefault(),
       'data-testid': dataTestId,
-      tabIndex,
       accessKey,
       ariaLabel,
       ariaDescribedBy,
@@ -43,7 +42,6 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
         className={`${styles.button} ${sizeClassName} ${outlineClassName} ${className}`}
         data-testid={dataTestId}
         disabled={disabled}
-        tabIndex={tabIndex}
         accessKey={accessKey}
         aria-describedby={ariaDescribedBy}
         aria-label={ariaLabel}

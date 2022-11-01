@@ -19,7 +19,9 @@ export default {
 } as ComponentMeta<typeof IconButton>;
 
 const Template: ComponentStory<typeof IconButton> = (args) => (
-  <IconButton {...args} />
+  <div style={{ margin: '1em' }} data-test-block>
+    <IconButton {...args} />
+  </div>
 );
 
 // Når IconButton instansieres, får den riktige default-verdier og rendrer riktig i ulike tilstander
@@ -475,24 +477,6 @@ WithArias.parameters = {
     });
     expect(ariaAttributes.ariaLabel).toBe('Knapp ariaLabel');
     expect(ariaAttributes.ariaDescribedBy).toBe('Knapp ariaDescribedBy');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-  },
-};
-
-// Når IconButton har en tabIndex, så har button-elementet tabIndex satt
-export const WithTabindex = Template.bind({});
-WithTabindex.args = {
-  svgPath: defaultSVGPath,
-  tabIndex: -1,
-};
-WithTabindex.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const tabIndex = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('tabIndex')
-    );
-    expect(tabIndex).toBe('-1');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
