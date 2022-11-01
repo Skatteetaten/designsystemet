@@ -19,7 +19,9 @@ export default {
 } as ComponentMeta<typeof IconButton>;
 
 const Template: ComponentStory<typeof IconButton> = (args) => (
-  <IconButton {...args} />
+  <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+    <IconButton {...args} />
+  </div>
 );
 
 // Når IconButton instansieres, får den riktige default-verdier og rendrer riktig i ulike tilstander
