@@ -17,6 +17,14 @@ const screenShotOptions: ScreenshotOptions = {
   encoding: 'base64',
 };
 
+const testSnapshot = async (page: ElementHandle): Promise<void> => {
+  const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+  expect(innerHtml).toMatchSnapshot();
+
+  const image = await page.screenshot(screenShotOptions);
+  expect(image).toMatchImageSnapshot();
+};
+
 export default {
   component: MegaButton,
   title: 'Tests / MegaButton',
@@ -330,13 +338,7 @@ WithLongText.args = {
   children: 'Denne knappen har en veldig lang tekst. Så lang at den må brekke.',
 };
 WithLongText.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
+  puppeteerTest: testSnapshot,
 };
 
 // Når MegaButton har en veldig lang tekst så skal teksten brytes over flere linjer
@@ -349,13 +351,7 @@ WithLongTextAndIcon.args = {
     'Denne knappen har en veldig lang tekst. Icon skal da plasseres løpende etter tekster på siste linje',
 };
 WithLongTextAndIcon.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
+  puppeteerTest: testSnapshot,
 };
 
 // Når MegaButton har en href og er eksternlink, så rendres den som en a og det vises eksternlink-ikon
@@ -365,13 +361,7 @@ AsLink.args = {
   children: defaultMegaButtonText,
 };
 AsLink.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
+  puppeteerTest: testSnapshot,
 };
 
 // Når MegaButton har en href, så rendres den som en a
