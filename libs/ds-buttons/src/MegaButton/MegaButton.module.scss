@@ -48,6 +48,7 @@
   text-align: center;
   text-decoration-line: none;
   transition: 0.15s;
+  word-break: break-word;
 
   .icon {
     display: inline;
@@ -73,6 +74,7 @@
   }
 
   &:active {
+    @extend %focus;
     @extend %active;
 
     border-color: var(--palette-azure-100);

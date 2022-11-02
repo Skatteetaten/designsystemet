@@ -20,15 +20,14 @@
     right: -7px; // border: 2px + offset: 1px
     bottom: -7px; // border: 2px + offset: 1px
     left: -7px; // border: 2px + offset: 1px
-    border: 2px solid var(--palette-azure-70);
-    border-radius: 12rem; // border—radius: 6px + offset: 1px
+    border: 2px solid var(--semantic-interactive-main);
+    border-radius: 23px;
     content: '';
   }
 }
 
 %active {
   box-shadow: none;
-  outline: none;
   transform: translateY(2px);
   transition-timing-function: ease;
 }
@@ -46,6 +45,7 @@
   line-height: var(--semantic-line-height-buttons);
   text-align: center;
   transition: 0.15s;
+  word-break: break-word;
 
   &_withIcon {
     padding-right: var(--spacing-l);
@@ -80,6 +80,7 @@
     }
 
     &:active {
+      @extend %focus;
       @extend %active;
 
       border-color: var(--palette-azure-100);
@@ -112,6 +113,7 @@
     }
 
     &:active {
+      @extend %focus;
       @extend %active;
 
       border-color: var(--palette-azure-70);
@@ -145,6 +147,7 @@
     }
 
     &:active {
+      @extend %focus;
       @extend %active;
 
       border-color: var(--palette-azure-70);
@@ -170,7 +173,7 @@
 
     &:hover {
       background-color: var(--palette-burgundy-50);
-      color: var(--palette-graphite-0);
+      color: var(--palette-graphite-100);
 
       & .icon svg {
         fill: var(--palette-graphite-0);
@@ -182,6 +185,7 @@
     }
 
     &:active {
+      @extend %focus;
       @extend %active;
 
       & .icon svg {
@@ -189,7 +193,7 @@
       }
 
       background-color: var(--palette-burgundy-50);
-      color: var(--palette-graphite-0);
+      color: var(--palette-graphite-100);
     }
 
     &:disabled,
