@@ -4,7 +4,7 @@ import { BaseProps, Size } from '@skatteetaten/ds-core-utils';
 
 type RequiredIconButtonHTMLAttributes = Pick<
   React.ComponentPropsWithoutRef<'button'>,
-  'accessKey' | 'disabled' | 'tabIndex' | 'onBlur' | 'onClick' | 'onFocus'
+  'accessKey' | 'disabled' | 'onBlur' | 'onClick' | 'onFocus'
 >;
 
 type IconButtonHTMLAttributes = Partial<RequiredIconButtonHTMLAttributes>;

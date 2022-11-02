@@ -22,7 +22,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       variant = getButtonVariantDefault(),
       accessKey,
       disabled = getCommonDisabledDefault(),
-      tabIndex,
       ariaDescribedby,
       onBlur,
       onClick,
@@ -41,7 +40,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         id={id}
         className={concatenatedClassName}
         data-testid={dataTestId}
-        tabIndex={tabIndex}
         accessKey={accessKey}
         disabled={disabled}
         aria-describedby={ariaDescribedby}

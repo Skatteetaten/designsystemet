@@ -4,7 +4,7 @@ import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 export type RequiredMegaButtonHTMLAttributes = Pick<
   React.HTMLProps<HTMLButtonElement | HTMLAnchorElement>,
-  'accessKey' | 'tabIndex' | 'onBlur' | 'onClick' | 'onFocus'
+  'accessKey' | 'onBlur' | 'onClick' | 'onFocus'
 >;
 
 type MegaButtonHTMLAttributes = Partial<RequiredMegaButtonHTMLAttributes>;

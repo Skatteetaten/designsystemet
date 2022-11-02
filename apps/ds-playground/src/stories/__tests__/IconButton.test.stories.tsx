@@ -19,7 +19,7 @@ export default {
 } as ComponentMeta<typeof IconButton>;
 
 const Template: ComponentStory<typeof IconButton> = (args) => (
-  <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+  <div style={{ margin: '1em' }} className={'noTranstion'} data-test-block>
     <IconButton {...args} />
   </div>
 );
@@ -406,12 +406,12 @@ WithCustomSVGPath.parameters = {
 export const WithCustomCss = Template.bind({});
 WithCustomCss.args = {
   svgPath: defaultSVGPath,
-  className: 'buttonClassnameDark',
+  className: 'dummyClassname',
 };
 WithCustomCss.argTypes = {
   className: {
     control: 'select',
-    options: ['', 'buttonClassnameDark', 'buttonClassnameGreen'],
+    options: ['', 'dummyClassname'],
   },
 };
 WithCustomCss.parameters = {
@@ -419,7 +419,7 @@ WithCustomCss.parameters = {
     const classNameAttribute = await page.$eval(`${wrapper}> button`, (el) =>
       el.getAttribute('class')
     );
-    expect(classNameAttribute).toContain('buttonClassnameDark');
+    expect(classNameAttribute).toContain('dummyClassname');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -434,12 +434,12 @@ export const WithCustomCssAndDisabled = Template.bind({});
 WithCustomCssAndDisabled.args = {
   svgPath: defaultSVGPath,
   disabled: true,
-  className: 'buttonClassnameDark',
+  className: 'dummyClassname',
 };
 WithCustomCssAndDisabled.argTypes = {
   className: {
     control: 'select',
-    options: ['', 'buttonClassnameDark', 'buttonClassnameGreen'],
+    options: ['', 'dummyClassname'],
   },
 };
 WithCustomCssAndDisabled.parameters = {
@@ -450,7 +450,7 @@ WithCustomCssAndDisabled.parameters = {
     const classNameAttribute = await page.$eval(`${wrapper} > button`, (el) =>
       el.getAttribute('class')
     );
-    expect(classNameAttribute).toContain('buttonClassnameDark');
+    expect(classNameAttribute).toContain('dummyClassname');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -465,7 +465,7 @@ export const WithArias = Template.bind({});
 WithArias.args = {
   svgPath: defaultSVGPath,
   ariaLabel: 'Knapp ariaLabel',
-  ariaDescribedBy: 'Knapp ariaDescribedBy',
+  ariaDescribedBy: 'araiDescId',
 };
 WithArias.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -476,25 +476,7 @@ WithArias.parameters = {
       };
     });
     expect(ariaAttributes.ariaLabel).toBe('Knapp ariaLabel');
-    expect(ariaAttributes.ariaDescribedBy).toBe('Knapp ariaDescribedBy');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-  },
-};
-
-// Når IconButton har en tabIndex, så har button-elementet tabIndex satt
-export const WithTabindex = Template.bind({});
-WithTabindex.args = {
-  svgPath: defaultSVGPath,
-  tabIndex: -1,
-};
-WithTabindex.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const tabIndex = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('tabIndex')
-    );
-    expect(tabIndex).toBe('-1');
+    expect(ariaAttributes.ariaDescribedBy).toBe('araiDescId');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -523,14 +505,14 @@ WithAccessKey.parameters = {
 export const WithDataTestId = Template.bind({});
 WithDataTestId.args = {
   svgPath: defaultSVGPath,
-  'data-testid': '123 bell svg',
+  'data-testid': '123bellsvgID',
 };
 WithDataTestId.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const dataTestId = await page.$eval(`${wrapper} > button`, (el) =>
       el.getAttribute('data-testid')
     );
-    expect(dataTestId).toBe('123 bell svg');
+    expect(dataTestId).toBe('123bellsvgID');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();

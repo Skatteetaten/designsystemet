@@ -37,8 +37,6 @@ const commonArgTypes = {
       category: category.props,
     },
   },
-  // HTML
-  tabIndex: { table: { category: category.htmlAttribute } },
   // Aria
   ariaLabel: { table: { category: category.aria } },
 };

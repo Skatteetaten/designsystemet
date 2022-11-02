@@ -188,17 +188,6 @@ WithAriaLabel.parameters = {
   },
 };
 
-export const WithTabIndex = Template.bind({});
-WithTabIndex.args = { tabIndex: -1 };
-WithTabIndex.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const tabIndex = await page.$eval('svg', (el) =>
-      el.getAttribute('tabindex')
-    );
-    expect(tabIndex).toBe('-1');
-  },
-};
-
 // Når Icon instansieres med variant="themeIcon", får den riktig viewBox og className
 export const WithVariant = Template.bind({});
 WithVariant.args = { variant: 'themeIcon', svgPath: AndreForholdSVGpath };
