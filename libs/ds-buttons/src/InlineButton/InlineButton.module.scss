@@ -1,3 +1,7 @@
+%focus {
+  outline: var(--semantic-interactive-main) solid 2px;
+  outline-offset: 2px;
+}
 %with-icon {
   display: inline-flex;
   gap: var(--spacing-s);
@@ -44,14 +48,14 @@
   }
 
   &:focus {
-    outline: var(--semantic-interactive-main) solid 2px;
-    outline-offset: 2px;
+    @extend %focus;
   }
 
   &:active {
+    @extend %focus;
+
     background-color: var(--semantic-interactive-background);
     color: var(--semantic-interactive-foreground);
-    outline: none;
     transform: translateY(2px);
     transition-timing-function: ease;
 

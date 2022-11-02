@@ -20,15 +20,14 @@
     right: -7px; // border: 2px + offset: 1px
     bottom: -7px; // border: 2px + offset: 1px
     left: -7px; // border: 2px + offset: 1px
-    border: 2px solid var(--palette-azure-70);
-    border-radius: 12rem; // border—radius: 6px + offset: 1px
+    border: 2px solid var(--semantic-interactive-main);
+    border-radius: 23px;
     content: '';
   }
 }
 
 %active {
   box-shadow: none;
-  outline: none;
   transform: translateY(2px);
   transition-timing-function: ease;
 }
@@ -81,6 +80,7 @@
     }
 
     &:active {
+      @extend %focus;
       @extend %active;
 
       border-color: var(--palette-azure-100);
@@ -113,6 +113,7 @@
     }
 
     &:active {
+      @extend %focus;
       @extend %active;
 
       border-color: var(--palette-azure-70);
@@ -146,6 +147,7 @@
     }
 
     &:active {
+      @extend %focus;
       @extend %active;
 
       border-color: var(--palette-azure-70);
@@ -183,6 +185,7 @@
     }
 
     &:active {
+      @extend %focus;
       @extend %active;
 
       & .icon svg {
