@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { IconButton } from '@skatteetaten/ds-buttons';
+import { IconButton, IconButtonProps } from '@skatteetaten/ds-buttons';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ElementHandle, ScreenshotOptions } from 'puppeteer';
 
@@ -19,17 +19,22 @@ export default {
   title: 'Tests / IconButton',
 } as ComponentMeta<typeof IconButton>;
 
+const defaultArgs: IconButtonProps = {
+  svgPath: defaultSVGPath,
+  ariaLabel: 'dummy tekst aria-label',
+};
+
 const Template: ComponentStory<typeof IconButton> = (args) => (
   <div style={{ margin: '1em' }} className={'noTranstion'} data-test-block>
-    <IconButton {...args} />
+    <IconButton {...args} ariaLabel={args.ariaLabel} />
   </div>
 );
 
 // Når IconButton instansieres, får den riktige default-verdier og rendrer riktig i ulike tilstander
 export const IconButtonDefaults = Template.bind({});
+IconButtonDefaults.storyName = 'Defaults';
 IconButtonDefaults.args = {
-  svgPath: defaultSVGPath,
-  ariaLabel: 'dummy tekst aria-label',
+  ...defaultArgs,
 };
 IconButtonDefaults.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -43,7 +48,7 @@ IconButtonDefaults.parameters = {
 // Når IconButton har en ref, så får dom button elementet ref forwarded
 export const WithRef = Template.bind({});
 WithRef.args = {
-  ...IconButtonDefaults.args,
+  ...defaultArgs,
   ref: (instance: HTMLButtonElement | null): void => {
     if (instance) {
       instance.id = 'dummyIdForwardedFromRef';
@@ -63,7 +68,7 @@ WithRef.parameters = {
 // Når IconButton har en id, så har button-elementet id'en satt
 export const WithId = Template.bind({});
 WithId.args = {
-  ...IconButtonDefaults.args,
+  ...defaultArgs,
   id: '123',
 };
 WithId.parameters = {
@@ -81,7 +86,7 @@ WithId.parameters = {
 // Når IconButton har en custom CSS, så vises custom stil
 export const WithCustomCss = Template.bind({});
 WithCustomCss.args = {
-  ...IconButtonDefaults.args,
+  ...defaultArgs,
   className: 'dummyClassname',
 };
 WithCustomCss.argTypes = {
@@ -139,7 +144,7 @@ WithCustomCssAndDisabled.parameters = {
 // Når IconButton har dataTestid, så har button-elementet data-testid satt
 export const WithDataTestid = Template.bind({});
 WithDataTestid.args = {
-  ...IconButtonDefaults.args,
+  ...defaultArgs,
   'data-testid': '123bellsvgID',
 };
 WithDataTestid.parameters = {
@@ -157,7 +162,7 @@ WithDataTestid.parameters = {
 // Når IconButton har size small, så vises en liten knapp uten ramme som rendrer riktig i ulike tilstander
 export const SizeSmall = Template.bind({});
 SizeSmall.args = {
-  ...IconButtonDefaults.args,
+  ...defaultArgs,
   size: 'small',
 };
 SizeSmall.parameters = {
@@ -225,7 +230,7 @@ SizeLarge.parameters = {
 // Når IconButton har size small og er disabled, så vises en liten knapp uten ramme i disabled stil
 export const SizeSmallAndDisabled = Template.bind({});
 SizeSmallAndDisabled.args = {
-  svgPath: defaultSVGPath,
+  ...defaultArgs,
   size: 'small',
   disabled: true,
 };
@@ -245,7 +250,7 @@ SizeSmallAndDisabled.parameters = {
 // Når IconButton har size large og er disabled, så vises en stor knapp uten ramme i disabled stil
 export const SizeLargeAndDisabled = Template.bind({});
 SizeLargeAndDisabled.args = {
-  ...IconButtonDefaults.args,
+  ...defaultArgs,
   size: 'large',
   disabled: true,
 };
@@ -286,7 +291,7 @@ SizeSmallDisabledWithOutline.parameters = {
 // Når IconButton er large og disabled og outlined, så vises en stor knapp med ramme i disabled stil
 export const SizeLargeDisabledWithOutline = Template.bind({});
 SizeLargeDisabledWithOutline.args = {
-  ...IconButtonDefaults.args,
+  ...defaultArgs,
   size: 'large',
   isOutlined: true,
   disabled: true,
@@ -307,7 +312,7 @@ SizeLargeDisabledWithOutline.parameters = {
 // Når IconButton er outlined, så vises knappen med ramme og rendrer riktig i ulike tilstander
 export const WithOutline = Template.bind({});
 WithOutline.args = {
-  ...IconButtonDefaults.args,
+  ...defaultArgs,
   isOutlined: true,
 };
 WithOutline.parameters = {
@@ -341,7 +346,7 @@ WithOutline.parameters = {
 // Når IconButton har size small og er outlined, så vises en liten knapp med ramme som rendrer riktig i ulike tilstander
 export const SmallWithOutline = Template.bind({});
 SmallWithOutline.args = {
-  ...IconButtonDefaults.args,
+  ...defaultArgs,
   size: 'small',
   isOutlined: true,
 };
@@ -376,7 +381,7 @@ SmallWithOutline.parameters = {
 // Når IconButton har size large og er outlined, så vises en stor knapp med ramme som rendrer riktig i ulike tilstander
 export const LargeWithOutline = Template.bind({});
 LargeWithOutline.args = {
-  ...IconButtonDefaults.args,
+  ...defaultArgs,
   size: 'large',
   isOutlined: true,
 };
@@ -411,7 +416,7 @@ LargeWithOutline.parameters = {
 // Når IconButton er disabled, så vises knappen uten ramme i disabled stil
 export const Disabled = Template.bind({});
 Disabled.args = {
-  ...IconButtonDefaults.args,
+  ...defaultArgs,
   disabled: true,
 };
 Disabled.parameters = {
@@ -430,7 +435,7 @@ Disabled.parameters = {
 // Når IconButton er disabled og outlined, så vises knappen med ramme i disabled stil
 export const DisabledWithOutline = Template.bind({});
 DisabledWithOutline.args = {
-  ...IconButtonDefaults.args,
+  ...defaultArgs,
   isOutlined: true,
   disabled: true,
 };
@@ -450,6 +455,7 @@ DisabledWithOutline.parameters = {
 // Når IconButton har et custom ikon, så vises dette ikonet
 export const WithCustomSVGPath = Template.bind({});
 WithCustomSVGPath.args = {
+  ...defaultArgs,
   svgPath: <path d={'M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z'} />,
 };
 WithCustomSVGPath.parameters = {
@@ -465,7 +471,7 @@ WithCustomSVGPath.parameters = {
 // Når IconButton har aria attributer, så har button-elementet aria-* satt
 export const WithArias = Template.bind({});
 WithArias.args = {
-  ...IconButtonDefaults.args,
+  ...defaultArgs,
   ariaLabel: 'Knapp ariaLabel',
   ariaDescribedBy: 'araiDescId',
 };
@@ -488,7 +494,7 @@ WithArias.parameters = {
 // Når IconButton har en accessKey, så har button-elementet accessKey satt
 export const WithAccessKey = Template.bind({});
 WithAccessKey.args = {
-  ...IconButtonDefaults.args,
+  ...defaultArgs,
   accessKey: 'The bell is ringing',
 };
 WithAccessKey.parameters = {
@@ -502,16 +508,6 @@ WithAccessKey.parameters = {
     expect(innerHtml).toMatchSnapshot();
   },
 };
-
-/*
-
-const Template: ComponentStory<typeof IconButton> = (args) => (
-  <div style={{ margin: '1em' }} className={'noTranstion'} data-test-block>
-    <IconButton {...args} />
-  </div>
-);
-
-*/
 
 // Når brukeren blurer knappen, så kalles funksjonen i onBlur prop.
 // onBlur-event endrer teksten på knappen.
@@ -529,6 +525,7 @@ const OnBlurTemplate: ComponentStory<typeof IconButton> = (args) => {
 };
 export const WithOnBlur = OnBlurTemplate.bind({});
 WithOnBlur.args = {
+  ...defaultArgs,
   ariaLabel: 'Knapp test av onBlur',
 };
 WithOnBlur.parameters = {
@@ -561,6 +558,7 @@ const OnClickTemplate: ComponentStory<typeof IconButton> = (args) => {
 };
 export const WithOnClick = OnClickTemplate.bind({});
 WithOnBlur.args = {
+  ...defaultArgs,
   ariaLabel: 'Knapp test av onClick',
 };
 WithOnClick.parameters = {
@@ -591,6 +589,7 @@ const OnFocusTemplate: ComponentStory<typeof IconButton> = (args) => {
 };
 export const WithOnFocus = OnFocusTemplate.bind({});
 WithOnFocus.args = {
+  ...defaultArgs,
   ariaLabel: 'Knapp test av onFocus',
 };
 WithOnFocus.parameters = {
