@@ -68,7 +68,6 @@ IconButtonDefault.args = {
   svgPath: Object.values(SystemSVGPaths)[14], // Bell icon
   size: getIconButtonSizeDefault(),
   isOutlined: getIconButtonIsOutlinedDefault(),
-  // TODO ariaLabel er påkrevet. Sjekk om: Skal vi sette default verdi i storien?
   ariaLabel: 'default tekst aria-label',
 };
 
