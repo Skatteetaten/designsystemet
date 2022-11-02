@@ -173,7 +173,7 @@
 
     &:hover {
       background-color: var(--palette-burgundy-50);
-      color: var(--palette-graphite-0);
+      color: var(--palette-graphite-100);
 
       & .icon svg {
         fill: var(--palette-graphite-0);
@@ -193,7 +193,7 @@
       }
 
       background-color: var(--palette-burgundy-50);
-      color: var(--palette-graphite-0);
+      color: var(--palette-graphite-100);
     }
 
     &:disabled,
