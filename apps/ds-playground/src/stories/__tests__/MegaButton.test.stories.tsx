@@ -17,6 +17,14 @@ const screenShotOptions: ScreenshotOptions = {
   encoding: 'base64',
 };
 
+const testSnapshot = async (page: ElementHandle): Promise<void> => {
+  const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+  expect(innerHtml).toMatchSnapshot();
+
+  const image = await page.screenshot(screenShotOptions);
+  expect(image).toMatchImageSnapshot();
+};
+
 export default {
   component: MegaButton,
   title: 'Tests / MegaButton',
@@ -306,19 +314,41 @@ withAccessKey.parameters = {
   },
 };
 
+// Når MegaButton har dataTestId, så har button-elementet data-testid satt
+export const WithDataTestId = Template.bind({});
+WithDataTestId.args = {
+  'data-testid': '123Mega',
+};
+WithDataTestId.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const dataTestId = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('data-testid')
+    );
+    expect(dataTestId).toBe('123Mega');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
+// Når MegaButton har en veldig lang tekst så skal det brekke over flere linjer
 export const WithLongText = Template.bind({});
 WithLongText.args = {
   ...defaultArgs,
   children: 'Denne knappen har en veldig lang tekst. Så lang at den må brekke.',
 };
 WithLongText.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
+  puppeteerTest: testSnapshot,
+};
 
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
+// Når MegaButton har en veldig lang tekst uten breaking space så skal det brekke over flere linjer
+export const WithLongTextBreaking = Template.bind({});
+WithLongTextBreaking.args = {
+  ...defaultArgs,
+  children: 'Denneknappenharenveldiglangtekst.Sålangatdenmåbrekke.',
+};
+WithLongTextBreaking.parameters = {
+  puppeteerTest: testSnapshot,
 };
 
 // Når MegaButton har en veldig lang tekst så skal teksten brytes over flere linjer
@@ -331,13 +361,7 @@ WithLongTextAndIcon.args = {
     'Denne knappen har en veldig lang tekst. Icon skal da plasseres løpende etter tekster på siste linje',
 };
 WithLongTextAndIcon.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
+  puppeteerTest: testSnapshot,
 };
 
 // Når MegaButton har en href og er eksternlink, så rendres den som en a og det vises eksternlink-ikon
@@ -347,13 +371,7 @@ AsLink.args = {
   children: defaultMegaButtonText,
 };
 AsLink.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
+  puppeteerTest: testSnapshot,
 };
 
 // Når MegaButton har en href, så rendres den som en a
@@ -386,6 +404,49 @@ AsLinkExternal.parameters = {
     await megaButtonElement?.hover();
     const imageHovered = await page.screenshot(screenShotOptions);
     expect(imageHovered).toMatchImageSnapshot();
+  },
+};
+
+// Når brukeren blurer knappen, så kalles funksjonen i onBlur prop.
+// onBlur-event endrer teksten på knappen.
+const OnBlurTemplate: ComponentStory<typeof MegaButton> = (args) => {
+  const [buttText, setButtText] = useState(
+    'Klikk på knapp for å teste onBlur event'
+  );
+  return (
+    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+      <MegaButton {...args} onBlur={(): void => setButtText('Knapp er bluret')}>
+        {buttText}
+      </MegaButton>
+    </div>
+  );
+};
+
+export const WithOnBlur = OnBlurTemplate.bind({});
+WithOnBlur.args = {
+  ...MegaButtonDefaults.args,
+};
+WithOnBlur.argTypes = {
+  ...WithOnBlur.argTypes,
+  children: { control: false },
+};
+
+WithOnBlur.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const buttonElement = await page.$(`${wrapper} > button`);
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+
+    await buttonElement?.focus();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
+    const imageBlured = await page.screenshot(screenShotOptions);
+    expect(imageBlured).toMatchImageSnapshot();
+
+    const element = await page.$(`${wrapper} > button`);
+    const textContent = await element?.getProperty('textContent');
+    const text = await textContent?.jsonValue();
+    expect(text).toBe('Knapp er bluret');
   },
 };
 
@@ -430,5 +491,46 @@ WithOnClick.parameters = {
     const textContent = await element?.getProperty('textContent');
     const text = await textContent?.jsonValue();
     expect(text).toBe('Endret Tekst på Knapp');
+  },
+};
+
+// Når brukeren setter focus på knappen, så kalles funksjonen i onFocus prop.
+// onFocus-event endrer teksten på knappen.
+const OnFocusTemplate: ComponentStory<typeof MegaButton> = (args) => {
+  const [buttText, setButtText] = useState(
+    'Klikk på knapp for å teste onFocus event'
+  );
+  return (
+    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+      <MegaButton
+        {...args}
+        onFocus={(): void => setButtText('Knapp har fått fokus')}
+      >
+        {buttText}
+      </MegaButton>
+    </div>
+  );
+};
+export const WithOnFocus = OnFocusTemplate.bind({});
+WithOnFocus.args = {
+  ...MegaButtonDefaults.args,
+};
+WithOnFocus.argTypes = {
+  ...WithOnFocus.argTypes,
+  children: { control: false },
+};
+WithOnFocus.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const buttonElement = await page.$(`${wrapper} > button`);
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+
+    await buttonElement?.focus();
+    const imageFocused = await page.screenshot(screenShotOptions);
+    expect(imageFocused).toMatchImageSnapshot();
+    const element = await page.$(`${wrapper} > button`);
+    const textContent = await element?.getProperty('textContent');
+    const text = await textContent?.jsonValue();
+    expect(text).toBe('Knapp har fått fokus');
   },
 };

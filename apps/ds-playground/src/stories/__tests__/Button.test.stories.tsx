@@ -388,6 +388,23 @@ WithLongText.parameters = {
   },
 };
 
+// Når Button har en veldig lang tekst uten breaking space så skal det brekke over flere linjer
+export const WithLongTextBreaking = Template.bind({});
+WithLongTextBreaking.args = {
+  ...ButtonDefaults.args,
+  children:
+    'Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles',
+};
+WithLongTextBreaking.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+  },
+};
+
 // Når Button har en veldig lang tekst og det er et ikon så skal tekst venstrejusteres
 export const WithLongTextAndIcon = Template.bind({});
 WithLongTextAndIcon.args = {
