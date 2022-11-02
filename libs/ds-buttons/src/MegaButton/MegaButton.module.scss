@@ -73,6 +73,7 @@
   }
 
   &:active {
+    @extend %focus;
     @extend %active;
 
     border-color: var(--palette-azure-100);
