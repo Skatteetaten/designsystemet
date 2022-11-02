@@ -85,6 +85,87 @@ WithId.parameters = {
   },
 };
 
+// Når Button har en custom CSS, så vises custom stil
+export const WithCustomCss = Template.bind({});
+WithCustomCss.args = {
+  ...ButtonDefaults.args,
+  variant: 'secondary',
+  className: 'dummyClassname',
+};
+WithCustomCss.argTypes = {
+  ...WithCustomCss.argTypes,
+  className: {
+    control: 'select',
+  },
+  variant: { control: false },
+};
+WithCustomCss.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const classNameAttribute = await page.$eval(`${wrapper}> button`, (el) =>
+      el.getAttribute('class')
+    );
+    expect(classNameAttribute).toContain('dummyClassname');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+  },
+};
+
+// Når Button har en custom CSS og er disabled, så vises disabled stil med overskrivinger fra customCSS
+export const WithCustomCssAndDisabled = Template.bind({});
+WithCustomCssAndDisabled.args = {
+  ...ButtonDefaults.args,
+  disabled: true,
+  className: 'dummyClassname',
+};
+WithCustomCssAndDisabled.argTypes = {
+  ...WithCustomCssAndDisabled.argTypes,
+  className: {
+    control: 'select',
+    options: ['', 'dummyClassname'],
+    description: 'Verdien appended til designsystemets stilsett for komponent',
+    table: { defaultValue: { summary: '' } },
+  },
+};
+WithCustomCssAndDisabled.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const isDisabled = await page.$(`${wrapper} > button[disabled]`);
+    expect(isDisabled).toBeTruthy();
+
+    const classNameAttribute = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('class')
+    );
+    expect(classNameAttribute).toContain('dummyClassname');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+  },
+};
+
+// Når Button har dataTestid, så har button-elementet data-testid satt
+export const WithDataTestid = Template.bind({});
+WithDataTestid.args = {
+  svgPath: SendSVGpath,
+  'data-testid': '123ID',
+};
+WithDataTestid.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const dataTestid = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('data-testid')
+    );
+    expect(dataTestid).toBe('123ID');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
 // Når Button har en variant, så vises stilsett for varianten (secondary)
 export const VariantSecondary = Template.bind({});
 VariantSecondary.args = {
@@ -261,72 +342,6 @@ DisabledWithIcon.parameters = {
 
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
     expect(isDisabled).toBeTruthy();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
-};
-
-// Når Button har en custom CSS, så vises custom stil
-export const WithCustomCss = Template.bind({});
-WithCustomCss.args = {
-  ...ButtonDefaults.args,
-  variant: 'secondary',
-  className: 'dummyClassname',
-};
-WithCustomCss.argTypes = {
-  ...WithCustomCss.argTypes,
-  className: {
-    control: 'select',
-    options: ['', 'dummyClassname'],
-    description: 'Verdien appended til designsystemets stilsett for komponent',
-    table: { defaultValue: { summary: '' } },
-  },
-  variant: { control: false },
-};
-WithCustomCss.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const classNameAttribute = await page.$eval(`${wrapper}> button`, (el) =>
-      el.getAttribute('class')
-    );
-    expect(classNameAttribute).toContain('dummyClassname');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
-};
-
-// Når Button har en custom CSS og er disabled, så vises disabled stil med overskrivinger fra customCSS
-export const WithCustomCssAndDisabled = Template.bind({});
-WithCustomCssAndDisabled.args = {
-  ...ButtonDefaults.args,
-  disabled: true,
-  className: 'dummyClassname',
-};
-WithCustomCssAndDisabled.argTypes = {
-  ...WithCustomCssAndDisabled.argTypes,
-  className: {
-    control: 'select',
-    options: ['', 'dummyClassname'],
-    description: 'Verdien appended til designsystemets stilsett for komponent',
-    table: { defaultValue: { summary: '' } },
-  },
-};
-WithCustomCssAndDisabled.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const isDisabled = await page.$(`${wrapper} > button[disabled]`);
-    expect(isDisabled).toBeTruthy();
-
-    const classNameAttribute = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('class')
-    );
-    expect(classNameAttribute).toContain('dummyClassname');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
 
     const image = await page.screenshot(screenShotOptions);
     expect(image).toMatchImageSnapshot();

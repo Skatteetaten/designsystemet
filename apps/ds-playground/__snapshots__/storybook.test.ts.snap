@@ -26,6 +26,8 @@ exports[`Image storyshots Tests / Button With Custom Css 1`] = `"<button class=\
 
 exports[`Image storyshots Tests / Button With Custom Css And Disabled 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP  dummyClassname\\" disabled=\\"\\">Klikk her</button>"`;
 
+exports[`Image storyshots Tests / Button With Data Testid 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP Button_button_withIcon__2G3uN \\" data-testid=\\"123ID\\"><span class=\\"Button_icon__Fgskl\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 \\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\" role=\\"img\\"><path d=\\"M2 3v7l15 2-15 2v7l21-9L2 3Z\\"></path></svg></span></button>"`;
+
 exports[`Image storyshots Tests / Button With Icon 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP Button_button_withIcon__2G3uN \\"><span class=\\"Button_icon__Fgskl\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 \\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\" role=\\"img\\"><path d=\\"M2 3v7l15 2-15 2v7l21-9L2 3Z\\"></path></svg></span>Klikk her</button>"`;
 
 exports[`Image storyshots Tests / Button With Id 1`] = `"<button id=\\"htmlid\\" class=\\"Button_button__1zTCG Button_button_primary__1O4RP  \\">Klikk her</button>"`;
@@ -68,7 +70,7 @@ exports[`Image storyshots Tests / IconButton With Custom Css And Disabled 1`] = 
 
 exports[`Image storyshots Tests / IconButton With Custom SVG Path 1`] = `"<button class=\\"IconButton_button__2SNVB IconButton_button_medium__1_HY9  \\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 \\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\" role=\\"img\\"><path d=\\"M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z\\"></path></svg></button>"`;
 
-exports[`Image storyshots Tests / IconButton With Data Test Id 1`] = `"<button class=\\"IconButton_button__2SNVB IconButton_button_medium__1_HY9  \\" data-testid=\\"123bellsvgID\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 \\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\" role=\\"img\\"><path d=\\"M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0\\"></path></svg></button>"`;
+exports[`Image storyshots Tests / IconButton With Data Testid 1`] = `"<button class=\\"IconButton_button__2SNVB IconButton_button_medium__1_HY9  \\" data-testid=\\"123bellsvgID\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 \\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\" role=\\"img\\"><path d=\\"M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0\\"></path></svg></button>"`;
 
 exports[`Image storyshots Tests / IconButton With Id 1`] = `"<button id=\\"123\\" class=\\"IconButton_button__2SNVB IconButton_button_medium__1_HY9  \\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 \\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\" role=\\"img\\"><path d=\\"M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0\\"></path></svg></button>"`;
 
