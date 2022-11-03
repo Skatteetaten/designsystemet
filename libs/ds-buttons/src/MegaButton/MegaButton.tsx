@@ -56,7 +56,11 @@ export const MegaButton = forwardRef<
         {children}
         {isExternal && (
           <span className={styles.icon}>
-            <ExternalIcon className={styles.svg} />
+            <ExternalIcon
+              className={styles.svg}
+              //TODO rette opp i hardkodet verdi når vi støtter flere språk.
+              ariaLabel={'Til et annet nettsted'}
+            />
           </span>
         )}
       </Tag>
