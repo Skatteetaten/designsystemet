@@ -158,8 +158,8 @@ WithIcon.parameters = {
       };
     });
     expect(svgAttributes.role).toBe('img');
-    expect(svgAttributes.ariaHidden).toBe('true');
-    expect(svgAttributes.ariaLabel).toBeNull();
+    expect(svgAttributes.ariaHidden).toBe('false');
+    expect(svgAttributes.ariaLabel).toBe('Til et annet nettsted');
     expect(svgAttributes.ariaLabelledBy).toBeNull();
     expect(svgAttributes.viewBox).toBe(systemIconViewBox);
 
