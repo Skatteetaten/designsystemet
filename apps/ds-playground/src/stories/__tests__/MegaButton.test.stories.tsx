@@ -102,6 +102,7 @@ MegaButtonDefaults.parameters = {
 
 // Når MegaButton har en ref, så får dom button elementet ref forwarded
 export const WithRef = Template.bind({});
+WithRef.storyName = 'With Ref (FA1)';
 WithRef.args = {
   ref: (instance: HTMLButtonElement | null): void => {
     if (instance) {
@@ -122,6 +123,7 @@ WithRef.parameters = {
 
 // Når Button har en id, så har button-element id
 export const WithId = Template.bind({});
+WithId.storyName = 'With Id (FA2)';
 WithId.args = {
   ...MegaButtonDefaults.args,
   id: 'htmlid',
@@ -132,6 +134,55 @@ WithId.parameters = {
       el.getAttribute('id')
     );
     expect(elementid).toBe('htmlid');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
+// Når MegaButton har en custom CSS, så vises custom stil
+export const WithCustomCss = Template.bind({});
+WithCustomCss.storyName = 'With Custom CSS (FA3)';
+WithCustomCss.args = {
+  ...defaultArgs,
+  className: 'dummyClassname ',
+};
+WithCustomCss.argTypes = {
+  ...WithCustomCss.argTypes,
+  className: {
+    control: 'select',
+    options: ['', 'dummyClassname'],
+    description: 'Verdien appended til designsystemets stilsett for komponent',
+    table: { defaultValue: { summary: '' } },
+  },
+};
+WithCustomCss.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const classNameAttribute = await page.$eval(`${wrapper}> button`, (el) =>
+      el.getAttribute('class')
+    );
+    expect(classNameAttribute).toContain('dummyClassname');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+  },
+};
+
+// Når MegaButton har dataTestId, så har button-elementet data-testid satt
+export const WithDataTestid = Template.bind({});
+WithDataTestid.storyName = 'With DataTestid (FA4)';
+WithDataTestid.args = {
+  'data-testid': '123Mega',
+};
+WithDataTestid.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const dataTestId = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('data-testid')
+    );
+    expect(dataTestId).toBe('123Mega');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -214,70 +265,6 @@ DisabledWithIcon.parameters = {
   },
 };
 
-// Når MegaButton har en custom CSS, så vises custom stil
-export const WithCustomCSS = Template.bind({});
-WithCustomCSS.args = {
-  ...defaultArgs,
-  className: 'dummyClassname ',
-};
-WithCustomCSS.argTypes = {
-  ...WithCustomCSS.argTypes,
-  className: {
-    control: 'select',
-    options: ['', 'dummyClassname'],
-    description: 'Verdien appended til designsystemets stilsett for komponent',
-    table: { defaultValue: { summary: '' } },
-  },
-};
-WithCustomCSS.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const classNameAttribute = await page.$eval(`${wrapper}> button`, (el) =>
-      el.getAttribute('class')
-    );
-    expect(classNameAttribute).toContain('dummyClassname');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
-};
-
-// Når MegaButton har en custom CSS og er disabled, så vises disabled stil med overskrivinger fra customCSS
-export const WithCustomCSSAndDisabled = Template.bind({});
-WithCustomCSSAndDisabled.args = {
-  children: defaultMegaButtonText,
-  disabled: true,
-  className: 'dummyClassname',
-};
-WithCustomCSSAndDisabled.argTypes = {
-  ...WithCustomCSSAndDisabled.argTypes,
-  className: {
-    control: 'select',
-    options: ['', 'dummyClassname'],
-    description: 'Verdien appended til designsystemets stilsett for komponent',
-    table: { defaultValue: { summary: '' } },
-  },
-};
-WithCustomCSSAndDisabled.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const isDisabled = await page.$(`${wrapper} > button[disabled]`);
-    expect(isDisabled).toBeTruthy();
-
-    const classNameAttribute = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('class')
-    );
-    expect(classNameAttribute).toContain('dummyClassname');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
-};
-
 // Når MegaButton har aria attributer, så har button element aria-* satt
 export const WithAriaDescribedby = Template.bind({});
 WithAriaDescribedby.args = {
@@ -311,23 +298,6 @@ withAccessKey.parameters = {
       await megaButtonElement?.getProperty('accessKey')
     )?.jsonValue();
     expect(accessKey).toBe('j');
-  },
-};
-
-// Når MegaButton har dataTestId, så har button-elementet data-testid satt
-export const WithDataTestId = Template.bind({});
-WithDataTestId.args = {
-  'data-testid': '123Mega',
-};
-WithDataTestId.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const dataTestId = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('data-testid')
-    );
-    expect(dataTestId).toBe('123Mega');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 

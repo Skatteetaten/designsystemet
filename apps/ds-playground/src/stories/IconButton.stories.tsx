@@ -10,6 +10,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { category, htmlEventDescription } from '../../.storybook/helpers';
 import { SystemSVGPaths } from './utils/icon.systems';
 
+const availableSizes = [...sizeArr].slice(1, 4);
 export default {
   component: IconButton,
   title: 'Design System/IconButton',
@@ -23,9 +24,10 @@ export default {
       },
     },
     size: {
-      options: [...sizeArr].slice(1, 4),
+      options: availableSizes,
       control: 'radio',
       table: {
+        type: { summary: availableSizes.toString() },
         category: category.props,
         defaultValue: { summary: getIconButtonSizeDefault() },
       },

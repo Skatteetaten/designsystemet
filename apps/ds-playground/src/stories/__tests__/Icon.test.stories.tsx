@@ -27,6 +27,85 @@ const Template: ComponentStory<typeof Icon> = (args) => (
 
 const wrapper = '[data-test-block]';
 
+// Når Icon har en ref, så får svg elementet ref forwarded
+export const WithRef = Template.bind({});
+WithRef.storyName = 'With Ref (FA1)';
+WithRef.args = {
+  ref: (instance: SVGSVGElement | null): void => {
+    if (instance) {
+      instance.id = 'dummyIdForwardedFromRef';
+    }
+  },
+};
+WithRef.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const idAttribute = await page.$eval('svg', (el) => el.getAttribute('id'));
+    expect(idAttribute).toBe('dummyIdForwardedFromRef');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
+// Når Icon har en id, så får svg elementet id forwarded
+export const WithId = Template.bind({});
+WithId.storyName = 'With Id (FA2)';
+WithId.args = {
+  id: 'htmlid',
+};
+WithId.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const elementid = await page.$eval('svg', (el) => el.getAttribute('id'));
+    expect(elementid).toBe('htmlid');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
+// Når Icon har en custom className, får den riktig class attribute i tillegg til andre classer og stilen forandret seg
+export const WithCustomCss = Template.bind({});
+WithCustomCss.storyName = 'With Custom CSS (FA3)';
+WithCustomCss.args = {
+  className: 'myIconClassname',
+};
+WithCustomCss.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const classNameAttribute = await page.$eval('svg', (el) =>
+      el.getAttribute('class')
+    );
+    expect(classNameAttribute).toContain('myIconClassname');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+
+    const image = await page.screenshot({
+      fullPage: true,
+      encoding: 'base64',
+    });
+    expect(image).toMatchImageSnapshot();
+  },
+};
+
+// Når Icon har dataTestid, så har svg-elementet data-testid satt
+export const WithDataTestid = Template.bind({});
+WithDataTestid.storyName = 'With DataTestid (FA4)';
+WithDataTestid.args = {
+  'data-testid': '123ID',
+};
+WithDataTestid.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const dataTestid = await page.$eval('svg', (el) =>
+      el.getAttribute('data-testid')
+    );
+
+    expect(dataTestid).toBe('123ID');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
 // Når Icon instansieres, får den riktig defaults
 export const Defaults = Template.bind({});
 Defaults.parameters = {
@@ -59,63 +138,6 @@ Defaults.parameters = {
     });
 
     expect(innerHtml).toMatchSnapshot();
-    expect(image).toMatchImageSnapshot();
-  },
-};
-
-// Når Icon har en ref, så får svg elementet ref forwarded
-export const WithRef = Template.bind({});
-WithRef.args = {
-  ref: (instance: SVGSVGElement | null): void => {
-    if (instance) {
-      instance.id = 'dummyIdForwardedFromRef';
-    }
-  },
-};
-WithRef.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const idAttribute = await page.$eval('svg', (el) => el.getAttribute('id'));
-    expect(idAttribute).toBe('dummyIdForwardedFromRef');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-  },
-};
-
-// Når Icon har en id, så får svg elementet id forwarded
-export const WithId = Template.bind({});
-WithId.args = {
-  id: 'htmlid',
-};
-WithId.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const elementid = await page.$eval('svg', (el) => el.getAttribute('id'));
-    expect(elementid).toBe('htmlid');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-  },
-};
-
-// Når Icon har en custom className, får den riktig class attribute i tillegg til andre classer og stilen forandret seg
-export const WithClassname = Template.bind({});
-WithClassname.args = {
-  className: 'myIconClassname',
-};
-WithClassname.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const classNameAttribute = await page.$eval('svg', (el) =>
-      el.getAttribute('class')
-    );
-    expect(classNameAttribute).toContain('myIconClassname');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot({
-      fullPage: true,
-      encoding: 'base64',
-    });
     expect(image).toMatchImageSnapshot();
   },
 };

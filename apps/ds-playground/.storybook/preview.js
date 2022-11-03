@@ -43,12 +43,13 @@ export const parameters = {
 
 export const argTypes = {
   key: {
-    control: 'text',
+    control: false,
     description:
       'Spesielt string attributt som brukes for å iterere gjennom elementer',
     table: { type: { summary: 'string' }, category: category.baseProps },
   },
   ref: {
+    control: false,
     description: 'React ref sendt gjennom React.forwardref',
     table: {
       type: { summary: 'React.ForwardedRef' },

@@ -21,16 +21,11 @@ export default {
     // HTML
     accessKey: {
       control: 'text',
-      table: {
-        type: { summary: 'string' },
-        category: category.htmlAttribute,
-        defaultValue: { summary: '' },
-      },
+      table: { category: category.htmlAttribute },
     },
     disabled: {
       control: 'boolean',
       table: {
-        type: { summary: 'boolean' },
         category: category.htmlAttribute,
         defaultValue: { summary: getCommonDisabledDefault() },
       },

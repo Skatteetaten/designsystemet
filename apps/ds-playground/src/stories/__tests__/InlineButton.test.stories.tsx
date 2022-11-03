@@ -34,6 +34,101 @@ const Template: ComponentStory<typeof InlineButton> = (args) => (
   </div>
 );
 
+const defaultArgs = {
+  children: defaultButtonText,
+};
+
+// Når InlineButton har en ref, så får dom button elementet ref forwarded
+const forwardedFromRefId = 'dummyId';
+export const WithRef = Template.bind({});
+WithRef.storyName = 'With Ref (FA1)';
+WithRef.args = {
+  ref: (instance: HTMLButtonElement | null): void => {
+    if (instance) {
+      instance.id = forwardedFromRefId;
+    }
+  },
+  children: defaultButtonText,
+};
+WithRef.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const refId = await page.$eval(`${wrapper} > button`, (el) => el.id);
+    expect(refId).toBe(forwardedFromRefId);
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
+// Når InlineButton har satt id, så har id en verdi
+export const WithId = Template.bind({});
+WithId.storyName = 'With Id (FA2)';
+WithId.args = {
+  ...defaultArgs,
+  id: elementId,
+};
+WithId.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const id = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('id')
+    );
+    expect(id).toBe(elementId);
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
+// Når InlineButton har en custom CSS, så vises custom stil
+const dummyClassName = 'dummyClassName';
+export const WithCustomCss = Template.bind({});
+WithCustomCss.storyName = 'With Custom CSS (FA3)';
+WithCustomCss.args = {
+  ...defaultArgs,
+  className: dummyClassName,
+};
+WithCustomCss.argTypes = {
+  ...WithCustomCss.argTypes,
+  className: {
+    control: 'select',
+    options: [' ', dummyClassName],
+    table: { defaultValue: { summary: '' } },
+  },
+};
+WithCustomCss.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const classNameAttribute = await page.$eval(`${wrapper}> button`, (el) =>
+      el.getAttribute('class')
+    );
+    expect(classNameAttribute).toContain(dummyClassName);
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+  },
+};
+
+// Når InlineButton har satt dataTestid, så har dataTestId en verdi
+export const WithDataTestid = Template.bind({});
+WithDataTestid.storyName = 'With DataTestid (FA4)';
+WithDataTestid.args = {
+  ...defaultArgs,
+  'data-testid': elementId,
+};
+WithDataTestid.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const id = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('data-testid')
+    );
+    expect(id).toBe(elementId);
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
 // Når InlineButton instansieres, får den default iconPosition left
 // Knapp må også ha tekst/children
 export const InlineButtonDefaults = Template.bind({});
@@ -56,98 +151,11 @@ InlineButtonDefaults.parameters = {
   },
 };
 
-// Når InlineButton har en ref, så får dom button elementet ref forwarded
-const forwardedFromRefId = 'dummyId';
-export const WithRef = Template.bind({});
-WithRef.args = {
-  ref: (instance: HTMLButtonElement | null): void => {
-    if (instance) {
-      instance.id = forwardedFromRefId;
-    }
-  },
-  children: defaultButtonText,
-};
-WithRef.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const refId = await page.$eval(`${wrapper} > button`, (el) => el.id);
-    expect(refId).toBe(forwardedFromRefId);
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-  },
-};
-
-// Når InlineButton har satt id, så har id en verdi
-export const WithId = Template.bind({});
-WithId.args = {
-  ...InlineButtonDefaults.args,
-  id: elementId,
-};
-WithId.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const id = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('id')
-    );
-    expect(id).toBe(elementId);
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-  },
-};
-
-// Når InlineButton har en custom CSS, så vises custom stil
-const dummyClassName = 'dummyClassName';
-export const withCustomCss = Template.bind({});
-withCustomCss.args = {
-  ...InlineButtonDefaults.args,
-  className: dummyClassName,
-};
-withCustomCss.argTypes = {
-  ...withCustomCss.argTypes,
-  className: {
-    control: 'select',
-    options: [' ', dummyClassName],
-    table: { defaultValue: { summary: '' } },
-  },
-};
-withCustomCss.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const classNameAttribute = await page.$eval(`${wrapper}> button`, (el) =>
-      el.getAttribute('class')
-    );
-    expect(classNameAttribute).toContain(dummyClassName);
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
-};
-
-// Når InlineButton har satt dataTestid, så har dataTestId en verdi
-export const WithDataTestid = Template.bind({});
-WithDataTestid.args = {
-  ...InlineButtonDefaults.args,
-  'data-testid': elementId,
-};
-WithDataTestid.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const id = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('data-testid')
-    );
-    expect(id).toBe(elementId);
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-  },
-};
-
 // Når InlineButton har ett ikon uten posisjon oppgitt, så vises dette ikonet på venstre side (default).
 // Tester også for riktig aria, role og viewbox for systemIcon som er brukt
 export const WithSystemIcon = Template.bind({});
 WithSystemIcon.args = {
-  ...InlineButtonDefaults.args,
+  ...defaultArgs,
   svgPath: AddOutlineSVGpath,
 };
 WithSystemIcon.argTypes = {
@@ -183,7 +191,7 @@ WithSystemIcon.parameters = {
 // Når InlineButton har et custom ikon, så vises dette ikonet
 export const WithCustomIcon = Template.bind({});
 WithCustomIcon.args = {
-  ...InlineButtonDefaults.args,
+  ...defaultArgs,
   svgPath: (
     <path
       d={
@@ -205,7 +213,7 @@ WithCustomIcon.parameters = {
 // Når InlineButton har ett ikon med posisjon right, så vises dette ikonet på høyre side.
 export const WithIconRight = Template.bind({});
 WithIconRight.args = {
-  ...InlineButtonDefaults.args,
+  ...defaultArgs,
   svgPath: AddOutlineSVGpath,
   iconPosition: 'right',
 };
@@ -226,7 +234,7 @@ WithIconRight.parameters = {
 // Når InlineButton har prop disabled, så er knapp disabled og stil er satt til disabled
 export const Disabled = Template.bind({});
 Disabled.args = {
-  ...InlineButtonDefaults.args,
+  ...defaultArgs,
   disabled: true,
 };
 Disabled.parameters = {
@@ -245,7 +253,7 @@ Disabled.parameters = {
 // Når InlineButton har prop disabled og ikon er satt, så vises ikonet og knapp er disabled og stil er satt til disabled
 export const DisabledWithIcon = Template.bind({});
 DisabledWithIcon.args = {
-  ...InlineButtonDefaults.args,
+  ...defaultArgs,
   svgPath: AddOutlineSVGpath,
   disabled: true,
 };
@@ -269,7 +277,7 @@ DisabledWithIcon.parameters = {
 // Når InlineButton har aria-describedby, så har button-element aria-describedby
 export const WithAriaDescribedby = Template.bind({});
 WithAriaDescribedby.args = {
-  ...InlineButtonDefaults.args,
+  ...defaultArgs,
   ariaDescribedby: elementId,
 };
 WithAriaDescribedby.parameters = {
@@ -288,7 +296,7 @@ WithAriaDescribedby.parameters = {
 const accessKeyValue = 'a';
 export const WithAccessKey = Template.bind({});
 WithAccessKey.args = {
-  ...InlineButtonDefaults.args,
+  ...defaultArgs,
   accessKey: accessKeyValue,
 };
 WithAccessKey.parameters = {
@@ -306,7 +314,7 @@ WithAccessKey.parameters = {
 // Når InlineButton har en veldig lang tekst så skal tekst venstrejusteres
 export const WithLongText = Template.bind({});
 WithLongText.args = {
-  ...InlineButtonDefaults.args,
+  ...defaultArgs,
   children:
     'Denne knappen har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert.',
 };
@@ -323,7 +331,7 @@ WithLongText.parameters = {
 // Når InlineButton har en veldig lang tekst uten breaking space så skal det brekke over flere linjer
 export const WithLongTextBreaking = Template.bind({});
 WithLongTextBreaking.args = {
-  ...InlineButtonDefaults.args,
+  ...defaultArgs,
   children:
     'Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Nårikkeikonsåskaltekstenværevenstrejusteres.',
 };
@@ -340,7 +348,7 @@ WithLongTextBreaking.parameters = {
 // Når InlineButton har en veldig lang tekst og det er et ikon med position right så skal tekst høyrejusteres
 export const WithLongTextAndIcon = Template.bind({});
 WithLongTextAndIcon.args = {
-  ...InlineButtonDefaults.args,
+  ...defaultArgs,
   svgPath: AddOutlineSVGpath,
   children:
     'Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert.',
@@ -376,7 +384,7 @@ const OnBlurTemplate: ComponentStory<typeof InlineButton> = (args) => {
 };
 export const WithOnBlur = OnBlurTemplate.bind({});
 WithOnBlur.args = {
-  ...InlineButtonDefaults.args,
+  ...defaultArgs,
 };
 WithOnBlur.argTypes = {
   ...WithOnBlur.argTypes,
@@ -420,7 +428,7 @@ const OnClickTemplate: ComponentStory<typeof InlineButton> = (args) => {
 };
 export const WithOnClick = OnClickTemplate.bind({});
 WithOnClick.args = {
-  ...InlineButtonDefaults.args,
+  ...defaultArgs,
 };
 WithOnClick.argTypes = {
   ...WithOnClick.argTypes,
@@ -464,7 +472,7 @@ const OnFocusTemplate: ComponentStory<typeof InlineButton> = (args) => {
 };
 export const WithOnFocus = OnFocusTemplate.bind({});
 WithOnFocus.args = {
-  ...InlineButtonDefaults.args,
+  ...defaultArgs,
 };
 WithOnFocus.argTypes = {
   ...WithOnFocus.argTypes,
