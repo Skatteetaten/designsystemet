@@ -30,23 +30,9 @@ const Template: ComponentStory<typeof IconButton> = (args) => (
   </div>
 );
 
-// Når IconButton instansieres, får den riktige default-verdier og rendrer riktig i ulike tilstander
-export const IconButtonDefaults = Template.bind({});
-IconButtonDefaults.storyName = 'Defaults';
-IconButtonDefaults.args = {
-  ...defaultArgs,
-};
-IconButtonDefaults.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    const image = await page.screenshot(screenShotOptions);
-
-    expect(innerHtml).toMatchSnapshot();
-    expect(image).toMatchImageSnapshot();
-  },
-};
 // Når IconButton har en ref, så får dom button elementet ref forwarded
 export const WithRef = Template.bind({});
+WithRef.storyName = 'With Ref (FA1)';
 WithRef.args = {
   ...defaultArgs,
   ref: (instance: HTMLButtonElement | null): void => {
@@ -67,6 +53,7 @@ WithRef.parameters = {
 
 // Når IconButton har en id, så har button-elementet id'en satt
 export const WithId = Template.bind({});
+WithId.storyName = 'With Id (FA2)';
 WithId.args = {
   ...defaultArgs,
   id: '123',
@@ -85,6 +72,7 @@ WithId.parameters = {
 
 // Når IconButton har en custom CSS, så vises custom stil
 export const WithCustomCss = Template.bind({});
+WithCustomCss.storyName = 'With Custom CSS (FA3)';
 WithCustomCss.args = {
   ...defaultArgs,
   className: 'dummyClassname',
@@ -110,39 +98,9 @@ WithCustomCss.parameters = {
   },
 };
 
-// Når IconButton har en custom CSS og er disabled, så vises disabled stil med overskrivinger fra custom CSS
-export const WithCustomCssAndDisabled = Template.bind({});
-WithCustomCssAndDisabled.args = {
-  ...IconButtonDefaults.args,
-  disabled: true,
-  className: 'dummyClassname',
-};
-WithCustomCssAndDisabled.argTypes = {
-  className: {
-    control: 'select',
-    options: ['', 'dummyClassname'],
-  },
-};
-WithCustomCssAndDisabled.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const isDisabled = await page.$(`${wrapper} > button[disabled]`);
-    expect(isDisabled).toBeTruthy();
-
-    const classNameAttribute = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('class')
-    );
-    expect(classNameAttribute).toContain('dummyClassname');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
-};
-
 // Når IconButton har dataTestid, så har button-elementet data-testid satt
 export const WithDataTestid = Template.bind({});
+WithDataTestid.storyName = 'With DataTestid (FA4)';
 WithDataTestid.args = {
   ...defaultArgs,
   'data-testid': '123bellsvgID',
@@ -156,6 +114,22 @@ WithDataTestid.parameters = {
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
+  },
+};
+
+// Når IconButton instansieres, får den riktige default-verdier og rendrer riktig i ulike tilstander
+export const IconButtonDefaults = Template.bind({});
+IconButtonDefaults.storyName = 'Defaults';
+IconButtonDefaults.args = {
+  ...defaultArgs,
+};
+IconButtonDefaults.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    const image = await page.screenshot(screenShotOptions);
+
+    expect(innerHtml).toMatchSnapshot();
+    expect(image).toMatchImageSnapshot();
   },
 };
 

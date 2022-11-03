@@ -1,3 +1,3 @@
-import { Variant } from '@skatteetaten/ds-core-utils';
+import { ButtonVariant } from '@skatteetaten/ds-core-utils';
 
-export const getButtonVariantDefault = (): Variant => 'primary';
+export const getButtonVariantDefault = (): ButtonVariant => 'primary';

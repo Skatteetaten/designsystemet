@@ -9,13 +9,13 @@ export interface BaseProps extends BasePropsHTMLAttributes {
   'data-testid'?: string;
 }
 
-export const variantArr = [
+export const buttonVariantArr = [
   'primary',
   'secondary',
   'tertiary',
   'danger',
 ] as const;
-export type Variant = typeof variantArr[number];
+export type ButtonVariant = typeof buttonVariantArr[number];
 
 export const iconVariantArr = ['systemIcon', 'themeIcon'] as const;
 export type IconVariant = typeof iconVariantArr[number];

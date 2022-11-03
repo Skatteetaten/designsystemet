@@ -2,7 +2,10 @@ import {
   InlineButton,
   getInlineButtonPositionDefault,
 } from '@skatteetaten/ds-buttons';
-import { getCommonDisabledDefault } from '@skatteetaten/ds-core-utils';
+import {
+  getCommonDisabledDefault,
+  positionArr,
+} from '@skatteetaten/ds-core-utils';
 import { action } from '@storybook/addon-actions';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
@@ -17,9 +20,10 @@ export default {
     // Props
     children: { table: { category: category.props } },
     iconPosition: {
+      options: [...positionArr],
       control: 'radio',
-      options: ['left', 'right'],
       table: {
+        type: { summary: positionArr.toString() },
         category: category.props,
         defaultValue: { summary: getInlineButtonPositionDefault() },
       },
@@ -85,5 +89,6 @@ const baseArgs = {
 
 InlineButtonDefault.args = {
   ...baseArgs,
+  iconPosition: getInlineButtonPositionDefault(),
 };
 InlineButtonDefault.parameters = buttonDefaultParameters;

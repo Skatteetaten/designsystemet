@@ -4,6 +4,7 @@ import {
   ButtonProps,
   getButtonVariantDefault,
 } from '@skatteetaten/ds-buttons';
+import { buttonVariantArr } from '@skatteetaten/ds-core-utils';
 import { getCommonDisabledDefault } from '@skatteetaten/ds-core-utils';
 import { action } from '@storybook/addon-actions';
 import { Story, Meta } from '@storybook/react';
@@ -24,7 +25,7 @@ export default {
       table: { category: category.props },
     },
     variant: {
-      options: ['primary', 'secondary', 'tertiary', 'danger'],
+      options: [...buttonVariantArr],
       control: 'radio',
       table: {
         category: category.props,

@@ -1,6 +1,6 @@
 import { FocusEventHandler, MouseEventHandler, ReactElement } from 'react';
 
-import { BaseProps, Variant } from '@skatteetaten/ds-core-utils';
+import { BaseProps, ButtonVariant } from '@skatteetaten/ds-core-utils';
 
 type RequiredButtonHTMLAttributes = Pick<
   React.HTMLProps<HTMLButtonElement>,
@@ -22,5 +22,5 @@ export interface ButtonProps extends ButtonPropsHTMLAttributes, BaseProps {
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
   svgPath?: ReactElement;
   /** Definerer stilen til knappen. */
-  variant?: Variant;
+  variant?: ButtonVariant;
 }
