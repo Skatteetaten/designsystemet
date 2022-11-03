@@ -1,6 +1,8 @@
 import React, { forwardRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import {
+  dsI18n,
   getCommonClassNameDefault,
   getCommonDisabledDefault,
 } from '@skatteetaten/ds-core-utils';
@@ -31,9 +33,10 @@ export const MegaButton = forwardRef<
     },
     ref
   ): JSX.Element => {
+    const { t } = useTranslation('ds_Buttons', { i18n: dsI18n });
     const cssName = `${styles.button} ${className}`;
-
     const Tag = href !== undefined ? 'a' : 'button';
+
     return (
       <Tag
         ref={
@@ -58,8 +61,8 @@ export const MegaButton = forwardRef<
           <span className={styles.icon}>
             <ExternalIcon
               className={styles.svg}
-              //TODO rette opp i hardkodet verdi når vi støtter flere språk.
-              ariaLabel={'Til et annet nettsted'}
+              //TODO FRONT-991 avklare hva som blir riktig key
+              ariaLabel={t('knapp.MegaButton.AriaLabel.ExternalIcon')}
             />
           </span>
         )}

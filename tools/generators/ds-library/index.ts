@@ -100,6 +100,15 @@ export default async function (tree: Tree, schema: Schema) {
     return tsconfigSpec;
   });
 
+  const tsconfigLib = joinPathFragments(
+    projectConfig.root,
+    'tsconfig.lib.json'
+  );
+  updateJson(tree, tsconfigLib, (tsconfigLib): object => {
+    tsconfigLib.files.push('../../types/i18next.d.ts');
+    return tsconfigLib;
+  });
+
   const packageJsonPath = joinPathFragments(projectConfig.root, 'package.json');
   updateJson(tree, packageJsonPath, (packageJson): object => {
     packageJson.groupId = 'no.skatteetaten.aurora';

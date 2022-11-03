@@ -1,12 +1,23 @@
-import React from 'react';
-
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  getCommonClassNameDefault,
+  Languages,
+} from '@skatteetaten/ds-core-utils';
+import { useEffect, useGlobals } from '@storybook/client-api';
 
 import { category } from './helpers';
 import '@skatteetaten/ds-core-designtokens/index.css';
 import './playground.css';
 
-export const decorators = [(Story) => <Story />];
+const LanguageUpdater = (Story) => {
+  const [{ locale }] = useGlobals();
+  useEffect(() => {
+    dsI18n.changeLanguage(locale);
+  }, [locale]);
+  return <Story />;
+};
+
+export const decorators = [(Story) => <Story />, LanguageUpdater];
 
 const getBreakPoint = (point) => {
   const pointPx = getComputedStyle(document.documentElement).getPropertyValue(
@@ -75,5 +86,20 @@ export const argTypes = {
     control: 'text',
     description: 'unik id attribute',
     table: { type: { summary: 'string' }, category: category.baseProps },
+  },
+};
+
+export const globalTypes = {
+  locale: {
+    name: 'Locale',
+    description: 'Internationalization locale',
+    defaultValue: Languages.Bokmal,
+    toolbar: {
+      icon: 'globe',
+      items: Object.entries(Languages).map(([key, value]) => ({
+        title: key,
+        value,
+      })),
+    },
   },
 };
