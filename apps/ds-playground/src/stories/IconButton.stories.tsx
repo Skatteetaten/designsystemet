@@ -68,6 +68,7 @@ IconButtonDefault.args = {
   svgPath: Object.values(SystemSVGPaths)[14], // Bell icon
   size: getIconButtonSizeDefault(),
   isOutlined: getIconButtonIsOutlinedDefault(),
+  ariaLabel: 'default tekst aria-label',
 };
 
 IconButtonDefault.parameters = {
