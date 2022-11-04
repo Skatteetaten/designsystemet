@@ -121,7 +121,7 @@ WithDataTestid.parameters = {
 // Når Button instansieres, får den default variant primary.
 // Knapp må også ha tekst/children
 export const ButtonDefaults = Template.bind({});
-ButtonDefaults.storyName = 'Defaults Variant Primary (B1 og A1 - 1 av 4)';
+ButtonDefaults.storyName = 'Defaults Variant Primary (B1, A1 - 1 av 4)';
 ButtonDefaults.args = {
   children: defaultButtonText,
 };
@@ -246,7 +246,6 @@ VariantDanger.parameters = {
   },
 };
 
-// TODO FRONT-971 diskusjon om text akseptansekriterier bør flyttes utenfor A1
 // Når Button har en veldig lang tekst så skal tekst venstrejusteres
 export const WithLongText = Template.bind({});
 WithLongText.storyName = 'With Long Text (A1 delvis)';
@@ -308,7 +307,7 @@ WithLongTextAndIcon.parameters = {
 
 // Når Button har ett ikon, så vises ikonet. tester også for riktig aria, role og viewbox for systemIcon som er brukt
 export const WithIcon = Template.bind({});
-WithIcon.storyName = 'With Icon (A3 og B3)';
+WithIcon.storyName = 'With Icon (A3, B3)';
 WithIcon.args = {
   ...defaultArgs,
   svgPath: SendSVGpath,
@@ -411,7 +410,7 @@ WithAriaDescribedby.parameters = {
 
 // Når Button har satt accessKey, så har accessKey en verdi
 export const WithAccesskey = Template.bind({});
-WithAccesskey.storyName = 'With AccessKey (B3)';
+WithAccesskey.storyName = 'With Accesskey (B3)';
 WithAccesskey.args = {
   ...defaultArgs,
   accessKey: 's',
@@ -494,7 +493,7 @@ const OnClickTemplate: ComponentStory<typeof Button> = (args) => {
   );
 };
 export const WithOnClick = OnClickTemplate.bind({});
-WithOnClick.storyName = 'With onClick (A4)';
+WithOnClick.storyName = 'With onClick (A2 delvis)';
 WithOnClick.args = {
   ...defaultArgs,
 };
