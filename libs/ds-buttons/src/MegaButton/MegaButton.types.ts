@@ -35,8 +35,6 @@ export type MegaButtonDiscriminatedProp =
 export interface MegaButtonComponentCommonProps
   extends MegaButtonPropsHTMLAttributes,
     BaseProps {
-  /** Viser ikon som indikerer at knappen åpner en ekstern tjeneste. Brukes hvis knappen er en lenke til en side på et annet domene. */
-  //isExternal?: boolean;
   /** Tekst på knapp */
   children: string;
 }
