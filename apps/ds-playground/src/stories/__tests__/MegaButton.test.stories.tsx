@@ -263,7 +263,7 @@ WithLongTextAndExternalIcon.parameters = {
 };
 
 export const Disabled = Template.bind({});
-Disabled.storyName = 'Disabled (B6 - 1 av 2)';
+Disabled.storyName = 'Disabled (B6)';
 const discriminatedProps: MegaButtonDiscriminatedProp = {
   href: undefined,
   disabled: true,
@@ -279,27 +279,6 @@ Disabled.parameters = {
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
-};
-
-// Når MegaButton har et ikon og er disabled, så vises iconet og knapp er disabled
-export const DisabledWithIcon = Template.bind({});
-DisabledWithIcon.storyName = 'Disabled With icon (B6 - 2 av 2)';
-DisabledWithIcon.args = {
-  ...defaultArgs,
-  isExternal: true,
-  ...discriminatedProps,
-};
-DisabledWithIcon.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const isDisabled = await page.$(`${wrapper} > button[disabled]`);
-    expect(isDisabled).toBeTruthy();
 
     const image = await page.screenshot(screenShotOptions);
     expect(image).toMatchImageSnapshot();
