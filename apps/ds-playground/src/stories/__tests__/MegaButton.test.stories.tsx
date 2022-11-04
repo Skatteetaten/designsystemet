@@ -244,27 +244,6 @@ Disabled.parameters = {
   },
 };
 
-// Når MegaButton har et ikon og er disabled, så vises iconet og knapp er disabled
-export const DisabledWithIcon = Template.bind({});
-
-DisabledWithIcon.args = {
-  ...defaultArgs,
-  isExternal: true,
-  ...discriminatedProps,
-};
-DisabledWithIcon.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const isDisabled = await page.$(`${wrapper} > button[disabled]`);
-    expect(isDisabled).toBeTruthy();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
-};
-
 // Når MegaButton har aria attributer, så har button element aria-* satt
 export const WithAriaDescribedby = Template.bind({});
 WithAriaDescribedby.args = {
@@ -337,10 +316,20 @@ WithLongTextAndIcon.parameters = {
 // Når MegaButton har en href og er eksternlink, så rendres den som en a og det vises eksternlink-ikon
 export const AsLink = Template.bind({});
 AsLink.args = {
-  href: '',
+  href: 'https://www.skatteetaten.no',
   children: defaultMegaButtonText,
 };
 AsLink.parameters = {
+  puppeteerTest: testSnapshot,
+};
+
+// Når MegaButton har en href og er eksternlink, så rendres den som en a og det vises eksternlink-ikon
+export const AsLinkEmptyString = Template.bind({});
+AsLink.args = {
+  href: '',
+  children: defaultMegaButtonText,
+};
+AsLinkEmptyString.parameters = {
   puppeteerTest: testSnapshot,
 };
 
