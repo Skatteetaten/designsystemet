@@ -33,7 +33,7 @@ export const MegaButton = forwardRef<
   ): JSX.Element => {
     const cssName = `${styles.button} ${className}`;
 
-    const Tag = href ? 'a' : 'button';
+    const Tag = href !== undefined ? 'a' : 'button';
     return (
       <Tag
         ref={

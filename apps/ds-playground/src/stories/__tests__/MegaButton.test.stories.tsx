@@ -337,7 +337,7 @@ WithLongTextAndIcon.parameters = {
 // Når MegaButton har en href og er eksternlink, så rendres den som en a og det vises eksternlink-ikon
 export const AsLink = Template.bind({});
 AsLink.args = {
-  href: 'https://www.skatteetaten.no',
+  href: '',
   children: defaultMegaButtonText,
 };
 AsLink.parameters = {
