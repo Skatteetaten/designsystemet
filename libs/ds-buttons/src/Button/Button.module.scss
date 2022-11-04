@@ -176,7 +176,7 @@
       color: var(--palette-graphite-100);
 
       & .icon svg {
-        fill: var(--palette-graphite-0);
+        fill: var(--palette-graphite-100);
       }
     }
 
@@ -189,7 +189,7 @@
       @extend %active;
 
       & .icon svg {
-        fill: var(--palette-graphite-0);
+        fill: var(--palette-graphite-100);
       }
 
       background-color: var(--palette-burgundy-50);
