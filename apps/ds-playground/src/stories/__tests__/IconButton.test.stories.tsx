@@ -19,6 +19,11 @@ export default {
   title: 'Tests / IconButton',
 } as ComponentMeta<typeof IconButton>;
 
+const ariaLabel = 'aria-label';
+const ariaLabelledby = 'aria-labelledby';
+const ariaDescribedby = 'aria-describedby';
+const ariaHidden = 'aria-hidden';
+
 const defaultArgs: IconButtonProps = {
   svgPath: defaultSVGPath,
   ariaLabel: 'dummy tekst aria-label',
@@ -118,173 +123,53 @@ WithDataTestid.parameters = {
 };
 
 // Når IconButton instansieres, får den riktige default-verdier og rendrer riktig i ulike tilstander
-export const IconButtonDefaults = Template.bind({});
-IconButtonDefaults.storyName = 'Defaults';
-IconButtonDefaults.args = {
+export const Defaults = Template.bind({});
+Defaults.storyName = 'Defaults Without Outline (A1 - 1 av 7, B1 - 1 av 2, B2)';
+Defaults.args = {
   ...defaultArgs,
 };
-IconButtonDefaults.parameters = {
+Defaults.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     const image = await page.screenshot(screenShotOptions);
 
-    expect(innerHtml).toMatchSnapshot();
-    expect(image).toMatchImageSnapshot();
-  },
-};
+    const ariaLabelValue = await page.$eval(
+      `${wrapper} > button`,
+      (el, { ariaLabel }) => el.getAttribute(ariaLabel),
+      { ariaLabel }
+    );
+    expect(ariaLabelValue).toBe('dummy tekst aria-label');
 
-// Når IconButton har size small, så vises en liten knapp uten ramme som rendrer riktig i ulike tilstander
-export const SizeSmall = Template.bind({});
-SizeSmall.args = {
-  ...defaultArgs,
-  size: 'small',
-};
-SizeSmall.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    const image = await page.screenshot(screenShotOptions);
+    const systemIconViewBox = '0 0 24 24';
 
-    expect(innerHtml).toMatchSnapshot();
-    expect(image).toMatchImageSnapshot();
+    const svgAttributes = await page.$eval(
+      `${wrapper} > button svg`,
+      (el, { ariaLabel, ariaLabelledby, ariaHidden }) => {
+        return {
+          role: el.getAttribute('role'),
+          ariaLabel: el.getAttribute(ariaLabel),
+          ariaLabelledBy: el.getAttribute(ariaLabelledby),
+          ariaHidden: el.getAttribute(ariaHidden),
+          viewBox: el.getAttribute('viewBox'),
+        };
+      },
+      { ariaLabel, ariaLabelledby, ariaHidden }
+    );
 
-    const iconButtonElement = await page.$(`${wrapper} > button`);
-
-    await iconButtonElement?.focus();
-    const imageFocused = await page.screenshot(screenShotOptions);
-    expect(imageFocused).toMatchImageSnapshot();
-
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
-
-    await iconButtonElement?.hover();
-    const imageHovered = await page.screenshot(screenShotOptions);
-    expect(imageHovered).toMatchImageSnapshot();
-
-    await iconButtonElement?.click();
-    await page.waitForSelector(`${wrapper} > button:focus`);
-    const imageClicked = await page.screenshot(screenShotOptions);
-    expect(imageClicked).toMatchImageSnapshot();
-  },
-};
-
-// Når IconButton har size large, så vises en stor knapp uten ramme som rendrer riktig i ulike tilstander
-export const SizeLarge = Template.bind({});
-SizeLarge.args = {
-  ...IconButtonDefaults.args,
-  size: 'large',
-};
-SizeLarge.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    const image = await page.screenshot(screenShotOptions);
+    expect(svgAttributes.role).toBe('img');
+    expect(svgAttributes.ariaLabel).toBeNull();
+    expect(svgAttributes.ariaLabelledBy).toBeNull();
+    expect(svgAttributes.ariaHidden).toBe('true');
+    expect(svgAttributes.viewBox).toBe(systemIconViewBox);
 
     expect(innerHtml).toMatchSnapshot();
-    expect(image).toMatchImageSnapshot();
-
-    const iconButtonElement = await page.$(`${wrapper} > button`);
-
-    await iconButtonElement?.focus();
-    const imageFocused = await page.screenshot(screenShotOptions);
-    expect(imageFocused).toMatchImageSnapshot();
-
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
-
-    await iconButtonElement?.hover();
-    const imageHovered = await page.screenshot(screenShotOptions);
-    expect(imageHovered).toMatchImageSnapshot();
-
-    await iconButtonElement?.click();
-    await page.waitForSelector(`${wrapper} > button:focus`);
-    const imageClicked = await page.screenshot(screenShotOptions);
-    expect(imageClicked).toMatchImageSnapshot();
-  },
-};
-
-// Når IconButton har size small og er disabled, så vises en liten knapp uten ramme i disabled stil
-export const SizeSmallAndDisabled = Template.bind({});
-SizeSmallAndDisabled.args = {
-  ...defaultArgs,
-  size: 'small',
-  disabled: true,
-};
-SizeSmallAndDisabled.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const isDisabled = await page.$(`${wrapper} > button[disabled]`);
-    expect(isDisabled).toBeTruthy();
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
-};
-
-// Når IconButton har size large og er disabled, så vises en stor knapp uten ramme i disabled stil
-export const SizeLargeAndDisabled = Template.bind({});
-SizeLargeAndDisabled.args = {
-  ...defaultArgs,
-  size: 'large',
-  disabled: true,
-};
-SizeLargeAndDisabled.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const isDisabled = await page.$(`${wrapper} > button[disabled]`);
-    expect(isDisabled).toBeTruthy();
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
-};
-
-// Når IconButton er small og disabled og outlined, så vises en liten knapp med ramme i disabled stil
-export const SizeSmallDisabledWithOutline = Template.bind({});
-SizeSmallDisabledWithOutline.args = {
-  ...IconButtonDefaults.args,
-  size: 'small',
-  isOutlined: true,
-  disabled: true,
-};
-SizeSmallDisabledWithOutline.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const isDisabled = await page.$(`${wrapper} > button[disabled]`);
-    expect(isDisabled).toBeTruthy();
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
-};
-
-// Når IconButton er large og disabled og outlined, så vises en stor knapp med ramme i disabled stil
-export const SizeLargeDisabledWithOutline = Template.bind({});
-SizeLargeDisabledWithOutline.args = {
-  ...defaultArgs,
-  size: 'large',
-  isOutlined: true,
-  disabled: true,
-};
-SizeLargeDisabledWithOutline.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const isDisabled = await page.$(`${wrapper} > button[disabled]`);
-    expect(isDisabled).toBeTruthy();
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
     expect(image).toMatchImageSnapshot();
   },
 };
 
 // Når IconButton er outlined, så vises knappen med ramme og rendrer riktig i ulike tilstander
 export const WithOutline = Template.bind({});
+WithOutline.storyName = 'With Outline (A1 - 2 av 7)';
 WithOutline.args = {
   ...defaultArgs,
   isOutlined: true,
@@ -317,14 +202,102 @@ WithOutline.parameters = {
   },
 };
 
+// Når IconButton har et custom ikon, så vises dette ikonet
+export const WithCustomSVGPath = Template.bind({});
+WithCustomSVGPath.storyName = 'With Custom SVGPath (A1 - 3 av 7)';
+WithCustomSVGPath.args = {
+  ...defaultArgs,
+  svgPath: <path d={'M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z'} />,
+};
+WithCustomSVGPath.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+  },
+};
+
+// Når IconButton har size small, så vises en liten knapp uten ramme som rendrer riktig i ulike tilstander
+export const WithSizeSmall = Template.bind({});
+WithSizeSmall.storyName = 'With Size Small (A1 - 4 av 7)';
+WithSizeSmall.args = {
+  ...defaultArgs,
+  size: 'small',
+};
+WithSizeSmall.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    const image = await page.screenshot(screenShotOptions);
+
+    expect(innerHtml).toMatchSnapshot();
+    expect(image).toMatchImageSnapshot();
+
+    const iconButtonElement = await page.$(`${wrapper} > button`);
+
+    await iconButtonElement?.focus();
+    const imageFocused = await page.screenshot(screenShotOptions);
+    expect(imageFocused).toMatchImageSnapshot();
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
+
+    await iconButtonElement?.hover();
+    const imageHovered = await page.screenshot(screenShotOptions);
+    expect(imageHovered).toMatchImageSnapshot();
+
+    await iconButtonElement?.click();
+    await page.waitForSelector(`${wrapper} > button:focus`);
+    const imageClicked = await page.screenshot(screenShotOptions);
+    expect(imageClicked).toMatchImageSnapshot();
+  },
+};
+
+// Når IconButton har size large, så vises en stor knapp uten ramme som rendrer riktig i ulike tilstander
+export const WithSizeLarge = Template.bind({});
+WithSizeLarge.storyName = 'With Size Large (A1 - 5 av 7)';
+WithSizeLarge.args = {
+  ...defaultArgs,
+  size: 'large',
+};
+WithSizeLarge.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    const image = await page.screenshot(screenShotOptions);
+
+    expect(innerHtml).toMatchSnapshot();
+    expect(image).toMatchImageSnapshot();
+
+    const iconButtonElement = await page.$(`${wrapper} > button`);
+
+    await iconButtonElement?.focus();
+    const imageFocused = await page.screenshot(screenShotOptions);
+    expect(imageFocused).toMatchImageSnapshot();
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
+
+    await iconButtonElement?.hover();
+    const imageHovered = await page.screenshot(screenShotOptions);
+    expect(imageHovered).toMatchImageSnapshot();
+
+    await iconButtonElement?.click();
+    await page.waitForSelector(`${wrapper} > button:focus`);
+    const imageClicked = await page.screenshot(screenShotOptions);
+    expect(imageClicked).toMatchImageSnapshot();
+  },
+};
+
 // Når IconButton har size small og er outlined, så vises en liten knapp med ramme som rendrer riktig i ulike tilstander
-export const SmallWithOutline = Template.bind({});
-SmallWithOutline.args = {
+export const WithSizeSmallAndOutline = Template.bind({});
+WithSizeSmallAndOutline.storyName = 'With Size Small and Outline (A1 - 6 av 7)';
+WithSizeSmallAndOutline.args = {
   ...defaultArgs,
   size: 'small',
   isOutlined: true,
 };
-SmallWithOutline.parameters = {
+WithSizeSmallAndOutline.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     const image = await page.screenshot(screenShotOptions);
@@ -353,13 +326,14 @@ SmallWithOutline.parameters = {
 };
 
 // Når IconButton har size large og er outlined, så vises en stor knapp med ramme som rendrer riktig i ulike tilstander
-export const LargeWithOutline = Template.bind({});
-LargeWithOutline.args = {
+export const WithSizeLargeAndOutline = Template.bind({});
+WithSizeLargeAndOutline.storyName = 'With Size Large and Outline (A1 - 7 av 7)';
+WithSizeLargeAndOutline.args = {
   ...defaultArgs,
   size: 'large',
   isOutlined: true,
 };
-LargeWithOutline.parameters = {
+WithSizeLargeAndOutline.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     const image = await page.screenshot(screenShotOptions);
@@ -389,6 +363,7 @@ LargeWithOutline.parameters = {
 
 // Når IconButton er disabled, så vises knappen uten ramme i disabled stil
 export const Disabled = Template.bind({});
+Disabled.storyName = 'Disabled (B5 - 1 av 2)';
 Disabled.args = {
   ...defaultArgs,
   disabled: true,
@@ -408,6 +383,7 @@ Disabled.parameters = {
 
 // Når IconButton er disabled og outlined, så vises knappen med ramme i disabled stil
 export const DisabledWithOutline = Template.bind({});
+DisabledWithOutline.storyName = 'Disabled With Outline (B5 - 2 av 2)';
 DisabledWithOutline.args = {
   ...defaultArgs,
   isOutlined: true,
@@ -426,24 +402,9 @@ DisabledWithOutline.parameters = {
   },
 };
 
-// Når IconButton har et custom ikon, så vises dette ikonet
-export const WithCustomSVGPath = Template.bind({});
-WithCustomSVGPath.args = {
-  ...defaultArgs,
-  svgPath: <path d={'M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z'} />,
-};
-WithCustomSVGPath.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
-};
-
 // Når IconButton har aria attributer, så har button-elementet aria-* satt
 export const WithArias = Template.bind({});
+WithArias.storyName = 'With Arias (B1 - 2 av 2, B3)';
 WithArias.args = {
   ...defaultArgs,
   ariaLabel: 'Knapp ariaLabel',
@@ -451,12 +412,17 @@ WithArias.args = {
 };
 WithArias.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
-    const ariaAttributes = await page.$eval(`${wrapper} > button`, (el) => {
-      return {
-        ariaLabel: el.getAttribute('aria-label'),
-        ariaDescribedBy: el.getAttribute('aria-describedby'),
-      };
-    });
+    const ariaAttributes = await page.$eval(
+      `${wrapper} > button`,
+      (el, { ariaLabel, ariaDescribedby }) => {
+        return {
+          ariaLabel: el.getAttribute(ariaLabel),
+          ariaDescribedBy: el.getAttribute(ariaDescribedby),
+        };
+      },
+      { ariaLabel, ariaDescribedby }
+    );
+
     expect(ariaAttributes.ariaLabel).toBe('Knapp ariaLabel');
     expect(ariaAttributes.ariaDescribedBy).toBe('araiDescId');
 
@@ -466,12 +432,13 @@ WithArias.parameters = {
 };
 
 // Når IconButton har en accessKey, så har button-elementet accessKey satt
-export const WithAccessKey = Template.bind({});
-WithAccessKey.args = {
+export const WithAccesskey = Template.bind({});
+WithAccesskey.storyName = 'With AccessKey (B4)';
+WithAccesskey.args = {
   ...defaultArgs,
   accessKey: 'The bell is ringing',
 };
-WithAccessKey.parameters = {
+WithAccesskey.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const accessKey = await page.$eval(`${wrapper} > button`, (el) =>
       el.getAttribute('accessKey')
@@ -498,6 +465,7 @@ const OnBlurTemplate: ComponentStory<typeof IconButton> = (args) => {
   );
 };
 export const WithOnBlur = OnBlurTemplate.bind({});
+WithOnBlur.storyName = 'With onBlur (A2 delvis)';
 WithOnBlur.args = {
   ...defaultArgs,
   ariaLabel: 'Knapp test av onBlur',
@@ -531,7 +499,8 @@ const OnClickTemplate: ComponentStory<typeof IconButton> = (args) => {
   );
 };
 export const WithOnClick = OnClickTemplate.bind({});
-WithOnBlur.args = {
+WithOnClick.storyName = 'With onClick (A2 delvis)';
+WithOnClick.args = {
   ...defaultArgs,
   ariaLabel: 'Knapp test av onClick',
 };
@@ -562,6 +531,7 @@ const OnFocusTemplate: ComponentStory<typeof IconButton> = (args) => {
   );
 };
 export const WithOnFocus = OnFocusTemplate.bind({});
+WithOnFocus.storyName = 'With onFocus (A2 delvis)';
 WithOnFocus.args = {
   ...defaultArgs,
   ariaLabel: 'Knapp test av onFocus',

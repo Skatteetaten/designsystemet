@@ -17,6 +17,14 @@ const screenShotOptions: ScreenshotOptions = {
   encoding: 'base64',
 };
 
+const testSnapshot = async (page: ElementHandle): Promise<void> => {
+  const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+  expect(innerHtml).toMatchSnapshot();
+
+  const image = await page.screenshot(screenShotOptions);
+  expect(image).toMatchImageSnapshot();
+};
+
 export default {
   component: InlineButton,
   title: 'Tests / InlineButton',
@@ -131,12 +139,12 @@ WithDataTestid.parameters = {
 
 // Når InlineButton instansieres, får den default iconPosition left
 // Knapp må også ha tekst/children
-export const InlineButtonDefaults = Template.bind({});
-InlineButtonDefaults.storyName = 'Defaults';
-InlineButtonDefaults.args = {
+export const Defaults = Template.bind({});
+Defaults.storyName = 'Defaults (A1 - 1 av 3)';
+Defaults.args = {
   children: defaultButtonText,
 };
-InlineButtonDefaults.parameters = {
+Defaults.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const element = await page.$(wrapper);
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
@@ -151,18 +159,49 @@ InlineButtonDefaults.parameters = {
   },
 };
 
+// Når InlineButton har en veldig lang tekst så skal tekst venstrejusteres
+export const WithLongText = Template.bind({});
+WithLongText.storyName = 'With Long Text (A1 - 2 av 3)';
+WithLongText.args = {
+  ...defaultArgs,
+  children:
+    'Denne knappen har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert.',
+};
+WithLongText.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+  },
+};
+
+// Når InlineButton har en veldig lang tekst uten breaking space så skal det brekke over flere linjer
+export const WithLongTextBreaking = Template.bind({});
+WithLongTextBreaking.storyName = 'With Long Text And Breaking (A1 - 3 av 3)';
+WithLongTextBreaking.args = {
+  ...defaultArgs,
+  children:
+    'Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Nårikkeikonsåskaltekstenværevenstrejusteres.',
+};
+WithLongTextBreaking.parameters = {
+  puppeteerTest: testSnapshot,
+};
+
 // Når InlineButton har ett ikon uten posisjon oppgitt, så vises dette ikonet på venstre side (default).
 // Tester også for riktig aria, role og viewbox for systemIcon som er brukt
-export const WithSystemIcon = Template.bind({});
-WithSystemIcon.args = {
+export const WithIcon = Template.bind({});
+WithIcon.storyName = 'With Icon (A3 - 1 av 3, A4, B4)';
+WithIcon.args = {
   ...defaultArgs,
   svgPath: AddOutlineSVGpath,
 };
-WithSystemIcon.argTypes = {
-  ...WithSystemIcon.argTypes,
+WithIcon.argTypes = {
+  ...WithIcon.argTypes,
   svgPath: { control: false },
 };
-WithSystemIcon.parameters = {
+WithIcon.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const systemIconViewBox = '0 0 24 24';
     const svgAttributes = await page.$eval(`${wrapper} > button svg`, (el) => {
@@ -190,6 +229,7 @@ WithSystemIcon.parameters = {
 
 // Når InlineButton har et custom ikon, så vises dette ikonet
 export const WithCustomIcon = Template.bind({});
+WithCustomIcon.storyName = 'With Custom Icon (A3 - 2 av 3)';
 WithCustomIcon.args = {
   ...defaultArgs,
   svgPath: (
@@ -210,8 +250,26 @@ WithCustomIcon.parameters = {
   },
 };
 
+// Når InlineButton har en veldig lang tekst og det er et ikon med position right så skal tekst høyrejusteres
+export const WithLongTextAndIcon = Template.bind({});
+WithLongTextAndIcon.storyName = 'With Long Text And Breaking (A3 - 3 av 3)';
+WithLongTextAndIcon.args = {
+  ...defaultArgs,
+  svgPath: AddOutlineSVGpath,
+  children:
+    'Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert.',
+};
+WithLongTextAndIcon.argTypes = {
+  ...WithLongTextAndIcon.argTypes,
+  svgPath: { control: false },
+};
+WithLongTextAndIcon.parameters = {
+  puppeteerTest: testSnapshot,
+};
+
 // Når InlineButton har ett ikon med posisjon right, så vises dette ikonet på høyre side.
 export const WithIconRight = Template.bind({});
+WithIconRight.storyName = 'With Icon Right (A5)';
 WithIconRight.args = {
   ...defaultArgs,
   svgPath: AddOutlineSVGpath,
@@ -233,6 +291,7 @@ WithIconRight.parameters = {
 
 // Når InlineButton har prop disabled, så er knapp disabled og stil er satt til disabled
 export const Disabled = Template.bind({});
+Disabled.storyName = 'With Icon Right (B5 - 1 av 2)';
 Disabled.args = {
   ...defaultArgs,
   disabled: true,
@@ -252,6 +311,7 @@ Disabled.parameters = {
 
 // Når InlineButton har prop disabled og ikon er satt, så vises ikonet og knapp er disabled og stil er satt til disabled
 export const DisabledWithIcon = Template.bind({});
+DisabledWithIcon.storyName = 'With Icon Right (B5 - 2 av 2)';
 DisabledWithIcon.args = {
   ...defaultArgs,
   svgPath: AddOutlineSVGpath,
@@ -276,6 +336,7 @@ DisabledWithIcon.parameters = {
 
 // Når InlineButton har aria-describedby, så har button-element aria-describedby
 export const WithAriaDescribedby = Template.bind({});
+WithAriaDescribedby.storyName = 'With AriaDescribedby (B2)';
 WithAriaDescribedby.args = {
   ...defaultArgs,
   ariaDescribedby: elementId,
@@ -294,12 +355,13 @@ WithAriaDescribedby.parameters = {
 
 // Når InlineButton har satt accessKey, så har accessKey en verdi
 const accessKeyValue = 'a';
-export const WithAccessKey = Template.bind({});
-WithAccessKey.args = {
+export const WithAccesskey = Template.bind({});
+WithAccesskey.storyName = 'With Accesskey (B3)';
+WithAccesskey.args = {
   ...defaultArgs,
   accessKey: accessKeyValue,
 };
-WithAccessKey.parameters = {
+WithAccesskey.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const accessKey = await page.$eval(`${wrapper} > button`, (el) =>
       el.getAttribute('accessKey')
@@ -308,62 +370,6 @@ WithAccessKey.parameters = {
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
-  },
-};
-
-// Når InlineButton har en veldig lang tekst så skal tekst venstrejusteres
-export const WithLongText = Template.bind({});
-WithLongText.args = {
-  ...defaultArgs,
-  children:
-    'Denne knappen har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert.',
-};
-WithLongText.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
-};
-
-// Når InlineButton har en veldig lang tekst uten breaking space så skal det brekke over flere linjer
-export const WithLongTextBreaking = Template.bind({});
-WithLongTextBreaking.args = {
-  ...defaultArgs,
-  children:
-    'Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Nårikkeikonsåskaltekstenværevenstrejusteres.',
-};
-WithLongTextBreaking.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
-};
-
-// Når InlineButton har en veldig lang tekst og det er et ikon med position right så skal tekst høyrejusteres
-export const WithLongTextAndIcon = Template.bind({});
-WithLongTextAndIcon.args = {
-  ...defaultArgs,
-  svgPath: AddOutlineSVGpath,
-  children:
-    'Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert.',
-};
-WithLongTextAndIcon.argTypes = {
-  ...WithLongTextAndIcon.argTypes,
-  svgPath: { control: false },
-};
-WithLongTextAndIcon.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
   },
 };
 
@@ -383,6 +389,7 @@ const OnBlurTemplate: ComponentStory<typeof InlineButton> = (args) => {
   );
 };
 export const WithOnBlur = OnBlurTemplate.bind({});
+WithOnBlur.storyName = 'With onBlur (A2 delvis)';
 WithOnBlur.args = {
   ...defaultArgs,
 };
@@ -427,6 +434,7 @@ const OnClickTemplate: ComponentStory<typeof InlineButton> = (args) => {
   );
 };
 export const WithOnClick = OnClickTemplate.bind({});
+WithOnClick.storyName = 'With onClick (A2 delvis)';
 WithOnClick.args = {
   ...defaultArgs,
 };
@@ -471,6 +479,7 @@ const OnFocusTemplate: ComponentStory<typeof InlineButton> = (args) => {
   );
 };
 export const WithOnFocus = OnFocusTemplate.bind({});
+WithOnFocus.storyName = 'With onFocus (A2 delvis)';
 WithOnFocus.args = {
   ...defaultArgs,
 };

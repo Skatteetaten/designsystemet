@@ -40,13 +40,103 @@ const defaultArgs: MegaButtonComponentCommonProps = {
   children: defaultMegaButtonText,
 };
 
+// Når MegaButton har en ref, så får dom button elementet ref forwarded
+export const WithRef = Template.bind({});
+WithRef.storyName = 'With Ref (FA1)';
+WithRef.args = {
+  ref: (instance: HTMLButtonElement | null): void => {
+    if (instance) {
+      instance.id = 'dummyIdForwardedFromRef';
+    }
+  },
+  children: defaultMegaButtonText,
+};
+WithRef.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const refId = await page.$eval(`${wrapper} > button`, (el) => el.id);
+    expect(refId).toBe('dummyIdForwardedFromRef');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
+// Når Button har en id, så har button-element id
+export const WithId = Template.bind({});
+WithId.storyName = 'With Id (FA2)';
+WithId.args = {
+  ...defaultArgs,
+  id: 'htmlid',
+};
+WithId.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const elementid = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('id')
+    );
+    expect(elementid).toBe('htmlid');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
+// Når MegaButton har en custom CSS, så vises custom stil
+export const WithCustomCss = Template.bind({});
+WithCustomCss.storyName = 'With Custom CSS (FA3)';
+WithCustomCss.args = {
+  ...defaultArgs,
+  className: 'dummyClassname ',
+};
+WithCustomCss.argTypes = {
+  ...WithCustomCss.argTypes,
+  className: {
+    control: 'select',
+    options: ['', 'dummyClassname'],
+    description: 'Verdien appended til designsystemets stilsett for komponent',
+    table: { defaultValue: { summary: '' } },
+  },
+};
+WithCustomCss.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const classNameAttribute = await page.$eval(`${wrapper}> button`, (el) =>
+      el.getAttribute('class')
+    );
+    expect(classNameAttribute).toContain('dummyClassname');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+  },
+};
+
+// Når MegaButton har dataTestId, så har button-elementet data-testid satt
+export const WithDataTestid = Template.bind({});
+WithDataTestid.storyName = 'With DataTestid (FA4)';
+WithDataTestid.args = {
+  ...defaultArgs,
+  'data-testid': '123Mega',
+};
+WithDataTestid.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const dataTestId = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('data-testid')
+    );
+    expect(dataTestId).toBe('123Mega');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
 // Når MegaButton instansieres, så får den riktige default-verdier og rendrer riktig i ulike tilstander
-export const MegaButtonDefaults = Template.bind({});
-MegaButtonDefaults.storyName = 'Defaults';
-MegaButtonDefaults.args = {
+export const Defaults = Template.bind({});
+Defaults.storyName = 'Defaults (A1 - 1 av 2, B2)';
+Defaults.args = {
   ...defaultArgs,
 };
-MegaButtonDefaults.parameters = {
+Defaults.parameters = {
   async puppeteerTest(page: Page): Promise<void> {
     const element = await page.$(wrapper);
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
@@ -100,103 +190,38 @@ MegaButtonDefaults.parameters = {
   },
 };
 
-// Når MegaButton har en ref, så får dom button elementet ref forwarded
-export const WithRef = Template.bind({});
-WithRef.storyName = 'With Ref (FA1)';
-WithRef.args = {
-  ref: (instance: HTMLButtonElement | null): void => {
-    if (instance) {
-      instance.id = 'dummyIdForwardedFromRef';
-    }
-  },
-  children: defaultMegaButtonText,
-};
-WithRef.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const refId = await page.$eval(`${wrapper} > button`, (el) => el.id);
-    expect(refId).toBe('dummyIdForwardedFromRef');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-  },
-};
-
-// Når Button har en id, så har button-element id
-export const WithId = Template.bind({});
-WithId.storyName = 'With Id (FA2)';
-WithId.args = {
-  ...MegaButtonDefaults.args,
-  id: 'htmlid',
-};
-WithId.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const elementid = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('id')
-    );
-    expect(elementid).toBe('htmlid');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-  },
-};
-
-// Når MegaButton har en custom CSS, så vises custom stil
-export const WithCustomCss = Template.bind({});
-WithCustomCss.storyName = 'With Custom CSS (FA3)';
-WithCustomCss.args = {
+// Når MegaButton har en veldig lang tekst så skal det brekke over flere linjer
+export const WithLongText = Template.bind({});
+WithLongText.storyName = 'With Long Text (A2 - 1 av 3)';
+WithLongText.args = {
   ...defaultArgs,
-  className: 'dummyClassname ',
+  children: 'Denne knappen har en veldig lang tekst. Så lang at den må brekke.',
 };
-WithCustomCss.argTypes = {
-  ...WithCustomCss.argTypes,
-  className: {
-    control: 'select',
-    options: ['', 'dummyClassname'],
-    description: 'Verdien appended til designsystemets stilsett for komponent',
-    table: { defaultValue: { summary: '' } },
-  },
-};
-WithCustomCss.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const classNameAttribute = await page.$eval(`${wrapper}> button`, (el) =>
-      el.getAttribute('class')
-    );
-    expect(classNameAttribute).toContain('dummyClassname');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
+WithLongText.parameters = {
+  puppeteerTest: testSnapshot,
 };
 
-// Når MegaButton har dataTestId, så har button-elementet data-testid satt
-export const WithDataTestid = Template.bind({});
-WithDataTestid.storyName = 'With DataTestid (FA4)';
-WithDataTestid.args = {
-  'data-testid': '123Mega',
+// Når MegaButton har en veldig lang tekst uten breaking space så skal det brekke over flere linjer
+export const WithLongTextBreaking = Template.bind({});
+WithLongTextBreaking.storyName =
+  'With Long Text Breaking (A1 - 2 av 2, A2 - 2 av 3)';
+WithLongTextBreaking.args = {
+  ...defaultArgs,
+  children: 'Denneknappenharenveldiglangtekst.Sålangatdenmåbrekke.',
 };
-WithDataTestid.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const dataTestId = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('data-testid')
-    );
-    expect(dataTestId).toBe('123Mega');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-  },
+WithLongTextBreaking.parameters = {
+  puppeteerTest: testSnapshot,
 };
 
 // Når MegaButton har isExternal, så vises riktig ikon. tester også for riktig aria, role og viewbox for systemIcon som er brukt
-export const WithIcon = Template.bind({});
-WithIcon.args = {
+export const WithExternalIcon = Template.bind({});
+WithExternalIcon.storyName = 'With External Icon (A4 - 1 av 2, B5)';
+WithExternalIcon.args = {
   ...defaultArgs,
   isExternal: true,
 };
 
-WithIcon.parameters = {
+WithExternalIcon.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const systemIconViewBox = '0 0 24 24';
     const svgAttributes = await page.$eval(`${wrapper} > button svg`, (el) => {
@@ -222,7 +247,23 @@ WithIcon.parameters = {
   },
 };
 
+// Når MegaButton har en veldig lang tekst så skal teksten brytes over flere linjer
+// og når det er et ikon skal ikonet plasseres løpende etter teksten
+export const WithLongTextAndExternalIcon = Template.bind({});
+WithLongTextAndExternalIcon.storyName =
+  'With Long Text and External Icon (A2 - 3 av 3)';
+WithLongTextAndExternalIcon.args = {
+  ...defaultArgs,
+  isExternal: true,
+  children:
+    'Denne knappen har en veldig lang tekst. Icon skal da plasseres løpende etter tekster på siste linje',
+};
+WithLongTextAndExternalIcon.parameters = {
+  puppeteerTest: testSnapshot,
+};
+
 export const Disabled = Template.bind({});
+Disabled.storyName = 'Disabled (B6 - 1 av 2)';
 const discriminatedProps: MegaButtonDiscriminatedProp = {
   href: undefined,
   disabled: true,
@@ -246,7 +287,7 @@ Disabled.parameters = {
 
 // Når MegaButton har et ikon og er disabled, så vises iconet og knapp er disabled
 export const DisabledWithIcon = Template.bind({});
-
+DisabledWithIcon.storyName = 'Disabled With icon (B6 - 2 av 2)';
 DisabledWithIcon.args = {
   ...defaultArgs,
   isExternal: true,
@@ -267,6 +308,7 @@ DisabledWithIcon.parameters = {
 
 // Når MegaButton har aria attributer, så har button element aria-* satt
 export const WithAriaDescribedby = Template.bind({});
+WithAriaDescribedby.storyName = 'With AriaDescribedby (B1)';
 WithAriaDescribedby.args = {
   ...defaultArgs,
   ariaDescribedby: 'testid1234',
@@ -286,12 +328,13 @@ WithAriaDescribedby.parameters = {
 };
 
 // Når MegaButton har en accessKey, så settes den som forventet
-export const withAccessKey = Template.bind({});
-withAccessKey.args = {
+export const WithAccesskey = Template.bind({});
+WithAccesskey.storyName = 'With Accesskey (B4)';
+WithAccesskey.args = {
   children: defaultMegaButtonText,
   accessKey: 'j',
 };
-withAccessKey.parameters = {
+WithAccesskey.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const megaButtonElement = await page.$(`${wrapper} > button`);
     const accessKey = await (
@@ -301,41 +344,9 @@ withAccessKey.parameters = {
   },
 };
 
-// Når MegaButton har en veldig lang tekst så skal det brekke over flere linjer
-export const WithLongText = Template.bind({});
-WithLongText.args = {
-  ...defaultArgs,
-  children: 'Denne knappen har en veldig lang tekst. Så lang at den må brekke.',
-};
-WithLongText.parameters = {
-  puppeteerTest: testSnapshot,
-};
-
-// Når MegaButton har en veldig lang tekst uten breaking space så skal det brekke over flere linjer
-export const WithLongTextBreaking = Template.bind({});
-WithLongTextBreaking.args = {
-  ...defaultArgs,
-  children: 'Denneknappenharenveldiglangtekst.Sålangatdenmåbrekke.',
-};
-WithLongTextBreaking.parameters = {
-  puppeteerTest: testSnapshot,
-};
-
-// Når MegaButton har en veldig lang tekst så skal teksten brytes over flere linjer
-// og når det er et ikon skal ikonet plasseres løpende etter teksten
-export const WithLongTextAndIcon = Template.bind({});
-WithLongTextAndIcon.args = {
-  ...defaultArgs,
-  isExternal: true,
-  children:
-    'Denne knappen har en veldig lang tekst. Icon skal da plasseres løpende etter tekster på siste linje',
-};
-WithLongTextAndIcon.parameters = {
-  puppeteerTest: testSnapshot,
-};
-
 // Når MegaButton har en href og er eksternlink, så rendres den som en a og det vises eksternlink-ikon
 export const AsLink = Template.bind({});
+AsLink.storyName = 'As Link (B3)';
 AsLink.args = {
   href: 'https://www.skatteetaten.no',
   children: defaultMegaButtonText,
@@ -346,6 +357,7 @@ AsLink.parameters = {
 
 // Når MegaButton har en href, så rendres den som en a
 export const AsLinkExternal = Template.bind({});
+AsLinkExternal.storyName = 'As Link (B3, A4 - 2 av 2)';
 AsLinkExternal.args = {
   href: 'https://www.skatteetaten.no',
   isExternal: true,
@@ -393,8 +405,9 @@ const OnBlurTemplate: ComponentStory<typeof MegaButton> = (args) => {
 };
 
 export const WithOnBlur = OnBlurTemplate.bind({});
+WithOnBlur.storyName = 'With onBlur (A2 delvis)';
 WithOnBlur.args = {
-  ...MegaButtonDefaults.args,
+  ...defaultArgs,
 };
 WithOnBlur.argTypes = {
   ...WithOnBlur.argTypes,
@@ -438,6 +451,7 @@ const OnClickTemplate: ComponentStory<typeof MegaButton> = (args) => {
   );
 };
 export const WithOnClick = OnClickTemplate.bind({});
+WithOnClick.storyName = 'With onClick (A2 delvis)';
 WithOnClick.args = {
   ...defaultArgs,
 };
@@ -482,8 +496,9 @@ const OnFocusTemplate: ComponentStory<typeof MegaButton> = (args) => {
   );
 };
 export const WithOnFocus = OnFocusTemplate.bind({});
+WithOnFocus.storyName = 'With onFocus (A2 delvis)';
 WithOnFocus.args = {
-  ...MegaButtonDefaults.args,
+  ...defaultArgs,
 };
 WithOnFocus.argTypes = {
   ...WithOnFocus.argTypes,
