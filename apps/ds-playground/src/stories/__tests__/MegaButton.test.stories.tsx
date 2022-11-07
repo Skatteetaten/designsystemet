@@ -263,7 +263,7 @@ WithLongTextAndExternalIcon.parameters = {
 };
 
 export const Disabled = Template.bind({});
-Disabled.storyName = 'Disabled (B6 - 1 av 2)';
+Disabled.storyName = 'Disabled (B6)';
 const discriminatedProps: MegaButtonDiscriminatedProp = {
   href: undefined,
   disabled: true,
@@ -279,27 +279,6 @@ Disabled.parameters = {
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
-};
-
-// Når MegaButton har et ikon og er disabled, så vises iconet og knapp er disabled
-export const DisabledWithIcon = Template.bind({});
-DisabledWithIcon.storyName = 'Disabled With icon (B6 - 2 av 2)';
-DisabledWithIcon.args = {
-  ...defaultArgs,
-  isExternal: true,
-  ...discriminatedProps,
-};
-DisabledWithIcon.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const isDisabled = await page.$(`${wrapper} > button[disabled]`);
-    expect(isDisabled).toBeTruthy();
 
     const image = await page.screenshot(screenShotOptions);
     expect(image).toMatchImageSnapshot();
@@ -344,7 +323,7 @@ WithAccesskey.parameters = {
   },
 };
 
-// Når MegaButton har en href og er eksternlink, så rendres den som en a og det vises eksternlink-ikon
+// Når MegaButton har en href, så rendres den som en a
 export const AsLink = Template.bind({});
 AsLink.storyName = 'As Link (B3)';
 AsLink.args = {
@@ -355,7 +334,18 @@ AsLink.parameters = {
   puppeteerTest: testSnapshot,
 };
 
-// Når MegaButton har en href, så rendres den som en a
+// Når MegaButton har en href med tom streng, så rendres den som en a
+export const AsLinkEmptyString = Template.bind({});
+AsLinkEmptyString.storyName = 'As Link with empty href (B3)';
+AsLinkEmptyString.args = {
+  href: '',
+  children: defaultMegaButtonText,
+};
+AsLinkEmptyString.parameters = {
+  puppeteerTest: testSnapshot,
+};
+
+// Når MegaButton har en href og er eksternlink, så rendres den som en a og det vises eksternlink-ikon
 export const AsLinkExternal = Template.bind({});
 AsLinkExternal.storyName = 'As Link (B3, A4 - 2 av 2)';
 AsLinkExternal.args = {
