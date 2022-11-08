@@ -31,11 +31,7 @@ export default {
 } as ComponentMeta<typeof InlineButton>;
 
 const Template: ComponentStory<typeof InlineButton> = (args) => (
-  <div
-    style={{ margin: '1em', maxWidth: '200px' }}
-    className={'noTranstion'}
-    data-test-block
-  >
+  <div style={{ margin: '1em' }} className={'noTranstion'} data-test-block>
     <InlineButton {...args} svgPath={args.svgPath}>
       {args.children}
     </InlineButton>
@@ -165,7 +161,7 @@ WithLongText.storyName = 'With Long Text (A1 - 2 av 3)';
 WithLongText.args = {
   ...defaultArgs,
   children:
-    'Denne knappen har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert.',
+    'Denne knappen har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert. Denne knappen har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert.',
 };
 WithLongText.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -183,7 +179,7 @@ WithLongTextBreaking.storyName = 'With Long Text And Breaking (A1 - 3 av 3)';
 WithLongTextBreaking.args = {
   ...defaultArgs,
   children:
-    'Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Nårikkeikonsåskaltekstenværevenstrejusteres.',
+    'Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Nårikkeikonsåskaltekstenværevenstrejusteres.Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Nårikkeikonsåskaltekstenværevenstrejusteres.',
 };
 WithLongTextBreaking.parameters = {
   puppeteerTest: testSnapshot,
@@ -252,12 +248,12 @@ WithCustomIcon.parameters = {
 
 // Når InlineButton har en veldig lang tekst og det er et ikon med position right så skal tekst høyrejusteres
 export const WithLongTextAndIcon = Template.bind({});
-WithLongTextAndIcon.storyName = 'With Long Text And Breaking (A3 - 3 av 3)';
+WithLongTextAndIcon.storyName = 'With Long Text And Icon (A3 - 3 av 3)';
 WithLongTextAndIcon.args = {
   ...defaultArgs,
   svgPath: AddOutlineSVGpath,
   children:
-    'Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert.',
+    'Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert. Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert.',
 };
 WithLongTextAndIcon.argTypes = {
   ...WithLongTextAndIcon.argTypes,

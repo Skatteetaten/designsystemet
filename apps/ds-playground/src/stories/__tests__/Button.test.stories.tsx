@@ -252,7 +252,7 @@ WithLongText.storyName = 'With Long Text (A1 delvis)';
 WithLongText.args = {
   ...defaultArgs,
   children:
-    'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles',
+    'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles. Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles',
 };
 WithLongText.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -270,7 +270,7 @@ WithLongTextBreaking.storyName = 'With Long Text Breaking (A1 delvis)';
 WithLongTextBreaking.args = {
   ...defaultArgs,
   children:
-    'Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles',
+    'Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles.Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles',
 };
 WithLongTextBreaking.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -289,7 +289,7 @@ WithLongTextAndIcon.args = {
   ...defaultArgs,
   svgPath: SendSVGpath,
   children:
-    'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres.',
+    'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres. Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres.',
 };
 WithLongTextAndIcon.argTypes = {
   ...WithLongTextAndIcon.argTypes,
