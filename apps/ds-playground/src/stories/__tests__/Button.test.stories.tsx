@@ -118,6 +118,25 @@ WithDataTestid.parameters = {
   },
 };
 
+// Når Button har en lang, så har button-element lang
+export const WithLang = Template.bind({});
+WithLang.storyName = 'With Lang (FA5)';
+WithLang.args = {
+  ...defaultArgs,
+  lang: 'nb',
+};
+WithLang.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const langAttribute = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('lang')
+    );
+    expect(langAttribute).toBe('nb');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
 // Når Button instansieres, får den default variant primary.
 // Knapp må også ha tekst/children
 export const ButtonDefaults = Template.bind({});

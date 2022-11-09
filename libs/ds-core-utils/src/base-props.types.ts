@@ -2,7 +2,7 @@ import { HTMLAttributes } from 'react';
 
 type BasePropsHTMLAttributes = Pick<
   HTMLAttributes<Record<string, never>>,
-  'className' | 'id'
+  'className' | 'id' | 'lang'
 >;
 
 export interface BaseProps extends BasePropsHTMLAttributes {

@@ -19,6 +19,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
     {
       id,
       className = getCommonClassNameDefault(),
+      lang,
       'data-testid': dataTestId,
       accessKey,
       ariaLabel,
@@ -40,6 +41,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
         ref={ref}
         id={id}
         className={`${styles.button} ${sizeClassName} ${outlineClassName} ${className}`}
+        lang={lang}
         data-testid={dataTestId}
         disabled={disabled}
         accessKey={accessKey}

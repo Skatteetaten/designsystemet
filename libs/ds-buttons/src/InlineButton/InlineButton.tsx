@@ -17,6 +17,7 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
     {
       id,
       className = getCommonClassNameDefault(),
+      lang,
       'data-testid': dataTestId,
       iconPosition = getInlineButtonPositionDefault(),
       svgPath,
@@ -44,6 +45,7 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
         ref={ref}
         id={id}
         className={concatenatedClassName}
+        lang={lang}
         data-testid={dataTestId}
         accessKey={accessKey}
         disabled={disabled}

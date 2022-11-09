@@ -106,6 +106,25 @@ WithDataTestid.parameters = {
   },
 };
 
+// Når Icon har en lang, så har svg-element lang
+export const WithLang = Template.bind({});
+WithLang.storyName = 'With Lang (FA5)';
+WithLang.args = {
+  ariaLabel: 'Sparegrisen til ungene',
+  lang: 'nb',
+};
+WithLang.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const langAttribute = await page.$eval('svg', (el) =>
+      el.getAttribute('lang')
+    );
+    expect(langAttribute).toBe('nb');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
 // Når Icon instansieres, får den riktig defaults
 export const Defaults = Template.bind({});
 Defaults.storyName = 'With Default - Variant SystemIcon (B1, B5, A1 - 1 av 2)';
