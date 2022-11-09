@@ -78,7 +78,7 @@ exports[`Image storyshots Tests / InlineButton With Accesskey (B3) 1`] = `"<butt
 
 exports[`Image storyshots Tests / InlineButton With AriaDescribedby (B2) 1`] = `"<button class=\\"InlineButton_button__2taCK   \\" aria-describedby=\\"htmlId\\">Legg til rapport</button>"`;
 
-exports[`Image storyshots Tests / InlineButton With Custom CSS (FA3) 1`] = `"<button class=\\"InlineButton_button__2taCK   dummyClassName\\">Legg til rapport</button>"`;
+exports[`Image storyshots Tests / InlineButton With Custom CSS (FA3) 1`] = `"<button class=\\"InlineButton_button__2taCK   dummyClassname\\">Legg til rapport</button>"`;
 
 exports[`Image storyshots Tests / InlineButton With Custom Icon (A3 - 2 av 3) 1`] = `"<button class=\\"InlineButton_button__2taCK InlineButton_button_withIconLeft__3Y66a  \\"><span class=\\"InlineButton_icon__GHhTr\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 \\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\" role=\\"img\\"><path d=\\"M20.18,8.63v-1.27h-1.24v-1.37h-1.24v-1.27h-1.45v-1.37h-1.24v-1.37h-6.52v1.37h-1.35v1.37h-1.34v1.27h-1.24v1.37h-1.35v1.27H1.86v6.73h1.34v1.27h1.35v1.37h1.24v1.27h1.34v1.37h1.35v1.37h6.52v-1.37h1.35v-1.37h1.34v-1.27h1.24v-1.37h1.34v-1.27h1.58v-6.73h-1.68Zm-5.21,5.38h-1.3v1.33h-3.93v-1.33h-1.3v-3.98h1.3v-1.33h3.93v1.33h1.3v3.98Zm3.27-3.98h-1.31v-1.33h-1.3v-1.33h-1.31v-1.33h1.31v1.33h1.3v1.33h1.31v1.33Z\\"></path></svg></span>Legg til rapport</button>"`;
 
