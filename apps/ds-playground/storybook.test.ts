@@ -55,6 +55,17 @@ initStoryshots({
         : undefined,
     storybookUrl,
     async testBody(page, options) {
+      const viewport = options.context.parameters['viewport'];
+      if (viewport?.defaultViewport) {
+        const widthPx =
+          viewport.viewports[viewport.defaultViewport].styles.width;
+        await page.setViewport({
+          width: parseInt(widthPx),
+          height: 600,
+        });
+      } else {
+        await page.setViewport({ width: 800, height: 600 });
+      }
       const testResult = options.context.parameters['puppeteerTest']
         ? options.context.parameters['puppeteerTest'](page, options)
         : null;

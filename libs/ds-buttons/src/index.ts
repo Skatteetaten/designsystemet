@@ -8,3 +8,5 @@ export * from './MegaButton/MegaButton';
 export * from './MegaButton/MegaButton.types';
 export * from './Link/Link';
 export * from './Link/Link.types';
+export * from './ScrollToTopButton/ScrollToTopButton';
+export * from './ScrollToTopButton/ScrollToTopButton.types';
