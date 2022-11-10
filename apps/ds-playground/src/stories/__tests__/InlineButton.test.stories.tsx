@@ -84,18 +84,18 @@ WithId.parameters = {
 };
 
 // Når InlineButton har en custom CSS, så vises custom stil
-const dummyClassName = 'dummyClassName';
+const dummyClassname = 'dummyClassname';
 export const WithCustomCss = Template.bind({});
 WithCustomCss.storyName = 'With Custom CSS (FA3)';
 WithCustomCss.args = {
   ...defaultArgs,
-  className: dummyClassName,
+  className: dummyClassname,
 };
 WithCustomCss.argTypes = {
   ...WithCustomCss.argTypes,
   className: {
     control: 'select',
-    options: [' ', dummyClassName],
+    options: [' ', dummyClassname],
     table: { defaultValue: { summary: '' } },
   },
 };
@@ -104,7 +104,7 @@ WithCustomCss.parameters = {
     const classNameAttribute = await page.$eval(`${wrapper}> button`, (el) =>
       el.getAttribute('class')
     );
-    expect(classNameAttribute).toContain(dummyClassName);
+    expect(classNameAttribute).toContain(dummyClassname);
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -374,7 +374,7 @@ const nyTekstPaaKnapp = 'Ny tekst på knapp slik at vi ser at event fungerte';
 // onBlur-event endrer teksten på knappen.
 const OnBlurTemplate: ComponentStory<typeof InlineButton> = (args) => {
   const [buttText, setButtText] = useState(
-    'Klikk på knapp for å teste at onClick virker'
+    'Klikk på knapp for å teste at onBlur virker'
   );
   return (
     <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
