@@ -10,7 +10,7 @@ import '../classnames.stories.css';
 // TODO FRONT-893 legge til snapshot når det fungerer for linux
 
 const wrapper = '[data-test-block]';
-const elementId = 'dummyId';
+const elementId = 'htmlId';
 const defaultButtonText = 'Legg til rapport';
 const screenShotOptions: ScreenshotOptions = {
   fullPage: true,
@@ -43,13 +43,12 @@ const defaultArgs = {
 };
 
 // Når InlineButton har en ref, så får dom button elementet ref forwarded
-const forwardedFromRefId = 'dummyId';
 export const WithRef = Template.bind({});
 WithRef.storyName = 'With Ref (FA1)';
 WithRef.args = {
   ref: (instance: HTMLButtonElement | null): void => {
     if (instance) {
-      instance.id = forwardedFromRefId;
+      instance.id = 'dummyIdForwardedFromRef';
     }
   },
   children: defaultButtonText,
@@ -57,7 +56,7 @@ WithRef.args = {
 WithRef.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const refId = await page.$eval(`${wrapper} > button`, (el) => el.id);
-    expect(refId).toBe(forwardedFromRefId);
+    expect(refId).toBe('dummyIdForwardedFromRef');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -119,14 +118,33 @@ export const WithDataTestid = Template.bind({});
 WithDataTestid.storyName = 'With DataTestid (FA4)';
 WithDataTestid.args = {
   ...defaultArgs,
-  'data-testid': elementId,
+  'data-testid': '123ID',
 };
 WithDataTestid.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const id = await page.$eval(`${wrapper} > button`, (el) =>
       el.getAttribute('data-testid')
     );
-    expect(id).toBe(elementId);
+    expect(id).toBe('123ID');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
+// Når InlineButton har en lang, så har button-element lang
+export const WithLang = Template.bind({});
+WithLang.storyName = 'With Lang (FA5)';
+WithLang.args = {
+  ...defaultArgs,
+  lang: 'nb',
+};
+WithLang.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const langAttribute = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('lang')
+    );
+    expect(langAttribute).toBe('nb');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();

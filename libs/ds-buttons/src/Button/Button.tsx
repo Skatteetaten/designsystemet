@@ -17,6 +17,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     {
       id,
       className = getCommonClassNameDefault(),
+      lang,
       'data-testid': dataTestId,
       svgPath,
       variant = getButtonVariantDefault(),
@@ -39,6 +40,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         id={id}
         className={concatenatedClassName}
+        lang={lang}
         data-testid={dataTestId}
         accessKey={accessKey}
         disabled={disabled}

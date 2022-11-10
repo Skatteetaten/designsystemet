@@ -76,4 +76,9 @@ export const argTypes = {
     description: 'unik id attribute',
     table: { type: { summary: 'string' }, category: category.baseProps },
   },
+  lang: {
+    control: 'text',
+    description: 'html lang attribute',
+    table: { type: { summary: 'string' }, category: category.baseProps },
+  },
 };

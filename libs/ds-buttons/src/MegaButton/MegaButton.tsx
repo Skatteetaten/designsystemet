@@ -18,6 +18,7 @@ export const MegaButton = forwardRef<
     {
       id,
       className = getCommonClassNameDefault(),
+      lang,
       'data-testid': dataTestId,
       href,
       isExternal,
@@ -43,6 +44,7 @@ export const MegaButton = forwardRef<
         }
         id={id}
         className={cssName}
+        lang={lang}
         data-testid={dataTestId}
         href={href}
         accessKey={accessKey}

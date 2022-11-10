@@ -61,7 +61,7 @@ WithRef.parameters = {
   },
 };
 
-// Når Button har en id, så har button-element id
+// Når MegaButton har en id, så har button-element id
 export const WithId = Template.bind({});
 WithId.storyName = 'With Id (FA2)';
 WithId.args = {
@@ -124,6 +124,25 @@ WithDataTestid.parameters = {
       el.getAttribute('data-testid')
     );
     expect(dataTestId).toBe('123Mega');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
+// Når MegaButton har en lang, så har button-element lang
+export const WithLang = Template.bind({});
+WithLang.storyName = 'With Lang (FA5)';
+WithLang.args = {
+  ...defaultArgs,
+  lang: 'nb',
+};
+WithLang.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const langAttribute = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('lang')
+    );
+    expect(langAttribute).toBe('nb');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -393,7 +412,6 @@ const OnBlurTemplate: ComponentStory<typeof MegaButton> = (args) => {
     </div>
   );
 };
-
 export const WithOnBlur = OnBlurTemplate.bind({});
 WithOnBlur.storyName = 'With onBlur (A2 delvis)';
 WithOnBlur.args = {
@@ -403,7 +421,6 @@ WithOnBlur.argTypes = {
   ...WithOnBlur.argTypes,
   children: { control: false },
 };
-
 WithOnBlur.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const buttonElement = await page.$(`${wrapper} > button`);

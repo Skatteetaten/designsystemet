@@ -122,6 +122,25 @@ WithDataTestid.parameters = {
   },
 };
 
+// Når IconButton har en lang, så har button-element lang
+export const WithLang = Template.bind({});
+WithLang.storyName = 'With Lang (FA5)';
+WithLang.args = {
+  ...defaultArgs,
+  lang: 'nb',
+};
+WithLang.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const langAttribute = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('lang')
+    );
+    expect(langAttribute).toBe('nb');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
 // Når IconButton instansieres, får den riktige default-verdier og rendrer riktig i ulike tilstander
 export const Defaults = Template.bind({});
 Defaults.storyName = 'Defaults Without Outline (A1 - 1 av 7, B1 - 1 av 2, B2)';
