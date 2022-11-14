@@ -19,19 +19,16 @@ export default {
   title: 'Tests / IconButton',
 } as ComponentMeta<typeof IconButton>;
 
-const ariaLabel = 'aria-label';
-const ariaLabelledby = 'aria-labelledby';
-const ariaDescribedby = 'aria-describedby';
-const ariaHidden = 'aria-hidden';
+const accessibleName = 'dummy tekst accessible name';
 
 const defaultArgs: IconButtonProps = {
   svgPath: defaultSVGPath,
-  ariaLabel: 'dummy tekst aria-label',
+  title: accessibleName,
 };
 
 const Template: ComponentStory<typeof IconButton> = (args) => (
   <div style={{ margin: '1em' }} className={'noTranstion'} data-test-block>
-    <IconButton {...args} ariaLabel={args.ariaLabel} />
+    <IconButton {...args} title={args.title} />
   </div>
 );
 
@@ -143,7 +140,7 @@ WithLang.parameters = {
 
 // Når IconButton instansieres, får den riktige default-verdier og rendrer riktig i ulike tilstander
 export const Defaults = Template.bind({});
-Defaults.storyName = 'Defaults Without Outline (A1 - 1 av 7, B1 - 1 av 2, B2)';
+Defaults.storyName = 'Defaults Without Outline (A1 - 1 av 7, B1, B2)';
 Defaults.args = {
   ...defaultArgs,
 };
@@ -152,33 +149,27 @@ Defaults.parameters = {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     const image = await page.screenshot(screenShotOptions);
 
-    const ariaLabelValue = await page.$eval(
-      `${wrapper} > button`,
-      (el, { ariaLabel }) => el.getAttribute(ariaLabel),
-      { ariaLabel }
+    const titleElement = await page.$eval(
+      `${wrapper} > button svg title`,
+      (el) => el.textContent
     );
-    expect(ariaLabelValue).toBe('dummy tekst aria-label');
+    expect(titleElement).toBeTruthy();
+    expect(titleElement).toContain(accessibleName);
 
     const systemIconViewBox = '0 0 24 24';
-
-    const svgAttributes = await page.$eval(
-      `${wrapper} > button svg`,
-      (el, { ariaLabel, ariaLabelledby, ariaHidden }) => {
-        return {
-          role: el.getAttribute('role'),
-          ariaLabel: el.getAttribute(ariaLabel),
-          ariaLabelledBy: el.getAttribute(ariaLabelledby),
-          ariaHidden: el.getAttribute(ariaHidden),
-          viewBox: el.getAttribute('viewBox'),
-        };
-      },
-      { ariaLabel, ariaLabelledby, ariaHidden }
-    );
-
+    const svgAttributes = await page.$eval(`${wrapper} > button svg`, (el) => {
+      return {
+        role: el.getAttribute('role'),
+        ariaLabel: el.getAttribute('aria-label'),
+        ariaLabelledBy: el.getAttribute('aria-labelledby'),
+        ariaHidden: el.getAttribute('aria-hidden'),
+        viewBox: el.getAttribute('viewBox'),
+      };
+    });
     expect(svgAttributes.role).toBe('img');
     expect(svgAttributes.ariaLabel).toBeNull();
-    expect(svgAttributes.ariaLabelledBy).toBeNull();
-    expect(svgAttributes.ariaHidden).toBe('true');
+    expect(svgAttributes.ariaLabelledBy).toBe('svgtitle-:r0:');
+    expect(svgAttributes.ariaHidden).toBe('false');
     expect(svgAttributes.viewBox).toBe(systemIconViewBox);
 
     expect(innerHtml).toMatchSnapshot();
@@ -421,29 +412,19 @@ DisabledWithOutline.parameters = {
   },
 };
 
-// Når IconButton har aria attributer, så har button-elementet aria-* satt
-export const WithArias = Template.bind({});
-WithArias.storyName = 'With Arias (B1 - 2 av 2, B3)';
-WithArias.args = {
+// Når IconButton har aria-describedby, så har button-elementet aria-describedby satt
+export const WithAriaDescribedby = Template.bind({});
+WithAriaDescribedby.storyName = 'With AriaDescribedby (B3)';
+WithAriaDescribedby.args = {
   ...defaultArgs,
-  ariaLabel: 'Knapp ariaLabel',
   ariaDescribedBy: 'araiDescId',
 };
-WithArias.parameters = {
+WithAriaDescribedby.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
-    const ariaAttributes = await page.$eval(
-      `${wrapper} > button`,
-      (el, { ariaLabel, ariaDescribedby }) => {
-        return {
-          ariaLabel: el.getAttribute(ariaLabel),
-          ariaDescribedBy: el.getAttribute(ariaDescribedby),
-        };
-      },
-      { ariaLabel, ariaDescribedby }
+    const ariaDescribedBy = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('aria-describedby')
     );
-
-    expect(ariaAttributes.ariaLabel).toBe('Knapp ariaLabel');
-    expect(ariaAttributes.ariaDescribedBy).toBe('araiDescId');
+    expect(ariaDescribedBy).toBe('araiDescId');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -455,14 +436,14 @@ export const WithAccesskey = Template.bind({});
 WithAccesskey.storyName = 'With AccessKey (B4)';
 WithAccesskey.args = {
   ...defaultArgs,
-  accessKey: 'The bell is ringing',
+  accessKey: 'a',
 };
 WithAccesskey.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const accessKey = await page.$eval(`${wrapper} > button`, (el) =>
       el.getAttribute('accessKey')
     );
-    expect(accessKey).toBe('The bell is ringing');
+    expect(accessKey).toBe('a');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -470,7 +451,7 @@ WithAccesskey.parameters = {
 };
 
 // Når brukeren blurer knappen, så kalles funksjonen i onBlur prop.
-// onBlur-event endrer teksten på knappen.
+// onBlur-event endrer ikonet på knappen.
 const OnBlurTemplate: ComponentStory<typeof IconButton> = (args) => {
   const [svgPath, setSvgPath] = useState(defaultSVGPath);
   return (
@@ -487,7 +468,6 @@ export const WithOnBlur = OnBlurTemplate.bind({});
 WithOnBlur.storyName = 'With onBlur (A2 delvis)';
 WithOnBlur.args = {
   ...defaultArgs,
-  ariaLabel: 'Knapp test av onBlur',
 };
 WithOnBlur.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -504,7 +484,7 @@ WithOnBlur.parameters = {
 };
 
 // Når brukeren klikker på knappen, så kalles funksjonen i onClick prop.
-// onClick-event endrer teksten på knappen.
+// onClick-event endrer ikonet på knappen.
 const OnClickTemplate: ComponentStory<typeof IconButton> = (args) => {
   const [svgPath, setSvgPath] = useState(defaultSVGPath);
   return (
@@ -521,7 +501,6 @@ export const WithOnClick = OnClickTemplate.bind({});
 WithOnClick.storyName = 'With onClick (A2 delvis)';
 WithOnClick.args = {
   ...defaultArgs,
-  ariaLabel: 'Knapp test av onClick',
 };
 WithOnClick.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -536,7 +515,7 @@ WithOnClick.parameters = {
 };
 
 // Når brukeren setter focus på knappen, så kalles funksjonen i onFocus prop.
-// onFocus-event endrer teksten på knappen.
+// onFocus-event endrer ikonet på knappen.
 const OnFocusTemplate: ComponentStory<typeof IconButton> = (args) => {
   const [svgPath, setSvgPath] = useState(defaultSVGPath);
   return (
@@ -553,7 +532,6 @@ export const WithOnFocus = OnFocusTemplate.bind({});
 WithOnFocus.storyName = 'With onFocus (A2 delvis)';
 WithOnFocus.args = {
   ...defaultArgs,
-  ariaLabel: 'Knapp test av onFocus',
 };
 WithOnFocus.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {

@@ -212,7 +212,7 @@ WithCustomSVG.parameters = {
 
 // Når Icon har en title, får den riktig <title> tag og aria attributer
 export const WithTitle = Template.bind({});
-WithTitle.storyName = 'With  Title (B3)';
+WithTitle.storyName = 'With Title (B3)';
 WithTitle.args = {
   title: 'Min custom title beskrivelse',
 };
@@ -247,7 +247,7 @@ WithTitle.parameters = {
 
 // Når Icon har en aria-label, får den ikke noe <title> tag, og riktig aria attributer
 export const WithAriaLabel = Template.bind({});
-WithAriaLabel.storyName = 'With  Title (B4)';
+WithAriaLabel.storyName = 'With AriaLabel (B4)';
 WithAriaLabel.args = {
   ariaLabel: 'min custom aria-label beskrivelse',
 };
