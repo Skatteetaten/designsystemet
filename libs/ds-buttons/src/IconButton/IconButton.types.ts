@@ -9,7 +9,7 @@ type RequiredIconButtonHTMLAttributes = Pick<
 
 type IconButtonHTMLAttributes = Partial<RequiredIconButtonHTMLAttributes>;
 interface IconButtonPropsHTMLAttributes extends IconButtonHTMLAttributes {
-  ariaLabel: string;
+  title: string;
   ariaDescribedBy?: string;
   onBlur?: FocusEventHandler<HTMLButtonElement>;
   onClick?: MouseEventHandler<HTMLButtonElement>;
