@@ -37,9 +37,13 @@ export default {
       mapping: SystemSVGPaths,
       table: { category: category.props },
     },
+    title: {
+      table: {
+        category: category.props,
+      },
+    },
     // HTML
     accessKey: {
-      control: 'text',
       table: { category: category.htmlAttribute },
     },
     disabled: {
@@ -51,7 +55,6 @@ export default {
     },
     // Aria
     ariaDescribedBy: { table: { category: category.aria } },
-    ariaLabel: { table: { category: category.aria } },
     // Events
     onBlur: { ...htmlEventDescription },
     onClick: { ...htmlEventDescription },
@@ -70,7 +73,7 @@ IconButtonDefault.args = {
   svgPath: Object.values(SystemSVGPaths)[14], // Bell icon
   size: getIconButtonSizeDefault(),
   isOutlined: getIconButtonIsOutlinedDefault(),
-  ariaLabel: 'default tekst aria-label',
+  title: 'default tekst accessible name',
 };
 
 IconButtonDefault.parameters = {
