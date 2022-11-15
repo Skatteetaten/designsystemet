@@ -26,6 +26,7 @@
   background-color: transparent;
   border-radius: 50%;
   cursor: pointer;
+  will-change: transform;
 
   > svg {
     display: block;
