@@ -1,11 +1,11 @@
 {
   "name": "@skatteetaten/ds-core-designtokens",
   "groupId": "no.skatteetaten.aurora",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "publishConfig": {
     "registry": "https://nexus.sits.no/repository/npm-internal/"
   },
   "peerDependencies": {
-    "react": ">=17"
+    "react": "^18"
   }
 }

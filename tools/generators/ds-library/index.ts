@@ -116,7 +116,7 @@ export default async function (tree: Tree, schema: Schema) {
       registry: 'https://nexus.sits.no/repository/npm-internal/',
     };
     packageJson.peerDependencies = {
-      react: '>=17',
+      react: '^18',
     };
     return packageJson;
   });
