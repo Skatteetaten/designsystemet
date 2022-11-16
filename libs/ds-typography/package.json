@@ -1,0 +1,11 @@
+{
+  "name": "@skatteetaten/ds-typography",
+  "version": "0.0.1",
+  "groupId": "no.skatteetaten.aurora",
+  "publishConfig": {
+    "registry": "https://nexus.sits.no/repository/npm-internal/"
+  },
+  "peerDependencies": {
+    "react": ">=17"
+  }
+}
