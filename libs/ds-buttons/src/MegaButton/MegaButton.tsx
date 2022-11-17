@@ -1,11 +1,7 @@
 import React, { forwardRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import {
-  dsI18n,
-  getCommonClassNameDefault,
-  getCommonDisabledDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { ExternalIcon } from '@skatteetaten/ds-icons';
 
 import { MegaButtonProps } from './MegaButton.types';
@@ -24,7 +20,7 @@ export const MegaButton = forwardRef<
       'data-testid': dataTestId,
       href,
       isExternal,
-      disabled = getCommonDisabledDefault(),
+      disabled,
       accessKey,
       ariaDescribedby,
       onBlur,

@@ -1,15 +1,9 @@
 import { forwardRef } from 'react';
 
-import {
-  getCommonDisabledDefault,
-  getCommonClassNameDefault,
-} from '@skatteetaten/ds-core-utils';
+import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
-import {
-  getIconButtonIsOutlinedDefault,
-  getIconButtonSizeDefault,
-} from './defaults';
+import { getIconButtonSizeDefault } from './defaults';
 import { IconButtonProps } from './IconButton.types';
 
 import styles from './IconButton.module.scss';
@@ -26,8 +20,8 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
       ariaDescribedBy,
       size = getIconButtonSizeDefault(),
       svgPath,
-      isOutlined = getIconButtonIsOutlinedDefault(),
-      disabled = getCommonDisabledDefault(),
+      isOutlined,
+      disabled,
       onClick,
       onBlur,
       onFocus,
@@ -58,4 +52,4 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
 
 IconButton.displayName = 'IconButton';
 
-export { getIconButtonIsOutlinedDefault, getIconButtonSizeDefault };
+export { getIconButtonSizeDefault };

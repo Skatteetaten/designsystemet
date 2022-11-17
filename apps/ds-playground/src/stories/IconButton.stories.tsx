@@ -1,9 +1,5 @@
-import {
-  IconButton,
-  getIconButtonIsOutlinedDefault,
-  getIconButtonSizeDefault,
-} from '@skatteetaten/ds-buttons';
-import { getCommonDisabledDefault, sizeArr } from '@skatteetaten/ds-core-utils';
+import { IconButton, getIconButtonSizeDefault } from '@skatteetaten/ds-buttons';
+import { sizeArr } from '@skatteetaten/ds-core-utils';
 import { action } from '@storybook/addon-actions';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
@@ -20,7 +16,6 @@ export default {
       control: 'boolean',
       table: {
         category: category.props,
-        defaultValue: { summary: getIconButtonIsOutlinedDefault() },
       },
     },
     size: {
@@ -50,7 +45,6 @@ export default {
       control: 'boolean',
       table: {
         category: category.htmlAttribute,
-        defaultValue: { summary: getCommonDisabledDefault() },
       },
     },
     // Aria
@@ -72,7 +66,6 @@ IconButtonDefault.storyName = 'Default';
 IconButtonDefault.args = {
   svgPath: Object.values(SystemSVGPaths)[14], // Bell icon
   size: getIconButtonSizeDefault(),
-  isOutlined: getIconButtonIsOutlinedDefault(),
   title: 'default tekst accessible name',
 };
 
