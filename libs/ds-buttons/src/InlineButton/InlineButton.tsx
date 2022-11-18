@@ -1,10 +1,7 @@
 /* eslint-disable jsx-a11y/no-access-key */
 import { forwardRef } from 'react';
 
-import {
-  getCommonDisabledDefault,
-  getCommonClassNameDefault,
-} from '@skatteetaten/ds-core-utils';
+import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
 import { getInlineButtonPositionDefault } from './defaults';
@@ -22,7 +19,7 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
       iconPosition = getInlineButtonPositionDefault(),
       svgPath,
       accessKey,
-      disabled = getCommonDisabledDefault(),
+      disabled,
       ariaDescribedby,
       onBlur,
       onClick,
