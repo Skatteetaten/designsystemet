@@ -6,7 +6,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { category, htmlEventDescription } from '../../.storybook/helpers';
 import { SystemSVGPaths } from './utils/icon.systems';
 
-const availableSizes = [...sizeArr].slice(1, 4);
+const availableSizes = [...sizeArr].slice(0, 4);
 export default {
   component: IconButton,
   title: 'Design System/IconButton',

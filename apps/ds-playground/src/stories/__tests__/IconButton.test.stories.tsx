@@ -140,7 +140,7 @@ WithLang.parameters = {
 
 // Når IconButton instansieres, får den riktige default-verdier og rendrer riktig i ulike tilstander
 export const Defaults = Template.bind({});
-Defaults.storyName = 'Defaults Without Outline (A1 - 1 av 7, B1, B2)';
+Defaults.storyName = 'Defaults Without Outline (A1 - 1 av 9, B1, B2)';
 Defaults.args = {
   ...defaultArgs,
 };
@@ -179,7 +179,7 @@ Defaults.parameters = {
 
 // Når IconButton er outlined, så vises knappen med ramme og rendrer riktig i ulike tilstander
 export const WithOutline = Template.bind({});
-WithOutline.storyName = 'With Outline (A1 - 2 av 7)';
+WithOutline.storyName = 'With Outline (A1 - 2 av 9)';
 WithOutline.args = {
   ...defaultArgs,
   isOutlined: true,
@@ -214,7 +214,7 @@ WithOutline.parameters = {
 
 // Når IconButton har et custom ikon, så vises dette ikonet
 export const WithCustomSVGPath = Template.bind({});
-WithCustomSVGPath.storyName = 'With Custom SVGPath (A1 - 3 av 7)';
+WithCustomSVGPath.storyName = 'With Custom SVGPath (A1 - 3 av 9)';
 WithCustomSVGPath.args = {
   ...defaultArgs,
   svgPath: <path d={'M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z'} />,
@@ -229,9 +229,44 @@ WithCustomSVGPath.parameters = {
   },
 };
 
+// Når IconButton har size extraSmall, så vises en liten knapp uten ramme som rendrer riktig i ulike tilstander
+export const WithSizeExtraSmall = Template.bind({});
+WithSizeExtraSmall.storyName = 'With Size extraSmall (A1 - 4 av 9)';
+WithSizeExtraSmall.args = {
+  ...defaultArgs,
+  size: 'extraSmall',
+};
+WithSizeExtraSmall.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    const image = await page.screenshot(screenShotOptions);
+
+    expect(innerHtml).toMatchSnapshot();
+    expect(image).toMatchImageSnapshot();
+
+    const iconButtonElement = await page.$(`${wrapper} > button`);
+
+    await iconButtonElement?.focus();
+    const imageFocused = await page.screenshot(screenShotOptions);
+    expect(imageFocused).toMatchImageSnapshot();
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
+
+    await iconButtonElement?.hover();
+    const imageHovered = await page.screenshot(screenShotOptions);
+    expect(imageHovered).toMatchImageSnapshot();
+
+    await iconButtonElement?.click();
+    await page.waitForSelector(`${wrapper} > button:focus`);
+    const imageClicked = await page.screenshot(screenShotOptions);
+    expect(imageClicked).toMatchImageSnapshot();
+  },
+};
+
 // Når IconButton har size small, så vises en liten knapp uten ramme som rendrer riktig i ulike tilstander
 export const WithSizeSmall = Template.bind({});
-WithSizeSmall.storyName = 'With Size Small (A1 - 4 av 7)';
+WithSizeSmall.storyName = 'With Size Small (A1 - 5 av 9)';
 WithSizeSmall.args = {
   ...defaultArgs,
   size: 'small',
@@ -266,7 +301,7 @@ WithSizeSmall.parameters = {
 
 // Når IconButton har size large, så vises en stor knapp uten ramme som rendrer riktig i ulike tilstander
 export const WithSizeLarge = Template.bind({});
-WithSizeLarge.storyName = 'With Size Large (A1 - 5 av 7)';
+WithSizeLarge.storyName = 'With Size Large (A1 - 6 av 9)';
 WithSizeLarge.args = {
   ...defaultArgs,
   size: 'large',
@@ -299,9 +334,46 @@ WithSizeLarge.parameters = {
   },
 };
 
+// Når IconButton har size extraSmall og er outlined, så vises en liten knapp med ramme som rendrer riktig i ulike tilstander
+export const WithSizeExtraSmallAndOutline = Template.bind({});
+WithSizeExtraSmallAndOutline.storyName =
+  'With Size extraSmall and Outline (A1 - 7 av 9)';
+WithSizeExtraSmallAndOutline.args = {
+  ...defaultArgs,
+  size: 'extraSmall',
+  isOutlined: true,
+};
+WithSizeExtraSmallAndOutline.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    const image = await page.screenshot(screenShotOptions);
+
+    expect(innerHtml).toMatchSnapshot();
+    expect(image).toMatchImageSnapshot();
+
+    const iconButtonElement = await page.$(`${wrapper} > button`);
+
+    await iconButtonElement?.focus();
+    const imageFocused = await page.screenshot(screenShotOptions);
+    expect(imageFocused).toMatchImageSnapshot();
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
+
+    await iconButtonElement?.hover();
+    const imageHovered = await page.screenshot(screenShotOptions);
+    expect(imageHovered).toMatchImageSnapshot();
+
+    await iconButtonElement?.click();
+    await page.waitForSelector(`${wrapper} > button:focus`);
+    const imageClicked = await page.screenshot(screenShotOptions);
+    expect(imageClicked).toMatchImageSnapshot();
+  },
+};
+
 // Når IconButton har size small og er outlined, så vises en liten knapp med ramme som rendrer riktig i ulike tilstander
 export const WithSizeSmallAndOutline = Template.bind({});
-WithSizeSmallAndOutline.storyName = 'With Size Small and Outline (A1 - 6 av 7)';
+WithSizeSmallAndOutline.storyName = 'With Size Small and Outline (A1 - 8 av 9)';
 WithSizeSmallAndOutline.args = {
   ...defaultArgs,
   size: 'small',
@@ -337,7 +409,7 @@ WithSizeSmallAndOutline.parameters = {
 
 // Når IconButton har size large og er outlined, så vises en stor knapp med ramme som rendrer riktig i ulike tilstander
 export const WithSizeLargeAndOutline = Template.bind({});
-WithSizeLargeAndOutline.storyName = 'With Size Large and Outline (A1 - 7 av 7)';
+WithSizeLargeAndOutline.storyName = 'With Size Large and Outline (A1 - 9 av 9)';
 WithSizeLargeAndOutline.args = {
   ...defaultArgs,
   size: 'large',
