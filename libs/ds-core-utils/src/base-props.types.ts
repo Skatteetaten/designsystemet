@@ -31,3 +31,6 @@ export type Size = typeof sizeArr[number];
 
 export const positionArr = ['left', 'right'] as const;
 export type Positon = typeof positionArr[number];
+
+export const paragraphVariantArr = ['standard', 'ingress'] as const;
+export type ParagraphVariant = typeof paragraphVariantArr[number];
