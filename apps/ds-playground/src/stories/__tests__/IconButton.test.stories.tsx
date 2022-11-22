@@ -470,14 +470,14 @@ export const WithAriaDescribedby = Template.bind({});
 WithAriaDescribedby.storyName = 'With AriaDescribedby (B3)';
 WithAriaDescribedby.args = {
   ...defaultArgs,
-  ariaDescribedBy: 'araiDescId',
+  ariaDescribedby: 'araiDescId',
 };
 WithAriaDescribedby.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
-    const ariaDescribedBy = await page.$eval(`${wrapper} > button`, (el) =>
+    const ariaDescribedby = await page.$eval(`${wrapper} > button`, (el) =>
       el.getAttribute('aria-describedby')
     );
-    expect(ariaDescribedBy).toBe('araiDescId');
+    expect(ariaDescribedby).toBe('araiDescId');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
