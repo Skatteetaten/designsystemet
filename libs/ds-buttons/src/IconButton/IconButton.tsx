@@ -22,7 +22,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
       'data-testid': dataTestId,
       accessKey,
       title,
-      ariaDescribedBy,
+      ariaDescribedby,
       size = getIconButtonSizeDefault(),
       svgPath,
       isOutlined = getIconButtonIsOutlinedDefault(),
@@ -43,7 +43,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
         data-testid={dataTestId}
         disabled={disabled}
         accessKey={accessKey}
-        aria-describedby={ariaDescribedBy}
+        aria-describedby={ariaDescribedby}
         onBlur={onBlur}
         onClick={onClick}
         onFocus={onFocus}
