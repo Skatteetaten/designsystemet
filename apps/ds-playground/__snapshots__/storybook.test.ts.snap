@@ -22,17 +22,11 @@ exports[`Image storyshots Tests / Button Disabled (B5 - 1 av 2) 1`] = `"<button 
 
 exports[`Image storyshots Tests / Button DisabledWith Icon (B5 - 2 av 2) 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP Button_button_withIcon__2G3uN \\" disabled=\\"\\"><span class=\\"Button_icon__Fgskl\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 \\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\" role=\\"img\\"><path d=\\"M2 3v7l15 2-15 2v7l21-9L2 3Z\\"></path></svg></span>Klikk her</button>"`;
 
-exports[`Image storyshots Tests / Button Variant Danger (A1 - 4 av 4) 1`] = `ElementHandle {}`;
+exports[`Image storyshots Tests / Button Variant Danger (A1 - 4 av 4) 1`] = `"<button class=\\"Button_button__1zTCG Button_button_danger___I_QG  \\">Klikk her</button>"`;
 
-exports[`Image storyshots Tests / Button Variant Danger (A1 - 4 av 4) 2`] = `"<button class=\\"Button_button__1zTCG Button_button_danger___I_QG  \\">Klikk her</button>"`;
+exports[`Image storyshots Tests / Button Variant Secondary (A1 - 2 av 4) 1`] = `"<button class=\\"Button_button__1zTCG Button_button_secondary__E8eKQ  \\">Klikk her</button>"`;
 
-exports[`Image storyshots Tests / Button Variant Secondary (A1 - 2 av 4) 1`] = `ElementHandle {}`;
-
-exports[`Image storyshots Tests / Button Variant Secondary (A1 - 2 av 4) 2`] = `"<button class=\\"Button_button__1zTCG Button_button_secondary__E8eKQ  \\">Klikk her</button>"`;
-
-exports[`Image storyshots Tests / Button Variant Tertiary (A1 - 3 av 4) 1`] = `ElementHandle {}`;
-
-exports[`Image storyshots Tests / Button Variant Tertiary (A1 - 3 av 4) 2`] = `"<button class=\\"Button_button__1zTCG Button_button_tertiary__1XbyX  \\">Klikk her</button>"`;
+exports[`Image storyshots Tests / Button Variant Tertiary (A1 - 3 av 4) 1`] = `"<button class=\\"Button_button__1zTCG Button_button_tertiary__1XbyX  \\">Klikk her</button>"`;
 
 exports[`Image storyshots Tests / Button With Accesskey (B3) 1`] = `"<button class=\\"Button_button__1zTCG Button_button_primary__1O4RP  \\" accesskey=\\"s\\">Klikk her</button>"`;
 

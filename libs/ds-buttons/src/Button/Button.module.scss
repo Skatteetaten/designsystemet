@@ -45,6 +45,7 @@
   line-height: var(--semantic-line-height-buttons);
   text-align: center;
   transition: 0.15s;
+  will-change: transform;
   word-break: break-word;
 
   &_withIcon {

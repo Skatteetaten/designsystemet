@@ -18,7 +18,7 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => (
-  <div style={{ margin: '1em' }} className={'noTranstion'} data-test-block>
+  <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
     <Button {...args} variant={args.variant} svgPath={args.svgPath}>
       {args.children}
     </Button>
@@ -147,15 +147,34 @@ ButtonDefaults.args = {
 ButtonDefaults.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const element = await page.$(wrapper);
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
 
     const textContent = await element?.getProperty('textContent');
     const text = await textContent?.jsonValue();
     expect(text).toBe(defaultButtonText);
 
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+
     const image = await page.screenshot(screenShotOptions);
     expect(innerHtml).toMatchSnapshot();
     expect(image).toMatchImageSnapshot();
+
+    const buttonElement = await page.$(`${wrapper} > button`);
+    await buttonElement?.focus();
+    const imageFocused = await page.screenshot(screenShotOptions);
+    expect(imageFocused).toMatchImageSnapshot();
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
+    await buttonElement?.hover();
+
+    const imageHovered = await page.screenshot(screenShotOptions);
+    expect(imageHovered).toMatchImageSnapshot();
+
+    await buttonElement?.click();
+    await page.waitForSelector(`${wrapper} > button:focus`);
+    await page.waitForTimeout(300);
+    const imageClicked = await page.screenshot(screenShotOptions);
+    expect(imageClicked).toMatchImageSnapshot();
   },
 };
 
@@ -168,29 +187,27 @@ VariantSecondary.args = {
 };
 VariantSecondary.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
-    const buttonElement = await page.$(`${wrapper} > button`);
-    expect(buttonElement).toMatchSnapshot();
-
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+
+    const image = await page.screenshot(screenShotOptions);
     expect(innerHtml).toMatchSnapshot();
+    expect(image).toMatchImageSnapshot();
 
-    const textContent = await buttonElement?.getProperty('textContent');
-    const text = await textContent?.jsonValue();
-    expect(text).toBe(defaultButtonText);
-
+    const buttonElement = await page.$(`${wrapper} > button`);
     await buttonElement?.focus();
     const imageFocused = await page.screenshot(screenShotOptions);
     expect(imageFocused).toMatchImageSnapshot();
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
-
     await buttonElement?.hover();
+
     const imageHovered = await page.screenshot(screenShotOptions);
     expect(imageHovered).toMatchImageSnapshot();
 
     await buttonElement?.click();
     await page.waitForSelector(`${wrapper} > button:focus`);
+    await page.waitForTimeout(300);
     const imageClicked = await page.screenshot(screenShotOptions);
     expect(imageClicked).toMatchImageSnapshot();
   },
@@ -205,28 +222,27 @@ VariantTertiary.args = {
 };
 VariantTertiary.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
-    const buttonElement = await page.$(`${wrapper} > button`);
-    expect(buttonElement).toMatchSnapshot();
-
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
 
     const image = await page.screenshot(screenShotOptions);
+    expect(innerHtml).toMatchSnapshot();
     expect(image).toMatchImageSnapshot();
 
+    const buttonElement = await page.$(`${wrapper} > button`);
     await buttonElement?.focus();
     const imageFocused = await page.screenshot(screenShotOptions);
     expect(imageFocused).toMatchImageSnapshot();
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
-
     await buttonElement?.hover();
+
     const imageHovered = await page.screenshot(screenShotOptions);
     expect(imageHovered).toMatchImageSnapshot();
 
     await buttonElement?.click();
-    await page.waitForSelector(`${wrapper} > button`);
+    await page.waitForSelector(`${wrapper} > button:focus`);
+    await page.waitForTimeout(300);
     const imageClicked = await page.screenshot(screenShotOptions);
     expect(imageClicked).toMatchImageSnapshot();
   },
@@ -238,28 +254,27 @@ VariantDanger.storyName = 'Variant Danger (A1 - 4 av 4)';
 VariantDanger.args = { ...defaultArgs, variant: 'danger' };
 VariantDanger.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
-    const buttonElement = await page.$(`${wrapper} > button`);
-    expect(buttonElement).toMatchSnapshot();
-
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
 
     const image = await page.screenshot(screenShotOptions);
+    expect(innerHtml).toMatchSnapshot();
     expect(image).toMatchImageSnapshot();
 
+    const buttonElement = await page.$(`${wrapper} > button`);
     await buttonElement?.focus();
     const imageFocused = await page.screenshot(screenShotOptions);
     expect(imageFocused).toMatchImageSnapshot();
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
-
     await buttonElement?.hover();
+
     const imageHovered = await page.screenshot(screenShotOptions);
     expect(imageHovered).toMatchImageSnapshot();
 
     await buttonElement?.click();
     await page.waitForSelector(`${wrapper} > button:focus`);
+    await page.waitForTimeout(300);
     const imageClicked = await page.screenshot(screenShotOptions);
     expect(imageClicked).toMatchImageSnapshot();
   },

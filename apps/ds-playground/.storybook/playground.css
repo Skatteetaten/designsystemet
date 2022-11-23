@@ -1,3 +1,13 @@
+:root,
+:host {
+  font-family: 'HelveticaLocalWebFont';
+}
+
+@font-face {
+  font-family: 'HelveticaLocalWebFont';
+  src: url('HelveticaLocalWebFont.woff2') format('woff2');
+}
+
 /* Dette er i titlene i Docs fanen */
 h1.sbdocs-h1,
 h2.sbdocs-h2,

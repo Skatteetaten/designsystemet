@@ -25,11 +25,11 @@
     "build": "nx run-many --target=build",
     "build:playground": "nx build ds-core-designtokens && nx build",
     "build:analyze": "STORYBOOK_WEBPACK_STATS=true nx build",
-    "test": "rimraf .nyc_output/* && nx run-many --target=test",
-    "test:playground": "nx test",
-    "test:update": "rimraf .nyc_output/* && nx run-many --target=test -- -u",
+    "test": "rimraf .nyc_output/* && STORYSHOTS_MODE=static nx run-many --target=test -- --detectOpenHandles",
+    "test:stories": "STORYSHOTS_MODE=static nx run ds-playground:test -- --detectOpenHandles",
+    "test:update": "rimraf .nyc_output/* && rimraf apps/ds-playground/__image_snapshots__/* && STORYSHOTS_MODE=static nx run-many --target=test -- -u",
+    "test:coverage": "rimraf .nyc_output/* && CI=true STORYSHOTS_MODE=ci nx run-many --target=test",
     "generate:coverage": "nyc report --report-dir=coverage/apps/stories --reporter=html --reporter=lcov",
-    "test:coverage": "",
     "typecheck": "nx run-many --target=tsc",
     "clean": "nx clear-cache",
     "lint": "nx run-many --target=lint",
@@ -41,7 +41,9 @@
     "prettier:fix": "nx format",
     "sonarqube": "sonar-scanner",
     "generate:iconIndexFiles": "node ./libs/ds-icons/src/createIconIndexFiles.js",
-    "generate:designtokens": "node ./libs/ds-core-designtokens/scripts/CSStoJS.js && nx format ds-core-designtokens"
+    "generate:designtokens": "node ./libs/ds-core-designtokens/scripts/CSStoJS.js && nx format ds-core-designtokens",
+    "docker:start": "docker run -d --rm --name snapshotscontainer -p 9002:3000 -e 'CONNECTION_TIMEOUT=600000' -v $(pwd)/dist/storybook/ds-playground:/opt/ds-playground -e ALLOW_FILE_PROTOCOL=true browserless/chrome",
+    "docker:stop": "docker stop snapshotscontainer"
   },
   "dependencies": {
     "@skatteetaten/ds-core-designtokens": "file:dist/libs/ds-core-designtokens",
