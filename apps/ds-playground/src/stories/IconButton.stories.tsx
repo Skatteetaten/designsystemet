@@ -48,7 +48,7 @@ export default {
       },
     },
     // Aria
-    ariaDescribedBy: { table: { category: category.aria } },
+    ariaDescribedby: { table: { category: category.aria } },
     // Events
     onBlur: { ...htmlEventDescription },
     onClick: { ...htmlEventDescription },
