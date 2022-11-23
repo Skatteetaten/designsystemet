@@ -32,7 +32,6 @@ export const ThemeIcon: Story<IconProps> = Template.bind({});
 const commonArgTypes = {
   // Props
   title: {
-    control: 'text',
     table: {
       category: category.props,
     },

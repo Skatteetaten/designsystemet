@@ -33,7 +33,6 @@ export default {
     },
     // HTML
     accessKey: {
-      control: 'text',
       table: { category: category.htmlAttribute },
     },
     disabled: {

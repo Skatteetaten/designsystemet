@@ -29,7 +29,7 @@ const ExampleComponentWithoutRef = whateverHOC(
     id,
     variant = 'primary',
     className,
-    'data-testid': dataTestId = `testid-${id}`,
+    'data-testid': dataTestid = `testid-${id}`,
     onClick,
     children,
   }: ExampleComponentProps &
@@ -38,7 +38,7 @@ const ExampleComponentWithoutRef = whateverHOC(
     return (
       <button
         ref={incomingRef}
-        data-testid={dataTestId}
+        data-testid={dataTestid}
         className={className}
         onClick={onClick}
       >

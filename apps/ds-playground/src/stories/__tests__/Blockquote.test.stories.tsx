@@ -11,6 +11,21 @@ const screenShotOptions: ScreenshotOptions = {
 export default {
   component: Blockquote,
   title: 'Tests / Blockquote',
+  argTypes: {
+    // Baseprops
+    key: { table: { disable: true } },
+    ref: { table: { disable: true } },
+    className: { table: { disable: true } },
+    id: { table: { disable: true } },
+    lang: { table: { disable: true } },
+    'data-testid': { table: { disable: true } },
+    // Props
+    children: {
+      table: { disable: true },
+      control: 'text',
+    },
+    hasSpacing: { table: { disable: true } },
+  },
 } as ComponentMeta<typeof Blockquote>;
 
 const defaultArgs: BlockquoteProps = {
@@ -35,6 +50,10 @@ WithRef.args = {
     }
   },
 };
+WithRef.argTypes = {
+  ...WithRef.argTypes,
+  ref: { table: { disable: false } },
+};
 WithRef.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const refId = await page.$eval(`${wrapper} > blockquote`, (el) => el.id);
@@ -51,6 +70,10 @@ WithId.storyName = 'With Id (FA2)';
 WithId.args = {
   ...defaultArgs,
   id: 'BlockquoteId',
+};
+WithId.argTypes = {
+  ...WithId.argTypes,
+  id: { table: { disable: false } },
 };
 WithId.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -72,10 +95,8 @@ WithCustomCss.args = {
   className: 'dummyClassname',
 };
 WithCustomCss.argTypes = {
-  className: {
-    control: 'select',
-    options: ['', 'dummyClassname'],
-  },
+  ...WithCustomCss.argTypes,
+  className: { table: { disable: false } },
 };
 WithCustomCss.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -93,31 +114,16 @@ WithCustomCss.parameters = {
   },
 };
 
-// Når Blockquote har dataTestId, så har elementet data-testid satt
-export const WithDataTestId = Template.bind({});
-WithDataTestId.storyName = 'With DataTestid (FA4)';
-WithDataTestId.args = {
-  ...defaultArgs,
-  'data-testid': 'BlockquoteID',
-};
-WithDataTestId.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const dataTestId = await page.$eval(`${wrapper} > blockquote`, (el) =>
-      el.getAttribute('data-testid')
-    );
-    expect(dataTestId).toBe('BlockquoteID');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-  },
-};
-
 // Når Blockquote har en lang, så har elementet lang satt
 export const WithLang = Template.bind({});
-WithLang.storyName = 'With Lang (FA5)';
+WithLang.storyName = 'With Lang (FA4)';
 WithLang.args = {
   ...defaultArgs,
   lang: 'nb',
+};
+WithLang.argTypes = {
+  ...WithLang.argTypes,
+  lang: { table: { disable: false } },
 };
 WithLang.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -131,11 +137,38 @@ WithLang.parameters = {
   },
 };
 
+// Når Blockquote har dataTestid, så har elementet data-testid satt
+export const WithDataTestid = Template.bind({});
+WithDataTestid.storyName = 'With DataTestid (FA5)';
+WithDataTestid.args = {
+  ...defaultArgs,
+  'data-testid': 'BlockquoteID',
+};
+WithDataTestid.argTypes = {
+  ...WithDataTestid.argTypes,
+  'data-testid': { table: { disable: false } },
+};
+WithDataTestid.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const dataTestid = await page.$eval(`${wrapper} > blockquote`, (el) =>
+      el.getAttribute('data-testid')
+    );
+    expect(dataTestid).toBe('BlockquoteID');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
 // Når Blockquote instansieres, får den riktige default-verdier
 export const Defaults = Template.bind({});
 Defaults.storyName = 'Defaults (A1, B1 - 1 av 2)';
 Defaults.args = {
   ...defaultArgs,
+};
+Defaults.argTypes = {
+  ...Defaults.argTypes,
+  children: { table: { disable: false } },
 };
 Defaults.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -181,6 +214,13 @@ const TemplateWithMarkup: ComponentStory<typeof Blockquote> = (args) => (
 // Når Blockquote instansieres med markup, får markup riktig styling
 export const WithMarkup = TemplateWithMarkup.bind({});
 WithMarkup.storyName = 'With Markup (A2, B1 - 2 av 2)';
+WithMarkup.argTypes = {
+  ...WithMarkup.argTypes,
+  children: {
+    table: { disable: false },
+    control: { type: null },
+  },
+};
 WithMarkup.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
@@ -206,6 +246,10 @@ WithSpacing.storyName = 'With Spacing (A3)';
 WithSpacing.args = {
   ...defaultArgs,
   hasSpacing: true,
+};
+WithSpacing.argTypes = {
+  ...WithSpacing.argTypes,
+  hasSpacing: { table: { disable: false } },
 };
 WithSpacing.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
