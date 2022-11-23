@@ -14,7 +14,7 @@ const customConfig: MatchImageSnapshotOptions = {
   comparisonMethod: 'ssim',
   dumpDiffToConsole: true,
   dumpInlineDiffToConsole: true,
-  failureThreshold: 0,
+  failureThreshold: 0.00001,
   failureThresholdType: 'percent',
   customDiffConfig: {
     ssim: 'fast',

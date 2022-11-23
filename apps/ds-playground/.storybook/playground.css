@@ -8,6 +8,15 @@
   src: url('HelveticaLocalWebFont.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: 'CourierLocalWebFont';
+  src: url('CourierStd.woff2') format('woff2');
+}
+
+code {
+  font-family: 'CourierLocalWebFont';
+}
+
 /* Dette er i titlene i Docs fanen */
 h1.sbdocs-h1,
 h2.sbdocs-h2,
