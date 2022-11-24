@@ -78,6 +78,18 @@ iconsWithSize.forEach(function (icon) {
       () => <Icon {...iconArgs} />,
       {
         component: Icon,
+        argTypes: {
+          // Baseprops
+          key: { table: { disable: true } },
+          ref: { table: { disable: true } },
+          className: { table: { disable: true } },
+          id: { table: { disable: true } },
+          lang: { table: { disable: true } },
+          'data-testid': { table: { disable: true } },
+          // Props
+          size: { table: { disable: false } },
+          variant: { table: { disable: false } },
+        },
       }
     );
 });

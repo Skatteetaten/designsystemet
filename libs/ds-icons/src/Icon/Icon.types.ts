@@ -1,6 +1,6 @@
 import { BaseProps, Size, IconVariant } from '@skatteetaten/ds-core-utils';
 
-interface IconComponentCommonProps extends BaseProps {
+export interface IconComponentCommonProps extends BaseProps {
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
   svgPath: React.ReactElement;
 }

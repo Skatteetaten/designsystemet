@@ -29,7 +29,6 @@ export default {
       },
     },
     href: {
-      control: 'text',
       table: { category: category.htmlAttribute },
     },
     // Aria

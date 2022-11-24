@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import { IconButton, IconButtonProps } from '@skatteetaten/ds-buttons';
+import { sizeArr } from '@skatteetaten/ds-core-utils';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ElementHandle, ScreenshotOptions } from 'puppeteer';
 
@@ -14,9 +15,41 @@ const screenShotOptions: ScreenshotOptions = {
   encoding: 'base64',
 };
 
+const availableSizes = [...sizeArr].slice(0, 4);
 export default {
   component: IconButton,
   title: 'Tests / IconButton',
+  argTypes: {
+    // Baseprops
+    key: { table: { disable: true } },
+    ref: { table: { disable: true } },
+    className: { table: { disable: true } },
+    id: { table: { disable: true } },
+    lang: { table: { disable: true } },
+    'data-testid': { table: { disable: true } },
+    // Props
+    isOutlined: { table: { disable: true } },
+    size: {
+      table: { disable: true },
+      options: availableSizes,
+      control: 'radio',
+    },
+    svgPath: {
+      table: { disable: true },
+      options: Object.keys(SystemSVGPaths),
+      mapping: SystemSVGPaths,
+    },
+    title: { table: { disable: true } },
+    // HTML
+    accessKey: { table: { disable: true } },
+    disabled: { table: { disable: true } },
+    // Aria
+    ariaDescribedby: { table: { disable: true } },
+    // Events
+    onBlur: { table: { disable: true } },
+    onClick: { table: { disable: true } },
+    onFocus: { table: { disable: true } },
+  },
 } as ComponentMeta<typeof IconButton>;
 
 const accessibleName = 'dummy tekst accessible name';
@@ -43,6 +76,10 @@ WithRef.args = {
     }
   },
 };
+WithRef.argTypes = {
+  ...WithRef.argTypes,
+  ref: { table: { disable: false } },
+};
 WithRef.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const refId = await page.$eval(`${wrapper} > button`, (el) => el.id);
@@ -58,7 +95,11 @@ export const WithId = Template.bind({});
 WithId.storyName = 'With Id (FA2)';
 WithId.args = {
   ...defaultArgs,
-  id: '123',
+  id: 'htmlid',
+};
+WithId.argTypes = {
+  ...WithId.argTypes,
+  id: { table: { disable: false } },
 };
 WithId.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -80,9 +121,9 @@ WithCustomCss.args = {
   className: 'dummyClassname',
 };
 WithCustomCss.argTypes = {
+  ...WithCustomCss.argTypes,
   className: {
-    control: 'select',
-    options: ['', 'dummyClassname'],
+    table: { disable: false },
   },
 };
 WithCustomCss.parameters = {
@@ -100,31 +141,16 @@ WithCustomCss.parameters = {
   },
 };
 
-// Når IconButton har dataTestid, så har button-elementet data-testid satt
-export const WithDataTestid = Template.bind({});
-WithDataTestid.storyName = 'With DataTestid (FA4)';
-WithDataTestid.args = {
-  ...defaultArgs,
-  'data-testid': '123bellsvgID',
-};
-WithDataTestid.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const dataTestid = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('data-testid')
-    );
-    expect(dataTestid).toBe('123bellsvgID');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-  },
-};
-
 // Når IconButton har en lang, så har button-element lang
 export const WithLang = Template.bind({});
-WithLang.storyName = 'With Lang (FA5)';
+WithLang.storyName = 'With Lang (FA4)';
 WithLang.args = {
   ...defaultArgs,
   lang: 'nb',
+};
+WithLang.argTypes = {
+  ...WithLang.argTypes,
+  lang: { table: { disable: false } },
 };
 WithLang.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -138,11 +164,39 @@ WithLang.parameters = {
   },
 };
 
+// Når IconButton har dataTestid, så har button-elementet data-testid satt
+export const WithDataTestid = Template.bind({});
+WithDataTestid.storyName = 'With DataTestid (FA5)';
+WithDataTestid.args = {
+  ...defaultArgs,
+  'data-testid': '123bellsvgID',
+};
+WithDataTestid.argTypes = {
+  ...WithDataTestid.argTypes,
+  'data-testid': { table: { disable: false } },
+};
+WithDataTestid.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const dataTestid = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('data-testid')
+    );
+    expect(dataTestid).toBe('123bellsvgID');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
 // Når IconButton instansieres, får den riktige default-verdier og rendrer riktig i ulike tilstander
 export const Defaults = Template.bind({});
-Defaults.storyName = 'Defaults Without Outline (A1 - 1 av 9, B1, B2)';
+Defaults.storyName = 'Defaults (A1 - 1 av 9, B1, B2)';
 Defaults.args = {
   ...defaultArgs,
+};
+Defaults.argTypes = {
+  ...Defaults.argTypes,
+  svgPath: { table: { disable: false } },
+  title: { table: { disable: false } },
 };
 Defaults.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -184,6 +238,10 @@ WithOutline.args = {
   ...defaultArgs,
   isOutlined: true,
 };
+WithOutline.argTypes = {
+  ...WithOutline.argTypes,
+  isOutlined: { table: { disable: false } },
+};
 WithOutline.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
@@ -219,6 +277,13 @@ WithCustomSVGPath.args = {
   ...defaultArgs,
   svgPath: <path d={'M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z'} />,
 };
+WithCustomSVGPath.argTypes = {
+  ...WithCustomSVGPath.argTypes,
+  svgPath: {
+    table: { disable: false },
+    control: { type: null },
+  },
+};
 WithCustomSVGPath.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
@@ -235,6 +300,10 @@ WithSizeExtraSmall.storyName = 'With Size extraSmall (A1 - 4 av 9)';
 WithSizeExtraSmall.args = {
   ...defaultArgs,
   size: 'extraSmall',
+};
+WithSizeExtraSmall.argTypes = {
+  ...WithSizeExtraSmall.argTypes,
+  size: { table: { disable: false } },
 };
 WithSizeExtraSmall.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -271,6 +340,10 @@ WithSizeSmall.args = {
   ...defaultArgs,
   size: 'small',
 };
+WithSizeSmall.argTypes = {
+  ...WithSizeSmall.argTypes,
+  size: { table: { disable: false } },
+};
 WithSizeSmall.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
@@ -305,6 +378,10 @@ WithSizeLarge.storyName = 'With Size Large (A1 - 6 av 9)';
 WithSizeLarge.args = {
   ...defaultArgs,
   size: 'large',
+};
+WithSizeLarge.argTypes = {
+  ...WithSizeLarge.argTypes,
+  size: { table: { disable: false } },
 };
 WithSizeLarge.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -343,6 +420,11 @@ WithSizeExtraSmallAndOutline.args = {
   size: 'extraSmall',
   isOutlined: true,
 };
+WithSizeExtraSmallAndOutline.argTypes = {
+  ...WithSizeExtraSmallAndOutline.argTypes,
+  size: { table: { disable: false } },
+  isOutlined: { table: { disable: false } },
+};
 WithSizeExtraSmallAndOutline.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
@@ -378,6 +460,11 @@ WithSizeSmallAndOutline.args = {
   ...defaultArgs,
   size: 'small',
   isOutlined: true,
+};
+WithSizeSmallAndOutline.argTypes = {
+  ...WithSizeSmallAndOutline.argTypes,
+  size: { table: { disable: false } },
+  isOutlined: { table: { disable: false } },
 };
 WithSizeSmallAndOutline.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -415,6 +502,11 @@ WithSizeLargeAndOutline.args = {
   size: 'large',
   isOutlined: true,
 };
+WithSizeLargeAndOutline.argTypes = {
+  ...WithSizeLargeAndOutline.argTypes,
+  size: { table: { disable: false } },
+  isOutlined: { table: { disable: false } },
+};
 WithSizeLargeAndOutline.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
@@ -450,6 +542,10 @@ Disabled.args = {
   ...defaultArgs,
   disabled: true,
 };
+Disabled.argTypes = {
+  ...Disabled.argTypes,
+  disabled: { table: { disable: false } },
+};
 Disabled.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
@@ -471,6 +567,11 @@ DisabledWithOutline.args = {
   isOutlined: true,
   disabled: true,
 };
+DisabledWithOutline.argTypes = {
+  ...DisabledWithOutline.argTypes,
+  isOutlined: { table: { disable: false } },
+  disabled: { table: { disable: false } },
+};
 DisabledWithOutline.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
@@ -491,6 +592,10 @@ WithAriaDescribedby.args = {
   ...defaultArgs,
   ariaDescribedby: 'araiDescId',
 };
+WithAriaDescribedby.argTypes = {
+  ...WithAriaDescribedby.argTypes,
+  ariaDescribedby: { table: { disable: false } },
+};
 WithAriaDescribedby.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const ariaDescribedby = await page.$eval(`${wrapper} > button`, (el) =>
@@ -509,6 +614,10 @@ WithAccesskey.storyName = 'With AccessKey (B4)';
 WithAccesskey.args = {
   ...defaultArgs,
   accessKey: 'a',
+};
+WithAccesskey.argTypes = {
+  ...WithAccesskey.argTypes,
+  accessKey: { table: { disable: false } },
 };
 WithAccesskey.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -540,6 +649,10 @@ export const WithOnBlur = OnBlurTemplate.bind({});
 WithOnBlur.storyName = 'With onBlur (A2 delvis)';
 WithOnBlur.args = {
   ...defaultArgs,
+};
+WithOnBlur.argTypes = {
+  ...WithOnBlur.argTypes,
+  onBlur: { table: { disable: false } },
 };
 WithOnBlur.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -574,6 +687,10 @@ WithOnClick.storyName = 'With onClick (A2 delvis)';
 WithOnClick.args = {
   ...defaultArgs,
 };
+WithOnClick.argTypes = {
+  ...WithOnClick.argTypes,
+  onClick: { table: { disable: false } },
+};
 WithOnClick.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const buttonElement = await page.$(`${wrapper} > button`);
@@ -604,6 +721,10 @@ export const WithOnFocus = OnFocusTemplate.bind({});
 WithOnFocus.storyName = 'With onFocus (A2 delvis)';
 WithOnFocus.args = {
   ...defaultArgs,
+};
+WithOnFocus.argTypes = {
+  ...WithOnFocus.argTypes,
+  onFocus: { table: { disable: false } },
 };
 WithOnFocus.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
