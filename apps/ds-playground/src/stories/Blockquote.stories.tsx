@@ -8,12 +8,13 @@ export default {
   title: 'Design System/Blockquote',
   argTypes: {
     // Props
-    children: { table: { category: category.props } },
+    children: {
+      control: 'text',
+      table: { category: category.props },
+    },
     hasSpacing: {
       control: 'boolean',
-      table: {
-        category: category.props,
-      },
+      table: { category: category.props },
     },
   },
 } as ComponentMeta<typeof Blockquote>;

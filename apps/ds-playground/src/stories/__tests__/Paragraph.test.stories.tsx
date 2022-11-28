@@ -1,3 +1,4 @@
+import { paragraphVariantArr } from '@skatteetaten/ds-core-utils';
 import {
   getParagraphVariantDefault,
   Paragraph,
@@ -15,6 +16,26 @@ const screenShotOptions: ScreenshotOptions = {
 export default {
   component: Paragraph,
   title: 'Tests / Paragraph',
+  argTypes: {
+    // Baseprops
+    key: { table: { disable: true } },
+    ref: { table: { disable: true } },
+    className: { table: { disable: true } },
+    id: { table: { disable: true } },
+    lang: { table: { disable: true } },
+    'data-testid': { table: { disable: true } },
+    // Props
+    children: {
+      table: { disable: true },
+      control: 'text',
+    },
+    hasSpacing: { table: { disable: true } },
+    variant: {
+      table: { disable: true },
+      options: [...paragraphVariantArr],
+      control: 'radio',
+    },
+  },
 } as ComponentMeta<typeof Paragraph>;
 
 const defaultArgs: ParagraphProps = {
@@ -40,6 +61,10 @@ WithRef.args = {
     }
   },
 };
+WithRef.argTypes = {
+  ...WithRef.argTypes,
+  ref: { table: { disable: false } },
+};
 WithRef.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const refId = await page.$eval(`${wrapper} > p`, (el) => el.id);
@@ -56,6 +81,10 @@ WithId.storyName = 'With Id (FA2)';
 WithId.args = {
   ...defaultArgs,
   id: 'ParagraphId',
+};
+WithId.argTypes = {
+  ...WithId.argTypes,
+  id: { table: { disable: false } },
 };
 WithId.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -77,9 +106,9 @@ WithCustomCss.args = {
   className: 'dummyClassname',
 };
 WithCustomCss.argTypes = {
+  ...WithCustomCss.argTypes,
   className: {
-    control: 'select',
-    options: ['', 'dummyClassname'],
+    table: { disable: false },
   },
 };
 WithCustomCss.parameters = {
@@ -97,31 +126,16 @@ WithCustomCss.parameters = {
   },
 };
 
-// Når Paragraph har dataTestId, så har elementet data-testid satt
-export const WithDataTestId = Template.bind({});
-WithDataTestId.storyName = 'With DataTestid (FA4)';
-WithDataTestId.args = {
-  ...defaultArgs,
-  'data-testid': 'ParagraphID',
-};
-WithDataTestId.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const dataTestId = await page.$eval(`${wrapper} > p`, (el) =>
-      el.getAttribute('data-testid')
-    );
-    expect(dataTestId).toBe('ParagraphID');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-  },
-};
-
 // Når Paragraph har en lang, så har elementet lang satt
 export const WithLang = Template.bind({});
-WithLang.storyName = 'With Lang (FA5)';
+WithLang.storyName = 'With Lang (FA4)';
 WithLang.args = {
   ...defaultArgs,
   lang: 'nb',
+};
+WithLang.argTypes = {
+  ...WithLang.argTypes,
+  lang: { table: { disable: false } },
 };
 WithLang.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -129,6 +143,29 @@ WithLang.parameters = {
       el.getAttribute('lang')
     );
     expect(langAttribute).toBe('nb');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
+// Når Paragraph har dataTestid, så har elementet data-testid satt
+export const WithDataTestid = Template.bind({});
+WithDataTestid.storyName = 'With DataTestid (FA5)';
+WithDataTestid.args = {
+  ...defaultArgs,
+  'data-testid': 'ParagraphID',
+};
+WithDataTestid.argTypes = {
+  ...WithDataTestid.argTypes,
+  'data-testid': { table: { disable: false } },
+};
+WithDataTestid.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const dataTestid = await page.$eval(`${wrapper} > p`, (el) =>
+      el.getAttribute('data-testid')
+    );
+    expect(dataTestid).toBe('ParagraphID');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -192,6 +229,13 @@ WithMarkup.storyName = 'With Markup (A2, B2 - 2 av 2)';
 WithMarkup.args = {
   ...defaultArgs,
 };
+WithMarkup.argTypes = {
+  ...WithMarkup.argTypes,
+  children: {
+    table: { disable: false },
+    control: { type: null },
+  },
+};
 WithMarkup.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
@@ -215,6 +259,10 @@ Defaults.storyName = 'Defaults Variant Standard (A1 - 1 av 2, B2 - 1 av 2)';
 Defaults.args = {
   ...defaultArgs,
 };
+Defaults.argTypes = {
+  ...Defaults.argTypes,
+  children: { table: { disable: false } },
+};
 Defaults.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
@@ -232,6 +280,10 @@ VariantIngress.args = {
   ...defaultArgs,
   variant: 'ingress',
 };
+VariantIngress.argTypes = {
+  ...VariantIngress.argTypes,
+  variant: { table: { disable: false } },
+};
 VariantIngress.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
@@ -248,6 +300,10 @@ WithSpacing.storyName = 'With Spacing Variant Standard (A3 - 1 av 2)';
 WithSpacing.args = {
   ...defaultArgs,
   hasSpacing: true,
+};
+WithSpacing.argTypes = {
+  ...WithSpacing.argTypes,
+  hasSpacing: { table: { disable: false } },
 };
 WithSpacing.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -267,6 +323,11 @@ VariantIngressWithSpacing.args = {
   ...defaultArgs,
   hasSpacing: true,
   variant: 'ingress',
+};
+VariantIngressWithSpacing.argTypes = {
+  ...VariantIngressWithSpacing.argTypes,
+  hasSpacing: { table: { disable: false } },
+  variant: { table: { disable: false } },
 };
 VariantIngressWithSpacing.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {

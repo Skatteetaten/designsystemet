@@ -28,6 +28,31 @@ const testSnapshot = async (page: ElementHandle): Promise<void> => {
 export default {
   component: MegaButton,
   title: 'Tests / MegaButton',
+  argTypes: {
+    // Baseprops
+    key: { table: { disable: true } },
+    ref: { table: { disable: true } },
+    className: { table: { disable: true } },
+    id: { table: { disable: true } },
+    lang: { table: { disable: true } },
+    'data-testid': { table: { disable: true } },
+    // Props
+    children: { table: { disable: true } },
+    isExternal: { table: { disable: true } },
+    // HTML
+    accessKey: {
+      table: { disable: true },
+      control: 'text',
+    },
+    disabled: { table: { disable: true } },
+    href: { table: { disable: true } },
+    // Aria
+    ariaDescribedby: { table: { disable: true } },
+    // Events
+    onBlur: { table: { disable: true } },
+    onClick: { table: { disable: true } },
+    onFocus: { table: { disable: true } },
+  },
 } as ComponentMeta<typeof MegaButton>;
 
 const Template: ComponentStory<typeof MegaButton> = (args) => (
@@ -44,12 +69,16 @@ const defaultArgs: MegaButtonComponentCommonProps = {
 export const WithRef = Template.bind({});
 WithRef.storyName = 'With Ref (FA1)';
 WithRef.args = {
+  ...defaultArgs,
   ref: (instance: HTMLButtonElement | null): void => {
     if (instance) {
       instance.id = 'dummyIdForwardedFromRef';
     }
   },
-  children: defaultMegaButtonText,
+};
+WithRef.argTypes = {
+  ...WithRef.argTypes,
+  ref: { table: { disable: false } },
 };
 WithRef.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -68,6 +97,10 @@ WithId.args = {
   ...defaultArgs,
   id: 'htmlid',
 };
+WithId.argTypes = {
+  ...WithId.argTypes,
+  id: { table: { disable: false } },
+};
 WithId.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const elementid = await page.$eval(`${wrapper} > button`, (el) =>
@@ -85,15 +118,12 @@ export const WithCustomCss = Template.bind({});
 WithCustomCss.storyName = 'With Custom CSS (FA3)';
 WithCustomCss.args = {
   ...defaultArgs,
-  className: 'dummyClassname ',
+  className: 'dummyClassname',
 };
 WithCustomCss.argTypes = {
   ...WithCustomCss.argTypes,
   className: {
-    control: 'select',
-    options: ['', 'dummyClassname'],
-    description: 'Verdien appended til designsystemets stilsett for komponent',
-    table: { defaultValue: { summary: '' } },
+    table: { disable: false },
   },
 };
 WithCustomCss.parameters = {
@@ -111,31 +141,16 @@ WithCustomCss.parameters = {
   },
 };
 
-// Når MegaButton har dataTestId, så har button-elementet data-testid satt
-export const WithDataTestid = Template.bind({});
-WithDataTestid.storyName = 'With DataTestid (FA4)';
-WithDataTestid.args = {
-  ...defaultArgs,
-  'data-testid': '123Mega',
-};
-WithDataTestid.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const dataTestId = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('data-testid')
-    );
-    expect(dataTestId).toBe('123Mega');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-  },
-};
-
 // Når MegaButton har en lang, så har button-element lang
 export const WithLang = Template.bind({});
-WithLang.storyName = 'With Lang (FA5)';
+WithLang.storyName = 'With Lang (FA4)';
 WithLang.args = {
   ...defaultArgs,
   lang: 'nb',
+};
+WithLang.argTypes = {
+  ...WithLang.argTypes,
+  lang: { table: { disable: false } },
 };
 WithLang.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -149,11 +164,38 @@ WithLang.parameters = {
   },
 };
 
+// Når MegaButton har dataTestid, så har button-elementet data-testid satt
+export const WithDataTestid = Template.bind({});
+WithDataTestid.storyName = 'With DataTestid (FA5)';
+WithDataTestid.args = {
+  ...defaultArgs,
+  'data-testid': '123Mega',
+};
+WithDataTestid.argTypes = {
+  ...WithDataTestid.argTypes,
+  'data-testid': { table: { disable: false } },
+};
+WithDataTestid.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const dataTestid = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('data-testid')
+    );
+    expect(dataTestid).toBe('123Mega');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
 // Når MegaButton instansieres, så får den riktige default-verdier og rendrer riktig i ulike tilstander
 export const Defaults = Template.bind({});
 Defaults.storyName = 'Defaults (A1 - 1 av 2, B2)';
 Defaults.args = {
   ...defaultArgs,
+};
+Defaults.argTypes = {
+  ...Defaults.argTypes,
+  children: { table: { disable: false } },
 };
 Defaults.parameters = {
   async puppeteerTest(page: Page): Promise<void> {
@@ -216,6 +258,10 @@ WithLongText.args = {
   ...defaultArgs,
   children: 'Denne knappen har en veldig lang tekst. Så lang at den må brekke.',
 };
+WithLongText.argTypes = {
+  ...WithLongText.argTypes,
+  children: { table: { disable: false } },
+};
 WithLongText.parameters = {
   puppeteerTest: testSnapshot,
 };
@@ -228,6 +274,10 @@ WithLongTextBreaking.args = {
   ...defaultArgs,
   children: 'Denneknappenharenveldiglangtekst.Sålangatdenmåbrekke.',
 };
+WithLongTextBreaking.argTypes = {
+  ...WithLongTextBreaking.argTypes,
+  children: { table: { disable: false } },
+};
 WithLongTextBreaking.parameters = {
   puppeteerTest: testSnapshot,
 };
@@ -239,7 +289,10 @@ WithExternalIcon.args = {
   ...defaultArgs,
   isExternal: true,
 };
-
+WithExternalIcon.argTypes = {
+  ...WithExternalIcon.argTypes,
+  isExternal: { table: { disable: false } },
+};
 WithExternalIcon.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const systemIconViewBox = '0 0 24 24';
@@ -277,6 +330,11 @@ WithLongTextAndExternalIcon.args = {
   children:
     'Denne knappen har en veldig lang tekst. Icon skal da plasseres løpende etter tekster på siste linje',
 };
+WithLongTextAndExternalIcon.argTypes = {
+  ...WithLongTextAndExternalIcon.argTypes,
+  children: { table: { disable: false } },
+  isExternal: { table: { disable: false } },
+};
 WithLongTextAndExternalIcon.parameters = {
   puppeteerTest: testSnapshot,
 };
@@ -290,6 +348,10 @@ const discriminatedProps: MegaButtonDiscriminatedProp = {
 Disabled.args = {
   ...defaultArgs,
   ...discriminatedProps,
+};
+Disabled.argTypes = {
+  ...Disabled.argTypes,
+  disabled: { table: { disable: false } },
 };
 Disabled.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -310,6 +372,10 @@ WithAriaDescribedby.storyName = 'With AriaDescribedby (B1)';
 WithAriaDescribedby.args = {
   ...defaultArgs,
   ariaDescribedby: 'testid1234',
+};
+WithAriaDescribedby.argTypes = {
+  ...WithAriaDescribedby.argTypes,
+  ariaDescribedby: { table: { disable: false } },
 };
 WithAriaDescribedby.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -332,6 +398,10 @@ WithAccesskey.args = {
   children: defaultMegaButtonText,
   accessKey: 'j',
 };
+WithAccesskey.argTypes = {
+  ...WithAccesskey.argTypes,
+  accessKey: { table: { disable: false } },
+};
 WithAccesskey.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const megaButtonElement = await page.$(`${wrapper} > button`);
@@ -346,8 +416,12 @@ WithAccesskey.parameters = {
 export const AsLink = Template.bind({});
 AsLink.storyName = 'As Link (B3)';
 AsLink.args = {
+  ...defaultArgs,
   href: 'https://www.skatteetaten.no',
-  children: defaultMegaButtonText,
+};
+AsLink.argTypes = {
+  ...AsLink.argTypes,
+  href: { table: { disable: false } },
 };
 AsLink.parameters = {
   puppeteerTest: testSnapshot,
@@ -357,8 +431,12 @@ AsLink.parameters = {
 export const AsLinkEmptyString = Template.bind({});
 AsLinkEmptyString.storyName = 'As Link with empty href (B3)';
 AsLinkEmptyString.args = {
+  ...defaultArgs,
   href: '',
-  children: defaultMegaButtonText,
+};
+AsLinkEmptyString.argTypes = {
+  ...AsLinkEmptyString.argTypes,
+  href: { table: { disable: false } },
 };
 AsLinkEmptyString.parameters = {
   puppeteerTest: testSnapshot,
@@ -366,11 +444,16 @@ AsLinkEmptyString.parameters = {
 
 // Når MegaButton har en href og er eksternlink, så rendres den som en a og det vises eksternlink-ikon
 export const AsLinkExternal = Template.bind({});
-AsLinkExternal.storyName = 'As Link (B3, A4 - 2 av 2)';
+AsLinkExternal.storyName = 'As Link External (B3, A4 - 2 av 2)';
 AsLinkExternal.args = {
+  ...defaultArgs,
   href: 'https://www.skatteetaten.no',
   isExternal: true,
-  children: defaultMegaButtonText,
+};
+AsLinkExternal.argTypes = {
+  ...AsLinkExternal.argTypes,
+  href: { table: { disable: false } },
+  isExternal: { table: { disable: false } },
 };
 AsLinkExternal.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -419,7 +502,7 @@ WithOnBlur.args = {
 };
 WithOnBlur.argTypes = {
   ...WithOnBlur.argTypes,
-  children: { control: false },
+  onBlur: { table: { disable: false } },
 };
 WithOnBlur.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -464,7 +547,7 @@ WithOnClick.args = {
 };
 WithOnClick.argTypes = {
   ...WithOnClick.argTypes,
-  children: { control: false },
+  onClick: { table: { disable: false } },
 };
 WithOnClick.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -509,7 +592,7 @@ WithOnFocus.args = {
 };
 WithOnFocus.argTypes = {
   ...WithOnFocus.argTypes,
-  children: { control: false },
+  onFocus: { table: { disable: false } },
 };
 WithOnFocus.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {

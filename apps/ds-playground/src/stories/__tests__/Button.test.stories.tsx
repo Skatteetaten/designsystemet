@@ -1,9 +1,12 @@
 import { useState } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
+import { buttonVariantArr } from '@skatteetaten/ds-core-utils';
 import { SendSVGpath } from '@skatteetaten/ds-icons';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ElementHandle, ScreenshotOptions } from 'puppeteer';
+
+import { SystemSVGPaths } from '../utils/icon.systems';
 
 const wrapper = '[data-test-block]';
 const defaultButtonText = 'Klikk her';
@@ -15,6 +18,36 @@ const screenShotOptions: ScreenshotOptions = {
 export default {
   component: Button,
   title: 'Tests / Button',
+  argTypes: {
+    // Baseprops
+    key: { table: { disable: true } },
+    ref: { table: { disable: true } },
+    className: { table: { disable: true } },
+    id: { table: { disable: true } },
+    lang: { table: { disable: true } },
+    'data-testid': { table: { disable: true } },
+    // Props
+    children: { table: { disable: true } },
+    svgPath: {
+      table: { disable: true },
+      options: Object.keys(SystemSVGPaths),
+      mapping: SystemSVGPaths,
+    },
+    variant: {
+      table: { disable: true },
+      options: [...buttonVariantArr],
+      control: 'radio',
+    },
+    // HTML
+    accessKey: { table: { disable: true } },
+    disabled: { table: { disable: true } },
+    // Aria
+    ariaDescribedby: { table: { disable: true } },
+    // Events
+    onBlur: { table: { disable: true } },
+    onClick: { table: { disable: true } },
+    onFocus: { table: { disable: true } },
+  },
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => (
@@ -33,12 +66,16 @@ const defaultArgs = {
 export const WithRef = Template.bind({});
 WithRef.storyName = 'With Ref (FA1)';
 WithRef.args = {
+  ...defaultArgs,
   ref: (instance: HTMLButtonElement | null): void => {
     if (instance) {
       instance.id = 'dummyIdForwardedFromRef';
     }
   },
-  children: defaultButtonText,
+};
+WithRef.argTypes = {
+  ...WithRef.argTypes,
+  ref: { table: { disable: false } },
 };
 WithRef.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -56,6 +93,10 @@ WithId.storyName = 'With Id (FA2)';
 WithId.args = {
   ...defaultArgs,
   id: 'htmlid',
+};
+WithId.argTypes = {
+  ...WithId.argTypes,
+  id: { table: { disable: false } },
 };
 WithId.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -80,9 +121,8 @@ WithCustomCss.args = {
 WithCustomCss.argTypes = {
   ...WithCustomCss.argTypes,
   className: {
-    control: 'select',
+    table: { disable: false },
   },
-  variant: { control: false },
 };
 WithCustomCss.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -99,31 +139,16 @@ WithCustomCss.parameters = {
   },
 };
 
-// Når Button har dataTestid, så har button-elementet data-testid satt
-export const WithDataTestid = Template.bind({});
-WithDataTestid.storyName = 'With DataTestid (FA4)';
-WithDataTestid.args = {
-  svgPath: SendSVGpath,
-  'data-testid': '123ID',
-};
-WithDataTestid.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const dataTestid = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('data-testid')
-    );
-    expect(dataTestid).toBe('123ID');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-  },
-};
-
 // Når Button har en lang, så har button-element lang
 export const WithLang = Template.bind({});
-WithLang.storyName = 'With Lang (FA5)';
+WithLang.storyName = 'With Lang (FA4)';
 WithLang.args = {
   ...defaultArgs,
   lang: 'nb',
+};
+WithLang.argTypes = {
+  ...WithLang.argTypes,
+  lang: { table: { disable: false } },
 };
 WithLang.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -137,14 +162,41 @@ WithLang.parameters = {
   },
 };
 
+// Når Button har dataTestid, så har button-elementet data-testid satt
+export const WithDataTestid = Template.bind({});
+WithDataTestid.storyName = 'With DataTestid (FA5)';
+WithDataTestid.args = {
+  ...defaultArgs,
+  'data-testid': '123ID',
+};
+WithDataTestid.argTypes = {
+  ...WithDataTestid.argTypes,
+  'data-testid': { table: { disable: false } },
+};
+WithDataTestid.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const dataTestid = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('data-testid')
+    );
+    expect(dataTestid).toBe('123ID');
+
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+  },
+};
+
 // Når Button instansieres, får den default variant primary.
 // Knapp må også ha tekst/children
-export const ButtonDefaults = Template.bind({});
-ButtonDefaults.storyName = 'Defaults Variant Primary (B1, A1 - 1 av 4)';
-ButtonDefaults.args = {
-  children: defaultButtonText,
+export const Defaults = Template.bind({});
+Defaults.storyName = 'Defaults Variant Primary (B1, A1 - 1 av 4)';
+Defaults.args = {
+  ...defaultArgs,
 };
-ButtonDefaults.parameters = {
+Defaults.argTypes = {
+  ...Defaults.argTypes,
+  children: { table: { disable: false } },
+};
+Defaults.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const element = await page.$(wrapper);
 
@@ -185,6 +237,10 @@ VariantSecondary.args = {
   ...defaultArgs,
   variant: 'secondary',
 };
+VariantSecondary.argTypes = {
+  ...VariantSecondary.argTypes,
+  variant: { table: { disable: false } },
+};
 VariantSecondary.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
@@ -220,6 +276,10 @@ VariantTertiary.args = {
   ...defaultArgs,
   variant: 'tertiary',
 };
+VariantTertiary.argTypes = {
+  ...VariantTertiary.argTypes,
+  variant: { table: { disable: false } },
+};
 VariantTertiary.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
@@ -252,6 +312,10 @@ VariantTertiary.parameters = {
 export const VariantDanger = Template.bind({});
 VariantDanger.storyName = 'Variant Danger (A1 - 4 av 4)';
 VariantDanger.args = { ...defaultArgs, variant: 'danger' };
+VariantDanger.argTypes = {
+  ...VariantDanger.argTypes,
+  variant: { table: { disable: false } },
+};
 VariantDanger.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
@@ -288,6 +352,10 @@ WithLongText.args = {
   children:
     'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles. Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles',
 };
+WithLongText.argTypes = {
+  ...WithLongText.argTypes,
+  children: { table: { disable: false } },
+};
 WithLongText.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
@@ -305,6 +373,10 @@ WithLongTextBreaking.args = {
   ...defaultArgs,
   children:
     'Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles.Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles',
+};
+WithLongTextBreaking.argTypes = {
+  ...WithLongTextBreaking.argTypes,
+  children: { table: { disable: false } },
 };
 WithLongTextBreaking.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -327,7 +399,8 @@ WithLongTextAndIcon.args = {
 };
 WithLongTextAndIcon.argTypes = {
   ...WithLongTextAndIcon.argTypes,
-  svgPath: { control: false },
+  children: { table: { disable: false } },
+  svgPath: { table: { disable: false } },
 };
 WithLongTextAndIcon.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -348,7 +421,7 @@ WithIcon.args = {
 };
 WithIcon.argTypes = {
   ...WithIcon.argTypes,
-  svgPath: { control: false },
+  svgPath: { table: { disable: false } },
 };
 WithIcon.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -383,6 +456,10 @@ Disabled.args = {
   ...defaultArgs,
   disabled: true,
 };
+Disabled.argTypes = {
+  ...Disabled.argTypes,
+  disabled: { table: { disable: false } },
+};
 Disabled.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
@@ -398,7 +475,7 @@ Disabled.parameters = {
 
 // Når Button har prop disabled og ikon er satt, så vises ikonet og knapp er disabled og stil er satt til disabled
 export const DisabledWithIcon = Template.bind({});
-DisabledWithIcon.storyName = 'DisabledWith Icon (B5 - 2 av 2)';
+DisabledWithIcon.storyName = 'Disabled With Icon (B5 - 2 av 2)';
 DisabledWithIcon.args = {
   ...defaultArgs,
   svgPath: SendSVGpath,
@@ -406,7 +483,8 @@ DisabledWithIcon.args = {
 };
 DisabledWithIcon.argTypes = {
   ...DisabledWithIcon.argTypes,
-  svgPath: { control: false },
+  svgPath: { table: { disable: false } },
+  disabled: { table: { disable: false } },
 };
 DisabledWithIcon.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -428,6 +506,10 @@ WithAriaDescribedby.args = {
   ...defaultArgs,
   ariaDescribedby: 'id1',
 };
+WithAriaDescribedby.argTypes = {
+  ...WithAriaDescribedby.argTypes,
+  ariaDescribedby: { table: { disable: false } },
+};
 WithAriaDescribedby.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const ariaAttributes = await page.$eval(`${wrapper} > button`, (el) => {
@@ -448,6 +530,10 @@ WithAccesskey.storyName = 'With Accesskey (B3)';
 WithAccesskey.args = {
   ...defaultArgs,
   accessKey: 's',
+};
+WithAccesskey.argTypes = {
+  ...WithAccesskey.argTypes,
+  accessKey: { table: { disable: false } },
 };
 WithAccesskey.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -486,8 +572,7 @@ WithOnBlur.args = {
 };
 WithOnBlur.argTypes = {
   ...WithOnBlur.argTypes,
-  children: { control: false },
-  variant: { control: false },
+  onBlur: { table: { disable: false } },
 };
 WithOnBlur.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -533,8 +618,7 @@ WithOnClick.args = {
 };
 WithOnClick.argTypes = {
   ...WithOnClick.argTypes,
-  children: { control: false },
-  variant: { control: false },
+  onClick: { table: { disable: false } },
 };
 WithOnClick.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
@@ -578,8 +662,7 @@ WithOnFocus.args = {
 };
 WithOnFocus.argTypes = {
   ...WithOnFocus.argTypes,
-  children: { control: false },
-  variant: { control: false },
+  onFocus: { table: { disable: false } },
 };
 WithOnFocus.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
