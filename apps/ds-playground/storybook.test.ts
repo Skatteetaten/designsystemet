@@ -28,13 +28,17 @@ const toMatchImageSnapshot = configureToMatchImageSnapshot({
 expect.extend({ toMatchImageSnapshot });
 
 let browser;
+let storybookUrl = 'http://localhost:4400';
 
-const storybookUrl =
-  process.env['STORYSHOTS_MODE'] === 'static'
-    ? `file://${resolve(__dirname, '/opt/ds-playground')}`
-    : process.env['STORYSHOTS_MODE'] === 'ci'
-    ? `file://${resolve(__dirname, '../../dist/storybook/ds-playground')}`
-    : 'http://localhost:4400';
+if (process.env['STORYSHOTS_MODE'] === 'static') {
+  storybookUrl = `file://${resolve(__dirname, '/opt/ds-playground')}`;
+}
+if (process.env['STORYSHOTS_MODE'] === 'ci') {
+  storybookUrl = `file://${resolve(
+    __dirname,
+    '../../dist/storybook/ds-playground'
+  )}`;
+}
 
 initStoryshots({
   suite: 'Image storyshots',
