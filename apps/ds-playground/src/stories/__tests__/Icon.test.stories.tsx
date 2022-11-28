@@ -117,7 +117,7 @@ WithCustomCss.parameters = {
     const classNameAttribute = await page.$eval('svg', (el) =>
       el.getAttribute('class')
     );
-    expect(classNameAttribute).toContain('myIconClassname');
+    expect(classNameAttribute).toContain('dummyClassname');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();

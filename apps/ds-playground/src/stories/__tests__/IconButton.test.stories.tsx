@@ -60,7 +60,7 @@ const defaultArgs: IconButtonProps = {
 };
 
 const Template: ComponentStory<typeof IconButton> = (args) => (
-  <div style={{ margin: '1em' }} className={'noTranstion'} data-test-block>
+  <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
     <IconButton {...args} title={args.title} />
   </div>
 );
@@ -106,7 +106,7 @@ WithId.parameters = {
     const id = await page.$eval(`${wrapper} > button`, (el) =>
       el.getAttribute('id')
     );
-    expect(id).toBe('123');
+    expect(id).toBe('htmlid');
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
@@ -228,6 +228,24 @@ Defaults.parameters = {
 
     expect(innerHtml).toMatchSnapshot();
     expect(image).toMatchImageSnapshot();
+
+    const buttonElement = await page.$(`${wrapper} > button`);
+    await buttonElement?.focus();
+    const imageFocused = await page.screenshot(screenShotOptions);
+    expect(imageFocused).toMatchImageSnapshot();
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
+    await buttonElement?.hover();
+
+    const imageHovered = await page.screenshot(screenShotOptions);
+    expect(imageHovered).toMatchImageSnapshot();
+
+    await buttonElement?.click();
+    await page.waitForSelector(`${wrapper} > button:focus`);
+    await page.waitForTimeout(300);
+    const imageClicked = await page.screenshot(screenShotOptions);
+    expect(imageClicked).toMatchImageSnapshot();
   },
 };
 

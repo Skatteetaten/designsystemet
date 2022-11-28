@@ -9,8 +9,6 @@ import { ElementHandle, ScreenshotOptions } from 'puppeteer';
 import '../classnames.stories.css';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
-// TODO FRONT-893 legge til snapshot når det fungerer for linux
-
 const wrapper = '[data-test-block]';
 const elementId = 'htmlId';
 const defaultButtonText = 'Legg til rapport';
@@ -63,7 +61,7 @@ export default {
 } as ComponentMeta<typeof InlineButton>;
 
 const Template: ComponentStory<typeof InlineButton> = (args) => (
-  <div style={{ margin: '1em' }} className={'noTranstion'} data-test-block>
+  <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
     <InlineButton {...args} svgPath={args.svgPath}>
       {args.children}
     </InlineButton>
@@ -220,6 +218,24 @@ Defaults.parameters = {
     const image = await page.screenshot(screenShotOptions);
     expect(innerHtml).toMatchSnapshot();
     expect(image).toMatchImageSnapshot();
+
+    const buttonElement = await page.$(`${wrapper} > button`);
+    await buttonElement?.focus();
+    const imageFocused = await page.screenshot(screenShotOptions);
+    expect(imageFocused).toMatchImageSnapshot();
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
+    await buttonElement?.hover();
+
+    const imageHovered = await page.screenshot(screenShotOptions);
+    expect(imageHovered).toMatchImageSnapshot();
+
+    await buttonElement?.click();
+    await page.waitForSelector(`${wrapper} > button:focus`);
+    await page.waitForTimeout(300);
+    const imageClicked = await page.screenshot(screenShotOptions);
+    expect(imageClicked).toMatchImageSnapshot();
   },
 };
 

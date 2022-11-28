@@ -1,20 +1,58 @@
 import initStoryshots from '@storybook/addon-storyshots';
 import { puppeteerTest } from '@storybook/addon-storyshots-puppeteer';
-import { toMatchImageSnapshot } from 'jest-image-snapshot';
+import {
+  configureToMatchImageSnapshot,
+  MatchImageSnapshotOptions,
+} from 'jest-image-snapshot';
+import puppeteer, { Browser } from 'puppeteer';
 
 import fs from 'fs';
 import { resolve } from 'path';
+
+const customConfig: MatchImageSnapshotOptions = {
+  allowSizeMismatch: true,
+  comparisonMethod: 'ssim',
+  dumpDiffToConsole: true,
+  dumpInlineDiffToConsole: true,
+  failureThreshold: 0.00001,
+  failureThresholdType: 'percent',
+  customDiffConfig: {
+    ssim: 'fast',
+  },
+};
+
+const toMatchImageSnapshot = configureToMatchImageSnapshot({
+  ...customConfig,
+});
+
 expect.extend({ toMatchImageSnapshot });
 
-const storybookUrl =
-  process.env['STORYSHOTS_MODE'] === 'static'
-    ? `file://${resolve(__dirname, '../../dist/storybook/ds-playground')}`
-    : 'http://localhost:4400';
+let browser;
+let storybookUrl = 'http://localhost:4400';
+
+if (process.env['STORYSHOTS_MODE'] === 'static') {
+  storybookUrl = `file://${resolve(__dirname, '/opt/ds-playground')}`;
+}
+if (process.env['STORYSHOTS_MODE'] === 'ci') {
+  storybookUrl = `file://${resolve(
+    __dirname,
+    '../../dist/storybook/ds-playground'
+  )}`;
+}
 
 initStoryshots({
   suite: 'Image storyshots',
   framework: 'react',
   test: puppeteerTest({
+    getCustomBrowser:
+      process.env['STORYSHOTS_MODE'] === 'static'
+        ? async (): Promise<Browser> => {
+            browser = await puppeteer.connect({
+              browserURL: 'http://localhost:9002',
+            });
+            return browser;
+          }
+        : undefined,
     storybookUrl,
     async testBody(page, options) {
       const testResult = options.context.parameters['puppeteerTest']
