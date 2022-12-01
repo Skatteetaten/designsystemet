@@ -30,7 +30,7 @@ export const MegaButton = forwardRef<
     },
     ref
   ): JSX.Element => {
-    const { t } = useTranslation('ds_Buttons', { i18n: dsI18n });
+    const { t } = useTranslation('Felles', { i18n: dsI18n });
     const cssName = `${styles.button} ${className}`;
     const Tag = href !== undefined ? 'a' : 'button';
 
@@ -60,7 +60,7 @@ export const MegaButton = forwardRef<
             <ExternalIcon
               className={styles.svg}
               //TODO FRONT-991 avklare hva som blir riktig key
-              ariaLabel={t('knapp.MegaButton.AriaLabel.ExternalIcon')}
+              ariaLabel={t('arialabel.Eksternt.Nettsted')}
             />
           </span>
         )}
