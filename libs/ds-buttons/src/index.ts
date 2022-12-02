@@ -6,3 +6,5 @@ export * from './InlineButton/InlineButton';
 export * from './InlineButton/InlineButton.types';
 export * from './MegaButton/MegaButton';
 export * from './MegaButton/MegaButton.types';
+export * from './Link/Link';
+export * from './Link/Link.types';

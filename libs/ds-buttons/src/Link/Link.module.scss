@@ -1,0 +1,50 @@
+// TODO FRONT-998 - fokus i Firefox vises ikke slik som i skissene
+%focus {
+  outline: var(--semantic-interactive-main) solid 2px;
+  outline-offset: 2px;
+}
+
+.link {
+  // FRONT-998 - sjekket ut om kan bruke rem istedenfor px
+  padding: 6px 0;
+  color: var(--palette-azure-70);
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--semantic-line-height-article);
+  word-break: break-word;
+
+  .icon {
+    &_isCustom {
+      margin-right: var(--spacing-s);
+    }
+
+    &_isExternal {
+      margin-left: var(--spacing-s);
+    }
+
+    background-color: inherit;
+    fill: var(--palette-azure-70);
+    transform: translate(0, 5px);
+    vertical-align: top;
+  }
+
+  &:hover {
+    background-color: var(--semantic-interactive-background);
+  }
+
+  &:focus {
+    @extend %focus;
+  }
+
+  &:active {
+    @extend %focus;
+
+    background-color: var(--semantic-interactive-background);
+    color: var(--semantic-interactive-foreground);
+    transition-timing-function: ease;
+
+    & .icon {
+      fill: var(--palette-azure-100);
+    }
+  }
+}

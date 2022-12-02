@@ -118,6 +118,32 @@ exports[`Image storyshots Tests / InlineButton With Long Text And Icon (A3 - 3 a
 
 exports[`Image storyshots Tests / InlineButton With Ref (FA1) 1`] = `"<button class=\\"InlineButton_button__2taCK   \\" id=\\"dummyIdForwardedFromRef\\">Legg til rapport</button>"`;
 
+exports[`Image storyshots Tests / Link Defaults (A1 delvis, A2 - 1 av 2, A3 delvis, B1 - 1 av 2) 1`] = `"<a class=\\"Link_link__2QfML \\" href=\\"https://www.skatteetaten.no\\">Er du pendler?</a>"`;
+
+exports[`Image storyshots Tests / Link With AriaDescribedby (B3) 1`] = `"<a class=\\"Link_link__2QfML \\" href=\\"https://www.skatteetaten.no\\" aria-describedby=\\"htmlId\\">Er du pendler?</a>"`;
+
+exports[`Image storyshots Tests / Link With Custom CSS (FA3) 1`] = `"<a class=\\"Link_link__2QfML dummyClassname\\" href=\\"https://www.skatteetaten.no\\">Er du pendler?</a>"`;
+
+exports[`Image storyshots Tests / Link With DataTestid (FA5) 1`] = `"<a class=\\"Link_link__2QfML \\" data-testid=\\"123ID\\" href=\\"https://www.skatteetaten.no\\">Er du pendler?</a>"`;
+
+exports[`Image storyshots Tests / Link With External Icon (A5) 1`] = `"<a class=\\"Link_link__2QfML \\" href=\\"https://www.skatteetaten.no\\">Er du pendler?<svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_small__YBQ5v Link_icon__zGn-0 Link_icon_isExternal__1yL1Q\\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-label=\\"Til et annet nettsted\\" aria-hidden=\\"false\\" role=\\"img\\"><path d=\\"M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7Zm5 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z\\"></path></svg></a>"`;
+
+exports[`Image storyshots Tests / Link With Icon (A4, B2) 1`] = `"<a class=\\"Link_link__2QfML \\" href=\\"https://www.skatteetaten.no\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_small__YBQ5v Link_icon__zGn-0 Link_icon_isCustom__-pOov\\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\" role=\\"img\\"><path d=\\"M19 19H5V8h14v11ZM16 1v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2Zm1 11h-5v5h5v-5Z\\"></path></svg>Er du pendler?</a>"`;
+
+exports[`Image storyshots Tests / Link With Id (FA2) 1`] = `"<a id=\\"htmlId\\" class=\\"Link_link__2QfML \\" href=\\"https://www.skatteetaten.no\\">Er du pendler?</a>"`;
+
+exports[`Image storyshots Tests / Link With Lang (FA4) 1`] = `"<a class=\\"Link_link__2QfML \\" lang=\\"nb\\" href=\\"https://www.skatteetaten.no\\">Er du pendler?</a>"`;
+
+exports[`Image storyshots Tests / Link With Long Text (A1 delvis) 1`] = `"<a class=\\"Link_link__2QfML \\" href=\\"https://www.skatteetaten.no\\">Denne lenken har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert uansett om ikon eller ikke.</a>"`;
+
+exports[`Image storyshots Tests / Link With Long Text And Breaking (A1 delvis) 1`] = `"<a class=\\"Link_link__2QfML \\" href=\\"https://www.skatteetaten.no\\">Dennelenkenharenveldiglangtekst.Sålangatdentvingerframlinjeskiftmedtekstsomalltidervenstrejustertuansettomikonellerikke.</a>"`;
+
+exports[`Image storyshots Tests / Link With Long Text And Icons (A1 delvis) 1`] = `"<a class=\\"Link_link__2QfML \\" href=\\"https://www.skatteetaten.no\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_small__YBQ5v Link_icon__zGn-0 Link_icon_isCustom__-pOov\\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\" role=\\"img\\"><path d=\\"M19 19H5V8h14v11ZM16 1v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2Zm1 11h-5v5h5v-5Z\\"></path></svg>Denne lenken har en veldig lang tekst med ikon på venstre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert.<svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_small__YBQ5v Link_icon__zGn-0 Link_icon_isExternal__1yL1Q\\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-label=\\"Til et annet nettsted\\" aria-hidden=\\"false\\" role=\\"img\\"><path d=\\"M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7Zm5 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z\\"></path></svg></a>"`;
+
+exports[`Image storyshots Tests / Link With Ref (FA1) 1`] = `"<a class=\\"Link_link__2QfML \\" href=\\"https://www.skatteetaten.no\\" id=\\"dummyIdForwardedFromRef\\">Er du pendler?</a>"`;
+
+exports[`Image storyshots Tests / Link With Target (A2  - 2 av 2) 1`] = `"<a class=\\"Link_link__2QfML \\" href=\\"https://www.skatteetaten.no\\" rel=\\"noreferrer\\" target=\\"_blank\\">Er du pendler?</a>"`;
+
 exports[`Image storyshots Tests / MegaButton As Link (B3) 1`] = `"<a class=\\"MegaButton_button__1aSH0 \\" href=\\"https://www.skatteetaten.no\\" role=\\"button\\">Klikk her</a>"`;
 
 exports[`Image storyshots Tests / MegaButton As Link External (B3, A4 - 2 av 2) 1`] = `"<a class=\\"MegaButton_button__1aSH0 \\" href=\\"https://www.skatteetaten.no\\" role=\\"button\\">Klikk her<span class=\\"MegaButton_icon__3cuzU\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 MegaButton_svg__2I3wW\\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-label=\\"Til et annet nettsted\\" aria-hidden=\\"false\\" role=\\"img\\"><path d=\\"M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7Zm5 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z\\"></path></svg></span></a>"`;
