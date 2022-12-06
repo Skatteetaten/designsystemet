@@ -1,0 +1,7 @@
+@media (prefers-color-scheme: dark) {
+  :root,
+  :host {
+    --semantic-page-foreground: var(--palette-graphite-5);
+    --semantic-page-background: var(--palette-graphite-100);
+  }
+}
