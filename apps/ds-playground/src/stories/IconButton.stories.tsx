@@ -10,7 +10,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { category, htmlEventDescription } from '../../.storybook/helpers';
 import { SystemSVGPaths } from './utils/icon.systems';
 
-const availableSizes = [...sizeArr].slice(1, 4);
+const availableSizes = [...sizeArr].slice(0, 4);
 export default {
   component: IconButton,
   title: 'Design System/IconButton',
@@ -54,7 +54,7 @@ export default {
       },
     },
     // Aria
-    ariaDescribedBy: { table: { category: category.aria } },
+    ariaDescribedby: { table: { category: category.aria } },
     // Events
     onBlur: { ...htmlEventDescription },
     onClick: { ...htmlEventDescription },

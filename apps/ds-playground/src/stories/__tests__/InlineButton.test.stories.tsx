@@ -339,10 +339,10 @@ WithAriaDescribedby.args = {
 };
 WithAriaDescribedby.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
-    const ariaDescribedBy = await page.$eval(`${wrapper} > button`, (el) =>
+    const ariaDescribedby = await page.$eval(`${wrapper} > button`, (el) =>
       el.getAttribute('aria-describedby')
     );
-    expect(ariaDescribedBy).toBe(elementId);
+    expect(ariaDescribedby).toBe(elementId);
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
