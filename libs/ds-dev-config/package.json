@@ -1,0 +1,13 @@
+{
+  "name": "@skatteetaten/ds-dev-config",
+  "groupId": "no.skatteetaten.aurora",
+  "version": "0.1.0",
+  "publishConfig": {
+    "registry": "https://nexus.sits.no/repository/npm-internal/"
+  },
+  "peerDependencies": {
+    "@nrwl/eslint-plugin-nx": "15.0.0",
+    "react": "^18"
+  },
+  "executors": "executors.json"
+}

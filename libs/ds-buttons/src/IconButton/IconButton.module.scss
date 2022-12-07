@@ -1,0 +1,132 @@
+%focus {
+  outline: none;
+
+  &::before {
+    position: absolute;
+    top: -5px; // border: 2px + offset: 1px
+    right: -5px; // border: 2px + offset: 1px
+    bottom: -5px; // border: 2px + offset: 1px
+    left: -5px; // border: 2px + offset: 1px
+    border: 2px solid var(--semantic-interactive-main);
+    border-radius: 12rem;
+    content: '';
+  }
+}
+
+%active {
+  background-color: var(--semantic-interactive-background);
+  transform: translateY(2px);
+  transition: 0.15s;
+}
+
+.button {
+  position: relative;
+  box-sizing: content-box;
+  border: 2px solid transparent;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  will-change: transform;
+
+  > svg {
+    display: block;
+    fill: var(--palette-azure-70);
+  }
+
+  &_extraSmall {
+    padding: var(--spacing-xxs) var(--spacing-xxs);
+    border-width: 1px;
+
+    > svg {
+      width: var(--size-small);
+      height: var(--size-small);
+    }
+  }
+
+  &_small {
+    padding: var(--spacing-xs) var(--spacing-xs);
+    border-width: 1px;
+
+    > svg {
+      width: var(--size-small);
+      height: var(--size-small);
+    }
+  }
+
+  &_medium {
+    padding: var(--spacing-xs) var(--spacing-xs);
+
+    > svg {
+      width: var(--size-medium);
+      height: var(--size-medium);
+    }
+  }
+
+  &_large {
+    padding: var(--spacing-s) var(--spacing-s);
+
+    > svg {
+      width: var(--size-large);
+      height: var(--size-large);
+    }
+  }
+
+  &:hover {
+    border-color: var(--semantic-interactive-background);
+    background-color: var(--semantic-interactive-background);
+  }
+
+  &:focus {
+    @extend %focus;
+
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  &:active {
+    @extend %focus;
+    @extend %active;
+
+    border-color: var(--semantic-interactive-background);
+    background-color: var(--semantic-interactive-background);
+
+    > svg {
+      fill: var(--semantic-interactive-foreground);
+    }
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:active {
+    border-color: transparent;
+    background-color: transparent;
+    cursor: not-allowed;
+    transform: none;
+
+    > svg {
+      fill: var(--palette-graphite-50);
+    }
+  }
+
+  &_outlined {
+    border-color: var(--palette-azure-70);
+
+    &:hover {
+      border-color: var(--semantic-interactive-main);
+    }
+
+    &:focus {
+      border-color: var(--semantic-interactive-main);
+    }
+
+    &:active {
+      border-color: var(--semantic-interactive-foreground);
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &:disabled:active {
+      border-color: var(--palette-graphite-50);
+    }
+  }
+}

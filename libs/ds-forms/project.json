@@ -3,9 +3,10 @@
   "sourceRoot": "libs/ds-forms/src",
   "projectType": "library",
   "tags": [],
+  "implicitDependencies": ["!ds-dev-config"],
   "targets": {
     "build": {
-      "executor": "@nrwl/web:rollup",
+      "executor": "@nrwl/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/ds-forms",
@@ -13,7 +14,7 @@
         "project": "libs/ds-forms/package.json",
         "entryFile": "libs/ds-forms/src/index.ts",
         "external": ["react/jsx-runtime"],
-        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "rollupConfig": ["libs/ds-forms/rollup.config.js"],
         "compiler": "babel",
         "assets": [
           {
@@ -31,15 +32,9 @@
         "lintFilePatterns": ["libs/ds-forms/**/*.{ts,tsx,js,jsx}"]
       }
     },
-    "tsc": {
-      "executor": "./tools/executors/tsCheck:tsCheck",
-      "options": {
-        "tsConfig": ["tsconfig.lib.json", "tsconfig.spec.json"]
-      }
-    },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/ds-forms"],
+      "outputs": ["{workspaceRoot}/coverage/libs/ds-forms"],
       "options": {
         "jestConfig": "libs/ds-forms/jest.config.ts",
         "passWithNoTests": true
@@ -53,6 +48,12 @@
           "libs/ds-forms/**/*.css",
           "libs/ds-forms/**/*.scss"
         ]
+      }
+    },
+    "tsc": {
+      "executor": "@skatteetaten/ds-dev-config:tsCheck",
+      "options": {
+        "tsConfig": ["tsconfig.lib.json", "tsconfig.spec.json"]
       }
     },
     "set-version": {

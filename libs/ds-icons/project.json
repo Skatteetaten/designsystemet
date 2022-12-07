@@ -3,9 +3,10 @@
   "sourceRoot": "libs/ds-icons/src",
   "projectType": "library",
   "tags": [],
+  "implicitDependencies": ["!ds-dev-config"],
   "targets": {
     "build": {
-      "executor": "@nrwl/web:rollup",
+      "executor": "@nrwl/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/ds-icons",
@@ -13,7 +14,7 @@
         "project": "libs/ds-icons/package.json",
         "entryFile": "libs/ds-icons/src/index.ts",
         "external": ["react/jsx-runtime"],
-        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "rollupConfig": ["libs/ds-icons/rollup.config.js"],
         "compiler": "babel",
         "assets": [
           {
@@ -31,15 +32,9 @@
         "lintFilePatterns": ["libs/ds-icons/**/*.{ts,tsx,js,jsx}"]
       }
     },
-    "tsc": {
-      "executor": "./tools/executors/tsCheck:tsCheck",
-      "options": {
-        "tsConfig": ["tsconfig.lib.json", "tsconfig.spec.json"]
-      }
-    },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/ds-icons"],
+      "outputs": ["{workspaceRoot}/coverage/libs/ds-icons"],
       "options": {
         "jestConfig": "libs/ds-icons/jest.config.ts",
         "passWithNoTests": true
@@ -53,6 +48,26 @@
           "libs/ds-icons/**/*.css",
           "libs/ds-icons/**/*.scss"
         ]
+      }
+    },
+    "tsc": {
+      "executor": "@skatteetaten/ds-dev-config:tsCheck",
+      "options": {
+        "tsConfig": ["tsconfig.lib.json", "tsconfig.spec.json"]
+      }
+    },
+    "set-version": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm version {args.packageVersion} --no-git-tag",
+        "cwd": "libs/ds-icons"
+      }
+    },
+    "publish": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm publish {args.switches}",
+        "cwd": "dist/libs/ds-icons"
       }
     }
   }

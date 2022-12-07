@@ -1,0 +1,94 @@
+%disabled {
+  border-color: var(--palette-graphite-50);
+  background-color: var(--palette-graphite-10);
+  box-shadow: none;
+  color: var(--palette-graphite-50);
+  cursor: not-allowed;
+  text-decoration: none;
+  transform: none;
+}
+
+%focus {
+  outline: none;
+
+  &::before {
+    position: absolute;
+    top: -7px; // border: 2px + offset: 1px
+    right: -7px; // border: 2px + offset: 1px
+    bottom: -7px; // border: 2px + offset: 1px
+    left: -7px; // border: 2px + offset: 1px
+    border: 2px solid var(--palette-azure-70);
+    border-radius: 13px;
+    content: '';
+  }
+}
+
+%active {
+  box-shadow: none;
+  outline: none;
+  transform: translateY(2px);
+  transition-timing-function: ease;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  max-width: 25rem;
+  padding: var(--spacing-l) var(--spacing-l);
+  border: 3px solid;
+  border-color: var(--palette-azure-70);
+  background-color: var(--palette-azure-70);
+  border-radius: 0.5rem;
+  box-shadow: 0 7px 6px -6px rgba(0, 0, 0, 16%);
+  color: var(--palette-graphite-0);
+  cursor: pointer;
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--semantic-line-height-buttons);
+  text-align: center;
+  text-decoration-line: none;
+  transition: 0.15s;
+  will-change: transform;
+  word-break: break-word;
+
+  .icon {
+    display: inline;
+
+    & .svg {
+      width: var(--size-medium);
+      height: var(--size-medium);
+      margin-left: var(--spacing-s);
+      background-color: inherit;
+      fill: var(--palette-graphite-0);
+      transform: translate(0, 2.5px);
+    }
+  }
+
+  &:hover {
+    border-color: var(--palette-azure-100);
+    background-color: var(--palette-azure-100);
+    box-shadow: none;
+  }
+
+  &:focus {
+    @extend %focus;
+  }
+
+  &:active {
+    @extend %focus;
+    @extend %active;
+
+    border-color: var(--palette-azure-100);
+    background-color: var(--palette-azure-100);
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:active {
+    @extend %disabled;
+
+    & .icon .svg {
+      fill: var(--palette-graphite-50);
+    }
+  }
+}

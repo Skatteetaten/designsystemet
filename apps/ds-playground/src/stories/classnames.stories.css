@@ -1,0 +1,19 @@
+.myIconClassname {
+  fill: var(--palette-denim-100);
+}
+
+.dummyClassname {
+  color: black;
+  fill: indianred;
+}
+
+.dummyClassname:not(svg) {
+  background-color: indianred;
+}
+
+.dummyClassname:disabled,
+.dummyClassname:hover,
+.dummyClassname:focus {
+  background-color: darksalmon;
+  color: white;
+}

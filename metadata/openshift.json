@@ -9,7 +9,7 @@
   "web": {
     "webapp": {
       "content": "dist/storybook/ds-playground",
-      "path": "/designsystemet/",
+      "path": "/web/designsystemet/",
       "headers": {
         "Cache-Control": "no-cache"
       }

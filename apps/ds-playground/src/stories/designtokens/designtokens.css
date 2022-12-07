@@ -1,0 +1,31 @@
+.designtokenName {
+  font-weight: var(--font-weight-bold);
+}
+
+.fontTokenExample {
+  width: 100%;
+}
+
+.fontTokenExample_grid {
+  display: grid;
+  gap: var(--semantic-spacing-default);
+  grid-template-columns: 1fr 1fr;
+}
+
+.fontTokenExample_lineheight {
+  box-sizing: border-box;
+  padding: var(--semantic-spacing-default);
+  background: var(--palette-graphite-10);
+  font-size: var(--font-size-xxl);
+  vertical-align: top;
+}
+
+.sizeTokenExample {
+  display: inline-block;
+  background: var(--palette-ochre-30);
+}
+
+.spacingTokenExample {
+  display: block;
+  background: var(--palette-ochre-30);
+}

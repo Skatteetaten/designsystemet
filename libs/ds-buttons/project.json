@@ -3,9 +3,10 @@
   "sourceRoot": "libs/ds-buttons/src",
   "projectType": "library",
   "tags": [],
+  "implicitDependencies": ["!ds-dev-config"],
   "targets": {
     "build": {
-      "executor": "@nrwl/web:rollup",
+      "executor": "@nrwl/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/ds-buttons",
@@ -13,7 +14,7 @@
         "project": "libs/ds-buttons/package.json",
         "entryFile": "libs/ds-buttons/src/index.ts",
         "external": ["react/jsx-runtime"],
-        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "rollupConfig": ["libs/ds-buttons/rollup.config.js"],
         "compiler": "babel",
         "assets": [
           {
@@ -31,15 +32,9 @@
         "lintFilePatterns": ["libs/ds-buttons/**/*.{ts,tsx,js,jsx}"]
       }
     },
-    "tsc": {
-      "executor": "./tools/executors/tsCheck:tsCheck",
-      "options": {
-        "tsConfig": ["tsconfig.lib.json", "tsconfig.spec.json"]
-      }
-    },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/ds-buttons"],
+      "outputs": ["{workspaceRoot}/coverage/libs/ds-buttons"],
       "options": {
         "jestConfig": "libs/ds-buttons/jest.config.ts",
         "passWithNoTests": true
@@ -53,6 +48,12 @@
           "libs/ds-buttons/**/*.css",
           "libs/ds-buttons/**/*.scss"
         ]
+      }
+    },
+    "tsc": {
+      "executor": "@skatteetaten/ds-dev-config:tsCheck",
+      "options": {
+        "tsConfig": ["tsconfig.lib.json", "tsconfig.spec.json"]
       }
     },
     "set-version": {

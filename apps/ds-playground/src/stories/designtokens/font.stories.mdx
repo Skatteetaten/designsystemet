@@ -1,0 +1,56 @@
+<!-- palette.mdx -->
+
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { TokensList } from './TokensList';
+import { FontTokenExamplesGenerator } from './FontTokenExamplesGenerator';
+
+# Font
+
+<Meta title="Designtokens" />
+
+## Font-size
+
+<FontTokenExamplesGenerator
+  propertyType={'font-size'}
+  sampleText={'Deklamerer lirke illebefinnende utholdelig dødsfallet'}
+/>
+
+## Font-weight
+
+<FontTokenExamplesGenerator
+  propertyType={'font-weight'}
+  sampleText={'Deklamerer lirke illebefinnende utholdelig dødsfallet'}
+/>
+
+## Line-height
+
+<FontTokenExamplesGenerator
+  propertyType={'line-height'}
+  sampleText={
+    'Deklamerer lirke illebefinnende utholdelig dødsfallet pleie, personalet tørklær kjære høyviktig således gledet måttet, den overlat pakkene lerkefuglen. Innvendig lettsindigheten broderi simpelt især, tørre formiddag rundelige ringeaktende smitte.'
+  }
+/>
+
+<Canvas>
+  <Story
+    name="Font"
+    parameters={{
+      design: [
+        {
+          name: 'Font',
+          type: 'figma',
+          url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=16083%3A25235',
+        },
+      ],
+    }}
+  >
+    {() => {
+      return (
+        <>
+          <p>{'Klikk på Docs tab for en visuell visning av font-størrelser'}</p>
+          <TokensList tokenType={'font'} />
+        </>
+      );
+    }}
+  </Story>
+</Canvas>

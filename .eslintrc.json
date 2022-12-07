@@ -1,9 +1,26 @@
 {
-  "extends": ["./libs/ds-core-config/config/designsystem-eslintrc.yml"],
+  "extends": ["./libs/ds-dev-config/config/designsystem-eslintrc.yml"],
   "root": true,
   "ignorePatterns": ["**/*"],
   "plugins": ["@nrwl/nx"],
   "overrides": [
+    {
+      "files": ["*.stories.tsx"],
+      "rules": {
+        "jest/no-standalone-expect": "off"
+      }
+    },
+    {
+      "files": [
+        "**/__tests__/*.test.ts",
+        "**/__tests__/*.test.tsx",
+        "**/__tests__/*.test.stories.tsx",
+        "**/__tests__/*.test.storiesof.stories.tsx"
+      ],
+      "rules": {
+        "sonarjs/no-duplicate-string": "off"
+      }
+    },
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {

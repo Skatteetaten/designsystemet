@@ -1,0 +1,26 @@
+.layout {
+  display: var(--semantic-responsive-internal-container-display);
+  padding: var(--semantic-responsive-internal-container-padding);
+  gap: var(--semantic-responsive-internal-container-padding);
+  grid-template-columns: var(--semantic-responsive-internal-aside) auto;
+}
+
+.aside,
+.main {
+  border: 3px solid var(--palette-burgundy-30);
+  background: var(--palette-graphite-0);
+}
+
+.article,
+.wideContent {
+  border: 3px solid var(--palette-forest-30);
+  background: var(--palette-forest-10);
+}
+
+.article {
+  max-width: var(--semantic-responsive-article);
+}
+
+.wideContent {
+  max-width: var(--semantic-responsive-wide-content);
+}

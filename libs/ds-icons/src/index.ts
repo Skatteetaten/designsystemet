@@ -1,4 +1,6 @@
-export * from './lib/Icon';
-export * from './lib/AccountChild';
-export * from './lib/AccountEnk';
-export * from './lib/AccountMultiple';
+export * from './Icon/Icon';
+export * from './Icon/Icon.types';
+export * from './SystemIcons';
+export * from './ThemeIcons';
+export * as SystemSVGPathsAndIcons from './SystemIcons';
+export * as ThemeSVGPathsAndIcons from './ThemeIcons';

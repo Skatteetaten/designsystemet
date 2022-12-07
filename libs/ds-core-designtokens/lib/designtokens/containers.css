@@ -1,4 +1,58 @@
+/* NB! Denne filen er utgangspunktet for den autogenerert .json fil, vennligst ikke gjør manuelle endringer i json. Skriv her og kjør kommandonavn generate:designtokens for å generere json. */
 :root,
 :host {
-  --random-variable: none;
+  --container-xs: 100%; /* Brukes som default */
+  --container-s: 560px; /* Brukes fom. breakpoint -s */
+  --container-m: 960px; /* Brukes fom. breakpoint -m */
+  --container-l: 1160px; /* Brukes fom. breakpoint -l */
+  --container-aside: 380px; /* Brukes for sidebars på desktop */
+  --container-wide-content: 760px /* Brukes for widecontent på desktop */
+    /* External */;
+  --semantic-responsive-container: var(--container-xs);
+  --semantic-responsive-container-padding: 0 var(--spacing-m);
+  --semantic-responsive-article: var(--container-xs);
+
+  /* Internal */
+  --semantic-responsive-internal-container-display: block;
+  --semantic-responsive-internal-container-padding: 0 var(--spacing-m);
+  --semantic-responsive-internal-aside: var(--container-xs);
+  --semantic-responsive-wide-content: var(--container-xs);
+}
+
+/* breakpoint-xs */
+@media (min-width: 480px) {
+  :root,
+  :host {
+    --semantic-responsive-container-padding: 0;
+    --semantic-responsive-wide-content: var(--container-s);
+  }
+}
+
+/* breakpoint-s */
+@media (min-width: 640px) {
+  :root,
+  :host {
+    --semantic-responsive-container: var(--container-s);
+    --semantic-responsive-article: var(--container-s);
+    --semantic-responsive-wide-content: var(--container-wide-content);
+  }
+}
+
+/* breakpoint-m */
+@media (min-width: 1024px) {
+  :root,
+  :host {
+    --semantic-responsive-container: var(--container-m);
+    --semantic-responsive-internal-container-display: grid;
+    --semantic-responsive-internal-container-padding: 0 var(--spacing-xl);
+    --semantic-responsive-internal-aside: var(--container-aside);
+  }
+}
+
+/* breakpoint-l */
+@media (min-width: 1366px) {
+  :root,
+  :host {
+    --semantic-responsive-container: var(--container-l);
+  }
 }

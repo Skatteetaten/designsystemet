@@ -1,0 +1,15 @@
+extends:
+  - stylelint-config-standard-scss
+  - stylelint-config-idiomatic-order
+  - stylelint-config-prettier # has to be last in order to overwrite other configs
+plugins:
+  - stylelint-scss
+  - stylelint-value-no-unknown-custom-properties
+rules:
+  color-hex-length: long
+  scss/at-import-partial-extension: null
+  color-function-notation: null
+  selector-class-pattern:
+    - '^[a-z][a-zA-Z0-9]+(_[a-z][a-zA-Z0-9]+)?$' # Denne sørger for at class selectors følger etablert konvensjon .lowerCamelCase_modifier
+    - resolveNestedSelectors: true
+  custom-property-no-missing-var-function: true

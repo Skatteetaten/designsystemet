@@ -1,3 +1,4 @@
+/* NB! Denne filen er utgangspunktet for den autogenerert .json fil, vennligst ikke gjør manuelle endringer i json. Skriv her og kjør kommandonavn generate:designtokens for å generere json. */
 :root,
 :host {
   /* Font-size reference settes på root tag'en. Den blir referansen for rem beregninger. */
@@ -14,10 +15,8 @@
   --font-size-mega: 2.625rem;
 
   /* Font-weight */
-  --font-weight-light: 100;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
-  --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
   /* Default gjelder for unstyled innhold og scenarier vi ikke er klar over */
