@@ -1,0 +1,89 @@
+@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
+%focus {
+  outline: var(--semantic-interactive-main) solid 2px;
+  outline-offset: 2px;
+}
+
+.heading {
+  margin: 0;
+  font-weight: var(--font-weight-bold);
+
+  &_level1 {
+    font-size: var(--font-size-xxl);
+    line-height: var(--semantic-line-height-heading1);
+
+    @media (min-width: $breakpoint-s) {
+      font-size: var(--font-size-mega);
+    }
+  }
+
+  &_level2 {
+    font-size: var(--font-size-xl);
+    line-height: var(--semantic-line-height-heading2);
+
+    @media (min-width: $breakpoint-s) {
+      font-size: var(--font-size-xxl);
+    }
+  }
+
+  &_level3 {
+    font-size: var(--font-size-l);
+    line-height: var(--semantic-line-height-heading3);
+
+    @media (min-width: $breakpoint-s) {
+      font-size: var(--font-size-xl);
+    }
+  }
+
+  &_level4 {
+    font-size: var(--font-size-l);
+    line-height: var(--semantic-line-height-heading4);
+  }
+
+  &_level5 {
+    font-size: var(--font-size-m);
+    line-height: var(--semantic-line-height-article);
+  }
+
+  &_hasSpacingExtraSmall {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  &_hasSpacingSmall {
+    margin-bottom: var(--spacing-s);
+  }
+
+  &_hasSpacingMedium {
+    margin-bottom: var(--spacing-m);
+  }
+
+  &_hasSpacingSmallMobileMediumOtherwise {
+    margin-bottom: var(--spacing-s);
+
+    @media (min-width: $breakpoint-s) {
+      margin-bottom: var(--spacing-m);
+    }
+  }
+
+  a {
+    color: var(--palette-azure-70);
+
+    &:hover {
+      background-color: var(--semantic-interactive-background);
+    }
+
+    &:focus {
+      @extend %focus;
+    }
+
+    &:active {
+      @extend %focus;
+
+      background-color: var(--semantic-interactive-background);
+      color: var(--semantic-interactive-foreground);
+      transform: translateY(2px);
+      transition-timing-function: ease;
+    }
+  }
+}
