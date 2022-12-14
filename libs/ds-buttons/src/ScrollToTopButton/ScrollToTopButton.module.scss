@@ -1,0 +1,83 @@
+@import '~@skatteetaten/ds-core-designtokens/designtokens/breakpoints.scss';
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.scrollToTopButton {
+  padding: var(--spacing-xs);
+  border: solid 2px transparent;
+  background: transparent;
+  border-radius: 0.25rem;
+  color: var(--palette-azure-70);
+  cursor: pointer;
+  opacity: 0;
+  outline: none;
+  transition: 0.15s;
+  transition-timing-function: ease;
+  visibility: hidden;
+  will-change: transform;
+
+  @media (min-width: $breakpoint-m) {
+    position: fixed;
+    z-index: 100;
+    right: calc(((100vw) - var(--semantic-responsive-container)) / 2);
+    bottom: 0;
+  }
+
+  &_visible {
+    opacity: 1;
+    visibility: visible;
+
+    @media (min-width: $breakpoint-m) {
+      bottom: var(--spacing-xl);
+    }
+  }
+
+  &:hover {
+    background: var(--palette-azure-10);
+  }
+
+  &:focus {
+    border: solid 2px var(--semantic-interactive-main);
+  }
+
+  &:active {
+    border: solid 2px var(--palette-azure-100);
+    background: var(--palette-azure-10);
+    color: var(--palette-azure-100);
+    transform: translateY(2px);
+  }
+
+  &IconContainer {
+    width: var(--spacing-xl);
+    height: var(--spacing-xl);
+    border: solid 2px var(--semantic-interactive-main);
+    margin: 0 auto var(--spacing-xs) auto;
+    background: var(--palette-graphite-0);
+    border-radius: 2rem;
+
+    &Icon {
+      margin: var(--spacing-xs) auto 0;
+      fill: var(--semantic-interactive-main);
+    }
+  }
+
+  &:active &IconContainer {
+    &Icon {
+      fill: var(--palette-azure-100);
+    }
+
+    border: solid 2px var(--palette-azure-100);
+  }
+
+  &Label {
+    padding: var(--spacing-xs) var(--spacing-s);
+    background: var(--palette-graphite-0);
+    border-radius: 999px;
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--semantic-line-height-buttons);
+  }
+}

@@ -12,7 +12,7 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true
   },
-  "files": [],
+  "files": ["../../types/i18next.d.ts"],
   "include": [],
   "references": [
     {

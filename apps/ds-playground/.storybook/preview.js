@@ -1,3 +1,4 @@
+import breakpoints from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
 import {
   dsI18n,
   getCommonClassNameDefault,
@@ -19,19 +20,12 @@ const LanguageUpdater = (Story) => {
 
 export const decorators = [(Story) => <Story />, LanguageUpdater];
 
-const getBreakPoint = (point) => {
-  const pointPx = getComputedStyle(document.documentElement).getPropertyValue(
-    point
-  );
-  return `${parseInt(pointPx) + 1}px`;
-};
-
 const makeViewPort = (dsbreakpoint) => {
   return {
-    [dsbreakpoint.replace(/[^a-zA-Z]/, '')]: {
+    [dsbreakpoint]: {
       name: dsbreakpoint,
       styles: {
-        width: getBreakPoint(dsbreakpoint),
+        width: breakpoints[dsbreakpoint],
         height: '100%',
       },
     },
