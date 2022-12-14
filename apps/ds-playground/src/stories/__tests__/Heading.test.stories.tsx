@@ -4,7 +4,7 @@ import {
   HeadingProps,
 } from '@skatteetaten/ds-typography';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ElementHandle, Page, ScreenshotOptions } from 'puppeteer';
+import { ElementHandle, ScreenshotOptions } from 'puppeteer';
 
 const wrapper = '[data-test-block]';
 const screenShotOptions: ScreenshotOptions = {
@@ -248,18 +248,17 @@ Defaults.parameters = {
 
 // Når Heading instansieres, ser den riktug ut for alle levels på mobil
 export const DefaultsMobile = TemplateWithAllLevels.bind({});
-DefaultsMobile.storyName = 'Defaults All Levels MOBIL (A1, A2 delvis)';
+DefaultsMobile.storyName =
+  'Defaults All Levels On Small Screen (A1, A2 delvis)';
 DefaultsMobile.args = {
   ...defaultArgs,
 };
 DefaultsMobile.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await page.setViewport({
-      width: 500,
-      height: 500,
-    });
+  viewport: {
+    defaultViewport: '--breakpoint-xs',
+  },
+  async puppeteerTest(page: ElementHandle): Promise<void> {
     const image = await page.screenshot(screenShotOptions);
-
     expect(image).toMatchImageSnapshot();
   },
 };
@@ -289,19 +288,18 @@ LevelsWithSpacing.parameters = {
 
 // Når Heading har spacing, så får elementet riktig margin under headingen på mobil
 export const LevelsWithSpacingMobile = TemplateWithAllLevels.bind({});
-LevelsWithSpacingMobile.storyName = 'With Spacing All Levels MOBIL (A4 delvis)';
+LevelsWithSpacingMobile.storyName =
+  'With Spacing All Levels On Small Screen (A4 delvis)';
 LevelsWithSpacingMobile.args = {
   ...defaultArgs,
   hasSpacing: true,
 };
 LevelsWithSpacingMobile.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await page.setViewport({
-      width: 500,
-      height: 500,
-    });
+  viewport: {
+    defaultViewport: '--breakpoint-xs',
+  },
+  async puppeteerTest(page: ElementHandle): Promise<void> {
     const image = await page.screenshot(screenShotOptions);
-
     expect(image).toMatchImageSnapshot();
   },
 };
