@@ -13,11 +13,3 @@ rules:
     - '^[a-z][a-zA-Z0-9]+(_[a-z][a-zA-Z0-9]+)?$' # Denne sørger for at class selectors følger etablert konvensjon .lowerCamelCase_modifier
     - resolveNestedSelectors: true
   custom-property-no-missing-var-function: true
-  csstools/value-no-unknown-custom-properties:
-    - true
-    - importFrom:
-        - 'libs/ds-core-designtokens/lib/designtokens/containers.css'
-        - 'libs/ds-core-designtokens/lib/designtokens/font.css'
-        - 'libs/ds-core-designtokens/lib/designtokens/palette.css'
-        - 'libs/ds-core-designtokens/lib/designtokens/sizes.css'
-        - 'libs/ds-core-designtokens/lib/designtokens/spacing.css'
