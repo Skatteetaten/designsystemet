@@ -25,7 +25,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
     },
     ref
   ): JSX.Element => {
-    const { t } = useTranslation('ds_Buttons', { i18n: dsI18n });
+    const { t } = useTranslation('ds_buttons', { i18n: dsI18n });
     const concatenatedClassName = `${styles.link} ${className}`;
 
     return (
@@ -53,8 +53,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
           <ExternalIcon
             size={'small'}
             className={`${styles.icon} ${styles.icon_isExternal}`}
-            // TODO FRONT-991 - avklare hva som blir riktig keytitle
-            ariaLabel={t('knapp.MegaButton.AriaLabel.ExternalIcon')}
+            ariaLabel={t('shared.ExternalIcon')}
           />
         )}
       </a>

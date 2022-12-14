@@ -1,0 +1,12 @@
+{
+  "fileuploader.AcceptedFileFormats": "Aksepterte filformater:",
+  "fileuploader.AddFile": "Legg til fil(er)",
+  "fileuploader.DeleteFile": "Fjern fil",
+  "fileuploader.FileFormatError": "Dette filformatet er ikke godkjent.",
+  "fileuploader.FileSizeError": "Vi kan ikke motta denne filen fordi den er for stor. Filer kan ikke overstige {{filstoerrelsegrense}} Mb. Du kan forsøke å dele opp i flere mindre filer, eller bruke et format som tar mindre plass.",
+  "fileuploader.GeneralDeleteError": "Kunne ikke slette fil",
+  "fileuploader.GeneralUploadError": "Kunne ikke laste opp fil",
+  "fileuploader.NoRightsToDeleteError": "Du har ikke rettigheter til å slette filer.",
+  "fileuploader.NoRightsUploadError": "Du har ikke rettigheter til å laste opp filer.",
+  "fileuploader.UploadedHeading": "Lastet opp:"
+}

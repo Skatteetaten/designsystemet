@@ -1,0 +1,10 @@
+{
+  "pagination.Back": "Tilbake",
+  "pagination.Forward": "Frem",
+  "pagination.Title": "Viser {view} av {total}",
+  "table.Sortable": "Sorterbar",
+  "table.SortedAscending": "Sortert stigende",
+  "table.SortedDescending": "Sortert synkende",
+  "tablerow.Editable": "Rediger rad",
+  "tablerow.Expandable": "Mer informasjon"
+}

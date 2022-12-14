@@ -36,7 +36,7 @@ export const ScrollToTopButton = forwardRef<
       return () => window.removeEventListener('scroll', onScroll);
     }, [visibilityThreshold]);
 
-    const { t } = useTranslation('ds_Buttons', { i18n: dsI18n });
+    const { t } = useTranslation('ds_buttons', { i18n: dsI18n });
 
     const buttonClassname = `${styles.scrollToTopButton} ${
       visible ? styles.scrollToTopButton_visible : ''
@@ -79,8 +79,7 @@ export const ScrollToTopButton = forwardRef<
               classNames?.label ?? ''
             }`}
           >
-            {/* TODO FRONT-891 bekrefte at key er riktig*/}
-            {children ? children : t('knapp.ScrollToTop')}
+            {children ? children : t('scrolltotopbutton.Title')}
           </div>
         </button>
       </div>
