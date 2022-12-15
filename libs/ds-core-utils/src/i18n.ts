@@ -72,7 +72,7 @@ export const resources = {
 export const dsI18n = i18n.createInstance({
   keySeparator: false,
   nsSeparator: ':',
-  fallbackLng: false,
+  fallbackLng: 'nb_NO',
   react: {
     useSuspense: false,
   },

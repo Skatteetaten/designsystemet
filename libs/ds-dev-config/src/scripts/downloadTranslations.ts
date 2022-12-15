@@ -137,7 +137,7 @@ Promise.all(tekstlisterPromises)
         if (fileName) {
           return unzipFile(fileName);
         } else {
-          return;
+          return undefined;
         }
       });
     return Promise.all(tekstlisterZipPromises);
@@ -153,7 +153,7 @@ Promise.all(tekstlisterPromises)
       if (tekstliste) {
         return concatLanguageFiles(tekstliste);
       } else {
-        return;
+        return undefined;
       }
     });
     return Promise.all(tekstlisterConcatFilesPromises);
