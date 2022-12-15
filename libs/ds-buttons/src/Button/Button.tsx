@@ -2,8 +2,8 @@
 import { forwardRef } from 'react';
 
 import {
-  getCommonDisabledDefault,
   getCommonClassNameDefault,
+  getCommonDisabledDefault,
 } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
@@ -22,6 +22,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       variant = getButtonVariantDefault(),
       accessKey,
       disabled = getCommonDisabledDefault(),
+      type = 'button',
       ariaDescribedby,
       onBlur,
       onClick,
@@ -42,6 +43,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         data-testid={dataTestId}
         accessKey={accessKey}
         disabled={disabled}
+        type={type}
         aria-describedby={ariaDescribedby}
         onBlur={onBlur}
         onClick={onClick}

@@ -23,13 +23,15 @@ export type MegaButtonDiscriminatedProp =
       disabled?: never;
       /** Viser ikon som indikerer at knappen åpner en ekstern tjeneste. Brukes hvis knappen er en lenke til en side på et annet domene. */
       isExternal?: boolean;
+      type?: never;
     }
   | {
+      /** Hvis det er ønskelig å vise knappen som en lenke. Setter strengen til href attributtet på lenken. */
       href?: never;
       disabled?: boolean;
-      /** Hvis det er ønskelig å vise knappen som en lenke. Setter strengen til href attributtet på lenken. */
       /** Viser ikon som indikerer at knappen åpner en ekstern tjeneste. Brukes hvis knappen er en lenke til en side på et annet domene. */
       isExternal?: never;
+      type?: 'submit' | 'reset' | 'button';
     };
 
 export interface MegaButtonComponentCommonProps

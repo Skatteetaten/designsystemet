@@ -53,6 +53,12 @@ export default {
         defaultValue: { summary: getCommonDisabledDefault() },
       },
     },
+    type: {
+      table: {
+        category: category.htmlAttribute,
+        defaultValue: { summary: 'button' },
+      },
+    },
     // Aria
     ariaDescribedby: { table: { category: category.aria } },
     // Events

@@ -3,8 +3,11 @@ import { FocusEventHandler, MouseEventHandler, ReactElement } from 'react';
 import { BaseProps, Positon } from '@skatteetaten/ds-core-utils';
 
 type RequiredMegaButtonHTMLAttributes = Pick<
-  React.HTMLProps<HTMLButtonElement>,
-  'accessKey' | 'disabled' | 'onBlur' | 'onClick' | 'onFocus'
+  React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  >,
+  'accessKey' | 'disabled' | 'type' | 'onBlur' | 'onClick' | 'onFocus'
 >;
 
 type InlineButtonHTMLAttributes = Partial<RequiredMegaButtonHTMLAttributes>;

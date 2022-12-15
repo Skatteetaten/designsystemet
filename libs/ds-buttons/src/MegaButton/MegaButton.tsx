@@ -21,8 +21,9 @@ export const MegaButton = forwardRef<
       'data-testid': dataTestId,
       href,
       isExternal,
-      disabled = getCommonDisabledDefault(),
       accessKey,
+      disabled = getCommonDisabledDefault(),
+      type = 'button',
       ariaDescribedby,
       onBlur,
       onClick,
@@ -32,6 +33,7 @@ export const MegaButton = forwardRef<
     ref
   ): JSX.Element => {
     const cssName = `${styles.button} ${className}`;
+    const buttonType = href !== undefined ? undefined : type;
 
     const Tag = href !== undefined ? 'a' : 'button';
     return (
@@ -47,6 +49,7 @@ export const MegaButton = forwardRef<
         href={href}
         accessKey={accessKey}
         disabled={disabled}
+        type={buttonType}
         aria-describedby={ariaDescribedby}
         role={href ? 'button' : undefined}
         onBlur={onBlur}

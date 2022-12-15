@@ -17,6 +17,9 @@ const screenShotOptions: ScreenshotOptions = {
 export default {
   component: IconButton,
   title: 'Tests / IconButton',
+  argTypes: {
+    type: { table: { disable: true } },
+  },
 } as ComponentMeta<typeof IconButton>;
 
 const accessibleName = 'dummy tekst accessible name';
@@ -121,7 +124,7 @@ WithDataTestid.parameters = {
 
 // Når IconButton instansieres, får den riktige default-verdier og rendrer riktig i ulike tilstander
 export const Defaults = Template.bind({});
-Defaults.storyName = 'Defaults Without Outline (A1 - 1 av 9, B1, B2)';
+Defaults.storyName = 'Defaults Without Outline (A1 - 1 av 9, B1 - 1 av 2, B2)';
 Defaults.args = {
   ...defaultArgs,
 };
@@ -129,6 +132,11 @@ Defaults.parameters = {
   async puppeteerTest(page: ElementHandle): Promise<void> {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     const image = await page.screenshot(screenShotOptions);
+
+    const attributeType = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('type')
+    );
+    expect(attributeType).toBe('button');
 
     const titleElement = await page.$eval(
       `${wrapper} > button svg title`,
@@ -459,6 +467,30 @@ DisabledWithOutline.parameters = {
 
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
+
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+  },
+};
+
+// Når IconButton har prop type, så har button-elementet type satt
+export const WithType = Template.bind({});
+WithType.storyName = 'With Type (B1 - 2 av 2)';
+WithType.args = {
+  ...defaultArgs,
+  type: 'submit',
+};
+WithType.argTypes = {
+  ...WithType.argTypes,
+  type: { table: { disable: false } },
+};
+WithType.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+
+    const hasType = await page.$(`${wrapper} > button[type]`);
+    expect(hasType).toBeTruthy();
 
     const image = await page.screenshot(screenShotOptions);
     expect(image).toMatchImageSnapshot();
