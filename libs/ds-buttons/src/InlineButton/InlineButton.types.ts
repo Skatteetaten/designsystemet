@@ -1,12 +1,14 @@
-import { FocusEventHandler, MouseEventHandler, ReactElement } from 'react';
+import {
+  ComponentPropsWithoutRef,
+  FocusEventHandler,
+  MouseEventHandler,
+  ReactElement,
+} from 'react';
 
 import { BaseProps, Positon } from '@skatteetaten/ds-core-utils';
 
 type RequiredMegaButtonHTMLAttributes = Pick<
-  React.DetailedHTMLProps<
-    React.ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-  >,
+  ComponentPropsWithoutRef<'button'>,
   'accessKey' | 'disabled' | 'type' | 'onBlur' | 'onClick' | 'onFocus'
 >;
 

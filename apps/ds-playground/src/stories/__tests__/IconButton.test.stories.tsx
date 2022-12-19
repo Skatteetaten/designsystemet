@@ -489,8 +489,10 @@ WithType.parameters = {
     const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
     expect(innerHtml).toMatchSnapshot();
 
-    const hasType = await page.$(`${wrapper} > button[type]`);
-    expect(hasType).toBeTruthy();
+    const type = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('type')
+    );
+    expect(type).toBe('submit');
 
     const image = await page.screenshot(screenShotOptions);
     expect(image).toMatchImageSnapshot();
