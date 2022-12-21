@@ -1,12 +1,13 @@
 #!/usr/bin/env node
+/* eslint-disable @typescript-eslint/no-var-requires */
+const axios = require('axios');
+const filterFiles = require('filter-files');
+const fse = require('fs-extra');
+const jsonConcat = require('json-concat');
+const unzipper = require('unzipper');
 
-const axios = require('axios'); // eslint-disable-line @typescript-eslint/no-var-requires
-const filterFiles = require('filter-files'); // eslint-disable-line @typescript-eslint/no-var-requires
-const fse = require('fs-extra'); // eslint-disable-line @typescript-eslint/no-var-requires
-const jsonConcat = require('json-concat'); // eslint-disable-line @typescript-eslint/no-var-requires
-const unzipper = require('unzipper'); // eslint-disable-line @typescript-eslint/no-var-requires
-
-const path = require('path'); // eslint-disable-line @typescript-eslint/no-var-requires
+const path = require('path');
+/* eslint-enable @typescript-eslint/no-var-requires */
 
 interface Tekstliste {
   language: string;
@@ -15,11 +16,8 @@ interface Tekstliste {
 }
 
 const tekstlistekatalog: string | undefined = process.env['TEKSTLISTEKATALOG'];
-const translationsFolderEnvironmentVariable: string = process.env[
-  'TRANSLATIONS_FOLDER'
-]
-  ? process.env['TRANSLATIONS_FOLDER']
-  : 'translations';
+const translationsFolderEnvironmentVariable =
+  process.env['TRANSLATIONS_FOLDER'] || 'translations';
 
 const translationsfolder = path.resolve(
   process.cwd(),
@@ -27,7 +25,9 @@ const translationsfolder = path.resolve(
 );
 const languages: string[] = ['nb_NO', 'nn_NO', 'se_NO', 'en_GB'];
 
-const downloadLanguageFile = (fileName: string): Promise<string | void> => {
+const downloadLanguageFile = async (
+  fileName: string
+): Promise<string | void> => {
   const url = `http://tekstlistekatalog.skead.no/api/v2/zip/${tekstlistekatalog}/${fileName}.zip`;
   const zipFileName = `${translationsfolder}/${fileName}.zip`;
   const zipFileWriteStream = fse.createWriteStream(zipFileName);
@@ -54,7 +54,7 @@ const downloadLanguageFile = (fileName: string): Promise<string | void> => {
 };
 
 const unzipFile = (fileName: string): Promise<Tekstliste[] | void> => {
-  return new Promise<Tekstliste[] | void>((resolve, reject) => {
+  return new Promise<Tekstliste[]>((resolve, reject) => {
     const filePath = `${translationsfolder}/${fileName}`;
     const zipFileName = `${filePath}.zip`;
     fse
@@ -64,29 +64,8 @@ const unzipFile = (fileName: string): Promise<Tekstliste[] | void> => {
       .promise()
       .then(
         () => {
-          // remove zip file
-          // eslint-disable-next-line  @typescript-eslint/no-explicit-any
-          fse.unlink(zipFileName, (unlinkError: any) => {
-            console.error(unlinkError);
-          });
-          // combine all json-files in each folder
-          const translations: Tekstliste[] = [];
-          languages.forEach((language: string) => {
-            const filesArray: string[] = filterFiles.sync(
-              filePath,
-              (fp: string) => {
-                return new RegExp(language).test(fp);
-              }
-            );
-            if (!filesArray.length) {
-              return;
-            }
-            translations.push({
-              language: language,
-              files: filesArray,
-              fileName: fileName,
-            });
-          });
+          removeZipFile(zipFileName);
+          const translations = combineJsonFiles(filePath, fileName);
           resolve(translations);
         },
         // eslint-disable-next-line  @typescript-eslint/no-explicit-any
@@ -96,6 +75,28 @@ const unzipFile = (fileName: string): Promise<Tekstliste[] | void> => {
     console.error(error);
   });
 };
+
+const removeZipFile = (zipFileName: string): void => {
+  fse.unlink(zipFileName, (unlinkError: NodeJS.ErrnoException) => {
+    if (unlinkError) {
+      console.error(unlinkError);
+    }
+  });
+};
+
+const combineJsonFiles = (
+  filePath: string,
+  fileName: string
+): Array<Tekstliste> =>
+  languages
+    .map((language: string) => ({
+      language,
+      files: filterFiles.sync(filePath, (fp: string) => {
+        return new RegExp(language).test(fp);
+      }),
+      fileName,
+    }))
+    .filter((translation) => translation.files.length);
 
 const concatLanguageFiles = (
   tekstliste: Tekstliste
@@ -129,33 +130,24 @@ const tekstlisteFileNamesArray: string[] = process.env['TEKSTLISTER']
 
 const tekstlisterPromises: Promise<string | void>[] =
   tekstlisteFileNamesArray.map((fileName) => downloadLanguageFile(fileName));
+
 Promise.all(tekstlisterPromises)
   .then((files) => {
     console.log(`downloaded files: ${files}`);
-    const tekstlisterZipPromises: (Promise<Tekstliste[] | void> | undefined)[] =
-      files.map((fileName) => {
-        if (fileName) {
-          return unzipFile(fileName);
-        } else {
-          return undefined;
-        }
-      });
+    const tekstlisterZipPromises: Promise<Tekstliste[] | void>[] = files
+      .filter((filename): filename is string => typeof filename === 'string')
+      .map((filename) => unzipFile(filename));
+
     return Promise.all(tekstlisterZipPromises);
   })
   .then((translations) => {
     console.log(`downloaded ${translations.length} tekstlister`);
     const allFiles = translations.flat();
-    // concat files for each language
-    const tekstlisterConcatFilesPromises: (
-      | Promise<Tekstliste | string | void>
-      | undefined
-    )[] = allFiles.map((tekstliste) => {
-      if (tekstliste) {
-        return concatLanguageFiles(tekstliste);
-      } else {
-        return undefined;
-      }
-    });
+
+    const tekstlisterConcatFilesPromises = allFiles
+      .filter((tekstliste): tekstliste is Tekstliste => Boolean(tekstliste))
+      .map((tekstliste) => concatLanguageFiles(tekstliste));
+
     return Promise.all(tekstlisterConcatFilesPromises);
   })
   .then(() => {
