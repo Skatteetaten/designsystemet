@@ -30,9 +30,6 @@ export default {
       table: { control: false, category: category.props },
     },
     children: { table: { category: category.props } },
-    // HTML
-    // Aria
-    // Events
   },
   parameters: {
     backgrounds: {
