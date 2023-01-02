@@ -45,9 +45,6 @@ export default {
     },
     shadowRootNode: { table: { disable: true } },
     children: { table: { disable: true, category: category.props } },
-    // HTML
-    // Aria
-    // Events
   },
   parameters: {
     backgrounds: {
