@@ -1,3 +1,4 @@
+import { AxePuppeteer } from '@axe-core/puppeteer';
 import { paragraphVariantArr } from '@skatteetaten/ds-core-utils';
 import {
   getParagraphVariantDefault,
@@ -5,12 +6,34 @@ import {
   ParagraphProps,
 } from '@skatteetaten/ds-typography';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ElementHandle, ScreenshotOptions } from 'puppeteer';
+import { toHaveNoViolations } from 'jest-axe';
+import { Page } from 'puppeteer';
 
-const wrapper = '[data-test-block]';
-const screenShotOptions: ScreenshotOptions = {
-  fullPage: true,
-  encoding: 'base64',
+import {
+  screenShotOptions,
+  wrapper,
+} from './testUtils/puppeteer.testing.utils';
+
+const verifyMatchSnapShot = async (page: Page): Promise<void> => {
+  const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+  expect(innerHtml).toMatchSnapshot();
+};
+
+const verifyMatchImageSnapShot = async (page: Page): Promise<void> => {
+  const image = await page.screenshot(screenShotOptions);
+  expect(image).toMatchImageSnapshot();
+};
+
+const verifyAxeRules = async (page: Page): Promise<void> => {
+  const axeResults = await new AxePuppeteer(page).include(wrapper).analyze();
+  expect.extend(toHaveNoViolations);
+  expect(axeResults).toHaveNoViolations();
+};
+
+const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
+  await verifyMatchSnapShot(page);
+  await verifyMatchImageSnapShot(page);
+  await verifyAxeRules(page);
 };
 
 export default {
@@ -66,12 +89,12 @@ WithRef.argTypes = {
   ref: { table: { disable: false } },
 };
 WithRef.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
+
     const refId = await page.$eval(`${wrapper} > p`, (el) => el.id);
     expect(refId).toBe('dummyIdForwardedFromRef');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 
@@ -87,14 +110,14 @@ WithId.argTypes = {
   id: { table: { disable: false } },
 };
 WithId.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
+
     const id = await page.$eval(`${wrapper} > p`, (el) =>
       el.getAttribute('id')
     );
     expect(id).toBe('ParagraphId');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 
@@ -112,17 +135,13 @@ WithCustomCss.argTypes = {
   },
 };
 WithCustomCss.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifySnapshotsAndAxeRules(page);
+
     const classNameAttribute = await page.$eval(`${wrapper} > p`, (el) =>
       el.getAttribute('class')
     );
     expect(classNameAttribute).toContain('dummyClassname');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
   },
 };
 
@@ -138,14 +157,14 @@ WithLang.argTypes = {
   lang: { table: { disable: false } },
 };
 WithLang.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
+
     const langAttribute = await page.$eval(`${wrapper} > p`, (el) =>
       el.getAttribute('lang')
     );
     expect(langAttribute).toBe('nb');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 
@@ -161,14 +180,14 @@ WithDataTestid.argTypes = {
   'data-testid': { table: { disable: false } },
 };
 WithDataTestid.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
+
     const dataTestid = await page.$eval(`${wrapper} > p`, (el) =>
       el.getAttribute('data-testid')
     );
     expect(dataTestid).toBe('ParagraphID');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 
@@ -179,12 +198,12 @@ IsPElement.args = {
   ...defaultArgs,
 };
 IsPElement.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
+
     const paragraphElement = await page.$(`${wrapper} > p`);
     expect(paragraphElement).toBeTruthy();
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 
@@ -237,13 +256,7 @@ WithMarkup.argTypes = {
   },
 };
 WithMarkup.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    const image = await page.screenshot(screenShotOptions);
-
-    expect(innerHtml).toMatchSnapshot();
-    expect(image).toMatchImageSnapshot();
-  },
+  puppeteerTest: verifySnapshotsAndAxeRules,
 };
 
 const TemplateWithTwoParagraphs: ComponentStory<typeof Paragraph> = (args) => (
@@ -264,13 +277,7 @@ Defaults.argTypes = {
   children: { table: { disable: false } },
 };
 Defaults.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    const image = await page.screenshot(screenShotOptions);
-
-    expect(innerHtml).toMatchSnapshot();
-    expect(image).toMatchImageSnapshot();
-  },
+  puppeteerTest: verifySnapshotsAndAxeRules,
 };
 
 // Når Paragraph er et ingress, så får elementet riktige verdier
@@ -285,13 +292,7 @@ VariantIngress.argTypes = {
   variant: { table: { disable: false } },
 };
 VariantIngress.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    const image = await page.screenshot(screenShotOptions);
-
-    expect(innerHtml).toMatchSnapshot();
-    expect(image).toMatchImageSnapshot();
-  },
+  puppeteerTest: verifySnapshotsAndAxeRules,
 };
 
 // Når Paragraph har spacing, så får elementet en margin under avsnittet
@@ -306,13 +307,7 @@ WithSpacing.argTypes = {
   hasSpacing: { table: { disable: false } },
 };
 WithSpacing.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    const image = await page.screenshot(screenShotOptions);
-
-    expect(innerHtml).toMatchSnapshot();
-    expect(image).toMatchImageSnapshot();
-  },
+  puppeteerTest: verifySnapshotsAndAxeRules,
 };
 
 // Når Paragraph er et ingress og har spacing, så får elementet riktige verdier og en margin under ingresset
@@ -330,11 +325,5 @@ VariantIngressWithSpacing.argTypes = {
   variant: { table: { disable: false } },
 };
 VariantIngressWithSpacing.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    const image = await page.screenshot(screenShotOptions);
-
-    expect(innerHtml).toMatchSnapshot();
-    expect(image).toMatchImageSnapshot();
-  },
+  puppeteerTest: verifySnapshotsAndAxeRules,
 };

@@ -1,18 +1,41 @@
 import { useState } from 'react';
 
+import { AxePuppeteer } from '@axe-core/puppeteer';
 import { Button } from '@skatteetaten/ds-buttons';
 import { buttonVariantArr } from '@skatteetaten/ds-core-utils';
 import { SendSVGpath } from '@skatteetaten/ds-icons';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ElementHandle, ScreenshotOptions } from 'puppeteer';
+import { toHaveNoViolations } from 'jest-axe';
+import { Page } from 'puppeteer';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
+import {
+  screenShotOptions,
+  wrapper,
+} from './testUtils/puppeteer.testing.utils';
 
-const wrapper = '[data-test-block]';
 const defaultButtonText = 'Klikk her';
-const screenShotOptions: ScreenshotOptions = {
-  fullPage: true,
-  encoding: 'base64',
+
+const verifyMatchSnapShot = async (page: Page): Promise<void> => {
+  const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+  expect(innerHtml).toMatchSnapshot();
+};
+
+const verifyMatchImageSnapShot = async (page: Page): Promise<void> => {
+  const image = await page.screenshot(screenShotOptions);
+  expect(image).toMatchImageSnapshot();
+};
+
+const verifyAxeRules = async (page: Page): Promise<void> => {
+  const axeResults = await new AxePuppeteer(page).include(wrapper).analyze();
+  expect.extend(toHaveNoViolations);
+  expect(axeResults).toHaveNoViolations();
+};
+
+const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
+  await verifyMatchSnapShot(page);
+  await verifyMatchImageSnapShot(page);
+  await verifyAxeRules(page);
 };
 
 export default {
@@ -78,12 +101,12 @@ WithRef.argTypes = {
   ref: { table: { disable: false } },
 };
 WithRef.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
+
     const refId = await page.$eval(`${wrapper} > button`, (el) => el.id);
     expect(refId).toBe('dummyIdForwardedFromRef');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 
@@ -99,14 +122,14 @@ WithId.argTypes = {
   id: { table: { disable: false } },
 };
 WithId.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
+
     const elementid = await page.$eval(`${wrapper} > button`, (el) =>
       el.getAttribute('id')
     );
     expect(elementid).toBe('htmlid');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 
@@ -125,17 +148,13 @@ WithCustomCss.argTypes = {
   },
 };
 WithCustomCss.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifySnapshotsAndAxeRules(page);
+
     const classNameAttribute = await page.$eval(`${wrapper}> button`, (el) =>
       el.getAttribute('class')
     );
     expect(classNameAttribute).toContain('dummyClassname');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
   },
 };
 
@@ -151,14 +170,14 @@ WithLang.argTypes = {
   lang: { table: { disable: false } },
 };
 WithLang.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
+
     const langAttribute = await page.$eval(`${wrapper} > button`, (el) =>
       el.getAttribute('lang')
     );
     expect(langAttribute).toBe('nb');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 
@@ -174,14 +193,14 @@ WithDataTestid.argTypes = {
   'data-testid': { table: { disable: false } },
 };
 WithDataTestid.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
+
     const dataTestid = await page.$eval(`${wrapper} > button`, (el) =>
       el.getAttribute('data-testid')
     );
     expect(dataTestid).toBe('123ID');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 
@@ -197,20 +216,16 @@ Defaults.argTypes = {
   children: { table: { disable: false } },
 };
 Defaults.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const element = await page.$(wrapper);
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifySnapshotsAndAxeRules(page);
 
+    const element = await page.$(wrapper);
     const textContent = await element?.getProperty('textContent');
     const text = await textContent?.jsonValue();
     expect(text).toBe(defaultButtonText);
 
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(innerHtml).toMatchSnapshot();
-    expect(image).toMatchImageSnapshot();
-
     const buttonElement = await page.$(`${wrapper} > button`);
+
     await buttonElement?.focus();
     const imageFocused = await page.screenshot(screenShotOptions);
     expect(imageFocused).toMatchImageSnapshot();
@@ -218,7 +233,6 @@ Defaults.parameters = {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
     await buttonElement?.hover();
-
     const imageHovered = await page.screenshot(screenShotOptions);
     expect(imageHovered).toMatchImageSnapshot();
 
@@ -242,14 +256,11 @@ VariantSecondary.argTypes = {
   variant: { table: { disable: false } },
 };
 VariantSecondary.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(innerHtml).toMatchSnapshot();
-    expect(image).toMatchImageSnapshot();
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifySnapshotsAndAxeRules(page);
 
     const buttonElement = await page.$(`${wrapper} > button`);
+
     await buttonElement?.focus();
     const imageFocused = await page.screenshot(screenShotOptions);
     expect(imageFocused).toMatchImageSnapshot();
@@ -257,7 +268,6 @@ VariantSecondary.parameters = {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
     await buttonElement?.hover();
-
     const imageHovered = await page.screenshot(screenShotOptions);
     expect(imageHovered).toMatchImageSnapshot();
 
@@ -281,14 +291,11 @@ VariantTertiary.argTypes = {
   variant: { table: { disable: false } },
 };
 VariantTertiary.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(innerHtml).toMatchSnapshot();
-    expect(image).toMatchImageSnapshot();
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifySnapshotsAndAxeRules(page);
 
     const buttonElement = await page.$(`${wrapper} > button`);
+
     await buttonElement?.focus();
     const imageFocused = await page.screenshot(screenShotOptions);
     expect(imageFocused).toMatchImageSnapshot();
@@ -296,7 +303,6 @@ VariantTertiary.parameters = {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
     await buttonElement?.hover();
-
     const imageHovered = await page.screenshot(screenShotOptions);
     expect(imageHovered).toMatchImageSnapshot();
 
@@ -317,14 +323,11 @@ VariantDanger.argTypes = {
   variant: { table: { disable: false } },
 };
 VariantDanger.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(innerHtml).toMatchSnapshot();
-    expect(image).toMatchImageSnapshot();
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifySnapshotsAndAxeRules(page);
 
     const buttonElement = await page.$(`${wrapper} > button`);
+
     await buttonElement?.focus();
     const imageFocused = await page.screenshot(screenShotOptions);
     expect(imageFocused).toMatchImageSnapshot();
@@ -332,7 +335,6 @@ VariantDanger.parameters = {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
     await buttonElement?.hover();
-
     const imageHovered = await page.screenshot(screenShotOptions);
     expect(imageHovered).toMatchImageSnapshot();
 
@@ -357,13 +359,7 @@ WithLongText.argTypes = {
   children: { table: { disable: false } },
 };
 WithLongText.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
+  puppeteerTest: verifySnapshotsAndAxeRules,
 };
 
 // Når Button har en veldig lang tekst uten breaking space så skal det brekke over flere linjer
@@ -379,13 +375,7 @@ WithLongTextBreaking.argTypes = {
   children: { table: { disable: false } },
 };
 WithLongTextBreaking.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
+  puppeteerTest: verifySnapshotsAndAxeRules,
 };
 
 // Når Button har en veldig lang tekst og det er et ikon så skal tekst venstrejusteres
@@ -403,13 +393,7 @@ WithLongTextAndIcon.argTypes = {
   svgPath: { table: { disable: false } },
 };
 WithLongTextAndIcon.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
-  },
+  puppeteerTest: verifySnapshotsAndAxeRules,
 };
 
 // Når Button har ett ikon, så vises ikonet. tester også for riktig aria, role og viewbox for systemIcon som er brukt
@@ -424,7 +408,9 @@ WithIcon.argTypes = {
   svgPath: { table: { disable: false } },
 };
 WithIcon.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifySnapshotsAndAxeRules(page);
+
     const systemIconViewBox = '0 0 24 24';
     const svgAttributes = await page.$eval(`${wrapper} > button svg`, (el) => {
       return {
@@ -440,12 +426,6 @@ WithIcon.parameters = {
     expect(svgAttributes.ariaHidden).toBe('true');
     expect(svgAttributes.ariaLabel).toBeNull();
     expect(svgAttributes.viewBox).toBe(systemIconViewBox);
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
   },
 };
 
@@ -461,15 +441,11 @@ Disabled.argTypes = {
   disabled: { table: { disable: false } },
 };
 Disabled.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifySnapshotsAndAxeRules(page);
+
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
     expect(isDisabled).toBeTruthy();
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
   },
 };
 
@@ -487,15 +463,11 @@ DisabledWithIcon.argTypes = {
   disabled: { table: { disable: false } },
 };
 DisabledWithIcon.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifySnapshotsAndAxeRules(page);
 
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
     expect(isDisabled).toBeTruthy();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
   },
 };
 
@@ -511,16 +483,16 @@ WithAriaDescribedby.argTypes = {
   ariaDescribedby: { table: { disable: false } },
 };
 WithAriaDescribedby.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
+
     const ariaAttributes = await page.$eval(`${wrapper} > button`, (el) => {
       return {
         ariaDescribedby: el.getAttribute('aria-describedby'),
       };
     });
     expect(ariaAttributes.ariaDescribedby).toBe('id1');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 
@@ -536,14 +508,14 @@ WithAccesskey.argTypes = {
   accessKey: { table: { disable: false } },
 };
 WithAccesskey.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
+
     const accesskey = await page.$eval(`${wrapper} > button`, (el) =>
       el.getAttribute('accesskey')
     );
     expect(accesskey).toBe('s');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 
@@ -575,11 +547,11 @@ WithOnBlur.argTypes = {
   onBlur: { table: { disable: false } },
 };
 WithOnBlur.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const buttonElement = await page.$(`${wrapper} > button`);
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchImageSnapShot(page);
+    await verifyAxeRules(page);
 
+    const buttonElement = await page.$(`${wrapper} > button`);
     await buttonElement?.focus();
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
@@ -621,11 +593,11 @@ WithOnClick.argTypes = {
   onClick: { table: { disable: false } },
 };
 WithOnClick.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const buttonElement = await page.$(`${wrapper} > button`);
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchImageSnapShot(page);
+    await verifyAxeRules(page);
 
+    const buttonElement = await page.$(`${wrapper} > button`);
     await buttonElement?.click();
     const imageClicked = await page.screenshot(screenShotOptions);
     expect(imageClicked).toMatchImageSnapshot();
@@ -665,14 +637,15 @@ WithOnFocus.argTypes = {
   onFocus: { table: { disable: false } },
 };
 WithOnFocus.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const buttonElement = await page.$(`${wrapper} > button`);
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchImageSnapShot(page);
+    await verifyAxeRules(page);
 
+    const buttonElement = await page.$(`${wrapper} > button`);
     await buttonElement?.focus();
     const imageFocused = await page.screenshot(screenShotOptions);
     expect(imageFocused).toMatchImageSnapshot();
+
     const element = await page.$(`${wrapper} > button`);
     const textContent = await element?.getProperty('textContent');
     const text = await textContent?.jsonValue();

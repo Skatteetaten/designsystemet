@@ -74,6 +74,10 @@ module.exports = {
         })
       );
     }
+    config.resolve.fallback.fs = false;
+    config.resolve.fallback.os = false;
+    config.resolve.fallback.path = false;
+
     return webpackConfigNoChunkTilde(config);
   },
   managerWebpack: (config) => {

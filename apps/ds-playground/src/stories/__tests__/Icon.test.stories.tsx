@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { AxePuppeteer } from '@axe-core/puppeteer';
 import {
   Icon,
   IconComponentCommonProps,
@@ -7,11 +8,38 @@ import {
   AndreForholdSVGpath,
 } from '@skatteetaten/ds-icons';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ElementHandle } from 'puppeteer';
+import { toHaveNoViolations } from 'jest-axe';
+import { Page } from 'puppeteer';
 
 import '../classnames.stories.css';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { ThemeSVGPaths } from '../utils/icon.themes';
+import {
+  screenShotOptions,
+  wrapper,
+} from './testUtils/puppeteer.testing.utils';
+
+const verifyMatchSnapShot = async (page: Page): Promise<void> => {
+  const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+  expect(innerHtml).toMatchSnapshot();
+};
+
+const verifyMatchImageSnapShot = async (page: Page): Promise<void> => {
+  const image = await page.screenshot(screenShotOptions);
+  expect(image).toMatchImageSnapshot();
+};
+
+const verifyAxeRules = async (page: Page): Promise<void> => {
+  const axeResults = await new AxePuppeteer(page).include(wrapper).analyze();
+  expect.extend(toHaveNoViolations);
+  expect(axeResults).toHaveNoViolations();
+};
+
+const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
+  await verifyMatchSnapShot(page);
+  await verifyMatchImageSnapShot(page);
+  await verifyAxeRules(page);
+};
 
 export default {
   component: Icon,
@@ -51,8 +79,6 @@ const Template: ComponentStory<typeof Icon> = (args) => (
   </div>
 );
 
-const wrapper = '[data-test-block]';
-
 // Når Icon har en ref, så får svg elementet ref forwarded
 export const WithRef = Template.bind({});
 WithRef.storyName = 'With Ref (FA1)';
@@ -69,12 +95,12 @@ WithRef.argTypes = {
   ref: { table: { disable: false } },
 };
 WithRef.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
+
     const idAttribute = await page.$eval('svg', (el) => el.getAttribute('id'));
     expect(idAttribute).toBe('dummyIdForwardedFromRef');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 
@@ -90,12 +116,12 @@ WithId.argTypes = {
   id: { table: { disable: false } },
 };
 WithId.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
+
     const elementid = await page.$eval('svg', (el) => el.getAttribute('id'));
     expect(elementid).toBe('htmlid');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 
@@ -113,20 +139,13 @@ WithCustomCss.argTypes = {
   },
 };
 WithCustomCss.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifySnapshotsAndAxeRules(page);
+
     const classNameAttribute = await page.$eval('svg', (el) =>
       el.getAttribute('class')
     );
     expect(classNameAttribute).toContain('dummyClassname');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot({
-      fullPage: true,
-      encoding: 'base64',
-    });
-    expect(image).toMatchImageSnapshot();
   },
 };
 
@@ -142,14 +161,14 @@ WithLang.argTypes = {
   lang: { table: { disable: false } },
 };
 WithLang.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
+
     const langAttribute = await page.$eval('svg', (el) =>
       el.getAttribute('lang')
     );
     expect(langAttribute).toBe('nb');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 
@@ -165,15 +184,14 @@ WithDataTestid.argTypes = {
   'data-testid': { table: { disable: false } },
 };
 WithDataTestid.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
+
     const dataTestid = await page.$eval('svg', (el) =>
       el.getAttribute('data-testid')
     );
-
     expect(dataTestid).toBe('123ID');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 
@@ -192,8 +210,8 @@ Defaults.argTypes = {
   },
 };
 Defaults.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifySnapshotsAndAxeRules(page);
 
     const ariaAttributes = await page.$eval(
       'svg',
@@ -208,20 +226,11 @@ Defaults.parameters = {
       },
       { ariaLabel, ariaLabelledby, ariaHidden }
     );
-
     expect(ariaAttributes.viewBox).toBe('0 0 24 24');
     expect(ariaAttributes.role).toBe('img');
     expect(ariaAttributes.ariaHidden).toBe('true');
     expect(ariaAttributes.ariaLabel).toBeNull();
     expect(ariaAttributes.ariaLabelledBy).toBeNull();
-
-    const image = await page.screenshot({
-      fullPage: true,
-      encoding: 'base64',
-    });
-
-    expect(innerHtml).toMatchSnapshot();
-    expect(image).toMatchImageSnapshot();
   },
 };
 
@@ -243,8 +252,8 @@ WithVariant.argTypes = {
   variant: { table: { disable: false } },
 };
 WithVariant.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifySnapshotsAndAxeRules(page);
 
     const elementAttributes = await page.$eval('svg', (el) => {
       return {
@@ -252,17 +261,8 @@ WithVariant.parameters = {
         className: el.getAttribute('class'),
       };
     });
-
     expect(elementAttributes.viewBox).toBe('0 0 48 48');
     expect(elementAttributes.className).toContain('Icon_themeIcon_medium');
-
-    const image = await page.screenshot({
-      fullPage: true,
-      encoding: 'base64',
-    });
-
-    expect(innerHtml).toMatchSnapshot();
-    expect(image).toMatchImageSnapshot();
   },
 };
 
@@ -281,17 +281,7 @@ WithCustomSVG.argTypes = {
   },
 };
 WithCustomSVG.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-
-    const image = await page.screenshot({
-      fullPage: true,
-      encoding: 'base64',
-    });
-
-    expect(innerHtml).toMatchSnapshot();
-    expect(image).toMatchImageSnapshot();
-  },
+  puppeteerTest: verifySnapshotsAndAxeRules,
 };
 
 // Når Icon har en title, får den riktig <title> tag og aria attributer
@@ -306,10 +296,11 @@ WithTitle.argTypes = {
   title: { table: { disable: false } },
 };
 WithTitle.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const element = await page.$(wrapper);
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
 
+    const element = await page.$(wrapper);
     const textContent = await element?.getProperty('textContent');
     const text = await textContent?.jsonValue();
     expect(text).toBe('Min custom title beskrivelse');
@@ -326,11 +317,9 @@ WithTitle.parameters = {
       },
       { ariaLabel, ariaLabelledby, ariaHidden }
     );
-
     expect(ariaAttributes.ariaHidden).toBe('false');
     expect(ariaAttributes.ariaLabel).toBeNull();
     expect(ariaAttributes.ariaLabelledBy).toBe(ariaAttributes.titleId);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 
@@ -346,10 +335,11 @@ WithAriaLabel.argTypes = {
   ariaLabel: { table: { disable: false } },
 };
 WithAriaLabel.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const element = await page.$(wrapper);
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
 
+    const element = await page.$(wrapper);
     const ariaAttributes = await page.$eval(
       'svg',
       (el, { ariaLabel, ariaLabelledby, ariaHidden }) => {
@@ -369,6 +359,5 @@ WithAriaLabel.parameters = {
     expect(ariaAttributes.ariaHidden).toBe('false');
     expect(ariaAttributes.ariaLabel).toBe('min custom aria-label beskrivelse');
     expect(ariaAttributes.ariaLabelledBy).toBeNull();
-    expect(innerHtml).toMatchSnapshot();
   },
 };

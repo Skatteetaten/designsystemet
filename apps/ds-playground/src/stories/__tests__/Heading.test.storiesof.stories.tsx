@@ -1,3 +1,4 @@
+import { AxePuppeteer } from '@axe-core/puppeteer';
 import {
   Heading,
   headingAsArr,
@@ -5,14 +6,36 @@ import {
   HeadingProps,
 } from '@skatteetaten/ds-typography';
 import { storiesOf } from '@storybook/react';
-import { ElementHandle, ScreenshotOptions } from 'puppeteer';
+import { toHaveNoViolations } from 'jest-axe';
+import { Page } from 'puppeteer';
+
+import {
+  screenShotOptions,
+  wrapper,
+} from './testUtils/puppeteer.testing.utils';
 
 import '../classnames.stories.css';
 
-const wrapper = '[data-test-block]';
-const screenShotOptions: ScreenshotOptions = {
-  fullPage: true,
-  encoding: 'base64',
+const verifyMatchSnapShot = async (page: Page): Promise<void> => {
+  const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+  expect(innerHtml).toMatchSnapshot();
+};
+
+const verifyMatchImageSnapShot = async (page: Page): Promise<void> => {
+  const image = await page.screenshot(screenShotOptions);
+  expect(image).toMatchImageSnapshot();
+};
+
+const verifyAxeRules = async (page: Page): Promise<void> => {
+  const axeResults = await new AxePuppeteer(page).include(wrapper).analyze();
+  expect.extend(toHaveNoViolations);
+  expect(axeResults).toHaveNoViolations();
+};
+
+const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
+  await verifyMatchSnapShot(page);
+  await verifyMatchImageSnapShot(page);
+  await verifyAxeRules(page);
 };
 
 // Når Heading har en level, så har elementet level satt og ser riktig ut
@@ -25,14 +48,14 @@ headingLevelArr.forEach(function (level) {
 
   storiesOf('Tests/Heading', module)
     .addParameters({
-      async puppeteerTest(page: ElementHandle): Promise<void> {
+      async puppeteerTest(page: Page): Promise<void> {
+        await verifyMatchImageSnapShot(page);
+        await verifyAxeRules(page);
+
         const classNames = await page.$eval(`${wrapper} > h2`, (el) =>
           el.getAttribute('class')
         );
         expect(classNames).toContain(`level${level}`);
-
-        const image = await page.screenshot(screenShotOptions);
-        expect(image).toMatchImageSnapshot();
       },
     })
     .add(
@@ -82,15 +105,11 @@ headingAsArr.forEach(function (as) {
 
   storiesOf('Tests/Heading', module)
     .addParameters({
-      async puppeteerTest(page: ElementHandle): Promise<void> {
+      async puppeteerTest(page: Page): Promise<void> {
+        await verifySnapshotsAndAxeRules(page);
+
         const headingElement = await page.$(`${wrapper} > ${as}`);
         expect(headingElement).toBeTruthy();
-
-        const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-        expect(innerHtml).toMatchSnapshot();
-
-        const image = await page.screenshot(screenShotOptions);
-        expect(image).toMatchImageSnapshot();
       },
     })
     .add(

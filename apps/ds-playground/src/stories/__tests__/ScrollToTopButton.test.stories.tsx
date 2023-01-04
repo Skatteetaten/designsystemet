@@ -1,3 +1,4 @@
+import { AxePuppeteer } from '@axe-core/puppeteer';
 import {
   getVisibilityThresholdDefault,
   ScrollToTopButton,
@@ -5,20 +6,43 @@ import {
 } from '@skatteetaten/ds-buttons';
 import { ExternalLayout } from '@skatteetaten/ds-core-utils';
 import { ComponentStory, Meta } from '@storybook/react';
+import { toHaveNoViolations } from 'jest-axe';
 // @skatteeteaten/ds-core-designtokens er angitt som symlink i package.json
 // derfor vil typecheck feile hvis pakken ikke er bygget, derfor bryter vi nx module boundaries her
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import palette from 'libs/ds-core-designtokens/lib/designtokens/palette.json';
-import { ElementHandle, ScreenshotOptions } from 'puppeteer';
+import { Page } from 'puppeteer';
 
 import { category } from '../../../.storybook/helpers';
+import {
+  screenShotOptions,
+  wrapper,
+} from './testUtils/puppeteer.testing.utils';
 
-const wrapper = '[data-test-block]';
 const defaultButtonText = 'Til toppen';
-const screenShotOptions: ScreenshotOptions = {
-  fullPage: true,
-  encoding: 'base64',
+
+const verifyMatchSnapShot = async (page: Page): Promise<void> => {
+  const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+  expect(innerHtml).toMatchSnapshot();
 };
+
+const verifyMatchImageSnapShot = async (page: Page): Promise<void> => {
+  const image = await page.screenshot(screenShotOptions);
+  expect(image).toMatchImageSnapshot();
+};
+
+const verifyAxeRules = async (page: Page): Promise<void> => {
+  const axeResults = await new AxePuppeteer(page).include(wrapper).analyze();
+  expect.extend(toHaveNoViolations);
+  expect(axeResults).toHaveNoViolations();
+};
+
+const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
+  await verifyMatchSnapShot(page);
+  await verifyMatchImageSnapShot(page);
+  await verifyAxeRules(page);
+};
+
 export default {
   component: ScrollToTopButton,
   title: 'Tests / ScrollToTopButton',
@@ -88,12 +112,12 @@ WithRef.argTypes = {
   ref: { table: { disable: false } },
 };
 WithRef.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
+
     const refId = await page.$eval(`${wrapper} > div > button`, (el) => el.id);
     expect(refId).toBe('dummyIdForwardedFromRef');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 
@@ -109,14 +133,14 @@ WithId.argTypes = {
   id: { table: { disable: false } },
 };
 WithId.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
+
     const elementid = await page.$eval(`${wrapper} > div > button`, (el) =>
       el.getAttribute('id')
     );
     expect(elementid).toBe('htmlid');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 
@@ -134,18 +158,14 @@ WithCustomCss.argTypes = {
   },
 };
 WithCustomCss.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifySnapshotsAndAxeRules(page);
+
     const classNameAttribute = await page.$eval(
       `${wrapper}> div:nth-child(2)`,
       (el) => el.getAttribute('class')
     );
     expect(classNameAttribute).toContain('dummyClassname');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
   },
 };
 
@@ -169,18 +189,14 @@ WithCustomClassNames.argTypes = {
   },
 };
 WithCustomClassNames.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifySnapshotsAndAxeRules(page);
+
     const classNameAttribute = await page.$eval(
       `${wrapper}> div > button`,
       (el) => el.getAttribute('class')
     );
     expect(classNameAttribute).toContain('dummyClassname');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
   },
 };
 
@@ -196,14 +212,14 @@ WithLang.argTypes = {
   lang: { table: { disable: false } },
 };
 WithLang.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
+
     const langAttribute = await page.$eval(`${wrapper} > div > button`, (el) =>
       el.getAttribute('lang')
     );
     expect(langAttribute).toBe('nb');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 
@@ -219,14 +235,14 @@ WithDataTestid.argTypes = {
   'data-testid': { table: { disable: false } },
 };
 WithDataTestid.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
+
     const dataTestid = await page.$eval(`${wrapper} > div > button`, (el) =>
       el.getAttribute('data-testid')
     );
     expect(dataTestid).toBe('123');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 
@@ -241,12 +257,13 @@ Defaults.argTypes = {
   visibilityThreshold: { table: { disable: false } },
 };
 Defaults.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyAxeRules(page);
+
     const buttonElement = await page.$(`${wrapper}> div > button`);
     expect(buttonElement).toMatchSnapshot();
 
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
+    await verifyMatchSnapShot(page);
 
     const textContent = await buttonElement?.getProperty('textContent');
     const text = await textContent?.jsonValue();
@@ -282,14 +299,14 @@ WithChildren.argTypes = {
   children: { table: { disable: false } },
 };
 WithChildren.parameters = {
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchImageSnapShot(page);
+    await verifyAxeRules(page);
+
     const buttonElement = await page.$(`${wrapper}> div > button`);
     const textContent = await buttonElement?.getProperty('textContent');
     const text = await textContent?.jsonValue();
     expect(text).toBe('dummy string');
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
   },
 };
 
@@ -303,9 +320,9 @@ WithMobileScreen.parameters = {
   viewport: {
     defaultViewport: '--breakpoint-xs',
   },
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchImageSnapShot(page);
+    await verifyAxeRules(page);
   },
 };
 
@@ -319,9 +336,9 @@ WithWideScreen.parameters = {
   viewport: {
     defaultViewport: '--breakpoint-xl',
   },
-  async puppeteerTest(page: ElementHandle): Promise<void> {
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchImageSnapShot(page);
+    await verifyAxeRules(page);
   },
 };
 
@@ -341,7 +358,9 @@ WithVisibilityThreshold.parameters = {
   viewport: {
     defaultViewport: '--breakpoint-xl',
   },
-  async puppeteerTest(page: ElementHandle): Promise<void> {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyAxeRules(page);
+
     const className = await page.$eval(
       `${wrapper} > div > button`,
       (el) => el.className
