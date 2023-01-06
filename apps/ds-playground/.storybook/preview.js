@@ -10,10 +10,17 @@ import { category } from './helpers';
 import '@skatteetaten/ds-core-designtokens/index.css';
 import './playground.css';
 
-const LanguageUpdater = (Story) => {
-  const [{ locale }] = useGlobals();
+const LanguageUpdater = (Story, context) => {
+  const [{ locale }, updateGlobals] = useGlobals();
+  useEffect(() => {
+    const locale = context.parameters.locale;
+    if (locale) {
+      updateGlobals({ locale: context.parameters.locale });
+    }
+  }, [context.parameters.locale, updateGlobals]);
   useEffect(() => {
     dsI18n.changeLanguage(locale);
+    document.documentElement.setAttribute('lang', locale);
   }, [locale]);
   return <Story />;
 };
@@ -88,6 +95,11 @@ export const argTypes = {
   },
 };
 
+const langs = Object.entries(Languages).map(([key, value]) => ({
+  title: key,
+  value,
+}));
+
 export const globalTypes = {
   locale: {
     name: 'Locale',
@@ -95,10 +107,7 @@ export const globalTypes = {
     defaultValue: Languages.Bokmal,
     toolbar: {
       icon: 'globe',
-      items: Object.entries(Languages).map(([key, value]) => ({
-        title: key,
-        value,
-      })),
+      items: [...langs, { title: 'key', value: 'cimode' }],
     },
   },
 };

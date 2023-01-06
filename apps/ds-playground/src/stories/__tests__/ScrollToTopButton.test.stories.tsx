@@ -401,3 +401,25 @@ WithVisibilityThreshold.parameters = {
 //TODO FRONT-891 when clicked (B4 - 1 av 2)
 
 //TODO FRONT-891 when clicked shadowRootNode (B4 - 2 av 2)
+
+// Innbakte tekster bruker riktig key
+export const WithTranslation = Template.bind({});
+WithTranslation.storyName = 'With translation (A4)';
+
+WithTranslation.args = {
+  ...defaultArgs,
+};
+WithTranslation.argTypes = {
+  ...WithTranslation.argTypes,
+};
+WithTranslation.parameters = {
+  locale: 'cimode',
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifySnapshotsAndAxeRules(page);
+    const label = await page.$eval(
+      `${wrapper} > div > button`,
+      (el) => el.textContent
+    );
+    expect(label).toBe('scrolltotopbutton.Title');
+  },
+};

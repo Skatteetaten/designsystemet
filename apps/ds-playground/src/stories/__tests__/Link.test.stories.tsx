@@ -362,6 +362,7 @@ WithExternalIcon.argTypes = {
   isExternal: { table: { disable: false } },
 };
 WithExternalIcon.parameters = {
+  locale: 'cimode',
   async puppeteerTest(page: Page): Promise<void> {
     await verifySnapshotsAndAxeRules(page);
 
@@ -374,8 +375,7 @@ WithExternalIcon.parameters = {
         viewBox: el.getAttribute('viewBox'),
       };
     });
-    // TODO FRONT-1004 håndtere i18n i storybook-tester (ønsker ikke hardkodet tekst)
-    expect(svgAttributes.ariaLabel).toBe('Til et annet nettsted');
+    expect(svgAttributes.ariaLabel).toBe('shared.ExternalIcon');
     expect(svgAttributes.viewBox).toBe(systemIconViewBox);
   },
 };

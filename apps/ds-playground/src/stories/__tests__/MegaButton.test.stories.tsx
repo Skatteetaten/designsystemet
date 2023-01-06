@@ -298,7 +298,7 @@ WithLongTextBreaking.parameters = {
 
 // Når MegaButton har isExternal, så vises riktig ikon. tester også for riktig aria, role og viewbox for systemIcon som er brukt
 export const WithExternalIcon = Template.bind({});
-WithExternalIcon.storyName = 'With External Icon (A4 - 1 av 2, B5)';
+WithExternalIcon.storyName = 'With External Icon (A4 - 1 av 2, B5, B7)';
 WithExternalIcon.args = {
   ...defaultArgs,
   isExternal: true,
@@ -308,6 +308,7 @@ WithExternalIcon.argTypes = {
   isExternal: { table: { disable: false } },
 };
 WithExternalIcon.parameters = {
+  locale: 'cimode',
   async puppeteerTest(page: Page): Promise<void> {
     await verifySnapshotsAndAxeRules(page);
 
@@ -323,7 +324,7 @@ WithExternalIcon.parameters = {
     });
     expect(svgAttributes.role).toBe('img');
     expect(svgAttributes.ariaHidden).toBe('false');
-    expect(svgAttributes.ariaLabel).toBe('Til et annet nettsted');
+    expect(svgAttributes.ariaLabel).toBe('shared.ExternalIcon');
     expect(svgAttributes.ariaLabelledBy).toBeNull();
     expect(svgAttributes.viewBox).toBe(systemIconViewBox);
   },
