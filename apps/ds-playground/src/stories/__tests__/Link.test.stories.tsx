@@ -14,8 +14,6 @@ import {
   wrapper,
 } from './testUtils/puppeteer.testing.utils';
 
-// TODO FRONT-913 legge til snapshot når det fungerer for linux eller av noen andre
-
 const elementId = 'htmlId';
 const systemIconViewBox = '0 0 24 24';
 const defaultLinkText = 'Er du pendler?';
@@ -83,7 +81,7 @@ const Template: ComponentStory<typeof Link> = (args) => (
 );
 
 const defaultArgs: LinkProps = {
-  href: 'https://www.skatteetaten.no',
+  href: '#root',
   children: defaultLinkText,
 };
 
@@ -244,15 +242,29 @@ Defaults.parameters = {
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     await page.$eval(`${wrapper} > a`, (el: any) => el.blur());
+
     await linkElement?.hover();
     const imageHovered = await page.screenshot(screenShotOptions);
     expect(imageHovered).toMatchImageSnapshot();
 
-    // TODO FRONT-913 - denne gir timeout
-    /*await linkElement?.click();
-    await page.waitForSelector(`${wrapper} > a:focus`);
-    const imageClicked = await page.screenshot(screenShotOptions);
-    expect(imageClicked).toMatchImageSnapshot();*/
+    // active
+    const cdp = await page.target().createCDPSession();
+    const docNodeId = (await cdp.send('DOM.getDocument')).root.nodeId;
+    const nodeId = (
+      await cdp.send('DOM.querySelector', {
+        nodeId: docNodeId,
+        selector: `${wrapper} > a`,
+      })
+    ).nodeId;
+
+    await cdp.send('CSS.enable');
+    await cdp.send('CSS.forcePseudoState', {
+      nodeId: nodeId,
+      forcedPseudoClasses: ['active'],
+    });
+
+    const imageActive = await page.screenshot(screenShotOptions);
+    expect(imageActive).toMatchImageSnapshot();
   },
 };
 
@@ -288,6 +300,7 @@ WithLongTextBreaking.parameters = {
   puppeteerTest: verifySnapshotsAndAxeRules,
 };
 
+// Når Link har en veldig lang tekst, valgfritt ikon og eksternal ikon så skal tekst venstrejusteres
 export const WithLongTextIconAndExternalIcon = Template.bind({});
 WithLongTextIconAndExternalIcon.storyName =
   'With Long Text And Icons (A1 delvis)';
@@ -426,7 +439,13 @@ const OnClickTemplate: ComponentStory<typeof Link> = (args) => {
   );
   return (
     <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
-      <Link {...args} onClick={(): void => setLinkText(nyLinkText)}>
+      <Link
+        {...args}
+        onClick={(e): void => {
+          e.preventDefault();
+          setLinkText(nyLinkText);
+        }}
+      >
         {linkText}
       </Link>
     </div>
@@ -436,10 +455,11 @@ export const WithOnClick = OnClickTemplate.bind({});
 WithOnClick.storyName = 'With onClick (A3 delvis)';
 WithOnClick.args = {
   ...defaultArgs,
-  href: '#',
+  svgPath: CalendarSVGpath,
 };
 WithOnClick.argTypes = {
   ...WithOnClick.argTypes,
+  svgPath: { table: { disable: false } },
   onClick: { table: { disable: false } },
 };
 WithOnClick.parameters = {

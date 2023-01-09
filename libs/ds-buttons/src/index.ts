@@ -10,3 +10,5 @@ export * from './Link/Link';
 export * from './Link/Link.types';
 export * from './ScrollToTopButton/ScrollToTopButton';
 export * from './ScrollToTopButton/ScrollToTopButton.types';
+export * from './LinkGroup/LinkGroup';
+export * from './LinkGroup/LinkGroup.types';

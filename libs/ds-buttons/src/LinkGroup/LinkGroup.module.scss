@@ -1,0 +1,51 @@
+// ikonet er plassert over listens bullets dvs flyttet -20px og så utvidet med ytterligere avstand tilsvarende i skissen mellom pil og link
+$spacing-arrow-link: calc(-20px - var(--spacing-s));
+
+.linkGroup {
+  padding-left: calc(-1 * $spacing-arrow-link);
+  margin: 0;
+
+  &_hasSpacing {
+    margin-bottom: var(--spacing-m);
+  }
+
+  .linkGroupItem {
+    position: relative;
+    display: block;
+    width: fit-content;
+    margin: 0 0 var(--spacing-s);
+
+    .icon {
+      position: absolute;
+      padding-right: var(--spacing-s);
+      background-color: inherit;
+      fill: var(--palette-azure-70);
+      transform: translate($spacing-arrow-link, 3px);
+      transition: 0.2s ease;
+    }
+
+    &:hover {
+      .icon {
+        &_forward {
+          transform: translate(
+            calc($spacing-arrow-link + var(--spacing-xs)),
+            3px
+          );
+        }
+
+        &_down {
+          transform: translate(
+            $spacing-arrow-link,
+            calc(3px + var(--spacing-xs))
+          );
+        }
+      }
+    }
+
+    &:active {
+      .icon {
+        fill: var(--palette-azure-100);
+      }
+    }
+  }
+}

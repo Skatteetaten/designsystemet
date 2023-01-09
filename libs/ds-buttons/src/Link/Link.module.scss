@@ -1,16 +1,15 @@
-// TODO FRONT-998 - fokus i Firefox vises ikke slik som i skissene
 %focus {
-  outline: var(--semantic-interactive-main) solid 2px;
-  outline-offset: 2px;
+  outline: none;
+  text-decoration-thickness: 3px;
 }
 
 .link {
-  // FRONT-998 - sjekket ut om kan bruke rem istedenfor px
-  padding: 6px 0;
+  padding: var(--spacing-s) 0;
   color: var(--palette-azure-70);
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-medium);
   line-height: var(--semantic-line-height-article);
+  text-decoration: underline var(--semantic-interactive-main);
   word-break: break-word;
 
   .icon {
@@ -24,7 +23,7 @@
 
     background-color: inherit;
     fill: var(--palette-azure-70);
-    transform: translate(0, 5px);
+    transform: translate(0, var(--spacing-xs));
     vertical-align: top;
   }
 
@@ -41,7 +40,6 @@
 
     background-color: var(--semantic-interactive-background);
     color: var(--semantic-interactive-foreground);
-    transition-timing-function: ease;
 
     & .icon {
       fill: var(--palette-azure-100);
