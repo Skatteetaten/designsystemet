@@ -28,6 +28,9 @@ const testSnapshot = async (page: ElementHandle): Promise<void> => {
 export default {
   component: InlineButton,
   title: 'Tests / InlineButton',
+  argTypes: {
+    type: { table: { disable: true } },
+  },
 } as ComponentMeta<typeof InlineButton>;
 
 const Template: ComponentStory<typeof InlineButton> = (args) => (
@@ -136,7 +139,7 @@ WithDataTestid.parameters = {
 // Når InlineButton instansieres, får den default iconPosition left
 // Knapp må også ha tekst/children
 export const Defaults = Template.bind({});
-Defaults.storyName = 'Defaults (A1 - 1 av 3)';
+Defaults.storyName = 'Defaults (A1 - 1 av 3, B1 - 1 av 2)';
 Defaults.args = {
   children: defaultButtonText,
 };
@@ -148,6 +151,11 @@ Defaults.parameters = {
     const textContent = await element?.getProperty('textContent');
     const text = await textContent?.jsonValue();
     expect(text).toBe(defaultButtonText);
+
+    const attributeType = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('type')
+    );
+    expect(attributeType).toBe('button');
 
     const image = await page.screenshot(screenShotOptions);
     expect(innerHtml).toMatchSnapshot();
@@ -324,6 +332,32 @@ DisabledWithIcon.parameters = {
 
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
     expect(isDisabled).toBeTruthy();
+
+    const image = await page.screenshot(screenShotOptions);
+    expect(image).toMatchImageSnapshot();
+  },
+};
+
+// Når InlineButton har prop type, så har button-elementet type satt
+export const WithType = Template.bind({});
+WithType.storyName = 'With Type (B1 - 2 av 2)';
+WithType.args = {
+  ...defaultArgs,
+  type: 'submit',
+};
+WithType.argTypes = {
+  ...WithType.argTypes,
+  type: { table: { disable: false } },
+};
+WithType.parameters = {
+  async puppeteerTest(page: ElementHandle): Promise<void> {
+    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
+    expect(innerHtml).toMatchSnapshot();
+
+    const type = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('type')
+    );
+    expect(type).toBe('submit');
 
     const image = await page.screenshot(screenShotOptions);
     expect(image).toMatchImageSnapshot();

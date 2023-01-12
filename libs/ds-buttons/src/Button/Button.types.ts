@@ -1,10 +1,15 @@
-import { FocusEventHandler, MouseEventHandler, ReactElement } from 'react';
+import {
+  ComponentPropsWithoutRef,
+  FocusEventHandler,
+  MouseEventHandler,
+  ReactElement,
+} from 'react';
 
 import { BaseProps, ButtonVariant } from '@skatteetaten/ds-core-utils';
 
 type RequiredButtonHTMLAttributes = Pick<
-  React.HTMLProps<HTMLButtonElement>,
-  'accessKey' | 'disabled' | 'onBlur' | 'onClick' | 'onFocus'
+  ComponentPropsWithoutRef<'button'>,
+  'accessKey' | 'disabled' | 'type' | 'onBlur' | 'onClick' | 'onFocus'
 >;
 
 type ButtonHTMLAttributes = Partial<RequiredButtonHTMLAttributes>;

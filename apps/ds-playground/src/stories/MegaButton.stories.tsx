@@ -34,6 +34,12 @@ export default {
       control: 'text',
       table: { category: category.htmlAttribute },
     },
+    type: {
+      table: {
+        category: category.htmlAttribute,
+        defaultValue: { summary: 'button' },
+      },
+    },
     // Aria
     ariaDescribedby: { table: { category: category.aria } },
     // Events
