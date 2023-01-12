@@ -2,9 +2,9 @@
 import {
   Button,
   ButtonProps,
+  buttonVariantArr,
   getButtonVariantDefault,
 } from '@skatteetaten/ds-buttons';
-import { buttonVariantArr } from '@skatteetaten/ds-core-utils';
 import { action } from '@storybook/addon-actions';
 import { Story, Meta } from '@storybook/react';
 

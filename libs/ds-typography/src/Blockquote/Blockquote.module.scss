@@ -1,7 +1,4 @@
-%focus {
-  outline: var(--semantic-interactive-main) solid 2px;
-  outline-offset: 2px;
-}
+@import 'libs/ds-core-utils/src/styles.scss';
 
 .blockquote {
   padding-left: var(--spacing-m);
@@ -20,24 +17,6 @@
   }
 
   a {
-    color: var(--palette-azure-70);
-    font-weight: var(--font-weight-medium);
-
-    &:hover {
-      background-color: var(--semantic-interactive-background);
-    }
-
-    &:focus {
-      @extend %focus;
-    }
-
-    &:active {
-      @extend %focus;
-
-      background-color: var(--semantic-interactive-background);
-      color: var(--semantic-interactive-foreground);
-      transform: translateY(2px);
-      transition-timing-function: ease;
-    }
+    @include link;
   }
 }

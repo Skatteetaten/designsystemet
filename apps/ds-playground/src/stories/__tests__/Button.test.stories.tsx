@@ -1,8 +1,7 @@
 import { useState } from 'react';
 
 import { AxePuppeteer } from '@axe-core/puppeteer';
-import { Button } from '@skatteetaten/ds-buttons';
-import { buttonVariantArr } from '@skatteetaten/ds-core-utils';
+import { Button, buttonVariantArr } from '@skatteetaten/ds-buttons';
 import { SendSVGpath } from '@skatteetaten/ds-icons';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { toHaveNoViolations } from 'jest-axe';

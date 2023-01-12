@@ -1,4 +1,7 @@
-import { BaseProps, Size, IconVariant } from '@skatteetaten/ds-core-utils';
+import { BaseProps, Size } from '@skatteetaten/ds-core-utils';
+
+export const iconVariantArr = ['systemIcon', 'themeIcon'] as const;
+export type IconVariant = typeof iconVariantArr[number];
 
 export interface IconComponentCommonProps extends BaseProps {
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */

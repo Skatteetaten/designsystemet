@@ -1,9 +1,5 @@
 @import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
-
-%focus {
-  outline: var(--semantic-interactive-main) solid 2px;
-  outline-offset: 2px;
-}
+@import 'libs/ds-core-utils/src/styles.scss';
 
 .heading {
   margin: 0;
@@ -67,23 +63,8 @@
   }
 
   a {
-    color: var(--palette-azure-70);
+    @include link;
 
-    &:hover {
-      background-color: var(--semantic-interactive-background);
-    }
-
-    &:focus {
-      @extend %focus;
-    }
-
-    &:active {
-      @extend %focus;
-
-      background-color: var(--semantic-interactive-background);
-      color: var(--semantic-interactive-foreground);
-      transform: translateY(2px);
-      transition-timing-function: ease;
-    }
+    font-weight: inherit;
   }
 }

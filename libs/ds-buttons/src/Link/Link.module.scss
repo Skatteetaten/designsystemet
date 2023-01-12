@@ -1,16 +1,10 @@
-%focus {
-  outline: none;
-  text-decoration-thickness: 3px;
-}
+@import 'libs/ds-core-utils/src/styles.scss';
 
 .link {
-  padding: var(--spacing-s) 0;
-  color: var(--palette-azure-70);
+  @include link;
+
   font-size: var(--font-size-m);
-  font-weight: var(--font-weight-medium);
   line-height: var(--semantic-line-height-article);
-  text-decoration: underline var(--semantic-interactive-main);
-  word-break: break-word;
 
   .icon {
     &_isCustom {
@@ -27,22 +21,7 @@
     vertical-align: top;
   }
 
-  &:hover {
-    background-color: var(--semantic-interactive-background);
-  }
-
-  &:focus {
-    @extend %focus;
-  }
-
-  &:active {
-    @extend %focus;
-
-    background-color: var(--semantic-interactive-background);
-    color: var(--semantic-interactive-foreground);
-
-    & .icon {
-      fill: var(--palette-azure-100);
-    }
+  &:active .icon {
+    fill: var(--palette-azure-100);
   }
 }

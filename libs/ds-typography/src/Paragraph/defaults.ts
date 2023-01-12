@@ -1,3 +1,3 @@
-import { ParagraphVariant } from '@skatteetaten/ds-core-utils';
+import { ParagraphVariant } from './Paragraph.types';
 
 export const getParagraphVariantDefault = (): ParagraphVariant => 'standard';

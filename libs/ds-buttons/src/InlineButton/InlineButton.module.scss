@@ -56,7 +56,6 @@
     background-color: var(--semantic-interactive-background);
     color: var(--semantic-interactive-foreground);
     transform: translateY(2px);
-    transition-timing-function: ease;
 
     & .icon svg {
       fill: var(--palette-azure-100);

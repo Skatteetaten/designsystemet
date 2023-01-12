@@ -1,9 +1,9 @@
 import { AxePuppeteer } from '@axe-core/puppeteer';
-import { paragraphVariantArr } from '@skatteetaten/ds-core-utils';
 import {
   getParagraphVariantDefault,
   Paragraph,
   ParagraphProps,
+  paragraphVariantArr,
 } from '@skatteetaten/ds-typography';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { toHaveNoViolations } from 'jest-axe';

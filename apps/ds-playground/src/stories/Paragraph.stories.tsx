@@ -1,7 +1,7 @@
-import { paragraphVariantArr } from '@skatteetaten/ds-core-utils';
 import {
   getParagraphVariantDefault,
   Paragraph,
+  paragraphVariantArr,
 } from '@skatteetaten/ds-typography';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 

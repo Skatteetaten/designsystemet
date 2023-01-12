@@ -21,7 +21,7 @@ $spacing-arrow-link: calc(-20px - var(--spacing-s));
       background-color: inherit;
       fill: var(--palette-azure-70);
       transform: translate($spacing-arrow-link, 3px);
-      transition: 0.2s ease;
+      transition: 0.2s;
     }
 
     &:hover {
