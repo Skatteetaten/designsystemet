@@ -1,4 +1,4 @@
-import { sizeArr, iconVariantArr } from '@skatteetaten/ds-core-utils';
+import { sizeArr } from '@skatteetaten/ds-core-utils';
 import {
   Icon,
   IconProps,
@@ -6,6 +6,7 @@ import {
   getIconSizeDefault,
   SystemSVGPathsAndIcons,
   ThemeSVGPathsAndIcons,
+  iconVariantArr,
 } from '@skatteetaten/ds-icons';
 import { Story, Meta } from '@storybook/react';
 
@@ -32,7 +33,6 @@ export const ThemeIcon: Story<IconProps> = Template.bind({});
 const commonArgTypes = {
   // Props
   title: {
-    control: 'text',
     table: {
       category: category.props,
     },

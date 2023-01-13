@@ -6,7 +6,8 @@
   },
   "files": [
     "../../node_modules/@nrwl/react/typings/cssmodule.d.ts",
-    "../../node_modules/@nrwl/react/typings/image.d.ts"
+    "../../node_modules/@nrwl/react/typings/image.d.ts",
+    "../../types/i18next.d.ts"
   ],
   "exclude": [
     "jest.config.ts",
@@ -23,11 +24,5 @@
     "**/*.stories.jsx",
     "**/*.stories.tsx"
   ],
-  "include": [
-    "**/*.js",
-    "**/*.jsx",
-    "**/*.ts",
-    "**/*.tsx",
-    "src/stories/designtokens.stories.mdx"
-  ]
+  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"]
 }

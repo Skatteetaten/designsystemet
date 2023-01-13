@@ -5,7 +5,15 @@ import {
   ReactElement,
 } from 'react';
 
-import { BaseProps, ButtonVariant } from '@skatteetaten/ds-core-utils';
+import { BaseProps } from '@skatteetaten/ds-core-utils';
+
+export const buttonVariantArr = [
+  'primary',
+  'secondary',
+  'tertiary',
+  'danger',
+] as const;
+export type ButtonVariant = typeof buttonVariantArr[number];
 
 type RequiredButtonHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'button'>,

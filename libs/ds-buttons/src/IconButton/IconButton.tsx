@@ -1,15 +1,9 @@
 import { forwardRef } from 'react';
 
-import {
-  getCommonClassNameDefault,
-  getCommonDisabledDefault,
-} from '@skatteetaten/ds-core-utils';
+import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
-import {
-  getIconButtonIsOutlinedDefault,
-  getIconButtonSizeDefault,
-} from './defaults';
+import { getIconButtonSizeDefault } from './defaults';
 import { IconButtonProps } from './IconButton.types';
 
 import styles from './IconButton.module.scss';
@@ -19,17 +13,18 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
     {
       id,
       className = getCommonClassNameDefault(),
+      lang,
       'data-testid': dataTestId,
+      accessKey,
       title,
+      ariaDescribedby,
       size = getIconButtonSizeDefault(),
       svgPath,
-      isOutlined = getIconButtonIsOutlinedDefault(),
-      accessKey,
-      disabled = getCommonDisabledDefault(),
+      isOutlined,
+      disabled,
       type = 'button',
-      ariaDescribedby,
-      onBlur,
       onClick,
+      onBlur,
       onFocus,
     },
     ref
@@ -41,9 +36,10 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
         ref={ref}
         id={id}
         className={`${styles.button} ${sizeClassName} ${outlineClassName} ${className}`}
+        lang={lang}
         data-testid={dataTestId}
-        accessKey={accessKey}
         disabled={disabled}
+        accessKey={accessKey}
         type={type}
         aria-describedby={ariaDescribedby}
         onBlur={onBlur}
@@ -58,4 +54,4 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
 
 IconButton.displayName = 'IconButton';
 
-export { getIconButtonIsOutlinedDefault, getIconButtonSizeDefault };
+export { getIconButtonSizeDefault };

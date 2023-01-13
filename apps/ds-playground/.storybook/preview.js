@@ -1,26 +1,31 @@
-import React from 'react';
-
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import breakpoints from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
+import {
+  dsI18n,
+  getCommonClassNameDefault,
+  Languages,
+} from '@skatteetaten/ds-core-utils';
+import { useEffect, useGlobals } from '@storybook/client-api';
 
 import { category } from './helpers';
 import '@skatteetaten/ds-core-designtokens/index.css';
 import './playground.css';
 
-export const decorators = [(Story) => <Story />];
-
-const getBreakPoint = (point) => {
-  const pointPx = getComputedStyle(document.documentElement).getPropertyValue(
-    point
-  );
-  return `${parseInt(pointPx) + 1}px`;
+const LanguageUpdater = (Story) => {
+  const [{ locale }] = useGlobals();
+  useEffect(() => {
+    dsI18n.changeLanguage(locale);
+  }, [locale]);
+  return <Story />;
 };
+
+export const decorators = [(Story) => <Story />, LanguageUpdater];
 
 const makeViewPort = (dsbreakpoint) => {
   return {
-    [dsbreakpoint.replace(/[^a-zA-Z]/, '')]: {
+    [dsbreakpoint]: {
       name: dsbreakpoint,
       styles: {
-        width: getBreakPoint(dsbreakpoint),
+        width: breakpoints[dsbreakpoint],
         height: '100%',
       },
     },
@@ -66,14 +71,34 @@ export const argTypes = {
       defaultValue: { summary: getCommonClassNameDefault() },
     },
   },
+  id: {
+    control: 'text',
+    description: 'unik id attribute',
+    table: { type: { summary: 'string' }, category: category.baseProps },
+  },
+  lang: {
+    control: 'text',
+    description: 'html lang attribute',
+    table: { type: { summary: 'string' }, category: category.baseProps },
+  },
   'data-testid': {
     control: 'text',
     description: 'data attribute som brukes for tester',
     table: { type: { summary: 'string' }, category: category.baseProps },
   },
-  id: {
-    control: 'text',
-    description: 'unik id attribute',
-    table: { type: { summary: 'string' }, category: category.baseProps },
+};
+
+export const globalTypes = {
+  locale: {
+    name: 'Locale',
+    description: 'Internationalization locale',
+    defaultValue: Languages.Bokmal,
+    toolbar: {
+      icon: 'globe',
+      items: Object.entries(Languages).map(([key, value]) => ({
+        title: key,
+        value,
+      })),
+    },
   },
 };

@@ -1,5 +1,4 @@
 import { MegaButton } from '@skatteetaten/ds-buttons';
-import { getCommonDisabledDefault } from '@skatteetaten/ds-core-utils';
 import { action } from '@storybook/addon-actions';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
@@ -27,11 +26,9 @@ export default {
       control: 'boolean',
       table: {
         category: category.htmlAttribute,
-        defaultValue: { summary: getCommonDisabledDefault() },
       },
     },
     href: {
-      control: 'text',
       table: { category: category.htmlAttribute },
     },
     type: {

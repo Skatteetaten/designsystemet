@@ -2,10 +2,7 @@ import {
   InlineButton,
   getInlineButtonPositionDefault,
 } from '@skatteetaten/ds-buttons';
-import {
-  getCommonDisabledDefault,
-  positionArr,
-} from '@skatteetaten/ds-core-utils';
+import { positionArr } from '@skatteetaten/ds-core-utils';
 import { action } from '@storybook/addon-actions';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
@@ -35,14 +32,12 @@ export default {
     },
     // HTML
     accessKey: {
-      control: 'text',
       table: { category: category.htmlAttribute },
     },
     disabled: {
       control: 'boolean',
       table: {
         category: category.htmlAttribute,
-        defaultValue: { summary: getCommonDisabledDefault() },
       },
     },
     type: {

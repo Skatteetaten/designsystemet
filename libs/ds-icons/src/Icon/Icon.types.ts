@@ -1,6 +1,9 @@
-import { BaseProps, Size, IconVariant } from '@skatteetaten/ds-core-utils';
+import { BaseProps, Size } from '@skatteetaten/ds-core-utils';
 
-interface IconComponentCommonProps extends BaseProps {
+export const iconVariantArr = ['systemIcon', 'themeIcon'] as const;
+export type IconVariant = typeof iconVariantArr[number];
+
+export interface IconComponentCommonProps extends BaseProps {
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
   svgPath: React.ReactElement;
 }
@@ -9,11 +12,11 @@ export type IconDiscriminatedTitleProps =
   | {
       /** Oppretter et title-element nested i svg. Dette medfører tooltip. */
       title?: string;
-      /** Hvis svg-en er meningsbærende og ikke bare pynt/dekor skal elementet ha aria-label. Merk at aria-label vises kun når "title"-prop ikke allerede er angitt. */
+      /** Hvis svg-en er meningsbærende og ikke bare pynt/dekor skal elementet ha ariaLabel. Merk at aria-label vises kun når "title"-prop ikke allerede er oppgitt. */
       ariaLabel?: never;
     }
   | {
-      /** Oppretter en title-tag nested i svg. Dette medfører tooltip. */
+      /** Oppretter et title-element nested i svg. Dette medfører tooltip. */
       title?: never;
       /** Hvis svg-en er meningsbærende og ikke bare pynt/dekor skal elementet ha ariaLabel. Merk at aria-label vises kun når "title"-prop ikke allerede er oppgitt. */
       ariaLabel?: string;

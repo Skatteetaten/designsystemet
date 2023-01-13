@@ -1,9 +1,7 @@
 import React, { forwardRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import {
-  getCommonClassNameDefault,
-  getCommonDisabledDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { ExternalIcon } from '@skatteetaten/ds-icons';
 
 import { MegaButtonProps } from './MegaButton.types';
@@ -18,11 +16,12 @@ export const MegaButton = forwardRef<
     {
       id,
       className = getCommonClassNameDefault(),
+      lang,
       'data-testid': dataTestId,
       href,
       isExternal,
+      disabled,
       accessKey,
-      disabled = getCommonDisabledDefault(),
       type = 'button',
       ariaDescribedby,
       onBlur,
@@ -32,10 +31,12 @@ export const MegaButton = forwardRef<
     },
     ref
   ): JSX.Element => {
+    const { t } = useTranslation('ds_buttons', { i18n: dsI18n });
     const cssName = `${styles.button} ${className}`;
     const buttonType = href !== undefined ? undefined : type;
 
     const Tag = href !== undefined ? 'a' : 'button';
+
     return (
       <Tag
         ref={
@@ -45,6 +46,7 @@ export const MegaButton = forwardRef<
         }
         id={id}
         className={cssName}
+        lang={lang}
         data-testid={dataTestId}
         href={href}
         accessKey={accessKey}
@@ -61,8 +63,7 @@ export const MegaButton = forwardRef<
           <span className={styles.icon}>
             <ExternalIcon
               className={styles.svg}
-              //TODO rette opp i hardkodet verdi når vi støtter flere språk.
-              ariaLabel={'Til et annet nettsted'}
+              ariaLabel={t('shared.ExternalIcon')}
             />
           </span>
         )}

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { ComponentType, forwardRef, Ref, useRef } from 'react';
 
 import { ExampleComponentProps } from './ExampleComponent';
 
@@ -7,11 +7,11 @@ export interface WhateverHOCProps {
 }
 
 export interface IncomingRefProp {
-  incomingRef: React.Ref<HTMLButtonElement>;
+  incomingRef: Ref<HTMLButtonElement>;
 }
 
 const whateverHOC = <T extends WhateverHOCProps>(
-  Component: React.ComponentType<T>
+  Component: ComponentType<T>
 ) => {
   return function Test(props: Omit<T, keyof WhateverHOCProps>): JSX.Element {
     const propFromHOC = 'random-string';
@@ -29,7 +29,7 @@ const ExampleComponentWithoutRef = whateverHOC(
     id,
     variant = 'primary',
     className,
-    'data-testid': dataTestId = `testid-${id}`,
+    'data-testid': dataTestid = `testid-${id}`,
     onClick,
     children,
   }: ExampleComponentProps &
@@ -38,7 +38,7 @@ const ExampleComponentWithoutRef = whateverHOC(
     return (
       <button
         ref={incomingRef}
-        data-testid={dataTestId}
+        data-testid={dataTestid}
         className={className}
         onClick={onClick}
       >
@@ -53,7 +53,7 @@ const ExampleComponentWithoutRef = whateverHOC(
 );
 
 // Dette er komponeneten som eksporteres, da den har fått forwardref på seg i lik linje som de andre
-export const ExampleComponentHOC = React.forwardRef<
+export const ExampleComponentHOC = forwardRef<
   HTMLButtonElement,
   ExampleComponentProps
 >(function MyExampleComponent(props, ref) {

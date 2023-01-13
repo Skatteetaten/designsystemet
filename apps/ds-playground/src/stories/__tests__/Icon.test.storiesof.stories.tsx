@@ -1,3 +1,4 @@
+import { AxePuppeteer } from '@axe-core/puppeteer';
 import {
   Icon,
   IconProps,
@@ -6,9 +7,11 @@ import {
   IconDiscriminatedVariantProps,
 } from '@skatteetaten/ds-icons';
 import { storiesOf } from '@storybook/react';
-import { ElementHandle } from 'puppeteer';
+import { toHaveNoViolations } from 'jest-axe';
+import { Page } from 'puppeteer';
 
 import '../classnames.stories.css';
+import { screenShotOptions } from './testUtils/puppeteer.testing.utils';
 
 const iconsWithSize = [
   {
@@ -58,17 +61,20 @@ iconsWithSize.forEach(function (icon) {
 
   storiesOf('Tests/Icon', module)
     .addParameters({
-      async puppeteerTest(page: ElementHandle): Promise<void> {
+      async puppeteerTest(page: Page): Promise<void> {
         const classNames = await page.$eval('svg', (el) =>
           el.getAttribute('class')
         );
         expect(classNames).toContain(icon.expectedClass);
 
-        const image = await page.screenshot({
-          fullPage: true,
-          encoding: 'base64',
-        });
+        const image = await page.screenshot(screenShotOptions);
         expect(image).toMatchImageSnapshot();
+
+        const axeResults = await new AxePuppeteer(page)
+          .include('svg')
+          .analyze();
+        expect.extend(toHaveNoViolations);
+        expect(axeResults).toHaveNoViolations();
       },
     })
     .add(
@@ -78,6 +84,18 @@ iconsWithSize.forEach(function (icon) {
       () => <Icon {...iconArgs} />,
       {
         component: Icon,
+        argTypes: {
+          // Baseprops
+          key: { table: { disable: true } },
+          ref: { table: { disable: true } },
+          className: { table: { disable: true } },
+          id: { table: { disable: true } },
+          lang: { table: { disable: true } },
+          'data-testid': { table: { disable: true } },
+          // Props
+          size: { table: { disable: false } },
+          variant: { table: { disable: false } },
+        },
       }
     );
 });

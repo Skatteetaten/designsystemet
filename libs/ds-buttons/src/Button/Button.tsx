@@ -1,10 +1,7 @@
 /* eslint-disable jsx-a11y/no-access-key */
 import { forwardRef } from 'react';
 
-import {
-  getCommonClassNameDefault,
-  getCommonDisabledDefault,
-} from '@skatteetaten/ds-core-utils';
+import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
 import { ButtonProps } from './Button.types';
@@ -17,11 +14,12 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     {
       id,
       className = getCommonClassNameDefault(),
+      lang,
       'data-testid': dataTestId,
       svgPath,
       variant = getButtonVariantDefault(),
       accessKey,
-      disabled = getCommonDisabledDefault(),
+      disabled,
       type = 'button',
       ariaDescribedby,
       onBlur,
@@ -40,6 +38,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         id={id}
         className={concatenatedClassName}
+        lang={lang}
         data-testid={dataTestId}
         accessKey={accessKey}
         disabled={disabled}

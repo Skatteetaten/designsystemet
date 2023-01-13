@@ -17,3 +17,7 @@
   background-color: darksalmon;
   color: white;
 }
+
+.scrollToTopContainer:focus {
+  background: var(--semantic-interactive-main);
+}

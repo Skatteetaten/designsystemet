@@ -1,0 +1,27 @@
+@import 'libs/ds-core-utils/src/styles.scss';
+
+.link {
+  @include link;
+
+  font-size: var(--font-size-m);
+  line-height: var(--semantic-line-height-article);
+
+  .icon {
+    &_isCustom {
+      margin-right: var(--spacing-s);
+    }
+
+    &_isExternal {
+      margin-left: var(--spacing-s);
+    }
+
+    background-color: inherit;
+    fill: var(--palette-azure-70);
+    transform: translate(0, var(--spacing-xs));
+    vertical-align: top;
+  }
+
+  &:active .icon {
+    fill: var(--palette-azure-100);
+  }
+}
