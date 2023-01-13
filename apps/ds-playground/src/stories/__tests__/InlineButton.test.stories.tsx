@@ -427,7 +427,7 @@ WithType.argTypes = {
 };
 WithType.parameters = {
   async puppeteerTest(page: Page): Promise<void> {
-    verifySnapshotsAndAxeRules(page);
+    await verifySnapshotsAndAxeRules(page);
 
     const type = await page.$eval(`${wrapper} > button`, (el) =>
       el.getAttribute('type')
