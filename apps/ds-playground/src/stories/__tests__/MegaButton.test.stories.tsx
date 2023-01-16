@@ -61,6 +61,7 @@ export default {
     },
     disabled: { table: { disable: true } },
     href: { table: { disable: true } },
+    type: { table: { disable: true } },
     // Aria
     ariaDescribedby: { table: { disable: true } },
     // Events
@@ -200,7 +201,7 @@ WithDataTestid.parameters = {
 
 // Når MegaButton instansieres, så får den riktige default-verdier og rendrer riktig i ulike tilstander
 export const Defaults = Template.bind({});
-Defaults.storyName = 'Defaults (A1 - 1 av 2, B2)';
+Defaults.storyName = 'Defaults (A1 - 1 av 2, B2 - 1 av 2)';
 Defaults.args = {
   ...defaultArgs,
 };
@@ -216,6 +217,11 @@ Defaults.parameters = {
     const textContent = await element?.getProperty('textContent');
     const text = await textContent?.jsonValue();
     expect(text).toBe(defaultMegaButtonText);
+
+    const attributeType = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('type')
+    );
+    expect(attributeType).toBe('button');
 
     const megaButtonElement = await page.$(`${wrapper} > button`);
 
@@ -363,6 +369,28 @@ Disabled.parameters = {
 
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
     expect(isDisabled).toBeTruthy();
+  },
+};
+
+// Når MegaButton har prop type, så har button-elementet type satt
+export const WithType = Template.bind({});
+WithType.storyName = 'With Type (B2 - 2 av 2)';
+WithType.args = {
+  ...defaultArgs,
+  type: 'submit',
+};
+WithType.argTypes = {
+  ...WithType.argTypes,
+  type: { table: { disable: false } },
+};
+WithType.parameters = {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifySnapshotsAndAxeRules(page);
+
+    const type = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('type')
+    );
+    expect(type).toBe('submit');
   },
 };
 

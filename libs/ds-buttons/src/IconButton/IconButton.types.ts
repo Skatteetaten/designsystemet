@@ -1,10 +1,15 @@
-import { FocusEventHandler, MouseEventHandler, ReactElement } from 'react';
+import {
+  ComponentPropsWithoutRef,
+  FocusEventHandler,
+  MouseEventHandler,
+  ReactElement,
+} from 'react';
 
 import { BaseProps, Size } from '@skatteetaten/ds-core-utils';
 
 type RequiredIconButtonHTMLAttributes = Pick<
-  React.ComponentPropsWithoutRef<'button'>,
-  'accessKey' | 'disabled' | 'onBlur' | 'onClick' | 'onFocus'
+  ComponentPropsWithoutRef<'button'>,
+  'accessKey' | 'disabled' | 'type' | 'onBlur' | 'onClick' | 'onFocus'
 >;
 
 type IconButtonHTMLAttributes = Partial<RequiredIconButtonHTMLAttributes>;

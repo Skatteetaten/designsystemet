@@ -22,6 +22,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
       svgPath,
       isOutlined,
       disabled,
+      type = 'button',
       onClick,
       onBlur,
       onFocus,
@@ -39,6 +40,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
         data-testid={dataTestId}
         disabled={disabled}
         accessKey={accessKey}
+        type={type}
         aria-describedby={ariaDescribedby}
         onBlur={onBlur}
         onClick={onClick}

@@ -22,6 +22,7 @@ export const MegaButton = forwardRef<
       isExternal,
       disabled,
       accessKey,
+      type = 'button',
       ariaDescribedby,
       onBlur,
       onClick,
@@ -32,6 +33,8 @@ export const MegaButton = forwardRef<
   ): JSX.Element => {
     const { t } = useTranslation('ds_buttons', { i18n: dsI18n });
     const cssName = `${styles.button} ${className}`;
+    const buttonType = href !== undefined ? undefined : type;
+
     const Tag = href !== undefined ? 'a' : 'button';
 
     return (
@@ -48,6 +51,7 @@ export const MegaButton = forwardRef<
         href={href}
         accessKey={accessKey}
         disabled={disabled}
+        type={buttonType}
         aria-describedby={ariaDescribedby}
         role={href ? 'button' : undefined}
         onBlur={onBlur}

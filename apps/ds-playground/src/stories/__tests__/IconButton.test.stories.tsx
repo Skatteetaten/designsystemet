@@ -66,6 +66,7 @@ export default {
     // HTML
     accessKey: { table: { disable: true } },
     disabled: { table: { disable: true } },
+    type: { table: { disable: true } },
     // Aria
     ariaDescribedby: { table: { disable: true } },
     // Events
@@ -208,7 +209,7 @@ WithDataTestid.parameters = {
 
 // Når IconButton instansieres, får den riktige default-verdier og rendrer riktig i ulike tilstander
 export const Defaults = Template.bind({});
-Defaults.storyName = 'Defaults (A1 - 1 av 9, B1, B2)';
+Defaults.storyName = 'Defaults (A1 - 1 av 9, B1 - 1 av 2, B2)';
 Defaults.args = {
   ...defaultArgs,
 };
@@ -220,6 +221,11 @@ Defaults.argTypes = {
 Defaults.parameters = {
   async puppeteerTest(page: Page): Promise<void> {
     await verifySnapshotsAndAxeRules(page);
+
+    const attributeType = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('type')
+    );
+    expect(attributeType).toBe('button');
 
     const titleElement = await page.$eval(
       `${wrapper} > button svg title`,
@@ -572,6 +578,28 @@ DisabledWithOutline.parameters = {
 
     const isDisabled = await page.$(`${wrapper} > button[disabled]`);
     expect(isDisabled).toBeTruthy();
+  },
+};
+
+// Når IconButton har prop type, så har button-elementet type satt
+export const WithType = Template.bind({});
+WithType.storyName = 'With Type (B1 - 2 av 2)';
+WithType.args = {
+  ...defaultArgs,
+  type: 'submit',
+};
+WithType.argTypes = {
+  ...WithType.argTypes,
+  type: { table: { disable: false } },
+};
+WithType.parameters = {
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifySnapshotsAndAxeRules(page);
+
+    const type = await page.$eval(`${wrapper} > button`, (el) =>
+      el.getAttribute('type')
+    );
+    expect(type).toBe('submit');
   },
 };
 
