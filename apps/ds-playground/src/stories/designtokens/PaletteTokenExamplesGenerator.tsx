@@ -1,62 +1,53 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-import { ColorPalette, ColorItem } from '@storybook/addon-docs';
+import { IconButton } from '@skatteetaten/ds-buttons';
+import { CopySVGpath } from '@skatteetaten/ds-icons';
 
 import './designtokens.css';
 const paletteJson = require('@skatteetaten/ds-core-designtokens/designtokens/palette.json');
-type ColorTokens = { [key: string]: { [key: string]: string } };
 
-const ColorPaletteOverTyped: React.FunctionComponent<{
-  children: JSX.Element | Array<JSX.Element>;
-}> = (props) => <ColorPalette {...(props as JSX.IntrinsicAttributes)} />;
-
-const generateTokens = (
-  colorsTokens: { [key: string]: string },
-  semantic: boolean
-): ColorTokens => {
-  let paletteTokens: ColorTokens = {};
-
-  Object.keys(colorsTokens)
-    .filter((key) =>
-      semantic ? key.includes('semantic') : !key.includes('semantic')
-    )
-    .forEach((key) => {
-      const subPaletteNames = key.split('-');
-      const subPaletteName = subPaletteNames[subPaletteNames.length - 2];
-      const color = {
-        [key]: colorsTokens[key],
-      };
-      paletteTokens = {
-        ...paletteTokens,
-        [subPaletteName]: { ...paletteTokens[subPaletteName], ...color },
-      };
-    });
-  return paletteTokens;
-};
-
-interface PaletteTokenExamplesGeneratorProps {
-  paletteType: 'color' | 'semantic';
-}
-
-export const PaletteTokenExamplesGenerator = ({
-  paletteType,
-}: PaletteTokenExamplesGeneratorProps): JSX.Element => {
-  const paletteTokens: ColorTokens = generateTokens(
-    paletteJson[':root,\n:host'],
-    paletteType === 'semantic'
-  );
+export const PaletteTokenExamplesGenerator = (): JSX.Element => {
+  const colorsTokens: { [key: string]: string } = paletteJson[':root,\n:host'];
 
   return (
-    <ColorPaletteOverTyped>
-      {Object.keys(paletteTokens).map((subPaletteKey) => {
+    <table className={'paletteTable'}>
+      <colgroup>
+        <col style={{ width: '50%' }} />
+        <col style={{ width: '15%' }} />
+        <col style={{ width: '25%' }} />
+        <col style={{ width: '10%' }} />
+      </colgroup>
+      <tr>
+        <th className={'paletteTableHeader'}>{'Designtoken'}</th>
+        <th></th>
+        <th className={'paletteTableHeader'}>{'Verdi'}</th>
+        <th className={'paletteTableHeader'}>{'Kopier'}</th>
+      </tr>
+      {Object.keys(colorsTokens).map((key) => {
         return (
-          <ColorItem
-            key={subPaletteKey}
-            title={subPaletteKey}
-            subtitle={paletteType}
-            colors={{ ...paletteTokens[subPaletteKey] }}
-          />
+          <tr key={key} className={'paletteTableRow'}>
+            <td>{key}</td>
+            <td>
+              <div
+                style={{
+                  background: colorsTokens[key],
+                  height: '2rem',
+                  width: '2rem',
+                }}
+              ></div>
+            </td>
+            <td>{colorsTokens[key]}</td>
+            <td>
+              <IconButton
+                svgPath={CopySVGpath}
+                title={'Kopier'}
+                onClick={(): Promise<void> =>
+                  navigator.clipboard.writeText(key)
+                }
+              />
+            </td>
+          </tr>
         );
       })}
-    </ColorPaletteOverTyped>
+    </table>
   );
 };

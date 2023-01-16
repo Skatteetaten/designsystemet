@@ -1,56 +1,47 @@
 <!-- palette.mdx -->
 
-import { Meta, Story, Canvas } from '@storybook/addon-docs';
-import { TokensList } from './TokensList';
+import { Meta, Story } from '@storybook/addon-docs';
 import { FontTokenExamplesGenerator } from './FontTokenExamplesGenerator';
-
-# Font
 
 <Meta title="Designtokens" />
 
-## Font-size
-
-<FontTokenExamplesGenerator
-  propertyType={'font-size'}
-  sampleText={'Deklamerer lirke illebefinnende utholdelig dødsfallet'}
-/>
-
-## Font-weight
-
-<FontTokenExamplesGenerator
-  propertyType={'font-weight'}
-  sampleText={'Deklamerer lirke illebefinnende utholdelig dødsfallet'}
-/>
-
-## Line-height
-
-<FontTokenExamplesGenerator
-  propertyType={'line-height'}
-  sampleText={
-    'Deklamerer lirke illebefinnende utholdelig dødsfallet pleie, personalet tørklær kjære høyviktig således gledet måttet, den overlat pakkene lerkefuglen. Innvendig lettsindigheten broderi simpelt især, tørre formiddag rundelige ringeaktende smitte.'
-  }
-/>
-
-<Canvas>
-  <Story
-    name="Font"
-    parameters={{
-      design: [
-        {
-          name: 'Font',
-          type: 'figma',
-          url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=16083%3A25235',
-        },
-      ],
-    }}
-  >
-    {() => {
-      return (
-        <>
-          <p>{'Klikk på Docs tab for en visuell visning av font-størrelser'}</p>
-          <TokensList tokenType={'font'} />
-        </>
-      );
-    }}
-  </Story>
-</Canvas>
+<Story
+  name="Font"
+  parameters={{
+    controls: {
+      disabled: true,
+    },
+    actions: {
+      disabled: true,
+    },
+    design: [
+      {
+        name: 'Font',
+        type: 'figma',
+        url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=16083%3A25235',
+      },
+    ],
+  }}
+>
+  <div className="fontSectionHeader">Font-size</div>
+  <FontTokenExamplesGenerator
+    propertyType={'font-size'}
+    sampleText={
+      'Skatteetaten ønsker å gjøre det enklere å gjøre rett og vanskeligere å gjøre feil'
+    }
+  />
+  <div className="fontSectionHeader">Font-weight</div>
+  <FontTokenExamplesGenerator
+    propertyType={'font-weight'}
+    sampleText={
+      'Skatteetaten ønsker å gjøre det enklere å gjøre rett og vanskeligere å gjøre feil'
+    }
+  />
+  <div className="fontSectionHeader">Line-height</div>
+  <FontTokenExamplesGenerator
+    propertyType={'line-height'}
+    sampleText={
+      'Skatteetaten ønsker å gjøre det enklere å gjøre rett og vanskeligere å gjøre feil, redusere skattekriminalitet, forvalte informasjon for å bidra til forenkling og digitalisering, jobbe sammen fra start og sist, bruke data, analyse og maskinlæring i stor skala i oppgaveløsningen. Alt for å sikre finansieringen av velferdsstaten.'
+    }
+  />
+</Story>

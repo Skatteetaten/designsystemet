@@ -2,19 +2,9 @@
 import './designtokens.css';
 const breakpointsJson = require('@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json');
 const containersJson = require('@skatteetaten/ds-core-designtokens/designtokens/containers.json');
-const fontJson = require('@skatteetaten/ds-core-designtokens/designtokens/font.json');
-const paletteJson = require('@skatteetaten/ds-core-designtokens/designtokens/palette.json');
-const sizesJson = require('@skatteetaten/ds-core-designtokens/designtokens/sizes.json');
-const spacingJson = require('@skatteetaten/ds-core-designtokens/designtokens/spacing.json');
 
 interface TokensListProps {
-  tokenType:
-    | 'breakpoints'
-    | 'containers'
-    | 'font'
-    | 'palette'
-    | 'sizes'
-    | 'spacing';
+  tokenType: 'breakpoints' | 'containers';
 }
 
 export const TokensList = ({ tokenType }: TokensListProps): JSX.Element => {
@@ -26,18 +16,6 @@ export const TokensList = ({ tokenType }: TokensListProps): JSX.Element => {
       break;
     case 'containers':
       tokens = containersJson[firstNode];
-      break;
-    case 'font':
-      tokens = fontJson[firstNode];
-      break;
-    case 'palette':
-      tokens = paletteJson[firstNode];
-      break;
-    case 'sizes':
-      tokens = sizesJson[firstNode];
-      break;
-    case 'spacing':
-      tokens = spacingJson[firstNode];
       break;
     default:
       tokens = {};
