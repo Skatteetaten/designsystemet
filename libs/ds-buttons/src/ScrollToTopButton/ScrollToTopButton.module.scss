@@ -10,7 +10,7 @@
   border: solid 2px transparent;
   background: transparent;
   border-radius: 0.25rem;
-  color: var(--palette-azure-70);
+  color: var(--semantic-interactive-main);
   cursor: pointer;
   opacity: 0;
   outline: none;
@@ -63,12 +63,17 @@
     }
   }
 
+  &:hover &IconContainer {
+    background: transparent;
+  }
+
   &:active &IconContainer {
     &Icon {
       fill: var(--palette-azure-100);
     }
 
     border: solid 2px var(--palette-azure-100);
+    background: transparent;
   }
 
   &Label {
