@@ -54,14 +54,14 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
         onFocus={onFocus}
       >
         {hasIconLeft && (
-          <span className={styles.icon}>
-            <Icon svgPath={svgPath} />
+          <span className={styles.iconWrapper}>
+            <Icon className={styles.icon} svgPath={svgPath} />
           </span>
         )}
         {children}
         {hasIconRight && (
-          <span className={styles.icon}>
-            <Icon svgPath={svgPath} />
+          <span className={styles.iconWrapper}>
+            <Icon className={styles.icon} svgPath={svgPath} />
           </span>
         )}
       </button>

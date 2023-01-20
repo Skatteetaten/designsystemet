@@ -46,7 +46,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
         onClick={onClick}
         onFocus={onFocus}
       >
-        <Icon svgPath={svgPath} title={title} />
+        <Icon className={styles.icon} svgPath={svgPath} title={title} />
       </button>
     );
   }

@@ -60,12 +60,10 @@ export const MegaButton = forwardRef<
       >
         {children}
         {isExternal && (
-          <span className={styles.icon}>
-            <ExternalIcon
-              className={styles.svg}
-              ariaLabel={t('shared.ExternalIcon')}
-            />
-          </span>
+          <ExternalIcon
+            className={styles.icon}
+            ariaLabel={t('shared.ExternalIcon')}
+          />
         )}
       </Tag>
     );

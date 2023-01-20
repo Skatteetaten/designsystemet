@@ -6,7 +6,7 @@
   text-decoration: none;
   transform: none;
 
-  & .icon svg {
+  & .iconWrapper .icon {
     fill: var(--palette-graphite-50);
   }
 }
@@ -52,10 +52,10 @@
     text-align: left;
   }
 
-  .icon {
+  .iconWrapper {
     display: flex;
 
-    & svg {
+    & .icon {
       margin-right: var(--spacing-xs);
       background-color: inherit;
     }
@@ -66,7 +66,7 @@
     background-color: var(--palette-azure-70);
     color: var(--palette-graphite-0);
 
-    & .icon svg {
+    & .iconWrapper .icon {
       fill: var(--palette-graphite-0);
     }
 
@@ -99,7 +99,7 @@
     background-color: var(--palette-graphite-0);
     color: var(--palette-azure-70);
 
-    & .icon svg {
+    & .iconWrapper .icon {
       fill: var(--palette-azure-70);
     }
 
@@ -133,7 +133,7 @@
     color: var(--palette-azure-70);
     text-decoration: underline;
 
-    & .icon svg {
+    & .iconWrapper .icon {
       fill: var(--palette-azure-70);
     }
 
@@ -167,7 +167,7 @@
     background-color: var(--semantic-danger-background);
     color: var(--palette-graphite-100);
 
-    & .icon svg {
+    & .iconWrapper .icon {
       fill: var(--palette-graphite-100);
     }
 
@@ -175,7 +175,7 @@
       background-color: var(--palette-burgundy-50);
       color: var(--palette-graphite-100);
 
-      & .icon svg {
+      & .iconWrapper .icon {
         fill: var(--palette-graphite-100);
       }
     }
@@ -188,7 +188,7 @@
       @extend %focus;
       @extend %active;
 
-      & .icon svg {
+      & .iconWrapper .icon {
         fill: var(--palette-graphite-100);
       }
 
@@ -201,7 +201,7 @@
     &:disabled:active {
       @extend %disabled;
 
-      & .icon svg {
+      & .iconWrapper .icon {
         fill: var(--palette-graphite-50);
       }
     }

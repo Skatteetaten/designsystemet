@@ -33,11 +33,11 @@
     text-decoration-line: none;
   }
 
-  .icon {
+  .iconWrapper {
     display: flex;
     padding-top: 2px;
 
-    & svg {
+    & .icon {
       fill: var(--palette-azure-70);
     }
   }
@@ -57,7 +57,7 @@
     color: var(--semantic-interactive-foreground);
     transform: translateY(2px);
 
-    & .icon svg {
+    & .icon {
       fill: var(--palette-azure-100);
     }
   }
@@ -70,7 +70,7 @@
     cursor: not-allowed;
     transform: none;
 
-    & .icon svg {
+    & .icon {
       fill: var(--palette-graphite-50);
     }
   }

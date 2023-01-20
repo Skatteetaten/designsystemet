@@ -28,7 +28,7 @@
   cursor: pointer;
   will-change: transform;
 
-  > svg {
+  & .icon {
     display: block;
     fill: var(--palette-azure-70);
   }
@@ -37,7 +37,7 @@
     padding: var(--spacing-xxs) var(--spacing-xxs);
     border-width: 1px;
 
-    > svg {
+    & .icon {
       width: var(--size-small);
       height: var(--size-small);
     }
@@ -47,7 +47,7 @@
     padding: var(--spacing-xs) var(--spacing-xs);
     border-width: 1px;
 
-    > svg {
+    & .icon {
       width: var(--size-small);
       height: var(--size-small);
     }
@@ -56,7 +56,7 @@
   &_medium {
     padding: var(--spacing-xs) var(--spacing-xs);
 
-    > svg {
+    & .icon {
       width: var(--size-medium);
       height: var(--size-medium);
     }
@@ -65,7 +65,7 @@
   &_large {
     padding: var(--spacing-s) var(--spacing-s);
 
-    > svg {
+    & .icon {
       width: var(--size-large);
       height: var(--size-large);
     }
@@ -90,7 +90,7 @@
     border-color: var(--semantic-interactive-background);
     background-color: var(--semantic-interactive-background);
 
-    > svg {
+    & .icon {
       fill: var(--semantic-interactive-foreground);
     }
   }
@@ -103,7 +103,7 @@
     cursor: not-allowed;
     transform: none;
 
-    > svg {
+    & .icon {
       fill: var(--palette-graphite-50);
     }
   }

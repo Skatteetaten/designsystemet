@@ -49,8 +49,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         onFocus={onFocus}
       >
         {svgPath && (
-          <span className={styles.icon}>
-            <Icon svgPath={svgPath} />
+          <span className={styles.iconWrapper}>
+            <Icon className={styles.icon} svgPath={svgPath} />
           </span>
         )}
         {children}

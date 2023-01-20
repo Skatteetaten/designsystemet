@@ -51,16 +51,12 @@
   word-break: break-word;
 
   .icon {
-    display: inline;
-
-    & .svg {
-      width: var(--size-medium);
-      height: var(--size-medium);
-      margin-left: var(--spacing-s);
-      background-color: inherit;
-      fill: var(--palette-graphite-0);
-      transform: translate(0, 2.5px);
-    }
+    width: var(--size-medium);
+    height: var(--size-medium);
+    margin-left: var(--spacing-s);
+    background-color: inherit;
+    fill: var(--palette-graphite-0);
+    transform: translate(0, 2.5px);
   }
 
   &:hover {
@@ -86,7 +82,7 @@
   &:disabled:active {
     @extend %disabled;
 
-    & .icon .svg {
+    & .icon {
       fill: var(--palette-graphite-50);
     }
   }
