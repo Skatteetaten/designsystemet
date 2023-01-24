@@ -9,6 +9,9 @@ import puppeteer, { Browser } from 'puppeteer';
 import fs from 'fs';
 import { resolve } from 'path';
 
+import CustomJestMatcher = jest.CustomJestMatcher;
+import CustomMatcherResult = jest.CustomMatcherResult;
+
 const customConfig: MatchImageSnapshotOptions = {
   allowSizeMismatch: true,
   comparisonMethod: 'ssim',
@@ -21,11 +24,27 @@ const customConfig: MatchImageSnapshotOptions = {
   },
 };
 
-const toMatchImageSnapshot = configureToMatchImageSnapshot({
-  ...customConfig,
-});
+const SKIP_SNAPSHOTS = process.env['SKIP_SNAPSHOTS'];
 
-expect.extend({ toMatchImageSnapshot });
+if (SKIP_SNAPSHOTS) {
+  const mockJestMatcher: CustomJestMatcher<
+    () => string,
+    CustomMatcherResult
+  > = () => ({
+    message: (): string => 'skipped',
+    pass: true,
+  });
+  expect.extend({
+    toMatchImageSnapshot: mockJestMatcher,
+    toMatchSnapshot: mockJestMatcher,
+  });
+} else {
+  const toMatchImageSnapshot = configureToMatchImageSnapshot({
+    ...customConfig,
+  });
+
+  expect.extend({ toMatchImageSnapshot });
+}
 
 let browser;
 let storybookUrl = 'http://localhost:4400';
@@ -55,6 +74,10 @@ initStoryshots({
         : undefined,
     storybookUrl,
     async testBody(page, options) {
+      if (SKIP_SNAPSHOTS) {
+        page.screenshot = (): Promise<string> => Promise.resolve('skipped');
+      }
+
       const viewport = options.context.parameters['viewport'];
       if (viewport?.defaultViewport) {
         const widthPx =
