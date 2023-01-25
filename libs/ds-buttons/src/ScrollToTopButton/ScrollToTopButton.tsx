@@ -53,6 +53,7 @@ export const ScrollToTopButton = forwardRef<
           id={id}
           className={buttonClassname}
           lang={lang}
+          type={'button'}
           data-testid={dataTestId}
           onClick={(): void => {
             window.scrollTo(0, 0);
