@@ -282,18 +282,16 @@ WithLongTextAndIcons.args = {
   ...defaultArgs,
   children: [
     <LinkGroup.Link key={'linkGroupLink_1'} href={'#root'} isExternal>
-      {
-        'Denne lenken har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert uansett om ikon eller ikke og får et hengende innrykk.'
-      }
+      {'Denne lenken har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert ' +
+        'uansett om ikon eller ikke og får et hengende innrykk.'}
     </LinkGroup.Link>,
     <LinkGroup.Link
       key={'linkGroupLink_2'}
       href={'#root'}
       svgPath={CalendarSVGpath}
     >
-      {
-        'Denne lenken har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert uansett om ikon eller ikke og får et hengende innrykk.'
-      }
+      {'Denne lenken har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert ' +
+        'uansett om ikon eller ikke og får et hengende innrykk.'}
     </LinkGroup.Link>,
   ],
 };

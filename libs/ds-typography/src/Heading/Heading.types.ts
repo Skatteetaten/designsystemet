@@ -10,7 +10,7 @@ export interface HeadingProps extends BaseProps {
   /** Heading tag h1-6 */
   as: HeadingAs;
   /** Tekst eller markup for heading */
-  children: React.ReactNode | string;
+  children: React.ReactNode;
   /** Margin under heading */
   hasSpacing?: boolean;
   /** Hierarkinivå som styrer font størrelse, line height og spacing */

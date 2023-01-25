@@ -1,0 +1,20 @@
+.list {
+  padding: 0;
+  margin: 0;
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--semantic-line-height-article);
+  list-style-position: inside;
+
+  &_withBullet {
+    list-style-type: square;
+  }
+
+  &_hasIndent {
+    margin-left: var(--spacing-m);
+  }
+
+  &_hasSpacing {
+    margin-bottom: var(--spacing-l);
+  }
+}

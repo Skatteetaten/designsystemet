@@ -1,0 +1,17 @@
+@import 'libs/ds-core-utils/src/styles.scss';
+
+.element {
+  margin-bottom: var(--spacing-s);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  strong {
+    font-weight: var(--font-weight-bold);
+  }
+
+  a {
+    @include link;
+  }
+}
