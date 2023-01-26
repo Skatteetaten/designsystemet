@@ -7,10 +7,14 @@ import {
 import puppeteer, { Browser } from 'puppeteer';
 
 import fs from 'fs';
+import dns from 'node:dns';
 import { resolve } from 'path';
 
 import CustomJestMatcher = jest.CustomJestMatcher;
 import CustomMatcherResult = jest.CustomMatcherResult;
+
+// Med node 18 så klarer ikke storyshots å koble til docker imaget uten denne
+dns.setDefaultResultOrder('ipv4first');
 
 const customConfig: MatchImageSnapshotOptions = {
   allowSizeMismatch: true,
