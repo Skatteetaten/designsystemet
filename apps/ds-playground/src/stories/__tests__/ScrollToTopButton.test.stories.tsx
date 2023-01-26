@@ -14,6 +14,7 @@ import palette from 'libs/ds-core-designtokens/lib/designtokens/palette.json';
 import { Page } from 'puppeteer';
 
 import { category } from '../../../.storybook/helpers';
+import { webComponent } from '../../../.storybook/webcomponent-decorator';
 import {
   screenShotOptions,
   wrapper,
@@ -85,8 +86,10 @@ export default {
 
 const Template: ComponentStory<typeof ScrollToTopButton> = (args) => (
   <div style={{ height: '100vh' }} className={'noTransition'} data-test-block>
-    <ExternalLayout />
-    <ScrollToTopButton {...args} />
+    <main className={'scrollToTopContainer'} tabIndex={-1}>
+      <ExternalLayout />
+      <ScrollToTopButton {...args} />
+    </main>
   </div>
 );
 
@@ -116,7 +119,10 @@ WithRef.parameters = {
     await verifyMatchSnapShot(page);
     await verifyAxeRules(page);
 
-    const refId = await page.$eval(`${wrapper} > div > button`, (el) => el.id);
+    const refId = await page.$eval(
+      `${wrapper} > main > div > button`,
+      (el) => el.id
+    );
     expect(refId).toBe('dummyIdForwardedFromRef');
   },
 };
@@ -137,8 +143,9 @@ WithId.parameters = {
     await verifyMatchSnapShot(page);
     await verifyAxeRules(page);
 
-    const elementid = await page.$eval(`${wrapper} > div > button`, (el) =>
-      el.getAttribute('id')
+    const elementid = await page.$eval(
+      `${wrapper} > main > div > button`,
+      (el) => el.getAttribute('id')
     );
     expect(elementid).toBe('htmlid');
   },
@@ -162,7 +169,7 @@ WithCustomCss.parameters = {
     await verifySnapshotsAndAxeRules(page);
 
     const classNameAttribute = await page.$eval(
-      `${wrapper}> div:nth-child(2)`,
+      `${wrapper} > main > div:nth-child(2)`,
       (el) => el.getAttribute('class')
     );
     expect(classNameAttribute).toContain('dummyClassname');
@@ -193,7 +200,7 @@ WithCustomClassNames.parameters = {
     await verifySnapshotsAndAxeRules(page);
 
     const classNameAttribute = await page.$eval(
-      `${wrapper}> div > button`,
+      `${wrapper}> main > div > button`,
       (el) => el.getAttribute('class')
     );
     expect(classNameAttribute).toContain('dummyClassname');
@@ -216,8 +223,9 @@ WithLang.parameters = {
     await verifyMatchSnapShot(page);
     await verifyAxeRules(page);
 
-    const langAttribute = await page.$eval(`${wrapper} > div > button`, (el) =>
-      el.getAttribute('lang')
+    const langAttribute = await page.$eval(
+      `${wrapper} > main > div > button`,
+      (el) => el.getAttribute('lang')
     );
     expect(langAttribute).toBe('nb');
   },
@@ -239,8 +247,9 @@ WithDataTestid.parameters = {
     await verifyMatchSnapShot(page);
     await verifyAxeRules(page);
 
-    const dataTestid = await page.$eval(`${wrapper} > div > button`, (el) =>
-      el.getAttribute('data-testid')
+    const dataTestid = await page.$eval(
+      `${wrapper} > main > div > button`,
+      (el) => el.getAttribute('data-testid')
     );
     expect(dataTestid).toBe('123');
   },
@@ -248,7 +257,7 @@ WithDataTestid.parameters = {
 
 // Når ScrollToTopButton instansieres, så får den riktige default-verdier og rendrer riktig
 export const Defaults = Template.bind({});
-Defaults.storyName = 'Defaults (A1, A3 - 1 av 2)';
+Defaults.storyName = 'Defaults (A1, A3 - 1 av 2, B4 - 1 av 2)';
 Defaults.args = {
   ...defaultArgs,
 };
@@ -260,7 +269,7 @@ Defaults.parameters = {
   async puppeteerTest(page: Page): Promise<void> {
     await verifyAxeRules(page);
 
-    const buttonElement = await page.$(`${wrapper}> div > button`);
+    const buttonElement = await page.$(`${wrapper} > main > div > button`);
     expect(buttonElement).toMatchSnapshot();
 
     await verifyMatchSnapShot(page);
@@ -274,14 +283,15 @@ Defaults.parameters = {
     expect(imageFocused).toMatchImageSnapshot();
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    await page.$eval(`${wrapper}> div > button`, (el: any) => el.blur());
+    await page.$eval(`${wrapper} > main > div > button`, (el: any) =>
+      el.blur()
+    );
 
     await buttonElement?.hover();
     const imageHovered = await page.screenshot(screenShotOptions);
     expect(imageHovered).toMatchImageSnapshot();
 
     await buttonElement?.click();
-    await page.waitForSelector(`${wrapper} > div > button:focus`);
     const imageClicked = await page.screenshot(screenShotOptions);
     expect(imageClicked).toMatchImageSnapshot();
   },
@@ -303,7 +313,7 @@ WithChildren.parameters = {
     await verifyMatchImageSnapShot(page);
     await verifyAxeRules(page);
 
-    const buttonElement = await page.$(`${wrapper}> div > button`);
+    const buttonElement = await page.$(`${wrapper} > main > div > button`);
     const textContent = await buttonElement?.getProperty('textContent');
     const text = await textContent?.jsonValue();
     expect(text).toBe('dummy string');
@@ -362,7 +372,7 @@ WithVisibilityThreshold.parameters = {
     await verifyAxeRules(page);
 
     const className = await page.$eval(
-      `${wrapper} > div > button`,
+      `${wrapper} > main > div > button`,
       (el) => el.className
     );
     expect(className.match('visible')).toBeFalsy();
@@ -375,7 +385,7 @@ WithVisibilityThreshold.parameters = {
     });
 
     const classNameScrolledDown = await page.$eval(
-      `${wrapper} > div > button`,
+      `${wrapper} > main > div > button`,
       (el) => el.className
     );
     expect(classNameScrolledDown.match('visible')).toBeTruthy();
@@ -388,7 +398,7 @@ WithVisibilityThreshold.parameters = {
     });
 
     const classNameScrolledUp = await page.$eval(
-      `${wrapper} > div > button`,
+      `${wrapper}> main > div > button`,
       (el) => el.className
     );
     expect(classNameScrolledUp.match('visible')).toBeFalsy();
@@ -398,9 +408,40 @@ WithVisibilityThreshold.parameters = {
   },
 };
 
-//TODO FRONT-891 when clicked (B4 - 1 av 2)
+const TemplateWithShadowDom: ComponentStory<typeof ScrollToTopButton> = (
+  args
+) => {
+  const element = document.querySelector('scrolltotop-customelement');
+  const shadowRoot = element?.shadowRoot;
+  return (
+    <div style={{ height: '100vh' }} className={'noTransition'} data-test-block>
+      <main className={'scrollToTopContainer'} tabIndex={-1}>
+        <ExternalLayout />
+        <ScrollToTopButton {...args} shadowRootNode={shadowRoot ?? undefined} />
+      </main>
+    </div>
+  );
+};
+// Når ScrollToTopButton lastes i en shadowDom så tegnes den riktig og klarer å sette focus til main elementet som befinner i et custom element
+export const WithShadowDom = TemplateWithShadowDom.bind({});
+WithShadowDom.storyName = 'With shadowDom (b4 - 2 av 2)';
+WithShadowDom.args = {
+  ...defaultArgs,
+};
+WithShadowDom.decorators = [webComponent];
+WithShadowDom.parameters = {
+  customElementName: 'scrolltotop-customelement',
+  async puppeteerTest(page: Page): Promise<void> {
+    const customElement = await page.$(`scrolltotop-customelement`);
+    const buttonElement = await customElement?.$(
+      `pierce/${wrapper} > main > div > button`
+    );
 
-//TODO FRONT-891 when clicked shadowRootNode (B4 - 2 av 2)
+    expect(buttonElement).not.toBeNull();
+    await buttonElement?.click();
+    await page.waitForSelector(`pierce/main:focus`);
+  },
+};
 
 // Innbakte tekster bruker riktig key
 export const WithTranslation = Template.bind({});
@@ -417,7 +458,7 @@ WithTranslation.parameters = {
   async puppeteerTest(page: Page): Promise<void> {
     await verifySnapshotsAndAxeRules(page);
     const label = await page.$eval(
-      `${wrapper} > div > button`,
+      `${wrapper} > main > div > button`,
       (el) => el.textContent
     );
     expect(label).toBe('scrolltotopbutton.Title');
