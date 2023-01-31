@@ -1,13 +1,13 @@
 %disabled {
-  border-color: var(--palette-graphite-50);
-  background-color: var(--palette-graphite-10);
-  color: var(--palette-graphite-50);
+  border-color: var(--semantic-disabled-foreground);
+  background-color: var(--semantic-disabled-background);
+  color: var(--semantic-disabled-foreground);
   cursor: not-allowed;
   text-decoration: none;
   transform: none;
 
   & .iconWrapper .icon {
-    fill: var(--palette-graphite-50);
+    fill: var(--semantic-disabled-foreground);
   }
 }
 
@@ -202,7 +202,7 @@
       @extend %disabled;
 
       & .iconWrapper .icon {
-        fill: var(--palette-graphite-50);
+        fill: var(--semantic-disabled-foreground);
       }
     }
   }

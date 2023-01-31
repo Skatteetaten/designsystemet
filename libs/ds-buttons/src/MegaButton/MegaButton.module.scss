@@ -1,8 +1,8 @@
 %disabled {
-  border-color: var(--palette-graphite-50);
-  background-color: var(--palette-graphite-10);
+  border-color: var(--semantic-disabled-foreground);
+  background-color: var(--semantic-disabled-background);
   box-shadow: none;
-  color: var(--palette-graphite-50);
+  color: var(--semantic-disabled-foreground);
   cursor: not-allowed;
   text-decoration: none;
   transform: none;
@@ -83,7 +83,7 @@
     @extend %disabled;
 
     & .icon {
-      fill: var(--palette-graphite-50);
+      fill: var(--semantic-disabled-foreground);
     }
   }
 }

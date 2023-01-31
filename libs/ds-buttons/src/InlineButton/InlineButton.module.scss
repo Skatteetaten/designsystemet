@@ -66,12 +66,12 @@
   &:disabled:hover,
   &:disabled:active {
     background-color: transparent;
-    color: var(--palette-graphite-50);
+    color: var(--semantic-disabled-foreground);
     cursor: not-allowed;
     transform: none;
 
     & .icon {
-      fill: var(--palette-graphite-50);
+      fill: var(--semantic-disabled-foreground);
     }
   }
 }

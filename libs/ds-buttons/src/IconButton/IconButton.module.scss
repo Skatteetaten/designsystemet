@@ -104,7 +104,7 @@
     transform: none;
 
     & .icon {
-      fill: var(--palette-graphite-50);
+      fill: var(--semantic-disabled-foreground);
     }
   }
 
@@ -126,7 +126,7 @@
     &:disabled,
     &:disabled:hover,
     &:disabled:active {
-      border-color: var(--palette-graphite-50);
+      border-color: var(--semantic-disabled-foreground);
     }
   }
 }
