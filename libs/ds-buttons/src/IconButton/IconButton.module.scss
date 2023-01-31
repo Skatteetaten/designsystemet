@@ -13,12 +13,6 @@
   }
 }
 
-%active {
-  background-color: var(--semantic-interactive-background);
-  transform: translateY(2px);
-  transition: 0.15s;
-}
-
 .button {
   position: relative;
   box-sizing: content-box;
@@ -30,7 +24,7 @@
 
   & .icon {
     display: block;
-    fill: var(--palette-azure-70);
+    fill: var(--semantic-interactive-main);
   }
 
   &_extraSmall {
@@ -85,10 +79,11 @@
 
   &:active {
     @extend %focus;
-    @extend %active;
 
     border-color: var(--semantic-interactive-background);
     background-color: var(--semantic-interactive-background);
+    transform: translateY(2px);
+    transition: 0.15s;
 
     & .icon {
       fill: var(--semantic-interactive-foreground);
@@ -109,7 +104,7 @@
   }
 
   &_outlined {
-    border-color: var(--palette-azure-70);
+    border-color: var(--semantic-interactive-main);
 
     &:hover {
       border-color: var(--semantic-interactive-main);

@@ -11,7 +11,7 @@
   padding: 0;
   border: none;
   background-color: transparent;
-  color: var(--palette-azure-70);
+  color: var(--semantic-interactive-main);
   cursor: pointer;
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-medium);
@@ -38,7 +38,7 @@
     padding-top: 2px;
 
     & .icon {
-      fill: var(--palette-azure-70);
+      fill: var(--semantic-interactive-main);
     }
   }
 
@@ -58,7 +58,7 @@
     transform: translateY(2px);
 
     & .icon {
-      fill: var(--palette-azure-100);
+      fill: var(--semantic-interactive-foreground);
     }
   }
 

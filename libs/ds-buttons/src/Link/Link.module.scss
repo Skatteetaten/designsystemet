@@ -16,12 +16,12 @@
     }
 
     background-color: inherit;
-    fill: var(--palette-azure-70);
+    fill: var(--semantic-interactive-main);
     transform: translate(0, var(--spacing-xs));
     vertical-align: top;
   }
 
   &:active .icon {
-    fill: var(--palette-azure-100);
+    fill: var(--semantic-interactive-foreground);
   }
 }

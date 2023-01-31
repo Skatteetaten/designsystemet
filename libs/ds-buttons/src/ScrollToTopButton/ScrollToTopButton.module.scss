@@ -35,7 +35,7 @@
   }
 
   &:hover {
-    background: var(--palette-azure-10);
+    background: var(--semantic-interactive-background);
   }
 
   &:focus {
@@ -43,9 +43,9 @@
   }
 
   &:active {
-    border: solid 2px var(--palette-azure-100);
-    background: var(--palette-azure-10);
-    color: var(--palette-azure-100);
+    border: solid 2px var(--semantic-interactive-foreground);
+    background: var(--semantic-interactive-background);
+    color: var(--semantic-interactive-foreground);
     transform: translateY(2px);
   }
 
@@ -69,10 +69,10 @@
 
   &:active &IconContainer {
     &Icon {
-      fill: var(--palette-azure-100);
+      fill: var(--semantic-interactive-foreground);
     }
 
-    border: solid 2px var(--palette-azure-100);
+    border: solid 2px var(--semantic-interactive-foreground);
     background: transparent;
   }
 

@@ -19,7 +19,7 @@ $spacing-arrow-link: calc(-20px - var(--spacing-s));
       position: absolute;
       padding-right: var(--spacing-s);
       background-color: inherit;
-      fill: var(--palette-azure-70);
+      fill: var(--semantic-interactive-main);
       transform: translate($spacing-arrow-link, 3px);
       transition: 0.2s;
     }
@@ -44,7 +44,7 @@ $spacing-arrow-link: calc(-20px - var(--spacing-s));
 
     &:active {
       .icon {
-        fill: var(--palette-azure-100);
+        fill: var(--semantic-interactive-foreground);
       }
     }
   }
