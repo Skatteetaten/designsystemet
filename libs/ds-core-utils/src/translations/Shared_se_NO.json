@@ -1,5 +1,8 @@
 {
+  "shared.AccessibilityStatement": "TODO",
   "shared.ChooseValue": "TODO",
   "shared.Close": "TODO",
-  "shared.RequiredField": "Fertet deavddit"
+  "shared.ContactUs": "TODO",
+  "shared.RequiredField": "Fertet deavddit",
+  "shared.SecurityAndPrivacy": "TODO"
 }
