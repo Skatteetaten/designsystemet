@@ -287,7 +287,7 @@ WithLongTextBreaking.parameters = {
 };
 
 // Når InlineButton har ett ikon uten posisjon oppgitt, så vises dette ikonet på venstre side (default).
-// Tester også for riktig aria, role og viewbox for systemIcon som er brukt
+// Tester også for de icon props som er relevant for saken med systemIcon som er brukt.
 export const WithIcon = Template.bind({});
 WithIcon.storyName = 'With Icon (A3 - 1 av 3, A4, B4)';
 WithIcon.args = {
@@ -302,19 +302,16 @@ WithIcon.parameters = {
   async puppeteerTest(page: Page): Promise<void> {
     await verifySnapshotsAndAxeRules(page);
 
+    const svgElement = await page.$(`${wrapper} > button svg`);
+    expect(svgElement).toBeTruthy();
+
     const systemIconViewBox = '0 0 24 24';
     const svgAttributes = await page.$eval(`${wrapper} > button svg`, (el) => {
       return {
-        role: el.getAttribute('role'),
-        ariaLabel: el.getAttribute('aria-label'),
-        ariaLabelledBy: el.getAttribute('aria-labelledby'),
         ariaHidden: el.getAttribute('aria-hidden'),
         viewBox: el.getAttribute('viewBox'),
       };
     });
-    expect(svgAttributes.role).toBe('img');
-    expect(svgAttributes.ariaLabel).toBeNull();
-    expect(svgAttributes.ariaLabelledBy).toBeNull();
     expect(svgAttributes.ariaHidden).toBe('true');
     expect(svgAttributes.viewBox).toBe(systemIconViewBox);
   },

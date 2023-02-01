@@ -350,7 +350,7 @@ WithIcon.parameters = {
   },
 };
 
-// Når Link har isExternal, så vises riktig ikon. Tester også for de icon props som er relevant for saken med systemIcon som er brukt
+// Når Link har isExternal, så vises riktig ikon med tilhørende tekst. Tester også for de icon props som er relevant for saken med systemIcon som er brukt
 export const WithExternalIcon = Template.bind({});
 WithExternalIcon.storyName = 'With External Icon (A5)';
 WithExternalIcon.args = {

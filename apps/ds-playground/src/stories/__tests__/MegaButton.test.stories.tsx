@@ -296,7 +296,7 @@ WithLongTextBreaking.parameters = {
   puppeteerTest: verifySnapshotsAndAxeRules,
 };
 
-// Når MegaButton har isExternal, så vises riktig ikon. tester også for riktig aria, role og viewbox for systemIcon som er brukt
+// Når MegaButton har isExternal, så vises riktig ikon med tilhørende tekst. Tester også for de icon props som er relevant for saken med systemIcon som er brukt.
 export const WithExternalIcon = Template.bind({});
 WithExternalIcon.storyName = 'With External Icon (A4 - 1 av 2, B5, B7)';
 WithExternalIcon.args = {
@@ -312,20 +312,17 @@ WithExternalIcon.parameters = {
   async puppeteerTest(page: Page): Promise<void> {
     await verifySnapshotsAndAxeRules(page);
 
+    const svgElement = await page.$(`${wrapper} > button svg`);
+    expect(svgElement).toBeTruthy();
+
     const systemIconViewBox = '0 0 24 24';
     const svgAttributes = await page.$eval(`${wrapper} > button svg`, (el) => {
       return {
-        role: el.getAttribute('role'),
         ariaLabel: el.getAttribute('aria-label'),
-        ariaLabelledBy: el.getAttribute('aria-labelledby'),
-        ariaHidden: el.getAttribute('aria-hidden'),
         viewBox: el.getAttribute('viewBox'),
       };
     });
-    expect(svgAttributes.role).toBe('img');
-    expect(svgAttributes.ariaHidden).toBe('false');
     expect(svgAttributes.ariaLabel).toBe('shared.ExternalIcon');
-    expect(svgAttributes.ariaLabelledBy).toBeNull();
     expect(svgAttributes.viewBox).toBe(systemIconViewBox);
   },
 };

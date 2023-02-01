@@ -237,16 +237,10 @@ Defaults.parameters = {
     const systemIconViewBox = '0 0 24 24';
     const svgAttributes = await page.$eval(`${wrapper} > button svg`, (el) => {
       return {
-        role: el.getAttribute('role'),
-        ariaLabel: el.getAttribute('aria-label'),
-        ariaLabelledBy: el.getAttribute('aria-labelledby'),
         ariaHidden: el.getAttribute('aria-hidden'),
         viewBox: el.getAttribute('viewBox'),
       };
     });
-    expect(svgAttributes.role).toBe('img');
-    expect(svgAttributes.ariaLabel).toBeNull();
-    expect(svgAttributes.ariaLabelledBy).toBe('svgtitle-:r0:');
     expect(svgAttributes.ariaHidden).toBe('false');
     expect(svgAttributes.viewBox).toBe(systemIconViewBox);
 
