@@ -1,11 +1,8 @@
+@import 'inter.css';
+
 :root,
 :host {
-  font-family: 'HelveticaLocalWebFont';
-}
-
-@font-face {
-  font-family: 'HelveticaLocalWebFont';
-  src: url('HelveticaLocalWebFont.woff2') format('woff2');
+  font-family: 'Inter';
 }
 
 @font-face {
