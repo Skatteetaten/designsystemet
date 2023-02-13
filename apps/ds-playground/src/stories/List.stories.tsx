@@ -1,9 +1,4 @@
-import {
-  getListHasIndentDefault,
-  getListAsDefault,
-  List,
-  listAsArr,
-} from '@skatteetaten/ds-typography';
+import { getListAsDefault, List, listAsArr } from '@skatteetaten/ds-typography';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { category } from '../../.storybook/helpers';
@@ -13,13 +8,6 @@ export default {
   title: 'Design System/List',
   argTypes: {
     // Props
-    hasIndent: {
-      control: 'boolean',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getListHasIndentDefault() },
-      },
-    },
     hasSpacing: {
       control: 'boolean',
       table: {
@@ -38,34 +26,21 @@ export default {
 } as ComponentMeta<typeof List>;
 
 const TemplateDefault: ComponentStory<typeof List> = (args) => (
-  <>
-    <p>
-      {
-        'Jeg er et tekstavsnitt uten innrykk. Denne teksten blir ca. to linjer lang.'
-      }
-    </p>
-    <List {...args}>
-      <List.Element key={'listElement_1'}>
-        {'Kjenner du behovet til brukeren?'}
-      </List.Element>
-      <List.Element key={'listElement_2'}>
-        {'Er du sikker på at du kjenner behovet til brukeren?'}
-      </List.Element>
-      <List.Element key={'listElement_3'}>{'Snakk med andre.'}</List.Element>
-    </List>
-    <p>
-      {
-        'Jeg er et tekstavsnitt uten innrykk. Denne teksten blir ca. to linjer lang.'
-      }
-    </p>
-  </>
+  <List {...args}>
+    <List.Element key={'listElement_1'}>
+      {'Kjenner du behovet til brukeren?'}
+    </List.Element>
+    <List.Element key={'listElement_2'}>
+      {'Er du sikker på at du kjenner behovet til brukeren?'}
+    </List.Element>
+    <List.Element key={'listElement_3'}>{'Snakk med andre.'}</List.Element>
+  </List>
 );
 
 export const ListDefault = TemplateDefault.bind({});
 ListDefault.storyName = 'Default';
 
 ListDefault.args = {
-  hasIndent: getListHasIndentDefault(),
   as: getListAsDefault(),
 };
 

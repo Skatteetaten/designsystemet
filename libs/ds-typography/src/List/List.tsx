@@ -2,7 +2,7 @@ import { forwardRef } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
-import { getListHasIndentDefault, getListAsDefault } from './defaults';
+import { getListAsDefault } from './defaults';
 import { ListProps, ListComponent, AnyHTMLListElement } from './List.types';
 import { ListElement } from './ListElement';
 
@@ -16,20 +16,18 @@ const List = forwardRef<AnyHTMLListElement, ListProps>(
       lang,
       'data-testid': dataTestid,
       as: Tag = getListAsDefault(),
-      hasIndent = getListHasIndentDefault(),
       hasSpacing,
       children,
     },
     ref
   ): JSX.Element => {
     const bulletClassName = Tag === 'ul' ? styles['list_withBullet'] : '';
-    const indentClassName = hasIndent ? styles['list_hasIndent'] : '';
     const spacingClassName = hasSpacing ? styles['list_hasSpacing'] : '';
     return (
       <Tag
         ref={ref as (instance: AnyHTMLListElement | null) => void}
         id={id}
-        className={`${styles.list} ${bulletClassName} ${indentClassName} ${spacingClassName} ${className}`}
+        className={`${styles.list} ${bulletClassName} ${spacingClassName} ${className}`}
         lang={lang}
         data-testid={dataTestid}
       >
@@ -42,4 +40,4 @@ const List = forwardRef<AnyHTMLListElement, ListProps>(
 List.displayName = 'List';
 List.Element = ListElement;
 
-export { List, getListAsDefault, getListHasIndentDefault };
+export { List, getListAsDefault };

@@ -1,7 +1,7 @@
-// import { AxePuppeteer } from '@axe-core/puppeteer';
+import { AxePuppeteer } from '@axe-core/puppeteer';
 import { List } from '@skatteetaten/ds-typography';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-// import { toHaveNoViolations } from 'jest-axe';
+import { toHaveNoViolations } from 'jest-axe';
 import { Page } from 'puppeteer';
 
 import {
@@ -19,17 +19,16 @@ const verifyMatchImageSnapShot = async (page: Page): Promise<void> => {
   expect(image).toMatchImageSnapshot();
 };
 
-// const verifyAxeRules = async (page: Page): Promise<void> => {
-//   const axeResults = await new AxePuppeteer(page).include(wrapper).analyze();
-//   expect.extend(toHaveNoViolations);
-//   expect(axeResults).toHaveNoViolations();
-// };
+const verifyAxeRules = async (page: Page): Promise<void> => {
+  const axeResults = await new AxePuppeteer(page).include(wrapper).analyze();
+  expect.extend(toHaveNoViolations);
+  expect(axeResults).toHaveNoViolations();
+};
 
 const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
   await verifyMatchSnapShot(page);
   await verifyMatchImageSnapShot(page);
-  // TODO 1091
-  // await verifyAxeRules(page);
+  await verifyAxeRules(page);
 };
 
 export default {
@@ -55,9 +54,9 @@ const defaultArgs = {
   children: 'Kjenner du behovet til brukeren?',
 };
 const Template: ComponentStory<typeof List.Element> = (args) => (
-  <div data-test-block>
+  <ul data-test-block>
     <List.Element {...args} />
-  </div>
+  </ul>
 );
 
 // Når ListElement har en ref, så får dom elementet ref forwarded
@@ -76,14 +75,9 @@ WithRef.args = {
   },
 };
 WithRef.parameters = {
-  // TODO 1091
-  a11y: {
-    disable: true,
-  },
   async puppeteerTest(page: Page): Promise<void> {
     await verifyMatchSnapShot(page);
-    // TODO 1091
-    // await verifyAxeRules(page);
+    await verifyAxeRules(page);
 
     const refId = await page.$eval(`${wrapper} > li`, (el) => el.id);
     expect(refId).toBe('dummyIdForwardedFromRef');
@@ -102,14 +96,9 @@ WithId.args = {
   id: 'ListElementId',
 };
 WithId.parameters = {
-  // TODO 1091
-  a11y: {
-    disable: true,
-  },
   async puppeteerTest(page: Page): Promise<void> {
     await verifyMatchSnapShot(page);
-    // TODO 1091
-    // await verifyAxeRules(page);
+    await verifyAxeRules(page);
 
     const id = await page.$eval(`${wrapper} > li`, (el) =>
       el.getAttribute('id')
@@ -130,10 +119,6 @@ WithCustomCss.argTypes = {
   className: { table: { disable: false } },
 };
 WithCustomCss.parameters = {
-  // TODO 1091
-  a11y: {
-    disable: true,
-  },
   async puppeteerTest(page: Page): Promise<void> {
     await verifySnapshotsAndAxeRules(page);
 
@@ -156,14 +141,9 @@ WithLang.args = {
   lang: 'nb',
 };
 WithLang.parameters = {
-  // TODO 1091
-  a11y: {
-    disable: true,
-  },
   async puppeteerTest(page: Page): Promise<void> {
     await verifyMatchSnapShot(page);
-    // TODO 1091
-    // await verifyAxeRules(page);
+    await verifyAxeRules(page);
 
     const langAttribute = await page.$eval(`${wrapper} > li`, (el) =>
       el.getAttribute('lang')
@@ -184,74 +164,13 @@ WithDataTestid.args = {
   'data-testid': 'ListElementID',
 };
 WithDataTestid.parameters = {
-  // TODO 1091
-  a11y: {
-    disable: true,
-  },
   async puppeteerTest(page: Page): Promise<void> {
     await verifyMatchSnapShot(page);
-    // TODO 1091
-    // await verifyAxeRules(page);
+    await verifyAxeRules(page);
 
     const dataTestid = await page.$eval(`${wrapper} > li`, (el) =>
       el.getAttribute('data-testid')
     );
     expect(dataTestid).toBe('ListElementID');
   },
-};
-
-// Når ListElement instansieres, får den riktige default-verdier
-export const Defaults = Template.bind({});
-Defaults.storyName = 'Defaults';
-Defaults.argTypes = {
-  ...Defaults.argTypes,
-  children: {
-    table: { disable: false },
-  },
-};
-Defaults.args = {
-  ...defaultArgs,
-};
-Defaults.parameters = {
-  // TODO 1091
-  a11y: {
-    disable: true,
-  },
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const listElement = await page.$(`${wrapper} > li`);
-    expect(listElement).toBeTruthy();
-  },
-};
-
-// Når ListElement instansieres med markup, får markup riktig styling
-export const WithMarkup = Template.bind({});
-WithMarkup.storyName = 'With Markup';
-WithMarkup.argTypes = {
-  ...WithMarkup.argTypes,
-  children: {
-    table: { disable: false },
-    control: { type: null },
-  },
-};
-WithMarkup.args = {
-  ...defaultArgs,
-  children: (
-    <span>
-      {'Kjenner du behovet til '}
-      <strong>{'brukeren i '}</strong>
-      <a href={'https://skatteetaten.no'}>{'Skatteetaten '}</a>
-      <em>{'som liker å '}</em>
-      <mark>{'markere '}</mark>
-      <code>{'Code tekst?'}</code>
-    </span>
-  ),
-};
-WithMarkup.parameters = {
-  // TODO 1091
-  a11y: {
-    disable: true,
-  },
-  puppeteerTest: verifySnapshotsAndAxeRules,
 };

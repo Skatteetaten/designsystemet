@@ -8,8 +8,6 @@ export type ListAs = typeof listAsArr[number];
 export interface ListProps extends BaseProps {
   /** HTML-tag for listen */
   as?: ListAs;
-  /** Innrykk foran listen */
-  hasIndent?: boolean;
   /** Margin under listen */
   hasSpacing?: boolean;
   /** Listelementer */

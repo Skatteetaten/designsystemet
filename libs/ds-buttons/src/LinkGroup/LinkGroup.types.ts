@@ -9,7 +9,7 @@ export interface LinkGroupComponentCommonProps extends BaseProps {
   /** Margin under lenkegruppen */
   hasSpacing?: boolean;
   /** Definerer stilen til lenkegruppen. */
-  variant: LinkGroupVariant;
+  variant?: LinkGroupVariant;
   /** Link-komponenter */
   children?: JSX.Element | JSX.Element[];
 }
