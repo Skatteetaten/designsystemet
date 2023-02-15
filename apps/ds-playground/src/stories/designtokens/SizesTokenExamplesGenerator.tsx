@@ -10,7 +10,7 @@ export const SizesTokenExamplesGenerator = (): JSX.Element => {
       {Object.keys(sizesTokens).map((value: string, index: number) => {
         return (
           <>
-            <p>
+            <p className={'tokenValue'}>
               <strong>{`${value} (${sizesTokens[value]})`}</strong>
             </p>
             <div

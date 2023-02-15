@@ -10,7 +10,7 @@ export const SpacingTokenExamplesGenerator = (): JSX.Element => {
       {Object.keys(spacingsTokens).map((value: string, index: number) => {
         return (
           <>
-            <p>
+            <p className={'tokenValue'}>
               <strong>{`${value} (${spacingsTokens[value]})`}</strong>
             </p>
             <div
