@@ -1,11 +1,14 @@
+import { AxePuppeteer } from '@axe-core/puppeteer';
 import {
   LinkGroup,
   LinkGroupProps,
   linkGroupVariantArr,
   getLinkGroupVariantDefault,
 } from '@skatteetaten/ds-buttons';
+import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { CalendarSVGpath } from '@skatteetaten/ds-icons';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { toHaveNoViolations } from 'jest-axe';
 import { Page } from 'puppeteer';
 
 import {
@@ -13,12 +16,26 @@ import {
   wrapper,
 } from './testUtils/puppeteer.testing.utils';
 
-const testSnapshot = async (page: Page): Promise<void> => {
+const verifyMatchSnapShot = async (page: Page): Promise<void> => {
   const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
   expect(innerHtml).toMatchSnapshot();
+};
 
+const verifyMatchImageSnapShot = async (page: Page): Promise<void> => {
   const image = await page.screenshot(screenShotOptions);
   expect(image).toMatchImageSnapshot();
+};
+
+const verifyAxeRules = async (page: Page): Promise<void> => {
+  const axeResults = await new AxePuppeteer(page).include(wrapper).analyze();
+  expect.extend(toHaveNoViolations);
+  expect(axeResults).toHaveNoViolations();
+};
+
+const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
+  await verifyMatchSnapShot(page);
+  await verifyMatchImageSnapShot(page);
+  await verifyAxeRules(page);
 };
 
 export default {
@@ -35,6 +52,7 @@ export default {
     // Props
     children: { table: { disable: true } },
     hasSpacing: { table: { disable: true } },
+    color: { table: { disable: true } },
     variant: {
       table: { disable: true },
       options: [...linkGroupVariantArr],
@@ -81,11 +99,11 @@ WithRef.argTypes = {
 };
 WithRef.parameters = {
   async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
+
     const refId = await page.$eval(`${wrapper} > ul`, (el) => el.id);
     expect(refId).toBe('dummyIdForwardedFromRef');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 
@@ -102,13 +120,13 @@ WithId.argTypes = {
 };
 WithId.parameters = {
   async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
+
     const id = await page.$eval(`${wrapper} > ul`, (el) =>
       el.getAttribute('id')
     );
     expect(id).toBe('htmlId');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 
@@ -125,16 +143,14 @@ WithCustomCss.argTypes = {
 };
 WithCustomCss.parameters = {
   async puppeteerTest(page: Page): Promise<void> {
+    // no axe rules because elements dont have sufficient color contrast
+    await verifyMatchSnapShot(page);
+    await verifyMatchImageSnapShot(page);
+
     const classNameAttribute = await page.$eval(`${wrapper}> ul`, (el) =>
       el.getAttribute('class')
     );
     expect(classNameAttribute).toContain('dummyClassname');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
   },
 };
 
@@ -151,13 +167,13 @@ WithLang.argTypes = {
 };
 WithLang.parameters = {
   async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
+
     const langAttribute = await page.$eval(`${wrapper} > ul`, (el) =>
       el.getAttribute('lang')
     );
     expect(langAttribute).toBe('nb');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 
@@ -174,13 +190,13 @@ WithDataTestid.argTypes = {
 };
 WithDataTestid.parameters = {
   async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchSnapShot(page);
+    await verifyAxeRules(page);
+
     const dataTestid = await page.$eval(`${wrapper} > ul`, (el) =>
       el.getAttribute('data-testid')
     );
     expect(dataTestid).toBe('123ID');
-
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
   },
 };
 
@@ -196,11 +212,7 @@ Defaults.argTypes = {
 };
 Defaults.parameters = {
   async puppeteerTest(page: Page): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
+    await verifySnapshotsAndAxeRules(page);
 
     const liElement = await page.$(`${wrapper} > ul > li:first-child`);
 
@@ -238,15 +250,15 @@ VariantAnchors.args = {
 };
 VariantAnchors.argTypes = {
   ...VariantAnchors.argTypes,
-  variant: { table: { disable: false } },
+  variant: {
+    table: {
+      disable: false,
+    },
+  },
 };
 VariantAnchors.parameters = {
   async puppeteerTest(page: Page): Promise<void> {
-    const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-    expect(innerHtml).toMatchSnapshot();
-
-    const image = await page.screenshot(screenShotOptions);
-    expect(image).toMatchImageSnapshot();
+    await verifySnapshotsAndAxeRules(page);
 
     const liElement = await page.$(`${wrapper} > ul > li:first-child`);
 
@@ -300,7 +312,7 @@ WithLongTextAndIcons.argTypes = {
   children: { table: { disable: false } },
 };
 WithLongTextAndIcons.parameters = {
-  puppeteerTest: testSnapshot,
+  puppeteerTest: verifySnapshotsAndAxeRules,
 };
 
 const TemplateWithTwoLinkGroups: ComponentStory<typeof LinkGroup> = (args) => (
@@ -322,5 +334,33 @@ WithSpacing.argTypes = {
   hasSpacing: { table: { disable: false } },
 };
 WithSpacing.parameters = {
-  puppeteerTest: testSnapshot,
+  puppeteerTest: verifySnapshotsAndAxeRules,
+};
+
+// Når LinkGroup har color white, så vises tekster og ikoner i hvit
+export const WithColor = Template.bind({});
+WithColor.storyName = 'With Color (A7)';
+WithColor.args = {
+  ...defaultArgs,
+  color: 'white',
+};
+WithColor.argTypes = {
+  ...WithColor.argTypes,
+  color: {
+    options: ['default', ...linkColorArr],
+    mapping: {
+      default: '',
+      ...linkColorArr,
+    },
+    table: { disable: false },
+  },
+};
+WithColor.parameters = {
+  backgrounds: {
+    default: 'dark',
+  },
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchImageSnapShot(page);
+    await verifyAxeRules(page);
+  },
 };

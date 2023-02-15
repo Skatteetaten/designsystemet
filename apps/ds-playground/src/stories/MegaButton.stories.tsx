@@ -81,10 +81,4 @@ Default.parameters = {
       url: designUrlLuft,
     },
   ],
-  backgrounds: {
-    values: [
-      { name: 'Svart', value: '#000' },
-      { name: 'Hvit', value: '#fff' },
-    ],
-  },
 };

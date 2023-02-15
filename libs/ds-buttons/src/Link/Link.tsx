@@ -16,6 +16,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
       lang,
       'data-testid': dataTestId,
       isExternal,
+      color,
       svgPath,
       href,
       target,
@@ -26,7 +27,9 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
     ref
   ): JSX.Element => {
     const { t } = useTranslation('ds_buttons', { i18n: dsI18n });
-    const concatenatedClassName = `${styles.link} ${className}`;
+    const concatenatedClassName = `${styles.link} ${
+      color ? styles[`link_${color}`] : ''
+    } ${className}`;
 
     return (
       <a

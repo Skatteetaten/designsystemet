@@ -2,7 +2,8 @@ import { useState } from 'react';
 
 import { AxePuppeteer } from '@axe-core/puppeteer';
 import { Link, LinkProps } from '@skatteetaten/ds-buttons';
-import { CalendarSVGpath } from '@skatteetaten/ds-icons';
+import { linkColorArr } from '@skatteetaten/ds-core-utils';
+import { AddOutlineSVGpath, CalendarSVGpath } from '@skatteetaten/ds-icons';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { toHaveNoViolations } from 'jest-axe';
 import { Page } from 'puppeteer';
@@ -54,6 +55,7 @@ export default {
     // Props
     children: { table: { disable: true } },
     isExternal: { table: { disable: true } },
+    color: { table: { disable: true } },
     svgPath: {
       table: { disable: true },
       options: Object.keys(SystemSVGPaths),
@@ -377,6 +379,39 @@ WithExternalIcon.parameters = {
     });
     expect(svgAttributes.ariaLabel).toBe('shared.ExternalIcon');
     expect(svgAttributes.viewBox).toBe(systemIconViewBox);
+  },
+};
+
+// Når Link har color white, så vises tekst og ikon i hvit
+export const WithColor = Template.bind({});
+WithColor.storyName = 'With Color (A6)';
+WithColor.args = {
+  ...defaultArgs,
+  color: 'white',
+  isExternal: true,
+  svgPath: AddOutlineSVGpath,
+};
+WithColor.argTypes = {
+  ...WithColor.argTypes,
+  color: {
+    options: ['default', ...linkColorArr],
+    mapping: {
+      default: '',
+      ...linkColorArr,
+    },
+    control: 'inline-radio',
+    table: {
+      disable: false,
+    },
+  },
+};
+WithColor.parameters = {
+  backgrounds: {
+    default: 'dark',
+  },
+  async puppeteerTest(page: Page): Promise<void> {
+    await verifyMatchImageSnapShot(page);
+    await verifyAxeRules(page);
   },
 };
 

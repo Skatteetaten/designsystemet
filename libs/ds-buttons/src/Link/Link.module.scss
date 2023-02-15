@@ -7,6 +7,11 @@
   line-height: var(--semantic-line-height-article);
 
   .icon {
+    background-color: inherit;
+    fill: var(--semantic-interactive-main);
+    transform: translate(0, var(--spacing-xs));
+    vertical-align: top;
+
     &_isCustom {
       margin-right: var(--spacing-s);
     }
@@ -14,11 +19,41 @@
     &_isExternal {
       margin-left: var(--spacing-s);
     }
+  }
 
-    background-color: inherit;
-    fill: var(--semantic-interactive-main);
-    transform: translate(0, var(--spacing-xs));
-    vertical-align: top;
+  &_white {
+    color: var(--palette-graphite-0);
+    text-decoration-color: var(--palette-graphite-0);
+
+    .icon {
+      fill: var(--palette-graphite-0);
+    }
+
+    &:hover {
+      background-color: var(--palette-graphite-0);
+      color: inherit;
+      text-decoration-color: inherit;
+
+      .icon {
+        fill: inherit;
+      }
+    }
+
+    &:focus {
+      @extend %focus;
+    }
+
+    &:active {
+      @extend %focus;
+
+      background-color: var(--palette-graphite-0);
+      color: inherit;
+      text-decoration-color: inherit;
+
+      .icon {
+        fill: inherit;
+      }
+    }
   }
 
   &:active .icon {

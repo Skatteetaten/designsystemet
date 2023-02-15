@@ -22,6 +22,10 @@ $spacing-arrow-link: calc(-20px - var(--spacing-s));
       fill: var(--semantic-interactive-main);
       transform: translate($spacing-arrow-link, 3px);
       transition: 0.2s;
+
+      &_white {
+        fill: var(--palette-graphite-0);
+      }
     }
 
     &:hover {
@@ -45,6 +49,10 @@ $spacing-arrow-link: calc(-20px - var(--spacing-s));
     &:active {
       .icon {
         fill: var(--semantic-interactive-foreground);
+
+        &_white {
+          fill: var(--palette-graphite-0);
+        }
       }
     }
   }

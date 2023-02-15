@@ -20,3 +20,6 @@ export type Size = typeof sizeArr[number];
 
 export const positionArr = ['left', 'right'] as const;
 export type Positon = typeof positionArr[number];
+
+export const linkColorArr = ['white'] as const;
+export type LinkColor = typeof linkColorArr[number];

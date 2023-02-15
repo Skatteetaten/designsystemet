@@ -1,4 +1,5 @@
 import { Link } from '@skatteetaten/ds-buttons';
+import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { action } from '@storybook/addon-actions';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
@@ -11,6 +12,19 @@ export default {
   argTypes: {
     // Props
     children: { table: { category: category.props } },
+    color: {
+      options: ['default', ...linkColorArr],
+      mapping: {
+        default: '',
+        ...linkColorArr,
+      },
+      defaultValue: 'default',
+      control: 'inline-radio',
+      table: {
+        category: category.props,
+      },
+    },
+
     isExternal: {
       control: 'boolean',
       table: { category: category.props },

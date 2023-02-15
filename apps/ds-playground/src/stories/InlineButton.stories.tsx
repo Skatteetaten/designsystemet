@@ -74,12 +74,6 @@ const buttonDefaultParameters = {
       url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1210%3A7396',
     },
   ],
-  backgrounds: {
-    values: [
-      { name: 'Svart', value: '#000' },
-      { name: 'Hvit', value: '#fff' },
-    ],
-  },
 };
 
 export const InlineButtonDefault = TemplateDefault.bind({});

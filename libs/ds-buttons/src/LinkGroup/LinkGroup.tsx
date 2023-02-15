@@ -1,4 +1,4 @@
-import { Children, forwardRef } from 'react';
+import { Children, cloneElement, forwardRef } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import {
@@ -21,6 +21,7 @@ const LinkGroup = forwardRef<HTMLUListElement, LinkGroupProps>(
       lang,
       'data-testid': dataTestId,
       hasSpacing,
+      color,
       variant = getLinkGroupVariantDefault(),
       children,
     },
@@ -31,7 +32,9 @@ const LinkGroup = forwardRef<HTMLUListElement, LinkGroupProps>(
     const iconVariantClassName = hasVariantList
       ? `${styles.icon_forward}`
       : `${styles.icon_down}`;
-    const concatenatedIconClassName = `${styles.icon} ${iconVariantClassName}`;
+    const concatenatedIconClassName = `${styles.icon} ${iconVariantClassName} ${
+      color ? styles[`icon_${color}`] : ''
+    }`;
 
     const spacingClassName = hasSpacing ? `${styles.linkGroup_hasSpacing}` : '';
     const concatenatedClassName = `${styles.linkGroup} ${spacingClassName} ${className} `;
@@ -50,7 +53,7 @@ const LinkGroup = forwardRef<HTMLUListElement, LinkGroupProps>(
           return (
             <li key={index} className={styles.linkGroupItem}>
               <Icon className={concatenatedIconClassName} svgPath={iconPath} />
-              {link}
+              {cloneElement(link as JSX.Element, { color: color })}
             </li>
           );
         })}

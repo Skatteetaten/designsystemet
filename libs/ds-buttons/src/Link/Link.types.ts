@@ -1,6 +1,6 @@
 import { MouseEventHandler } from 'react';
 
-import { BaseProps } from '@skatteetaten/ds-core-utils';
+import { BaseProps, LinkColor } from '@skatteetaten/ds-core-utils';
 
 type RequiredLinkHTMLAttributes = Pick<
   React.HTMLProps<HTMLAnchorElement>,
@@ -21,6 +21,8 @@ export interface LinkComponentCommonProps
     BaseProps {
   /** Viser ikon etter lenketeksten som indikerer at lenken er til en side på et annet domene. */
   isExternal?: boolean;
+  /** Farge på ikon og tekst */
+  color?: LinkColor;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
   svgPath?: React.ReactElement;
   /** Lenketekst. */
