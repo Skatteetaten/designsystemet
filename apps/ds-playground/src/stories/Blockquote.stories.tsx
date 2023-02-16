@@ -2,7 +2,6 @@ import { Blockquote } from '@skatteetaten/ds-typography';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { category } from '../../.storybook/helpers';
-import { getParameters } from './utils/parameters.utils';
 
 export default {
   component: Blockquote,
@@ -32,25 +31,10 @@ const TemplateExample: ComponentStory<typeof Blockquote> = () => (
   </Blockquote>
 );
 
-const designParameters = [
-  {
-    name: 'Font og størrelser',
-    type: 'figma',
-    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=7490%3A12547&t=1KMwZAqrUp0ClnpK-0',
-  },
-  {
-    name: 'Luft og avstander',
-    type: 'figma',
-    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=7490%3A12580&t=xXoSp2cmSHZZtCMU-0',
-  },
-];
-
 export const BlockquoteDefault = TemplateDefault.bind({});
 export const BlockquoteExample = TemplateExample.bind({});
 BlockquoteDefault.storyName = 'Default';
 BlockquoteExample.storyName = 'Example';
-BlockquoteDefault.parameters = getParameters(designParameters);
-BlockquoteExample.parameters = getParameters(designParameters);
 
 BlockquoteDefault.args = {
   children:

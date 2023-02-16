@@ -7,7 +7,6 @@ import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { category } from '../../.storybook/helpers';
-import { getParameters } from './utils/parameters.utils';
 
 export default {
   component: LinkGroup,
@@ -80,23 +79,10 @@ const TemplateExample: ComponentStory<typeof LinkGroup> = () => (
   </>
 );
 
-const designParameters = [
-  {
-    name: 'Varianter og tilstander',
-    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=14%3A200',
-  },
-  {
-    name: 'Luft og fontstørrelser',
-    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=14%3A188',
-  },
-];
-
 export const LinkGroupDefault = TemplateDefault.bind({});
 export const LinkGroupExample = TemplateExample.bind({});
 LinkGroupDefault.storyName = 'Default';
 LinkGroupExample.storyName = 'Example';
-LinkGroupDefault.parameters = getParameters(designParameters);
-LinkGroupExample.parameters = getParameters(designParameters);
 
 LinkGroupDefault.args = {
   variant: getLinkGroupVariantDefault(),

@@ -6,7 +6,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../.storybook/helpers';
 import { SystemSVGPaths } from './utils/icon.systems';
-import { getParameters } from './utils/parameters.utils';
 
 const availableSizes = [...sizeArr].slice(0, 4);
 export default {
@@ -117,25 +116,10 @@ const TemplateExample: ComponentStory<typeof IconButton> = () => (
   </div>
 );
 
-const designParameters = [
-  {
-    name: 'Tilstander',
-    type: 'figma',
-    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=3152%3A8650',
-  },
-  {
-    name: 'Spacing',
-    type: 'figma',
-    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1556%3A9035',
-  },
-];
-
 export const IconButtonDefault = TemplateDefault.bind({});
 export const IconButtonExample = TemplateExample.bind({});
 IconButtonDefault.storyName = 'Default';
 IconButtonExample.storyName = 'Example';
-IconButtonDefault.parameters = getParameters(designParameters);
-IconButtonExample.parameters = getParameters(designParameters);
 
 IconButtonDefault.args = {
   svgPath: Object.values(SystemSVGPaths)[14], // Bell icon

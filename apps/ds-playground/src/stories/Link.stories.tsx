@@ -5,7 +5,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../.storybook/helpers';
 import { SystemSVGPaths } from './utils/icon.systems';
-import { getParameters } from './utils/parameters.utils';
 
 export default {
   component: Link,
@@ -69,25 +68,10 @@ const TemplateExample: ComponentStory<typeof Link> = () => (
   </div>
 );
 
-const designParameters = [
-  {
-    name: 'Varianter og tilstander',
-    type: 'figma',
-    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=14%3A200',
-  },
-  {
-    name: 'Luft og fontstørrelser',
-    type: 'figma',
-    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=14%3A188',
-  },
-];
-
 export const LinkDefault = TemplateDefault.bind({});
 export const LinkExample = TemplateExample.bind({});
 LinkDefault.storyName = 'Default';
 LinkExample.storyName = 'Example';
-LinkDefault.parameters = getParameters(designParameters);
-LinkExample.parameters = getParameters(designParameters);
 
 LinkDefault.args = {
   href: '#',

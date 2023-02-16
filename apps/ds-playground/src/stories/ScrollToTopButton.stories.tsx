@@ -11,7 +11,6 @@ import { Meta, Story } from '@storybook/react';
 import palette from 'libs/ds-core-designtokens/lib/designtokens/palette.json';
 
 import { category } from '../../.storybook/helpers';
-import { getParameters } from './utils/parameters.utils';
 
 export default {
   component: ScrollToTopButton,
@@ -60,37 +59,12 @@ const TemplateExample: Story<ScrollToTopButtonProps> = () => (
   </div>
 );
 
-const designParameters = [
-  {
-    name: 'Tilstander',
-    type: 'figma',
-    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=5507%3A10821&t=ph6CtBRDkbwEBgbj-0',
-  },
-  {
-    name: 'Luft og fontstørrelser',
-    type: 'figma',
-    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=4636%3A9524&t=rPzwMjzIfFVKpI7b-0',
-  },
-  {
-    name: 'Plassering på desktop',
-    type: 'figma',
-    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1276%3A8091&t=vB2K1eVIBGZ0gFtH-0',
-  },
-  {
-    name: 'Plassering på mobil',
-    type: 'figma',
-    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=4636%253A9422',
-  },
-];
-
 export const ScrollToTopButtonDefault: Story<ScrollToTopButtonProps> =
   TemplateDefault.bind({});
 export const ScrollToTopButtonExample: Story<ScrollToTopButtonProps> =
   TemplateExample.bind({});
 ScrollToTopButtonDefault.storyName = 'Default';
 ScrollToTopButtonExample.storyName = 'Example';
-ScrollToTopButtonDefault.parameters = getParameters(designParameters);
-ScrollToTopButtonExample.parameters = getParameters(designParameters);
 
 ScrollToTopButtonDefault.args = {
   visibilityThreshold: getVisibilityThresholdDefault(),

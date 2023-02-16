@@ -3,8 +3,6 @@ import { action } from '@storybook/addon-actions';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../.storybook/helpers';
-import { getParameters } from './utils/parameters.utils';
-import './classnames.stories.css';
 
 export default {
   component: MegaButton,
@@ -53,25 +51,10 @@ const TemplateDefault: ComponentStory<typeof MegaButton> = (args) => (
   </MegaButton>
 );
 
-const designParameters = [
-  {
-    name: 'Varianter og tilstander',
-    type: 'figma',
-    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1717%3A8893',
-  },
-  {
-    name: 'Luft og fontstørrelser',
-    type: 'figma',
-    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1717%3A8987',
-  },
-];
-
 export const MegaButtonDefault = TemplateDefault.bind({});
 export const MegaButtonExample = TemplateDefault.bind({});
 MegaButtonDefault.storyName = 'Default';
 MegaButtonExample.storyName = 'Example';
-MegaButtonDefault.parameters = getParameters(designParameters);
-MegaButtonExample.parameters = getParameters(designParameters);
 
 MegaButtonDefault.args = {
   children: 'Klikk her',

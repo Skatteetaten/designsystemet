@@ -5,12 +5,12 @@ import {
   buttonVariantArr,
   getButtonVariantDefault,
 } from '@skatteetaten/ds-buttons';
+import { action } from '@storybook/addon-actions';
 import { Story, Meta } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../.storybook/helpers';
 import { SystemSVGPaths } from './utils/icon.systems';
 import './classnames.stories.css';
-import { getParameters } from './utils/parameters.utils';
 
 export default {
   component: Button,
@@ -58,7 +58,11 @@ export default {
 } as Meta<ButtonProps>;
 
 const TemplateDefault: Story<ButtonProps> = (args) => (
-  <Button {...args} variant={args.variant}>
+  <Button
+    {...args}
+    variant={args.variant}
+    onClick={action('KlikkEvent Button')}
+  >
     {args.children}
   </Button>
 );
@@ -82,25 +86,10 @@ const TemplateExample: Story<ButtonProps> = () => (
   </div>
 );
 
-const designParameters = [
-  {
-    name: 'Varianter og tilstander',
-    type: 'figma',
-    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1765%3A8640',
-  },
-  {
-    name: 'Luft og fontstørrelser',
-    type: 'figma',
-    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=123%3A1494',
-  },
-];
-
 export const ButtonDefault = TemplateDefault.bind({});
 export const ButtonExample = TemplateExample.bind({});
 ButtonDefault.storyName = 'Default';
 ButtonExample.storyName = 'Example';
-ButtonDefault.parameters = getParameters(designParameters);
-ButtonExample.parameters = getParameters(designParameters);
 
 ButtonDefault.args = {
   children: 'Klikk',

@@ -15,8 +15,6 @@ import { category } from '../../.storybook/helpers';
 import { SystemIconLabels, SystemSVGPaths } from './utils/icon.systems';
 import { ThemeIconLabels, ThemeSVGPaths } from './utils/icon.themes';
 
-import './classnames.stories.css';
-
 export default {
   component: Icon,
   title: 'Design System/Icon',
@@ -44,22 +42,8 @@ const commonArgTypes = {
 
 const iconDefaultParameters = {
   docs: {
-    page: (): JSX.Element => {
-      return <ArgsTable story={PRIMARY_STORY} />;
-    },
+    page: (): JSX.Element => <ArgsTable story={PRIMARY_STORY} />,
   },
-  design: [
-    {
-      name: 'Oversikt',
-      type: 'figma',
-      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1124%3A6643',
-    },
-    {
-      name: 'Størrelser og avstander',
-      type: 'figma',
-      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1124%3A6642',
-    },
-  ],
 };
 const defaultSystemIconVariant = getIconVariantDefault();
 

@@ -7,7 +7,6 @@ import {
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { category } from '../../.storybook/helpers';
-import { getParameters } from './utils/parameters.utils';
 
 export default {
   component: Paragraph,
@@ -65,25 +64,10 @@ const TemplateExample: ComponentStory<typeof Paragraph> = () => (
   </>
 );
 
-const designParameters = [
-  {
-    name: 'Varianter og størrelser',
-    type: 'figma',
-    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=7490%3A12296',
-  },
-  {
-    name: 'Luft og avstander',
-    type: 'figma',
-    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=7490%3A12324',
-  },
-];
-
 export const ParagraphDefault = TemplateDefault.bind({});
 export const ParagraphExample = TemplateExample.bind({});
 ParagraphDefault.storyName = 'Default';
 ParagraphExample.storyName = 'Example';
-ParagraphDefault.parameters = getParameters(designParameters);
-ParagraphExample.parameters = getParameters(designParameters);
 
 ParagraphDefault.args = {
   children:

@@ -9,8 +9,6 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../.storybook/helpers';
 import { SystemSVGPaths } from './utils/icon.systems';
-import { getParameters } from './utils/parameters.utils';
-import './classnames.stories.css';
 
 export default {
   component: InlineButton,
@@ -77,25 +75,10 @@ const TemplateExample: ComponentStory<typeof InlineButton> = () => (
   </div>
 );
 
-const designParameters = [
-  {
-    name: 'Varianter og tilstander',
-    type: 'figma',
-    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=4018%3A9627',
-  },
-  {
-    name: 'Luft og fontstørrelser',
-    type: 'figma',
-    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1210%3A7396',
-  },
-];
-
 export const InlineButtonDefault = TemplateDefault.bind({});
 export const InlineButtonExample = TemplateExample.bind({});
 InlineButtonDefault.storyName = 'Default';
 InlineButtonExample.storyName = 'Example';
-InlineButtonDefault.parameters = getParameters(designParameters);
-InlineButtonExample.parameters = getParameters(designParameters);
 
 InlineButtonDefault.args = {
   children: 'Legg til rapport',

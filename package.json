@@ -124,7 +124,6 @@
     "puppeteer": "16.1.1",
     "react-test-renderer": "18.2.0",
     "sonarqube-scanner": "2.8.2",
-    "storybook-addon-designs": "6.3.1",
     "stylelint": "14.10.0",
     "stylelint-config-idiomatic-order": "8.1.0",
     "stylelint-config-prettier": "9.0.3",

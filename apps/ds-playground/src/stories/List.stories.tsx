@@ -7,7 +7,6 @@ import {
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { category } from '../../.storybook/helpers';
-import { getParameters } from './utils/parameters.utils';
 
 export default {
   component: List,
@@ -73,25 +72,10 @@ const TemplateExample: ComponentStory<typeof List> = () => (
   </>
 );
 
-const designParameters = [
-  {
-    name: 'varianter og font',
-    type: 'figma',
-    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=7490%3A12391&t=2mJsV7woWcwQI3i6-0',
-  },
-  {
-    name: 'luft og avstander',
-    type: 'figma',
-    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=7490%3A12419&t=D45Mkl3WbJqk8vM4-0',
-  },
-];
-
 export const ListDefault = TemplateDefault.bind({});
 export const ListExample = TemplateExample.bind({});
 ListDefault.storyName = 'Default';
 ListExample.storyName = 'Example';
-ListDefault.parameters = getParameters(designParameters);
-ListExample.parameters = getParameters(designParameters);
 
 ListDefault.args = {
   as: getListAsDefault(),
