@@ -1,11 +1,13 @@
 import {
   getParagraphVariantDefault,
+  Heading,
   Paragraph,
   paragraphVariantArr,
 } from '@skatteetaten/ds-typography';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { category } from '../../.storybook/helpers';
+import { getParameters } from './utils/parameters.utils';
 
 export default {
   component: Paragraph,
@@ -34,27 +36,58 @@ const TemplateDefault: ComponentStory<typeof Paragraph> = (args) => (
   <Paragraph {...args} />
 );
 
+const TemplateExample: ComponentStory<typeof Paragraph> = () => (
+  <>
+    <Heading as={'h1'} level={1} hasSpacing>
+      {'Flere oppgir kryptoverdier i skattemeldingen'}
+    </Heading>
+    <Paragraph variant={'ingress'} hasSpacing>
+      {'Antall personer som oppgir kryptoverdier i skattemeldingen har økt fra 15.000 til 41.000. ' +
+        'Skatteetaten ønsker at det skal bli pliktig for tilbydere av vekslingstjenester å rapportere om transaksjoner og eiere.'}
+    </Paragraph>
+    <Paragraph hasSpacing>
+      {'- Det har vært en god vekst i antall personer som eier kryptovaluta, men fortsatt er det mange som ikke rapporterer sine verdier. ' +
+        'Vi har økt vår innsats innen både veiledning og kontroll for at også denne delen av økonomien skal bli riktigere beskattet, sier skattedirektør Nina Schanke Funnemark.'}
+    </Paragraph>
+    <Paragraph>
+      {'Sammenlignet med '}
+      <a
+        href={
+          'https://www.skatteetaten.no/presse/nyhetsrommet/flere-oppgir-kryptoverdier-i-skattemeldingen/'
+        }
+      >
+        {'tidligere år'}
+      </a>
+      {
+        ' oppgir langt flere personer at de eier kryptovaluta, og inntekt, formue og fradrag fra kryptovaluta øker også kraftig.'
+      }
+    </Paragraph>
+  </>
+);
+
+const designParameters = [
+  {
+    name: 'Varianter og størrelser',
+    type: 'figma',
+    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=7490%3A12296',
+  },
+  {
+    name: 'Luft og avstander',
+    type: 'figma',
+    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=7490%3A12324',
+  },
+];
+
 export const ParagraphDefault = TemplateDefault.bind({});
+export const ParagraphExample = TemplateExample.bind({});
 ParagraphDefault.storyName = 'Default';
+ParagraphExample.storyName = 'Example';
+ParagraphDefault.parameters = getParameters(designParameters);
+ParagraphExample.parameters = getParameters(designParameters);
 
 ParagraphDefault.args = {
   children:
     'Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, ' +
     'etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.',
   variant: getParagraphVariantDefault(),
-};
-
-ParagraphDefault.parameters = {
-  design: [
-    {
-      name: 'varianter og størrelser',
-      type: 'figma',
-      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=7490%3A12296',
-    },
-    {
-      name: 'luft og avstander',
-      type: 'figma',
-      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=7490%3A12324',
-    },
-  ],
 };

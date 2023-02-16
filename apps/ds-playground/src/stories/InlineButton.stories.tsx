@@ -3,11 +3,13 @@ import {
   getInlineButtonPositionDefault,
 } from '@skatteetaten/ds-buttons';
 import { positionArr } from '@skatteetaten/ds-core-utils';
+import { AddOutlineSVGpath, CancelSVGpath } from '@skatteetaten/ds-icons';
 import { action } from '@storybook/addon-actions';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../.storybook/helpers';
 import { SystemSVGPaths } from './utils/icon.systems';
+import { getParameters } from './utils/parameters.utils';
 import './classnames.stories.css';
 
 export default {
@@ -60,30 +62,42 @@ const TemplateDefault: ComponentStory<typeof InlineButton> = (args) => (
     {args.children}
   </InlineButton>
 );
+const TemplateExample: ComponentStory<typeof InlineButton> = () => (
+  <div className={'flex'}>
+    <InlineButton className={'exampleSpacing'} svgPath={AddOutlineSVGpath}>
+      {'Legg til'}
+    </InlineButton>
+    <InlineButton
+      className={'exampleSpacing'}
+      svgPath={CancelSVGpath}
+      iconPosition={'right'}
+    >
+      {'Fjern'}
+    </InlineButton>
+  </div>
+);
 
-const buttonDefaultParameters = {
-  design: [
-    {
-      name: 'Varianter og tilstander',
-      type: 'figma',
-      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=4018%3A9627',
-    },
-    {
-      name: 'Luft og fontstørrelser',
-      type: 'figma',
-      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1210%3A7396',
-    },
-  ],
-};
+const designParameters = [
+  {
+    name: 'Varianter og tilstander',
+    type: 'figma',
+    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=4018%3A9627',
+  },
+  {
+    name: 'Luft og fontstørrelser',
+    type: 'figma',
+    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1210%3A7396',
+  },
+];
 
 export const InlineButtonDefault = TemplateDefault.bind({});
+export const InlineButtonExample = TemplateExample.bind({});
 InlineButtonDefault.storyName = 'Default';
-const baseArgs = {
-  children: 'Legg til rapport',
-};
+InlineButtonExample.storyName = 'Example';
+InlineButtonDefault.parameters = getParameters(designParameters);
+InlineButtonExample.parameters = getParameters(designParameters);
 
 InlineButtonDefault.args = {
-  ...baseArgs,
+  children: 'Legg til rapport',
   iconPosition: getInlineButtonPositionDefault(),
 };
-InlineButtonDefault.parameters = buttonDefaultParameters;

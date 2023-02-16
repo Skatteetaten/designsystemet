@@ -8,6 +8,7 @@ import {
   ThemeSVGPathsAndIcons,
   iconVariantArr,
 } from '@skatteetaten/ds-icons';
+import { ArgsTable, PRIMARY_STORY } from '@storybook/addon-docs';
 import { Story, Meta } from '@storybook/react';
 
 import { category } from '../../.storybook/helpers';
@@ -42,6 +43,11 @@ const commonArgTypes = {
 };
 
 const iconDefaultParameters = {
+  docs: {
+    page: (): JSX.Element => {
+      return <ArgsTable story={PRIMARY_STORY} />;
+    },
+  },
   design: [
     {
       name: 'Oversikt',

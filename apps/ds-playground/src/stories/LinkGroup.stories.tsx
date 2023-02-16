@@ -7,6 +7,7 @@ import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { category } from '../../.storybook/helpers';
+import { getParameters } from './utils/parameters.utils';
 
 export default {
   component: LinkGroup,
@@ -49,24 +50,54 @@ const TemplateDefault: ComponentStory<typeof LinkGroup> = (args) => (
   </LinkGroup>
 );
 
-const linkGroupDefaultParameters = {
-  design: [
-    {
-      name: 'Varianter og tilstander',
-      type: 'figma',
-      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=14%3A200',
-    },
-    {
-      name: 'Luft og fontstørrelser',
-      type: 'figma',
-      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=14%3A188',
-    },
-  ],
-};
+const TemplateExample: ComponentStory<typeof LinkGroup> = () => (
+  <>
+    <LinkGroup hasSpacing>
+      <LinkGroup.Link key={'linkGroupLink_1'} href={'#root'}>
+        {'Rettledning til RF-1167 Næringsoppgave 2 for 2020 (PDF)'}
+      </LinkGroup.Link>
+      <LinkGroup.Link key={'linkGroupLink_2'} href={'#root'}>
+        {'Rettledning til RF-1167 Næringsoppgave 2 for 2020 (Word)'}
+      </LinkGroup.Link>
+    </LinkGroup>
+    <LinkGroup>
+      <LinkGroup.Link key={'linkGroupLink_1'} href={'#root'}>
+        {'Kontakt oss'}
+      </LinkGroup.Link>
+      <LinkGroup.Link key={'linkGroupLink_2'} href={'#root'}>
+        {'Jobb i Skatteetaten'}
+      </LinkGroup.Link>
+      <LinkGroup.Link key={'linkGroupLink_3'} href={'#root'}>
+        {'Om oss'}
+      </LinkGroup.Link>
+      <LinkGroup.Link key={'linkGroupLink_4'} href={'#root'}>
+        {'Analyse og rapporter'}
+      </LinkGroup.Link>
+      <LinkGroup.Link key={'linkGroupLink_5'} href={'#root'}>
+        {'Forskning'}
+      </LinkGroup.Link>
+    </LinkGroup>
+  </>
+);
+
+const designParameters = [
+  {
+    name: 'Varianter og tilstander',
+    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=14%3A200',
+  },
+  {
+    name: 'Luft og fontstørrelser',
+    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=14%3A188',
+  },
+];
 
 export const LinkGroupDefault = TemplateDefault.bind({});
+export const LinkGroupExample = TemplateExample.bind({});
 LinkGroupDefault.storyName = 'Default';
+LinkGroupExample.storyName = 'Example';
+LinkGroupDefault.parameters = getParameters(designParameters);
+LinkGroupExample.parameters = getParameters(designParameters);
+
 LinkGroupDefault.args = {
   variant: getLinkGroupVariantDefault(),
 };
-LinkGroupDefault.parameters = linkGroupDefaultParameters;

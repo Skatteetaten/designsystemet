@@ -5,12 +5,12 @@ import {
   buttonVariantArr,
   getButtonVariantDefault,
 } from '@skatteetaten/ds-buttons';
-import { action } from '@storybook/addon-actions';
 import { Story, Meta } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../.storybook/helpers';
 import { SystemSVGPaths } from './utils/icon.systems';
 import './classnames.stories.css';
+import { getParameters } from './utils/parameters.utils';
 
 export default {
   component: Button,
@@ -63,77 +63,46 @@ const TemplateDefault: Story<ButtonProps> = (args) => (
   </Button>
 );
 
-const TemplateVariant: Story<ButtonProps> = (args) => (
-  <>
-    <div style={{ marginBottom: '1em' }}>
-      <Button
-        {...args}
-        variant={'primary'}
-        svgPath={args.svgPath}
-        onClick={action('Button story klikk på primary')}
-      >
-        {'Primary knapp'}
+const TemplateExample: Story<ButtonProps> = () => (
+  <div>
+    <Button className={'exampleSpacing'} variant={'primary'}>
+      {'Send inn skjema'}
+    </Button>
+    <Button className={'exampleSpacing'} variant={'secondary'}>
+      {'Avbryt'}
+    </Button>
+    <div>
+      <Button className={'exampleSpacing'} variant={'tertiary'}>
+        {'Logg inn'}
       </Button>
     </div>
-    <div style={{ marginBottom: '1em' }}>
-      <Button
-        {...args}
-        variant={'secondary'}
-        svgPath={args.svgPath}
-        onClick={action('Button story klikk på secondary')}
-      >
-        {'Secondary knapp'}
-      </Button>
-    </div>
-    <div style={{ marginBottom: '1em' }}>
-      <Button
-        {...args}
-        variant={'tertiary'}
-        svgPath={args.svgPath}
-        onClick={action('Button story klikk på tertiary')}
-      >
-        {'Tertiary knapp'}
-      </Button>
-    </div>
-    <div style={{ marginBottom: '1em' }}>
-      <Button {...args} variant={'danger'} svgPath={args.svgPath}>
-        {'Danger variant'}
-      </Button>
-    </div>
-  </>
+    <Button className={'exampleSpacing'} variant={'danger'}>
+      {'Slett'}
+    </Button>
+  </div>
 );
 
-const buttonDefaultParameters = {
-  design: [
-    {
-      name: 'Varianter og tilstander',
-      type: 'figma',
-      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1765%3A8640',
-    },
-    {
-      name: 'Luft og fontstørrelser',
-      type: 'figma',
-      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=123%3A1494',
-    },
-  ],
-};
+const designParameters = [
+  {
+    name: 'Varianter og tilstander',
+    type: 'figma',
+    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1765%3A8640',
+  },
+  {
+    name: 'Luft og fontstørrelser',
+    type: 'figma',
+    url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=123%3A1494',
+  },
+];
 
-export const ButtonDefault: Story<ButtonProps> = TemplateDefault.bind({});
+export const ButtonDefault = TemplateDefault.bind({});
+export const ButtonExample = TemplateExample.bind({});
 ButtonDefault.storyName = 'Default';
-const baseArgs = {
-  children: 'Klikk',
-};
+ButtonExample.storyName = 'Example';
+ButtonDefault.parameters = getParameters(designParameters);
+ButtonExample.parameters = getParameters(designParameters);
 
 ButtonDefault.args = {
-  ...baseArgs,
+  children: 'Klikk',
   variant: 'primary',
 };
-ButtonDefault.parameters = buttonDefaultParameters;
-
-export const Variants: Story<ButtonProps> = TemplateVariant.bind({});
-Variants.args = {
-  ...baseArgs,
-  ariaDescribedby: 'elementid-satt-i-story',
-  variant: 'secondary',
-};
-Variants.parameters = buttonDefaultParameters;

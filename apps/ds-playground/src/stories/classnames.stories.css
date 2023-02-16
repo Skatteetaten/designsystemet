@@ -4,11 +4,11 @@
 
 .dummyClassname {
   color: black;
-  fill: indianred;
+  fill: lightgoldenrodyellow;
 }
 
 .dummyClassname:not(svg) {
-  background-color: indianred;
+  background-color: lightgoldenrodyellow;
 }
 
 .dummyClassname:disabled,
@@ -20,4 +20,13 @@
 
 .scrollToTopContainer:focus {
   background: var(--semantic-interactive-main);
+}
+
+.exampleSpacing {
+  margin-right: var(--spacing-m);
+  margin-bottom: var(--spacing-m);
+}
+
+.flex {
+  display: flex;
 }
