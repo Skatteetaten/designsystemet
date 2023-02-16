@@ -12,7 +12,7 @@ import { SystemSVGPaths } from './utils/icon.systems';
 
 export default {
   component: InlineButton,
-  title: 'Design System / InlineButton',
+  title: 'Komponenter/InlineButton',
   argTypes: {
     // Props
     children: { table: { category: category.props } },

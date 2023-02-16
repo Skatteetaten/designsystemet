@@ -14,7 +14,7 @@ import { category } from '../../.storybook/helpers';
 
 export default {
   component: ScrollToTopButton,
-  title: 'Design System/ScrollToTopButton',
+  title: 'Komponenter/ScrollToTopButton',
   argTypes: {
     // Props
     classNames: {

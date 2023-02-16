@@ -10,7 +10,7 @@ import { category } from '../../.storybook/helpers';
 
 export default {
   component: List,
-  title: 'Design System/List',
+  title: 'Komponenter/List',
   argTypes: {
     // Props
     hasSpacing: {

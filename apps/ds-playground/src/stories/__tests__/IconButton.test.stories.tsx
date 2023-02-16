@@ -41,7 +41,7 @@ const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
 const availableSizes = [...sizeArr].slice(0, 4);
 export default {
   component: IconButton,
-  title: 'Tests / IconButton',
+  title: 'Tester/IconButton',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },

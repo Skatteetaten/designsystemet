@@ -52,6 +52,11 @@ const DSViewports = {
 export const parameters = {
   controls: { sort: 'alpha' },
   viewport: { viewports: DSViewports },
+  options: {
+    storySort: {
+      order: ['Generelt', 'Designtokens', 'Komponenter', 'Tester'],
+    },
+  },
   backgrounds: {
     default: 'light',
     values: [

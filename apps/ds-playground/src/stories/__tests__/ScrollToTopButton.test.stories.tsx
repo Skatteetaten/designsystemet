@@ -46,7 +46,7 @@ const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
 
 export default {
   component: ScrollToTopButton,
-  title: 'Tests / ScrollToTopButton',
+  title: 'Tester/ScrollToTopButton',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },

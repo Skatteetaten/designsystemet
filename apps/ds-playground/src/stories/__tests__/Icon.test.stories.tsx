@@ -43,7 +43,7 @@ const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
 
 export default {
   component: Icon,
-  title: 'Tests/Icon',
+  title: 'Tester/Icon',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },

@@ -10,7 +10,7 @@ import { SystemSVGPaths } from './utils/icon.systems';
 const availableSizes = [...sizeArr].slice(0, 4);
 export default {
   component: IconButton,
-  title: 'Design System/IconButton',
+  title: 'Komponenter/IconButton',
   argTypes: {
     // Props
     isOutlined: {

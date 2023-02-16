@@ -46,7 +46,7 @@ headingLevelArr.forEach(function (level) {
     children: `Heading level ${level}`,
   } as HeadingProps;
 
-  storiesOf('Tests/Heading', module)
+  storiesOf('Tester/Heading', module)
     .addParameters({
       async puppeteerTest(page: Page): Promise<void> {
         await verifyMatchImageSnapShot(page);
@@ -103,7 +103,7 @@ headingAsArr.forEach(function (as) {
     as: as,
   } as HeadingProps;
 
-  storiesOf('Tests/Heading', module)
+  storiesOf('Tester/Heading', module)
     .addParameters({
       async puppeteerTest(page: Page): Promise<void> {
         await verifySnapshotsAndAxeRules(page);

@@ -42,7 +42,7 @@ const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
 
 export default {
   component: MegaButton,
-  title: 'Tests / MegaButton',
+  title: 'Tester/MegaButton',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },

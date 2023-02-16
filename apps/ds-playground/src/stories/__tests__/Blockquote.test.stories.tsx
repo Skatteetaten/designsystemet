@@ -33,7 +33,7 @@ const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
 
 export default {
   component: Blockquote,
-  title: 'Tests / Blockquote',
+  title: 'Tester/Blockquote',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },

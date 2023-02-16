@@ -10,7 +10,7 @@ import { category } from '../../.storybook/helpers';
 
 export default {
   component: LinkGroup,
-  title: 'Design System/LinkGroup',
+  title: 'Komponenter/LinkGroup',
   argTypes: {
     // Props
     children: { control: 'object', table: { category: category.props } },

@@ -17,7 +17,7 @@ import { ThemeIconLabels, ThemeSVGPaths } from './utils/icon.themes';
 
 export default {
   component: Icon,
-  title: 'Design System/Icon',
+  title: 'Komponenter/Icon',
 } as Meta<IconProps>;
 
 const Template: Story<IconProps> = (args) => (

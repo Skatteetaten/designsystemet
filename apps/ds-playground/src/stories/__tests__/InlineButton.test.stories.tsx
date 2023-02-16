@@ -42,7 +42,7 @@ const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
 
 export default {
   component: InlineButton,
-  title: 'Tests / InlineButton',
+  title: 'Tester/InlineButton',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },

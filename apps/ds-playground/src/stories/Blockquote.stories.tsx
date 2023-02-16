@@ -5,7 +5,7 @@ import { category } from '../../.storybook/helpers';
 
 export default {
   component: Blockquote,
-  title: 'Design System/Blockquote',
+  title: 'Komponenter/Blockquote',
   argTypes: {
     // Props
     children: {

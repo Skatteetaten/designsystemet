@@ -8,7 +8,7 @@ import { SystemSVGPaths } from './utils/icon.systems';
 
 export default {
   component: Link,
-  title: 'Design System/Link',
+  title: 'Komponenter/Link',
   argTypes: {
     // Props
     children: { table: { category: category.props } },

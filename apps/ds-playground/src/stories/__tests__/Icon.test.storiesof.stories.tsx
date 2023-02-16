@@ -59,7 +59,7 @@ iconsWithSize.forEach(function (icon) {
       icon.variant === 'systemIcon' ? AccountChildSVGpath : AndreForholdSVGpath,
   } as IconProps;
 
-  storiesOf('Tests/Icon', module)
+  storiesOf('Tester/Icon', module)
     .addParameters({
       async puppeteerTest(page: Page): Promise<void> {
         const classNames = await page.$eval('svg', (el) =>

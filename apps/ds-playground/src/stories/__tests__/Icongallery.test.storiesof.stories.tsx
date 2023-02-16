@@ -7,7 +7,7 @@ import { SystemSVGPaths } from '../utils/icon.systems';
 import { ThemeSVGPaths } from '../utils/icon.themes';
 import { screenShotOptions } from './testUtils/puppeteer.testing.utils';
 
-storiesOf('Tests/Icon Gallery', module)
+storiesOf('Tester/Icon Gallery', module)
   .addParameters({
     async puppeteerTest(page: Page): Promise<void> {
       const image = await page.screenshot(screenShotOptions);

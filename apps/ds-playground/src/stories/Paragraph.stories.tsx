@@ -10,7 +10,7 @@ import { category } from '../../.storybook/helpers';
 
 export default {
   component: Paragraph,
-  title: 'Design System/Paragraph',
+  title: 'Komponenter/Paragraph',
   argTypes: {
     // Props
     children: { table: { category: category.props } },

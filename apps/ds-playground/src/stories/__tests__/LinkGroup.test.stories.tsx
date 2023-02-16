@@ -40,7 +40,7 @@ const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
 
 export default {
   component: LinkGroup,
-  title: 'Tests / LinkGroup',
+  title: 'Tester/LinkGroup',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },

@@ -6,7 +6,7 @@ import { category, htmlEventDescription } from '../../.storybook/helpers';
 
 export default {
   component: MegaButton,
-  title: 'Design System/MegaButton',
+  title: 'Komponenter/MegaButton',
   argTypes: {
     // Props
     children: { table: { category: category.props } },

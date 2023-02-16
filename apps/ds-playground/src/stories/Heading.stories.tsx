@@ -9,7 +9,7 @@ import { category } from '../../.storybook/helpers';
 
 export default {
   component: Heading,
-  title: 'Design System/Heading',
+  title: 'Komponenter/Heading',
   argTypes: {
     // Props
     as: {

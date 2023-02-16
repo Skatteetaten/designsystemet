@@ -14,7 +14,7 @@ import './classnames.stories.css';
 
 export default {
   component: Button,
-  title: 'Design System/Button',
+  title: 'Komponenter/Button',
   argTypes: {
     // Props
     children: { table: { category: category.props } },

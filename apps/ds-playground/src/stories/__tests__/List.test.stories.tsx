@@ -40,7 +40,7 @@ const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
 
 export default {
   component: List,
-  title: 'Tests / List',
+  title: 'Tester/List',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },
