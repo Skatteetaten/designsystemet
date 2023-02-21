@@ -9,11 +9,11 @@ import { toHaveNoViolations } from 'jest-axe';
 import { Page } from 'puppeteer';
 
 import '../classnames.stories.css';
-import { SystemSVGPaths } from '../utils/icon.systems';
 import {
   screenShotOptions,
   wrapper,
 } from './testUtils/puppeteer.testing.utils';
+import { SystemSVGPaths } from '../utils/icon.systems';
 
 const elementId = 'htmlId';
 const systemIconViewBox = '0 0 24 24';

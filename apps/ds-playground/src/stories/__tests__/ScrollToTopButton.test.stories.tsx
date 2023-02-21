@@ -13,12 +13,12 @@ import { toHaveNoViolations } from 'jest-axe';
 import palette from 'libs/ds-core-designtokens/lib/designtokens/palette.json';
 import { Page } from 'puppeteer';
 
-import { category } from '../../../.storybook/helpers';
-import { webComponent } from '../../../.storybook/webcomponent-decorator';
 import {
   screenShotOptions,
   wrapper,
 } from './testUtils/puppeteer.testing.utils';
+import { category } from '../../../.storybook/helpers';
+import { webComponent } from '../../../.storybook/webcomponent-decorator';
 
 const defaultButtonText = 'Til toppen';
 

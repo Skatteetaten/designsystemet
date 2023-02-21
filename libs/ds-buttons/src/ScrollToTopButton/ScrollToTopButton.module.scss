@@ -8,8 +8,8 @@
 .scrollToTopButton {
   padding: var(--spacing-xs);
   border: solid 2px transparent;
-  background: transparent;
   border-radius: 0.25rem;
+  background: transparent;
   color: var(--semantic-interactive-main);
   cursor: pointer;
   opacity: 0;
@@ -53,9 +53,9 @@
     width: var(--spacing-xl);
     height: var(--spacing-xl);
     border: solid 2px var(--semantic-interactive-main);
+    border-radius: 2rem;
     margin: 0 auto var(--spacing-xs) auto;
     background: var(--palette-graphite-0);
-    border-radius: 2rem;
 
     &Icon {
       margin: var(--spacing-xs) auto 0;
@@ -78,8 +78,8 @@
 
   &Label {
     padding: var(--spacing-xs) var(--spacing-s);
-    background: var(--palette-graphite-0);
     border-radius: 999px;
+    background: var(--palette-graphite-0);
     font-size: var(--font-size-s);
     font-weight: var(--font-weight-bold);
     line-height: var(--semantic-line-height-buttons);

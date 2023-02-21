@@ -12,12 +12,12 @@ import { toHaveNoViolations } from 'jest-axe';
 import { Page } from 'puppeteer';
 
 import '../classnames.stories.css';
-import { SystemSVGPaths } from '../utils/icon.systems';
-import { ThemeSVGPaths } from '../utils/icon.themes';
 import {
   screenShotOptions,
   wrapper,
 } from './testUtils/puppeteer.testing.utils';
+import { SystemSVGPaths } from '../utils/icon.systems';
+import { ThemeSVGPaths } from '../utils/icon.themes';
 
 const verifyMatchSnapShot = async (page: Page): Promise<void> => {
   const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);

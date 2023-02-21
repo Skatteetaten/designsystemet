@@ -70,5 +70,6 @@
         "cwd": "dist/libs/ds-forms"
       }
     }
-  }
+  },
+  "name": "ds-forms"
 }

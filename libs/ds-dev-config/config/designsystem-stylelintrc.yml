@@ -1,7 +1,6 @@
 extends:
   - stylelint-config-standard-scss
   - stylelint-config-idiomatic-order
-  - stylelint-config-prettier # has to be last in order to overwrite other configs
 plugins:
   - stylelint-scss
   - stylelint-value-no-unknown-custom-properties

@@ -47,7 +47,7 @@ def overrides = [
     publishSnapshotToNpmOverride : publishSnapshotToNpmOverride,
     preCompile                   : preCompile,
     npmPublishFolder    : './dist/libs',
-    versionStrategy     : [[branch: 'master', versionHint: '0']]
+    versionStrategy     : [[branch: 'master', versionHint: '0.2', minorOnPrefixes: 'release/']]
 ]
 
 

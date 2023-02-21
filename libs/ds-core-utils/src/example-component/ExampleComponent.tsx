@@ -17,7 +17,9 @@ interface ExampleComponentCustomProps
 }
 
 // Her samler jeg interfacet med BaseProps som er et set med properties som alle komponentene våre skal tilby
-export type ExampleComponentProps = ExampleComponentCustomProps & BaseProps;
+export interface ExampleComponentProps
+  extends ExampleComponentCustomProps,
+    BaseProps {}
 
 export const ExampleComponent = forwardRef<
   HTMLButtonElement,

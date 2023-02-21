@@ -70,5 +70,6 @@
         "cwd": "dist/libs/ds-buttons"
       }
     }
-  }
+  },
+  "name": "ds-buttons"
 }

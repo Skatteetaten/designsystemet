@@ -1,10 +1,8 @@
-@import '_reset.css';
-
-@import 'designtokens/containers.css';
-@import 'designtokens/font.css';
-@import 'designtokens/palette.css';
-@import 'designtokens/sizes.css';
-@import 'designtokens/spacing.css';
-
-@import '_default.css';
-@import 'themes/SKE.css';
+@import url('_reset.css');
+@import url('designtokens/containers.css');
+@import url('designtokens/font.css');
+@import url('designtokens/palette.css');
+@import url('designtokens/sizes.css');
+@import url('designtokens/spacing.css');
+@import url('_default.css');
+@import url('themes/SKE.css');

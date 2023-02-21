@@ -8,8 +8,8 @@ import {
 import { action } from '@storybook/addon-actions';
 import { Story, Meta } from '@storybook/react';
 
-import { category, htmlEventDescription } from '../../.storybook/helpers';
 import { SystemSVGPaths } from './utils/icon.systems';
+import { category, htmlEventDescription } from '../../.storybook/helpers';
 import './classnames.stories.css';
 
 export default {

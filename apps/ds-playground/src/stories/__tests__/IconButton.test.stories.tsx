@@ -7,11 +7,11 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { toHaveNoViolations } from 'jest-axe';
 import { Page } from 'puppeteer';
 
-import { SystemSVGPaths } from '../utils/icon.systems';
 import {
   screenShotOptions,
   wrapper,
 } from './testUtils/puppeteer.testing.utils';
+import { SystemSVGPaths } from '../utils/icon.systems';
 
 const defaultSVGPath = Object.values(SystemSVGPaths)[14];
 const alternativeSVGPath = Object.values(SystemSVGPaths)[40];

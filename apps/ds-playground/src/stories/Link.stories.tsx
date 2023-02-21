@@ -3,8 +3,8 @@ import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { action } from '@storybook/addon-actions';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { category, htmlEventDescription } from '../../.storybook/helpers';
 import { SystemSVGPaths } from './utils/icon.systems';
+import { category, htmlEventDescription } from '../../.storybook/helpers';
 
 export default {
   component: Link,
