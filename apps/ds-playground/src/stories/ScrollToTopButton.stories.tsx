@@ -45,7 +45,7 @@ export default {
 } as Meta<ScrollToTopButtonProps>;
 
 const TemplateDefault: Story<ScrollToTopButtonProps> = (args) => (
-  <div style={{ height: '100vh' }}>
+  <div className={'height100vh'}>
     <main className={'scrollToTopContainer'} tabIndex={-1}>
       <ExternalLayout />
       <ScrollToTopButton {...args} />
@@ -54,7 +54,7 @@ const TemplateDefault: Story<ScrollToTopButtonProps> = (args) => (
 );
 
 const TemplateExample: Story<ScrollToTopButtonProps> = () => (
-  <div style={{ height: '100vh' }}>
+  <div className={'height100vh'}>
     <ScrollToTopButton visibilityThreshold={0} />
   </div>
 );

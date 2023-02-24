@@ -14,8 +14,6 @@ import {
   wrapper,
 } from './testUtils/puppeteer.testing.utils';
 
-import '../classnames.stories.css';
-
 const verifyMatchSnapShot = async (page: Page): Promise<void> => {
   const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
   expect(innerHtml).toMatchSnapshot();

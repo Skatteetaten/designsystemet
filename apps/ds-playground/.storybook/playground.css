@@ -14,43 +14,23 @@ code {
   font-family: 'CourierLocalWebFont';
 }
 
-/* Dette er i titlene i Docs fanen */
-h1.sbdocs-h1,
-h2.sbdocs-h2,
-h3.sbdocs-h3 {
-  color: var(--semantic-page-foreground);
+.height100vh {
+  height: 100vh;
 }
-h1.sbdocs-title,
-h2.sbdocs-title,
-h3.sbdocs-title {
-  color: var(--semantic-page-foreground);
+
+.scrollToTopContainer:focus {
+  background: var(--semantic-interactive-main);
 }
-/* Dette er i sub-titlene i Docs Palette fanen */
-div.css-bp0xxt,
-div.css-1rr4qq7,
-div.css-1cic1f4,
-div.css-1nkxwxu,
-div.css-1xrb7qh {
-  color: var(--semantic-page-foreground);
+
+.exampleSpacing {
+  margin-right: var(--spacing-m);
+  margin-bottom: var(--spacing-m);
 }
-/* Dette er i sub-titlene i Docs Icon Galery fanen */
-div.css-87agpt {
-  color: var(--semantic-page-foreground);
+
+.flex {
+  display: flex;
 }
-div.css-15erloe {
-  background: var(--semantic-page-background);
-}
-/* Dette er bakgrunnen og preview området i Docs fanen */
-div.css-zgt7u1,
-div.css-tmvzag {
-  background: var(--semantic-page-background);
-}
-@media (prefers-color-scheme: dark) {
-  div.docs-story.css-kdwx3d {
-    background: var(--semantic-page-background);
-  }
-}
-/* Dette er Table header i Docs fanen */
-.css-tm6i3o.css-tm6i3o .docblock-argstable-head th {
-  color: var(--semantic-page-foreground);
+
+.introImageContainer {
+  background-color: var(--palette-denim-10);
 }

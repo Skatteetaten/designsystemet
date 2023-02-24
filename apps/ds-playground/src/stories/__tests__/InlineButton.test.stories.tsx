@@ -8,7 +8,6 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { toHaveNoViolations } from 'jest-axe';
 import { Page } from 'puppeteer';
 
-import '../classnames.stories.css';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import {
   screenShotOptions,
@@ -77,7 +76,7 @@ export default {
 } as ComponentMeta<typeof InlineButton>;
 
 const Template: ComponentStory<typeof InlineButton> = (args) => (
-  <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+  <div className={'noTransition'} data-test-block>
     <InlineButton {...args} svgPath={args.svgPath}>
       {args.children}
     </InlineButton>
@@ -491,7 +490,7 @@ const OnBlurTemplate: ComponentStory<typeof InlineButton> = (args) => {
     'Klikk på knapp for å teste at onBlur virker'
   );
   return (
-    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+    <div className={'noTransition'} data-test-block>
       <InlineButton {...args} onBlur={(): void => setButtText(nyTekstPaaKnapp)}>
         {buttText}
       </InlineButton>
@@ -533,7 +532,7 @@ const OnClickTemplate: ComponentStory<typeof InlineButton> = (args) => {
     'Klikk på knapp for å teste at onClick virker'
   );
   return (
-    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+    <div className={'noTransition'} data-test-block>
       <InlineButton
         {...args}
         onClick={(): void => setButtText(nyTekstPaaKnapp)}
@@ -577,7 +576,7 @@ const OnFocusTemplate: ComponentStory<typeof InlineButton> = (args) => {
     'Gi knapp fokus for å teste at onFocus virker'
   );
   return (
-    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+    <div className={'noTransition'} data-test-block>
       <InlineButton
         {...args}
         onFocus={(): void => setButtText(nyTekstPaaKnapp)}

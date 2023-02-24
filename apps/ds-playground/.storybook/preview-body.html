@@ -1,0 +1,43 @@
+<style>
+  /* css-regler som brukes til å teste hvordan komponenten blir seende ut med en konsument sine css-regler hvor det er ønskelig at disse skal komme etter css-reglene til en komponent */
+
+  .dummyClassname {
+    color: black;
+    fill: lightgoldenrodyellow;
+  }
+
+  .dummyClassname:not(svg) {
+    background-color: lightgoldenrodyellow;
+  }
+
+  svg.dummyClassname {
+    background-color: black;
+  }
+
+  .scrollToTopContainer svg.dummyClassname {
+    background-color: lightgoldenrodyellow;
+  }
+
+  div#root .dummyClassname svg {
+    fill: black;
+  }
+
+  .dummyClassname:disabled,
+  .dummyClassname:hover,
+  .dummyClassname:focus {
+    background-color: darkred;
+    color: white;
+  }
+
+  div#root .dummyClassname:disabled svg,
+  div#root .dummyClassname:hover svg,
+  div#root .dummyClassname:focus svg {
+    fill: white;
+  }
+
+  div#root .scrollToTopContainer .dummyClassname:disabled svg,
+  div#root .scrollToTopContainer .dummyClassname:hover svg,
+  div#root .scrollToTopContainer .dummyClassname:focus svg {
+    fill: black;
+  }
+</style>

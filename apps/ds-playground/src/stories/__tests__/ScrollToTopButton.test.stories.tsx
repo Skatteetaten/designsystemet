@@ -19,7 +19,6 @@ import {
   screenShotOptions,
   wrapper,
 } from './testUtils/puppeteer.testing.utils';
-
 const defaultButtonText = 'Til toppen';
 
 const verifyMatchSnapShot = async (page: Page): Promise<void> => {
@@ -85,7 +84,7 @@ export default {
 } as Meta<ScrollToTopButtonProps>;
 
 const Template: ComponentStory<typeof ScrollToTopButton> = (args) => (
-  <div style={{ height: '100vh' }} className={'noTransition'} data-test-block>
+  <div className={'noTransition height100vh'} data-test-block>
     <main className={'scrollToTopContainer'} tabIndex={-1}>
       <ExternalLayout />
       <ScrollToTopButton {...args} />
@@ -156,7 +155,7 @@ export const WithCustomCss = Template.bind({});
 WithCustomCss.storyName = 'With Custom CSS (FA3 - 1 av 2)';
 WithCustomCss.args = {
   ...defaultArgs,
-  className: 'dummyClassname ',
+  className: 'dummyClassname',
 };
 WithCustomCss.argTypes = {
   ...WithCustomCss.argTypes,
@@ -414,7 +413,7 @@ const TemplateWithShadowDom: ComponentStory<typeof ScrollToTopButton> = (
   const element = document.querySelector('scrolltotop-customelement');
   const shadowRoot = element?.shadowRoot;
   return (
-    <div style={{ height: '100vh' }} className={'noTransition'} data-test-block>
+    <div className={'noTransition height100vh'} data-test-block>
       <main className={'scrollToTopContainer'} tabIndex={-1}>
         <ExternalLayout />
         <ScrollToTopButton {...args} shadowRootNode={shadowRoot ?? undefined} />

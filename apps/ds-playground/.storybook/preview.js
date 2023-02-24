@@ -10,6 +10,7 @@ import { useEffect, useGlobals } from '@storybook/client-api';
 import { category } from './helpers';
 import '@skatteetaten/ds-core-designtokens/index.css';
 import './playground.css';
+import '../src/stories/designtokens/designtokens.css';
 
 const LanguageUpdater = (Story, context) => {
   const [{ locale }, updateGlobals] = useGlobals();
@@ -48,7 +49,6 @@ const DSViewports = {
   ...makeViewPort('--breakpoint-xl'),
 };
 
-// TODO FRONT-930 - sortering på prop-kategorier i argsTable
 export const parameters = {
   controls: { sort: 'alpha' },
   viewport: { viewports: DSViewports },

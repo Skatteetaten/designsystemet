@@ -3,26 +3,57 @@
     transition: none !important;
     transition-timing-function: unset !important;
   }
-  /* slik at transition ikke ødelegger snapshots når man setter en annen bakgrunnsfarge*/
+  /* slik at transition ikke ødelegger snapshots når man setter en annen bakgrunnsfarge */
   .sb-show-main {
     transition: none !important;
-    transition-timing-function: none !important;
+    transition-timing-function: unset !important;
+  }
+
+  .sb-show-main.sb-main-padded {
+    margin: 1em;
+  }
+
+  /* sub-titlene/ikonnavnene i Docs Icon Galery fanen icongallery */
+  .docblock-icongallery div {
+    color: var(--semantic-page-foreground);
   }
 
   /* slik at hele ikonnavnet vises */
-  .docblock-icongallery .css-ngu85f {
+  .docblock-icongallery > div {
     min-width: 220px;
   }
 
   /* slik at tema-ikon får riktig default størrelse */
-  .docblock-icongallery .css-ngu85f svg[viewBox='0 0 48 48'] {
+  .docblock-icongallery > div svg[viewBox='0 0 48 48'] {
     width: var(--size-extra-large);
     height: var(--size-extra-large);
   }
 
   /* slik at system-ikon får riktig default størrelse */
-  .docblock-icongallery .css-ngu85f svg[viewBox='0 0 24 24'] {
+  .docblock-icongallery > div svg[viewBox='0 0 24 24'] {
     width: var(--size-medium);
     height: var(--size-medium);
+  }
+
+  /* titlene i Docs fanen */
+  h1.sbdocs-h1,
+  h2.sbdocs-h2,
+  h3.sbdocs-h3 {
+    color: var(--semantic-page-foreground);
+  }
+  h1.sbdocs-title,
+  h2.sbdocs-title,
+  h3.sbdocs-title {
+    color: var(--semantic-page-foreground);
+  }
+
+  /* table header i Docs fanen */
+  table.docblock-argstable .docblock-argstable-head th {
+    color: var(--semantic-page-foreground);
+  }
+
+  /* bakgrunnen området i Docs fanen */
+  .sbdocs.sbdocs-wrapper {
+    background: var(--semantic-page-background);
   }
 </style>

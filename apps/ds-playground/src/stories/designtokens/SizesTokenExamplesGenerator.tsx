@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-import './designtokens.css';
 const sizesJson = require('@skatteetaten/ds-core-designtokens/designtokens/sizes.json');
 
 export const SizesTokenExamplesGenerator = (): JSX.Element => {
@@ -8,18 +7,19 @@ export const SizesTokenExamplesGenerator = (): JSX.Element => {
   return (
     <>
       {Object.keys(sizesTokens).map((value: string, index: number) => {
+        const sizeValue = sizesTokens[value];
+        const sizeClassName = `sizeToken${index}`;
+        const cssRule = `.${sizeClassName} { height: ${sizeValue}; width: ${sizeValue}; }`;
+
         return (
           <>
+            <style>{cssRule}</style>
             <p className={'tokenValue'}>
               <strong>{`${value} (${sizesTokens[value]})`}</strong>
             </p>
             <div
               key={index}
-              className={`sizeTokenExample`}
-              style={{
-                height: sizesTokens[value],
-                width: sizesTokens[value],
-              }}
+              className={`sizeTokenExample ${sizeClassName}`}
             ></div>
           </>
         );

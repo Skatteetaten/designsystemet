@@ -11,7 +11,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { toHaveNoViolations } from 'jest-axe';
 import { Page } from 'puppeteer';
 
-import '../classnames.stories.css';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { ThemeSVGPaths } from '../utils/icon.themes';
 import {
@@ -74,7 +73,7 @@ const defaultArgs: IconComponentCommonProps = {
 };
 
 const Template: ComponentStory<typeof Icon> = (args) => (
-  <div style={{ width: '150px' }} data-test-block>
+  <div data-test-block>
     <Icon {...args} />
   </div>
 );

@@ -84,7 +84,7 @@ const defaultArgs: IconButtonProps = {
 };
 
 const Template: ComponentStory<typeof IconButton> = (args) => (
-  <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+  <div className={'noTransition'} data-test-block>
     <IconButton {...args} title={args.title} />
   </div>
 );
@@ -648,7 +648,7 @@ WithAccesskey.parameters = {
 const OnBlurTemplate: ComponentStory<typeof IconButton> = (args) => {
   const [svgPath, setSvgPath] = useState(defaultSVGPath);
   return (
-    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+    <div className={'noTransition'} data-test-block>
       <IconButton
         {...args}
         svgPath={svgPath}
@@ -685,7 +685,7 @@ WithOnBlur.parameters = {
 const OnClickTemplate: ComponentStory<typeof IconButton> = (args) => {
   const [svgPath, setSvgPath] = useState(defaultSVGPath);
   return (
-    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+    <div className={'noTransition'} data-test-block>
       <IconButton
         {...args}
         svgPath={svgPath}
@@ -720,7 +720,7 @@ WithOnClick.parameters = {
 const OnFocusTemplate: ComponentStory<typeof IconButton> = (args) => {
   const [svgPath, setSvgPath] = useState(defaultSVGPath);
   return (
-    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+    <div className={'noTransition'} data-test-block>
       <IconButton
         {...args}
         svgPath={svgPath}

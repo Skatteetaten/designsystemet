@@ -10,7 +10,6 @@ import { storiesOf } from '@storybook/react';
 import { toHaveNoViolations } from 'jest-axe';
 import { Page } from 'puppeteer';
 
-import '../classnames.stories.css';
 import { screenShotOptions } from './testUtils/puppeteer.testing.utils';
 
 const iconsWithSize = [

@@ -8,7 +8,6 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { toHaveNoViolations } from 'jest-axe';
 import { Page } from 'puppeteer';
 
-import '../classnames.stories.css';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import {
   screenShotOptions,
@@ -473,7 +472,7 @@ const OnClickTemplate: ComponentStory<typeof Link> = (args) => {
     'Klikk på lenken for å teste onClick event'
   );
   return (
-    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+    <div className={'noTransition'} data-test-block>
       <Link
         {...args}
         onClick={(e): void => {

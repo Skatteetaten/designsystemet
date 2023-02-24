@@ -21,7 +21,7 @@ export default {
 } as Meta<IconProps>;
 
 const Template: Story<IconProps> = (args) => (
-  <div style={{ width: '150px' }}>
+  <div>
     <Icon {...args} />
   </div>
 );

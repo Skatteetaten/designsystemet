@@ -38,6 +38,22 @@
   border-collapse: collapse;
 }
 
+.paletteTableCol65 {
+  width: 65%;
+}
+
+.paletteTableCol25 {
+  width: 25%;
+}
+
+.paletteTableCol15 {
+  width: 15%;
+}
+
+.paletteTableCol10 {
+  width: 10%;
+}
+
 .paletteTableHeader {
   padding-bottom: var(--spacing-s);
   text-align: start;
@@ -48,6 +64,12 @@
   border-top: 2px solid var(--semantic-divider-100);
 }
 
+.paletteTableDesigntoken {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10%;
+}
+
 .fontSectionHeader {
   margin-top: var(--spacing-xxl);
   font-size: var(--font-size-xxl);
@@ -56,4 +78,8 @@
 
 .fontSectionHeader:first-of-type {
   margin-top: 0;
+}
+
+.layoutContainer {
+  background-color: var(--palette-burgundy-10);
 }

@@ -10,7 +10,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { toHaveNoViolations } from 'jest-axe';
 import { Page } from 'puppeteer';
 
-import '../classnames.stories.css';
 import {
   screenShotOptions,
   wrapper,
@@ -72,7 +71,7 @@ export default {
 } as ComponentMeta<typeof MegaButton>;
 
 const Template: ComponentStory<typeof MegaButton> = (args) => (
-  <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+  <div className={'noTransition'} data-test-block>
     <MegaButton {...args}>{args.children}</MegaButton>
   </div>
 );
@@ -512,7 +511,7 @@ const OnBlurTemplate: ComponentStory<typeof MegaButton> = (args) => {
     'Klikk på knapp for å teste onBlur event'
   );
   return (
-    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+    <div className={'noTransition'} data-test-block>
       <MegaButton {...args} onBlur={(): void => setButtText('Knapp er bluret')}>
         {buttText}
       </MegaButton>
@@ -554,7 +553,7 @@ const OnClickTemplate: ComponentStory<typeof MegaButton> = (args) => {
     'Klikk på knapp for å teste onClick event'
   );
   return (
-    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+    <div className={'noTransition'} data-test-block>
       <MegaButton
         {...args}
         onClick={(): void => setButtText('Endret Tekst på Knapp')}
@@ -598,7 +597,7 @@ const OnFocusTemplate: ComponentStory<typeof MegaButton> = (args) => {
     'Klikk på knapp for å teste onFocus event'
   );
   return (
-    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+    <div className={'noTransition'} data-test-block>
       <MegaButton
         {...args}
         onFocus={(): void => setButtText('Knapp har fått fokus')}

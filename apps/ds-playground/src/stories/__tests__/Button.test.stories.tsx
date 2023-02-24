@@ -74,7 +74,7 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => (
-  <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+  <div className={'noTransition'} data-test-block>
     <Button {...args} variant={args.variant} svgPath={args.svgPath}>
       {args.children}
     </Button>
@@ -553,7 +553,7 @@ const OnBlurTemplate: ComponentStory<typeof Button> = (args) => {
     'Klikk på knapp for å teste onBlur event'
   );
   return (
-    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+    <div className={'noTransition'} data-test-block>
       <Button
         {...args}
         variant={args.variant}
@@ -599,7 +599,7 @@ const OnClickTemplate: ComponentStory<typeof Button> = (args) => {
     'Klikk på knapp for å teste onClick event'
   );
   return (
-    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+    <div className={'noTransition'} data-test-block>
       <Button
         {...args}
         variant={args.variant}
@@ -643,7 +643,7 @@ const OnFocusTemplate: ComponentStory<typeof Button> = (args) => {
     'Klikk på knapp for å teste onFocus event'
   );
   return (
-    <div style={{ margin: '1em' }} className={'noTransition'} data-test-block>
+    <div className={'noTransition'} data-test-block>
       <Button
         {...args}
         variant={args.variant}
