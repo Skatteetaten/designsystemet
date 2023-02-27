@@ -285,7 +285,9 @@ WithMarkup.args = {
     </List.Element>,
     <List.Element key={'listElement_2'}>
       {'Behovet til brukeren er veldig viktig. '}
-      <a href={'#'}>{'Er du sikker på at du kjenner behovet til brukeren?'}</a>
+      <a href={'#root'}>
+        {'Er du sikker på at du kjenner behovet til brukeren?'}
+      </a>
     </List.Element>,
     <List.Element key={'listElement_3'}>
       {'Snakk med andre om '}

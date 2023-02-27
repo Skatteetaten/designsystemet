@@ -2,7 +2,10 @@
   "extends": ["./libs/ds-dev-config/config/designsystem-eslintrc.yml"],
   "root": true,
   "ignorePatterns": ["**/*"],
-  "plugins": ["@nrwl/nx"],
+  "plugins": ["@nrwl/nx", "eslint-plugin-no-inline-styles"],
+  "rules": {
+    "no-inline-styles/no-inline-styles": 2
+  },
   "overrides": [
     {
       "files": ["*.stories.tsx"],
