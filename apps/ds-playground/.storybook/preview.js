@@ -1,5 +1,4 @@
 import breakpoints from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
-import palette from '@skatteetaten/ds-core-designtokens/designtokens/palette.json';
 import {
   dsI18n,
   getCommonClassNameDefault,
@@ -62,11 +61,15 @@ export const parameters = {
     values: [
       {
         name: 'light',
-        value: palette[':root,\n:host']['--palette-graphite-0'],
+        value: 'var(--palette-graphite-0)',
       },
       {
         name: 'dark',
-        value: palette[':root,\n:host']['--palette-graphite-100'],
+        value: 'var(--palette-graphite-100)',
+      },
+      {
+        name: 'themePrimary',
+        value: 'var(--theme-primary)',
       },
     ],
   },

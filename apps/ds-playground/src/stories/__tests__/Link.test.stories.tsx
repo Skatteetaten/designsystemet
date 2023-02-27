@@ -407,7 +407,7 @@ WithColor.argTypes = {
 };
 WithColor.parameters = {
   backgrounds: {
-    default: 'dark',
+    default: 'themePrimary',
   },
   async puppeteerTest(page: Page): Promise<void> {
     await verifyMatchImageSnapShot(page);

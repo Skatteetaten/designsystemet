@@ -22,21 +22,11 @@
   }
 
   &_white {
-    color: var(--palette-graphite-0);
-    text-decoration-color: var(--palette-graphite-0);
-
-    .icon {
-      fill: var(--palette-graphite-0);
-    }
+    --semantic-interactive-main: var(--palette-graphite-0);
 
     &:hover {
-      background-color: var(--palette-graphite-0);
-      color: inherit;
-      text-decoration-color: inherit;
-
-      .icon {
-        fill: inherit;
-      }
+      --semantic-interactive-main: var(--theme-primary);
+      --semantic-interactive-background: var(--palette-graphite-0);
     }
 
     &:focus {
@@ -46,13 +36,8 @@
     &:active {
       @extend %focus;
 
-      background-color: var(--palette-graphite-0);
-      color: inherit;
-      text-decoration-color: inherit;
-
-      .icon {
-        fill: inherit;
-      }
+      --semantic-interactive-foreground: var(--theme-primary);
+      --semantic-interactive-background: var(--palette-graphite-0);
     }
   }
 
