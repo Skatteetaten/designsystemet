@@ -6,7 +6,7 @@ import {
 } from '@skatteetaten/ds-typography';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { category } from '../../.storybook/helpers';
+import { category } from '../../../.storybook/helpers';
 
 export default {
   component: List,

@@ -6,7 +6,7 @@ import {
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { category } from '../../.storybook/helpers';
+import { category } from '../../../.storybook/helpers';
 
 export default {
   component: LinkGroup,

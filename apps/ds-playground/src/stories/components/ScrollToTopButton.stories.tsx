@@ -10,7 +10,7 @@ import { Meta, Story } from '@storybook/react';
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import palette from 'libs/ds-core-designtokens/lib/designtokens/palette.json';
 
-import { category } from '../../.storybook/helpers';
+import { category } from '../../../.storybook/helpers';
 
 export default {
   component: ScrollToTopButton,

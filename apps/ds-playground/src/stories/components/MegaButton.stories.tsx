@@ -2,7 +2,7 @@ import { MegaButton } from '@skatteetaten/ds-buttons';
 import { action } from '@storybook/addon-actions';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { category, htmlEventDescription } from '../../.storybook/helpers';
+import { category, htmlEventDescription } from '../../../.storybook/helpers';
 
 export default {
   component: MegaButton,

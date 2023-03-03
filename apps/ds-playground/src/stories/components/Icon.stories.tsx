@@ -11,9 +11,9 @@ import {
 import { ArgsTable, PRIMARY_STORY } from '@storybook/addon-docs';
 import { Story, Meta } from '@storybook/react';
 
-import { category } from '../../.storybook/helpers';
-import { SystemIconLabels, SystemSVGPaths } from './utils/icon.systems';
-import { ThemeIconLabels, ThemeSVGPaths } from './utils/icon.themes';
+import { category } from '../../../.storybook/helpers';
+import { SystemIconLabels, SystemSVGPaths } from '../utils/icon.systems';
+import { ThemeIconLabels, ThemeSVGPaths } from '../utils/icon.themes';
 
 export default {
   component: Icon,

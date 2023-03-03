@@ -7,8 +7,8 @@ import { AddOutlineSVGpath, CancelSVGpath } from '@skatteetaten/ds-icons';
 import { action } from '@storybook/addon-actions';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import { category, htmlEventDescription } from '../../.storybook/helpers';
-import { SystemSVGPaths } from './utils/icon.systems';
+import { category, htmlEventDescription } from '../../../.storybook/helpers';
+import { SystemSVGPaths } from '../utils/icon.systems';
 
 export default {
   component: InlineButton,
