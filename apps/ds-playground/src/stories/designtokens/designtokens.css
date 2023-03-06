@@ -57,3 +57,7 @@
 .fontSectionHeader:first-of-type {
   margin-top: 0;
 }
+
+.layoutContainer {
+  background-color: var(--palette-burgundy-10);
+}

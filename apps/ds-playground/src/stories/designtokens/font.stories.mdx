@@ -1,47 +1,54 @@
-<!-- palette.mdx -->
-
-import { Meta, Story } from '@storybook/addon-docs';
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
 import { FontTokenExamplesGenerator } from './FontTokenExamplesGenerator';
+import { TokensList } from './TokensList';
+
+# Font
 
 <Meta title="Designtokens/Font" />
 
-<Story
-  name="Font"
-  parameters={{
-    controls: {
-      disabled: true,
-    },
-    actions: {
-      disabled: true,
-    },
-    design: [
-      {
-        name: 'Font',
-        type: 'figma',
-        url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=16083%3A25235',
+## Font-size
+
+<FontTokenExamplesGenerator
+  propertyType={'font-size'}
+  sampleText={
+    'Skatteetaten ønsker å gjøre det enklere å gjøre rett og vanskeligere å gjøre feil'
+  }
+/>
+
+## Font-weight
+
+<FontTokenExamplesGenerator
+  propertyType={'font-weight'}
+  sampleText={
+    'Skatteetaten ønsker å gjøre det enklere å gjøre rett og vanskeligere å gjøre feil'
+  }
+/>
+
+## Line-height
+
+<FontTokenExamplesGenerator
+  propertyType={'line-height'}
+  sampleText={
+    'Skatteetaten ønsker å gjøre det enklere å gjøre rett og vanskeligere å gjøre feil, redusere skattekriminalitet, forvalte informasjon for å bidra til forenkling og digitalisering, jobbe sammen fra start og sist, bruke data, analyse og maskinlæring i stor skala i oppgaveløsningen. Alt for å sikre finansieringen av velferdsstaten.'
+  }
+/>
+
+<Canvas withSource="none">
+  <Story
+    name="Font"
+    parameters={{
+      controls: {
+        disabled: true,
       },
-    ],
-  }}
->
-  <div className="fontSectionHeader">Font-size</div>
-  <FontTokenExamplesGenerator
-    propertyType={'font-size'}
-    sampleText={
-      'Skatteetaten ønsker å gjøre det enklere å gjøre rett og vanskeligere å gjøre feil'
-    }
-  />
-  <div className="fontSectionHeader">Font-weight</div>
-  <FontTokenExamplesGenerator
-    propertyType={'font-weight'}
-    sampleText={
-      'Skatteetaten ønsker å gjøre det enklere å gjøre rett og vanskeligere å gjøre feil'
-    }
-  />
-  <div className="fontSectionHeader">Line-height</div>
-  <FontTokenExamplesGenerator
-    propertyType={'line-height'}
-    sampleText={
-      'Skatteetaten ønsker å gjøre det enklere å gjøre rett og vanskeligere å gjøre feil, redusere skattekriminalitet, forvalte informasjon for å bidra til forenkling og digitalisering, jobbe sammen fra start og sist, bruke data, analyse og maskinlæring i stor skala i oppgaveløsningen. Alt for å sikre finansieringen av velferdsstaten.'
-    }
-  />
-</Story>
+      actions: {
+        disabled: true,
+      },
+      previewTabs: {
+        canvas: { hidden: true },
+      },
+      viewMode: 'docs',
+    }}
+  >
+    <TokensList tokenType={'font'} />
+  </Story>
+</Canvas>
