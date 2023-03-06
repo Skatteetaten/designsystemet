@@ -152,7 +152,7 @@ WithId.parameters = {
 
 // Når ScrollToTopButton har en custom CSS, så vises custom stil
 export const WithCustomCss = Template.bind({});
-WithCustomCss.storyName = 'With Custom CSS (FA3 - 1 av 2)';
+WithCustomCss.storyName = 'With Custom CSS (FA3)';
 WithCustomCss.args = {
   ...defaultArgs,
   className: 'dummyClassname',
@@ -177,7 +177,7 @@ WithCustomCss.parameters = {
 
 // Når ScrollToTopButton har en custom classNames, så vises custom stil på riktig sted
 export const WithCustomClassNames = Template.bind({});
-WithCustomClassNames.storyName = 'With Custom classNames (FA3 - 2 av 2)';
+WithCustomClassNames.storyName = 'With Custom ClassNames (FA3)';
 WithCustomClassNames.args = {
   ...defaultArgs,
   classNames: {
@@ -256,7 +256,7 @@ WithDataTestid.parameters = {
 
 // Når ScrollToTopButton instansieres, så får den riktige default-verdier og rendrer riktig
 export const Defaults = Template.bind({});
-Defaults.storyName = 'Defaults (A1, A3 - 1 av 2, B4 - 1 av 2)';
+Defaults.storyName = 'Defaults (A1, A3, B4)';
 Defaults.args = {
   ...defaultArgs,
 };
@@ -321,7 +321,7 @@ WithChildren.parameters = {
 
 // Når ScrollToTopButton lastes i en small skjerm så får den riktig plassering
 export const WithMobileScreen = Template.bind({});
-WithMobileScreen.storyName = 'With Small screen (A5)';
+WithMobileScreen.storyName = 'With Small Screen (A5)';
 WithMobileScreen.args = {
   ...defaultArgs,
 };
@@ -337,7 +337,7 @@ WithMobileScreen.parameters = {
 
 // Når ScrollToTopButton lastes i en bred skjerm så får den riktig plassering
 export const WithWideScreen = Template.bind({});
-WithWideScreen.storyName = 'With Wide screen (A6)';
+WithWideScreen.storyName = 'With Wide Screen (A6)';
 WithWideScreen.args = {
   ...defaultArgs,
 };
@@ -354,7 +354,7 @@ WithWideScreen.parameters = {
 // Når ScrollToTopButton har visibilityThreshold så vises/skjules knappen ved riktig innslagspunkt for scroll
 export const WithVisibilityThreshold = Template.bind({});
 WithVisibilityThreshold.storyName =
-  'With visibilityThreshold and scrolling (A7, A8)';
+  'With VisibilityThreshold and Scrolling (A7, A8)';
 WithVisibilityThreshold.args = {
   ...defaultArgs,
   visibilityThreshold: 3,
@@ -423,7 +423,7 @@ const TemplateWithShadowDom: ComponentStory<typeof ScrollToTopButton> = (
 };
 // Når ScrollToTopButton lastes i en shadowDom så tegnes den riktig og klarer å sette focus til main elementet som befinner i et custom element
 export const WithShadowDom = TemplateWithShadowDom.bind({});
-WithShadowDom.storyName = 'With shadowDom (b4 - 2 av 2)';
+WithShadowDom.storyName = 'With ShadowDom (B4)';
 WithShadowDom.args = {
   ...defaultArgs,
 };
@@ -444,7 +444,7 @@ WithShadowDom.parameters = {
 
 // Innbakte tekster bruker riktig key
 export const WithTranslation = Template.bind({});
-WithTranslation.storyName = 'With translation (A4)';
+WithTranslation.storyName = 'With Translation (A4)';
 
 WithTranslation.args = {
   ...defaultArgs,

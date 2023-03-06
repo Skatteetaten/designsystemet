@@ -79,7 +79,7 @@ iconsWithSize.forEach(function (icon) {
     .add(
       `Icon With Size ${icon.size} (${icon.variant}) - (A${
         icon.variant === 'systemIcon' ? '2' : '3'
-      } delvis)`,
+      })`,
       () => <Icon {...iconArgs} />,
       {
         component: Icon,

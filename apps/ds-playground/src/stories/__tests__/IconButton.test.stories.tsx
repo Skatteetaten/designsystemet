@@ -209,7 +209,7 @@ WithDataTestid.parameters = {
 
 // Når IconButton instansieres, får den riktige default-verdier og rendrer riktig i ulike tilstander
 export const Defaults = Template.bind({});
-Defaults.storyName = 'Defaults (A1 - 1 av 9, B1 - 1 av 2, B2)';
+Defaults.storyName = 'Defaults (A1, B1, B2)';
 Defaults.args = {
   ...defaultArgs,
 };
@@ -266,7 +266,7 @@ Defaults.parameters = {
 
 // Når IconButton er outlined, så vises knappen med ramme og rendrer riktig i ulike tilstander
 export const WithOutline = Template.bind({});
-WithOutline.storyName = 'With Outline (A1 - 2 av 9)';
+WithOutline.storyName = 'With Outline (A1)';
 WithOutline.args = {
   ...defaultArgs,
   isOutlined: true,
@@ -300,7 +300,7 @@ WithOutline.parameters = {
 
 // Når IconButton har et custom ikon, så vises dette ikonet
 export const WithCustomSVGPath = Template.bind({});
-WithCustomSVGPath.storyName = 'With Custom SVGPath (A1 - 3 av 9)';
+WithCustomSVGPath.storyName = 'With Custom SVGPath (A1)';
 WithCustomSVGPath.args = {
   ...defaultArgs,
   svgPath: <path d={'M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z'} />,
@@ -318,7 +318,7 @@ WithCustomSVGPath.parameters = {
 
 // Når IconButton har size extraSmall, så vises en liten knapp uten ramme som rendrer riktig i ulike tilstander
 export const WithSizeExtraSmall = Template.bind({});
-WithSizeExtraSmall.storyName = 'With Size extraSmall (A1 - 4 av 9)';
+WithSizeExtraSmall.storyName = 'With Size extraSmall (A1)';
 WithSizeExtraSmall.args = {
   ...defaultArgs,
   size: 'extraSmall',
@@ -353,7 +353,7 @@ WithSizeExtraSmall.parameters = {
 
 // Når IconButton har size small, så vises en liten knapp uten ramme som rendrer riktig i ulike tilstander
 export const WithSizeSmall = Template.bind({});
-WithSizeSmall.storyName = 'With Size Small (A1 - 5 av 9)';
+WithSizeSmall.storyName = 'With Size Small (A1)';
 WithSizeSmall.args = {
   ...defaultArgs,
   size: 'small',
@@ -388,7 +388,7 @@ WithSizeSmall.parameters = {
 
 // Når IconButton har size large, så vises en stor knapp uten ramme som rendrer riktig i ulike tilstander
 export const WithSizeLarge = Template.bind({});
-WithSizeLarge.storyName = 'With Size Large (A1 - 6 av 9)';
+WithSizeLarge.storyName = 'With Size Large (A1)';
 WithSizeLarge.args = {
   ...defaultArgs,
   size: 'large',
@@ -424,7 +424,7 @@ WithSizeLarge.parameters = {
 // Når IconButton har size extraSmall og er outlined, så vises en liten knapp med ramme som rendrer riktig i ulike tilstander
 export const WithSizeExtraSmallAndOutline = Template.bind({});
 WithSizeExtraSmallAndOutline.storyName =
-  'With Size extraSmall and Outline (A1 - 7 av 9)';
+  'With Size extraSmall and Outline (A1)';
 WithSizeExtraSmallAndOutline.args = {
   ...defaultArgs,
   size: 'extraSmall',
@@ -461,7 +461,7 @@ WithSizeExtraSmallAndOutline.parameters = {
 
 // Når IconButton har size small og er outlined, så vises en liten knapp med ramme som rendrer riktig i ulike tilstander
 export const WithSizeSmallAndOutline = Template.bind({});
-WithSizeSmallAndOutline.storyName = 'With Size Small and Outline (A1 - 8 av 9)';
+WithSizeSmallAndOutline.storyName = 'With Size Small and Outline (A1)';
 WithSizeSmallAndOutline.args = {
   ...defaultArgs,
   size: 'small',
@@ -498,7 +498,7 @@ WithSizeSmallAndOutline.parameters = {
 
 // Når IconButton har size large og er outlined, så vises en stor knapp med ramme som rendrer riktig i ulike tilstander
 export const WithSizeLargeAndOutline = Template.bind({});
-WithSizeLargeAndOutline.storyName = 'With Size Large and Outline (A1 - 9 av 9)';
+WithSizeLargeAndOutline.storyName = 'With Size Large and Outline (A1)';
 WithSizeLargeAndOutline.args = {
   ...defaultArgs,
   size: 'large',
@@ -535,7 +535,7 @@ WithSizeLargeAndOutline.parameters = {
 
 // Når IconButton er disabled, så vises knappen uten ramme i disabled stil
 export const Disabled = Template.bind({});
-Disabled.storyName = 'Disabled (B5 - 1 av 2)';
+Disabled.storyName = 'Disabled (B5)';
 Disabled.args = {
   ...defaultArgs,
   disabled: true,
@@ -555,7 +555,7 @@ Disabled.parameters = {
 
 // Når IconButton er disabled og outlined, så vises knappen med ramme i disabled stil
 export const DisabledWithOutline = Template.bind({});
-DisabledWithOutline.storyName = 'Disabled With Outline (B5 - 2 av 2)';
+DisabledWithOutline.storyName = 'Disabled With Outline (B5)';
 DisabledWithOutline.args = {
   ...defaultArgs,
   isOutlined: true,
@@ -577,7 +577,7 @@ DisabledWithOutline.parameters = {
 
 // Når IconButton har prop type, så har button-elementet type satt
 export const WithType = Template.bind({});
-WithType.storyName = 'With Type (B1 - 2 av 2)';
+WithType.storyName = 'With Type (B1)';
 WithType.args = {
   ...defaultArgs,
   type: 'submit',

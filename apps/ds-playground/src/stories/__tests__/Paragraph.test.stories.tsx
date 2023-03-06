@@ -244,7 +244,7 @@ const TemplateWithMarkup: ComponentStory<typeof Paragraph> = (args) => (
 
 // Når Paragraph inkluderer markup, så får markupen riktig styling
 export const WithMarkup = TemplateWithMarkup.bind({});
-WithMarkup.storyName = 'With Markup (A2, B2 - 2 av 2)';
+WithMarkup.storyName = 'With Markup (A2, B2)';
 WithMarkup.args = {
   ...defaultArgs,
 };
@@ -268,7 +268,7 @@ const TemplateWithTwoParagraphs: ComponentStory<typeof Paragraph> = (args) => (
 
 // Når Paragraph instansieres, får den riktige default-verdier
 export const Defaults = TemplateWithTwoParagraphs.bind({});
-Defaults.storyName = 'Defaults Variant Standard (A1 - 1 av 2, B2 - 1 av 2)';
+Defaults.storyName = 'Defaults Variant Standard (A1, B2)';
 Defaults.args = {
   ...defaultArgs,
 };
@@ -282,7 +282,7 @@ Defaults.parameters = {
 
 // Når Paragraph er et ingress, så får elementet riktige verdier
 export const VariantIngress = TemplateWithTwoParagraphs.bind({});
-VariantIngress.storyName = 'Variant Ingress (A1 - 2 av 2)';
+VariantIngress.storyName = 'Variant Ingress (A1)';
 VariantIngress.args = {
   ...defaultArgs,
   variant: 'ingress',
@@ -297,7 +297,7 @@ VariantIngress.parameters = {
 
 // Når Paragraph har spacing, så får elementet en margin under avsnittet
 export const WithSpacing = TemplateWithTwoParagraphs.bind({});
-WithSpacing.storyName = 'With Spacing Variant Standard (A3 - 1 av 2)';
+WithSpacing.storyName = 'With Spacing Variant Standard (A3)';
 WithSpacing.args = {
   ...defaultArgs,
   hasSpacing: true,
@@ -312,8 +312,7 @@ WithSpacing.parameters = {
 
 // Når Paragraph er et ingress og har spacing, så får elementet riktige verdier og en margin under ingresset
 export const VariantIngressWithSpacing = TemplateWithTwoParagraphs.bind({});
-VariantIngressWithSpacing.storyName =
-  'With Spacing Variant Ingress (A3 - 2 av 2)';
+VariantIngressWithSpacing.storyName = 'With Spacing Variant Ingress (A3)';
 VariantIngressWithSpacing.args = {
   ...defaultArgs,
   hasSpacing: true,

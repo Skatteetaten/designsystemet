@@ -198,8 +198,7 @@ WithDataTestid.parameters = {
 
 // Når List instansieres, får den riktige default-verdier
 export const Defaults = Template.bind({});
-Defaults.storyName =
-  'Defaults Variant Bullet (A1 - 1 av 3, B1 - 1 av 2, B2 - 1 av 2)';
+Defaults.storyName = 'Defaults Variant Bullet (A1, B1, B2)';
 Defaults.argTypes = {
   ...Defaults.argTypes,
   children: {
@@ -221,7 +220,7 @@ Defaults.parameters = {
 
 // Når List har en as, får elementet riktig tag og ser riktig ut
 export const VariantNumber = Template.bind({});
-VariantNumber.storyName = 'Variant Number(A1 - 2 av 3, B1 - 2 av 2)';
+VariantNumber.storyName = 'Variant Number(A1, B1)';
 VariantNumber.argTypes = {
   ...VariantNumber.argTypes,
   as: {
@@ -243,7 +242,7 @@ VariantNumber.parameters = {
 
 // Når ListItem har en veldig lang tekst, så skal teksten ha hengende innrykk og brekke over flere linjer
 export const WithLongTextAndBreaking = Template.bind({});
-WithLongTextAndBreaking.storyName = 'With Long Text And Breaking (A1 - 3 av 3)';
+WithLongTextAndBreaking.storyName = 'With Long Text And Breaking (A1)';
 WithLongTextAndBreaking.args = {
   ...defaultArgs,
   children: [
@@ -268,7 +267,7 @@ WithLongTextAndBreaking.parameters = {
 
 // Når List instansieres med markup, får markup riktig styling
 export const WithMarkup = Template.bind({});
-WithMarkup.storyName = 'With Markup (A2, B2 - 2 av 2)';
+WithMarkup.storyName = 'With Markup (A2, B2)';
 WithMarkup.argTypes = {
   ...WithMarkup.argTypes,
   children: {

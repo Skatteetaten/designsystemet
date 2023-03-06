@@ -182,7 +182,7 @@ WithDataTestid.parameters = {
 
 // Når Blockquote instansieres, får den riktige default-verdier
 export const Defaults = Template.bind({});
-Defaults.storyName = 'Defaults (A1, B1 - 1 av 2)';
+Defaults.storyName = 'Defaults (A1, B1)';
 Defaults.args = {
   ...defaultArgs,
 };
@@ -227,7 +227,7 @@ const TemplateWithMarkup: ComponentStory<typeof Blockquote> = (args) => (
 
 // Når Blockquote instansieres med markup, får markup riktig styling
 export const WithMarkup = TemplateWithMarkup.bind({});
-WithMarkup.storyName = 'With Markup (A2, B1 - 2 av 2)';
+WithMarkup.storyName = 'With Markup (A2, B1)';
 WithMarkup.argTypes = {
   ...WithMarkup.argTypes,
   children: {

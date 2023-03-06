@@ -241,7 +241,7 @@ const TemplateWithAllLevels: ComponentStory<typeof Heading> = (args) => (
 
 // Når Heading instansieres, får den riktige default-verdier og ser riktig ut for alle levels
 export const Defaults = TemplateWithAllLevels.bind({});
-Defaults.storyName = 'Defaults All Levels (A1, A2 delvis)';
+Defaults.storyName = 'Defaults All Levels (A1, A2)';
 Defaults.argTypes = {
   ...Defaults.argTypes,
   children: { table: { disable: false } },
@@ -255,8 +255,7 @@ Defaults.parameters = {
 
 // Når Heading instansieres, ser den riktug ut for alle levels på mobil
 export const DefaultsMobile = TemplateWithAllLevels.bind({});
-DefaultsMobile.storyName =
-  'Defaults All Levels On Small Screen (A1, A2 delvis)';
+DefaultsMobile.storyName = 'Defaults All Levels On Small Screen (A1, A2)';
 DefaultsMobile.args = {
   ...defaultArgs,
 };
@@ -272,7 +271,7 @@ DefaultsMobile.parameters = {
 
 // Når Heading har spacing, så får elementet riktig margin under headingen
 export const LevelsWithSpacing = TemplateWithAllLevels.bind({});
-LevelsWithSpacing.storyName = 'With Spacing All Levels (A4 delvis)';
+LevelsWithSpacing.storyName = 'With Spacing All Levels (A4)';
 LevelsWithSpacing.argTypes = {
   ...LevelsWithSpacing.argTypes,
   hasSpacing: {
@@ -290,7 +289,7 @@ LevelsWithSpacing.parameters = {
 // Når Heading har spacing, så får elementet riktig margin under headingen på mobil
 export const LevelsWithSpacingMobile = TemplateWithAllLevels.bind({});
 LevelsWithSpacingMobile.storyName =
-  'With Spacing All Levels On Small Screen (A4 delvis)';
+  'With Spacing All Levels On Small Screen (A4)';
 LevelsWithSpacingMobile.args = {
   ...defaultArgs,
   hasSpacing: true,

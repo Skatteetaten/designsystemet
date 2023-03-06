@@ -57,7 +57,7 @@ headingLevelArr.forEach(function (level) {
       },
     })
     .add(
-      `Defaults Level ${level} (A2 delvis)`,
+      `Defaults Level ${level} (A2)`,
       () => (
         <div data-test-block>
           <Heading {...headingArgs} />
@@ -111,7 +111,7 @@ headingAsArr.forEach(function (as) {
       },
     })
     .add(
-      `As ${as} (B1 delvis)`,
+      `As ${as} (B1)`,
       () => (
         <div data-test-block>
           <Heading

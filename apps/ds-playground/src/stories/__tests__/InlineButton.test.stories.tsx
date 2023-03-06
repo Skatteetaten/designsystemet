@@ -209,7 +209,7 @@ WithDataTestid.parameters = {
 // Når InlineButton instansieres, får den default iconPosition left
 // Knapp må også ha tekst/children
 export const Defaults = Template.bind({});
-Defaults.storyName = 'Defaults (A1 - 1 av 3, B1 - 1 av 2)';
+Defaults.storyName = 'Defaults (A1, B1)';
 Defaults.args = {
   ...defaultArgs,
 };
@@ -253,7 +253,7 @@ Defaults.parameters = {
 
 // Når InlineButton har en veldig lang tekst så skal tekst venstrejusteres
 export const WithLongText = Template.bind({});
-WithLongText.storyName = 'With Long Text (A1 - 2 av 3)';
+WithLongText.storyName = 'With Long Text (A1)';
 WithLongText.args = {
   ...defaultArgs,
   children:
@@ -270,7 +270,7 @@ WithLongText.parameters = {
 
 // Når InlineButton har en veldig lang tekst uten breaking space så skal det brekke over flere linjer
 export const WithLongTextBreaking = Template.bind({});
-WithLongTextBreaking.storyName = 'With Long Text And Breaking (A1 - 3 av 3)';
+WithLongTextBreaking.storyName = 'With Long Text And Breaking (A1)';
 WithLongTextBreaking.args = {
   ...defaultArgs,
   children:
@@ -288,7 +288,7 @@ WithLongTextBreaking.parameters = {
 // Når InlineButton har ett ikon uten posisjon oppgitt, så vises dette ikonet på venstre side (default).
 // Tester også for de icon props som er relevant for saken med systemIcon som er brukt.
 export const WithIcon = Template.bind({});
-WithIcon.storyName = 'With Icon (A3 - 1 av 3, A4, B4)';
+WithIcon.storyName = 'With Icon (A3, A4, B4)';
 WithIcon.args = {
   ...defaultArgs,
   svgPath: AddOutlineSVGpath,
@@ -318,7 +318,7 @@ WithIcon.parameters = {
 
 // Når InlineButton har et custom ikon, så vises dette ikonet
 export const WithCustomIcon = Template.bind({});
-WithCustomIcon.storyName = 'With Custom Icon (A3 - 2 av 3)';
+WithCustomIcon.storyName = 'With Custom Icon (A3)';
 WithCustomIcon.args = {
   ...defaultArgs,
   svgPath: <path d={'M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z'} />,
@@ -336,7 +336,7 @@ WithCustomIcon.parameters = {
 
 // Når InlineButton har en veldig lang tekst og det er et ikon med position right så skal tekst høyrejusteres
 export const WithLongTextAndIcon = Template.bind({});
-WithLongTextAndIcon.storyName = 'With Long Text And Icon (A3 - 3 av 3)';
+WithLongTextAndIcon.storyName = 'With Long Text And Icon (A3)';
 WithLongTextAndIcon.args = {
   ...defaultArgs,
   svgPath: AddOutlineSVGpath,
@@ -373,7 +373,7 @@ WithIconRight.parameters = {
 
 // Når InlineButton har prop disabled, så er knapp disabled og stil er satt til disabled
 export const Disabled = Template.bind({});
-Disabled.storyName = 'With Disabled (B5 - 1 av 2)';
+Disabled.storyName = 'With Disabled (B5)';
 Disabled.args = {
   ...defaultArgs,
   disabled: true,
@@ -393,7 +393,7 @@ Disabled.parameters = {
 
 // Når InlineButton har prop disabled og ikon er satt, så vises ikonet og knapp er disabled og stil er satt til disabled
 export const DisabledWithIcon = Template.bind({});
-DisabledWithIcon.storyName = 'With Disabled Icon (B5 - 2 av 2)';
+DisabledWithIcon.storyName = 'With Disabled Icon (B5)';
 DisabledWithIcon.args = {
   ...defaultArgs,
   svgPath: AddOutlineSVGpath,
@@ -415,7 +415,7 @@ DisabledWithIcon.parameters = {
 
 // Når InlineButton har prop type, så har button-elementet type satt
 export const WithType = Template.bind({});
-WithType.storyName = 'With Type (B1 - 2 av 2)';
+WithType.storyName = 'With Type (B1)';
 WithType.args = {
   ...defaultArgs,
   type: 'submit',

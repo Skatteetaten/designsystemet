@@ -196,7 +196,7 @@ WithDataTestid.parameters = {
 
 // Når Icon instansieres, får den riktig defaults
 export const Defaults = Template.bind({});
-Defaults.storyName = 'With Default - Variant SystemIcon (B1, B5, A1 - 1 av 2)';
+Defaults.storyName = 'With Default - Variant SystemIcon (A1, B1, B5)';
 Defaults.args = {
   ...defaultArgs,
 };
@@ -235,7 +235,7 @@ Defaults.parameters = {
 
 // Når Icon instansieres med variant="themeIcon", får den riktig viewBox og className
 export const WithVariant = Template.bind({});
-WithVariant.storyName = 'With Variant ThemeIcon (A1 - 2 av 2)';
+WithVariant.storyName = 'With Variant ThemeIcon (A1)';
 WithVariant.args = {
   ...defaultArgs,
   svgPath: AndreForholdSVGpath,

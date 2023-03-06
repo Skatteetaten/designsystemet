@@ -207,7 +207,7 @@ WithDataTestid.parameters = {
 // Når Button instansieres, får den default variant primary.
 // Knapp må også ha tekst/children
 export const Defaults = Template.bind({});
-Defaults.storyName = 'Defaults Variant Primary (B1 - 1 av 2, A1 - 1 av 4)';
+Defaults.storyName = 'Defaults Variant Primary (A1, B1)';
 Defaults.args = {
   ...defaultArgs,
 };
@@ -251,7 +251,7 @@ Defaults.parameters = {
 
 // Når Button har en variant, så vises stilsett for varianten (secondary)
 export const VariantSecondary = Template.bind({});
-VariantSecondary.storyName = 'Variant Secondary (A1 - 2 av 4)';
+VariantSecondary.storyName = 'Variant Secondary (A1)';
 VariantSecondary.args = {
   ...defaultArgs,
   variant: 'secondary',
@@ -286,7 +286,7 @@ VariantSecondary.parameters = {
 
 // Når Button har en variant, så vises stilsett for varianten (tertiary)
 export const VariantTertiary = Template.bind({});
-VariantTertiary.storyName = 'Variant Tertiary (A1 - 3 av 4)';
+VariantTertiary.storyName = 'Variant Tertiary (A1)';
 VariantTertiary.args = {
   ...defaultArgs,
   variant: 'tertiary',
@@ -321,7 +321,7 @@ VariantTertiary.parameters = {
 
 // Når Button har en variant, så vises stilsett for varianten (danger)
 export const VariantDanger = Template.bind({});
-VariantDanger.storyName = 'Variant Danger (A1 - 4 av 4)';
+VariantDanger.storyName = 'Variant Danger (A1)';
 VariantDanger.args = { ...defaultArgs, variant: 'danger' };
 VariantDanger.argTypes = {
   ...VariantDanger.argTypes,
@@ -436,7 +436,7 @@ WithIcon.parameters = {
 
 // Når Button har prop disabled, så er knapp disabled og stil er satt til disabled
 export const Disabled = Template.bind({});
-Disabled.storyName = 'Disabled (B5 - 1 av 2)';
+Disabled.storyName = 'Disabled (B5)';
 Disabled.args = {
   ...defaultArgs,
   disabled: true,
@@ -456,7 +456,7 @@ Disabled.parameters = {
 
 // Når Button har prop disabled og ikon er satt, så vises ikonet og knapp er disabled og stil er satt til disabled
 export const DisabledWithIcon = Template.bind({});
-DisabledWithIcon.storyName = 'Disabled With Icon (B5 - 2 av 2)';
+DisabledWithIcon.storyName = 'Disabled With Icon (B5)';
 DisabledWithIcon.args = {
   ...defaultArgs,
   svgPath: SendSVGpath,
@@ -478,7 +478,7 @@ DisabledWithIcon.parameters = {
 
 // Når Button har prop type, så har button-elementet type satt
 export const WithType = Template.bind({});
-WithType.storyName = 'With Type (B1 - 2 av 2)';
+WithType.storyName = 'With Type (B1)';
 WithType.args = {
   ...defaultArgs,
   type: 'submit',

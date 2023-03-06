@@ -204,8 +204,7 @@ WithDataTestid.parameters = {
 
 // Når Link instansieres, så får den riktige default-verdier og rendrer riktig i ulike tilstander
 export const Defaults = Template.bind({});
-Defaults.storyName =
-  'Defaults (A1 delvis, A2 - 1 av 2, A3 delvis, B1 - 1 av 2)';
+Defaults.storyName = 'Defaults (A1 delvis, A2, A3 delvis, B1)';
 Defaults.args = {
   ...defaultArgs,
 };
@@ -416,7 +415,7 @@ WithColor.parameters = {
 
 // Når Link har target, så har link-elementet target med riktig verdi
 export const WithTarget = Template.bind({});
-WithTarget.storyName = 'With Target (A2  - 2 av 2)';
+WithTarget.storyName = 'With Target (A2)';
 WithTarget.args = {
   ...defaultArgs,
   target: '_blank',
