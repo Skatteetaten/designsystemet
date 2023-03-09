@@ -142,6 +142,7 @@ WithCustomCss.argTypes = {
   className: { table: { disable: false } },
 };
 WithCustomCss.parameters = {
+  a11y: { disable: true },
   async puppeteerTest(page: Page): Promise<void> {
     // no axe rules because elements dont have sufficient color contrast
     await verifyMatchSnapShot(page);

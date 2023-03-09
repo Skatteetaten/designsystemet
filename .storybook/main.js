@@ -1,6 +1,10 @@
 module.exports = {
   stories: [],
-  addons: ['@storybook/addon-essentials', '@storybook/addon-a11y'],
+  addons: [
+    '@storybook/addon-essentials',
+    '@storybook/addon-a11y',
+    '@storybook/addon-interactions',
+  ],
   typescript: {
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
@@ -10,6 +14,9 @@ module.exports = {
         esModuleInterop: false,
       },
     },
+  },
+  features: {
+    interactionsDebugger: true,
   },
   // uncomment the property below if you want to apply some webpack config globally
   // webpackFinal: async (config, { configType }) => {

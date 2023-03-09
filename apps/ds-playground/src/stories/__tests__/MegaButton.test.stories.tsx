@@ -1,43 +1,26 @@
 import { useState } from 'react';
 
-import { AxePuppeteer } from '@axe-core/puppeteer';
 import {
   MegaButton,
   MegaButtonComponentCommonProps,
   MegaButtonDiscriminatedProp,
 } from '@skatteetaten/ds-buttons';
+import { expect } from '@storybook/jest';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { toHaveNoViolations } from 'jest-axe';
-import { Page } from 'puppeteer';
+import { userEvent, waitFor, within } from '@storybook/testing-library';
 
-import {
-  screenShotOptions,
-  wrapper,
-} from './testUtils/puppeteer.testing.utils';
+import { wrapper } from './testUtils/puppeteer.testing.utils';
 
 const defaultMegaButtonText = 'Klikk her';
 
-const verifyMatchSnapShot = async (page: Page): Promise<void> => {
-  const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-  expect(innerHtml).toMatchSnapshot();
-};
-
-const verifyMatchImageSnapShot = async (page: Page): Promise<void> => {
-  const image = await page.screenshot(screenShotOptions);
-  expect(image).toMatchImageSnapshot();
-};
-
-const verifyAxeRules = async (page: Page): Promise<void> => {
-  const axeResults = await new AxePuppeteer(page).include(wrapper).analyze();
-  expect.extend(toHaveNoViolations);
-  expect(axeResults).toHaveNoViolations();
-};
-
-const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
-  await verifyMatchSnapShot(page);
-  await verifyMatchImageSnapShot(page);
-  await verifyAxeRules(page);
-};
+const verifyAttribute =
+  (attribute: string, expectedValue: string) =>
+  async ({ canvasElement }: { canvasElement: HTMLElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const megaButton = canvas.getByRole('button');
+    await expect(megaButton).toBeInTheDocument();
+    await expect(megaButton).toHaveAttribute(attribute, expectedValue);
+  };
 
 export default {
   component: MegaButton,
@@ -72,6 +55,7 @@ export default {
 
 const Template: ComponentStory<typeof MegaButton> = (args) => (
   <div className={'noTransition'} data-test-block>
+    {/* eslint-disable-next-line testing-library/no-node-access */}
     <MegaButton {...args}>{args.children}</MegaButton>
   </div>
 );
@@ -96,14 +80,9 @@ WithRef.argTypes = {
   ref: { table: { disable: false } },
 };
 WithRef.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const refId = await page.$eval(`${wrapper} > button`, (el) => el.id);
-    expect(refId).toBe('dummyIdForwardedFromRef');
-  },
+  imageSnapshot: { disable: true },
 };
+WithRef.play = verifyAttribute('id', 'dummyIdForwardedFromRef');
 
 // Når MegaButton har en id, så har button-element id
 export const WithId = Template.bind({});
@@ -117,16 +96,9 @@ WithId.argTypes = {
   id: { table: { disable: false } },
 };
 WithId.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const elementid = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('id')
-    );
-    expect(elementid).toBe('htmlid');
-  },
+  imageSnapshot: { disable: true },
 };
+WithId.play = verifyAttribute('id', 'htmlid');
 
 // Når MegaButton har en custom CSS, så vises custom stil
 export const WithCustomCss = Template.bind({});
@@ -141,15 +113,9 @@ WithCustomCss.argTypes = {
     table: { disable: false },
   },
 };
-WithCustomCss.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const classNameAttribute = await page.$eval(`${wrapper}> button`, (el) =>
-      el.getAttribute('class')
-    );
-    expect(classNameAttribute).toContain('dummyClassname');
-  },
+WithCustomCss.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  expect(canvas.getByRole('button')).toHaveClass('dummyClassname');
 };
 
 // Når MegaButton har en lang, så har button-element lang
@@ -164,16 +130,9 @@ WithLang.argTypes = {
   lang: { table: { disable: false } },
 };
 WithLang.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const langAttribute = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('lang')
-    );
-    expect(langAttribute).toBe('nb');
-  },
+  imageSnapshot: { disable: true },
 };
+WithLang.play = verifyAttribute('lang', 'nb');
 
 // Når MegaButton har dataTestid, så har button-elementet data-testid satt
 export const WithDataTestid = Template.bind({});
@@ -187,20 +146,16 @@ WithDataTestid.argTypes = {
   'data-testid': { table: { disable: false } },
 };
 WithDataTestid.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const dataTestid = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('data-testid')
-    );
-    expect(dataTestid).toBe('123Mega');
-  },
+  imageSnapshot: { disable: true },
+};
+WithDataTestid.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  expect(canvas.getByTestId('123Mega')).toBeInTheDocument();
 };
 
 // Når MegaButton instansieres, så får den riktige default-verdier og rendrer riktig i ulike tilstander
 export const Defaults = Template.bind({});
-Defaults.storyName = 'Defaults (A1 - 1 av 2, B2 - 1 av 2)';
+Defaults.storyName = 'Defaults (A1, B2)';
 Defaults.args = {
   ...defaultArgs,
 };
@@ -209,64 +164,22 @@ Defaults.argTypes = {
   children: { table: { disable: false } },
 };
 Defaults.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const element = await page.$(wrapper);
-    const textContent = await element?.getProperty('textContent');
-    const text = await textContent?.jsonValue();
-    expect(text).toBe(defaultMegaButtonText);
-
-    const attributeType = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('type')
-    );
-    expect(attributeType).toBe('button');
-
-    const megaButtonElement = await page.$(`${wrapper} > button`);
-
-    await megaButtonElement?.focus();
-    const imageFocused = await page.screenshot(screenShotOptions);
-    expect(imageFocused).toMatchImageSnapshot();
-
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
-    await megaButtonElement?.hover();
-    //await waitForTransitionEnd(`${wrapper} > button`, page);
-    const imageHovered = await page.screenshot(screenShotOptions);
-    expect(imageHovered).toMatchImageSnapshot();
-
-    await megaButtonElement?.click();
-    await page.waitForSelector(`${wrapper} > button:focus`);
-    const imageClicked = await page.screenshot(screenShotOptions);
-    expect(imageClicked).toMatchImageSnapshot();
-
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
-
-    //active uten focus
-    const cdp = await page.target().createCDPSession();
-    const docNodeId = (await cdp.send('DOM.getDocument')).root.nodeId;
-    const nodeId = (
-      await cdp.send('DOM.querySelector', {
-        nodeId: docNodeId,
-        selector: `${wrapper} > button`,
-      })
-    ).nodeId;
-
-    await cdp.send('CSS.enable');
-    await cdp.send('CSS.forcePseudoState', {
-      nodeId: nodeId,
-      forcedPseudoClasses: ['active'],
-    });
-
-    const imageActive = await page.screenshot(screenShotOptions);
-    expect(imageActive).toMatchImageSnapshot();
+  imageSnapshot: {
+    focus: `${wrapper} > button`,
+    hover: `${wrapper} > button`,
+    click: `${wrapper} > button`,
   },
+};
+Defaults.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const megaButton = canvas.getByText(defaultMegaButtonText);
+  await expect(megaButton).toBeInTheDocument();
+  await expect(megaButton).toHaveAttribute('type', 'button');
 };
 
 // Når MegaButton har en veldig lang tekst så skal det brekke over flere linjer
 export const WithLongText = Template.bind({});
-WithLongText.storyName = 'With Long Text (A2 - 1 av 3)';
+WithLongText.storyName = 'With Long Text (A2)';
 WithLongText.args = {
   ...defaultArgs,
   children: 'Denne knappen har en veldig lang tekst. Så lang at den må brekke.',
@@ -275,14 +188,10 @@ WithLongText.argTypes = {
   ...WithLongText.argTypes,
   children: { table: { disable: false } },
 };
-WithLongText.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
-};
 
 // Når MegaButton har en veldig lang tekst uten breaking space så skal det brekke over flere linjer
 export const WithLongTextBreaking = Template.bind({});
-WithLongTextBreaking.storyName =
-  'With Long Text Breaking (A1 - 2 av 2, A2 - 2 av 3)';
+WithLongTextBreaking.storyName = 'With Long Text Breaking (A1, A2)';
 WithLongTextBreaking.args = {
   ...defaultArgs,
   children: 'Denneknappenharenveldiglangtekst.Sålangatdenmåbrekke.',
@@ -291,13 +200,10 @@ WithLongTextBreaking.argTypes = {
   ...WithLongTextBreaking.argTypes,
   children: { table: { disable: false } },
 };
-WithLongTextBreaking.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
-};
 
 // Når MegaButton har isExternal, så vises riktig ikon med tilhørende tekst. Tester også for de icon props som er relevant for saken med systemIcon som er brukt.
 export const WithExternalIcon = Template.bind({});
-WithExternalIcon.storyName = 'With External Icon (A4 - 1 av 2, B5, B7)';
+WithExternalIcon.storyName = 'With External Icon (A4, B5, B7)';
 WithExternalIcon.args = {
   ...defaultArgs,
   isExternal: true,
@@ -306,31 +212,21 @@ WithExternalIcon.argTypes = {
   ...WithExternalIcon.argTypes,
   isExternal: { table: { disable: false } },
 };
-WithExternalIcon.parameters = {
-  locale: 'cimode',
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
+WithExternalIcon.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
 
-    const svgElement = await page.$(`${wrapper} > button svg`);
-    expect(svgElement).toBeTruthy();
-
-    const systemIconViewBox = '0 0 24 24';
-    const svgAttributes = await page.$eval(`${wrapper} > button svg`, (el) => {
-      return {
-        ariaLabel: el.getAttribute('aria-label'),
-        viewBox: el.getAttribute('viewBox'),
-      };
-    });
-    expect(svgAttributes.ariaLabel).toBe('shared.ExternalIcon');
-    expect(svgAttributes.viewBox).toBe(systemIconViewBox);
-  },
+  const megaButton = canvas.getByRole('button');
+  // eslint-disable-next-line testing-library/no-node-access
+  const svg = megaButton.querySelector('svg');
+  await expect(svg).toHaveAttribute('aria-label', 'Til et annet nettsted');
+  await expect(svg).toHaveAttribute('viewBox', '0 0 24 24');
+  await expect(megaButton).toBeInTheDocument();
 };
 
 // Når MegaButton har en veldig lang tekst så skal teksten brytes over flere linjer
 // og når det er et ikon skal ikonet plasseres løpende etter teksten
 export const WithLongTextAndExternalIcon = Template.bind({});
-WithLongTextAndExternalIcon.storyName =
-  'With Long Text and External Icon (A2 - 3 av 3)';
+WithLongTextAndExternalIcon.storyName = 'With Long Text and External Icon (A2)';
 WithLongTextAndExternalIcon.args = {
   ...defaultArgs,
   isExternal: true,
@@ -341,9 +237,6 @@ WithLongTextAndExternalIcon.argTypes = {
   ...WithLongTextAndExternalIcon.argTypes,
   children: { table: { disable: false } },
   isExternal: { table: { disable: false } },
-};
-WithLongTextAndExternalIcon.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
 };
 
 export const Disabled = Template.bind({});
@@ -360,18 +253,14 @@ Disabled.argTypes = {
   ...Disabled.argTypes,
   disabled: { table: { disable: false } },
 };
-Disabled.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const isDisabled = await page.$(`${wrapper} > button[disabled]`);
-    expect(isDisabled).toBeTruthy();
-  },
+Disabled.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  expect(canvas.getByText(defaultMegaButtonText)).toBeDisabled();
 };
 
 // Når MegaButton har prop type, så har button-elementet type satt
 export const WithType = Template.bind({});
-WithType.storyName = 'With Type (B2 - 2 av 2)';
+WithType.storyName = 'With Type (B2)';
 WithType.args = {
   ...defaultArgs,
   type: 'submit',
@@ -381,15 +270,9 @@ WithType.argTypes = {
   type: { table: { disable: false } },
 };
 WithType.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const type = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('type')
-    );
-    expect(type).toBe('submit');
-  },
+  imageSnapshot: { disable: true },
 };
+WithType.play = verifyAttribute('type', 'submit');
 
 // Når MegaButton har aria attributer, så har button element aria-* satt
 export const WithAriaDescribedby = Template.bind({});
@@ -403,17 +286,13 @@ WithAriaDescribedby.argTypes = {
   ariaDescribedby: { table: { disable: false } },
 };
 WithAriaDescribedby.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const ariaAttributes = await page.$eval(`${wrapper} > button`, (el) => {
-      return {
-        ariaDescribedby: el.getAttribute('aria-describedby'),
-      };
-    });
-    expect(ariaAttributes.ariaDescribedby).toBe('testid1234');
-  },
+  imageSnapshot: { disable: true },
+};
+WithAriaDescribedby.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const megaButton = canvas.getByRole('button');
+  await expect(megaButton).toBeInTheDocument();
+  await expect(megaButton).toHaveAttribute('aria-describedby', 'testid1234');
 };
 
 // Når MegaButton har en accessKey, så settes den som forventet
@@ -428,15 +307,14 @@ WithAccesskey.argTypes = {
   accessKey: { table: { disable: false } },
 };
 WithAccesskey.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyAxeRules(page);
+  imageSnapshot: { disable: true },
+};
 
-    const megaButtonElement = await page.$(`${wrapper} > button`);
-    const accessKey = await (
-      await megaButtonElement?.getProperty('accessKey')
-    )?.jsonValue();
-    expect(accessKey).toBe('j');
-  },
+WithAccesskey.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const megaButton = canvas.getByRole('button');
+  await expect(megaButton).toBeInTheDocument();
+  await expect(megaButton).toHaveAttribute('accessKey', 'j');
 };
 
 // Når MegaButton har en href, så rendres den som en a
@@ -451,7 +329,10 @@ AsLink.argTypes = {
   href: { table: { disable: false } },
 };
 AsLink.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
+  imageSnapshot: {
+    focus: `${wrapper} > a`,
+    hover: `${wrapper} > a`,
+  },
 };
 
 // Når MegaButton har en href med tom streng, så rendres den som en a
@@ -466,12 +347,12 @@ AsLinkEmptyString.argTypes = {
   href: { table: { disable: false } },
 };
 AsLinkEmptyString.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
+  imageSnapshot: { disable: true },
 };
 
 // Når MegaButton har en href og er eksternlink, så rendres den som en a og det vises eksternlink-ikon
 export const AsLinkExternal = Template.bind({});
-AsLinkExternal.storyName = 'As Link External (B3, A4 - 2 av 2)';
+AsLinkExternal.storyName = 'As Link External (B3, A4)';
 AsLinkExternal.args = {
   ...defaultArgs,
   href: 'https://www.skatteetaten.no',
@@ -483,152 +364,71 @@ AsLinkExternal.argTypes = {
   isExternal: { table: { disable: false } },
 };
 AsLinkExternal.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const megaButtonElement = await page.$(`${wrapper} > a`);
-    const role = await (
-      await megaButtonElement?.getProperty('role')
-    )?.jsonValue();
-    expect(role).toBe('button');
-
-    await megaButtonElement?.focus();
-    const imageFocused = await page.screenshot(screenShotOptions);
-    expect(imageFocused).toMatchImageSnapshot();
-
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    await page.$eval(`${wrapper} > a`, (el: any) => el.blur());
-    await megaButtonElement?.hover();
-    const imageHovered = await page.screenshot(screenShotOptions);
-    expect(imageHovered).toMatchImageSnapshot();
+  imageSnapshot: {
+    focus: `${wrapper} > a`,
+    hover: `${wrapper} > a`,
   },
 };
 
-// Når brukeren blurer knappen, så kalles funksjonen i onBlur prop.
-// onBlur-event endrer teksten på knappen.
-const OnBlurTemplate: ComponentStory<typeof MegaButton> = (args) => {
-  const [buttText, setButtText] = useState(
-    'Klikk på knapp for å teste onBlur event'
-  );
-  return (
-    <div className={'noTransition'} data-test-block>
-      <MegaButton {...args} onBlur={(): void => setButtText('Knapp er bluret')}>
-        {buttText}
-      </MegaButton>
-    </div>
-  );
-};
-export const WithOnBlur = OnBlurTemplate.bind({});
-WithOnBlur.storyName = 'With onBlur (A2 delvis)';
-WithOnBlur.args = {
-  ...defaultArgs,
-};
-WithOnBlur.argTypes = {
-  ...WithOnBlur.argTypes,
-  onBlur: { table: { disable: false } },
-};
-WithOnBlur.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchImageSnapShot(page);
-    await verifyAxeRules(page);
-
-    const buttonElement = await page.$(`${wrapper} > button`);
-    await buttonElement?.focus();
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
-    const imageBlured = await page.screenshot(screenShotOptions);
-    expect(imageBlured).toMatchImageSnapshot();
-
-    const element = await page.$(`${wrapper} > button`);
-    const textContent = await element?.getProperty('textContent');
-    const text = await textContent?.jsonValue();
-    expect(text).toBe('Knapp er bluret');
-  },
+AsLinkExternal.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const megaButton = canvas.getByText('Klikk her');
+  await expect(megaButton).toBeInTheDocument();
+  await expect(megaButton.tagName).toBe('A');
+  await expect(megaButton).toHaveAttribute('role', 'button');
 };
 
-// Testing onClick på knapp. onClick-event endrer teksten på knappen.
-// Egen template for å kunne bruke useState som lar oss synliggjøre resultatet av en event
-const OnClickTemplate: ComponentStory<typeof MegaButton> = (args) => {
-  const [buttText, setButtText] = useState(
-    'Klikk på knapp for å teste onClick event'
-  );
+// Når brukeren setter focus, blurrer, eller klikker på knappen, så kalles riktig eventHandler
+// Eventhandlere endrer tesksten på knappen
+const EventHandlersTemplate: ComponentStory<typeof MegaButton> = (args) => {
+  const [buttonText, setButtonText] = useState('bruk knapp for å events');
   return (
     <div className={'noTransition'} data-test-block>
       <MegaButton
         {...args}
-        onClick={(): void => setButtText('Endret Tekst på Knapp')}
+        onFocus={(
+          event: React.FocusEvent<HTMLButtonElement | HTMLAnchorElement>
+        ): void => {
+          setButtonText('Knapp har fått fokus');
+          args.onFocus && args.onFocus(event);
+        }}
+        onBlur={(
+          event: React.FocusEvent<HTMLButtonElement | HTMLAnchorElement>
+        ): void => {
+          setButtonText('Knapp har blitt blurret');
+          args.onBlur && args.onBlur(event);
+        }}
+        onClick={(
+          event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
+        ): void => {
+          setButtonText('Knapp har blitt klikket på');
+          args.onClick && args.onClick(event);
+        }}
       >
-        {buttText}
+        {buttonText}
       </MegaButton>
     </div>
   );
 };
-export const WithOnClick = OnClickTemplate.bind({});
-WithOnClick.storyName = 'With onClick (A2 delvis)';
-WithOnClick.args = {
+export const WithEventHandlers = EventHandlersTemplate.bind({});
+WithEventHandlers.storyName = 'With EventHandlers (A2 delvis)';
+WithEventHandlers.args = {
   ...defaultArgs,
 };
-WithOnClick.argTypes = {
-  ...WithOnClick.argTypes,
-  onClick: { table: { disable: false } },
+WithEventHandlers.argTypes = {
+  ...WithEventHandlers.argTypes,
 };
-WithOnClick.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchImageSnapShot(page);
-    await verifyAxeRules(page);
-
-    const buttonElement = await page.$(`${wrapper} > button`);
-    await buttonElement?.click();
-    const imageClicked = await page.screenshot(screenShotOptions);
-    expect(imageClicked).toMatchImageSnapshot();
-
-    await page.waitForSelector(`${wrapper} > button:active`, { hidden: true });
-    const element = await page.$(`${wrapper} > button`);
-    const textContent = await element?.getProperty('textContent');
-    const text = await textContent?.jsonValue();
-    expect(text).toBe('Endret Tekst på Knapp');
-  },
+WithEventHandlers.parameters = {
+  imageSnapshot: { disable: true },
 };
-
-// Når brukeren setter focus på knappen, så kalles funksjonen i onFocus prop.
-// onFocus-event endrer teksten på knappen.
-const OnFocusTemplate: ComponentStory<typeof MegaButton> = (args) => {
-  const [buttText, setButtText] = useState(
-    'Klikk på knapp for å teste onFocus event'
-  );
-  return (
-    <div className={'noTransition'} data-test-block>
-      <MegaButton
-        {...args}
-        onFocus={(): void => setButtText('Knapp har fått fokus')}
-      >
-        {buttText}
-      </MegaButton>
-    </div>
-  );
-};
-export const WithOnFocus = OnFocusTemplate.bind({});
-WithOnFocus.storyName = 'With onFocus (A2 delvis)';
-WithOnFocus.args = {
-  ...defaultArgs,
-};
-WithOnFocus.argTypes = {
-  ...WithOnFocus.argTypes,
-  onFocus: { table: { disable: false } },
-};
-WithOnFocus.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchImageSnapShot(page);
-    await verifyAxeRules(page);
-
-    const buttonElement = await page.$(`${wrapper} > button`);
-    await buttonElement?.focus();
-    const imageFocused = await page.screenshot(screenShotOptions);
-    expect(imageFocused).toMatchImageSnapshot();
-
-    const element = await page.$(`${wrapper} > button`);
-    const textContent = await element?.getProperty('textContent');
-    const text = await textContent?.jsonValue();
-    expect(text).toBe('Knapp har fått fokus');
-  },
+WithEventHandlers.play = async ({ args, canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const megaButton = canvas.getByText('bruk knapp for å events');
+  await expect(megaButton).toBeInTheDocument();
+  await megaButton.focus();
+  await waitFor(() => expect(args.onFocus).toHaveBeenCalled());
+  await userEvent.tab();
+  await waitFor(() => expect(args.onBlur).toHaveBeenCalled());
+  await userEvent.click(megaButton);
+  await waitFor(() => expect(args.onClick).toHaveBeenCalled());
 };

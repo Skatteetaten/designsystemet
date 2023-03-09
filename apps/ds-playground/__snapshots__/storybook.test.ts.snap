@@ -248,38 +248,6 @@ exports[`Image storyshots Tester/List.Element With Lang (FA4) 1`] = `"<li class=
 
 exports[`Image storyshots Tester/List.Element With Ref (FA1) 1`] = `"<li class=\\"ListElement_element__3Opue \\" id=\\"dummyIdForwardedFromRef\\">Kjenner du behovet til brukeren?</li>"`;
 
-exports[`Image storyshots Tester/MegaButton As Link (B3) 1`] = `"<a class=\\"MegaButton_button__1aSH0 \\" href=\\"https://www.skatteetaten.no\\" role=\\"button\\">Klikk her</a>"`;
-
-exports[`Image storyshots Tester/MegaButton As Link External (B3, A4 - 2 av 2) 1`] = `"<a class=\\"MegaButton_button__1aSH0 \\" href=\\"https://www.skatteetaten.no\\" role=\\"button\\">Klikk her<svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 MegaButton_icon__3cuzU\\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-label=\\"Til et annet nettsted\\" aria-hidden=\\"false\\" role=\\"img\\"><path d=\\"M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7Zm5 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z\\"></path></svg></a>"`;
-
-exports[`Image storyshots Tester/MegaButton As Link with empty href (B3) 1`] = `"<a class=\\"MegaButton_button__1aSH0 \\" href=\\"\\">Klikk her</a>"`;
-
-exports[`Image storyshots Tester/MegaButton Defaults (A1 - 1 av 2, B2 - 1 av 2) 1`] = `"<button class=\\"MegaButton_button__1aSH0 \\" type=\\"button\\">Klikk her</button>"`;
-
-exports[`Image storyshots Tester/MegaButton Disabled (B6) 1`] = `"<button class=\\"MegaButton_button__1aSH0 \\" disabled=\\"\\" type=\\"button\\">Klikk her</button>"`;
-
-exports[`Image storyshots Tester/MegaButton With AriaDescribedby (B1) 1`] = `"<button class=\\"MegaButton_button__1aSH0 \\" type=\\"button\\" aria-describedby=\\"testid1234\\">Klikk her</button>"`;
-
-exports[`Image storyshots Tester/MegaButton With Custom CSS (FA3) 1`] = `"<button class=\\"MegaButton_button__1aSH0 dummyClassname\\" type=\\"button\\">Klikk her</button>"`;
-
-exports[`Image storyshots Tester/MegaButton With DataTestid (FA5) 1`] = `"<button class=\\"MegaButton_button__1aSH0 \\" data-testid=\\"123Mega\\" type=\\"button\\">Klikk her</button>"`;
-
-exports[`Image storyshots Tester/MegaButton With External Icon (A4 - 1 av 2, B5, B7) 1`] = `"<button class=\\"MegaButton_button__1aSH0 \\" type=\\"button\\">Klikk her<svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 MegaButton_icon__3cuzU\\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-label=\\"shared.ExternalIcon\\" aria-hidden=\\"false\\" role=\\"img\\"><path d=\\"M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7Zm5 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z\\"></path></svg></button>"`;
-
-exports[`Image storyshots Tester/MegaButton With Id (FA2) 1`] = `"<button id=\\"htmlid\\" class=\\"MegaButton_button__1aSH0 \\" type=\\"button\\">Klikk her</button>"`;
-
-exports[`Image storyshots Tester/MegaButton With Lang (FA4) 1`] = `"<button class=\\"MegaButton_button__1aSH0 \\" lang=\\"nb\\" type=\\"button\\">Klikk her</button>"`;
-
-exports[`Image storyshots Tester/MegaButton With Long Text (A2 - 1 av 3) 1`] = `"<button class=\\"MegaButton_button__1aSH0 \\" type=\\"button\\">Denne knappen har en veldig lang tekst. Så lang at den må brekke.</button>"`;
-
-exports[`Image storyshots Tester/MegaButton With Long Text Breaking (A1 - 2 av 2, A2 - 2 av 3) 1`] = `"<button class=\\"MegaButton_button__1aSH0 \\" type=\\"button\\">Denneknappenharenveldiglangtekst.Sålangatdenmåbrekke.</button>"`;
-
-exports[`Image storyshots Tester/MegaButton With Long Text and External Icon (A2 - 3 av 3) 1`] = `"<button class=\\"MegaButton_button__1aSH0 \\" type=\\"button\\">Denne knappen har en veldig lang tekst. Icon skal da plasseres løpende etter tekster på siste linje<svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 MegaButton_icon__3cuzU\\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-label=\\"Til et annet nettsted\\" aria-hidden=\\"false\\" role=\\"img\\"><path d=\\"M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7Zm5 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z\\"></path></svg></button>"`;
-
-exports[`Image storyshots Tester/MegaButton With Ref (FA1) 1`] = `"<button class=\\"MegaButton_button__1aSH0 \\" type=\\"button\\" id=\\"dummyIdForwardedFromRef\\">Klikk her</button>"`;
-
-exports[`Image storyshots Tester/MegaButton With Type (B2 - 2 av 2) 1`] = `"<button class=\\"MegaButton_button__1aSH0 \\" type=\\"submit\\">Klikk her</button>"`;
-
 exports[`Image storyshots Tester/Paragraph Defaults Variant Standard (A1, B2) 1`] = `"<p class=\\"Paragraph_paragraph__3DdMb Paragraph_paragraph_standard__1SXYw  \\">Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.</p><p class=\\"Paragraph_paragraph__3DdMb Paragraph_paragraph_standard__1SXYw  \\">Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.</p>"`;
 
 exports[`Image storyshots Tester/Paragraph Is <p>-element (B1) 1`] = `"<p class=\\"Paragraph_paragraph__3DdMb Paragraph_paragraph_standard__1SXYw  \\">Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.</p>"`;

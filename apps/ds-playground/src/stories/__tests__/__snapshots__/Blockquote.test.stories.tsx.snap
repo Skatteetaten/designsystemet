@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Blockquote Defaults smoke-test 1`] = `
+<div data-test-block="true">
+  <blockquote class="Blockquote_blockquote__2bXHi  ">
+    Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+  </blockquote>
+</div>
+`;
+
+exports[`Tester/Blockquote WithCustomCss smoke-test 1`] = `
+<div data-test-block="true">
+  <blockquote class="Blockquote_blockquote__2bXHi  dummyClassname">
+    Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+  </blockquote>
+</div>
+`;
+
+exports[`Tester/Blockquote WithDataTestid smoke-test 1`] = `
+<div data-test-block="true">
+  <blockquote class="Blockquote_blockquote__2bXHi  "
+              data-testid="BlockquoteID"
+  >
+    Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+  </blockquote>
+</div>
+`;
+
+exports[`Tester/Blockquote WithId smoke-test 1`] = `
+<div data-test-block="true">
+  <blockquote id="BlockquoteId"
+              class="Blockquote_blockquote__2bXHi  "
+  >
+    Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+  </blockquote>
+</div>
+`;
+
+exports[`Tester/Blockquote WithLang smoke-test 1`] = `
+<div data-test-block="true">
+  <blockquote class="Blockquote_blockquote__2bXHi  "
+              lang="nb"
+  >
+    Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+  </blockquote>
+</div>
+`;
+
+exports[`Tester/Blockquote WithMarkup smoke-test 1`] = `
+<div data-test-block="true">
+  <blockquote class="Blockquote_blockquote__2bXHi  ">
+    <div>
+      Manowar Manowar living on the road
+      <a href="https://en.wikipedia.org/wiki/Manowar">
+        lenke
+      </a>
+    </div>
+    <div>
+      When we're on
+      <strong>
+        strong
+      </strong>
+      explode
+      <em>
+        italic em
+      </em>
+    </div>
+    <div>
+      We don't attract
+      <code>
+        code wimps
+      </code>
+      'cause we're too
+      <mark>
+        mark
+      </mark>
+    </div>
+    <div>
+      Just
+      <i>
+        italic i
+      </i>
+      true
+      <small>
+        small
+      </small>
+      people that's Manowar's
+      <b>
+        b
+      </b>
+    </div>
+  </blockquote>
+</div>
+`;
+
+exports[`Tester/Blockquote WithRef smoke-test 1`] = `
+<div data-test-block="true">
+  <blockquote class="Blockquote_blockquote__2bXHi  "
+              id="dummyIdForwardedFromRef"
+  >
+    Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+  </blockquote>
+</div>
+`;
+
+exports[`Tester/Blockquote WithSpacing smoke-test 1`] = `
+<div data-test-block="true">
+  <blockquote class="Blockquote_blockquote__2bXHi Blockquote_blockquote_hasSpacing__27NjS ">
+    Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+  </blockquote>
+  <blockquote class="Blockquote_blockquote__2bXHi Blockquote_blockquote_hasSpacing__27NjS ">
+    Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+  </blockquote>
+</div>
+`;

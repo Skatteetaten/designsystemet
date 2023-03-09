@@ -8,7 +8,7 @@
   },
   "overrides": [
     {
-      "files": ["*.stories.tsx"],
+      "files": ["*.stories.tsx", "test-runner.ts"],
       "rules": {
         "jest/no-standalone-expect": "off"
       }

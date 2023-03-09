@@ -5,7 +5,9 @@ import {
   ScrollToTopButtonProps,
 } from '@skatteetaten/ds-buttons';
 import { ExternalLayout } from '@skatteetaten/ds-core-utils';
+import { expect } from '@storybook/jest';
 import { ComponentStory, Meta } from '@storybook/react';
+import { within } from '@storybook/testing-library';
 import { toHaveNoViolations } from 'jest-axe';
 // @skatteeteaten/ds-core-designtokens er angitt som symlink i package.json
 // derfor vil typecheck feile hvis pakken ikke er bygget, derfor bryter vi nx module boundaries her
@@ -107,6 +109,13 @@ WithRef.args = {
       instance.id = 'dummyIdForwardedFromRef';
     }
   },
+};
+WithRef.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  expect(canvas.getByRole('button')).toHaveAttribute(
+    'id',
+    'dummyIdForwardedFromRef'
+  );
 };
 
 WithRef.argTypes = {
@@ -217,6 +226,7 @@ WithLang.argTypes = {
   ...WithLang.argTypes,
   lang: { table: { disable: false } },
 };
+
 WithLang.parameters = {
   async puppeteerTest(page: Page): Promise<void> {
     await verifyMatchSnapShot(page);
@@ -410,6 +420,7 @@ WithVisibilityThreshold.parameters = {
 const TemplateWithShadowDom: ComponentStory<typeof ScrollToTopButton> = (
   args
 ) => {
+  // eslint-disable-next-line testing-library/no-node-access
   const element = document.querySelector('scrolltotop-customelement');
   const shadowRoot = element?.shadowRoot;
   return (
@@ -429,6 +440,9 @@ WithShadowDom.args = {
 };
 WithShadowDom.decorators = [webComponent];
 WithShadowDom.parameters = {
+  imageSnapshot: {
+    disable: true,
+  },
   customElementName: 'scrolltotop-customelement',
   async puppeteerTest(page: Page): Promise<void> {
     const customElement = await page.$(`scrolltotop-customelement`);

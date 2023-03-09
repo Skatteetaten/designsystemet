@@ -74,6 +74,13 @@
       "options": {
         "command": "npm version {args.packageVersion} --no-git-tag"
       }
+    },
+    "test-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/ds-playground",
+        "command": "test-storybook -c .storybook"
+      }
     }
   },
   "tags": [],

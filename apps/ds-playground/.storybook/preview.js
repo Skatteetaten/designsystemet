@@ -8,6 +8,7 @@ import {
 import { useEffect, useGlobals } from '@storybook/client-api';
 
 import { category } from './helpers';
+
 import '@skatteetaten/ds-core-designtokens/index.css';
 import './playground.css';
 import '../src/stories/designtokens/designtokens.css';
@@ -50,6 +51,7 @@ const DSViewports = {
 };
 
 export const parameters = {
+  actions: { argTypesRegex: '^on.*' },
   controls: { sort: 'alpha' },
   viewport: { viewports: DSViewports },
   options: {
