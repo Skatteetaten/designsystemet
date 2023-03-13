@@ -101,6 +101,10 @@
     & .icon {
       fill: var(--semantic-disabled-foreground);
     }
+
+    &::before {
+      border: none;
+    }
   }
 
   &_outlined {
@@ -122,6 +126,10 @@
     &:disabled:hover,
     &:disabled:active {
       border-color: var(--semantic-disabled-foreground);
+
+      &::before {
+        border: none;
+      }
     }
   }
 }

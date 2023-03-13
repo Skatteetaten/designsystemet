@@ -9,6 +9,10 @@
   & .iconWrapper .icon {
     fill: var(--semantic-disabled-foreground);
   }
+
+  &::before {
+    border: none;
+  }
 }
 
 %focus {
