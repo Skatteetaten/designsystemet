@@ -309,7 +309,6 @@ WithAccesskey.argTypes = {
 WithAccesskey.parameters = {
   imageSnapshot: { disable: true },
 };
-
 WithAccesskey.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   const megaButton = canvas.getByRole('button');

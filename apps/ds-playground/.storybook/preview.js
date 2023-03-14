@@ -56,6 +56,7 @@ export const parameters = {
   viewport: { viewports: DSViewports },
   options: {
     storySort: {
+      method: 'alphabetical',
       order: ['Generelt', 'Designtokens', 'Komponenter', 'Tester'],
     },
   },

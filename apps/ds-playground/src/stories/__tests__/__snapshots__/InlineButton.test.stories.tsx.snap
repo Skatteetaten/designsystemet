@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tester/InlineButton Defaults smoke-test 1`] = `
+exports[`Tester/InlineButton Defaults play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
@@ -12,7 +12,7 @@ exports[`Tester/InlineButton Defaults smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/InlineButton Disabled smoke-test 1`] = `
+exports[`Tester/InlineButton Disabled play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
@@ -49,12 +49,12 @@ exports[`Tester/InlineButton DisabledWithIcon smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/InlineButton WithAccesskey smoke-test 1`] = `
+exports[`Tester/InlineButton WithAccesskey play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
   <button class="InlineButton_button__2taCK   "
-          accesskey="a"
+          accesskey="j"
           type="button"
   >
     Legg til rapport
@@ -62,20 +62,20 @@ exports[`Tester/InlineButton WithAccesskey smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/InlineButton WithAriaDescribedby smoke-test 1`] = `
+exports[`Tester/InlineButton WithAriaDescribedby play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
   <button class="InlineButton_button__2taCK   "
           type="button"
-          aria-describedby="htmlId"
+          aria-describedby="testid1234"
   >
     Legg til rapport
   </button>
 </div>
 `;
 
-exports[`Tester/InlineButton WithCustomCss smoke-test 1`] = `
+exports[`Tester/InlineButton WithCustomCss play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
@@ -110,7 +110,7 @@ exports[`Tester/InlineButton WithCustomIcon smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/InlineButton WithDataTestid smoke-test 1`] = `
+exports[`Tester/InlineButton WithDataTestid play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
@@ -123,7 +123,19 @@ exports[`Tester/InlineButton WithDataTestid smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/InlineButton WithIcon smoke-test 1`] = `
+exports[`Tester/InlineButton WithEventHandlers play-test 1`] = `
+<div class="noTransition"
+     data-test-block="true"
+>
+  <button class="InlineButton_button__2taCK   "
+          type="button"
+  >
+    Knapp har blitt klikket på
+  </button>
+</div>
+`;
+
+exports[`Tester/InlineButton WithIcon play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
@@ -169,11 +181,11 @@ exports[`Tester/InlineButton WithIconRight smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/InlineButton WithId smoke-test 1`] = `
+exports[`Tester/InlineButton WithId play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button id="htmlId"
+  <button id="htmlid"
           class="InlineButton_button__2taCK   "
           type="button"
   >
@@ -182,7 +194,7 @@ exports[`Tester/InlineButton WithId smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/InlineButton WithLang smoke-test 1`] = `
+exports[`Tester/InlineButton WithLang play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
@@ -242,43 +254,7 @@ exports[`Tester/InlineButton WithLongTextBreaking smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/InlineButton WithOnBlur smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
-  <button class="InlineButton_button__2taCK   "
-          type="button"
-  >
-    Klikk på knapp for å teste at onBlur virker
-  </button>
-</div>
-`;
-
-exports[`Tester/InlineButton WithOnClick smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
-  <button class="InlineButton_button__2taCK   "
-          type="button"
-  >
-    Klikk på knapp for å teste at onClick virker
-  </button>
-</div>
-`;
-
-exports[`Tester/InlineButton WithOnFocus smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
-  <button class="InlineButton_button__2taCK   "
-          type="button"
-  >
-    Gi knapp fokus for å teste at onFocus virker
-  </button>
-</div>
-`;
-
-exports[`Tester/InlineButton WithRef smoke-test 1`] = `
+exports[`Tester/InlineButton WithRef play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
@@ -291,7 +267,7 @@ exports[`Tester/InlineButton WithRef smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/InlineButton WithType smoke-test 1`] = `
+exports[`Tester/InlineButton WithType play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >

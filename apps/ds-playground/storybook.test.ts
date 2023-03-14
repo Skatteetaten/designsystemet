@@ -71,7 +71,7 @@ initStoryshots({
       process.env['STORYSHOTS_MODE'] === 'static'
         ? async (): Promise<Browser> => {
             browser = await puppeteer.connect({
-              browserURL: 'http://localhost:9002',
+              browserURL: 'http://localhost:3000',
             });
             return browser;
           }

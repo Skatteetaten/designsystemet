@@ -138,40 +138,6 @@ exports[`Image storyshots Tester/IconButton With Size extraSmall and Outline (A1
 
 exports[`Image storyshots Tester/IconButton With Type (B1) 1`] = `"<button class=\\"IconButton_button__2SNVB IconButton_button_medium__1_HY9  \\" type=\\"submit\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 IconButton_icon__2Ze1o\\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-labelledby=\\"svgtitle-:r0:\\" aria-hidden=\\"false\\" role=\\"img\\"><title id=\\"svgtitle-:r0:\\">dummy tekst accessible name</title><path d=\\"M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0\\"></path></svg></button>"`;
 
-exports[`Image storyshots Tester/InlineButton Defaults (A1, B1) 1`] = `"<button class=\\"InlineButton_button__2taCK   \\" type=\\"button\\">Legg til rapport</button>"`;
-
-exports[`Image storyshots Tester/InlineButton With Accesskey (B3) 1`] = `"<button class=\\"InlineButton_button__2taCK   \\" accesskey=\\"a\\" type=\\"button\\">Legg til rapport</button>"`;
-
-exports[`Image storyshots Tester/InlineButton With AriaDescribedby (B2) 1`] = `"<button class=\\"InlineButton_button__2taCK   \\" type=\\"button\\" aria-describedby=\\"htmlId\\">Legg til rapport</button>"`;
-
-exports[`Image storyshots Tester/InlineButton With Custom CSS (FA3) 1`] = `"<button class=\\"InlineButton_button__2taCK   dummyClassname\\" type=\\"button\\">Legg til rapport</button>"`;
-
-exports[`Image storyshots Tester/InlineButton With Custom Icon (A3) 1`] = `"<button class=\\"InlineButton_button__2taCK InlineButton_button_withIconLeft__3Y66a  \\" type=\\"button\\"><span class=\\"InlineButton_iconWrapper__1jDt6\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 InlineButton_icon__GHhTr\\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\" role=\\"img\\"><path d=\\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z\\"></path></svg></span>Legg til rapport</button>"`;
-
-exports[`Image storyshots Tester/InlineButton With DataTestid (FA5) 1`] = `"<button class=\\"InlineButton_button__2taCK   \\" data-testid=\\"123ID\\" type=\\"button\\">Legg til rapport</button>"`;
-
-exports[`Image storyshots Tester/InlineButton With Disabled (B5) 1`] = `"<button class=\\"InlineButton_button__2taCK   \\" disabled=\\"\\" type=\\"button\\">Legg til rapport</button>"`;
-
-exports[`Image storyshots Tester/InlineButton With Disabled Icon (B5) 1`] = `"<button class=\\"InlineButton_button__2taCK InlineButton_button_withIconLeft__3Y66a  \\" disabled=\\"\\" type=\\"button\\"><span class=\\"InlineButton_iconWrapper__1jDt6\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 InlineButton_icon__GHhTr\\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\" role=\\"img\\"><path d=\\"M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z\\"></path></svg></span>Legg til rapport</button>"`;
-
-exports[`Image storyshots Tester/InlineButton With Icon (A3, A4, B4) 1`] = `"<button class=\\"InlineButton_button__2taCK InlineButton_button_withIconLeft__3Y66a  \\" type=\\"button\\"><span class=\\"InlineButton_iconWrapper__1jDt6\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 InlineButton_icon__GHhTr\\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\" role=\\"img\\"><path d=\\"M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z\\"></path></svg></span>Legg til rapport</button>"`;
-
-exports[`Image storyshots Tester/InlineButton With Icon Right (A5) 1`] = `"<button class=\\"InlineButton_button__2taCK  InlineButton_button_withIconRight__3d8PZ \\" type=\\"button\\">Legg til rapport<span class=\\"InlineButton_iconWrapper__1jDt6\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 InlineButton_icon__GHhTr\\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\" role=\\"img\\"><path d=\\"M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z\\"></path></svg></span></button>"`;
-
-exports[`Image storyshots Tester/InlineButton With Id (FA2) 1`] = `"<button id=\\"htmlId\\" class=\\"InlineButton_button__2taCK   \\" type=\\"button\\">Legg til rapport</button>"`;
-
-exports[`Image storyshots Tester/InlineButton With Lang (FA4) 1`] = `"<button class=\\"InlineButton_button__2taCK   \\" lang=\\"nb\\" type=\\"button\\">Legg til rapport</button>"`;
-
-exports[`Image storyshots Tester/InlineButton With Long Text (A1) 1`] = `"<button class=\\"InlineButton_button__2taCK   \\" type=\\"button\\">Denne knappen har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert. Denne knappen har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert.</button>"`;
-
-exports[`Image storyshots Tester/InlineButton With Long Text And Breaking (A1) 1`] = `"<button class=\\"InlineButton_button__2taCK   \\" type=\\"button\\">Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Nårikkeikonsåskaltekstenværevenstrejusteres.Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Nårikkeikonsåskaltekstenværevenstrejusteres.</button>"`;
-
-exports[`Image storyshots Tester/InlineButton With Long Text And Icon (A3) 1`] = `"<button class=\\"InlineButton_button__2taCK InlineButton_button_withIconLeft__3Y66a  \\" type=\\"button\\"><span class=\\"InlineButton_iconWrapper__1jDt6\\"><svg class=\\"Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 InlineButton_icon__GHhTr\\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\" role=\\"img\\"><path d=\\"M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z\\"></path></svg></span>Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert. Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert.</button>"`;
-
-exports[`Image storyshots Tester/InlineButton With Ref (FA1) 1`] = `"<button class=\\"InlineButton_button__2taCK   \\" type=\\"button\\" id=\\"dummyIdForwardedFromRef\\">Legg til rapport</button>"`;
-
-exports[`Image storyshots Tester/InlineButton With Type (B1) 1`] = `"<button class=\\"InlineButton_button__2taCK   \\" type=\\"submit\\">Legg til rapport</button>"`;
-
 exports[`Image storyshots Tester/Link Defaults (A1 delvis, A2, A3 delvis, B1) 1`] = `"<a class=\\"Link_link__2QfML  \\" href=\\"#root\\">Er du pendler?</a>"`;
 
 exports[`Image storyshots Tester/Link With AriaDescribedby (B3) 1`] = `"<a class=\\"Link_link__2QfML  \\" href=\\"#root\\" aria-describedby=\\"htmlId\\">Er du pendler?</a>"`;
