@@ -41,7 +41,7 @@
         "lintFilePatterns": ["apps/ds-playground/**/*.{ts,tsx,js,jsx}"]
       }
     },
-    "test": {
+    "test-old": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/ds-playground"],
       "options": {
@@ -75,7 +75,7 @@
         "command": "npm version {args.packageVersion} --no-git-tag"
       }
     },
-    "test-storybook": {
+    "test": {
       "executor": "nx:run-commands",
       "options": {
         "cwd": "apps/ds-playground",

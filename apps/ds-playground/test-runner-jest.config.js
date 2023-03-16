@@ -24,6 +24,7 @@ module.exports = {
 
   testEnvironmentOptions: {
     'jest-playwright': {
+      collectCoverage: true,
       connectOptions: process.env['CI']
         ? {}
         : {

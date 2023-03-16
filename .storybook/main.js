@@ -1,6 +1,7 @@
 module.exports = {
   stories: [],
   addons: [
+    '@storybook/addon-coverage',
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
     '@storybook/addon-interactions',

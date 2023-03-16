@@ -2,6 +2,7 @@
 
 /dist
 /coverage
+apps/ds-playground/coverage/
 
 /.idea
 /.scannerwork
