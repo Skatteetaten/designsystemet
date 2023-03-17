@@ -1,0 +1,47 @@
+@import 'libs/ds-core-utils/src/styles.scss';
+
+.link {
+  @include link;
+
+  font-size: var(--font-size-m);
+  line-height: var(--semantic-line-height-article);
+
+  .icon {
+    background-color: inherit;
+    fill: var(--semantic-interactive-main);
+    transform: translate(0, var(--spacing-xs));
+    vertical-align: top;
+
+    &_isCustom {
+      margin-right: var(--spacing-s);
+    }
+
+    &_isExternal {
+      margin-left: var(--spacing-s);
+    }
+  }
+
+  &_white {
+    --semantic-interactive-main: var(--palette-graphite-0);
+
+    &:hover {
+      --semantic-interactive-main: var(--theme-primary);
+      --semantic-interactive-background: var(--palette-graphite-0);
+    }
+
+    &:focus {
+      @extend %focus;
+    }
+
+    &:active {
+      @extend %focus;
+
+      --semantic-interactive-foreground: var(--theme-primary);
+      --semantic-interactive-background: var(--palette-graphite-0);
+    }
+  }
+
+  &:active .icon {
+    fill: var(--semantic-interactive-foreground);
+  }
+}

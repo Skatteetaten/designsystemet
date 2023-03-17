@@ -1,47 +1,27 @@
-<!-- palette.mdx -->
-
-import {
-  Meta,
-  Story,
-  Canvas,
-  ColorPalette,
-  ColorItem,
-} from '@storybook/addon-docs';
-import { TokensList } from './TokensList';
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
 import { PaletteTokenExamplesGenerator } from './PaletteTokenExamplesGenerator';
+import { TokensList } from './TokensList';
 
-# Palette
+<Meta title="Designtokens/Palette" />
 
-<Meta title="Designtokens" />
+<PaletteTokenExamplesGenerator />
 
-## Enkelte farger
-
-<PaletteTokenExamplesGenerator paletteType={'color'} />
-
-## Semantiske farger
-
-<PaletteTokenExamplesGenerator paletteType={'semantic'} />
-
-<Canvas>
+<Canvas withSource="none">
   <Story
     name="Palette"
     parameters={{
-      design: [
-        {
-          name: 'Palette',
-          type: 'figma',
-          url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=3254%3A8885',
-        },
-      ],
+      controls: {
+        disabled: true,
+      },
+      actions: {
+        disabled: true,
+      },
+      previewTabs: {
+        canvas: { hidden: true },
+      },
+      viewMode: 'docs',
     }}
   >
-    {() => {
-      return (
-        <>
-          <p>{'Klikk på Docs tab for en visuell visning av palette'}</p>
-          <TokensList tokenType={'palette'} />
-        </>
-      );
-    }}
+    <TokensList tokenType={'palette'} />
   </Story>
 </Canvas>

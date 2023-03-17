@@ -25,11 +25,7 @@ module.exports = {
     '../../../libs/**/*.stories.mdx',
     '../../../libs/**/*.stories.@(js|jsx|ts|tsx)',
   ],
-  addons: [
-    ...rootMain.addons,
-    '@nrwl/react/plugins/storybook',
-    'storybook-addon-designs',
-  ],
+  addons: [...rootMain.addons, '@nrwl/react/plugins/storybook'],
   webpackFinal: async (config, { configType }) => {
     // apply any global webpack configs that might have been specified in .storybook/main.js
     if (rootMain.webpackFinal) {
@@ -74,6 +70,10 @@ module.exports = {
         })
       );
     }
+    config.resolve.fallback.fs = false;
+    config.resolve.fallback.os = false;
+    config.resolve.fallback.path = false;
+
     return webpackConfigNoChunkTilde(config);
   },
   managerWebpack: (config) => {

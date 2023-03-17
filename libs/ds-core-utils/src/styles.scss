@@ -1,0 +1,29 @@
+%focus {
+  outline: none;
+  text-decoration-thickness: 3px;
+}
+
+@mixin link {
+  padding: var(--spacing-s) 0;
+  color: var(--semantic-interactive-main);
+  font-weight: var(--font-weight-medium);
+  text-decoration-color: var(--semantic-interactive-main);
+  text-decoration-line: underline;
+  word-break: break-word;
+
+  &:hover {
+    background-color: var(--semantic-interactive-background);
+  }
+
+  &:focus {
+    @extend %focus;
+  }
+
+  &:active {
+    @extend %focus;
+
+    background-color: var(--semantic-interactive-background);
+    color: var(--semantic-interactive-foreground);
+    text-decoration-color: var(--semantic-interactive-foreground);
+  }
+}

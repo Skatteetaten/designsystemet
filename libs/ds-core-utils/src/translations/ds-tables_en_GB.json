@@ -1,0 +1,10 @@
+{
+  "pagination.Back": "TODO",
+  "pagination.Forward": "TODO",
+  "pagination.Title": "TODO",
+  "table.Sortable": "Sortable",
+  "table.SortedAscending": "Sorted ascending",
+  "table.SortedDescending": "Sorted descending",
+  "tablerow.Editable": "Edit row",
+  "tablerow.Expandable": "More information"
+}

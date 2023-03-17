@@ -43,6 +43,8 @@
     "--semantic-warning-foreground": "#9f7509",
     "--semantic-success-background": "var(--palette-forest-10)",
     "--semantic-success-foreground": "#316f2a",
+    "--semantic-disabled-background": "var(--palette-graphite-10)",
+    "--semantic-disabled-foreground": "var(--palette-graphite-50)",
     "--semantic-interactive-background": "var(--palette-azure-10)",
     "--semantic-interactive-main": "var(--palette-azure-70)",
     "--semantic-interactive-foreground": "var(--palette-azure-100)",

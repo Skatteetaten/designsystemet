@@ -1,3 +1,19 @@
+@import 'inter.css';
+
+:root,
+:host {
+  font-family: 'Inter';
+}
+
+@font-face {
+  font-family: 'CourierLocalWebFont';
+  src: url('CourierStd.woff2') format('woff2');
+}
+
+code {
+  font-family: 'CourierLocalWebFont';
+}
+
 /* Dette er i titlene i Docs fanen */
 h1.sbdocs-h1,
 h2.sbdocs-h2,
@@ -37,4 +53,9 @@ div.css-tmvzag {
 /* Dette er Table header i Docs fanen */
 .css-tm6i3o.css-tm6i3o .docblock-argstable-head th {
   color: var(--semantic-page-foreground);
+}
+
+.introImageContainer {
+  margin-bottom: var(--spacing-xl) !important;
+  background-color: var(--palette-denim-10);
 }

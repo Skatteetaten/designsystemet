@@ -1,6 +1,12 @@
 <style>
-  .noTransition > * {
+  .noTransition * {
     transition: none !important;
+    transition-timing-function: unset !important;
+  }
+  /* slik at transition ikke ødelegger snapshots når man setter en annen bakgrunnsfarge*/
+  .sb-show-main {
+    transition: none !important;
+    transition-timing-function: none !important;
   }
 
   /* slik at hele ikonnavnet vises */

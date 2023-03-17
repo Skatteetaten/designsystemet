@@ -1,0 +1,22 @@
+@import 'libs/ds-core-utils/src/styles.scss';
+
+.blockquote {
+  padding-left: var(--spacing-m);
+  border-left: 4px solid var(--palette-ochre-50);
+  margin: 0 0 0 var(--spacing-m);
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--semantic-line-height-article);
+
+  &_hasSpacing {
+    margin-bottom: var(--spacing-l);
+  }
+
+  strong {
+    font-weight: var(--font-weight-bold);
+  }
+
+  a {
+    @include link;
+  }
+}

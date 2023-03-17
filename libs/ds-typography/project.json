@@ -1,0 +1,75 @@
+{
+  "name": "ds-typography",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ds-typography/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ds-typography",
+        "tsConfig": "libs/ds-typography/tsconfig.lib.json",
+        "project": "libs/ds-typography/package.json",
+        "entryFile": "libs/ds-typography/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": ["libs/ds-typography/rollup.config.js"],
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/ds-typography/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ds-typography/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/ds-typography/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/ds-typography/**/*.css",
+          "libs/ds-typography/**/*.scss"
+        ]
+      }
+    },
+    "tsc": {
+      "executor": "@skatteetaten/ds-dev-config:tsCheck",
+      "options": {
+        "tsConfig": ["tsconfig.lib.json", "tsconfig.spec.json"]
+      }
+    },
+    "set-version": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm version {args.packageVersion} --no-git-tag",
+        "cwd": "libs/ds-typography"
+      }
+    },
+    "publish": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm publish {args.switches}",
+        "cwd": "dist/libs/ds-typography"
+      }
+    }
+  },
+  "implicitDependencies": ["!ds-dev-config"]
+}

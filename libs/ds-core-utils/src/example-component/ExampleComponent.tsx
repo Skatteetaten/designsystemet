@@ -17,7 +17,9 @@ interface ExampleComponentCustomProps
 }
 
 // Her samler jeg interfacet med BaseProps som er et set med properties som alle komponentene våre skal tilby
-export type ExampleComponentProps = ExampleComponentCustomProps & BaseProps;
+export interface ExampleComponentProps
+  extends ExampleComponentCustomProps,
+    BaseProps {}
 
 export const ExampleComponent = forwardRef<
   HTMLButtonElement,
@@ -28,7 +30,7 @@ export const ExampleComponent = forwardRef<
       id,
       variant = 'primary',
       className,
-      'data-testid': dataTestId = `testid-${id}`,
+      'data-testid': dataTestid = `testid-${id}`,
       onClick,
       children,
     },
@@ -37,7 +39,7 @@ export const ExampleComponent = forwardRef<
     return (
       <button
         ref={ref}
-        data-testid={dataTestId}
+        data-testid={dataTestid}
         className={className}
         onClick={onClick}
       >

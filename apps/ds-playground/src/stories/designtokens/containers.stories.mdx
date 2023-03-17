@@ -1,5 +1,3 @@
-<!-- palette.mdx -->
-
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
 import { TokensList } from './TokensList';
 import { ExternalLayout, InternalLayout } from '@skatteetaten/ds-core-utils';
@@ -8,38 +6,34 @@ import { ExternalLayout, InternalLayout } from '@skatteetaten/ds-core-utils';
 
 ## External layout
 
-<div style={{ backgroundColor: 'var(--palette-burgundy-10)' }}>
+<div className={'layoutContainer'}>
   <ExternalLayout />
 </div>
 
 ## Internal layout
 
-<div style={{ backgroundColor: 'var(--palette-burgundy-10)' }}>
+<div className={'layoutContainer'}>
   <InternalLayout />
 </div>
 
-<Meta title="Designtokens" />
+<Meta title="Designtokens/Containers" />
 
-<Canvas>
+<Canvas withSource="none">
   <Story
     name="Containers"
     parameters={{
-      design: [
-        {
-          name: 'Containers & Breakpoints',
-          type: 'figma',
-          url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=9157%3A15029',
-        },
-      ],
+      controls: {
+        disabled: true,
+      },
+      actions: {
+        disabled: true,
+      },
+      previewTabs: {
+        canvas: { hidden: true },
+      },
+      viewMode: 'docs',
     }}
   >
-    {() => {
-      return (
-        <>
-          <p>{'Klikk på Docs tab for en visuell visning av containers'}</p>
-          <TokensList tokenType={'containers'} />
-        </>
-      );
-    }}
+    <TokensList tokenType={'containers'} />
   </Story>
 </Canvas>

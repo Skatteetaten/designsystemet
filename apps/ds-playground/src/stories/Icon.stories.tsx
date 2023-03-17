@@ -1,4 +1,4 @@
-import { sizeArr, iconVariantArr } from '@skatteetaten/ds-core-utils';
+import { sizeArr } from '@skatteetaten/ds-core-utils';
 import {
   Icon,
   IconProps,
@@ -6,18 +6,18 @@ import {
   getIconSizeDefault,
   SystemSVGPathsAndIcons,
   ThemeSVGPathsAndIcons,
+  iconVariantArr,
 } from '@skatteetaten/ds-icons';
+import { ArgsTable, PRIMARY_STORY } from '@storybook/addon-docs';
 import { Story, Meta } from '@storybook/react';
 
-import { category } from '../../.storybook/helpers';
 import { SystemIconLabels, SystemSVGPaths } from './utils/icon.systems';
 import { ThemeIconLabels, ThemeSVGPaths } from './utils/icon.themes';
-
-import './classnames.stories.css';
+import { category } from '../../.storybook/helpers';
 
 export default {
   component: Icon,
-  title: 'Design System/Icon',
+  title: 'Komponenter/Icon',
 } as Meta<IconProps>;
 
 const Template: Story<IconProps> = (args) => (
@@ -32,7 +32,6 @@ export const ThemeIcon: Story<IconProps> = Template.bind({});
 const commonArgTypes = {
   // Props
   title: {
-    control: 'text',
     table: {
       category: category.props,
     },
@@ -42,18 +41,9 @@ const commonArgTypes = {
 };
 
 const iconDefaultParameters = {
-  design: [
-    {
-      name: 'Oversikt',
-      type: 'figma',
-      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1124%3A6643',
-    },
-    {
-      name: 'Størrelser og avstander',
-      type: 'figma',
-      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1124%3A6642',
-    },
-  ],
+  docs: {
+    page: (): JSX.Element => <ArgsTable story={PRIMARY_STORY} />,
+  },
 };
 const defaultSystemIconVariant = getIconVariantDefault();
 

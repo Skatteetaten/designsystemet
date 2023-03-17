@@ -11,7 +11,7 @@
   padding: 0;
   border: none;
   background-color: transparent;
-  color: var(--palette-azure-70);
+  color: var(--semantic-interactive-main);
   cursor: pointer;
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-medium);
@@ -33,12 +33,12 @@
     text-decoration-line: none;
   }
 
-  .icon {
+  .iconWrapper {
     display: flex;
     padding-top: 2px;
 
-    & svg {
-      fill: var(--palette-azure-70);
+    & .icon {
+      fill: var(--semantic-interactive-main);
     }
   }
 
@@ -56,10 +56,9 @@
     background-color: var(--semantic-interactive-background);
     color: var(--semantic-interactive-foreground);
     transform: translateY(2px);
-    transition-timing-function: ease;
 
-    & .icon svg {
-      fill: var(--palette-azure-100);
+    & .icon {
+      fill: var(--semantic-interactive-foreground);
     }
   }
 
@@ -67,12 +66,13 @@
   &:disabled:hover,
   &:disabled:active {
     background-color: transparent;
-    color: var(--palette-graphite-50);
+    color: var(--semantic-disabled-foreground);
     cursor: not-allowed;
+    outline: none;
     transform: none;
 
-    & .icon svg {
-      fill: var(--palette-graphite-50);
+    & .icon {
+      fill: var(--semantic-disabled-foreground);
     }
   }
 }

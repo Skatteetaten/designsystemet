@@ -8,6 +8,7 @@
     "ds-dev-config": "libs/ds-dev-config",
     "ds-forms": "libs/ds-forms",
     "ds-icons": "libs/ds-icons",
-    "ds-playground": "apps/ds-playground"
+    "ds-playground": "apps/ds-playground",
+    "ds-typography": "libs/ds-typography"
   }
 }

@@ -41,13 +41,15 @@
   --semantic-page-background: var(--palette-graphite-0);
   --semantic-page-foreground: var(--palette-graphite-100);
 
-  /* Variant "danger"/"warning"/"success": foreground / background */
+  /* Variant "danger"/"warning"/"success"/"disabled": foreground / background */
   --semantic-danger-background: var(--palette-burgundy-10);
   --semantic-danger-foreground: #a82e39;
   --semantic-warning-background: var(--palette-ochre-10);
   --semantic-warning-foreground: #9f7509;
   --semantic-success-background: var(--palette-forest-10);
   --semantic-success-foreground: #316f2a;
+  --semantic-disabled-background: var(--palette-graphite-10);
+  --semantic-disabled-foreground: var(--palette-graphite-50);
 
   /* Interaktive farger: :active / :hoved / :focus */
   --semantic-interactive-background: var(--palette-azure-10);

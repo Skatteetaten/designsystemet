@@ -4,7 +4,7 @@ def jenkinsfile
 
 def publishToNpmOverride = { Map<String, Object> props  ->
   if (props.publishToNpm) {
-    if (props.nodeVersion == '16') {
+    if (props.nodeVersion == '16'  || props.nodeVersion == '18') {
       echo 'The registry is specified as a workaround for https://github.com/npm/cli/issues/2453'
       sh "npx nx affected --head=HEAD --base=${props.scmVars.GIT_PREVIOUS_SUCCESSFUL_COMMIT ?: 'HEAD~1'} --target=publish --switches='--registry https://nexus.sits.no/repository/npm-internal/'"
     } else {
@@ -16,7 +16,7 @@ def publishToNpmOverride = { Map<String, Object> props  ->
 
 def publishSnapshotToNpmOverride = { Map<String, Object> props  ->
   if (props.publishSnapshotToNpm) {
-    if (props.nodeVersion == '16') {
+    if (props.nodeVersion == '16' || props.nodeVersion == '18') {
       echo 'The registry is specified as a workaround for https://github.com/npm/cli/issues/2453'
       sh "npx nx affected --head=HEAD --base origin/master --target=publish --switches='--tag ${props.branchVersion} --registry https://nexus.sits.no/repository/npm-internal/'"
     } else {
@@ -38,7 +38,7 @@ def overrides = [
     iqOrganizationName           : 'Team Designsystem',
     sonarQube                    : true,
     npmInstallCommand            : "ci",
-    nodeVersion                  : "16",
+    nodeVersion                  : "18",
     disableAllReports            : false,
     lineCoverageReport           : false,
     publishToNpm                 : true,
@@ -47,7 +47,7 @@ def overrides = [
     publishSnapshotToNpmOverride : publishSnapshotToNpmOverride,
     preCompile                   : preCompile,
     npmPublishFolder    : './dist/libs',
-    versionStrategy     : [[branch: 'master', versionHint: '0']]
+    versionStrategy     : [[branch: 'master', versionHint: '0.2', minorOnPrefixes: 'release/']]
 ]
 
 

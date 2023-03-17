@@ -1,0 +1,19 @@
+@import 'libs/ds-core-utils/src/styles.scss';
+
+.element {
+  padding-left: var(--spacing-m);
+  margin-bottom: var(--spacing-xs);
+  word-break: break-word;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  strong {
+    font-weight: var(--font-weight-bold);
+  }
+
+  a {
+    @include link;
+  }
+}

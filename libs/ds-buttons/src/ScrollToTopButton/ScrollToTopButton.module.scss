@@ -1,0 +1,87 @@
+@import '~@skatteetaten/ds-core-designtokens/designtokens/breakpoints.scss';
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.scrollToTopButton {
+  padding: var(--spacing-xs);
+  border: solid 2px transparent;
+  border-radius: 0.25rem;
+  background: transparent;
+  color: var(--semantic-interactive-main);
+  cursor: pointer;
+  opacity: 0;
+  outline: none;
+  transition: 0.15s;
+  visibility: hidden;
+  will-change: transform;
+
+  @media (min-width: $breakpoint-m) {
+    position: fixed;
+    z-index: 100;
+    right: calc(((100vw) - var(--semantic-responsive-container)) / 2);
+    bottom: 0;
+  }
+
+  &_visible {
+    opacity: 1;
+    visibility: visible;
+
+    @media (min-width: $breakpoint-m) {
+      bottom: var(--spacing-xl);
+    }
+  }
+
+  &:hover {
+    background: var(--semantic-interactive-background);
+  }
+
+  &:focus {
+    border: solid 2px var(--semantic-interactive-main);
+  }
+
+  &:active {
+    border: solid 2px var(--semantic-interactive-foreground);
+    background: var(--semantic-interactive-background);
+    color: var(--semantic-interactive-foreground);
+    transform: translateY(2px);
+  }
+
+  &IconContainer {
+    width: var(--spacing-xl);
+    height: var(--spacing-xl);
+    border: solid 2px var(--semantic-interactive-main);
+    border-radius: 2rem;
+    margin: 0 auto var(--spacing-xs) auto;
+    background: var(--palette-graphite-0);
+
+    &Icon {
+      margin: var(--spacing-xs) auto 0;
+      fill: var(--semantic-interactive-main);
+    }
+  }
+
+  &:hover &IconContainer {
+    background: transparent;
+  }
+
+  &:active &IconContainer {
+    &Icon {
+      fill: var(--semantic-interactive-foreground);
+    }
+
+    border: solid 2px var(--semantic-interactive-foreground);
+    background: transparent;
+  }
+
+  &Label {
+    padding: var(--spacing-xs) var(--spacing-s);
+    border-radius: 999px;
+    background: var(--palette-graphite-0);
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--semantic-line-height-buttons);
+  }
+}

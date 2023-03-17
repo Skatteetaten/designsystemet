@@ -74,5 +74,6 @@
         "cwd": "dist/libs/ds-core-designtokens"
       }
     }
-  }
+  },
+  "name": "ds-core-designtokens"
 }

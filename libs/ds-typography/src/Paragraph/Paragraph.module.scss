@@ -1,0 +1,31 @@
+@import 'libs/ds-core-utils/src/styles.scss';
+
+.paragraph {
+  margin: 0;
+  font-weight: var(--font-weight-regular);
+  line-height: var(--semantic-line-height-article);
+
+  &_standard {
+    font-size: var(--font-size-m);
+  }
+
+  &_ingress {
+    font-size: var(--font-size-l);
+  }
+
+  &_hasSpacingLarge {
+    margin-bottom: var(--spacing-l);
+  }
+
+  &_hasSpacingExtraLarge {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  strong {
+    font-weight: var(--font-weight-bold);
+  }
+
+  a {
+    @include link;
+  }
+}

@@ -2,20 +2,17 @@ import {
   InlineButton,
   getInlineButtonPositionDefault,
 } from '@skatteetaten/ds-buttons';
-import {
-  getCommonDisabledDefault,
-  positionArr,
-} from '@skatteetaten/ds-core-utils';
+import { positionArr } from '@skatteetaten/ds-core-utils';
+import { AddOutlineSVGpath, CancelSVGpath } from '@skatteetaten/ds-icons';
 import { action } from '@storybook/addon-actions';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import { category, htmlEventDescription } from '../../.storybook/helpers';
 import { SystemSVGPaths } from './utils/icon.systems';
-import './classnames.stories.css';
+import { category, htmlEventDescription } from '../../.storybook/helpers';
 
 export default {
   component: InlineButton,
-  title: 'Design System / InlineButton',
+  title: 'Komponenter/InlineButton',
   argTypes: {
     // Props
     children: { table: { category: category.props } },
@@ -35,14 +32,12 @@ export default {
     },
     // HTML
     accessKey: {
-      control: 'text',
       table: { category: category.htmlAttribute },
     },
     disabled: {
       control: 'boolean',
       table: {
         category: category.htmlAttribute,
-        defaultValue: { summary: getCommonDisabledDefault() },
       },
     },
     type: {
@@ -65,36 +60,27 @@ const TemplateDefault: ComponentStory<typeof InlineButton> = (args) => (
     {args.children}
   </InlineButton>
 );
-
-const buttonDefaultParameters = {
-  design: [
-    {
-      name: 'Varianter og tilstander',
-      type: 'figma',
-      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=4018%3A9627',
-    },
-    {
-      name: 'Luft og fontstørrelser',
-      type: 'figma',
-      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1210%3A7396',
-    },
-  ],
-  backgrounds: {
-    values: [
-      { name: 'Svart', value: '#000' },
-      { name: 'Hvit', value: '#fff' },
-    ],
-  },
-};
+const TemplateExample: ComponentStory<typeof InlineButton> = () => (
+  <div className={'flex'}>
+    <InlineButton className={'exampleSpacing'} svgPath={AddOutlineSVGpath}>
+      {'Legg til'}
+    </InlineButton>
+    <InlineButton
+      className={'exampleSpacing'}
+      svgPath={CancelSVGpath}
+      iconPosition={'right'}
+    >
+      {'Fjern'}
+    </InlineButton>
+  </div>
+);
 
 export const InlineButtonDefault = TemplateDefault.bind({});
+export const InlineButtonExample = TemplateExample.bind({});
 InlineButtonDefault.storyName = 'Default';
-const baseArgs = {
-  children: 'Legg til rapport',
-};
+InlineButtonExample.storyName = 'Example';
 
 InlineButtonDefault.args = {
-  ...baseArgs,
+  children: 'Legg til rapport',
   iconPosition: getInlineButtonPositionDefault(),
 };
-InlineButtonDefault.parameters = buttonDefaultParameters;

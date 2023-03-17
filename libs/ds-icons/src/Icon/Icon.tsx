@@ -12,6 +12,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
     {
       id,
       className = getCommonClassNameDefault(),
+      lang,
       'data-testid': dataTestId,
       title,
       variant = getIconVariantDefault(),
@@ -30,6 +31,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
         ref={ref}
         id={id}
         className={`${styles[variant]} ${sizeClassName} ${className}`}
+        lang={lang}
         data-testid={dataTestId}
         viewBox={variant === 'systemIcon' ? '0 0 24 24' : '0 0 48 48'}
         focusable={false}

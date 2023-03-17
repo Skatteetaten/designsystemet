@@ -1,10 +1,7 @@
 /* eslint-disable jsx-a11y/no-access-key */
 import { forwardRef } from 'react';
 
-import {
-  getCommonDisabledDefault,
-  getCommonClassNameDefault,
-} from '@skatteetaten/ds-core-utils';
+import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
 import { getInlineButtonPositionDefault } from './defaults';
@@ -17,11 +14,12 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
     {
       id,
       className = getCommonClassNameDefault(),
+      lang,
       'data-testid': dataTestId,
       iconPosition = getInlineButtonPositionDefault(),
       svgPath,
       accessKey,
-      disabled = getCommonDisabledDefault(),
+      disabled,
       type = 'button',
       ariaDescribedby,
       onBlur,
@@ -45,6 +43,7 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
         ref={ref}
         id={id}
         className={concatenatedClassName}
+        lang={lang}
         data-testid={dataTestId}
         accessKey={accessKey}
         disabled={disabled}
@@ -55,14 +54,14 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
         onFocus={onFocus}
       >
         {hasIconLeft && (
-          <span className={styles.icon}>
-            <Icon svgPath={svgPath} />
+          <span className={styles.iconWrapper}>
+            <Icon className={styles.icon} svgPath={svgPath} />
           </span>
         )}
         {children}
         {hasIconRight && (
-          <span className={styles.icon}>
-            <Icon svgPath={svgPath} />
+          <span className={styles.iconWrapper}>
+            <Icon className={styles.icon} svgPath={svgPath} />
           </span>
         )}
       </button>

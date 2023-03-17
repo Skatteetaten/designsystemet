@@ -1,25 +1,27 @@
-<!-- palette.mdx -->
-
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
-import { TokensList } from './TokensList';
 import { FontTokenExamplesGenerator } from './FontTokenExamplesGenerator';
+import { TokensList } from './TokensList';
 
 # Font
 
-<Meta title="Designtokens" />
+<Meta title="Designtokens/Font" />
 
 ## Font-size
 
 <FontTokenExamplesGenerator
   propertyType={'font-size'}
-  sampleText={'Deklamerer lirke illebefinnende utholdelig dødsfallet'}
+  sampleText={
+    'Skatteetaten ønsker å gjøre det enklere å gjøre rett og vanskeligere å gjøre feil'
+  }
 />
 
 ## Font-weight
 
 <FontTokenExamplesGenerator
   propertyType={'font-weight'}
-  sampleText={'Deklamerer lirke illebefinnende utholdelig dødsfallet'}
+  sampleText={
+    'Skatteetaten ønsker å gjøre det enklere å gjøre rett og vanskeligere å gjøre feil'
+  }
 />
 
 ## Line-height
@@ -27,30 +29,26 @@ import { FontTokenExamplesGenerator } from './FontTokenExamplesGenerator';
 <FontTokenExamplesGenerator
   propertyType={'line-height'}
   sampleText={
-    'Deklamerer lirke illebefinnende utholdelig dødsfallet pleie, personalet tørklær kjære høyviktig således gledet måttet, den overlat pakkene lerkefuglen. Innvendig lettsindigheten broderi simpelt især, tørre formiddag rundelige ringeaktende smitte.'
+    'Skatteetaten ønsker å gjøre det enklere å gjøre rett og vanskeligere å gjøre feil, redusere skattekriminalitet, forvalte informasjon for å bidra til forenkling og digitalisering, jobbe sammen fra start og sist, bruke data, analyse og maskinlæring i stor skala i oppgaveløsningen. Alt for å sikre finansieringen av velferdsstaten.'
   }
 />
 
-<Canvas>
+<Canvas withSource="none">
   <Story
     name="Font"
     parameters={{
-      design: [
-        {
-          name: 'Font',
-          type: 'figma',
-          url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=16083%3A25235',
-        },
-      ],
+      controls: {
+        disabled: true,
+      },
+      actions: {
+        disabled: true,
+      },
+      previewTabs: {
+        canvas: { hidden: true },
+      },
+      viewMode: 'docs',
     }}
   >
-    {() => {
-      return (
-        <>
-          <p>{'Klikk på Docs tab for en visuell visning av font-størrelser'}</p>
-          <TokensList tokenType={'font'} />
-        </>
-      );
-    }}
+    <TokensList tokenType={'font'} />
   </Story>
 </Canvas>

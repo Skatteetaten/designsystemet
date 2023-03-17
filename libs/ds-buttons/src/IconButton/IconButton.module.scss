@@ -13,31 +13,25 @@
   }
 }
 
-%active {
-  background-color: var(--semantic-interactive-background);
-  transform: translateY(2px);
-  transition: 0.15s;
-}
-
 .button {
   position: relative;
   box-sizing: content-box;
   border: 2px solid transparent;
-  background-color: transparent;
   border-radius: 50%;
+  background-color: transparent;
   cursor: pointer;
   will-change: transform;
 
-  > svg {
+  & .icon {
     display: block;
-    fill: var(--palette-azure-70);
+    fill: var(--semantic-interactive-main);
   }
 
   &_extraSmall {
     padding: var(--spacing-xxs) var(--spacing-xxs);
     border-width: 1px;
 
-    > svg {
+    & .icon {
       width: var(--size-small);
       height: var(--size-small);
     }
@@ -47,7 +41,7 @@
     padding: var(--spacing-xs) var(--spacing-xs);
     border-width: 1px;
 
-    > svg {
+    & .icon {
       width: var(--size-small);
       height: var(--size-small);
     }
@@ -56,7 +50,7 @@
   &_medium {
     padding: var(--spacing-xs) var(--spacing-xs);
 
-    > svg {
+    & .icon {
       width: var(--size-medium);
       height: var(--size-medium);
     }
@@ -65,7 +59,7 @@
   &_large {
     padding: var(--spacing-s) var(--spacing-s);
 
-    > svg {
+    & .icon {
       width: var(--size-large);
       height: var(--size-large);
     }
@@ -85,12 +79,13 @@
 
   &:active {
     @extend %focus;
-    @extend %active;
 
     border-color: var(--semantic-interactive-background);
     background-color: var(--semantic-interactive-background);
+    transform: translateY(2px);
+    transition: 0.15s;
 
-    > svg {
+    & .icon {
       fill: var(--semantic-interactive-foreground);
     }
   }
@@ -103,13 +98,17 @@
     cursor: not-allowed;
     transform: none;
 
-    > svg {
-      fill: var(--palette-graphite-50);
+    & .icon {
+      fill: var(--semantic-disabled-foreground);
+    }
+
+    &::before {
+      border: none;
     }
   }
 
   &_outlined {
-    border-color: var(--palette-azure-70);
+    border-color: var(--semantic-interactive-main);
 
     &:hover {
       border-color: var(--semantic-interactive-main);
@@ -126,7 +125,11 @@
     &:disabled,
     &:disabled:hover,
     &:disabled:active {
-      border-color: var(--palette-graphite-50);
+      border-color: var(--semantic-disabled-foreground);
+
+      &::before {
+        border: none;
+      }
     }
   }
 }

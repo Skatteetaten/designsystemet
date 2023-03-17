@@ -1,0 +1,45 @@
+import { Meta } from '@storybook/addon-docs';
+import imageUrl from './designsystem_illustrasjon.png';
+import { List, Paragraph, Heading } from '@skatteetaten/ds-typography';
+import { Link } from '@skatteetaten/ds-buttons';
+
+<Meta title="Generelt/Introduksjon" />
+
+<Heading as={'h1'} level={1}>
+  {'Skatteetatens designsystem'}
+</Heading>
+<Paragraph hasSpacing>
+  <strong>
+    {
+      'Et system som gjør det effektivt å lage digitale produkter med god kvalitet.'
+    }
+  </strong>
+</Paragraph>
+
+<div className={'introImageContainer'}>
+  <img src={imageUrl} />
+</div>
+
+<Paragraph hasSpacing>{'På disse sidene finner du'}</Paragraph>
+<List hasSpacing>
+  <List.Element>
+    {'demo av komponenter i Skatteetatens designsystem'}
+  </List.Element>
+  <List.Element>{'oversikt over ikoner og desigtokens'}</List.Element>
+  <List.Element>{'teknisk grensesnitt (API) til komponentene'}</List.Element>
+  <List.Element>
+    {'testscenarioer, inkludert testområde for språk og reponsivitet'}
+  </List.Element>
+</List>
+<Paragraph>
+  {
+    'Denne siden er av teknisk karakter. Designmønster, språk og universell utforming er dokumentert på Skatteetatens Stil og Tone-underside: '
+  }
+  <Link
+    href={'https://www.skatteetaten.no/stilogtone/designe-utvikle/'}
+    target={'_blank'}
+  >
+    {'Stil og tone: Designe og utvikle'}
+  </Link>
+  {'.'}
+</Paragraph>

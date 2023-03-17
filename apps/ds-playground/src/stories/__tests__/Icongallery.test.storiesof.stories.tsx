@@ -1,19 +1,15 @@
 import { Icon } from '@skatteetaten/ds-icons';
 import '../classnames.stories.css';
 import { storiesOf } from '@storybook/react';
-import { ElementHandle, ScreenshotOptions } from 'puppeteer';
+import { Page } from 'puppeteer';
 
+import { screenShotOptions } from './testUtils/puppeteer.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { ThemeSVGPaths } from '../utils/icon.themes';
 
-const screenShotOptions: ScreenshotOptions = {
-  fullPage: true,
-  encoding: 'base64',
-};
-
-storiesOf('Tests/Icon Gallery', module)
+storiesOf('Tester/Icon Gallery', module)
   .addParameters({
-    async puppeteerTest(page: ElementHandle): Promise<void> {
+    async puppeteerTest(page: Page): Promise<void> {
       const image = await page.screenshot(screenShotOptions);
       expect(image).toMatchImageSnapshot();
     },

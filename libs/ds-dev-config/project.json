@@ -69,5 +69,6 @@
         "cwd": "dist/libs/ds-dev-config"
       }
     }
-  }
+  },
+  "name": "ds-dev-config"
 }

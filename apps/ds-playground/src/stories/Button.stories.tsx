@@ -2,20 +2,19 @@
 import {
   Button,
   ButtonProps,
+  buttonVariantArr,
   getButtonVariantDefault,
 } from '@skatteetaten/ds-buttons';
-import { buttonVariantArr } from '@skatteetaten/ds-core-utils';
-import { getCommonDisabledDefault } from '@skatteetaten/ds-core-utils';
 import { action } from '@storybook/addon-actions';
 import { Story, Meta } from '@storybook/react';
 
-import { category, htmlEventDescription } from '../../.storybook/helpers';
 import { SystemSVGPaths } from './utils/icon.systems';
+import { category, htmlEventDescription } from '../../.storybook/helpers';
 import './classnames.stories.css';
 
 export default {
   component: Button,
-  title: 'Design System/Button',
+  title: 'Komponenter/Button',
   argTypes: {
     // Props
     children: { table: { category: category.props } },
@@ -34,14 +33,12 @@ export default {
     },
     // HTML
     accessKey: {
-      control: 'text',
       table: { category: category.htmlAttribute },
     },
     disabled: {
       control: 'boolean',
       table: {
         category: category.htmlAttribute,
-        defaultValue: { summary: getCommonDisabledDefault() },
       },
     },
     type: {
@@ -61,82 +58,40 @@ export default {
 } as Meta<ButtonProps>;
 
 const TemplateDefault: Story<ButtonProps> = (args) => (
-  <Button {...args} variant={args.variant}>
+  <Button
+    {...args}
+    variant={args.variant}
+    onClick={action('KlikkEvent Button')}
+  >
     {args.children}
   </Button>
 );
 
-const TemplateVariant: Story<ButtonProps> = (args) => (
-  <>
-    <div style={{ marginBottom: '1em' }}>
-      <Button
-        {...args}
-        variant={'primary'}
-        svgPath={args.svgPath}
-        onClick={action('Button story klikk på primary')}
-      >
-        {'Primary knapp'}
+const TemplateExample: Story<ButtonProps> = () => (
+  <div>
+    <Button className={'exampleSpacing'} variant={'primary'}>
+      {'Send inn skjema'}
+    </Button>
+    <Button className={'exampleSpacing'} variant={'secondary'}>
+      {'Avbryt'}
+    </Button>
+    <div>
+      <Button className={'exampleSpacing'} variant={'tertiary'}>
+        {'Logg inn'}
       </Button>
     </div>
-    <div style={{ marginBottom: '1em' }}>
-      <Button
-        {...args}
-        variant={'secondary'}
-        svgPath={args.svgPath}
-        onClick={action('Button story klikk på secondary')}
-      >
-        {'Secondary knapp'}
-      </Button>
-    </div>
-    <div style={{ marginBottom: '1em' }}>
-      <Button
-        {...args}
-        variant={'tertiary'}
-        svgPath={args.svgPath}
-        onClick={action('Button story klikk på tertiary')}
-      >
-        {'Tertiary knapp'}
-      </Button>
-    </div>
-    <div style={{ marginBottom: '1em' }}>
-      <Button {...args} variant={'danger'} svgPath={args.svgPath}>
-        {'Danger variant'}
-      </Button>
-    </div>
-  </>
+    <Button className={'exampleSpacing'} variant={'danger'}>
+      {'Slett'}
+    </Button>
+  </div>
 );
 
-const buttonDefaultParameters = {
-  design: [
-    {
-      name: 'Varianter og tilstander',
-      type: 'figma',
-      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=1765%3A8640',
-    },
-    {
-      name: 'Luft og fontstørrelser',
-      type: 'figma',
-      url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=123%3A1494',
-    },
-  ],
-};
-
-export const ButtonDefault: Story<ButtonProps> = TemplateDefault.bind({});
+export const ButtonDefault = TemplateDefault.bind({});
+export const ButtonExample = TemplateExample.bind({});
 ButtonDefault.storyName = 'Default';
-const baseArgs = {
-  children: 'Klikk',
-};
+ButtonExample.storyName = 'Example';
 
 ButtonDefault.args = {
-  ...baseArgs,
+  children: 'Klikk',
   variant: 'primary',
 };
-ButtonDefault.parameters = buttonDefaultParameters;
-
-export const Variants: Story<ButtonProps> = TemplateVariant.bind({});
-Variants.args = {
-  ...baseArgs,
-  ariaDescribedby: 'elementid-satt-i-story',
-  variant: 'secondary',
-};
-Variants.parameters = buttonDefaultParameters;

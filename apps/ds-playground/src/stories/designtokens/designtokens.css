@@ -20,6 +20,10 @@
   vertical-align: top;
 }
 
+.tokenValue {
+  margin: var(--spacing-xl) 0 var(--spacing-xs);
+}
+
 .sizeTokenExample {
   display: inline-block;
   background: var(--palette-ochre-30);
@@ -28,4 +32,32 @@
 .spacingTokenExample {
   display: block;
   background: var(--palette-ochre-30);
+}
+
+.paletteTable {
+  border-collapse: collapse;
+}
+
+.paletteTableHeader {
+  padding-bottom: var(--spacing-s);
+  text-align: start;
+}
+
+.paletteTableRow > td {
+  padding: var(--spacing-xs) 0;
+  border-top: 2px solid var(--semantic-divider-100);
+}
+
+.fontSectionHeader {
+  margin-top: var(--spacing-xxl);
+  font-size: var(--font-size-xxl);
+  font-weight: bold;
+}
+
+.fontSectionHeader:first-of-type {
+  margin-top: 0;
+}
+
+.layoutContainer {
+  background-color: var(--palette-burgundy-10);
 }
