@@ -78,6 +78,20 @@ async function verifyImageSnapshots(
     await page.mouse.move(0, 0);
     await page.mouse.click(0, 0);
   }
+
+  const scroll = storyContext.parameters.imageSnapshot?.scroll;
+  if (scroll) {
+    await page.evaluate((scroll) => {
+      window.scrollBy(scroll.xPixels ?? 0, scroll.yPixels ?? 0);
+    }, scroll);
+    const imageScrolled = await page.screenshot(screenShotOptions);
+    expect(imageScrolled).toMatchImageSnapshot({
+      customSnapshotIdentifier: `${context.id}-scrolled-snap`,
+    });
+    await page.evaluate(() => {
+      window.scrollTo(0, 0);
+    });
+  }
 }
 
 async function verifyHTMLSnapshots(page: Page): Promise<void> {

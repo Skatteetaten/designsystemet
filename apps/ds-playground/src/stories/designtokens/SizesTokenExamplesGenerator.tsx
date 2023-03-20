@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+import { Fragment } from 'react';
+
 const sizesJson = require('@skatteetaten/ds-core-designtokens/designtokens/sizes.json');
 
 export const SizesTokenExamplesGenerator = (): JSX.Element => {
@@ -12,16 +14,13 @@ export const SizesTokenExamplesGenerator = (): JSX.Element => {
         const cssRule = `.${sizeClassName} { height: ${sizeValue}; width: ${sizeValue}; }`;
 
         return (
-          <>
+          <Fragment key={index}>
             <style>{cssRule}</style>
             <p className={'tokenValue'}>
               <strong>{`${value} (${sizesTokens[value]})`}</strong>
             </p>
-            <div
-              key={index}
-              className={`sizeTokenExample ${sizeClassName}`}
-            ></div>
-          </>
+            <div className={`sizeTokenExample ${sizeClassName}`}></div>
+          </Fragment>
         );
       })}
     </>

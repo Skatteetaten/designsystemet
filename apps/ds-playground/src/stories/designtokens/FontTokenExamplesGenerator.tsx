@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+import { Fragment } from 'react';
+
 const fontJson = require('@skatteetaten/ds-core-designtokens/designtokens/font.json');
 
 interface FontTokenExamplesGeneratorProps {
@@ -39,10 +41,9 @@ export const FontTokenExamplesGenerator = ({
         const cssRule = `.${fontClassName} { font-size: ${fontSizeValue}; font-weight: ${fontWeightValue}; line-height: ${lineHeightValue}; }`;
 
         return (
-          <>
+          <Fragment key={index}>
             <style>{cssRule}</style>
             <p
-              key={index}
               className={`fontTokenExample ${fontClassName} ${
                 hasLineHeight ? 'fontTokenExample_lineheight' : ''
               }`}
@@ -53,7 +54,7 @@ export const FontTokenExamplesGenerator = ({
               <br />
               {sampleText}
             </p>
-          </>
+          </Fragment>
         );
       })}
     </div>

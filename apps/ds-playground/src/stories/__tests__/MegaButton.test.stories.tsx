@@ -380,7 +380,7 @@ AsLinkExternal.play = async ({ canvasElement }): Promise<void> => {
 // Når brukeren setter focus, blurrer, eller klikker på knappen, så kalles riktig eventHandler
 // Eventhandlere endrer tesksten på knappen
 const EventHandlersTemplate: ComponentStory<typeof MegaButton> = (args) => {
-  const [buttonText, setButtonText] = useState('bruk knapp for å events');
+  const [buttonText, setButtonText] = useState('bruk knapp for å teste events');
   return (
     <div className={'noTransition'} data-test-block>
       <MegaButton
@@ -422,7 +422,7 @@ WithEventHandlers.parameters = {
 };
 WithEventHandlers.play = async ({ args, canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
-  const megaButton = canvas.getByText('bruk knapp for å events');
+  const megaButton = canvas.getByText('bruk knapp for å teste events');
   await expect(megaButton).toBeInTheDocument();
   await megaButton.focus();
   await waitFor(() => expect(args.onFocus).toHaveBeenCalled());

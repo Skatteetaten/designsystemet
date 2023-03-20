@@ -1,4 +1,3 @@
-import { AxePuppeteer } from '@axe-core/puppeteer';
 import {
   getVisibilityThresholdDefault,
   ScrollToTopButton,
@@ -7,43 +6,25 @@ import {
 import { ExternalLayout } from '@skatteetaten/ds-core-utils';
 import { expect } from '@storybook/jest';
 import { ComponentStory, Meta } from '@storybook/react';
-import { within } from '@storybook/testing-library';
-import { toHaveNoViolations } from 'jest-axe';
+import { userEvent, within } from '@storybook/testing-library';
 // @skatteeteaten/ds-core-designtokens er angitt som symlink i package.json
 // derfor vil typecheck feile hvis pakken ikke er bygget, derfor bryter vi nx module boundaries her
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import palette from 'libs/ds-core-designtokens/lib/designtokens/palette.json';
-import { Page } from 'puppeteer';
 
 import { category } from '../../../.storybook/helpers';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
-import {
-  screenShotOptions,
-  wrapper,
-} from './testUtils/puppeteer.testing.utils';
+import { wrapper } from './testUtils/puppeteer.testing.utils';
 const defaultButtonText = 'Til toppen';
 
-const verifyMatchSnapShot = async (page: Page): Promise<void> => {
-  const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-  expect(innerHtml).toMatchSnapshot();
-};
-
-const verifyMatchImageSnapShot = async (page: Page): Promise<void> => {
-  const image = await page.screenshot(screenShotOptions);
-  expect(image).toMatchImageSnapshot();
-};
-
-const verifyAxeRules = async (page: Page): Promise<void> => {
-  const axeResults = await new AxePuppeteer(page).include(wrapper).analyze();
-  expect.extend(toHaveNoViolations);
-  expect(axeResults).toHaveNoViolations();
-};
-
-const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
-  await verifyMatchSnapShot(page);
-  await verifyMatchImageSnapShot(page);
-  await verifyAxeRules(page);
-};
+const verifyAttribute =
+  (attribute: string, expectedValue: string) =>
+  async ({ canvasElement }: { canvasElement: HTMLElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const scrollToTopButton = canvas.getByRole('button');
+    await expect(scrollToTopButton).toBeInTheDocument();
+    await expect(scrollToTopButton).toHaveAttribute(attribute, expectedValue);
+  };
 
 export default {
   component: ScrollToTopButton,
@@ -122,18 +103,7 @@ WithRef.argTypes = {
   ...WithRef.argTypes,
   ref: { table: { disable: false } },
 };
-WithRef.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const refId = await page.$eval(
-      `${wrapper} > main > div > button`,
-      (el) => el.id
-    );
-    expect(refId).toBe('dummyIdForwardedFromRef');
-  },
-};
+WithRef.parameters = {};
 
 // Når MegaButton har en id, så har button-element id
 export const WithId = Template.bind({});
@@ -146,18 +116,8 @@ WithId.argTypes = {
   ...WithId.argTypes,
   id: { table: { disable: false } },
 };
-WithId.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const elementid = await page.$eval(
-      `${wrapper} > main > div > button`,
-      (el) => el.getAttribute('id')
-    );
-    expect(elementid).toBe('htmlid');
-  },
-};
+WithId.parameters = {};
+WithId.play = verifyAttribute('id', 'htmlid');
 
 // Når ScrollToTopButton har en custom CSS, så vises custom stil
 export const WithCustomCss = Template.bind({});
@@ -172,16 +132,11 @@ WithCustomCss.argTypes = {
     table: { disable: false },
   },
 };
-WithCustomCss.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const classNameAttribute = await page.$eval(
-      `${wrapper} > main > div:nth-child(2)`,
-      (el) => el.getAttribute('class')
-    );
-    expect(classNameAttribute).toContain('dummyClassname');
-  },
+WithCustomCss.play = async ({ canvasElement }): Promise<void> => {
+  await expect(
+    // eslint-disable-next-line testing-library/no-node-access
+    canvasElement.querySelector(`${wrapper} > main > div:nth-child(2)`)
+  ).toHaveClass('dummyClassname');
 };
 
 // Når ScrollToTopButton har en custom classNames, så vises custom stil på riktig sted
@@ -203,16 +158,22 @@ WithCustomClassNames.argTypes = {
     table: { disable: false },
   },
 };
-WithCustomClassNames.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const classNameAttribute = await page.$eval(
-      `${wrapper}> main > div > button`,
-      (el) => el.getAttribute('class')
-    );
-    expect(classNameAttribute).toContain('dummyClassname');
-  },
+WithCustomClassNames.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  /* eslint-disable testing-library/no-node-access */
+  const container = canvasElement.querySelector(
+    `${wrapper} > main > div:nth-child(2)`
+  );
+  const button = canvas.getByRole('button');
+  const iconContainer = button.querySelector('div');
+  /* eslint-disable testing-library/no-node-access */
+  const icon = canvas.getByRole('img', { hidden: true });
+  const label = canvas.getByText('Til toppen');
+  await expect(container).toHaveClass('dummyClassname');
+  await expect(button).toHaveClass('dummyClassname');
+  await expect(iconContainer).toHaveClass('dummyClassname');
+  await expect(icon).toHaveClass('dummyClassname');
+  await expect(label).toHaveClass('dummyClassname');
 };
 
 // Når Button har en lang, så har button-element lang
@@ -226,19 +187,7 @@ WithLang.argTypes = {
   ...WithLang.argTypes,
   lang: { table: { disable: false } },
 };
-
-WithLang.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const langAttribute = await page.$eval(
-      `${wrapper} > main > div > button`,
-      (el) => el.getAttribute('lang')
-    );
-    expect(langAttribute).toBe('nb');
-  },
-};
+WithLang.play = verifyAttribute('lang', 'nb');
 
 // Når ScrollToTopButton har dataTestid, så har button-elementet data-testid satt
 export const WithDataTestid = Template.bind({});
@@ -252,16 +201,11 @@ WithDataTestid.argTypes = {
   'data-testid': { table: { disable: false } },
 };
 WithDataTestid.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const dataTestid = await page.$eval(
-      `${wrapper} > main > div > button`,
-      (el) => el.getAttribute('data-testid')
-    );
-    expect(dataTestid).toBe('123');
-  },
+  imageSnapshot: { disable: true },
+};
+WithDataTestid.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  expect(canvas.getByTestId('123')).toBeInTheDocument();
 };
 
 // Når ScrollToTopButton instansieres, så får den riktige default-verdier og rendrer riktig
@@ -275,35 +219,17 @@ Defaults.argTypes = {
   visibilityThreshold: { table: { disable: false } },
 };
 Defaults.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyAxeRules(page);
-
-    const buttonElement = await page.$(`${wrapper} > main > div > button`);
-    expect(buttonElement).toMatchSnapshot();
-
-    await verifyMatchSnapShot(page);
-
-    const textContent = await buttonElement?.getProperty('textContent');
-    const text = await textContent?.jsonValue();
-    expect(text).toBe(defaultButtonText);
-
-    await buttonElement?.focus();
-    const imageFocused = await page.screenshot(screenShotOptions);
-    expect(imageFocused).toMatchImageSnapshot();
-
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    await page.$eval(`${wrapper} > main > div > button`, (el: any) =>
-      el.blur()
-    );
-
-    await buttonElement?.hover();
-    const imageHovered = await page.screenshot(screenShotOptions);
-    expect(imageHovered).toMatchImageSnapshot();
-
-    await buttonElement?.click();
-    const imageClicked = await page.screenshot(screenShotOptions);
-    expect(imageClicked).toMatchImageSnapshot();
+  imageSnapshot: {
+    hover: `${wrapper} > main > div:nth-child(2) > button`,
+    focus: `${wrapper} > main > div:nth-child(2) > button`,
+    click: `${wrapper} > main > div:nth-child(2) > button`,
   },
+};
+Defaults.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const scrollToTopButton = canvas.getByText(defaultButtonText);
+  await expect(scrollToTopButton).toBeInTheDocument();
+  await expect(canvas.getByRole('button')).toHaveAttribute('type', 'button');
 };
 
 // Når ScrollToTopButton har children, så settes teksten i button-elementet
@@ -317,16 +243,9 @@ WithChildren.argTypes = {
   ...WithChildren.argTypes,
   children: { table: { disable: false } },
 };
-WithChildren.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchImageSnapShot(page);
-    await verifyAxeRules(page);
-
-    const buttonElement = await page.$(`${wrapper} > main > div > button`);
-    const textContent = await buttonElement?.getProperty('textContent');
-    const text = await textContent?.jsonValue();
-    expect(text).toBe('dummy string');
-  },
+WithChildren.play = async ({ args, canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  await expect(canvas.getByText(args.children ?? '')).toBeInTheDocument();
 };
 
 // Når ScrollToTopButton lastes i en small skjerm så får den riktig plassering
@@ -339,10 +258,6 @@ WithMobileScreen.parameters = {
   viewport: {
     defaultViewport: '--breakpoint-xs',
   },
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchImageSnapShot(page);
-    await verifyAxeRules(page);
-  },
 };
 
 // Når ScrollToTopButton lastes i en bred skjerm så får den riktig plassering
@@ -354,10 +269,6 @@ WithWideScreen.args = {
 WithWideScreen.parameters = {
   viewport: {
     defaultViewport: '--breakpoint-xl',
-  },
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchImageSnapShot(page);
-    await verifyAxeRules(page);
   },
 };
 
@@ -377,43 +288,10 @@ WithVisibilityThreshold.parameters = {
   viewport: {
     defaultViewport: '--breakpoint-xl',
   },
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyAxeRules(page);
-
-    const className = await page.$eval(
-      `${wrapper} > main > div > button`,
-      (el) => el.className
-    );
-    expect(className.match('visible')).toBeFalsy();
-
-    const imageAtTop = await page.screenshot(screenShotOptions);
-    expect(imageAtTop).toMatchImageSnapshot();
-
-    await page.evaluate(() => {
-      window.scrollBy(0, 3);
-    });
-
-    const classNameScrolledDown = await page.$eval(
-      `${wrapper} > main > div > button`,
-      (el) => el.className
-    );
-    expect(classNameScrolledDown.match('visible')).toBeTruthy();
-
-    const imageScrolledDown = await page.screenshot(screenShotOptions);
-    expect(imageScrolledDown).toMatchImageSnapshot();
-
-    await page.evaluate(() => {
-      window.scrollBy(0, -3);
-    });
-
-    const classNameScrolledUp = await page.$eval(
-      `${wrapper}> main > div > button`,
-      (el) => el.className
-    );
-    expect(classNameScrolledUp.match('visible')).toBeFalsy();
-
-    const imageScrolledUp = await page.screenshot(screenShotOptions);
-    expect(imageScrolledUp).toMatchImageSnapshot();
+  imageSnapshot: {
+    scroll: {
+      yPixels: 10,
+    },
   },
 };
 
@@ -444,36 +322,24 @@ WithShadowDom.parameters = {
     disable: true,
   },
   customElementName: 'scrolltotop-customelement',
-  async puppeteerTest(page: Page): Promise<void> {
-    const customElement = await page.$(`scrolltotop-customelement`);
-    const buttonElement = await customElement?.$(
-      `pierce/${wrapper} > main > div > button`
-    );
-
-    expect(buttonElement).not.toBeNull();
-    await buttonElement?.click();
-    await page.waitForSelector(`pierce/main:focus`);
-  },
 };
+WithShadowDom.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  //button finnes ikke utenfor shadowDom
+  await expect(canvas.queryByRole('button')).not.toBeInTheDocument();
+  const customElement = canvasElement.querySelector(
+    `scrolltotop-customelement`
+  );
+  await expect(customElement).toBeInTheDocument();
+  const button =
+    customElement?.shadowRoot &&
+    customElement.shadowRoot.querySelector('button');
 
-// Innbakte tekster bruker riktig key
-export const WithTranslation = Template.bind({});
-WithTranslation.storyName = 'With Translation (A4)';
+  await expect(button).toBeInTheDocument();
+  await userEvent.click(button!);
 
-WithTranslation.args = {
-  ...defaultArgs,
-};
-WithTranslation.argTypes = {
-  ...WithTranslation.argTypes,
-};
-WithTranslation.parameters = {
-  locale: 'cimode',
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-    const label = await page.$eval(
-      `${wrapper} > main > div > button`,
-      (el) => el.textContent
-    );
-    expect(label).toBe('scrolltotopbutton.Title');
-  },
+  const main =
+    customElement?.shadowRoot &&
+    customElement.shadowRoot.querySelector('main:focus');
+  await expect(main).toBeInTheDocument();
 };
