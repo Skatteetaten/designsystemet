@@ -2,9 +2,9 @@ import { Icon } from '@skatteetaten/ds-icons';
 import { storiesOf } from '@storybook/react';
 import { Page } from 'puppeteer';
 
+import { screenShotOptions } from './testUtils/puppeteer.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { ThemeSVGPaths } from '../utils/icon.themes';
-import { screenShotOptions } from './testUtils/puppeteer.testing.utils';
 
 storiesOf('Tester/Icon Gallery', module)
   .addParameters({

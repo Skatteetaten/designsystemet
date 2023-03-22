@@ -7,8 +7,8 @@ import { expect } from '@storybook/jest';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { userEvent, waitFor, within } from '@storybook/testing-library';
 
-import { SystemSVGPaths } from '../utils/icon.systems';
 import { wrapper } from './testUtils/puppeteer.testing.utils';
+import { SystemSVGPaths } from '../utils/icon.systems';
 
 const defaultButtonText = 'Legg til rapport';
 

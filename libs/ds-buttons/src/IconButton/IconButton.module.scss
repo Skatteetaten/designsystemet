@@ -17,8 +17,8 @@
   position: relative;
   box-sizing: content-box;
   border: 2px solid transparent;
-  background-color: transparent;
   border-radius: 50%;
+  background-color: transparent;
   cursor: pointer;
   will-change: transform;
 
@@ -101,6 +101,10 @@
     & .icon {
       fill: var(--semantic-disabled-foreground);
     }
+
+    &::before {
+      border: none;
+    }
   }
 
   &_outlined {
@@ -122,6 +126,10 @@
     &:disabled:hover,
     &:disabled:active {
       border-color: var(--semantic-disabled-foreground);
+
+      &::before {
+        border: none;
+      }
     }
   }
 }

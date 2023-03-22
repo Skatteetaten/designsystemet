@@ -1,7 +1,7 @@
 {
   "name": "@skatteetaten/ds-core-designtokens",
   "groupId": "no.skatteetaten.aurora",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publishConfig": {
     "registry": "https://nexus.sits.no/repository/npm-internal/"
   },
@@ -9,6 +9,6 @@
     "react": "^18"
   },
   "devDependencies": {
-    "postcss": "^7"
+    "postcss": "^8"
   }
 }

@@ -1,19 +1,27 @@
-import { Meta, Story } from '@storybook/addon-docs';
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
 import { PaletteTokenExamplesGenerator } from './PaletteTokenExamplesGenerator';
+import { TokensList } from './TokensList';
 
 <Meta title="Designtokens/Palette" />
 
-<Story
-  name="Palette"
-  parameters={{
-    design: [
-      {
-        name: 'Palette',
-        type: 'figma',
-        url: 'https://www.figma.com/file/nuVtE8FTaeGVs6eZQbEzyM/Funksjonelle-beskrivelser---eksempler?node-id=3254%3A8885',
+<PaletteTokenExamplesGenerator />
+
+<Canvas withSource="none">
+  <Story
+    name="Palette"
+    parameters={{
+      controls: {
+        disabled: true,
       },
-    ],
-  }}
->
-  <PaletteTokenExamplesGenerator />
-</Story>
+      actions: {
+        disabled: true,
+      },
+      previewTabs: {
+        canvas: { hidden: true },
+      },
+      viewMode: 'docs',
+    }}
+  >
+    <TokensList tokenType={'palette'} />
+  </Story>
+</Canvas>

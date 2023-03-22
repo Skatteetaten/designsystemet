@@ -1,7 +1,6 @@
 extends:
   - stylelint-config-standard
   - stylelint-config-idiomatic-order
-  - stylelint-config-prettier # has to be last in order to overwrite other configs
 
 rules:
   color-hex-length: long

@@ -7,9 +7,9 @@ import {
   Icon,
 } from '@skatteetaten/ds-icons';
 
-import { Link } from '../Link/Link';
 import { getLinkGroupVariantDefault } from './defaults';
 import { LinkGroupComponent, LinkGroupProps } from './LinkGroup.types';
+import { Link } from '../Link/Link';
 
 import styles from './LinkGroup.module.scss';
 

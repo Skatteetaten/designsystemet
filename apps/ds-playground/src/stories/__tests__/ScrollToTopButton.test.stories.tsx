@@ -12,9 +12,10 @@ import { userEvent, within } from '@storybook/testing-library';
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import palette from 'libs/ds-core-designtokens/lib/designtokens/palette.json';
 
+import { wrapper } from './testUtils/puppeteer.testing.utils';
 import { category } from '../../../.storybook/helpers';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
-import { wrapper } from './testUtils/puppeteer.testing.utils';
+
 const defaultButtonText = 'Til toppen';
 
 const verifyAttribute =
