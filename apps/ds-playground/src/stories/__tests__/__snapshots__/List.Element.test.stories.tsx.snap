@@ -2,7 +2,7 @@
 
 exports[`Tester/List.Element WithCustomCss smoke-test 1`] = `
 <ul data-test-block="true">
-  <li class="ListElement_element__3Opue dummyClassname">
+  <li class="ListElement_element__mEewo dummyClassname">
     Kjenner du behovet til brukeren?
   </li>
 </ul>
@@ -10,7 +10,7 @@ exports[`Tester/List.Element WithCustomCss smoke-test 1`] = `
 
 exports[`Tester/List.Element WithDataTestid smoke-test 1`] = `
 <ul data-test-block="true">
-  <li class="ListElement_element__3Opue "
+  <li class="ListElement_element__mEewo "
       data-testid="ListElementID"
   >
     Kjenner du behovet til brukeren?
@@ -21,7 +21,7 @@ exports[`Tester/List.Element WithDataTestid smoke-test 1`] = `
 exports[`Tester/List.Element WithId smoke-test 1`] = `
 <ul data-test-block="true">
   <li id="ListElementId"
-      class="ListElement_element__3Opue "
+      class="ListElement_element__mEewo "
   >
     Kjenner du behovet til brukeren?
   </li>
@@ -30,7 +30,7 @@ exports[`Tester/List.Element WithId smoke-test 1`] = `
 
 exports[`Tester/List.Element WithLang smoke-test 1`] = `
 <ul data-test-block="true">
-  <li class="ListElement_element__3Opue "
+  <li class="ListElement_element__mEewo "
       lang="nb"
   >
     Kjenner du behovet til brukeren?
@@ -40,7 +40,7 @@ exports[`Tester/List.Element WithLang smoke-test 1`] = `
 
 exports[`Tester/List.Element WithRef smoke-test 1`] = `
 <ul data-test-block="true">
-  <li class="ListElement_element__3Opue "
+  <li class="ListElement_element__mEewo "
       id="dummyIdForwardedFromRef"
   >
     Kjenner du behovet til brukeren?

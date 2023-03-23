@@ -2,10 +2,10 @@
 
 exports[`Tester/Paragraph Defaults smoke-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__3DdMb Paragraph_paragraph_standard__1SXYw  ">
+  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <p class="Paragraph_paragraph__3DdMb Paragraph_paragraph_standard__1SXYw  ">
+  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
 </div>
@@ -13,7 +13,7 @@ exports[`Tester/Paragraph Defaults smoke-test 1`] = `
 
 exports[`Tester/Paragraph IsPElement smoke-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__3DdMb Paragraph_paragraph_standard__1SXYw  ">
+  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
 </div>
@@ -21,10 +21,10 @@ exports[`Tester/Paragraph IsPElement smoke-test 1`] = `
 
 exports[`Tester/Paragraph VariantIngress smoke-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__3DdMb Paragraph_paragraph_ingress__aR0kV  ">
+  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_ingress__K1ALx  ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <p class="Paragraph_paragraph__3DdMb Paragraph_paragraph_ingress__aR0kV  ">
+  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_ingress__K1ALx  ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
 </div>
@@ -32,10 +32,10 @@ exports[`Tester/Paragraph VariantIngress smoke-test 1`] = `
 
 exports[`Tester/Paragraph VariantIngressWithSpacing smoke-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__3DdMb Paragraph_paragraph_ingress__aR0kV Paragraph_paragraph_hasSpacingExtraLarge__22DjR ">
+  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_ingress__K1ALx Paragraph_paragraph_hasSpacingExtraLarge__MFYg8 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <p class="Paragraph_paragraph__3DdMb Paragraph_paragraph_ingress__aR0kV Paragraph_paragraph_hasSpacingExtraLarge__22DjR ">
+  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_ingress__K1ALx Paragraph_paragraph_hasSpacingExtraLarge__MFYg8 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
 </div>
@@ -43,7 +43,7 @@ exports[`Tester/Paragraph VariantIngressWithSpacing smoke-test 1`] = `
 
 exports[`Tester/Paragraph WithCustomCss smoke-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__3DdMb Paragraph_paragraph_standard__1SXYw  dummyClassname">
+  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  dummyClassname">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
 </div>
@@ -51,7 +51,7 @@ exports[`Tester/Paragraph WithCustomCss smoke-test 1`] = `
 
 exports[`Tester/Paragraph WithDataTestid smoke-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__3DdMb Paragraph_paragraph_standard__1SXYw  "
+  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  "
      data-testid="ParagraphID"
   >
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
@@ -62,7 +62,7 @@ exports[`Tester/Paragraph WithDataTestid smoke-test 1`] = `
 exports[`Tester/Paragraph WithId smoke-test 1`] = `
 <div data-test-block="true">
   <p id="ParagraphId"
-     class="Paragraph_paragraph__3DdMb Paragraph_paragraph_standard__1SXYw  "
+     class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  "
   >
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
@@ -71,7 +71,7 @@ exports[`Tester/Paragraph WithId smoke-test 1`] = `
 
 exports[`Tester/Paragraph WithLang smoke-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__3DdMb Paragraph_paragraph_standard__1SXYw  "
+  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  "
      lang="nb"
   >
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
@@ -81,7 +81,7 @@ exports[`Tester/Paragraph WithLang smoke-test 1`] = `
 
 exports[`Tester/Paragraph WithMarkup smoke-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__3DdMb Paragraph_paragraph_standard__1SXYw  ">
+  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
     <span>
       Tekstavsnitt som kan inneholde en lengre tekst. Husk å følge klarspråkprinsippene når en skriver tekster. I dette tilfellet skriver bare litt ekstra tekst for å få litt
       <strong>
@@ -123,7 +123,7 @@ exports[`Tester/Paragraph WithMarkup smoke-test 1`] = `
 
 exports[`Tester/Paragraph WithRef smoke-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__3DdMb Paragraph_paragraph_standard__1SXYw  "
+  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  "
      id="dummyIdForwardedFromRef"
   >
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
@@ -133,10 +133,10 @@ exports[`Tester/Paragraph WithRef smoke-test 1`] = `
 
 exports[`Tester/Paragraph WithSpacing smoke-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__3DdMb Paragraph_paragraph_standard__1SXYw Paragraph_paragraph_hasSpacingLarge__18xTK ">
+  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <p class="Paragraph_paragraph__3DdMb Paragraph_paragraph_standard__1SXYw Paragraph_paragraph_hasSpacingLarge__18xTK ">
+  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
 </div>

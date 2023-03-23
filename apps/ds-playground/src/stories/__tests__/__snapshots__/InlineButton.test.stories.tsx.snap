@@ -4,7 +4,7 @@ exports[`Tester/InlineButton Defaults play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="InlineButton_button__2taCK   "
+  <button class="InlineButton_button__2aGtg   "
           type="button"
   >
     Legg til rapport
@@ -16,7 +16,7 @@ exports[`Tester/InlineButton Disabled play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="InlineButton_button__2taCK   "
+  <button class="InlineButton_button__2aGtg   "
           disabled
           type="button"
   >
@@ -29,12 +29,12 @@ exports[`Tester/InlineButton DisabledWithIcon smoke-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="InlineButton_button__2taCK InlineButton_button_withIconLeft__3Y66a  "
+  <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  "
           disabled
           type="button"
   >
-    <span class="InlineButton_iconWrapper__1jDt6">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 InlineButton_icon__GHhTr"
+    <span class="InlineButton_iconWrapper__CqjpJ">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -53,7 +53,7 @@ exports[`Tester/InlineButton WithAccesskey play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="InlineButton_button__2taCK   "
+  <button class="InlineButton_button__2aGtg   "
           accesskey="j"
           type="button"
   >
@@ -66,7 +66,7 @@ exports[`Tester/InlineButton WithAriaDescribedby play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="InlineButton_button__2taCK   "
+  <button class="InlineButton_button__2aGtg   "
           type="button"
           aria-describedby="testid1234"
   >
@@ -79,7 +79,7 @@ exports[`Tester/InlineButton WithCustomCss play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="InlineButton_button__2taCK   dummyClassname"
+  <button class="InlineButton_button__2aGtg   dummyClassname"
           type="button"
   >
     Legg til rapport
@@ -91,11 +91,11 @@ exports[`Tester/InlineButton WithCustomIcon smoke-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="InlineButton_button__2taCK InlineButton_button_withIconLeft__3Y66a  "
+  <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  "
           type="button"
   >
-    <span class="InlineButton_iconWrapper__1jDt6">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 InlineButton_icon__GHhTr"
+    <span class="InlineButton_iconWrapper__CqjpJ">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -114,7 +114,7 @@ exports[`Tester/InlineButton WithDataTestid play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="InlineButton_button__2taCK   "
+  <button class="InlineButton_button__2aGtg   "
           data-testid="123ID"
           type="button"
   >
@@ -127,7 +127,7 @@ exports[`Tester/InlineButton WithEventHandlers play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="InlineButton_button__2taCK   "
+  <button class="InlineButton_button__2aGtg   "
           type="button"
   >
     Knapp har blitt klikket på
@@ -139,11 +139,11 @@ exports[`Tester/InlineButton WithIcon play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="InlineButton_button__2taCK InlineButton_button_withIconLeft__3Y66a  "
+  <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  "
           type="button"
   >
-    <span class="InlineButton_iconWrapper__1jDt6">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 InlineButton_icon__GHhTr"
+    <span class="InlineButton_iconWrapper__CqjpJ">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -162,12 +162,12 @@ exports[`Tester/InlineButton WithIconRight smoke-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="InlineButton_button__2taCK  InlineButton_button_withIconRight__3d8PZ "
+  <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 "
           type="button"
   >
     Legg til rapport
-    <span class="InlineButton_iconWrapper__1jDt6">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 InlineButton_icon__GHhTr"
+    <span class="InlineButton_iconWrapper__CqjpJ">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -186,7 +186,7 @@ exports[`Tester/InlineButton WithId play-test 1`] = `
      data-test-block="true"
 >
   <button id="htmlid"
-          class="InlineButton_button__2taCK   "
+          class="InlineButton_button__2aGtg   "
           type="button"
   >
     Legg til rapport
@@ -198,7 +198,7 @@ exports[`Tester/InlineButton WithLang play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="InlineButton_button__2taCK   "
+  <button class="InlineButton_button__2aGtg   "
           lang="nb"
           type="button"
   >
@@ -211,7 +211,7 @@ exports[`Tester/InlineButton WithLongText smoke-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="InlineButton_button__2taCK   "
+  <button class="InlineButton_button__2aGtg   "
           type="button"
   >
     Denne knappen har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert. Denne knappen har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert.
@@ -223,11 +223,11 @@ exports[`Tester/InlineButton WithLongTextAndIcon smoke-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="InlineButton_button__2taCK InlineButton_button_withIconLeft__3Y66a  "
+  <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  "
           type="button"
   >
-    <span class="InlineButton_iconWrapper__1jDt6">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 InlineButton_icon__GHhTr"
+    <span class="InlineButton_iconWrapper__CqjpJ">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -246,7 +246,7 @@ exports[`Tester/InlineButton WithLongTextBreaking smoke-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="InlineButton_button__2taCK   "
+  <button class="InlineButton_button__2aGtg   "
           type="button"
   >
     Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Nårikkeikonsåskaltekstenværevenstrejusteres.Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Nårikkeikonsåskaltekstenværevenstrejusteres.
@@ -258,7 +258,7 @@ exports[`Tester/InlineButton WithRef play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="InlineButton_button__2taCK   "
+  <button class="InlineButton_button__2aGtg   "
           type="button"
           id="dummyIdForwardedFromRef"
   >
@@ -271,7 +271,7 @@ exports[`Tester/InlineButton WithType play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="InlineButton_button__2taCK   "
+  <button class="InlineButton_button__2aGtg   "
           type="submit"
   >
     Legg til rapport

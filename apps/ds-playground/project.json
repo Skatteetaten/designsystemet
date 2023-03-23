@@ -49,6 +49,13 @@
         "passWithNoTests": true
       }
     },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/ds-playground",
+        "command": "test-storybook -c .storybook"
+      }
+    },
     "stylelint": {
       "executor": "nx-stylelint:lint",
       "outputs": ["{options.outputFile}"],

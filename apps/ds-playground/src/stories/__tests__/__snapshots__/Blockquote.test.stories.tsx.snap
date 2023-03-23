@@ -2,7 +2,7 @@
 
 exports[`Tester/Blockquote Defaults smoke-test 1`] = `
 <div data-test-block="true">
-  <blockquote class="Blockquote_blockquote__2bXHi  ">
+  <blockquote class="Blockquote_blockquote__i5HzN  ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </blockquote>
 </div>
@@ -10,7 +10,7 @@ exports[`Tester/Blockquote Defaults smoke-test 1`] = `
 
 exports[`Tester/Blockquote WithCustomCss smoke-test 1`] = `
 <div data-test-block="true">
-  <blockquote class="Blockquote_blockquote__2bXHi  dummyClassname">
+  <blockquote class="Blockquote_blockquote__i5HzN  dummyClassname">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </blockquote>
 </div>
@@ -18,7 +18,7 @@ exports[`Tester/Blockquote WithCustomCss smoke-test 1`] = `
 
 exports[`Tester/Blockquote WithDataTestid smoke-test 1`] = `
 <div data-test-block="true">
-  <blockquote class="Blockquote_blockquote__2bXHi  "
+  <blockquote class="Blockquote_blockquote__i5HzN  "
               data-testid="BlockquoteID"
   >
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
@@ -29,7 +29,7 @@ exports[`Tester/Blockquote WithDataTestid smoke-test 1`] = `
 exports[`Tester/Blockquote WithId smoke-test 1`] = `
 <div data-test-block="true">
   <blockquote id="BlockquoteId"
-              class="Blockquote_blockquote__2bXHi  "
+              class="Blockquote_blockquote__i5HzN  "
   >
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </blockquote>
@@ -38,7 +38,7 @@ exports[`Tester/Blockquote WithId smoke-test 1`] = `
 
 exports[`Tester/Blockquote WithLang smoke-test 1`] = `
 <div data-test-block="true">
-  <blockquote class="Blockquote_blockquote__2bXHi  "
+  <blockquote class="Blockquote_blockquote__i5HzN  "
               lang="nb"
   >
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
@@ -48,7 +48,7 @@ exports[`Tester/Blockquote WithLang smoke-test 1`] = `
 
 exports[`Tester/Blockquote WithMarkup smoke-test 1`] = `
 <div data-test-block="true">
-  <blockquote class="Blockquote_blockquote__2bXHi  ">
+  <blockquote class="Blockquote_blockquote__i5HzN  ">
     <div>
       Manowar Manowar living on the road
       <a href="https://en.wikipedia.org/wiki/Manowar">
@@ -95,7 +95,7 @@ exports[`Tester/Blockquote WithMarkup smoke-test 1`] = `
 
 exports[`Tester/Blockquote WithRef smoke-test 1`] = `
 <div data-test-block="true">
-  <blockquote class="Blockquote_blockquote__2bXHi  "
+  <blockquote class="Blockquote_blockquote__i5HzN  "
               id="dummyIdForwardedFromRef"
   >
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
@@ -105,10 +105,10 @@ exports[`Tester/Blockquote WithRef smoke-test 1`] = `
 
 exports[`Tester/Blockquote WithSpacing smoke-test 1`] = `
 <div data-test-block="true">
-  <blockquote class="Blockquote_blockquote__2bXHi Blockquote_blockquote_hasSpacing__27NjS ">
+  <blockquote class="Blockquote_blockquote__i5HzN Blockquote_blockquote_hasSpacing__uLqf9 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </blockquote>
-  <blockquote class="Blockquote_blockquote__2bXHi Blockquote_blockquote_hasSpacing__27NjS ">
+  <blockquote class="Blockquote_blockquote__i5HzN Blockquote_blockquote_hasSpacing__uLqf9 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </blockquote>
 </div>

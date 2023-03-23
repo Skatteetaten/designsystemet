@@ -4,9 +4,9 @@ exports[`Tester/LinkGroup Defaults smoke-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <ul class="LinkGroup_linkGroup__1rrZk   ">
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+  <ul class="LinkGroup_linkGroup__ZiEgs   ">
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -15,14 +15,14 @@ exports[`Tester/LinkGroup Defaults smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Er du pendler?
       </a>
     </li>
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -31,14 +31,14 @@ exports[`Tester/LinkGroup Defaults smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Pendler du mye?
       </a>
     </li>
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -47,7 +47,7 @@ exports[`Tester/LinkGroup Defaults smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Pendler du dagen lang?
@@ -61,9 +61,9 @@ exports[`Tester/LinkGroup VariantAnchors smoke-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <ul class="LinkGroup_linkGroup__1rrZk   ">
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_down__raHO1 "
+  <ul class="LinkGroup_linkGroup__ZiEgs   ">
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_down__oXF-n "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -72,14 +72,14 @@ exports[`Tester/LinkGroup VariantAnchors smoke-test 1`] = `
         <path d="M11.1 1.5h1.8v16.8l5.1-5.2 1.3 1.4L12 22l-7.3-7.6L6 13l5.1 5.2V1.5Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Er du pendler?
       </a>
     </li>
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_down__raHO1 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_down__oXF-n "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -88,14 +88,14 @@ exports[`Tester/LinkGroup VariantAnchors smoke-test 1`] = `
         <path d="M11.1 1.5h1.8v16.8l5.1-5.2 1.3 1.4L12 22l-7.3-7.6L6 13l5.1 5.2V1.5Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Pendler du mye?
       </a>
     </li>
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_down__raHO1 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_down__oXF-n "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -104,7 +104,7 @@ exports[`Tester/LinkGroup VariantAnchors smoke-test 1`] = `
         <path d="M11.1 1.5h1.8v16.8l5.1-5.2 1.3 1.4L12 22l-7.3-7.6L6 13l5.1 5.2V1.5Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Pendler du dagen lang?
@@ -118,9 +118,9 @@ exports[`Tester/LinkGroup WithColor smoke-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <ul class="LinkGroup_linkGroup__1rrZk   ">
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 LinkGroup_icon_white__2kXKS"
+  <ul class="LinkGroup_linkGroup__ZiEgs   ">
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi LinkGroup_icon_white__5ZXue"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -129,14 +129,14 @@ exports[`Tester/LinkGroup WithColor smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML Link_link_white__z8Oms "
+      <a class="Link_link__jeUpY Link_link_white__bmeQu "
          href="#root"
       >
         Er du pendler?
       </a>
     </li>
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 LinkGroup_icon_white__2kXKS"
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi LinkGroup_icon_white__5ZXue"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -145,14 +145,14 @@ exports[`Tester/LinkGroup WithColor smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML Link_link_white__z8Oms "
+      <a class="Link_link__jeUpY Link_link_white__bmeQu "
          href="#root"
       >
         Pendler du mye?
       </a>
     </li>
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 LinkGroup_icon_white__2kXKS"
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi LinkGroup_icon_white__5ZXue"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -161,7 +161,7 @@ exports[`Tester/LinkGroup WithColor smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML Link_link_white__z8Oms "
+      <a class="Link_link__jeUpY Link_link_white__bmeQu "
          href="#root"
       >
         Pendler du dagen lang?
@@ -175,9 +175,9 @@ exports[`Tester/LinkGroup WithCustomCss smoke-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <ul class="LinkGroup_linkGroup__1rrZk  dummyClassname ">
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+  <ul class="LinkGroup_linkGroup__ZiEgs  dummyClassname ">
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -186,14 +186,14 @@ exports[`Tester/LinkGroup WithCustomCss smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Er du pendler?
       </a>
     </li>
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -202,14 +202,14 @@ exports[`Tester/LinkGroup WithCustomCss smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Pendler du mye?
       </a>
     </li>
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -218,7 +218,7 @@ exports[`Tester/LinkGroup WithCustomCss smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Pendler du dagen lang?
@@ -232,11 +232,11 @@ exports[`Tester/LinkGroup WithDataTestid smoke-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <ul class="LinkGroup_linkGroup__1rrZk   "
+  <ul class="LinkGroup_linkGroup__ZiEgs   "
       data-testid="123ID"
   >
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -245,14 +245,14 @@ exports[`Tester/LinkGroup WithDataTestid smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Er du pendler?
       </a>
     </li>
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -261,14 +261,14 @@ exports[`Tester/LinkGroup WithDataTestid smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Pendler du mye?
       </a>
     </li>
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -277,7 +277,7 @@ exports[`Tester/LinkGroup WithDataTestid smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Pendler du dagen lang?
@@ -292,10 +292,10 @@ exports[`Tester/LinkGroup WithId smoke-test 1`] = `
      data-test-block="true"
 >
   <ul id="htmlId"
-      class="LinkGroup_linkGroup__1rrZk   "
+      class="LinkGroup_linkGroup__ZiEgs   "
   >
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -304,14 +304,14 @@ exports[`Tester/LinkGroup WithId smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Er du pendler?
       </a>
     </li>
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -320,14 +320,14 @@ exports[`Tester/LinkGroup WithId smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Pendler du mye?
       </a>
     </li>
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -336,7 +336,7 @@ exports[`Tester/LinkGroup WithId smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Pendler du dagen lang?
@@ -350,11 +350,11 @@ exports[`Tester/LinkGroup WithLang smoke-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <ul class="LinkGroup_linkGroup__1rrZk   "
+  <ul class="LinkGroup_linkGroup__ZiEgs   "
       lang="nb"
   >
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -363,14 +363,14 @@ exports[`Tester/LinkGroup WithLang smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Er du pendler?
       </a>
     </li>
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -379,14 +379,14 @@ exports[`Tester/LinkGroup WithLang smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Pendler du mye?
       </a>
     </li>
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -395,7 +395,7 @@ exports[`Tester/LinkGroup WithLang smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Pendler du dagen lang?
@@ -409,9 +409,9 @@ exports[`Tester/LinkGroup WithLongTextAndIcons smoke-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <ul class="LinkGroup_linkGroup__1rrZk   ">
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+  <ul class="LinkGroup_linkGroup__ZiEgs   ">
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -420,11 +420,11 @@ exports[`Tester/LinkGroup WithLongTextAndIcons smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Denne lenken har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert uansett om ikon eller ikke og får et hengende innrykk.
-        <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_small__YBQ5v Link_icon__zGn-0 Link_icon_isExternal__1yL1Q"
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isExternal__O+HIA"
              viewbox="0 0 24 24"
              focusable="false"
              aria-label="Til et annet nettsted"
@@ -436,8 +436,8 @@ exports[`Tester/LinkGroup WithLongTextAndIcons smoke-test 1`] = `
         </svg>
       </a>
     </li>
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -446,10 +446,10 @@ exports[`Tester/LinkGroup WithLongTextAndIcons smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
-        <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_small__YBQ5v Link_icon__zGn-0 Link_icon_isCustom__-pOov"
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isCustom__nsOot"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -469,11 +469,11 @@ exports[`Tester/LinkGroup WithRef smoke-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <ul class="LinkGroup_linkGroup__1rrZk   "
+  <ul class="LinkGroup_linkGroup__ZiEgs   "
       id="dummyIdForwardedFromRef"
   >
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -482,14 +482,14 @@ exports[`Tester/LinkGroup WithRef smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Er du pendler?
       </a>
     </li>
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -498,14 +498,14 @@ exports[`Tester/LinkGroup WithRef smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Pendler du mye?
       </a>
     </li>
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -514,7 +514,7 @@ exports[`Tester/LinkGroup WithRef smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Pendler du dagen lang?
@@ -526,9 +526,9 @@ exports[`Tester/LinkGroup WithRef smoke-test 1`] = `
 
 exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
 <div data-test-block="true">
-  <ul class="LinkGroup_linkGroup__1rrZk LinkGroup_linkGroup_hasSpacing__JcwMh  ">
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+  <ul class="LinkGroup_linkGroup__ZiEgs LinkGroup_linkGroup_hasSpacing__AhexL  ">
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -537,14 +537,14 @@ exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Er du pendler?
       </a>
     </li>
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -553,14 +553,14 @@ exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Pendler du mye?
       </a>
     </li>
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -569,16 +569,16 @@ exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Pendler du dagen lang?
       </a>
     </li>
   </ul>
-  <ul class="LinkGroup_linkGroup__1rrZk LinkGroup_linkGroup_hasSpacing__JcwMh  ">
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+  <ul class="LinkGroup_linkGroup__ZiEgs LinkGroup_linkGroup_hasSpacing__AhexL  ">
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -587,14 +587,14 @@ exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Er du pendler?
       </a>
     </li>
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -603,14 +603,14 @@ exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Pendler du mye?
       </a>
     </li>
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -619,7 +619,7 @@ exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Pendler du dagen lang?

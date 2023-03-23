@@ -2,14 +2,14 @@
 
 exports[`Tester/List Defaults smoke-test 1`] = `
 <div data-test-block="true">
-  <ul class="List_list__2T3sQ List_list_withBullet__F14FY  ">
-    <li class="ListElement_element__3Opue ">
+  <ul class="List_list__xzA1c List_list_withBullet__s5lqA  ">
+    <li class="ListElement_element__mEewo ">
       Kjenner du behovet til brukeren?
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Snakk med andre.
     </li>
   </ul>
@@ -18,14 +18,14 @@ exports[`Tester/List Defaults smoke-test 1`] = `
 
 exports[`Tester/List VariantNumber smoke-test 1`] = `
 <div data-test-block="true">
-  <ol class="List_list__2T3sQ   ">
-    <li class="ListElement_element__3Opue ">
+  <ol class="List_list__xzA1c   ">
+    <li class="ListElement_element__mEewo ">
       Kjenner du behovet til brukeren?
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Snakk med andre.
     </li>
   </ol>
@@ -34,64 +34,64 @@ exports[`Tester/List VariantNumber smoke-test 1`] = `
 
 exports[`Tester/List WithBothVariantSpacingAndAtLeast10NumberItems smoke-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__3DdMb Paragraph_paragraph_standard__1SXYw  ">
+  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
     Her kan du se hvordan de forskjellige variantene til en list ser ut sammen med andre elementer med veksling av luft under listene.
   </p>
-  <ul class="List_list__2T3sQ List_list_withBullet__F14FY  ">
-    <li class="ListElement_element__3Opue ">
+  <ul class="List_list__xzA1c List_list_withBullet__s5lqA  ">
+    <li class="ListElement_element__mEewo ">
       Kjenner du behovet til brukeren?
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Snakk med andre.
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Kjenner du behovet?
     </li>
   </ul>
-  <p class="Paragraph_paragraph__3DdMb Paragraph_paragraph_standard__1SXYw  ">
+  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
     Den første listen kan veksle mellom variantene en liste har.
   </p>
-  <ol class="List_list__2T3sQ   ">
-    <li class="ListElement_element__3Opue ">
+  <ol class="List_list__xzA1c   ">
+    <li class="ListElement_element__mEewo ">
       Kjenner du behovet til brukeren?
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Snakk med andre
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Kjenner du behovet?
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Snakk med andre når som helst
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Kjenner du behovet?
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Snakk med andre ofte
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Snakk med andre aldri
     </li>
   </ol>
-  <p class="Paragraph_paragraph__3DdMb Paragraph_paragraph_standard__1SXYw  ">
+  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
     Videre så er en liste med lenker også tatt med for å se hvordan det hele ser ut sammen.
   </p>
-  <ul class="LinkGroup_linkGroup__1rrZk   ">
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+  <ul class="LinkGroup_linkGroup__ZiEgs   ">
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -100,14 +100,14 @@ exports[`Tester/List WithBothVariantSpacingAndAtLeast10NumberItems smoke-test 1`
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Er du pendler?
       </a>
     </li>
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -116,14 +116,14 @@ exports[`Tester/List WithBothVariantSpacingAndAtLeast10NumberItems smoke-test 1`
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Pendler du mye?
       </a>
     </li>
-    <li class="LinkGroup_linkGroupItem__3fEXi">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 LinkGroup_icon__Xb4Jv LinkGroup_icon_forward__2mRJ3 "
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -132,7 +132,7 @@ exports[`Tester/List WithBothVariantSpacingAndAtLeast10NumberItems smoke-test 1`
         <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
         </path>
       </svg>
-      <a class="Link_link__2QfML  "
+      <a class="Link_link__jeUpY  "
          href="#root"
       >
         Pendler du dagen lang?
@@ -144,14 +144,14 @@ exports[`Tester/List WithBothVariantSpacingAndAtLeast10NumberItems smoke-test 1`
 
 exports[`Tester/List WithCustomCss smoke-test 1`] = `
 <div data-test-block="true">
-  <ul class="List_list__2T3sQ List_list_withBullet__F14FY  dummyClassname">
-    <li class="ListElement_element__3Opue ">
+  <ul class="List_list__xzA1c List_list_withBullet__s5lqA  dummyClassname">
+    <li class="ListElement_element__mEewo ">
       Kjenner du behovet til brukeren?
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Snakk med andre.
     </li>
   </ul>
@@ -160,16 +160,16 @@ exports[`Tester/List WithCustomCss smoke-test 1`] = `
 
 exports[`Tester/List WithDataTestid smoke-test 1`] = `
 <div data-test-block="true">
-  <ul class="List_list__2T3sQ List_list_withBullet__F14FY  "
+  <ul class="List_list__xzA1c List_list_withBullet__s5lqA  "
       data-testid="ListID"
   >
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Kjenner du behovet til brukeren?
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Snakk med andre.
     </li>
   </ul>
@@ -179,15 +179,15 @@ exports[`Tester/List WithDataTestid smoke-test 1`] = `
 exports[`Tester/List WithId smoke-test 1`] = `
 <div data-test-block="true">
   <ul id="ListId"
-      class="List_list__2T3sQ List_list_withBullet__F14FY  "
+      class="List_list__xzA1c List_list_withBullet__s5lqA  "
   >
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Kjenner du behovet til brukeren?
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Snakk med andre.
     </li>
   </ul>
@@ -196,16 +196,16 @@ exports[`Tester/List WithId smoke-test 1`] = `
 
 exports[`Tester/List WithLang smoke-test 1`] = `
 <div data-test-block="true">
-  <ul class="List_list__2T3sQ List_list_withBullet__F14FY  "
+  <ul class="List_list__xzA1c List_list_withBullet__s5lqA  "
       lang="nb"
   >
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Kjenner du behovet til brukeren?
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Snakk med andre.
     </li>
   </ul>
@@ -214,11 +214,11 @@ exports[`Tester/List WithLang smoke-test 1`] = `
 
 exports[`Tester/List WithLongTextAndBreaking smoke-test 1`] = `
 <div data-test-block="true">
-  <ul class="List_list__2T3sQ List_list_withBullet__F14FY  ">
-    <li class="ListElement_element__3Opue ">
+  <ul class="List_list__xzA1c List_list_withBullet__s5lqA  ">
+    <li class="ListElement_element__mEewo ">
       Denne listItem har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert, brekke over flere linjer og får et hengende innrykk.
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       DennelistItemharenveldiglangtekst.Sålangatdentvingerframlinjeskiftmedtekstsomalltidervenstrejustertbrekkeoverflerelinjerogfårethengendeinntrykk.
     </li>
   </ul>
@@ -227,20 +227,20 @@ exports[`Tester/List WithLongTextAndBreaking smoke-test 1`] = `
 
 exports[`Tester/List WithMarkup smoke-test 1`] = `
 <div data-test-block="true">
-  <ul class="List_list__2T3sQ List_list_withBullet__F14FY  ">
-    <li class="ListElement_element__3Opue ">
+  <ul class="List_list__xzA1c List_list_withBullet__s5lqA  ">
+    <li class="ListElement_element__mEewo ">
       Kjenner du behovet til
       <strong>
         brukeren?
       </strong>
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Behovet til brukeren er veldig viktig.
       <a href="#root">
         Er du sikker på at du kjenner behovet til brukeren?
       </a>
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Snakk med andre om
       <em>
         italic,
@@ -259,16 +259,16 @@ exports[`Tester/List WithMarkup smoke-test 1`] = `
 
 exports[`Tester/List WithRef smoke-test 1`] = `
 <div data-test-block="true">
-  <ul class="List_list__2T3sQ List_list_withBullet__F14FY  "
+  <ul class="List_list__xzA1c List_list_withBullet__s5lqA  "
       id="dummyIdForwardedFromRef"
   >
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Kjenner du behovet til brukeren?
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Snakk med andre.
     </li>
   </ul>
@@ -277,21 +277,21 @@ exports[`Tester/List WithRef smoke-test 1`] = `
 
 exports[`Tester/List WithSpacing smoke-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__3DdMb Paragraph_paragraph_standard__1SXYw Paragraph_paragraph_hasSpacingLarge__18xTK ">
+  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
     Jeg er et tekstavsnitt uten innrykk. Denne teksten skulle bli ca. to linjer lang, men jeg trenger litt mer innhold for å bli to linjer lang. Derfor fortsetter jeg å skrive på dette tekstavsnittet uten innrykk og etter en stund blir denne teksten ca to linjer lang.
   </p>
-  <ul class="List_list__2T3sQ List_list_withBullet__F14FY List_list_hasSpacing__3H_OZ ">
-    <li class="ListElement_element__3Opue ">
+  <ul class="List_list__xzA1c List_list_withBullet__s5lqA List_list_hasSpacing__a4Kcg ">
+    <li class="ListElement_element__mEewo ">
       Kjenner du behovet til brukeren?
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="ListElement_element__3Opue ">
+    <li class="ListElement_element__mEewo ">
       Snakk med andre.
     </li>
   </ul>
-  <p class="Paragraph_paragraph__3DdMb Paragraph_paragraph_standard__1SXYw  ">
+  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
     Jeg er et tekstavsnitt uten innrykk. Denne teksten skulle bli ca. to linjer lang, men jeg trenger litt mer innhold for å bli to linjer lang. Derfor fortsetter jeg å skrive på dette tekstavsnittet uten innrykk og etter en stund blir denne teksten ca to linjer lang.
   </p>
 </div>
