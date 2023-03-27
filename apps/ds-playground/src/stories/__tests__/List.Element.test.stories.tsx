@@ -1,35 +1,7 @@
-import { AxePuppeteer } from '@axe-core/puppeteer';
 import { List } from '@skatteetaten/ds-typography';
+import { expect } from '@storybook/jest';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { toHaveNoViolations } from 'jest-axe';
-import { Page } from 'puppeteer';
-
-import {
-  screenShotOptions,
-  wrapper,
-} from './testUtils/puppeteer.testing.utils';
-
-const verifyMatchSnapShot = async (page: Page): Promise<void> => {
-  const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-  expect(innerHtml).toMatchSnapshot();
-};
-
-const verifyMatchImageSnapShot = async (page: Page): Promise<void> => {
-  const image = await page.screenshot(screenShotOptions);
-  expect(image).toMatchImageSnapshot();
-};
-
-const verifyAxeRules = async (page: Page): Promise<void> => {
-  const axeResults = await new AxePuppeteer(page).include(wrapper).analyze();
-  expect.extend(toHaveNoViolations);
-  expect(axeResults).toHaveNoViolations();
-};
-
-const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
-  await verifyMatchSnapShot(page);
-  await verifyMatchImageSnapShot(page);
-  await verifyAxeRules(page);
-};
+import { within } from '@storybook/testing-library';
 
 export default {
   component: List.Element,
@@ -62,10 +34,6 @@ const Template: ComponentStory<typeof List.Element> = (args) => (
 // Når ListElement har en ref, så får dom elementet ref forwarded
 export const WithRef = Template.bind({});
 WithRef.storyName = 'With Ref (FA1)';
-WithRef.argTypes = {
-  ...WithRef.argTypes,
-  ref: { table: { disable: false } },
-};
 WithRef.args = {
   ...defaultArgs,
   ref: (instance: HTMLLIElement | null): void => {
@@ -74,103 +42,41 @@ WithRef.args = {
     }
   },
 };
+WithRef.argTypes = {
+  ...WithRef.argTypes,
+  ref: { table: { disable: false } },
+};
 WithRef.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const refId = await page.$eval(`${wrapper} > li`, (el) => el.id);
-    expect(refId).toBe('dummyIdForwardedFromRef');
-  },
+  imageSnapshot: { disable: true },
+};
+WithRef.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const list = canvas.getByRole('listitem');
+  await expect(list).toHaveAttribute('id', 'dummyIdForwardedFromRef');
 };
 
-// Når ListElement har en id, så har elementet id'en satt
-export const WithId = Template.bind({});
-WithId.storyName = 'With Id (FA2)';
-WithId.argTypes = {
-  ...WithId.argTypes,
-  id: { table: { disable: false } },
-};
-WithId.args = {
+// Når List.Element har en id, custom className, lang og dataTestid, så får elementet attributene id, class, lang og data-testid satt og custom stil vises
+export const WithAttributes = Template.bind({});
+WithAttributes.storyName = 'With Attributes (FA2-5)';
+WithAttributes.args = {
   ...defaultArgs,
-  id: 'ListElementId',
-};
-WithId.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const id = await page.$eval(`${wrapper} > li`, (el) =>
-      el.getAttribute('id')
-    );
-    expect(id).toBe('ListElementId');
-  },
-};
-
-// Når ListElement har en custom CSS, så vises custom stil
-export const WithCustomCss = Template.bind({});
-WithCustomCss.storyName = 'With Custom CSS (FA3)';
-WithCustomCss.args = {
-  ...defaultArgs,
+  id: 'htmlid',
   className: 'dummyClassname',
-};
-WithCustomCss.argTypes = {
-  ...WithCustomCss.argTypes,
-  className: { table: { disable: false } },
-};
-WithCustomCss.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const classNameAttribute = await page.$eval(`${wrapper} > li`, (el) =>
-      el.getAttribute('class')
-    );
-    expect(classNameAttribute).toContain('dummyClassname');
-  },
-};
-
-// Når ListElement har en lang, så har elementet lang satt
-export const WithLang = Template.bind({});
-WithLang.storyName = 'With Lang (FA4)';
-WithLang.argTypes = {
-  ...WithLang.argTypes,
-  lang: { table: { disable: false } },
-};
-WithLang.args = {
-  ...defaultArgs,
   lang: 'nb',
+  'data-testid': '123ID',
 };
-WithLang.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const langAttribute = await page.$eval(`${wrapper} > li`, (el) =>
-      el.getAttribute('lang')
-    );
-    expect(langAttribute).toBe('nb');
-  },
-};
-
-// Når ListElement har dataTestid, så har elementet data-testid satt
-export const WithDataTestid = Template.bind({});
-WithDataTestid.storyName = 'With DataTestid (FA5)';
-WithDataTestid.argTypes = {
-  ...WithDataTestid.argTypes,
+WithAttributes.argTypes = {
+  ...WithAttributes.argTypes,
+  id: { table: { disable: false } },
+  className: { table: { disable: false } },
+  lang: { table: { disable: false } },
   'data-testid': { table: { disable: false } },
 };
-WithDataTestid.args = {
-  ...defaultArgs,
-  'data-testid': 'ListElementID',
-};
-WithDataTestid.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const dataTestid = await page.$eval(`${wrapper} > li`, (el) =>
-      el.getAttribute('data-testid')
-    );
-    expect(dataTestid).toBe('ListElementID');
-  },
+WithAttributes.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const list = canvas.getByRole('listitem');
+  await expect(list).toHaveAttribute('id', 'htmlid');
+  await expect(list).toHaveClass('dummyClassname');
+  await expect(list).toHaveAttribute('lang', 'nb');
+  await expect(list).toHaveAttribute('data-testid', '123ID');
 };

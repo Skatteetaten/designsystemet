@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tester/List Defaults smoke-test 1`] = `
+exports[`Tester/List Defaults play-test 1`] = `
 <div data-test-block="true">
   <ul class="List_list__xzA1c List_list_withBullet__s5lqA  ">
     <li class="ListElement_element__mEewo ">
@@ -16,7 +16,7 @@ exports[`Tester/List Defaults smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/List VariantNumber smoke-test 1`] = `
+exports[`Tester/List VariantNumber play-test 1`] = `
 <div data-test-block="true">
   <ol class="List_list__xzA1c   ">
     <li class="ListElement_element__mEewo ">
@@ -32,7 +32,27 @@ exports[`Tester/List VariantNumber smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/List WithBothVariantSpacingAndAtLeast10NumberItems smoke-test 1`] = `
+exports[`Tester/List WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <ul id="htmlid"
+      class="List_list__xzA1c List_list_withBullet__s5lqA  dummyClassname"
+      lang="nb"
+      data-testid="123ID"
+  >
+    <li class="ListElement_element__mEewo ">
+      Kjenner du behovet til brukeren?
+    </li>
+    <li class="ListElement_element__mEewo ">
+      Er du sikker på at du kjenner behovet til brukeren?
+    </li>
+    <li class="ListElement_element__mEewo ">
+      Snakk med andre.
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Tester/List WithBothVariantsAndAtLeast10NumberItems smoke-test 1`] = `
 <div data-test-block="true">
   <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
     Her kan du se hvordan de forskjellige variantene til en list ser ut sammen med andre elementer med veksling av luft under listene.
@@ -142,76 +162,6 @@ exports[`Tester/List WithBothVariantSpacingAndAtLeast10NumberItems smoke-test 1`
 </div>
 `;
 
-exports[`Tester/List WithCustomCss smoke-test 1`] = `
-<div data-test-block="true">
-  <ul class="List_list__xzA1c List_list_withBullet__s5lqA  dummyClassname">
-    <li class="ListElement_element__mEewo ">
-      Kjenner du behovet til brukeren?
-    </li>
-    <li class="ListElement_element__mEewo ">
-      Er du sikker på at du kjenner behovet til brukeren?
-    </li>
-    <li class="ListElement_element__mEewo ">
-      Snakk med andre.
-    </li>
-  </ul>
-</div>
-`;
-
-exports[`Tester/List WithDataTestid smoke-test 1`] = `
-<div data-test-block="true">
-  <ul class="List_list__xzA1c List_list_withBullet__s5lqA  "
-      data-testid="ListID"
-  >
-    <li class="ListElement_element__mEewo ">
-      Kjenner du behovet til brukeren?
-    </li>
-    <li class="ListElement_element__mEewo ">
-      Er du sikker på at du kjenner behovet til brukeren?
-    </li>
-    <li class="ListElement_element__mEewo ">
-      Snakk med andre.
-    </li>
-  </ul>
-</div>
-`;
-
-exports[`Tester/List WithId smoke-test 1`] = `
-<div data-test-block="true">
-  <ul id="ListId"
-      class="List_list__xzA1c List_list_withBullet__s5lqA  "
-  >
-    <li class="ListElement_element__mEewo ">
-      Kjenner du behovet til brukeren?
-    </li>
-    <li class="ListElement_element__mEewo ">
-      Er du sikker på at du kjenner behovet til brukeren?
-    </li>
-    <li class="ListElement_element__mEewo ">
-      Snakk med andre.
-    </li>
-  </ul>
-</div>
-`;
-
-exports[`Tester/List WithLang smoke-test 1`] = `
-<div data-test-block="true">
-  <ul class="List_list__xzA1c List_list_withBullet__s5lqA  "
-      lang="nb"
-  >
-    <li class="ListElement_element__mEewo ">
-      Kjenner du behovet til brukeren?
-    </li>
-    <li class="ListElement_element__mEewo ">
-      Er du sikker på at du kjenner behovet til brukeren?
-    </li>
-    <li class="ListElement_element__mEewo ">
-      Snakk med andre.
-    </li>
-  </ul>
-</div>
-`;
-
 exports[`Tester/List WithLongTextAndBreaking smoke-test 1`] = `
 <div data-test-block="true">
   <ul class="List_list__xzA1c List_list_withBullet__s5lqA  ">
@@ -257,7 +207,7 @@ exports[`Tester/List WithMarkup smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/List WithRef smoke-test 1`] = `
+exports[`Tester/List WithRef play-test 1`] = `
 <div data-test-block="true">
   <ul class="List_list__xzA1c List_list_withBullet__s5lqA  "
       id="dummyIdForwardedFromRef"
