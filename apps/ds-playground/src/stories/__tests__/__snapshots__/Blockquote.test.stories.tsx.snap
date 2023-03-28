@@ -8,38 +8,12 @@ exports[`Tester/Blockquote Defaults smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Blockquote WithCustomCss smoke-test 1`] = `
+exports[`Tester/Blockquote WithAttributes play-test 1`] = `
 <div data-test-block="true">
-  <blockquote class="Blockquote_blockquote__i5HzN  dummyClassname">
-    Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
-  </blockquote>
-</div>
-`;
-
-exports[`Tester/Blockquote WithDataTestid smoke-test 1`] = `
-<div data-test-block="true">
-  <blockquote class="Blockquote_blockquote__i5HzN  "
-              data-testid="BlockquoteID"
-  >
-    Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
-  </blockquote>
-</div>
-`;
-
-exports[`Tester/Blockquote WithId smoke-test 1`] = `
-<div data-test-block="true">
-  <blockquote id="BlockquoteId"
-              class="Blockquote_blockquote__i5HzN  "
-  >
-    Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
-  </blockquote>
-</div>
-`;
-
-exports[`Tester/Blockquote WithLang smoke-test 1`] = `
-<div data-test-block="true">
-  <blockquote class="Blockquote_blockquote__i5HzN  "
+  <blockquote id="htmlId"
+              class="Blockquote_blockquote__i5HzN  dummyClassname"
               lang="nb"
+              data-testid="123ID"
   >
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </blockquote>
@@ -93,7 +67,7 @@ exports[`Tester/Blockquote WithMarkup smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Blockquote WithRef smoke-test 1`] = `
+exports[`Tester/Blockquote WithRef play-test 1`] = `
 <div data-test-block="true">
   <blockquote class="Blockquote_blockquote__i5HzN  "
               id="dummyIdForwardedFromRef"

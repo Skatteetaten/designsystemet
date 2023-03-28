@@ -1,4 +1,3 @@
-import { AxePuppeteer } from '@axe-core/puppeteer';
 import {
   LinkGroup,
   LinkGroupProps,
@@ -7,36 +6,21 @@ import {
 } from '@skatteetaten/ds-buttons';
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { CalendarSVGpath } from '@skatteetaten/ds-icons';
+import { expect } from '@storybook/jest';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { toHaveNoViolations } from 'jest-axe';
-import { Page } from 'puppeteer';
+import { within } from '@storybook/testing-library';
 
-import {
-  screenShotOptions,
-  wrapper,
-} from './testUtils/puppeteer.testing.utils';
+import { wrapper } from './testUtils/puppeteer.testing.utils';
 
-const verifyMatchSnapShot = async (page: Page): Promise<void> => {
-  const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-  expect(innerHtml).toMatchSnapshot();
-};
-
-const verifyMatchImageSnapShot = async (page: Page): Promise<void> => {
-  const image = await page.screenshot(screenShotOptions);
-  expect(image).toMatchImageSnapshot();
-};
-
-const verifyAxeRules = async (page: Page): Promise<void> => {
-  const axeResults = await new AxePuppeteer(page).include(wrapper).analyze();
-  expect.extend(toHaveNoViolations);
-  expect(axeResults).toHaveNoViolations();
-};
-
-const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
-  await verifyMatchSnapShot(page);
-  await verifyMatchImageSnapShot(page);
-  await verifyAxeRules(page);
-};
+const verifyAttribute =
+  (attribute: string, expectedValue: string) =>
+  async ({ canvasElement }: { canvasElement: HTMLElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByRole('list')).toHaveAttribute(
+      attribute,
+      expectedValue
+    );
+  };
 
 export default {
   component: LinkGroup,
@@ -70,13 +54,25 @@ const Template: ComponentStory<typeof LinkGroup> = (args) => (
 const defaultArgs: LinkGroupProps = {
   variant: getLinkGroupVariantDefault(),
   children: [
-    <LinkGroup.Link key={'linkGroupLink_1'} href={'#root'}>
+    <LinkGroup.Link
+      key={'linkGroupLink_1'}
+      href={'#root'}
+      onClick={(e): void => e.preventDefault()}
+    >
       {'Er du pendler?'}
     </LinkGroup.Link>,
-    <LinkGroup.Link key={'linkGroupLink_2'} href={'#root'}>
+    <LinkGroup.Link
+      key={'linkGroupLink_2'}
+      href={'#root'}
+      onClick={(e): void => e.preventDefault()}
+    >
       {'Pendler du mye?'}
     </LinkGroup.Link>,
-    <LinkGroup.Link key={'linkGroupLink_3'} href={'#root'}>
+    <LinkGroup.Link
+      key={'linkGroupLink_3'}
+      href={'#root'}
+      onClick={(e): void => e.preventDefault()}
+    >
       {'Pendler du dagen lang?'}
     </LinkGroup.Link>,
   ],
@@ -97,108 +93,35 @@ WithRef.argTypes = {
   ...WithRef.argTypes,
   ref: { table: { disable: false } },
 };
-WithRef.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const refId = await page.$eval(`${wrapper} > ul`, (el) => el.id);
-    expect(refId).toBe('dummyIdForwardedFromRef');
-  },
-};
+WithRef.play = verifyAttribute('id', 'dummyIdForwardedFromRef');
 
 // Når LinkGroup har en id, så har ul-element id
-export const WithId = Template.bind({});
-WithId.storyName = 'With Id (FA2)';
-WithId.args = {
+// Når LinkGroup har en custom CSS, så vises custom stil
+// Når LinkGroup har en lang, så har ul-element lang
+// Når LinkGroup har dataTestid, så har ul-elementet data-testid satt
+export const WithAttributes = Template.bind({});
+WithAttributes.storyName = 'With Attributes (FA2-5)';
+WithAttributes.args = {
   ...defaultArgs,
   id: 'htmlId',
-};
-WithId.argTypes = {
-  ...WithId.argTypes,
-  id: { table: { disable: false } },
-};
-WithId.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const id = await page.$eval(`${wrapper} > ul`, (el) =>
-      el.getAttribute('id')
-    );
-    expect(id).toBe('htmlId');
-  },
-};
-
-// Når LinkGroup har en custom CSS, så vises custom stil
-export const WithCustomCss = Template.bind({});
-WithCustomCss.storyName = 'With Custom CSS (FA3)';
-WithCustomCss.args = {
-  ...defaultArgs,
   className: 'dummyClassname',
-};
-WithCustomCss.argTypes = {
-  ...WithCustomCss.argTypes,
-  className: { table: { disable: false } },
-};
-WithCustomCss.parameters = {
-  a11y: { disable: true },
-  async puppeteerTest(page: Page): Promise<void> {
-    // no axe rules because elements dont have sufficient color contrast
-    await verifyMatchSnapShot(page);
-    await verifyMatchImageSnapShot(page);
-
-    const classNameAttribute = await page.$eval(`${wrapper}> ul`, (el) =>
-      el.getAttribute('class')
-    );
-    expect(classNameAttribute).toContain('dummyClassname');
-  },
-};
-
-// Når LinkGroup har en lang, så har ul-element lang
-export const WithLang = Template.bind({});
-WithLang.storyName = 'With Lang (FA4)';
-WithLang.args = {
-  ...defaultArgs,
   lang: 'nb',
-};
-WithLang.argTypes = {
-  ...WithLang.argTypes,
-  lang: { table: { disable: false } },
-};
-WithLang.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const langAttribute = await page.$eval(`${wrapper} > ul`, (el) =>
-      el.getAttribute('lang')
-    );
-    expect(langAttribute).toBe('nb');
-  },
-};
-
-// Når LinkGroup har dataTestid, så har ul-elementet data-testid satt
-export const WithDataTestid = Template.bind({});
-WithDataTestid.storyName = 'With DataTestid (FA5)';
-WithDataTestid.args = {
-  ...defaultArgs,
   'data-testid': '123ID',
 };
-WithDataTestid.argTypes = {
-  ...WithDataTestid.argTypes,
+WithAttributes.argTypes = {
+  ...WithAttributes.argTypes,
+  id: { table: { disable: false } },
+  className: { table: { disable: false } },
+  lang: { table: { disable: false } },
   'data-testid': { table: { disable: false } },
 };
-WithDataTestid.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const dataTestid = await page.$eval(`${wrapper} > ul`, (el) =>
-      el.getAttribute('data-testid')
-    );
-    expect(dataTestid).toBe('123ID');
-  },
+WithAttributes.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const linkGroup = canvas.getByRole('list');
+  await expect(linkGroup).toHaveClass('dummyClassname');
+  await expect(linkGroup).toHaveAttribute('id', 'htmlId');
+  await expect(linkGroup).toHaveAttribute('lang', 'nb');
+  await expect(linkGroup).toHaveAttribute('data-testid', '123ID');
 };
 
 // Når LinkGroup instansieres, så vises default-variant list og rendrer riktig ulike tilstander (imageSnapshot viser kun ulike tilstander av listItem og ikke link)
@@ -212,33 +135,10 @@ Defaults.argTypes = {
   children: { table: { disable: false } },
 };
 Defaults.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const liElement = await page.$(`${wrapper} > ul > li:first-child`);
-
-    await liElement?.hover();
-    const imageHovered = await page.screenshot(screenShotOptions);
-    expect(imageHovered).toMatchImageSnapshot();
-
-    // active
-    const cdp = await page.target().createCDPSession();
-    const docNodeId = (await cdp.send('DOM.getDocument')).root.nodeId;
-    const nodeId = (
-      await cdp.send('DOM.querySelector', {
-        nodeId: docNodeId,
-        selector: `${wrapper} > ul > li:first-child`,
-      })
-    ).nodeId;
-
-    await cdp.send('CSS.enable');
-    await cdp.send('CSS.forcePseudoState', {
-      nodeId: nodeId,
-      forcedPseudoClasses: ['active'],
-    });
-
-    const imageActive = await page.screenshot(screenShotOptions);
-    expect(imageActive).toMatchImageSnapshot();
+  imageSnapshot: {
+    hover: `${wrapper} > ul > li:first-child > a`,
+    focus: `${wrapper} > ul > li:first-child > a`,
+    click: `${wrapper} > ul > li:first-child > a`,
   },
 };
 
@@ -258,33 +158,8 @@ VariantAnchors.argTypes = {
   },
 };
 VariantAnchors.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const liElement = await page.$(`${wrapper} > ul > li:first-child`);
-
-    await liElement?.hover();
-    const imageHovered = await page.screenshot(screenShotOptions);
-    expect(imageHovered).toMatchImageSnapshot();
-
-    // active
-    const cdp = await page.target().createCDPSession();
-    const docNodeId = (await cdp.send('DOM.getDocument')).root.nodeId;
-    const nodeId = (
-      await cdp.send('DOM.querySelector', {
-        nodeId: docNodeId,
-        selector: `${wrapper} > ul > li:first-child`,
-      })
-    ).nodeId;
-
-    await cdp.send('CSS.enable');
-    await cdp.send('CSS.forcePseudoState', {
-      nodeId: nodeId,
-      forcedPseudoClasses: ['active'],
-    });
-
-    const imageActive = await page.screenshot(screenShotOptions);
-    expect(imageActive).toMatchImageSnapshot();
+  imageSnapshot: {
+    hover: `${wrapper} > ul > li:first-child > a`,
   },
 };
 
@@ -312,9 +187,6 @@ WithLongTextAndIcons.argTypes = {
   ...WithLongTextAndIcons.argTypes,
   children: { table: { disable: false } },
 };
-WithLongTextAndIcons.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
-};
 
 const TemplateWithTwoLinkGroups: ComponentStory<typeof LinkGroup> = (args) => (
   <div data-test-block>
@@ -333,9 +205,6 @@ WithSpacing.args = {
 WithSpacing.argTypes = {
   ...WithSpacing.argTypes,
   hasSpacing: { table: { disable: false } },
-};
-WithSpacing.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
 };
 
 // Når LinkGroup har color white, så vises tekster og ikoner i hvit
@@ -360,8 +229,9 @@ WithColor.parameters = {
   backgrounds: {
     default: 'themePrimary',
   },
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchImageSnapShot(page);
-    await verifyAxeRules(page);
+  imageSnapshot: {
+    hover: `${wrapper} > ul > li:first-child > a`,
+    focus: `${wrapper} > ul > li:first-child > a`,
+    click: `${wrapper} > ul > li:first-child > a`,
   },
 };

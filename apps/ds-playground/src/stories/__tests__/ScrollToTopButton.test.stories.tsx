@@ -337,6 +337,7 @@ WithShadowDom.play = async ({ canvasElement }): Promise<void> => {
     customElement.shadowRoot.querySelector('button');
 
   await expect(button).toBeInTheDocument();
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   await userEvent.click(button!);
 
   const main =

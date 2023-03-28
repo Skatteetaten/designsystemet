@@ -1,45 +1,28 @@
 import { useState } from 'react';
 
-import { AxePuppeteer } from '@axe-core/puppeteer';
 import { Link, LinkProps } from '@skatteetaten/ds-buttons';
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath, CalendarSVGpath } from '@skatteetaten/ds-icons';
+import { expect } from '@storybook/jest';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { toHaveNoViolations } from 'jest-axe';
-import { Page } from 'puppeteer';
+import { userEvent, waitFor, within } from '@storybook/testing-library';
 
-import {
-  screenShotOptions,
-  wrapper,
-} from './testUtils/puppeteer.testing.utils';
+import { wrapper } from './testUtils/puppeteer.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const elementId = 'htmlId';
 const systemIconViewBox = '0 0 24 24';
 const defaultLinkText = 'Er du pendler?';
 
-const verifyMatchSnapShot = async (page: Page): Promise<void> => {
-  const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-  expect(innerHtml).toMatchSnapshot();
-};
-
-const verifyMatchImageSnapShot = async (page: Page): Promise<void> => {
-  const image = await page.screenshot(screenShotOptions);
-  expect(image).toMatchImageSnapshot();
-};
-
-const verifyAxeRules = async (page: Page): Promise<void> => {
-  const axeResults = await new AxePuppeteer(page).include(wrapper).analyze();
-  expect.extend(toHaveNoViolations);
-  expect(axeResults).toHaveNoViolations();
-};
-
-const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
-  await verifyMatchSnapShot(page);
-  await verifyMatchImageSnapShot(page);
-  await verifyAxeRules(page);
-};
-
+const verifyAttribute =
+  (attribute: string, expectedValue: string) =>
+  async ({ canvasElement }: { canvasElement: HTMLElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByRole('link')).toHaveAttribute(
+      attribute,
+      expectedValue
+    );
+  };
 export default {
   component: Link,
   title: 'Tester/Link',
@@ -76,6 +59,7 @@ export default {
 const Template: ComponentStory<typeof Link> = (args) => (
   <div className={'noTransition'} data-test-block>
     <Link {...args} onClick={(e): void => e.preventDefault()}>
+      {/* eslint-disable-next-line testing-library/no-node-access */}
       {args.children}
     </Link>
   </div>
@@ -102,104 +86,37 @@ WithRef.argTypes = {
   ref: { table: { disable: false } },
 };
 WithRef.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const refId = await page.$eval(`${wrapper} > a`, (el) => el.id);
-    expect(refId).toBe('dummyIdForwardedFromRef');
-  },
+  imageSnapshot: { disable: true },
 };
+WithRef.play = verifyAttribute('id', 'dummyIdForwardedFromRef');
 
 // Når Link har en id, så har a-element id
-export const WithId = Template.bind({});
-WithId.storyName = 'With Id (FA2)';
-WithId.args = {
+// Når Link har en custom CSS, så vises custom stil
+// Når Link har en lang, så har a-element lang
+// Når Link har dataTestid, så har a-elementet data-testid satt
+export const WithAttributes = Template.bind({});
+WithAttributes.storyName = 'With Attributes(FA2-5)';
+WithAttributes.args = {
   ...defaultArgs,
   id: elementId,
-};
-WithId.argTypes = {
-  ...WithId.argTypes,
-  id: { table: { disable: false } },
-};
-WithId.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const id = await page.$eval(`${wrapper} > a`, (el) =>
-      el.getAttribute('id')
-    );
-    expect(id).toBe(elementId);
-  },
-};
-
-// Når Link har en custom CSS, så vises custom stil
-export const WithCustomCss = Template.bind({});
-WithCustomCss.storyName = 'With Custom CSS (FA3)';
-WithCustomCss.args = {
-  ...defaultArgs,
   className: 'dummyClassname',
-};
-WithCustomCss.argTypes = {
-  ...WithCustomCss.argTypes,
-  className: { table: { disable: false } },
-};
-WithCustomCss.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const classNameAttribute = await page.$eval(`${wrapper}> a`, (el) =>
-      el.getAttribute('class')
-    );
-    expect(classNameAttribute).toContain('dummyClassname');
-  },
-};
-
-// Når Link har en lang, så har a-element lang
-export const WithLang = Template.bind({});
-WithLang.storyName = 'With Lang (FA4)';
-WithLang.args = {
-  ...defaultArgs,
   lang: 'nb',
-};
-WithLang.argTypes = {
-  ...WithLang.argTypes,
-  lang: { table: { disable: false } },
-};
-WithLang.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const langAttribute = await page.$eval(`${wrapper} > a`, (el) =>
-      el.getAttribute('lang')
-    );
-    expect(langAttribute).toBe('nb');
-  },
-};
-
-// Når Link har dataTestid, så har link-elementet data-testid satt
-export const WithDataTestid = Template.bind({});
-WithDataTestid.storyName = 'With DataTestid (FA5)';
-WithDataTestid.args = {
-  ...defaultArgs,
   'data-testid': '123ID',
 };
-WithDataTestid.argTypes = {
-  ...WithDataTestid.argTypes,
+WithAttributes.argTypes = {
+  ...WithAttributes.argTypes,
+  id: { table: { disable: false } },
+  className: { table: { disable: false } },
+  lang: { table: { disable: false } },
   'data-testid': { table: { disable: false } },
 };
-WithDataTestid.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const dataTestid = await page.$eval(`${wrapper} > a`, (el) =>
-      el.getAttribute('data-testid')
-    );
-    expect(dataTestid).toBe('123ID');
-  },
+WithAttributes.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const link = canvas.getByRole('link');
+  await expect(link).toHaveClass('dummyClassname');
+  await expect(link).toHaveAttribute('id', elementId);
+  await expect(link).toHaveAttribute('lang', 'nb');
+  await expect(link).toHaveAttribute('data-testid', '123ID');
 };
 
 // Når Link instansieres, så får den riktige default-verdier og rendrer riktig i ulike tilstander
@@ -214,58 +131,22 @@ Defaults.argTypes = {
   children: { table: { disable: false } },
 };
 Defaults.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const element = await page.$(wrapper);
-    const textContent = await element?.getProperty('textContent');
-    const text = await textContent?.jsonValue();
-    expect(text).toBe(defaultLinkText);
-
-    const linkAttribute = await page.$eval(`${wrapper} > a`, (el) => {
-      return {
-        target: el.getAttribute('target'),
-        rel: el.getAttribute('rel'),
-      };
-    });
-    expect(linkAttribute.target).toBeNull();
-    expect(linkAttribute.rel).toBeNull();
-
-    const svgElement = await page.$(`${wrapper} > a svg`);
-    expect(svgElement).toBeNull();
-
-    const linkElement = await page.$(`${wrapper} > a`);
-
-    await linkElement?.focus();
-    const imageFocused = await page.screenshot(screenShotOptions);
-    expect(imageFocused).toMatchImageSnapshot();
-
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    await page.$eval(`${wrapper} > a`, (el: any) => el.blur());
-
-    await linkElement?.hover();
-    const imageHovered = await page.screenshot(screenShotOptions);
-    expect(imageHovered).toMatchImageSnapshot();
-
-    // active
-    const cdp = await page.target().createCDPSession();
-    const docNodeId = (await cdp.send('DOM.getDocument')).root.nodeId;
-    const nodeId = (
-      await cdp.send('DOM.querySelector', {
-        nodeId: docNodeId,
-        selector: `${wrapper} > a`,
-      })
-    ).nodeId;
-
-    await cdp.send('CSS.enable');
-    await cdp.send('CSS.forcePseudoState', {
-      nodeId: nodeId,
-      forcedPseudoClasses: ['active'],
-    });
-
-    const imageActive = await page.screenshot(screenShotOptions);
-    expect(imageActive).toMatchImageSnapshot();
+  imageSnapshot: {
+    hover: `${wrapper} > a`,
+    focus: `${wrapper} > a`,
+    click: `${wrapper} > a`,
   },
+};
+Defaults.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const link = canvas.getByRole('link');
+  await expect(link).not.toHaveAttribute('rel');
+  await expect(link).not.toHaveAttribute('target');
+
+  // eslint-disable-next-line testing-library/no-node-access
+  const svg = link.querySelector('svg');
+  await expect(svg).not.toBeInTheDocument();
+  expect(link).toHaveTextContent(defaultLinkText);
 };
 
 // Når Link har en veldig lang tekst så skal tekst venstrejusteres
@@ -280,9 +161,6 @@ WithLongText.argTypes = {
   ...WithLongText.argTypes,
   children: { table: { disable: false } },
 };
-WithLongText.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
-};
 
 // Når Link har en veldig lang tekst uten breaking space så skal det brekke over flere linjer
 export const WithLongTextBreaking = Template.bind({});
@@ -295,9 +173,6 @@ WithLongTextBreaking.args = {
 WithLongTextBreaking.argTypes = {
   ...WithLongTextBreaking.argTypes,
   children: { table: { disable: false } },
-};
-WithLongTextBreaking.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
 };
 
 // Når Link har en veldig lang tekst, valgfritt ikon og eksternal ikon så skal tekst venstrejusteres
@@ -317,9 +192,6 @@ WithLongTextIconAndExternalIcon.argTypes = {
   svgPath: { table: { disable: false } },
   children: { table: { disable: false } },
 };
-WithLongTextIconAndExternalIcon.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
-};
 
 // Når Link har ett valgfritt ikon, så vises ikonet. Tester også for de icon props som er relevant for saken med systemIcon som er brukt
 export const WithIcon = Template.bind({});
@@ -332,22 +204,13 @@ WithIcon.argTypes = {
   ...WithIcon.argTypes,
   svgPath: { table: { disable: false } },
 };
-WithIcon.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const svgElement = await page.$(`${wrapper} > a svg`);
-    expect(svgElement).toBeTruthy();
-
-    const svgAttributes = await page.$eval(`${wrapper} > a svg`, (el) => {
-      return {
-        ariaHidden: el.getAttribute('aria-hidden'),
-        viewBox: el.getAttribute('viewBox'),
-      };
-    });
-    expect(svgAttributes.ariaHidden).toBe('true');
-    expect(svgAttributes.viewBox).toBe(systemIconViewBox);
-  },
+WithIcon.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const link = canvas.getByRole('link');
+  // eslint-disable-next-line testing-library/no-node-access
+  const svg = link.querySelector('svg');
+  await expect(svg).toHaveAttribute('aria-hidden', 'true');
+  await expect(svg).toHaveAttribute('viewBox', systemIconViewBox);
 };
 
 // Når Link har isExternal, så vises riktig ikon med tilhørende tekst. Tester også for de icon props som er relevant for saken med systemIcon som er brukt
@@ -361,23 +224,13 @@ WithExternalIcon.argTypes = {
   ...WithExternalIcon.argTypes,
   isExternal: { table: { disable: false } },
 };
-WithExternalIcon.parameters = {
-  locale: 'cimode',
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const svgElement = await page.$(`${wrapper} > a svg`);
-    expect(svgElement).toBeTruthy();
-
-    const svgAttributes = await page.$eval(`${wrapper} > a svg`, (el) => {
-      return {
-        ariaLabel: el.getAttribute('aria-label'),
-        viewBox: el.getAttribute('viewBox'),
-      };
-    });
-    expect(svgAttributes.ariaLabel).toBe('shared.ExternalIcon');
-    expect(svgAttributes.viewBox).toBe(systemIconViewBox);
-  },
+WithExternalIcon.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const link = canvas.getByRole('link');
+  // eslint-disable-next-line testing-library/no-node-access
+  const svg = link.querySelector('svg');
+  await expect(svg).toHaveAttribute('aria-label', 'Til et annet nettsted');
+  await expect(svg).toHaveAttribute('viewBox', systemIconViewBox);
 };
 
 // Når Link har color white, så vises tekst og ikon i hvit
@@ -407,9 +260,9 @@ WithColor.parameters = {
   backgrounds: {
     default: 'themePrimary',
   },
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchImageSnapShot(page);
-    await verifyAxeRules(page);
+  imageSnapshot: {
+    hover: `${wrapper} > a`,
+    focus: `${wrapper} > a`,
   },
 };
 
@@ -425,19 +278,14 @@ WithTarget.argTypes = {
   target: { table: { disable: false } },
 };
 WithTarget.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
+  imageSnapshot: { disable: true },
+};
 
-    const linkAttribute = await page.$eval(`${wrapper} > a`, (el) => {
-      return {
-        target: el.getAttribute('target'),
-        rel: el.getAttribute('rel'),
-      };
-    });
-    expect(linkAttribute.target).toBe('_blank');
-    expect(linkAttribute.rel).toBeTruthy();
-  },
+WithTarget.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const link = canvas.getByRole('link');
+  expect(link).toHaveAttribute('rel', 'noreferrer');
+  expect(link).toHaveAttribute('target', '_blank');
 };
 
 // Når Link har ariaDescribedby, så har link element aria-describedby satt
@@ -452,16 +300,9 @@ WithAriaDescribedby.argTypes = {
   ariaDescribedby: { table: { disable: false } },
 };
 WithAriaDescribedby.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const ariaDescribedBy = await page.$eval(`${wrapper} > a`, (el) =>
-      el.getAttribute('aria-describedby')
-    );
-    expect(ariaDescribedBy).toBe(elementId);
-  },
+  imageSnapshot: { disable: true },
 };
+WithAriaDescribedby.play = verifyAttribute('aria-describedby', elementId);
 
 // Når brukeren klikker på lenken, så kalles funksjonen i onClick prop.
 // onClick-event endrer lenketeksten til lenken
@@ -477,6 +318,7 @@ const OnClickTemplate: ComponentStory<typeof Link> = (args) => {
         onClick={(e): void => {
           e.preventDefault();
           setLinkText(nyLinkText);
+          args.onClick && args.onClick(e);
         }}
       >
         {linkText}
@@ -496,19 +338,17 @@ WithOnClick.argTypes = {
   onClick: { table: { disable: false } },
 };
 WithOnClick.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchImageSnapShot(page);
-    await verifyAxeRules(page);
-
-    const linkElement = await page.$(`${wrapper} > a`);
-    await linkElement?.click();
-    const imageClicked = await page.screenshot(screenShotOptions);
-    expect(imageClicked).toMatchImageSnapshot();
-
-    await page.waitForSelector(`${wrapper} > a`);
-    const element = await page.$(`${wrapper} > a`);
-    const textContent = await element?.getProperty('textContent');
-    const text = await textContent?.jsonValue();
-    expect(text).toBe(nyLinkText);
-  },
+  imageSnapshot: { disbale: true },
+};
+WithOnClick.play = async ({ args, canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const link = canvas.getByRole('link');
+  await expect(link).toHaveTextContent(
+    'Klikk på lenken for å teste onClick event'
+  );
+  await userEvent.click(link);
+  await expect(link).toHaveTextContent(
+    'Ny lenketekst slik at vi ser at event fungerte'
+  );
+  await waitFor(() => expect(args.onClick).toHaveBeenCalled());
 };

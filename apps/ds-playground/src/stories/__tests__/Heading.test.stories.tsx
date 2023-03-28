@@ -1,39 +1,24 @@
-import { AxePuppeteer } from '@axe-core/puppeteer';
 import {
   Heading,
   headingLevelArr,
   HeadingProps,
 } from '@skatteetaten/ds-typography';
+import { headingAsArr } from '@skatteetaten/ds-typography';
+import { expect } from '@storybook/jest';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { toHaveNoViolations } from 'jest-axe';
-import { Page } from 'puppeteer';
+import { within } from '@storybook/testing-library';
 
-import {
-  screenShotOptions,
-  wrapper,
-} from './testUtils/puppeteer.testing.utils';
+import { wrapper } from './testUtils/puppeteer.testing.utils';
 
-const verifyMatchSnapShot = async (page: Page): Promise<void> => {
-  const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-  expect(innerHtml).toMatchSnapshot();
-};
-
-const verifyMatchImageSnapShot = async (page: Page): Promise<void> => {
-  const image = await page.screenshot(screenShotOptions);
-  expect(image).toMatchImageSnapshot();
-};
-
-const verifyAxeRules = async (page: Page): Promise<void> => {
-  const axeResults = await new AxePuppeteer(page).include(wrapper).analyze();
-  expect.extend(toHaveNoViolations);
-  expect(axeResults).toHaveNoViolations();
-};
-
-const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
-  await verifyMatchSnapShot(page);
-  await verifyMatchImageSnapShot(page);
-  await verifyAxeRules(page);
-};
+const verifyAttribute =
+  (attribute: string, expectedValue: string) =>
+  async ({ canvasElement }: { canvasElement: HTMLElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByRole('heading')).toHaveAttribute(
+      attribute,
+      expectedValue
+    );
+  };
 
 export default {
   component: Heading,
@@ -67,6 +52,39 @@ const defaultArgs: HeadingProps = {
   level: 2,
   children: 'Dette er en heading',
 };
+
+const LevelsTemplate: ComponentStory<typeof Heading> = (args) => (
+  <div data-test-block>
+    {headingAsArr.map((heading) =>
+      headingLevelArr.map((level) => (
+        <Heading
+          key={`${heading}-${level}`}
+          {...args}
+          as={heading}
+          level={level}
+        >
+          {`Heading ${heading} level ${level}`}
+        </Heading>
+      ))
+    )}
+  </div>
+);
+
+export const WithLevels = LevelsTemplate.bind({});
+WithLevels.storyName = 'With Levels (A2, B1)';
+WithLevels.argTypes = {
+  ...WithLevels.argTypes,
+};
+WithLevels.args = {
+  ...defaultArgs,
+};
+WithLevels.parameters = {
+  viewport: {
+    //defaultViewport: '--breakpoint-xs',
+    viewPortHeight: 1200,
+  },
+};
+
 const Template: ComponentStory<typeof Heading> = (args) => (
   <div data-test-block>
     <Heading {...args} />
@@ -88,110 +106,36 @@ WithRef.args = {
     }
   },
 };
-WithRef.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
+WithRef.parameters = { imageSnapshot: { disable: true } };
+WithRef.play = verifyAttribute('id', 'dummyIdForwardedFromRef');
 
-    const refId = await page.$eval(
-      `${wrapper} > ${headingAsTest}`,
-      (el) => el.id
-    );
-    expect(refId).toBe('dummyIdForwardedFromRef');
-  },
-};
-
-// Når Heading har en id, så har elementet id'en satt
-export const WithId = Template.bind({});
-WithId.storyName = 'With Id (FA2)';
-WithId.argTypes = {
-  ...WithId.argTypes,
-  id: { table: { disable: false } },
-};
-WithId.args = {
-  ...defaultArgs,
-  id: 'headingId',
-};
-WithId.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const id = await page.$eval(`${wrapper} > ${headingAsTest}`, (el) =>
-      el.getAttribute('id')
-    );
-    expect(id).toBe('headingId');
-  },
-};
-
+// Når Heading har en id, så har ul-element id
 // Når Heading har en custom CSS, så vises custom stil
-export const WithCustomCss = Template.bind({});
-WithCustomCss.storyName = 'With Custom CSS (FA3)';
-WithCustomCss.args = {
+// Når Heading har en lang, så har ul-element lang
+// Når Heading har dataTestid, så har ul-elementet data-testid satt
+export const WithAttributes = Template.bind({});
+WithAttributes.storyName = 'With Attributes (FA2-5)';
+WithAttributes.args = {
   ...defaultArgs,
+  id: 'htmlId',
   className: 'dummyClassname',
-};
-WithCustomCss.argTypes = {
-  ...WithCustomCss.argTypes,
-  className: { table: { disable: false } },
-};
-WithCustomCss.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const classNameAttribute = await page.$eval(
-      `${wrapper} > ${headingAsTest}`,
-      (el) => el.getAttribute('class')
-    );
-    expect(classNameAttribute).toContain('dummyClassname');
-  },
-};
-
-// Når Heading har en lang, så har elementet lang satt
-export const WithLang = Template.bind({});
-WithLang.storyName = 'With Lang (FA4)';
-WithLang.argTypes = {
-  ...WithLang.argTypes,
-  lang: { table: { disable: false } },
-};
-WithLang.args = {
-  ...defaultArgs,
   lang: 'nb',
+  'data-testid': '123ID',
 };
-WithLang.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const langAttribute = await page.$eval(
-      `${wrapper} > ${headingAsTest}`,
-      (el) => el.getAttribute('lang')
-    );
-    expect(langAttribute).toBe('nb');
-  },
-};
-
-// Når Heading har dataTestId, så har elementet data-testid satt
-export const WithDataTestid = Template.bind({});
-WithDataTestid.storyName = 'With DataTestid (FA5)';
-WithDataTestid.argTypes = {
-  ...WithDataTestid.argTypes,
+WithAttributes.argTypes = {
+  ...WithAttributes.argTypes,
+  id: { table: { disable: false } },
+  className: { table: { disable: false } },
+  lang: { table: { disable: false } },
   'data-testid': { table: { disable: false } },
 };
-WithDataTestid.args = {
-  ...defaultArgs,
-  'data-testid': 'HeadingID',
-};
-WithDataTestid.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const dataTestId = await page.$eval(`${wrapper} > ${headingAsTest}`, (el) =>
-      el.getAttribute('data-testid')
-    );
-    expect(dataTestId).toBe('HeadingID');
-  },
+WithAttributes.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const heading = canvas.getByRole('heading');
+  await expect(heading).toHaveClass('dummyClassname');
+  await expect(heading).toHaveAttribute('id', 'htmlId');
+  await expect(heading).toHaveAttribute('lang', 'nb');
+  await expect(heading).toHaveAttribute('data-testid', '123ID');
 };
 
 const TemplateWithMarkup: ComponentStory<typeof Heading> = (args) => (
@@ -224,7 +168,10 @@ WithMarkup.args = {
   children: 'Dette er den fineste string headingen uten markup',
 };
 WithMarkup.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
+  imageSnapshot: {
+    hover: `${wrapper} > h2 > a`,
+    focus: `${wrapper} > h2 > a`,
+  },
 };
 
 const TemplateWithAllLevels: ComponentStory<typeof Heading> = (args) => (
@@ -249,8 +196,12 @@ Defaults.argTypes = {
 Defaults.args = {
   ...defaultArgs,
 };
-Defaults.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
+Defaults.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const headings = canvas.getAllByRole('heading', { level: 2 });
+  for (const heading of headings) {
+    await expect(heading).toBeInTheDocument();
+  }
 };
 
 // Når Heading instansieres, ser den riktug ut for alle levels på mobil
@@ -262,10 +213,6 @@ DefaultsMobile.args = {
 DefaultsMobile.parameters = {
   viewport: {
     defaultViewport: '--breakpoint-xs',
-  },
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchImageSnapShot(page);
-    await verifyAxeRules(page);
   },
 };
 
@@ -282,9 +229,6 @@ LevelsWithSpacing.args = {
   ...defaultArgs,
   hasSpacing: true,
 };
-LevelsWithSpacing.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
-};
 
 // Når Heading har spacing, så får elementet riktig margin under headingen på mobil
 export const LevelsWithSpacingMobile = TemplateWithAllLevels.bind({});
@@ -297,9 +241,5 @@ LevelsWithSpacingMobile.args = {
 LevelsWithSpacingMobile.parameters = {
   viewport: {
     defaultViewport: '--breakpoint-xs',
-  },
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchImageSnapShot(page);
-    await verifyAxeRules(page);
   },
 };

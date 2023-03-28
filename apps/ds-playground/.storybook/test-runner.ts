@@ -24,14 +24,17 @@ const customConfig = {
 };
 
 async function adjustViewport(page, viewport): Promise<void> {
-  if (viewport?.defaultViewport) {
-    const widthPx = viewport.viewports[viewport.defaultViewport].styles.width;
+  if (viewport?.defaultViewport || viewport.viewPortHeight) {
+    const widthPx = viewport.viewports[viewport.defaultViewport]?.styles?.width;
     await page.setViewportSize({
-      width: parseInt(widthPx),
-      height: 600,
+      width: widthPx ? parseInt(widthPx) : 800,
+      height: viewport?.viewPortHeight ?? 600,
     });
   } else {
-    await page.setViewportSize({ width: 800, height: 600 });
+    await page.setViewportSize({
+      width: 800,
+      height: 600,
+    });
   }
 }
 async function verifyImageSnapshots(

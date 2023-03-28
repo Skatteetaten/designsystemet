@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tester/Link Defaults smoke-test 1`] = `
+exports[`Tester/Link Defaults play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
@@ -12,13 +12,28 @@ exports[`Tester/Link Defaults smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Link WithAriaDescribedby smoke-test 1`] = `
+exports[`Tester/Link WithAriaDescribedby play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
   <a class="Link_link__jeUpY  "
      href="#root"
      aria-describedby="htmlId"
+  >
+    Er du pendler?
+  </a>
+</div>
+`;
+
+exports[`Tester/Link WithAttributes play-test 1`] = `
+<div class="noTransition"
+     data-test-block="true"
+>
+  <a id="htmlId"
+     class="Link_link__jeUpY  dummyClassname"
+     lang="nb"
+     data-testid="123ID"
+     href="#root"
   >
     Er du pendler?
   </a>
@@ -45,7 +60,7 @@ exports[`Tester/Link WithColor smoke-test 1`] = `
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isExternal__O+HIA"
          viewbox="0 0 24 24"
          focusable="false"
-         aria-label="shared.ExternalIcon"
+         aria-label="Til et annet nettsted"
          aria-hidden="false"
          role="img"
     >
@@ -56,32 +71,7 @@ exports[`Tester/Link WithColor smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Link WithCustomCss smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
-  <a class="Link_link__jeUpY  dummyClassname"
-     href="#root"
-  >
-    Er du pendler?
-  </a>
-</div>
-`;
-
-exports[`Tester/Link WithDataTestid smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
-  <a class="Link_link__jeUpY  "
-     data-testid="123ID"
-     href="#root"
-  >
-    Er du pendler?
-  </a>
-</div>
-`;
-
-exports[`Tester/Link WithExternalIcon smoke-test 1`] = `
+exports[`Tester/Link WithExternalIcon play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
@@ -92,7 +82,7 @@ exports[`Tester/Link WithExternalIcon smoke-test 1`] = `
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isExternal__O+HIA"
          viewbox="0 0 24 24"
          focusable="false"
-         aria-label="shared.ExternalIcon"
+         aria-label="Til et annet nettsted"
          aria-hidden="false"
          role="img"
     >
@@ -103,7 +93,7 @@ exports[`Tester/Link WithExternalIcon smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Link WithIcon smoke-test 1`] = `
+exports[`Tester/Link WithIcon play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
@@ -119,32 +109,6 @@ exports[`Tester/Link WithIcon smoke-test 1`] = `
       <path d="M19 19H5V8h14v11ZM16 1v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2Zm1 11h-5v5h5v-5Z">
       </path>
     </svg>
-    Er du pendler?
-  </a>
-</div>
-`;
-
-exports[`Tester/Link WithId smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
-  <a id="htmlId"
-     class="Link_link__jeUpY  "
-     href="#root"
-  >
-    Er du pendler?
-  </a>
-</div>
-`;
-
-exports[`Tester/Link WithLang smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
-  <a class="Link_link__jeUpY  "
-     lang="nb"
-     href="#root"
-  >
     Er du pendler?
   </a>
 </div>
@@ -205,7 +169,7 @@ exports[`Tester/Link WithLongTextIconAndExternalIcon smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Link WithOnClick smoke-test 1`] = `
+exports[`Tester/Link WithOnClick play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
@@ -221,12 +185,12 @@ exports[`Tester/Link WithOnClick smoke-test 1`] = `
       <path d="M19 19H5V8h14v11ZM16 1v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2Zm1 11h-5v5h5v-5Z">
       </path>
     </svg>
-    Klikk på lenken for å teste onClick event
+    Ny lenketekst slik at vi ser at event fungerte
   </a>
 </div>
 `;
 
-exports[`Tester/Link WithRef smoke-test 1`] = `
+exports[`Tester/Link WithRef play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
@@ -239,7 +203,7 @@ exports[`Tester/Link WithRef smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Link WithTarget smoke-test 1`] = `
+exports[`Tester/Link WithTarget play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >

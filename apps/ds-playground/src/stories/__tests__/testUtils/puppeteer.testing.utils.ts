@@ -5,3 +5,7 @@ export const screenShotOptions: ScreenshotOptions = {
   fullPage: true,
   encoding: 'base64',
 };
+
+export const loremIpsum =
+  'Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, ' +
+  'etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.';
