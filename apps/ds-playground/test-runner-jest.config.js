@@ -5,9 +5,6 @@ const config = getJestConfig();
 module.exports = {
   ...config,
   verbose: true,
-  testPathIgnorePatterns: [
-    '<rootDir>/src/stories/__tests__/Button.test.stories.tsx',
-  ],
   testMatch: [
     '<rootDir>/src/stories/__tests__/**/*test.stories.mdx',
     '<rootDir>/src/stories/__tests__/**/*test.stories.@(js|jsx|ts|tsx)',

@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tester/Button Defaults smoke-test 1`] = `
+exports[`Tester/Button Defaults play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="Button_button__1zTCG Button_button_primary__1O4RP  "
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
           type="button"
   >
     Klikk her
@@ -12,11 +12,11 @@ exports[`Tester/Button Defaults smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Button Disabled smoke-test 1`] = `
+exports[`Tester/Button Disabled play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="Button_button__1zTCG Button_button_primary__1O4RP  "
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
           disabled
           type="button"
   >
@@ -29,12 +29,12 @@ exports[`Tester/Button DisabledWithIcon smoke-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="Button_button__1zTCG Button_button_primary__1O4RP Button_button_withIcon__2G3uN "
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo Button_button_withIcon__P1eEM "
           disabled
           type="button"
   >
-    <span class="Button_iconWrapper__3qV4-">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 Button_icon__Fgskl"
+    <span class="Button_iconWrapper__9FDzj">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Button_icon__9r5UK"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -49,11 +49,11 @@ exports[`Tester/Button DisabledWithIcon smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Button VariantDanger smoke-test 1`] = `
+exports[`Tester/Button VariantDanger play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="Button_button__1zTCG Button_button_danger___I_QG  "
+  <button class="Button_button__pkuNv Button_button_danger__0CE32  "
           type="button"
   >
     Klikk her
@@ -61,11 +61,11 @@ exports[`Tester/Button VariantDanger smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Button VariantSecondary smoke-test 1`] = `
+exports[`Tester/Button VariantSecondary play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="Button_button__1zTCG Button_button_secondary__E8eKQ  "
+  <button class="Button_button__pkuNv Button_button_secondary__KxQlU  "
           type="button"
   >
     Klikk her
@@ -73,11 +73,11 @@ exports[`Tester/Button VariantSecondary smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Button VariantTertiary smoke-test 1`] = `
+exports[`Tester/Button VariantTertiary play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="Button_button__1zTCG Button_button_tertiary__1XbyX  "
+  <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
           type="button"
   >
     Klikk her
@@ -85,12 +85,12 @@ exports[`Tester/Button VariantTertiary smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Button WithAccesskey smoke-test 1`] = `
+exports[`Tester/Button WithAccesskey play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="Button_button__1zTCG Button_button_primary__1O4RP  "
-          accesskey="s"
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+          accesskey="j"
           type="button"
   >
     Klikk her
@@ -98,36 +98,26 @@ exports[`Tester/Button WithAccesskey smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Button WithAriaDescribedby smoke-test 1`] = `
+exports[`Tester/Button WithAriaDescribedby play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="Button_button__1zTCG Button_button_primary__1O4RP  "
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
           type="button"
-          aria-describedby="id1"
+          aria-describedby="testid1234"
   >
     Klikk her
   </button>
 </div>
 `;
 
-exports[`Tester/Button WithCustomCss smoke-test 1`] = `
+exports[`Tester/Button WithAttributes play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="Button_button__1zTCG Button_button_secondary__E8eKQ  dummyClassname"
-          type="button"
-  >
-    Klikk her
-  </button>
-</div>
-`;
-
-exports[`Tester/Button WithDataTestid smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
-  <button class="Button_button__1zTCG Button_button_primary__1O4RP  "
+  <button id="htmlid"
+          class="Button_button__pkuNv Button_button_primary__8Ouwo  dummyClassname"
+          lang="nb"
           data-testid="123ID"
           type="button"
   >
@@ -136,15 +126,27 @@ exports[`Tester/Button WithDataTestid smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Button WithIcon smoke-test 1`] = `
+exports[`Tester/Button WithEventHandlers play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="Button_button__1zTCG Button_button_primary__1O4RP Button_button_withIcon__2G3uN "
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
           type="button"
   >
-    <span class="Button_iconWrapper__3qV4-">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 Button_icon__Fgskl"
+    Knapp har blitt klikket på
+  </button>
+</div>
+`;
+
+exports[`Tester/Button WithIcon play-test 1`] = `
+<div class="noTransition"
+     data-test-block="true"
+>
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo Button_button_withIcon__P1eEM "
+          type="button"
+  >
+    <span class="Button_iconWrapper__9FDzj">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Button_icon__9r5UK"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -154,32 +156,6 @@ exports[`Tester/Button WithIcon smoke-test 1`] = `
         </path>
       </svg>
     </span>
-    Klikk her
-  </button>
-</div>
-`;
-
-exports[`Tester/Button WithId smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
-  <button id="htmlid"
-          class="Button_button__1zTCG Button_button_primary__1O4RP  "
-          type="button"
-  >
-    Klikk her
-  </button>
-</div>
-`;
-
-exports[`Tester/Button WithLang smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
-  <button class="Button_button__1zTCG Button_button_primary__1O4RP  "
-          lang="nb"
-          type="button"
-  >
     Klikk her
   </button>
 </div>
@@ -189,7 +165,7 @@ exports[`Tester/Button WithLongText smoke-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="Button_button__1zTCG Button_button_primary__1O4RP  "
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
           type="button"
   >
     Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles. Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles
@@ -201,11 +177,11 @@ exports[`Tester/Button WithLongTextAndIcon smoke-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="Button_button__1zTCG Button_button_primary__1O4RP Button_button_withIcon__2G3uN "
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo Button_button_withIcon__P1eEM "
           type="button"
   >
-    <span class="Button_iconWrapper__3qV4-">
-      <svg class="Icon_systemIcon__3UiY7 Icon_systemIcon_medium__3Bf05 Button_icon__Fgskl"
+    <span class="Button_iconWrapper__9FDzj">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Button_icon__9r5UK"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -224,7 +200,7 @@ exports[`Tester/Button WithLongTextBreaking smoke-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="Button_button__1zTCG Button_button_primary__1O4RP  "
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
           type="button"
   >
     Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles.Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles
@@ -232,47 +208,11 @@ exports[`Tester/Button WithLongTextBreaking smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Button WithOnBlur smoke-test 1`] = `
+exports[`Tester/Button WithRef play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="Button_button__1zTCG Button_button_primary__1O4RP  "
-          type="button"
-  >
-    Klikk på knapp for å teste onBlur event
-  </button>
-</div>
-`;
-
-exports[`Tester/Button WithOnClick smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
-  <button class="Button_button__1zTCG Button_button_primary__1O4RP  "
-          type="button"
-  >
-    Klikk på knapp for å teste onClick event
-  </button>
-</div>
-`;
-
-exports[`Tester/Button WithOnFocus smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
-  <button class="Button_button__1zTCG Button_button_primary__1O4RP  "
-          type="button"
-  >
-    Klikk på knapp for å teste onFocus event
-  </button>
-</div>
-`;
-
-exports[`Tester/Button WithRef smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
-  <button class="Button_button__1zTCG Button_button_primary__1O4RP  "
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
           type="button"
           id="dummyIdForwardedFromRef"
   >
@@ -281,11 +221,11 @@ exports[`Tester/Button WithRef smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Button WithType smoke-test 1`] = `
+exports[`Tester/Button WithType play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="Button_button__1zTCG Button_button_primary__1O4RP  "
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
           type="submit"
   >
     Klikk her

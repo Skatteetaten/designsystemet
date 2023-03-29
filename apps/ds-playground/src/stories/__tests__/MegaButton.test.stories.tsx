@@ -368,7 +368,6 @@ AsLinkExternal.parameters = {
     hover: `${wrapper} > a`,
   },
 };
-
 AsLinkExternal.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   const megaButton = canvas.getByText('Klikk her');

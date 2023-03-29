@@ -1,41 +1,24 @@
 import { useState } from 'react';
 
-import { AxePuppeteer } from '@axe-core/puppeteer';
 import { Button, buttonVariantArr } from '@skatteetaten/ds-buttons';
 import { SendSVGpath } from '@skatteetaten/ds-icons';
+import { expect } from '@storybook/jest';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { toHaveNoViolations } from 'jest-axe';
-import { Page } from 'puppeteer';
+import { userEvent, waitFor, within } from '@storybook/testing-library';
 
-import {
-  screenShotOptions,
-  wrapper,
-} from './testUtils/puppeteer.testing.utils';
+import { wrapper } from './testUtils/puppeteer.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const defaultButtonText = 'Klikk her';
 
-const verifyMatchSnapShot = async (page: Page): Promise<void> => {
-  const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-  expect(innerHtml).toMatchSnapshot();
-};
-
-const verifyMatchImageSnapShot = async (page: Page): Promise<void> => {
-  const image = await page.screenshot(screenShotOptions);
-  expect(image).toMatchImageSnapshot();
-};
-
-const verifyAxeRules = async (page: Page): Promise<void> => {
-  const axeResults = await new AxePuppeteer(page).include(wrapper).analyze();
-  expect.extend(toHaveNoViolations);
-  expect(axeResults).toHaveNoViolations();
-};
-
-const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
-  await verifyMatchSnapShot(page);
-  await verifyMatchImageSnapShot(page);
-  await verifyAxeRules(page);
-};
+const verifyAttribute =
+  (attribute: string, expectedValue: string) =>
+  async ({ canvasElement }: { canvasElement: HTMLElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await expect(button).toBeInTheDocument();
+    await expect(button).toHaveAttribute(attribute, expectedValue);
+  };
 
 export default {
   component: Button,
@@ -76,6 +59,7 @@ export default {
 const Template: ComponentStory<typeof Button> = (args) => (
   <div className={'noTransition'} data-test-block>
     <Button {...args} variant={args.variant} svgPath={args.svgPath}>
+      {/* eslint-disable-next-line testing-library/no-node-access */}
       {args.children}
     </Button>
   </div>
@@ -101,107 +85,46 @@ WithRef.argTypes = {
   ref: { table: { disable: false } },
 };
 WithRef.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const refId = await page.$eval(`${wrapper} > button`, (el) => el.id);
-    expect(refId).toBe('dummyIdForwardedFromRef');
-  },
+  imageSnapshot: { disable: true },
 };
+WithRef.play = verifyAttribute('id', 'dummyIdForwardedFromRef');
 
-// Når Button har en id, så har button-element id
-export const WithId = Template.bind({});
-WithId.storyName = 'With Id (FA2)';
-WithId.args = {
+// Når Button har en id, så har button-elementet id'en satt
+// Når Button har en custom className, så har button-elementet className satt og custom stil vises
+// Når Button har en lang, så har button-elementet lang satt
+// Når Button har en data-testid, så har button-elementet data-testid satt
+export const WithAttributes = Template.bind({});
+WithAttributes.storyName = 'With Attributes (FA2-5)';
+WithAttributes.args = {
   ...defaultArgs,
   id: 'htmlid',
-};
-WithId.argTypes = {
-  ...WithId.argTypes,
-  id: { table: { disable: false } },
-};
-WithId.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const elementid = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('id')
-    );
-    expect(elementid).toBe('htmlid');
-  },
-};
-
-// Når Button har en custom CSS, så vises custom stil
-export const WithCustomCss = Template.bind({});
-WithCustomCss.storyName = 'With Custom CSS (FA3)';
-WithCustomCss.args = {
-  ...defaultArgs,
-  variant: 'secondary',
   className: 'dummyClassname',
-};
-WithCustomCss.argTypes = {
-  ...WithCustomCss.argTypes,
-  className: {
-    table: { disable: false },
-  },
-};
-WithCustomCss.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const classNameAttribute = await page.$eval(`${wrapper}> button`, (el) =>
-      el.getAttribute('class')
-    );
-    expect(classNameAttribute).toContain('dummyClassname');
-  },
-};
-
-// Når Button har en lang, så har button-element lang
-export const WithLang = Template.bind({});
-WithLang.storyName = 'With Lang (FA4)';
-WithLang.args = {
-  ...defaultArgs,
   lang: 'nb',
-};
-WithLang.argTypes = {
-  ...WithLang.argTypes,
-  lang: { table: { disable: false } },
-};
-WithLang.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const langAttribute = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('lang')
-    );
-    expect(langAttribute).toBe('nb');
-  },
-};
-
-// Når Button har dataTestid, så har button-elementet data-testid satt
-export const WithDataTestid = Template.bind({});
-WithDataTestid.storyName = 'With DataTestid (FA5)';
-WithDataTestid.args = {
-  ...defaultArgs,
   'data-testid': '123ID',
 };
-WithDataTestid.argTypes = {
-  ...WithDataTestid.argTypes,
+WithAttributes.argTypes = {
+  ...WithAttributes.argTypes,
+  id: { table: { disable: false } },
+  className: { table: { disable: false } },
+  lang: { table: { disable: false } },
   'data-testid': { table: { disable: false } },
 };
-WithDataTestid.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
 
-    const dataTestid = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('data-testid')
-    );
-    expect(dataTestid).toBe('123ID');
+WithAttributes.parameters = {
+  imageSnapshot: {
+    disable: true,
+    focus: `${wrapper} > button`,
+    hover: `${wrapper} > button`,
+    click: `${wrapper} > button`,
   },
+};
+WithAttributes.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const icon = canvas.getByRole('button');
+  await expect(icon).toHaveAttribute('id', 'htmlid');
+  await expect(icon).toHaveClass('dummyClassname');
+  await expect(icon).toHaveAttribute('lang', 'nb');
+  await expect(icon).toHaveAttribute('data-testid', '123ID');
 };
 
 // Når Button instansieres, får den default variant primary.
@@ -216,37 +139,18 @@ Defaults.argTypes = {
   children: { table: { disable: false } },
 };
 Defaults.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const element = await page.$(wrapper);
-    const textContent = await element?.getProperty('textContent');
-    const text = await textContent?.jsonValue();
-    expect(text).toBe(defaultButtonText);
-
-    const attributeType = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('type')
-    );
-    expect(attributeType).toBe('button');
-
-    const buttonElement = await page.$(`${wrapper} > button`);
-
-    await buttonElement?.focus();
-    const imageFocused = await page.screenshot(screenShotOptions);
-    expect(imageFocused).toMatchImageSnapshot();
-
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
-    await buttonElement?.hover();
-    const imageHovered = await page.screenshot(screenShotOptions);
-    expect(imageHovered).toMatchImageSnapshot();
-
-    await buttonElement?.click();
-    await page.waitForSelector(`${wrapper} > button:focus`);
-    await page.waitForTimeout(300);
-    const imageClicked = await page.screenshot(screenShotOptions);
-    expect(imageClicked).toMatchImageSnapshot();
+  imageSnapshot: {
+    disable: true,
+    focus: `${wrapper} > button`,
+    hover: `${wrapper} > button`,
+    click: `${wrapper} > button`,
   },
+};
+Defaults.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const button = canvas.getByText(defaultButtonText);
+  await expect(button).toBeInTheDocument();
+  await expect(button).toHaveAttribute('type', 'button');
 };
 
 // Når Button har en variant, så vises stilsett for varianten (secondary)
@@ -261,27 +165,18 @@ VariantSecondary.argTypes = {
   variant: { table: { disable: false } },
 };
 VariantSecondary.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const buttonElement = await page.$(`${wrapper} > button`);
-
-    await buttonElement?.focus();
-    const imageFocused = await page.screenshot(screenShotOptions);
-    expect(imageFocused).toMatchImageSnapshot();
-
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
-    await buttonElement?.hover();
-    const imageHovered = await page.screenshot(screenShotOptions);
-    expect(imageHovered).toMatchImageSnapshot();
-
-    await buttonElement?.click();
-    await page.waitForSelector(`${wrapper} > button:focus`);
-    await page.waitForTimeout(300);
-    const imageClicked = await page.screenshot(screenShotOptions);
-    expect(imageClicked).toMatchImageSnapshot();
+  imageSnapshot: {
+    disable: true,
+    focus: `${wrapper} > button`,
+    hover: `${wrapper} > button`,
+    click: `${wrapper} > button`,
   },
+};
+VariantSecondary.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const button = canvas.getByText(defaultButtonText);
+  await expect(button).toBeInTheDocument();
+  await expect(button).toHaveAttribute('type', 'button');
 };
 
 // Når Button har en variant, så vises stilsett for varianten (tertiary)
@@ -296,27 +191,18 @@ VariantTertiary.argTypes = {
   variant: { table: { disable: false } },
 };
 VariantTertiary.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const buttonElement = await page.$(`${wrapper} > button`);
-
-    await buttonElement?.focus();
-    const imageFocused = await page.screenshot(screenShotOptions);
-    expect(imageFocused).toMatchImageSnapshot();
-
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
-    await buttonElement?.hover();
-    const imageHovered = await page.screenshot(screenShotOptions);
-    expect(imageHovered).toMatchImageSnapshot();
-
-    await buttonElement?.click();
-    await page.waitForSelector(`${wrapper} > button:focus`);
-    await page.waitForTimeout(300);
-    const imageClicked = await page.screenshot(screenShotOptions);
-    expect(imageClicked).toMatchImageSnapshot();
+  imageSnapshot: {
+    disable: true,
+    focus: `${wrapper} > button`,
+    hover: `${wrapper} > button`,
+    click: `${wrapper} > button`,
   },
+};
+VariantTertiary.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const button = canvas.getByText(defaultButtonText);
+  await expect(button).toBeInTheDocument();
+  await expect(button).toHaveAttribute('type', 'button');
 };
 
 // Når Button har en variant, så vises stilsett for varianten (danger)
@@ -328,27 +214,45 @@ VariantDanger.argTypes = {
   variant: { table: { disable: false } },
 };
 VariantDanger.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const buttonElement = await page.$(`${wrapper} > button`);
-
-    await buttonElement?.focus();
-    const imageFocused = await page.screenshot(screenShotOptions);
-    expect(imageFocused).toMatchImageSnapshot();
-
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
-    await buttonElement?.hover();
-    const imageHovered = await page.screenshot(screenShotOptions);
-    expect(imageHovered).toMatchImageSnapshot();
-
-    await buttonElement?.click();
-    await page.waitForSelector(`${wrapper} > button:focus`);
-    await page.waitForTimeout(300);
-    const imageClicked = await page.screenshot(screenShotOptions);
-    expect(imageClicked).toMatchImageSnapshot();
+  imageSnapshot: {
+    disable: true,
+    focus: `${wrapper} > button`,
+    hover: `${wrapper} > button`,
+    click: `${wrapper} > button`,
   },
+};
+VariantDanger.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const button = canvas.getByText(defaultButtonText);
+  await expect(button).toBeInTheDocument();
+  await expect(button).toHaveAttribute('type', 'button');
+};
+
+// Når Button har ett ikon, så vises ikonet. Tester også for de icon props som er relevant for saken med systemIcon som er brukt.
+export const WithIcon = Template.bind({});
+WithIcon.storyName = 'With Icon (A3, B3)';
+WithIcon.args = {
+  ...defaultArgs,
+  svgPath: SendSVGpath,
+};
+WithIcon.argTypes = {
+  ...WithIcon.argTypes,
+  svgPath: { table: { disable: false } },
+};
+WithIcon.parameters = {
+  imageSnapshot: {
+    disable: true,
+  },
+};
+WithIcon.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+
+  const button = canvas.getByRole('button');
+  // eslint-disable-next-line testing-library/no-node-access
+  const svg = button.querySelector('svg');
+  await expect(svg).toHaveAttribute('viewBox', '0 0 24 24');
+  await expect(svg).toHaveAttribute('aria-hidden', 'true');
+  await expect(button).toBeInTheDocument();
 };
 
 // Når Button har en veldig lang tekst så skal tekst venstrejusteres
@@ -365,7 +269,9 @@ WithLongText.argTypes = {
   children: { table: { disable: false } },
 };
 WithLongText.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
+  imageSnapshot: {
+    disable: true,
+  },
 };
 
 // Når Button har en veldig lang tekst uten breaking space så skal det brekke over flere linjer
@@ -382,7 +288,9 @@ WithLongTextBreaking.argTypes = {
   children: { table: { disable: false } },
 };
 WithLongTextBreaking.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
+  imageSnapshot: {
+    disable: true,
+  },
 };
 
 // Når Button har en veldig lang tekst og det er et ikon så skal tekst venstrejusteres
@@ -401,36 +309,8 @@ WithLongTextAndIcon.argTypes = {
   svgPath: { table: { disable: false } },
 };
 WithLongTextAndIcon.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
-};
-
-// Når Button har ett ikon, så vises ikonet. Tester også for de icon props som er relevant for saken med systemIcon som er brukt.
-export const WithIcon = Template.bind({});
-WithIcon.storyName = 'With Icon (A3, B3)';
-WithIcon.args = {
-  ...defaultArgs,
-  svgPath: SendSVGpath,
-};
-WithIcon.argTypes = {
-  ...WithIcon.argTypes,
-  svgPath: { table: { disable: false } },
-};
-WithIcon.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const svgElement = await page.$(`${wrapper} > button svg`);
-    expect(svgElement).toBeTruthy();
-
-    const systemIconViewBox = '0 0 24 24';
-    const svgAttributes = await page.$eval(`${wrapper} > button svg`, (el) => {
-      return {
-        ariaHidden: el.getAttribute('aria-hidden'),
-        viewBox: el.getAttribute('viewBox'),
-      };
-    });
-    expect(svgAttributes.ariaHidden).toBe('true');
-    expect(svgAttributes.viewBox).toBe(systemIconViewBox);
+  imageSnapshot: {
+    disable: true,
   },
 };
 
@@ -446,12 +326,11 @@ Disabled.argTypes = {
   disabled: { table: { disable: false } },
 };
 Disabled.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const isDisabled = await page.$(`${wrapper} > button[disabled]`);
-    expect(isDisabled).toBeTruthy();
-  },
+  imageSnapshot: { disable: true },
+};
+Disabled.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  expect(canvas.getByRole('button')).toBeDisabled();
 };
 
 // Når Button har prop disabled og ikon er satt, så vises ikonet og knapp er disabled og stil er satt til disabled
@@ -468,12 +347,7 @@ DisabledWithIcon.argTypes = {
   disabled: { table: { disable: false } },
 };
 DisabledWithIcon.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const isDisabled = await page.$(`${wrapper} > button[disabled]`);
-    expect(isDisabled).toBeTruthy();
-  },
+  imageSnapshot: { disable: true },
 };
 
 // Når Button har prop type, så har button-elementet type satt
@@ -488,39 +362,29 @@ WithType.argTypes = {
   type: { table: { disable: false } },
 };
 WithType.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const type = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('type')
-    );
-    expect(type).toBe('submit');
-  },
+  imageSnapshot: { disable: true },
 };
+WithType.play = verifyAttribute('type', 'submit');
 
 // Når Button har aria attributer, så har button element aria-* satt
 export const WithAriaDescribedby = Template.bind({});
 WithAriaDescribedby.storyName = 'With AriaDescribedby (B2)';
 WithAriaDescribedby.args = {
   ...defaultArgs,
-  ariaDescribedby: 'id1',
+  ariaDescribedby: 'testid1234',
 };
 WithAriaDescribedby.argTypes = {
   ...WithAriaDescribedby.argTypes,
   ariaDescribedby: { table: { disable: false } },
 };
 WithAriaDescribedby.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const ariaAttributes = await page.$eval(`${wrapper} > button`, (el) => {
-      return {
-        ariaDescribedby: el.getAttribute('aria-describedby'),
-      };
-    });
-    expect(ariaAttributes.ariaDescribedby).toBe('id1');
-  },
+  imageSnapshot: { disable: true },
+};
+WithAriaDescribedby.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const button = canvas.getByRole('button');
+  await expect(button).toBeInTheDocument();
+  await expect(button).toHaveAttribute('aria-describedby', 'testid1234');
 };
 
 // Når Button har satt accessKey, så har accessKey en verdi
@@ -528,154 +392,67 @@ export const WithAccesskey = Template.bind({});
 WithAccesskey.storyName = 'With Accesskey (B3)';
 WithAccesskey.args = {
   ...defaultArgs,
-  accessKey: 's',
+  accessKey: 'j',
 };
 WithAccesskey.argTypes = {
   ...WithAccesskey.argTypes,
   accessKey: { table: { disable: false } },
 };
 WithAccesskey.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const accesskey = await page.$eval(`${wrapper} > button`, (el) =>
-      el.getAttribute('accesskey')
-    );
-    expect(accesskey).toBe('s');
-  },
+  imageSnapshot: { disable: true },
+};
+WithAccesskey.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const button = canvas.getByRole('button');
+  await expect(button).toBeInTheDocument();
+  await expect(button).toHaveAttribute('accessKey', 'j');
 };
 
-// Når brukeren blurer knappen, så kalles funksjonen i onBlur prop.
-// onBlur-event endrer teksten på knappen.
-const OnBlurTemplate: ComponentStory<typeof Button> = (args) => {
-  const [buttText, setButtText] = useState(
-    'Klikk på knapp for å teste onBlur event'
-  );
+// Når brukeren setter focus, blurrer, eller klikker på knappen, så kalles riktig eventHandler
+// Eventhandlere endrer tesksten på knappen
+const EventHandlersTemplate: ComponentStory<typeof Button> = (args) => {
+  const [buttonText, setButtonText] = useState('bruk knapp for å teste events');
   return (
     <div className={'noTransition'} data-test-block>
       <Button
         {...args}
-        variant={args.variant}
-        onBlur={(): void => setButtText('Knapp er bluret')}
+        onFocus={(event: React.FocusEvent<HTMLButtonElement>): void => {
+          setButtonText('Knapp har fått fokus');
+          args.onFocus && args.onFocus(event);
+        }}
+        onBlur={(event: React.FocusEvent<HTMLButtonElement>): void => {
+          setButtonText('Knapp har blitt blurret');
+          args.onBlur && args.onBlur(event);
+        }}
+        onClick={(event: React.MouseEvent<HTMLButtonElement>): void => {
+          setButtonText('Knapp har blitt klikket på');
+          args.onClick && args.onClick(event);
+        }}
       >
-        {buttText}
+        {buttonText}
       </Button>
     </div>
   );
 };
-export const WithOnBlur = OnBlurTemplate.bind({});
-WithOnBlur.storyName = 'With onBlur (A2 delvis)';
-WithOnBlur.args = {
+export const WithEventHandlers = EventHandlersTemplate.bind({});
+WithEventHandlers.storyName = 'With EventHandlers (A2 delvis)';
+WithEventHandlers.args = {
   ...defaultArgs,
 };
-WithOnBlur.argTypes = {
-  ...WithOnBlur.argTypes,
-  onBlur: { table: { disable: false } },
+WithEventHandlers.argTypes = {
+  ...WithEventHandlers.argTypes,
 };
-WithOnBlur.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchImageSnapShot(page);
-    await verifyAxeRules(page);
-
-    const buttonElement = await page.$(`${wrapper} > button`);
-    await buttonElement?.focus();
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    await page.$eval(`${wrapper} > button`, (el: any) => el.blur());
-    const imageBlured = await page.screenshot(screenShotOptions);
-    expect(imageBlured).toMatchImageSnapshot();
-
-    const element = await page.$(`${wrapper} > button`);
-    const textContent = await element?.getProperty('textContent');
-    const text = await textContent?.jsonValue();
-    expect(text).toBe('Knapp er bluret');
-  },
+WithEventHandlers.parameters = {
+  imageSnapshot: { disable: true },
 };
-
-// Når brukeren klikker på knappen, så kalles funksjonen i onClick prop.
-// onClick-event endrer teksten på knappen.
-const OnClickTemplate: ComponentStory<typeof Button> = (args) => {
-  const [buttText, setButtText] = useState(
-    'Klikk på knapp for å teste onClick event'
-  );
-  return (
-    <div className={'noTransition'} data-test-block>
-      <Button
-        {...args}
-        variant={args.variant}
-        onClick={(): void => setButtText('Knapp er klikket')}
-      >
-        {buttText}
-      </Button>
-    </div>
-  );
-};
-export const WithOnClick = OnClickTemplate.bind({});
-WithOnClick.storyName = 'With onClick (A2 delvis)';
-WithOnClick.args = {
-  ...defaultArgs,
-};
-WithOnClick.argTypes = {
-  ...WithOnClick.argTypes,
-  onClick: { table: { disable: false } },
-};
-WithOnClick.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchImageSnapShot(page);
-    await verifyAxeRules(page);
-
-    const buttonElement = await page.$(`${wrapper} > button`);
-    await buttonElement?.click();
-    const imageClicked = await page.screenshot(screenShotOptions);
-    expect(imageClicked).toMatchImageSnapshot();
-
-    const element = await page.$(`${wrapper} > button`);
-    const textContent = await element?.getProperty('textContent');
-    const text = await textContent?.jsonValue();
-    expect(text).toBe('Knapp er klikket');
-  },
-};
-
-// Når brukeren setter focus på knappen, så kalles funksjonen i onFocus prop.
-// onFocus-event endrer teksten på knappen.
-const OnFocusTemplate: ComponentStory<typeof Button> = (args) => {
-  const [buttText, setButtText] = useState(
-    'Klikk på knapp for å teste onFocus event'
-  );
-  return (
-    <div className={'noTransition'} data-test-block>
-      <Button
-        {...args}
-        variant={args.variant}
-        onFocus={(): void => setButtText('Knapp har fått fokus')}
-      >
-        {buttText}
-      </Button>
-    </div>
-  );
-};
-export const WithOnFocus = OnFocusTemplate.bind({});
-WithOnFocus.storyName = 'With onFocus (A2 delvis)';
-WithOnFocus.args = {
-  ...defaultArgs,
-};
-WithOnFocus.argTypes = {
-  ...WithOnFocus.argTypes,
-  onFocus: { table: { disable: false } },
-};
-WithOnFocus.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchImageSnapShot(page);
-    await verifyAxeRules(page);
-
-    const buttonElement = await page.$(`${wrapper} > button`);
-    await buttonElement?.focus();
-    const imageFocused = await page.screenshot(screenShotOptions);
-    expect(imageFocused).toMatchImageSnapshot();
-
-    const element = await page.$(`${wrapper} > button`);
-    const textContent = await element?.getProperty('textContent');
-    const text = await textContent?.jsonValue();
-    expect(text).toBe('Knapp har fått fokus');
-  },
+WithEventHandlers.play = async ({ args, canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const button = canvas.getByText('bruk knapp for å teste events');
+  await expect(button).toBeInTheDocument();
+  await button.focus();
+  await waitFor(() => expect(args.onFocus).toHaveBeenCalled());
+  await userEvent.tab();
+  await waitFor(() => expect(args.onBlur).toHaveBeenCalled());
+  await userEvent.click(button);
+  await waitFor(() => expect(args.onClick).toHaveBeenCalled());
 };
