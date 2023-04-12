@@ -6,6 +6,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
+import { getVersion } from '../utils/version.utils';
 
 const availableSizes = [...sizeArr].slice(0, 4);
 export default {
@@ -60,6 +61,9 @@ export default {
     onBlur: { ...htmlEventDescription },
     onClick: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
+  },
+  parameters: {
+    version: getVersion('ds-buttons'),
   },
 } as ComponentMeta<typeof IconButton>;
 

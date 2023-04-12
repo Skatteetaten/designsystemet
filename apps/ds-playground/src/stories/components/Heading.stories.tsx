@@ -6,6 +6,7 @@ import {
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
+import { getVersion } from '../utils/version.utils';
 
 export default {
   component: Heading,
@@ -37,6 +38,7 @@ export default {
       },
     },
   },
+  parameters: { version: getVersion('ds-typography') },
 } as ComponentMeta<typeof Heading>;
 
 const TemplateDefault: ComponentStory<typeof Heading> = (args) => (

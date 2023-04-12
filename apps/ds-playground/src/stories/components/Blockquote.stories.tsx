@@ -2,6 +2,7 @@ import { Blockquote } from '@skatteetaten/ds-typography';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
+import { getVersion } from '../utils/version.utils';
 
 export default {
   component: Blockquote,
@@ -16,6 +17,9 @@ export default {
       control: 'boolean',
       table: { category: category.props },
     },
+  },
+  parameters: {
+    version: getVersion('ds-typography'),
   },
 } as ComponentMeta<typeof Blockquote>;
 

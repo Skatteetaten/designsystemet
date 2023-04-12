@@ -7,6 +7,7 @@ import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
+import { getVersion } from '../utils/version.utils';
 
 export default {
   component: LinkGroup,
@@ -32,6 +33,9 @@ export default {
       control: 'inline-radio',
       table: { category: category.props },
     },
+  },
+  parameters: {
+    version: getVersion('ds-buttons'),
   },
 } as ComponentMeta<typeof LinkGroup>;
 

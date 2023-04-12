@@ -9,6 +9,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
+import { getVersion } from '../utils/version.utils';
 
 export default {
   component: InlineButton,
@@ -52,6 +53,9 @@ export default {
     onClick: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
     onBlur: { ...htmlEventDescription },
+  },
+  parameters: {
+    version: getVersion('ds-buttons'),
   },
 } as ComponentMeta<typeof InlineButton>;
 

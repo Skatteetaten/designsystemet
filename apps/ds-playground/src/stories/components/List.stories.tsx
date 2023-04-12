@@ -7,6 +7,7 @@ import {
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
+import { getVersion } from '../utils/version.utils';
 
 export default {
   component: List,
@@ -27,6 +28,9 @@ export default {
         defaultValue: { summary: getListAsDefault() },
       },
     },
+  },
+  parameters: {
+    version: getVersion('ds-typography'),
   },
 } as ComponentMeta<typeof List>;
 
@@ -57,10 +61,10 @@ const TemplateExample: ComponentStory<typeof List> = () => (
           'oversikt over skatten din, blant annet skattekort, skattemelding og skatteoppgjør'
         }
       </List.Element>
-      <List.Element key={'listElement_3'}>
+      <List.Element key={'listElement_4'}>
         {'kontonummeret du har registrert hos oss'}
       </List.Element>
-      <List.Element key={'listElement_3'}>
+      <List.Element key={'listElement_5'}>
         {
           'innboksen din med faktura, melding og brev fra Skatteetaten og Folkeregisteret'
         }

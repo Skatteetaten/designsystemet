@@ -7,6 +7,7 @@ import {
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
+import { getVersion } from '../utils/version.utils';
 
 export default {
   component: Paragraph,
@@ -28,6 +29,9 @@ export default {
         defaultValue: { summary: getParagraphVariantDefault() },
       },
     },
+  },
+  parameters: {
+    version: getVersion('ds-typography'),
   },
 } as ComponentMeta<typeof Paragraph>;
 

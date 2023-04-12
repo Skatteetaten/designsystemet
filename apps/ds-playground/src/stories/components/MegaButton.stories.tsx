@@ -3,6 +3,7 @@ import { action } from '@storybook/addon-actions';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
+import { getVersion } from '../utils/version.utils';
 
 export default {
   component: MegaButton,
@@ -42,6 +43,9 @@ export default {
     onClick: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
     onBlur: { ...htmlEventDescription },
+  },
+  parameters: {
+    version: getVersion('ds-buttons'),
   },
 } as ComponentMeta<typeof MegaButton>;
 

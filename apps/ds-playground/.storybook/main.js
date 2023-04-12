@@ -1,6 +1,9 @@
 const BundleAnalyzerPlugin =
   require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
+const { readFileSync, readdirSync } = require('fs');
+const path = require('node:path');
+
 const rootMain = require('../../../.storybook/main');
 
 function webpackConfigNoChunkTilde(config) {
@@ -14,6 +17,16 @@ function webpackConfigNoChunkTilde(config) {
   }
   return config;
 }
+
+const readJsonFile = (path) => {
+  const file = readFileSync(path, 'utf8');
+  return JSON.parse(file);
+};
+
+const getDirectories = (source) =>
+  readdirSync(source, { withFileTypes: true })
+    .filter((dirent) => dirent.isDirectory())
+    .map((dirent) => dirent.name);
 
 module.exports = {
   ...rootMain,
@@ -70,6 +83,31 @@ module.exports = {
         })
       );
     }
+
+    config.plugins.forEach((plugin) => {
+      if (plugin.constructor.name === 'DefinePlugin') {
+        const directories = getDirectories('./libs');
+
+        const packageVersions = directories.reduce(
+          (previousValue, currentValue) => {
+            const json = readJsonFile(
+              path.resolve('libs', currentValue, 'package.json')
+            );
+            return {
+              ...previousValue,
+              [json.name]: JSON.stringify(json.version),
+            };
+          },
+          {}
+        );
+
+        plugin.definitions['process.env'] = {
+          ...plugin.definitions['process.env'],
+          ...packageVersions,
+        };
+      }
+    });
+
     config.resolve.fallback.fs = false;
     config.resolve.fallback.os = false;
     config.resolve.fallback.path = false;

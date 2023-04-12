@@ -1,6 +1,7 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
 import { SizesTokenExamplesGenerator } from './SizesTokenExamplesGenerator';
 import { TokensList } from './TokensList';
+import { getVersion } from '../utils/version.utils';
 
 <Meta title="Designtokens/Sizes" />
 
@@ -14,6 +15,7 @@ import { TokensList } from './TokensList';
         canvas: { hidden: true },
       },
       viewMode: 'docs',
+      version: getVersion('ds-core-designtokens'),
     }}
   >
     <TokensList tokenType={'sizes'} />

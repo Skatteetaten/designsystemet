@@ -11,6 +11,7 @@ import { Meta, Story } from '@storybook/react';
 import palette from 'libs/ds-core-designtokens/lib/designtokens/palette.json';
 
 import { category } from '../../../.storybook/helpers';
+import { getVersion } from '../utils/version.utils';
 
 export default {
   component: ScrollToTopButton,
@@ -41,6 +42,7 @@ export default {
         },
       ],
     },
+    version: getVersion('ds-buttons'),
   },
 } as Meta<ScrollToTopButtonProps>;
 

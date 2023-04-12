@@ -19,7 +19,7 @@
     "registry": "https://nexus.sits.no/repository/npm-internal/"
   },
   "scripts": {
-    "start": "nx build ds-core-designtokens && nx serve --host=127.0.0.1",
+    "start": "nx build ds-core-designtokens && STORYBOOK_BUILD_VERSION=develop nx serve --host=127.0.0.1",
     "start:static": "npx http-server dist/storybook/ds-playground --port 4400",
     "prepare": "node -e \"if (process.env.CI !== 'true'){process.exit(1)} \" || npx lefthook install -a",
     "prebuild": "npm-run-all lint stylelint prettier typecheck",
@@ -71,6 +71,7 @@
     "react-dom": "18.2.0",
     "react-i18next": "12.1.1",
     "regenerator-runtime": "0.13.11",
+    "storybook-version": "0.1.1",
     "tslib": "2.5.0"
   },
   "devDependencies": {

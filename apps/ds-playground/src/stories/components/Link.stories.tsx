@@ -5,6 +5,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
+import { getVersion } from '../utils/version.utils';
 
 export default {
   component: Link,
@@ -41,6 +42,9 @@ export default {
     ariaDescribedby: { table: { category: category.aria } },
     // Events
     onClick: { ...htmlEventDescription },
+  },
+  parameters: {
+    version: getVersion('ds-buttons'),
   },
 } as ComponentMeta<typeof Link>;
 

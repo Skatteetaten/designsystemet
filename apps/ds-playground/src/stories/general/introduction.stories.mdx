@@ -19,6 +19,12 @@ import { Link } from '@skatteetaten/ds-buttons';
 <div className={'introImageContainer'}>
   <img src={imageUrl} />
 </div>
+<Paragraph hasSpacing>
+  <b>
+    version:
+    <> {process.env.STORYBOOK_BUILD_VERSION ?? 'develop'}</>
+  </b>
+</Paragraph>
 
 <Paragraph hasSpacing>{'På disse sidene finner du'}</Paragraph>
 <List hasSpacing>

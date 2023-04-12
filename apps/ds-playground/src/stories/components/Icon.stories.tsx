@@ -14,6 +14,7 @@ import { Story, Meta } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import { SystemIconLabels, SystemSVGPaths } from '../utils/icon.systems';
 import { ThemeIconLabels, ThemeSVGPaths } from '../utils/icon.themes';
+import { getVersion } from '../utils/version.utils';
 
 export default {
   component: Icon,
@@ -44,6 +45,7 @@ const iconDefaultParameters = {
   docs: {
     page: (): JSX.Element => <ArgsTable story={PRIMARY_STORY} />,
   },
+  version: getVersion('ds-icons'),
 };
 const defaultSystemIconVariant = getIconVariantDefault();
 
