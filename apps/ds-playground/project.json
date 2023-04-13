@@ -41,14 +41,6 @@
         "lintFilePatterns": ["apps/ds-playground/**/*.{ts,tsx,js,jsx}"]
       }
     },
-    "test-old": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/apps/ds-playground"],
-      "options": {
-        "jestConfig": "apps/ds-playground/jest.config.ts",
-        "passWithNoTests": true
-      }
-    },
     "test": {
       "executor": "nx:run-commands",
       "options": {

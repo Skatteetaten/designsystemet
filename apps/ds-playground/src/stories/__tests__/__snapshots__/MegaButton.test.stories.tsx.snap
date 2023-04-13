@@ -99,24 +99,14 @@ exports[`Tester/MegaButton WithAriaDescribedby play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/MegaButton WithCustomCss play-test 1`] = `
+exports[`Tester/MegaButton WithAttributes play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >
-  <button class="MegaButton_button__njALO dummyClassname"
-          type="button"
-  >
-    Klikk her
-  </button>
-</div>
-`;
-
-exports[`Tester/MegaButton WithDataTestid play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
-  <button class="MegaButton_button__njALO "
-          data-testid="123Mega"
+  <button id="htmlId"
+          class="MegaButton_button__njALO dummyClassname"
+          lang="nb"
+          data-testid="123ID"
           type="button"
   >
     Klikk her
@@ -154,32 +144,6 @@ exports[`Tester/MegaButton WithExternalIcon play-test 1`] = `
       <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7Zm5 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z">
       </path>
     </svg>
-  </button>
-</div>
-`;
-
-exports[`Tester/MegaButton WithId play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
-  <button id="htmlid"
-          class="MegaButton_button__njALO "
-          type="button"
-  >
-    Klikk her
-  </button>
-</div>
-`;
-
-exports[`Tester/MegaButton WithLang play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
-  <button class="MegaButton_button__njALO "
-          lang="nb"
-          type="button"
-  >
-    Klikk her
   </button>
 </div>
 `;

@@ -7,7 +7,7 @@ import { expect } from '@storybook/jest';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { userEvent, waitFor, within } from '@storybook/testing-library';
 
-import { wrapper } from './testUtils/puppeteer.testing.utils';
+import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const elementId = 'htmlId';

@@ -1,9 +1,8 @@
-import { ScreenshotOptions } from 'puppeteer';
+import { PageScreenshotOptions } from 'playwright';
 
 export const wrapper = '[data-test-block]';
-export const screenShotOptions: ScreenshotOptions = {
+export const screenShotOptions: PageScreenshotOptions = {
   fullPage: true,
-  encoding: 'base64',
 };
 
 export const loremIpsum =

@@ -12,20 +12,11 @@ import { userEvent, within } from '@storybook/testing-library';
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import palette from 'libs/ds-core-designtokens/lib/designtokens/palette.json';
 
-import { wrapper } from './testUtils/puppeteer.testing.utils';
+import { wrapper } from './testUtils/storybook.testing.utils';
 import { category } from '../../../.storybook/helpers';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
 
 const defaultButtonText = 'Til toppen';
-
-const verifyAttribute =
-  (attribute: string, expectedValue: string) =>
-  async ({ canvasElement }: { canvasElement: HTMLElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const scrollToTopButton = canvas.getByRole('button');
-    await expect(scrollToTopButton).toBeInTheDocument();
-    await expect(scrollToTopButton).toHaveAttribute(attribute, expectedValue);
-  };
 
 export default {
   component: ScrollToTopButton,
@@ -104,40 +95,45 @@ WithRef.argTypes = {
   ...WithRef.argTypes,
   ref: { table: { disable: false } },
 };
-WithRef.parameters = {};
-
-// Når MegaButton har en id, så har button-element id
-export const WithId = Template.bind({});
-WithId.storyName = 'With Id (FA2)';
-WithId.args = {
-  ...defaultArgs,
-  id: 'htmlid',
-};
-WithId.argTypes = {
-  ...WithId.argTypes,
-  id: { table: { disable: false } },
-};
-WithId.parameters = {};
-WithId.play = verifyAttribute('id', 'htmlid');
-
-// Når ScrollToTopButton har en custom CSS, så vises custom stil
-export const WithCustomCss = Template.bind({});
-WithCustomCss.storyName = 'With Custom CSS (FA3)';
-WithCustomCss.args = {
-  ...defaultArgs,
-  className: 'dummyClassname',
-};
-WithCustomCss.argTypes = {
-  ...WithCustomCss.argTypes,
-  className: {
-    table: { disable: false },
+WithRef.parameters = {
+  imageSnapshot: {
+    disable: true,
   },
 };
-WithCustomCss.play = async ({ canvasElement }): Promise<void> => {
-  await expect(
-    // eslint-disable-next-line testing-library/no-node-access
-    canvasElement.querySelector(`${wrapper} > main > div:nth-child(2)`)
-  ).toHaveClass('dummyClassname');
+
+// Når ScrollToTopButton har en id, så har button-element id
+// Når ScrollToTopButton har en custom CSS, så vises custom stil
+// Når ScrollToTopButton har en lang, så har button-element lang
+// Når ScrollToTopButton har dataTestid, så har button-elementet data-testid satt
+export const WithAttributes = Template.bind({});
+WithAttributes.storyName = 'With Attributes(FA2-5)';
+
+WithAttributes.args = {
+  ...defaultArgs,
+  id: 'htmlId',
+  className: 'dummyClassname',
+  lang: 'nb',
+  'data-testid': '123ID',
+};
+WithAttributes.argTypes = {
+  ...WithAttributes.argTypes,
+  id: { table: { disable: false } },
+  className: { table: { disable: false } },
+  lang: { table: { disable: false } },
+  'data-testid': { table: { disable: false } },
+};
+WithAttributes.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const scrollToTopButton = canvas.getByRole('button');
+  await expect(scrollToTopButton).toHaveAttribute('id', 'htmlId');
+  await expect(scrollToTopButton).toHaveAttribute('lang', 'nb');
+  await expect(scrollToTopButton).toHaveAttribute('data-testid', '123ID');
+
+  // eslint-disable-next-line testing-library/no-node-access
+  const container = canvasElement.querySelector(
+    `${wrapper} > main > div:nth-child(2)`
+  );
+  await expect(container).toHaveClass('dummyClassname');
 };
 
 // Når ScrollToTopButton har en custom classNames, så vises custom stil på riktig sted
@@ -175,38 +171,6 @@ WithCustomClassNames.play = async ({ canvasElement }): Promise<void> => {
   await expect(iconContainer).toHaveClass('dummyClassname');
   await expect(icon).toHaveClass('dummyClassname');
   await expect(label).toHaveClass('dummyClassname');
-};
-
-// Når Button har en lang, så har button-element lang
-export const WithLang = Template.bind({});
-WithLang.storyName = 'With Lang (FA4)';
-WithLang.args = {
-  ...defaultArgs,
-  lang: 'nb',
-};
-WithLang.argTypes = {
-  ...WithLang.argTypes,
-  lang: { table: { disable: false } },
-};
-WithLang.play = verifyAttribute('lang', 'nb');
-
-// Når ScrollToTopButton har dataTestid, så har button-elementet data-testid satt
-export const WithDataTestid = Template.bind({});
-WithDataTestid.storyName = 'With DataTestid (FA5)';
-WithDataTestid.args = {
-  ...defaultArgs,
-  'data-testid': '123',
-};
-WithDataTestid.argTypes = {
-  ...WithDataTestid.argTypes,
-  'data-testid': { table: { disable: false } },
-};
-WithDataTestid.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithDataTestid.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  expect(canvas.getByTestId('123')).toBeInTheDocument();
 };
 
 // Når ScrollToTopButton instansieres, så får den riktige default-verdier og rendrer riktig

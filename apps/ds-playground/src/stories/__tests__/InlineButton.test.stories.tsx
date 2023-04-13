@@ -7,7 +7,7 @@ import { expect } from '@storybook/jest';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { userEvent, waitFor, within } from '@storybook/testing-library';
 
-import { wrapper } from './testUtils/puppeteer.testing.utils';
+import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const defaultButtonText = 'Legg til rapport';
@@ -90,73 +90,33 @@ WithRef.parameters = {
 };
 WithRef.play = verifyAttribute('id', 'dummyIdForwardedFromRef');
 
-// Når InlineButton har satt id, så har id en verdi
-export const WithId = Template.bind({});
-WithId.storyName = 'With Id (FA2)';
-WithId.args = {
-  ...defaultArgs,
-  id: 'htmlid',
-};
-WithId.argTypes = {
-  ...WithId.argTypes,
-  id: { table: { disable: false } },
-};
-WithId.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithId.play = verifyAttribute('id', 'htmlid');
-
+// Når InlineButton har en id, så har button-element id
 // Når InlineButton har en custom CSS, så vises custom stil
-export const WithCustomCss = Template.bind({});
-WithCustomCss.storyName = 'With Custom CSS (FA3)';
-WithCustomCss.args = {
-  ...defaultArgs,
-  className: 'dummyClassname',
-};
-WithCustomCss.argTypes = {
-  ...WithCustomCss.argTypes,
-  className: {
-    table: { disable: false },
-  },
-};
-WithCustomCss.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  expect(canvas.getByRole('button')).toHaveClass('dummyClassname');
-};
-
 // Når InlineButton har en lang, så har button-element lang
-export const WithLang = Template.bind({});
-WithLang.storyName = 'With Lang (FA4)';
-WithLang.args = {
+// Når InlineButton har dataTestid, så har button-elementet data-testid satt
+export const WithAttributes = Template.bind({});
+WithAttributes.storyName = 'With Attributes(FA2-5)';
+WithAttributes.args = {
   ...defaultArgs,
+  id: 'htmlId',
+  className: 'dummyClassname',
   lang: 'nb',
-};
-WithLang.argTypes = {
-  ...WithLang.argTypes,
-  lang: { table: { disable: false } },
-};
-WithLang.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithLang.play = verifyAttribute('lang', 'nb');
-
-// Når InlineButton har satt dataTestid, så har dataTestId en verdi
-export const WithDataTestid = Template.bind({});
-WithDataTestid.storyName = 'With DataTestid (FA5)';
-WithDataTestid.args = {
-  ...defaultArgs,
   'data-testid': '123ID',
 };
-WithDataTestid.argTypes = {
-  ...WithDataTestid.argTypes,
+WithAttributes.argTypes = {
+  ...WithAttributes.argTypes,
+  id: { table: { disable: false } },
+  className: { table: { disable: false } },
+  lang: { table: { disable: false } },
   'data-testid': { table: { disable: false } },
 };
-WithDataTestid.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithDataTestid.play = async ({ canvasElement }): Promise<void> => {
+WithAttributes.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
-  expect(canvas.getByTestId('123ID')).toBeInTheDocument();
+  const inlineButton = canvas.getByRole('button');
+  await expect(inlineButton).toHaveClass('dummyClassname');
+  await expect(inlineButton).toHaveAttribute('id', 'htmlId');
+  await expect(inlineButton).toHaveAttribute('lang', 'nb');
+  await expect(inlineButton).toHaveAttribute('data-testid', '123ID');
 };
 
 // Når InlineButton instansieres, får den default iconPosition left

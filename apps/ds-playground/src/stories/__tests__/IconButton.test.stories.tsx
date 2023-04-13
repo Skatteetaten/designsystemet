@@ -6,7 +6,7 @@ import { expect } from '@storybook/jest';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { userEvent, waitFor, within } from '@storybook/testing-library';
 
-import { wrapper } from './testUtils/puppeteer.testing.utils';
+import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const defaultSVGPath = Object.values(SystemSVGPaths)[14];
@@ -106,18 +106,14 @@ WithAttributes.storyName = 'With Attributes(FA2-5)';
 WithAttributes.args = {
   ...defaultArgs,
   id: 'htmlId',
-
   className: 'dummyClassname',
   lang: 'nb',
   'data-testid': '123ID',
 };
 WithAttributes.argTypes = {
   ...WithAttributes.argTypes,
-
   id: { table: { disable: false } },
-
   className: { table: { disable: false } },
-
   lang: { table: { disable: false } },
   'data-testid': { table: { disable: false } },
 };

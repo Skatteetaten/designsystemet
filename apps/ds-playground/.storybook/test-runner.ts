@@ -9,7 +9,7 @@ import { injectAxe, checkA11y, configureAxe } from 'axe-playwright';
 import { configureToMatchImageSnapshot } from 'jest-image-snapshot';
 import { Page } from 'Playwright';
 
-import { screenShotOptions } from '../src/stories/__tests__/testUtils/puppeteer.testing.utils';
+import { screenShotOptions } from '../src/stories/__tests__/testUtils/storybook.testing.utils';
 
 const customConfig = {
   allowSizeMismatch: true,

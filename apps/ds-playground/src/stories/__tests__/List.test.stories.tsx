@@ -9,7 +9,7 @@ import { expect } from '@storybook/jest';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 
-import { wrapper } from './testUtils/puppeteer.testing.utils';
+import { wrapper } from './testUtils/storybook.testing.utils';
 
 export default {
   component: List,
