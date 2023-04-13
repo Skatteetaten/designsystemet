@@ -9,6 +9,7 @@
     "ds-forms": "libs/ds-forms",
     "ds-icons": "libs/ds-icons",
     "ds-playground": "apps/ds-playground",
+    "ds-status": "libs/ds-status",
     "ds-typography": "libs/ds-typography"
   }
 }

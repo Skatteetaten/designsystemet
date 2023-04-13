@@ -1,0 +1,19 @@
+{
+  "name": "@skatteetaten/ds-status",
+  "version": "0.0.1",
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js"
+    }
+  },
+  "groupId": "no.skatteetaten.aurora",
+  "publishConfig": {
+    "registry": "https://nexus.sits.no/repository/npm-internal/"
+  },
+  "peerDependencies": {
+    "react": "^18"
+  }
+}
