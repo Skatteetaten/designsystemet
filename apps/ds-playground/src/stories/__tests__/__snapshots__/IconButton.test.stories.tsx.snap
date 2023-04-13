@@ -24,56 +24,6 @@ exports[`Tester/IconButton Defaults play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/IconButton Disabled play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
-  <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
-          disabled
-          type="button"
-  >
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
-         viewbox="0 0 24 24"
-         focusable="false"
-         aria-labelledby="svgtitle-:rb:"
-         aria-hidden="false"
-         role="img"
-    >
-      <title id="svgtitle-:rb:">
-        dummy tekst accessible name
-      </title>
-      <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
-      </path>
-    </svg>
-  </button>
-</div>
-`;
-
-exports[`Tester/IconButton DisabledWithOutline smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
-  <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt IconButton_button_outlined__aDbNH "
-          disabled
-          type="button"
-  >
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
-         viewbox="0 0 24 24"
-         focusable="false"
-         aria-labelledby="svgtitle-:rc:"
-         aria-hidden="false"
-         role="img"
-    >
-      <title id="svgtitle-:rc:">
-        dummy tekst accessible name
-      </title>
-      <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
-      </path>
-    </svg>
-  </button>
-</div>
-`;
-
 exports[`Tester/IconButton WithAccesskey play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
@@ -169,6 +119,56 @@ exports[`Tester/IconButton WithCustomSVGPath smoke-test 1`] = `
         dummy tekst accessible name
       </title>
       <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/IconButton WithDisabled play-test 1`] = `
+<div class="noTransition"
+     data-test-block="true"
+>
+  <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+          disabled
+          type="button"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:rb:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:rb:">
+        dummy tekst accessible name
+      </title>
+      <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/IconButton WithDisabledAndOutline smoke-test 1`] = `
+<div class="noTransition"
+     data-test-block="true"
+>
+  <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt IconButton_button_outlined__aDbNH "
+          disabled
+          type="button"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:rc:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:rc:">
+        dummy tekst accessible name
+      </title>
+      <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
       </path>
     </svg>
   </button>

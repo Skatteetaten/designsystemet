@@ -1,5 +1,6 @@
 import {
   getLinkGroupVariantDefault,
+  Link,
   LinkGroup,
   linkGroupVariantArr,
 } from '@skatteetaten/ds-buttons';
@@ -11,6 +12,9 @@ import { getVersion } from '../utils/version.utils';
 
 export default {
   component: LinkGroup,
+  subcomponents: {
+    'LinkGroup.Link': Link,
+  },
   title: 'Komponenter/LinkGroup',
   argTypes: {
     // Props
@@ -87,6 +91,9 @@ export const LinkGroupDefault = TemplateDefault.bind({});
 export const LinkGroupExample = TemplateExample.bind({});
 LinkGroupDefault.storyName = 'Default';
 LinkGroupExample.storyName = 'Example';
+LinkGroupExample.parameters = {
+  controls: { hideNoControlsWarning: true },
+};
 
 LinkGroupDefault.args = {
   variant: getLinkGroupVariantDefault(),

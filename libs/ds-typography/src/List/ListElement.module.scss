@@ -3,7 +3,8 @@
 .element {
   padding-left: var(--spacing-m);
   margin-bottom: var(--spacing-xs);
-  word-break: break-word;
+  overflow-wrap: anywhere;
+  word-break: normal;
 
   &:last-child {
     margin-bottom: 0;

@@ -80,6 +80,29 @@ exports[`Tester/Heading LevelsWithSpacingMobile smoke-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Heading WithAs play-test 1`] = `
+<div data-test-block="true">
+  <h1 class="Heading_heading__7K0um Heading_heading_level2__2SV45  ">
+    Heading h1
+  </h1>
+  <h2 class="Heading_heading__7K0um Heading_heading_level2__2SV45  ">
+    Heading h2
+  </h2>
+  <h3 class="Heading_heading__7K0um Heading_heading_level2__2SV45  ">
+    Heading h3
+  </h3>
+  <h4 class="Heading_heading__7K0um Heading_heading_level2__2SV45  ">
+    Heading h4
+  </h4>
+  <h5 class="Heading_heading__7K0um Heading_heading_level2__2SV45  ">
+    Heading h5
+  </h5>
+  <h6 class="Heading_heading__7K0um Heading_heading_level2__2SV45  ">
+    Heading h6
+  </h6>
+</div>
+`;
+
 exports[`Tester/Heading WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <h2 id="htmlId"
@@ -89,101 +112,6 @@ exports[`Tester/Heading WithAttributes play-test 1`] = `
   >
     Dette er en heading
   </h2>
-</div>
-`;
-
-exports[`Tester/Heading WithLevels smoke-test 1`] = `
-<div data-test-block="true">
-  <h1 class="Heading_heading__7K0um Heading_heading_level1__j6PDU  ">
-    Heading h1 level 1
-  </h1>
-  <h1 class="Heading_heading__7K0um Heading_heading_level2__2SV45  ">
-    Heading h1 level 2
-  </h1>
-  <h1 class="Heading_heading__7K0um Heading_heading_level3__T5BVI  ">
-    Heading h1 level 3
-  </h1>
-  <h1 class="Heading_heading__7K0um Heading_heading_level4__KEMPA  ">
-    Heading h1 level 4
-  </h1>
-  <h1 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  ">
-    Heading h1 level 5
-  </h1>
-  <h2 class="Heading_heading__7K0um Heading_heading_level1__j6PDU  ">
-    Heading h2 level 1
-  </h2>
-  <h2 class="Heading_heading__7K0um Heading_heading_level2__2SV45  ">
-    Heading h2 level 2
-  </h2>
-  <h2 class="Heading_heading__7K0um Heading_heading_level3__T5BVI  ">
-    Heading h2 level 3
-  </h2>
-  <h2 class="Heading_heading__7K0um Heading_heading_level4__KEMPA  ">
-    Heading h2 level 4
-  </h2>
-  <h2 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  ">
-    Heading h2 level 5
-  </h2>
-  <h3 class="Heading_heading__7K0um Heading_heading_level1__j6PDU  ">
-    Heading h3 level 1
-  </h3>
-  <h3 class="Heading_heading__7K0um Heading_heading_level2__2SV45  ">
-    Heading h3 level 2
-  </h3>
-  <h3 class="Heading_heading__7K0um Heading_heading_level3__T5BVI  ">
-    Heading h3 level 3
-  </h3>
-  <h3 class="Heading_heading__7K0um Heading_heading_level4__KEMPA  ">
-    Heading h3 level 4
-  </h3>
-  <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  ">
-    Heading h3 level 5
-  </h3>
-  <h4 class="Heading_heading__7K0um Heading_heading_level1__j6PDU  ">
-    Heading h4 level 1
-  </h4>
-  <h4 class="Heading_heading__7K0um Heading_heading_level2__2SV45  ">
-    Heading h4 level 2
-  </h4>
-  <h4 class="Heading_heading__7K0um Heading_heading_level3__T5BVI  ">
-    Heading h4 level 3
-  </h4>
-  <h4 class="Heading_heading__7K0um Heading_heading_level4__KEMPA  ">
-    Heading h4 level 4
-  </h4>
-  <h4 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  ">
-    Heading h4 level 5
-  </h4>
-  <h5 class="Heading_heading__7K0um Heading_heading_level1__j6PDU  ">
-    Heading h5 level 1
-  </h5>
-  <h5 class="Heading_heading__7K0um Heading_heading_level2__2SV45  ">
-    Heading h5 level 2
-  </h5>
-  <h5 class="Heading_heading__7K0um Heading_heading_level3__T5BVI  ">
-    Heading h5 level 3
-  </h5>
-  <h5 class="Heading_heading__7K0um Heading_heading_level4__KEMPA  ">
-    Heading h5 level 4
-  </h5>
-  <h5 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  ">
-    Heading h5 level 5
-  </h5>
-  <h6 class="Heading_heading__7K0um Heading_heading_level1__j6PDU  ">
-    Heading h6 level 1
-  </h6>
-  <h6 class="Heading_heading__7K0um Heading_heading_level2__2SV45  ">
-    Heading h6 level 2
-  </h6>
-  <h6 class="Heading_heading__7K0um Heading_heading_level3__T5BVI  ">
-    Heading h6 level 3
-  </h6>
-  <h6 class="Heading_heading__7K0um Heading_heading_level4__KEMPA  ">
-    Heading h6 level 4
-  </h6>
-  <h6 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  ">
-    Heading h6 level 5
-  </h6>
 </div>
 `;
 

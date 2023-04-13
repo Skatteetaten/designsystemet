@@ -2,7 +2,6 @@ import {
   LinkGroup,
   LinkGroupProps,
   linkGroupVariantArr,
-  getLinkGroupVariantDefault,
 } from '@skatteetaten/ds-buttons';
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { CalendarSVGpath } from '@skatteetaten/ds-icons';
@@ -11,16 +10,6 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
-
-const verifyAttribute =
-  (attribute: string, expectedValue: string) =>
-  async ({ canvasElement }: { canvasElement: HTMLElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    await expect(canvas.getByRole('list')).toHaveAttribute(
-      attribute,
-      expectedValue
-    );
-  };
 
 export default {
   component: LinkGroup,
@@ -34,7 +23,10 @@ export default {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    children: { table: { disable: true } },
+    children: {
+      table: { disable: true },
+      control: { type: null },
+    },
     hasSpacing: { table: { disable: true } },
     color: { table: { disable: true } },
     variant: {
@@ -52,7 +44,6 @@ const Template: ComponentStory<typeof LinkGroup> = (args) => (
 );
 
 const defaultArgs: LinkGroupProps = {
-  variant: getLinkGroupVariantDefault(),
   children: [
     <LinkGroup.Link
       key={'linkGroupLink_1'}
@@ -93,7 +84,11 @@ WithRef.argTypes = {
   ...WithRef.argTypes,
   ref: { table: { disable: false } },
 };
-WithRef.play = verifyAttribute('id', 'dummyIdForwardedFromRef');
+WithRef.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const linkGroup = canvas.getByRole('list');
+  await expect(linkGroup).toHaveAttribute('id', 'dummyIdForwardedFromRef');
+};
 
 // Når LinkGroup har en id, så har ul-element id
 // Når LinkGroup har en custom CSS, så vises custom stil
@@ -132,7 +127,9 @@ Defaults.args = {
 };
 Defaults.argTypes = {
   ...Defaults.argTypes,
-  children: { table: { disable: false } },
+  children: {
+    table: { disable: false },
+  },
 };
 Defaults.parameters = {
   imageSnapshot: {

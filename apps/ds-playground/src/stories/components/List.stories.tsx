@@ -11,6 +11,9 @@ import { getVersion } from '../utils/version.utils';
 
 export default {
   component: List,
+  subcomponents: {
+    'List.Element': List.Element,
+  },
   title: 'Komponenter/List',
   argTypes: {
     // Props

@@ -102,7 +102,6 @@ WithRef.play = verifyAttribute('id', 'dummyIdForwardedFromRef');
 // Når IconButton har dataTestid, så har a-elementet data-testid satt
 export const WithAttributes = Template.bind({});
 WithAttributes.storyName = 'With Attributes(FA2-5)';
-
 WithAttributes.args = {
   ...defaultArgs,
   id: 'htmlId',
@@ -193,7 +192,7 @@ WithCustomSVGPath.argTypes = {
 
 // Når IconButton har size extraSmall, så vises en liten knapp uten ramme som rendrer riktig i ulike tilstander
 export const WithSizeExtraSmall = Template.bind({});
-WithSizeExtraSmall.storyName = 'With Size extraSmall (A1)';
+WithSizeExtraSmall.storyName = 'With Size Extra Small (A1)';
 WithSizeExtraSmall.args = {
   ...defaultArgs,
   size: 'extraSmall',
@@ -230,7 +229,7 @@ WithSizeLarge.argTypes = {
 // Når IconButton har size extraSmall og er outlined, så vises en liten knapp med ramme som rendrer riktig i ulike tilstander
 export const WithSizeExtraSmallAndOutline = Template.bind({});
 WithSizeExtraSmallAndOutline.storyName =
-  'With Size extraSmall and Outline (A1)';
+  'With Size Extra Small and Outline (A1)';
 WithSizeExtraSmallAndOutline.args = {
   ...defaultArgs,
   size: 'extraSmall',
@@ -271,31 +270,31 @@ WithSizeLargeAndOutline.argTypes = {
 };
 
 // Når IconButton er disabled, så vises knappen uten ramme i disabled stil
-export const Disabled = Template.bind({});
-Disabled.storyName = 'Disabled (B5)';
-Disabled.args = {
+export const WithDisabled = Template.bind({});
+WithDisabled.storyName = 'With Disabled (B5)';
+WithDisabled.args = {
   ...defaultArgs,
   disabled: true,
 };
-Disabled.argTypes = {
-  ...Disabled.argTypes,
+WithDisabled.argTypes = {
+  ...WithDisabled.argTypes,
   disabled: { table: { disable: false } },
 };
-Disabled.play = async ({ canvasElement }): Promise<void> => {
+WithDisabled.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   expect(canvas.getByRole('button')).toBeDisabled();
 };
 
 // Når IconButton er disabled og outlined, så vises knappen med ramme i disabled stil
-export const DisabledWithOutline = Template.bind({});
-DisabledWithOutline.storyName = 'Disabled With Outline (B5)';
-DisabledWithOutline.args = {
+export const WithDisabledAndOutline = Template.bind({});
+WithDisabledAndOutline.storyName = 'With Disabled And Outline (B5)';
+WithDisabledAndOutline.args = {
   ...defaultArgs,
   isOutlined: true,
   disabled: true,
 };
-DisabledWithOutline.argTypes = {
-  ...DisabledWithOutline.argTypes,
+WithDisabledAndOutline.argTypes = {
+  ...WithDisabledAndOutline.argTypes,
   isOutlined: { table: { disable: false } },
   disabled: { table: { disable: false } },
 };

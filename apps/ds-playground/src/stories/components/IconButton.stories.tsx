@@ -124,6 +124,9 @@ export const IconButtonDefault = TemplateDefault.bind({});
 export const IconButtonExample = TemplateExample.bind({});
 IconButtonDefault.storyName = 'Default';
 IconButtonExample.storyName = 'Example';
+IconButtonExample.parameters = {
+  controls: { hideNoControlsWarning: true },
+};
 
 IconButtonDefault.args = {
   svgPath: Object.values(SystemSVGPaths)[14], // Bell icon

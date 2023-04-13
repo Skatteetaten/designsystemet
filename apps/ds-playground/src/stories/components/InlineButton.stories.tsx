@@ -83,6 +83,9 @@ export const InlineButtonDefault = TemplateDefault.bind({});
 export const InlineButtonExample = TemplateExample.bind({});
 InlineButtonDefault.storyName = 'Default';
 InlineButtonExample.storyName = 'Example';
+InlineButtonExample.parameters = {
+  controls: { hideNoControlsWarning: true },
+};
 
 InlineButtonDefault.args = {
   children: 'Legg til rapport',

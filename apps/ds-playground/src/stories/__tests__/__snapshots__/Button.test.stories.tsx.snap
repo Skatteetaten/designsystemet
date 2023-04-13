@@ -12,43 +12,6 @@ exports[`Tester/Button Defaults play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Button Disabled play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
-          disabled
-          type="button"
-  >
-    Klikk her
-  </button>
-</div>
-`;
-
-exports[`Tester/Button DisabledWithIcon smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo Button_button_withIcon__P1eEM "
-          disabled
-          type="button"
-  >
-    <span class="Button_iconWrapper__9FDzj">
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Button_icon__9r5UK"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-hidden="true"
-           role="img"
-      >
-        <path d="M2 3v7l15 2-15 2v7l21-9L2 3Z">
-        </path>
-      </svg>
-    </span>
-    Klikk her
-  </button>
-</div>
-`;
-
 exports[`Tester/Button VariantDanger play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
@@ -126,6 +89,43 @@ exports[`Tester/Button WithAttributes play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Button WithDisabled play-test 1`] = `
+<div class="noTransition"
+     data-test-block="true"
+>
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+          disabled
+          type="button"
+  >
+    Klikk her
+  </button>
+</div>
+`;
+
+exports[`Tester/Button WithDisabledAndIcon smoke-test 1`] = `
+<div class="noTransition"
+     data-test-block="true"
+>
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo Button_button_withIcon__P1eEM "
+          disabled
+          type="button"
+  >
+    <span class="Button_iconWrapper__9FDzj">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Button_icon__9r5UK"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M2 3v7l15 2-15 2v7l21-9L2 3Z">
+        </path>
+      </svg>
+    </span>
+    Klikk her
+  </button>
+</div>
+`;
+
 exports[`Tester/Button WithEventHandlers play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
@@ -173,6 +173,18 @@ exports[`Tester/Button WithLongText smoke-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Button WithLongTextAndBreaking smoke-test 1`] = `
+<div class="noTransition"
+     data-test-block="true"
+>
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+          type="button"
+  >
+    Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles.Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles
+  </button>
+</div>
+`;
+
 exports[`Tester/Button WithLongTextAndIcon smoke-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
@@ -192,18 +204,6 @@ exports[`Tester/Button WithLongTextAndIcon smoke-test 1`] = `
       </svg>
     </span>
     Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres. Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres.
-  </button>
-</div>
-`;
-
-exports[`Tester/Button WithLongTextBreaking smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
-          type="button"
-  >
-    Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles.Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles
   </button>
 </div>
 `;

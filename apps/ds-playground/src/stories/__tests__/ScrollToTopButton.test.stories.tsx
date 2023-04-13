@@ -1,5 +1,4 @@
 import {
-  getVisibilityThresholdDefault,
   ScrollToTopButton,
   ScrollToTopButtonProps,
 } from '@skatteetaten/ds-buttons';
@@ -13,7 +12,6 @@ import { userEvent, within } from '@storybook/testing-library';
 import palette from 'libs/ds-core-designtokens/lib/designtokens/palette.json';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
-import { category } from '../../../.storybook/helpers';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
 
 const defaultButtonText = 'Til toppen';
@@ -35,15 +33,10 @@ export default {
       table: { disable: true },
     },
     visibilityThreshold: {
-      table: {
-        category: category.props,
-        disable: true,
-        //type: { summary: 'number' },
-        defaultValue: { summary: getVisibilityThresholdDefault() },
-      },
+      table: { disable: true },
     },
     shadowRootNode: { table: { disable: true } },
-    children: { table: { disable: true, category: category.props } },
+    children: { table: { disable: true } },
   },
   parameters: {
     backgrounds: {

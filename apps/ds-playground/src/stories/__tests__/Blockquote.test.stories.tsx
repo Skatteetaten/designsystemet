@@ -5,16 +5,6 @@ import { within } from '@storybook/testing-library';
 
 import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
 
-const verifyAttribute =
-  (attribute: string, expectedValue: string) =>
-  async ({ canvasElement }: { canvasElement: HTMLElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    await expect(canvas.getByText(loremIpsum)).toHaveAttribute(
-      attribute,
-      expectedValue
-    );
-  };
-
 export default {
   component: Blockquote,
   title: 'Tester/Blockquote',
@@ -63,7 +53,11 @@ WithRef.argTypes = {
 WithRef.parameters = {
   imageSnapshot: { disable: true },
 };
-WithRef.play = verifyAttribute('id', 'dummyIdForwardedFromRef');
+WithRef.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const blockquote = canvas.getByText(loremIpsum);
+  await expect(blockquote).toHaveAttribute('id', 'dummyIdForwardedFromRef');
+};
 
 // Når Blockquote har en id, så har element id
 // Når Blockquote har en custom CSS, så vises custom stil

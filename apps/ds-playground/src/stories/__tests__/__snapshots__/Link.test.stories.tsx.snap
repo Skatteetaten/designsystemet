@@ -126,7 +126,7 @@ exports[`Tester/Link WithLongText smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Link WithLongTextBreaking smoke-test 1`] = `
+exports[`Tester/Link WithLongTextAndBreaking smoke-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
 >

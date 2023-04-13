@@ -1,5 +1,4 @@
 import {
-  getParagraphVariantDefault,
   Paragraph,
   ParagraphProps,
   paragraphVariantArr,
@@ -9,16 +8,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 
 import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
-
-const verifyAttribute =
-  (attribute: string, expectedValue: string) =>
-  async ({ canvasElement }: { canvasElement: HTMLElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    await expect(canvas.getByText(loremIpsum)).toHaveAttribute(
-      attribute,
-      expectedValue
-    );
-  };
 
 export default {
   component: Paragraph,
@@ -47,7 +36,6 @@ export default {
 
 const defaultArgs: ParagraphProps = {
   children: loremIpsum,
-  variant: getParagraphVariantDefault(),
 };
 const Template: ComponentStory<typeof Paragraph> = (args) => (
   <div data-test-block>
@@ -71,7 +59,11 @@ WithRef.argTypes = {
   ref: { table: { disable: false } },
 };
 WithRef.parameters = { imageSnapshot: { disable: true } };
-WithRef.play = verifyAttribute('id', 'dummyIdForwardedFromRef');
+WithRef.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const paragraph = canvas.getByText(loremIpsum);
+  await expect(paragraph).toHaveAttribute('id', 'dummyIdForwardedFromRef');
+};
 
 // Når Paragraph har en id, så har element id
 // Når Paragraph har en custom CSS, så vises custom stil
@@ -95,11 +87,11 @@ WithAttributes.argTypes = {
 };
 WithAttributes.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
-  const blockquote = canvas.getByText(loremIpsum);
-  await expect(blockquote).toHaveClass('dummyClassname');
-  await expect(blockquote).toHaveAttribute('id', 'htmlId');
-  await expect(blockquote).toHaveAttribute('lang', 'nb');
-  await expect(blockquote).toHaveAttribute('data-testid', '123ID');
+  const paragraph = canvas.getByText(loremIpsum);
+  await expect(paragraph).toHaveClass('dummyClassname');
+  await expect(paragraph).toHaveAttribute('id', 'htmlId');
+  await expect(paragraph).toHaveAttribute('lang', 'nb');
+  await expect(paragraph).toHaveAttribute('data-testid', '123ID');
 };
 
 // Når Paragraph instansieres, så finnes <p>-elementet
@@ -167,6 +159,7 @@ WithMarkup.argTypes = {
 WithMarkup.parameters = {
   imageSnapshot: {
     hover: `${wrapper} > p a`,
+    focus: `${wrapper} > p a`,
   },
 };
 

@@ -8,7 +8,7 @@ import { ListElement } from './ListElement';
 
 import styles from './List.module.scss';
 
-const List = forwardRef<AnyHTMLListElement, ListProps>(
+export const List = forwardRef<AnyHTMLListElement, ListProps>(
   (
     {
       id,
@@ -40,4 +40,4 @@ const List = forwardRef<AnyHTMLListElement, ListProps>(
 List.displayName = 'List';
 List.Element = ListElement;
 
-export { List, getListAsDefault };
+export { getListAsDefault };

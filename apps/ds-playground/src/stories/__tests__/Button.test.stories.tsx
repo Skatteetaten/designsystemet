@@ -109,7 +109,6 @@ WithAttributes.argTypes = {
   lang: { table: { disable: false } },
   'data-testid': { table: { disable: false } },
 };
-
 WithAttributes.parameters = {
   imageSnapshot: {
     disable: true,
@@ -120,11 +119,11 @@ WithAttributes.parameters = {
 };
 WithAttributes.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
-  const icon = canvas.getByRole('button');
-  await expect(icon).toHaveAttribute('id', 'htmlid');
-  await expect(icon).toHaveClass('dummyClassname');
-  await expect(icon).toHaveAttribute('lang', 'nb');
-  await expect(icon).toHaveAttribute('data-testid', '123ID');
+  const button = canvas.getByRole('button');
+  await expect(button).toHaveAttribute('id', 'htmlid');
+  await expect(button).toHaveClass('dummyClassname');
+  await expect(button).toHaveAttribute('lang', 'nb');
+  await expect(button).toHaveAttribute('data-testid', '123ID');
 };
 
 // Når Button instansieres, får den default variant primary.
@@ -275,19 +274,19 @@ WithLongText.parameters = {
 };
 
 // Når Button har en veldig lang tekst uten breaking space så skal det brekke over flere linjer
-export const WithLongTextBreaking = Template.bind({});
-WithLongTextBreaking.storyName = 'With Long Text Breaking (A1 delvis)';
-WithLongTextBreaking.args = {
+export const WithLongTextAndBreaking = Template.bind({});
+WithLongTextAndBreaking.storyName = 'With Long Text And Breaking (A1 delvis)';
+WithLongTextAndBreaking.args = {
   ...defaultArgs,
   children:
     'Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles.' +
     'Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles',
 };
-WithLongTextBreaking.argTypes = {
-  ...WithLongTextBreaking.argTypes,
+WithLongTextAndBreaking.argTypes = {
+  ...WithLongTextAndBreaking.argTypes,
   children: { table: { disable: false } },
 };
-WithLongTextBreaking.parameters = {
+WithLongTextAndBreaking.parameters = {
   imageSnapshot: {
     disable: true,
   },
@@ -315,38 +314,38 @@ WithLongTextAndIcon.parameters = {
 };
 
 // Når Button har prop disabled, så er knapp disabled og stil er satt til disabled
-export const Disabled = Template.bind({});
-Disabled.storyName = 'Disabled (B5)';
-Disabled.args = {
+export const WithDisabled = Template.bind({});
+WithDisabled.storyName = 'With Disabled (B5)';
+WithDisabled.args = {
   ...defaultArgs,
   disabled: true,
 };
-Disabled.argTypes = {
-  ...Disabled.argTypes,
+WithDisabled.argTypes = {
+  ...WithDisabled.argTypes,
   disabled: { table: { disable: false } },
 };
-Disabled.parameters = {
+WithDisabled.parameters = {
   imageSnapshot: { disable: true },
 };
-Disabled.play = async ({ canvasElement }): Promise<void> => {
+WithDisabled.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   expect(canvas.getByRole('button')).toBeDisabled();
 };
 
 // Når Button har prop disabled og ikon er satt, så vises ikonet og knapp er disabled og stil er satt til disabled
-export const DisabledWithIcon = Template.bind({});
-DisabledWithIcon.storyName = 'Disabled With Icon (B5)';
-DisabledWithIcon.args = {
+export const WithDisabledAndIcon = Template.bind({});
+WithDisabledAndIcon.storyName = 'With Disabled And Icon (B5)';
+WithDisabledAndIcon.args = {
   ...defaultArgs,
   svgPath: SendSVGpath,
   disabled: true,
 };
-DisabledWithIcon.argTypes = {
-  ...DisabledWithIcon.argTypes,
+WithDisabledAndIcon.argTypes = {
+  ...WithDisabledAndIcon.argTypes,
   svgPath: { table: { disable: false } },
   disabled: { table: { disable: false } },
 };
-DisabledWithIcon.parameters = {
+WithDisabledAndIcon.parameters = {
   imageSnapshot: { disable: true },
 };
 

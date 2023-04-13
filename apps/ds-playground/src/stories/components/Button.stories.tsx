@@ -93,6 +93,9 @@ export const ButtonDefault = TemplateDefault.bind({});
 export const ButtonExample = TemplateExample.bind({});
 ButtonDefault.storyName = 'Default';
 ButtonExample.storyName = 'Example';
+ButtonExample.parameters = {
+  controls: { hideNoControlsWarning: true },
+};
 
 ButtonDefault.args = {
   children: 'Klikk',

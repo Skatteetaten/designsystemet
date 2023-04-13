@@ -37,7 +37,15 @@ export default {
     // Props
     children: { table: { disable: true } },
     isExternal: { table: { disable: true } },
-    color: { table: { disable: true } },
+    color: {
+      table: { disable: true },
+      options: ['default', ...linkColorArr],
+      mapping: {
+        default: '',
+        ...linkColorArr,
+      },
+      control: 'inline-radio',
+    },
     svgPath: {
       table: { disable: true },
       options: Object.keys(SystemSVGPaths),
@@ -163,15 +171,15 @@ WithLongText.argTypes = {
 };
 
 // Når Link har en veldig lang tekst uten breaking space så skal det brekke over flere linjer
-export const WithLongTextBreaking = Template.bind({});
-WithLongTextBreaking.storyName = 'With Long Text And Breaking (A1 delvis)';
-WithLongTextBreaking.args = {
+export const WithLongTextAndBreaking = Template.bind({});
+WithLongTextAndBreaking.storyName = 'With Long Text And Breaking (A1 delvis)';
+WithLongTextAndBreaking.args = {
   ...defaultArgs,
   children:
     'Dennelenkenharenveldiglangtekst.Sålangatdentvingerframlinjeskiftmedtekstsomalltidervenstrejustertuansettomikonellerikke.',
 };
-WithLongTextBreaking.argTypes = {
-  ...WithLongTextBreaking.argTypes,
+WithLongTextAndBreaking.argTypes = {
+  ...WithLongTextAndBreaking.argTypes,
   children: { table: { disable: false } },
 };
 
@@ -245,15 +253,7 @@ WithColor.args = {
 WithColor.argTypes = {
   ...WithColor.argTypes,
   color: {
-    options: ['default', ...linkColorArr],
-    mapping: {
-      default: '',
-      ...linkColorArr,
-    },
-    control: 'inline-radio',
-    table: {
-      disable: false,
-    },
+    table: { disable: false },
   },
 };
 WithColor.parameters = {

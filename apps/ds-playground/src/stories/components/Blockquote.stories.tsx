@@ -39,6 +39,9 @@ export const BlockquoteDefault = TemplateDefault.bind({});
 export const BlockquoteExample = TemplateExample.bind({});
 BlockquoteDefault.storyName = 'Default';
 BlockquoteExample.storyName = 'Example';
+BlockquoteExample.parameters = {
+  controls: { hideNoControlsWarning: true },
+};
 
 BlockquoteDefault.args = {
   children:

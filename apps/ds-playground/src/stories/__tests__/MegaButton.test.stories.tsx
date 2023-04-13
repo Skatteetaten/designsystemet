@@ -150,14 +150,14 @@ WithLongText.argTypes = {
 };
 
 // Når MegaButton har en veldig lang tekst uten breaking space så skal det brekke over flere linjer
-export const WithLongTextBreaking = Template.bind({});
-WithLongTextBreaking.storyName = 'With Long Text Breaking (A1, A2)';
-WithLongTextBreaking.args = {
+export const WithLongTextAndBreaking = Template.bind({});
+WithLongTextAndBreaking.storyName = 'With Long Text And Breaking (A1, A2)';
+WithLongTextAndBreaking.args = {
   ...defaultArgs,
   children: 'Denneknappenharenveldiglangtekst.Sålangatdenmåbrekke.',
 };
-WithLongTextBreaking.argTypes = {
-  ...WithLongTextBreaking.argTypes,
+WithLongTextAndBreaking.argTypes = {
+  ...WithLongTextAndBreaking.argTypes,
   children: { table: { disable: false } },
 };
 
@@ -199,21 +199,21 @@ WithLongTextAndExternalIcon.argTypes = {
   isExternal: { table: { disable: false } },
 };
 
-export const Disabled = Template.bind({});
-Disabled.storyName = 'Disabled (B6)';
+export const WithDisabled = Template.bind({});
+WithDisabled.storyName = 'With Disabled (B6)';
 const discriminatedProps: MegaButtonDiscriminatedProp = {
   href: undefined,
   disabled: true,
 };
-Disabled.args = {
+WithDisabled.args = {
   ...defaultArgs,
   ...discriminatedProps,
 };
-Disabled.argTypes = {
-  ...Disabled.argTypes,
+WithDisabled.argTypes = {
+  ...WithDisabled.argTypes,
   disabled: { table: { disable: false } },
 };
-Disabled.play = async ({ canvasElement }): Promise<void> => {
+WithDisabled.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   expect(canvas.getByText(defaultMegaButtonText)).toBeDisabled();
 };

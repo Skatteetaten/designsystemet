@@ -10,16 +10,6 @@ import { within } from '@storybook/testing-library';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 
-const verifyAttribute =
-  (attribute: string, expectedValue: string) =>
-  async ({ canvasElement }: { canvasElement: HTMLElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    await expect(canvas.getByRole('heading')).toHaveAttribute(
-      attribute,
-      expectedValue
-    );
-  };
-
 export default {
   component: Heading,
   title: 'Tester/Heading',
@@ -53,38 +43,6 @@ const defaultArgs: HeadingProps = {
   children: 'Dette er en heading',
 };
 
-const LevelsTemplate: ComponentStory<typeof Heading> = (args) => (
-  <div data-test-block>
-    {headingAsArr.map((heading) =>
-      headingLevelArr.map((level) => (
-        <Heading
-          key={`${heading}-${level}`}
-          {...args}
-          as={heading}
-          level={level}
-        >
-          {`Heading ${heading} level ${level}`}
-        </Heading>
-      ))
-    )}
-  </div>
-);
-
-export const WithLevels = LevelsTemplate.bind({});
-WithLevels.storyName = 'With Levels (A2, B1)';
-WithLevels.argTypes = {
-  ...WithLevels.argTypes,
-};
-WithLevels.args = {
-  ...defaultArgs,
-};
-WithLevels.parameters = {
-  viewport: {
-    //defaultViewport: '--breakpoint-xs',
-    viewPortHeight: 1200,
-  },
-};
-
 const Template: ComponentStory<typeof Heading> = (args) => (
   <div data-test-block>
     <Heading {...args} />
@@ -94,10 +52,6 @@ const Template: ComponentStory<typeof Heading> = (args) => (
 // Når Heading har en ref, så får dom elementet ref forwarded
 export const WithRef = Template.bind({});
 WithRef.storyName = 'With Ref (FA1)';
-WithRef.argTypes = {
-  ...WithRef.argTypes,
-  ref: { table: { disable: false } },
-};
 WithRef.args = {
   ...defaultArgs,
   ref: (instance: HTMLHeadingElement | null): void => {
@@ -106,13 +60,21 @@ WithRef.args = {
     }
   },
 };
+WithRef.argTypes = {
+  ...WithRef.argTypes,
+  ref: { table: { disable: false } },
+};
 WithRef.parameters = { imageSnapshot: { disable: true } };
-WithRef.play = verifyAttribute('id', 'dummyIdForwardedFromRef');
+WithRef.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const heading = canvas.getByRole('heading');
+  await expect(heading).toHaveAttribute('id', 'dummyIdForwardedFromRef');
+};
 
-// Når Heading har en id, så har ul-element id
-// Når Heading har en custom CSS, så vises custom stil
-// Når Heading har en lang, så har ul-element lang
-// Når Heading har dataTestid, så har ul-elementet data-testid satt
+// Når Heading har en id, så har heading-elementet id'en satt
+// Når Heading har en custom CSS, så har heading-elementet className satt og custom stil vises
+// Når Heading har en lang, så har heading-elementet lang satt
+// Når Heading har dataTestid, så har heading-elementet data-testid satt
 export const WithAttributes = Template.bind({});
 WithAttributes.storyName = 'With Attributes (FA2-5)';
 WithAttributes.args = {
@@ -138,42 +100,6 @@ WithAttributes.play = async ({ canvasElement }): Promise<void> => {
   await expect(heading).toHaveAttribute('data-testid', '123ID');
 };
 
-const TemplateWithMarkup: ComponentStory<typeof Heading> = (args) => (
-  <div data-test-block>
-    <Heading {...args} hasSpacing>
-      {'Dette er den '}
-      <a href={'https://skatteetaten.no'}>{'fyneste markup headingen'}</a>
-      <em>{' som finnes i italic '}</em>
-      <strong>{'og strong '}</strong>
-      <mark>{'mark '}</mark>
-      <code>{'code '}</code>
-      {'med spacing under og en skrivefeil'}
-    </Heading>
-    <Heading {...args} />
-  </div>
-);
-
-// Når Heading inkluderer markup, så får markupen riktig styling
-export const WithMarkup = TemplateWithMarkup.bind({});
-WithMarkup.storyName = 'With Markup And String (A3, B2)';
-WithMarkup.argTypes = {
-  ...WithMarkup.argTypes,
-  children: {
-    table: { disable: false },
-    control: { type: null },
-  },
-};
-WithMarkup.args = {
-  ...defaultArgs,
-  children: 'Dette er den fineste string headingen uten markup',
-};
-WithMarkup.parameters = {
-  imageSnapshot: {
-    hover: `${wrapper} > h2 > a`,
-    focus: `${wrapper} > h2 > a`,
-  },
-};
-
 const TemplateWithAllLevels: ComponentStory<typeof Heading> = (args) => (
   <div data-test-block>
     {headingLevelArr.map((headingLevel, item) => {
@@ -189,18 +115,21 @@ const TemplateWithAllLevels: ComponentStory<typeof Heading> = (args) => (
 // Når Heading instansieres, får den riktige default-verdier og ser riktig ut for alle levels
 export const Defaults = TemplateWithAllLevels.bind({});
 Defaults.storyName = 'Defaults All Levels (A1, A2)';
+Defaults.args = {
+  ...defaultArgs,
+};
 Defaults.argTypes = {
   ...Defaults.argTypes,
   children: { table: { disable: false } },
 };
-Defaults.args = {
-  ...defaultArgs,
-};
 Defaults.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   const headings = canvas.getAllByRole('heading', { level: 2 });
-  for (const heading of headings) {
+  for (const [index, heading] of headings.entries()) {
     await expect(heading).toBeInTheDocument();
+    await expect(heading.classList.toString()).toContain(
+      `Heading_heading_level${headingLevelArr[index]}`
+    );
   }
 };
 
@@ -241,5 +170,72 @@ LevelsWithSpacingMobile.args = {
 LevelsWithSpacingMobile.parameters = {
   viewport: {
     defaultViewport: '--breakpoint-xs',
+  },
+};
+
+const AsTemplate: ComponentStory<typeof Heading> = (args) => (
+  <div data-test-block>
+    {headingAsArr.map((heading) => (
+      <Heading key={`heading-${heading}`} {...args} as={heading}>
+        {`Heading ${heading}`}
+      </Heading>
+    ))}
+  </div>
+);
+
+export const WithAs = AsTemplate.bind({});
+WithAs.storyName = 'With As (B1)';
+WithAs.args = {
+  ...defaultArgs,
+};
+WithAs.argTypes = {
+  ...WithAs.argTypes,
+};
+WithAs.parameters = {
+  viewport: {
+    viewPortHeight: 1200,
+  },
+};
+WithAs.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const headings = canvas.getAllByRole('heading');
+  for (const [index, heading] of headings.entries()) {
+    await expect(heading.tagName).toBe(headingAsArr[index].toLocaleUpperCase());
+  }
+};
+
+const TemplateWithMarkup: ComponentStory<typeof Heading> = (args) => (
+  <div data-test-block>
+    <Heading {...args} hasSpacing>
+      {'Dette er den '}
+      <a href={'https://skatteetaten.no'}>{'fyneste markup headingen'}</a>
+      <em>{' som finnes i italic '}</em>
+      <strong>{'og strong '}</strong>
+      <mark>{'mark '}</mark>
+      <code>{'code '}</code>
+      {'med spacing under og en skrivefeil'}
+    </Heading>
+    <Heading {...args} />
+  </div>
+);
+
+// Når Heading inkluderer markup, så får markupen riktig styling
+export const WithMarkup = TemplateWithMarkup.bind({});
+WithMarkup.storyName = 'With Markup And String (A3, B2)';
+WithMarkup.args = {
+  ...defaultArgs,
+  children: 'Dette er den fineste string headingen uten markup',
+};
+WithMarkup.argTypes = {
+  ...WithMarkup.argTypes,
+  children: {
+    table: { disable: false },
+    control: { type: null },
+  },
+};
+WithMarkup.parameters = {
+  imageSnapshot: {
+    hover: `${wrapper} > h2 > a`,
+    focus: `${wrapper} > h2 > a`,
   },
 };

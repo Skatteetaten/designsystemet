@@ -60,19 +60,6 @@ exports[`Tester/MegaButton Defaults play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/MegaButton Disabled play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
-  <button class="MegaButton_button__njALO "
-          disabled
-          type="button"
-  >
-    Klikk her
-  </button>
-</div>
-`;
-
 exports[`Tester/MegaButton WithAccesskey play-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
@@ -107,6 +94,19 @@ exports[`Tester/MegaButton WithAttributes play-test 1`] = `
           class="MegaButton_button__njALO dummyClassname"
           lang="nb"
           data-testid="123ID"
+          type="button"
+  >
+    Klikk her
+  </button>
+</div>
+`;
+
+exports[`Tester/MegaButton WithDisabled play-test 1`] = `
+<div class="noTransition"
+     data-test-block="true"
+>
+  <button class="MegaButton_button__njALO "
+          disabled
           type="button"
   >
     Klikk her
@@ -160,6 +160,18 @@ exports[`Tester/MegaButton WithLongText smoke-test 1`] = `
 </div>
 `;
 
+exports[`Tester/MegaButton WithLongTextAndBreaking smoke-test 1`] = `
+<div class="noTransition"
+     data-test-block="true"
+>
+  <button class="MegaButton_button__njALO "
+          type="button"
+  >
+    Denneknappenharenveldiglangtekst.Sålangatdenmåbrekke.
+  </button>
+</div>
+`;
+
 exports[`Tester/MegaButton WithLongTextAndExternalIcon smoke-test 1`] = `
 <div class="noTransition"
      data-test-block="true"
@@ -178,18 +190,6 @@ exports[`Tester/MegaButton WithLongTextAndExternalIcon smoke-test 1`] = `
       <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7Zm5 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z">
       </path>
     </svg>
-  </button>
-</div>
-`;
-
-exports[`Tester/MegaButton WithLongTextBreaking smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
-  <button class="MegaButton_button__njALO "
-          type="button"
-  >
-    Denneknappenharenveldiglangtekst.Sålangatdenmåbrekke.
   </button>
 </div>
 `;

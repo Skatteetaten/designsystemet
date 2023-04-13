@@ -46,10 +46,11 @@
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-bold);
   line-height: var(--semantic-line-height-buttons);
+  overflow-wrap: anywhere;
   text-align: center;
   transition: 0.15s;
   will-change: transform;
-  word-break: break-word;
+  word-break: normal;
 
   &_withIcon {
     padding-right: var(--spacing-l);

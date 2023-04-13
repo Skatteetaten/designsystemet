@@ -159,16 +159,16 @@ WithLongText.argTypes = {
 };
 
 // Når InlineButton har en veldig lang tekst uten breaking space så skal det brekke over flere linjer
-export const WithLongTextBreaking = Template.bind({});
-WithLongTextBreaking.storyName = 'With Long Text And Breaking (A1)';
-WithLongTextBreaking.args = {
+export const WithLongTextAndBreaking = Template.bind({});
+WithLongTextAndBreaking.storyName = 'With Long Text And Breaking (A1)';
+WithLongTextAndBreaking.args = {
   ...defaultArgs,
   children:
     'Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Nårikkeikonsåskaltekstenværevenstrejusteres.' +
     'Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Nårikkeikonsåskaltekstenværevenstrejusteres.',
 };
-WithLongTextBreaking.argTypes = {
-  ...WithLongTextBreaking.argTypes,
+WithLongTextAndBreaking.argTypes = {
+  ...WithLongTextAndBreaking.argTypes,
   children: { table: { disable: false } },
 };
 
@@ -241,31 +241,31 @@ WithIconRight.argTypes = {
 };
 
 // Når InlineButton har prop disabled, så er knapp disabled og stil er satt til disabled
-export const Disabled = Template.bind({});
-Disabled.storyName = 'Disabled (B5)';
-Disabled.args = {
+export const WithDisabled = Template.bind({});
+WithDisabled.storyName = 'With Disabled (B5)';
+WithDisabled.args = {
   ...defaultArgs,
   disabled: true,
 };
-Disabled.argTypes = {
-  ...Disabled.argTypes,
+WithDisabled.argTypes = {
+  ...WithDisabled.argTypes,
   disabled: { table: { disable: false } },
 };
-Disabled.play = async ({ canvasElement }): Promise<void> => {
+WithDisabled.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   expect(canvas.getByText(defaultButtonText)).toBeDisabled();
 };
 
 // Når InlineButton har prop disabled og ikon er satt, så vises ikonet og knapp er disabled og stil er satt til disabled
-export const DisabledWithIcon = Template.bind({});
-DisabledWithIcon.storyName = 'Disabled Icon (B5)';
-DisabledWithIcon.args = {
+export const WithDisabledAndIcon = Template.bind({});
+WithDisabledAndIcon.storyName = 'With Disabled And Icon (B5)';
+WithDisabledAndIcon.args = {
   ...defaultArgs,
   svgPath: AddOutlineSVGpath,
   disabled: true,
 };
-DisabledWithIcon.argTypes = {
-  ...DisabledWithIcon.argTypes,
+WithDisabledAndIcon.argTypes = {
+  ...WithDisabledAndIcon.argTypes,
   disabled: { table: { disable: false } },
   svgPath: { table: { disable: false } },
 };

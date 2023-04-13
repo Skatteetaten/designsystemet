@@ -24,8 +24,16 @@ export default {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    size: { table: { disable: true } },
-    svgPath: { table: { disable: true } },
+    size: {
+      table: { disable: true },
+      control: 'radio',
+      options: [...sizeArr].slice(1),
+    },
+    svgPath: {
+      table: { disable: true },
+      options: Object.keys(SystemSVGPaths),
+      mapping: SystemSVGPaths,
+    },
     title: { table: { disable: true } },
     variant: {
       table: { disable: true },
@@ -101,7 +109,7 @@ WithAttributes.play = async ({ canvasElement }): Promise<void> => {
 
 // Når Icon instansieres, får den riktig defaults
 export const Defaults = Template.bind({});
-Defaults.storyName = 'With Default - Variant SystemIcon (A1, B1, B5)';
+Defaults.storyName = 'Default - Variant SystemIcon (A1, B1, B5)';
 Defaults.args = {
   ...defaultArgs,
 };
@@ -109,8 +117,6 @@ Defaults.argTypes = {
   ...Defaults.argTypes,
   svgPath: {
     table: { disable: false },
-    options: Object.keys(SystemSVGPaths),
-    mapping: SystemSVGPaths,
   },
 };
 Defaults.play = async ({ canvasElement }): Promise<void> => {
@@ -233,11 +239,7 @@ SystemIconSizeSmall.args = {
 };
 SystemIconSizeSmall.argTypes = {
   ...SystemIconSizeSmall.argTypes,
-  size: {
-    table: { disable: false },
-    control: 'select',
-    options: [...sizeArr].slice(1),
-  },
+  size: { table: { disable: false } },
 };
 SystemIconSizeSmall.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
@@ -256,11 +258,7 @@ SystemIconSizeMedium.args = {
 };
 SystemIconSizeMedium.argTypes = {
   ...SystemIconSizeMedium.argTypes,
-  size: {
-    table: { disable: false },
-    control: 'select',
-    options: [...sizeArr].slice(1),
-  },
+  size: { table: { disable: false } },
 };
 SystemIconSizeMedium.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
@@ -279,11 +277,7 @@ SystemIconSizeLarge.args = {
 };
 SystemIconSizeLarge.argTypes = {
   ...SystemIconSizeLarge.argTypes,
-  size: {
-    table: { disable: false },
-    control: 'select',
-    options: [...sizeArr].slice(1),
-  },
+  size: { table: { disable: false } },
 };
 SystemIconSizeLarge.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
@@ -302,11 +296,7 @@ SystemIconSizeExtraLarge.args = {
 };
 SystemIconSizeExtraLarge.argTypes = {
   ...SystemIconSizeExtraLarge.argTypes,
-  size: {
-    table: { disable: false },
-    control: 'select',
-    options: [...sizeArr].slice(1),
-  },
+  size: { table: { disable: false } },
 };
 SystemIconSizeExtraLarge.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
@@ -329,7 +319,6 @@ ThemeIconSizeMedium.argTypes = {
   ...ThemeIconSizeMedium.argTypes,
   size: {
     table: { disable: false },
-    control: 'select',
     options: [sizeArr[2], sizeArr[3]],
   },
 };
@@ -352,7 +341,6 @@ ThemeIconSizeLarge.argTypes = {
   ...ThemeIconSizeLarge.argTypes,
   size: {
     table: { disable: false },
-    control: 'select',
     options: [sizeArr[2], sizeArr[3]],
   },
 };

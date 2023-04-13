@@ -13,7 +13,7 @@ import { Link } from '../Link/Link';
 
 import styles from './LinkGroup.module.scss';
 
-const LinkGroup = forwardRef<HTMLUListElement, LinkGroupProps>(
+export const LinkGroup = forwardRef<HTMLUListElement, LinkGroupProps>(
   (
     {
       id,
@@ -65,4 +65,4 @@ const LinkGroup = forwardRef<HTMLUListElement, LinkGroupProps>(
 LinkGroup.displayName = 'LinkGroup';
 LinkGroup.Link = Link;
 
-export { LinkGroup, getLinkGroupVariantDefault };
+export { getLinkGroupVariantDefault };
