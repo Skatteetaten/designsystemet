@@ -31,6 +31,24 @@ code {
   display: flex;
 }
 
+.block {
+  display: block;
+}
+
 .introImageContainer {
   background-color: var(--palette-denim-10);
+}
+
+.introImageContainer {
+  margin-bottom: var(--spacing-xl) !important;
+  background-color: var(--palette-denim-10);
+}
+
+.bottomSpacingXL {
+  margin-bottom: var(--spacing-xl);
+}
+
+.errorMessageContainer {
+  border: 2px solid var(--palette-forest-50);
+  width: 250px;
 }
