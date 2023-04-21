@@ -1,9 +1,9 @@
 import {
   Heading,
-  headingLevelArr,
   HeadingProps,
+  headingLevelArr,
+  headingAsArr,
 } from '@skatteetaten/ds-typography';
-import { headingAsArr } from '@skatteetaten/ds-typography';
 import { expect } from '@storybook/jest';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
