@@ -69,7 +69,7 @@ const defaultArgs: IconButtonProps = {
 };
 
 const Template: ComponentStory<typeof IconButton> = (args) => (
-  <div className={'noTransition'} data-test-block>
+  <div data-test-block>
     <IconButton {...args} title={args.title} />
   </div>
 );
@@ -358,7 +358,7 @@ WithAccesskey.play = verifyAttribute('accessKey', 'a');
 const EventHandlersTemplate: ComponentStory<typeof IconButton> = (args) => {
   const [svgPath, setSvgPath] = useState(defaultSVGPath);
   return (
-    <div className={'noTransition'} data-test-block>
+    <div data-test-block>
       <IconButton
         {...args}
         svgPath={svgPath}

@@ -65,7 +65,7 @@ export default {
 } as ComponentMeta<typeof Link>;
 
 const Template: ComponentStory<typeof Link> = (args) => (
-  <div className={'noTransition'} data-test-block>
+  <div data-test-block>
     <Link {...args} onClick={(e): void => e.preventDefault()}>
       {/* eslint-disable-next-line testing-library/no-node-access */}
       {args.children}
@@ -312,7 +312,7 @@ const OnClickTemplate: ComponentStory<typeof Link> = (args) => {
     'Klikk på lenken for å teste onClick event'
   );
   return (
-    <div className={'noTransition'} data-test-block>
+    <div data-test-block>
       <Link
         {...args}
         onClick={(e): void => {

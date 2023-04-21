@@ -1,10 +1,8 @@
 <style>
-  .noTransition * {
+  [data-test-block] * {
+    animation: none !important;
     transition: none !important;
     transition-timing-function: unset !important;
-  }
-  .noAnimation * {
-    animation: none !important;
   }
   /* slik at transition ikke ødelegger snapshots når man setter en annen bakgrunnsfarge */
   .sb-show-main {

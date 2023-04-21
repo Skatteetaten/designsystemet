@@ -32,7 +32,7 @@ const defaultArgs = {
 };
 
 const Template: ComponentStory<typeof ErrorMessage> = (args) => (
-  <div className={'noAnimation'} data-test-block>
+  <div data-test-block>
     <ErrorMessage {...args} />
   </div>
 );
@@ -131,7 +131,7 @@ WithPElement.play = async ({ canvasElement }): Promise<void> => {
 };
 
 const TemplateWithInput: ComponentStory<typeof ErrorMessage> = (args) => (
-  <div className={'noAnimation errorMessageContainer'} data-test-block>
+  <div className={'errorMessageContainer'} data-test-block>
     {/* TODO FRONT-1279 erstattes med TextField når den er ferdig utviklet */}
     <label htmlFor={'label1'} className={'block'}>
       {'Label'}

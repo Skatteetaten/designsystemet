@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tester/InlineButton Defaults play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="InlineButton_button__2aGtg   "
           type="button"
   >
@@ -13,9 +11,7 @@ exports[`Tester/InlineButton Defaults play-test 1`] = `
 `;
 
 exports[`Tester/InlineButton WithAccesskey play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="InlineButton_button__2aGtg   "
           accesskey="j"
           type="button"
@@ -26,9 +22,7 @@ exports[`Tester/InlineButton WithAccesskey play-test 1`] = `
 `;
 
 exports[`Tester/InlineButton WithAriaDescribedby play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="InlineButton_button__2aGtg   "
           type="button"
           aria-describedby="testid1234"
@@ -39,9 +33,7 @@ exports[`Tester/InlineButton WithAriaDescribedby play-test 1`] = `
 `;
 
 exports[`Tester/InlineButton WithAttributes play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button id="htmlId"
           class="InlineButton_button__2aGtg   dummyClassname"
           lang="nb"
@@ -54,9 +46,7 @@ exports[`Tester/InlineButton WithAttributes play-test 1`] = `
 `;
 
 exports[`Tester/InlineButton WithCustomIcon smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  "
           type="button"
   >
@@ -77,9 +67,7 @@ exports[`Tester/InlineButton WithCustomIcon smoke-test 1`] = `
 `;
 
 exports[`Tester/InlineButton WithDisabled play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="InlineButton_button__2aGtg   "
           disabled
           type="button"
@@ -90,9 +78,7 @@ exports[`Tester/InlineButton WithDisabled play-test 1`] = `
 `;
 
 exports[`Tester/InlineButton WithDisabledAndIcon smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  "
           disabled
           type="button"
@@ -114,9 +100,7 @@ exports[`Tester/InlineButton WithDisabledAndIcon smoke-test 1`] = `
 `;
 
 exports[`Tester/InlineButton WithEventHandlers play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="InlineButton_button__2aGtg   "
           type="button"
   >
@@ -126,9 +110,7 @@ exports[`Tester/InlineButton WithEventHandlers play-test 1`] = `
 `;
 
 exports[`Tester/InlineButton WithIcon play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  "
           type="button"
   >
@@ -149,9 +131,7 @@ exports[`Tester/InlineButton WithIcon play-test 1`] = `
 `;
 
 exports[`Tester/InlineButton WithIconRight smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 "
           type="button"
   >
@@ -172,9 +152,7 @@ exports[`Tester/InlineButton WithIconRight smoke-test 1`] = `
 `;
 
 exports[`Tester/InlineButton WithLongText smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="InlineButton_button__2aGtg   "
           type="button"
   >
@@ -184,9 +162,7 @@ exports[`Tester/InlineButton WithLongText smoke-test 1`] = `
 `;
 
 exports[`Tester/InlineButton WithLongTextAndBreaking smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="InlineButton_button__2aGtg   "
           type="button"
   >
@@ -196,9 +172,7 @@ exports[`Tester/InlineButton WithLongTextAndBreaking smoke-test 1`] = `
 `;
 
 exports[`Tester/InlineButton WithLongTextAndIcon smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  "
           type="button"
   >
@@ -219,9 +193,7 @@ exports[`Tester/InlineButton WithLongTextAndIcon smoke-test 1`] = `
 `;
 
 exports[`Tester/InlineButton WithRef play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="InlineButton_button__2aGtg   "
           type="button"
           id="dummyIdForwardedFromRef"
@@ -232,9 +204,7 @@ exports[`Tester/InlineButton WithRef play-test 1`] = `
 `;
 
 exports[`Tester/InlineButton WithType play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="InlineButton_button__2aGtg   "
           type="submit"
   >

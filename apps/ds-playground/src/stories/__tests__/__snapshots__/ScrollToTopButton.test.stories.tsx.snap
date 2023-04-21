@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tester/ScrollToTopButton Defaults play-test 1`] = `
-<div class="noTransition height100vh"
+<div class="height100vh"
      data-test-block="true"
 >
   <main class="scrollToTopContainer"
@@ -55,7 +55,7 @@ exports[`Tester/ScrollToTopButton Defaults play-test 1`] = `
 `;
 
 exports[`Tester/ScrollToTopButton WithAttributes play-test 1`] = `
-<div class="noTransition height100vh"
+<div class="height100vh"
      data-test-block="true"
 >
   <main class="scrollToTopContainer"
@@ -112,7 +112,7 @@ exports[`Tester/ScrollToTopButton WithAttributes play-test 1`] = `
 `;
 
 exports[`Tester/ScrollToTopButton WithChildren play-test 1`] = `
-<div class="noTransition height100vh"
+<div class="height100vh"
      data-test-block="true"
 >
   <main class="scrollToTopContainer"
@@ -166,7 +166,7 @@ exports[`Tester/ScrollToTopButton WithChildren play-test 1`] = `
 `;
 
 exports[`Tester/ScrollToTopButton WithCustomClassNames play-test 1`] = `
-<div class="noTransition height100vh"
+<div class="height100vh"
      data-test-block="true"
 >
   <main class="scrollToTopContainer"
@@ -220,7 +220,7 @@ exports[`Tester/ScrollToTopButton WithCustomClassNames play-test 1`] = `
 `;
 
 exports[`Tester/ScrollToTopButton WithMobileScreen smoke-test 1`] = `
-<div class="noTransition height100vh"
+<div class="height100vh"
      data-test-block="true"
 >
   <main class="scrollToTopContainer"
@@ -274,7 +274,7 @@ exports[`Tester/ScrollToTopButton WithMobileScreen smoke-test 1`] = `
 `;
 
 exports[`Tester/ScrollToTopButton WithRef play-test 1`] = `
-<div class="noTransition height100vh"
+<div class="height100vh"
      data-test-block="true"
 >
   <main class="scrollToTopContainer"
@@ -334,7 +334,7 @@ exports[`Tester/ScrollToTopButton WithShadowDom play-test 1`] = `
 `;
 
 exports[`Tester/ScrollToTopButton WithVisibilityThreshold smoke-test 1`] = `
-<div class="noTransition height100vh"
+<div class="height100vh"
      data-test-block="true"
 >
   <main class="scrollToTopContainer"
@@ -388,7 +388,7 @@ exports[`Tester/ScrollToTopButton WithVisibilityThreshold smoke-test 1`] = `
 `;
 
 exports[`Tester/ScrollToTopButton WithWideScreen smoke-test 1`] = `
-<div class="noTransition height100vh"
+<div class="height100vh"
      data-test-block="true"
 >
   <main class="scrollToTopContainer"

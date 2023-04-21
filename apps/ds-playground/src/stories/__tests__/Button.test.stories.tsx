@@ -57,7 +57,7 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => (
-  <div className={'noTransition'} data-test-block>
+  <div data-test-block>
     <Button {...args} variant={args.variant} svgPath={args.svgPath}>
       {/* eslint-disable-next-line testing-library/no-node-access */}
       {args.children}
@@ -412,7 +412,7 @@ WithAccesskey.play = async ({ canvasElement }): Promise<void> => {
 const EventHandlersTemplate: ComponentStory<typeof Button> = (args) => {
   const [buttonText, setButtonText] = useState('bruk knapp for å teste events');
   return (
-    <div className={'noTransition'} data-test-block>
+    <div data-test-block>
       <Button
         {...args}
         onFocus={(event: React.FocusEvent<HTMLButtonElement>): void => {

@@ -136,7 +136,7 @@ const config: TestRunnerConfig = {
     const storyContext = await getStoryContext(page, context);
     await adjustViewport(page, storyContext.parameters.viewport);
     await page.waitForLoadState('networkidle');
-    await page.evaluate(() => document.fonts.ready);
+    await page.evaluate(async () => await document.fonts.ready);
   },
 
   async postRender(page, context): Promise<void> {

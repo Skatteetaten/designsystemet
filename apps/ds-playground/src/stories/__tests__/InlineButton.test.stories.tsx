@@ -58,7 +58,7 @@ export default {
 } as ComponentMeta<typeof InlineButton>;
 
 const Template: ComponentStory<typeof InlineButton> = (args) => (
-  <div className={'noTransition'} data-test-block>
+  <div data-test-block>
     <InlineButton {...args} svgPath={args.svgPath}>
       {/* eslint-disable-next-line testing-library/no-node-access */}
       {args.children}
@@ -333,7 +333,7 @@ WithAccesskey.play = async ({ canvasElement }): Promise<void> => {
 const EventHandlersTemplate: ComponentStory<typeof InlineButton> = (args) => {
   const [buttonText, setButtonText] = useState('bruk knapp for å events');
   return (
-    <div className={'noTransition'} data-test-block>
+    <div data-test-block>
       <InlineButton
         {...args}
         onFocus={(event: React.FocusEvent<HTMLButtonElement>): void => {

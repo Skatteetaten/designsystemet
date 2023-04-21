@@ -31,7 +31,7 @@
     "test:linux": "npx nx run-many --target=test -- --url=http://127.0.0.1:4400",
     "test:storybook": "nx test ds-playground -- --url=http://host.docker.internal:4400/",
     "test:storybook:lima": "nx test ds-playground -- --url=http://host.lima.internal:4400/",
-    "test:collectAndMergeCoverage": "npx nx run-many --target=test -- --url=http://127.0.0.1:4400 --coverage && ts-node --project tsconfig.base.json libs/ds-dev-config/src/scripts/mergeCoverage.ts",
+    "test:collectAndMergeCoverage": "npx nx run-many --target=test -- --url=http://127.0.0.1:4400 --coverage --maxWorkers=2 && ts-node --project tsconfig.base.json libs/ds-dev-config/src/scripts/mergeCoverage.ts",
     "test:update": "JEST_IMAGE_SNAPSHOT_TRACK_OBSOLETE=1 nx test ds-playground -- --url=http://host.docker.internal:4400/ -u",
     "test:update:lima": "JEST_IMAGE_SNAPSHOT_TRACK_OBSOLETE=1 nx test ds-playground -- --url=http://host.lima.internal:4400/ -u",
     "test:coverage": "FORCE_COLOR=false CI=true npm-run-all -r -p 'start:static -- --silent' test:collectAndMergeCoverage",

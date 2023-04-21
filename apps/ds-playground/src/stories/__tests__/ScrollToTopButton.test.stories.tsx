@@ -52,7 +52,7 @@ export default {
 } as Meta<ScrollToTopButtonProps>;
 
 const Template: ComponentStory<typeof ScrollToTopButton> = (args) => (
-  <div className={'noTransition height100vh'} data-test-block>
+  <div className={'height100vh'} data-test-block>
     <main className={'scrollToTopContainer'} tabIndex={-1}>
       <ExternalLayout />
       <ScrollToTopButton {...args} />
@@ -260,7 +260,7 @@ const TemplateWithShadowDom: ComponentStory<typeof ScrollToTopButton> = (
   const element = document.querySelector('scrolltotop-customelement');
   const shadowRoot = element?.shadowRoot;
   return (
-    <div className={'noTransition height100vh'} data-test-block>
+    <div className={'height100vh'} data-test-block>
       <main className={'scrollToTopContainer'} tabIndex={-1}>
         <ExternalLayout />
         <ScrollToTopButton {...args} shadowRootNode={shadowRoot ?? undefined} />

@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tester/Link Defaults play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <a class="Link_link__jeUpY  "
      href="#root"
   >
@@ -13,9 +11,7 @@ exports[`Tester/Link Defaults play-test 1`] = `
 `;
 
 exports[`Tester/Link WithAriaDescribedby play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <a class="Link_link__jeUpY  "
      href="#root"
      aria-describedby="htmlId"
@@ -26,9 +22,7 @@ exports[`Tester/Link WithAriaDescribedby play-test 1`] = `
 `;
 
 exports[`Tester/Link WithAttributes play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <a id="htmlId"
      class="Link_link__jeUpY  dummyClassname"
      lang="nb"
@@ -41,9 +35,7 @@ exports[`Tester/Link WithAttributes play-test 1`] = `
 `;
 
 exports[`Tester/Link WithColor smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <a class="Link_link__jeUpY Link_link_white__bmeQu "
      href="#root"
   >
@@ -72,9 +64,7 @@ exports[`Tester/Link WithColor smoke-test 1`] = `
 `;
 
 exports[`Tester/Link WithExternalIcon play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <a class="Link_link__jeUpY  "
      href="#root"
   >
@@ -94,9 +84,7 @@ exports[`Tester/Link WithExternalIcon play-test 1`] = `
 `;
 
 exports[`Tester/Link WithIcon play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <a class="Link_link__jeUpY  "
      href="#root"
   >
@@ -115,9 +103,7 @@ exports[`Tester/Link WithIcon play-test 1`] = `
 `;
 
 exports[`Tester/Link WithLongText smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <a class="Link_link__jeUpY  "
      href="#root"
   >
@@ -127,9 +113,7 @@ exports[`Tester/Link WithLongText smoke-test 1`] = `
 `;
 
 exports[`Tester/Link WithLongTextAndBreaking smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <a class="Link_link__jeUpY  "
      href="#root"
   >
@@ -139,9 +123,7 @@ exports[`Tester/Link WithLongTextAndBreaking smoke-test 1`] = `
 `;
 
 exports[`Tester/Link WithLongTextIconAndExternalIcon smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <a class="Link_link__jeUpY  "
      href="#root"
   >
@@ -170,9 +152,7 @@ exports[`Tester/Link WithLongTextIconAndExternalIcon smoke-test 1`] = `
 `;
 
 exports[`Tester/Link WithOnClick play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <a class="Link_link__jeUpY  "
      href="#root"
   >
@@ -191,9 +171,7 @@ exports[`Tester/Link WithOnClick play-test 1`] = `
 `;
 
 exports[`Tester/Link WithRef play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <a class="Link_link__jeUpY  "
      href="#root"
      id="dummyIdForwardedFromRef"
@@ -204,9 +182,7 @@ exports[`Tester/Link WithRef play-test 1`] = `
 `;
 
 exports[`Tester/Link WithTarget play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <a class="Link_link__jeUpY  "
      href="#root"
      rel="noreferrer"

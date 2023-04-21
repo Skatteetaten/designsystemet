@@ -54,7 +54,7 @@ export default {
 } as ComponentMeta<typeof MegaButton>;
 
 const Template: ComponentStory<typeof MegaButton> = (args) => (
-  <div className={'noTransition'} data-test-block>
+  <div data-test-block>
     {/* eslint-disable-next-line testing-library/no-node-access */}
     <MegaButton {...args}>{args.children}</MegaButton>
   </div>
@@ -341,7 +341,7 @@ AsLinkExternal.play = async ({ canvasElement }): Promise<void> => {
 const EventHandlersTemplate: ComponentStory<typeof MegaButton> = (args) => {
   const [buttonText, setButtonText] = useState('bruk knapp for å teste events');
   return (
-    <div className={'noTransition'} data-test-block>
+    <div data-test-block>
       <MegaButton
         {...args}
         onFocus={(

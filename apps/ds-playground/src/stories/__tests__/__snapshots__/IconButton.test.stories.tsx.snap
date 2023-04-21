@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tester/IconButton Defaults play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
           type="button"
   >
@@ -25,9 +23,7 @@ exports[`Tester/IconButton Defaults play-test 1`] = `
 `;
 
 exports[`Tester/IconButton WithAccesskey play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
           accesskey="a"
           type="button"
@@ -50,9 +46,7 @@ exports[`Tester/IconButton WithAccesskey play-test 1`] = `
 `;
 
 exports[`Tester/IconButton WithAriaDescribedby play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
           type="button"
           aria-describedby="araiDescId"
@@ -75,9 +69,7 @@ exports[`Tester/IconButton WithAriaDescribedby play-test 1`] = `
 `;
 
 exports[`Tester/IconButton WithAttributes play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button id="htmlId"
           class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  dummyClassname"
           lang="nb"
@@ -102,9 +94,7 @@ exports[`Tester/IconButton WithAttributes play-test 1`] = `
 `;
 
 exports[`Tester/IconButton WithCustomSVGPath smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
           type="button"
   >
@@ -126,9 +116,7 @@ exports[`Tester/IconButton WithCustomSVGPath smoke-test 1`] = `
 `;
 
 exports[`Tester/IconButton WithDisabled play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
           disabled
           type="button"
@@ -151,9 +139,7 @@ exports[`Tester/IconButton WithDisabled play-test 1`] = `
 `;
 
 exports[`Tester/IconButton WithDisabledAndOutline smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt IconButton_button_outlined__aDbNH "
           disabled
           type="button"
@@ -176,9 +162,7 @@ exports[`Tester/IconButton WithDisabledAndOutline smoke-test 1`] = `
 `;
 
 exports[`Tester/IconButton WithEventHandlers play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
           type="button"
   >
@@ -200,9 +184,7 @@ exports[`Tester/IconButton WithEventHandlers play-test 1`] = `
 `;
 
 exports[`Tester/IconButton WithOutline smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt IconButton_button_outlined__aDbNH "
           type="button"
   >
@@ -224,9 +206,7 @@ exports[`Tester/IconButton WithOutline smoke-test 1`] = `
 `;
 
 exports[`Tester/IconButton WithRef play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
           type="button"
           id="dummyIdForwardedFromRef"
@@ -249,9 +229,7 @@ exports[`Tester/IconButton WithRef play-test 1`] = `
 `;
 
 exports[`Tester/IconButton WithSizeExtraSmall smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY  "
           type="button"
   >
@@ -273,9 +251,7 @@ exports[`Tester/IconButton WithSizeExtraSmall smoke-test 1`] = `
 `;
 
 exports[`Tester/IconButton WithSizeExtraSmallAndOutline smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH "
           type="button"
   >
@@ -297,9 +273,7 @@ exports[`Tester/IconButton WithSizeExtraSmallAndOutline smoke-test 1`] = `
 `;
 
 exports[`Tester/IconButton WithSizeLarge smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="IconButton_button__mw9sG IconButton_button_large__IejTf  "
           type="button"
   >
@@ -321,9 +295,7 @@ exports[`Tester/IconButton WithSizeLarge smoke-test 1`] = `
 `;
 
 exports[`Tester/IconButton WithSizeLargeAndOutline smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="IconButton_button__mw9sG IconButton_button_large__IejTf IconButton_button_outlined__aDbNH "
           type="button"
   >
@@ -345,9 +317,7 @@ exports[`Tester/IconButton WithSizeLargeAndOutline smoke-test 1`] = `
 `;
 
 exports[`Tester/IconButton WithSizeSmall smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="IconButton_button__mw9sG IconButton_button_small__etst4  "
           type="button"
   >
@@ -369,9 +339,7 @@ exports[`Tester/IconButton WithSizeSmall smoke-test 1`] = `
 `;
 
 exports[`Tester/IconButton WithSizeSmallAndOutline smoke-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="IconButton_button__mw9sG IconButton_button_small__etst4 IconButton_button_outlined__aDbNH "
           type="button"
   >
@@ -393,9 +361,7 @@ exports[`Tester/IconButton WithSizeSmallAndOutline smoke-test 1`] = `
 `;
 
 exports[`Tester/IconButton WithType play-test 1`] = `
-<div class="noTransition"
-     data-test-block="true"
->
+<div data-test-block="true">
   <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
           type="submit"
   >

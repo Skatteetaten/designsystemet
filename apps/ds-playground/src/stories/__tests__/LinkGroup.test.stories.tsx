@@ -38,7 +38,7 @@ export default {
 } as ComponentMeta<typeof LinkGroup>;
 
 const Template: ComponentStory<typeof LinkGroup> = (args) => (
-  <div className={'noTransition'} data-test-block>
+  <div data-test-block>
     <LinkGroup {...args} />
   </div>
 );
