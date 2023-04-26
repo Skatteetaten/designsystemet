@@ -111,7 +111,6 @@ WithAttributes.argTypes = {
 };
 WithAttributes.parameters = {
   imageSnapshot: {
-    disable: true,
     focus: `${wrapper} > button`,
     hover: `${wrapper} > button`,
     click: `${wrapper} > button`,
@@ -139,7 +138,6 @@ Defaults.argTypes = {
 };
 Defaults.parameters = {
   imageSnapshot: {
-    disable: true,
     focus: `${wrapper} > button`,
     hover: `${wrapper} > button`,
     click: `${wrapper} > button`,
@@ -165,7 +163,6 @@ VariantSecondary.argTypes = {
 };
 VariantSecondary.parameters = {
   imageSnapshot: {
-    disable: true,
     focus: `${wrapper} > button`,
     hover: `${wrapper} > button`,
     click: `${wrapper} > button`,
@@ -191,7 +188,6 @@ VariantTertiary.argTypes = {
 };
 VariantTertiary.parameters = {
   imageSnapshot: {
-    disable: true,
     focus: `${wrapper} > button`,
     hover: `${wrapper} > button`,
     click: `${wrapper} > button`,
@@ -214,7 +210,6 @@ VariantDanger.argTypes = {
 };
 VariantDanger.parameters = {
   imageSnapshot: {
-    disable: true,
     focus: `${wrapper} > button`,
     hover: `${wrapper} > button`,
     click: `${wrapper} > button`,
@@ -238,14 +233,8 @@ WithIcon.argTypes = {
   ...WithIcon.argTypes,
   svgPath: { table: { disable: false } },
 };
-WithIcon.parameters = {
-  imageSnapshot: {
-    disable: true,
-  },
-};
 WithIcon.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
-
   const button = canvas.getByRole('button');
   // eslint-disable-next-line testing-library/no-node-access
   const svg = button.querySelector('svg');
@@ -267,11 +256,6 @@ WithLongText.argTypes = {
   ...WithLongText.argTypes,
   children: { table: { disable: false } },
 };
-WithLongText.parameters = {
-  imageSnapshot: {
-    disable: true,
-  },
-};
 
 // Når Button har en veldig lang tekst uten breaking space så skal det brekke over flere linjer
 export const WithLongTextAndBreaking = Template.bind({});
@@ -285,11 +269,6 @@ WithLongTextAndBreaking.args = {
 WithLongTextAndBreaking.argTypes = {
   ...WithLongTextAndBreaking.argTypes,
   children: { table: { disable: false } },
-};
-WithLongTextAndBreaking.parameters = {
-  imageSnapshot: {
-    disable: true,
-  },
 };
 
 // Når Button har en veldig lang tekst og det er et ikon så skal tekst venstrejusteres
@@ -307,11 +286,6 @@ WithLongTextAndIcon.argTypes = {
   children: { table: { disable: false } },
   svgPath: { table: { disable: false } },
 };
-WithLongTextAndIcon.parameters = {
-  imageSnapshot: {
-    disable: true,
-  },
-};
 
 // Når Button har prop disabled, så er knapp disabled og stil er satt til disabled
 export const WithDisabled = Template.bind({});
@@ -325,7 +299,10 @@ WithDisabled.argTypes = {
   disabled: { table: { disable: false } },
 };
 WithDisabled.parameters = {
-  imageSnapshot: { disable: true },
+  imageSnapshot: {
+    focus: `${wrapper} > button`,
+    hover: `${wrapper} > button`,
+  },
 };
 WithDisabled.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
@@ -346,7 +323,10 @@ WithDisabledAndIcon.argTypes = {
   disabled: { table: { disable: false } },
 };
 WithDisabledAndIcon.parameters = {
-  imageSnapshot: { disable: true },
+  imageSnapshot: {
+    focus: `${wrapper} > button`,
+    hover: `${wrapper} > button`,
+  },
 };
 
 // Når Button har prop type, så har button-elementet type satt
