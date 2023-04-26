@@ -29,7 +29,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ): JSX.Element => {
-    const withIconClassName = svgPath ? `${styles.button_withIcon}` : '';
+    const withIconClassName = svgPath ? styles.button_withIcon : '';
     const concatenatedClassName = `${styles.button} ${
       styles[`button_${variant}`]
     } ${withIconClassName} ${className}`;

@@ -30,7 +30,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
     ref
   ): JSX.Element => {
     const sizeClassName = styles[`button_${size}`];
-    const outlineClassName = isOutlined ? styles[`button_outlined`] : '';
+    const outlineClassName = isOutlined ? styles.button_outlined : '';
     return (
       <button
         ref={ref}

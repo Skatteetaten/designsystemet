@@ -21,8 +21,8 @@ export const List = forwardRef<AnyHTMLListElement, ListProps>(
     },
     ref
   ): JSX.Element => {
-    const bulletClassName = Tag === 'ul' ? styles['list_withBullet'] : '';
-    const spacingClassName = hasSpacing ? styles['list_hasSpacing'] : '';
+    const bulletClassName = Tag === 'ul' ? styles.list_withBullet : '';
+    const spacingClassName = hasSpacing ? styles.list_hasSpacing : '';
     return (
       <Tag
         ref={ref as (instance: AnyHTMLListElement | null) => void}

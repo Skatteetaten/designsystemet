@@ -18,7 +18,7 @@ export const Blockquote = forwardRef<HTMLQuoteElement, BlockquoteProps>(
     },
     ref
   ): JSX.Element => {
-    const spacingClassName = hasSpacing ? styles['blockquote_hasSpacing'] : '';
+    const spacingClassName = hasSpacing ? styles.blockquote_hasSpacing : '';
     return (
       <blockquote
         ref={ref}

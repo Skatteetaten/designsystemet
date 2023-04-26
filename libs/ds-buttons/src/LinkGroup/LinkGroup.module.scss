@@ -9,7 +9,7 @@ $spacing-arrow-link: calc(-20px - var(--spacing-s));
     margin-bottom: var(--spacing-m);
   }
 
-  .linkGroupItem {
+  &Item {
     position: relative;
     display: block;
     width: fit-content;
