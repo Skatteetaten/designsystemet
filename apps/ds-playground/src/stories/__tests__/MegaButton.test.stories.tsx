@@ -76,7 +76,6 @@ WithRef.args = {
   },
 };
 WithRef.argTypes = {
-  ...WithRef.argTypes,
   ref: { table: { disable: false } },
 };
 WithRef.parameters = {
@@ -98,7 +97,6 @@ WithAttributes.args = {
   'data-testid': '123ID',
 };
 WithAttributes.argTypes = {
-  ...WithAttributes.argTypes,
   id: { table: { disable: false } },
   className: { table: { disable: false } },
   lang: { table: { disable: false } },
@@ -120,7 +118,6 @@ Defaults.args = {
   ...defaultArgs,
 };
 Defaults.argTypes = {
-  ...Defaults.argTypes,
   children: { table: { disable: false } },
 };
 Defaults.parameters = {
@@ -145,7 +142,6 @@ WithLongText.args = {
   children: 'Denne knappen har en veldig lang tekst. Så lang at den må brekke.',
 };
 WithLongText.argTypes = {
-  ...WithLongText.argTypes,
   children: { table: { disable: false } },
 };
 
@@ -157,7 +153,6 @@ WithLongTextAndBreaking.args = {
   children: 'Denneknappenharenveldiglangtekst.Sålangatdenmåbrekke.',
 };
 WithLongTextAndBreaking.argTypes = {
-  ...WithLongTextAndBreaking.argTypes,
   children: { table: { disable: false } },
 };
 
@@ -169,12 +164,10 @@ WithExternalIcon.args = {
   isExternal: true,
 };
 WithExternalIcon.argTypes = {
-  ...WithExternalIcon.argTypes,
   isExternal: { table: { disable: false } },
 };
 WithExternalIcon.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
-
   const megaButton = canvas.getByRole('button');
   // eslint-disable-next-line testing-library/no-node-access
   const svg = megaButton.querySelector('svg');
@@ -194,7 +187,6 @@ WithLongTextAndExternalIcon.args = {
     'Denne knappen har en veldig lang tekst. Icon skal da plasseres løpende etter tekster på siste linje',
 };
 WithLongTextAndExternalIcon.argTypes = {
-  ...WithLongTextAndExternalIcon.argTypes,
   children: { table: { disable: false } },
   isExternal: { table: { disable: false } },
 };
@@ -210,7 +202,6 @@ WithDisabled.args = {
   ...discriminatedProps,
 };
 WithDisabled.argTypes = {
-  ...WithDisabled.argTypes,
   disabled: { table: { disable: false } },
 };
 WithDisabled.play = async ({ canvasElement }): Promise<void> => {
@@ -226,7 +217,6 @@ WithType.args = {
   type: 'submit',
 };
 WithType.argTypes = {
-  ...WithType.argTypes,
   type: { table: { disable: false } },
 };
 WithType.parameters = {
@@ -242,18 +232,12 @@ WithAriaDescribedby.args = {
   ariaDescribedby: 'testid1234',
 };
 WithAriaDescribedby.argTypes = {
-  ...WithAriaDescribedby.argTypes,
   ariaDescribedby: { table: { disable: false } },
 };
 WithAriaDescribedby.parameters = {
   imageSnapshot: { disable: true },
 };
-WithAriaDescribedby.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const megaButton = canvas.getByRole('button');
-  await expect(megaButton).toBeInTheDocument();
-  await expect(megaButton).toHaveAttribute('aria-describedby', 'testid1234');
-};
+WithAriaDescribedby.play = verifyAttribute('aria-describedby', 'testid1234');
 
 // Når MegaButton har en accessKey, så settes den som forventet
 export const WithAccesskey = Template.bind({});
@@ -263,18 +247,12 @@ WithAccesskey.args = {
   accessKey: 'j',
 };
 WithAccesskey.argTypes = {
-  ...WithAccesskey.argTypes,
   accessKey: { table: { disable: false } },
 };
 WithAccesskey.parameters = {
   imageSnapshot: { disable: true },
 };
-WithAccesskey.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const megaButton = canvas.getByRole('button');
-  await expect(megaButton).toBeInTheDocument();
-  await expect(megaButton).toHaveAttribute('accessKey', 'j');
-};
+WithAccesskey.play = verifyAttribute('accessKey', 'j');
 
 // Når MegaButton har en href, så rendres den som en a
 export const AsLink = Template.bind({});
@@ -284,7 +262,6 @@ AsLink.args = {
   href: 'https://www.skatteetaten.no',
 };
 AsLink.argTypes = {
-  ...AsLink.argTypes,
   href: { table: { disable: false } },
 };
 AsLink.parameters = {
@@ -302,7 +279,6 @@ AsLinkEmptyString.args = {
   href: '',
 };
 AsLinkEmptyString.argTypes = {
-  ...AsLinkEmptyString.argTypes,
   href: { table: { disable: false } },
 };
 AsLinkEmptyString.parameters = {
@@ -318,7 +294,6 @@ AsLinkExternal.args = {
   isExternal: true,
 };
 AsLinkExternal.argTypes = {
-  ...AsLinkExternal.argTypes,
   href: { table: { disable: false } },
   isExternal: { table: { disable: false } },
 };
@@ -372,9 +347,6 @@ export const WithEventHandlers = EventHandlersTemplate.bind({});
 WithEventHandlers.storyName = 'With EventHandlers (A2 delvis)';
 WithEventHandlers.args = {
   ...defaultArgs,
-};
-WithEventHandlers.argTypes = {
-  ...WithEventHandlers.argTypes,
 };
 WithEventHandlers.parameters = {
   imageSnapshot: { disable: true },

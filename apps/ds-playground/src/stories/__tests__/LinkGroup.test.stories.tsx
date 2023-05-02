@@ -28,7 +28,15 @@ export default {
       control: { type: null },
     },
     hasSpacing: { table: { disable: true } },
-    color: { table: { disable: true } },
+    color: {
+      table: { disable: true },
+      options: ['default', ...linkColorArr],
+      mapping: {
+        default: '',
+        ...linkColorArr,
+      },
+      control: 'inline-radio',
+    },
     variant: {
       table: { disable: true },
       options: [...linkGroupVariantArr],
@@ -81,7 +89,6 @@ WithRef.args = {
   },
 };
 WithRef.argTypes = {
-  ...WithRef.argTypes,
   ref: { table: { disable: false } },
 };
 WithRef.play = async ({ canvasElement }): Promise<void> => {
@@ -104,7 +111,6 @@ WithAttributes.args = {
   'data-testid': '123ID',
 };
 WithAttributes.argTypes = {
-  ...WithAttributes.argTypes,
   id: { table: { disable: false } },
   className: { table: { disable: false } },
   lang: { table: { disable: false } },
@@ -126,7 +132,6 @@ Defaults.args = {
   ...defaultArgs,
 };
 Defaults.argTypes = {
-  ...Defaults.argTypes,
   children: {
     table: { disable: false },
   },
@@ -147,7 +152,6 @@ VariantAnchors.args = {
   variant: 'anchors',
 };
 VariantAnchors.argTypes = {
-  ...VariantAnchors.argTypes,
   variant: {
     table: {
       disable: false,
@@ -181,7 +185,6 @@ WithLongTextAndIcons.args = {
   ],
 };
 WithLongTextAndIcons.argTypes = {
-  ...WithLongTextAndIcons.argTypes,
   children: { table: { disable: false } },
 };
 
@@ -200,7 +203,6 @@ WithSpacing.args = {
   hasSpacing: true,
 };
 WithSpacing.argTypes = {
-  ...WithSpacing.argTypes,
   hasSpacing: { table: { disable: false } },
 };
 
@@ -212,13 +214,7 @@ WithColor.args = {
   color: 'white',
 };
 WithColor.argTypes = {
-  ...WithColor.argTypes,
   color: {
-    options: ['default', ...linkColorArr],
-    mapping: {
-      default: '',
-      ...linkColorArr,
-    },
     table: { disable: false },
   },
 };

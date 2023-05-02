@@ -61,7 +61,6 @@ WithRef.args = {
   },
 };
 WithRef.argTypes = {
-  ...WithRef.argTypes,
   ref: { table: { disable: false } },
 };
 WithRef.parameters = { imageSnapshot: { disable: true } };
@@ -85,7 +84,6 @@ WithAttributes.args = {
   'data-testid': '123ID',
 };
 WithAttributes.argTypes = {
-  ...WithAttributes.argTypes,
   id: { table: { disable: false } },
   className: { table: { disable: false } },
   lang: { table: { disable: false } },
@@ -118,10 +116,6 @@ Defaults.storyName = 'Defaults All Levels (A1, A2)';
 Defaults.args = {
   ...defaultArgs,
 };
-Defaults.argTypes = {
-  ...Defaults.argTypes,
-  children: { table: { disable: false } },
-};
 Defaults.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   const headings = canvas.getAllByRole('heading', { level: 2 });
@@ -148,15 +142,14 @@ DefaultsMobile.parameters = {
 // Når Heading har spacing, så får elementet riktig margin under headingen
 export const LevelsWithSpacing = TemplateWithAllLevels.bind({});
 LevelsWithSpacing.storyName = 'With Spacing All Levels (A4)';
-LevelsWithSpacing.argTypes = {
-  ...LevelsWithSpacing.argTypes,
-  hasSpacing: {
-    table: { disable: false },
-  },
-};
 LevelsWithSpacing.args = {
   ...defaultArgs,
   hasSpacing: true,
+};
+LevelsWithSpacing.argTypes = {
+  hasSpacing: {
+    table: { disable: false },
+  },
 };
 
 // Når Heading har spacing, så får elementet riktig margin under headingen på mobil
@@ -166,6 +159,11 @@ LevelsWithSpacingMobile.storyName =
 LevelsWithSpacingMobile.args = {
   ...defaultArgs,
   hasSpacing: true,
+};
+LevelsWithSpacingMobile.argTypes = {
+  hasSpacing: {
+    table: { disable: false },
+  },
 };
 LevelsWithSpacingMobile.parameters = {
   viewport: {
@@ -187,9 +185,6 @@ export const WithAs = AsTemplate.bind({});
 WithAs.storyName = 'With As (B1)';
 WithAs.args = {
   ...defaultArgs,
-};
-WithAs.argTypes = {
-  ...WithAs.argTypes,
 };
 WithAs.parameters = {
   viewport: {
@@ -227,7 +222,6 @@ WithMarkup.args = {
   children: 'Dette er den fineste string headingen uten markup',
 };
 WithMarkup.argTypes = {
-  ...WithMarkup.argTypes,
   children: {
     table: { disable: false },
     control: { type: null },

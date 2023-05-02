@@ -43,7 +43,6 @@ WithRef.args = {
   },
 };
 WithRef.argTypes = {
-  ...WithRef.argTypes,
   ref: { table: { disable: false } },
 };
 WithRef.parameters = {
@@ -66,7 +65,6 @@ WithAttributes.args = {
   'data-testid': '123ID',
 };
 WithAttributes.argTypes = {
-  ...WithAttributes.argTypes,
   id: { table: { disable: false } },
   className: { table: { disable: false } },
   lang: { table: { disable: false } },

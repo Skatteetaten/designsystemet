@@ -23,6 +23,7 @@ const verifyAttribute =
       expectedValue
     );
   };
+
 export default {
   component: Link,
   title: 'Tester/Link',
@@ -90,7 +91,6 @@ WithRef.args = {
   },
 };
 WithRef.argTypes = {
-  ...WithRef.argTypes,
   ref: { table: { disable: false } },
 };
 WithRef.parameters = {
@@ -112,7 +112,6 @@ WithAttributes.args = {
   'data-testid': '123ID',
 };
 WithAttributes.argTypes = {
-  ...WithAttributes.argTypes,
   id: { table: { disable: false } },
   className: { table: { disable: false } },
   lang: { table: { disable: false } },
@@ -134,7 +133,6 @@ Defaults.args = {
   ...defaultArgs,
 };
 Defaults.argTypes = {
-  ...Defaults.argTypes,
   href: { table: { disable: false } },
   children: { table: { disable: false } },
 };
@@ -150,7 +148,6 @@ Defaults.play = async ({ canvasElement }): Promise<void> => {
   const link = canvas.getByRole('link');
   await expect(link).not.toHaveAttribute('rel');
   await expect(link).not.toHaveAttribute('target');
-
   // eslint-disable-next-line testing-library/no-node-access
   const svg = link.querySelector('svg');
   await expect(svg).not.toBeInTheDocument();
@@ -166,7 +163,6 @@ WithLongText.args = {
     'Denne lenken har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert uansett om ikon eller ikke.',
 };
 WithLongText.argTypes = {
-  ...WithLongText.argTypes,
   children: { table: { disable: false } },
 };
 
@@ -179,7 +175,6 @@ WithLongTextAndBreaking.args = {
     'Dennelenkenharenveldiglangtekst.Sålangatdentvingerframlinjeskiftmedtekstsomalltidervenstrejustertuansettomikonellerikke.',
 };
 WithLongTextAndBreaking.argTypes = {
-  ...WithLongTextAndBreaking.argTypes,
   children: { table: { disable: false } },
 };
 
@@ -195,7 +190,6 @@ WithLongTextIconAndExternalIcon.args = {
     'Denne lenken har en veldig lang tekst med ikon på venstre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert.',
 };
 WithLongTextIconAndExternalIcon.argTypes = {
-  ...WithLongTextIconAndExternalIcon.argTypes,
   isExternal: { table: { disable: false } },
   svgPath: { table: { disable: false } },
   children: { table: { disable: false } },
@@ -209,7 +203,6 @@ WithIcon.args = {
   svgPath: CalendarSVGpath,
 };
 WithIcon.argTypes = {
-  ...WithIcon.argTypes,
   svgPath: { table: { disable: false } },
 };
 WithIcon.play = async ({ canvasElement }): Promise<void> => {
@@ -229,7 +222,6 @@ WithExternalIcon.args = {
   isExternal: true,
 };
 WithExternalIcon.argTypes = {
-  ...WithExternalIcon.argTypes,
   isExternal: { table: { disable: false } },
 };
 WithExternalIcon.play = async ({ canvasElement }): Promise<void> => {
@@ -251,7 +243,6 @@ WithColor.args = {
   svgPath: AddOutlineSVGpath,
 };
 WithColor.argTypes = {
-  ...WithColor.argTypes,
   color: {
     table: { disable: false },
   },
@@ -274,7 +265,6 @@ WithTarget.args = {
   target: '_blank',
 };
 WithTarget.argTypes = {
-  ...WithTarget.argTypes,
   target: { table: { disable: false } },
 };
 WithTarget.parameters = {
@@ -296,7 +286,6 @@ WithAriaDescribedby.args = {
   ariaDescribedby: elementId,
 };
 WithAriaDescribedby.argTypes = {
-  ...WithAriaDescribedby.argTypes,
   ariaDescribedby: { table: { disable: false } },
 };
 WithAriaDescribedby.parameters = {
@@ -331,11 +320,6 @@ WithOnClick.storyName = 'With onClick (A3 delvis)';
 WithOnClick.args = {
   ...defaultArgs,
   svgPath: CalendarSVGpath,
-};
-WithOnClick.argTypes = {
-  ...WithOnClick.argTypes,
-  svgPath: { table: { disable: false } },
-  onClick: { table: { disable: false } },
 };
 WithOnClick.parameters = {
   imageSnapshot: { disbale: true },

@@ -66,7 +66,6 @@ WithRef.args = {
   },
 };
 WithRef.argTypes = {
-  ...WithRef.argTypes,
   ref: { table: { disable: false } },
 };
 WithRef.parameters = {
@@ -92,7 +91,6 @@ WithAttributes.args = {
   'data-testid': '123ID',
 };
 WithAttributes.argTypes = {
-  ...WithAttributes.argTypes,
   id: { table: { disable: false } },
   className: { table: { disable: false } },
   lang: { table: { disable: false } },
@@ -114,7 +112,6 @@ Defaults.args = {
   ...defaultArgs,
 };
 Defaults.argTypes = {
-  ...Defaults.argTypes,
   svgPath: {
     table: { disable: false },
   },
@@ -138,13 +135,11 @@ WithVariant.args = {
   variant: 'themeIcon',
 };
 WithVariant.argTypes = {
-  ...WithVariant.argTypes,
   svgPath: {
     table: { disable: false },
     options: Object.keys(ThemeSVGPaths),
     mapping: ThemeSVGPaths,
   },
-  variant: { table: { disable: false } },
 };
 WithVariant.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
@@ -162,7 +157,6 @@ WithCustomSVG.args = {
   svgPath: <path d={'M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z'} />,
 };
 WithCustomSVG.argTypes = {
-  ...WithCustomSVG.argTypes,
   svgPath: {
     table: { disable: false },
     control: { type: null },
@@ -177,7 +171,6 @@ WithTitle.args = {
   title: 'Min custom title beskrivelse',
 };
 WithTitle.argTypes = {
-  ...WithTitle.argTypes,
   title: { table: { disable: false } },
 };
 WithTitle.parameters = {
@@ -207,7 +200,6 @@ WithAriaLabel.args = {
   ariaLabel: 'min custom aria-label beskrivelse',
 };
 WithAriaLabel.argTypes = {
-  ...WithAriaLabel.argTypes,
   ariaLabel: { table: { disable: false } },
 };
 WithAriaLabel.parameters = {
@@ -238,7 +230,6 @@ SystemIconSizeSmall.args = {
   size: 'small',
 };
 SystemIconSizeSmall.argTypes = {
-  ...SystemIconSizeSmall.argTypes,
   size: { table: { disable: false } },
 };
 SystemIconSizeSmall.play = async ({ canvasElement }): Promise<void> => {
@@ -257,7 +248,6 @@ SystemIconSizeMedium.args = {
   size: 'medium',
 };
 SystemIconSizeMedium.argTypes = {
-  ...SystemIconSizeMedium.argTypes,
   size: { table: { disable: false } },
 };
 SystemIconSizeMedium.play = async ({ canvasElement }): Promise<void> => {
@@ -276,7 +266,6 @@ SystemIconSizeLarge.args = {
   size: 'large',
 };
 SystemIconSizeLarge.argTypes = {
-  ...SystemIconSizeLarge.argTypes,
   size: { table: { disable: false } },
 };
 SystemIconSizeLarge.play = async ({ canvasElement }): Promise<void> => {
@@ -295,7 +284,6 @@ SystemIconSizeExtraLarge.args = {
   size: 'extraLarge',
 };
 SystemIconSizeExtraLarge.argTypes = {
-  ...SystemIconSizeExtraLarge.argTypes,
   size: { table: { disable: false } },
 };
 SystemIconSizeExtraLarge.play = async ({ canvasElement }): Promise<void> => {
@@ -316,7 +304,6 @@ ThemeIconSizeMedium.args = {
   size: 'medium',
 };
 ThemeIconSizeMedium.argTypes = {
-  ...ThemeIconSizeMedium.argTypes,
   size: {
     table: { disable: false },
     options: [sizeArr[2], sizeArr[3]],
@@ -338,7 +325,6 @@ ThemeIconSizeLarge.args = {
   size: 'large',
 };
 ThemeIconSizeLarge.argTypes = {
-  ...ThemeIconSizeLarge.argTypes,
   size: {
     table: { disable: false },
     options: [sizeArr[2], sizeArr[3]],

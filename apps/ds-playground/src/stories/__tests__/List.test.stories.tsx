@@ -65,7 +65,6 @@ WithRef.args = {
   },
 };
 WithRef.argTypes = {
-  ...WithRef.argTypes,
   ref: { table: { disable: false } },
 };
 WithRef.parameters = {
@@ -88,7 +87,6 @@ WithAttributes.args = {
   'data-testid': '123ID',
 };
 WithAttributes.argTypes = {
-  ...WithAttributes.argTypes,
   id: { table: { disable: false } },
   className: { table: { disable: false } },
   lang: { table: { disable: false } },
@@ -110,7 +108,6 @@ Defaults.args = {
   ...defaultArgs,
 };
 Defaults.argTypes = {
-  ...Defaults.argTypes,
   children: {
     table: { disable: false },
     control: { type: null },
@@ -131,7 +128,6 @@ VariantNumber.args = {
   as: 'ol',
 };
 VariantNumber.argTypes = {
-  ...VariantNumber.argTypes,
   as: {
     table: { disable: false },
   },
@@ -161,8 +157,10 @@ WithLongTextAndBreaking.args = {
   ],
 };
 WithLongTextAndBreaking.argTypes = {
-  ...WithLongTextAndBreaking.argTypes,
-  children: { table: { disable: false } },
+  children: {
+    table: { disable: false },
+    control: { type: null },
+  },
 };
 
 // Når List instansieres med markup, får markup riktig styling
@@ -191,7 +189,6 @@ WithMarkup.args = {
   ],
 };
 WithMarkup.argTypes = {
-  ...WithMarkup.argTypes,
   children: {
     table: { disable: false },
     control: { type: null },
@@ -226,7 +223,6 @@ WithSpacing.args = {
   hasSpacing: true,
 };
 WithSpacing.argTypes = {
-  ...WithSpacing.argTypes,
   hasSpacing: { table: { disable: false } },
 };
 
@@ -305,8 +301,4 @@ WithBothVariantsAndAtLeast10NumberItems.storyName =
   'With Both Variants And At Least 10 Number Items';
 WithBothVariantsAndAtLeast10NumberItems.args = {
   ...defaultArgs,
-};
-WithBothVariantsAndAtLeast10NumberItems.argTypes = {
-  ...WithBothVariantsAndAtLeast10NumberItems.argTypes,
-  as: { table: { disable: false } },
 };

@@ -81,7 +81,6 @@ WithRef.args = {
   },
 };
 WithRef.argTypes = {
-  ...WithRef.argTypes,
   ref: { table: { disable: false } },
 };
 WithRef.parameters = {
@@ -103,7 +102,6 @@ WithAttributes.args = {
   'data-testid': '123ID',
 };
 WithAttributes.argTypes = {
-  ...WithAttributes.argTypes,
   id: { table: { disable: false } },
   className: { table: { disable: false } },
   lang: { table: { disable: false } },
@@ -133,7 +131,6 @@ Defaults.args = {
   ...defaultArgs,
 };
 Defaults.argTypes = {
-  ...Defaults.argTypes,
   children: { table: { disable: false } },
 };
 Defaults.parameters = {
@@ -158,7 +155,6 @@ VariantSecondary.args = {
   variant: 'secondary',
 };
 VariantSecondary.argTypes = {
-  ...VariantSecondary.argTypes,
   variant: { table: { disable: false } },
 };
 VariantSecondary.parameters = {
@@ -183,7 +179,6 @@ VariantTertiary.args = {
   variant: 'tertiary',
 };
 VariantTertiary.argTypes = {
-  ...VariantTertiary.argTypes,
   variant: { table: { disable: false } },
 };
 VariantTertiary.parameters = {
@@ -205,7 +200,6 @@ export const VariantDanger = Template.bind({});
 VariantDanger.storyName = 'Variant Danger (A1)';
 VariantDanger.args = { ...defaultArgs, variant: 'danger' };
 VariantDanger.argTypes = {
-  ...VariantDanger.argTypes,
   variant: { table: { disable: false } },
 };
 VariantDanger.parameters = {
@@ -230,7 +224,6 @@ WithIcon.args = {
   svgPath: SendSVGpath,
 };
 WithIcon.argTypes = {
-  ...WithIcon.argTypes,
   svgPath: { table: { disable: false } },
 };
 WithIcon.play = async ({ canvasElement }): Promise<void> => {
@@ -253,7 +246,6 @@ WithLongText.args = {
     'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles',
 };
 WithLongText.argTypes = {
-  ...WithLongText.argTypes,
   children: { table: { disable: false } },
 };
 
@@ -267,7 +259,6 @@ WithLongTextAndBreaking.args = {
     'Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles',
 };
 WithLongTextAndBreaking.argTypes = {
-  ...WithLongTextAndBreaking.argTypes,
   children: { table: { disable: false } },
 };
 
@@ -282,7 +273,6 @@ WithLongTextAndIcon.args = {
     'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres.',
 };
 WithLongTextAndIcon.argTypes = {
-  ...WithLongTextAndIcon.argTypes,
   children: { table: { disable: false } },
   svgPath: { table: { disable: false } },
 };
@@ -295,7 +285,6 @@ WithDisabled.args = {
   disabled: true,
 };
 WithDisabled.argTypes = {
-  ...WithDisabled.argTypes,
   disabled: { table: { disable: false } },
 };
 WithDisabled.parameters = {
@@ -318,7 +307,6 @@ WithDisabledAndIcon.args = {
   disabled: true,
 };
 WithDisabledAndIcon.argTypes = {
-  ...WithDisabledAndIcon.argTypes,
   svgPath: { table: { disable: false } },
   disabled: { table: { disable: false } },
 };
@@ -337,7 +325,6 @@ WithType.args = {
   type: 'submit',
 };
 WithType.argTypes = {
-  ...WithType.argTypes,
   type: { table: { disable: false } },
 };
 WithType.parameters = {
@@ -353,18 +340,12 @@ WithAriaDescribedby.args = {
   ariaDescribedby: 'testid1234',
 };
 WithAriaDescribedby.argTypes = {
-  ...WithAriaDescribedby.argTypes,
   ariaDescribedby: { table: { disable: false } },
 };
 WithAriaDescribedby.parameters = {
   imageSnapshot: { disable: true },
 };
-WithAriaDescribedby.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const button = canvas.getByRole('button');
-  await expect(button).toBeInTheDocument();
-  await expect(button).toHaveAttribute('aria-describedby', 'testid1234');
-};
+WithAriaDescribedby.play = verifyAttribute('aria-describedby', 'testid1234');
 
 // Når Button har satt accessKey, så har accessKey en verdi
 export const WithAccesskey = Template.bind({});
@@ -374,18 +355,12 @@ WithAccesskey.args = {
   accessKey: 'j',
 };
 WithAccesskey.argTypes = {
-  ...WithAccesskey.argTypes,
   accessKey: { table: { disable: false } },
 };
 WithAccesskey.parameters = {
   imageSnapshot: { disable: true },
 };
-WithAccesskey.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const button = canvas.getByRole('button');
-  await expect(button).toBeInTheDocument();
-  await expect(button).toHaveAttribute('accessKey', 'j');
-};
+WithAccesskey.play = verifyAttribute('accessKey', 'j');
 
 // Når brukeren setter focus, blurrer, eller klikker på knappen, så kalles riktig eventHandler
 // Eventhandlere endrer tesksten på knappen
@@ -417,9 +392,6 @@ export const WithEventHandlers = EventHandlersTemplate.bind({});
 WithEventHandlers.storyName = 'With EventHandlers (A2 delvis)';
 WithEventHandlers.args = {
   ...defaultArgs,
-};
-WithEventHandlers.argTypes = {
-  ...WithEventHandlers.argTypes,
 };
 WithEventHandlers.parameters = {
   imageSnapshot: { disable: true },

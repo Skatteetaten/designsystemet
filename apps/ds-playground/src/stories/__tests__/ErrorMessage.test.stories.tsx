@@ -49,7 +49,6 @@ WithRef.args = {
   },
 };
 WithRef.argTypes = {
-  ...WithRef.argTypes,
   ref: { table: { disable: false } },
 };
 WithRef.parameters = {
@@ -76,7 +75,6 @@ WithAttributes.args = {
   showError: true,
 };
 WithAttributes.argTypes = {
-  ...WithAttributes.argTypes,
   id: { table: { disable: false } },
   className: { table: { disable: false } },
   lang: { table: { disable: false } },
@@ -97,11 +95,6 @@ Defaults.storyName = 'Default (A1, A2)';
 Defaults.args = {
   ...defaultArgs,
 };
-Defaults.argTypes = {
-  ...Defaults.argTypes,
-  id: { table: { disable: false } },
-  children: { table: { disable: false } },
-};
 Defaults.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   const container = canvas.getByRole('alert');
@@ -119,7 +112,6 @@ WithPElement.args = {
   showError: true,
 };
 WithPElement.argTypes = {
-  ...WithPElement.argTypes,
   showError: {
     table: { disable: false },
   },
@@ -151,7 +143,6 @@ WithLongText.args = {
     'Dette blir en veldig lang feilmelding for å teste om du oppfører seg om den skal.',
 };
 WithLongText.argTypes = {
-  ...WithLongText.argTypes,
   children: {
     table: { disable: false },
   },
@@ -167,7 +158,6 @@ WithLongTextAndBreaking.args = {
     'Detteblirenveldiglangfeilmeldingforåtesteomduoppførersegomdenskal.',
 };
 WithLongTextAndBreaking.argTypes = {
-  ...WithLongTextAndBreaking.argTypes,
   children: {
     table: { disable: false },
   },

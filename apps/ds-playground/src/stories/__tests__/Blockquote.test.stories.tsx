@@ -47,7 +47,6 @@ WithRef.args = {
   },
 };
 WithRef.argTypes = {
-  ...WithRef.argTypes,
   ref: { table: { disable: false } },
 };
 WithRef.parameters = {
@@ -73,7 +72,6 @@ WithAttributes.args = {
   'data-testid': '123ID',
 };
 WithAttributes.argTypes = {
-  ...WithAttributes.argTypes,
   id: { table: { disable: false } },
   className: { table: { disable: false } },
   lang: { table: { disable: false } },
@@ -95,7 +93,6 @@ Defaults.args = {
   ...defaultArgs,
 };
 Defaults.argTypes = {
-  ...Defaults.argTypes,
   children: { table: { disable: false } },
 };
 
@@ -134,7 +131,6 @@ const TemplateWithMarkup: ComponentStory<typeof Blockquote> = (args) => (
 export const WithMarkup = TemplateWithMarkup.bind({});
 WithMarkup.storyName = 'With Markup (A2, B1)';
 WithMarkup.argTypes = {
-  ...WithMarkup.argTypes,
   children: {
     table: { disable: false },
     control: { type: null },
@@ -164,6 +160,5 @@ WithSpacing.args = {
   hasSpacing: true,
 };
 WithSpacing.argTypes = {
-  ...WithSpacing.argTypes,
   hasSpacing: { table: { disable: false } },
 };

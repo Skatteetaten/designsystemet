@@ -67,13 +67,20 @@ const defaultArgs = {
 // Når ScrollToTopButton har en ref, så får dom button elementet ref forwarded
 export const WithRef = Template.bind({});
 WithRef.storyName = 'With Ref (FA1)';
-
 WithRef.args = {
   ...defaultArgs,
   ref: (instance: HTMLButtonElement | null): void => {
     if (instance) {
       instance.id = 'dummyIdForwardedFromRef';
     }
+  },
+};
+WithRef.argTypes = {
+  ref: { table: { disable: false } },
+};
+WithRef.parameters = {
+  imageSnapshot: {
+    disable: true,
   },
 };
 WithRef.play = async ({ canvasElement }): Promise<void> => {
@@ -84,23 +91,12 @@ WithRef.play = async ({ canvasElement }): Promise<void> => {
   );
 };
 
-WithRef.argTypes = {
-  ...WithRef.argTypes,
-  ref: { table: { disable: false } },
-};
-WithRef.parameters = {
-  imageSnapshot: {
-    disable: true,
-  },
-};
-
 // Når ScrollToTopButton har en id, så har button-element id
 // Når ScrollToTopButton har en custom CSS, så vises custom stil
 // Når ScrollToTopButton har en lang, så har button-element lang
 // Når ScrollToTopButton har dataTestid, så har button-elementet data-testid satt
 export const WithAttributes = Template.bind({});
 WithAttributes.storyName = 'With Attributes(FA2-5)';
-
 WithAttributes.args = {
   ...defaultArgs,
   id: 'htmlId',
@@ -109,7 +105,6 @@ WithAttributes.args = {
   'data-testid': '123ID',
 };
 WithAttributes.argTypes = {
-  ...WithAttributes.argTypes,
   id: { table: { disable: false } },
   className: { table: { disable: false } },
   lang: { table: { disable: false } },
@@ -121,7 +116,6 @@ WithAttributes.play = async ({ canvasElement }): Promise<void> => {
   await expect(scrollToTopButton).toHaveAttribute('id', 'htmlId');
   await expect(scrollToTopButton).toHaveAttribute('lang', 'nb');
   await expect(scrollToTopButton).toHaveAttribute('data-testid', '123ID');
-
   // eslint-disable-next-line testing-library/no-node-access
   const container = canvasElement.querySelector(
     `${wrapper} > main > div:nth-child(2)`
@@ -143,7 +137,6 @@ WithCustomClassNames.args = {
   },
 };
 WithCustomClassNames.argTypes = {
-  ...WithCustomClassNames.argTypes,
   classNames: {
     table: { disable: false },
   },
@@ -173,7 +166,6 @@ Defaults.args = {
   ...defaultArgs,
 };
 Defaults.argTypes = {
-  ...Defaults.argTypes,
   visibilityThreshold: { table: { disable: false } },
 };
 Defaults.parameters = {
@@ -192,13 +184,12 @@ Defaults.play = async ({ canvasElement }): Promise<void> => {
 
 // Når ScrollToTopButton har children, så settes teksten i button-elementet
 export const WithChildren = Template.bind({});
-WithChildren.storyName = 'With Children(A2)';
+WithChildren.storyName = 'With Children (A2)';
 WithChildren.args = {
   ...defaultArgs,
   children: 'dummy string',
 };
 WithChildren.argTypes = {
-  ...WithChildren.argTypes,
   children: { table: { disable: false } },
 };
 WithChildren.play = async ({ args, canvasElement }): Promise<void> => {
@@ -239,7 +230,6 @@ WithVisibilityThreshold.args = {
   visibilityThreshold: 3,
 };
 WithVisibilityThreshold.argTypes = {
-  ...WithVisibilityThreshold.argTypes,
   visibilityThreshold: { table: { disable: false } },
 };
 WithVisibilityThreshold.parameters = {

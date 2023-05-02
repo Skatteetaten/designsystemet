@@ -82,7 +82,6 @@ WithRef.args = {
   },
 };
 WithRef.argTypes = {
-  ...WithRef.argTypes,
   ref: { table: { disable: false } },
 };
 WithRef.parameters = {
@@ -104,7 +103,6 @@ WithAttributes.args = {
   'data-testid': '123ID',
 };
 WithAttributes.argTypes = {
-  ...WithAttributes.argTypes,
   id: { table: { disable: false } },
   className: { table: { disable: false } },
   lang: { table: { disable: false } },
@@ -127,7 +125,6 @@ Defaults.args = {
   ...defaultArgs,
 };
 Defaults.argTypes = {
-  ...Defaults.argTypes,
   children: { table: { disable: false } },
 };
 Defaults.parameters = {
@@ -154,7 +151,6 @@ WithLongText.args = {
     'Denne knappen har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert.',
 };
 WithLongText.argTypes = {
-  ...WithLongText.argTypes,
   children: { table: { disable: false } },
 };
 
@@ -168,7 +164,6 @@ WithLongTextAndBreaking.args = {
     'Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Nårikkeikonsåskaltekstenværevenstrejusteres.',
 };
 WithLongTextAndBreaking.argTypes = {
-  ...WithLongTextAndBreaking.argTypes,
   children: { table: { disable: false } },
 };
 
@@ -181,12 +176,10 @@ WithIcon.args = {
   svgPath: AddOutlineSVGpath,
 };
 WithIcon.argTypes = {
-  ...WithIcon.argTypes,
   svgPath: { table: { disable: false } },
 };
 WithIcon.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
-
   const inlineButton = canvas.getByRole('button');
   // eslint-disable-next-line testing-library/no-node-access
   const svg = inlineButton.querySelector('svg');
@@ -202,7 +195,6 @@ WithCustomIcon.args = {
   svgPath: <path d={'M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z'} />,
 };
 WithCustomIcon.argTypes = {
-  ...WithCustomIcon.argTypes,
   svgPath: {
     table: { disable: false },
     control: { type: null },
@@ -220,7 +212,6 @@ WithLongTextAndIcon.args = {
     'Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert.',
 };
 WithLongTextAndIcon.argTypes = {
-  ...WithLongTextAndIcon.argTypes,
   children: { table: { disable: false } },
   svgPath: { table: { disable: false } },
 };
@@ -234,7 +225,6 @@ WithIconRight.args = {
   iconPosition: 'right',
 };
 WithIconRight.argTypes = {
-  ...WithIconRight.argTypes,
   iconPosition: {
     table: { disable: false },
   },
@@ -248,7 +238,6 @@ WithDisabled.args = {
   disabled: true,
 };
 WithDisabled.argTypes = {
-  ...WithDisabled.argTypes,
   disabled: { table: { disable: false } },
 };
 WithDisabled.play = async ({ canvasElement }): Promise<void> => {
@@ -265,7 +254,6 @@ WithDisabledAndIcon.args = {
   disabled: true,
 };
 WithDisabledAndIcon.argTypes = {
-  ...WithDisabledAndIcon.argTypes,
   disabled: { table: { disable: false } },
   svgPath: { table: { disable: false } },
 };
@@ -278,7 +266,6 @@ WithType.args = {
   type: 'submit',
 };
 WithType.argTypes = {
-  ...WithType.argTypes,
   type: { table: { disable: false } },
 };
 WithType.parameters = {
@@ -294,18 +281,12 @@ WithAriaDescribedby.args = {
   ariaDescribedby: 'testid1234',
 };
 WithAriaDescribedby.argTypes = {
-  ...WithAriaDescribedby.argTypes,
   ariaDescribedby: { table: { disable: false } },
 };
 WithAriaDescribedby.parameters = {
   imageSnapshot: { disable: true },
 };
-WithAriaDescribedby.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const inlineButton = canvas.getByRole('button');
-  await expect(inlineButton).toBeInTheDocument();
-  await expect(inlineButton).toHaveAttribute('aria-describedby', 'testid1234');
-};
+WithAriaDescribedby.play = verifyAttribute('aria-describedby', 'testid1234');
 
 // Når InlineButton har satt accessKey, så har accessKey en verdi
 export const WithAccesskey = Template.bind({});
@@ -315,18 +296,12 @@ WithAccesskey.args = {
   accessKey: 'j',
 };
 WithAccesskey.argTypes = {
-  ...WithAccesskey.argTypes,
   accessKey: { table: { disable: false } },
 };
 WithAccesskey.parameters = {
   imageSnapshot: { disable: true },
 };
-WithAccesskey.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const inlineButton = canvas.getByRole('button');
-  await expect(inlineButton).toBeInTheDocument();
-  await expect(inlineButton).toHaveAttribute('accessKey', 'j');
-};
+WithAccesskey.play = verifyAttribute('accessKey', 'j');
 
 // Når brukeren setter focus, blurrer, eller klikker på knappen, så kalles riktig eventHandler
 // Eventhandlere endrer tesksten på knappen
@@ -358,9 +333,6 @@ export const WithEventHandlers = EventHandlersTemplate.bind({});
 WithEventHandlers.storyName = 'With EventHandlers (A2 delvis)';
 WithEventHandlers.args = {
   ...defaultArgs,
-};
-WithEventHandlers.argTypes = {
-  ...WithEventHandlers.argTypes,
 };
 WithEventHandlers.parameters = {
   imageSnapshot: { disable: true },

@@ -86,7 +86,6 @@ WithRef.args = {
   },
 };
 WithRef.argTypes = {
-  ...WithRef.argTypes,
   ref: { table: { disable: false } },
 };
 WithRef.parameters = {
@@ -110,7 +109,6 @@ WithAttributes.args = {
   'data-testid': '123ID',
 };
 WithAttributes.argTypes = {
-  ...WithAttributes.argTypes,
   id: { table: { disable: false } },
   className: { table: { disable: false } },
   lang: { table: { disable: false } },
@@ -132,7 +130,6 @@ Defaults.args = {
   ...defaultArgs,
 };
 Defaults.argTypes = {
-  ...Defaults.argTypes,
   svgPath: { table: { disable: false } },
   title: { table: { disable: false } },
 };
@@ -147,7 +144,6 @@ Defaults.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   const iconButton = canvas.getByRole('button');
   expect(iconButton).toHaveAttribute('type', 'button');
-
   // eslint-disable-next-line testing-library/no-node-access
   const svg = iconButton.querySelector('svg');
   await expect(svg).toHaveAttribute('viewBox', '0 0 24 24');
@@ -164,7 +160,6 @@ WithOutline.args = {
   isOutlined: true,
 };
 WithOutline.argTypes = {
-  ...WithOutline.argTypes,
   isOutlined: { table: { disable: false } },
 };
 WithOutline.parameters = {
@@ -183,7 +178,6 @@ WithCustomSVGPath.args = {
   svgPath: <path d={'M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z'} />,
 };
 WithCustomSVGPath.argTypes = {
-  ...WithCustomSVGPath.argTypes,
   svgPath: {
     table: { disable: false },
     control: { type: null },
@@ -198,7 +192,6 @@ WithSizeExtraSmall.args = {
   size: 'extraSmall',
 };
 WithSizeExtraSmall.argTypes = {
-  ...WithSizeExtraSmall.argTypes,
   size: { table: { disable: false } },
 };
 
@@ -210,7 +203,6 @@ WithSizeSmall.args = {
   size: 'small',
 };
 WithSizeSmall.argTypes = {
-  ...WithSizeSmall.argTypes,
   size: { table: { disable: false } },
 };
 
@@ -222,7 +214,6 @@ WithSizeLarge.args = {
   size: 'large',
 };
 WithSizeLarge.argTypes = {
-  ...WithSizeLarge.argTypes,
   size: { table: { disable: false } },
 };
 
@@ -236,7 +227,6 @@ WithSizeExtraSmallAndOutline.args = {
   isOutlined: true,
 };
 WithSizeExtraSmallAndOutline.argTypes = {
-  ...WithSizeExtraSmallAndOutline.argTypes,
   size: { table: { disable: false } },
   isOutlined: { table: { disable: false } },
 };
@@ -250,7 +240,6 @@ WithSizeSmallAndOutline.args = {
   isOutlined: true,
 };
 WithSizeSmallAndOutline.argTypes = {
-  ...WithSizeSmallAndOutline.argTypes,
   size: { table: { disable: false } },
   isOutlined: { table: { disable: false } },
 };
@@ -264,7 +253,6 @@ WithSizeLargeAndOutline.args = {
   isOutlined: true,
 };
 WithSizeLargeAndOutline.argTypes = {
-  ...WithSizeLargeAndOutline.argTypes,
   size: { table: { disable: false } },
   isOutlined: { table: { disable: false } },
 };
@@ -277,7 +265,6 @@ WithDisabled.args = {
   disabled: true,
 };
 WithDisabled.argTypes = {
-  ...WithDisabled.argTypes,
   disabled: { table: { disable: false } },
 };
 WithDisabled.play = async ({ canvasElement }): Promise<void> => {
@@ -294,7 +281,6 @@ WithDisabledAndOutline.args = {
   disabled: true,
 };
 WithDisabledAndOutline.argTypes = {
-  ...WithDisabledAndOutline.argTypes,
   isOutlined: { table: { disable: false } },
   disabled: { table: { disable: false } },
 };
@@ -307,7 +293,6 @@ WithType.args = {
   type: 'submit',
 };
 WithType.argTypes = {
-  ...WithType.argTypes,
   type: { table: { disable: false } },
 };
 WithType.parameters = {
@@ -325,7 +310,6 @@ WithAriaDescribedby.args = {
   ariaDescribedby: 'araiDescId',
 };
 WithAriaDescribedby.argTypes = {
-  ...WithAriaDescribedby.argTypes,
   ariaDescribedby: { table: { disable: false } },
 };
 WithAriaDescribedby.parameters = {
@@ -343,7 +327,6 @@ WithAccesskey.args = {
   accessKey: 'a',
 };
 WithAccesskey.argTypes = {
-  ...WithAccesskey.argTypes,
   accessKey: { table: { disable: false } },
 };
 WithAccesskey.parameters = {
@@ -382,9 +365,6 @@ export const WithEventHandlers = EventHandlersTemplate.bind({});
 WithEventHandlers.storyName = 'With EventHandlers (A2 delvis)';
 WithEventHandlers.args = {
   ...defaultArgs,
-};
-WithEventHandlers.argTypes = {
-  ...WithEventHandlers.argTypes,
 };
 WithEventHandlers.parameters = {
   imageSnapshot: { disable: true },

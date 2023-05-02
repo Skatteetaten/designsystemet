@@ -55,7 +55,6 @@ WithRef.args = {
   },
 };
 WithRef.argTypes = {
-  ...WithRef.argTypes,
   ref: { table: { disable: false } },
 };
 WithRef.parameters = { imageSnapshot: { disable: true } };
@@ -79,7 +78,6 @@ WithAttributes.args = {
   'data-testid': '123ID',
 };
 WithAttributes.argTypes = {
-  ...WithAttributes.argTypes,
   id: { table: { disable: false } },
   className: { table: { disable: false } },
   lang: { table: { disable: false } },
@@ -150,7 +148,6 @@ WithMarkup.args = {
   ...defaultArgs,
 };
 WithMarkup.argTypes = {
-  ...WithMarkup.argTypes,
   children: {
     table: { disable: false },
     control: { type: null },
@@ -177,7 +174,6 @@ Defaults.args = {
   ...defaultArgs,
 };
 Defaults.argTypes = {
-  ...Defaults.argTypes,
   children: { table: { disable: false } },
 };
 
@@ -189,7 +185,6 @@ VariantIngress.args = {
   variant: 'ingress',
 };
 VariantIngress.argTypes = {
-  ...VariantIngress.argTypes,
   variant: { table: { disable: false } },
 };
 
@@ -201,7 +196,6 @@ WithSpacing.args = {
   hasSpacing: true,
 };
 WithSpacing.argTypes = {
-  ...WithSpacing.argTypes,
   hasSpacing: { table: { disable: false } },
 };
 
@@ -214,7 +208,6 @@ VariantIngressWithSpacing.args = {
   variant: 'ingress',
 };
 VariantIngressWithSpacing.argTypes = {
-  ...VariantIngressWithSpacing.argTypes,
   hasSpacing: { table: { disable: false } },
   variant: { table: { disable: false } },
 };
