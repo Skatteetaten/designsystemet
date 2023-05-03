@@ -270,7 +270,6 @@ WithTarget.argTypes = {
 WithTarget.parameters = {
   imageSnapshot: { disable: true },
 };
-
 WithTarget.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   const link = canvas.getByRole('link');

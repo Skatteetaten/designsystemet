@@ -1,10 +1,11 @@
-import { forwardRef } from 'react';
+import { forwardRef, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { ExternalIcon, Icon } from '@skatteetaten/ds-icons';
 
 import { LinkProps } from './Link.types';
+import { LinkContext } from '../LinkGroup/LinkContext';
 
 import styles from './Link.module.scss';
 
@@ -27,9 +28,19 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
     ref
   ): JSX.Element => {
     const { t } = useTranslation('ds_buttons', { i18n: dsI18n });
-    const concatenatedClassName = `${styles.link} ${
-      color ? styles[`link_${color}`] : ''
-    } ${className}`;
+    const context = useContext(LinkContext);
+
+    const getColor = (): string => {
+      if (color) {
+        return styles[`link_${color}`];
+      } else if (context?.color) {
+        return styles[`link_${context?.color}`];
+      } else {
+        return '';
+      }
+    };
+
+    const concatenatedClassName = `${styles.link} ${getColor()} ${className}`;
 
     return (
       <a

@@ -40,6 +40,7 @@ export default {
   },
   parameters: {
     version: getVersion('ds-buttons'),
+    docs: { source: { type: 'code' } },
   },
 } as ComponentMeta<typeof LinkGroup>;
 

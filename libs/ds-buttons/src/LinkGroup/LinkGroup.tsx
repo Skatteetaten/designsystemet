@@ -1,4 +1,4 @@
-import { Children, cloneElement, forwardRef } from 'react';
+import { Children, forwardRef } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import {
@@ -8,6 +8,7 @@ import {
 } from '@skatteetaten/ds-icons';
 
 import { getLinkGroupVariantDefault } from './defaults';
+import { LinkContext } from './LinkContext';
 import { LinkGroupComponent, LinkGroupProps } from './LinkGroup.types';
 import { Link } from '../Link/Link';
 
@@ -49,14 +50,19 @@ export const LinkGroup = forwardRef<HTMLUListElement, LinkGroupProps>(
         lang={lang}
         data-testid={dataTestId}
       >
-        {links.map((link, index) => {
-          return (
-            <li key={index} className={styles.linkGroupItem}>
-              <Icon className={concatenatedIconClassName} svgPath={iconPath} />
-              {cloneElement(link as JSX.Element, { color: color })}
-            </li>
-          );
-        })}
+        <LinkContext.Provider value={{ color }}>
+          {links.map((child, index) => {
+            return (
+              <li key={index} className={styles.linkGroupItem}>
+                <Icon
+                  className={concatenatedIconClassName}
+                  svgPath={iconPath}
+                />
+                {child}
+              </li>
+            );
+          })}
+        </LinkContext.Provider>
       </ul>
     );
   }

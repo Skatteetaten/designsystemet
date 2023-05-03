@@ -34,6 +34,7 @@ export default {
   },
   parameters: {
     version: getVersion('ds-typography'),
+    docs: { source: { type: 'code' } },
   },
 } as ComponentMeta<typeof List>;
 
