@@ -1,0 +1,135 @@
+@import 'libs/ds-core-utils/src/styles.scss';
+
+.container {
+  position: relative;
+  width: fit-content;
+}
+
+.input {
+  position: absolute;
+  top: 2px;
+  left: -2px;
+  width: var(--size-large);
+  height: var(--size-large);
+  cursor: pointer;
+  opacity: 0;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.label {
+  --checkbox-border-color: var(--semantic-page-foreground);
+  --checkbox-background-color: var(--semantic-page-background);
+  --check-color: var(--palette-graphite-0);
+  --label-color: var(--semantic-page-foreground);
+  --description-color: var(--palette-graphite-70);
+
+  display: flex;
+  padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-xs) 0;
+  color: var(--label-color);
+  cursor: pointer;
+  gap: var(--spacing-s);
+
+  &_error {
+    --checkbox-border-color: var(--semantic-danger-foreground);
+  }
+
+  &Checkbox {
+    position: relative;
+    width: var(--size-medium);
+    min-width: var(--size-medium);
+    height: var(--size-medium);
+    box-sizing: border-box;
+    border: 2px solid var(--checkbox-border-color);
+    margin-top: var(--spacing-xxs);
+    background-color: var(--checkbox-background-color);
+
+    &Check {
+      position: absolute;
+      top: 3px;
+      left: 1px;
+      width: 11.5px;
+      height: 5px;
+      border-bottom: 2px solid var(--check-color);
+      border-left: 2px solid var(--check-color);
+      transform: rotate(-45deg);
+    }
+  }
+
+  &TextWrapper {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-size-m);
+    line-height: var(--semantic-line-height-input);
+    overflow-wrap: anywhere;
+    word-break: normal;
+
+    &_hide {
+      @include sr-only;
+    }
+
+    &Description {
+      margin-top: var(--spacing-xs);
+      color: var(--description-color);
+    }
+  }
+}
+
+.input:focus + .label .labelCheckbox {
+  outline: 2px solid var(--semantic-interactive-main);
+  outline-offset: var(--spacing-xxs);
+}
+
+.input:hover + .label {
+  --checkbox-border-color: var(--semantic-interactive-main);
+  --checkbox-background-color: var(--semantic-interactive-background);
+  --check-color: var(--semantic-interactive-background);
+  --label-color: var(--semantic-interactive-main);
+  --description-color: var(--semantic-interactive-main);
+}
+
+.input:required + .label .labelTextWrapperText {
+  &::after {
+    color: var(--semantic-danger-foreground);
+    content: '*';
+    font-weight: var(--font-weight-bold);
+  }
+}
+
+.input:required + .label_error {
+  background-color: var(--semantic-danger-background);
+  box-shadow: calc(-1 * var(--spacing-xs)) 0 var(--semantic-danger-background);
+}
+
+.input:disabled + .label {
+  --checkbox-border-color: var(--semantic-disabled-foreground);
+  --checkbox-background-color: var(--semantic-disabled-background);
+  --check-color: var(--semantic-disabled-background);
+  --label-color: var(--semantic-disabled-foreground);
+  --description-color: var(--semantic-disabled-foreground);
+  --semantic-danger-foreground: var(--semantic-disabled-foreground);
+  --semantic-interactive-main: var(--semantic-disabled-foreground);
+  --semantic-interactive-background: var(--semantic-disabled-background);
+
+  cursor: not-allowed;
+}
+
+.input:checked + .label {
+  --checkbox-border-color: var(--semantic-interactive-main);
+  --checkbox-background-color: var(--semantic-interactive-main);
+
+  &:hover {
+    --check-color: var(--palette-graphite-0);
+  }
+}
+
+.input:checked:disabled + .label {
+  --checkbox-background-color: var(--semantic-disabled-background);
+  --check-color: var(--semantic-disabled-foreground);
+}
+
+.input:disabled:focus + .label .labelCheckbox {
+  outline: none;
+}

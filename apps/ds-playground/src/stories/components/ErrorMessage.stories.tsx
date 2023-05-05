@@ -5,6 +5,7 @@ import { ErrorMessage, ErrorMessageProps } from '@skatteetaten/ds-forms';
 import { Meta, Story } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
+import { getVersion } from '../utils/version.utils';
 
 export default {
   component: ErrorMessage,
@@ -18,6 +19,9 @@ export default {
         category: category.props,
       },
     },
+  },
+  parameters: {
+    version: getVersion('ds-forms'),
   },
 } as Meta<ErrorMessageProps>;
 
