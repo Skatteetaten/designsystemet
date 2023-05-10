@@ -125,7 +125,7 @@ export const IconButtonExample = TemplateExample.bind({});
 IconButtonDefault.storyName = 'Default';
 IconButtonExample.storyName = 'Example';
 IconButtonExample.parameters = {
-  controls: { hideNoControlsWarning: true },
+  controls: { disabled: true },
 };
 
 IconButtonDefault.args = {

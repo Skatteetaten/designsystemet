@@ -73,7 +73,7 @@ export const HeadingExample = TemplateExample.bind({});
 HeadingDefault.storyName = 'Default';
 HeadingExample.storyName = 'Example';
 HeadingExample.parameters = {
-  controls: { hideNoControlsWarning: true },
+  controls: { disabled: true },
 };
 
 HeadingDefault.args = {

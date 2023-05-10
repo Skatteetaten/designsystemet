@@ -59,6 +59,9 @@ export const MegaButtonDefault = TemplateDefault.bind({});
 export const MegaButtonExample = TemplateDefault.bind({});
 MegaButtonDefault.storyName = 'Default';
 MegaButtonExample.storyName = 'Example';
+MegaButtonExample.parameters = {
+  controls: { disabled: true },
+};
 
 MegaButtonDefault.args = {
   children: 'Klikk her',

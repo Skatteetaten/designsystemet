@@ -84,6 +84,9 @@ export const ListDefault = TemplateDefault.bind({});
 export const ListExample = TemplateExample.bind({});
 ListDefault.storyName = 'Default';
 ListExample.storyName = 'Example';
+ListExample.parameters = {
+  controls: { disabled: true },
+};
 
 ListDefault.args = {
   as: getListAsDefault(),

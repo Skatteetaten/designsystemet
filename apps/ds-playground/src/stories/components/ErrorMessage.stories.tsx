@@ -68,7 +68,7 @@ export const ErrorMessageExample: Story<ErrorMessageProps> =
 ErrorMessageDefault.storyName = 'Default';
 ErrorMessageExample.storyName = 'Example';
 ErrorMessageExample.parameters = {
-  controls: { hideNoControlsWarning: true },
+  controls: { disabled: true },
 };
 
 ErrorMessageDefault.args = {

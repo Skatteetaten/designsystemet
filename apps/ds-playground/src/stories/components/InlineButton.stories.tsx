@@ -84,7 +84,7 @@ export const InlineButtonExample = TemplateExample.bind({});
 InlineButtonDefault.storyName = 'Default';
 InlineButtonExample.storyName = 'Example';
 InlineButtonExample.parameters = {
-  controls: { hideNoControlsWarning: true },
+  controls: { disabled: true },
 };
 
 InlineButtonDefault.args = {

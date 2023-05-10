@@ -40,7 +40,7 @@ export const BlockquoteExample = TemplateExample.bind({});
 BlockquoteDefault.storyName = 'Default';
 BlockquoteExample.storyName = 'Example';
 BlockquoteExample.parameters = {
-  controls: { hideNoControlsWarning: true },
+  controls: { disabled: true },
 };
 
 BlockquoteDefault.args = {

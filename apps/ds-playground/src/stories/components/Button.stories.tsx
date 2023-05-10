@@ -94,7 +94,7 @@ export const ButtonExample = TemplateExample.bind({});
 ButtonDefault.storyName = 'Default';
 ButtonExample.storyName = 'Example';
 ButtonExample.parameters = {
-  controls: { hideNoControlsWarning: true },
+  controls: { disabled: true },
 };
 
 ButtonDefault.args = {

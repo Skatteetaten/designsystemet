@@ -72,6 +72,9 @@ export const ParagraphDefault = TemplateDefault.bind({});
 export const ParagraphExample = TemplateExample.bind({});
 ParagraphDefault.storyName = 'Default';
 ParagraphExample.storyName = 'Example';
+ParagraphExample.parameters = {
+  controls: { disabled: true },
+};
 
 ParagraphDefault.args = {
   children:

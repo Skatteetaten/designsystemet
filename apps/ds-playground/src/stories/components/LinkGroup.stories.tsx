@@ -93,7 +93,7 @@ export const LinkGroupExample = TemplateExample.bind({});
 LinkGroupDefault.storyName = 'Default';
 LinkGroupExample.storyName = 'Example';
 LinkGroupExample.parameters = {
-  controls: { hideNoControlsWarning: true },
+  controls: { disabled: true },
 };
 
 LinkGroupDefault.args = {

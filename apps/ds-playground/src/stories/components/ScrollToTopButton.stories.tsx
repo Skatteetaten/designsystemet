@@ -67,6 +67,9 @@ export const ScrollToTopButtonExample: Story<ScrollToTopButtonProps> =
   TemplateExample.bind({});
 ScrollToTopButtonDefault.storyName = 'Default';
 ScrollToTopButtonExample.storyName = 'Example';
+ScrollToTopButtonExample.parameters = {
+  controls: { disabled: true },
+};
 
 ScrollToTopButtonDefault.args = {
   visibilityThreshold: getVisibilityThresholdDefault(),

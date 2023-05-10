@@ -88,7 +88,7 @@ export const CheckboxExample = TemplateExample.bind({});
 CheckboxDefault.storyName = 'Default';
 CheckboxExample.storyName = 'Example';
 CheckboxExample.parameters = {
-  controls: { hideNoControlsWarning: true },
+  controls: { disabled: true },
 };
 
 CheckboxDefault.args = {

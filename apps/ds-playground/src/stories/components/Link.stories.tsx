@@ -77,7 +77,7 @@ export const LinkExample = TemplateExample.bind({});
 LinkDefault.storyName = 'Default';
 LinkExample.storyName = 'Example';
 LinkExample.parameters = {
-  controls: { hideNoControlsWarning: true },
+  controls: { disabled: true },
 };
 
 LinkDefault.args = {
