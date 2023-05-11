@@ -23,8 +23,8 @@
 
   &Icon {
     flex-shrink: 0;
-    padding-top: var(--spacing-s);
     fill: var(--semantic-danger-foreground);
+    transform: translateY(6px);
   }
 
   &Text {
