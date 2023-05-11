@@ -3,7 +3,7 @@
 exports[`Tester/ErrorMessage Defaults play-test 1`] = `
 <div data-test-block="true">
   <div class
-       role="alert"
+       aria-live="assertive"
   >
   </div>
 </div>
@@ -15,7 +15,7 @@ exports[`Tester/ErrorMessage WithAttributes play-test 1`] = `
        class="dummyClassname"
        lang="nb"
        data-testid="123ID"
-       role="alert"
+       aria-live="assertive"
   >
     <div class="ErrorMessage_errorMessage__508oW">
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
@@ -48,7 +48,7 @@ exports[`Tester/ErrorMessage WithLongText smoke-test 1`] = `
          type="text"
   >
   <div class
-       role="alert"
+       aria-live="assertive"
   >
     <div class="ErrorMessage_errorMessage__508oW">
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
@@ -81,7 +81,7 @@ exports[`Tester/ErrorMessage WithLongTextAndBreaking smoke-test 1`] = `
          type="text"
   >
   <div class
-       role="alert"
+       aria-live="assertive"
   >
     <div class="ErrorMessage_errorMessage__508oW">
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
@@ -104,7 +104,7 @@ exports[`Tester/ErrorMessage WithLongTextAndBreaking smoke-test 1`] = `
 exports[`Tester/ErrorMessage WithPElement play-test 1`] = `
 <div data-test-block="true">
   <div class
-       role="alert"
+       aria-live="assertive"
   >
     <div class="ErrorMessage_errorMessage__508oW">
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
@@ -127,7 +127,7 @@ exports[`Tester/ErrorMessage WithPElement play-test 1`] = `
 exports[`Tester/ErrorMessage WithRef play-test 1`] = `
 <div data-test-block="true">
   <div class
-       role="alert"
+       aria-live="assertive"
        id="dummyIdForwardedFromRef"
   >
   </div>

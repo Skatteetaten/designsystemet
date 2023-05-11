@@ -56,7 +56,7 @@ WithRef.parameters = {
 };
 WithRef.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
-  const container = canvas.getByRole('alert');
+  const container = canvas.getAllByRole('generic')[1];
   await expect(container).toHaveAttribute('id', 'dummyIdForwardedFromRef');
 };
 
@@ -82,7 +82,7 @@ WithAttributes.argTypes = {
 };
 WithAttributes.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
-  const container = canvas.getByRole('alert');
+  const container = canvas.getAllByRole('generic')[1];
   await expect(container).toHaveAttribute('id', 'htmlId');
   await expect(container).toHaveClass('dummyClassname');
   await expect(container).toHaveAttribute('lang', 'nb');
@@ -97,7 +97,7 @@ Defaults.args = {
 };
 Defaults.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
-  const container = canvas.getByRole('alert');
+  const container = canvas.getAllByRole('generic')[1];
   await expect(container).toBeInTheDocument();
   // eslint-disable-next-line testing-library/no-node-access
   const textNode = container.querySelector('p');

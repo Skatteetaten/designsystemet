@@ -151,7 +151,7 @@ Defaults.play = async ({ canvasElement }): Promise<void> => {
   await expect(inputNode).not.toBeRequired();
   await expect(inputNode).toBeEnabled();
   await expect(inputNode).not.toHaveAttribute('aria-describedby');
-  const errorMessage = canvas.getByRole('alert');
+  const errorMessage = canvas.getAllByRole('generic')[6];
   await expect(errorMessage).toBeInTheDocument();
 };
 
@@ -354,7 +354,7 @@ WithError.parameters = {
 };
 WithError.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
-  const errorMessageNode = canvas.getByRole('alert');
+  const errorMessageNode = canvas.getAllByRole('generic')[6];
   await expect(errorMessageNode).toHaveAttribute('id');
   const inputNode = canvas.getByRole('checkbox', {
     description: defaultErrorMessage,
