@@ -1,0 +1,13 @@
+{
+  "name": "@skatteetaten/ds-table",
+  "version": "0.0.1",
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "groupId": "no.skatteetaten.aurora",
+  "publishConfig": {
+    "registry": "https://nexus.sits.no/repository/npm-internal/"
+  },
+  "peerDependencies": {
+    "react": "^18"
+  }
+}

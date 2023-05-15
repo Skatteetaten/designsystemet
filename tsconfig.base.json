@@ -25,6 +25,7 @@
       "@skatteetaten/ds-forms": ["libs/ds-forms/src/index.ts"],
       "@skatteetaten/ds-icons": ["libs/ds-icons/src/index.ts"],
       "@skatteetaten/ds-status": ["libs/ds-status/src/index.ts"],
+      "@skatteetaten/ds-table": ["libs/ds-table/src/index.ts"],
       "@skatteetaten/ds-typography": ["libs/ds-typography/src/index.ts"]
     }
   },

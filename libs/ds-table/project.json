@@ -1,0 +1,74 @@
+{
+  "name": "ds-table",
+  "sourceRoot": "libs/ds-table/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ds-table/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "build": {
+      "executor": "@nrwl/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ds-table",
+        "tsConfig": "libs/ds-table/tsconfig.lib.json",
+        "project": "libs/ds-table/package.json",
+        "entryFile": "libs/ds-table/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": ["libs/ds-table/rollup.config.js"],
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/ds-table/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/ds-table/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/ds-table/**/*.css",
+          "libs/ds-table/**/*.scss"
+        ]
+      }
+    },
+    "tsc": {
+      "executor": "@skatteetaten/ds-dev-config:tsCheck",
+      "options": {
+        "tsConfig": ["tsconfig.lib.json", "tsconfig.spec.json"]
+      }
+    },
+    "set-version": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm version {args.packageVersion} --no-git-tag",
+        "cwd": "libs/ds-table"
+      }
+    },
+    "publish": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm publish {args.switches}",
+        "cwd": "dist/libs/ds-table"
+      }
+    }
+  },
+  "implicitDependencies": ["!ds-dev-config"]
+}

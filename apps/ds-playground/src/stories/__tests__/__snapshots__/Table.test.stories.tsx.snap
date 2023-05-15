@@ -1,0 +1,402 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Table WithAttributes play-test 1`] = `
+<div class=" ">
+  <table id="htmlId"
+         class="Table_table__VhSJI  Table_table_standard__8JWMb dummyClassname"
+         lang="nb"
+         data-testid="123ID"
+  >
+    <caption class="Table_tableCaption__zTm5t Table_hidden__N7qKc Table_tableCaption_standard__Nhqht">
+      tabellcaption
+    </caption>
+    <thead>
+      <tr class="Row_row_notExpanded__qKGMb">
+        <th class="HeaderCell_headerCell__-PNsO HeaderCell_headerCell_standard__SWZS8  HeaderCell_headerCell_left__KiiuU undefined"
+            scope="col"
+        >
+          Items
+        </th>
+        <th class="HeaderCell_headerCell__-PNsO HeaderCell_headerCell_standard__SWZS8  HeaderCell_headerCell_left__KiiuU undefined"
+            scope="col"
+        >
+          Expenditure
+        </th>
+        <th class="HeaderCell_headerCell__-PNsO HeaderCell_headerCell_standard__SWZS8  HeaderCell_headerCell_left__KiiuU undefined"
+            scope="col"
+        >
+          Category
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="Row_row_notExpanded__qKGMb">
+        <th class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  "
+            scope="row"
+        >
+          Donuts
+        </th>
+        <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+          3,000
+        </td>
+        <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC DataCell_dataCell_rowspan__xTjXX rowSpanLeft"
+            rowspan="2"
+        >
+          Edible
+        </td>
+      </tr>
+      <tr class="Row_row_notExpanded__qKGMb">
+        <th class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  "
+            scope="row"
+        >
+          Cake
+        </th>
+        <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+          3,000
+        </td>
+      </tr>
+      <tr class="Row_row_notExpanded__qKGMb">
+        <th class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  "
+            scope="row"
+        >
+          Stationery
+        </th>
+        <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+          18,000
+        </td>
+        <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+          Non-Edible
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Tester/Table WithRef play-test 1`] = `
+<div class=" ">
+  <table class="Table_table__VhSJI  Table_table_standard__8JWMb "
+         id="dummyIdForwardedFromRef"
+  >
+    <caption class="Table_tableCaption__zTm5t Table_hidden__N7qKc Table_tableCaption_standard__Nhqht">
+      tabellcaption
+    </caption>
+    <thead>
+      <tr class="Row_row_notExpanded__qKGMb">
+        <th class="HeaderCell_headerCell__-PNsO HeaderCell_headerCell_standard__SWZS8  HeaderCell_headerCell_left__KiiuU undefined"
+            scope="col"
+        >
+          Items
+        </th>
+        <th class="HeaderCell_headerCell__-PNsO HeaderCell_headerCell_standard__SWZS8  HeaderCell_headerCell_left__KiiuU undefined"
+            scope="col"
+        >
+          Expenditure
+        </th>
+        <th class="HeaderCell_headerCell__-PNsO HeaderCell_headerCell_standard__SWZS8  HeaderCell_headerCell_left__KiiuU undefined"
+            scope="col"
+        >
+          Category
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="Row_row_notExpanded__qKGMb">
+        <th class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  "
+            scope="row"
+        >
+          Donuts
+        </th>
+        <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+          3,000
+        </td>
+        <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC DataCell_dataCell_rowspan__xTjXX rowSpanLeft"
+            rowspan="2"
+        >
+          Edible
+        </td>
+      </tr>
+      <tr class="Row_row_notExpanded__qKGMb">
+        <th class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  "
+            scope="row"
+        >
+          Cake
+        </th>
+        <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+          3,000
+        </td>
+      </tr>
+      <tr class="Row_row_notExpanded__qKGMb">
+        <th class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  "
+            scope="row"
+        >
+          Stationery
+        </th>
+        <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+          18,000
+        </td>
+        <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+          Non-Edible
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Tester/Table WithScrollbar smoke-test 1`] = `
+<div>
+  <p>
+    Table med Scrollbar
+  </p>
+  <div class="scrollTableWrapper">
+    <div class="Table_wrapper__cQelY ">
+      <table class="Table_table__VhSJI  Table_table_standard__8JWMb ">
+        <thead>
+          <tr class="Row_row_notExpanded__qKGMb">
+            <th class="HeaderCell_headerCell__-PNsO HeaderCell_headerCell_standard__SWZS8  HeaderCell_headerCell_left__KiiuU undefined"
+                scope="col"
+            >
+              Forename
+            </th>
+            <th class="HeaderCell_headerCell__-PNsO HeaderCell_headerCell_standard__SWZS8  HeaderCell_headerCell_left__KiiuU undefined"
+                scope="col"
+            >
+              Surname
+            </th>
+            <th class="HeaderCell_headerCell__-PNsO HeaderCell_headerCell_standard__SWZS8  HeaderCell_headerCell_left__KiiuU undefined"
+                scope="col"
+            >
+              email
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="Row_row_notExpanded__qKGMb">
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              Otto
+            </td>
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              Octavius
+            </td>
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              doc.ock@example.org
+            </td>
+          </tr>
+          <tr class="Row_row_notExpanded__qKGMb">
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              Norman
+            </td>
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              Osbourne
+            </td>
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              norman.osbourne@example.org
+            </td>
+          </tr>
+          <tr class="Row_row_notExpanded__qKGMb">
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              Curt
+            </td>
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              Connors
+            </td>
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              curt.connors@example.org
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="scrollTableWrapperSuccess">
+    <div class="Table_wrapper__cQelY ">
+      <table class="Table_table__VhSJI  Table_table_standard__8JWMb ">
+        <thead>
+          <tr class="Row_row_notExpanded__qKGMb">
+            <th class="HeaderCell_headerCell__-PNsO HeaderCell_headerCell_standard__SWZS8  HeaderCell_headerCell_left__KiiuU undefined"
+                scope="col"
+            >
+              Forename
+            </th>
+            <th class="HeaderCell_headerCell__-PNsO HeaderCell_headerCell_standard__SWZS8  HeaderCell_headerCell_left__KiiuU undefined"
+                scope="col"
+            >
+              Surname
+            </th>
+            <th class="HeaderCell_headerCell__-PNsO HeaderCell_headerCell_standard__SWZS8  HeaderCell_headerCell_left__KiiuU undefined"
+                scope="col"
+            >
+              email
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="Row_row_notExpanded__qKGMb">
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              Otto
+            </td>
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              Octavius
+            </td>
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              doc.ock@example.org
+            </td>
+          </tr>
+          <tr class="Row_row_notExpanded__qKGMb">
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              Norman
+            </td>
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              Osbourne
+            </td>
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              norman.osbourne@example.org
+            </td>
+          </tr>
+          <tr class="Row_row_notExpanded__qKGMb">
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              Curt
+            </td>
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              Connors
+            </td>
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              curt.connors@example.org
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="scrollTableWrapperWarning">
+    <div class="Table_wrapper__cQelY ">
+      <table class="Table_table__VhSJI  Table_table_standard__8JWMb ">
+        <thead>
+          <tr class="Row_row_notExpanded__qKGMb">
+            <th class="HeaderCell_headerCell__-PNsO HeaderCell_headerCell_standard__SWZS8  HeaderCell_headerCell_left__KiiuU undefined"
+                scope="col"
+            >
+              Forename
+            </th>
+            <th class="HeaderCell_headerCell__-PNsO HeaderCell_headerCell_standard__SWZS8  HeaderCell_headerCell_left__KiiuU undefined"
+                scope="col"
+            >
+              Surname
+            </th>
+            <th class="HeaderCell_headerCell__-PNsO HeaderCell_headerCell_standard__SWZS8  HeaderCell_headerCell_left__KiiuU undefined"
+                scope="col"
+            >
+              email
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="Row_row_notExpanded__qKGMb">
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              Otto
+            </td>
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              Octavius
+            </td>
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              doc.ock@example.org
+            </td>
+          </tr>
+          <tr class="Row_row_notExpanded__qKGMb">
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              Norman
+            </td>
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              Osbourne
+            </td>
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              norman.osbourne@example.org
+            </td>
+          </tr>
+          <tr class="Row_row_notExpanded__qKGMb">
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              Curt
+            </td>
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              Connors
+            </td>
+            <td class="DataCell_dataCell__t3nsq DataCell_dataCell_standard__uNRyN DataCell_dataCell_left__KhBFC  ">
+              curt.connors@example.org
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Table WithVariantCompact smoke-test 1`] = `
+<div class=" ">
+  <table class="Table_table__VhSJI  Table_table_compact__MEM6O ">
+    <caption class="Table_tableCaption__zTm5t Table_hidden__N7qKc Table_tableCaption_compact__AmeMW">
+      tabellcaption
+    </caption>
+    <thead>
+      <tr class="Row_row_notExpanded__qKGMb">
+        <th class="HeaderCell_headerCell__-PNsO HeaderCell_headerCell_compact__tyAcv  HeaderCell_headerCell_left__KiiuU undefined"
+            scope="col"
+        >
+          Items
+        </th>
+        <th class="HeaderCell_headerCell__-PNsO HeaderCell_headerCell_compact__tyAcv  HeaderCell_headerCell_left__KiiuU undefined"
+            scope="col"
+        >
+          Expenditure
+        </th>
+        <th class="HeaderCell_headerCell__-PNsO HeaderCell_headerCell_compact__tyAcv  HeaderCell_headerCell_left__KiiuU undefined"
+            scope="col"
+        >
+          Category
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="Row_row_notExpanded__qKGMb">
+        <th class="DataCell_dataCell__t3nsq DataCell_dataCell_compact__POiKz DataCell_dataCell_left__KhBFC  "
+            scope="row"
+        >
+          Donuts
+        </th>
+        <td class="DataCell_dataCell__t3nsq DataCell_dataCell_compact__POiKz DataCell_dataCell_left__KhBFC  ">
+          3,000
+        </td>
+        <td class="DataCell_dataCell__t3nsq DataCell_dataCell_compact__POiKz DataCell_dataCell_left__KhBFC DataCell_dataCell_rowspan__xTjXX rowSpanLeft"
+            rowspan="2"
+        >
+          Edible
+        </td>
+      </tr>
+      <tr class="Row_row_notExpanded__qKGMb">
+        <th class="DataCell_dataCell__t3nsq DataCell_dataCell_compact__POiKz DataCell_dataCell_left__KhBFC  "
+            scope="row"
+        >
+          Cake
+        </th>
+        <td class="DataCell_dataCell__t3nsq DataCell_dataCell_compact__POiKz DataCell_dataCell_left__KhBFC  ">
+          3,000
+        </td>
+      </tr>
+      <tr class="Row_row_notExpanded__qKGMb">
+        <th class="DataCell_dataCell__t3nsq DataCell_dataCell_compact__POiKz DataCell_dataCell_left__KhBFC  "
+            scope="row"
+        >
+          Stationery
+        </th>
+        <td class="DataCell_dataCell__t3nsq DataCell_dataCell_compact__POiKz DataCell_dataCell_left__KhBFC  ">
+          18,000
+        </td>
+        <td class="DataCell_dataCell__t3nsq DataCell_dataCell_compact__POiKz DataCell_dataCell_left__KhBFC  ">
+          Non-Edible
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

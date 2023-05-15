@@ -52,3 +52,36 @@ code {
   border: 2px solid var(--palette-forest-50);
   width: 250px;
 }
+
+.emptyExpandedTableRow {
+  height: 200px;
+  width: 100%;
+  background: var(--palette-ochre-5);
+}
+
+.rowSpanLeft {
+  border-left: solid 1px var(--semantic-divider-30);
+}
+
+.rowSpanRight {
+  border-right: solid 1px var(--semantic-divider-30);
+}
+
+.scrollTableWrapper {
+  width: 320px;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.scrollTableWrapperSuccess {
+  width: 320px;
+  background: var(--semantic-success-background);
+  display: inline-block;
+  margin-right: 20px;
+}
+.scrollTableWrapperWarning {
+  width: 320px;
+  background: var(--semantic-warning-background);
+  display: inline-block;
+  margin-right: 20px;
+}

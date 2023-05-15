@@ -10,6 +10,7 @@
     "ds-icons": "libs/ds-icons",
     "ds-playground": "apps/ds-playground",
     "ds-status": "libs/ds-status",
+    "ds-table": "libs/ds-table",
     "ds-typography": "libs/ds-typography"
   }
 }

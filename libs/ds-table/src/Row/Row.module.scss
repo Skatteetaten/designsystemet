@@ -1,0 +1,34 @@
+@import '~@skatteetaten/ds-core-designtokens/designtokens/breakpoints.scss';
+
+.buttonCell {
+  max-width: 2rem;
+  padding: var(--spacing-xs);
+
+  @media (min-width: $breakpoint-m) {
+    max-width: 2.75rem;
+  }
+
+  &_compact {
+    max-width: 1.375rem;
+  }
+}
+
+.expandableContent {
+  margin-top: var(--spacing-l);
+}
+
+.expandedRowRight {
+  border-bottom: solid 1px var(--semantic-divider-30);
+}
+
+.row {
+  &_noBorder {
+    --table-cell-border-bottom: none;
+  }
+
+  &_notExpanded {
+    &:hover {
+      --table-cell-background: var(--semantic-interactive-background);
+    }
+  }
+}

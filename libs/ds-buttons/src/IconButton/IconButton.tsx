@@ -18,6 +18,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
       accessKey,
       title,
       ariaDescribedby,
+      ariaExpanded,
       size = getIconButtonSizeDefault(),
       svgPath,
       isOutlined,
@@ -42,6 +43,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
         accessKey={accessKey}
         type={type}
         aria-describedby={ariaDescribedby}
+        aria-expanded={ariaExpanded}
         onBlur={onBlur}
         onClick={onClick}
         onFocus={onFocus}

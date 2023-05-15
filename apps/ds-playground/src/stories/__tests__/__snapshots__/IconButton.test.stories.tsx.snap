@@ -31,11 +31,11 @@ exports[`Tester/IconButton WithAccesskey play-test 1`] = `
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
          viewbox="0 0 24 24"
          focusable="false"
-         aria-labelledby="svgtitle-:rf:"
+         aria-labelledby="svgtitle-:rg:"
          aria-hidden="false"
          role="img"
     >
-      <title id="svgtitle-:rf:">
+      <title id="svgtitle-:rg:">
         dummy tekst accessible name
       </title>
       <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
@@ -59,6 +59,29 @@ exports[`Tester/IconButton WithAriaDescribedby play-test 1`] = `
          role="img"
     >
       <title id="svgtitle-:re:">
+        dummy tekst accessible name
+      </title>
+      <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/IconButton WithAriaExpanded play-test 1`] = `
+<div data-test-block="true">
+  <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+          type="button"
+          aria-expanded="true"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:rf:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:rf:">
         dummy tekst accessible name
       </title>
       <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
@@ -169,11 +192,11 @@ exports[`Tester/IconButton WithEventHandlers play-test 1`] = `
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
          viewbox="0 0 24 24"
          focusable="false"
-         aria-labelledby="svgtitle-:rg:"
+         aria-labelledby="svgtitle-:rh:"
          aria-hidden="false"
          role="img"
     >
-      <title id="svgtitle-:rg:">
+      <title id="svgtitle-:rh:">
         dummy tekst accessible name
       </title>
       <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">

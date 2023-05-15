@@ -3,13 +3,13 @@
 exports[`Tester/List Defaults play-test 1`] = `
 <div data-test-block="true">
   <ul class="List_list__xzA1c List_list_withBullet__s5lqA  ">
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Kjenner du behovet til brukeren?
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Snakk med andre.
     </li>
   </ul>
@@ -19,13 +19,13 @@ exports[`Tester/List Defaults play-test 1`] = `
 exports[`Tester/List VariantNumber play-test 1`] = `
 <div data-test-block="true">
   <ol class="List_list__xzA1c   ">
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Kjenner du behovet til brukeren?
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Snakk med andre.
     </li>
   </ol>
@@ -39,13 +39,13 @@ exports[`Tester/List WithAttributes play-test 1`] = `
       lang="nb"
       data-testid="123ID"
   >
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Kjenner du behovet til brukeren?
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Snakk med andre.
     </li>
   </ul>
@@ -58,16 +58,16 @@ exports[`Tester/List WithBothVariantsAndAtLeast10NumberItems smoke-test 1`] = `
     Her kan du se hvordan de forskjellige variantene til en list ser ut sammen med andre elementer med veksling av luft under listene.
   </p>
   <ul class="List_list__xzA1c List_list_withBullet__s5lqA  ">
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Kjenner du behovet til brukeren?
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Snakk med andre.
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Kjenner du behovet?
     </li>
   </ul>
@@ -75,34 +75,34 @@ exports[`Tester/List WithBothVariantsAndAtLeast10NumberItems smoke-test 1`] = `
     Den første listen kan veksle mellom variantene en liste har.
   </p>
   <ol class="List_list__xzA1c   ">
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Kjenner du behovet til brukeren?
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Snakk med andre
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Kjenner du behovet?
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Snakk med andre når som helst
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Kjenner du behovet?
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Snakk med andre ofte
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Snakk med andre aldri
     </li>
   </ol>
@@ -165,10 +165,10 @@ exports[`Tester/List WithBothVariantsAndAtLeast10NumberItems smoke-test 1`] = `
 exports[`Tester/List WithLongTextAndBreaking smoke-test 1`] = `
 <div data-test-block="true">
   <ul class="List_list__xzA1c List_list_withBullet__s5lqA  ">
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Denne listItem har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert, brekke over flere linjer og får et hengende innrykk.
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       DennelistItemharenveldiglangtekst.Sålangatdentvingerframlinjeskiftmedtekstsomalltidervenstrejustertbrekkeoverflerelinjerogfårethengendeinntrykk.
     </li>
   </ul>
@@ -178,19 +178,19 @@ exports[`Tester/List WithLongTextAndBreaking smoke-test 1`] = `
 exports[`Tester/List WithMarkup smoke-test 1`] = `
 <div data-test-block="true">
   <ul class="List_list__xzA1c List_list_withBullet__s5lqA  ">
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Kjenner du behovet til
       <strong>
         brukeren?
       </strong>
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Behovet til brukeren er veldig viktig.
       <a href="#root">
         Er du sikker på at du kjenner behovet til brukeren?
       </a>
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Snakk med andre om
       <em>
         italic,
@@ -212,13 +212,13 @@ exports[`Tester/List WithRef play-test 1`] = `
   <ul class="List_list__xzA1c List_list_withBullet__s5lqA  "
       id="dummyIdForwardedFromRef"
   >
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Kjenner du behovet til brukeren?
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Snakk med andre.
     </li>
   </ul>
@@ -231,13 +231,13 @@ exports[`Tester/List WithSpacing smoke-test 1`] = `
     Jeg er et tekstavsnitt uten innrykk. Denne teksten skulle bli ca. to linjer lang, men jeg trenger litt mer innhold for å bli to linjer lang. Derfor fortsetter jeg å skrive på dette tekstavsnittet uten innrykk og etter en stund blir denne teksten ca to linjer lang.
   </p>
   <ul class="List_list__xzA1c List_list_withBullet__s5lqA List_list_hasSpacing__a4Kcg ">
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Kjenner du behovet til brukeren?
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="ListElement_element__mEewo ">
+    <li class="ListElement_element__B0xdX ">
       Snakk med andre.
     </li>
   </ul>

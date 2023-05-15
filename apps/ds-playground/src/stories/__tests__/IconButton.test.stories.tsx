@@ -54,6 +54,7 @@ export default {
     type: { table: { disable: true } },
     // Aria
     ariaDescribedby: { table: { disable: true } },
+    ariaExpanded: { table: { disable: true } },
     // Events
     onBlur: { table: { disable: true } },
     onClick: { table: { disable: true } },
@@ -318,6 +319,24 @@ WithAriaDescribedby.parameters = {
   },
 };
 WithAriaDescribedby.play = verifyAttribute('aria-describedby', 'araiDescId');
+
+// Når IconButton har aria-describedby, så har button-elementet aria-describedby satt
+export const WithAriaExpanded = Template.bind({});
+WithAriaExpanded.storyName = 'With AriaExpanded (B6)';
+WithAriaExpanded.args = {
+  ...defaultArgs,
+  ariaExpanded: true,
+};
+WithAriaExpanded.argTypes = {
+  ...WithAriaExpanded.argTypes,
+  ariaExpanded: { table: { disable: false } },
+};
+WithAriaExpanded.parameters = {
+  imageSnapshot: {
+    disable: true,
+  },
+};
+WithAriaExpanded.play = verifyAttribute('aria-expanded', 'true');
 
 // Når IconButton har en accessKey, så har button-elementet accessKey satt
 export const WithAccesskey = Template.bind({});

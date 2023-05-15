@@ -46,7 +46,7 @@ export default {
 
 const TemplateDefault: ComponentStory<typeof LinkGroup> = (args) => (
   <LinkGroup {...args}>
-    <LinkGroup.Link key={'linkGroupLink_1'} href={'#root'}>
+    <LinkGroup.Link key={'linkGroupLink_1'} target={'_blank'} href={'#root'}>
       {'Er du pendler?'}
     </LinkGroup.Link>
     <LinkGroup.Link key={'linkGroupLink_2'} href={'#root'}>
