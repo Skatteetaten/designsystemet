@@ -1,8 +1,8 @@
+import { headingAsArr } from '@skatteetaten/ds-core-utils';
 import {
   Heading,
   HeadingProps,
   headingLevelArr,
-  headingAsArr,
 } from '@skatteetaten/ds-typography';
 import { expect } from '@storybook/jest';
 import { ComponentStory, ComponentMeta } from '@storybook/react';

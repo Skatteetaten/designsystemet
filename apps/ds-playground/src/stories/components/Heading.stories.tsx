@@ -1,8 +1,5 @@
-import {
-  Heading,
-  headingAsArr,
-  headingLevelArr,
-} from '@skatteetaten/ds-typography';
+import { headingAsArr } from '@skatteetaten/ds-core-utils';
+import { Heading, headingLevelArr } from '@skatteetaten/ds-typography';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';

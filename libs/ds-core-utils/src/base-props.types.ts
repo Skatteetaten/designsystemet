@@ -23,3 +23,9 @@ export type Position = typeof positionArr[number];
 
 export const linkColorArr = ['white'] as const;
 export type LinkColor = typeof linkColorArr[number];
+
+export const headingAsArr = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as const;
+export type HeadingAs = typeof headingAsArr[number];
+
+export const subheadingAsArr = ['h2', 'h3', 'h4', 'h5', 'h6'] as const;
+export type SubheadingAs = typeof subheadingAsArr[number];
