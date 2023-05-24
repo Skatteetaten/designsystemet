@@ -23,6 +23,8 @@ import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import illustrationSource from '../__tests__/testUtils/test_bonde.svg';
 import { getVersion } from '../utils/version.utils';
 
+const inlineRadio = 'inline-radio';
+
 export default {
   component: Panel,
   title: 'Komponenter/Panel',
@@ -34,8 +36,7 @@ export default {
     },
     color: {
       options: [...panelColorArr],
-      // eslint-disable-next-line sonarjs/no-duplicate-string
-      control: 'inline-radio',
+      control: inlineRadio,
       table: {
         category: category.props,
         defaultValue: { summary: getPanelColorDefault() },
@@ -55,7 +56,7 @@ export default {
     },
     padding: {
       options: [...panelPaddingArr],
-      control: 'inline-radio',
+      control: inlineRadio,
       table: {
         category: category.props,
         defaultValue: { summary: getPanelPaddingDefault() },
@@ -67,7 +68,7 @@ export default {
     },
     spacing: {
       options: [...panelSpacingArr],
-      control: 'inline-radio',
+      control: inlineRadio,
       table: {
         category: category.props,
         defaultValue: { summary: getPanelSpacingDefault() },
@@ -79,7 +80,7 @@ export default {
     },
     subtitleAs: {
       options: [...subheadingAsArr],
-      control: 'inline-radio',
+      control: inlineRadio,
       table: {
         category: category.props,
         defaultValue: { summary: getPanelSubtitleAsDefault() },
@@ -91,7 +92,7 @@ export default {
     },
     titleAs: {
       options: [...headingAsArr],
-      control: 'inline-radio',
+      control: inlineRadio,
       table: {
         category: category.props,
         defaultValue: { summary: getPanelTitleAsDefault() },
@@ -99,7 +100,7 @@ export default {
     },
     variant: {
       options: [...panelVariantArr],
-      control: 'inline-radio',
+      control: inlineRadio,
       table: {
         category: category.props,
         defaultValue: { summary: getPanelVariantDefault() },

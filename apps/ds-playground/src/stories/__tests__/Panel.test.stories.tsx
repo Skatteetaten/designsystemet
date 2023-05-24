@@ -17,6 +17,8 @@ import { loremIpsum } from './testUtils/storybook.testing.utils';
 import illustrationSource from './testUtils/test_bonde.svg';
 
 const inlineRadio = 'inline-radio';
+const tittelText = 'Det er en tittel';
+const subtittelText = 'Det er en undertittel';
 
 export default {
   component: Panel,
@@ -207,7 +209,7 @@ export const WithTitle = Template.bind({});
 WithTitle.storyName = 'With Title (A5 delvis, A3 delvis)';
 WithTitle.args = {
   ...defaultArgs,
-  title: 'Det er en tittel',
+  title: tittelText,
   children: <Paragraph>{loremIpsum}</Paragraph>,
 };
 WithTitle.argTypes = {
@@ -217,7 +219,7 @@ WithTitle.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   const heading = canvas.getByRole('heading');
   await expect(heading).toBeInTheDocument();
-  await expect(heading).toHaveTextContent('Det er en tittel');
+  await expect(heading).toHaveTextContent(tittelText);
   await expect(heading.tagName).toBe('H3');
 };
 
@@ -226,7 +228,7 @@ export const WithTitleAs = Template.bind({});
 WithTitleAs.storyName = 'With TitleAs (A5 delvis)';
 WithTitleAs.args = {
   ...defaultArgs,
-  title: 'Det er en tittel',
+  title: tittelText,
   titleAs: 'h1',
 };
 WithTitleAs.argTypes = {
@@ -243,7 +245,7 @@ export const WithHideTitle = Template.bind({});
 WithHideTitle.storyName = 'With HideTitle (A6)';
 WithHideTitle.args = {
   ...defaultArgs,
-  title: 'Det er en tittel',
+  title: tittelText,
   hideTitle: true,
 };
 WithHideTitle.argTypes = {
@@ -260,7 +262,7 @@ export const WithSubtitle = Template.bind({});
 WithSubtitle.storyName = 'With Subtitle (A7 delvis, A3 delvis)';
 WithSubtitle.args = {
   ...defaultArgs,
-  subtitle: 'Det er en undertittel',
+  subtitle: subtittelText,
   children: <Paragraph>{loremIpsum}</Paragraph>,
 };
 WithSubtitle.argTypes = {
@@ -270,7 +272,7 @@ WithSubtitle.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   const heading = canvas.getByRole('heading');
   await expect(heading).toBeInTheDocument();
-  await expect(heading).toHaveTextContent('Det er en undertittel');
+  await expect(heading).toHaveTextContent(subtittelText);
   await expect(heading.tagName).toBe('H4');
 };
 
@@ -296,7 +298,7 @@ export const WithHideSubtitle = Template.bind({});
 WithHideSubtitle.storyName = 'With HideSubtitle (A8)';
 WithHideSubtitle.args = {
   ...defaultArgs,
-  subtitle: 'Det er en undertittel',
+  subtitle: subtittelText,
   hideSubtitle: true,
 };
 WithHideSubtitle.argTypes = {

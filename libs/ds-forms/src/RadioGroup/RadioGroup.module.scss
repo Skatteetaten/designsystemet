@@ -1,0 +1,42 @@
+@import 'libs/ds-core-utils/src/styles.scss';
+
+.radioGroup {
+  padding: 0;
+  border: none;
+  margin: 0 0 var(--spacing-m);
+
+  &Legend {
+    margin-bottom: var(--spacing-m);
+    font-size: var(--font-size-m);
+    line-height: var(--semantic-line-height-input);
+    overflow-wrap: anywhere;
+    word-break: normal;
+
+    &_required::after,
+    &AsMarkup_required > :first-child::after {
+      width: fit-content;
+      color: var(--semantic-danger-foreground);
+      content: '*';
+      font-weight: var(--font-weight-bold);
+    }
+
+    &_hide {
+      @include sr-only;
+    }
+  }
+
+  &ItemContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
+
+    &_horizontal {
+      flex-direction: row;
+      gap: var(--spacing-l);
+    }
+
+    &_error {
+      margin-bottom: var(--spacing-m);
+    }
+  }
+}
