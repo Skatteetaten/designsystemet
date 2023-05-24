@@ -29,7 +29,7 @@ export default {
     hasError: { table: { disable: true } },
     hideLegend: { table: { disable: true } },
     legend: { table: { disable: true } },
-    selectedValue: { table: { disable: true } },
+    selectedValue: { type: 'string', table: { disable: true } },
     variant: {
       table: { disable: true },
       options: [...radioGroupVariantArr],
