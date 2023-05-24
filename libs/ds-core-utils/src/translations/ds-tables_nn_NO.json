@@ -1,7 +1,7 @@
 {
-  "pagination.Back": "TODO",
-  "pagination.Forward": "TODO",
-  "pagination.Title": "TODO",
+  "pagination.Back": "Tilbake",
+  "pagination.Forward": "Fram",
+  "pagination.Title": "Viser {view} av {total}",
   "table.Sortable": "Sorterbar",
   "table.SortedAscending": "Sortert stigande",
   "table.SortedDescending": "Sortert søkkande",

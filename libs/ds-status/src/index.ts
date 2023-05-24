@@ -1,1 +1,2 @@
-export * from './MessageBar/MessageBar';
+export * from './Alert/Alert';
+export * from './Alert/Alert.types';

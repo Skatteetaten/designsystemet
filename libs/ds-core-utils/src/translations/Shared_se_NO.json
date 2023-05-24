@@ -1,8 +1,8 @@
 {
-  "shared.AccessibilityStatement": "TODO",
-  "shared.ChooseValue": "TODO",
-  "shared.Close": "TODO",
-  "shared.ContactUs": "TODO",
+  "shared.AccessibilityStatement": "Almmusjulggaštus",
+  "shared.ChooseValue": "Vállje",
+  "shared.Close": "Govčča",
+  "shared.ContactUs": "Válde oktavuođa minguin",
   "shared.RequiredField": "Fertet deavddit",
-  "shared.SecurityAndPrivacy": "TODO"
+  "shared.SecurityAndPrivacy": "Sihkarvuohta ja persovdnasuodjaleapmi"
 }

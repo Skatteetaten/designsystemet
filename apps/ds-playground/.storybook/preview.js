@@ -34,7 +34,8 @@ const makeViewPort = (dsbreakpoint) => {
     [dsbreakpoint]: {
       name: dsbreakpoint,
       styles: {
-        width: breakpoints[dsbreakpoint],
+        width:
+          dsbreakpoint === '--mobile' ? '320px' : breakpoints[dsbreakpoint],
         height: '100%',
       },
     },
@@ -42,6 +43,7 @@ const makeViewPort = (dsbreakpoint) => {
 };
 
 const DSViewports = {
+  ...makeViewPort('--mobile'),
   ...makeViewPort('--breakpoint-xs'),
   ...makeViewPort('--breakpoint-s'),
   ...makeViewPort('--breakpoint-m'),
