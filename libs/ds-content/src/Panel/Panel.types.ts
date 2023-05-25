@@ -65,13 +65,13 @@ export type PanelDiscriminatedGraphicProps =
   | {
       /** Source til illustrasjonsbilde */
       imageSource?: string;
-      /** Icon-komponent  */
+      /** Icon-komponent som en funksjon */
       renderIcon?: never;
     }
   | {
       /** Source til illustrasjonsbilde */
       imageSource?: never;
-      /** Icon-komponent  */
+      /** Icon-komponent som en funksjon */
       renderIcon?: () => ReactElement<IconProps>;
     };
 

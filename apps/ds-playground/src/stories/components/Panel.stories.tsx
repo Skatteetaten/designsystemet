@@ -63,8 +63,8 @@ export default {
       },
     },
     renderIcon: {
-      table: { disable: true },
       control: { type: null },
+      table: { category: category.props },
     },
     spacing: {
       options: [...panelSpacingArr],
