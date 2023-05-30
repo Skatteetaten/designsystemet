@@ -3,11 +3,11 @@
 import { ReactNode, useRef, useState } from 'react';
 
 import { MegaButton } from '@skatteetaten/ds-buttons';
+import { densityArr } from '@skatteetaten/ds-core-utils';
 import {
   Table,
   TableProps,
   getTableVariantDefault,
-  tableVariantArr,
   SortState,
 } from '@skatteetaten/ds-table';
 import { Heading } from '@skatteetaten/ds-typography';
@@ -23,7 +23,7 @@ export default {
     // Props
     children: { table: { category: category.props } },
     variant: {
-      options: [...tableVariantArr],
+      options: [...densityArr],
       control: 'radio',
       table: {
         category: category.props,

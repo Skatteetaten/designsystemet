@@ -1,14 +1,11 @@
 import { Dispatch, ReactNode, SetStateAction } from 'react';
 
-import { BaseProps } from '@skatteetaten/ds-core-utils';
+import { BaseProps, Density } from '@skatteetaten/ds-core-utils';
 
 import { DataCellProps } from '../DataCell/DataCell.types';
 import { TableHeaderCellProps } from '../HeaderCell/HeaderCell.types';
 import { RowProps } from '../Row/Row.types';
 import { TableSumProps } from '../Sum/Sum.types';
-
-export const tableVariantArr = ['standard', 'compact'] as const;
-export type TableVariant = typeof tableVariantArr[number];
 
 //TODO Skal bli en del av felles Position type?
 export const textAlignArr = ['left', 'right', 'center'] as const;
@@ -25,7 +22,7 @@ export interface SortState {
 export interface TableContextProps {
   sortState?: SortState;
   setSortState?: Dispatch<SetStateAction<SortState>>;
-  variant: TableVariant;
+  variant: Density;
   rowInEditModeId?: string;
   setRowInEditModeId: Dispatch<SetStateAction<string | undefined>>;
 }
@@ -34,7 +31,7 @@ export interface TableProps extends BaseProps {
   /** Table caption  */
   caption: string;
   /** Definerer stilen til tabellen. */
-  variant?: TableVariant;
+  variant?: Density;
   /** Holder styr på sortering av kolonner */
   sortState?: SortState;
   /** Styrer om tabellen skal ta opp full bredde eller tilpasse seg størrelsen på innholdet */

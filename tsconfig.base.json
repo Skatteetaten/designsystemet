@@ -17,6 +17,7 @@
     "baseUrl": ".",
     "paths": {
       "@skatteetaten/ds-buttons": ["libs/ds-buttons/src/index.ts"],
+      "@skatteetaten/ds-collections": ["libs/ds-collections/src/index.ts"],
       "@skatteetaten/ds-content": ["libs/ds-content/src/index.ts"],
       "@skatteetaten/ds-core-designtokens": [
         "libs/ds-core-designtokens/src/index.ts"

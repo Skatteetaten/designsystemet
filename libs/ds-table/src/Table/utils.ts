@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 
-import { Size } from '@skatteetaten/ds-core-utils';
+import { Density, Size } from '@skatteetaten/ds-core-utils';
 import { TFunction } from 'i18next';
 
-import { SortState, TableVariant } from './Table.types';
+import { SortState } from './Table.types';
 
 export const useMediaQuery = (query: string): boolean => {
   const [matches, setMatches] = useState(false);
@@ -25,7 +25,7 @@ export const useMediaQuery = (query: string): boolean => {
 
 export const getIconButtonSize = (
   isDesktop: boolean,
-  variant?: TableVariant
+  variant?: Density
 ): Extract<Size, 'extraSmall' | 'medium' | 'large'> => {
   if (variant === 'compact') {
     return 'extraSmall';
