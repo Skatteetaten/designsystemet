@@ -1,7 +1,10 @@
 /* eslint-disable jsx-a11y/no-access-key */
 import { forwardRef } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import {
+  getCommonButtonTypeDefault,
+  getCommonClassNameDefault,
+} from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
 import { ButtonProps } from './Button.types';
@@ -20,7 +23,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       variant = getButtonVariantDefault(),
       accessKey,
       disabled,
-      type = 'button',
+      type = getCommonButtonTypeDefault(),
       ariaDescribedby,
       onBlur,
       onClick,

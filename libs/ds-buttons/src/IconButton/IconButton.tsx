@@ -1,6 +1,9 @@
 import { forwardRef } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import {
+  getCommonButtonTypeDefault,
+  getCommonClassNameDefault,
+} from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
 import { getIconButtonSizeDefault } from './defaults';
@@ -23,7 +26,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
       svgPath,
       isOutlined,
       disabled,
-      type = 'button',
+      type = getCommonButtonTypeDefault(),
       onClick,
       onBlur,
       onFocus,
