@@ -47,7 +47,17 @@ export default {
         disable: true,
       },
     },
+    defaultChecked: {
+      table: {
+        disable: true,
+      },
+    },
     disabled: {
+      table: {
+        disable: true,
+      },
+    },
+    name: {
       table: {
         disable: true,
       },
@@ -477,3 +487,37 @@ WithValue.parameters = {
   imageSnapshot: { disable: true },
 };
 WithValue.play = verifyAttribute('value', 'test_value_checkbox');
+
+// Når Checkbox har defaultChecked, så er defaultChecked satt
+export const WithDefaultChecked = Template.bind({});
+WithDefaultChecked.storyName = 'With DefaultChecked';
+WithDefaultChecked.args = {
+  ...defaultArgs,
+  defaultChecked: true,
+};
+WithDefaultChecked.argTypes = {
+  defaultChecked: { table: { disable: false } },
+};
+WithDefaultChecked.parameters = {
+  imageSnapshot: { disable: true },
+};
+WithDefaultChecked.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const inputNode = canvas.getByRole('checkbox');
+  await expect(inputNode).toBeChecked();
+};
+
+// Når Checkbox har en name, så er name satt
+export const WithName = Template.bind({});
+WithName.storyName = 'With Name';
+WithName.args = {
+  ...defaultArgs,
+  name: 'test_name_checkbox',
+};
+WithName.argTypes = {
+  name: { table: { disable: false } },
+};
+WithName.parameters = {
+  imageSnapshot: { disable: true },
+};
+WithName.play = verifyAttribute('name', 'test_name_checkbox');

@@ -34,8 +34,19 @@ export default {
         category: category.htmlAttribute,
       },
     },
+    defaultChecked: {
+      control: 'boolean',
+      table: {
+        category: category.htmlAttribute,
+      },
+    },
     disabled: {
       control: 'boolean',
+      table: {
+        category: category.htmlAttribute,
+      },
+    },
+    name: {
       table: {
         category: category.htmlAttribute,
       },
@@ -83,14 +94,31 @@ const TemplateExample: ComponentStory<typeof Checkbox> = () => {
   );
 };
 
-export const CheckboxDefault = TemplateDefault.bind({});
+export const CheckboxDefaultControlled = TemplateDefault.bind({});
+CheckboxDefaultControlled.storyName = 'Default Controlled';
+CheckboxDefaultControlled.argTypes = {
+  defaultChecked: { control: { disable: true } },
+};
+CheckboxDefaultControlled.args = {
+  children: 'Checkbox',
+  checked: false,
+  defaultChecked: undefined,
+  name: undefined,
+};
+
+export const CheckboxDefaultUncontrolled = TemplateDefault.bind({});
+CheckboxDefaultUncontrolled.storyName = 'Default Uncontrolled';
+CheckboxDefaultUncontrolled.argTypes = {
+  checked: { control: { disable: true } },
+};
+CheckboxDefaultUncontrolled.args = {
+  children: 'Checkbox',
+  checked: undefined,
+  defaultChecked: false,
+};
+
 export const CheckboxExample = TemplateExample.bind({});
-CheckboxDefault.storyName = 'Default';
 CheckboxExample.storyName = 'Example';
 CheckboxExample.parameters = {
   controls: { disabled: true },
-};
-
-CheckboxDefault.args = {
-  children: 'Checkbox',
 };

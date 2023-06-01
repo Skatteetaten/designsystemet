@@ -17,7 +17,9 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       description,
       errorMessage,
       checked,
+      defaultChecked,
       disabled,
+      name,
       required,
       value,
       ariaLabelledby,
@@ -53,7 +55,9 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           className={styles.input}
           data-testid={dataTestId}
           checked={checked}
+          defaultChecked={defaultChecked}
           disabled={disabled}
+          name={name}
           required={required}
           type={'checkbox'}
           value={value}

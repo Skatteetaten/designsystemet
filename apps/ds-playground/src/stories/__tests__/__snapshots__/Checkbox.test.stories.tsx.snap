@@ -188,6 +188,37 @@ exports[`Tester/Checkbox WithCheckedAndRequired play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Checkbox WithDefaultChecked play-test 1`] = `
+<div data-test-block="true">
+  <div class="Checkbox_container__xhXb4 ">
+    <input id="checkboxInputId-:r19:"
+           class="Checkbox_input__fDeJ7"
+           type="checkbox"
+           value
+           checked
+    >
+    <label for="checkboxInputId-:r19:"
+           class="Checkbox_label__sEFOt "
+    >
+      <span class="Checkbox_labelCheckbox__TIE0R">
+        <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+        </span>
+      </span>
+      <span class="Checkbox_labelTextWrapper__lS76D ">
+        <span class="Checkbox_labelTextWrapperText__EYzpJ">
+          Checkbox
+        </span>
+      </span>
+    </label>
+    <div id="checkboxErrorId-:r1a:"
+         class
+         aria-live="assertive"
+    >
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Tester/Checkbox WithDescription play-test 1`] = `
 <div data-test-block="true">
   <div class="Checkbox_container__xhXb4 ">
@@ -544,6 +575,37 @@ exports[`Tester/Checkbox WithLongTextAndBreaking smoke-test 1`] = `
       </span>
     </label>
     <div id="checkboxErrorId-:rf:"
+         class
+         aria-live="assertive"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Checkbox WithName play-test 1`] = `
+<div data-test-block="true">
+  <div class="Checkbox_container__xhXb4 ">
+    <input id="checkboxInputId-:r1b:"
+           class="Checkbox_input__fDeJ7"
+           name="test_name_checkbox"
+           type="checkbox"
+           value
+    >
+    <label for="checkboxInputId-:r1b:"
+           class="Checkbox_label__sEFOt "
+    >
+      <span class="Checkbox_labelCheckbox__TIE0R">
+        <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+        </span>
+      </span>
+      <span class="Checkbox_labelTextWrapper__lS76D ">
+        <span class="Checkbox_labelTextWrapperText__EYzpJ">
+          Checkbox
+        </span>
+      </span>
+    </label>
+    <div id="checkboxErrorId-:r1c:"
          class
          aria-live="assertive"
     >
