@@ -24,6 +24,33 @@ exports[`Tester/OpenClose Compact smoke-test 1`] = `
 </div>
 `;
 
+exports[`Tester/OpenClose CompactAndIsExpanded smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="OpenClose_tag__hWZ8z">
+    <button class="OpenClose_openClose__HxKKD OpenClose_openClose_compact__TuMGQ  "
+            aria-expanded="true"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_open__3ueiR OpenClose_icon_compact__Nl-IS"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+        </path>
+      </svg>
+      <span class="OpenClose_title__tWrXz OpenClose_title_compact__8rSWt ">
+        Er jeg pendler?
+      </span>
+    </button>
+  </div>
+  <div class="OpenClose_content__SuoX1 OpenClose_content_compact__Hh-8S ">
+    En pendler er en lønnstaker som overnatter borte på grunn av jobb. Hvis du er pendler kan du ha krav på fradrag for dine merkostnader til kost, losji og reiser til og fra pendlerboligen.
+  </div>
+</div>
+`;
+
 exports[`Tester/OpenClose CompactWithIconRight smoke-test 1`] = `
 <div data-test-block="true">
   <div class="OpenClose_tag__hWZ8z">

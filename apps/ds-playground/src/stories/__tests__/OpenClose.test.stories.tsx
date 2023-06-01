@@ -330,13 +330,25 @@ IsExpanded.args = {
 IsExpanded.argTypes = {
   isExpanded: { table: { disable: false } },
 };
-
 IsExpanded.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   const content = await canvas.findByText(defaultContent);
   await expect(content).toBeInTheDocument();
   const button = canvas.getByRole('button');
   await expect(button).toHaveAttribute('aria-expanded', 'true');
+};
+
+// Når OpenClose har isExpanded satt til true og variant er 'compact', vises innrykk med riktig margin
+export const CompactAndIsExpanded = Template.bind({});
+CompactAndIsExpanded.storyName = 'With Compact And IsExpanded (A4 delvis)';
+CompactAndIsExpanded.args = {
+  ...defaultArgs,
+  isExpanded: true,
+  variant: 'compact',
+};
+CompactAndIsExpanded.argTypes = {
+  isExpanded: { table: { disable: false } },
+  variant: { table: { disable: false } },
 };
 
 // Når OpenClose har isExpanded satt til true og iconPosition er 'right', vises innhold uten innrykk
