@@ -3,14 +3,14 @@ import { forwardRef, useId, useContext } from 'react';
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { RadioProps } from './Radio.types';
-import { RadioGroupContext } from '../RadioGroup/RadioGroupContext';
+import { RadioGroupContext } from '../RadioGroupContext/RadioGroupContext';
 
 import styles from './Radio.module.scss';
 
 export const Radio = forwardRef<HTMLInputElement, RadioProps>(
   (
     {
-      id,
+      id: externalId,
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
@@ -24,7 +24,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
     const context = useContext(RadioGroupContext);
 
     const uniqueInputId = `radioInputId-${useId()}`;
-    const inputId = id ?? uniqueInputId;
+    const inputId = externalId ?? uniqueInputId;
 
     const concatenatedClassName = `${styles.radio} ${className}`.trim();
     const ariaDescribedbyInput = `${ariaDescribedby ?? ''} ${
@@ -33,6 +33,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
 
     return (
       <div className={concatenatedClassName} lang={lang}>
+        {/* eslint-disable-next-line jsx-a11y/role-supports-aria-props */}
         <input
           ref={ref}
           id={inputId}
@@ -42,6 +43,11 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
             context?.selectedValue === undefined
               ? undefined
               : context?.selectedValue === value
+          }
+          defaultChecked={
+            context?.defaultValue === undefined
+              ? undefined
+              : context?.defaultValue === value
           }
           value={value}
           type={'radio'}

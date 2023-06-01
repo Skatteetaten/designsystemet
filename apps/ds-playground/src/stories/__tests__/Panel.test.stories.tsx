@@ -16,7 +16,6 @@ import { within } from '@storybook/testing-library';
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 import illustrationSource from './testUtils/test_bonde.svg';
 
-const inlineRadio = 'inline-radio';
 const tittelText = 'Det er en tittel';
 const subtittelText = 'Det er en undertittel';
 
@@ -42,7 +41,7 @@ export default {
     color: {
       table: { disable: true },
       options: [...panelColorArr],
-      control: inlineRadio,
+      control: 'inline-radio',
     },
     hideGraphicMobile: { table: { disable: true } },
     hideSubtitle: {
@@ -63,7 +62,7 @@ export default {
     padding: {
       table: { disable: true },
       options: [...panelPaddingArr],
-      control: inlineRadio,
+      control: 'inline-radio',
     },
     renderIcon: {
       table: { disable: true },
@@ -72,14 +71,14 @@ export default {
     spacing: {
       table: { disable: true },
       options: [...panelSpacingArr],
-      control: inlineRadio,
+      control: 'inline-radio',
     },
     subtitle: {
       table: { disable: true },
     },
     subtitleAs: {
       options: [...subheadingAsArr],
-      control: inlineRadio,
+      control: 'inline-radio',
       table: { disable: true },
     },
     title: {
@@ -87,13 +86,13 @@ export default {
     },
     titleAs: {
       options: [...headingAsArr],
-      control: inlineRadio,
+      control: 'inline-radio',
       table: { disable: true },
     },
     variant: {
       table: { disable: true },
       options: [...panelVariantArr],
-      control: inlineRadio,
+      control: 'inline-radio',
     },
   },
 } as ComponentMeta<typeof Panel>;

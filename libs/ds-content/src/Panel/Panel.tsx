@@ -120,4 +120,14 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
     );
   }
 );
+
 Panel.displayName = 'Panel';
+
+export {
+  getPanelVariantDefault,
+  getPanelSpacingDefault,
+  getPanelColorDefault,
+  getPanelTitleAsDefault,
+  getPanelSubtitleAsDefault,
+  getPanelPaddingDefault,
+};

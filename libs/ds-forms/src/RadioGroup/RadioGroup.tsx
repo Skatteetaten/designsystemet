@@ -4,9 +4,9 @@ import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { getRadioGroupVariantDefault } from './defaults';
 import { RadioGroupComponent, RadioGroupProps } from './RadioGroup.types';
-import { RadioGroupContext } from './RadioGroupContext';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { Radio } from '../Radio/Radio';
+import { RadioGroupContext } from '../RadioGroupContext/RadioGroupContext';
 
 import styles from './RadioGroup.module.scss';
 
@@ -21,11 +21,13 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
       legend,
       selectedValue,
       variant = getRadioGroupVariantDefault(),
+      defaultValue,
       disabled,
       name,
       required,
       hasError,
       hideLegend,
+      showRequiredMark,
       onChange,
       children,
     },
@@ -35,14 +37,17 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
     const uniqueNameId = `radioInputName-${useId()}`;
     const nameId = name ?? uniqueNameId;
 
-    const hasVariantHorizontal = variant === 'horizontal';
+    if (legend === '') {
+      throw new Error('Empty string is not a valid legend');
+    }
 
-    const concatenatedClassName = `${styles.radioGroup} ${className}`;
     let requiredClassName;
     if (typeof legend === 'string') {
-      requiredClassName = required ? styles.radioGroupLegend_required : '';
+      requiredClassName = showRequiredMark
+        ? styles.radioGroupLegend_required
+        : '';
     } else {
-      requiredClassName = required
+      requiredClassName = showRequiredMark
         ? styles.radioGroupLegendAsMarkup_required
         : '';
     }
@@ -51,9 +56,10 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
     const legendClassName =
       `${styles.radioGroupLegend} ${hideClassName} ${requiredClassName}`.trim();
     const errorClassName = hasError ? styles.radioGroupItemContainer_error : '';
-    const variantClassName = hasVariantHorizontal
-      ? `${styles.radioGroupItemContainer_horizontal}`
-      : '';
+    const variantClassName =
+      variant === 'horizontal'
+        ? `${styles.radioGroupItemContainer_horizontal}`
+        : '';
     const radioGroupItemContainer =
       `${styles.radioGroupItemContainer} ${errorClassName} ${variantClassName}`.trim();
 
@@ -61,7 +67,7 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
       <fieldset
         ref={ref}
         id={id}
-        className={concatenatedClassName}
+        className={`${styles.radioGroup} ${className}`}
         lang={lang}
         data-testid={dataTestId}
         disabled={disabled}
@@ -71,9 +77,10 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
         <div className={radioGroupItemContainer}>
           <RadioGroupContext.Provider
             value={{
+              defaultValue,
               errorId: hasError ? errorId : '',
               name: nameId,
-              selectedValue: selectedValue,
+              selectedValue,
               hasError: hasError ?? undefined,
               required,
               onChange,
@@ -96,3 +103,5 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
 
 RadioGroup.displayName = 'RadioGroup';
 RadioGroup.Radio = Radio;
+
+export { getRadioGroupVariantDefault };

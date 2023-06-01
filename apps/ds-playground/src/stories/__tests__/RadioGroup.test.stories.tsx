@@ -25,11 +25,19 @@ export default {
     'data-testid': { table: { disable: true } },
     // Props
     children: { table: { disable: true } },
+    defaultValue: {
+      type: 'string',
+      table: { disable: true },
+    },
     errorMessage: { table: { disable: true } },
     hasError: { table: { disable: true } },
     hideLegend: { table: { disable: true } },
     legend: { table: { disable: true } },
-    selectedValue: { type: 'string', table: { disable: true } },
+    showRequiredMark: { table: { disable: true } },
+    selectedValue: {
+      type: 'string',
+      table: { disable: true },
+    },
     variant: {
       table: { disable: true },
       options: [...radioGroupVariantArr],
@@ -52,13 +60,18 @@ const Template: ComponentStory<typeof RadioGroup> = (args) => {
       <RadioGroup
         {...args}
         onChange={(e): void => {
-          setArgs({ selectedValue: e.target.value });
+          if (args.selectedValue) {
+            setArgs({ selectedValue: e.target.value });
+          } else if (args.defaultValue) {
+            setArgs({ defaultValue: e.target.value });
+          }
         }}
       />
     </div>
   );
 };
 
+const selectedValue = 'annet';
 const defaultLegendText = 'Type virksomhet';
 const defaultArgs: RadioGroupProps = {
   legend: defaultLegendText,
@@ -164,7 +177,7 @@ VariantHorizontal.argTypes = {
 
 // Når RadioGroup har prop hideLegend, så skal legend skjules visuelt men fortsatt være synlig for en skjermleser
 export const WithHideLegend = Template.bind({});
-WithHideLegend.storyName = 'With Hide Legend (B1)';
+WithHideLegend.storyName = 'With HideLegend (B1)';
 WithHideLegend.args = {
   ...defaultArgs,
   hideLegend: true,
@@ -183,7 +196,8 @@ export const WithSelectedValue = Template.bind({});
 WithSelectedValue.storyName = 'With SelectedValue (A3 delvis)';
 WithSelectedValue.args = {
   ...defaultArgs,
-  selectedValue: 'annet',
+  selectedValue: selectedValue,
+  defaultValue: undefined,
 };
 WithSelectedValue.argTypes = {
   selectedValue: { table: { disable: false } },
@@ -192,7 +206,25 @@ WithSelectedValue.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   const input = canvas.getByRole('radio', { checked: true });
   // eslint-disable-next-line jest-dom/prefer-to-have-value
-  await expect(input).toHaveAttribute('value', 'annet');
+  await expect(input).toHaveAttribute('value', selectedValue);
+};
+
+// Når RadioGroup har prop defaultValue, så er riktig radio blitt valgt
+export const WithDefaultValue = Template.bind({});
+WithDefaultValue.storyName = 'With DefaultValue (A3 delvis)';
+WithDefaultValue.args = {
+  ...defaultArgs,
+  selectedValue: undefined,
+  defaultValue: selectedValue,
+};
+WithDefaultValue.argTypes = {
+  defaultValue: { table: { disable: false } },
+};
+WithDefaultValue.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const input = canvas.getByRole('radio', { checked: true });
+  // eslint-disable-next-line jest-dom/prefer-to-have-value
+  await expect(input).toHaveAttribute('value', selectedValue);
 };
 
 // Når RadioGroup har prop disabled, så er alle Radio disabled og stil er satt til disabled
@@ -201,7 +233,8 @@ WithDisabled.storyName = 'With Disabled (A4 delvis)';
 WithDisabled.args = {
   ...defaultArgs,
   disabled: true,
-  selectedValue: 'annet',
+  selectedValue: selectedValue,
+  defaultValue: undefined,
 };
 WithDisabled.argTypes = {
   disabled: { table: { disable: false } },
@@ -214,7 +247,7 @@ WithDisabled.play = async ({ canvasElement }): Promise<void> => {
   });
 };
 
-// Når RadioGroup er påkrevd, så har alle Radio required og stil er satt til required
+// Når RadioGroup er påkrevd, så har alle Radio required attributtet
 export const WithRequired = Template.bind({});
 WithRequired.storyName = 'With Required (A7 delvis)';
 WithRequired.args = {
@@ -232,11 +265,24 @@ WithRequired.play = async ({ canvasElement }): Promise<void> => {
   });
 };
 
-// Når RadioGroup er påkrev og legend består av markup, så skal obligatorisk stjerne vises på etter første barn
-export const WithRequiredAndLegendAsMarkup = Template.bind({});
-WithRequiredAndLegendAsMarkup.storyName =
-  'With Required And Legend As Markup (A7 delvis)';
-WithRequiredAndLegendAsMarkup.args = {
+// Når RadioGroup er påkrevd med markering, så vises obligatorisk stil
+export const WithRequiredAndMark = Template.bind({});
+WithRequiredAndMark.storyName = 'With Required And Mark (A7 delvis, A8 delvis)';
+WithRequiredAndMark.args = {
+  ...defaultArgs,
+  required: true,
+  showRequiredMark: true,
+};
+WithRequiredAndMark.argTypes = {
+  required: { table: { disable: false } },
+  showRequiredMark: { table: { disable: false } },
+};
+
+// Når RadioGroup er påkrev med markering og legend består av markup, så vises obligatorisk stil etter første barn
+export const WithRequiredAndMarkAndLegendAsMarkup = Template.bind({});
+WithRequiredAndMarkAndLegendAsMarkup.storyName =
+  'With Required And Mark And Legend As Markup (A7 delvis, A8 delvis)';
+WithRequiredAndMarkAndLegendAsMarkup.args = {
   ...defaultArgs,
   legend: (
     <>
@@ -247,9 +293,10 @@ WithRequiredAndLegendAsMarkup.args = {
     </>
   ),
   required: true,
+  showRequiredMark: true,
 };
-WithRequiredAndLegendAsMarkup.argTypes = {
-  required: { table: { disable: false } },
+WithRequiredAndMarkAndLegendAsMarkup.argTypes = {
+  showRequiredMark: { table: { disable: false } },
 };
 
 // Når RadioGroup har prop name, så har alle Radio name med verdi fra konsumenten
@@ -296,18 +343,21 @@ WithErrorMessage.play = async ({ canvasElement }): Promise<void> => {
 };
 
 // Når RadioGroup har en error, så vises feilmelding, alle radio's relevante aria-attributter og stil er satt til error
-export const WithHasError = Template.bind({});
-WithHasError.storyName = 'With HasError (B4 delvis, A3 delvis)';
-WithHasError.args = {
+export const WithErrorMessageAndHasError = Template.bind({});
+WithErrorMessageAndHasError.storyName =
+  'With ErrorMessage And HasError (B4 delvis, A3 delvis)';
+WithErrorMessageAndHasError.args = {
   ...defaultArgs,
   errorMessage: 'Feilmelding',
   hasError: true,
-  selectedValue: 'annet',
+  selectedValue: selectedValue,
+  defaultValue: undefined,
 };
-WithHasError.argTypes = {
+WithErrorMessageAndHasError.argTypes = {
+  errorMessage: { table: { disable: false } },
   hasError: { table: { disable: false } },
 };
-WithHasError.play = async ({ canvasElement }): Promise<void> => {
+WithErrorMessageAndHasError.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   const radios = canvas.getAllByRole('radio');
   const errorMessage = canvas.getByText('Feilmelding');

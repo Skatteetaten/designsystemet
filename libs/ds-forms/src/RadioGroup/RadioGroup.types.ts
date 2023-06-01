@@ -8,6 +8,7 @@ export const radioGroupVariantArr = ['standard', 'horizontal'] as const;
 export type RadioGroupVariant = typeof radioGroupVariantArr[number];
 
 export interface RadioGroupContextProps {
+  defaultValue?: string | number;
   errorId?: string;
   name: string;
   selectedValue?: string | number;
@@ -21,16 +22,22 @@ type RequiredInputHTMLAttributes = Pick<
   'onChange'
 >;
 
+type RequiredFieldsetHTMLAttributes = Pick<
+  ComponentPropsWithoutRef<'fieldset'>,
+  'disabled'
+>;
+
 type InputHTMLAttributes = Partial<RequiredInputHTMLAttributes>;
 interface InputPropsHTMLAttributes extends InputHTMLAttributes {
   onChange?: ChangeEventHandler<HTMLInputElement>;
 }
 
-export interface RadioGroupProps extends InputPropsHTMLAttributes, BaseProps {
+export interface RadioGroupComponentCommonProps
+  extends InputPropsHTMLAttributes,
+    RequiredFieldsetHTMLAttributes,
+    BaseProps {
   /** Radio-komponenter */
   children: JSX.Element | JSX.Element[];
-  /** Om gruppen skal være inaktiv */
-  disabled?: boolean;
   /** Feilmelding */
   errorMessage?: string;
   /** Viser feilmelding */
@@ -41,13 +48,41 @@ export interface RadioGroupProps extends InputPropsHTMLAttributes, BaseProps {
   legend: React.ReactNode;
   /** Overskriver autogenerert name */
   name?: string;
-  /** Om gruppen er påkrevd */
-  required?: boolean;
-  /** Hvilke value som er valgt */
-  selectedValue?: string | number;
   /** Definerer stilen til gruppen. */
   variant?: RadioGroupVariant;
 }
+
+type RadioGroupDiscriminatedRequiredProps =
+  | {
+      /** Om gruppen er obligatorisk */
+      required: boolean;
+      /** Om obligatorisk gruppe skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
+      showRequiredMark?: boolean;
+    }
+  | {
+      /** Om gruppen er obligatorisk */
+      required?: never;
+      /** Om obligatorisk gruppe skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
+      showRequiredMark?: never;
+    };
+
+type RadioGroupDiscriminatedCheckedProps =
+  | {
+      /** Hvilke value som skal være satt til checked (controlled state) */
+      selectedValue?: string | number;
+      /** Hvilke value som skal være satt til default checked (uncontrolled state) */
+      defaultValue?: never;
+    }
+  | {
+      /** Hvilke value som skal være satt til checked (controlled state) */
+      selectedValue?: never;
+      /** Hvilke value som skal være satt til default checked (uncontrolled state) */
+      defaultValue?: string | number;
+    };
+
+export type RadioGroupProps = RadioGroupComponentCommonProps &
+  RadioGroupDiscriminatedRequiredProps &
+  RadioGroupDiscriminatedCheckedProps;
 
 export interface RadioGroupComponent
   extends React.ForwardRefExoticComponent<

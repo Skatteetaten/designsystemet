@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import { MegaButton, Link } from '@skatteetaten/ds-buttons';
 import {
   Panel,
@@ -23,8 +24,6 @@ import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import illustrationSource from '../__tests__/testUtils/test_bonde.svg';
 import { getVersion } from '../utils/version.utils';
 
-const inlineRadio = 'inline-radio';
-
 export default {
   component: Panel,
   title: 'Komponenter/Panel',
@@ -36,7 +35,7 @@ export default {
     },
     color: {
       options: [...panelColorArr],
-      control: inlineRadio,
+      control: 'inline-radio',
       table: {
         category: category.props,
         defaultValue: { summary: getPanelColorDefault() },
@@ -56,7 +55,7 @@ export default {
     },
     padding: {
       options: [...panelPaddingArr],
-      control: inlineRadio,
+      control: 'inline-radio',
       table: {
         category: category.props,
         defaultValue: { summary: getPanelPaddingDefault() },
@@ -68,7 +67,7 @@ export default {
     },
     spacing: {
       options: [...panelSpacingArr],
-      control: inlineRadio,
+      control: 'inline-radio',
       table: {
         category: category.props,
         defaultValue: { summary: getPanelSpacingDefault() },
@@ -80,7 +79,7 @@ export default {
     },
     subtitleAs: {
       options: [...subheadingAsArr],
-      control: inlineRadio,
+      control: 'inline-radio',
       table: {
         category: category.props,
         defaultValue: { summary: getPanelSubtitleAsDefault() },
@@ -92,7 +91,7 @@ export default {
     },
     titleAs: {
       options: [...headingAsArr],
-      control: inlineRadio,
+      control: 'inline-radio',
       table: {
         category: category.props,
         defaultValue: { summary: getPanelTitleAsDefault() },
@@ -100,7 +99,7 @@ export default {
     },
     variant: {
       options: [...panelVariantArr],
-      control: inlineRadio,
+      control: 'inline-radio',
       table: {
         category: category.props,
         defaultValue: { summary: getPanelVariantDefault() },

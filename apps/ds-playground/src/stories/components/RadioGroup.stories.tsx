@@ -4,6 +4,7 @@ import {
   RadioGroup,
   RadioGroupProps,
   radioGroupVariantArr,
+  getRadioGroupVariantDefault,
 } from '@skatteetaten/ds-forms';
 import { useArgs } from '@storybook/client-api';
 import { ComponentMeta, ComponentStory, Story } from '@storybook/react';
@@ -11,16 +12,16 @@ import { ComponentMeta, ComponentStory, Story } from '@storybook/react';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
+const legendText = 'Type virksomhet';
+
 export default {
   component: RadioGroup,
   title: 'Komponenter/RadioGroup/RadioGroup',
   argTypes: {
     // Props
     children: { table: { category: category.props } },
+    errorMessage: { table: { category: category.props } },
     hasError: {
-      table: { category: category.props },
-    },
-    errorMessage: {
       table: { category: category.props },
     },
     hideLegend: {
@@ -29,13 +30,23 @@ export default {
     legend: {
       table: { category: category.props },
     },
-    selectedValue: {
-      type: 'string',
+    showRequiredMark: {
       table: { category: category.props },
     },
     variant: {
       control: 'inline-radio',
       options: [...radioGroupVariantArr],
+      table: {
+        category: category.props,
+        defaultValue: { summary: getRadioGroupVariantDefault() },
+      },
+    },
+    defaultValue: {
+      type: 'string',
+      table: { category: category.props },
+    },
+    selectedValue: {
+      type: 'string',
       table: { category: category.props },
     },
     // HTML
@@ -64,12 +75,11 @@ export default {
   },
 } as ComponentMeta<typeof RadioGroup>;
 
-const TemplateDefault: ComponentStory<typeof RadioGroup> = (args) => {
+const TemplateDefaultControlled: ComponentStory<typeof RadioGroup> = (args) => {
   const [, setArgs] = useArgs();
 
   return (
     <RadioGroup
-      selectedValue={''}
       {...args}
       onChange={(e): void => {
         setArgs({ selectedValue: e.target.value });
@@ -84,10 +94,42 @@ const TemplateDefault: ComponentStory<typeof RadioGroup> = (args) => {
   );
 };
 
-export const RadioGroupDefault = TemplateDefault.bind({});
-RadioGroupDefault.storyName = 'Default';
-RadioGroupDefault.args = {
-  legend: 'Type virksomhet',
+export const RadioGroupDefaultControlled = TemplateDefaultControlled.bind({});
+RadioGroupDefaultControlled.storyName = 'Default Controlled';
+RadioGroupDefaultControlled.argTypes = {
+  defaultValue: { control: { disable: true } },
+};
+RadioGroupDefaultControlled.args = {
+  legend: legendText,
+  defaultValue: undefined,
+  selectedValue: '',
+};
+
+const TemplateDefaultUncontrolled: ComponentStory<typeof RadioGroup> = (
+  args
+) => {
+  return (
+    <RadioGroup {...args}>
+      <RadioGroup.Radio value={'foretak'}>
+        {'Enkeltpersonsforetak'}
+      </RadioGroup.Radio>
+      <RadioGroup.Radio value={'selskap'}>{'Aksjeselskap'}</RadioGroup.Radio>
+      <RadioGroup.Radio value={'annet'}>{'Annet'}</RadioGroup.Radio>
+    </RadioGroup>
+  );
+};
+
+export const RadioGroupDefaultUncontrolled = TemplateDefaultUncontrolled.bind(
+  {}
+);
+RadioGroupDefaultUncontrolled.storyName = 'Default Uncontrolled';
+RadioGroupDefaultUncontrolled.argTypes = {
+  selectedValue: { control: { disable: true } },
+};
+RadioGroupDefaultUncontrolled.args = {
+  legend: legendText,
+  selectedValue: undefined,
+  defaultValue: 'annet',
 };
 
 const TemplateExampleStandard: Story<RadioGroupProps> = () => {
@@ -97,9 +139,10 @@ const TemplateExampleStandard: Story<RadioGroupProps> = () => {
 
   return (
     <RadioGroup
-      legend={'Type virksomhet'}
+      legend={legendText}
       errorMessage={'Valg av type virksomhet er påkrevd.'}
       selectedValue={state.selectedValue}
+      showRequiredMark
       required
       onChange={(e): void => setState({ selectedValue: e.target.value })}
     >
