@@ -4,6 +4,7 @@ const config = getJestConfig();
 
 module.exports = {
   ...config,
+  testTimeout: 30000,
   verbose: true,
   testMatch: [
     '<rootDir>/src/stories/__tests__/**/*test.stories.mdx',

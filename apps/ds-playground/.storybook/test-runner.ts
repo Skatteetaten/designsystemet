@@ -37,6 +37,78 @@ async function adjustViewport(page, viewport): Promise<void> {
     });
   }
 }
+
+async function verifyFocusSnapshot(
+  focus: string,
+  page: Page,
+  context: TestContext,
+  snapshotId?: string
+): Promise<void> {
+  const elementToFocus = page.locator(focus);
+  await elementToFocus.focus();
+  const imageFocused = await page.screenshot(screenShotOptions);
+  expect(imageFocused).toMatchImageSnapshot({
+    customSnapshotIdentifier: `${context.id}-focused${snapshotId ?? ''}-snap`,
+  });
+  if (await elementToFocus.isVisible()) {
+    await page.$eval(`${focus}`, (el: HTMLElement) => el.blur());
+  }
+}
+
+async function verifyHoverSnapshot(
+  hover: string,
+  page: Page,
+  context: TestContext,
+  snapshotId?: string
+): Promise<void> {
+  const elementToHover = page.locator(hover);
+  await elementToHover.hover();
+  const imageHovered = await page.screenshot(screenShotOptions);
+  expect(imageHovered).toMatchImageSnapshot({
+    customSnapshotIdentifier: `${context.id}-hovered${snapshotId ?? ''}-snap`,
+  });
+  await page.mouse.move(0, 0);
+  await page.mouse.click(0, 0);
+}
+
+async function verifyClickSnapshot(
+  click: string,
+  page: Page,
+  context: TestContext,
+  snapshotId?: string
+): Promise<void> {
+  const elementToClick = page.locator(click);
+  await elementToClick.click();
+  const imageClicked = await page.screenshot(screenShotOptions);
+  expect(imageClicked).toMatchImageSnapshot({
+    customSnapshotIdentifier: `${context.id}-clicked${snapshotId ?? ''}-snap`,
+  });
+  if (await elementToClick.isVisible()) {
+    await page.$eval(`${click}`, (el: HTMLElement) => el.blur());
+  }
+  await page.mouse.move(0, 0);
+  await page.mouse.click(0, 0);
+}
+
+async function handleSnapshotSelectors(
+  snapshotVerifier: () => Promise<void>,
+  selectors: string | Array<string>,
+  page: Page,
+  context: TestContext
+): Promise<void> {
+  if (!selectors) {
+    return;
+  }
+
+  if (typeof selectors === 'string') {
+    await snapshotVerifier(selectors, page, context);
+  } else if (Array.isArray(selectors)) {
+    for (const [index, value] of selectors.entries()) {
+      await snapshotVerifier(value, page, context, index);
+    }
+  }
+}
+
 async function verifyImageSnapshots(
   page: Page,
   storyContext: StoryContext,
@@ -50,37 +122,13 @@ async function verifyImageSnapshots(
     customSnapshotIdentifier: `${context.id}-snap`,
   });
   const hover = storyContext.parameters.imageSnapshot?.hover;
-  if (hover) {
-    await page.hover(hover);
-    const imageHovered = await page.screenshot(screenShotOptions);
-    expect(imageHovered).toMatchImageSnapshot({
-      customSnapshotIdentifier: `${context.id}-hovered-snap`,
-    });
-    await page.mouse.move(0, 0);
-    await page.mouse.click(0, 0);
-  }
+  await handleSnapshotSelectors(verifyHoverSnapshot, hover, page, context);
 
   const focus = storyContext.parameters.imageSnapshot?.focus;
-  if (focus) {
-    await page.focus(focus);
-    const imageFocused = await page.screenshot(screenShotOptions);
-    expect(imageFocused).toMatchImageSnapshot({
-      customSnapshotIdentifier: `${context.id}-focused-snap`,
-    });
-    await page.$eval(`${focus}`, (el: HTMLElement) => el.blur());
-  }
+  await handleSnapshotSelectors(verifyFocusSnapshot, focus, page, context);
 
   const click = storyContext.parameters.imageSnapshot?.click;
-  if (click) {
-    await page.click(click);
-    const imageClicked = await page.screenshot(screenShotOptions);
-    expect(imageClicked).toMatchImageSnapshot({
-      customSnapshotIdentifier: `${context.id}-clicked-snap`,
-    });
-    await page.$eval(`${click}`, (el: HTMLElement) => el.blur());
-    await page.mouse.move(0, 0);
-    await page.mouse.click(0, 0);
-  }
+  await handleSnapshotSelectors(verifyClickSnapshot, click, page, context);
 
   const scroll = storyContext.parameters.imageSnapshot?.scroll;
   if (scroll) {

@@ -1,8 +1,6 @@
-/* eslint-disable sonarjs/no-duplicate-string */
-//TODO rydd i dette
-import { ReactNode, useRef, useState } from 'react';
+import { ReactNode, useState } from 'react';
 
-import { MegaButton } from '@skatteetaten/ds-buttons';
+import { Button } from '@skatteetaten/ds-buttons';
 import { densityArr } from '@skatteetaten/ds-core-utils';
 import {
   Table,
@@ -10,7 +8,6 @@ import {
   getTableVariantDefault,
   SortState,
 } from '@skatteetaten/ds-table';
-import { Heading } from '@skatteetaten/ds-typography';
 import { Story, ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
@@ -21,7 +18,7 @@ export default {
   title: 'komponenter/Table/Table',
   argTypes: {
     // Props
-    children: { table: { category: category.props } },
+    children: { control: false, table: { category: category.props } },
     variant: {
       options: [...densityArr],
       control: 'radio',
@@ -57,6 +54,14 @@ export default {
     hasFullWidth: {
       table: {
         category: category.props,
+      },
+    },
+  },
+  parameters: {
+    version: getVersion('ds-table'),
+    docs: {
+      source: {
+        type: 'code',
       },
     },
   },
@@ -99,94 +104,88 @@ const TemplateDefault: ComponentStory<typeof Table> = (args) => (
   </Table>
 );
 
-const TemplateVariant: ComponentStory<typeof Table> = (args) => (
-  <>
-    <div>
-      {'Standard table'}
-      <Table {...args} variant={'standard'}>
-        <Table.Header>
-          <Table.Row>
-            <Table.HeaderCell scope={'col'}>{'Frist'}</Table.HeaderCell>
-            <Table.HeaderCell scope={'col'}>{'Kategori'}</Table.HeaderCell>
-            <Table.HeaderCell scope={'col'}>
-              {'Arbeidsoppgave'}
-            </Table.HeaderCell>
-            <Table.HeaderCell scope={'col'}>{'navn'}</Table.HeaderCell>
-            <Table.HeaderCell scope={'col'}>{'status'}</Table.HeaderCell>
-          </Table.Row>
-        </Table.Header>
-        <Table.Body>
-          <Table.Row>
-            <Table.DataCell>{'10.04.2023'}</Table.DataCell>
-            <Table.DataCell>{'Kategori 1'}</Table.DataCell>
-            <Table.DataCell>{'Klage på vedtak'}</Table.DataCell>
-            <Table.DataCell>{'LIMERICK PARTNER ASA'}</Table.DataCell>
-            <Table.DataCell>{'NY'}</Table.DataCell>
-          </Table.Row>
-          <Table.Row>
-            <Table.DataCell>{'10.04.2023'}</Table.DataCell>
-            <Table.DataCell>{'Kategori 1'}</Table.DataCell>
-            <Table.DataCell>{'Klage på vedtak'}</Table.DataCell>
-            <Table.DataCell>{'LIMERICK PARTNER ASA'}</Table.DataCell>
-            <Table.DataCell>{'NY'}</Table.DataCell>
-          </Table.Row>
-        </Table.Body>
-      </Table>
-    </div>
-    <div>
-      {'Compact table'}
-      <Table {...args} variant={'compact'}>
-        <Table.Header>
-          <Table.Row>
-            <Table.HeaderCell scope={'col'}>{'Frist'}</Table.HeaderCell>
-            <Table.HeaderCell scope={'col'}>{'Kategori'}</Table.HeaderCell>
-            <Table.HeaderCell scope={'col'}>
-              {'Arbeidsoppgave'}
-            </Table.HeaderCell>
-            <Table.HeaderCell scope={'col'}>{'navn'}</Table.HeaderCell>
-            <Table.HeaderCell scope={'col'}>{'status'}</Table.HeaderCell>
-          </Table.Row>
-        </Table.Header>
-        <Table.Body>
-          <Table.Row>
-            <Table.DataCell>{'10.04.2023'}</Table.DataCell>
-            <Table.DataCell>{'Kategori 1'}</Table.DataCell>
-            <Table.DataCell>{'Klage på vedtak'}</Table.DataCell>
-            <Table.DataCell>{'LIMERICK PARTNER ASA'}</Table.DataCell>
-            <Table.DataCell>{'NY'}</Table.DataCell>
-          </Table.Row>
-          <Table.Row>
-            <Table.DataCell>{'10.04.2023'}</Table.DataCell>
-            <Table.DataCell>{'Kategori 1'}</Table.DataCell>
-            <Table.DataCell>{'Klage på vedtak'}</Table.DataCell>
-            <Table.DataCell>{'LIMERICK PARTNER ASA'}</Table.DataCell>
-            <Table.DataCell>{'NY'}</Table.DataCell>
-          </Table.Row>
-        </Table.Body>
-      </Table>
-    </div>
-  </>
-);
-
-const tableDefaultParameters = {
-  version: getVersion('ds-table'),
-  docs: {
-    source: {
-      type: 'code',
-    },
-  },
+const TemplateVariant: ComponentStory<typeof Table> = (args) => {
+  const klage = 'Klage på vedtak';
+  return (
+    <>
+      <div>
+        {'Standard table'}
+        <Table {...args} variant={'standard'}>
+          <Table.Header>
+            <Table.Row>
+              <Table.HeaderCell scope={'col'}>{'Frist'}</Table.HeaderCell>
+              <Table.HeaderCell scope={'col'}>{'Kategori'}</Table.HeaderCell>
+              <Table.HeaderCell scope={'col'}>
+                {'Arbeidsoppgave'}
+              </Table.HeaderCell>
+              <Table.HeaderCell scope={'col'}>{'navn'}</Table.HeaderCell>
+              <Table.HeaderCell scope={'col'}>{'status'}</Table.HeaderCell>
+            </Table.Row>
+          </Table.Header>
+          <Table.Body>
+            <Table.Row>
+              <Table.DataCell>{'10.03.2023'}</Table.DataCell>
+              <Table.DataCell>{'Kategori 2'}</Table.DataCell>
+              <Table.DataCell>{klage}</Table.DataCell>
+              <Table.DataCell>{'HAIKU HEDGE ASA'}</Table.DataCell>
+              <Table.DataCell>{'NY'}</Table.DataCell>
+            </Table.Row>
+            <Table.Row>
+              <Table.DataCell>{'11.04.2023'}</Table.DataCell>
+              <Table.DataCell>{'Kategori 4'}</Table.DataCell>
+              <Table.DataCell>{klage}</Table.DataCell>
+              <Table.DataCell>{'ATMOSPHERIC EXPLORER ASA'}</Table.DataCell>
+              <Table.DataCell>{'NY'}</Table.DataCell>
+            </Table.Row>
+          </Table.Body>
+        </Table>
+      </div>
+      <div>
+        {'Compact table'}
+        <Table {...args} variant={'compact'}>
+          <Table.Header>
+            <Table.Row>
+              <Table.HeaderCell scope={'col'}>{'Frist'}</Table.HeaderCell>
+              <Table.HeaderCell scope={'col'}>{'Kategori'}</Table.HeaderCell>
+              <Table.HeaderCell scope={'col'}>
+                {'Arbeidsoppgave'}
+              </Table.HeaderCell>
+              <Table.HeaderCell scope={'col'}>{'navn'}</Table.HeaderCell>
+              <Table.HeaderCell scope={'col'}>{'status'}</Table.HeaderCell>
+            </Table.Row>
+          </Table.Header>
+          <Table.Body>
+            <Table.Row>
+              <Table.DataCell>{'10.04.2023'}</Table.DataCell>
+              <Table.DataCell>{'Kategori 1'}</Table.DataCell>
+              <Table.DataCell>{klage}</Table.DataCell>
+              <Table.DataCell>{'LIMERICK PARTNER ASA'}</Table.DataCell>
+              <Table.DataCell>{'NY'}</Table.DataCell>
+            </Table.Row>
+            <Table.Row>
+              <Table.DataCell>{'10.04.2023'}</Table.DataCell>
+              <Table.DataCell>{'Kategori 1'}</Table.DataCell>
+              <Table.DataCell>{klage}</Table.DataCell>
+              <Table.DataCell>{'LIMERICK PARTNER ASA'}</Table.DataCell>
+              <Table.DataCell>{'NY'}</Table.DataCell>
+            </Table.Row>
+          </Table.Body>
+        </Table>
+      </div>
+    </>
+  );
 };
+
+const tableDefaultParameters = {};
 
 export const TableDefault: Story<TableProps> = TemplateDefault.bind({});
 TableDefault.storyName = 'Default';
 const baseArgs = {
   caption: 'Jeg er en tabell.',
-  children: 'Klikk',
 };
 
 TableDefault.args = {
   ...baseArgs,
-  variant: 'standard',
 };
 TableDefault.parameters = tableDefaultParameters;
 
@@ -218,7 +217,6 @@ const TemplateSort: Story<TableProps> = (args) => {
   ];
 
   const sortedData = data.slice().sort((a, b) => {
-    //TODO gjøre sortkey generic i context? unngå typecast?
     const sortKey = sortState.sortKey as keyof typeof data[0];
     if (!sortKey) {
       return 0;
@@ -278,71 +276,80 @@ const TemplateExampleExpandable: Story<TableProps> = (args) => {
 
   const data = [
     {
+      id: 'abcd',
       firma: 'Bluth Company',
       timestamp: '08.04.2020 11:31:57',
       status: 'Under behandling',
       eta: 'Mer enn 1 dag',
       ansatte: [
         {
+          id: 'efgh',
           navn: 'Per Olsen',
-          fnr: '01012020 99999',
+          fnr: '11012020 99999',
           beskrivelse: 'Ingen flere opplysninger',
         },
       ],
     },
     {
+      id: 'ijkl',
       firma: 'Business Engros',
       timestamp: '08.04.2020 11:32:16',
       status: 'Under behandling',
       eta: '23 min',
       ansatte: [
         {
+          id: 'mnop',
           navn: 'Bryce Navnesen',
           fnr: '02012020 99999',
-          beskrivelse: 'Ingen flere opplysninger',
+          beskrivelse: 'noen flere opplysninger',
         },
         {
+          id: 'qrst',
           navn: 'Alice Middleman',
           fnr: '03012020 99999',
-          beskrivelse: 'Ingen flere opplysninger',
+          beskrivelse: 'mange flere opplysninger',
         },
       ],
     },
     {
+      id: 'uvwx',
       firma: 'Corwood Industries',
       timestamp: '08.04.2020 11:32:16',
       status: 'Ferdig',
       eta: '–',
       ansatte: [
         {
+          id: 'yzab',
           navn: 'Kai Mossige',
           fnr: '01012020 99999',
-          beskrivelse: 'Ingen flere opplysninger',
+          beskrivelse: 'finnes flere opplysninger?',
         },
       ],
     },
     {
+      id: 'cdef',
       firma: 'Limerick Partner',
       timestamp: '08.04.2020 11:32:47',
       status: 'Ferdig',
       eta: '–',
       ansatte: [
         {
+          id: 'ghij',
           navn: 'Kari Saksbehandler',
           fnr: '01012020 99999',
           beskrivelse: 'Ingen flere opplysninger',
         },
         {
+          id: 'klmn',
           navn: 'Bob Egil Hansen',
           fnr: '04012020 99999',
-          beskrivelse: 'Ingen flere opplysninger',
+          beskrivelse: 'Ingen andre opplysninger',
         },
       ],
     },
   ];
 
   const sortedData = data.slice().sort((a, b) => {
-    //TODO gjøre sortkey generic i context? unngå typecast?
     const sortKey = sortState.sortKey as keyof typeof data[0];
 
     if (!sortKey) {
@@ -368,7 +375,6 @@ const TemplateExampleExpandable: Story<TableProps> = (args) => {
       >
         <Table.Header>
           <Table.Row>
-            <Table.HeaderCell scope={'col'} />
             <Table.HeaderCell sortKey={'firma'} scope={'col'} isSortable>
               {'Firma'}
             </Table.HeaderCell>
@@ -377,6 +383,7 @@ const TemplateExampleExpandable: Story<TableProps> = (args) => {
             <Table.HeaderCell scope={'col'}>
               {'Forventet behandlet'}
             </Table.HeaderCell>
+            <Table.HeaderCell as={'td'} />
           </Table.Row>
         </Table.Header>
         <Table.Body>
@@ -384,12 +391,14 @@ const TemplateExampleExpandable: Story<TableProps> = (args) => {
             return (
               <Table.Row
                 key={idx}
-                expandedContent={
+                expandButtonPosition={'right'}
+                expandableContent={
                   <div className={'emptyExpandedTableRow'}></div>
                 }
+                expandButtonAriaDescribedby={row.id}
                 isExpandable
               >
-                <Table.DataCell>{row.firma}</Table.DataCell>
+                <Table.DataCell id={row.id}>{row.firma}</Table.DataCell>
                 <Table.DataCell>{row.timestamp}</Table.DataCell>
                 <Table.DataCell>{row.status}</Table.DataCell>
                 <Table.DataCell>{row.eta}</Table.DataCell>
@@ -415,7 +424,6 @@ const TemplateExampleEditable: ComponentStory<typeof Table> = (args) => {
   const [sortState, setSortState] = useState<SortState>({
     direction: 'none',
   });
-  const redigerDataRef = useRef<HTMLHeadingElement>(null);
 
   const data = [
     {
@@ -423,29 +431,32 @@ const TemplateExampleEditable: ComponentStory<typeof Table> = (args) => {
       amount: 5426,
       coverage: '100 %',
       revenue: '1000',
+      id: '9f78',
     },
     {
       month: 'Februar',
       amount: 5432,
       coverage: '50 %',
       revenue: '500',
+      id: '6925',
     },
     {
       month: 'Mars',
       amount: 4899,
       coverage: '20 %',
       revenue: '2000',
+      id: 'fc9d',
     },
     {
       month: 'April',
       amount: 2344,
       coverage: '30 %',
       revenue: '1055',
+      id: '1d15',
     },
   ];
 
   const sortedData = data.slice().sort((a, b) => {
-    //TODO gjøre sortkey generic i context? unngå typecast?
     const sortKey = sortState.sortKey as keyof typeof data[0];
 
     if (!sortKey) {
@@ -471,51 +482,49 @@ const TemplateExampleEditable: ComponentStory<typeof Table> = (args) => {
       >
         <Table.Header>
           <Table.Row>
-            <Table.HeaderCell scope={'col'}>{'Dekningsgrad'}</Table.HeaderCell>
-            <Table.HeaderCell scope={'col'} sortKey={'amount'} isSortable>
-              {'Beløp'}
-            </Table.HeaderCell>
+            <Table.HeaderCell as={'td'} />
             <Table.HeaderCell alignment={'right'} scope={'col'}>
               {'Måned'}
             </Table.HeaderCell>
+            <Table.HeaderCell scope={'col'} sortKey={'amount'} isSortable>
+              {'Beløp'}
+            </Table.HeaderCell>
+            <Table.HeaderCell scope={'col'}>{'Dekningsgrad'}</Table.HeaderCell>
             <Table.HeaderCell alignment={'right'} scope={'col'}>
               {'Avkastning'}
             </Table.HeaderCell>
-            <Table.HeaderCell scope={'col'}></Table.HeaderCell>
           </Table.Row>
         </Table.Header>
         <Table.Body>
-          {sortedData.map((row, idx) => {
+          {sortedData.map((row) => {
             return (
               <Table.EditableRow
-                key={idx}
+                key={row.id}
                 editableContent={(closeEditing: () => void): ReactNode => (
                   <div className={'emptyExpandedTableRow'}>
-                    <Heading
-                      ref={redigerDataRef}
-                      className={'scrollToTopContainer'}
-                      as={'h2'}
-                      level={2}
+                    <span className={'srOnly'}>{'rediger data'}</span>
+
+                    <Button
+                      onClick={(): void => {
+                        closeEditing();
+                      }}
                     >
-                      {'rediger data'}
-                    </Heading>
-                    <MegaButton onClick={closeEditing}>{'Lukk2'}</MegaButton>
+                      {'Lukk'}
+                    </Button>
                   </div>
                 )}
+                editButtonAriaDescribedby={row.id}
                 onEdit={(): void => {
-                  setTimeout(() => {
-                    if (redigerDataRef?.current) {
-                      redigerDataRef.current.tabIndex = 0; //TODO bør ikke være nødvendig å sette tabindex på denne måten
-                    }
-                    redigerDataRef?.current?.focus();
-                  }, 0);
+                  console.log('redigerrer rad');
                 }}
               >
-                <Table.DataCell>{row.coverage}</Table.DataCell>
+                <Table.DataCell id={row.id} alignment={'right'}>
+                  {row.month}
+                </Table.DataCell>
                 <Table.DataCell alignment={'right'}>
                   {row.amount}
                 </Table.DataCell>
-                <Table.DataCell alignment={'right'}>{row.month}</Table.DataCell>
+                <Table.DataCell>{row.coverage}</Table.DataCell>
                 <Table.DataCell alignment={'right'}>
                   {row.revenue}
                 </Table.DataCell>
@@ -533,6 +542,5 @@ TableExampleEditable.storyName = 'Example Editable';
 
 TableExampleEditable.args = {
   ...baseArgs,
-  variant: 'standard',
 };
 TableExampleEditable.parameters = tableDefaultParameters;

@@ -14,7 +14,7 @@ import { userEvent, waitFor, within } from '@storybook/testing-library';
 
 export default {
   component: RadioGroup,
-  title: 'Tester/RadioGroup',
+  title: 'Tester/RadioGroup/RadioGroup',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },

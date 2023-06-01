@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tester/Radio Defaults play-test 1`] = `
+exports[`Tester/RadioGroup/Radio Defaults play-test 1`] = `
 <div data-test-block="true">
   <div class="Radio_radio__Fh+3R">
     <input id="radioInputId-:r2:"
@@ -17,7 +17,7 @@ exports[`Tester/Radio Defaults play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Radio WithAriaDescribedby play-test 1`] = `
+exports[`Tester/RadioGroup/Radio WithAriaDescribedby play-test 1`] = `
 <div data-test-block="true">
   <div class="Radio_radio__Fh+3R">
     <input id="radioInputId-:r7:"
@@ -35,7 +35,7 @@ exports[`Tester/Radio WithAriaDescribedby play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Radio WithAttributes play-test 1`] = `
+exports[`Tester/RadioGroup/Radio WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <div class="Radio_radio__Fh+3R dummyClassname"
        lang="nb"
@@ -55,7 +55,7 @@ exports[`Tester/Radio WithAttributes play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Radio WithDescription play-test 1`] = `
+exports[`Tester/RadioGroup/Radio WithDescription play-test 1`] = `
 <div data-test-block="true">
   <div class="Radio_radio__Fh+3R">
     <input id="radioInputId-:r3:"
@@ -75,7 +75,7 @@ exports[`Tester/Radio WithDescription play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Radio WithLongText smoke-test 1`] = `
+exports[`Tester/RadioGroup/Radio WithLongText smoke-test 1`] = `
 <div data-test-block="true">
   <div class="Radio_radio__Fh+3R">
     <input id="radioInputId-:r4:"
@@ -95,7 +95,7 @@ exports[`Tester/Radio WithLongText smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Radio WithLongTextAndBreaking smoke-test 1`] = `
+exports[`Tester/RadioGroup/Radio WithLongTextAndBreaking smoke-test 1`] = `
 <div data-test-block="true">
   <div class="Radio_radio__Fh+3R">
     <input id="radioInputId-:r5:"
@@ -115,7 +115,7 @@ exports[`Tester/Radio WithLongTextAndBreaking smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Radio WithRef play-test 1`] = `
+exports[`Tester/RadioGroup/Radio WithRef play-test 1`] = `
 <div data-test-block="true">
   <div class="Radio_radio__Fh+3R">
     <input id="radioInputId-:r0:"
@@ -133,7 +133,7 @@ exports[`Tester/Radio WithRef play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Radio WithValue play-test 1`] = `
+exports[`Tester/RadioGroup/Radio WithValue play-test 1`] = `
 <div data-test-block="true">
   <div class="Radio_radio__Fh+3R">
     <input id="radioInputId-:r6:"

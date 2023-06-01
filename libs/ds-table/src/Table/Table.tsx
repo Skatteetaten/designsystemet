@@ -3,28 +3,28 @@ import { useTranslation } from 'react-i18next';
 
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
-import { getTableVariantDefault } from './defaults';
+import {
+  getTableVariantDefault,
+  getDataCellAsDefault,
+  getHeaderCellAsDefault,
+  getTableRowExpandButtonPositionDefault,
+  getTableCellAlignmentDefault,
+} from './defaults';
 import { TableComponent, TableProps } from './Table.types';
-import { TableContext } from './TableContext';
-import { getScreenReaderSortDirectionText } from './utils';
-import { Body } from '../Body/Body';
-import { DataCell } from '../DataCell/DataCell';
-import { EditableRow } from '../EditableRow/EditableRow';
-import { Header } from '../Header/Header';
-import { HeaderCell } from '../HeaderCell/HeaderCell';
-import { Row } from '../Row/Row';
-import { Sum } from '../Sum/Sum';
+import { TableBody } from '../TableBody/TableBody';
+import { TableContext } from '../TableContext/TableContext';
+import { TableDataCell } from '../TableDataCell/TableDataCell';
+import { TableEditableRow } from '../TableEditableRow/TableEditableRow';
+import { TableHeader } from '../TableHeader/TableHeader';
+import { TableHeaderCell } from '../TableHeaderCell/TableHeaderCell';
+import { TableRow } from '../TableRow/TableRow';
+import { TableSum } from '../TableSum/TableSum';
+import { getScreenReaderSortDirectionText } from '../utils';
 
 import styles from './Table.module.scss';
-// TODO editable mangler mulighet til å vise knapp på venstre side
-
 // TODO sort bedre typing?
 
 // TODO ytelse må testes
-
-// TODO fikse storybook controls substories osv
-
-// TODO fokushåndtering
 
 // TODO bedre eksempler i storybook
 
@@ -48,7 +48,6 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
     ref
   ): JSX.Element => {
     const wrapperRef = useRef<HTMLDivElement>(null);
-    const tableRef = useRef<HTMLTableElement | null>(null);
 
     const [isTableScrollable, setIsTableScrollable] = useState<boolean>(false);
     const [shouldShowSRText, setShouldShowSRText] = useState<boolean>(false);
@@ -57,6 +56,9 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
       undefined
     );
 
+    if (caption === '') {
+      throw new Error('Empty string is not a valid caption.');
+    }
     const { t } = useTranslation('ds_tables', { i18n: dsI18n });
 
     const variantClassName = styles[`table_${variant}`];
@@ -95,13 +97,14 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
       };
     }, []);
 
-    /** Holder styr på om tabellen trenger en scrollbar. */
+    /** Holder styr på om tabellen trenger en horisontal scrollbar. */
     useEffect(() => {
       const updateDimensions = (): void => {
-        const tableWidth = tableRef?.current?.clientWidth ?? 0;
-        const wrapperWidth = wrapperRef?.current?.clientWidth ?? 0;
+        const wrapperScrollWidth = wrapperRef?.current?.scrollWidth ?? 0;
+        const wrapperBoundingWidth =
+          wrapperRef?.current?.getBoundingClientRect().width ?? 0;
 
-        setIsTableScrollable(tableWidth + 8 > wrapperWidth);
+        setIsTableScrollable(wrapperScrollWidth > wrapperBoundingWidth);
       };
       updateDimensions();
 
@@ -120,7 +123,12 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
           setShouldShowSRText(false);
         }, 3000);
       }
-    }, [shouldShowSRText, sortState]);
+      /*
+        I dette tilfellet blir det feil å legge til shouldShowSRText i
+       dependency Array. Det ville skap en evig løkke
+       */
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [sortState]);
 
     return (
       <TableContext.Provider
@@ -134,26 +142,17 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
       >
         <div ref={wrapperRef} className={wrapperClassName}>
           <table
-            ref={(node): void => {
-              tableRef.current = node;
-              if (typeof ref === 'function') {
-                ref(node);
-              } else if (ref) {
-                ref.current = node;
-              }
-            }}
+            ref={ref}
             id={id}
             className={concatenatedClassName}
             lang={lang}
             data-testid={dataTestId}
           >
-            {caption && (
-              <caption className={captionClassName}>{caption}</caption>
-            )}
+            <caption className={captionClassName}>{caption}</caption>
             {children}
           </table>
           {sortState && (
-            <div className={styles.hidden} aria-live={'polite'} role={'status'}>
+            <div className={styles.hidden} aria-live={'polite'}>
               {getScreenReaderSortDirectionText(shouldShowSRText, sortState, t)}
             </div>
           )}
@@ -163,12 +162,18 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
   }
 ) as TableComponent;
 Table.displayName = 'Table';
-Table.Header = Header;
-Table.HeaderCell = HeaderCell;
-Table.Row = Row;
-Table.EditableRow = EditableRow;
-Table.DataCell = DataCell;
-Table.Body = Body;
-Table.Sum = Sum;
+Table.Header = TableHeader;
+Table.HeaderCell = TableHeaderCell;
+Table.Row = TableRow;
+Table.EditableRow = TableEditableRow;
+Table.DataCell = TableDataCell;
+Table.Body = TableBody;
+Table.Sum = TableSum;
 
-export { getTableVariantDefault };
+export {
+  getDataCellAsDefault,
+  getHeaderCellAsDefault,
+  getTableCellAlignmentDefault,
+  getTableRowExpandButtonPositionDefault,
+  getTableVariantDefault,
+};

@@ -13,7 +13,7 @@ import { wrapper } from './testUtils/storybook.testing.utils';
 
 export default {
   component: List,
-  title: 'Tester/List',
+  title: 'Tester/List/List',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },

@@ -11,7 +11,7 @@ import {
 
 export default {
   component: Radio,
-  title: 'Tester/Radio',
+  title: 'Tester/RadioGroup/Radio',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },

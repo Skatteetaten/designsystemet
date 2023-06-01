@@ -5,7 +5,7 @@ import { within } from '@storybook/testing-library';
 
 export default {
   component: List.Element,
-  title: 'Tester/List.Element',
+  title: 'Tester/List/Element',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },

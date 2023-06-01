@@ -6,5 +6,6 @@
   "table.SortedAscending": "Sortert stigande",
   "table.SortedDescending": "Sortert søkkande",
   "tablerow.Editable": "Rediger rad",
-  "tablerow.Expandable": "Meir informasjon"
+  "tablerow.Expandable": "Meir informasjon",
+  "tablesum.Sum": "Sum"
 }

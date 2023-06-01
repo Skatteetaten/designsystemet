@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tester/List Defaults play-test 1`] = `
+exports[`Tester/List/List Defaults play-test 1`] = `
 <div data-test-block="true">
   <ul class="List_list__xzA1c List_list_withBullet__s5lqA  ">
     <li class="ListElement_element__B0xdX ">
@@ -16,7 +16,7 @@ exports[`Tester/List Defaults play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/List VariantNumber play-test 1`] = `
+exports[`Tester/List/List VariantNumber play-test 1`] = `
 <div data-test-block="true">
   <ol class="List_list__xzA1c   ">
     <li class="ListElement_element__B0xdX ">
@@ -32,7 +32,7 @@ exports[`Tester/List VariantNumber play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/List WithAttributes play-test 1`] = `
+exports[`Tester/List/List WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <ul id="htmlid"
       class="List_list__xzA1c List_list_withBullet__s5lqA  dummyClassname"
@@ -52,7 +52,7 @@ exports[`Tester/List WithAttributes play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/List WithBothVariantsAndAtLeast10NumberItems smoke-test 1`] = `
+exports[`Tester/List/List WithBothVariantsAndAtLeast10NumberItems smoke-test 1`] = `
 <div data-test-block="true">
   <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
     Her kan du se hvordan de forskjellige variantene til en list ser ut sammen med andre elementer med veksling av luft under listene.
@@ -162,7 +162,7 @@ exports[`Tester/List WithBothVariantsAndAtLeast10NumberItems smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/List WithLongTextAndBreaking smoke-test 1`] = `
+exports[`Tester/List/List WithLongTextAndBreaking smoke-test 1`] = `
 <div data-test-block="true">
   <ul class="List_list__xzA1c List_list_withBullet__s5lqA  ">
     <li class="ListElement_element__B0xdX ">
@@ -175,7 +175,7 @@ exports[`Tester/List WithLongTextAndBreaking smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/List WithMarkup smoke-test 1`] = `
+exports[`Tester/List/List WithMarkup smoke-test 1`] = `
 <div data-test-block="true">
   <ul class="List_list__xzA1c List_list_withBullet__s5lqA  ">
     <li class="ListElement_element__B0xdX ">
@@ -207,7 +207,7 @@ exports[`Tester/List WithMarkup smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/List WithRef play-test 1`] = `
+exports[`Tester/List/List WithRef play-test 1`] = `
 <div data-test-block="true">
   <ul class="List_list__xzA1c List_list_withBullet__s5lqA  "
       id="dummyIdForwardedFromRef"
@@ -225,7 +225,7 @@ exports[`Tester/List WithRef play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/List WithSpacing smoke-test 1`] = `
+exports[`Tester/List/List WithSpacing smoke-test 1`] = `
 <div data-test-block="true">
   <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
     Jeg er et tekstavsnitt uten innrykk. Denne teksten skulle bli ca. to linjer lang, men jeg trenger litt mer innhold for å bli to linjer lang. Derfor fortsetter jeg å skrive på dette tekstavsnittet uten innrykk og etter en stund blir denne teksten ca to linjer lang.

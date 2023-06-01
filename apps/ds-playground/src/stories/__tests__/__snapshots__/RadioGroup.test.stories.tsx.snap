@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tester/RadioGroup Defaults play-test 1`] = `
+exports[`Tester/RadioGroup/RadioGroup Defaults play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="RadioGroup_radioGroup__CZc2h ">
     <legend class="RadioGroup_radioGroupLegend__yNB2H">
@@ -56,7 +56,7 @@ exports[`Tester/RadioGroup Defaults play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/RadioGroup VariantHorizontal smoke-test 1`] = `
+exports[`Tester/RadioGroup/RadioGroup VariantHorizontal smoke-test 1`] = `
 <div data-test-block="true">
   <fieldset class="RadioGroup_radioGroup__CZc2h ">
     <legend class="RadioGroup_radioGroupLegend__yNB2H">
@@ -112,7 +112,7 @@ exports[`Tester/RadioGroup VariantHorizontal smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/RadioGroup WithAttributes play-test 1`] = `
+exports[`Tester/RadioGroup/RadioGroup WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <fieldset id="htmlId"
             class="RadioGroup_radioGroup__CZc2h dummyClassname"
@@ -172,7 +172,7 @@ exports[`Tester/RadioGroup WithAttributes play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/RadioGroup WithDisabled play-test 1`] = `
+exports[`Tester/RadioGroup/RadioGroup WithDisabled play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="RadioGroup_radioGroup__CZc2h "
             disabled
@@ -231,7 +231,7 @@ exports[`Tester/RadioGroup WithDisabled play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/RadioGroup WithErrorMessage play-test 1`] = `
+exports[`Tester/RadioGroup/RadioGroup WithErrorMessage play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="RadioGroup_radioGroup__CZc2h ">
     <legend class="RadioGroup_radioGroupLegend__yNB2H">
@@ -287,7 +287,7 @@ exports[`Tester/RadioGroup WithErrorMessage play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/RadioGroup WithEventHandlers play-test 1`] = `
+exports[`Tester/RadioGroup/RadioGroup WithEventHandlers play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="RadioGroup_radioGroup__CZc2h ">
     <legend class="RadioGroup_radioGroupLegend__yNB2H">
@@ -317,7 +317,7 @@ exports[`Tester/RadioGroup WithEventHandlers play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/RadioGroup WithHasError play-test 1`] = `
+exports[`Tester/RadioGroup/RadioGroup WithHasError play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="RadioGroup_radioGroup__CZc2h ">
     <legend class="RadioGroup_radioGroupLegend__yNB2H">
@@ -394,7 +394,7 @@ exports[`Tester/RadioGroup WithHasError play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/RadioGroup WithHasErrorAndAriaDescribedby play-test 1`] = `
+exports[`Tester/RadioGroup/RadioGroup WithHasErrorAndAriaDescribedby play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="RadioGroup_radioGroup__CZc2h ">
     <legend class="RadioGroup_radioGroupLegend__yNB2H">
@@ -440,7 +440,7 @@ exports[`Tester/RadioGroup WithHasErrorAndAriaDescribedby play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/RadioGroup WithHideLegend play-test 1`] = `
+exports[`Tester/RadioGroup/RadioGroup WithHideLegend play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="RadioGroup_radioGroup__CZc2h ">
     <legend class="RadioGroup_radioGroupLegend__yNB2H RadioGroup_radioGroupLegend_hide__rDWfk">
@@ -496,7 +496,7 @@ exports[`Tester/RadioGroup WithHideLegend play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/RadioGroup WithName play-test 1`] = `
+exports[`Tester/RadioGroup/RadioGroup WithName play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="RadioGroup_radioGroup__CZc2h ">
     <legend class="RadioGroup_radioGroupLegend__yNB2H">
@@ -552,7 +552,7 @@ exports[`Tester/RadioGroup WithName play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/RadioGroup WithRef play-test 1`] = `
+exports[`Tester/RadioGroup/RadioGroup WithRef play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="RadioGroup_radioGroup__CZc2h "
             id="dummyIdForwardedFromRef"
@@ -610,7 +610,7 @@ exports[`Tester/RadioGroup WithRef play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/RadioGroup WithRequired play-test 1`] = `
+exports[`Tester/RadioGroup/RadioGroup WithRequired play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="RadioGroup_radioGroup__CZc2h ">
     <legend class="RadioGroup_radioGroupLegend__yNB2H  RadioGroup_radioGroupLegend_required__ivZwy">
@@ -669,7 +669,7 @@ exports[`Tester/RadioGroup WithRequired play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/RadioGroup WithRequiredAndLegendAsMarkup smoke-test 1`] = `
+exports[`Tester/RadioGroup/RadioGroup WithRequiredAndLegendAsMarkup smoke-test 1`] = `
 <div data-test-block="true">
   <fieldset class="RadioGroup_radioGroup__CZc2h ">
     <legend class="RadioGroup_radioGroupLegend__yNB2H  RadioGroup_radioGroupLegendAsMarkup_required__ZcMXb">
@@ -733,7 +733,7 @@ exports[`Tester/RadioGroup WithRequiredAndLegendAsMarkup smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/RadioGroup WithSelectedValue play-test 1`] = `
+exports[`Tester/RadioGroup/RadioGroup WithSelectedValue play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="RadioGroup_radioGroup__CZc2h ">
     <legend class="RadioGroup_radioGroupLegend__yNB2H">

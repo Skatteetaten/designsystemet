@@ -1,7 +1,9 @@
 import { Density, Position } from '@skatteetaten/ds-core-utils';
 
-import { DataCellAs } from '../DataCell/DataCell.types';
+import { TableCellAs, TextAlignment } from './Table.types';
 
+export const getDataCellAsDefault = (): TableCellAs => 'td';
+export const getHeaderCellAsDefault = (): TableCellAs => 'th';
 export const getTableVariantDefault = (): Density => 'standard';
-export const getDataCellAsDefault = (): DataCellAs => 'td';
 export const getTableRowExpandButtonPositionDefault = (): Position => 'left';
+export const getTableCellAlignmentDefault = (): TextAlignment => 'left';

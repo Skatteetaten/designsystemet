@@ -56,7 +56,6 @@ code {
 .emptyExpandedTableRow {
   height: 200px;
   width: 100%;
-  background: var(--palette-ochre-5);
 }
 
 .rowSpanLeft {
@@ -84,4 +83,16 @@ code {
   background: var(--semantic-warning-background);
   display: inline-block;
   margin-right: 20px;
+}
+
+.srOnly {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
 }
