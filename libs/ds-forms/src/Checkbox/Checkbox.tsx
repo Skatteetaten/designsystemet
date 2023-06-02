@@ -1,8 +1,9 @@
-import { forwardRef, useId } from 'react';
+import { forwardRef, useContext, useId } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { CheckboxProps } from './Checkbox.types';
+import { CheckboxContext } from '../CheckboxContext/CheckboxContext';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 
 import styles from './Checkbox.module.scss';
@@ -10,7 +11,7 @@ import styles from './Checkbox.module.scss';
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
   (
     {
-      id,
+      id: idExternal,
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
@@ -23,71 +24,81 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       required,
       value,
       ariaDescribedby,
-      hasError,
+      hasError: hasErrorExternal,
       hideLabel,
+      showRequiredMark,
       onChange,
       children,
     },
     ref
   ): JSX.Element => {
+    const context = useContext(CheckboxContext);
+    const errorIdExternal = context?.errorId;
+
     const uniqueInputId = `checkboxInputId-${useId()}`;
-    const inputId = id ?? uniqueInputId;
-    const errorId = `checkboxErrorId-${useId()}`;
+    const inputIdInternal = idExternal ?? uniqueInputId;
+    const uniqueErrorId = `checkboxErrorId-${useId()}`;
+    const errorIdInternal = errorIdExternal ?? uniqueErrorId;
+    const hasErrorInternal =
+      errorIdExternal && !checked ? true : hasErrorExternal;
+    const isRequired = required && !checked;
 
-    const errorClassName = hasError && !checked ? styles[`label_error`] : '';
-    const hideTextWrapperClassName = hideLabel
-      ? styles[`labelTextWrapper_hide`]
+    const spacingBottomClassName = context ? styles.containerSpacingBottom : '';
+    const checkboxErrorClassName = hasErrorInternal
+      ? styles.labelCheckbox_error
       : '';
+    const labelErrorClassName =
+      hasErrorInternal && !context && required ? styles.label_error : '';
+    const labelRequiredClassName =
+      !context && showRequiredMark ? styles.labelContent_required : '';
+    const hideLabelClassName = hideLabel ? styles.labelContent_hide : '';
 
-    const getAriaDescribedby = (): string | undefined => {
-      if (hasError) {
-        return ariaDescribedby ? `${ariaDescribedby} ${errorId}` : errorId;
-      }
-      return ariaDescribedby;
-    };
+    const ariaDescribedbyInput = `${ariaDescribedby ?? ''} ${
+      hasErrorInternal ? errorIdInternal : ''
+    }`.trim();
 
     return (
-      <div className={`${styles.container} ${className}`} lang={lang}>
+      <div
+        className={`${styles.container} ${spacingBottomClassName} ${className}`}
+        lang={lang}
+      >
         <input
           ref={ref}
-          id={inputId}
+          id={inputIdInternal}
           className={styles.input}
           data-testid={dataTestId}
           checked={checked}
           defaultChecked={defaultChecked}
           disabled={disabled}
           name={name}
-          required={required}
+          required={isRequired}
           type={'checkbox'}
           value={value}
-          aria-describedby={getAriaDescribedby()}
-          aria-invalid={hasError ? hasError : undefined}
+          aria-describedby={ariaDescribedbyInput || undefined}
+          aria-invalid={hasErrorInternal ?? undefined}
           onChange={onChange}
         />
         <label
-          htmlFor={inputId}
-          className={`${styles.label} ${errorClassName}`}
+          htmlFor={inputIdInternal}
+          className={`${styles.label} ${labelErrorClassName}`}
         >
-          <span className={styles.labelCheckbox}>
+          <span className={`${styles.labelCheckbox} ${checkboxErrorClassName}`}>
             <span className={styles.labelCheckboxCheck}></span>
           </span>
-          <span
-            className={`${styles.labelTextWrapper} ${hideTextWrapperClassName}`}
-          >
-            <span className={`${styles.labelTextWrapperText}`}>{children}</span>
+          <span className={`${styles.labelContent} ${hideLabelClassName}`}>
+            <span className={labelRequiredClassName}>{children}</span>
             {description && (
-              <span className={styles.labelTextWrapperDescription}>
+              <span className={styles.labelContentDescription}>
                 {description}
               </span>
             )}
           </span>
         </label>
-        <ErrorMessage
-          id={errorId}
-          showError={hasError && errorMessage !== undefined}
-        >
-          {errorMessage ?? ''}
-        </ErrorMessage>
+        {!context && (
+          <ErrorMessage id={errorIdInternal} showError={hasErrorInternal}>
+            {errorMessage ?? ''}
+          </ErrorMessage>
+        )}
       </div>
     );
   }

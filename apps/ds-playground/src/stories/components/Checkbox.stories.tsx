@@ -27,6 +27,12 @@ export default {
         category: category.props,
       },
     },
+    showRequiredMark: {
+      control: 'boolean',
+      table: {
+        category: category.props,
+      },
+    },
     // HTML
     checked: {
       control: 'boolean',
@@ -73,22 +79,21 @@ const TemplateDefault: ComponentStory<typeof Checkbox> = (args) => (
 );
 
 const TemplateExample: ComponentStory<typeof Checkbox> = () => {
-  const [state, setState] = useState({
-    hasError: false,
-  });
+  const [checked, setChecked] = useState(false);
+  const [error, setError] = useState(false);
   return (
     <>
       <Checkbox
         className={'exampleSpacing'}
         errorMessage={'Du må lese og forstå innholdet for å gå videre.'}
-        hasError={state.hasError}
+        checked={checked}
+        hasError={error}
         required
+        onChange={(): void => setChecked(!checked)}
       >
         {'Jeg har lest og forstått innholdet'}
       </Checkbox>
-      <Button onClick={(): void => setState({ hasError: true })}>
-        {'Send'}
-      </Button>
+      <Button onClick={(): void => setError(!checked)}>{'Send'}</Button>
     </>
   );
 };

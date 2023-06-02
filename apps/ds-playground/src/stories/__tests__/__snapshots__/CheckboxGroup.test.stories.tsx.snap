@@ -1,0 +1,1041 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/CheckboxGroup Defaults play-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="CheckboxGroup_fieldset__wEILr ">
+    <legend class="CheckboxGroup_fieldsetLegend__UfzKH  ">
+      Velg det som passer deg
+    </legend>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:rf:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:rf:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn over 16 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:rh:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:rh:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn under 12 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:rj:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:rj:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
+          </span>
+        </span>
+      </label>
+    </div>
+    <div id="checkboxGroupErrorId-:re:"
+         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu "
+         aria-live="assertive"
+    >
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/CheckboxGroup LegendWithMarkup smoke-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="CheckboxGroup_fieldset__wEILr ">
+    <legend class="CheckboxGroup_fieldsetLegend__UfzKH  ">
+      <h1 class="Heading_heading__7K0um Heading_heading_level3__T5BVI  ">
+        Dette er en Heading i legend
+      </h1>
+      <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_ingress__K1ALx  ">
+        <em>
+          Dette er en italic Paragraph med ingress variant i legend
+        </em>
+      </p>
+    </legend>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:rm:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:rm:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn over 16 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:ro:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:ro:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn under 12 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:rq:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:rq:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
+          </span>
+        </span>
+      </label>
+    </div>
+    <div id="checkboxGroupErrorId-:rl:"
+         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu "
+         aria-live="assertive"
+    >
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/CheckboxGroup LegendWithMarkupAndRequiredMark smoke-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="CheckboxGroup_fieldset__wEILr ">
+    <legend class="CheckboxGroup_fieldsetLegend__UfzKH CheckboxGroup_fieldsetLegendWithMarkup_required__C3ItQ ">
+      <h1 class="Heading_heading__7K0um Heading_heading_level3__T5BVI  ">
+        Dette er en Heading i legend
+      </h1>
+      <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_ingress__K1ALx  ">
+        <em>
+          Dette er en italic Paragraph med ingress variant i legend
+        </em>
+      </p>
+    </legend>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:rt:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:rt:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn over 16 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:rv:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:rv:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn under 12 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r11:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:r11:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
+          </span>
+        </span>
+      </label>
+    </div>
+    <div id="checkboxGroupErrorId-:rs:"
+         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu "
+         aria-live="assertive"
+    >
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/CheckboxGroup WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <fieldset id="htmlid"
+            class="CheckboxGroup_fieldset__wEILr dummyClassname"
+            lang="nb"
+            data-testid="123ID"
+  >
+    <legend class="CheckboxGroup_fieldsetLegend__UfzKH  ">
+      Velg det som passer deg
+    </legend>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r8:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:r8:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn over 16 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:ra:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:ra:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn under 12 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:rc:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:rc:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
+          </span>
+        </span>
+      </label>
+    </div>
+    <div id="checkboxGroupErrorId-:r7:"
+         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu "
+         aria-live="assertive"
+    >
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/CheckboxGroup WithDisabled play-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="CheckboxGroup_fieldset__wEILr "
+            disabled
+  >
+    <legend class="CheckboxGroup_fieldsetLegend__UfzKH  ">
+      Velg det som passer deg
+    </legend>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r1b:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:r1b:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn over 16 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r1d:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:r1d:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn under 12 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r1f:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:r1f:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
+          </span>
+        </span>
+      </label>
+    </div>
+    <div id="checkboxGroupErrorId-:r1a:"
+         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu "
+         aria-live="assertive"
+    >
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/CheckboxGroup WithDisabledAndChecked smoke-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="CheckboxGroup_fieldset__wEILr "
+            disabled
+  >
+    <legend class="CheckboxGroup_fieldsetLegend__UfzKH  ">
+      Velg det som passer deg
+    </legend>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r1i:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+             checked
+      >
+      <label for="checkboxInputId-:r1i:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn over 16 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r1k:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:r1k:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn under 12 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r1m:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:r1m:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
+          </span>
+        </span>
+      </label>
+    </div>
+    <div id="checkboxGroupErrorId-:r1h:"
+         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu "
+         aria-live="assertive"
+    >
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/CheckboxGroup WithError play-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="CheckboxGroup_fieldset__wEILr ">
+    <legend class="CheckboxGroup_fieldsetLegend__UfzKH  ">
+      Velg det som passer deg
+    </legend>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r2m:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             aria-describedby="checkboxGroupErrorId-:r2l:"
+             aria-invalid="true"
+             value
+      >
+      <label for="checkboxInputId-:r2m:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R Checkbox_labelCheckbox_error__TDi7U">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn over 16 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r2o:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             aria-describedby="checkboxGroupErrorId-:r2l:"
+             aria-invalid="true"
+             value
+      >
+      <label for="checkboxInputId-:r2o:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R Checkbox_labelCheckbox_error__TDi7U">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn under 12 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r2q:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             aria-describedby="checkboxGroupErrorId-:r2l:"
+             aria-invalid="true"
+             value
+      >
+      <label for="checkboxInputId-:r2q:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R Checkbox_labelCheckbox_error__TDi7U">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
+          </span>
+        </span>
+      </label>
+    </div>
+    <div id="checkboxGroupErrorId-:r2l:"
+         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu CheckboxGroup_fieldsetSpacingBottom__cj7Jo"
+         aria-live="assertive"
+    >
+      <div class="ErrorMessage_errorMessage__508oW">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+          </path>
+        </svg>
+        <p class="ErrorMessage_errorMessageText__e27TU">
+          Velg minst ett av alternativene
+        </p>
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/CheckboxGroup WithHideLegend play-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="CheckboxGroup_fieldset__wEILr ">
+    <legend class="CheckboxGroup_fieldsetLegend__UfzKH  CheckboxGroup_fieldsetLegend_hide__PF0WM">
+      Velg det som passer deg
+    </legend>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r14:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:r14:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn over 16 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r16:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:r16:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn under 12 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r18:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:r18:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
+          </span>
+        </span>
+      </label>
+    </div>
+    <div id="checkboxGroupErrorId-:r13:"
+         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu "
+         aria-live="assertive"
+    >
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/CheckboxGroup WithRef play-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="CheckboxGroup_fieldset__wEILr "
+            id="dummyIdForwardedFromRef"
+  >
+    <legend class="CheckboxGroup_fieldsetLegend__UfzKH  ">
+      Velg det som passer deg
+    </legend>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r1:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:r1:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn over 16 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r3:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:r3:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn under 12 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r5:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:r5:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
+          </span>
+        </span>
+      </label>
+    </div>
+    <div id="checkboxGroupErrorId-:r0:"
+         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu "
+         aria-live="assertive"
+    >
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/CheckboxGroup WithRequired play-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="CheckboxGroup_fieldset__wEILr ">
+    <legend class="CheckboxGroup_fieldsetLegend__UfzKH  ">
+      Velg det som passer deg
+    </legend>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r1p:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:r1p:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn over 16 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r1r:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:r1r:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn under 12 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r1t:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:r1t:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
+          </span>
+        </span>
+      </label>
+    </div>
+    <div id="checkboxGroupErrorId-:r1o:"
+         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu "
+         aria-live="assertive"
+    >
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/CheckboxGroup WithRequiredAndError play-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="CheckboxGroup_fieldset__wEILr ">
+    <legend class="CheckboxGroup_fieldsetLegend__UfzKH  ">
+      Velg det som passer deg
+    </legend>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r2e:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+             checked
+      >
+      <label for="checkboxInputId-:r2e:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn over 16 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r2g:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             aria-describedby="checkboxGroupErrorId-:r2d:"
+             aria-invalid="true"
+             value
+      >
+      <label for="checkboxInputId-:r2g:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R Checkbox_labelCheckbox_error__TDi7U">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn under 12 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r2i:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             aria-describedby="checkboxGroupErrorId-:r2d:"
+             aria-invalid="true"
+             value
+      >
+      <label for="checkboxInputId-:r2i:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R Checkbox_labelCheckbox_error__TDi7U">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
+          </span>
+        </span>
+      </label>
+    </div>
+    <div id="checkboxGroupErrorId-:r2d:"
+         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu CheckboxGroup_fieldsetSpacingBottom__cj7Jo"
+         aria-live="assertive"
+    >
+      <div class="ErrorMessage_errorMessage__508oW">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+          </path>
+        </svg>
+        <p class="ErrorMessage_errorMessageText__e27TU">
+          Velg minst to alternativer
+        </p>
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/CheckboxGroup WithRequiredAndMark smoke-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="CheckboxGroup_fieldset__wEILr ">
+    <legend class="CheckboxGroup_fieldsetLegend__UfzKH CheckboxGroup_fieldsetLegend_required__WJbIo ">
+      Velg det som passer deg
+    </legend>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r20:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:r20:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn over 16 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r22:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:r22:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn under 12 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r24:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:r24:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
+          </span>
+        </span>
+      </label>
+    </div>
+    <div id="checkboxGroupErrorId-:r1v:"
+         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu "
+         aria-live="assertive"
+    >
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/CheckboxGroup WithRequiredAndNoError play-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="CheckboxGroup_fieldset__wEILr ">
+    <legend class="CheckboxGroup_fieldsetLegend__UfzKH  ">
+      Velg det som passer deg
+    </legend>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r27:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+             checked
+      >
+      <label for="checkboxInputId-:r27:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn over 16 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r29:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:r29:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn under 12 år
+          </span>
+        </span>
+      </label>
+    </div>
+    <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+      <input id="checkboxInputId-:r2b:"
+             class="Checkbox_input__fDeJ7"
+             type="checkbox"
+             value
+      >
+      <label for="checkboxInputId-:r2b:"
+             class="Checkbox_label__sEFOt "
+      >
+        <span class="Checkbox_labelCheckbox__TIE0R ">
+          <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+          </span>
+        </span>
+        <span class="Checkbox_labelContent__Nf+Nz ">
+          <span class>
+            Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
+          </span>
+        </span>
+      </label>
+    </div>
+    <div id="checkboxGroupErrorId-:r26:"
+         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu "
+         aria-live="assertive"
+    >
+    </div>
+  </fieldset>
+</div>
+`;

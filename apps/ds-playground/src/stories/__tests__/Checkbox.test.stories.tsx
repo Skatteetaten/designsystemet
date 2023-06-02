@@ -1,7 +1,9 @@
+import { useState } from 'react';
+
 import { Checkbox } from '@skatteetaten/ds-forms';
 import { expect } from '@storybook/jest';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { userEvent, waitFor, within } from '@storybook/testing-library';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 
@@ -37,6 +39,11 @@ export default {
       },
     },
     hideLabel: {
+      table: {
+        disable: true,
+      },
+    },
+    showRequiredMark: {
       table: {
         disable: true,
       },
@@ -327,9 +334,9 @@ WithDisabledAndChecked.play = async ({ canvasElement }): Promise<void> => {
   await expect(inputNode).toBeDisabled();
 };
 
-// Når Checkbox er required, så er required satt på input-elementet og vises stjerne bak labelen
+// Når Checkbox er required, så er required satt på input-elementet
 export const WithRequired = Template.bind({});
-WithRequired.storyName = 'With Required (A1, B3)';
+WithRequired.storyName = 'With Required (B3)';
 WithRequired.args = {
   ...defaultArgs,
   required: true,
@@ -341,6 +348,48 @@ WithRequired.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   const inputNode = canvas.getByRole('checkbox');
   await expect(inputNode).toBeRequired();
+};
+
+// Når Checkbox er required og showRequiredMark er satt, så er required satt på input-elementet og vises stjerne bak labelen
+export const WithRequiredAndMark = Template.bind({});
+WithRequiredAndMark.storyName = 'With Required And Mark (A1, B3)';
+WithRequiredAndMark.args = {
+  ...defaultArgs,
+  required: true,
+  showRequiredMark: true,
+};
+WithRequiredAndMark.argTypes = {
+  required: { table: { disable: false } },
+  showRequiredMark: { table: { disable: false } },
+};
+WithRequiredAndMark.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const inputNode = canvas.getByRole('checkbox');
+  await expect(inputNode).toBeRequired();
+};
+
+// Når Checkbox er required og checked, så er required ikke satt på input-elementet
+export const WithRequiredAndChecked = Template.bind({});
+WithRequiredAndChecked.storyName = 'With Required And Checked (B3)';
+WithRequiredAndChecked.args = {
+  ...defaultArgs,
+  checked: true,
+  required: true,
+};
+WithRequiredAndChecked.argTypes = {
+  checked: { table: { disable: false } },
+  required: { table: { disable: false } },
+};
+WithRequiredAndChecked.parameters = {
+  imageSnapshot: {
+    disable: true,
+  },
+};
+WithRequiredAndChecked.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const inputNode = canvas.getByRole('checkbox');
+  await expect(inputNode).toBeChecked();
+  await expect(inputNode).not.toBeRequired();
 };
 
 // Når CheckboxGroup har error, så får input-elementet aria-invalid og aria-describedby satt, vises checkboksen i korrekt stil og feilmeldingen vises
@@ -371,17 +420,19 @@ WithError.play = async ({ canvasElement }): Promise<void> => {
   await expect(inputNode).toHaveAttribute('aria-invalid', 'true');
 };
 
-// Når Checkbox er disabled og required, så ser checkboksen riktig ut
+// Når Checkbox er disabled og required, så ser checkboksen og stjerne riktig ut
 export const WithDisabledAndRequired = Template.bind({});
 WithDisabledAndRequired.storyName = 'With Disabled And Required (A1)';
 WithDisabledAndRequired.args = {
   ...defaultArgs,
   disabled: true,
   required: true,
+  showRequiredMark: true,
 };
 WithDisabledAndRequired.argTypes = {
   disabled: { table: { disable: false } },
   required: { table: { disable: false } },
+  showRequiredMark: { table: { disable: false } },
 };
 WithDisabledAndRequired.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
@@ -395,12 +446,16 @@ export const WithErrorAndRequired = Template.bind({});
 WithErrorAndRequired.storyName = 'With Error And Required (A1)';
 WithErrorAndRequired.args = {
   ...defaultArgs,
+  errorMessage: 'Feilmelding',
   hasError: true,
   required: true,
+  showRequiredMark: true,
 };
 WithErrorAndRequired.argTypes = {
+  errorMessage: { table: { disable: false } },
   hasError: { table: { disable: false } },
   required: { table: { disable: false } },
+  showRequiredMark: { table: { disable: false } },
 };
 WithErrorAndRequired.parameters = {
   imageSnapshot: {
@@ -431,7 +486,7 @@ WithCheckedAndRequired.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   const inputNode = canvas.getByRole('checkbox');
   await expect(inputNode).toBeChecked();
-  await expect(inputNode).toBeRequired();
+  await expect(inputNode).not.toBeRequired();
 };
 
 // Når Checkbox har aria-describedby, så er aria-describedby satt og fremdeles knyttet til id'en i ErrorMessage
@@ -439,7 +494,7 @@ export const WithAriaDescribedby = Template.bind({});
 WithAriaDescribedby.storyName = 'With AriaDescribedby (B1)';
 WithAriaDescribedby.args = {
   ...defaultArgs,
-  ariaDescribedby: '123ID',
+  ariaDescribedby: 'testID',
 };
 WithAriaDescribedby.argTypes = {
   ariaDescribedby: { table: { disable: false } },
@@ -453,7 +508,7 @@ WithAriaDescribedby.play = async ({ canvasElement }): Promise<void> => {
   await expect(inputNode).toHaveAttribute('aria-describedby');
   await expect(inputNode).toHaveAttribute(
     'aria-describedby',
-    expect.stringMatching('123ID')
+    expect.stringMatching('testID')
   );
 };
 
@@ -505,3 +560,36 @@ WithName.parameters = {
   imageSnapshot: { disable: true },
 };
 WithName.play = verifyAttribute('name', 'test_name_checkbox');
+
+// Når brukeren klikker på checkboksen, så kalles riktig eventHandler
+// Eventhandleren endrer teksten på knappen
+const EventHandlersTemplate: ComponentStory<typeof Checkbox> = (args) => {
+  const [labelText, setLabelText] = useState('Checkbox');
+  return (
+    <div data-test-block>
+      <Checkbox
+        {...args}
+        onChange={(event: React.ChangeEvent<HTMLInputElement>): void => {
+          setLabelText('Checkbox har blitt klikket på');
+          args.onChange && args.onChange(event);
+        }}
+      >
+        {labelText}
+      </Checkbox>
+    </div>
+  );
+};
+export const WithEventHandlers = EventHandlersTemplate.bind({});
+WithEventHandlers.storyName = 'With EventHandlers';
+WithEventHandlers.args = {
+  ...defaultArgs,
+};
+WithEventHandlers.parameters = {
+  imageSnapshot: { disable: true },
+};
+WithEventHandlers.play = async ({ args, canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const inputNode = canvas.getByRole('checkbox');
+  await userEvent.click(inputNode);
+  await waitFor(() => expect(args.onChange).toHaveBeenCalled());
+};

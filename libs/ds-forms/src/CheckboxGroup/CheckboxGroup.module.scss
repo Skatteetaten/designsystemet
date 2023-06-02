@@ -1,0 +1,38 @@
+@import 'libs/ds-core-utils/src/styles.scss';
+
+.fieldset {
+  padding: 0;
+  border: none;
+  margin: 0;
+
+  &Legend {
+    margin-bottom: var(--spacing-m);
+    font-size: var(--font-size-m);
+    line-height: var(--semantic-line-height-input);
+
+    &_hide {
+      @include sr-only;
+    }
+
+    &_required::after {
+      color: var(--semantic-danger-foreground);
+      content: '*';
+      font-weight: var(--font-weight-bold);
+    }
+
+    &WithMarkup_required > :first-child::after {
+      width: fit-content;
+      color: var(--semantic-danger-foreground);
+      content: '*';
+      font-weight: var(--font-weight-bold);
+    }
+  }
+
+  &ErrorMessage {
+    margin-top: var(--spacing-m);
+  }
+
+  &SpacingBottom {
+    margin-bottom: var(--spacing-m);
+  }
+}
