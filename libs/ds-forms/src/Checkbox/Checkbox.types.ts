@@ -15,7 +15,6 @@ type RequiredCheckboxHTMLAttributes = Pick<
 
 type CheckboxHTMLAttributes = Partial<RequiredCheckboxHTMLAttributes>;
 interface CheckboxPropsHTMLAttributes extends CheckboxHTMLAttributes {
-  ariaLabelledby?: string;
   ariaDescribedby?: string;
 }
 

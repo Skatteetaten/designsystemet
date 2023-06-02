@@ -22,7 +22,6 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       name,
       required,
       value,
-      ariaLabelledby,
       ariaDescribedby,
       hasError,
       hideLabel,
@@ -63,7 +62,6 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           value={value}
           aria-describedby={getAriaDescribedby()}
           aria-invalid={hasError ? hasError : undefined}
-          aria-labelledby={ariaLabelledby}
           onChange={onChange}
         />
         <label

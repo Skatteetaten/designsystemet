@@ -59,7 +59,6 @@ export default {
     },
     value: { table: { category: category.htmlAttribute } },
     // Aria
-    ariaLabelledby: { table: { category: category.aria } },
     ariaDescribedby: { table: { category: category.aria } },
     // Events
     onChange: { ...htmlEventDescription },

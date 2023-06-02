@@ -69,7 +69,6 @@ export default {
     },
     value: { table: { disable: true } },
     // Aria
-    ariaLabelledby: { table: { disable: true } },
     ariaDescribedby: { table: { disable: true } },
     // Events
     onChange: { table: { disable: true } },
@@ -434,21 +433,6 @@ WithCheckedAndRequired.play = async ({ canvasElement }): Promise<void> => {
   await expect(inputNode).toBeChecked();
   await expect(inputNode).toBeRequired();
 };
-
-// Når Checkbox har aria-labelledby, så er aria-labelledby satt
-export const WithAriaLabelledby = Template.bind({});
-WithAriaLabelledby.storyName = 'With AriaLabelledby (B1)';
-WithAriaLabelledby.args = {
-  ...defaultArgs,
-  ariaLabelledby: 'textId',
-};
-WithAriaLabelledby.argTypes = {
-  ariaLabelledby: { table: { disable: false } },
-};
-WithAriaLabelledby.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithAriaLabelledby.play = verifyAttribute('aria-labelledby', 'textId');
 
 // Når Checkbox har aria-describedby, så er aria-describedby satt og fremdeles knyttet til id'en i ErrorMessage
 export const WithAriaDescribedby = Template.bind({});

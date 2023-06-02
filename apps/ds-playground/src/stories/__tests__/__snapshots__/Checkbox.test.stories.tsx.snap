@@ -33,41 +33,10 @@ exports[`Tester/Checkbox Defaults play-test 1`] = `
 exports[`Tester/Checkbox WithAriaDescribedby play-test 1`] = `
 <div data-test-block="true">
   <div class="Checkbox_container__xhXb4 ">
-    <input id="checkboxInputId-:r15:"
-           class="Checkbox_input__fDeJ7"
-           type="checkbox"
-           aria-describedby="123ID"
-           value
-    >
-    <label for="checkboxInputId-:r15:"
-           class="Checkbox_label__sEFOt "
-    >
-      <span class="Checkbox_labelCheckbox__TIE0R">
-        <span class="Checkbox_labelCheckboxCheck__x9xdZ">
-        </span>
-      </span>
-      <span class="Checkbox_labelTextWrapper__lS76D ">
-        <span class="Checkbox_labelTextWrapperText__EYzpJ">
-          Checkbox
-        </span>
-      </span>
-    </label>
-    <div id="checkboxErrorId-:r16:"
-         class
-         aria-live="assertive"
-    >
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Tester/Checkbox WithAriaLabelledby play-test 1`] = `
-<div data-test-block="true">
-  <div class="Checkbox_container__xhXb4 ">
     <input id="checkboxInputId-:r13:"
            class="Checkbox_input__fDeJ7"
            type="checkbox"
-           aria-labelledby="textId"
+           aria-describedby="123ID"
            value
     >
     <label for="checkboxInputId-:r13:"
@@ -191,13 +160,13 @@ exports[`Tester/Checkbox WithCheckedAndRequired play-test 1`] = `
 exports[`Tester/Checkbox WithDefaultChecked play-test 1`] = `
 <div data-test-block="true">
   <div class="Checkbox_container__xhXb4 ">
-    <input id="checkboxInputId-:r19:"
+    <input id="checkboxInputId-:r17:"
            class="Checkbox_input__fDeJ7"
            type="checkbox"
            value
            checked
     >
-    <label for="checkboxInputId-:r19:"
+    <label for="checkboxInputId-:r17:"
            class="Checkbox_label__sEFOt "
     >
       <span class="Checkbox_labelCheckbox__TIE0R">
@@ -210,7 +179,7 @@ exports[`Tester/Checkbox WithDefaultChecked play-test 1`] = `
         </span>
       </span>
     </label>
-    <div id="checkboxErrorId-:r1a:"
+    <div id="checkboxErrorId-:r18:"
          class
          aria-live="assertive"
     >
@@ -586,13 +555,13 @@ exports[`Tester/Checkbox WithLongTextAndBreaking smoke-test 1`] = `
 exports[`Tester/Checkbox WithName play-test 1`] = `
 <div data-test-block="true">
   <div class="Checkbox_container__xhXb4 ">
-    <input id="checkboxInputId-:r1b:"
+    <input id="checkboxInputId-:r19:"
            class="Checkbox_input__fDeJ7"
            name="test_name_checkbox"
            type="checkbox"
            value
     >
-    <label for="checkboxInputId-:r1b:"
+    <label for="checkboxInputId-:r19:"
            class="Checkbox_label__sEFOt "
     >
       <span class="Checkbox_labelCheckbox__TIE0R">
@@ -605,7 +574,7 @@ exports[`Tester/Checkbox WithName play-test 1`] = `
         </span>
       </span>
     </label>
-    <div id="checkboxErrorId-:r1c:"
+    <div id="checkboxErrorId-:r1a:"
          class
          aria-live="assertive"
     >
@@ -679,12 +648,12 @@ exports[`Tester/Checkbox WithRequired play-test 1`] = `
 exports[`Tester/Checkbox WithValue play-test 1`] = `
 <div data-test-block="true">
   <div class="Checkbox_container__xhXb4 ">
-    <input id="checkboxInputId-:r17:"
+    <input id="checkboxInputId-:r15:"
            class="Checkbox_input__fDeJ7"
            type="checkbox"
            value="test_value_checkbox"
     >
-    <label for="checkboxInputId-:r17:"
+    <label for="checkboxInputId-:r15:"
            class="Checkbox_label__sEFOt "
     >
       <span class="Checkbox_labelCheckbox__TIE0R">
@@ -697,7 +666,7 @@ exports[`Tester/Checkbox WithValue play-test 1`] = `
         </span>
       </span>
     </label>
-    <div id="checkboxErrorId-:r18:"
+    <div id="checkboxErrorId-:r16:"
          class
          aria-live="assertive"
     >
