@@ -51,7 +51,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       hasErrorInternal && !context && required ? styles.label_error : '';
     const labelRequiredClassName =
       !context && showRequiredMark ? styles.labelContent_required : '';
-    const hideLabelClassName = hideLabel ? styles.labelContent_hide : '';
+    const hideLabelClassName = hideLabel ? styles.srOnly : '';
 
     const ariaDescribedbyInput = `${ariaDescribedby ?? ''} ${
       hasErrorInternal ? errorIdInternal : ''

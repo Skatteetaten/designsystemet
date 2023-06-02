@@ -34,7 +34,6 @@ export const CheckboxGroup = forwardRef<
     ref
   ): JSX.Element => {
     const errorId = `checkboxGroupErrorId-${useId()}`;
-    const hideLegendClassName = hideLegend ? styles['fieldsetLegend_hide'] : '';
 
     if (legend === '') {
       throw new Error('Empty string is not a valid legend.');
@@ -44,9 +43,11 @@ export const CheckboxGroup = forwardRef<
     if (showRequiredMark) {
       requiredMarkClassName =
         typeof legend === 'string'
-          ? styles['fieldsetLegend_required']
-          : styles['fieldsetLegendWithMarkup_required'];
+          ? styles.fieldsetLegend_required
+          : styles.fieldsetLegendWithMarkup_required;
     }
+
+    const hideLegendClassName = hideLegend ? styles.srOnly : '';
 
     return (
       <CheckboxContext.Provider

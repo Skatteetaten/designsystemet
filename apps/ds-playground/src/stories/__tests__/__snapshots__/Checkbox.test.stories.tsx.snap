@@ -520,7 +520,7 @@ exports[`Tester/Checkbox WithHideLabel play-test 1`] = `
         <span class="Checkbox_labelCheckboxCheck__x9xdZ">
         </span>
       </span>
-      <span class="Checkbox_labelContent__Nf+Nz Checkbox_labelContent_hide__kt3It">
+      <span class="Checkbox_labelContent__Nf+Nz Checkbox_srOnly__nxK8+">
         <span class>
           Checkbox
         </span>

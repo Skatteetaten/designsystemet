@@ -30,4 +30,4 @@ export const panel_spacingL: string;
 export const panel_spacingXL: string;
 export const panel_spacingXXL: string;
 export const panel_spacingMEGA: string;
-export const hide: string;
+export const srOnly: string;

@@ -41,18 +41,15 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
       throw new Error('Empty string is not a valid legend');
     }
 
-    let requiredClassName;
-    if (typeof legend === 'string') {
-      requiredClassName = showRequiredMark
-        ? styles.radioGroupLegend_required
-        : '';
-    } else {
-      requiredClassName = showRequiredMark
-        ? styles.radioGroupLegendAsMarkup_required
-        : '';
+    let requiredClassName = '';
+    if (showRequiredMark) {
+      requiredClassName =
+        typeof legend === 'string'
+          ? styles.radioGroupLegend_required
+          : styles.radioGroupLegendAsMarkup_required;
     }
 
-    const hideClassName = hideLegend ? styles.radioGroupLegend_hide : '';
+    const hideClassName = hideLegend ? styles.srOnly : '';
     const legendClassName =
       `${styles.radioGroupLegend} ${hideClassName} ${requiredClassName}`.trim();
     const errorClassName = hasError ? styles.radioGroupItemContainer_error : '';

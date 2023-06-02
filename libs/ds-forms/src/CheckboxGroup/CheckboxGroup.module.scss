@@ -10,10 +10,6 @@
     font-size: var(--font-size-m);
     line-height: var(--semantic-line-height-input);
 
-    &_hide {
-      @include sr-only;
-    }
-
     &_required::after {
       color: var(--semantic-danger-foreground);
       content: '*';
@@ -35,4 +31,8 @@
   &SpacingBottom {
     margin-bottom: var(--spacing-m);
   }
+}
+
+.srOnly {
+  @include sr-only;
 }

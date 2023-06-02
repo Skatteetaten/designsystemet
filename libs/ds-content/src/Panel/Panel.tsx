@@ -97,7 +97,7 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
             <Heading
               as={titleAs}
               level={3}
-              className={hideTitle ? styles.hide : ''}
+              className={hideTitle ? styles.srOnly : ''}
               hasSpacing={!subtitle || hideSubtitle}
             >
               {title}
@@ -107,7 +107,7 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
             <Heading
               as={subtitleAs}
               level={5}
-              className={hideSubtitle ? styles.hide : ''}
+              className={hideSubtitle ? styles.srOnly : ''}
               hasSpacing
             >
               {subtitle}

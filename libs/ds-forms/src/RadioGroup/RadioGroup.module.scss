@@ -19,10 +19,6 @@
       content: '*';
       font-weight: var(--font-weight-bold);
     }
-
-    &_hide {
-      @include sr-only;
-    }
   }
 
   &ItemContainer {
@@ -39,4 +35,8 @@
       margin-bottom: var(--spacing-m);
     }
   }
+}
+
+.srOnly {
+  @include sr-only;
 }

@@ -75,10 +75,6 @@
       overflow-wrap: anywhere;
       word-break: normal;
 
-      &_hide {
-        @include sr-only;
-      }
-
       &_required {
         &::after {
           color: var(--semantic-danger-foreground);
@@ -137,4 +133,8 @@
   .input:disabled:focus + .label .labelCheckbox {
     outline: none;
   }
+}
+
+.srOnly {
+  @include sr-only;
 }

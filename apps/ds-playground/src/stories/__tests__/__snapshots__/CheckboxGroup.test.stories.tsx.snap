@@ -571,7 +571,7 @@ exports[`Tester/CheckboxGroup WithError play-test 1`] = `
 exports[`Tester/CheckboxGroup WithHideLegend play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="CheckboxGroup_fieldset__wEILr ">
-    <legend class="CheckboxGroup_fieldsetLegend__UfzKH  CheckboxGroup_fieldsetLegend_hide__PF0WM">
+    <legend class="CheckboxGroup_fieldsetLegend__UfzKH  CheckboxGroup_srOnly__kI24m">
       Velg det som passer deg
     </legend>
     <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">

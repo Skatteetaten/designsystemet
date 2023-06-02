@@ -32,16 +32,12 @@ interface InputPropsHTMLAttributes extends InputHTMLAttributes {
   onChange?: ChangeEventHandler<HTMLInputElement>;
 }
 
-export interface RadioGroupComponentCommonProps
+interface RadioGroupComponentCommonProps
   extends InputPropsHTMLAttributes,
     RequiredFieldsetHTMLAttributes,
     BaseProps {
   /** Radio-komponenter */
   children: JSX.Element | JSX.Element[];
-  /** Feilmelding */
-  errorMessage?: string;
-  /** Viser feilmelding */
-  hasError?: boolean;
   /** Skjule navn på gruppen. */
   hideLegend?: boolean;
   /** Navn på gruppen. */
@@ -80,9 +76,24 @@ type RadioGroupDiscriminatedCheckedProps =
       defaultValue?: string | number;
     };
 
+type RadioGroupDiscriminatedErrorProps =
+  | {
+      /** Tekst på feilmelding */
+      errorMessage: string;
+      /** Om gruppen har en feil */
+      hasError?: boolean;
+    }
+  | {
+      /** Tekst på feilmelding */
+      errorMessage?: never;
+      /** Om gruppen har en feil */
+      hasError?: never;
+    };
+
 export type RadioGroupProps = RadioGroupComponentCommonProps &
   RadioGroupDiscriminatedRequiredProps &
-  RadioGroupDiscriminatedCheckedProps;
+  RadioGroupDiscriminatedCheckedProps &
+  RadioGroupDiscriminatedErrorProps;
 
 export interface RadioGroupComponent
   extends React.ForwardRefExoticComponent<

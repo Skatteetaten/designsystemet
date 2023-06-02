@@ -500,7 +500,7 @@ exports[`Tester/RadioGroup/RadioGroup WithHasErrorAndAriaDescribedby play-test 1
 exports[`Tester/RadioGroup/RadioGroup WithHideLegend play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="RadioGroup_radioGroup__CZc2h ">
-    <legend class="RadioGroup_radioGroupLegend__yNB2H RadioGroup_radioGroupLegend_hide__rDWfk">
+    <legend class="RadioGroup_radioGroupLegend__yNB2H RadioGroup_srOnly__a0T+C">
       Type virksomhet
     </legend>
     <div class="RadioGroup_radioGroupItemContainer__AINZK">
