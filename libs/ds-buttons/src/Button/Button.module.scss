@@ -38,7 +38,7 @@
 .button {
   position: relative;
   display: inline-flex;
-  align-items: center;
+  align-items: baseline;
   padding: var(--spacing-xxs) var(--spacing-m);
   border: 3px solid;
   border-radius: 2.75rem;
@@ -47,7 +47,6 @@
   font-weight: var(--font-weight-bold);
   line-height: var(--semantic-line-height-buttons);
   overflow-wrap: anywhere;
-  text-align: center;
   transition: 0.15s;
   will-change: transform;
   word-break: normal;
@@ -59,11 +58,20 @@
 
   .iconWrapper {
     display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-self: center;
+  }
 
-    & .icon {
-      margin-right: var(--spacing-xs);
-      background-color: inherit;
-    }
+  .icon {
+    display: inline;
+    margin: 0 var(--spacing-xs) 0 0;
+    background-color: inherit;
+  }
+
+  & .buttonText {
+    flex-grow: 1;
+    flex-shrink: 1;
   }
 
   &_primary {
@@ -71,7 +79,7 @@
     background-color: var(--semantic-interactive-main);
     color: var(--palette-graphite-0);
 
-    & .iconWrapper .icon {
+    & .icon {
       fill: var(--palette-graphite-0);
     }
 
@@ -104,7 +112,7 @@
     background-color: var(--palette-graphite-0);
     color: var(--semantic-interactive-main);
 
-    & .iconWrapper .icon {
+    & .icon {
       fill: var(--semantic-interactive-main);
     }
 
@@ -138,7 +146,7 @@
     color: var(--semantic-interactive-main);
     text-decoration: underline;
 
-    & .iconWrapper .icon {
+    & .icon {
       fill: var(--semantic-interactive-main);
     }
 
@@ -172,7 +180,7 @@
     background-color: var(--semantic-danger-background);
     color: var(--palette-graphite-100);
 
-    & .iconWrapper .icon {
+    & .icon {
       fill: var(--palette-graphite-100);
     }
 
@@ -180,7 +188,7 @@
       background-color: var(--palette-burgundy-50);
       color: var(--palette-graphite-100);
 
-      & .iconWrapper .icon {
+      & .icon {
         fill: var(--palette-graphite-100);
       }
     }
@@ -193,7 +201,7 @@
       @extend %focus;
       @extend %active;
 
-      & .iconWrapper .icon {
+      & .icon {
         fill: var(--palette-graphite-100);
       }
 
@@ -206,7 +214,7 @@
     &:disabled:active {
       @extend %disabled;
 
-      & .iconWrapper .icon {
+      & .icon {
         fill: var(--semantic-disabled-foreground);
       }
     }

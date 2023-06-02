@@ -142,7 +142,7 @@ Defaults.parameters = {
 };
 Defaults.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
-  const button = canvas.getByText(defaultButtonText);
+  const button = canvas.getByRole('button');
   await expect(button).toBeInTheDocument();
   await expect(button).toHaveAttribute('type', 'button');
 };
@@ -166,7 +166,7 @@ VariantSecondary.parameters = {
 };
 VariantSecondary.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
-  const button = canvas.getByText(defaultButtonText);
+  const button = canvas.getByRole('button');
   await expect(button).toBeInTheDocument();
   await expect(button).toHaveAttribute('type', 'button');
 };
@@ -190,7 +190,7 @@ VariantTertiary.parameters = {
 };
 VariantTertiary.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
-  const button = canvas.getByText(defaultButtonText);
+  const button = canvas.getByRole('button');
   await expect(button).toBeInTheDocument();
   await expect(button).toHaveAttribute('type', 'button');
 };
@@ -211,7 +211,7 @@ VariantDanger.parameters = {
 };
 VariantDanger.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
-  const button = canvas.getByText(defaultButtonText);
+  const button = canvas.getByRole('button');
   await expect(button).toBeInTheDocument();
   await expect(button).toHaveAttribute('type', 'button');
 };
@@ -398,7 +398,7 @@ WithEventHandlers.parameters = {
 };
 WithEventHandlers.play = async ({ args, canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
-  const button = canvas.getByText('bruk knapp for å teste events');
+  const button = canvas.getByRole('button');
   await expect(button).toBeInTheDocument();
   await button.focus();
   await waitFor(() => expect(args.onFocus).toHaveBeenCalled());

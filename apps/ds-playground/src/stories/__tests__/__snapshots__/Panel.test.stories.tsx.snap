@@ -12,7 +12,9 @@ exports[`Tester/Panel Defaults play-test 1`] = `
       <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
               type="button"
       >
-        Trykk på meg
+        <span class="Button_buttonText__JxyB+">
+          Trykk på meg
+        </span>
       </button>
     </div>
     <div class="Panel_panelSpace__J2keW">
@@ -98,7 +100,9 @@ exports[`Tester/Panel VariantFilled smoke-test 1`] = `
       <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
               type="button"
       >
-        Trykk på meg
+        <span class="Button_buttonText__JxyB+">
+          Trykk på meg
+        </span>
       </button>
     </div>
     <div class="Panel_panelSpace__J2keW">
@@ -123,7 +127,9 @@ exports[`Tester/Panel WithAttributes play-test 1`] = `
       <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
               type="button"
       >
-        Trykk på meg
+        <span class="Button_buttonText__JxyB+">
+          Trykk på meg
+        </span>
       </button>
     </div>
     <div class="Panel_panelSpace__J2keW">
@@ -144,7 +150,9 @@ exports[`Tester/Panel WithClassNameOverridesPanelWidthAndPadding smoke-test 1`] 
       <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
               type="button"
       >
-        Trykk på meg
+        <span class="Button_buttonText__JxyB+">
+          Trykk på meg
+        </span>
       </button>
     </div>
     <div class="Panel_panelSpace__J2keW">
@@ -423,7 +431,9 @@ exports[`Tester/Panel WithHideSubtitle play-test 1`] = `
       <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
               type="button"
       >
-        Trykk på meg
+        <span class="Button_buttonText__JxyB+">
+          Trykk på meg
+        </span>
       </button>
     </div>
     <div class="Panel_panelSpace__J2keW">
@@ -447,7 +457,9 @@ exports[`Tester/Panel WithHideTitle play-test 1`] = `
       <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
               type="button"
       >
-        Trykk på meg
+        <span class="Button_buttonText__JxyB+">
+          Trykk på meg
+        </span>
       </button>
     </div>
     <div class="Panel_panelSpace__J2keW">
@@ -803,7 +815,9 @@ exports[`Tester/Panel WithRef play-test 1`] = `
       <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
               type="button"
       >
-        Trykk på meg
+        <span class="Button_buttonText__JxyB+">
+          Trykk på meg
+        </span>
       </button>
     </div>
     <div class="Panel_panelSpace__J2keW">
@@ -923,7 +937,9 @@ exports[`Tester/Panel WithSubtitleAs play-test 1`] = `
       <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
               type="button"
       >
-        Trykk på meg
+        <span class="Button_buttonText__JxyB+">
+          Trykk på meg
+        </span>
       </button>
     </div>
     <div class="Panel_panelSpace__J2keW">
@@ -966,7 +982,9 @@ exports[`Tester/Panel WithTitleAs play-test 1`] = `
       <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
               type="button"
       >
-        Trykk på meg
+        <span class="Button_buttonText__JxyB+">
+          Trykk på meg
+        </span>
       </button>
     </div>
     <div class="Panel_panelSpace__J2keW">

@@ -5,7 +5,9 @@ exports[`Tester/Button Defaults play-test 1`] = `
   <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
           type="button"
   >
-    Klikk her
+    <span class="Button_buttonText__JxyB+">
+      Klikk her
+    </span>
   </button>
 </div>
 `;
@@ -15,7 +17,9 @@ exports[`Tester/Button VariantDanger play-test 1`] = `
   <button class="Button_button__pkuNv Button_button_danger__0CE32  "
           type="button"
   >
-    Klikk her
+    <span class="Button_buttonText__JxyB+">
+      Klikk her
+    </span>
   </button>
 </div>
 `;
@@ -25,7 +29,9 @@ exports[`Tester/Button VariantSecondary play-test 1`] = `
   <button class="Button_button__pkuNv Button_button_secondary__KxQlU  "
           type="button"
   >
-    Klikk her
+    <span class="Button_buttonText__JxyB+">
+      Klikk her
+    </span>
   </button>
 </div>
 `;
@@ -35,7 +41,9 @@ exports[`Tester/Button VariantTertiary play-test 1`] = `
   <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
           type="button"
   >
-    Klikk her
+    <span class="Button_buttonText__JxyB+">
+      Klikk her
+    </span>
   </button>
 </div>
 `;
@@ -46,7 +54,9 @@ exports[`Tester/Button WithAccesskey play-test 1`] = `
           accesskey="j"
           type="button"
   >
-    Klikk her
+    <span class="Button_buttonText__JxyB+">
+      Klikk her
+    </span>
   </button>
 </div>
 `;
@@ -57,7 +67,9 @@ exports[`Tester/Button WithAriaDescribedby play-test 1`] = `
           type="button"
           aria-describedby="testid1234"
   >
-    Klikk her
+    <span class="Button_buttonText__JxyB+">
+      Klikk her
+    </span>
   </button>
 </div>
 `;
@@ -70,7 +82,9 @@ exports[`Tester/Button WithAttributes play-test 1`] = `
           data-testid="123ID"
           type="button"
   >
-    Klikk her
+    <span class="Button_buttonText__JxyB+">
+      Klikk her
+    </span>
   </button>
 </div>
 `;
@@ -81,7 +95,9 @@ exports[`Tester/Button WithDisabled play-test 1`] = `
           disabled
           type="button"
   >
-    Klikk her
+    <span class="Button_buttonText__JxyB+">
+      Klikk her
+    </span>
   </button>
 </div>
 `;
@@ -103,7 +119,9 @@ exports[`Tester/Button WithDisabledAndIcon smoke-test 1`] = `
         </path>
       </svg>
     </span>
-    Klikk her
+    <span class="Button_buttonText__JxyB+">
+      Klikk her
+    </span>
   </button>
 </div>
 `;
@@ -113,7 +131,9 @@ exports[`Tester/Button WithEventHandlers play-test 1`] = `
   <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
           type="button"
   >
-    Knapp har blitt klikket på
+    <span class="Button_buttonText__JxyB+">
+      Knapp har blitt klikket på
+    </span>
   </button>
 </div>
 `;
@@ -134,7 +154,9 @@ exports[`Tester/Button WithIcon play-test 1`] = `
         </path>
       </svg>
     </span>
-    Klikk her
+    <span class="Button_buttonText__JxyB+">
+      Klikk her
+    </span>
   </button>
 </div>
 `;
@@ -144,7 +166,9 @@ exports[`Tester/Button WithLongText smoke-test 1`] = `
   <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
           type="button"
   >
-    Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles. Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles
+    <span class="Button_buttonText__JxyB+">
+      Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles. Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles
+    </span>
   </button>
 </div>
 `;
@@ -154,7 +178,9 @@ exports[`Tester/Button WithLongTextAndBreaking smoke-test 1`] = `
   <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
           type="button"
   >
-    Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles.Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles
+    <span class="Button_buttonText__JxyB+">
+      Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles.Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles
+    </span>
   </button>
 </div>
 `;
@@ -175,7 +201,9 @@ exports[`Tester/Button WithLongTextAndIcon smoke-test 1`] = `
         </path>
       </svg>
     </span>
-    Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres. Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres.
+    <span class="Button_buttonText__JxyB+">
+      Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres. Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres.
+    </span>
   </button>
 </div>
 `;
@@ -186,7 +214,9 @@ exports[`Tester/Button WithRef play-test 1`] = `
           type="button"
           id="dummyIdForwardedFromRef"
   >
-    Klikk her
+    <span class="Button_buttonText__JxyB+">
+      Klikk her
+    </span>
   </button>
 </div>
 `;
@@ -196,7 +226,9 @@ exports[`Tester/Button WithType play-test 1`] = `
   <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
           type="submit"
   >
-    Klikk her
+    <span class="Button_buttonText__JxyB+">
+      Klikk her
+    </span>
   </button>
 </div>
 `;

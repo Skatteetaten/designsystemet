@@ -56,7 +56,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             <Icon className={styles.icon} svgPath={svgPath} />
           </span>
         )}
-        {children}
+        <span className={styles.buttonText}>{children}</span>
       </button>
     );
   }
