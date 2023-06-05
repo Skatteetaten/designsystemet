@@ -1,15 +1,7 @@
 {
   "name": "@skatteetaten/ds-collections",
-  "version": "0.0.1",
-  "main": "./index.js",
-  "module": "./index.mjs",
-  "exports": {
-    ".": {
-      "import": "./index.mjs",
-      "require": "./index.js"
-    }
-  },
   "groupId": "no.skatteetaten.aurora",
+  "version": "0.2.0",
   "publishConfig": {
     "registry": "https://nexus.sits.no/repository/npm-internal/"
   },
