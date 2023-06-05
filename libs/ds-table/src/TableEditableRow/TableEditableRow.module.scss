@@ -1,3 +1,5 @@
+@import 'libs/ds-core-utils/src/styles.scss';
+
 .editableRow {
   &_expanded {
     --table-cell-border-bottom: none;
@@ -54,4 +56,8 @@
   padding-top: var(--spacing-m);
   border-top: solid 1px var(--palette-ochre-50);
   background: var(--palette-ochre-5);
+}
+
+.srOnly {
+  @include sr-only;
 }

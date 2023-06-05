@@ -389,6 +389,7 @@ WithOnClickCloseButton.args = {
 };
 WithOnClickCloseButton.parameters = {
   imageSnapshot: { disable: true },
+  HTMLSnapshot: { disable: true },
 };
 WithOnClickCloseButton.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);

@@ -6,6 +6,7 @@ import {
   useState,
 } from 'react';
 
+import { densityArr } from '@skatteetaten/ds-core-utils';
 import { SortState, Table, TableProps } from '@skatteetaten/ds-table';
 import { Heading } from '@skatteetaten/ds-typography';
 import { expect } from '@storybook/jest';
@@ -27,7 +28,11 @@ export default {
     'data-testid': { table: { disable: true } },
     // Props
     caption: { table: { disable: true } },
-    variant: { table: { disable: true } },
+    variant: {
+      table: { disable: true },
+      options: [...densityArr],
+      control: 'radio',
+    },
     hasFullWidth: { table: { disable: true } },
     showCaption: { table: { disable: true } },
     sortState: { table: { disable: true } },
@@ -148,7 +153,7 @@ const ExpandEditSortTable = (
         </Table.Row>
       </Table.Header>
       <Table.Body>
-        {sortedData.map(({ isExpandable, id, rowData }, idx) => {
+        {sortedData.map(({ isExpandable, id, rowData }, index) => {
           const content = (
             <>
               <Table.DataCell alignment={'right'} id={id}>
@@ -169,8 +174,8 @@ const ExpandEditSortTable = (
           if (isExpandable) {
             return (
               <Table.Row
-                key={idx}
-                data-testid={`row-expand-${idx}`}
+                key={`${id}${index}`}
+                data-testid={`row-expand-${index}`}
                 expandButtonAriaDescribedby={id}
                 expandableContent={
                   <div className={'emptyExpandedTableRow'}>
@@ -189,14 +194,12 @@ const ExpandEditSortTable = (
 
           return (
             <Table.EditableRow
-              key={idx}
-              data-testid={`row-${idx}`}
+              key={index}
+              data-testid={`row-${index}`}
               editButtonAriaDescribedby={id}
               editButtonPosition={'left'}
               editableContent={(): ReactNode => (
-                <div className={'emptyExpandedTableRow'}>
-                  <span className={'srOnly'}>{'rediger data'}</span>
-                </div>
+                <div className={'emptyExpandedTableRow'}></div>
               )}
             >
               {content}
@@ -216,29 +219,36 @@ const Template: ComponentStory<typeof Table> = (args) => (
     <Table {...args} variant={args.variant}>
       <Table.Header>
         <Table.Row>
+          <Table.HeaderCell scope={'col'}>{'Category'}</Table.HeaderCell>
           <Table.HeaderCell scope={'col'}>{'Items'}</Table.HeaderCell>
           <Table.HeaderCell scope={'col'}>{'Expenditure'}</Table.HeaderCell>
-          <Table.HeaderCell scope={'col'}>{'Category'}</Table.HeaderCell>
         </Table.Row>
       </Table.Header>
       <Table.Body>
         <Table.Row>
-          <Table.DataCell as={'th'}>{'Donuts'}</Table.DataCell>
-          <Table.DataCell>{'3,000'}</Table.DataCell>
-          <Table.DataCell className={'rowSpanLeft'} rowSpan={2}>
+          <Table.DataCell className={'rowSpanRight'} rowSpan={2}>
             {'Edible'}
           </Table.DataCell>
-        </Table.Row>
-        <Table.Row>
-          <Table.DataCell as={'th'}>{'Cake'}</Table.DataCell>
+          <Table.DataCell>{'Donuts'}</Table.DataCell>
           <Table.DataCell>{'3,000'}</Table.DataCell>
         </Table.Row>
         <Table.Row>
-          <Table.DataCell as={'th'}>{'Stationery'}</Table.DataCell>
+          <Table.DataCell>{'Cake'}</Table.DataCell>
+          <Table.DataCell>{'3,000'}</Table.DataCell>
+        </Table.Row>
+        <Table.Row>
+          <Table.DataCell rowSpan={2} className={'rowSpanRight'}>
+            {'Non-Edible'}
+          </Table.DataCell>
+          <Table.DataCell>{'Stationery'}</Table.DataCell>
           <Table.DataCell>{'18,000'}</Table.DataCell>
-          <Table.DataCell>{'Non-Edible'}</Table.DataCell>
+        </Table.Row>
+        <Table.Row>
+          <Table.DataCell>{'Batteries'}</Table.DataCell>
+          <Table.DataCell>{'9,000'}</Table.DataCell>
         </Table.Row>
       </Table.Body>
+      <Table.Sum colSpan={2}>{'32,000'}</Table.Sum>
     </Table>
   </div>
 );
@@ -278,7 +288,7 @@ WithRef.play = async ({ canvasElement }): Promise<void> => {
 // Når Table har en lang, så har table-element lang
 // Når Table har dataTestid, så har table-elementet data-testid satt
 export const WithAttributes = Template.bind({});
-WithAttributes.storyName = 'With Attributes(FA2-5)';
+WithAttributes.storyName = 'With Attributes (FA2-5)';
 WithAttributes.args = {
   ...defaultArgs,
   id: 'htmlId',
@@ -287,7 +297,6 @@ WithAttributes.args = {
   'data-testid': '123ID',
 };
 WithAttributes.argTypes = {
-  ...WithAttributes.argTypes,
   id: { table: { disable: false } },
   className: { table: { disable: false } },
   lang: { table: { disable: false } },
@@ -303,7 +312,7 @@ WithAttributes.play = async ({ canvasElement }): Promise<void> => {
 };
 
 export const Defaults = Template.bind({});
-Defaults.storyName = 'Defaults (Table A8, B1, B2) (TableRow B1)';
+Defaults.storyName = 'Defaults (Table A1, A8, B1, B2, TableRow B1, A20)';
 Defaults.args = {
   ...defaultArgs,
 };
@@ -316,7 +325,7 @@ Defaults.play = async ({ canvasElement }): Promise<void> => {
 
 export const WithVariantCompact = TemplateExpandEditSort.bind({});
 WithVariantCompact.storyName =
-  'Variant compact(Table A1, A3) (Header A2) (TableRow A17, A19)';
+  'Variant compact(Table A1, A3, TableHeader A2, TableRow A3, A17, A19, A20)';
 WithVariantCompact.args = {
   ...defaultArgs,
   variant: 'compact',
@@ -367,7 +376,7 @@ const TemplateScroll: ComponentStory<typeof Table> = (args) => {
 
 // Når Table får en scrollbar så tegnes den opp som forventet
 export const WithScrollbar = TemplateScroll.bind({});
-WithScrollbar.storyName = 'With scroll(A5)';
+WithScrollbar.storyName = 'With scroll (A5)';
 WithScrollbar.parameters = { a11y: { disable: true } };
 
 const TemplateAlignment: ComponentStory<typeof Table> = (args) => (
@@ -414,7 +423,7 @@ const TemplateAlignment: ComponentStory<typeof Table> = (args) => (
 //Når Table rader/kolonner har alignment så tegnes det riktig
 export const WithFullWidthAndTextAlignment = TemplateAlignment.bind({});
 WithFullWidthAndTextAlignment.storyName =
-  'With Full Width, text Alignment (Table A4, A10) (Header A1) (TableRow A2)';
+  'With Full Width, text Alignment (Table A4, A10, TableHeader A1, TableRow A2)';
 WithFullWidthAndTextAlignment.args = {
   ...defaultArgs,
   hasFullWidth: true,
@@ -422,7 +431,7 @@ WithFullWidthAndTextAlignment.args = {
 
 export const WithExpandEditSort = TemplateExpandEditSort.bind({});
 WithExpandEditSort.storyName =
-  'With Expand Edit Sort (Table A9, A11, A14, A15) (Header A4, A6, A7) (TableRow A14, A15)';
+  'With Expand Edit Sort (Table A9, A11, A14, A15, TableHeader A4, A5, A6, A7, B2, TableRow B3, A14, A15, A19)';
 WithExpandEditSort.args = {
   ...defaultArgs,
 };
@@ -444,5 +453,17 @@ WithExpandEditSort.parameters = {
       `${wrapper} [data-testid="header-belop"] button`,
       `${wrapper} [data-testid="header-avkastning"] button`,
     ],
+  },
+};
+
+export const WithWideScreen = TemplateExpandEditSort.bind({});
+WithWideScreen.storyName = 'With Wide screen (Table A1, A2)';
+WithWideScreen.args = {
+  ...defaultArgs,
+};
+
+WithWideScreen.parameters = {
+  viewport: {
+    defaultViewport: '--breakpoint-m',
   },
 };

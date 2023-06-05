@@ -16,6 +16,8 @@ export const TableSum = forwardRef<HTMLTableRowElement, TableSumProps>(
       className,
       lang,
       'data-testid': dataTestid,
+      labelAlignment,
+      valueAlignment,
       colSpan,
       hasTopSeparator,
       sumText,
@@ -33,12 +35,16 @@ export const TableSum = forwardRef<HTMLTableRowElement, TableSumProps>(
         <TableRow ref={ref}>
           <TableDataCell
             className={concatenatedClassName}
-            alignment={'right'}
+            as={'th'}
+            alignment={labelAlignment}
             colSpan={colSpan}
           >
             {sumText ?? t('tablesum.Sum')}
           </TableDataCell>
-          <TableDataCell className={concatenatedClassName}>
+          <TableDataCell
+            className={concatenatedClassName}
+            alignment={valueAlignment}
+          >
             {children}
           </TableDataCell>
         </TableRow>

@@ -1,11 +1,11 @@
 import { Table } from '@skatteetaten/ds-table';
 import { expect } from '@storybook/jest';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { userEvent, within } from '@storybook/testing-library';
+import { within } from '@storybook/testing-library';
 
 export default {
-  component: Table.Row,
-  title: 'Tester/Table/Row',
+  component: Table.EditableRow,
+  title: 'Tester/Table/EditableRow',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },
@@ -15,29 +15,22 @@ export default {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    expandableContent: { table: { disable: true } },
-    expandButtonAriaDescribedby: { table: { disable: true } },
-    expandButtonPosition: { table: { disable: true } },
-    expandButtonTitle: { table: { disable: true } },
-    isExpandable: { table: { disable: true } },
-    isExpanded: { table: { disable: true } },
+    editableContent: { table: { disable: true } },
+    editButtonAriaDescribedby: { table: { disable: true } },
+    editButtonPosition: { table: { disable: true } },
+    onEdit: { table: { disable: true } },
     children: { table: { disable: true } },
-    onOpen: { table: { disable: true } },
-    onClose: { table: { disable: true } },
-    onExpand: { table: { disable: true } },
   },
-} as ComponentMeta<typeof Table.Row>;
+} as ComponentMeta<typeof Table.EditableRow>;
 
-const Template: ComponentStory<typeof Table.Row> = (args) => (
+const Template: ComponentStory<typeof Table.EditableRow> = (args) => (
   <div data-test-block>
     <Table caption={'testtabell'}>
       <Table.Body>
-        <Table.Row {...args}>
-          <Table.DataCell id={'Id123'} as={'th'}>
-            {'Cake'}
-          </Table.DataCell>
+        <Table.EditableRow {...args}>
+          <Table.DataCell as={'th'}>{'Cake'}</Table.DataCell>
           <Table.DataCell>{'3,000'}</Table.DataCell>
-        </Table.Row>
+        </Table.EditableRow>
       </Table.Body>
     </Table>
   </div>
@@ -89,34 +82,9 @@ WithAttributes.parameters = {
 };
 WithAttributes.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
-  const row = canvas.getByRole('row');
-  await expect(row).toHaveClass('dummyClassname');
-  await expect(row).toHaveAttribute('id', 'htmlId');
-  await expect(row).toHaveAttribute('lang', 'nb');
-  await expect(row).toHaveAttribute('data-testid', '123ID');
-};
-
-// Når TableRow er expandable så setter den riktig title, aria-expanded og aria-describedby på ikonknappen
-export const WithExpandable = Template.bind({});
-WithExpandable.storyName = 'With Expandable (TableRow B6)';
-WithExpandable.args = {
-  isExpandable: true,
-  expandButtonAriaDescribedby: 'Id123',
-};
-WithExpandable.argTypes = {
-  isExpandable: { table: { disable: false } },
-  expandButtonAriaDescribedby: { table: { disable: false } },
-};
-WithExpandable.parameters = {
-  imageSnapshot: { disable: true },
-  HTMLSnapshot: { disable: true },
-};
-WithExpandable.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const iconButton = canvas.getByRole('button');
-  await expect(iconButton).toHaveAttribute('aria-describedby', 'Id123');
-  await expect(iconButton).toHaveAccessibleName('Mer informasjon');
-  await expect(iconButton).toHaveAttribute('aria-expanded', 'false');
-  await userEvent.click(iconButton);
-  await expect(iconButton).toHaveAttribute('aria-expanded', 'true');
+  const table = canvas.getByRole('row');
+  await expect(table).toHaveClass('dummyClassname');
+  await expect(table).toHaveAttribute('id', 'htmlId');
+  await expect(table).toHaveAttribute('lang', 'nb');
+  await expect(table).toHaveAttribute('data-testid', '123ID');
 };

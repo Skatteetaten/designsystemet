@@ -6,6 +6,7 @@
   "table.SortedAscending": "Sorted ascending",
   "table.SortedDescending": "Sorted descending",
   "tablerow.Editable": "Edit row",
+  "tablerow.EditData": "Edit data",
   "tablerow.Expandable": "More information",
   "tablesum.Sum": "Sum"
 }

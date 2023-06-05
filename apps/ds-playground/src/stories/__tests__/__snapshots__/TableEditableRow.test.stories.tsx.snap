@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Table/EditableRow WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <div class=" ">
+    <table class="Table_table__VhSJI  Table_table_standard__8JWMb ">
+      <caption class="Table_tableCaption__zTm5t Table_hidden__N7qKc Table_tableCaption_standard__Nhqht">
+        testtabell
+      </caption>
+      <tbody>
+        <tr id="htmlId"
+            class=" dummyClassname"
+            lang="nb"
+            data-testid="123ID"
+        >
+          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableRowWithIconButton_buttonCell__Ogf4J  ">
+            <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+                    type="button"
+            >
+              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-labelledby="svgtitle-:r3:"
+                   aria-hidden="false"
+                   role="img"
+              >
+                <title id="svgtitle-:r3:">
+                  Rediger rad
+                </title>
+                <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
+                </path>
+              </svg>
+            </button>
+          </td>
+          <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
+              scope="row"
+          >
+            Cake
+          </th>
+          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            3,000
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Tester/Table/EditableRow WithRef play-test 1`] = `
+<div data-test-block="true">
+  <div class=" ">
+    <table class="Table_table__VhSJI  Table_table_standard__8JWMb ">
+      <caption class="Table_tableCaption__zTm5t Table_hidden__N7qKc Table_tableCaption_standard__Nhqht">
+        testtabell
+      </caption>
+      <tbody>
+        <tr id="dummyIdForwardedFromRef"
+            class=" "
+        >
+          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableRowWithIconButton_buttonCell__Ogf4J  ">
+            <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+                    type="button"
+            >
+              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+                   viewbox="0 0 24 24"
+                   focusable="false"
+                   aria-labelledby="svgtitle-:r1:"
+                   aria-hidden="false"
+                   role="img"
+              >
+                <title id="svgtitle-:r1:">
+                  Rediger rad
+                </title>
+                <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
+                </path>
+              </svg>
+            </button>
+          </td>
+          <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
+              scope="row"
+          >
+            Cake
+          </th>
+          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            3,000
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

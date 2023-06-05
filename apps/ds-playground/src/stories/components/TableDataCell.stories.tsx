@@ -33,6 +33,9 @@ export default {
     // HTML
     colSpan: { table: { category: category.htmlAttribute } },
     rowSpan: { table: { category: category.htmlAttribute } },
+    scope: {
+      table: { category: category.htmlAttribute },
+    },
   },
   parameters: {
     version: getVersion('ds-table'),

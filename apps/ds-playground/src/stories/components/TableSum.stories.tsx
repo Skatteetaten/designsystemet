@@ -16,6 +16,12 @@ export default {
     sumText: {
       table: { category: category.props },
     },
+    labelAlignment: {
+      table: { category: category.props },
+    },
+    valueAlignment: {
+      table: { category: category.props },
+    },
     hasTopSeparator: {
       table: { category: category.props },
     },

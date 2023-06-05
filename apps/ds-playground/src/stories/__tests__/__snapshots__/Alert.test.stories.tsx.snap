@@ -702,15 +702,6 @@ exports[`Tester/Alert WithMarkup smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Alert WithOnClickCloseButton play-test 1`] = `
-<div data-test-block="true">
-  <div class
-       aria-live="polite"
-  >
-  </div>
-</div>
-`;
-
 exports[`Tester/Alert WithRef play-test 1`] = `
 <div data-test-block="true">
   <div class

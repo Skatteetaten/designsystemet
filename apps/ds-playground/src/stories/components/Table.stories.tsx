@@ -249,8 +249,10 @@ const TemplateSort: Story<TableProps> = (args) => {
         </Table.Row>
       </Table.Header>
       <Table.Body>
-        {sortedData.map((row) => (
-          <Table.Row key={row.player}>
+        {sortedData.map((row, index) => (
+          /* hvis ikke index tas med i key slik at de blir unike når tabellen sorteres
+          så blir voiceover i Safari forvirret og hopper over rader */
+          <Table.Row key={`${row.player}-${index}`}>
             <Table.DataCell alignment={'center'}>{row.player}</Table.DataCell>
             <Table.DataCell alignment={'right'}>{row.score}</Table.DataCell>
           </Table.Row>
@@ -387,10 +389,10 @@ const TemplateExampleExpandable: Story<TableProps> = (args) => {
           </Table.Row>
         </Table.Header>
         <Table.Body>
-          {sortedData.map((row, idx) => {
+          {sortedData.map((row, index) => {
             return (
               <Table.Row
-                key={idx}
+                key={`${row.id}-${index}`}
                 expandButtonPosition={'right'}
                 expandableContent={
                   <div className={'emptyExpandedTableRow'}></div>
@@ -496,14 +498,12 @@ const TemplateExampleEditable: ComponentStory<typeof Table> = (args) => {
           </Table.Row>
         </Table.Header>
         <Table.Body>
-          {sortedData.map((row) => {
+          {sortedData.map((row, index) => {
             return (
               <Table.EditableRow
-                key={row.id}
+                key={`${row.id}-${index}`}
                 editableContent={(closeEditing: () => void): ReactNode => (
                   <div className={'emptyExpandedTableRow'}>
-                    <span className={'srOnly'}>{'rediger data'}</span>
-
                     <Button
                       onClick={(): void => {
                         closeEditing();

@@ -6,3 +6,4 @@ export const editableRowButtonCell: string;
 export const editableRowTriangle: string;
 export const expandedRow: string;
 export const expandableContent: string;
+export const srOnly: string;

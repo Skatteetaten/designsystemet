@@ -6,7 +6,7 @@ import { TableCellAs, TextAlignment } from '../Table/Table.types';
 
 type RequiredTableDataCellHTMLAttributes = Pick<
   React.HTMLProps<HTMLTableCellElement>,
-  'colSpan' | 'rowSpan'
+  'scope' | 'colSpan' | 'rowSpan'
 >;
 type TableDataCellHTMLAttributes = Partial<RequiredTableDataCellHTMLAttributes>;
 

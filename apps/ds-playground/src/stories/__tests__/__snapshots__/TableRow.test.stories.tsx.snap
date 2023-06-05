@@ -13,7 +13,8 @@ exports[`Tester/Table/Row WithAttributes play-test 1`] = `
             lang="nb"
             data-testid="123ID"
         >
-          <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
+          <th id="Id123"
+              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
               scope="row"
           >
             Cake
@@ -39,7 +40,8 @@ exports[`Tester/Table/Row WithRef play-test 1`] = `
         <tr class
             id="dummyIdForwardedFromRef"
         >
-          <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
+          <th id="Id123"
+              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
               scope="row"
           >
             Cake

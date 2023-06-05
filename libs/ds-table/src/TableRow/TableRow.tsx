@@ -89,6 +89,7 @@ export const TableRow = forwardRef<HTMLTableRowElement, TableRowProps>(
       expandButtonAriaDescribedby,
       isDesktop,
       isExpanded,
+      iconButtonAriaExpanded: isExpanded,
       isExpandButtonDisabled,
       onExpandClick,
       children,

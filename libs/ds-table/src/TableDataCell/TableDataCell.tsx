@@ -23,9 +23,10 @@ export const TableDataCell = forwardRef<
       lang,
       'data-testid': dataTestid,
       as: Tag = getDataCellAsDefault(),
+      alignment = getTableCellAlignmentDefault(),
       colSpan,
       rowSpan,
-      alignment = getTableCellAlignmentDefault(),
+      scope,
       children,
     },
     ref
@@ -50,7 +51,7 @@ export const TableDataCell = forwardRef<
         data-testid={dataTestid}
         colSpan={colSpan}
         rowSpan={rowSpan}
-        scope={Tag === 'th' ? 'row' : undefined}
+        scope={scope ?? Tag === 'th' ? 'row' : undefined}
       >
         {children}
       </Tag>

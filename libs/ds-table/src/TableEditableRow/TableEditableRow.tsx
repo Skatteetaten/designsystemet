@@ -40,7 +40,7 @@ export const TableEditableRow = forwardRef<
     ref
   ) => {
     const rowWithButtonRef = useRef<RowWithExpandButtonHandle>(null);
-    const expandContentRef = useRef<HTMLDivElement | null>(null);
+    const srOnlySpanRef = useRef<HTMLSpanElement | null>(null);
     useImperativeHandle(
       ref,
       () => rowWithButtonRef?.current?.rowRef?.current as HTMLTableRowElement
@@ -71,14 +71,15 @@ export const TableEditableRow = forwardRef<
           expandableContent={
             <>
               <div className={styles.editableRowTriangle} />
-              <div ref={expandContentRef} tabIndex={-1}>
-                {editableContent?.(() => {
-                  context?.setRowInEditModeId(undefined);
-                  setTimeout(() => {
-                    rowWithButtonRef.current?.focusButton();
-                  }, 0);
-                })}
-              </div>
+              <span ref={srOnlySpanRef} className={styles.srOnly} tabIndex={-1}>
+                {t('tablerow.EditData')}
+              </span>
+              {editableContent?.(() => {
+                context?.setRowInEditModeId(undefined);
+                setTimeout(() => {
+                  rowWithButtonRef.current?.focusButton();
+                }, 0);
+              })}
             </>
           }
           context={context}
@@ -88,7 +89,7 @@ export const TableEditableRow = forwardRef<
           onExpandClick={(): void => {
             onEdit && onEdit();
             context?.setRowInEditModeId(id);
-            setTimeout(() => expandContentRef.current?.focus(), 0);
+            setTimeout(() => srOnlySpanRef.current?.focus(), 0);
           }}
         >
           {children}
@@ -111,7 +112,10 @@ export const TableEditableRow = forwardRef<
         expandableContent={
           <>
             <div className={styles.editableRowTriangle} />
-            <div ref={expandContentRef} tabIndex={-1}>
+            <div tabIndex={-1}>
+              <span ref={srOnlySpanRef} className={styles.srOnly} tabIndex={-1}>
+                {t('tablerow.EditData')}
+              </span>
               {editableContent?.(() => {
                 context?.setRowInEditModeId(undefined);
                 setTimeout(() => {
@@ -128,7 +132,7 @@ export const TableEditableRow = forwardRef<
         onExpandClick={(): void => {
           onEdit && onEdit();
           context?.setRowInEditModeId(id);
-          setTimeout(() => expandContentRef.current?.focus(), 0);
+          setTimeout(() => srOnlySpanRef.current?.focus(), 0);
         }}
       >
         {children}

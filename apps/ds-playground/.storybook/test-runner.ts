@@ -145,7 +145,13 @@ async function verifyImageSnapshots(
   }
 }
 
-async function verifyHTMLSnapshots(page: Page): Promise<void> {
+async function verifyHTMLSnapshots(
+  page: Page,
+  storyContext: StoryContext
+): Promise<void> {
+  if (storyContext.parameters.HTMLSnapshot?.disable) {
+    return;
+  }
   const elementHandler = await page.$('#root');
   const innerHTML = await elementHandler.innerHTML();
   expect(innerHTML).toMatchSnapshot();
@@ -190,7 +196,7 @@ const config: TestRunnerConfig = {
   async postRender(page, context): Promise<void> {
     const storyContext = await getStoryContext(page, context);
     await verifyAxeRules(page, storyContext);
-    await verifyHTMLSnapshots(page);
+    await verifyHTMLSnapshots(page, storyContext);
     await verifyImageSnapshots(page, storyContext, context);
   },
 };

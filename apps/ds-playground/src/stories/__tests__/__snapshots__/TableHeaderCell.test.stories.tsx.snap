@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Table/HeaderCell WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <th id="htmlId"
+      class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 dummyClassname"
+      lang="nb"
+      data-testid="123ID"
+  >
+    cake
+  </th>
+</div>
+`;
+
+exports[`Tester/Table/HeaderCell WithChildren play-test 1`] = `
+<div data-test-block="true">
+  <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 ">
+    columnheader
+  </th>
+</div>
+`;
+
+exports[`Tester/Table/HeaderCell WithRef play-test 1`] = `
+<div data-test-block="true">
+  <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 "
+      id="dummyIdForwardedFromRef"
+  >
+    cake
+  </th>
+</div>
+`;

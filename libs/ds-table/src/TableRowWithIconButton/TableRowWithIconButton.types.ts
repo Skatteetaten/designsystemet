@@ -1,5 +1,6 @@
 import { ReactElement, ReactNode } from 'react';
 
+import { IconButtonProps } from '@skatteetaten/ds-buttons';
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 import { TableContextProps } from '../Table/Table.types';
@@ -10,10 +11,11 @@ export interface ExpandableRowProps extends BaseProps {
   context: TableContextProps | null;
   svgPath: ReactElement;
   expandButtonAriaDescribedby?: string;
+  iconButtonAriaExpanded?: IconButtonProps['ariaExpanded'];
+  hideIconButton?: boolean;
   isDesktop: boolean;
   isExpanded?: boolean;
   isExpandButtonDisabled?: boolean;
-  hideIconButton?: boolean;
   onExpandClick: () => void;
   children?: ReactNode;
   classNames?: { expandedContent?: string };
