@@ -106,8 +106,9 @@ WithAttributes.argTypes = {
 WithAttributes.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   const container = canvas.getAllByRole('generic')[1];
+  const alert = canvas.getAllByRole('generic')[2];
   await expect(container).toHaveAttribute('id', 'htmlId');
-  await expect(container).toHaveClass('dummyClassname');
+  await expect(alert).toHaveClass('dummyClassname');
   await expect(container).toHaveAttribute('lang', 'en');
   await expect(container).toHaveAttribute('data-testid', '123ID');
 };

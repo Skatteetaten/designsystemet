@@ -67,7 +67,6 @@ exports[`Tester/CheckboxGroup Defaults play-test 1`] = `
       </label>
     </div>
     <div id="checkboxGroupErrorId-:re:"
-         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu "
          aria-live="assertive"
     >
     </div>
@@ -149,7 +148,6 @@ exports[`Tester/CheckboxGroup LegendWithMarkup smoke-test 1`] = `
       </label>
     </div>
     <div id="checkboxGroupErrorId-:rl:"
-         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu "
          aria-live="assertive"
     >
     </div>
@@ -231,7 +229,6 @@ exports[`Tester/CheckboxGroup LegendWithMarkupAndRequiredMark smoke-test 1`] = `
       </label>
     </div>
     <div id="checkboxGroupErrorId-:rs:"
-         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu "
          aria-live="assertive"
     >
     </div>
@@ -310,7 +307,6 @@ exports[`Tester/CheckboxGroup WithAttributes play-test 1`] = `
       </label>
     </div>
     <div id="checkboxGroupErrorId-:r7:"
-         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu "
          aria-live="assertive"
     >
     </div>
@@ -387,7 +383,6 @@ exports[`Tester/CheckboxGroup WithDisabled play-test 1`] = `
       </label>
     </div>
     <div id="checkboxGroupErrorId-:r1a:"
-         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu "
          aria-live="assertive"
     >
     </div>
@@ -465,7 +460,6 @@ exports[`Tester/CheckboxGroup WithDisabledAndChecked smoke-test 1`] = `
       </label>
     </div>
     <div id="checkboxGroupErrorId-:r1h:"
-         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu "
          aria-live="assertive"
     >
     </div>
@@ -546,10 +540,9 @@ exports[`Tester/CheckboxGroup WithError play-test 1`] = `
       </label>
     </div>
     <div id="checkboxGroupErrorId-:r2l:"
-         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu CheckboxGroup_fieldsetSpacingBottom__cj7Jo"
          aria-live="assertive"
     >
-      <div class="ErrorMessage_errorMessage__508oW">
+      <div class="ErrorMessage_errorMessage__508oW CheckboxGroup_fieldsetErrorMessage__HH1Qu CheckboxGroup_fieldsetSpacingBottom__cj7Jo">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
              viewbox="0 0 24 24"
              focusable="false"
@@ -635,7 +628,6 @@ exports[`Tester/CheckboxGroup WithHideLegend play-test 1`] = `
       </label>
     </div>
     <div id="checkboxGroupErrorId-:r13:"
-         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu "
          aria-live="assertive"
     >
     </div>
@@ -712,7 +704,6 @@ exports[`Tester/CheckboxGroup WithRef play-test 1`] = `
       </label>
     </div>
     <div id="checkboxGroupErrorId-:r0:"
-         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu "
          aria-live="assertive"
     >
     </div>
@@ -787,7 +778,6 @@ exports[`Tester/CheckboxGroup WithRequired play-test 1`] = `
       </label>
     </div>
     <div id="checkboxGroupErrorId-:r1o:"
-         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu "
          aria-live="assertive"
     >
     </div>
@@ -867,10 +857,9 @@ exports[`Tester/CheckboxGroup WithRequiredAndError play-test 1`] = `
       </label>
     </div>
     <div id="checkboxGroupErrorId-:r2d:"
-         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu CheckboxGroup_fieldsetSpacingBottom__cj7Jo"
          aria-live="assertive"
     >
-      <div class="ErrorMessage_errorMessage__508oW">
+      <div class="ErrorMessage_errorMessage__508oW CheckboxGroup_fieldsetErrorMessage__HH1Qu CheckboxGroup_fieldsetSpacingBottom__cj7Jo">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
              viewbox="0 0 24 24"
              focusable="false"
@@ -956,7 +945,6 @@ exports[`Tester/CheckboxGroup WithRequiredAndMark smoke-test 1`] = `
       </label>
     </div>
     <div id="checkboxGroupErrorId-:r1v:"
-         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu "
          aria-live="assertive"
     >
     </div>
@@ -1032,7 +1020,6 @@ exports[`Tester/CheckboxGroup WithRequiredAndNoError play-test 1`] = `
       </label>
     </div>
     <div id="checkboxGroupErrorId-:r26:"
-         class="CheckboxGroup_fieldsetErrorMessage__HH1Qu "
          aria-live="assertive"
     >
     </div>

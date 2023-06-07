@@ -2,9 +2,7 @@
 
 exports[`Tester/ErrorMessage Defaults play-test 1`] = `
 <div data-test-block="true">
-  <div class
-       aria-live="assertive"
-  >
+  <div aria-live="assertive">
   </div>
 </div>
 `;
@@ -12,12 +10,11 @@ exports[`Tester/ErrorMessage Defaults play-test 1`] = `
 exports[`Tester/ErrorMessage WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <div id="htmlId"
-       class="dummyClassname"
        lang="nb"
        data-testid="123ID"
        aria-live="assertive"
   >
-    <div class="ErrorMessage_errorMessage__508oW">
+    <div class="ErrorMessage_errorMessage__508oW dummyClassname">
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
            viewbox="0 0 24 24"
            focusable="false"
@@ -47,10 +44,8 @@ exports[`Tester/ErrorMessage WithLongText smoke-test 1`] = `
   <input id="label1"
          type="text"
   >
-  <div class
-       aria-live="assertive"
-  >
-    <div class="ErrorMessage_errorMessage__508oW">
+  <div aria-live="assertive">
+    <div class="ErrorMessage_errorMessage__508oW ">
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
            viewbox="0 0 24 24"
            focusable="false"
@@ -80,10 +75,8 @@ exports[`Tester/ErrorMessage WithLongTextAndBreaking smoke-test 1`] = `
   <input id="label1"
          type="text"
   >
-  <div class
-       aria-live="assertive"
-  >
-    <div class="ErrorMessage_errorMessage__508oW">
+  <div aria-live="assertive">
+    <div class="ErrorMessage_errorMessage__508oW ">
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
            viewbox="0 0 24 24"
            focusable="false"
@@ -103,10 +96,8 @@ exports[`Tester/ErrorMessage WithLongTextAndBreaking smoke-test 1`] = `
 
 exports[`Tester/ErrorMessage WithPElement play-test 1`] = `
 <div data-test-block="true">
-  <div class
-       aria-live="assertive"
-  >
-    <div class="ErrorMessage_errorMessage__508oW">
+  <div aria-live="assertive">
+    <div class="ErrorMessage_errorMessage__508oW ">
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
            viewbox="0 0 24 24"
            focusable="false"
@@ -126,8 +117,7 @@ exports[`Tester/ErrorMessage WithPElement play-test 1`] = `
 
 exports[`Tester/ErrorMessage WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class
-       aria-live="assertive"
+  <div aria-live="assertive"
        id="dummyIdForwardedFromRef"
   >
   </div>
