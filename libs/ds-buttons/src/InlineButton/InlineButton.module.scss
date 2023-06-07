@@ -34,13 +34,10 @@
     text-decoration-line: none;
   }
 
-  .iconWrapper {
-    display: flex;
-    padding-top: 2px;
-
-    & .icon {
-      fill: var(--semantic-interactive-main);
-    }
+  & .icon {
+    height: calc(var(--font-size-m) * var(--semantic-line-height-buttons));
+    flex-shrink: 0;
+    fill: var(--semantic-interactive-main);
   }
 
   &:hover {
@@ -57,6 +54,7 @@
     background-color: var(--semantic-interactive-background);
     color: var(--semantic-interactive-foreground);
     transform: translateY(2px);
+    transition: 0.15s;
 
     & .icon {
       fill: var(--semantic-interactive-foreground);

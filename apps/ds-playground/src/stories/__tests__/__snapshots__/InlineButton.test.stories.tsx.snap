@@ -50,17 +50,15 @@ exports[`Tester/InlineButton WithCustomIcon smoke-test 1`] = `
   <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  "
           type="button"
   >
-    <span class="InlineButton_iconWrapper__CqjpJ">
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-hidden="true"
-           role="img"
-      >
-        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z">
-        </path>
-      </svg>
-    </span>
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z">
+      </path>
+    </svg>
     Legg til rapport
   </button>
 </div>
@@ -83,17 +81,15 @@ exports[`Tester/InlineButton WithDisabledAndIcon smoke-test 1`] = `
           disabled
           type="button"
   >
-    <span class="InlineButton_iconWrapper__CqjpJ">
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-hidden="true"
-           role="img"
-      >
-        <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
-        </path>
-      </svg>
-    </span>
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
+      </path>
+    </svg>
     Legg til rapport
   </button>
 </div>
@@ -114,17 +110,15 @@ exports[`Tester/InlineButton WithIcon play-test 1`] = `
   <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  "
           type="button"
   >
-    <span class="InlineButton_iconWrapper__CqjpJ">
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-hidden="true"
-           role="img"
-      >
-        <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
-        </path>
-      </svg>
-    </span>
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
+      </path>
+    </svg>
     Legg til rapport
   </button>
 </div>
@@ -136,17 +130,15 @@ exports[`Tester/InlineButton WithIconRight smoke-test 1`] = `
           type="button"
   >
     Legg til rapport
-    <span class="InlineButton_iconWrapper__CqjpJ">
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-hidden="true"
-           role="img"
-      >
-        <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
-        </path>
-      </svg>
-    </span>
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
+      </path>
+    </svg>
   </button>
 </div>
 `;
@@ -176,17 +168,15 @@ exports[`Tester/InlineButton WithLongTextAndIcon smoke-test 1`] = `
   <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  "
           type="button"
   >
-    <span class="InlineButton_iconWrapper__CqjpJ">
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-hidden="true"
-           role="img"
-      >
-        <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
-        </path>
-      </svg>
-    </span>
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
+      </path>
+    </svg>
     Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert. Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert.
   </button>
 </div>
