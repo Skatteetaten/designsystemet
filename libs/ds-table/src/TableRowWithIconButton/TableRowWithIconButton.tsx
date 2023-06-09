@@ -183,7 +183,7 @@ export const RowWithRightSideExpandButton = forwardRef<
             lang={lang}
             data-testid={dataTestid}
           >
-            <td colSpan={999}>
+            <td colSpan={rowRef?.current?.cells.length ?? 999}>
               <div className={classNames?.expandedContent}>
                 {expandableContent}
               </div>
