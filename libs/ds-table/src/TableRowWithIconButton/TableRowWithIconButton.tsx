@@ -161,6 +161,7 @@ export const RowWithRightSideExpandButton = forwardRef<
             className={`${styles.buttonCell} ${
               context?.variant === 'compact' ? styles.buttonCell_compact : ''
             }`}
+            alignment={'right'}
           >
             <IconButton
               ref={buttonRef}
