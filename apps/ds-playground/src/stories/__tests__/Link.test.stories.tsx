@@ -309,7 +309,7 @@ WithOnClick.args = {
   svgPath: CalendarSVGpath,
 };
 WithOnClick.parameters = {
-  imageSnapshot: { disbale: true },
+  imageSnapshot: { disable: true },
 };
 WithOnClick.play = async ({ args, canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);

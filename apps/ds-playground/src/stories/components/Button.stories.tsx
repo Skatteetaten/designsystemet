@@ -99,5 +99,5 @@ ButtonExample.parameters = {
 
 ButtonDefault.args = {
   children: 'Klikk',
-  variant: 'primary',
+  variant: getButtonVariantDefault(),
 };
