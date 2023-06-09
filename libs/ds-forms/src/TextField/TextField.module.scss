@@ -1,0 +1,101 @@
+@import 'libs/ds-core-utils/src/styles.scss';
+
+.label {
+  --label-color: var(--palette-graphite-70);
+  --description-color: var(--semantic-page-foreground);
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--spacing-xs);
+  color: var(--label-color);
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--semantic-line-height-input);
+  overflow-wrap: anywhere;
+  word-break: normal;
+
+  &_required::after {
+    width: fit-content;
+    color: var(--semantic-danger-foreground);
+    content: '*';
+  }
+
+  &Description {
+    margin-top: var(--spacing-xs);
+    color: var(--description-color);
+    font-weight: var(--font-weight-regular);
+  }
+}
+
+.textbox {
+  --border-color: var(--palette-graphite-100);
+
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--spacing-xs) var(--spacing-s);
+  border: 1px solid var(--border-color);
+  background: var(--semantic-page-background);
+  color: var(--semantic-page-foreground);
+  font-size: var(--font-size-m);
+  line-height: var(--semantic-line-height-input);
+
+  &_large {
+    padding: var(--spacing-s);
+    border-width: 2px;
+  }
+
+  &_multiline {
+    padding: var(--spacing-s);
+    overflow-y: auto;
+  }
+
+  &::placeholder {
+    color: var(--palette-graphite-70);
+  }
+
+  &:hover {
+    --border-color: var(--palette-graphite-100);
+
+    border-width: 2px;
+    box-shadow: 0 0 0 2px var(--palette-azure-10);
+  }
+
+  &[aria-invalid='true'] {
+    --border-color: var(--semantic-danger-foreground);
+
+    border-width: 2px;
+  }
+
+  &:focus {
+    --border-color: var(--palette-azure-70);
+
+    border-width: 2px;
+    box-shadow: 0 0 0 2px var(--palette-azure-10);
+    outline: 0;
+
+    &::selection {
+      background: var(--palette-azure-10);
+    }
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    --border-color: var(--palette-graphite-50);
+
+    border-width: 1px;
+    background: var(--palette-graphite-10);
+    box-shadow: none;
+    color: var(--palette-graphite-50);
+    cursor: not-allowed;
+  }
+
+  &:read-only:not(:disabled) {
+    padding: var(--spacing-s);
+    border: none;
+    box-shadow: none;
+  }
+}
+
+.srOnly {
+  @include sr-only;
+}
