@@ -5,6 +5,10 @@
   font-weight: var(--font-weight-bold);
   vertical-align: top;
 
+  &_noPadding {
+    padding: 0;
+  }
+
   &SortButton {
     width: 100%;
     border: none;
@@ -36,6 +40,7 @@
     }
 
     &:active {
+      background: var(--semantic-interactive-background);
       box-shadow: inset 0 0 0 3px var(--semantic-interactive-foreground);
       color: var(--semantic-interactive-foreground);
     }

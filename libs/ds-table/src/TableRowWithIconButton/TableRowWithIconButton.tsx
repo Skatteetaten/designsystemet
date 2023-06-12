@@ -161,6 +161,7 @@ export const RowWithRightSideExpandButton = forwardRef<
             className={`${styles.buttonCell} ${
               context?.variant === 'compact' ? styles.buttonCell_compact : ''
             }`}
+            alignment={'right'}
           >
             <IconButton
               ref={buttonRef}
@@ -182,7 +183,7 @@ export const RowWithRightSideExpandButton = forwardRef<
             lang={lang}
             data-testid={dataTestid}
           >
-            <td colSpan={999}>
+            <td colSpan={rowRef?.current?.cells.length ?? 999}>
               <div className={classNames?.expandedContent}>
                 {expandableContent}
               </div>

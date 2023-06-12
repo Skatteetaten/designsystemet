@@ -101,10 +101,8 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
     useEffect(() => {
       const updateDimensions = (): void => {
         const wrapperScrollWidth = wrapperRef?.current?.scrollWidth ?? 0;
-        const wrapperBoundingWidth =
-          wrapperRef?.current?.getBoundingClientRect().width ?? 0;
-
-        setIsTableScrollable(wrapperScrollWidth > wrapperBoundingWidth);
+        const wrapperClientWidth = wrapperRef?.current?.clientWidth ?? 0;
+        setIsTableScrollable(wrapperScrollWidth > wrapperClientWidth);
       };
       updateDimensions();
 
