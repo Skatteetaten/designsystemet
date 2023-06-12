@@ -71,6 +71,7 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
         lang={lang}
         data-testid={dataTestId}
         aria-live={getAriaLive()}
+        aria-atomic
       >
         {showAlertContent && (
           <div className={`${styles.alert} ${variantClassName}`}>
