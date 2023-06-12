@@ -2,11 +2,10 @@
 
 exports[`Tester/Alert AllVariants smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="bottomSpacingXL"
-       aria-live="polite"
+  <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="Alert_alert__XPPVr Alert_alert_success__J2bFZ">
+    <div class="Alert_alert__XPPVr Alert_alert_success__J2bFZ bottomSpacingXL">
       <span class="Alert_iconWrapper__ZCD7G">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o Alert_icon__+KJ7h"
              viewbox="0 0 24 24"
@@ -40,11 +39,10 @@ exports[`Tester/Alert AllVariants smoke-test 1`] = `
       </button>
     </div>
   </div>
-  <div class="bottomSpacingXL"
-       aria-live="polite"
+  <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="Alert_alert__XPPVr Alert_alert_neutral__9UStB">
+    <div class="Alert_alert__XPPVr Alert_alert_neutral__9UStB bottomSpacingXL">
       <span class="Alert_iconWrapper__ZCD7G">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o Alert_icon__+KJ7h"
              viewbox="0 0 24 24"
@@ -78,11 +76,10 @@ exports[`Tester/Alert AllVariants smoke-test 1`] = `
       </button>
     </div>
   </div>
-  <div class="bottomSpacingXL"
-       aria-live="polite"
+  <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="Alert_alert__XPPVr Alert_alert_warning__SfZPF">
+    <div class="Alert_alert__XPPVr Alert_alert_warning__SfZPF bottomSpacingXL">
       <span class="Alert_iconWrapper__ZCD7G">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o Alert_icon__+KJ7h"
              viewbox="0 0 24 24"
@@ -116,11 +113,10 @@ exports[`Tester/Alert AllVariants smoke-test 1`] = `
       </button>
     </div>
   </div>
-  <div class="bottomSpacingXL"
-       aria-live="assertive"
+  <div aria-live="assertive"
        aria-atomic="true"
   >
-    <div class="Alert_alert__XPPVr Alert_alert_danger__4ufSR">
+    <div class="Alert_alert__XPPVr Alert_alert_danger__4ufSR bottomSpacingXL">
       <span class="Alert_iconWrapper__ZCD7G">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o Alert_icon__+KJ7h"
              viewbox="0 0 24 24"
@@ -159,11 +155,10 @@ exports[`Tester/Alert AllVariants smoke-test 1`] = `
 
 exports[`Tester/Alert AllVariantsMobile smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="bottomSpacingXL"
-       aria-live="polite"
+  <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="Alert_alert__XPPVr Alert_alert_success__J2bFZ">
+    <div class="Alert_alert__XPPVr Alert_alert_success__J2bFZ bottomSpacingXL">
       <span class="Alert_iconWrapper__ZCD7G">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o Alert_icon__+KJ7h"
              viewbox="0 0 24 24"
@@ -197,11 +192,10 @@ exports[`Tester/Alert AllVariantsMobile smoke-test 1`] = `
       </button>
     </div>
   </div>
-  <div class="bottomSpacingXL"
-       aria-live="polite"
+  <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="Alert_alert__XPPVr Alert_alert_neutral__9UStB">
+    <div class="Alert_alert__XPPVr Alert_alert_neutral__9UStB bottomSpacingXL">
       <span class="Alert_iconWrapper__ZCD7G">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o Alert_icon__+KJ7h"
              viewbox="0 0 24 24"
@@ -235,11 +229,10 @@ exports[`Tester/Alert AllVariantsMobile smoke-test 1`] = `
       </button>
     </div>
   </div>
-  <div class="bottomSpacingXL"
-       aria-live="polite"
+  <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="Alert_alert__XPPVr Alert_alert_warning__SfZPF">
+    <div class="Alert_alert__XPPVr Alert_alert_warning__SfZPF bottomSpacingXL">
       <span class="Alert_iconWrapper__ZCD7G">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o Alert_icon__+KJ7h"
              viewbox="0 0 24 24"
@@ -273,11 +266,10 @@ exports[`Tester/Alert AllVariantsMobile smoke-test 1`] = `
       </button>
     </div>
   </div>
-  <div class="bottomSpacingXL"
-       aria-live="assertive"
+  <div aria-live="assertive"
        aria-atomic="true"
   >
-    <div class="Alert_alert__XPPVr Alert_alert_danger__4ufSR">
+    <div class="Alert_alert__XPPVr Alert_alert_danger__4ufSR bottomSpacingXL">
       <span class="Alert_iconWrapper__ZCD7G">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o Alert_icon__+KJ7h"
              viewbox="0 0 24 24"
@@ -316,8 +308,7 @@ exports[`Tester/Alert AllVariantsMobile smoke-test 1`] = `
 
 exports[`Tester/Alert Defaults play-test 1`] = `
 <div data-test-block="true">
-  <div class
-       aria-live="polite"
+  <div aria-live="polite"
        aria-atomic="true"
   >
   </div>
@@ -326,11 +317,10 @@ exports[`Tester/Alert Defaults play-test 1`] = `
 
 exports[`Tester/Alert DefaultsWithMessage play-test 1`] = `
 <div data-test-block="true">
-  <div class
-       aria-live="polite"
+  <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="Alert_alert__XPPVr Alert_alert_neutral__9UStB">
+    <div class="Alert_alert__XPPVr Alert_alert_neutral__9UStB ">
       <span class="Alert_iconWrapper__ZCD7G">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o Alert_icon__+KJ7h"
              viewbox="0 0 24 24"
@@ -352,11 +342,10 @@ exports[`Tester/Alert DefaultsWithMessage play-test 1`] = `
 
 exports[`Tester/Alert VariantDanger play-test 1`] = `
 <div data-test-block="true">
-  <div class
-       aria-live="assertive"
+  <div aria-live="assertive"
        aria-atomic="true"
   >
-    <div class="Alert_alert__XPPVr Alert_alert_danger__4ufSR">
+    <div class="Alert_alert__XPPVr Alert_alert_danger__4ufSR ">
       <span class="Alert_iconWrapper__ZCD7G">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o Alert_icon__+KJ7h"
              viewbox="0 0 24 24"
@@ -378,11 +367,10 @@ exports[`Tester/Alert VariantDanger play-test 1`] = `
 
 exports[`Tester/Alert VariantNeutral play-test 1`] = `
 <div data-test-block="true">
-  <div class
-       aria-live="polite"
+  <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="Alert_alert__XPPVr Alert_alert_neutral__9UStB">
+    <div class="Alert_alert__XPPVr Alert_alert_neutral__9UStB ">
       <span class="Alert_iconWrapper__ZCD7G">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o Alert_icon__+KJ7h"
              viewbox="0 0 24 24"
@@ -404,11 +392,10 @@ exports[`Tester/Alert VariantNeutral play-test 1`] = `
 
 exports[`Tester/Alert VariantSuccess play-test 1`] = `
 <div data-test-block="true">
-  <div class
-       aria-live="polite"
+  <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="Alert_alert__XPPVr Alert_alert_success__J2bFZ">
+    <div class="Alert_alert__XPPVr Alert_alert_success__J2bFZ ">
       <span class="Alert_iconWrapper__ZCD7G">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o Alert_icon__+KJ7h"
              viewbox="0 0 24 24"
@@ -430,11 +417,10 @@ exports[`Tester/Alert VariantSuccess play-test 1`] = `
 
 exports[`Tester/Alert VariantWarning play-test 1`] = `
 <div data-test-block="true">
-  <div class
-       aria-live="polite"
+  <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="Alert_alert__XPPVr Alert_alert_warning__SfZPF">
+    <div class="Alert_alert__XPPVr Alert_alert_warning__SfZPF ">
       <span class="Alert_iconWrapper__ZCD7G">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o Alert_icon__+KJ7h"
              viewbox="0 0 24 24"
@@ -456,11 +442,10 @@ exports[`Tester/Alert VariantWarning play-test 1`] = `
 
 exports[`Tester/Alert WithAriaLiveOff play-test 1`] = `
 <div data-test-block="true">
-  <div class
-       aria-live="off"
+  <div aria-live="off"
        aria-atomic="true"
   >
-    <div class="Alert_alert__XPPVr Alert_alert_neutral__9UStB">
+    <div class="Alert_alert__XPPVr Alert_alert_neutral__9UStB ">
       <span class="Alert_iconWrapper__ZCD7G">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o Alert_icon__+KJ7h"
              viewbox="0 0 24 24"
@@ -483,13 +468,12 @@ exports[`Tester/Alert WithAriaLiveOff play-test 1`] = `
 exports[`Tester/Alert WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <div id="htmlId"
-       class="dummyClassname"
        lang="en"
        data-testid="123ID"
        aria-live="polite"
        aria-atomic="true"
   >
-    <div class="Alert_alert__XPPVr Alert_alert_neutral__9UStB">
+    <div class="Alert_alert__XPPVr Alert_alert_neutral__9UStB dummyClassname">
       <span class="Alert_iconWrapper__ZCD7G">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o Alert_icon__+KJ7h"
              viewbox="0 0 24 24"
@@ -511,11 +495,10 @@ exports[`Tester/Alert WithAttributes play-test 1`] = `
 
 exports[`Tester/Alert WithCloseButton play-test 1`] = `
 <div data-test-block="true">
-  <div class
-       aria-live="polite"
+  <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="Alert_alert__XPPVr Alert_alert_neutral__9UStB">
+    <div class="Alert_alert__XPPVr Alert_alert_neutral__9UStB ">
       <span class="Alert_iconWrapper__ZCD7G">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o Alert_icon__+KJ7h"
              viewbox="0 0 24 24"
@@ -554,11 +537,10 @@ exports[`Tester/Alert WithCloseButton play-test 1`] = `
 
 exports[`Tester/Alert WithCustomIcon smoke-test 1`] = `
 <div data-test-block="true">
-  <div class
-       aria-live="polite"
+  <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="Alert_alert__XPPVr Alert_alert_neutral__9UStB">
+    <div class="Alert_alert__XPPVr Alert_alert_neutral__9UStB ">
       <span class="Alert_iconWrapper__ZCD7G">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o Alert_icon__+KJ7h"
              viewbox="0 0 24 24"
@@ -580,11 +562,10 @@ exports[`Tester/Alert WithCustomIcon smoke-test 1`] = `
 
 exports[`Tester/Alert WithCustomSVGPath smoke-test 1`] = `
 <div data-test-block="true">
-  <div class
-       aria-live="polite"
+  <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="Alert_alert__XPPVr Alert_alert_neutral__9UStB">
+    <div class="Alert_alert__XPPVr Alert_alert_neutral__9UStB ">
       <span class="Alert_iconWrapper__ZCD7G">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o Alert_icon__+KJ7h"
              viewbox="0 0 24 24"
@@ -606,11 +587,10 @@ exports[`Tester/Alert WithCustomSVGPath smoke-test 1`] = `
 
 exports[`Tester/Alert WithLongText smoke-test 1`] = `
 <div data-test-block="true">
-  <div class
-       aria-live="polite"
+  <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="Alert_alert__XPPVr Alert_alert_neutral__9UStB">
+    <div class="Alert_alert__XPPVr Alert_alert_neutral__9UStB ">
       <span class="Alert_iconWrapper__ZCD7G">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o Alert_icon__+KJ7h"
              viewbox="0 0 24 24"
@@ -649,11 +629,10 @@ exports[`Tester/Alert WithLongText smoke-test 1`] = `
 
 exports[`Tester/Alert WithLongTextAndBreaking smoke-test 1`] = `
 <div data-test-block="true">
-  <div class
-       aria-live="polite"
+  <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="Alert_alert__XPPVr Alert_alert_neutral__9UStB">
+    <div class="Alert_alert__XPPVr Alert_alert_neutral__9UStB ">
       <span class="Alert_iconWrapper__ZCD7G">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o Alert_icon__+KJ7h"
              viewbox="0 0 24 24"
@@ -692,11 +671,10 @@ exports[`Tester/Alert WithLongTextAndBreaking smoke-test 1`] = `
 
 exports[`Tester/Alert WithMarkup smoke-test 1`] = `
 <div data-test-block="true">
-  <div class
-       aria-live="polite"
+  <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="Alert_alert__XPPVr Alert_alert_neutral__9UStB">
+    <div class="Alert_alert__XPPVr Alert_alert_neutral__9UStB ">
       <span class="Alert_iconWrapper__ZCD7G">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o Alert_icon__+KJ7h"
              viewbox="0 0 24 24"
@@ -726,8 +704,7 @@ exports[`Tester/Alert WithMarkup smoke-test 1`] = `
 
 exports[`Tester/Alert WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class
-       aria-live="polite"
+  <div aria-live="polite"
        aria-atomic="true"
        id="dummyIdForwardedFromRef"
   >
