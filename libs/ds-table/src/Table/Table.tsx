@@ -102,7 +102,8 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
       const updateDimensions = (): void => {
         const wrapperScrollWidth = wrapperRef?.current?.scrollWidth ?? 0;
         const wrapperClientWidth = wrapperRef?.current?.clientWidth ?? 0;
-        setIsTableScrollable(wrapperScrollWidth > wrapperClientWidth);
+        setIsTableScrollable(wrapperScrollWidth > wrapperClientWidth + 1);
+        // +1 fordi Safari regner/avrunder forskjellig fra andre nettlesere
       };
       updateDimensions();
 
