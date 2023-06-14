@@ -100,6 +100,8 @@ Defaults.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   const container = canvas.getAllByRole('generic')[1];
   await expect(container).toBeInTheDocument();
+  await expect(container).toHaveAttribute('aria-live', 'assertive');
+  await expect(container).toHaveAttribute('aria-atomic');
   // eslint-disable-next-line testing-library/no-node-access
   const textNode = container.querySelector('p');
   await expect(textNode).not.toBeInTheDocument();

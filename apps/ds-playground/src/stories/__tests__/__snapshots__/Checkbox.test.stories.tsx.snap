@@ -23,6 +23,7 @@ exports[`Tester/Checkbox Defaults play-test 1`] = `
     </label>
     <div id="checkboxErrorId-:r5:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </div>
@@ -53,6 +54,7 @@ exports[`Tester/Checkbox WithAriaDescribedby play-test 1`] = `
     </label>
     <div id="checkboxErrorId-:r19:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </div>
@@ -85,6 +87,7 @@ exports[`Tester/Checkbox WithAttributes play-test 1`] = `
     </label>
     <div id="checkboxErrorId-:r3:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </div>
@@ -115,6 +118,7 @@ exports[`Tester/Checkbox WithChecked play-test 1`] = `
     </label>
     <div id="checkboxErrorId-:rj:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </div>
@@ -145,6 +149,7 @@ exports[`Tester/Checkbox WithCheckedAndRequired play-test 1`] = `
     </label>
     <div id="checkboxErrorId-:r17:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </div>
@@ -175,6 +180,7 @@ exports[`Tester/Checkbox WithDefaultChecked play-test 1`] = `
     </label>
     <div id="checkboxErrorId-:r1d:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </div>
@@ -207,6 +213,7 @@ exports[`Tester/Checkbox WithDescription play-test 1`] = `
     </label>
     <div id="checkboxErrorId-:r7:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </div>
@@ -240,6 +247,7 @@ exports[`Tester/Checkbox WithDescriptionAndDisabled smoke-test 1`] = `
     </label>
     <div id="checkboxErrorId-:rb:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </div>
@@ -272,6 +280,7 @@ exports[`Tester/Checkbox WithDescriptionAndLongText smoke-test 1`] = `
     </label>
     <div id="checkboxErrorId-:r9:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </div>
@@ -302,6 +311,7 @@ exports[`Tester/Checkbox WithDisabled play-test 1`] = `
     </label>
     <div id="checkboxErrorId-:rl:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </div>
@@ -333,6 +343,7 @@ exports[`Tester/Checkbox WithDisabledAndChecked play-test 1`] = `
     </label>
     <div id="checkboxErrorId-:rn:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </div>
@@ -364,6 +375,7 @@ exports[`Tester/Checkbox WithDisabledAndRequired play-test 1`] = `
     </label>
     <div id="checkboxErrorId-:r12:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </div>
@@ -395,6 +407,7 @@ exports[`Tester/Checkbox WithError play-test 1`] = `
     </label>
     <div id="checkboxErrorId-:rv:"
          aria-live="assertive"
+         aria-atomic="true"
     >
       <div class="ErrorMessage_errorMessage__508oW ">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
@@ -441,6 +454,7 @@ exports[`Tester/Checkbox WithErrorAndRequired play-test 1`] = `
     </label>
     <div id="checkboxErrorId-:r14:"
          aria-live="assertive"
+         aria-atomic="true"
     >
       <div class="ErrorMessage_errorMessage__508oW ">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
@@ -484,6 +498,7 @@ exports[`Tester/Checkbox WithEventHandlers play-test 1`] = `
     </label>
     <div id="checkboxErrorId-:r1h:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </div>
@@ -513,6 +528,7 @@ exports[`Tester/Checkbox WithHideLabel play-test 1`] = `
     </label>
     <div id="checkboxErrorId-:rh:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </div>
@@ -542,6 +558,7 @@ exports[`Tester/Checkbox WithLongText smoke-test 1`] = `
     </label>
     <div id="checkboxErrorId-:rd:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </div>
@@ -571,6 +588,7 @@ exports[`Tester/Checkbox WithLongTextAndBreaking smoke-test 1`] = `
     </label>
     <div id="checkboxErrorId-:rf:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </div>
@@ -601,6 +619,7 @@ exports[`Tester/Checkbox WithName play-test 1`] = `
     </label>
     <div id="checkboxErrorId-:r1f:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </div>
@@ -631,6 +650,7 @@ exports[`Tester/Checkbox WithRef play-test 1`] = `
     </label>
     <div id="checkboxErrorId-:r1:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </div>
@@ -661,6 +681,7 @@ exports[`Tester/Checkbox WithRequired play-test 1`] = `
     </label>
     <div id="checkboxErrorId-:rp:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </div>
@@ -691,6 +712,7 @@ exports[`Tester/Checkbox WithRequiredAndChecked play-test 1`] = `
     </label>
     <div id="checkboxErrorId-:rt:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </div>
@@ -721,6 +743,7 @@ exports[`Tester/Checkbox WithRequiredAndMark play-test 1`] = `
     </label>
     <div id="checkboxErrorId-:rr:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </div>
@@ -750,6 +773,7 @@ exports[`Tester/Checkbox WithValue play-test 1`] = `
     </label>
     <div id="checkboxErrorId-:r1b:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </div>

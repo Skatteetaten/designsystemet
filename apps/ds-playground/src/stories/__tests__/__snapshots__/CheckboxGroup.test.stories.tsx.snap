@@ -68,6 +68,7 @@ exports[`Tester/CheckboxGroup Defaults play-test 1`] = `
     </div>
     <div id="checkboxGroupErrorId-:re:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -149,6 +150,7 @@ exports[`Tester/CheckboxGroup LegendWithMarkup smoke-test 1`] = `
     </div>
     <div id="checkboxGroupErrorId-:rl:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -230,6 +232,7 @@ exports[`Tester/CheckboxGroup LegendWithMarkupAndRequiredMark smoke-test 1`] = `
     </div>
     <div id="checkboxGroupErrorId-:rs:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -308,6 +311,7 @@ exports[`Tester/CheckboxGroup WithAttributes play-test 1`] = `
     </div>
     <div id="checkboxGroupErrorId-:r7:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -384,6 +388,7 @@ exports[`Tester/CheckboxGroup WithDisabled play-test 1`] = `
     </div>
     <div id="checkboxGroupErrorId-:r1a:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -461,6 +466,7 @@ exports[`Tester/CheckboxGroup WithDisabledAndChecked smoke-test 1`] = `
     </div>
     <div id="checkboxGroupErrorId-:r1h:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -541,6 +547,7 @@ exports[`Tester/CheckboxGroup WithError play-test 1`] = `
     </div>
     <div id="checkboxGroupErrorId-:r2l:"
          aria-live="assertive"
+         aria-atomic="true"
     >
       <div class="ErrorMessage_errorMessage__508oW CheckboxGroup_fieldsetErrorMessage__HH1Qu CheckboxGroup_fieldsetSpacingBottom__cj7Jo">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
@@ -629,6 +636,7 @@ exports[`Tester/CheckboxGroup WithHideLegend play-test 1`] = `
     </div>
     <div id="checkboxGroupErrorId-:r13:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -705,6 +713,7 @@ exports[`Tester/CheckboxGroup WithRef play-test 1`] = `
     </div>
     <div id="checkboxGroupErrorId-:r0:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -779,6 +788,7 @@ exports[`Tester/CheckboxGroup WithRequired play-test 1`] = `
     </div>
     <div id="checkboxGroupErrorId-:r1o:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -858,6 +868,7 @@ exports[`Tester/CheckboxGroup WithRequiredAndError play-test 1`] = `
     </div>
     <div id="checkboxGroupErrorId-:r2d:"
          aria-live="assertive"
+         aria-atomic="true"
     >
       <div class="ErrorMessage_errorMessage__508oW CheckboxGroup_fieldsetErrorMessage__HH1Qu CheckboxGroup_fieldsetSpacingBottom__cj7Jo">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
@@ -946,6 +957,7 @@ exports[`Tester/CheckboxGroup WithRequiredAndMark smoke-test 1`] = `
     </div>
     <div id="checkboxGroupErrorId-:r1v:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -1021,6 +1033,7 @@ exports[`Tester/CheckboxGroup WithRequiredAndNoError play-test 1`] = `
     </div>
     <div id="checkboxGroupErrorId-:r26:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>

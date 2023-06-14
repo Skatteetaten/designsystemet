@@ -26,6 +26,7 @@ export const ErrorMessage = forwardRef<HTMLDivElement, ErrorMessageProps>(
         lang={lang}
         data-testid={dataTestId}
         aria-live={'assertive'}
+        aria-atomic
       >
         {showError && (
           <div className={`${styles.errorMessage} ${className}`}>

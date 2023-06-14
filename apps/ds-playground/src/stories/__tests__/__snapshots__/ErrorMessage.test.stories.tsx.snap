@@ -2,7 +2,9 @@
 
 exports[`Tester/ErrorMessage Defaults play-test 1`] = `
 <div data-test-block="true">
-  <div aria-live="assertive">
+  <div aria-live="assertive"
+       aria-atomic="true"
+  >
   </div>
 </div>
 `;
@@ -13,6 +15,7 @@ exports[`Tester/ErrorMessage WithAttributes play-test 1`] = `
        lang="nb"
        data-testid="123ID"
        aria-live="assertive"
+       aria-atomic="true"
   >
     <div class="ErrorMessage_errorMessage__508oW dummyClassname">
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
@@ -44,7 +47,9 @@ exports[`Tester/ErrorMessage WithLongText smoke-test 1`] = `
   <input id="label1"
          type="text"
   >
-  <div aria-live="assertive">
+  <div aria-live="assertive"
+       aria-atomic="true"
+  >
     <div class="ErrorMessage_errorMessage__508oW ">
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
            viewbox="0 0 24 24"
@@ -75,7 +80,9 @@ exports[`Tester/ErrorMessage WithLongTextAndBreaking smoke-test 1`] = `
   <input id="label1"
          type="text"
   >
-  <div aria-live="assertive">
+  <div aria-live="assertive"
+       aria-atomic="true"
+  >
     <div class="ErrorMessage_errorMessage__508oW ">
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
            viewbox="0 0 24 24"
@@ -96,7 +103,9 @@ exports[`Tester/ErrorMessage WithLongTextAndBreaking smoke-test 1`] = `
 
 exports[`Tester/ErrorMessage WithPElement play-test 1`] = `
 <div data-test-block="true">
-  <div aria-live="assertive">
+  <div aria-live="assertive"
+       aria-atomic="true"
+  >
     <div class="ErrorMessage_errorMessage__508oW ">
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
            viewbox="0 0 24 24"
@@ -118,6 +127,7 @@ exports[`Tester/ErrorMessage WithPElement play-test 1`] = `
 exports[`Tester/ErrorMessage WithRef play-test 1`] = `
 <div data-test-block="true">
   <div aria-live="assertive"
+       aria-atomic="true"
        id="dummyIdForwardedFromRef"
   >
   </div>
