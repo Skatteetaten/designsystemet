@@ -4,7 +4,5 @@ export * from './CheckboxGroup/CheckboxGroup';
 export * from './CheckboxGroup/CheckboxGroup.types';
 export * from './ErrorMessage/ErrorMessage';
 export * from './ErrorMessage/ErrorMessage.types';
-export * from './Radio/Radio';
-export * from './Radio/Radio.types';
 export * from './RadioGroup/RadioGroup';
 export * from './RadioGroup/RadioGroup.types';

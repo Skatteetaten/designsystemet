@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 import {
-  Radio,
   RadioGroup,
   RadioGroupProps,
   radioGroupVariantArr,
@@ -415,7 +414,7 @@ const EventHandlersTemplate: ComponentStory<typeof RadioGroup> = (args) => {
           args.onChange && args.onChange(event);
         }}
       >
-        <Radio value={'selskap'}>{labelText}</Radio>
+        <RadioGroup.Radio value={'selskap'}>{labelText}</RadioGroup.Radio>
       </RadioGroup>
     </div>
   );
