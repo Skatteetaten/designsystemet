@@ -1,8 +1,12 @@
 {
   "shared.AccessibilityStatement": "Tilgjengelighetserklæring",
+  "shared.AccessibilityStatementURL": "https://uustatus.no/",
   "shared.ChooseValue": "Velg",
   "shared.Close": "Lukk",
   "shared.ContactUs": "Kontakt oss",
+  "shared.ContactUsURL": "https://www.skatteetaten.no/kontakt/",
   "shared.RequiredField": "Må fylles ut ",
-  "shared.SecurityAndPrivacy": "Sikkerhet og personvern"
+  "shared.SecurityAndPrivacy": "Sikkerhet og personvern",
+  "shared.SecurityAndPrivacyURL": "https://www.skatteetaten.no/om-skatteetaten/sikkerhet/",
+  "shared.SkeLogoImageText": "Skatteetaten logo"
 }

@@ -3,6 +3,9 @@
   "shared.ChooseValue": "Velj",
   "shared.Close": "Lukk",
   "shared.ContactUs": "Kontakt oss",
+  "shared.ContactUsURL": "https://www.skatteetaten.no/nn/kontakt-oss/",
   "shared.RequiredField": "Må fyllast ut  ",
-  "shared.SecurityAndPrivacy": "Sikkerheit og personvern"
+  "shared.SecurityAndPrivacy": "Sikkerheit og personvern",
+  "shared.SecurityAndPrivacyURL": "https://www.skatteetaten.no/nn/om-skatteetaten/sikkerhet/",
+  "shared.SkeLogoImageText": "Skatteetaten logo"
 }
