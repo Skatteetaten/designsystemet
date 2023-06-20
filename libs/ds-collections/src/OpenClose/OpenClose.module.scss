@@ -1,0 +1,95 @@
+.tag {
+  margin: 0;
+}
+
+.openClose {
+  display: flex;
+  padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-xs) 0;
+  border: none;
+  margin-top: var(--spacing-xs);
+  background-color: var(--semantic-page-background);
+  color: var(--semantic-interactive-main);
+  cursor: pointer;
+  font-weight: var(--font-weight-bold);
+  gap: var(--spacing-s);
+  line-height: var(--semantic-line-height-article);
+  overflow-wrap: anywhere;
+
+  &_compact {
+    padding: var(--spacing-xxs) var(--spacing-xs) var(--spacing-xxs) 0;
+  }
+
+  &_hasIconRight {
+    flex-direction: row-reverse;
+  }
+
+  &:hover {
+    background-color: var(--semantic-interactive-background);
+  }
+
+  &:focus {
+    outline: 2px solid var(--semantic-interactive-main);
+    outline-offset: 2px;
+  }
+
+  &:active {
+    background-color: var(--semantic-interactive-background);
+    color: var(--semantic-interactive-foreground);
+    outline: 2px solid var(--semantic-interactive-foreground);
+    outline-offset: 2px;
+
+    .icon_active {
+      fill: var(--semantic-interactive-foreground);
+    }
+  }
+}
+
+.icon {
+  height: calc(var(--font-size-l) * var(--semantic-line-height-article));
+  flex-shrink: 0;
+  fill: var(--semantic-interactive-main);
+  transition: transform 0.14s linear;
+
+  &_open {
+    transform: scaleY(-1);
+  }
+
+  &_closed {
+    transform: scaleY(1);
+  }
+
+  &_compact {
+    height: calc(var(--font-size-s) * var(--semantic-line-height-article));
+  }
+}
+
+.title {
+  font-size: var(--font-size-l);
+  text-align: left;
+
+  &_underline {
+    text-decoration: underline;
+    text-decoration-thickness: var(--spacing-xxs);
+    text-underline-offset: var(--spacing-xxs);
+  }
+
+  &_compact {
+    font-size: var(--font-size-s);
+  }
+}
+
+.content {
+  padding-top: var(--spacing-s);
+  margin-left: calc(var(--size-large) + var(--spacing-s));
+  font-size: var(--font-size-m);
+
+  &_compact {
+    padding-top: var(--spacing-xs);
+    margin-left: calc(var(--size-medium) + var(--spacing-s));
+    font-size: var(--font-size-s);
+  }
+
+  &_hasIconRight {
+    margin-left: 0;
+  }
+}

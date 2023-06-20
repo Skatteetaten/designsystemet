@@ -1,6 +1,9 @@
 import { forwardRef } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import {
+  getCommonButtonTypeDefault,
+  getCommonClassNameDefault,
+} from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
 import { getIconButtonSizeDefault } from './defaults';
@@ -18,11 +21,12 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
       accessKey,
       title,
       ariaDescribedby,
+      ariaExpanded,
       size = getIconButtonSizeDefault(),
       svgPath,
       isOutlined,
       disabled,
-      type = 'button',
+      type = getCommonButtonTypeDefault(),
       onClick,
       onBlur,
       onFocus,
@@ -30,7 +34,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
     ref
   ): JSX.Element => {
     const sizeClassName = styles[`button_${size}`];
-    const outlineClassName = isOutlined ? styles[`button_outlined`] : '';
+    const outlineClassName = isOutlined ? styles.button_outlined : '';
     return (
       <button
         ref={ref}
@@ -42,6 +46,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
         accessKey={accessKey}
         type={type}
         aria-describedby={ariaDescribedby}
+        aria-expanded={ariaExpanded}
         onBlur={onBlur}
         onClick={onClick}
         onFocus={onFocus}

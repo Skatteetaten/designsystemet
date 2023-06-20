@@ -1,6 +1,6 @@
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-import { ListElementProps } from './ListElement.types';
+import { ListElementProps } from '../ListElement/ListElement.types';
 
 export const listAsArr = ['ul', 'ol'] as const;
 export type ListAs = typeof listAsArr[number];

@@ -26,3 +26,7 @@ export interface LinkGroupComponent
     LinkProps & React.RefAttributes<HTMLAnchorElement>
   >;
 }
+
+export interface LinkContextProps {
+  color?: LinkColor;
+}

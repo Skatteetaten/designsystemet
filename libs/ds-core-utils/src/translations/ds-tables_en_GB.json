@@ -1,10 +1,12 @@
 {
-  "pagination.Back": "TODO",
-  "pagination.Forward": "TODO",
-  "pagination.Title": "TODO",
+  "pagination.Back": "Back",
+  "pagination.Forward": "Forward",
+  "pagination.Title": "Shows {view} of {total}",
   "table.Sortable": "Sortable",
   "table.SortedAscending": "Sorted ascending",
   "table.SortedDescending": "Sorted descending",
   "tablerow.Editable": "Edit row",
-  "tablerow.Expandable": "More information"
+  "tablerow.EditData": "Edit data",
+  "tablerow.Expandable": "More information",
+  "tablesum.Sum": "Sum"
 }

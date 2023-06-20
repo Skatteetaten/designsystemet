@@ -42,11 +42,10 @@
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/apps/ds-playground"],
+      "executor": "nx:run-commands",
       "options": {
-        "jestConfig": "apps/ds-playground/jest.config.ts",
-        "passWithNoTests": true
+        "cwd": "apps/ds-playground",
+        "command": "test-storybook -c .storybook"
       }
     },
     "stylelint": {

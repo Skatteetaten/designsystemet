@@ -1,45 +1,16 @@
-import React from 'react';
-
-import { AxePuppeteer } from '@axe-core/puppeteer';
+import { sizeArr } from '@skatteetaten/ds-core-utils';
 import {
   Icon,
   IconComponentCommonProps,
   AccountChildSVGpath,
   AndreForholdSVGpath,
 } from '@skatteetaten/ds-icons';
+import { expect } from '@storybook/jest';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { toHaveNoViolations } from 'jest-axe';
-import { Page } from 'puppeteer';
+import { within } from '@storybook/testing-library';
 
-import '../classnames.stories.css';
-import {
-  screenShotOptions,
-  wrapper,
-} from './testUtils/puppeteer.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { ThemeSVGPaths } from '../utils/icon.themes';
-
-const verifyMatchSnapShot = async (page: Page): Promise<void> => {
-  const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-  expect(innerHtml).toMatchSnapshot();
-};
-
-const verifyMatchImageSnapShot = async (page: Page): Promise<void> => {
-  const image = await page.screenshot(screenShotOptions);
-  expect(image).toMatchImageSnapshot();
-};
-
-const verifyAxeRules = async (page: Page): Promise<void> => {
-  const axeResults = await new AxePuppeteer(page).include(wrapper).analyze();
-  expect.extend(toHaveNoViolations);
-  expect(axeResults).toHaveNoViolations();
-};
-
-const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
-  await verifyMatchSnapShot(page);
-  await verifyMatchImageSnapShot(page);
-  await verifyAxeRules(page);
-};
 
 export default {
   component: Icon,
@@ -53,8 +24,16 @@ export default {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    size: { table: { disable: true } },
-    svgPath: { table: { disable: true } },
+    size: {
+      table: { disable: true },
+      control: 'radio',
+      options: [...sizeArr].slice(1),
+    },
+    svgPath: {
+      table: { disable: true },
+      options: Object.keys(SystemSVGPaths),
+      mapping: SystemSVGPaths,
+    },
     title: { table: { disable: true } },
     variant: {
       table: { disable: true },
@@ -65,16 +44,12 @@ export default {
   },
 } as ComponentMeta<typeof Icon>;
 
-const ariaLabel = 'aria-label';
-const ariaLabelledby = 'aria-labelledby';
-const ariaHidden = 'aria-hidden';
-
 const defaultArgs: IconComponentCommonProps = {
   svgPath: AccountChildSVGpath,
 };
 
 const Template: ComponentStory<typeof Icon> = (args) => (
-  <div style={{ width: '150px' }} data-test-block>
+  <div data-test-block>
     <Icon {...args} />
   </div>
 );
@@ -91,179 +66,87 @@ WithRef.args = {
   },
 };
 WithRef.argTypes = {
-  ...WithRef.argTypes,
   ref: { table: { disable: false } },
 };
 WithRef.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const idAttribute = await page.$eval('svg', (el) => el.getAttribute('id'));
-    expect(idAttribute).toBe('dummyIdForwardedFromRef');
-  },
+  imageSnapshot: { disable: true },
+};
+WithRef.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const icon = canvas.getByRole('img', { hidden: true });
+  await expect(icon).toHaveAttribute('id', 'dummyIdForwardedFromRef');
 };
 
-// Når Icon har en id, så får svg elementet id forwarded
-export const WithId = Template.bind({});
-WithId.storyName = 'With Id (FA2)';
-WithId.args = {
+// Når Icon har en id, så har svg-elementet id'en satt
+// Når Icon har en custom className, så har svg-elementet className satt og custom stil vises
+// Når Icon har en lang, så har svg-elementet lang satt
+// Når Icon har en data-testid, så har svg-elementet data-testid satt
+export const WithAttributes = Template.bind({});
+WithAttributes.storyName = 'With Attributes(FA2-5)';
+WithAttributes.args = {
   ...defaultArgs,
   id: 'htmlid',
-};
-WithId.argTypes = {
-  ...WithId.argTypes,
-  id: { table: { disable: false } },
-};
-WithId.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const elementid = await page.$eval('svg', (el) => el.getAttribute('id'));
-    expect(elementid).toBe('htmlid');
-  },
-};
-
-// Når Icon har en custom className, får den riktig class attribute i tillegg til andre classer og stilen forandret seg
-export const WithCustomCss = Template.bind({});
-WithCustomCss.storyName = 'With Custom CSS (FA3)';
-WithCustomCss.args = {
-  ...defaultArgs,
   className: 'dummyClassname',
-};
-WithCustomCss.argTypes = {
-  ...WithCustomCss.argTypes,
-  className: {
-    table: { disable: false },
-  },
-};
-WithCustomCss.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const classNameAttribute = await page.$eval('svg', (el) =>
-      el.getAttribute('class')
-    );
-    expect(classNameAttribute).toContain('dummyClassname');
-  },
-};
-
-// Når Icon har en lang, så har svg-element lang
-export const WithLang = Template.bind({});
-WithLang.storyName = 'With Lang (FA4)';
-WithLang.args = {
-  ...defaultArgs,
   lang: 'nb',
-};
-WithLang.argTypes = {
-  ...WithLang.argTypes,
-  lang: { table: { disable: false } },
-};
-WithLang.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const langAttribute = await page.$eval('svg', (el) =>
-      el.getAttribute('lang')
-    );
-    expect(langAttribute).toBe('nb');
-  },
-};
-
-// Når Icon har dataTestid, så har svg-elementet data-testid satt
-export const WithDataTestid = Template.bind({});
-WithDataTestid.storyName = 'With DataTestid (FA5)';
-WithDataTestid.args = {
-  ...defaultArgs,
   'data-testid': '123ID',
 };
-WithDataTestid.argTypes = {
-  ...WithDataTestid.argTypes,
+WithAttributes.argTypes = {
+  id: { table: { disable: false } },
+  className: { table: { disable: false } },
+  lang: { table: { disable: false } },
   'data-testid': { table: { disable: false } },
 };
-WithDataTestid.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const dataTestid = await page.$eval('svg', (el) =>
-      el.getAttribute('data-testid')
-    );
-    expect(dataTestid).toBe('123ID');
-  },
+WithAttributes.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const icon = canvas.getByRole('img', { hidden: true });
+  await expect(icon).toHaveAttribute('id', 'htmlid');
+  await expect(icon).toHaveClass('dummyClassname');
+  await expect(icon).toHaveAttribute('lang', 'nb');
+  await expect(icon).toHaveAttribute('data-testid', '123ID');
 };
 
 // Når Icon instansieres, får den riktig defaults
 export const Defaults = Template.bind({});
-Defaults.storyName = 'With Default - Variant SystemIcon (B1, B5, A1 - 1 av 2)';
+Defaults.storyName = 'Default - Variant SystemIcon (A1, B1, B5)';
 Defaults.args = {
   ...defaultArgs,
 };
 Defaults.argTypes = {
-  ...Defaults.argTypes,
   svgPath: {
     table: { disable: false },
-    options: Object.keys(SystemSVGPaths),
-    mapping: SystemSVGPaths,
   },
 };
-Defaults.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const ariaAttributes = await page.$eval(
-      'svg',
-      (el, { ariaLabel, ariaLabelledby, ariaHidden }) => {
-        return {
-          viewBox: el.getAttribute('viewBox'),
-          role: el.getAttribute('role'),
-          ariaLabel: el.getAttribute(ariaLabel),
-          ariaLabelledBy: el.getAttribute(ariaLabelledby),
-          ariaHidden: el.getAttribute(ariaHidden),
-        };
-      },
-      { ariaLabel, ariaLabelledby, ariaHidden }
-    );
-    expect(ariaAttributes.viewBox).toBe('0 0 24 24');
-    expect(ariaAttributes.role).toBe('img');
-    expect(ariaAttributes.ariaHidden).toBe('true');
-    expect(ariaAttributes.ariaLabel).toBeNull();
-    expect(ariaAttributes.ariaLabelledBy).toBeNull();
-  },
+Defaults.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const icon = canvas.getByRole('img', { hidden: true });
+  await expect(icon).toBeInTheDocument();
+  await expect(icon).toHaveAttribute('viewBox', '0 0 24 24');
+  await expect(icon).toHaveAttribute('aria-hidden', 'true');
+  await expect(icon).not.toHaveAttribute('aria-label');
+  await expect(icon).not.toHaveAttribute('aria-labelledby');
 };
 
 // Når Icon instansieres med variant="themeIcon", får den riktig viewBox og className
 export const WithVariant = Template.bind({});
-WithVariant.storyName = 'With Variant ThemeIcon (A1 - 2 av 2)';
+WithVariant.storyName = 'With Variant ThemeIcon (A1)';
 WithVariant.args = {
   ...defaultArgs,
   svgPath: AndreForholdSVGpath,
   variant: 'themeIcon',
 };
 WithVariant.argTypes = {
-  ...WithVariant.argTypes,
   svgPath: {
     table: { disable: false },
     options: Object.keys(ThemeSVGPaths),
     mapping: ThemeSVGPaths,
   },
-  variant: { table: { disable: false } },
 };
-WithVariant.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const elementAttributes = await page.$eval('svg', (el) => {
-      return {
-        viewBox: el.getAttribute('viewBox'),
-        className: el.getAttribute('class'),
-      };
-    });
-    expect(elementAttributes.viewBox).toBe('0 0 48 48');
-    expect(elementAttributes.className).toContain('Icon_themeIcon_medium');
-  },
+WithVariant.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const icon = canvas.getByRole('img', { hidden: true });
+  await expect(icon).toBeInTheDocument();
+  await expect(icon).toHaveAttribute('viewBox', '0 0 48 48');
+  await expect(icon.classList.toString()).toContain('Icon_themeIcon_medium');
 };
 
 // Når Icon instansieres med en custom svgPath, så rendres den riktig
@@ -274,14 +157,10 @@ WithCustomSVG.args = {
   svgPath: <path d={'M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z'} />,
 };
 WithCustomSVG.argTypes = {
-  ...WithCustomSVG.argTypes,
   svgPath: {
     table: { disable: false },
     control: { type: null },
   },
-};
-WithCustomSVG.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
 };
 
 // Når Icon har en title, får den riktig <title> tag og aria attributer
@@ -292,35 +171,25 @@ WithTitle.args = {
   title: 'Min custom title beskrivelse',
 };
 WithTitle.argTypes = {
-  ...WithTitle.argTypes,
   title: { table: { disable: false } },
 };
 WithTitle.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
+  imageSnapshot: { disable: true },
+};
+WithTitle.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const icon = canvas.getByRole('img');
+  await expect(icon).toBeInTheDocument();
+  await expect(icon).toHaveAttribute('aria-hidden', 'false');
+  await expect(icon).toHaveAttribute('aria-labelledby');
+  await expect(icon).not.toHaveAttribute('aria-label');
 
-    const element = await page.$(wrapper);
-    const textContent = await element?.getProperty('textContent');
-    const text = await textContent?.jsonValue();
-    expect(text).toBe('Min custom title beskrivelse');
-
-    const ariaAttributes = await page.$eval(
-      'svg',
-      (el, { ariaLabel, ariaLabelledby, ariaHidden }) => {
-        return {
-          ariaLabel: el.getAttribute(ariaLabel),
-          ariaLabelledBy: el.getAttribute(ariaLabelledby),
-          ariaHidden: el.getAttribute(ariaHidden),
-          titleId: el.querySelector('title')?.getAttribute('id'),
-        };
-      },
-      { ariaLabel, ariaLabelledby, ariaHidden }
-    );
-    expect(ariaAttributes.ariaHidden).toBe('false');
-    expect(ariaAttributes.ariaLabel).toBeNull();
-    expect(ariaAttributes.ariaLabelledBy).toBe(ariaAttributes.titleId);
-  },
+  const titleText = 'Min custom title beskrivelse';
+  const titleNode = canvas.getByTitle(titleText);
+  await expect(titleNode).toBeInTheDocument();
+  await expect(titleNode).toHaveAttribute('id');
+  const svgNode = canvas.getByLabelText(titleText, { selector: 'svg' });
+  await expect(svgNode).toBeInTheDocument();
 };
 
 // Når Icon har en aria-label, får den ikke noe <title> tag, og riktig aria attributer
@@ -331,33 +200,138 @@ WithAriaLabel.args = {
   ariaLabel: 'min custom aria-label beskrivelse',
 };
 WithAriaLabel.argTypes = {
-  ...WithAriaLabel.argTypes,
   ariaLabel: { table: { disable: false } },
 };
 WithAriaLabel.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
+  imageSnapshot: { disable: true },
+};
+WithAriaLabel.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const icon = canvas.getByRole('img');
+  await expect(icon).toBeInTheDocument();
+  await expect(icon).toHaveAttribute('aria-hidden', 'false');
+  await expect(icon).toHaveAttribute(
+    'aria-label',
+    'min custom aria-label beskrivelse'
+  );
+  await expect(icon).not.toHaveAttribute('aria-labelledby');
+  // eslint-disable-next-line testing-library/no-node-access
+  const title = icon.querySelector('title');
+  await expect(title).not.toBeInTheDocument();
+};
 
-    const element = await page.$(wrapper);
-    const ariaAttributes = await page.$eval(
-      'svg',
-      (el, { ariaLabel, ariaLabelledby, ariaHidden }) => {
-        return {
-          ariaLabel: el.getAttribute(ariaLabel),
-          ariaLabelledBy: el.getAttribute(ariaLabelledby),
-          ariaHidden: el.getAttribute(ariaHidden),
-        };
-      },
-      { ariaLabel, ariaLabelledby, ariaHidden }
-    );
+// Når Icon har en variant og en size, får den riktig className og ser riktig ut
+export const SystemIconSizeSmall = Template.bind({});
+SystemIconSizeSmall.storyName = 'With Size Small - SystemIcon (A2)';
+SystemIconSizeSmall.args = {
+  ...defaultArgs,
+  svgPath: AccountChildSVGpath,
+  variant: 'systemIcon',
+  size: 'small',
+};
+SystemIconSizeSmall.argTypes = {
+  size: { table: { disable: false } },
+};
+SystemIconSizeSmall.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const icon = canvas.getByRole('img', { hidden: true });
+  await expect(icon.classList.toString()).toContain('Icon_systemIcon_small');
+};
 
-    const textContent = await element?.getProperty('textContent');
-    const text = await textContent?.jsonValue();
-    expect(text).toBe('');
+// Når Icon har en variant og en size, får den riktig className og ser riktig ut
+export const SystemIconSizeMedium = Template.bind({});
+SystemIconSizeMedium.storyName = 'With Size Medium - SystemIcon (A2)';
+SystemIconSizeMedium.args = {
+  ...defaultArgs,
+  svgPath: AccountChildSVGpath,
+  variant: 'systemIcon',
+  size: 'medium',
+};
+SystemIconSizeMedium.argTypes = {
+  size: { table: { disable: false } },
+};
+SystemIconSizeMedium.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const icon = canvas.getByRole('img', { hidden: true });
+  await expect(icon.classList.toString()).toContain('Icon_systemIcon_medium');
+};
 
-    expect(ariaAttributes.ariaHidden).toBe('false');
-    expect(ariaAttributes.ariaLabel).toBe('min custom aria-label beskrivelse');
-    expect(ariaAttributes.ariaLabelledBy).toBeNull();
+// Når Icon har en variant og en size, får den riktig className og ser riktig ut
+export const SystemIconSizeLarge = Template.bind({});
+SystemIconSizeLarge.storyName = 'With Size Large - SystemIcon (A2)';
+SystemIconSizeLarge.args = {
+  ...defaultArgs,
+  svgPath: AccountChildSVGpath,
+  variant: 'systemIcon',
+  size: 'large',
+};
+SystemIconSizeLarge.argTypes = {
+  size: { table: { disable: false } },
+};
+SystemIconSizeLarge.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const icon = canvas.getByRole('img', { hidden: true });
+  await expect(icon.classList.toString()).toContain('Icon_systemIcon_large');
+};
+
+// Når Icon har en variant og en size, får den riktig className og ser riktig ut
+export const SystemIconSizeExtraLarge = Template.bind({});
+SystemIconSizeExtraLarge.storyName = 'With Size Extra Large - SystemIcon (A2)';
+SystemIconSizeExtraLarge.args = {
+  ...defaultArgs,
+  svgPath: AccountChildSVGpath,
+  variant: 'systemIcon',
+  size: 'extraLarge',
+};
+SystemIconSizeExtraLarge.argTypes = {
+  size: { table: { disable: false } },
+};
+SystemIconSizeExtraLarge.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const icon = canvas.getByRole('img', { hidden: true });
+  await expect(icon.classList.toString()).toContain(
+    'Icon_systemIcon_extraLarge'
+  );
+};
+
+// Når Icon har en variant og en size, får den riktig className og ser riktig ut
+export const ThemeIconSizeMedium = Template.bind({});
+ThemeIconSizeMedium.storyName = 'With Size Medium - ThemeIcon (A3)';
+ThemeIconSizeMedium.args = {
+  ...defaultArgs,
+  svgPath: AndreForholdSVGpath,
+  variant: 'themeIcon',
+  size: 'medium',
+};
+ThemeIconSizeMedium.argTypes = {
+  size: {
+    table: { disable: false },
+    options: [sizeArr[2], sizeArr[3]],
   },
+};
+ThemeIconSizeMedium.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const icon = canvas.getByRole('img', { hidden: true });
+  await expect(icon.classList.toString()).toContain('Icon_themeIcon_medium');
+};
+
+// Når Icon har en variant og en size, får den riktig className og ser riktig ut
+export const ThemeIconSizeLarge = Template.bind({});
+ThemeIconSizeLarge.storyName = 'With Size Large - ThemeIcon (A3)';
+ThemeIconSizeLarge.args = {
+  ...defaultArgs,
+  svgPath: AndreForholdSVGpath,
+  variant: 'themeIcon',
+  size: 'large',
+};
+ThemeIconSizeLarge.argTypes = {
+  size: {
+    table: { disable: false },
+    options: [sizeArr[2], sizeArr[3]],
+  },
+};
+ThemeIconSizeLarge.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const icon = canvas.getByRole('img', { hidden: true });
+  await expect(icon.classList.toString()).toContain('Icon_themeIcon_large');
 };

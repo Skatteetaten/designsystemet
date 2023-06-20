@@ -17,6 +17,8 @@
     "baseUrl": ".",
     "paths": {
       "@skatteetaten/ds-buttons": ["libs/ds-buttons/src/index.ts"],
+      "@skatteetaten/ds-collections": ["libs/ds-collections/src/index.ts"],
+      "@skatteetaten/ds-content": ["libs/ds-content/src/index.ts"],
       "@skatteetaten/ds-core-designtokens": [
         "libs/ds-core-designtokens/src/index.ts"
       ],
@@ -24,8 +26,17 @@
       "@skatteetaten/ds-dev-config": ["libs/ds-dev-config/src/index.ts"],
       "@skatteetaten/ds-forms": ["libs/ds-forms/src/index.ts"],
       "@skatteetaten/ds-icons": ["libs/ds-icons/src/index.ts"],
+      "@skatteetaten/ds-status": ["libs/ds-status/src/index.ts"],
+      "@skatteetaten/ds-table": ["libs/ds-table/src/index.ts"],
       "@skatteetaten/ds-typography": ["libs/ds-typography/src/index.ts"]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": ["node_modules", "tmp"],
+  "ts-node": {
+    "compilerOptions": {
+      "target": "ES2017",
+      "module": "commonjs",
+      "esModuleInterop": true
+    }
+  }
 }

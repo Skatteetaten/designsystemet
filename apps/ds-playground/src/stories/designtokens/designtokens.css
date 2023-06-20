@@ -38,6 +38,22 @@
   border-collapse: collapse;
 }
 
+.paletteTableCol65 {
+  width: 65%;
+}
+
+.paletteTableCol25 {
+  width: 25%;
+}
+
+.paletteTableCol15 {
+  width: 15%;
+}
+
+.paletteTableCol10 {
+  width: 10%;
+}
+
 .paletteTableHeader {
   padding-bottom: var(--spacing-s);
   text-align: start;
@@ -46,6 +62,12 @@
 .paletteTableRow > td {
   padding: var(--spacing-xs) 0;
   border-top: 2px solid var(--semantic-divider-100);
+}
+
+.paletteTableDesigntoken {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10%;
 }
 
 .fontSectionHeader {

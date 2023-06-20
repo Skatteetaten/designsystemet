@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Blockquote Defaults smoke-test 1`] = `
+<div data-test-block="true">
+  <blockquote class="Blockquote_blockquote__i5HzN  ">
+    Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+  </blockquote>
+</div>
+`;
+
+exports[`Tester/Blockquote WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <blockquote id="htmlId"
+              class="Blockquote_blockquote__i5HzN  dummyClassname"
+              lang="nb"
+              data-testid="123ID"
+  >
+    Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+  </blockquote>
+</div>
+`;
+
+exports[`Tester/Blockquote WithMarkup smoke-test 1`] = `
+<div data-test-block="true">
+  <blockquote class="Blockquote_blockquote__i5HzN  ">
+    <div>
+      Manowar Manowar living on the road
+      <a href="https://en.wikipedia.org/wiki/Manowar">
+        lenke
+      </a>
+    </div>
+    <div>
+      When we're on
+      <strong>
+        strong
+      </strong>
+      explode
+      <em>
+        italic em
+      </em>
+    </div>
+    <div>
+      We don't attract
+      <code>
+        code wimps
+      </code>
+      'cause we're too
+      <mark>
+        mark
+      </mark>
+    </div>
+    <div>
+      Just
+      <i>
+        italic i
+      </i>
+      true
+      <small>
+        small
+      </small>
+      people that's Manowar's
+      <b>
+        b
+      </b>
+    </div>
+  </blockquote>
+</div>
+`;
+
+exports[`Tester/Blockquote WithRef play-test 1`] = `
+<div data-test-block="true">
+  <blockquote class="Blockquote_blockquote__i5HzN  "
+              id="dummyIdForwardedFromRef"
+  >
+    Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+  </blockquote>
+</div>
+`;
+
+exports[`Tester/Blockquote WithSpacing smoke-test 1`] = `
+<div data-test-block="true">
+  <blockquote class="Blockquote_blockquote__i5HzN Blockquote_blockquote_hasSpacing__uLqf9 ">
+    Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+  </blockquote>
+  <blockquote class="Blockquote_blockquote__i5HzN Blockquote_blockquote_hasSpacing__uLqf9 ">
+    Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+  </blockquote>
+</div>
+`;

@@ -1,4 +1,4 @@
-import { Children, cloneElement, forwardRef } from 'react';
+import { Children, forwardRef } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import {
@@ -10,10 +10,11 @@ import {
 import { getLinkGroupVariantDefault } from './defaults';
 import { LinkGroupComponent, LinkGroupProps } from './LinkGroup.types';
 import { Link } from '../Link/Link';
+import { LinkContext } from '../LinkContext/LinkContext';
 
 import styles from './LinkGroup.module.scss';
 
-const LinkGroup = forwardRef<HTMLUListElement, LinkGroupProps>(
+export const LinkGroup = forwardRef<HTMLUListElement, LinkGroupProps>(
   (
     {
       id,
@@ -36,7 +37,7 @@ const LinkGroup = forwardRef<HTMLUListElement, LinkGroupProps>(
       color ? styles[`icon_${color}`] : ''
     }`;
 
-    const spacingClassName = hasSpacing ? `${styles.linkGroup_hasSpacing}` : '';
+    const spacingClassName = hasSpacing ? styles.linkGroup_hasSpacing : '';
     const concatenatedClassName = `${styles.linkGroup} ${spacingClassName} ${className} `;
 
     const links = Children.toArray(children);
@@ -49,14 +50,19 @@ const LinkGroup = forwardRef<HTMLUListElement, LinkGroupProps>(
         lang={lang}
         data-testid={dataTestId}
       >
-        {links.map((link, index) => {
-          return (
-            <li key={index} className={styles.linkGroupItem}>
-              <Icon className={concatenatedIconClassName} svgPath={iconPath} />
-              {cloneElement(link as JSX.Element, { color: color })}
-            </li>
-          );
-        })}
+        <LinkContext.Provider value={{ color }}>
+          {links.map((child, index) => {
+            return (
+              <li key={index} className={styles.linkGroupItem}>
+                <Icon
+                  className={concatenatedIconClassName}
+                  svgPath={iconPath}
+                />
+                {child}
+              </li>
+            );
+          })}
+        </LinkContext.Provider>
       </ul>
     );
   }
@@ -65,4 +71,4 @@ const LinkGroup = forwardRef<HTMLUListElement, LinkGroupProps>(
 LinkGroup.displayName = 'LinkGroup';
 LinkGroup.Link = Link;
 
-export { LinkGroup, getLinkGroupVariantDefault };
+export { getLinkGroupVariantDefault };

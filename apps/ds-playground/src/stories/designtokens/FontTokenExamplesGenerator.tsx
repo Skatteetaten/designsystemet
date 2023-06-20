@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-import './designtokens.css';
+import { Fragment } from 'react';
+
 const fontJson = require('@skatteetaten/ds-core-designtokens/designtokens/font.json');
 
 interface FontTokenExamplesGeneratorProps {
@@ -17,35 +18,43 @@ export const FontTokenExamplesGenerator = ({
     key.includes(propertyType)
   );
 
+  const isFontSize = propertyType === 'font-size';
+  const isFontWeight = propertyType === 'font-weight';
   const hasLineHeight = propertyType === 'line-height';
 
   return (
     <div className={hasLineHeight ? 'fontTokenExample_grid' : ''}>
       {Object.keys(tokens).map((value: string, index: number) => {
+        const fontValue = fontTokens[tokens[index]];
+        const fontSizeValue = isFontSize
+          ? fontValue
+          : 'var(--semantic-font-size-default)';
+        const fontWeightValue = isFontWeight
+          ? fontValue
+          : 'var(--semantic-font-weight-default)';
+        const lineHeightValue = hasLineHeight
+          ? fontValue
+          : 'var(--semantic-line-height-default)';
+
+        const uniqueSuffixName = `${tokens[index]}`;
+        const fontClassName = `fontToken${index}${uniqueSuffixName}`;
+        const cssRule = `.${fontClassName} { font-size: ${fontSizeValue}; font-weight: ${fontWeightValue}; line-height: ${lineHeightValue}; }`;
+
         return (
-          <p
-            key={index}
-            className={`fontTokenExample ${
-              hasLineHeight ? 'fontTokenExample_lineheight' : ''
-            }`}
-            style={{
-              fontSize:
-                propertyType === 'font-size'
-                  ? fontTokens[tokens[index]]
-                  : 'var(--semantic-font-size-default)',
-              fontWeight:
-                propertyType === 'font-weight'
-                  ? fontTokens[tokens[index]]
-                  : 'var(--semantic-font-weight-default)',
-              lineHeight: hasLineHeight
-                ? fontTokens[tokens[index]]
-                : 'var(--semantic-line-height-default)',
-            }}
-          >
-            <strong>{`${tokens[index]}: ${fontTokens[tokens[index]]}`}</strong>
-            <br />
-            {sampleText}
-          </p>
+          <Fragment key={index}>
+            <style>{cssRule}</style>
+            <p
+              className={`fontTokenExample ${fontClassName} ${
+                hasLineHeight ? 'fontTokenExample_lineheight' : ''
+              }`}
+            >
+              <strong>{`${tokens[index]}: ${
+                fontTokens[tokens[index]]
+              }`}</strong>
+              <br />
+              {sampleText}
+            </p>
+          </Fragment>
         );
       })}
     </div>

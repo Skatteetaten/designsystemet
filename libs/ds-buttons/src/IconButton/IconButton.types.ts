@@ -16,6 +16,7 @@ type IconButtonHTMLAttributes = Partial<RequiredIconButtonHTMLAttributes>;
 interface IconButtonPropsHTMLAttributes extends IconButtonHTMLAttributes {
   title: string;
   ariaDescribedby?: string;
+  ariaExpanded?: boolean;
   onBlur?: FocusEventHandler<HTMLButtonElement>;
   onClick?: MouseEventHandler<HTMLButtonElement>;
   onFocus?: FocusEventHandler<HTMLButtonElement>;

@@ -1,35 +1,9 @@
-import { AxePuppeteer } from '@axe-core/puppeteer';
 import { Blockquote, BlockquoteProps } from '@skatteetaten/ds-typography';
+import { expect } from '@storybook/jest';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { toHaveNoViolations } from 'jest-axe';
-import { Page } from 'puppeteer';
+import { within } from '@storybook/testing-library';
 
-import {
-  screenShotOptions,
-  wrapper,
-} from './testUtils/puppeteer.testing.utils';
-
-const verifyMatchSnapShot = async (page: Page): Promise<void> => {
-  const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-  expect(innerHtml).toMatchSnapshot();
-};
-
-const verifyMatchImageSnapShot = async (page: Page): Promise<void> => {
-  const image = await page.screenshot(screenShotOptions);
-  expect(image).toMatchImageSnapshot();
-};
-
-const verifyAxeRules = async (page: Page): Promise<void> => {
-  const axeResults = await new AxePuppeteer(page).include(wrapper).analyze();
-  expect.extend(toHaveNoViolations);
-  expect(axeResults).toHaveNoViolations();
-};
-
-const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
-  await verifyMatchSnapShot(page);
-  await verifyMatchImageSnapShot(page);
-  await verifyAxeRules(page);
-};
+import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
 
 export default {
   component: Blockquote,
@@ -52,9 +26,7 @@ export default {
 } as ComponentMeta<typeof Blockquote>;
 
 const defaultArgs: BlockquoteProps = {
-  children:
-    'Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, ' +
-    'etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.',
+  children: loremIpsum,
 };
 
 const Template: ComponentStory<typeof Blockquote> = (args) => (
@@ -75,123 +47,53 @@ WithRef.args = {
   },
 };
 WithRef.argTypes = {
-  ...WithRef.argTypes,
   ref: { table: { disable: false } },
 };
 WithRef.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const refId = await page.$eval(`${wrapper} > blockquote`, (el) => el.id);
-    expect(refId).toBe('dummyIdForwardedFromRef');
-  },
+  imageSnapshot: { disable: true },
+};
+WithRef.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const blockquote = canvas.getByText(loremIpsum);
+  await expect(blockquote).toHaveAttribute('id', 'dummyIdForwardedFromRef');
 };
 
-// Når Blockquote har en id, så har elementet id'en satt
-export const WithId = Template.bind({});
-WithId.storyName = 'With Id (FA2)';
-WithId.args = {
-  ...defaultArgs,
-  id: 'BlockquoteId',
-};
-WithId.argTypes = {
-  ...WithId.argTypes,
-  id: { table: { disable: false } },
-};
-WithId.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const id = await page.$eval(`${wrapper} > blockquote`, (el) =>
-      el.getAttribute('id')
-    );
-    expect(id).toBe('BlockquoteId');
-  },
-};
-
+// Når Blockquote har en id, så har element id
 // Når Blockquote har en custom CSS, så vises custom stil
-export const WithCustomCss = Template.bind({});
-WithCustomCss.storyName = 'With Custom CSS (FA3)';
-WithCustomCss.args = {
-  ...defaultArgs,
-  className: 'dummyClassname',
-};
-WithCustomCss.argTypes = {
-  ...WithCustomCss.argTypes,
-  className: { table: { disable: false } },
-};
-WithCustomCss.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const classNameAttribute = await page.$eval(
-      `${wrapper} > blockquote`,
-      (el) => el.getAttribute('class')
-    );
-    expect(classNameAttribute).toContain('dummyClassname');
-  },
-};
-
-// Når Blockquote har en lang, så har elementet lang satt
-export const WithLang = Template.bind({});
-WithLang.storyName = 'With Lang (FA4)';
-WithLang.args = {
-  ...defaultArgs,
-  lang: 'nb',
-};
-WithLang.argTypes = {
-  ...WithLang.argTypes,
-  lang: { table: { disable: false } },
-};
-WithLang.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const langAttribute = await page.$eval(`${wrapper} > blockquote`, (el) =>
-      el.getAttribute('lang')
-    );
-    expect(langAttribute).toBe('nb');
-  },
-};
-
+// Når Blockquote har en lang, så har element lang
 // Når Blockquote har dataTestid, så har elementet data-testid satt
-export const WithDataTestid = Template.bind({});
-WithDataTestid.storyName = 'With DataTestid (FA5)';
-WithDataTestid.args = {
+export const WithAttributes = Template.bind({});
+WithAttributes.storyName = 'With Attributes (FA2-5)';
+WithAttributes.args = {
   ...defaultArgs,
-  'data-testid': 'BlockquoteID',
+  id: 'htmlId',
+  className: 'dummyClassname',
+  lang: 'nb',
+  'data-testid': '123ID',
 };
-WithDataTestid.argTypes = {
-  ...WithDataTestid.argTypes,
+WithAttributes.argTypes = {
+  id: { table: { disable: false } },
+  className: { table: { disable: false } },
+  lang: { table: { disable: false } },
   'data-testid': { table: { disable: false } },
 };
-WithDataTestid.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const dataTestid = await page.$eval(`${wrapper} > blockquote`, (el) =>
-      el.getAttribute('data-testid')
-    );
-    expect(dataTestid).toBe('BlockquoteID');
-  },
+WithAttributes.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const blockquote = canvas.getByText(loremIpsum);
+  await expect(blockquote).toHaveClass('dummyClassname');
+  await expect(blockquote).toHaveAttribute('id', 'htmlId');
+  await expect(blockquote).toHaveAttribute('lang', 'nb');
+  await expect(blockquote).toHaveAttribute('data-testid', '123ID');
 };
 
 // Når Blockquote instansieres, får den riktige default-verdier
 export const Defaults = Template.bind({});
-Defaults.storyName = 'Defaults (A1, B1 - 1 av 2)';
+Defaults.storyName = 'Defaults (A1, B1)';
 Defaults.args = {
   ...defaultArgs,
 };
 Defaults.argTypes = {
-  ...Defaults.argTypes,
   children: { table: { disable: false } },
-};
-Defaults.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
 };
 
 const TemplateWithMarkup: ComponentStory<typeof Blockquote> = (args) => (
@@ -227,16 +129,18 @@ const TemplateWithMarkup: ComponentStory<typeof Blockquote> = (args) => (
 
 // Når Blockquote instansieres med markup, får markup riktig styling
 export const WithMarkup = TemplateWithMarkup.bind({});
-WithMarkup.storyName = 'With Markup (A2, B1 - 2 av 2)';
+WithMarkup.storyName = 'With Markup (A2, B1)';
 WithMarkup.argTypes = {
-  ...WithMarkup.argTypes,
   children: {
     table: { disable: false },
     control: { type: null },
   },
 };
 WithMarkup.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
+  imageSnapshot: {
+    hover: `${wrapper} > blockquote a`,
+    focus: `${wrapper} > blockquote a`,
+  },
 };
 
 const TemplateWithTwoBlockquotes: ComponentStory<typeof Blockquote> = (
@@ -256,9 +160,5 @@ WithSpacing.args = {
   hasSpacing: true,
 };
 WithSpacing.argTypes = {
-  ...WithSpacing.argTypes,
   hasSpacing: { table: { disable: false } },
-};
-WithSpacing.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
 };

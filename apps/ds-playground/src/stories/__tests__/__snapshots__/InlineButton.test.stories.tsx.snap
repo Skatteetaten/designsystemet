@@ -1,0 +1,214 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/InlineButton Defaults play-test 1`] = `
+<div data-test-block="true">
+  <button class="InlineButton_button__2aGtg   "
+          type="button"
+  >
+    Legg til rapport
+  </button>
+</div>
+`;
+
+exports[`Tester/InlineButton WithAccesskey play-test 1`] = `
+<div data-test-block="true">
+  <button class="InlineButton_button__2aGtg   "
+          accesskey="j"
+          type="button"
+  >
+    Legg til rapport
+  </button>
+</div>
+`;
+
+exports[`Tester/InlineButton WithAriaDescribedby play-test 1`] = `
+<div data-test-block="true">
+  <button class="InlineButton_button__2aGtg   "
+          type="button"
+          aria-describedby="testid1234"
+  >
+    Legg til rapport
+  </button>
+</div>
+`;
+
+exports[`Tester/InlineButton WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <button id="htmlId"
+          class="InlineButton_button__2aGtg   dummyClassname"
+          lang="nb"
+          data-testid="123ID"
+          type="button"
+  >
+    Legg til rapport
+  </button>
+</div>
+`;
+
+exports[`Tester/InlineButton WithCustomIcon smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  "
+          type="button"
+  >
+    <span class="InlineButton_iconWrapper__CqjpJ">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z">
+        </path>
+      </svg>
+    </span>
+    Legg til rapport
+  </button>
+</div>
+`;
+
+exports[`Tester/InlineButton WithDisabled play-test 1`] = `
+<div data-test-block="true">
+  <button class="InlineButton_button__2aGtg   "
+          disabled
+          type="button"
+  >
+    Legg til rapport
+  </button>
+</div>
+`;
+
+exports[`Tester/InlineButton WithDisabledAndIcon smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  "
+          disabled
+          type="button"
+  >
+    <span class="InlineButton_iconWrapper__CqjpJ">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
+        </path>
+      </svg>
+    </span>
+    Legg til rapport
+  </button>
+</div>
+`;
+
+exports[`Tester/InlineButton WithEventHandlers play-test 1`] = `
+<div data-test-block="true">
+  <button class="InlineButton_button__2aGtg   "
+          type="button"
+  >
+    Knapp har blitt klikket på
+  </button>
+</div>
+`;
+
+exports[`Tester/InlineButton WithIcon play-test 1`] = `
+<div data-test-block="true">
+  <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  "
+          type="button"
+  >
+    <span class="InlineButton_iconWrapper__CqjpJ">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
+        </path>
+      </svg>
+    </span>
+    Legg til rapport
+  </button>
+</div>
+`;
+
+exports[`Tester/InlineButton WithIconRight smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 "
+          type="button"
+  >
+    Legg til rapport
+    <span class="InlineButton_iconWrapper__CqjpJ">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
+        </path>
+      </svg>
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/InlineButton WithLongText smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="InlineButton_button__2aGtg   "
+          type="button"
+  >
+    Denne knappen har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert. Denne knappen har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert.
+  </button>
+</div>
+`;
+
+exports[`Tester/InlineButton WithLongTextAndBreaking smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="InlineButton_button__2aGtg   "
+          type="button"
+  >
+    Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Nårikkeikonsåskaltekstenværevenstrejusteres.Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Nårikkeikonsåskaltekstenværevenstrejusteres.
+  </button>
+</div>
+`;
+
+exports[`Tester/InlineButton WithLongTextAndIcon smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  "
+          type="button"
+  >
+    <span class="InlineButton_iconWrapper__CqjpJ">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
+        </path>
+      </svg>
+    </span>
+    Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert. Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert.
+  </button>
+</div>
+`;
+
+exports[`Tester/InlineButton WithRef play-test 1`] = `
+<div data-test-block="true">
+  <button class="InlineButton_button__2aGtg   "
+          type="button"
+          id="dummyIdForwardedFromRef"
+  >
+    Legg til rapport
+  </button>
+</div>
+`;
+
+exports[`Tester/InlineButton WithType play-test 1`] = `
+<div data-test-block="true">
+  <button class="InlineButton_button__2aGtg   "
+          type="submit"
+  >
+    Legg til rapport
+  </button>
+</div>
+`;

@@ -7,9 +7,10 @@
   padding: var(--spacing-s) 0;
   color: var(--semantic-interactive-main);
   font-weight: var(--font-weight-medium);
+  overflow-wrap: anywhere;
   text-decoration-color: var(--semantic-interactive-main);
   text-decoration-line: underline;
-  word-break: break-word;
+  word-break: normal;
 
   &:hover {
     background-color: var(--semantic-interactive-background);
@@ -26,4 +27,16 @@
     color: var(--semantic-interactive-foreground);
     text-decoration-color: var(--semantic-interactive-foreground);
   }
+}
+
+@mixin sr-only {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
 }

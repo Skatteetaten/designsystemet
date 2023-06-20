@@ -1,0 +1,406 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/IconButton Defaults play-test 1`] = `
+<div data-test-block="true">
+  <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+          type="button"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:r2:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:r2:">
+        dummy tekst accessible name
+      </title>
+      <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/IconButton WithAccesskey play-test 1`] = `
+<div data-test-block="true">
+  <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+          accesskey="a"
+          type="button"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:rg:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:rg:">
+        dummy tekst accessible name
+      </title>
+      <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/IconButton WithAriaDescribedby play-test 1`] = `
+<div data-test-block="true">
+  <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+          type="button"
+          aria-describedby="araiDescId"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:re:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:re:">
+        dummy tekst accessible name
+      </title>
+      <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/IconButton WithAriaExpanded play-test 1`] = `
+<div data-test-block="true">
+  <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+          type="button"
+          aria-expanded="true"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:rf:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:rf:">
+        dummy tekst accessible name
+      </title>
+      <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/IconButton WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <button id="htmlId"
+          class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  dummyClassname"
+          lang="nb"
+          data-testid="123ID"
+          type="button"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:r1:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:r1:">
+        dummy tekst accessible name
+      </title>
+      <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/IconButton WithCustomSVGPath smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+          type="button"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:r4:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:r4:">
+        dummy tekst accessible name
+      </title>
+      <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/IconButton WithDisabled play-test 1`] = `
+<div data-test-block="true">
+  <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+          disabled
+          type="button"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:rb:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:rb:">
+        dummy tekst accessible name
+      </title>
+      <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/IconButton WithDisabledAndOutline smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt IconButton_button_outlined__aDbNH "
+          disabled
+          type="button"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:rc:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:rc:">
+        dummy tekst accessible name
+      </title>
+      <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/IconButton WithEventHandlers play-test 1`] = `
+<div data-test-block="true">
+  <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+          type="button"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:rh:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:rh:">
+        dummy tekst accessible name
+      </title>
+      <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/IconButton WithOutline smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt IconButton_button_outlined__aDbNH "
+          type="button"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:r3:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:r3:">
+        dummy tekst accessible name
+      </title>
+      <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/IconButton WithRef play-test 1`] = `
+<div data-test-block="true">
+  <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+          type="button"
+          id="dummyIdForwardedFromRef"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:r0:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:r0:">
+        dummy tekst accessible name
+      </title>
+      <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/IconButton WithSizeExtraSmall smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY  "
+          type="button"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:r5:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:r5:">
+        dummy tekst accessible name
+      </title>
+      <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/IconButton WithSizeExtraSmallAndOutline smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH "
+          type="button"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:r8:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:r8:">
+        dummy tekst accessible name
+      </title>
+      <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/IconButton WithSizeLarge smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="IconButton_button__mw9sG IconButton_button_large__IejTf  "
+          type="button"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:r7:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:r7:">
+        dummy tekst accessible name
+      </title>
+      <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/IconButton WithSizeLargeAndOutline smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="IconButton_button__mw9sG IconButton_button_large__IejTf IconButton_button_outlined__aDbNH "
+          type="button"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:ra:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:ra:">
+        dummy tekst accessible name
+      </title>
+      <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/IconButton WithSizeSmall smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="IconButton_button__mw9sG IconButton_button_small__etst4  "
+          type="button"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:r6:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:r6:">
+        dummy tekst accessible name
+      </title>
+      <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/IconButton WithSizeSmallAndOutline smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="IconButton_button__mw9sG IconButton_button_small__etst4 IconButton_button_outlined__aDbNH "
+          type="button"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:r9:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:r9:">
+        dummy tekst accessible name
+      </title>
+      <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/IconButton WithType play-test 1`] = `
+<div data-test-block="true">
+  <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+          type="submit"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:rd:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:rd:">
+        dummy tekst accessible name
+      </title>
+      <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+      </path>
+    </svg>
+  </button>
+</div>
+`;

@@ -1,0 +1,38 @@
+@keyframes errormessage {
+  from {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate3d(0, -20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.errorMessage {
+  display: flex;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-name: errormessage;
+  animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
+  overflow-wrap: anywhere;
+  word-break: normal;
+
+  &Icon {
+    flex-shrink: 0;
+    fill: var(--semantic-danger-foreground);
+    transform: translateY(6px);
+  }
+
+  &Text {
+    padding: var(--spacing-xs) 0 var(--spacing-xs) var(--spacing-s);
+    margin: 0;
+    color: var(--semantic-danger-foreground);
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--semantic-line-height-default);
+  }
+}

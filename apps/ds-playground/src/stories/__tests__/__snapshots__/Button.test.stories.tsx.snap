@@ -1,0 +1,234 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Button Defaults play-test 1`] = `
+<div data-test-block="true">
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+          type="button"
+  >
+    <span class="Button_buttonText__JxyB+">
+      Klikk her
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/Button VariantDanger play-test 1`] = `
+<div data-test-block="true">
+  <button class="Button_button__pkuNv Button_button_danger__0CE32  "
+          type="button"
+  >
+    <span class="Button_buttonText__JxyB+">
+      Klikk her
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/Button VariantSecondary play-test 1`] = `
+<div data-test-block="true">
+  <button class="Button_button__pkuNv Button_button_secondary__KxQlU  "
+          type="button"
+  >
+    <span class="Button_buttonText__JxyB+">
+      Klikk her
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/Button VariantTertiary play-test 1`] = `
+<div data-test-block="true">
+  <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+          type="button"
+  >
+    <span class="Button_buttonText__JxyB+">
+      Klikk her
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/Button WithAccesskey play-test 1`] = `
+<div data-test-block="true">
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+          accesskey="j"
+          type="button"
+  >
+    <span class="Button_buttonText__JxyB+">
+      Klikk her
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/Button WithAriaDescribedby play-test 1`] = `
+<div data-test-block="true">
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+          type="button"
+          aria-describedby="testid1234"
+  >
+    <span class="Button_buttonText__JxyB+">
+      Klikk her
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/Button WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <button id="htmlid"
+          class="Button_button__pkuNv Button_button_primary__8Ouwo  dummyClassname"
+          lang="nb"
+          data-testid="123ID"
+          type="button"
+  >
+    <span class="Button_buttonText__JxyB+">
+      Klikk her
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/Button WithDisabled play-test 1`] = `
+<div data-test-block="true">
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+          disabled
+          type="button"
+  >
+    <span class="Button_buttonText__JxyB+">
+      Klikk her
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/Button WithDisabledAndIcon smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo Button_button_withIcon__P1eEM "
+          disabled
+          type="button"
+  >
+    <span class="Button_iconWrapper__9FDzj">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Button_icon__9r5UK"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M2 3v7l15 2-15 2v7l21-9L2 3Z">
+        </path>
+      </svg>
+    </span>
+    <span class="Button_buttonText__JxyB+">
+      Klikk her
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/Button WithEventHandlers play-test 1`] = `
+<div data-test-block="true">
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+          type="button"
+  >
+    <span class="Button_buttonText__JxyB+">
+      Knapp har blitt klikket på
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/Button WithIcon play-test 1`] = `
+<div data-test-block="true">
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo Button_button_withIcon__P1eEM "
+          type="button"
+  >
+    <span class="Button_iconWrapper__9FDzj">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Button_icon__9r5UK"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M2 3v7l15 2-15 2v7l21-9L2 3Z">
+        </path>
+      </svg>
+    </span>
+    <span class="Button_buttonText__JxyB+">
+      Klikk her
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/Button WithLongText smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+          type="button"
+  >
+    <span class="Button_buttonText__JxyB+">
+      Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles. Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/Button WithLongTextAndBreaking smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+          type="button"
+  >
+    <span class="Button_buttonText__JxyB+">
+      Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles.Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/Button WithLongTextAndIcon smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo Button_button_withIcon__P1eEM "
+          type="button"
+  >
+    <span class="Button_iconWrapper__9FDzj">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Button_icon__9r5UK"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M2 3v7l15 2-15 2v7l21-9L2 3Z">
+        </path>
+      </svg>
+    </span>
+    <span class="Button_buttonText__JxyB+">
+      Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres. Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres.
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/Button WithRef play-test 1`] = `
+<div data-test-block="true">
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+          type="button"
+          id="dummyIdForwardedFromRef"
+  >
+    <span class="Button_buttonText__JxyB+">
+      Klikk her
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/Button WithType play-test 1`] = `
+<div data-test-block="true">
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+          type="submit"
+  >
+    <span class="Button_buttonText__JxyB+">
+      Klikk her
+    </span>
+  </button>
+</div>
+`;

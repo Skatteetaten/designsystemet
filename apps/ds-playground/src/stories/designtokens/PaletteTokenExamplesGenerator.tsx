@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+import { Fragment } from 'react';
+
 import { IconButton } from '@skatteetaten/ds-buttons';
 import { CopySVGpath } from '@skatteetaten/ds-icons';
 
-import './designtokens.css';
 const paletteJson = require('@skatteetaten/ds-core-designtokens/designtokens/palette.json');
 
 export const PaletteTokenExamplesGenerator = (): JSX.Element => {
@@ -11,43 +12,47 @@ export const PaletteTokenExamplesGenerator = (): JSX.Element => {
   return (
     <table className={'paletteTable'}>
       <colgroup>
-        <col style={{ width: '50%' }} />
-        <col style={{ width: '15%' }} />
-        <col style={{ width: '25%' }} />
-        <col style={{ width: '10%' }} />
+        <col className={'paletteTableCol65'} />
+        <col className={'paletteTableCol25'} />
+        <col className={'paletteTableCol10'} />
       </colgroup>
-      <tr>
-        <th className={'paletteTableHeader'}>{'Designtoken'}</th>
-        <th></th>
-        <th className={'paletteTableHeader'}>{'Verdi'}</th>
-        <th className={'paletteTableHeader'}>{'Kopier'}</th>
-      </tr>
-      {Object.keys(colorsTokens).map((key) => {
-        return (
-          <tr key={key} className={'paletteTableRow'}>
-            <td>{key}</td>
-            <td>
-              <div
-                style={{
-                  background: colorsTokens[key],
-                  height: '2rem',
-                  width: '2rem',
-                }}
-              ></div>
-            </td>
-            <td>{colorsTokens[key]}</td>
-            <td>
-              <IconButton
-                svgPath={CopySVGpath}
-                title={'Kopier'}
-                onClick={(): Promise<void> =>
-                  navigator.clipboard.writeText(key)
-                }
-              />
-            </td>
-          </tr>
-        );
-      })}
+      <thead>
+        <tr>
+          <th className={'paletteTableHeader'}>{'Designtoken'}</th>
+          <th className={'paletteTableHeader'}>{'Verdi'}</th>
+          <th className={'paletteTableHeader'}>{'Kopier'}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {Object.keys(colorsTokens).map((key, index) => {
+          const colorClassName = `colorToken${index}`;
+          const cssRule = `.${colorClassName} { background: ${colorsTokens[key]}; width: 2rem; height: 2rem; }`;
+
+          return (
+            <Fragment key={index}>
+              <style>{cssRule}</style>
+              <tr key={key} className={'paletteTableRow'}>
+                <td>
+                  <div className={'paletteTableDesigntoken'}>
+                    <span>{key}</span>
+                    <span className={`${colorClassName}`}></span>
+                  </div>
+                </td>
+                <td>{colorsTokens[key]}</td>
+                <td>
+                  <IconButton
+                    svgPath={CopySVGpath}
+                    title={'Kopier'}
+                    onClick={(): Promise<void> =>
+                      navigator.clipboard.writeText(key)
+                    }
+                  />
+                </td>
+              </tr>
+            </Fragment>
+          );
+        })}
+      </tbody>
     </table>
   );
 };

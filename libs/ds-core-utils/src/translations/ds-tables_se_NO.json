@@ -1,10 +1,11 @@
 {
-  "pagination.Back": "TODO",
-  "pagination.Forward": "TODO",
-  "pagination.Title": "TODO",
-  "table.Sortable": "TODO",
-  "table.SortedAscending": "TODO",
-  "table.SortedDescending": "TODO",
+  "pagination.Back": "Ruovttuluotta",
+  "pagination.Forward": "Ovddas",
+  "pagination.Title": "Čájeha {view} oktiibuot {total} bohtosis",
+  "table.Sortable": "Vejolaš sirret",
+  "table.SortedAscending": "Sirrejuvvon lassáneamen",
+  "table.SortedDescending": "Sirrejuvvon vuolideamen",
   "tablerow.Editable": "Redigere ráiddu",
-  "tablerow.Expandable": "Eanet dieđut"
+  "tablerow.Expandable": "Eanet dieđut",
+  "tablesum.Sum": "Submi"
 }

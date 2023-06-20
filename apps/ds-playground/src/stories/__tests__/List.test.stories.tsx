@@ -1,4 +1,3 @@
-import { AxePuppeteer } from '@axe-core/puppeteer';
 import { LinkGroup } from '@skatteetaten/ds-buttons';
 import {
   List,
@@ -6,41 +5,15 @@ import {
   ListProps,
   Paragraph,
 } from '@skatteetaten/ds-typography';
+import { expect } from '@storybook/jest';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { toHaveNoViolations } from 'jest-axe';
-import { Page } from 'puppeteer';
+import { within } from '@storybook/testing-library';
 
-import {
-  screenShotOptions,
-  wrapper,
-} from './testUtils/puppeteer.testing.utils';
-
-const verifyMatchSnapShot = async (page: Page): Promise<void> => {
-  const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-  expect(innerHtml).toMatchSnapshot();
-};
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const verifyMatchImageSnapShot = async (page: Page): Promise<void> => {
-  const image = await page.screenshot(screenShotOptions);
-  expect(image).toMatchImageSnapshot();
-};
-
-const verifyAxeRules = async (page: Page): Promise<void> => {
-  const axeResults = await new AxePuppeteer(page).include(wrapper).analyze();
-  expect.extend(toHaveNoViolations);
-  expect(axeResults).toHaveNoViolations();
-};
-
-const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
-  await verifyMatchSnapShot(page);
-  await verifyMatchImageSnapShot(page);
-  await verifyAxeRules(page);
-};
+import { wrapper } from './testUtils/storybook.testing.utils';
 
 export default {
   component: List,
-  title: 'Tester/List',
+  title: 'Tester/List/List',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },
@@ -83,10 +56,6 @@ const Template: ComponentStory<typeof List> = (args) => (
 // Når List har en ref, så får dom elementet ref forwarded
 export const WithRef = Template.bind({});
 WithRef.storyName = 'With Ref (FA1)';
-WithRef.argTypes = {
-  ...WithRef.argTypes,
-  ref: { table: { disable: false } },
-};
 WithRef.args = {
   ...defaultArgs,
   ref: (instance: HTMLUListElement | null): void => {
@@ -95,155 +64,84 @@ WithRef.args = {
     }
   },
 };
+WithRef.argTypes = {
+  ref: { table: { disable: false } },
+};
 WithRef.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const refId = await page.$eval(`${wrapper} > ul`, (el) => el.id);
-    expect(refId).toBe('dummyIdForwardedFromRef');
-  },
+  imageSnapshot: { disable: true },
+};
+WithRef.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const list = canvas.getByRole('list');
+  await expect(list).toHaveAttribute('id', 'dummyIdForwardedFromRef');
 };
 
-// Når List har en id, så har elementet id'en satt
-export const WithId = Template.bind({});
-WithId.storyName = 'With Id (FA2)';
-WithId.argTypes = {
-  ...WithId.argTypes,
-  id: { table: { disable: false } },
-};
-WithId.args = {
+// Når List har en id, custom className, lang og dataTestid, så får elementet attributene id, class, lang og data-testid satt og custom stil vises
+export const WithAttributes = Template.bind({});
+WithAttributes.storyName = 'With Attributes (FA2-5)';
+WithAttributes.args = {
   ...defaultArgs,
-  id: 'ListId',
-};
-WithId.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const id = await page.$eval(`${wrapper} > ul`, (el) =>
-      el.getAttribute('id')
-    );
-    expect(id).toBe('ListId');
-  },
-};
-
-// Når List har en custom CSS, så vises custom stil
-export const WithCustomCss = Template.bind({});
-WithCustomCss.storyName = 'With Custom CSS (FA3)';
-WithCustomCss.args = {
-  ...defaultArgs,
+  id: 'htmlid',
   className: 'dummyClassname',
-};
-WithCustomCss.argTypes = {
-  ...WithCustomCss.argTypes,
-  className: { table: { disable: false } },
-};
-WithCustomCss.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const classNameAttribute = await page.$eval(`${wrapper} > ul`, (el) =>
-      el.getAttribute('class')
-    );
-    expect(classNameAttribute).toContain('dummyClassname');
-  },
-};
-
-// Når List har en lang, så har elementet lang satt
-export const WithLang = Template.bind({});
-WithLang.storyName = 'With Lang (FA4)';
-WithLang.argTypes = {
-  ...WithLang.argTypes,
-  lang: { table: { disable: false } },
-};
-WithLang.args = {
-  ...defaultArgs,
   lang: 'nb',
+  'data-testid': '123ID',
 };
-WithLang.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const langAttribute = await page.$eval(`${wrapper} > ul`, (el) =>
-      el.getAttribute('lang')
-    );
-    expect(langAttribute).toBe('nb');
-  },
-};
-
-// Når List har dataTestid, så har elementet data-testid satt
-export const WithDataTestid = Template.bind({});
-WithDataTestid.storyName = 'With DataTestid (FA5)';
-WithDataTestid.argTypes = {
-  ...WithDataTestid.argTypes,
+WithAttributes.argTypes = {
+  id: { table: { disable: false } },
+  className: { table: { disable: false } },
+  lang: { table: { disable: false } },
   'data-testid': { table: { disable: false } },
 };
-WithDataTestid.args = {
-  ...defaultArgs,
-  'data-testid': 'ListID',
-};
-WithDataTestid.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const dataTestid = await page.$eval(`${wrapper} > ul`, (el) =>
-      el.getAttribute('data-testid')
-    );
-    expect(dataTestid).toBe('ListID');
-  },
+WithAttributes.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const list = canvas.getByRole('list');
+  await expect(list).toHaveAttribute('id', 'htmlid');
+  await expect(list).toHaveClass('dummyClassname');
+  await expect(list).toHaveAttribute('lang', 'nb');
+  await expect(list).toHaveAttribute('data-testid', '123ID');
 };
 
 // Når List instansieres, får den riktige default-verdier
 export const Defaults = Template.bind({});
-Defaults.storyName =
-  'Defaults Variant Bullet (A1 - 1 av 3, B1 - 1 av 2, B2 - 1 av 2)';
+Defaults.storyName = 'Defaults Variant Bullet (A1, B1, B2)';
+Defaults.args = {
+  ...defaultArgs,
+};
 Defaults.argTypes = {
-  ...Defaults.argTypes,
   children: {
     table: { disable: false },
     control: { type: null },
   },
 };
-Defaults.args = {
-  ...defaultArgs,
-};
-Defaults.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const listElement = await page.$(`${wrapper} > ul`);
-    expect(listElement).toBeTruthy();
-  },
+Defaults.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const list = canvas.getByRole('list');
+  await expect(list).toBeInTheDocument();
+  await expect(list.tagName).toBe('UL');
 };
 
 // Når List har en as, får elementet riktig tag og ser riktig ut
 export const VariantNumber = Template.bind({});
-VariantNumber.storyName = 'Variant Number(A1 - 2 av 3, B1 - 2 av 2)';
-VariantNumber.argTypes = {
-  ...VariantNumber.argTypes,
-  as: {
-    table: { disable: false },
-  },
-};
+VariantNumber.storyName = 'Variant Number(A1, B1)';
 VariantNumber.args = {
   ...defaultArgs,
   as: 'ol',
 };
-VariantNumber.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const listElement = await page.$(`${wrapper} > ol`);
-    expect(listElement).toBeTruthy();
+VariantNumber.argTypes = {
+  as: {
+    table: { disable: false },
   },
+};
+VariantNumber.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const list = canvas.getByRole('list');
+  await expect(list).toBeInTheDocument();
+  await expect(list.tagName).toBe('OL');
 };
 
 // Når ListItem har en veldig lang tekst, så skal teksten ha hengende innrykk og brekke over flere linjer
 export const WithLongTextAndBreaking = Template.bind({});
-WithLongTextAndBreaking.storyName = 'With Long Text And Breaking (A1 - 3 av 3)';
+WithLongTextAndBreaking.storyName = 'With Long Text And Breaking (A1)';
 WithLongTextAndBreaking.args = {
   ...defaultArgs,
   children: [
@@ -259,23 +157,15 @@ WithLongTextAndBreaking.args = {
   ],
 };
 WithLongTextAndBreaking.argTypes = {
-  ...WithLongTextAndBreaking.argTypes,
-  children: { table: { disable: false } },
-};
-WithLongTextAndBreaking.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
-};
-
-// Når List instansieres med markup, får markup riktig styling
-export const WithMarkup = Template.bind({});
-WithMarkup.storyName = 'With Markup (A2, B2 - 2 av 2)';
-WithMarkup.argTypes = {
-  ...WithMarkup.argTypes,
   children: {
     table: { disable: false },
     control: { type: null },
   },
 };
+
+// Når List instansieres med markup, får markup riktig styling
+export const WithMarkup = Template.bind({});
+WithMarkup.storyName = 'With Markup (A2, B2)';
 WithMarkup.args = {
   ...defaultArgs,
   children: [
@@ -298,8 +188,17 @@ WithMarkup.args = {
     </List.Element>,
   ],
 };
+WithMarkup.argTypes = {
+  children: {
+    table: { disable: false },
+    control: { type: null },
+  },
+};
 WithMarkup.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
+  imageSnapshot: {
+    hover: `${wrapper} > ul > li a`,
+    focus: `${wrapper} > ul > li a`,
+  },
 };
 
 const TemplateWithTwoParagraph: ComponentStory<typeof List> = (args) => (
@@ -315,23 +214,20 @@ const TemplateWithTwoParagraph: ComponentStory<typeof List> = (args) => (
     </Paragraph>
   </div>
 );
+
 // Når List har spacing, så får elementet en margin under listen
 export const WithSpacing = TemplateWithTwoParagraph.bind({});
 WithSpacing.storyName = 'With Spacing (A3)';
-WithSpacing.argTypes = {
-  ...WithSpacing.argTypes,
-  hasSpacing: { table: { disable: false } },
-};
 WithSpacing.args = {
   ...defaultArgs,
   hasSpacing: true,
 };
-WithSpacing.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
+WithSpacing.argTypes = {
+  hasSpacing: { table: { disable: false } },
 };
 
 // TODO Fjerne andre elementer når testprosjektet (FRONT-1008) er på plass
-const TemplateWithVariantAndAtLeast10ItemsAndOtherComponents: ComponentStory<
+const TemplateWithVariantsAndAtLeast10ItemsAndOtherComponents: ComponentStory<
   typeof List
 > = (args) => (
   <div data-test-block>
@@ -399,19 +295,10 @@ const TemplateWithVariantAndAtLeast10ItemsAndOtherComponents: ComponentStory<
 );
 
 // Når List har minst ti number items (fordi ønsker to siffer som listepunkt), så blir listeelementene plassert korrekt i forhold til inntrykk og teksten
-export const WithBothVariantSpacingAndAtLeast10NumberItems =
-  TemplateWithVariantAndAtLeast10ItemsAndOtherComponents.bind({});
-WithBothVariantSpacingAndAtLeast10NumberItems.storyName =
-  'With Both Variant Spacing And At Least 10 Number Items';
-WithBothVariantSpacingAndAtLeast10NumberItems.argTypes = {
-  ...WithBothVariantSpacingAndAtLeast10NumberItems.argTypes,
-  as: { table: { disable: false } },
-  hasSpacing: { table: { disable: false } },
-};
-WithBothVariantSpacingAndAtLeast10NumberItems.args = {
+export const WithBothVariantsAndAtLeast10NumberItems =
+  TemplateWithVariantsAndAtLeast10ItemsAndOtherComponents.bind({});
+WithBothVariantsAndAtLeast10NumberItems.storyName =
+  'With Both Variants And At Least 10 Number Items';
+WithBothVariantsAndAtLeast10NumberItems.args = {
   ...defaultArgs,
-  hasSpacing: false,
-};
-WithBothVariantSpacingAndAtLeast10NumberItems.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
 };

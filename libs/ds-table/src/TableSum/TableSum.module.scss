@@ -1,0 +1,9 @@
+.sum {
+  border-bottom: solid 2px var(--semantic-divider-100);
+  font-weight: var(--font-weight-bold);
+  text-align: right;
+
+  &_topSeparator {
+    border-top: solid 2px var(--semantic-divider-100);
+  }
+}

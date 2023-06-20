@@ -1,6 +1,7 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
 import { SpacingTokenExamplesGenerator } from './SpacingTokenExamplesGenerator';
 import { TokensList } from './TokensList';
+import { getVersion } from '../utils/version.utils';
 
 <Meta title="Designtokens/Spacing" />
 
@@ -10,16 +11,11 @@ import { TokensList } from './TokensList';
   <Story
     name="Spacing"
     parameters={{
-      controls: {
-        disabled: true,
-      },
-      actions: {
-        disabled: true,
-      },
       previewTabs: {
         canvas: { hidden: true },
       },
       viewMode: 'docs',
+      version: getVersion('ds-core-designtokens'),
     }}
   >
     <TokensList tokenType={'spacing'} />
