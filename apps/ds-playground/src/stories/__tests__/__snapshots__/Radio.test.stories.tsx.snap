@@ -23,6 +23,7 @@ exports[`Tester/RadioGroup/Radio Defaults play-test 1`] = `
     </div>
     <div id="radioErrorId-:r6:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -53,6 +54,7 @@ exports[`Tester/RadioGroup/Radio WithAriaDescribedby play-test 1`] = `
     </div>
     <div id="radioErrorId-:rl:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -85,6 +87,7 @@ exports[`Tester/RadioGroup/Radio WithAttributes play-test 1`] = `
     </div>
     <div id="radioErrorId-:r3:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -117,6 +120,7 @@ exports[`Tester/RadioGroup/Radio WithDescription play-test 1`] = `
     </div>
     <div id="radioErrorId-:r9:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -149,6 +153,7 @@ exports[`Tester/RadioGroup/Radio WithLongText smoke-test 1`] = `
     </div>
     <div id="radioErrorId-:rc:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -181,6 +186,7 @@ exports[`Tester/RadioGroup/Radio WithLongTextAndBreaking smoke-test 1`] = `
     </div>
     <div id="radioErrorId-:rf:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -210,6 +216,7 @@ exports[`Tester/RadioGroup/Radio WithRef play-test 1`] = `
     </div>
     <div id="radioErrorId-:r0:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -239,6 +246,7 @@ exports[`Tester/RadioGroup/Radio WithValue play-test 1`] = `
     </div>
     <div id="radioErrorId-:ri:"
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
