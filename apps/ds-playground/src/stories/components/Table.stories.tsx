@@ -1,13 +1,19 @@
 import { ReactNode, useState } from 'react';
 
-import { Button } from '@skatteetaten/ds-buttons';
+import { Button, InlineButton } from '@skatteetaten/ds-buttons';
 import { densityArr } from '@skatteetaten/ds-core-utils';
+import {
+  CopySVGpath,
+  DeleteSVGpath,
+  EditSVGpath,
+} from '@skatteetaten/ds-icons';
 import {
   Table,
   TableProps,
   getTableVariantDefault,
   SortState,
 } from '@skatteetaten/ds-table';
+import { Paragraph } from '@skatteetaten/ds-typography';
 import { Story, ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
@@ -67,6 +73,7 @@ export default {
   },
 } as ComponentMeta<typeof Table>;
 
+/* eslint-disable sonarjs/no-duplicate-string */
 const TemplateDefault: ComponentStory<typeof Table> = (args) => (
   <Table {...args} variant={args.variant}>
     <Table.Header>
@@ -544,3 +551,143 @@ TableExampleEditable.args = {
   ...baseArgs,
 };
 TableExampleEditable.parameters = tableDefaultParameters;
+
+const TemplateExampleEmtpyHeaders: ComponentStory<typeof Table> = (args) => {
+  const [sortState, setSortState] = useState<SortState>({
+    direction: 'none',
+  });
+
+  const data = [
+    {
+      deadline: '10.04.2023',
+      category: 'Kategori 1',
+      task: 'Mottatt tilbakemelding',
+      name: 'BARMEN OG BORGHEIM',
+      status: 'Tilgjengelig',
+      id: '9f78',
+    },
+    {
+      deadline: '12.04.2023',
+      category: 'Kategori 2',
+      task: 'Klage på vedtak',
+      name: 'LIMERICKS PARTNER ASA',
+      status: 'Ny',
+      id: '4b90',
+    },
+    {
+      deadline: '13.04.2023',
+      category: 'Kategori 3',
+      task: 'Mottatt tilbakemelding',
+      name: 'ENCKEL OG WIRCKE LØSNINGER',
+      status: 'Ny',
+      id: '8c6f',
+    },
+    {
+      deadline: '15.04.2023',
+      category: 'Kategori 1',
+      task: 'Klage på vedtak',
+      name: 'CORWOOD INDUSTRIES NORGE',
+      status: 'Tilgjengelig',
+      id: '8182',
+    },
+    {
+      deadline: '22.04.2023',
+      category: 'Kategori 3',
+      task: 'Medhold klage',
+      name: 'SLANTED N CHANTED',
+      status: 'Under arbeid',
+      id: '85cd',
+    },
+  ];
+
+  const sortedData = data.slice().sort((a, b) => {
+    const sortKey = sortState.sortKey as keyof typeof data[0];
+
+    if (!sortKey) {
+      return 0;
+    }
+    if (a[sortKey] === b[sortKey]) {
+      return 0;
+    }
+    if (sortState.direction === 'ascending') {
+      return a[sortKey] > b[sortKey] ? 1 : -1;
+    }
+    return a[sortKey] < b[sortKey] ? 1 : -1;
+  });
+
+  return (
+    <div>
+      <Paragraph>
+        {
+          'Hvis vi har en tabell med med minst 3 kolonner uten kolonnetitler så bør'
+        }
+        {'vi legge på sr-only tekster som th for at det skulle bli lettere for'}
+        {'skjermleserbrukere å forstå tabellen.'}
+      </Paragraph>
+      <Table {...args} sortState={sortState} setSortState={setSortState}>
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell scope={'col'} sortKey={'deadline'} isSortable>
+              {'Frist'}
+            </Table.HeaderCell>
+            <Table.HeaderCell scope={'col'} sortKey={'category'} isSortable>
+              {'Kategori'}
+            </Table.HeaderCell>
+            <Table.HeaderCell scope={'col'}>
+              {'Arbeidsoppgave'}
+            </Table.HeaderCell>
+            <Table.HeaderCell
+              alignment={'right'}
+              scope={'col'}
+              sortKey={'name'}
+              isSortable
+            >
+              {'navn'}
+            </Table.HeaderCell>
+            <Table.HeaderCell scope={'col'}>{'status'}</Table.HeaderCell>
+            <Table.HeaderCell>
+              <span className={'srOnly'}>{'Rediger-funksjon'}</span>
+            </Table.HeaderCell>
+            <Table.HeaderCell>
+              <span className={'srOnly'}>{'Kopier-funksjon'}</span>
+            </Table.HeaderCell>
+            <Table.HeaderCell>
+              <span className={'srOnly'}>{'Slett-funksjon'}</span>
+            </Table.HeaderCell>
+          </Table.Row>
+        </Table.Header>
+        <Table.Body>
+          {sortedData.map((row, index) => {
+            return (
+              <Table.Row key={`${row.id}-${index}`}>
+                <Table.DataCell id={row.id}>{row.deadline}</Table.DataCell>
+                <Table.DataCell>{row.category}</Table.DataCell>
+                <Table.DataCell>{row.task}</Table.DataCell>
+                <Table.DataCell>{row.name}</Table.DataCell>
+                <Table.DataCell>{row.status}</Table.DataCell>
+                <Table.DataCell>
+                  <InlineButton svgPath={EditSVGpath}>{'Rediger'}</InlineButton>
+                </Table.DataCell>
+                <Table.DataCell>
+                  <InlineButton svgPath={CopySVGpath}>{'Kopier'}</InlineButton>
+                </Table.DataCell>
+                <Table.DataCell>
+                  <InlineButton svgPath={DeleteSVGpath}>{'Slett'}</InlineButton>
+                </Table.DataCell>
+              </Table.Row>
+            );
+          })}
+        </Table.Body>
+      </Table>
+    </div>
+  );
+};
+
+export const TableExampleEmtpyHeaders = TemplateExampleEmtpyHeaders.bind({});
+TableExampleEmtpyHeaders.storyName = 'Example with empty headers';
+
+TableExampleEmtpyHeaders.args = {
+  ...baseArgs,
+  caption: 'Arbeidsoppgaver',
+};
+TableExampleEmtpyHeaders.parameters = tableDefaultParameters;
