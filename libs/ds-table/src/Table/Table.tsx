@@ -22,11 +22,6 @@ import { TableSum } from '../TableSum/TableSum';
 import { getScreenReaderSortDirectionText } from '../utils';
 
 import styles from './Table.module.scss';
-// TODO sort bedre typing?
-
-// TODO bedre eksempler i storybook
-
-// TODO tester
 
 export const Table = forwardRef<HTMLTableElement, TableProps>(
   (
