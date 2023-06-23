@@ -249,19 +249,6 @@ WithLongText.argTypes = {
   children: { table: { disable: false } },
 };
 
-// Når Button har en veldig lang tekst uten breaking space så skal det brekke over flere linjer
-export const WithLongTextAndBreaking = Template.bind({});
-WithLongTextAndBreaking.storyName = 'With Long Text And Breaking (A1 delvis)';
-WithLongTextAndBreaking.args = {
-  ...defaultArgs,
-  children:
-    'Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles.' +
-    'Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles',
-};
-WithLongTextAndBreaking.argTypes = {
-  children: { table: { disable: false } },
-};
-
 // Når Button har en veldig lang tekst og det er et ikon så skal tekst venstrejusteres
 export const WithLongTextAndIcon = Template.bind({});
 WithLongTextAndIcon.storyName = 'With Long Text And Icon (A1 delvis)';

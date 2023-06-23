@@ -7,10 +7,8 @@
   padding: var(--spacing-s) 0;
   color: var(--semantic-interactive-main);
   font-weight: var(--font-weight-medium);
-  overflow-wrap: anywhere;
   text-decoration-color: var(--semantic-interactive-main);
   text-decoration-line: underline;
-  word-break: normal;
 
   &:hover {
     background-color: var(--semantic-interactive-background);
