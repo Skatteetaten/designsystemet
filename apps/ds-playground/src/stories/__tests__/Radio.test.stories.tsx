@@ -120,12 +120,9 @@ Defaults.parameters = {
 };
 Defaults.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
-  const input = canvas.getByRole('radio');
-  const label = canvas.getByText(defaultLabelText);
+  const input = canvas.getByRole('radio', { name: defaultLabelText });
   await expect(input).toBeInTheDocument();
   await expect(input).toHaveAttribute('id');
-  await expect(label).toBeInTheDocument();
-  await expect(label).toHaveAttribute('for', input.id);
 };
 
 // Når Radio har en beskrivelse, så blir den vist sammen med label/ledeteksten
