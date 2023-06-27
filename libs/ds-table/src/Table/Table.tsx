@@ -22,13 +22,6 @@ import { TableSum } from '../TableSum/TableSum';
 import { getScreenReaderSortDirectionText } from '../utils';
 
 import styles from './Table.module.scss';
-// TODO sort bedre typing?
-
-// TODO ytelse må testes
-
-// TODO bedre eksempler i storybook
-
-// TODO tester
 
 export const Table = forwardRef<HTMLTableElement, TableProps>(
   (
@@ -46,6 +39,7 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
       children,
     },
     ref
+    // eslint-disable-next-line sonarjs/cognitive-complexity
   ): JSX.Element => {
     const wrapperRef = useRef<HTMLDivElement>(null);
 
@@ -99,17 +93,24 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
 
     /** Holder styr på om tabellen trenger en horisontal scrollbar. */
     useEffect(() => {
-      const updateDimensions = (): void => {
+      const updateDimensions = (entry: ResizeObserverEntry): void => {
         const wrapperScrollWidth = wrapperRef?.current?.scrollWidth ?? 0;
-        const wrapperClientWidth = wrapperRef?.current?.clientWidth ?? 0;
+        const wrapperClientWidth = Math.round(
+          entry.contentBoxSize[0].inlineSize ?? 0
+        );
+
         setIsTableScrollable(wrapperScrollWidth > wrapperClientWidth + 1);
         // +1 fordi Safari regner/avrunder forskjellig fra andre nettlesere
       };
-      updateDimensions();
 
-      window.addEventListener('resize', updateDimensions);
-      return () => {
-        window.removeEventListener('resize', updateDimensions);
+      const observer = new ResizeObserver((entries) => {
+        for (const entry of entries) {
+          updateDimensions(entry);
+        }
+      });
+      wrapperRef.current && observer.observe(wrapperRef.current);
+      return (): void => {
+        observer.disconnect();
       };
     }, []);
 
