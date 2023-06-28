@@ -32,11 +32,6 @@ export default {
       },
     },
     legend: { table: { disable: true } },
-    required: {
-      table: {
-        disable: true,
-      },
-    },
     showRequiredMark: {
       table: {
         disable: true,
@@ -199,12 +194,10 @@ LegendWithMarkupAndRequiredMark.args = {
       </Paragraph>
     </>
   ),
-  required: true,
   showRequiredMark: true,
 };
 LegendWithMarkupAndRequiredMark.argTypes = {
   legend: { table: { disable: false }, control: { type: null } },
-  required: { table: { disable: false } },
   showRequiredMark: { table: { disable: false } },
 };
 
@@ -252,84 +245,15 @@ WithDisabledAndChecked.argTypes = {
   disabled: { table: { disable: false } },
 };
 
-// Når CheckboxGroup er required, så er required satt på input-elementene og vises stjerne bak legend
-export const WithRequired = Template.bind({});
-WithRequired.storyName = 'With Required (B3)';
-WithRequired.args = {
+// Når CheckboxGroup har showRequiredMark er satt, så vises stjerne bak legend
+export const WithRequiredMark = Template.bind({});
+WithRequiredMark.storyName = 'With Required Mark (A1, B3)';
+WithRequiredMark.args = {
   ...defaultArgs,
-  required: true,
-};
-WithRequired.argTypes = {
-  required: { table: { disable: false } },
-};
-WithRequired.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const inputNodes = canvas.getAllByRole('checkbox');
-  for (const input of inputNodes) {
-    // await expect(input).toBeRequired();
-    await expect(input).not.toHaveAttribute('aria-invalid');
-  }
-};
-
-// Når CheckboxGroup er required og showRequiredMark er satt, så vises stjerne bak legend
-export const WithRequiredAndMark = Template.bind({});
-WithRequiredAndMark.storyName = 'With Required And Mark (A1, B3)';
-WithRequiredAndMark.args = {
-  ...defaultArgs,
-  required: true,
   showRequiredMark: true,
 };
-WithRequiredAndMark.argTypes = {
-  required: { table: { disable: false } },
+WithRequiredMark.argTypes = {
   showRequiredMark: { table: { disable: false } },
-};
-
-// Når CheckboxGroup er required og et alternativ er valgt, så har ingen input-elementer required satt
-export const WithRequiredAndNoError = Template.bind({});
-WithRequiredAndNoError.storyName = 'With Required And No Error (B4)';
-WithRequiredAndNoError.args = {
-  ...defaultArgs,
-  children: childrenWithOneChecked,
-  required: true,
-};
-WithRequiredAndNoError.argTypes = {
-  required: { table: { disable: false } },
-};
-WithRequiredAndNoError.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithRequiredAndNoError.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const inputNodes = canvas.getAllByRole('checkbox');
-  for (const input of inputNodes) {
-    await expect(input).not.toBeRequired();
-  }
-};
-
-// Når CheckboxGroup er required og et alternativ er valgt, men minst to alternativer trenger å være valgt,
-// så har det valgte alternativet ingen aria-invalid eller required og er blå, mens de andre checkboksene har required og aria-invalid satt og har rød ramme
-export const WithRequiredAndError = Template.bind({});
-WithRequiredAndError.storyName = 'With Required And Error (B4, B5)';
-WithRequiredAndError.args = {
-  ...defaultArgs,
-  children: childrenWithOneChecked,
-  errorMessage: 'Velg minst to alternativer',
-  hasError: true,
-  required: true,
-};
-WithRequiredAndError.argTypes = {
-  hasError: { table: { disable: false } },
-  required: { table: { disable: false } },
-};
-WithRequiredAndError.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const inputNodes = canvas.getAllByRole('checkbox');
-  await expect(inputNodes[0]).not.toHaveAttribute('aria-invalid');
-  await expect(inputNodes[0]).not.toBeRequired();
-  for (const input of inputNodes.slice(1)) {
-    await expect(input).toHaveAttribute('aria-invalid', 'true');
-    // await expect(input).toBeRequired();
-  }
 };
 
 // Når CheckboxGroup har error, så får input-elementene aria-invalid og aria-describedby satt, vises checkboksene i korrekt stil og feilmeldingen vises

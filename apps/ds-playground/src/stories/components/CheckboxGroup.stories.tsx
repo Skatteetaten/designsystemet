@@ -40,12 +40,6 @@ export default {
         category: category.htmlAttribute,
       },
     },
-    required: {
-      control: 'boolean',
-      table: {
-        category: category.htmlAttribute,
-      },
-    },
   },
   parameters: {
     version: getVersion('ds-forms'),
