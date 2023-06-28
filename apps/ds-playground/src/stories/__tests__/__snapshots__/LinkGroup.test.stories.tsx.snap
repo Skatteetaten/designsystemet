@@ -1,0 +1,445 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/LinkGroup Defaults smoke-test 1`] = `
+<div data-test-block="true">
+  <ul class="LinkGroup_linkGroup__ZiEgs   ">
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+      <a class="Link_link__jeUpY  "
+         href="#root"
+      >
+        Er du pendler?
+      </a>
+    </li>
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+      <a class="Link_link__jeUpY  "
+         href="#root"
+      >
+        Pendler du mye?
+      </a>
+    </li>
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+      <a class="Link_link__jeUpY  "
+         href="#root"
+      >
+        Pendler du dagen lang?
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Tester/LinkGroup VariantAnchors smoke-test 1`] = `
+<div data-test-block="true">
+  <ul class="LinkGroup_linkGroup__ZiEgs   ">
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_down__oXF-n "
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M11.1 1.5h1.8v16.8l5.1-5.2 1.3 1.4L12 22l-7.3-7.6L6 13l5.1 5.2V1.5Z">
+        </path>
+      </svg>
+      <a class="Link_link__jeUpY  "
+         href="#root"
+      >
+        Er du pendler?
+      </a>
+    </li>
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_down__oXF-n "
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M11.1 1.5h1.8v16.8l5.1-5.2 1.3 1.4L12 22l-7.3-7.6L6 13l5.1 5.2V1.5Z">
+        </path>
+      </svg>
+      <a class="Link_link__jeUpY  "
+         href="#root"
+      >
+        Pendler du mye?
+      </a>
+    </li>
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_down__oXF-n "
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M11.1 1.5h1.8v16.8l5.1-5.2 1.3 1.4L12 22l-7.3-7.6L6 13l5.1 5.2V1.5Z">
+        </path>
+      </svg>
+      <a class="Link_link__jeUpY  "
+         href="#root"
+      >
+        Pendler du dagen lang?
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Tester/LinkGroup WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <ul id="htmlId"
+      class="LinkGroup_linkGroup__ZiEgs  dummyClassname "
+      lang="nb"
+      data-testid="123ID"
+  >
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+      <a class="Link_link__jeUpY  "
+         href="#root"
+      >
+        Er du pendler?
+      </a>
+    </li>
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+      <a class="Link_link__jeUpY  "
+         href="#root"
+      >
+        Pendler du mye?
+      </a>
+    </li>
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+      <a class="Link_link__jeUpY  "
+         href="#root"
+      >
+        Pendler du dagen lang?
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Tester/LinkGroup WithColor smoke-test 1`] = `
+<div data-test-block="true">
+  <ul class="LinkGroup_linkGroup__ZiEgs   ">
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi LinkGroup_icon_white__5ZXue"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+      <a class="Link_link__jeUpY Link_link_white__bmeQu "
+         href="#root"
+      >
+        Er du pendler?
+      </a>
+    </li>
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi LinkGroup_icon_white__5ZXue"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+      <a class="Link_link__jeUpY Link_link_white__bmeQu "
+         href="#root"
+      >
+        Pendler du mye?
+      </a>
+    </li>
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi LinkGroup_icon_white__5ZXue"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+      <a class="Link_link__jeUpY Link_link_white__bmeQu "
+         href="#root"
+      >
+        Pendler du dagen lang?
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Tester/LinkGroup WithLongTextAndIcons smoke-test 1`] = `
+<div data-test-block="true">
+  <ul class="LinkGroup_linkGroup__ZiEgs   ">
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+      <a class="Link_link__jeUpY  "
+         href="#root"
+      >
+        Denne lenken har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert uansett om ikon eller ikke og får et hengende innrykk.
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isExternal__O+HIA"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-label="Til et annet nettsted"
+             aria-hidden="false"
+             role="img"
+        >
+          <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7Zm5 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z">
+          </path>
+        </svg>
+      </a>
+    </li>
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+      <a class="Link_link__jeUpY  "
+         href="#root"
+      >
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isCustom__nsOot"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M19 19H5V8h14v11ZM16 1v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2Zm1 11h-5v5h5v-5Z">
+          </path>
+        </svg>
+        Denne lenken har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert uansett om ikon eller ikke og får et hengende innrykk.
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Tester/LinkGroup WithRef play-test 1`] = `
+<div data-test-block="true">
+  <ul class="LinkGroup_linkGroup__ZiEgs   "
+      id="dummyIdForwardedFromRef"
+  >
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+      <a class="Link_link__jeUpY  "
+         href="#root"
+      >
+        Er du pendler?
+      </a>
+    </li>
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+      <a class="Link_link__jeUpY  "
+         href="#root"
+      >
+        Pendler du mye?
+      </a>
+    </li>
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+      <a class="Link_link__jeUpY  "
+         href="#root"
+      >
+        Pendler du dagen lang?
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
+<div data-test-block="true">
+  <ul class="LinkGroup_linkGroup__ZiEgs LinkGroup_linkGroup_hasSpacing__AhexL  ">
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+      <a class="Link_link__jeUpY  "
+         href="#root"
+      >
+        Er du pendler?
+      </a>
+    </li>
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+      <a class="Link_link__jeUpY  "
+         href="#root"
+      >
+        Pendler du mye?
+      </a>
+    </li>
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+      <a class="Link_link__jeUpY  "
+         href="#root"
+      >
+        Pendler du dagen lang?
+      </a>
+    </li>
+  </ul>
+  <ul class="LinkGroup_linkGroup__ZiEgs LinkGroup_linkGroup_hasSpacing__AhexL  ">
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+      <a class="Link_link__jeUpY  "
+         href="#root"
+      >
+        Er du pendler?
+      </a>
+    </li>
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+      <a class="Link_link__jeUpY  "
+         href="#root"
+      >
+        Pendler du mye?
+      </a>
+    </li>
+    <li class="LinkGroup_linkGroupItem__Y7SjF">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+      <a class="Link_link__jeUpY  "
+         href="#root"
+      >
+        Pendler du dagen lang?
+      </a>
+    </li>
+  </ul>
+</div>
+`;

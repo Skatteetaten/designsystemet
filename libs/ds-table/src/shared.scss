@@ -1,0 +1,9 @@
+@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
+%cell-padding {
+  padding: var(--spacing-s);
+
+  @media (min-width: $breakpoint-m) {
+    padding: var(--spacing-m);
+  }
+}

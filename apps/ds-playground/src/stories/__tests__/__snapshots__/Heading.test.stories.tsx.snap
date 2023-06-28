@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Heading Defaults play-test 1`] = `
+<div data-test-block="true">
+  <h2 class="Heading_heading__7K0um Heading_heading_level1__j6PDU  ">
+    Heading level 1
+  </h2>
+  <h2 class="Heading_heading__7K0um Heading_heading_level2__2SV45  ">
+    Heading level 2
+  </h2>
+  <h2 class="Heading_heading__7K0um Heading_heading_level3__T5BVI  ">
+    Heading level 3
+  </h2>
+  <h2 class="Heading_heading__7K0um Heading_heading_level4__KEMPA  ">
+    Heading level 4
+  </h2>
+  <h2 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  ">
+    Heading level 5
+  </h2>
+</div>
+`;
+
+exports[`Tester/Heading DefaultsMobile smoke-test 1`] = `
+<div data-test-block="true">
+  <h2 class="Heading_heading__7K0um Heading_heading_level1__j6PDU  ">
+    Heading level 1
+  </h2>
+  <h2 class="Heading_heading__7K0um Heading_heading_level2__2SV45  ">
+    Heading level 2
+  </h2>
+  <h2 class="Heading_heading__7K0um Heading_heading_level3__T5BVI  ">
+    Heading level 3
+  </h2>
+  <h2 class="Heading_heading__7K0um Heading_heading_level4__KEMPA  ">
+    Heading level 4
+  </h2>
+  <h2 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  ">
+    Heading level 5
+  </h2>
+</div>
+`;
+
+exports[`Tester/Heading LevelsWithSpacing smoke-test 1`] = `
+<div data-test-block="true">
+  <h2 class="Heading_heading__7K0um Heading_heading_level1__j6PDU Heading_heading_hasSpacingMedium__xbJD5 ">
+    Heading level 1
+  </h2>
+  <h2 class="Heading_heading__7K0um Heading_heading_level2__2SV45 Heading_heading_hasSpacingSmallMobileMediumOtherwise__FQy+I ">
+    Heading level 2
+  </h2>
+  <h2 class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ ">
+    Heading level 3
+  </h2>
+  <h2 class="Heading_heading__7K0um Heading_heading_level4__KEMPA Heading_heading_hasSpacingSmall__ofrX+ ">
+    Heading level 4
+  </h2>
+  <h2 class="Heading_heading__7K0um Heading_heading_level5__CrIzo Heading_heading_hasSpacingExtraSmall__h-y9X ">
+    Heading level 5
+  </h2>
+</div>
+`;
+
+exports[`Tester/Heading LevelsWithSpacingMobile smoke-test 1`] = `
+<div data-test-block="true">
+  <h2 class="Heading_heading__7K0um Heading_heading_level1__j6PDU Heading_heading_hasSpacingMedium__xbJD5 ">
+    Heading level 1
+  </h2>
+  <h2 class="Heading_heading__7K0um Heading_heading_level2__2SV45 Heading_heading_hasSpacingSmallMobileMediumOtherwise__FQy+I ">
+    Heading level 2
+  </h2>
+  <h2 class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ ">
+    Heading level 3
+  </h2>
+  <h2 class="Heading_heading__7K0um Heading_heading_level4__KEMPA Heading_heading_hasSpacingSmall__ofrX+ ">
+    Heading level 4
+  </h2>
+  <h2 class="Heading_heading__7K0um Heading_heading_level5__CrIzo Heading_heading_hasSpacingExtraSmall__h-y9X ">
+    Heading level 5
+  </h2>
+</div>
+`;
+
+exports[`Tester/Heading WithAs play-test 1`] = `
+<div data-test-block="true">
+  <h1 class="Heading_heading__7K0um Heading_heading_level2__2SV45  ">
+    Heading h1
+  </h1>
+  <h2 class="Heading_heading__7K0um Heading_heading_level2__2SV45  ">
+    Heading h2
+  </h2>
+  <h3 class="Heading_heading__7K0um Heading_heading_level2__2SV45  ">
+    Heading h3
+  </h3>
+  <h4 class="Heading_heading__7K0um Heading_heading_level2__2SV45  ">
+    Heading h4
+  </h4>
+  <h5 class="Heading_heading__7K0um Heading_heading_level2__2SV45  ">
+    Heading h5
+  </h5>
+  <h6 class="Heading_heading__7K0um Heading_heading_level2__2SV45  ">
+    Heading h6
+  </h6>
+</div>
+`;
+
+exports[`Tester/Heading WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <h2 id="htmlId"
+      class="Heading_heading__7K0um Heading_heading_level2__2SV45  dummyClassname"
+      lang="nb"
+      data-testid="123ID"
+  >
+    Dette er en heading
+  </h2>
+</div>
+`;
+
+exports[`Tester/Heading WithMarkup smoke-test 1`] = `
+<div data-test-block="true">
+  <h2 class="Heading_heading__7K0um Heading_heading_level2__2SV45 Heading_heading_hasSpacingSmallMobileMediumOtherwise__FQy+I ">
+    Dette er den
+    <a href="https://skatteetaten.no">
+      fyneste markup headingen
+    </a>
+    <em>
+      som finnes i italic
+    </em>
+    <strong>
+      og strong
+    </strong>
+    <mark>
+      mark
+    </mark>
+    <code>
+      code
+    </code>
+    med spacing under og en skrivefeil
+  </h2>
+  <h2 class="Heading_heading__7K0um Heading_heading_level2__2SV45  ">
+    Dette er den fineste string headingen uten markup
+  </h2>
+</div>
+`;
+
+exports[`Tester/Heading WithRef play-test 1`] = `
+<div data-test-block="true">
+  <h2 class="Heading_heading__7K0um Heading_heading_level2__2SV45  "
+      id="dummyIdForwardedFromRef"
+  >
+    Dette er en heading
+  </h2>
+</div>
+`;

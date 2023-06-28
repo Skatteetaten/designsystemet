@@ -18,7 +18,6 @@
   line-height: var(--semantic-line-height-buttons);
   text-align: left;
   text-decoration-line: underline;
-  word-break: break-word;
 
   &_withIconLeft {
     @extend %with-icon;

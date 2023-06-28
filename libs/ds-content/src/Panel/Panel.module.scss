@@ -1,0 +1,174 @@
+@import 'libs/ds-core-utils/src/styles.scss';
+@import '~@skatteetaten/ds-core-designtokens/designtokens/breakpoints.scss';
+
+$border-outline: 6px;
+
+// TODO FRONT-1006 layout - implementer layout-oppskrift på å få innhold i panel til å være alinget i forhold til hverandre
+
+.panel {
+  --variant-outline-color: var(--palette-ochre-50);
+  --variant-filled-color: var(--palette-ochre-10);
+  --panel-padding: var(--spacing-xl);
+
+  display: flex;
+  max-width: var(--container-m);
+  box-sizing: border-box;
+  flex-direction: column;
+  overflow-wrap: anywhere;
+  word-break: normal;
+
+  @media (min-width: $breakpoint-s) {
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--spacing-m);
+  }
+
+  &_outline {
+    padding: calc(var(--panel-padding) - $border-outline);
+    border: $border-outline solid var(--variant-outline-color);
+    background-color: var(--palette-graphite-0);
+  }
+
+  &_filled {
+    padding: var(--panel-padding);
+    border: none;
+    background-color: var(--variant-filled-color);
+  }
+
+  &_graphic {
+    @media (min-width: $breakpoint-s) {
+      &Image {
+        gap: var(--spacing-xxl);
+      }
+
+      &Icon {
+        gap: var(--spacing-m);
+      }
+    }
+  }
+
+  &Space {
+    flex: 0 2 auto;
+
+    @media (min-width: $breakpoint-s) {
+      flex-basis: 150px;
+    }
+
+    &_hide {
+      display: none;
+    }
+  }
+
+  &Article {
+    max-width: var(--semantic-responsive-article);
+    flex: 0 1 var(--semantic-responsive-article);
+  }
+
+  &Graphic {
+    padding-bottom: var(--spacing-s);
+
+    &_hide {
+      display: none;
+    }
+
+    @media (min-width: $breakpoint-s) {
+      display: block;
+      padding-bottom: 0;
+      text-align: right;
+    }
+  }
+
+  &ImageContainer {
+    flex: 0 2 40%;
+
+    &Image {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &_ochre {
+    --variant-outline-color: var(--palette-ochre-50);
+    --variant-filled-color: var(--palette-ochre-10);
+  }
+
+  &_forest {
+    --variant-outline-color: var(--palette-forest-50);
+    --variant-filled-color: var(--palette-forest-10);
+  }
+
+  &_burgundy {
+    --variant-outline-color: var(--palette-burgundy-50);
+    --variant-filled-color: var(--palette-burgundy-10);
+  }
+
+  &_denim {
+    --variant-outline-color: var(--palette-denim-50);
+    --variant-filled-color: var(--palette-denim-10);
+  }
+
+  &_graphite {
+    --variant-outline-color: var(--palette-graphite-30);
+    --variant-filled-color: var(--palette-graphite-5);
+  }
+
+  &_paddingS {
+    --panel-padding: var(--spacing-s);
+  }
+
+  &_paddingM {
+    --panel-padding: var(--spacing-m);
+  }
+
+  &_paddingL {
+    --panel-padding: var(--spacing-l);
+  }
+
+  &_paddingXL {
+    --panel-padding: var(--spacing-xl);
+  }
+
+  &_paddingXXL {
+    --panel-padding: var(--spacing-xxl);
+  }
+
+  &_paddingMEGA {
+    --panel-padding: var(--spacing-mega);
+  }
+
+  &_spacingXXS {
+    margin-bottom: var(--spacing-xxs);
+  }
+
+  &_spacingXS {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  &_spacingS {
+    margin-bottom: var(--spacing-s);
+  }
+
+  &_spacingM {
+    margin-bottom: var(--spacing-m);
+  }
+
+  &_spacingL {
+    margin-bottom: var(--spacing-l);
+  }
+
+  &_spacingXL {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  &_spacingXXL {
+    margin-bottom: var(--spacing-xxl);
+  }
+
+  &_spacingMEGA {
+    margin-bottom: var(--spacing-mega);
+  }
+}
+
+.srOnly {
+  @include sr-only;
+}

@@ -1,0 +1,11 @@
+{
+  "name": "@skatteetaten/ds-collections",
+  "groupId": "no.skatteetaten.aurora",
+  "version": "0.3.0",
+  "publishConfig": {
+    "registry": "https://nexus.sits.no/repository/npm-internal/"
+  },
+  "peerDependencies": {
+    "react": "^18"
+  }
+}

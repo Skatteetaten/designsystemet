@@ -1,13 +1,15 @@
 #!/usr/bin/env node
-/* eslint-disable @typescript-eslint/no-var-requires */
-const axios = require('axios');
-const filterFiles = require('filter-files');
-const fse = require('fs-extra');
-const jsonConcat = require('json-concat');
-const unzipper = require('unzipper');
+import axios from 'axios';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import filterFiles from 'filter-files';
+import * as fse from 'fs-extra';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import jsonConcat from 'json-concat';
+import * as unzipper from 'unzipper';
 
-const path = require('path');
-/* eslint-enable @typescript-eslint/no-var-requires */
+import path from 'path';
 
 interface Tekstliste {
   language: string;

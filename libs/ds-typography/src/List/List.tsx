@@ -4,11 +4,11 @@ import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { getListAsDefault } from './defaults';
 import { ListProps, ListComponent, AnyHTMLListElement } from './List.types';
-import { ListElement } from './ListElement';
+import { ListElement } from '../ListElement/ListElement';
 
 import styles from './List.module.scss';
 
-const List = forwardRef<AnyHTMLListElement, ListProps>(
+export const List = forwardRef<AnyHTMLListElement, ListProps>(
   (
     {
       id,
@@ -21,8 +21,8 @@ const List = forwardRef<AnyHTMLListElement, ListProps>(
     },
     ref
   ): JSX.Element => {
-    const bulletClassName = Tag === 'ul' ? styles['list_withBullet'] : '';
-    const spacingClassName = hasSpacing ? styles['list_hasSpacing'] : '';
+    const bulletClassName = Tag === 'ul' ? styles.list_withBullet : '';
+    const spacingClassName = hasSpacing ? styles.list_hasSpacing : '';
     return (
       <Tag
         ref={ref as (instance: AnyHTMLListElement | null) => void}
@@ -40,4 +40,4 @@ const List = forwardRef<AnyHTMLListElement, ListProps>(
 List.displayName = 'List';
 List.Element = ListElement;
 
-export { List, getListAsDefault };
+export { getListAsDefault };

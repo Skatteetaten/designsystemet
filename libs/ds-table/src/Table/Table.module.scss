@@ -1,0 +1,71 @@
+@import 'libs/ds-core-utils/src/styles.scss';
+
+.wrapper {
+  // stylelint-disable-next-line property-no-vendor-prefix
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 100%) 80%,
+    rgba(0, 0, 0, 0%)
+  );
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 100%) 80%,
+    rgba(0, 0, 0, 20%)
+  );
+  overflow-x: auto;
+
+  &_fadeLeft {
+    // stylelint-disable-next-line property-no-vendor-prefix
+    -webkit-mask-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 100%) 80%,
+      rgba(0, 0, 0, 0%)
+    );
+    mask-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 100%) 80%,
+      rgba(0, 0, 0, 20%)
+    );
+  }
+}
+
+.table {
+  --table-cell-background: transparent;
+  --table-cell-border-bottom: solid 1px var(--semantic-divider-30);
+
+  border-collapse: collapse;
+  line-height: var(--semantic-line-height-table);
+  text-align: left;
+
+  &Caption {
+    caption-side: bottom;
+    color: var(--palette-graphite-70);
+    font-style: italic;
+    text-align: left;
+
+    &_standard {
+      padding: var(--spacing-s) var(--spacing-m);
+    }
+
+    &_compact {
+      padding: 0 var(--spacing-s);
+      font-size: var(--font-size-s);
+    }
+  }
+
+  &_fullWidth {
+    width: 100%;
+  }
+
+  &_standard {
+    margin-bottom: var(--spacing-l);
+  }
+
+  &_compact {
+    margin-bottom: var(--spacing-m);
+  }
+}
+
+.hidden {
+  @include sr-only;
+}

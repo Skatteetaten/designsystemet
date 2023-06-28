@@ -1,0 +1,35 @@
+@import '../shared';
+
+.dataCell {
+  border-bottom: var(--table-cell-border-bottom);
+  background: var(--table-cell-background);
+  font-weight: var(--semantic-font-weight-default);
+  vertical-align: top;
+
+  &_rowspan {
+    padding-right: var(--spacing-l);
+    padding-left: var(--spacing-l);
+  }
+
+  &_standard {
+    @extend %cell-padding;
+  }
+
+  &_left {
+    text-align: left;
+  }
+
+  &_right {
+    text-align: right;
+  }
+
+  &_center {
+    text-align: center;
+  }
+
+  &_compact {
+    padding: var(--spacing-xs) var(--spacing-m) var(--spacing-xs)
+      var(--spacing-s);
+    font-size: var(--font-size-s);
+  }
+}

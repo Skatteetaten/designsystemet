@@ -29,6 +29,7 @@ node_modules
 .nyc_output
 /connect.lock
 /coverage
+apps/ds-playground/coverage/
 /libpeerconnection.log
 npm-debug.log
 yarn-error.log

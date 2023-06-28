@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Table/Sum WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <tfoot id="htmlId"
+         class="dummyClassname"
+         lang="nb"
+         data-testid="123ID"
+  >
+    <tr class>
+      <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableSum_sum__JNHMR "
+          scope="row"
+      >
+        Sum
+      </th>
+      <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableSum_sum__JNHMR ">
+        9 000 kr
+      </td>
+    </tr>
+  </tfoot>
+</div>
+`;
+
+exports[`Tester/Table/Sum WithRef play-test 1`] = `
+<div data-test-block="true">
+  <tfoot>
+    <tr class
+        id="dummyIdForwardedFromRef"
+    >
+      <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableSum_sum__JNHMR "
+          scope="row"
+      >
+        Sum
+      </th>
+      <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableSum_sum__JNHMR ">
+        9 000 kr
+      </td>
+    </tr>
+  </tfoot>
+</div>
+`;

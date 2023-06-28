@@ -1,0 +1,149 @@
+$radio-transform-x: 2px;
+
+.radio {
+  display: flex;
+  width: fit-content;
+
+  &Input {
+    --radio-box-shadow-color: var(--semantic-page-foreground);
+    --radio-border-color: var(--semantic-page-background);
+    --radio-background-color: var(--semantic-page-background);
+
+    position: relative;
+    width: var(--size-small);
+    height: var(--size-small);
+    flex-shrink: 0;
+    border: 2px solid var(--radio-border-color);
+    border-radius: 50%;
+    appearance: none;
+    background-color: var(--radio-background-color);
+    box-shadow: 0 0 0 2px var(--radio-box-shadow-color);
+    cursor: pointer;
+    transform: translate($radio-transform-x, 8px);
+
+    &:hover {
+      --radio-box-shadow-color: var(--semantic-interactive-main);
+      --radio-background-color: var(--semantic-interactive-main);
+    }
+
+    &:focus {
+      outline: none;
+
+      &::before {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        bottom: -8px;
+        left: -8px;
+        border: 2px solid var(--semantic-interactive-main);
+        border-radius: 50%;
+        content: '';
+      }
+    }
+
+    &:active {
+      --radio-box-shadow-color: var(--semantic-interactive-foreground);
+      --radio-background-color: var(--semantic-interactive-foreground);
+
+      &::before {
+        border: none;
+      }
+    }
+
+    &:disabled {
+      --radio-box-shadow-color: var(--semantic-disabled-foreground);
+      --radio-background-color: var(--semantic-disabled-background);
+      --radio-border-color: var(--semantic-disabled-background);
+
+      cursor: not-allowed;
+
+      &::before {
+        border: none;
+      }
+    }
+
+    &:checked {
+      --radio-background-color: var(--semantic-page-foreground);
+
+      &:hover {
+        --radio-box-shadow-color: var(--semantic-interactive-main);
+        --radio-background-color: var(--semantic-interactive-main);
+      }
+
+      &:active {
+        --radio-box-shadow-color: var(--semantic-interactive-foreground);
+        --radio-background-color: var(--semantic-interactive-foreground);
+      }
+
+      &:disabled {
+        --radio-box-shadow-color: var(--semantic-disabled-foreground);
+        --radio-background-color: var(--semantic-disabled-foreground);
+      }
+    }
+
+    &[aria-invalid='true'] {
+      --radio-box-shadow-color: var(--semantic-danger-foreground);
+
+      &:checked {
+        --radio-background-color: var(--semantic-danger-foreground);
+      }
+
+      &:hover {
+        --radio-box-shadow-color: var(--semantic-interactive-main);
+        --radio-background-color: var(--semantic-interactive-main);
+      }
+
+      &:active {
+        --radio-box-shadow-color: var(--semantic-interactive-foreground);
+        --radio-background-color: var(--semantic-interactive-foreground);
+      }
+
+      &:disabled {
+        --radio-box-shadow-color: var(--semantic-disabled-foreground);
+        --radio-background-color: var(--semantic-disabled-background);
+      }
+
+      &:disabled:checked {
+        --radio-background-color: var(--semantic-disabled-foreground);
+      }
+    }
+  }
+
+  &Label {
+    --label-color: var(--semantic-page-foreground);
+    --description-color: var(--palette-graphite-70);
+
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-xs)
+      calc($radio-transform-x + 2px + var(--spacing-s));
+    color: var(--label-color);
+    cursor: pointer;
+    font-size: var(--font-size-m);
+    line-height: var(--semantic-line-height-input);
+    overflow-wrap: anywhere;
+    word-break: normal;
+
+    &Description {
+      padding-top: var(--spacing-xs);
+      color: var(--description-color);
+    }
+  }
+
+  &Input:hover + &Label {
+    --label-color: var(--semantic-interactive-main);
+    --description-color: var(--semantic-interactive-main);
+  }
+
+  &Input:active + &Label {
+    --label-color: var(--semantic-interactive-foreground);
+    --description-color: var(--semantic-interactive-foreground);
+  }
+
+  &Input:disabled + &Label {
+    --label-color: var(--semantic-disabled-foreground);
+    --description-color: var(--semantic-disabled-foreground);
+
+    cursor: not-allowed;
+  }
+}

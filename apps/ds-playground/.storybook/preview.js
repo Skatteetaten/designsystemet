@@ -7,8 +7,10 @@ import {
 import { useEffect, useGlobals } from '@storybook/client-api';
 
 import { category } from './helpers';
+
 import '@skatteetaten/ds-core-designtokens/index.css';
 import './playground.css';
+import '../src/stories/designtokens/designtokens.css';
 
 const LanguageUpdater = (Story, context) => {
   const [{ locale }, updateGlobals] = useGlobals();
@@ -32,7 +34,8 @@ const makeViewPort = (dsbreakpoint) => {
     [dsbreakpoint]: {
       name: dsbreakpoint,
       styles: {
-        width: breakpoints[dsbreakpoint],
+        width:
+          dsbreakpoint === '--mobile' ? '320px' : breakpoints[dsbreakpoint],
         height: '100%',
       },
     },
@@ -40,6 +43,7 @@ const makeViewPort = (dsbreakpoint) => {
 };
 
 const DSViewports = {
+  ...makeViewPort('--mobile'),
   ...makeViewPort('--breakpoint-xs'),
   ...makeViewPort('--breakpoint-s'),
   ...makeViewPort('--breakpoint-m'),
@@ -47,12 +51,13 @@ const DSViewports = {
   ...makeViewPort('--breakpoint-xl'),
 };
 
-// TODO FRONT-930 - sortering på prop-kategorier i argsTable
 export const parameters = {
+  actions: { argTypesRegex: '^on.*' },
   controls: { sort: 'alpha' },
   viewport: { viewports: DSViewports },
   options: {
     storySort: {
+      method: 'alphabetical',
       order: ['Generelt', 'Designtokens', 'Komponenter', 'Tester'],
     },
   },

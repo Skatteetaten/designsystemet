@@ -24,14 +24,13 @@ export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
     let spacingClassName = '';
     if (hasSpacing) {
       if (level === 1) {
-        spacingClassName = styles[`heading_hasSpacingMedium`];
+        spacingClassName = styles.heading_hasSpacingMedium;
       } else if (level === 2) {
-        spacingClassName =
-          styles[`heading_hasSpacingSmallMobileMediumOtherwise`];
+        spacingClassName = styles.heading_hasSpacingSmallMobileMediumOtherwise;
       } else if (level === 3 || level === 4) {
-        spacingClassName = styles[`heading_hasSpacingSmall`];
+        spacingClassName = styles.heading_hasSpacingSmall;
       } else if (level === 5) {
-        spacingClassName = styles[`heading_hasSpacingExtraSmall`];
+        spacingClassName = styles.heading_hasSpacingExtraSmall;
       }
     }
     return (

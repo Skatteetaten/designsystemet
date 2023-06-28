@@ -1,40 +1,13 @@
-import { AxePuppeteer } from '@axe-core/puppeteer';
 import {
-  getParagraphVariantDefault,
   Paragraph,
   ParagraphProps,
   paragraphVariantArr,
 } from '@skatteetaten/ds-typography';
+import { expect } from '@storybook/jest';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { toHaveNoViolations } from 'jest-axe';
-import { Page } from 'puppeteer';
+import { within } from '@storybook/testing-library';
 
-import {
-  screenShotOptions,
-  wrapper,
-} from './testUtils/puppeteer.testing.utils';
-
-const verifyMatchSnapShot = async (page: Page): Promise<void> => {
-  const innerHtml = await page.$eval(wrapper, (el) => el.innerHTML);
-  expect(innerHtml).toMatchSnapshot();
-};
-
-const verifyMatchImageSnapShot = async (page: Page): Promise<void> => {
-  const image = await page.screenshot(screenShotOptions);
-  expect(image).toMatchImageSnapshot();
-};
-
-const verifyAxeRules = async (page: Page): Promise<void> => {
-  const axeResults = await new AxePuppeteer(page).include(wrapper).analyze();
-  expect.extend(toHaveNoViolations);
-  expect(axeResults).toHaveNoViolations();
-};
-
-const verifySnapshotsAndAxeRules = async (page: Page): Promise<void> => {
-  await verifyMatchSnapShot(page);
-  await verifyMatchImageSnapShot(page);
-  await verifyAxeRules(page);
-};
+import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
 
 export default {
   component: Paragraph,
@@ -62,10 +35,7 @@ export default {
 } as ComponentMeta<typeof Paragraph>;
 
 const defaultArgs: ParagraphProps = {
-  children:
-    'Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, ' +
-    'etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.',
-  variant: getParagraphVariantDefault(),
+  children: loremIpsum,
 };
 const Template: ComponentStory<typeof Paragraph> = (args) => (
   <div data-test-block>
@@ -85,110 +55,41 @@ WithRef.args = {
   },
 };
 WithRef.argTypes = {
-  ...WithRef.argTypes,
   ref: { table: { disable: false } },
 };
-WithRef.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const refId = await page.$eval(`${wrapper} > p`, (el) => el.id);
-    expect(refId).toBe('dummyIdForwardedFromRef');
-  },
+WithRef.parameters = { imageSnapshot: { disable: true } };
+WithRef.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const paragraph = canvas.getByText(loremIpsum);
+  await expect(paragraph).toHaveAttribute('id', 'dummyIdForwardedFromRef');
 };
 
-// Når Paragraph har en id, så har elementet id'en satt
-export const WithId = Template.bind({});
-WithId.storyName = 'With Id (FA2)';
-WithId.args = {
-  ...defaultArgs,
-  id: 'ParagraphId',
-};
-WithId.argTypes = {
-  ...WithId.argTypes,
-  id: { table: { disable: false } },
-};
-WithId.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const id = await page.$eval(`${wrapper} > p`, (el) =>
-      el.getAttribute('id')
-    );
-    expect(id).toBe('ParagraphId');
-  },
-};
-
+// Når Paragraph har en id, så har element id
 // Når Paragraph har en custom CSS, så vises custom stil
-export const WithCustomCss = Template.bind({});
-WithCustomCss.storyName = 'With Custom CSS (FA3)';
-WithCustomCss.args = {
-  ...defaultArgs,
-  className: 'dummyClassname',
-};
-WithCustomCss.argTypes = {
-  ...WithCustomCss.argTypes,
-  className: {
-    table: { disable: false },
-  },
-};
-WithCustomCss.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifySnapshotsAndAxeRules(page);
-
-    const classNameAttribute = await page.$eval(`${wrapper} > p`, (el) =>
-      el.getAttribute('class')
-    );
-    expect(classNameAttribute).toContain('dummyClassname');
-  },
-};
-
-// Når Paragraph har en lang, så har elementet lang satt
-export const WithLang = Template.bind({});
-WithLang.storyName = 'With Lang (FA4)';
-WithLang.args = {
-  ...defaultArgs,
-  lang: 'nb',
-};
-WithLang.argTypes = {
-  ...WithLang.argTypes,
-  lang: { table: { disable: false } },
-};
-WithLang.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const langAttribute = await page.$eval(`${wrapper} > p`, (el) =>
-      el.getAttribute('lang')
-    );
-    expect(langAttribute).toBe('nb');
-  },
-};
-
+// Når Paragraph har en lang, så har element lang
 // Når Paragraph har dataTestid, så har elementet data-testid satt
-export const WithDataTestid = Template.bind({});
-WithDataTestid.storyName = 'With DataTestid (FA5)';
-WithDataTestid.args = {
+export const WithAttributes = Template.bind({});
+WithAttributes.storyName = 'With Attributes (FA2-5)';
+WithAttributes.args = {
   ...defaultArgs,
-  'data-testid': 'ParagraphID',
+  id: 'htmlId',
+  className: 'dummyClassname',
+  lang: 'nb',
+  'data-testid': '123ID',
 };
-WithDataTestid.argTypes = {
-  ...WithDataTestid.argTypes,
+WithAttributes.argTypes = {
+  id: { table: { disable: false } },
+  className: { table: { disable: false } },
+  lang: { table: { disable: false } },
   'data-testid': { table: { disable: false } },
 };
-WithDataTestid.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const dataTestid = await page.$eval(`${wrapper} > p`, (el) =>
-      el.getAttribute('data-testid')
-    );
-    expect(dataTestid).toBe('ParagraphID');
-  },
+WithAttributes.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const paragraph = canvas.getByText(loremIpsum);
+  await expect(paragraph).toHaveClass('dummyClassname');
+  await expect(paragraph).toHaveAttribute('id', 'htmlId');
+  await expect(paragraph).toHaveAttribute('lang', 'nb');
+  await expect(paragraph).toHaveAttribute('data-testid', '123ID');
 };
 
 // Når Paragraph instansieres, så finnes <p>-elementet
@@ -198,13 +99,11 @@ IsPElement.args = {
   ...defaultArgs,
 };
 IsPElement.parameters = {
-  async puppeteerTest(page: Page): Promise<void> {
-    await verifyMatchSnapShot(page);
-    await verifyAxeRules(page);
-
-    const paragraphElement = await page.$(`${wrapper} > p`);
-    expect(paragraphElement).toBeTruthy();
-  },
+  imageSnapshot: { disable: true },
+};
+IsPElement.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  await expect(canvas.getByText(loremIpsum).nodeName).toBe('P');
 };
 
 const TemplateWithMarkup: ComponentStory<typeof Paragraph> = (args) => (
@@ -244,19 +143,21 @@ const TemplateWithMarkup: ComponentStory<typeof Paragraph> = (args) => (
 
 // Når Paragraph inkluderer markup, så får markupen riktig styling
 export const WithMarkup = TemplateWithMarkup.bind({});
-WithMarkup.storyName = 'With Markup (A2, B2 - 2 av 2)';
+WithMarkup.storyName = 'With Markup (A2, B2)';
 WithMarkup.args = {
   ...defaultArgs,
 };
 WithMarkup.argTypes = {
-  ...WithMarkup.argTypes,
   children: {
     table: { disable: false },
     control: { type: null },
   },
 };
 WithMarkup.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
+  imageSnapshot: {
+    hover: `${wrapper} > p a`,
+    focus: `${wrapper} > p a`,
+  },
 };
 
 const TemplateWithTwoParagraphs: ComponentStory<typeof Paragraph> = (args) => (
@@ -268,62 +169,45 @@ const TemplateWithTwoParagraphs: ComponentStory<typeof Paragraph> = (args) => (
 
 // Når Paragraph instansieres, får den riktige default-verdier
 export const Defaults = TemplateWithTwoParagraphs.bind({});
-Defaults.storyName = 'Defaults Variant Standard (A1 - 1 av 2, B2 - 1 av 2)';
+Defaults.storyName = 'Defaults Variant Standard (A1, B2)';
 Defaults.args = {
   ...defaultArgs,
 };
 Defaults.argTypes = {
-  ...Defaults.argTypes,
   children: { table: { disable: false } },
-};
-Defaults.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
 };
 
 // Når Paragraph er et ingress, så får elementet riktige verdier
 export const VariantIngress = TemplateWithTwoParagraphs.bind({});
-VariantIngress.storyName = 'Variant Ingress (A1 - 2 av 2)';
+VariantIngress.storyName = 'Variant Ingress (A1)';
 VariantIngress.args = {
   ...defaultArgs,
   variant: 'ingress',
 };
 VariantIngress.argTypes = {
-  ...VariantIngress.argTypes,
   variant: { table: { disable: false } },
-};
-VariantIngress.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
 };
 
 // Når Paragraph har spacing, så får elementet en margin under avsnittet
 export const WithSpacing = TemplateWithTwoParagraphs.bind({});
-WithSpacing.storyName = 'With Spacing Variant Standard (A3 - 1 av 2)';
+WithSpacing.storyName = 'With Spacing Variant Standard (A3)';
 WithSpacing.args = {
   ...defaultArgs,
   hasSpacing: true,
 };
 WithSpacing.argTypes = {
-  ...WithSpacing.argTypes,
   hasSpacing: { table: { disable: false } },
-};
-WithSpacing.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
 };
 
 // Når Paragraph er et ingress og har spacing, så får elementet riktige verdier og en margin under ingresset
 export const VariantIngressWithSpacing = TemplateWithTwoParagraphs.bind({});
-VariantIngressWithSpacing.storyName =
-  'With Spacing Variant Ingress (A3 - 2 av 2)';
+VariantIngressWithSpacing.storyName = 'With Spacing Variant Ingress (A3)';
 VariantIngressWithSpacing.args = {
   ...defaultArgs,
   hasSpacing: true,
   variant: 'ingress',
 };
 VariantIngressWithSpacing.argTypes = {
-  ...VariantIngressWithSpacing.argTypes,
   hasSpacing: { table: { disable: false } },
   variant: { table: { disable: false } },
-};
-VariantIngressWithSpacing.parameters = {
-  puppeteerTest: verifySnapshotsAndAxeRules,
 };

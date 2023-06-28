@@ -1,11 +1,13 @@
 {
   "name": "@skatteetaten/ds-core-utils",
   "groupId": "no.skatteetaten.aurora",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "publishConfig": {
     "registry": "https://nexus.sits.no/repository/npm-internal/"
   },
   "peerDependencies": {
-    "react": "^18"
+    "i18next": "^22",
+    "react": "^18",
+    "react-i18next": "^12"
   }
 }

@@ -23,12 +23,11 @@ export const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(
     let spacingClassName = '';
     if (hasSpacing) {
       if (variant === 'standard') {
-        spacingClassName = styles[`paragraph_hasSpacingLarge`];
+        spacingClassName = styles.paragraph_hasSpacingLarge;
       } else if (variant === 'ingress') {
-        spacingClassName = styles[`paragraph_hasSpacingExtraLarge`];
+        spacingClassName = styles.paragraph_hasSpacingExtraLarge;
       }
     }
-
     const concatenatedClassName = `${styles.paragraph} ${
       styles[`paragraph_${variant}`]
     } ${spacingClassName} ${className}`;

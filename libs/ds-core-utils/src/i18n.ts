@@ -18,6 +18,10 @@ import ds_pages_en_GB from './translations/ds-pages_en_GB.json';
 import ds_pages_nb_NO from './translations/ds-pages_nb_NO.json';
 import ds_pages_nn_NO from './translations/ds-pages_nn_NO.json';
 import ds_pages_se_NO from './translations/ds-pages_se_NO.json';
+import ds_status_en_GB from './translations/ds-status_en_GB.json';
+import ds_status_nb_NO from './translations/ds-status_nb_NO.json';
+import ds_status_nn_NO from './translations/ds-status_nn_NO.json';
+import ds_status_se_NO from './translations/ds-status_se_NO.json';
 import ds_tables_en_GB from './translations/ds-tables_en_GB.json';
 import ds_tables_nb_NO from './translations/ds-tables_nb_NO.json';
 import ds_tables_nn_NO from './translations/ds-tables_nn_NO.json';
@@ -41,6 +45,7 @@ export const resources = {
     ds_buttons: ds_buttons_en_GB,
     ds_forms: ds_forms_en_GB,
     ds_pages: ds_pages_en_GB,
+    ds_status: ds_status_en_GB,
     ds_tables: ds_tables_en_GB,
   },
   nb_NO: {
@@ -49,6 +54,7 @@ export const resources = {
     ds_buttons: ds_buttons_nb_NO,
     ds_forms: ds_forms_nb_NO,
     ds_pages: ds_pages_nb_NO,
+    ds_status: ds_status_nb_NO,
     ds_tables: ds_tables_nb_NO,
   },
   nn_NO: {
@@ -57,6 +63,7 @@ export const resources = {
     ds_buttons: ds_buttons_nn_NO,
     ds_forms: ds_forms_nn_NO,
     ds_pages: ds_pages_nn_NO,
+    ds_status: ds_status_nn_NO,
     ds_tables: ds_tables_nn_NO,
   },
   se_NO: {
@@ -65,6 +72,7 @@ export const resources = {
     ds_buttons: ds_buttons_se_NO,
     ds_forms: ds_forms_se_NO,
     ds_pages: ds_pages_se_NO,
+    ds_status: ds_status_se_NO,
     ds_tables: ds_tables_se_NO,
   },
 };

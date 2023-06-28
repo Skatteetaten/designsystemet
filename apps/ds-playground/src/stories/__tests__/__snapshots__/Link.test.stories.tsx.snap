@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Link Defaults play-test 1`] = `
+<div data-test-block="true">
+  <a class="Link_link__jeUpY  "
+     href="#root"
+  >
+    Er du pendler?
+  </a>
+</div>
+`;
+
+exports[`Tester/Link WithAriaDescribedby play-test 1`] = `
+<div data-test-block="true">
+  <a class="Link_link__jeUpY  "
+     href="#root"
+     aria-describedby="htmlId"
+  >
+    Er du pendler?
+  </a>
+</div>
+`;
+
+exports[`Tester/Link WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <a id="htmlId"
+     class="Link_link__jeUpY  dummyClassname"
+     lang="nb"
+     data-testid="123ID"
+     href="#root"
+  >
+    Er du pendler?
+  </a>
+</div>
+`;
+
+exports[`Tester/Link WithColor smoke-test 1`] = `
+<div data-test-block="true">
+  <a class="Link_link__jeUpY Link_link_white__bmeQu "
+     href="#root"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isCustom__nsOot"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
+      </path>
+    </svg>
+    Er du pendler?
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isExternal__O+HIA"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-label="Til et annet nettsted"
+         aria-hidden="false"
+         role="img"
+    >
+      <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7Zm5 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z">
+      </path>
+    </svg>
+  </a>
+</div>
+`;
+
+exports[`Tester/Link WithExternalIcon play-test 1`] = `
+<div data-test-block="true">
+  <a class="Link_link__jeUpY  "
+     href="#root"
+  >
+    Er du pendler?
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isExternal__O+HIA"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-label="Til et annet nettsted"
+         aria-hidden="false"
+         role="img"
+    >
+      <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7Zm5 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z">
+      </path>
+    </svg>
+  </a>
+</div>
+`;
+
+exports[`Tester/Link WithIcon play-test 1`] = `
+<div data-test-block="true">
+  <a class="Link_link__jeUpY  "
+     href="#root"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isCustom__nsOot"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="M19 19H5V8h14v11ZM16 1v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2Zm1 11h-5v5h5v-5Z">
+      </path>
+    </svg>
+    Er du pendler?
+  </a>
+</div>
+`;
+
+exports[`Tester/Link WithLongText smoke-test 1`] = `
+<div data-test-block="true">
+  <a class="Link_link__jeUpY  "
+     href="#root"
+  >
+    Denne lenken har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert uansett om ikon eller ikke.
+  </a>
+</div>
+`;
+
+exports[`Tester/Link WithLongTextIconAndExternalIcon smoke-test 1`] = `
+<div data-test-block="true">
+  <a class="Link_link__jeUpY  "
+     href="#root"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isCustom__nsOot"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="M19 19H5V8h14v11ZM16 1v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2Zm1 11h-5v5h5v-5Z">
+      </path>
+    </svg>
+    Denne lenken har en veldig lang tekst med ikon på venstre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert.
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isExternal__O+HIA"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-label="Til et annet nettsted"
+         aria-hidden="false"
+         role="img"
+    >
+      <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7Zm5 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z">
+      </path>
+    </svg>
+  </a>
+</div>
+`;
+
+exports[`Tester/Link WithOnClick play-test 1`] = `
+<div data-test-block="true">
+  <a class="Link_link__jeUpY  "
+     href="#root"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isCustom__nsOot"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="M19 19H5V8h14v11ZM16 1v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2Zm1 11h-5v5h5v-5Z">
+      </path>
+    </svg>
+    Ny lenketekst slik at vi ser at event fungerte
+  </a>
+</div>
+`;
+
+exports[`Tester/Link WithRef play-test 1`] = `
+<div data-test-block="true">
+  <a class="Link_link__jeUpY  "
+     href="#root"
+     id="dummyIdForwardedFromRef"
+  >
+    Er du pendler?
+  </a>
+</div>
+`;
+
+exports[`Tester/Link WithTarget play-test 1`] = `
+<div data-test-block="true">
+  <a class="Link_link__jeUpY  "
+     href="#root"
+     rel="noreferrer"
+     target="_blank"
+  >
+    Er du pendler?
+  </a>
+</div>
+`;

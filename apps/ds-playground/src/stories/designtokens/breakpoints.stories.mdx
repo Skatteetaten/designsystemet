@@ -1,5 +1,6 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
 import { TokensList } from './TokensList';
+import { getVersion } from '../utils/version.utils';
 
 # Breakpoints
 
@@ -9,16 +10,11 @@ import { TokensList } from './TokensList';
   <Story
     name="Breakpoints"
     parameters={{
-      controls: {
-        disabled: true,
-      },
-      actions: {
-        disabled: true,
-      },
       previewTabs: {
         canvas: { hidden: true },
       },
       viewMode: 'docs',
+      version: getVersion('ds-core-designtokens'),
     }}
   >
     <TokensList tokenType={'breakpoints'} />

@@ -1,3 +1,3 @@
-import { Positon } from '@skatteetaten/ds-core-utils';
+import { Position } from '@skatteetaten/ds-core-utils';
 
-export const getInlineButtonPositionDefault = (): Positon => 'left';
+export const getInlineButtonPositionDefault = (): Position => 'left';

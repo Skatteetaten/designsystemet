@@ -1,7 +1,4 @@
-import { BaseProps } from '@skatteetaten/ds-core-utils';
-
-export const headingAsArr = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as const;
-export type HeadingAs = typeof headingAsArr[number];
+import { BaseProps, HeadingAs } from '@skatteetaten/ds-core-utils';
 
 export const headingLevelArr = [1, 2, 3, 4, 5] as const;
 export type HeadingLevel = typeof headingLevelArr[number];
