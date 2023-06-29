@@ -286,6 +286,11 @@ export const WithShadowRootNode = TemplateWithShadowRootNode.bind({});
 WithShadowRootNode.storyName = 'With ShadowRootNode';
 WithShadowRootNode.decorators = [webComponent];
 WithShadowRootNode.parameters = {
+  a11y: {
+    //Stilen som slår av transitions og animations finnes ikke på innsiden av shadowDom
+    //Slår derfor av denne slik at vi ikke får false positives
+    disable: true,
+  },
   imageSnapshot: {
     disable: true,
   },
