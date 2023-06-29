@@ -173,18 +173,6 @@ exports[`Tester/Button WithLongText smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Button WithLongTextAndBreaking smoke-test 1`] = `
-<div data-test-block="true">
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
-          type="button"
-  >
-    <span class="Button_buttonText__JxyB+">
-      Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles.Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Herharviikkeikonsådaskaltekstenmidtstilles
-    </span>
-  </button>
-</div>
-`;
-
 exports[`Tester/Button WithLongTextAndIcon smoke-test 1`] = `
 <div data-test-block="true">
   <button class="Button_button__pkuNv Button_button_primary__8Ouwo Button_button_withIcon__P1eEM "

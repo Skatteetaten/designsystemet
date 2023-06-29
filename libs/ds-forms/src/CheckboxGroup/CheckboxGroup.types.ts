@@ -20,21 +20,10 @@ interface CheckboxGroupCommonProps
   hideLegend?: boolean;
   /** Ledetekst til gruppen */
   legend: React.ReactNode;
+  /** Om obligatorisk gruppe skal markeres med stjerne */
+  showRequiredMark?: boolean;
+  /* Hvis innføring av required på Group, se commit 05e7ac89ac3b132d37d18aed55a933573b3beb70 */
 }
-
-type CheckboxGroupDiscriminatedRequiredProps =
-  | {
-      /** Om gruppen er obligatorisk */
-      required: boolean;
-      /** Om obligatorisk gruppe skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
-      showRequiredMark?: boolean;
-    }
-  | {
-      /** Om gruppen er obligatorisk */
-      required?: never;
-      /** Om obligatorisk gruppe skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
-      showRequiredMark?: never;
-    };
 
 type CheckboxGroupDiscriminatedErrorProps =
   | {
@@ -51,7 +40,6 @@ type CheckboxGroupDiscriminatedErrorProps =
     };
 
 export type CheckboxGroupProps = CheckboxGroupCommonProps &
-  CheckboxGroupDiscriminatedRequiredProps &
   CheckboxGroupDiscriminatedErrorProps;
 
 export interface CheckboxGroupComponent

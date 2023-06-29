@@ -4,7 +4,7 @@ import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 type RequiredCheckboxHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'input'>,
-  'disabled' | 'onChange' | 'value'
+  'defaultChecked' | 'checked' | 'disabled' | 'name' | 'value' | 'onChange'
 >;
 
 type CheckboxHTMLAttributes = Partial<RequiredCheckboxHTMLAttributes>;
@@ -53,25 +53,6 @@ type CheckboxDiscriminatedErrorProps =
       hasError?: never;
     };
 
-type CheckboxDiscriminatedCheckedProps =
-  | {
-      /** Om checkboksen skal være satt til checked (controlled state) */
-      checked?: boolean;
-      /** Om checkboksen skal være satt til default checked (uncontrolled state) */
-      defaultChecked?: never;
-      /** Teknisk navn på checkboksen (uncontrolled state) */
-      name?: never;
-    }
-  | {
-      /** Om checkboksen skal være satt til checked (controlled state) */
-      checked?: never;
-      /** Om checkboksen skal være satt til default checked (uncontrolled state) */
-      defaultChecked?: boolean;
-      /** Teknisk navn på checkboksen (uncontrolled state) */
-      name?: string;
-    };
-
 export type CheckboxProps = CheckboxCommonProps &
   CheckboxDiscriminatedRequiredProps &
-  CheckboxDiscriminatedErrorProps &
-  CheckboxDiscriminatedCheckedProps;
+  CheckboxDiscriminatedErrorProps;

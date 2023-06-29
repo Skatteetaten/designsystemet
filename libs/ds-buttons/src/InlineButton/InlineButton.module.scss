@@ -16,10 +16,8 @@
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-medium);
   line-height: var(--semantic-line-height-buttons);
-  overflow-wrap: anywhere;
   text-align: left;
   text-decoration-line: underline;
-  word-break: normal;
 
   &_withIconLeft {
     @extend %with-icon;

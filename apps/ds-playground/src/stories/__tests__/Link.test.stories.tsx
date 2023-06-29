@@ -166,18 +166,6 @@ WithLongText.argTypes = {
   children: { table: { disable: false } },
 };
 
-// Når Link har en veldig lang tekst uten breaking space så skal det brekke over flere linjer
-export const WithLongTextAndBreaking = Template.bind({});
-WithLongTextAndBreaking.storyName = 'With Long Text And Breaking (A1 delvis)';
-WithLongTextAndBreaking.args = {
-  ...defaultArgs,
-  children:
-    'Dennelenkenharenveldiglangtekst.Sålangatdentvingerframlinjeskiftmedtekstsomalltidervenstrejustertuansettomikonellerikke.',
-};
-WithLongTextAndBreaking.argTypes = {
-  children: { table: { disable: false } },
-};
-
 // Når Link har en veldig lang tekst, valgfritt ikon og eksternal ikon så skal tekst venstrejusteres
 export const WithLongTextIconAndExternalIcon = Template.bind({});
 WithLongTextIconAndExternalIcon.storyName =

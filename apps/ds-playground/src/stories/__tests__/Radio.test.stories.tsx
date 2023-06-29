@@ -1,4 +1,4 @@
-import { Radio, RadioProps } from '@skatteetaten/ds-forms';
+import { RadioGroup } from '@skatteetaten/ds-forms';
 import { expect } from '@storybook/jest';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { within } from '@storybook/testing-library';
@@ -10,7 +10,7 @@ import {
 } from './testUtils/storybook.testing.utils';
 
 export default {
-  component: Radio,
+  component: RadioGroup.Radio,
   title: 'Tester/RadioGroup/Radio',
   argTypes: {
     // Baseprops
@@ -36,16 +36,19 @@ export default {
       table: { disable: true },
     },
   },
-} as ComponentMeta<typeof Radio>;
+} as ComponentMeta<typeof RadioGroup.Radio>;
 
-const Template: ComponentStory<typeof Radio> = (args) => (
+const Template: ComponentStory<typeof RadioGroup.Radio> = (args) => (
   <div data-test-block>
-    <Radio {...args} />
+    <RadioGroup legend={'radio example'} hideLegend>
+      {/* eslint-disable-next-line testing-library/no-node-access */}
+      <RadioGroup.Radio {...args}>{args.children}</RadioGroup.Radio>
+    </RadioGroup>
   </div>
 );
 
 const defaultLabelText = 'Enkeltpersonsforetak';
-const defaultArgs: RadioProps = {
+const defaultArgs = {
   children: defaultLabelText,
 };
 
@@ -94,7 +97,9 @@ WithAttributes.argTypes = {
 WithAttributes.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   // eslint-disable-next-line testing-library/no-node-access
-  const container = canvasElement.querySelector(`${wrapper} > div`);
+  const container = canvasElement.querySelector(
+    `${wrapper} fieldset > div > div`
+  );
   const input = canvas.getByRole('radio');
   await expect(container).toHaveClass('dummyClassname');
   await expect(container).toHaveAttribute('lang', 'nb');

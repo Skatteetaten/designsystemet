@@ -154,19 +154,6 @@ WithLongText.argTypes = {
   children: { table: { disable: false } },
 };
 
-// Når InlineButton har en veldig lang tekst uten breaking space så skal det brekke over flere linjer
-export const WithLongTextAndBreaking = Template.bind({});
-WithLongTextAndBreaking.storyName = 'With Long Text And Breaking (A1)';
-WithLongTextAndBreaking.args = {
-  ...defaultArgs,
-  children:
-    'Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Nårikkeikonsåskaltekstenværevenstrejusteres.' +
-    'Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Nårikkeikonsåskaltekstenværevenstrejusteres.',
-};
-WithLongTextAndBreaking.argTypes = {
-  children: { table: { disable: false } },
-};
-
 // Når InlineButton har ett ikon uten posisjon oppgitt, så vises dette ikonet på venstre side (default).
 // Tester også for de icon props som er relevant for saken med systemIcon som er brukt.
 export const WithIcon = Template.bind({});

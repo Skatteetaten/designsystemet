@@ -47,7 +47,7 @@ export const TableHeaderCell = forwardRef<
     const alignmentClassName = styles[`headerCell_${alignment}`];
     const variantClassName = styles[`headerCell_${variant}`];
     const concatenatedClassNames = `${styles.headerCell} ${
-      isSortable ? '' : variantClassName
+      isSortable ? styles.headerCell_noPadding : variantClassName
     } ${
       scope === 'row' ? styles.headerCell_row : ''
     } ${alignmentClassName} ${className}`;

@@ -112,16 +112,6 @@ exports[`Tester/Link WithLongText smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Link WithLongTextAndBreaking smoke-test 1`] = `
-<div data-test-block="true">
-  <a class="Link_link__jeUpY  "
-     href="#root"
-  >
-    Dennelenkenharenveldiglangtekst.Sålangatdentvingerframlinjeskiftmedtekstsomalltidervenstrejustertuansettomikonellerikke.
-  </a>
-</div>
-`;
-
 exports[`Tester/Link WithLongTextIconAndExternalIcon smoke-test 1`] = `
 <div data-test-block="true">
   <a class="Link_link__jeUpY  "
