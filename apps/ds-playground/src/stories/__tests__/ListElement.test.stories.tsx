@@ -54,7 +54,10 @@ WithRef.play = async ({ canvasElement }): Promise<void> => {
   await expect(list).toHaveAttribute('id', 'dummyIdForwardedFromRef');
 };
 
-// Når List.Element har en id, custom className, lang og dataTestid, så får elementet attributene id, class, lang og data-testid satt og custom stil vises
+// Når ListElement har en id, så har li-elementet id'en satt
+// Når ListElement har en custom className, så har li-elementet className satt og custom stil vises
+// Når ListElement har en lang, så har li-elementet lang satt
+// Når ListElement har en data-testid, så har li-elementet data-testid satt
 export const WithAttributes = Template.bind({});
 WithAttributes.storyName = 'With Attributes (FA2-5)';
 WithAttributes.args = {

@@ -36,16 +36,20 @@ export default {
     variant: {
       table: { disable: true },
       options: [...densityArr],
-      control: 'radio',
+      control: 'inline-radio',
     },
     iconPosition: {
       table: { disable: true },
       options: [...positionArr],
-      control: 'radio',
+      control: 'inline-radio',
     },
     isExpanded: { table: { disable: true } },
     isOnClickOnlyFiredOnOpen: { table: { disable: true } },
-    titleAs: { table: { disable: true } },
+    titleAs: {
+      options: [...headingAsArr],
+      control: 'inline-radio',
+      table: { disable: true },
+    },
     title: { table: { disable: true } },
     showUnderline: { table: { disable: true } },
     onClick: { table: { disable: true } },
