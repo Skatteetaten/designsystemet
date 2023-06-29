@@ -28,6 +28,7 @@ export default async function (tree: Tree, schema: Schema) {
     importPath: schema.importPath,
     strict: true,
     compiler: 'babel',
+    bundler: 'rollup',
   });
 
   //konfigurasjon for stylelint
@@ -86,6 +87,21 @@ export default async function (tree: Tree, schema: Schema) {
     return eslintrc;
   });
 
+  const tsconfig = joinPathFragments(projectConfig.root, 'tsconfig.json');
+  updateJson(tree, tsconfig, (tsconfig): object => {
+    tsconfig.compilerOptions = {
+      ...tsconfig.compilerOptions,
+      allowJs: true,
+      esModuleInterop: true,
+      forceConsistentCasingInFileNames: true,
+      noImplicitOverride: true,
+      noPropertyAccessFromIndexSignature: true,
+      noImplicitReturns: true,
+      noFallthroughCasesInSwitch: true,
+    };
+    return tsconfig;
+  });
+
   const tsconfigSpec = joinPathFragments(
     projectConfig.root,
     'tsconfig.spec.json'
@@ -118,6 +134,7 @@ export default async function (tree: Tree, schema: Schema) {
     packageJson.peerDependencies = {
       react: '^18',
     };
+    packageJson.exports = undefined;
     return packageJson;
   });
 

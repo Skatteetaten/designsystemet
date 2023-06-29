@@ -10,6 +10,7 @@
     "ds-dev-config": "libs/ds-dev-config",
     "ds-forms": "libs/ds-forms",
     "ds-icons": "libs/ds-icons",
+    "ds-layout": "libs/ds-layout",
     "ds-playground": "apps/ds-playground",
     "ds-status": "libs/ds-status",
     "ds-table": "libs/ds-table",
