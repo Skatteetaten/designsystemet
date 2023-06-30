@@ -10,3 +10,5 @@ export * from './Radio/Radio';
 export * from './Radio/Radio.types';
 export * from './RadioGroup/RadioGroup';
 export * from './RadioGroup/RadioGroup.types';
+export * from './TextField/TextField';
+export * from './TextField/TextField.types';
