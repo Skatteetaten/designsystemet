@@ -49,6 +49,11 @@
     overflow-y: auto;
   }
 
+  &_autosize {
+    overflow: hidden;
+    resize: none;
+  }
+
   &::placeholder {
     color: var(--palette-graphite-70);
   }

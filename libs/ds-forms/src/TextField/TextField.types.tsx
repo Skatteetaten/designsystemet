@@ -2,12 +2,17 @@ import {
   ChangeEventHandler,
   ComponentPropsWithoutRef,
   FocusEventHandler,
+  RefObject,
 } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-export const textFieldVariantArr = ['standard', 'multiline'] as const;
-export type TextFieldVariant = typeof textFieldVariantArr[number];
+export const textFieldAsArr = ['input', 'textarea'] as const;
+export type TextFieldAs = typeof textFieldAsArr[number];
+
+export type TextboxRefHandle = {
+  textboxRef: RefObject<HTMLTextAreaElement | HTMLInputElement>;
+};
 
 type RequiredTextFieldHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'input' | 'textarea'>,
@@ -44,27 +49,27 @@ export interface TextFieldCommonProps
   isLarge?: boolean;
   /** Ledeteksten til textbox-feltet */
   label: string;
-  /** Definerer om elementet skal være <input> eller <textarea>. */
-  variant?: TextFieldVariant;
 }
 
 type TextFieldDiscriminatedProps =
-  | {
+  | ({
       /** Tusenskilletegn for heltall som bruker mellomrom eller komma som skilletegn avhengig av språket som er valgt og fjerner ikke numeriske tegn */
       thousandSeparator?: boolean;
-      /** Input HTML-attributt pattern */
-      pattern?: string;
-      /** Textarea (multiline) HTML-attributt rows */
+      /** HTML-tag for TextField. */
+      as?: Extract<TextFieldAs, 'input'>;
+      /** Textarea høyden justerer seg automatisk for å tilpasse seg lengden på innholdet */
+      autosize?: never;
       rows?: never;
-    }
-  | {
+    } & Pick<ComponentPropsWithoutRef<'input'>, 'pattern'>)
+  | ({
       /** Tusenskilletegn for heltall som bruker mellomrom eller komma som skilletegn avhengig av språket som er valgt og fjerner ikke numeriske tegn */
       thousandSeparator?: never;
-      /** Input HTML-attributt pattern */
       pattern?: never;
-      /** Textarea (multiline) HTML-attributt rows */
-      rows?: number;
-    };
+      /** HTML-tag for TextField. */
+      as?: Extract<TextFieldAs, 'textarea'>;
+      /** Textarea høyden justerer seg automatisk for å tilpasse seg lengden på innholdet */
+      autosize?: boolean;
+    } & Pick<ComponentPropsWithoutRef<'textarea'>, 'rows'>);
 
 type TextFieldDiscriminatedRequiredProps =
   | {

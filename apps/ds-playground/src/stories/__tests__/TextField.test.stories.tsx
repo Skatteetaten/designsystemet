@@ -1,6 +1,10 @@
 import { useState } from 'react';
 
-import { TextField, textFieldVariantArr } from '@skatteetaten/ds-forms';
+import {
+  TextboxRefHandle,
+  TextField,
+  textFieldAsArr,
+} from '@skatteetaten/ds-forms';
 import { expect } from '@storybook/jest';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { userEvent, waitFor, within } from '@storybook/testing-library';
@@ -28,6 +32,12 @@ export default {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    as: {
+      table: { disable: true },
+      options: [...textFieldAsArr],
+      control: 'inline-radio',
+    },
+    autosize: { table: { disable: true } },
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
     hasError: { table: { disable: true } },
@@ -36,11 +46,6 @@ export default {
     label: { table: { disable: true } },
     showRequiredMark: { table: { disable: true } },
     thousandSeparator: { table: { disable: true } },
-    variant: {
-      table: { disable: true },
-      options: [...textFieldVariantArr],
-      control: 'inline-radio',
-    },
     // HTML
     autoComplete: { table: { disable: true } },
     defaultValue: { table: { disable: true } },
@@ -83,9 +88,9 @@ export const WithRef = Template.bind({});
 WithRef.storyName = 'With Ref (FA1)';
 WithRef.args = {
   ...defaultArgs,
-  ref: (instance: HTMLInputElement | null): void => {
-    if (instance) {
-      instance.name = 'dummyNameForwardedFromRef';
+  ref: (instance: TextboxRefHandle | null): void => {
+    if (instance && instance.textboxRef && instance.textboxRef.current) {
+      instance.textboxRef.current.name = 'dummyNameForwardedFromRef';
     }
   },
 };
@@ -118,18 +123,17 @@ WithAttributes.argTypes = {
 };
 WithAttributes.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
-  const field = canvas.getByRole('textbox');
+  const textbox = canvas.getByRole('textbox');
   const container = canvas.getAllByRole('generic')[1];
-  await expect(field).toHaveAttribute('id', 'htmlid');
+  await expect(textbox).toHaveAttribute('id', 'htmlid');
   await expect(container).toHaveClass('dummyClassname');
   await expect(container).toHaveAttribute('lang', 'nb');
-  await expect(field).toHaveAttribute('data-testid', '123ID');
+  await expect(textbox).toHaveAttribute('data-testid', '123ID');
 };
 
 // Når TextField instansieres, får den riktige default-verdier og riktig html-element
 export const Defaults = Template.bind({});
-Defaults.storyName =
-  'Defaults Variant Standard (A1 delvis, A2 delvis, B2, FS-A2)';
+Defaults.storyName = 'Defaults (A1 delvis, A2 delvis, B2, FS-A2)';
 Defaults.args = {
   ...defaultArgs,
 };
@@ -156,23 +160,23 @@ Defaults.play = async ({ canvasElement }): Promise<void> => {
   await expect(errorMessage).toBeInTheDocument();
 };
 
-// Når TextField har en variant, så vises stilsett for variant og riktig html-element
-export const VariantMultiline = Template.bind({});
-VariantMultiline.storyName = 'Variant Multiline (A1 delvis, A2 delvis)';
-VariantMultiline.args = {
+// Når TextField har en as, så vises riktig html-element
+export const WithAs = Template.bind({});
+WithAs.storyName = 'With As (A1 delvis, A2 delvis)';
+WithAs.args = {
   ...defaultArgs,
-  variant: 'multiline',
+  as: 'textarea',
 };
-VariantMultiline.argTypes = {
-  variant: { table: { disable: false } },
+WithAs.argTypes = {
+  as: { table: { disable: false } },
 };
-VariantMultiline.parameters = {
+WithAs.parameters = {
   imageSnapshot: {
     hover: `${wrapper} textarea`,
     focus: `${wrapper} textarea`,
   },
 };
-VariantMultiline.play = async ({ canvasElement }): Promise<void> => {
+WithAs.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   const textbox = canvas.getByRole('textbox');
   await expect(textbox.tagName).toBe('TEXTAREA');
@@ -188,7 +192,6 @@ WithDisabled.args = {
 };
 WithDisabled.argTypes = {
   disabled: { table: { disable: false } },
-  value: { table: { disable: false } },
 };
 WithDisabled.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
@@ -196,20 +199,20 @@ WithDisabled.play = async ({ canvasElement }): Promise<void> => {
   await expect(textbox).toBeDisabled();
 };
 
-// Når TextField har en autoComplete, så er autoComplete satt på input
-export const WithAutoComplete = Template.bind({});
-WithAutoComplete.storyName = 'With AutoComplete (B1 delvis)';
-WithAutoComplete.args = {
+// Når TextField har en value, så er value satt
+export const WithValue = Template.bind({});
+WithValue.storyName = 'With Value';
+WithValue.args = {
   ...defaultArgs,
-  autoComplete: 'given-name',
+  value: valueText,
 };
-WithAutoComplete.argTypes = {
-  autoComplete: { table: { disable: false } },
+WithValue.argTypes = {
+  value: { table: { disable: false } },
 };
-WithAutoComplete.parameters = {
+WithValue.parameters = {
   imageSnapshot: { disable: true },
 };
-WithAutoComplete.play = verifyAttribute('autoComplete', 'given-name');
+WithValue.play = verifyAttribute('value', valueText);
 
 // Når TextField har defaultValue, så er defaultValue satt
 export const WithDefaultValue = Template.bind({});
@@ -226,48 +229,34 @@ WithDefaultValue.parameters = {
 };
 WithDefaultValue.play = verifyAttribute('value', valueText);
 
-// Når TextField har inputmode, så er riktig inputmode satt på input
-export const WithInputMode = Template.bind({});
-WithInputMode.storyName = 'With InputMode (A6 delvis, B1 delvis)';
-WithInputMode.args = {
+// Når TextField har autoComplete, inputMode, name og placeholder, så er hhv
+// HTML-attributtene autocomplete, inputmode, name og placeholder satt på input
+export const WithAutoCompleteInputModeNameAndPlaceholder = Template.bind({});
+WithAutoCompleteInputModeNameAndPlaceholder.storyName =
+  'With AutoComplete InputMode Name And Placeholder (A3 delvis, A6 delvis, B1 delvis)';
+WithAutoCompleteInputModeNameAndPlaceholder.args = {
   ...defaultArgs,
-  label: 'E-postadresse',
-  inputMode: 'email',
-};
-WithInputMode.argTypes = {
-  inputMode: { table: { disable: false } },
-};
-WithInputMode.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithInputMode.play = verifyAttribute('inputmode', 'email');
-
-// Når TextField har en name, så er name satt
-export const WithName = Template.bind({});
-WithName.storyName = 'With Name (B1 delvis)';
-WithName.args = {
-  ...defaultArgs,
+  autoComplete: 'given-name',
+  inputMode: 'text',
   name: 'test_name',
-};
-WithName.argTypes = {
-  name: { table: { disable: false } },
-};
-WithName.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithName.play = verifyAttribute('name', 'test_name');
-
-// Når TextField har placeholder, så er placeholder satt på input
-export const WithPlaceholder = Template.bind({});
-WithPlaceholder.storyName = 'With Placeholder (A3 delvis, B1 delvis)';
-WithPlaceholder.args = {
-  ...defaultArgs,
   placeholder: valueText,
 };
-WithPlaceholder.argTypes = {
+WithAutoCompleteInputModeNameAndPlaceholder.argTypes = {
+  autoComplete: { table: { disable: false } },
+  inputMode: { table: { disable: false } },
+  name: { table: { disable: false } },
   placeholder: { table: { disable: false } },
 };
-WithPlaceholder.play = verifyAttribute('placeholder', valueText);
+WithAutoCompleteInputModeNameAndPlaceholder.play = async ({
+  canvasElement,
+}): Promise<void> => {
+  const canvas = within(canvasElement);
+  const textbox = canvas.getByRole('textbox');
+  await expect(textbox).toHaveAttribute('autocomplete', 'given-name');
+  await expect(textbox).toHaveAttribute('inputmode', 'text');
+  await expect(textbox).toHaveAttribute('name', 'test_name');
+  await expect(textbox).toHaveAttribute('placeholder', valueText);
+};
 
 // Når TextField har readonly, så er readonly satt på input
 export const WithReadOnly = Template.bind({});
@@ -319,47 +308,64 @@ WithRequiredAndMark.argTypes = {
   showRequiredMark: { table: { disable: false } },
 };
 
-// Når TextField har en value, så er value satt
-export const WithValue = Template.bind({});
-WithValue.storyName = 'With Value';
-WithValue.args = {
-  ...defaultArgs,
-  value: valueText,
-};
-WithValue.argTypes = {
-  value: { table: { disable: false } },
-};
-WithValue.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithValue.play = verifyAttribute('value', valueText);
-
-// Når TextField har minLength, maxLength og pattern, så blir attributtene satt
-export const WithMinAndMaxLengthAndPattern = Template.bind({});
-WithMinAndMaxLengthAndPattern.storyName =
-  'With MinLength MaxLength And Pattern (A5, B1)';
-WithMinAndMaxLengthAndPattern.args = {
+// Når TextField har minLength og maxLength, så blir attributtene satt
+export const WithMinAndMaxLength = Template.bind({});
+WithMinAndMaxLength.storyName = 'With MinLength And MaxLength (A5, B1)';
+WithMinAndMaxLength.args = {
   ...defaultArgs,
   maxLength: 50,
   minLength: 10,
-  pattern: '[a-z]',
 };
-WithMinAndMaxLengthAndPattern.argTypes = {
+WithMinAndMaxLength.argTypes = {
   maxLength: { table: { disable: false } },
   minLength: { table: { disable: false } },
-  pattern: { table: { disable: false } },
 };
-WithMinAndMaxLengthAndPattern.parameters = {
+WithMinAndMaxLength.parameters = {
   imageSnapshot: { disable: true },
 };
-WithMinAndMaxLengthAndPattern.play = async ({
-  canvasElement,
-}): Promise<void> => {
+WithMinAndMaxLength.play = async ({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   const textbox = canvas.getByRole('textbox');
   await expect(textbox).toHaveAttribute('maxlength');
   await expect(textbox).toHaveAttribute('minlength');
+};
+
+// Når TextField har pattern, så blir attributten pattern satt input
+export const WithPattern = Template.bind({});
+WithPattern.storyName = 'With Pattern As Input (A5, B1)';
+WithPattern.args = {
+  ...defaultArgs,
+  pattern: '[a-z]',
+};
+WithPattern.argTypes = {
+  pattern: { table: { disable: false } },
+};
+WithPattern.parameters = {
+  imageSnapshot: { disable: true },
+};
+WithPattern.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const textbox = canvas.getByRole('textbox');
   await expect(textbox).toHaveAttribute('pattern');
+  await expect(textbox.tagName).toBe('INPUT');
+};
+
+// Når TextField har en rows, så blir rows satt på textarea
+export const WithRows = Template.bind({});
+WithRows.storyName = 'With Rows As Textarea (A5 delvis)';
+WithRows.args = {
+  ...defaultArgs,
+  as: 'textarea',
+  rows: 4,
+};
+WithRows.argTypes = {
+  rows: { table: { disable: false } },
+};
+WithRows.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const textbox = canvas.getByRole('textbox');
+  await expect(textbox).toHaveAttribute('rows', '4');
+  await expect(textbox.tagName).toBe('TEXTAREA');
 };
 
 // Når TextField har aria-describedby, så er aria-describedby satt og fremdeles knyttet til id'en i ErrorMessage
@@ -465,22 +471,6 @@ WithHasErrorAndAriaDescribedby.play = async ({
   );
 };
 
-// Når TextField har hideLabel, så er labelen ikke synlig men label-elementet finnes
-export const WithHideLabel = Template.bind({});
-WithHideLabel.storyName = 'With HideLabel (B2)';
-WithHideLabel.args = {
-  ...defaultArgs,
-  hideLabel: true,
-};
-WithHideLabel.argTypes = {
-  hideLabel: { table: { disable: false } },
-};
-WithHideLabel.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const textbox = canvas.getByRole('textbox', { name: defaultLabelText });
-  await expect(textbox).toBeInTheDocument();
-};
-
 // Når TextField har en beskrivelse, så blir den vist sammen med label/ledeteksten
 export const WithDescription = Template.bind({});
 WithDescription.storyName = 'With Description (FS-A3)';
@@ -497,6 +487,22 @@ WithDescription.play = async ({ canvasElement }): Promise<void> => {
   await expect(labelWithDescription).toBeInTheDocument();
 };
 
+// Når TextField har hideLabel, så er labelen ikke synlig men label-elementet finnes
+export const WithHideLabel = Template.bind({});
+WithHideLabel.storyName = 'With HideLabel (B2)';
+WithHideLabel.args = {
+  ...defaultArgs,
+  hideLabel: true,
+};
+WithHideLabel.argTypes = {
+  hideLabel: { table: { disable: false } },
+};
+WithHideLabel.play = async ({ canvasElement }): Promise<void> => {
+  const canvas = within(canvasElement);
+  const textbox = canvas.getByRole('textbox', { name: defaultLabelText });
+  await expect(textbox).toBeInTheDocument();
+};
+
 // Når TextField har IsLarge, så vises feltet med riktig stil
 export const WithIsLarge = Template.bind({});
 WithIsLarge.storyName = 'With IsLarge (A1 delvis)';
@@ -510,7 +516,7 @@ WithIsLarge.argTypes = {
 
 // Når TextField har thousandSeparator, så blir verdier som ikke er tall tatt bort og formattert riktig
 export const WithThousandSeparator = Template.bind({});
-WithThousandSeparator.storyName = 'With ThousandSeparator (A10 delvis)';
+WithThousandSeparator.storyName = 'With ThousandSeparator As Input (A8 delvis)';
 WithThousandSeparator.args = {
   ...defaultArgs,
   thousandSeparator: true,
@@ -521,24 +527,12 @@ WithThousandSeparator.argTypes = {
 WithThousandSeparator.play = async ({ args, canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   const textbox = canvas.getByRole('textbox');
+  await expect(textbox.tagName).toBe('INPUT');
   await textbox.focus();
   await userEvent.type(textbox, 'A10000');
   await waitFor(() => expect(args.onChange).toHaveBeenCalled());
   await expect(textbox).toHaveValue('10 000');
 };
-
-// Når TextField har en rows, så blir rows satt
-export const WithRows = Template.bind({});
-WithRows.storyName = 'With Rows Variant Multiline (A10 delvis)';
-WithRows.args = {
-  ...defaultArgs,
-  variant: 'multiline',
-  rows: 4,
-};
-WithRows.argTypes = {
-  rows: { table: { disable: false } },
-};
-WithRows.play = verifyAttribute('rows', '4');
 
 // Når brukeren setter focus, blurrer, eller change i TextField, så kalles riktig eventHandler og ledeteksten endres
 const EventHandlersTemplate: ComponentStory<typeof TextField> = (args) => {

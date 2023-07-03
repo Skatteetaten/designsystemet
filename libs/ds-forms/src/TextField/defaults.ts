@@ -1,3 +1,3 @@
-import { TextFieldVariant } from './TextField.types';
+import { TextFieldAs } from './TextField.types';
 
-export const getTextFieldVariantDefault = (): TextFieldVariant => 'standard';
+export const getTextFieldAsDefault = (): TextFieldAs => 'input';

@@ -1,9 +1,9 @@
 import { expect } from '@storybook/jest';
 
-import { getTextFieldVariantDefault } from '../defaults';
+import { getTextFieldAsDefault } from '../defaults';
 
 describe('TextField defaults', () => {
   it('Når getTextFieldVariantDefault kalles, så returnerer den riktig verdi', () => {
-    expect(getTextFieldVariantDefault()).toBe('standard');
+    expect(getTextFieldAsDefault()).toBe('input');
   });
 });
