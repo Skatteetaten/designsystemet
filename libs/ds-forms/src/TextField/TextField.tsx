@@ -1,4 +1,10 @@
-import { forwardRef, useId } from 'react';
+import {
+  forwardRef,
+  useEffect,
+  useId,
+  useImperativeHandle,
+  useRef,
+} from 'react';
 
 import {
   dsI18n,
@@ -6,27 +12,25 @@ import {
   Languages,
 } from '@skatteetaten/ds-core-utils';
 
-import { getTextFieldVariantDefault } from './defaults';
-import { TextFieldProps } from './TextField.types';
+import { getTextFieldAsDefault } from './defaults';
+import { TextboxRefHandle, TextFieldProps } from './TextField.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 
 import styles from './TextField.module.scss';
 
-export const TextField = forwardRef<
-  HTMLInputElement | HTMLTextAreaElement,
-  TextFieldProps
->(
+export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
   (
     {
       id: externalId,
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
+      autosize,
       description,
       errorMessage,
       label,
       thousandSeparator,
-      variant = getTextFieldVariantDefault(),
+      as: Tag = getTextFieldAsDefault(),
       autoComplete,
       defaultValue,
       disabled,
@@ -50,35 +54,55 @@ export const TextField = forwardRef<
       onFocus,
     },
     ref
+    /* TODO - når FRONT-1294 er ferdig utviklet så vil cognitive complexity bli redusert og kan fjerne suppress:  */
+    // eslint-disable-next-line sonarjs/cognitive-complexity
   ): JSX.Element => {
     const errorId = `textFieldErrorId-${useId()}`;
     const uniqueTextboxId = `textFieldTextboxId-${useId()}`;
     const textboxId = externalId ?? uniqueTextboxId;
 
-    const addSpaces = (value: string): string =>
-      value.replace(
-        /\B(?=(\d{3})+(?!\d))/g,
-        dsI18n.language === Languages.Engelsk ? ',' : ' '
-      );
+    const textboxRef = useRef<HTMLTextAreaElement & HTMLInputElement>(null);
+    useImperativeHandle(ref, () => ({
+      textboxRef: textboxRef,
+    }));
+
+    useEffect(() => {
+      if (autosize) {
+        const textArea = textboxRef.current as HTMLTextAreaElement;
+        textArea.style.height = 'inherit';
+        const { scrollHeight } = textArea;
+        const includeBorderAndMore =
+          textArea.offsetHeight - textArea.clientHeight;
+        textArea.style.height = `${scrollHeight + includeBorderAndMore}px`;
+      } else {
+        (textboxRef.current as HTMLInputElement).style.height = 'inherit';
+      }
+    }, [autosize, value]);
+
+    const separator = dsI18n.language === Languages.Engelsk ? ',' : ' ';
+    const addSpacesOrCommas = (value: string): string =>
+      value.replace(/\B(?=(\d{3})+(?!\d))/g, separator);
     const removeNonNumeric = (value: string): string =>
       value.replace(/[^0-9]/g, '');
 
     const handleChange = (
       e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
     ): void => {
-      if (thousandSeparator && (e.target as HTMLInputElement)) {
+      if (thousandSeparator) {
         const input = e.target as HTMLInputElement;
-        input.value = addSpaces(removeNonNumeric(input.value));
+        input.value = addSpacesOrCommas(removeNonNumeric(input.value));
       }
 
       onChange?.(e);
     };
 
+    if (thousandSeparator && value) {
+      value = addSpacesOrCommas(removeNonNumeric(value.toString()));
+    }
+
     const ariaDescribedbyInput = `${ariaDescribedby ?? ''} ${
       hasError ? errorId : ''
     }`.trim();
-
-    const isMultiline = variant === 'multiline';
 
     const concatenatedClassName = `${className}`.trim();
 
@@ -89,13 +113,11 @@ export const TextField = forwardRef<
       : undefined;
 
     const lagreTextboxClassName = isLarge ? styles.textbox_large : '';
-    const multilineTextboxClassName = isMultiline
-      ? styles.textbox_multiline
-      : '';
+    const multilineTextboxClassName =
+      Tag === 'textarea' ? styles.textbox_multiline : '';
+    const autosizeTextarea = autosize ? styles.textbox_autosize : '';
     const textboxClassName =
-      `${styles.textbox} ${lagreTextboxClassName} ${multilineTextboxClassName}`.trim();
-
-    const Tag = isMultiline ? 'textarea' : 'input';
+      `${styles.textbox} ${lagreTextboxClassName} ${multilineTextboxClassName} ${autosizeTextarea}`.trim();
     return (
       <div className={concatenatedClassName} lang={lang}>
         <label htmlFor={textboxId} className={labelClassName}>
@@ -105,11 +127,7 @@ export const TextField = forwardRef<
           )}
         </label>
         <Tag
-          ref={
-            ref as (
-              instance: HTMLInputElement | HTMLTextAreaElement | null
-            ) => void
-          }
+          ref={textboxRef}
           id={textboxId}
           className={textboxClassName}
           data-testid={dataTestId}
@@ -120,11 +138,11 @@ export const TextField = forwardRef<
           maxLength={maxLength}
           minLength={minLength}
           name={name}
-          pattern={isMultiline ? undefined : pattern}
+          pattern={pattern}
           placeholder={placeholder}
           readOnly={readOnly}
           required={required}
-          rows={isMultiline ? rows : undefined}
+          rows={rows}
           value={value}
           aria-describedby={ariaDescribedbyInput || undefined}
           aria-invalid={hasError ?? undefined}
@@ -145,4 +163,4 @@ export const TextField = forwardRef<
 
 TextField.displayName = 'TextField';
 
-export { getTextFieldVariantDefault };
+export { getTextFieldAsDefault };

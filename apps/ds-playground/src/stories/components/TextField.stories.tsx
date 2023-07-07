@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { ReactElement, useState } from 'react';
 
 import {
   TextField,
   TextFieldProps,
-  textFieldVariantArr,
+  textFieldAsArr,
 } from '@skatteetaten/ds-forms';
 import { useArgs } from '@storybook/client-api';
 import { Meta, Story } from '@storybook/react';
@@ -16,6 +16,12 @@ export default {
   title: 'Komponenter/TextField',
   argTypes: {
     // Props
+    as: {
+      table: { category: category.props },
+      options: [...textFieldAsArr],
+      control: 'inline-radio',
+    },
+    autosize: { table: { category: category.props } },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasError: {
@@ -44,11 +50,6 @@ export default {
       },
     },
     thousandSeparator: { table: { category: category.props } },
-    variant: {
-      table: { category: category.props },
-      options: [...textFieldVariantArr],
-      control: 'inline-radio',
-    },
     // HTML
     autoComplete: { table: { category: category.htmlAttribute } },
     defaultValue: {
@@ -131,42 +132,79 @@ TextFieldDefaultUncontrolled.args = {
 };
 
 const TemplateExample: Story<TextFieldProps> = () => {
+  const [creditInput, setCreditInput] = useState('10000');
+  const [infoInput, setInfoInput] = useState('');
+
+  return (
+    <form noValidate>
+      <TextField
+        label={'Ønsket kredittgrense'}
+        className={'textField300'}
+        description={'Gjennomsnittlig oppgjør for fire dager'}
+        value={creditInput}
+        thousandSeparator
+        onChange={(e): void => setCreditInput(e.target.value)}
+      />
+      <TextField
+        label={'Andre opplysninger'}
+        className={'textField300'}
+        as={'textarea'}
+        rows={4}
+        value={infoInput}
+        autosize
+        onChange={(e): void => setInfoInput(e.target.value)}
+      />
+      <PostalCodeExample />
+    </form>
+  );
+};
+
+const PostalCodeExample = (): ReactElement => {
   const [userInput, setUserInput] = useState('');
   const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleBlur = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ): void => {
     if (e.target.validity.patternMismatch) {
       setError(true);
+      setErrorMessage('Postnummer må inneholde fire tall.');
+    }
+    if (e.target.validity.valueMissing) {
+      setError(true);
+      setErrorMessage('Postnummer er påkrevd.');
     }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    if (error && !e.target.validity.patternMismatch) {
-      setError(false);
-    } else {
+    setError(false);
+    setErrorMessage('');
+    if (e.target.value.length > 0 && isNaN(Number(e.target.value))) {
       setError(true);
+      setErrorMessage('Postnummer kan kun inneholde tall.');
     }
+
     setUserInput(e.target.value);
   };
 
   return (
-    <form noValidate>
-      <TextField
-        label={'Postnummer'}
-        hasError={error}
-        errorMessage={'Postnummer må ha 4 siffer.'}
-        value={userInput}
-        pattern={'\\d{4}'}
-        required
-        showRequiredMark
-        onChange={handleChange}
-        onBlur={handleBlur}
-      />
-    </form>
+    <TextField
+      label={'Postnummer'}
+      className={'textField150'}
+      hasError={error}
+      errorMessage={errorMessage}
+      value={userInput}
+      maxLength={4}
+      pattern={'\\d{4}'}
+      required
+      showRequiredMark
+      onChange={handleChange}
+      onBlur={handleBlur}
+    />
   );
 };
+
 export const TextFieldExample: Story<TextFieldProps> = TemplateExample.bind({});
 TextFieldExample.storyName = 'Example';
 TextFieldExample.parameters = {
