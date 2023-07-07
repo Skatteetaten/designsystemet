@@ -431,7 +431,9 @@ WithEventHandlers.play = async ({ args, canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
   const radio = canvas.getByRole('radio');
   await expect(radio).toBeInTheDocument();
+  await expect(radio).not.toBeChecked();
   await userEvent.click(radio);
+  await expect(radio).toBeChecked();
   await waitFor(() =>
     expect(args.onChange).toHaveBeenCalledWith(
       expect.objectContaining({
