@@ -13,7 +13,6 @@ exports[`Tester/TextField Defaults play-test 1`] = `
     <input id="textFieldTextboxId-:r5:"
            class="TextField_textbox__qbZlk"
            value
-           style="height: inherit;"
     >
     <div id="textFieldErrorId-:r4:"
          aria-live="assertive"
@@ -38,7 +37,6 @@ exports[`Tester/TextField WithAriaDescribedby play-test 1`] = `
            class="TextField_textbox__qbZlk"
            aria-describedby="testID"
            value
-           style="height: inherit;"
     >
     <div id="textFieldErrorId-:rs:"
          aria-live="assertive"
@@ -61,7 +59,6 @@ exports[`Tester/TextField WithAs play-test 1`] = `
     </label>
     <textarea id="textFieldTextboxId-:r7:"
               class="TextField_textbox__qbZlk  TextField_textbox_multiline__dzg2r"
-              style="height: inherit;"
     >
     </textarea>
     <div id="textFieldErrorId-:r6:"
@@ -89,7 +86,6 @@ exports[`Tester/TextField WithAttributes play-test 1`] = `
            class="TextField_textbox__qbZlk"
            data-testid="123ID"
            value
-           style="height: inherit;"
     >
     <div id="textFieldErrorId-:r2:"
          aria-live="assertive"
@@ -117,7 +113,6 @@ exports[`Tester/TextField WithAutoCompleteInputModeNameAndPlaceholder play-test 
            name="test_name"
            placeholder="Kari Nordmann"
            value
-           style="height: inherit;"
     >
     <div id="textFieldErrorId-:re:"
          aria-live="assertive"
@@ -141,7 +136,6 @@ exports[`Tester/TextField WithDefaultValue play-test 1`] = `
     <input id="textFieldTextboxId-:rd:"
            class="TextField_textbox__qbZlk"
            value="Kari Nordmann"
-           style="height: inherit;"
     >
     <div id="textFieldErrorId-:rc:"
          aria-live="assertive"
@@ -168,7 +162,6 @@ exports[`Tester/TextField WithDescription play-test 1`] = `
     <input id="textFieldTextboxId-:r17:"
            class="TextField_textbox__qbZlk"
            value
-           style="height: inherit;"
     >
     <div id="textFieldErrorId-:r16:"
          aria-live="assertive"
@@ -193,7 +186,6 @@ exports[`Tester/TextField WithDisabled play-test 1`] = `
            class="TextField_textbox__qbZlk"
            disabled
            value="Kari Nordmann"
-           style="height: inherit;"
     >
     <div id="textFieldErrorId-:r8:"
          aria-live="assertive"
@@ -217,7 +209,6 @@ exports[`Tester/TextField WithError play-test 1`] = `
     <input id="textFieldTextboxId-:rv:"
            class="TextField_textbox__qbZlk"
            value
-           style="height: inherit;"
     >
     <div id="textFieldErrorId-:ru:"
          aria-live="assertive"
@@ -243,7 +234,6 @@ exports[`Tester/TextField WithErrorMessageAndHasError play-test 1`] = `
            aria-describedby="textFieldErrorId-:r10:"
            aria-invalid="true"
            value
-           style="height: inherit;"
     >
     <div id="textFieldErrorId-:r10:"
          aria-live="assertive"
@@ -281,7 +271,6 @@ exports[`Tester/TextField WithEventHandlers play-test 1`] = `
     <input id="textFieldTextboxId-:r1f:"
            class="TextField_textbox__qbZlk"
            value
-           style="height: inherit;"
     >
     <div id="textFieldErrorId-:r1e:"
          aria-live="assertive"
@@ -307,7 +296,6 @@ exports[`Tester/TextField WithHasErrorAndAriaDescribedby play-test 1`] = `
            aria-describedby="konsumentId textFieldErrorId-:r13:"
            aria-invalid="true"
            value
-           style="height: inherit;"
     >
     <div id="textFieldErrorId-:r13:"
          aria-live="assertive"
@@ -345,7 +333,6 @@ exports[`Tester/TextField WithHideLabel play-test 1`] = `
     <input id="textFieldTextboxId-:r19:"
            class="TextField_textbox__qbZlk"
            value
-           style="height: inherit;"
     >
     <div id="textFieldErrorId-:r18:"
          aria-live="assertive"
@@ -369,7 +356,6 @@ exports[`Tester/TextField WithIsLarge smoke-test 1`] = `
     <input id="textFieldTextboxId-:r1b:"
            class="TextField_textbox__qbZlk TextField_textbox_large__Qmwm8"
            value
-           style="height: inherit;"
     >
     <div id="textFieldErrorId-:r1a:"
          aria-live="assertive"
@@ -395,7 +381,6 @@ exports[`Tester/TextField WithMinAndMaxLength play-test 1`] = `
            maxlength="50"
            minlength="10"
            value
-           style="height: inherit;"
     >
     <div id="textFieldErrorId-:rm:"
          aria-live="assertive"
@@ -420,7 +405,6 @@ exports[`Tester/TextField WithPattern play-test 1`] = `
            class="TextField_textbox__qbZlk"
            pattern="[a-z]"
            value
-           style="height: inherit;"
     >
     <div id="textFieldErrorId-:ro:"
          aria-live="assertive"
@@ -445,7 +429,6 @@ exports[`Tester/TextField WithReadOnly play-test 1`] = `
            class="TextField_textbox__qbZlk"
            readonly
            value="Kari Nordmann"
-           style="height: inherit;"
     >
     <div id="textFieldErrorId-:rg:"
          aria-live="assertive"
@@ -470,7 +453,6 @@ exports[`Tester/TextField WithRef play-test 1`] = `
            class="TextField_textbox__qbZlk"
            value
            name="dummyNameForwardedFromRef"
-           style="height: inherit;"
     >
     <div id="textFieldErrorId-:r0:"
          aria-live="assertive"
@@ -495,7 +477,6 @@ exports[`Tester/TextField WithRequired play-test 1`] = `
            class="TextField_textbox__qbZlk"
            required
            value
-           style="height: inherit;"
     >
     <div id="textFieldErrorId-:ri:"
          aria-live="assertive"
@@ -520,7 +501,6 @@ exports[`Tester/TextField WithRequiredAndMark smoke-test 1`] = `
            class="TextField_textbox__qbZlk"
            required
            value
-           style="height: inherit;"
     >
     <div id="textFieldErrorId-:rk:"
          aria-live="assertive"
@@ -544,7 +524,6 @@ exports[`Tester/TextField WithRows play-test 1`] = `
     <textarea id="textFieldTextboxId-:rr:"
               class="TextField_textbox__qbZlk  TextField_textbox_multiline__dzg2r"
               rows="4"
-              style="height: inherit;"
     >
     </textarea>
     <div id="textFieldErrorId-:rq:"
@@ -569,7 +548,6 @@ exports[`Tester/TextField WithThousandSeparator play-test 1`] = `
     <input id="textFieldTextboxId-:r1d:"
            class="TextField_textbox__qbZlk"
            value
-           style="height: inherit;"
     >
     <div id="textFieldErrorId-:r1c:"
          aria-live="assertive"
@@ -593,7 +571,6 @@ exports[`Tester/TextField WithValue play-test 1`] = `
     <input id="textFieldTextboxId-:rb:"
            class="TextField_textbox__qbZlk"
            value="Kari Nordmann"
-           style="height: inherit;"
     >
     <div id="textFieldErrorId-:ra:"
          aria-live="assertive"

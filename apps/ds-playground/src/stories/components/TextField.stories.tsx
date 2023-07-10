@@ -1,4 +1,4 @@
-import { ReactElement, useState } from 'react';
+import { useState } from 'react';
 
 import {
   TextField,
@@ -133,6 +133,11 @@ TextFieldDefaultUncontrolled.args = {
 
 const TemplateExample: Story<TextFieldProps> = () => {
   const [creditInput, setCreditInput] = useState('10000');
+
+  const [postaCodeInput, setPostaCodeInput] = useState('');
+  const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
   const [infoInput, setInfoInput] = useState('');
 
   return (
@@ -143,7 +148,40 @@ const TemplateExample: Story<TextFieldProps> = () => {
         description={'Gjennomsnittlig oppgjør for fire dager'}
         value={creditInput}
         thousandSeparator
-        onChange={(e): void => setCreditInput(e.target.value)}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>): void =>
+          setCreditInput(e.target.value)
+        }
+      />
+      <TextField
+        label={'Postnummer'}
+        as={'input'}
+        className={'textField150'}
+        hasError={error}
+        errorMessage={errorMessage}
+        value={postaCodeInput}
+        maxLength={4}
+        required
+        showRequiredMark
+        onChange={(e: React.ChangeEvent<HTMLInputElement>): void => {
+          setError(false);
+          setErrorMessage('');
+          if (e.target.value.length > 0 && isNaN(Number(e.target.value))) {
+            setError(true);
+            setErrorMessage('Postnummer kan kun inneholde tall.');
+          }
+
+          setPostaCodeInput(e.target.value);
+        }}
+        onBlur={(e: React.FocusEvent<HTMLInputElement>): void => {
+          if (e.target.validity.patternMismatch) {
+            setError(true);
+            setErrorMessage('Postnummer må inneholde fire tall.');
+          }
+          if (e.target.validity.valueMissing) {
+            setError(true);
+            setErrorMessage('Postnummer er påkrevd.');
+          }
+        }}
       />
       <TextField
         label={'Andre opplysninger'}
@@ -152,56 +190,11 @@ const TemplateExample: Story<TextFieldProps> = () => {
         rows={4}
         value={infoInput}
         autosize
-        onChange={(e): void => setInfoInput(e.target.value)}
+        onChange={(e: React.ChangeEvent<HTMLTextAreaElement>): void =>
+          setInfoInput(e.target.value)
+        }
       />
-      <PostalCodeExample />
     </form>
-  );
-};
-
-const PostalCodeExample = (): ReactElement => {
-  const [userInput, setUserInput] = useState('');
-  const [error, setError] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
-
-  const handleBlur = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ): void => {
-    if (e.target.validity.patternMismatch) {
-      setError(true);
-      setErrorMessage('Postnummer må inneholde fire tall.');
-    }
-    if (e.target.validity.valueMissing) {
-      setError(true);
-      setErrorMessage('Postnummer er påkrevd.');
-    }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    setError(false);
-    setErrorMessage('');
-    if (e.target.value.length > 0 && isNaN(Number(e.target.value))) {
-      setError(true);
-      setErrorMessage('Postnummer kan kun inneholde tall.');
-    }
-
-    setUserInput(e.target.value);
-  };
-
-  return (
-    <TextField
-      label={'Postnummer'}
-      className={'textField150'}
-      hasError={error}
-      errorMessage={errorMessage}
-      value={userInput}
-      maxLength={4}
-      pattern={'\\d{4}'}
-      required
-      showRequiredMark
-      onChange={handleChange}
-      onBlur={handleBlur}
-    />
   );
 };
 
