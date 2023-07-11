@@ -1,10 +1,4 @@
-import {
-  forwardRef,
-  useEffect,
-  useId,
-  useImperativeHandle,
-  useRef,
-} from 'react';
+import { forwardRef, useId, useImperativeHandle, useRef } from 'react';
 
 import {
   dsI18n,
@@ -54,8 +48,6 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       onFocus,
     },
     ref
-    /* TODO - når FRONT-1294 er ferdig utviklet så vil cognitive complexity bli redusert og kan fjerne suppress:  */
-    // eslint-disable-next-line sonarjs/cognitive-complexity
   ): JSX.Element => {
     const errorId = `textFieldErrorId-${useId()}`;
     const uniqueTextboxId = `textFieldTextboxId-${useId()}`;
@@ -65,19 +57,6 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
     useImperativeHandle(ref, () => ({
       textboxRef: textboxRef,
     }));
-
-    useEffect(() => {
-      if (autosize) {
-        const textArea = textboxRef.current as HTMLTextAreaElement;
-        textArea.style.height = 'inherit';
-        const { scrollHeight } = textArea;
-        const includeBorderAndMore =
-          textArea.offsetHeight - textArea.clientHeight;
-        textArea.style.height = `${scrollHeight + includeBorderAndMore}px`;
-      } else {
-        (textboxRef.current as HTMLInputElement).style.height = 'inherit';
-      }
-    }, [autosize, value]);
 
     const separator = dsI18n.language === Languages.Engelsk ? ',' : ' ';
     const addSpacesOrCommas = (value: string): string =>
@@ -93,9 +72,19 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
         input.value = addSpacesOrCommas(removeNonNumeric(input.value));
       }
 
+      if (autosize) {
+        const textArea = textboxRef.current as HTMLTextAreaElement;
+        textArea.style.height = 'inherit';
+        const { scrollHeight } = textArea;
+        const includeBorderAndMore =
+          textArea.offsetHeight - textArea.clientHeight;
+        textArea.style.height = `${scrollHeight + includeBorderAndMore}px`;
+      }
+
       onChange?.(e);
     };
 
+    /* Slik at value har riktig format også før bruker begynner å skrive i feltet */
     if (thousandSeparator && value) {
       value = addSpacesOrCommas(removeNonNumeric(value.toString()));
     }

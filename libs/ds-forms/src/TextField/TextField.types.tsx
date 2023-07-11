@@ -66,7 +66,7 @@ type TextFieldDiscriminatedProps =
       thousandSeparator?: never;
       pattern?: never;
       /** HTML-tag for TextField. */
-      as?: Extract<TextFieldAs, 'textarea'>;
+      as: Extract<TextFieldAs, 'textarea'>;
       /** Textarea høyden justerer seg automatisk for å tilpasse seg lengden på innholdet */
       autosize?: boolean;
     } & Pick<ComponentPropsWithoutRef<'textarea'>, 'rows'>);
