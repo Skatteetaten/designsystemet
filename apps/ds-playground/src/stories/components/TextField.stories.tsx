@@ -160,6 +160,7 @@ const TemplateExample: Story<TextFieldProps> = () => {
         errorMessage={errorMessage}
         value={postaCodeInput}
         maxLength={4}
+        pattern={'\\d{4}'}
         required
         showRequiredMark
         onChange={(e: React.ChangeEvent<HTMLInputElement>): void => {
