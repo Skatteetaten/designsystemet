@@ -43,11 +43,11 @@ export interface TextFieldCommonProps
     BaseProps {
   /** Tilleggstekst til ledeteksten */
   description?: string;
-  /** Skjuler ledeteksten men er synlig for skjermleser. */
+  /** Skjuler label og description men er synlig for skjermleser. */
   hideLabel?: boolean;
-  /** Tykkere textbox-ramme (og ev. større padding */
+  /** Tykkere textbox-ramme og litt mer padding hvis det er textarea-element */
   isLarge?: boolean;
-  /** Ledeteksten til textbox-feltet */
+  /** Input eller textarea ledetekst */
   label: string;
 }
 
@@ -55,7 +55,7 @@ type TextFieldDiscriminatedProps =
   | ({
       /** Tusenskilletegn for heltall som bruker mellomrom eller komma som skilletegn avhengig av språket som er valgt og fjerner ikke numeriske tegn */
       thousandSeparator?: boolean;
-      /** HTML-tag for TextField. */
+      /** HTML-tag for TextField: input eller textarea. */
       as?: Extract<TextFieldAs, 'input'>;
       /** Textarea høyden justerer seg automatisk for å tilpasse seg lengden på innholdet */
       autosize?: never;
@@ -65,7 +65,7 @@ type TextFieldDiscriminatedProps =
       /** Tusenskilletegn for heltall som bruker mellomrom eller komma som skilletegn avhengig av språket som er valgt og fjerner ikke numeriske tegn */
       thousandSeparator?: never;
       pattern?: never;
-      /** HTML-tag for TextField. */
+      /** HTML-tag for TextField: input eller textarea. */
       as: Extract<TextFieldAs, 'textarea'>;
       /** Textarea høyden justerer seg automatisk for å tilpasse seg lengden på innholdet */
       autosize?: boolean;
@@ -73,13 +73,11 @@ type TextFieldDiscriminatedProps =
 
 type TextFieldDiscriminatedRequiredProps =
   | {
-      /** Om TextField er obligatorisk */
       required: boolean;
       /** Om obligatorisk TextField skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
       showRequiredMark?: boolean;
     }
   | {
-      /** Om TextField er obligatorisk */
       required?: never;
       /** Om obligatorisk TextField skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
       showRequiredMark?: never;
