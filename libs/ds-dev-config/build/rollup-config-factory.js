@@ -1,4 +1,4 @@
-const nrwlConfig = require('@nrwl/react/plugins/bundle-rollup');
+const nrwlConfig = require('@nx/react/plugins/bundle-rollup');
 const autoprefixer = require('autoprefixer');
 const glob = require('glob');
 const postcss = require('rollup-plugin-postcss');

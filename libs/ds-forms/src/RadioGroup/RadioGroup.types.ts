@@ -5,7 +5,7 @@ import { BaseProps } from '@skatteetaten/ds-core-utils';
 import { RadioProps } from '../Radio/Radio.types';
 
 export const radioGroupVariantArr = ['standard', 'horizontal'] as const;
-export type RadioGroupVariant = typeof radioGroupVariantArr[number];
+export type RadioGroupVariant = (typeof radioGroupVariantArr)[number];
 
 export interface RadioGroupContextProps {
   defaultValue?: string | number;

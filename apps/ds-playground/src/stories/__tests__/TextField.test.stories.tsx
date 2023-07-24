@@ -6,7 +6,7 @@ import {
   textFieldAsArr,
 } from '@skatteetaten/ds-forms';
 import { expect } from '@storybook/jest';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { userEvent, waitFor, within } from '@storybook/testing-library';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
@@ -20,7 +20,7 @@ const verifyAttribute =
     await expect(button).toHaveAttribute(attribute, expectedValue);
   };
 
-export default {
+const meta = {
   component: TextField,
   title: 'Tester/TextField',
   argTypes: {
@@ -67,7 +67,9 @@ export default {
     onChange: { table: { disable: true } },
     onFocus: { table: { disable: true } },
   },
-} as ComponentMeta<typeof TextField>;
+} satisfies Meta<typeof TextField>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 const valueText = 'Kari Nordmann';
 const errorMessageText = 'Navn er obligatorisk';
@@ -77,502 +79,562 @@ const defaultArgs = {
   label: defaultLabelText,
 };
 
-const Template: ComponentStory<typeof TextField> = (args) => (
-  <div data-test-block>
-    <TextField {...args} />
-  </div>
-);
+export const WithRef = {
+  name: 'With Ref (FA1)',
 
-// Når TextField har en ref, så får dom elementet ref forwarded
-export const WithRef = Template.bind({});
-WithRef.storyName = 'With Ref (FA1)';
-WithRef.args = {
-  ...defaultArgs,
-  ref: (instance: TextboxRefHandle | null): void => {
-    if (instance && instance.textboxRef && instance.textboxRef.current) {
-      instance.textboxRef.current.name = 'dummyNameForwardedFromRef';
-    }
+  args: {
+    ...defaultArgs,
+    ref: (instance: TextboxRefHandle | null): void => {
+      if (instance && instance.textboxRef && instance.textboxRef.current) {
+        instance.textboxRef.current.name = 'dummyNameForwardedFromRef';
+      }
+    },
   },
-};
-WithRef.argTypes = {
-  ref: { table: { disable: false } },
-};
-WithRef.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithRef.play = verifyAttribute('name', 'dummyNameForwardedFromRef');
 
-// Når TextField har en id, så har input-elementet id'en satt
-// Når TextField har en custom className, så har containeren className satt og custom stil vises
-// Når TextField har en lang, så har containeren lang satt
-// Når TextField har en data-testid, så har input-elementet data-testid satt
-export const WithAttributes = Template.bind({});
-WithAttributes.storyName = 'With Attributes (FA2-5)';
-WithAttributes.args = {
-  ...defaultArgs,
-  id: 'htmlid',
-  className: 'dummyClassname',
-  lang: 'nb',
-  'data-testid': '123ID',
-};
-WithAttributes.argTypes = {
-  id: { table: { disable: false } },
-  className: { table: { disable: false } },
-  lang: { table: { disable: false } },
-  'data-testid': { table: { disable: false } },
-};
-WithAttributes.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const textbox = canvas.getByRole('textbox');
-  const container = canvas.getAllByRole('generic')[1];
-  await expect(textbox).toHaveAttribute('id', 'htmlid');
-  await expect(container).toHaveClass('dummyClassname');
-  await expect(container).toHaveAttribute('lang', 'nb');
-  await expect(textbox).toHaveAttribute('data-testid', '123ID');
-};
-
-// Når TextField instansieres, får den riktige default-verdier og riktig html-element
-export const Defaults = Template.bind({});
-Defaults.storyName = 'Defaults (A1 delvis, A2 delvis, B2, FS-A2)';
-Defaults.args = {
-  ...defaultArgs,
-};
-Defaults.argTypes = {
-  label: { table: { disable: false } },
-};
-Defaults.parameters = {
-  imageSnapshot: {
-    hover: `${wrapper} input`,
-    focus: `${wrapper} input`,
+  argTypes: {
+    ref: { table: { disable: false } },
   },
-};
-Defaults.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const textbox = canvas.getByRole('textbox', { name: defaultLabelText });
-  await expect(textbox).toBeInTheDocument();
-  await expect(textbox).toBeEnabled();
-  await expect(textbox).toHaveAttribute('id');
-  await expect(textbox.tagName).toBe('INPUT');
-  await expect(textbox).not.toBeRequired();
-  await expect(textbox).not.toHaveAttribute('aria-invalid');
-  await expect(textbox).not.toHaveAttribute('aria-describedby');
-  const errorMessage = canvas.getAllByRole('generic')[3];
-  await expect(errorMessage).toBeInTheDocument();
-};
 
-// Når TextField har en as, så vises riktig html-element
-export const WithAs = Template.bind({});
-WithAs.storyName = 'With As (A1 delvis, A2 delvis)';
-WithAs.args = {
-  ...defaultArgs,
-  as: 'textarea',
-};
-WithAs.argTypes = {
-  as: { table: { disable: false } },
-};
-WithAs.parameters = {
-  imageSnapshot: {
-    hover: `${wrapper} textarea`,
-    focus: `${wrapper} textarea`,
+  parameters: {
+    imageSnapshot: { disable: true },
   },
-};
-WithAs.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const textbox = canvas.getByRole('textbox');
-  await expect(textbox.tagName).toBe('TEXTAREA');
-};
 
-// Når TextField er disabled, så er disabled satt på input og riktig stil er satt
-export const WithDisabled = Template.bind({});
-WithDisabled.storyName = 'With Disabled (B1 delvis, B8 delvis)';
-WithDisabled.args = {
-  ...defaultArgs,
-  disabled: true,
-  value: valueText,
-};
-WithDisabled.argTypes = {
-  disabled: { table: { disable: false } },
-};
-WithDisabled.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const textbox = canvas.getByRole('textbox');
-  await expect(textbox).toBeDisabled();
-};
+  play: verifyAttribute('name', 'dummyNameForwardedFromRef'),
+} satisfies Story;
 
-// Når TextField har en value, så er value satt
-export const WithValue = Template.bind({});
-WithValue.storyName = 'With Value';
-WithValue.args = {
-  ...defaultArgs,
-  value: valueText,
-};
-WithValue.argTypes = {
-  value: { table: { disable: false } },
-};
-WithValue.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithValue.play = verifyAttribute('value', valueText);
+export const WithAttributes = {
+  name: 'With Attributes (FA2-5)',
 
-// Når TextField har defaultValue, så er defaultValue satt
-export const WithDefaultValue = Template.bind({});
-WithDefaultValue.storyName = 'With DefaultValue';
-WithDefaultValue.args = {
-  ...defaultArgs,
-  defaultValue: valueText,
-};
-WithDefaultValue.argTypes = {
-  defaultValue: { table: { disable: false } },
-};
-WithDefaultValue.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithDefaultValue.play = verifyAttribute('value', valueText);
-
-// Når TextField har autoComplete, inputMode, name og placeholder, så er hhv
-// HTML-attributtene autocomplete, inputmode, name og placeholder satt på input
-export const WithAutoCompleteInputModeNameAndPlaceholder = Template.bind({});
-WithAutoCompleteInputModeNameAndPlaceholder.storyName =
-  'With AutoComplete InputMode Name And Placeholder (A3 delvis, A6 delvis, B1 delvis)';
-WithAutoCompleteInputModeNameAndPlaceholder.args = {
-  ...defaultArgs,
-  autoComplete: 'given-name',
-  inputMode: 'text',
-  name: 'test_name',
-  placeholder: valueText,
-};
-WithAutoCompleteInputModeNameAndPlaceholder.argTypes = {
-  autoComplete: { table: { disable: false } },
-  inputMode: { table: { disable: false } },
-  name: { table: { disable: false } },
-  placeholder: { table: { disable: false } },
-};
-WithAutoCompleteInputModeNameAndPlaceholder.play = async ({
-  canvasElement,
-}): Promise<void> => {
-  const canvas = within(canvasElement);
-  const textbox = canvas.getByRole('textbox');
-  await expect(textbox).toHaveAttribute('autocomplete', 'given-name');
-  await expect(textbox).toHaveAttribute('inputmode', 'text');
-  await expect(textbox).toHaveAttribute('name', 'test_name');
-  await expect(textbox).toHaveAttribute('placeholder', valueText);
-};
-
-// Når TextField har readonly, så er readonly satt på input
-export const WithReadOnly = Template.bind({});
-WithReadOnly.storyName = 'With ReadOnly (B1 delvis, B6 delvis)';
-WithReadOnly.args = {
-  ...defaultArgs,
-  value: valueText,
-  readOnly: true,
-};
-WithReadOnly.argTypes = {
-  readOnly: { table: { disable: false } },
-};
-WithReadOnly.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const textbox = canvas.getByRole('textbox');
-  await expect(textbox).toHaveAttribute('readonly');
-};
-
-// Når TextField er required, så er required satt på input-elementet
-export const WithRequired = Template.bind({});
-WithRequired.storyName = 'With Required (B4 delvis)';
-WithRequired.args = {
-  ...defaultArgs,
-  required: true,
-};
-WithRequired.argTypes = {
-  required: { table: { disable: false } },
-};
-WithRequired.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithRequired.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const textbox = canvas.getByRole('textbox');
-  await expect(textbox).toBeRequired();
-};
-
-// Når TextField er required og showRequiredMark er satt, så er required satt på input-elementet og vises stjerne bak labelen
-export const WithRequiredAndMark = Template.bind({});
-WithRequiredAndMark.storyName =
-  'With Required And Mark (B4 delvis, FS-A4 delvis)';
-WithRequiredAndMark.args = {
-  ...defaultArgs,
-  required: true,
-  showRequiredMark: true,
-};
-WithRequiredAndMark.argTypes = {
-  required: { table: { disable: false } },
-  showRequiredMark: { table: { disable: false } },
-};
-
-// Når TextField har minLength og maxLength, så blir attributtene satt
-export const WithMinAndMaxLength = Template.bind({});
-WithMinAndMaxLength.storyName = 'With MinLength And MaxLength (A5, B1)';
-WithMinAndMaxLength.args = {
-  ...defaultArgs,
-  maxLength: 50,
-  minLength: 10,
-};
-WithMinAndMaxLength.argTypes = {
-  maxLength: { table: { disable: false } },
-  minLength: { table: { disable: false } },
-};
-WithMinAndMaxLength.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithMinAndMaxLength.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const textbox = canvas.getByRole('textbox');
-  await expect(textbox).toHaveAttribute('maxlength');
-  await expect(textbox).toHaveAttribute('minlength');
-};
-
-// Når TextField har pattern, så blir attributten pattern satt input
-export const WithPattern = Template.bind({});
-WithPattern.storyName = 'With Pattern As Input (A5, B1)';
-WithPattern.args = {
-  ...defaultArgs,
-  pattern: '[a-z]',
-};
-WithPattern.argTypes = {
-  pattern: { table: { disable: false } },
-};
-WithPattern.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithPattern.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const textbox = canvas.getByRole('textbox');
-  await expect(textbox).toHaveAttribute('pattern');
-  await expect(textbox.tagName).toBe('INPUT');
-};
-
-// Når TextField har en rows, så blir rows satt på textarea
-export const WithRows = Template.bind({});
-WithRows.storyName = 'With Rows As Textarea (A5 delvis)';
-WithRows.args = {
-  ...defaultArgs,
-  as: 'textarea',
-  rows: 4,
-};
-WithRows.argTypes = {
-  rows: { table: { disable: false } },
-};
-WithRows.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const textbox = canvas.getByRole('textbox');
-  await expect(textbox).toHaveAttribute('rows', '4');
-  await expect(textbox.tagName).toBe('TEXTAREA');
-};
-
-// Når TextField har aria-describedby, så er aria-describedby satt og fremdeles knyttet til id'en i ErrorMessage
-export const WithAriaDescribedby = Template.bind({});
-WithAriaDescribedby.storyName = 'With AriaDescribedby (B5 delvis)';
-WithAriaDescribedby.args = {
-  ...defaultArgs,
-  ariaDescribedby: 'testID',
-};
-WithAriaDescribedby.argTypes = {
-  ariaDescribedby: { table: { disable: false } },
-};
-WithAriaDescribedby.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithAriaDescribedby.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const textbox = canvas.getByRole('textbox');
-  await expect(textbox).toHaveAttribute('aria-describedby');
-  await expect(textbox).toHaveAttribute(
-    'aria-describedby',
-    expect.stringMatching('testID')
-  );
-};
-
-// Når TextField har errorMessage, så vises ingen feilmelding, aria-attributter eller stil satt for error
-export const WithError = Template.bind({});
-WithError.storyName = 'With ErrorMessage (B5 delvis)';
-WithError.args = {
-  ...defaultArgs,
-  errorMessage: errorMessageText,
-};
-WithError.argTypes = {
-  errorMessage: { table: { disable: false } },
-  hasError: { table: { disable: false } },
-};
-WithError.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const textbox = canvas.getByRole('textbox');
-  const errorMessageContainer = canvas.getAllByRole('generic')[2];
-  await expect(errorMessageContainer).toBeInTheDocument();
-  await expect(canvas.queryByText(errorMessageText)).not.toBeInTheDocument();
-  await expect(textbox).not.toHaveAttribute('aria-invalid', 'true');
-  await expect(textbox).not.toHaveAttribute('aria-describedby');
-};
-
-// Når TextField har en error, så vises feilmelding, relevante aria-attributter og stil er satt til error
-export const WithErrorMessageAndHasError = Template.bind({});
-WithErrorMessageAndHasError.storyName =
-  'With ErrorMessage And HasError (B5 delvis)';
-WithErrorMessageAndHasError.args = {
-  ...defaultArgs,
-  errorMessage: errorMessageText,
-  hasError: true,
-};
-WithErrorMessageAndHasError.argTypes = {
-  errorMessage: { table: { disable: false } },
-  hasError: { table: { disable: false } },
-};
-WithErrorMessageAndHasError.parameters = {
-  imageSnapshot: {
-    hover: `${wrapper} input`,
-    focus: `${wrapper} input`,
+  args: {
+    ...defaultArgs,
+    id: 'htmlid',
+    className: 'dummyClassname',
+    lang: 'nb',
+    'data-testid': '123ID',
   },
-};
-WithErrorMessageAndHasError.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const textbox = canvas.getByRole('textbox');
-  const errorMessage = canvas.getByText(errorMessageText);
-  const errorMessageContainer = canvas.getAllByRole('generic')[2];
-  await expect(errorMessage).toBeInTheDocument();
-  await expect(errorMessageContainer).toBeInTheDocument();
-  await expect(textbox).toHaveAttribute('aria-invalid', 'true');
-  await expect(textbox).toHaveAttribute('aria-describedby');
-};
 
-// Når TextField har hasError og har prop ariaDescribedby fra konsument, så har aria-describedby begge id-ene
-export const WithHasErrorAndAriaDescribedby = Template.bind({});
-WithHasErrorAndAriaDescribedby.storyName =
-  'With HasError And AriaDescribedby (B5 delvis)';
-WithHasErrorAndAriaDescribedby.args = {
-  ...defaultArgs,
-  ariaDescribedby: 'konsumentId',
-  errorMessage: errorMessageText,
-  hasError: true,
-};
-WithHasErrorAndAriaDescribedby.argTypes = {
-  ariaDescribedby: { table: { disable: false } },
-  hasError: { table: { disable: false } },
-};
-WithHasErrorAndAriaDescribedby.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithHasErrorAndAriaDescribedby.play = async ({
-  canvasElement,
-}): Promise<void> => {
-  const canvas = within(canvasElement);
-  const errorMessageContainer = canvas.getAllByRole('generic')[3];
-  const textbox = canvas.getByRole('textbox');
-  await expect(textbox).toHaveAttribute(
-    'aria-describedby',
-    expect.stringMatching(`konsumentId ${errorMessageContainer.id}`)
-  );
-};
+  argTypes: {
+    id: { table: { disable: false } },
+    className: { table: { disable: false } },
+    lang: { table: { disable: false } },
+    'data-testid': { table: { disable: false } },
+  },
 
-// Når TextField har en beskrivelse, så blir den vist sammen med label/ledeteksten
-export const WithDescription = Template.bind({});
-WithDescription.storyName = 'With Description (FS-A3)';
-WithDescription.args = {
-  ...defaultArgs,
-  description: 'En liten beskrivelse tekst',
-};
-WithDescription.argTypes = {
-  description: { table: { disable: false } },
-};
-WithDescription.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const labelWithDescription = canvas.getByText('En liten beskrivelse tekst');
-  await expect(labelWithDescription).toBeInTheDocument();
-};
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    const container = canvas.getAllByRole('generic')[1];
+    await expect(textbox).toHaveAttribute('id', 'htmlid');
+    await expect(container).toHaveClass('dummyClassname');
+    await expect(container).toHaveAttribute('lang', 'nb');
+    await expect(textbox).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
 
-// Når TextField har hideLabel, så er labelen ikke synlig men label-elementet finnes
-export const WithHideLabel = Template.bind({});
-WithHideLabel.storyName = 'With HideLabel (B2)';
-WithHideLabel.args = {
-  ...defaultArgs,
-  hideLabel: true,
-};
-WithHideLabel.argTypes = {
-  hideLabel: { table: { disable: false } },
-};
-WithHideLabel.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const textbox = canvas.getByRole('textbox', { name: defaultLabelText });
-  await expect(textbox).toBeInTheDocument();
-};
+export const Defaults = {
+  name: 'Defaults (A1 delvis, A2 delvis, B2, FS-A2)',
 
-// Når TextField har IsLarge, så vises feltet med riktig stil
-export const WithIsLarge = Template.bind({});
-WithIsLarge.storyName = 'With IsLarge (A1 delvis)';
-WithIsLarge.args = {
-  ...defaultArgs,
-  isLarge: true,
-};
-WithIsLarge.argTypes = {
-  isLarge: { table: { disable: false } },
-};
+  args: {
+    ...defaultArgs,
+  },
 
-// Når TextField har thousandSeparator, så blir verdier som ikke er tall tatt bort og formattert riktig
-export const WithThousandSeparator = Template.bind({});
-WithThousandSeparator.storyName = 'With ThousandSeparator As Input (A8 delvis)';
-WithThousandSeparator.args = {
-  ...defaultArgs,
-  thousandSeparator: true,
-};
-WithThousandSeparator.argTypes = {
-  thousandSeparator: { table: { disable: false } },
-};
-WithThousandSeparator.play = async ({ args, canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const textbox = canvas.getByRole('textbox');
-  await expect(textbox.tagName).toBe('INPUT');
-  await textbox.focus();
-  await userEvent.type(textbox, 'A10000');
-  await waitFor(() => expect(args.onChange).toHaveBeenCalled());
-  await expect(textbox).toHaveValue('10 000');
-};
+  argTypes: {
+    label: { table: { disable: false } },
+  },
 
-// Når brukeren setter focus, blurrer, eller change i TextField, så kalles riktig eventHandler og ledeteksten endres
-const EventHandlersTemplate: ComponentStory<typeof TextField> = (args) => {
+  parameters: {
+    imageSnapshot: {
+      hover: `${wrapper} input`,
+      focus: `${wrapper} input`,
+    },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox', { name: defaultLabelText });
+    await expect(textbox).toBeInTheDocument();
+    await expect(textbox).toBeEnabled();
+    await expect(textbox).toHaveAttribute('id');
+    await expect(textbox.tagName).toBe('INPUT');
+    await expect(textbox).not.toBeRequired();
+    await expect(textbox).not.toHaveAttribute('aria-invalid');
+    await expect(textbox).not.toHaveAttribute('aria-describedby');
+    const errorMessage = canvas.getAllByRole('generic')[3];
+    await expect(errorMessage).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithAs = {
+  name: 'With As (A1 delvis, A2 delvis)',
+
+  args: {
+    ...defaultArgs,
+    as: 'textarea',
+  },
+
+  argTypes: {
+    as: { table: { disable: false } },
+  },
+
+  parameters: {
+    imageSnapshot: {
+      hover: `${wrapper} textarea`,
+      focus: `${wrapper} textarea`,
+    },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox.tagName).toBe('TEXTAREA');
+  },
+} satisfies Story;
+
+export const WithDisabled = {
+  name: 'With Disabled (B1 delvis, B8 delvis)',
+
+  args: {
+    ...defaultArgs,
+    disabled: true,
+    value: valueText,
+  },
+
+  argTypes: {
+    disabled: { table: { disable: false } },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox).toBeDisabled();
+  },
+} satisfies Story;
+
+export const WithValue = {
+  name: 'With Value',
+
+  args: {
+    ...defaultArgs,
+    value: valueText,
+  },
+
+  argTypes: {
+    value: { table: { disable: false } },
+  },
+
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+
+  play: verifyAttribute('value', valueText),
+} satisfies Story;
+
+export const WithDefaultValue = {
+  name: 'With DefaultValue',
+
+  args: {
+    ...defaultArgs,
+    defaultValue: valueText,
+  },
+
+  argTypes: {
+    defaultValue: { table: { disable: false } },
+  },
+
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+
+  play: verifyAttribute('value', valueText),
+} satisfies Story;
+
+export const WithAutoCompleteInputModeNameAndPlaceholder = {
+  name: 'With AutoComplete InputMode Name And Placeholder (A3 delvis, A6 delvis, B1 delvis)',
+
+  args: {
+    ...defaultArgs,
+    autoComplete: 'given-name',
+    inputMode: 'text',
+    name: 'test_name',
+    placeholder: valueText,
+  },
+
+  argTypes: {
+    autoComplete: { table: { disable: false } },
+    inputMode: { table: { disable: false } },
+    name: { table: { disable: false } },
+    placeholder: { table: { disable: false } },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox).toHaveAttribute('autocomplete', 'given-name');
+    await expect(textbox).toHaveAttribute('inputmode', 'text');
+    await expect(textbox).toHaveAttribute('name', 'test_name');
+    await expect(textbox).toHaveAttribute('placeholder', valueText);
+  },
+} satisfies Story;
+
+export const WithReadOnly = {
+  name: 'With ReadOnly (B1 delvis, B6 delvis)',
+
+  args: {
+    ...defaultArgs,
+    value: valueText,
+    readOnly: true,
+  },
+
+  argTypes: {
+    readOnly: { table: { disable: false } },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox).toHaveAttribute('readonly');
+  },
+} satisfies Story;
+
+export const WithRequired = {
+  name: 'With Required (B4 delvis)',
+
+  args: {
+    ...defaultArgs,
+    required: true,
+  },
+
+  argTypes: {
+    required: { table: { disable: false } },
+  },
+
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox).toBeRequired();
+  },
+} satisfies Story;
+
+export const WithRequiredAndMark = {
+  name: 'With Required And Mark (B4 delvis, FS-A4 delvis)',
+
+  args: {
+    ...defaultArgs,
+    required: true,
+    showRequiredMark: true,
+  },
+
+  argTypes: {
+    required: { table: { disable: false } },
+    showRequiredMark: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithMinAndMaxLength = {
+  name: 'With MinLength And MaxLength (A5, B1)',
+
+  args: {
+    ...defaultArgs,
+    maxLength: 50,
+    minLength: 10,
+  },
+
+  argTypes: {
+    maxLength: { table: { disable: false } },
+    minLength: { table: { disable: false } },
+  },
+
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox).toHaveAttribute('maxlength');
+    await expect(textbox).toHaveAttribute('minlength');
+  },
+} satisfies Story;
+
+export const WithPattern = {
+  name: 'With Pattern As Input (A5, B1)',
+
+  args: {
+    ...defaultArgs,
+    pattern: '[a-z]',
+  },
+
+  argTypes: {
+    pattern: { table: { disable: false } },
+  },
+
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox).toHaveAttribute('pattern');
+    await expect(textbox.tagName).toBe('INPUT');
+  },
+} satisfies Story;
+
+export const WithRows = {
+  name: 'With Rows As Textarea (A5 delvis)',
+
+  args: {
+    ...defaultArgs,
+    as: 'textarea',
+    rows: 4,
+  },
+
+  argTypes: {
+    rows: { table: { disable: false } },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox).toHaveAttribute('rows', '4');
+    await expect(textbox.tagName).toBe('TEXTAREA');
+  },
+} satisfies Story;
+
+export const WithAriaDescribedby = {
+  name: 'With AriaDescribedby (B5 delvis)',
+
+  args: {
+    ...defaultArgs,
+    ariaDescribedby: 'testID',
+  },
+
+  argTypes: {
+    ariaDescribedby: { table: { disable: false } },
+  },
+
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox).toHaveAttribute('aria-describedby');
+    await expect(textbox).toHaveAttribute(
+      'aria-describedby',
+      expect.stringMatching('testID')
+    );
+  },
+} satisfies Story;
+
+export const WithError = {
+  name: 'With ErrorMessage (B5 delvis)',
+
+  args: {
+    ...defaultArgs,
+    errorMessage: errorMessageText,
+  },
+
+  argTypes: {
+    errorMessage: { table: { disable: false } },
+    hasError: { table: { disable: false } },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    const errorMessageContainer = canvas.getAllByRole('generic')[2];
+    await expect(errorMessageContainer).toBeInTheDocument();
+    await expect(canvas.queryByText(errorMessageText)).not.toBeInTheDocument();
+    await expect(textbox).not.toHaveAttribute('aria-invalid', 'true');
+    await expect(textbox).not.toHaveAttribute('aria-describedby');
+  },
+} satisfies Story;
+
+export const WithErrorMessageAndHasError = {
+  name: 'With ErrorMessage And HasError (B5 delvis)',
+
+  args: {
+    ...defaultArgs,
+    errorMessage: errorMessageText,
+    hasError: true,
+  },
+
+  argTypes: {
+    errorMessage: { table: { disable: false } },
+    hasError: { table: { disable: false } },
+  },
+
+  parameters: {
+    imageSnapshot: {
+      hover: `${wrapper} input`,
+      focus: `${wrapper} input`,
+    },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    const errorMessage = canvas.getByText(errorMessageText);
+    const errorMessageContainer = canvas.getAllByRole('generic')[2];
+    await expect(errorMessage).toBeInTheDocument();
+    await expect(errorMessageContainer).toBeInTheDocument();
+    await expect(textbox).toHaveAttribute('aria-invalid', 'true');
+    await expect(textbox).toHaveAttribute('aria-describedby');
+  },
+} satisfies Story;
+
+export const WithHasErrorAndAriaDescribedby = {
+  name: 'With HasError And AriaDescribedby (B5 delvis)',
+
+  args: {
+    ...defaultArgs,
+    ariaDescribedby: 'konsumentId',
+    errorMessage: errorMessageText,
+    hasError: true,
+  },
+
+  argTypes: {
+    ariaDescribedby: { table: { disable: false } },
+    hasError: { table: { disable: false } },
+  },
+
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const errorMessageContainer = canvas.getAllByRole('generic')[3];
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox).toHaveAttribute(
+      'aria-describedby',
+      expect.stringMatching(`konsumentId ${errorMessageContainer.id}`)
+    );
+  },
+} satisfies Story;
+
+export const WithDescription = {
+  name: 'With Description (FS-A3)',
+
+  args: {
+    ...defaultArgs,
+    description: 'En liten beskrivelse tekst',
+  },
+
+  argTypes: {
+    description: { table: { disable: false } },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const labelWithDescription = canvas.getByText('En liten beskrivelse tekst');
+    await expect(labelWithDescription).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithHideLabel = {
+  name: 'With HideLabel (B2)',
+
+  args: {
+    ...defaultArgs,
+    hideLabel: true,
+  },
+
+  argTypes: {
+    hideLabel: { table: { disable: false } },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox', { name: defaultLabelText });
+    await expect(textbox).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithIsLarge = {
+  name: 'With IsLarge (A1 delvis)',
+
+  args: {
+    ...defaultArgs,
+    isLarge: true,
+  },
+
+  argTypes: {
+    isLarge: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithThousandSeparator = {
+  name: 'With ThousandSeparator As Input (A8 delvis)',
+
+  args: {
+    ...defaultArgs,
+    thousandSeparator: true,
+  },
+
+  argTypes: {
+    thousandSeparator: { table: { disable: false } },
+  },
+
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox.tagName).toBe('INPUT');
+    await textbox.focus();
+    await userEvent.type(textbox, 'A10000');
+    await waitFor(() => expect(args.onChange).toHaveBeenCalled());
+    await expect(textbox).toHaveValue('10 000');
+  },
+} satisfies Story;
+
+const EventHandlersTemplate: StoryFn<typeof TextField> = (args) => {
   const [labelText, setLabelText] = useState('Tester events');
   return (
-    <div data-test-block>
-      <TextField
-        {...args}
-        label={labelText}
-        onFocus={(event: React.FocusEvent<HTMLInputElement>): void => {
-          setLabelText('TextField har fått fokus');
-          args.onFocus && args.onFocus(event);
-        }}
-        onBlur={(event: React.FocusEvent<HTMLInputElement>): void => {
-          setLabelText('TextField har blitt blurret');
-          args.onBlur && args.onBlur(event);
-        }}
-        onChange={(event: React.ChangeEvent<HTMLInputElement>): void => {
-          setLabelText('TextField har blitt klikket på');
-          args.onChange && args.onChange(event);
-        }}
-      />
-    </div>
+    <TextField
+      {...args}
+      label={labelText}
+      onFocus={(event: React.FocusEvent<HTMLInputElement>): void => {
+        setLabelText('TextField har fått fokus');
+        args.onFocus && args.onFocus(event);
+      }}
+      onBlur={(event: React.FocusEvent<HTMLInputElement>): void => {
+        setLabelText('TextField har blitt blurret');
+        args.onBlur && args.onBlur(event);
+      }}
+      onChange={(event: React.ChangeEvent<HTMLInputElement>): void => {
+        setLabelText('TextField har blitt klikket på');
+        args.onChange && args.onChange(event);
+      }}
+    />
   );
 };
-export const WithEventHandlers = EventHandlersTemplate.bind({});
-WithEventHandlers.storyName = 'With EventHandlers (A4 delvis)';
-WithEventHandlers.args = {
-  ...defaultArgs,
-};
-WithEventHandlers.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithEventHandlers.play = async ({ args, canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const textbox = canvas.getByRole('textbox');
-  await textbox.focus();
-  await waitFor(() => expect(args.onFocus).toHaveBeenCalled());
-  await userEvent.type(textbox, 'Olav Nordmann');
-  await waitFor(() => expect(args.onChange).toHaveBeenCalled());
-  await userEvent.tab();
-  await waitFor(() => expect(args.onBlur).toHaveBeenCalled());
-};
+
+export const WithEventHandlers = {
+  render: EventHandlersTemplate,
+  name: 'With EventHandlers (A4 delvis)',
+
+  args: {
+    ...defaultArgs,
+  },
+
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await textbox.focus();
+    await waitFor(() => expect(args.onFocus).toHaveBeenCalled());
+    await userEvent.type(textbox, 'Olav Nordmann');
+    await waitFor(() => expect(args.onChange).toHaveBeenCalled());
+    await userEvent.tab();
+    await waitFor(() => expect(args.onBlur).toHaveBeenCalled());
+  },
+} satisfies Story;

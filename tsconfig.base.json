@@ -29,7 +29,8 @@
       "@skatteetaten/ds-layout": ["libs/ds-layout/src/index.ts"],
       "@skatteetaten/ds-status": ["libs/ds-status/src/index.ts"],
       "@skatteetaten/ds-table": ["libs/ds-table/src/index.ts"],
-      "@skatteetaten/ds-typography": ["libs/ds-typography/src/index.ts"]
+      "@skatteetaten/ds-typography": ["libs/ds-typography/src/index.ts"],
+      "@skatteetaten/workspace-plugin": ["tools/workspace-plugin/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"],

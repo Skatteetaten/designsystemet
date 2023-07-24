@@ -639,6 +639,7 @@ exports[`Tester/Table/Table WithScrollbar smoke-test 1`] = `
     <div class="Table_wrapper__cQelY ">
       <table class="Table_table__VhSJI  Table_table_standard__8JWMb ">
         <caption class="Table_tableCaption__zTm5t Table_hidden__N7qKc Table_tableCaption_standard__Nhqht">
+          tabellcaption
         </caption>
         <thead>
           <tr class>
@@ -701,6 +702,7 @@ exports[`Tester/Table/Table WithScrollbar smoke-test 1`] = `
     <div class="Table_wrapper__cQelY ">
       <table class="Table_table__VhSJI  Table_table_standard__8JWMb ">
         <caption class="Table_tableCaption__zTm5t Table_hidden__N7qKc Table_tableCaption_standard__Nhqht">
+          tabellcaption
         </caption>
         <thead>
           <tr class>
@@ -763,6 +765,7 @@ exports[`Tester/Table/Table WithScrollbar smoke-test 1`] = `
     <div class="Table_wrapper__cQelY ">
       <table class="Table_table__VhSJI  Table_table_standard__8JWMb ">
         <caption class="Table_tableCaption__zTm5t Table_hidden__N7qKc Table_tableCaption_standard__Nhqht">
+          tabellcaption
         </caption>
         <thead>
           <tr class>

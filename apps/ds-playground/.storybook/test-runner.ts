@@ -6,12 +6,15 @@ import {
   TestRunnerConfig,
 } from '@storybook/test-runner';
 import { injectAxe, checkA11y, configureAxe } from 'axe-playwright';
-import { configureToMatchImageSnapshot } from 'jest-image-snapshot';
-import { Page } from 'Playwright';
+import {
+  configureToMatchImageSnapshot,
+  MatchImageSnapshotOptions,
+} from 'jest-image-snapshot';
+import { Page } from 'playwright';
 
 import { screenShotOptions } from '../src/stories/__tests__/testUtils/storybook.testing.utils';
 
-const customConfig = {
+const customConfig: MatchImageSnapshotOptions = {
   allowSizeMismatch: true,
   comparisonMethod: 'ssim',
   dumpDiffToConsole: true,
@@ -23,9 +26,15 @@ const customConfig = {
   },
 };
 
-async function adjustViewport(page, viewport): Promise<void> {
-  if (viewport?.defaultViewport || viewport.viewPortHeight) {
-    const widthPx = viewport.viewports[viewport.defaultViewport]?.styles?.width;
+interface ViewPort {
+  defaultViewport?: string;
+  viewPortHeight?: number;
+  viewports: Record<string, any>;
+}
+async function adjustViewport(page: Page, viewport: ViewPort): Promise<void> {
+  if (viewport.defaultViewport || viewport.viewPortHeight) {
+    const widthPx =
+      viewport.viewports[viewport.defaultViewport || '']?.styles?.width;
     await page.setViewportSize({
       width: widthPx ? parseInt(widthPx) : 800,
       height: viewport?.viewPortHeight ?? 600,
@@ -91,7 +100,12 @@ async function verifyClickSnapshot(
 }
 
 async function handleSnapshotSelectors(
-  snapshotVerifier: () => Promise<void>,
+  snapshotVerifier: (
+    selectors: string,
+    page: Page,
+    context: TestContext,
+    snapshotId?: string
+  ) => Promise<void>,
   selectors: string | Array<string>,
   page: Page,
   context: TestContext
@@ -104,7 +118,7 @@ async function handleSnapshotSelectors(
     await snapshotVerifier(selectors, page, context);
   } else if (Array.isArray(selectors)) {
     for (const [index, value] of selectors.entries()) {
-      await snapshotVerifier(value, page, context, index);
+      await snapshotVerifier(value, page, context, index.toString());
     }
   }
 }
@@ -152,8 +166,8 @@ async function verifyHTMLSnapshots(
   if (storyContext.parameters.HTMLSnapshot?.disable) {
     return;
   }
-  const elementHandler = await page.$('#root');
-  const innerHTML = await elementHandler.innerHTML();
+  const elementHandler = await page.$('#storybook-root');
+  const innerHTML = await elementHandler?.innerHTML();
   expect(innerHTML).toMatchSnapshot();
 }
 
@@ -168,12 +182,13 @@ async function verifyAxeRules(
     rules: storyContext.parameters?.a11y?.config?.rules,
   });
 
-  await checkA11y(page, '#root', {
+  await checkA11y(page, '#storybook-root', {
     detailedReport: true,
-    verbose: false,
     detailedReportOptions: {
       html: true,
     },
+    verbose: false,
+    axeOptions: storyContext.parameters?.a11y?.options,
   });
 }
 
@@ -189,12 +204,13 @@ const config: TestRunnerConfig = {
     await injectAxe(page);
     const storyContext = await getStoryContext(page, context);
     await adjustViewport(page, storyContext.parameters.viewport);
-    await page.waitForLoadState('networkidle');
+    //await page.waitForLoadState('networkidle'); //TODO hvorfor har denne begynt å henge? kan den erstattes av domcontentloaded ? https://github.com/microsoft/playwright/issues/19835
+    await page.waitForLoadState('domcontentloaded');
     await page.evaluate(async () => await document.fonts.ready);
   },
 
   async postRender(page, context): Promise<void> {
-    const storyContext = await getStoryContext(page, context);
+    const storyContext = (await getStoryContext(page, context)) as StoryContext;
     await verifyAxeRules(page, storyContext);
     await verifyHTMLSnapshots(page, storyContext);
     await verifyImageSnapshots(page, storyContext, context);

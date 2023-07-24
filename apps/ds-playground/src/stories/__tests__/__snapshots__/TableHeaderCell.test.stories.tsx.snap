@@ -2,30 +2,48 @@
 
 exports[`Tester/Table/HeaderCell WithAttributes play-test 1`] = `
 <div data-test-block="true">
-  <th id="htmlId"
-      class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 dummyClassname"
-      lang="nb"
-      data-testid="123ID"
-  >
-    cake
-  </th>
+  <table>
+    <thead>
+      <tr class>
+        <th id="htmlId"
+            class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 dummyClassname"
+            lang="nb"
+            data-testid="123ID"
+        >
+          cake
+        </th>
+      </tr>
+    </thead>
+  </table>
 </div>
 `;
 
 exports[`Tester/Table/HeaderCell WithChildren play-test 1`] = `
 <div data-test-block="true">
-  <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 ">
-    columnheader
-  </th>
+  <table>
+    <thead>
+      <tr class>
+        <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 ">
+          columnheader
+        </th>
+      </tr>
+    </thead>
+  </table>
 </div>
 `;
 
 exports[`Tester/Table/HeaderCell WithRef play-test 1`] = `
 <div data-test-block="true">
-  <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 "
-      id="dummyIdForwardedFromRef"
-  >
-    cake
-  </th>
+  <table>
+    <thead>
+      <tr class>
+        <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 "
+            id="dummyIdForwardedFromRef"
+        >
+          cake
+        </th>
+      </tr>
+    </thead>
+  </table>
 </div>
 `;

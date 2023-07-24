@@ -2,7 +2,7 @@
   "extends": ["./libs/ds-dev-config/config/designsystem-eslintrc.yml"],
   "root": true,
   "ignorePatterns": ["**/*"],
-  "plugins": ["@nrwl/nx", "eslint-plugin-no-inline-styles"],
+  "plugins": ["@nx", "eslint-plugin-no-inline-styles"],
   "rules": {
     "no-inline-styles/no-inline-styles": 2
   },
@@ -18,7 +18,8 @@
         "**/__tests__/*.test.ts",
         "**/__tests__/*.test.tsx",
         "**/__tests__/*.test.stories.tsx",
-        "**/__tests__/*.test.storiesof.stories.tsx"
+        "**/__tests__/*.test.storiesof.stories.tsx",
+        "**/*.stories.tsx"
       ],
       "rules": {
         "sonarjs/no-duplicate-string": "off"
@@ -27,7 +28,7 @@
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
-        "@nrwl/nx/enforce-module-boundaries": [
+        "@nx/enforce-module-boundaries": [
           "error",
           {
             "enforceBuildableLibDependency": true,
@@ -41,6 +42,11 @@
           }
         ]
       }
+    },
+    {
+      "files": "*.json",
+      "parser": "jsonc-eslint-parser",
+      "rules": {}
     }
   ]
 }

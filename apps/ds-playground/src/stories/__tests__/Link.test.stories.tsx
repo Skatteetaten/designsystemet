@@ -4,7 +4,7 @@ import { Link, LinkProps } from '@skatteetaten/ds-buttons';
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath, CalendarSVGpath } from '@skatteetaten/ds-icons';
 import { expect } from '@storybook/jest';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { userEvent, waitFor, within } from '@storybook/testing-library';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
@@ -24,7 +24,7 @@ const verifyAttribute =
     );
   };
 
-export default {
+const meta = {
   component: Link,
   title: 'Tester/Link',
   argTypes: {
@@ -63,263 +63,303 @@ export default {
     onClick: { table: { disable: true } },
     onFocus: { table: { disable: true } },
   },
-} as ComponentMeta<typeof Link>;
+} as Meta<typeof Link>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-const Template: ComponentStory<typeof Link> = (args) => (
-  <div data-test-block>
-    <Link {...args} onClick={(e): void => e.preventDefault()}>
-      {/* eslint-disable-next-line testing-library/no-node-access */}
-      {args.children}
-    </Link>
-  </div>
+const Template: StoryFn<typeof Link> = (args) => (
+  <Link {...args} onClick={(e): void => e.preventDefault()}>
+    {/* eslint-disable-next-line testing-library/no-node-access */}
+    {args.children}
+  </Link>
 );
 
 const defaultArgs: LinkProps = {
-  href: '#root',
+  href: '#storybook-root',
   children: defaultLinkText,
 };
 
-// Når Link har en ref, så får dom a elementet ref forwarded
-export const WithRef = Template.bind({});
-WithRef.storyName = 'With Ref (FA1)';
-WithRef.args = {
-  ...defaultArgs,
-  ref: (instance: HTMLAnchorElement | null): void => {
-    if (instance) {
-      instance.id = 'dummyIdForwardedFromRef';
-    }
+export const WithRef = {
+  render: Template,
+  name: 'With Ref (FA1)',
+
+  args: {
+    ...defaultArgs,
+    ref: (instance: HTMLAnchorElement | null): void => {
+      if (instance) {
+        instance.id = 'dummyIdForwardedFromRef';
+      }
+    },
   },
-};
-WithRef.argTypes = {
-  ref: { table: { disable: false } },
-};
-WithRef.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithRef.play = verifyAttribute('id', 'dummyIdForwardedFromRef');
 
-// Når Link har en id, så har a-element id
-// Når Link har en custom CSS, så vises custom stil
-// Når Link har en lang, så har a-element lang
-// Når Link har dataTestid, så har a-elementet data-testid satt
-export const WithAttributes = Template.bind({});
-WithAttributes.storyName = 'With Attributes(FA2-5)';
-WithAttributes.args = {
-  ...defaultArgs,
-  id: elementId,
-  className: 'dummyClassname',
-  lang: 'nb',
-  'data-testid': '123ID',
-};
-WithAttributes.argTypes = {
-  id: { table: { disable: false } },
-  className: { table: { disable: false } },
-  lang: { table: { disable: false } },
-  'data-testid': { table: { disable: false } },
-};
-WithAttributes.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const link = canvas.getByRole('link');
-  await expect(link).toHaveClass('dummyClassname');
-  await expect(link).toHaveAttribute('id', elementId);
-  await expect(link).toHaveAttribute('lang', 'nb');
-  await expect(link).toHaveAttribute('data-testid', '123ID');
-};
-
-// Når Link instansieres, så får den riktige default-verdier og rendrer riktig i ulike tilstander
-export const Defaults = Template.bind({});
-Defaults.storyName = 'Defaults (A1 delvis, A2, A3 delvis, B1)';
-Defaults.args = {
-  ...defaultArgs,
-};
-Defaults.argTypes = {
-  href: { table: { disable: false } },
-  children: { table: { disable: false } },
-};
-Defaults.parameters = {
-  imageSnapshot: {
-    hover: `${wrapper} > a`,
-    focus: `${wrapper} > a`,
-    click: `${wrapper} > a`,
+  argTypes: {
+    ref: { table: { disable: false } },
   },
-};
-Defaults.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const link = canvas.getByRole('link');
-  await expect(link).not.toHaveAttribute('rel');
-  await expect(link).not.toHaveAttribute('target');
-  // eslint-disable-next-line testing-library/no-node-access
-  const svg = link.querySelector('svg');
-  await expect(svg).not.toBeInTheDocument();
-  expect(link).toHaveTextContent(defaultLinkText);
-};
 
-// Når Link har en veldig lang tekst så skal tekst venstrejusteres
-export const WithLongText = Template.bind({});
-WithLongText.storyName = 'With Long Text (A1 delvis)';
-WithLongText.args = {
-  ...defaultArgs,
-  children:
-    'Denne lenken har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert uansett om ikon eller ikke.',
-};
-WithLongText.argTypes = {
-  children: { table: { disable: false } },
-};
-
-// Når Link har en veldig lang tekst, valgfritt ikon og eksternal ikon så skal tekst venstrejusteres
-export const WithLongTextIconAndExternalIcon = Template.bind({});
-WithLongTextIconAndExternalIcon.storyName =
-  'With Long Text And Icons (A1 delvis)';
-WithLongTextIconAndExternalIcon.args = {
-  ...defaultArgs,
-  isExternal: true,
-  svgPath: CalendarSVGpath,
-  children:
-    'Denne lenken har en veldig lang tekst med ikon på venstre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert.',
-};
-WithLongTextIconAndExternalIcon.argTypes = {
-  isExternal: { table: { disable: false } },
-  svgPath: { table: { disable: false } },
-  children: { table: { disable: false } },
-};
-
-// Når Link har ett valgfritt ikon, så vises ikonet. Tester også for de icon props som er relevant for saken med systemIcon som er brukt
-export const WithIcon = Template.bind({});
-WithIcon.storyName = 'With Icon (A4, B2)';
-WithIcon.args = {
-  ...defaultArgs,
-  svgPath: CalendarSVGpath,
-};
-WithIcon.argTypes = {
-  svgPath: { table: { disable: false } },
-};
-WithIcon.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const link = canvas.getByRole('link');
-  // eslint-disable-next-line testing-library/no-node-access
-  const svg = link.querySelector('svg');
-  await expect(svg).toHaveAttribute('aria-hidden', 'true');
-  await expect(svg).toHaveAttribute('viewBox', systemIconViewBox);
-};
-
-// Når Link har isExternal, så vises riktig ikon med tilhørende tekst. Tester også for de icon props som er relevant for saken med systemIcon som er brukt
-export const WithExternalIcon = Template.bind({});
-WithExternalIcon.storyName = 'With External Icon (A5)';
-WithExternalIcon.args = {
-  ...defaultArgs,
-  isExternal: true,
-};
-WithExternalIcon.argTypes = {
-  isExternal: { table: { disable: false } },
-};
-WithExternalIcon.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const link = canvas.getByRole('link');
-  // eslint-disable-next-line testing-library/no-node-access
-  const svg = link.querySelector('svg');
-  await expect(svg).toHaveAttribute('aria-label', 'Til et annet nettsted');
-  await expect(svg).toHaveAttribute('viewBox', systemIconViewBox);
-};
-
-// Når Link har color white, så vises tekst og ikon i hvit
-export const WithColor = Template.bind({});
-WithColor.storyName = 'With Color (A6)';
-WithColor.args = {
-  ...defaultArgs,
-  color: 'white',
-  isExternal: true,
-  svgPath: AddOutlineSVGpath,
-};
-WithColor.argTypes = {
-  color: {
-    table: { disable: false },
+  parameters: {
+    imageSnapshot: { disable: true },
   },
-};
-WithColor.parameters = {
-  backgrounds: {
-    default: 'themePrimary',
+
+  play: verifyAttribute('id', 'dummyIdForwardedFromRef'),
+} satisfies Story;
+
+export const WithAttributes = {
+  render: Template,
+  name: 'With Attributes(FA2-5)',
+
+  args: {
+    ...defaultArgs,
+    id: elementId,
+    className: 'dummyClassname',
+    lang: 'nb',
+    'data-testid': '123ID',
   },
-  imageSnapshot: {
-    hover: `${wrapper} > a`,
-    focus: `${wrapper} > a`,
+
+  argTypes: {
+    id: { table: { disable: false } },
+    className: { table: { disable: false } },
+    lang: { table: { disable: false } },
+    'data-testid': { table: { disable: false } },
   },
-};
 
-// Når Link har target, så har link-elementet target med riktig verdi
-export const WithTarget = Template.bind({});
-WithTarget.storyName = 'With Target (A2)';
-WithTarget.args = {
-  ...defaultArgs,
-  target: '_blank',
-};
-WithTarget.argTypes = {
-  target: { table: { disable: false } },
-};
-WithTarget.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithTarget.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const link = canvas.getByRole('link');
-  expect(link).toHaveAttribute('rel', 'noreferrer');
-  expect(link).toHaveAttribute('target', '_blank');
-};
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const link = canvas.getByRole('link');
+    await expect(link).toHaveClass('dummyClassname');
+    await expect(link).toHaveAttribute('id', elementId);
+    await expect(link).toHaveAttribute('lang', 'nb');
+    await expect(link).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
 
-// Når Link har ariaDescribedby, så har link element aria-describedby satt
-export const WithAriaDescribedby = Template.bind({});
-WithAriaDescribedby.storyName = 'With AriaDescribedby (B3)';
-WithAriaDescribedby.args = {
-  ...defaultArgs,
-  ariaDescribedby: elementId,
-};
-WithAriaDescribedby.argTypes = {
-  ariaDescribedby: { table: { disable: false } },
-};
-WithAriaDescribedby.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithAriaDescribedby.play = verifyAttribute('aria-describedby', elementId);
+export const Defaults = {
+  render: Template,
+  name: 'Defaults (A1 delvis, A2, A3 delvis, B1)',
 
-// Når brukeren klikker på lenken, så kalles funksjonen i onClick prop.
-// onClick-event endrer lenketeksten til lenken
+  args: {
+    ...defaultArgs,
+  },
+
+  argTypes: {
+    href: { table: { disable: false } },
+    children: { table: { disable: false } },
+  },
+
+  parameters: {
+    imageSnapshot: {
+      hover: `${wrapper} > a`,
+      focus: `${wrapper} > a`,
+      click: `${wrapper} > a`,
+    },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const link = canvas.getByRole('link');
+    await expect(link).not.toHaveAttribute('rel');
+    await expect(link).not.toHaveAttribute('target');
+    // eslint-disable-next-line testing-library/no-node-access
+    const svg = link.querySelector('svg');
+    await expect(svg).not.toBeInTheDocument();
+    expect(link).toHaveTextContent(defaultLinkText);
+  },
+} satisfies Story;
+
+export const WithLongText = {
+  render: Template,
+  name: 'With Long Text (A1 delvis)',
+
+  args: {
+    ...defaultArgs,
+    children:
+      'Denne lenken har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert uansett om ikon eller ikke.',
+  },
+
+  argTypes: {
+    children: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithLongTextIconAndExternalIcon = {
+  render: Template,
+  name: 'With Long Text And Icons (A1 delvis)',
+
+  args: {
+    ...defaultArgs,
+    isExternal: true,
+    svgPath: CalendarSVGpath,
+    children:
+      'Denne lenken har en veldig lang tekst med ikon på venstre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert.',
+  },
+
+  argTypes: {
+    isExternal: { table: { disable: false } },
+    svgPath: { table: { disable: false } },
+    children: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithIcon = {
+  render: Template,
+  name: 'With Icon (A4, B2)',
+
+  args: {
+    ...defaultArgs,
+    svgPath: CalendarSVGpath,
+  },
+
+  argTypes: {
+    svgPath: { table: { disable: false } },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const link = canvas.getByRole('link');
+    // eslint-disable-next-line testing-library/no-node-access
+    const svg = link.querySelector('svg');
+    await expect(svg).toHaveAttribute('aria-hidden', 'true');
+    await expect(svg).toHaveAttribute('viewBox', systemIconViewBox);
+  },
+} satisfies Story;
+
+export const WithExternalIcon = {
+  render: Template,
+  name: 'With External Icon (A5)',
+
+  args: {
+    ...defaultArgs,
+    isExternal: true,
+  },
+
+  argTypes: {
+    isExternal: { table: { disable: false } },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const link = canvas.getByRole('link');
+    // eslint-disable-next-line testing-library/no-node-access
+    const svg = link.querySelector('svg');
+    await expect(svg).toHaveAttribute('aria-label', 'Til et annet nettsted');
+    await expect(svg).toHaveAttribute('viewBox', systemIconViewBox);
+  },
+} satisfies Story;
+
+export const WithColor = {
+  render: Template,
+  name: 'With Color (A6)',
+
+  args: {
+    ...defaultArgs,
+    color: 'white',
+    isExternal: true,
+    svgPath: AddOutlineSVGpath,
+  },
+
+  argTypes: {
+    color: {
+      table: { disable: false },
+    },
+  },
+
+  parameters: {
+    backgrounds: {
+      default: 'themePrimary',
+    },
+    imageSnapshot: {
+      hover: `${wrapper} > a`,
+      focus: `${wrapper} > a`,
+    },
+  },
+} satisfies Story;
+
+export const WithTarget = {
+  render: Template,
+  name: 'With Target (A2)',
+
+  args: {
+    ...defaultArgs,
+    target: '_blank',
+  },
+
+  argTypes: {
+    target: { table: { disable: false } },
+  },
+
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const link = canvas.getByRole('link');
+    expect(link).toHaveAttribute('rel', 'noreferrer');
+    expect(link).toHaveAttribute('target', '_blank');
+  },
+} satisfies Story;
+
+export const WithAriaDescribedby = {
+  render: Template,
+  name: 'With AriaDescribedby (B3)',
+
+  args: {
+    ...defaultArgs,
+    ariaDescribedby: elementId,
+  },
+
+  argTypes: {
+    ariaDescribedby: { table: { disable: false } },
+  },
+
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+
+  play: verifyAttribute('aria-describedby', elementId),
+} satisfies Story;
+
 const nyLinkText = 'Ny lenketekst slik at vi ser at event fungerte';
-const OnClickTemplate: ComponentStory<typeof Link> = (args) => {
+const OnClickTemplate: StoryFn<typeof Link> = (args) => {
   const [linkText, setLinkText] = useState(
     'Klikk på lenken for å teste onClick event'
   );
   return (
-    <div data-test-block>
-      <Link
-        {...args}
-        onClick={(e): void => {
-          e.preventDefault();
-          setLinkText(nyLinkText);
-          args.onClick && args.onClick(e);
-        }}
-      >
-        {linkText}
-      </Link>
-    </div>
+    <Link
+      {...args}
+      onClick={(e): void => {
+        e.preventDefault();
+        setLinkText(nyLinkText);
+        args.onClick && args.onClick(e);
+      }}
+    >
+      {linkText}
+    </Link>
   );
 };
-export const WithOnClick = OnClickTemplate.bind({});
-WithOnClick.storyName = 'With onClick (A3 delvis)';
-WithOnClick.args = {
-  ...defaultArgs,
-  svgPath: CalendarSVGpath,
-};
-WithOnClick.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithOnClick.play = async ({ args, canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const link = canvas.getByRole('link');
-  await expect(link).toHaveTextContent(
-    'Klikk på lenken for å teste onClick event'
-  );
-  await userEvent.click(link);
-  await expect(link).toHaveTextContent(
-    'Ny lenketekst slik at vi ser at event fungerte'
-  );
-  await waitFor(() => expect(args.onClick).toHaveBeenCalled());
-};
+
+export const WithOnClick = {
+  render: OnClickTemplate,
+  name: 'With onClick (A3 delvis)',
+
+  args: {
+    ...defaultArgs,
+    svgPath: CalendarSVGpath,
+  },
+
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const link = canvas.getByRole('link');
+    await expect(link).toHaveTextContent(
+      'Klikk på lenken for å teste onClick event'
+    );
+    await userEvent.click(link);
+    await expect(link).toHaveTextContent(
+      'Ny lenketekst slik at vi ser at event fungerte'
+    );
+    await waitFor(() => expect(args.onClick).toHaveBeenCalled());
+  },
+} satisfies Story;

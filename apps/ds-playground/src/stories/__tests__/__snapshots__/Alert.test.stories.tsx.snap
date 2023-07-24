@@ -692,7 +692,7 @@ exports[`Tester/Alert WithMarkup smoke-test 1`] = `
         </h1>
         <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
           Ta kontakt med kortutsteder for
-          <a href="#root">
+          <a href="#storybook-root">
             mer informasjon
           </a>
         </p>
