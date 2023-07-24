@@ -51,7 +51,7 @@
     "docker:start": "docker run -d --rm --name snapshotscontainer -p 3000:3000 -e 'CONNECTION_TIMEOUT=600000' -v $(pwd)/dist/storybook/ds-playground:/opt/ds-playground -e ALLOW_FILE_PROTOCOL=true browserless/chrome:1.59.0-chrome-stable",
     "docker:start:linux": "docker run -d --rm --name snapshotscontainer -e 'CONNECTION_TIMEOUT=600000' -v $(pwd)/dist/storybook/ds-playground:/opt/ds-playground -e ALLOW_FILE_PROTOCOL=true --net=host browserless/chrome:1.59.0-chrome-stable",
     "docker:stop": "docker stop snapshotscontainer",
-    "downloadTranslations": "TEKSTLISTEKATALOG=designsystemet TEKSTLISTER='Shared,ds-alerts,ds-buttons,ds-forms,ds-layout,ds-tables,ds-status' TRANSLATIONS_FOLDER='./libs/ds-core-utils/src/translations' ts-node  --project tsconfig.base.json  ./libs/ds-dev-config/src/scripts/downloadTranslations.ts"
+    "downloadTranslations": "TEKSTLISTEKATALOG=designsystemet TEKSTLISTER='Shared,ds-alerts,ds-buttons,ds-forms,ds-layout,ds-tables,ds-status,ds-collections' TRANSLATIONS_FOLDER='./libs/ds-core-utils/src/translations' ts-node  --project tsconfig.base.json  ./libs/ds-dev-config/src/scripts/downloadTranslations.ts"
   },
   "dependencies": {
     "@skatteetaten/ds-core-designtokens": "file:dist/libs/ds-core-designtokens",
