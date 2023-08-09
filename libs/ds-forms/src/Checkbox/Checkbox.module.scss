@@ -90,7 +90,8 @@
     }
   }
 
-  .input:hover + .label {
+  .input:hover + .label,
+  .input:hover + .label .labelCheckbox {
     --checkbox-border-color: var(--semantic-interactive-main);
     --checkbox-background-color: var(--semantic-interactive-background);
     --check-color: var(--semantic-interactive-background);
@@ -101,6 +102,13 @@
   .input:focus + .label .labelCheckbox {
     outline: 2px solid var(--semantic-interactive-main);
     outline-offset: var(--spacing-xxs);
+  }
+
+  .input:active + .label,
+  .input:active + .label .labelCheckbox {
+    --checkbox-border-color: var(--semantic-interactive-foreground);
+    --label-color: var(--semantic-interactive-foreground);
+    --description-color: var(--semantic-interactive-foreground);
   }
 
   .input:disabled + .label {
@@ -116,16 +124,24 @@
     cursor: not-allowed;
   }
 
-  .input:checked + .label {
+  .input:checked + .label,
+  .input:checked + .label .labelCheckbox {
     --checkbox-border-color: var(--semantic-interactive-main);
     --checkbox-background-color: var(--semantic-interactive-main);
-
-    &:hover {
-      --check-color: var(--palette-graphite-0);
-    }
+    --check-color: var(--palette-graphite-0);
   }
 
-  .input:checked:disabled + .label {
+  .input:checked:active + .label,
+  .input:checked:active + .label .labelCheckbox {
+    --checkbox-border-color: var(--semantic-interactive-foreground);
+    --label-color: var(--semantic-interactive-foreground);
+    --description-color: var(--semantic-interactive-foreground);
+    --checkbox-background-color: var(--semantic-interactive-foreground);
+    --check-color: var(--palette-graphite-0);
+  }
+
+  .input:checked:disabled + .label,
+  .input:checked:disabled + .label .labelCheckbox {
     --checkbox-background-color: var(--semantic-disabled-background);
     --check-color: var(--semantic-disabled-foreground);
   }

@@ -153,8 +153,9 @@ Defaults.argTypes = {
 };
 Defaults.parameters = {
   imageSnapshot: {
-    hover: `${wrapper} > div > label`,
-    focus: `${wrapper} > div > input`,
+    hover: `${wrapper} label`,
+    focus: `${wrapper} input`,
+    click: `${wrapper} label`,
   },
 };
 Defaults.play = async ({ canvasElement }): Promise<void> => {
@@ -183,8 +184,9 @@ WithDescription.argTypes = {
 };
 WithDescription.parameters = {
   imageSnapshot: {
-    hover: `${wrapper} > div > label`,
-    focus: `${wrapper} > div > input`,
+    hover: `${wrapper} label`,
+    focus: `${wrapper} input`,
+    click: `${wrapper} label`,
   },
 };
 WithDescription.play = async ({ canvasElement }): Promise<void> => {
@@ -287,8 +289,9 @@ WithChecked.argTypes = {
 };
 WithChecked.parameters = {
   imageSnapshot: {
-    hover: `${wrapper} > div > label`,
-    focus: `${wrapper} > div > input`,
+    hover: `${wrapper} label`,
+    focus: `${wrapper} input`,
+    click: `${wrapper} label`,
   },
 };
 WithChecked.play = async ({ canvasElement }): Promise<void> => {
@@ -406,8 +409,9 @@ WithError.argTypes = {
 };
 WithError.parameters = {
   imageSnapshot: {
-    hover: `${wrapper} > div > label`,
-    focus: `${wrapper} > div > input`,
+    hover: `${wrapper} label`,
+    focus: `${wrapper} input`,
+    click: `${wrapper} label`,
   },
 };
 WithError.play = async ({ canvasElement }): Promise<void> => {
@@ -459,8 +463,8 @@ WithErrorAndRequired.argTypes = {
 };
 WithErrorAndRequired.parameters = {
   imageSnapshot: {
-    hover: `${wrapper} > div > label`,
-    focus: `${wrapper} > div > input`,
+    hover: `${wrapper} label`,
+    focus: `${wrapper} input`,
   },
 };
 WithErrorAndRequired.play = async ({ canvasElement }): Promise<void> => {
