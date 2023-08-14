@@ -145,6 +145,7 @@
     "nyc": "15.1.0",
     "postcss-js": "4.0.1",
     "prettier": "2.8.8",
+    "rollup-plugin-visualizer": "5.9.2",
     "sonarqube-scanner": "3.0.1",
     "style-loader": "3.3.1",
     "stylelint": "15.1.0",
