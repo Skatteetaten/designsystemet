@@ -422,8 +422,10 @@ exports[`Tester/ErrorSummary/ErrorSummary WithRef play-test 1`] = `
 `;
 
 exports[`Tester/ErrorSummary/ErrorSummary WithShadowRootNode play-test 1`] = `
-<errorsummary-customelement>
-</errorsummary-customelement>
+<div data-test-block="true">
+  <errorsummary-customelement>
+  </errorsummary-customelement>
+</div>
 `;
 
 exports[`Tester/ErrorSummary/ErrorSummary WithTitleAs play-test 1`] = `

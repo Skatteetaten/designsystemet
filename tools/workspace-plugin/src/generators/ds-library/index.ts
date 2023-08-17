@@ -8,13 +8,17 @@ import {
   updateJson,
   updateProjectConfiguration,
   generateFiles,
-} from '@nrwl/devkit';
-import { libraryGenerator } from '@nrwl/react';
-import { Schema } from './schema';
-import { Linter } from '@nrwl/linter';
+} from '@nx/devkit';
+import { Linter } from '@nx/linter';
+import { libraryGenerator } from '@nx/react';
 import { configurationGenerator, scssGenerator } from 'nx-stylelint';
 
-export default async function (tree: Tree, schema: Schema) {
+import { Schema } from './schema';
+
+export default async function (
+  tree: Tree,
+  schema: Schema
+): Promise<() => void> {
   const projectName = schema.name;
 
   await libraryGenerator(tree, {
@@ -77,13 +81,13 @@ export default async function (tree: Tree, schema: Schema) {
   updateJson(tree, babelrcPath, (babelrc): object => {
     babelrc.presets = undefined;
     babelrc.plugins = undefined;
-    babelrc.extends = '../../.babelrc';
+    babelrc.extends = '../../../../.babelrc';
     return babelrc;
   });
 
   const eslintrcPath = joinPathFragments(projectConfig.root, '.eslintrc.json');
   updateJson(tree, eslintrcPath, (eslintrc): object => {
-    eslintrc.extends = ['../../.eslintrc.json'];
+    eslintrc.extends = ['../../../../.eslintrc.json'];
     return eslintrc;
   });
 
@@ -121,7 +125,7 @@ export default async function (tree: Tree, schema: Schema) {
     'tsconfig.lib.json'
   );
   updateJson(tree, tsconfigLib, (tsconfigLib): object => {
-    tsconfigLib.files.push('../../types/i18next.d.ts');
+    tsconfigLib.files.push('../../../../types/i18next.d.ts');
     return tsconfigLib;
   });
 

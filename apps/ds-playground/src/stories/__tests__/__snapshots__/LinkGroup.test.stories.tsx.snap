@@ -14,7 +14,7 @@ exports[`Tester/LinkGroup Defaults smoke-test 1`] = `
         </path>
       </svg>
       <a class="Link_link__jeUpY  "
-         href="#root"
+         href="#storybook-root"
       >
         Er du pendler?
       </a>
@@ -30,7 +30,7 @@ exports[`Tester/LinkGroup Defaults smoke-test 1`] = `
         </path>
       </svg>
       <a class="Link_link__jeUpY  "
-         href="#root"
+         href="#storybook-root"
       >
         Pendler du mye?
       </a>
@@ -46,7 +46,7 @@ exports[`Tester/LinkGroup Defaults smoke-test 1`] = `
         </path>
       </svg>
       <a class="Link_link__jeUpY  "
-         href="#root"
+         href="#storybook-root"
       >
         Pendler du dagen lang?
       </a>
@@ -69,7 +69,7 @@ exports[`Tester/LinkGroup VariantAnchors smoke-test 1`] = `
         </path>
       </svg>
       <a class="Link_link__jeUpY  "
-         href="#root"
+         href="#storybook-root"
       >
         Er du pendler?
       </a>
@@ -85,7 +85,7 @@ exports[`Tester/LinkGroup VariantAnchors smoke-test 1`] = `
         </path>
       </svg>
       <a class="Link_link__jeUpY  "
-         href="#root"
+         href="#storybook-root"
       >
         Pendler du mye?
       </a>
@@ -101,7 +101,7 @@ exports[`Tester/LinkGroup VariantAnchors smoke-test 1`] = `
         </path>
       </svg>
       <a class="Link_link__jeUpY  "
-         href="#root"
+         href="#storybook-root"
       >
         Pendler du dagen lang?
       </a>
@@ -128,7 +128,7 @@ exports[`Tester/LinkGroup WithAttributes play-test 1`] = `
         </path>
       </svg>
       <a class="Link_link__jeUpY  "
-         href="#root"
+         href="#storybook-root"
       >
         Er du pendler?
       </a>
@@ -144,7 +144,7 @@ exports[`Tester/LinkGroup WithAttributes play-test 1`] = `
         </path>
       </svg>
       <a class="Link_link__jeUpY  "
-         href="#root"
+         href="#storybook-root"
       >
         Pendler du mye?
       </a>
@@ -160,7 +160,7 @@ exports[`Tester/LinkGroup WithAttributes play-test 1`] = `
         </path>
       </svg>
       <a class="Link_link__jeUpY  "
-         href="#root"
+         href="#storybook-root"
       >
         Pendler du dagen lang?
       </a>
@@ -183,7 +183,7 @@ exports[`Tester/LinkGroup WithColor smoke-test 1`] = `
         </path>
       </svg>
       <a class="Link_link__jeUpY Link_link_white__bmeQu "
-         href="#root"
+         href="#storybook-root"
       >
         Er du pendler?
       </a>
@@ -199,7 +199,7 @@ exports[`Tester/LinkGroup WithColor smoke-test 1`] = `
         </path>
       </svg>
       <a class="Link_link__jeUpY Link_link_white__bmeQu "
-         href="#root"
+         href="#storybook-root"
       >
         Pendler du mye?
       </a>
@@ -215,7 +215,7 @@ exports[`Tester/LinkGroup WithColor smoke-test 1`] = `
         </path>
       </svg>
       <a class="Link_link__jeUpY Link_link_white__bmeQu "
-         href="#root"
+         href="#storybook-root"
       >
         Pendler du dagen lang?
       </a>
@@ -238,7 +238,7 @@ exports[`Tester/LinkGroup WithLongTextAndIcons smoke-test 1`] = `
         </path>
       </svg>
       <a class="Link_link__jeUpY  "
-         href="#root"
+         href="#storybook-root"
       >
         Denne lenken har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert uansett om ikon eller ikke og får et hengende innrykk.
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isExternal__O+HIA"
@@ -264,7 +264,7 @@ exports[`Tester/LinkGroup WithLongTextAndIcons smoke-test 1`] = `
         </path>
       </svg>
       <a class="Link_link__jeUpY  "
-         href="#root"
+         href="#storybook-root"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isCustom__nsOot"
              viewbox="0 0 24 24"
@@ -298,7 +298,7 @@ exports[`Tester/LinkGroup WithRef play-test 1`] = `
         </path>
       </svg>
       <a class="Link_link__jeUpY  "
-         href="#root"
+         href="#storybook-root"
       >
         Er du pendler?
       </a>
@@ -314,7 +314,7 @@ exports[`Tester/LinkGroup WithRef play-test 1`] = `
         </path>
       </svg>
       <a class="Link_link__jeUpY  "
-         href="#root"
+         href="#storybook-root"
       >
         Pendler du mye?
       </a>
@@ -330,7 +330,7 @@ exports[`Tester/LinkGroup WithRef play-test 1`] = `
         </path>
       </svg>
       <a class="Link_link__jeUpY  "
-         href="#root"
+         href="#storybook-root"
       >
         Pendler du dagen lang?
       </a>
@@ -353,7 +353,7 @@ exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
         </path>
       </svg>
       <a class="Link_link__jeUpY  "
-         href="#root"
+         href="#storybook-root"
       >
         Er du pendler?
       </a>
@@ -369,7 +369,7 @@ exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
         </path>
       </svg>
       <a class="Link_link__jeUpY  "
-         href="#root"
+         href="#storybook-root"
       >
         Pendler du mye?
       </a>
@@ -385,7 +385,7 @@ exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
         </path>
       </svg>
       <a class="Link_link__jeUpY  "
-         href="#root"
+         href="#storybook-root"
       >
         Pendler du dagen lang?
       </a>
@@ -403,7 +403,7 @@ exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
         </path>
       </svg>
       <a class="Link_link__jeUpY  "
-         href="#root"
+         href="#storybook-root"
       >
         Er du pendler?
       </a>
@@ -419,7 +419,7 @@ exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
         </path>
       </svg>
       <a class="Link_link__jeUpY  "
-         href="#root"
+         href="#storybook-root"
       >
         Pendler du mye?
       </a>
@@ -435,7 +435,7 @@ exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
         </path>
       </svg>
       <a class="Link_link__jeUpY  "
-         href="#root"
+         href="#storybook-root"
       >
         Pendler du dagen lang?
       </a>

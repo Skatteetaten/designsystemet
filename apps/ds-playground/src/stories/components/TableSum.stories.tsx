@@ -1,10 +1,10 @@
 import { Table } from '@skatteetaten/ds-table';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Table.Sum,
   title: 'Komponenter/Table/Sum',
   argTypes: {
@@ -29,6 +29,7 @@ export default {
       table: { category: category.htmlAttribute },
     },
   },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-table'),
     docs: {
@@ -37,17 +38,21 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Table.Sum>;
+} satisfies Meta<typeof Table.Sum>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: ComponentStory<typeof Table.Sum> = (args) => (
+const TemplateDefault: StoryFn<typeof Table.Sum> = (args) => (
   <Table caption={'testTable'}>
     <Table.Sum {...args} />
   </Table>
 );
 
-export const DataCellDefault = TemplateDefault.bind({});
-DataCellDefault.storyName = 'Default';
+export const DataCellDefault = {
+  render: TemplateDefault,
+  name: 'Default',
 
-DataCellDefault.args = {
-  children: '1 000kr',
-};
+  args: {
+    children: '1 000kr',
+  },
+} satisfies Story;

@@ -36,66 +36,66 @@ exports[`Tester/ErrorMessage WithAttributes play-test 1`] = `
 `;
 
 exports[`Tester/ErrorMessage WithLongText smoke-test 1`] = `
-<div class="errorMessageContainer"
-     data-test-block="true"
->
-  <label for="label1"
-         class="block"
-  >
-    Label
-  </label>
-  <input id="label1"
-         type="text"
-  >
-  <div aria-live="assertive"
-       aria-atomic="true"
-  >
-    <div class="ErrorMessage_errorMessage__508oW ">
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-hidden="true"
-           role="img"
-      >
-        <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
-        </path>
-      </svg>
-      <p class="ErrorMessage_errorMessageText__e27TU">
-        Dette blir en veldig lang feilmelding for å teste om du oppfører seg om den skal.
-      </p>
+<div data-test-block="true">
+  <div class="errorMessageContainer">
+    <label for="label1"
+           class="block"
+    >
+      Label
+    </label>
+    <input id="label1"
+           type="text"
+    >
+    <div aria-live="assertive"
+         aria-atomic="true"
+    >
+      <div class="ErrorMessage_errorMessage__508oW ">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+          </path>
+        </svg>
+        <p class="ErrorMessage_errorMessageText__e27TU">
+          Dette blir en veldig lang feilmelding for å teste om du oppfører seg om den skal.
+        </p>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`Tester/ErrorMessage WithLongTextAndBreaking smoke-test 1`] = `
-<div class="errorMessageContainer"
-     data-test-block="true"
->
-  <label for="label1"
-         class="block"
-  >
-    Label
-  </label>
-  <input id="label1"
-         type="text"
-  >
-  <div aria-live="assertive"
-       aria-atomic="true"
-  >
-    <div class="ErrorMessage_errorMessage__508oW ">
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-hidden="true"
-           role="img"
-      >
-        <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
-        </path>
-      </svg>
-      <p class="ErrorMessage_errorMessageText__e27TU">
-        Detteblirenveldiglangfeilmeldingforåtesteomduoppførersegomdenskal.
-      </p>
+<div data-test-block="true">
+  <div class="errorMessageContainer">
+    <label for="label1"
+           class="block"
+    >
+      Label
+    </label>
+    <input id="label1"
+           type="text"
+    >
+    <div aria-live="assertive"
+         aria-atomic="true"
+    >
+      <div class="ErrorMessage_errorMessage__508oW ">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+          </path>
+        </svg>
+        <p class="ErrorMessage_errorMessageText__e27TU">
+          Detteblirenveldiglangfeilmeldingforåtesteomduoppførersegomdenskal.
+        </p>
+      </div>
     </div>
   </div>
 </div>

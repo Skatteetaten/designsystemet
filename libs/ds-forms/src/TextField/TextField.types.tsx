@@ -8,7 +8,7 @@ import {
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 export const textFieldAsArr = ['input', 'textarea'] as const;
-export type TextFieldAs = typeof textFieldAsArr[number];
+export type TextFieldAs = (typeof textFieldAsArr)[number];
 
 export type TextboxRefHandle = {
   textboxRef: RefObject<HTMLTextAreaElement | HTMLInputElement>;

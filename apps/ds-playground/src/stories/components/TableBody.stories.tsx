@@ -1,16 +1,17 @@
 import { Table } from '@skatteetaten/ds-table';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Table.Body,
   title: 'komponenter/Table/Body',
   argTypes: {
     // Props
     children: { table: { category: category.props } },
   },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-table'),
     docs: {
@@ -19,9 +20,11 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Table.Body>;
+} satisfies Meta<typeof Table.Body>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: ComponentStory<typeof Table.Body> = (args) => (
+const TemplateDefault: StoryFn<typeof Table.Body> = (args) => (
   <Table caption={'body example'}>
     <Table.Body {...args}>
       <Table.Row>
@@ -36,5 +39,7 @@ const TemplateDefault: ComponentStory<typeof Table.Body> = (args) => (
   </Table>
 );
 
-export const TableRowDefault = TemplateDefault.bind({});
-TableRowDefault.storyName = 'Default';
+export const TableRowDefault = {
+  render: TemplateDefault,
+  name: 'Default',
+} satisfies Story;

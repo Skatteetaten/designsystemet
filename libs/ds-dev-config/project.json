@@ -1,11 +1,12 @@
 {
+  "name": "ds-dev-config",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ds-dev-config/src",
   "projectType": "library",
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@nrwl/rollup:rollup",
+      "executor": "@nx/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/ds-dev-config",
@@ -13,7 +14,7 @@
         "project": "libs/ds-dev-config/package.json",
         "entryFile": "libs/ds-dev-config/src/index.ts",
         "external": ["react/jsx-runtime"],
-        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "rollupConfig": "@nx/react/plugins/bundle-rollup",
         "compiler": "babel",
         "assets": [
           {
@@ -31,18 +32,20 @@
             "input": "libs/ds-dev-config/build",
             "output": "build"
           }
-        ]
+        ],
+        "babelUpwardRootMode": true,
+        "updateBuildableProjectDepsInPackageJson": true
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/ds-dev-config/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/ds-dev-config"],
       "options": {
         "jestConfig": "libs/ds-dev-config/jest.config.ts",
@@ -69,6 +72,5 @@
         "cwd": "dist/libs/ds-dev-config"
       }
     }
-  },
-  "name": "ds-dev-config"
+  }
 }

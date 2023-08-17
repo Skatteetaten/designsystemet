@@ -6,12 +6,12 @@ import {
   Paragraph,
 } from '@skatteetaten/ds-typography';
 import { expect } from '@storybook/jest';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 
-export default {
+const meta = {
   component: List,
   title: 'Tester/List/List',
   argTypes: {
@@ -34,7 +34,9 @@ export default {
       control: 'inline-radio',
     },
   },
-} as ComponentMeta<typeof List>;
+} satisfies Meta<typeof List>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 const defaultArgs: ListProps = {
   children: [
@@ -47,162 +49,175 @@ const defaultArgs: ListProps = {
     <List.Element key={'listElement_3'}>{'Snakk med andre.'}</List.Element>,
   ],
 };
-const Template: ComponentStory<typeof List> = (args) => (
-  <div data-test-block>
-    <List {...args} />
-  </div>
-);
 
-// Når List har en ref, så får dom elementet ref forwarded
-export const WithRef = Template.bind({});
-WithRef.storyName = 'With Ref (FA1)';
-WithRef.args = {
-  ...defaultArgs,
-  ref: (instance: HTMLUListElement | null): void => {
-    if (instance) {
-      instance.id = 'dummyIdForwardedFromRef';
-    }
-  },
-};
-WithRef.argTypes = {
-  ref: { table: { disable: false } },
-};
-WithRef.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithRef.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const list = canvas.getByRole('list');
-  await expect(list).toHaveAttribute('id', 'dummyIdForwardedFromRef');
-};
+export const WithRef = {
+  name: 'With Ref (FA1)',
 
-// Når List har en id, custom className, lang og dataTestid, så får elementet attributene id, class, lang og data-testid satt og custom stil vises
-export const WithAttributes = Template.bind({});
-WithAttributes.storyName = 'With Attributes (FA2-5)';
-WithAttributes.args = {
-  ...defaultArgs,
-  id: 'htmlid',
-  className: 'dummyClassname',
-  lang: 'nb',
-  'data-testid': '123ID',
-};
-WithAttributes.argTypes = {
-  id: { table: { disable: false } },
-  className: { table: { disable: false } },
-  lang: { table: { disable: false } },
-  'data-testid': { table: { disable: false } },
-};
-WithAttributes.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const list = canvas.getByRole('list');
-  await expect(list).toHaveAttribute('id', 'htmlid');
-  await expect(list).toHaveClass('dummyClassname');
-  await expect(list).toHaveAttribute('lang', 'nb');
-  await expect(list).toHaveAttribute('data-testid', '123ID');
-};
-
-// Når List instansieres, får den riktige default-verdier
-export const Defaults = Template.bind({});
-Defaults.storyName = 'Defaults Variant Bullet (A1, B1, B2)';
-Defaults.args = {
-  ...defaultArgs,
-};
-Defaults.argTypes = {
-  children: {
-    table: { disable: false },
-    control: { type: null },
-  },
-};
-Defaults.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const list = canvas.getByRole('list');
-  await expect(list).toBeInTheDocument();
-  await expect(list.tagName).toBe('UL');
-};
-
-// Når List har en as, får elementet riktig tag og ser riktig ut
-export const VariantNumber = Template.bind({});
-VariantNumber.storyName = 'Variant Number(A1, B1)';
-VariantNumber.args = {
-  ...defaultArgs,
-  as: 'ol',
-};
-VariantNumber.argTypes = {
-  as: {
-    table: { disable: false },
-  },
-};
-VariantNumber.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const list = canvas.getByRole('list');
-  await expect(list).toBeInTheDocument();
-  await expect(list.tagName).toBe('OL');
-};
-
-// Når ListItem har en veldig lang tekst, så skal teksten ha hengende innrykk og brekke over flere linjer
-export const WithLongTextAndBreaking = Template.bind({});
-WithLongTextAndBreaking.storyName = 'With Long Text And Breaking (A1)';
-WithLongTextAndBreaking.args = {
-  ...defaultArgs,
-  children: [
-    <List.Element key={'listElement_1'}>
-      {'Denne listItem har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med ' +
-        'tekst som alltid er venstrejustert, brekke over flere linjer og får et hengende innrykk.'}
-    </List.Element>,
-    <List.Element key={'listElement_2'}>
-      {
-        'DennelistItemharenveldiglangtekst.Sålangatdentvingerframlinjeskiftmedtekstsomalltidervenstrejustertbrekkeoverflerelinjerogfårethengendeinntrykk.'
+  args: {
+    ...defaultArgs,
+    ref: (instance: HTMLUListElement | null): void => {
+      if (instance) {
+        instance.id = 'dummyIdForwardedFromRef';
       }
-    </List.Element>,
-  ],
-};
-WithLongTextAndBreaking.argTypes = {
-  children: {
-    table: { disable: false },
-    control: { type: null },
+    },
   },
-};
 
-// Når List instansieres med markup, får markup riktig styling
-export const WithMarkup = Template.bind({});
-WithMarkup.storyName = 'With Markup (A2, B2)';
-WithMarkup.args = {
-  ...defaultArgs,
-  children: [
-    <List.Element key={'listElement_1'}>
-      {'Kjenner du behovet til '}
-      <strong>{'brukeren?'}</strong>
-    </List.Element>,
-    <List.Element key={'listElement_2'}>
-      {'Behovet til brukeren er veldig viktig. '}
-      <a href={'#root'}>
-        {'Er du sikker på at du kjenner behovet til brukeren?'}
-      </a>
-    </List.Element>,
-    <List.Element key={'listElement_3'}>
-      {'Snakk med andre om '}
-      <em>{'italic, '}</em>
-      <mark>{'mark og '}</mark>
-      <code>{'code blokk'}</code>
-      {' bare på gøy'}
-    </List.Element>,
-  ],
-};
-WithMarkup.argTypes = {
-  children: {
-    table: { disable: false },
-    control: { type: null },
+  argTypes: {
+    ref: { table: { disable: false } },
   },
-};
-WithMarkup.parameters = {
-  imageSnapshot: {
-    hover: `${wrapper} > ul > li a`,
-    focus: `${wrapper} > ul > li a`,
-  },
-};
 
-const TemplateWithTwoParagraph: ComponentStory<typeof List> = (args) => (
-  <div data-test-block>
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const list = canvas.getByRole('list');
+    await expect(list).toHaveAttribute('id', 'dummyIdForwardedFromRef');
+  },
+} satisfies Story;
+
+export const WithAttributes = {
+  name: 'With Attributes (FA2-5)',
+
+  args: {
+    ...defaultArgs,
+    id: 'htmlid',
+    className: 'dummyClassname',
+    lang: 'nb',
+    'data-testid': '123ID',
+  },
+
+  argTypes: {
+    id: { table: { disable: false } },
+    className: { table: { disable: false } },
+    lang: { table: { disable: false } },
+    'data-testid': { table: { disable: false } },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const list = canvas.getByRole('list');
+    await expect(list).toHaveAttribute('id', 'htmlid');
+    await expect(list).toHaveClass('dummyClassname');
+    await expect(list).toHaveAttribute('lang', 'nb');
+    await expect(list).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const Defaults = {
+  name: 'Defaults Variant Bullet (A1, B1, B2)',
+
+  args: {
+    ...defaultArgs,
+  },
+
+  argTypes: {
+    children: {
+      table: { disable: false },
+      control: { type: null },
+    },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const list = canvas.getByRole('list');
+    await expect(list).toBeInTheDocument();
+    await expect(list.tagName).toBe('UL');
+  },
+} satisfies Story;
+
+export const VariantNumber = {
+  name: 'Variant Number(A1, B1)',
+
+  args: {
+    ...defaultArgs,
+    as: 'ol',
+  },
+
+  argTypes: {
+    as: {
+      table: { disable: false },
+    },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const list = canvas.getByRole('list');
+    await expect(list).toBeInTheDocument();
+    await expect(list.tagName).toBe('OL');
+  },
+} satisfies Story;
+
+export const WithLongTextAndBreaking = {
+  name: 'With Long Text And Breaking (A1)',
+
+  args: {
+    ...defaultArgs,
+    children: [
+      <List.Element key={'listElement_1'}>
+        {'Denne listItem har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med ' +
+          'tekst som alltid er venstrejustert, brekke over flere linjer og får et hengende innrykk.'}
+      </List.Element>,
+      <List.Element key={'listElement_2'}>
+        {
+          'DennelistItemharenveldiglangtekst.Sålangatdentvingerframlinjeskiftmedtekstsomalltidervenstrejustertbrekkeoverflerelinjerogfårethengendeinntrykk.'
+        }
+      </List.Element>,
+    ],
+  },
+
+  argTypes: {
+    children: {
+      table: { disable: false },
+      control: { type: null },
+    },
+  },
+} satisfies Story;
+
+export const WithMarkup = {
+  name: 'With Markup (A2, B2)',
+
+  args: {
+    ...defaultArgs,
+    children: [
+      <List.Element key={'listElement_1'}>
+        {'Kjenner du behovet til '}
+        <strong>{'brukeren?'}</strong>
+      </List.Element>,
+      <List.Element key={'listElement_2'}>
+        {'Behovet til brukeren er veldig viktig. '}
+        <a href={'#storybook-root'}>
+          {'Er du sikker på at du kjenner behovet til brukeren?'}
+        </a>
+      </List.Element>,
+      <List.Element key={'listElement_3'}>
+        {'Snakk med andre om '}
+        <em>{'italic, '}</em>
+        <mark>{'mark og '}</mark>
+        <code>{'code blokk'}</code>
+        {' bare på gøy'}
+      </List.Element>,
+    ],
+  },
+
+  argTypes: {
+    children: {
+      table: { disable: false },
+      control: { type: null },
+    },
+  },
+
+  parameters: {
+    imageSnapshot: {
+      hover: `${wrapper} > ul > li a`,
+      focus: `${wrapper} > ul > li a`,
+    },
+  },
+} satisfies Story;
+
+const TemplateWithTwoParagraph: StoryFn<typeof List> = (args) => (
+  <>
     <Paragraph hasSpacing>
       {'Jeg er et tekstavsnitt uten innrykk. Denne teksten skulle bli ca. to linjer lang, men jeg trenger litt mer innhold for å bli to linjer lang. ' +
         'Derfor fortsetter jeg å skrive på dette tekstavsnittet uten innrykk og etter en stund blir denne teksten ca to linjer lang.'}
@@ -212,25 +227,28 @@ const TemplateWithTwoParagraph: ComponentStory<typeof List> = (args) => (
       {'Jeg er et tekstavsnitt uten innrykk. Denne teksten skulle bli ca. to linjer lang, men jeg trenger litt mer innhold for å bli to linjer lang. ' +
         'Derfor fortsetter jeg å skrive på dette tekstavsnittet uten innrykk og etter en stund blir denne teksten ca to linjer lang.'}
     </Paragraph>
-  </div>
+  </>
 );
 
-// Når List har spacing, så får elementet en margin under listen
-export const WithSpacing = TemplateWithTwoParagraph.bind({});
-WithSpacing.storyName = 'With Spacing (A3)';
-WithSpacing.args = {
-  ...defaultArgs,
-  hasSpacing: true,
-};
-WithSpacing.argTypes = {
-  hasSpacing: { table: { disable: false } },
-};
+export const WithSpacing = {
+  render: TemplateWithTwoParagraph,
+  name: 'With Spacing (A3)',
+
+  args: {
+    ...defaultArgs,
+    hasSpacing: true,
+  },
+
+  argTypes: {
+    hasSpacing: { table: { disable: false } },
+  },
+} satisfies Story;
 
 // TODO Fjerne andre elementer når testprosjektet (FRONT-1008) er på plass
-const TemplateWithVariantsAndAtLeast10ItemsAndOtherComponents: ComponentStory<
+const TemplateWithVariantsAndAtLeast10ItemsAndOtherComponents: StoryFn<
   typeof List
 > = (args) => (
-  <div data-test-block>
+  <>
     <Paragraph>
       {
         'Her kan du se hvordan de forskjellige variantene til en list ser ut sammen med andre elementer med veksling av luft under listene.'
@@ -281,24 +299,24 @@ const TemplateWithVariantsAndAtLeast10ItemsAndOtherComponents: ComponentStory<
       }
     </Paragraph>
     <LinkGroup>
-      <LinkGroup.Link key={'linkGroupLink_1'} href={'#root'}>
+      <LinkGroup.Link key={'linkGroupLink_1'} href={'#storybook-root'}>
         {'Er du pendler?'}
       </LinkGroup.Link>
-      <LinkGroup.Link key={'linkGroupLink_2'} href={'#root'}>
+      <LinkGroup.Link key={'linkGroupLink_2'} href={'#storybook-root'}>
         {'Pendler du mye?'}
       </LinkGroup.Link>
-      <LinkGroup.Link key={'linkGroupLink_3'} href={'#root'}>
+      <LinkGroup.Link key={'linkGroupLink_3'} href={'#storybook-root'}>
         {'Pendler du dagen lang?'}
       </LinkGroup.Link>
     </LinkGroup>
-  </div>
+  </>
 );
 
-// Når List har minst ti number items (fordi ønsker to siffer som listepunkt), så blir listeelementene plassert korrekt i forhold til inntrykk og teksten
-export const WithBothVariantsAndAtLeast10NumberItems =
-  TemplateWithVariantsAndAtLeast10ItemsAndOtherComponents.bind({});
-WithBothVariantsAndAtLeast10NumberItems.storyName =
-  'With Both Variants And At Least 10 Number Items';
-WithBothVariantsAndAtLeast10NumberItems.args = {
-  ...defaultArgs,
-};
+export const WithBothVariantsAndAtLeast10NumberItems = {
+  render: TemplateWithVariantsAndAtLeast10ItemsAndOtherComponents,
+  name: 'With Both Variants And At Least 10 Number Items',
+
+  args: {
+    ...defaultArgs,
+  },
+} satisfies Story;

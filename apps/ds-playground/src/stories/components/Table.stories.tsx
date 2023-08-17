@@ -14,12 +14,12 @@ import {
   SortState,
 } from '@skatteetaten/ds-table';
 import { Paragraph } from '@skatteetaten/ds-typography';
-import { Story, ComponentMeta, ComponentStory } from '@storybook/react';
+import { StoryObj, StoryFn, Meta } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Table,
   title: 'komponenter/Table/Table',
   argTypes: {
@@ -63,6 +63,7 @@ export default {
       },
     },
   },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-table'),
     docs: {
@@ -71,10 +72,12 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Table>;
+} satisfies Meta<typeof Table>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 /* eslint-disable sonarjs/no-duplicate-string */
-const TemplateDefault: ComponentStory<typeof Table> = (args) => (
+const TemplateDefault: StoryFn<typeof Table> = (args) => (
   <Table {...args} variant={args.variant}>
     <Table.Header>
       <Table.Row>
@@ -111,7 +114,7 @@ const TemplateDefault: ComponentStory<typeof Table> = (args) => (
   </Table>
 );
 
-const TemplateVariant: ComponentStory<typeof Table> = (args) => {
+const TemplateVariant: StoryFn<typeof Table> = (args) => {
   const klage = 'Klage på vedtak';
   return (
     <>
@@ -185,25 +188,33 @@ const TemplateVariant: ComponentStory<typeof Table> = (args) => {
 
 const tableDefaultParameters = {};
 
-export const TableDefault: Story<TableProps> = TemplateDefault.bind({});
-TableDefault.storyName = 'Default';
 const baseArgs = {
   caption: 'Jeg er en tabell.',
 };
 
-TableDefault.args = {
-  ...baseArgs,
-};
-TableDefault.parameters = tableDefaultParameters;
+export const TableDefault: StoryObj<TableProps> = {
+  render: TemplateDefault,
+  name: 'Default',
 
-export const Variants: Story<TableProps> = TemplateVariant.bind({});
-Variants.args = {
-  ...baseArgs,
-  variant: 'compact',
-};
-Variants.parameters = tableDefaultParameters;
+  args: {
+    ...baseArgs,
+  },
 
-const TemplateSort: Story<TableProps> = (args) => {
+  parameters: tableDefaultParameters,
+} satisfies Story;
+
+export const Variants: StoryObj<TableProps> = {
+  render: TemplateVariant,
+
+  args: {
+    ...baseArgs,
+    variant: 'compact',
+  },
+
+  parameters: tableDefaultParameters,
+} satisfies Story;
+
+const TemplateSort: StoryFn<TableProps> = (args) => {
   const [sortState, setSortState] = useState<SortState>({
     direction: 'none',
   });
@@ -224,7 +235,7 @@ const TemplateSort: Story<TableProps> = (args) => {
   ];
 
   const sortedData = data.slice().sort((a, b) => {
-    const sortKey = sortState.sortKey as keyof typeof data[0];
+    const sortKey = sortState.sortKey as keyof (typeof data)[0];
     if (!sortKey) {
       return 0;
     }
@@ -269,16 +280,19 @@ const TemplateSort: Story<TableProps> = (args) => {
   );
 };
 
-export const TableSort: Story<TableProps> = TemplateSort.bind({});
-TableSort.storyName = 'Sortable';
+export const TableSort: StoryObj<TableProps> = {
+  render: TemplateSort,
+  name: 'Sortable',
 
-TableSort.args = {
-  ...baseArgs,
-  variant: 'standard',
-};
-TableSort.parameters = tableDefaultParameters;
+  args: {
+    ...baseArgs,
+    variant: 'standard',
+  },
 
-const TemplateExampleExpandable: Story<TableProps> = (args) => {
+  parameters: tableDefaultParameters,
+} satisfies Story;
+
+const TemplateExampleExpandable: StoryFn<TableProps> = (args) => {
   const [sortState, setSortState] = useState<SortState>({
     direction: 'none',
   });
@@ -359,7 +373,7 @@ const TemplateExampleExpandable: Story<TableProps> = (args) => {
   ];
 
   const sortedData = data.slice().sort((a, b) => {
-    const sortKey = sortState.sortKey as keyof typeof data[0];
+    const sortKey = sortState.sortKey as keyof (typeof data)[0];
 
     if (!sortKey) {
       return 0;
@@ -420,16 +434,19 @@ const TemplateExampleExpandable: Story<TableProps> = (args) => {
   );
 };
 
-export const TableExampleExpandable = TemplateExampleExpandable.bind({});
-TableExampleExpandable.storyName = 'Example Expandable';
+export const TableExampleExpandable = {
+  render: TemplateExampleExpandable,
+  name: 'Example Expandable',
 
-TableExampleExpandable.args = {
-  ...baseArgs,
-  variant: 'standard',
-};
-TableExampleExpandable.parameters = tableDefaultParameters;
+  args: {
+    ...baseArgs,
+    variant: 'standard',
+  },
 
-const TemplateExampleEditable: ComponentStory<typeof Table> = (args) => {
+  parameters: tableDefaultParameters,
+} satisfies Story;
+
+const TemplateExampleEditable: StoryFn<typeof Table> = (args) => {
   const [sortState, setSortState] = useState<SortState>({
     direction: 'none',
   });
@@ -466,7 +483,7 @@ const TemplateExampleEditable: ComponentStory<typeof Table> = (args) => {
   ];
 
   const sortedData = data.slice().sort((a, b) => {
-    const sortKey = sortState.sortKey as keyof typeof data[0];
+    const sortKey = sortState.sortKey as keyof (typeof data)[0];
 
     if (!sortKey) {
       return 0;
@@ -544,15 +561,18 @@ const TemplateExampleEditable: ComponentStory<typeof Table> = (args) => {
   );
 };
 
-export const TableExampleEditable = TemplateExampleEditable.bind({});
-TableExampleEditable.storyName = 'Example Editable';
+export const TableExampleEditable = {
+  render: TemplateExampleEditable,
+  name: 'Example Editable',
 
-TableExampleEditable.args = {
-  ...baseArgs,
-};
-TableExampleEditable.parameters = tableDefaultParameters;
+  args: {
+    ...baseArgs,
+  },
 
-const TemplateExampleEmtpyHeaders: ComponentStory<typeof Table> = (args) => {
+  parameters: tableDefaultParameters,
+} satisfies Story;
+
+const TemplateExampleEmtpyHeaders: StoryFn<typeof Table> = (args) => {
   const [sortState, setSortState] = useState<SortState>({
     direction: 'none',
   });
@@ -601,7 +621,7 @@ const TemplateExampleEmtpyHeaders: ComponentStory<typeof Table> = (args) => {
   ];
 
   const sortedData = data.slice().sort((a, b) => {
-    const sortKey = sortState.sortKey as keyof typeof data[0];
+    const sortKey = sortState.sortKey as keyof (typeof data)[0];
 
     if (!sortKey) {
       return 0;
@@ -683,11 +703,14 @@ const TemplateExampleEmtpyHeaders: ComponentStory<typeof Table> = (args) => {
   );
 };
 
-export const TableExampleEmtpyHeaders = TemplateExampleEmtpyHeaders.bind({});
-TableExampleEmtpyHeaders.storyName = 'Example with empty headers';
+export const TableExampleEmtpyHeaders = {
+  render: TemplateExampleEmtpyHeaders,
+  name: 'Example with empty headers',
 
-TableExampleEmtpyHeaders.args = {
-  ...baseArgs,
-  caption: 'Arbeidsoppgaver',
-};
-TableExampleEmtpyHeaders.parameters = tableDefaultParameters;
+  args: {
+    ...baseArgs,
+    caption: 'Arbeidsoppgaver',
+  },
+
+  parameters: tableDefaultParameters,
+} satisfies Story;

@@ -5,12 +5,12 @@ import {
   ErrorSummaryProps,
   getErrorSummaryTitleAsDefault,
 } from '@skatteetaten/ds-forms';
-import { Meta, Story } from '@storybook/react';
+import { StoryObj, Meta, StoryFn } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: ErrorSummary,
   title: 'Komponenter/ErrorSummary',
   argTypes: {
@@ -34,12 +34,15 @@ export default {
       },
     },
   },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-forms'),
   },
-} as Meta<ErrorSummaryProps>;
+} satisfies Meta<ErrorSummaryProps>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: Story<ErrorSummaryProps> = (args) => (
+const TemplateDefault: StoryFn<ErrorSummaryProps> = (args) => (
   <ErrorSummary {...args}>
     <ErrorSummary.Error referenceId={'id1'}>
       {'Husk å fylle ut type varer'}
@@ -50,7 +53,7 @@ const TemplateDefault: Story<ErrorSummaryProps> = (args) => (
   </ErrorSummary>
 );
 
-const TemplateExample: Story<ErrorSummaryProps> = () => {
+const TemplateExample: StoryFn<ErrorSummaryProps> = () => {
   return (
     <>
       {/* TODO FRONT-1279 erstattes med TextField når den er ferdig utviklet */}
@@ -88,18 +91,22 @@ const TemplateExample: Story<ErrorSummaryProps> = () => {
   );
 };
 
-export const ErrorSummaryDefault: Story<ErrorSummaryProps> =
-  TemplateDefault.bind({});
-export const ErrorSummaryExample: Story<ErrorSummaryProps> =
-  TemplateExample.bind({});
-ErrorSummaryDefault.storyName = 'Default';
-ErrorSummaryExample.storyName = 'Example';
-ErrorSummaryExample.parameters = {
-  controls: { disabled: true },
-};
+export const ErrorSummaryDefault: StoryObj<ErrorSummaryProps> = {
+  render: TemplateDefault,
+  name: 'Default',
 
-ErrorSummaryDefault.args = {
-  showErrorSummary: true,
-  content: 'Her kan du legge inn vilkårlig innhold',
-  titleAs: getErrorSummaryTitleAsDefault(),
-};
+  args: {
+    showErrorSummary: true,
+    content: 'Her kan du legge inn vilkårlig innhold',
+    titleAs: getErrorSummaryTitleAsDefault(),
+  },
+} satisfies Story;
+
+export const ErrorSummaryExample: StoryObj<ErrorSummaryProps> = {
+  render: TemplateExample,
+  name: 'Example',
+
+  parameters: {
+    controls: { disabled: true },
+  },
+} satisfies Story;

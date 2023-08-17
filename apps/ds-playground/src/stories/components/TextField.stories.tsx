@@ -5,13 +5,13 @@ import {
   TextFieldProps,
   textFieldAsArr,
 } from '@skatteetaten/ds-forms';
-import { useArgs } from '@storybook/client-api';
-import { Meta, Story } from '@storybook/react';
+import { useArgs } from '@storybook/preview-api';
+import { StoryObj, Meta, StoryFn } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: TextField,
   title: 'Komponenter/TextField',
   argTypes: {
@@ -87,12 +87,15 @@ export default {
     onChange: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
   },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-forms'),
   },
-} as Meta<TextFieldProps>;
+} satisfies Meta<typeof TextField>;
+export default meta;
 
-const TemplateDefaultControlled: Story<TextFieldProps> = (args) => {
+type Story = StoryObj<typeof meta>;
+const TemplateDefaultControlled: StoryFn<typeof TextField> = (args) => {
   const [, setArgs] = useArgs();
 
   return (
@@ -104,34 +107,37 @@ const TemplateDefaultControlled: Story<TextFieldProps> = (args) => {
     />
   );
 };
-export const TextFieldDefaultControlled: Story<TextFieldProps> =
-  TemplateDefaultControlled.bind({});
-TextFieldDefaultControlled.storyName = 'Default Controlled';
-TextFieldDefaultControlled.argTypes = {
-  defaultValue: { control: { disable: true } },
-};
-TextFieldDefaultControlled.args = {
-  label: 'Navn',
-  defaultValue: undefined,
-  value: '',
+
+export const TextFieldDefaultControlled: StoryObj<TextFieldProps> = {
+  render: TemplateDefaultControlled,
+  name: 'Default Controlled',
+
+  argTypes: {
+    defaultValue: { control: { disable: true } },
+  },
+
+  args: {
+    label: 'Navn',
+    defaultValue: undefined,
+    value: '',
+  },
+} satisfies Story;
+
+export const TextFieldDefaultUncontrolled: StoryObj<TextFieldProps> = {
+  name: 'Default Uncontrolled',
+
+  argTypes: {
+    value: { control: { disable: true } },
+  },
+
+  args: {
+    label: 'Navn',
+    defaultValue: 'Kari Nordmann',
+    value: undefined,
+  },
 };
 
-const TemplateDefaultUncontrolled: Story<TextFieldProps> = (args) => (
-  <TextField {...args} />
-);
-export const TextFieldDefaultUncontrolled: Story<TextFieldProps> =
-  TemplateDefaultUncontrolled.bind({});
-TextFieldDefaultUncontrolled.storyName = 'Default Uncontrolled';
-TextFieldDefaultUncontrolled.argTypes = {
-  value: { control: { disable: true } },
-};
-TextFieldDefaultUncontrolled.args = {
-  label: 'Navn',
-  defaultValue: 'Kari Nordmann',
-  value: undefined,
-};
-
-const TemplateExample: Story<TextFieldProps> = () => {
+const TemplateExample: StoryFn<typeof TextField> = (args) => {
   const [creditInput, setCreditInput] = useState('10000');
 
   const [postaCodeInput, setPostaCodeInput] = useState('');
@@ -185,7 +191,7 @@ const TemplateExample: Story<TextFieldProps> = () => {
         }}
       />
       <TextField
-        label={'Andre opplysninger'}
+        label={args.label}
         className={'textField300'}
         as={'textarea'}
         rows={4}
@@ -199,8 +205,13 @@ const TemplateExample: Story<TextFieldProps> = () => {
   );
 };
 
-export const TextFieldExample: Story<TextFieldProps> = TemplateExample.bind({});
-TextFieldExample.storyName = 'Example';
-TextFieldExample.parameters = {
-  controls: { disabled: true },
-};
+export const TextFieldExample = {
+  render: TemplateExample,
+  name: 'Example',
+  args: {
+    label: 'Andre opplysninger',
+  },
+  parameters: {
+    controls: { disabled: true },
+  },
+} satisfies Story;

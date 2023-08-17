@@ -3,12 +3,12 @@ import {
   getTableCellAlignmentDefault,
   Table,
 } from '@skatteetaten/ds-table';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Table.DataCell,
   title: 'Komponenter/Table/DataCell',
   argTypes: {
@@ -37,6 +37,7 @@ export default {
       table: { category: category.htmlAttribute },
     },
   },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-table'),
     docs: {
@@ -45,15 +46,19 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Table.DataCell>;
+} satisfies Meta<typeof Table.DataCell>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: ComponentStory<typeof Table.DataCell> = (args) => (
+const TemplateDefault: StoryFn<typeof Table.DataCell> = (args) => (
   <Table.DataCell {...args} />
 );
 
-export const DataCellDefault = TemplateDefault.bind({});
-DataCellDefault.storyName = 'Default';
+export const DataCellDefault = {
+  render: TemplateDefault,
+  name: 'Default',
 
-DataCellDefault.args = {
-  children: 'Example DataCell',
-};
+  args: {
+    children: 'Example DataCell',
+  },
+} satisfies Story;

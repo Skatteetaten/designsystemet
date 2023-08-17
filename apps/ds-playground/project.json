@@ -1,16 +1,14 @@
 {
+  "name": "ds-playground",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/ds-playground/src",
   "projectType": "application",
   "targets": {
     "serve": {
-      "executor": "@nrwl/storybook:storybook",
+      "executor": "@nx/storybook:storybook",
       "options": {
-        "uiFramework": "@storybook/react",
         "port": 4400,
-        "config": {
-          "configFolder": "apps/ds-playground/.storybook"
-        }
+        "configDir": "apps/ds-playground/.storybook"
       },
       "configurations": {
         "ci": {
@@ -19,23 +17,21 @@
       }
     },
     "build": {
-      "executor": "@nrwl/storybook:build",
-      "outputs": ["{options.outputPath}"],
+      "executor": "@nx/storybook:build",
+      "outputs": ["{options.outputDir}"],
       "options": {
-        "uiFramework": "@storybook/react",
-        "outputPath": "dist/storybook/ds-playground",
-        "config": {
-          "configFolder": "apps/ds-playground/.storybook"
-        }
+        "configDir": "apps/ds-playground/.storybook",
+        "outputDir": "dist/storybook/ds-playground"
       },
       "configurations": {
         "ci": {
           "quiet": true
-        }
+        },
+        "isVerbose": true
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["apps/ds-playground/**/*.{ts,tsx,js,jsx}"]
@@ -64,12 +60,11 @@
         "tsConfig": [
           "tsconfig.app.json",
           "tsconfig.spec.json",
-          ".storybook/tsconfig.json"
+          "tsconfig.storybook.json"
         ]
       }
     }
   },
   "tags": [],
-  "namedInputs": {},
-  "name": "ds-playground"
+  "namedInputs": {}
 }

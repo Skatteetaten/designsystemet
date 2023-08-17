@@ -1,4 +1,5 @@
 {
+  "name": "ds-icons",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ds-icons/src",
   "projectType": "library",
@@ -6,7 +7,7 @@
   "implicitDependencies": ["!ds-dev-config"],
   "targets": {
     "build": {
-      "executor": "@nrwl/rollup:rollup",
+      "executor": "@nx/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/ds-icons",
@@ -22,18 +23,20 @@
             "input": ".",
             "output": "."
           }
-        ]
+        ],
+        "babelUpwardRootMode": true,
+        "updateBuildableProjectDepsInPackageJson": true
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/ds-icons/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/ds-icons"],
       "options": {
         "jestConfig": "libs/ds-icons/jest.config.ts",
@@ -70,6 +73,5 @@
         "cwd": "dist/libs/ds-icons"
       }
     }
-  },
-  "name": "ds-icons"
+  }
 }

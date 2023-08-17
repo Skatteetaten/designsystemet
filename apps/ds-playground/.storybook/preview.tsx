@@ -1,18 +1,21 @@
-import breakpoints from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
+/* eslint-disable @typescript-eslint/no-var-requires */
 import {
   dsI18n,
   getCommonClassNameDefault,
   Languages,
 } from '@skatteetaten/ds-core-utils';
-import { useEffect, useGlobals } from '@storybook/client-api';
+import { useEffect, useGlobals } from '@storybook/preview-api';
+import { Decorator, Preview } from '@storybook/react';
 
 import { category } from './helpers';
 
 import '@skatteetaten/ds-core-designtokens/index.css';
 import './playground.css';
 import '../src/stories/designtokens/designtokens.css';
+const breakpoints = require('@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json');
+//TODO hvorfor feiler typecheck når breakpoints importeres med import i stedet for require
 
-const LanguageUpdater = (Story, context) => {
+const LanguageUpdater: Decorator = (Story, context) => {
   const [{ locale }, updateGlobals] = useGlobals();
   useEffect(() => {
     const locale = context.parameters.locale;
@@ -27,9 +30,21 @@ const LanguageUpdater = (Story, context) => {
   return <Story />;
 };
 
-export const decorators = [(Story) => <Story />, LanguageUpdater];
+const testBlock: Decorator = (Story, context) => {
+  if (context.kind.includes('Tester')) {
+    return (
+      <div data-test-block>
+        <Story />
+      </div>
+    );
+  } else {
+    return <Story />;
+  }
+};
 
-const makeViewPort = (dsbreakpoint) => {
+const makeViewPort = (
+  dsbreakpoint: keyof typeof breakpoints | '--mobile'
+): object => {
   return {
     [dsbreakpoint]: {
       name: dsbreakpoint,
@@ -51,7 +66,7 @@ const DSViewports = {
   ...makeViewPort('--breakpoint-xl'),
 };
 
-export const parameters = {
+const parameters = {
   actions: { argTypesRegex: '^on.*' },
   controls: { sort: 'alpha' },
   viewport: { viewports: DSViewports },
@@ -80,7 +95,7 @@ export const parameters = {
   },
 };
 
-export const argTypes = {
+const argTypes = {
   key: {
     control: false,
     description:
@@ -127,7 +142,7 @@ const langs = Object.entries(Languages).map(([key, value]) => ({
   value,
 }));
 
-export const globalTypes = {
+const globalTypes = {
   locale: {
     name: 'Locale',
     description: 'Internationalization locale',
@@ -138,3 +153,11 @@ export const globalTypes = {
     },
   },
 };
+
+const preview: Preview = {
+  decorators: [(Story): JSX.Element => <Story />, LanguageUpdater, testBlock],
+  parameters,
+  globalTypes,
+  argTypes,
+};
+export default preview;
