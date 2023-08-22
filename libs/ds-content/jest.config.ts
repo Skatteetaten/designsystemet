@@ -5,5 +5,5 @@ export default {
     '^.+\\.[tj]sx?$': ['babel-jest', { presets: ['@nx/react/babel'] }],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/libs/ds-buttons',
+  coverageDirectory: '../../coverage/libs/ds-content',
 };
