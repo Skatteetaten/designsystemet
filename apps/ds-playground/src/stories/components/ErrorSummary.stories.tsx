@@ -89,7 +89,7 @@ const TemplateExample: StoryFn<ErrorSummaryProps> = () => {
       <ErrorMessage className={'bottomSpacingXL'} showError={state.hasError}>
         {'Antall dager må fylles ut.'}
       </ErrorMessage>
-      <ErrorSummary showErrorSummary={state.hasError}>
+      <ErrorSummary id={'errorSummary1'} showErrorSummary={state.hasError}>
         <ErrorSummary.Error referenceId={'input_aar'}>
           {'Inntekståret må være etter 2008'}
         </ErrorSummary.Error>
@@ -102,7 +102,13 @@ const TemplateExample: StoryFn<ErrorSummaryProps> = () => {
       </ErrorSummary>
       <Button
         className={'topSpacingXL'}
-        onClick={(): void => setState({ hasError: !state.hasError })}
+        onClick={(): void => {
+          setState({ hasError: !state.hasError });
+          setTimeout((): void => {
+            const el = document.getElementById('errorSummary1');
+            el?.focus();
+          }, 0);
+        }}
       >
         {'Send'}
       </Button>
