@@ -44,6 +44,10 @@ code {
   background-color: var(--palette-denim-10);
 }
 
+.topSpacingXL {
+  margin-top: var(--spacing-xl);
+}
+
 .bottomSpacingXL {
   margin-bottom: var(--spacing-xl);
 }
