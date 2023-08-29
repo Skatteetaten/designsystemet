@@ -1,0 +1,98 @@
+@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
+.popover {
+  position: relative;
+  z-index: 1000;
+  width: fit-content;
+  max-width: $breakpoint-s;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--border-color);
+  background-color: var(--background-color);
+
+  &_forest {
+    --background-color: var(--semantic-success-background);
+    --border-color: var(--semantic-success-foreground);
+  }
+
+  &_ochre {
+    --background-color: var(--semantic-warning-background);
+    --border-color: var(--semantic-warning-foreground);
+  }
+
+  &_white {
+    --background-color: var(--palette-graphite-0);
+    --border-color: var(--palette-graphite-100);
+  }
+
+  &_arrowtopRight,
+  &_arrowtopLeft {
+    margin-top: var(--spacing-xl);
+  }
+
+  &_arrowbottomRight,
+  &_arrowbottomLeft {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  &Content {
+    display: flex;
+
+    &Wrapper {
+      flex-grow: 1;
+      padding: var(--spacing-s);
+      margin: 0;
+
+      @media (min-width: $breakpoint-xs) {
+        padding: var(--spacing-m);
+      }
+    }
+
+    &CloseButton {
+      align-self: start;
+      margin: var(--spacing-s) var(--spacing-s) 0 0;
+
+      &:not(:active) > svg {
+        fill: var(--palette-graphite-100);
+      }
+    }
+  }
+
+  &Arrow {
+    position: absolute;
+    z-index: -1;
+    width: var(--size-large);
+    height: var(--size-large);
+    border: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    transform: rotate(45deg);
+
+    &_topRight {
+      top: calc(-0.5 * var(--size-large) - 1px);
+      right: var(--size-extra-large);
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+    }
+
+    &_topLeft {
+      top: calc(-0.5 * var(--size-large) - 1px);
+      left: var(--size-extra-large);
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+    }
+
+    &_bottomRight {
+      right: var(--size-extra-large);
+      bottom: calc(-0.5 * var(--size-large) - 1px);
+      border-top-color: transparent;
+      border-left-color: transparent;
+    }
+
+    &_bottomLeft {
+      bottom: calc(-0.5 * var(--size-large) - 1px);
+      left: var(--size-extra-large);
+      border-top-color: transparent;
+      border-left-color: transparent;
+    }
+  }
+}
