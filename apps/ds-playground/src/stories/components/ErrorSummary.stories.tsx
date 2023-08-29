@@ -1,3 +1,6 @@
+import { useState } from 'react';
+
+import { Button } from '@skatteetaten/ds-buttons';
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
 import {
   ErrorMessage,
@@ -54,29 +57,39 @@ const TemplateDefault: StoryFn<ErrorSummaryProps> = (args) => (
 );
 
 const TemplateExample: StoryFn<ErrorSummaryProps> = () => {
+  const [state, setState] = useState({
+    hasError: false,
+  });
   return (
     <>
       {/* TODO FRONT-1279 erstattes med TextField når den er ferdig utviklet */}
       <label className={'block'} htmlFor={'input_aar'}>
         {'År'}
       </label>
-      <input id={'input_aar'} type={'number'} value={1009} />
-      <ErrorMessage showError>{'Inntekståret må være etter 2008'}</ErrorMessage>
+      <input id={'input_aar'} type={'number'} value={1009} required />
+      <ErrorMessage showError={state.hasError}>
+        {'Inntekståret må være etter 2008'}
+      </ErrorMessage>
       <label className={'block'} htmlFor={'input_epost'}>
         {'E-post'}
       </label>
-      <input id={'input_epost'} type={'email'} value={'Ola.Normann.no'} />
-      <ErrorMessage showError>
+      <input
+        id={'input_epost'}
+        type={'email'}
+        value={'Ola.Normann.no'}
+        required
+      />
+      <ErrorMessage showError={state.hasError}>
         {'E-posten ser ikke riktig ut. Skriv slik: ola.normann@norge.no'}
       </ErrorMessage>
       <label className={'block'} htmlFor={'input_dager'}>
         {'Antall dager i Norge i perioden/inntekståret'}
       </label>
-      <input id={'input_dager'} type={'number'} />
-      <ErrorMessage className={'bottomSpacingXL'} showError>
+      <input id={'input_dager'} type={'number'} required />
+      <ErrorMessage className={'bottomSpacingXL'} showError={state.hasError}>
         {'Antall dager må fylles ut.'}
       </ErrorMessage>
-      <ErrorSummary showErrorSummary>
+      <ErrorSummary id={'errorSummary1'} showErrorSummary={state.hasError}>
         <ErrorSummary.Error referenceId={'input_aar'}>
           {'Inntekståret må være etter 2008'}
         </ErrorSummary.Error>
@@ -87,6 +100,18 @@ const TemplateExample: StoryFn<ErrorSummaryProps> = () => {
           {'Antall dager må fylles ut.'}
         </ErrorSummary.Error>
       </ErrorSummary>
+      <Button
+        className={'topSpacingXL'}
+        onClick={(): void => {
+          setState({ hasError: !state.hasError });
+          setTimeout((): void => {
+            const el = document.getElementById('errorSummary1');
+            el?.focus();
+          }, 0);
+        }}
+      >
+        {'Send'}
+      </Button>
     </>
   );
 };
@@ -94,7 +119,6 @@ const TemplateExample: StoryFn<ErrorSummaryProps> = () => {
 export const ErrorSummaryDefault: StoryObj<ErrorSummaryProps> = {
   render: TemplateDefault,
   name: 'Default',
-
   args: {
     showErrorSummary: true,
     content: 'Her kan du legge inn vilkårlig innhold',
@@ -105,7 +129,6 @@ export const ErrorSummaryDefault: StoryObj<ErrorSummaryProps> = {
 export const ErrorSummaryExample: StoryObj<ErrorSummaryProps> = {
   render: TemplateExample,
   name: 'Example',
-
   parameters: {
     controls: { disabled: true },
   },
