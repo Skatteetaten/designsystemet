@@ -7,9 +7,15 @@ import {
 } from '@skatteetaten/ds-forms';
 import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { userEvent, waitFor, within } from '@storybook/testing-library';
+import {
+  fireEvent,
+  userEvent,
+  waitFor,
+  within,
+} from '@storybook/testing-library';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
+import { SystemSVGPaths } from '../utils/icon.systems';
 
 const verifyAttribute =
   (attribute: string, expectedValue: string) =>
@@ -41,11 +47,18 @@ const meta = {
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
     hasError: { table: { disable: true } },
+    helpSvgPath: {
+      table: { disable: true },
+      options: Object.keys(SystemSVGPaths),
+      mapping: SystemSVGPaths,
+    },
+    helpText: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
     isLarge: { table: { disable: true } },
     label: { table: { disable: true } },
     showRequiredMark: { table: { disable: true } },
     thousandSeparator: { table: { disable: true } },
+    titleHelpSvg: { table: { disable: true } },
     // HTML
     autoComplete: { table: { disable: true } },
     defaultValue: { table: { disable: true } },
@@ -590,6 +603,26 @@ export const WithThousandSeparator = {
     await userEvent.type(textbox, 'A10000');
     await waitFor(() => expect(args.onChange).toHaveBeenCalled());
     await expect(textbox).toHaveValue('10 000');
+  },
+} satisfies Story;
+
+export const WithHelpText = {
+  name: 'With HelpText (A1)',
+  args: {
+    ...defaultArgs,
+    helpText:
+      'Vi trenger å vite navnet ditt dersom vi skal kontakte deg senere.',
+  },
+  argTypes: {
+    helpText: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button', {
+      description: defaultLabelText,
+    });
+    await expect(helpButton).toBeInTheDocument();
+    await fireEvent.click(helpButton);
   },
 } satisfies Story;
 

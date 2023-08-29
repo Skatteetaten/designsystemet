@@ -30,6 +30,8 @@ const meta = {
         category: category.props,
       },
     },
+    helpSvgPath: { table: { category: category.props } },
+    helpText: { table: { category: category.props } },
     hideLabel: {
       control: 'boolean',
       table: {
@@ -50,6 +52,7 @@ const meta = {
       },
     },
     thousandSeparator: { table: { category: category.props } },
+    titleHelpSvg: { table: { category: category.props } },
     // HTML
     autoComplete: { table: { category: category.htmlAttribute } },
     defaultValue: {

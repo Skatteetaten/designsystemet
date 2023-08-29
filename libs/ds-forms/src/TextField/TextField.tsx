@@ -9,6 +9,7 @@ import {
 import { getTextFieldAsDefault } from './defaults';
 import { TextboxRefHandle, TextFieldProps } from './TextField.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
+import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 
 import styles from './TextField.module.scss';
 
@@ -23,8 +24,11 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       autosize,
       description,
       errorMessage,
+      helpSvgPath,
+      helpText,
       label,
       thousandSeparator,
+      titleHelpSvg,
       autoComplete,
       defaultValue,
       disabled,
@@ -93,28 +97,25 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       hasError ? errorId : ''
     }`.trim();
 
-    const concatenatedClassName = `${className}`.trim();
-
-    const hideLabelClassName = hideLabel ? styles.srOnly : '';
-    const labelClassName = `${styles.label} ${hideLabelClassName}`.trim();
-    const requiredClassName = showRequiredMark
-      ? styles.label_required
-      : undefined;
-
-    const lagreTextboxClassName = isLarge ? styles.textbox_large : '';
+    const largeTextboxClassName = isLarge ? styles.textbox_large : '';
     const multilineTextboxClassName =
       Tag === 'textarea' ? styles.textbox_multiline : '';
     const autosizeTextarea = autosize ? styles.textbox_autosize : '';
     const textboxClassName =
-      `${styles.textbox} ${lagreTextboxClassName} ${multilineTextboxClassName} ${autosizeTextarea}`.trim();
+      `${styles.textbox} ${largeTextboxClassName} ${multilineTextboxClassName} ${autosizeTextarea}`.trim();
     return (
-      <div className={concatenatedClassName} lang={lang}>
-        <label htmlFor={textboxId} className={labelClassName}>
-          <span className={requiredClassName}>{label}</span>
-          {description && (
-            <span className={styles.labelDescription}>{description}</span>
-          )}
-        </label>
+      <div className={className} lang={lang}>
+        <LabelWithHelp
+          htmlFor={textboxId}
+          hideLabel={hideLabel}
+          showRequiredMark={showRequiredMark}
+          description={description}
+          helpSvgPath={helpSvgPath}
+          helpText={helpText}
+          titleHelpSvg={titleHelpSvg}
+        >
+          {label}
+        </LabelWithHelp>
         <Tag
           ref={textboxRef}
           id={textboxId}
