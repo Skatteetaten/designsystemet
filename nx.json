@@ -65,7 +65,8 @@
     "default": ["{projectRoot}/**/*", "sharedGlobals", "projectSpecificFiles"],
     "sharedGlobals": [
       "{workspaceRoot}/.stylelintrc.json",
-      "{workspaceRoot}/babel.config.json"
+      "{workspaceRoot}/babel.config.json",
+      "{workspaceRoot}/libs/ds-dev-config/build/rollup-config-factory.js"
     ],
     "production": [
       "default",
