@@ -41,6 +41,11 @@ interface TextFieldPropsHTMLAttributes extends TextFieldHTMLAttributes {
 export interface TextFieldCommonProps
   extends TextFieldPropsHTMLAttributes,
     BaseProps {
+  classNames?: {
+    label?: string;
+    textbox?: string;
+    errorMessage?: string;
+  };
   /** Tilleggstekst til ledeteksten */
   description?: string;
   /** Skjuler label og description men er synlig for skjermleser. */
