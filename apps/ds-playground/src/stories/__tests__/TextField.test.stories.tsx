@@ -131,6 +131,39 @@ export const WithAttributes = {
   },
 } satisfies Story;
 
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+
+  args: {
+    ...defaultArgs,
+    classNames: {
+      label: 'dummyClassname',
+      textbox: 'dummyClassname',
+      errorMessage: 'dummyClassname',
+    },
+    hasError: true,
+    errorMessage: errorMessageText,
+  },
+
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox).toHaveClass('dummyClassname');
+
+    const label = canvas.getByLabelText(defaultLabelText);
+    await expect(label).toHaveClass('dummyClassname');
+
+    const errorMessage = canvas.getAllByRole('generic')[4];
+    await expect(errorMessage).toHaveClass('dummyClassname');
+  },
+} satisfies Story;
+
 export const Defaults = {
   name: 'Defaults (A1 delvis, A2 delvis, B2, FS-A2)',
 
@@ -448,7 +481,7 @@ export const WithError = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
-    const errorMessageContainer = canvas.getAllByRole('generic')[2];
+    const errorMessageContainer = canvas.getAllByRole('generic')[3];
     await expect(errorMessageContainer).toBeInTheDocument();
     await expect(canvas.queryByText(errorMessageText)).not.toBeInTheDocument();
     await expect(textbox).not.toHaveAttribute('aria-invalid', 'true');
@@ -481,7 +514,7 @@ export const WithErrorMessageAndHasError = {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
     const errorMessage = canvas.getByText(errorMessageText);
-    const errorMessageContainer = canvas.getAllByRole('generic')[2];
+    const errorMessageContainer = canvas.getAllByRole('generic')[3];
     await expect(errorMessage).toBeInTheDocument();
     await expect(errorMessageContainer).toBeInTheDocument();
     await expect(textbox).toHaveAttribute('aria-invalid', 'true');

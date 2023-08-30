@@ -17,6 +17,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
     {
       id: externalId,
       className = getCommonClassNameDefault(),
+      classNames,
       lang,
       'data-testid': dataTestId,
       as: Tag = getTextFieldAsDefault(),
@@ -39,9 +40,9 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       rows,
       value,
       ariaDescribedby,
-      isLarge,
-      hideLabel,
       hasError,
+      hideLabel,
+      isLarge,
       showRequiredMark,
       onBlur,
       onChange,
@@ -93,22 +94,19 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       hasError ? errorId : ''
     }`.trim();
 
-    const concatenatedClassName = `${className}`.trim();
-
     const hideLabelClassName = hideLabel ? styles.srOnly : '';
-    const labelClassName = `${styles.label} ${hideLabelClassName}`.trim();
-    const requiredClassName = showRequiredMark
-      ? styles.label_required
-      : undefined;
+    const labelClassName =
+      `${styles.label} ${hideLabelClassName} ${classNames?.label}`.trim();
+    const requiredClassName = showRequiredMark ? styles.label_required : '';
 
-    const lagreTextboxClassName = isLarge ? styles.textbox_large : '';
+    const largeTextboxClassName = isLarge ? styles.textbox_large : '';
     const multilineTextboxClassName =
       Tag === 'textarea' ? styles.textbox_multiline : '';
     const autosizeTextarea = autosize ? styles.textbox_autosize : '';
     const textboxClassName =
-      `${styles.textbox} ${lagreTextboxClassName} ${multilineTextboxClassName} ${autosizeTextarea}`.trim();
+      `${styles.textbox} ${largeTextboxClassName} ${multilineTextboxClassName} ${autosizeTextarea} ${classNames?.textbox}`.trim();
     return (
-      <div className={concatenatedClassName} lang={lang}>
+      <div className={className} lang={lang}>
         <label htmlFor={textboxId} className={labelClassName}>
           <span className={requiredClassName}>{label}</span>
           {description && (
@@ -141,7 +139,8 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
         />
         <ErrorMessage
           id={errorId}
-          showError={hasError && errorMessage !== undefined}
+          showError={hasError}
+          className={classNames?.errorMessage ?? ''}
         >
           {errorMessage ?? ''}
         </ErrorMessage>
