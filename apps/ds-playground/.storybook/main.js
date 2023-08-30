@@ -105,6 +105,21 @@ const config = {
         };
       }
     });
+    config.optimization = {
+      ...config.optimization,
+      splitChunks: {
+        ...config.optimization.splitChunks,
+        cacheGroups: {
+          ...config.optimization.splitChunks.cacheGroups,
+          styles: {
+            name: 'main',
+            type: 'css/mini-extract',
+            chunks: 'all',
+            enforce: true,
+          },
+        },
+      },
+    };
     config.resolve.fallback.fs = false;
     config.resolve.fallback.os = false;
     config.resolve.fallback.path = false;
