@@ -101,10 +101,7 @@ export const WithAttributes = {
 
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    // eslint-disable-next-line testing-library/no-node-access
-    const container = canvasElement.querySelector(
-      `${wrapper} fieldset > div > div`
-    );
+    const container = canvas.getAllByRole('generic')[3];
     const input = canvas.getByRole('radio');
     await expect(container).toHaveClass('dummyClassname');
     await expect(container).toHaveAttribute('lang', 'nb');

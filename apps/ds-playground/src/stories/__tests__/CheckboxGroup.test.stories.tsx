@@ -2,7 +2,7 @@ import { CheckboxGroup } from '@skatteetaten/ds-forms';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 import { expect } from '@storybook/jest';
 import { Meta, StoryObj } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { fireEvent, within } from '@storybook/testing-library';
 
 const meta = {
   component: CheckboxGroup,
@@ -20,12 +20,15 @@ const meta = {
       table: { disable: true },
       control: { type: null },
     },
+    description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
     hasError: {
       table: {
         disable: true,
       },
     },
+    helpSvgPath: { table: { disable: true } },
+    helpText: { table: { disable: true } },
     hideLegend: {
       table: {
         disable: true,
@@ -37,6 +40,7 @@ const meta = {
         disable: true,
       },
     },
+    titleHelpSvg: { table: { disable: true } },
     // HTML
     disabled: {
       table: {
@@ -208,7 +212,7 @@ export const LegendWithMarkupAndRequiredMark = {
 } satisfies Story;
 
 export const WithHideLegend = {
-  name: 'Without Legend (B1)',
+  name: 'With HideLegend (B1)',
 
   args: {
     ...defaultArgs,
@@ -288,14 +292,55 @@ export const WithError = {
 
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const errorMessageNode = canvas.getAllByRole('generic');
-    await expect(errorMessageNode[16]).toBeInTheDocument();
-    await expect(errorMessageNode[16]).toHaveAttribute('id');
+    const errorMessageContainer = canvas.getAllByRole('generic')[17];
+    await expect(errorMessageContainer).toBeInTheDocument();
+    await expect(errorMessageContainer).toHaveAttribute('id');
     const inputNodes = canvas.getAllByRole('checkbox', {
       description: defaultErrorMessage,
     });
     for (const input of inputNodes) {
       await expect(input).toHaveAttribute('aria-invalid', 'true');
     }
+  },
+} satisfies Story;
+
+export const WithHelptext = {
+  name: 'With HelpText (A1)',
+
+  args: {
+    ...defaultArgs,
+    helpText: 'Vi trenger å vite om du har barn.',
+  },
+
+  argTypes: {
+    helpText: { table: { disable: false } },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button', {
+      description: defaultLegendText,
+    });
+    await expect(helpButton).toBeInTheDocument();
+    await fireEvent.click(helpButton);
+  },
+} satisfies Story;
+
+export const WithDescription = {
+  name: 'With Description (A1)',
+
+  args: {
+    ...defaultArgs,
+    description: 'Vi trenger å vite om du har barn.',
+  },
+
+  argTypes: {
+    description: { table: { disable: false } },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const description = canvas.getByText('Vi trenger å vite om du har barn.');
+    await expect(description).toBeInTheDocument();
   },
 } satisfies Story;

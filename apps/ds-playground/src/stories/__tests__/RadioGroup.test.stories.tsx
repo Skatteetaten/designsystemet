@@ -9,7 +9,12 @@ import { Heading } from '@skatteetaten/ds-typography';
 import { expect } from '@storybook/jest';
 import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { userEvent, waitFor, within } from '@storybook/testing-library';
+import {
+  fireEvent,
+  userEvent,
+  waitFor,
+  within,
+} from '@storybook/testing-library';
 
 const meta = {
   component: RadioGroup,
@@ -28,8 +33,11 @@ const meta = {
       type: 'string',
       table: { disable: true },
     },
+    description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
     hasError: { table: { disable: true } },
+    helpSvgPath: { table: { disable: true } },
+    helpText: { table: { disable: true } },
     hideLegend: { table: { disable: true } },
     legend: { table: { disable: true } },
     showRequiredMark: { table: { disable: true } },
@@ -37,6 +45,7 @@ const meta = {
       type: 'string',
       table: { disable: true },
     },
+    titleHelpSvg: { table: { disable: true } },
     variant: {
       table: { disable: true },
       options: [...radioGroupVariantArr],
@@ -377,7 +386,7 @@ export const WithErrorMessage = {
 
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const errorMessageContainer = canvas.getAllByRole('generic')[5];
+    const errorMessageContainer = canvas.getAllByRole('generic')[6];
     await expect(errorMessageContainer).toBeInTheDocument();
     await expect(canvas.queryByText('Feilmelding')).not.toBeInTheDocument();
     const radios = canvas.getAllByRole('radio');
@@ -409,7 +418,7 @@ export const WithErrorMessageAndHasError = {
     const canvas = within(canvasElement);
     const radios = canvas.getAllByRole('radio');
     const errorMessage = canvas.getByText('Feilmelding');
-    const errorMessageContainer = canvas.getAllByRole('generic')[5];
+    const errorMessageContainer = canvas.getAllByRole('generic')[6];
     await expect(errorMessage).toBeInTheDocument();
     await expect(errorMessageContainer).toBeInTheDocument();
     radios.forEach((radio) => {
@@ -450,12 +459,56 @@ export const WithHasErrorAndAriaDescribedby = {
 
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const errorMessageContainer = canvas.getAllByRole('generic')[3];
+    const errorMessageContainer = canvas.getAllByRole('generic')[4];
     const radio = canvas.getByRole('radio');
     expect(radio).toHaveAttribute(
       'aria-describedby',
       `konsumentId ${errorMessageContainer.id}`
     );
+  },
+} satisfies Story;
+
+export const WithHelpText = {
+  render: Template,
+  name: 'With HelpText (A1)',
+
+  args: {
+    ...defaultArgs,
+    helpText: 'Vi trenger å vite din type virksomhet.',
+  },
+
+  argTypes: {
+    helpText: { table: { disable: false } },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button', {
+      description: defaultLegendText,
+    });
+    await expect(helpButton).toBeInTheDocument();
+    await fireEvent.click(helpButton);
+  },
+} satisfies Story;
+
+export const WithDescription = {
+  name: 'With Description (A1)',
+
+  args: {
+    ...defaultArgs,
+    description: 'Vi trenger å vite din type virksomhet.',
+  },
+
+  argTypes: {
+    description: { table: { disable: false } },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const description = canvas.getByText(
+      'Vi trenger å vite din type virksomhet.'
+    );
+    await expect(description).toBeInTheDocument();
   },
 } satisfies Story;
 

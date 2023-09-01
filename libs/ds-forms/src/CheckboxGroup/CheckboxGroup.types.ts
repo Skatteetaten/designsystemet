@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef } from 'react';
+import { ComponentPropsWithoutRef, ReactElement } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -15,11 +15,19 @@ interface CheckboxGroupCommonProps
   extends CheckboxGroupHTMLAttributes,
     BaseProps {
   /** Checkbox-komponenter */
-  children?: JSX.Element | JSX.Element[];
+  children: JSX.Element | JSX.Element[];
   /** Skjuler ledeteksten men synlig for skjermleser */
   hideLegend?: boolean;
   /** Ledetekst til gruppen */
   legend: React.ReactNode;
+  /** Tilleggstekst */
+  description?: string;
+  /** Hjelpetekst */
+  helpText?: string;
+  /** Overskriver default hjelpeikon */
+  helpSvgPath?: ReactElement;
+  /** Title-element til hjelpeikon */
+  titleHelpSvg?: string;
   /** Om obligatorisk gruppe skal markeres med stjerne */
   showRequiredMark?: boolean;
   /* Hvis innføring av required på Group, se commit 05e7ac89ac3b132d37d18aed55a933573b3beb70 */

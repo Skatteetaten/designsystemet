@@ -1,4 +1,8 @@
-import { ChangeEventHandler, ComponentPropsWithoutRef } from 'react';
+import {
+  ChangeEventHandler,
+  ComponentPropsWithoutRef,
+  ReactElement,
+} from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -42,6 +46,14 @@ interface RadioGroupComponentCommonProps
   hideLegend?: boolean;
   /** Navn på gruppen. */
   legend: React.ReactNode;
+  /** Tilleggstekst */
+  description?: string;
+  /** Hjelpetekst */
+  helpText?: string;
+  /** Overskriver default hjelpeikon */
+  helpSvgPath?: ReactElement;
+  /** Title-element til hjelpeikon */
+  titleHelpSvg?: string;
   /** Overskriver autogenerert name */
   name?: string;
   /** Definerer stilen til gruppen. */

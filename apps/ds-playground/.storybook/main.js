@@ -29,8 +29,6 @@ const config = {
   stories: [
     '../src/stories/**/*.stories.mdx',
     '../src/stories/**/*.stories.@(js|jsx|ts|tsx)',
-    '../../../libs/**/*.stories.mdx',
-    '../../../libs/**/*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [
     '@storybook/addon-essentials',

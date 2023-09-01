@@ -1,0 +1,533 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Fieldset ClickCloseButton play-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="Fieldset_fieldset__gwnkr">
+    <legend id="legendId-:r1a:"
+            class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+    >
+      Ledetekst
+    </legend>
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Fieldset_helpButton__Qd9mY "
+            type="button"
+            aria-describedby="legendId-:r1a:"
+            aria-expanded="false"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r1b:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r1b:">
+          Hjelp
+        </title>
+        <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+        </path>
+      </svg>
+    </button>
+    <div class="Fieldset_contentContainer__fJcfT ">
+      <div class>
+        <label for="textFieldTextboxId-:r1d:"
+               class="TextField_label__K0isy  undefined"
+        >
+          <span class>
+            Label
+          </span>
+        </label>
+        <input id="textFieldTextboxId-:r1d:"
+               class="TextField_textbox__qbZlk    undefined"
+               value
+        >
+        <div id="textFieldErrorId-:r1c:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/Fieldset ClickHelpButton play-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="Fieldset_fieldset__gwnkr">
+    <legend id="legendId-:r15:"
+            class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+    >
+      Ledetekst
+    </legend>
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Fieldset_helpButton__Qd9mY "
+            type="button"
+            aria-describedby="legendId-:r15:"
+            aria-expanded="false"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r16:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r16:">
+          Hjelp
+        </title>
+        <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+        </path>
+      </svg>
+    </button>
+    <div class="Fieldset_contentContainer__fJcfT ">
+      <div class>
+        <label for="textFieldTextboxId-:r18:"
+               class="TextField_label__K0isy  undefined"
+        >
+          <span class>
+            Label
+          </span>
+        </label>
+        <input id="textFieldTextboxId-:r18:"
+               class="TextField_textbox__qbZlk    undefined"
+               value
+        >
+        <div id="textFieldErrorId-:r17:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/Fieldset Defaults play-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="Fieldset_fieldset__gwnkr">
+    <legend id="legendId-:r6:"
+            class="Fieldset_legend__8odl-"
+    >
+      Ledetekst
+    </legend>
+    <div class="Fieldset_contentContainer__fJcfT ">
+      <div class>
+        <label for="textFieldTextboxId-:r8:"
+               class="TextField_label__K0isy  undefined"
+        >
+          <span class>
+            Label
+          </span>
+        </label>
+        <input id="textFieldTextboxId-:r8:"
+               class="TextField_textbox__qbZlk    undefined"
+               value
+        >
+        <div id="textFieldErrorId-:r7:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/Fieldset WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <fieldset id="htmlid"
+            data-testid="123ID"
+            class="Fieldset_fieldset__gwnkr  dummyClassname"
+            lang="nb"
+  >
+    <legend id="legendId-:r3:"
+            class="Fieldset_legend__8odl-"
+    >
+      Ledetekst
+    </legend>
+    <div class="Fieldset_contentContainer__fJcfT ">
+      <div class>
+        <label for="textFieldTextboxId-:r5:"
+               class="TextField_label__K0isy  undefined"
+        >
+          <span class>
+            Label
+          </span>
+        </label>
+        <input id="textFieldTextboxId-:r5:"
+               class="TextField_textbox__qbZlk    undefined"
+               value
+        >
+        <div id="textFieldErrorId-:r4:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/Fieldset WithDescription play-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="Fieldset_fieldset__gwnkr">
+    <legend id="legendId-:r9:"
+            class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+    >
+      Ledetekst
+    </legend>
+    <div class="Fieldset_description__k538X ">
+      Kort hjelpetekst
+    </div>
+    <div class="Fieldset_contentContainer__fJcfT ">
+      <div class>
+        <label for="textFieldTextboxId-:rb:"
+               class="TextField_label__K0isy  undefined"
+        >
+          <span class>
+            Label
+          </span>
+        </label>
+        <input id="textFieldTextboxId-:rb:"
+               class="TextField_textbox__qbZlk    undefined"
+               value
+        >
+        <div id="textFieldErrorId-:ra:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/Fieldset WithDisabled play-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="Fieldset_fieldset__gwnkr"
+            disabled
+  >
+    <legend id="legendId-:rp:"
+            class="Fieldset_legend__8odl-"
+    >
+      Ledetekst
+    </legend>
+    <div class="Fieldset_contentContainer__fJcfT ">
+      <div class>
+        <label for="textFieldTextboxId-:rr:"
+               class="TextField_label__K0isy  undefined"
+        >
+          <span class>
+            Label
+          </span>
+        </label>
+        <input id="textFieldTextboxId-:rr:"
+               class="TextField_textbox__qbZlk    undefined"
+               value
+        >
+        <div id="textFieldErrorId-:rq:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/Fieldset WithHelpSvgPath smoke-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="Fieldset_fieldset__gwnkr">
+    <legend id="legendId-:r11:"
+            class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+    >
+      Ledetekst
+    </legend>
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Fieldset_helpButton__Qd9mY "
+            type="button"
+            aria-describedby="legendId-:r11:"
+            aria-expanded="false"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r12:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r12:">
+          Hjelp
+        </title>
+        <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
+        </path>
+      </svg>
+    </button>
+    <div class="Fieldset_contentContainer__fJcfT ">
+      <div class>
+        <label for="textFieldTextboxId-:r14:"
+               class="TextField_label__K0isy  undefined"
+        >
+          <span class>
+            Label
+          </span>
+        </label>
+        <input id="textFieldTextboxId-:r14:"
+               class="TextField_textbox__qbZlk    undefined"
+               value
+        >
+        <div id="textFieldErrorId-:r13:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/Fieldset WithHelpText play-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="Fieldset_fieldset__gwnkr">
+    <legend id="legendId-:rs:"
+            class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+    >
+      Ledetekst
+    </legend>
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Fieldset_helpButton__Qd9mY "
+            type="button"
+            aria-describedby="legendId-:rs:"
+            aria-expanded="false"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:rt:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:rt:">
+          Hjelp
+        </title>
+        <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+        </path>
+      </svg>
+    </button>
+    <div class="Fieldset_contentContainer__fJcfT ">
+      <div class>
+        <label for="textFieldTextboxId-:rv:"
+               class="TextField_label__K0isy  undefined"
+        >
+          <span class>
+            Label
+          </span>
+        </label>
+        <input id="textFieldTextboxId-:rv:"
+               class="TextField_textbox__qbZlk    undefined"
+               value
+        >
+        <div id="textFieldErrorId-:ru:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/Fieldset WithHideLegend play-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="Fieldset_fieldset__gwnkr">
+    <legend id="legendId-:ri:"
+            class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39 Fieldset_legendNoMarginBottom__UO3iu"
+    >
+      Ledetekst
+    </legend>
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Fieldset_helpButton__Qd9mY Fieldset_srOnly__7qh39"
+            type="button"
+            aria-describedby="legendId-:ri:"
+            aria-expanded="false"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:rj:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:rj:">
+          Hjelp
+        </title>
+        <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+        </path>
+      </svg>
+    </button>
+    <div class="Fieldset_description__k538X Fieldset_srOnly__7qh39">
+      Kort hjelpetekst
+    </div>
+    <div class="Fieldset_contentContainer__fJcfT Fieldset_contentContainerNoMarginTop__YkL1P">
+      <div class>
+        <label for="textFieldTextboxId-:rl:"
+               class="TextField_label__K0isy  undefined"
+        >
+          <span class>
+            Label
+          </span>
+        </label>
+        <input id="textFieldTextboxId-:rl:"
+               class="TextField_textbox__qbZlk    undefined"
+               value
+        >
+        <div id="textFieldErrorId-:rk:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/Fieldset WithRef play-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="Fieldset_fieldset__gwnkr"
+            id="dummyIdForwardedFromRef"
+  >
+    <legend id="legendId-:r0:"
+            class="Fieldset_legend__8odl-"
+    >
+      Ledetekst
+    </legend>
+    <div class="Fieldset_contentContainer__fJcfT ">
+      <div class>
+        <label for="textFieldTextboxId-:r2:"
+               class="TextField_label__K0isy  undefined"
+        >
+          <span class>
+            Label
+          </span>
+        </label>
+        <input id="textFieldTextboxId-:r2:"
+               class="TextField_textbox__qbZlk    undefined"
+               value
+        >
+        <div id="textFieldErrorId-:r1:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/Fieldset WithShowRequiredMark smoke-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="Fieldset_fieldset__gwnkr">
+    <legend id="legendId-:rc:"
+            class="Fieldset_legend__8odl- Fieldset_legend_required__U4xWm"
+    >
+      Ledetekst
+    </legend>
+    <div class="Fieldset_contentContainer__fJcfT ">
+      <div class>
+        <label for="textFieldTextboxId-:re:"
+               class="TextField_label__K0isy  undefined"
+        >
+          <span class>
+            Label
+          </span>
+        </label>
+        <input id="textFieldTextboxId-:re:"
+               class="TextField_textbox__qbZlk    undefined"
+               value
+        >
+        <div id="textFieldErrorId-:rd:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/Fieldset WithShowRequiredMarkAndLegend smoke-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="Fieldset_fieldset__gwnkr">
+    <legend id="legendId-:rf:"
+            class="Fieldset_legend__8odl- Fieldset_legendWithMarkup_required__WcdUI"
+    >
+      <h1 class="Heading_heading__7K0um Heading_heading_level3__T5BVI  ">
+        Dette er en Heading i legend
+      </h1>
+      <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_ingress__K1ALx  ">
+        <em>
+          Dette er en italic Paragraph med ingress variant i legend
+        </em>
+      </p>
+    </legend>
+    <div class="Fieldset_contentContainer__fJcfT ">
+      <div class>
+        <label for="textFieldTextboxId-:rh:"
+               class="TextField_label__K0isy  undefined"
+        >
+          <span class>
+            Label
+          </span>
+        </label>
+        <input id="textFieldTextboxId-:rh:"
+               class="TextField_textbox__qbZlk    undefined"
+               value
+        >
+        <div id="textFieldErrorId-:rg:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/Fieldset WithSpacing smoke-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
+    <legend id="legendId-:rm:"
+            class="Fieldset_legend__8odl-"
+    >
+      Ledetekst
+    </legend>
+    <div class="Fieldset_contentContainer__fJcfT ">
+      <div class>
+        <label for="textFieldTextboxId-:ro:"
+               class="TextField_label__K0isy  undefined"
+        >
+          <span class>
+            Label
+          </span>
+        </label>
+        <input id="textFieldTextboxId-:ro:"
+               class="TextField_textbox__qbZlk    undefined"
+               value
+        >
+        <div id="textFieldErrorId-:rn:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;

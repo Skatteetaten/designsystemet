@@ -1,44 +1,16 @@
 @import 'libs/ds-core-utils/src/styles.scss';
 
-.radioGroup {
-  padding: 0;
-  border: none;
-  margin: 0 0 var(--spacing-m);
+.radioGroupItemContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
 
-  &Legend {
-    margin-bottom: var(--spacing-m);
-    color: var(--palette-graphite-70);
-    font-size: var(--font-size-m);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--semantic-line-height-input);
-    overflow-wrap: anywhere;
-    word-break: normal;
-
-    &_required::after,
-    &AsMarkup_required > :first-child::after {
-      width: fit-content;
-      color: var(--semantic-danger-foreground);
-      content: '*';
-      font-weight: var(--font-weight-bold);
-    }
-  }
-
-  &ItemContainer {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-s);
-
-    &_horizontal {
-      flex-direction: row;
-      gap: var(--spacing-l);
-    }
-
-    &_error {
-      margin-bottom: var(--spacing-m);
-    }
+  &_horizontal {
+    flex-direction: row;
+    gap: var(--spacing-l);
   }
 }
 
-.srOnly {
-  @include sr-only;
+.errorMessage {
+  margin-top: var(--spacing-m);
 }

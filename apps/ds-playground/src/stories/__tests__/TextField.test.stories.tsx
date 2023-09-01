@@ -38,6 +38,9 @@ const meta = {
       control: 'inline-radio',
     },
     autosize: { table: { disable: true } },
+    classNames: {
+      table: { disable: true },
+    },
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
     hasError: { table: { disable: true } },
