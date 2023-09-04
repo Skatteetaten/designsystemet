@@ -1,11 +1,11 @@
 import { Blockquote, BlockquoteProps } from '@skatteetaten/ds-typography';
 import { expect } from '@storybook/jest';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 
 import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
 
-export default {
+const meta = {
   component: Blockquote,
   title: 'Tester/Blockquote',
   argTypes: {
@@ -23,142 +23,151 @@ export default {
     },
     hasSpacing: { table: { disable: true } },
   },
-} as ComponentMeta<typeof Blockquote>;
+} satisfies Meta<typeof Blockquote>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-const defaultArgs: BlockquoteProps = {
+const defaultArgs = {
   children: loremIpsum,
 };
 
-const Template: ComponentStory<typeof Blockquote> = (args) => (
-  <div data-test-block>
-    <Blockquote {...args} />
-  </div>
-);
+export const WithRef = {
+  name: 'With Ref (FA1)',
 
-// Når Blockquote har en ref, så får dom elementet ref forwarded
-export const WithRef = Template.bind({});
-WithRef.storyName = 'With Ref (FA1)';
-WithRef.args = {
-  ...defaultArgs,
-  ref: (instance: HTMLQuoteElement | null): void => {
-    if (instance) {
-      instance.id = 'dummyIdForwardedFromRef';
-    }
+  args: {
+    ...defaultArgs,
+    ref: (instance: HTMLQuoteElement | null): void => {
+      if (instance) {
+        instance.id = 'dummyIdForwardedFromRef';
+      }
+    },
   },
-};
-WithRef.argTypes = {
-  ref: { table: { disable: false } },
-};
-WithRef.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithRef.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const blockquote = canvas.getByText(loremIpsum);
-  await expect(blockquote).toHaveAttribute('id', 'dummyIdForwardedFromRef');
-};
 
-// Når Blockquote har en id, så har element id
-// Når Blockquote har en custom CSS, så vises custom stil
-// Når Blockquote har en lang, så har element lang
-// Når Blockquote har dataTestid, så har elementet data-testid satt
-export const WithAttributes = Template.bind({});
-WithAttributes.storyName = 'With Attributes (FA2-5)';
-WithAttributes.args = {
-  ...defaultArgs,
-  id: 'htmlId',
-  className: 'dummyClassname',
-  lang: 'nb',
-  'data-testid': '123ID',
-};
-WithAttributes.argTypes = {
-  id: { table: { disable: false } },
-  className: { table: { disable: false } },
-  lang: { table: { disable: false } },
-  'data-testid': { table: { disable: false } },
-};
-WithAttributes.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const blockquote = canvas.getByText(loremIpsum);
-  await expect(blockquote).toHaveClass('dummyClassname');
-  await expect(blockquote).toHaveAttribute('id', 'htmlId');
-  await expect(blockquote).toHaveAttribute('lang', 'nb');
-  await expect(blockquote).toHaveAttribute('data-testid', '123ID');
-};
-
-// Når Blockquote instansieres, får den riktige default-verdier
-export const Defaults = Template.bind({});
-Defaults.storyName = 'Defaults (A1, B1)';
-Defaults.args = {
-  ...defaultArgs,
-};
-Defaults.argTypes = {
-  children: { table: { disable: false } },
-};
-
-const TemplateWithMarkup: ComponentStory<typeof Blockquote> = (args) => (
-  <div data-test-block>
-    <Blockquote {...args}>
-      <div>
-        {'Manowar Manowar living on the road '}
-        <a href={'https://en.wikipedia.org/wiki/Manowar'}>{'lenke'}</a>
-      </div>
-      <div>
-        {"When we're on "}
-        <strong>{'strong '}</strong>
-        {'explode '}
-        <em>{'italic em '}</em>
-      </div>
-      <div>
-        {"We don't attract "}
-        <code>{'code wimps '}</code>
-        {"'cause we're too "}
-        <mark>{'mark'}</mark>
-      </div>
-      <div>
-        {'Just '}
-        <i>{'italic i '}</i>
-        {'true '}
-        <small>{'small '}</small>
-        {"people that's Manowar's "}
-        <b>{'b'}</b>
-      </div>
-    </Blockquote>
-  </div>
-);
-
-// Når Blockquote instansieres med markup, får markup riktig styling
-export const WithMarkup = TemplateWithMarkup.bind({});
-WithMarkup.storyName = 'With Markup (A2, B1)';
-WithMarkup.argTypes = {
-  children: {
-    table: { disable: false },
-    control: { type: null },
+  argTypes: {
+    ref: { table: { disable: false } },
   },
-};
-WithMarkup.parameters = {
-  imageSnapshot: {
-    hover: `${wrapper} > blockquote a`,
-    focus: `${wrapper} > blockquote a`,
+
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const blockquote = canvas.getByText(loremIpsum);
+    await expect(blockquote).toHaveAttribute('id', 'dummyIdForwardedFromRef');
+  },
+} satisfies Story;
+
+export const WithAttributes = {
+  name: 'With Attributes (FA2-5)',
+
+  args: {
+    ...defaultArgs,
+    id: 'htmlId',
+    className: 'dummyClassname',
+    lang: 'nb',
+    'data-testid': '123ID',
+  },
+
+  argTypes: {
+    id: { table: { disable: false } },
+    className: { table: { disable: false } },
+    lang: { table: { disable: false } },
+    'data-testid': { table: { disable: false } },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const blockquote = canvas.getByText(loremIpsum);
+    await expect(blockquote).toHaveClass('dummyClassname');
+    await expect(blockquote).toHaveAttribute('id', 'htmlId');
+    await expect(blockquote).toHaveAttribute('lang', 'nb');
+    await expect(blockquote).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const Defaults = {
+  name: 'Defaults (A1, B1)',
+
+  args: {
+    ...defaultArgs,
+  },
+
+  argTypes: {
+    children: { table: { disable: false } },
   },
 };
 
-const TemplateWithTwoBlockquotes: ComponentStory<typeof Blockquote> = (
+const TemplateWithMarkup: StoryFn<Exclude<BlockquoteProps, 'children'>> = (
   args
 ) => (
-  <div data-test-block>
-    <Blockquote {...args} />
-    <Blockquote {...args} />
-  </div>
+  <Blockquote {...args}>
+    <div>
+      {'Manowar Manowar living on the road '}
+      <a href={'https://en.wikipedia.org/wiki/Manowar'}>{'lenke'}</a>
+    </div>
+    <div>
+      {"When we're on "}
+      <strong>{'strong '}</strong>
+      {'explode '}
+      <em>{'italic em '}</em>
+    </div>
+    <div>
+      {"We don't attract "}
+      <code>{'code wimps '}</code>
+      {"'cause we're too "}
+      <mark>{'mark'}</mark>
+    </div>
+    <div>
+      {'Just '}
+      <i>{'italic i '}</i>
+      {'true '}
+      <small>{'small '}</small>
+      {"people that's Manowar's "}
+      <b>{'b'}</b>
+    </div>
+  </Blockquote>
 );
 
-// Når Blockquote har spacing, så får elementet en margin under sitatet
-export const WithSpacing = TemplateWithTwoBlockquotes.bind({});
-WithSpacing.storyName = 'With Spacing (A3)';
-WithSpacing.args = {
-  ...defaultArgs,
-  hasSpacing: true,
-};
-WithSpacing.argTypes = {
-  hasSpacing: { table: { disable: false } },
-};
+export const WithMarkup = {
+  render: TemplateWithMarkup,
+  name: 'With Markup (A2, B1)',
+
+  argTypes: {
+    children: {
+      table: { disable: false },
+      control: { type: null },
+    },
+  },
+
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: {
+      hover: `${wrapper} > blockquote a`,
+      focus: `${wrapper} > blockquote a`,
+    },
+  },
+} satisfies Story;
+
+const TemplateWithTwoBlockquotes: StoryFn<BlockquoteProps> = (args) => (
+  <>
+    <Blockquote {...args} />
+    <Blockquote {...args} />
+  </>
+);
+
+export const WithSpacing = {
+  render: TemplateWithTwoBlockquotes,
+  name: 'With Spacing (A3)',
+
+  args: {
+    ...defaultArgs,
+    hasSpacing: true,
+  },
+
+  argTypes: {
+    hasSpacing: { table: { disable: false } },
+  },
+} satisfies Story;

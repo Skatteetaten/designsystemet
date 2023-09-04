@@ -1,4 +1,5 @@
 {
+  "name": "ds-buttons",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ds-buttons/src",
   "projectType": "library",
@@ -6,7 +7,7 @@
   "implicitDependencies": ["!ds-dev-config"],
   "targets": {
     "build": {
-      "executor": "@nrwl/rollup:rollup",
+      "executor": "@nx/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/ds-buttons",
@@ -22,18 +23,20 @@
             "input": ".",
             "output": "."
           }
-        ]
+        ],
+        "babelUpwardRootMode": true,
+        "updateBuildableProjectDepsInPackageJson": true
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/ds-buttons/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/ds-buttons"],
       "options": {
         "jestConfig": "libs/ds-buttons/jest.config.ts",
@@ -70,6 +73,5 @@
         "cwd": "dist/libs/ds-buttons"
       }
     }
-  },
-  "name": "ds-buttons"
+  }
 }

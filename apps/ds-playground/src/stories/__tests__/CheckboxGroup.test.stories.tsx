@@ -1,10 +1,10 @@
 import { CheckboxGroup } from '@skatteetaten/ds-forms';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 import { expect } from '@storybook/jest';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 
-export default {
+const meta = {
   component: CheckboxGroup,
   title: 'Tester/CheckboxGroup',
   argTypes: {
@@ -32,11 +32,6 @@ export default {
       },
     },
     legend: { table: { disable: true } },
-    required: {
-      table: {
-        disable: true,
-      },
-    },
     showRequiredMark: {
       table: {
         disable: true,
@@ -49,7 +44,9 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof CheckboxGroup>;
+} satisfies Meta<typeof CheckboxGroup>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 const defaultLegendText = 'Velg det som passer deg';
 const defaultErrorMessage = 'Velg minst ett av alternativene';
@@ -81,278 +78,224 @@ const defaultArgs = {
   children: defaultChildren,
 };
 
-const Template: ComponentStory<typeof CheckboxGroup> = (args) => (
-  <div data-test-block>
-    <CheckboxGroup {...args} />
-  </div>
-);
+export const WithRef = {
+  name: 'With Ref (FA1)',
 
-// Når CheckboxGroup har en ref, så får dom elementet ref forwarded
-export const WithRef = Template.bind({});
-WithRef.storyName = 'With Ref (FA1)';
-WithRef.args = {
-  ...defaultArgs,
-  ref: (instance: HTMLFieldSetElement | null): void => {
-    if (instance) {
-      instance.id = 'dummyIdForwardedFromRef';
+  args: {
+    ...defaultArgs,
+    ref: (instance: HTMLFieldSetElement | null): void => {
+      if (instance) {
+        instance.id = 'dummyIdForwardedFromRef';
+      }
+    },
+  },
+
+  argTypes: {
+    ref: { table: { disable: false } },
+  },
+
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const fieldsetNode = canvas.getByRole('group');
+    await expect(fieldsetNode).toHaveAttribute('id', 'dummyIdForwardedFromRef');
+  },
+} satisfies Story;
+
+export const WithAttributes = {
+  name: 'With Attributes (FA2-5)',
+
+  args: {
+    ...defaultArgs,
+    id: 'htmlid',
+    className: 'dummyClassname',
+    lang: 'nb',
+    'data-testid': '123ID',
+  },
+
+  argTypes: {
+    id: { table: { disable: false } },
+    className: { table: { disable: false } },
+    lang: { table: { disable: false } },
+    'data-testid': { table: { disable: false } },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const fieldsetNode = canvas.getByRole('group');
+    await expect(fieldsetNode).toHaveAttribute('id', 'htmlid');
+    await expect(fieldsetNode).toHaveClass('dummyClassname');
+    await expect(fieldsetNode).toHaveAttribute('lang', 'nb');
+    await expect(fieldsetNode).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const Defaults = {
+  name: 'Defaults (A1, B1, B5)',
+
+  args: {
+    ...defaultArgs,
+  },
+
+  argTypes: {
+    legend: { table: { disable: false } },
+    children: { table: { disable: false } },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const fieldsetNode = canvas.getByRole('group');
+    await expect(fieldsetNode).toBeInTheDocument();
+    await expect(fieldsetNode.tagName).toBe('FIELDSET');
+    const legendNode = canvas.getByText(defaultLegendText);
+    await expect(legendNode).toBeInTheDocument();
+    await expect(legendNode.tagName).toBe('LEGEND');
+    const inputNodes = canvas.getAllByRole('checkbox');
+    for (const input of inputNodes) {
+      await expect(input).not.toHaveAttribute('aria-invalid');
+      await expect(input).not.toBeRequired();
     }
   },
-};
-WithRef.argTypes = {
-  ref: { table: { disable: false } },
-};
-WithRef.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithRef.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const fieldsetNode = canvas.getByRole('group');
-  await expect(fieldsetNode).toHaveAttribute('id', 'dummyIdForwardedFromRef');
-};
+} satisfies Story;
 
-// Når CheckboxGroup har en id, så har fieldset-elementet id'en satt
-// Når CheckboxGroup har en custom className, så har fieldset-elementet className satt og custom stil vises
-// Når CheckboxGroup har en lang, så har fieldset-elementet lang satt
-// Når CheckboxGroup har en data-testid, så har fieldset-elementet data-testid satt
-export const WithAttributes = Template.bind({});
-WithAttributes.storyName = 'With Attributes (FA2-5)';
-WithAttributes.args = {
-  ...defaultArgs,
-  id: 'htmlid',
-  className: 'dummyClassname',
-  lang: 'nb',
-  'data-testid': '123ID',
-};
-WithAttributes.argTypes = {
-  id: { table: { disable: false } },
-  className: { table: { disable: false } },
-  lang: { table: { disable: false } },
-  'data-testid': { table: { disable: false } },
-};
-WithAttributes.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const fieldsetNode = canvas.getByRole('group');
-  await expect(fieldsetNode).toHaveAttribute('id', 'htmlid');
-  await expect(fieldsetNode).toHaveClass('dummyClassname');
-  await expect(fieldsetNode).toHaveAttribute('lang', 'nb');
-  await expect(fieldsetNode).toHaveAttribute('data-testid', '123ID');
-};
+export const LegendWithMarkup = {
+  name: 'Legend With Markup (B1)',
 
-// Når CheckboxGroup instansieres, får den riktige default-verdier
-export const Defaults = Template.bind({});
-Defaults.storyName = 'Defaults (A1, B1, B5)';
-Defaults.args = {
-  ...defaultArgs,
-};
-Defaults.argTypes = {
-  legend: { table: { disable: false } },
-  children: { table: { disable: false } },
-};
-Defaults.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const fieldsetNode = canvas.getByRole('group');
-  await expect(fieldsetNode).toBeInTheDocument();
-  await expect(fieldsetNode.tagName).toBe('FIELDSET');
-  const legendNode = canvas.getByText(defaultLegendText);
-  await expect(legendNode).toBeInTheDocument();
-  await expect(legendNode.tagName).toBe('LEGEND');
-  const inputNodes = canvas.getAllByRole('checkbox');
-  for (const input of inputNodes) {
-    await expect(input).not.toHaveAttribute('aria-invalid');
-    await expect(input).not.toBeRequired();
-  }
-};
+  args: {
+    ...defaultArgs,
+    legend: (
+      <>
+        <Heading as={'h1'} level={3}>
+          {'Dette er en Heading i legend'}
+        </Heading>
+        <Paragraph variant={'ingress'}>
+          <em>{'Dette er en italic Paragraph med ingress variant i legend'}</em>
+        </Paragraph>
+      </>
+    ),
+  },
 
-// Når Legend har markup, så ser det riktig ut
-export const LegendWithMarkup = Template.bind({});
-LegendWithMarkup.storyName = 'Legend With Markup (B1)';
-LegendWithMarkup.args = {
-  ...defaultArgs,
-  legend: (
-    <>
-      <Heading as={'h1'} level={3}>
-        {'Dette er en Heading i legend'}
-      </Heading>
-      <Paragraph variant={'ingress'}>
-        <em>{'Dette er en italic Paragraph med ingress variant i legend'}</em>
-      </Paragraph>
-    </>
-  ),
-};
-LegendWithMarkup.argTypes = {
-  legend: { table: { disable: false }, control: { type: null } },
-};
+  argTypes: {
+    legend: { table: { disable: false }, control: { type: null } },
+  },
+} satisfies Story;
 
-// Når Legend har markup og er required med stjerne, så vises stjerne bak første child-element i legend
-export const LegendWithMarkupAndRequiredMark = Template.bind({});
-LegendWithMarkupAndRequiredMark.storyName =
-  'Legend With Markup and Required Mark (B1)';
-LegendWithMarkupAndRequiredMark.args = {
-  ...defaultArgs,
-  legend: (
-    <>
-      <Heading as={'h1'} level={3}>
-        {'Dette er en Heading i legend'}
-      </Heading>
-      <Paragraph variant={'ingress'}>
-        <em>{'Dette er en italic Paragraph med ingress variant i legend'}</em>
-      </Paragraph>
-    </>
-  ),
-  required: true,
-  showRequiredMark: true,
-};
-LegendWithMarkupAndRequiredMark.argTypes = {
-  legend: { table: { disable: false }, control: { type: null } },
-  required: { table: { disable: false } },
-  showRequiredMark: { table: { disable: false } },
-};
+export const LegendWithMarkupAndRequiredMark = {
+  name: 'Legend With Markup and Required Mark (B1)',
 
-// Når CheckboxGroup har hideLegend, så finnes legend-elementet fremdeles men er elementet ikke synlig
-export const WithHideLegend = Template.bind({});
-WithHideLegend.storyName = 'Without Legend (B1)';
-WithHideLegend.args = {
-  ...defaultArgs,
-  hideLegend: true,
-};
-WithHideLegend.argTypes = {
-  hideLegend: { table: { disable: false } },
-};
-WithHideLegend.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const legendNode = canvas.getByText(defaultLegendText);
-  await expect(legendNode).toBeInTheDocument();
-};
+  args: {
+    ...defaultArgs,
+    legend: (
+      <>
+        <Heading as={'h1'} level={3}>
+          {'Dette er en Heading i legend'}
+        </Heading>
+        <Paragraph variant={'ingress'}>
+          <em>{'Dette er en italic Paragraph med ingress variant i legend'}</em>
+        </Paragraph>
+      </>
+    ),
+    showRequiredMark: true,
+  },
 
-// Når CheckboxGroup er disabled, så er disabled satt på fieldset-elementet og vises checkboksene i disabled stil
-export const WithDisabled = Template.bind({});
-WithDisabled.storyName = 'With Disabled (A1, B2)';
-WithDisabled.args = {
-  ...defaultArgs,
-  disabled: true,
-};
-WithDisabled.argTypes = {
-  disabled: { table: { disable: false } },
-};
-WithDisabled.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const fieldsetNode = canvas.getByRole('group');
-  await expect(fieldsetNode).toBeDisabled();
-};
+  argTypes: {
+    legend: { table: { disable: false }, control: { type: null } },
+    showRequiredMark: { table: { disable: false } },
+  },
+} satisfies Story;
 
-// Når CheckboxGroup er disabled og en checkbox er checked, så er disabled satt på fieldset-elementet og vises checkboksene i disabled stil
-export const WithDisabledAndChecked = Template.bind({});
-WithDisabledAndChecked.storyName = 'With Disabled And Checked (A1)';
-WithDisabledAndChecked.args = {
-  ...defaultArgs,
-  children: childrenWithOneChecked,
-  disabled: true,
-};
-WithDisabledAndChecked.argTypes = {
-  disabled: { table: { disable: false } },
-};
+export const WithHideLegend = {
+  name: 'Without Legend (B1)',
 
-// Når CheckboxGroup er required, så er required satt på input-elementene og vises stjerne bak legend
-export const WithRequired = Template.bind({});
-WithRequired.storyName = 'With Required (B3)';
-WithRequired.args = {
-  ...defaultArgs,
-  required: true,
-};
-WithRequired.argTypes = {
-  required: { table: { disable: false } },
-};
-WithRequired.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const inputNodes = canvas.getAllByRole('checkbox');
-  for (const input of inputNodes) {
-    // await expect(input).toBeRequired();
-    await expect(input).not.toHaveAttribute('aria-invalid');
-  }
-};
+  args: {
+    ...defaultArgs,
+    hideLegend: true,
+  },
 
-// Når CheckboxGroup er required og showRequiredMark er satt, så vises stjerne bak legend
-export const WithRequiredAndMark = Template.bind({});
-WithRequiredAndMark.storyName = 'With Required And Mark (A1, B3)';
-WithRequiredAndMark.args = {
-  ...defaultArgs,
-  required: true,
-  showRequiredMark: true,
-};
-WithRequiredAndMark.argTypes = {
-  required: { table: { disable: false } },
-  showRequiredMark: { table: { disable: false } },
-};
+  argTypes: {
+    hideLegend: { table: { disable: false } },
+  },
 
-// Når CheckboxGroup er required og et alternativ er valgt, så har ingen input-elementer required satt
-export const WithRequiredAndNoError = Template.bind({});
-WithRequiredAndNoError.storyName = 'With Required And No Error (B4)';
-WithRequiredAndNoError.args = {
-  ...defaultArgs,
-  children: childrenWithOneChecked,
-  required: true,
-};
-WithRequiredAndNoError.argTypes = {
-  required: { table: { disable: false } },
-};
-WithRequiredAndNoError.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithRequiredAndNoError.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const inputNodes = canvas.getAllByRole('checkbox');
-  for (const input of inputNodes) {
-    await expect(input).not.toBeRequired();
-  }
-};
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const legendNode = canvas.getByText(defaultLegendText);
+    await expect(legendNode).toBeInTheDocument();
+  },
+} satisfies Story;
 
-// Når CheckboxGroup er required og et alternativ er valgt, men minst to alternativer trenger å være valgt,
-// så har det valgte alternativet ingen aria-invalid eller required og er blå, mens de andre checkboksene har required og aria-invalid satt og har rød ramme
-export const WithRequiredAndError = Template.bind({});
-WithRequiredAndError.storyName = 'With Required And Error (B4, B5)';
-WithRequiredAndError.args = {
-  ...defaultArgs,
-  children: childrenWithOneChecked,
-  errorMessage: 'Velg minst to alternativer',
-  hasError: true,
-  required: true,
-};
-WithRequiredAndError.argTypes = {
-  hasError: { table: { disable: false } },
-  required: { table: { disable: false } },
-};
-WithRequiredAndError.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const inputNodes = canvas.getAllByRole('checkbox');
-  await expect(inputNodes[0]).not.toHaveAttribute('aria-invalid');
-  await expect(inputNodes[0]).not.toBeRequired();
-  for (const input of inputNodes.slice(1)) {
-    await expect(input).toHaveAttribute('aria-invalid', 'true');
-    // await expect(input).toBeRequired();
-  }
-};
+export const WithDisabled = {
+  name: 'With Disabled (A1, B2)',
 
-// Når CheckboxGroup har error, så får input-elementene aria-invalid og aria-describedby satt, vises checkboksene i korrekt stil og feilmeldingen vises
-export const WithError = Template.bind({});
-WithError.storyName = 'With Error (A1, B5)';
-WithError.args = {
-  ...defaultArgs,
-  hasError: true,
-  errorMessage: defaultErrorMessage,
-};
-WithError.argTypes = {
-  hasError: { table: { disable: false } },
-  errorMessage: { table: { disable: false } },
-};
-WithError.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const errorMessageNode = canvas.getAllByRole('generic');
-  await expect(errorMessageNode[16]).toBeInTheDocument();
-  await expect(errorMessageNode[16]).toHaveAttribute('id');
-  const inputNodes = canvas.getAllByRole('checkbox', {
-    description: defaultErrorMessage,
-  });
-  for (const input of inputNodes) {
-    await expect(input).toHaveAttribute('aria-invalid', 'true');
-  }
-};
+  args: {
+    ...defaultArgs,
+    disabled: true,
+  },
+
+  argTypes: {
+    disabled: { table: { disable: false } },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const fieldsetNode = canvas.getByRole('group');
+    await expect(fieldsetNode).toBeDisabled();
+  },
+} satisfies Story;
+
+export const WithDisabledAndChecked = {
+  name: 'With Disabled And Checked (A1)',
+
+  args: {
+    ...defaultArgs,
+    children: childrenWithOneChecked,
+    disabled: true,
+  },
+
+  argTypes: {
+    disabled: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithRequiredMark = {
+  name: 'With Required Mark (A1, B3)',
+
+  args: {
+    ...defaultArgs,
+    showRequiredMark: true,
+  },
+
+  argTypes: {
+    showRequiredMark: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithError = {
+  name: 'With Error (A1, B5)',
+
+  args: {
+    ...defaultArgs,
+    hasError: true,
+    errorMessage: defaultErrorMessage,
+  },
+
+  argTypes: {
+    hasError: { table: { disable: false } },
+    errorMessage: { table: { disable: false } },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const errorMessageNode = canvas.getAllByRole('generic');
+    await expect(errorMessageNode[16]).toBeInTheDocument();
+    await expect(errorMessageNode[16]).toHaveAttribute('id');
+    const inputNodes = canvas.getAllByRole('checkbox', {
+      description: defaultErrorMessage,
+    });
+    for (const input of inputNodes) {
+      await expect(input).toHaveAttribute('aria-invalid', 'true');
+    }
+  },
+} satisfies Story;

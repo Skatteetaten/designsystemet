@@ -1,4 +1,4 @@
-import type { ExecutorContext } from '@nrwl/devkit';
+import type { ExecutorContext } from '@nx/devkit';
 
 import { spawn } from 'child_process';
 import { resolve, join } from 'path';
@@ -14,7 +14,9 @@ export default async function runExecutor(
   const tsConfigs = Array.isArray(options.tsConfig)
     ? options.tsConfig
     : [options.tsConfig];
-  const libRoot = context.workspace.projects[context.projectName ?? ''].root;
+  const libRoot =
+    context.projectsConfigurations?.projects[context.projectName ?? ''].root ??
+    'unknown';
 
   const executionCodes = await Promise.all(
     tsConfigs.map(

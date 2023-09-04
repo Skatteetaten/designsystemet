@@ -5,12 +5,12 @@ import {
   linkGroupVariantArr,
 } from '@skatteetaten/ds-buttons';
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: LinkGroup,
   subcomponents: {
     'LinkGroup.Link': Link,
@@ -38,64 +38,77 @@ export default {
       table: { category: category.props },
     },
   },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-buttons'),
     docs: { source: { type: 'code' } },
   },
-} as ComponentMeta<typeof LinkGroup>;
+} as Meta<typeof LinkGroup>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: ComponentStory<typeof LinkGroup> = (args) => (
+const TemplateDefault: StoryFn<typeof LinkGroup> = (args) => (
   <LinkGroup {...args}>
-    <LinkGroup.Link key={'linkGroupLink_1'} target={'_blank'} href={'#root'}>
+    <LinkGroup.Link
+      key={'linkGroupLink_1'}
+      target={'_blank'}
+      href={'#storybook-root'}
+    >
       {'Er du pendler?'}
     </LinkGroup.Link>
-    <LinkGroup.Link key={'linkGroupLink_2'} href={'#root'}>
+    <LinkGroup.Link key={'linkGroupLink_2'} href={'#storybook-root'}>
       {'Pendler du mye?'}
     </LinkGroup.Link>
-    <LinkGroup.Link key={'linkGroupLink_3'} href={'#root'}>
+    <LinkGroup.Link key={'linkGroupLink_3'} href={'#storybook-root'}>
       {'Pendler du dagen lang?'}
     </LinkGroup.Link>
   </LinkGroup>
 );
 
-const TemplateExample: ComponentStory<typeof LinkGroup> = () => (
+const TemplateExample: StoryFn<typeof LinkGroup> = () => (
   <>
     <LinkGroup hasSpacing>
-      <LinkGroup.Link key={'linkGroupLink_1'} href={'#root'}>
+      <LinkGroup.Link key={'linkGroupLink_1'} href={'#storybook-root'}>
         {'Rettledning til RF-1167 Næringsoppgave 2 for 2020 (PDF)'}
       </LinkGroup.Link>
-      <LinkGroup.Link key={'linkGroupLink_2'} href={'#root'}>
+      <LinkGroup.Link key={'linkGroupLink_2'} href={'#storybook-root'}>
         {'Rettledning til RF-1167 Næringsoppgave 2 for 2020 (Word)'}
       </LinkGroup.Link>
     </LinkGroup>
     <LinkGroup>
-      <LinkGroup.Link key={'linkGroupLink_1'} href={'#root'}>
+      <LinkGroup.Link key={'linkGroupLink_1'} href={'#storybook-root'}>
         {'Kontakt oss'}
       </LinkGroup.Link>
-      <LinkGroup.Link key={'linkGroupLink_2'} href={'#root'}>
+      <LinkGroup.Link key={'linkGroupLink_2'} href={'#storybook-root'}>
         {'Jobb i Skatteetaten'}
       </LinkGroup.Link>
-      <LinkGroup.Link key={'linkGroupLink_3'} href={'#root'}>
+      <LinkGroup.Link key={'linkGroupLink_3'} href={'#storybook-root'}>
         {'Om oss'}
       </LinkGroup.Link>
-      <LinkGroup.Link key={'linkGroupLink_4'} href={'#root'}>
+      <LinkGroup.Link key={'linkGroupLink_4'} href={'#storybook-root'}>
         {'Analyse og rapporter'}
       </LinkGroup.Link>
-      <LinkGroup.Link key={'linkGroupLink_5'} href={'#root'}>
+      <LinkGroup.Link key={'linkGroupLink_5'} href={'#storybook-root'}>
         {'Forskning'}
       </LinkGroup.Link>
     </LinkGroup>
   </>
 );
 
-export const LinkGroupDefault = TemplateDefault.bind({});
-export const LinkGroupExample = TemplateExample.bind({});
-LinkGroupDefault.storyName = 'Default';
-LinkGroupExample.storyName = 'Example';
-LinkGroupExample.parameters = {
-  controls: { disabled: true },
-};
+export const LinkGroupDefault = {
+  render: TemplateDefault,
+  name: 'Default',
 
-LinkGroupDefault.args = {
-  variant: getLinkGroupVariantDefault(),
-};
+  args: {
+    variant: getLinkGroupVariantDefault(),
+  },
+} satisfies Story;
+
+export const LinkGroupExample = {
+  render: TemplateExample,
+  name: 'Example',
+
+  parameters: {
+    controls: { disabled: true },
+  },
+} satisfies Story;

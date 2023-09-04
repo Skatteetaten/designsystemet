@@ -67,13 +67,13 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
       <div
         ref={ref}
         id={id}
-        className={className}
         lang={lang}
         data-testid={dataTestId}
         aria-live={getAriaLive()}
+        aria-atomic
       >
         {showAlertContent && (
-          <div className={`${styles.alert} ${variantClassName}`}>
+          <div className={`${styles.alert} ${variantClassName} ${className}`}>
             <span className={styles.iconWrapper}>
               <Icon size={'large'} svgPath={svg} className={styles.icon} />
             </span>

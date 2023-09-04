@@ -36,6 +36,8 @@ yarn-error.log
 testem.log
 /typings
 /.scannerwork/
+.jest-image-snapshot-touched-files
+**/*stats.html
 
 # System Files
 .DS_Store

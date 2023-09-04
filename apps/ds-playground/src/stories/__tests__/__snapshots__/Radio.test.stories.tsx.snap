@@ -2,150 +2,253 @@
 
 exports[`Tester/RadioGroup/Radio Defaults play-test 1`] = `
 <div data-test-block="true">
-  <div class="Radio_radio__Fh+3R">
-    <input id="radioInputId-:r2:"
-           class="Radio_radioInput__gTlv0"
-           type="radio"
-           value
+  <fieldset class="RadioGroup_radioGroup__CZc2h ">
+    <legend class="RadioGroup_radioGroupLegend__yNB2H RadioGroup_srOnly__a0T+C">
+      radio example
+    </legend>
+    <div class="RadioGroup_radioGroupItemContainer__AINZK">
+      <div class="Radio_radio__Fh+3R">
+        <input id="radioInputId-:r8:"
+               class="Radio_radioInput__gTlv0"
+               type="radio"
+               name="radioInputName-:r7:"
+               value
+        >
+        <label class="Radio_radioLabel__lJQhF"
+               for="radioInputId-:r8:"
+        >
+          Enkeltpersonsforetak
+        </label>
+      </div>
+    </div>
+    <div id="radioErrorId-:r6:"
+         aria-live="assertive"
+         aria-atomic="true"
     >
-    <label class="Radio_radioLabel__lJQhF"
-           for="radioInputId-:r2:"
-    >
-      Enkeltpersonsforetak
-    </label>
-  </div>
+    </div>
+  </fieldset>
 </div>
 `;
 
 exports[`Tester/RadioGroup/Radio WithAriaDescribedby play-test 1`] = `
 <div data-test-block="true">
-  <div class="Radio_radio__Fh+3R">
-    <input id="radioInputId-:r7:"
-           class="Radio_radioInput__gTlv0"
-           type="radio"
-           aria-describedby="htmlId"
-           value
+  <fieldset class="RadioGroup_radioGroup__CZc2h ">
+    <legend class="RadioGroup_radioGroupLegend__yNB2H RadioGroup_srOnly__a0T+C">
+      radio example
+    </legend>
+    <div class="RadioGroup_radioGroupItemContainer__AINZK">
+      <div class="Radio_radio__Fh+3R">
+        <input id="radioInputId-:rn:"
+               class="Radio_radioInput__gTlv0"
+               type="radio"
+               name="radioInputName-:rm:"
+               aria-describedby="htmlId"
+               value
+        >
+        <label class="Radio_radioLabel__lJQhF"
+               for="radioInputId-:rn:"
+        >
+          Enkeltpersonsforetak
+        </label>
+      </div>
+    </div>
+    <div id="radioErrorId-:rl:"
+         aria-live="assertive"
+         aria-atomic="true"
     >
-    <label class="Radio_radioLabel__lJQhF"
-           for="radioInputId-:r7:"
-    >
-      Enkeltpersonsforetak
-    </label>
-  </div>
+    </div>
+  </fieldset>
 </div>
 `;
 
 exports[`Tester/RadioGroup/Radio WithAttributes play-test 1`] = `
 <div data-test-block="true">
-  <div class="Radio_radio__Fh+3R dummyClassname"
-       lang="nb"
-  >
-    <input id="htmlId"
-           class="Radio_radioInput__gTlv0"
-           data-testid="123ID"
-           type="radio"
-           value
+  <fieldset class="RadioGroup_radioGroup__CZc2h ">
+    <legend class="RadioGroup_radioGroupLegend__yNB2H RadioGroup_srOnly__a0T+C">
+      radio example
+    </legend>
+    <div class="RadioGroup_radioGroupItemContainer__AINZK">
+      <div class="Radio_radio__Fh+3R dummyClassname"
+           lang="nb"
+      >
+        <input id="htmlId"
+               class="Radio_radioInput__gTlv0"
+               data-testid="123ID"
+               type="radio"
+               name="radioInputName-:r4:"
+               value
+        >
+        <label class="Radio_radioLabel__lJQhF"
+               for="htmlId"
+        >
+          Enkeltpersonsforetak
+        </label>
+      </div>
+    </div>
+    <div id="radioErrorId-:r3:"
+         aria-live="assertive"
+         aria-atomic="true"
     >
-    <label class="Radio_radioLabel__lJQhF"
-           for="htmlId"
-    >
-      Enkeltpersonsforetak
-    </label>
-  </div>
+    </div>
+  </fieldset>
 </div>
 `;
 
 exports[`Tester/RadioGroup/Radio WithDescription play-test 1`] = `
 <div data-test-block="true">
-  <div class="Radio_radio__Fh+3R">
-    <input id="radioInputId-:r3:"
-           class="Radio_radioInput__gTlv0"
-           type="radio"
-           value
+  <fieldset class="RadioGroup_radioGroup__CZc2h ">
+    <legend class="RadioGroup_radioGroupLegend__yNB2H RadioGroup_srOnly__a0T+C">
+      radio example
+    </legend>
+    <div class="RadioGroup_radioGroupItemContainer__AINZK">
+      <div class="Radio_radio__Fh+3R">
+        <input id="radioInputId-:rb:"
+               class="Radio_radioInput__gTlv0"
+               type="radio"
+               name="radioInputName-:ra:"
+               value
+        >
+        <label class="Radio_radioLabel__lJQhF"
+               for="radioInputId-:rb:"
+        >
+          Enkeltpersonsforetak
+          <span class="Radio_radioLabelDescription__29Ec0">
+            En liten beskrivelse tekst
+          </span>
+        </label>
+      </div>
+    </div>
+    <div id="radioErrorId-:r9:"
+         aria-live="assertive"
+         aria-atomic="true"
     >
-    <label class="Radio_radioLabel__lJQhF"
-           for="radioInputId-:r3:"
-    >
-      Enkeltpersonsforetak
-      <span class="Radio_radioLabelDescription__29Ec0">
-        En liten beskrivelse tekst
-      </span>
-    </label>
-  </div>
+    </div>
+  </fieldset>
 </div>
 `;
 
 exports[`Tester/RadioGroup/Radio WithLongText smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="Radio_radio__Fh+3R">
-    <input id="radioInputId-:r4:"
-           class="Radio_radioInput__gTlv0"
-           type="radio"
-           value
+  <fieldset class="RadioGroup_radioGroup__CZc2h ">
+    <legend class="RadioGroup_radioGroupLegend__yNB2H RadioGroup_srOnly__a0T+C">
+      radio example
+    </legend>
+    <div class="RadioGroup_radioGroupItemContainer__AINZK">
+      <div class="Radio_radio__Fh+3R">
+        <input id="radioInputId-:re:"
+               class="Radio_radioInput__gTlv0"
+               type="radio"
+               name="radioInputName-:rd:"
+               value
+        >
+        <label class="Radio_radioLabel__lJQhF"
+               for="radioInputId-:re:"
+        >
+          Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+          <span class="Radio_radioLabelDescription__29Ec0">
+            Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+          </span>
+        </label>
+      </div>
+    </div>
+    <div id="radioErrorId-:rc:"
+         aria-live="assertive"
+         aria-atomic="true"
     >
-    <label class="Radio_radioLabel__lJQhF"
-           for="radioInputId-:r4:"
-    >
-      Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
-      <span class="Radio_radioLabelDescription__29Ec0">
-        Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
-      </span>
-    </label>
-  </div>
+    </div>
+  </fieldset>
 </div>
 `;
 
 exports[`Tester/RadioGroup/Radio WithLongTextAndBreaking smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="Radio_radio__Fh+3R">
-    <input id="radioInputId-:r5:"
-           class="Radio_radioInput__gTlv0"
-           type="radio"
-           value
+  <fieldset class="RadioGroup_radioGroup__CZc2h ">
+    <legend class="RadioGroup_radioGroupLegend__yNB2H RadioGroup_srOnly__a0T+C">
+      radio example
+    </legend>
+    <div class="RadioGroup_radioGroupItemContainer__AINZK">
+      <div class="Radio_radio__Fh+3R">
+        <input id="radioInputId-:rh:"
+               class="Radio_radioInput__gTlv0"
+               type="radio"
+               name="radioInputName-:rg:"
+               value
+        >
+        <label class="Radio_radioLabel__lJQhF"
+               for="radioInputId-:rh:"
+        >
+          Loremipsumdolorsitamet.Allesomharlagetennettside,trengtlittfylltekstellerbaresurfetrundtpånettetharantageligvissettdisseordene,etterfulgtaventilsynelatendeeviglangtekstfyltmedlatinskeliksomsetninger.
+          <span class="Radio_radioLabelDescription__29Ec0">
+            Loremipsumdolorsitamet.Allesomharlagetennettside,trengtlittfylltekstellerbaresurfetrundtpånettetharantageligvissettdisseordene,etterfulgtaventilsynelatendeeviglangtekstfyltmedlatinskeliksomsetninger.
+          </span>
+        </label>
+      </div>
+    </div>
+    <div id="radioErrorId-:rf:"
+         aria-live="assertive"
+         aria-atomic="true"
     >
-    <label class="Radio_radioLabel__lJQhF"
-           for="radioInputId-:r5:"
-    >
-      Loremipsumdolorsitamet.Allesomharlagetennettside,trengtlittfylltekstellerbaresurfetrundtpånettetharantageligvissettdisseordene,etterfulgtaventilsynelatendeeviglangtekstfyltmedlatinskeliksomsetninger.
-      <span class="Radio_radioLabelDescription__29Ec0">
-        Loremipsumdolorsitamet.Allesomharlagetennettside,trengtlittfylltekstellerbaresurfetrundtpånettetharantageligvissettdisseordene,etterfulgtaventilsynelatendeeviglangtekstfyltmedlatinskeliksomsetninger.
-      </span>
-    </label>
-  </div>
+    </div>
+  </fieldset>
 </div>
 `;
 
 exports[`Tester/RadioGroup/Radio WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class="Radio_radio__Fh+3R">
-    <input id="radioInputId-:r0:"
-           class="Radio_radioInput__gTlv0"
-           type="radio"
-           value
-           name="dummyIdForwardedFromRef"
+  <fieldset class="RadioGroup_radioGroup__CZc2h ">
+    <legend class="RadioGroup_radioGroupLegend__yNB2H RadioGroup_srOnly__a0T+C">
+      radio example
+    </legend>
+    <div class="RadioGroup_radioGroupItemContainer__AINZK">
+      <div class="Radio_radio__Fh+3R">
+        <input id="radioInputId-:r2:"
+               class="Radio_radioInput__gTlv0"
+               type="radio"
+               name="dummyIdForwardedFromRef"
+               value
+        >
+        <label class="Radio_radioLabel__lJQhF"
+               for="radioInputId-:r2:"
+        >
+          Enkeltpersonsforetak
+        </label>
+      </div>
+    </div>
+    <div id="radioErrorId-:r0:"
+         aria-live="assertive"
+         aria-atomic="true"
     >
-    <label class="Radio_radioLabel__lJQhF"
-           for="radioInputId-:r0:"
-    >
-      Enkeltpersonsforetak
-    </label>
-  </div>
+    </div>
+  </fieldset>
 </div>
 `;
 
 exports[`Tester/RadioGroup/Radio WithValue play-test 1`] = `
 <div data-test-block="true">
-  <div class="Radio_radio__Fh+3R">
-    <input id="radioInputId-:r6:"
-           class="Radio_radioInput__gTlv0"
-           type="radio"
-           value="person"
+  <fieldset class="RadioGroup_radioGroup__CZc2h ">
+    <legend class="RadioGroup_radioGroupLegend__yNB2H RadioGroup_srOnly__a0T+C">
+      radio example
+    </legend>
+    <div class="RadioGroup_radioGroupItemContainer__AINZK">
+      <div class="Radio_radio__Fh+3R">
+        <input id="radioInputId-:rk:"
+               class="Radio_radioInput__gTlv0"
+               type="radio"
+               name="radioInputName-:rj:"
+               value="person"
+        >
+        <label class="Radio_radioLabel__lJQhF"
+               for="radioInputId-:rk:"
+        >
+          Enkeltpersonsforetak
+        </label>
+      </div>
+    </div>
+    <div id="radioErrorId-:ri:"
+         aria-live="assertive"
+         aria-atomic="true"
     >
-    <label class="Radio_radioLabel__lJQhF"
-           for="radioInputId-:r6:"
-    >
-      Enkeltpersonsforetak
-    </label>
-  </div>
+    </div>
+  </fieldset>
 </div>
 `;

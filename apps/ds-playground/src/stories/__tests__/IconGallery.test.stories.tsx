@@ -1,10 +1,10 @@
 import { Icon } from '@skatteetaten/ds-icons';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { ThemeSVGPaths } from '../utils/icon.themes';
 
-export default {
+const meta = {
   component: Icon,
   title: 'Tester/Icon Gallery',
   argTypes: {
@@ -26,26 +26,32 @@ export default {
     // Aria
     ariaLabel: { table: { disable: true } },
   },
-} as ComponentMeta<typeof Icon>;
+} satisfies Meta<typeof Icon>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-const TemplateSystemIcons: ComponentStory<typeof Icon> = () => (
-  <div data-test-block>
+const TemplateSystemIcons: StoryFn<typeof Icon> = () => (
+  <>
     {Object.entries(SystemSVGPaths).map(([svgPathName, svgPath]) => (
       <Icon key={svgPathName} svgPath={svgPath} />
     ))}
-  </div>
+  </>
 );
 
-const TemplateThemeIcons: ComponentStory<typeof Icon> = () => (
-  <div data-test-block>
+const TemplateThemeIcons: StoryFn<typeof Icon> = () => (
+  <>
     {Object.entries(ThemeSVGPaths).map(([svgPathName, svgPath]) => (
       <Icon key={svgPathName} svgPath={svgPath} variant={'themeIcon'} />
     ))}
-  </div>
+  </>
 );
 
-export const SystemIcons = TemplateSystemIcons.bind({});
-SystemIcons.storyName = 'SystemIcons Image Snaphot';
+export const SystemIcons = {
+  render: TemplateSystemIcons,
+  name: 'SystemIcons Image Snaphot',
+} as Story;
 
-export const ThemeIcons = TemplateThemeIcons.bind({});
-ThemeIcons.storyName = 'ThemeIcons Image Snaphot';
+export const ThemeIcons = {
+  render: TemplateThemeIcons,
+  name: 'ThemeIcons Image Snaphot',
+} as Story;

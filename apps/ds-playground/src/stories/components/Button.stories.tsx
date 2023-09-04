@@ -6,13 +6,13 @@ import {
   getButtonVariantDefault,
 } from '@skatteetaten/ds-buttons';
 import { action } from '@storybook/addon-actions';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Button,
   title: 'Komponenter/Button',
   argTypes: {
@@ -55,12 +55,15 @@ export default {
     onClick: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
   },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-buttons'),
   },
 } as Meta<ButtonProps>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: Story<ButtonProps> = (args) => (
+const TemplateDefault: StoryFn<ButtonProps> = (args) => (
   <Button
     {...args}
     variant={args.variant}
@@ -70,7 +73,7 @@ const TemplateDefault: Story<ButtonProps> = (args) => (
   </Button>
 );
 
-const TemplateExample: Story<ButtonProps> = () => (
+const TemplateExample: StoryFn<ButtonProps> = () => (
   <div>
     <Button className={'exampleSpacing'} variant={'primary'}>
       {'Send inn skjema'}
@@ -89,15 +92,21 @@ const TemplateExample: Story<ButtonProps> = () => (
   </div>
 );
 
-export const ButtonDefault = TemplateDefault.bind({});
-export const ButtonExample = TemplateExample.bind({});
-ButtonDefault.storyName = 'Default';
-ButtonExample.storyName = 'Example';
-ButtonExample.parameters = {
-  controls: { disabled: true },
-};
+export const ButtonDefault = {
+  render: TemplateDefault,
+  name: 'Default',
 
-ButtonDefault.args = {
-  children: 'Klikk',
-  variant: 'primary',
-};
+  args: {
+    children: 'Klikk',
+    variant: getButtonVariantDefault(),
+  },
+} satisfies Story;
+
+export const ButtonExample = {
+  render: TemplateExample,
+  name: 'Example',
+
+  parameters: {
+    controls: { disabled: true },
+  },
+} satisfies Story;

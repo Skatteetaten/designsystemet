@@ -1,10 +1,10 @@
 import { RadioGroup } from '@skatteetaten/ds-forms';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: RadioGroup.Radio,
   title: 'Komponenter/RadioGroup/Radio',
   argTypes: {
@@ -18,18 +18,24 @@ export default {
     // Aria
     ariaDescribedby: { table: { category: category.aria } },
   },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-forms'),
     docs: { source: { type: 'code' } },
   },
-} as ComponentMeta<typeof RadioGroup.Radio>;
+} satisfies Meta<typeof RadioGroup.Radio>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: ComponentStory<typeof RadioGroup.Radio> = (args) => {
+const TemplateDefault: StoryFn<typeof RadioGroup.Radio> = (args) => {
   return <RadioGroup.Radio {...args} />;
 };
 
-export const RadioDefault = TemplateDefault.bind({});
-RadioDefault.storyName = 'Default';
-RadioDefault.args = {
-  children: 'Enkeltpersonsforetak',
-};
+export const RadioDefault = {
+  render: TemplateDefault,
+  name: 'Default',
+
+  args: {
+    children: 'Enkeltpersonsforetak',
+  },
+} satisfies Story;

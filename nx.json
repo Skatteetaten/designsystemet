@@ -2,7 +2,7 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "npmScope": "skatteetaten",
   "affected": {
-    "defaultBase": "master"
+    "defaultBase": "origin/master"
   },
   "tasksRunnerOptions": {
     "default": {
@@ -36,10 +36,18 @@
         "default",
         "{workspaceRoot}/.stylelintrc(.(json|yml|yaml|js))?"
       ]
+    },
+    "build-storybook": {
+      "inputs": [
+        "default",
+        "^production",
+        "{projectRoot}/.storybook/**/*",
+        "{projectRoot}/tsconfig.storybook.json"
+      ]
     }
   },
   "generators": {
-    "@nrwl/react": {
+    "@nx/react": {
       "application": {
         "style": "scss",
         "linter": "eslint",
@@ -56,7 +64,7 @@
     }
   },
   "pluginsConfig": {
-    "@nrwl/js": {
+    "@nx/js": {
       "analyzeSourceFiles": true
     }
   },
@@ -65,7 +73,9 @@
     "default": ["{projectRoot}/**/*", "sharedGlobals", "projectSpecificFiles"],
     "sharedGlobals": [
       "{workspaceRoot}/.stylelintrc.json",
-      "{workspaceRoot}/babel.config.json"
+      "{workspaceRoot}/babel.config.json",
+      "{workspaceRoot}/.stylelintrc.json",
+      "{workspaceRoot}/libs/ds-dev-config/build/rollup-config-factory.js"
     ],
     "production": [
       "default",
@@ -75,11 +85,10 @@
       "!{projectRoot}/.eslintrc.json",
       "!{projectRoot}/.storybook/**/*",
       "!{projectRoot}/**/*.stories.@(js|jsx|ts|tsx|mdx)",
-      "!{projectRoot}/.stylelintrc(.(json|yml|yaml|js))?"
+      "!{projectRoot}/.stylelintrc(.(json|yml|yaml|js))?",
+      "!{projectRoot}/tsconfig.storybook.json",
+      "!{projectRoot}/src/test-setup.[jt]s"
     ],
     "projectSpecificFiles": []
-  },
-  "implicitDependencies": {
-    ".stylelintrc.json": "*"
   }
 }

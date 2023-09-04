@@ -2,12 +2,12 @@ import { useState } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { CheckboxGroup } from '@skatteetaten/ds-forms';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: CheckboxGroup,
   title: 'Komponenter/CheckboxGroup',
   argTypes: {
@@ -40,20 +40,17 @@ export default {
         category: category.htmlAttribute,
       },
     },
-    required: {
-      control: 'boolean',
-      table: {
-        category: category.htmlAttribute,
-      },
-    },
   },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-forms'),
     docs: { source: { type: 'code' } },
   },
-} as ComponentMeta<typeof CheckboxGroup>;
+} satisfies Meta<typeof CheckboxGroup>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: ComponentStory<typeof CheckboxGroup> = (args) => (
+const TemplateDefault: StoryFn<typeof CheckboxGroup> = (args) => (
   <CheckboxGroup {...args}>
     <CheckboxGroup.Checkbox>{'Har barn over 16 år'}</CheckboxGroup.Checkbox>
     <CheckboxGroup.Checkbox>{'Har barn under 12 år'}</CheckboxGroup.Checkbox>
@@ -69,7 +66,7 @@ const TemplateDefault: ComponentStory<typeof CheckboxGroup> = (args) => (
   </CheckboxGroup>
 );
 
-const TemplateExample: ComponentStory<typeof CheckboxGroup> = () => {
+const TemplateExample: StoryFn<typeof CheckboxGroup> = () => {
   const options = [
     {
       label: 'Har barn over 16 år',
@@ -120,14 +117,23 @@ const TemplateExample: ComponentStory<typeof CheckboxGroup> = () => {
   );
 };
 
-export const CheckboxGroupDefault = TemplateDefault.bind({});
-export const CheckboxGroupExample = TemplateExample.bind({});
-CheckboxGroupDefault.storyName = 'Default';
-CheckboxGroupExample.storyName = 'Example';
-CheckboxGroupExample.parameters = {
-  controls: { disabled: true },
-};
+export const CheckboxGroupDefault = {
+  render: TemplateDefault,
+  name: 'Default',
 
-CheckboxGroupDefault.args = {
-  legend: 'Velg det som passer deg',
-};
+  args: {
+    legend: 'Velg det som passer deg',
+  },
+} satisfies Story;
+
+export const CheckboxGroupExample = {
+  render: TemplateExample,
+  name: 'Example',
+
+  args: {
+    legend: 'dummy',
+  },
+  parameters: {
+    controls: { disabled: true },
+  },
+} satisfies Story;

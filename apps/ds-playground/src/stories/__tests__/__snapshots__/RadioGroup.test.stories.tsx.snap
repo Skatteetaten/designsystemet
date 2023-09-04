@@ -48,8 +48,8 @@ exports[`Tester/RadioGroup/RadioGroup Defaults play-test 1`] = `
       </div>
     </div>
     <div id="radioErrorId-:ra:"
-         class
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -104,8 +104,8 @@ exports[`Tester/RadioGroup/RadioGroup VariantHorizontal smoke-test 1`] = `
       </div>
     </div>
     <div id="radioErrorId-:rf:"
-         class
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -164,8 +164,8 @@ exports[`Tester/RadioGroup/RadioGroup WithAttributes play-test 1`] = `
       </div>
     </div>
     <div id="radioErrorId-:r5:"
-         class
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -221,8 +221,8 @@ exports[`Tester/RadioGroup/RadioGroup WithDefaultValue play-test 1`] = `
       </div>
     </div>
     <div id="radioErrorId-:ru:"
-         class
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -280,8 +280,8 @@ exports[`Tester/RadioGroup/RadioGroup WithDisabled play-test 1`] = `
       </div>
     </div>
     <div id="radioErrorId-:r13:"
-         class
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -336,8 +336,8 @@ exports[`Tester/RadioGroup/RadioGroup WithErrorMessage play-test 1`] = `
       </div>
     </div>
     <div id="radioErrorId-:r1s:"
-         class
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -399,10 +399,10 @@ exports[`Tester/RadioGroup/RadioGroup WithErrorMessageAndHasError play-test 1`] 
       </div>
     </div>
     <div id="radioErrorId-:r21:"
-         class
          aria-live="assertive"
+         aria-atomic="true"
     >
-      <div class="ErrorMessage_errorMessage__508oW">
+      <div class="ErrorMessage_errorMessage__508oW ">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
              viewbox="0 0 24 24"
              focusable="false"
@@ -443,8 +443,8 @@ exports[`Tester/RadioGroup/RadioGroup WithEventHandlers play-test 1`] = `
       </div>
     </div>
     <div id="radioErrorId-:r2b:"
-         class
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -475,10 +475,10 @@ exports[`Tester/RadioGroup/RadioGroup WithHasErrorAndAriaDescribedby play-test 1
       </div>
     </div>
     <div id="radioErrorId-:r27:"
-         class
          aria-live="assertive"
+         aria-atomic="true"
     >
-      <div class="ErrorMessage_errorMessage__508oW">
+      <div class="ErrorMessage_errorMessage__508oW ">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
              viewbox="0 0 24 24"
              focusable="false"
@@ -545,8 +545,8 @@ exports[`Tester/RadioGroup/RadioGroup WithHideLegend play-test 1`] = `
       </div>
     </div>
     <div id="radioErrorId-:rk:"
-         class
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -601,8 +601,8 @@ exports[`Tester/RadioGroup/RadioGroup WithName play-test 1`] = `
       </div>
     </div>
     <div id="radioErrorId-:r1n:"
-         class
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -659,8 +659,8 @@ exports[`Tester/RadioGroup/RadioGroup WithRef play-test 1`] = `
       </div>
     </div>
     <div id="radioErrorId-:r0:"
-         class
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -718,8 +718,8 @@ exports[`Tester/RadioGroup/RadioGroup WithRequired play-test 1`] = `
       </div>
     </div>
     <div id="radioErrorId-:r18:"
-         class
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -777,8 +777,8 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMark smoke-test 1`] = `
       </div>
     </div>
     <div id="radioErrorId-:r1d:"
-         class
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -841,8 +841,8 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMarkAndLegendAsMarkup smoke
       </div>
     </div>
     <div id="radioErrorId-:r1i:"
-         class
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>
@@ -898,8 +898,8 @@ exports[`Tester/RadioGroup/RadioGroup WithSelectedValue play-test 1`] = `
       </div>
     </div>
     <div id="radioErrorId-:rp:"
-         class
          aria-live="assertive"
+         aria-atomic="true"
     >
     </div>
   </fieldset>

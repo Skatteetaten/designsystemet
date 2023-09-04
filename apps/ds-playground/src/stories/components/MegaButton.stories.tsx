@@ -1,11 +1,11 @@
 import { MegaButton } from '@skatteetaten/ds-buttons';
 import { action } from '@storybook/addon-actions';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: MegaButton,
   title: 'Komponenter/MegaButton',
   argTypes: {
@@ -44,29 +44,38 @@ export default {
     onFocus: { ...htmlEventDescription },
     onBlur: { ...htmlEventDescription },
   },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-buttons'),
   },
-} as ComponentMeta<typeof MegaButton>;
+} satisfies Meta<typeof MegaButton>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: ComponentStory<typeof MegaButton> = (args) => (
+const TemplateDefault: StoryFn<typeof MegaButton> = (args) => (
   <MegaButton {...args} onClick={action('KlikkEvent MegaButton')}>
     {args.children}
   </MegaButton>
 );
 
-export const MegaButtonDefault = TemplateDefault.bind({});
-export const MegaButtonExample = TemplateDefault.bind({});
-MegaButtonDefault.storyName = 'Default';
-MegaButtonExample.storyName = 'Example';
-MegaButtonExample.parameters = {
-  controls: { disabled: true },
-};
+export const MegaButtonDefault = {
+  render: TemplateDefault,
+  name: 'Default',
 
-MegaButtonDefault.args = {
-  children: 'Klikk her',
-};
+  args: {
+    children: 'Klikk her',
+  },
+} satisfies Story;
 
-MegaButtonExample.args = {
-  children: 'Se eller endre skattekortet',
-};
+export const MegaButtonExample = {
+  render: TemplateDefault,
+  name: 'Example',
+
+  parameters: {
+    controls: { disabled: true },
+  },
+
+  args: {
+    children: 'Se eller endre skattekortet',
+  },
+} satisfies Story;

@@ -191,7 +191,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
         <tr class>
           <td class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 ">
           </td>
-          <th class="TableHeaderCell_headerCell__3iEUX   TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_left__HuGJ2 "
               scope="col"
           >
             <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_standard__I+g27"
@@ -213,7 +213,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX   TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_left__HuGJ2 "
               data-testid="header-belop"
               scope="col"
           >
@@ -236,7 +236,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX   TableHeaderCell_headerCell_right__UCGmP "
+          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
               scope="col"
           >
             <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_standard__I+g27"
@@ -258,7 +258,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX   TableHeaderCell_headerCell_right__UCGmP "
+          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
               data-testid="header-avkastning"
               scope="col"
           >
@@ -639,6 +639,7 @@ exports[`Tester/Table/Table WithScrollbar smoke-test 1`] = `
     <div class="Table_wrapper__cQelY ">
       <table class="Table_table__VhSJI  Table_table_standard__8JWMb ">
         <caption class="Table_tableCaption__zTm5t Table_hidden__N7qKc Table_tableCaption_standard__Nhqht">
+          tabellcaption
         </caption>
         <thead>
           <tr class>
@@ -701,6 +702,7 @@ exports[`Tester/Table/Table WithScrollbar smoke-test 1`] = `
     <div class="Table_wrapper__cQelY ">
       <table class="Table_table__VhSJI  Table_table_standard__8JWMb ">
         <caption class="Table_tableCaption__zTm5t Table_hidden__N7qKc Table_tableCaption_standard__Nhqht">
+          tabellcaption
         </caption>
         <thead>
           <tr class>
@@ -763,6 +765,7 @@ exports[`Tester/Table/Table WithScrollbar smoke-test 1`] = `
     <div class="Table_wrapper__cQelY ">
       <table class="Table_table__VhSJI  Table_table_standard__8JWMb ">
         <caption class="Table_tableCaption__zTm5t Table_hidden__N7qKc Table_tableCaption_standard__Nhqht">
+          tabellcaption
         </caption>
         <thead>
           <tr class>
@@ -835,7 +838,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
         <tr class>
           <td class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_compact__-SSF+  TableHeaderCell_headerCell_left__HuGJ2 ">
           </td>
-          <th class="TableHeaderCell_headerCell__3iEUX   TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_left__HuGJ2 "
               scope="col"
           >
             <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_compact__-SSF+"
@@ -857,7 +860,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX   TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_left__HuGJ2 "
               data-testid="header-belop"
               scope="col"
           >
@@ -880,7 +883,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX   TableHeaderCell_headerCell_right__UCGmP "
+          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
               scope="col"
           >
             <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_compact__-SSF+"
@@ -902,7 +905,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX   TableHeaderCell_headerCell_right__UCGmP "
+          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
               data-testid="header-avkastning"
               scope="col"
           >
@@ -1118,7 +1121,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
         <tr class>
           <td class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 ">
           </td>
-          <th class="TableHeaderCell_headerCell__3iEUX   TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_left__HuGJ2 "
               scope="col"
           >
             <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_standard__I+g27"
@@ -1140,7 +1143,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX   TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_left__HuGJ2 "
               data-testid="header-belop"
               scope="col"
           >
@@ -1163,7 +1166,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX   TableHeaderCell_headerCell_right__UCGmP "
+          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
               scope="col"
           >
             <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_standard__I+g27"
@@ -1185,7 +1188,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX   TableHeaderCell_headerCell_right__UCGmP "
+          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
               data-testid="header-avkastning"
               scope="col"
           >

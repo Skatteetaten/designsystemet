@@ -23,13 +23,13 @@ export const ErrorMessage = forwardRef<HTMLDivElement, ErrorMessageProps>(
       <div
         ref={ref}
         id={id}
-        className={className}
         lang={lang}
         data-testid={dataTestId}
         aria-live={'assertive'}
+        aria-atomic
       >
         {showError && (
-          <div className={styles.errorMessage}>
+          <div className={`${styles.errorMessage} ${className}`}>
             <ErrorIcon size={'small'} className={styles.errorMessageIcon} />
             <p className={styles.errorMessageText}>{children}</p>
           </div>

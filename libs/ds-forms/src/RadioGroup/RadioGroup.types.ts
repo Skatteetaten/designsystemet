@@ -5,7 +5,7 @@ import { BaseProps } from '@skatteetaten/ds-core-utils';
 import { RadioProps } from '../Radio/Radio.types';
 
 export const radioGroupVariantArr = ['standard', 'horizontal'] as const;
-export type RadioGroupVariant = typeof radioGroupVariantArr[number];
+export type RadioGroupVariant = (typeof radioGroupVariantArr)[number];
 
 export interface RadioGroupContextProps {
   defaultValue?: string | number;
@@ -38,7 +38,7 @@ interface RadioGroupComponentCommonProps
     BaseProps {
   /** Radio-komponenter */
   children: JSX.Element | JSX.Element[];
-  /** Skjule navn på gruppen. */
+  /** Skjuler navnet på gruppen men er fortsatt synlig for skjermleser. */
   hideLegend?: boolean;
   /** Navn på gruppen. */
   legend: React.ReactNode;

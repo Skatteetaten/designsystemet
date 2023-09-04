@@ -6,12 +6,12 @@ import {
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { CalendarSVGpath } from '@skatteetaten/ds-icons';
 import { expect } from '@storybook/jest';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 
-export default {
+const meta = {
   component: LinkGroup,
   title: 'Tester/LinkGroup',
   argTypes: {
@@ -43,33 +43,29 @@ export default {
       control: 'inline-radio',
     },
   },
-} as ComponentMeta<typeof LinkGroup>;
-
-const Template: ComponentStory<typeof LinkGroup> = (args) => (
-  <div data-test-block>
-    <LinkGroup {...args} />
-  </div>
-);
+} satisfies Meta<typeof LinkGroup>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 const defaultArgs: LinkGroupProps = {
   children: [
     <LinkGroup.Link
       key={'linkGroupLink_1'}
-      href={'#root'}
+      href={'#storybook-root'}
       onClick={(e): void => e.preventDefault()}
     >
       {'Er du pendler?'}
     </LinkGroup.Link>,
     <LinkGroup.Link
       key={'linkGroupLink_2'}
-      href={'#root'}
+      href={'#storybook-root'}
       onClick={(e): void => e.preventDefault()}
     >
       {'Pendler du mye?'}
     </LinkGroup.Link>,
     <LinkGroup.Link
       key={'linkGroupLink_3'}
-      href={'#root'}
+      href={'#storybook-root'}
       onClick={(e): void => e.preventDefault()}
     >
       {'Pendler du dagen lang?'}
@@ -77,154 +73,175 @@ const defaultArgs: LinkGroupProps = {
   ],
 };
 
-// Når LinkGroup har en ref, så får dom a elementet ref forwarded
-export const WithRef = Template.bind({});
-WithRef.storyName = 'With Ref (FA1)';
-WithRef.args = {
-  ...defaultArgs,
-  ref: (instance: HTMLUListElement | null): void => {
-    if (instance) {
-      instance.id = 'dummyIdForwardedFromRef';
-    }
-  },
-};
-WithRef.argTypes = {
-  ref: { table: { disable: false } },
-};
-WithRef.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const linkGroup = canvas.getByRole('list');
-  await expect(linkGroup).toHaveAttribute('id', 'dummyIdForwardedFromRef');
-};
+export const WithRef = {
+  name: 'With Ref (FA1)',
 
-// Når LinkGroup har en id, så har ul-element id
-// Når LinkGroup har en custom CSS, så vises custom stil
-// Når LinkGroup har en lang, så har ul-element lang
-// Når LinkGroup har dataTestid, så har ul-elementet data-testid satt
-export const WithAttributes = Template.bind({});
-WithAttributes.storyName = 'With Attributes (FA2-5)';
-WithAttributes.args = {
-  ...defaultArgs,
-  id: 'htmlId',
-  className: 'dummyClassname',
-  lang: 'nb',
-  'data-testid': '123ID',
-};
-WithAttributes.argTypes = {
-  id: { table: { disable: false } },
-  className: { table: { disable: false } },
-  lang: { table: { disable: false } },
-  'data-testid': { table: { disable: false } },
-};
-WithAttributes.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const linkGroup = canvas.getByRole('list');
-  await expect(linkGroup).toHaveClass('dummyClassname');
-  await expect(linkGroup).toHaveAttribute('id', 'htmlId');
-  await expect(linkGroup).toHaveAttribute('lang', 'nb');
-  await expect(linkGroup).toHaveAttribute('data-testid', '123ID');
-};
-
-// Når LinkGroup instansieres, så vises default-variant list og rendrer riktig ulike tilstander (imageSnapshot viser kun ulike tilstander av listItem og ikke link)
-export const Defaults = Template.bind({});
-Defaults.storyName = 'Defaults Variant List (A1 delvis, A4 delvis, A5)';
-Defaults.args = {
-  ...defaultArgs,
-};
-Defaults.argTypes = {
-  children: {
-    table: { disable: false },
-  },
-};
-Defaults.parameters = {
-  imageSnapshot: {
-    hover: `${wrapper} > ul > li:first-child > a`,
-    focus: `${wrapper} > ul > li:first-child > a`,
-    click: `${wrapper} > ul > li:first-child > a`,
-  },
-};
-
-// Når LinkGroup instansieres, så vises variant anchors og rendrer riktig ulike tilstander (imageSnapshot viser kun ulike tilstander av listItem og ikke link)
-export const VariantAnchors = Template.bind({});
-VariantAnchors.storyName = 'Variant Anchors (A1 delvis, A4 delvis, A6)';
-VariantAnchors.args = {
-  ...defaultArgs,
-  variant: 'anchors',
-};
-VariantAnchors.argTypes = {
-  variant: {
-    table: {
-      disable: false,
+  args: {
+    ...defaultArgs,
+    ref: (instance: HTMLUListElement | null): void => {
+      if (instance) {
+        instance.id = 'dummyIdForwardedFromRef';
+      }
     },
   },
-};
-VariantAnchors.parameters = {
-  imageSnapshot: {
-    hover: `${wrapper} > ul > li:first-child > a`,
+
+  argTypes: {
+    ref: { table: { disable: false } },
   },
-};
 
-// Når LinkGroup har en veldig lang tekst, valgfritt ikon og/eller external ikon så skal teksten og ikon ha hengende innrykk
-export const WithLongTextAndIcons = Template.bind({});
-WithLongTextAndIcons.storyName = 'With Long Text And Icons (A2)';
-WithLongTextAndIcons.args = {
-  ...defaultArgs,
-  children: [
-    <LinkGroup.Link key={'linkGroupLink_1'} href={'#root'} isExternal>
-      {'Denne lenken har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert ' +
-        'uansett om ikon eller ikke og får et hengende innrykk.'}
-    </LinkGroup.Link>,
-    <LinkGroup.Link
-      key={'linkGroupLink_2'}
-      href={'#root'}
-      svgPath={CalendarSVGpath}
-    >
-      {'Denne lenken har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert ' +
-        'uansett om ikon eller ikke og får et hengende innrykk.'}
-    </LinkGroup.Link>,
-  ],
-};
-WithLongTextAndIcons.argTypes = {
-  children: { table: { disable: false } },
-};
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const linkGroup = canvas.getByRole('list');
+    await expect(linkGroup).toHaveAttribute('id', 'dummyIdForwardedFromRef');
+  },
+} satisfies Story;
 
-const TemplateWithTwoLinkGroups: ComponentStory<typeof LinkGroup> = (args) => (
-  <div data-test-block>
+export const WithAttributes = {
+  name: 'With Attributes (FA2-5)',
+
+  args: {
+    ...defaultArgs,
+    id: 'htmlId',
+    className: 'dummyClassname',
+    lang: 'nb',
+    'data-testid': '123ID',
+  },
+
+  argTypes: {
+    id: { table: { disable: false } },
+    className: { table: { disable: false } },
+    lang: { table: { disable: false } },
+    'data-testid': { table: { disable: false } },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const linkGroup = canvas.getByRole('list');
+    await expect(linkGroup).toHaveClass('dummyClassname');
+    await expect(linkGroup).toHaveAttribute('id', 'htmlId');
+    await expect(linkGroup).toHaveAttribute('lang', 'nb');
+    await expect(linkGroup).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const Defaults = {
+  name: 'Defaults Variant List (A1 delvis, A4 delvis, A5)',
+
+  args: {
+    ...defaultArgs,
+  },
+
+  argTypes: {
+    children: {
+      table: { disable: false },
+    },
+  },
+
+  parameters: {
+    imageSnapshot: {
+      hover: `${wrapper} > ul > li:first-child > a`,
+      focus: `${wrapper} > ul > li:first-child > a`,
+      click: `${wrapper} > ul > li:first-child > a`,
+    },
+  },
+} satisfies Story;
+
+export const VariantAnchors = {
+  name: 'Variant Anchors (A1 delvis, A4 delvis, A6)',
+
+  args: {
+    ...defaultArgs,
+    variant: 'anchors',
+  },
+
+  argTypes: {
+    variant: {
+      table: {
+        disable: false,
+      },
+    },
+  },
+
+  parameters: {
+    imageSnapshot: {
+      hover: `${wrapper} > ul > li:first-child > a`,
+    },
+  },
+} satisfies Story;
+
+export const WithLongTextAndIcons = {
+  name: 'With Long Text And Icons (A2)',
+
+  args: {
+    ...defaultArgs,
+    children: [
+      <LinkGroup.Link
+        key={'linkGroupLink_1'}
+        href={'#storybook-root'}
+        isExternal
+      >
+        {'Denne lenken har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert ' +
+          'uansett om ikon eller ikke og får et hengende innrykk.'}
+      </LinkGroup.Link>,
+      <LinkGroup.Link
+        key={'linkGroupLink_2'}
+        href={'#storybook-root'}
+        svgPath={CalendarSVGpath}
+      >
+        {'Denne lenken har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert ' +
+          'uansett om ikon eller ikke og får et hengende innrykk.'}
+      </LinkGroup.Link>,
+    ],
+  },
+
+  argTypes: {
+    children: { table: { disable: false } },
+  },
+} satisfies Story;
+
+const TemplateWithTwoLinkGroups: StoryFn<typeof LinkGroup> = (args) => (
+  <>
     <LinkGroup {...args} />
     <LinkGroup {...args} />
-  </div>
+  </>
 );
 
-// Når LinkGroup har spacing, så får gruppen en margin under gruppen
-export const WithSpacing = TemplateWithTwoLinkGroups.bind({});
-WithSpacing.storyName = 'With Spacing (A3)';
-WithSpacing.args = {
-  ...defaultArgs,
-  hasSpacing: true,
-};
-WithSpacing.argTypes = {
-  hasSpacing: { table: { disable: false } },
-};
+export const WithSpacing = {
+  render: TemplateWithTwoLinkGroups,
+  name: 'With Spacing (A3)',
 
-// Når LinkGroup har color white, så vises tekster og ikoner i hvit
-export const WithColor = Template.bind({});
-WithColor.storyName = 'With Color (A7)';
-WithColor.args = {
-  ...defaultArgs,
-  color: 'white',
-};
-WithColor.argTypes = {
-  color: {
-    table: { disable: false },
+  args: {
+    ...defaultArgs,
+    hasSpacing: true,
   },
-};
-WithColor.parameters = {
-  backgrounds: {
-    default: 'themePrimary',
+
+  argTypes: {
+    hasSpacing: { table: { disable: false } },
   },
-  imageSnapshot: {
-    hover: `${wrapper} > ul > li:first-child > a`,
-    focus: `${wrapper} > ul > li:first-child > a`,
-    click: `${wrapper} > ul > li:first-child > a`,
+} satisfies Story;
+
+export const WithColor = {
+  name: 'With Color (A7)',
+
+  args: {
+    ...defaultArgs,
+    color: 'white',
   },
-};
+
+  argTypes: {
+    color: {
+      table: { disable: false },
+    },
+  },
+
+  parameters: {
+    backgrounds: {
+      default: 'themePrimary',
+    },
+    imageSnapshot: {
+      hover: `${wrapper} > ul > li:first-child > a`,
+      focus: `${wrapper} > ul > li:first-child > a`,
+      click: `${wrapper} > ul > li:first-child > a`,
+    },
+  },
+} satisfies Story;

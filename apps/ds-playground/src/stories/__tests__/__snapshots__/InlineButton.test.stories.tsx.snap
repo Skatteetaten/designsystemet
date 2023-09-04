@@ -153,16 +153,6 @@ exports[`Tester/InlineButton WithLongText smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/InlineButton WithLongTextAndBreaking smoke-test 1`] = `
-<div data-test-block="true">
-  <button class="InlineButton_button__2aGtg   "
-          type="button"
-  >
-    Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Nårikkeikonsåskaltekstenværevenstrejusteres.Denneknappenharenveldiglangtekst.Sålangatdentvingerframlinjeskift.Nårikkeikonsåskaltekstenværevenstrejusteres.
-  </button>
-</div>
-`;
-
 exports[`Tester/InlineButton WithLongTextAndIcon smoke-test 1`] = `
 <div data-test-block="true">
   <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  "

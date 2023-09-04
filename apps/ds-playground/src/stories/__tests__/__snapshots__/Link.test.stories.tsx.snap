@@ -3,7 +3,7 @@
 exports[`Tester/Link Defaults play-test 1`] = `
 <div data-test-block="true">
   <a class="Link_link__jeUpY  "
-     href="#root"
+     href="#storybook-root"
   >
     Er du pendler?
   </a>
@@ -13,7 +13,7 @@ exports[`Tester/Link Defaults play-test 1`] = `
 exports[`Tester/Link WithAriaDescribedby play-test 1`] = `
 <div data-test-block="true">
   <a class="Link_link__jeUpY  "
-     href="#root"
+     href="#storybook-root"
      aria-describedby="htmlId"
   >
     Er du pendler?
@@ -27,7 +27,7 @@ exports[`Tester/Link WithAttributes play-test 1`] = `
      class="Link_link__jeUpY  dummyClassname"
      lang="nb"
      data-testid="123ID"
-     href="#root"
+     href="#storybook-root"
   >
     Er du pendler?
   </a>
@@ -37,7 +37,7 @@ exports[`Tester/Link WithAttributes play-test 1`] = `
 exports[`Tester/Link WithColor smoke-test 1`] = `
 <div data-test-block="true">
   <a class="Link_link__jeUpY Link_link_white__bmeQu "
-     href="#root"
+     href="#storybook-root"
   >
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isCustom__nsOot"
          viewbox="0 0 24 24"
@@ -66,7 +66,7 @@ exports[`Tester/Link WithColor smoke-test 1`] = `
 exports[`Tester/Link WithExternalIcon play-test 1`] = `
 <div data-test-block="true">
   <a class="Link_link__jeUpY  "
-     href="#root"
+     href="#storybook-root"
   >
     Er du pendler?
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isExternal__O+HIA"
@@ -86,7 +86,7 @@ exports[`Tester/Link WithExternalIcon play-test 1`] = `
 exports[`Tester/Link WithIcon play-test 1`] = `
 <div data-test-block="true">
   <a class="Link_link__jeUpY  "
-     href="#root"
+     href="#storybook-root"
   >
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isCustom__nsOot"
          viewbox="0 0 24 24"
@@ -105,19 +105,9 @@ exports[`Tester/Link WithIcon play-test 1`] = `
 exports[`Tester/Link WithLongText smoke-test 1`] = `
 <div data-test-block="true">
   <a class="Link_link__jeUpY  "
-     href="#root"
+     href="#storybook-root"
   >
     Denne lenken har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert uansett om ikon eller ikke.
-  </a>
-</div>
-`;
-
-exports[`Tester/Link WithLongTextAndBreaking smoke-test 1`] = `
-<div data-test-block="true">
-  <a class="Link_link__jeUpY  "
-     href="#root"
-  >
-    Dennelenkenharenveldiglangtekst.Sålangatdentvingerframlinjeskiftmedtekstsomalltidervenstrejustertuansettomikonellerikke.
   </a>
 </div>
 `;
@@ -125,7 +115,7 @@ exports[`Tester/Link WithLongTextAndBreaking smoke-test 1`] = `
 exports[`Tester/Link WithLongTextIconAndExternalIcon smoke-test 1`] = `
 <div data-test-block="true">
   <a class="Link_link__jeUpY  "
-     href="#root"
+     href="#storybook-root"
   >
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isCustom__nsOot"
          viewbox="0 0 24 24"
@@ -154,7 +144,7 @@ exports[`Tester/Link WithLongTextIconAndExternalIcon smoke-test 1`] = `
 exports[`Tester/Link WithOnClick play-test 1`] = `
 <div data-test-block="true">
   <a class="Link_link__jeUpY  "
-     href="#root"
+     href="#storybook-root"
   >
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isCustom__nsOot"
          viewbox="0 0 24 24"
@@ -173,7 +163,7 @@ exports[`Tester/Link WithOnClick play-test 1`] = `
 exports[`Tester/Link WithRef play-test 1`] = `
 <div data-test-block="true">
   <a class="Link_link__jeUpY  "
-     href="#root"
+     href="#storybook-root"
      id="dummyIdForwardedFromRef"
   >
     Er du pendler?
@@ -184,7 +174,7 @@ exports[`Tester/Link WithRef play-test 1`] = `
 exports[`Tester/Link WithTarget play-test 1`] = `
 <div data-test-block="true">
   <a class="Link_link__jeUpY  "
-     href="#root"
+     href="#storybook-root"
      rel="noreferrer"
      target="_blank"
   >

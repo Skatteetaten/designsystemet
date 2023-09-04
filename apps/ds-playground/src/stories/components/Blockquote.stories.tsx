@@ -1,10 +1,10 @@
 import { Blockquote } from '@skatteetaten/ds-typography';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Blockquote,
   title: 'Komponenter/Blockquote',
   argTypes: {
@@ -18,33 +18,32 @@ export default {
       table: { category: category.props },
     },
   },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-typography'),
   },
-} as ComponentMeta<typeof Blockquote>;
+} satisfies Meta<typeof Blockquote>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: ComponentStory<typeof Blockquote> = (args) => (
-  <Blockquote {...args} />
-);
+export const BlockquoteDefault = {
+  name: 'Default',
 
-const TemplateExample: ComponentStory<typeof Blockquote> = () => (
-  <Blockquote>
-    {
-      'Skatteetaten jobber målrettet sammen med andre samarbeidspartnere for at det skal være enkelt å gjøre rett og vanskelig å gjøre feil.'
-    }
-  </Blockquote>
-);
+  args: {
+    children:
+      'Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, ' +
+      'etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.',
+  },
+} satisfies Story;
 
-export const BlockquoteDefault = TemplateDefault.bind({});
-export const BlockquoteExample = TemplateExample.bind({});
-BlockquoteDefault.storyName = 'Default';
-BlockquoteExample.storyName = 'Example';
-BlockquoteExample.parameters = {
-  controls: { disabled: true },
-};
+export const BlockquoteExample = {
+  name: 'Example',
 
-BlockquoteDefault.args = {
-  children:
-    'Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, ' +
-    'etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.',
-};
+  args: {
+    children:
+      'Skatteetaten jobber målrettet sammen med andre samarbeidspartnere for at det skal være enkelt å gjøre rett og vanskelig å gjøre feil.',
+  },
+  parameters: {
+    controls: { disabled: true },
+  },
+} satisfies Story;

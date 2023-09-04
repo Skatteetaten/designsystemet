@@ -17,7 +17,7 @@ libs.forEach((lib) => {
 });
 
 fs.copyFileSync(
-  'apps/ds-playground/coverage/storybook/coverage-storybook.json',
+  'apps/ds-playground/.nyc_output/coverage.json',
   `${REPORTS_FOLDER}/coverage-storybook.json`
 );
 

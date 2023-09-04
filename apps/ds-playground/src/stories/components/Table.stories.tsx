@@ -1,19 +1,25 @@
 import { ReactNode, useState } from 'react';
 
-import { Button } from '@skatteetaten/ds-buttons';
+import { Button, InlineButton } from '@skatteetaten/ds-buttons';
 import { densityArr } from '@skatteetaten/ds-core-utils';
+import {
+  CopySVGpath,
+  DeleteSVGpath,
+  EditSVGpath,
+} from '@skatteetaten/ds-icons';
 import {
   Table,
   TableProps,
   getTableVariantDefault,
   SortState,
 } from '@skatteetaten/ds-table';
-import { Story, ComponentMeta, ComponentStory } from '@storybook/react';
+import { Paragraph } from '@skatteetaten/ds-typography';
+import { StoryObj, StoryFn, Meta } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Table,
   title: 'komponenter/Table/Table',
   argTypes: {
@@ -57,6 +63,7 @@ export default {
       },
     },
   },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-table'),
     docs: {
@@ -65,9 +72,12 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Table>;
+} satisfies Meta<typeof Table>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: ComponentStory<typeof Table> = (args) => (
+/* eslint-disable sonarjs/no-duplicate-string */
+const TemplateDefault: StoryFn<typeof Table> = (args) => (
   <Table {...args} variant={args.variant}>
     <Table.Header>
       <Table.Row>
@@ -104,7 +114,7 @@ const TemplateDefault: ComponentStory<typeof Table> = (args) => (
   </Table>
 );
 
-const TemplateVariant: ComponentStory<typeof Table> = (args) => {
+const TemplateVariant: StoryFn<typeof Table> = (args) => {
   const klage = 'Klage på vedtak';
   return (
     <>
@@ -178,25 +188,33 @@ const TemplateVariant: ComponentStory<typeof Table> = (args) => {
 
 const tableDefaultParameters = {};
 
-export const TableDefault: Story<TableProps> = TemplateDefault.bind({});
-TableDefault.storyName = 'Default';
 const baseArgs = {
   caption: 'Jeg er en tabell.',
 };
 
-TableDefault.args = {
-  ...baseArgs,
-};
-TableDefault.parameters = tableDefaultParameters;
+export const TableDefault: StoryObj<TableProps> = {
+  render: TemplateDefault,
+  name: 'Default',
 
-export const Variants: Story<TableProps> = TemplateVariant.bind({});
-Variants.args = {
-  ...baseArgs,
-  variant: 'compact',
-};
-Variants.parameters = tableDefaultParameters;
+  args: {
+    ...baseArgs,
+  },
 
-const TemplateSort: Story<TableProps> = (args) => {
+  parameters: tableDefaultParameters,
+} satisfies Story;
+
+export const Variants: StoryObj<TableProps> = {
+  render: TemplateVariant,
+
+  args: {
+    ...baseArgs,
+    variant: 'compact',
+  },
+
+  parameters: tableDefaultParameters,
+} satisfies Story;
+
+const TemplateSort: StoryFn<TableProps> = (args) => {
   const [sortState, setSortState] = useState<SortState>({
     direction: 'none',
   });
@@ -217,7 +235,7 @@ const TemplateSort: Story<TableProps> = (args) => {
   ];
 
   const sortedData = data.slice().sort((a, b) => {
-    const sortKey = sortState.sortKey as keyof typeof data[0];
+    const sortKey = sortState.sortKey as keyof (typeof data)[0];
     if (!sortKey) {
       return 0;
     }
@@ -262,16 +280,19 @@ const TemplateSort: Story<TableProps> = (args) => {
   );
 };
 
-export const TableSort: Story<TableProps> = TemplateSort.bind({});
-TableSort.storyName = 'Sortable';
+export const TableSort: StoryObj<TableProps> = {
+  render: TemplateSort,
+  name: 'Sortable',
 
-TableSort.args = {
-  ...baseArgs,
-  variant: 'standard',
-};
-TableSort.parameters = tableDefaultParameters;
+  args: {
+    ...baseArgs,
+    variant: 'standard',
+  },
 
-const TemplateExampleExpandable: Story<TableProps> = (args) => {
+  parameters: tableDefaultParameters,
+} satisfies Story;
+
+const TemplateExampleExpandable: StoryFn<TableProps> = (args) => {
   const [sortState, setSortState] = useState<SortState>({
     direction: 'none',
   });
@@ -352,7 +373,7 @@ const TemplateExampleExpandable: Story<TableProps> = (args) => {
   ];
 
   const sortedData = data.slice().sort((a, b) => {
-    const sortKey = sortState.sortKey as keyof typeof data[0];
+    const sortKey = sortState.sortKey as keyof (typeof data)[0];
 
     if (!sortKey) {
       return 0;
@@ -413,16 +434,19 @@ const TemplateExampleExpandable: Story<TableProps> = (args) => {
   );
 };
 
-export const TableExampleExpandable = TemplateExampleExpandable.bind({});
-TableExampleExpandable.storyName = 'Example Expandable';
+export const TableExampleExpandable = {
+  render: TemplateExampleExpandable,
+  name: 'Example Expandable',
 
-TableExampleExpandable.args = {
-  ...baseArgs,
-  variant: 'standard',
-};
-TableExampleExpandable.parameters = tableDefaultParameters;
+  args: {
+    ...baseArgs,
+    variant: 'standard',
+  },
 
-const TemplateExampleEditable: ComponentStory<typeof Table> = (args) => {
+  parameters: tableDefaultParameters,
+} satisfies Story;
+
+const TemplateExampleEditable: StoryFn<typeof Table> = (args) => {
   const [sortState, setSortState] = useState<SortState>({
     direction: 'none',
   });
@@ -459,7 +483,7 @@ const TemplateExampleEditable: ComponentStory<typeof Table> = (args) => {
   ];
 
   const sortedData = data.slice().sort((a, b) => {
-    const sortKey = sortState.sortKey as keyof typeof data[0];
+    const sortKey = sortState.sortKey as keyof (typeof data)[0];
 
     if (!sortKey) {
       return 0;
@@ -537,10 +561,156 @@ const TemplateExampleEditable: ComponentStory<typeof Table> = (args) => {
   );
 };
 
-export const TableExampleEditable = TemplateExampleEditable.bind({});
-TableExampleEditable.storyName = 'Example Editable';
+export const TableExampleEditable = {
+  render: TemplateExampleEditable,
+  name: 'Example Editable',
 
-TableExampleEditable.args = {
-  ...baseArgs,
+  args: {
+    ...baseArgs,
+  },
+
+  parameters: tableDefaultParameters,
+} satisfies Story;
+
+const TemplateExampleEmtpyHeaders: StoryFn<typeof Table> = (args) => {
+  const [sortState, setSortState] = useState<SortState>({
+    direction: 'none',
+  });
+
+  const data = [
+    {
+      deadline: '10.04.2023',
+      category: 'Kategori 1',
+      task: 'Mottatt tilbakemelding',
+      name: 'BARMEN OG BORGHEIM',
+      status: 'Tilgjengelig',
+      id: '9f78',
+    },
+    {
+      deadline: '12.04.2023',
+      category: 'Kategori 2',
+      task: 'Klage på vedtak',
+      name: 'LIMERICKS PARTNER ASA',
+      status: 'Ny',
+      id: '4b90',
+    },
+    {
+      deadline: '13.04.2023',
+      category: 'Kategori 3',
+      task: 'Mottatt tilbakemelding',
+      name: 'ENCKEL OG WIRCKE LØSNINGER',
+      status: 'Ny',
+      id: '8c6f',
+    },
+    {
+      deadline: '15.04.2023',
+      category: 'Kategori 1',
+      task: 'Klage på vedtak',
+      name: 'CORWOOD INDUSTRIES NORGE',
+      status: 'Tilgjengelig',
+      id: '8182',
+    },
+    {
+      deadline: '22.04.2023',
+      category: 'Kategori 3',
+      task: 'Medhold klage',
+      name: 'SLANTED N CHANTED',
+      status: 'Under arbeid',
+      id: '85cd',
+    },
+  ];
+
+  const sortedData = data.slice().sort((a, b) => {
+    const sortKey = sortState.sortKey as keyof (typeof data)[0];
+
+    if (!sortKey) {
+      return 0;
+    }
+    if (a[sortKey] === b[sortKey]) {
+      return 0;
+    }
+    if (sortState.direction === 'ascending') {
+      return a[sortKey] > b[sortKey] ? 1 : -1;
+    }
+    return a[sortKey] < b[sortKey] ? 1 : -1;
+  });
+
+  return (
+    <div>
+      <Paragraph>
+        {
+          'Hvis vi har en tabell med med minst 3 kolonner uten kolonnetitler så bør'
+        }
+        {'vi legge på sr-only tekster som th for at det skulle bli lettere for'}
+        {'skjermleserbrukere å forstå tabellen.'}
+      </Paragraph>
+      <Table {...args} sortState={sortState} setSortState={setSortState}>
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell scope={'col'} sortKey={'deadline'} isSortable>
+              {'Frist'}
+            </Table.HeaderCell>
+            <Table.HeaderCell scope={'col'} sortKey={'category'} isSortable>
+              {'Kategori'}
+            </Table.HeaderCell>
+            <Table.HeaderCell scope={'col'}>
+              {'Arbeidsoppgave'}
+            </Table.HeaderCell>
+            <Table.HeaderCell
+              alignment={'right'}
+              scope={'col'}
+              sortKey={'name'}
+              isSortable
+            >
+              {'navn'}
+            </Table.HeaderCell>
+            <Table.HeaderCell scope={'col'}>{'status'}</Table.HeaderCell>
+            <Table.HeaderCell>
+              <span className={'srOnly'}>{'Rediger-funksjon'}</span>
+            </Table.HeaderCell>
+            <Table.HeaderCell>
+              <span className={'srOnly'}>{'Kopier-funksjon'}</span>
+            </Table.HeaderCell>
+            <Table.HeaderCell>
+              <span className={'srOnly'}>{'Slett-funksjon'}</span>
+            </Table.HeaderCell>
+          </Table.Row>
+        </Table.Header>
+        <Table.Body>
+          {sortedData.map((row, index) => {
+            return (
+              <Table.Row key={`${row.id}-${index}`}>
+                <Table.DataCell id={row.id}>{row.deadline}</Table.DataCell>
+                <Table.DataCell>{row.category}</Table.DataCell>
+                <Table.DataCell>{row.task}</Table.DataCell>
+                <Table.DataCell>{row.name}</Table.DataCell>
+                <Table.DataCell>{row.status}</Table.DataCell>
+                <Table.DataCell>
+                  <InlineButton svgPath={EditSVGpath}>{'Rediger'}</InlineButton>
+                </Table.DataCell>
+                <Table.DataCell>
+                  <InlineButton svgPath={CopySVGpath}>{'Kopier'}</InlineButton>
+                </Table.DataCell>
+                <Table.DataCell>
+                  <InlineButton svgPath={DeleteSVGpath}>{'Slett'}</InlineButton>
+                </Table.DataCell>
+              </Table.Row>
+            );
+          })}
+        </Table.Body>
+      </Table>
+    </div>
+  );
 };
-TableExampleEditable.parameters = tableDefaultParameters;
+
+export const TableExampleEmtpyHeaders = {
+  render: TemplateExampleEmtpyHeaders,
+  name: 'Example with empty headers',
+
+  args: {
+    ...baseArgs,
+    caption: 'Arbeidsoppgaver',
+  },
+
+  parameters: tableDefaultParameters,
+} satisfies Story;

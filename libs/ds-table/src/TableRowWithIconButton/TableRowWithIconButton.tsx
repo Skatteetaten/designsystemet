@@ -44,20 +44,21 @@ export const RowWithLeftSideExpandButton = forwardRef<
       rowRef: rowRef,
     }));
     const expandableWrapperRef = useRef<HTMLDivElement | null>(null);
+
     useEffect(() => {
-      const currentRowRef = rowRef.current;
-
-      const listener = (): void => {
-        expandableWrapperRef.current?.style?.setProperty(
-          'width',
-          `${currentRowRef?.offsetWidth ?? 0}px`
-        );
+      const observer = new ResizeObserver((entries) => {
+        for (const entry of entries) {
+          expandableWrapperRef.current?.style?.setProperty(
+            'width',
+            `${Math.round(entry.contentBoxSize[0].inlineSize ?? 0)}px`
+          );
+        }
+      });
+      rowRef.current && observer.observe(rowRef.current);
+      return (): void => {
+        observer.disconnect();
       };
-      listener();
-
-      window.addEventListener('resize', listener);
-      return (): void => window.removeEventListener('resize', listener);
-    }, [rowRef]);
+    }, []);
 
     const handleClick = (): void => {
       onExpandClick();
@@ -161,6 +162,7 @@ export const RowWithRightSideExpandButton = forwardRef<
             className={`${styles.buttonCell} ${
               context?.variant === 'compact' ? styles.buttonCell_compact : ''
             }`}
+            alignment={'right'}
           >
             <IconButton
               ref={buttonRef}
@@ -182,7 +184,7 @@ export const RowWithRightSideExpandButton = forwardRef<
             lang={lang}
             data-testid={dataTestid}
           >
-            <td colSpan={999}>
+            <td colSpan={rowRef?.current?.cells.length ?? 999}>
               <div className={classNames?.expandedContent}>
                 {expandableContent}
               </div>
