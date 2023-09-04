@@ -16,7 +16,7 @@ interface CheckboxGroupCommonProps
     BaseProps {
   /** Checkbox-komponenter */
   children: JSX.Element | JSX.Element[];
-  /** Skjuler ledeteksten men synlig for skjermleser */
+  /** Skjuler ledetekst, tilleggstekst og hjelpetekst, men er fortsatt synlig for skjermleser */
   hideLegend?: boolean;
   /** Ledetekst til gruppen */
   legend: React.ReactNode;

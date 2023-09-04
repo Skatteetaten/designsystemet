@@ -14,7 +14,7 @@ export interface FieldsetProps
   children: JSX.Element | JSX.Element[];
   /** Ledetekst */
   legend: React.ReactNode;
-  /** Skjuler ledeteksten, men er fortsatt synlig for skjermleser */
+  /** Skjuler ledetekst, tilleggstekst og hjelpetekst, men er fortsatt synlig for skjermleser */
   hideLegend?: boolean;
   /** Tilleggstekst */
   description?: string;

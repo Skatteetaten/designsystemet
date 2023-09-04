@@ -30,7 +30,6 @@ export const CheckboxGroup = forwardRef<
       legend,
       titleHelpSvg,
       disabled,
-      // TODO AK B4 - legg inn required og send videre til children
       hasError,
       hideLegend,
       showRequiredMark,

@@ -4,6 +4,8 @@ import { expect } from '@storybook/jest';
 import { Meta, StoryObj } from '@storybook/react';
 import { fireEvent, within } from '@storybook/testing-library';
 
+import { SystemSVGPaths } from '../utils/icon.systems';
+
 const meta = {
   component: CheckboxGroup,
   title: 'Tester/CheckboxGroup',
@@ -27,7 +29,11 @@ const meta = {
         disable: true,
       },
     },
-    helpSvgPath: { table: { disable: true } },
+    helpSvgPath: {
+      table: { disable: true },
+      options: Object.keys(SystemSVGPaths),
+      mapping: SystemSVGPaths,
+    },
     helpText: { table: { disable: true } },
     hideLegend: {
       table: {
@@ -84,7 +90,6 @@ const defaultArgs = {
 
 export const WithRef = {
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: HTMLFieldSetElement | null): void => {
@@ -93,15 +98,12 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const fieldsetNode = canvas.getByRole('group');
@@ -111,7 +113,6 @@ export const WithRef = {
 
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
-
   args: {
     ...defaultArgs,
     id: 'htmlid',
@@ -119,14 +120,12 @@ export const WithAttributes = {
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const fieldsetNode = canvas.getByRole('group');
@@ -139,16 +138,13 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (A1, B1, B5)',
-
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     legend: { table: { disable: false } },
     children: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const fieldsetNode = canvas.getByRole('group');
@@ -167,7 +163,6 @@ export const Defaults = {
 
 export const LegendWithMarkup = {
   name: 'Legend With Markup (B1)',
-
   args: {
     ...defaultArgs,
     legend: (
@@ -181,7 +176,6 @@ export const LegendWithMarkup = {
       </>
     ),
   },
-
   argTypes: {
     legend: { table: { disable: false }, control: { type: null } },
   },
@@ -189,7 +183,6 @@ export const LegendWithMarkup = {
 
 export const LegendWithMarkupAndRequiredMark = {
   name: 'Legend With Markup and Required Mark (B1)',
-
   args: {
     ...defaultArgs,
     legend: (
@@ -204,7 +197,6 @@ export const LegendWithMarkupAndRequiredMark = {
     ),
     showRequiredMark: true,
   },
-
   argTypes: {
     legend: { table: { disable: false }, control: { type: null } },
     showRequiredMark: { table: { disable: false } },
@@ -213,16 +205,13 @@ export const LegendWithMarkupAndRequiredMark = {
 
 export const WithHideLegend = {
   name: 'With HideLegend (B1)',
-
   args: {
     ...defaultArgs,
     hideLegend: true,
   },
-
   argTypes: {
     hideLegend: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const legendNode = canvas.getByText(defaultLegendText);
@@ -232,16 +221,13 @@ export const WithHideLegend = {
 
 export const WithDisabled = {
   name: 'With Disabled (A1, B2)',
-
   args: {
     ...defaultArgs,
     disabled: true,
   },
-
   argTypes: {
     disabled: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const fieldsetNode = canvas.getByRole('group');
@@ -251,13 +237,11 @@ export const WithDisabled = {
 
 export const WithDisabledAndChecked = {
   name: 'With Disabled And Checked (A1)',
-
   args: {
     ...defaultArgs,
     children: childrenWithOneChecked,
     disabled: true,
   },
-
   argTypes: {
     disabled: { table: { disable: false } },
   },
@@ -265,12 +249,10 @@ export const WithDisabledAndChecked = {
 
 export const WithRequiredMark = {
   name: 'With Required Mark (A1, B3)',
-
   args: {
     ...defaultArgs,
     showRequiredMark: true,
   },
-
   argTypes: {
     showRequiredMark: { table: { disable: false } },
   },
@@ -278,18 +260,15 @@ export const WithRequiredMark = {
 
 export const WithError = {
   name: 'With Error (A1, B5)',
-
   args: {
     ...defaultArgs,
     hasError: true,
     errorMessage: defaultErrorMessage,
   },
-
   argTypes: {
     hasError: { table: { disable: false } },
     errorMessage: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const errorMessageContainer = canvas.getAllByRole('generic')[17];
@@ -306,16 +285,13 @@ export const WithError = {
 
 export const WithHelptext = {
   name: 'With HelpText (A1)',
-
   args: {
     ...defaultArgs,
     helpText: 'Vi trenger å vite om du har barn.',
   },
-
   argTypes: {
     helpText: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const helpButton = canvas.getByRole('button', {
@@ -328,16 +304,13 @@ export const WithHelptext = {
 
 export const WithDescription = {
   name: 'With Description (A1)',
-
   args: {
     ...defaultArgs,
     description: 'Vi trenger å vite om du har barn.',
   },
-
   argTypes: {
     description: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const description = canvas.getByText('Vi trenger å vite om du har barn.');

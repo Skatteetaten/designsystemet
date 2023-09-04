@@ -42,7 +42,7 @@ interface RadioGroupComponentCommonProps
     BaseProps {
   /** Radio-komponenter */
   children: JSX.Element | JSX.Element[];
-  /** Skjuler navnet på gruppen men er fortsatt synlig for skjermleser. */
+  /** Skjuler navn på gruppen, tilleggstekst og hjelpetekst, men er fortsatt synlig for skjermleser */
   hideLegend?: boolean;
   /** Navn på gruppen. */
   legend: React.ReactNode;

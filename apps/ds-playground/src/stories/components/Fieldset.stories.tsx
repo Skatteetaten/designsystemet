@@ -56,7 +56,7 @@ export const FieldsetDefault = {
   name: 'Default',
   args: {
     legend: 'Ledetekst',
-    children: <TextField label={'Label'} />,
+    children: <div>{'Innhold'}</div>,
   },
 } satisfies Story;
 
