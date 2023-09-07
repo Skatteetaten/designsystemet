@@ -1,12 +1,12 @@
 import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { Footer } from '@skatteetaten/ds-layout';
 import { Paragraph, Heading } from '@skatteetaten/ds-typography';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Footer,
   title: 'Komponenter/Footer',
   argTypes: {
@@ -26,9 +26,11 @@ export default {
   parameters: {
     version: getVersion('ds-layout'),
   },
-} as ComponentMeta<typeof Footer>;
+} satisfies Meta<typeof Footer>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: ComponentStory<typeof Footer> = (args) => (
+const TemplateDefault: StoryFn<typeof Footer> = (args) => (
   <Footer {...args}>
     <Footer.Link href={'#'}>{'Satser'}</Footer.Link>
     <Footer.Link href={'#'}>{'Skjema og tjenester'}</Footer.Link>
@@ -38,66 +40,68 @@ const TemplateDefault: ComponentStory<typeof Footer> = (args) => (
   </Footer>
 );
 
-export const FooterDefault: ComponentStory<typeof Footer> =
-  TemplateDefault.bind({});
-export const FooterExample: ComponentStory<typeof Footer> =
-  TemplateDefault.bind({});
-FooterDefault.storyName = 'Default';
-FooterExample.storyName = 'Example';
-FooterExample.parameters = {
-  controls: { disabled: true },
-};
+export const FooterDefault = {
+  render: TemplateDefault,
+  name: 'Default',
+  args: {
+    titleFirstColumn: 'Om skatteetaten',
+  },
+} satisfies Story;
 
-FooterDefault.args = {
-  titleFirstColumn: 'Om skatteetaten',
-};
-FooterExample.args = {
-  titleFirstColumn: 'Om skatteetaten',
-  firstColumn: (
-    <LinkGroup color={'white'}>
-      <LinkGroup.Link href={'#'}>{'Jobb i Skatteetaten'}</LinkGroup.Link>
-      <LinkGroup.Link href={'#'}>{'Om oss'}</LinkGroup.Link>
-      <LinkGroup.Link href={'#'}>{'Analyse og rapporter'}</LinkGroup.Link>
-      <LinkGroup.Link href={'#'}>{'Forskning'}</LinkGroup.Link>
-    </LinkGroup>
-  ),
-  titleSecondColumn: 'Følg oss',
-  secondColumn: (
-    <>
-      <Paragraph hasSpacing>
-        {'Du kan kontakte oss i sosiale medier.'}
-      </Paragraph>
+export const FooterExample = {
+  render: TemplateDefault,
+  name: 'Example',
+  parameters: {
+    controls: { disable: true },
+  },
+  args: {
+    titleFirstColumn: 'Om skatteetaten',
+    firstColumn: (
       <LinkGroup color={'white'}>
-        <LinkGroup.Link href={'#'}>
-          {'Se alle Skatteetatens kontoer'}
-        </LinkGroup.Link>
+        <LinkGroup.Link href={'#'}>{'Jobb i Skatteetaten'}</LinkGroup.Link>
+        <LinkGroup.Link href={'#'}>{'Om oss'}</LinkGroup.Link>
+        <LinkGroup.Link href={'#'}>{'Analyse og rapporter'}</LinkGroup.Link>
+        <LinkGroup.Link href={'#'}>{'Forskning'}</LinkGroup.Link>
       </LinkGroup>
-    </>
-  ),
-  titleThirdColumn: 'Presse',
-  thirdColumn: (
-    <>
-      <Paragraph hasSpacing>
-        {
-          'Pressemeldinger, pressekontaker og annen informasjon for journalister.'
-        }
-      </Paragraph>
-      <LinkGroup color={'white'} hasSpacing>
-        <LinkGroup.Link href={'#'}>{'Se vårt presserom'}</LinkGroup.Link>
-      </LinkGroup>
-      <Heading as={'h2'} level={3} hasSpacing>
-        {'Bruke data fra Skatteetaten'}
-      </Heading>
-      <Paragraph hasSpacing>
-        {
-          'Skatteetaten deler data som andre virksomheter og etater kan gjenbruke for å fornkle og effektivisere eksisterende og nye digitale tjenester.'
-        }
-      </Paragraph>
-      <LinkGroup color={'white'}>
-        <LinkGroup.Link href={'#'}>
-          {'Hvordan få tilgang til data'}
-        </LinkGroup.Link>
-      </LinkGroup>
-    </>
-  ),
-};
+    ),
+    titleSecondColumn: 'Følg oss',
+    secondColumn: (
+      <>
+        <Paragraph hasSpacing>
+          {'Du kan kontakte oss i sosiale medier.'}
+        </Paragraph>
+        <LinkGroup color={'white'}>
+          <LinkGroup.Link href={'#'}>
+            {'Se alle Skatteetatens kontoer'}
+          </LinkGroup.Link>
+        </LinkGroup>
+      </>
+    ),
+    titleThirdColumn: 'Presse',
+    thirdColumn: (
+      <>
+        <Paragraph hasSpacing>
+          {
+            'Pressemeldinger, pressekontaker og annen informasjon for journalister.'
+          }
+        </Paragraph>
+        <LinkGroup color={'white'} hasSpacing>
+          <LinkGroup.Link href={'#'}>{'Se vårt presserom'}</LinkGroup.Link>
+        </LinkGroup>
+        <Heading as={'h2'} level={3} hasSpacing>
+          {'Bruke data fra Skatteetaten'}
+        </Heading>
+        <Paragraph hasSpacing>
+          {
+            'Skatteetaten deler data som andre virksomheter og etater kan gjenbruke for å fornkle og effektivisere eksisterende og nye digitale tjenester.'
+          }
+        </Paragraph>
+        <LinkGroup color={'white'}>
+          <LinkGroup.Link href={'#'}>
+            {'Hvordan få tilgang til data'}
+          </LinkGroup.Link>
+        </LinkGroup>
+      </>
+    ),
+  },
+} satisfies Story;

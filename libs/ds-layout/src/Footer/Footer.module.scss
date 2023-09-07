@@ -23,7 +23,7 @@
 }
 
 .footer {
-  padding: var(--spacing-xl); // replace left and right with 0
+  padding: var(--spacing-xl) 0;
   margin-top: -1px;
   background-color: var(--theme-primary);
   color: var(--palette-graphite-0);
@@ -34,8 +34,7 @@
     max-width: calc(
       var(--semantic-responsive-container) - calc(var(--spacing-m) * 2)
     );
-    margin: auto;
-    margin-bottom: var(--spacing-mega);
+    margin: auto auto var(--spacing-mega);
     gap: var(--spacing-xl);
     grid-template-columns: 1fr;
 
