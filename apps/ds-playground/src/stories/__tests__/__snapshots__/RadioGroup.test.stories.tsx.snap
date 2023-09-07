@@ -8,7 +8,7 @@ exports[`Tester/RadioGroup/RadioGroup Defaults play-test 1`] = `
     >
       Type virksomhet
     </legend>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
           <input id="radioInputId-:rf:"
@@ -68,7 +68,7 @@ exports[`Tester/RadioGroup/RadioGroup VariantHorizontal smoke-test 1`] = `
     >
       Type virksomhet
     </legend>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK RadioGroup_radioGroupItemContainer_horizontal__CuruZ">
         <div class="Radio_radio__Fh+3R">
           <input id="radioInputId-:rl:"
@@ -132,7 +132,7 @@ exports[`Tester/RadioGroup/RadioGroup WithAttributes play-test 1`] = `
     >
       Type virksomhet
     </legend>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
           <input id="radioInputId-:r9:"
@@ -192,7 +192,7 @@ exports[`Tester/RadioGroup/RadioGroup WithDefaultValue play-test 1`] = `
     >
       Type virksomhet
     </legend>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
           <input id="radioInputId-:r17:"
@@ -253,10 +253,10 @@ exports[`Tester/RadioGroup/RadioGroup WithDescription play-test 1`] = `
     >
       Type virksomhet
     </legend>
-    <div class="Fieldset_description__k538X ">
+    <div class="Fieldset_description__k538X">
       Vi trenger å vite din type virksomhet.
     </div>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
           <input id="radioInputId-:r35:"
@@ -318,7 +318,7 @@ exports[`Tester/RadioGroup/RadioGroup WithDisabled play-test 1`] = `
     >
       Type virksomhet
     </legend>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
           <input id="radioInputId-:r1d:"
@@ -379,7 +379,7 @@ exports[`Tester/RadioGroup/RadioGroup WithErrorMessage play-test 1`] = `
     >
       Type virksomhet
     </legend>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
           <input id="radioInputId-:r2b:"
@@ -439,7 +439,7 @@ exports[`Tester/RadioGroup/RadioGroup WithErrorMessageAndHasError play-test 1`] 
     >
       Type virksomhet
     </legend>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
           <input id="radioInputId-:r2h:"
@@ -520,7 +520,7 @@ exports[`Tester/RadioGroup/RadioGroup WithEventHandlers play-test 1`] = `
     >
       Type virksomhet
     </legend>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
           <input id="radioInputId-:r3b:"
@@ -554,7 +554,7 @@ exports[`Tester/RadioGroup/RadioGroup WithHasErrorAndAriaDescribedby play-test 1
     >
       Type virksomhet
     </legend>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
           <input id="radioInputId-:r2o:"
@@ -604,7 +604,7 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
     >
       Type virksomhet
     </legend>
-    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Fieldset_helpButton__Qd9mY "
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Fieldset_helpButton__Qd9mY"
             type="button"
             aria-describedby="legendId-:r2s:"
             aria-expanded="true"
@@ -623,7 +623,7 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="Fieldset_helpBox__tSijq ">
+    <div class="Fieldset_helpBox__tSijq">
       <span class="Fieldset_helpBoxText__81P15">
         Vi trenger å vite din type virksomhet.
       </span>
@@ -645,7 +645,7 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
         </svg>
       </button>
     </div>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
           <input id="radioInputId-:r2u:"
@@ -765,7 +765,7 @@ exports[`Tester/RadioGroup/RadioGroup WithName play-test 1`] = `
     >
       Type virksomhet
     </legend>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
           <input id="radioInputId-:r25:"
@@ -827,7 +827,7 @@ exports[`Tester/RadioGroup/RadioGroup WithRef play-test 1`] = `
     >
       Type virksomhet
     </legend>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
           <input id="radioInputId-:r3:"
@@ -887,7 +887,7 @@ exports[`Tester/RadioGroup/RadioGroup WithRequired play-test 1`] = `
     >
       Type virksomhet
     </legend>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
           <input id="radioInputId-:r1j:"
@@ -950,7 +950,7 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMark smoke-test 1`] = `
     >
       Type virksomhet
     </legend>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
           <input id="radioInputId-:r1p:"
@@ -1018,7 +1018,7 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMarkAndLegendAsMarkup smoke
         Med virksomhet så menes bla bla
       </span>
     </legend>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
           <input id="radioInputId-:r1v:"
@@ -1081,7 +1081,7 @@ exports[`Tester/RadioGroup/RadioGroup WithSelectedValue play-test 1`] = `
     >
       Type virksomhet
     </legend>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
           <input id="radioInputId-:r11:"

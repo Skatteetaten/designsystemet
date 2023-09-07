@@ -84,7 +84,7 @@ export const Fieldset = forwardRef<HTMLFieldSetElement, FieldsetProps>(
         {helpText && (
           <IconButton
             ref={helpButtonRef}
-            className={`${styles.helpButton} ${hideLegendClassName}`}
+            className={`${styles.helpButton} ${hideLegendClassName}`.trim()}
             svgPath={svgHelpIcon}
             title={titleHelpIcon}
             size={'extraSmall'}
@@ -95,7 +95,7 @@ export const Fieldset = forwardRef<HTMLFieldSetElement, FieldsetProps>(
           />
         )}
         {helpText && showHelpText && (
-          <div className={`${styles.helpBox} ${hideLegendClassName}`}>
+          <div className={`${styles.helpBox} ${hideLegendClassName}`.trim()}>
             <span className={styles.helpBoxText}>{helpText}</span>
             <IconButton
               className={styles.helpBoxCloseButton}
@@ -107,12 +107,14 @@ export const Fieldset = forwardRef<HTMLFieldSetElement, FieldsetProps>(
           </div>
         )}
         {description && (
-          <div className={`${styles.description} ${hideLegendClassName}`}>
+          <div
+            className={`${styles.description} ${hideLegendClassName}`.trim()}
+          >
             {description}
           </div>
         )}
         <div
-          className={`${styles.contentContainer} ${noMarginTopContentContainerClassName}`}
+          className={`${styles.contentContainer} ${noMarginTopContentContainerClassName}`.trim()}
         >
           {children}
         </div>

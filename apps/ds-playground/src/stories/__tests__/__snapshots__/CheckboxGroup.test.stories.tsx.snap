@@ -8,7 +8,7 @@ exports[`Tester/CheckboxGroup Defaults play-test 1`] = `
     >
       Velg det som passer deg
     </legend>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
         <input id="checkboxInputId-:ri:"
                class="Checkbox_input__fDeJ7"
@@ -94,7 +94,7 @@ exports[`Tester/CheckboxGroup LegendWithMarkup smoke-test 1`] = `
         </em>
       </p>
     </legend>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
         <input id="checkboxInputId-:rq:"
                class="Checkbox_input__fDeJ7"
@@ -180,7 +180,7 @@ exports[`Tester/CheckboxGroup LegendWithMarkupAndRequiredMark smoke-test 1`] = `
         </em>
       </p>
     </legend>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
         <input id="checkboxInputId-:r12:"
                class="Checkbox_input__fDeJ7"
@@ -263,7 +263,7 @@ exports[`Tester/CheckboxGroup WithAttributes play-test 1`] = `
     >
       Velg det som passer deg
     </legend>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
         <input id="checkboxInputId-:ra:"
                class="Checkbox_input__fDeJ7"
@@ -342,10 +342,10 @@ exports[`Tester/CheckboxGroup WithDescription play-test 1`] = `
     >
       Velg det som passer deg
     </legend>
-    <div class="Fieldset_description__k538X ">
+    <div class="Fieldset_description__k538X">
       Vi trenger å vite om du har barn.
     </div>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
         <input id="checkboxInputId-:r2t:"
                class="Checkbox_input__fDeJ7"
@@ -426,7 +426,7 @@ exports[`Tester/CheckboxGroup WithDisabled play-test 1`] = `
     >
       Velg det som passer deg
     </legend>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
         <input id="checkboxInputId-:r1i:"
                class="Checkbox_input__fDeJ7"
@@ -507,7 +507,7 @@ exports[`Tester/CheckboxGroup WithDisabledAndChecked smoke-test 1`] = `
     >
       Velg det som passer deg
     </legend>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
         <input id="checkboxInputId-:r1q:"
                class="Checkbox_input__fDeJ7"
@@ -587,7 +587,7 @@ exports[`Tester/CheckboxGroup WithError play-test 1`] = `
     >
       Velg det som passer deg
     </legend>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
         <input id="checkboxInputId-:r2a:"
                class="Checkbox_input__fDeJ7"
@@ -686,7 +686,7 @@ exports[`Tester/CheckboxGroup WithHelptext play-test 1`] = `
     >
       Velg det som passer deg
     </legend>
-    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Fieldset_helpButton__Qd9mY "
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Fieldset_helpButton__Qd9mY"
             type="button"
             aria-describedby="legendId-:r2i:"
             aria-expanded="true"
@@ -705,7 +705,7 @@ exports[`Tester/CheckboxGroup WithHelptext play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="Fieldset_helpBox__tSijq ">
+    <div class="Fieldset_helpBox__tSijq">
       <span class="Fieldset_helpBoxText__81P15">
         Vi trenger å vite om du har barn.
       </span>
@@ -727,7 +727,7 @@ exports[`Tester/CheckboxGroup WithHelptext play-test 1`] = `
         </svg>
       </button>
     </div>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
         <input id="checkboxInputId-:r2k:"
                class="Checkbox_input__fDeJ7"
@@ -887,7 +887,7 @@ exports[`Tester/CheckboxGroup WithRef play-test 1`] = `
     >
       Velg det som passer deg
     </legend>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
         <input id="checkboxInputId-:r2:"
                class="Checkbox_input__fDeJ7"
@@ -966,7 +966,7 @@ exports[`Tester/CheckboxGroup WithRequiredMark smoke-test 1`] = `
     >
       Velg det som passer deg
     </legend>
-    <div class="Fieldset_contentContainer__fJcfT ">
+    <div class="Fieldset_contentContainer__fJcfT">
       <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
         <input id="checkboxInputId-:r22:"
                class="Checkbox_input__fDeJ7"

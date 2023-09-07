@@ -1,4 +1,4 @@
-import { Fieldset, FieldsetProps, TextField } from '@skatteetaten/ds-forms';
+import { Fieldset, FieldsetProps } from '@skatteetaten/ds-forms';
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 import { expect } from '@storybook/jest';
@@ -46,7 +46,7 @@ const defaultHelpText =
 const defaultLegendText = 'Ledetekst';
 const defaultArgs: FieldsetProps = {
   legend: defaultLegendText,
-  children: <TextField label={'Label'} />,
+  children: <div>{'Innhold'}</div>,
 };
 
 export const WithRef = {

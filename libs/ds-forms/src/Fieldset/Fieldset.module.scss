@@ -62,6 +62,7 @@
 
 .helpBox {
   display: flex;
+  width: fit-content;
   box-sizing: border-box;
   border: 2px solid var(--palette-forest-30);
   margin: var(--spacing-xs) 0;
