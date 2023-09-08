@@ -10,7 +10,7 @@ export const FooterLogo = forwardRef<HTMLDivElement, FooterLogoProps>(
       id,
       className = getCommonClassNameDefault(),
       lang,
-      'data-testid': dataTestid,
+      'data-testid': dataTestId,
       children,
     },
     ref
@@ -21,7 +21,7 @@ export const FooterLogo = forwardRef<HTMLDivElement, FooterLogoProps>(
         id={id}
         className={className}
         lang={lang}
-        data-testid={dataTestid}
+        data-testid={dataTestId}
       >
         {children}
       </div>
