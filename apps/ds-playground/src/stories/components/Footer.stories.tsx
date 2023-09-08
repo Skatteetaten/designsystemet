@@ -23,6 +23,7 @@ const meta = {
     secondColumn: { table: { category: category.props } },
     thirdColumn: { table: { category: category.props } },
   },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-layout'),
   },
@@ -45,6 +46,8 @@ export const FooterDefault = {
   name: 'Default',
   args: {
     titleFirstColumn: 'Om skatteetaten',
+    secondColumn: '',
+    thirdColumn: '',
   },
 } satisfies Story;
 

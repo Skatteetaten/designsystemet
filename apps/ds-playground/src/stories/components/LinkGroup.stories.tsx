@@ -41,7 +41,6 @@ const meta = {
   tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-buttons'),
-    docs: { source: { type: 'code' } },
   },
 } as Meta<typeof LinkGroup>;
 export default meta;
