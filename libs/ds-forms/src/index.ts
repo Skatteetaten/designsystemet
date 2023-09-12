@@ -6,6 +6,8 @@ export * from './ErrorMessage/ErrorMessage';
 export * from './ErrorMessage/ErrorMessage.types';
 export * from './ErrorSummary/ErrorSummary';
 export * from './ErrorSummary/ErrorSummary.types';
+export * from './Fieldset/Fieldset';
+export * from './Fieldset/Fieldset.types';
 export * from './Radio/Radio';
 export * from './Radio/Radio.types';
 export * from './RadioGroup/RadioGroup';
