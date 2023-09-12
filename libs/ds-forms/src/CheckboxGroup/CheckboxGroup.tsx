@@ -21,7 +21,7 @@ export const CheckboxGroup = forwardRef<
       id,
       className = getCommonClassNameDefault(),
       lang,
-      'data-testid': dataTestid,
+      'data-testid': dataTestId,
       errorMessage,
       legend,
       disabled,
@@ -60,7 +60,7 @@ export const CheckboxGroup = forwardRef<
           id={id}
           className={`${styles.fieldset} ${className}`}
           lang={lang}
-          data-testid={dataTestid}
+          data-testid={dataTestId}
           disabled={disabled}
         >
           <legend
