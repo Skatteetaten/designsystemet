@@ -22,7 +22,7 @@ export const CheckboxGroup = forwardRef<
       id,
       className = getCommonClassNameDefault(),
       lang,
-      'data-testid': dataTestid,
+      'data-testid': dataTestId,
       description,
       errorMessage,
       helpSvgPath,
@@ -45,7 +45,7 @@ export const CheckboxGroup = forwardRef<
         id={id}
         className={className}
         lang={lang}
-        data-testid={dataTestid}
+        data-testid={dataTestId}
         disabled={disabled}
         legend={legend}
         hideLegend={hideLegend}

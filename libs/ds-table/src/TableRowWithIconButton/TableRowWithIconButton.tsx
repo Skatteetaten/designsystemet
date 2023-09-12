@@ -18,7 +18,7 @@ export const RowWithLeftSideExpandButton = forwardRef<
       id,
       className,
       lang,
-      'data-testid': dataTestid,
+      'data-testid': dataTestId,
       onExpandClick,
       classNames,
       svgPath,
@@ -79,7 +79,7 @@ export const RowWithLeftSideExpandButton = forwardRef<
         id={id}
         className={className}
         lang={lang}
-        data-testid={dataTestid}
+        data-testid={dataTestId}
       >
         <TableDataCell
           className={`${styles.buttonCell} ${
@@ -125,7 +125,7 @@ export const RowWithRightSideExpandButton = forwardRef<
       className,
       classNames,
       lang,
-      'data-testid': dataTestid,
+      'data-testid': dataTestId,
       context,
       expandButtonTitle,
       expandableContent,
@@ -155,7 +155,7 @@ export const RowWithRightSideExpandButton = forwardRef<
           id={id}
           className={`${isExpanded ? styles.row_noBorder : ''} ${className}`}
           lang={lang}
-          data-testid={dataTestid}
+          data-testid={dataTestId}
         >
           {children}
           <TableDataCell
@@ -182,7 +182,7 @@ export const RowWithRightSideExpandButton = forwardRef<
             id={id}
             className={`${styles.expandedRowRight} ${className}`}
             lang={lang}
-            data-testid={dataTestid}
+            data-testid={dataTestId}
           >
             <td colSpan={rowRef?.current?.cells.length ?? 999}>
               <div className={classNames?.expandedContent}>

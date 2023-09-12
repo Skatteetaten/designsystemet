@@ -30,7 +30,7 @@ export const ExampleComponent = forwardRef<
       id,
       variant = 'primary',
       className,
-      'data-testid': dataTestid = `testid-${id}`,
+      'data-testid': dataTestId = `testid-${id}`,
       onClick,
       children,
     },
@@ -39,7 +39,7 @@ export const ExampleComponent = forwardRef<
     return (
       <button
         ref={ref}
-        data-testid={dataTestid}
+        data-testid={dataTestId}
         className={className}
         onClick={onClick}
       >

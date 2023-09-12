@@ -12,7 +12,7 @@ export const ErrorSummaryError = forwardRef<HTMLAnchorElement, ErrorProps>(
       id,
       className = getCommonClassNameDefault(),
       lang,
-      'data-testid': dataTestid,
+      'data-testid': dataTestId,
       referenceId,
       children,
     },
@@ -38,7 +38,7 @@ export const ErrorSummaryError = forwardRef<HTMLAnchorElement, ErrorProps>(
         id={id}
         className={className}
         lang={lang}
-        data-testid={dataTestid}
+        data-testid={dataTestId}
         href={`#${referenceId}`}
         onClick={(e: MouseEvent<HTMLAnchorElement>): void => {
           e.preventDefault();

@@ -21,7 +21,7 @@ export const TableDataCell = forwardRef<
       id,
       className = getCommonClassNameDefault(),
       lang,
-      'data-testid': dataTestid,
+      'data-testid': dataTestId,
       as: Tag = getDataCellAsDefault(),
       alignment = getTableCellAlignmentDefault(),
       colSpan,
@@ -48,7 +48,7 @@ export const TableDataCell = forwardRef<
         id={id}
         className={concatenatedClassName}
         lang={lang}
-        data-testid={dataTestid}
+        data-testid={dataTestId}
         colSpan={colSpan}
         rowSpan={rowSpan}
         scope={scope ?? Tag === 'th' ? 'row' : undefined}
