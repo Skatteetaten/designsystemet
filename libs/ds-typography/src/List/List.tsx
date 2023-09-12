@@ -14,7 +14,7 @@ export const List = forwardRef<AnyHTMLListElement, ListProps>(
       id,
       className = getCommonClassNameDefault(),
       lang,
-      'data-testid': dataTestid,
+      'data-testid': dataTestId,
       as: Tag = getListAsDefault(),
       hasSpacing,
       children,
@@ -29,7 +29,7 @@ export const List = forwardRef<AnyHTMLListElement, ListProps>(
         id={id}
         className={`${styles.list} ${bulletClassName} ${spacingClassName} ${className}`}
         lang={lang}
-        data-testid={dataTestid}
+        data-testid={dataTestId}
       >
         {children}
       </Tag>

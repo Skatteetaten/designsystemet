@@ -19,10 +19,13 @@ const meta = {
   argTypes: {
     // Props
     children: { table: { category: category.props } },
+    description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasError: {
       table: { category: category.props },
     },
+    helpSvgPath: { table: { category: category.props } },
+    helpText: { table: { category: category.props } },
     hideLegend: {
       table: { category: category.props },
     },
@@ -32,6 +35,7 @@ const meta = {
     showRequiredMark: {
       table: { category: category.props },
     },
+    titleHelpSvg: { table: { category: category.props } },
     variant: {
       control: 'inline-radio',
       options: [...radioGroupVariantArr],
@@ -71,7 +75,15 @@ const meta = {
   tags: ['autodocs'],
   args: {
     legend: legendText,
-    children: <></>,
+    children: (
+      <>
+        <RadioGroup.Radio value={'foretak'}>
+          {'Enkeltpersonsforetak'}
+        </RadioGroup.Radio>
+        <RadioGroup.Radio value={'selskap'}>{'Aksjeselskap'}</RadioGroup.Radio>
+        <RadioGroup.Radio value={'annet'}>{'Annet'}</RadioGroup.Radio>
+      </>
+    ),
   },
   parameters: {
     version: getVersion('ds-forms'),
@@ -89,13 +101,7 @@ const TemplateDefaultControlled: StoryFn<typeof RadioGroup> = (args) => {
       onChange={(e): void => {
         setArgs({ selectedValue: e.target.value });
       }}
-    >
-      <RadioGroup.Radio value={'foretak'}>
-        {'Enkeltpersonsforetak'}
-      </RadioGroup.Radio>
-      <RadioGroup.Radio value={'selskap'}>{'Aksjeselskap'}</RadioGroup.Radio>
-      <RadioGroup.Radio value={'annet'}>{'Annet'}</RadioGroup.Radio>
-    </RadioGroup>
+    />
   );
 };
 
@@ -108,7 +114,15 @@ export const RadioGroupDefaultControlled = {
   },
 
   args: {
-    children: <></>,
+    children: (
+      <>
+        <RadioGroup.Radio value={'foretak'}>
+          {'Enkeltpersonsforetak'}
+        </RadioGroup.Radio>
+        <RadioGroup.Radio value={'selskap'}>{'Aksjeselskap'}</RadioGroup.Radio>
+        <RadioGroup.Radio value={'annet'}>{'Annet'}</RadioGroup.Radio>
+      </>
+    ),
     defaultValue: undefined,
     selectedValue: '',
   },

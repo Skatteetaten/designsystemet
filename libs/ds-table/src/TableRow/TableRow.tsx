@@ -27,7 +27,7 @@ export const TableRow = forwardRef<HTMLTableRowElement, TableRowProps>(
       id,
       className = getCommonClassNameDefault(),
       lang,
-      'data-testid': dataTestid,
+      'data-testid': dataTestId,
       expandButtonTitle,
       expandButtonPosition = getTableRowExpandButtonPositionDefault(),
       expandableContent,
@@ -79,7 +79,7 @@ export const TableRow = forwardRef<HTMLTableRowElement, TableRowProps>(
       id,
       className,
       lang,
-      'data-testid': dataTestid,
+      'data-testid': dataTestId,
       rowRef,
       context,
       expandButtonTitle: buttonTitle,
@@ -102,7 +102,7 @@ export const TableRow = forwardRef<HTMLTableRowElement, TableRowProps>(
           id={id}
           className={className}
           lang={lang}
-          data-testid={dataTestid}
+          data-testid={dataTestId}
         >
           {children}
         </tr>
