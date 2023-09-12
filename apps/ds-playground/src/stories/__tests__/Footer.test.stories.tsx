@@ -212,16 +212,14 @@ export const WithHideLogo = {
 } satisfies Story;
 
 const TemplateWithLogo: StoryFn<typeof Footer> = (args) => (
-  <div data-test-block>
-    <Footer {...args}>
-      <Footer.Logo>
-        <Icon variant={'themeIcon'} svgPath={GaveArvSVGpath} />
-      </Footer.Logo>
-      <Footer.Logo>
-        <Icon variant={'themeIcon'} svgPath={GaveArvSVGpath} />
-      </Footer.Logo>
-    </Footer>
-  </div>
+  <Footer {...args}>
+    <Footer.Logo>
+      <Icon variant={'themeIcon'} svgPath={GaveArvSVGpath} />
+    </Footer.Logo>
+    <Footer.Logo>
+      <Icon variant={'themeIcon'} svgPath={GaveArvSVGpath} />
+    </Footer.Logo>
+  </Footer>
 );
 
 // Når Footer har logo som children, ser det riktig ut
@@ -237,15 +235,13 @@ export const WithCustomLogo = {
 } satisfies Story;
 
 const TemplateWithLink: StoryFn<typeof Footer> = (args) => (
-  <div data-test-block>
-    <Footer {...args}>
-      <Footer.Link href={'#'}>{'Satser'}</Footer.Link>
-      <Footer.Link href={'#'}>{'Skjema og tjenester'}</Footer.Link>
-      <Footer.Link href={'#'}>{'RSS'}</Footer.Link>
-      <Footer.Link href={'#'}>{'Tips oss'}</Footer.Link>
-      <Footer.Link href={'#'}>{'Koronatiltak'}</Footer.Link>
-    </Footer>
-  </div>
+  <Footer {...args}>
+    <Footer.Link href={'#'}>{'Satser'}</Footer.Link>
+    <Footer.Link href={'#'}>{'Skjema og tjenester'}</Footer.Link>
+    <Footer.Link href={'#'}>{'RSS'}</Footer.Link>
+    <Footer.Link href={'#'}>{'Tips oss'}</Footer.Link>
+    <Footer.Link href={'#'}>{'Koronatiltak'}</Footer.Link>
+  </Footer>
 );
 
 // Når Footer har lenker, ser det riktig ut
