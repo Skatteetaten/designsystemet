@@ -236,8 +236,12 @@ export const WithCustomLogo = {
 
 const TemplateWithLink: StoryFn<typeof Footer> = (args) => (
   <Footer {...args}>
-    <Footer.Link href={'#'}>{'Satser'}</Footer.Link>
-    <Footer.Link href={'#'}>{'Skjema og tjenester'}</Footer.Link>
+    <Footer.Link href={'#'} className={'dummyClassname'}>
+      {'Satser'}
+    </Footer.Link>
+    <Footer.Link href={'#'} isExternal>
+      {'Skjema og tjenester'}
+    </Footer.Link>
     <Footer.Link href={'#'}>{'RSS'}</Footer.Link>
     <Footer.Link href={'#'}>{'Tips oss'}</Footer.Link>
     <Footer.Link href={'#'}>{'Koronatiltak'}</Footer.Link>
@@ -253,6 +257,14 @@ export const WithLinks = {
   },
   argTypes: {
     children: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const links = canvas.getAllByRole('link');
+    await expect(links[3]).toHaveClass('dummyClassname');
+    // eslint-disable-next-line testing-library/no-node-access
+    const externalLink = links[4].querySelector('svg');
+    await expect(externalLink).toBeInTheDocument();
   },
 } satisfies Story;
 

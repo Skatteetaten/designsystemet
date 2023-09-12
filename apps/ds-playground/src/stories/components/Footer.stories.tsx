@@ -8,7 +8,7 @@ import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Footer,
-  title: 'Komponenter/Footer',
+  title: 'Komponenter/Footer/Footer',
   argTypes: {
     // Props
     children: { table: { category: category.props } },

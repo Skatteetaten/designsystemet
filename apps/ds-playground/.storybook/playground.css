@@ -116,3 +116,7 @@ code {
 .inlineBlock {
   display: inline-block;
 }
+
+.logoHeight {
+  height: 4rem;
+}
