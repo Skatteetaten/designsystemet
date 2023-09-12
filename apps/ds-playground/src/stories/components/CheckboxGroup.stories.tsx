@@ -13,6 +13,7 @@ const meta = {
   argTypes: {
     // Props
     children: { control: 'object', table: { category: category.props } },
+    description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasError: {
       control: 'boolean',
@@ -20,6 +21,8 @@ const meta = {
         category: category.props,
       },
     },
+    helpSvgPath: { table: { category: category.props } },
+    helpText: { table: { category: category.props } },
     hideLegend: {
       control: 'boolean',
       table: {
@@ -33,6 +36,7 @@ const meta = {
         category: category.props,
       },
     },
+    titleHelpSvg: { table: { category: category.props } },
     // HTML
     disabled: {
       control: 'boolean',
@@ -51,19 +55,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const TemplateDefault: StoryFn<typeof CheckboxGroup> = (args) => (
-  <CheckboxGroup {...args}>
-    <CheckboxGroup.Checkbox>{'Har barn over 16 år'}</CheckboxGroup.Checkbox>
-    <CheckboxGroup.Checkbox>{'Har barn under 12 år'}</CheckboxGroup.Checkbox>
-    <CheckboxGroup.Checkbox>
-      {
-        'Får ekstra reisevei til jobb på grunn av levering til barnehage eller skolefritidsordning'
-      }
-    </CheckboxGroup.Checkbox>
-    <CheckboxGroup.Checkbox>
-      {'Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov'}
-    </CheckboxGroup.Checkbox>
-    <CheckboxGroup.Checkbox>{'Er enslig forsørger'}</CheckboxGroup.Checkbox>
-  </CheckboxGroup>
+  <CheckboxGroup {...args} />
 );
 
 const TemplateExample: StoryFn<typeof CheckboxGroup> = () => {
@@ -123,6 +115,23 @@ export const CheckboxGroupDefault = {
 
   args: {
     legend: 'Velg det som passer deg',
+    children: (
+      <>
+        <CheckboxGroup.Checkbox>{'Har barn over 16 år'}</CheckboxGroup.Checkbox>
+        <CheckboxGroup.Checkbox>
+          {'Har barn under 12 år'}
+        </CheckboxGroup.Checkbox>
+        <CheckboxGroup.Checkbox>
+          {
+            'Får ekstra reisevei til jobb på grunn av levering til barnehage eller skolefritidsordning'
+          }
+        </CheckboxGroup.Checkbox>
+        <CheckboxGroup.Checkbox>
+          {'Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov'}
+        </CheckboxGroup.Checkbox>
+        <CheckboxGroup.Checkbox>{'Er enslig forsørger'}</CheckboxGroup.Checkbox>
+      </>
+    ),
   },
 } satisfies Story;
 
@@ -132,6 +141,23 @@ export const CheckboxGroupExample = {
 
   args: {
     legend: 'dummy',
+    children: (
+      <>
+        <CheckboxGroup.Checkbox>{'Har barn over 16 år'}</CheckboxGroup.Checkbox>
+        <CheckboxGroup.Checkbox>
+          {'Har barn under 12 år'}
+        </CheckboxGroup.Checkbox>
+        <CheckboxGroup.Checkbox>
+          {
+            'Får ekstra reisevei til jobb på grunn av levering til barnehage eller skolefritidsordning'
+          }
+        </CheckboxGroup.Checkbox>
+        <CheckboxGroup.Checkbox>
+          {'Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov'}
+        </CheckboxGroup.Checkbox>
+        <CheckboxGroup.Checkbox>{'Er enslig forsørger'}</CheckboxGroup.Checkbox>
+      </>
+    ),
   },
   parameters: {
     controls: { disabled: true },

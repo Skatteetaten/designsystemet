@@ -5,6 +5,7 @@ import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { getRadioGroupVariantDefault } from './defaults';
 import { RadioGroupComponent, RadioGroupProps } from './RadioGroup.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
+import { Fieldset } from '../Fieldset/Fieldset';
 import { Radio } from '../Radio/Radio';
 import { RadioGroupContext } from '../RadioGroupContext/RadioGroupContext';
 
@@ -17,9 +18,13 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
+      description,
       errorMessage,
+      helpSvgPath,
+      helpText,
       legend,
       selectedValue,
+      titleHelpSvg,
       variant = getRadioGroupVariantDefault(),
       defaultValue,
       disabled,
@@ -37,40 +42,30 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
     const uniqueNameId = `radioInputName-${useId()}`;
     const nameId = name ?? uniqueNameId;
 
-    if (legend === '') {
-      throw new Error('Empty string is not a valid legend');
-    }
-
-    let requiredClassName = '';
-    if (showRequiredMark) {
-      requiredClassName =
-        typeof legend === 'string'
-          ? styles.radioGroupLegend_required
-          : styles.radioGroupLegendAsMarkup_required;
-    }
-
-    const hideClassName = hideLegend ? styles.srOnly : '';
-    const legendClassName =
-      `${styles.radioGroupLegend} ${hideClassName} ${requiredClassName}`.trim();
-    const errorClassName = hasError ? styles.radioGroupItemContainer_error : '';
     const variantClassName =
       variant === 'horizontal'
         ? `${styles.radioGroupItemContainer_horizontal}`
         : '';
     const radioGroupItemContainer =
-      `${styles.radioGroupItemContainer} ${errorClassName} ${variantClassName}`.trim();
+      `${styles.radioGroupItemContainer} ${variantClassName}`.trim();
 
     return (
-      <fieldset
+      <Fieldset
         ref={ref}
         id={id}
-        className={`${styles.radioGroup} ${className}`}
+        className={className}
         lang={lang}
         data-testid={dataTestId}
         disabled={disabled}
+        legend={legend}
+        hideLegend={hideLegend}
+        showRequiredMark={showRequiredMark}
+        description={description}
+        helpSvgPath={helpSvgPath}
+        helpText={helpText}
+        titleHelpSvg={titleHelpSvg}
+        hasSpacing
       >
-        <legend className={legendClassName}>{legend}</legend>
-
         <div className={radioGroupItemContainer}>
           <RadioGroupContext.Provider
             value={{
@@ -86,14 +81,14 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
             {children}
           </RadioGroupContext.Provider>
         </div>
-
         <ErrorMessage
+          className={styles.errorMessage}
           id={errorId}
-          showError={hasError && errorMessage !== undefined}
+          showError={hasError}
         >
           {errorMessage ?? ''}
         </ErrorMessage>
-      </fieldset>
+      </Fieldset>
     );
   }
 ) as RadioGroupComponent;

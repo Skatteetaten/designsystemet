@@ -1,8 +1,13 @@
 {
   "shared.AccessibilityStatement": "Accessibility statement",
+  "shared.AccessibilityStatementURL": "https://uustatus.no/",
   "shared.ChooseValue": "Select",
   "shared.Close": "Close",
   "shared.ContactUs": "Contact us",
+  "shared.ContactUsURL": "https://www.skatteetaten.no/en/contact/",
+  "shared.Help": "Help",
   "shared.RequiredField": "Mandatory field",
-  "shared.SecurityAndPrivacy": "Security and privacy"
+  "shared.SecurityAndPrivacy": "Security and privacy",
+  "shared.SecurityAndPrivacyURL": "https://www.skatteetaten.no/en/about-tde-tax-administration/security-and-privacy/",
+  "shared.SkeLogoImageText": "The Norwegian Tax Administration logo"
 }
