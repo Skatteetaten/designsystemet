@@ -11,18 +11,17 @@ const meta = {
   argTypes: {
     ...LinkMeta.argTypes,
     color: { table: { disable: true } },
-    titleFirstColumn: { table: { disable: true } },
   },
   tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-layout'),
   },
-} satisfies Meta<typeof Footer.Link>;
+} satisfies Meta<typeof Link>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: StoryFn<typeof Footer.Link> = (args) => (
-  <Footer {...args}>
+const TemplateDefault: StoryFn<typeof Footer.Link> = () => (
+  <Footer titleFirstColumn={'Om Skatteetaten'}>
     <Footer.Link href={'#'}>{'Satser'}</Footer.Link>
     <Footer.Link href={'#'}>{'Skjema og tjenester'}</Footer.Link>
     <Footer.Link href={'#'}>{'RSS'}</Footer.Link>
@@ -37,6 +36,7 @@ export const FooterDefault = {
   render: TemplateDefault,
   name: 'Default',
   args: {
-    titleFirstColumn: 'Om Skatteetaten',
+    children: 'dummy',
+    href: '#',
   },
 } satisfies Story;

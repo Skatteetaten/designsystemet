@@ -11,8 +11,7 @@ const meta = {
   title: 'Komponenter/Footer/Logo',
   argTypes: {
     // Props
-    children: { table: { category: category.props } },
-    titleFirstColumn: { table: { disable: true } },
+    children: { control: { type: null }, table: { category: category.props } },
   },
   tags: ['autodocs'],
   parameters: {
@@ -22,8 +21,8 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: StoryFn<typeof Footer.Logo> = (args) => (
-  <Footer {...args}>
+const TemplateDefault: StoryFn<typeof Footer.Logo> = () => (
+  <Footer titleFirstColumn={'Om Skatteetaten'}>
     <Footer.Logo>
       <img className={'logoHeight'} alt={'Logo'} src={logo}></img>
     </Footer.Logo>
@@ -37,6 +36,6 @@ export const FooterDefault = {
   render: TemplateDefault,
   name: 'Default',
   args: {
-    titleFirstColumn: 'Om Skatteetaten',
+    children: 'dummy',
   },
 } satisfies Story;
