@@ -45,7 +45,7 @@ export const FooterDefault = {
   render: TemplateDefault,
   name: 'Default',
   args: {
-    titleFirstColumn: 'Om skatteetaten',
+    titleFirstColumn: 'Om Skatteetaten',
     firstColumn: '',
     secondColumn: '',
     thirdColumn: '',
@@ -59,7 +59,7 @@ export const FooterExample = {
     controls: { disable: true },
   },
   args: {
-    titleFirstColumn: 'Om skatteetaten',
+    titleFirstColumn: 'Om Skatteetaten',
     firstColumn: (
       <LinkGroup color={'white'}>
         <LinkGroup.Link href={'#'}>{'Jobb i Skatteetaten'}</LinkGroup.Link>

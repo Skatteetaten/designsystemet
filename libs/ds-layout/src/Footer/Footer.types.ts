@@ -38,6 +38,6 @@ export interface FooterComponent
     FooterLogoProps & React.RefAttributes<HTMLDivElement>
   >;
   Link: React.ForwardRefExoticComponent<
-    LinkProps & React.RefAttributes<HTMLAnchorElement>
+    Omit<LinkProps, 'color'> & React.RefAttributes<HTMLAnchorElement>
   >;
 }

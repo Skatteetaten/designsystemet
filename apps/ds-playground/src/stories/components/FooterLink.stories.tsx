@@ -2,14 +2,16 @@ import { Link } from '@skatteetaten/ds-buttons';
 import { Footer } from '@skatteetaten/ds-layout';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
+import LinkMeta from './Link.stories';
 import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Link,
   title: 'Komponenter/Footer/Link',
   argTypes: {
-    // Props
+    ...LinkMeta.argTypes,
     color: { table: { disable: true } },
+    titleFirstColumn: { table: { disable: true } },
   },
   tags: ['autodocs'],
   parameters: {
@@ -19,8 +21,8 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: StoryFn<typeof Footer.Link> = () => (
-  <Footer>
+const TemplateDefault: StoryFn<typeof Footer.Link> = (args) => (
+  <Footer {...args}>
     <Footer.Link href={'#'}>{'Satser'}</Footer.Link>
     <Footer.Link href={'#'}>{'Skjema og tjenester'}</Footer.Link>
     <Footer.Link href={'#'}>{'RSS'}</Footer.Link>
@@ -34,4 +36,7 @@ const TemplateDefault: StoryFn<typeof Footer.Link> = () => (
 export const FooterDefault = {
   render: TemplateDefault,
   name: 'Default',
+  args: {
+    titleFirstColumn: 'Om Skatteetaten',
+  },
 } satisfies Story;
