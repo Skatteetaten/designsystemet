@@ -470,7 +470,7 @@ exports[`Tester/Footer WithHideLogo play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Footer WithLinks smoke-test 1`] = `
+exports[`Tester/Footer WithLinks play-test 1`] = `
 <div data-test-block="true">
   <footer class>
     <div class="Footer_diagonals__BqOO9">
@@ -556,7 +556,7 @@ exports[`Tester/Footer WithLinks smoke-test 1`] = `
         >
       </div>
       <div class="Footer_linkContainer__Xcdpn">
-        <a class="Link_link__jeUpY Link_link_white__bmeQu "
+        <a class="Link_link__jeUpY Link_link_white__bmeQu dummyClassname"
            href="#"
         >
           Satser
@@ -565,6 +565,16 @@ exports[`Tester/Footer WithLinks smoke-test 1`] = `
            href="#"
         >
           Skjema og tjenester
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isExternal__O+HIA"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-label="Til et annet nettsted"
+               aria-hidden="false"
+               role="img"
+          >
+            <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7Zm5 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z">
+            </path>
+          </svg>
         </a>
         <a class="Link_link__jeUpY Link_link_white__bmeQu "
            href="#"
