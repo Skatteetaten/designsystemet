@@ -48,7 +48,6 @@ const meta = {
   tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-forms'),
-    docs: { source: { type: 'code' } },
   },
 } satisfies Meta<typeof CheckboxGroup>;
 export default meta;

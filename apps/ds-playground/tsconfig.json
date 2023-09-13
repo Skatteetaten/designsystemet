@@ -12,7 +12,10 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true
   },
-  "files": ["../../types/i18next.d.ts"],
+  "files": [
+    "../../types/i18next.d.ts",
+    "../../node_modules/@nx/react/typings/image.d.ts"
+  ],
   "include": [],
   "references": [
     {

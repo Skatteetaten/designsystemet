@@ -87,7 +87,6 @@ const meta = {
   },
   parameters: {
     version: getVersion('ds-forms'),
-    docs: { source: { type: 'code' } },
   },
 } satisfies Meta<typeof RadioGroup>;
 export default meta;
