@@ -1,6 +1,8 @@
-import { ComponentPropsWithoutRef, ReactElement } from 'react';
+import { ComponentPropsWithoutRef } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
+
+import { HelpProps } from '../Help/Help.types';
 
 type RequiredFieldsetHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'fieldset'>,
@@ -21,11 +23,11 @@ export interface FieldsetProps
   /** Margin under fieldset */
   hasSpacing?: boolean;
   /** Hjelpetekst */
-  helpText?: string;
+  helpText?: HelpProps['helpText'];
   /** Overskriver default hjelpeikon */
-  helpSvgPath?: ReactElement;
+  helpSvgPath?: HelpProps['helpSvgPath'];
   /** Title-element til hjelpeikon */
-  titleHelpSvg?: string;
+  titleHelpSvg?: HelpProps['titleHelpSvg'];
   /** Om legend skal markeres med stjerne */
   showRequiredMark?: boolean;
 }

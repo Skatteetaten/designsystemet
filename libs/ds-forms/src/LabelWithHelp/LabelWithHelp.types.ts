@@ -1,6 +1,8 @@
-import { ComponentPropsWithoutRef, ReactElement } from 'react';
+import { ComponentPropsWithoutRef } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
+
+import { HelpProps } from '../Help/Help.types';
 
 type RequiredLabelHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'label'>,
@@ -17,11 +19,11 @@ interface LabelWithHelpCommonProps
   /** Tilleggstekst */
   description?: string;
   /** Hjelpetekst */
-  helpText?: string;
+  helpText?: HelpProps['helpText'];
   /** Overskriver default hjelpeikon */
-  helpSvgPath?: ReactElement;
+  helpSvgPath?: HelpProps['helpSvgPath'];
   /** Title-element til hjelpeikon */
-  titleHelpSvg?: string;
+  titleHelpSvg?: HelpProps['titleHelpSvg'];
   /** Om obligatorisk label skal markeres med stjerne */
   showRequiredMark?: boolean;
 }
