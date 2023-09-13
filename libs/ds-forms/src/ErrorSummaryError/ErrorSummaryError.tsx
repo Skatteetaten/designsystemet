@@ -1,4 +1,4 @@
-import { forwardRef, useContext } from 'react';
+import { forwardRef, useContext, MouseEvent } from 'react';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
@@ -12,7 +12,7 @@ export const ErrorSummaryError = forwardRef<HTMLAnchorElement, ErrorProps>(
       id,
       className = getCommonClassNameDefault(),
       lang,
-      'data-testid': dataTestid,
+      'data-testid': dataTestId,
       referenceId,
       children,
     },
@@ -38,9 +38,12 @@ export const ErrorSummaryError = forwardRef<HTMLAnchorElement, ErrorProps>(
         id={id}
         className={className}
         lang={lang}
-        data-testid={dataTestid}
+        data-testid={dataTestId}
         href={`#${referenceId}`}
-        onClick={(): void => scrollToId(referenceId)}
+        onClick={(e: MouseEvent<HTMLAnchorElement>): void => {
+          e.preventDefault();
+          scrollToId(referenceId);
+        }}
       >
         {children}
       </LinkGroup.Link>

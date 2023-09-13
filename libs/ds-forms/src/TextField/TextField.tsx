@@ -18,6 +18,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
     {
       id: externalId,
       className = getCommonClassNameDefault(),
+      classNames,
       lang,
       'data-testid': dataTestId,
       as: Tag = getTextFieldAsDefault(),
@@ -43,9 +44,9 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       rows,
       value,
       ariaDescribedby,
-      isLarge,
-      hideLabel,
       hasError,
+      hideLabel,
+      isLarge,
       showRequiredMark,
       onBlur,
       onChange,
@@ -101,11 +102,15 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
     const multilineTextboxClassName =
       Tag === 'textarea' ? styles.textbox_multiline : '';
     const autosizeTextarea = autosize ? styles.textbox_autosize : '';
-    const textboxClassName =
-      `${styles.textbox} ${largeTextboxClassName} ${multilineTextboxClassName} ${autosizeTextarea}`.trim();
+    const textboxClassName = `${
+      styles.textbox
+    } ${largeTextboxClassName} ${multilineTextboxClassName} ${autosizeTextarea} ${
+      classNames?.textbox ?? ''
+    }`.trim();
     return (
       <div className={className} lang={lang}>
         <LabelWithHelp
+          className={classNames?.label ?? ''}
           htmlFor={textboxId}
           hideLabel={hideLabel}
           showRequiredMark={showRequiredMark}
@@ -142,7 +147,8 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
         />
         <ErrorMessage
           id={errorId}
-          showError={hasError && errorMessage !== undefined}
+          showError={hasError}
+          className={classNames?.errorMessage ?? ''}
         >
           {errorMessage ?? ''}
         </ErrorMessage>

@@ -15,7 +15,7 @@ export const TableSum = forwardRef<HTMLTableRowElement, TableSumProps>(
       id,
       className,
       lang,
-      'data-testid': dataTestid,
+      'data-testid': dataTestId,
       labelAlignment,
       valueAlignment,
       colSpan,
@@ -31,7 +31,7 @@ export const TableSum = forwardRef<HTMLTableRowElement, TableSumProps>(
       hasTopSeparator ? styles.sum_topSeparator : ''
     }`;
     return (
-      <tfoot id={id} className={className} lang={lang} data-testid={dataTestid}>
+      <tfoot id={id} className={className} lang={lang} data-testid={dataTestId}>
         <TableRow ref={ref}>
           <TableDataCell
             className={concatenatedClassName}

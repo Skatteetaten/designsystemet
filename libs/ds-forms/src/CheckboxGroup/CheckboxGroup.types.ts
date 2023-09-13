@@ -3,6 +3,7 @@ import { ComponentPropsWithoutRef } from 'react';
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 import { CheckboxProps } from '../Checkbox/Checkbox.types';
+import { FieldsetProps } from '../Fieldset/Fieldset.types';
 
 type RequiredCheckboxGroupHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'fieldset'>,
@@ -15,13 +16,21 @@ interface CheckboxGroupCommonProps
   extends CheckboxGroupHTMLAttributes,
     BaseProps {
   /** Checkbox-komponenter */
-  children?: JSX.Element | JSX.Element[];
-  /** Skjuler ledeteksten men synlig for skjermleser */
-  hideLegend?: boolean;
+  children: JSX.Element | JSX.Element[];
+  /** Skjuler ledetekst, tilleggstekst og hjelpetekst, men er fortsatt synlig for skjermleser */
+  hideLegend?: FieldsetProps['hideLegend'];
   /** Ledetekst til gruppen */
-  legend: React.ReactNode;
+  legend: FieldsetProps['legend'];
+  /** Tilleggstekst */
+  description?: FieldsetProps['description'];
+  /** Hjelpetekst */
+  helpText?: FieldsetProps['helpText'];
+  /** Overskriver default hjelpeikon */
+  helpSvgPath?: FieldsetProps['helpSvgPath'];
+  /** Title-element til hjelpeikon */
+  titleHelpSvg?: FieldsetProps['titleHelpSvg'];
   /** Om obligatorisk gruppe skal markeres med stjerne */
-  showRequiredMark?: boolean;
+  showRequiredMark?: FieldsetProps['showRequiredMark'];
   /* Hvis innføring av required på Group, se commit 05e7ac89ac3b132d37d18aed55a933573b3beb70 */
 }
 

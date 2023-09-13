@@ -43,7 +43,12 @@ interface TextFieldPropsHTMLAttributes extends TextFieldHTMLAttributes {
 export interface TextFieldCommonProps
   extends TextFieldPropsHTMLAttributes,
     BaseProps {
-  /** Skjuler label, hjelpetekst og tilleggstekst, men er forstsatt synlig for skjermleser. */
+  classNames?: {
+    label?: string;
+    textbox?: string;
+    errorMessage?: string;
+  };
+  /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */
   hideLabel?: boolean;
   /** Input eller textarea ledetekst */
   label: string;

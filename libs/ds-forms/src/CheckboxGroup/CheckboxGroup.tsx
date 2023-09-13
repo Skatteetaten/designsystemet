@@ -9,6 +9,7 @@ import {
 import { Checkbox } from '../Checkbox/Checkbox';
 import { CheckboxContext } from '../CheckboxContext/CheckboxContext';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
+import { Fieldset } from '../Fieldset/Fieldset';
 
 import styles from './CheckboxGroup.module.scss';
 
@@ -21,11 +22,14 @@ export const CheckboxGroup = forwardRef<
       id,
       className = getCommonClassNameDefault(),
       lang,
-      'data-testid': dataTestid,
+      'data-testid': dataTestId,
+      description,
       errorMessage,
+      helpSvgPath,
+      helpText,
       legend,
+      titleHelpSvg,
       disabled,
-      // TODO AK B4 - legg inn required og send videre til children
       hasError,
       hideLegend,
       showRequiredMark,
@@ -35,51 +39,38 @@ export const CheckboxGroup = forwardRef<
   ): JSX.Element => {
     const errorId = `checkboxGroupErrorId-${useId()}`;
 
-    if (legend === '') {
-      throw new Error('Empty string is not a valid legend.');
-    }
-
-    let requiredMarkClassName = '';
-    if (showRequiredMark) {
-      requiredMarkClassName =
-        typeof legend === 'string'
-          ? styles.fieldsetLegend_required
-          : styles.fieldsetLegendWithMarkup_required;
-    }
-
-    const hideLegendClassName = hideLegend ? styles.srOnly : '';
-
     return (
-      <CheckboxContext.Provider
-        value={{
-          errorId: hasError ? errorId : undefined,
-        }}
+      <Fieldset
+        ref={ref}
+        id={id}
+        className={className}
+        lang={lang}
+        data-testid={dataTestId}
+        disabled={disabled}
+        legend={legend}
+        hideLegend={hideLegend}
+        showRequiredMark={showRequiredMark}
+        description={description}
+        helpSvgPath={helpSvgPath}
+        helpText={helpText}
+        titleHelpSvg={titleHelpSvg}
+        hasSpacing
       >
-        <fieldset
-          ref={ref}
-          id={id}
-          className={`${styles.fieldset} ${className}`}
-          lang={lang}
-          data-testid={dataTestid}
-          disabled={disabled}
+        <CheckboxContext.Provider
+          value={{
+            errorId: hasError ? errorId : undefined,
+          }}
         >
-          <legend
-            className={`${styles.fieldsetLegend} ${requiredMarkClassName} ${hideLegendClassName}`}
-          >
-            {legend}
-          </legend>
           {children}
-          <ErrorMessage
-            id={errorId}
-            showError={hasError}
-            className={`${styles.fieldsetErrorMessage} ${
-              hasError ? styles.fieldsetSpacingBottom : ''
-            }`}
-          >
-            {errorMessage ?? ''}
-          </ErrorMessage>
-        </fieldset>
-      </CheckboxContext.Provider>
+        </CheckboxContext.Provider>
+        <ErrorMessage
+          className={styles.errorMessage}
+          id={errorId}
+          showError={hasError}
+        >
+          {errorMessage ?? ''}
+        </ErrorMessage>
+      </Fieldset>
     );
   }
 ) as CheckboxGroupComponent;
