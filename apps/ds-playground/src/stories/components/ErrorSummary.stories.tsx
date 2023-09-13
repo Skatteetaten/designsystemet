@@ -6,6 +6,7 @@ import {
   ErrorMessage,
   ErrorSummary,
   ErrorSummaryProps,
+  TextField,
   getErrorSummaryTitleAsDefault,
 } from '@skatteetaten/ds-forms';
 import { StoryObj, Meta, StoryFn } from '@storybook/react';
@@ -62,31 +63,37 @@ const TemplateExample: StoryFn<ErrorSummaryProps> = () => {
   });
   return (
     <>
-      {/* TODO FRONT-1279 erstattes med TextField når den er ferdig utviklet */}
-      <label className={'block'} htmlFor={'input_aar'}>
-        {'År'}
-      </label>
-      <input id={'input_aar'} type={'number'} value={1009} required />
-      <ErrorMessage showError={state.hasError}>
+      <TextField
+        id={'input_aar'}
+        ariaDescribedby={'error_aar'}
+        label={'År'}
+        value={1009}
+        required
+      />
+      <ErrorMessage id={'error_aar'} showError={state.hasError}>
         {'Inntekståret må være etter 2008'}
       </ErrorMessage>
-      <label className={'block'} htmlFor={'input_epost'}>
-        {'E-post'}
-      </label>
-      <input
+      <TextField
         id={'input_epost'}
-        type={'email'}
+        ariaDescribedby={'error_epost'}
+        label={'E-post'}
         value={'Ola.Normann.no'}
         required
       />
-      <ErrorMessage showError={state.hasError}>
+      <ErrorMessage id={'error_epost'} showError={state.hasError}>
         {'E-posten ser ikke riktig ut. Skriv slik: ola.normann@norge.no'}
       </ErrorMessage>
-      <label className={'block'} htmlFor={'input_dager'}>
-        {'Antall dager i Norge i perioden/inntekståret'}
-      </label>
-      <input id={'input_dager'} type={'number'} required />
-      <ErrorMessage className={'bottomSpacingXL'} showError={state.hasError}>
+      <TextField
+        id={'input_dager'}
+        ariaDescribedby={'error_dager'}
+        label={'Antall dager i Norge i perioden/inntekståret'}
+        required
+      />
+      <ErrorMessage
+        id={'error_dager'}
+        className={'bottomSpacingXL'}
+        showError={state.hasError}
+      >
         {'Antall dager må fylles ut.'}
       </ErrorMessage>
       <ErrorSummary id={'errorSummary1'} showErrorSummary={state.hasError}>
