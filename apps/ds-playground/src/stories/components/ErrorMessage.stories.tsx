@@ -41,13 +41,12 @@ const TemplateExample: StoryFn<ErrorMessageProps> = () => {
   return (
     <>
       <TextField
+        className={'bottomSpacingXL'}
         label={'Fødselsdato'}
-        ariaDescribedby={'fdato-error'}
         value={'17.5.19'}
+        errorMessage={'Skriv fødselsdatoen med følgende format: DD.MM.ÅÅÅÅ'}
+        hasError
       />
-      <ErrorMessage id={'fdato-error'} className={'bottomSpacingXL'} showError>
-        {'Skriv fødselsdatoen med følgende format: DD.MM.ÅÅÅÅ'}
-      </ErrorMessage>
       <Button
         variant={'secondary'}
         onClick={(): void => setState({ hasError: !state.hasError })}

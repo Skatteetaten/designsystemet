@@ -1,5 +1,5 @@
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
-import { ErrorMessage, ErrorSummary, TextField } from '@skatteetaten/ds-forms';
+import { ErrorSummary, TextField } from '@skatteetaten/ds-forms';
 import { Paragraph } from '@skatteetaten/ds-typography';
 import { expect } from '@storybook/jest';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
@@ -248,15 +248,14 @@ export const WithTitleAs = {
 const TemplateWithInput: StoryFn<typeof ErrorSummary> = () => (
   <>
     <TextField
+      className={'bottomSpacingXL'}
       id={'input_aar'}
-      ariaDescribedby={'error_aar'}
       label={'År'}
       value={1009}
+      errorMessage={'Inntekståret må være etter 2008'}
+      hasError
       required
     />
-    <ErrorMessage id={'error_aar'} className={'bottomSpacingXL'} showError>
-      {'Inntekståret må være etter 2008'}
-    </ErrorMessage>
     <ErrorSummary showErrorSummary>
       <ErrorSummary.Error referenceId={'input_aar'}>
         {'Inntekståret må være etter 2008'}
@@ -285,15 +284,14 @@ const TemplateWithShadowRootNode: StoryFn<typeof ErrorSummary> = () => {
   return (
     <div data-test-block>
       <TextField
+        className={'bottomSpacingXL'}
         id={'input_aar'}
-        ariaDescribedby={'error_aar'}
         label={'År'}
         value={1009}
+        errorMessage={'Inntekståret må være etter 2008'}
+        hasError
         required
       />
-      <ErrorMessage id={'error_aar'} className={'bottomSpacingXL'} showError>
-        {'Inntekståret må være etter 2008'}
-      </ErrorMessage>
       <ErrorSummary shadowRootNode={shadowRoot ?? undefined} showErrorSummary>
         <ErrorSummary.Error referenceId={'input_aar'}>
           {'Inntekståret må være etter 2008'}

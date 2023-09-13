@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { Button } from '@skatteetaten/ds-buttons';
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
 import {
-  ErrorMessage,
   ErrorSummary,
   ErrorSummaryProps,
   TextField,
@@ -68,34 +67,28 @@ const TemplateExample: StoryFn<ErrorSummaryProps> = () => {
         ariaDescribedby={'error_aar'}
         label={'År'}
         value={1009}
+        errorMessage={'Inntekståret må være etter 2008'}
+        hasError={state.hasError}
         required
       />
-      <ErrorMessage id={'error_aar'} showError={state.hasError}>
-        {'Inntekståret må være etter 2008'}
-      </ErrorMessage>
       <TextField
         id={'input_epost'}
-        ariaDescribedby={'error_epost'}
         label={'E-post'}
         value={'Ola.Normann.no'}
+        errorMessage={
+          'E-posten ser ikke riktig ut. Skriv slik: ola.normann@norge.no'
+        }
+        hasError={state.hasError}
         required
       />
-      <ErrorMessage id={'error_epost'} showError={state.hasError}>
-        {'E-posten ser ikke riktig ut. Skriv slik: ola.normann@norge.no'}
-      </ErrorMessage>
       <TextField
+        className={'bottomSpacingXL'}
         id={'input_dager'}
-        ariaDescribedby={'error_dager'}
         label={'Antall dager i Norge i perioden/inntekståret'}
+        errorMessage={'Antall dager må fylles ut.'}
+        hasError={state.hasError}
         required
       />
-      <ErrorMessage
-        id={'error_dager'}
-        className={'bottomSpacingXL'}
-        showError={state.hasError}
-      >
-        {'Antall dager må fylles ut.'}
-      </ErrorMessage>
       <ErrorSummary id={'errorSummary1'} showErrorSummary={state.hasError}>
         <ErrorSummary.Error referenceId={'input_aar'}>
           {'Inntekståret må være etter 2008'}
