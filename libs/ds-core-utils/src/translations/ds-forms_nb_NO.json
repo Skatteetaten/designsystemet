@@ -3,7 +3,7 @@
   "fileuploader.AcceptedFileFormats": "Filer du kan laste opp:",
   "fileuploader.AddFile": "Legg til fil(er)",
   "fileuploader.DeleteFile": "Fjern fil",
-  "fileuploader.FileFormatError": "{{filnavn}} kan ikke lastes opp. Last opp filen i riktig format.",
+  "fileuploader.FileFormatError": "{{filnavn}} kan ikke lastes opp. Last opp filen i riktig format.",
   "fileuploader.FileSizeError": "Vi kan ikke motta denne filen fordi den er for stor. Filer kan ikke overstige {{filstoerrelsegrense}} MB. Du kan forsøke å dele opp i flere mindre filer, eller bruke et format som tar mindre plass.",
   "fileuploader.GeneralDeleteError": "Kunne ikke slette fil",
   "fileuploader.GeneralUploadError": "Kunne ikke laste opp fil",
