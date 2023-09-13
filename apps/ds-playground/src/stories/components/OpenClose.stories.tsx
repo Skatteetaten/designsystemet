@@ -76,10 +76,6 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: StoryFn<OpenCloseProps> = (args) => (
-  <OpenClose {...args}>{args.children}</OpenClose>
-);
-
 const exampleTitle = 'Hva er aksjesparekonto';
 const exampleContent =
   'En aksjesparekonto er en konto hvor du kan kjøpe og selge aksjer og aksjefond skattefritt. ' +
@@ -120,9 +116,7 @@ const TemplateExample: StoryFn<OpenCloseProps> = () => (
 );
 
 export const OpenCloseDefault: StoryObj<OpenCloseProps> = {
-  render: TemplateDefault,
   name: 'Default',
-
   args: {
     title: 'OpenClose (Åpne og lukke)',
     children: 'Innhold som vises bare når OpenClose er expanded',
@@ -132,11 +126,10 @@ export const OpenCloseDefault: StoryObj<OpenCloseProps> = {
 export const OpenCloseExample: StoryObj<OpenCloseProps> = {
   render: TemplateExample,
   name: 'Example',
-
   args: {
     title: 'dummy',
   },
   parameters: {
-    controls: { disabled: true },
+    controls: { disable: true },
   },
 } satisfies Story;

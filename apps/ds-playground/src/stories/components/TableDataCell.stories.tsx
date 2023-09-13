@@ -3,7 +3,7 @@ import {
   getTableCellAlignmentDefault,
   Table,
 } from '@skatteetaten/ds-table';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
@@ -50,14 +50,8 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: StoryFn<typeof Table.DataCell> = (args) => (
-  <Table.DataCell {...args} />
-);
-
 export const DataCellDefault = {
-  render: TemplateDefault,
   name: 'Default',
-
   args: {
     children: 'Example DataCell',
   },

@@ -112,7 +112,6 @@ const TemplateExample: StoryFn<typeof CheckboxGroup> = () => {
 export const CheckboxGroupDefault = {
   render: TemplateDefault,
   name: 'Default',
-
   args: {
     legend: 'Velg det som passer deg',
     children: (
@@ -138,7 +137,6 @@ export const CheckboxGroupDefault = {
 export const CheckboxGroupExample = {
   render: TemplateExample,
   name: 'Example',
-
   args: {
     legend: 'dummy',
     children: (
@@ -160,6 +158,6 @@ export const CheckboxGroupExample = {
     ),
   },
   parameters: {
-    controls: { disabled: true },
+    controls: { disable: true },
   },
 } satisfies Story;

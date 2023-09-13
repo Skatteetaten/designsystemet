@@ -130,6 +130,6 @@ export const ErrorSummaryExample: StoryObj<ErrorSummaryProps> = {
   render: TemplateExample,
   name: 'Example',
   parameters: {
-    controls: { disabled: true },
+    controls: { disable: true },
   },
 } satisfies Story;

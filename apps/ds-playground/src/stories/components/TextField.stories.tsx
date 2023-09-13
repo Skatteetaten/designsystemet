@@ -96,15 +96,14 @@ const meta = {
   },
 } satisfies Meta<typeof TextField>;
 export default meta;
-
 type Story = StoryObj<typeof meta>;
+
 const TemplateDefaultControlled: StoryFn<typeof TextField> = (args) => {
   const [, setArgs] = useArgs();
-
   return (
     <TextField
       {...args}
-      onChange={(e): void => {
+      onChange={(e: React.ChangeEvent<HTMLInputElement>): void => {
         setArgs({ value: e.target.value });
       }}
     />
@@ -114,11 +113,9 @@ const TemplateDefaultControlled: StoryFn<typeof TextField> = (args) => {
 export const TextFieldDefaultControlled: StoryObj<TextFieldProps> = {
   render: TemplateDefaultControlled,
   name: 'Default Controlled',
-
   argTypes: {
     defaultValue: { control: { disable: true } },
   },
-
   args: {
     label: 'Navn',
     defaultValue: undefined,
@@ -128,11 +125,9 @@ export const TextFieldDefaultControlled: StoryObj<TextFieldProps> = {
 
 export const TextFieldDefaultUncontrolled: StoryObj<TextFieldProps> = {
   name: 'Default Uncontrolled',
-
   argTypes: {
     value: { control: { disable: true } },
   },
-
   args: {
     label: 'Navn',
     defaultValue: 'Kari Nordmann',
@@ -215,6 +210,6 @@ export const TextFieldExample = {
     label: 'Andre opplysninger',
   },
   parameters: {
-    controls: { disabled: true },
+    controls: { disable: true },
   },
 } satisfies Story;

@@ -85,7 +85,6 @@ const TemplateExample: StoryFn<typeof InlineButton> = () => (
 export const InlineButtonDefault = {
   render: TemplateDefault,
   name: 'Default',
-
   args: {
     children: 'Legg til rapport',
     iconPosition: getInlineButtonPositionDefault(),
@@ -95,11 +94,10 @@ export const InlineButtonDefault = {
 export const InlineButtonExample = {
   render: TemplateExample,
   name: 'Example',
-
-  parameters: {
-    controls: { disabled: true },
-  },
   args: {
     children: 'dummy',
+  },
+  parameters: {
+    controls: { disable: true },
   },
 } satisfies Story;

@@ -28,7 +28,6 @@ type Story = StoryObj<typeof meta>;
 
 export const BlockquoteDefault = {
   name: 'Default',
-
   args: {
     children:
       'Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, ' +
@@ -38,12 +37,11 @@ export const BlockquoteDefault = {
 
 export const BlockquoteExample = {
   name: 'Example',
-
   args: {
     children:
       'Skatteetaten jobber målrettet sammen med andre samarbeidspartnere for at det skal være enkelt å gjøre rett og vanskelig å gjøre feil.',
   },
   parameters: {
-    controls: { disabled: true },
+    controls: { disable: true },
   },
 } satisfies Story;

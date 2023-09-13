@@ -51,7 +51,6 @@ const TemplateDefault: StoryFn<typeof Table.Sum> = (args) => (
 export const DataCellDefault = {
   render: TemplateDefault,
   name: 'Default',
-
   args: {
     children: '1 000kr',
   },

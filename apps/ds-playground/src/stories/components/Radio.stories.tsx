@@ -1,5 +1,5 @@
 import { RadioGroup } from '@skatteetaten/ds-forms';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
@@ -27,14 +27,8 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: StoryFn<typeof RadioGroup.Radio> = (args) => {
-  return <RadioGroup.Radio {...args} />;
-};
-
 export const RadioDefault = {
-  render: TemplateDefault,
   name: 'Default',
-
   args: {
     children: 'Enkeltpersonsforetak',
   },

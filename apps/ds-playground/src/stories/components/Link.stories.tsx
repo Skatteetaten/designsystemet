@@ -56,7 +56,7 @@ const TemplateDefault: StoryFn<typeof Link> = (args) => (
 );
 
 const TemplateExample: StoryFn<typeof Link> = () => (
-  <div>
+  <>
     <div className={'exampleSpacing'}>
       <Link href={'#link'}>
         {'Rettledning til RF-1167 Næringsoppgave 2 for 2020 (pdf)'}
@@ -72,13 +72,12 @@ const TemplateExample: StoryFn<typeof Link> = () => (
         {'Brukerveiledning for bilforhandlere'}
       </Link>
     </div>
-  </div>
+  </>
 );
 
 export const LinkDefault = {
   render: TemplateDefault,
   name: 'Default',
-
   args: {
     href: '#',
     children: 'Er du pendler?',
@@ -88,12 +87,11 @@ export const LinkDefault = {
 export const LinkExample = {
   render: TemplateExample,
   name: 'Example',
-
-  parameters: {
-    controls: { disabled: true },
-  },
   args: {
     children: 'dummy',
     href: '#',
+  },
+  parameters: {
+    controls: { disable: true },
   },
 } satisfies Story;
