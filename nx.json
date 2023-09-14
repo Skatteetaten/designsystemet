@@ -1,30 +1,24 @@
 {
-  "pluginsConfig": {
-    "@nx/js": {
-      "analyzeSourceFiles": true
-    }
-  },
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "npmScope": "skatteetaten",
-  "namedInputs": {
-    "default": ["{projectRoot}/**/*", "sharedGlobals", "projectSpecificFiles"],
-    "sharedGlobals": [
-      "{workspaceRoot}/.stylelintrc.json",
-      "{workspaceRoot}/babel.config.json",
-      "{workspaceRoot}/.stylelintrc.json"
-    ],
-    "production": [
-      "default",
-      "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
-      "!{projectRoot}/tsconfig.spec.json",
-      "!{projectRoot}/jest.config.[jt]s",
-      "!{projectRoot}/.eslintrc.json",
-      "!{projectRoot}/.storybook/**/*",
-      "!{projectRoot}/**/*.stories.@(js|jsx|ts|tsx|mdx)",
-      "!{projectRoot}/.stylelintrc(.(json|yml|yaml|js))?",
-      "!{projectRoot}/tsconfig.storybook.json",
-      "!{projectRoot}/src/test-setup.[jt]s"
-    ],
-    "projectSpecificFiles": []
+  "affected": {
+    "defaultBase": "origin/master"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "build-storybook",
+          "e2e",
+          "lint",
+          "stylelint",
+          "test",
+          "tsc"
+        ]
+      }
+    }
   },
   "targetDefaults": {
     "build": {
@@ -52,25 +46,6 @@
       ]
     }
   },
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "nx/tasks-runners/default",
-      "options": {
-        "cacheableOperations": [
-          "build",
-          "build-storybook",
-          "e2e",
-          "lint",
-          "stylelint",
-          "test",
-          "tsc"
-        ]
-      }
-    }
-  },
-  "affected": {
-    "defaultBase": "origin/master"
-  },
   "generators": {
     "@nx/react": {
       "application": {
@@ -88,5 +63,32 @@
       }
     }
   },
-  "defaultProject": "ds-playground"
+  "pluginsConfig": {
+    "@nx/js": {
+      "analyzeSourceFiles": true
+    }
+  },
+  "defaultProject": "ds-playground",
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*", "sharedGlobals", "projectSpecificFiles"],
+    "sharedGlobals": [
+      "{workspaceRoot}/.stylelintrc.json",
+      "{workspaceRoot}/babel.config.json",
+      "{workspaceRoot}/.stylelintrc.json",
+      "{workspaceRoot}/libs/ds-dev-config/build/rollup-config-factory.js"
+    ],
+    "production": [
+      "default",
+      "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
+      "!{projectRoot}/tsconfig.spec.json",
+      "!{projectRoot}/jest.config.[jt]s",
+      "!{projectRoot}/.eslintrc.json",
+      "!{projectRoot}/.storybook/**/*",
+      "!{projectRoot}/**/*.stories.@(js|jsx|ts|tsx|mdx)",
+      "!{projectRoot}/.stylelintrc(.(json|yml|yaml|js))?",
+      "!{projectRoot}/tsconfig.storybook.json",
+      "!{projectRoot}/src/test-setup.[jt]s"
+    ],
+    "projectSpecificFiles": []
+  }
 }
