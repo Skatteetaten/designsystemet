@@ -31,6 +31,10 @@ const meta = {
         defaultValue: { summary: getListAsDefault() },
       },
     },
+    children: {
+      control: 'text',
+      table: { category: category.props },
+    },
   },
   tags: ['autodocs'],
   parameters: {
