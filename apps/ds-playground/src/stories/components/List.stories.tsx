@@ -35,7 +35,6 @@ const meta = {
   tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-typography'),
-    docs: { source: { type: 'code' } },
   },
 } as Meta<typeof List>;
 export default meta;
