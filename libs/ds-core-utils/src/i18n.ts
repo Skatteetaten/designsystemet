@@ -10,6 +10,10 @@ import ds_buttons_en_GB from './translations/ds-buttons_en_GB.json';
 import ds_buttons_nb_NO from './translations/ds-buttons_nb_NO.json';
 import ds_buttons_nn_NO from './translations/ds-buttons_nn_NO.json';
 import ds_buttons_se_NO from './translations/ds-buttons_se_NO.json';
+import ds_collections_en_GB from './translations/ds-collections_en_GB.json';
+import ds_collections_nb_NO from './translations/ds-collections_nb_NO.json';
+import ds_collections_nn_NO from './translations/ds-collections_nn_NO.json';
+import ds_collections_se_NO from './translations/ds-collections_se_NO.json';
 import ds_forms_en_GB from './translations/ds-forms_en_GB.json';
 import ds_forms_nb_NO from './translations/ds-forms_nb_NO.json';
 import ds_forms_nn_NO from './translations/ds-forms_nn_NO.json';
@@ -43,6 +47,7 @@ export const resources = {
     Shared: Shared_en_GB,
     ds_alerts: ds_alerts_en_GB,
     ds_buttons: ds_buttons_en_GB,
+    ds_collections: ds_collections_en_GB,
     ds_forms: ds_forms_en_GB,
     ds_pages: ds_layout_en_GB,
     ds_status: ds_status_en_GB,
@@ -52,6 +57,7 @@ export const resources = {
     Shared: Shared_nb_NO,
     ds_alerts: ds_alerts_nb_NO,
     ds_buttons: ds_buttons_nb_NO,
+    ds_collections: ds_collections_nb_NO,
     ds_forms: ds_forms_nb_NO,
     ds_pages: ds_layout_nb_NO,
     ds_status: ds_status_nb_NO,
@@ -61,6 +67,7 @@ export const resources = {
     Shared: Shared_nn_NO,
     ds_alerts: ds_alerts_nn_NO,
     ds_buttons: ds_buttons_nn_NO,
+    ds_collections: ds_collections_nn_NO,
     ds_forms: ds_forms_nn_NO,
     ds_pages: ds_layout_nn_NO,
     ds_status: ds_status_nn_NO,
@@ -70,6 +77,7 @@ export const resources = {
     Shared: Shared_se_NO,
     ds_alerts: ds_alerts_se_NO,
     ds_buttons: ds_buttons_se_NO,
+    ds_collections: ds_collections_se_NO,
     ds_forms: ds_forms_se_NO,
     ds_pages: ds_layout_se_NO,
     ds_status: ds_status_se_NO,

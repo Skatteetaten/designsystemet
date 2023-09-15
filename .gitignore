@@ -38,6 +38,7 @@ testem.log
 /.scannerwork/
 .jest-image-snapshot-touched-files
 **/*stats.html
+*.dump
 
 # System Files
 .DS_Store

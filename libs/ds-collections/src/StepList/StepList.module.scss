@@ -1,0 +1,15 @@
+@import '~@skatteetaten/ds-core-designtokens/designtokens/breakpoints.scss';
+
+.stepList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  @media (min-width: $breakpoint-s) {
+    margin: 0 -0.75rem;
+  }
+
+  @media (min-width: $breakpoint-m) {
+    margin: 0;
+  }
+}

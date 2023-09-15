@@ -96,7 +96,7 @@ export const Defaults = {
   argTypes: {
     children: { table: { disable: false } },
   },
-};
+} satisfies Story;
 
 const TemplateWithMarkup: StoryFn<Exclude<BlockquoteProps, 'children'>> = (
   args
