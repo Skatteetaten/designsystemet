@@ -32,7 +32,7 @@ const meta = {
       },
     },
     children: {
-      control: 'text',
+      control: 'object',
       table: { category: category.props },
     },
   },
