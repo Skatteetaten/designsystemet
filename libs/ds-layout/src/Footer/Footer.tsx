@@ -1,4 +1,4 @@
-import { Children, forwardRef, isValidElement } from 'react';
+import { Children, forwardRef, isValidElement, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';

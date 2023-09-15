@@ -1,4 +1,9 @@
-import { ForwardRefExoticComponent, ReactNode, RefAttributes } from 'react';
+import {
+  ForwardRefExoticComponent,
+  ReactNode,
+  RefAttributes,
+  JSX,
+} from 'react';
 
 import { BaseProps, HeadingAs } from '@skatteetaten/ds-core-utils';
 

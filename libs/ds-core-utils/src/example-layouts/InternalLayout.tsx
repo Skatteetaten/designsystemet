@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { BaseProps } from '../base-props.types';
 
 import styles from './InternalLayout.module.scss';

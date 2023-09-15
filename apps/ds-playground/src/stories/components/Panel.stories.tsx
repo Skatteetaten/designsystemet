@@ -1,4 +1,6 @@
 /* eslint-disable sonarjs/no-duplicate-string */
+import { JSX } from 'react';
+
 import { MegaButton, Link } from '@skatteetaten/ds-buttons';
 import {
   Panel,

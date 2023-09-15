@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ReactNode } from 'react';
+import { ComponentPropsWithoutRef, ReactNode, JSX } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 

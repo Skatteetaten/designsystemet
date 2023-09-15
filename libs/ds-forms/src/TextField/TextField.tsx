@@ -4,6 +4,7 @@ import {
   useId,
   useImperativeHandle,
   useRef,
+  JSX,
 } from 'react';
 
 import {

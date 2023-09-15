@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Icon } from '../Icon/Icon';
 import { IconPropsWithoutSvgPath } from '../Icon/Icon.types';
 
