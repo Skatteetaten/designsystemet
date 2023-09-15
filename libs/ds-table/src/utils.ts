@@ -36,7 +36,7 @@ export const getIconButtonSize = (
 export const getScreenReaderSortDirectionText = (
   shouldShowSRText: boolean,
   sortState: SortState,
-  t: TFunction<'ds_tables', undefined, 'ds_tables'>
+  t: TFunction<'ds_tables'>
 ): string => {
   if (!shouldShowSRText) {
     return '';
