@@ -1,10 +1,13 @@
-import { LabelWithHelp, LabelWithHelpProps } from '@skatteetaten/ds-forms';
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
 import { expect } from '@storybook/jest';
 import { Meta, StoryObj } from '@storybook/react';
 import { fireEvent, within } from '@storybook/testing-library';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { LabelWithHelp } from '../../../../../libs/ds-forms/src/LabelWithHelp/LabelWithHelp';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { LabelWithHelpProps } from '../../../../../libs/ds-forms/src/LabelWithHelp/LabelWithHelp.types';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {

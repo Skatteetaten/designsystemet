@@ -1,19 +1,4 @@
 @import 'libs/ds-core-utils/src/styles.scss';
-@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
-
-@keyframes animationhelpbox {
-  from {
-    opacity: 0;
-    pointer-events: none;
-    transform: translate3d(0, -20px, 0);
-  }
-
-  to {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translate3d(0, 0, 0);
-  }
-}
 
 .label {
   color: var(--palette-graphite-70);

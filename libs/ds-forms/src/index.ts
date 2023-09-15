@@ -14,5 +14,3 @@ export * from './RadioGroup/RadioGroup';
 export * from './RadioGroup/RadioGroup.types';
 export * from './TextField/TextField';
 export * from './TextField/TextField.types';
-export * from './LabelWithHelp/LabelWithHelp';
-export * from './LabelWithHelp/LabelWithHelp.types';

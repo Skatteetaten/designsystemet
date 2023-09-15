@@ -3,4 +3,3 @@ export const label: string;
 export const label_required: string;
 export const description: string;
 export const srOnly: string;
-export const animationhelpbox: string;

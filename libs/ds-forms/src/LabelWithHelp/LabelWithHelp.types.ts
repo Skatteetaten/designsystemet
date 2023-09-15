@@ -9,7 +9,7 @@ type RequiredLabelHTMLAttributes = Pick<
   'htmlFor'
 >;
 
-interface LabelWithHelpCommonProps
+export interface LabelWithHelpProps
   extends RequiredLabelHTMLAttributes,
     BaseProps {
   /** Ledetekst */
@@ -27,5 +27,3 @@ interface LabelWithHelpCommonProps
   /** Om obligatorisk label skal markeres med stjerne */
   showRequiredMark?: boolean;
 }
-
-export type LabelWithHelpProps = LabelWithHelpCommonProps;
