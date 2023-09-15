@@ -5,11 +5,6 @@ import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Heading } from '@skatteetaten/ds-typography';
 
-import {
-  getAccessibilityLinkDefault,
-  getContactLinkDefault,
-  getSecurityLinkDefault,
-} from './defaults';
 import { FooterComponent, FooterProps } from './Footer.types';
 import logo from './logo.svg';
 import { FooterLink } from '../FooterLink/FooterLink';
@@ -24,11 +19,11 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
-      accessibilityURL = getAccessibilityLinkDefault(),
-      contactUsURL = getContactLinkDefault(),
+      accessibilityURL,
+      contactUsURL,
       firstColumn,
       secondColumn,
-      securityURL = getSecurityLinkDefault(),
+      securityURL,
       thirdColumn,
       titleFirstColumn,
       titleSecondColumn,
