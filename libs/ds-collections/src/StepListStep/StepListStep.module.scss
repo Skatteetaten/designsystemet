@@ -28,9 +28,12 @@
   grid-template-rows: 1fr max-content max-content max-content;
   list-style: none;
 
+  @media (min-width: $breakpoint-xs) {
+    grid-template-columns: min-content 1fr;
+  }
+
   @media (min-width: $breakpoint-s) {
     grid-gap: 0 var(--spacing-l);
-    grid-template-columns: min-content 1fr;
   }
 
   @media (min-width: $breakpoint-m) {
@@ -158,7 +161,7 @@
     &_result {
       grid-area: 1 / 1 / 2 / 2;
 
-      @media (min-width: $breakpoint-m) {
+      @media (min-width: $breakpoint-s) {
         &:nth-last-child(3) {
           grid-area: 1 / 1 / -1 / 2;
         }
