@@ -604,7 +604,7 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
     >
       Type virksomhet
     </legend>
-    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Fieldset_helpButton__Qd9mY"
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
             type="button"
             aria-describedby="legendId-:r2s:"
             aria-expanded="true"
@@ -623,11 +623,11 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="Fieldset_helpBox__tSijq">
-      <span class="Fieldset_helpBoxText__81P15">
+    <div class="Help_helpBox__nbhjO">
+      <span class="Help_helpBoxText__j6sH7">
         Vi trenger å vite din type virksomhet.
       </span>
-      <button class="IconButton_button__mw9sG IconButton_button_small__etst4  Fieldset_helpBoxCloseButton__+6cOF"
+      <button class="IconButton_button__mw9sG IconButton_button_small__etst4  Help_helpBoxCloseButton__RueX2"
               type="button"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"

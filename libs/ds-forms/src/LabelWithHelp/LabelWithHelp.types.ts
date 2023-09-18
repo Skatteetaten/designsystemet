@@ -4,30 +4,26 @@ import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 import { HelpProps } from '../Help/Help.types';
 
-type RequiredFieldsetHTMLAttributes = Pick<
-  ComponentPropsWithoutRef<'fieldset'>,
-  'disabled'
+type RequiredLabelHTMLAttributes = Pick<
+  ComponentPropsWithoutRef<'label'>,
+  'htmlFor'
 >;
 
-export interface FieldsetProps
-  extends RequiredFieldsetHTMLAttributes,
+export interface LabelWithHelpProps
+  extends RequiredLabelHTMLAttributes,
     BaseProps {
-  /** Innhold */
-  children: JSX.Element | JSX.Element[];
   /** Ledetekst */
-  legend: React.ReactNode;
-  /** Skjuler ledetekst, tilleggstekst og hjelpetekst, men er fortsatt synlig for skjermleser */
-  hideLegend?: boolean;
+  children: string;
+  /** Skjuler hele komponenten men er fortsatt synlig for skjermleser */
+  hideLabel?: boolean;
   /** Tilleggstekst */
   description?: string;
-  /** Margin under fieldset */
-  hasSpacing?: boolean;
   /** Hjelpetekst */
   helpText?: HelpProps['helpText'];
   /** Overskriver default hjelpeikon */
   helpSvgPath?: HelpProps['helpSvgPath'];
   /** Title-element til hjelpeikon */
   titleHelpSvg?: HelpProps['titleHelpSvg'];
-  /** Om legend skal markeres med stjerne */
+  /** Om obligatorisk label skal markeres med stjerne */
   showRequiredMark?: boolean;
 }

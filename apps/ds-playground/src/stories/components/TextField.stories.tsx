@@ -9,6 +9,7 @@ import { useArgs } from '@storybook/preview-api';
 import { StoryObj, Meta, StoryFn } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
+import { SystemSVGPaths } from '../utils/icon.systems';
 import { getVersion } from '../utils/version.utils';
 
 const meta = {
@@ -33,6 +34,12 @@ const meta = {
         category: category.props,
       },
     },
+    helpSvgPath: { table: { category: category.props } },
+    helpText: {
+      options: Object.keys(SystemSVGPaths),
+      mapping: SystemSVGPaths,
+      table: { category: category.props },
+    },
     hideLabel: {
       control: 'boolean',
       table: {
@@ -53,6 +60,7 @@ const meta = {
       },
     },
     thousandSeparator: { table: { category: category.props } },
+    titleHelpSvg: { table: { category: category.props } },
     // HTML
     autoComplete: { table: { category: category.htmlAttribute } },
     defaultValue: {
