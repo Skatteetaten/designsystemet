@@ -38,15 +38,27 @@ exports[`Tester/ErrorMessage WithAttributes play-test 1`] = `
 exports[`Tester/ErrorMessage WithLongText smoke-test 1`] = `
 <div data-test-block="true">
   <div class="errorMessageContainer">
-    <label for="label1"
-           class="block"
-    >
-      Label
-    </label>
-    <input id="label1"
-           type="text"
-    >
-    <div aria-live="assertive"
+    <div class>
+      <label for="textFieldTextboxId-:r3:"
+             class="TextField_label__K0isy  undefined"
+      >
+        <span class>
+          Label
+        </span>
+      </label>
+      <input id="textFieldTextboxId-:r3:"
+             class="TextField_textbox__qbZlk    undefined"
+             aria-describedby="errorId"
+             value
+      >
+      <div id="textFieldErrorId-:r2:"
+           aria-live="assertive"
+           aria-atomic="true"
+      >
+      </div>
+    </div>
+    <div id="errorId"
+         aria-live="assertive"
          aria-atomic="true"
     >
       <div class="ErrorMessage_errorMessage__508oW ">
@@ -71,14 +83,25 @@ exports[`Tester/ErrorMessage WithLongText smoke-test 1`] = `
 exports[`Tester/ErrorMessage WithLongTextAndBreaking smoke-test 1`] = `
 <div data-test-block="true">
   <div class="errorMessageContainer">
-    <label for="label1"
-           class="block"
-    >
-      Label
-    </label>
-    <input id="label1"
-           type="text"
-    >
+    <div class>
+      <label for="textFieldTextboxId-:r6:"
+             class="TextField_label__K0isy  undefined"
+      >
+        <span class>
+          Label
+        </span>
+      </label>
+      <input id="textFieldTextboxId-:r6:"
+             class="TextField_textbox__qbZlk    undefined"
+             aria-describedby="errorId"
+             value
+      >
+      <div id="textFieldErrorId-:r5:"
+           aria-live="assertive"
+           aria-atomic="true"
+      >
+      </div>
+    </div>
     <div aria-live="assertive"
          aria-atomic="true"
     >

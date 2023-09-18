@@ -339,31 +339,39 @@ exports[`Tester/ErrorSummary/ErrorSummary WithContent play-test 1`] = `
 
 exports[`Tester/ErrorSummary/ErrorSummary WithInput play-test 1`] = `
 <div data-test-block="true">
-  <label class="block"
-         for="input_aar"
-  >
-    År
-  </label>
-  <input id="input_aar"
-         type="number"
-         value="1009"
-  >
-  <div aria-live="assertive"
-       aria-atomic="true"
-  >
-    <div class="ErrorMessage_errorMessage__508oW bottomSpacingXL">
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-hidden="true"
-           role="img"
-      >
-        <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
-        </path>
-      </svg>
-      <p class="ErrorMessage_errorMessageText__e27TU">
-        Inntekståret må være etter 2008
-      </p>
+  <div class="bottomSpacingXL">
+    <label for="input_aar"
+           class="TextField_label__K0isy  undefined"
+    >
+      <span class>
+        År
+      </span>
+    </label>
+    <input id="input_aar"
+           class="TextField_textbox__qbZlk    undefined"
+           required
+           aria-describedby="textFieldErrorId-:rh:"
+           aria-invalid="true"
+           value="1009"
+    >
+    <div id="textFieldErrorId-:rh:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+      <div class="ErrorMessage_errorMessage__508oW ">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+          </path>
+        </svg>
+        <p class="ErrorMessage_errorMessageText__e27TU">
+          Inntekståret må være etter 2008
+        </p>
+      </div>
     </div>
   </div>
   <div aria-live="assertive"
