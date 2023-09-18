@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/LabelWithHelp (intern) ClickCloseButton play-test 1`] = `
+<div data-test-block="true">
+  <label id="labelId-:rf:"
+         class="LabelWithHelp_label__59tP-"
+  >
+    Ledetekst
+  </label>
+  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+          type="button"
+          aria-describedby="labelId-:rf:"
+          aria-expanded="false"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:rg:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:rg:">
+        Hjelp
+      </title>
+      <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/LabelWithHelp (intern) ClickHelpButton play-test 1`] = `
+<div data-test-block="true">
+  <label id="labelId-:rc:"
+         class="LabelWithHelp_label__59tP-"
+  >
+    Ledetekst
+  </label>
+  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+          type="button"
+          aria-describedby="labelId-:rc:"
+          aria-expanded="false"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:rd:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:rd:">
+        Hjelp
+      </title>
+      <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/LabelWithHelp (intern) Defaults play-test 1`] = `
+<div data-test-block="true">
+  <label id="labelId-:r2:"
+         class="LabelWithHelp_label__59tP-"
+  >
+    Ledetekst
+  </label>
+</div>
+`;
+
+exports[`Tester/LabelWithHelp (intern) WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <label id="htmlid"
+         data-testid="123ID"
+         class="LabelWithHelp_label__59tP-   dummyClassname"
+         lang="nb"
+  >
+    Ledetekst
+  </label>
+</div>
+`;
+
+exports[`Tester/LabelWithHelp (intern) WithDescription play-test 1`] = `
+<div data-test-block="true">
+  <label id="labelId-:r3:"
+         class="LabelWithHelp_label__59tP-"
+  >
+    Ledetekst
+  </label>
+  <div class="LabelWithHelp_description__jzDin">
+    Kort hjelpetekst
+  </div>
+</div>
+`;
+
+exports[`Tester/LabelWithHelp (intern) WithHelpSvgPath smoke-test 1`] = `
+<div data-test-block="true">
+  <label id="labelId-:ra:"
+         class="LabelWithHelp_label__59tP-"
+  >
+    Ledetekst
+  </label>
+  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+          type="button"
+          aria-describedby="labelId-:ra:"
+          aria-expanded="false"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:rb:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:rb:">
+        Hjelp
+      </title>
+      <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/LabelWithHelp (intern) WithHelpText play-test 1`] = `
+<div data-test-block="true">
+  <label id="labelId-:r7:"
+         class="LabelWithHelp_label__59tP-"
+  >
+    Ledetekst
+  </label>
+  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+          type="button"
+          aria-describedby="labelId-:r7:"
+          aria-expanded="false"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:r8:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:r8:">
+        Hjelp
+      </title>
+      <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/LabelWithHelp (intern) WithHideLabel play-test 1`] = `
+<div data-test-block="true">
+  <label id="labelId-:r5:"
+         class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+  >
+    Ledetekst
+  </label>
+  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6 Help_srOnly__svaKL"
+          type="button"
+          aria-describedby="labelId-:r5:"
+          aria-expanded="false"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:r6:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:r6:">
+        Hjelp
+      </title>
+      <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+      </path>
+    </svg>
+  </button>
+  <div class="LabelWithHelp_description__jzDin LabelWithHelp_srOnly__uWL7Z">
+    Kort hjelpetekst
+  </div>
+</div>
+`;
+
+exports[`Tester/LabelWithHelp (intern) WithRef play-test 1`] = `
+<div data-test-block="true">
+  <label id="dummyIdForwardedFromRef"
+         class="LabelWithHelp_label__59tP-"
+  >
+    Ledetekst
+  </label>
+</div>
+`;
+
+exports[`Tester/LabelWithHelp (intern) WithShowRequiredMark smoke-test 1`] = `
+<div data-test-block="true">
+  <label id="labelId-:r4:"
+         class="LabelWithHelp_label__59tP- LabelWithHelp_label_required__KSuzW"
+  >
+    Ledetekst
+  </label>
+</div>
+`;

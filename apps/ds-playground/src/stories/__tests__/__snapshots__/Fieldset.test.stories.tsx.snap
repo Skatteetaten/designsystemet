@@ -8,7 +8,7 @@ exports[`Tester/Fieldset ClickCloseButton play-test 1`] = `
     >
       Ledetekst
     </legend>
-    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Fieldset_helpButton__Qd9mY"
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
             type="button"
             aria-describedby="legendId-:ri:"
             aria-expanded="false"
@@ -44,7 +44,7 @@ exports[`Tester/Fieldset ClickHelpButton play-test 1`] = `
     >
       Ledetekst
     </legend>
-    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Fieldset_helpButton__Qd9mY"
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
             type="button"
             aria-describedby="legendId-:rf:"
             aria-expanded="false"
@@ -157,7 +157,7 @@ exports[`Tester/Fieldset WithHelpSvgPath smoke-test 1`] = `
     >
       Ledetekst
     </legend>
-    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Fieldset_helpButton__Qd9mY"
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
             type="button"
             aria-describedby="legendId-:rd:"
             aria-expanded="false"
@@ -193,7 +193,7 @@ exports[`Tester/Fieldset WithHelpText play-test 1`] = `
     >
       Ledetekst
     </legend>
-    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Fieldset_helpButton__Qd9mY"
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
             type="button"
             aria-describedby="legendId-:ra:"
             aria-expanded="false"
@@ -229,7 +229,7 @@ exports[`Tester/Fieldset WithHideLegend play-test 1`] = `
     >
       Ledetekst
     </legend>
-    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Fieldset_helpButton__Qd9mY Fieldset_srOnly__7qh39"
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6 Help_srOnly__svaKL"
             type="button"
             aria-describedby="legendId-:r6:"
             aria-expanded="false"

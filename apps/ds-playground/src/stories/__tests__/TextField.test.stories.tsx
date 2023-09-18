@@ -175,8 +175,11 @@ export const WithCustomClassNames = {
     const label = canvas.getByLabelText(defaultLabelText);
     await expect(label).toHaveClass('dummyClassname');
 
-    const errorMessage = canvas.getAllByRole('generic')[4];
-    await expect(errorMessage).toHaveClass('dummyClassname');
+    // eslint-disable-next-line testing-library/no-node-access
+    const errorMessageContainer = canvasElement.querySelector(
+      '[id^=textFieldErrorId]>div'
+    );
+    await expect(errorMessageContainer).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
@@ -208,8 +211,11 @@ export const Defaults = {
     await expect(textbox).not.toBeRequired();
     await expect(textbox).not.toHaveAttribute('aria-invalid');
     await expect(textbox).not.toHaveAttribute('aria-describedby');
-    const errorMessage = canvas.getAllByRole('generic')[3];
-    await expect(errorMessage).toBeInTheDocument();
+    // eslint-disable-next-line testing-library/no-node-access
+    const errorMessageContainer = canvasElement.querySelector(
+      '[id^=textFieldErrorId]'
+    );
+    await expect(errorMessageContainer).toBeInTheDocument();
   },
 } satisfies Story;
 
@@ -497,7 +503,10 @@ export const WithError = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
-    const errorMessageContainer = canvas.getAllByRole('generic')[3];
+    // eslint-disable-next-line testing-library/no-node-access
+    const errorMessageContainer = canvasElement.querySelector(
+      '[id^=textFieldErrorId]'
+    );
     await expect(errorMessageContainer).toBeInTheDocument();
     await expect(canvas.queryByText(errorMessageText)).not.toBeInTheDocument();
     await expect(textbox).not.toHaveAttribute('aria-invalid', 'true');
