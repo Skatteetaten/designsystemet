@@ -1,32 +1,5 @@
 @import 'libs/ds-core-utils/src/styles.scss';
 
-.label {
-  --label-color: var(--palette-graphite-70);
-  --description-color: var(--semantic-page-foreground);
-
-  display: flex;
-  flex-direction: column;
-  margin-bottom: var(--spacing-xs);
-  color: var(--label-color);
-  font-size: var(--font-size-m);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--semantic-line-height-input);
-  overflow-wrap: anywhere;
-  word-break: normal;
-
-  &_required::after {
-    width: fit-content;
-    color: var(--semantic-danger-foreground);
-    content: '*';
-  }
-
-  &Description {
-    margin-top: var(--spacing-xs);
-    color: var(--description-color);
-    font-weight: var(--font-weight-regular);
-  }
-}
-
 .textbox {
   width: 100%;
   box-sizing: border-box;
@@ -89,8 +62,4 @@
     box-shadow: none;
     outline: 0;
   }
-}
-
-.srOnly {
-  @include sr-only;
 }

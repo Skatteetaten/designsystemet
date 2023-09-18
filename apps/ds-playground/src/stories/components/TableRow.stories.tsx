@@ -64,11 +64,6 @@ const meta = {
   tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-table'),
-    docs: {
-      source: {
-        type: 'code',
-      },
-    },
   },
 } as Meta<typeof Table.Row>;
 export default meta;

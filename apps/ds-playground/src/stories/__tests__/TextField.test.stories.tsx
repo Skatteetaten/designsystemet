@@ -7,9 +7,15 @@ import {
 } from '@skatteetaten/ds-forms';
 import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { userEvent, waitFor, within } from '@storybook/testing-library';
+import {
+  fireEvent,
+  userEvent,
+  waitFor,
+  within,
+} from '@storybook/testing-library';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
+import { SystemSVGPaths } from '../utils/icon.systems';
 
 const verifyAttribute =
   (attribute: string, expectedValue: string) =>
@@ -44,11 +50,18 @@ const meta = {
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
     hasError: { table: { disable: true } },
+    helpSvgPath: {
+      table: { disable: true },
+      options: Object.keys(SystemSVGPaths),
+      mapping: SystemSVGPaths,
+    },
+    helpText: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
     isLarge: { table: { disable: true } },
     label: { table: { disable: true } },
     showRequiredMark: { table: { disable: true } },
     thousandSeparator: { table: { disable: true } },
+    titleHelpSvg: { table: { disable: true } },
     // HTML
     autoComplete: { table: { disable: true } },
     defaultValue: { table: { disable: true } },
@@ -162,8 +175,11 @@ export const WithCustomClassNames = {
     const label = canvas.getByLabelText(defaultLabelText);
     await expect(label).toHaveClass('dummyClassname');
 
-    const errorMessage = canvas.getAllByRole('generic')[4];
-    await expect(errorMessage).toHaveClass('dummyClassname');
+    // eslint-disable-next-line testing-library/no-node-access
+    const errorMessageContainer = canvasElement.querySelector(
+      '[id^=textFieldErrorId]>div'
+    );
+    await expect(errorMessageContainer).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
@@ -195,8 +211,11 @@ export const Defaults = {
     await expect(textbox).not.toBeRequired();
     await expect(textbox).not.toHaveAttribute('aria-invalid');
     await expect(textbox).not.toHaveAttribute('aria-describedby');
-    const errorMessage = canvas.getAllByRole('generic')[3];
-    await expect(errorMessage).toBeInTheDocument();
+    // eslint-disable-next-line testing-library/no-node-access
+    const errorMessageContainer = canvasElement.querySelector(
+      '[id^=textFieldErrorId]'
+    );
+    await expect(errorMessageContainer).toBeInTheDocument();
   },
 } satisfies Story;
 
@@ -484,7 +503,10 @@ export const WithError = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
-    const errorMessageContainer = canvas.getAllByRole('generic')[3];
+    // eslint-disable-next-line testing-library/no-node-access
+    const errorMessageContainer = canvasElement.querySelector(
+      '[id^=textFieldErrorId]'
+    );
     await expect(errorMessageContainer).toBeInTheDocument();
     await expect(canvas.queryByText(errorMessageText)).not.toBeInTheDocument();
     await expect(textbox).not.toHaveAttribute('aria-invalid', 'true');
@@ -626,6 +648,26 @@ export const WithThousandSeparator = {
     await userEvent.type(textbox, 'A10000');
     await waitFor(() => expect(args.onChange).toHaveBeenCalled());
     await expect(textbox).toHaveValue('10 000');
+  },
+} satisfies Story;
+
+export const WithHelpText = {
+  name: 'With HelpText (A1)',
+  args: {
+    ...defaultArgs,
+    helpText:
+      'Vi trenger å vite navnet ditt dersom vi skal kontakte deg senere.',
+  },
+  argTypes: {
+    helpText: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button', {
+      description: defaultLabelText,
+    });
+    await expect(helpButton).toBeInTheDocument();
+    await fireEvent.click(helpButton);
   },
 } satisfies Story;
 

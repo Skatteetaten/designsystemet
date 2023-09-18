@@ -7,6 +7,8 @@ import {
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
+import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
+
 export const textFieldAsArr = ['input', 'textarea'] as const;
 export type TextFieldAs = (typeof textFieldAsArr)[number];
 
@@ -46,14 +48,20 @@ export interface TextFieldCommonProps
     textbox?: string;
     errorMessage?: string;
   };
-  /** Tilleggstekst til ledeteksten */
-  description?: string;
-  /** Skjuler label og description men er synlig for skjermleser. */
+  /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */
   hideLabel?: boolean;
-  /** Tykkere textbox-ramme og litt mer padding hvis det er textarea-element */
-  isLarge?: boolean;
   /** Input eller textarea ledetekst */
   label: string;
+  /** Tilleggstekst */
+  description?: LabelWithHelpProps['description'];
+  /** Hjelpetekst */
+  helpText?: LabelWithHelpProps['helpText'];
+  /** Overskriver default hjelpeikon */
+  helpSvgPath?: LabelWithHelpProps['helpSvgPath'];
+  /** Title-element til hjelpeikon */
+  titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
+  /** Tykkere textbox-ramme og litt mer padding hvis det er textarea-element */
+  isLarge?: boolean;
 }
 
 type TextFieldDiscriminatedProps =
