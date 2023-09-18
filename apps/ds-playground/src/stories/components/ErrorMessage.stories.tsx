@@ -1,7 +1,11 @@
 import { useState } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { ErrorMessage, ErrorMessageProps } from '@skatteetaten/ds-forms';
+import {
+  ErrorMessage,
+  ErrorMessageProps,
+  TextField,
+} from '@skatteetaten/ds-forms';
 import { StoryObj, Meta, StoryFn } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
@@ -36,19 +40,13 @@ const TemplateExample: StoryFn<ErrorMessageProps> = () => {
   });
   return (
     <>
-      {/* TODO FRONT-1279 erstattes med TextField når den er ferdig utviklet */}
-      <label className={'block'} htmlFor={'fdato'}>
-        {'Fødseldato'}
-      </label>
-      <input
-        id={'fdato'}
-        type={'text'}
-        aria-describedby={'fdato-error'}
+      <TextField
+        className={'bottomSpacingXL'}
+        label={'Fødselsdato'}
         value={'17.5.19'}
+        errorMessage={'Skriv fødselsdatoen med følgende format: DD.MM.ÅÅÅÅ'}
+        hasError
       />
-      <ErrorMessage id={'fdato-error'} className={'bottomSpacingXL'} showError>
-        {'Skriv fødselsdatoen med følgende format: DD.MM.ÅÅÅÅ'}
-      </ErrorMessage>
       <Button
         variant={'secondary'}
         onClick={(): void => setState({ hasError: !state.hasError })}

@@ -3,9 +3,9 @@ import { useState } from 'react';
 import { Button } from '@skatteetaten/ds-buttons';
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
 import {
-  ErrorMessage,
   ErrorSummary,
   ErrorSummaryProps,
+  TextField,
   getErrorSummaryTitleAsDefault,
 } from '@skatteetaten/ds-forms';
 import { StoryObj, Meta, StoryFn } from '@storybook/react';
@@ -62,33 +62,33 @@ const TemplateExample: StoryFn<ErrorSummaryProps> = () => {
   });
   return (
     <>
-      {/* TODO FRONT-1279 erstattes med TextField når den er ferdig utviklet */}
-      <label className={'block'} htmlFor={'input_aar'}>
-        {'År'}
-      </label>
-      <input id={'input_aar'} type={'number'} value={1009} required />
-      <ErrorMessage showError={state.hasError}>
-        {'Inntekståret må være etter 2008'}
-      </ErrorMessage>
-      <label className={'block'} htmlFor={'input_epost'}>
-        {'E-post'}
-      </label>
-      <input
-        id={'input_epost'}
-        type={'email'}
-        value={'Ola.Normann.no'}
+      <TextField
+        id={'input_aar'}
+        ariaDescribedby={'error_aar'}
+        label={'År'}
+        value={1009}
+        errorMessage={'Inntekståret må være etter 2008'}
+        hasError={state.hasError}
         required
       />
-      <ErrorMessage showError={state.hasError}>
-        {'E-posten ser ikke riktig ut. Skriv slik: ola.normann@norge.no'}
-      </ErrorMessage>
-      <label className={'block'} htmlFor={'input_dager'}>
-        {'Antall dager i Norge i perioden/inntekståret'}
-      </label>
-      <input id={'input_dager'} type={'number'} required />
-      <ErrorMessage className={'bottomSpacingXL'} showError={state.hasError}>
-        {'Antall dager må fylles ut.'}
-      </ErrorMessage>
+      <TextField
+        id={'input_epost'}
+        label={'E-post'}
+        value={'Ola.Normann.no'}
+        errorMessage={
+          'E-posten ser ikke riktig ut. Skriv slik: ola.normann@norge.no'
+        }
+        hasError={state.hasError}
+        required
+      />
+      <TextField
+        className={'bottomSpacingXL'}
+        id={'input_dager'}
+        label={'Antall dager i Norge i perioden/inntekståret'}
+        errorMessage={'Antall dager må fylles ut.'}
+        hasError={state.hasError}
+        required
+      />
       <ErrorSummary id={'errorSummary1'} showErrorSummary={state.hasError}>
         <ErrorSummary.Error referenceId={'input_aar'}>
           {'Inntekståret må være etter 2008'}
