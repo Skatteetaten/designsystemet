@@ -34,12 +34,12 @@ const meta = {
         category: category.props,
       },
     },
-    helpSvgPath: { table: { category: category.props } },
-    helpText: {
+    helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
       table: { category: category.props },
     },
+    helpText: { table: { category: category.props } },
     hideLabel: {
       control: 'boolean',
       table: {
