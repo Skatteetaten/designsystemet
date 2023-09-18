@@ -139,7 +139,7 @@ export const WithShowRequiredMark = {
 } satisfies Story;
 
 export const WithHideLabel = {
-  name: 'With HideLabel',
+  name: 'With HideLabel (FS-A7)',
   args: {
     ...defaultArgs,
     description: defaultDescription,
