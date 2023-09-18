@@ -340,15 +340,14 @@ exports[`Tester/ErrorSummary/ErrorSummary WithContent play-test 1`] = `
 exports[`Tester/ErrorSummary/ErrorSummary WithInput play-test 1`] = `
 <div data-test-block="true">
   <div class="bottomSpacingXL">
-    <label for="input_aar"
-           class="TextField_label__K0isy  undefined"
+    <label id="labelId-:rj:"
+           class="LabelWithHelp_label__59tP-"
+           for="input_aar"
     >
-      <span class>
-        År
-      </span>
+      År
     </label>
     <input id="input_aar"
-           class="TextField_textbox__qbZlk    undefined"
+           class="TextField_textbox__qbZlk"
            required
            aria-describedby="textFieldErrorId-:rh:"
            aria-invalid="true"

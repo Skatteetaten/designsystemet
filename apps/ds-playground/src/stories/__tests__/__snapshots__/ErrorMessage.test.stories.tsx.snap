@@ -39,15 +39,14 @@ exports[`Tester/ErrorMessage WithLongText smoke-test 1`] = `
 <div data-test-block="true">
   <div class="errorMessageContainer">
     <div class>
-      <label for="textFieldTextboxId-:r3:"
-             class="TextField_label__K0isy  undefined"
+      <label id="labelId-:r4:"
+             class="LabelWithHelp_label__59tP-"
+             for="textFieldTextboxId-:r3:"
       >
-        <span class>
-          Label
-        </span>
+        Label
       </label>
       <input id="textFieldTextboxId-:r3:"
-             class="TextField_textbox__qbZlk    undefined"
+             class="TextField_textbox__qbZlk"
              aria-describedby="errorId"
              value
       >
@@ -84,19 +83,18 @@ exports[`Tester/ErrorMessage WithLongTextAndBreaking smoke-test 1`] = `
 <div data-test-block="true">
   <div class="errorMessageContainer">
     <div class>
-      <label for="textFieldTextboxId-:r6:"
-             class="TextField_label__K0isy  undefined"
+      <label id="labelId-:r8:"
+             class="LabelWithHelp_label__59tP-"
+             for="textFieldTextboxId-:r7:"
       >
-        <span class>
-          Label
-        </span>
+        Label
       </label>
-      <input id="textFieldTextboxId-:r6:"
-             class="TextField_textbox__qbZlk    undefined"
+      <input id="textFieldTextboxId-:r7:"
+             class="TextField_textbox__qbZlk"
              aria-describedby="errorId"
              value
       >
-      <div id="textFieldErrorId-:r5:"
+      <div id="textFieldErrorId-:r6:"
            aria-live="assertive"
            aria-atomic="true"
       >
