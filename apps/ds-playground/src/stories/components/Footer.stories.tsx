@@ -37,7 +37,9 @@ const TemplateDefault: StoryFn<typeof Footer> = (args) => (
     <Footer.Link href={'#'}>{'Skjema og tjenester'}</Footer.Link>
     <Footer.Link href={'#'}>{'RSS'}</Footer.Link>
     <Footer.Link href={'#'}>{'Tips oss'}</Footer.Link>
-    <Footer.Link href={'#'}>{'Koronatiltak'}</Footer.Link>
+    <Footer.Link href={'#'} isExternal>
+      {'Koronatiltak'}
+    </Footer.Link>
   </Footer>
 );
 

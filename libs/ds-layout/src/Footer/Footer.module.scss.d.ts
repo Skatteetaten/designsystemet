@@ -9,3 +9,4 @@ export const columnsTwo: string;
 export const logoContainer: string;
 export const skatteetatenLogo: string;
 export const linkContainer: string;
+export const linkList: string;
