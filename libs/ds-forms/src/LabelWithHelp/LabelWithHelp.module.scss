@@ -19,6 +19,54 @@
   line-height: var(--semantic-line-height-input);
 }
 
+@keyframes animationhelpbox {
+  from {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate3d(0, -20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.helpButton {
+  margin-left: var(--spacing-s);
+}
+
+.helpBox {
+  display: flex;
+  width: fit-content;
+  box-sizing: border-box;
+  border: 2px solid var(--palette-forest-30);
+  margin: var(--spacing-xs) 0;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-name: animationhelpbox;
+  animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
+  background-color: var(--palette-forest-10);
+
+  &Text {
+    flex-grow: 1;
+    padding: var(--spacing-xs) var(--spacing-s);
+    color: var(--semantic-page-foreground);
+    font-size: var(--font-size-m);
+    line-height: var(--semantic-line-height-default);
+  }
+
+  &CloseButton {
+    align-self: start;
+    margin: var(--spacing-xs) var(--spacing-s) var(--spacing-xs) 0;
+
+    &:not(:active) > svg {
+      fill: var(--palette-graphite-100);
+    }
+  }
+}
+
 .srOnly {
   @include sr-only;
 }

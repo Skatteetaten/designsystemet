@@ -1,10 +1,74 @@
-import { forwardRef, useId } from 'react';
+import { forwardRef, useId, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { IconButton } from '@skatteetaten/ds-buttons';
+import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { CancelSVGpath, HelpSimpleSVGpath } from '@skatteetaten/ds-icons';
 
 import { LabelWithHelpProps } from './LabelWithHelp.types';
-import { Help } from '../Help/Help';
-import styles from '../LabelWithHelp/LabelWithHelp.module.scss';
+import { HelpProps } from '../Help/Help.types';
+
+import styles from './LabelWithHelp.module.scss';
+
+//TODO FRONT-1395
+const Help = ({
+  helpText,
+  helpSvgPath,
+  hideHelp,
+  targetId,
+  titleHelpSvg,
+}: HelpProps): JSX.Element => {
+  const { t } = useTranslation('Shared', { i18n: dsI18n });
+
+  const [showHelpText, setShowHelpText] = useState(false);
+  const helpButtonRef = useRef<HTMLButtonElement>(null);
+
+  const svgHelpIcon = helpSvgPath ?? HelpSimpleSVGpath;
+  const titleHelpIcon = titleHelpSvg ?? t('shared.Help');
+
+  const toggleHelpText = (): void => {
+    setShowHelpText(!showHelpText);
+  };
+
+  const closeHelpText = (): void => {
+    setShowHelpText(false);
+    helpButtonRef.current?.focus();
+  };
+
+  const hideHelpClassName = hideHelp ? styles.srOnly : '';
+
+  return (
+    <>
+      {helpText && (
+        <IconButton
+          ref={helpButtonRef}
+          className={`${styles.helpButton} ${hideHelpClassName}`.trim()}
+          svgPath={svgHelpIcon}
+          title={titleHelpIcon}
+          size={'extraSmall'}
+          ariaExpanded={showHelpText}
+          ariaDescribedby={targetId}
+          isOutlined
+          onClick={(): void => toggleHelpText()}
+        />
+      )}
+      {helpText && showHelpText && (
+        <div className={`${styles.helpBox} ${hideHelpClassName}`.trim()}>
+          <span className={styles.helpBoxText}>{helpText}</span>
+          <IconButton
+            className={styles.helpBoxCloseButton}
+            size={'small'}
+            svgPath={CancelSVGpath}
+            title={t('shared.Close')}
+            onClick={(): void => closeHelpText()}
+          />
+        </div>
+      )}
+    </>
+  );
+};
+
+Help.displayName = 'Help';
 
 export const LabelWithHelp = forwardRef<HTMLLabelElement, LabelWithHelpProps>(
   (

@@ -7,7 +7,7 @@ exports[`Tester/LabelWithHelp (intern) ClickCloseButton play-test 1`] = `
   >
     Ledetekst
   </label>
-  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH LabelWithHelp_helpButton__yI6az"
           type="button"
           aria-describedby="labelId-:rf:"
           aria-expanded="false"
@@ -36,7 +36,7 @@ exports[`Tester/LabelWithHelp (intern) ClickHelpButton play-test 1`] = `
   >
     Ledetekst
   </label>
-  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH LabelWithHelp_helpButton__yI6az"
           type="button"
           aria-describedby="labelId-:rc:"
           aria-expanded="false"
@@ -100,7 +100,7 @@ exports[`Tester/LabelWithHelp (intern) WithHelpSvgPath smoke-test 1`] = `
   >
     Ledetekst
   </label>
-  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH LabelWithHelp_helpButton__yI6az"
           type="button"
           aria-describedby="labelId-:ra:"
           aria-expanded="false"
@@ -129,7 +129,7 @@ exports[`Tester/LabelWithHelp (intern) WithHelpText play-test 1`] = `
   >
     Ledetekst
   </label>
-  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH LabelWithHelp_helpButton__yI6az"
           type="button"
           aria-describedby="labelId-:r7:"
           aria-expanded="false"
@@ -158,7 +158,7 @@ exports[`Tester/LabelWithHelp (intern) WithHideLabel play-test 1`] = `
   >
     Ledetekst
   </label>
-  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6 Help_srOnly__svaKL"
+  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH LabelWithHelp_helpButton__yI6az LabelWithHelp_srOnly__uWL7Z"
           type="button"
           aria-describedby="labelId-:r5:"
           aria-expanded="false"
