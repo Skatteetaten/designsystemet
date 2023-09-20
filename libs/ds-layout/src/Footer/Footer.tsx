@@ -121,7 +121,15 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(
             </div>
           )}
           {links.length > 0 && (
-            <div className={styles.linkContainer}>{links}</div>
+            <ul className={styles.linkContainer}>
+              {links.map((link, index) => {
+                return (
+                  <li key={index} className={styles.linkList}>
+                    {link}
+                  </li>
+                );
+              })}
+            </ul>
           )}
         </div>
       </footer>
