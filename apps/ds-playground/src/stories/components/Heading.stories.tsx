@@ -66,7 +66,6 @@ const TemplateExample: StoryFn<typeof Heading> = () => (
 
 export const HeadingDefault = {
   name: 'Default',
-
   args: {
     as: 'h2',
     level: 2,
@@ -77,8 +76,7 @@ export const HeadingDefault = {
 export const HeadingExample = {
   render: TemplateExample,
   name: 'Example',
-
   parameters: {
-    controls: { disabled: true },
+    controls: { disable: true },
   },
 } satisfies Story;

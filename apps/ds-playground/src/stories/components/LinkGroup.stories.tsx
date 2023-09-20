@@ -97,7 +97,6 @@ const TemplateExample: StoryFn<typeof LinkGroup> = () => (
 export const LinkGroupDefault = {
   render: TemplateDefault,
   name: 'Default',
-
   args: {
     variant: getLinkGroupVariantDefault(),
   },
@@ -106,8 +105,7 @@ export const LinkGroupDefault = {
 export const LinkGroupExample = {
   render: TemplateExample,
   name: 'Example',
-
   parameters: {
-    controls: { disabled: true },
+    controls: { disable: true },
   },
 } satisfies Story;

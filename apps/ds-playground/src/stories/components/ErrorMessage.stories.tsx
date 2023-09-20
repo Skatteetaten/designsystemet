@@ -63,7 +63,6 @@ const TemplateExample: StoryFn<ErrorMessageProps> = () => {
 type Story = StoryObj<typeof meta>;
 export const ErrorMessageDefault = {
   name: 'Default',
-
   args: {
     children: 'Feilmelding',
     showError: true,
@@ -73,8 +72,7 @@ export const ErrorMessageDefault = {
 export const ErrorMessageExample = {
   render: TemplateExample,
   name: 'Example',
-  //args: { children: ''},
   parameters: {
-    controls: { disabled: true },
+    controls: { disable: true },
   },
 } satisfies Story;

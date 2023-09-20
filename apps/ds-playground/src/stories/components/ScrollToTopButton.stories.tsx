@@ -67,7 +67,6 @@ const TemplateExample: StoryFn<ScrollToTopButtonProps> = () => (
 export const ScrollToTopButtonDefault: StoryObj<ScrollToTopButtonProps> = {
   render: TemplateDefault,
   name: 'Default',
-
   args: {
     visibilityThreshold: getVisibilityThresholdDefault(),
   },
@@ -76,8 +75,7 @@ export const ScrollToTopButtonDefault: StoryObj<ScrollToTopButtonProps> = {
 export const ScrollToTopButtonExample: StoryObj<ScrollToTopButtonProps> = {
   render: TemplateExample,
   name: 'Example',
-
   parameters: {
-    controls: { disabled: true },
+    controls: { disable: true },
   },
 } satisfies Story;

@@ -115,7 +115,6 @@ type Story = StoryObj<typeof meta>;
 
 export const PanelDefault = {
   name: 'Default',
-
   args: {
     children: loremIpsum,
   },

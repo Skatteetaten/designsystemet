@@ -41,6 +41,7 @@ const meta = {
     // HTML
     disabled: { table: { category: category.htmlAttribute } },
   },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-forms'),
   },
@@ -76,5 +77,8 @@ export const FieldsetExample = {
         <TextField className={'inlineBlock'} label={'Til dato (dd.mm.åååå)'} />
       </>
     ),
+  },
+  parameters: {
+    controls: { disable: true },
   },
 } satisfies Story;

@@ -69,7 +69,6 @@ const TemplateExample: StoryFn<typeof Paragraph> = () => (
 
 export const ParagraphDefault = {
   name: 'Default',
-
   args: {
     children:
       'Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, ' +
@@ -84,8 +83,7 @@ export const ParagraphExample = {
   args: {
     children: 'dummy',
   },
-
   parameters: {
-    controls: { disabled: true },
+    controls: { disable: true },
   },
 } satisfies Story;

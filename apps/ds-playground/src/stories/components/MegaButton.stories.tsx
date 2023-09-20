@@ -61,7 +61,6 @@ const TemplateDefault: StoryFn<typeof MegaButton> = (args) => (
 export const MegaButtonDefault = {
   render: TemplateDefault,
   name: 'Default',
-
   args: {
     children: 'Klikk her',
   },
@@ -70,12 +69,10 @@ export const MegaButtonDefault = {
 export const MegaButtonExample = {
   render: TemplateDefault,
   name: 'Example',
-
-  parameters: {
-    controls: { disabled: true },
-  },
-
   args: {
     children: 'Se eller endre skattekortet',
+  },
+  parameters: {
+    controls: { disable: true },
   },
 } satisfies Story;

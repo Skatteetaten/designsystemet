@@ -89,7 +89,6 @@ const TemplateExample: StoryFn<typeof List> = () => (
 export const ListDefault = {
   render: TemplateDefault,
   name: 'Default',
-
   args: {
     as: getListAsDefault(),
   },
@@ -98,8 +97,7 @@ export const ListDefault = {
 export const ListExample = {
   render: TemplateExample,
   name: 'Example',
-
   parameters: {
-    controls: { disabled: true },
+    controls: { disable: true },
   },
 } satisfies Story;

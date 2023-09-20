@@ -108,11 +108,9 @@ const TemplateDefaultControlled: StoryFn<typeof RadioGroup> = (args) => {
 export const RadioGroupDefaultControlled = {
   render: TemplateDefaultControlled,
   name: 'Default Controlled',
-
   argTypes: {
     defaultValue: { control: { disable: true } },
   },
-
   args: {
     children: (
       <>
@@ -143,11 +141,9 @@ const TemplateDefaultUncontrolled: StoryFn<typeof RadioGroup> = (args) => {
 export const RadioGroupDefaultUncontrolled = {
   render: TemplateDefaultUncontrolled,
   name: 'Default Uncontrolled',
-
   argTypes: {
     selectedValue: { control: { disable: true } },
   },
-
   args: {
     selectedValue: undefined,
     defaultValue: 'annet',

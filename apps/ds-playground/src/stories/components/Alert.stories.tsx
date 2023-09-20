@@ -70,7 +70,6 @@ const TemplateExample: StoryFn<AlertProps> = () => {
 
 export const AlertDefault = {
   name: 'Default',
-
   args: {
     children:
       'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.',
@@ -82,12 +81,11 @@ export const AlertDefault = {
 export const AlertExample = {
   render: TemplateExample,
   name: 'Example',
-
   args: {
     variant: 'danger',
     children: 'dummy',
   },
   parameters: {
-    controls: { disabled: true },
+    controls: { disable: true },
   },
 } satisfies AlertStory;

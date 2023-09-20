@@ -74,7 +74,7 @@ const TemplateDefault: StoryFn<ButtonProps> = (args) => (
 );
 
 const TemplateExample: StoryFn<ButtonProps> = () => (
-  <div>
+  <>
     <Button className={'exampleSpacing'} variant={'primary'}>
       {'Send inn skjema'}
     </Button>
@@ -89,13 +89,12 @@ const TemplateExample: StoryFn<ButtonProps> = () => (
     <Button className={'exampleSpacing'} variant={'danger'}>
       {'Slett'}
     </Button>
-  </div>
+  </>
 );
 
 export const ButtonDefault = {
   render: TemplateDefault,
   name: 'Default',
-
   args: {
     children: 'Klikk',
     variant: getButtonVariantDefault(),
@@ -105,8 +104,7 @@ export const ButtonDefault = {
 export const ButtonExample = {
   render: TemplateExample,
   name: 'Example',
-
   parameters: {
-    controls: { disabled: true },
+    controls: { disable: true },
   },
 } satisfies Story;

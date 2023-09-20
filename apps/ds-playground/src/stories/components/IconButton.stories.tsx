@@ -75,7 +75,7 @@ const TemplateDefault: StoryFn<typeof IconButton> = (args) => (
 );
 
 const TemplateExample: StoryFn<typeof IconButton> = () => (
-  <div>
+  <>
     <div>
       <IconButton
         className={'exampleSpacing'}
@@ -120,13 +120,12 @@ const TemplateExample: StoryFn<typeof IconButton> = () => (
       />
       <IconButton svgPath={PrintSVGpath} size={'large'} title={'Skriv ut'} />
     </div>
-  </div>
+  </>
 );
 
 export const IconButtonDefault = {
   render: TemplateDefault,
   name: 'Default',
-
   args: {
     svgPath: Object.values(SystemSVGPaths)[14], // Bell icon
     size: getIconButtonSizeDefault(),
@@ -141,8 +140,7 @@ export const IconButtonExample = {
     title: 'dummy',
     svgPath: Object.values(SystemSVGPaths)[14], // Bell icon
   },
-
   parameters: {
-    controls: { disabled: true },
+    controls: { disable: true },
   },
 } satisfies Story;

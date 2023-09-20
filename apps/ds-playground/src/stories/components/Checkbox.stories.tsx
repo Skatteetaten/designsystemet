@@ -99,11 +99,9 @@ const TemplateExample: StoryFn<typeof Checkbox> = () => {
 
 export const CheckboxDefaultControlled = {
   name: 'Default Controlled',
-
   argTypes: {
     defaultChecked: { control: { disable: true } },
   },
-
   args: {
     children: 'Checkbox',
     checked: false,
@@ -114,11 +112,9 @@ export const CheckboxDefaultControlled = {
 
 export const CheckboxDefaultUncontrolled = {
   name: 'Default Uncontrolled',
-
   argTypes: {
     checked: { control: { disable: true } },
   },
-
   args: {
     children: 'Checkbox',
     checked: undefined,
@@ -129,11 +125,10 @@ export const CheckboxDefaultUncontrolled = {
 export const CheckboxExample = {
   render: TemplateExample,
   name: 'Example',
-
   args: {
     children: 'dummy',
   },
   parameters: {
-    controls: { disabled: true },
+    controls: { disable: true },
   },
 } satisfies Story;
