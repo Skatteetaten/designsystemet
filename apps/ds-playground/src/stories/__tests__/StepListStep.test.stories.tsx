@@ -42,6 +42,7 @@ const meta = {
       mapping: SystemSVGPaths,
       table: { disable: true, category: category.props },
     },
+    svgTitle: { table: { disable: true, category: category.props } },
     variant: {
       options: [...stepVariantArr],
       control: 'inline-radio',
@@ -155,5 +156,27 @@ export const WithFullWidthResult = {
   },
   argTypes: {
     hasResultContentFullWidth: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithEditAccessibleDescription = {
+  render: Template,
+  name: 'With edit button accessible description (B2 delvis)',
+  args: {
+    stepNumber: 1,
+    variant: 'active',
+    title: 'tittel',
+    children: loremIpsum,
+  },
+  argTypes: {
+    title: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const endreButton = canvas.getByText('Endre');
+    expect(endreButton).toHaveAccessibleDescription('tittel');
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
   },
 } satisfies Story;

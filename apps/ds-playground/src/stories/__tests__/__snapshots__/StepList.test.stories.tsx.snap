@@ -26,7 +26,9 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
           <div class="StepListStep_stepLine__BOJMv ">
           </div>
         </div>
-        <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf">
+        <h3 id="steptitle-:ro:"
+            class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+        >
           besvart
         </h3>
         <div class="StepListStep_stepContent__1uagT   
@@ -36,6 +38,7 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
           </div>
           <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  StepListStep_stepEditButton__4I4jx"
                   type="button"
+                  aria-describedby="steptitle-:ro:"
           >
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
                  viewbox="0 0 24 24"
@@ -61,7 +64,9 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
           <div class="StepListStep_stepLine__BOJMv ">
           </div>
         </div>
-        <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf">
+        <h3 id="steptitle-:rq:"
+            class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+        >
           besvart 2
         </h3>
         <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
@@ -83,7 +88,9 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
           <div class="StepListStep_stepLine__BOJMv ">
           </div>
         </div>
-        <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf">
+        <h3 id="steptitle-:rr:"
+            class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+        >
           aktivt
         </h3>
         <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
@@ -114,11 +121,11 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
                  viewbox="0 0 24 24"
                  focusable="false"
-                 aria-labelledby="svgtitle-:ra:"
+                 aria-labelledby="svgtitle-:rt:"
                  aria-hidden="false"
                  role="img"
             >
-              <title id="svgtitle-:ra:">
+              <title id="svgtitle-:rt:">
                 Fullført
               </title>
               <path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z">
@@ -128,7 +135,9 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
           <div class="StepListStep_stepLine__BOJMv StepListStep_stepLine_positiveResult__EkfJp">
           </div>
         </div>
-        <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf">
+        <h3 id="steptitle-:rs:"
+            class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+        >
           positivt resultat
         </h3>
         <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_positiveResult__yObTM  
@@ -167,11 +176,11 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
                  viewbox="0 0 24 24"
                  focusable="false"
-                 aria-labelledby="svgtitle-:rb:"
+                 aria-labelledby="svgtitle-:rv:"
                  aria-hidden="false"
                  role="img"
             >
-              <title id="svgtitle-:rb:">
+              <title id="svgtitle-:rv:">
                 Fullført
               </title>
               <path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z">
@@ -181,7 +190,9 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
           <div class="StepListStep_stepLine__BOJMv StepListStep_stepLine_neutralResult__s7I7X">
           </div>
         </div>
-        <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf">
+        <h3 id="steptitle-:ru:"
+            class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+        >
           neutralt resultat
         </h3>
         <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0  StepListStep_resultIntro__Ok83p">
@@ -223,7 +234,9 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
           <div class="StepListStep_stepLine__BOJMv ">
           </div>
         </div>
-        <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf">
+        <h3 id="steptitle-:r8:"
+            class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+        >
           besvart
         </h3>
         <div class="StepListStep_stepContent__1uagT   
@@ -233,6 +246,7 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
           </div>
           <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  StepListStep_stepEditButton__4I4jx"
                   type="button"
+                  aria-describedby="steptitle-:r8:"
           >
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
                  viewbox="0 0 24 24"
@@ -258,7 +272,9 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
           <div class="StepListStep_stepLine__BOJMv ">
           </div>
         </div>
-        <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf">
+        <h3 id="steptitle-:ra:"
+            class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+        >
           besvart 2
         </h3>
         <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
@@ -280,7 +296,9 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
           <div class="StepListStep_stepLine__BOJMv ">
           </div>
         </div>
-        <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf">
+        <h3 id="steptitle-:rb:"
+            class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+        >
           aktivt
         </h3>
         <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
@@ -311,11 +329,11 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
                  viewbox="0 0 24 24"
                  focusable="false"
-                 aria-labelledby="svgtitle-:r4:"
+                 aria-labelledby="svgtitle-:rd:"
                  aria-hidden="false"
                  role="img"
             >
-              <title id="svgtitle-:r4:">
+              <title id="svgtitle-:rd:">
                 Fullført
               </title>
               <path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z">
@@ -325,7 +343,9 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
           <div class="StepListStep_stepLine__BOJMv StepListStep_stepLine_positiveResult__EkfJp">
           </div>
         </div>
-        <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf">
+        <h3 id="steptitle-:rc:"
+            class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+        >
           positivt resultat
         </h3>
         <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_positiveResult__yObTM  
@@ -364,11 +384,11 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
                  viewbox="0 0 24 24"
                  focusable="false"
-                 aria-labelledby="svgtitle-:r5:"
+                 aria-labelledby="svgtitle-:rf:"
                  aria-hidden="false"
                  role="img"
             >
-              <title id="svgtitle-:r5:">
+              <title id="svgtitle-:rf:">
                 Fullført
               </title>
               <path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z">
@@ -378,7 +398,9 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
           <div class="StepListStep_stepLine__BOJMv StepListStep_stepLine_neutralResult__s7I7X">
           </div>
         </div>
-        <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf">
+        <h3 id="steptitle-:re:"
+            class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+        >
           neutralt resultat
         </h3>
         <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0  StepListStep_resultIntro__Ok83p">
@@ -420,7 +442,9 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
           <div class="StepListStep_stepLine__BOJMv ">
           </div>
         </div>
-        <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf">
+        <h3 id="steptitle-:rg:"
+            class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+        >
           besvart
         </h3>
         <div class="StepListStep_stepContent__1uagT   
@@ -430,6 +454,7 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
           </div>
           <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  StepListStep_stepEditButton__4I4jx"
                   type="button"
+                  aria-describedby="steptitle-:rg:"
           >
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
                  viewbox="0 0 24 24"
@@ -455,7 +480,9 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
           <div class="StepListStep_stepLine__BOJMv ">
           </div>
         </div>
-        <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf">
+        <h3 id="steptitle-:ri:"
+            class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+        >
           besvart 2
         </h3>
         <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
@@ -477,7 +504,9 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
           <div class="StepListStep_stepLine__BOJMv ">
           </div>
         </div>
-        <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf">
+        <h3 id="steptitle-:rj:"
+            class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+        >
           aktivt
         </h3>
         <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
@@ -508,11 +537,11 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
                  viewbox="0 0 24 24"
                  focusable="false"
-                 aria-labelledby="svgtitle-:r7:"
+                 aria-labelledby="svgtitle-:rl:"
                  aria-hidden="false"
                  role="img"
             >
-              <title id="svgtitle-:r7:">
+              <title id="svgtitle-:rl:">
                 Fullført
               </title>
               <path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z">
@@ -522,7 +551,9 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
           <div class="StepListStep_stepLine__BOJMv StepListStep_stepLine_positiveResult__EkfJp">
           </div>
         </div>
-        <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf">
+        <h3 id="steptitle-:rk:"
+            class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+        >
           positivt resultat
         </h3>
         <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_positiveResult__yObTM  
@@ -561,11 +592,11 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
                  viewbox="0 0 24 24"
                  focusable="false"
-                 aria-labelledby="svgtitle-:r8:"
+                 aria-labelledby="svgtitle-:rn:"
                  aria-hidden="false"
                  role="img"
             >
-              <title id="svgtitle-:r8:">
+              <title id="svgtitle-:rn:">
                 Fullført
               </title>
               <path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z">
@@ -575,7 +606,9 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
           <div class="StepListStep_stepLine__BOJMv StepListStep_stepLine_neutralResult__s7I7X">
           </div>
         </div>
-        <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf">
+        <h3 id="steptitle-:rm:"
+            class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+        >
           neutralt resultat
         </h3>
         <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0  StepListStep_resultIntro__Ok83p">
@@ -605,11 +638,11 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
 exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
 <div data-test-block="true">
   <ol class="StepList_stepList__XjLpY ">
-    <li id=":rc:-1"
+    <li id=":r10:-1"
         class="StepListStep_step__js1fz StepListStep_step_passive__MQSNI "
     >
       <div class="StepListStep_stepSideWrapper__Mshb7 "
-           id=":rc:-1-focus-target"
+           id=":r10:-1-focus-target"
            tabindex="-1"
       >
         <span class="StepListStep_stepCircle__wWmPq 
@@ -619,7 +652,9 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
         <div class="StepListStep_stepLine__BOJMv ">
         </div>
       </div>
-      <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf">
+      <h3 id="steptitle-:r10:-1"
+          class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+      >
         Hva holder du på med?
       </h3>
       <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
@@ -629,11 +664,11 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
         </div>
       </div>
     </li>
-    <li id=":rc:-2"
+    <li id=":r10:-2"
         class="StepListStep_step__js1fz StepListStep_step_passive__MQSNI "
     >
       <div class="StepListStep_stepSideWrapper__Mshb7 "
-           id=":rc:-2-focus-target"
+           id=":r10:-2-focus-target"
            tabindex="-1"
       >
         <span class="StepListStep_stepCircle__wWmPq 
@@ -643,7 +678,9 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
         <div class="StepListStep_stepLine__BOJMv ">
         </div>
       </div>
-      <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf">
+      <h3 id="steptitle-:r10:-2"
+          class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+      >
         Hva gjør du?
       </h3>
       <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
@@ -653,11 +690,11 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
         </div>
       </div>
     </li>
-    <li id=":rc:-3"
+    <li id=":r10:-3"
         class="StepListStep_step__js1fz StepListStep_step_passive__MQSNI "
     >
       <div class="StepListStep_stepSideWrapper__Mshb7 "
-           id=":rc:-3-focus-target"
+           id=":r10:-3-focus-target"
            tabindex="-1"
       >
         <span class="StepListStep_stepCircle__wWmPq 
@@ -667,7 +704,9 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
         <div class="StepListStep_stepLine__BOJMv ">
         </div>
       </div>
-      <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf">
+      <h3 id="steptitle-:r10:-3"
+          class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+      >
         Salg av varer og tjenester
       </h3>
       <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
@@ -679,11 +718,11 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
         </div>
       </div>
     </li>
-    <li id=":rc:-4"
+    <li id=":r10:-4"
         class="StepListStep_step__js1fz StepListStep_step_positiveResult__iIy3H "
     >
       <div class="StepListStep_stepSideWrapper__Mshb7 StepListStep_stepSideWrapper_result__yMOyt"
-           id=":rc:-4-focus-target"
+           id=":r10:-4-focus-target"
            tabindex="-1"
            aria-current="step"
       >
@@ -692,11 +731,11 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
           <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
                viewbox="0 0 24 24"
                focusable="false"
-               aria-labelledby="svgtitle-:rp:"
+               aria-labelledby="svgtitle-:r1i:"
                aria-hidden="false"
                role="img"
           >
-            <title id="svgtitle-:rp:">
+            <title id="svgtitle-:r1i:">
               Fullført
             </title>
             <path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z">
@@ -706,7 +745,9 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
         <div class="StepListStep_stepLine__BOJMv StepListStep_stepLine_positiveResult__EkfJp">
         </div>
       </div>
-      <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf">
+      <h3 id="steptitle-:r10:-4"
+          class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+      >
         Vårt veiledende svar
       </h3>
       <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_forest__8dVE7 Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0  StepListStep_resultIntro__Ok83p">
@@ -772,7 +813,9 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
           <div class="StepListStep_stepLine__BOJMv ">
           </div>
         </div>
-        <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf">
+        <h3 id="steptitle-:r0:"
+            class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+        >
           besvart
         </h3>
         <div class="StepListStep_stepContent__1uagT   
@@ -782,6 +825,7 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
           </div>
           <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  StepListStep_stepEditButton__4I4jx"
                   type="button"
+                  aria-describedby="steptitle-:r0:"
           >
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
                  viewbox="0 0 24 24"
@@ -807,7 +851,9 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
           <div class="StepListStep_stepLine__BOJMv ">
           </div>
         </div>
-        <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf">
+        <h3 id="steptitle-:r2:"
+            class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+        >
           besvart 2
         </h3>
         <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
@@ -829,7 +875,9 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
           <div class="StepListStep_stepLine__BOJMv ">
           </div>
         </div>
-        <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf">
+        <h3 id="steptitle-:r3:"
+            class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+        >
           aktivt
         </h3>
         <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
@@ -860,11 +908,11 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
                  viewbox="0 0 24 24"
                  focusable="false"
-                 aria-labelledby="svgtitle-:r1:"
+                 aria-labelledby="svgtitle-:r5:"
                  aria-hidden="false"
                  role="img"
             >
-              <title id="svgtitle-:r1:">
+              <title id="svgtitle-:r5:">
                 Fullført
               </title>
               <path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z">
@@ -874,7 +922,9 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
           <div class="StepListStep_stepLine__BOJMv StepListStep_stepLine_positiveResult__EkfJp">
           </div>
         </div>
-        <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf">
+        <h3 id="steptitle-:r4:"
+            class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+        >
           positivt resultat
         </h3>
         <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_positiveResult__yObTM  
@@ -913,11 +963,11 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
                  viewbox="0 0 24 24"
                  focusable="false"
-                 aria-labelledby="svgtitle-:r2:"
+                 aria-labelledby="svgtitle-:r7:"
                  aria-hidden="false"
                  role="img"
             >
-              <title id="svgtitle-:r2:">
+              <title id="svgtitle-:r7:">
                 Fullført
               </title>
               <path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z">
@@ -927,7 +977,9 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
           <div class="StepListStep_stepLine__BOJMv StepListStep_stepLine_neutralResult__s7I7X">
           </div>
         </div>
-        <h3 class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf">
+        <h3 id="steptitle-:r6:"
+            class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+        >
           neutralt resultat
         </h3>
         <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0  StepListStep_resultIntro__Ok83p">
