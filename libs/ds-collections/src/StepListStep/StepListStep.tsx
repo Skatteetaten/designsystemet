@@ -1,4 +1,4 @@
-import React, { forwardRef, useRef } from 'react';
+import React, { forwardRef, useId, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Button, InlineButton } from '@skatteetaten/ds-buttons';
@@ -40,9 +40,12 @@ export const StepListStep = forwardRef<HTMLLIElement, StepListStepProps>(
       children,
     },
     ref
+    // eslint-disable-next-line sonarjs/cognitive-complexity
   ): JSX.Element => {
     const { t } = useTranslation('ds_collections', { i18n: dsI18n });
     const innerRef = useRef<HTMLDivElement>(null);
+    const generatedId = useId();
+    const titleId = `steptitle-${id ?? generatedId}`;
 
     const circleClassName = `${styles.stepCircle} 
         ${styles[`stepCircle_${variant}`]}`;
@@ -106,7 +109,12 @@ export const StepListStep = forwardRef<HTMLLIElement, StepListStepProps>(
           <span className={circleClassName}>{getCircleContent()}</span>
           <div className={`${styles.stepLine} ${stepLineVariantClassName}`} />
         </div>
-        <Heading className={styles.stepHeading} as={titleAs} level={5}>
+        <Heading
+          id={titleId}
+          className={styles.stepHeading}
+          as={titleAs}
+          level={5}
+        >
           {title}
         </Heading>
         {hasStepIntro() && (
@@ -132,6 +140,7 @@ export const StepListStep = forwardRef<HTMLLIElement, StepListStepProps>(
             <InlineButton
               className={styles.stepEditButton}
               svgPath={EditSVGpath}
+              ariaDescribedby={titleId}
               onClick={(): void => {
                 onEdit();
                 setTimeout(() => {
@@ -149,7 +158,6 @@ export const StepListStep = forwardRef<HTMLLIElement, StepListStepProps>(
             <div className={styles.nextLine}></div>
             <span className={styles.buttonWrapper}>
               <Button onClick={onNext}>
-                {/*TODO FRONT-1198 husk å oppdatere tekster når oversettelser er klare*/}
                 {nextButtonText ?? t('steplist.Next')}
               </Button>
             </span>
