@@ -10,6 +10,7 @@ import { HelpProps } from './Help.types';
 import styles from './Help.module.scss';
 
 export const Help = ({
+  description,
   helpText,
   helpSvgPath,
   hideHelp,
@@ -49,6 +50,11 @@ export const Help = ({
           isOutlined
           onClick={(): void => toggleHelpText()}
         />
+      )}
+      {description && (
+        <div className={`${styles.description} ${hideHelpClassName}`.trim()}>
+          {description}
+        </div>
       )}
       {helpText && showHelpText && (
         <div className={`${styles.helpBox} ${hideHelpClassName}`.trim()}>

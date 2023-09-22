@@ -230,7 +230,6 @@ export const WithHelpText = {
   },
   parameters: {
     imageSnapshot: {
-      hover: `${wrapper} > fieldset > button`,
       focus: `${wrapper} > fieldset > button`,
       click: `${wrapper} > fieldset > button`,
     },
@@ -246,6 +245,26 @@ export const WithHelpText = {
     await expect(helpButton).toHaveAttribute('aria-describedby', legend.id);
     const helpSvg = canvas.getByLabelText('Hjelp', { selector: 'svg' });
     await expect(helpSvg).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithHelpTextAndDescription = {
+  name: 'With HelpText And Description (A1)',
+  args: {
+    ...defaultArgs,
+    helpText:
+      'Vi trenger å vite navnet ditt dersom vi skal kontakte deg senere.',
+    description: 'En liten beskrivelse tekst',
+  },
+  argTypes: {
+    helpText: { table: { disable: false } },
+    description: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: {
+      focus: `${wrapper} > fieldset > button`,
+      click: `${wrapper} > fieldset > button`,
+    },
   },
 } satisfies Story;
 

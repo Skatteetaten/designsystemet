@@ -9,6 +9,8 @@ export interface HelpProps {
   helpSvgPath?: ReactElement;
   /** Title-element til hjelpeikon */
   titleHelpSvg?: string;
-  /** Label or legend id */
+  /** Label eller legend id */
   targetId?: string;
+  /** Beskrivelse */
+  description?: string;
 }
