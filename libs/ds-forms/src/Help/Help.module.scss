@@ -18,6 +18,10 @@
   color: var(--semantic-page-foreground);
   font-size: var(--font-size-m);
   line-height: var(--semantic-line-height-input);
+
+  &MarginTop {
+    margin-top: var(--spacing-xs);
+  }
 }
 
 .helpButton {

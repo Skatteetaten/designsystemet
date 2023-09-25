@@ -1,5 +1,6 @@
 /* automatisk genererte types */
 export const description: string;
+export const descriptionMarginTop: string;
 export const helpButton: string;
 export const helpBox: string;
 export const animationhelpbox: string;

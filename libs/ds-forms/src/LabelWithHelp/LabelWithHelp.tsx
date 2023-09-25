@@ -36,6 +36,7 @@ const Help = ({
     helpButtonRef.current?.focus();
   };
 
+  const marginTopClassName = showHelpText ? styles.descriptionMarginTop : '';
   const hideHelpClassName = hideHelp ? styles.srOnly : '';
 
   return (
@@ -53,11 +54,6 @@ const Help = ({
           onClick={(): void => toggleHelpText()}
         />
       )}
-      {description && (
-        <div className={`${styles.description} ${hideHelpClassName}`.trim()}>
-          {description}
-        </div>
-      )}
       {helpText && showHelpText && (
         <div className={`${styles.helpBox} ${hideHelpClassName}`.trim()}>
           <span className={styles.helpBoxText}>{helpText}</span>
@@ -68,6 +64,13 @@ const Help = ({
             title={t('shared.Close')}
             onClick={(): void => closeHelpText()}
           />
+        </div>
+      )}
+      {description && (
+        <div
+          className={`${styles.description} ${marginTopClassName} ${hideHelpClassName}`.trim()}
+        >
+          {description}
         </div>
       )}
     </>

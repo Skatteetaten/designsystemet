@@ -287,7 +287,7 @@ exports[`Tester/Fieldset WithHideLegend play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="Help_description__niabw Help_srOnly__svaKL">
+    <div class="Help_description__niabw  Help_srOnly__svaKL">
       Kort hjelpetekst
     </div>
     <div class="Fieldset_contentContainer__fJcfT Fieldset_contentContainerNoMarginTop__YkL1P">
