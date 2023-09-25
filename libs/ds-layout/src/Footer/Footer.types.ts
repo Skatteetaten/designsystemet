@@ -26,7 +26,7 @@ export interface FooterProps extends BaseProps {
   secondColumn?: ReactNode;
   /** Innhold i tredje kolonne */
   thirdColumn?: ReactNode;
-  /** Footer.Logo og Footer.Link */
+  /** Footer.LinkFirstColumn, Footer.Logo eller Footer.Link */
   children?: JSX.Element | JSX.Element[];
 }
 
@@ -38,6 +38,9 @@ export interface FooterComponent
     FooterLogoProps & React.RefAttributes<HTMLDivElement>
   >;
   Link: React.ForwardRefExoticComponent<
+    Omit<LinkProps, 'color'> & React.RefAttributes<HTMLAnchorElement>
+  >;
+  LinkFirstColumn: React.ForwardRefExoticComponent<
     Omit<LinkProps, 'color'> & React.RefAttributes<HTMLAnchorElement>
   >;
 }

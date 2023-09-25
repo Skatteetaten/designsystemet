@@ -43,6 +43,26 @@ const TemplateDefault: StoryFn<typeof Footer> = (args) => (
   </Footer>
 );
 
+const TemplateExample: StoryFn<typeof Footer> = (args) => (
+  <Footer {...args}>
+    <Footer.LinkFirstColumn href={'#'}>
+      {'Jobb i Skatteetaten'}
+    </Footer.LinkFirstColumn>
+    <Footer.LinkFirstColumn href={'#'}>{'Om oss'}</Footer.LinkFirstColumn>
+    <Footer.LinkFirstColumn href={'#'}>
+      {'Analyse og rapporter'}
+    </Footer.LinkFirstColumn>
+    <Footer.LinkFirstColumn href={'#'}>{'Forskning'}</Footer.LinkFirstColumn>
+    <Footer.Link href={'#'}>{'Satser'}</Footer.Link>
+    <Footer.Link href={'#'}>{'Skjema og tjenester'}</Footer.Link>
+    <Footer.Link href={'#'}>{'RSS'}</Footer.Link>
+    <Footer.Link href={'#'}>{'Tips oss'}</Footer.Link>
+    <Footer.Link href={'#'} isExternal>
+      {'Koronatiltak'}
+    </Footer.Link>
+  </Footer>
+);
+
 export const FooterDefault = {
   render: TemplateDefault,
   name: 'Default',
@@ -55,21 +75,13 @@ export const FooterDefault = {
 } satisfies Story;
 
 export const FooterExample = {
-  render: TemplateDefault,
+  render: TemplateExample,
   name: 'Example',
   parameters: {
     controls: { disable: true },
   },
   args: {
     titleFirstColumn: 'Om Skatteetaten',
-    firstColumn: (
-      <LinkGroup color={'white'}>
-        <LinkGroup.Link href={'#'}>{'Jobb i Skatteetaten'}</LinkGroup.Link>
-        <LinkGroup.Link href={'#'}>{'Om oss'}</LinkGroup.Link>
-        <LinkGroup.Link href={'#'}>{'Analyse og rapporter'}</LinkGroup.Link>
-        <LinkGroup.Link href={'#'}>{'Forskning'}</LinkGroup.Link>
-      </LinkGroup>
-    ),
     titleSecondColumn: 'Følg oss',
     secondColumn: (
       <>
