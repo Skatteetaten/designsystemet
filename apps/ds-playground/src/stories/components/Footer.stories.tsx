@@ -4,6 +4,7 @@ import { Paragraph, Heading } from '@skatteetaten/ds-typography';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
+import logo from '../__tests__/testUtils/Skatteetaten-Logo-Horisontal-RGB-Hvit.png';
 import { getVersion } from '../utils/version.utils';
 
 const meta = {
@@ -31,18 +32,6 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: StoryFn<typeof Footer> = (args) => (
-  <Footer {...args}>
-    <Footer.Link href={'#'}>{'Satser'}</Footer.Link>
-    <Footer.Link href={'#'}>{'Skjema og tjenester'}</Footer.Link>
-    <Footer.Link href={'#'}>{'RSS'}</Footer.Link>
-    <Footer.Link href={'#'}>{'Tips oss'}</Footer.Link>
-    <Footer.Link href={'#'} isExternal>
-      {'Koronatiltak'}
-    </Footer.Link>
-  </Footer>
-);
-
 const TemplateExample: StoryFn<typeof Footer> = (args) => (
   <Footer {...args}>
     <Footer.LinkFirstColumn href={'#'}>
@@ -53,6 +42,9 @@ const TemplateExample: StoryFn<typeof Footer> = (args) => (
       {'Analyse og rapporter'}
     </Footer.LinkFirstColumn>
     <Footer.LinkFirstColumn href={'#'}>{'Forskning'}</Footer.LinkFirstColumn>
+    <Footer.Logo>
+      <img src={logo} alt={'Skatteetaten logo'} />
+    </Footer.Logo>
     <Footer.Link href={'#'}>{'Satser'}</Footer.Link>
     <Footer.Link href={'#'}>{'Skjema og tjenester'}</Footer.Link>
     <Footer.Link href={'#'}>{'RSS'}</Footer.Link>
@@ -64,7 +56,6 @@ const TemplateExample: StoryFn<typeof Footer> = (args) => (
 );
 
 export const FooterDefault = {
-  render: TemplateDefault,
   name: 'Default',
   args: {
     titleFirstColumn: 'Om Skatteetaten',
