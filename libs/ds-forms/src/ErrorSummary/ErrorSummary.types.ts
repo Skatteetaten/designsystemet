@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ForwardRefExoticComponent, ReactNode, RefAttributes } from 'react';
 
 import { BaseProps, HeadingAs } from '@skatteetaten/ds-core-utils';
 
@@ -20,11 +20,11 @@ export interface ErrorSummaryProps extends BaseProps {
 }
 
 export interface ErrorSummaryComponent
-  extends React.ForwardRefExoticComponent<
-    ErrorSummaryProps & React.RefAttributes<HTMLDivElement>
+  extends ForwardRefExoticComponent<
+    ErrorSummaryProps & RefAttributes<HTMLDivElement>
   > {
-  Error: React.ForwardRefExoticComponent<
-    ErrorProps & React.RefAttributes<HTMLAnchorElement>
+  Error: ForwardRefExoticComponent<
+    ErrorProps & RefAttributes<HTMLAnchorElement>
   >;
 }
 

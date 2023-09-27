@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { FocusEvent, ChangeEvent, useState } from 'react';
 
 import {
   TextboxRefHandle,
@@ -677,15 +677,15 @@ const EventHandlersTemplate: StoryFn<typeof TextField> = (args) => {
     <TextField
       {...args}
       label={labelText}
-      onFocus={(event: React.FocusEvent<HTMLInputElement>): void => {
+      onFocus={(event: FocusEvent<HTMLInputElement>): void => {
         setLabelText('TextField har fått fokus');
         args.onFocus && args.onFocus(event);
       }}
-      onBlur={(event: React.FocusEvent<HTMLInputElement>): void => {
+      onBlur={(event: FocusEvent<HTMLInputElement>): void => {
         setLabelText('TextField har blitt blurret');
         args.onBlur && args.onBlur(event);
       }}
-      onChange={(event: React.ChangeEvent<HTMLInputElement>): void => {
+      onChange={(event: ChangeEvent<HTMLInputElement>): void => {
         setLabelText('TextField har blitt klikket på');
         args.onChange && args.onChange(event);
       }}

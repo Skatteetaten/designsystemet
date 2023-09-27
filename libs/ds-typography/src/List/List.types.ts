@@ -1,9 +1,11 @@
+import { ForwardRefExoticComponent, RefAttributes } from 'react';
+
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 import { ListElementProps } from '../ListElement/ListElement.types';
 
 export const listAsArr = ['ul', 'ol'] as const;
-export type ListAs = typeof listAsArr[number];
+export type ListAs = (typeof listAsArr)[number];
 
 export interface ListProps extends BaseProps {
   /** HTML-tag for listen */
@@ -15,11 +17,11 @@ export interface ListProps extends BaseProps {
 }
 
 export interface ListComponent
-  extends React.ForwardRefExoticComponent<
-    ListProps & React.RefAttributes<AnyHTMLListElement>
+  extends ForwardRefExoticComponent<
+    ListProps & RefAttributes<AnyHTMLListElement>
   > {
-  Element: React.ForwardRefExoticComponent<
-    ListElementProps & React.RefAttributes<HTMLLIElement>
+  Element: ForwardRefExoticComponent<
+    ListElementProps & RefAttributes<HTMLLIElement>
   >;
 }
 

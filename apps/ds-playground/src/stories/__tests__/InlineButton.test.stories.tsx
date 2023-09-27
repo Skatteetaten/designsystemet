@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { FocusEvent, MouseEvent, useState } from 'react';
 
 import { InlineButton } from '@skatteetaten/ds-buttons';
 import { positionArr } from '@skatteetaten/ds-core-utils';
@@ -322,15 +322,15 @@ const EventHandlersTemplate: StoryFn<typeof InlineButton> = (args) => {
   return (
     <InlineButton
       {...args}
-      onFocus={(event: React.FocusEvent<HTMLButtonElement>): void => {
+      onFocus={(event: FocusEvent<HTMLButtonElement>): void => {
         setButtonText('Knapp har fått fokus');
         args.onFocus && args.onFocus(event);
       }}
-      onBlur={(event: React.FocusEvent<HTMLButtonElement>): void => {
+      onBlur={(event: FocusEvent<HTMLButtonElement>): void => {
         setButtonText('Knapp har blitt blurret');
         args.onBlur && args.onBlur(event);
       }}
-      onClick={(event: React.MouseEvent<HTMLButtonElement>): void => {
+      onClick={(event: MouseEvent<HTMLButtonElement>): void => {
         setButtonText('Knapp har blitt klikket på');
         args.onClick && args.onClick(event);
       }}
