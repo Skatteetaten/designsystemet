@@ -15,7 +15,7 @@ export interface LinkGroupComponentCommonProps extends BaseProps {
   /** Definerer stilen til lenkegruppen. */
   variant?: LinkGroupVariant;
   /** Link-komponenter */
-  children?: ReactNode | ReactNode[];
+  children?: ReactNode;
 }
 
 export type LinkGroupProps = LinkGroupComponentCommonProps;
