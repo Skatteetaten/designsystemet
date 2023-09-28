@@ -39,7 +39,6 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
       children,
     },
     ref
-    // eslint-disable-next-line sonarjs/cognitive-complexity
   ): JSX.Element => {
     const wrapperRef = useRef<HTMLDivElement>(null);
 
