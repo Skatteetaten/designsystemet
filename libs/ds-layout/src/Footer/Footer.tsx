@@ -42,6 +42,9 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(
     const links = childrenArray.filter((child) =>
       isValidElement(child) ? child.type === Footer.Link : null
     );
+    const linksFirstColumn = childrenArray.filter((child) =>
+      isValidElement(child) ? child.type === Footer.LinkFirstColumn : null
+    );
 
     const threeColumnsClassName = thirdColumn ? styles.columnsThree : '';
     const twoColumnsClassName = secondColumn ? styles.columnsTwo : '';
@@ -84,6 +87,7 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(
                 >
                   {t('shared.AccessibilityStatement')}
                 </LinkGroup.Link>
+                {linksFirstColumn}
               </LinkGroup>
               {firstColumn}
             </div>
@@ -140,3 +144,4 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(
 Footer.displayName = 'Footer';
 Footer.Logo = FooterLogo;
 Footer.Link = FooterLink;
+Footer.LinkFirstColumn = LinkGroup.Link;

@@ -4,6 +4,7 @@ import { Paragraph, Heading } from '@skatteetaten/ds-typography';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
+import logo from '../__tests__/testUtils/Skatteetaten-Logo-Horisontal-RGB-Hvit.png';
 import { getVersion } from '../utils/version.utils';
 
 const meta = {
@@ -31,8 +32,19 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: StoryFn<typeof Footer> = (args) => (
+const TemplateExample: StoryFn<typeof Footer> = (args) => (
   <Footer {...args}>
+    <Footer.LinkFirstColumn href={'#'}>
+      {'Jobb i Skatteetaten'}
+    </Footer.LinkFirstColumn>
+    <Footer.LinkFirstColumn href={'#'}>{'Om oss'}</Footer.LinkFirstColumn>
+    <Footer.LinkFirstColumn href={'#'}>
+      {'Analyse og rapporter'}
+    </Footer.LinkFirstColumn>
+    <Footer.LinkFirstColumn href={'#'}>{'Forskning'}</Footer.LinkFirstColumn>
+    <Footer.Logo>
+      <img className={'logoHeight'} src={logo} alt={'Skatteetaten logo'} />
+    </Footer.Logo>
     <Footer.Link href={'#'}>{'Satser'}</Footer.Link>
     <Footer.Link href={'#'}>{'Skjema og tjenester'}</Footer.Link>
     <Footer.Link href={'#'}>{'RSS'}</Footer.Link>
@@ -44,7 +56,6 @@ const TemplateDefault: StoryFn<typeof Footer> = (args) => (
 );
 
 export const FooterDefault = {
-  render: TemplateDefault,
   name: 'Default',
   args: {
     titleFirstColumn: 'Om Skatteetaten',
@@ -55,21 +66,13 @@ export const FooterDefault = {
 } satisfies Story;
 
 export const FooterExample = {
-  render: TemplateDefault,
+  render: TemplateExample,
   name: 'Example',
   parameters: {
     controls: { disable: true },
   },
   args: {
     titleFirstColumn: 'Om Skatteetaten',
-    firstColumn: (
-      <LinkGroup color={'white'}>
-        <LinkGroup.Link href={'#'}>{'Jobb i Skatteetaten'}</LinkGroup.Link>
-        <LinkGroup.Link href={'#'}>{'Om oss'}</LinkGroup.Link>
-        <LinkGroup.Link href={'#'}>{'Analyse og rapporter'}</LinkGroup.Link>
-        <LinkGroup.Link href={'#'}>{'Forskning'}</LinkGroup.Link>
-      </LinkGroup>
-    ),
     titleSecondColumn: 'Følg oss',
     secondColumn: (
       <>
