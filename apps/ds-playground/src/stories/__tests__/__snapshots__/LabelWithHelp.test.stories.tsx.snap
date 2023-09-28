@@ -177,7 +177,7 @@ exports[`Tester/LabelWithHelp (intern) WithHideLabel play-test 1`] = `
       </path>
     </svg>
   </button>
-  <div class="LabelWithHelp_description__jzDin LabelWithHelp_srOnly__uWL7Z">
+  <div class="LabelWithHelp_description__jzDin  LabelWithHelp_srOnly__uWL7Z">
     Kort hjelpetekst
   </div>
 </div>

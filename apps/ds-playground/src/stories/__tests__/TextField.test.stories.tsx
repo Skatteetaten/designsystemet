@@ -7,12 +7,7 @@ import {
 } from '@skatteetaten/ds-forms';
 import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import {
-  fireEvent,
-  userEvent,
-  waitFor,
-  within,
-} from '@storybook/testing-library';
+import { userEvent, waitFor, within } from '@storybook/testing-library';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -661,13 +656,38 @@ export const WithHelpText = {
   argTypes: {
     helpText: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: {
+      focus: `${wrapper} > div > button`,
+      click: `${wrapper} > div > button`,
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const helpButton = canvas.getByRole('button', {
       description: defaultLabelText,
     });
     await expect(helpButton).toBeInTheDocument();
-    await fireEvent.click(helpButton);
+  },
+} satisfies Story;
+
+export const WithHelpTextAndDescription = {
+  name: 'With HelpText And Description (A1)',
+  args: {
+    ...defaultArgs,
+    helpText:
+      'Vi trenger å vite navnet ditt dersom vi skal kontakte deg senere.',
+    description: 'En liten beskrivelse tekst',
+  },
+  argTypes: {
+    helpText: { table: { disable: false } },
+    description: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: {
+      focus: `${wrapper} > div > button`,
+      click: `${wrapper} > div > button`,
+    },
   },
 } satisfies Story;
 

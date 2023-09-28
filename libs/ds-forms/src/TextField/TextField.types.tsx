@@ -58,7 +58,7 @@ export interface TextFieldCommonProps
   helpText?: LabelWithHelpProps['helpText'];
   /** Overskriver default hjelpeikon */
   helpSvgPath?: LabelWithHelpProps['helpSvgPath'];
-  /** Title-element til hjelpeikon */
+  /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
   /** Tykkere textbox-ramme og litt mer padding hvis det er textarea-element */
   isLarge?: boolean;

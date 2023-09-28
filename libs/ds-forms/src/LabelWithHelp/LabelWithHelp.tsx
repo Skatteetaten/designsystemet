@@ -12,6 +12,7 @@ import styles from './LabelWithHelp.module.scss';
 
 //TODO FRONT-1395
 const Help = ({
+  description,
   helpText,
   helpSvgPath,
   hideHelp,
@@ -35,6 +36,7 @@ const Help = ({
     helpButtonRef.current?.focus();
   };
 
+  const marginTopClassName = showHelpText ? styles.descriptionMarginTop : '';
   const hideHelpClassName = hideHelp ? styles.srOnly : '';
 
   return (
@@ -62,6 +64,13 @@ const Help = ({
             title={t('shared.Close')}
             onClick={(): void => closeHelpText()}
           />
+        </div>
+      )}
+      {description && (
+        <div
+          className={`${styles.description} ${marginTopClassName} ${hideHelpClassName}`.trim()}
+        >
+          {description}
         </div>
       )}
     </>
@@ -114,12 +123,8 @@ export const LabelWithHelp = forwardRef<HTMLLabelElement, LabelWithHelpProps>(
           hideHelp={hideLabel}
           targetId={labelId}
           titleHelpSvg={titleHelpSvg}
+          description={description}
         />
-        {description && (
-          <div className={`${styles.description} ${hideLabelClassName}`.trim()}>
-            {description}
-          </div>
-        )}
       </>
     );
   }
