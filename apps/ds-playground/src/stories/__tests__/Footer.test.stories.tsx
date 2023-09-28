@@ -216,7 +216,7 @@ export const WithHideLogo = {
 const TemplateWithLogo: StoryFn<typeof Footer> = (args) => (
   <Footer {...args}>
     <Footer.Logo>
-      <img src={logo} alt={'Skatteetaten logo'} />
+      <img className={'logoHeight'} src={logo} alt={'Skatteetaten logo'} />
     </Footer.Logo>
     <Footer.Logo>
       <Icon variant={'themeIcon'} svgPath={GaveArvSVGpath} />

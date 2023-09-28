@@ -43,7 +43,7 @@ const TemplateExample: StoryFn<typeof Footer> = (args) => (
     </Footer.LinkFirstColumn>
     <Footer.LinkFirstColumn href={'#'}>{'Forskning'}</Footer.LinkFirstColumn>
     <Footer.Logo>
-      <img src={logo} alt={'Skatteetaten logo'} />
+      <img className={'logoHeight'} src={logo} alt={'Skatteetaten logo'} />
     </Footer.Logo>
     <Footer.Link href={'#'}>{'Satser'}</Footer.Link>
     <Footer.Link href={'#'}>{'Skjema og tjenester'}</Footer.Link>
