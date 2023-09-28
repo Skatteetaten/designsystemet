@@ -153,7 +153,7 @@ export const StepListStep = forwardRef<HTMLLIElement, StepListStepProps>(
           )}
         </div>
 
-        {variant === 'active' && (
+        {variant === 'active' && onNext && (
           <>
             <div className={styles.nextLine}></div>
             <span className={styles.buttonWrapper}>
