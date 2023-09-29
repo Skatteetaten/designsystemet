@@ -265,7 +265,7 @@ exports[`Tester/Select/Select WithDescription play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="LabelWithHelp_description__jzDin">
+    <div class="Help_description__niabw">
       En liten beskrivelse tekst
     </div>
     <div class="Select_select_container__DGJeG ">
@@ -519,7 +519,7 @@ exports[`Tester/Select/Select WithHelpText play-test 1`] = `
     >
       Ledetekst
     </label>
-    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH LabelWithHelp_helpButton__yI6az"
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
             type="button"
             aria-describedby="labelId-:r24:"
             aria-expanded="true"
@@ -538,11 +538,11 @@ exports[`Tester/Select/Select WithHelpText play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="LabelWithHelp_helpBox__TtbYl">
-      <span class="LabelWithHelp_helpBoxText__nJRcF">
+    <div class="Help_helpBox__nbhjO">
+      <span class="Help_helpBoxText__j6sH7">
         Hjelpetekst
       </span>
-      <button class="IconButton_button__mw9sG IconButton_button_small__etst4  LabelWithHelp_helpBoxCloseButton__2lXkB"
+      <button class="IconButton_button__mw9sG IconButton_button_small__etst4  Help_helpBoxCloseButton__RueX2"
               type="button"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
