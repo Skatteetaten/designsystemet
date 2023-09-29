@@ -7,8 +7,8 @@ module.exports = {
   testTimeout: 30000,
   verbose: true,
   testMatch: [
-    '<rootDir>/src/stories/__tests__/**/*test.stories.mdx',
-    '<rootDir>/src/stories/__tests__/**/*test.stories.@(js|jsx|ts|tsx)',
+    '<rootDir>/apps/ds-playground/src/stories/__tests__/**/*test.stories.mdx',
+    '<rootDir>/apps/ds-playground/src/stories/__tests__/**/*test.stories.@(js|jsx|ts|tsx)',
   ],
   reporters: [
     ...config.reporters,

@@ -7,7 +7,6 @@
   },
   "peerDependencies": {
     "react": "^18",
-    "react-i18next": "^12",
     "@nx/eslint-plugin": "15.0.0"
   },
   "executors": "executors.json"

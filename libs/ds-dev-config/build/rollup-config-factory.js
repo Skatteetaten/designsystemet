@@ -88,7 +88,7 @@ const createRollupConfig = (
     output: {
       ...config.output,
       dir: outputDir,
-      entryFileNames: '[name].js',
+      entryFileNames: '[name].esm.js',
     },
     plugins: [
       ...plugins,
