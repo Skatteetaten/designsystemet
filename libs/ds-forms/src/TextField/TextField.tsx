@@ -43,7 +43,6 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       required,
       rows,
       value,
-      ariaDescribedby,
       hasError,
       hideLabel,
       isLarge,
@@ -94,10 +93,6 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       value = addSpacesOrCommas(removeNonNumeric(value.toString()));
     }
 
-    const ariaDescribedbyInput = `${ariaDescribedby ?? ''} ${
-      hasError ? errorId : ''
-    }`.trim();
-
     const largeTextboxClassName = isLarge ? styles.textbox_large : '';
     const multilineTextboxClassName =
       Tag === 'textarea' ? styles.textbox_multiline : '';
@@ -107,6 +102,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
     } ${largeTextboxClassName} ${multilineTextboxClassName} ${autosizeTextarea} ${
       classNames?.textbox ?? ''
     }`.trim();
+
     return (
       <div className={className} lang={lang}>
         <LabelWithHelp
@@ -139,7 +135,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
           required={required}
           rows={rows}
           value={value}
-          aria-describedby={ariaDescribedbyInput || undefined}
+          aria-describedby={hasError ? errorId : undefined}
           aria-invalid={hasError ?? undefined}
           onBlur={onBlur}
           onChange={handleChange}

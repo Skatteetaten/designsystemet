@@ -38,24 +38,6 @@ exports[`Tester/ErrorMessage WithAttributes play-test 1`] = `
 exports[`Tester/ErrorMessage WithLongText smoke-test 1`] = `
 <div data-test-block="true">
   <div class="errorMessageContainer">
-    <div class>
-      <label id="labelId-:r4:"
-             class="LabelWithHelp_label__59tP-"
-             for="textFieldTextboxId-:r3:"
-      >
-        Label
-      </label>
-      <input id="textFieldTextboxId-:r3:"
-             class="TextField_textbox__qbZlk"
-             aria-describedby="errorId"
-             value
-      >
-      <div id="textFieldErrorId-:r2:"
-           aria-live="assertive"
-           aria-atomic="true"
-      >
-      </div>
-    </div>
     <div id="errorId"
          aria-live="assertive"
          aria-atomic="true"
@@ -82,24 +64,6 @@ exports[`Tester/ErrorMessage WithLongText smoke-test 1`] = `
 exports[`Tester/ErrorMessage WithLongTextAndBreaking smoke-test 1`] = `
 <div data-test-block="true">
   <div class="errorMessageContainer">
-    <div class>
-      <label id="labelId-:r8:"
-             class="LabelWithHelp_label__59tP-"
-             for="textFieldTextboxId-:r7:"
-      >
-        Label
-      </label>
-      <input id="textFieldTextboxId-:r7:"
-             class="TextField_textbox__qbZlk"
-             aria-describedby="errorId"
-             value
-      >
-      <div id="textFieldErrorId-:r6:"
-           aria-live="assertive"
-           aria-atomic="true"
-      >
-      </div>
-    </div>
     <div aria-live="assertive"
          aria-atomic="true"
     >

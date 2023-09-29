@@ -34,7 +34,6 @@ type RequiredTextFieldHTMLAttributes = Pick<
 type TextFieldHTMLAttributes = Partial<RequiredTextFieldHTMLAttributes>;
 
 interface TextFieldPropsHTMLAttributes extends TextFieldHTMLAttributes {
-  ariaDescribedby?: string;
   onBlur?: FocusEventHandler<HTMLInputElement | HTMLTextAreaElement>;
   onChange?: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;
   onFocus?: FocusEventHandler<HTMLInputElement | HTMLTextAreaElement>;
