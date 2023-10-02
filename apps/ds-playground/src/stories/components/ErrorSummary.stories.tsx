@@ -64,7 +64,6 @@ const TemplateExample: StoryFn<ErrorSummaryProps> = () => {
     <>
       <TextField
         id={'input_aar'}
-        ariaDescribedby={'error_aar'}
         label={'År'}
         value={1009}
         errorMessage={'Inntekståret må være etter 2008'}

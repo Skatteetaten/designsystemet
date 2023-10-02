@@ -91,8 +91,6 @@ const meta = {
       control: 'text',
       table: { category: category.htmlAttribute },
     },
-    // Aria
-    ariaDescribedby: { table: { category: category.aria } },
     // Events
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },

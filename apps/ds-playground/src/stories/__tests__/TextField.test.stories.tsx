@@ -71,8 +71,6 @@ const meta = {
     required: { table: { disable: true } },
     rows: { table: { disable: true } },
     value: { table: { disable: true } },
-    // Aria
-    ariaDescribedby: { table: { disable: true } },
     // Events
     onBlur: { table: { disable: true } },
     onChange: { table: { disable: true } },
@@ -455,33 +453,6 @@ export const WithRows = {
   },
 } satisfies Story;
 
-export const WithAriaDescribedby = {
-  name: 'With AriaDescribedby (B5 delvis)',
-
-  args: {
-    ...defaultArgs,
-    ariaDescribedby: 'testID',
-  },
-
-  argTypes: {
-    ariaDescribedby: { table: { disable: false } },
-  },
-
-  parameters: {
-    imageSnapshot: { disable: true },
-  },
-
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const textbox = canvas.getByRole('textbox');
-    await expect(textbox).toHaveAttribute('aria-describedby');
-    await expect(textbox).toHaveAttribute(
-      'aria-describedby',
-      expect.stringMatching('testID')
-    );
-  },
-} satisfies Story;
-
 export const WithError = {
   name: 'With ErrorMessage (B5 delvis)',
 
@@ -539,36 +510,6 @@ export const WithErrorMessageAndHasError = {
     await expect(errorMessageContainer).toBeInTheDocument();
     await expect(textbox).toHaveAttribute('aria-invalid', 'true');
     await expect(textbox).toHaveAttribute('aria-describedby');
-  },
-} satisfies Story;
-
-export const WithHasErrorAndAriaDescribedby = {
-  name: 'With HasError And AriaDescribedby (B5 delvis)',
-
-  args: {
-    ...defaultArgs,
-    ariaDescribedby: 'konsumentId',
-    errorMessage: errorMessageText,
-    hasError: true,
-  },
-
-  argTypes: {
-    ariaDescribedby: { table: { disable: false } },
-    hasError: { table: { disable: false } },
-  },
-
-  parameters: {
-    imageSnapshot: { disable: true },
-  },
-
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const errorMessageContainer = canvas.getAllByRole('generic')[3];
-    const textbox = canvas.getByRole('textbox');
-    await expect(textbox).toHaveAttribute(
-      'aria-describedby',
-      expect.stringMatching(`konsumentId ${errorMessageContainer.id}`)
-    );
   },
 } satisfies Story;
 
