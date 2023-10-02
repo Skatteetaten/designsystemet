@@ -91,6 +91,7 @@
     "@storybook/addon-a11y": "7.2.3",
     "@storybook/addon-coverage": "0.0.9",
     "@storybook/addon-interactions": "7.2.3",
+    "@storybook/blocks": "7.4.5",
     "@storybook/jest": "0.1.0",
     "@storybook/react-webpack5": "7.2.3",
     "@storybook/test-runner": "0.11.0",
