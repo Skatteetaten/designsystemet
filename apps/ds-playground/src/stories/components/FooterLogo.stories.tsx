@@ -2,8 +2,8 @@ import { Footer } from '@skatteetaten/ds-layout';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
-import logo from '../__tests__/testUtils/Skatteetaten-Logo-Horisontal-RGB-Hvit.png';
-import illustration from '../__tests__/testUtils/test_bonde.svg';
+import logo from '../../assets/Skatteetaten-Logo-Horisontal-RGB-Hvit.png';
+import illustration from '../../assets/test_bonde.svg';
 import { getVersion } from '../utils/version.utils';
 
 const meta = {

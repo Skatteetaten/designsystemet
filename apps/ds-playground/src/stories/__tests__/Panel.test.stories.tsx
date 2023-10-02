@@ -14,7 +14,7 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
-import illustrationSource from './testUtils/test_bonde.svg';
+import illustrationSource from '../../assets/test_bonde.svg';
 
 const tittelText = 'Det er en tittel';
 const subtittelText = 'Det er en undertittel';

@@ -19,8 +19,8 @@ import { Paragraph } from '@skatteetaten/ds-typography';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
+import illustrationSource from '../../assets/test_bonde.svg';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
-import illustrationSource from '../__tests__/testUtils/test_bonde.svg';
 import { getVersion } from '../utils/version.utils';
 
 const meta = {

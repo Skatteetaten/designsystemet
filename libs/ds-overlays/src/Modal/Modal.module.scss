@@ -1,0 +1,58 @@
+@import 'libs/ds-core-utils/src/styles.scss';
+
+.modal {
+  position: fixed;
+  min-width: calc(300px - 2 * var(--spacing-m));
+  max-width: calc(var(--semantic-responsive-article) - 2 * var(--spacing-m));
+  max-height: calc(100vh - 2 * var(--spacing-m));
+  box-sizing: border-box;
+  border: 0.25rem solid var(--theme-primary);
+  background-color: var(--palette-graphite-0);
+  box-shadow: 0 7px 6px -6px rgba(0, 0, 0, 16%);
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-l);
+  overflow-y: scroll;
+
+  &::backdrop {
+    background: rgba(255, 255, 255, 80%);
+  }
+
+  &NoBorder {
+    border-color: transparent;
+  }
+
+  &PaddingNONE {
+    padding: 0;
+  }
+
+  &PaddingS {
+    padding: calc(var(--spacing-s) - 0.25rem);
+  }
+
+  &PaddingM {
+    padding: calc(var(--spacing-m) - 0.25rem);
+  }
+
+  &PaddingL {
+    padding: calc(var(--spacing-l) - 0.25rem);
+  }
+
+  &PaddingMEGA {
+    padding: calc(var(--spacing-mega) - 0.25rem);
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: var(--spacing-s);
+
+  &:not(:active) > svg {
+    fill: var(--palette-graphite-100);
+  }
+}
+
+.srOnly {
+  @include sr-only;
+}
