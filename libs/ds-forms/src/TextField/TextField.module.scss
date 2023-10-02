@@ -13,6 +13,7 @@
   color: var(--semantic-page-foreground);
   font-size: var(--font-size-m);
   line-height: var(--semantic-line-height-input);
+  outline-offset: 0;
 
   &_large {
     padding: var(--spacing-s);
