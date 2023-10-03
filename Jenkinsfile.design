@@ -13,6 +13,11 @@ def publishToNpmOverride = { Map<String, Object> props  ->
   }
 }
 
+def publishToNpmJsOverride = { Map<String, Object> props  ->
+  if (props.publishToNpm) {
+    sh "npx nx affected --head=HEAD --base=${props.scmVars.GIT_PREVIOUS_SUCCESSFUL_COMMIT ?: 'HEAD~1'} --target=publish --switches='--registry https://registry.npmjs.org/ --access public'"
+  }
+}
 
 def publishSnapshotToNpmOverride = { Map<String, Object> props  ->
   if (props.publishSnapshotToNpm) {
@@ -43,11 +48,22 @@ def overrides = [
     lineCoverageReport           : false,
     publishToNpm                 : true,
     publishToNpmOverride         : publishToNpmOverride,
+    publishToNpmJsOverride       : publishToNpmJsOverride,
     publishSnapshotToNpm         : true,
     publishSnapshotToNpmOverride : publishSnapshotToNpmOverride,
+    npmjs                    : [
+        publish              : env.BRANCH_NAME == "master",
+        prepareCmd           : "run build:preparePublish"
+    ],
+    github                 : [
+        enabled              : true,
+        push                 : env.BRANCH_NAME == "master",
+        repoUrl              : "https://github.com/Skatteetaten/designsystemet.git",
+        deployToGHPagesCmd   : "npm run deploy:gh-pages"
+    ],
     preCompile                   : preCompile,
     npmPublishFolder             : './dist/libs',
-    versionStrategy              : [[branch: 'master', versionHint: '0.4.1']],
+    versionStrategy              : [[branch: 'master', versionHint: '0.4.4']],
     createBuildEnvs              : { props -> "STORYBOOK_BUILD_VERSION=${props.version}" },
 ]
 

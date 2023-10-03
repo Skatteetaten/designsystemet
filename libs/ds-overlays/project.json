@@ -28,6 +28,11 @@
             "glob": "libs/ds-overlays/README.md",
             "input": ".",
             "output": "."
+          },
+          {
+            "glob": "LICENSE",
+            "input": ".",
+            "output": "."
           }
         ]
       }
@@ -72,8 +77,7 @@
     "publish": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "npm publish {args.switches}",
-        "cwd": "dist/libs/ds-overlays"
+        "command": "npm publish dist/libs/ds-overlays {args.switches}"
       }
     }
   },
