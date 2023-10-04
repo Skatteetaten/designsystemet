@@ -34,13 +34,13 @@
     color: var(--palette-graphite-70);
   }
 
+  &[aria-invalid='true'] {
+    box-shadow: inset 0 0 0 2px var(--semantic-danger-foreground);
+  }
+
   &:hover {
     box-shadow: inset 0 0 0 2px var(--palette-graphite-100);
     outline: 2px solid var(--palette-azure-10);
-  }
-
-  &[aria-invalid='true'] {
-    box-shadow: inset 0 0 0 2px var(--semantic-danger-foreground);
   }
 
   &:focus {
