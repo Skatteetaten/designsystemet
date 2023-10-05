@@ -146,6 +146,7 @@ export const WithCustomClassNames = {
   args: {
     ...defaultArgs,
     classNames: {
+      container: ' dummyClassname',
       label: 'dummyClassname',
       textbox: 'dummyClassname',
       errorMessage: 'dummyClassname',
@@ -162,6 +163,10 @@ export const WithCustomClassNames = {
 
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
+    // eslint-disable-next-line testing-library/no-node-access
+    const container = canvasElement.querySelector(`${wrapper} > div`);
+    await expect(container).toHaveClass('dummyClassname');
+
     const textbox = canvas.getByRole('textbox');
     await expect(textbox).toHaveClass('dummyClassname');
 

@@ -104,7 +104,10 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
     }`.trim();
 
     return (
-      <div className={className} lang={lang}>
+      <div
+        className={`${className} ${classNames?.container ?? ''}`.trim()}
+        lang={lang}
+      >
         <LabelWithHelp
           className={classNames?.label ?? ''}
           htmlFor={textboxId}

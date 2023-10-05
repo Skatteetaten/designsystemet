@@ -43,6 +43,7 @@ export interface TextFieldCommonProps
   extends TextFieldPropsHTMLAttributes,
     BaseProps {
   classNames?: {
+    container?: string;
     label?: string;
     textbox?: string;
     errorMessage?: string;
