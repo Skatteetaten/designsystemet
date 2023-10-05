@@ -97,7 +97,7 @@ exports[`Tester/TextField WithAutoCompleteInputModeNameAndPlaceholder play-test 
 
 exports[`Tester/TextField WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class="dummyClassname">
     <label id="labelId-:r8:"
            class="LabelWithHelp_label__59tP-   dummyClassname"
            for="textFieldTextboxId-:r7:"
