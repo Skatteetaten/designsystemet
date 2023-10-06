@@ -42,9 +42,6 @@ const config = {
   core: {
     disableTelemetry: true,
   },
-  docs: {
-    autodocs: true,
-  },
   typescript: {
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
