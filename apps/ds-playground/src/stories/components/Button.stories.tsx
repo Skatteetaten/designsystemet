@@ -1,18 +1,16 @@
 /* eslint-disable sonarjs/no-duplicate-string */
 import {
   Button,
-  ButtonProps,
   buttonVariantArr,
   getButtonVariantDefault,
 } from '@skatteetaten/ds-buttons';
-import { action } from '@storybook/addon-actions';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: Button,
   title: 'Komponenter/Button',
   argTypes: {
@@ -55,25 +53,14 @@ const meta = {
     onClick: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-buttons'),
   },
-} as Meta<ButtonProps>;
-export default meta;
-type Story = StoryObj<typeof meta>;
+} as Meta<typeof Button>;
 
-const TemplateDefault: StoryFn<ButtonProps> = (args) => (
-  <Button
-    {...args}
-    variant={args.variant}
-    onClick={action('KlikkEvent Button')}
-  >
-    {args.children}
-  </Button>
-);
+export const Default: StoryFn<typeof Button> = () => <Button>{'Klikk'}</Button>;
 
-const TemplateExample: StoryFn<ButtonProps> = () => (
+export const Example: StoryFn<typeof Button> = () => (
   <>
     <Button className={'exampleSpacing'} variant={'primary'}>
       {'Send inn skjema'}
@@ -91,20 +78,3 @@ const TemplateExample: StoryFn<ButtonProps> = () => (
     </Button>
   </>
 );
-
-export const ButtonDefault = {
-  render: TemplateDefault,
-  name: 'Default',
-  args: {
-    children: 'Klikk',
-    variant: getButtonVariantDefault(),
-  },
-} satisfies Story;
-
-export const ButtonExample = {
-  render: TemplateExample,
-  name: 'Example',
-  parameters: {
-    controls: { disable: true },
-  },
-} satisfies Story;

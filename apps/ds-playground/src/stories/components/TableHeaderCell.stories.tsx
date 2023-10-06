@@ -39,8 +39,8 @@ const meta = {
     colSpan: { table: { category: category.htmlAttribute } },
     scope: { table: { category: category.htmlAttribute } },
   },
-  tags: ['autodocs'],
   parameters: {
+    docs: { source: { code: null } },
     version: getVersion('ds-table'),
   },
 } satisfies Meta<typeof Table.HeaderCell>;

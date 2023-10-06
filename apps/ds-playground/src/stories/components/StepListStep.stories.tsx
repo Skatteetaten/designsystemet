@@ -57,8 +57,8 @@ const meta = {
     },
     hasResultContentFullWidth: { table: { category: category.props } },
   },
-  tags: ['autodocs'],
   parameters: {
+    docs: { source: { code: null } },
     version: getVersion('ds-collections'),
   },
 } satisfies Meta<typeof StepList.Step>;

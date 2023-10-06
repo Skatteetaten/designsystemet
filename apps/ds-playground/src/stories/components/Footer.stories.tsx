@@ -1,13 +1,13 @@
 import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { Footer } from '@skatteetaten/ds-layout';
 import { Paragraph, Heading } from '@skatteetaten/ds-typography';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import logo from '../__tests__/testUtils/Skatteetaten-Logo-Horisontal-RGB-Hvit.png';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: Footer,
   title: 'Komponenter/Footer/Footer',
   argTypes: {
@@ -24,57 +24,20 @@ const meta = {
     secondColumn: { table: { category: category.props } },
     thirdColumn: { table: { category: category.props } },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-layout'),
   },
 } satisfies Meta<typeof Footer>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-const TemplateExample: StoryFn<typeof Footer> = (args) => (
-  <Footer {...args}>
-    <Footer.LinkFirstColumn href={'#'}>
-      {'Jobb i Skatteetaten'}
-    </Footer.LinkFirstColumn>
-    <Footer.LinkFirstColumn href={'#'}>{'Om oss'}</Footer.LinkFirstColumn>
-    <Footer.LinkFirstColumn href={'#'}>
-      {'Analyse og rapporter'}
-    </Footer.LinkFirstColumn>
-    <Footer.LinkFirstColumn href={'#'}>{'Forskning'}</Footer.LinkFirstColumn>
-    <Footer.Logo>
-      <img className={'logoHeight'} src={logo} alt={'Skatteetaten logo'} />
-    </Footer.Logo>
-    <Footer.Link href={'#'}>{'Satser'}</Footer.Link>
-    <Footer.Link href={'#'}>{'Skjema og tjenester'}</Footer.Link>
-    <Footer.Link href={'#'}>{'RSS'}</Footer.Link>
-    <Footer.Link href={'#'}>{'Tips oss'}</Footer.Link>
-    <Footer.Link href={'#'} isExternal>
-      {'Koronatiltak'}
-    </Footer.Link>
-  </Footer>
+export const Default: StoryFn<typeof Footer> = () => (
+  <Footer titleFirstColumn={'Om Skatteetaten'} />
 );
 
-export const FooterDefault = {
-  name: 'Default',
-  args: {
-    titleFirstColumn: 'Om Skatteetaten',
-    firstColumn: '',
-    secondColumn: '',
-    thirdColumn: '',
-  },
-} satisfies Story;
-
-export const FooterExample = {
-  render: TemplateExample,
-  name: 'Example',
-  parameters: {
-    controls: { disable: true },
-  },
-  args: {
-    titleFirstColumn: 'Om Skatteetaten',
-    titleSecondColumn: 'Følg oss',
-    secondColumn: (
+export const Example: StoryFn<typeof Footer> = () => (
+  <Footer
+    titleFirstColumn={'Om Skatteetaten'}
+    titleSecondColumn={'Følg oss'}
+    secondColumn={
       <>
         <Paragraph hasSpacing>
           {'Du kan kontakte oss i sosiale medier.'}
@@ -85,9 +48,9 @@ export const FooterExample = {
           </LinkGroup.Link>
         </LinkGroup>
       </>
-    ),
-    titleThirdColumn: 'Presse',
-    thirdColumn: (
+    }
+    titleThirdColumn={'Presse'}
+    thirdColumn={
       <>
         <Paragraph hasSpacing>
           {
@@ -111,6 +74,25 @@ export const FooterExample = {
           </LinkGroup.Link>
         </LinkGroup>
       </>
-    ),
-  },
-} satisfies Story;
+    }
+  >
+    <Footer.LinkFirstColumn href={'#'}>
+      {'Jobb i Skatteetaten'}
+    </Footer.LinkFirstColumn>
+    <Footer.LinkFirstColumn href={'#'}>{'Om oss'}</Footer.LinkFirstColumn>
+    <Footer.LinkFirstColumn href={'#'}>
+      {'Analyse og rapporter'}
+    </Footer.LinkFirstColumn>
+    <Footer.LinkFirstColumn href={'#'}>{'Forskning'}</Footer.LinkFirstColumn>
+    <Footer.Logo>
+      <img className={'logoHeight'} src={logo} alt={'Skatteetaten logo'} />
+    </Footer.Logo>
+    <Footer.Link href={'#'}>{'Satser'}</Footer.Link>
+    <Footer.Link href={'#'}>{'Skjema og tjenester'}</Footer.Link>
+    <Footer.Link href={'#'}>{'RSS'}</Footer.Link>
+    <Footer.Link href={'#'}>{'Tips oss'}</Footer.Link>
+    <Footer.Link href={'#'} isExternal>
+      {'Koronatiltak'}
+    </Footer.Link>
+  </Footer>
+);

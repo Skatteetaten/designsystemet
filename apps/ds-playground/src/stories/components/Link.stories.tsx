@@ -1,13 +1,12 @@
 import { Link } from '@skatteetaten/ds-buttons';
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
-import { action } from '@storybook/addon-actions';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: Link,
   title: 'Komponenter/Link',
   argTypes: {
@@ -43,19 +42,16 @@ const meta = {
     // Events
     onClick: { ...htmlEventDescription },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-buttons'),
   },
 } satisfies Meta<typeof Link>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: StoryFn<typeof Link> = (args) => (
-  <Link {...args} onClick={action('KlikkEvent Link')} />
+export const Default: StoryFn<typeof Link> = () => (
+  <Link href={'#'}>{'Er du pendler?'}</Link>
 );
 
-const TemplateExample: StoryFn<typeof Link> = () => (
+export const Example: StoryFn<typeof Link> = () => (
   <>
     <div className={'exampleSpacing'}>
       <Link href={'#link'}>
@@ -74,24 +70,3 @@ const TemplateExample: StoryFn<typeof Link> = () => (
     </div>
   </>
 );
-
-export const LinkDefault = {
-  render: TemplateDefault,
-  name: 'Default',
-  args: {
-    href: '#',
-    children: 'Er du pendler?',
-  },
-} satisfies Story;
-
-export const LinkExample = {
-  render: TemplateExample,
-  name: 'Example',
-  args: {
-    children: 'dummy',
-    href: '#',
-  },
-  parameters: {
-    controls: { disable: true },
-  },
-} satisfies Story;

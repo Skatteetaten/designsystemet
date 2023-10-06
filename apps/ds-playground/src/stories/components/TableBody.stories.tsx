@@ -11,8 +11,8 @@ const meta = {
     // Props
     children: { table: { category: category.props } },
   },
-  tags: ['autodocs'],
   parameters: {
+    docs: { source: { code: null } },
     version: getVersion('ds-table'),
   },
 } satisfies Meta<typeof Table.Body>;

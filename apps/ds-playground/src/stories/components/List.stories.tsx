@@ -4,16 +4,13 @@ import {
   listAsArr,
   Paragraph,
 } from '@skatteetaten/ds-typography';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: List,
-  subcomponents: {
-    'List.Element': List.Element,
-  },
   title: 'Komponenter/List',
   argTypes: {
     // Props
@@ -36,16 +33,13 @@ const meta = {
       table: { category: category.props },
     },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-typography'),
   },
 } as Meta<typeof List>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: StoryFn<typeof List> = (args) => (
-  <List {...args}>
+export const Default: StoryFn<typeof List> = () => (
+  <List>
     <List.Element key={'listElement_1'}>
       {'Kjenner du behovet til brukeren?'}
     </List.Element>
@@ -56,7 +50,7 @@ const TemplateDefault: StoryFn<typeof List> = (args) => (
   </List>
 );
 
-const TemplateExample: StoryFn<typeof List> = () => (
+export const Example: StoryFn<typeof List> = () => (
   <>
     <Paragraph hasSpacing>{'På Min side finner du'}</Paragraph>
     <List hasSpacing>
@@ -85,19 +79,3 @@ const TemplateExample: StoryFn<typeof List> = () => (
     </Paragraph>
   </>
 );
-
-export const ListDefault = {
-  render: TemplateDefault,
-  name: 'Default',
-  args: {
-    as: getListAsDefault(),
-  },
-} satisfies Story;
-
-export const ListExample = {
-  render: TemplateExample,
-  name: 'Example',
-  parameters: {
-    controls: { disable: true },
-  },
-} satisfies Story;
