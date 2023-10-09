@@ -187,7 +187,7 @@ export const WithCustomClassNames = {
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults Variant Standard (A1 delvis, A2 delvis, B2, FS-A2)',
+  name: 'Defaults Variant Medium (A1 delvis, A2 delvis, B2, FS-A2)',
 
   args: {
     ...defaultArgs,
