@@ -1,6 +1,11 @@
 import { useState } from 'react';
 
-import { TextField, textFieldAsArr } from '@skatteetaten/ds-forms';
+import { formArrSize } from '@skatteetaten/ds-core-utils';
+import {
+  TextField,
+  textFieldAsArr,
+  getTextFieldVariantDefault,
+} from '@skatteetaten/ds-forms';
 import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn } from '@storybook/react';
 
@@ -17,6 +22,14 @@ export default {
       table: { category: category.props },
       options: [...textFieldAsArr],
       control: 'inline-radio',
+    },
+    variant: {
+      options: [...formArrSize],
+      control: 'inline-radio',
+      table: {
+        category: category.props,
+        defaultValue: { summary: getTextFieldVariantDefault() },
+      },
     },
     autosize: { table: { category: category.props } },
     classNames: {
@@ -37,12 +50,6 @@ export default {
     },
     helpText: { table: { category: category.props } },
     hideLabel: {
-      control: 'boolean',
-      table: {
-        category: category.props,
-      },
-    },
-    isLarge: {
       control: 'boolean',
       table: {
         category: category.props,

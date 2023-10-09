@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import { formArrSize } from '@skatteetaten/ds-core-utils';
 import {
   TextboxRefHandle,
   TextField,
@@ -38,6 +39,11 @@ const meta = {
       options: [...textFieldAsArr],
       control: 'inline-radio',
     },
+    variant: {
+      table: { disable: true },
+      options: [...formArrSize],
+      control: 'inline-radio',
+    },
     autosize: { table: { disable: true } },
     classNames: {
       table: { disable: true },
@@ -52,7 +58,6 @@ const meta = {
     },
     helpText: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
-    isLarge: { table: { disable: true } },
     label: { table: { disable: true } },
     showRequiredMark: { table: { disable: true } },
     thousandSeparator: { table: { disable: true } },
@@ -146,6 +151,7 @@ export const WithCustomClassNames = {
   args: {
     ...defaultArgs,
     classNames: {
+      container: ' dummyClassname',
       label: 'dummyClassname',
       textbox: 'dummyClassname',
       errorMessage: 'dummyClassname',
@@ -162,6 +168,10 @@ export const WithCustomClassNames = {
 
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
+    // eslint-disable-next-line testing-library/no-node-access
+    const container = canvasElement.querySelector(`${wrapper} > div`);
+    await expect(container).toHaveClass('dummyClassname');
+
     const textbox = canvas.getByRole('textbox');
     await expect(textbox).toHaveClass('dummyClassname');
 
@@ -177,7 +187,7 @@ export const WithCustomClassNames = {
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults (A1 delvis, A2 delvis, B2, FS-A2)',
+  name: 'Defaults Variant Medium (A1 delvis, A2 delvis, B2, FS-A2)',
 
   args: {
     ...defaultArgs,
@@ -209,6 +219,19 @@ export const Defaults = {
       '[id^=textFieldErrorId]'
     );
     await expect(errorMessageContainer).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithVariantLarge = {
+  name: 'With Variant Large (A1 delvis)',
+
+  args: {
+    ...defaultArgs,
+    variant: 'large',
+  },
+
+  argTypes: {
+    variant: { table: { disable: false } },
   },
 } satisfies Story;
 
@@ -548,19 +571,6 @@ export const WithHideLabel = {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox', { name: defaultLabelText });
     await expect(textbox).toBeInTheDocument();
-  },
-} satisfies Story;
-
-export const WithIsLarge = {
-  name: 'With IsLarge (A1 delvis)',
-
-  args: {
-    ...defaultArgs,
-    isLarge: true,
-  },
-
-  argTypes: {
-    isLarge: { table: { disable: false } },
   },
 } satisfies Story;
 
