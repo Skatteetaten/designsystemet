@@ -5,6 +5,7 @@ import {
   TextField,
   TextFieldProps,
   textFieldAsArr,
+  getTextFieldVariantDefault,
 } from '@skatteetaten/ds-forms';
 import { useArgs } from '@storybook/preview-api';
 import { StoryObj, Meta, StoryFn } from '@storybook/react';
@@ -28,6 +29,7 @@ const meta = {
       control: 'inline-radio',
       table: {
         category: category.props,
+        defaultValue: { summary: getTextFieldVariantDefault() },
       },
     },
     autosize: { table: { category: category.props } },

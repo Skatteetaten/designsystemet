@@ -159,4 +159,4 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
 
 TextField.displayName = 'TextField';
 
-export { getTextFieldAsDefault };
+export { getTextFieldAsDefault, getTextFieldVariantDefault };
