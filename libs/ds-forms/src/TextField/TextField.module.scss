@@ -39,24 +39,24 @@
   }
 
   &:hover {
-    box-shadow: inset 0 0 0 2px var(--palette-graphite-100);
-    outline: 2px solid var(--palette-azure-10);
+    box-shadow: inset 0 0 0 2px var(--semantic-page-foreground);
+    outline: 2px solid var(--semantic-interactive-background);
   }
 
   &:focus {
-    box-shadow: inset 0 0 0 2px var(--palette-azure-70);
-    outline: 2px solid var(--palette-azure-10);
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+    outline: 2px solid var(--semantic-interactive-background);
 
     &::selection {
-      background: var(--palette-azure-10);
+      background: var(--semantic-interactive-background);
     }
   }
 
   &:disabled,
   &:disabled:hover {
-    background: var(--palette-graphite-10);
-    box-shadow: inset 0 0 0 1px var(--palette-graphite-50);
-    color: var(--palette-graphite-50);
+    background: var(--semantic-disabled-background);
+    box-shadow: inset 0 0 0 1px var(--semantic-disabled-foreground);
+    color: var(--semantic-disabled-foreground);
     cursor: not-allowed;
     outline: 0;
   }

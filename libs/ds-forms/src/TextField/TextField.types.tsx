@@ -5,7 +5,7 @@ import {
   RefObject,
 } from 'react';
 
-import { BaseProps } from '@skatteetaten/ds-core-utils';
+import { BaseProps, FormSize } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 
@@ -60,8 +60,8 @@ export interface TextFieldCommonProps
   helpSvgPath?: LabelWithHelpProps['helpSvgPath'];
   /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
-  /** Tykkere textbox-ramme og litt mer padding hvis det er input-element */
-  isLarge?: boolean;
+  /** Definerer stilen til TextField */
+  variant?: FormSize;
 }
 
 type TextFieldDiscriminatedProps =
@@ -86,7 +86,7 @@ type TextFieldDiscriminatedProps =
 
 type TextFieldDiscriminatedRequiredProps =
   | {
-      required: boolean;
+      required: true;
       /** Om obligatorisk TextField skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
       showRequiredMark?: boolean;
     }
