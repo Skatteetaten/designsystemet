@@ -86,7 +86,7 @@ type TextFieldDiscriminatedProps =
 
 type TextFieldDiscriminatedRequiredProps =
   | {
-      required: boolean;
+      required: true;
       /** Om obligatorisk TextField skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
       showRequiredMark?: boolean;
     }
