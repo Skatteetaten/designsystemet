@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import { formArrSize } from '@skatteetaten/ds-core-utils';
 import {
   TextField,
   TextFieldProps,
@@ -22,6 +23,13 @@ const meta = {
       options: [...textFieldAsArr],
       control: 'inline-radio',
     },
+    variant: {
+      options: [...formArrSize],
+      control: 'inline-radio',
+      table: {
+        category: category.props,
+      },
+    },
     autosize: { table: { category: category.props } },
     classNames: {
       table: { category: category.props },
@@ -41,12 +49,6 @@ const meta = {
     },
     helpText: { table: { category: category.props } },
     hideLabel: {
-      control: 'boolean',
-      table: {
-        category: category.props,
-      },
-    },
-    isLarge: {
       control: 'boolean',
       table: {
         category: category.props,

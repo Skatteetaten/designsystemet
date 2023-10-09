@@ -6,7 +6,7 @@ import {
   Languages,
 } from '@skatteetaten/ds-core-utils';
 
-import { getTextFieldAsDefault } from './defaults';
+import { getTextFieldAsDefault, getTextFieldVariantDefault } from './defaults';
 import { TextboxRefHandle, TextFieldProps } from './TextField.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
@@ -30,6 +30,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       label,
       thousandSeparator,
       titleHelpSvg,
+      variant = getTextFieldVariantDefault(),
       autoComplete,
       defaultValue,
       disabled,
@@ -45,7 +46,6 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       value,
       hasError,
       hideLabel,
-      isLarge,
       showRequiredMark,
       onBlur,
       onChange,
@@ -93,6 +93,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       value = addSpacesOrCommas(removeNonNumeric(value.toString()));
     }
 
+    const isLarge = variant === 'large';
     const largeTextboxClassName = isLarge ? styles.textbox_large : '';
     const multilineTextboxClassName =
       Tag === 'textarea' ? styles.textbox_multiline : '';
