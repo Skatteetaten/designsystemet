@@ -14,6 +14,7 @@ const meta = {
   },
   tags: ['autodocs'],
   parameters: {
+    docs: { source: { code: null } },
     version: getVersion('ds-layout'),
   },
 } satisfies Meta<typeof Link>;

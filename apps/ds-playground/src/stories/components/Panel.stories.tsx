@@ -16,14 +16,14 @@ import {
 import { headingAsArr, subheadingAsArr } from '@skatteetaten/ds-core-utils';
 import { CheckIcon } from '@skatteetaten/ds-icons';
 import { Paragraph } from '@skatteetaten/ds-typography';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import illustrationSource from '../__tests__/testUtils/test_bonde.svg';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: Panel,
   title: 'Komponenter/Panel',
   argTypes: {
@@ -105,22 +105,14 @@ const meta = {
       },
     },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-content'),
   },
 } satisfies Meta<typeof Panel>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-export const PanelDefault = {
-  name: 'Default',
-  args: {
-    children: loremIpsum,
-  },
-} satisfies Story;
+export const Default: StoryFn<typeof Panel> = () => <Panel>{loremIpsum}</Panel>;
 
-const TemplateExample: StoryFn<typeof Panel> = () => (
+export const Example: StoryFn<typeof Panel> = () => (
   <>
     <Panel
       title={'Når kommer skattepengene'}
@@ -162,15 +154,3 @@ const TemplateExample: StoryFn<typeof Panel> = () => (
     </Panel>
   </>
 );
-
-export const PanelExample = {
-  render: TemplateExample,
-  name: 'Example',
-
-  args: {
-    children: 'dummy',
-  },
-  parameters: {
-    controls: { disabled: true },
-  },
-} satisfies Story;

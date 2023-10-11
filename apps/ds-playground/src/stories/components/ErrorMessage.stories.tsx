@@ -1,17 +1,13 @@
 import { useState } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import {
-  ErrorMessage,
-  ErrorMessageProps,
-  TextField,
-} from '@skatteetaten/ds-forms';
-import { StoryObj, Meta, StoryFn } from '@storybook/react';
+import { ErrorMessage, TextField } from '@skatteetaten/ds-forms';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: ErrorMessage,
   title: 'Komponenter/ErrorMessage',
   argTypes: {
@@ -27,14 +23,16 @@ const meta = {
   args: {
     children: '',
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-forms'),
   },
 } satisfies Meta<typeof ErrorMessage>;
-export default meta;
 
-const TemplateExample: StoryFn<ErrorMessageProps> = () => {
+export const Default: StoryFn<typeof ErrorMessage> = () => (
+  <ErrorMessage showError>{'Feilmelding'}</ErrorMessage>
+);
+
+export const Example: StoryFn<typeof ErrorMessage> = () => {
   const [state, setState] = useState({
     hasError: false,
   });
@@ -59,20 +57,3 @@ const TemplateExample: StoryFn<ErrorMessageProps> = () => {
     </>
   );
 };
-
-type Story = StoryObj<typeof meta>;
-export const ErrorMessageDefault = {
-  name: 'Default',
-  args: {
-    children: 'Feilmelding',
-    showError: true,
-  },
-} satisfies Story;
-
-export const ErrorMessageExample = {
-  render: TemplateExample,
-  name: 'Example',
-  parameters: {
-    controls: { disable: true },
-  },
-} satisfies Story;

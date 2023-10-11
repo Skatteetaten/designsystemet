@@ -1,0 +1,32 @@
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as TableStories from './Table.stories';
+
+<Meta of={TableStories} />
+
+# Table
+
+<Controls />
+
+## Default
+
+<Canvas of={TableStories.Default} />
+
+## Variants
+
+<Canvas of={TableStories.Variants} />
+
+## Sortable
+
+<Canvas of={TableStories.Sortable} />
+
+## Expandable
+
+<Canvas of={TableStories.Expandable} />
+
+## Editable
+
+<Canvas of={TableStories.Editable} />
+
+## With Empty Headers
+
+<Canvas of={TableStories.WithEmptyHeaders} />
