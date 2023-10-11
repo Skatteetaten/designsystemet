@@ -12,7 +12,7 @@ export const ListElement = forwardRef<HTMLLIElement, ListElementProps>(
       id,
       className = getCommonClassNameDefault(),
       lang,
-      'data-testid': dataTestid,
+      'data-testid': dataTestId,
       children,
     },
     ref
@@ -23,7 +23,7 @@ export const ListElement = forwardRef<HTMLLIElement, ListElementProps>(
         id={id}
         className={`${styles.element} ${className}`}
         lang={lang}
-        data-testid={dataTestid}
+        data-testid={dataTestId}
       >
         {children}
       </li>

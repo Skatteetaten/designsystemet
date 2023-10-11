@@ -1,23 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tester/List/Element WithAttributes play-test 1`] = `
-<ul data-test-block="true">
-  <li id="htmlid"
-      class="ListElement_element__B0xdX dummyClassname"
-      lang="nb"
-      data-testid="123ID"
-  >
-    Kjenner du behovet til brukeren?
-  </li>
-</ul>
+<div data-test-block="true">
+  <ul>
+    <li id="htmlid"
+        class="ListElement_element__B0xdX dummyClassname"
+        lang="nb"
+        data-testid="123ID"
+    >
+      Kjenner du behovet til brukeren?
+    </li>
+  </ul>
+</div>
 `;
 
 exports[`Tester/List/Element WithRef play-test 1`] = `
-<ul data-test-block="true">
-  <li class="ListElement_element__B0xdX "
-      id="dummyIdForwardedFromRef"
-  >
-    Kjenner du behovet til brukeren?
-  </li>
-</ul>
+<div data-test-block="true">
+  <ul>
+    <li class="ListElement_element__B0xdX "
+        id="dummyIdForwardedFromRef"
+    >
+      Kjenner du behovet til brukeren?
+    </li>
+  </ul>
+</div>
 `;

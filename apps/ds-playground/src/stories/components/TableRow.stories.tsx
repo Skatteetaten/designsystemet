@@ -3,12 +3,12 @@ import {
   getTableRowExpandButtonPositionDefault,
   Table,
 } from '@skatteetaten/ds-table';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Table.Row,
   title: 'komponenter/Table/Row',
   argTypes: {
@@ -61,17 +61,15 @@ export default {
       },
     },
   },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-table'),
-    docs: {
-      source: {
-        type: 'code',
-      },
-    },
   },
-} as ComponentMeta<typeof Table.Row>;
+} as Meta<typeof Table.Row>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: ComponentStory<typeof Table.Row> = (args) => (
+const TemplateDefault: StoryFn<typeof Table.Row> = (args) => (
   <Table caption={'row example'}>
     <Table.Body>
       <Table.Row {...args}>
@@ -82,5 +80,7 @@ const TemplateDefault: ComponentStory<typeof Table.Row> = (args) => (
   </Table>
 );
 
-export const TableRowDefault = TemplateDefault.bind({});
-TableRowDefault.storyName = 'Default';
+export const TableRowDefault = {
+  render: TemplateDefault,
+  name: 'Default',
+} satisfies Story;

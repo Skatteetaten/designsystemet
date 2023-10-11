@@ -1,0 +1,498 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/ErrorSummary/ErrorSummary Defaults play-test 1`] = `
+<div data-test-block="true">
+  <div aria-live="assertive"
+       tabindex="-1"
+       aria-atomic="true"
+  >
+  </div>
+</div>
+`;
+
+exports[`Tester/ErrorSummary/ErrorSummary WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <div id="htmlId"
+       lang="nb"
+       data-testid="123ID"
+       aria-live="assertive"
+       tabindex="-1"
+       aria-atomic="true"
+  >
+    <div class="ErrorSummary_errorSummary__vciMR dummyClassname">
+      <div class="ErrorSummary_iconContainer__Jhnlg">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o ErrorSummary_icon__vHubL"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+          </path>
+        </svg>
+      </div>
+      <div class="ErrorSummary_summaryContainer__1LXQT">
+        <h2 class="Heading_heading__7K0um Heading_heading_level4__KEMPA Heading_heading_hasSpacingSmall__ofrX+ ">
+          For å gå videre må du rette opp 0 feil:
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/ErrorSummary/ErrorSummary WithChildren play-test 1`] = `
+<div data-test-block="true">
+  <div aria-live="assertive"
+       tabindex="-1"
+       aria-atomic="true"
+  >
+    <div class="ErrorSummary_errorSummary__vciMR ">
+      <div class="ErrorSummary_iconContainer__Jhnlg">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o ErrorSummary_icon__vHubL"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+          </path>
+        </svg>
+      </div>
+      <div class="ErrorSummary_summaryContainer__1LXQT">
+        <h2 class="Heading_heading__7K0um Heading_heading_level4__KEMPA Heading_heading_hasSpacingSmall__ofrX+ ">
+          For å gå videre må du rette opp 2 feil:
+        </h2>
+        <ul class="LinkGroup_linkGroup__ZiEgs   ">
+          <li class="LinkGroup_linkGroupItem__Y7SjF">
+            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+                 viewbox="0 0 24 24"
+                 focusable="false"
+                 aria-hidden="true"
+                 role="img"
+            >
+              <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+              </path>
+            </svg>
+            <a class="Link_link__jeUpY  "
+               href="#id_1"
+            >
+              Husk å fylle ut type varer
+            </a>
+          </li>
+          <li class="LinkGroup_linkGroupItem__Y7SjF">
+            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+                 viewbox="0 0 24 24"
+                 focusable="false"
+                 aria-hidden="true"
+                 role="img"
+            >
+              <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+              </path>
+            </svg>
+            <a class="Link_link__jeUpY  "
+               href="#id_2"
+            >
+              Selger du varer og tjenester for egen regning?
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContent smoke-test 1`] = `
+<div data-test-block="true">
+  <div aria-live="assertive"
+       tabindex="-1"
+       aria-atomic="true"
+  >
+    <div class="ErrorSummary_errorSummary__vciMR ">
+      <div class="ErrorSummary_iconContainer__Jhnlg">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o ErrorSummary_icon__vHubL"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+          </path>
+        </svg>
+      </div>
+      <div class="ErrorSummary_summaryContainer__1LXQT">
+        <h2 class="Heading_heading__7K0um Heading_heading_level4__KEMPA Heading_heading_hasSpacingSmall__ofrX+ ">
+          For å gå videre må du rette opp 2 feil:
+        </h2>
+        <ul class="LinkGroup_linkGroup__ZiEgs   ">
+          <li class="LinkGroup_linkGroupItem__Y7SjF">
+            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+                 viewbox="0 0 24 24"
+                 focusable="false"
+                 aria-hidden="true"
+                 role="img"
+            >
+              <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+              </path>
+            </svg>
+            <a class="Link_link__jeUpY  "
+               href="#id_1"
+            >
+              Husk å fylle ut type varer
+            </a>
+          </li>
+          <li class="LinkGroup_linkGroupItem__Y7SjF">
+            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+                 viewbox="0 0 24 24"
+                 focusable="false"
+                 aria-hidden="true"
+                 role="img"
+            >
+              <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+              </path>
+            </svg>
+            <a class="Link_link__jeUpY  "
+               href="#id_2"
+            >
+              Selger du varer og tjenester for egen regning?
+            </a>
+          </li>
+        </ul>
+        <div class="ErrorSummary_content__jEDZS ">
+          <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
+            Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentBreakpointXs smoke-test 1`] = `
+<div data-test-block="true">
+  <div aria-live="assertive"
+       tabindex="-1"
+       aria-atomic="true"
+  >
+    <div class="ErrorSummary_errorSummary__vciMR ">
+      <div class="ErrorSummary_iconContainer__Jhnlg">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o ErrorSummary_icon__vHubL"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+          </path>
+        </svg>
+      </div>
+      <div class="ErrorSummary_summaryContainer__1LXQT">
+        <h2 class="Heading_heading__7K0um Heading_heading_level4__KEMPA Heading_heading_hasSpacingSmall__ofrX+ ">
+          For å gå videre må du rette opp 2 feil:
+        </h2>
+        <ul class="LinkGroup_linkGroup__ZiEgs   ">
+          <li class="LinkGroup_linkGroupItem__Y7SjF">
+            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+                 viewbox="0 0 24 24"
+                 focusable="false"
+                 aria-hidden="true"
+                 role="img"
+            >
+              <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+              </path>
+            </svg>
+            <a class="Link_link__jeUpY  "
+               href="#id_1"
+            >
+              Husk å fylle ut type varer
+            </a>
+          </li>
+          <li class="LinkGroup_linkGroupItem__Y7SjF">
+            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+                 viewbox="0 0 24 24"
+                 focusable="false"
+                 aria-hidden="true"
+                 role="img"
+            >
+              <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+              </path>
+            </svg>
+            <a class="Link_link__jeUpY  "
+               href="#id_2"
+            >
+              Selger du varer og tjenester for egen regning?
+            </a>
+          </li>
+        </ul>
+        <div class="ErrorSummary_content__jEDZS ">
+          <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
+            Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentMobile smoke-test 1`] = `
+<div data-test-block="true">
+  <div aria-live="assertive"
+       tabindex="-1"
+       aria-atomic="true"
+  >
+    <div class="ErrorSummary_errorSummary__vciMR ">
+      <div class="ErrorSummary_iconContainer__Jhnlg">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o ErrorSummary_icon__vHubL"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+          </path>
+        </svg>
+      </div>
+      <div class="ErrorSummary_summaryContainer__1LXQT">
+        <h2 class="Heading_heading__7K0um Heading_heading_level4__KEMPA Heading_heading_hasSpacingSmall__ofrX+ ">
+          For å gå videre må du rette opp 2 feil:
+        </h2>
+        <ul class="LinkGroup_linkGroup__ZiEgs   ">
+          <li class="LinkGroup_linkGroupItem__Y7SjF">
+            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+                 viewbox="0 0 24 24"
+                 focusable="false"
+                 aria-hidden="true"
+                 role="img"
+            >
+              <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+              </path>
+            </svg>
+            <a class="Link_link__jeUpY  "
+               href="#id_1"
+            >
+              Husk å fylle ut type varer
+            </a>
+          </li>
+          <li class="LinkGroup_linkGroupItem__Y7SjF">
+            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+                 viewbox="0 0 24 24"
+                 focusable="false"
+                 aria-hidden="true"
+                 role="img"
+            >
+              <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+              </path>
+            </svg>
+            <a class="Link_link__jeUpY  "
+               href="#id_2"
+            >
+              Selger du varer og tjenester for egen regning?
+            </a>
+          </li>
+        </ul>
+        <div class="ErrorSummary_content__jEDZS ">
+          <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
+            Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/ErrorSummary/ErrorSummary WithContent play-test 1`] = `
+<div data-test-block="true">
+  <div aria-live="assertive"
+       tabindex="-1"
+       aria-atomic="true"
+  >
+    <div class="ErrorSummary_errorSummary__vciMR ">
+      <div class="ErrorSummary_iconContainer__Jhnlg">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o ErrorSummary_icon__vHubL"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+          </path>
+        </svg>
+      </div>
+      <div class="ErrorSummary_summaryContainer__1LXQT">
+        <h2 class="Heading_heading__7K0um Heading_heading_level4__KEMPA Heading_heading_hasSpacingSmall__ofrX+ ">
+          Inntektsmottaker inneholder 2 feil:
+        </h2>
+        <div class="ErrorSummary_content__jEDZS ErrorSummary_contentWithoutChildren__mZUdF">
+          <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
+            Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/ErrorSummary/ErrorSummary WithInput play-test 1`] = `
+<div data-test-block="true">
+  <div class="bottomSpacingXL">
+    <label id="labelId-:rj:"
+           class="LabelWithHelp_label__59tP-"
+           for="input_aar"
+    >
+      År
+    </label>
+    <input id="input_aar"
+           class="TextField_textbox__qbZlk"
+           required
+           aria-describedby="textFieldErrorId-:rh:"
+           aria-invalid="true"
+           value="1009"
+    >
+    <div id="textFieldErrorId-:rh:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+      <div class="ErrorMessage_errorMessage__508oW ">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+          </path>
+        </svg>
+        <p class="ErrorMessage_errorMessageText__e27TU">
+          Inntekståret må være etter 2008
+        </p>
+      </div>
+    </div>
+  </div>
+  <div aria-live="assertive"
+       tabindex="-1"
+       aria-atomic="true"
+  >
+    <div class="ErrorSummary_errorSummary__vciMR ">
+      <div class="ErrorSummary_iconContainer__Jhnlg">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o ErrorSummary_icon__vHubL"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+          </path>
+        </svg>
+      </div>
+      <div class="ErrorSummary_summaryContainer__1LXQT">
+        <h2 class="Heading_heading__7K0um Heading_heading_level4__KEMPA Heading_heading_hasSpacingSmall__ofrX+ ">
+          For å gå videre må du rette opp 1 feil:
+        </h2>
+        <ul class="LinkGroup_linkGroup__ZiEgs   ">
+          <li class="LinkGroup_linkGroupItem__Y7SjF">
+            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+                 viewbox="0 0 24 24"
+                 focusable="false"
+                 aria-hidden="true"
+                 role="img"
+            >
+              <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+              </path>
+            </svg>
+            <a class="Link_link__jeUpY  "
+               href="#input_aar"
+            >
+              Inntekståret må være etter 2008
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/ErrorSummary/ErrorSummary WithRef play-test 1`] = `
+<div data-test-block="true">
+  <div aria-live="assertive"
+       tabindex="-1"
+       aria-atomic="true"
+       id="dummyIdForwardedFromRef"
+  >
+  </div>
+</div>
+`;
+
+exports[`Tester/ErrorSummary/ErrorSummary WithShadowRootNode play-test 1`] = `
+<div data-test-block="true">
+  <errorsummary-customelement>
+  </errorsummary-customelement>
+</div>
+`;
+
+exports[`Tester/ErrorSummary/ErrorSummary WithTitleAs play-test 1`] = `
+<div data-test-block="true">
+  <div aria-live="assertive"
+       tabindex="-1"
+       aria-atomic="true"
+  >
+    <div class="ErrorSummary_errorSummary__vciMR ">
+      <div class="ErrorSummary_iconContainer__Jhnlg">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o ErrorSummary_icon__vHubL"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+          </path>
+        </svg>
+      </div>
+      <div class="ErrorSummary_summaryContainer__1LXQT">
+        <h1 class="Heading_heading__7K0um Heading_heading_level4__KEMPA Heading_heading_hasSpacingSmall__ofrX+ ">
+          For å gå videre må du rette opp 2 feil:
+        </h1>
+        <ul class="LinkGroup_linkGroup__ZiEgs   ">
+          <li class="LinkGroup_linkGroupItem__Y7SjF">
+            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+                 viewbox="0 0 24 24"
+                 focusable="false"
+                 aria-hidden="true"
+                 role="img"
+            >
+              <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+              </path>
+            </svg>
+            <a class="Link_link__jeUpY  "
+               href="#id_1"
+            >
+              Husk å fylle ut type varer
+            </a>
+          </li>
+          <li class="LinkGroup_linkGroupItem__Y7SjF">
+            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz LinkGroup_icon__cSIB- LinkGroup_icon_forward__ErPTi "
+                 viewbox="0 0 24 24"
+                 focusable="false"
+                 aria-hidden="true"
+                 role="img"
+            >
+              <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+              </path>
+            </svg>
+            <a class="Link_link__jeUpY  "
+               href="#id_2"
+            >
+              Selger du varer og tjenester for egen regning?
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;

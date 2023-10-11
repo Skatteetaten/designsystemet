@@ -5,13 +5,13 @@ import {
 import { positionArr } from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath, CancelSVGpath } from '@skatteetaten/ds-icons';
 import { action } from '@storybook/addon-actions';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: InlineButton,
   title: 'Komponenter/InlineButton',
   argTypes: {
@@ -54,17 +54,20 @@ export default {
     onFocus: { ...htmlEventDescription },
     onBlur: { ...htmlEventDescription },
   },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-buttons'),
   },
-} as ComponentMeta<typeof InlineButton>;
+} satisfies Meta<typeof InlineButton>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: ComponentStory<typeof InlineButton> = (args) => (
+const TemplateDefault: StoryFn<typeof InlineButton> = (args) => (
   <InlineButton {...args} onClick={action('klikkEvent InlineButton')}>
     {args.children}
   </InlineButton>
 );
-const TemplateExample: ComponentStory<typeof InlineButton> = () => (
+const TemplateExample: StoryFn<typeof InlineButton> = () => (
   <div className={'flex'}>
     <InlineButton className={'exampleSpacing'} svgPath={AddOutlineSVGpath}>
       {'Legg til'}
@@ -79,15 +82,22 @@ const TemplateExample: ComponentStory<typeof InlineButton> = () => (
   </div>
 );
 
-export const InlineButtonDefault = TemplateDefault.bind({});
-export const InlineButtonExample = TemplateExample.bind({});
-InlineButtonDefault.storyName = 'Default';
-InlineButtonExample.storyName = 'Example';
-InlineButtonExample.parameters = {
-  controls: { disabled: true },
-};
+export const InlineButtonDefault = {
+  render: TemplateDefault,
+  name: 'Default',
+  args: {
+    children: 'Legg til rapport',
+    iconPosition: getInlineButtonPositionDefault(),
+  },
+} satisfies Story;
 
-InlineButtonDefault.args = {
-  children: 'Legg til rapport',
-  iconPosition: getInlineButtonPositionDefault(),
-};
+export const InlineButtonExample = {
+  render: TemplateExample,
+  name: 'Example',
+  args: {
+    children: 'dummy',
+  },
+  parameters: {
+    controls: { disable: true },
+  },
+} satisfies Story;

@@ -1,9 +1,11 @@
+import { ReactNode } from 'react';
+
 import { BaseProps, LinkColor } from '@skatteetaten/ds-core-utils';
 
 import { LinkProps } from '../Link/Link.types';
 
 export const linkGroupVariantArr = ['list', 'anchors'] as const;
-export type LinkGroupVariant = typeof linkGroupVariantArr[number];
+export type LinkGroupVariant = (typeof linkGroupVariantArr)[number];
 
 export interface LinkGroupComponentCommonProps extends BaseProps {
   /** Margin under lenkegruppen */
@@ -13,7 +15,7 @@ export interface LinkGroupComponentCommonProps extends BaseProps {
   /** Definerer stilen til lenkegruppen. */
   variant?: LinkGroupVariant;
   /** Link-komponenter */
-  children?: JSX.Element | JSX.Element[];
+  children?: ReactNode;
 }
 
 export type LinkGroupProps = LinkGroupComponentCommonProps;

@@ -2,8 +2,8 @@ export default {
   displayName: 'ds-status',
   preset: '../../jest.preset.js',
   transform: {
-    '^.+\\.[tj]sx?$': ['babel-jest', { presets: ['@nrwl/react/babel'] }],
+    '^.+\\.[tj]sx?$': ['babel-jest', { presets: ['@nx/react/babel'] }],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/libs/ds-buttons',
+  coverageDirectory: '../../coverage/libs/ds-status',
 };

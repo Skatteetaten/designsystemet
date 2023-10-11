@@ -1,0 +1,33 @@
+import { ReactNode } from 'react';
+
+import { BaseProps, HeadingAs } from '@skatteetaten/ds-core-utils';
+
+import { ErrorProps } from '../ErrorSummaryError/ErrorSummaryError.types';
+
+export interface ErrorSummaryProps extends BaseProps {
+  /** Liste med feil */
+  children?: JSX.Element | JSX.Element[];
+  /** Valgfritt innhold */
+  content?: ReactNode;
+  /** Mulighet til å angi shadowRootNode slik at fokus kan settes når elementet feilen hører til ligger i shadowDOM */
+  shadowRootNode?: Document | ShadowRoot;
+  /** Om komponenten skal vises */
+  showErrorSummary?: boolean;
+  /** Overskrift */
+  title?: string;
+  /** Rendrer overskriften som heading på gitt nivå */
+  titleAs?: HeadingAs;
+}
+
+export interface ErrorSummaryComponent
+  extends React.ForwardRefExoticComponent<
+    ErrorSummaryProps & React.RefAttributes<HTMLDivElement>
+  > {
+  Error: React.ForwardRefExoticComponent<
+    ErrorProps & React.RefAttributes<HTMLAnchorElement>
+  >;
+}
+
+export interface ErrorSummaryContextProps {
+  shadowRootNode?: Document | ShadowRoot;
+}

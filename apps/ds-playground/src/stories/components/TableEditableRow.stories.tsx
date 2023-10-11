@@ -1,11 +1,11 @@
 import { positionArr } from '@skatteetaten/ds-core-utils';
 import { Table } from '@skatteetaten/ds-table';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Table.EditableRow,
   title: 'komponenter/Table/EditableRow',
   argTypes: {
@@ -26,17 +26,15 @@ export default {
       table: { category: category.aria },
     },
   },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-table'),
-    docs: {
-      source: {
-        type: 'code',
-      },
-    },
   },
-} as ComponentMeta<typeof Table.EditableRow>;
+} satisfies Meta<typeof Table.EditableRow>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: ComponentStory<typeof Table.EditableRow> = (args) => (
+const TemplateDefault: StoryFn<typeof Table.EditableRow> = (args) => (
   <Table caption={'row example'}>
     <Table.Body>
       <Table.EditableRow {...args}>
@@ -47,5 +45,7 @@ const TemplateDefault: ComponentStory<typeof Table.EditableRow> = (args) => (
   </Table>
 );
 
-export const TableRowDefault = TemplateDefault.bind({});
-TableRowDefault.storyName = 'Default';
+export const TableRowDefault = {
+  render: TemplateDefault,
+  name: 'Default',
+} satisfies Story;

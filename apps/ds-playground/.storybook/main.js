@@ -1,57 +1,70 @@
-const BundleAnalyzerPlugin =
-  require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
-const { readFileSync, readdirSync } = require('fs');
-const path = require('node:path');
-
-const rootMain = require('../../../.storybook/main');
+import { readdirSync, readFileSync } from 'fs';
+import path from 'node:path';
 
 function webpackConfigNoChunkTilde(config) {
-  if (config.optimization.runtimeChunk) {
+  if (config.optimization?.runtimeChunk) {
     config.optimization.runtimeChunk = {
       name: ({ name }) => `runtime-${name}`,
     };
   }
-  if (config.optimization.splitChunks) {
+  if (config.optimization?.splitChunks) {
     config.optimization.splitChunks.automaticNameDelimiter = '-';
   }
   return config;
 }
-
 const readJsonFile = (path) => {
   const file = readFileSync(path, 'utf8');
   return JSON.parse(file);
 };
-
 const getDirectories = (source) =>
-  readdirSync(source, { withFileTypes: true })
+  readdirSync(source, {
+    withFileTypes: true,
+  })
     .filter((dirent) => dirent.isDirectory())
     .map((dirent) => dirent.name);
 
-module.exports = {
-  ...rootMain,
-  core: { ...rootMain.core, builder: 'webpack5' },
+const config = {
   stories: [
-    ...rootMain.stories,
     '../src/stories/**/*.stories.mdx',
     '../src/stories/**/*.stories.@(js|jsx|ts|tsx)',
-    '../../../libs/**/*.stories.mdx',
-    '../../../libs/**/*.stories.@(js|jsx|ts|tsx)',
   ],
-  addons: [...rootMain.addons, '@nrwl/react/plugins/storybook'],
-  webpackFinal: async (config, { configType }) => {
-    // apply any global webpack configs that might have been specified in .storybook/main.js
-    if (rootMain.webpackFinal) {
-      config = await rootMain.webpackFinal(config, { configType });
-    }
-    const outerIndex = config.module.rules.findIndex(
-      (rule) =>
-        rule.test.toString() === '/\\.css$|\\.scss$|\\.sass$|\\.less$|\\.styl$/'
-    );
+  addons: [
+    '@storybook/addon-essentials',
+    '@storybook/addon-coverage',
+    '@storybook/addon-a11y',
+    '@storybook/addon-interactions',
+    'storybook-version',
+    '@nx/react/plugins/storybook',
+  ],
+  core: {
+    disableTelemetry: true,
+  },
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      compilerOptions: {
+        shouldExtractLiteralValuesFromEnum: true,
+        allowSyntheticDefaultImports: false,
+        esModuleInterop: false,
+      },
+    },
+  },
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {},
+  },
+  webpackFinal: async (config) => {
+    const outerIndex =
+      config.module?.rules.findIndex(
+        (rule) =>
+          rule.test.toString() ===
+          '/\\.css$|\\.scss$|\\.sass$|\\.less$|\\.styl$/'
+      ) ?? 0;
     const innerIndex = config.module.rules[outerIndex].oneOf.findIndex(
       (rule) => rule.test.toString() === '/\\.module\\.(scss|sass)$/'
     );
-
     //rekkefølge på loaders er viktig. Derfor splice slik at den plasseres mellom style-loader og css-loader
     config.module.rules[outerIndex].oneOf[innerIndex].use.splice(1, 0, {
       loader: 'dts-css-modules-loader',
@@ -61,20 +74,6 @@ module.exports = {
       },
     });
 
-    config.module.rules.push({
-      test: /\.(ts|tsx)$/,
-      use: [
-        '@jsdevtools/coverage-istanbul-loader',
-        {
-          loader: require.resolve('ts-loader'),
-        },
-      ],
-    });
-
-    config.resolve.extensions.push('.ts', '.tsx');
-    config.mode = 'development';
-    config.devtool = 'source-map';
-
     if (process.env.STORYBOOK_WEBPACK_STATS === 'true') {
       config.plugins.push(
         new BundleAnalyzerPlugin({
@@ -83,11 +82,9 @@ module.exports = {
         })
       );
     }
-
     config.plugins.forEach((plugin) => {
       if (plugin.constructor.name === 'DefinePlugin') {
         const directories = getDirectories('./libs');
-
         const packageVersions = directories.reduce(
           (previousValue, currentValue) => {
             const json = readJsonFile(
@@ -100,21 +97,33 @@ module.exports = {
           },
           {}
         );
-
         plugin.definitions['process.env'] = {
           ...plugin.definitions['process.env'],
           ...packageVersions,
         };
       }
     });
-
+    config.optimization = {
+      ...config.optimization,
+      splitChunks: {
+        ...config.optimization.splitChunks,
+        cacheGroups: {
+          ...config.optimization.splitChunks.cacheGroups,
+          styles: {
+            name: 'main',
+            type: 'css/mini-extract',
+            chunks: 'all',
+            enforce: true,
+          },
+        },
+      },
+    };
     config.resolve.fallback.fs = false;
     config.resolve.fallback.os = false;
     config.resolve.fallback.path = false;
-
-    return webpackConfigNoChunkTilde(config);
-  },
-  managerWebpack: (config) => {
+    config.resolve.fallback.assert = require.resolve('browser-assert');
     return webpackConfigNoChunkTilde(config);
   },
 };
+
+export default config;

@@ -4,12 +4,12 @@ import {
   Paragraph,
   paragraphVariantArr,
 } from '@skatteetaten/ds-typography';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Paragraph,
   title: 'Komponenter/Paragraph',
   argTypes: {
@@ -30,16 +30,15 @@ export default {
       },
     },
   },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-typography'),
   },
-} as ComponentMeta<typeof Paragraph>;
+} satisfies Meta<typeof Paragraph>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: ComponentStory<typeof Paragraph> = (args) => (
-  <Paragraph {...args} />
-);
-
-const TemplateExample: ComponentStory<typeof Paragraph> = () => (
+const TemplateExample: StoryFn<typeof Paragraph> = () => (
   <>
     <Heading as={'h1'} level={1} hasSpacing>
       {'Flere oppgir kryptoverdier i skattemeldingen'}
@@ -68,17 +67,23 @@ const TemplateExample: ComponentStory<typeof Paragraph> = () => (
   </>
 );
 
-export const ParagraphDefault = TemplateDefault.bind({});
-export const ParagraphExample = TemplateExample.bind({});
-ParagraphDefault.storyName = 'Default';
-ParagraphExample.storyName = 'Example';
-ParagraphExample.parameters = {
-  controls: { disabled: true },
-};
+export const ParagraphDefault = {
+  name: 'Default',
+  args: {
+    children:
+      'Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, ' +
+      'etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.',
+    variant: getParagraphVariantDefault(),
+  },
+} satisfies Story;
 
-ParagraphDefault.args = {
-  children:
-    'Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, ' +
-    'etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.',
-  variant: getParagraphVariantDefault(),
-};
+export const ParagraphExample = {
+  render: TemplateExample,
+  name: 'Example',
+  args: {
+    children: 'dummy',
+  },
+  parameters: {
+    controls: { disable: true },
+  },
+} satisfies Story;

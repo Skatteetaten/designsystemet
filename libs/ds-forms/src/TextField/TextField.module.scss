@@ -1,0 +1,69 @@
+@import 'libs/ds-core-utils/src/styles.scss';
+
+.textbox {
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--spacing-xs) var(--spacing-s);
+  border: none;
+  border-radius: 0;
+  margin-top: var(--spacing-xs);
+  appearance: none;
+  background: var(--semantic-page-background);
+  box-shadow: inset 0 0 0 1px var(--palette-graphite-100);
+  color: var(--semantic-page-foreground);
+  font-size: var(--font-size-m);
+  line-height: var(--semantic-line-height-input);
+  outline-offset: 0;
+
+  &_large {
+    padding: var(--spacing-s);
+    box-shadow: inset 0 0 0 2px var(--palette-graphite-100);
+  }
+
+  &_multiline {
+    padding: var(--spacing-s);
+    overflow-y: auto;
+  }
+
+  &_autosize {
+    overflow: hidden;
+    resize: none;
+  }
+
+  &::placeholder {
+    color: var(--palette-graphite-70);
+  }
+
+  &[aria-invalid='true'] {
+    box-shadow: inset 0 0 0 2px var(--semantic-danger-foreground);
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 0 2px var(--semantic-page-foreground);
+    outline: 2px solid var(--semantic-interactive-background);
+  }
+
+  &:focus {
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+    outline: 2px solid var(--semantic-interactive-background);
+
+    &::selection {
+      background: var(--semantic-interactive-background);
+    }
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    background: var(--semantic-disabled-background);
+    box-shadow: inset 0 0 0 1px var(--semantic-disabled-foreground);
+    color: var(--semantic-disabled-foreground);
+    cursor: not-allowed;
+    outline: 0;
+  }
+
+  &:read-only:not(:disabled) {
+    padding: var(--spacing-s);
+    box-shadow: none;
+    outline: 0;
+  }
+}

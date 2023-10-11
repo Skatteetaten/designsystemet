@@ -1,14 +1,10 @@
-import { DecoratorFn } from '@storybook/react';
-import { StoryFnReactReturnType } from '@storybook/react/dist/ts3.9/client/preview/types';
+import { Decorator } from '@storybook/react';
 import { createRoot, Root } from 'react-dom/client';
 
 export interface WebcompAttributes {
   [key: string]: string | undefined;
 }
-export const webComponent: DecoratorFn = function (
-  Story,
-  context
-): StoryFnReactReturnType {
+export const webComponent: Decorator = function (Story, context) {
   const Name = context.parameters['customElementName'] ?? 'ds-customelement';
   class WebComponent extends HTMLElement {
     mountPoint!: HTMLElement;

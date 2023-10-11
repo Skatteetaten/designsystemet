@@ -2,14 +2,14 @@ import { IconButton, getIconButtonSizeDefault } from '@skatteetaten/ds-buttons';
 import { sizeArr } from '@skatteetaten/ds-core-utils';
 import { PrintSVGpath } from '@skatteetaten/ds-icons';
 import { action } from '@storybook/addon-actions';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { getVersion } from '../utils/version.utils';
 
 const availableSizes = [...sizeArr].slice(0, 4);
-export default {
+const meta = {
   component: IconButton,
   title: 'Komponenter/IconButton',
   argTypes: {
@@ -62,17 +62,20 @@ export default {
     onClick: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
   },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-buttons'),
   },
-} as ComponentMeta<typeof IconButton>;
+} satisfies Meta<typeof IconButton>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: ComponentStory<typeof IconButton> = (args) => (
+const TemplateDefault: StoryFn<typeof IconButton> = (args) => (
   <IconButton {...args} onClick={action('KlikkEvent IconButton')} />
 );
 
-const TemplateExample: ComponentStory<typeof IconButton> = () => (
-  <div>
+const TemplateExample: StoryFn<typeof IconButton> = () => (
+  <>
     <div>
       <IconButton
         className={'exampleSpacing'}
@@ -117,19 +120,27 @@ const TemplateExample: ComponentStory<typeof IconButton> = () => (
       />
       <IconButton svgPath={PrintSVGpath} size={'large'} title={'Skriv ut'} />
     </div>
-  </div>
+  </>
 );
 
-export const IconButtonDefault = TemplateDefault.bind({});
-export const IconButtonExample = TemplateExample.bind({});
-IconButtonDefault.storyName = 'Default';
-IconButtonExample.storyName = 'Example';
-IconButtonExample.parameters = {
-  controls: { disabled: true },
-};
+export const IconButtonDefault = {
+  render: TemplateDefault,
+  name: 'Default',
+  args: {
+    svgPath: Object.values(SystemSVGPaths)[14], // Bell icon
+    size: getIconButtonSizeDefault(),
+    title: 'default tekst accessible name',
+  },
+} satisfies Story;
 
-IconButtonDefault.args = {
-  svgPath: Object.values(SystemSVGPaths)[14], // Bell icon
-  size: getIconButtonSizeDefault(),
-  title: 'default tekst accessible name',
-};
+export const IconButtonExample = {
+  render: TemplateExample,
+  name: 'Example',
+  args: {
+    title: 'dummy',
+    svgPath: Object.values(SystemSVGPaths)[14], // Bell icon
+  },
+  parameters: {
+    controls: { disable: true },
+  },
+} satisfies Story;

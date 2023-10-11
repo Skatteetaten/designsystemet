@@ -2,17 +2,18 @@ import { useState } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { CheckboxGroup } from '@skatteetaten/ds-forms';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: CheckboxGroup,
   title: 'Komponenter/CheckboxGroup',
   argTypes: {
     // Props
     children: { control: 'object', table: { category: category.props } },
+    description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasError: {
       control: 'boolean',
@@ -20,6 +21,8 @@ export default {
         category: category.props,
       },
     },
+    helpSvgPath: { table: { category: category.props } },
+    helpText: { table: { category: category.props } },
     hideLegend: {
       control: 'boolean',
       table: {
@@ -33,6 +36,7 @@ export default {
         category: category.props,
       },
     },
+    titleHelpSvg: { table: { category: category.props } },
     // HTML
     disabled: {
       control: 'boolean',
@@ -41,29 +45,19 @@ export default {
       },
     },
   },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-forms'),
-    docs: { source: { type: 'code' } },
   },
-} as ComponentMeta<typeof CheckboxGroup>;
+} satisfies Meta<typeof CheckboxGroup>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: ComponentStory<typeof CheckboxGroup> = (args) => (
-  <CheckboxGroup {...args}>
-    <CheckboxGroup.Checkbox>{'Har barn over 16 år'}</CheckboxGroup.Checkbox>
-    <CheckboxGroup.Checkbox>{'Har barn under 12 år'}</CheckboxGroup.Checkbox>
-    <CheckboxGroup.Checkbox>
-      {
-        'Får ekstra reisevei til jobb på grunn av levering til barnehage eller skolefritidsordning'
-      }
-    </CheckboxGroup.Checkbox>
-    <CheckboxGroup.Checkbox>
-      {'Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov'}
-    </CheckboxGroup.Checkbox>
-    <CheckboxGroup.Checkbox>{'Er enslig forsørger'}</CheckboxGroup.Checkbox>
-  </CheckboxGroup>
+const TemplateDefault: StoryFn<typeof CheckboxGroup> = (args) => (
+  <CheckboxGroup {...args} />
 );
 
-const TemplateExample: ComponentStory<typeof CheckboxGroup> = () => {
+const TemplateExample: StoryFn<typeof CheckboxGroup> = () => {
   const options = [
     {
       label: 'Har barn over 16 år',
@@ -114,14 +108,55 @@ const TemplateExample: ComponentStory<typeof CheckboxGroup> = () => {
   );
 };
 
-export const CheckboxGroupDefault = TemplateDefault.bind({});
-export const CheckboxGroupExample = TemplateExample.bind({});
-CheckboxGroupDefault.storyName = 'Default';
-CheckboxGroupExample.storyName = 'Example';
-CheckboxGroupExample.parameters = {
-  controls: { disabled: true },
-};
+export const CheckboxGroupDefault = {
+  render: TemplateDefault,
+  name: 'Default',
+  args: {
+    legend: 'Velg det som passer deg',
+    children: (
+      <>
+        <CheckboxGroup.Checkbox>{'Har barn over 16 år'}</CheckboxGroup.Checkbox>
+        <CheckboxGroup.Checkbox>
+          {'Har barn under 12 år'}
+        </CheckboxGroup.Checkbox>
+        <CheckboxGroup.Checkbox>
+          {
+            'Får ekstra reisevei til jobb på grunn av levering til barnehage eller skolefritidsordning'
+          }
+        </CheckboxGroup.Checkbox>
+        <CheckboxGroup.Checkbox>
+          {'Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov'}
+        </CheckboxGroup.Checkbox>
+        <CheckboxGroup.Checkbox>{'Er enslig forsørger'}</CheckboxGroup.Checkbox>
+      </>
+    ),
+  },
+} satisfies Story;
 
-CheckboxGroupDefault.args = {
-  legend: 'Velg det som passer deg',
-};
+export const CheckboxGroupExample = {
+  render: TemplateExample,
+  name: 'Example',
+  args: {
+    legend: 'dummy',
+    children: (
+      <>
+        <CheckboxGroup.Checkbox>{'Har barn over 16 år'}</CheckboxGroup.Checkbox>
+        <CheckboxGroup.Checkbox>
+          {'Har barn under 12 år'}
+        </CheckboxGroup.Checkbox>
+        <CheckboxGroup.Checkbox>
+          {
+            'Får ekstra reisevei til jobb på grunn av levering til barnehage eller skolefritidsordning'
+          }
+        </CheckboxGroup.Checkbox>
+        <CheckboxGroup.Checkbox>
+          {'Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov'}
+        </CheckboxGroup.Checkbox>
+        <CheckboxGroup.Checkbox>{'Er enslig forsørger'}</CheckboxGroup.Checkbox>
+      </>
+    ),
+  },
+  parameters: {
+    controls: { disable: true },
+  },
+} satisfies Story;

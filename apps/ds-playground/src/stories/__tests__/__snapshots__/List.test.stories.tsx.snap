@@ -121,7 +121,7 @@ exports[`Tester/List/List WithBothVariantsAndAtLeast10NumberItems smoke-test 1`]
         </path>
       </svg>
       <a class="Link_link__jeUpY  "
-         href="#root"
+         href="#storybook-root"
       >
         Er du pendler?
       </a>
@@ -137,7 +137,7 @@ exports[`Tester/List/List WithBothVariantsAndAtLeast10NumberItems smoke-test 1`]
         </path>
       </svg>
       <a class="Link_link__jeUpY  "
-         href="#root"
+         href="#storybook-root"
       >
         Pendler du mye?
       </a>
@@ -153,7 +153,7 @@ exports[`Tester/List/List WithBothVariantsAndAtLeast10NumberItems smoke-test 1`]
         </path>
       </svg>
       <a class="Link_link__jeUpY  "
-         href="#root"
+         href="#storybook-root"
       >
         Pendler du dagen lang?
       </a>
@@ -186,7 +186,7 @@ exports[`Tester/List/List WithMarkup smoke-test 1`] = `
     </li>
     <li class="ListElement_element__B0xdX ">
       Behovet til brukeren er veldig viktig.
-      <a href="#root">
+      <a href="#storybook-root">
         Er du sikker på at du kjenner behovet til brukeren?
       </a>
     </li>

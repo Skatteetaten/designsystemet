@@ -9,26 +9,20 @@ import {
   iconVariantArr,
 } from '@skatteetaten/ds-icons';
 import { ArgsTable, PRIMARY_STORY } from '@storybook/addon-docs';
-import { Story, Meta } from '@storybook/react';
+import { StoryObj, StoryFn, Meta } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { SystemIconLabels, SystemSVGPaths } from '../utils/icon.systems';
 import { ThemeIconLabels, ThemeSVGPaths } from '../utils/icon.themes';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Icon,
   title: 'Komponenter/Icon',
-} as Meta<IconProps>;
-
-const Template: Story<IconProps> = (args) => (
-  <div>
-    <Icon {...args} />
-  </div>
-);
-
-export const SystemIcon: Story<IconProps> = Template.bind({});
-export const ThemeIcon: Story<IconProps> = Template.bind({});
+  tags: ['autodocs'],
+} satisfies Meta<typeof Icon>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 const commonArgTypes = {
   // Props
@@ -47,79 +41,96 @@ const iconDefaultParameters = {
   },
   version: getVersion('ds-icons'),
 };
+
 const defaultSystemIconVariant = getIconVariantDefault();
 
-SystemIcon.argTypes = {
-  ...commonArgTypes,
-  size: {
-    control: 'select',
-    options: [...sizeArr].slice(1),
-    table: {
-      type: { summary: sizeArr.toString() },
-      category: category.props,
-      defaultValue: { summary: getIconSizeDefault() },
-    },
-  },
-  svgPath: {
-    control: {
-      type: 'select',
-      labels: SystemIconLabels,
-    },
-    options: Object.keys(SystemSVGPaths),
-    mapping: SystemSVGPaths,
-    table: { category: category.props },
-  },
-  variant: {
-    name: 'variant',
-    control: { type: null },
-    table: {
-      type: { summary: iconVariantArr.toString() },
-      category: category.props,
-      defaultValue: { summary: defaultSystemIconVariant },
-    },
-  },
-};
+const Template: StoryFn<typeof Icon> = (args) => (
+  <div>
+    <Icon {...args} />
+  </div>
+);
 
-SystemIcon.args = {
-  size: getIconSizeDefault(),
-  svgPath: SystemSVGPathsAndIcons.AccountChildSVGpath,
-  variant: defaultSystemIconVariant,
-};
-SystemIcon.parameters = iconDefaultParameters;
+export const SystemIcon = {
+  render: Template,
 
-ThemeIcon.argTypes = {
-  ...commonArgTypes,
-  size: {
-    control: 'select',
-    options: [sizeArr[2], sizeArr[3]],
-    table: {
-      type: { summary: sizeArr.toString() },
-      category: category.props,
-      defaultValue: { summary: getIconSizeDefault() },
+  argTypes: {
+    ...commonArgTypes,
+    size: {
+      control: 'select',
+      options: [...sizeArr].slice(1),
+      table: {
+        type: { summary: sizeArr.toString() },
+        category: category.props,
+        defaultValue: { summary: getIconSizeDefault() },
+      },
+    },
+    svgPath: {
+      control: {
+        type: 'select',
+        labels: SystemIconLabels,
+      },
+      options: Object.keys(SystemSVGPaths),
+      mapping: SystemSVGPaths,
+      table: { category: category.props },
+    },
+    variant: {
+      name: 'variant',
+      control: { type: null },
+      table: {
+        type: { summary: iconVariantArr.toString() },
+        category: category.props,
+        defaultValue: { summary: defaultSystemIconVariant },
+      },
     },
   },
-  svgPath: {
-    options: Object.keys(ThemeSVGPaths),
-    mapping: ThemeSVGPaths,
-    control: {
-      labels: ThemeIconLabels,
-    },
-    table: { category: category.props },
-  },
-  variant: {
-    name: 'variant',
-    control: { type: null },
-    table: {
-      type: { summary: iconVariantArr.toString() },
-      category: category.props,
-      defaultValue: { summary: 'themeIcon' },
-    },
-  },
-};
 
-ThemeIcon.args = {
-  size: getIconSizeDefault(),
-  svgPath: ThemeSVGPathsAndIcons.AndreForholdSVGpath,
-  variant: 'themeIcon',
-};
-ThemeIcon.parameters = iconDefaultParameters;
+  args: {
+    size: getIconSizeDefault(),
+    svgPath: SystemSVGPathsAndIcons.AccountChildSVGpath,
+    variant: defaultSystemIconVariant,
+  },
+
+  parameters: iconDefaultParameters,
+} satisfies Story;
+
+export const ThemeIcon: StoryObj<IconProps> = {
+  render: Template,
+
+  argTypes: {
+    ...commonArgTypes,
+    size: {
+      control: 'select',
+      options: [sizeArr[2], sizeArr[3]],
+      table: {
+        type: { summary: sizeArr.toString() },
+        category: category.props,
+        defaultValue: { summary: getIconSizeDefault() },
+      },
+    },
+    svgPath: {
+      options: Object.keys(ThemeSVGPaths),
+      mapping: ThemeSVGPaths,
+      control: {
+        labels: ThemeIconLabels,
+      },
+      table: { category: category.props },
+    },
+    variant: {
+      name: 'variant',
+      control: { type: null },
+      table: {
+        type: { summary: iconVariantArr.toString() },
+        category: category.props,
+        defaultValue: { summary: 'themeIcon' },
+      },
+    },
+  },
+
+  args: {
+    size: getIconSizeDefault(),
+    svgPath: ThemeSVGPathsAndIcons.AndreForholdSVGpath,
+    variant: 'themeIcon',
+  },
+
+  parameters: iconDefaultParameters,
+} satisfies Story;

@@ -1,0 +1,65 @@
+@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
+$border-width: 3px;
+
+.errorSummary {
+  display: flex;
+  width: 100%;
+  max-width: var(--container-s);
+  box-sizing: border-box;
+  flex-direction: column;
+  border: $border-width solid var(--semantic-danger-foreground);
+
+  @media (min-width: $breakpoint-s) {
+    flex-direction: row;
+  }
+}
+
+.iconContainer {
+  display: flex;
+  padding: calc(var(--spacing-xs) - $border-width)
+    calc(var(--spacing-xs) - $border-width) var(--spacing-xs);
+  background-color: var(--semantic-danger-foreground);
+
+  @media (min-width: $breakpoint-xs) {
+    padding: calc(var(--spacing-s) - $border-width)
+      calc(var(--spacing-m) - $border-width) var(--spacing-s);
+  }
+
+  @media (min-width: $breakpoint-s) {
+    padding: calc(var(--spacing-m) - $border-width) var(--spacing-m) 0
+      calc(var(--spacing-m) - $border-width);
+  }
+}
+
+.icon {
+  fill: var(--palette-graphite-0);
+
+  @media (min-width: $breakpoint-s) {
+    height: calc(var(--font-size-l) * var(--semantic-line-height-heading4));
+  }
+}
+
+.summaryContainer {
+  padding: var(--spacing-xs) calc(var(--spacing-s) - $border-width)
+    calc(var(--spacing-m) - $border-width);
+
+  @media (min-width: $breakpoint-xs) {
+    padding: var(--spacing-m) calc(var(--spacing-m) - $border-width)
+      calc(var(--spacing-m) - $border-width);
+  }
+
+  @media (min-width: $breakpoint-s) {
+    padding: calc(var(--spacing-m) - $border-width)
+      calc(var(--spacing-m) - $border-width)
+      calc(var(--spacing-xl) - $border-width) var(--spacing-m);
+  }
+}
+
+.content {
+  margin-top: var(--spacing-m);
+
+  &WithoutChildren {
+    margin-top: var(--spacing-s);
+  }
+}

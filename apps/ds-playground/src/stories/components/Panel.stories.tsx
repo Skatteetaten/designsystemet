@@ -12,19 +12,18 @@ import {
   panelPaddingArr,
   panelSpacingArr,
   panelVariantArr,
-  PanelProps,
 } from '@skatteetaten/ds-content';
 import { headingAsArr, subheadingAsArr } from '@skatteetaten/ds-core-utils';
 import { CheckIcon } from '@skatteetaten/ds-icons';
 import { Paragraph } from '@skatteetaten/ds-typography';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import illustrationSource from '../__tests__/testUtils/test_bonde.svg';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Panel,
   title: 'Komponenter/Panel',
   argTypes: {
@@ -106,19 +105,22 @@ export default {
       },
     },
   },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-content'),
   },
-} as Meta<PanelProps>;
+} satisfies Meta<typeof Panel>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: Story<PanelProps> = (args) => <Panel {...args} />;
-export const PanelDefault = TemplateDefault.bind({});
-PanelDefault.storyName = 'Default';
-PanelDefault.args = {
-  children: loremIpsum,
-};
+export const PanelDefault = {
+  name: 'Default',
+  args: {
+    children: loremIpsum,
+  },
+} satisfies Story;
 
-const TemplateExample: Story<PanelProps> = () => (
+const TemplateExample: StoryFn<typeof Panel> = () => (
   <>
     <Panel
       title={'Når kommer skattepengene'}
@@ -160,8 +162,15 @@ const TemplateExample: Story<PanelProps> = () => (
     </Panel>
   </>
 );
-export const PanelExample = TemplateExample.bind({});
-PanelExample.storyName = 'Example';
-PanelExample.parameters = {
-  controls: { disabled: true },
-};
+
+export const PanelExample = {
+  render: TemplateExample,
+  name: 'Example',
+
+  args: {
+    children: 'dummy',
+  },
+  parameters: {
+    controls: { disabled: true },
+  },
+} satisfies Story;

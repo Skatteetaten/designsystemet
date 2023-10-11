@@ -2,10 +2,11 @@ import { ChangeEventHandler, ComponentPropsWithoutRef } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
+import { FieldsetProps } from '../Fieldset/Fieldset.types';
 import { RadioProps } from '../Radio/Radio.types';
 
 export const radioGroupVariantArr = ['standard', 'horizontal'] as const;
-export type RadioGroupVariant = typeof radioGroupVariantArr[number];
+export type RadioGroupVariant = (typeof radioGroupVariantArr)[number];
 
 export interface RadioGroupContextProps {
   defaultValue?: string | number;
@@ -38,10 +39,18 @@ interface RadioGroupComponentCommonProps
     BaseProps {
   /** Radio-komponenter */
   children: JSX.Element | JSX.Element[];
-  /** Skjule navn på gruppen. */
-  hideLegend?: boolean;
+  /** Skjuler navn på gruppen, tilleggstekst og hjelpetekst, men er fortsatt synlig for skjermleser */
+  hideLegend?: FieldsetProps['hideLegend'];
   /** Navn på gruppen. */
-  legend: React.ReactNode;
+  legend: FieldsetProps['legend'];
+  /** Tilleggstekst */
+  description?: FieldsetProps['description'];
+  /** Hjelpetekst */
+  helpText?: FieldsetProps['helpText'];
+  /** Overskriver default hjelpeikon */
+  helpSvgPath?: FieldsetProps['helpSvgPath'];
+  /** Overskriver default tooltip-tekst til hjelpeikon */
+  titleHelpSvg?: FieldsetProps['titleHelpSvg'];
   /** Overskriver autogenerert name */
   name?: string;
   /** Definerer stilen til gruppen. */
@@ -53,7 +62,7 @@ type RadioGroupDiscriminatedRequiredProps =
       /** Om gruppen er obligatorisk */
       required: boolean;
       /** Om obligatorisk gruppe skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
-      showRequiredMark?: boolean;
+      showRequiredMark?: FieldsetProps['showRequiredMark'];
     }
   | {
       /** Om gruppen er obligatorisk */

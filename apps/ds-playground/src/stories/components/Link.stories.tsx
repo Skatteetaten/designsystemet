@@ -1,13 +1,13 @@
 import { Link } from '@skatteetaten/ds-buttons';
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { action } from '@storybook/addon-actions';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Link,
   title: 'Komponenter/Link',
   argTypes: {
@@ -43,17 +43,20 @@ export default {
     // Events
     onClick: { ...htmlEventDescription },
   },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-buttons'),
   },
-} as ComponentMeta<typeof Link>;
+} satisfies Meta<typeof Link>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: ComponentStory<typeof Link> = (args) => (
+const TemplateDefault: StoryFn<typeof Link> = (args) => (
   <Link {...args} onClick={action('KlikkEvent Link')} />
 );
 
-const TemplateExample: ComponentStory<typeof Link> = () => (
-  <div>
+const TemplateExample: StoryFn<typeof Link> = () => (
+  <>
     <div className={'exampleSpacing'}>
       <Link href={'#link'}>
         {'Rettledning til RF-1167 Næringsoppgave 2 for 2020 (pdf)'}
@@ -69,18 +72,26 @@ const TemplateExample: ComponentStory<typeof Link> = () => (
         {'Brukerveiledning for bilforhandlere'}
       </Link>
     </div>
-  </div>
+  </>
 );
 
-export const LinkDefault = TemplateDefault.bind({});
-export const LinkExample = TemplateExample.bind({});
-LinkDefault.storyName = 'Default';
-LinkExample.storyName = 'Example';
-LinkExample.parameters = {
-  controls: { disabled: true },
-};
+export const LinkDefault = {
+  render: TemplateDefault,
+  name: 'Default',
+  args: {
+    href: '#',
+    children: 'Er du pendler?',
+  },
+} satisfies Story;
 
-LinkDefault.args = {
-  href: '#',
-  children: 'Er du pendler?',
-};
+export const LinkExample = {
+  render: TemplateExample,
+  name: 'Example',
+  args: {
+    children: 'dummy',
+    href: '#',
+  },
+  parameters: {
+    controls: { disable: true },
+  },
+} satisfies Story;

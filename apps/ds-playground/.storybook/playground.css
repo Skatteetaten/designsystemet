@@ -44,6 +44,10 @@ code {
   background-color: var(--palette-denim-10);
 }
 
+.topSpacingXL {
+  margin-top: var(--spacing-xl);
+}
+
 .bottomSpacingXL {
   margin-bottom: var(--spacing-xl);
 }
@@ -95,4 +99,24 @@ code {
   margin: -1px;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
+}
+
+.textField150 {
+  padding-bottom: 20px;
+  max-width: 150px;
+  width: 100%;
+}
+
+.textField300 {
+  padding-bottom: 20px;
+  max-width: 300px;
+  width: 100%;
+}
+
+.inlineBlock {
+  display: inline-block;
+}
+
+.logoHeight {
+  height: 4rem;
 }

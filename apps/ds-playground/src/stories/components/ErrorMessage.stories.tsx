@@ -1,13 +1,17 @@
 import { useState } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { ErrorMessage, ErrorMessageProps } from '@skatteetaten/ds-forms';
-import { Meta, Story } from '@storybook/react';
+import {
+  ErrorMessage,
+  ErrorMessageProps,
+  TextField,
+} from '@skatteetaten/ds-forms';
+import { StoryObj, Meta, StoryFn } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: ErrorMessage,
   title: 'Komponenter/ErrorMessage',
   argTypes: {
@@ -20,34 +24,29 @@ export default {
       },
     },
   },
+  args: {
+    children: '',
+  },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-forms'),
   },
-} as Meta<ErrorMessageProps>;
+} satisfies Meta<typeof ErrorMessage>;
+export default meta;
 
-const TemplateDefault: Story<ErrorMessageProps> = (args) => (
-  <ErrorMessage {...args} />
-);
-
-const TemplateExample: Story<ErrorMessageProps> = () => {
+const TemplateExample: StoryFn<ErrorMessageProps> = () => {
   const [state, setState] = useState({
     hasError: false,
   });
   return (
     <>
-      {/* TODO FRONT-1279 erstattes med TextField når den er ferdig utviklet */}
-      <label className={'block'} htmlFor={'fdato'}>
-        {'Fødseldato'}
-      </label>
-      <input
-        id={'fdato'}
-        type={'text'}
-        aria-describedby={'fdato-error'}
+      <TextField
+        className={'bottomSpacingXL'}
+        label={'Fødselsdato'}
         value={'17.5.19'}
+        errorMessage={'Skriv fødselsdatoen med følgende format: DD.MM.ÅÅÅÅ'}
+        hasError
       />
-      <ErrorMessage id={'fdato-error'} className={'bottomSpacingXL'} showError>
-        {'Skriv fødselsdatoen med følgende format: DD.MM.ÅÅÅÅ'}
-      </ErrorMessage>
       <Button
         variant={'secondary'}
         onClick={(): void => setState({ hasError: !state.hasError })}
@@ -61,17 +60,19 @@ const TemplateExample: Story<ErrorMessageProps> = () => {
   );
 };
 
-export const ErrorMessageDefault: Story<ErrorMessageProps> =
-  TemplateDefault.bind({});
-export const ErrorMessageExample: Story<ErrorMessageProps> =
-  TemplateExample.bind({});
-ErrorMessageDefault.storyName = 'Default';
-ErrorMessageExample.storyName = 'Example';
-ErrorMessageExample.parameters = {
-  controls: { disabled: true },
-};
+type Story = StoryObj<typeof meta>;
+export const ErrorMessageDefault = {
+  name: 'Default',
+  args: {
+    children: 'Feilmelding',
+    showError: true,
+  },
+} satisfies Story;
 
-ErrorMessageDefault.args = {
-  children: 'Feilmelding',
-  showError: true,
-};
+export const ErrorMessageExample = {
+  render: TemplateExample,
+  name: 'Example',
+  parameters: {
+    controls: { disable: true },
+  },
+} satisfies Story;

@@ -1,11 +1,12 @@
 import { statusArr } from '@skatteetaten/ds-core-utils';
 import { Alert, AlertProps } from '@skatteetaten/ds-status';
-import { Meta, Story } from '@storybook/react';
+import { StoryObj, Meta, StoryFn } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
+import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Alert,
   title: 'Komponenter/Alert',
   argTypes: {
@@ -31,11 +32,15 @@ export default {
     // Aria
     ariaLive: { table: { category: category.aria } },
   },
-} as Meta<AlertProps>;
+  tags: ['autodocs'],
+  parameters: {
+    version: getVersion('ds-status'),
+  },
+} satisfies Meta<AlertProps>;
+export default meta;
+type AlertStory = StoryObj<typeof meta>;
 
-const TemplateDefault: Story<AlertProps> = (args) => <Alert {...args} />;
-
-const TemplateExample: Story<AlertProps> = () => {
+const TemplateExample: StoryFn<AlertProps> = () => {
   return (
     <>
       <Alert
@@ -63,17 +68,24 @@ const TemplateExample: Story<AlertProps> = () => {
   );
 };
 
-export const AlertDefault: Story<AlertProps> = TemplateDefault.bind({});
-export const AlertExample: Story<AlertProps> = TemplateExample.bind({});
-AlertDefault.storyName = 'Default';
-AlertExample.storyName = 'Example';
-AlertExample.parameters = {
-  controls: { disabled: true },
-};
+export const AlertDefault = {
+  name: 'Default',
+  args: {
+    children:
+      'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.',
+    showAlert: true,
+    variant: 'neutral' as const,
+  },
+} satisfies AlertStory;
 
-AlertDefault.args = {
-  children:
-    'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.',
-  showAlert: true,
-  variant: 'neutral',
-};
+export const AlertExample = {
+  render: TemplateExample,
+  name: 'Example',
+  args: {
+    variant: 'danger',
+    children: 'dummy',
+  },
+  parameters: {
+    controls: { disable: true },
+  },
+} satisfies AlertStory;

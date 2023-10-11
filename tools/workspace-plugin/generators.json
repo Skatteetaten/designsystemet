@@ -1,0 +1,9 @@
+{
+  "generators": {
+    "ds-library": {
+      "implementation": "./src/generators/ds-library",
+      "schema": "./src/generators/ds-library/schema.json",
+      "description": "Generator ds-library"
+    }
+  }
+}

@@ -1,7 +1,8 @@
-const nrwlConfig = require('@nrwl/react/plugins/bundle-rollup');
+const nrwlConfig = require('@nx/react/plugins/bundle-rollup');
 const autoprefixer = require('autoprefixer');
 const glob = require('glob');
 const postcss = require('rollup-plugin-postcss');
+const { visualizer } = require('rollup-plugin-visualizer');
 
 const fs = require('fs');
 const path = require('path');
@@ -87,9 +88,14 @@ const createRollupConfig = (
     output: {
       ...config.output,
       dir: outputDir,
-      entryFileNames: '[name].js',
+      entryFileNames: '[name].esm.js',
     },
-    plugins: [...plugins, ...postCssPlugins, addStyleImportPlugin()],
+    plugins: [
+      ...plugins,
+      ...postCssPlugins,
+      addStyleImportPlugin(),
+      visualizer({ filename: `${outputDir.split('/').pop()}-stats.html` }),
+    ],
   };
 };
 

@@ -14,12 +14,12 @@ import {
   SortState,
 } from '@skatteetaten/ds-table';
 import { Paragraph } from '@skatteetaten/ds-typography';
-import { Story, ComponentMeta, ComponentStory } from '@storybook/react';
+import { StoryObj, StoryFn, Meta } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Table,
   title: 'komponenter/Table/Table',
   argTypes: {
@@ -63,18 +63,16 @@ export default {
       },
     },
   },
+  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-table'),
-    docs: {
-      source: {
-        type: 'code',
-      },
-    },
   },
-} as ComponentMeta<typeof Table>;
+} satisfies Meta<typeof Table>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 /* eslint-disable sonarjs/no-duplicate-string */
-const TemplateDefault: ComponentStory<typeof Table> = (args) => (
+const TemplateDefault: StoryFn<typeof Table> = (args) => (
   <Table {...args} variant={args.variant}>
     <Table.Header>
       <Table.Row>
@@ -111,7 +109,7 @@ const TemplateDefault: ComponentStory<typeof Table> = (args) => (
   </Table>
 );
 
-const TemplateVariant: ComponentStory<typeof Table> = (args) => {
+const TemplateVariant: StoryFn<typeof Table> = (args) => {
   const klage = 'Klage på vedtak';
   return (
     <>
@@ -185,25 +183,29 @@ const TemplateVariant: ComponentStory<typeof Table> = (args) => {
 
 const tableDefaultParameters = {};
 
-export const TableDefault: Story<TableProps> = TemplateDefault.bind({});
-TableDefault.storyName = 'Default';
 const baseArgs = {
   caption: 'Jeg er en tabell.',
 };
 
-TableDefault.args = {
-  ...baseArgs,
-};
-TableDefault.parameters = tableDefaultParameters;
+export const TableDefault: StoryObj<TableProps> = {
+  render: TemplateDefault,
+  name: 'Default',
+  args: {
+    ...baseArgs,
+  },
+  parameters: tableDefaultParameters,
+} satisfies Story;
 
-export const Variants: Story<TableProps> = TemplateVariant.bind({});
-Variants.args = {
-  ...baseArgs,
-  variant: 'compact',
-};
-Variants.parameters = tableDefaultParameters;
+export const Variants: StoryObj<TableProps> = {
+  render: TemplateVariant,
+  args: {
+    ...baseArgs,
+    variant: 'compact',
+  },
+  parameters: tableDefaultParameters,
+} satisfies Story;
 
-const TemplateSort: Story<TableProps> = (args) => {
+const TemplateSort: StoryFn<TableProps> = (args) => {
   const [sortState, setSortState] = useState<SortState>({
     direction: 'none',
   });
@@ -224,7 +226,7 @@ const TemplateSort: Story<TableProps> = (args) => {
   ];
 
   const sortedData = data.slice().sort((a, b) => {
-    const sortKey = sortState.sortKey as keyof typeof data[0];
+    const sortKey = sortState.sortKey as keyof (typeof data)[0];
     if (!sortKey) {
       return 0;
     }
@@ -269,16 +271,17 @@ const TemplateSort: Story<TableProps> = (args) => {
   );
 };
 
-export const TableSort: Story<TableProps> = TemplateSort.bind({});
-TableSort.storyName = 'Sortable';
+export const TableSort: StoryObj<TableProps> = {
+  render: TemplateSort,
+  name: 'Sortable',
+  args: {
+    ...baseArgs,
+    variant: 'standard',
+  },
+  parameters: tableDefaultParameters,
+} satisfies Story;
 
-TableSort.args = {
-  ...baseArgs,
-  variant: 'standard',
-};
-TableSort.parameters = tableDefaultParameters;
-
-const TemplateExampleExpandable: Story<TableProps> = (args) => {
+const TemplateExampleExpandable: StoryFn<TableProps> = (args) => {
   const [sortState, setSortState] = useState<SortState>({
     direction: 'none',
   });
@@ -359,7 +362,7 @@ const TemplateExampleExpandable: Story<TableProps> = (args) => {
   ];
 
   const sortedData = data.slice().sort((a, b) => {
-    const sortKey = sortState.sortKey as keyof typeof data[0];
+    const sortKey = sortState.sortKey as keyof (typeof data)[0];
 
     if (!sortKey) {
       return 0;
@@ -374,62 +377,61 @@ const TemplateExampleExpandable: Story<TableProps> = (args) => {
   });
 
   return (
-    <div>
-      <Table
-        {...args}
-        caption={'Firmaoversikt'}
-        sortState={sortState}
-        setSortState={setSortState}
-        variant={args.variant}
-      >
-        <Table.Header>
-          <Table.Row>
-            <Table.HeaderCell sortKey={'firma'} scope={'col'} isSortable>
-              {'Firma'}
-            </Table.HeaderCell>
-            <Table.HeaderCell scope={'col'}>{'Startet'}</Table.HeaderCell>
-            <Table.HeaderCell scope={'col'}>{'Status'}</Table.HeaderCell>
-            <Table.HeaderCell scope={'col'}>
-              {'Forventet behandlet'}
-            </Table.HeaderCell>
-            <Table.HeaderCell as={'td'} />
-          </Table.Row>
-        </Table.Header>
-        <Table.Body>
-          {sortedData.map((row, index) => {
-            return (
-              <Table.Row
-                key={`${row.id}-${index}`}
-                expandButtonPosition={'right'}
-                expandableContent={
-                  <div className={'emptyExpandedTableRow'}></div>
-                }
-                expandButtonAriaDescribedby={row.id}
-                isExpandable
-              >
-                <Table.DataCell id={row.id}>{row.firma}</Table.DataCell>
-                <Table.DataCell>{row.timestamp}</Table.DataCell>
-                <Table.DataCell>{row.status}</Table.DataCell>
-                <Table.DataCell>{row.eta}</Table.DataCell>
-              </Table.Row>
-            );
-          })}
-        </Table.Body>
-      </Table>
-    </div>
+    <Table
+      {...args}
+      caption={'Firmaoversikt'}
+      sortState={sortState}
+      setSortState={setSortState}
+      variant={args.variant}
+    >
+      <Table.Header>
+        <Table.Row>
+          <Table.HeaderCell sortKey={'firma'} scope={'col'} isSortable>
+            {'Firma'}
+          </Table.HeaderCell>
+          <Table.HeaderCell scope={'col'}>{'Startet'}</Table.HeaderCell>
+          <Table.HeaderCell scope={'col'}>{'Status'}</Table.HeaderCell>
+          <Table.HeaderCell scope={'col'}>
+            {'Forventet behandlet'}
+          </Table.HeaderCell>
+          <Table.HeaderCell as={'td'} />
+        </Table.Row>
+      </Table.Header>
+      <Table.Body>
+        {sortedData.map((row, index) => {
+          return (
+            <Table.Row
+              key={`${row.id}-${index}`}
+              expandButtonPosition={'right'}
+              expandableContent={
+                <div className={'emptyExpandedTableRow'}></div>
+              }
+              expandButtonAriaDescribedby={row.id}
+              isExpandable
+            >
+              <Table.DataCell id={row.id}>{row.firma}</Table.DataCell>
+              <Table.DataCell>{row.timestamp}</Table.DataCell>
+              <Table.DataCell>{row.status}</Table.DataCell>
+              <Table.DataCell>{row.eta}</Table.DataCell>
+            </Table.Row>
+          );
+        })}
+      </Table.Body>
+    </Table>
   );
 };
 
-export const TableExampleExpandable = TemplateExampleExpandable.bind({});
-TableExampleExpandable.storyName = 'Example Expandable';
+export const TableExampleExpandable = {
+  render: TemplateExampleExpandable,
+  name: 'Example Expandable',
+  args: {
+    ...baseArgs,
+    variant: 'standard',
+  },
+  parameters: tableDefaultParameters,
+} satisfies Story;
 
-TableExampleExpandable.args = {
-  ...baseArgs,
-  variant: 'standard',
-};
-TableExampleExpandable.parameters = tableDefaultParameters;
-
-const TemplateExampleEditable: ComponentStory<typeof Table> = (args) => {
+const TemplateExampleEditable: StoryFn<typeof Table> = (args) => {
   const [sortState, setSortState] = useState<SortState>({
     direction: 'none',
   });
@@ -466,7 +468,7 @@ const TemplateExampleEditable: ComponentStory<typeof Table> = (args) => {
   ];
 
   const sortedData = data.slice().sort((a, b) => {
-    const sortKey = sortState.sortKey as keyof typeof data[0];
+    const sortKey = sortState.sortKey as keyof (typeof data)[0];
 
     if (!sortKey) {
       return 0;
@@ -481,78 +483,73 @@ const TemplateExampleEditable: ComponentStory<typeof Table> = (args) => {
   });
 
   return (
-    <div>
-      <Table
-        {...args}
-        sortState={sortState}
-        setSortState={setSortState}
-        variant={args.variant}
-        caption={'Månedoversikt'}
-      >
-        <Table.Header>
-          <Table.Row>
-            <Table.HeaderCell as={'td'} />
-            <Table.HeaderCell alignment={'right'} scope={'col'}>
-              {'Måned'}
-            </Table.HeaderCell>
-            <Table.HeaderCell scope={'col'} sortKey={'amount'} isSortable>
-              {'Beløp'}
-            </Table.HeaderCell>
-            <Table.HeaderCell scope={'col'}>{'Dekningsgrad'}</Table.HeaderCell>
-            <Table.HeaderCell alignment={'right'} scope={'col'}>
-              {'Avkastning'}
-            </Table.HeaderCell>
-          </Table.Row>
-        </Table.Header>
-        <Table.Body>
-          {sortedData.map((row, index) => {
-            return (
-              <Table.EditableRow
-                key={`${row.id}-${index}`}
-                editableContent={(closeEditing: () => void): ReactNode => (
-                  <div className={'emptyExpandedTableRow'}>
-                    <Button
-                      onClick={(): void => {
-                        closeEditing();
-                      }}
-                    >
-                      {'Lukk'}
-                    </Button>
-                  </div>
-                )}
-                editButtonAriaDescribedby={row.id}
-                onEdit={(): void => {
-                  console.log('redigerrer rad');
-                }}
-              >
-                <Table.DataCell id={row.id} alignment={'right'}>
-                  {row.month}
-                </Table.DataCell>
-                <Table.DataCell alignment={'right'}>
-                  {row.amount}
-                </Table.DataCell>
-                <Table.DataCell>{row.coverage}</Table.DataCell>
-                <Table.DataCell alignment={'right'}>
-                  {row.revenue}
-                </Table.DataCell>
-              </Table.EditableRow>
-            );
-          })}
-        </Table.Body>
-      </Table>
-    </div>
+    <Table
+      {...args}
+      sortState={sortState}
+      setSortState={setSortState}
+      variant={args.variant}
+      caption={'Månedoversikt'}
+    >
+      <Table.Header>
+        <Table.Row>
+          <Table.HeaderCell as={'td'} />
+          <Table.HeaderCell alignment={'right'} scope={'col'}>
+            {'Måned'}
+          </Table.HeaderCell>
+          <Table.HeaderCell scope={'col'} sortKey={'amount'} isSortable>
+            {'Beløp'}
+          </Table.HeaderCell>
+          <Table.HeaderCell scope={'col'}>{'Dekningsgrad'}</Table.HeaderCell>
+          <Table.HeaderCell alignment={'right'} scope={'col'}>
+            {'Avkastning'}
+          </Table.HeaderCell>
+        </Table.Row>
+      </Table.Header>
+      <Table.Body>
+        {sortedData.map((row, index) => {
+          return (
+            <Table.EditableRow
+              key={`${row.id}-${index}`}
+              editableContent={(closeEditing: () => void): ReactNode => (
+                <div className={'emptyExpandedTableRow'}>
+                  <Button
+                    onClick={(): void => {
+                      closeEditing();
+                    }}
+                  >
+                    {'Lukk'}
+                  </Button>
+                </div>
+              )}
+              editButtonAriaDescribedby={row.id}
+              onEdit={(): void => {
+                console.log('redigerrer rad');
+              }}
+            >
+              <Table.DataCell id={row.id} alignment={'right'}>
+                {row.month}
+              </Table.DataCell>
+              <Table.DataCell alignment={'right'}>{row.amount}</Table.DataCell>
+              <Table.DataCell>{row.coverage}</Table.DataCell>
+              <Table.DataCell alignment={'right'}>{row.revenue}</Table.DataCell>
+            </Table.EditableRow>
+          );
+        })}
+      </Table.Body>
+    </Table>
   );
 };
 
-export const TableExampleEditable = TemplateExampleEditable.bind({});
-TableExampleEditable.storyName = 'Example Editable';
+export const TableExampleEditable = {
+  render: TemplateExampleEditable,
+  name: 'Example Editable',
+  args: {
+    ...baseArgs,
+  },
+  parameters: tableDefaultParameters,
+} satisfies Story;
 
-TableExampleEditable.args = {
-  ...baseArgs,
-};
-TableExampleEditable.parameters = tableDefaultParameters;
-
-const TemplateExampleEmtpyHeaders: ComponentStory<typeof Table> = (args) => {
+const TemplateExampleEmtpyHeaders: StoryFn<typeof Table> = (args) => {
   const [sortState, setSortState] = useState<SortState>({
     direction: 'none',
   });
@@ -601,7 +598,7 @@ const TemplateExampleEmtpyHeaders: ComponentStory<typeof Table> = (args) => {
   ];
 
   const sortedData = data.slice().sort((a, b) => {
-    const sortKey = sortState.sortKey as keyof typeof data[0];
+    const sortKey = sortState.sortKey as keyof (typeof data)[0];
 
     if (!sortKey) {
       return 0;
@@ -616,7 +613,7 @@ const TemplateExampleEmtpyHeaders: ComponentStory<typeof Table> = (args) => {
   });
 
   return (
-    <div>
+    <>
       <Paragraph>
         {
           'Hvis vi har en tabell med med minst 3 kolonner uten kolonnetitler så bør'
@@ -679,15 +676,16 @@ const TemplateExampleEmtpyHeaders: ComponentStory<typeof Table> = (args) => {
           })}
         </Table.Body>
       </Table>
-    </div>
+    </>
   );
 };
 
-export const TableExampleEmtpyHeaders = TemplateExampleEmtpyHeaders.bind({});
-TableExampleEmtpyHeaders.storyName = 'Example with empty headers';
-
-TableExampleEmtpyHeaders.args = {
-  ...baseArgs,
-  caption: 'Arbeidsoppgaver',
-};
-TableExampleEmtpyHeaders.parameters = tableDefaultParameters;
+export const TableExampleEmtpyHeaders = {
+  render: TemplateExampleEmtpyHeaders,
+  name: 'Example with empty headers',
+  args: {
+    ...baseArgs,
+    caption: 'Arbeidsoppgaver',
+  },
+  parameters: tableDefaultParameters,
+} satisfies Story;

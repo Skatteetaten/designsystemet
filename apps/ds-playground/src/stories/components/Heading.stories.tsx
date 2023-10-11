@@ -1,11 +1,11 @@
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
 import { Heading, headingLevelArr } from '@skatteetaten/ds-typography';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Heading,
   title: 'Komponenter/Heading',
   argTypes: {
@@ -35,14 +35,13 @@ export default {
       },
     },
   },
+  tags: ['autodocs'],
   parameters: { version: getVersion('ds-typography') },
-} as ComponentMeta<typeof Heading>;
+} as Meta<typeof Heading>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: ComponentStory<typeof Heading> = (args) => (
-  <Heading {...args} />
-);
-
-const TemplateExample: ComponentStory<typeof Heading> = () => (
+const TemplateExample: StoryFn<typeof Heading> = () => (
   <>
     <Heading as={'h1'} level={1} hasSpacing>
       {'Overskriftsnivå 1'}
@@ -65,16 +64,19 @@ const TemplateExample: ComponentStory<typeof Heading> = () => (
   </>
 );
 
-export const HeadingDefault = TemplateDefault.bind({});
-export const HeadingExample = TemplateExample.bind({});
-HeadingDefault.storyName = 'Default';
-HeadingExample.storyName = 'Example';
-HeadingExample.parameters = {
-  controls: { disabled: true },
-};
+export const HeadingDefault = {
+  name: 'Default',
+  args: {
+    as: 'h2',
+    level: 2,
+    children: 'Dette er en heading',
+  },
+} satisfies Story;
 
-HeadingDefault.args = {
-  as: 'h2',
-  level: 2,
-  children: 'Dette er en heading',
-};
+export const HeadingExample = {
+  render: TemplateExample,
+  name: 'Example',
+  parameters: {
+    controls: { disable: true },
+  },
+} satisfies Story;

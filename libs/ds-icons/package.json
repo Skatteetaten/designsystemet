@@ -1,7 +1,7 @@
 {
   "name": "@skatteetaten/ds-icons",
   "groupId": "no.skatteetaten.aurora",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "publishConfig": {
     "registry": "https://nexus.sits.no/repository/npm-internal/"
   },

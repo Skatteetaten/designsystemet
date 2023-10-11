@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/ErrorSummary/Error Defaults play-test 1`] = `
+<div data-test-block="true">
+  <a class="Link_link__jeUpY  "
+     href="#referenceId_1"
+  >
+    Husk å fylle ut type varer
+  </a>
+</div>
+`;
+
+exports[`Tester/ErrorSummary/Error WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <a id="htmlid"
+     class="Link_link__jeUpY  dummyClassname"
+     lang="nb"
+     data-testid="123ID"
+     href="#referenceId_1"
+  >
+    Husk å fylle ut type varer
+  </a>
+</div>
+`;
+
+exports[`Tester/ErrorSummary/Error WithRef play-test 1`] = `
+<div data-test-block="true">
+  <a class="Link_link__jeUpY  "
+     href="#referenceId_1"
+     id="dummyIdForwardedFromRef"
+  >
+    Husk å fylle ut type varer
+  </a>
+</div>
+`;

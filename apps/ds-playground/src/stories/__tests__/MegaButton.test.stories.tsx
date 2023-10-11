@@ -6,7 +6,7 @@ import {
   MegaButtonDiscriminatedProp,
 } from '@skatteetaten/ds-buttons';
 import { expect } from '@storybook/jest';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { userEvent, waitFor, within } from '@storybook/testing-library';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
@@ -22,7 +22,7 @@ const verifyAttribute =
     await expect(megaButton).toHaveAttribute(attribute, expectedValue);
   };
 
-export default {
+const meta = {
   component: MegaButton,
   title: 'Tester/MegaButton',
   argTypes: {
@@ -51,314 +51,357 @@ export default {
     onClick: { table: { disable: true } },
     onFocus: { table: { disable: true } },
   },
-} as ComponentMeta<typeof MegaButton>;
-
-const Template: ComponentStory<typeof MegaButton> = (args) => (
-  <div data-test-block>
-    {/* eslint-disable-next-line testing-library/no-node-access */}
-    <MegaButton {...args}>{args.children}</MegaButton>
-  </div>
-);
+} satisfies Meta<typeof MegaButton>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 const defaultArgs: MegaButtonComponentCommonProps = {
   children: defaultMegaButtonText,
 };
 
-// Når MegaButton har en ref, så får dom button elementet ref forwarded
-export const WithRef = Template.bind({});
-WithRef.storyName = 'With Ref (FA1)';
-WithRef.args = {
-  ...defaultArgs,
-  ref: (instance: HTMLButtonElement | null): void => {
-    if (instance) {
-      instance.id = 'dummyIdForwardedFromRef';
-    }
+export const WithRef = {
+  name: 'With Ref (FA1)',
+
+  args: {
+    ...defaultArgs,
+    ref: (instance: HTMLButtonElement | null): void => {
+      if (instance) {
+        instance.id = 'dummyIdForwardedFromRef';
+      }
+    },
   },
-};
-WithRef.argTypes = {
-  ref: { table: { disable: false } },
-};
-WithRef.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithRef.play = verifyAttribute('id', 'dummyIdForwardedFromRef');
 
-// Når MegaButton har en id, så har button-element id
-// Når MegaButton har en custom CSS, så vises custom stil
-// Når MegaButton har en lang, så har button-element lang
-// Når MegaButton har dataTestid, så har button-elementet data-testid satt
-export const WithAttributes = Template.bind({});
-WithAttributes.storyName = 'With Attributes(FA2-5)';
-WithAttributes.args = {
-  ...defaultArgs,
-  id: 'htmlId',
-  className: 'dummyClassname',
-  lang: 'nb',
-  'data-testid': '123ID',
-};
-WithAttributes.argTypes = {
-  id: { table: { disable: false } },
-  className: { table: { disable: false } },
-  lang: { table: { disable: false } },
-  'data-testid': { table: { disable: false } },
-};
-WithAttributes.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const megaButton = canvas.getByRole('button');
-  await expect(megaButton).toHaveClass('dummyClassname');
-  await expect(megaButton).toHaveAttribute('id', 'htmlId');
-  await expect(megaButton).toHaveAttribute('lang', 'nb');
-  await expect(megaButton).toHaveAttribute('data-testid', '123ID');
-};
-
-// Når MegaButton instansieres, så får den riktige default-verdier og rendrer riktig i ulike tilstander
-export const Defaults = Template.bind({});
-Defaults.storyName = 'Defaults (A1, B2)';
-Defaults.args = {
-  ...defaultArgs,
-};
-Defaults.argTypes = {
-  children: { table: { disable: false } },
-};
-Defaults.parameters = {
-  imageSnapshot: {
-    focus: `${wrapper} > button`,
-    hover: `${wrapper} > button`,
-    click: `${wrapper} > button`,
+  argTypes: {
+    ref: { table: { disable: false } },
   },
-};
-Defaults.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const megaButton = canvas.getByText(defaultMegaButtonText);
-  await expect(megaButton).toBeInTheDocument();
-  await expect(megaButton).toHaveAttribute('type', 'button');
-};
 
-// Når MegaButton har en veldig lang tekst så skal det brekke over flere linjer
-export const WithLongText = Template.bind({});
-WithLongText.storyName = 'With Long Text (A2)';
-WithLongText.args = {
-  ...defaultArgs,
-  children: 'Denne knappen har en veldig lang tekst. Så lang at den må brekke.',
-};
-WithLongText.argTypes = {
-  children: { table: { disable: false } },
-};
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
 
-// Når MegaButton har en veldig lang tekst uten breaking space så skal det brekke over flere linjer
-export const WithLongTextAndBreaking = Template.bind({});
-WithLongTextAndBreaking.storyName = 'With Long Text And Breaking (A1, A2)';
-WithLongTextAndBreaking.args = {
-  ...defaultArgs,
-  children: 'Denneknappenharenveldiglangtekst.Sålangatdenmåbrekke.',
-};
-WithLongTextAndBreaking.argTypes = {
-  children: { table: { disable: false } },
-};
+  play: verifyAttribute('id', 'dummyIdForwardedFromRef'),
+} satisfies Story;
 
-// Når MegaButton har isExternal, så vises riktig ikon med tilhørende tekst. Tester også for de icon props som er relevant for saken med systemIcon som er brukt.
-export const WithExternalIcon = Template.bind({});
-WithExternalIcon.storyName = 'With External Icon (A4, B5, B7)';
-WithExternalIcon.args = {
-  ...defaultArgs,
-  isExternal: true,
-};
-WithExternalIcon.argTypes = {
-  isExternal: { table: { disable: false } },
-};
-WithExternalIcon.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const megaButton = canvas.getByRole('button');
-  // eslint-disable-next-line testing-library/no-node-access
-  const svg = megaButton.querySelector('svg');
-  await expect(svg).toHaveAttribute('aria-label', 'Til et annet nettsted');
-  await expect(svg).toHaveAttribute('viewBox', '0 0 24 24');
-  await expect(megaButton).toBeInTheDocument();
-};
+export const WithAttributes = {
+  name: 'With Attributes(FA2-5)',
 
-// Når MegaButton har en veldig lang tekst så skal teksten brytes over flere linjer
-// og når det er et ikon skal ikonet plasseres løpende etter teksten
-export const WithLongTextAndExternalIcon = Template.bind({});
-WithLongTextAndExternalIcon.storyName = 'With Long Text and External Icon (A2)';
-WithLongTextAndExternalIcon.args = {
-  ...defaultArgs,
-  isExternal: true,
-  children:
-    'Denne knappen har en veldig lang tekst. Icon skal da plasseres løpende etter tekster på siste linje',
-};
-WithLongTextAndExternalIcon.argTypes = {
-  children: { table: { disable: false } },
-  isExternal: { table: { disable: false } },
-};
+  args: {
+    ...defaultArgs,
+    id: 'htmlId',
+    className: 'dummyClassname',
+    lang: 'nb',
+    'data-testid': '123ID',
+  },
 
-export const WithDisabled = Template.bind({});
-WithDisabled.storyName = 'With Disabled (B6)';
+  argTypes: {
+    id: { table: { disable: false } },
+    className: { table: { disable: false } },
+    lang: { table: { disable: false } },
+    'data-testid': { table: { disable: false } },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const megaButton = canvas.getByRole('button');
+    await expect(megaButton).toHaveClass('dummyClassname');
+    await expect(megaButton).toHaveAttribute('id', 'htmlId');
+    await expect(megaButton).toHaveAttribute('lang', 'nb');
+    await expect(megaButton).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const Defaults = {
+  name: 'Defaults (A1, B2)',
+
+  args: {
+    ...defaultArgs,
+  },
+
+  argTypes: {
+    children: { table: { disable: false } },
+  },
+
+  parameters: {
+    imageSnapshot: {
+      focus: `${wrapper} > button`,
+      hover: `${wrapper} > button`,
+      click: `${wrapper} > button`,
+    },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const megaButton = canvas.getByText(defaultMegaButtonText);
+    await expect(megaButton).toBeInTheDocument();
+    await expect(megaButton).toHaveAttribute('type', 'button');
+  },
+} satisfies Story;
+
+export const WithLongText = {
+  name: 'With Long Text (A2)',
+
+  args: {
+    ...defaultArgs,
+    children:
+      'Denne knappen har en veldig lang tekst. Så lang at den må brekke.',
+  },
+
+  argTypes: {
+    children: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithLongTextAndBreaking = {
+  name: 'With Long Text And Breaking (A1, A2)',
+
+  args: {
+    ...defaultArgs,
+    children: 'Denneknappenharenveldiglangtekst.Sålangatdenmåbrekke.',
+  },
+
+  argTypes: {
+    children: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithExternalIcon = {
+  name: 'With External Icon (A4, B5, B7)',
+
+  args: {
+    ...defaultArgs,
+    isExternal: true,
+    href: '#',
+  },
+
+  argTypes: {
+    isExternal: { table: { disable: false } },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const megaButton = canvas.getByRole('button');
+    // eslint-disable-next-line testing-library/no-node-access
+    const svg = megaButton.querySelector('svg');
+    await expect(svg).toHaveAttribute('aria-label', 'Til et annet nettsted');
+    await expect(svg).toHaveAttribute('viewBox', '0 0 24 24');
+    await expect(megaButton).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithLongTextAndExternalIcon = {
+  name: 'With Long Text and External Icon (A2)',
+
+  args: {
+    ...defaultArgs,
+    isExternal: true,
+    href: '#',
+    children:
+      'Denne knappen har en veldig lang tekst. Icon skal da plasseres løpende etter tekster på siste linje',
+  },
+
+  argTypes: {
+    children: { table: { disable: false } },
+    isExternal: { table: { disable: false } },
+  },
+} satisfies Story;
+
 const discriminatedProps: MegaButtonDiscriminatedProp = {
   href: undefined,
   disabled: true,
 };
-WithDisabled.args = {
-  ...defaultArgs,
-  ...discriminatedProps,
-};
-WithDisabled.argTypes = {
-  disabled: { table: { disable: false } },
-};
-WithDisabled.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  expect(canvas.getByText(defaultMegaButtonText)).toBeDisabled();
-};
 
-// Når MegaButton har prop type, så har button-elementet type satt
-export const WithType = Template.bind({});
-WithType.storyName = 'With Type (B2)';
-WithType.args = {
-  ...defaultArgs,
-  type: 'submit',
-};
-WithType.argTypes = {
-  type: { table: { disable: false } },
-};
-WithType.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithType.play = verifyAttribute('type', 'submit');
+export const WithDisabled = {
+  name: 'With Disabled (B6)',
 
-// Når MegaButton har aria attributer, så har button element aria-* satt
-export const WithAriaDescribedby = Template.bind({});
-WithAriaDescribedby.storyName = 'With AriaDescribedby (B1)';
-WithAriaDescribedby.args = {
-  ...defaultArgs,
-  ariaDescribedby: 'testid1234',
-};
-WithAriaDescribedby.argTypes = {
-  ariaDescribedby: { table: { disable: false } },
-};
-WithAriaDescribedby.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithAriaDescribedby.play = verifyAttribute('aria-describedby', 'testid1234');
-
-// Når MegaButton har en accessKey, så settes den som forventet
-export const WithAccesskey = Template.bind({});
-WithAccesskey.storyName = 'With Accesskey (B4)';
-WithAccesskey.args = {
-  children: defaultMegaButtonText,
-  accessKey: 'j',
-};
-WithAccesskey.argTypes = {
-  accessKey: { table: { disable: false } },
-};
-WithAccesskey.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithAccesskey.play = verifyAttribute('accessKey', 'j');
-
-// Når MegaButton har en href, så rendres den som en a
-export const AsLink = Template.bind({});
-AsLink.storyName = 'As Link (B3)';
-AsLink.args = {
-  ...defaultArgs,
-  href: 'https://www.skatteetaten.no',
-};
-AsLink.argTypes = {
-  href: { table: { disable: false } },
-};
-AsLink.parameters = {
-  imageSnapshot: {
-    focus: `${wrapper} > a`,
-    hover: `${wrapper} > a`,
+  args: {
+    ...defaultArgs,
+    ...discriminatedProps,
   },
-};
 
-// Når MegaButton har en href med tom streng, så rendres den som en a
-export const AsLinkEmptyString = Template.bind({});
-AsLinkEmptyString.storyName = 'As Link with empty href (B3)';
-AsLinkEmptyString.args = {
-  ...defaultArgs,
-  href: '',
-};
-AsLinkEmptyString.argTypes = {
-  href: { table: { disable: false } },
-};
-AsLinkEmptyString.parameters = {
-  imageSnapshot: { disable: true },
-};
-
-// Når MegaButton har en href og er eksternlink, så rendres den som en a og det vises eksternlink-ikon
-export const AsLinkExternal = Template.bind({});
-AsLinkExternal.storyName = 'As Link External (B3, A4)';
-AsLinkExternal.args = {
-  ...defaultArgs,
-  href: 'https://www.skatteetaten.no',
-  isExternal: true,
-};
-AsLinkExternal.argTypes = {
-  href: { table: { disable: false } },
-  isExternal: { table: { disable: false } },
-};
-AsLinkExternal.parameters = {
-  imageSnapshot: {
-    focus: `${wrapper} > a`,
-    hover: `${wrapper} > a`,
+  argTypes: {
+    disabled: { table: { disable: false } },
   },
-};
-AsLinkExternal.play = async ({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const megaButton = canvas.getByText('Klikk her');
-  await expect(megaButton).toBeInTheDocument();
-  await expect(megaButton.tagName).toBe('A');
-  await expect(megaButton).toHaveAttribute('role', 'button');
-};
 
-// Når brukeren setter focus, blurrer, eller klikker på knappen, så kalles riktig eventHandler
-// Eventhandlere endrer tesksten på knappen
-const EventHandlersTemplate: ComponentStory<typeof MegaButton> = (args) => {
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    expect(canvas.getByText(defaultMegaButtonText)).toBeDisabled();
+  },
+} satisfies Story;
+
+export const WithType = {
+  name: 'With Type (B2)',
+
+  args: {
+    ...defaultArgs,
+    type: 'submit',
+  },
+
+  argTypes: {
+    type: { table: { disable: false } },
+  },
+
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+
+  play: verifyAttribute('type', 'submit'),
+} satisfies Story;
+
+export const WithAriaDescribedby = {
+  name: 'With AriaDescribedby (B1)',
+
+  args: {
+    ...defaultArgs,
+    ariaDescribedby: 'testid1234',
+  },
+
+  argTypes: {
+    ariaDescribedby: { table: { disable: false } },
+  },
+
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+
+  play: verifyAttribute('aria-describedby', 'testid1234'),
+} satisfies Story;
+
+export const WithAccesskey = {
+  name: 'With Accesskey (B4)',
+
+  args: {
+    children: defaultMegaButtonText,
+    accessKey: 'j',
+  },
+
+  argTypes: {
+    accessKey: { table: { disable: false } },
+  },
+
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+
+  play: verifyAttribute('accessKey', 'j'),
+} satisfies Story;
+
+export const AsLink = {
+  name: 'As Link (B3)',
+
+  args: {
+    ...defaultArgs,
+    href: 'https://www.skatteetaten.no',
+  },
+
+  argTypes: {
+    href: { table: { disable: false } },
+  },
+
+  parameters: {
+    imageSnapshot: {
+      focus: `${wrapper} > a`,
+      hover: `${wrapper} > a`,
+    },
+  },
+} satisfies Story;
+
+export const AsLinkEmptyString = {
+  name: 'As Link with empty href (B3)',
+
+  args: {
+    ...defaultArgs,
+    href: '',
+  },
+
+  argTypes: {
+    href: { table: { disable: false } },
+  },
+
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+} satisfies Story;
+
+export const AsLinkExternal = {
+  name: 'As Link External (B3, A4)',
+
+  args: {
+    ...defaultArgs,
+    href: 'https://www.skatteetaten.no',
+    isExternal: true,
+  },
+
+  argTypes: {
+    href: { table: { disable: false } },
+    isExternal: { table: { disable: false } },
+  },
+
+  parameters: {
+    imageSnapshot: {
+      focus: `${wrapper} > a`,
+      hover: `${wrapper} > a`,
+    },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const megaButton = canvas.getByText('Klikk her');
+    await expect(megaButton).toBeInTheDocument();
+    await expect(megaButton.tagName).toBe('A');
+    await expect(megaButton).toHaveAttribute('role', 'button');
+  },
+} satisfies Story;
+
+const EventHandlersTemplate: StoryFn<typeof MegaButton> = (args) => {
   const [buttonText, setButtonText] = useState('bruk knapp for å teste events');
   return (
-    <div data-test-block>
-      <MegaButton
-        {...args}
-        onFocus={(
-          event: React.FocusEvent<HTMLButtonElement | HTMLAnchorElement>
-        ): void => {
-          setButtonText('Knapp har fått fokus');
-          args.onFocus && args.onFocus(event);
-        }}
-        onBlur={(
-          event: React.FocusEvent<HTMLButtonElement | HTMLAnchorElement>
-        ): void => {
-          setButtonText('Knapp har blitt blurret');
-          args.onBlur && args.onBlur(event);
-        }}
-        onClick={(
-          event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
-        ): void => {
-          setButtonText('Knapp har blitt klikket på');
-          args.onClick && args.onClick(event);
-        }}
-      >
-        {buttonText}
-      </MegaButton>
-    </div>
+    <MegaButton
+      {...args}
+      onFocus={(
+        event: React.FocusEvent<HTMLButtonElement | HTMLAnchorElement>
+      ): void => {
+        setButtonText('Knapp har fått fokus');
+        args.onFocus && args.onFocus(event);
+      }}
+      onBlur={(
+        event: React.FocusEvent<HTMLButtonElement | HTMLAnchorElement>
+      ): void => {
+        setButtonText('Knapp har blitt blurret');
+        args.onBlur && args.onBlur(event);
+      }}
+      onClick={(
+        event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
+      ): void => {
+        setButtonText('Knapp har blitt klikket på');
+        args.onClick && args.onClick(event);
+      }}
+    >
+      {buttonText}
+    </MegaButton>
   );
 };
-export const WithEventHandlers = EventHandlersTemplate.bind({});
-WithEventHandlers.storyName = 'With EventHandlers (A2 delvis)';
-WithEventHandlers.args = {
-  ...defaultArgs,
-};
-WithEventHandlers.parameters = {
-  imageSnapshot: { disable: true },
-};
-WithEventHandlers.play = async ({ args, canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
-  const megaButton = canvas.getByText('bruk knapp for å teste events');
-  await expect(megaButton).toBeInTheDocument();
-  await megaButton.focus();
-  await waitFor(() => expect(args.onFocus).toHaveBeenCalled());
-  await userEvent.tab();
-  await waitFor(() => expect(args.onBlur).toHaveBeenCalled());
-  await userEvent.click(megaButton);
-  await waitFor(() => expect(args.onClick).toHaveBeenCalled());
-};
+
+export const WithEventHandlers = {
+  render: EventHandlersTemplate,
+  name: 'With EventHandlers (A2 delvis)',
+
+  args: {
+    ...defaultArgs,
+  },
+
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const megaButton = canvas.getByText('bruk knapp for å teste events');
+    await expect(megaButton).toBeInTheDocument();
+    await megaButton.focus();
+    await waitFor(() => expect(args.onFocus).toHaveBeenCalled());
+    await userEvent.tab();
+    await waitFor(() => expect(args.onBlur).toHaveBeenCalled());
+    await userEvent.click(megaButton);
+    await waitFor(() => expect(args.onClick).toHaveBeenCalled());
+  },
+} satisfies Story;

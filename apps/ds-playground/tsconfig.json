@@ -8,11 +8,14 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
+    "noPropertyAccessFromIndexSignature": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true
   },
-  "files": ["../../types/i18next.d.ts"],
+  "files": [
+    "../../types/i18next.d.ts",
+    "../../node_modules/@nx/react/typings/image.d.ts"
+  ],
   "include": [],
   "references": [
     {
@@ -22,7 +25,7 @@
       "path": "./tsconfig.spec.json"
     },
     {
-      "path": "./.storybook/tsconfig.json"
+      "path": "./tsconfig.storybook.json"
     }
   ]
 }

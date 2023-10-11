@@ -17,32 +17,23 @@ $spacing-arrow-link: calc(-20px - var(--spacing-s));
 
     .icon {
       position: absolute;
+      height: calc(var(--font-size-m) * var(--semantic-line-height-article));
       padding-right: var(--spacing-s);
       background-color: inherit;
       fill: var(--semantic-interactive-main);
-      transform: translate($spacing-arrow-link, 3px);
+      transform: translateX($spacing-arrow-link);
       transition: 0.2s;
 
       &_white {
         fill: var(--palette-graphite-0);
       }
-    }
 
-    &:hover {
-      .icon {
-        &_forward {
-          transform: translate(
-            calc($spacing-arrow-link + var(--spacing-xs)),
-            3px
-          );
-        }
+      &_forward:has(+ a:hover) {
+        transform: translateX(calc($spacing-arrow-link + var(--spacing-xs)));
+      }
 
-        &_down {
-          transform: translate(
-            $spacing-arrow-link,
-            calc(3px + var(--spacing-xs))
-          );
-        }
+      &_down:has(+ a:hover) {
+        transform: translate($spacing-arrow-link, var(--spacing-xs));
       }
     }
 
