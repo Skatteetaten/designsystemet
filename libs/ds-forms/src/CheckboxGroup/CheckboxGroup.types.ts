@@ -31,7 +31,7 @@ interface CheckboxGroupCommonProps
   helpText?: FieldsetProps['helpText'];
   /** Overskriver default hjelpeikon */
   helpSvgPath?: FieldsetProps['helpSvgPath'];
-  /** Title-element til hjelpeikon */
+  /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: FieldsetProps['titleHelpSvg'];
   /** Om obligatorisk gruppe skal markeres med stjerne */
   showRequiredMark?: FieldsetProps['showRequiredMark'];

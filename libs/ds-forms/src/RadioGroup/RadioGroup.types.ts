@@ -54,7 +54,7 @@ interface RadioGroupComponentCommonProps
   helpText?: FieldsetProps['helpText'];
   /** Overskriver default hjelpeikon */
   helpSvgPath?: FieldsetProps['helpSvgPath'];
-  /** Title-element til hjelpeikon */
+  /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: FieldsetProps['titleHelpSvg'];
   /** Overskriver autogenerert name */
   name?: string;

@@ -17,6 +17,10 @@
   color: var(--semantic-page-foreground);
   font-size: var(--font-size-m);
   line-height: var(--semantic-line-height-input);
+
+  &MarginTop {
+    margin-top: var(--spacing-xs);
+  }
 }
 
 @keyframes animationhelpbox {
@@ -42,7 +46,7 @@
   width: fit-content;
   box-sizing: border-box;
   border: 2px solid var(--palette-forest-30);
-  margin: var(--spacing-xs) 0;
+  margin-top: var(--spacing-xs);
   animation-duration: 0.3s;
   animation-fill-mode: both;
   animation-name: animationhelpbox;

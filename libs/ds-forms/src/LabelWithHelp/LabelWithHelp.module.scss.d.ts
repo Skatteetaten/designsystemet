@@ -2,6 +2,7 @@
 export const label: string;
 export const label_required: string;
 export const description: string;
+export const descriptionMarginTop: string;
 export const helpButton: string;
 export const helpBox: string;
 export const animationhelpbox: string;

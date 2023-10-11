@@ -1,4 +1,4 @@
-import { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { ForwardRefExoticComponent, ReactNode, RefAttributes } from 'react';
 
 import { BaseProps, LinkColor } from '@skatteetaten/ds-core-utils';
 
@@ -15,7 +15,7 @@ export interface LinkGroupComponentCommonProps extends BaseProps {
   /** Definerer stilen til lenkegruppen. */
   variant?: LinkGroupVariant;
   /** Link-komponenter */
-  children?: JSX.Element | JSX.Element[];
+  children?: ReactNode;
 }
 
 export type LinkGroupProps = LinkGroupComponentCommonProps;
