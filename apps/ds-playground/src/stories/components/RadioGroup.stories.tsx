@@ -6,14 +6,12 @@ import {
   getRadioGroupVariantDefault,
 } from '@skatteetaten/ds-forms';
 import { useArgs } from '@storybook/preview-api';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-const legendText = 'Type virksomhet';
-
-const meta = {
+export default {
   component: RadioGroup,
   title: 'Komponenter/RadioGroup/RadioGroup',
   argTypes: {
@@ -72,63 +70,20 @@ const meta = {
       ...htmlEventDescription,
     },
   },
-  tags: ['autodocs'],
-  args: {
-    legend: legendText,
-    children: (
-      <>
-        <RadioGroup.Radio value={'foretak'}>
-          {'Enkeltpersonsforetak'}
-        </RadioGroup.Radio>
-        <RadioGroup.Radio value={'selskap'}>{'Aksjeselskap'}</RadioGroup.Radio>
-        <RadioGroup.Radio value={'annet'}>{'Annet'}</RadioGroup.Radio>
-      </>
-    ),
-  },
   parameters: {
     version: getVersion('ds-forms'),
   },
 } satisfies Meta<typeof RadioGroup>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-const TemplateDefaultControlled: StoryFn<typeof RadioGroup> = (args) => {
+export const Default: StoryFn<typeof RadioGroup> = () => {
   const [, setArgs] = useArgs();
-
   return (
     <RadioGroup
-      {...args}
+      legend={'Type virksomhet'}
       onChange={(e): void => {
-        setArgs({ selectedValue: e.target.value });
+        setArgs({ value: e.target.value });
       }}
-    />
-  );
-};
-
-export const RadioGroupDefaultControlled = {
-  render: TemplateDefaultControlled,
-  name: 'Default Controlled',
-  argTypes: {
-    defaultValue: { control: { disable: true } },
-  },
-  args: {
-    children: (
-      <>
-        <RadioGroup.Radio value={'foretak'}>
-          {'Enkeltpersonsforetak'}
-        </RadioGroup.Radio>
-        <RadioGroup.Radio value={'selskap'}>{'Aksjeselskap'}</RadioGroup.Radio>
-        <RadioGroup.Radio value={'annet'}>{'Annet'}</RadioGroup.Radio>
-      </>
-    ),
-    defaultValue: undefined,
-    selectedValue: '',
-  },
-} satisfies Story;
-
-const TemplateDefaultUncontrolled: StoryFn<typeof RadioGroup> = (args) => {
-  return (
-    <RadioGroup {...args}>
+    >
       <RadioGroup.Radio value={'foretak'}>
         {'Enkeltpersonsforetak'}
       </RadioGroup.Radio>
@@ -138,26 +93,14 @@ const TemplateDefaultUncontrolled: StoryFn<typeof RadioGroup> = (args) => {
   );
 };
 
-export const RadioGroupDefaultUncontrolled = {
-  render: TemplateDefaultUncontrolled,
-  name: 'Default Uncontrolled',
-  argTypes: {
-    selectedValue: { control: { disable: true } },
-  },
-  args: {
-    selectedValue: undefined,
-    defaultValue: 'annet',
-  },
-} satisfies Story;
-
-const TemplateExampleStandard: StoryFn<typeof RadioGroup> = (args) => {
+export const ExampleStandard: StoryFn<typeof RadioGroup> = () => {
   const [state, setState] = useState({
     selectedValue: 'foretak',
   });
 
   return (
     <RadioGroup
-      legend={args.legend}
+      legend={'Type virksomhet'}
       errorMessage={'Valg av type virksomhet er påkrevd.'}
       selectedValue={state.selectedValue}
       showRequiredMark
@@ -173,15 +116,7 @@ const TemplateExampleStandard: StoryFn<typeof RadioGroup> = (args) => {
   );
 };
 
-export const RadioGroupExampleStandard = {
-  render: TemplateExampleStandard,
-  name: 'Example Standard',
-  parameters: {
-    controls: { disable: true },
-  },
-} satisfies Story;
-
-const TemplateExampleHorizontal: StoryFn<typeof RadioGroup> = () => {
+export const ExampleHorizontal: StoryFn<typeof RadioGroup> = () => {
   const [state, setState] = useState({
     selectedValue: 'nei',
   });
@@ -199,11 +134,3 @@ const TemplateExampleHorizontal: StoryFn<typeof RadioGroup> = () => {
     </RadioGroup>
   );
 };
-
-export const RadioGroupExampleHorizontal = {
-  render: TemplateExampleHorizontal,
-  name: 'Example Horizontal',
-  parameters: {
-    controls: { disable: true },
-  },
-} satisfies Story;

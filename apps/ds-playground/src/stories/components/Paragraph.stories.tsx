@@ -4,12 +4,13 @@ import {
   Paragraph,
   paragraphVariantArr,
 } from '@skatteetaten/ds-typography';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
+import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: Paragraph,
   title: 'Komponenter/Paragraph',
   argTypes: {
@@ -30,15 +31,16 @@ const meta = {
       },
     },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-typography'),
   },
 } satisfies Meta<typeof Paragraph>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-const TemplateExample: StoryFn<typeof Paragraph> = () => (
+export const Default: StoryFn<typeof Paragraph> = () => (
+  <Paragraph>{loremIpsum}</Paragraph>
+);
+
+export const Example: StoryFn<typeof Paragraph> = () => (
   <>
     <Heading as={'h1'} level={1} hasSpacing>
       {'Flere oppgir kryptoverdier i skattemeldingen'}
@@ -66,24 +68,3 @@ const TemplateExample: StoryFn<typeof Paragraph> = () => (
     </Paragraph>
   </>
 );
-
-export const ParagraphDefault = {
-  name: 'Default',
-  args: {
-    children:
-      'Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, ' +
-      'etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.',
-    variant: getParagraphVariantDefault(),
-  },
-} satisfies Story;
-
-export const ParagraphExample = {
-  render: TemplateExample,
-  name: 'Example',
-  args: {
-    children: 'dummy',
-  },
-  parameters: {
-    controls: { disable: true },
-  },
-} satisfies Story;

@@ -1,34 +1,27 @@
-import React, { useId, useState } from 'react';
+import { useId, useState } from 'react';
 
-import {
-  OpenClose,
-  StepList,
-  StepListProps,
-} from '@skatteetaten/ds-collections';
+import { OpenClose, StepList } from '@skatteetaten/ds-collections';
 import { ErrorSummary, RadioGroup } from '@skatteetaten/ds-forms';
 import { List, Paragraph } from '@skatteetaten/ds-typography';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: StepList,
   title: 'Komponenter/StepList/StepList',
   argTypes: {
     // Props
     children: { control: false, table: { category: category.props } },
   },
-  tags: ['autodocs'],
   parameters: {
     docs: { source: { type: 'code' } },
     version: getVersion('ds-collections'),
   },
 } satisfies Meta<typeof StepList>;
-export default meta;
 
-type Story = StoryObj<typeof meta>;
-const TemplateDefault: StoryFn<StepListProps> = (args) => {
+export const Default: StoryFn<typeof StepList> = () => {
   const stepId = useId();
   const [activeStep, setActiveStep] = useState(1);
   const [step3, setStep3] = useState<string | undefined>(undefined);
@@ -42,8 +35,9 @@ const TemplateDefault: StoryFn<StepListProps> = (args) => {
       el?.focus();
     }, 0);
   };
+
   return (
-    <StepList {...args}>
+    <StepList>
       {activeStep >= 1 && (
         <StepList.Step
           id={`${stepId}-1`}
@@ -184,8 +178,3 @@ const TemplateDefault: StoryFn<StepListProps> = (args) => {
     </StepList>
   );
 };
-
-export const StepListDefault = {
-  render: TemplateDefault,
-  name: 'Default',
-} satisfies Story;

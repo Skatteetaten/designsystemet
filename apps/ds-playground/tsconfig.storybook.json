@@ -26,6 +26,7 @@
     ".storybook/*.js",
     ".storybook/*.ts",
     ".storybook/*.tsx",
+    ".storybook/*.mdx",
     "**/*.d.ts"
   ]
 }

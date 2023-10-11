@@ -2,12 +2,12 @@ import { useState } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { Checkbox } from '@skatteetaten/ds-forms';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: Checkbox,
   title: 'Komponenter/Checkbox',
   argTypes: {
@@ -69,15 +69,16 @@ const meta = {
     // Events
     onChange: { ...htmlEventDescription },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-forms'),
   },
 } satisfies Meta<typeof Checkbox>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-const TemplateExample: StoryFn<typeof Checkbox> = () => {
+export const Default: StoryFn<typeof Checkbox> = () => (
+  <Checkbox>{'Checkbox'}</Checkbox>
+);
+
+export const Example: StoryFn<typeof Checkbox> = () => {
   const [checked, setChecked] = useState(false);
   const [error, setError] = useState(false);
   return (
@@ -96,39 +97,3 @@ const TemplateExample: StoryFn<typeof Checkbox> = () => {
     </>
   );
 };
-
-export const CheckboxDefaultControlled = {
-  name: 'Default Controlled',
-  argTypes: {
-    defaultChecked: { control: { disable: true } },
-  },
-  args: {
-    children: 'Checkbox',
-    checked: false,
-    defaultChecked: undefined,
-    name: undefined,
-  },
-} satisfies Story;
-
-export const CheckboxDefaultUncontrolled = {
-  name: 'Default Uncontrolled',
-  argTypes: {
-    checked: { control: { disable: true } },
-  },
-  args: {
-    children: 'Checkbox',
-    checked: undefined,
-    defaultChecked: false,
-  },
-} satisfies Story;
-
-export const CheckboxExample = {
-  render: TemplateExample,
-  name: 'Example',
-  args: {
-    children: 'dummy',
-  },
-  parameters: {
-    controls: { disable: true },
-  },
-} satisfies Story;

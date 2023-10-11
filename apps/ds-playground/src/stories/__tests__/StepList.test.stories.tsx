@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { StepList, StepListProps } from '@skatteetaten/ds-collections';
 import { Heading, List, Paragraph } from '@skatteetaten/ds-typography';
 import { expect } from '@storybook/jest';
@@ -7,7 +5,7 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
 
 import { category } from '../../../.storybook/helpers';
-import { StepListDefault } from '../components/StepList.stories';
+import { Default } from '../components/StepList.stories';
 
 const meta = {
   component: StepList,
@@ -196,8 +194,8 @@ export const WithBreakPointMobile = {
 } satisfies Story;
 
 export const WithMultipleSteps = {
-  ...StepListDefault,
   name: 'With steps (A6, A8, A9)',
+  render: Default,
   parameters: {
     imageSnapshot: { disable: true },
   },
