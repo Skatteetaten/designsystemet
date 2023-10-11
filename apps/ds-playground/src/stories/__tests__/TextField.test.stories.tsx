@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import { formArrSize } from '@skatteetaten/ds-core-utils';
 import {
   TextboxRefHandle,
   TextField,
@@ -7,12 +8,7 @@ import {
 } from '@skatteetaten/ds-forms';
 import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import {
-  fireEvent,
-  userEvent,
-  waitFor,
-  within,
-} from '@storybook/testing-library';
+import { userEvent, waitFor, within } from '@storybook/testing-library';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -43,6 +39,11 @@ const meta = {
       options: [...textFieldAsArr],
       control: 'inline-radio',
     },
+    variant: {
+      table: { disable: true },
+      options: [...formArrSize],
+      control: 'inline-radio',
+    },
     autosize: { table: { disable: true } },
     classNames: {
       table: { disable: true },
@@ -57,7 +58,6 @@ const meta = {
     },
     helpText: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
-    isLarge: { table: { disable: true } },
     label: { table: { disable: true } },
     showRequiredMark: { table: { disable: true } },
     thousandSeparator: { table: { disable: true } },
@@ -76,8 +76,6 @@ const meta = {
     required: { table: { disable: true } },
     rows: { table: { disable: true } },
     value: { table: { disable: true } },
-    // Aria
-    ariaDescribedby: { table: { disable: true } },
     // Events
     onBlur: { table: { disable: true } },
     onChange: { table: { disable: true } },
@@ -153,6 +151,7 @@ export const WithCustomClassNames = {
   args: {
     ...defaultArgs,
     classNames: {
+      container: ' dummyClassname',
       label: 'dummyClassname',
       textbox: 'dummyClassname',
       errorMessage: 'dummyClassname',
@@ -169,6 +168,10 @@ export const WithCustomClassNames = {
 
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
+    // eslint-disable-next-line testing-library/no-node-access
+    const container = canvasElement.querySelector(`${wrapper} > div`);
+    await expect(container).toHaveClass('dummyClassname');
+
     const textbox = canvas.getByRole('textbox');
     await expect(textbox).toHaveClass('dummyClassname');
 
@@ -184,7 +187,7 @@ export const WithCustomClassNames = {
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults (A1 delvis, A2 delvis, B2, FS-A2)',
+  name: 'Defaults Variant Medium (A1 delvis, A2 delvis, B2, FS-A2)',
 
   args: {
     ...defaultArgs,
@@ -216,6 +219,19 @@ export const Defaults = {
       '[id^=textFieldErrorId]'
     );
     await expect(errorMessageContainer).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithVariantLarge = {
+  name: 'With Variant Large (A1 delvis)',
+
+  args: {
+    ...defaultArgs,
+    variant: 'large',
+  },
+
+  argTypes: {
+    variant: { table: { disable: false } },
   },
 } satisfies Story;
 
@@ -460,33 +476,6 @@ export const WithRows = {
   },
 } satisfies Story;
 
-export const WithAriaDescribedby = {
-  name: 'With AriaDescribedby (B5 delvis)',
-
-  args: {
-    ...defaultArgs,
-    ariaDescribedby: 'testID',
-  },
-
-  argTypes: {
-    ariaDescribedby: { table: { disable: false } },
-  },
-
-  parameters: {
-    imageSnapshot: { disable: true },
-  },
-
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const textbox = canvas.getByRole('textbox');
-    await expect(textbox).toHaveAttribute('aria-describedby');
-    await expect(textbox).toHaveAttribute(
-      'aria-describedby',
-      expect.stringMatching('testID')
-    );
-  },
-} satisfies Story;
-
 export const WithError = {
   name: 'With ErrorMessage (B5 delvis)',
 
@@ -547,36 +536,6 @@ export const WithErrorMessageAndHasError = {
   },
 } satisfies Story;
 
-export const WithHasErrorAndAriaDescribedby = {
-  name: 'With HasError And AriaDescribedby (B5 delvis)',
-
-  args: {
-    ...defaultArgs,
-    ariaDescribedby: 'konsumentId',
-    errorMessage: errorMessageText,
-    hasError: true,
-  },
-
-  argTypes: {
-    ariaDescribedby: { table: { disable: false } },
-    hasError: { table: { disable: false } },
-  },
-
-  parameters: {
-    imageSnapshot: { disable: true },
-  },
-
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const errorMessageContainer = canvas.getAllByRole('generic')[3];
-    const textbox = canvas.getByRole('textbox');
-    await expect(textbox).toHaveAttribute(
-      'aria-describedby',
-      expect.stringMatching(`konsumentId ${errorMessageContainer.id}`)
-    );
-  },
-} satisfies Story;
-
 export const WithDescription = {
   name: 'With Description (FS-A3)',
 
@@ -615,19 +574,6 @@ export const WithHideLabel = {
   },
 } satisfies Story;
 
-export const WithIsLarge = {
-  name: 'With IsLarge (A1 delvis)',
-
-  args: {
-    ...defaultArgs,
-    isLarge: true,
-  },
-
-  argTypes: {
-    isLarge: { table: { disable: false } },
-  },
-} satisfies Story;
-
 export const WithThousandSeparator = {
   name: 'With ThousandSeparator As Input (A8 delvis)',
 
@@ -661,13 +607,38 @@ export const WithHelpText = {
   argTypes: {
     helpText: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: {
+      focus: `${wrapper} > div > button`,
+      click: `${wrapper} > div > button`,
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const helpButton = canvas.getByRole('button', {
       description: defaultLabelText,
     });
     await expect(helpButton).toBeInTheDocument();
-    await fireEvent.click(helpButton);
+  },
+} satisfies Story;
+
+export const WithHelpTextAndDescription = {
+  name: 'With HelpText And Description (A1)',
+  args: {
+    ...defaultArgs,
+    helpText:
+      'Vi trenger å vite navnet ditt dersom vi skal kontakte deg senere.',
+    description: 'En liten beskrivelse tekst',
+  },
+  argTypes: {
+    helpText: { table: { disable: false } },
+    description: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: {
+      focus: `${wrapper} > div > button`,
+      click: `${wrapper} > div > button`,
+    },
   },
 } satisfies Story;
 

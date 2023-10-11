@@ -26,7 +26,7 @@ export interface FieldsetProps
   helpText?: HelpProps['helpText'];
   /** Overskriver default hjelpeikon */
   helpSvgPath?: HelpProps['helpSvgPath'];
-  /** Title-element til hjelpeikon */
+  /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: HelpProps['titleHelpSvg'];
   /** Om legend skal markeres med stjerne */
   showRequiredMark?: boolean;

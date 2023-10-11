@@ -7,8 +7,10 @@ export interface HelpProps {
   helpText?: string;
   /** Overskriver default hjelpeikon */
   helpSvgPath?: ReactElement;
-  /** Title-element til hjelpeikon */
+  /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: string;
-  /** Label or legend id */
+  /** Label eller legend id */
   targetId?: string;
+  /** Beskrivelse */
+  description?: string;
 }

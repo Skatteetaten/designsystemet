@@ -6,8 +6,8 @@
     "registry": "https://nexus.sits.no/repository/npm-internal/"
   },
   "peerDependencies": {
-    "i18next": "^22",
+    "i18next": "^23",
     "react": "^18",
-    "react-i18next": "^12"
+    "react-i18next": "^13"
   }
 }

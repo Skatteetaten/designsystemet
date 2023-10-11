@@ -342,7 +342,7 @@ exports[`Tester/CheckboxGroup WithDescription play-test 1`] = `
     >
       Velg det som passer deg
     </legend>
-    <div class="Fieldset_description__k538X">
+    <div class="Help_description__niabw">
       Vi trenger å vite om du har barn.
     </div>
     <div class="Fieldset_contentContainer__fJcfT">

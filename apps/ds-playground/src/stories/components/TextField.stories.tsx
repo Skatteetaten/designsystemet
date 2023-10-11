@@ -1,9 +1,11 @@
 import { useState } from 'react';
 
+import { formArrSize } from '@skatteetaten/ds-core-utils';
 import {
   TextField,
   TextFieldProps,
   textFieldAsArr,
+  getTextFieldVariantDefault,
 } from '@skatteetaten/ds-forms';
 import { useArgs } from '@storybook/preview-api';
 import { StoryObj, Meta, StoryFn } from '@storybook/react';
@@ -21,6 +23,14 @@ const meta = {
       table: { category: category.props },
       options: [...textFieldAsArr],
       control: 'inline-radio',
+    },
+    variant: {
+      options: [...formArrSize],
+      control: 'inline-radio',
+      table: {
+        category: category.props,
+        defaultValue: { summary: getTextFieldVariantDefault() },
+      },
     },
     autosize: { table: { category: category.props } },
     classNames: {
@@ -41,12 +51,6 @@ const meta = {
     },
     helpText: { table: { category: category.props } },
     hideLabel: {
-      control: 'boolean',
-      table: {
-        category: category.props,
-      },
-    },
-    isLarge: {
       control: 'boolean',
       table: {
         category: category.props,
@@ -91,8 +95,6 @@ const meta = {
       control: 'text',
       table: { category: category.htmlAttribute },
     },
-    // Aria
-    ariaDescribedby: { table: { category: category.aria } },
     // Events
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },

@@ -3,24 +3,24 @@
 exports[`Tester/Fieldset ClickCloseButton play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr">
-    <legend id="legendId-:ri:"
+    <legend id="legendId-:rl:"
             class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
     >
       Ledetekst
     </legend>
     <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
             type="button"
-            aria-describedby="legendId-:ri:"
+            aria-describedby="legendId-:rl:"
             aria-expanded="false"
     >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
            viewbox="0 0 24 24"
            focusable="false"
-           aria-labelledby="svgtitle-:rj:"
+           aria-labelledby="svgtitle-:rm:"
            aria-hidden="false"
            role="img"
       >
-        <title id="svgtitle-:rj:">
+        <title id="svgtitle-:rm:">
           Hjelp
         </title>
         <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
@@ -39,24 +39,24 @@ exports[`Tester/Fieldset ClickCloseButton play-test 1`] = `
 exports[`Tester/Fieldset ClickHelpButton play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr">
-    <legend id="legendId-:rf:"
+    <legend id="legendId-:ri:"
             class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
     >
       Ledetekst
     </legend>
     <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
             type="button"
-            aria-describedby="legendId-:rf:"
+            aria-describedby="legendId-:ri:"
             aria-expanded="false"
     >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
            viewbox="0 0 24 24"
            focusable="false"
-           aria-labelledby="svgtitle-:rg:"
+           aria-labelledby="svgtitle-:rj:"
            aria-hidden="false"
            role="img"
       >
-        <title id="svgtitle-:rg:">
+        <title id="svgtitle-:rj:">
           Hjelp
         </title>
         <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
@@ -118,7 +118,7 @@ exports[`Tester/Fieldset WithDescription play-test 1`] = `
     >
       Ledetekst
     </legend>
-    <div class="Fieldset_description__k538X">
+    <div class="Help_description__niabw">
       Kort hjelpetekst
     </div>
     <div class="Fieldset_contentContainer__fJcfT">
@@ -152,24 +152,24 @@ exports[`Tester/Fieldset WithDisabled play-test 1`] = `
 exports[`Tester/Fieldset WithHelpSvgPath smoke-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr">
-    <legend id="legendId-:rd:"
+    <legend id="legendId-:rg:"
             class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
     >
       Ledetekst
     </legend>
     <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
             type="button"
-            aria-describedby="legendId-:rd:"
+            aria-describedby="legendId-:rg:"
             aria-expanded="false"
     >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
            viewbox="0 0 24 24"
            focusable="false"
-           aria-labelledby="svgtitle-:re:"
+           aria-labelledby="svgtitle-:rh:"
            aria-hidden="false"
            role="img"
       >
-        <title id="svgtitle-:re:">
+        <title id="svgtitle-:rh:">
           Hjelp
         </title>
         <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
@@ -221,6 +221,45 @@ exports[`Tester/Fieldset WithHelpText play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Fieldset WithHelpTextAndDescription smoke-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="Fieldset_fieldset__gwnkr">
+    <legend id="legendId-:rd:"
+            class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+    >
+      Ledetekst
+    </legend>
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+            type="button"
+            aria-describedby="legendId-:rd:"
+            aria-expanded="false"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:re:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:re:">
+          Hjelp
+        </title>
+        <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+        </path>
+      </svg>
+    </button>
+    <div class="Help_description__niabw">
+      En liten beskrivelse tekst
+    </div>
+    <div class="Fieldset_contentContainer__fJcfT">
+      <div>
+        Innhold
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
 exports[`Tester/Fieldset WithHideLegend play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr">
@@ -248,7 +287,7 @@ exports[`Tester/Fieldset WithHideLegend play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="Fieldset_description__k538X Fieldset_srOnly__7qh39">
+    <div class="Help_description__niabw  Help_srOnly__svaKL">
       Kort hjelpetekst
     </div>
     <div class="Fieldset_contentContainer__fJcfT Fieldset_contentContainerNoMarginTop__YkL1P">

@@ -69,14 +69,8 @@ export const Fieldset = forwardRef<HTMLFieldSetElement, FieldsetProps>(
           hideHelp={hideLegend}
           targetId={legendId}
           titleHelpSvg={titleHelpSvg}
+          description={description}
         />
-        {description && (
-          <div
-            className={`${styles.description} ${hideLegendClassName}`.trim()}
-          >
-            {description}
-          </div>
-        )}
         <div
           className={`${styles.contentContainer} ${noMarginTopContentContainerClassName}`.trim()}
         >

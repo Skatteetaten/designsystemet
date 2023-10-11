@@ -253,7 +253,7 @@ exports[`Tester/RadioGroup/RadioGroup WithDescription play-test 1`] = `
     >
       Type virksomhet
     </legend>
-    <div class="Fieldset_description__k538X">
+    <div class="Help_description__niabw">
       Vi trenger å vite din type virksomhet.
     </div>
     <div class="Fieldset_contentContainer__fJcfT">

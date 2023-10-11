@@ -46,24 +46,6 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: StoryFn<typeof LinkGroup> = (args) => (
-  <LinkGroup {...args}>
-    <LinkGroup.Link
-      key={'linkGroupLink_1'}
-      target={'_blank'}
-      href={'#storybook-root'}
-    >
-      {'Er du pendler?'}
-    </LinkGroup.Link>
-    <LinkGroup.Link key={'linkGroupLink_2'} href={'#storybook-root'}>
-      {'Pendler du mye?'}
-    </LinkGroup.Link>
-    <LinkGroup.Link key={'linkGroupLink_3'} href={'#storybook-root'}>
-      {'Pendler du dagen lang?'}
-    </LinkGroup.Link>
-  </LinkGroup>
-);
-
 const TemplateExample: StoryFn<typeof LinkGroup> = () => (
   <>
     <LinkGroup hasSpacing>
@@ -95,10 +77,24 @@ const TemplateExample: StoryFn<typeof LinkGroup> = () => (
 );
 
 export const LinkGroupDefault = {
-  render: TemplateDefault,
   name: 'Default',
   args: {
     variant: getLinkGroupVariantDefault(),
+    children: [
+      <LinkGroup.Link
+        key={'linkGroupLink_1'}
+        target={'_blank'}
+        href={'#storybook-root'}
+      >
+        {'Er du pendler?'}
+      </LinkGroup.Link>,
+      <LinkGroup.Link key={'linkGroupLink_2'} href={'#storybook-root'}>
+        {'Pendler du mye?'}
+      </LinkGroup.Link>,
+      <LinkGroup.Link key={'linkGroupLink_3'} href={'#storybook-root'}>
+        {'Pendler du dagen lang?'}
+      </LinkGroup.Link>,
+    ],
   },
 } satisfies Story;
 

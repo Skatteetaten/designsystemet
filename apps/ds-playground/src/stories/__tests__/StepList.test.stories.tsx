@@ -92,7 +92,12 @@ const TemplateExample: StoryFn<StepListProps> = () => {
         <StepList.Step title={'besvart 2'} stepNumber={2}>
           {'brødtekst'}
         </StepList.Step>
-        <StepList.Step title={'aktivt'} variant={'active'} stepNumber={3}>
+        <StepList.Step
+          title={'aktivt'}
+          variant={'active'}
+          stepNumber={3}
+          onNext={(): void => console.log('next')}
+        >
           {
             'brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst '
           }

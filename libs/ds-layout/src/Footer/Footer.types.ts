@@ -26,7 +26,12 @@ export interface FooterProps extends BaseProps {
   secondColumn?: ReactNode;
   /** Innhold i tredje kolonne */
   thirdColumn?: ReactNode;
-  /** Footer.Logo og Footer.Link */
+  /**
+   * Footer.LinkFirstColumn, Footer.Logo eller Footer.Link:
+   * Footer.LinkFirstColumn blir plassert under de første tre lenkene i første kolonne.
+   * Footer.Logo blir plassert ved siden av Skatteetatens logo.
+   * Footer.Link blir plassert under logoen horisontalt.
+   */
   children?: JSX.Element | JSX.Element[];
 }
 
@@ -38,6 +43,9 @@ export interface FooterComponent
     FooterLogoProps & React.RefAttributes<HTMLDivElement>
   >;
   Link: React.ForwardRefExoticComponent<
+    Omit<LinkProps, 'color'> & React.RefAttributes<HTMLAnchorElement>
+  >;
+  LinkFirstColumn: React.ForwardRefExoticComponent<
     Omit<LinkProps, 'color'> & React.RefAttributes<HTMLAnchorElement>
   >;
 }
