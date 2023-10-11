@@ -11,7 +11,7 @@ import { getVersion } from '../utils/version.utils';
 
 export default {
   component: List,
-  title: 'Komponenter/List',
+  title: 'Komponenter/List/List',
   argTypes: {
     // Props
     hasSpacing: {

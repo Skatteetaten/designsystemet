@@ -14,7 +14,7 @@ import { getVersion } from '../utils/version.utils';
 
 export default {
   component: ErrorSummary,
-  title: 'Komponenter/ErrorSummary',
+  title: 'Komponenter/ErrorSummary/ErrorSummary',
   argTypes: {
     // Props
     children: { table: { category: category.props } },
@@ -113,5 +113,3 @@ export const Example: StoryFn<typeof ErrorSummary> = () => {
     </>
   );
 };
-
-//TODO Props ErrorSummaryError should be documented

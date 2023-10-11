@@ -6,11 +6,12 @@ import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Table.Header,
-  title: 'komponenter/Table/Header',
+  title: 'Komponenter/Table/Header',
   argTypes: {
     // Props
     children: { table: { category: category.props } },
   },
+  tags: ['autodocs'],
   parameters: {
     docs: { source: { code: null } },
     version: getVersion('ds-table'),

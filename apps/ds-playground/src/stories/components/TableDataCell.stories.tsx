@@ -37,6 +37,7 @@ const meta = {
       table: { category: category.htmlAttribute },
     },
   },
+  tags: ['autodocs'],
   parameters: {
     docs: { source: { code: null } },
     version: getVersion('ds-table'),

@@ -1,35 +1,30 @@
-import { RadioGroup } from '@skatteetaten/ds-forms';
+import { ErrorSummary } from '@skatteetaten/ds-forms';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
 const meta = {
-  component: RadioGroup.Radio,
-  title: 'Komponenter/RadioGroup/Radio',
+  component: ErrorSummary.Error,
+  title: 'Komponenter/ErrorSummary/Error',
   argTypes: {
     // Props
     children: { table: { category: category.props } },
-    description: { table: { category: category.props } },
-    // HTML
-    value: {
-      table: { category: category.htmlAttribute },
-    },
-    // Aria
-    ariaDescribedby: { table: { category: category.aria } },
+    referenceId: { table: { category: category.props } },
   },
   tags: ['autodocs'],
   parameters: {
     docs: { source: { code: null } },
     version: getVersion('ds-forms'),
   },
-} satisfies Meta<typeof RadioGroup.Radio>;
+} satisfies Meta<typeof ErrorSummary.Error>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const RadioDefault = {
+export const Default = {
   name: 'Default',
   args: {
-    children: 'Enkeltpersonsforetak',
+    children: 'Husk å fylle ut type varer',
+    referenceId: 'id1',
   },
 } satisfies Story;

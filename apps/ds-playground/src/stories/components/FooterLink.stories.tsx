@@ -12,6 +12,7 @@ const meta = {
     ...LinkMeta.argTypes,
     color: { table: { disable: true } },
   },
+  tags: ['autodocs'],
   parameters: {
     docs: { source: { code: null } },
     version: getVersion('ds-layout'),
