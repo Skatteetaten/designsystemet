@@ -47,6 +47,8 @@ interface SelectCommonProps extends SelectPropsHTMLAttributes, BaseProps {
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
   /** Overskriver default placeholder-tekst */
   placeholder?: string;
+  /** Skjuler placeholder */
+  hidePlaceholder?: boolean;
   /** Definerer stilen til Select */
   variant?: FormSize;
   /** SelectOption-komponenter */

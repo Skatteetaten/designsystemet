@@ -38,6 +38,7 @@ const meta = {
         category: category.props,
       },
     },
+    hidePlaceholder: { table: { category: category.props } },
     variant: {
       options: [...formArrSize],
       control: 'inline-radio',

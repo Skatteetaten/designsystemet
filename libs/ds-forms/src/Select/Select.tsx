@@ -44,6 +44,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
       required,
       hasError,
       hideLabel,
+      hidePlaceholder,
       showRequiredMark,
       onBlur,
       onChange,
@@ -80,11 +81,13 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
     };
 
     const changePlaceholderColor = (): void => {
-      const select = selectRef.current as HTMLSelectElement;
-      if (select.value.length === 0) {
-        select.style.color = placeholderPaletteGraphite50;
-      } else {
-        select.style.color = '';
+      if (!hidePlaceholder) {
+        const select = selectRef.current as HTMLSelectElement;
+        if (select.value.length === 0) {
+          select.style.color = placeholderPaletteGraphite50;
+        } else {
+          select.style.color = '';
+        }
       }
     };
 
@@ -127,7 +130,11 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
             onChange={handleChange}
             onFocus={onFocus}
           >
-            <option value={''}>{placeholder ?? t('shared.ChooseValue')}</option>
+            {!hidePlaceholder && (
+              <option value={''}>
+                {placeholder ?? t('shared.ChooseValue')}
+              </option>
+            )}
             {children}
           </select>
           <Icon className={selectIconClassName} svgPath={ChevronDownSVGpath} />

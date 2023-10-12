@@ -44,6 +44,7 @@ const meta = {
     },
     helpText: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
+    hidePlaceholder: { table: { disable: true } },
     variant: {
       table: { disable: true },
       options: [...formArrSize],
@@ -298,6 +299,22 @@ export const WithAutoCompleteNameAndPlaceholder = {
     const placeholderOption = canvas.getByText(customPlaceholderText);
     await expect(placeholderOption).toBeInTheDocument();
     await expect(placeholderOption.tagName).toBe('OPTION');
+  },
+} satisfies Story;
+
+export const WithHidePlaceholder = {
+  name: 'With HidePlaceholder (A2 delvis)',
+  args: {
+    ...defaultArgs,
+    hidePlaceholder: true,
+  },
+  argTypes: {
+    hidePlaceholder: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const optionNode = canvas.getByRole('combobox');
+    await expect(optionNode).not.toHaveValue('');
   },
 } satisfies Story;
 
