@@ -1,0 +1,92 @@
+import {
+  ChangeEventHandler,
+  ComponentPropsWithoutRef,
+  FocusEventHandler,
+  ForwardRefExoticComponent,
+  RefAttributes,
+  JSX,
+} from 'react';
+
+import { BaseProps, FormSize } from '@skatteetaten/ds-core-utils';
+
+import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
+import { SelectOptionProps } from '../SelectOption/SelectOption.types';
+
+type RequiredSelectHTMLAttributes = Pick<
+  ComponentPropsWithoutRef<'select'>,
+  'autoComplete' | 'disabled' | 'name' | 'required' | 'defaultValue' | 'value'
+>;
+
+type SelectHTMLAttributes = Partial<RequiredSelectHTMLAttributes>;
+
+interface SelectPropsHTMLAttributes extends SelectHTMLAttributes {
+  onBlur?: FocusEventHandler<HTMLSelectElement>;
+  onChange?: ChangeEventHandler<HTMLSelectElement>;
+  onFocus?: FocusEventHandler<HTMLSelectElement>;
+}
+
+interface SelectCommonProps extends SelectPropsHTMLAttributes, BaseProps {
+  classNames?: {
+    container?: string;
+    label?: string;
+    selectContainer?: string;
+    select?: string;
+    errorMessage?: string;
+  };
+  /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */
+  hideLabel?: boolean;
+  /** Ledetekst */
+  label: string;
+  /** Tilleggstekst */
+  description?: LabelWithHelpProps['description'];
+  /** Hjelpetekst */
+  helpText?: LabelWithHelpProps['helpText'];
+  /** Overskriver default hjelpeikon */
+  helpSvgPath?: LabelWithHelpProps['helpSvgPath'];
+  /** Overskriver default tooltip-tekst til hjelpeikon */
+  titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
+  /** Overskriver default placeholder-tekst */
+  placeholder?: string;
+  /** Definerer stilen til Select */
+  variant?: FormSize;
+  /** SelectOption-komponenter */
+  children: JSX.Element | JSX.Element[];
+}
+export type SelectDiscriminatedRequiredProps =
+  | {
+      required: true;
+      /** Om obligatorisk form-komponent skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
+      showRequiredMark?: boolean;
+    }
+  | {
+      required?: never;
+      /** Om obligatorisk form-komponent skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
+      showRequiredMark?: never;
+    };
+
+export type SelectDiscriminatedErrorProps =
+  | {
+      /** Tekst på feilmelding */
+      errorMessage: string;
+      /** Om form-komponent har en feil */
+      hasError?: boolean;
+    }
+  | {
+      /** Tekst på feilmelding */
+      errorMessage?: never;
+      /** Om form-komponent har en feil */
+      hasError?: never;
+    };
+
+export type SelectProps = SelectCommonProps &
+  SelectDiscriminatedRequiredProps &
+  SelectDiscriminatedErrorProps;
+
+export interface SelectComponent
+  extends ForwardRefExoticComponent<
+    SelectProps & RefAttributes<HTMLSelectElement>
+  > {
+  SelectOption: ForwardRefExoticComponent<
+    SelectOptionProps & RefAttributes<HTMLOptionElement>
+  >;
+}

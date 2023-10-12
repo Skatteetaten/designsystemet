@@ -1,0 +1,481 @@
+import { useState } from 'react';
+
+import { formArrSize } from '@skatteetaten/ds-core-utils';
+import { Select } from '@skatteetaten/ds-forms';
+import { expect } from '@storybook/jest';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import {
+  fireEvent,
+  userEvent,
+  waitFor,
+  within,
+} from '@storybook/testing-library';
+
+import { wrapper } from './testUtils/storybook.testing.utils';
+import { SystemSVGPaths } from '../utils/icon.systems';
+
+const meta = {
+  component: Select,
+  title: 'Tester/Select/Select',
+  argTypes: {
+    // Baseprops
+    key: { table: { disable: true } },
+    ref: { table: { disable: true } },
+    className: { table: { disable: true } },
+    id: { table: { disable: true } },
+    lang: { table: { disable: true } },
+    'data-testid': { table: { disable: true } },
+    // Props
+    children: {
+      table: { disable: true },
+      control: { type: null },
+    },
+    classNames: { table: { disable: true } },
+    defaultValue: { table: { disable: true } },
+    value: { table: { disable: true } },
+    placeholder: { table: { disable: true } },
+    description: { table: { disable: true } },
+    errorMessage: { table: { disable: true } },
+    hasError: { table: { disable: true } },
+    helpSvgPath: {
+      table: { disable: true },
+      options: Object.keys(SystemSVGPaths),
+      mapping: SystemSVGPaths,
+    },
+    helpText: { table: { disable: true } },
+    hideLabel: { table: { disable: true } },
+    variant: {
+      table: { disable: true },
+      options: [...formArrSize],
+      control: 'inline-radio',
+    },
+    label: { table: { disable: true } },
+    showRequiredMark: { table: { disable: true } },
+    titleHelpSvg: { table: { disable: true } },
+    // HTML
+    autoComplete: { table: { disable: true } },
+    disabled: { table: { disable: true } },
+    name: { table: { disable: true } },
+    required: { table: { disable: true } },
+    // Events
+    onBlur: { table: { disable: true } },
+    onChange: { table: { disable: true } },
+    onFocus: { table: { disable: true } },
+  },
+} satisfies Meta<typeof Select>;
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+const valueOption1 = 'option1';
+const valueOption2 = 'option2';
+const errorMessageText = 'Ledetekst er obligatorisk';
+
+const defaultLabelText = 'Ledetekst';
+const defaultChildren = [
+  <Select.SelectOption key={'option_1'} value={valueOption1}>
+    {'Test 1'}
+  </Select.SelectOption>,
+  <Select.SelectOption key={'option_2'} value={valueOption2}>
+    {'Test 2'}
+  </Select.SelectOption>,
+];
+const defaultArgs = {
+  label: defaultLabelText,
+  children: defaultChildren,
+};
+
+export const WithRef = {
+  name: 'With Ref (FA1)',
+  args: {
+    ...defaultArgs,
+    ref: (instance: HTMLSelectElement | null): void => {
+      if (instance) {
+        instance.name = 'dummyNameForwardedFromRef';
+      }
+    },
+  },
+  argTypes: {
+    ref: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const element = canvas.getByRole('combobox');
+    await expect(element).toBeInTheDocument();
+    await expect(element).toHaveAttribute('name', 'dummyNameForwardedFromRef');
+  },
+} satisfies Story;
+
+export const WithAttributes = {
+  name: 'With Attributes (FA2-5)',
+  args: {
+    ...defaultArgs,
+    id: 'htmlid',
+    className: 'dummyClassname',
+    lang: 'nb',
+    'data-testid': '123ID',
+  },
+  argTypes: {
+    id: { table: { disable: false } },
+    className: { table: { disable: false } },
+    lang: { table: { disable: false } },
+    'data-testid': { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const selectNode = canvas.getByRole('combobox');
+    const container = canvas.getAllByRole('generic')[1];
+    await expect(selectNode).toHaveAttribute('id', 'selectId-htmlid');
+    await expect(selectNode).toHaveAttribute('data-testid', '123ID');
+    await expect(container).toHaveClass('dummyClassname');
+    await expect(container).toHaveAttribute('lang', 'nb');
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    ...defaultArgs,
+    classNames: {
+      container: 'dummyClassname',
+      label: 'dummyClassname',
+      selectContainer: 'dummyClassname',
+      select: 'dummyClassnamePlaceholderContrast',
+      errorMessage: 'dummyClassname',
+    },
+    hasError: true,
+    errorMessage: errorMessageText,
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    // eslint-disable-next-line testing-library/no-node-access
+    const container = canvasElement.querySelector(`${wrapper} > div`);
+    const label = canvas.getByText(defaultLabelText);
+    // eslint-disable-next-line testing-library/no-node-access
+    const selectContainer = canvasElement.querySelector(
+      `${wrapper} > div > div`
+    );
+    const select = canvas.getByRole('combobox');
+    // eslint-disable-next-line testing-library/no-node-access
+    const errorMessageContainer = canvasElement.querySelector(
+      '[id^=selectErrorId]>div'
+    );
+    await expect(container).toHaveClass('dummyClassname');
+    await expect(label).toHaveClass('dummyClassname');
+    await expect(selectContainer).toHaveClass('dummyClassname');
+    await expect(select).toHaveClass('dummyClassnamePlaceholderContrast');
+    await expect(errorMessageContainer).toHaveClass('dummyClassname');
+  },
+} satisfies Story;
+
+export const Defaults = {
+  name: 'Defaults Variant Medium (A1, A2 delvis, A3, FS-A2, B2)',
+  args: {
+    ...defaultArgs,
+  },
+  argTypes: {
+    label: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: {
+      hover: `${wrapper} select`,
+      focus: `${wrapper} select`,
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const selectNode = canvas.getByRole('combobox', { name: defaultLabelText });
+    await expect(selectNode).toBeInTheDocument();
+    await expect(selectNode).toBeEnabled();
+    await expect(selectNode).toHaveValue('');
+    await expect(selectNode).toHaveTextContent('Velg');
+    await expect(selectNode).toHaveAttribute('id');
+    await expect(selectNode.tagName).toBe('SELECT');
+    await expect(selectNode).not.toBeRequired();
+    await expect(selectNode).not.toHaveAttribute('aria-invalid');
+    await expect(selectNode).not.toHaveAttribute('aria-describedby');
+    // eslint-disable-next-line testing-library/no-node-access
+    const errorMessageContainer = canvasElement.querySelector(
+      '[id^=selectErrorId]'
+    );
+    await expect(errorMessageContainer).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithVariantLarge = {
+  name: 'With Variant Large (A1)',
+  args: {
+    ...defaultArgs,
+    variant: 'large',
+  },
+  argTypes: {
+    variant: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithDisabled = {
+  name: 'With Disabled (B1, B6)',
+  args: {
+    ...defaultArgs,
+    disabled: true,
+    value: valueOption1,
+  },
+  argTypes: {
+    disabled: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const selectNode = canvas.getByRole('combobox');
+    await expect(selectNode).toBeDisabled();
+  },
+} satisfies Story;
+
+export const WithValue = {
+  name: 'With Value',
+  args: {
+    ...defaultArgs,
+    value: valueOption2,
+  },
+  argTypes: {
+    value: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const optionNode = canvas.getByRole('combobox');
+    await expect(optionNode).toHaveValue(valueOption2);
+  },
+} satisfies Story;
+
+export const WithDefaultValue = {
+  name: 'With DefaultValue',
+  args: {
+    ...defaultArgs,
+    defaultValue: valueOption2,
+  },
+  argTypes: {
+    defaultValue: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const optionNode = canvas.getByRole('combobox');
+    await expect(optionNode).toHaveValue(valueOption2);
+  },
+} satisfies Story;
+
+const customPlaceholderText = 'Velg fra listen noe gøy';
+export const WithAutoCompleteNameAndPlaceholder = {
+  name: 'With AutoComplete Name And Placeholder (A2 delvis, B1)',
+  args: {
+    ...defaultArgs,
+    autoComplete: 'given-name',
+    name: 'test_name',
+    placeholder: customPlaceholderText,
+  },
+  argTypes: {
+    autoComplete: { table: { disable: false } },
+    name: { table: { disable: false } },
+    placeholder: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const selectNode = canvas.getByRole('combobox');
+    await expect(selectNode).toHaveAttribute('autocomplete', 'given-name');
+    await expect(selectNode).toHaveAttribute('name', 'test_name');
+
+    const placeholderOption = canvas.getByText(customPlaceholderText);
+    await expect(placeholderOption).toBeInTheDocument();
+    await expect(placeholderOption.tagName).toBe('OPTION');
+  },
+} satisfies Story;
+
+export const WithRequired = {
+  name: 'With Required (B1, B4)',
+  args: {
+    ...defaultArgs,
+    required: true,
+  },
+  argTypes: {
+    required: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const selectNode = canvas.getByRole('combobox');
+    await expect(selectNode).toBeRequired();
+  },
+} satisfies Story;
+
+export const WithRequiredAndMark = {
+  name: 'With Required And Mark (B1, FS-A4 delvis)',
+  args: {
+    ...defaultArgs,
+    required: true,
+    showRequiredMark: true,
+  },
+  argTypes: {
+    required: { table: { disable: false } },
+    showRequiredMark: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithError = {
+  name: 'With ErrorMessage (B5)',
+  args: {
+    ...defaultArgs,
+    errorMessage: errorMessageText,
+  },
+  argTypes: {
+    errorMessage: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const selectNode = canvas.getByRole('combobox');
+    // eslint-disable-next-line testing-library/no-node-access
+    const errorMessageContainer = canvasElement.querySelector(
+      '[id^=selectErrorId]'
+    );
+    await expect(errorMessageContainer).toBeInTheDocument();
+    await expect(canvas.queryByText(errorMessageText)).not.toBeInTheDocument();
+    await expect(selectNode).not.toHaveAttribute('aria-invalid', 'true');
+    await expect(selectNode).not.toHaveAttribute('aria-describedby');
+  },
+} satisfies Story;
+
+export const WithErrorMessageAndHasError = {
+  name: 'With ErrorMessage And HasError (A4 delvis, B5 delvis)',
+  args: {
+    ...defaultArgs,
+    errorMessage: errorMessageText,
+    hasError: true,
+  },
+  argTypes: {
+    errorMessage: { table: { disable: false } },
+    hasError: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: {
+      hover: `${wrapper} select`,
+      focus: `${wrapper} select`,
+    },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const selectNode = canvas.getByRole('combobox', {
+      description: errorMessageText,
+    });
+    const errorMessageContainer = canvas.getAllByRole('generic')[3];
+    await expect(errorMessageContainer).toBeInTheDocument();
+    await expect(selectNode).toHaveAttribute('aria-invalid', 'true');
+    await expect(selectNode).toHaveAttribute('aria-describedby');
+  },
+} satisfies Story;
+
+export const WithDescription = {
+  name: 'With Description (FS-A3)',
+  args: {
+    ...defaultArgs,
+    description: 'En liten beskrivelse tekst',
+  },
+  argTypes: {
+    description: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const labelWithDescription = canvas.getByText('En liten beskrivelse tekst');
+    await expect(labelWithDescription).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithHideLabel = {
+  name: 'With HideLabel (FS-A7)',
+  args: {
+    ...defaultArgs,
+    hideLabel: true,
+  },
+  argTypes: {
+    hideLabel: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const selectNode = canvas.getByRole('combobox', { name: defaultLabelText });
+    await expect(selectNode).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithHelpText = {
+  name: 'With HelpText (A1)',
+  args: {
+    ...defaultArgs,
+    helpText: 'Hjelpetekst',
+  },
+  argTypes: {
+    helpText: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button', {
+      description: defaultLabelText,
+    });
+    await expect(helpButton).toBeInTheDocument();
+    await fireEvent.click(helpButton);
+  },
+} satisfies Story;
+
+const EventHandlersTemplate: StoryFn<typeof Select> = (args) => {
+  const [labelText, setLabelText] = useState('Tester events');
+  return (
+    <Select
+      {...args}
+      label={labelText}
+      onFocus={(event: React.FocusEvent<HTMLSelectElement>): void => {
+        setLabelText('Select har fått fokus');
+        args.onFocus && args.onFocus(event);
+      }}
+      onBlur={(event: React.FocusEvent<HTMLSelectElement>): void => {
+        setLabelText('Select har blitt blurret');
+        args.onBlur && args.onBlur(event);
+      }}
+      onChange={(event: React.ChangeEvent<HTMLSelectElement>): void => {
+        setLabelText('Select har blitt klikket på');
+        args.onChange && args.onChange(event);
+      }}
+    />
+  );
+};
+
+export const WithEventHandlers = {
+  render: EventHandlersTemplate,
+  name: 'With EventHandlers (A3)',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const selectNode = canvas.getByRole('combobox');
+    await selectNode.focus();
+    await waitFor(() => expect(args.onFocus).toHaveBeenCalled());
+    await userEvent.selectOptions(selectNode, valueOption2);
+    await waitFor(() => expect(args.onChange).toHaveBeenCalled());
+    await userEvent.tab();
+    await waitFor(() => expect(args.onBlur).toHaveBeenCalled());
+  },
+} satisfies Story;
