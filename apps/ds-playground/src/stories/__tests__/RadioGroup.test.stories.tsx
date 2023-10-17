@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 
 import {
   RadioGroup,
@@ -472,7 +472,7 @@ const EventHandlersTemplate: StoryFn<typeof RadioGroup> = (args) => {
   return (
     <RadioGroup
       {...args}
-      onChange={(event: React.ChangeEvent<HTMLInputElement>): void => {
+      onChange={(event: ChangeEvent<HTMLInputElement>): void => {
         setLabelText('Radio har blitt klikket på');
         args.onChange && args.onChange(event);
       }}

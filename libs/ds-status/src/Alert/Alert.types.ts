@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ReactElement } from 'react';
+import { ComponentPropsWithoutRef, ReactElement, ReactNode } from 'react';
 
 import { BaseProps, Status } from '@skatteetaten/ds-core-utils';
 
@@ -8,7 +8,7 @@ interface AlertHTMLAttributes {
 
 export interface AlertProps extends AlertHTMLAttributes, BaseProps {
   /** Tekst eller markup for meldingen */
-  children: React.ReactNode;
+  children: ReactNode;
   /** Om alerten er synlig */
   showAlert?: boolean;
   /** Om Alert skal ha lukke-knapp */

@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef } from 'react';
+import { ComponentPropsWithoutRef, ReactNode } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -15,7 +15,7 @@ export interface FieldsetProps
   /** Innhold */
   children: JSX.Element | JSX.Element[];
   /** Ledetekst */
-  legend: React.ReactNode;
+  legend: ReactNode;
   /** Skjuler ledetekst, tilleggstekst og hjelpetekst, men er fortsatt synlig for skjermleser */
   hideLegend?: boolean;
   /** Tilleggstekst */

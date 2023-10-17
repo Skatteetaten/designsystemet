@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ForwardRefExoticComponent, ReactNode, RefAttributes } from 'react';
 
 import { BaseProps, LinkColor } from '@skatteetaten/ds-core-utils';
 
@@ -21,12 +21,10 @@ export interface LinkGroupComponentCommonProps extends BaseProps {
 export type LinkGroupProps = LinkGroupComponentCommonProps;
 
 export interface LinkGroupComponent
-  extends React.ForwardRefExoticComponent<
-    LinkGroupProps & React.RefAttributes<HTMLUListElement>
+  extends ForwardRefExoticComponent<
+    LinkGroupProps & RefAttributes<HTMLUListElement>
   > {
-  Link: React.ForwardRefExoticComponent<
-    LinkProps & React.RefAttributes<HTMLAnchorElement>
-  >;
+  Link: ForwardRefExoticComponent<LinkProps & RefAttributes<HTMLAnchorElement>>;
 }
 
 export interface LinkContextProps {

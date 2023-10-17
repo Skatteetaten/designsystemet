@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ChangeEvent, FocusEvent, useState } from 'react';
 
 import { formArrSize } from '@skatteetaten/ds-core-utils';
 import {
@@ -113,7 +113,7 @@ const TemplateDefaultControlled: StoryFn<typeof TextField> = (args) => {
   return (
     <TextField
       {...args}
-      onChange={(e: React.ChangeEvent<HTMLInputElement>): void => {
+      onChange={(e: ChangeEvent<HTMLInputElement>): void => {
         setArgs({ value: e.target.value });
       }}
     />
@@ -162,7 +162,7 @@ const TemplateExample: StoryFn<typeof TextField> = (args) => {
         description={'Gjennomsnittlig oppgjør for fire dager'}
         value={creditInput}
         thousandSeparator
-        onChange={(e: React.ChangeEvent<HTMLInputElement>): void =>
+        onChange={(e: ChangeEvent<HTMLInputElement>): void =>
           setCreditInput(e.target.value)
         }
       />
@@ -177,7 +177,7 @@ const TemplateExample: StoryFn<typeof TextField> = (args) => {
         pattern={'\\d{4}'}
         required
         showRequiredMark
-        onChange={(e: React.ChangeEvent<HTMLInputElement>): void => {
+        onChange={(e: ChangeEvent<HTMLInputElement>): void => {
           setError(false);
           setErrorMessage('');
           if (e.target.value.length > 0 && isNaN(Number(e.target.value))) {
@@ -187,7 +187,7 @@ const TemplateExample: StoryFn<typeof TextField> = (args) => {
 
           setPostaCodeInput(e.target.value);
         }}
-        onBlur={(e: React.FocusEvent<HTMLInputElement>): void => {
+        onBlur={(e: FocusEvent<HTMLInputElement>): void => {
           if (e.target.validity.patternMismatch) {
             setError(true);
             setErrorMessage('Postnummer må inneholde fire tall.');
@@ -205,7 +205,7 @@ const TemplateExample: StoryFn<typeof TextField> = (args) => {
         rows={4}
         value={infoInput}
         autosize
-        onChange={(e: React.ChangeEvent<HTMLTextAreaElement>): void =>
+        onChange={(e: ChangeEvent<HTMLTextAreaElement>): void =>
           setInfoInput(e.target.value)
         }
       />

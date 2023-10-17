@@ -1,4 +1,9 @@
-import { ChangeEventHandler, ComponentPropsWithoutRef } from 'react';
+import {
+  ChangeEventHandler,
+  ComponentPropsWithoutRef,
+  ForwardRefExoticComponent,
+  RefAttributes,
+} from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -105,10 +110,10 @@ export type RadioGroupProps = RadioGroupComponentCommonProps &
   RadioGroupDiscriminatedErrorProps;
 
 export interface RadioGroupComponent
-  extends React.ForwardRefExoticComponent<
-    RadioGroupProps & React.RefAttributes<HTMLFieldSetElement>
+  extends ForwardRefExoticComponent<
+    RadioGroupProps & RefAttributes<HTMLFieldSetElement>
   > {
-  Radio: React.ForwardRefExoticComponent<
-    RadioProps & React.RefAttributes<HTMLInputElement>
+  Radio: ForwardRefExoticComponent<
+    RadioProps & RefAttributes<HTMLInputElement>
   >;
 }

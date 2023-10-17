@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { FocusEvent, MouseEvent, useState } from 'react';
 
 import { IconButton, IconButtonProps } from '@skatteetaten/ds-buttons';
 import { sizeArr } from '@skatteetaten/ds-core-utils';
@@ -401,15 +401,15 @@ const EventHandlersTemplate: StoryFn<typeof IconButton> = (args) => {
     <IconButton
       {...args}
       svgPath={svgPath}
-      onFocus={(event: React.FocusEvent<HTMLButtonElement>): void => {
+      onFocus={(event: FocusEvent<HTMLButtonElement>): void => {
         setSvgPath(alternativeSVGPathFocus);
         args.onFocus && args.onFocus(event);
       }}
-      onBlur={(event: React.FocusEvent<HTMLButtonElement>): void => {
+      onBlur={(event: FocusEvent<HTMLButtonElement>): void => {
         setSvgPath(alternativeSVGPathBlur);
         args.onBlur && args.onBlur(event);
       }}
-      onClick={(event: React.MouseEvent<HTMLButtonElement>): void => {
+      onClick={(event: MouseEvent<HTMLButtonElement>): void => {
         setSvgPath(alternativeSVGPathClick);
         args.onClick && args.onClick(event);
       }}
