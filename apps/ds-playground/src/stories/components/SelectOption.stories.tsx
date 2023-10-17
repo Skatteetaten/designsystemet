@@ -5,8 +5,8 @@ import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
 const meta = {
-  component: Select.SelectOption,
-  title: 'Komponenter/Select/SelectOption',
+  component: Select.Option,
+  title: 'Komponenter/Select/Option',
   argTypes: {
     // Props
     children: { table: { category: category.props } },
@@ -17,7 +17,7 @@ const meta = {
   parameters: {
     version: getVersion('ds-forms'),
   },
-} satisfies Meta<typeof Select.SelectOption>;
+} satisfies Meta<typeof Select.Option>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 

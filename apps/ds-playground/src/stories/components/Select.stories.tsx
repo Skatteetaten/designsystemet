@@ -38,6 +38,7 @@ const meta = {
         category: category.props,
       },
     },
+    hidePlaceholder: { table: { category: category.props } },
     variant: {
       options: [...formArrSize],
       control: 'inline-radio',
@@ -78,8 +79,8 @@ const meta = {
     label: 'Test',
     children: (
       <>
-        <Select.SelectOption value={1}>{'Test 1'}</Select.SelectOption>
-        <Select.SelectOption value={2}>{'Test 2'}</Select.SelectOption>
+        <Select.Option value={1}>{'Test 1'}</Select.Option>
+        <Select.Option value={2}>{'Test 2'}</Select.Option>
       </>
     ),
   },
@@ -124,11 +125,11 @@ const TemplateExample: StoryFn<typeof Select> = () => {
           setFruktOption(Number(e.target.value));
         }}
       >
-        <Select.SelectOption value={1}>{'Banan'}</Select.SelectOption>
-        <Select.SelectOption value={2}>{'Eple'}</Select.SelectOption>
-        <Select.SelectOption value={3}>{'Kiwi'}</Select.SelectOption>
-        <Select.SelectOption value={4}>{'Pære'}</Select.SelectOption>
-        <Select.SelectOption value={5}>{'Sitron'}</Select.SelectOption>
+        <Select.Option value={1}>{'Banan'}</Select.Option>
+        <Select.Option value={2}>{'Eple'}</Select.Option>
+        <Select.Option value={3}>{'Kiwi'}</Select.Option>
+        <Select.Option value={4}>{'Pære'}</Select.Option>
+        <Select.Option value={5}>{'Sitron'}</Select.Option>
       </Select>
 
       <Select
@@ -148,11 +149,11 @@ const TemplateExample: StoryFn<typeof Select> = () => {
           setFruktLargeOption(Number(e.target.value));
         }}
       >
-        <Select.SelectOption value={1}>{'Banan'}</Select.SelectOption>
-        <Select.SelectOption value={2}>{'Eple'}</Select.SelectOption>
-        <Select.SelectOption value={3}>{'Kiwi'}</Select.SelectOption>
-        <Select.SelectOption value={4}>{'Pære'}</Select.SelectOption>
-        <Select.SelectOption value={5}>{'Sitron'}</Select.SelectOption>
+        <Select.Option value={1}>{'Banan'}</Select.Option>
+        <Select.Option value={2}>{'Eple'}</Select.Option>
+        <Select.Option value={3}>{'Kiwi'}</Select.Option>
+        <Select.Option value={4}>{'Pære'}</Select.Option>
+        <Select.Option value={5}>{'Sitron'}</Select.Option>
       </Select>
     </>
   );

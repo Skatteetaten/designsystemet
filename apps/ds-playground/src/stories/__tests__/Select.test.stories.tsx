@@ -44,6 +44,7 @@ const meta = {
     },
     helpText: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
+    hidePlaceholder: { table: { disable: true } },
     variant: {
       table: { disable: true },
       options: [...formArrSize],
@@ -72,12 +73,12 @@ const errorMessageText = 'Ledetekst er obligatorisk';
 
 const defaultLabelText = 'Ledetekst';
 const defaultChildren = [
-  <Select.SelectOption key={'option_1'} value={valueOption1}>
+  <Select.Option key={'option_1'} value={valueOption1}>
     {'Test 1'}
-  </Select.SelectOption>,
-  <Select.SelectOption key={'option_2'} value={valueOption2}>
+  </Select.Option>,
+  <Select.Option key={'option_2'} value={valueOption2}>
     {'Test 2'}
-  </Select.SelectOption>,
+  </Select.Option>,
 ];
 const defaultArgs = {
   label: defaultLabelText,
@@ -298,6 +299,22 @@ export const WithAutoCompleteNameAndPlaceholder = {
     const placeholderOption = canvas.getByText(customPlaceholderText);
     await expect(placeholderOption).toBeInTheDocument();
     await expect(placeholderOption.tagName).toBe('OPTION');
+  },
+} satisfies Story;
+
+export const WithHidePlaceholder = {
+  name: 'With HidePlaceholder (A2 delvis)',
+  args: {
+    ...defaultArgs,
+    hidePlaceholder: true,
+  },
+  argTypes: {
+    hidePlaceholder: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const optionNode = canvas.getByRole('combobox');
+    await expect(optionNode).not.toHaveValue('');
   },
 } satisfies Story;
 
