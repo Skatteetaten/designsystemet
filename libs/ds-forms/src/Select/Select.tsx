@@ -152,6 +152,6 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
 ) as SelectComponent;
 
 Select.displayName = 'Select';
-Select.SelectOption = SelectOption;
+Select.Option = SelectOption;
 
 export { getSelectVariantDefault };

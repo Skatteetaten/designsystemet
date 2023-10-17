@@ -4,8 +4,8 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 
 const meta = {
-  component: Select.SelectOption,
-  title: 'Tester/Select/SelectOption',
+  component: Select.Option,
+  title: 'Tester/Select/Option',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },
@@ -19,12 +19,12 @@ const meta = {
     // HTML
     value: { table: { disable: true } },
   },
-} satisfies Meta<typeof Select.SelectOption>;
+} satisfies Meta<typeof Select.Option>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const Template: StoryFn<typeof Select.SelectOption> = (args) => (
-  <Select.SelectOption {...args} />
+const Template: StoryFn<typeof Select.Option> = (args) => (
+  <Select.Option {...args} />
 );
 
 const optionText = 'Option 1';
@@ -93,9 +93,6 @@ export const WithChildrenAndValue = {
   argTypes: {
     children: { table: { disable: false } },
     value: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

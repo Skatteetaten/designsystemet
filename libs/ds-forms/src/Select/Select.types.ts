@@ -88,7 +88,7 @@ export interface SelectComponent
   extends ForwardRefExoticComponent<
     SelectProps & RefAttributes<HTMLSelectElement>
   > {
-  SelectOption: ForwardRefExoticComponent<
+  Option: ForwardRefExoticComponent<
     SelectOptionProps & RefAttributes<HTMLOptionElement>
   >;
 }

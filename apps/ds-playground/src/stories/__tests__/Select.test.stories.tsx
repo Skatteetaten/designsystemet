@@ -73,12 +73,12 @@ const errorMessageText = 'Ledetekst er obligatorisk';
 
 const defaultLabelText = 'Ledetekst';
 const defaultChildren = [
-  <Select.SelectOption key={'option_1'} value={valueOption1}>
+  <Select.Option key={'option_1'} value={valueOption1}>
     {'Test 1'}
-  </Select.SelectOption>,
-  <Select.SelectOption key={'option_2'} value={valueOption2}>
+  </Select.Option>,
+  <Select.Option key={'option_2'} value={valueOption2}>
     {'Test 2'}
-  </Select.SelectOption>,
+  </Select.Option>,
 ];
 const defaultArgs = {
   label: defaultLabelText,
