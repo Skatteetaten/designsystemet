@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ChangeEvent, FocusEvent, useState } from 'react';
 
 import { formArrSize } from '@skatteetaten/ds-core-utils';
 import { Select } from '@skatteetaten/ds-forms';
@@ -443,15 +443,15 @@ const EventHandlersTemplate: StoryFn<typeof Select> = (args) => {
     <Select
       {...args}
       label={labelText}
-      onFocus={(event: React.FocusEvent<HTMLSelectElement>): void => {
+      onFocus={(event: FocusEvent<HTMLSelectElement>): void => {
         setLabelText('Select har fått fokus');
         args.onFocus && args.onFocus(event);
       }}
-      onBlur={(event: React.FocusEvent<HTMLSelectElement>): void => {
+      onBlur={(event: FocusEvent<HTMLSelectElement>): void => {
         setLabelText('Select har blitt blurret');
         args.onBlur && args.onBlur(event);
       }}
-      onChange={(event: React.ChangeEvent<HTMLSelectElement>): void => {
+      onChange={(event: ChangeEvent<HTMLSelectElement>): void => {
         setLabelText('Select har blitt klikket på');
         args.onChange && args.onChange(event);
       }}

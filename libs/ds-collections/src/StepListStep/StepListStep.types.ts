@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactElement, ReactNode } from 'react';
 
 import { PanelProps } from '@skatteetaten/ds-content';
 import { BaseProps } from '@skatteetaten/ds-core-utils';
@@ -21,7 +21,7 @@ export interface StepListStepProps extends BaseProps {
   /** Angir nummer på steget. */
   stepNumber: number;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
-  svgPath?: React.ReactElement;
+  svgPath?: ReactElement;
   /** Dersom steget har et ikon som vises i stedet for stegnummer må det gjøres en vundering på om ikonet er meningsbærende og trenger en alternativ tekst.*/
   svgTitle?: string;
   /** Tittel på steget.*/

@@ -1,4 +1,10 @@
-import { forwardRef, useId, useImperativeHandle, useRef } from 'react';
+import {
+  ChangeEvent,
+  forwardRef,
+  useId,
+  useImperativeHandle,
+  useRef,
+} from 'react';
 
 import {
   dsI18n,
@@ -69,7 +75,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       value.replace(/[^0-9]/g, '');
 
     const handleChange = (
-      e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
+      e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
     ): void => {
       if (thousandSeparator) {
         const input = e.target as HTMLInputElement;
