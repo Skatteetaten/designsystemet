@@ -1,15 +1,15 @@
 import { IconButton, getIconButtonSizeDefault } from '@skatteetaten/ds-buttons';
 import { sizeArr } from '@skatteetaten/ds-core-utils';
 import { PrintSVGpath } from '@skatteetaten/ds-icons';
-import { action } from '@storybook/addon-actions';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { getVersion } from '../utils/version.utils';
 
 const availableSizes = [...sizeArr].slice(0, 4);
-const meta = {
+
+export default {
   component: IconButton,
   title: 'Komponenter/IconButton',
   argTypes: {
@@ -62,19 +62,16 @@ const meta = {
     onClick: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-buttons'),
   },
 } satisfies Meta<typeof IconButton>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: StoryFn<typeof IconButton> = (args) => (
-  <IconButton {...args} onClick={action('KlikkEvent IconButton')} />
+export const Default: StoryFn<typeof IconButton> = () => (
+  <IconButton svgPath={PrintSVGpath} title={'Skriv ut'} />
 );
 
-const TemplateExample: StoryFn<typeof IconButton> = () => (
+export const Example: StoryFn<typeof IconButton> = () => (
   <>
     <div>
       <IconButton
@@ -122,25 +119,3 @@ const TemplateExample: StoryFn<typeof IconButton> = () => (
     </div>
   </>
 );
-
-export const IconButtonDefault = {
-  render: TemplateDefault,
-  name: 'Default',
-  args: {
-    svgPath: Object.values(SystemSVGPaths)[14], // Bell icon
-    size: getIconButtonSizeDefault(),
-    title: 'default tekst accessible name',
-  },
-} satisfies Story;
-
-export const IconButtonExample = {
-  render: TemplateExample,
-  name: 'Example',
-  args: {
-    title: 'dummy',
-    svgPath: Object.values(SystemSVGPaths)[14], // Bell icon
-  },
-  parameters: {
-    controls: { disable: true },
-  },
-} satisfies Story;

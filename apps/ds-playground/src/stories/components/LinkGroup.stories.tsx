@@ -1,20 +1,12 @@
-import {
-  getLinkGroupVariantDefault,
-  Link,
-  LinkGroup,
-  linkGroupVariantArr,
-} from '@skatteetaten/ds-buttons';
+import { LinkGroup, linkGroupVariantArr } from '@skatteetaten/ds-buttons';
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: LinkGroup,
-  subcomponents: {
-    'LinkGroup.Link': Link,
-  },
   title: 'Komponenter/LinkGroup',
   argTypes: {
     // Props
@@ -38,15 +30,30 @@ const meta = {
       table: { category: category.props },
     },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-buttons'),
   },
 } as Meta<typeof LinkGroup>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-const TemplateExample: StoryFn<typeof LinkGroup> = () => (
+export const Default: StoryFn<typeof LinkGroup> = () => (
+  <LinkGroup>
+    <LinkGroup.Link
+      key={'linkGroupLink_1'}
+      target={'_blank'}
+      href={'#storybook-root'}
+    >
+      {'Er du pendler?'}
+    </LinkGroup.Link>
+    <LinkGroup.Link key={'linkGroupLink_2'} href={'#storybook-root'}>
+      {'Pendler du mye?'}
+    </LinkGroup.Link>
+    <LinkGroup.Link key={'linkGroupLink_3'} href={'#storybook-root'}>
+      {'Pendler du dagen lang?'}
+    </LinkGroup.Link>
+  </LinkGroup>
+);
+
+export const Example: StoryFn<typeof LinkGroup> = () => (
   <>
     <LinkGroup hasSpacing>
       <LinkGroup.Link key={'linkGroupLink_1'} href={'#storybook-root'}>
@@ -75,33 +82,3 @@ const TemplateExample: StoryFn<typeof LinkGroup> = () => (
     </LinkGroup>
   </>
 );
-
-export const LinkGroupDefault = {
-  name: 'Default',
-  args: {
-    variant: getLinkGroupVariantDefault(),
-    children: [
-      <LinkGroup.Link
-        key={'linkGroupLink_1'}
-        target={'_blank'}
-        href={'#storybook-root'}
-      >
-        {'Er du pendler?'}
-      </LinkGroup.Link>,
-      <LinkGroup.Link key={'linkGroupLink_2'} href={'#storybook-root'}>
-        {'Pendler du mye?'}
-      </LinkGroup.Link>,
-      <LinkGroup.Link key={'linkGroupLink_3'} href={'#storybook-root'}>
-        {'Pendler du dagen lang?'}
-      </LinkGroup.Link>,
-    ],
-  },
-} satisfies Story;
-
-export const LinkGroupExample = {
-  render: TemplateExample,
-  name: 'Example',
-  parameters: {
-    controls: { disable: true },
-  },
-} satisfies Story;

@@ -1,16 +1,16 @@
-import { OpenClose, OpenCloseProps } from '@skatteetaten/ds-collections';
+import { OpenClose } from '@skatteetaten/ds-collections';
 import {
   densityArr,
   headingAsArr,
   positionArr,
 } from '@skatteetaten/ds-core-utils';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
-import { StoryObj, Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: OpenClose,
   title: 'Komponenter/OpenClose',
   argTypes: {
@@ -68,20 +68,23 @@ const meta = {
     //Events
     onClick: { ...htmlEventDescription },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-collections'),
   },
-} satisfies Meta<OpenCloseProps>;
-export default meta;
-type Story = StoryObj<typeof meta>;
+} satisfies Meta<typeof OpenClose>;
+
+export const Default: StoryFn<typeof OpenClose> = () => (
+  <OpenClose title={'OpenClose (Åpne og lukke)'}>
+    {'Innhold som vises bare når OpenClose er expanded'}
+  </OpenClose>
+);
 
 const exampleTitle = 'Hva er aksjesparekonto';
 const exampleContent =
   'En aksjesparekonto er en konto hvor du kan kjøpe og selge aksjer og aksjefond skattefritt. ' +
   'Gevinster blir ikke skattlagt og det gis ikke fradrag for tap så lenge verdien holdes inne på kontoen. ';
 
-const TemplateExample: StoryFn<OpenCloseProps> = () => (
+export const Example: StoryFn<typeof OpenClose> = () => (
   <>
     <Heading level={4} as={'h2'}>
       {'Aksjesparekonto (ASK)'}
@@ -114,22 +117,3 @@ const TemplateExample: StoryFn<OpenCloseProps> = () => (
     </OpenClose>
   </>
 );
-
-export const OpenCloseDefault: StoryObj<OpenCloseProps> = {
-  name: 'Default',
-  args: {
-    title: 'OpenClose (Åpne og lukke)',
-    children: 'Innhold som vises bare når OpenClose er expanded',
-  },
-} satisfies Story;
-
-export const OpenCloseExample: StoryObj<OpenCloseProps> = {
-  render: TemplateExample,
-  name: 'Example',
-  args: {
-    title: 'dummy',
-  },
-  parameters: {
-    controls: { disable: true },
-  },
-} satisfies Story;
