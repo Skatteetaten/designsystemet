@@ -1,5 +1,5 @@
 import { Fieldset, TextField } from '@skatteetaten/ds-forms';
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -46,11 +46,30 @@ export default {
   },
 } satisfies Meta<typeof Fieldset>;
 
-export const Default: StoryFn<typeof Fieldset> = () => (
-  <Fieldset legend={'Ledetekst'}>
-    <div>{'Innhold'}</div>
-  </Fieldset>
-);
+export const Preview: StoryObj<typeof Fieldset> = {
+  args: {
+    legend: 'Hvilken periode trenger du bekreftelse for?',
+    children: [
+      <TextField
+        key={'textfield1'}
+        className={'inlineBlock exampleSpacing'}
+        label={'Fra dato (dd.mm.åååå)'}
+      />,
+      <TextField
+        key={'textfield2'}
+        className={'inlineBlock'}
+        label={'Til dato (dd.mm.åååå)'}
+      />,
+    ],
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
+};
 
 export const Example: StoryFn<typeof Fieldset> = () => (
   <Fieldset

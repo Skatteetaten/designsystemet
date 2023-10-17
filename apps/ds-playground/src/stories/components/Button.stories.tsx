@@ -4,7 +4,7 @@ import {
   buttonVariantArr,
   getButtonVariantDefault,
 } from '@skatteetaten/ds-buttons';
-import { StoryFn, Meta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -58,7 +58,18 @@ export default {
   },
 } as Meta<typeof Button>;
 
-export const Default: StoryFn<typeof Button> = () => <Button>{'Klikk'}</Button>;
+export const Preview: StoryObj<typeof Button> = {
+  args: {
+    children: 'Send inn skjema',
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
+};
 
 export const Example: StoryFn<typeof Button> = () => (
   <>

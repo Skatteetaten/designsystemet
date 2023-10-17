@@ -1,6 +1,6 @@
 import { statusArr } from '@skatteetaten/ds-core-utils';
 import { Alert } from '@skatteetaten/ds-status';
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -37,11 +37,21 @@ export default {
   },
 } satisfies Meta<typeof Alert>;
 
-export const Default: StoryFn<typeof Alert> = () => (
-  <Alert variant={'neutral'} showAlert>
-    {'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.'}
-  </Alert>
-);
+export const Preview: StoryObj<typeof Alert> = {
+  args: {
+    children:
+      'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.',
+    showAlert: true,
+    variant: 'neutral',
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
+};
 
 export const Example: StoryFn<typeof Alert> = () => (
   <>

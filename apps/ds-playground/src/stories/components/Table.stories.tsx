@@ -13,7 +13,7 @@ import {
   SortState,
 } from '@skatteetaten/ds-table';
 import { Paragraph } from '@skatteetaten/ds-typography';
-import { StoryFn, Meta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
@@ -68,42 +68,54 @@ export default {
 } satisfies Meta<typeof Table>;
 
 /* eslint-disable sonarjs/no-duplicate-string */
-export const Default: StoryFn<typeof Table> = () => (
-  <Table caption={'Dette er en tabell.'}>
-    <Table.Header>
-      <Table.Row>
-        <Table.HeaderCell scope={'col'}>{'Category'}</Table.HeaderCell>
-        <Table.HeaderCell scope={'col'}>{'Items'}</Table.HeaderCell>
-        <Table.HeaderCell scope={'col'}>{'Expenditure'}</Table.HeaderCell>
-      </Table.Row>
-    </Table.Header>
-    <Table.Body>
-      <Table.Row>
-        <Table.DataCell className={'rowSpanRight'} rowSpan={2}>
-          {'Edible'}
-        </Table.DataCell>
-        <Table.DataCell>{'Donuts'}</Table.DataCell>
-        <Table.DataCell>{'3,000'}</Table.DataCell>
-      </Table.Row>
-      <Table.Row>
-        <Table.DataCell>{'Cake'}</Table.DataCell>
-        <Table.DataCell>{'3,000'}</Table.DataCell>
-      </Table.Row>
-      <Table.Row>
-        <Table.DataCell rowSpan={2} className={'rowSpanRight'}>
-          {'Non-Edible'}
-        </Table.DataCell>
-        <Table.DataCell>{'Stationery'}</Table.DataCell>
-        <Table.DataCell>{'18,000'}</Table.DataCell>
-      </Table.Row>
-      <Table.Row>
-        <Table.DataCell>{'Batteries'}</Table.DataCell>
-        <Table.DataCell>{'9,000'}</Table.DataCell>
-      </Table.Row>
-    </Table.Body>
-    <Table.Sum colSpan={2}>{'32,000'}</Table.Sum>
-  </Table>
-);
+export const Preview: StoryObj<typeof Table> = {
+  args: {
+    caption: 'Dette er en tabell.',
+    children: (
+      <>
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell scope={'col'}>{'Category'}</Table.HeaderCell>
+            <Table.HeaderCell scope={'col'}>{'Items'}</Table.HeaderCell>
+            <Table.HeaderCell scope={'col'}>{'Expenditure'}</Table.HeaderCell>
+          </Table.Row>
+        </Table.Header>
+        <Table.Body>
+          <Table.Row>
+            <Table.DataCell className={'rowSpanRight'} rowSpan={2}>
+              {'Edible'}
+            </Table.DataCell>
+            <Table.DataCell>{'Donuts'}</Table.DataCell>
+            <Table.DataCell>{'3,000'}</Table.DataCell>
+          </Table.Row>
+          <Table.Row>
+            <Table.DataCell>{'Cake'}</Table.DataCell>
+            <Table.DataCell>{'3,000'}</Table.DataCell>
+          </Table.Row>
+          <Table.Row>
+            <Table.DataCell rowSpan={2} className={'rowSpanRight'}>
+              {'Non-Edible'}
+            </Table.DataCell>
+            <Table.DataCell>{'Stationery'}</Table.DataCell>
+            <Table.DataCell>{'18,000'}</Table.DataCell>
+          </Table.Row>
+          <Table.Row>
+            <Table.DataCell>{'Batteries'}</Table.DataCell>
+            <Table.DataCell>{'9,000'}</Table.DataCell>
+          </Table.Row>
+        </Table.Body>
+        <Table.Sum colSpan={2}>{'32,000'}</Table.Sum>
+      </>
+    ),
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
+};
 
 export const Variants: StoryFn<typeof Table> = () => {
   const klage = 'Klage på vedtak';

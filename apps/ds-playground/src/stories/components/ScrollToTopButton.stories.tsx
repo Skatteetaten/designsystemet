@@ -3,7 +3,7 @@ import {
   ScrollToTopButton,
 } from '@skatteetaten/ds-buttons';
 import { ExternalLayout } from '@skatteetaten/ds-core-utils';
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 // @skatteeteaten/ds-core-designtokens er angitt som symlink i package.json
 // derfor vil typecheck feile hvis pakken ikke er bygget, derfor bryter vi nx module boundaries her
 // eslint-disable-next-line @nx/enforce-module-boundaries
@@ -45,14 +45,24 @@ export default {
   },
 } satisfies Meta<typeof ScrollToTopButton>;
 
-export const Default: StoryFn<typeof ScrollToTopButton> = () => (
-  <div className={'height100vh'}>
-    <main className={'scrollToTopContainer'} tabIndex={-1}>
-      <ExternalLayout />
-      <ScrollToTopButton />
-    </main>
-  </div>
-);
+export const Preview: StoryObj<typeof ScrollToTopButton> = {
+  render: (args) => (
+    <div className={'height100vh'}>
+      <main className={'scrollToTopContainer'} tabIndex={-1}>
+        <ExternalLayout />
+        <ScrollToTopButton {...args} />
+      </main>
+    </div>
+  ),
+  args: {},
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
+};
 
 export const Example: StoryFn<typeof ScrollToTopButton> = () => (
   <div className={'height100vh'}>

@@ -4,7 +4,7 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: Table.Header,
   title: 'Komponenter/Table/Header',
   argTypes: {
@@ -17,8 +17,6 @@ const meta = {
     version: getVersion('ds-table'),
   },
 } satisfies Meta<typeof Table.Header>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
 const TemplateDefault: StoryFn<typeof Table.Header> = (args) => (
   <Table caption={'header example'}>
@@ -34,7 +32,6 @@ const TemplateDefault: StoryFn<typeof Table.Header> = (args) => (
   </Table>
 );
 
-export const TableRowDefault = {
+export const Preview = {
   render: TemplateDefault,
-  name: 'Default',
-} satisfies Story;
+} satisfies StoryObj<typeof Table.Header>;

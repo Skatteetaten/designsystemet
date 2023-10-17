@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { CheckboxGroup } from '@skatteetaten/ds-forms';
-import { StoryFn, Meta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
@@ -50,21 +50,29 @@ export default {
   },
 } satisfies Meta<typeof CheckboxGroup>;
 
-export const Default: StoryFn<typeof CheckboxGroup> = () => (
-  <CheckboxGroup legend={'Velg det som passer deg'}>
-    <CheckboxGroup.Checkbox>{'Har barn over 16 år'}</CheckboxGroup.Checkbox>
-    <CheckboxGroup.Checkbox>{'Har barn under 12 år'}</CheckboxGroup.Checkbox>
-    <CheckboxGroup.Checkbox>
-      {
-        'Får ekstra reisevei til jobb på grunn av levering til barnehage eller skolefritidsordning'
-      }
-    </CheckboxGroup.Checkbox>
-    <CheckboxGroup.Checkbox>
-      {'Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov'}
-    </CheckboxGroup.Checkbox>
-    <CheckboxGroup.Checkbox>{'Er enslig forsørger'}</CheckboxGroup.Checkbox>
-  </CheckboxGroup>
-);
+export const Preview: StoryObj<typeof CheckboxGroup> = {
+  args: {
+    children: [
+      <CheckboxGroup.Checkbox key={'checkbox1'}>
+        {'Har barn over 16 år'}
+      </CheckboxGroup.Checkbox>,
+      <CheckboxGroup.Checkbox key={'checkbox2'}>
+        {'Har barn under 12 år'}
+      </CheckboxGroup.Checkbox>,
+      <CheckboxGroup.Checkbox key={'checkbox3'}>
+        {'Har ingen barn'}
+      </CheckboxGroup.Checkbox>,
+    ],
+    legend: 'Velg det som passer deg',
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
+};
 
 export const Example: StoryFn<typeof CheckboxGroup> = () => {
   const options = [

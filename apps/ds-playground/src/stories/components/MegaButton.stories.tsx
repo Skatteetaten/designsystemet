@@ -1,5 +1,5 @@
 import { MegaButton } from '@skatteetaten/ds-buttons';
-import { StoryFn, Meta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
@@ -48,9 +48,18 @@ export default {
   },
 } satisfies Meta<typeof MegaButton>;
 
-export const Default: StoryFn<typeof MegaButton> = () => (
-  <MegaButton>{'Klikk her'}</MegaButton>
-);
+export const Preview: StoryObj<typeof MegaButton> = {
+  args: {
+    children: 'Klikk her',
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
+};
 
 export const Example: StoryFn<typeof MegaButton> = () => (
   <MegaButton>{'Se eller endre skattekortet'}</MegaButton>

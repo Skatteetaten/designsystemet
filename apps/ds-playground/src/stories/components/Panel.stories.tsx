@@ -16,7 +16,7 @@ import {
 import { headingAsArr, subheadingAsArr } from '@skatteetaten/ds-core-utils';
 import { CheckIcon } from '@skatteetaten/ds-icons';
 import { Paragraph } from '@skatteetaten/ds-typography';
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
@@ -110,7 +110,18 @@ export default {
   },
 } satisfies Meta<typeof Panel>;
 
-export const Default: StoryFn<typeof Panel> = () => <Panel>{loremIpsum}</Panel>;
+export const Preview: StoryObj<typeof Panel> = {
+  args: {
+    children: loremIpsum,
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
+};
 
 export const Example: StoryFn<typeof Panel> = () => (
   <>

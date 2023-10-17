@@ -4,7 +4,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: ErrorSummary.Error,
   title: 'Komponenter/ErrorSummary/Error',
   argTypes: {
@@ -18,13 +18,10 @@ const meta = {
     version: getVersion('ds-forms'),
   },
 } satisfies Meta<typeof ErrorSummary.Error>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-export const Default = {
-  name: 'Default',
+export const Preview = {
   args: {
     children: 'Husk å fylle ut type varer',
     referenceId: 'id1',
   },
-} satisfies Story;
+} satisfies StoryObj<typeof ErrorSummary.Error>;

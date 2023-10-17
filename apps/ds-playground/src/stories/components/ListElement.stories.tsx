@@ -4,7 +4,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: List.Element,
   title: 'Komponenter/List/Element',
   argTypes: {
@@ -17,12 +17,9 @@ const meta = {
     version: getVersion('ds-typography'),
   },
 } satisfies Meta<typeof List.Element>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-export const Default = {
-  name: 'Default',
+export const Preview = {
   args: {
     children: 'Kjenner du behovet til brukeren?',
   },
-} satisfies Story;
+} satisfies StoryObj<typeof List.Element>;

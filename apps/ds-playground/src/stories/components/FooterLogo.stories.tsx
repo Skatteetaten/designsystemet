@@ -6,7 +6,7 @@ import logo from '../__tests__/testUtils/Skatteetaten-Logo-Horisontal-RGB-Hvit.p
 import illustration from '../__tests__/testUtils/test_bonde.svg';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: Footer.Logo,
   title: 'Komponenter/Footer/Logo',
   argTypes: {
@@ -19,10 +19,8 @@ const meta = {
     version: getVersion('ds-layout'),
   },
 } satisfies Meta<typeof Footer.Logo>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: StoryFn<typeof Footer.Logo> = () => (
+const Template: StoryFn<typeof Footer.Logo> = () => (
   <Footer titleFirstColumn={'Om Skatteetaten'}>
     <Footer.Logo>
       <img className={'logoHeight'} alt={'Logo'} src={logo}></img>
@@ -33,10 +31,9 @@ const TemplateDefault: StoryFn<typeof Footer.Logo> = () => (
   </Footer>
 );
 
-export const FooterDefault = {
-  render: TemplateDefault,
-  name: 'Default',
+export const Preview = {
+  render: Template,
   args: {
     children: 'dummy',
   },
-} satisfies Story;
+} satisfies StoryObj<typeof Footer.Logo>;

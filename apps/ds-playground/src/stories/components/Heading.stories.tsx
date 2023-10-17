@@ -1,6 +1,6 @@
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
 import { Heading, headingLevelArr } from '@skatteetaten/ds-typography';
-import { StoryFn, Meta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
@@ -38,11 +38,20 @@ export default {
   parameters: { version: getVersion('ds-typography') },
 } as Meta<typeof Heading>;
 
-export const Default: StoryFn<typeof Heading> = () => (
-  <Heading as={'h2'} level={2}>
-    {'Dette er en heading'}
-  </Heading>
-);
+export const Preview: StoryObj<typeof Heading> = {
+  args: {
+    as: 'h2',
+    level: 2,
+    children: 'Overskrift',
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
+};
 
 export const Example: StoryFn<typeof Heading> = () => (
   <>

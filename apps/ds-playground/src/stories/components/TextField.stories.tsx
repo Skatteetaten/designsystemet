@@ -6,8 +6,7 @@ import {
   textFieldAsArr,
   getTextFieldVariantDefault,
 } from '@skatteetaten/ds-forms';
-import { useArgs } from '@storybook/preview-api';
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -104,16 +103,17 @@ export default {
   },
 } satisfies Meta<typeof TextField>;
 
-export const Default: StoryFn<typeof TextField> = () => {
-  const [, setArgs] = useArgs();
-  return (
-    <TextField
-      label={'Navn'}
-      onChange={(e: React.ChangeEvent<HTMLInputElement>): void => {
-        setArgs({ value: e.target.value });
-      }}
-    />
-  );
+export const Preview: StoryObj<typeof TextField> = {
+  args: {
+    label: 'Navn',
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
 };
 
 export const Example: StoryFn<typeof TextField> = () => {

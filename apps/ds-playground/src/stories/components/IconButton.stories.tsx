@@ -1,7 +1,7 @@
 import { IconButton, getIconButtonSizeDefault } from '@skatteetaten/ds-buttons';
 import { sizeArr } from '@skatteetaten/ds-core-utils';
 import { PrintSVGpath } from '@skatteetaten/ds-icons';
-import { StoryFn, Meta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -67,9 +67,19 @@ export default {
   },
 } satisfies Meta<typeof IconButton>;
 
-export const Default: StoryFn<typeof IconButton> = () => (
-  <IconButton svgPath={PrintSVGpath} title={'Skriv ut'} />
-);
+export const Preview: StoryObj<typeof IconButton> = {
+  args: {
+    title: 'Skriv ut',
+    svgPath: PrintSVGpath,
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
+};
 
 export const Example: StoryFn<typeof IconButton> = () => (
   <>

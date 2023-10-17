@@ -7,7 +7,7 @@ import {
   TextField,
   getErrorSummaryTitleAsDefault,
 } from '@skatteetaten/ds-forms';
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
@@ -41,19 +41,27 @@ export default {
   },
 } satisfies Meta<typeof ErrorSummary>;
 
-export const Default: StoryFn<typeof ErrorSummary> = () => (
-  <ErrorSummary
-    content={'Her kan du legge inn vilkårlig innhold'}
-    showErrorSummary
-  >
-    <ErrorSummary.Error referenceId={'id1'}>
-      {'Husk å fylle ut type varer'}
-    </ErrorSummary.Error>
-    <ErrorSummary.Error referenceId={'id2'}>
-      {'Selger du varer og tjenester for egen regning?'}
-    </ErrorSummary.Error>
-  </ErrorSummary>
-);
+export const Preview: StoryObj<typeof ErrorSummary> = {
+  args: {
+    showErrorSummary: true,
+    content: 'Her kan du legge inn vilkårlig innhold.',
+    children: [
+      <ErrorSummary.Error key={'error1'} referenceId={'id1'}>
+        {'Husk å fylle ut type varer'}
+      </ErrorSummary.Error>,
+      <ErrorSummary.Error key={'error2'} referenceId={'id2'}>
+        {'Selger du varer og tjenester for egen regning?'}
+      </ErrorSummary.Error>,
+    ],
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
+};
 
 export const Example: StoryFn<typeof ErrorSummary> = () => {
   const [state, setState] = useState({

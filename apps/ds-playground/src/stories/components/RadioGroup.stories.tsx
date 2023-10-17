@@ -5,8 +5,7 @@ import {
   radioGroupVariantArr,
   getRadioGroupVariantDefault,
 } from '@skatteetaten/ds-forms';
-import { useArgs } from '@storybook/preview-api';
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
@@ -75,22 +74,28 @@ export default {
   },
 } satisfies Meta<typeof RadioGroup>;
 
-export const Default: StoryFn<typeof RadioGroup> = () => {
-  const [, setArgs] = useArgs();
-  return (
-    <RadioGroup
-      legend={'Type virksomhet'}
-      onChange={(e): void => {
-        setArgs({ value: e.target.value });
-      }}
-    >
-      <RadioGroup.Radio value={'foretak'}>
+export const Preview: StoryObj<typeof RadioGroup> = {
+  args: {
+    legend: 'Type virksomhet',
+    children: [
+      <RadioGroup.Radio key={'radio1'} value={'foretak'}>
         {'Enkeltpersonsforetak'}
-      </RadioGroup.Radio>
-      <RadioGroup.Radio value={'selskap'}>{'Aksjeselskap'}</RadioGroup.Radio>
-      <RadioGroup.Radio value={'annet'}>{'Annet'}</RadioGroup.Radio>
-    </RadioGroup>
-  );
+      </RadioGroup.Radio>,
+      <RadioGroup.Radio key={'radio2'} value={'selskap'}>
+        {'Aksjeselskap'}
+      </RadioGroup.Radio>,
+      <RadioGroup.Radio key={'radio3'} value={'annet'}>
+        {'Annet'}
+      </RadioGroup.Radio>,
+    ],
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
 };
 
 export const ExampleStandard: StoryFn<typeof RadioGroup> = () => {

@@ -4,7 +4,7 @@ import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: Table.Sum,
   title: 'Komponenter/Table/Sum',
   argTypes: {
@@ -35,8 +35,6 @@ const meta = {
     version: getVersion('ds-table'),
   },
 } satisfies Meta<typeof Table.Sum>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
 const TemplateDefault: StoryFn<typeof Table.Sum> = (args) => (
   <Table caption={'testTable'}>
@@ -44,10 +42,9 @@ const TemplateDefault: StoryFn<typeof Table.Sum> = (args) => (
   </Table>
 );
 
-export const DataCellDefault = {
+export const Preview = {
   render: TemplateDefault,
-  name: 'Default',
   args: {
     children: '1 000kr',
   },
-} satisfies Story;
+} satisfies StoryObj<typeof Table.Sum>;

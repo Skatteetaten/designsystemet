@@ -21,7 +21,7 @@ export default {
   },
 } satisfies Meta<typeof StepList>;
 
-export const Default: StoryFn<typeof StepList> = () => {
+export const Preview: StoryFn<typeof StepList> = () => {
   const stepId = useId();
   const [activeStep, setActiveStep] = useState(1);
   const [step3, setStep3] = useState<string | undefined>(undefined);

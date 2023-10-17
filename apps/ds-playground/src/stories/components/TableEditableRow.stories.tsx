@@ -5,7 +5,7 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: Table.EditableRow,
   title: 'komponenter/Table/EditableRow',
   argTypes: {
@@ -32,8 +32,6 @@ const meta = {
     version: getVersion('ds-table'),
   },
 } satisfies Meta<typeof Table.EditableRow>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
 const TemplateDefault: StoryFn<typeof Table.EditableRow> = (args) => (
   <Table caption={'row example'}>
@@ -46,7 +44,6 @@ const TemplateDefault: StoryFn<typeof Table.EditableRow> = (args) => (
   </Table>
 );
 
-export const TableRowDefault = {
+export const Preview = {
   render: TemplateDefault,
-  name: 'Default',
-} satisfies Story;
+} satisfies StoryObj<typeof Table.EditableRow>;

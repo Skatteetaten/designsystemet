@@ -1,7 +1,7 @@
 import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { Footer } from '@skatteetaten/ds-layout';
 import { Paragraph, Heading } from '@skatteetaten/ds-typography';
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import logo from '../__tests__/testUtils/Skatteetaten-Logo-Horisontal-RGB-Hvit.png';
@@ -29,9 +29,18 @@ export default {
   },
 } satisfies Meta<typeof Footer>;
 
-export const Default: StoryFn<typeof Footer> = () => (
-  <Footer titleFirstColumn={'Om Skatteetaten'} />
-);
+export const Preview: StoryObj<typeof Footer> = {
+  args: {
+    titleFirstColumn: 'Om Skatteetaten',
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
+};
 
 export const Example: StoryFn<typeof Footer> = () => (
   <Footer

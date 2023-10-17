@@ -4,7 +4,7 @@ import {
   Paragraph,
   paragraphVariantArr,
 } from '@skatteetaten/ds-typography';
-import { StoryFn, Meta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
@@ -36,9 +36,18 @@ export default {
   },
 } satisfies Meta<typeof Paragraph>;
 
-export const Default: StoryFn<typeof Paragraph> = () => (
-  <Paragraph>{loremIpsum}</Paragraph>
-);
+export const Preview: StoryObj<typeof Paragraph> = {
+  args: {
+    children: loremIpsum,
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
+};
 
 export const Example: StoryFn<typeof Paragraph> = () => (
   <>
