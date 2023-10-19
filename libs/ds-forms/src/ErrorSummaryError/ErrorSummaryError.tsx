@@ -1,4 +1,4 @@
-import { forwardRef, useContext, MouseEvent } from 'react';
+import { forwardRef, useContext, MouseEvent, JSX } from 'react';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';

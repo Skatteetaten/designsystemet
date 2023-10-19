@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, forwardRef, useRef } from 'react';
+import { ComponentPropsWithoutRef, forwardRef, useRef, JSX } from 'react';
 
 import { BaseProps } from '../base-props.types';
 

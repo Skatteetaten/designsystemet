@@ -1,4 +1,9 @@
-import { ForwardRefExoticComponent, ReactNode, RefAttributes } from 'react';
+import {
+  ForwardRefExoticComponent,
+  ReactNode,
+  RefAttributes,
+  JSX,
+} from 'react';
 
 import { LinkProps } from '@skatteetaten/ds-buttons';
 import { BaseProps } from '@skatteetaten/ds-core-utils';

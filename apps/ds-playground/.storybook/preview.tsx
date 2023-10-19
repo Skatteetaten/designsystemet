@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+import { JSX } from 'react';
+
 import {
   dsI18n,
   getCommonClassNameDefault,

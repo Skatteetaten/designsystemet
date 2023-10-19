@@ -1,4 +1,4 @@
-import { HTMLAttributes, forwardRef, useRef } from 'react';
+import { HTMLAttributes, forwardRef, useRef, JSX } from 'react';
 
 import { BaseProps } from '../base-props.types';
 
