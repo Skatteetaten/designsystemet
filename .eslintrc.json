@@ -10,7 +10,17 @@
     {
       "files": ["*.stories.tsx", "test-runner.ts"],
       "rules": {
-        "jest/no-standalone-expect": "off"
+        "jest/no-standalone-expect": "off",
+        "@nx/dependency-checks": [
+          "error",
+          {
+            "buildTargets": ["build"],
+            "checkMissingDependencies": true,
+            "checkObsoleteDependencies": true,
+            "checkVersionMismatches": true,
+            "ignoredDependencies": []
+          }
+        ]
       }
     },
     {
