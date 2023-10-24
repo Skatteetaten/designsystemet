@@ -6,9 +6,17 @@ function addStyleImportPlugin() {
         if (bundle[key].modules) {
           Object.keys(bundle[key].modules).every(function (moduleKey) {
             if (moduleKey.includes('.scss')) {
+              const filename = bundle[key].fileName;
+              const replacementValue = filename.includes('/')
+                ? "$1\nimport './styles.css';\n"
+                : `$1\nimport './${filename.substr(
+                    0,
+                    filename.indexOf('.')
+                  )}/styles.css';\n`;
+
               const newCode = bundle[key].code.replace(
-                /(import.*;\n)(\n)/,
-                "$1import './styles.css';\n$2"
+                /(import\s[^;]*;)(?![\s\S]*import\s)/gs,
+                replacementValue
               );
 
               bundle[key].code = newCode;
