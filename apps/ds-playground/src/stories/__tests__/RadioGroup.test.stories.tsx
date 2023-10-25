@@ -31,10 +31,7 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     children: { table: { disable: true } },
-    defaultValue: {
-      type: 'string',
-      table: { disable: true },
-    },
+    defaultValue: { table: { disable: true } },
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
     hasError: { table: { disable: true } },
@@ -47,10 +44,7 @@ const meta = {
     hideLegend: { table: { disable: true } },
     legend: { table: { disable: true } },
     showRequiredMark: { table: { disable: true } },
-    selectedValue: {
-      type: 'string',
-      table: { disable: true },
-    },
+    selectedValue: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     variant: {
       table: { disable: true },
