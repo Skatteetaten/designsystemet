@@ -65,16 +65,9 @@ export const Preview: StoryObj<typeof CheckboxGroup> = {
     ],
     legend: 'Velg det som passer deg',
   },
-  parameters: {
-    docs: {
-      source: {
-        code: null,
-      },
-    },
-  },
 };
 
-export const Example: StoryFn<typeof CheckboxGroup> = () => {
+export const Example: StoryFn<typeof CheckboxGroup> = (_args) => {
   const options = [
     {
       label: 'Har barn over 16 år',
@@ -123,4 +116,10 @@ export const Example: StoryFn<typeof CheckboxGroup> = () => {
       <Button>{'Neste side'}</Button>
     </>
   );
+};
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
 };

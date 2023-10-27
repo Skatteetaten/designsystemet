@@ -63,7 +63,6 @@ export default {
   },
   tags: ['autodocs'],
   parameters: {
-    docs: { source: { code: null } },
     version: getVersion('ds-table'),
   },
 } as Meta<typeof Table.Row>;

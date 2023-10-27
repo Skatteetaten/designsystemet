@@ -50,16 +50,9 @@ export const Preview: StoryObj<typeof List> = {
       <List.Element key={'listElement3'}>{'Snakk med andre.'}</List.Element>,
     ],
   },
-  parameters: {
-    docs: {
-      source: {
-        code: null,
-      },
-    },
-  },
 };
 
-export const Example: StoryFn<typeof List> = () => (
+export const Example: StoryFn<typeof List> = (_args) => (
   <>
     <Paragraph hasSpacing>{'På Min side finner du'}</Paragraph>
     <List hasSpacing>
@@ -88,3 +81,9 @@ export const Example: StoryFn<typeof List> = () => (
     </Paragraph>
   </>
 );
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};

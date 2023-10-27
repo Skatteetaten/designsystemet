@@ -114,16 +114,9 @@ export const Preview: StoryObj<typeof Panel> = {
   args: {
     children: loremIpsum,
   },
-  parameters: {
-    docs: {
-      source: {
-        code: null,
-      },
-    },
-  },
 };
 
-export const Example: StoryFn<typeof Panel> = () => (
+export const Example: StoryFn<typeof Panel> = (_args) => (
   <>
     <Panel
       title={'Når kommer skattepengene'}
@@ -165,3 +158,9 @@ export const Example: StoryFn<typeof Panel> = () => (
     </Panel>
   </>
 );
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};

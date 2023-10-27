@@ -52,16 +52,9 @@ export const Preview: StoryObj<typeof Link> = {
     children: 'Er du pendler?',
     href: '#',
   },
-  parameters: {
-    docs: {
-      source: {
-        code: null,
-      },
-    },
-  },
 };
 
-export const Example: StoryFn<typeof Link> = () => (
+export const Example: StoryFn<typeof Link> = (_args) => (
   <>
     <div className={'exampleSpacing'}>
       <Link href={'#link'}>
@@ -80,3 +73,9 @@ export const Example: StoryFn<typeof Link> = () => (
     </div>
   </>
 );
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};

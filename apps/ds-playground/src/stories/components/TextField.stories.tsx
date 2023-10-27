@@ -107,13 +107,6 @@ export const Preview: StoryObj<typeof TextField> = {
   args: {
     label: 'Navn',
   },
-  parameters: {
-    docs: {
-      source: {
-        code: null,
-      },
-    },
-  },
 };
 
 export const Example: StoryFn<typeof TextField> = () => {

@@ -61,11 +61,4 @@ export const Preview: StoryObj<typeof Icon> = {
   args: {
     svgPath: AccountChildSVGpath,
   },
-  parameters: {
-    docs: {
-      source: {
-        code: null,
-      },
-    },
-  },
 };

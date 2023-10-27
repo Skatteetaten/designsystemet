@@ -55,6 +55,9 @@ const config = {
     name: '@storybook/react-webpack5',
     options: {},
   },
+  docs: {
+    autodocs: true,
+  },
   webpackFinal: async (config) => {
     const outerIndex =
       config.module?.rules.findIndex(

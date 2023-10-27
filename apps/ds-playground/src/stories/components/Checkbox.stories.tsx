@@ -78,16 +78,9 @@ export const Preview: StoryObj<typeof Checkbox> = {
   args: {
     children: 'Checkbox',
   },
-  parameters: {
-    docs: {
-      source: {
-        code: null,
-      },
-    },
-  },
 };
 
-export const Example: StoryFn<typeof Checkbox> = () => {
+export const Example: StoryFn<typeof Checkbox> = (_args) => {
   const [checked, setChecked] = useState(false);
   const [error, setError] = useState(false);
   return (
@@ -105,4 +98,10 @@ export const Example: StoryFn<typeof Checkbox> = () => {
       <Button onClick={(): void => setError(!checked)}>{'Send'}</Button>
     </>
   );
+};
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
 };

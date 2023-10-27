@@ -62,16 +62,9 @@ export const Preview: StoryObj<typeof Fieldset> = {
       />,
     ],
   },
-  parameters: {
-    docs: {
-      source: {
-        code: null,
-      },
-    },
-  },
 };
 
-export const Example: StoryFn<typeof Fieldset> = () => (
+export const Example: StoryFn<typeof Fieldset> = (_args) => (
   <Fieldset
     legend={'Hvilken periode trenger du bekreftelse for?'}
     helpText={'Legg inn hvilken periode du trenger bekreftelse for.'}
@@ -83,5 +76,11 @@ export const Example: StoryFn<typeof Fieldset> = () => (
     <TextField className={'inlineBlock'} label={'Til dato (dd.mm.åååå)'} />
   </Fieldset>
 );
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};
 
 //TODO Erstatt TextField med Datepicker i Example

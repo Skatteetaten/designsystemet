@@ -40,16 +40,9 @@ export const Preview: StoryObj<typeof Paragraph> = {
   args: {
     children: loremIpsum,
   },
-  parameters: {
-    docs: {
-      source: {
-        code: null,
-      },
-    },
-  },
 };
 
-export const Example: StoryFn<typeof Paragraph> = () => (
+export const Example: StoryFn<typeof Paragraph> = (_args) => (
   <>
     <Heading as={'h1'} level={1} hasSpacing>
       {'Flere oppgir kryptoverdier i skattemeldingen'}
@@ -77,3 +70,9 @@ export const Example: StoryFn<typeof Paragraph> = () => (
     </Paragraph>
   </>
 );
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};

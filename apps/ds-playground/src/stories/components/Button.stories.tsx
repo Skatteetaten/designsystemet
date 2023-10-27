@@ -1,16 +1,21 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
 /* eslint-disable sonarjs/no-duplicate-string */
+
 import {
   Button,
   buttonVariantArr,
   getButtonVariantDefault,
 } from '@skatteetaten/ds-buttons';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+type Story = StoryObj<typeof Button>;
+
+const meta = {
   component: Button,
   title: 'Komponenter/Button',
   argTypes: {
@@ -58,34 +63,36 @@ export default {
   },
 } as Meta<typeof Button>;
 
+export default meta;
+
 export const Preview: StoryObj<typeof Button> = {
   args: {
-    children: 'Send inn skjema',
-  },
-  parameters: {
-    docs: {
-      source: {
-        code: null,
-      },
-    },
+    children: `Send inn skjema`,
   },
 };
 
-export const Example: StoryFn<typeof Button> = () => (
-  <>
-    <Button className={'exampleSpacing'} variant={'primary'}>
-      {'Send inn skjema'}
-    </Button>
-    <Button className={'exampleSpacing'} variant={'secondary'}>
-      {'Avbryt'}
-    </Button>
-    <div>
-      <Button className={'exampleSpacing'} variant={'tertiary'}>
-        {'Logg inn'}
+export const Example: Story = {
+  render: (_args) => (
+    <>
+      <Button className={'exampleSpacing'} variant={'primary'}>
+        {'Send inn skjema '}
       </Button>
-    </div>
-    <Button className={'exampleSpacing'} variant={'danger'}>
-      {'Slett'}
-    </Button>
-  </>
-);
+      <Button className={'exampleSpacing'} variant={'secondary'}>
+        {'Avbryt'}
+      </Button>
+      <div>
+        <Button className={'exampleSpacing'} variant={'tertiary'}>
+          {'Logg inn'}
+        </Button>
+      </div>
+      <Button className={'exampleSpacing'} variant={'danger'}>
+        {'Slett'}
+      </Button>
+    </>
+  ),
+  parameters: {
+    controls: {
+      exclude: /.*/,
+    },
+  },
+};

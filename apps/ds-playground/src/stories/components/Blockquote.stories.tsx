@@ -28,19 +28,18 @@ export const Preview: StoryObj<typeof Blockquote> = {
   args: {
     children: loremIpsum,
   },
-  parameters: {
-    docs: {
-      source: {
-        code: null,
-      },
-    },
-  },
 };
 
-export const Example: StoryFn<typeof Blockquote> = () => (
+export const Example: StoryFn<typeof Blockquote> = (_args) => (
   <Blockquote>
     {
       'Skatteetaten jobber målrettet sammen med andre samarbeidspartnere for at det skal være enkelt å gjøre rett og vanskelig å gjøre feil.'
     }
   </Blockquote>
 );
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};

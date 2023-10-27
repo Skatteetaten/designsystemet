@@ -62,16 +62,9 @@ export const Preview: StoryObj<typeof InlineButton> = {
   args: {
     children: 'Legg til rapport',
   },
-  parameters: {
-    docs: {
-      source: {
-        code: null,
-      },
-    },
-  },
 };
 
-export const Example: StoryFn<typeof InlineButton> = () => (
+export const Example: StoryFn<typeof InlineButton> = (_args) => (
   <div className={'flex'}>
     <InlineButton className={'exampleSpacing'} svgPath={AddOutlineSVGpath}>
       {'Legg til'}
@@ -85,3 +78,9 @@ export const Example: StoryFn<typeof InlineButton> = () => (
     </InlineButton>
   </div>
 );
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};

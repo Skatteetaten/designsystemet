@@ -52,15 +52,14 @@ export const Preview: StoryObj<typeof MegaButton> = {
   args: {
     children: 'Klikk her',
   },
-  parameters: {
-    docs: {
-      source: {
-        code: null,
-      },
-    },
-  },
 };
 
-export const Example: StoryFn<typeof MegaButton> = () => (
+export const Example: StoryFn<typeof MegaButton> = (_args) => (
   <MegaButton>{'Se eller endre skattekortet'}</MegaButton>
 );
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};

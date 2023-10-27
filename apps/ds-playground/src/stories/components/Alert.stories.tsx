@@ -34,8 +34,18 @@ export default {
   },
   parameters: {
     version: getVersion('ds-status'),
+    /*     controls: { exclude: [] }, */
   },
 } satisfies Meta<typeof Alert>;
+
+export const MyDocs: StoryObj<typeof Alert> = {
+  tags: ['isHidden'],
+  args: {
+    children: 'This is docs - Avvist av kortutsteder. ',
+    showAlert: true,
+    variant: 'neutral',
+  },
+};
 
 export const Preview: StoryObj<typeof Alert> = {
   args: {
@@ -44,16 +54,9 @@ export const Preview: StoryObj<typeof Alert> = {
     showAlert: true,
     variant: 'neutral',
   },
-  parameters: {
-    docs: {
-      source: {
-        code: null,
-      },
-    },
-  },
 };
 
-export const Example: StoryFn<typeof Alert> = () => (
+export const Example: StoryFn<typeof Alert> = (_args) => (
   <>
     <Alert
       variant={'success'}
@@ -78,3 +81,9 @@ export const Example: StoryFn<typeof Alert> = () => (
     </Alert>
   </>
 );
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};

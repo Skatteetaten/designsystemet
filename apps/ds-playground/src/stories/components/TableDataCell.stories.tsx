@@ -39,7 +39,6 @@ export default {
   },
   tags: ['autodocs'],
   parameters: {
-    docs: { source: { code: null } },
     version: getVersion('ds-table'),
   },
 } satisfies Meta<typeof Table.DataCell>;

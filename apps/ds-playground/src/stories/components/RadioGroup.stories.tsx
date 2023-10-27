@@ -89,16 +89,9 @@ export const Preview: StoryObj<typeof RadioGroup> = {
       </RadioGroup.Radio>,
     ],
   },
-  parameters: {
-    docs: {
-      source: {
-        code: null,
-      },
-    },
-  },
 };
 
-export const ExampleStandard: StoryFn<typeof RadioGroup> = () => {
+export const ExampleStandard: StoryFn<typeof RadioGroup> = (_args) => {
   const [state, setState] = useState({
     selectedValue: 'foretak',
   });
@@ -121,7 +114,13 @@ export const ExampleStandard: StoryFn<typeof RadioGroup> = () => {
   );
 };
 
-export const ExampleHorizontal: StoryFn<typeof RadioGroup> = () => {
+ExampleStandard.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};
+
+export const ExampleHorizontal: StoryFn<typeof RadioGroup> = (_args) => {
   const [state, setState] = useState({
     selectedValue: 'nei',
   });
@@ -138,4 +137,10 @@ export const ExampleHorizontal: StoryFn<typeof RadioGroup> = () => {
       <RadioGroup.Radio value={'nei'}>{'Nei'}</RadioGroup.Radio>
     </RadioGroup>
   );
+};
+
+ExampleHorizontal.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
 };

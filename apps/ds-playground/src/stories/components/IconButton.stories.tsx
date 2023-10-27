@@ -72,16 +72,9 @@ export const Preview: StoryObj<typeof IconButton> = {
     title: 'Skriv ut',
     svgPath: PrintSVGpath,
   },
-  parameters: {
-    docs: {
-      source: {
-        code: null,
-      },
-    },
-  },
 };
 
-export const Example: StoryFn<typeof IconButton> = () => (
+export const Example: StoryFn<typeof IconButton> = (_args) => (
   <>
     <div>
       <IconButton
@@ -129,3 +122,9 @@ export const Example: StoryFn<typeof IconButton> = () => (
     </div>
   </>
 );
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};

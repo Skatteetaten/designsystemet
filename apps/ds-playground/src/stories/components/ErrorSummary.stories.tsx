@@ -54,16 +54,9 @@ export const Preview: StoryObj<typeof ErrorSummary> = {
       </ErrorSummary.Error>,
     ],
   },
-  parameters: {
-    docs: {
-      source: {
-        code: null,
-      },
-    },
-  },
 };
 
-export const Example: StoryFn<typeof ErrorSummary> = () => {
+export const Example: StoryFn<typeof ErrorSummary> = (_args) => {
   const [state, setState] = useState({
     hasError: false,
   });
@@ -120,4 +113,10 @@ export const Example: StoryFn<typeof ErrorSummary> = () => {
       </Button>
     </>
   );
+};
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
 };

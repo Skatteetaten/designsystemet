@@ -16,7 +16,6 @@ export default {
     children: { control: false, table: { category: category.props } },
   },
   parameters: {
-    docs: { source: { type: 'code' } },
     version: getVersion('ds-collections'),
   },
 } satisfies Meta<typeof StepList>;

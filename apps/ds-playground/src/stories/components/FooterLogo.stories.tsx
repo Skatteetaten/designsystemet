@@ -15,7 +15,6 @@ export default {
   },
   tags: ['autodocs'],
   parameters: {
-    docs: { source: { code: null } },
     version: getVersion('ds-layout'),
   },
 } satisfies Meta<typeof Footer.Logo>;

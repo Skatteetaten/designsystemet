@@ -1,4 +1,4 @@
-import { LinkGroup } from '@skatteetaten/ds-buttons';
+import { LinkGroup, Link } from '@skatteetaten/ds-buttons';
 import { Footer } from '@skatteetaten/ds-layout';
 import { Paragraph, Heading } from '@skatteetaten/ds-typography';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
@@ -33,16 +33,9 @@ export const Preview: StoryObj<typeof Footer> = {
   args: {
     titleFirstColumn: 'Om Skatteetaten',
   },
-  parameters: {
-    docs: {
-      source: {
-        code: null,
-      },
-    },
-  },
 };
 
-export const Example: StoryFn<typeof Footer> = () => (
+export const Example: StoryFn<typeof Footer> = (_args) => (
   <Footer
     titleFirstColumn={'Om Skatteetaten'}
     titleSecondColumn={'Følg oss'}
@@ -82,6 +75,8 @@ export const Example: StoryFn<typeof Footer> = () => (
             {'Hvordan få tilgang til data'}
           </LinkGroup.Link>
         </LinkGroup>
+        <Link href={'#'}>{'Link etter LinkGroup'}</Link>
+        <Link href={'#'}>{'Link andrelink'}</Link>
       </>
     }
   >
@@ -105,3 +100,9 @@ export const Example: StoryFn<typeof Footer> = () => (
     </Footer.Link>
   </Footer>
 );
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};

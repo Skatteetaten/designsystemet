@@ -108,13 +108,6 @@ export const Preview: StoryObj<typeof Table> = {
       </>
     ),
   },
-  parameters: {
-    docs: {
-      source: {
-        code: null,
-      },
-    },
-  },
 };
 
 export const Variants: StoryFn<typeof Table> = () => {

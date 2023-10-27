@@ -30,16 +30,9 @@ export const Preview: StoryObj<typeof ErrorMessage> = {
     children: 'Feilmelding',
     showError: true,
   },
-  parameters: {
-    docs: {
-      source: {
-        code: null,
-      },
-    },
-  },
 };
 
-export const Example: StoryFn<typeof ErrorMessage> = () => {
+export const Example: StoryFn<typeof ErrorMessage> = (_args) => {
   const [state, setState] = useState({
     hasError: false,
   });
@@ -63,4 +56,10 @@ export const Example: StoryFn<typeof ErrorMessage> = () => {
       </ErrorMessage>
     </>
   );
+};
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
 };

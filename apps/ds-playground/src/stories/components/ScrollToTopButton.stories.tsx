@@ -55,17 +55,16 @@ export const Preview: StoryObj<typeof ScrollToTopButton> = {
     </div>
   ),
   args: {},
-  parameters: {
-    docs: {
-      source: {
-        code: null,
-      },
-    },
-  },
 };
 
-export const Example: StoryFn<typeof ScrollToTopButton> = () => (
+export const Example: StoryFn<typeof ScrollToTopButton> = (_args) => (
   <div className={'height100vh'}>
     <ScrollToTopButton visibilityThreshold={0} />
   </div>
 );
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};

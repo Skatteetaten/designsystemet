@@ -44,16 +44,9 @@ export const Preview: StoryObj<typeof Heading> = {
     level: 2,
     children: 'Overskrift',
   },
-  parameters: {
-    docs: {
-      source: {
-        code: null,
-      },
-    },
-  },
 };
 
-export const Example: StoryFn<typeof Heading> = () => (
+export const Example: StoryFn<typeof Heading> = (_args) => (
   <>
     <Heading as={'h1'} level={1} hasSpacing>
       {'Overskriftsnivå 1'}
@@ -75,3 +68,9 @@ export const Example: StoryFn<typeof Heading> = () => (
     </Heading>
   </>
 );
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};

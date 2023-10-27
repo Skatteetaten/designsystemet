@@ -5,6 +5,11 @@ import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+LinkGroup.Link = { ...LinkGroup.Link };
+LinkGroup.Link.displayName = 'LinkGroup.Link';
+
 export default {
   component: LinkGroup,
   title: 'Komponenter/LinkGroup',
@@ -53,16 +58,9 @@ export const Preview: StoryObj<typeof LinkGroup> = {
       </LinkGroup.Link>,
     ],
   },
-  parameters: {
-    docs: {
-      source: {
-        code: null,
-      },
-    },
-  },
 };
 
-export const Example: StoryFn<typeof LinkGroup> = () => (
+export const Example: StoryFn<typeof LinkGroup> = (_args) => (
   <>
     <LinkGroup hasSpacing>
       <LinkGroup.Link key={'linkGroupLink_1'} href={'#storybook-root'}>
@@ -91,3 +89,9 @@ export const Example: StoryFn<typeof LinkGroup> = () => (
     </LinkGroup>
   </>
 );
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};
