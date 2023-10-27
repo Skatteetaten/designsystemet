@@ -1,10 +1,14 @@
 {
   "loginbutton.Title": "Log in",
   "logoutbutton.Title": "Log out",
-  "topbanner.InkLogoImageText": "The Norwegian National Collection Agency logo",
-  "topbanner.InkLogoLinkText": "Front page The Norwegian National Collection Agency",
-  "topbanner.LsoLogoImageText": "Salary subsidy logo",
-  "topbanner.LsoLogoLinkText": "Front page Salary subsidy",
-  "topbanner.SkeLogoImageText": "The Norwegian Tax Administration logo",
-  "topbanner.SkeLogoLinkText": "Front page The Norwegian Tax Administration"
+  "menubutton.Meny": "Menu",
+  "topbannerexternal.DrawerAriaLabel": "Theme overview",
+  "topbannerexternal.InkLogoImageText": "The Norwegian National Collection Agency logo",
+  "topbannerexternal.InkLogoLinkText": "Front page The Norwegian National Collection Agency",
+  "topbannerexternal.LsoLogoImageText": "Salary subsidy logo",
+  "topbannerexternal.LsoLogoLinkText": "Front page Salary subsidy",
+  "topbannerexternal.SkeLogoImageText": "The Norwegian Tax Administration logo",
+  "topbannerexternal.SkeLogoLinkText": "Front page The Norwegian Tax Administration",
+  "topbannerexternal.SkipLinkText": "Skip to main content",
+  "userbutton.Title": "Profile"
 }
