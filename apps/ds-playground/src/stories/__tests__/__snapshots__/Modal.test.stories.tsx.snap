@@ -1,0 +1,505 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Modal ClickCancelButton play-test 1`] = `
+<div data-test-block="true">
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+          type="button"
+  >
+    <span class="Button_buttonText__JxyB+">
+      Åpne modal
+    </span>
+  </button>
+  <dialog class="Modal_modal__JdsM-   Modal_modalPaddingL__TAljg"
+          aria-labelledby="modalAriaLabelId-:rj:"
+  >
+    <h1 id="modalAriaLabelId-:rj:"
+        class="Heading_heading__7K0um Heading_heading_level2__2SV45 Heading_heading_hasSpacingSmallMobileMediumOtherwise__FQy+I "
+    >
+      Vil du erstatte nye opplysninger fra fil?
+    </h1>
+    <div>
+    </div>
+    <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:rk:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:rk:">
+          Lukk
+        </title>
+        <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+        </path>
+      </svg>
+    </button>
+    <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+      Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
+    </p>
+    <div class="flex">
+      <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+              type="button"
+      >
+        <span class="Button_buttonText__JxyB+">
+          Erstatt opplysninger
+        </span>
+      </button>
+      <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+              type="button"
+      >
+        <span class="Button_buttonText__JxyB+">
+          Avbryt
+        </span>
+      </button>
+    </div>
+  </dialog>
+</div>
+`;
+
+exports[`Tester/Modal ClickCloseButton play-test 1`] = `
+<div data-test-block="true">
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+          type="button"
+  >
+    <span class="Button_buttonText__JxyB+">
+      Åpne modal
+    </span>
+  </button>
+  <dialog class="Modal_modal__JdsM-   Modal_modalPaddingL__TAljg"
+          aria-labelledby="modalAriaLabelId-:rf:"
+  >
+    <h1 id="modalAriaLabelId-:rf:"
+        class="Heading_heading__7K0um Heading_heading_level2__2SV45 Heading_heading_hasSpacingSmallMobileMediumOtherwise__FQy+I "
+    >
+      Vil du erstatte nye opplysninger fra fil?
+    </h1>
+    <div>
+    </div>
+    <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:rg:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:rg:">
+          Lukk
+        </title>
+        <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+        </path>
+      </svg>
+    </button>
+    <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+      Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
+    </p>
+    <div class="flex">
+      <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+              type="button"
+      >
+        <span class="Button_buttonText__JxyB+">
+          Erstatt opplysninger
+        </span>
+      </button>
+      <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+              type="button"
+      >
+        <span class="Button_buttonText__JxyB+">
+          Avbryt
+        </span>
+      </button>
+    </div>
+  </dialog>
+</div>
+`;
+
+exports[`Tester/Modal Defaults play-test 1`] = `
+<div data-test-block="true">
+  <dialog class="Modal_modal__JdsM-   Modal_modalPaddingL__TAljg"
+          aria-labelledby="modalAriaLabelId-:r4:"
+          open
+  >
+    <h1 id="modalAriaLabelId-:r4:"
+        class="Heading_heading__7K0um Heading_heading_level2__2SV45 Heading_heading_hasSpacingSmallMobileMediumOtherwise__FQy+I "
+    >
+      Vil du erstatte nye opplysninger fra fil?
+    </h1>
+    <div>
+    </div>
+    <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r5:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r5:">
+          Lukk
+        </title>
+        <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+        </path>
+      </svg>
+    </button>
+    Modal innhold
+  </dialog>
+</div>
+`;
+
+exports[`Tester/Modal WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <dialog id="htmlId"
+          class="Modal_modal__JdsM- dummyClassname  Modal_modalPaddingL__TAljg"
+          lang="nb"
+          data-testid="123ID"
+          aria-labelledby="modalAriaLabelId-:r2:"
+          open
+  >
+    <h1 id="modalAriaLabelId-:r2:"
+        class="Heading_heading__7K0um Heading_heading_level2__2SV45 Heading_heading_hasSpacingSmallMobileMediumOtherwise__FQy+I "
+    >
+      Vil du erstatte nye opplysninger fra fil?
+    </h1>
+    <div>
+    </div>
+    <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r3:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r3:">
+          Lukk
+        </title>
+        <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+        </path>
+      </svg>
+    </button>
+    Modal innhold
+  </dialog>
+</div>
+`;
+
+exports[`Tester/Modal WithAutoClose play-test 1`] = `
+<div data-test-block="true">
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+          type="button"
+  >
+    <span class="Button_buttonText__JxyB+">
+      Åpne modal
+    </span>
+  </button>
+  <dialog class="Modal_modal__JdsM-   Modal_modalPaddingL__TAljg"
+          aria-labelledby="modalAriaLabelId-:rh:"
+  >
+    <h1 id="modalAriaLabelId-:rh:"
+        class="Heading_heading__7K0um Heading_heading_level2__2SV45 Heading_heading_hasSpacingSmallMobileMediumOtherwise__FQy+I "
+    >
+      Vil du erstatte nye opplysninger fra fil?
+    </h1>
+    <div>
+    </div>
+    <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:ri:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:ri:">
+          Lukk
+        </title>
+        <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+        </path>
+      </svg>
+    </button>
+    <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+      Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
+    </p>
+    <div class="flex">
+      <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+              type="button"
+      >
+        <span class="Button_buttonText__JxyB+">
+          Erstatt opplysninger
+        </span>
+      </button>
+      <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+              type="button"
+      >
+        <span class="Button_buttonText__JxyB+">
+          Avbryt
+        </span>
+      </button>
+    </div>
+  </dialog>
+</div>
+`;
+
+exports[`Tester/Modal WithHideTitle play-test 1`] = `
+<div data-test-block="true">
+  <dialog class="Modal_modal__JdsM-   Modal_modalPaddingL__TAljg"
+          aria-labelledby="modalAriaLabelId-:rl:"
+          open
+  >
+    <h1 id="modalAriaLabelId-:rl:"
+        class="Heading_heading__7K0um Heading_heading_level2__2SV45 Heading_heading_hasSpacingSmallMobileMediumOtherwise__FQy+I Modal_srOnly__cHEpw"
+    >
+      Vil du erstatte nye opplysninger fra fil?
+    </h1>
+    <div>
+    </div>
+    <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:rm:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:rm:">
+          Lukk
+        </title>
+        <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+        </path>
+      </svg>
+    </button>
+    Modal innhold
+  </dialog>
+</div>
+`;
+
+exports[`Tester/Modal WithPadding smoke-test 1`] = `
+<div data-test-block="true">
+  <dialog class="Modal_modal__JdsM-   Modal_modalPaddingNONE__hHaff"
+          aria-labelledby="modalAriaLabelId-:rb:"
+          open
+  >
+    <h1 id="modalAriaLabelId-:rb:"
+        class="Heading_heading__7K0um Heading_heading_level2__2SV45 Heading_heading_hasSpacingSmallMobileMediumOtherwise__FQy+I "
+    >
+      Vil du erstatte nye opplysninger fra fil?
+    </h1>
+    <div>
+    </div>
+    <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:rc:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:rc:">
+          Lukk
+        </title>
+        <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+        </path>
+      </svg>
+    </button>
+    Modal innhold
+  </dialog>
+</div>
+`;
+
+exports[`Tester/Modal WithRef play-test 1`] = `
+<div data-test-block="true">
+  <dialog class="Modal_modal__JdsM-   Modal_modalPaddingL__TAljg"
+          aria-labelledby="modalAriaLabelId-:r0:"
+          open
+          id="dummyIdForwardedFromRef"
+  >
+    <h1 id="modalAriaLabelId-:r0:"
+        class="Heading_heading__7K0um Heading_heading_level2__2SV45 Heading_heading_hasSpacingSmallMobileMediumOtherwise__FQy+I "
+    >
+      Vil du erstatte nye opplysninger fra fil?
+    </h1>
+    <div>
+    </div>
+    <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r1:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r1:">
+          Lukk
+        </title>
+        <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+        </path>
+      </svg>
+    </button>
+    Modal innhold
+  </dialog>
+</div>
+`;
+
+exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
+<div data-test-block="true">
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+          type="button"
+  >
+    <span class="Button_buttonText__JxyB+">
+      Åpne modal
+    </span>
+  </button>
+  <dialog class="Modal_modal__JdsM-   Modal_modalPaddingL__TAljg"
+          aria-labelledby="modalAriaLabelId-:r6:"
+          open
+  >
+    <h1 id="modalAriaLabelId-:r6:"
+        class="Heading_heading__7K0um Heading_heading_level2__2SV45 Heading_heading_hasSpacingSmallMobileMediumOtherwise__FQy+I "
+    >
+      Vil du erstatte nye opplysninger fra fil?
+    </h1>
+    <div>
+    </div>
+    <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r7:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r7:">
+          Lukk
+        </title>
+        <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+        </path>
+      </svg>
+    </button>
+    <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+      Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
+    </p>
+    <div class="flex">
+      <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+              type="button"
+      >
+        <span class="Button_buttonText__JxyB+">
+          Erstatt opplysninger
+        </span>
+      </button>
+      <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+              type="button"
+      >
+        <span class="Button_buttonText__JxyB+">
+          Avbryt
+        </span>
+      </button>
+    </div>
+  </dialog>
+</div>
+`;
+
+exports[`Tester/Modal WithVerticalScrolling play-test 1`] = `
+<div data-test-block="true">
+  <dialog class="Modal_modal__JdsM-   Modal_modalPaddingL__TAljg"
+          aria-labelledby="modalAriaLabelId-:rd:"
+          open
+  >
+    <h1 id="modalAriaLabelId-:rd:"
+        class="Heading_heading__7K0um Heading_heading_level2__2SV45 Heading_heading_hasSpacingSmallMobileMediumOtherwise__FQy+I "
+    >
+      Vil du erstatte nye opplysninger fra fil?
+    </h1>
+    <div>
+    </div>
+    <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:re:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:re:">
+          Lukk
+        </title>
+        <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+        </path>
+      </svg>
+    </button>
+    Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+  </dialog>
+</div>
+`;
+
+exports[`Tester/Modal WithoutCloseButton smoke-test 1`] = `
+<div data-test-block="true">
+  <dialog class="Modal_modal__JdsM-   Modal_modalPaddingL__TAljg"
+          aria-labelledby="modalAriaLabelId-:r8:"
+          open
+  >
+    <h1 id="modalAriaLabelId-:r8:"
+        class="Heading_heading__7K0um Heading_heading_level2__2SV45 Heading_heading_hasSpacingSmallMobileMediumOtherwise__FQy+I "
+    >
+      Vil du erstatte nye opplysninger fra fil?
+    </h1>
+    <div>
+    </div>
+    Modal innhold
+  </dialog>
+</div>
+`;
+
+exports[`Tester/Modal WithoutOutline smoke-test 1`] = `
+<div data-test-block="true">
+  <dialog class="Modal_modal__JdsM-  Modal_modalNoBorder__YIHxf Modal_modalPaddingL__TAljg"
+          aria-labelledby="modalAriaLabelId-:r9:"
+          open
+  >
+    <h1 id="modalAriaLabelId-:r9:"
+        class="Heading_heading__7K0um Heading_heading_level2__2SV45 Heading_heading_hasSpacingSmallMobileMediumOtherwise__FQy+I "
+    >
+      Vil du erstatte nye opplysninger fra fil?
+    </h1>
+    <div>
+    </div>
+    <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:ra:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:ra:">
+          Lukk
+        </title>
+        <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+        </path>
+      </svg>
+    </button>
+    Modal innhold
+  </dialog>
+</div>
+`;
