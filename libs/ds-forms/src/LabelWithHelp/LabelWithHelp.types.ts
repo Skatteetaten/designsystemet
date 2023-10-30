@@ -22,7 +22,7 @@ export interface LabelWithHelpProps
   helpText?: HelpProps['helpText'];
   /** Overskriver default hjelpeikon */
   helpSvgPath?: HelpProps['helpSvgPath'];
-  /** Title-element til hjelpeikon */
+  /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: HelpProps['titleHelpSvg'];
   /** Om obligatorisk label skal markeres med stjerne */
   showRequiredMark?: boolean;

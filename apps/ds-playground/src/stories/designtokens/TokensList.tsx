@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 /* eslint-disable @typescript-eslint/no-var-requires */
 const breakpointsJson = require('@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json');
 const containersJson = require('@skatteetaten/ds-core-designtokens/designtokens/containers.json');

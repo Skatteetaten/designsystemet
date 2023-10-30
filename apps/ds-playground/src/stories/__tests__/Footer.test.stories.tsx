@@ -6,6 +6,8 @@ import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 
+import logo from '../__tests__/testUtils/Skatteetaten-Logo-Horisontal-RGB-Hvit.png';
+
 const meta = {
   component: Footer,
   title: 'Tester/Footer',
@@ -214,7 +216,7 @@ export const WithHideLogo = {
 const TemplateWithLogo: StoryFn<typeof Footer> = (args) => (
   <Footer {...args}>
     <Footer.Logo>
-      <Icon variant={'themeIcon'} svgPath={GaveArvSVGpath} />
+      <img className={'logoHeight'} src={logo} alt={'Skatteetaten logo'} />
     </Footer.Logo>
     <Footer.Logo>
       <Icon variant={'themeIcon'} svgPath={GaveArvSVGpath} />

@@ -4,18 +4,17 @@ import { Button } from '@skatteetaten/ds-buttons';
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
 import {
   ErrorSummary,
-  ErrorSummaryProps,
   TextField,
   getErrorSummaryTitleAsDefault,
 } from '@skatteetaten/ds-forms';
-import { StoryObj, Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: ErrorSummary,
-  title: 'Komponenter/ErrorSummary',
+  title: 'Komponenter/ErrorSummary/ErrorSummary',
   argTypes: {
     // Props
     children: { table: { category: category.props } },
@@ -37,16 +36,16 @@ const meta = {
       },
     },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-forms'),
   },
-} satisfies Meta<ErrorSummaryProps>;
-export default meta;
-type Story = StoryObj<typeof meta>;
+} satisfies Meta<typeof ErrorSummary>;
 
-const TemplateDefault: StoryFn<ErrorSummaryProps> = (args) => (
-  <ErrorSummary {...args}>
+export const Default: StoryFn<typeof ErrorSummary> = () => (
+  <ErrorSummary
+    content={'Her kan du legge inn vilkårlig innhold'}
+    showErrorSummary
+  >
     <ErrorSummary.Error referenceId={'id1'}>
       {'Husk å fylle ut type varer'}
     </ErrorSummary.Error>
@@ -56,7 +55,7 @@ const TemplateDefault: StoryFn<ErrorSummaryProps> = (args) => (
   </ErrorSummary>
 );
 
-const TemplateExample: StoryFn<ErrorSummaryProps> = () => {
+export const Example: StoryFn<typeof ErrorSummary> = () => {
   const [state, setState] = useState({
     hasError: false,
   });
@@ -64,7 +63,6 @@ const TemplateExample: StoryFn<ErrorSummaryProps> = () => {
     <>
       <TextField
         id={'input_aar'}
-        ariaDescribedby={'error_aar'}
         label={'År'}
         value={1009}
         errorMessage={'Inntekståret må være etter 2008'}
@@ -115,21 +113,3 @@ const TemplateExample: StoryFn<ErrorSummaryProps> = () => {
     </>
   );
 };
-
-export const ErrorSummaryDefault: StoryObj<ErrorSummaryProps> = {
-  render: TemplateDefault,
-  name: 'Default',
-  args: {
-    showErrorSummary: true,
-    content: 'Her kan du legge inn vilkårlig innhold',
-    titleAs: getErrorSummaryTitleAsDefault(),
-  },
-} satisfies Story;
-
-export const ErrorSummaryExample: StoryObj<ErrorSummaryProps> = {
-  render: TemplateExample,
-  name: 'Example',
-  parameters: {
-    controls: { disable: true },
-  },
-} satisfies Story;

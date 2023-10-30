@@ -1,4 +1,4 @@
-import { Children, forwardRef } from 'react';
+import { Children, forwardRef, JSX } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import {

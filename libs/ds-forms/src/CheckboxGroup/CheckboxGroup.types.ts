@@ -1,4 +1,9 @@
-import { ComponentPropsWithoutRef } from 'react';
+import {
+  ComponentPropsWithoutRef,
+  ForwardRefExoticComponent,
+  RefAttributes,
+  JSX,
+} from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -27,7 +32,7 @@ interface CheckboxGroupCommonProps
   helpText?: FieldsetProps['helpText'];
   /** Overskriver default hjelpeikon */
   helpSvgPath?: FieldsetProps['helpSvgPath'];
-  /** Title-element til hjelpeikon */
+  /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: FieldsetProps['titleHelpSvg'];
   /** Om obligatorisk gruppe skal markeres med stjerne */
   showRequiredMark?: FieldsetProps['showRequiredMark'];
@@ -52,11 +57,11 @@ export type CheckboxGroupProps = CheckboxGroupCommonProps &
   CheckboxGroupDiscriminatedErrorProps;
 
 export interface CheckboxGroupComponent
-  extends React.ForwardRefExoticComponent<
-    CheckboxGroupProps & React.RefAttributes<HTMLFieldSetElement>
+  extends ForwardRefExoticComponent<
+    CheckboxGroupProps & RefAttributes<HTMLFieldSetElement>
   > {
-  Checkbox: React.ForwardRefExoticComponent<
-    CheckboxProps & React.RefAttributes<HTMLInputElement>
+  Checkbox: ForwardRefExoticComponent<
+    CheckboxProps & RefAttributes<HTMLInputElement>
   >;
 }
 

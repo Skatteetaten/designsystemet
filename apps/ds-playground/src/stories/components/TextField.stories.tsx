@@ -1,18 +1,19 @@
 import { useState } from 'react';
 
+import { formArrSize } from '@skatteetaten/ds-core-utils';
 import {
   TextField,
-  TextFieldProps,
   textFieldAsArr,
+  getTextFieldVariantDefault,
 } from '@skatteetaten/ds-forms';
 import { useArgs } from '@storybook/preview-api';
-import { StoryObj, Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: TextField,
   title: 'Komponenter/TextField',
   argTypes: {
@@ -21,6 +22,14 @@ const meta = {
       table: { category: category.props },
       options: [...textFieldAsArr],
       control: 'inline-radio',
+    },
+    variant: {
+      options: [...formArrSize],
+      control: 'inline-radio',
+      table: {
+        category: category.props,
+        defaultValue: { summary: getTextFieldVariantDefault() },
+      },
     },
     autosize: { table: { category: category.props } },
     classNames: {
@@ -41,12 +50,6 @@ const meta = {
     },
     helpText: { table: { category: category.props } },
     hideLabel: {
-      control: 'boolean',
-      table: {
-        category: category.props,
-      },
-    },
-    isLarge: {
       control: 'boolean',
       table: {
         category: category.props,
@@ -91,26 +94,21 @@ const meta = {
       control: 'text',
       table: { category: category.htmlAttribute },
     },
-    // Aria
-    ariaDescribedby: { table: { category: category.aria } },
     // Events
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-forms'),
   },
 } satisfies Meta<typeof TextField>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-const TemplateDefaultControlled: StoryFn<typeof TextField> = (args) => {
+export const Default: StoryFn<typeof TextField> = () => {
   const [, setArgs] = useArgs();
   return (
     <TextField
-      {...args}
+      label={'Navn'}
       onChange={(e: React.ChangeEvent<HTMLInputElement>): void => {
         setArgs({ value: e.target.value });
       }}
@@ -118,32 +116,7 @@ const TemplateDefaultControlled: StoryFn<typeof TextField> = (args) => {
   );
 };
 
-export const TextFieldDefaultControlled: StoryObj<TextFieldProps> = {
-  render: TemplateDefaultControlled,
-  name: 'Default Controlled',
-  argTypes: {
-    defaultValue: { control: { disable: true } },
-  },
-  args: {
-    label: 'Navn',
-    defaultValue: undefined,
-    value: '',
-  },
-} satisfies Story;
-
-export const TextFieldDefaultUncontrolled: StoryObj<TextFieldProps> = {
-  name: 'Default Uncontrolled',
-  argTypes: {
-    value: { control: { disable: true } },
-  },
-  args: {
-    label: 'Navn',
-    defaultValue: 'Kari Nordmann',
-    value: undefined,
-  },
-};
-
-const TemplateExample: StoryFn<typeof TextField> = (args) => {
+export const Example: StoryFn<typeof TextField> = () => {
   const [creditInput, setCreditInput] = useState('10000');
 
   const [postaCodeInput, setPostaCodeInput] = useState('');
@@ -197,7 +170,7 @@ const TemplateExample: StoryFn<typeof TextField> = (args) => {
         }}
       />
       <TextField
-        label={args.label}
+        label={'Andre opplysninger'}
         className={'textField300'}
         as={'textarea'}
         rows={4}
@@ -210,14 +183,3 @@ const TemplateExample: StoryFn<typeof TextField> = (args) => {
     </form>
   );
 };
-
-export const TextFieldExample = {
-  render: TemplateExample,
-  name: 'Example',
-  args: {
-    label: 'Andre opplysninger',
-  },
-  parameters: {
-    controls: { disable: true },
-  },
-} satisfies Story;

@@ -5,7 +5,7 @@ import {
   RefObject,
 } from 'react';
 
-import { BaseProps } from '@skatteetaten/ds-core-utils';
+import { BaseProps, FormSize } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 
@@ -34,7 +34,6 @@ type RequiredTextFieldHTMLAttributes = Pick<
 type TextFieldHTMLAttributes = Partial<RequiredTextFieldHTMLAttributes>;
 
 interface TextFieldPropsHTMLAttributes extends TextFieldHTMLAttributes {
-  ariaDescribedby?: string;
   onBlur?: FocusEventHandler<HTMLInputElement | HTMLTextAreaElement>;
   onChange?: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;
   onFocus?: FocusEventHandler<HTMLInputElement | HTMLTextAreaElement>;
@@ -44,6 +43,7 @@ export interface TextFieldCommonProps
   extends TextFieldPropsHTMLAttributes,
     BaseProps {
   classNames?: {
+    container?: string;
     label?: string;
     textbox?: string;
     errorMessage?: string;
@@ -58,10 +58,10 @@ export interface TextFieldCommonProps
   helpText?: LabelWithHelpProps['helpText'];
   /** Overskriver default hjelpeikon */
   helpSvgPath?: LabelWithHelpProps['helpSvgPath'];
-  /** Title-element til hjelpeikon */
+  /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
-  /** Tykkere textbox-ramme og litt mer padding hvis det er textarea-element */
-  isLarge?: boolean;
+  /** Definerer stilen til TextField */
+  variant?: FormSize;
 }
 
 type TextFieldDiscriminatedProps =
@@ -86,7 +86,7 @@ type TextFieldDiscriminatedProps =
 
 type TextFieldDiscriminatedRequiredProps =
   | {
-      required: boolean;
+      required: true;
       /** Om obligatorisk TextField skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
       showRequiredMark?: boolean;
     }

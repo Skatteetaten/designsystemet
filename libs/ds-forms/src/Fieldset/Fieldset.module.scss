@@ -34,13 +34,6 @@
   clear: left;
 }
 
-.description {
-  margin-bottom: var(--spacing-m);
-  color: var(--semantic-page-foreground);
-  font-size: var(--font-size-m);
-  line-height: var(--semantic-line-height-input);
-}
-
 .contentContainer {
   margin-top: var(--spacing-m);
 
@@ -51,4 +44,7 @@
 
 .srOnly {
   @include sr-only;
+
+  width: 200px;
+  white-space: normal;
 }

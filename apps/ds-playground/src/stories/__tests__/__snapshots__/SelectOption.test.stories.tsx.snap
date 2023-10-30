@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Select/Option WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <option lang="nb"
+          id="htmlid"
+          class="dummyClassname"
+          data-testid="123ID"
+  >
+    Option 1
+  </option>
+</div>
+`;
+
+exports[`Tester/Select/Option WithChildrenAndValue play-test 1`] = `
+<div data-test-block="true">
+  <option class
+          value="option1"
+  >
+    Option 1
+  </option>
+</div>
+`;
+
+exports[`Tester/Select/Option WithRef play-test 1`] = `
+<div data-test-block="true">
+  <option class
+          id="dummyIdForwardedFromRef"
+  >
+    Option 1
+  </option>
+</div>
+`;

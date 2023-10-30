@@ -10,6 +10,7 @@ import { HelpProps } from './Help.types';
 import styles from './Help.module.scss';
 
 export const Help = ({
+  description,
   helpText,
   helpSvgPath,
   hideHelp,
@@ -33,6 +34,7 @@ export const Help = ({
     helpButtonRef.current?.focus();
   };
 
+  const marginTopClassName = showHelpText ? styles.descriptionMarginTop : '';
   const hideHelpClassName = hideHelp ? styles.srOnly : '';
 
   return (
@@ -60,6 +62,13 @@ export const Help = ({
             title={t('shared.Close')}
             onClick={(): void => closeHelpText()}
           />
+        </div>
+      )}
+      {description && (
+        <div
+          className={`${styles.description} ${marginTopClassName} ${hideHelpClassName}`.trim()}
+        >
+          {description}
         </div>
       )}
     </>

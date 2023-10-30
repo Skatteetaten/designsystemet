@@ -1,4 +1,4 @@
-import { ComponentType, forwardRef, Ref, useRef } from 'react';
+import { ComponentType, forwardRef, Ref, useRef, JSX } from 'react';
 
 import { ExampleComponentProps } from './ExampleComponent';
 

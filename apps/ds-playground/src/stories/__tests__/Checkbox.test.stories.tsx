@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 
 import { Checkbox } from '@skatteetaten/ds-forms';
 import { expect } from '@storybook/jest';
@@ -641,7 +641,7 @@ const EventHandlersTemplate: StoryFn<typeof Checkbox> = (args) => {
   return (
     <Checkbox
       {...args}
-      onChange={(event: React.ChangeEvent<HTMLInputElement>): void => {
+      onChange={(event: ChangeEvent<HTMLInputElement>): void => {
         setLabelText('Checkbox har blitt klikket på');
         args.onChange && args.onChange(event);
       }}

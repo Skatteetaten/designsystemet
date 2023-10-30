@@ -10,7 +10,7 @@ import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Table.Row,
-  title: 'komponenter/Table/Row',
+  title: 'Komponenter/Table/Row',
   argTypes: {
     // Props
     children: { table: { category: category.props } },
@@ -63,6 +63,7 @@ const meta = {
   },
   tags: ['autodocs'],
   parameters: {
+    docs: { source: { code: null } },
     version: getVersion('ds-table'),
   },
 } as Meta<typeof Table.Row>;

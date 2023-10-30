@@ -1,4 +1,11 @@
-import { forwardRef, useId, useImperativeHandle, useRef } from 'react';
+import {
+  ChangeEvent,
+  forwardRef,
+  useId,
+  useImperativeHandle,
+  useRef,
+  JSX,
+} from 'react';
 
 import {
   dsI18n,
@@ -6,7 +13,7 @@ import {
   Languages,
 } from '@skatteetaten/ds-core-utils';
 
-import { getTextFieldAsDefault } from './defaults';
+import { getTextFieldAsDefault, getTextFieldVariantDefault } from './defaults';
 import { TextboxRefHandle, TextFieldProps } from './TextField.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
@@ -30,6 +37,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       label,
       thousandSeparator,
       titleHelpSvg,
+      variant = getTextFieldVariantDefault(),
       autoComplete,
       defaultValue,
       disabled,
@@ -43,10 +51,8 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       required,
       rows,
       value,
-      ariaDescribedby,
       hasError,
       hideLabel,
-      isLarge,
       showRequiredMark,
       onBlur,
       onChange,
@@ -70,7 +76,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       value.replace(/[^0-9]/g, '');
 
     const handleChange = (
-      e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
+      e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
     ): void => {
       if (thousandSeparator) {
         const input = e.target as HTMLInputElement;
@@ -94,10 +100,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       value = addSpacesOrCommas(removeNonNumeric(value.toString()));
     }
 
-    const ariaDescribedbyInput = `${ariaDescribedby ?? ''} ${
-      hasError ? errorId : ''
-    }`.trim();
-
+    const isLarge = variant === 'large';
     const largeTextboxClassName = isLarge ? styles.textbox_large : '';
     const multilineTextboxClassName =
       Tag === 'textarea' ? styles.textbox_multiline : '';
@@ -107,8 +110,12 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
     } ${largeTextboxClassName} ${multilineTextboxClassName} ${autosizeTextarea} ${
       classNames?.textbox ?? ''
     }`.trim();
+
     return (
-      <div className={className} lang={lang}>
+      <div
+        className={`${className} ${classNames?.container ?? ''}`.trim()}
+        lang={lang}
+      >
         <LabelWithHelp
           className={classNames?.label ?? ''}
           htmlFor={textboxId}
@@ -139,7 +146,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
           required={required}
           rows={rows}
           value={value}
-          aria-describedby={ariaDescribedbyInput || undefined}
+          aria-describedby={hasError ? errorId : undefined}
           aria-invalid={hasError ?? undefined}
           onBlur={onBlur}
           onChange={handleChange}
@@ -159,4 +166,4 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
 
 TextField.displayName = 'TextField';
 
-export { getTextFieldAsDefault };
+export { getTextFieldAsDefault, getTextFieldVariantDefault };

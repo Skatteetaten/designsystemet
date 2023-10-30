@@ -20,6 +20,7 @@ const meta = {
   },
   tags: ['autodocs'],
   parameters: {
+    docs: { source: { code: null } },
     version: getVersion('ds-forms'),
   },
 } satisfies Meta<typeof RadioGroup.Radio>;

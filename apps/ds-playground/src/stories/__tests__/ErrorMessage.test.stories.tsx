@@ -1,4 +1,4 @@
-import { ErrorMessage, TextField } from '@skatteetaten/ds-forms';
+import { ErrorMessage } from '@skatteetaten/ds-forms';
 import { expect } from '@storybook/jest';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { within } from '@storybook/testing-library';
@@ -132,7 +132,6 @@ export const WithPElement = {
 
 const TemplateWithInput: StoryFn<typeof ErrorMessage> = (args) => (
   <div className={'errorMessageContainer'}>
-    <TextField label={'Label'} ariaDescribedby={'errorId'} />
     <ErrorMessage {...args} />
   </div>
 );
