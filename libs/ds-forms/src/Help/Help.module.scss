@@ -18,6 +18,7 @@
   color: var(--semantic-page-foreground);
   font-size: var(--font-size-m);
   line-height: var(--semantic-line-height-input);
+  overflow-wrap: anywhere;
 
   &MarginTop {
     margin-top: var(--spacing-xs);
@@ -39,6 +40,7 @@
   animation-name: animationhelpbox;
   animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
   background-color: var(--palette-forest-10);
+  overflow-wrap: anywhere;
 
   &Text {
     flex-grow: 1;

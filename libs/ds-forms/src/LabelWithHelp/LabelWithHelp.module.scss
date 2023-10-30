@@ -5,6 +5,7 @@
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-bold);
   line-height: var(--semantic-line-height-input);
+  overflow-wrap: anywhere;
 
   &_required::after {
     margin-left: var(--spacing-xxs);
