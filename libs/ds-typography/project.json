@@ -30,7 +30,10 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/ds-typography/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "libs/ds-typography/**/*.{ts,tsx,js,jsx}",
+          "libs/ds-typography/package.json"
+        ]
       }
     },
     "test": {

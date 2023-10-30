@@ -15,7 +15,10 @@
         "project": "libs/ds-buttons/package.json",
         "entryFile": "libs/ds-buttons/src/index.ts",
         "external": ["react/jsx-runtime"],
-        "rollupConfig": ["libs/ds-buttons/rollup.config.js"],
+        "rollupConfig": [
+          "libs/ds-buttons/rollup.config.js",
+          "libs/ds-buttons/package.json"
+        ],
         "compiler": "babel",
         "assets": [
           {
@@ -31,7 +34,10 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/ds-buttons/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "libs/ds-buttons/**/*.{ts,tsx,js,jsx}",
+          "libs/ds-buttons/package.json"
+        ]
       }
     },
     "test": {

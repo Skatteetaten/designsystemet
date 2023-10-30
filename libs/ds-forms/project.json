@@ -31,7 +31,10 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/ds-forms/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "libs/ds-forms/**/*.{ts,tsx,js,jsx}",
+          "libs/ds-forms/package.json"
+        ]
       }
     },
     "test": {

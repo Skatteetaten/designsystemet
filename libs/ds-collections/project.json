@@ -9,7 +9,10 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/ds-collections/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "libs/ds-collections/**/*.{ts,tsx,js,jsx}",
+          "libs/ds-collections/package.json"
+        ]
       }
     },
     "build": {
