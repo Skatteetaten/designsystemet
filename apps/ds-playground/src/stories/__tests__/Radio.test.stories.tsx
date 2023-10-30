@@ -112,7 +112,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   render: Template,
-  name: 'Defaults (A1 delvis, A3 delvis)',
+  name: 'Defaults (A1, A3, B1)',
 
   args: {
     ...defaultArgs,
@@ -140,7 +140,7 @@ export const Defaults = {
 
 export const WithDescription = {
   render: Template,
-  name: 'With Description (A3 delvis, A5)',
+  name: 'With Description (A3, A5)',
 
   args: {
     ...defaultArgs,
@@ -208,7 +208,6 @@ export const WithValue = {
   argTypes: {
     value: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
@@ -223,7 +222,7 @@ export const WithValue = {
 
 export const WithAriaDescribedby = {
   render: Template,
-  name: 'With AriaDescribedby (B4 delvis)',
+  name: 'With AriaDescribedby (B4)',
 
   args: {
     ...defaultArgs,

@@ -13,7 +13,7 @@ const meta = {
   title: 'Komponenter/Select/Select',
   argTypes: {
     // Props
-    children: { table: { category: category.props }, control: false },
+    children: { table: { category: category.props }, control: 'object' },
     classNames: { table: { category: category.props } },
     defaultValue: { table: { category: category.props } },
     value: { table: { category: category.props } },

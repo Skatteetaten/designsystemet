@@ -148,7 +148,7 @@ export const WithHelpSvgPathTitleHelpSvgAndTargetId = {
 } satisfies Story;
 
 export const WithHideHelp = {
-  name: 'With HideHelp',
+  name: 'With HideHelp (FS-A7)',
   args: {
     helpText: defaultHelpText,
     description: defaultDescription,
