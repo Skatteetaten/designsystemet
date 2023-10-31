@@ -61,8 +61,8 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
     ref
   ): JSX.Element => {
     const errorId = `textFieldErrorId-${useId()}`;
-    const uniqueTextboxId = `textFieldTextboxId-${useId()}`;
-    const textboxId = externalId ?? uniqueTextboxId;
+    const generatedId = `textFieldTextboxId-${useId()}`;
+    const textboxId = externalId ?? generatedId;
 
     const textboxRef = useRef<HTMLTextAreaElement & HTMLInputElement>(null);
     useImperativeHandle(ref, () => ({

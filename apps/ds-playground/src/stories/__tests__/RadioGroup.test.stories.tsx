@@ -31,10 +31,7 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     children: { table: { disable: true } },
-    defaultValue: {
-      type: 'string',
-      table: { disable: true },
-    },
+    defaultValue: { table: { disable: true } },
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
     hasError: { table: { disable: true } },
@@ -47,10 +44,7 @@ const meta = {
     hideLegend: { table: { disable: true } },
     legend: { table: { disable: true } },
     showRequiredMark: { table: { disable: true } },
-    selectedValue: {
-      type: 'string',
-      table: { disable: true },
-    },
+    selectedValue: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     variant: {
       table: { disable: true },
@@ -154,7 +148,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   render: Template,
-  name: 'Defaults Variant Standard (A1 delvis, B1 delvis)',
+  name: 'Defaults Variant Standard (A1, B1)',
   args: {
     ...defaultArgs,
   },
@@ -209,7 +203,7 @@ export const WithHideLegend = {
 
 export const WithSelectedValue = {
   render: Template,
-  name: 'With SelectedValue (A3 delvis)',
+  name: 'With SelectedValue (A3)',
   args: {
     ...defaultArgs,
     selectedValue: selectedValue,
@@ -228,7 +222,7 @@ export const WithSelectedValue = {
 
 export const WithDefaultValue = {
   render: Template,
-  name: 'With DefaultValue (A3 delvis)',
+  name: 'With DefaultValue (A3)',
   args: {
     ...defaultArgs,
     selectedValue: undefined,
@@ -268,7 +262,7 @@ export const WithDisabled = {
 
 export const WithRequired = {
   render: Template,
-  name: 'With Required (A7 delvis)',
+  name: 'With Required (A7)',
   args: {
     ...defaultArgs,
     required: true,
@@ -287,7 +281,7 @@ export const WithRequired = {
 
 export const WithRequiredAndMark = {
   render: Template,
-  name: 'With Required And Mark (A7 delvis, A8 delvis)',
+  name: 'With Required And Mark (A7, A8)',
   args: {
     ...defaultArgs,
     required: true,
@@ -301,7 +295,7 @@ export const WithRequiredAndMark = {
 
 export const WithRequiredAndMarkAndLegendAsMarkup = {
   render: Template,
-  name: 'With Required And Mark And Legend As Markup (A7 delvis, A8 delvis)',
+  name: 'With Required And Mark And Legend As Markup (A7, A8)',
   args: {
     ...defaultArgs,
     legend: (
@@ -344,7 +338,7 @@ export const WithName = {
 
 export const WithErrorMessage = {
   render: Template,
-  name: 'With ErrorMessage (B4 delvis)',
+  name: 'With ErrorMessage (B4)',
   args: {
     ...defaultArgs,
     errorMessage: 'Feilmelding',
@@ -367,7 +361,7 @@ export const WithErrorMessage = {
 
 export const WithErrorMessageAndHasError = {
   render: Template,
-  name: 'With ErrorMessage And HasError (B4 delvis, A3 delvis)',
+  name: 'With ErrorMessage And HasError (B4, A3)',
   args: {
     ...defaultArgs,
     errorMessage: 'Feilmelding',
@@ -398,7 +392,7 @@ export const WithErrorMessageAndHasError = {
 
 export const WithHasErrorAndAriaDescribedby = {
   render: Template,
-  name: 'With HasError And AriaDescribedby (B4 delvis)',
+  name: 'With HasError And AriaDescribedby (B4)',
   args: {
     ...defaultArgs,
     children: [

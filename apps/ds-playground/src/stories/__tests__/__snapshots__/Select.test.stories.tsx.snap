@@ -54,12 +54,12 @@ exports[`Tester/Select/Select WithAttributes play-test 1`] = `
   >
     <label id="labelId-:r6:"
            class="LabelWithHelp_label__59tP-"
-           for="selectId-htmlid"
+           for="htmlid"
     >
       Ledetekst
     </label>
     <div class="Select_select_container__DGJeG ">
-      <select id="selectId-htmlid"
+      <select id="htmlid"
               class="Select_select__-ENv1 "
               data-testid="123ID"
               style="color: var(--palette-graphite-50);"

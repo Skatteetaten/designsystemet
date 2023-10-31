@@ -31,6 +31,7 @@ const meta = {
     children: {
       table: { disable: true },
     },
+    defaultChecked: { table: { disable: true } },
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
     hasError: {
@@ -50,11 +51,6 @@ const meta = {
     },
     // HTML
     checked: {
-      table: {
-        disable: true,
-      },
-    },
-    defaultChecked: {
       table: {
         disable: true,
       },
