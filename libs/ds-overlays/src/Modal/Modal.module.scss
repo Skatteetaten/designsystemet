@@ -6,9 +6,10 @@
   max-width: calc(var(--semantic-responsive-article) - 2 * var(--spacing-m));
   max-height: calc(100vh - 2 * var(--spacing-m));
   box-sizing: border-box;
+  padding: 0;
   border: 0.25rem solid var(--theme-primary);
   background-color: var(--palette-graphite-0);
-  box-shadow: 0 7px 6px -6px rgba(0, 0, 0, 16%);
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 16%), 0 2px 4px -4px rgba(0, 0, 0, 16%);
   font-size: var(--font-size-m);
   line-height: var(--line-height-l);
   overflow-y: scroll;
@@ -17,8 +18,12 @@
     background: rgba(255, 255, 255, 80%);
   }
 
+  &Heading {
+    padding-right: var(--spacing-xl);
+  }
+
   &NoBorder {
-    border-color: transparent;
+    border: none;
   }
 
   &PaddingNONE {

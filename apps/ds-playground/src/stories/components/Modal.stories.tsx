@@ -2,12 +2,16 @@ import { useRef, useState } from 'react';
 
 import { Button, Link } from '@skatteetaten/ds-buttons';
 import { InfoOutlineSVGpath } from '@skatteetaten/ds-icons';
-import { Modal, getModalPaddingDefault } from '@skatteetaten/ds-overlays';
+import {
+  Modal,
+  getModalPaddingDefault,
+  getModalVariantDefault,
+  modalVariantArr,
+} from '@skatteetaten/ds-overlays';
 import { Paragraph } from '@skatteetaten/ds-typography';
 import { StoryObj, Meta, StoryFn } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
-import logo from '../../assets/logo-symbol.png';
 import waitAlert from '../../assets/wait-alert-illustration.svg';
 import { getVersion } from '../utils/version.utils';
 
@@ -28,6 +32,14 @@ const meta = {
       },
     },
     title: { table: { category: category.props } },
+    variant: {
+      options: [...modalVariantArr],
+      control: 'inline-radio',
+      table: {
+        category: category.props,
+        defaultValue: { summary: getModalVariantDefault() },
+      },
+    },
     // HTML
     open: { table: { category: category.htmlAttribute } },
     // Events
@@ -125,8 +137,12 @@ const ExampleImportant: StoryFn<typeof Modal> = () => {
       >
         {'Viktig driftsmelding'}
       </Button>
-      <Modal ref={ref} title={'Viktig melding!'} hideOutline>
-        <img className={'modalLogo'} src={logo} alt={'Logo Skatteetaten'} />
+      <Modal
+        ref={ref}
+        variant={'important'}
+        title={'Viktig melding!'}
+        hideOutline
+      >
         <Paragraph hasSpacing>
           {
             'Løsningen er ikke kommet i drift ennå eller tatt ned for vedlikehold.'
@@ -139,10 +155,6 @@ const ExampleImportant: StoryFn<typeof Modal> = () => {
         >
           {'Les mer på skatteetaten.no'}
         </Link>
-        <div className={'diagonals'}>
-          <div className={'diagonalsLeft'}></div>
-          <div className={'diagonalsRight'}></div>
-        </div>
       </Modal>
     </>
   );

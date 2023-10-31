@@ -1,0 +1,23 @@
+.separator {
+  position: relative;
+  height: 1rem;
+  margin-top: var(--spacing-m);
+
+  &Left {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--palette-graphite-10);
+    clip-path: polygon(0 0, 87.5% 100%, 0 100%, 0 100%);
+  }
+
+  &Right {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--theme-primary);
+    clip-path: polygon(100% 0, 100% 100%, 100% 100%, 0 100%);
+  }
+}

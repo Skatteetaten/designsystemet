@@ -1,5 +1,6 @@
 /* automatisk genererte types */
 export const modal: string;
+export const modalHeading: string;
 export const modalNoBorder: string;
 export const modalPaddingNONE: string;
 export const modalPaddingS: string;

@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { Modal } from '@skatteetaten/ds-overlays';
+import { Modal, modalVariantArr } from '@skatteetaten/ds-overlays';
 import { Paragraph } from '@skatteetaten/ds-typography';
 import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
@@ -36,6 +36,13 @@ const meta = {
     hideTitle: { table: { disable: true } },
     padding: { table: { disable: true } },
     title: { table: { disable: true } },
+    variant: {
+      table: {
+        disable: true,
+      },
+      options: [...modalVariantArr],
+      control: 'inline-radio',
+    },
     // HTML
     open: { table: { disable: true } },
     // Events
@@ -292,5 +299,17 @@ export const WithHideTitle = {
     const canvas = within(canvasElement);
     const heading = canvas.getByRole('heading', { level: 1 });
     await expect(heading).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const VariantImportant = {
+  name: 'Variant Important',
+  args: {
+    ...defaultArgs,
+    variant: 'important',
+    open: true,
+  },
+  argTypes: {
+    variant: { table: { disable: false } },
   },
 } satisfies Story;

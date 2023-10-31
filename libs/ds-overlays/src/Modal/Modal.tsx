@@ -2,11 +2,16 @@ import { forwardRef, useEffect, useId, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import {
+  Separator,
+  SymbolLogo,
+  dsI18n,
+  getCommonClassNameDefault,
+} from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
-import { getModalPaddingDefault } from './defaults';
+import { getModalPaddingDefault, getModalVariantDefault } from './defaults';
 import { ModalPadding, ModalProps } from './Modal.types';
 import mergeRefs from '../utils';
 
@@ -23,9 +28,10 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
       hideCloseButton,
       hideOutline,
       hideTitle,
-      open,
       padding = getModalPaddingDefault(),
       title,
+      variant,
+      open,
       onClose,
       children,
     },
@@ -67,7 +73,8 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
     }, [modalRef, open, hideAutoClose, onClose]);
 
     const hideTitleClassName = hideTitle ? styles.srOnly : '';
-    const hideOutlineClassName = hideOutline ? styles.modalNoBorder : '';
+    const hideOutlineClassName =
+      hideOutline || variant === 'important' ? styles.modalNoBorder : '';
     const paddingClassName =
       styles[`modalPadding${padding.toUpperCase() as Uppercase<ModalPadding>}`];
 
@@ -75,35 +82,39 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
       <dialog
         ref={mergedRef}
         id={id}
-        className={`${styles.modal} ${className} ${hideOutlineClassName} ${paddingClassName}`.trim()}
+        className={`${styles.modal} ${hideOutlineClassName} ${className} `.trim()}
         lang={lang}
         data-testid={dataTestId}
         aria-labelledby={ariaLabelId}
         open={open}
         onCancel={onClose}
       >
-        <Heading
-          className={hideTitleClassName}
-          id={ariaLabelId}
-          as={'h1'}
-          level={2}
-          hasSpacing
-        >
-          {title}
-        </Heading>
-        <div></div>
-        {!hideCloseButton && (
-          <IconButton
-            className={styles.closeButton}
-            svgPath={CancelSVGpath}
-            title={t('shared.Close')}
-            onClick={(): void => {
-              onClose && onClose();
-              modalRef.current?.close();
-            }}
-          />
-        )}
-        {children}
+        <div className={`${paddingClassName}`}>
+          {variant === 'important' && <SymbolLogo />}
+          <Heading
+            className={`${styles.modalHeading} ${hideTitleClassName}`.trim()}
+            id={ariaLabelId}
+            as={'h1'}
+            level={2}
+            hasSpacing
+          >
+            {title}
+          </Heading>
+          <div></div>
+          {!hideCloseButton && (
+            <IconButton
+              className={styles.closeButton}
+              svgPath={CancelSVGpath}
+              title={t('shared.Close')}
+              onClick={(): void => {
+                onClose && onClose();
+                modalRef.current?.close();
+              }}
+            />
+          )}
+          {children}
+        </div>
+        {variant === 'important' && <Separator />}
       </dialog>
     );
   }
@@ -111,4 +122,4 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
 
 Modal.displayName = 'Modal';
 
-export { getModalPaddingDefault };
+export { getModalPaddingDefault, getModalVariantDefault };
