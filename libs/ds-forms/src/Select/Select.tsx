@@ -59,8 +59,8 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
     useImperativeHandle(ref, () => selectRef?.current as HTMLSelectElement);
 
     const errorId = `selectErrorId-${useId()}`;
-    const generatedId = useId();
-    const selectId = `selectId-${externalId ?? generatedId}`;
+    const generatedId = `selectId-${useId()}`;
+    const selectId = externalId ?? generatedId;
 
     const isLarge = variant === 'large';
     const selectClassName = `${styles.select} ${
