@@ -15,10 +15,7 @@
         "project": "libs/ds-buttons/package.json",
         "entryFile": "libs/ds-buttons/src/index.ts",
         "external": ["react/jsx-runtime"],
-        "rollupConfig": [
-          "libs/ds-buttons/rollup.config.js",
-          "libs/ds-buttons/package.json"
-        ],
+        "rollupConfig": ["libs/ds-buttons/rollup.config.js"],
         "compiler": "babel",
         "assets": [
           {

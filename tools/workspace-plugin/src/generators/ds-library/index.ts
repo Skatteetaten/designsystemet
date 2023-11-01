@@ -125,7 +125,7 @@ export default async function (
     'tsconfig.lib.json'
   );
   updateJson(tree, tsconfigLib, (tsconfigLib): object => {
-    tsconfigLib.files.push('../../../../types/i18next.d.ts');
+    tsconfigLib.compilerOptions.types.push('../../types/i18next.d.ts');
     return tsconfigLib;
   });
 
