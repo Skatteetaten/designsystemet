@@ -11,7 +11,7 @@ exports[`Tester/Select/Select Defaults play-test 1`] = `
     </label>
     <div class="Select_select_container__DGJeG ">
       <select id="selectId-:re:"
-              class="Select_select__-ENv1 "
+              class="Select_select__-ENv1"
               style="color: var(--palette-graphite-50);"
       >
         <option value>
@@ -60,7 +60,7 @@ exports[`Tester/Select/Select WithAttributes play-test 1`] = `
     </label>
     <div class="Select_select_container__DGJeG ">
       <select id="htmlid"
-              class="Select_select__-ENv1 "
+              class="Select_select__-ENv1"
               data-testid="123ID"
               style="color: var(--palette-graphite-50);"
       >
@@ -108,7 +108,7 @@ exports[`Tester/Select/Select WithAutoCompleteNameAndPlaceholder play-test 1`] =
     </label>
     <div class="Select_select_container__DGJeG ">
       <select id="selectId-:r12:"
-              class="Select_select__-ENv1 "
+              class="Select_select__-ENv1"
               autocomplete="given-name"
               name="test_name"
               style="color: var(--palette-graphite-50);"
@@ -155,9 +155,9 @@ exports[`Tester/Select/Select WithCustomClassNames play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="Select_select_container__DGJeG dummyClassname">
+    <div class="Select_select_container__DGJeG dummyClassnameFormContainer">
       <select id="selectId-:r9:"
-              class="Select_select__-ENv1 dummyClassnamePlaceholderContrast"
+              class="Select_select__-ENv1"
               aria-describedby="selectErrorId-:r8:"
               aria-invalid="true"
               style="color: var(--palette-graphite-50);"
@@ -220,7 +220,7 @@ exports[`Tester/Select/Select WithDefaultValue play-test 1`] = `
     </label>
     <div class="Select_select_container__DGJeG ">
       <select id="selectId-:ru:"
-              class="Select_select__-ENv1 "
+              class="Select_select__-ENv1"
       >
         <option value>
           Velg
@@ -270,7 +270,7 @@ exports[`Tester/Select/Select WithDescription play-test 1`] = `
     </div>
     <div class="Select_select_container__DGJeG ">
       <select id="selectId-:r1r:"
-              class="Select_select__-ENv1 "
+              class="Select_select__-ENv1"
               style="color: var(--palette-graphite-50);"
       >
         <option value>
@@ -317,7 +317,7 @@ exports[`Tester/Select/Select WithDisabled play-test 1`] = `
     </label>
     <div class="Select_select_container__DGJeG ">
       <select id="selectId-:rm:"
-              class="Select_select__-ENv1 "
+              class="Select_select__-ENv1"
               disabled
       >
         <option value>
@@ -364,7 +364,7 @@ exports[`Tester/Select/Select WithError play-test 1`] = `
     </label>
     <div class="Select_select_container__DGJeG ">
       <select id="selectId-:r1i:"
-              class="Select_select__-ENv1 "
+              class="Select_select__-ENv1"
               style="color: var(--palette-graphite-50);"
       >
         <option value>
@@ -411,7 +411,7 @@ exports[`Tester/Select/Select WithErrorMessageAndHasError play-test 1`] = `
     </label>
     <div class="Select_select_container__DGJeG ">
       <select id="selectId-:r1m:"
-              class="Select_select__-ENv1 "
+              class="Select_select__-ENv1"
               aria-describedby="selectErrorId-:r1l:"
               aria-invalid="true"
               style="color: var(--palette-graphite-50);"
@@ -474,7 +474,7 @@ exports[`Tester/Select/Select WithEventHandlers play-test 1`] = `
     </label>
     <div class="Select_select_container__DGJeG ">
       <select id="selectId-:r29:"
-              class="Select_select__-ENv1 "
+              class="Select_select__-ENv1"
               style
       >
         <option value>
@@ -562,7 +562,7 @@ exports[`Tester/Select/Select WithHelpText play-test 1`] = `
     </div>
     <div class="Select_select_container__DGJeG ">
       <select id="selectId-:r23:"
-              class="Select_select__-ENv1 "
+              class="Select_select__-ENv1"
               style="color: var(--palette-graphite-50);"
       >
         <option value>
@@ -609,7 +609,7 @@ exports[`Tester/Select/Select WithHideLabel play-test 1`] = `
     </label>
     <div class="Select_select_container__DGJeG ">
       <select id="selectId-:r1v:"
-              class="Select_select__-ENv1 "
+              class="Select_select__-ENv1"
               style="color: var(--palette-graphite-50);"
       >
         <option value>
@@ -656,7 +656,7 @@ exports[`Tester/Select/Select WithHidePlaceholder play-test 1`] = `
     </label>
     <div class="Select_select_container__DGJeG ">
       <select id="selectId-:r16:"
-              class="Select_select__-ENv1 "
+              class="Select_select__-ENv1"
       >
         <option class
                 value="option1"
@@ -699,7 +699,7 @@ exports[`Tester/Select/Select WithRef play-test 1`] = `
     </label>
     <div class="Select_select_container__DGJeG ">
       <select id="selectId-:r1:"
-              class="Select_select__-ENv1 "
+              class="Select_select__-ENv1"
               name="dummyNameForwardedFromRef"
               style="color: var(--palette-graphite-50);"
       >
@@ -747,7 +747,7 @@ exports[`Tester/Select/Select WithRequired play-test 1`] = `
     </label>
     <div class="Select_select_container__DGJeG ">
       <select id="selectId-:r1a:"
-              class="Select_select__-ENv1 "
+              class="Select_select__-ENv1"
               required
               style="color: var(--palette-graphite-50);"
       >
@@ -795,7 +795,7 @@ exports[`Tester/Select/Select WithRequiredAndMark smoke-test 1`] = `
     </label>
     <div class="Select_select_container__DGJeG ">
       <select id="selectId-:r1e:"
-              class="Select_select__-ENv1 "
+              class="Select_select__-ENv1"
               required
               style="color: var(--palette-graphite-50);"
       >
@@ -843,7 +843,7 @@ exports[`Tester/Select/Select WithValue play-test 1`] = `
     </label>
     <div class="Select_select_container__DGJeG ">
       <select id="selectId-:rq:"
-              class="Select_select__-ENv1 "
+              class="Select_select__-ENv1"
       >
         <option value>
           Velg
@@ -889,7 +889,7 @@ exports[`Tester/Select/Select WithVariantLarge smoke-test 1`] = `
     </label>
     <div class="Select_select_container__DGJeG ">
       <select id="selectId-:ri:"
-              class="Select_select__-ENv1 Select_select_large__Pq2eA "
+              class="Select_select__-ENv1 Select_select_large__Pq2eA"
               style="color: var(--palette-graphite-50);"
       >
         <option value>

@@ -142,8 +142,7 @@ export const WithCustomClassNames = {
     classNames: {
       container: 'dummyClassname',
       label: 'dummyClassname',
-      selectContainer: 'dummyClassname',
-      select: 'dummyClassnamePlaceholderContrast',
+      selectContainer: 'dummyClassnameFormContainer',
       errorMessage: 'dummyClassname',
     },
     hasError: true,
@@ -163,15 +162,13 @@ export const WithCustomClassNames = {
     const selectContainer = canvasElement.querySelector(
       `${wrapper} > div > div`
     );
-    const select = canvas.getByRole('combobox');
     // eslint-disable-next-line testing-library/no-node-access
     const errorMessageContainer = canvasElement.querySelector(
       '[id^=selectErrorId]>div'
     );
     await expect(container).toHaveClass('dummyClassname');
     await expect(label).toHaveClass('dummyClassname');
-    await expect(selectContainer).toHaveClass('dummyClassname');
-    await expect(select).toHaveClass('dummyClassnamePlaceholderContrast');
+    await expect(selectContainer).toHaveClass('dummyClassnameFormContainer');
     await expect(errorMessageContainer).toHaveClass('dummyClassname');
   },
 } satisfies Story;

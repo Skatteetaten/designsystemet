@@ -119,7 +119,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
           <select
             ref={selectRef}
             id={selectId}
-            className={`${selectClassName} ${classNames?.select ?? ''}`}
+            className={selectClassName}
             data-testid={dataTestId}
             autoComplete={autoComplete}
             disabled={disabled}
