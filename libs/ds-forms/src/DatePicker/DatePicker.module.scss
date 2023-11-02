@@ -1,0 +1,131 @@
+.date_container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: var(--spacing-xs);
+}
+
+.input {
+  width: 100%;
+  padding: var(--spacing-xs) 2rem var(--spacing-xs) var(--spacing-s);
+  border: none;
+  border-radius: 0;
+  // stylelint-disable-next-line property-no-vendor-prefix
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--semantic-page-background);
+  box-shadow: inset 0 0 0 1px var(--palette-graphite-100);
+  color: var(--semantic-page-foreground);
+  font-size: var(--font-size-m);
+  line-height: var(--semantic-line-height-input);
+  outline: none;
+  outline-offset: 0;
+
+  &_large {
+    padding: var(--spacing-s);
+    box-shadow: inset 0 0 0 2px var(--palette-graphite-100);
+  }
+
+  &[aria-invalid='true'] {
+    box-shadow: inset 0 0 0 2px var(--semantic-danger-foreground);
+  }
+
+  &::placeholder {
+    color: var(--palette-graphite-50);
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 0 2px var(--semantic-page-foreground);
+    outline: 2px solid var(--semantic-interactive-background);
+  }
+
+  &:focus {
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+    outline: 2px solid var(--semantic-interactive-background);
+
+    &::selection {
+      background: var(--semantic-interactive-background);
+    }
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    background: var(--semantic-disabled-background);
+    box-shadow: inset 0 0 0 1px var(--semantic-disabled-foreground);
+    color: var(--semantic-disabled-foreground);
+    cursor: not-allowed;
+    outline: 0;
+  }
+
+  &:enabled:active {
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-foreground);
+    outline: 2px solid var(--semantic-interactive-background);
+  }
+
+  &:read-only:not(:disabled) {
+    padding: var(--spacing-s);
+    box-shadow: none;
+    outline: 0;
+  }
+}
+
+.calendarButton {
+  position: absolute;
+  right: 3px;
+  display: grid;
+  align-self: center;
+  padding: var(--spacing-xxs);
+  border: none;
+  border-radius: 0;
+  margin-right: 1px;
+  appearance: none;
+  background: #00000000;
+  outline: 0;
+  place-items: center;
+
+  & .icon {
+    fill: var(--palette-azure-70);
+  }
+
+  &_large {
+    padding: 5px 4px 5px 6px;
+    margin-right: 2px;
+  }
+
+  &:focus {
+    background-color: var(--semantic-interactive-background);
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    color: var(--semantic-disabled-foreground);
+    cursor: not-allowed;
+    outline: 0;
+
+    & .icon {
+      fill: var(--semantic-disabled-foreground);
+    }
+  }
+
+  &:enabled:active {
+    background-color: var(--semantic-interactive-background);
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-foreground);
+
+    & .icon {
+      fill: var(--semantic-interactive-foreground);
+    }
+  }
+
+  &:enabled:hover {
+    background-color: var(--semantic-interactive-background);
+  }
+}
+
+.calendar_container {
+  width: fit-content;
+  padding: var(--spacing-s);
+  border: 1px solid var(--palette-graphite-100);
+  margin-top: 10px;
+}
