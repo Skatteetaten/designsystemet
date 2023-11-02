@@ -7,7 +7,6 @@
 }
 
 .select {
-  position: relative;
   width: 100%;
   padding: var(--spacing-xs) 2.3rem var(--spacing-xs) var(--spacing-s);
   border: none;
@@ -60,14 +59,14 @@
 .selectIcon {
   position: absolute;
   right: 3px;
+  display: grid;
   align-self: center;
   padding: 3px 1px 1px 3px;
   border-left: 1px solid var(--palette-graphite-30);
   margin-right: 1px;
   fill: var(--palette-azure-70);
   line-height: var(--semantic-line-height-input);
-  pointer-events: none;
-  vertical-align: text-bottom;
+  place-items: center;
 
   &_large {
     padding: 5px 4px 5px 6px;

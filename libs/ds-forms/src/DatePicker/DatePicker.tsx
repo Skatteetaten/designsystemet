@@ -1,4 +1,4 @@
-import React, { forwardRef, useId, useState } from 'react';
+import React, { forwardRef, useId, useState, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import {

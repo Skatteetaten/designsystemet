@@ -76,6 +76,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
     const placeholderPaletteGraphite50 = 'var(--palette-graphite-50)';
     useEffect(() => {
       changePlaceholderColor();
+      // eslint-disable-next-line
     }, []);
 
     const handleChange = (e: ChangeEvent<HTMLSelectElement>): void => {
