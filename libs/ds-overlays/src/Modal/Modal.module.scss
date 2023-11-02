@@ -11,15 +11,29 @@
   background-color: var(--palette-graphite-0);
   box-shadow: 0 0 8px 2px rgba(0, 0, 0, 16%), 0 2px 4px -4px rgba(0, 0, 0, 16%);
   font-size: var(--font-size-m);
-  line-height: var(--line-height-l);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--semantic-line-height-article);
   overflow-y: scroll;
 
   &::backdrop {
     background: rgba(255, 255, 255, 80%);
   }
 
+  &SymbolLogo {
+    margin-bottom: var(--spacing-m);
+  }
+
   &Heading {
     padding-right: var(--spacing-xl);
+
+    &NoPadding {
+      padding-right: 0;
+    }
+  }
+
+  &Illustration {
+    width: 100%;
+    margin-bottom: var(--spacing-m);
   }
 
   &NoBorder {
@@ -44,6 +58,10 @@
 
   &PaddingMEGA {
     padding: calc(var(--spacing-mega) - 0.25rem);
+  }
+
+  &NoPaddingTop {
+    padding-top: 0;
   }
 }
 

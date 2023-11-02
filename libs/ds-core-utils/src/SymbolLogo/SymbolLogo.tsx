@@ -1,8 +1,8 @@
 import { forwardRef } from 'react';
 
 import symbolLogo from './logo-symbol.png';
-import { BaseProps } from '../src/base-props.types';
-import { getCommonClassNameDefault } from '../src/defaults';
+import { BaseProps } from '../base-props.types';
+import { getCommonClassNameDefault } from '../defaults';
 
 import styles from './SymbolLogo.module.scss';
 

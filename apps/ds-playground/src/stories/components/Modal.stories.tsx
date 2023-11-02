@@ -9,22 +9,28 @@ import {
   modalVariantArr,
 } from '@skatteetaten/ds-overlays';
 import { Paragraph } from '@skatteetaten/ds-typography';
-import { StoryObj, Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
-import waitAlert from '../../assets/wait-alert-illustration.svg';
+import waitAlert from '../../assets/wait-alert-illustration.png';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: Modal,
   title: 'Komponenter/Modal',
   argTypes: {
     // Props
     children: { control: { type: null }, table: { category: category.props } },
+    classNames: { table: { category: category.props } },
     hideAutoClose: { table: { category: category.props } },
     hideCloseButton: { table: { category: category.props } },
     hideOutline: { table: { category: category.props } },
     hideTitle: { table: { category: category.props } },
+    imageSource: {
+      control: { type: null },
+      table: { category: category.props },
+    },
+    imageSourceAltText: { table: { category: category.props } },
     padding: {
       table: {
         category: category.props,
@@ -45,31 +51,34 @@ const meta = {
     // Events
     onClose: { control: { type: null }, table: { category: category.event } },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-overlays'),
   },
 } satisfies Meta<typeof Modal>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-const Preview: StoryFn<typeof Modal> = (args) => {
-  return (
-    <Modal {...args}>
-      <Paragraph hasSpacing>
-        {
-          'Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?'
-        }
-      </Paragraph>
-      <div className={'flex'}>
-        <Button>{'Erstatt opplysninger'}</Button>
-        <Button variant={'tertiary'}>{'Avbryt'}</Button>
-      </div>
-    </Modal>
-  );
-};
+export const Preview = {
+  args: {
+    children: (
+      <>
+        <Paragraph hasSpacing>
+          {
+            'Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?'
+          }
+        </Paragraph>
+        <div className={'flex'}>
+          <Button className={'marginRightM'}>{'Erstatt opplysninger'}</Button>
+          <Button variant={'tertiary'}>{'Avbryt'}</Button>
+        </div>
+      </>
+    ),
+    title: 'Vil du erstatte nye opplysninger fra fil?',
+    open: true,
+    padding: getModalPaddingDefault(),
+    variant: getModalVariantDefault(),
+  },
+} satisfies StoryObj<typeof Modal>;
 
-const ExampleWithRef: StoryFn<typeof Modal> = () => {
+export const ExampleWithRef: StoryFn<typeof Modal> = () => {
   const ref = useRef<HTMLDialogElement>(null);
   return (
     <>
@@ -87,7 +96,7 @@ const ExampleWithRef: StoryFn<typeof Modal> = () => {
           }
         </Paragraph>
         <div className={'flex'}>
-          <Button>{'Erstatt opplysninger'}</Button>
+          <Button className={'marginRightM'}>{'Erstatt opplysninger'}</Button>
           <Button
             variant={'tertiary'}
             onClick={(): void => ref.current?.close()}
@@ -100,7 +109,7 @@ const ExampleWithRef: StoryFn<typeof Modal> = () => {
   );
 };
 
-const ExampleWithState: StoryFn<typeof Modal> = () => {
+export const ExampleWithState: StoryFn<typeof Modal> = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -116,7 +125,7 @@ const ExampleWithState: StoryFn<typeof Modal> = () => {
           }
         </Paragraph>
         <div className={'flex'}>
-          <Button>{'Erstatt opplysninger'}</Button>
+          <Button className={'marginRightM'}>{'Erstatt opplysninger'}</Button>
           <Button variant={'tertiary'} onClick={(): void => setOpen(false)}>
             {'Avbryt'}
           </Button>
@@ -126,7 +135,7 @@ const ExampleWithState: StoryFn<typeof Modal> = () => {
   );
 };
 
-const ExampleImportant: StoryFn<typeof Modal> = () => {
+export const ExampleImportant: StoryFn<typeof Modal> = () => {
   const ref = useRef<HTMLDialogElement>(null);
   return (
     <>
@@ -160,7 +169,7 @@ const ExampleImportant: StoryFn<typeof Modal> = () => {
   );
 };
 
-const ExampleWait: StoryFn<typeof Modal> = () => {
+export const ExampleWait: StoryFn<typeof Modal> = () => {
   const ref = useRef<HTMLDialogElement>(null);
   return (
     <>
@@ -171,15 +180,14 @@ const ExampleWait: StoryFn<typeof Modal> = () => {
       >
         {'Vis ventevarsel'}
       </Button>
-      {/* modalWaitAlert fungerer ikke i Storybook, sjekk testprosjektet */}
-      <Modal ref={ref} className={'modalWaitAlert'} title={'Hei!'}>
-        <img
-          className={'modalWaitAlertIllustration'}
-          src={waitAlert}
-          alt={
-            'Illustrasjon av travel person med seks armer, opptatt med kontorarbeid.'
-          }
-        />
+      <Modal
+        ref={ref}
+        title={'Hei, er du fortsatt her?'}
+        imageSource={waitAlert}
+        imageSourceAltText={
+          'Illustrasjon av travel person med seks armer, opptatt med kontorarbeid.'
+        }
+      >
         <Paragraph hasSpacing>
           {
             'Vi ser at du ikke har gjort noe på nettsiden på ei stund. Er du fortsatt her?'
@@ -195,50 +203,3 @@ const ExampleWait: StoryFn<typeof Modal> = () => {
     </>
   );
 };
-
-export const ModalDefault = {
-  render: Preview,
-  name: 'Default',
-  args: {
-    children: '',
-    title: 'Vil du erstatte nye opplysninger fra fil?',
-    open: true,
-    padding: getModalPaddingDefault(),
-  },
-} satisfies Story;
-
-export const ExampleModalWithRef = {
-  render: ExampleWithRef,
-  name: 'Example With Ref',
-  args: {
-    children: '',
-    title: 'Vil du erstatte nye opplysninger fra fil?',
-  },
-} satisfies Story;
-
-export const ExampleModalWithState = {
-  render: ExampleWithState,
-  name: 'Example With State',
-  args: {
-    children: '',
-    title: 'Vil du erstatte nye opplysninger fra fil?',
-  },
-} satisfies Story;
-
-export const ExampleImportantModal = {
-  render: ExampleImportant,
-  name: 'Example Viktig Dialog',
-  args: {
-    children: '',
-    title: 'Viktig melding!',
-  },
-} satisfies Story;
-
-export const ExampleWaitModal = {
-  render: ExampleWait,
-  name: 'Example Ventevarsel',
-  args: {
-    children: '',
-    title: 'Hei!',
-  },
-} satisfies Story;

@@ -1,0 +1,16 @@
+import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import * as ModalStories from './Modal.stories';
+
+<Meta of={ModalStories} />
+
+# Modal
+
+<Primary />
+<Controls />
+
+## Examples
+
+<Canvas of={ModalStories.ExampleWithRef} />
+<Canvas of={ModalStories.ExampleWithState} />
+<Canvas of={ModalStories.ExampleImportant} />
+<Canvas of={ModalStories.ExampleWait} />

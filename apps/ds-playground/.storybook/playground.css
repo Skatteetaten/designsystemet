@@ -31,6 +31,10 @@ code {
   margin-bottom: var(--spacing-m);
 }
 
+.marginRightM {
+  margin-right: var(--spacing-m);
+}
+
 .flex {
   display: flex;
 }
@@ -123,24 +127,6 @@ code {
 
 .logoHeight {
   height: 4rem;
-}
-
-.modalLogo {
-  position: absolute;
-  top: 0;
-  margin-top: var(--spacing-l);
-  height: 2rem;
-}
-
-.modalWaitAlert {
-  max-width: 340px;
-}
-
-.modalWaitAlertIllustration {
-  position: absolute;
-  top: 0;
-  margin-top: var(--spacing-mega);
-  height: 200px;
 }
 
 .modalLink {

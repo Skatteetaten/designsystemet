@@ -16,6 +16,10 @@ type RequiredModalHTMLAttributes = Pick<
 type ModalHTMLAttributes = Partial<RequiredModalHTMLAttributes>;
 
 export interface ModalProps extends ModalHTMLAttributes, BaseProps {
+  classNames?: {
+    container?: string;
+    image?: string;
+  };
   /** Innhold */
   children: ReactNode;
   /** Definerer stilen til Modal */
@@ -32,6 +36,10 @@ export interface ModalProps extends ModalHTMLAttributes, BaseProps {
   hideCloseButton?: boolean;
   /** Om autolukking skal skrus av */
   hideAutoClose?: boolean;
+  /** Source til illustrasjonsbilde øverst i Modal */
+  imageSource?: string;
+  /** Alt tekst til illustrasjonsbilde */
+  imageSourceAltText?: string;
   /** Callback når modalen lukkes */
   onClose?: () => void;
 }

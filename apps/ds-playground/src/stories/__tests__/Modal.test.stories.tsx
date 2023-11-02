@@ -13,6 +13,7 @@ import {
 } from '@storybook/testing-library';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
+import illustration from '../../assets/wait-alert-illustration.png';
 
 const meta = {
   component: Modal,
@@ -64,6 +65,7 @@ const TemplateModal: StoryFn<typeof Modal> = (args) => {
   const ref = useRef<HTMLDialogElement>(null);
   return (
     <>
+      <Paragraph hasSpacing>{loremIpsum}</Paragraph>
       <Button onClick={(): void => ref.current?.showModal()}>
         {'Åpne modal'}
       </Button>
@@ -142,7 +144,7 @@ export const WithAttributes = {
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults (A1, A2, A3 delvis, A5, A6 delvis, B1, B3, B4, B5 delvis)',
+  name: 'Defaults (A1, A2, A3 delvis, A5, A6 delvis, A10, B1, B3, B4, B5 delvis)',
   args: {
     ...defaultArgs,
   },
@@ -153,21 +155,54 @@ export const Defaults = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const modal = canvas.getByLabelText(defaultTitle); // B3
+    const modal = canvas.getByLabelText(defaultTitle);
     await expect(modal).toBeInTheDocument();
     await expect(modal).toHaveAttribute('open');
     const closeButton = canvas.getAllByRole('button')[0];
     await expect(closeButton).toBeInTheDocument();
     await expect(canvas.getByTitle('Lukk')).toBeInTheDocument();
     await expect(modal.tagName).toBe('DIALOG');
+    const heading = canvas.getByText(defaultTitle);
+    await expect(heading.tagName).toBe('H1');
+  },
+} satisfies Story;
+
+export const VariantImportant = {
+  name: 'Variant Important (A1)',
+  args: {
+    ...defaultArgs,
+    variant: 'important',
+    open: true,
+  },
+  argTypes: {
+    variant: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithImage = {
+  name: 'With Image (A1)',
+  args: {
+    ...defaultArgs,
+    imageSource: illustration,
+    imageSourceAltText: 'Image alt tekst',
+  },
+  argTypes: {
+    imageSource: { table: { disable: false } },
+    imageSourceAltText: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const modal = canvas.getByRole('dialog');
     // eslint-disable-next-line testing-library/no-node-access
-    await expect(modal.firstChild?.nodeName).toBe('H1'); // B4
+    const image = modal.querySelector('img');
+    await expect(image).toBeInTheDocument();
+    await expect(image).toHaveAttribute('alt', 'Image alt tekst');
   },
 } satisfies Story;
 
 export const WithTransparentBackground = {
   render: TemplateModal,
-  name: 'With Transparent Background (A4)',
+  name: 'With Transparent Background (A4, A10)',
   args: {
     ...defaultArgs,
   },
@@ -250,7 +285,7 @@ export const ClickCloseButton = {
 
 export const WithAutoClose = {
   render: TemplateModal,
-  name: 'With AutoClose (A14)',
+  name: 'With AutoClose (A14, A15)',
   args: {
     ...defaultArgs,
     onClose: (): void => {
@@ -268,11 +303,15 @@ export const WithAutoClose = {
   },
 } satisfies Story;
 
-export const ClickCancelButton = {
+export const WithHideAutoClose = {
   render: TemplateModal,
-  name: 'Click Cancel Button (A15)',
+  name: 'With HideAutoClose (A14)',
   args: {
     ...defaultArgs,
+    hideAutoClose: true,
+  },
+  argTypes: {
+    hideAutoClose: { table: { disable: false } },
   },
   parameters: {
     imageSnapshot: { disable: true },
@@ -280,9 +319,8 @@ export const ClickCancelButton = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const modal = canvas.getByRole('dialog');
-    const closeButton = canvas.getAllByRole('button')[2];
-    await userEvent.click(closeButton);
-    await waitFor(() => expect(modal).not.toHaveAttribute('open'));
+    await userEvent.click(modal);
+    await waitFor(() => expect(modal).toHaveAttribute('open'));
   },
 } satisfies Story;
 
@@ -299,17 +337,5 @@ export const WithHideTitle = {
     const canvas = within(canvasElement);
     const heading = canvas.getByRole('heading', { level: 1 });
     await expect(heading).toBeInTheDocument();
-  },
-} satisfies Story;
-
-export const VariantImportant = {
-  name: 'Variant Important',
-  args: {
-    ...defaultArgs,
-    variant: 'important',
-    open: true,
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
   },
 } satisfies Story;

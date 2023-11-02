@@ -22,12 +22,15 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
     {
       id,
       className = getCommonClassNameDefault(),
+      classNames,
       lang,
       'data-testid': dataTestId,
       hideAutoClose,
       hideCloseButton,
       hideOutline,
       hideTitle,
+      imageSource,
+      imageSourceAltText,
       padding = getModalPaddingDefault(),
       title,
       variant,
@@ -43,14 +46,6 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
     const { t } = useTranslation('Shared', { i18n: dsI18n });
 
     useEffect((): any => {
-      if (modalRef.current && open !== undefined) {
-        if (open && !modalRef.current.open) {
-          modalRef.current.showModal();
-        } else if (!open && modalRef.current.open) {
-          modalRef.current.close();
-        }
-      }
-
       const onClickOutside = (event: any): void => {
         const rect = event.target.getBoundingClientRect();
         if (
@@ -70,37 +65,56 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
           document.removeEventListener('click', onClickOutside, true);
         };
       }
-    }, [modalRef, open, hideAutoClose, onClose]);
+    }, [modalRef, hideAutoClose, onClose]);
 
     const hideTitleClassName = hideTitle ? styles.srOnly : '';
     const hideOutlineClassName =
       hideOutline || variant === 'important' ? styles.modalNoBorder : '';
     const paddingClassName =
       styles[`modalPadding${padding.toUpperCase() as Uppercase<ModalPadding>}`];
+    const noPaddingTop = imageSource ? styles.modalNoPaddingTop : '';
+    const headingNoPaddingClassName =
+      padding === 'mega' ? styles.modalHeadingNoPadding : '';
 
     return (
       <dialog
         ref={mergedRef}
         id={id}
-        className={`${styles.modal} ${hideOutlineClassName} ${className} `.trim()}
+        className={`${styles.modal} ${hideOutlineClassName} ${className} ${
+          classNames?.container ?? ''
+        }`.trim()}
         lang={lang}
         data-testid={dataTestId}
         aria-labelledby={ariaLabelId}
         open={open}
+        autoFocus
         onCancel={onClose}
       >
-        <div className={`${paddingClassName}`}>
-          {variant === 'important' && <SymbolLogo />}
+        {imageSource && (
+          <img
+            src={imageSource}
+            alt={imageSourceAltText}
+            className={`${styles.modalIllustration} ${
+              classNames?.image ?? ''
+            }`.trim()}
+          />
+        )}
+        <div
+          tabIndex={-1}
+          className={`${paddingClassName} ${noPaddingTop}`.trim()}
+        >
+          {variant === 'important' && (
+            <SymbolLogo className={styles.modalSymbolLogo} />
+          )}
           <Heading
-            className={`${styles.modalHeading} ${hideTitleClassName}`.trim()}
+            className={`${styles.modalHeading} ${headingNoPaddingClassName} ${hideTitleClassName}`.trim()}
             id={ariaLabelId}
             as={'h1'}
-            level={2}
+            level={3}
             hasSpacing
           >
             {title}
           </Heading>
-          <div></div>
           {!hideCloseButton && (
             <IconButton
               className={styles.closeButton}
