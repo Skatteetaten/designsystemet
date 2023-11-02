@@ -9,10 +9,13 @@ import React, {
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  getCommonClassNameDefault,
+  getCommonFormVariantDefault,
+} from '@skatteetaten/ds-core-utils';
 import { ChevronDownSVGpath, Icon } from '@skatteetaten/ds-icons';
 
-import { getSelectVariantDefault } from './defaults';
 import { SelectComponent, SelectProps } from './Select.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
@@ -36,7 +39,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
       label,
       placeholder,
       titleHelpSvg,
-      variant = getSelectVariantDefault(),
+      variant = getCommonFormVariantDefault(),
       value,
       autoComplete,
       disabled,
@@ -153,5 +156,3 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
 
 Select.displayName = 'Select';
 Select.Option = SelectOption;
-
-export { getSelectVariantDefault };
