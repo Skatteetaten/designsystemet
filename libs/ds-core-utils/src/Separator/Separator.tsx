@@ -23,8 +23,8 @@ export const Separator = forwardRef<HTMLDivElement, BaseProps>(
         lang={lang}
         data-testid={dataTestId}
       >
-        <div className={styles.separatorRight}></div>
         <div className={styles.separatorLeft}></div>
+        <div className={styles.separatorRight}></div>
       </div>
     );
   }
