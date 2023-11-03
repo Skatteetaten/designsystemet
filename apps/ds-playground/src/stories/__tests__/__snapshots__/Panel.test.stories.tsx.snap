@@ -355,7 +355,7 @@ exports[`Tester/Panel WithHideGraphicMobileAndImage smoke-test 1`] = `
            class="Panel_panelImageContainerImage__YIhOY"
       >
     </div>
-    <div class="Panel_panelArticle__4fhzq">
+    <div class="Panel_panelArticle__4fhzq Panel_panelArticle_illustration__b0uKs">
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
@@ -370,7 +370,7 @@ exports[`Tester/Panel WithHideGraphicMobileAndImage smoke-test 1`] = `
            class="Panel_panelImageContainerImage__YIhOY"
       >
     </div>
-    <div class="Panel_panelArticle__4fhzq">
+    <div class="Panel_panelArticle__4fhzq Panel_panelArticle_illustration__b0uKs">
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
@@ -390,7 +390,7 @@ exports[`Tester/Panel WithHideGraphicMobileAndImageDesktop smoke-test 1`] = `
            class="Panel_panelImageContainerImage__YIhOY"
       >
     </div>
-    <div class="Panel_panelArticle__4fhzq">
+    <div class="Panel_panelArticle__4fhzq Panel_panelArticle_illustration__b0uKs">
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
@@ -405,7 +405,7 @@ exports[`Tester/Panel WithHideGraphicMobileAndImageDesktop smoke-test 1`] = `
            class="Panel_panelImageContainerImage__YIhOY"
       >
     </div>
-    <div class="Panel_panelArticle__4fhzq">
+    <div class="Panel_panelArticle__4fhzq Panel_panelArticle_illustration__b0uKs">
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
@@ -567,7 +567,7 @@ exports[`Tester/Panel WithImage play-test 1`] = `
            class="Panel_panelImageContainerImage__YIhOY"
       >
     </div>
-    <div class="Panel_panelArticle__4fhzq">
+    <div class="Panel_panelArticle__4fhzq Panel_panelArticle_illustration__b0uKs">
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
@@ -582,7 +582,7 @@ exports[`Tester/Panel WithImage play-test 1`] = `
            class="Panel_panelImageContainerImage__YIhOY"
       >
     </div>
-    <div class="Panel_panelArticle__4fhzq">
+    <div class="Panel_panelArticle__4fhzq Panel_panelArticle_illustration__b0uKs">
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
@@ -602,7 +602,7 @@ exports[`Tester/Panel WithImageMobile smoke-test 1`] = `
            class="Panel_panelImageContainerImage__YIhOY"
       >
     </div>
-    <div class="Panel_panelArticle__4fhzq">
+    <div class="Panel_panelArticle__4fhzq Panel_panelArticle_illustration__b0uKs">
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
@@ -617,7 +617,7 @@ exports[`Tester/Panel WithImageMobile smoke-test 1`] = `
            class="Panel_panelImageContainerImage__YIhOY"
       >
     </div>
-    <div class="Panel_panelArticle__4fhzq">
+    <div class="Panel_panelArticle__4fhzq Panel_panelArticle_illustration__b0uKs">
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
