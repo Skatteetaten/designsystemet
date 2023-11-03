@@ -9,7 +9,10 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/ds-overlays/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "libs/ds-overlays/**/*.{ts,tsx,js,jsx}",
+          "libs/ds-overlays/package.json"
+        ]
       }
     },
     "build": {
