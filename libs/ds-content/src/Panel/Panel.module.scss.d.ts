@@ -7,6 +7,7 @@ export const panel_graphicIcon: string;
 export const panelSpace: string;
 export const panelSpace_hide: string;
 export const panelArticle: string;
+export const panelArticle_illustration: string;
 export const panelGraphic: string;
 export const panelGraphic_hide: string;
 export const panelImageContainer: string;

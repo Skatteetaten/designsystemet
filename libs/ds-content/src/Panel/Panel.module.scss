@@ -3,8 +3,6 @@
 
 $border-outline: 6px;
 
-// TODO FRONT-1006 layout - implementer layout-oppskrift på å få innhold i panel til å være alinget i forhold til hverandre
-
 .panel {
   --variant-outline-color: var(--palette-ochre-50);
   --variant-filled-color: var(--palette-ochre-10);
@@ -62,6 +60,10 @@ $border-outline: 6px;
   &Article {
     max-width: var(--semantic-responsive-article);
     flex: 0 1 var(--semantic-responsive-article);
+
+    &_illustration {
+      flex: 0 1 60%;
+    }
   }
 
   &Graphic {

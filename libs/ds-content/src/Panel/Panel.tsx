@@ -69,6 +69,9 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
     const spaceClassName = imageSource
       ? styles.panelSpace_hide
       : styles.panelSpace;
+    const articleClassName = `${styles.panelArticle} ${
+      imageSource ? styles.panelArticle_illustration : ''
+    }`.trim();
 
     return (
       <div
@@ -88,11 +91,9 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
           </div>
         )}
         {!imageSource && (
-          <div className={spaceAndIconClassName}>
-            {renderIcon && renderIcon()}
-          </div>
+          <div className={spaceAndIconClassName}>{renderIcon?.()}</div>
         )}
-        <div className={styles.panelArticle}>
+        <div className={articleClassName}>
           {title && (
             <Heading
               as={titleAs}
