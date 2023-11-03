@@ -142,6 +142,7 @@ export default async function (
     return packageJson;
   });
 
+  const lint = projectConfig?.targets?.lint;
   const projectConfigWithRollupOptions = {
     ...projectConfig,
     implicitDependencies: ['!ds-dev-config'],
@@ -152,6 +153,16 @@ export default async function (
         options: {
           ...projectConfig?.targets.build.options,
           rollupConfig: [`libs/${projectName}/rollup.config.js`],
+        },
+      },
+      lint: {
+        ...lint,
+        options: {
+          ...lint.options,
+          lintFilePatterns: [
+            ...lint.options.lintFilePatterns,
+            `libs/${projectName}/package.json`,
+          ],
         },
       },
     },
