@@ -7,6 +7,11 @@ import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+CheckboxGroup.Checkbox = { ...CheckboxGroup.Checkbox };
+CheckboxGroup.Checkbox.displayName = 'CheckboxGroup.Checkbox';
+
 export default {
   component: CheckboxGroup,
   title: 'Komponenter/CheckboxGroup',

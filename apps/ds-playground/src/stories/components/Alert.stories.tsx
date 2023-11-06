@@ -34,18 +34,8 @@ export default {
   },
   parameters: {
     version: getVersion('ds-status'),
-    /*     controls: { exclude: [] }, */
   },
 } satisfies Meta<typeof Alert>;
-
-export const MyDocs: StoryObj<typeof Alert> = {
-  tags: ['isHidden'],
-  args: {
-    children: 'This is docs - Avvist av kortutsteder. ',
-    showAlert: true,
-    variant: 'neutral',
-  },
-};
 
 export const Preview: StoryObj<typeof Alert> = {
   args: {
