@@ -67,7 +67,7 @@ export default meta;
 
 export const Preview: StoryObj<typeof Button> = {
   args: {
-    children: `Send inn skjema`,
+    children: 'Send inn skjema',
   },
 };
 

@@ -73,7 +73,7 @@ const parameters = {
   options: {
     storySort: {
       method: 'alphabetical',
-      order: ['Designtokens', 'Generelt', 'Komponenter', 'Tester'],
+      order: ['Generelt', 'Designtokens', 'Komponenter', 'Tester'],
     },
   },
   backgrounds: {
