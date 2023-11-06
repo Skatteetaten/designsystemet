@@ -9,7 +9,7 @@ exports[`Tester/Select/Select Defaults play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="Select_select_container__DGJeG ">
+    <div class="Select_selectContainer__CfUZs ">
       <select id="selectId-:re:"
               class="Select_select__-ENv1"
               style="color: var(--palette-graphite-50);"
@@ -58,7 +58,7 @@ exports[`Tester/Select/Select WithAttributes play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="Select_select_container__DGJeG ">
+    <div class="Select_selectContainer__CfUZs ">
       <select id="htmlid"
               class="Select_select__-ENv1"
               data-testid="123ID"
@@ -106,7 +106,7 @@ exports[`Tester/Select/Select WithAutoCompleteNameAndPlaceholder play-test 1`] =
     >
       Ledetekst
     </label>
-    <div class="Select_select_container__DGJeG ">
+    <div class="Select_selectContainer__CfUZs ">
       <select id="selectId-:r12:"
               class="Select_select__-ENv1"
               autocomplete="given-name"
@@ -155,7 +155,7 @@ exports[`Tester/Select/Select WithCustomClassNames play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="Select_select_container__DGJeG dummyClassnameFormContainer">
+    <div class="Select_selectContainer__CfUZs dummyClassnameFormContainer">
       <select id="selectId-:r9:"
               class="Select_select__-ENv1"
               aria-describedby="selectErrorId-:r8:"
@@ -218,7 +218,7 @@ exports[`Tester/Select/Select WithDefaultValue play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="Select_select_container__DGJeG ">
+    <div class="Select_selectContainer__CfUZs ">
       <select id="selectId-:ru:"
               class="Select_select__-ENv1"
       >
@@ -268,7 +268,7 @@ exports[`Tester/Select/Select WithDescription play-test 1`] = `
     <div class="Help_description__niabw">
       En liten beskrivelse tekst
     </div>
-    <div class="Select_select_container__DGJeG ">
+    <div class="Select_selectContainer__CfUZs ">
       <select id="selectId-:r1r:"
               class="Select_select__-ENv1"
               style="color: var(--palette-graphite-50);"
@@ -315,7 +315,7 @@ exports[`Tester/Select/Select WithDisabled play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="Select_select_container__DGJeG ">
+    <div class="Select_selectContainer__CfUZs ">
       <select id="selectId-:rm:"
               class="Select_select__-ENv1"
               disabled
@@ -362,7 +362,7 @@ exports[`Tester/Select/Select WithError play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="Select_select_container__DGJeG ">
+    <div class="Select_selectContainer__CfUZs ">
       <select id="selectId-:r1i:"
               class="Select_select__-ENv1"
               style="color: var(--palette-graphite-50);"
@@ -409,7 +409,7 @@ exports[`Tester/Select/Select WithErrorMessageAndHasError play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="Select_select_container__DGJeG ">
+    <div class="Select_selectContainer__CfUZs ">
       <select id="selectId-:r1m:"
               class="Select_select__-ENv1"
               aria-describedby="selectErrorId-:r1l:"
@@ -472,7 +472,7 @@ exports[`Tester/Select/Select WithEventHandlers play-test 1`] = `
     >
       Select har blitt blurret
     </label>
-    <div class="Select_select_container__DGJeG ">
+    <div class="Select_selectContainer__CfUZs ">
       <select id="selectId-:r29:"
               class="Select_select__-ENv1"
               style
@@ -560,7 +560,7 @@ exports[`Tester/Select/Select WithHelpText play-test 1`] = `
         </svg>
       </button>
     </div>
-    <div class="Select_select_container__DGJeG ">
+    <div class="Select_selectContainer__CfUZs ">
       <select id="selectId-:r23:"
               class="Select_select__-ENv1"
               style="color: var(--palette-graphite-50);"
@@ -607,7 +607,7 @@ exports[`Tester/Select/Select WithHideLabel play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="Select_select_container__DGJeG ">
+    <div class="Select_selectContainer__CfUZs ">
       <select id="selectId-:r1v:"
               class="Select_select__-ENv1"
               style="color: var(--palette-graphite-50);"
@@ -654,7 +654,7 @@ exports[`Tester/Select/Select WithHidePlaceholder play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="Select_select_container__DGJeG ">
+    <div class="Select_selectContainer__CfUZs ">
       <select id="selectId-:r16:"
               class="Select_select__-ENv1"
       >
@@ -697,7 +697,7 @@ exports[`Tester/Select/Select WithRef play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="Select_select_container__DGJeG ">
+    <div class="Select_selectContainer__CfUZs ">
       <select id="selectId-:r1:"
               class="Select_select__-ENv1"
               name="dummyNameForwardedFromRef"
@@ -745,7 +745,7 @@ exports[`Tester/Select/Select WithRequired play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="Select_select_container__DGJeG ">
+    <div class="Select_selectContainer__CfUZs ">
       <select id="selectId-:r1a:"
               class="Select_select__-ENv1"
               required
@@ -793,7 +793,7 @@ exports[`Tester/Select/Select WithRequiredAndMark smoke-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="Select_select_container__DGJeG ">
+    <div class="Select_selectContainer__CfUZs ">
       <select id="selectId-:r1e:"
               class="Select_select__-ENv1"
               required
@@ -841,7 +841,7 @@ exports[`Tester/Select/Select WithValue play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="Select_select_container__DGJeG ">
+    <div class="Select_selectContainer__CfUZs ">
       <select id="selectId-:rq:"
               class="Select_select__-ENv1"
       >
@@ -887,7 +887,7 @@ exports[`Tester/Select/Select WithVariantLarge smoke-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="Select_select_container__DGJeG ">
+    <div class="Select_selectContainer__CfUZs ">
       <select id="selectId-:ri:"
               class="Select_select__-ENv1 Select_select_large__Pq2eA"
               style="color: var(--palette-graphite-50);"

@@ -9,7 +9,7 @@ exports[`Tester/DatePicker ClickCalendarButton play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_date_container__1t6qM ">
+    <div class="DatePicker_dateContainer__WILQF ">
       <input id="datepickerInputId-:r2g:"
              class="DatePicker_input__vz7zh"
              placeholder="Velg"
@@ -54,7 +54,7 @@ exports[`Tester/DatePicker Defaults play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_date_container__1t6qM ">
+    <div class="DatePicker_dateContainer__WILQF ">
       <input id="datepickerInputId-:re:"
              class="DatePicker_input__vz7zh"
              placeholder="Velg"
@@ -98,7 +98,7 @@ exports[`Tester/DatePicker WithAttributes play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_date_container__1t6qM ">
+    <div class="DatePicker_dateContainer__WILQF ">
       <input id="htmlid"
              class="DatePicker_input__vz7zh"
              data-testid="123ID"
@@ -141,7 +141,7 @@ exports[`Tester/DatePicker WithAutoCompleteNameAndPlaceholder play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_date_container__1t6qM ">
+    <div class="DatePicker_dateContainer__WILQF ">
       <input id="datepickerInputId-:r21:"
              class="DatePicker_input__vz7zh"
              autocomplete="given-name"
@@ -185,7 +185,7 @@ exports[`Tester/DatePicker WithCustomClassNames play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_date_container__1t6qM dummyClassnameFormContainer">
+    <div class="DatePicker_dateContainer__WILQF dummyClassnameFormContainer">
       <input id="datepickerInputId-:r9:"
              class="DatePicker_input__vz7zh"
              placeholder="Velg"
@@ -243,7 +243,7 @@ exports[`Tester/DatePicker WithDefaultValue play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_date_container__1t6qM ">
+    <div class="DatePicker_dateContainer__WILQF ">
       <input id="datepickerInputId-:ru:"
              class="DatePicker_input__vz7zh"
              placeholder="Velg"
@@ -288,7 +288,7 @@ exports[`Tester/DatePicker WithDescription play-test 1`] = `
     <div class="Help_description__niabw">
       En liten beskrivelse tekst
     </div>
-    <div class="DatePicker_date_container__1t6qM ">
+    <div class="DatePicker_dateContainer__WILQF ">
       <input id="datepickerInputId-:r1j:"
              class="DatePicker_input__vz7zh"
              placeholder="Velg"
@@ -330,7 +330,7 @@ exports[`Tester/DatePicker WithDisabled play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_date_container__1t6qM ">
+    <div class="DatePicker_dateContainer__WILQF ">
       <input id="datepickerInputId-:rm:"
              class="DatePicker_input__vz7zh"
              disabled
@@ -374,7 +374,7 @@ exports[`Tester/DatePicker WithError play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_date_container__1t6qM ">
+    <div class="DatePicker_dateContainer__WILQF ">
       <input id="datepickerInputId-:r1a:"
              class="DatePicker_input__vz7zh"
              placeholder="Velg"
@@ -416,7 +416,7 @@ exports[`Tester/DatePicker WithErrorMessageAndHasError play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_date_container__1t6qM ">
+    <div class="DatePicker_dateContainer__WILQF ">
       <input id="datepickerInputId-:r1e:"
              class="DatePicker_input__vz7zh"
              placeholder="Velg"
@@ -474,7 +474,7 @@ exports[`Tester/DatePicker WithEventHandlers play-test 1`] = `
     >
       Form-element har blitt blurret
     </label>
-    <div class="DatePicker_date_container__1t6qM ">
+    <div class="DatePicker_dateContainer__WILQF ">
       <input id="datepickerInputId-:r2c:"
              class="DatePicker_input__vz7zh"
              placeholder="Velg"
@@ -557,7 +557,7 @@ exports[`Tester/DatePicker WithHelpText play-test 1`] = `
         </svg>
       </button>
     </div>
-    <div class="DatePicker_date_container__1t6qM ">
+    <div class="DatePicker_dateContainer__WILQF ">
       <input id="datepickerInputId-:r1n:"
              class="DatePicker_input__vz7zh"
              placeholder="Velg"
@@ -599,7 +599,7 @@ exports[`Tester/DatePicker WithHideLabel play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_date_container__1t6qM ">
+    <div class="DatePicker_dateContainer__WILQF ">
       <input id="datepickerInputId-:r1t:"
              class="DatePicker_input__vz7zh"
              placeholder="Velg"
@@ -641,7 +641,7 @@ exports[`Tester/DatePicker WithPlaceholderEmpty play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_date_container__1t6qM ">
+    <div class="DatePicker_dateContainer__WILQF ">
       <input id="datepickerInputId-:r25:"
              class="DatePicker_input__vz7zh"
              value
@@ -682,7 +682,7 @@ exports[`Tester/DatePicker WithReadOnly play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_date_container__1t6qM ">
+    <div class="DatePicker_dateContainer__WILQF ">
       <input id="datepickerInputId-:r29:"
              class="DatePicker_input__vz7zh"
              placeholder="Velg"
@@ -708,7 +708,7 @@ exports[`Tester/DatePicker WithRef play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_date_container__1t6qM ">
+    <div class="DatePicker_dateContainer__WILQF ">
       <input id="datepickerInputId-:r1:"
              class="DatePicker_input__vz7zh"
              placeholder="Velg"
@@ -751,7 +751,7 @@ exports[`Tester/DatePicker WithRequired play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_date_container__1t6qM ">
+    <div class="DatePicker_dateContainer__WILQF ">
       <input id="datepickerInputId-:r12:"
              class="DatePicker_input__vz7zh"
              placeholder="Velg"
@@ -794,7 +794,7 @@ exports[`Tester/DatePicker WithRequiredAndMark smoke-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_date_container__1t6qM ">
+    <div class="DatePicker_dateContainer__WILQF ">
       <input id="datepickerInputId-:r16:"
              class="DatePicker_input__vz7zh"
              placeholder="Velg"
@@ -837,7 +837,7 @@ exports[`Tester/DatePicker WithValue play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_date_container__1t6qM ">
+    <div class="DatePicker_dateContainer__WILQF ">
       <input id="datepickerInputId-:rq:"
              class="DatePicker_input__vz7zh"
              placeholder="Velg"
@@ -879,7 +879,7 @@ exports[`Tester/DatePicker WithVariantLarge smoke-test 1`] = `
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_date_container__1t6qM ">
+    <div class="DatePicker_dateContainer__WILQF ">
       <input id="datepickerInputId-:ri:"
              class="DatePicker_input__vz7zh DatePicker_input_large__ynP5U"
              placeholder="Velg"

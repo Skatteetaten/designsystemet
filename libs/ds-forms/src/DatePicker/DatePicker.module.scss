@@ -1,4 +1,4 @@
-.date_container {
+.dateContainer {
   position: relative;
   display: flex;
   width: 100%;
@@ -8,7 +8,8 @@
 
 .input {
   width: 100%;
-  padding: var(--spacing-xs) 2rem var(--spacing-xs) var(--spacing-s);
+  padding: var(--spacing-xs) var(--spacing-xl) var(--spacing-xs)
+    var(--spacing-s);
   border: none;
   border-radius: 0;
   // stylelint-disable-next-line property-no-vendor-prefix

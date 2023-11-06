@@ -90,7 +90,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
           {label}
         </LabelWithHelp>
         <div
-          className={`${styles.date_container} ${
+          className={`${styles.dateContainer} ${
             classNames?.dateContainer ?? ''
           }`}
         >

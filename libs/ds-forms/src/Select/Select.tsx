@@ -113,7 +113,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
           {label}
         </LabelWithHelp>
         <div
-          className={`${styles.select_container} ${
+          className={`${styles.selectContainer} ${
             classNames?.selectContainer ?? ''
           }`}
         >
