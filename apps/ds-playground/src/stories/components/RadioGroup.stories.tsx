@@ -180,7 +180,7 @@ ExampleHorizontal.parameters = {
   },
 };
 
-export const ExampleHorizontalSource: StoryFn<typeof RadioGroup> = (_args) => {
+export const ExampleHorizontalSource: StoryFn<typeof RadioGroup> = () => {
   const [state, setState] = useState({
     selectedValue: 'nei',
   });
