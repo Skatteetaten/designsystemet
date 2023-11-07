@@ -1,10 +1,16 @@
-import { forwardRef, useEffect, useId, useMemo, useRef } from 'react';
+import {
+  forwardRef,
+  useEffect,
+  useId,
+  useImperativeHandle,
+  useRef,
+} from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
 import {
   Separator,
-  SymbolLogo,
+  SkatteetatenLogo,
   dsI18n,
   getCommonClassNameDefault,
 } from '@skatteetaten/ds-core-utils';
@@ -13,7 +19,6 @@ import { Heading } from '@skatteetaten/ds-typography';
 
 import { getModalPaddingDefault, getModalVariantDefault } from './defaults';
 import { ModalPadding, ModalProps } from './Modal.types';
-import mergeRefs from '../utils';
 
 import styles from './Modal.module.scss';
 
@@ -25,28 +30,33 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
       classNames,
       lang,
       'data-testid': dataTestId,
-      hideAutoClose,
+      disableAutoClose,
       hideCloseButton,
-      hideOutline,
       hideTitle,
       imageSource,
       imageSourceAltText,
       padding = getModalPaddingDefault(),
       title,
-      variant,
-      open,
+      variant = getModalVariantDefault(),
       onClose,
       children,
     },
     ref
   ): JSX.Element => {
-    const ariaLabelId = `modalAriaLabelId-${useId()}`;
-    const modalRef = useRef<HTMLDialogElement>(null);
-    const mergedRef = useMemo(() => mergeRefs([modalRef, ref]), [ref]);
+    const headingId = `modalHeadingId-${useId()}`;
     const { t } = useTranslation('Shared', { i18n: dsI18n });
 
-    useEffect((): any => {
-      const onClickOutside = (event: any): void => {
+    const modalRef = useRef<HTMLDialogElement>(null);
+    useImperativeHandle(ref, () => modalRef?.current as HTMLDialogElement);
+
+    useEffect(() => {
+      if (disableAutoClose) {
+        return;
+      }
+      const onClickOutside = (event: MouseEvent): void => {
+        if (!(event.target instanceof HTMLElement)) {
+          return;
+        }
         const rect = event.target.getBoundingClientRect();
         if (
           rect.left > event.clientX ||
@@ -59,17 +69,17 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
         }
       };
 
-      if (!hideAutoClose) {
-        document.addEventListener('click', onClickOutside, true);
-        return () => {
-          document.removeEventListener('click', onClickOutside, true);
-        };
-      }
-    }, [modalRef, hideAutoClose, onClose]);
+      document.addEventListener('click', onClickOutside, true);
+      return () => {
+        document.removeEventListener('click', onClickOutside, true);
+      };
+    }, [modalRef, disableAutoClose, onClose]);
 
     const hideTitleClassName = hideTitle ? styles.srOnly : '';
     const hideOutlineClassName =
-      hideOutline || variant === 'important' ? styles.modalNoBorder : '';
+      variant === 'plain' || variant === 'important'
+        ? styles.modalNoBorder
+        : '';
     const paddingClassName =
       styles[`modalPadding${padding.toUpperCase() as Uppercase<ModalPadding>}`];
     const noPaddingTop = imageSource ? styles.modalNoPaddingTop : '';
@@ -78,15 +88,14 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
 
     return (
       <dialog
-        ref={mergedRef}
+        ref={modalRef}
         id={id}
         className={`${styles.modal} ${hideOutlineClassName} ${className} ${
           classNames?.container ?? ''
         }`.trim()}
         lang={lang}
         data-testid={dataTestId}
-        aria-labelledby={ariaLabelId}
-        open={open}
+        aria-labelledby={headingId}
         autoFocus
         onCancel={onClose}
       >
@@ -104,11 +113,11 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
           className={`${paddingClassName} ${noPaddingTop}`.trim()}
         >
           {variant === 'important' && (
-            <SymbolLogo className={styles.modalSymbolLogo} />
+            <SkatteetatenLogo className={styles.modalSymbolLogo} />
           )}
           <Heading
             className={`${styles.modalHeading} ${headingNoPaddingClassName} ${hideTitleClassName}`.trim()}
-            id={ariaLabelId}
+            id={headingId}
             as={'h1'}
             level={3}
             hasSpacing

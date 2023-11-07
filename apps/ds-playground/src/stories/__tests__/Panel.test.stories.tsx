@@ -16,7 +16,7 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
-import illustrationSource from '../../assets/test_bonde.svg';
+import illustrationSource from '../../assets/farmer-illustration.svg';
 
 const tittelText = 'Det er en tittel';
 const subtittelText = 'Det er en undertittel';
@@ -57,7 +57,7 @@ const meta = {
       control: 'select',
       options: [
         '',
-        'test_bonde.7eebe78d220ecf48b97e4811ac2c5210.svg',
+        'farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg',
         'd52134bda41b5aa041ef.png',
       ],
     },

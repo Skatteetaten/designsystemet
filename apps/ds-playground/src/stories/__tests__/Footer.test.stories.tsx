@@ -6,7 +6,7 @@ import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 
-import logo from '../../assets/Skatteetaten-Logo-Horisontal-RGB-Hvit.png';
+import logo from '../../assets/ske-logo-horizontal-white.png';
 
 const meta = {
   component: Footer,

@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 
 import { Button, Link } from '@skatteetaten/ds-buttons';
 import { InfoOutlineSVGpath } from '@skatteetaten/ds-icons';
@@ -6,10 +6,9 @@ import {
   Modal,
   getModalPaddingDefault,
   getModalVariantDefault,
-  modalVariantArr,
 } from '@skatteetaten/ds-overlays';
 import { Paragraph } from '@skatteetaten/ds-typography';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import waitAlert from '../../assets/wait-alert-illustration.png';
@@ -22,9 +21,8 @@ export default {
     // Props
     children: { control: { type: null }, table: { category: category.props } },
     classNames: { table: { category: category.props } },
-    hideAutoClose: { table: { category: category.props } },
+    disableAutoClose: { table: { category: category.props } },
     hideCloseButton: { table: { category: category.props } },
-    hideOutline: { table: { category: category.props } },
     hideTitle: { table: { category: category.props } },
     imageSource: {
       control: { type: null },
@@ -39,15 +37,11 @@ export default {
     },
     title: { table: { category: category.props } },
     variant: {
-      options: [...modalVariantArr],
-      control: 'inline-radio',
       table: {
         category: category.props,
         defaultValue: { summary: getModalVariantDefault() },
       },
     },
-    // HTML
-    open: { table: { category: category.htmlAttribute } },
     // Events
     onClose: { control: { type: null }, table: { category: category.event } },
   },
@@ -56,40 +50,14 @@ export default {
   },
 } satisfies Meta<typeof Modal>;
 
-export const Preview = {
-  args: {
-    children: (
-      <>
-        <Paragraph hasSpacing>
-          {
-            'Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?'
-          }
-        </Paragraph>
-        <div className={'flex'}>
-          <Button className={'marginRightM'}>{'Erstatt opplysninger'}</Button>
-          <Button variant={'tertiary'}>{'Avbryt'}</Button>
-        </div>
-      </>
-    ),
-    title: 'Vil du erstatte nye opplysninger fra fil?',
-    open: true,
-    padding: getModalPaddingDefault(),
-    variant: getModalVariantDefault(),
-  },
-} satisfies StoryObj<typeof Modal>;
-
-export const ExampleWithRef: StoryFn<typeof Modal> = () => {
+export const Preview: StoryFn<typeof Modal> = (args) => {
   const ref = useRef<HTMLDialogElement>(null);
   return (
     <>
       <Button onClick={(): void => ref.current?.showModal()}>
         {'Åpne modal'}
       </Button>
-      <Modal
-        ref={ref}
-        title={'Vil du erstatte nye opplysninger fra fil?'}
-        onClose={(): void => console.log('onClose activated')}
-      >
+      <Modal {...args} ref={ref}>
         <Paragraph hasSpacing>
           {
             'Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?'
@@ -109,30 +77,24 @@ export const ExampleWithRef: StoryFn<typeof Modal> = () => {
   );
 };
 
-export const ExampleWithState: StoryFn<typeof Modal> = () => {
-  const [open, setOpen] = useState(false);
-  return (
+Preview.args = {
+  children: (
     <>
-      <Button onClick={(): void => setOpen(true)}>{'Åpne modal'}</Button>
-      <Modal
-        open={open}
-        title={'Vil du erstatte nye opplysninger fra fil?'}
-        hideCloseButton
-      >
-        <Paragraph hasSpacing>
-          {
-            'Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?'
-          }
-        </Paragraph>
-        <div className={'flex'}>
-          <Button className={'marginRightM'}>{'Erstatt opplysninger'}</Button>
-          <Button variant={'tertiary'} onClick={(): void => setOpen(false)}>
-            {'Avbryt'}
-          </Button>
-        </div>
-      </Modal>
+      <Paragraph hasSpacing>
+        {
+          'Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?'
+        }
+      </Paragraph>
+      <div className={'flex'}>
+        <Button className={'marginRightM'}>{'Erstatt opplysninger'}</Button>
+        <Button variant={'tertiary'}>{'Avbryt'}</Button>
+      </div>
     </>
-  );
+  ),
+  title: 'Vil du erstatte nye opplysninger fra fil?',
+  padding: getModalPaddingDefault(),
+  variant: getModalVariantDefault(),
+  onClose: (): void => console.log('onClose activated'),
 };
 
 export const ExampleImportant: StoryFn<typeof Modal> = () => {
@@ -146,12 +108,7 @@ export const ExampleImportant: StoryFn<typeof Modal> = () => {
       >
         {'Viktig driftsmelding'}
       </Button>
-      <Modal
-        ref={ref}
-        variant={'important'}
-        title={'Viktig melding!'}
-        hideOutline
-      >
+      <Modal ref={ref} variant={'important'} title={'Viktig melding!'}>
         <Paragraph hasSpacing>
           {
             'Løsningen er ikke kommet i drift ennå eller tatt ned for vedlikehold.'

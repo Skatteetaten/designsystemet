@@ -1,12 +1,14 @@
 import { forwardRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import symbolLogo from './logo-symbol.png';
+import logo from './SKESquare40.svg';
 import { BaseProps } from '../base-props.types';
 import { getCommonClassNameDefault } from '../defaults';
+import { dsI18n } from '../i18n';
 
-import styles from './SymbolLogo.module.scss';
+import styles from './SkatteetatenLogo.module.scss';
 
-export const SymbolLogo = forwardRef<HTMLImageElement, BaseProps>(
+export const SkatteetatenLogo = forwardRef<HTMLImageElement, BaseProps>(
   (
     {
       id,
@@ -16,6 +18,8 @@ export const SymbolLogo = forwardRef<HTMLImageElement, BaseProps>(
     },
     ref
   ): JSX.Element => {
+    const { t } = useTranslation('Shared', { i18n: dsI18n });
+
     return (
       <img
         ref={ref}
@@ -23,11 +27,11 @@ export const SymbolLogo = forwardRef<HTMLImageElement, BaseProps>(
         className={`${styles.logo} ${className}`.trim()}
         lang={lang}
         data-testid={dataTestId}
-        src={symbolLogo}
-        alt={'Logo Skatteetaten'}
+        src={logo}
+        alt={t('shared.SkeLogoImageText')}
       />
     );
   }
 );
 
-SymbolLogo.displayName = 'SymbolLogo';
+SkatteetatenLogo.displayName = 'SkatteetatenLogo';

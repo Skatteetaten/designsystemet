@@ -13,7 +13,7 @@
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-regular);
   line-height: var(--semantic-line-height-article);
-  overflow-y: scroll;
+  overflow-y: auto;
 
   &::backdrop {
     background: rgba(255, 255, 255, 80%);

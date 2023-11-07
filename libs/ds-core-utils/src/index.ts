@@ -1,4 +1,4 @@
-export * from './SymbolLogo/SymbolLogo';
+export * from './SkatteetatenLogo/SkatteetatenLogo';
 export * from './base-props.types';
 export * from './defaults';
 export * from './example-layouts/ExternalLayout';

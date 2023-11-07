@@ -1,21 +1,14 @@
-import { ComponentPropsWithoutRef, ReactNode } from 'react';
+import { ReactNode } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 export const modalPaddingArr = ['none', 's', 'm', 'l', 'mega'] as const;
 export type ModalPadding = (typeof modalPaddingArr)[number];
 
-export const modalVariantArr = ['standard', 'important'] as const;
+export const modalVariantArr = ['standard', 'plain', 'important'] as const;
 export type ModalVariant = (typeof modalVariantArr)[number];
 
-type RequiredModalHTMLAttributes = Pick<
-  ComponentPropsWithoutRef<'dialog'>,
-  'open'
->;
-
-type ModalHTMLAttributes = Partial<RequiredModalHTMLAttributes>;
-
-export interface ModalProps extends ModalHTMLAttributes, BaseProps {
+export interface ModalProps extends BaseProps {
   classNames?: {
     container?: string;
     image?: string;
@@ -24,8 +17,6 @@ export interface ModalProps extends ModalHTMLAttributes, BaseProps {
   children: ReactNode;
   /** Definerer stilen til Modal */
   variant?: ModalVariant;
-  /** Modal uten ramme */
-  hideOutline?: boolean;
   /** Padding rundt Modal */
   padding?: ModalPadding;
   /** Overskrift */
@@ -35,7 +26,7 @@ export interface ModalProps extends ModalHTMLAttributes, BaseProps {
   /** Om lukkekryss skal skjules */
   hideCloseButton?: boolean;
   /** Om autolukking skal skrus av */
-  hideAutoClose?: boolean;
+  disableAutoClose?: boolean;
   /** Source til illustrasjonsbilde øverst i Modal */
   imageSource?: string;
   /** Alt tekst til illustrasjonsbilde */

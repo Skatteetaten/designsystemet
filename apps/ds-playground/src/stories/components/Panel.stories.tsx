@@ -21,7 +21,7 @@ import { Paragraph } from '@skatteetaten/ds-typography';
 import { Meta, StoryFn } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
-import illustrationSource from '../../assets/test_bonde.svg';
+import illustrationSource from '../../assets/farmer-illustration.svg';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import { getVersion } from '../utils/version.utils';
 
@@ -49,7 +49,7 @@ export default {
       control: 'select',
       options: [
         '',
-        'test_bonde.7eebe78d220ecf48b97e4811ac2c5210.svg',
+        'farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg',
         'd52134bda41b5aa041ef.png',
       ],
       table: { category: category.props },
