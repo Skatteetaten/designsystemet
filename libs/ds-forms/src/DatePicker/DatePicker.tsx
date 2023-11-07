@@ -133,7 +133,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
           {errorMessage ?? ''}
         </ErrorMessage>
         {showCalendar && (
-          <div className={styles.calendar_container}>
+          <div className={styles.calendarContainer}>
             {'TODO - FRONT-1346 Her kommer kalendervisning'}
           </div>
         )}

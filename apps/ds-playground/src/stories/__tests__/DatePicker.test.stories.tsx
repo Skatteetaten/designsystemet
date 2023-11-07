@@ -212,6 +212,24 @@ export const WithVariantLarge = {
   },
 } satisfies Story;
 
+export const WithVariantLargeAndLongText = {
+  name: 'With Variant Large And Long Text',
+  args: {
+    ...defaultArgs,
+    variant: 'large',
+    value: 'En lang tekst som ikke skal synes bak åpne ikonet',
+  },
+  argTypes: {
+    variant: { table: { disable: false } },
+    value: { table: { disable: false } },
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: '--mobile',
+    },
+  },
+} satisfies Story;
+
 export const WithDisabled = {
   name: 'With Disabled (B7)',
   args: {

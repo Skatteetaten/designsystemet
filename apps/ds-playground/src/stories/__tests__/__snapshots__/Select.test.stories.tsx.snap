@@ -100,14 +100,14 @@ exports[`Tester/Select/Select WithAttributes play-test 1`] = `
 exports[`Tester/Select/Select WithAutoCompleteNameAndPlaceholder play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label id="labelId-:r13:"
+    <label id="labelId-:r17:"
            class="LabelWithHelp_label__59tP-"
-           for="selectId-:r12:"
+           for="selectId-:r16:"
     >
       Ledetekst
     </label>
     <div class="Select_selectContainer__CfUZs ">
-      <select id="selectId-:r12:"
+      <select id="selectId-:r16:"
               class="Select_select__-ENv1"
               autocomplete="given-name"
               name="test_name"
@@ -137,7 +137,7 @@ exports[`Tester/Select/Select WithAutoCompleteNameAndPlaceholder play-test 1`] =
         </path>
       </svg>
     </div>
-    <div id="selectErrorId-:r11:"
+    <div id="selectErrorId-:r15:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -212,14 +212,14 @@ exports[`Tester/Select/Select WithCustomClassNames play-test 1`] = `
 exports[`Tester/Select/Select WithDefaultValue play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label id="labelId-:rv:"
+    <label id="labelId-:r13:"
            class="LabelWithHelp_label__59tP-"
-           for="selectId-:ru:"
+           for="selectId-:r12:"
     >
       Ledetekst
     </label>
     <div class="Select_selectContainer__CfUZs ">
-      <select id="selectId-:ru:"
+      <select id="selectId-:r12:"
               class="Select_select__-ENv1"
       >
         <option value>
@@ -247,7 +247,7 @@ exports[`Tester/Select/Select WithDefaultValue play-test 1`] = `
         </path>
       </svg>
     </div>
-    <div id="selectErrorId-:rt:"
+    <div id="selectErrorId-:r11:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -259,354 +259,15 @@ exports[`Tester/Select/Select WithDefaultValue play-test 1`] = `
 exports[`Tester/Select/Select WithDescription play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label id="labelId-:r1s:"
+    <label id="labelId-:r20:"
            class="LabelWithHelp_label__59tP-"
-           for="selectId-:r1r:"
+           for="selectId-:r1v:"
     >
       Ledetekst
     </label>
     <div class="Help_description__niabw">
       En liten beskrivelse tekst
     </div>
-    <div class="Select_selectContainer__CfUZs ">
-      <select id="selectId-:r1r:"
-              class="Select_select__-ENv1"
-              style="color: var(--palette-graphite-50);"
-      >
-        <option value>
-          Velg
-        </option>
-        <option class
-                value="option1"
-        >
-          Test 1
-        </option>
-        <option class
-                value="option2"
-        >
-          Test 2
-        </option>
-      </select>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-hidden="true"
-           role="img"
-      >
-        <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
-        </path>
-      </svg>
-    </div>
-    <div id="selectErrorId-:r1q:"
-         aria-live="assertive"
-         aria-atomic="true"
-    >
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Tester/Select/Select WithDisabled play-test 1`] = `
-<div data-test-block="true">
-  <div class>
-    <label id="labelId-:rn:"
-           class="LabelWithHelp_label__59tP-"
-           for="selectId-:rm:"
-    >
-      Ledetekst
-    </label>
-    <div class="Select_selectContainer__CfUZs ">
-      <select id="selectId-:rm:"
-              class="Select_select__-ENv1"
-              disabled
-      >
-        <option value>
-          Velg
-        </option>
-        <option class
-                value="option1"
-        >
-          Test 1
-        </option>
-        <option class
-                value="option2"
-        >
-          Test 2
-        </option>
-      </select>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-hidden="true"
-           role="img"
-      >
-        <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
-        </path>
-      </svg>
-    </div>
-    <div id="selectErrorId-:rl:"
-         aria-live="assertive"
-         aria-atomic="true"
-    >
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Tester/Select/Select WithError play-test 1`] = `
-<div data-test-block="true">
-  <div class>
-    <label id="labelId-:r1j:"
-           class="LabelWithHelp_label__59tP-"
-           for="selectId-:r1i:"
-    >
-      Ledetekst
-    </label>
-    <div class="Select_selectContainer__CfUZs ">
-      <select id="selectId-:r1i:"
-              class="Select_select__-ENv1"
-              style="color: var(--palette-graphite-50);"
-      >
-        <option value>
-          Velg
-        </option>
-        <option class
-                value="option1"
-        >
-          Test 1
-        </option>
-        <option class
-                value="option2"
-        >
-          Test 2
-        </option>
-      </select>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-hidden="true"
-           role="img"
-      >
-        <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
-        </path>
-      </svg>
-    </div>
-    <div id="selectErrorId-:r1h:"
-         aria-live="assertive"
-         aria-atomic="true"
-    >
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Tester/Select/Select WithErrorMessageAndHasError play-test 1`] = `
-<div data-test-block="true">
-  <div class>
-    <label id="labelId-:r1n:"
-           class="LabelWithHelp_label__59tP-"
-           for="selectId-:r1m:"
-    >
-      Ledetekst
-    </label>
-    <div class="Select_selectContainer__CfUZs ">
-      <select id="selectId-:r1m:"
-              class="Select_select__-ENv1"
-              aria-describedby="selectErrorId-:r1l:"
-              aria-invalid="true"
-              style="color: var(--palette-graphite-50);"
-      >
-        <option value>
-          Velg
-        </option>
-        <option class
-                value="option1"
-        >
-          Test 1
-        </option>
-        <option class
-                value="option2"
-        >
-          Test 2
-        </option>
-      </select>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-hidden="true"
-           role="img"
-      >
-        <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
-        </path>
-      </svg>
-    </div>
-    <div id="selectErrorId-:r1l:"
-         aria-live="assertive"
-         aria-atomic="true"
-    >
-      <div class="ErrorMessage_errorMessage__508oW ">
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-hidden="true"
-             role="img"
-        >
-          <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
-          </path>
-        </svg>
-        <p class="ErrorMessage_errorMessageText__e27TU">
-          Ledetekst er obligatorisk
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Tester/Select/Select WithEventHandlers play-test 1`] = `
-<div data-test-block="true">
-  <div class>
-    <label id="labelId-:r2a:"
-           class="LabelWithHelp_label__59tP-"
-           for="selectId-:r29:"
-    >
-      Select har blitt blurret
-    </label>
-    <div class="Select_selectContainer__CfUZs ">
-      <select id="selectId-:r29:"
-              class="Select_select__-ENv1"
-              style
-      >
-        <option value>
-          Velg
-        </option>
-        <option class
-                value="option1"
-        >
-          Test 1
-        </option>
-        <option class
-                value="option2"
-        >
-          Test 2
-        </option>
-      </select>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-hidden="true"
-           role="img"
-      >
-        <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
-        </path>
-      </svg>
-    </div>
-    <div id="selectErrorId-:r28:"
-         aria-live="assertive"
-         aria-atomic="true"
-    >
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Tester/Select/Select WithHelpText play-test 1`] = `
-<div data-test-block="true">
-  <div class>
-    <label id="labelId-:r24:"
-           class="LabelWithHelp_label__59tP-"
-           for="selectId-:r23:"
-    >
-      Ledetekst
-    </label>
-    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
-            type="button"
-            aria-describedby="labelId-:r24:"
-            aria-expanded="true"
-    >
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-labelledby="svgtitle-:r25:"
-           aria-hidden="false"
-           role="img"
-      >
-        <title id="svgtitle-:r25:">
-          Hjelp
-        </title>
-        <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
-        </path>
-      </svg>
-    </button>
-    <div class="Help_helpBox__nbhjO">
-      <span class="Help_helpBoxText__j6sH7">
-        Hjelpetekst
-      </span>
-      <button class="IconButton_button__mw9sG IconButton_button_small__etst4  Help_helpBoxCloseButton__RueX2"
-              type="button"
-      >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-labelledby="svgtitle-:r27:"
-             aria-hidden="false"
-             role="img"
-        >
-          <title id="svgtitle-:r27:">
-            Lukk
-          </title>
-          <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
-          </path>
-        </svg>
-      </button>
-    </div>
-    <div class="Select_selectContainer__CfUZs ">
-      <select id="selectId-:r23:"
-              class="Select_select__-ENv1"
-              style="color: var(--palette-graphite-50);"
-      >
-        <option value>
-          Velg
-        </option>
-        <option class
-                value="option1"
-        >
-          Test 1
-        </option>
-        <option class
-                value="option2"
-        >
-          Test 2
-        </option>
-      </select>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-hidden="true"
-           role="img"
-      >
-        <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
-        </path>
-      </svg>
-    </div>
-    <div id="selectErrorId-:r22:"
-         aria-live="assertive"
-         aria-atomic="true"
-    >
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Tester/Select/Select WithHideLabel play-test 1`] = `
-<div data-test-block="true">
-  <div class>
-    <label id="labelId-:r20:"
-           class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
-           for="selectId-:r1v:"
-    >
-      Ledetekst
-    </label>
     <div class="Select_selectContainer__CfUZs ">
       <select id="selectId-:r1v:"
               class="Select_select__-ENv1"
@@ -645,17 +306,356 @@ exports[`Tester/Select/Select WithHideLabel play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Select/Select WithHidePlaceholder play-test 1`] = `
+exports[`Tester/Select/Select WithDisabled play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label id="labelId-:r17:"
+    <label id="labelId-:rr:"
            class="LabelWithHelp_label__59tP-"
-           for="selectId-:r16:"
+           for="selectId-:rq:"
     >
       Ledetekst
     </label>
     <div class="Select_selectContainer__CfUZs ">
-      <select id="selectId-:r16:"
+      <select id="selectId-:rq:"
+              class="Select_select__-ENv1"
+              disabled
+      >
+        <option value>
+          Velg
+        </option>
+        <option class
+                value="option1"
+        >
+          Test 1
+        </option>
+        <option class
+                value="option2"
+        >
+          Test 2
+        </option>
+      </select>
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+        </path>
+      </svg>
+    </div>
+    <div id="selectErrorId-:rp:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Select/Select WithError play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:r1n:"
+           class="LabelWithHelp_label__59tP-"
+           for="selectId-:r1m:"
+    >
+      Ledetekst
+    </label>
+    <div class="Select_selectContainer__CfUZs ">
+      <select id="selectId-:r1m:"
+              class="Select_select__-ENv1"
+              style="color: var(--palette-graphite-50);"
+      >
+        <option value>
+          Velg
+        </option>
+        <option class
+                value="option1"
+        >
+          Test 1
+        </option>
+        <option class
+                value="option2"
+        >
+          Test 2
+        </option>
+      </select>
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+        </path>
+      </svg>
+    </div>
+    <div id="selectErrorId-:r1l:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Select/Select WithErrorMessageAndHasError play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:r1r:"
+           class="LabelWithHelp_label__59tP-"
+           for="selectId-:r1q:"
+    >
+      Ledetekst
+    </label>
+    <div class="Select_selectContainer__CfUZs ">
+      <select id="selectId-:r1q:"
+              class="Select_select__-ENv1"
+              aria-describedby="selectErrorId-:r1p:"
+              aria-invalid="true"
+              style="color: var(--palette-graphite-50);"
+      >
+        <option value>
+          Velg
+        </option>
+        <option class
+                value="option1"
+        >
+          Test 1
+        </option>
+        <option class
+                value="option2"
+        >
+          Test 2
+        </option>
+      </select>
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+        </path>
+      </svg>
+    </div>
+    <div id="selectErrorId-:r1p:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+      <div class="ErrorMessage_errorMessage__508oW ">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+          </path>
+        </svg>
+        <p class="ErrorMessage_errorMessageText__e27TU">
+          Ledetekst er obligatorisk
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Select/Select WithEventHandlers play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:r2e:"
+           class="LabelWithHelp_label__59tP-"
+           for="selectId-:r2d:"
+    >
+      Select har blitt blurret
+    </label>
+    <div class="Select_selectContainer__CfUZs ">
+      <select id="selectId-:r2d:"
+              class="Select_select__-ENv1"
+              style
+      >
+        <option value>
+          Velg
+        </option>
+        <option class
+                value="option1"
+        >
+          Test 1
+        </option>
+        <option class
+                value="option2"
+        >
+          Test 2
+        </option>
+      </select>
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+        </path>
+      </svg>
+    </div>
+    <div id="selectErrorId-:r2c:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Select/Select WithHelpText play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:r28:"
+           class="LabelWithHelp_label__59tP-"
+           for="selectId-:r27:"
+    >
+      Ledetekst
+    </label>
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+            type="button"
+            aria-describedby="labelId-:r28:"
+            aria-expanded="true"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r29:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r29:">
+          Hjelp
+        </title>
+        <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+        </path>
+      </svg>
+    </button>
+    <div class="Help_helpBox__nbhjO">
+      <span class="Help_helpBoxText__j6sH7">
+        Hjelpetekst
+      </span>
+      <button class="IconButton_button__mw9sG IconButton_button_small__etst4  Help_helpBoxCloseButton__RueX2"
+              type="button"
+      >
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r2b:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r2b:">
+            Lukk
+          </title>
+          <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div class="Select_selectContainer__CfUZs ">
+      <select id="selectId-:r27:"
+              class="Select_select__-ENv1"
+              style="color: var(--palette-graphite-50);"
+      >
+        <option value>
+          Velg
+        </option>
+        <option class
+                value="option1"
+        >
+          Test 1
+        </option>
+        <option class
+                value="option2"
+        >
+          Test 2
+        </option>
+      </select>
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+        </path>
+      </svg>
+    </div>
+    <div id="selectErrorId-:r26:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Select/Select WithHideLabel play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:r24:"
+           class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+           for="selectId-:r23:"
+    >
+      Ledetekst
+    </label>
+    <div class="Select_selectContainer__CfUZs ">
+      <select id="selectId-:r23:"
+              class="Select_select__-ENv1"
+              style="color: var(--palette-graphite-50);"
+      >
+        <option value>
+          Velg
+        </option>
+        <option class
+                value="option1"
+        >
+          Test 1
+        </option>
+        <option class
+                value="option2"
+        >
+          Test 2
+        </option>
+      </select>
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+        </path>
+      </svg>
+    </div>
+    <div id="selectErrorId-:r22:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Select/Select WithHidePlaceholder play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:r1b:"
+           class="LabelWithHelp_label__59tP-"
+           for="selectId-:r1a:"
+    >
+      Ledetekst
+    </label>
+    <div class="Select_selectContainer__CfUZs ">
+      <select id="selectId-:r1a:"
               class="Select_select__-ENv1"
       >
         <option class
@@ -679,7 +679,7 @@ exports[`Tester/Select/Select WithHidePlaceholder play-test 1`] = `
         </path>
       </svg>
     </div>
-    <div id="selectErrorId-:r15:"
+    <div id="selectErrorId-:r19:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -739,56 +739,8 @@ exports[`Tester/Select/Select WithRef play-test 1`] = `
 exports[`Tester/Select/Select WithRequired play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label id="labelId-:r1b:"
-           class="LabelWithHelp_label__59tP-"
-           for="selectId-:r1a:"
-    >
-      Ledetekst
-    </label>
-    <div class="Select_selectContainer__CfUZs ">
-      <select id="selectId-:r1a:"
-              class="Select_select__-ENv1"
-              required
-              style="color: var(--palette-graphite-50);"
-      >
-        <option value>
-          Velg
-        </option>
-        <option class
-                value="option1"
-        >
-          Test 1
-        </option>
-        <option class
-                value="option2"
-        >
-          Test 2
-        </option>
-      </select>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-hidden="true"
-           role="img"
-      >
-        <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
-        </path>
-      </svg>
-    </div>
-    <div id="selectErrorId-:r19:"
-         aria-live="assertive"
-         aria-atomic="true"
-    >
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Tester/Select/Select WithRequiredAndMark smoke-test 1`] = `
-<div data-test-block="true">
-  <div class>
     <label id="labelId-:r1f:"
-           class="LabelWithHelp_label__59tP- LabelWithHelp_label_required__KSuzW"
+           class="LabelWithHelp_label__59tP-"
            for="selectId-:r1e:"
     >
       Ledetekst
@@ -832,17 +784,65 @@ exports[`Tester/Select/Select WithRequiredAndMark smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Select/Select WithValue play-test 1`] = `
+exports[`Tester/Select/Select WithRequiredAndMark smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label id="labelId-:rr:"
-           class="LabelWithHelp_label__59tP-"
-           for="selectId-:rq:"
+    <label id="labelId-:r1j:"
+           class="LabelWithHelp_label__59tP- LabelWithHelp_label_required__KSuzW"
+           for="selectId-:r1i:"
     >
       Ledetekst
     </label>
     <div class="Select_selectContainer__CfUZs ">
-      <select id="selectId-:rq:"
+      <select id="selectId-:r1i:"
+              class="Select_select__-ENv1"
+              required
+              style="color: var(--palette-graphite-50);"
+      >
+        <option value>
+          Velg
+        </option>
+        <option class
+                value="option1"
+        >
+          Test 1
+        </option>
+        <option class
+                value="option2"
+        >
+          Test 2
+        </option>
+      </select>
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+        </path>
+      </svg>
+    </div>
+    <div id="selectErrorId-:r1h:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Select/Select WithValue play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:rv:"
+           class="LabelWithHelp_label__59tP-"
+           for="selectId-:ru:"
+    >
+      Ledetekst
+    </label>
+    <div class="Select_selectContainer__CfUZs ">
+      <select id="selectId-:ru:"
               class="Select_select__-ENv1"
       >
         <option value>
@@ -869,7 +869,7 @@ exports[`Tester/Select/Select WithValue play-test 1`] = `
         </path>
       </svg>
     </div>
-    <div id="selectErrorId-:rp:"
+    <div id="selectErrorId-:rt:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -917,6 +917,44 @@ exports[`Tester/Select/Select WithVariantLarge smoke-test 1`] = `
       </svg>
     </div>
     <div id="selectErrorId-:rh:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Select/Select WithVariantLargeAndLongText smoke-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:rn:"
+           class="LabelWithHelp_label__59tP-"
+           for="selectId-:rm:"
+    >
+      Ledetekst
+    </label>
+    <div class="Select_selectContainer__CfUZs ">
+      <select id="selectId-:rm:"
+              class="Select_select__-ENv1 Select_select_large__Pq2eA"
+      >
+        <option class
+                value="option1"
+        >
+          En lang tekst som ikke skal synes bak åpne ikonet
+        </option>
+      </select>
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N Select_selectIcon_large__m1vHf"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+        </path>
+      </svg>
+    </div>
+    <div id="selectErrorId-:rl:"
          aria-live="assertive"
          aria-atomic="true"
     >

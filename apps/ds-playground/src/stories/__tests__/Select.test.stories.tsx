@@ -180,6 +180,7 @@ export const Defaults = {
   },
   argTypes: {
     label: { table: { disable: false } },
+    children: { table: { disable: false } },
   },
   parameters: {
     imageSnapshot: {
@@ -215,6 +216,29 @@ export const WithVariantLarge = {
   },
   argTypes: {
     variant: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithVariantLargeAndLongText = {
+  name: 'With Variant Large And Long Text',
+  args: {
+    ...defaultArgs,
+    hidePlaceholder: true,
+    variant: 'large',
+    children: [
+      <Select.Option key={'option_1'} value={valueOption1}>
+        {'En lang tekst som ikke skal synes bak åpne ikonet'}
+      </Select.Option>,
+    ],
+  },
+  argTypes: {
+    variant: { table: { disable: false } },
+    children: { table: { disable: false } },
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: '--mobile',
+    },
   },
 } satisfies Story;
 
