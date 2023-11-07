@@ -57,7 +57,6 @@ export default {
     },
     hasResultContentFullWidth: { table: { category: category.props } },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-collections'),
   },

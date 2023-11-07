@@ -39,7 +39,6 @@ export default {
     colSpan: { table: { category: category.htmlAttribute } },
     scope: { table: { category: category.htmlAttribute } },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-table'),
   },

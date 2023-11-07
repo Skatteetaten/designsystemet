@@ -13,7 +13,6 @@ export default {
     // Props
     children: { control: { type: null }, table: { category: category.props } },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-layout'),
   },

@@ -26,7 +26,6 @@ export default {
       table: { category: category.aria },
     },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-table'),
   },

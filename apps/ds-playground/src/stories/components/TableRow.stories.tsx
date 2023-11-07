@@ -61,7 +61,6 @@ export default {
       },
     },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-table'),
   },

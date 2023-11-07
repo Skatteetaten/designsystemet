@@ -18,7 +18,6 @@ export default {
     // Aria
     ariaDescribedby: { table: { category: category.aria } },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-forms'),
   },

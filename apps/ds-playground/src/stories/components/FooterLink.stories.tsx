@@ -12,7 +12,6 @@ export default {
     ...LinkMeta.argTypes,
     color: { table: { disable: true } },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-layout'),
   },

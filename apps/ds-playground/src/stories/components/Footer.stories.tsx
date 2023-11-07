@@ -1,4 +1,4 @@
-import { LinkGroup, Link } from '@skatteetaten/ds-buttons';
+import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { Footer } from '@skatteetaten/ds-layout';
 import { Paragraph, Heading } from '@skatteetaten/ds-typography';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
@@ -75,8 +75,6 @@ export const Example: StoryFn<typeof Footer> = (_args) => (
             {'Hvordan få tilgang til data'}
           </LinkGroup.Link>
         </LinkGroup>
-        <Link href={'#'}>{'Link etter LinkGroup'}</Link>
-        <Link href={'#'}>{'Link andrelink'}</Link>
       </>
     }
   >

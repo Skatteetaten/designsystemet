@@ -12,7 +12,6 @@ export default {
     children: { table: { category: category.props } },
     referenceId: { table: { category: category.props } },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-forms'),
   },

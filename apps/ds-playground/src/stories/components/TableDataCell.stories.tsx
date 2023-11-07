@@ -37,7 +37,6 @@ export default {
       table: { category: category.htmlAttribute },
     },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-table'),
   },

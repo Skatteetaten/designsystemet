@@ -120,3 +120,69 @@ Example.parameters = {
     exclude: /.*/,
   },
 };
+
+export const ExampleSource: StoryFn<typeof ErrorSummary> = () => {
+  const [state, setState] = useState({
+    hasError: false,
+  });
+  return (
+    <>
+      <TextField
+        id={'input_aar'}
+        label={'År'}
+        value={1009}
+        errorMessage={'Inntekståret må være etter 2008'}
+        hasError={state.hasError}
+        required
+      />
+      <TextField
+        id={'input_epost'}
+        label={'E-post'}
+        value={'Ola.Normann.no'}
+        errorMessage={
+          'E-posten ser ikke riktig ut. Skriv slik: ola.normann@norge.no'
+        }
+        hasError={state.hasError}
+        required
+      />
+      <TextField
+        className={'bottomSpacingXL'}
+        id={'input_dager'}
+        label={'Antall dager i Norge i perioden/inntekståret'}
+        errorMessage={'Antall dager må fylles ut.'}
+        hasError={state.hasError}
+        required
+      />
+      <ErrorSummary id={'errorSummary1'} showErrorSummary={state.hasError}>
+        <ErrorSummary.Error referenceId={'input_aar'}>
+          {'Inntekståret må være etter 2008'}
+        </ErrorSummary.Error>
+        <ErrorSummary.Error referenceId={'input_epost'}>
+          {'E-posten ser ikke riktig ut. Skriv slik: ola.normann@norge.no'}
+        </ErrorSummary.Error>
+        <ErrorSummary.Error referenceId={'input_dager'}>
+          {'Antall dager må fylles ut.'}
+        </ErrorSummary.Error>
+      </ErrorSummary>
+      <Button
+        className={'topSpacingXL'}
+        onClick={(): void => {
+          setState({ hasError: !state.hasError });
+          setTimeout((): void => {
+            const el = document.getElementById('errorSummary1');
+            el?.focus();
+          }, 0);
+        }}
+      >
+        {'Send'}
+      </Button>
+    </>
+  );
+};
+
+ExampleSource.tags = ['isHidden'];
+ExampleSource.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};

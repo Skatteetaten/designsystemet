@@ -10,6 +10,11 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+RadioGroup.Radio = { ...RadioGroup.Radio };
+RadioGroup.Radio.displayName = 'RadioGroup.Radio';
+
 export default {
   component: RadioGroup,
   title: 'Komponenter/RadioGroup/RadioGroup',
@@ -120,6 +125,36 @@ ExampleStandard.parameters = {
   },
 };
 
+export const ExampleStandardSource: StoryFn<typeof RadioGroup> = () => {
+  const [state, setState] = useState({
+    selectedValue: 'foretak',
+  });
+
+  return (
+    <RadioGroup
+      legend={'Type virksomhet'}
+      errorMessage={'Valg av type virksomhet er påkrevd.'}
+      selectedValue={state.selectedValue}
+      showRequiredMark
+      required
+      onChange={(e): void => setState({ selectedValue: e.target.value })}
+    >
+      <RadioGroup.Radio value={'foretak'}>
+        {'Enkeltpersonsforetak'}
+      </RadioGroup.Radio>
+      <RadioGroup.Radio value={'selskap'}>{'Aksjeselskap'}</RadioGroup.Radio>
+      <RadioGroup.Radio value={'annet'}>{'Annet'}</RadioGroup.Radio>
+    </RadioGroup>
+  );
+};
+
+ExampleStandardSource.tags = ['isHidden'];
+ExampleStandardSource.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};
+
 export const ExampleHorizontal: StoryFn<typeof RadioGroup> = (_args) => {
   const [state, setState] = useState({
     selectedValue: 'nei',
@@ -140,6 +175,32 @@ export const ExampleHorizontal: StoryFn<typeof RadioGroup> = (_args) => {
 };
 
 ExampleHorizontal.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};
+
+export const ExampleHorizontalSource: StoryFn<typeof RadioGroup> = (_args) => {
+  const [state, setState] = useState({
+    selectedValue: 'nei',
+  });
+
+  return (
+    <RadioGroup
+      variant={'horizontal'}
+      legend={'Har du sendt inn skattemeldingen?'}
+      selectedValue={state.selectedValue}
+      required
+      onChange={(e): void => setState({ selectedValue: e.target.value })}
+    >
+      <RadioGroup.Radio value={'ja'}>{'Ja'}</RadioGroup.Radio>
+      <RadioGroup.Radio value={'nei'}>{'Nei'}</RadioGroup.Radio>
+    </RadioGroup>
+  );
+};
+
+ExampleHorizontalSource.tags = ['isHidden'];
+ExampleHorizontalSource.parameters = {
   controls: {
     exclude: /.*/,
   },

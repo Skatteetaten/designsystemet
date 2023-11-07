@@ -128,3 +128,61 @@ Example.parameters = {
     exclude: /.*/,
   },
 };
+
+export const ExampleSource: StoryFn<typeof CheckboxGroup> = () => {
+  const options = [
+    {
+      label: 'Har barn over 16 år',
+    },
+    {
+      label: 'Har barn under 12 år',
+    },
+    {
+      label:
+        'Får ekstra reisevei til jobb på grunn av levering til barnehage eller skolefritidsordning',
+    },
+    {
+      label:
+        'Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov',
+    },
+    {
+      label: 'Er enslig forsørger',
+    },
+  ];
+
+  const [checkedState, setCheckedState] = useState(
+    new Array(options.length).fill(false)
+  );
+
+  const handleOnChange = (position: number): void => {
+    const updatedCheckedState = checkedState.map((option, index) =>
+      index === position ? !option : option
+    );
+    setCheckedState(updatedCheckedState);
+  };
+  return (
+    <>
+      <CheckboxGroup legend={'Velg det som gjelder deg'}>
+        {options.map((option, index) => {
+          return (
+            <CheckboxGroup.Checkbox
+              key={index}
+              checked={checkedState[index]}
+              onChange={(): void => handleOnChange(index)}
+            >
+              {option.label}
+            </CheckboxGroup.Checkbox>
+          );
+        })}
+      </CheckboxGroup>
+      <Button>{'Neste side'}</Button>
+    </>
+  );
+};
+
+ExampleSource.tags = ['isHidden'];
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};
