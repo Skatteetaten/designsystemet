@@ -7,6 +7,9 @@ import { category } from '../../../.storybook/helpers';
 import logo from '../__tests__/testUtils/Skatteetaten-Logo-Horisontal-RGB-Hvit.png';
 import { getVersion } from '../utils/version.utils';
 
+Footer.Link.displayName = 'Footer.Link';
+Footer.Logo.displayName = 'Footer.Logo';
+
 export default {
   component: Footer,
   title: 'Komponenter/Footer/Footer',
