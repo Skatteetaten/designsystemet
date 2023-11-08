@@ -7,6 +7,7 @@ apps/ds-playground/coverage/
 /.idea
 /.scannerwork
 /.nyc_output
+/.vscode
 apps/ds-playground/.nyc_output
 
 **/*stats.html

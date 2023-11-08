@@ -128,7 +128,7 @@ export const WithAttributes = {
     const canvas = within(canvasElement);
     const selectNode = canvas.getByRole('combobox');
     const container = canvas.getAllByRole('generic')[1];
-    await expect(selectNode).toHaveAttribute('id', 'selectId-htmlid');
+    await expect(selectNode).toHaveAttribute('id', 'htmlid');
     await expect(selectNode).toHaveAttribute('data-testid', '123ID');
     await expect(container).toHaveClass('dummyClassname');
     await expect(container).toHaveAttribute('lang', 'nb');

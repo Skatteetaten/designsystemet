@@ -33,15 +33,17 @@
             "output": "build"
           }
         ],
-        "babelUpwardRootMode": true,
-        "updateBuildableProjectDepsInPackageJson": true
+        "babelUpwardRootMode": true
       }
     },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/ds-dev-config/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "libs/ds-dev-config/**/*.{ts,tsx,js,jsx}",
+          "libs/ds-dev-config/package.json"
+        ]
       }
     },
     "test": {

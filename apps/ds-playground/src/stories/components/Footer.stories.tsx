@@ -1,11 +1,14 @@
 import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { Footer } from '@skatteetaten/ds-layout';
 import { Paragraph, Heading } from '@skatteetaten/ds-typography';
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import logo from '../../assets/ske-logo-horizontal-white.png';
 import { getVersion } from '../utils/version.utils';
+
+Footer.Link.displayName = 'Footer.Link';
+Footer.Logo.displayName = 'Footer.Logo';
 
 export default {
   component: Footer,
@@ -29,11 +32,13 @@ export default {
   },
 } satisfies Meta<typeof Footer>;
 
-export const Default: StoryFn<typeof Footer> = () => (
-  <Footer titleFirstColumn={'Om Skatteetaten'} />
-);
+export const Preview: StoryObj<typeof Footer> = {
+  args: {
+    titleFirstColumn: 'Om Skatteetaten',
+  },
+};
 
-export const Example: StoryFn<typeof Footer> = () => (
+export const Example: StoryFn<typeof Footer> = (_args) => (
   <Footer
     titleFirstColumn={'Om Skatteetaten'}
     titleSecondColumn={'Følg oss'}
@@ -96,3 +101,9 @@ export const Example: StoryFn<typeof Footer> = () => (
     </Footer.Link>
   </Footer>
 );
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};

@@ -16,12 +16,11 @@ export default {
     children: { control: false, table: { category: category.props } },
   },
   parameters: {
-    docs: { source: { type: 'code' } },
     version: getVersion('ds-collections'),
   },
 } satisfies Meta<typeof StepList>;
 
-export const Default: StoryFn<typeof StepList> = () => {
+export const Preview: StoryFn<typeof StepList> = () => {
   const stepId = useId();
   const [activeStep, setActiveStep] = useState(1);
   const [step3, setStep3] = useState<string | undefined>(undefined);

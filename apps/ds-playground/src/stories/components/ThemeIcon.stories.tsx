@@ -6,7 +6,7 @@ import {
   iconVariantArr,
   AndreForholdSVGpath,
 } from '@skatteetaten/ds-icons';
-import { StoryFn, Meta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { ThemeIconLabels, ThemeSVGPaths } from '../utils/icon.themes';
@@ -57,6 +57,8 @@ export default {
   },
 } satisfies Meta<typeof Icon>;
 
-export const Default: StoryFn<typeof Icon> = () => (
-  <Icon svgPath={AndreForholdSVGpath} variant={'themeIcon'} />
-);
+export const Preview: StoryObj<typeof Icon> = {
+  args: {
+    svgPath: AndreForholdSVGpath,
+  },
+};

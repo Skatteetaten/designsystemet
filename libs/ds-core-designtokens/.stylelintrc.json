@@ -3,6 +3,12 @@
   "ignoreFiles": ["!**/*"],
   "overrides": [
     {
+      "files": ["palette.css"],
+      "rules": {
+        "color-no-hex": null
+      }
+    },
+    {
       "files": ["**/*.css"],
       "rules": {}
     },

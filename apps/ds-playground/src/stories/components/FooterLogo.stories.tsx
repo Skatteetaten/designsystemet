@@ -6,23 +6,19 @@ import illustration from '../../assets/farmer-illustration.svg';
 import logo from '../../assets/ske-logo-horizontal-white.png';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: Footer.Logo,
   title: 'Komponenter/Footer/Logo',
   argTypes: {
     // Props
     children: { control: { type: null }, table: { category: category.props } },
   },
-  tags: ['autodocs'],
   parameters: {
-    docs: { source: { code: null } },
     version: getVersion('ds-layout'),
   },
 } satisfies Meta<typeof Footer.Logo>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: StoryFn<typeof Footer.Logo> = () => (
+const Template: StoryFn<typeof Footer.Logo> = () => (
   <Footer titleFirstColumn={'Om Skatteetaten'}>
     <Footer.Logo>
       <img className={'logoHeight'} alt={'Logo'} src={logo}></img>
@@ -33,10 +29,9 @@ const TemplateDefault: StoryFn<typeof Footer.Logo> = () => (
   </Footer>
 );
 
-export const FooterDefault = {
-  render: TemplateDefault,
-  name: 'Default',
+export const Preview = {
+  render: Template,
   args: {
     children: 'dummy',
   },
-} satisfies Story;
+} satisfies StoryObj<typeof Footer.Logo>;

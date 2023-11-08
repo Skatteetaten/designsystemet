@@ -4,7 +4,7 @@ import {
   Paragraph,
   paragraphVariantArr,
 } from '@skatteetaten/ds-typography';
-import { StoryFn, Meta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
@@ -36,11 +36,13 @@ export default {
   },
 } satisfies Meta<typeof Paragraph>;
 
-export const Default: StoryFn<typeof Paragraph> = () => (
-  <Paragraph>{loremIpsum}</Paragraph>
-);
+export const Preview: StoryObj<typeof Paragraph> = {
+  args: {
+    children: loremIpsum,
+  },
+};
 
-export const Example: StoryFn<typeof Paragraph> = () => (
+export const Example: StoryFn<typeof Paragraph> = (_args) => (
   <>
     <Heading as={'h1'} level={1} hasSpacing>
       {'Flere oppgir kryptoverdier i skattemeldingen'}
@@ -68,3 +70,9 @@ export const Example: StoryFn<typeof Paragraph> = () => (
     </Paragraph>
   </>
 );
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};

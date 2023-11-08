@@ -1,9 +1,14 @@
 import { LinkGroup, linkGroupVariantArr } from '@skatteetaten/ds-buttons';
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
-import { StoryFn, Meta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+LinkGroup.Link = { ...LinkGroup.Link };
+LinkGroup.Link.displayName = 'LinkGroup.Link';
 
 export default {
   component: LinkGroup,
@@ -35,25 +40,27 @@ export default {
   },
 } as Meta<typeof LinkGroup>;
 
-export const Default: StoryFn<typeof LinkGroup> = () => (
-  <LinkGroup>
-    <LinkGroup.Link
-      key={'linkGroupLink_1'}
-      target={'_blank'}
-      href={'#storybook-root'}
-    >
-      {'Er du pendler?'}
-    </LinkGroup.Link>
-    <LinkGroup.Link key={'linkGroupLink_2'} href={'#storybook-root'}>
-      {'Pendler du mye?'}
-    </LinkGroup.Link>
-    <LinkGroup.Link key={'linkGroupLink_3'} href={'#storybook-root'}>
-      {'Pendler du dagen lang?'}
-    </LinkGroup.Link>
-  </LinkGroup>
-);
+export const Preview: StoryObj<typeof LinkGroup> = {
+  args: {
+    children: [
+      <LinkGroup.Link
+        key={'linkGroupLink1'}
+        target={'_blank'}
+        href={'#storybook-root'}
+      >
+        {'Er du pendler?'}
+      </LinkGroup.Link>,
+      <LinkGroup.Link key={'linkGroupLink2'} href={'#storybook-root'}>
+        {'Pendler du mye?'}
+      </LinkGroup.Link>,
+      <LinkGroup.Link key={'linkGroupLink3'} href={'#storybook-root'}>
+        {'Pendler du dagen lang?'}
+      </LinkGroup.Link>,
+    ],
+  },
+};
 
-export const Example: StoryFn<typeof LinkGroup> = () => (
+export const Example: StoryFn<typeof LinkGroup> = (_args) => (
   <>
     <LinkGroup hasSpacing>
       <LinkGroup.Link key={'linkGroupLink_1'} href={'#storybook-root'}>
@@ -82,3 +89,9 @@ export const Example: StoryFn<typeof LinkGroup> = () => (
     </LinkGroup>
   </>
 );
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};

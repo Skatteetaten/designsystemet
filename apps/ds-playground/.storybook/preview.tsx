@@ -70,7 +70,7 @@ const DSViewports = {
 
 const parameters = {
   actions: { argTypesRegex: '^on.*' },
-  controls: { sort: 'alpha' },
+  controls: { sort: 'alpha', hideNoControlsWarning: true },
   viewport: { viewports: DSViewports },
   options: {
     storySort: {
@@ -115,7 +115,7 @@ const argTypes = {
   className: {
     control: 'select',
     options: ['', 'dummyClassname'],
-    description: 'html class til noden',
+    description: 'html class attributt til noden',
     table: {
       type: { summary: 'string' },
       category: category.baseProps,
@@ -124,17 +124,17 @@ const argTypes = {
   },
   id: {
     control: 'text',
-    description: 'unik id attribute',
+    description: 'html id attributt',
     table: { type: { summary: 'string' }, category: category.baseProps },
   },
   lang: {
     control: 'text',
-    description: 'html lang attribute',
+    description: 'html lang attributt',
     table: { type: { summary: 'string' }, category: category.baseProps },
   },
   'data-testid': {
     control: 'text',
-    description: 'data attribute som brukes for tester',
+    description: 'html data attributt som brukes for tester',
     table: { type: { summary: 'string' }, category: category.baseProps },
   },
 };

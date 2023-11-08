@@ -7,7 +7,7 @@ import {
   TextField,
   getErrorSummaryTitleAsDefault,
 } from '@skatteetaten/ds-forms';
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
@@ -41,21 +41,22 @@ export default {
   },
 } satisfies Meta<typeof ErrorSummary>;
 
-export const Default: StoryFn<typeof ErrorSummary> = () => (
-  <ErrorSummary
-    content={'Her kan du legge inn vilkårlig innhold'}
-    showErrorSummary
-  >
-    <ErrorSummary.Error referenceId={'id1'}>
-      {'Husk å fylle ut type varer'}
-    </ErrorSummary.Error>
-    <ErrorSummary.Error referenceId={'id2'}>
-      {'Selger du varer og tjenester for egen regning?'}
-    </ErrorSummary.Error>
-  </ErrorSummary>
-);
+export const Preview: StoryObj<typeof ErrorSummary> = {
+  args: {
+    showErrorSummary: true,
+    content: 'Her kan du legge inn vilkårlig innhold.',
+    children: [
+      <ErrorSummary.Error key={'error1'} referenceId={'id1'}>
+        {'Husk å fylle ut type varer'}
+      </ErrorSummary.Error>,
+      <ErrorSummary.Error key={'error2'} referenceId={'id2'}>
+        {'Selger du varer og tjenester for egen regning?'}
+      </ErrorSummary.Error>,
+    ],
+  },
+};
 
-export const Example: StoryFn<typeof ErrorSummary> = () => {
+export const Example: StoryFn<typeof ErrorSummary> = (_args) => {
   const [state, setState] = useState({
     hasError: false,
   });
@@ -112,4 +113,76 @@ export const Example: StoryFn<typeof ErrorSummary> = () => {
       </Button>
     </>
   );
+};
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};
+
+export const ExampleSource: StoryFn<typeof ErrorSummary> = () => {
+  const [state, setState] = useState({
+    hasError: false,
+  });
+  return (
+    <>
+      <TextField
+        id={'input_aar'}
+        label={'År'}
+        value={1009}
+        errorMessage={'Inntekståret må være etter 2008'}
+        hasError={state.hasError}
+        required
+      />
+      <TextField
+        id={'input_epost'}
+        label={'E-post'}
+        value={'Ola.Normann.no'}
+        errorMessage={
+          'E-posten ser ikke riktig ut. Skriv slik: ola.normann@norge.no'
+        }
+        hasError={state.hasError}
+        required
+      />
+      <TextField
+        className={'bottomSpacingXL'}
+        id={'input_dager'}
+        label={'Antall dager i Norge i perioden/inntekståret'}
+        errorMessage={'Antall dager må fylles ut.'}
+        hasError={state.hasError}
+        required
+      />
+      <ErrorSummary id={'errorSummary1'} showErrorSummary={state.hasError}>
+        <ErrorSummary.Error referenceId={'input_aar'}>
+          {'Inntekståret må være etter 2008'}
+        </ErrorSummary.Error>
+        <ErrorSummary.Error referenceId={'input_epost'}>
+          {'E-posten ser ikke riktig ut. Skriv slik: ola.normann@norge.no'}
+        </ErrorSummary.Error>
+        <ErrorSummary.Error referenceId={'input_dager'}>
+          {'Antall dager må fylles ut.'}
+        </ErrorSummary.Error>
+      </ErrorSummary>
+      <Button
+        className={'topSpacingXL'}
+        onClick={(): void => {
+          setState({ hasError: !state.hasError });
+          setTimeout((): void => {
+            const el = document.getElementById('errorSummary1');
+            el?.focus();
+          }, 0);
+        }}
+      >
+        {'Send'}
+      </Button>
+    </>
+  );
+};
+
+ExampleSource.tags = ['isHidden'];
+ExampleSource.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
 };

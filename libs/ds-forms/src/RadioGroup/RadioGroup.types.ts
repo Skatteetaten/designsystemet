@@ -65,13 +65,11 @@ interface RadioGroupComponentCommonProps
 
 type RadioGroupDiscriminatedRequiredProps =
   | {
-      /** Om gruppen er obligatorisk */
       required: boolean;
       /** Om obligatorisk gruppe skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
       showRequiredMark?: FieldsetProps['showRequiredMark'];
     }
   | {
-      /** Om gruppen er obligatorisk */
       required?: never;
       /** Om obligatorisk gruppe skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
       showRequiredMark?: never;
