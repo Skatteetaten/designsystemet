@@ -10,7 +10,7 @@ import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: DatePicker,
   title: 'Komponenter/DatePicker',
   argTypes: {
@@ -71,13 +71,10 @@ const meta = {
     onChange: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-forms'),
   },
 } satisfies Meta<typeof DatePicker>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
 const TemplateDefault: StoryFn<typeof DatePicker> = (args) => {
   const [, setArgs] = useArgs();
@@ -91,7 +88,7 @@ const TemplateDefault: StoryFn<typeof DatePicker> = (args) => {
   );
 };
 
-export const DatePickerDefault: StoryObj<DatePickerProps> = {
+export const Preview: StoryObj<DatePickerProps> = {
   render: TemplateDefault,
   name: 'Default',
   argTypes: {
@@ -102,4 +99,4 @@ export const DatePickerDefault: StoryObj<DatePickerProps> = {
     defaultValue: undefined,
     value: '',
   },
-} satisfies Story;
+} satisfies StoryObj<typeof DatePicker>;

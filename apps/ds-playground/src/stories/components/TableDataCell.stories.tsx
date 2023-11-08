@@ -8,7 +8,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: Table.DataCell,
   title: 'Komponenter/Table/DataCell',
   argTypes: {
@@ -37,18 +37,13 @@ const meta = {
       table: { category: category.htmlAttribute },
     },
   },
-  tags: ['autodocs'],
   parameters: {
-    docs: { source: { code: null } },
     version: getVersion('ds-table'),
   },
 } satisfies Meta<typeof Table.DataCell>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-export const DataCellDefault = {
-  name: 'Default',
+export const Preview = {
   args: {
     children: 'Example DataCell',
   },
-} satisfies Story;
+} satisfies StoryObj<typeof Table.DataCell>;

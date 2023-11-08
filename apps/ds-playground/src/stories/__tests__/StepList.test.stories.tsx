@@ -5,7 +5,7 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
 
 import { category } from '../../../.storybook/helpers';
-import { Default } from '../components/StepList.stories';
+import { Preview } from '../components/StepList.stories';
 
 const meta = {
   component: StepList,
@@ -195,7 +195,7 @@ export const WithBreakPointMobile = {
 
 export const WithMultipleSteps = {
   name: 'With steps (A6, A8, A9)',
-  render: Default,
+  render: Preview,
   parameters: {
     imageSnapshot: { disable: true },
   },

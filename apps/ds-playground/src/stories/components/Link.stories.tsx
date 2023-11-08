@@ -1,6 +1,6 @@
 import { Link } from '@skatteetaten/ds-buttons';
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
-import { StoryFn, Meta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -47,11 +47,14 @@ export default {
   },
 } satisfies Meta<typeof Link>;
 
-export const Default: StoryFn<typeof Link> = () => (
-  <Link href={'#'}>{'Er du pendler?'}</Link>
-);
+export const Preview: StoryObj<typeof Link> = {
+  args: {
+    children: 'Er du pendler?',
+    href: '#',
+  },
+};
 
-export const Example: StoryFn<typeof Link> = () => (
+export const Example: StoryFn<typeof Link> = (_args) => (
   <>
     <div className={'exampleSpacing'}>
       <Link href={'#link'}>
@@ -70,3 +73,9 @@ export const Example: StoryFn<typeof Link> = () => (
     </div>
   </>
 );
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};

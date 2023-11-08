@@ -1,5 +1,5 @@
 import { Blockquote } from '@skatteetaten/ds-typography';
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
@@ -24,14 +24,22 @@ export default {
   },
 } satisfies Meta<typeof Blockquote>;
 
-export const Default: StoryFn<typeof Blockquote> = () => (
-  <Blockquote>{loremIpsum}</Blockquote>
-);
+export const Preview: StoryObj<typeof Blockquote> = {
+  args: {
+    children: loremIpsum,
+  },
+};
 
-export const Example: StoryFn<typeof Blockquote> = () => (
+export const Example: StoryFn<typeof Blockquote> = (_args) => (
   <Blockquote>
     {
       'Skatteetaten jobber målrettet sammen med andre samarbeidspartnere for at det skal være enkelt å gjøre rett og vanskelig å gjøre feil.'
     }
   </Blockquote>
 );
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};

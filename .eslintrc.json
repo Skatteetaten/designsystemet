@@ -10,7 +10,8 @@
     {
       "files": ["*.stories.tsx", "test-runner.ts"],
       "rules": {
-        "jest/no-standalone-expect": "off"
+        "jest/no-standalone-expect": "off",
+        "sonarjs/no-identical-functions": "off"
       }
     },
     {
@@ -47,7 +48,19 @@
     {
       "files": "*.json",
       "parser": "jsonc-eslint-parser",
-      "rules": {}
+      "rules": {
+        "@nx/dependency-checks": [
+          "error",
+          {
+            "buildTargets": ["build"],
+            "checkMissingDependencies": true,
+            "checkObsoleteDependencies": true,
+            "checkVersionMismatches": true,
+            "ignoredDependencies": ["@skatteetaten/ds-dev-config"],
+            "includeTransitiveDependencies": true
+          }
+        ]
+      }
     }
   ]
 }

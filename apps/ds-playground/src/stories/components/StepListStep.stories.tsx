@@ -8,7 +8,7 @@ import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: StepList.Step,
   title: 'Komponenter/StepList/Step',
   argTypes: {
@@ -57,20 +57,15 @@ const meta = {
     },
     hasResultContentFullWidth: { table: { category: category.props } },
   },
-  tags: ['autodocs'],
   parameters: {
-    docs: { source: { code: null } },
     version: getVersion('ds-collections'),
   },
 } satisfies Meta<typeof StepList.Step>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-export const StepListStepDefault = {
-  name: 'Default',
+export const Preview = {
   args: {
     title: 'overskrift',
     children: 'innhold',
     stepNumber: 9,
   },
-} satisfies Story;
+} satisfies StoryObj<typeof StepList.Step>;

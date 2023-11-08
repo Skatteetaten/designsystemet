@@ -4,7 +4,7 @@ import {
 } from '@skatteetaten/ds-buttons';
 import { positionArr } from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath, CancelSVGpath } from '@skatteetaten/ds-icons';
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -58,11 +58,13 @@ export default {
   },
 } satisfies Meta<typeof InlineButton>;
 
-export const Default: StoryFn<typeof InlineButton> = () => (
-  <InlineButton>{'Legg til rapport'}</InlineButton>
-);
+export const Preview: StoryObj<typeof InlineButton> = {
+  args: {
+    children: 'Legg til rapport',
+  },
+};
 
-export const Example: StoryFn<typeof InlineButton> = () => (
+export const Example: StoryFn<typeof InlineButton> = (_args) => (
   <div className={'flex'}>
     <InlineButton className={'exampleSpacing'} svgPath={AddOutlineSVGpath}>
       {'Legg til'}
@@ -76,3 +78,9 @@ export const Example: StoryFn<typeof InlineButton> = () => (
     </InlineButton>
   </div>
 );
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};
