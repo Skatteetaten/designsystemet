@@ -1,4 +1,11 @@
-import { forwardRef, useId, useImperativeHandle, useRef } from 'react';
+import {
+  ChangeEvent,
+  forwardRef,
+  useId,
+  useImperativeHandle,
+  useRef,
+  JSX,
+} from 'react';
 
 import {
   dsI18n,
@@ -54,8 +61,8 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
     ref
   ): JSX.Element => {
     const errorId = `textFieldErrorId-${useId()}`;
-    const uniqueTextboxId = `textFieldTextboxId-${useId()}`;
-    const textboxId = externalId ?? uniqueTextboxId;
+    const generatedId = `textFieldTextboxId-${useId()}`;
+    const textboxId = externalId ?? generatedId;
 
     const textboxRef = useRef<HTMLTextAreaElement & HTMLInputElement>(null);
     useImperativeHandle(ref, () => ({
@@ -69,7 +76,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       value.replace(/[^0-9]/g, '');
 
     const handleChange = (
-      e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
+      e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
     ): void => {
       if (thousandSeparator) {
         const input = e.target as HTMLInputElement;

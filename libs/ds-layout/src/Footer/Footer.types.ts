@@ -1,4 +1,9 @@
-import { ReactNode } from 'react';
+import {
+  ForwardRefExoticComponent,
+  ReactNode,
+  RefAttributes,
+  JSX,
+} from 'react';
 
 import { LinkProps } from '@skatteetaten/ds-buttons';
 import { BaseProps } from '@skatteetaten/ds-core-utils';
@@ -36,16 +41,14 @@ export interface FooterProps extends BaseProps {
 }
 
 export interface FooterComponent
-  extends React.ForwardRefExoticComponent<
-    FooterProps & React.RefAttributes<HTMLElement>
-  > {
-  Logo: React.ForwardRefExoticComponent<
-    FooterLogoProps & React.RefAttributes<HTMLDivElement>
+  extends ForwardRefExoticComponent<FooterProps & RefAttributes<HTMLElement>> {
+  Logo: ForwardRefExoticComponent<
+    FooterLogoProps & RefAttributes<HTMLDivElement>
   >;
-  Link: React.ForwardRefExoticComponent<
-    Omit<LinkProps, 'color'> & React.RefAttributes<HTMLAnchorElement>
+  Link: ForwardRefExoticComponent<
+    Omit<LinkProps, 'color'> & RefAttributes<HTMLAnchorElement>
   >;
-  LinkFirstColumn: React.ForwardRefExoticComponent<
-    Omit<LinkProps, 'color'> & React.RefAttributes<HTMLAnchorElement>
+  LinkFirstColumn: ForwardRefExoticComponent<
+    Omit<LinkProps, 'color'> & RefAttributes<HTMLAnchorElement>
   >;
 }

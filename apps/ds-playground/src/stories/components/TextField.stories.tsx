@@ -34,6 +34,7 @@ export default {
     classNames: {
       table: { category: category.props },
     },
+    defaultValue: { table: { category: category.props } },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasError: {
@@ -65,10 +66,6 @@ export default {
     titleHelpSvg: { table: { category: category.props } },
     // HTML
     autoComplete: { table: { category: category.htmlAttribute } },
-    defaultValue: {
-      control: 'text',
-      table: { category: category.htmlAttribute },
-    },
     disabled: {
       control: 'boolean',
       table: {

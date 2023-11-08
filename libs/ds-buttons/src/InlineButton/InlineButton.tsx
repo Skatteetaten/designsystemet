@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/no-access-key */
-import { forwardRef } from 'react';
+import { forwardRef, JSX } from 'react';
 
 import {
   getCommonButtonTypeDefault,

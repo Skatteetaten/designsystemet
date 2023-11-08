@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-import { Fragment } from 'react';
+import { Fragment, JSX } from 'react';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
 import { CopySVGpath } from '@skatteetaten/ds-icons';

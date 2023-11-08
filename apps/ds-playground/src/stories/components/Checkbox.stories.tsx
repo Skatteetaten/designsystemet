@@ -13,6 +13,12 @@ export default {
   argTypes: {
     // Props
     children: { table: { category: category.props } },
+    defaultChecked: {
+      control: 'boolean',
+      table: {
+        category: category.props,
+      },
+    },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasError: {
@@ -35,12 +41,6 @@ export default {
     },
     // HTML
     checked: {
-      control: 'boolean',
-      table: {
-        category: category.htmlAttribute,
-      },
-    },
-    defaultChecked: {
       control: 'boolean',
       table: {
         category: category.htmlAttribute,

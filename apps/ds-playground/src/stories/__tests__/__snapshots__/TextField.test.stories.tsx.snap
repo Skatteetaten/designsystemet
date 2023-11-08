@@ -164,7 +164,7 @@ exports[`Tester/TextField WithDescription play-test 1`] = `
     >
       Navn
     </label>
-    <div class="LabelWithHelp_description__jzDin">
+    <div class="Help_description__niabw">
       En liten beskrivelse tekst
     </div>
     <input id="textFieldTextboxId-:r1p:"
@@ -294,7 +294,7 @@ exports[`Tester/TextField WithHelpText play-test 1`] = `
     >
       Navn
     </label>
-    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH LabelWithHelp_helpButton__yI6az"
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
             type="button"
             aria-describedby="labelId-:r23:"
             aria-expanded="false"
@@ -335,7 +335,7 @@ exports[`Tester/TextField WithHelpTextAndDescription smoke-test 1`] = `
     >
       Navn
     </label>
-    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH LabelWithHelp_helpButton__yI6az"
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
             type="button"
             aria-describedby="labelId-:r28:"
             aria-expanded="false"
@@ -354,7 +354,7 @@ exports[`Tester/TextField WithHelpTextAndDescription smoke-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="LabelWithHelp_description__jzDin">
+    <div class="Help_description__niabw">
       En liten beskrivelse tekst
     </div>
     <input id="textFieldTextboxId-:r27:"

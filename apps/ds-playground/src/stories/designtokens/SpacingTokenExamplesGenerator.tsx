@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-import { Fragment } from 'react';
+import { Fragment, JSX } from 'react';
 
 const spacingJson = require('@skatteetaten/ds-core-designtokens/designtokens/spacing.json');
 

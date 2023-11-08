@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { MouseEvent, useState } from 'react';
 
 import { OpenClose, OpenCloseProps } from '@skatteetaten/ds-collections';
 import {
@@ -62,7 +62,7 @@ const TemplateWithOnClick: StoryFn<typeof OpenClose> = (args) => {
   return (
     <OpenClose
       {...args}
-      onClick={(e: React.MouseEvent<HTMLButtonElement>): void => {
+      onClick={(e: MouseEvent<HTMLButtonElement>): void => {
         args.onClick?.(e);
       }}
     >
@@ -78,7 +78,7 @@ const TemplateWithChangingTitle: StoryFn<typeof OpenClose> = (args) => {
     <OpenClose
       {...args}
       title={title}
-      onClick={(_e: React.MouseEvent<HTMLButtonElement>): void => {
+      onClick={(_e: MouseEvent<HTMLButtonElement>): void => {
         setTitle(changedTitle);
       }}
     >

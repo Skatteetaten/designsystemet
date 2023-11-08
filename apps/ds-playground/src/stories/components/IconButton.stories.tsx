@@ -57,6 +57,7 @@ export default {
     },
     // Aria
     ariaDescribedby: { table: { category: category.aria } },
+    ariaExpanded: { table: { category: category.aria } },
     // Events
     onBlur: { ...htmlEventDescription },
     onClick: { ...htmlEventDescription },

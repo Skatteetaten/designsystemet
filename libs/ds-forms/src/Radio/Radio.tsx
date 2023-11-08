@@ -1,4 +1,4 @@
-import { forwardRef, useId, useContext } from 'react';
+import { forwardRef, useId, useContext, JSX } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 

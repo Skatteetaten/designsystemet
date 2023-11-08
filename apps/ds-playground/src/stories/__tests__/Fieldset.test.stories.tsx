@@ -3,9 +3,12 @@ import { WarningSVGpath } from '@skatteetaten/ds-icons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 import { expect } from '@storybook/jest';
 import { Meta, StoryObj } from '@storybook/react';
-import { fireEvent, within } from '@storybook/testing-library';
+import { within } from '@storybook/testing-library';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
+import {
+  loremIpsumWithoutSpaces,
+  wrapper,
+} from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {
@@ -219,18 +222,21 @@ export const WithDisabled = {
   },
 } satisfies Story;
 
-export const WithHelpText = {
-  name: 'With HelpText (FS-A1, FS-A5 delvis, FS-B2 delvis)',
+export const WithHelpTextSvgPathAndTitle = {
+  name: 'With HelpText HelpSvgPath And TitleHelpSvg (FS-A1, FS-A5 delvis, FS-B2 delvis)',
   args: {
     ...defaultArgs,
     helpText: defaultHelpText,
+    helpSvgPath: WarningSVGpath,
+    titleHelpSvg: 'Tooltip',
   },
   argTypes: {
     helpText: { table: { disable: false } },
+    helpSvgPath: { table: { disable: false } },
+    titleHelpSvg: { table: { disable: false } },
   },
   parameters: {
     imageSnapshot: {
-      focus: `${wrapper} > fieldset > button`,
       click: `${wrapper} > fieldset > button`,
     },
   },
@@ -240,92 +246,25 @@ export const WithHelpText = {
       description: defaultLegendText,
     });
     await expect(helpButton).toBeInTheDocument();
-    await expect(helpButton).toHaveAttribute('aria-expanded', 'false');
+    const svgNode = canvas.getByLabelText('Tooltip', { selector: 'svg' });
+    await expect(svgNode).toBeInTheDocument();
     const legend = canvas.getByText(defaultLegendText);
     await expect(helpButton).toHaveAttribute('aria-describedby', legend.id);
-    const helpSvg = canvas.getByLabelText('Hjelp', { selector: 'svg' });
-    await expect(helpSvg).toBeInTheDocument();
   },
 } satisfies Story;
 
-export const WithHelpTextAndDescription = {
-  name: 'With HelpText And Description (A1)',
+export const WithLongLegend = {
+  name: 'With Long Legend',
   args: {
     ...defaultArgs,
-    helpText:
-      'Vi trenger å vite navnet ditt dersom vi skal kontakte deg senere.',
-    description: 'En liten beskrivelse tekst',
+    legend: loremIpsumWithoutSpaces,
   },
   argTypes: {
-    helpText: { table: { disable: false } },
-    description: { table: { disable: false } },
+    legend: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > fieldset > button`,
-      click: `${wrapper} > fieldset > button`,
+    viewport: {
+      defaultViewport: '--mobile',
     },
-  },
-} satisfies Story;
-
-export const WithHelpSvgPath = {
-  name: 'With HelpSvgPath (FS-A5 delvis)',
-  args: {
-    ...defaultArgs,
-    helpText: defaultHelpText,
-    helpSvgPath: WarningSVGpath,
-  },
-  argTypes: {
-    helpSvgPath: {
-      table: { disable: false },
-    },
-  },
-} satisfies Story;
-
-export const ClickHelpButton = {
-  name: 'Click HelpButton On And Off (FS-A5 delvis, FS-B2 delvis)',
-  args: {
-    ...defaultArgs,
-    helpText: defaultHelpText,
-  },
-  parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const helpButton = canvas.getByRole('button', {
-      description: defaultLegendText,
-    });
-    await expect(helpButton).toHaveAttribute('aria-expanded', 'false');
-    await fireEvent.click(helpButton);
-    await expect(helpButton).toHaveAttribute('aria-expanded', 'true');
-    const helpText = canvas.getByText(defaultHelpText);
-    await expect(helpText).toBeInTheDocument();
-    await fireEvent.click(helpButton);
-    await expect(helpText).not.toBeInTheDocument();
-    await expect(helpButton).toHaveAttribute('aria-expanded', 'false');
-  },
-} satisfies Story;
-
-export const ClickCloseButton = {
-  name: 'Close HelpText With CloseButton (FS-A5 delvis, FS-A6, FS-B2 delvis)',
-  args: {
-    ...defaultArgs,
-    helpText: defaultHelpText,
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const helpButton = canvas.getByRole('button', {
-      description: defaultLegendText,
-    });
-    await fireEvent.click(helpButton);
-    const closeButton = canvas.getByTitle('Lukk');
-    await expect(closeButton).toBeInTheDocument();
-    const helpText = canvas.getByText(defaultHelpText);
-    await fireEvent.click(closeButton);
-    await expect(helpText).not.toBeInTheDocument();
-    await expect(helpButton).toHaveFocus();
   },
 } satisfies Story;

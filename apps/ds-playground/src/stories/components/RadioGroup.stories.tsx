@@ -46,14 +46,8 @@ export default {
         defaultValue: { summary: getRadioGroupVariantDefault() },
       },
     },
-    defaultValue: {
-      type: 'string',
-      table: { category: category.props },
-    },
-    selectedValue: {
-      type: 'string',
-      table: { category: category.props },
-    },
+    defaultValue: { table: { category: category.props } },
+    selectedValue: { table: { category: category.props } },
     // HTML
     disabled: {
       control: 'boolean',

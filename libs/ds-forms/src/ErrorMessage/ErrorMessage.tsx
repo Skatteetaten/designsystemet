@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { forwardRef, JSX } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { ErrorIcon } from '@skatteetaten/ds-icons';

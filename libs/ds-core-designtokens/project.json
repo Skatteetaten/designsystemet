@@ -28,15 +28,17 @@
             "output": "."
           }
         ],
-        "babelUpwardRootMode": true,
-        "updateBuildableProjectDepsInPackageJson": true
+        "babelUpwardRootMode": true
       }
     },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/ds-core-designtokens/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "libs/ds-core-designtokens/**/*.{ts,tsx,js,jsx}",
+          "libs/ds-core-designtokens/package.json"
+        ]
       }
     },
     "test": {

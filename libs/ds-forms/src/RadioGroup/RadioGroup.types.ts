@@ -1,4 +1,10 @@
-import { ChangeEventHandler, ComponentPropsWithoutRef } from 'react';
+import {
+  ChangeEventHandler,
+  ComponentPropsWithoutRef,
+  ForwardRefExoticComponent,
+  RefAttributes,
+  JSX,
+} from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -59,13 +65,11 @@ interface RadioGroupComponentCommonProps
 
 type RadioGroupDiscriminatedRequiredProps =
   | {
-      /** Om gruppen er obligatorisk */
       required: boolean;
       /** Om obligatorisk gruppe skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
       showRequiredMark?: FieldsetProps['showRequiredMark'];
     }
   | {
-      /** Om gruppen er obligatorisk */
       required?: never;
       /** Om obligatorisk gruppe skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
       showRequiredMark?: never;
@@ -105,10 +109,10 @@ export type RadioGroupProps = RadioGroupComponentCommonProps &
   RadioGroupDiscriminatedErrorProps;
 
 export interface RadioGroupComponent
-  extends React.ForwardRefExoticComponent<
-    RadioGroupProps & React.RefAttributes<HTMLFieldSetElement>
+  extends ForwardRefExoticComponent<
+    RadioGroupProps & RefAttributes<HTMLFieldSetElement>
   > {
-  Radio: React.ForwardRefExoticComponent<
-    RadioProps & React.RefAttributes<HTMLInputElement>
+  Radio: ForwardRefExoticComponent<
+    RadioProps & RefAttributes<HTMLInputElement>
   >;
 }

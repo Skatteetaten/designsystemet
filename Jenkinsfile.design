@@ -47,7 +47,7 @@ def overrides = [
     publishSnapshotToNpmOverride : publishSnapshotToNpmOverride,
     preCompile                   : preCompile,
     npmPublishFolder             : './dist/libs',
-    versionStrategy              : [[branch: 'master', versionHint: '0.4.1']],
+    versionStrategy              : [[branch: 'master', versionHint: '0.5', minorOnPrefixes: 'release/']],
     createBuildEnvs              : { props -> "STORYBOOK_BUILD_VERSION=${props.version}" },
 ]
 

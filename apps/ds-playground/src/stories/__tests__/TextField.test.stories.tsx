@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { FocusEvent, ChangeEvent, useState } from 'react';
 
 import { formArrSize } from '@skatteetaten/ds-core-utils';
 import {
@@ -48,6 +48,10 @@ const meta = {
     classNames: {
       table: { disable: true },
     },
+    defaultValue: {
+      control: 'text',
+      table: { disable: true },
+    },
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
     hasError: { table: { disable: true } },
@@ -64,7 +68,6 @@ const meta = {
     titleHelpSvg: { table: { disable: true } },
     // HTML
     autoComplete: { table: { disable: true } },
-    defaultValue: { table: { disable: true } },
     disabled: { table: { disable: true } },
     inputMode: { table: { disable: true } },
     name: { table: { disable: true } },
@@ -187,7 +190,7 @@ export const WithCustomClassNames = {
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults Variant Medium (A1 delvis, A2 delvis, B2, FS-A2)',
+  name: 'Defaults Variant Medium (A1, A2, B2, FS-A2)',
 
   args: {
     ...defaultArgs,
@@ -223,7 +226,7 @@ export const Defaults = {
 } satisfies Story;
 
 export const WithVariantLarge = {
-  name: 'With Variant Large (A1 delvis)',
+  name: 'With Variant Large (A1)',
 
   args: {
     ...defaultArgs,
@@ -236,7 +239,7 @@ export const WithVariantLarge = {
 } satisfies Story;
 
 export const WithAs = {
-  name: 'With As (A1 delvis, A2 delvis)',
+  name: 'With As (A1, A2)',
 
   args: {
     ...defaultArgs,
@@ -262,7 +265,7 @@ export const WithAs = {
 } satisfies Story;
 
 export const WithDisabled = {
-  name: 'With Disabled (B1 delvis, B8 delvis)',
+  name: 'With Disabled (B1, B8)',
 
   args: {
     ...defaultArgs,
@@ -320,7 +323,7 @@ export const WithDefaultValue = {
 } satisfies Story;
 
 export const WithAutoCompleteInputModeNameAndPlaceholder = {
-  name: 'With AutoComplete InputMode Name And Placeholder (A3 delvis, A6 delvis, B1 delvis)',
+  name: 'With AutoComplete InputMode Name And Placeholder (A3, A6, B1)',
 
   args: {
     ...defaultArgs,
@@ -348,7 +351,7 @@ export const WithAutoCompleteInputModeNameAndPlaceholder = {
 } satisfies Story;
 
 export const WithReadOnly = {
-  name: 'With ReadOnly (B1 delvis, B6 delvis)',
+  name: 'With ReadOnly (B1, B6)',
 
   args: {
     ...defaultArgs,
@@ -368,7 +371,7 @@ export const WithReadOnly = {
 } satisfies Story;
 
 export const WithRequired = {
-  name: 'With Required (B4 delvis)',
+  name: 'With Required (B4)',
 
   args: {
     ...defaultArgs,
@@ -391,7 +394,7 @@ export const WithRequired = {
 } satisfies Story;
 
 export const WithRequiredAndMark = {
-  name: 'With Required And Mark (B4 delvis, FS-A4 delvis)',
+  name: 'With Required And Mark (B4, FS-A4 delvis)',
 
   args: {
     ...defaultArgs,
@@ -456,7 +459,7 @@ export const WithPattern = {
 } satisfies Story;
 
 export const WithRows = {
-  name: 'With Rows As Textarea (A5 delvis)',
+  name: 'With Rows As Textarea (A5)',
 
   args: {
     ...defaultArgs,
@@ -477,18 +480,14 @@ export const WithRows = {
 } satisfies Story;
 
 export const WithError = {
-  name: 'With ErrorMessage (B5 delvis)',
-
+  name: 'With ErrorMessage (B5)',
   args: {
     ...defaultArgs,
     errorMessage: errorMessageText,
   },
-
   argTypes: {
     errorMessage: { table: { disable: false } },
-    hasError: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -504,32 +503,28 @@ export const WithError = {
 } satisfies Story;
 
 export const WithErrorMessageAndHasError = {
-  name: 'With ErrorMessage And HasError (B5 delvis)',
-
+  name: 'With ErrorMessage And HasError (B5)',
   args: {
     ...defaultArgs,
     errorMessage: errorMessageText,
     hasError: true,
   },
-
   argTypes: {
     errorMessage: { table: { disable: false } },
     hasError: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} input`,
       focus: `${wrapper} input`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const textbox = canvas.getByRole('textbox');
-    const errorMessage = canvas.getByText(errorMessageText);
+    const textbox = canvas.getByRole('textbox', {
+      description: errorMessageText,
+    });
     const errorMessageContainer = canvas.getAllByRole('generic')[3];
-    await expect(errorMessage).toBeInTheDocument();
     await expect(errorMessageContainer).toBeInTheDocument();
     await expect(textbox).toHaveAttribute('aria-invalid', 'true');
     await expect(textbox).toHaveAttribute('aria-describedby');
@@ -648,15 +643,15 @@ const EventHandlersTemplate: StoryFn<typeof TextField> = (args) => {
     <TextField
       {...args}
       label={labelText}
-      onFocus={(event: React.FocusEvent<HTMLInputElement>): void => {
+      onFocus={(event: FocusEvent<HTMLInputElement>): void => {
         setLabelText('TextField har fått fokus');
         args.onFocus && args.onFocus(event);
       }}
-      onBlur={(event: React.FocusEvent<HTMLInputElement>): void => {
+      onBlur={(event: FocusEvent<HTMLInputElement>): void => {
         setLabelText('TextField har blitt blurret');
         args.onBlur && args.onBlur(event);
       }}
-      onChange={(event: React.ChangeEvent<HTMLInputElement>): void => {
+      onChange={(event: ChangeEvent<HTMLInputElement>): void => {
         setLabelText('TextField har blitt klikket på');
         args.onChange && args.onChange(event);
       }}
@@ -666,7 +661,7 @@ const EventHandlersTemplate: StoryFn<typeof TextField> = (args) => {
 
 export const WithEventHandlers = {
   render: EventHandlersTemplate,
-  name: 'With EventHandlers (A4 delvis)',
+  name: 'With EventHandlers (A4)',
 
   args: {
     ...defaultArgs,

@@ -1,0 +1,86 @@
+.select_container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: var(--spacing-xs);
+}
+
+.select {
+  position: relative;
+  width: 100%;
+  padding: var(--spacing-xs) 2.3rem var(--spacing-xs) var(--spacing-s);
+  border: none;
+  border-radius: 0;
+  // stylelint-disable-next-line property-no-vendor-prefix
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--semantic-page-background);
+  box-shadow: inset 0 0 0 1px var(--palette-graphite-100);
+  color: var(--semantic-page-foreground);
+  font-size: var(--font-size-m);
+  line-height: var(--semantic-line-height-input);
+  outline: none;
+  outline-offset: 0;
+
+  &_large {
+    padding: var(--spacing-s);
+    box-shadow: inset 0 0 0 2px var(--palette-graphite-100);
+  }
+
+  &[aria-invalid='true'] {
+    box-shadow: inset 0 0 0 2px var(--semantic-danger-foreground);
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 0 2px var(--semantic-page-foreground);
+    outline: 2px solid var(--semantic-interactive-background);
+  }
+
+  &:focus {
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+    outline: 2px solid var(--semantic-interactive-background);
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    background: var(--semantic-disabled-background);
+    box-shadow: inset 0 0 0 1px var(--semantic-disabled-foreground);
+    color: var(--semantic-disabled-foreground);
+    cursor: not-allowed;
+    outline: 0;
+  }
+
+  &:enabled:active {
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-foreground);
+    outline: 2px solid var(--semantic-interactive-background);
+  }
+}
+
+.selectIcon {
+  position: absolute;
+  right: 3px;
+  align-self: center;
+  padding: 3px 1px 1px 3px;
+  border-left: 1px solid var(--palette-graphite-30);
+  margin-right: 1px;
+  fill: var(--palette-azure-70);
+  line-height: var(--semantic-line-height-input);
+  pointer-events: none;
+  vertical-align: text-bottom;
+
+  &_large {
+    padding: 5px 4px 5px 6px;
+    margin-right: 2px;
+  }
+}
+
+.select:disabled + .selectIcon {
+  fill: var(--semantic-disabled-foreground);
+}
+
+.select:enabled:active + .selectIcon {
+  border-left: none;
+  background-color: var(--semantic-interactive-background);
+  fill: var(--semantic-interactive-foreground);
+}

@@ -1,9 +1,9 @@
-import { MouseEventHandler } from 'react';
+import { HTMLProps, MouseEventHandler, ReactElement } from 'react';
 
 import { BaseProps, LinkColor } from '@skatteetaten/ds-core-utils';
 
 type RequiredLinkHTMLAttributes = Pick<
-  React.HTMLProps<HTMLAnchorElement>,
+  HTMLProps<HTMLAnchorElement>,
   'href' | 'target' | 'onClick'
 >;
 
@@ -24,7 +24,7 @@ export interface LinkComponentCommonProps
   /** Farge på ikon og tekst */
   color?: LinkColor;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
-  svgPath?: React.ReactElement;
+  svgPath?: ReactElement;
   /** Lenketekst. */
   children: string;
 }
