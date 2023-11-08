@@ -5,7 +5,7 @@ import {
   positionArr,
 } from '@skatteetaten/ds-core-utils';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
@@ -73,18 +73,19 @@ export default {
   },
 } satisfies Meta<typeof OpenClose>;
 
-export const Default: StoryFn<typeof OpenClose> = () => (
-  <OpenClose title={'OpenClose (Åpne og lukke)'}>
-    {'Innhold som vises bare når OpenClose er expanded'}
-  </OpenClose>
-);
+export const Preview: StoryObj<typeof OpenClose> = {
+  args: {
+    children: 'Innhold som vises bare når OpenClose er expanded',
+    title: 'OpenClose (Åpne og lukke)',
+  },
+};
 
 const exampleTitle = 'Hva er aksjesparekonto';
 const exampleContent =
   'En aksjesparekonto er en konto hvor du kan kjøpe og selge aksjer og aksjefond skattefritt. ' +
   'Gevinster blir ikke skattlagt og det gis ikke fradrag for tap så lenge verdien holdes inne på kontoen. ';
 
-export const Example: StoryFn<typeof OpenClose> = () => (
+export const Example: StoryFn<typeof OpenClose> = (_args) => (
   <>
     <Heading level={4} as={'h2'}>
       {'Aksjesparekonto (ASK)'}
@@ -117,3 +118,9 @@ export const Example: StoryFn<typeof OpenClose> = () => (
     </OpenClose>
   </>
 );
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};

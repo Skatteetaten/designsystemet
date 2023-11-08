@@ -6,7 +6,7 @@ import {
   iconVariantArr,
   AccountChildSVGpath,
 } from '@skatteetaten/ds-icons';
-import { StoryFn, Meta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { SystemIconLabels, SystemSVGPaths } from '../utils/icon.systems';
@@ -57,6 +57,8 @@ export default {
   },
 } satisfies Meta<typeof Icon>;
 
-export const Default: StoryFn<typeof Icon> = () => (
-  <Icon svgPath={AccountChildSVGpath} />
-);
+export const Preview: StoryObj<typeof Icon> = {
+  args: {
+    svgPath: AccountChildSVGpath,
+  },
+};
