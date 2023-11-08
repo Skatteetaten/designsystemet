@@ -51,4 +51,4 @@ export const ErrorSummaryError = forwardRef<HTMLAnchorElement, ErrorProps>(
   }
 );
 
-ErrorSummaryError.displayName = 'ErrorSummaryError';
+ErrorSummaryError.displayName = 'ErrorSummary.Error';

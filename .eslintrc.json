@@ -10,7 +10,8 @@
     {
       "files": ["*.stories.tsx", "test-runner.ts"],
       "rules": {
-        "jest/no-standalone-expect": "off"
+        "jest/no-standalone-expect": "off",
+        "sonarjs/no-identical-functions": "off"
       }
     },
     {

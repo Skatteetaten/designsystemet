@@ -163,12 +163,19 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
 ) as TableComponent;
 Table.displayName = 'Table';
 Table.Header = TableHeader;
+Table.Header.displayName = 'Table.Header';
 Table.HeaderCell = TableHeaderCell;
+Table.HeaderCell.displayName = 'Table.HeaderCell';
 Table.Row = TableRow;
+Table.Row.displayName = 'Table.Row';
 Table.EditableRow = TableEditableRow;
+Table.EditableRow.displayName = 'Table.EditableRow';
 Table.DataCell = TableDataCell;
+Table.DataCell.displayName = 'Table.DataCell';
 Table.Body = TableBody;
+Table.Body.displayName = 'Table.Body';
 Table.Sum = TableSum;
+Table.Sum.displayName = 'Table.Sum';
 
 export {
   getDataCellAsDefault,

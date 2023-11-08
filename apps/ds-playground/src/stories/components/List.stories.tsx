@@ -4,7 +4,7 @@ import {
   listAsArr,
   Paragraph,
 } from '@skatteetaten/ds-typography';
-import { StoryFn, Meta } from '@storybook/react';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
@@ -38,19 +38,21 @@ export default {
   },
 } as Meta<typeof List>;
 
-export const Default: StoryFn<typeof List> = () => (
-  <List>
-    <List.Element key={'listElement_1'}>
-      {'Kjenner du behovet til brukeren?'}
-    </List.Element>
-    <List.Element key={'listElement_2'}>
-      {'Er du sikker på at du kjenner behovet til brukeren?'}
-    </List.Element>
-    <List.Element key={'listElement_3'}>{'Snakk med andre.'}</List.Element>
-  </List>
-);
+export const Preview: StoryObj<typeof List> = {
+  args: {
+    children: [
+      <List.Element key={'listElement1'}>
+        {'Kjenner du behovet til brukeren?'}
+      </List.Element>,
+      <List.Element key={'listElement2'}>
+        {'Er du sikker på at du kjenner behovet til brukeren?'}
+      </List.Element>,
+      <List.Element key={'listElement3'}>{'Snakk med andre.'}</List.Element>,
+    ],
+  },
+};
 
-export const Example: StoryFn<typeof List> = () => (
+export const Example: StoryFn<typeof List> = (_args) => (
   <>
     <Paragraph hasSpacing>{'På Min side finner du'}</Paragraph>
     <List hasSpacing>
@@ -79,3 +81,9 @@ export const Example: StoryFn<typeof List> = () => (
     </Paragraph>
   </>
 );
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};

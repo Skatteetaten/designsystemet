@@ -1,16 +1,15 @@
-import { Meta, Canvas, Controls } from '@storybook/blocks';
+import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
 import * as CheckboxStories from './Checkbox.stories';
 
 <Meta of={CheckboxStories} />
 
 # Checkbox
 
+<Primary />
 <Controls />
-
-## Default
-
-<Canvas of={CheckboxStories.Default} />
 
 ## Example
 
-<Canvas of={CheckboxStories.Example} />
+{/* Linker til komponent som ikke har args. Da vises hele code source */}
+
+<Canvas of={CheckboxStories.ExampleSource} />

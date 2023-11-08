@@ -1,7 +1,7 @@
 {
   "name": "@skatteetaten/ds-dev-config",
   "groupId": "no.skatteetaten.aurora",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "publishConfig": {
     "registry": "https://nexus.sits.no/repository/npm-internal/"
   },
