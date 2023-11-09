@@ -1,11 +1,10 @@
 import { useState } from 'react';
 
-import { formArrSize } from '@skatteetaten/ds-core-utils';
 import {
-  TextField,
-  textFieldAsArr,
-  getTextFieldVariantDefault,
-} from '@skatteetaten/ds-forms';
+  formArrSize,
+  getCommonFormVariantDefault,
+} from '@skatteetaten/ds-core-utils';
+import { TextField, textFieldAsArr } from '@skatteetaten/ds-forms';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
@@ -27,7 +26,7 @@ export default {
       control: 'inline-radio',
       table: {
         category: category.props,
-        defaultValue: { summary: getTextFieldVariantDefault() },
+        defaultValue: { summary: getCommonFormVariantDefault() },
       },
     },
     autosize: { table: { category: category.props } },

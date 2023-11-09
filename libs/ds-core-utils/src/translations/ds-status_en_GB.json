@@ -1,3 +1,4 @@
 {
-  "alert.CloseMessage": "Close message"
+  "alert.CloseMessage": "Close message",
+  "spinner.LoadingLabel": "Loading"
 }

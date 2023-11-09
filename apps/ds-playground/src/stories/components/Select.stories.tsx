@@ -1,7 +1,10 @@
 import { ChangeEvent, useState } from 'react';
 
-import { formArrSize } from '@skatteetaten/ds-core-utils';
-import { Select, getSelectVariantDefault } from '@skatteetaten/ds-forms';
+import {
+  formArrSize,
+  getCommonFormVariantDefault,
+} from '@skatteetaten/ds-core-utils';
+import { Select } from '@skatteetaten/ds-forms';
 import { StoryObj, Meta, StoryFn } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
@@ -44,7 +47,7 @@ const meta = {
       control: 'inline-radio',
       table: {
         category: category.props,
-        defaultValue: { summary: getSelectVariantDefault() },
+        defaultValue: { summary: getCommonFormVariantDefault() },
       },
     },
     label: { table: { category: category.props } },

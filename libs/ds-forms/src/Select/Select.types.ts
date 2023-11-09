@@ -30,7 +30,6 @@ interface SelectCommonProps extends SelectPropsHTMLAttributes, BaseProps {
     container?: string;
     label?: string;
     selectContainer?: string;
-    select?: string;
     errorMessage?: string;
   };
   /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */

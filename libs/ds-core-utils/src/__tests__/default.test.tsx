@@ -1,6 +1,7 @@
 import {
   getCommonButtonTypeDefault,
   getCommonClassNameDefault,
+  getCommonFormVariantDefault,
 } from '../defaults';
 
 describe('Core utils defaults', () => {
@@ -11,5 +12,9 @@ describe('Core utils defaults', () => {
   it('Når getCommonButtonTypeDefault kalles, så returnerer den riktig verdi', () => {
     const renderDefault = getCommonButtonTypeDefault();
     expect(renderDefault).toBe('button');
+  });
+  it('Når getCommonFormVariantDefault kalles, så returnerer den riktig verdi', () => {
+    const renderDefault = getCommonFormVariantDefault();
+    expect(renderDefault).toBe('medium');
   });
 });

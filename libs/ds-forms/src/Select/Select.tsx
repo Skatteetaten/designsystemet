@@ -9,10 +9,13 @@ import React, {
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  getCommonClassNameDefault,
+  getCommonFormVariantDefault,
+} from '@skatteetaten/ds-core-utils';
 import { ChevronDownSVGpath, Icon } from '@skatteetaten/ds-icons';
 
-import { getSelectVariantDefault } from './defaults';
 import { SelectComponent, SelectProps } from './Select.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
@@ -36,7 +39,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
       label,
       placeholder,
       titleHelpSvg,
-      variant = getSelectVariantDefault(),
+      variant = getCommonFormVariantDefault(),
       value,
       autoComplete,
       disabled,
@@ -73,6 +76,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
     const placeholderPaletteGraphite50 = 'var(--palette-graphite-50)';
     useEffect(() => {
       changePlaceholderColor();
+      // eslint-disable-next-line
     }, []);
 
     const handleChange = (e: ChangeEvent<HTMLSelectElement>): void => {
@@ -109,14 +113,14 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
           {label}
         </LabelWithHelp>
         <div
-          className={`${styles.select_container} ${
+          className={`${styles.selectContainer} ${
             classNames?.selectContainer ?? ''
           }`}
         >
           <select
             ref={selectRef}
             id={selectId}
-            className={`${selectClassName} ${classNames?.select ?? ''}`}
+            className={selectClassName}
             data-testid={dataTestId}
             autoComplete={autoComplete}
             disabled={disabled}
@@ -153,5 +157,3 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
 
 Select.displayName = 'Select';
 Select.Option = SelectOption;
-
-export { getSelectVariantDefault };
