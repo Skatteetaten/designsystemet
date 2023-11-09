@@ -94,9 +94,6 @@ Preview.args = {
     </>
   ),
   title: 'Vil du erstatte nye opplysninger fra fil?',
-  padding: getModalPaddingDefault(),
-  variant: getModalVariantDefault(),
-  onClose: (): void => console.log('onClose activated'),
 };
 
 export const ExampleImportant: StoryFn<typeof Modal> = () => {

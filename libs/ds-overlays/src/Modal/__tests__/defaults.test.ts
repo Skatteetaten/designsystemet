@@ -7,6 +7,6 @@ describe('Modal defaults', () => {
   });
   it('Når getModalVariantDefault kalles, så returnerer den riktig verdi', () => {
     const renderDefault = getModalVariantDefault();
-    expect(renderDefault).toBe('standard');
+    expect(renderDefault).toBe('outline');
   });
 });

@@ -5,7 +5,7 @@ import { BaseProps } from '@skatteetaten/ds-core-utils';
 export const modalPaddingArr = ['none', 's', 'm', 'l', 'mega'] as const;
 export type ModalPadding = (typeof modalPaddingArr)[number];
 
-export const modalVariantArr = ['standard', 'plain', 'important'] as const;
+export const modalVariantArr = ['outline', 'plain', 'important'] as const;
 export type ModalVariant = (typeof modalVariantArr)[number];
 
 export interface ModalProps extends BaseProps {
