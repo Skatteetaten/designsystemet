@@ -7,7 +7,7 @@ exports[`Tester/Spinner Defaults play-test 1`] = `
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
     </div>
-    <span class="Spinner_spinnerText__MCxkM  Spinner_spinnerText_centerText__8bgoo">
+    <span class="Spinner_spinnerTitle__Qksb8  Spinner_spinnerTitle_centerText__gm2Yl">
       Laster inn
     </span>
   </div>
@@ -24,7 +24,7 @@ exports[`Tester/Spinner WithAttributes play-test 1`] = `
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
     </div>
-    <span class="Spinner_spinnerText__MCxkM  Spinner_spinnerText_centerText__8bgoo">
+    <span class="Spinner_spinnerTitle__Qksb8  Spinner_spinnerTitle_centerText__gm2Yl">
       Laster inn
     </span>
   </div>
@@ -38,7 +38,7 @@ exports[`Tester/Spinner WithColorsDarkBackground smoke-test 1`] = `
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
     </div>
-    <span class="Spinner_spinnerText__MCxkM  Spinner_spinnerText_centerText__8bgoo">
+    <span class="Spinner_spinnerTitle__Qksb8  Spinner_spinnerTitle_centerText__gm2Yl">
       Laster inn
     </span>
   </div>
@@ -52,7 +52,7 @@ exports[`Tester/Spinner WithColorsLightBackground smoke-test 1`] = `
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
     </div>
-    <span class="Spinner_spinnerText__MCxkM  Spinner_spinnerText_centerText__8bgoo">
+    <span class="Spinner_spinnerTitle__Qksb8  Spinner_spinnerTitle_centerText__gm2Yl">
       Henter innhold
     </span>
   </div>
@@ -61,7 +61,7 @@ exports[`Tester/Spinner WithColorsLightBackground smoke-test 1`] = `
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
     </div>
-    <span class="Spinner_spinnerText__MCxkM  Spinner_spinnerText_centerText__8bgoo">
+    <span class="Spinner_spinnerTitle__Qksb8  Spinner_spinnerTitle_centerText__gm2Yl">
       Henter innhold
     </span>
   </div>
@@ -75,7 +75,7 @@ exports[`Tester/Spinner WithHideText play-test 1`] = `
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
     </div>
-    <span class="Spinner_spinnerText__MCxkM Spinner_srOnly__qNwwl Spinner_spinnerText_centerText__8bgoo">
+    <span class="Spinner_spinnerTitle__Qksb8 Spinner_srOnly__qNwwl Spinner_spinnerTitle_centerText__gm2Yl">
       laster data
     </span>
   </div>
@@ -90,7 +90,7 @@ exports[`Tester/Spinner WithRef play-test 1`] = `
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
     </div>
-    <span class="Spinner_spinnerText__MCxkM  Spinner_spinnerText_centerText__8bgoo">
+    <span class="Spinner_spinnerTitle__Qksb8  Spinner_spinnerTitle_centerText__gm2Yl">
       Laster inn
     </span>
   </div>
@@ -104,7 +104,7 @@ exports[`Tester/Spinner WithSizeAndPosition smoke-test 1`] = `
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
     </div>
-    <span class="Spinner_spinnerText__MCxkM  Spinner_spinnerText_centerText__8bgoo">
+    <span class="Spinner_spinnerTitle__Qksb8  Spinner_spinnerTitle_centerText__gm2Yl">
       henter innhold
     </span>
   </div>
@@ -113,7 +113,7 @@ exports[`Tester/Spinner WithSizeAndPosition smoke-test 1`] = `
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
     </div>
-    <span class="Spinner_spinnerText__MCxkM  Spinner_spinnerText_centerText__8bgoo">
+    <span class="Spinner_spinnerTitle__Qksb8  Spinner_spinnerTitle_centerText__gm2Yl">
       henter innhold
     </span>
   </div>
@@ -122,7 +122,7 @@ exports[`Tester/Spinner WithSizeAndPosition smoke-test 1`] = `
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
     </div>
-    <span class="Spinner_spinnerText__MCxkM  Spinner_spinnerText_centerText__8bgoo">
+    <span class="Spinner_spinnerTitle__Qksb8  Spinner_spinnerTitle_centerText__gm2Yl">
       henter innhold
     </span>
   </div>
@@ -131,7 +131,7 @@ exports[`Tester/Spinner WithSizeAndPosition smoke-test 1`] = `
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
     </div>
-    <span class="Spinner_spinnerText__MCxkM  ">
+    <span class="Spinner_spinnerTitle__Qksb8  ">
       henter innhold
     </span>
   </div>
@@ -140,7 +140,7 @@ exports[`Tester/Spinner WithSizeAndPosition smoke-test 1`] = `
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
     </div>
-    <span class="Spinner_spinnerText__MCxkM  ">
+    <span class="Spinner_spinnerTitle__Qksb8  ">
       henter innhold
     </span>
   </div>
@@ -149,7 +149,7 @@ exports[`Tester/Spinner WithSizeAndPosition smoke-test 1`] = `
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
     </div>
-    <span class="Spinner_spinnerText__MCxkM  ">
+    <span class="Spinner_spinnerTitle__Qksb8  ">
       henter innhold
     </span>
   </div>
@@ -163,7 +163,7 @@ exports[`Tester/Spinner WithSizeAndPositionLongText smoke-test 1`] = `
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
     </div>
-    <span class="Spinner_spinnerText__MCxkM  Spinner_spinnerText_centerText__8bgoo">
+    <span class="Spinner_spinnerTitle__Qksb8  Spinner_spinnerTitle_centerText__gm2Yl">
       Henter årsmiddelkurs fra valutakurstjenesten
     </span>
   </div>
@@ -172,7 +172,7 @@ exports[`Tester/Spinner WithSizeAndPositionLongText smoke-test 1`] = `
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
     </div>
-    <span class="Spinner_spinnerText__MCxkM  Spinner_spinnerText_centerText__8bgoo">
+    <span class="Spinner_spinnerTitle__Qksb8  Spinner_spinnerTitle_centerText__gm2Yl">
       Henter årsmiddelkurs fra valutakurstjenesten
     </span>
   </div>
@@ -181,7 +181,7 @@ exports[`Tester/Spinner WithSizeAndPositionLongText smoke-test 1`] = `
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
     </div>
-    <span class="Spinner_spinnerText__MCxkM  Spinner_spinnerText_centerText__8bgoo">
+    <span class="Spinner_spinnerTitle__Qksb8  Spinner_spinnerTitle_centerText__gm2Yl">
       Henter årsmiddelkurs fra valutakurstjenesten
     </span>
   </div>
@@ -190,7 +190,7 @@ exports[`Tester/Spinner WithSizeAndPositionLongText smoke-test 1`] = `
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
     </div>
-    <span class="Spinner_spinnerText__MCxkM  ">
+    <span class="Spinner_spinnerTitle__Qksb8  ">
       Henter årsmiddelkurs fra valutakurstjenesten
     </span>
   </div>
@@ -199,7 +199,7 @@ exports[`Tester/Spinner WithSizeAndPositionLongText smoke-test 1`] = `
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
     </div>
-    <span class="Spinner_spinnerText__MCxkM  ">
+    <span class="Spinner_spinnerTitle__Qksb8  ">
       Henter årsmiddelkurs fra valutakurstjenesten
     </span>
   </div>
@@ -208,7 +208,7 @@ exports[`Tester/Spinner WithSizeAndPositionLongText smoke-test 1`] = `
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
     </div>
-    <span class="Spinner_spinnerText__MCxkM  ">
+    <span class="Spinner_spinnerTitle__Qksb8  ">
       Henter årsmiddelkurs fra valutakurstjenesten
     </span>
   </div>

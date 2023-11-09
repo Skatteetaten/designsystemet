@@ -20,7 +20,7 @@ export default {
       control: 'inline-radio',
       options: [...spinnerSizeArr],
     },
-    textPosition: {
+    titlePosition: {
       table: { category: category.props },
       control: 'inline-radio',
       options: [...spinnerPositionArr],
@@ -30,7 +30,7 @@ export default {
       control: 'inline-radio',
       options: [...spinnerColorArr],
     },
-    hideText: {
+    hideTitle: {
       control: 'boolean',
       table: { category: category.props },
     },
@@ -48,12 +48,12 @@ export const Example: StoryFn<typeof Spinner> = (_args) => (
       className={'bottomSpacingXL'}
       size={'large'}
       color={'blue'}
-      textPosition={'right'}
+      titlePosition={'right'}
     >
       {'Vent litt mens vi sjekker tidligere innsendte a-meldinger'}
     </Spinner>
 
-    <Spinner size={'small'} color={'blue'} textPosition={'right'}>
+    <Spinner size={'small'} color={'blue'} titlePosition={'right'}>
       {'Vent litt mens vi sjekker tidligere innsendte a-meldinger'}
     </Spinner>
   </>

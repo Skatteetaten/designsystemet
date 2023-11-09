@@ -10,6 +10,6 @@ export const spinner_flexColumn: string;
 export const spinner_flexRow: string;
 export const spinnerAnimation: string;
 export const spin: string;
-export const spinnerText: string;
-export const spinnerText_centerText: string;
+export const spinnerTitle: string;
+export const spinnerTitle_centerText: string;
 export const srOnly: string;

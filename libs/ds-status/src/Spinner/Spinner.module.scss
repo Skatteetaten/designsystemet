@@ -26,7 +26,7 @@
   }
 
   &_large {
-    --spinner-size: var(--size-large);
+    --spinner-size: var(--size-medium);
     --spinner-border-width: 5px;
   }
 
@@ -65,7 +65,7 @@
     }
   }
 
-  &Text {
+  &Title {
     max-width: 9rem;
     color: var(--spinner-color);
     font-size: var(--font-size-xs);
