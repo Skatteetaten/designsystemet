@@ -133,3 +133,9 @@ code {
   display: flex;
   flex-direction: row-reverse;
 }
+
+.topbannerButtonContainer {
+  display: flex;
+  gap: var(--spacing-s);
+  width: fit-content;
+}
