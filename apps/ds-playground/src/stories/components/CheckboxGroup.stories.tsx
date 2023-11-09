@@ -5,6 +5,7 @@ import { CheckboxGroup } from '@skatteetaten/ds-forms';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
+import { SystemSVGPaths } from '../utils/icon.systems';
 import { getVersion } from '../utils/version.utils';
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -17,34 +18,39 @@ export default {
   title: 'Komponenter/CheckboxGroup',
   argTypes: {
     // Props
-    children: { control: 'object', table: { category: category.props } },
+    children: { table: { category: category.props } },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasError: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
     },
-    helpSvgPath: { table: { category: category.props } },
+    helpSvgPath: {
+      options: Object.keys(SystemSVGPaths),
+      mapping: SystemSVGPaths,
+      table: {
+        category: category.props,
+        defaultValue: { summary: 'HelpSimpleSVGpath' },
+      },
+    },
     helpText: { table: { category: category.props } },
     hideLegend: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
     },
-    legend: { table: { category: category.props } },
+    legend: { control: 'text', table: { category: category.props } },
     showRequiredMark: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
     },
-    titleHelpSvg: { table: { category: category.props } },
+    titleHelpSvg: {
+      table: { category: category.props, defaultValue: { summary: 'Hjelp' } },
+    },
     // HTML
     disabled: {
-      control: 'boolean',
       table: {
         category: category.htmlAttribute,
       },

@@ -1,5 +1,8 @@
 import { positionArr } from '@skatteetaten/ds-core-utils';
-import { Table } from '@skatteetaten/ds-table';
+import {
+  Table,
+  getTableRowExpandButtonPositionDefault,
+} from '@skatteetaten/ds-table';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
@@ -10,20 +13,26 @@ export default {
   title: 'komponenter/Table/EditableRow',
   argTypes: {
     // Props
-    children: { table: { category: category.props } },
-    onEdit: {
-      table: { category: category.props },
-    },
+    children: { control: false, table: { category: category.props } },
     editableContent: {
       table: { category: category.props },
     },
     editButtonPosition: {
       control: 'radio',
       options: [...positionArr],
-      table: { category: category.props },
+      table: {
+        category: category.props,
+        defaultValue: { summary: getTableRowExpandButtonPositionDefault() },
+        type: { summary: positionArr },
+      },
     },
+    // Aria
     editButtonAriaDescribedby: {
       table: { category: category.aria },
+    },
+    // Event
+    onEdit: {
+      table: { category: category.event },
     },
   },
   parameters: {

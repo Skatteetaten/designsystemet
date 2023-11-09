@@ -14,13 +14,13 @@ export default {
       table: { category: category.props },
     },
     sumText: {
-      table: { category: category.props },
+      table: { category: category.props, defaultValue: { summary: 'Sum' } },
     },
     labelAlignment: {
-      table: { category: category.props },
+      table: { category: category.props, defaultValue: { summary: 'right' } },
     },
     valueAlignment: {
-      table: { category: category.props },
+      table: { category: category.props, defaultValue: { summary: 'right' } },
     },
     hasTopSeparator: {
       table: { category: category.props },

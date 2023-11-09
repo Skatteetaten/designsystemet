@@ -1,7 +1,9 @@
+import { sizeArr } from '@skatteetaten/ds-core-utils';
 import {
   Spinner,
-  spinnerColorArr,
-  spinnerPositionArr,
+  getSpinnerColorDefault,
+  getSpinnerSizeDefault,
+  getSpinnerTextPositionDefault,
   spinnerSizeArr,
 } from '@skatteetaten/ds-status';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
@@ -14,24 +16,34 @@ export default {
   title: 'Komponenter/Spinner',
   argTypes: {
     // Props
-    children: { table: { category: category.props }, control: 'text' },
-    size: {
+    children: {
       table: { category: category.props },
+      defaultValue: { summary: 'Laster inn' },
+    },
+    size: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: getSpinnerSizeDefault() },
+        type: { summary: sizeArr.slice(1, 4) },
+      },
       control: 'inline-radio',
       options: [...spinnerSizeArr],
     },
     textPosition: {
-      table: { category: category.props },
+      table: {
+        category: category.props,
+        defaultValue: { summary: getSpinnerTextPositionDefault() },
+      },
       control: 'inline-radio',
-      options: [...spinnerPositionArr],
     },
     color: {
-      table: { category: category.props },
+      table: {
+        category: category.props,
+        defaultValue: { summary: getSpinnerColorDefault() },
+      },
       control: 'inline-radio',
-      options: [...spinnerColorArr],
     },
     hideText: {
-      control: 'boolean',
       table: { category: category.props },
     },
   },

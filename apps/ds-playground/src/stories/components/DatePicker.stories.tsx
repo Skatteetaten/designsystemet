@@ -21,7 +21,6 @@ export default {
     label: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasError: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
@@ -29,28 +28,32 @@ export default {
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
-      table: { category: category.props },
+      table: {
+        category: category.props,
+        defaultValue: { summary: 'HelpSimpleSVGpath' },
+      },
     },
     helpText: { table: { category: category.props } },
     hideLabel: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
     },
     showRequiredMark: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
     },
-    titleHelpSvg: { table: { category: category.props } },
+    titleHelpSvg: {
+      table: { category: category.props, defaultValue: { summary: 'Hjelp' } },
+    },
     variant: {
       options: [...formArrSize],
       control: 'inline-radio',
       table: {
         category: category.props,
         defaultValue: { summary: getCommonFormVariantDefault() },
+        type: { summary: formArrSize },
       },
     },
     // HTML
@@ -60,7 +63,6 @@ export default {
     placeholder: { table: { category: category.htmlAttribute } },
     readOnly: { table: { category: category.htmlAttribute } },
     required: {
-      control: 'boolean',
       table: {
         category: category.htmlAttribute,
       },

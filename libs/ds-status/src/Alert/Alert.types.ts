@@ -13,7 +13,7 @@ export interface AlertProps extends AlertHTMLAttributes, BaseProps {
   showAlert?: boolean;
   /** Om Alert skal ha lukke-knapp */
   showCloseButton?: boolean;
-  /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
+  /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
   svgPath?: ReactElement;
   /** Definerer stilen */
   variant: Status;

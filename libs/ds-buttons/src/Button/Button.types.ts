@@ -13,7 +13,7 @@ export const buttonVariantArr = [
   'tertiary',
   'danger',
 ] as const;
-export type ButtonVariant = typeof buttonVariantArr[number];
+export type ButtonVariant = (typeof buttonVariantArr)[number];
 
 type RequiredButtonHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'button'>,
@@ -32,7 +32,7 @@ interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
 export interface ButtonProps extends ButtonPropsHTMLAttributes, BaseProps {
   /** Tekst på knapp. */
   children: string;
-  /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
+  /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
   svgPath?: ReactElement;
   /** Definerer stilen til knappen. */
   variant?: ButtonVariant;

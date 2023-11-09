@@ -14,7 +14,6 @@ export default {
     // Props
     children: { table: { category: category.props } },
     defaultChecked: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
@@ -22,32 +21,27 @@ export default {
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasError: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
     },
     hideLabel: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
     },
     showRequiredMark: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
     },
     // HTML
     checked: {
-      control: 'boolean',
       table: {
         category: category.htmlAttribute,
       },
     },
     disabled: {
-      control: 'boolean',
       table: {
         category: category.htmlAttribute,
       },
@@ -58,7 +52,6 @@ export default {
       },
     },
     required: {
-      control: 'boolean',
       table: {
         category: category.htmlAttribute,
       },
