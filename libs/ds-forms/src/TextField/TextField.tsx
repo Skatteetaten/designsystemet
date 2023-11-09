@@ -10,10 +10,11 @@ import {
 import {
   dsI18n,
   getCommonClassNameDefault,
+  getCommonFormVariantDefault,
   Languages,
 } from '@skatteetaten/ds-core-utils';
 
-import { getTextFieldAsDefault, getTextFieldVariantDefault } from './defaults';
+import { getTextFieldAsDefault } from './defaults';
 import { TextboxRefHandle, TextFieldProps } from './TextField.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
@@ -37,7 +38,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       label,
       thousandSeparator,
       titleHelpSvg,
-      variant = getTextFieldVariantDefault(),
+      variant = getCommonFormVariantDefault(),
       autoComplete,
       defaultValue,
       disabled,
@@ -166,4 +167,4 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
 
 TextField.displayName = 'TextField';
 
-export { getTextFieldAsDefault, getTextFieldVariantDefault };
+export { getTextFieldAsDefault };

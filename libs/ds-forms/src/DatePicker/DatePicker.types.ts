@@ -2,34 +2,39 @@ import {
   ChangeEventHandler,
   ComponentPropsWithoutRef,
   FocusEventHandler,
-  ForwardRefExoticComponent,
-  RefAttributes,
-  JSX,
 } from 'react';
 
 import { BaseProps, FormSize } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
-import { SelectOptionProps } from '../SelectOption/SelectOption.types';
 
-type RequiredSelectHTMLAttributes = Pick<
-  ComponentPropsWithoutRef<'select'>,
-  'autoComplete' | 'disabled' | 'name' | 'required' | 'defaultValue' | 'value'
+type RequiredDatePickerHTMLAttributes = Pick<
+  ComponentPropsWithoutRef<'input'>,
+  | 'autoComplete'
+  | 'defaultValue'
+  | 'disabled'
+  | 'name'
+  | 'placeholder'
+  | 'readOnly'
+  | 'required'
+  | 'value'
 >;
 
-type SelectHTMLAttributes = Partial<RequiredSelectHTMLAttributes>;
+type DatePickerHTMLAttributes = Partial<RequiredDatePickerHTMLAttributes>;
 
-interface SelectPropsHTMLAttributes extends SelectHTMLAttributes {
-  onBlur?: FocusEventHandler<HTMLSelectElement>;
-  onChange?: ChangeEventHandler<HTMLSelectElement>;
-  onFocus?: FocusEventHandler<HTMLSelectElement>;
+interface DatePickerPropsHTMLAttributes extends DatePickerHTMLAttributes {
+  onBlur?: FocusEventHandler<HTMLInputElement>;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
+  onFocus?: FocusEventHandler<HTMLInputElement>;
 }
 
-interface SelectCommonProps extends SelectPropsHTMLAttributes, BaseProps {
+interface DatePickerCommonProps
+  extends DatePickerPropsHTMLAttributes,
+    BaseProps {
   classNames?: {
     container?: string;
     label?: string;
-    selectContainer?: string;
+    dateContainer?: string;
     errorMessage?: string;
   };
   /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */
@@ -44,16 +49,11 @@ interface SelectCommonProps extends SelectPropsHTMLAttributes, BaseProps {
   helpSvgPath?: LabelWithHelpProps['helpSvgPath'];
   /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
-  /** Overskriver default placeholder-tekst */
-  placeholder?: string;
-  /** Skjuler placeholder */
-  hidePlaceholder?: boolean;
-  /** Definerer stilen til Select */
+  /** Definerer stilen til DatePicker */
   variant?: FormSize;
-  /** SelectOption-komponenter */
-  children: JSX.Element | JSX.Element[];
 }
-export type SelectDiscriminatedRequiredProps =
+
+export type DatePickerDiscriminatedRequiredProps =
   | {
       required: true;
       /** Om obligatorisk form-komponent skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
@@ -65,7 +65,7 @@ export type SelectDiscriminatedRequiredProps =
       showRequiredMark?: never;
     };
 
-export type SelectDiscriminatedErrorProps =
+export type DatePickerDiscriminatedErrorProps =
   | {
       /** Tekst på feilmelding */
       errorMessage: string;
@@ -79,15 +79,6 @@ export type SelectDiscriminatedErrorProps =
       hasError?: never;
     };
 
-export type SelectProps = SelectCommonProps &
-  SelectDiscriminatedRequiredProps &
-  SelectDiscriminatedErrorProps;
-
-export interface SelectComponent
-  extends ForwardRefExoticComponent<
-    SelectProps & RefAttributes<HTMLSelectElement>
-  > {
-  Option: ForwardRefExoticComponent<
-    SelectOptionProps & RefAttributes<HTMLOptionElement>
-  >;
-}
+export type DatePickerProps = DatePickerCommonProps &
+  DatePickerDiscriminatedRequiredProps &
+  DatePickerDiscriminatedErrorProps;
