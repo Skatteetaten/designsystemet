@@ -1,0 +1,17 @@
+@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
+.username {
+  overflow: hidden;
+  max-width: 58px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  @media (min-width: $breakpoint-s) {
+    max-width: 106px;
+  }
+
+  // TODO FRONT-1161 Snakke med Andreas om greit at større breakpoint ikke skal ha noe begresning på bredden
+  @media (min-width: $breakpoint-l) {
+    max-width: none;
+  }
+}

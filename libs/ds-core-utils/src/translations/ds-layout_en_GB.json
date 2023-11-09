@@ -10,5 +10,8 @@
   "topbannerexternal.SkeLogoImageText": "The Norwegian Tax Administration logo",
   "topbannerexternal.SkeLogoLinkText": "Front page The Norwegian Tax Administration",
   "topbannerexternal.SkipLinkText": "Skip to main content",
-  "userbutton.Title": "Profile"
+  "userbutton.OtherIconText": "Logged in as other person",
+  "userbutton.SelfIconText": "Logged in as my self",
+  "userbutton.Title": "Profile",
+  "userbutton.WorkIconText": "Logged in as company"
 }

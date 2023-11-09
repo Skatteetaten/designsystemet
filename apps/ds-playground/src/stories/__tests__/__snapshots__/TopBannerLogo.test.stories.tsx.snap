@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/TopBannerLogo (intern) Defaults play-test 1`] = `
+<div data-test-block="true">
+  <div class="TopBannerLogo_containerLogo__HNnbt">
+    <a href="https://www.skatteetaten.no/"
+       class="TopBannerLogo_logoLink__DvORV"
+    >
+      <img class="TopBannerLogo_logo_mobile__x4lpB"
+           alt="Forside Skatteetaten"
+           src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
+      >
+      <img class="TopBannerLogo_logo_desktop__SI+eK"
+           alt="Forside Skatteetaten"
+           src="ske-logo.189db021336caae2e5b562b9604133c1.svg"
+      >
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Tester/TopBannerLogo (intern) WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <div id="htmlId"
+       class="dummyClassname TopBannerLogo_containerLogo__HNnbt"
+       lang="en"
+       data-testid="123ID"
+  >
+    <a href="https://www.skatteetaten.no/"
+       class="TopBannerLogo_logoLink__DvORV"
+    >
+      <img class="TopBannerLogo_logo_mobile__x4lpB"
+           alt="Forside Skatteetaten"
+           src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
+      >
+      <img class="TopBannerLogo_logo_desktop__SI+eK"
+           alt="Forside Skatteetaten"
+           src="ske-logo.189db021336caae2e5b562b9604133c1.svg"
+      >
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Tester/TopBannerLogo (intern) WithBreakpointS smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="TopBannerLogo_containerLogo__HNnbt">
+    <a href="https://www.skatteetaten.no/"
+       class="TopBannerLogo_logoLink__DvORV"
+    >
+      <img class="TopBannerLogo_logo_mobile__x4lpB"
+           alt="Forside Skatteetaten"
+           src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
+      >
+      <img class="TopBannerLogo_logo_desktop__SI+eK"
+           alt="Forside Skatteetaten"
+           src="ske-logo.189db021336caae2e5b562b9604133c1.svg"
+      >
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Tester/TopBannerLogo (intern) WithBreakpointXS smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="TopBannerLogo_containerLogo__HNnbt">
+    <a href="https://www.skatteetaten.no/"
+       class="TopBannerLogo_logoLink__DvORV"
+    >
+      <img class="TopBannerLogo_logo_mobile__x4lpB"
+           alt="Forside Skatteetaten"
+           src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
+      >
+      <img class="TopBannerLogo_logo_desktop__SI+eK"
+           alt="Forside Skatteetaten"
+           src="ske-logo.189db021336caae2e5b562b9604133c1.svg"
+      >
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Tester/TopBannerLogo (intern) WithLogoMobileLogoAltAndHref play-test 1`] = `
+<div data-test-block="true">
+  <div class="TopBannerLogo_containerLogo__HNnbt">
+    <a href="#"
+       class="TopBannerLogo_logoLink__DvORV"
+    >
+      <img class="TopBannerLogo_logo_mobile__x4lpB"
+           alt="custom alt text"
+           src="custom-mobile-logo.e7c1e07901657fb09f8543357f7fa867.svg"
+      >
+      <img class="TopBannerLogo_logo_desktop__SI+eK"
+           alt="custom alt text"
+           src="custom-logo.252414682ce8a77d1dfc266bb47a0e0e.svg"
+      >
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Tester/TopBannerLogo (intern) WithNoLinkLogo play-test 1`] = `
+<div data-test-block="true">
+  <div class="TopBannerLogo_containerLogo__HNnbt">
+    <img class="TopBannerLogo_logo_mobile__x4lpB"
+         alt="Skatteetaten logo"
+         src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
+    >
+    <img class="TopBannerLogo_logo_desktop__SI+eK"
+         alt="Skatteetaten logo"
+         src="ske-logo.189db021336caae2e5b562b9604133c1.svg"
+    >
+  </div>
+</div>
+`;
+
+exports[`Tester/TopBannerLogo (intern) WithRef play-test 1`] = `
+<div data-test-block="true">
+  <div class="TopBannerLogo_containerLogo__HNnbt"
+       id="dummyIdForwardedFromRef"
+  >
+    <a href="https://www.skatteetaten.no/"
+       class="TopBannerLogo_logoLink__DvORV"
+    >
+      <img class="TopBannerLogo_logo_mobile__x4lpB"
+           alt="Forside Skatteetaten"
+           src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
+      >
+      <img class="TopBannerLogo_logo_desktop__SI+eK"
+           alt="Forside Skatteetaten"
+           src="ske-logo.189db021336caae2e5b562b9604133c1.svg"
+      >
+    </a>
+  </div>
+</div>
+`;

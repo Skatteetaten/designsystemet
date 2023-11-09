@@ -1,0 +1,78 @@
+@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
+.topContainer {
+  display: flex;
+  width: 100%;
+  max-width: var(--container-l);
+  box-sizing: border-box;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: var(--spacing-m) var(--spacing-m) var(--spacing-s);
+  margin: auto;
+  gap: var(--spacing-s);
+
+  .contentContainer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .content {
+    display: flex;
+    padding-left: var(--spacing-s);
+    gap: var(--spacing-s);
+  }
+}
+
+.separator {
+  position: relative;
+  height: 1rem;
+
+  &Left {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--palette-graphite-5);
+    clip-path: polygon(0 0, 100% 100%, 0 100%, 0 100%);
+  }
+
+  &Right {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--theme-primary);
+    clip-path: polygon(0 85%, 100% 0, 100% 100%, 100% 100%);
+  }
+}
+
+.menuDrawerContainer {
+  background-color: var(--palette-graphite-5);
+
+  .columns {
+    display: grid;
+    max-width: var(--container-m);
+    padding: var(--spacing-xl) var(--spacing-m);
+    margin: auto;
+    grid-gap: var(--spacing-xl);
+    grid-template-columns: 1fr;
+
+    @media (min-width: $breakpoint-s) {
+      &Three,
+      &Two {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: $breakpoint-m) {
+      &Three {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+  }
+
+  .column {
+    overflow-wrap: anywhere;
+  }
+}

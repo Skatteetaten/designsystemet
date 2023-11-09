@@ -10,5 +10,8 @@
   "topbannerexternal.SkeLogoImageText": "Vearroetáhta dovdomearka",
   "topbannerexternal.SkeLogoLinkText": "Vearroetáhta ovdasiidu",
   "topbannerexternal.SkipLinkText": "(Hopp til hovedinnhold)",
-  "userbutton.Title": "(Profil)"
+  "userbutton.OtherIconText": "(Innlogget som annen person)",
+  "userbutton.SelfIconText": "(Innlogget som meg selv)",
+  "userbutton.Title": "(Profil)",
+  "userbutton.WorkIconText": "(Innlogget som virksomhet)"
 }

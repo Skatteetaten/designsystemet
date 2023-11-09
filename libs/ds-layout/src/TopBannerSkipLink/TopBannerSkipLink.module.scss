@@ -1,0 +1,60 @@
+@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
+.skipLink {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: var(--semantic-interactive-background);
+  color: var(--semantic-interactive-main);
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-bold);
+  gap: var(--spacing-s);
+  line-height: var(--semantic-line-height-article);
+  transform: translateY(-200%);
+  transition: transform 0.3s;
+
+  &:focus {
+    position: static;
+    outline: 0;
+    transform: translateY(0);
+  }
+
+  .skipLinkContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-s);
+    gap: var(--spacing-s);
+
+    @media (min-width: $breakpoint-xs) {
+      width: var(--container-xs);
+    }
+
+    @media (min-width: $breakpoint-s) {
+      width: calc(100% - (var(--spacing-s) * 2));
+      min-width: var(--container-s);
+      max-width: var(--container-wide-content);
+    }
+
+    @media (min-width: $breakpoint-m) {
+      width: var(--container-m);
+      min-width: 0;
+      max-width: none;
+      justify-content: flex-start;
+      padding: var(--spacing-s) var(--spacing-m);
+    }
+
+    @media (min-width: $breakpoint-l) {
+      width: var(--container-l);
+    }
+  }
+}
+
+.icon {
+  height: calc(var(--font-size-l) * var(--semantic-line-height-article));
+  fill: var(--semantic-interactive-main);
+}

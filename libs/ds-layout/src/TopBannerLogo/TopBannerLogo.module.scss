@@ -1,0 +1,43 @@
+@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
+.containerLogo {
+  width: fit-content;
+}
+
+.logoLink {
+  display: flex;
+  padding: var(--spacing-xxs);
+  text-decoration: none;
+
+  &:focus {
+    outline: 2px solid var(--semantic-interactive-main);
+    outline-offset: 2px;
+  }
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+
+  &_mobile {
+    display: inline-block;
+
+    // Må justeres med høyden til TopBanner sine knapper i mobilvisning
+    width: 56px;
+  }
+
+  &_desktop {
+    display: none;
+    width: 150px;
+  }
+
+  @media (min-width: $breakpoint-s) {
+    &_mobile {
+      display: none;
+    }
+
+    &_desktop {
+      display: inline-block;
+    }
+  }
+}

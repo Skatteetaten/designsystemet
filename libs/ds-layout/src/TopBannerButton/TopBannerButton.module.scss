@@ -1,0 +1,149 @@
+@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
+.button {
+  position: relative;
+  display: flex;
+  height: 100%;
+
+  // Må justeres med høyden/bredden til TopBanner sine logo i mobilvisning
+  min-height: 56px;
+  box-sizing: border-box;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-xs) var(--spacing-xxs) var(--spacing-xxs);
+  border: none;
+  border-radius: var(--spacing-xs);
+
+  // stylelint-disable-next-line property-no-vendor-prefix
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--palette-graphite-0);
+  color: var(--semantic-interactive-main);
+  cursor: pointer;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--semantic-line-height-default);
+
+  .icon {
+    padding: var(--spacing-xs);
+
+    &_standard,
+    &_outline {
+      fill: var(--semantic-interactive-main);
+    }
+
+    &_filled {
+      border-radius: 50%;
+      background-color: var(--semantic-interactive-main);
+      fill: var(--palette-graphite-0);
+    }
+  }
+
+  &:focus {
+    border-radius: var(--spacing-xxs);
+    outline: none;
+
+    &::before {
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      bottom: -2px;
+      left: -2px;
+      border: 2px solid var(--semantic-interactive-main);
+      border-radius: var(--spacing-xs);
+      content: '';
+    }
+  }
+
+  &:active {
+    box-shadow: none;
+    color: var(--semantic-interactive-foreground);
+
+    &::before {
+      border: 2px solid var(--semantic-interactive-foreground);
+    }
+
+    .icon {
+      &_standard,
+      &_outline {
+        fill: var(--semantic-interactive-foreground);
+      }
+
+      &_filled {
+        background-color: var(--semantic-interactive-foreground);
+      }
+    }
+  }
+
+  &:hover {
+    background-color: var(--semantic-interactive-background);
+  }
+
+  @media (min-width: $breakpoint-s) {
+    height: auto;
+    min-height: auto;
+    flex-direction: row;
+    padding: var(--spacing-xxs) var(--spacing-m);
+    border: 3px solid;
+    border-radius: var(--spacing-l);
+    font-size: var(--font-size-m);
+    gap: 5px;
+    line-height: var(--semantic-line-height-buttons);
+
+    &_standard {
+      border-color: var(--palette-graphite-0);
+
+      &:hover {
+        border-color: var(--semantic-interactive-main);
+      }
+    }
+
+    &_outline {
+      border-color: var(--semantic-interactive-main);
+    }
+
+    &_filled {
+      border-color: var(--semantic-interactive-main);
+      background-color: var(--semantic-interactive-main);
+      color: var(--palette-graphite-0);
+
+      &:hover {
+        border-color: var(--semantic-interactive-foreground);
+        background-color: var(--semantic-interactive-foreground);
+        color: var(--palette-graphite-0);
+      }
+    }
+
+    &:hover {
+      .icon {
+        &_filled {
+          background-color: var(--semantic-interactive-foreground);
+        }
+      }
+    }
+
+    &:focus {
+      border-radius: 3rem;
+
+      &::before {
+        top: -7px;
+        right: -7px;
+        bottom: -7px;
+        left: -7px;
+        border-color: var(--semantic-interactive-main);
+        border-radius: 3rem;
+      }
+    }
+
+    &:active {
+      transform: translateY(2px);
+
+      .icon {
+        &_filled {
+          background-color: var(--semantic-interactive-foreground);
+        }
+      }
+    }
+  }
+}

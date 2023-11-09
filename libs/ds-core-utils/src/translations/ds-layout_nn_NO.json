@@ -10,5 +10,8 @@
   "topbannerexternal.SkeLogoImageText": "Skatteetaten logo",
   "topbannerexternal.SkeLogoLinkText": "Forside Skatteetaten",
   "topbannerexternal.SkipLinkText": "Hopp til hovedinnhald",
-  "userbutton.Title": "Profil"
+  "userbutton.OtherIconText": "(Innlogget som annen person)",
+  "userbutton.SelfIconText": "(Innlogget som meg selv)",
+  "userbutton.Title": "Profil",
+  "userbutton.WorkIconText": "(Innlogget som virksomhet)"
 }
