@@ -102,7 +102,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
         {imageSource && (
           <img
             src={imageSource}
-            alt={imageSourceAltText}
+            alt={imageSourceAltText ?? ''}
             className={`${styles.modalIllustration} ${
               classNames?.image ?? ''
             }`.trim()}

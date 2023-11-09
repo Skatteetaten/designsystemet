@@ -16,7 +16,8 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
-import illustrationSource from '../../assets/farmer-illustration.svg';
+import farmerIllustration from '../../assets/farmer-illustration.svg';
+import waitIllustration from '../../assets/wait-alert-illustration.png';
 
 const tittelText = 'Det er en tittel';
 const subtittelText = 'Det er en undertittel';
@@ -55,11 +56,7 @@ const meta = {
     imageSource: {
       table: { disable: true },
       control: 'select',
-      options: [
-        '',
-        'farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg',
-        'd52134bda41b5aa041ef.png',
-      ],
+      options: ['', farmerIllustration, waitIllustration],
     },
     padding: {
       table: { disable: true },
@@ -350,7 +347,7 @@ export const WithImage = {
 
   args: {
     ...defaultArgs,
-    imageSource: illustrationSource,
+    imageSource: farmerIllustration,
   },
 
   argTypes: {
@@ -373,7 +370,7 @@ export const WithImageMobile = {
 
   args: {
     ...defaultArgs,
-    imageSource: illustrationSource,
+    imageSource: farmerIllustration,
   },
 
   argTypes: {
@@ -457,7 +454,7 @@ export const WithHideGraphicMobileAndImage = {
   args: {
     ...defaultArgs,
     hideGraphicMobile: true,
-    imageSource: illustrationSource,
+    imageSource: farmerIllustration,
   },
 
   argTypes: {
@@ -493,7 +490,7 @@ export const WithHideGraphicMobileAndImageDesktop = {
   args: {
     ...defaultArgs,
     hideGraphicMobile: true,
-    imageSource: illustrationSource,
+    imageSource: farmerIllustration,
   },
 
   argTypes: {

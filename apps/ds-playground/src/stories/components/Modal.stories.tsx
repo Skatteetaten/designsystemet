@@ -11,7 +11,8 @@ import { Paragraph } from '@skatteetaten/ds-typography';
 import { Meta, StoryFn } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
-import waitAlert from '../../assets/wait-alert-illustration.png';
+import farmerIllustration from '../../assets/farmer-illustration.svg';
+import waitIllustration from '../../assets/wait-alert-illustration.png';
 import { getVersion } from '../utils/version.utils';
 
 export default {
@@ -25,8 +26,9 @@ export default {
     hideCloseButton: { table: { category: category.props } },
     hideTitle: { table: { category: category.props } },
     imageSource: {
-      control: { type: null },
       table: { category: category.props },
+      control: 'select',
+      options: ['', farmerIllustration, waitIllustration],
     },
     imageSourceAltText: { table: { category: category.props } },
     padding: {
@@ -140,7 +142,7 @@ export const ExampleWait: StoryFn<typeof Modal> = () => {
       <Modal
         ref={ref}
         title={'Hei, er du fortsatt her?'}
-        imageSource={waitAlert}
+        imageSource={waitIllustration}
         imageSourceAltText={
           'Illustrasjon av travel person med seks armer, opptatt med kontorarbeid.'
         }

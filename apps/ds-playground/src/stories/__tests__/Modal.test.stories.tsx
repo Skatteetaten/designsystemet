@@ -8,7 +8,8 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { fireEvent, userEvent, within } from '@storybook/testing-library';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
-import illustration from '../../assets/wait-alert-illustration.png';
+import farmerIllustration from '../../assets/farmer-illustration.svg';
+import waitIllustration from '../../assets/wait-alert-illustration.png';
 
 const defaultTitle = 'Vil du erstatte nye opplysninger fra fil?';
 
@@ -32,7 +33,11 @@ const meta = {
     disableAutoClose: { table: { disable: true } },
     hideCloseButton: { table: { disable: true } },
     hideTitle: { table: { disable: true } },
-    imageSource: { table: { disable: true } },
+    imageSource: {
+      table: { disable: true },
+      control: 'select',
+      options: ['', farmerIllustration, waitIllustration],
+    },
     imageSourceAltText: { table: { disable: true } },
     padding: { table: { disable: true } },
     title: { table: { disable: true } },
@@ -170,7 +175,7 @@ export const WithImage = {
   render: TemplateModal,
   name: 'With Image (A1)',
   args: {
-    imageSource: illustration,
+    imageSource: waitIllustration,
     imageSourceAltText: 'Image alt tekst',
   },
   argTypes: {

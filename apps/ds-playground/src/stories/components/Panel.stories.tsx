@@ -21,7 +21,8 @@ import { Paragraph } from '@skatteetaten/ds-typography';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
-import illustrationSource from '../../assets/farmer-illustration.svg';
+import farmerIllustration from '../../assets/farmer-illustration.svg';
+import waitIllustration from '../../assets/wait-alert-illustration.png';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import { getVersion } from '../utils/version.utils';
 
@@ -47,11 +48,7 @@ export default {
     hideTitle: { table: { category: category.props } },
     imageSource: {
       control: 'select',
-      options: [
-        '',
-        'farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg',
-        'd52134bda41b5aa041ef.png',
-      ],
+      options: ['', farmerIllustration, waitIllustration],
       table: { category: category.props },
     },
     padding: {
@@ -122,7 +119,7 @@ export const Example: StoryFn<typeof Panel> = (_args) => (
   <>
     <Panel
       title={'Når kommer skattepengene'}
-      imageSource={illustrationSource}
+      imageSource={farmerIllustration}
       padding={'mega'}
       spacing={'xxl'}
     >
