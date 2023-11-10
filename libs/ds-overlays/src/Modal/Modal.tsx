@@ -113,7 +113,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
           className={`${paddingClassName} ${noPaddingTop}`.trim()}
         >
           {variant === 'important' && (
-            <SkatteetatenLogo className={styles.modalSymbolLogo} />
+            <SkatteetatenLogo className={styles.modalLogo} />
           )}
           <Heading
             className={`${styles.modalHeading} ${headingNoPaddingClassName} ${hideTitleClassName}`.trim()}

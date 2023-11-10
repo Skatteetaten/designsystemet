@@ -1,7 +1,12 @@
 @import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
 .separator {
-  height: 3rem;
+  height: 2rem;
+  margin-top: var(--spacing-xxl);
+
+  @media (min-width: $breakpoint-s) {
+    height: 3rem;
+  }
 }
 
 .footer {

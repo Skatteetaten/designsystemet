@@ -21,7 +21,10 @@ export default {
   argTypes: {
     // Props
     children: { control: { type: null }, table: { category: category.props } },
-    classNames: { table: { category: category.props } },
+    classNames: {
+      control: { type: null },
+      table: { category: category.props },
+    },
     disableAutoClose: { table: { category: category.props } },
     hideCloseButton: { table: { category: category.props } },
     hideTitle: { table: { category: category.props } },
@@ -139,6 +142,7 @@ export const ExampleWait: StoryFn<typeof Modal> = () => {
       <Modal
         ref={ref}
         title={'Hei, er du fortsatt her?'}
+        // husk å importere illustrasjonen
         imageSource={waitIllustration}
         imageSourceAltText={
           'Illustrasjon av travel person med seks armer, opptatt med kontorarbeid.'
