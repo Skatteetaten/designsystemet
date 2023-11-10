@@ -31,7 +31,7 @@ const meta = {
       control: 'inline-radio',
       options: [...spinnerSizeArr],
     },
-    textPosition: {
+    titlePosition: {
       table: { disable: true },
       control: 'inline-radio',
       options: [...spinnerPositionArr],
@@ -41,7 +41,7 @@ const meta = {
       control: 'inline-radio',
       options: [...spinnerColorArr],
     },
-    hideText: {
+    hideTitle: {
       control: 'boolean',
       table: { disable: true },
     },
@@ -117,7 +117,7 @@ export const Defaults = {
 } satisfies Story;
 
 export const WithSizeAndPosition = {
-  name: 'With Size, Text postition, children (A1, A2, A4)',
+  name: 'With Size, TitlePostition, Children (A1, A2, A4)',
   render: (args): JSX.Element => {
     return (
       <>
@@ -127,19 +127,19 @@ export const WithSizeAndPosition = {
 
         <Spinner
           className={'bottomSpacingXL'}
-          textPosition={'right'}
+          titlePosition={'right'}
           size={'small'}
           {...args}
         />
         <Spinner
           className={'bottomSpacingXL'}
-          textPosition={'right'}
+          titlePosition={'right'}
           size={'medium'}
           {...args}
         />
         <Spinner
           className={'bottomSpacingXL'}
-          textPosition={'right'}
+          titlePosition={'right'}
           size={'large'}
           {...args}
         />
@@ -152,7 +152,7 @@ export const WithSizeAndPosition = {
   argTypes: {
     children: { table: { disable: false } },
     size: { table: { disable: false } },
-    textPosition: { table: { disable: false } },
+    titlePosition: { table: { disable: false } },
   },
 } satisfies Story;
 
@@ -209,13 +209,13 @@ export const WithColorsDarkBackground = {
 
 const spinnerText = 'laster data';
 export const WithHideText = {
-  name: 'With HideText (B1)',
+  name: 'With HideTitle (B1)',
   args: {
-    hideText: true,
+    hideTitle: true,
     children: spinnerText,
   },
   argTypes: {
-    hideText: { table: { disable: false } },
+    hideTitle: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
