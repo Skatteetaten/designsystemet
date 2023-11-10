@@ -3,7 +3,7 @@
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
     "module": "commonjs",
-    "types": ["jest", "node"]
+    "types": ["jest", "node", "../../node_modules/@nx/react/typings/image.d.ts"]
   },
   "include": [
     "jest.config.ts",

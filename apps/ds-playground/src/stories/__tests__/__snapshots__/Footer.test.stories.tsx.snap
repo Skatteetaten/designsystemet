@@ -3,10 +3,10 @@
 exports[`Tester/Footer Defaults play-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="Footer_diagonals__BqOO9">
-      <div class="Footer_diagonalsLeft__UyjI+">
+    <div class="Separator_separator__d97SR Footer_separator__iahH6">
+      <div class="Separator_separatorLeft__pT4Sa">
       </div>
-      <div class="Footer_diagonalsRight__TTTG4">
+      <div class="Separator_separatorRight__G8gOn">
       </div>
     </div>
     <div class="Footer_footer__3WCzc">
@@ -97,10 +97,10 @@ exports[`Tester/Footer WithAttributes play-test 1`] = `
           data-testid="123ID"
           class="dummyClassname"
   >
-    <div class="Footer_diagonals__BqOO9">
-      <div class="Footer_diagonalsLeft__UyjI+">
+    <div class="Separator_separator__d97SR Footer_separator__iahH6">
+      <div class="Separator_separatorLeft__pT4Sa">
       </div>
-      <div class="Footer_diagonalsRight__TTTG4">
+      <div class="Separator_separatorRight__G8gOn">
       </div>
     </div>
     <div class="Footer_footer__3WCzc">
@@ -187,10 +187,10 @@ exports[`Tester/Footer WithAttributes play-test 1`] = `
 exports[`Tester/Footer WithCustomLogo smoke-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="Footer_diagonals__BqOO9">
-      <div class="Footer_diagonalsLeft__UyjI+">
+    <div class="Separator_separator__d97SR Footer_separator__iahH6">
+      <div class="Separator_separatorLeft__pT4Sa">
       </div>
-      <div class="Footer_diagonalsRight__TTTG4">
+      <div class="Separator_separatorRight__G8gOn">
       </div>
     </div>
     <div class="Footer_footer__3WCzc">
@@ -270,7 +270,7 @@ exports[`Tester/Footer WithCustomLogo smoke-test 1`] = `
         >
         <div class>
           <img class="logoHeight"
-               src="Skatteetaten-Logo-Horisontal-RGB-Hvit.png"
+               src="ske-logo-horizontal-white.png"
                alt="Skatteetaten logo"
           >
         </div>
@@ -294,10 +294,10 @@ exports[`Tester/Footer WithCustomLogo smoke-test 1`] = `
 exports[`Tester/Footer WithCustomURL play-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="Footer_diagonals__BqOO9">
-      <div class="Footer_diagonalsLeft__UyjI+">
+    <div class="Separator_separator__d97SR Footer_separator__iahH6">
+      <div class="Separator_separatorLeft__pT4Sa">
       </div>
-      <div class="Footer_diagonalsRight__TTTG4">
+      <div class="Separator_separatorRight__G8gOn">
       </div>
     </div>
     <div class="Footer_footer__3WCzc">
@@ -384,10 +384,10 @@ exports[`Tester/Footer WithCustomURL play-test 1`] = `
 exports[`Tester/Footer WithHideLogo play-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="Footer_diagonals__BqOO9">
-      <div class="Footer_diagonalsLeft__UyjI+">
+    <div class="Separator_separator__d97SR Footer_separator__iahH6">
+      <div class="Separator_separatorLeft__pT4Sa">
       </div>
-      <div class="Footer_diagonalsRight__TTTG4">
+      <div class="Separator_separatorRight__G8gOn">
       </div>
     </div>
     <div class="Footer_footer__3WCzc">
@@ -468,10 +468,10 @@ exports[`Tester/Footer WithHideLogo play-test 1`] = `
 exports[`Tester/Footer WithLinks play-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="Footer_diagonals__BqOO9">
-      <div class="Footer_diagonalsLeft__UyjI+">
+    <div class="Separator_separator__d97SR Footer_separator__iahH6">
+      <div class="Separator_separatorLeft__pT4Sa">
       </div>
-      <div class="Footer_diagonalsRight__TTTG4">
+      <div class="Separator_separatorRight__G8gOn">
       </div>
     </div>
     <div class="Footer_footer__3WCzc">
@@ -605,10 +605,10 @@ exports[`Tester/Footer WithLinks play-test 1`] = `
 exports[`Tester/Footer WithOneColumnBreakpointM smoke-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="Footer_diagonals__BqOO9">
-      <div class="Footer_diagonalsLeft__UyjI+">
+    <div class="Separator_separator__d97SR Footer_separator__iahH6">
+      <div class="Separator_separatorLeft__pT4Sa">
       </div>
-      <div class="Footer_diagonalsRight__TTTG4">
+      <div class="Separator_separatorRight__G8gOn">
       </div>
     </div>
     <div class="Footer_footer__3WCzc">
@@ -764,10 +764,10 @@ exports[`Tester/Footer WithOneColumnBreakpointM smoke-test 1`] = `
 exports[`Tester/Footer WithOneColumnBreakpointS smoke-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="Footer_diagonals__BqOO9">
-      <div class="Footer_diagonalsLeft__UyjI+">
+    <div class="Separator_separator__d97SR Footer_separator__iahH6">
+      <div class="Separator_separatorLeft__pT4Sa">
       </div>
-      <div class="Footer_diagonalsRight__TTTG4">
+      <div class="Separator_separatorRight__G8gOn">
       </div>
     </div>
     <div class="Footer_footer__3WCzc">
@@ -923,10 +923,10 @@ exports[`Tester/Footer WithOneColumnBreakpointS smoke-test 1`] = `
 exports[`Tester/Footer WithOneColumnBreakpointXs smoke-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="Footer_diagonals__BqOO9">
-      <div class="Footer_diagonalsLeft__UyjI+">
+    <div class="Separator_separator__d97SR Footer_separator__iahH6">
+      <div class="Separator_separatorLeft__pT4Sa">
       </div>
-      <div class="Footer_diagonalsRight__TTTG4">
+      <div class="Separator_separatorRight__G8gOn">
       </div>
     </div>
     <div class="Footer_footer__3WCzc">
@@ -1084,10 +1084,10 @@ exports[`Tester/Footer WithRef play-test 1`] = `
   <footer class
           id="dummyIdForwardedFromRef"
   >
-    <div class="Footer_diagonals__BqOO9">
-      <div class="Footer_diagonalsLeft__UyjI+">
+    <div class="Separator_separator__d97SR Footer_separator__iahH6">
+      <div class="Separator_separatorLeft__pT4Sa">
       </div>
-      <div class="Footer_diagonalsRight__TTTG4">
+      <div class="Separator_separatorRight__G8gOn">
       </div>
     </div>
     <div class="Footer_footer__3WCzc">
@@ -1174,10 +1174,10 @@ exports[`Tester/Footer WithRef play-test 1`] = `
 exports[`Tester/Footer WithThreeColumnsBreakpointL smoke-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="Footer_diagonals__BqOO9">
-      <div class="Footer_diagonalsLeft__UyjI+">
+    <div class="Separator_separator__d97SR Footer_separator__iahH6">
+      <div class="Separator_separatorLeft__pT4Sa">
       </div>
-      <div class="Footer_diagonalsRight__TTTG4">
+      <div class="Separator_separatorRight__G8gOn">
       </div>
     </div>
     <div class="Footer_footer__3WCzc">
@@ -1409,10 +1409,10 @@ exports[`Tester/Footer WithThreeColumnsBreakpointL smoke-test 1`] = `
 exports[`Tester/Footer WithThreeColumnsBreakpointM smoke-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="Footer_diagonals__BqOO9">
-      <div class="Footer_diagonalsLeft__UyjI+">
+    <div class="Separator_separator__d97SR Footer_separator__iahH6">
+      <div class="Separator_separatorLeft__pT4Sa">
       </div>
-      <div class="Footer_diagonalsRight__TTTG4">
+      <div class="Separator_separatorRight__G8gOn">
       </div>
     </div>
     <div class="Footer_footer__3WCzc">
@@ -1644,10 +1644,10 @@ exports[`Tester/Footer WithThreeColumnsBreakpointM smoke-test 1`] = `
 exports[`Tester/Footer WithThreeColumnsBreakpointS smoke-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="Footer_diagonals__BqOO9">
-      <div class="Footer_diagonalsLeft__UyjI+">
+    <div class="Separator_separator__d97SR Footer_separator__iahH6">
+      <div class="Separator_separatorLeft__pT4Sa">
       </div>
-      <div class="Footer_diagonalsRight__TTTG4">
+      <div class="Separator_separatorRight__G8gOn">
       </div>
     </div>
     <div class="Footer_footer__3WCzc">
@@ -1879,10 +1879,10 @@ exports[`Tester/Footer WithThreeColumnsBreakpointS smoke-test 1`] = `
 exports[`Tester/Footer WithThreeColumnsBreakpointXs smoke-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="Footer_diagonals__BqOO9">
-      <div class="Footer_diagonalsLeft__UyjI+">
+    <div class="Separator_separator__d97SR Footer_separator__iahH6">
+      <div class="Separator_separatorLeft__pT4Sa">
       </div>
-      <div class="Footer_diagonalsRight__TTTG4">
+      <div class="Separator_separatorRight__G8gOn">
       </div>
     </div>
     <div class="Footer_footer__3WCzc">
@@ -2114,10 +2114,10 @@ exports[`Tester/Footer WithThreeColumnsBreakpointXs smoke-test 1`] = `
 exports[`Tester/Footer WithTwoColumnsBreakpointM smoke-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="Footer_diagonals__BqOO9">
-      <div class="Footer_diagonalsLeft__UyjI+">
+    <div class="Separator_separator__d97SR Footer_separator__iahH6">
+      <div class="Separator_separatorLeft__pT4Sa">
       </div>
-      <div class="Footer_diagonalsRight__TTTG4">
+      <div class="Separator_separatorRight__G8gOn">
       </div>
     </div>
     <div class="Footer_footer__3WCzc">
@@ -2299,10 +2299,10 @@ exports[`Tester/Footer WithTwoColumnsBreakpointM smoke-test 1`] = `
 exports[`Tester/Footer WithTwoColumnsBreakpointS smoke-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="Footer_diagonals__BqOO9">
-      <div class="Footer_diagonalsLeft__UyjI+">
+    <div class="Separator_separator__d97SR Footer_separator__iahH6">
+      <div class="Separator_separatorLeft__pT4Sa">
       </div>
-      <div class="Footer_diagonalsRight__TTTG4">
+      <div class="Separator_separatorRight__G8gOn">
       </div>
     </div>
     <div class="Footer_footer__3WCzc">
@@ -2484,10 +2484,10 @@ exports[`Tester/Footer WithTwoColumnsBreakpointS smoke-test 1`] = `
 exports[`Tester/Footer WithTwoColumnsBreakpointXs smoke-test 1`] = `
 <div data-test-block="true">
   <footer class>
-    <div class="Footer_diagonals__BqOO9">
-      <div class="Footer_diagonalsLeft__UyjI+">
+    <div class="Separator_separator__d97SR Footer_separator__iahH6">
+      <div class="Separator_separatorLeft__pT4Sa">
       </div>
-      <div class="Footer_diagonalsRight__TTTG4">
+      <div class="Separator_separatorRight__G8gOn">
       </div>
     </div>
     <div class="Footer_footer__3WCzc">

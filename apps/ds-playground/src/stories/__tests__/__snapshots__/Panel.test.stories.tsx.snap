@@ -350,7 +350,7 @@ exports[`Tester/Panel WithHideGraphicMobileAndImage smoke-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicImage__yJ2sd">
     <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphic_hide__exKT9 Panel_panelImageContainer__cuT5S">
-      <img src="test_bonde.7eebe78d220ecf48b97e4811ac2c5210.svg"
+      <img src="farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg"
            alt
            class="Panel_panelImageContainerImage__YIhOY"
       >
@@ -365,7 +365,7 @@ exports[`Tester/Panel WithHideGraphicMobileAndImage smoke-test 1`] = `
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicImage__yJ2sd">
     <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphic_hide__exKT9 Panel_panelImageContainer__cuT5S">
-      <img src="test_bonde.7eebe78d220ecf48b97e4811ac2c5210.svg"
+      <img src="farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg"
            alt
            class="Panel_panelImageContainerImage__YIhOY"
       >
@@ -385,7 +385,7 @@ exports[`Tester/Panel WithHideGraphicMobileAndImageDesktop smoke-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicImage__yJ2sd">
     <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphic_hide__exKT9 Panel_panelImageContainer__cuT5S">
-      <img src="test_bonde.7eebe78d220ecf48b97e4811ac2c5210.svg"
+      <img src="farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg"
            alt
            class="Panel_panelImageContainerImage__YIhOY"
       >
@@ -400,7 +400,7 @@ exports[`Tester/Panel WithHideGraphicMobileAndImageDesktop smoke-test 1`] = `
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicImage__yJ2sd">
     <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphic_hide__exKT9 Panel_panelImageContainer__cuT5S">
-      <img src="test_bonde.7eebe78d220ecf48b97e4811ac2c5210.svg"
+      <img src="farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg"
            alt
            class="Panel_panelImageContainerImage__YIhOY"
       >
@@ -562,7 +562,7 @@ exports[`Tester/Panel WithImage play-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicImage__yJ2sd">
     <div class="Panel_panelGraphic__7GPa9 Panel_panelImageContainer__cuT5S">
-      <img src="test_bonde.7eebe78d220ecf48b97e4811ac2c5210.svg"
+      <img src="farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg"
            alt
            class="Panel_panelImageContainerImage__YIhOY"
       >
@@ -577,7 +577,7 @@ exports[`Tester/Panel WithImage play-test 1`] = `
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicImage__yJ2sd">
     <div class="Panel_panelGraphic__7GPa9 Panel_panelImageContainer__cuT5S">
-      <img src="test_bonde.7eebe78d220ecf48b97e4811ac2c5210.svg"
+      <img src="farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg"
            alt
            class="Panel_panelImageContainerImage__YIhOY"
       >
@@ -597,7 +597,7 @@ exports[`Tester/Panel WithImageMobile smoke-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicImage__yJ2sd">
     <div class="Panel_panelGraphic__7GPa9 Panel_panelImageContainer__cuT5S">
-      <img src="test_bonde.7eebe78d220ecf48b97e4811ac2c5210.svg"
+      <img src="farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg"
            alt
            class="Panel_panelImageContainerImage__YIhOY"
       >
@@ -612,7 +612,7 @@ exports[`Tester/Panel WithImageMobile smoke-test 1`] = `
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicImage__yJ2sd">
     <div class="Panel_panelGraphic__7GPa9 Panel_panelImageContainer__cuT5S">
-      <img src="test_bonde.7eebe78d220ecf48b97e4811ac2c5210.svg"
+      <img src="farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg"
            alt
            class="Panel_panelImageContainerImage__YIhOY"
       >
