@@ -1,12 +1,12 @@
 import {
   getSpinnerColorDefault,
-  getSpinnerTextPositionDefault,
+  getSpinnerTitlePositionDefault,
   getSpinnerSizeDefault,
 } from '../defaults';
 
 describe('Spinner defaults', () => {
-  it('Når getSpinnerTextPositionDefault kalles, så returnerer den riktig verdi', () => {
-    const renderDefault = getSpinnerTextPositionDefault();
+  it('Når getSpinnerTitlePositionDefault kalles, så returnerer den riktig verdi', () => {
+    const renderDefault = getSpinnerTitlePositionDefault();
     expect(renderDefault).toBe('bottom');
   });
 

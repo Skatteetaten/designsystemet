@@ -3,7 +3,7 @@ import {
   Spinner,
   getSpinnerColorDefault,
   getSpinnerSizeDefault,
-  getSpinnerTextPositionDefault,
+  getSpinnerTitlePositionDefault,
   spinnerSizeArr,
 } from '@skatteetaten/ds-status';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
@@ -17,33 +17,35 @@ export default {
   argTypes: {
     // Props
     children: {
-      table: { category: category.props },
-      defaultValue: { summary: 'Laster inn' },
+      table: {
+        category: category.props,
+        defaultValue: { summary: 'Laster inn' },
+      },
     },
     size: {
+      options: [...spinnerSizeArr],
+      control: 'inline-radio',
       table: {
         category: category.props,
         defaultValue: { summary: getSpinnerSizeDefault() },
         type: { summary: sizeArr.slice(1, 4) },
       },
-      control: 'inline-radio',
-      options: [...spinnerSizeArr],
     },
-    textPosition: {
+    titlePosition: {
+      control: 'inline-radio',
       table: {
         category: category.props,
-        defaultValue: { summary: getSpinnerTextPositionDefault() },
+        defaultValue: { summary: getSpinnerTitlePositionDefault() },
       },
-      control: 'inline-radio',
     },
     color: {
+      control: 'inline-radio',
       table: {
         category: category.props,
         defaultValue: { summary: getSpinnerColorDefault() },
       },
-      control: 'inline-radio',
     },
-    hideText: {
+    hideTitle: {
       table: { category: category.props },
     },
   },
@@ -60,12 +62,12 @@ export const Example: StoryFn<typeof Spinner> = (_args) => (
       className={'bottomSpacingXL'}
       size={'large'}
       color={'blue'}
-      textPosition={'right'}
+      titlePosition={'right'}
     >
       {'Vent litt mens vi sjekker tidligere innsendte a-meldinger'}
     </Spinner>
 
-    <Spinner size={'small'} color={'blue'} textPosition={'right'}>
+    <Spinner size={'small'} color={'blue'} titlePosition={'right'}>
       {'Vent litt mens vi sjekker tidligere innsendte a-meldinger'}
     </Spinner>
   </>

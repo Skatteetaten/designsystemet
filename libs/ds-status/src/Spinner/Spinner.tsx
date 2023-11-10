@@ -5,7 +5,7 @@ import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import {
   getSpinnerColorDefault,
-  getSpinnerTextPositionDefault,
+  getSpinnerTitlePositionDefault,
   getSpinnerSizeDefault,
 } from './defaults';
 import { SpinnerProps } from './Spinner.types';
@@ -20,15 +20,15 @@ export const Spinner = forwardRef<HTMLDivElement, SpinnerProps>(
       lang,
       'data-testid': dataTestId,
       color = getSpinnerColorDefault(),
-      textPosition = getSpinnerTextPositionDefault(),
+      titlePosition = getSpinnerTitlePositionDefault(),
       size = getSpinnerSizeDefault(),
-      hideText,
+      hideTitle,
       children,
     },
     ref
   ): JSX.Element => {
     const { t } = useTranslation('ds_status', { i18n: dsI18n });
-    const [text, setText] = useState<string>();
+    const [title, setTitle] = useState<string>();
 
     /**
      * useEffect sørger for at div med role=status blir rendret før children.
@@ -36,14 +36,14 @@ export const Spinner = forwardRef<HTMLDivElement, SpinnerProps>(
      */
     useEffect(() => {
       setTimeout(() => {
-        setText(children ?? t('spinner.LoadingLabel'));
+        setTitle(children ?? t('spinner.LoadingLabel'));
       }, 0);
     }, [children, t]);
 
     const sizeClassname = size ? styles[`spinner_${size}`] : undefined;
     const colorClassname = color ? styles[`spinner_${color}`] : undefined;
     const positionClassname =
-      textPosition === 'right'
+      titlePosition === 'right'
         ? styles.spinner_flexRow
         : styles.spinner_flexColumn;
 
@@ -59,11 +59,13 @@ export const Spinner = forwardRef<HTMLDivElement, SpinnerProps>(
       >
         <div className={`${styles.spinnerAnimation} `} />
         <span
-          className={`${styles.spinnerText} ${hideText ? styles.srOnly : ''} ${
-            textPosition === 'bottom' ? styles.spinnerText_centerText : ''
+          className={`${styles.spinnerTitle} ${
+            hideTitle ? styles.srOnly : ''
+          } ${
+            titlePosition === 'bottom' ? styles.spinnerTitle_centerText : ''
           }`}
         >
-          {text}
+          {title}
         </span>
       </div>
     );
@@ -75,5 +77,5 @@ Spinner.displayName = 'Spinner';
 export {
   getSpinnerColorDefault,
   getSpinnerSizeDefault,
-  getSpinnerTextPositionDefault,
+  getSpinnerTitlePositionDefault,
 };
