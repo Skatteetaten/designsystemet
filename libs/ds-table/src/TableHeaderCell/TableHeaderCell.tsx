@@ -1,4 +1,4 @@
-import { forwardRef, useContext } from 'react';
+import { forwardRef, useContext, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
@@ -29,7 +29,7 @@ export const TableHeaderCell = forwardRef<
       id,
       className = getCommonClassNameDefault(),
       lang,
-      'data-testid': dataTestid,
+      'data-testid': dataTestId,
       alignment = getTableCellAlignmentDefault(),
       as: Tag = getHeaderCellAsDefault(),
       colSpan,
@@ -91,7 +91,7 @@ export const TableHeaderCell = forwardRef<
         id={id}
         className={concatenatedClassNames}
         lang={lang}
-        data-testid={dataTestid}
+        data-testid={dataTestId}
         scope={scope}
         colSpan={colSpan}
       >

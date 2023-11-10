@@ -1,0 +1,27 @@
+import { Meta, IconGallery, IconItem } from '@storybook/blocks';
+import { Icon } from '@skatteetaten/ds-icons';
+import { iconName } from '../utils/icon.utils';
+import { SystemSVGPaths } from '../utils/icon.systems';
+import { ThemeSVGPaths } from '../utils/icon.themes';
+
+<Meta title="Komponenter/Icon/Icon Gallery" />
+
+## Theme Icons
+
+<IconGallery>
+  {Object.entries(ThemeSVGPaths).map(([svgPathName, svgPath]) => (
+    <IconItem key={svgPathName} name={iconName(svgPathName)}>
+      <Icon svgPath={svgPath} variant={'themeIcon'} />
+    </IconItem>
+  ))}
+</IconGallery>
+
+## System Icons
+
+<IconGallery>
+  {Object.entries(SystemSVGPaths).map(([svgPathName, svgPath]) => (
+    <IconItem key={svgPathName} name={iconName(svgPathName)}>
+      <Icon svgPath={svgPath} />
+    </IconItem>
+  ))}
+</IconGallery>

@@ -1,4 +1,4 @@
-import { ComponentType, forwardRef, Ref, useRef } from 'react';
+import { ComponentType, forwardRef, Ref, useRef, JSX } from 'react';
 
 import { ExampleComponentProps } from './ExampleComponent';
 
@@ -29,7 +29,7 @@ const ExampleComponentWithoutRef = whateverHOC(
     id,
     variant = 'primary',
     className,
-    'data-testid': dataTestid = `testid-${id}`,
+    'data-testid': dataTestId = `testid-${id}`,
     onClick,
     children,
   }: ExampleComponentProps &
@@ -38,7 +38,7 @@ const ExampleComponentWithoutRef = whateverHOC(
     return (
       <button
         ref={incomingRef}
-        data-testid={dataTestid}
+        data-testid={dataTestId}
         className={className}
         onClick={onClick}
       >

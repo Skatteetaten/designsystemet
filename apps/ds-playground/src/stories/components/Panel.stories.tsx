@@ -1,4 +1,6 @@
 /* eslint-disable sonarjs/no-duplicate-string */
+import { JSX } from 'react';
+
 import { MegaButton, Link } from '@skatteetaten/ds-buttons';
 import {
   Panel,
@@ -19,11 +21,12 @@ import { Paragraph } from '@skatteetaten/ds-typography';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
+import farmerIllustration from '../../assets/farmer-illustration.svg';
+import waitIllustration from '../../assets/wait-alert-illustration.png';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
-import illustrationSource from '../__tests__/testUtils/test_bonde.svg';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: Panel,
   title: 'Komponenter/Panel',
   argTypes: {
@@ -45,11 +48,7 @@ const meta = {
     hideTitle: { table: { category: category.props } },
     imageSource: {
       control: 'select',
-      options: [
-        '',
-        'test_bonde.7eebe78d220ecf48b97e4811ac2c5210.svg',
-        'd52134bda41b5aa041ef.png',
-      ],
+      options: ['', farmerIllustration, waitIllustration],
       table: { category: category.props },
     },
     padding: {
@@ -105,27 +104,22 @@ const meta = {
       },
     },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-content'),
   },
 } satisfies Meta<typeof Panel>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-export const PanelDefault = {
-  name: 'Default',
-
+export const Preview: StoryObj<typeof Panel> = {
   args: {
     children: loremIpsum,
   },
-} satisfies Story;
+};
 
-const TemplateExample: StoryFn<typeof Panel> = () => (
+export const Example: StoryFn<typeof Panel> = (_args) => (
   <>
     <Panel
       title={'Når kommer skattepengene'}
-      imageSource={illustrationSource}
+      imageSource={farmerIllustration}
       padding={'mega'}
       spacing={'xxl'}
     >
@@ -164,14 +158,8 @@ const TemplateExample: StoryFn<typeof Panel> = () => (
   </>
 );
 
-export const PanelExample = {
-  render: TemplateExample,
-  name: 'Example',
-
-  args: {
-    children: 'dummy',
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
   },
-  parameters: {
-    controls: { disabled: true },
-  },
-} satisfies Story;
+};

@@ -38,15 +38,8 @@ exports[`Tester/ErrorMessage WithAttributes play-test 1`] = `
 exports[`Tester/ErrorMessage WithLongText smoke-test 1`] = `
 <div data-test-block="true">
   <div class="errorMessageContainer">
-    <label for="label1"
-           class="block"
-    >
-      Label
-    </label>
-    <input id="label1"
-           type="text"
-    >
-    <div aria-live="assertive"
+    <div id="errorId"
+         aria-live="assertive"
          aria-atomic="true"
     >
       <div class="ErrorMessage_errorMessage__508oW ">
@@ -71,14 +64,6 @@ exports[`Tester/ErrorMessage WithLongText smoke-test 1`] = `
 exports[`Tester/ErrorMessage WithLongTextAndBreaking smoke-test 1`] = `
 <div data-test-block="true">
   <div class="errorMessageContainer">
-    <label for="label1"
-           class="block"
-    >
-      Label
-    </label>
-    <input id="label1"
-           type="text"
-    >
     <div aria-live="assertive"
          aria-atomic="true"
     >

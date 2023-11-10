@@ -1,11 +1,11 @@
-import { ReactNode } from 'react';
+import { HTMLProps, ReactNode } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 import { TextAlignment } from '../Table/Table.types';
 
 type RequiredSumHTMLAttributes = Pick<
-  React.HTMLProps<HTMLTableCellElement>,
+  HTMLProps<HTMLTableCellElement>,
   'colSpan'
 >;
 type SumHTMLAttributes = Partial<RequiredSumHTMLAttributes>;

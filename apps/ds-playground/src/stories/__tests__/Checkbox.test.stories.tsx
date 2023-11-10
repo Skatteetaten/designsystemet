@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 
 import { Checkbox } from '@skatteetaten/ds-forms';
 import { expect } from '@storybook/jest';
@@ -31,6 +31,7 @@ const meta = {
     children: {
       table: { disable: true },
     },
+    defaultChecked: { table: { disable: true } },
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
     hasError: {
@@ -50,11 +51,6 @@ const meta = {
     },
     // HTML
     checked: {
-      table: {
-        disable: true,
-      },
-    },
-    defaultChecked: {
       table: {
         disable: true,
       },
@@ -641,7 +637,7 @@ const EventHandlersTemplate: StoryFn<typeof Checkbox> = (args) => {
   return (
     <Checkbox
       {...args}
-      onChange={(event: React.ChangeEvent<HTMLInputElement>): void => {
+      onChange={(event: ChangeEvent<HTMLInputElement>): void => {
         setLabelText('Checkbox har blitt klikket på');
         args.onChange && args.onChange(event);
       }}

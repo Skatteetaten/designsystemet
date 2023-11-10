@@ -7,12 +7,18 @@ import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+CheckboxGroup.Checkbox = { ...CheckboxGroup.Checkbox };
+CheckboxGroup.Checkbox.displayName = 'CheckboxGroup.Checkbox';
+
+export default {
   component: CheckboxGroup,
   title: 'Komponenter/CheckboxGroup',
   argTypes: {
     // Props
     children: { control: 'object', table: { category: category.props } },
+    description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasError: {
       control: 'boolean',
@@ -20,6 +26,8 @@ const meta = {
         category: category.props,
       },
     },
+    helpSvgPath: { table: { category: category.props } },
+    helpText: { table: { category: category.props } },
     hideLegend: {
       control: 'boolean',
       table: {
@@ -33,6 +41,7 @@ const meta = {
         category: category.props,
       },
     },
+    titleHelpSvg: { table: { category: category.props } },
     // HTML
     disabled: {
       control: 'boolean',
@@ -41,32 +50,29 @@ const meta = {
       },
     },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-forms'),
-    docs: { source: { type: 'code' } },
   },
 } satisfies Meta<typeof CheckboxGroup>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: StoryFn<typeof CheckboxGroup> = (args) => (
-  <CheckboxGroup {...args}>
-    <CheckboxGroup.Checkbox>{'Har barn over 16 år'}</CheckboxGroup.Checkbox>
-    <CheckboxGroup.Checkbox>{'Har barn under 12 år'}</CheckboxGroup.Checkbox>
-    <CheckboxGroup.Checkbox>
-      {
-        'Får ekstra reisevei til jobb på grunn av levering til barnehage eller skolefritidsordning'
-      }
-    </CheckboxGroup.Checkbox>
-    <CheckboxGroup.Checkbox>
-      {'Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov'}
-    </CheckboxGroup.Checkbox>
-    <CheckboxGroup.Checkbox>{'Er enslig forsørger'}</CheckboxGroup.Checkbox>
-  </CheckboxGroup>
-);
+export const Preview: StoryObj<typeof CheckboxGroup> = {
+  args: {
+    children: [
+      <CheckboxGroup.Checkbox key={'checkbox1'}>
+        {'Har barn over 16 år'}
+      </CheckboxGroup.Checkbox>,
+      <CheckboxGroup.Checkbox key={'checkbox2'}>
+        {'Har barn under 12 år'}
+      </CheckboxGroup.Checkbox>,
+      <CheckboxGroup.Checkbox key={'checkbox3'}>
+        {'Har ingen barn'}
+      </CheckboxGroup.Checkbox>,
+    ],
+    legend: 'Velg det som passer deg',
+  },
+};
 
-const TemplateExample: StoryFn<typeof CheckboxGroup> = () => {
+export const Example: StoryFn<typeof CheckboxGroup> = (_args) => {
   const options = [
     {
       label: 'Har barn over 16 år',
@@ -117,23 +123,66 @@ const TemplateExample: StoryFn<typeof CheckboxGroup> = () => {
   );
 };
 
-export const CheckboxGroupDefault = {
-  render: TemplateDefault,
-  name: 'Default',
-
-  args: {
-    legend: 'Velg det som passer deg',
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
   },
-} satisfies Story;
+};
 
-export const CheckboxGroupExample = {
-  render: TemplateExample,
-  name: 'Example',
+export const ExampleSource: StoryFn<typeof CheckboxGroup> = () => {
+  const options = [
+    {
+      label: 'Har barn over 16 år',
+    },
+    {
+      label: 'Har barn under 12 år',
+    },
+    {
+      label:
+        'Får ekstra reisevei til jobb på grunn av levering til barnehage eller skolefritidsordning',
+    },
+    {
+      label:
+        'Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov',
+    },
+    {
+      label: 'Er enslig forsørger',
+    },
+  ];
 
-  args: {
-    legend: 'dummy',
+  const [checkedState, setCheckedState] = useState(
+    new Array(options.length).fill(false)
+  );
+
+  const handleOnChange = (position: number): void => {
+    const updatedCheckedState = checkedState.map((option, index) =>
+      index === position ? !option : option
+    );
+    setCheckedState(updatedCheckedState);
+  };
+  return (
+    <>
+      <CheckboxGroup legend={'Velg det som gjelder deg'}>
+        {options.map((option, index) => {
+          return (
+            <CheckboxGroup.Checkbox
+              key={index}
+              checked={checkedState[index]}
+              onChange={(): void => handleOnChange(index)}
+            >
+              {option.label}
+            </CheckboxGroup.Checkbox>
+          );
+        })}
+      </CheckboxGroup>
+      <Button>{'Neste side'}</Button>
+    </>
+  );
+};
+
+ExampleSource.tags = ['isHidden'];
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
   },
-  parameters: {
-    controls: { disabled: true },
-  },
-} satisfies Story;
+};

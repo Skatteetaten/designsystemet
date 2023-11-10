@@ -1,0 +1,14 @@
+{
+  "loginbutton.Title": "(Logg inn)",
+  "logoutbutton.Title": "(Logg ut)",
+  "menubutton.Meny": "(Meny)",
+  "topbannerexternal.DrawerAriaLabel": "(Temaoversikt)",
+  "topbannerexternal.InkLogoImageText": "Stáhta gáibideami dovdomearka",
+  "topbannerexternal.InkLogoLinkText": "Stáhta gáibideami ovdasiidu",
+  "topbannerexternal.LsoLogoImageText": "Bálkádoarjja dovdomearka",
+  "topbannerexternal.LsoLogoLinkText": "Bálkádoarjja ovdasiidu",
+  "topbannerexternal.SkeLogoImageText": "Vearroetáhta dovdomearka",
+  "topbannerexternal.SkeLogoLinkText": "Vearroetáhta ovdasiidu",
+  "topbannerexternal.SkipLinkText": "(Hopp til hovedinnhold)",
+  "userbutton.Title": "(Profil)"
+}

@@ -1,10 +1,9 @@
 import {
   getVisibilityThresholdDefault,
   ScrollToTopButton,
-  ScrollToTopButtonProps,
 } from '@skatteetaten/ds-buttons';
 import { ExternalLayout } from '@skatteetaten/ds-core-utils';
-import { StoryObj, Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 // @skatteeteaten/ds-core-designtokens er angitt som symlink i package.json
 // derfor vil typecheck feile hvis pakken ikke er bygget, derfor bryter vi nx module boundaries her
 // eslint-disable-next-line @nx/enforce-module-boundaries
@@ -13,7 +12,7 @@ import palette from 'libs/ds-core-designtokens/lib/designtokens/palette.json';
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: ScrollToTopButton,
   title: 'Komponenter/ScrollToTopButton',
   argTypes: {
@@ -32,7 +31,6 @@ const meta = {
     },
     children: { table: { category: category.props } },
   },
-  tags: ['autodocs'],
   parameters: {
     backgrounds: {
       default: 'graphite-70',
@@ -45,39 +43,28 @@ const meta = {
     },
     version: getVersion('ds-buttons'),
   },
-} satisfies Meta<ScrollToTopButtonProps>;
-export default meta;
-type Story = StoryObj<typeof meta>;
+} satisfies Meta<typeof ScrollToTopButton>;
 
-const TemplateDefault: StoryFn<ScrollToTopButtonProps> = (args) => (
-  <div className={'height100vh'}>
-    <main className={'scrollToTopContainer'} tabIndex={-1}>
-      <ExternalLayout />
-      <ScrollToTopButton {...args} />
-    </main>
-  </div>
-);
+export const Preview: StoryObj<typeof ScrollToTopButton> = {
+  render: (args) => (
+    <div className={'height100vh'}>
+      <main className={'scrollToTopContainer'} tabIndex={-1}>
+        <ExternalLayout />
+        <ScrollToTopButton {...args} />
+      </main>
+    </div>
+  ),
+  args: {},
+};
 
-const TemplateExample: StoryFn<ScrollToTopButtonProps> = () => (
+export const Example: StoryFn<typeof ScrollToTopButton> = (_args) => (
   <div className={'height100vh'}>
     <ScrollToTopButton visibilityThreshold={0} />
   </div>
 );
 
-export const ScrollToTopButtonDefault: StoryObj<ScrollToTopButtonProps> = {
-  render: TemplateDefault,
-  name: 'Default',
-
-  args: {
-    visibilityThreshold: getVisibilityThresholdDefault(),
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
   },
-} satisfies Story;
-
-export const ScrollToTopButtonExample: StoryObj<ScrollToTopButtonProps> = {
-  render: TemplateExample,
-  name: 'Example',
-
-  parameters: {
-    controls: { disabled: true },
-  },
-} satisfies Story;
+};

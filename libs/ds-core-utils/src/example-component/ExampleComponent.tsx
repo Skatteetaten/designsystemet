@@ -1,10 +1,10 @@
-import { forwardRef, useRef } from 'react';
+import { ComponentPropsWithoutRef, forwardRef, useRef, JSX } from 'react';
 
 import { BaseProps } from '../base-props.types';
 
 // Her plukker man manuelt hvilke html-attributer skal eksponeres som property
 type ExampleComponentPropsHTMLAttributes = Pick<
-  React.ComponentPropsWithoutRef<'button'>,
+  ComponentPropsWithoutRef<'button'>,
   'title' | 'onClick' | 'children'
 >;
 
@@ -30,7 +30,7 @@ export const ExampleComponent = forwardRef<
       id,
       variant = 'primary',
       className,
-      'data-testid': dataTestid = `testid-${id}`,
+      'data-testid': dataTestId = `testid-${id}`,
       onClick,
       children,
     },
@@ -39,7 +39,7 @@ export const ExampleComponent = forwardRef<
     return (
       <button
         ref={ref}
-        data-testid={dataTestid}
+        data-testid={dataTestId}
         className={className}
         onClick={onClick}
       >

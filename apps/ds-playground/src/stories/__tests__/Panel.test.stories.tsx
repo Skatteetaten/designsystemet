@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Button } from '@skatteetaten/ds-buttons';
 import {
   Panel,
@@ -14,7 +16,8 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
-import illustrationSource from './testUtils/test_bonde.svg';
+import farmerIllustration from '../../assets/farmer-illustration.svg';
+import waitIllustration from '../../assets/wait-alert-illustration.png';
 
 const tittelText = 'Det er en tittel';
 const subtittelText = 'Det er en undertittel';
@@ -53,11 +56,7 @@ const meta = {
     imageSource: {
       table: { disable: true },
       control: 'select',
-      options: [
-        '',
-        'test_bonde.7eebe78d220ecf48b97e4811ac2c5210.svg',
-        'd52134bda41b5aa041ef.png',
-      ],
+      options: ['', farmerIllustration, waitIllustration],
     },
     padding: {
       table: { disable: true },
@@ -177,7 +176,7 @@ export const WithClassNameOverridesPanelWidthAndPadding = {
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults Variant Outline (A1 delvis, A2 delvis, A3 delvis)',
+  name: 'Defaults Variant Outline (A1, A2 delvis, A3)',
 
   args: {
     ...defaultArgs,
@@ -195,7 +194,7 @@ export const Defaults = {
 } satisfies Story;
 
 export const VariantFilled = {
-  name: 'Variant Filled (A1 delvis)',
+  name: 'Variant Filled (A1)',
 
   args: {
     ...defaultArgs,
@@ -208,7 +207,7 @@ export const VariantFilled = {
 } satisfies Story;
 
 export const WithTitle = {
-  name: 'With Title (A5 delvis, A3 delvis)',
+  name: 'With Title (A5, A3)',
 
   args: {
     ...defaultArgs,
@@ -230,7 +229,7 @@ export const WithTitle = {
 } satisfies Story;
 
 export const WithTitleAs = {
-  name: 'With TitleAs (A5 delvis)',
+  name: 'With TitleAs (A5)',
 
   args: {
     ...defaultArgs,
@@ -270,7 +269,7 @@ export const WithHideTitle = {
 } satisfies Story;
 
 export const WithSubtitle = {
-  name: 'With Subtitle (A7 delvis, A3 delvis)',
+  name: 'With Subtitle (A7, A3)',
 
   args: {
     ...defaultArgs,
@@ -292,7 +291,7 @@ export const WithSubtitle = {
 } satisfies Story;
 
 export const WithSubtitleAs = {
-  name: 'With SubtitleAs (A7 delvis)',
+  name: 'With SubtitleAs (A7)',
 
   args: {
     ...defaultArgs,
@@ -344,11 +343,11 @@ const TemplateWithGraphics: StoryFn<typeof Panel> = (args) => (
 
 export const WithImage = {
   render: TemplateWithGraphics,
-  name: 'With Image (A9 delvis)',
+  name: 'With Image (A9)',
 
   args: {
     ...defaultArgs,
-    imageSource: illustrationSource,
+    imageSource: farmerIllustration,
   },
 
   argTypes: {
@@ -367,11 +366,11 @@ export const WithImage = {
 
 export const WithImageMobile = {
   render: TemplateWithGraphics,
-  name: 'With Image On Small Screen (A9 delvis)',
+  name: 'With Image On Small Screen (A9)',
 
   args: {
     ...defaultArgs,
-    imageSource: illustrationSource,
+    imageSource: farmerIllustration,
   },
 
   argTypes: {
@@ -409,7 +408,7 @@ export const WithIcon = {
 
 export const WithIconMobile = {
   render: TemplateWithGraphics,
-  name: 'With Icon On Small Screen (A12 delvis)',
+  name: 'With Icon On Small Screen (A12)',
 
   args: {
     ...defaultArgs,
@@ -429,7 +428,7 @@ export const WithIconMobile = {
 
 export const WithHideGraphicMobileAndIcon = {
   render: TemplateWithGraphics,
-  name: 'With HideGraphicMobile And Icon On Small Screen (A12 delvis, A9 delvis)',
+  name: 'With HideGraphicMobile And Icon On Small Screen (A12, A9)',
 
   args: {
     ...defaultArgs,
@@ -450,12 +449,12 @@ export const WithHideGraphicMobileAndIcon = {
 
 export const WithHideGraphicMobileAndImage = {
   render: TemplateWithGraphics,
-  name: 'With HideGraphicMobile And Image On Small Screen (A12 delvis, A9 delvis)',
+  name: 'With HideGraphicMobile And Image On Small Screen (A12, A9)',
 
   args: {
     ...defaultArgs,
     hideGraphicMobile: true,
-    imageSource: illustrationSource,
+    imageSource: farmerIllustration,
   },
 
   argTypes: {
@@ -471,7 +470,7 @@ export const WithHideGraphicMobileAndImage = {
 
 export const WithHideGraphicMobileAndIconDesktop = {
   render: TemplateWithGraphics,
-  name: 'With HideGraphicMobile And Icon On Big Screen (A12 delvis, A9 delvis)',
+  name: 'With HideGraphicMobile And Icon On Big Screen (A12, A9)',
 
   args: {
     ...defaultArgs,
@@ -486,12 +485,12 @@ export const WithHideGraphicMobileAndIconDesktop = {
 
 export const WithHideGraphicMobileAndImageDesktop = {
   render: TemplateWithGraphics,
-  name: 'With HideGraphicMobile And Image On Big Screen (A12 delvis, A9 delvis)',
+  name: 'With HideGraphicMobile And Image On Big Screen (A12, A9)',
 
   args: {
     ...defaultArgs,
     hideGraphicMobile: true,
-    imageSource: illustrationSource,
+    imageSource: farmerIllustration,
   },
 
   argTypes: {
@@ -530,7 +529,7 @@ const TemplateWithAllColors: StoryFn<typeof Panel> = (args) => (
 
 export const WithColorAndVariant = {
   render: TemplateWithAllColors,
-  name: 'With Color And Variant (A1 delvis)',
+  name: 'With Color And Variant (A1)',
 
   args: {
     ...defaultArgs,

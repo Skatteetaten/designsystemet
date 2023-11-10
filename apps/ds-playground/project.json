@@ -40,8 +40,7 @@
     "test": {
       "executor": "nx:run-commands",
       "options": {
-        "cwd": "apps/ds-playground",
-        "command": "test-storybook -c .storybook"
+        "command": "test-storybook -c apps/ds-playground/.storybook"
       }
     },
     "stylelint": {
@@ -62,6 +61,18 @@
           "tsconfig.spec.json",
           "tsconfig.storybook.json"
         ]
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "ds-playground:build-storybook",
+        "staticFilePath": "dist/storybook/ds-playground"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "ds-playground:build-storybook:ci"
+        }
       }
     }
   },

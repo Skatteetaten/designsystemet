@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { forwardRef, JSX } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
@@ -12,7 +12,7 @@ export const ListElement = forwardRef<HTMLLIElement, ListElementProps>(
       id,
       className = getCommonClassNameDefault(),
       lang,
-      'data-testid': dataTestid,
+      'data-testid': dataTestId,
       children,
     },
     ref
@@ -23,7 +23,7 @@ export const ListElement = forwardRef<HTMLLIElement, ListElementProps>(
         id={id}
         className={`${styles.element} ${className}`}
         lang={lang}
-        data-testid={dataTestid}
+        data-testid={dataTestId}
       >
         {children}
       </li>
@@ -31,4 +31,4 @@ export const ListElement = forwardRef<HTMLLIElement, ListElementProps>(
   }
 );
 
-ListElement.displayName = 'ListElement';
+ListElement.displayName = 'List.Element';

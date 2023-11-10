@@ -27,10 +27,8 @@ const getDirectories = (source) =>
 
 const config = {
   stories: [
-    '../src/stories/**/*.stories.mdx',
+    '../src/stories/**/*.mdx',
     '../src/stories/**/*.stories.@(js|jsx|ts|tsx)',
-    '../../../libs/**/*.stories.mdx',
-    '../../../libs/**/*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [
     '@storybook/addon-essentials',
@@ -56,6 +54,9 @@ const config = {
   framework: {
     name: '@storybook/react-webpack5',
     options: {},
+  },
+  docs: {
+    autodocs: true,
   },
   webpackFinal: async (config) => {
     const outerIndex =
@@ -105,6 +106,21 @@ const config = {
         };
       }
     });
+    config.optimization = {
+      ...config.optimization,
+      splitChunks: {
+        ...config.optimization.splitChunks,
+        cacheGroups: {
+          ...config.optimization.splitChunks.cacheGroups,
+          styles: {
+            name: 'main',
+            type: 'css/mini-extract',
+            chunks: 'all',
+            enforce: true,
+          },
+        },
+      },
+    };
     config.resolve.fallback.fs = false;
     config.resolve.fallback.os = false;
     config.resolve.fallback.path = false;

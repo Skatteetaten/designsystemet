@@ -1,9 +1,9 @@
 {
   "errorsummary.Title": "Jus áigut viidáset de fertet divvut {{errorAmount}} boasttuvuođa:",
-  "fileuploader.AcceptedFileFormats": "Dohkkehuvvon fiilaformáhtat:",
+  "fileuploader.AcceptedFileFormats": "Fiillaid maid sáhtát lasihit:",
   "fileuploader.AddFile": "Lasit fiilla/fiillaid",
   "fileuploader.DeleteFile": "Sihko fiilla",
-  "fileuploader.FileFormatError": "Fiilaformáhta ii leat dohkkehuvvon",
+  "fileuploader.FileFormatError": "{{filnavn}} ii sáhte lasihuvvot. Lasit fiilla rievttes formáhtas.",
   "fileuploader.FileSizeError": "Mii eat nagot vuostáiváldit fiilla. Fiillat eai sáhte leat stuorát go {{filstoerrelsegrense}} MB. Sáhtát geahččalit juohkit fiilla eanet osiide, dahje geavahit formáhta mii geavaha unnit saji.",
   "fileuploader.GeneralDeleteError": "It sáhtán sihkkot fiilla",
   "fileuploader.GeneralUploadError": "It sáhtán lasihit fiilla",

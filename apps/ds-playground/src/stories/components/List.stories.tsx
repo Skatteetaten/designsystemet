@@ -9,12 +9,9 @@ import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: List,
-  subcomponents: {
-    'List.Element': List.Element,
-  },
-  title: 'Komponenter/List',
+  title: 'Komponenter/List/List',
   argTypes: {
     // Props
     hasSpacing: {
@@ -31,29 +28,31 @@ const meta = {
         defaultValue: { summary: getListAsDefault() },
       },
     },
+    children: {
+      control: 'object',
+      table: { category: category.props },
+    },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-typography'),
-    docs: { source: { type: 'code' } },
   },
 } as Meta<typeof List>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: StoryFn<typeof List> = (args) => (
-  <List {...args}>
-    <List.Element key={'listElement_1'}>
-      {'Kjenner du behovet til brukeren?'}
-    </List.Element>
-    <List.Element key={'listElement_2'}>
-      {'Er du sikker på at du kjenner behovet til brukeren?'}
-    </List.Element>
-    <List.Element key={'listElement_3'}>{'Snakk med andre.'}</List.Element>
-  </List>
-);
+export const Preview: StoryObj<typeof List> = {
+  args: {
+    children: [
+      <List.Element key={'listElement1'}>
+        {'Kjenner du behovet til brukeren?'}
+      </List.Element>,
+      <List.Element key={'listElement2'}>
+        {'Er du sikker på at du kjenner behovet til brukeren?'}
+      </List.Element>,
+      <List.Element key={'listElement3'}>{'Snakk med andre.'}</List.Element>,
+    ],
+  },
+};
 
-const TemplateExample: StoryFn<typeof List> = () => (
+export const Example: StoryFn<typeof List> = (_args) => (
   <>
     <Paragraph hasSpacing>{'På Min side finner du'}</Paragraph>
     <List hasSpacing>
@@ -83,20 +82,8 @@ const TemplateExample: StoryFn<typeof List> = () => (
   </>
 );
 
-export const ListDefault = {
-  render: TemplateDefault,
-  name: 'Default',
-
-  args: {
-    as: getListAsDefault(),
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
   },
-} satisfies Story;
-
-export const ListExample = {
-  render: TemplateExample,
-  name: 'Example',
-
-  parameters: {
-    controls: { disabled: true },
-  },
-} satisfies Story;
+};

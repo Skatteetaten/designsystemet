@@ -1,11 +1,10 @@
 import { MegaButton } from '@skatteetaten/ds-buttons';
-import { action } from '@storybook/addon-actions';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: MegaButton,
   title: 'Komponenter/MegaButton',
   argTypes: {
@@ -44,38 +43,23 @@ const meta = {
     onFocus: { ...htmlEventDescription },
     onBlur: { ...htmlEventDescription },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-buttons'),
   },
 } satisfies Meta<typeof MegaButton>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: StoryFn<typeof MegaButton> = (args) => (
-  <MegaButton {...args} onClick={action('KlikkEvent MegaButton')}>
-    {args.children}
-  </MegaButton>
-);
-
-export const MegaButtonDefault = {
-  render: TemplateDefault,
-  name: 'Default',
-
+export const Preview: StoryObj<typeof MegaButton> = {
   args: {
     children: 'Klikk her',
   },
-} satisfies Story;
+};
 
-export const MegaButtonExample = {
-  render: TemplateDefault,
-  name: 'Example',
+export const Example: StoryFn<typeof MegaButton> = (_args) => (
+  <MegaButton>{'Se eller endre skattekortet'}</MegaButton>
+);
 
-  parameters: {
-    controls: { disabled: true },
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
   },
-
-  args: {
-    children: 'Se eller endre skattekortet',
-  },
-} satisfies Story;
+};

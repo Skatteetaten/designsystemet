@@ -3,42 +3,17 @@
 exports[`Tester/TextField Defaults play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label for="textFieldTextboxId-:r5:"
-           class="TextField_label__K0isy"
+    <label id="labelId-:rc:"
+           class="LabelWithHelp_label__59tP-"
+           for="textFieldTextboxId-:rb:"
     >
-      <span>
-        Navn
-      </span>
+      Navn
     </label>
-    <input id="textFieldTextboxId-:r5:"
+    <input id="textFieldTextboxId-:rb:"
            class="TextField_textbox__qbZlk"
            value
     >
-    <div id="textFieldErrorId-:r4:"
-         aria-live="assertive"
-         aria-atomic="true"
-    >
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Tester/TextField WithAriaDescribedby play-test 1`] = `
-<div data-test-block="true">
-  <div class>
-    <label for="textFieldTextboxId-:rt:"
-           class="TextField_label__K0isy"
-    >
-      <span>
-        Navn
-      </span>
-    </label>
-    <input id="textFieldTextboxId-:rt:"
-           class="TextField_textbox__qbZlk"
-           aria-describedby="testID"
-           value
-    >
-    <div id="textFieldErrorId-:rs:"
+    <div id="textFieldErrorId-:ra:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -50,18 +25,17 @@ exports[`Tester/TextField WithAriaDescribedby play-test 1`] = `
 exports[`Tester/TextField WithAs play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label for="textFieldTextboxId-:r7:"
-           class="TextField_label__K0isy"
+    <label id="labelId-:ri:"
+           class="LabelWithHelp_label__59tP-"
+           for="textFieldTextboxId-:rh:"
     >
-      <span>
-        Navn
-      </span>
+      Navn
     </label>
-    <textarea id="textFieldTextboxId-:r7:"
+    <textarea id="textFieldTextboxId-:rh:"
               class="TextField_textbox__qbZlk  TextField_textbox_multiline__dzg2r"
     >
     </textarea>
-    <div id="textFieldErrorId-:r6:"
+    <div id="textFieldErrorId-:rg:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -75,19 +49,18 @@ exports[`Tester/TextField WithAttributes play-test 1`] = `
   <div class="dummyClassname"
        lang="nb"
   >
-    <label for="htmlid"
-           class="TextField_label__K0isy"
+    <label id="labelId-:r5:"
+           class="LabelWithHelp_label__59tP-"
+           for="htmlid"
     >
-      <span>
-        Navn
-      </span>
+      Navn
     </label>
     <input id="htmlid"
            class="TextField_textbox__qbZlk"
            data-testid="123ID"
            value
     >
-    <div id="textFieldErrorId-:r2:"
+    <div id="textFieldErrorId-:r3:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -99,14 +72,13 @@ exports[`Tester/TextField WithAttributes play-test 1`] = `
 exports[`Tester/TextField WithAutoCompleteInputModeNameAndPlaceholder play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label for="textFieldTextboxId-:rf:"
-           class="TextField_label__K0isy"
+    <label id="labelId-:ru:"
+           class="LabelWithHelp_label__59tP-"
+           for="textFieldTextboxId-:rt:"
     >
-      <span>
-        Navn
-      </span>
+      Navn
     </label>
-    <input id="textFieldTextboxId-:rf:"
+    <input id="textFieldTextboxId-:rt:"
            class="TextField_textbox__qbZlk"
            autocomplete="given-name"
            inputmode="text"
@@ -114,7 +86,7 @@ exports[`Tester/TextField WithAutoCompleteInputModeNameAndPlaceholder play-test 
            placeholder="Kari Nordmann"
            value
     >
-    <div id="textFieldErrorId-:re:"
+    <div id="textFieldErrorId-:rs:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -123,21 +95,58 @@ exports[`Tester/TextField WithAutoCompleteInputModeNameAndPlaceholder play-test 
 </div>
 `;
 
+exports[`Tester/TextField WithCustomClassNames play-test 1`] = `
+<div data-test-block="true">
+  <div class="dummyClassname">
+    <label id="labelId-:r8:"
+           class="LabelWithHelp_label__59tP-   dummyClassname"
+           for="textFieldTextboxId-:r7:"
+    >
+      Navn
+    </label>
+    <input id="textFieldTextboxId-:r7:"
+           class="TextField_textbox__qbZlk    dummyClassnameFormContainer"
+           aria-describedby="textFieldErrorId-:r6:"
+           aria-invalid="true"
+           value
+    >
+    <div id="textFieldErrorId-:r6:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+      <div class="ErrorMessage_errorMessage__508oW dummyClassname">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+          </path>
+        </svg>
+        <p class="ErrorMessage_errorMessageText__e27TU">
+          Navn er obligatorisk
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Tester/TextField WithDefaultValue play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label for="textFieldTextboxId-:rd:"
-           class="TextField_label__K0isy"
+    <label id="labelId-:rr:"
+           class="LabelWithHelp_label__59tP-"
+           for="textFieldTextboxId-:rq:"
     >
-      <span>
-        Navn
-      </span>
+      Navn
     </label>
-    <input id="textFieldTextboxId-:rd:"
+    <input id="textFieldTextboxId-:rq:"
            class="TextField_textbox__qbZlk"
            value="Kari Nordmann"
     >
-    <div id="textFieldErrorId-:rc:"
+    <div id="textFieldErrorId-:rp:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -149,21 +158,20 @@ exports[`Tester/TextField WithDefaultValue play-test 1`] = `
 exports[`Tester/TextField WithDescription play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label for="textFieldTextboxId-:r17:"
-           class="TextField_label__K0isy"
+    <label id="labelId-:r1q:"
+           class="LabelWithHelp_label__59tP-"
+           for="textFieldTextboxId-:r1p:"
     >
-      <span>
-        Navn
-      </span>
-      <span class="TextField_labelDescription__WCNdq">
-        En liten beskrivelse tekst
-      </span>
+      Navn
     </label>
-    <input id="textFieldTextboxId-:r17:"
+    <div class="Help_description__niabw">
+      En liten beskrivelse tekst
+    </div>
+    <input id="textFieldTextboxId-:r1p:"
            class="TextField_textbox__qbZlk"
            value
     >
-    <div id="textFieldErrorId-:r16:"
+    <div id="textFieldErrorId-:r1o:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -175,19 +183,18 @@ exports[`Tester/TextField WithDescription play-test 1`] = `
 exports[`Tester/TextField WithDisabled play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label for="textFieldTextboxId-:r9:"
-           class="TextField_label__K0isy"
+    <label id="labelId-:rl:"
+           class="LabelWithHelp_label__59tP-"
+           for="textFieldTextboxId-:rk:"
     >
-      <span>
-        Navn
-      </span>
+      Navn
     </label>
-    <input id="textFieldTextboxId-:r9:"
+    <input id="textFieldTextboxId-:rk:"
            class="TextField_textbox__qbZlk"
            disabled
            value="Kari Nordmann"
     >
-    <div id="textFieldErrorId-:r8:"
+    <div id="textFieldErrorId-:rj:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -199,18 +206,17 @@ exports[`Tester/TextField WithDisabled play-test 1`] = `
 exports[`Tester/TextField WithError play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label for="textFieldTextboxId-:rv:"
-           class="TextField_label__K0isy"
+    <label id="labelId-:r1j:"
+           class="LabelWithHelp_label__59tP-"
+           for="textFieldTextboxId-:r1i:"
     >
-      <span>
-        Navn
-      </span>
+      Navn
     </label>
-    <input id="textFieldTextboxId-:rv:"
+    <input id="textFieldTextboxId-:r1i:"
            class="TextField_textbox__qbZlk"
            value
     >
-    <div id="textFieldErrorId-:ru:"
+    <div id="textFieldErrorId-:r1h:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -222,20 +228,19 @@ exports[`Tester/TextField WithError play-test 1`] = `
 exports[`Tester/TextField WithErrorMessageAndHasError play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label for="textFieldTextboxId-:r11:"
-           class="TextField_label__K0isy"
+    <label id="labelId-:r1m:"
+           class="LabelWithHelp_label__59tP-"
+           for="textFieldTextboxId-:r1l:"
     >
-      <span>
-        Navn
-      </span>
+      Navn
     </label>
-    <input id="textFieldTextboxId-:r11:"
+    <input id="textFieldTextboxId-:r1l:"
            class="TextField_textbox__qbZlk"
-           aria-describedby="textFieldErrorId-:r10:"
+           aria-describedby="textFieldErrorId-:r1k:"
            aria-invalid="true"
            value
     >
-    <div id="textFieldErrorId-:r10:"
+    <div id="textFieldErrorId-:r1k:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -261,18 +266,17 @@ exports[`Tester/TextField WithErrorMessageAndHasError play-test 1`] = `
 exports[`Tester/TextField WithEventHandlers play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label for="textFieldTextboxId-:r1f:"
-           class="TextField_label__K0isy"
+    <label id="labelId-:r2d:"
+           class="LabelWithHelp_label__59tP-"
+           for="textFieldTextboxId-:r2c:"
     >
-      <span>
-        TextField har blitt blurret
-      </span>
+      TextField har blitt blurret
     </label>
-    <input id="textFieldTextboxId-:r1f:"
+    <input id="textFieldTextboxId-:r2c:"
            class="TextField_textbox__qbZlk"
            value
     >
-    <div id="textFieldErrorId-:r1e:"
+    <div id="textFieldErrorId-:r2b:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -281,40 +285,86 @@ exports[`Tester/TextField WithEventHandlers play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TextField WithHasErrorAndAriaDescribedby play-test 1`] = `
+exports[`Tester/TextField WithHelpText play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label for="textFieldTextboxId-:r14:"
-           class="TextField_label__K0isy"
+    <label id="labelId-:r23:"
+           class="LabelWithHelp_label__59tP-"
+           for="textFieldTextboxId-:r22:"
     >
-      <span>
-        Navn
-      </span>
+      Navn
     </label>
-    <input id="textFieldTextboxId-:r14:"
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+            type="button"
+            aria-describedby="labelId-:r23:"
+            aria-expanded="false"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r24:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r24:">
+          Hjelp
+        </title>
+        <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+        </path>
+      </svg>
+    </button>
+    <input id="textFieldTextboxId-:r22:"
            class="TextField_textbox__qbZlk"
-           aria-describedby="konsumentId textFieldErrorId-:r13:"
-           aria-invalid="true"
            value
     >
-    <div id="textFieldErrorId-:r13:"
+    <div id="textFieldErrorId-:r21:"
          aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="ErrorMessage_errorMessage__508oW ">
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-hidden="true"
-             role="img"
-        >
-          <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
-          </path>
-        </svg>
-        <p class="ErrorMessage_errorMessageText__e27TU">
-          Navn er obligatorisk
-        </p>
-      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TextField WithHelpTextAndDescription smoke-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:r28:"
+           class="LabelWithHelp_label__59tP-"
+           for="textFieldTextboxId-:r27:"
+    >
+      Navn
+    </label>
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+            type="button"
+            aria-describedby="labelId-:r28:"
+            aria-expanded="false"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r29:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r29:">
+          Hjelp
+        </title>
+        <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+        </path>
+      </svg>
+    </button>
+    <div class="Help_description__niabw">
+      En liten beskrivelse tekst
+    </div>
+    <input id="textFieldTextboxId-:r27:"
+           class="TextField_textbox__qbZlk"
+           value
+    >
+    <div id="textFieldErrorId-:r26:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
     </div>
   </div>
 </div>
@@ -323,41 +373,17 @@ exports[`Tester/TextField WithHasErrorAndAriaDescribedby play-test 1`] = `
 exports[`Tester/TextField WithHideLabel play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label for="textFieldTextboxId-:r19:"
-           class="TextField_label__K0isy TextField_srOnly__0+S1D"
+    <label id="labelId-:r1t:"
+           class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+           for="textFieldTextboxId-:r1s:"
     >
-      <span>
-        Navn
-      </span>
+      Navn
     </label>
-    <input id="textFieldTextboxId-:r19:"
+    <input id="textFieldTextboxId-:r1s:"
            class="TextField_textbox__qbZlk"
            value
     >
-    <div id="textFieldErrorId-:r18:"
-         aria-live="assertive"
-         aria-atomic="true"
-    >
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Tester/TextField WithIsLarge smoke-test 1`] = `
-<div data-test-block="true">
-  <div class>
-    <label for="textFieldTextboxId-:r1b:"
-           class="TextField_label__K0isy"
-    >
-      <span>
-        Navn
-      </span>
-    </label>
-    <input id="textFieldTextboxId-:r1b:"
-           class="TextField_textbox__qbZlk TextField_textbox_large__Qmwm8"
-           value
-    >
-    <div id="textFieldErrorId-:r1a:"
+    <div id="textFieldErrorId-:r1r:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -369,20 +395,19 @@ exports[`Tester/TextField WithIsLarge smoke-test 1`] = `
 exports[`Tester/TextField WithMinAndMaxLength play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label for="textFieldTextboxId-:rn:"
-           class="TextField_label__K0isy"
+    <label id="labelId-:r1a:"
+           class="LabelWithHelp_label__59tP-"
+           for="textFieldTextboxId-:r19:"
     >
-      <span>
-        Navn
-      </span>
+      Navn
     </label>
-    <input id="textFieldTextboxId-:rn:"
+    <input id="textFieldTextboxId-:r19:"
            class="TextField_textbox__qbZlk"
            maxlength="50"
            minlength="10"
            value
     >
-    <div id="textFieldErrorId-:rm:"
+    <div id="textFieldErrorId-:r18:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -394,19 +419,18 @@ exports[`Tester/TextField WithMinAndMaxLength play-test 1`] = `
 exports[`Tester/TextField WithPattern play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label for="textFieldTextboxId-:rp:"
-           class="TextField_label__K0isy"
+    <label id="labelId-:r1d:"
+           class="LabelWithHelp_label__59tP-"
+           for="textFieldTextboxId-:r1c:"
     >
-      <span>
-        Navn
-      </span>
+      Navn
     </label>
-    <input id="textFieldTextboxId-:rp:"
+    <input id="textFieldTextboxId-:r1c:"
            class="TextField_textbox__qbZlk"
            pattern="[a-z]"
            value
     >
-    <div id="textFieldErrorId-:ro:"
+    <div id="textFieldErrorId-:r1b:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -418,19 +442,18 @@ exports[`Tester/TextField WithPattern play-test 1`] = `
 exports[`Tester/TextField WithReadOnly play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label for="textFieldTextboxId-:rh:"
-           class="TextField_label__K0isy"
+    <label id="labelId-:r11:"
+           class="LabelWithHelp_label__59tP-"
+           for="textFieldTextboxId-:r10:"
     >
-      <span>
-        Navn
-      </span>
+      Navn
     </label>
-    <input id="textFieldTextboxId-:rh:"
+    <input id="textFieldTextboxId-:r10:"
            class="TextField_textbox__qbZlk"
            readonly
            value="Kari Nordmann"
     >
-    <div id="textFieldErrorId-:rg:"
+    <div id="textFieldErrorId-:rv:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -442,12 +465,11 @@ exports[`Tester/TextField WithReadOnly play-test 1`] = `
 exports[`Tester/TextField WithRef play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label for="textFieldTextboxId-:r1:"
-           class="TextField_label__K0isy"
+    <label id="labelId-:r2:"
+           class="LabelWithHelp_label__59tP-"
+           for="textFieldTextboxId-:r1:"
     >
-      <span>
-        Navn
-      </span>
+      Navn
     </label>
     <input id="textFieldTextboxId-:r1:"
            class="TextField_textbox__qbZlk"
@@ -466,19 +488,18 @@ exports[`Tester/TextField WithRef play-test 1`] = `
 exports[`Tester/TextField WithRequired play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label for="textFieldTextboxId-:rj:"
-           class="TextField_label__K0isy"
+    <label id="labelId-:r14:"
+           class="LabelWithHelp_label__59tP-"
+           for="textFieldTextboxId-:r13:"
     >
-      <span>
-        Navn
-      </span>
+      Navn
     </label>
-    <input id="textFieldTextboxId-:rj:"
+    <input id="textFieldTextboxId-:r13:"
            class="TextField_textbox__qbZlk"
            required
            value
     >
-    <div id="textFieldErrorId-:ri:"
+    <div id="textFieldErrorId-:r12:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -490,19 +511,18 @@ exports[`Tester/TextField WithRequired play-test 1`] = `
 exports[`Tester/TextField WithRequiredAndMark smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label for="textFieldTextboxId-:rl:"
-           class="TextField_label__K0isy"
+    <label id="labelId-:r17:"
+           class="LabelWithHelp_label__59tP- LabelWithHelp_label_required__KSuzW"
+           for="textFieldTextboxId-:r16:"
     >
-      <span class="TextField_label_required__n7aHl">
-        Navn
-      </span>
+      Navn
     </label>
-    <input id="textFieldTextboxId-:rl:"
+    <input id="textFieldTextboxId-:r16:"
            class="TextField_textbox__qbZlk"
            required
            value
     >
-    <div id="textFieldErrorId-:rk:"
+    <div id="textFieldErrorId-:r15:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -514,19 +534,18 @@ exports[`Tester/TextField WithRequiredAndMark smoke-test 1`] = `
 exports[`Tester/TextField WithRows play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label for="textFieldTextboxId-:rr:"
-           class="TextField_label__K0isy"
+    <label id="labelId-:r1g:"
+           class="LabelWithHelp_label__59tP-"
+           for="textFieldTextboxId-:r1f:"
     >
-      <span>
-        Navn
-      </span>
+      Navn
     </label>
-    <textarea id="textFieldTextboxId-:rr:"
+    <textarea id="textFieldTextboxId-:r1f:"
               class="TextField_textbox__qbZlk  TextField_textbox_multiline__dzg2r"
               rows="4"
     >
     </textarea>
-    <div id="textFieldErrorId-:rq:"
+    <div id="textFieldErrorId-:r1e:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -538,18 +557,17 @@ exports[`Tester/TextField WithRows play-test 1`] = `
 exports[`Tester/TextField WithThousandSeparator play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label for="textFieldTextboxId-:r1d:"
-           class="TextField_label__K0isy"
+    <label id="labelId-:r20:"
+           class="LabelWithHelp_label__59tP-"
+           for="textFieldTextboxId-:r1v:"
     >
-      <span>
-        Navn
-      </span>
+      Navn
     </label>
-    <input id="textFieldTextboxId-:r1d:"
+    <input id="textFieldTextboxId-:r1v:"
            class="TextField_textbox__qbZlk"
            value
     >
-    <div id="textFieldErrorId-:r1c:"
+    <div id="textFieldErrorId-:r1u:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -561,18 +579,39 @@ exports[`Tester/TextField WithThousandSeparator play-test 1`] = `
 exports[`Tester/TextField WithValue play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label for="textFieldTextboxId-:rb:"
-           class="TextField_label__K0isy"
+    <label id="labelId-:ro:"
+           class="LabelWithHelp_label__59tP-"
+           for="textFieldTextboxId-:rn:"
     >
-      <span>
-        Navn
-      </span>
+      Navn
     </label>
-    <input id="textFieldTextboxId-:rb:"
+    <input id="textFieldTextboxId-:rn:"
            class="TextField_textbox__qbZlk"
            value="Kari Nordmann"
     >
-    <div id="textFieldErrorId-:ra:"
+    <div id="textFieldErrorId-:rm:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/TextField WithVariantLarge smoke-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:rf:"
+           class="LabelWithHelp_label__59tP-"
+           for="textFieldTextboxId-:re:"
+    >
+      Navn
+    </label>
+    <input id="textFieldTextboxId-:re:"
+           class="TextField_textbox__qbZlk TextField_textbox_large__Qmwm8"
+           value
+    >
+    <div id="textFieldErrorId-:rd:"
          aria-live="assertive"
          aria-atomic="true"
     >

@@ -1,16 +1,19 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
 /* eslint-disable sonarjs/no-duplicate-string */
+
 import {
   Button,
-  ButtonProps,
   buttonVariantArr,
   getButtonVariantDefault,
 } from '@skatteetaten/ds-buttons';
-import { action } from '@storybook/addon-actions';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { getVersion } from '../utils/version.utils';
+
+type Story = StoryObj<typeof Button>;
 
 const meta = {
   component: Button,
@@ -55,58 +58,41 @@ const meta = {
     onClick: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-buttons'),
   },
-} as Meta<ButtonProps>;
+} as Meta<typeof Button>;
+
 export default meta;
-type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: StoryFn<ButtonProps> = (args) => (
-  <Button
-    {...args}
-    variant={args.variant}
-    onClick={action('KlikkEvent Button')}
-  >
-    {args.children}
-  </Button>
-);
-
-const TemplateExample: StoryFn<ButtonProps> = () => (
-  <div>
-    <Button className={'exampleSpacing'} variant={'primary'}>
-      {'Send inn skjema'}
-    </Button>
-    <Button className={'exampleSpacing'} variant={'secondary'}>
-      {'Avbryt'}
-    </Button>
-    <div>
-      <Button className={'exampleSpacing'} variant={'tertiary'}>
-        {'Logg inn'}
-      </Button>
-    </div>
-    <Button className={'exampleSpacing'} variant={'danger'}>
-      {'Slett'}
-    </Button>
-  </div>
-);
-
-export const ButtonDefault = {
-  render: TemplateDefault,
-  name: 'Default',
-
+export const Preview: StoryObj<typeof Button> = {
   args: {
-    children: 'Klikk',
-    variant: getButtonVariantDefault(),
+    children: 'Send inn skjema',
   },
-} satisfies Story;
+};
 
-export const ButtonExample = {
-  render: TemplateExample,
-  name: 'Example',
-
+export const Example: Story = {
+  render: (_args) => (
+    <>
+      <Button className={'exampleSpacing'} variant={'primary'}>
+        {'Send inn skjema '}
+      </Button>
+      <Button className={'exampleSpacing'} variant={'secondary'}>
+        {'Avbryt'}
+      </Button>
+      <div>
+        <Button className={'exampleSpacing'} variant={'tertiary'}>
+          {'Logg inn'}
+        </Button>
+      </div>
+      <Button className={'exampleSpacing'} variant={'danger'}>
+        {'Slett'}
+      </Button>
+    </>
+  ),
   parameters: {
-    controls: { disabled: true },
+    controls: {
+      exclude: /.*/,
+    },
   },
-} satisfies Story;
+};

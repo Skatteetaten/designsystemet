@@ -1,0 +1,69 @@
+@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
+.separator {
+  height: 2rem;
+  margin-top: var(--spacing-xxl);
+
+  @media (min-width: $breakpoint-s) {
+    height: 3rem;
+  }
+}
+
+.footer {
+  padding: var(--spacing-xl) 0;
+  margin-top: -1px;
+  background-color: var(--theme-primary);
+  color: var(--palette-graphite-0);
+
+  .columns {
+    display: grid;
+    width: 100%;
+    max-width: calc(
+      var(--semantic-responsive-container) - calc(var(--spacing-m) * 2)
+    );
+    margin: auto auto var(--spacing-mega);
+    gap: var(--spacing-xl);
+    grid-template-columns: 1fr;
+
+    @media (min-width: $breakpoint-s) {
+      &Three,
+      &Two {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: $breakpoint-m) {
+      margin-bottom: var(--spacing-xl);
+      grid-template-columns: 1fr 1fr;
+
+      &Three {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+  }
+}
+
+.logoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-l);
+}
+
+.skatteetatenLogo {
+  width: 4rem;
+}
+
+.linkContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin-top: var(--spacing-xl);
+  margin-bottom: 0;
+  gap: var(--spacing-xs) var(--spacing-l);
+
+  .linkList {
+    list-style: none;
+  }
+}

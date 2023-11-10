@@ -101,10 +101,7 @@ export const WithAttributes = {
 
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    // eslint-disable-next-line testing-library/no-node-access
-    const container = canvasElement.querySelector(
-      `${wrapper} fieldset > div > div`
-    );
+    const container = canvas.getAllByRole('generic')[3];
     const input = canvas.getByRole('radio');
     await expect(container).toHaveClass('dummyClassname');
     await expect(container).toHaveAttribute('lang', 'nb');
@@ -115,7 +112,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   render: Template,
-  name: 'Defaults (A1 delvis, A3 delvis)',
+  name: 'Defaults (A1, A3, B1)',
 
   args: {
     ...defaultArgs,
@@ -143,7 +140,7 @@ export const Defaults = {
 
 export const WithDescription = {
   render: Template,
-  name: 'With Description (A3 delvis, A5)',
+  name: 'With Description (A3, A5)',
 
   args: {
     ...defaultArgs,
@@ -211,7 +208,6 @@ export const WithValue = {
   argTypes: {
     value: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
@@ -226,7 +222,7 @@ export const WithValue = {
 
 export const WithAriaDescribedby = {
   render: Template,
-  name: 'With AriaDescribedby (B4 delvis)',
+  name: 'With AriaDescribedby (B4)',
 
   args: {
     ...defaultArgs,

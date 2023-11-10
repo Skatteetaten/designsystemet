@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { FocusEvent, MouseEvent, useState } from 'react';
 
 import {
   MegaButton,
@@ -358,19 +358,19 @@ const EventHandlersTemplate: StoryFn<typeof MegaButton> = (args) => {
     <MegaButton
       {...args}
       onFocus={(
-        event: React.FocusEvent<HTMLButtonElement | HTMLAnchorElement>
+        event: FocusEvent<HTMLButtonElement | HTMLAnchorElement>
       ): void => {
         setButtonText('Knapp har fått fokus');
         args.onFocus && args.onFocus(event);
       }}
       onBlur={(
-        event: React.FocusEvent<HTMLButtonElement | HTMLAnchorElement>
+        event: FocusEvent<HTMLButtonElement | HTMLAnchorElement>
       ): void => {
         setButtonText('Knapp har blitt blurret');
         args.onBlur && args.onBlur(event);
       }}
       onClick={(
-        event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
+        event: MouseEvent<HTMLButtonElement | HTMLAnchorElement>
       ): void => {
         setButtonText('Knapp har blitt klikket på');
         args.onClick && args.onClick(event);

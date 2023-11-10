@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 
 import {
   RadioGroup,
@@ -9,7 +9,14 @@ import { Heading } from '@skatteetaten/ds-typography';
 import { expect } from '@storybook/jest';
 import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { userEvent, waitFor, within } from '@storybook/testing-library';
+import {
+  fireEvent,
+  userEvent,
+  waitFor,
+  within,
+} from '@storybook/testing-library';
+
+import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {
   component: RadioGroup,
@@ -24,19 +31,21 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     children: { table: { disable: true } },
-    defaultValue: {
-      type: 'string',
-      table: { disable: true },
-    },
+    defaultValue: { table: { disable: true } },
+    description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
     hasError: { table: { disable: true } },
+    helpSvgPath: {
+      table: { disable: true },
+      options: Object.keys(SystemSVGPaths),
+      mapping: SystemSVGPaths,
+    },
+    helpText: { table: { disable: true } },
     hideLegend: { table: { disable: true } },
     legend: { table: { disable: true } },
     showRequiredMark: { table: { disable: true } },
-    selectedValue: {
-      type: 'string',
-      table: { disable: true },
-    },
+    selectedValue: { table: { disable: true } },
+    titleHelpSvg: { table: { disable: true } },
     variant: {
       table: { disable: true },
       options: [...radioGroupVariantArr],
@@ -90,7 +99,6 @@ const defaultArgs: RadioGroupProps = {
 export const WithRef = {
   render: Template,
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: HTMLFieldSetElement | null): void => {
@@ -99,15 +107,12 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getByRole('group');
@@ -118,7 +123,6 @@ export const WithRef = {
 export const WithAttributes = {
   render: Template,
   name: 'With Attributes (FA2-5)',
-
   args: {
     ...defaultArgs,
     id: 'htmlId',
@@ -126,14 +130,12 @@ export const WithAttributes = {
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const fieldset = canvas.getByRole('group');
@@ -146,18 +148,15 @@ export const WithAttributes = {
 
 export const Defaults = {
   render: Template,
-  name: 'Defaults Variant Standard (A1 delvis, B1 delvis)',
-
+  name: 'Defaults Variant Standard (A1, B1)',
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     children: { table: { disable: false } },
     legend: { table: { disable: false } },
     variant: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const fieldset = canvas.getByRole('group');
@@ -176,12 +175,10 @@ export const Defaults = {
 export const VariantHorizontal = {
   render: Template,
   name: 'Variant Horizontal (A6)',
-
   args: {
     ...defaultArgs,
     variant: 'horizontal',
   },
-
   argTypes: {
     variant: { table: { disable: false } },
   },
@@ -190,16 +187,13 @@ export const VariantHorizontal = {
 export const WithHideLegend = {
   render: Template,
   name: 'With HideLegend (B1)',
-
   args: {
     ...defaultArgs,
     hideLegend: true,
   },
-
   argTypes: {
     hideLegend: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const legend = canvas.getByText(defaultLegendText);
@@ -209,18 +203,15 @@ export const WithHideLegend = {
 
 export const WithSelectedValue = {
   render: Template,
-  name: 'With SelectedValue (A3 delvis)',
-
+  name: 'With SelectedValue (A3)',
   args: {
     ...defaultArgs,
     selectedValue: selectedValue,
     defaultValue: undefined,
   },
-
   argTypes: {
     selectedValue: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const input = canvas.getByRole('radio', { checked: true });
@@ -231,18 +222,15 @@ export const WithSelectedValue = {
 
 export const WithDefaultValue = {
   render: Template,
-  name: 'With DefaultValue (A3 delvis)',
-
+  name: 'With DefaultValue (A3)',
   args: {
     ...defaultArgs,
     selectedValue: undefined,
     defaultValue: selectedValue,
   },
-
   argTypes: {
     defaultValue: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const input = canvas.getByRole('radio', { checked: true });
@@ -254,18 +242,15 @@ export const WithDefaultValue = {
 export const WithDisabled = {
   render: Template,
   name: 'With Disabled (A4 delvis)',
-
   args: {
     ...defaultArgs,
     disabled: true,
     selectedValue: selectedValue,
     defaultValue: undefined,
   },
-
   argTypes: {
     disabled: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const radios = canvas.getAllByRole('radio');
@@ -277,17 +262,14 @@ export const WithDisabled = {
 
 export const WithRequired = {
   render: Template,
-  name: 'With Required (A7 delvis)',
-
+  name: 'With Required (A7)',
   args: {
     ...defaultArgs,
     required: true,
   },
-
   argTypes: {
     required: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const radios = canvas.getAllByRole('radio');
@@ -299,14 +281,12 @@ export const WithRequired = {
 
 export const WithRequiredAndMark = {
   render: Template,
-  name: 'With Required And Mark (A7 delvis, A8 delvis)',
-
+  name: 'With Required And Mark (A7, A8)',
   args: {
     ...defaultArgs,
     required: true,
     showRequiredMark: true,
   },
-
   argTypes: {
     required: { table: { disable: false } },
     showRequiredMark: { table: { disable: false } },
@@ -315,8 +295,7 @@ export const WithRequiredAndMark = {
 
 export const WithRequiredAndMarkAndLegendAsMarkup = {
   render: Template,
-  name: 'With Required And Mark And Legend As Markup (A7 delvis, A8 delvis)',
-
+  name: 'With Required And Mark And Legend As Markup (A7, A8)',
   args: {
     ...defaultArgs,
     legend: (
@@ -330,7 +309,6 @@ export const WithRequiredAndMarkAndLegendAsMarkup = {
     required: true,
     showRequiredMark: true,
   },
-
   argTypes: {
     showRequiredMark: { table: { disable: false } },
   },
@@ -339,20 +317,16 @@ export const WithRequiredAndMarkAndLegendAsMarkup = {
 export const WithName = {
   render: Template,
   name: 'With Name (B1)',
-
   args: {
     ...defaultArgs,
     name: 'nameFraKonsument',
   },
-
   argTypes: {
     name: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const radios = canvas.getAllByRole('radio');
@@ -364,20 +338,17 @@ export const WithName = {
 
 export const WithErrorMessage = {
   render: Template,
-  name: 'With ErrorMessage (B4 delvis)',
-
+  name: 'With ErrorMessage (B4)',
   args: {
     ...defaultArgs,
     errorMessage: 'Feilmelding',
   },
-
   argTypes: {
     errorMessage: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const errorMessageContainer = canvas.getAllByRole('generic')[5];
+    const errorMessageContainer = canvas.getAllByRole('generic')[6];
     await expect(errorMessageContainer).toBeInTheDocument();
     await expect(canvas.queryByText('Feilmelding')).not.toBeInTheDocument();
     const radios = canvas.getAllByRole('radio');
@@ -390,8 +361,7 @@ export const WithErrorMessage = {
 
 export const WithErrorMessageAndHasError = {
   render: Template,
-  name: 'With ErrorMessage And HasError (B4 delvis, A3 delvis)',
-
+  name: 'With ErrorMessage And HasError (B4, A3)',
   args: {
     ...defaultArgs,
     errorMessage: 'Feilmelding',
@@ -399,17 +369,15 @@ export const WithErrorMessageAndHasError = {
     selectedValue: selectedValue,
     defaultValue: undefined,
   },
-
   argTypes: {
     errorMessage: { table: { disable: false } },
     hasError: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const radios = canvas.getAllByRole('radio');
     const errorMessage = canvas.getByText('Feilmelding');
-    const errorMessageContainer = canvas.getAllByRole('generic')[5];
+    const errorMessageContainer = canvas.getAllByRole('generic')[6];
     await expect(errorMessage).toBeInTheDocument();
     await expect(errorMessageContainer).toBeInTheDocument();
     radios.forEach((radio) => {
@@ -424,8 +392,7 @@ export const WithErrorMessageAndHasError = {
 
 export const WithHasErrorAndAriaDescribedby = {
   render: Template,
-  name: 'With HasError And AriaDescribedby (B4 delvis)',
-
+  name: 'With HasError And AriaDescribedby (B4)',
   args: {
     ...defaultArgs,
     children: [
@@ -439,18 +406,15 @@ export const WithHasErrorAndAriaDescribedby = {
     errorMessage: 'Feilmelding',
     hasError: true,
   },
-
   argTypes: {
     hasError: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const errorMessageContainer = canvas.getAllByRole('generic')[3];
+    const errorMessageContainer = canvas.getAllByRole('generic')[4];
     const radio = canvas.getByRole('radio');
     expect(radio).toHaveAttribute(
       'aria-describedby',
@@ -459,12 +423,50 @@ export const WithHasErrorAndAriaDescribedby = {
   },
 } satisfies Story;
 
+export const WithHelpText = {
+  render: Template,
+  name: 'With HelpText (A1)',
+  args: {
+    ...defaultArgs,
+    helpText: 'Vi trenger å vite din type virksomhet.',
+  },
+  argTypes: {
+    helpText: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button', {
+      description: defaultLegendText,
+    });
+    await expect(helpButton).toBeInTheDocument();
+    await fireEvent.click(helpButton);
+  },
+} satisfies Story;
+
+export const WithDescription = {
+  name: 'With Description (A1)',
+  args: {
+    ...defaultArgs,
+    description: 'Vi trenger å vite din type virksomhet.',
+  },
+  argTypes: {
+    description: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const description = canvas.getByText(
+      'Vi trenger å vite din type virksomhet.'
+    );
+    await expect(description).toBeInTheDocument();
+  },
+} satisfies Story;
+
 const EventHandlersTemplate: StoryFn<typeof RadioGroup> = (args) => {
   const [labelText, setLabelText] = useState('Aksjeselskap');
   return (
     <RadioGroup
       {...args}
-      onChange={(event: React.ChangeEvent<HTMLInputElement>): void => {
+      onChange={(event: ChangeEvent<HTMLInputElement>): void => {
         setLabelText('Radio har blitt klikket på');
         args.onChange && args.onChange(event);
       }}
@@ -477,15 +479,12 @@ const EventHandlersTemplate: StoryFn<typeof RadioGroup> = (args) => {
 export const WithEventHandlers = {
   render: EventHandlersTemplate,
   name: 'With EventHandlers',
-
   args: {
     ...defaultArgs,
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const radio = canvas.getByRole('radio');

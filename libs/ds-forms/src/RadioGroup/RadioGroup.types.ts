@@ -1,7 +1,14 @@
-import { ChangeEventHandler, ComponentPropsWithoutRef } from 'react';
+import {
+  ChangeEventHandler,
+  ComponentPropsWithoutRef,
+  ForwardRefExoticComponent,
+  RefAttributes,
+  JSX,
+} from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
+import { FieldsetProps } from '../Fieldset/Fieldset.types';
 import { RadioProps } from '../Radio/Radio.types';
 
 export const radioGroupVariantArr = ['standard', 'horizontal'] as const;
@@ -38,10 +45,18 @@ interface RadioGroupComponentCommonProps
     BaseProps {
   /** Radio-komponenter */
   children: JSX.Element | JSX.Element[];
-  /** Skjuler navnet på gruppen men er fortsatt synlig for skjermleser. */
-  hideLegend?: boolean;
+  /** Skjuler navn på gruppen, tilleggstekst og hjelpetekst, men er fortsatt synlig for skjermleser */
+  hideLegend?: FieldsetProps['hideLegend'];
   /** Navn på gruppen. */
-  legend: React.ReactNode;
+  legend: FieldsetProps['legend'];
+  /** Tilleggstekst */
+  description?: FieldsetProps['description'];
+  /** Hjelpetekst */
+  helpText?: FieldsetProps['helpText'];
+  /** Overskriver default hjelpeikon */
+  helpSvgPath?: FieldsetProps['helpSvgPath'];
+  /** Overskriver default tooltip-tekst til hjelpeikon */
+  titleHelpSvg?: FieldsetProps['titleHelpSvg'];
   /** Overskriver autogenerert name */
   name?: string;
   /** Definerer stilen til gruppen. */
@@ -50,13 +65,11 @@ interface RadioGroupComponentCommonProps
 
 type RadioGroupDiscriminatedRequiredProps =
   | {
-      /** Om gruppen er obligatorisk */
       required: boolean;
       /** Om obligatorisk gruppe skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
-      showRequiredMark?: boolean;
+      showRequiredMark?: FieldsetProps['showRequiredMark'];
     }
   | {
-      /** Om gruppen er obligatorisk */
       required?: never;
       /** Om obligatorisk gruppe skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
       showRequiredMark?: never;
@@ -96,10 +109,10 @@ export type RadioGroupProps = RadioGroupComponentCommonProps &
   RadioGroupDiscriminatedErrorProps;
 
 export interface RadioGroupComponent
-  extends React.ForwardRefExoticComponent<
-    RadioGroupProps & React.RefAttributes<HTMLFieldSetElement>
+  extends ForwardRefExoticComponent<
+    RadioGroupProps & RefAttributes<HTMLFieldSetElement>
   > {
-  Radio: React.ForwardRefExoticComponent<
-    RadioProps & React.RefAttributes<HTMLInputElement>
+  Radio: ForwardRefExoticComponent<
+    RadioProps & RefAttributes<HTMLInputElement>
   >;
 }

@@ -132,11 +132,6 @@ export const WithPElement = {
 
 const TemplateWithInput: StoryFn<typeof ErrorMessage> = (args) => (
   <div className={'errorMessageContainer'}>
-    {/* TODO FRONT-1279 erstattes med TextField når den er ferdig utviklet */}
-    <label htmlFor={'label1'} className={'block'}>
-      {'Label'}
-    </label>
-    <input id={'label1'} type={'text'} />
     <ErrorMessage {...args} />
   </div>
 );
@@ -146,6 +141,7 @@ export const WithLongText = {
   name: 'With Long Text (A3)',
   args: {
     ...defaultArgs,
+    id: 'errorId',
     showError: true,
     children:
       'Dette blir en veldig lang feilmelding for å teste om du oppfører seg om den skal.',

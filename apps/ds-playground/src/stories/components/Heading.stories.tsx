@@ -5,7 +5,7 @@ import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: Heading,
   title: 'Komponenter/Heading',
   argTypes: {
@@ -35,13 +35,18 @@ const meta = {
       },
     },
   },
-  tags: ['autodocs'],
   parameters: { version: getVersion('ds-typography') },
 } as Meta<typeof Heading>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-const TemplateExample: StoryFn<typeof Heading> = () => (
+export const Preview: StoryObj<typeof Heading> = {
+  args: {
+    as: 'h2',
+    level: 2,
+    children: 'Overskrift',
+  },
+};
+
+export const Example: StoryFn<typeof Heading> = (_args) => (
   <>
     <Heading as={'h1'} level={1} hasSpacing>
       {'Overskriftsnivå 1'}
@@ -64,21 +69,8 @@ const TemplateExample: StoryFn<typeof Heading> = () => (
   </>
 );
 
-export const HeadingDefault = {
-  name: 'Default',
-
-  args: {
-    as: 'h2',
-    level: 2,
-    children: 'Dette er en heading',
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
   },
-} satisfies Story;
-
-export const HeadingExample = {
-  render: TemplateExample,
-  name: 'Example',
-
-  parameters: {
-    controls: { disabled: true },
-  },
-} satisfies Story;
+};

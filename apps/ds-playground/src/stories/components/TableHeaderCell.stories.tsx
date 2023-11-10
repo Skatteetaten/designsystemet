@@ -4,12 +4,12 @@ import {
   Table,
   tableCellAsArr,
 } from '@skatteetaten/ds-table';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: Table.HeaderCell,
   title: 'Komponenter/Table/HeaderCell',
   argTypes: {
@@ -39,28 +39,13 @@ const meta = {
     colSpan: { table: { category: category.htmlAttribute } },
     scope: { table: { category: category.htmlAttribute } },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-table'),
-    docs: {
-      source: {
-        type: 'code',
-      },
-    },
   },
 } satisfies Meta<typeof Table.HeaderCell>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: StoryFn<typeof Table.HeaderCell> = (args) => (
-  <Table.HeaderCell {...args} />
-);
-
-export const DataCellDefault = {
-  render: TemplateDefault,
-  name: 'Default',
-
+export const Preview = {
   args: {
     children: 'Example TableHeaderCell',
   },
-} satisfies Story;
+} satisfies StoryObj<typeof Table.HeaderCell>;

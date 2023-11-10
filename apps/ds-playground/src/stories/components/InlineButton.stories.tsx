@@ -4,14 +4,13 @@ import {
 } from '@skatteetaten/ds-buttons';
 import { positionArr } from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath, CancelSVGpath } from '@skatteetaten/ds-icons';
-import { action } from '@storybook/addon-actions';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: InlineButton,
   title: 'Komponenter/InlineButton',
   argTypes: {
@@ -54,20 +53,18 @@ const meta = {
     onFocus: { ...htmlEventDescription },
     onBlur: { ...htmlEventDescription },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-buttons'),
   },
 } satisfies Meta<typeof InlineButton>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-const TemplateDefault: StoryFn<typeof InlineButton> = (args) => (
-  <InlineButton {...args} onClick={action('klikkEvent InlineButton')}>
-    {args.children}
-  </InlineButton>
-);
-const TemplateExample: StoryFn<typeof InlineButton> = () => (
+export const Preview: StoryObj<typeof InlineButton> = {
+  args: {
+    children: 'Legg til rapport',
+  },
+};
+
+export const Example: StoryFn<typeof InlineButton> = (_args) => (
   <div className={'flex'}>
     <InlineButton className={'exampleSpacing'} svgPath={AddOutlineSVGpath}>
       {'Legg til'}
@@ -82,24 +79,8 @@ const TemplateExample: StoryFn<typeof InlineButton> = () => (
   </div>
 );
 
-export const InlineButtonDefault = {
-  render: TemplateDefault,
-  name: 'Default',
-
-  args: {
-    children: 'Legg til rapport',
-    iconPosition: getInlineButtonPositionDefault(),
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
   },
-} satisfies Story;
-
-export const InlineButtonExample = {
-  render: TemplateExample,
-  name: 'Example',
-
-  parameters: {
-    controls: { disabled: true },
-  },
-  args: {
-    children: 'dummy',
-  },
-} satisfies Story;
+};

@@ -1,0 +1,19 @@
+@import 'libs/ds-core-utils/src/styles.scss';
+
+.label {
+  color: var(--palette-graphite-70);
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--semantic-line-height-input);
+  overflow-wrap: anywhere;
+
+  &_required::after {
+    margin-left: var(--spacing-xxs);
+    color: var(--semantic-danger-foreground);
+    content: '*';
+  }
+}
+
+.srOnly {
+  @include sr-only;
+}

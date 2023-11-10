@@ -7,12 +7,18 @@ import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: Checkbox,
   title: 'Komponenter/Checkbox',
   argTypes: {
     // Props
     children: { table: { category: category.props } },
+    defaultChecked: {
+      control: 'boolean',
+      table: {
+        category: category.props,
+      },
+    },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasError: {
@@ -35,12 +41,6 @@ const meta = {
     },
     // HTML
     checked: {
-      control: 'boolean',
-      table: {
-        category: category.htmlAttribute,
-      },
-    },
-    defaultChecked: {
       control: 'boolean',
       table: {
         category: category.htmlAttribute,
@@ -69,15 +69,18 @@ const meta = {
     // Events
     onChange: { ...htmlEventDescription },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-forms'),
   },
 } satisfies Meta<typeof Checkbox>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-const TemplateExample: StoryFn<typeof Checkbox> = () => {
+export const Preview: StoryObj<typeof Checkbox> = {
+  args: {
+    children: 'Checkbox',
+  },
+};
+
+export const Example: StoryFn<typeof Checkbox> = (_args) => {
   const [checked, setChecked] = useState(false);
   const [error, setError] = useState(false);
   return (
@@ -97,43 +100,35 @@ const TemplateExample: StoryFn<typeof Checkbox> = () => {
   );
 };
 
-export const CheckboxDefaultControlled = {
-  name: 'Default Controlled',
-
-  argTypes: {
-    defaultChecked: { control: { disable: true } },
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
   },
+};
 
-  args: {
-    children: 'Checkbox',
-    checked: false,
-    defaultChecked: undefined,
-    name: undefined,
+export const ExampleSource: StoryFn<typeof Checkbox> = () => {
+  const [checked, setChecked] = useState(false);
+  const [error, setError] = useState(false);
+  return (
+    <>
+      <Checkbox
+        className={'exampleSpacing'}
+        errorMessage={'Du må lese og forstå innholdet for å gå videre.'}
+        checked={checked}
+        hasError={error}
+        required
+        onChange={(): void => setChecked(!checked)}
+      >
+        {'Jeg har lest og forstått innholdet'}
+      </Checkbox>
+      <Button onClick={(): void => setError(!checked)}>{'Send'}</Button>
+    </>
+  );
+};
+// Forhindrer at komponent dukker opp i menyen
+ExampleSource.tags = ['isHidden'];
+ExampleSource.parameters = {
+  controls: {
+    exclude: /.*/,
   },
-} satisfies Story;
-
-export const CheckboxDefaultUncontrolled = {
-  name: 'Default Uncontrolled',
-
-  argTypes: {
-    checked: { control: { disable: true } },
-  },
-
-  args: {
-    children: 'Checkbox',
-    checked: undefined,
-    defaultChecked: false,
-  },
-} satisfies Story;
-
-export const CheckboxExample = {
-  render: TemplateExample,
-  name: 'Example',
-
-  args: {
-    children: 'dummy',
-  },
-  parameters: {
-    controls: { disabled: true },
-  },
-} satisfies Story;
+};

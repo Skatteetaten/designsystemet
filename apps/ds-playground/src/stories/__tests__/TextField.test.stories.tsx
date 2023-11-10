@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { FocusEvent, ChangeEvent, useState } from 'react';
 
+import { formArrSize } from '@skatteetaten/ds-core-utils';
 import {
   TextboxRefHandle,
   TextField,
@@ -10,6 +11,7 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { userEvent, waitFor, within } from '@storybook/testing-library';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
+import { SystemSVGPaths } from '../utils/icon.systems';
 
 const verifyAttribute =
   (attribute: string, expectedValue: string) =>
@@ -37,18 +39,35 @@ const meta = {
       options: [...textFieldAsArr],
       control: 'inline-radio',
     },
+    variant: {
+      table: { disable: true },
+      options: [...formArrSize],
+      control: 'inline-radio',
+    },
     autosize: { table: { disable: true } },
+    classNames: {
+      table: { disable: true },
+    },
+    defaultValue: {
+      control: 'text',
+      table: { disable: true },
+    },
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
     hasError: { table: { disable: true } },
+    helpSvgPath: {
+      table: { disable: true },
+      options: Object.keys(SystemSVGPaths),
+      mapping: SystemSVGPaths,
+    },
+    helpText: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
-    isLarge: { table: { disable: true } },
     label: { table: { disable: true } },
     showRequiredMark: { table: { disable: true } },
     thousandSeparator: { table: { disable: true } },
+    titleHelpSvg: { table: { disable: true } },
     // HTML
     autoComplete: { table: { disable: true } },
-    defaultValue: { table: { disable: true } },
     disabled: { table: { disable: true } },
     inputMode: { table: { disable: true } },
     name: { table: { disable: true } },
@@ -60,8 +79,6 @@ const meta = {
     required: { table: { disable: true } },
     rows: { table: { disable: true } },
     value: { table: { disable: true } },
-    // Aria
-    ariaDescribedby: { table: { disable: true } },
     // Events
     onBlur: { table: { disable: true } },
     onChange: { table: { disable: true } },
@@ -131,8 +148,43 @@ export const WithAttributes = {
   },
 } satisfies Story;
 
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    ...defaultArgs,
+    classNames: {
+      container: ' dummyClassname',
+      label: 'dummyClassname',
+      textbox: 'dummyClassnameFormContainer',
+      errorMessage: 'dummyClassname',
+    },
+    hasError: true,
+    errorMessage: errorMessageText,
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    // eslint-disable-next-line testing-library/no-node-access
+    const container = canvasElement.querySelector(`${wrapper} > div`);
+    const label = canvas.getByText(defaultLabelText);
+    const textbox = canvas.getByRole('textbox');
+    // eslint-disable-next-line testing-library/no-node-access
+    const errorMessageContainer = canvasElement.querySelector(
+      '[id^=textFieldErrorId]>div'
+    );
+    await expect(container).toHaveClass('dummyClassname');
+    await expect(label).toHaveClass('dummyClassname');
+    await expect(textbox).toHaveClass('dummyClassnameFormContainer');
+    await expect(errorMessageContainer).toHaveClass('dummyClassname');
+  },
+} satisfies Story;
+
 export const Defaults = {
-  name: 'Defaults (A1 delvis, A2 delvis, B2, FS-A2)',
+  name: 'Defaults Variant Medium (A1, A2, B2, FS-A2)',
 
   args: {
     ...defaultArgs,
@@ -159,13 +211,29 @@ export const Defaults = {
     await expect(textbox).not.toBeRequired();
     await expect(textbox).not.toHaveAttribute('aria-invalid');
     await expect(textbox).not.toHaveAttribute('aria-describedby');
-    const errorMessage = canvas.getAllByRole('generic')[3];
-    await expect(errorMessage).toBeInTheDocument();
+    // eslint-disable-next-line testing-library/no-node-access
+    const errorMessageContainer = canvasElement.querySelector(
+      '[id^=textFieldErrorId]'
+    );
+    await expect(errorMessageContainer).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithVariantLarge = {
+  name: 'With Variant Large (A1)',
+
+  args: {
+    ...defaultArgs,
+    variant: 'large',
+  },
+
+  argTypes: {
+    variant: { table: { disable: false } },
   },
 } satisfies Story;
 
 export const WithAs = {
-  name: 'With As (A1 delvis, A2 delvis)',
+  name: 'With As (A1, A2)',
 
   args: {
     ...defaultArgs,
@@ -191,7 +259,7 @@ export const WithAs = {
 } satisfies Story;
 
 export const WithDisabled = {
-  name: 'With Disabled (B1 delvis, B8 delvis)',
+  name: 'With Disabled (B1, B8)',
 
   args: {
     ...defaultArgs,
@@ -249,7 +317,7 @@ export const WithDefaultValue = {
 } satisfies Story;
 
 export const WithAutoCompleteInputModeNameAndPlaceholder = {
-  name: 'With AutoComplete InputMode Name And Placeholder (A3 delvis, A6 delvis, B1 delvis)',
+  name: 'With AutoComplete InputMode Name And Placeholder (A3, A6, B1)',
 
   args: {
     ...defaultArgs,
@@ -277,7 +345,7 @@ export const WithAutoCompleteInputModeNameAndPlaceholder = {
 } satisfies Story;
 
 export const WithReadOnly = {
-  name: 'With ReadOnly (B1 delvis, B6 delvis)',
+  name: 'With ReadOnly (B1, B6)',
 
   args: {
     ...defaultArgs,
@@ -297,7 +365,7 @@ export const WithReadOnly = {
 } satisfies Story;
 
 export const WithRequired = {
-  name: 'With Required (B4 delvis)',
+  name: 'With Required (B4)',
 
   args: {
     ...defaultArgs,
@@ -320,7 +388,7 @@ export const WithRequired = {
 } satisfies Story;
 
 export const WithRequiredAndMark = {
-  name: 'With Required And Mark (B4 delvis, FS-A4 delvis)',
+  name: 'With Required And Mark (B4, FS-A4 delvis)',
 
   args: {
     ...defaultArgs,
@@ -385,7 +453,7 @@ export const WithPattern = {
 } satisfies Story;
 
 export const WithRows = {
-  name: 'With Rows As Textarea (A5 delvis)',
+  name: 'With Rows As Textarea (A5)',
 
   args: {
     ...defaultArgs,
@@ -405,50 +473,22 @@ export const WithRows = {
   },
 } satisfies Story;
 
-export const WithAriaDescribedby = {
-  name: 'With AriaDescribedby (B5 delvis)',
-
-  args: {
-    ...defaultArgs,
-    ariaDescribedby: 'testID',
-  },
-
-  argTypes: {
-    ariaDescribedby: { table: { disable: false } },
-  },
-
-  parameters: {
-    imageSnapshot: { disable: true },
-  },
-
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const textbox = canvas.getByRole('textbox');
-    await expect(textbox).toHaveAttribute('aria-describedby');
-    await expect(textbox).toHaveAttribute(
-      'aria-describedby',
-      expect.stringMatching('testID')
-    );
-  },
-} satisfies Story;
-
 export const WithError = {
-  name: 'With ErrorMessage (B5 delvis)',
-
+  name: 'With ErrorMessage (B5)',
   args: {
     ...defaultArgs,
     errorMessage: errorMessageText,
   },
-
   argTypes: {
     errorMessage: { table: { disable: false } },
-    hasError: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
-    const errorMessageContainer = canvas.getAllByRole('generic')[2];
+    // eslint-disable-next-line testing-library/no-node-access
+    const errorMessageContainer = canvasElement.querySelector(
+      '[id^=textFieldErrorId]'
+    );
     await expect(errorMessageContainer).toBeInTheDocument();
     await expect(canvas.queryByText(errorMessageText)).not.toBeInTheDocument();
     await expect(textbox).not.toHaveAttribute('aria-invalid', 'true');
@@ -457,65 +497,31 @@ export const WithError = {
 } satisfies Story;
 
 export const WithErrorMessageAndHasError = {
-  name: 'With ErrorMessage And HasError (B5 delvis)',
-
+  name: 'With ErrorMessage And HasError (B5)',
   args: {
     ...defaultArgs,
     errorMessage: errorMessageText,
     hasError: true,
   },
-
   argTypes: {
     errorMessage: { table: { disable: false } },
     hasError: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} input`,
       focus: `${wrapper} input`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const textbox = canvas.getByRole('textbox');
-    const errorMessage = canvas.getByText(errorMessageText);
-    const errorMessageContainer = canvas.getAllByRole('generic')[2];
-    await expect(errorMessage).toBeInTheDocument();
+    const textbox = canvas.getByRole('textbox', {
+      description: errorMessageText,
+    });
+    const errorMessageContainer = canvas.getAllByRole('generic')[3];
     await expect(errorMessageContainer).toBeInTheDocument();
     await expect(textbox).toHaveAttribute('aria-invalid', 'true');
     await expect(textbox).toHaveAttribute('aria-describedby');
-  },
-} satisfies Story;
-
-export const WithHasErrorAndAriaDescribedby = {
-  name: 'With HasError And AriaDescribedby (B5 delvis)',
-
-  args: {
-    ...defaultArgs,
-    ariaDescribedby: 'konsumentId',
-    errorMessage: errorMessageText,
-    hasError: true,
-  },
-
-  argTypes: {
-    ariaDescribedby: { table: { disable: false } },
-    hasError: { table: { disable: false } },
-  },
-
-  parameters: {
-    imageSnapshot: { disable: true },
-  },
-
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const errorMessageContainer = canvas.getAllByRole('generic')[3];
-    const textbox = canvas.getByRole('textbox');
-    await expect(textbox).toHaveAttribute(
-      'aria-describedby',
-      expect.stringMatching(`konsumentId ${errorMessageContainer.id}`)
-    );
   },
 } satisfies Story;
 
@@ -557,19 +563,6 @@ export const WithHideLabel = {
   },
 } satisfies Story;
 
-export const WithIsLarge = {
-  name: 'With IsLarge (A1 delvis)',
-
-  args: {
-    ...defaultArgs,
-    isLarge: true,
-  },
-
-  argTypes: {
-    isLarge: { table: { disable: false } },
-  },
-} satisfies Story;
-
 export const WithThousandSeparator = {
   name: 'With ThousandSeparator As Input (A8 delvis)',
 
@@ -593,21 +586,66 @@ export const WithThousandSeparator = {
   },
 } satisfies Story;
 
+export const WithHelpText = {
+  name: 'With HelpText (A1)',
+  args: {
+    ...defaultArgs,
+    helpText:
+      'Vi trenger å vite navnet ditt dersom vi skal kontakte deg senere.',
+  },
+  argTypes: {
+    helpText: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: {
+      focus: `${wrapper} > div > button`,
+      click: `${wrapper} > div > button`,
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button', {
+      description: defaultLabelText,
+    });
+    await expect(helpButton).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithHelpTextAndDescription = {
+  name: 'With HelpText And Description (A1)',
+  args: {
+    ...defaultArgs,
+    helpText:
+      'Vi trenger å vite navnet ditt dersom vi skal kontakte deg senere.',
+    description: 'En liten beskrivelse tekst',
+  },
+  argTypes: {
+    helpText: { table: { disable: false } },
+    description: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: {
+      focus: `${wrapper} > div > button`,
+      click: `${wrapper} > div > button`,
+    },
+  },
+} satisfies Story;
+
 const EventHandlersTemplate: StoryFn<typeof TextField> = (args) => {
   const [labelText, setLabelText] = useState('Tester events');
   return (
     <TextField
       {...args}
       label={labelText}
-      onFocus={(event: React.FocusEvent<HTMLInputElement>): void => {
+      onFocus={(event: FocusEvent<HTMLInputElement>): void => {
         setLabelText('TextField har fått fokus');
         args.onFocus && args.onFocus(event);
       }}
-      onBlur={(event: React.FocusEvent<HTMLInputElement>): void => {
+      onBlur={(event: FocusEvent<HTMLInputElement>): void => {
         setLabelText('TextField har blitt blurret');
         args.onBlur && args.onBlur(event);
       }}
-      onChange={(event: React.ChangeEvent<HTMLInputElement>): void => {
+      onChange={(event: ChangeEvent<HTMLInputElement>): void => {
         setLabelText('TextField har blitt klikket på');
         args.onChange && args.onChange(event);
       }}
@@ -617,7 +655,7 @@ const EventHandlersTemplate: StoryFn<typeof TextField> = (args) => {
 
 export const WithEventHandlers = {
   render: EventHandlersTemplate,
-  name: 'With EventHandlers (A4 delvis)',
+  name: 'With EventHandlers (A4)',
 
   args: {
     ...defaultArgs,

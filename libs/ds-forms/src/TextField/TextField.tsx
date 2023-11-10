@@ -1,14 +1,23 @@
-import { forwardRef, useId, useImperativeHandle, useRef } from 'react';
+import {
+  ChangeEvent,
+  forwardRef,
+  useId,
+  useImperativeHandle,
+  useRef,
+  JSX,
+} from 'react';
 
 import {
   dsI18n,
   getCommonClassNameDefault,
+  getCommonFormVariantDefault,
   Languages,
 } from '@skatteetaten/ds-core-utils';
 
 import { getTextFieldAsDefault } from './defaults';
 import { TextboxRefHandle, TextFieldProps } from './TextField.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
+import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 
 import styles from './TextField.module.scss';
 
@@ -17,14 +26,19 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
     {
       id: externalId,
       className = getCommonClassNameDefault(),
+      classNames,
       lang,
       'data-testid': dataTestId,
       as: Tag = getTextFieldAsDefault(),
       autosize,
       description,
       errorMessage,
+      helpSvgPath,
+      helpText,
       label,
       thousandSeparator,
+      titleHelpSvg,
+      variant = getCommonFormVariantDefault(),
       autoComplete,
       defaultValue,
       disabled,
@@ -38,10 +52,8 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       required,
       rows,
       value,
-      ariaDescribedby,
-      isLarge,
-      hideLabel,
       hasError,
+      hideLabel,
       showRequiredMark,
       onBlur,
       onChange,
@@ -50,8 +62,8 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
     ref
   ): JSX.Element => {
     const errorId = `textFieldErrorId-${useId()}`;
-    const uniqueTextboxId = `textFieldTextboxId-${useId()}`;
-    const textboxId = externalId ?? uniqueTextboxId;
+    const generatedId = `textFieldTextboxId-${useId()}`;
+    const textboxId = externalId ?? generatedId;
 
     const textboxRef = useRef<HTMLTextAreaElement & HTMLInputElement>(null);
     useImperativeHandle(ref, () => ({
@@ -65,7 +77,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       value.replace(/[^0-9]/g, '');
 
     const handleChange = (
-      e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
+      e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
     ): void => {
       if (thousandSeparator) {
         const input = e.target as HTMLInputElement;
@@ -89,32 +101,34 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       value = addSpacesOrCommas(removeNonNumeric(value.toString()));
     }
 
-    const ariaDescribedbyInput = `${ariaDescribedby ?? ''} ${
-      hasError ? errorId : ''
-    }`.trim();
-
-    const concatenatedClassName = `${className}`.trim();
-
-    const hideLabelClassName = hideLabel ? styles.srOnly : '';
-    const labelClassName = `${styles.label} ${hideLabelClassName}`.trim();
-    const requiredClassName = showRequiredMark
-      ? styles.label_required
-      : undefined;
-
-    const lagreTextboxClassName = isLarge ? styles.textbox_large : '';
+    const isLarge = variant === 'large';
+    const largeTextboxClassName = isLarge ? styles.textbox_large : '';
     const multilineTextboxClassName =
       Tag === 'textarea' ? styles.textbox_multiline : '';
     const autosizeTextarea = autosize ? styles.textbox_autosize : '';
-    const textboxClassName =
-      `${styles.textbox} ${lagreTextboxClassName} ${multilineTextboxClassName} ${autosizeTextarea}`.trim();
+    const textboxClassName = `${
+      styles.textbox
+    } ${largeTextboxClassName} ${multilineTextboxClassName} ${autosizeTextarea} ${
+      classNames?.textbox ?? ''
+    }`.trim();
+
     return (
-      <div className={concatenatedClassName} lang={lang}>
-        <label htmlFor={textboxId} className={labelClassName}>
-          <span className={requiredClassName}>{label}</span>
-          {description && (
-            <span className={styles.labelDescription}>{description}</span>
-          )}
-        </label>
+      <div
+        className={`${className} ${classNames?.container ?? ''}`.trim()}
+        lang={lang}
+      >
+        <LabelWithHelp
+          className={classNames?.label ?? ''}
+          htmlFor={textboxId}
+          hideLabel={hideLabel}
+          showRequiredMark={showRequiredMark}
+          description={description}
+          helpSvgPath={helpSvgPath}
+          helpText={helpText}
+          titleHelpSvg={titleHelpSvg}
+        >
+          {label}
+        </LabelWithHelp>
         <Tag
           ref={textboxRef}
           id={textboxId}
@@ -133,7 +147,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
           required={required}
           rows={rows}
           value={value}
-          aria-describedby={ariaDescribedbyInput || undefined}
+          aria-describedby={hasError ? errorId : undefined}
           aria-invalid={hasError ?? undefined}
           onBlur={onBlur}
           onChange={handleChange}
@@ -141,7 +155,8 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
         />
         <ErrorMessage
           id={errorId}
-          showError={hasError && errorMessage !== undefined}
+          showError={hasError}
+          className={classNames?.errorMessage ?? ''}
         >
           {errorMessage ?? ''}
         </ErrorMessage>
