@@ -60,5 +60,6 @@ export default {
 export const Preview: StoryObj<typeof Icon> = {
   args: {
     svgPath: AndreForholdSVGpath,
+    variant: 'themeIcon',
   },
 };
