@@ -51,6 +51,7 @@ export default {
       options: ['', farmerIllustration, waitIllustration],
       table: { category: category.props },
     },
+    imageSourceAltText: { table: { category: category.props } },
     padding: {
       options: [...panelPaddingArr],
       control: 'inline-radio',

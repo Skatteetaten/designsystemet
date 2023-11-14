@@ -628,6 +628,41 @@ exports[`Tester/Panel WithImageMobile smoke-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Panel WithImageSourceAltText play-test 1`] = `
+<div data-test-block="true">
+  <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicImage__yJ2sd">
+    <div class="Panel_panelGraphic__7GPa9 Panel_panelImageContainer__cuT5S">
+      <img src="farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg"
+           alt="Bonde med ku"
+           class="Panel_panelImageContainerImage__YIhOY"
+      >
+    </div>
+    <div class="Panel_panelArticle__4fhzq">
+      <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
+        Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+      </p>
+    </div>
+    <div class="Panel_panelSpace_hide__W74m6">
+    </div>
+  </div>
+  <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicImage__yJ2sd">
+    <div class="Panel_panelGraphic__7GPa9 Panel_panelImageContainer__cuT5S">
+      <img src="farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg"
+           alt="Bonde med ku"
+           class="Panel_panelImageContainerImage__YIhOY"
+      >
+    </div>
+    <div class="Panel_panelArticle__4fhzq">
+      <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
+        Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+      </p>
+    </div>
+    <div class="Panel_panelSpace_hide__W74m6">
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Tester/Panel WithPadding smoke-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingS__Bmszn Panel_panel_spacingXXS__ljNS0">

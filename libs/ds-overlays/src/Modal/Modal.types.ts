@@ -29,7 +29,7 @@ export interface ModalProps extends BaseProps {
   disableAutoClose?: boolean;
   /** Source til illustrasjonsbilde øverst i Modal */
   imageSource?: string;
-  /** Alt tekst til illustrasjonsbilde */
+  /** Alt tekst til illustrasjonsbilde. Hvis bildet er meningsbærende, legg på alt tekst. */
   imageSourceAltText?: string;
   /** Callback når modalen lukkes */
   onClose?: () => void;
