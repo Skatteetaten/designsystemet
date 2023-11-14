@@ -17,7 +17,6 @@ $border-outline: 6px;
 
   @media (min-width: $breakpoint-s) {
     flex-direction: row;
-    justify-content: center;
     gap: var(--spacing-m);
   }
 
@@ -46,11 +45,11 @@ $border-outline: 6px;
   }
 
   &Space {
-    flex: 0 2 auto;
+    /* flex: 0 2 auto;
 
     @media (min-width: $breakpoint-s) {
       flex-basis: 150px;
-    }
+    } */
 
     &_hide {
       display: none;
@@ -59,7 +58,8 @@ $border-outline: 6px;
 
   &Article {
     max-width: var(--semantic-responsive-article);
-    flex: 0 1 var(--semantic-responsive-article);
+    flex-basis: var(--semantic-responsive-article);
+    margin: auto;
 
     &_illustration {
       flex: 0 1 60%;
@@ -81,7 +81,7 @@ $border-outline: 6px;
   }
 
   &ImageContainer {
-    flex: 0 2 40%;
+    flex: 0 40%;
 
     &Image {
       width: 100%;

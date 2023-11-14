@@ -5,9 +5,6 @@
   "publishConfig": {
     "registry": "https://nexus.sits.no/repository/npm-internal/"
   },
-  "peerDependencies": {
-    "react": "^18"
-  },
   "devDependencies": {
     "postcss": "^8"
   }

@@ -105,7 +105,7 @@ exports[`Tester/TextField WithCustomClassNames play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:r7:"
-           class="TextField_textbox__qbZlk    dummyClassname"
+           class="TextField_textbox__qbZlk    dummyClassnameFormContainer"
            aria-describedby="textFieldErrorId-:r6:"
            aria-invalid="true"
            value

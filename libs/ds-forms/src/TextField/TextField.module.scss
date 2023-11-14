@@ -1,6 +1,7 @@
 @import 'libs/ds-core-utils/src/styles.scss';
 
 .textbox {
+  display: block;
   width: 100%;
   box-sizing: border-box;
   padding: var(--spacing-xs) var(--spacing-s);

@@ -4,7 +4,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: Select.Option,
   title: 'Komponenter/Select/Option',
   argTypes: {
@@ -13,17 +13,13 @@ const meta = {
     // HTML
     value: { table: { category: category.htmlAttribute } },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-forms'),
   },
 } satisfies Meta<typeof Select.Option>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-export const SelectOptionDefault = {
-  name: 'Default',
+export const Preview = {
   args: {
     children: 'Option 1',
   },
-} satisfies Story;
+} satisfies StoryObj<typeof Select.Option>;

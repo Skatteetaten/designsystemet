@@ -1,7 +1,5 @@
 /* automatisk genererte types */
-export const diagonals: string;
-export const diagonalsLeft: string;
-export const diagonalsRight: string;
+export const separator: string;
 export const footer: string;
 export const columns: string;
 export const columnsThree: string;

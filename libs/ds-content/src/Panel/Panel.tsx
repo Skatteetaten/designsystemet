@@ -90,7 +90,7 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
             />
           </div>
         )}
-        {!imageSource && (
+        {!imageSource && renderIcon && (
           <div className={spaceAndIconClassName}>{renderIcon?.()}</div>
         )}
         <div className={articleClassName}>
@@ -116,7 +116,7 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
           )}
           {children}
         </div>
-        <div className={spaceClassName}></div>
+        {(imageSource || renderIcon) && <div className={spaceClassName}></div>}
       </div>
     );
   }

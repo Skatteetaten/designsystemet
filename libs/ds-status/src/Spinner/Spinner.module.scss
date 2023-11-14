@@ -1,0 +1,83 @@
+@import 'libs/ds-core-utils/src/styles.scss';
+
+.spinner {
+  --spinner-size: var(--size-small);
+  --spinner-color: var(--semantic-page-foreground);
+  --spinner-border-width: 3px;
+
+  &_black {
+    --spinner-color: var(--palette-graphite-100);
+  }
+
+  &_blue {
+    --spinner-color: var(--semantic-interactive-main);
+  }
+
+  &_white {
+    --spinner-color: var(--palette-graphite-0);
+  }
+
+  &_small {
+    --spinner-size: var(--size-extra-small);
+  }
+
+  &_medium {
+    --spinner-size: var(--size-small);
+  }
+
+  &_large {
+    --spinner-size: var(--size-medium);
+    --spinner-border-width: 5px;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &_flexColumn {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  &_flexRow {
+    flex-direction: row;
+    gap: var(--spacing-s);
+  }
+
+  &Animation {
+    display: inline-block;
+    width: var(--spinner-size);
+    height: var(--spinner-size);
+    box-sizing: border-box;
+    border: var(--spinner-border-width) solid var(--spinner-color);
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  &Title {
+    max-width: 9rem;
+    color: var(--spinner-color);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--semantic-line-height-default);
+
+    &_centerText {
+      text-align: center;
+    }
+  }
+}
+
+.srOnly {
+  @include sr-only;
+}

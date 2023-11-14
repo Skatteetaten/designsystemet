@@ -28,7 +28,6 @@ const getDirectories = (source) =>
 const config = {
   stories: [
     '../src/stories/**/*.mdx',
-    '../src/stories/**/*.stories.mdx',
     '../src/stories/**/*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [
@@ -55,6 +54,9 @@ const config = {
   framework: {
     name: '@storybook/react-webpack5',
     options: {},
+  },
+  docs: {
+    autodocs: true,
   },
   webpackFinal: async (config) => {
     const outerIndex =

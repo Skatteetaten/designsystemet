@@ -34,3 +34,4 @@ export const StepList = forwardRef<HTMLOListElement, StepListProps>(
 
 StepList.displayName = 'StepList';
 StepList.Step = StepListStep;
+StepList.Step.displayName = 'StepList.Step';

@@ -18,6 +18,10 @@ code {
   height: 100vh;
 }
 
+.width100 {
+  width: 100%;
+}
+
 .scrollToTopContainer:focus {
   background: var(--semantic-interactive-main);
 }
@@ -25,6 +29,10 @@ code {
 .exampleSpacing {
   margin-right: var(--spacing-m);
   margin-bottom: var(--spacing-m);
+}
+
+.marginRightM {
+  margin-right: var(--spacing-m);
 }
 
 .flex {
@@ -119,4 +127,9 @@ code {
 
 .logoHeight {
   height: 4rem;
+}
+
+.modalLink {
+  display: flex;
+  flex-direction: row-reverse;
 }

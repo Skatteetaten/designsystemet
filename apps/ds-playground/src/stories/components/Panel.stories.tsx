@@ -18,11 +18,12 @@ import {
 import { headingAsArr, subheadingAsArr } from '@skatteetaten/ds-core-utils';
 import { CheckIcon } from '@skatteetaten/ds-icons';
 import { Paragraph } from '@skatteetaten/ds-typography';
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
+import farmerIllustration from '../../assets/farmer-illustration.svg';
+import waitIllustration from '../../assets/wait-alert-illustration.png';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
-import illustrationSource from '../__tests__/testUtils/test_bonde.svg';
 import { getVersion } from '../utils/version.utils';
 
 export default {
@@ -47,11 +48,7 @@ export default {
     hideTitle: { table: { category: category.props } },
     imageSource: {
       control: 'select',
-      options: [
-        '',
-        'test_bonde.7eebe78d220ecf48b97e4811ac2c5210.svg',
-        'd52134bda41b5aa041ef.png',
-      ],
+      options: ['', farmerIllustration, waitIllustration],
       table: { category: category.props },
     },
     padding: {
@@ -112,13 +109,17 @@ export default {
   },
 } satisfies Meta<typeof Panel>;
 
-export const Default: StoryFn<typeof Panel> = () => <Panel>{loremIpsum}</Panel>;
+export const Preview: StoryObj<typeof Panel> = {
+  args: {
+    children: loremIpsum,
+  },
+};
 
-export const Example: StoryFn<typeof Panel> = () => (
+export const Example: StoryFn<typeof Panel> = (_args) => (
   <>
     <Panel
       title={'Når kommer skattepengene'}
-      imageSource={illustrationSource}
+      imageSource={farmerIllustration}
       padding={'mega'}
       spacing={'xxl'}
     >
@@ -156,3 +157,9 @@ export const Example: StoryFn<typeof Panel> = () => (
     </Panel>
   </>
 );
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};

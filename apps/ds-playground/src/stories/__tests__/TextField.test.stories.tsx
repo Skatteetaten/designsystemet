@@ -150,41 +150,35 @@ export const WithAttributes = {
 
 export const WithCustomClassNames = {
   name: 'With Custom ClassNames (FA3)',
-
   args: {
     ...defaultArgs,
     classNames: {
       container: ' dummyClassname',
       label: 'dummyClassname',
-      textbox: 'dummyClassname',
+      textbox: 'dummyClassnameFormContainer',
       errorMessage: 'dummyClassname',
     },
     hasError: true,
     errorMessage: errorMessageText,
   },
-
   argTypes: {
     classNames: {
       table: { disable: false },
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     // eslint-disable-next-line testing-library/no-node-access
     const container = canvasElement.querySelector(`${wrapper} > div`);
-    await expect(container).toHaveClass('dummyClassname');
-
+    const label = canvas.getByText(defaultLabelText);
     const textbox = canvas.getByRole('textbox');
-    await expect(textbox).toHaveClass('dummyClassname');
-
-    const label = canvas.getByLabelText(defaultLabelText);
-    await expect(label).toHaveClass('dummyClassname');
-
     // eslint-disable-next-line testing-library/no-node-access
     const errorMessageContainer = canvasElement.querySelector(
       '[id^=textFieldErrorId]>div'
     );
+    await expect(container).toHaveClass('dummyClassname');
+    await expect(label).toHaveClass('dummyClassname');
+    await expect(textbox).toHaveClass('dummyClassnameFormContainer');
     await expect(errorMessageContainer).toHaveClass('dummyClassname');
   },
 } satisfies Story;

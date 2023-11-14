@@ -1,5 +1,5 @@
 import { Fieldset, TextField } from '@skatteetaten/ds-forms';
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -46,13 +46,25 @@ export default {
   },
 } satisfies Meta<typeof Fieldset>;
 
-export const Default: StoryFn<typeof Fieldset> = () => (
-  <Fieldset legend={'Ledetekst'}>
-    <div>{'Innhold'}</div>
-  </Fieldset>
-);
+export const Preview: StoryObj<typeof Fieldset> = {
+  args: {
+    legend: 'Hvilken periode trenger du bekreftelse for?',
+    children: [
+      <TextField
+        key={'textfield1'}
+        className={'inlineBlock exampleSpacing'}
+        label={'Fra dato (dd.mm.åååå)'}
+      />,
+      <TextField
+        key={'textfield2'}
+        className={'inlineBlock'}
+        label={'Til dato (dd.mm.åååå)'}
+      />,
+    ],
+  },
+};
 
-export const Example: StoryFn<typeof Fieldset> = () => (
+export const Example: StoryFn<typeof Fieldset> = (_args) => (
   <Fieldset
     legend={'Hvilken periode trenger du bekreftelse for?'}
     helpText={'Legg inn hvilken periode du trenger bekreftelse for.'}
@@ -64,5 +76,11 @@ export const Example: StoryFn<typeof Fieldset> = () => (
     <TextField className={'inlineBlock'} label={'Til dato (dd.mm.åååå)'} />
   </Fieldset>
 );
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};
 
 //TODO Erstatt TextField med Datepicker i Example
