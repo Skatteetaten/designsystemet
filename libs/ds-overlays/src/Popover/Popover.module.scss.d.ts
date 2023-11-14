@@ -1,5 +1,6 @@
 /* automatisk genererte types */
 export const popover: string;
+export const popoverHidden: string;
 export const popover_forest: string;
 export const popover_ochre: string;
 export const popover_white: string;

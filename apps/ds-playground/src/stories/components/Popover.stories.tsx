@@ -1,42 +1,58 @@
+import { useRef, useState } from 'react';
+
+import { IconButton } from '@skatteetaten/ds-buttons';
+import { InfoOutlineSVGpath } from '@skatteetaten/ds-icons';
 import { Popover } from '@skatteetaten/ds-overlays';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
+import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import { getVersion } from '../utils/version.utils';
 
-const meta = {
+export default {
   component: Popover,
   title: 'Komponenter/Popover',
   argTypes: {
     // Props
     children: { table: { category: category.props } },
   },
-  tags: ['autodocs'],
   parameters: {
     version: getVersion('ds-typography'),
   },
 } satisfies Meta<typeof Popover>;
-export default meta;
-type Story = StoryObj<typeof meta>;
 
-export const ParagraphDefault = {
-  name: 'Default',
-
+export const Preview: StoryObj<typeof Popover> = {
   args: {
-    children:
-      'Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, ' +
-      'etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.',
+    children: loremIpsum,
   },
-} satisfies Story;
+};
 
-//   export const ParagraphExample = {
-//     render: TemplateExample,
-//     name: 'Example',
-//     args: {
-//       children: 'dummy',
-//     },
+export const Example: StoryFn<typeof Popover> = (_args) => {
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const [openState, setOpenState] = useState(false);
+  return (
+    <>
+      <IconButton
+        ref={buttonRef}
+        ariaExpanded={openState}
+        svgPath={InfoOutlineSVGpath}
+        title={'Open popover'}
+        onClick={(): void => setOpenState(!openState)}
+      />
+      <Popover
+        open={openState}
+        arrowPosition={'topLeft'}
+        anchorEl={buttonRef.current}
+        onClose={(): void => setOpenState(false)}
+      >
+        {loremIpsum}
+      </Popover>
+    </>
+  );
+};
 
-//     parameters: {
-//       controls: { disabled: true },
-//     },
-//   } satisfies Story;
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
+  },
+};

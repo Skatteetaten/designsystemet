@@ -8,7 +8,7 @@ import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import {
   getPopoverColorDefault,
-  getPopoverArrowLocationDefault,
+  getPopoverArrowPositionDefault,
   getPopoverTitleAsDefault,
 } from './defaults';
 import { PopoverProps } from './Popover.types';
@@ -22,12 +22,14 @@ export const Popover = forwardRef<HTMLDivElement, PopoverProps>(
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
-      arrowLocation = getPopoverArrowLocationDefault(),
+      // anchorEl,
+      arrowPosition = getPopoverArrowPositionDefault(),
       color = getPopoverColorDefault(),
+      open,
       title,
       titleAs = getPopoverTitleAsDefault(),
       // disableAutoDismiss,
-      showCloseButton,
+      onClose,
       children,
     },
     ref
@@ -53,17 +55,19 @@ export const Popover = forwardRef<HTMLDivElement, PopoverProps>(
     const { t } = useTranslation('ds_status', { i18n: dsI18n });
     const isBreakpointXs = useMediaQuery('(min-width: 480px)');
 
+    const hiddenClassName = open ? styles.popoverHidden : '';
     const colorClassName = styles[`popover_${color}`];
-    const popoverArrowLocationClassName =
-      styles[`popover_arrow${arrowLocation}`];
-    const arrowLocationClassName = styles[`popoverArrow_${arrowLocation}`];
+    const popoverArrowPositionClassName =
+      styles[`popover_arrow${arrowPosition}`];
+    const arrowPositionClassName = styles[`popoverArrow_${arrowPosition}`];
     return (
       <div
         ref={ref}
         id={id}
         lang={lang}
         data-testid={dataTestId}
-        className={`${styles.popover} ${colorClassName} ${popoverArrowLocationClassName} ${className}`}
+        className={`${styles.popover} ${hiddenClassName} ${colorClassName} ${popoverArrowPositionClassName} ${className}`.trim()}
+        aria-hidden={!open}
       >
         <div className={styles.popoverContent}>
           <div className={styles.popoverContentWrapper}>
@@ -75,18 +79,16 @@ export const Popover = forwardRef<HTMLDivElement, PopoverProps>(
             {typeof children === 'string' && <Paragraph>{children}</Paragraph>}
             {typeof children !== 'string' && children}
           </div>
-          {showCloseButton && (
-            <IconButton
-              className={styles.popoverContentCloseButton}
-              size={isBreakpointXs ? 'large' : 'small'}
-              svgPath={CancelSVGpath}
-              title={t('alert.CloseMessage')}
-              onClick={(): void => console.log('click')}
-            />
-          )}
+          <IconButton
+            className={styles.popoverContentCloseButton}
+            size={isBreakpointXs ? 'large' : 'small'}
+            svgPath={CancelSVGpath}
+            title={t('alert.CloseMessage')}
+            onClick={onClose}
+          />
         </div>
         <div
-          className={`${styles.popoverArrow} ${arrowLocationClassName}`}
+          className={`${styles.popoverArrow} ${arrowPositionClassName}`.trim()}
         ></div>
       </div>
     );
@@ -97,6 +99,6 @@ Popover.displayName = 'Popover';
 
 export {
   getPopoverColorDefault,
-  getPopoverArrowLocationDefault,
+  getPopoverArrowPositionDefault,
   getPopoverTitleAsDefault,
 };

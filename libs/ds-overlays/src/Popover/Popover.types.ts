@@ -2,30 +2,34 @@ import { ReactNode } from 'react';
 
 import { BaseProps, HeadingAs } from '@skatteetaten/ds-core-utils';
 
-export const arrowLocationArr = [
+export const arrowPositionArr = [
   'topRight',
   'topLeft',
   'bottomRight',
   'bottomLeft',
 ] as const;
-export type ArrowLocation = (typeof arrowLocationArr)[number];
+export type ArrowPosition = (typeof arrowPositionArr)[number];
 
 export const popoverColorArr = ['forest', 'ochre', 'white'] as const;
 export type PopoverColor = (typeof popoverColorArr)[number];
 
 export interface PopoverProps extends BaseProps {
   /** Plassering av pilen */
-  arrowLocation?: ArrowLocation;
+  arrowPosition?: ArrowPosition;
   /** Tekst */
   children: ReactNode;
-  /** Farge */
+  /** Bakgrunnsfarge */
   color?: PopoverColor;
-  /** Skru av autolukking */
+  /** Om autolukking skal skrus av */
   disableAutoDismiss?: boolean;
-  /** Om Popover skal ha lukkekryss */
-  showCloseButton?: boolean;
   /** Tittel */
   title?: string;
   /** Tittel as */
   titleAs?: HeadingAs;
+  /** Om Popover er synlig */
+  open?: boolean;
+  /** Element Popover anchors to */
+  anchorEl?: Element | null;
+  /** Callback når Popover lukkes */
+  onClose?: () => void;
 }
