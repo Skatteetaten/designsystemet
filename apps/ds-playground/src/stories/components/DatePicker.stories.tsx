@@ -2,17 +2,20 @@ import {
   formArrSize,
   getCommonFormVariantDefault,
 } from '@skatteetaten/ds-core-utils';
-import { DatePicker, DatePickerProps } from '@skatteetaten/ds-forms';
 import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { DatePicker } from '../../../../../libs/ds-forms/src/DatePicker/DatePicker';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { DatePickerProps } from '../../../../../libs/ds-forms/src/DatePicker/DatePicker.types';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { getVersion } from '../utils/version.utils';
 
 export default {
   component: DatePicker,
-  title: 'Komponenter/DatePicker',
+  title: 'Komponenter/DatePicker (under utvikling)',
   argTypes: {
     // Props
     classNames: { table: { category: category.props } },

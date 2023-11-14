@@ -1,7 +1,6 @@
 import { ChangeEvent, FocusEvent, useState } from 'react';
 
 import { formArrSize } from '@skatteetaten/ds-core-utils';
-import { DatePicker } from '@skatteetaten/ds-forms';
 import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import {
@@ -12,6 +11,8 @@ import {
 } from '@storybook/testing-library';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { DatePicker } from '../../../../../libs/ds-forms/src/DatePicker/DatePicker';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const verifyAttribute =
@@ -25,7 +26,7 @@ const verifyAttribute =
 
 const meta = {
   component: DatePicker,
-  title: 'Tester/DatePicker',
+  title: 'Tester/DatePicker (under utvikling)',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },

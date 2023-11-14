@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tester/DatePicker ClickCalendarButton play-test 1`] = `
+exports[`Tester/DatePicker (under utvikling) ClickCalendarButton play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r2l:"
@@ -45,7 +45,7 @@ exports[`Tester/DatePicker ClickCalendarButton play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/DatePicker Defaults play-test 1`] = `
+exports[`Tester/DatePicker (under utvikling) Defaults play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:rf:"
@@ -87,7 +87,7 @@ exports[`Tester/DatePicker Defaults play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/DatePicker WithAttributes play-test 1`] = `
+exports[`Tester/DatePicker (under utvikling) WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <div class="dummyClassname"
        lang="nb"
@@ -132,7 +132,7 @@ exports[`Tester/DatePicker WithAttributes play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/DatePicker WithAutoCompleteNameAndPlaceholder play-test 1`] = `
+exports[`Tester/DatePicker (under utvikling) WithAutoCompleteNameAndPlaceholder play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r26:"
@@ -176,7 +176,7 @@ exports[`Tester/DatePicker WithAutoCompleteNameAndPlaceholder play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/DatePicker WithCustomClassNames play-test 1`] = `
+exports[`Tester/DatePicker (under utvikling) WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
   <div class="dummyClassname">
     <label id="labelId-:ra:"
@@ -234,7 +234,7 @@ exports[`Tester/DatePicker WithCustomClassNames play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/DatePicker WithDefaultValue play-test 1`] = `
+exports[`Tester/DatePicker (under utvikling) WithDefaultValue play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r13:"
@@ -276,7 +276,7 @@ exports[`Tester/DatePicker WithDefaultValue play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/DatePicker WithDescription play-test 1`] = `
+exports[`Tester/DatePicker (under utvikling) WithDescription play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r1o:"
@@ -321,7 +321,7 @@ exports[`Tester/DatePicker WithDescription play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/DatePicker WithDisabled play-test 1`] = `
+exports[`Tester/DatePicker (under utvikling) WithDisabled play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:rr:"
@@ -365,7 +365,7 @@ exports[`Tester/DatePicker WithDisabled play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/DatePicker WithError play-test 1`] = `
+exports[`Tester/DatePicker (under utvikling) WithError play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r1f:"
@@ -407,7 +407,7 @@ exports[`Tester/DatePicker WithError play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/DatePicker WithErrorMessageAndHasError play-test 1`] = `
+exports[`Tester/DatePicker (under utvikling) WithErrorMessageAndHasError play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r1j:"
@@ -465,7 +465,7 @@ exports[`Tester/DatePicker WithErrorMessageAndHasError play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/DatePicker WithEventHandlers play-test 1`] = `
+exports[`Tester/DatePicker (under utvikling) WithEventHandlers play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r2h:"
@@ -507,7 +507,7 @@ exports[`Tester/DatePicker WithEventHandlers play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/DatePicker WithHelpText play-test 1`] = `
+exports[`Tester/DatePicker (under utvikling) WithHelpText play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r1s:"
@@ -590,7 +590,7 @@ exports[`Tester/DatePicker WithHelpText play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/DatePicker WithHideLabel play-test 1`] = `
+exports[`Tester/DatePicker (under utvikling) WithHideLabel play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r22:"
@@ -632,7 +632,7 @@ exports[`Tester/DatePicker WithHideLabel play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/DatePicker WithPlaceholderEmpty play-test 1`] = `
+exports[`Tester/DatePicker (under utvikling) WithPlaceholderEmpty play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r2a:"
@@ -673,7 +673,7 @@ exports[`Tester/DatePicker WithPlaceholderEmpty play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/DatePicker WithReadOnly play-test 1`] = `
+exports[`Tester/DatePicker (under utvikling) WithReadOnly play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r2e:"
@@ -699,7 +699,7 @@ exports[`Tester/DatePicker WithReadOnly play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/DatePicker WithRef play-test 1`] = `
+exports[`Tester/DatePicker (under utvikling) WithRef play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r2:"
@@ -742,7 +742,7 @@ exports[`Tester/DatePicker WithRef play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/DatePicker WithRequired play-test 1`] = `
+exports[`Tester/DatePicker (under utvikling) WithRequired play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r17:"
@@ -785,7 +785,7 @@ exports[`Tester/DatePicker WithRequired play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/DatePicker WithRequiredAndMark smoke-test 1`] = `
+exports[`Tester/DatePicker (under utvikling) WithRequiredAndMark smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r1b:"
@@ -828,7 +828,7 @@ exports[`Tester/DatePicker WithRequiredAndMark smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/DatePicker WithValue play-test 1`] = `
+exports[`Tester/DatePicker (under utvikling) WithValue play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:rv:"
@@ -870,7 +870,7 @@ exports[`Tester/DatePicker WithValue play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/DatePicker WithVariantLarge smoke-test 1`] = `
+exports[`Tester/DatePicker (under utvikling) WithVariantLarge smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:rj:"
@@ -912,7 +912,7 @@ exports[`Tester/DatePicker WithVariantLarge smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/DatePicker WithVariantLargeAndLongText smoke-test 1`] = `
+exports[`Tester/DatePicker (under utvikling) WithVariantLargeAndLongText smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:rn:"
