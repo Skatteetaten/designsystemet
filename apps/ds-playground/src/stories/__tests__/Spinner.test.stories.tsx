@@ -71,7 +71,7 @@ export const WithRef = {
 
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const spinner = canvas.getByRole('status');
+    const spinner = canvas.getAllByRole('generic')[1];
     await expect(spinner).toHaveAttribute('id', 'dummyIdForwardedFromRef');
   },
 } satisfies Story;
@@ -95,11 +95,10 @@ export const WithAttributes = {
 
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const spinner = canvas.getByRole('status');
+    const spinner = canvas.getByTestId('123ID');
     await expect(spinner).toHaveAttribute('id', 'htmlid');
     await expect(spinner).toHaveClass('dummyClassname');
     await expect(spinner).toHaveAttribute('lang', 'nb');
-    await expect(spinner).toHaveAttribute('data-testid', '123ID');
   },
 } satisfies Story;
 
@@ -111,7 +110,7 @@ export const Defaults = {
 
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const spinner = canvas.getByRole('status');
+    const spinner = await canvas.findByText('Laster inn');
     await expect(spinner).toBeInTheDocument();
   },
 } satisfies Story;

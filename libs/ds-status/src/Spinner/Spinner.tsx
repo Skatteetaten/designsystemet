@@ -28,7 +28,7 @@ export const Spinner = forwardRef<HTMLDivElement, SpinnerProps>(
     ref
   ): JSX.Element => {
     const { t } = useTranslation('ds_status', { i18n: dsI18n });
-    const [title, setTitle] = useState<string>();
+    const [isRendered, setIsRendered] = useState<boolean>(false);
 
     /**
      * useEffect sørger for at div med role=status blir rendret før children.
@@ -36,9 +36,9 @@ export const Spinner = forwardRef<HTMLDivElement, SpinnerProps>(
      */
     useEffect(() => {
       setTimeout(() => {
-        setTitle(children ?? t('spinner.LoadingLabel'));
+        setIsRendered(true);
       }, 0);
-    }, [children, t]);
+    }, []);
 
     const sizeClassname = size ? styles[`spinner_${size}`] : undefined;
     const colorClassname = color ? styles[`spinner_${color}`] : undefined;
@@ -51,7 +51,8 @@ export const Spinner = forwardRef<HTMLDivElement, SpinnerProps>(
     return (
       <div
         ref={ref}
-        role={'status'}
+        aria-live={'polite'}
+        aria-atomic={'true'}
         id={id}
         className={concatenatedClassnames}
         lang={lang}
@@ -65,7 +66,7 @@ export const Spinner = forwardRef<HTMLDivElement, SpinnerProps>(
             titlePosition === 'bottom' ? styles.spinnerTitle_centerText : ''
           }`}
         >
-          {title}
+          {isRendered && (children ?? t('spinner.LoadingLabel'))}
         </span>
       </div>
     );
