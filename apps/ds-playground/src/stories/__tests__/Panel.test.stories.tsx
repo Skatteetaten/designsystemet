@@ -58,6 +58,9 @@ const meta = {
       control: 'select',
       options: ['', farmerIllustration, waitIllustration],
     },
+    imageSourceAltText: {
+      table: { disable: true },
+    },
     padding: {
       table: { disable: true },
       options: [...panelPaddingArr],
@@ -360,6 +363,31 @@ export const WithImage = {
     images.forEach((img) => {
       expect(img).toBeInTheDocument();
       expect(img).toHaveAttribute('alt', '');
+    });
+  },
+} satisfies Story;
+
+export const WithImageSourceAltText = {
+  render: TemplateWithGraphics,
+  name: 'With Image With Alt Text (A9)',
+
+  args: {
+    ...defaultArgs,
+    imageSource: farmerIllustration,
+    imageSourceAltText: 'Bonde med ku',
+  },
+
+  argTypes: {
+    imageSource: { table: { disable: false } },
+    imageSourceAltText: { table: { disable: false } },
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const images = canvas.getAllByRole('img', { hidden: true });
+    images.forEach((img) => {
+      expect(img).toBeInTheDocument();
+      expect(img).toHaveAttribute('alt', 'Bonde med ku');
     });
   },
 } satisfies Story;
