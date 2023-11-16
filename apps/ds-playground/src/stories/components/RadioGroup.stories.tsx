@@ -2,12 +2,12 @@ import { useState } from 'react';
 
 import {
   RadioGroup,
-  radioGroupVariantArr,
   getRadioGroupVariantDefault,
 } from '@skatteetaten/ds-forms';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
+import { SystemSVGPaths } from '../utils/icon.systems';
 import { getVersion } from '../utils/version.utils';
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -26,41 +26,46 @@ export default {
     hasError: {
       table: { category: category.props },
     },
-    helpSvgPath: { table: { category: category.props } },
+    helpSvgPath: {
+      options: Object.keys(SystemSVGPaths),
+      mapping: SystemSVGPaths,
+      table: {
+        category: category.props,
+        defaultValue: { summary: 'HelpSimpleSVGpath' },
+      },
+    },
     helpText: { table: { category: category.props } },
     hideLegend: {
       table: { category: category.props },
     },
     legend: {
+      control: 'text',
       table: { category: category.props },
     },
     showRequiredMark: {
       table: { category: category.props },
     },
-    titleHelpSvg: { table: { category: category.props } },
+    titleHelpSvg: {
+      table: { category: category.props, defaultValue: { summary: 'Hjelp' } },
+    },
     variant: {
-      control: 'inline-radio',
-      options: [...radioGroupVariantArr],
       table: {
         category: category.props,
         defaultValue: { summary: getRadioGroupVariantDefault() },
       },
     },
-    defaultValue: { table: { category: category.props } },
-    selectedValue: { table: { category: category.props } },
+    defaultValue: { control: 'text', table: { category: category.props } },
+    selectedValue: { control: 'text', table: { category: category.props } },
     // HTML
     disabled: {
-      control: 'boolean',
       table: {
         category: category.htmlAttribute,
       },
     },
     name: {
-      control: 'text',
       table: { category: category.htmlAttribute },
     },
     required: {
-      control: 'boolean',
       table: { category: category.htmlAttribute },
     },
     // Events

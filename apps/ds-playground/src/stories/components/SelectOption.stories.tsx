@@ -11,7 +11,7 @@ export default {
     // Props
     children: { table: { category: category.props } },
     // HTML
-    value: { table: { category: category.htmlAttribute } },
+    value: { control: 'text', table: { category: category.htmlAttribute } },
   },
   parameters: {
     version: getVersion('ds-forms'),

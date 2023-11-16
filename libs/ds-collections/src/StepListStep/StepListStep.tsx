@@ -169,3 +169,5 @@ export const StepListStep = forwardRef<HTMLLIElement, StepListStepProps>(
 );
 
 StepListStep.displayName = 'StepListStep';
+
+export { getStepListStepTitleAsDefault, getStepListStepVariantDefault };

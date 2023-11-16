@@ -14,23 +14,18 @@ export default {
     children: { table: { category: category.props } },
     color: {
       options: ['default', ...linkColorArr],
-      mapping: {
-        default: '',
-        ...linkColorArr,
-      },
-      defaultValue: 'default',
       control: 'inline-radio',
       table: {
         category: category.props,
+        defaultValue: { summary: 'default' },
+        type: { summary: ['default', ...linkColorArr] },
       },
     },
-
     isExternal: {
-      control: 'boolean',
       table: { category: category.props },
     },
     svgPath: {
-      options: [''].concat(Object.keys(SystemSVGPaths)),
+      options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
       table: { category: category.props },
     },

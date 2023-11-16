@@ -28,6 +28,6 @@ export interface InlineButtonProps
   children: string;
   /** Posisjonen til ikonet: 'left', 'right'. */
   iconPosition?: Position;
-  /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
+  /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
   svgPath?: ReactElement;
 }

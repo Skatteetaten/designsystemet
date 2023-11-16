@@ -4,10 +4,6 @@ import {
 } from '@skatteetaten/ds-buttons';
 import { ExternalLayout } from '@skatteetaten/ds-core-utils';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-// @skatteeteaten/ds-core-designtokens er angitt som symlink i package.json
-// derfor vil typecheck feile hvis pakken ikke er bygget, derfor bryter vi nx module boundaries her
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import palette from 'libs/ds-core-designtokens/lib/designtokens/palette.json';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
@@ -18,6 +14,7 @@ export default {
   argTypes: {
     // Props
     classNames: {
+      control: false,
       table: { category: category.props },
     },
     visibilityThreshold: {
@@ -27,19 +24,16 @@ export default {
       },
     },
     shadowRootNode: {
-      table: { control: false, category: category.props },
+      control: false,
+      table: {
+        category: category.props,
+      },
     },
     children: { table: { category: category.props } },
   },
   parameters: {
     backgrounds: {
-      default: 'graphite-70',
-      values: [
-        {
-          name: 'graphite-70',
-          value: palette[':root,\n:host']['--palette-graphite-70'],
-        },
-      ],
+      default: 'grey',
     },
     version: getVersion('ds-buttons'),
   },

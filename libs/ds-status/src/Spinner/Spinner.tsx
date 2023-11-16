@@ -73,3 +73,9 @@ export const Spinner = forwardRef<HTMLDivElement, SpinnerProps>(
 );
 
 Spinner.displayName = 'Spinner';
+
+export {
+  getSpinnerColorDefault,
+  getSpinnerSizeDefault,
+  getSpinnerTitlePositionDefault,
+};

@@ -1,5 +1,8 @@
 import { IconButton, getIconButtonSizeDefault } from '@skatteetaten/ds-buttons';
-import { sizeArr } from '@skatteetaten/ds-core-utils';
+import {
+  getCommonButtonTypeDefault,
+  sizeArr,
+} from '@skatteetaten/ds-core-utils';
 import { PrintSVGpath } from '@skatteetaten/ds-icons';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
@@ -15,18 +18,17 @@ export default {
   argTypes: {
     // Props
     isOutlined: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
     },
     size: {
-      options: availableSizes,
       control: 'radio',
+      options: availableSizes,
       table: {
-        type: { summary: availableSizes.toString() },
         category: category.props,
         defaultValue: { summary: getIconButtonSizeDefault() },
+        type: { summary: availableSizes },
       },
     },
     svgPath: {
@@ -34,17 +36,16 @@ export default {
       mapping: SystemSVGPaths,
       table: { category: category.props },
     },
-    title: {
-      table: {
-        category: category.props,
-      },
-    },
     // HTML
     accessKey: {
       table: { category: category.htmlAttribute },
     },
     disabled: {
-      control: 'boolean',
+      table: {
+        category: category.htmlAttribute,
+      },
+    },
+    title: {
       table: {
         category: category.htmlAttribute,
       },
@@ -52,7 +53,7 @@ export default {
     type: {
       table: {
         category: category.htmlAttribute,
-        defaultValue: { summary: 'button' },
+        defaultValue: { summary: getCommonButtonTypeDefault() },
       },
     },
     // Aria

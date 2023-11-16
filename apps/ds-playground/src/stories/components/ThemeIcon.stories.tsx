@@ -9,7 +9,7 @@ import {
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
-import { ThemeIconLabels, ThemeSVGPaths } from '../utils/icon.themes';
+import { ThemeSVGPaths } from '../utils/icon.themes';
 import { getVersion } from '../utils/version.utils';
 
 export default {
@@ -21,16 +21,12 @@ export default {
       control: 'select',
       options: [sizeArr[2], sizeArr[3]],
       table: {
-        type: { summary: sizeArr.toString() },
+        type: { summary: [sizeArr[2], sizeArr[3]] },
         category: category.props,
         defaultValue: { summary: getIconSizeDefault() },
       },
     },
     svgPath: {
-      control: {
-        type: 'select',
-        labels: ThemeIconLabels,
-      },
       options: Object.keys(ThemeSVGPaths),
       mapping: ThemeSVGPaths,
       table: { category: category.props },
@@ -41,10 +37,9 @@ export default {
       },
     },
     variant: {
-      name: 'variant',
       control: { type: null },
       table: {
-        type: { summary: iconVariantArr.toString() },
+        type: { summary: iconVariantArr },
         category: category.props,
         defaultValue: { summary: getIconVariantDefault() },
       },

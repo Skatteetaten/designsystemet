@@ -9,7 +9,7 @@ import {
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
-import { SystemIconLabels, SystemSVGPaths } from '../utils/icon.systems';
+import { SystemSVGPaths } from '../utils/icon.systems';
 import { getVersion } from '../utils/version.utils';
 
 export default {
@@ -21,16 +21,12 @@ export default {
       control: 'select',
       options: [...sizeArr].slice(1),
       table: {
-        type: { summary: sizeArr.toString() },
+        type: { summary: [...sizeArr].slice(1) },
         category: category.props,
         defaultValue: { summary: getIconSizeDefault() },
       },
     },
     svgPath: {
-      control: {
-        type: 'select',
-        labels: SystemIconLabels,
-      },
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
       table: { category: category.props },
@@ -41,10 +37,9 @@ export default {
       },
     },
     variant: {
-      name: 'variant',
       control: { type: null },
       table: {
-        type: { summary: iconVariantArr.toString() },
+        type: { summary: iconVariantArr },
         category: category.props,
         defaultValue: { summary: getIconVariantDefault() },
       },

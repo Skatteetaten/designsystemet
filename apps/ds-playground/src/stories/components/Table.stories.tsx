@@ -30,10 +30,10 @@ export default {
       table: {
         category: category.props,
         defaultValue: { summary: getTableVariantDefault() },
+        type: { summary: densityArr },
       },
     },
     showCaption: {
-      control: 'boolean',
       table: {
         category: category.props,
       },

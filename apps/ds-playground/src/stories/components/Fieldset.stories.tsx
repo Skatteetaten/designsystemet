@@ -13,7 +13,6 @@ export default {
     children: { table: { category: category.props } },
     description: { table: { category: category.props } },
     hasSpacing: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
@@ -22,22 +21,25 @@ export default {
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
-      table: { category: category.props },
+      table: {
+        category: category.props,
+        defaultValue: { summary: 'HelpSimpleSVGpath' },
+      },
     },
     hideLegend: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
     },
-    legend: { table: { category: category.props } },
+    legend: { control: 'text', table: { category: category.props } },
     showRequiredMark: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
     },
-    titleHelpSvg: { table: { category: category.props } },
+    titleHelpSvg: {
+      table: { category: category.props, defaultValue: { summary: 'Hjelp' } },
+    },
     // HTML
     disabled: { table: { category: category.htmlAttribute } },
   },

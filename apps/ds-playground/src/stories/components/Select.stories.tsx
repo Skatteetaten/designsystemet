@@ -16,11 +16,13 @@ export default {
   title: 'Komponenter/Select/Select',
   argTypes: {
     // Props
-    children: { table: { category: category.props }, control: 'object' },
-    classNames: { table: { category: category.props } },
-    defaultValue: { table: { category: category.props } },
-    value: { table: { category: category.props } },
-    placeholder: { table: { category: category.props } },
+    children: { table: { category: category.props } },
+    classNames: { control: false, table: { category: category.props } },
+    defaultValue: { control: 'text', table: { category: category.props } },
+    value: { control: 'text', table: { category: category.props } },
+    placeholder: {
+      table: { category: category.props, defaultValue: { summary: 'Velg' } },
+    },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasError: {
@@ -31,7 +33,10 @@ export default {
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
-      table: { category: category.props },
+      table: {
+        category: category.props,
+        defaultValue: { summary: 'HelpSimpleSVGpath' },
+      },
     },
     helpText: { table: { category: category.props } },
     hideLabel: {
@@ -46,6 +51,7 @@ export default {
       table: {
         category: category.props,
         defaultValue: { summary: getCommonFormVariantDefault() },
+        type: { summary: formArrSize },
       },
     },
     label: { table: { category: category.props } },
@@ -54,7 +60,9 @@ export default {
         category: category.props,
       },
     },
-    titleHelpSvg: { table: { category: category.props } },
+    titleHelpSvg: {
+      table: { category: category.props, defaultValue: { summary: 'Hjelp' } },
+    },
     // HTML
     autoComplete: { table: { category: category.htmlAttribute } },
     disabled: {

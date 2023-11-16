@@ -1,4 +1,7 @@
-import { LinkGroup, linkGroupVariantArr } from '@skatteetaten/ds-buttons';
+import {
+  LinkGroup,
+  getLinkGroupVariantDefault,
+} from '@skatteetaten/ds-buttons';
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
@@ -15,24 +18,23 @@ export default {
   title: 'Komponenter/LinkGroup',
   argTypes: {
     // Props
-    children: { control: 'object', table: { category: category.props } },
+    children: { table: { category: category.props } },
     color: {
       options: ['default', ...linkColorArr],
-      mapping: {
-        default: '',
-        ...linkColorArr,
-      },
-      defaultValue: 'default',
       control: 'inline-radio',
       table: {
         category: category.props,
+        defaultValue: { summary: 'default' },
+        type: { summary: ['default', ...linkColorArr] },
       },
     },
-    hasSpacing: { control: 'boolean', table: { category: category.props } },
+    hasSpacing: { table: { category: category.props } },
     variant: {
-      options: [...linkGroupVariantArr],
       control: 'inline-radio',
-      table: { category: category.props },
+      table: {
+        category: category.props,
+        defaultValue: { summary: getLinkGroupVariantDefault() },
+      },
     },
   },
   parameters: {
