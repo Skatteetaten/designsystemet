@@ -1,4 +1,5 @@
-import { Table } from '@skatteetaten/ds-table';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { Table, getTableSumAlignmentDefault } from '@skatteetaten/ds-table';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
@@ -14,13 +15,22 @@ export default {
       table: { category: category.props },
     },
     sumText: {
-      table: { category: category.props, defaultValue: { summary: 'Sum' } },
+      table: {
+        category: category.props,
+        defaultValue: { summary: dsI18n.t('ds_tables:tablesum.Sum') },
+      },
     },
     labelAlignment: {
-      table: { category: category.props, defaultValue: { summary: 'right' } },
+      table: {
+        category: category.props,
+        defaultValue: { summary: getTableSumAlignmentDefault() },
+      },
     },
     valueAlignment: {
-      table: { category: category.props, defaultValue: { summary: 'right' } },
+      table: {
+        category: category.props,
+        defaultValue: { summary: getTableSumAlignmentDefault() },
+      },
     },
     hasTopSeparator: {
       table: { category: category.props },

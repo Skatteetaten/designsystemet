@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   RadioGroup,
   getRadioGroupVariantDefault,
@@ -46,7 +47,10 @@ export default {
       table: { category: category.props },
     },
     titleHelpSvg: {
-      table: { category: category.props, defaultValue: { summary: 'Hjelp' } },
+      table: {
+        category: category.props,
+        defaultValue: { summary: dsI18n.t('Shared:shared.Help') },
+      },
     },
     variant: {
       table: {

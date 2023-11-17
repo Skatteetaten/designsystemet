@@ -1,4 +1,5 @@
 import {
+  dsI18n,
   formArrSize,
   getCommonFormVariantDefault,
 } from '@skatteetaten/ds-core-utils';
@@ -48,7 +49,10 @@ export default {
       },
     },
     titleHelpSvg: {
-      table: { category: category.props, defaultValue: { summary: 'Hjelp' } },
+      table: {
+        category: category.props,
+        defaultValue: { summary: dsI18n.t('Shared:shared.Help') },
+      },
     },
     variant: {
       options: [...formArrSize],

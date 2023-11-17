@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { Link, LinkProps } from '@skatteetaten/ds-buttons';
-import { linkColorArr } from '@skatteetaten/ds-core-utils';
+import { dsI18n, linkColorArr } from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath, CalendarSVGpath } from '@skatteetaten/ds-icons';
 import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
@@ -40,11 +40,7 @@ const meta = {
     isExternal: { table: { disable: true } },
     color: {
       table: { disable: true },
-      options: ['default', ...linkColorArr],
-      mapping: {
-        default: '',
-        ...linkColorArr,
-      },
+      options: [...linkColorArr],
       control: 'inline-radio',
     },
     svgPath: {
@@ -82,7 +78,6 @@ const defaultArgs: LinkProps = {
 export const WithRef = {
   render: Template,
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: HTMLAnchorElement | null): void => {
@@ -91,22 +86,18 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: verifyAttribute('id', 'dummyIdForwardedFromRef'),
 } satisfies Story;
 
 export const WithAttributes = {
   render: Template,
   name: 'With Attributes(FA2-5)',
-
   args: {
     ...defaultArgs,
     id: elementId,
@@ -114,14 +105,12 @@ export const WithAttributes = {
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
@@ -135,16 +124,13 @@ export const WithAttributes = {
 export const Defaults = {
   render: Template,
   name: 'Defaults (A1 delvis, A2, A3 delvis, B1)',
-
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     href: { table: { disable: false } },
     children: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} > a`,
@@ -152,7 +138,6 @@ export const Defaults = {
       click: `${wrapper} > a`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
@@ -168,13 +153,11 @@ export const Defaults = {
 export const WithLongText = {
   render: Template,
   name: 'With Long Text (A1 delvis)',
-
   args: {
     ...defaultArgs,
     children:
       'Denne lenken har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert uansett om ikon eller ikke.',
   },
-
   argTypes: {
     children: { table: { disable: false } },
   },
@@ -183,7 +166,6 @@ export const WithLongText = {
 export const WithLongTextIconAndExternalIcon = {
   render: Template,
   name: 'With Long Text And Icons (A1 delvis)',
-
   args: {
     ...defaultArgs,
     isExternal: true,
@@ -191,7 +173,6 @@ export const WithLongTextIconAndExternalIcon = {
     children:
       'Denne lenken har en veldig lang tekst med ikon på venstre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert.',
   },
-
   argTypes: {
     isExternal: { table: { disable: false } },
     svgPath: { table: { disable: false } },
@@ -202,16 +183,13 @@ export const WithLongTextIconAndExternalIcon = {
 export const WithIcon = {
   render: Template,
   name: 'With Icon (A4, B2)',
-
   args: {
     ...defaultArgs,
     svgPath: CalendarSVGpath,
   },
-
   argTypes: {
     svgPath: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
@@ -225,22 +203,22 @@ export const WithIcon = {
 export const WithExternalIcon = {
   render: Template,
   name: 'With External Icon (A5)',
-
   args: {
     ...defaultArgs,
     isExternal: true,
   },
-
   argTypes: {
     isExternal: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
     // eslint-disable-next-line testing-library/no-node-access
     const svg = link.querySelector('svg');
-    await expect(svg).toHaveAttribute('aria-label', 'Til et annet nettsted');
+    await expect(svg).toHaveAttribute(
+      'aria-label',
+      dsI18n.t('ds_buttons:shared.ExternalIcon')
+    );
     await expect(svg).toHaveAttribute('viewBox', systemIconViewBox);
   },
 } satisfies Story;
@@ -248,20 +226,17 @@ export const WithExternalIcon = {
 export const WithColor = {
   render: Template,
   name: 'With Color (A6)',
-
   args: {
     ...defaultArgs,
     color: 'white',
     isExternal: true,
     svgPath: AddOutlineSVGpath,
   },
-
   argTypes: {
     color: {
       table: { disable: false },
     },
   },
-
   parameters: {
     backgrounds: {
       default: 'themePrimary',
@@ -276,20 +251,16 @@ export const WithColor = {
 export const WithTarget = {
   render: Template,
   name: 'With Target (A2)',
-
   args: {
     ...defaultArgs,
     target: '_blank',
   },
-
   argTypes: {
     target: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
@@ -301,20 +272,16 @@ export const WithTarget = {
 export const WithAriaDescribedby = {
   render: Template,
   name: 'With AriaDescribedby (B3)',
-
   args: {
     ...defaultArgs,
     ariaDescribedby: elementId,
   },
-
   argTypes: {
     ariaDescribedby: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: verifyAttribute('aria-describedby', elementId),
 } satisfies Story;
 
@@ -340,16 +307,13 @@ const OnClickTemplate: StoryFn<typeof Link> = (args) => {
 export const WithOnClick = {
   render: OnClickTemplate,
   name: 'With onClick (A3 delvis)',
-
   args: {
     ...defaultArgs,
     svgPath: CalendarSVGpath,
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');

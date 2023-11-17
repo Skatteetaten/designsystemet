@@ -20,12 +20,11 @@ export default {
     // Props
     children: { table: { category: category.props } },
     color: {
-      options: ['default', ...linkColorArr],
+      options: [...linkColorArr],
       control: 'inline-radio',
       table: {
         category: category.props,
-        defaultValue: { summary: 'default' },
-        type: { summary: ['default', ...linkColorArr] },
+        type: { summary: linkColorArr },
       },
     },
     hasSpacing: { table: { category: category.props } },

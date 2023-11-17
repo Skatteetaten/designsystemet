@@ -1,6 +1,7 @@
 import { ChangeEvent, useState } from 'react';
 
 import {
+  dsI18n,
   formArrSize,
   getCommonFormVariantDefault,
 } from '@skatteetaten/ds-core-utils';
@@ -21,7 +22,10 @@ export default {
     defaultValue: { control: 'text', table: { category: category.props } },
     value: { control: 'text', table: { category: category.props } },
     placeholder: {
-      table: { category: category.props, defaultValue: { summary: 'Velg' } },
+      table: {
+        category: category.props,
+        defaultValue: { summary: dsI18n.t('Shared:shared.ChooseValue') },
+      },
     },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
@@ -61,7 +65,10 @@ export default {
       },
     },
     titleHelpSvg: {
-      table: { category: category.props, defaultValue: { summary: 'Hjelp' } },
+      table: {
+        category: category.props,
+        defaultValue: { summary: dsI18n.t('Shared:shared.Help') },
+      },
     },
     // HTML
     autoComplete: { table: { category: category.htmlAttribute } },

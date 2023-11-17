@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import {
+  dsI18n,
   formArrSize,
   getCommonFormVariantDefault,
 } from '@skatteetaten/ds-core-utils';
@@ -67,7 +68,10 @@ export default {
     },
     thousandSeparator: { table: { category: category.props } },
     titleHelpSvg: {
-      table: { category: category.props, defaultValue: { summary: 'Hjelp' } },
+      table: {
+        category: category.props,
+        defaultValue: { summary: dsI18n.t('Shared:shared.Help') },
+      },
     },
     // HTML
     autoComplete: { table: { category: category.htmlAttribute } },

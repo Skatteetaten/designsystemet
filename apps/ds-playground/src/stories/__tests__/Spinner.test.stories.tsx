@@ -52,7 +52,6 @@ type Story = StoryObj<typeof meta>;
 
 export const WithRef = {
   name: 'With Ref (FA1)',
-
   args: {
     ref: (instance: HTMLDivElement | null): void => {
       if (instance) {
@@ -60,15 +59,12 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const spinner = canvas.getByRole('status');
@@ -78,21 +74,18 @@ export const WithRef = {
 
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
-
   args: {
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const spinner = canvas.getByRole('status');
@@ -108,7 +101,6 @@ export const Defaults = {
   argTypes: {
     children: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const spinner = canvas.getByRole('status');

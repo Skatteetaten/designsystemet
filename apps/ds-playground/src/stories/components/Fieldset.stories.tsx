@@ -1,3 +1,4 @@
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Fieldset, TextField } from '@skatteetaten/ds-forms';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
@@ -38,7 +39,10 @@ export default {
       },
     },
     titleHelpSvg: {
-      table: { category: category.props, defaultValue: { summary: 'Hjelp' } },
+      table: {
+        category: category.props,
+        defaultValue: { summary: dsI18n.t('Shared:shared.Help') },
+      },
     },
     // HTML
     disabled: { table: { category: category.htmlAttribute } },

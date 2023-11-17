@@ -187,7 +187,7 @@ export const Defaults = {
     await expect(textbox).not.toBeRequired();
     await expect(textbox).not.toHaveAttribute('aria-invalid');
     await expect(textbox).not.toHaveAttribute('aria-describedby');
-
+    // TODO Hent 'Velg dato' fra tekstlistekatalogen
     const calendarButton = canvas.getByRole('button', { name: 'Velg dato' });
     await expect(calendarButton).toBeInTheDocument();
     await expect(calendarButton).toBeEnabled();

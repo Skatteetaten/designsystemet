@@ -1,4 +1,4 @@
-import { statusArr } from '@skatteetaten/ds-core-utils';
+import { dsI18n, statusArr } from '@skatteetaten/ds-core-utils';
 import { LockSVGpath } from '@skatteetaten/ds-icons';
 import { Alert } from '@skatteetaten/ds-status';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
@@ -66,15 +66,12 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
@@ -92,14 +89,12 @@ export const WithAttributes = {
     'data-testid': '123ID',
     showAlert: true,
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
@@ -113,15 +108,12 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (B1, B2)',
-
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     children: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
@@ -136,17 +128,14 @@ export const Defaults = {
 
 export const DefaultsWithMessage = {
   name: 'Defaults With Alert Content (B2)',
-
   args: {
     ...defaultArgs,
     showAlert: true,
   },
-
   argTypes: {
     children: { table: { disable: false } },
     showAlert: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
@@ -163,17 +152,14 @@ export const DefaultsWithMessage = {
 
 export const VariantSuccess = {
   name: 'Variant Success (A1, A3)',
-
   args: {
     ...defaultArgs,
     showAlert: true,
     variant: 'success',
   },
-
   argTypes: {
     variant: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
@@ -185,17 +171,14 @@ export const VariantSuccess = {
 
 export const VariantNeutral = {
   name: 'Variant Neutral (A1, A3)',
-
   args: {
     ...defaultArgs,
     showAlert: true,
     variant: 'neutral',
   },
-
   argTypes: {
     variant: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
@@ -207,17 +190,14 @@ export const VariantNeutral = {
 
 export const VariantWarning = {
   name: 'Variant Warning (A1, A3)',
-
   args: {
     ...defaultArgs,
     showAlert: true,
     variant: 'warning',
   },
-
   argTypes: {
     variant: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
@@ -229,17 +209,14 @@ export const VariantWarning = {
 
 export const VariantDanger = {
   name: 'Variant Danger (A1, A3, B4)',
-
   args: {
     ...defaultArgs,
     showAlert: true,
     variant: 'danger',
   },
-
   argTypes: {
     variant: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
@@ -267,7 +244,6 @@ const TemplateAllVariants: StoryFn<typeof Alert> = (args) => (
 export const AllVariants = {
   render: TemplateAllVariants,
   name: 'All Variants (A1)',
-
   args: {
     ...defaultArgs,
     showCloseButton: true,
@@ -278,13 +254,11 @@ export const AllVariants = {
 export const AllVariantsMobile = {
   render: TemplateAllVariants,
   name: 'All Variants On Small Screen (A1)',
-
   args: {
     ...defaultArgs,
     showCloseButton: true,
     showAlert: true,
   },
-
   parameters: {
     viewport: {
       defaultViewport: '--mobile',
@@ -294,7 +268,6 @@ export const AllVariantsMobile = {
 
 export const WithLongText = {
   name: 'With Long Text (A2)',
-
   args: {
     ...defaultArgs,
     children:
@@ -302,7 +275,6 @@ export const WithLongText = {
     showCloseButton: true,
     showAlert: true,
   },
-
   argTypes: {
     children: {
       table: { disable: false },
@@ -312,7 +284,6 @@ export const WithLongText = {
 
 export const WithLongTextAndBreaking = {
   name: 'With Long Text And Breaking (A2)',
-
   args: {
     ...defaultArgs,
     children:
@@ -320,7 +291,6 @@ export const WithLongTextAndBreaking = {
     showCloseButton: true,
     showAlert: true,
   },
-
   argTypes: {
     children: {
       table: { disable: false },
@@ -330,7 +300,6 @@ export const WithLongTextAndBreaking = {
 
 export const WithMarkup = {
   name: 'With Markup (A2)',
-
   args: {
     ...defaultArgs,
     children: (
@@ -346,7 +315,6 @@ export const WithMarkup = {
     ),
     showAlert: true,
   },
-
   argTypes: {
     children: {
       table: { disable: false },
@@ -357,13 +325,11 @@ export const WithMarkup = {
 
 export const WithCustomIcon = {
   name: 'With Custom Icon (A3)',
-
   args: {
     ...defaultArgs,
     showAlert: true,
     svgPath: LockSVGpath,
   },
-
   argTypes: {
     svgPath: {
       table: { disable: false },
@@ -373,13 +339,11 @@ export const WithCustomIcon = {
 
 export const WithCustomSVGPath = {
   name: 'With Custom SVG (A3)',
-
   args: {
     ...defaultArgs,
     showAlert: true,
     svgPath: <path d={'M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z'} />,
   },
-
   argTypes: {
     svgPath: {
       table: { disable: false },
@@ -390,47 +354,40 @@ export const WithCustomSVGPath = {
 
 export const WithCloseButton = {
   name: 'With Close Button (A4)',
-
   args: {
     ...defaultArgs,
     showCloseButton: true,
     showAlert: true,
   },
-
   argTypes: {
     showCloseButton: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       focus: `${wrapper} button`,
       hover: `${wrapper} button`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const iconButton = canvas.getByRole('button');
     await expect(iconButton).toBeInTheDocument();
-    const svg = canvas.getByTitle('Lukk melding');
+    const svg = canvas.getByTitle(dsI18n.t('ds_status:alert.CloseMessage'));
     await expect(svg).toBeInTheDocument();
   },
 } satisfies Story;
 
 export const WithOnClickCloseButton = {
   name: 'With OnClick Close Button (A4)',
-
   args: {
     ...defaultArgs,
     showCloseButton: true,
     showAlert: true,
   },
-
   parameters: {
     imageSnapshot: { disable: true },
     HTMLSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
@@ -446,21 +403,17 @@ export const WithOnClickCloseButton = {
 
 export const WithAriaLiveOff = {
   name: 'With Aria-Live Off (B3)',
-
   args: {
     ...defaultArgs,
     showAlert: true,
     ariaLive: 'off',
   },
-
   argTypes: {
     ariaLive: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];

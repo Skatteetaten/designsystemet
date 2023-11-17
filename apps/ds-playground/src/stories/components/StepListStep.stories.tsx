@@ -4,7 +4,7 @@ import {
   getStepListStepVariantDefault,
 } from '@skatteetaten/ds-collections';
 import { getPanelTitleAsDefault } from '@skatteetaten/ds-content';
-import { headingAsArr } from '@skatteetaten/ds-core-utils';
+import { dsI18n, headingAsArr } from '@skatteetaten/ds-core-utils';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
@@ -17,10 +17,16 @@ export default {
   argTypes: {
     // Props
     editButtonText: {
-      table: { category: category.props, defaultValue: { summary: 'Endre' } },
+      table: {
+        category: category.props,
+        defaultValue: { summary: dsI18n.t('ds_collections:steplist.Edit') },
+      },
     },
     nextButtonText: {
-      table: { category: category.props, defaultValue: { summary: 'Neste' } },
+      table: {
+        category: category.props,
+        defaultValue: { summary: dsI18n.t('ds_collections:steplist.Next') },
+      },
     },
     introTitle: {
       control: 'text',
