@@ -32,7 +32,6 @@ const defaultArgs = {
 
 export const WithRef = {
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: HTMLTableCellElement | null): void => {
@@ -41,15 +40,12 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const table = canvas.getByRole('cell');
@@ -60,7 +56,6 @@ export const WithRef = {
 
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
-
   args: {
     ...defaultArgs,
     id: 'htmlId',
@@ -68,18 +63,15 @@ export const WithAttributes = {
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const dataCell = canvas.getByRole('cell');
@@ -92,22 +84,18 @@ export const WithAttributes = {
 
 export const WithThAndScope = {
   name: 'With Scope And As th (TableRow B2, TableHeader B1)',
-
   args: {
     ...defaultArgs,
     as: 'th',
     scope: 'row',
   },
-
   argTypes: {
     as: { table: { disable: false } },
     scope: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const dataCell = canvas.getByRole('rowheader');
@@ -117,19 +105,15 @@ export const WithThAndScope = {
 
 export const WithChildren = {
   name: 'With children (TableRow A1)',
-
   args: {
     children: 'cellChildren',
   },
-
   argTypes: {
     children: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     await expect(canvas.getByText('cellChildren')).toBeInTheDocument();

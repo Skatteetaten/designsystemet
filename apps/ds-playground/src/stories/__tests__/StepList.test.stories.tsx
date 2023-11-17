@@ -1,4 +1,5 @@
 import { StepList, StepListProps } from '@skatteetaten/ds-collections';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Heading, List, Paragraph } from '@skatteetaten/ds-typography';
 import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
@@ -201,14 +202,16 @@ export const WithMultipleSteps = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    await userEvent.click(canvas.getByText('Neste'));
-    await userEvent.click(canvas.getByText('Endre'));
-    await userEvent.click(canvas.getByText('Neste'));
-    await userEvent.click(canvas.getByText('Neste'));
-    await userEvent.click(canvas.getByText('Neste'));
+    const nextText = dsI18n.t('ds_collections:steplist.Next');
+    const editText = dsI18n.t('ds_collections:steplist.Edit');
+    await userEvent.click(canvas.getByText(nextText));
+    await userEvent.click(canvas.getByText(editText));
+    await userEvent.click(canvas.getByText(nextText));
+    await userEvent.click(canvas.getByText(nextText));
+    await userEvent.click(canvas.getByText(nextText));
     await userEvent.click(canvas.getByText('Ja'));
-    await userEvent.click(canvas.getByText('Neste'));
-    await expect(canvas.queryByText('Neste')).not.toBeInTheDocument();
-    await expect(canvas.queryByText('Endre')).not.toBeInTheDocument();
+    await userEvent.click(canvas.getByText(nextText));
+    await expect(canvas.queryByText(nextText)).not.toBeInTheDocument();
+    await expect(canvas.queryByText(editText)).not.toBeInTheDocument();
   },
 } satisfies Story;

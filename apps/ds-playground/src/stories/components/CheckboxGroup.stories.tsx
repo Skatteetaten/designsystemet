@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { CheckboxGroup } from '@skatteetaten/ds-forms';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
@@ -47,7 +48,10 @@ export default {
       },
     },
     titleHelpSvg: {
-      table: { category: category.props, defaultValue: { summary: 'Hjelp' } },
+      table: {
+        category: category.props,
+        defaultValue: { summary: dsI18n.t('Shared:shared.Help') },
+      },
     },
     // HTML
     disabled: {

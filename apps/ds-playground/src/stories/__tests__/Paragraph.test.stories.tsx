@@ -42,7 +42,6 @@ const defaultArgs: ParagraphProps = {
 
 export const WithRef = {
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: HTMLParagraphElement | null): void => {
@@ -51,13 +50,10 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: { imageSnapshot: { disable: true } },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const paragraph = canvas.getByText(loremIpsum);
@@ -67,7 +63,6 @@ export const WithRef = {
 
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
-
   args: {
     ...defaultArgs,
     id: 'htmlId',
@@ -75,14 +70,12 @@ export const WithAttributes = {
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const paragraph = canvas.getByText(loremIpsum);
@@ -95,15 +88,12 @@ export const WithAttributes = {
 
 export const IsPElement = {
   name: 'Is <p>-element (B1)',
-
   args: {
     ...defaultArgs,
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     await expect(canvas.getByText(loremIpsum).nodeName).toBe('P');
@@ -146,18 +136,15 @@ const TemplateWithMarkup: StoryFn<typeof Paragraph> = (args) => (
 export const WithMarkup = {
   render: TemplateWithMarkup,
   name: 'With Markup (A2, B2)',
-
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     children: {
       table: { disable: false },
       control: { type: null },
     },
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} > p a`,
@@ -176,11 +163,9 @@ const TemplateWithTwoParagraphs: StoryFn<typeof Paragraph> = (args) => (
 export const Defaults = {
   render: TemplateWithTwoParagraphs,
   name: 'Defaults Variant Standard (A1, B2)',
-
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     children: { table: { disable: false } },
   },
@@ -189,12 +174,10 @@ export const Defaults = {
 export const VariantIngress = {
   render: TemplateWithTwoParagraphs,
   name: 'Variant Ingress (A1)',
-
   args: {
     ...defaultArgs,
     variant: 'ingress',
   },
-
   argTypes: {
     variant: { table: { disable: false } },
   },
@@ -203,12 +186,10 @@ export const VariantIngress = {
 export const WithSpacing = {
   render: TemplateWithTwoParagraphs,
   name: 'With Spacing Variant Standard (A3)',
-
   args: {
     ...defaultArgs,
     hasSpacing: true,
   },
-
   argTypes: {
     hasSpacing: { table: { disable: false } },
   },
@@ -217,13 +198,11 @@ export const WithSpacing = {
 export const VariantIngressWithSpacing = {
   render: TemplateWithTwoParagraphs,
   name: 'With Spacing Variant Ingress (A3)',
-
   args: {
     ...defaultArgs,
     hasSpacing: true,
     variant: 'ingress',
   },
-
   argTypes: {
     hasSpacing: { table: { disable: false } },
     variant: { table: { disable: false } },

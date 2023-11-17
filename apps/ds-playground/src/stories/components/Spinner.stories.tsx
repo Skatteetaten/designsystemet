@@ -1,4 +1,4 @@
-import { sizeArr } from '@skatteetaten/ds-core-utils';
+import { dsI18n, sizeArr } from '@skatteetaten/ds-core-utils';
 import {
   Spinner,
   getSpinnerColorDefault,
@@ -19,7 +19,7 @@ export default {
     children: {
       table: {
         category: category.props,
-        defaultValue: { summary: 'Laster inn' },
+        defaultValue: { summary: dsI18n.t('ds_status:spinner.LoadingLabel') },
       },
     },
     size: {
