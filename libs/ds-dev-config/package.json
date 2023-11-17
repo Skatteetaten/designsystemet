@@ -9,5 +9,6 @@
     "react": "^18",
     "@nx/eslint-plugin": "15.0.0"
   },
-  "executors": "executors.json"
+  "executors": "executors.json",
+  "scripts": {}
 }

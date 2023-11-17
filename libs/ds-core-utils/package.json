@@ -9,5 +9,6 @@
     "i18next": "^23",
     "react": "^18",
     "react-i18next": "^13"
-  }
+  },
+  "scripts": {}
 }
