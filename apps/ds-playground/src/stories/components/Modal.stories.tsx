@@ -4,6 +4,8 @@ import { Button, Link } from '@skatteetaten/ds-buttons';
 import { InfoOutlineSVGpath } from '@skatteetaten/ds-icons';
 import {
   Modal,
+  getModalDismissOnEscDefault,
+  getModalDismissOnOutsideClickDefault,
   getModalPaddingDefault,
   getModalVariantDefault,
 } from '@skatteetaten/ds-overlays';
@@ -25,7 +27,18 @@ export default {
       control: { type: null },
       table: { category: category.props },
     },
-    disableAutoClose: { table: { category: category.props } },
+    dismissOnEsc: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: getModalDismissOnEscDefault() },
+      },
+    },
+    dismissOnOutsideClick: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: getModalDismissOnOutsideClickDefault() },
+      },
+    },
     hideCloseButton: { table: { category: category.props } },
     hideTitle: { table: { category: category.props } },
     imageSource: {

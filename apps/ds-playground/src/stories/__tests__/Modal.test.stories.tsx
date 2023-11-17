@@ -30,7 +30,8 @@ const meta = {
       table: { disable: true },
       control: 'text',
     },
-    disableAutoClose: { table: { disable: true } },
+    dismissOnEsc: { table: { disable: true } },
+    dismissOnOutsideClick: { table: { disable: true } },
     hideCloseButton: { table: { disable: true } },
     hideTitle: { table: { disable: true } },
     imageSource: {
@@ -314,10 +315,10 @@ export const WithAutoCloseDisabled = {
   render: TemplateModal,
   name: 'With AutoClose Disabled (A14)',
   args: {
-    disableAutoClose: true,
+    dismissOnOutsideClick: false,
   },
   argTypes: {
-    disableAutoClose: { table: { disable: false } },
+    dismissOnOutsideClick: { table: { disable: false } },
   },
   parameters: {
     imageSnapshot: { disable: true },
