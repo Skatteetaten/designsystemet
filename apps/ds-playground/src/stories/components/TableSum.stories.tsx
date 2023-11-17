@@ -45,7 +45,7 @@ export default {
 } satisfies Meta<typeof Table.Sum>;
 
 const TemplateDefault: StoryFn<typeof Table.Sum> = (args) => (
-  <Table caption={'testTable'}>
+  <Table className={'width100'} caption={'testTable'}>
     <Table.Sum {...args} />
   </Table>
 );
