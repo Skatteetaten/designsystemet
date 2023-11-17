@@ -8,17 +8,14 @@ $border-outline: 6px;
   --variant-filled-color: var(--palette-ochre-10);
   --panel-padding: var(--spacing-xl);
 
-  display: flex;
+  display: grid;
+  width: 100%;
   max-width: var(--container-m);
   box-sizing: border-box;
-  flex-direction: column;
+  justify-content: center;
+  grid-template-columns: 100%;
   overflow-wrap: anywhere;
   word-break: normal;
-
-  @media (min-width: $breakpoint-s) {
-    flex-direction: row;
-    gap: var(--spacing-m);
-  }
 
   &_outline {
     padding: calc(var(--panel-padding) - $border-outline);
@@ -33,55 +30,68 @@ $border-outline: 6px;
   }
 
   &_graphic {
-    @media (min-width: $breakpoint-s) {
-      &Image {
+    &Image {
+      @media (min-width: $breakpoint-s) {
+        align-self: center;
         gap: var(--spacing-xxl);
-      }
-
-      &Icon {
-        gap: var(--spacing-m);
+        grid-template-columns: 1fr 60%;
       }
     }
-  }
 
-  &Space {
-    /* flex: 0 2 auto;
-
-    @media (min-width: $breakpoint-s) {
-      flex-basis: 150px;
-    } */
-
-    &_hide {
-      display: none;
-    }
-  }
-
-  &Article {
-    max-width: var(--semantic-responsive-article);
-    flex-basis: var(--semantic-responsive-article);
-    margin: auto;
-
-    &_illustration {
-      flex: 0 1 60%;
+    &Icon {
+      @media (min-width: $breakpoint-m) {
+        position: relative;
+        justify-content: center;
+        grid-template-columns: auto var(--semantic-responsive-article);
+      }
     }
   }
 
   &Graphic {
+    width: 100%;
+    max-width: var(--semantic-responsive-article);
     padding-bottom: var(--spacing-s);
+    margin: 0 auto;
 
     &_hide {
       display: none;
+
+      @media (min-width: $breakpoint-s) {
+        display: block;
+      }
     }
 
     @media (min-width: $breakpoint-s) {
-      display: block;
       padding-bottom: 0;
+    }
+
+    @media (min-width: $breakpoint-m) {
+      width: auto;
+      padding-right: var(--spacing-m);
+      padding-bottom: 0;
+      margin-right: 0;
+      margin-left: -150px;
+      grid-column: 1;
       text-align: right;
     }
   }
 
+  &Article {
+    width: 100%;
+    max-width: var(--semantic-responsive-article);
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (min-width: $breakpoint-m) {
+      &_illustration {
+        grid-column: 2;
+      }
+    }
+  }
+
   &ImageContainer {
-    flex: 0 40%;
+    width: 100%;
+    margin-left: auto;
 
     &Image {
       width: 100%;
