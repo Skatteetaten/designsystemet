@@ -14,5 +14,6 @@
     "@skatteetaten/ds-buttons": "*",
     "@skatteetaten/ds-content": "*",
     "@skatteetaten/ds-typography": "*"
-  }
+  },
+  "scripts": {}
 }

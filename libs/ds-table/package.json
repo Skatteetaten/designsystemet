@@ -12,5 +12,6 @@
     "@skatteetaten/ds-core-utils": "*",
     "@skatteetaten/ds-icons": "*",
     "@skatteetaten/ds-buttons": "*"
-  }
+  },
+  "scripts": {}
 }

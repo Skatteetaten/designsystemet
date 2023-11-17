@@ -13,5 +13,6 @@
     "@skatteetaten/ds-buttons": "*",
     "@skatteetaten/ds-icons": "*",
     "@skatteetaten/ds-typography": "*"
-  }
+  },
+  "scripts": {}
 }
