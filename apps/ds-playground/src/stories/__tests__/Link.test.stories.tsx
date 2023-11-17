@@ -40,7 +40,7 @@ const meta = {
     isExternal: { table: { disable: true } },
     color: {
       table: { disable: true },
-      options: [...linkColorArr],
+      options: [undefined, ...linkColorArr],
       control: 'inline-radio',
     },
     svgPath: {

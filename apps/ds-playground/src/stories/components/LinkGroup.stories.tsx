@@ -20,7 +20,7 @@ export default {
     // Props
     children: { table: { category: category.props } },
     color: {
-      options: [...linkColorArr],
+      options: [undefined, ...linkColorArr],
       control: 'inline-radio',
       table: {
         category: category.props,

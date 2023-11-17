@@ -30,11 +30,7 @@ const meta = {
     hasSpacing: { table: { disable: true } },
     color: {
       table: { disable: true },
-      options: [...linkColorArr],
-      mapping: {
-        default: '',
-        ...linkColorArr,
-      },
+      options: [undefined, ...linkColorArr],
       control: 'inline-radio',
     },
     variant: {
