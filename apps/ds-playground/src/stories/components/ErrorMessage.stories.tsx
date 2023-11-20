@@ -14,7 +14,6 @@ export default {
     // Props
     children: { table: { category: category.props } },
     showError: {
-      control: 'boolean',
       table: {
         category: category.props,
       },

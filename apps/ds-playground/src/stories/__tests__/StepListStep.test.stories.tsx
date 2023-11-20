@@ -1,4 +1,5 @@
 import { StepList, stepVariantArr } from '@skatteetaten/ds-collections';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TimersandSVGpath } from '@skatteetaten/ds-icons';
 import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
@@ -173,7 +174,9 @@ export const WithEditAccessibleDescription = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const endreButton = canvas.getByText('Endre');
+    const endreButton = canvas.getByText(
+      dsI18n.t('ds_collections:steplist.Edit')
+    );
     expect(endreButton).toHaveAccessibleDescription('tittel');
   },
   parameters: {

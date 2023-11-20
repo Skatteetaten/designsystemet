@@ -11,7 +11,7 @@ type RequiredSumHTMLAttributes = Pick<
 type SumHTMLAttributes = Partial<RequiredSumHTMLAttributes>;
 
 export interface TableSumProps extends SumHTMLAttributes, BaseProps {
-  /** Overstyrer standard tekst i raden*/
+  /** Overskriver default tekst i raden*/
   sumText?: string;
   /** Tekstjustering for tekst i sumrad*/
   labelAlignment?: TextAlignment;

@@ -1,6 +1,7 @@
 import { FocusEvent, MouseEvent, useState } from 'react';
 
 import { Button, buttonVariantArr } from '@skatteetaten/ds-buttons';
+import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';
 import { SendSVGpath } from '@skatteetaten/ds-icons';
 import { expect } from '@storybook/jest';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
@@ -64,7 +65,6 @@ const defaultArgs = {
 
 export const WithRef = {
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: HTMLButtonElement | null): void => {
@@ -73,21 +73,17 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: verifyAttribute('id', 'dummyIdForwardedFromRef'),
 } satisfies Story;
 
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
-
   args: {
     ...defaultArgs,
     id: 'htmlid',
@@ -95,14 +91,12 @@ export const WithAttributes = {
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       focus: `${wrapper} > button`,
@@ -110,7 +104,6 @@ export const WithAttributes = {
       click: `${wrapper} > button`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
@@ -123,15 +116,12 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults Variant Primary (A1, B1)',
-
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     children: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       focus: `${wrapper} > button`,
@@ -139,27 +129,23 @@ export const Defaults = {
       click: `${wrapper} > button`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
     await expect(button).toBeInTheDocument();
-    await expect(button).toHaveAttribute('type', 'button');
+    await expect(button).toHaveAttribute('type', getCommonButtonTypeDefault());
   },
 } satisfies Story;
 
 export const VariantSecondary = {
   name: 'Variant Secondary (A1)',
-
   args: {
     ...defaultArgs,
     variant: 'secondary',
   },
-
   argTypes: {
     variant: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       focus: `${wrapper} > button`,
@@ -167,27 +153,23 @@ export const VariantSecondary = {
       click: `${wrapper} > button`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
     await expect(button).toBeInTheDocument();
-    await expect(button).toHaveAttribute('type', 'button');
+    await expect(button).toHaveAttribute('type', getCommonButtonTypeDefault());
   },
 } satisfies Story;
 
 export const VariantTertiary = {
   name: 'Variant Tertiary (A1)',
-
   args: {
     ...defaultArgs,
     variant: 'tertiary',
   },
-
   argTypes: {
     variant: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       focus: `${wrapper} > button`,
@@ -195,23 +177,20 @@ export const VariantTertiary = {
       click: `${wrapper} > button`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
     await expect(button).toBeInTheDocument();
-    await expect(button).toHaveAttribute('type', 'button');
+    await expect(button).toHaveAttribute('type', getCommonButtonTypeDefault());
   },
 } satisfies Story;
 
 export const VariantDanger = {
   name: 'Variant Danger (A1)',
   args: { ...defaultArgs, variant: 'danger' },
-
   argTypes: {
     variant: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       focus: `${wrapper} > button`,
@@ -219,27 +198,23 @@ export const VariantDanger = {
       click: `${wrapper} > button`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
     await expect(button).toBeInTheDocument();
-    await expect(button).toHaveAttribute('type', 'button');
+    await expect(button).toHaveAttribute('type', getCommonButtonTypeDefault());
   },
 } satisfies Story;
 
 export const WithIcon = {
   name: 'With Icon (A3, B3)',
-
   args: {
     ...defaultArgs,
     svgPath: SendSVGpath,
   },
-
   argTypes: {
     svgPath: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
@@ -253,14 +228,12 @@ export const WithIcon = {
 
 export const WithLongText = {
   name: 'With Long Text (A1 delvis)',
-
   args: {
     ...defaultArgs,
     children:
       'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles. ' +
       'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles',
   },
-
   argTypes: {
     children: { table: { disable: false } },
   },
@@ -268,7 +241,6 @@ export const WithLongText = {
 
 export const WithLongTextAndIcon = {
   name: 'With Long Text And Icon (A1 delvis)',
-
   args: {
     ...defaultArgs,
     svgPath: SendSVGpath,
@@ -276,7 +248,6 @@ export const WithLongTextAndIcon = {
       'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres. ' +
       'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres.',
   },
-
   argTypes: {
     children: { table: { disable: false } },
     svgPath: { table: { disable: false } },
@@ -285,23 +256,19 @@ export const WithLongTextAndIcon = {
 
 export const WithDisabled = {
   name: 'With Disabled (B5)',
-
   args: {
     ...defaultArgs,
     disabled: true,
   },
-
   argTypes: {
     disabled: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       focus: `${wrapper} > button`,
       hover: `${wrapper} > button`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     expect(canvas.getByRole('button')).toBeDisabled();
@@ -310,18 +277,15 @@ export const WithDisabled = {
 
 export const WithDisabledAndIcon = {
   name: 'With Disabled And Icon (B5)',
-
   args: {
     ...defaultArgs,
     svgPath: SendSVGpath,
     disabled: true,
   },
-
   argTypes: {
     svgPath: { table: { disable: false } },
     disabled: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       focus: `${wrapper} > button`,
@@ -332,58 +296,46 @@ export const WithDisabledAndIcon = {
 
 export const WithType = {
   name: 'With Type (B1)',
-
   args: {
     ...defaultArgs,
     type: 'submit',
   },
-
   argTypes: {
     type: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: verifyAttribute('type', 'submit'),
 } satisfies Story;
 
 export const WithAriaDescribedby = {
   name: 'With AriaDescribedby (B2)',
-
   args: {
     ...defaultArgs,
     ariaDescribedby: 'testid1234',
   },
-
   argTypes: {
     ariaDescribedby: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: verifyAttribute('aria-describedby', 'testid1234'),
 } satisfies Story;
 
 export const WithAccesskey = {
   name: 'With Accesskey (B3)',
-
   args: {
     ...defaultArgs,
     accessKey: 'j',
   },
-
   argTypes: {
     accessKey: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: verifyAttribute('accessKey', 'j'),
 } satisfies Story;
 
@@ -413,15 +365,12 @@ const EventHandlersTemplate: StoryFn<typeof Button> = (args) => {
 export const WithEventHandlers = {
   render: EventHandlersTemplate,
   name: 'With EventHandlers (A2 delvis)',
-
   args: {
     ...defaultArgs,
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');

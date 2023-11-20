@@ -1,8 +1,6 @@
 export * from './Checkbox/Checkbox';
 export * from './Checkbox/Checkbox.types';
 export * from './CheckboxGroup/CheckboxGroup';
-export * from './DatePicker/DatePicker';
-export * from './DatePicker/DatePicker.types';
 export * from './Select/Select';
 export * from './Select/Select.types';
 export * from './SelectOption/SelectOption.types';
@@ -13,7 +11,6 @@ export * from './ErrorSummary/ErrorSummary';
 export * from './ErrorSummary/ErrorSummary.types';
 export * from './Fieldset/Fieldset';
 export * from './Fieldset/Fieldset.types';
-export * from './Radio/Radio';
 export * from './Radio/Radio.types';
 export * from './RadioGroup/RadioGroup';
 export * from './RadioGroup/RadioGroup.types';

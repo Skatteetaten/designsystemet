@@ -139,6 +139,7 @@ export default async function (
       react: '^18',
     };
     packageJson.exports = undefined;
+    packageJson.script = { ...packageJson.script };
     return packageJson;
   });
 

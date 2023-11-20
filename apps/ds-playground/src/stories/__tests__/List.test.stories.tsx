@@ -52,7 +52,6 @@ const defaultArgs: ListProps = {
 
 export const WithRef = {
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: HTMLUListElement | null): void => {
@@ -61,15 +60,12 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const list = canvas.getByRole('list');
@@ -79,7 +75,6 @@ export const WithRef = {
 
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
-
   args: {
     ...defaultArgs,
     id: 'htmlid',
@@ -87,14 +82,12 @@ export const WithAttributes = {
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const list = canvas.getByRole('list');
@@ -107,18 +100,15 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults Variant Bullet (A1, B1, B2)',
-
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     children: {
       table: { disable: false },
       control: { type: null },
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const list = canvas.getByRole('list');
@@ -129,18 +119,15 @@ export const Defaults = {
 
 export const VariantNumber = {
   name: 'Variant Number(A1, B1)',
-
   args: {
     ...defaultArgs,
     as: 'ol',
   },
-
   argTypes: {
     as: {
       table: { disable: false },
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const list = canvas.getByRole('list');
@@ -151,7 +138,6 @@ export const VariantNumber = {
 
 export const WithLongTextAndBreaking = {
   name: 'With Long Text And Breaking (A1)',
-
   args: {
     ...defaultArgs,
     children: [
@@ -166,7 +152,6 @@ export const WithLongTextAndBreaking = {
       </List.Element>,
     ],
   },
-
   argTypes: {
     children: {
       table: { disable: false },
@@ -177,7 +162,6 @@ export const WithLongTextAndBreaking = {
 
 export const WithMarkup = {
   name: 'With Markup (A2, B2)',
-
   args: {
     ...defaultArgs,
     children: [
@@ -200,14 +184,12 @@ export const WithMarkup = {
       </List.Element>,
     ],
   },
-
   argTypes: {
     children: {
       table: { disable: false },
       control: { type: null },
     },
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} > ul > li a`,
@@ -233,12 +215,10 @@ const TemplateWithTwoParagraph: StoryFn<typeof List> = (args) => (
 export const WithSpacing = {
   render: TemplateWithTwoParagraph,
   name: 'With Spacing (A3)',
-
   args: {
     ...defaultArgs,
     hasSpacing: true,
   },
-
   argTypes: {
     hasSpacing: { table: { disable: false } },
   },
@@ -315,7 +295,6 @@ const TemplateWithVariantsAndAtLeast10ItemsAndOtherComponents: StoryFn<
 export const WithBothVariantsAndAtLeast10NumberItems = {
   render: TemplateWithVariantsAndAtLeast10ItemsAndOtherComponents,
   name: 'With Both Variants And At Least 10 Number Items',
-
   args: {
     ...defaultArgs,
   },

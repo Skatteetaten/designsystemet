@@ -25,11 +25,13 @@ export interface ModalProps extends BaseProps {
   hideTitle?: boolean;
   /** Om lukkekryss skal skjules */
   hideCloseButton?: boolean;
-  /** Om autolukking skal skrus av */
-  disableAutoClose?: boolean;
+  /** Om autolukking skal skrus på/av. Autolukking er skrudd på som default. */
+  dismissOnOutsideClick?: boolean;
+  /** Om modalen kan lukkes ved Esc-trykk. Modalen lukkes ved Esc-trykk som default. */
+  dismissOnEsc?: boolean;
   /** Source til illustrasjonsbilde øverst i Modal */
   imageSource?: string;
-  /** Alt tekst til illustrasjonsbilde */
+  /** Alt tekst til illustrasjonsbilde. Hvis bildet er meningsbærende, legg på alt tekst. */
   imageSourceAltText?: string;
   /** Callback når modalen lukkes */
   onClose?: () => void;

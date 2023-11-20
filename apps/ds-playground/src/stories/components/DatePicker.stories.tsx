@@ -1,18 +1,22 @@
 import {
+  dsI18n,
   formArrSize,
   getCommonFormVariantDefault,
 } from '@skatteetaten/ds-core-utils';
-import { DatePicker, DatePickerProps } from '@skatteetaten/ds-forms';
 import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { DatePicker } from '../../../../../libs/ds-forms/src/DatePicker/DatePicker';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { DatePickerProps } from '../../../../../libs/ds-forms/src/DatePicker/DatePicker.types';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { getVersion } from '../utils/version.utils';
 
 export default {
   component: DatePicker,
-  title: 'Komponenter/DatePicker',
+  title: 'Komponenter/DatePicker (under utvikling)',
   argTypes: {
     // Props
     classNames: { table: { category: category.props } },
@@ -21,7 +25,6 @@ export default {
     label: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasError: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
@@ -29,28 +32,35 @@ export default {
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
-      table: { category: category.props },
+      table: {
+        category: category.props,
+        defaultValue: { summary: 'HelpSimpleSVGpath' },
+      },
     },
     helpText: { table: { category: category.props } },
     hideLabel: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
     },
     showRequiredMark: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
     },
-    titleHelpSvg: { table: { category: category.props } },
+    titleHelpSvg: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: dsI18n.t('Shared:shared.Help') },
+      },
+    },
     variant: {
       options: [...formArrSize],
       control: 'inline-radio',
       table: {
         category: category.props,
         defaultValue: { summary: getCommonFormVariantDefault() },
+        type: { summary: formArrSize },
       },
     },
     // HTML
@@ -60,7 +70,6 @@ export default {
     placeholder: { table: { category: category.htmlAttribute } },
     readOnly: { table: { category: category.htmlAttribute } },
     required: {
-      control: 'boolean',
       table: {
         category: category.htmlAttribute,
       },

@@ -24,6 +24,7 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
       'data-testid': dataTestId,
       color = getPanelColorDefault(),
       imageSource,
+      imageSourceAltText,
       padding = getPanelPaddingDefault(),
       spacing = getPanelSpacingDefault(),
       subtitle,
@@ -86,7 +87,7 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
           <div className={`${graphicClassName} ${styles.panelImageContainer}`}>
             <img
               src={imageSource}
-              alt={''}
+              alt={imageSourceAltText ?? ''}
               className={styles.panelImageContainerImage}
             />
           </div>

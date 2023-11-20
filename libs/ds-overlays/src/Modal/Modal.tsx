@@ -17,7 +17,12 @@ import {
 import { CancelSVGpath } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
-import { getModalPaddingDefault, getModalVariantDefault } from './defaults';
+import {
+  getModalDismissOnEscDefault,
+  getModalDismissOnOutsideClickDefault,
+  getModalPaddingDefault,
+  getModalVariantDefault,
+} from './defaults';
 import { ModalPadding, ModalProps } from './Modal.types';
 
 import styles from './Modal.module.scss';
@@ -30,7 +35,8 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
       classNames,
       lang,
       'data-testid': dataTestId,
-      disableAutoClose,
+      dismissOnEsc = getModalDismissOnEscDefault(),
+      dismissOnOutsideClick = getModalDismissOnOutsideClickDefault(),
       hideCloseButton,
       hideTitle,
       imageSource,
@@ -50,7 +56,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
     useImperativeHandle(ref, () => modalRef?.current as HTMLDialogElement);
 
     useEffect(() => {
-      if (disableAutoClose) {
+      if (!dismissOnOutsideClick) {
         return;
       }
       const onClickOutside = (event: MouseEvent): void => {
@@ -64,7 +70,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
           rect.top > event.clientY ||
           rect.bottom < event.clientY
         ) {
-          onClose && onClose();
+          onClose?.();
           modalRef.current?.close();
         }
       };
@@ -73,7 +79,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
       return () => {
         document.removeEventListener('click', onClickOutside, true);
       };
-    }, [modalRef, disableAutoClose, onClose]);
+    }, [modalRef, dismissOnOutsideClick, onClose]);
 
     const hideTitleClassName = hideTitle ? styles.srOnly : '';
     const hideOutlineClassName =
@@ -97,7 +103,12 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
         data-testid={dataTestId}
         aria-labelledby={headingId}
         autoFocus
-        onCancel={onClose}
+        onCancel={(e): void => {
+          if (!dismissOnEsc) {
+            e.preventDefault();
+          }
+          onClose?.();
+        }}
       >
         {imageSource && (
           <img
@@ -130,7 +141,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
               svgPath={CancelSVGpath}
               title={t('shared.Close')}
               onClick={(): void => {
-                onClose && onClose();
+                onClose?.();
                 modalRef.current?.close();
               }}
             />
@@ -145,4 +156,9 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
 
 Modal.displayName = 'Modal';
 
-export { getModalPaddingDefault, getModalVariantDefault };
+export {
+  getModalPaddingDefault,
+  getModalVariantDefault,
+  getModalDismissOnOutsideClickDefault,
+  getModalDismissOnEscDefault,
+};

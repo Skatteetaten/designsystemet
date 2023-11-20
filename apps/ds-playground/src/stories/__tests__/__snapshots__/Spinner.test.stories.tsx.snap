@@ -2,7 +2,8 @@
 
 exports[`Tester/Spinner Defaults play-test 1`] = `
 <div data-test-block="true">
-  <div role="status"
+  <div aria-live="polite"
+       aria-atomic="true"
        class="Spinner_spinner__fayYI Spinner_spinner_black__Tvg6T Spinner_spinner_flexColumn__lfAop Spinner_spinner_medium__8dfoo "
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
@@ -16,7 +17,8 @@ exports[`Tester/Spinner Defaults play-test 1`] = `
 
 exports[`Tester/Spinner WithAttributes play-test 1`] = `
 <div data-test-block="true">
-  <div role="status"
+  <div aria-live="polite"
+       aria-atomic="true"
        id="htmlid"
        class="Spinner_spinner__fayYI Spinner_spinner_black__Tvg6T Spinner_spinner_flexColumn__lfAop Spinner_spinner_medium__8dfoo dummyClassname"
        lang="nb"
@@ -33,7 +35,8 @@ exports[`Tester/Spinner WithAttributes play-test 1`] = `
 
 exports[`Tester/Spinner WithColorsDarkBackground smoke-test 1`] = `
 <div data-test-block="true">
-  <div role="status"
+  <div aria-live="polite"
+       aria-atomic="true"
        class="Spinner_spinner__fayYI Spinner_spinner_white__8GlC3 Spinner_spinner_flexColumn__lfAop Spinner_spinner_medium__8dfoo "
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
@@ -47,7 +50,8 @@ exports[`Tester/Spinner WithColorsDarkBackground smoke-test 1`] = `
 
 exports[`Tester/Spinner WithColorsLightBackground smoke-test 1`] = `
 <div data-test-block="true">
-  <div role="status"
+  <div aria-live="polite"
+       aria-atomic="true"
        class="Spinner_spinner__fayYI Spinner_spinner_black__Tvg6T Spinner_spinner_flexColumn__lfAop Spinner_spinner_medium__8dfoo bottomSpacingXL"
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
@@ -56,7 +60,8 @@ exports[`Tester/Spinner WithColorsLightBackground smoke-test 1`] = `
       Henter innhold
     </span>
   </div>
-  <div role="status"
+  <div aria-live="polite"
+       aria-atomic="true"
        class="Spinner_spinner__fayYI Spinner_spinner_blue__UIMQN Spinner_spinner_flexColumn__lfAop Spinner_spinner_medium__8dfoo "
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
@@ -70,7 +75,8 @@ exports[`Tester/Spinner WithColorsLightBackground smoke-test 1`] = `
 
 exports[`Tester/Spinner WithHideText play-test 1`] = `
 <div data-test-block="true">
-  <div role="status"
+  <div aria-live="polite"
+       aria-atomic="true"
        class="Spinner_spinner__fayYI Spinner_spinner_black__Tvg6T Spinner_spinner_flexColumn__lfAop Spinner_spinner_medium__8dfoo "
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
@@ -84,7 +90,8 @@ exports[`Tester/Spinner WithHideText play-test 1`] = `
 
 exports[`Tester/Spinner WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div role="status"
+  <div aria-live="polite"
+       aria-atomic="true"
        class="Spinner_spinner__fayYI Spinner_spinner_black__Tvg6T Spinner_spinner_flexColumn__lfAop Spinner_spinner_medium__8dfoo "
        id="dummyIdForwardedFromRef"
   >
@@ -99,7 +106,8 @@ exports[`Tester/Spinner WithRef play-test 1`] = `
 
 exports[`Tester/Spinner WithSizeAndPosition smoke-test 1`] = `
 <div data-test-block="true">
-  <div role="status"
+  <div aria-live="polite"
+       aria-atomic="true"
        class="Spinner_spinner__fayYI Spinner_spinner_black__Tvg6T Spinner_spinner_flexColumn__lfAop Spinner_spinner_small__G-MW+ bottomSpacingXL"
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
@@ -108,7 +116,8 @@ exports[`Tester/Spinner WithSizeAndPosition smoke-test 1`] = `
       henter innhold
     </span>
   </div>
-  <div role="status"
+  <div aria-live="polite"
+       aria-atomic="true"
        class="Spinner_spinner__fayYI Spinner_spinner_black__Tvg6T Spinner_spinner_flexColumn__lfAop Spinner_spinner_medium__8dfoo bottomSpacingXL"
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
@@ -117,7 +126,8 @@ exports[`Tester/Spinner WithSizeAndPosition smoke-test 1`] = `
       henter innhold
     </span>
   </div>
-  <div role="status"
+  <div aria-live="polite"
+       aria-atomic="true"
        class="Spinner_spinner__fayYI Spinner_spinner_black__Tvg6T Spinner_spinner_flexColumn__lfAop Spinner_spinner_large__046-O bottomSpacingXL"
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
@@ -126,7 +136,8 @@ exports[`Tester/Spinner WithSizeAndPosition smoke-test 1`] = `
       henter innhold
     </span>
   </div>
-  <div role="status"
+  <div aria-live="polite"
+       aria-atomic="true"
        class="Spinner_spinner__fayYI Spinner_spinner_black__Tvg6T Spinner_spinner_flexRow__E20Jk Spinner_spinner_small__G-MW+ bottomSpacingXL"
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
@@ -135,7 +146,8 @@ exports[`Tester/Spinner WithSizeAndPosition smoke-test 1`] = `
       henter innhold
     </span>
   </div>
-  <div role="status"
+  <div aria-live="polite"
+       aria-atomic="true"
        class="Spinner_spinner__fayYI Spinner_spinner_black__Tvg6T Spinner_spinner_flexRow__E20Jk Spinner_spinner_medium__8dfoo bottomSpacingXL"
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
@@ -144,7 +156,8 @@ exports[`Tester/Spinner WithSizeAndPosition smoke-test 1`] = `
       henter innhold
     </span>
   </div>
-  <div role="status"
+  <div aria-live="polite"
+       aria-atomic="true"
        class="Spinner_spinner__fayYI Spinner_spinner_black__Tvg6T Spinner_spinner_flexRow__E20Jk Spinner_spinner_large__046-O bottomSpacingXL"
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
@@ -158,7 +171,8 @@ exports[`Tester/Spinner WithSizeAndPosition smoke-test 1`] = `
 
 exports[`Tester/Spinner WithSizeAndPositionLongText smoke-test 1`] = `
 <div data-test-block="true">
-  <div role="status"
+  <div aria-live="polite"
+       aria-atomic="true"
        class="Spinner_spinner__fayYI Spinner_spinner_black__Tvg6T Spinner_spinner_flexColumn__lfAop Spinner_spinner_small__G-MW+ bottomSpacingXL"
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
@@ -167,7 +181,8 @@ exports[`Tester/Spinner WithSizeAndPositionLongText smoke-test 1`] = `
       Henter årsmiddelkurs fra valutakurstjenesten
     </span>
   </div>
-  <div role="status"
+  <div aria-live="polite"
+       aria-atomic="true"
        class="Spinner_spinner__fayYI Spinner_spinner_black__Tvg6T Spinner_spinner_flexColumn__lfAop Spinner_spinner_medium__8dfoo bottomSpacingXL"
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
@@ -176,7 +191,8 @@ exports[`Tester/Spinner WithSizeAndPositionLongText smoke-test 1`] = `
       Henter årsmiddelkurs fra valutakurstjenesten
     </span>
   </div>
-  <div role="status"
+  <div aria-live="polite"
+       aria-atomic="true"
        class="Spinner_spinner__fayYI Spinner_spinner_black__Tvg6T Spinner_spinner_flexColumn__lfAop Spinner_spinner_large__046-O bottomSpacingXL"
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
@@ -185,7 +201,8 @@ exports[`Tester/Spinner WithSizeAndPositionLongText smoke-test 1`] = `
       Henter årsmiddelkurs fra valutakurstjenesten
     </span>
   </div>
-  <div role="status"
+  <div aria-live="polite"
+       aria-atomic="true"
        class="Spinner_spinner__fayYI Spinner_spinner_black__Tvg6T Spinner_spinner_flexRow__E20Jk Spinner_spinner_small__G-MW+ bottomSpacingXL"
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
@@ -194,7 +211,8 @@ exports[`Tester/Spinner WithSizeAndPositionLongText smoke-test 1`] = `
       Henter årsmiddelkurs fra valutakurstjenesten
     </span>
   </div>
-  <div role="status"
+  <div aria-live="polite"
+       aria-atomic="true"
        class="Spinner_spinner__fayYI Spinner_spinner_black__Tvg6T Spinner_spinner_flexRow__E20Jk Spinner_spinner_medium__8dfoo bottomSpacingXL"
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">
@@ -203,7 +221,8 @@ exports[`Tester/Spinner WithSizeAndPositionLongText smoke-test 1`] = `
       Henter årsmiddelkurs fra valutakurstjenesten
     </span>
   </div>
-  <div role="status"
+  <div aria-live="polite"
+       aria-atomic="true"
        class="Spinner_spinner__fayYI Spinner_spinner_black__Tvg6T Spinner_spinner_flexRow__E20Jk Spinner_spinner_large__046-O bottomSpacingXL"
   >
     <div class="Spinner_spinnerAnimation__Wzz9g ">

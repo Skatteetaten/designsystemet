@@ -1,6 +1,6 @@
 import { ChangeEvent, FocusEvent, useState } from 'react';
 
-import { formArrSize } from '@skatteetaten/ds-core-utils';
+import { dsI18n, formArrSize } from '@skatteetaten/ds-core-utils';
 import { Select } from '@skatteetaten/ds-forms';
 import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
@@ -194,7 +194,9 @@ export const Defaults = {
     await expect(selectNode).toBeInTheDocument();
     await expect(selectNode).toBeEnabled();
     await expect(selectNode).toHaveValue('');
-    await expect(selectNode).toHaveTextContent('Velg');
+    await expect(selectNode).toHaveTextContent(
+      dsI18n.t('Shared:shared.ChooseValue')
+    );
     await expect(selectNode).toHaveAttribute('id');
     await expect(selectNode.tagName).toBe('SELECT');
     await expect(selectNode).not.toBeRequired();

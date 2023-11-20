@@ -38,7 +38,7 @@ def overrides = [
     iqOrganizationName           : 'Team Designsystem',
     sonarQube                    : true,
     npmInstallCommand            : "ci",
-    nodeVersion                  : "18",
+    nodeVersion                  : "20",
     disableAllReports            : false,
     lineCoverageReport           : false,
     publishToNpm                 : true,

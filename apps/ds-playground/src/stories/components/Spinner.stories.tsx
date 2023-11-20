@@ -1,7 +1,9 @@
+import { dsI18n, sizeArr } from '@skatteetaten/ds-core-utils';
 import {
   Spinner,
-  spinnerColorArr,
-  spinnerPositionArr,
+  getSpinnerColorDefault,
+  getSpinnerSizeDefault,
+  getSpinnerTitlePositionDefault,
   spinnerSizeArr,
 } from '@skatteetaten/ds-status';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
@@ -14,24 +16,36 @@ export default {
   title: 'Komponenter/Spinner',
   argTypes: {
     // Props
-    children: { table: { category: category.props }, control: 'text' },
+    children: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: dsI18n.t('ds_status:spinner.LoadingLabel') },
+      },
+    },
     size: {
-      table: { category: category.props },
-      control: 'inline-radio',
       options: [...spinnerSizeArr],
+      control: 'inline-radio',
+      table: {
+        category: category.props,
+        defaultValue: { summary: getSpinnerSizeDefault() },
+        type: { summary: sizeArr.slice(1, 4) },
+      },
     },
     titlePosition: {
-      table: { category: category.props },
       control: 'inline-radio',
-      options: [...spinnerPositionArr],
+      table: {
+        category: category.props,
+        defaultValue: { summary: getSpinnerTitlePositionDefault() },
+      },
     },
     color: {
-      table: { category: category.props },
       control: 'inline-radio',
-      options: [...spinnerColorArr],
+      table: {
+        category: category.props,
+        defaultValue: { summary: getSpinnerColorDefault() },
+      },
     },
     hideTitle: {
-      control: 'boolean',
       table: { category: category.props },
     },
   },

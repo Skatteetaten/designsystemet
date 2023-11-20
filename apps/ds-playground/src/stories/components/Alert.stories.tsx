@@ -11,10 +11,9 @@ export default {
   title: 'Komponenter/Alert',
   argTypes: {
     // Props
-    children: { table: { category: category.props } },
-    showAlert: { control: 'boolean', table: { category: category.props } },
+    children: { control: 'text', table: { category: category.props } },
+    showAlert: { table: { category: category.props } },
     showCloseButton: {
-      control: 'boolean',
       table: { category: category.props },
     },
     svgPath: {
@@ -27,6 +26,7 @@ export default {
       control: 'radio',
       table: {
         category: category.props,
+        type: { summary: statusArr },
       },
     },
     // Aria

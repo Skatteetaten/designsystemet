@@ -29,7 +29,6 @@ export default {
         category: category.props,
       },
     },
-
     // HTML
     colSpan: { table: { category: category.htmlAttribute } },
     rowSpan: { table: { category: category.htmlAttribute } },

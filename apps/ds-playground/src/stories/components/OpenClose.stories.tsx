@@ -1,4 +1,8 @@
-import { OpenClose } from '@skatteetaten/ds-collections';
+import {
+  OpenClose,
+  getOpenCloseIconPositionDefault,
+  getOpenCloseVariantDefault,
+} from '@skatteetaten/ds-collections';
 import {
   densityArr,
   headingAsArr,
@@ -15,18 +19,46 @@ export default {
   title: 'Komponenter/OpenClose',
   argTypes: {
     // Props
-    title: {
+    children: {
       control: 'text',
+      table: { category: category.props },
+    },
+    iconPosition: {
+      options: [...positionArr],
+      control: 'inline-radio',
+      table: {
+        category: category.props,
+        defaultValue: { summary: getOpenCloseIconPositionDefault() },
+        type: { summary: positionArr },
+      },
+    },
+    isOnClickOnlyFiredOnOpen: {
+      table: {
+        category: category.props,
+      },
+    },
+    isExpanded: {
+      table: {
+        category: category.props,
+      },
+    },
+    showUnderline: {
+      table: {
+        category: category.props,
+      },
+    },
+    title: {
       table: {
         category: category.props,
       },
     },
     titleAs: {
-      options: [...headingAsArr],
-      // eslint-disable-next-line sonarjs/no-duplicate-string
+      options: ['div', ...headingAsArr],
       control: 'inline-radio',
       table: {
         category: category.props,
+        defaultValue: { summary: 'div' },
+        type: { summary: ['div', ...headingAsArr] },
       },
     },
     variant: {
@@ -34,36 +66,9 @@ export default {
       control: 'inline-radio',
       table: {
         category: category.props,
+        defaultValue: { summary: getOpenCloseVariantDefault() },
+        type: { summary: densityArr },
       },
-    },
-    iconPosition: {
-      options: [...positionArr],
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-      },
-    },
-    isOnClickOnlyFiredOnOpen: {
-      control: 'boolean',
-      table: {
-        category: category.props,
-      },
-    },
-    isExpanded: {
-      control: 'boolean',
-      table: {
-        category: category.props,
-      },
-    },
-    showUnderline: {
-      control: 'boolean',
-      table: {
-        category: category.props,
-      },
-    },
-    children: {
-      control: 'text',
-      table: { category: category.props },
     },
     //Events
     onClick: { ...htmlEventDescription },

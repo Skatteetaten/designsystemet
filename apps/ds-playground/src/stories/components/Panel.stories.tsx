@@ -10,10 +10,6 @@ import {
   getPanelSubtitleAsDefault,
   getPanelTitleAsDefault,
   getPanelVariantDefault,
-  panelColorArr,
-  panelPaddingArr,
-  panelSpacingArr,
-  panelVariantArr,
 } from '@skatteetaten/ds-content';
 import { headingAsArr, subheadingAsArr } from '@skatteetaten/ds-core-utils';
 import { CheckIcon } from '@skatteetaten/ds-icons';
@@ -36,7 +32,6 @@ export default {
       table: { category: category.props },
     },
     color: {
-      options: [...panelColorArr],
       control: 'inline-radio',
       table: {
         category: category.props,
@@ -51,8 +46,8 @@ export default {
       options: ['', farmerIllustration, waitIllustration],
       table: { category: category.props },
     },
+    imageSourceAltText: { table: { category: category.props } },
     padding: {
-      options: [...panelPaddingArr],
       control: 'inline-radio',
       table: {
         category: category.props,
@@ -64,7 +59,6 @@ export default {
       table: { category: category.props },
     },
     spacing: {
-      options: [...panelSpacingArr],
       control: 'inline-radio',
       table: {
         category: category.props,
@@ -72,7 +66,6 @@ export default {
       },
     },
     subtitle: {
-      control: 'text',
       table: { category: category.props },
     },
     subtitleAs: {
@@ -81,10 +74,10 @@ export default {
       table: {
         category: category.props,
         defaultValue: { summary: getPanelSubtitleAsDefault() },
+        type: { summary: subheadingAsArr },
       },
     },
     title: {
-      control: 'text',
       table: { category: category.props },
     },
     titleAs: {
@@ -93,10 +86,10 @@ export default {
       table: {
         category: category.props,
         defaultValue: { summary: getPanelTitleAsDefault() },
+        type: { summary: headingAsArr },
       },
     },
     variant: {
-      options: [...panelVariantArr],
       control: 'inline-radio',
       table: {
         category: category.props,

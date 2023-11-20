@@ -52,7 +52,6 @@ type Story = StoryObj<typeof meta>;
 
 export const WithRef = {
   name: 'With Ref (FA1)',
-
   args: {
     ref: (instance: HTMLDivElement | null): void => {
       if (instance) {
@@ -60,46 +59,39 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const spinner = canvas.getByRole('status');
+    const spinner = canvas.getAllByRole('generic')[1];
     await expect(spinner).toHaveAttribute('id', 'dummyIdForwardedFromRef');
   },
 } satisfies Story;
 
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
-
   args: {
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const spinner = canvas.getByRole('status');
+    const spinner = canvas.getByTestId('123ID');
     await expect(spinner).toHaveAttribute('id', 'htmlid');
     await expect(spinner).toHaveClass('dummyClassname');
     await expect(spinner).toHaveAttribute('lang', 'nb');
-    await expect(spinner).toHaveAttribute('data-testid', '123ID');
   },
 } satisfies Story;
 
@@ -108,10 +100,9 @@ export const Defaults = {
   argTypes: {
     children: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const spinner = canvas.getByRole('status');
+    const spinner = await canvas.findByText('Laster inn');
     await expect(spinner).toBeInTheDocument();
   },
 } satisfies Story;

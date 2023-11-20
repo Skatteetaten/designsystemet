@@ -15,7 +15,6 @@ export default {
       table: { category: category.props },
     },
     hasSpacing: {
-      control: 'boolean',
       table: { category: category.props },
     },
   },

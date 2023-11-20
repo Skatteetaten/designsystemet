@@ -6,7 +6,7 @@ export const iconVariantArr = ['systemIcon', 'themeIcon'] as const;
 export type IconVariant = (typeof iconVariantArr)[number];
 
 export interface IconComponentCommonProps extends BaseProps {
-  /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
+  /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
   svgPath: ReactElement;
 }
 

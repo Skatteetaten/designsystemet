@@ -90,6 +90,10 @@ const parameters = {
         value: 'var(--palette-graphite-100)',
       },
       {
+        name: 'grey',
+        value: 'var(--palette-graphite-70)',
+      },
+      {
         name: 'themePrimary',
         value: 'var(--theme-primary)',
       },

@@ -12,5 +12,6 @@
     "@skatteetaten/ds-icons": "*",
     "react-i18next": "^13",
     "i18next": "^23"
-  }
+  },
+  "scripts": {}
 }
