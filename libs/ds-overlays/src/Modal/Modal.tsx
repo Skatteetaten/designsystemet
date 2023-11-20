@@ -50,7 +50,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
     ref
   ): JSX.Element => {
     const headingId = `modalHeadingId-${useId()}`;
-    const { t } = useTranslation('Shared', { i18n: dsI18n });
+    const { t } = useTranslation('ds_overlays', { i18n: dsI18n });
 
     const modalRef = useRef<HTMLDialogElement>(null);
     useImperativeHandle(ref, () => modalRef?.current as HTMLDialogElement);
@@ -111,6 +111,17 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
         }}
       >
         <div tabIndex={-1}>
+          {!hideCloseButton && (
+            <IconButton
+              className={styles.closeButton}
+              svgPath={CancelSVGpath}
+              title={t('modal.CloseModal')}
+              onClick={(): void => {
+                onClose?.();
+                modalRef.current?.close();
+              }}
+            />
+          )}
           {imageSource && (
             <img
               src={imageSource}
@@ -133,17 +144,6 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
             >
               {title}
             </Heading>
-            {!hideCloseButton && (
-              <IconButton
-                className={styles.closeButton}
-                svgPath={CancelSVGpath}
-                title={t('shared.Close')}
-                onClick={(): void => {
-                  onClose?.();
-                  modalRef.current?.close();
-                }}
-              />
-            )}
             {children}
           </div>
           {variant === 'important' && <Separator />}
