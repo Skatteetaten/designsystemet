@@ -14,7 +14,7 @@
         "project": "libs/ds-core-utils/package.json",
         "entryFile": "libs/ds-core-utils/src/index.ts",
         "external": ["react/jsx-runtime"],
-        "rollupConfig": "@nx/react/plugins/bundle-rollup",
+        "rollupConfig": ["libs/ds-core-utils/rollup.config.js"],
         "compiler": "babel",
         "assets": [
           {
@@ -74,5 +74,6 @@
         "cwd": "dist/libs/ds-core-utils"
       }
     }
-  }
+  },
+  "implicitDependencies": ["!ds-dev-config"]
 }
