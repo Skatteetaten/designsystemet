@@ -1,4 +1,5 @@
 {
+  "datepicker.ChooseDate": "Velg dato",
   "errorsummary.Title": "For å gå videre må du rette opp {{errorAmount}} feil:",
   "fileuploader.AcceptedFileFormats": "Filer du kan laste opp:",
   "fileuploader.AddFile": "Legg til fil(er)",
