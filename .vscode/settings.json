@@ -1,8 +1,3 @@
 {
-  "eslint.validate": [
-    "json"
-  ],
-  "prettier.configPath": "./libs/ds-dev-config/config/designsystem-prettierrc.json",
-  "editor.formatOnSave": true,
-  "editor.formatOnType": true
+  "eslint.validate": ["json"]
 }
