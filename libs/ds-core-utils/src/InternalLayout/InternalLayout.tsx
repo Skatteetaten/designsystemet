@@ -61,5 +61,3 @@ export const InternalLayout: (props: BaseProps) => JSX.Element = ({
     </>
   );
 };
-
-export default InternalLayout;

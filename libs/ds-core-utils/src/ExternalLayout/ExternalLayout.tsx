@@ -32,5 +32,3 @@ export const ExternalLayout: (props: BaseProps) => JSX.Element = ({
     </div>
   );
 };
-
-export default ExternalLayout;
