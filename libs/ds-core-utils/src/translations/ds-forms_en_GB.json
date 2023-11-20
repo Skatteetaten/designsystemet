@@ -1,4 +1,5 @@
 {
+  "datepicker.ChooseDate": "Choose date",
   "errorsummary.Title": "To continue you must correct {{errorAmount}} error(s):",
   "fileuploader.AcceptedFileFormats": "Files you can upload:",
   "fileuploader.AddFile": "Add file(s)",

@@ -110,45 +110,44 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
           onClose?.();
         }}
       >
-        {imageSource && (
-          <img
-            src={imageSource}
-            alt={imageSourceAltText ?? ''}
-            className={`${styles.modalIllustration} ${
-              classNames?.image ?? ''
-            }`.trim()}
-          />
-        )}
-        <div
-          tabIndex={-1}
-          className={`${paddingClassName} ${noPaddingTop}`.trim()}
-        >
-          {variant === 'important' && (
-            <SkatteetatenLogo className={styles.modalLogo} />
-          )}
-          <Heading
-            className={`${styles.modalHeading} ${headingNoPaddingClassName} ${hideTitleClassName}`.trim()}
-            id={headingId}
-            as={'h1'}
-            level={3}
-            hasSpacing
-          >
-            {title}
-          </Heading>
-          {!hideCloseButton && (
-            <IconButton
-              className={styles.closeButton}
-              svgPath={CancelSVGpath}
-              title={t('shared.Close')}
-              onClick={(): void => {
-                onClose?.();
-                modalRef.current?.close();
-              }}
+        <div tabIndex={-1}>
+          {imageSource && (
+            <img
+              src={imageSource}
+              alt={imageSourceAltText ?? ''}
+              className={`${styles.modalIllustration} ${
+                classNames?.image ?? ''
+              }`.trim()}
             />
           )}
-          {children}
+          <div className={`${paddingClassName} ${noPaddingTop}`.trim()}>
+            {variant === 'important' && (
+              <SkatteetatenLogo className={styles.modalLogo} />
+            )}
+            <Heading
+              className={`${styles.modalHeading} ${headingNoPaddingClassName} ${hideTitleClassName}`.trim()}
+              id={headingId}
+              as={'h1'}
+              level={3}
+              hasSpacing
+            >
+              {title}
+            </Heading>
+            {!hideCloseButton && (
+              <IconButton
+                className={styles.closeButton}
+                svgPath={CancelSVGpath}
+                title={t('shared.Close')}
+                onClick={(): void => {
+                  onClose?.();
+                  modalRef.current?.close();
+                }}
+              />
+            )}
+            {children}
+          </div>
+          {variant === 'important' && <Separator />}
         </div>
-        {variant === 'important' && <Separator />}
       </dialog>
     );
   }
