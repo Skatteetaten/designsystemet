@@ -40,7 +40,6 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
     },
     ref
   ): JSX.Element => {
-    //    const hasGraphicOrIcon = imageSource || renderIcon;
     const panelVariantClassName =
       variant === 'filled' ? styles.panel_filled : styles.panel_outline;
     const panelColorClassName = styles[`panel_${color}`];
@@ -68,9 +67,6 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
     const spaceAndIconClassName = `${
       renderIcon ? graphicClassName : ''
     }`.trim();
-    /*     const spaceClassName = imageSource
-      ? styles.panelSpace_hide
-      : styles.panelSpace; */
     const articleClassName = `${styles.panelArticle} ${
       imageSource ? styles.panelArticle_illustration : ''
     }`.trim();
@@ -118,8 +114,6 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
           )}
           {children}
         </div>
-        {/* {(imageSource || renderIcon) && <div className={spaceClassName}></div>} */}
-        {/* <div className={spaceClassName}></div> */}
       </div>
     );
   }
