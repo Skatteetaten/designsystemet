@@ -67,8 +67,7 @@ $border-outline: 6px;
 
     @media (min-width: $breakpoint-m) {
       width: auto;
-      padding-right: var(--spacing-m);
-      padding-bottom: 0;
+      padding: 0 var(--spacing-m) 0 0;
       margin-right: 0;
       margin-left: -150px;
       grid-column: 1;
@@ -79,8 +78,7 @@ $border-outline: 6px;
   &Article {
     width: 100%;
     max-width: var(--semantic-responsive-article);
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
 
     @media (min-width: $breakpoint-m) {
       &_illustration {
