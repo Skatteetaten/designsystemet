@@ -50,7 +50,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
     ref
   ): JSX.Element => {
     const headingId = `modalHeadingId-${useId()}`;
-    const { t } = useTranslation('Shared', { i18n: dsI18n });
+    const { t } = useTranslation('ds_overlays', { i18n: dsI18n });
 
     const modalRef = useRef<HTMLDialogElement>(null);
     useImperativeHandle(ref, () => modalRef?.current as HTMLDialogElement);
@@ -110,45 +110,44 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
           onClose?.();
         }}
       >
-        {imageSource && (
-          <img
-            src={imageSource}
-            alt={imageSourceAltText ?? ''}
-            className={`${styles.modalIllustration} ${
-              classNames?.image ?? ''
-            }`.trim()}
-          />
-        )}
-        <div
-          tabIndex={-1}
-          className={`${paddingClassName} ${noPaddingTop}`.trim()}
-        >
-          {variant === 'important' && (
-            <SkatteetatenLogo className={styles.modalLogo} />
-          )}
-          <Heading
-            className={`${styles.modalHeading} ${headingNoPaddingClassName} ${hideTitleClassName}`.trim()}
-            id={headingId}
-            as={'h1'}
-            level={3}
-            hasSpacing
-          >
-            {title}
-          </Heading>
+        <div tabIndex={-1}>
           {!hideCloseButton && (
             <IconButton
               className={styles.closeButton}
               svgPath={CancelSVGpath}
-              title={t('shared.Close')}
+              title={t('modal.CloseModal')}
               onClick={(): void => {
                 onClose?.();
                 modalRef.current?.close();
               }}
             />
           )}
-          {children}
+          {imageSource && (
+            <img
+              src={imageSource}
+              alt={imageSourceAltText ?? ''}
+              className={`${styles.modalIllustration} ${
+                classNames?.image ?? ''
+              }`.trim()}
+            />
+          )}
+          <div className={`${paddingClassName} ${noPaddingTop}`.trim()}>
+            {variant === 'important' && (
+              <SkatteetatenLogo className={styles.modalLogo} />
+            )}
+            <Heading
+              className={`${styles.modalHeading} ${headingNoPaddingClassName} ${hideTitleClassName}`.trim()}
+              id={headingId}
+              as={'h1'}
+              level={3}
+              hasSpacing
+            >
+              {title}
+            </Heading>
+            {children}
+          </div>
+          {variant === 'important' && <Separator />}
         </div>
-        {variant === 'important' && <Separator />}
       </dialog>
     );
   }
