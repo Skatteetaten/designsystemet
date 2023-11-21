@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Modal } from '@skatteetaten/ds-overlays';
 import { Paragraph } from '@skatteetaten/ds-typography';
 import { expect } from '@storybook/jest';
@@ -133,7 +134,9 @@ export const Defaults = {
     await expect(modal).toBeInTheDocument();
     const closeButton = canvas.getAllByRole('button')[0];
     await expect(closeButton).toBeInTheDocument();
-    await expect(canvas.getByTitle('Lukk')).toBeInTheDocument();
+    await expect(
+      canvas.getByTitle(dsI18n.t('ds_overlays:modal.CloseModal'))
+    ).toBeInTheDocument();
     await expect(modal.tagName).toBe('DIALOG');
     const heading = canvas.getByText(defaultTitle);
     await expect(heading.tagName).toBe('H1');
@@ -284,7 +287,9 @@ export const ClickCloseButton = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
     await userEvent.click(button);
-    const closeButton = canvas.getByTitle('Lukk');
+    const closeButton = canvas.getByTitle(
+      dsI18n.t('ds_overlays:modal.CloseModal')
+    );
     await userEvent.click(closeButton);
     await expect(canvas.queryByRole('dialog')).not.toBeInTheDocument();
   },
