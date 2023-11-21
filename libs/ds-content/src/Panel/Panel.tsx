@@ -56,7 +56,9 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
     if (imageSource) {
       panelGraphicClassName = styles.panel_graphicImage;
     } else if (renderIcon) {
-      panelGraphicClassName = styles.panel_graphicIcon;
+      panelGraphicClassName = hideGraphicMobile
+        ? styles.panel_graphicIconHideMobile
+        : styles.panel_graphicIcon;
     }
     const panelClassName =
       `${styles.panel} ${panelVariantClassName} ${panelColorClassName} ${panelPaddingClassName} ${panelSpacingClassName} ${panelGraphicClassName} ${className}`.trim();
@@ -64,9 +66,7 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
     const graphicClassName = `${styles.panelGraphic} ${
       hideGraphicMobile ? styles.panelGraphic_hide : ''
     }`.trim();
-    const spaceAndIconClassName = `${
-      renderIcon ? graphicClassName : ''
-    }`.trim();
+    const iconClassName = `${renderIcon ? graphicClassName : ''}`.trim();
     const articleClassName = `${styles.panelArticle} ${
       imageSource ? styles.panelArticle_illustration : ''
     }`.trim();
@@ -80,16 +80,16 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
         data-testid={dataTestId}
       >
         {!renderIcon && imageSource && (
-          <div className={`${graphicClassName} ${styles.panelImageContainer}`}>
+          <div className={`${graphicClassName}`}>
             <img
               src={imageSource}
               alt={imageSourceAltText ?? ''}
-              className={styles.panelImageContainerImage}
+              className={styles.panelImage}
             />
           </div>
         )}
         {!imageSource && renderIcon && (
-          <div className={spaceAndIconClassName}>{renderIcon?.()}</div>
+          <div className={iconClassName}>{renderIcon?.()}</div>
         )}
         <div className={articleClassName}>
           {title && (

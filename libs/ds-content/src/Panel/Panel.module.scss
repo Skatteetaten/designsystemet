@@ -9,13 +9,10 @@ $border-outline: 6px;
   --panel-padding: var(--spacing-xl);
 
   display: grid;
-  width: 100%;
   max-width: var(--container-m);
   box-sizing: border-box;
-  justify-content: center;
-  grid-template-columns: 100%;
+  grid-template: 'graphic' 'article' / 100%;
   overflow-wrap: anywhere;
-  word-break: normal;
 
   &_outline {
     padding: calc(var(--panel-padding) - $border-outline);
@@ -32,17 +29,30 @@ $border-outline: 6px;
   &_graphic {
     &Image {
       @media (min-width: $breakpoint-s) {
-        align-self: center;
         gap: var(--spacing-xxl);
-        grid-template-columns: 1fr 60%;
+        grid-template: 'graphic article' /1fr 60%;
       }
     }
 
     &Icon {
+      grid-template:
+        '. graphic .'
+        '. article .' / 1fr minmax(40px, var(--semantic-responsive-article))
+        1fr;
+      row-gap: var(--spacing-m);
+
+      &HideMobile {
+        row-gap: 0;
+      }
+
       @media (min-width: $breakpoint-m) {
-        position: relative;
-        justify-content: center;
-        grid-template-columns: auto var(--semantic-responsive-article);
+        gap: normal var(--spacing-m);
+        grid-template:
+          'graphic article .' / 1fr minmax(
+            40px,
+            var(--semantic-responsive-article)
+          )
+          1fr;
       }
     }
   }
@@ -50,8 +60,9 @@ $border-outline: 6px;
   &Graphic {
     width: 100%;
     max-width: var(--semantic-responsive-article);
-    padding-bottom: var(--spacing-s);
     margin: 0 auto;
+    grid-area: graphic;
+    line-height: 1;
 
     &_hide {
       display: none;
@@ -61,26 +72,18 @@ $border-outline: 6px;
       }
     }
 
-    @media (min-width: $breakpoint-s) {
-      padding-bottom: 0;
-    }
-
     @media (min-width: $breakpoint-m) {
       width: auto;
-      padding-right: var(--spacing-m);
-      padding-bottom: 0;
       margin-right: 0;
-      margin-left: -150px;
       grid-column: 1;
-      text-align: right;
     }
   }
 
   &Article {
     width: 100%;
     max-width: var(--semantic-responsive-article);
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
+    grid-area: article;
 
     @media (min-width: $breakpoint-m) {
       &_illustration {
@@ -89,14 +92,9 @@ $border-outline: 6px;
     }
   }
 
-  &ImageContainer {
+  &Image {
     width: 100%;
-    margin-left: auto;
-
-    &Image {
-      width: 100%;
-      height: auto;
-    }
+    max-height: 320px;
   }
 
   &_ochre {

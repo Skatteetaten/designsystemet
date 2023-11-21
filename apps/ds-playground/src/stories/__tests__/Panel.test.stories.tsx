@@ -623,8 +623,8 @@ export const TextShortAndIcon = {
   name: 'Text Short And Icon (A11)',
 
   args: {
-    title: 'Kortitl',
-    children: <Paragraph>{'Kort tekstKort...'}</Paragraph>,
+    title: 'Kort tittel',
+    children: <Paragraph>{'Kort test ...'}</Paragraph>,
     renderIcon: (): JSX.Element => <InfoIcon size={'large'} />,
   },
 
