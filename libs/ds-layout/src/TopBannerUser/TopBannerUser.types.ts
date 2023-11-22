@@ -24,7 +24,7 @@ export interface TopBannerUserProps
   /** Navn på innlogget bruker. */
   children: string;
   /** Hvilken rolle innloget bruker har. */
-  role?: UserRole;
-  /** HTML-tag for brukernavn */
+  role: UserRole;
+  /** HTML-tag for brukernavn TODO FRONT-1161 ikke i bruk enda */
   as?: UsernameAs;
 }

@@ -12,7 +12,7 @@ exports[`Tester/TopBannerLogo (intern) Defaults play-test 1`] = `
       >
       <img class="TopBannerLogo_logo_desktop__SI+eK"
            alt="Forside Skatteetaten"
-           src="ske-logo.189db021336caae2e5b562b9604133c1.svg"
+           src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
       >
     </a>
   </div>
@@ -35,7 +35,7 @@ exports[`Tester/TopBannerLogo (intern) WithAttributes play-test 1`] = `
       >
       <img class="TopBannerLogo_logo_desktop__SI+eK"
            alt="Forside Skatteetaten"
-           src="ske-logo.189db021336caae2e5b562b9604133c1.svg"
+           src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
       >
     </a>
   </div>
@@ -54,7 +54,7 @@ exports[`Tester/TopBannerLogo (intern) WithBreakpointS smoke-test 1`] = `
       >
       <img class="TopBannerLogo_logo_desktop__SI+eK"
            alt="Forside Skatteetaten"
-           src="ske-logo.189db021336caae2e5b562b9604133c1.svg"
+           src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
       >
     </a>
   </div>
@@ -73,7 +73,7 @@ exports[`Tester/TopBannerLogo (intern) WithBreakpointXS smoke-test 1`] = `
       >
       <img class="TopBannerLogo_logo_desktop__SI+eK"
            alt="Forside Skatteetaten"
-           src="ske-logo.189db021336caae2e5b562b9604133c1.svg"
+           src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
       >
     </a>
   </div>
@@ -108,7 +108,7 @@ exports[`Tester/TopBannerLogo (intern) WithNoLinkLogo play-test 1`] = `
     >
     <img class="TopBannerLogo_logo_desktop__SI+eK"
          alt="Skatteetaten logo"
-         src="ske-logo.189db021336caae2e5b562b9604133c1.svg"
+         src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
     >
   </div>
 </div>
@@ -128,7 +128,7 @@ exports[`Tester/TopBannerLogo (intern) WithRef play-test 1`] = `
       >
       <img class="TopBannerLogo_logo_desktop__SI+eK"
            alt="Forside Skatteetaten"
-           src="ske-logo.189db021336caae2e5b562b9604133c1.svg"
+           src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
       >
     </a>
   </div>

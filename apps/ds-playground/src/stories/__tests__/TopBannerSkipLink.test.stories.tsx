@@ -7,7 +7,7 @@ import { wrapper } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerSkipLink } from '../../../../../libs/ds-layout/src/TopBannerSkipLink/TopBannerSkipLink';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { SkipLinkProps } from '../../../../../libs/ds-layout/src/TopBannerSkipLink/TopBannerSkipLink.types';
+import { TopBannerSkipLinkProps } from '../../../../../libs/ds-layout/src/TopBannerSkipLink/TopBannerSkipLink.types';
 
 const meta = {
   component: TopBannerSkipLink,
@@ -30,7 +30,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const skipLinkText = 'ds_pages:topbannerexternal.SkipLinkText';
-const defaultArgs: SkipLinkProps = {};
+const defaultArgs: TopBannerSkipLinkProps = {};
 
 export const WithRef = {
   name: 'With Ref (FA1)',
@@ -159,7 +159,7 @@ export const ClickSkipLink = {
 } satisfies Story;
 
 export const WithMobileScreenAndFocused = {
-  name: 'With Mobile Screen And Focused (A3)',
+  name: 'With Small Screen And Focused (A3)',
   args: {
     ...defaultArgs,
   },

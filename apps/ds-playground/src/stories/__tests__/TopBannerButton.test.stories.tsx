@@ -14,9 +14,10 @@ import { wrapper } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerButton } from '../../../../../libs/ds-layout/src/TopBannerButton/TopBannerButton';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { topBannerButtonVariantArr } from '../../../../../libs/ds-layout/src/TopBannerButton/TopBannerButton.types';
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { TopBannerUser } from '../../../../../libs/ds-layout/src/TopBannerUser/TopBannerUser';
+import {
+  TopBannerButtonProps,
+  topBannerButtonVariantArr,
+} from '../../../../../libs/ds-layout/src/TopBannerButton/TopBannerButton.types';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const verifyAttribute =
@@ -62,7 +63,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const defaultButtonText = 'Meny';
-const defaultArgs = {
+const defaultArgs: TopBannerButtonProps = {
   children: defaultButtonText,
   svgPath: MenuSVGpath,
 };
@@ -312,7 +313,7 @@ export const WithBreakpointXSVariantFilled = {
   },
 } satisfies Story;
 
-const TemplateWithAllVariant: StoryFn<typeof TopBannerUser> = (args) => (
+const TemplateWithAllVariant: StoryFn<typeof TopBannerButton> = (args) => (
   <div className={'topbannerButtonContainer'}>
     {topBannerButtonVariantArr.map((variant, index) => {
       let svgPath = MenuSVGpath;

@@ -15,7 +15,7 @@ type RequiredLinkLogoHTMLAttributes = Pick<
   'href'
 >;
 
-export interface LogoProps
+export interface TopBannerLogoProps
   extends RequiredLogoHTMLAttributes,
     RequiredLinkLogoHTMLAttributes,
     BaseProps {

@@ -11,7 +11,10 @@ import { getTopBannerLogoHrefDefault } from './defaults';
 import defaultEnglishLogo from './ske-logo-en.svg';
 import defaultMobileLogo from './ske-logo-mobile.svg';
 import defaultNorwegainLogo from './ske-logo.svg';
-import { LogoProps, ConditionalWrapperProps } from './TopBannerLogo.types';
+import {
+  TopBannerLogoProps,
+  ConditionalWrapperProps,
+} from './TopBannerLogo.types';
 
 import styles from './TopBannerLogo.module.scss';
 
@@ -21,7 +24,7 @@ const ConditionalWrapper: React.FC<ConditionalWrapperProps> = ({
   children,
 }) => (condition ? children : wrapper(children));
 
-export const TopBannerLogo = forwardRef<HTMLImageElement, LogoProps>(
+export const TopBannerLogo = forwardRef<HTMLImageElement, TopBannerLogoProps>(
   (
     {
       id,

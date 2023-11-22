@@ -7,6 +7,7 @@ import { within } from '@storybook/testing-library';
 import { TopBannerUser } from '../../../../../libs/ds-layout/src/TopBannerUser/TopBannerUser';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import {
+  TopBannerUserProps,
   usernameAsArr,
   userRoleArr,
 } from '../../../../../libs/ds-layout/src/TopBannerUser/TopBannerUser.types';
@@ -50,9 +51,10 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const username = 'Knotten, Gudleik';
-const defaultArgs = {
+const username = 'SØRUMSAND-SCHOENBERG WILLIAM';
+const defaultArgs: TopBannerUserProps = {
   children: username,
+  role: 'meg',
 };
 
 export const WithRef = {
@@ -128,7 +130,7 @@ const TemplateWithAllRoles: StoryFn<typeof TopBannerUser> = (args) => (
           {...args}
           role={role}
         >
-          {`${username}`}
+          {`${role}`}
         </TopBannerUser>
       );
     })}
@@ -164,8 +166,19 @@ export const WithAllRoles = {
   },
 } satisfies Story;
 
+export const WithMobileScreen = {
+  name: 'With Small Screen (Username A2)',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: '--mobile',
+    },
+  },
+} satisfies Story;
+
 export const WithBreakpointXS = {
-  render: TemplateWithAllRoles,
   name: 'With Breakpoint-xs (Username A2)',
   args: {
     ...defaultArgs,
@@ -178,7 +191,6 @@ export const WithBreakpointXS = {
 } satisfies Story;
 
 export const WithBreakpointS = {
-  render: TemplateWithAllRoles,
   name: 'With Breakpoint-s (Username A2)',
   args: {
     ...defaultArgs,
@@ -190,8 +202,19 @@ export const WithBreakpointS = {
   },
 } satisfies Story;
 
+export const WithBreakpointM = {
+  name: 'With Breakpoint-m (Username A2)',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: '--breakpoint-m',
+    },
+  },
+} satisfies Story;
+
 export const WithBreakpointL = {
-  render: TemplateWithAllRoles,
   name: 'With Breakpoint-l (Username A2)',
   args: {
     ...defaultArgs,

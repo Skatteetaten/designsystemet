@@ -33,7 +33,7 @@ export interface TopBannerButtonProps
   };
   /** Tekst på knappen. */
   children: string;
-  /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
+  /** HTML-path node. */
   svgPath: ReactElement;
   /** Hvis svgPath er meningsbærende, må ha en beskrivende tekst */
   title?: string;

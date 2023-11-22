@@ -8,7 +8,7 @@ import { wrapper } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerLogo } from '../../../../../libs/ds-layout/src/TopBannerLogo/TopBannerLogo';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { LogoProps } from '../../../../../libs/ds-layout/src/TopBannerLogo/TopBannerLogo.types';
+import { TopBannerLogoProps } from '../../../../../libs/ds-layout/src/TopBannerLogo/TopBannerLogo.types';
 import customLogo from '../../assets/custom-logo.svg';
 import customMobileLogo from '../../assets/custom-mobile-logo.svg';
 
@@ -45,7 +45,7 @@ type Story = StoryObj<typeof meta>;
 
 const frontPageText = dsI18n.t('ds_pages:topbannerexternal.SkeLogoLinkText');
 const logoText = dsI18n.t('ds_pages:topbannerexternal.SkeLogoImageText');
-const defaultArgs: LogoProps = {};
+const defaultArgs: TopBannerLogoProps = {};
 
 export const WithRef = {
   name: 'With Ref (FA1)',
