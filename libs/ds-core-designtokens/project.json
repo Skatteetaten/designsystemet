@@ -23,6 +23,11 @@
             "output": "."
           },
           {
+            "glob": "LICENSE",
+            "input": ".",
+            "output": "."
+          },
+          {
             "glob": "*",
             "input": "libs/ds-core-designtokens/lib",
             "output": "."
@@ -73,8 +78,8 @@
     "publish": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "npm publish {args.switches}",
-        "cwd": "dist/libs/ds-core-designtokens"
+        "command": "npm publish dist/libs/ds-core-designtokens {args.switches}",
+        "cwd": ""
       }
     }
   }
