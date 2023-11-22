@@ -50,7 +50,7 @@ libs.forEach((lib) => {
       homepage,
       peerDependencies,
       dependencies,
-      scripts,
+      scripts: scripts ?? {},
       exports: pkgExports,
     };
 
