@@ -92,7 +92,7 @@ export const TopBannerExternal = forwardRef<
               )}
 
               {/** TODO - FRONT-1161 språkmeny */}
-
+              {/** TODO - FRONT-1161 skjule inn- og utlogging */}
               {isLoggedIn && (
                 <>
                   {/** TODO - FRONT-1161 username som bare text og implementere usernameAs */}
@@ -114,7 +114,6 @@ export const TopBannerExternal = forwardRef<
                   </TopBannerButton>
                 </>
               )}
-              {/** TODO - FRONT-1161 skal antagelig være mulig å skjule innlogging */}
               {!isLoggedIn && (
                 <TopBannerButton
                   svgPath={LockOutlineSVGpath}
