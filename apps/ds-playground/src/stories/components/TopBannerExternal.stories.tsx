@@ -1,12 +1,20 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
+import { RadioGroup, TextField } from '@skatteetaten/ds-forms';
 import { TopBannerExternal } from '@skatteetaten/ds-layout';
+import { Modal } from '@skatteetaten/ds-overlays';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { getTopBannerLogoHrefDefault } from '../../../../../libs/ds-layout/src/TopBannerLogo/defaults';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { getTopBannerSkipLinkHrefDefault } from '../../../../../libs/ds-layout/src/TopBannerSkipLink/defaults';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import {
+  usernameAsArr,
+  UserRole,
+  userRoleArr,
+} from '../../../../../libs/ds-layout/src/TopBannerUser/TopBannerUser.types';
 import { category } from '../../../.storybook/helpers';
 import customLogo from '../../assets/custom-logo.svg';
 import customMobileLogo from '../../assets/custom-mobile-logo.svg';
@@ -47,17 +55,25 @@ export default {
     },
     noLinkLogo: { table: { category: category.props } },
     username: { table: { category: category.props } },
-    isLoggedIn: { table: { category: category.props } },
+    usernameAs: {
+      table: { category: category.props },
+      options: [...usernameAsArr],
+      control: 'inline-radio',
+    },
+    userRole: {
+      table: { category: category.props },
+      options: [...userRoleArr],
+      control: 'inline-radio',
+    },
     firstColumn: { control: 'text', table: { category: category.props } },
     secondColumn: { control: 'text', table: { category: category.props } },
     thirdColumn: { control: 'text', table: { category: category.props } },
-    onLogIn: {
-      table: { category: category.props },
-      control: false,
-    },
-    onLogOut: {
-      table: { category: category.props },
-      control: false,
+    // Events
+    onLogIn: { control: { type: null }, table: { category: category.event } },
+    onLogOut: { control: { type: null }, table: { category: category.event } },
+    onSwitchUserRole: {
+      control: { type: null },
+      table: { category: category.event },
     },
   },
   parameters: {
@@ -68,58 +84,64 @@ export default {
 export const Preview: StoryObj<typeof TopBannerExternal> = {};
 
 export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
-  const usernameExample = 'Knotten, Gudleik';
-
+  const modalRef = useRef<HTMLDialogElement>(null);
   const [username, setUsername] = useState<string>('');
+  const [userRole, setUserRole] = useState<UserRole | undefined>(undefined);
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
 
   const handleLogOut = (): void => {
+    setUserRole(undefined);
+    setUsername('');
     setIsLoggedIn(false);
   };
+
   const handleLogIn = (): void => {
-    setIsLoggedIn(true);
-    setUsername(usernameExample);
-    alert(
-      'Hvis bruker har flere roller, så skal en modal tilby roller som kan velges.'
-    );
+    modalRef.current?.showModal();
   };
-  const handleSwitchUserRole = (): void => {
-    alert('Siden jeg er knapp, så skal bruker kunne bytte rolle');
+
+  const handleChangeRole = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    setUserRole(e.target.value as UserRole);
+    setIsLoggedIn(true);
+    setUsername('Knotten, Gudleik');
   };
 
   return (
     <>
+      <TopBannerExternal />
+      <TopBannerExternal
+        firstColumn={'First column'}
+        secondColumn={'Second column'}
+        thirdColumn={'Third column'}
+      >
+        <TextField label={'Søk'} placeholder={'Søk'} hideLabel />
+      </TopBannerExternal>
       <TopBannerExternal
         firstColumn={isLoggedIn ? 'First Column' : ''}
-        secondColumn={'Second column'}
-        thirdColumn={'Third column'}
-        isLoggedIn={isLoggedIn}
+        secondColumn={isLoggedIn ? 'Second column' : ''}
+        thirdColumn={isLoggedIn ? 'Third column' : ''}
         username={username}
+        userRole={userRole}
         onLogIn={handleLogIn}
         onLogOut={handleLogOut}
-        onSwitchUserRole={handleSwitchUserRole}
+        onSwitchUserRole={(): void => modalRef.current?.showModal()}
       />
-
-      <TopBannerExternal
-        firstColumn={'First column'}
-        username={usernameExample}
-        isLoggedIn
-      />
-      <TopBannerExternal
-        firstColumn={'First column'}
-        secondColumn={'Second column'}
-        username={usernameExample}
-        userRole={'verge'}
-        isLoggedIn
-      />
-      <TopBannerExternal
-        firstColumn={'First column'}
-        secondColumn={'Second column'}
-        thirdColumn={'Third column'}
-        username={usernameExample}
-        userRole={'virksomhet'}
-        isLoggedIn
-      />
+      <Modal ref={modalRef} title={'Dette er dine roller'}>
+        <RadioGroup
+          legend={'Velge en rolle'}
+          selectedValue={userRole}
+          onChange={handleChangeRole}
+        >
+          <RadioGroup.Radio value={'meg'}>
+            {'Innlogget som meg selv'}
+          </RadioGroup.Radio>
+          <RadioGroup.Radio value={'verge'}>
+            {'Innlogget som annen person'}
+          </RadioGroup.Radio>
+          <RadioGroup.Radio value={'virksomhet'}>
+            {'Innlogget som virksomhet'}
+          </RadioGroup.Radio>
+        </RadioGroup>
+      </Modal>
     </>
   );
 };
@@ -131,58 +153,64 @@ Example.parameters = {
 };
 
 export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
-  const usernameExample = 'Knotten, Gudleik';
-
+  const modalRef = useRef<HTMLDialogElement>(null);
   const [username, setUsername] = useState<string>('');
+  const [userRole, setUserRole] = useState<UserRole | undefined>(undefined);
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
 
   const handleLogOut = (): void => {
+    setUserRole(undefined);
+    setUsername('');
     setIsLoggedIn(false);
   };
+
   const handleLogIn = (): void => {
-    setIsLoggedIn(true);
-    setUsername(usernameExample);
-    alert(
-      'Hvis bruker har flere roller, så skal en modal tilby roller som kan velges'
-    );
+    modalRef.current?.showModal();
   };
-  const handleSwitchUserRole = (): void => {
-    alert('Siden jeg er knapp, så skal bruker kunne bytte rolle');
+
+  const handleChangeRole = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    setUserRole(e.target.value as UserRole);
+    setIsLoggedIn(true);
+    setUsername('Knotten, Gudleik');
   };
 
   return (
     <>
+      <TopBannerExternal />
+      <TopBannerExternal
+        firstColumn={'First column'}
+        secondColumn={'Second column'}
+        thirdColumn={'Third column'}
+      >
+        <TextField label={'Søk'} placeholder={'Søk'} hideLabel />
+      </TopBannerExternal>
       <TopBannerExternal
         firstColumn={isLoggedIn ? 'First Column' : ''}
-        secondColumn={'Second column'}
-        thirdColumn={'Third column'}
-        isLoggedIn={isLoggedIn}
+        secondColumn={isLoggedIn ? 'Second column' : ''}
+        thirdColumn={isLoggedIn ? 'Third column' : ''}
         username={username}
+        userRole={userRole}
         onLogIn={handleLogIn}
         onLogOut={handleLogOut}
-        onSwitchUserRole={handleSwitchUserRole}
+        onSwitchUserRole={(): void => modalRef.current?.showModal()}
       />
-
-      <TopBannerExternal
-        firstColumn={'First column'}
-        username={usernameExample}
-        isLoggedIn
-      />
-      <TopBannerExternal
-        firstColumn={'First column'}
-        secondColumn={'Second column'}
-        username={usernameExample}
-        userRole={'verge'}
-        isLoggedIn
-      />
-      <TopBannerExternal
-        firstColumn={'First column'}
-        secondColumn={'Second column'}
-        thirdColumn={'Third column'}
-        username={usernameExample}
-        userRole={'virksomhet'}
-        isLoggedIn
-      />
+      <Modal ref={modalRef} title={'Dette er dine roller'}>
+        <RadioGroup
+          legend={'Velge en rolle'}
+          selectedValue={userRole}
+          onChange={handleChangeRole}
+        >
+          <RadioGroup.Radio value={'meg'}>
+            {'Innlogget som meg selv'}
+          </RadioGroup.Radio>
+          <RadioGroup.Radio value={'verge'}>
+            {'Innlogget som annen person'}
+          </RadioGroup.Radio>
+          <RadioGroup.Radio value={'virksomhet'}>
+            {'Innlogget som virksomhet'}
+          </RadioGroup.Radio>
+        </RadioGroup>
+      </Modal>
     </>
   );
 };

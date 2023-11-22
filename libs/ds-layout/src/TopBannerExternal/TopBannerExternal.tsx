@@ -40,7 +40,6 @@ export const TopBannerExternal = forwardRef<
       username,
       usernameAs,
       userRole,
-      isLoggedIn,
       noLinkLogo,
       children,
       onLogIn,
@@ -52,12 +51,15 @@ export const TopBannerExternal = forwardRef<
     const { t } = useTranslation('ds_pages', { i18n: dsI18n });
 
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
     const handleClick = (): void => {
       setIsMenuOpen(!isMenuOpen);
     };
 
     const threeColumnsClassName = thirdColumn ? styles.columnsThree : '';
     const twoColumnsClassName = secondColumn ? styles.columnsTwo : '';
+
+    console.log(`Hva er onLogIn ${onLogIn}`);
 
     return (
       <header
@@ -92,19 +94,18 @@ export const TopBannerExternal = forwardRef<
               )}
 
               {/** TODO - FRONT-1161 språkmeny */}
-              {/** TODO - FRONT-1161 skjule inn- og utlogging */}
-              {isLoggedIn && (
+
+              {/** TODO - FRONT-1161 en smarte måtte enn dette */}
+              {onLogIn && onLogOut && username && userRole && (
                 <>
-                  {/** TODO - FRONT-1161 username som bare text og implementere usernameAs */}
-                  {username && (
-                    <TopBannerUser
-                      role={userRole}
-                      as={usernameAs}
-                      onClick={onSwitchUserRole}
-                    >
-                      {username}
-                    </TopBannerUser>
-                  )}
+                  {/** TODO - FRONT-1161 username som bare text og bruk av usernameAs eller ikke */}
+                  <TopBannerUser
+                    role={userRole}
+                    as={usernameAs}
+                    onClick={onSwitchUserRole}
+                  >
+                    {username}
+                  </TopBannerUser>
                   <TopBannerButton
                     svgPath={LogOutSVGpath}
                     variant={'outline'}
@@ -114,7 +115,8 @@ export const TopBannerExternal = forwardRef<
                   </TopBannerButton>
                 </>
               )}
-              {!isLoggedIn && (
+              {/** TODO - FRONT-1161 en smarte måtte enn dette */}
+              {onLogIn && onLogOut && !username && !userRole && (
                 <TopBannerButton
                   svgPath={LockOutlineSVGpath}
                   variant={'filled'}

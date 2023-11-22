@@ -2,16 +2,23 @@
 
 .username {
   overflow: hidden;
-  max-width: 58px;
+  max-width: 85px;
   text-overflow: ellipsis;
   white-space: nowrap;
 
-  @media (min-width: $breakpoint-s) {
-    max-width: 106px;
+  @media (min-width: $breakpoint-xs) {
+    max-width: 100px;
   }
 
-  // TODO FRONT-1161 Snakke med Andreas om greit at større breakpoint ikke skal ha noe begresning på bredden
+  @media (min-width: $breakpoint-s) {
+    max-width: 120px;
+  }
+
+  @media (min-width: $breakpoint-m) {
+    max-width: 320px;
+  }
+
   @media (min-width: $breakpoint-l) {
-    max-width: none;
+    max-width: 400px;
   }
 }

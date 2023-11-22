@@ -5,11 +5,14 @@ import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { ArrowDownSVGpath, Icon } from '@skatteetaten/ds-icons';
 
 import { getTopBannerSkipLinkHrefDefault } from './defaults';
-import { SkipLinkProps } from './TopBannerSkipLink.types';
+import { TopBannerSkipLinkProps } from './TopBannerSkipLink.types';
 
 import styles from './TopBannerSkipLink.module.scss';
 
-export const TopBannerSkipLink = forwardRef<HTMLAnchorElement, SkipLinkProps>(
+export const TopBannerSkipLink = forwardRef<
+  HTMLAnchorElement,
+  TopBannerSkipLinkProps
+>(
   (
     {
       id,

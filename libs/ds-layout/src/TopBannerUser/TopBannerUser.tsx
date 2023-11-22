@@ -8,7 +8,6 @@ import {
   PersonSVGpath,
 } from '@skatteetaten/ds-icons';
 
-import { getTopBannerUserRoleDefault } from './defaults';
 import { TopBannerUserProps } from './TopBannerUser.types';
 import { TopBannerButton } from '../TopBannerButton/TopBannerButton';
 import styles from '../TopBannerUser/TopBannerUser.module.scss';
@@ -20,7 +19,7 @@ export const TopBannerUser = forwardRef<HTMLButtonElement, TopBannerUserProps>(
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
-      role = getTopBannerUserRoleDefault(),
+      role,
       onClick,
       children,
     },
@@ -29,8 +28,10 @@ export const TopBannerUser = forwardRef<HTMLButtonElement, TopBannerUserProps>(
     const { t } = useTranslation('ds_pages', { i18n: dsI18n });
 
     let roleSVGpath = PersonSVGpath;
-    let title = t('userbutton.SelfIconText');
-    if (role === 'virksomhet') {
+    let title = '';
+    if (role === 'meg') {
+      title = t('userbutton.SelfIconText');
+    } else if (role === 'virksomhet') {
       roleSVGpath = BriefcaseSVGpath;
       title = t('userbutton.WorkIconText');
     } else if (role === 'verge') {

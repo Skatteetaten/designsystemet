@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-import { SkipLinkProps } from '../TopBannerSkipLink/TopBannerSkipLink.types';
+import { TopBannerSkipLinkProps } from '../TopBannerSkipLink/TopBannerSkipLink.types';
 import { UsernameAs, UserRole } from '../TopBannerUser/TopBannerUser.types';
 
 type TopBannerLogoDiscriminatedProps =
@@ -41,9 +41,9 @@ interface TopBannerCommonProps extends BaseProps {
     thirdColumn?: string;
   };
   /** Overskriver default lenketekst. */
-  skipLinkText?: SkipLinkProps['children'];
+  skipLinkText?: TopBannerSkipLinkProps['children'];
   /** Overskriver default verdi til href som flytter fokus til main-element. */
-  skipLinkURL?: SkipLinkProps['href'];
+  skipLinkURL?: TopBannerSkipLinkProps['href'];
   /** Brukernavn */
   username?: string;
   /** Brukernavn enten som button hvis bruker har flere roller eller bare tekst når bruker har en rolle */
@@ -52,8 +52,6 @@ interface TopBannerCommonProps extends BaseProps {
   userRole?: UserRole;
   /** Callback når username-knapp trykkes på. */
   onSwitchUserRole?: () => void;
-  /** Om bruker er logget inn. Når ikke innlogget, vises logg inn-knapp. Når logget inn, vises logg ut-knapp og brukernavn */
-  isLoggedIn?: boolean;
   /** Callback når Logg inn-knapp trykkes på. */
   onLogIn?: () => void;
   /** Callback når Logg ut-knapp trykkes på. */
