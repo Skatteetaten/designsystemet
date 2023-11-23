@@ -98,7 +98,6 @@ export const TopBannerExternal = forwardRef<
               {/** TODO - FRONT-1161 en smarte måtte enn dette */}
               {onLogIn && onLogOut && username && userRole && (
                 <>
-                  {/** TODO - FRONT-1161 username som bare text og bruk av usernameAs eller ikke */}
                   <TopBannerUser
                     role={userRole}
                     as={usernameAs}
@@ -132,7 +131,7 @@ export const TopBannerExternal = forwardRef<
           <div className={styles.separatorRight}></div>
           <div className={styles.separatorLeft}></div>
         </div>
-        {/** TODO - FRONT-1161 når menyen åpnes må fokusrekkefølgen fikses */}
+        {/** TODO - FRONT-1161 når menyen åpnes må fokusrekkefølgen fikses og at menyen lukker seg når noe er valgt */}
         {isMenuOpen && (
           <div className={styles.menuDrawerContainer}>
             <nav

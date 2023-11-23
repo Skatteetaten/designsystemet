@@ -75,11 +75,15 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// const loginText = dsI18n.t('ds_pages:loginbutton.Title');
+const loginText = dsI18n.t('ds_pages:loginbutton.Title');
 const logoutText = dsI18n.t('ds_pages:logoutbutton.Title');
 const themeText = dsI18n.t('ds_pages:topbannerexternal.DrawerAriaLabel');
 const menuText = dsI18n.t('ds_pages:menubutton.Meny');
-const defaultArgs: TopBannerExternalProps = {};
+const defaultArgs: TopBannerExternalProps = {
+  onLogIn: undefined,
+  onLogOut: undefined,
+  onSwitchUserRole: undefined,
+};
 
 export const WithRef = {
   name: 'With Ref (FA1)',
@@ -142,9 +146,8 @@ export const WithDefaults = {
     // TODO FRONT-1161 test at skipLink finnes
     // TODO FRONT-1161 test at språkvelger finnes
 
-    // TODO FRONT-1161 Hvorfor blir logg inn button vist men ikke i stories.....
     // eslint-disable-next-line testing-library/no-node-access
-    // await expect(canvas.queryByText(loginText)).not.toBeInTheDocument();
+    await expect(canvas.queryByText(loginText)).not.toBeInTheDocument();
     // eslint-disable-next-line testing-library/no-node-access
     await expect(canvas.queryByText(menuText)).not.toBeInTheDocument();
     // eslint-disable-next-line testing-library/no-node-access
