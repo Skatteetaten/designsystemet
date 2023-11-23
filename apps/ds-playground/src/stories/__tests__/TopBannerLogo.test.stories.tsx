@@ -8,7 +8,11 @@ import { wrapper } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerLogo } from '../../../../../libs/ds-layout/src/TopBannerLogo/TopBannerLogo';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { TopBannerLogoProps } from '../../../../../libs/ds-layout/src/TopBannerLogo/TopBannerLogo.types';
+import {
+  logoAsArr,
+  LogoRefHandle,
+  TopBannerLogoProps,
+} from '../../../../../libs/ds-layout/src/TopBannerLogo/TopBannerLogo.types';
 import customLogo from '../../assets/custom-logo.svg';
 import customMobileLogo from '../../assets/custom-mobile-logo.svg';
 
@@ -24,6 +28,11 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    as: {
+      table: { disable: true },
+      options: [...logoAsArr],
+      control: 'inline-radio',
+    },
     logo: {
       table: { disable: true },
       control: 'select',
@@ -34,7 +43,6 @@ const meta = {
       control: 'select',
       options: ['', customMobileLogo],
     },
-    noLinkLogo: { table: { disable: true } },
     // HTML
     alt: { table: { disable: true } },
     href: { table: { disable: true } },
@@ -50,9 +58,10 @@ const defaultArgs: TopBannerLogoProps = {};
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ref: (instance: HTMLDivElement | null): void => {
-      if (instance) {
-        instance.id = 'dummyIdForwardedFromRef';
+    ...defaultArgs,
+    ref: (instance: LogoRefHandle | null): void => {
+      if (instance && instance.logoRef && instance.logoRef.current) {
+        instance.logoRef.current.id = 'dummyIdForwardedFromRef';
       }
     },
   },
@@ -64,8 +73,8 @@ export const WithRef = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const container = canvas.getAllByRole('generic')[1];
-    await expect(container).toHaveAttribute('id', 'dummyIdForwardedFromRef');
+    const link = canvas.getByRole('link');
+    await expect(link).toHaveAttribute('id', 'dummyIdForwardedFromRef');
   },
 } satisfies Story;
 
@@ -86,11 +95,11 @@ export const WithAttributes = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const container = canvas.getAllByRole('generic')[1];
-    await expect(container).toHaveAttribute('id', 'htmlId');
-    await expect(container).toHaveClass('dummyClassname');
-    await expect(container).toHaveAttribute('lang', 'en');
-    await expect(container).toHaveAttribute('data-testid', '123ID');
+    const link = canvas.getByRole('link');
+    await expect(link).toHaveAttribute('id', 'htmlId');
+    await expect(link).toHaveClass('dummyClassname');
+    await expect(link).toHaveAttribute('lang', 'en');
+    await expect(link).toHaveAttribute('data-testid', '123ID');
   },
 } satisfies Story;
 
@@ -117,14 +126,14 @@ export const Defaults = {
   },
 } satisfies Story;
 
-export const WithNoLinkLogo = {
-  name: 'With NoLinkLogo (A8)',
+export const WithAs = {
+  name: 'With As (A8)',
   args: {
     ...defaultArgs,
-    noLinkLogo: true,
+    as: 'div',
   },
   argTypes: {
-    noLinkLogo: { table: { disable: false } },
+    as: { table: { disable: false } },
   },
   parameters: {
     imageSnapshot: { disable: true },

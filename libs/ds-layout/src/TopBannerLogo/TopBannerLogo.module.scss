@@ -1,17 +1,17 @@
 @import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
-.containerLogo {
+.logoContainer {
+  display: flex;
   width: fit-content;
+  padding: var(--spacing-xs);
 }
 
-.logoLink {
-  display: flex;
-  padding: var(--spacing-xxs);
+.logoAsLink {
   text-decoration: none;
 
   &:focus {
-    outline: 2px solid var(--semantic-interactive-main);
-    outline-offset: 2px;
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+    outline: none;
   }
 }
 

@@ -9,6 +9,8 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { getTopBannerLogoHrefDefault } from '../../../../../libs/ds-layout/src/TopBannerLogo/defaults';
 // eslint-disable-next-line @nx/enforce-module-boundaries
+import { logoAsArr } from '../../../../../libs/ds-layout/src/TopBannerLogo/TopBannerLogo.types';
+// eslint-disable-next-line @nx/enforce-module-boundaries
 import { getTopBannerSkipLinkHrefDefault } from '../../../../../libs/ds-layout/src/TopBannerSkipLink/defaults';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import {
@@ -47,13 +49,17 @@ export default {
       options: ['', customMobileLogo, skeMobileLogo],
     },
     logoAltText: { table: { category: category.props } },
+    logoAs: {
+      table: { category: category.props },
+      options: [...logoAsArr],
+      control: 'inline-radio',
+    },
     logoURL: {
       table: {
         category: category.props,
         defaultValue: { summary: getTopBannerLogoHrefDefault() },
       },
     },
-    noLinkLogo: { table: { category: category.props } },
     username: { table: { category: category.props } },
     userRole: {
       table: { category: category.props },
@@ -114,7 +120,7 @@ export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
         firstColumn={'First column'}
         secondColumn={'Second column'}
         thirdColumn={'Third column'}
-        noLinkLogo
+        logoAs={'div'}
       >
         <div className={'messagebox_container'}>
           <div className={'messagebox'}>
@@ -189,7 +195,7 @@ export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
         firstColumn={'First column'}
         secondColumn={'Second column'}
         thirdColumn={'Third column'}
-        noLinkLogo
+        logoAs={'div'}
       >
         <div className={'messagebox_container'}>
           <div className={'messagebox'}>
