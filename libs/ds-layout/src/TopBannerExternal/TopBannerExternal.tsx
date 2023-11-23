@@ -31,6 +31,7 @@ export const TopBannerExternal = forwardRef<
       firstColumn,
       logo,
       logoAltText,
+      logoAs,
       logoURL,
       mobileLogo,
       secondColumn,
@@ -39,7 +40,6 @@ export const TopBannerExternal = forwardRef<
       thirdColumn,
       username,
       userRole,
-      noLinkLogo,
       children,
       onLogIn,
       onLogOut,
@@ -70,7 +70,7 @@ export const TopBannerExternal = forwardRef<
 
         <div className={styles.topContainer}>
           <TopBannerLogo
-            noLinkLogo={noLinkLogo}
+            as={logoAs}
             logo={logo}
             mobileLogo={mobileLogo}
             alt={logoAltText}

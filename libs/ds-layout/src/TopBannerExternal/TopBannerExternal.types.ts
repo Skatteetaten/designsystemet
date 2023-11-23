@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
+import { LogoAs } from '../TopBannerLogo/TopBannerLogo.types';
 import { TopBannerSkipLinkProps } from '../TopBannerSkipLink/TopBannerSkipLink.types';
 import { UserRole } from '../TopBannerUser/TopBannerUser.types';
 
@@ -15,22 +16,22 @@ type TopBannerLogoDiscriminatedProps =
       logoAltText?: never;
       /** Overskriver default URL. */
       logoURL?: never;
-      /** Hvis logo ikke skal være en lenke. */
-      noLinkLogo?: boolean;
+      /** HTML-tag for Logo. Styrer om logo skal kodes som en lenke eller ikke. */
+      logoAs?: LogoAs;
     }
   | {
       logo: string;
       mobileLogo: string;
       logoAltText: string;
       logoURL: string;
-      noLinkLogo?: false;
+      logoAs?: Extract<LogoAs, 'div'>;
     }
   | {
       logo: string;
       mobileLogo: string;
       logoAltText: string;
       logoURL?: never;
-      noLinkLogo: true;
+      logoAs?: Extract<LogoAs, 'a'>;
     };
 
 interface TopBannerCommonProps extends BaseProps {
@@ -42,7 +43,7 @@ interface TopBannerCommonProps extends BaseProps {
   };
   /** Overskriver default lenketekst. */
   skipLinkText?: TopBannerSkipLinkProps['children'];
-  /** Overskriver default verdi til href som flytter fokus til main-element. */
+  /** Overskriver default verdi til href som flytter fokus til toppen av hovedinnholdet. */
   skipLinkURL?: TopBannerSkipLinkProps['href'];
   /** Brukernavn */
   username?: string;

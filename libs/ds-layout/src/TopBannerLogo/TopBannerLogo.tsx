@@ -1,4 +1,4 @@
-import { forwardRef, ReactElement, ReactNode, JSX } from 'react';
+import { forwardRef, JSX, useRef, useImperativeHandle } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import {
@@ -7,82 +7,76 @@ import {
   Languages,
 } from '@skatteetaten/ds-core-utils';
 
-import { getTopBannerLogoHrefDefault } from './defaults';
+import {
+  getTopBannerLogoAsDefault,
+  getTopBannerLogoHrefDefault,
+} from './defaults';
 import defaultEnglishLogo from './ske-logo-en.svg';
 import defaultMobileLogo from './ske-logo-mobile.svg';
 import defaultNorwegainLogo from './ske-logo.svg';
-import {
-  TopBannerLogoProps,
-  ConditionalWrapperProps,
-} from './TopBannerLogo.types';
+import { LogoRefHandle, TopBannerLogoProps } from './TopBannerLogo.types';
 
 import styles from './TopBannerLogo.module.scss';
 
-const ConditionalWrapper: React.FC<ConditionalWrapperProps> = ({
-  condition,
-  wrapper,
-  children,
-}) => (condition ? children : wrapper(children));
-
-export const TopBannerLogo = forwardRef<HTMLImageElement, TopBannerLogoProps>(
+export const TopBannerLogo = forwardRef<LogoRefHandle, TopBannerLogoProps>(
   (
     {
       id,
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
+      as: Tag = getTopBannerLogoAsDefault(),
       logo,
       href = getTopBannerLogoHrefDefault(),
       mobileLogo,
-      noLinkLogo,
       alt,
     },
     ref
   ): JSX.Element => {
     const { t } = useTranslation('ds_pages', { i18n: dsI18n });
 
-    const linkWrapper = (children: ReactNode): ReactElement => (
-      <a href={href} className={styles.logoLink}>
-        {children}
-      </a>
-    );
+    const logoRef = useRef<HTMLAnchorElement & HTMLDivElement>(null);
+    useImperativeHandle(ref, () => ({
+      logoRef: logoRef,
+    }));
 
     const defaultLogo =
       dsI18n.language === Languages.Engelsk
         ? defaultEnglishLogo
         : defaultNorwegainLogo;
 
-    const defaultAltText = noLinkLogo
-      ? t('topbannerexternal.SkeLogoImageText')
-      : t('topbannerexternal.SkeLogoLinkText');
+    const defaultAltText =
+      Tag === 'div'
+        ? t('topbannerexternal.SkeLogoImageText')
+        : t('topbannerexternal.SkeLogoLinkText');
     const altText = alt ?? defaultAltText;
 
+    const asClassName = Tag !== 'div' ? styles.logoAsLink : '';
+    const concatenatedClassName =
+      `${className} ${styles.logoContainer} ${asClassName}`.trim();
+
     return (
-      <div
-        ref={ref}
+      <Tag
+        ref={logoRef}
         id={id}
-        className={`${className} ${styles.containerLogo}`.trim()}
+        className={concatenatedClassName}
         lang={lang}
         data-testid={dataTestId}
+        href={Tag === 'div' ? undefined : href}
       >
-        <ConditionalWrapper
-          condition={noLinkLogo ?? false}
-          wrapper={linkWrapper}
-        >
-          <>
-            <img
-              className={styles.logo_mobile}
-              alt={altText}
-              src={mobileLogo ?? defaultMobileLogo}
-            />
-            <img
-              className={styles.logo_desktop}
-              alt={altText}
-              src={logo ?? defaultLogo}
-            />
-          </>
-        </ConditionalWrapper>
-      </div>
+        <>
+          <img
+            className={styles.logo_mobile}
+            alt={altText}
+            src={mobileLogo ?? defaultMobileLogo}
+          />
+          <img
+            className={styles.logo_desktop}
+            alt={altText}
+            src={logo ?? defaultLogo}
+          />
+        </>
+      </Tag>
     );
   }
 );

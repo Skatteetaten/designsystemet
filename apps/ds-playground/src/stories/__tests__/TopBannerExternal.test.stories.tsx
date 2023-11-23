@@ -10,6 +10,8 @@ import { Meta, StoryObj } from '@storybook/react';
 import { fireEvent, within } from '@storybook/testing-library';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
+import { logoAsArr } from '../../../../../libs/ds-layout/src/TopBannerLogo/TopBannerLogo.types';
+// eslint-disable-next-line @nx/enforce-module-boundaries
 import { userRoleArr } from '../../../../../libs/ds-layout/src/TopBannerUser/TopBannerUser.types';
 import { category } from '../../../.storybook/helpers';
 import customLogo from '../../assets/custom-logo.svg';
@@ -47,8 +49,12 @@ const meta = {
       options: ['', customMobileLogo, skeMobileLogo],
     },
     logoAltText: { table: { disable: true } },
+    logoAs: {
+      table: { disable: true },
+      options: [...logoAsArr],
+      control: 'inline-radio',
+    },
     logoURL: { table: { disable: true } },
-    noLinkLogo: { table: { disable: true } },
     username: { table: { disable: true } },
     userRole: {
       table: { disable: true },

@@ -20,20 +20,18 @@ exports[`Tester/TopBannerExternal ClickMainMenuOpenAndClose play-test 1`] = `
       </span>
     </a>
     <div class="TopBannerExternal_topContainer__WnqE6">
-      <div class="TopBannerLogo_containerLogo__HNnbt">
-        <a href="https://www.skatteetaten.no/"
-           class="TopBannerLogo_logoLink__DvORV"
+      <a class="TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
+         href="https://www.skatteetaten.no/"
+      >
+        <img class="TopBannerLogo_logo_mobile__x4lpB"
+             alt="Forside Skatteetaten"
+             src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
         >
-          <img class="TopBannerLogo_logo_mobile__x4lpB"
-               alt="Forside Skatteetaten"
-               src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
-          >
-          <img class="TopBannerLogo_logo_desktop__SI+eK"
-               alt="Forside Skatteetaten"
-               src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
-          >
-        </a>
-      </div>
+        <img class="TopBannerLogo_logo_desktop__SI+eK"
+             alt="Forside Skatteetaten"
+             src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+        >
+      </a>
       <div class="TopBannerExternal_contentContainer__h2K6k">
         <div class="TopBannerExternal_content__obwYA">
           <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_standard__7194L  undefined"
@@ -89,20 +87,18 @@ exports[`Tester/TopBannerExternal WithAttributes play-test 1`] = `
       </span>
     </a>
     <div class="TopBannerExternal_topContainer__WnqE6">
-      <div class="TopBannerLogo_containerLogo__HNnbt">
-        <a href="https://www.skatteetaten.no/"
-           class="TopBannerLogo_logoLink__DvORV"
+      <a class="TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
+         href="https://www.skatteetaten.no/"
+      >
+        <img class="TopBannerLogo_logo_mobile__x4lpB"
+             alt="Forside Skatteetaten"
+             src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
         >
-          <img class="TopBannerLogo_logo_mobile__x4lpB"
-               alt="Forside Skatteetaten"
-               src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
-          >
-          <img class="TopBannerLogo_logo_desktop__SI+eK"
-               alt="Forside Skatteetaten"
-               src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
-          >
-        </a>
-      </div>
+        <img class="TopBannerLogo_logo_desktop__SI+eK"
+             alt="Forside Skatteetaten"
+             src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+        >
+      </a>
       <div class="TopBannerExternal_contentContainer__h2K6k">
         <div class="TopBannerExternal_content__obwYA">
           <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx  undefined">
@@ -152,20 +148,18 @@ exports[`Tester/TopBannerExternal WithChildren play-test 1`] = `
       </span>
     </a>
     <div class="TopBannerExternal_topContainer__WnqE6">
-      <div class="TopBannerLogo_containerLogo__HNnbt">
-        <a href="https://www.skatteetaten.no/"
-           class="TopBannerLogo_logoLink__DvORV"
+      <a class="TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
+         href="https://www.skatteetaten.no/"
+      >
+        <img class="TopBannerLogo_logo_mobile__x4lpB"
+             alt="Forside Skatteetaten"
+             src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
         >
-          <img class="TopBannerLogo_logo_mobile__x4lpB"
-               alt="Forside Skatteetaten"
-               src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
-          >
-          <img class="TopBannerLogo_logo_desktop__SI+eK"
-               alt="Forside Skatteetaten"
-               src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
-          >
-        </a>
-      </div>
+        <img class="TopBannerLogo_logo_desktop__SI+eK"
+             alt="Forside Skatteetaten"
+             src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+        >
+      </a>
       <div class="TopBannerExternal_contentContainer__h2K6k">
         <div>
           <div class>
@@ -221,20 +215,18 @@ exports[`Tester/TopBannerExternal WithDefaults play-test 1`] = `
       </span>
     </a>
     <div class="TopBannerExternal_topContainer__WnqE6">
-      <div class="TopBannerLogo_containerLogo__HNnbt">
-        <a href="https://www.skatteetaten.no/"
-           class="TopBannerLogo_logoLink__DvORV"
+      <a class="TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
+         href="https://www.skatteetaten.no/"
+      >
+        <img class="TopBannerLogo_logo_mobile__x4lpB"
+             alt="Forside Skatteetaten"
+             src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
         >
-          <img class="TopBannerLogo_logo_mobile__x4lpB"
-               alt="Forside Skatteetaten"
-               src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
-          >
-          <img class="TopBannerLogo_logo_desktop__SI+eK"
-               alt="Forside Skatteetaten"
-               src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
-          >
-        </a>
-      </div>
+        <img class="TopBannerLogo_logo_desktop__SI+eK"
+             alt="Forside Skatteetaten"
+             src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+        >
+      </a>
       <div class="TopBannerExternal_contentContainer__h2K6k">
         <div class="TopBannerExternal_content__obwYA">
         </div>
@@ -270,20 +262,18 @@ exports[`Tester/TopBannerExternal WithFirstAndSecondColumnAndClassNames play-tes
       </span>
     </a>
     <div class="TopBannerExternal_topContainer__WnqE6">
-      <div class="TopBannerLogo_containerLogo__HNnbt">
-        <a href="https://www.skatteetaten.no/"
-           class="TopBannerLogo_logoLink__DvORV"
+      <a class="TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
+         href="https://www.skatteetaten.no/"
+      >
+        <img class="TopBannerLogo_logo_mobile__x4lpB"
+             alt="Forside Skatteetaten"
+             src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
         >
-          <img class="TopBannerLogo_logo_mobile__x4lpB"
-               alt="Forside Skatteetaten"
-               src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
-          >
-          <img class="TopBannerLogo_logo_desktop__SI+eK"
-               alt="Forside Skatteetaten"
-               src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
-          >
-        </a>
-      </div>
+        <img class="TopBannerLogo_logo_desktop__SI+eK"
+             alt="Forside Skatteetaten"
+             src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+        >
+      </a>
       <div class="TopBannerExternal_contentContainer__h2K6k">
         <div class="TopBannerExternal_content__obwYA">
           <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_standard__7194L  undefined"
@@ -347,20 +337,18 @@ exports[`Tester/TopBannerExternal WithFirstAndSecondColumnClassNamesAndBreakpoin
       </span>
     </a>
     <div class="TopBannerExternal_topContainer__WnqE6">
-      <div class="TopBannerLogo_containerLogo__HNnbt">
-        <a href="https://www.skatteetaten.no/"
-           class="TopBannerLogo_logoLink__DvORV"
+      <a class="TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
+         href="https://www.skatteetaten.no/"
+      >
+        <img class="TopBannerLogo_logo_mobile__x4lpB"
+             alt="Forside Skatteetaten"
+             src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
         >
-          <img class="TopBannerLogo_logo_mobile__x4lpB"
-               alt="Forside Skatteetaten"
-               src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
-          >
-          <img class="TopBannerLogo_logo_desktop__SI+eK"
-               alt="Forside Skatteetaten"
-               src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
-          >
-        </a>
-      </div>
+        <img class="TopBannerLogo_logo_desktop__SI+eK"
+             alt="Forside Skatteetaten"
+             src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+        >
+      </a>
       <div class="TopBannerExternal_contentContainer__h2K6k">
         <div class="TopBannerExternal_content__obwYA">
           <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_standard__7194L  undefined"
@@ -424,20 +412,18 @@ exports[`Tester/TopBannerExternal WithFirstAndSecondColumnClassNamesAndBreakpoin
       </span>
     </a>
     <div class="TopBannerExternal_topContainer__WnqE6">
-      <div class="TopBannerLogo_containerLogo__HNnbt">
-        <a href="https://www.skatteetaten.no/"
-           class="TopBannerLogo_logoLink__DvORV"
+      <a class="TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
+         href="https://www.skatteetaten.no/"
+      >
+        <img class="TopBannerLogo_logo_mobile__x4lpB"
+             alt="Forside Skatteetaten"
+             src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
         >
-          <img class="TopBannerLogo_logo_mobile__x4lpB"
-               alt="Forside Skatteetaten"
-               src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
-          >
-          <img class="TopBannerLogo_logo_desktop__SI+eK"
-               alt="Forside Skatteetaten"
-               src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
-          >
-        </a>
-      </div>
+        <img class="TopBannerLogo_logo_desktop__SI+eK"
+             alt="Forside Skatteetaten"
+             src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+        >
+      </a>
       <div class="TopBannerExternal_contentContainer__h2K6k">
         <div class="TopBannerExternal_content__obwYA">
           <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_standard__7194L  undefined"
@@ -501,20 +487,18 @@ exports[`Tester/TopBannerExternal WithFirstColumnAndClassNames play-test 1`] = `
       </span>
     </a>
     <div class="TopBannerExternal_topContainer__WnqE6">
-      <div class="TopBannerLogo_containerLogo__HNnbt">
-        <a href="https://www.skatteetaten.no/"
-           class="TopBannerLogo_logoLink__DvORV"
+      <a class="TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
+         href="https://www.skatteetaten.no/"
+      >
+        <img class="TopBannerLogo_logo_mobile__x4lpB"
+             alt="Forside Skatteetaten"
+             src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
         >
-          <img class="TopBannerLogo_logo_mobile__x4lpB"
-               alt="Forside Skatteetaten"
-               src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
-          >
-          <img class="TopBannerLogo_logo_desktop__SI+eK"
-               alt="Forside Skatteetaten"
-               src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
-          >
-        </a>
-      </div>
+        <img class="TopBannerLogo_logo_desktop__SI+eK"
+             alt="Forside Skatteetaten"
+             src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+        >
+      </a>
       <div class="TopBannerExternal_contentContainer__h2K6k">
         <div class="TopBannerExternal_content__obwYA">
           <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_standard__7194L  undefined"
@@ -575,20 +559,18 @@ exports[`Tester/TopBannerExternal WithFirstColumnClassNamesAndBreakpointS play-t
       </span>
     </a>
     <div class="TopBannerExternal_topContainer__WnqE6">
-      <div class="TopBannerLogo_containerLogo__HNnbt">
-        <a href="https://www.skatteetaten.no/"
-           class="TopBannerLogo_logoLink__DvORV"
+      <a class="TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
+         href="https://www.skatteetaten.no/"
+      >
+        <img class="TopBannerLogo_logo_mobile__x4lpB"
+             alt="Forside Skatteetaten"
+             src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
         >
-          <img class="TopBannerLogo_logo_mobile__x4lpB"
-               alt="Forside Skatteetaten"
-               src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
-          >
-          <img class="TopBannerLogo_logo_desktop__SI+eK"
-               alt="Forside Skatteetaten"
-               src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
-          >
-        </a>
-      </div>
+        <img class="TopBannerLogo_logo_desktop__SI+eK"
+             alt="Forside Skatteetaten"
+             src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+        >
+      </a>
       <div class="TopBannerExternal_contentContainer__h2K6k">
         <div class="TopBannerExternal_content__obwYA">
           <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_standard__7194L  undefined"
@@ -649,20 +631,18 @@ exports[`Tester/TopBannerExternal WithFirstColumnClassNamesAndBreakpointXS play-
       </span>
     </a>
     <div class="TopBannerExternal_topContainer__WnqE6">
-      <div class="TopBannerLogo_containerLogo__HNnbt">
-        <a href="https://www.skatteetaten.no/"
-           class="TopBannerLogo_logoLink__DvORV"
+      <a class="TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
+         href="https://www.skatteetaten.no/"
+      >
+        <img class="TopBannerLogo_logo_mobile__x4lpB"
+             alt="Forside Skatteetaten"
+             src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
         >
-          <img class="TopBannerLogo_logo_mobile__x4lpB"
-               alt="Forside Skatteetaten"
-               src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
-          >
-          <img class="TopBannerLogo_logo_desktop__SI+eK"
-               alt="Forside Skatteetaten"
-               src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
-          >
-        </a>
-      </div>
+        <img class="TopBannerLogo_logo_desktop__SI+eK"
+             alt="Forside Skatteetaten"
+             src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+        >
+      </a>
       <div class="TopBannerExternal_contentContainer__h2K6k">
         <div class="TopBannerExternal_content__obwYA">
           <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_standard__7194L  undefined"
@@ -723,20 +703,18 @@ exports[`Tester/TopBannerExternal WithFirstSecondAndThirdColumnAndClassNames pla
       </span>
     </a>
     <div class="TopBannerExternal_topContainer__WnqE6">
-      <div class="TopBannerLogo_containerLogo__HNnbt">
-        <a href="https://www.skatteetaten.no/"
-           class="TopBannerLogo_logoLink__DvORV"
+      <a class="TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
+         href="https://www.skatteetaten.no/"
+      >
+        <img class="TopBannerLogo_logo_mobile__x4lpB"
+             alt="Forside Skatteetaten"
+             src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
         >
-          <img class="TopBannerLogo_logo_mobile__x4lpB"
-               alt="Forside Skatteetaten"
-               src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
-          >
-          <img class="TopBannerLogo_logo_desktop__SI+eK"
-               alt="Forside Skatteetaten"
-               src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
-          >
-        </a>
-      </div>
+        <img class="TopBannerLogo_logo_desktop__SI+eK"
+             alt="Forside Skatteetaten"
+             src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+        >
+      </a>
       <div class="TopBannerExternal_contentContainer__h2K6k">
         <div class="TopBannerExternal_content__obwYA">
           <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_standard__7194L  undefined"
@@ -803,20 +781,18 @@ exports[`Tester/TopBannerExternal WithFirstSecondAndThirdColumnClassNamesAndBrea
       </span>
     </a>
     <div class="TopBannerExternal_topContainer__WnqE6">
-      <div class="TopBannerLogo_containerLogo__HNnbt">
-        <a href="https://www.skatteetaten.no/"
-           class="TopBannerLogo_logoLink__DvORV"
+      <a class="TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
+         href="https://www.skatteetaten.no/"
+      >
+        <img class="TopBannerLogo_logo_mobile__x4lpB"
+             alt="Forside Skatteetaten"
+             src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
         >
-          <img class="TopBannerLogo_logo_mobile__x4lpB"
-               alt="Forside Skatteetaten"
-               src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
-          >
-          <img class="TopBannerLogo_logo_desktop__SI+eK"
-               alt="Forside Skatteetaten"
-               src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
-          >
-        </a>
-      </div>
+        <img class="TopBannerLogo_logo_desktop__SI+eK"
+             alt="Forside Skatteetaten"
+             src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+        >
+      </a>
       <div class="TopBannerExternal_contentContainer__h2K6k">
         <div class="TopBannerExternal_content__obwYA">
           <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_standard__7194L  undefined"
@@ -883,20 +859,18 @@ exports[`Tester/TopBannerExternal WithFirstSecondAndThirdColumnClassNamesAndBrea
       </span>
     </a>
     <div class="TopBannerExternal_topContainer__WnqE6">
-      <div class="TopBannerLogo_containerLogo__HNnbt">
-        <a href="https://www.skatteetaten.no/"
-           class="TopBannerLogo_logoLink__DvORV"
+      <a class="TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
+         href="https://www.skatteetaten.no/"
+      >
+        <img class="TopBannerLogo_logo_mobile__x4lpB"
+             alt="Forside Skatteetaten"
+             src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
         >
-          <img class="TopBannerLogo_logo_mobile__x4lpB"
-               alt="Forside Skatteetaten"
-               src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
-          >
-          <img class="TopBannerLogo_logo_desktop__SI+eK"
-               alt="Forside Skatteetaten"
-               src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
-          >
-        </a>
-      </div>
+        <img class="TopBannerLogo_logo_desktop__SI+eK"
+             alt="Forside Skatteetaten"
+             src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+        >
+      </a>
       <div class="TopBannerExternal_contentContainer__h2K6k">
         <div class="TopBannerExternal_content__obwYA">
           <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_standard__7194L  undefined"
@@ -965,20 +939,18 @@ exports[`Tester/TopBannerExternal WithRef play-test 1`] = `
       </span>
     </a>
     <div class="TopBannerExternal_topContainer__WnqE6">
-      <div class="TopBannerLogo_containerLogo__HNnbt">
-        <a href="https://www.skatteetaten.no/"
-           class="TopBannerLogo_logoLink__DvORV"
+      <a class="TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
+         href="https://www.skatteetaten.no/"
+      >
+        <img class="TopBannerLogo_logo_mobile__x4lpB"
+             alt="Forside Skatteetaten"
+             src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
         >
-          <img class="TopBannerLogo_logo_mobile__x4lpB"
-               alt="Forside Skatteetaten"
-               src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
-          >
-          <img class="TopBannerLogo_logo_desktop__SI+eK"
-               alt="Forside Skatteetaten"
-               src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
-          >
-        </a>
-      </div>
+        <img class="TopBannerLogo_logo_desktop__SI+eK"
+             alt="Forside Skatteetaten"
+             src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+        >
+      </a>
       <div class="TopBannerExternal_contentContainer__h2K6k">
         <div class="TopBannerExternal_content__obwYA">
           <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx  undefined">

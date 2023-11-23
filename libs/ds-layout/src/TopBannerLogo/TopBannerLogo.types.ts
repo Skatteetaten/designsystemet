@@ -1,11 +1,12 @@
-import { ComponentPropsWithoutRef, ReactElement } from 'react';
+import { ComponentPropsWithoutRef, RefObject } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-export type ConditionalWrapperProps = {
-  children: ReactElement;
-  condition: boolean;
-  wrapper: (children: ReactElement) => JSX.Element;
+export const logoAsArr = ['a', 'div'] as const;
+export type LogoAs = (typeof logoAsArr)[number];
+
+export type LogoRefHandle = {
+  logoRef: RefObject<HTMLAnchorElement | HTMLDivElement>;
 };
 
 type RequiredLogoHTMLAttributes = Pick<ComponentPropsWithoutRef<'img'>, 'alt'>;
@@ -23,6 +24,6 @@ export interface TopBannerLogoProps
   logo?: string;
   /** Egendefinert logo for mobilvisning. Default er Skatteetatens logo. */
   mobileLogo?: string;
-  /** Hvis logo ikke skal være en lenke. Default er false */
-  noLinkLogo?: boolean;
+  /** HTML-tag for Logo. */
+  as?: LogoAs;
 }
