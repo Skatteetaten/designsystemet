@@ -31,7 +31,7 @@
     width: 150px;
   }
 
-  @media (min-width: $breakpoint-s) {
+  @media (min-width: $breakpoint-m) {
     &_mobile {
       display: none;
     }

@@ -166,26 +166,26 @@ export const WithLogoMobileLogoAltAndHref = {
   },
 } satisfies Story;
 
-export const WithBreakpointXS = {
-  name: 'With Breakpoint-xs',
+export const WithMobileScreen = {
+  name: 'With Small Screen',
   args: {
     ...defaultArgs,
   },
   parameters: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      defaultViewport: '--mobile',
     },
   },
 } satisfies Story;
 
-export const WithBreakpointS = {
-  name: 'With Breakpoint-s',
+export const WithBreakpointM = {
+  name: 'With Breakpoint-m',
   args: {
     ...defaultArgs,
   },
   parameters: {
     viewport: {
-      defaultViewport: '--breakpoint-s',
+      defaultViewport: '--breakpoint-m',
     },
   },
 } satisfies Story;
