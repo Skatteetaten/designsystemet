@@ -5,6 +5,7 @@ import { BaseProps } from '@skatteetaten/ds-core-utils';
 export const usernameAsArr = ['button', 'span'] as const;
 export type UsernameAs = (typeof usernameAsArr)[number];
 
+// TODO - FRONT-1161 Venter på nye verdier fra Eivind
 export const userRoleArr = ['meg', 'verge', 'virksomhet'] as const;
 export type UserRole = (typeof userRoleArr)[number];
 
@@ -25,6 +26,4 @@ export interface TopBannerUserProps
   children: string;
   /** Hvilken rolle innloget bruker har. */
   role: UserRole;
-  /** HTML-tag for brukernavn TODO FRONT-1161 ikke i bruk enda */
-  as?: UsernameAs;
 }

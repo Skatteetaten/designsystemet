@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 
-import { RadioGroup, TextField } from '@skatteetaten/ds-forms';
+import { RadioGroup } from '@skatteetaten/ds-forms';
+import { BellSVGpath, Icon } from '@skatteetaten/ds-icons';
 import { TopBannerExternal } from '@skatteetaten/ds-layout';
 import { Modal } from '@skatteetaten/ds-overlays';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
@@ -113,8 +114,14 @@ export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
         firstColumn={'First column'}
         secondColumn={'Second column'}
         thirdColumn={'Third column'}
+        noLinkLogo
       >
-        <TextField label={'Søk'} placeholder={'Søk'} hideLabel />
+        <div className={'messagebox_container'}>
+          <div className={'messagebox'}>
+            <Icon svgPath={BellSVGpath} />
+            {'Dette er en test-side.'}
+          </div>
+        </div>
       </TopBannerExternal>
       <TopBannerExternal
         firstColumn={isLoggedIn ? 'First Column' : ''}
@@ -182,8 +189,14 @@ export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
         firstColumn={'First column'}
         secondColumn={'Second column'}
         thirdColumn={'Third column'}
+        noLinkLogo
       >
-        <TextField label={'Søk'} placeholder={'Søk'} hideLabel />
+        <div className={'messagebox_container'}>
+          <div className={'messagebox'}>
+            <Icon svgPath={BellSVGpath} />
+            {'Dette er en test-side.'}
+          </div>
+        </div>
       </TopBannerExternal>
       <TopBannerExternal
         firstColumn={isLoggedIn ? 'First Column' : ''}

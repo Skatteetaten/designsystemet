@@ -38,7 +38,6 @@ export const TopBannerExternal = forwardRef<
       skipLinkURL,
       thirdColumn,
       username,
-      usernameAs,
       userRole,
       noLinkLogo,
       children,
@@ -58,8 +57,6 @@ export const TopBannerExternal = forwardRef<
 
     const threeColumnsClassName = thirdColumn ? styles.columnsThree : '';
     const twoColumnsClassName = secondColumn ? styles.columnsTwo : '';
-
-    console.log(`Hva er onLogIn ${onLogIn}`);
 
     return (
       <header
@@ -95,14 +92,10 @@ export const TopBannerExternal = forwardRef<
 
               {/** TODO - FRONT-1161 språkmeny */}
 
-              {/** TODO - FRONT-1161 en smarte måtte enn dette */}
+              {/** TODO - FRONT-1161 en smartere måtte enn dette */}
               {onLogIn && onLogOut && username && userRole && (
                 <>
-                  <TopBannerUser
-                    role={userRole}
-                    as={usernameAs}
-                    onClick={onSwitchUserRole}
-                  >
+                  <TopBannerUser role={userRole} onClick={onSwitchUserRole}>
                     {username}
                   </TopBannerUser>
                   <TopBannerButton
@@ -114,7 +107,7 @@ export const TopBannerExternal = forwardRef<
                   </TopBannerButton>
                 </>
               )}
-              {/** TODO - FRONT-1161 en smarte måtte enn dette */}
+              {/** TODO - FRONT-1161 en smartere måtte enn dette */}
               {onLogIn && onLogOut && !username && !userRole && (
                 <TopBannerButton
                   svgPath={LockOutlineSVGpath}

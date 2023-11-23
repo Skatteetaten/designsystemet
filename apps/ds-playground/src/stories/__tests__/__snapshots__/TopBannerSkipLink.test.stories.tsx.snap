@@ -51,7 +51,7 @@ exports[`Tester/TopBannerSkipLink (intern) WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <a id="htmlId"
      href="main:first-of-type"
-     class="dummyClassname TopBannerSkipLink_skipLink__5N+l7"
+     class="TopBannerSkipLink_skipLink__5N+l7 dummyClassname"
      lang="nb"
      data-testid="123ID"
   >
