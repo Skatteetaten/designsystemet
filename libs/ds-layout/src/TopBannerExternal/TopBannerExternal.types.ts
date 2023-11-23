@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 import { TopBannerSkipLinkProps } from '../TopBannerSkipLink/TopBannerSkipLink.types';
-import { UsernameAs, UserRole } from '../TopBannerUser/TopBannerUser.types';
+import { UserRole } from '../TopBannerUser/TopBannerUser.types';
 
 type TopBannerLogoDiscriminatedProps =
   | {
@@ -46,8 +46,6 @@ interface TopBannerCommonProps extends BaseProps {
   skipLinkURL?: TopBannerSkipLinkProps['href'];
   /** Brukernavn */
   username?: string;
-  /** Brukernavn enten som button hvis bruker har flere roller eller bare tekst når bruker har en rolle */
-  usernameAs?: UsernameAs;
   /** Brukerrolle */
   userRole?: UserRole;
   /** Callback når username-knapp trykkes på. */
