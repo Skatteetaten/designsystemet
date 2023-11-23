@@ -26,8 +26,6 @@ export const TopBannerSkipLink = forwardRef<
   ): JSX.Element => {
     const { t } = useTranslation('ds_pages', { i18n: dsI18n });
 
-    const concatenatedClassName = `${className} ${styles.skipLink}`.trim();
-
     const handleClick = (event: React.SyntheticEvent): void => {
       event.preventDefault();
 
@@ -44,7 +42,7 @@ export const TopBannerSkipLink = forwardRef<
         ref={ref}
         id={id}
         href={href}
-        className={concatenatedClassName}
+        className={`${styles.skipLink} ${className}`.trim()}
         lang={lang}
         data-testid={dataTestId}
         onClick={handleClick}
