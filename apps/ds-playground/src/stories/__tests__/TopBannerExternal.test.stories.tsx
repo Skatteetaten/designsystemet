@@ -80,6 +80,7 @@ const logoutText = dsI18n.t('ds_pages:logoutbutton.Title');
 const themeText = dsI18n.t('ds_pages:topbannerexternal.DrawerAriaLabel');
 const menuText = dsI18n.t('ds_pages:menubutton.Meny');
 const defaultArgs: TopBannerExternalProps = {
+  // Uten undefined så blir funksjonene initalisert med mockConstructor i Storybook
   onLogIn: undefined,
   onLogOut: undefined,
   onSwitchUserRole: undefined,
