@@ -8,7 +8,6 @@ import { TopBannerUser } from '../../../../../libs/ds-layout/src/TopBannerUser/T
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import {
   TopBannerUserProps,
-  usernameAsArr,
   userRoleArr,
 } from '../../../../../libs/ds-layout/src/TopBannerUser/TopBannerUser.types';
 
@@ -33,11 +32,6 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    as: {
-      table: { disable: true },
-      options: [...usernameAsArr],
-      control: 'inline-radio',
-    },
     children: { table: { disable: true } },
     role: {
       table: { disable: true },

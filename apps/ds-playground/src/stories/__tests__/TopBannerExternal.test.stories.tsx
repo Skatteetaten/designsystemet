@@ -10,10 +10,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { fireEvent, within } from '@storybook/testing-library';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import {
-  usernameAsArr,
-  userRoleArr,
-} from '../../../../../libs/ds-layout/src/TopBannerUser/TopBannerUser.types';
+import { userRoleArr } from '../../../../../libs/ds-layout/src/TopBannerUser/TopBannerUser.types';
 import { category } from '../../../.storybook/helpers';
 import customLogo from '../../assets/custom-logo.svg';
 import customMobileLogo from '../../assets/custom-mobile-logo.svg';
@@ -53,11 +50,6 @@ const meta = {
     logoURL: { table: { disable: true } },
     noLinkLogo: { table: { disable: true } },
     username: { table: { disable: true } },
-    usernameAs: {
-      table: { disable: true },
-      options: [...usernameAsArr],
-      control: 'inline-radio',
-    },
     userRole: {
       table: { disable: true },
       options: [...userRoleArr],
