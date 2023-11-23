@@ -11,7 +11,6 @@ import { getTopBannerLogoHrefDefault } from '../../../../../libs/ds-layout/src/T
 import { getTopBannerSkipLinkHrefDefault } from '../../../../../libs/ds-layout/src/TopBannerSkipLink/defaults';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import {
-  usernameAsArr,
   UserRole,
   userRoleArr,
 } from '../../../../../libs/ds-layout/src/TopBannerUser/TopBannerUser.types';
@@ -55,11 +54,6 @@ export default {
     },
     noLinkLogo: { table: { category: category.props } },
     username: { table: { category: category.props } },
-    usernameAs: {
-      table: { category: category.props },
-      options: [...usernameAsArr],
-      control: 'inline-radio',
-    },
     userRole: {
       table: { category: category.props },
       options: [...userRoleArr],
@@ -81,7 +75,13 @@ export default {
   },
 } satisfies Meta<typeof TopBannerExternal>;
 
-export const Preview: StoryObj<typeof TopBannerExternal> = {};
+export const Preview: StoryObj<typeof TopBannerExternal> = {
+  args: {
+    onLogIn: undefined,
+    onLogOut: undefined,
+    onSwitchUserRole: undefined,
+  },
+};
 
 export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
   const modalRef = useRef<HTMLDialogElement>(null);
