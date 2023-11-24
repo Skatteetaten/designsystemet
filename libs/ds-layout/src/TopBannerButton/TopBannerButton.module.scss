@@ -3,19 +3,12 @@
 .button {
   position: relative;
   display: flex;
-  height: 100%;
-
-  // TODO - Må justeres med høyden/bredden til TopBanner sine logo i mobilvisning
-  min-height: 56px;
-  box-sizing: border-box;
-  flex-flow: column nowrap;
-  flex-shrink: 0;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: var(--spacing-xs) var(--spacing-xxs) var(--spacing-xxs);
-  border: none;
+  border: 2px solid var(--palette-graphite-0);
   border-radius: var(--spacing-xs);
-
   // stylelint-disable-next-line property-no-vendor-prefix
   -webkit-appearance: none;
   appearance: none;
@@ -28,52 +21,14 @@
 
   .icon {
     padding: var(--spacing-xs);
+    fill: var(--semantic-interactive-main);
+  }
 
-    &_standard,
-    &_outline {
-      fill: var(--semantic-interactive-main);
-    }
-
-    &_filled {
+  &_filled {
+    .icon {
       border-radius: 50%;
       background-color: var(--semantic-interactive-main);
       fill: var(--palette-graphite-0);
-    }
-  }
-
-  &:focus {
-    border-radius: var(--spacing-xxs);
-    outline: none;
-
-    &::before {
-      position: absolute;
-      top: -2px;
-      right: -2px;
-      bottom: -2px;
-      left: -2px;
-      border: 2px solid var(--semantic-interactive-main);
-      border-radius: var(--spacing-xs);
-      content: '';
-    }
-  }
-
-  &:active {
-    box-shadow: none;
-    color: var(--semantic-interactive-foreground);
-
-    &::before {
-      border: 2px solid var(--semantic-interactive-foreground);
-    }
-
-    .icon {
-      &_standard,
-      &_outline {
-        fill: var(--semantic-interactive-foreground);
-      }
-
-      &_filled {
-        background-color: var(--semantic-interactive-foreground);
-      }
     }
   }
 
@@ -81,27 +36,82 @@
     background-color: var(--semantic-interactive-background);
   }
 
+  &:focus {
+    border-color: var(--semantic-interactive-main);
+    outline: none;
+  }
+
+  &:active {
+    // box-shadow: none;
+    border-color: var(--semantic-interactive-foreground);
+    background-color: var(--semantic-interactive-background);
+    color: var(--semantic-interactive-foreground);
+
+    .icon {
+      fill: var(--semantic-interactive-foreground);
+    }
+  }
+
+  &_filled:active {
+    .icon {
+      background-color: var(--semantic-interactive-foreground);
+      fill: var(--palette-graphite-0);
+    }
+  }
+
   @media (min-width: $breakpoint-s) {
-    height: auto;
-    min-height: auto;
     flex-direction: row;
     padding: var(--spacing-xxs) var(--spacing-m);
-    border: 3px solid;
+    border-width: 3px;
     border-radius: var(--spacing-l);
     font-size: var(--font-size-m);
-    gap: 5px;
+    gap: var(--spacing-xs);
     line-height: var(--semantic-line-height-buttons);
 
-    &_standard {
-      border-color: var(--palette-graphite-0);
+    &:hover {
+      background-color: var(--semantic-interactive-background);
+    }
 
-      &:hover {
-        border-color: var(--semantic-interactive-main);
+    &:focus {
+      &::before {
+        position: absolute;
+        top: -7px;
+        right: -7px;
+        bottom: -7px;
+        left: -7px;
+        border: 2px solid var(--semantic-interactive-main);
+        border-radius: 3rem;
+        content: '';
       }
+    }
+
+    &:active {
+      &::before {
+        position: absolute;
+        top: -7px;
+        right: -7px;
+        bottom: -7px;
+        left: -7px;
+        border: 2px solid var(--semantic-interactive-main);
+        border-radius: 3rem;
+        content: '';
+      }
+
+      background-color: var(--semantic-interactive-background);
+      transform: translateY(2px);
     }
 
     &_outline {
       border-color: var(--semantic-interactive-main);
+
+      &:active {
+        border-color: var(--semantic-interactive-main);
+        color: var(--semantic-interactive-main);
+
+        .icon {
+          fill: var(--semantic-interactive-main);
+        }
+      }
     }
 
     &_filled {
@@ -112,38 +122,16 @@
       &:hover {
         border-color: var(--semantic-interactive-foreground);
         background-color: var(--semantic-interactive-foreground);
+
+        .icon {
+          background-color: var(--semantic-interactive-foreground);
+        }
+      }
+
+      &:active {
+        border-color: var(--semantic-interactive-foreground);
+        background-color: var(--semantic-interactive-foreground);
         color: var(--palette-graphite-0);
-      }
-    }
-
-    &:hover {
-      .icon {
-        &_filled {
-          background-color: var(--semantic-interactive-foreground);
-        }
-      }
-    }
-
-    &:focus {
-      border-radius: 3rem;
-
-      &::before {
-        top: -7px;
-        right: -7px;
-        bottom: -7px;
-        left: -7px;
-        border-color: var(--semantic-interactive-main);
-        border-radius: 3rem;
-      }
-    }
-
-    &:active {
-      transform: translateY(2px);
-
-      .icon {
-        &_filled {
-          background-color: var(--semantic-interactive-foreground);
-        }
       }
     }
   }

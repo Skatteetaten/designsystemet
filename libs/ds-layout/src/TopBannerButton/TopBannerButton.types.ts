@@ -6,11 +6,7 @@ import {
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-export const topBannerButtonVariantArr = [
-  'standard',
-  'outline',
-  'filled',
-] as const;
+export const topBannerButtonVariantArr = ['outline', 'filled'] as const;
 export type TopBannerButtonVariant = (typeof topBannerButtonVariantArr)[number];
 
 type RequiredButtonHTMLAttributes = Pick<
