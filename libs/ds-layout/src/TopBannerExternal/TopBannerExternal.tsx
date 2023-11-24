@@ -13,7 +13,7 @@ import { TopBannerExternalProps } from './TopBannerExternal.types';
 import { TopBannerButton } from '../TopBannerButton/TopBannerButton';
 import { TopBannerLogo } from '../TopBannerLogo/TopBannerLogo';
 import { TopBannerSkipLink } from '../TopBannerSkipLink/TopBannerSkipLink';
-import { TopBannerUser } from '../TopBannerUser/TopBannerUser';
+import { TopBannerUserButton } from '../TopBannerUserButton/TopBannerUserButton';
 
 import styles from './TopBannerExternal.module.scss';
 
@@ -42,7 +42,7 @@ export const TopBannerExternal = forwardRef<
       children,
       onLogIn,
       onLogOut,
-      onSwitchUserRole,
+      onUsername,
     },
     ref
   ): JSX.Element => {
@@ -94,9 +94,9 @@ export const TopBannerExternal = forwardRef<
               {/** TODO - FRONT-1161 en smartere måtte enn dette */}
               {onLogIn && onLogOut && username && userRole && (
                 <>
-                  <TopBannerUser role={userRole} onClick={onSwitchUserRole}>
+                  <TopBannerUserButton role={userRole} onClick={onUsername}>
                     {username}
-                  </TopBannerUser>
+                  </TopBannerUserButton>
                   <TopBannerButton
                     svgPath={LogOutSVGpath}
                     variant={'outline'}

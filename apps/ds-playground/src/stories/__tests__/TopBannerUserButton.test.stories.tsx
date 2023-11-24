@@ -4,12 +4,12 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { TopBannerUser } from '../../../../../libs/ds-layout/src/TopBannerUser/TopBannerUser';
+import { TopBannerUserButton } from '../../../../../libs/ds-layout/src/TopBannerUserButton/TopBannerUserButton';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import {
-  TopBannerUserProps,
+  TopBannerUserButtonProps,
   userRoleArr,
-} from '../../../../../libs/ds-layout/src/TopBannerUser/TopBannerUser.types';
+} from '../../../../../libs/ds-layout/src/TopBannerUserButton/TopBannerUserButton.types';
 
 const verifyAttribute =
   (attribute: string, expectedValue: string) =>
@@ -21,8 +21,8 @@ const verifyAttribute =
   };
 
 const meta = {
-  component: TopBannerUser,
-  title: 'Tester/TopBannerUser (intern)',
+  component: TopBannerUserButton,
+  title: 'Tester/TopBannerUserButton (intern)',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },
@@ -41,13 +41,11 @@ const meta = {
     // Events
     onClick: { table: { disable: true } },
   },
-} as Meta<typeof TopBannerUser>;
+} as Meta<typeof TopBannerUserButton>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const username = 'SØRUMSAND-SCHOENBERG WILLIAM';
-const defaultArgs: TopBannerUserProps = {
-  children: username,
+const defaultArgs: TopBannerUserButtonProps = {
   role: 'meg',
 };
 
@@ -105,7 +103,8 @@ export const Defaults = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const usernameText = canvas.getByText(username);
+    // TODO FRONT 1161 - erstattet hardkodet tekst når tekstvariabelen finnes
+    const usernameText = canvas.getByText('Meg selv');
     const defaultTitle = canvas.getByText(
       dsI18n.t('ds_pages:userbutton.SelfIconText')
     );
@@ -114,18 +113,22 @@ export const Defaults = {
   },
 } satisfies Story;
 
-const TemplateWithAllRoles: StoryFn<typeof TopBannerUser> = (args) => (
+const TemplateWithAllRoles: StoryFn<typeof TopBannerUserButton> = (args) => (
   <div className={'topbannerButtonContainer'}>
     {userRoleArr.map((role, index) => {
       return (
-        <TopBannerUser
+        <TopBannerUserButton
           key={`user_${index}`}
           className={'bottomSpacingXL'}
           {...args}
           role={role}
         >
-          {`${role}`}
-        </TopBannerUser>
+          {`${
+            role === 'andre'
+              ? 'SØRUMSAND-SCHOENBERG WILLIAM'
+              : 'Navn på virksomhet'
+          }`}
+        </TopBannerUserButton>
       );
     })}
   </div>
@@ -161,6 +164,7 @@ export const WithAllRoles = {
 } satisfies Story;
 
 export const WithMobileScreen = {
+  render: TemplateWithAllRoles,
   name: 'With Small Screen (Username A2)',
   args: {
     ...defaultArgs,
@@ -173,6 +177,7 @@ export const WithMobileScreen = {
 } satisfies Story;
 
 export const WithBreakpointXS = {
+  render: TemplateWithAllRoles,
   name: 'With Breakpoint-xs (Username A2)',
   args: {
     ...defaultArgs,
@@ -185,6 +190,7 @@ export const WithBreakpointXS = {
 } satisfies Story;
 
 export const WithBreakpointS = {
+  render: TemplateWithAllRoles,
   name: 'With Breakpoint-s (Username A2)',
   args: {
     ...defaultArgs,
@@ -197,6 +203,7 @@ export const WithBreakpointS = {
 } satisfies Story;
 
 export const WithBreakpointM = {
+  render: TemplateWithAllRoles,
   name: 'With Breakpoint-m (Username A2)',
   args: {
     ...defaultArgs,
@@ -209,6 +216,7 @@ export const WithBreakpointM = {
 } satisfies Story;
 
 export const WithBreakpointL = {
+  render: TemplateWithAllRoles,
   name: 'With Breakpoint-l (Username A2)',
   args: {
     ...defaultArgs,
