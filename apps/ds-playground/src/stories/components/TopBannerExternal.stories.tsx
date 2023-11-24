@@ -7,7 +7,10 @@ import { Modal } from '@skatteetaten/ds-overlays';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { getTopBannerLogoHrefDefault } from '../../../../../libs/ds-layout/src/TopBannerLogo/defaults';
+import {
+  getTopBannerLogoAsDefault,
+  getTopBannerLogoHrefDefault,
+} from '../../../../../libs/ds-layout/src/TopBannerLogo/defaults';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { logoAsArr } from '../../../../../libs/ds-layout/src/TopBannerLogo/TopBannerLogo.types';
 // eslint-disable-next-line @nx/enforce-module-boundaries
@@ -16,7 +19,7 @@ import { getTopBannerSkipLinkHrefDefault } from '../../../../../libs/ds-layout/s
 import {
   UserRole,
   userRoleArr,
-} from '../../../../../libs/ds-layout/src/TopBannerUser/TopBannerUser.types';
+} from '../../../../../libs/ds-layout/src/TopBannerUserButton/TopBannerUserButton.types';
 import { category } from '../../../.storybook/helpers';
 import customLogo from '../../assets/custom-logo.svg';
 import customMobileLogo from '../../assets/custom-mobile-logo.svg';
@@ -52,6 +55,7 @@ export default {
       table: { category: category.props },
       options: [...logoAsArr],
       control: 'inline-radio',
+      defaultValue: { summary: getTopBannerLogoAsDefault() },
     },
     logoURL: {
       table: {
@@ -71,7 +75,7 @@ export default {
     // Events
     onLogIn: { control: { type: null }, table: { category: category.event } },
     onLogOut: { control: { type: null }, table: { category: category.event } },
-    onSwitchUserRole: {
+    onUsername: {
       control: { type: null },
       table: { category: category.event },
     },
@@ -86,7 +90,7 @@ export const Preview: StoryObj<typeof TopBannerExternal> = {
     // Uten undefined så blir funksjonene initalisert med mockConstructor i Storybook
     onLogIn: undefined,
     onLogOut: undefined,
-    onSwitchUserRole: undefined,
+    onUsername: undefined,
   },
 };
 
@@ -136,7 +140,7 @@ export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
         userRole={userRole}
         onLogIn={handleLogIn}
         onLogOut={handleLogOut}
-        onSwitchUserRole={(): void => modalRef.current?.showModal()}
+        onUsername={(): void => modalRef.current?.showModal()}
       />
       <Modal ref={modalRef} title={'Dette er dine roller'}>
         <RadioGroup
@@ -147,7 +151,7 @@ export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
           <RadioGroup.Radio value={'meg'}>
             {'Innlogget som meg selv'}
           </RadioGroup.Radio>
-          <RadioGroup.Radio value={'verge'}>
+          <RadioGroup.Radio value={'andre'}>
             {'Innlogget som annen person'}
           </RadioGroup.Radio>
           <RadioGroup.Radio value={'virksomhet'}>
@@ -211,7 +215,7 @@ export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
         userRole={userRole}
         onLogIn={handleLogIn}
         onLogOut={handleLogOut}
-        onSwitchUserRole={(): void => modalRef.current?.showModal()}
+        onUsername={(): void => modalRef.current?.showModal()}
       />
       <Modal ref={modalRef} title={'Dette er dine roller'}>
         <RadioGroup
@@ -222,7 +226,7 @@ export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
           <RadioGroup.Radio value={'meg'}>
             {'Innlogget som meg selv'}
           </RadioGroup.Radio>
-          <RadioGroup.Radio value={'verge'}>
+          <RadioGroup.Radio value={'andre'}>
             {'Innlogget som annen person'}
           </RadioGroup.Radio>
           <RadioGroup.Radio value={'virksomhet'}>

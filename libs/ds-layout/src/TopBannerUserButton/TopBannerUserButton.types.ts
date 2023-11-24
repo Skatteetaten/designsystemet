@@ -2,8 +2,7 @@ import { ComponentPropsWithoutRef, MouseEventHandler } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-// TODO - FRONT-1161 Venter på nye verdier fra Eivind
-export const userRoleArr = ['meg', 'verge', 'virksomhet'] as const;
+export const userRoleArr = ['meg', 'andre', 'virksomhet'] as const;
 export type UserRole = (typeof userRoleArr)[number];
 
 type RequiredButtonHTMLAttributes = Pick<
@@ -16,11 +15,11 @@ interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
-export interface TopBannerUserProps
+export interface TopBannerUserButtonProps
   extends ButtonPropsHTMLAttributes,
     BaseProps {
-  /** Navn på innlogget bruker. */
-  children: string;
+  /** Teksten på knappen. Hva teksten skal være henger sammen med userRole. Når rollen er 'meg', settes brukernavn til 'Meg selv' automatisk. Hvis rollen er 'andre', må det settes brukernavn til navnet på person det gjelder mens rollen 'virksomhet' settes navnet på virksomheten. */
+  children?: string;
   /** Hvilken rolle innloget bruker har. */
   role: UserRole;
 }

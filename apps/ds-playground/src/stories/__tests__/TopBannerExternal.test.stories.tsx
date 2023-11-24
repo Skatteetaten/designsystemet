@@ -12,7 +12,7 @@ import { fireEvent, within } from '@storybook/testing-library';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { logoAsArr } from '../../../../../libs/ds-layout/src/TopBannerLogo/TopBannerLogo.types';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { userRoleArr } from '../../../../../libs/ds-layout/src/TopBannerUser/TopBannerUser.types';
+import { userRoleArr } from '../../../../../libs/ds-layout/src/TopBannerUserButton/TopBannerUserButton.types';
 import { category } from '../../../.storybook/helpers';
 import customLogo from '../../assets/custom-logo.svg';
 import customMobileLogo from '../../assets/custom-mobile-logo.svg';
@@ -66,7 +66,7 @@ const meta = {
     // Events
     onLogIn: { table: { disable: true } },
     onLogOut: { table: { disable: true } },
-    onSwitchUserRole: { table: { disable: true } },
+    onUsername: { table: { disable: true } },
   },
 } satisfies Meta<typeof TopBannerExternal>;
 export default meta;
@@ -80,7 +80,7 @@ const defaultArgs: TopBannerExternalProps = {
   // Uten undefined så blir funksjonene initalisert med mockConstructor i Storybook
   onLogIn: undefined,
   onLogOut: undefined,
-  onSwitchUserRole: undefined,
+  onUsername: undefined,
 };
 
 export const WithRef = {

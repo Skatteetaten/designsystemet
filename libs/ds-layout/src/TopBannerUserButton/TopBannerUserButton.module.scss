@@ -2,23 +2,23 @@
 
 .username {
   overflow: hidden;
-  max-width: 85px;
+  max-width: 5.25rem;
   text-overflow: ellipsis;
   white-space: nowrap;
 
   @media (min-width: $breakpoint-xs) {
-    max-width: 100px;
+    max-width: 6.25rem;
   }
 
   @media (min-width: $breakpoint-s) {
-    max-width: 120px;
+    max-width: 7.5rem;
   }
 
   @media (min-width: $breakpoint-m) {
-    max-width: 320px;
+    max-width: 20rem;
   }
 
   @media (min-width: $breakpoint-l) {
-    max-width: 400px;
+    max-width: 25rem;
   }
 }

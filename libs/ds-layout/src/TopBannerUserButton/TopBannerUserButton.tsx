@@ -8,11 +8,15 @@ import {
   PersonSVGpath,
 } from '@skatteetaten/ds-icons';
 
-import { TopBannerUserProps } from './TopBannerUser.types';
+import { TopBannerUserButtonProps } from './TopBannerUserButton.types';
 import { TopBannerButton } from '../TopBannerButton/TopBannerButton';
-import styles from '../TopBannerUser/TopBannerUser.module.scss';
 
-export const TopBannerUser = forwardRef<HTMLButtonElement, TopBannerUserProps>(
+import styles from './TopBannerUserButton.module.scss';
+
+export const TopBannerUserButton = forwardRef<
+  HTMLButtonElement,
+  TopBannerUserButtonProps
+>(
   (
     {
       id,
@@ -28,17 +32,16 @@ export const TopBannerUser = forwardRef<HTMLButtonElement, TopBannerUserProps>(
     const { t } = useTranslation('ds_pages', { i18n: dsI18n });
 
     let roleSVGpath = PersonSVGpath;
-    let title = '';
-    if (role === 'meg') {
-      title = t('userbutton.SelfIconText');
-    } else if (role === 'virksomhet') {
+    let title = t('userbutton.SelfIconText');
+    if (role === 'virksomhet') {
       roleSVGpath = BriefcaseSVGpath;
       title = t('userbutton.WorkIconText');
-    } else if (role === 'verge') {
+    } else if (role === 'andre') {
       roleSVGpath = AccountMultipleSVGpath;
       title = t('userbutton.OtherIconText');
     }
 
+    // TODO FRONT 1161 - erstattet hardkodet tekst når tekstvariabelen finnes
     return (
       <TopBannerButton
         ref={ref}
@@ -52,10 +55,10 @@ export const TopBannerUser = forwardRef<HTMLButtonElement, TopBannerUserProps>(
         title={title}
         onClick={onClick}
       >
-        {children}
+        {children ? children : 'Meg selv'}
       </TopBannerButton>
     );
   }
 );
 
-TopBannerUser.displayName = 'TopBannerUser';
+TopBannerUserButton.displayName = 'TopBannerUserButton';
