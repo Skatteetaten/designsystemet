@@ -8,7 +8,7 @@ import {
 import { IconProps } from '@skatteetaten/ds-icons';
 
 export const panelVariantArr = ['outline', 'filled'] as const;
-export type PanelVariant = typeof panelVariantArr[number];
+export type PanelVariant = (typeof panelVariantArr)[number];
 
 export const panelColorArr = [
   'ochre',
@@ -17,10 +17,10 @@ export const panelColorArr = [
   'denim',
   'graphite',
 ] as const;
-export type PanelColor = typeof panelColorArr[number];
+export type PanelColor = (typeof panelColorArr)[number];
 
 export const panelPaddingArr = ['s', 'm', 'l', 'xl', 'xxl', 'mega'] as const;
-export type PanelPadding = typeof panelPaddingArr[number];
+export type PanelPadding = (typeof panelPaddingArr)[number];
 
 export const panelSpacingArr = [
   'xxs',
@@ -32,7 +32,7 @@ export const panelSpacingArr = [
   'xxl',
   'mega',
 ] as const;
-export type PanelSpacing = typeof panelSpacingArr[number];
+export type PanelSpacing = (typeof panelSpacingArr)[number];
 
 export interface PanelComponentCommonProps extends BaseProps {
   /** Tekst eller markup for Panel. */
@@ -65,12 +65,16 @@ export type PanelDiscriminatedGraphicProps =
   | {
       /** Source til illustrasjonsbilde */
       imageSource?: string;
+      /** Alt tekst til illustrasjonsbilde. Hvis bildet er meningsbærende, legg på alt tekst. */
+      imageSourceAltText?: string;
       /** Icon-komponent som en funksjon */
       renderIcon?: never;
     }
   | {
       /** Source til illustrasjonsbilde */
       imageSource?: never;
+      /** Alt tekst til illustrasjonsbilde. Hvis bildet er meningsbærende, legg på alt tekst. */
+      imageSourceAltText?: never;
       /** Icon-komponent som en funksjon */
       renderIcon?: () => ReactElement<IconProps>;
     };

@@ -1,9 +1,4 @@
-import {
-  getListAsDefault,
-  List,
-  listAsArr,
-  Paragraph,
-} from '@skatteetaten/ds-typography';
+import { getListAsDefault, List, Paragraph } from '@skatteetaten/ds-typography';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
@@ -15,13 +10,11 @@ export default {
   argTypes: {
     // Props
     hasSpacing: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
     },
     as: {
-      options: [...listAsArr],
       control: 'inline-radio',
       table: {
         category: category.props,
@@ -29,7 +22,6 @@ export default {
       },
     },
     children: {
-      control: 'object',
       table: { category: category.props },
     },
   },

@@ -72,13 +72,13 @@ exports[`Tester/Table/Table Defaults play-test 1`] = `
       </tbody>
       <tfoot>
         <tr class>
-          <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableSum_sum__JNHMR "
+          <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR "
               colspan="2"
               scope="row"
           >
             Sum
           </th>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableSum_sum__JNHMR ">
+          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR ">
             32,000
           </td>
         </tr>
@@ -164,13 +164,13 @@ exports[`Tester/Table/Table WithAttributes play-test 1`] = `
       </tbody>
       <tfoot>
         <tr class>
-          <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableSum_sum__JNHMR "
+          <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR "
               colspan="2"
               scope="row"
           >
             Sum
           </th>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableSum_sum__JNHMR ">
+          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR ">
             32,000
           </td>
         </tr>
@@ -443,13 +443,13 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
       </tbody>
       <tfoot>
         <tr class>
-          <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableSum_sum__JNHMR TableSum_sum_topSeparator__Ggyn4"
+          <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR TableSum_sum_topSeparator__Ggyn4"
               colspan="4"
               scope="row"
           >
             Sum
           </th>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableSum_sum__JNHMR TableSum_sum_topSeparator__Ggyn4">
+          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR TableSum_sum_topSeparator__Ggyn4">
             4555
           </td>
         </tr>
@@ -614,13 +614,13 @@ exports[`Tester/Table/Table WithRef play-test 1`] = `
       </tbody>
       <tfoot>
         <tr class>
-          <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableSum_sum__JNHMR "
+          <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR "
               colspan="2"
               scope="row"
           >
             Sum
           </th>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableSum_sum__JNHMR ">
+          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR ">
             32,000
           </td>
         </tr>
@@ -1090,13 +1090,13 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
       </tbody>
       <tfoot>
         <tr class>
-          <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_left__+6UbM  TableSum_sum__JNHMR TableSum_sum_topSeparator__Ggyn4"
+          <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR TableSum_sum_topSeparator__Ggyn4"
               colspan="4"
               scope="row"
           >
             Sum
           </th>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_left__+6UbM  TableSum_sum__JNHMR TableSum_sum_topSeparator__Ggyn4">
+          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR TableSum_sum_topSeparator__Ggyn4">
             4555
           </td>
         </tr>
@@ -1373,13 +1373,13 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
       </tbody>
       <tfoot>
         <tr class>
-          <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableSum_sum__JNHMR TableSum_sum_topSeparator__Ggyn4"
+          <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR TableSum_sum_topSeparator__Ggyn4"
               colspan="4"
               scope="row"
           >
             Sum
           </th>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableSum_sum__JNHMR TableSum_sum_topSeparator__Ggyn4">
+          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR TableSum_sum_topSeparator__Ggyn4">
             4555
           </td>
         </tr>

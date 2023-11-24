@@ -14,7 +14,7 @@
         "project": "libs/ds-core-utils/package.json",
         "entryFile": "libs/ds-core-utils/src/index.ts",
         "external": ["react/jsx-runtime"],
-        "rollupConfig": "@nx/react/plugins/bundle-rollup",
+        "rollupConfig": ["libs/ds-core-utils/rollup.config.js"],
         "compiler": "babel",
         "assets": [
           {
@@ -28,15 +28,17 @@
             "output": "."
           }
         ],
-        "babelUpwardRootMode": true,
-        "updateBuildableProjectDepsInPackageJson": true
+        "babelUpwardRootMode": true
       }
     },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/ds-core-utils/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "libs/ds-core-utils/**/*.{ts,tsx,js,jsx}",
+          "libs/ds-core-utils/package.json"
+        ]
       }
     },
     "test": {
@@ -76,5 +78,6 @@
         "command": "npm publish dist/libs/ds-core-utils {args.switches}"
       }
     }
-  }
+  },
+  "implicitDependencies": ["!ds-dev-config"]
 }

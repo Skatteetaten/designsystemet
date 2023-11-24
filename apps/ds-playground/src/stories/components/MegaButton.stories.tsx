@@ -1,4 +1,5 @@
 import { MegaButton } from '@skatteetaten/ds-buttons';
+import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
@@ -11,18 +12,15 @@ export default {
     // Props
     children: { table: { category: category.props } },
     isExternal: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
     },
     // HTML
     accessKey: {
-      control: 'text',
       table: { category: category.htmlAttribute },
     },
     disabled: {
-      control: 'boolean',
       table: {
         category: category.htmlAttribute,
       },
@@ -33,7 +31,7 @@ export default {
     type: {
       table: {
         category: category.htmlAttribute,
-        defaultValue: { summary: 'button' },
+        defaultValue: { summary: getCommonButtonTypeDefault() },
       },
     },
     // Aria

@@ -18,10 +18,12 @@ export default {
   argTypes: {
     // Props
     children: { table: { category: category.props } },
-    content: { table: { category: category.props } },
-    shadowRootNode: { table: { control: false, category: category.props } },
+    content: { control: 'text', table: { category: category.props } },
+    shadowRootNode: {
+      control: false,
+      table: { control: false, category: category.props },
+    },
     showErrorSummary: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
@@ -33,6 +35,7 @@ export default {
       table: {
         category: category.props,
         defaultValue: { summary: getErrorSummaryTitleAsDefault() },
+        type: { summary: headingAsArr },
       },
     },
   },

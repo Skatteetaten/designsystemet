@@ -1,9 +1,12 @@
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
 import { expect } from '@storybook/jest';
 import { Meta, StoryObj } from '@storybook/react';
-import { fireEvent, within } from '@storybook/testing-library';
+import { within } from '@storybook/testing-library';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
+import {
+  loremIpsumWithoutSpaces,
+  wrapper,
+} from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { LabelWithHelp } from '../../../../../libs/ds-forms/src/LabelWithHelp/LabelWithHelp';
 // eslint-disable-next-line @nx/enforce-module-boundaries
@@ -160,19 +163,21 @@ export const WithHideLabel = {
   },
 } satisfies Story;
 
-export const WithHelpText = {
-  name: 'With HelpText (FS-A1, FS-A5 delvis, FS-B2 delvis)',
+export const WithHelpTextSvgPathAndTitle = {
+  name: 'With HelpText HelpSvgPath And TitleHelpSvg (FS-A1, FS-A5 delvis, FS-B2 delvis)',
   args: {
     ...defaultArgs,
     helpText: defaultHelpText,
+    helpSvgPath: WarningSVGpath,
+    titleHelpSvg: 'Tooltip',
   },
   argTypes: {
     helpText: { table: { disable: false } },
+    helpSvgPath: { table: { disable: false } },
+    titleHelpSvg: { table: { disable: false } },
   },
   parameters: {
     imageSnapshot: {
-      hover: `${wrapper} > button`,
-      focus: `${wrapper} > button`,
       click: `${wrapper} > button`,
     },
   },
@@ -182,70 +187,25 @@ export const WithHelpText = {
       description: defaultChildrenText,
     });
     await expect(helpButton).toBeInTheDocument();
-    await expect(helpButton).toHaveAttribute('aria-expanded', 'false');
-    const helpSvg = canvas.getByLabelText('Hjelp', { selector: 'svg' });
-    await expect(helpSvg).toBeInTheDocument();
+    const svgNode = canvas.getByLabelText('Tooltip', { selector: 'svg' });
+    await expect(svgNode).toBeInTheDocument();
+    const label = canvas.getByText(defaultChildrenText);
+    await expect(helpButton).toHaveAttribute('aria-describedby', label.id);
   },
 } satisfies Story;
 
-export const WithHelpSvgPath = {
-  name: 'With HelpSvgPath (FS-A5 delvis)',
+export const WithLongChildren = {
+  name: 'With Long Children',
   args: {
     ...defaultArgs,
-    helpText: defaultHelpText,
-    helpSvgPath: WarningSVGpath,
+    children: loremIpsumWithoutSpaces,
   },
   argTypes: {
-    helpSvgPath: {
-      table: { disable: false },
-    },
-  },
-} satisfies Story;
-
-export const ClickHelpButton = {
-  name: 'Click HelpButton On And Off (FS-A5 delvis, FS-B2 delvis)',
-  args: {
-    ...defaultArgs,
-    helpText: defaultHelpText,
+    children: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: {
-      disable: true,
+    viewport: {
+      defaultViewport: '--mobile',
     },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const helpButton = canvas.getByRole('button', {
-      description: defaultChildrenText,
-    });
-    await expect(helpButton).toHaveAttribute('aria-expanded', 'false');
-    await fireEvent.click(helpButton);
-    await expect(helpButton).toHaveAttribute('aria-expanded', 'true');
-    const helpText = canvas.getByText(defaultHelpText);
-    await expect(helpText).toBeInTheDocument();
-    await fireEvent.click(helpButton);
-    await expect(helpText).not.toBeInTheDocument();
-    await expect(helpButton).toHaveAttribute('aria-expanded', 'false');
-  },
-} satisfies Story;
-
-export const ClickCloseButton = {
-  name: 'Close HelpText With CloseButton (FS-A5 delvis, FS-A6, FS-B2 delvis)',
-  args: {
-    ...defaultArgs,
-    helpText: defaultHelpText,
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const helpButton = canvas.getByRole('button', {
-      description: defaultChildrenText,
-    });
-    await fireEvent.click(helpButton);
-    const closeButton = canvas.getByTitle('Lukk');
-    await expect(closeButton).toBeInTheDocument();
-    const helpText = canvas.getByText(defaultHelpText);
-    await fireEvent.click(closeButton);
-    await expect(helpText).not.toBeInTheDocument();
-    await expect(helpButton).toHaveFocus();
   },
 } satisfies Story;

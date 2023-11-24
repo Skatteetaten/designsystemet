@@ -2,20 +2,15 @@
 // @ts-nocheck
 /* eslint-disable sonarjs/no-duplicate-string */
 
-import {
-  Button,
-  buttonVariantArr,
-  getButtonVariantDefault,
-} from '@skatteetaten/ds-buttons';
+import { Button, getButtonVariantDefault } from '@skatteetaten/ds-buttons';
+import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { getVersion } from '../utils/version.utils';
 
-type Story = StoryObj<typeof Button>;
-
-const meta = {
+export default {
   component: Button,
   title: 'Komponenter/Button',
   argTypes: {
@@ -27,8 +22,6 @@ const meta = {
       table: { category: category.props },
     },
     variant: {
-      options: [...buttonVariantArr],
-      control: 'radio',
       table: {
         category: category.props,
         defaultValue: { summary: getButtonVariantDefault() },
@@ -39,16 +32,14 @@ const meta = {
       table: { category: category.htmlAttribute },
     },
     disabled: {
-      control: 'boolean',
       table: {
         category: category.htmlAttribute,
       },
     },
     type: {
-      control: 'text',
       table: {
         category: category.htmlAttribute,
-        defaultValue: { summary: 'button' },
+        defaultValue: { summary: getCommonButtonTypeDefault() },
       },
     },
     // Aria
@@ -63,36 +54,31 @@ const meta = {
   },
 } as Meta<typeof Button>;
 
-export default meta;
-
 export const Preview: StoryObj<typeof Button> = {
   args: {
     children: 'Send inn skjema',
   },
 };
 
-export const Example: Story = {
-  render: (_args) => (
-    <>
-      <Button className={'exampleSpacing'} variant={'primary'}>
-        {'Send inn skjema '}
+export const Example: StoryFn<typeof Button> = (_args) => (
+  <>
+    <Button className={'exampleSpacing'}>{'Send inn skjema'}</Button>
+    <Button className={'exampleSpacing'} variant={'secondary'}>
+      {'Avbryt'}
+    </Button>
+    <div>
+      <Button className={'exampleSpacing'} variant={'tertiary'}>
+        {'Logg inn'}
       </Button>
-      <Button className={'exampleSpacing'} variant={'secondary'}>
-        {'Avbryt'}
-      </Button>
-      <div>
-        <Button className={'exampleSpacing'} variant={'tertiary'}>
-          {'Logg inn'}
-        </Button>
-      </div>
-      <Button className={'exampleSpacing'} variant={'danger'}>
-        {'Slett'}
-      </Button>
-    </>
-  ),
-  parameters: {
-    controls: {
-      exclude: /.*/,
-    },
+    </div>
+    <Button className={'exampleSpacing'} variant={'danger'}>
+      {'Slett'}
+    </Button>
+  </>
+);
+
+Example.parameters = {
+  controls: {
+    exclude: /.*/,
   },
 };

@@ -2,7 +2,10 @@ import {
   InlineButton,
   getInlineButtonPositionDefault,
 } from '@skatteetaten/ds-buttons';
-import { positionArr } from '@skatteetaten/ds-core-utils';
+import {
+  getCommonButtonTypeDefault,
+  positionArr,
+} from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath, CancelSVGpath } from '@skatteetaten/ds-icons';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
@@ -20,13 +23,13 @@ export default {
       options: [...positionArr],
       control: 'radio',
       table: {
-        type: { summary: positionArr.toString() },
         category: category.props,
         defaultValue: { summary: getInlineButtonPositionDefault() },
+        type: { summary: positionArr },
       },
     },
     svgPath: {
-      options: [''].concat(Object.keys(SystemSVGPaths)),
+      options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
       table: { category: category.props },
     },
@@ -35,7 +38,6 @@ export default {
       table: { category: category.htmlAttribute },
     },
     disabled: {
-      control: 'boolean',
       table: {
         category: category.htmlAttribute,
       },
@@ -43,7 +45,7 @@ export default {
     type: {
       table: {
         category: category.htmlAttribute,
-        defaultValue: { summary: 'button' },
+        defaultValue: { summary: getCommonButtonTypeDefault() },
       },
     },
     // Aria

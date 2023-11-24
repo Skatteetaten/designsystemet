@@ -1,5 +1,5 @@
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
-import { Heading, headingLevelArr } from '@skatteetaten/ds-typography';
+import { Heading } from '@skatteetaten/ds-typography';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
@@ -15,6 +15,7 @@ export default {
       control: 'inline-radio',
       table: {
         category: category.props,
+        type: { summary: headingAsArr },
       },
     },
     children: {
@@ -22,13 +23,11 @@ export default {
       table: { category: category.props },
     },
     hasSpacing: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
     },
     level: {
-      options: [...headingLevelArr],
       control: 'inline-radio',
       table: {
         category: category.props,

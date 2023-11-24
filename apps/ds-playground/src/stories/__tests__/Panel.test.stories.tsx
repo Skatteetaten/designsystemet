@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Button } from '@skatteetaten/ds-buttons';
 import {
   Panel,
@@ -14,7 +16,8 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
-import illustrationSource from './testUtils/test_bonde.svg';
+import farmerIllustration from '../../assets/farmer-illustration.svg';
+import waitIllustration from '../../assets/wait-alert-illustration.png';
 
 const tittelText = 'Det er en tittel';
 const subtittelText = 'Det er en undertittel';
@@ -53,11 +56,10 @@ const meta = {
     imageSource: {
       table: { disable: true },
       control: 'select',
-      options: [
-        '',
-        'test_bonde.7eebe78d220ecf48b97e4811ac2c5210.svg',
-        'd52134bda41b5aa041ef.png',
-      ],
+      options: ['', farmerIllustration, waitIllustration],
+    },
+    imageSourceAltText: {
+      table: { disable: true },
     },
     padding: {
       table: { disable: true },
@@ -110,7 +112,6 @@ const defaultArgs = {
 
 export const WithRef = {
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: HTMLParagraphElement | null): void => {
@@ -119,13 +120,10 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: { imageSnapshot: { disable: true } },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
@@ -135,7 +133,6 @@ export const WithRef = {
 
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
-
   args: {
     ...defaultArgs,
     id: 'htmlId',
@@ -143,14 +140,12 @@ export const WithAttributes = {
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
@@ -163,12 +158,10 @@ export const WithAttributes = {
 
 export const WithClassNameOverridesPanelWidthAndPadding = {
   name: 'With ClassName Overrides Panel Width And Padding none (A2, A10)',
-
   args: {
     ...defaultArgs,
     className: 'dummyPanelOverridesWidthAndPadding',
   },
-
   argTypes: {
     className: {
       table: { disable: false },
@@ -177,16 +170,13 @@ export const WithClassNameOverridesPanelWidthAndPadding = {
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults Variant Outline (A1 delvis, A2 delvis, A3 delvis)',
-
+  name: 'Defaults Variant Outline (A1, A2 delvis, A3)',
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     children: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textNode = canvas.getByText(loremIpsum);
@@ -195,31 +185,26 @@ export const Defaults = {
 } satisfies Story;
 
 export const VariantFilled = {
-  name: 'Variant Filled (A1 delvis)',
-
+  name: 'Variant Filled (A1)',
   args: {
     ...defaultArgs,
     variant: 'filled',
   },
-
   argTypes: {
     variant: { table: { disable: false } },
   },
 } satisfies Story;
 
 export const WithTitle = {
-  name: 'With Title (A5 delvis, A3 delvis)',
-
+  name: 'With Title (A5, A3)',
   args: {
     ...defaultArgs,
     title: tittelText,
     children: <Paragraph>{loremIpsum}</Paragraph>,
   },
-
   argTypes: {
     title: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const heading = canvas.getByRole('heading');
@@ -230,18 +215,15 @@ export const WithTitle = {
 } satisfies Story;
 
 export const WithTitleAs = {
-  name: 'With TitleAs (A5 delvis)',
-
+  name: 'With TitleAs (A5)',
   args: {
     ...defaultArgs,
     title: tittelText,
     titleAs: 'h1',
   },
-
   argTypes: {
     titleAs: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const heading = canvas.getByRole('heading');
@@ -251,17 +233,14 @@ export const WithTitleAs = {
 
 export const WithHideTitle = {
   name: 'With HideTitle (A6)',
-
   args: {
     ...defaultArgs,
     title: tittelText,
     hideTitle: true,
   },
-
   argTypes: {
     hideTitle: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const heading = canvas.getByRole('heading');
@@ -270,18 +249,15 @@ export const WithHideTitle = {
 } satisfies Story;
 
 export const WithSubtitle = {
-  name: 'With Subtitle (A7 delvis, A3 delvis)',
-
+  name: 'With Subtitle (A7, A3)',
   args: {
     ...defaultArgs,
     subtitle: subtittelText,
     children: <Paragraph>{loremIpsum}</Paragraph>,
   },
-
   argTypes: {
     subtitle: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const heading = canvas.getByRole('heading');
@@ -292,18 +268,15 @@ export const WithSubtitle = {
 } satisfies Story;
 
 export const WithSubtitleAs = {
-  name: 'With SubtitleAs (A7 delvis)',
-
+  name: 'With SubtitleAs (A7)',
   args: {
     ...defaultArgs,
     subtitle: 'Det er en undertittel med valgt heading nivå',
     subtitleAs: 'h2',
   },
-
   argTypes: {
     subtitleAs: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const heading = canvas.getByRole('heading');
@@ -313,17 +286,14 @@ export const WithSubtitleAs = {
 
 export const WithHideSubtitle = {
   name: 'With HideSubtitle (A8)',
-
   args: {
     ...defaultArgs,
     subtitle: subtittelText,
     hideSubtitle: true,
   },
-
   argTypes: {
     hideSubtitle: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const heading = canvas.getByRole('heading');
@@ -344,17 +314,14 @@ const TemplateWithGraphics: StoryFn<typeof Panel> = (args) => (
 
 export const WithImage = {
   render: TemplateWithGraphics,
-  name: 'With Image (A9 delvis)',
-
+  name: 'With Image (A9)',
   args: {
     ...defaultArgs,
-    imageSource: illustrationSource,
+    imageSource: farmerIllustration,
   },
-
   argTypes: {
     imageSource: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const images = canvas.getAllByRole('img', { hidden: true });
@@ -365,19 +332,38 @@ export const WithImage = {
   },
 } satisfies Story;
 
-export const WithImageMobile = {
+export const WithImageSourceAltText = {
   render: TemplateWithGraphics,
-  name: 'With Image On Small Screen (A9 delvis)',
-
+  name: 'With Image With Alt Text (A9)',
   args: {
     ...defaultArgs,
-    imageSource: illustrationSource,
+    imageSource: farmerIllustration,
+    imageSourceAltText: 'Bonde med ku',
   },
+  argTypes: {
+    imageSource: { table: { disable: false } },
+    imageSourceAltText: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const images = canvas.getAllByRole('img', { hidden: true });
+    images.forEach((img) => {
+      expect(img).toBeInTheDocument();
+      expect(img).toHaveAttribute('alt', 'Bonde med ku');
+    });
+  },
+} satisfies Story;
 
+export const WithImageMobile = {
+  render: TemplateWithGraphics,
+  name: 'With Image On Small Screen (A9)',
+  args: {
+    ...defaultArgs,
+    imageSource: farmerIllustration,
+  },
   argTypes: {
     imageSource: { table: { disable: false } },
   },
-
   parameters: {
     viewport: {
       defaultViewport: '--breakpoint-xs',
@@ -388,16 +374,13 @@ export const WithImageMobile = {
 export const WithIcon = {
   render: TemplateWithGraphics,
   name: 'With Icon (A11 delvis)',
-
   args: {
     ...defaultArgs,
     renderIcon: (): JSX.Element => <InfoIcon size={'extraLarge'} />,
   },
-
   argTypes: {
     renderIcon: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const icons = canvas.getAllByRole('img', { hidden: true });
@@ -409,17 +392,14 @@ export const WithIcon = {
 
 export const WithIconMobile = {
   render: TemplateWithGraphics,
-  name: 'With Icon On Small Screen (A12 delvis)',
-
+  name: 'With Icon On Small Screen (A12)',
   args: {
     ...defaultArgs,
     renderIcon: (): JSX.Element => <InfoIcon size={'extraLarge'} />,
   },
-
   argTypes: {
     renderIcon: { table: { disable: false } },
   },
-
   parameters: {
     viewport: {
       defaultViewport: '--breakpoint-xs',
@@ -429,18 +409,15 @@ export const WithIconMobile = {
 
 export const WithHideGraphicMobileAndIcon = {
   render: TemplateWithGraphics,
-  name: 'With HideGraphicMobile And Icon On Small Screen (A12 delvis, A9 delvis)',
-
+  name: 'With HideGraphicMobile And Icon On Small Screen (A12, A9)',
   args: {
     ...defaultArgs,
     hideGraphicMobile: true,
     renderIcon: (): JSX.Element => <InfoIcon size={'extraLarge'} />,
   },
-
   argTypes: {
     hideGraphicMobile: { table: { disable: false } },
   },
-
   parameters: {
     viewport: {
       defaultViewport: '--breakpoint-xs',
@@ -450,18 +427,15 @@ export const WithHideGraphicMobileAndIcon = {
 
 export const WithHideGraphicMobileAndImage = {
   render: TemplateWithGraphics,
-  name: 'With HideGraphicMobile And Image On Small Screen (A12 delvis, A9 delvis)',
-
+  name: 'With HideGraphicMobile And Image On Small Screen (A12, A9)',
   args: {
     ...defaultArgs,
     hideGraphicMobile: true,
-    imageSource: illustrationSource,
+    imageSource: farmerIllustration,
   },
-
   argTypes: {
     hideGraphicMobile: { table: { disable: false } },
   },
-
   parameters: {
     viewport: {
       defaultViewport: '--breakpoint-xs',
@@ -471,14 +445,12 @@ export const WithHideGraphicMobileAndImage = {
 
 export const WithHideGraphicMobileAndIconDesktop = {
   render: TemplateWithGraphics,
-  name: 'With HideGraphicMobile And Icon On Big Screen (A12 delvis, A9 delvis)',
-
+  name: 'With HideGraphicMobile And Icon On Big Screen (A12, A9)',
   args: {
     ...defaultArgs,
     hideGraphicMobile: true,
     renderIcon: (): JSX.Element => <InfoIcon size={'extraLarge'} />,
   },
-
   argTypes: {
     hideGraphicMobile: { table: { disable: false } },
   },
@@ -486,14 +458,12 @@ export const WithHideGraphicMobileAndIconDesktop = {
 
 export const WithHideGraphicMobileAndImageDesktop = {
   render: TemplateWithGraphics,
-  name: 'With HideGraphicMobile And Image On Big Screen (A12 delvis, A9 delvis)',
-
+  name: 'With HideGraphicMobile And Image On Big Screen (A12, A9)',
   args: {
     ...defaultArgs,
     hideGraphicMobile: true,
-    imageSource: illustrationSource,
+    imageSource: farmerIllustration,
   },
-
   argTypes: {
     hideGraphicMobile: { table: { disable: false } },
   },
@@ -530,12 +500,10 @@ const TemplateWithAllColors: StoryFn<typeof Panel> = (args) => (
 
 export const WithColorAndVariant = {
   render: TemplateWithAllColors,
-  name: 'With Color And Variant (A1 delvis)',
-
+  name: 'With Color And Variant (A1)',
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     color: {
       table: { disable: false },
@@ -559,11 +527,9 @@ const TemplateWithAllSpacings: StoryFn<typeof Panel> = (args) => (
 export const WithSpacing = {
   render: TemplateWithAllSpacings,
   name: 'With Spacing (A4)',
-
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     spacing: {
       table: { disable: false },
@@ -599,18 +565,15 @@ const TemplateWithAllPaddings: StoryFn<typeof Panel> = (args) => (
 export const WithPadding = {
   render: TemplateWithAllPaddings,
   name: 'With Padding (A10)',
-
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     padding: {
       table: { disable: false },
       control: { type: null },
     },
   },
-
   parameters: {
     viewport: {
       defaultViewport: '--breakpoint-xs',
@@ -645,12 +608,10 @@ const TemplateTwoPanelWithTextAndOneWithIcon: StoryFn<typeof Panel> = (
 export const TextAlginedVertical = {
   render: TemplateTwoPanelWithTextAndOneWithIcon,
   name: 'Text Aligned Vertical (A13)',
-
   args: {
     ...defaultArgs,
     renderIcon: (): JSX.Element => <InfoIcon size={'extraLarge'} />,
   },
-
   argTypes: {
     renderIcon: {
       table: { disable: false },

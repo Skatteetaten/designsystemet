@@ -102,10 +102,11 @@ export const Preview: StoryFn<typeof StepList> = () => {
               <RadioGroup
                 id={'step3radio'}
                 legend={
-                  'Selger du varer og tjenester for egen regning og risiko?'
+                  'Selger du varer og tjenester for egen regning og risiko? Selger du varer og tjenester for egen regning og risiko? Selger du varer og tjenester for egen regning og risiko?'
                 }
                 errorMessage={'Kryss av hvorvidt du selger varer  og tjenester'}
                 hasError={hasStep3Error}
+                hideLegend
                 onChange={(e): void => {
                   setHasStep3Error(false);
                   setStep3(e.target.value);

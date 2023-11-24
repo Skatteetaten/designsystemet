@@ -30,11 +30,7 @@ const meta = {
     hasSpacing: { table: { disable: true } },
     color: {
       table: { disable: true },
-      options: ['default', ...linkColorArr],
-      mapping: {
-        default: '',
-        ...linkColorArr,
-      },
+      options: [undefined, ...linkColorArr],
       control: 'inline-radio',
     },
     variant: {
@@ -75,7 +71,6 @@ const defaultArgs: LinkGroupProps = {
 
 export const WithRef = {
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: HTMLUListElement | null): void => {
@@ -84,11 +79,9 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const linkGroup = canvas.getByRole('list');
@@ -98,7 +91,6 @@ export const WithRef = {
 
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
-
   args: {
     ...defaultArgs,
     id: 'htmlId',
@@ -106,14 +98,12 @@ export const WithAttributes = {
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const linkGroup = canvas.getByRole('list');
@@ -126,17 +116,14 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults Variant List (A1 delvis, A4 delvis, A5)',
-
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     children: {
       table: { disable: false },
     },
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} > ul > li:first-child > a`,
@@ -148,12 +135,10 @@ export const Defaults = {
 
 export const VariantAnchors = {
   name: 'Variant Anchors (A1 delvis, A4 delvis, A6)',
-
   args: {
     ...defaultArgs,
     variant: 'anchors',
   },
-
   argTypes: {
     variant: {
       table: {
@@ -161,7 +146,6 @@ export const VariantAnchors = {
       },
     },
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} > ul > li:first-child > a`,
@@ -171,7 +155,6 @@ export const VariantAnchors = {
 
 export const WithLongTextAndIcons = {
   name: 'With Long Text And Icons (A2)',
-
   args: {
     ...defaultArgs,
     children: [
@@ -193,7 +176,6 @@ export const WithLongTextAndIcons = {
       </LinkGroup.Link>,
     ],
   },
-
   argTypes: {
     children: { table: { disable: false } },
   },
@@ -209,12 +191,10 @@ const TemplateWithTwoLinkGroups: StoryFn<typeof LinkGroup> = (args) => (
 export const WithSpacing = {
   render: TemplateWithTwoLinkGroups,
   name: 'With Spacing (A3)',
-
   args: {
     ...defaultArgs,
     hasSpacing: true,
   },
-
   argTypes: {
     hasSpacing: { table: { disable: false } },
   },
@@ -222,18 +202,15 @@ export const WithSpacing = {
 
 export const WithColor = {
   name: 'With Color (A7)',
-
   args: {
     ...defaultArgs,
     color: 'white',
   },
-
   argTypes: {
     color: {
       table: { disable: false },
     },
   },
-
   parameters: {
     backgrounds: {
       default: 'themePrimary',

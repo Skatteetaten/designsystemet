@@ -13,7 +13,7 @@ export default {
   title: 'Komponenter/Table/Row',
   argTypes: {
     // Props
-    children: { table: { category: category.props } },
+    children: { control: false, table: { category: category.props } },
     isExpandable: {
       table: {
         category: category.props,
@@ -40,24 +40,26 @@ export default {
       table: {
         defaultValue: { summary: getTableRowExpandButtonPositionDefault() },
         category: category.props,
-      },
-    },
-    onExpand: {
-      control: false,
-      table: {
-        category: category.props,
-      },
-    },
-    onClose: {
-      control: false,
-      table: {
-        category: category.props,
+        type: { summary: positionArr },
       },
     },
     expandableContent: {
       control: 'text',
       table: {
         category: category.props,
+      },
+    },
+    // Event
+    onExpand: {
+      control: false,
+      table: {
+        category: category.event,
+      },
+    },
+    onClose: {
+      control: false,
+      table: {
+        category: category.event,
       },
     },
   },

@@ -1,0 +1,22 @@
+.separator {
+  position: relative;
+  height: 1rem;
+
+  &Left {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    background-color: var(--theme-secondary);
+    clip-path: polygon(0 0, 100% 60%, 0 100%, 0 100%);
+  }
+
+  &Right {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--theme-primary);
+    clip-path: polygon(100% 0, 100% 100%, 100% 100%, 0 100%);
+  }
+}

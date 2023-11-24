@@ -142,9 +142,11 @@ export default async function (
       react: '^18',
     };
     packageJson.exports = undefined;
+    packageJson.script = { ...packageJson.script };
     return packageJson;
   });
 
+  const lint = projectConfig?.targets?.lint;
   const projectConfigWithRollupOptions = {
     ...projectConfig,
     implicitDependencies: ['!ds-dev-config'],
@@ -162,6 +164,16 @@ export default async function (
               input: '.',
               output: '.',
             },
+          ],
+        },
+      },
+      lint: {
+        ...lint,
+        options: {
+          ...lint.options,
+          lintFilePatterns: [
+            ...lint.options.lintFilePatterns,
+            `libs/${projectName}/package.json`,
           ],
         },
       },

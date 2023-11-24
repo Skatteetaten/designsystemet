@@ -1,17 +1,17 @@
-import { ReactNode } from 'react';
+import { HTMLProps, ReactNode } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 import { TextAlignment } from '../Table/Table.types';
 
 type RequiredSumHTMLAttributes = Pick<
-  React.HTMLProps<HTMLTableCellElement>,
+  HTMLProps<HTMLTableCellElement>,
   'colSpan'
 >;
 type SumHTMLAttributes = Partial<RequiredSumHTMLAttributes>;
 
 export interface TableSumProps extends SumHTMLAttributes, BaseProps {
-  /** Overstyrer standard tekst i raden*/
+  /** Overskriver default tekst i raden*/
   sumText?: string;
   /** Tekstjustering for tekst i sumrad*/
   labelAlignment?: TextAlignment;

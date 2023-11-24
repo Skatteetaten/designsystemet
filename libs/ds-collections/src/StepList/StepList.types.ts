@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ForwardRefExoticComponent, ReactNode, RefAttributes } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -10,10 +10,10 @@ export interface StepListProps extends BaseProps {
 }
 
 export interface StepListComponent
-  extends React.ForwardRefExoticComponent<
-    StepListProps & React.RefAttributes<HTMLOListElement>
+  extends ForwardRefExoticComponent<
+    StepListProps & RefAttributes<HTMLOListElement>
   > {
-  Step: React.ForwardRefExoticComponent<
-    StepListStepProps & React.RefAttributes<HTMLLIElement>
+  Step: ForwardRefExoticComponent<
+    StepListStepProps & RefAttributes<HTMLLIElement>
   >;
 }

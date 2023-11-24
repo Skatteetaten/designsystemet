@@ -1,7 +1,10 @@
-import { useState } from 'react';
+import { FocusEvent, MouseEvent, useState } from 'react';
 
 import { InlineButton } from '@skatteetaten/ds-buttons';
-import { positionArr } from '@skatteetaten/ds-core-utils';
+import {
+  getCommonButtonTypeDefault,
+  positionArr,
+} from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath } from '@skatteetaten/ds-icons';
 import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
@@ -65,7 +68,6 @@ const defaultArgs = {
 
 export const WithRef = {
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: HTMLButtonElement | null): void => {
@@ -74,21 +76,17 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: verifyAttribute('id', 'dummyIdForwardedFromRef'),
 } satisfies Story;
 
 export const WithAttributes = {
   name: 'With Attributes(FA2-5)',
-
   args: {
     ...defaultArgs,
     id: 'htmlId',
@@ -96,14 +94,12 @@ export const WithAttributes = {
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inlineButton = canvas.getByRole('button');
@@ -116,15 +112,12 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (A1, B1)',
-
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     children: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       focus: `${wrapper} > button`,
@@ -132,25 +125,25 @@ export const Defaults = {
       click: `${wrapper} > button`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inlineButton = canvas.getByText(defaultButtonText);
     await expect(inlineButton).toBeInTheDocument();
-    await expect(inlineButton).toHaveAttribute('type', 'button');
+    await expect(inlineButton).toHaveAttribute(
+      'type',
+      getCommonButtonTypeDefault()
+    );
   },
 } satisfies Story;
 
 export const WithLongText = {
   name: 'With Long Text (A1)',
-
   args: {
     ...defaultArgs,
     children:
       'Denne knappen har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert. ' +
       'Denne knappen har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert.',
   },
-
   argTypes: {
     children: { table: { disable: false } },
   },
@@ -158,16 +151,13 @@ export const WithLongText = {
 
 export const WithIcon = {
   name: 'With Icon (A3, A4, B4)',
-
   args: {
     ...defaultArgs,
     svgPath: AddOutlineSVGpath,
   },
-
   argTypes: {
     svgPath: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inlineButton = canvas.getByRole('button');
@@ -180,12 +170,10 @@ export const WithIcon = {
 
 export const WithCustomIcon = {
   name: 'With Custom Icon (A3)',
-
   args: {
     ...defaultArgs,
     svgPath: <path d={'M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z'} />,
   },
-
   argTypes: {
     svgPath: {
       table: { disable: false },
@@ -196,7 +184,6 @@ export const WithCustomIcon = {
 
 export const WithLongTextAndIcon = {
   name: 'With Long Text And Icon (A3)',
-
   args: {
     ...defaultArgs,
     svgPath: AddOutlineSVGpath,
@@ -204,7 +191,6 @@ export const WithLongTextAndIcon = {
       'Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert. ' +
       'Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert.',
   },
-
   argTypes: {
     children: { table: { disable: false } },
     svgPath: { table: { disable: false } },
@@ -213,13 +199,11 @@ export const WithLongTextAndIcon = {
 
 export const WithIconRight = {
   name: 'With Icon Right (A5)',
-
   args: {
     ...defaultArgs,
     svgPath: AddOutlineSVGpath,
     iconPosition: 'right',
   },
-
   argTypes: {
     iconPosition: {
       table: { disable: false },
@@ -229,16 +213,13 @@ export const WithIconRight = {
 
 export const WithDisabled = {
   name: 'With Disabled (B5)',
-
   args: {
     ...defaultArgs,
     disabled: true,
   },
-
   argTypes: {
     disabled: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     expect(canvas.getByText(defaultButtonText)).toBeDisabled();
@@ -247,13 +228,11 @@ export const WithDisabled = {
 
 export const WithDisabledAndIcon = {
   name: 'With Disabled And Icon (B5)',
-
   args: {
     ...defaultArgs,
     svgPath: AddOutlineSVGpath,
     disabled: true,
   },
-
   argTypes: {
     disabled: { table: { disable: false } },
     svgPath: { table: { disable: false } },
@@ -262,58 +241,46 @@ export const WithDisabledAndIcon = {
 
 export const WithType = {
   name: 'With Type (B1)',
-
   args: {
     ...defaultArgs,
     type: 'submit',
   },
-
   argTypes: {
     type: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: verifyAttribute('type', 'submit'),
 } satisfies Story;
 
 export const WithAriaDescribedby = {
   name: 'With AriaDescribedby (B2)',
-
   args: {
     ...defaultArgs,
     ariaDescribedby: 'testid1234',
   },
-
   argTypes: {
     ariaDescribedby: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: verifyAttribute('aria-describedby', 'testid1234'),
 } satisfies Story;
 
 export const WithAccesskey = {
   name: 'With Accesskey (B3)',
-
   args: {
     ...defaultArgs,
     accessKey: 'j',
   },
-
   argTypes: {
     accessKey: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: verifyAttribute('accessKey', 'j'),
 } satisfies Story;
 
@@ -322,15 +289,15 @@ const EventHandlersTemplate: StoryFn<typeof InlineButton> = (args) => {
   return (
     <InlineButton
       {...args}
-      onFocus={(event: React.FocusEvent<HTMLButtonElement>): void => {
+      onFocus={(event: FocusEvent<HTMLButtonElement>): void => {
         setButtonText('Knapp har fått fokus');
         args.onFocus && args.onFocus(event);
       }}
-      onBlur={(event: React.FocusEvent<HTMLButtonElement>): void => {
+      onBlur={(event: FocusEvent<HTMLButtonElement>): void => {
         setButtonText('Knapp har blitt blurret');
         args.onBlur && args.onBlur(event);
       }}
-      onClick={(event: React.MouseEvent<HTMLButtonElement>): void => {
+      onClick={(event: MouseEvent<HTMLButtonElement>): void => {
         setButtonText('Knapp har blitt klikket på');
         args.onClick && args.onClick(event);
       }}
@@ -343,15 +310,12 @@ const EventHandlersTemplate: StoryFn<typeof InlineButton> = (args) => {
 export const WithEventHandlers = {
   render: EventHandlersTemplate,
   name: 'With EventHandlers (A2 delvis)',
-
   args: {
     ...defaultArgs,
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inlineButton = canvas.getByText('bruk knapp for å events');

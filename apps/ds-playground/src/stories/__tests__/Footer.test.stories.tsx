@@ -1,4 +1,5 @@
 import { LinkGroup } from '@skatteetaten/ds-buttons';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { GaveArvSVGpath, Icon } from '@skatteetaten/ds-icons';
 import { Footer, FooterProps } from '@skatteetaten/ds-layout';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
@@ -6,7 +7,7 @@ import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 
-import logo from '../__tests__/testUtils/Skatteetaten-Logo-Horisontal-RGB-Hvit.png';
+import logo from '../../assets/ske-logo-horizontal-white.png';
 
 const meta = {
   component: Footer,
@@ -157,17 +158,23 @@ export const Defaults = {
     // eslint-disable-next-line testing-library/no-node-access
     const logo = footer.querySelector('img');
     await expect(logo).toBeInTheDocument();
-    await expect(logo).toHaveAttribute('alt', 'Skatteetaten logo');
+    await expect(logo).toHaveAttribute(
+      'alt',
+      dsI18n.t('Shared:shared.SkeLogoImageText')
+    );
     const links = canvas.getAllByRole('link');
     await expect(links[0]).toHaveAttribute(
       'href',
-      'https://www.skatteetaten.no/kontakt/'
+      dsI18n.t('Shared:shared.ContactUsURL')
     );
     await expect(links[1]).toHaveAttribute(
       'href',
-      'https://www.skatteetaten.no/om-skatteetaten/sikkerhet/'
+      dsI18n.t('Shared:shared.SecurityAndPrivacyURL')
     );
-    await expect(links[2]).toHaveAttribute('href', 'https://uustatus.no/');
+    await expect(links[2]).toHaveAttribute(
+      'href',
+      dsI18n.t('Shared:shared.AccessibilityStatementURL')
+    );
   },
 } satisfies Story;
 

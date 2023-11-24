@@ -9,7 +9,7 @@ export default {
   title: 'Komponenter/List/Element',
   argTypes: {
     // Props
-    children: { table: { category: category.props } },
+    children: { control: 'text', table: { category: category.props } },
   },
   parameters: {
     version: getVersion('ds-typography'),

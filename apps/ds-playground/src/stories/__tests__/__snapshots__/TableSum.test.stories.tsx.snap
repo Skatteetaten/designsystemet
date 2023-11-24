@@ -8,12 +8,12 @@ exports[`Tester/Table/Sum WithAttributes play-test 1`] = `
          data-testid="123ID"
   >
     <tr class>
-      <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableSum_sum__JNHMR "
+      <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR "
           scope="row"
       >
         Sum
       </th>
-      <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableSum_sum__JNHMR ">
+      <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR ">
         9 000 kr
       </td>
     </tr>
@@ -27,12 +27,12 @@ exports[`Tester/Table/Sum WithRef play-test 1`] = `
     <tr class
         id="dummyIdForwardedFromRef"
     >
-      <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableSum_sum__JNHMR "
+      <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR "
           scope="row"
       >
         Sum
       </th>
-      <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableSum_sum__JNHMR ">
+      <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR ">
         9 000 kr
       </td>
     </tr>

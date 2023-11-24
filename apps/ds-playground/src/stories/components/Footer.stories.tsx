@@ -4,7 +4,7 @@ import { Paragraph, Heading } from '@skatteetaten/ds-typography';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
-import logo from '../__tests__/testUtils/Skatteetaten-Logo-Horisontal-RGB-Hvit.png';
+import logo from '../../assets/ske-logo-horizontal-white.png';
 import { getVersion } from '../utils/version.utils';
 
 Footer.Link.displayName = 'Footer.Link';
@@ -15,7 +15,7 @@ export default {
   title: 'Komponenter/Footer/Footer',
   argTypes: {
     // Props
-    children: { table: { category: category.props } },
+    children: { control: false, table: { category: category.props } },
     contactUsURL: { table: { category: category.props } },
     securityURL: { table: { category: category.props } },
     accessibilityURL: { table: { category: category.props } },
@@ -23,9 +23,9 @@ export default {
     titleFirstColumn: { table: { category: category.props } },
     titleSecondColumn: { table: { category: category.props } },
     titleThirdColumn: { table: { category: category.props } },
-    firstColumn: { table: { category: category.props } },
-    secondColumn: { table: { category: category.props } },
-    thirdColumn: { table: { category: category.props } },
+    firstColumn: { control: 'text', table: { category: category.props } },
+    secondColumn: { control: 'text', table: { category: category.props } },
+    thirdColumn: { control: 'text', table: { category: category.props } },
   },
   parameters: {
     version: getVersion('ds-layout'),

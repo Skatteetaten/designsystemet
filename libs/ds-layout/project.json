@@ -9,7 +9,10 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/ds-layout/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "libs/ds-layout/**/*.{ts,tsx,js,jsx}",
+          "libs/ds-layout/package.json"
+        ]
       }
     },
     "build": {
@@ -35,8 +38,7 @@
             "output": "."
           }
         ],
-        "babelUpwardRootMode": true,
-        "updateBuildableProjectDepsInPackageJson": true
+        "babelUpwardRootMode": true
       }
     },
     "test": {
