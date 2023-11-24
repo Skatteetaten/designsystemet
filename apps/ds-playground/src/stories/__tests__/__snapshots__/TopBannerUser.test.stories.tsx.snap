@@ -2,8 +2,8 @@
 
 exports[`Tester/TopBannerUser (intern) Defaults play-test 1`] = `
 <div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx  undefined">
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon_filled__h6Gxu TopBannerButton_icon__FyVd5"
+  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx">
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r2:"
@@ -26,8 +26,8 @@ exports[`Tester/TopBannerUser (intern) Defaults play-test 1`] = `
 exports[`Tester/TopBannerUser (intern) WithAllRoles play-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL undefined">
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon_filled__h6Gxu TopBannerButton_icon__FyVd5"
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r3:"
@@ -44,8 +44,8 @@ exports[`Tester/TopBannerUser (intern) WithAllRoles play-test 1`] = `
         meg
       </span>
     </button>
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL undefined">
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon_filled__h6Gxu TopBannerButton_icon__FyVd5"
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r4:"
@@ -62,8 +62,8 @@ exports[`Tester/TopBannerUser (intern) WithAllRoles play-test 1`] = `
         verge
       </span>
     </button>
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL undefined">
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon_filled__h6Gxu TopBannerButton_icon__FyVd5"
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r5:"
@@ -87,11 +87,11 @@ exports[`Tester/TopBannerUser (intern) WithAllRoles play-test 1`] = `
 exports[`Tester/TopBannerUser (intern) WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <button id="htmlid"
-          class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx dummyClassname undefined"
+          class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx dummyClassname"
           lang="nb"
           data-testid="123ID"
   >
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon_filled__h6Gxu TopBannerButton_icon__FyVd5"
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r1:"
@@ -113,8 +113,8 @@ exports[`Tester/TopBannerUser (intern) WithAttributes play-test 1`] = `
 
 exports[`Tester/TopBannerUser (intern) WithBreakpointL smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx  undefined">
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon_filled__h6Gxu TopBannerButton_icon__FyVd5"
+  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx">
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:ra:"
@@ -136,8 +136,8 @@ exports[`Tester/TopBannerUser (intern) WithBreakpointL smoke-test 1`] = `
 
 exports[`Tester/TopBannerUser (intern) WithBreakpointM smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx  undefined">
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon_filled__h6Gxu TopBannerButton_icon__FyVd5"
+  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx">
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r9:"
@@ -159,8 +159,8 @@ exports[`Tester/TopBannerUser (intern) WithBreakpointM smoke-test 1`] = `
 
 exports[`Tester/TopBannerUser (intern) WithBreakpointS smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx  undefined">
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon_filled__h6Gxu TopBannerButton_icon__FyVd5"
+  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx">
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r8:"
@@ -182,8 +182,8 @@ exports[`Tester/TopBannerUser (intern) WithBreakpointS smoke-test 1`] = `
 
 exports[`Tester/TopBannerUser (intern) WithBreakpointXS smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx  undefined">
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon_filled__h6Gxu TopBannerButton_icon__FyVd5"
+  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx">
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r7:"
@@ -205,8 +205,8 @@ exports[`Tester/TopBannerUser (intern) WithBreakpointXS smoke-test 1`] = `
 
 exports[`Tester/TopBannerUser (intern) WithMobileScreen smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx  undefined">
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon_filled__h6Gxu TopBannerButton_icon__FyVd5"
+  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx">
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r6:"
@@ -228,10 +228,10 @@ exports[`Tester/TopBannerUser (intern) WithMobileScreen smoke-test 1`] = `
 
 exports[`Tester/TopBannerUser (intern) WithRef play-test 1`] = `
 <div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx  undefined"
+  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
           id="dummyIdForwardedFromRef"
   >
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon_filled__h6Gxu TopBannerButton_icon__FyVd5"
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r0:"

@@ -25,7 +25,6 @@ export const TopBannerExternal = forwardRef<
     {
       id,
       className = getCommonClassNameDefault(),
-      classNames,
       lang,
       'data-testid': dataTestId,
       firstColumn,
@@ -77,7 +76,7 @@ export const TopBannerExternal = forwardRef<
             href={logoURL}
           />
           <div className={styles.contentContainer}>
-            {children && <div className={classNames?.children}>{children}</div>}
+            {children}
 
             <div className={styles.content}>
               {firstColumn && (
@@ -131,18 +130,12 @@ export const TopBannerExternal = forwardRef<
               aria-label={t('topbannerexternal.DrawerAriaLabel')}
               className={`${styles.columns} ${threeColumnsClassName} ${twoColumnsClassName}`}
             >
-              <div className={`${styles.column} ${classNames?.firstColumn}`}>
-                {firstColumn}
-              </div>
+              <div className={styles.column}>{firstColumn}</div>
               {secondColumn && (
-                <div className={`${styles.column} ${classNames?.secondColumn}`}>
-                  {secondColumn}
-                </div>
+                <div className={styles.column}>{secondColumn}</div>
               )}
               {thirdColumn && (
-                <div className={`${styles.column} ${classNames?.thirdColumn}`}>
-                  {thirdColumn}
-                </div>
+                <div className={styles.column}>{thirdColumn}</div>
               )}
             </nav>
           </div>

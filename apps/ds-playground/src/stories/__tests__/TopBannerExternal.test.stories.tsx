@@ -27,7 +27,6 @@ const meta = {
     key: { table: { disable: true } },
     ref: { table: { disable: true } },
     className: { table: { disable: true } },
-    classNames: { table: { disable: true } },
     id: { table: { disable: true } },
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
@@ -205,14 +204,15 @@ export const ClickMainMenuOpenAndClose = {
   },
 } satisfies Story;
 
-export const WithFirstColumnAndClassNames = {
-  name: 'With FirstColumn And ClassNames (MainMenu A1)',
+export const WithOneColumn = {
+  name: 'With One Column (MainMenu A1)',
   args: {
     ...defaultArgs,
-    firstColumn: 'First column and classNames background pink',
-    classNames: {
-      firstColumn: 'dummyClassNamePinkBackground',
-    },
+    firstColumn: (
+      <div className={'dummyClassNamePinkBackground'}>
+        {'First column with pink background'}
+      </div>
+    ),
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -223,14 +223,15 @@ export const WithFirstColumnAndClassNames = {
   },
 } satisfies Story;
 
-export const WithFirstColumnClassNamesAndBreakpointS = {
-  name: 'With FirstColumn ClassNames And Breakpoint-s (MainMenu A1)',
+export const WithOneColumnBreakpointS = {
+  name: 'With One Column Breakpoint-s (MainMenu A1)',
   args: {
     ...defaultArgs,
-    firstColumn: 'First column and classNames background pink',
-    classNames: {
-      firstColumn: 'dummyClassNamePinkBackground',
-    },
+    firstColumn: (
+      <div className={'dummyClassNamePinkBackground'}>
+        {'First column with pink background'}
+      </div>
+    ),
   },
   parameters: {
     viewport: {
@@ -246,14 +247,15 @@ export const WithFirstColumnClassNamesAndBreakpointS = {
   },
 } satisfies Story;
 
-export const WithFirstColumnClassNamesAndBreakpointXS = {
-  name: 'With FirstColumn ClassNames And Breakpoint-xs (MainMenu A1)',
+export const WithOneColumnBreakpointXS = {
+  name: 'With One Column Breakpoint-xs (MainMenu A1)',
   args: {
     ...defaultArgs,
-    firstColumn: 'First column and classNames background pink',
-    classNames: {
-      firstColumn: 'dummyClassNamePinkBackground',
-    },
+    firstColumn: (
+      <div className={'dummyClassNamePinkBackground'}>
+        {'First column with pink background'}
+      </div>
+    ),
   },
   parameters: {
     viewport: {
@@ -269,16 +271,20 @@ export const WithFirstColumnClassNamesAndBreakpointXS = {
   },
 } satisfies Story;
 
-export const WithFirstAndSecondColumnAndClassNames = {
+export const WithTwoColumns = {
   name: 'With FirstColumn SecondColumn And ClassNames (MainMenu A1)',
   args: {
     ...defaultArgs,
-    firstColumn: 'First column and classNames background pink',
-    secondColumn: 'Second column and classNames background pink',
-    classNames: {
-      firstColumn: 'dummyClassNamePinkBackground',
-      secondColumn: 'dummyClassNamePinkBackground',
-    },
+    firstColumn: (
+      <div className={'dummyClassNamePinkBackground'}>
+        {'First column with pink background'}
+      </div>
+    ),
+    secondColumn: (
+      <div className={'dummyClassNamePinkBackground'}>
+        {'Second column with pink background'}
+      </div>
+    ),
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -289,16 +295,20 @@ export const WithFirstAndSecondColumnAndClassNames = {
   },
 } satisfies Story;
 
-export const WithFirstAndSecondColumnClassNamesAndBreakpointS = {
-  name: 'With FirstColumn SecondColumn ClassNames And Breakpoint-s (MainMenu A1)',
+export const WithTwoColumnsBreakpointS = {
+  name: 'With Two Columns Breakpoint-s (MainMenu A1)',
   args: {
     ...defaultArgs,
-    firstColumn: 'First column and classNames background pink',
-    secondColumn: 'Second column and classNames background pink',
-    classNames: {
-      firstColumn: 'dummyClassNamePinkBackground',
-      secondColumn: 'dummyClassNamePinkBackground',
-    },
+    firstColumn: (
+      <div className={'dummyClassNamePinkBackground'}>
+        {'First column with pink background'}
+      </div>
+    ),
+    secondColumn: (
+      <div className={'dummyClassNamePinkBackground'}>
+        {'Second column with pink background'}
+      </div>
+    ),
   },
   parameters: {
     viewport: {
@@ -314,16 +324,20 @@ export const WithFirstAndSecondColumnClassNamesAndBreakpointS = {
   },
 } satisfies Story;
 
-export const WithFirstAndSecondColumnClassNamesAndBreakpointXS = {
-  name: 'With FirstColumn SecondColumn ClassNames And Breakpoint-xs (MainMenu A1)',
+export const WithTwoColumnsBreakpointXS = {
+  name: 'With Two Columns Breakpoint-xs (MainMenu A1)',
   args: {
     ...defaultArgs,
-    firstColumn: 'First column and classNames background pink',
-    secondColumn: 'Second column and classNames background pink',
-    classNames: {
-      firstColumn: 'dummyClassNamePinkBackground',
-      secondColumn: 'dummyClassNamePinkBackground',
-    },
+    firstColumn: (
+      <div className={'dummyClassNamePinkBackground'}>
+        {'First column with pink background'}
+      </div>
+    ),
+    secondColumn: (
+      <div className={'dummyClassNamePinkBackground'}>
+        {'Second column with pink background'}
+      </div>
+    ),
   },
   parameters: {
     viewport: {
@@ -339,18 +353,25 @@ export const WithFirstAndSecondColumnClassNamesAndBreakpointXS = {
   },
 } satisfies Story;
 
-export const WithFirstSecondAndThirdColumnAndClassNames = {
-  name: 'With FirstColumn SecondColumn ThirdColumn And ClassNames (MainMenu A1)',
+export const WithThreeColumns = {
+  name: 'With Three Columns (MainMenu A1)',
   args: {
     ...defaultArgs,
-    firstColumn: 'First column and classNames background pink',
-    secondColumn: 'Second column and classNames background pink',
-    thirdColumn: 'Third column and classNames background pink',
-    classNames: {
-      firstColumn: 'dummyClassNamePinkBackground',
-      secondColumn: 'dummyClassNamePinkBackground',
-      thirdColumn: 'dummyClassNamePinkBackground',
-    },
+    firstColumn: (
+      <div className={'dummyClassNamePinkBackground'}>
+        {'First column with pink background'}
+      </div>
+    ),
+    secondColumn: (
+      <div className={'dummyClassNamePinkBackground'}>
+        {'Second column with pink background'}
+      </div>
+    ),
+    thirdColumn: (
+      <div className={'dummyClassNamePinkBackground'}>
+        {'Third column with pink background'}
+      </div>
+    ),
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -361,18 +382,25 @@ export const WithFirstSecondAndThirdColumnAndClassNames = {
   },
 } satisfies Story;
 
-export const WithFirstSecondAndThirdColumnClassNamesAndBreakpointS = {
-  name: 'With FirstColumn SecondColumn ThirdColumn ClassNames And Breakpoint-s (MainMenu A1)',
+export const WithThreeColumnsBreakpointS = {
+  name: 'With Three Columns Breakpoint-s (MainMenu A1)',
   args: {
     ...defaultArgs,
-    firstColumn: 'First column and classNames background pink',
-    secondColumn: 'Second column and classNames background pink',
-    thirdColumn: 'Third column and classNames background pink',
-    classNames: {
-      firstColumn: 'dummyClassNamePinkBackground',
-      secondColumn: 'dummyClassNamePinkBackground',
-      thirdColumn: 'dummyClassNamePinkBackground',
-    },
+    firstColumn: (
+      <div className={'dummyClassNamePinkBackground'}>
+        {'First column with pink background'}
+      </div>
+    ),
+    secondColumn: (
+      <div className={'dummyClassNamePinkBackground'}>
+        {'Second column with pink background'}
+      </div>
+    ),
+    thirdColumn: (
+      <div className={'dummyClassNamePinkBackground'}>
+        {'Third column with pink background'}
+      </div>
+    ),
   },
   parameters: {
     viewport: {
@@ -388,18 +416,25 @@ export const WithFirstSecondAndThirdColumnClassNamesAndBreakpointS = {
   },
 } satisfies Story;
 
-export const WithFirstSecondAndThirdColumnClassNamesAndBreakpointXS = {
-  name: 'With FirstColumn SecondColumn ThirdColumn ClassNames And Breakpoint-xs (MainMenu A1)',
+export const WithThreeColumnsBreakpointXS = {
+  name: 'With Three Columns Breakpoint-xs (MainMenu A1)',
   args: {
     ...defaultArgs,
-    firstColumn: 'First column and classNames background pink',
-    secondColumn: 'Second column and classNames background pink',
-    thirdColumn: 'Third column and classNames background pink',
-    classNames: {
-      firstColumn: 'dummyClassNamePinkBackground',
-      secondColumn: 'dummyClassNamePinkBackground',
-      thirdColumn: 'dummyClassNamePinkBackground',
-    },
+    firstColumn: (
+      <div className={'dummyClassNamePinkBackground'}>
+        {'First column with pink background'}
+      </div>
+    ),
+    secondColumn: (
+      <div className={'dummyClassNamePinkBackground'}>
+        {'Second column with pink background'}
+      </div>
+    ),
+    thirdColumn: (
+      <div className={'dummyClassNamePinkBackground'}>
+        {'Third column with pink background'}
+      </div>
+    ),
   },
   parameters: {
     viewport: {
