@@ -5,7 +5,7 @@ import {
   spinnerColorArr,
   spinnerPositionArr,
   spinnerSizeArr,
-} from '@skatteetaten/ds-status';
+} from '@skatteetaten/ds-progress';
 import { expect } from '@storybook/jest';
 import { Meta, StoryObj } from '@storybook/react';
 import { within } from '@storybook/testing-library';
