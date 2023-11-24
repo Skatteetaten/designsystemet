@@ -94,7 +94,7 @@ export const TopBannerExternal = forwardRef<
               {/** TODO - FRONT-1161 en smartere måtte enn dette */}
               {onLogIn && onLogOut && username && userRole && (
                 <>
-                  <TopBannerUserButton role={userRole} onClick={onUsername}>
+                  <TopBannerUserButton role={userRole} onUsername={onUsername}>
                     {username}
                   </TopBannerUserButton>
                   <TopBannerButton
@@ -106,6 +106,7 @@ export const TopBannerExternal = forwardRef<
                   </TopBannerButton>
                 </>
               )}
+
               {/** TODO - FRONT-1161 en smartere måtte enn dette */}
               {onLogIn && onLogOut && !username && !userRole && (
                 <TopBannerButton

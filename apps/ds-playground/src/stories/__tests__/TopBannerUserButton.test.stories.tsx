@@ -99,7 +99,7 @@ export const Defaults = {
     ...defaultArgs,
   },
   argTypes: {
-    children: { table: { disable: false } },
+    role: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -112,6 +112,8 @@ export const Defaults = {
     await expect(defaultTitle).toBeInTheDocument();
   },
 } satisfies Story;
+
+// TODO FRONT 1161 skrive test WithChildren
 
 const TemplateWithAllRoles: StoryFn<typeof TopBannerUserButton> = (args) => (
   <div className={'topbannerButtonContainer'}>
