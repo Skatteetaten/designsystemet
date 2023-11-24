@@ -142,7 +142,7 @@ export const WithClassNames = {
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults Variant Standard (LoginButton A1, A2)',
+  name: 'Defaults (LoginButton A1, A2)',
   args: {
     ...defaultArgs,
   },
@@ -240,7 +240,7 @@ export const WithTitle = {
 } satisfies Story;
 
 export const WithBreakpointXSVariantStandard = {
-  name: 'With Breakpoint-xs Variant Standard (LoginButton A1, A2)',
+  name: 'With Breakpoint-xs Defaults (LoginButton A1, A2)',
   args: {
     ...defaultArgs,
   },

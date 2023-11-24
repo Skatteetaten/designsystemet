@@ -29,7 +29,6 @@ export default {
   title: 'Komponenter/TopBannerExternal',
   argTypes: {
     // Props
-    classNames: { table: { category: category.props } },
     children: { control: 'text', table: { category: category.props } },
     skipLinkText: { table: { category: category.props } },
     skipLinkURL: {

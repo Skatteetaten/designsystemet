@@ -35,12 +35,6 @@ type TopBannerLogoDiscriminatedProps =
     };
 
 interface TopBannerCommonProps extends BaseProps {
-  classNames?: {
-    children?: string;
-    firstColumn?: string;
-    secondColumn?: string;
-    thirdColumn?: string;
-  };
   /** Overskriver default lenketekst. */
   skipLinkText?: TopBannerSkipLinkProps['children'];
   /** Overskriver default verdi til href som flytter fokus til toppen av hovedinnholdet. */
