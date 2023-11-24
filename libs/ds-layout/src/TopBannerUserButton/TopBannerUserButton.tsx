@@ -24,8 +24,8 @@ export const TopBannerUserButton = forwardRef<
       lang,
       'data-testid': dataTestId,
       role,
-      onClick,
       children,
+      onUsername,
     },
     ref
   ): JSX.Element => {
@@ -53,7 +53,7 @@ export const TopBannerUserButton = forwardRef<
         variant={'filled'}
         svgPath={roleSVGpath}
         title={title}
-        onClick={onClick}
+        onClick={onUsername}
       >
         {children ? children : 'Meg selv'}
       </TopBannerButton>
