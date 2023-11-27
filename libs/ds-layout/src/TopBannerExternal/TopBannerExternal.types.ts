@@ -24,14 +24,14 @@ type TopBannerLogoDiscriminatedProps =
       mobileLogo: string;
       logoAltText: string;
       logoURL: string;
-      logoAs?: Extract<LogoAs, 'div'>;
+      logoAs?: Extract<LogoAs, 'a'>;
     }
   | {
       logo: string;
       mobileLogo: string;
       logoAltText: string;
       logoURL?: never;
-      logoAs?: Extract<LogoAs, 'a'>;
+      logoAs?: Extract<LogoAs, 'div'>;
     };
 
 interface TopBannerCommonProps extends BaseProps {
