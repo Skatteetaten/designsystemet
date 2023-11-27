@@ -40,6 +40,7 @@ export const TopBannerButton = forwardRef<
         lang={lang}
         data-testid={dataTestId}
         aria-expanded={ariaExpanded}
+        type={'button'}
         onClick={onClick}
       >
         <Icon svgPath={svgPath} className={styles.icon} title={title} />
