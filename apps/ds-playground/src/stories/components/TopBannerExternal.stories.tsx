@@ -87,7 +87,7 @@ export default {
 
 export const Preview: StoryObj<typeof TopBannerExternal> = {
   args: {
-    // Uten undefined så blir funksjonene initalisert med mockConstructor i Storybook
+    // uten undefined så blir funksjonene initalisert med mockConstructor i Storybook
     onLogIn: undefined,
     onLogOut: undefined,
     onUsername: undefined,
