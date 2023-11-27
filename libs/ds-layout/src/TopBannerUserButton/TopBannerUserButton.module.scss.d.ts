@@ -1,2 +1,3 @@
 /* automatisk genererte types */
-export const username: string;
+export const usernameButton: string;
+export const usernameText: string;
