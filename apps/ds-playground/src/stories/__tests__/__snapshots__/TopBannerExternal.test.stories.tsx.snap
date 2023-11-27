@@ -35,22 +35,24 @@ exports[`Tester/TopBannerExternal ClickMainMenuOpenAndClose play-test 1`] = `
         </a>
         <div class="TopBannerExternal_contentContainer__h2K6k">
           <div class="TopBannerExternal_content__obwYA">
-            <button class="TopBannerButton_button__5RUa7"
-                    aria-expanded="false"
-            >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                   viewbox="0 0 24 24"
-                   focusable="false"
-                   aria-hidden="true"
-                   role="img"
+            <div>
+              <button class="TopBannerButton_button__5RUa7"
+                      aria-expanded="false"
               >
-                <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
-                </path>
-              </svg>
-              <span class>
-                Meny
-              </span>
-            </button>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+                  </path>
+                </svg>
+                <span class>
+                  Meny
+                </span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -283,32 +285,34 @@ exports[`Tester/TopBannerExternal WithOneColumn play-test 1`] = `
         </a>
         <div class="TopBannerExternal_contentContainer__h2K6k">
           <div class="TopBannerExternal_content__obwYA">
-            <button class="TopBannerButton_button__5RUa7"
-                    aria-expanded="true"
-            >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                   viewbox="0 0 24 24"
-                   focusable="false"
-                   aria-hidden="true"
-                   role="img"
+            <div>
+              <button class="TopBannerButton_button__5RUa7"
+                      aria-expanded="true"
               >
-                <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
-                </path>
-              </svg>
-              <span class>
-                Meny
-              </span>
-            </button>
-            <div class="TopBannerExternal_mainMenu__y-Qyo">
-              <nav aria-label="Temaoversikt"
-                   class="TopBannerExternal_columns__GeLJz  "
-              >
-                <div class="TopBannerExternal_column__SR540">
-                  <div class="dummyClassNamePinkBackground">
-                    First column with pink background
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+                  </path>
+                </svg>
+                <span class>
+                  Meny
+                </span>
+              </button>
+              <div class="TopBannerExternal_mainMenu__y-Qyo">
+                <nav aria-label="Temaoversikt"
+                     class="TopBannerExternal_columns__GeLJz  "
+                >
+                  <div class="TopBannerExternal_column__SR540">
+                    <div class="dummyClassNamePinkBackground">
+                      First column with pink background
+                    </div>
                   </div>
-                </div>
-              </nav>
+                </nav>
+              </div>
             </div>
           </div>
         </div>
@@ -359,32 +363,34 @@ exports[`Tester/TopBannerExternal WithOneColumnBreakpointS play-test 1`] = `
         </a>
         <div class="TopBannerExternal_contentContainer__h2K6k">
           <div class="TopBannerExternal_content__obwYA">
-            <button class="TopBannerButton_button__5RUa7"
-                    aria-expanded="true"
-            >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                   viewbox="0 0 24 24"
-                   focusable="false"
-                   aria-hidden="true"
-                   role="img"
+            <div>
+              <button class="TopBannerButton_button__5RUa7"
+                      aria-expanded="true"
               >
-                <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
-                </path>
-              </svg>
-              <span class>
-                Meny
-              </span>
-            </button>
-            <div class="TopBannerExternal_mainMenu__y-Qyo">
-              <nav aria-label="Temaoversikt"
-                   class="TopBannerExternal_columns__GeLJz  "
-              >
-                <div class="TopBannerExternal_column__SR540">
-                  <div class="dummyClassNamePinkBackground">
-                    First column with pink background
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+                  </path>
+                </svg>
+                <span class>
+                  Meny
+                </span>
+              </button>
+              <div class="TopBannerExternal_mainMenu__y-Qyo">
+                <nav aria-label="Temaoversikt"
+                     class="TopBannerExternal_columns__GeLJz  "
+                >
+                  <div class="TopBannerExternal_column__SR540">
+                    <div class="dummyClassNamePinkBackground">
+                      First column with pink background
+                    </div>
                   </div>
-                </div>
-              </nav>
+                </nav>
+              </div>
             </div>
           </div>
         </div>
@@ -435,32 +441,34 @@ exports[`Tester/TopBannerExternal WithOneColumnBreakpointXS play-test 1`] = `
         </a>
         <div class="TopBannerExternal_contentContainer__h2K6k">
           <div class="TopBannerExternal_content__obwYA">
-            <button class="TopBannerButton_button__5RUa7"
-                    aria-expanded="true"
-            >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                   viewbox="0 0 24 24"
-                   focusable="false"
-                   aria-hidden="true"
-                   role="img"
+            <div>
+              <button class="TopBannerButton_button__5RUa7"
+                      aria-expanded="true"
               >
-                <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
-                </path>
-              </svg>
-              <span class>
-                Meny
-              </span>
-            </button>
-            <div class="TopBannerExternal_mainMenu__y-Qyo">
-              <nav aria-label="Temaoversikt"
-                   class="TopBannerExternal_columns__GeLJz  "
-              >
-                <div class="TopBannerExternal_column__SR540">
-                  <div class="dummyClassNamePinkBackground">
-                    First column with pink background
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+                  </path>
+                </svg>
+                <span class>
+                  Meny
+                </span>
+              </button>
+              <div class="TopBannerExternal_mainMenu__y-Qyo">
+                <nav aria-label="Temaoversikt"
+                     class="TopBannerExternal_columns__GeLJz  "
+                >
+                  <div class="TopBannerExternal_column__SR540">
+                    <div class="dummyClassNamePinkBackground">
+                      First column with pink background
+                    </div>
                   </div>
-                </div>
-              </nav>
+                </nav>
+              </div>
             </div>
           </div>
         </div>
@@ -576,42 +584,44 @@ exports[`Tester/TopBannerExternal WithThreeColumns play-test 1`] = `
         </a>
         <div class="TopBannerExternal_contentContainer__h2K6k">
           <div class="TopBannerExternal_content__obwYA">
-            <button class="TopBannerButton_button__5RUa7"
-                    aria-expanded="true"
-            >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                   viewbox="0 0 24 24"
-                   focusable="false"
-                   aria-hidden="true"
-                   role="img"
+            <div>
+              <button class="TopBannerButton_button__5RUa7"
+                      aria-expanded="true"
               >
-                <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
-                </path>
-              </svg>
-              <span class>
-                Meny
-              </span>
-            </button>
-            <div class="TopBannerExternal_mainMenu__y-Qyo">
-              <nav aria-label="Temaoversikt"
-                   class="TopBannerExternal_columns__GeLJz TopBannerExternal_columnsThree__gP-p5 TopBannerExternal_columnsTwo__3Bn6m"
-              >
-                <div class="TopBannerExternal_column__SR540">
-                  <div class="dummyClassNamePinkBackground">
-                    First column with pink background
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+                  </path>
+                </svg>
+                <span class>
+                  Meny
+                </span>
+              </button>
+              <div class="TopBannerExternal_mainMenu__y-Qyo">
+                <nav aria-label="Temaoversikt"
+                     class="TopBannerExternal_columns__GeLJz TopBannerExternal_columnsThree__gP-p5 TopBannerExternal_columnsTwo__3Bn6m"
+                >
+                  <div class="TopBannerExternal_column__SR540">
+                    <div class="dummyClassNamePinkBackground">
+                      First column with pink background
+                    </div>
                   </div>
-                </div>
-                <div class="TopBannerExternal_column__SR540">
-                  <div class="dummyClassNamePinkBackground">
-                    Second column with pink background
+                  <div class="TopBannerExternal_column__SR540">
+                    <div class="dummyClassNamePinkBackground">
+                      Second column with pink background
+                    </div>
                   </div>
-                </div>
-                <div class="TopBannerExternal_column__SR540">
-                  <div class="dummyClassNamePinkBackground">
-                    Third column with pink background
+                  <div class="TopBannerExternal_column__SR540">
+                    <div class="dummyClassNamePinkBackground">
+                      Third column with pink background
+                    </div>
                   </div>
-                </div>
-              </nav>
+                </nav>
+              </div>
             </div>
           </div>
         </div>
@@ -662,42 +672,44 @@ exports[`Tester/TopBannerExternal WithThreeColumnsBreakpointS play-test 1`] = `
         </a>
         <div class="TopBannerExternal_contentContainer__h2K6k">
           <div class="TopBannerExternal_content__obwYA">
-            <button class="TopBannerButton_button__5RUa7"
-                    aria-expanded="true"
-            >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                   viewbox="0 0 24 24"
-                   focusable="false"
-                   aria-hidden="true"
-                   role="img"
+            <div>
+              <button class="TopBannerButton_button__5RUa7"
+                      aria-expanded="true"
               >
-                <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
-                </path>
-              </svg>
-              <span class>
-                Meny
-              </span>
-            </button>
-            <div class="TopBannerExternal_mainMenu__y-Qyo">
-              <nav aria-label="Temaoversikt"
-                   class="TopBannerExternal_columns__GeLJz TopBannerExternal_columnsThree__gP-p5 TopBannerExternal_columnsTwo__3Bn6m"
-              >
-                <div class="TopBannerExternal_column__SR540">
-                  <div class="dummyClassNamePinkBackground">
-                    First column with pink background
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+                  </path>
+                </svg>
+                <span class>
+                  Meny
+                </span>
+              </button>
+              <div class="TopBannerExternal_mainMenu__y-Qyo">
+                <nav aria-label="Temaoversikt"
+                     class="TopBannerExternal_columns__GeLJz TopBannerExternal_columnsThree__gP-p5 TopBannerExternal_columnsTwo__3Bn6m"
+                >
+                  <div class="TopBannerExternal_column__SR540">
+                    <div class="dummyClassNamePinkBackground">
+                      First column with pink background
+                    </div>
                   </div>
-                </div>
-                <div class="TopBannerExternal_column__SR540">
-                  <div class="dummyClassNamePinkBackground">
-                    Second column with pink background
+                  <div class="TopBannerExternal_column__SR540">
+                    <div class="dummyClassNamePinkBackground">
+                      Second column with pink background
+                    </div>
                   </div>
-                </div>
-                <div class="TopBannerExternal_column__SR540">
-                  <div class="dummyClassNamePinkBackground">
-                    Third column with pink background
+                  <div class="TopBannerExternal_column__SR540">
+                    <div class="dummyClassNamePinkBackground">
+                      Third column with pink background
+                    </div>
                   </div>
-                </div>
-              </nav>
+                </nav>
+              </div>
             </div>
           </div>
         </div>
@@ -748,42 +760,44 @@ exports[`Tester/TopBannerExternal WithThreeColumnsBreakpointXS play-test 1`] = `
         </a>
         <div class="TopBannerExternal_contentContainer__h2K6k">
           <div class="TopBannerExternal_content__obwYA">
-            <button class="TopBannerButton_button__5RUa7"
-                    aria-expanded="true"
-            >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                   viewbox="0 0 24 24"
-                   focusable="false"
-                   aria-hidden="true"
-                   role="img"
+            <div>
+              <button class="TopBannerButton_button__5RUa7"
+                      aria-expanded="true"
               >
-                <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
-                </path>
-              </svg>
-              <span class>
-                Meny
-              </span>
-            </button>
-            <div class="TopBannerExternal_mainMenu__y-Qyo">
-              <nav aria-label="Temaoversikt"
-                   class="TopBannerExternal_columns__GeLJz TopBannerExternal_columnsThree__gP-p5 TopBannerExternal_columnsTwo__3Bn6m"
-              >
-                <div class="TopBannerExternal_column__SR540">
-                  <div class="dummyClassNamePinkBackground">
-                    First column with pink background
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+                  </path>
+                </svg>
+                <span class>
+                  Meny
+                </span>
+              </button>
+              <div class="TopBannerExternal_mainMenu__y-Qyo">
+                <nav aria-label="Temaoversikt"
+                     class="TopBannerExternal_columns__GeLJz TopBannerExternal_columnsThree__gP-p5 TopBannerExternal_columnsTwo__3Bn6m"
+                >
+                  <div class="TopBannerExternal_column__SR540">
+                    <div class="dummyClassNamePinkBackground">
+                      First column with pink background
+                    </div>
                   </div>
-                </div>
-                <div class="TopBannerExternal_column__SR540">
-                  <div class="dummyClassNamePinkBackground">
-                    Second column with pink background
+                  <div class="TopBannerExternal_column__SR540">
+                    <div class="dummyClassNamePinkBackground">
+                      Second column with pink background
+                    </div>
                   </div>
-                </div>
-                <div class="TopBannerExternal_column__SR540">
-                  <div class="dummyClassNamePinkBackground">
-                    Third column with pink background
+                  <div class="TopBannerExternal_column__SR540">
+                    <div class="dummyClassNamePinkBackground">
+                      Third column with pink background
+                    </div>
                   </div>
-                </div>
-              </nav>
+                </nav>
+              </div>
             </div>
           </div>
         </div>
@@ -834,37 +848,39 @@ exports[`Tester/TopBannerExternal WithTwoColumns play-test 1`] = `
         </a>
         <div class="TopBannerExternal_contentContainer__h2K6k">
           <div class="TopBannerExternal_content__obwYA">
-            <button class="TopBannerButton_button__5RUa7"
-                    aria-expanded="true"
-            >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                   viewbox="0 0 24 24"
-                   focusable="false"
-                   aria-hidden="true"
-                   role="img"
+            <div>
+              <button class="TopBannerButton_button__5RUa7"
+                      aria-expanded="true"
               >
-                <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
-                </path>
-              </svg>
-              <span class>
-                Meny
-              </span>
-            </button>
-            <div class="TopBannerExternal_mainMenu__y-Qyo">
-              <nav aria-label="Temaoversikt"
-                   class="TopBannerExternal_columns__GeLJz  TopBannerExternal_columnsTwo__3Bn6m"
-              >
-                <div class="TopBannerExternal_column__SR540">
-                  <div class="dummyClassNamePinkBackground">
-                    First column with pink background
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+                  </path>
+                </svg>
+                <span class>
+                  Meny
+                </span>
+              </button>
+              <div class="TopBannerExternal_mainMenu__y-Qyo">
+                <nav aria-label="Temaoversikt"
+                     class="TopBannerExternal_columns__GeLJz  TopBannerExternal_columnsTwo__3Bn6m"
+                >
+                  <div class="TopBannerExternal_column__SR540">
+                    <div class="dummyClassNamePinkBackground">
+                      First column with pink background
+                    </div>
                   </div>
-                </div>
-                <div class="TopBannerExternal_column__SR540">
-                  <div class="dummyClassNamePinkBackground">
-                    Second column with pink background
+                  <div class="TopBannerExternal_column__SR540">
+                    <div class="dummyClassNamePinkBackground">
+                      Second column with pink background
+                    </div>
                   </div>
-                </div>
-              </nav>
+                </nav>
+              </div>
             </div>
           </div>
         </div>
@@ -915,37 +931,39 @@ exports[`Tester/TopBannerExternal WithTwoColumnsBreakpointS play-test 1`] = `
         </a>
         <div class="TopBannerExternal_contentContainer__h2K6k">
           <div class="TopBannerExternal_content__obwYA">
-            <button class="TopBannerButton_button__5RUa7"
-                    aria-expanded="true"
-            >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                   viewbox="0 0 24 24"
-                   focusable="false"
-                   aria-hidden="true"
-                   role="img"
+            <div>
+              <button class="TopBannerButton_button__5RUa7"
+                      aria-expanded="true"
               >
-                <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
-                </path>
-              </svg>
-              <span class>
-                Meny
-              </span>
-            </button>
-            <div class="TopBannerExternal_mainMenu__y-Qyo">
-              <nav aria-label="Temaoversikt"
-                   class="TopBannerExternal_columns__GeLJz  TopBannerExternal_columnsTwo__3Bn6m"
-              >
-                <div class="TopBannerExternal_column__SR540">
-                  <div class="dummyClassNamePinkBackground">
-                    First column with pink background
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+                  </path>
+                </svg>
+                <span class>
+                  Meny
+                </span>
+              </button>
+              <div class="TopBannerExternal_mainMenu__y-Qyo">
+                <nav aria-label="Temaoversikt"
+                     class="TopBannerExternal_columns__GeLJz  TopBannerExternal_columnsTwo__3Bn6m"
+                >
+                  <div class="TopBannerExternal_column__SR540">
+                    <div class="dummyClassNamePinkBackground">
+                      First column with pink background
+                    </div>
                   </div>
-                </div>
-                <div class="TopBannerExternal_column__SR540">
-                  <div class="dummyClassNamePinkBackground">
-                    Second column with pink background
+                  <div class="TopBannerExternal_column__SR540">
+                    <div class="dummyClassNamePinkBackground">
+                      Second column with pink background
+                    </div>
                   </div>
-                </div>
-              </nav>
+                </nav>
+              </div>
             </div>
           </div>
         </div>
@@ -996,37 +1014,39 @@ exports[`Tester/TopBannerExternal WithTwoColumnsBreakpointXS play-test 1`] = `
         </a>
         <div class="TopBannerExternal_contentContainer__h2K6k">
           <div class="TopBannerExternal_content__obwYA">
-            <button class="TopBannerButton_button__5RUa7"
-                    aria-expanded="true"
-            >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                   viewbox="0 0 24 24"
-                   focusable="false"
-                   aria-hidden="true"
-                   role="img"
+            <div>
+              <button class="TopBannerButton_button__5RUa7"
+                      aria-expanded="true"
               >
-                <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
-                </path>
-              </svg>
-              <span class>
-                Meny
-              </span>
-            </button>
-            <div class="TopBannerExternal_mainMenu__y-Qyo">
-              <nav aria-label="Temaoversikt"
-                   class="TopBannerExternal_columns__GeLJz  TopBannerExternal_columnsTwo__3Bn6m"
-              >
-                <div class="TopBannerExternal_column__SR540">
-                  <div class="dummyClassNamePinkBackground">
-                    First column with pink background
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+                  </path>
+                </svg>
+                <span class>
+                  Meny
+                </span>
+              </button>
+              <div class="TopBannerExternal_mainMenu__y-Qyo">
+                <nav aria-label="Temaoversikt"
+                     class="TopBannerExternal_columns__GeLJz  TopBannerExternal_columnsTwo__3Bn6m"
+                >
+                  <div class="TopBannerExternal_column__SR540">
+                    <div class="dummyClassNamePinkBackground">
+                      First column with pink background
+                    </div>
                   </div>
-                </div>
-                <div class="TopBannerExternal_column__SR540">
-                  <div class="dummyClassNamePinkBackground">
-                    Second column with pink background
+                  <div class="TopBannerExternal_column__SR540">
+                    <div class="dummyClassNamePinkBackground">
+                      Second column with pink background
+                    </div>
                   </div>
-                </div>
-              </nav>
+                </nav>
+              </div>
             </div>
           </div>
         </div>
