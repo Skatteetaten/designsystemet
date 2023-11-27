@@ -55,14 +55,6 @@ export const TopBannerExternal = forwardRef<
       setIsMenuOpen(!isMenuOpen);
     };
 
-    const handleClickOutside = (event: MouseEvent): void => {
-      const node = event.target as Node;
-      if (isMenuOpen && menuRef.current && !menuRef.current.contains(node)) {
-        setIsMenuOpen(false);
-        menuButtonRef.current?.focus();
-      }
-    };
-
     const handleEscape = (event: KeyboardEvent): void => {
       if (event.key === 'Escape') {
         setIsMenuOpen(false);
@@ -71,6 +63,18 @@ export const TopBannerExternal = forwardRef<
     };
 
     useEffect(() => {
+      if (!isMenuOpen) {
+        return;
+      }
+
+      const handleClickOutside = (event: MouseEvent): void => {
+        const node = event.target as Node;
+        if (menuRef.current && !menuRef.current.contains(node)) {
+          setIsMenuOpen(false);
+          menuButtonRef.current?.focus();
+        }
+      };
+
       document.addEventListener('click', handleClickOutside, false);
       document.addEventListener('keydown', handleEscape, false);
       return () => {
