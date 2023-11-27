@@ -47,7 +47,10 @@ export const TopBannerUserButton = forwardRef<
         ref={ref}
         id={id}
         className={className}
-        classNames={{ text: styles.username }}
+        classNames={{
+          container: styles.usernameButton,
+          text: styles.usernameText,
+        }}
         lang={lang}
         data-testid={dataTestId}
         variant={'filled'}

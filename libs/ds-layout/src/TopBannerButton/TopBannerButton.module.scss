@@ -3,6 +3,7 @@
 .button {
   position: relative;
   display: flex;
+  height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -20,6 +21,7 @@
   line-height: var(--semantic-line-height-default);
 
   .icon {
+    flex-shrink: 0;
     padding: var(--spacing-xs);
     fill: var(--semantic-interactive-main);
   }
@@ -59,6 +61,7 @@
   }
 
   @media (min-width: $breakpoint-s) {
+    height: fit-content;
     flex-direction: row;
     padding: var(--spacing-xxs) var(--spacing-m);
     border-width: 3px;
