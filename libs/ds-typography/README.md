@@ -17,5 +17,4 @@ npm i @skatteetaten/ds-typography
 - Heading
 - Paragraph
 - Blockquote
-- Ingress
 - List
