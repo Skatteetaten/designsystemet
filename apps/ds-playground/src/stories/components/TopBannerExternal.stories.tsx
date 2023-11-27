@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 
-import { Link, LinkGroup } from '@skatteetaten/ds-buttons';
+import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { RadioGroup } from '@skatteetaten/ds-forms';
 import { TopBannerExternal } from '@skatteetaten/ds-layout';
 import { Modal } from '@skatteetaten/ds-overlays';
@@ -118,21 +118,23 @@ export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
 
   return (
     <>
-      <TopBannerExternal />
+      <TopBannerExternal logoAs={'div'} />
       <TopBannerExternal
         firstColumn={
-          <LinkGroup>
-            <LinkGroup.Link href={'#storybook-root'}>{'Skatt'}</LinkGroup.Link>
-            <LinkGroup.Link href={'#storybook-root'}>{'Avgift'}</LinkGroup.Link>
-            <LinkGroup.Link href={'#storybook-root'}>
-              {'Folkeregisteret'}
-            </LinkGroup.Link>
-          </LinkGroup>
+          isLoggedIn && (
+            <LinkGroup>
+              <LinkGroup.Link href={'#storybook-root'}>
+                {'Skatt'}
+              </LinkGroup.Link>
+              <LinkGroup.Link href={'#storybook-root'}>
+                {'Avgift'}
+              </LinkGroup.Link>
+              <LinkGroup.Link href={'#storybook-root'}>
+                {'Folkeregisteret'}
+              </LinkGroup.Link>
+            </LinkGroup>
+          )
         }
-        logoAs={'div'}
-      />
-      <TopBannerExternal
-        firstColumn={isLoggedIn ? 'First Column' : ''}
         secondColumn={isLoggedIn ? 'Second column' : ''}
         thirdColumn={isLoggedIn ? 'Third column' : ''}
         username={username}
@@ -192,19 +194,23 @@ export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
 
   return (
     <>
-      <TopBannerExternal />
+      <TopBannerExternal logoAs={'div'} />
       <TopBannerExternal
         firstColumn={
-          <>
-            <Link href={'#storybook-root'}>{'Skatt'}</Link>
-            <Link href={'#storybook-root'}>{'Avgift'}</Link>
-            <Link href={'#storybook-root'}>{'Folkeregisteret'}</Link>
-          </>
+          isLoggedIn && (
+            <LinkGroup>
+              <LinkGroup.Link href={'#storybook-root'}>
+                {'Skatt'}
+              </LinkGroup.Link>
+              <LinkGroup.Link href={'#storybook-root'}>
+                {'Avgift'}
+              </LinkGroup.Link>
+              <LinkGroup.Link href={'#storybook-root'}>
+                {'Folkeregisteret'}
+              </LinkGroup.Link>
+            </LinkGroup>
+          )
         }
-        logoAs={'div'}
-      />
-      <TopBannerExternal
-        firstColumn={isLoggedIn ? 'First Column' : ''}
         secondColumn={isLoggedIn ? 'Second column' : ''}
         thirdColumn={isLoggedIn ? 'Third column' : ''}
         username={username}

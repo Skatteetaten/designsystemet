@@ -49,34 +49,32 @@ export const TopBannerExternal = forwardRef<
     const { t } = useTranslation('ds_pages', { i18n: dsI18n });
 
     const menuRef = useRef<HTMLDivElement>(null);
+    const menuButtonRef = useRef<HTMLButtonElement>(null);
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
     const handleMenuClick = (): void => {
       setIsMenuOpen(!isMenuOpen);
     };
 
     const handleClickOutside = (event: MouseEvent): void => {
-      const eventPaths: Array<EventTarget> = event.composedPath
-        ? event.composedPath()
-        : [];
-      const target = eventPaths.length > 0 ? eventPaths[0] : event.target;
-      const node = menuRef.current;
-      if (node && node.contains(target as Node)) {
-        return;
+      const node = event.target as Node;
+      if (isMenuOpen && menuRef.current && !menuRef.current.contains(node)) {
+        setIsMenuOpen(false);
+        menuButtonRef.current?.focus();
       }
-      setIsMenuOpen(false);
     };
 
     const handleEscape = (event: KeyboardEvent): void => {
       if (event.key === 'Escape') {
         setIsMenuOpen(false);
+        menuButtonRef.current?.focus();
       }
     };
 
     useEffect(() => {
-      document.addEventListener('mousedown', handleClickOutside, false);
+      document.addEventListener('click', handleClickOutside, false);
       document.addEventListener('keydown', handleEscape, false);
       return () => {
-        document.removeEventListener('mousedown', handleClickOutside, false);
+        document.removeEventListener('click', handleClickOutside, false);
         document.removeEventListener('keydown', handleEscape, false);
       };
     }, [menuRef, isMenuOpen]);
@@ -112,6 +110,7 @@ export const TopBannerExternal = forwardRef<
                 {showMenu && (
                   <div ref={menuRef}>
                     <TopBannerButton
+                      ref={menuButtonRef}
                       svgPath={isMenuOpen ? CancelSVGpath : MenuSVGpath}
                       ariaExpanded={isMenuOpen}
                       onClick={handleMenuClick}
@@ -140,7 +139,6 @@ export const TopBannerExternal = forwardRef<
 
                 {/** TODO - FRONT-1161 språkmeny */}
 
-                {/** TODO - FRONT-1161 er det en bedre måtte enn dette? */}
                 {onLogIn && onLogOut && userRole && (
                   <>
                     <TopBannerUserButton
@@ -159,7 +157,6 @@ export const TopBannerExternal = forwardRef<
                   </>
                 )}
 
-                {/** TODO - FRONT-1161 er det en bedre måtte enn dette? */}
                 {onLogIn && onLogOut && !userRole && (
                   <TopBannerButton
                     svgPath={LockOutlineSVGpath}
