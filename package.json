@@ -7,6 +7,10 @@
   "author": {
     "name": "Skatteetaten"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Skatteetaten/designsystemet.git"
+  },
   "files": [
     "dist",
     "metadata",
@@ -26,6 +30,8 @@
     "build": "nx run-many --target=build --parallel=8",
     "build:playground": "nx build ds-core-designtokens && nx build",
     "build:analyze": "STORYBOOK_WEBPACK_STATS=true nx build",
+    "build:preparePublish": "ts-node  --project tsconfig.base.json  ./libs/ds-dev-config/src/scripts/preparePublish.ts",
+    "deploy:gh-pages": "gh-pages -d dist/storybook/ds-playground -p 0 -r https://github.com/Skatteetaten/designsystemet.git",
     "test": "rimraf .nyc_output/* && nx run-many --target=test -- --url=http://host.docker.internal:4400/",
     "test:lima": "rimraf .nyc_output/* && nx run-many --target=test -- --url=http://host.lima.internal:4400/",
     "test:linux": "npx nx run-many --target=test -- --url=http://127.0.0.1:4400",
@@ -132,6 +138,7 @@
     "eslint-plugin-storybook": "0.6.13",
     "eslint-plugin-testing-library": "5.10.1",
     "filter-files": "0.4.0",
+    "gh-pages": "6.0.0",
     "html-webpack-plugin": "5.5.3",
     "http-server": "14.1.1",
     "jest": "29.4.3",
