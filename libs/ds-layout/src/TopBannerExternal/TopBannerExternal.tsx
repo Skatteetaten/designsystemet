@@ -68,7 +68,7 @@ export const TopBannerExternal = forwardRef<
         className={className}
       >
         <TopBannerSkipLink href={skipLinkURL}>{skipLinkText}</TopBannerSkipLink>
-        <div className={styles.container}>
+        <div className={styles.containerForMainMenu}>
           <div className={styles.topContainer}>
             <TopBannerLogo
               as={logoAs}

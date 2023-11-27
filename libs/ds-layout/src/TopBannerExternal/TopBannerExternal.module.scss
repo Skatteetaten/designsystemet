@@ -27,7 +27,7 @@
 .separator {
   position: relative;
   height: 1rem;
-  background-color: var(--palette-graphite-0);
+  background-color: inherit;
 
   &Left {
     position: absolute;
@@ -48,7 +48,8 @@
   }
 }
 
-.container {
+/* pga skiplink så er det ikke mulig å sette position på header */
+.containerForMainMenu {
   position: relative;
 }
 
@@ -60,10 +61,6 @@
   left: 0;
   padding: 0 var(--spacing-m);
   background-color: var(--palette-graphite-5);
-
-  @media (min-width: $breakpoint-s) {
-    top: 5.2rem;
-  }
 
   @media (min-width: $breakpoint-m) {
     top: 5.5rem;

@@ -5,7 +5,7 @@ export const content: string;
 export const separator: string;
 export const separatorLeft: string;
 export const separatorRight: string;
-export const container: string;
+export const containerForMainMenu: string;
 export const mainMenu: string;
 export const columns: string;
 export const columnsThree: string;
