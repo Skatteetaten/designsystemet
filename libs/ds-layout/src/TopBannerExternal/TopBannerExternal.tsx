@@ -1,4 +1,4 @@
-import { forwardRef, useState } from 'react';
+import { forwardRef, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
@@ -48,11 +48,38 @@ export const TopBannerExternal = forwardRef<
   ): JSX.Element => {
     const { t } = useTranslation('ds_pages', { i18n: dsI18n });
 
+    const menuRef = useRef<HTMLDivElement>(null);
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-
-    const handleClick = (): void => {
+    const handleMenuClick = (): void => {
       setIsMenuOpen(!isMenuOpen);
     };
+
+    const handleClickOutside = (event: MouseEvent): void => {
+      const eventPaths: Array<EventTarget> = event.composedPath
+        ? event.composedPath()
+        : [];
+      const target = eventPaths.length > 0 ? eventPaths[0] : event.target;
+      const node = menuRef.current;
+      if (node && node.contains(target as Node)) {
+        return;
+      }
+      setIsMenuOpen(false);
+    };
+
+    const handleEscape = (event: KeyboardEvent): void => {
+      if (event.key === 'Escape') {
+        setIsMenuOpen(false);
+      }
+    };
+
+    useEffect(() => {
+      document.addEventListener('mousedown', handleClickOutside, false);
+      document.addEventListener('keydown', handleEscape, false);
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside, false);
+        document.removeEventListener('keydown', handleEscape, false);
+      };
+    }, [menuRef, isMenuOpen]);
 
     const showMenu = firstColumn || secondColumn || thirdColumn;
 
@@ -81,36 +108,39 @@ export const TopBannerExternal = forwardRef<
               {children}
 
               <div className={styles.content}>
+                {/** TODO - FRONT-1161 Meny må lukkes når det gjøres et valg i den og når navigert ferdig med tab */}
                 {showMenu && (
-                  <TopBannerButton
-                    svgPath={isMenuOpen ? CancelSVGpath : MenuSVGpath}
-                    ariaExpanded={isMenuOpen}
-                    onClick={handleClick}
-                  >
-                    {t('topbannerbutton.Menu')}
-                  </TopBannerButton>
-                )}
-                {/** TODO - FRONT-1161 Menyen må lukkes når det gjøres et valg i menyen */}
-                {showMenu && isMenuOpen && (
-                  <div className={styles.mainMenu}>
-                    <nav
-                      aria-label={t('topbanner.NavAriaLabel')}
-                      className={`${styles.columns} ${threeColumnsClassName} ${twoColumnsClassName}`}
+                  <div ref={menuRef}>
+                    <TopBannerButton
+                      svgPath={isMenuOpen ? CancelSVGpath : MenuSVGpath}
+                      ariaExpanded={isMenuOpen}
+                      onClick={handleMenuClick}
                     >
-                      <div className={styles.column}>{firstColumn}</div>
-                      {secondColumn && (
-                        <div className={styles.column}>{secondColumn}</div>
-                      )}
-                      {thirdColumn && (
-                        <div className={styles.column}>{thirdColumn}</div>
-                      )}
-                    </nav>
+                      {t('topbannerbutton.Menu')}
+                    </TopBannerButton>
+
+                    {isMenuOpen && (
+                      <div className={styles.mainMenu}>
+                        <nav
+                          aria-label={t('topbanner.NavAriaLabel')}
+                          className={`${styles.columns} ${threeColumnsClassName} ${twoColumnsClassName}`}
+                        >
+                          <div className={styles.column}>{firstColumn}</div>
+                          {secondColumn && (
+                            <div className={styles.column}>{secondColumn}</div>
+                          )}
+                          {thirdColumn && (
+                            <div className={styles.column}>{thirdColumn}</div>
+                          )}
+                        </nav>
+                      </div>
+                    )}
                   </div>
                 )}
 
                 {/** TODO - FRONT-1161 språkmeny */}
 
-                {/** TODO - FRONT-1161 en smartere måtte enn dette */}
+                {/** TODO - FRONT-1161 er det en bedre måtte enn dette? */}
                 {onLogIn && onLogOut && userRole && (
                   <>
                     <TopBannerUserButton
@@ -129,7 +159,7 @@ export const TopBannerExternal = forwardRef<
                   </>
                 )}
 
-                {/** TODO - FRONT-1161 en smartere måtte enn dette */}
+                {/** TODO - FRONT-1161 er det en bedre måtte enn dette? */}
                 {onLogIn && onLogOut && !userRole && (
                   <TopBannerButton
                     svgPath={LockOutlineSVGpath}
