@@ -4,8 +4,13 @@
   display: flex;
   max-width: var(--container-l);
   justify-content: space-between;
-  padding: var(--spacing-m) var(--spacing-m) var(--spacing-s);
+  padding: var(--spacing-m) var(--spacing-xxs) var(--spacing-s);
+  margin: auto;
   gap: var(--spacing-s);
+
+  @media (min-width: $breakpoint-s) {
+    padding: var(--spacing-m) var(--spacing-s) var(--spacing-s);
+  }
 
   .contentContainer {
     display: flex;
@@ -22,6 +27,7 @@
 .separator {
   position: relative;
   height: 1rem;
+  background-color: var(--palette-graphite-0);
 
   &Left {
     position: absolute;
@@ -42,8 +48,26 @@
   }
 }
 
-.menuDrawerContainer {
+.container {
+  position: relative;
+}
+
+.mainMenu {
+  position: absolute;
+  z-index: 101;
+  top: 6.5rem;
+  right: 0;
+  left: 0;
+  padding: 0 var(--spacing-m);
   background-color: var(--palette-graphite-5);
+
+  @media (min-width: $breakpoint-s) {
+    top: 5.2rem;
+  }
+
+  @media (min-width: $breakpoint-m) {
+    top: 5.5rem;
+  }
 
   .columns {
     display: grid;

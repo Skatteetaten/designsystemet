@@ -54,6 +54,8 @@ export const TopBannerExternal = forwardRef<
       setIsMenuOpen(!isMenuOpen);
     };
 
+    const showMenu = firstColumn || secondColumn || thirdColumn;
+
     const threeColumnsClassName = thirdColumn ? styles.columnsThree : '';
     const twoColumnsClassName = secondColumn ? styles.columnsTwo : '';
 
@@ -66,81 +68,85 @@ export const TopBannerExternal = forwardRef<
         className={className}
       >
         <TopBannerSkipLink href={skipLinkURL}>{skipLinkText}</TopBannerSkipLink>
+        <div className={styles.container}>
+          <div className={styles.topContainer}>
+            <TopBannerLogo
+              as={logoAs}
+              logo={logo}
+              mobileLogo={mobileLogo}
+              alt={logoAltText}
+              href={logoURL}
+            />
+            <div className={styles.contentContainer}>
+              {children}
 
-        <div className={styles.topContainer}>
-          <TopBannerLogo
-            as={logoAs}
-            logo={logo}
-            mobileLogo={mobileLogo}
-            alt={logoAltText}
-            href={logoURL}
-          />
-          <div className={styles.contentContainer}>
-            {children}
-
-            <div className={styles.content}>
-              {firstColumn && (
-                <TopBannerButton
-                  svgPath={isMenuOpen ? CancelSVGpath : MenuSVGpath}
-                  ariaExpanded={isMenuOpen}
-                  onClick={handleClick}
-                >
-                  {t('topbannerbutton.Menu')}
-                </TopBannerButton>
-              )}
-
-              {/** TODO - FRONT-1161 språkmeny */}
-
-              {/** TODO - FRONT-1161 en smartere måtte enn dette */}
-              {onLogIn && onLogOut && username && userRole && (
-                <>
-                  <TopBannerUserButton role={userRole} onUsername={onUsername}>
-                    {username}
-                  </TopBannerUserButton>
+              <div className={styles.content}>
+                {showMenu && (
                   <TopBannerButton
-                    svgPath={LogOutSVGpath}
-                    variant={'outline'}
-                    onClick={onLogOut}
+                    svgPath={isMenuOpen ? CancelSVGpath : MenuSVGpath}
+                    ariaExpanded={isMenuOpen}
+                    onClick={handleClick}
                   >
-                    {t('topbannerbutton.Logout')}
+                    {t('topbannerbutton.Menu')}
                   </TopBannerButton>
-                </>
-              )}
+                )}
+                {/** TODO - FRONT-1161 Menyen må lukkes når det gjøres et valg i menyen */}
+                {showMenu && isMenuOpen && (
+                  <div className={styles.mainMenu}>
+                    <nav
+                      aria-label={t('topbanner.NavAriaLabel')}
+                      className={`${styles.columns} ${threeColumnsClassName} ${twoColumnsClassName}`}
+                    >
+                      <div className={styles.column}>{firstColumn}</div>
+                      {secondColumn && (
+                        <div className={styles.column}>{secondColumn}</div>
+                      )}
+                      {thirdColumn && (
+                        <div className={styles.column}>{thirdColumn}</div>
+                      )}
+                    </nav>
+                  </div>
+                )}
 
-              {/** TODO - FRONT-1161 en smartere måtte enn dette */}
-              {onLogIn && onLogOut && !username && !userRole && (
-                <TopBannerButton
-                  svgPath={LockOutlineSVGpath}
-                  variant={'filled'}
-                  onClick={onLogIn}
-                >
-                  {t('topbannerbutton.Login')}
-                </TopBannerButton>
-              )}
+                {/** TODO - FRONT-1161 språkmeny */}
+
+                {/** TODO - FRONT-1161 en smartere måtte enn dette */}
+                {onLogIn && onLogOut && userRole && (
+                  <>
+                    <TopBannerUserButton
+                      role={userRole}
+                      onUsername={onUsername}
+                    >
+                      {username}
+                    </TopBannerUserButton>
+                    <TopBannerButton
+                      svgPath={LogOutSVGpath}
+                      variant={'outline'}
+                      onClick={onLogOut}
+                    >
+                      {t('topbannerbutton.Logout')}
+                    </TopBannerButton>
+                  </>
+                )}
+
+                {/** TODO - FRONT-1161 en smartere måtte enn dette */}
+                {onLogIn && onLogOut && !userRole && (
+                  <TopBannerButton
+                    svgPath={LockOutlineSVGpath}
+                    variant={'filled'}
+                    onClick={onLogIn}
+                  >
+                    {t('topbannerbutton.Login')}
+                  </TopBannerButton>
+                )}
+              </div>
             </div>
           </div>
-        </div>
-        <div className={styles.separator}>
-          <div className={styles.separatorRight}></div>
-          <div className={styles.separatorLeft}></div>
-        </div>
-        {/** TODO - FRONT-1161 når menyen åpnes må fokusrekkefølgen fikses og at menyen lukker seg når noe er valgt */}
-        {isMenuOpen && (
-          <div className={styles.menuDrawerContainer}>
-            <nav
-              aria-label={t('topbanner.NavAriaLabel')}
-              className={`${styles.columns} ${threeColumnsClassName} ${twoColumnsClassName}`}
-            >
-              <div className={styles.column}>{firstColumn}</div>
-              {secondColumn && (
-                <div className={styles.column}>{secondColumn}</div>
-              )}
-              {thirdColumn && (
-                <div className={styles.column}>{thirdColumn}</div>
-              )}
-            </nav>
+          <div className={styles.separator}>
+            <div className={styles.separatorRight}></div>
+            <div className={styles.separatorLeft}></div>
           </div>
-        )}
+        </div>
       </header>
     );
   }

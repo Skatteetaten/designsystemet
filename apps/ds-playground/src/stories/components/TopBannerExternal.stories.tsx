@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 
+import { Link, LinkGroup } from '@skatteetaten/ds-buttons';
 import { RadioGroup } from '@skatteetaten/ds-forms';
-import { BellSVGpath, Icon } from '@skatteetaten/ds-icons';
 import { TopBannerExternal } from '@skatteetaten/ds-layout';
 import { Modal } from '@skatteetaten/ds-overlays';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
@@ -120,18 +120,17 @@ export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
     <>
       <TopBannerExternal />
       <TopBannerExternal
-        firstColumn={'First column'}
-        secondColumn={'Second column'}
-        thirdColumn={'Third column'}
+        firstColumn={
+          <LinkGroup>
+            <LinkGroup.Link href={'#storybook-root'}>{'Skatt'}</LinkGroup.Link>
+            <LinkGroup.Link href={'#storybook-root'}>{'Avgift'}</LinkGroup.Link>
+            <LinkGroup.Link href={'#storybook-root'}>
+              {'Folkeregisteret'}
+            </LinkGroup.Link>
+          </LinkGroup>
+        }
         logoAs={'div'}
-      >
-        <div className={'messagebox_container'}>
-          <div className={'messagebox'}>
-            <Icon svgPath={BellSVGpath} />
-            {'Dette er en test-side.'}
-          </div>
-        </div>
-      </TopBannerExternal>
+      />
       <TopBannerExternal
         firstColumn={isLoggedIn ? 'First Column' : ''}
         secondColumn={isLoggedIn ? 'Second column' : ''}
@@ -195,18 +194,15 @@ export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
     <>
       <TopBannerExternal />
       <TopBannerExternal
-        firstColumn={'First column'}
-        secondColumn={'Second column'}
-        thirdColumn={'Third column'}
+        firstColumn={
+          <>
+            <Link href={'#storybook-root'}>{'Skatt'}</Link>
+            <Link href={'#storybook-root'}>{'Avgift'}</Link>
+            <Link href={'#storybook-root'}>{'Folkeregisteret'}</Link>
+          </>
+        }
         logoAs={'div'}
-      >
-        <div className={'messagebox_container'}>
-          <div className={'messagebox'}>
-            <Icon svgPath={BellSVGpath} />
-            {'Dette er en test-side.'}
-          </div>
-        </div>
-      </TopBannerExternal>
+      />
       <TopBannerExternal
         firstColumn={isLoggedIn ? 'First Column' : ''}
         secondColumn={isLoggedIn ? 'Second column' : ''}
