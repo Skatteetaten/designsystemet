@@ -2,7 +2,9 @@
 
 exports[`Tester/TopBannerUserButton (intern) Defaults play-test 1`] = `
 <div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx">
+  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
+          type="button"
+  >
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
          viewbox="0 0 24 24"
          focusable="false"
@@ -26,7 +28,9 @@ exports[`Tester/TopBannerUserButton (intern) Defaults play-test 1`] = `
 exports[`Tester/TopBannerUserButton (intern) WithAllRoles play-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL"
+            type="button"
+    >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
@@ -44,7 +48,9 @@ exports[`Tester/TopBannerUserButton (intern) WithAllRoles play-test 1`] = `
         Meg selv
       </span>
     </button>
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY"
+            type="button"
+    >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
@@ -62,7 +68,9 @@ exports[`Tester/TopBannerUserButton (intern) WithAllRoles play-test 1`] = `
         SØRUMSAND-SCHOENBERG WILLIAM
       </span>
     </button>
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY"
+            type="button"
+    >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
@@ -90,6 +98,7 @@ exports[`Tester/TopBannerUserButton (intern) WithAttributes play-test 1`] = `
           class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx dummyClassname"
           lang="nb"
           data-testid="123ID"
+          type="button"
   >
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
          viewbox="0 0 24 24"
@@ -114,7 +123,9 @@ exports[`Tester/TopBannerUserButton (intern) WithAttributes play-test 1`] = `
 exports[`Tester/TopBannerUserButton (intern) WithBreakpointL smoke-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL"
+            type="button"
+    >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
@@ -132,7 +143,9 @@ exports[`Tester/TopBannerUserButton (intern) WithBreakpointL smoke-test 1`] = `
         Meg selv
       </span>
     </button>
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY"
+            type="button"
+    >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
@@ -150,7 +163,9 @@ exports[`Tester/TopBannerUserButton (intern) WithBreakpointL smoke-test 1`] = `
         SØRUMSAND-SCHOENBERG WILLIAM
       </span>
     </button>
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY"
+            type="button"
+    >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
@@ -175,7 +190,9 @@ exports[`Tester/TopBannerUserButton (intern) WithBreakpointL smoke-test 1`] = `
 exports[`Tester/TopBannerUserButton (intern) WithBreakpointM smoke-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL"
+            type="button"
+    >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
@@ -193,7 +210,9 @@ exports[`Tester/TopBannerUserButton (intern) WithBreakpointM smoke-test 1`] = `
         Meg selv
       </span>
     </button>
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY"
+            type="button"
+    >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
@@ -211,7 +230,9 @@ exports[`Tester/TopBannerUserButton (intern) WithBreakpointM smoke-test 1`] = `
         SØRUMSAND-SCHOENBERG WILLIAM
       </span>
     </button>
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY"
+            type="button"
+    >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
@@ -236,7 +257,9 @@ exports[`Tester/TopBannerUserButton (intern) WithBreakpointM smoke-test 1`] = `
 exports[`Tester/TopBannerUserButton (intern) WithBreakpointS smoke-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL"
+            type="button"
+    >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
@@ -254,7 +277,9 @@ exports[`Tester/TopBannerUserButton (intern) WithBreakpointS smoke-test 1`] = `
         Meg selv
       </span>
     </button>
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY"
+            type="button"
+    >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
@@ -272,7 +297,9 @@ exports[`Tester/TopBannerUserButton (intern) WithBreakpointS smoke-test 1`] = `
         SØRUMSAND-SCHOENBERG WILLIAM
       </span>
     </button>
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY"
+            type="button"
+    >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
@@ -297,7 +324,9 @@ exports[`Tester/TopBannerUserButton (intern) WithBreakpointS smoke-test 1`] = `
 exports[`Tester/TopBannerUserButton (intern) WithBreakpointXS smoke-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL"
+            type="button"
+    >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
@@ -315,7 +344,9 @@ exports[`Tester/TopBannerUserButton (intern) WithBreakpointXS smoke-test 1`] = `
         Meg selv
       </span>
     </button>
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY"
+            type="button"
+    >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
@@ -333,7 +364,9 @@ exports[`Tester/TopBannerUserButton (intern) WithBreakpointXS smoke-test 1`] = `
         SØRUMSAND-SCHOENBERG WILLIAM
       </span>
     </button>
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY"
+            type="button"
+    >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
@@ -357,7 +390,9 @@ exports[`Tester/TopBannerUserButton (intern) WithBreakpointXS smoke-test 1`] = `
 
 exports[`Tester/TopBannerUserButton (intern) WithChildren play-test 1`] = `
 <div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx  TopBannerUserButton_usernameButton__06VaY">
+  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx  TopBannerUserButton_usernameButton__06VaY"
+          type="button"
+  >
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
          viewbox="0 0 24 24"
          focusable="false"
@@ -381,7 +416,9 @@ exports[`Tester/TopBannerUserButton (intern) WithChildren play-test 1`] = `
 exports[`Tester/TopBannerUserButton (intern) WithMobileScreen smoke-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL"
+            type="button"
+    >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
@@ -399,7 +436,9 @@ exports[`Tester/TopBannerUserButton (intern) WithMobileScreen smoke-test 1`] = `
         Meg selv
       </span>
     </button>
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY"
+            type="button"
+    >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
@@ -417,7 +456,9 @@ exports[`Tester/TopBannerUserButton (intern) WithMobileScreen smoke-test 1`] = `
         SØRUMSAND-SCHOENBERG WILLIAM
       </span>
     </button>
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY"
+            type="button"
+    >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
@@ -442,6 +483,7 @@ exports[`Tester/TopBannerUserButton (intern) WithMobileScreen smoke-test 1`] = `
 exports[`Tester/TopBannerUserButton (intern) WithRef play-test 1`] = `
 <div data-test-block="true">
   <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
+          type="button"
           id="dummyIdForwardedFromRef"
   >
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
