@@ -72,10 +72,10 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const loginText = dsI18n.t('ds_pages:loginbutton.Title');
-const logoutText = dsI18n.t('ds_pages:logoutbutton.Title');
-const themeText = dsI18n.t('ds_pages:topbannerexternal.DrawerAriaLabel');
-const menuText = dsI18n.t('ds_pages:menubutton.Meny');
+const loginText = dsI18n.t('ds_pages:topbannerbutton.Login');
+const logoutText = dsI18n.t('ds_pages:topbannerbutton.Logout');
+const themeText = dsI18n.t('ds_pages:topbanner.NavAriaLabel');
+const menuText = dsI18n.t('ds_pages:topbannerbutton.Menu');
 const defaultArgs: TopBannerExternalProps = {
   // Uten undefined så blir funksjonene initalisert med mockConstructor i Storybook
   onLogIn: undefined,

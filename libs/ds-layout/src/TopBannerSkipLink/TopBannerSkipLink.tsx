@@ -49,7 +49,7 @@ export const TopBannerSkipLink = forwardRef<
       >
         <span className={styles.skipLinkContent}>
           <Icon className={styles.icon} svgPath={ArrowDownSVGpath} />
-          {children ? children : t('topbannerexternal.SkipLinkText')}
+          {children ?? t('topbanner.SkipLinkText')}
         </span>
       </a>
     );

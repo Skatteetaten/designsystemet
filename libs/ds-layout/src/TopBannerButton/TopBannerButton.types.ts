@@ -2,6 +2,7 @@ import {
   ComponentPropsWithoutRef,
   MouseEventHandler,
   ReactElement,
+  ReactNode,
 } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
@@ -27,8 +28,8 @@ export interface TopBannerButtonProps
     container?: string;
     text?: string;
   };
-  /** Tekst på knappen. */
-  children: string;
+  /** Innhold/tekst på knappen. */
+  children: ReactNode;
   /** HTML-path node. */
   svgPath: ReactElement;
   /** Hvis svgPath er meningsbærende, må ha en beskrivende tekst */

@@ -39,7 +39,7 @@ const meta = {
       control: 'inline-radio',
     },
     // Events
-    onClick: { table: { disable: true } },
+    onUsername: { table: { disable: true } },
   },
 } as Meta<typeof TopBannerUserButton>;
 export default meta;
@@ -97,23 +97,41 @@ export const Defaults = {
   name: 'Defaults (Username A2)',
   args: {
     ...defaultArgs,
+    children: 'Meg selv',
   },
   argTypes: {
     role: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    // TODO FRONT 1161 - erstattet hardkodet tekst når tekstvariabelen finnes
-    const usernameText = canvas.getByText('Meg selv');
-    const defaultTitle = canvas.getByText(
-      dsI18n.t('ds_pages:userbutton.SelfIconText')
+    const usernameButtonText = canvas.getByText(
+      dsI18n.t('ds_pages:topbannerbutton.Myself')
     );
-    await expect(usernameText).toBeInTheDocument();
-    await expect(defaultTitle).toBeInTheDocument();
+    const title = canvas.getByText(
+      dsI18n.t('ds_pages:topbannerbutton.MyselfTitle')
+    );
+    await expect(usernameButtonText).toBeInTheDocument();
+    await expect(title).toBeInTheDocument();
   },
 } satisfies Story;
 
-// TODO FRONT 1161 skrive test WithChildren
+export const WithChildren = {
+  name: 'With Children (A2)',
+  args: {
+    ...defaultArgs,
+    role: 'virksomhet',
+    children: 'Navnet på virksomheten',
+  },
+  argTypes: {
+    children: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(
+      canvas.getByText('Navnet på virksomheten')
+    ).toBeInTheDocument();
+  },
+} satisfies Story;
 
 const TemplateWithAllRoles: StoryFn<typeof TopBannerUserButton> = (args) => (
   <div className={'topbannerButtonContainer'}>
@@ -151,13 +169,13 @@ export const WithAllRoles = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const titleSelf = canvas.getByText(
-      dsI18n.t('ds_pages:userbutton.SelfIconText')
+      dsI18n.t('ds_pages:topbannerbutton.MyselfTitle')
     );
     const titleWork = canvas.getByText(
-      dsI18n.t('ds_pages:userbutton.WorkIconText')
+      dsI18n.t('ds_pages:topbannerbutton.CompanyTitle')
     );
     const titleOther = canvas.getByText(
-      dsI18n.t('ds_pages:userbutton.OtherIconText')
+      dsI18n.t('ds_pages:topbannerbutton.OtherTitle')
     );
     await expect(titleSelf).toBeInTheDocument();
     await expect(titleWork).toBeInTheDocument();
