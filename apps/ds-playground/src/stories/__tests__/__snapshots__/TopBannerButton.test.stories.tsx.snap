@@ -2,7 +2,9 @@
 
 exports[`Tester/TopBannerButton (intern) Defaults play-test 1`] = `
 <div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7">
+  <button class="TopBannerButton_button__5RUa7"
+          type="button"
+  >
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
          viewbox="0 0 24 24"
          focusable="false"
@@ -22,7 +24,9 @@ exports[`Tester/TopBannerButton (intern) Defaults play-test 1`] = `
 exports[`Tester/TopBannerButton (intern) WithAllVariant smoke-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_outline__bVRJP">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_outline__bVRJP"
+            type="button"
+    >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
@@ -36,7 +40,9 @@ exports[`Tester/TopBannerButton (intern) WithAllVariant smoke-test 1`] = `
         Logg ut
       </span>
     </button>
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
+            type="button"
+    >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
@@ -60,6 +66,7 @@ exports[`Tester/TopBannerButton (intern) WithAttributes play-test 1`] = `
           class="TopBannerButton_button__5RUa7  dummyClassname"
           lang="nb"
           data-testid="123ID"
+          type="button"
   >
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
          viewbox="0 0 24 24"
@@ -80,7 +87,9 @@ exports[`Tester/TopBannerButton (intern) WithAttributes play-test 1`] = `
 exports[`Tester/TopBannerButton (intern) WithBreakpointXS smoke-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_outline__bVRJP">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_outline__bVRJP"
+            type="button"
+    >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
@@ -94,7 +103,9 @@ exports[`Tester/TopBannerButton (intern) WithBreakpointXS smoke-test 1`] = `
         Logg ut
       </span>
     </button>
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
+            type="button"
+    >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
            viewbox="0 0 24 24"
            focusable="false"
@@ -114,7 +125,9 @@ exports[`Tester/TopBannerButton (intern) WithBreakpointXS smoke-test 1`] = `
 
 exports[`Tester/TopBannerButton (intern) WithBreakpointXSVariantFilled smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx">
+  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
+          type="button"
+  >
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
          viewbox="0 0 24 24"
          focusable="false"
@@ -133,7 +146,9 @@ exports[`Tester/TopBannerButton (intern) WithBreakpointXSVariantFilled smoke-tes
 
 exports[`Tester/TopBannerButton (intern) WithBreakpointXSVariantOutline smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_outline__bVRJP">
+  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_outline__bVRJP"
+          type="button"
+  >
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
          viewbox="0 0 24 24"
          focusable="false"
@@ -152,7 +167,9 @@ exports[`Tester/TopBannerButton (intern) WithBreakpointXSVariantOutline smoke-te
 
 exports[`Tester/TopBannerButton (intern) WithBreakpointXSVariantStandard play-test 1`] = `
 <div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7">
+  <button class="TopBannerButton_button__5RUa7"
+          type="button"
+  >
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
          viewbox="0 0 24 24"
          focusable="false"
@@ -171,7 +188,9 @@ exports[`Tester/TopBannerButton (intern) WithBreakpointXSVariantStandard play-te
 
 exports[`Tester/TopBannerButton (intern) WithClassNames play-test 1`] = `
 <div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7    dummyClassname">
+  <button class="TopBannerButton_button__5RUa7    dummyClassname"
+          type="button"
+  >
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
          viewbox="0 0 24 24"
          focusable="false"
@@ -190,7 +209,9 @@ exports[`Tester/TopBannerButton (intern) WithClassNames play-test 1`] = `
 
 exports[`Tester/TopBannerButton (intern) WithEventHandlers play-test 1`] = `
 <div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7">
+  <button class="TopBannerButton_button__5RUa7"
+          type="button"
+  >
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
          viewbox="0 0 24 24"
          focusable="false"
@@ -210,6 +231,7 @@ exports[`Tester/TopBannerButton (intern) WithEventHandlers play-test 1`] = `
 exports[`Tester/TopBannerButton (intern) WithRef play-test 1`] = `
 <div data-test-block="true">
   <button class="TopBannerButton_button__5RUa7"
+          type="button"
           id="dummyIdForwardedFromRef"
   >
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
@@ -230,7 +252,9 @@ exports[`Tester/TopBannerButton (intern) WithRef play-test 1`] = `
 
 exports[`Tester/TopBannerButton (intern) WithTitle play-test 1`] = `
 <div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx">
+  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
+          type="button"
+  >
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
          viewbox="0 0 24 24"
          focusable="false"
@@ -253,7 +277,9 @@ exports[`Tester/TopBannerButton (intern) WithTitle play-test 1`] = `
 
 exports[`Tester/TopBannerButton (intern) WithVariantFilled smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx">
+  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
+          type="button"
+  >
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
          viewbox="0 0 24 24"
          focusable="false"
@@ -272,7 +298,9 @@ exports[`Tester/TopBannerButton (intern) WithVariantFilled smoke-test 1`] = `
 
 exports[`Tester/TopBannerButton (intern) WithVariantOutline smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_outline__bVRJP">
+  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_outline__bVRJP"
+          type="button"
+  >
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
          viewbox="0 0 24 24"
          focusable="false"

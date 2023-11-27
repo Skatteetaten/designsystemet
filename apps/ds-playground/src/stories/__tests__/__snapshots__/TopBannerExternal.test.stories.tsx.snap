@@ -38,6 +38,7 @@ exports[`Tester/TopBannerExternal ClickMainMenuOpenAndClose play-test 1`] = `
             <div>
               <button class="TopBannerButton_button__5RUa7"
                       aria-expanded="false"
+                      type="button"
               >
                 <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
                      viewbox="0 0 24 24"
@@ -106,7 +107,9 @@ exports[`Tester/TopBannerExternal WithAttributes play-test 1`] = `
         </a>
         <div class="TopBannerExternal_contentContainer__h2K6k">
           <div class="TopBannerExternal_content__obwYA">
-            <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx">
+            <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
+                    type="button"
+            >
               <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
                    viewbox="0 0 24 24"
                    focusable="false"
@@ -288,6 +291,7 @@ exports[`Tester/TopBannerExternal WithOneColumn play-test 1`] = `
             <div>
               <button class="TopBannerButton_button__5RUa7"
                       aria-expanded="true"
+                      type="button"
               >
                 <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
                      viewbox="0 0 24 24"
@@ -366,6 +370,7 @@ exports[`Tester/TopBannerExternal WithOneColumnBreakpointS play-test 1`] = `
             <div>
               <button class="TopBannerButton_button__5RUa7"
                       aria-expanded="true"
+                      type="button"
               >
                 <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
                      viewbox="0 0 24 24"
@@ -444,6 +449,7 @@ exports[`Tester/TopBannerExternal WithOneColumnBreakpointXS play-test 1`] = `
             <div>
               <button class="TopBannerButton_button__5RUa7"
                       aria-expanded="true"
+                      type="button"
               >
                 <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
                      viewbox="0 0 24 24"
@@ -521,7 +527,9 @@ exports[`Tester/TopBannerExternal WithRef play-test 1`] = `
         </a>
         <div class="TopBannerExternal_contentContainer__h2K6k">
           <div class="TopBannerExternal_content__obwYA">
-            <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx">
+            <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
+                    type="button"
+            >
               <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
                    viewbox="0 0 24 24"
                    focusable="false"
@@ -587,6 +595,7 @@ exports[`Tester/TopBannerExternal WithThreeColumns play-test 1`] = `
             <div>
               <button class="TopBannerButton_button__5RUa7"
                       aria-expanded="true"
+                      type="button"
               >
                 <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
                      viewbox="0 0 24 24"
@@ -675,6 +684,7 @@ exports[`Tester/TopBannerExternal WithThreeColumnsBreakpointS play-test 1`] = `
             <div>
               <button class="TopBannerButton_button__5RUa7"
                       aria-expanded="true"
+                      type="button"
               >
                 <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
                      viewbox="0 0 24 24"
@@ -763,6 +773,7 @@ exports[`Tester/TopBannerExternal WithThreeColumnsBreakpointXS play-test 1`] = `
             <div>
               <button class="TopBannerButton_button__5RUa7"
                       aria-expanded="true"
+                      type="button"
               >
                 <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
                      viewbox="0 0 24 24"
@@ -851,6 +862,7 @@ exports[`Tester/TopBannerExternal WithTwoColumns play-test 1`] = `
             <div>
               <button class="TopBannerButton_button__5RUa7"
                       aria-expanded="true"
+                      type="button"
               >
                 <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
                      viewbox="0 0 24 24"
@@ -934,6 +946,7 @@ exports[`Tester/TopBannerExternal WithTwoColumnsBreakpointS play-test 1`] = `
             <div>
               <button class="TopBannerButton_button__5RUa7"
                       aria-expanded="true"
+                      type="button"
               >
                 <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
                      viewbox="0 0 24 24"
@@ -1017,6 +1030,7 @@ exports[`Tester/TopBannerExternal WithTwoColumnsBreakpointXS play-test 1`] = `
             <div>
               <button class="TopBannerButton_button__5RUa7"
                       aria-expanded="true"
+                      type="button"
               >
                 <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
                      viewbox="0 0 24 24"
