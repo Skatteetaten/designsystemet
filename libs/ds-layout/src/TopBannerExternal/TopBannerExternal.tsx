@@ -85,7 +85,7 @@ export const TopBannerExternal = forwardRef<
                   ariaExpanded={isMenuOpen}
                   onClick={handleClick}
                 >
-                  {t('menubutton.Meny')}
+                  {t('topbannerbutton.Menu')}
                 </TopBannerButton>
               )}
 
@@ -102,7 +102,7 @@ export const TopBannerExternal = forwardRef<
                     variant={'outline'}
                     onClick={onLogOut}
                   >
-                    {t('logoutbutton.Title')}
+                    {t('topbannerbutton.Logout')}
                   </TopBannerButton>
                 </>
               )}
@@ -114,7 +114,7 @@ export const TopBannerExternal = forwardRef<
                   variant={'filled'}
                   onClick={onLogIn}
                 >
-                  {t('loginbutton.Title')}
+                  {t('topbannerbutton.Login')}
                 </TopBannerButton>
               )}
             </div>
@@ -128,7 +128,7 @@ export const TopBannerExternal = forwardRef<
         {isMenuOpen && (
           <div className={styles.menuDrawerContainer}>
             <nav
-              aria-label={t('topbannerexternal.DrawerAriaLabel')}
+              aria-label={t('topbanner.NavAriaLabel')}
               className={`${styles.columns} ${threeColumnsClassName} ${twoColumnsClassName}`}
             >
               <div className={styles.column}>{firstColumn}</div>

@@ -31,26 +31,34 @@ export const TopBannerUserButton = forwardRef<
   ): JSX.Element => {
     const { t } = useTranslation('ds_pages', { i18n: dsI18n });
 
+    let buttonText = children;
     let roleSVGpath = PersonSVGpath;
-    let title = t('userbutton.SelfIconText');
-    if (role === 'virksomhet') {
+    let title = '';
+    if (role === 'meg') {
+      buttonText = t('topbannerbutton.Myself');
+      roleSVGpath = PersonSVGpath;
+      title = t('topbannerbutton.MyselfTitle');
+    } else if (role === 'virksomhet') {
       roleSVGpath = BriefcaseSVGpath;
-      title = t('userbutton.WorkIconText');
+      title = t('topbannerbutton.CompanyTitle');
     } else if (role === 'andre') {
       roleSVGpath = AccountMultipleSVGpath;
-      title = t('userbutton.OtherIconText');
+      title = t('topbannerbutton.OtherTitle');
     }
 
-    // TODO FRONT 1161 - erstattet hardkodet tekst når tekstvariabelen finnes
     return (
       <TopBannerButton
         ref={ref}
         id={id}
         className={className}
-        classNames={{
-          container: styles.usernameButton,
-          text: styles.usernameText,
-        }}
+        classNames={
+          role === 'meg'
+            ? undefined
+            : {
+                container: styles.usernameButton,
+                text: styles.usernameText,
+              }
+        }
         lang={lang}
         data-testid={dataTestId}
         variant={'filled'}
@@ -58,7 +66,7 @@ export const TopBannerUserButton = forwardRef<
         title={title}
         onClick={onUsername}
       >
-        {children ? children : 'Meg selv'}
+        {buttonText}
       </TopBannerButton>
     );
   }

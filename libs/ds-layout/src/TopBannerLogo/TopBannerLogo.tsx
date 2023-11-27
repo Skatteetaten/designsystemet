@@ -47,8 +47,8 @@ export const TopBannerLogo = forwardRef<LogoRefHandle, TopBannerLogoProps>(
 
     const defaultAltText =
       Tag === 'div'
-        ? t('topbannerexternal.SkeLogoImageText')
-        : t('topbannerexternal.SkeLogoLinkText');
+        ? t('topbanner.SkeLogoImageText')
+        : t('topbanner.SkeLogoLinkText');
     const altText = alt ?? defaultAltText;
 
     const asClassName = Tag !== 'div' ? styles.logoAsLink : '';
