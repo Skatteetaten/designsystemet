@@ -22,7 +22,7 @@ import skeLogo from '../../assets/ske-logo.svg';
 
 const meta = {
   component: TopBannerExternal,
-  title: 'Tester/TopBannerExternal',
+  title: 'Tester/TopBanner/TopBannerExternal',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },
@@ -37,7 +37,8 @@ const meta = {
       table: { disable: true, category: category.props },
     },
     skipLinkText: { table: { disable: true } },
-    skipLinkURL: { table: { disable: true } },
+    skipLinkTarget: { table: { disable: true } },
+    skipLinkShadowRootNode: { table: { disable: true } },
     logo: {
       table: { disable: true },
       control: 'select',
@@ -67,7 +68,7 @@ const meta = {
     // Events
     onLogIn: { table: { disable: true } },
     onLogOut: { table: { disable: true } },
-    onUsername: { table: { disable: true } },
+    onUserClick: { table: { disable: true } },
   },
 } satisfies Meta<typeof TopBannerExternal>;
 export default meta;
@@ -82,7 +83,7 @@ const defaultArgs: TopBannerExternalProps = {
   // Uten undefined så blir funksjonene initalisert med mockConstructor i Storybook
   onLogIn: undefined,
   onLogOut: undefined,
-  onUsername: undefined,
+  onUserClick: undefined,
 };
 
 export const WithRef = {

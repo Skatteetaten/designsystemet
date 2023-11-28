@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tester/TopBannerButton (intern) AllVariantOnBreakpointS smoke-test 1`] = `
+exports[`Tester/TopBanner/TopBannerButton (intern) AllVariantOnBreakpointS smoke-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
     <button class="TopBannerButton_button__5RUa7"
@@ -61,7 +61,7 @@ exports[`Tester/TopBannerButton (intern) AllVariantOnBreakpointS smoke-test 1`] 
 </div>
 `;
 
-exports[`Tester/TopBannerButton (intern) AllVariantOnMobileScreen smoke-test 1`] = `
+exports[`Tester/TopBanner/TopBannerButton (intern) AllVariantOnMobileScreen smoke-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
     <button class="TopBannerButton_button__5RUa7"
@@ -122,7 +122,7 @@ exports[`Tester/TopBannerButton (intern) AllVariantOnMobileScreen smoke-test 1`]
 </div>
 `;
 
-exports[`Tester/TopBannerButton (intern) Defaults play-test 1`] = `
+exports[`Tester/TopBanner/TopBannerButton (intern) Defaults play-test 1`] = `
 <div data-test-block="true">
   <button class="TopBannerButton_button__5RUa7"
           type="button"
@@ -145,7 +145,7 @@ exports[`Tester/TopBannerButton (intern) Defaults play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TopBannerButton (intern) DefaultsOnMobileScreen smoke-test 1`] = `
+exports[`Tester/TopBanner/TopBannerButton (intern) DefaultsOnMobileScreen smoke-test 1`] = `
 <div data-test-block="true">
   <button class="TopBannerButton_button__5RUa7"
           type="button"
@@ -168,7 +168,7 @@ exports[`Tester/TopBannerButton (intern) DefaultsOnMobileScreen smoke-test 1`] =
 </div>
 `;
 
-exports[`Tester/TopBannerButton (intern) VariantFilledOnMobileScreen smoke-test 1`] = `
+exports[`Tester/TopBanner/TopBannerButton (intern) VariantFilledOnMobileScreen smoke-test 1`] = `
 <div data-test-block="true">
   <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
           type="button"
@@ -191,7 +191,7 @@ exports[`Tester/TopBannerButton (intern) VariantFilledOnMobileScreen smoke-test 
 </div>
 `;
 
-exports[`Tester/TopBannerButton (intern) VariantOutlineOnMobileScreen smoke-test 1`] = `
+exports[`Tester/TopBanner/TopBannerButton (intern) VariantOutlineOnMobileScreen smoke-test 1`] = `
 <div data-test-block="true">
   <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_outline__bVRJP"
           type="button"
@@ -214,7 +214,7 @@ exports[`Tester/TopBannerButton (intern) VariantOutlineOnMobileScreen smoke-test
 </div>
 `;
 
-exports[`Tester/TopBannerButton (intern) WithArrow play-test 1`] = `
+exports[`Tester/TopBanner/TopBannerButton (intern) WithArrow play-test 1`] = `
 <div data-test-block="true">
   <button class="TopBannerButton_button__5RUa7"
           type="button"
@@ -255,7 +255,7 @@ exports[`Tester/TopBannerButton (intern) WithArrow play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TopBannerButton (intern) WithArrowOnMobileScreen smoke-test 1`] = `
+exports[`Tester/TopBanner/TopBannerButton (intern) WithArrowOnMobileScreen smoke-test 1`] = `
 <div data-test-block="true">
   <button class="TopBannerButton_button__5RUa7"
           type="button"
@@ -296,7 +296,7 @@ exports[`Tester/TopBannerButton (intern) WithArrowOnMobileScreen smoke-test 1`] 
 </div>
 `;
 
-exports[`Tester/TopBannerButton (intern) WithAttributes play-test 1`] = `
+exports[`Tester/TopBanner/TopBannerButton (intern) WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <button id="htmlid"
           class="TopBannerButton_button__5RUa7  dummyClassname"
@@ -322,7 +322,7 @@ exports[`Tester/TopBannerButton (intern) WithAttributes play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TopBannerButton (intern) WithClassNames play-test 1`] = `
+exports[`Tester/TopBanner/TopBannerButton (intern) WithClassNames play-test 1`] = `
 <div data-test-block="true">
   <button class="TopBannerButton_button__5RUa7   dummyClassname"
           type="button"
@@ -345,7 +345,7 @@ exports[`Tester/TopBannerButton (intern) WithClassNames play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TopBannerButton (intern) WithEventHandlers play-test 1`] = `
+exports[`Tester/TopBanner/TopBannerButton (intern) WithEventHandlers play-test 1`] = `
 <div data-test-block="true">
   <button class="TopBannerButton_button__5RUa7"
           type="button"
@@ -368,7 +368,7 @@ exports[`Tester/TopBannerButton (intern) WithEventHandlers play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TopBannerButton (intern) WithRef play-test 1`] = `
+exports[`Tester/TopBanner/TopBannerButton (intern) WithRef play-test 1`] = `
 <div data-test-block="true">
   <button class="TopBannerButton_button__5RUa7"
           type="button"
@@ -392,7 +392,7 @@ exports[`Tester/TopBannerButton (intern) WithRef play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TopBannerButton (intern) WithTitle play-test 1`] = `
+exports[`Tester/TopBanner/TopBannerButton (intern) WithTitle play-test 1`] = `
 <div data-test-block="true">
   <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
           type="button"
@@ -419,7 +419,7 @@ exports[`Tester/TopBannerButton (intern) WithTitle play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TopBannerButton (intern) WithVariantFilled smoke-test 1`] = `
+exports[`Tester/TopBanner/TopBannerButton (intern) WithVariantFilled smoke-test 1`] = `
 <div data-test-block="true">
   <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
           type="button"
@@ -442,7 +442,7 @@ exports[`Tester/TopBannerButton (intern) WithVariantFilled smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TopBannerButton (intern) WithVariantOutline smoke-test 1`] = `
+exports[`Tester/TopBanner/TopBannerButton (intern) WithVariantOutline smoke-test 1`] = `
 <div data-test-block="true">
   <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_outline__bVRJP"
           type="button"

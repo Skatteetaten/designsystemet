@@ -9,5 +9,5 @@ export interface TopBannerUserButtonProps extends BaseProps {
   /** Hvilken rolle innlogget bruker har. */
   role?: UserRole;
   /** Callback når knappen trykkes på. */
-  onUsername?: () => void;
+  onUserClick?: () => void;
 }

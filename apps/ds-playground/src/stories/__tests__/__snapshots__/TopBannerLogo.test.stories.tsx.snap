@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tester/TopBannerLogo (intern) Defaults play-test 1`] = `
+exports[`Tester/TopBanner/TopBannerLogo (intern) Defaults play-test 1`] = `
 <div data-test-block="true">
   <a class="TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
      href="https://www.skatteetaten.no/"
@@ -17,7 +17,7 @@ exports[`Tester/TopBannerLogo (intern) Defaults play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TopBannerLogo (intern) WithAs play-test 1`] = `
+exports[`Tester/TopBanner/TopBannerLogo (intern) WithAs play-test 1`] = `
 <div data-test-block="true">
   <div class="TopBannerLogo_logoContainer__-AsET">
     <img class="TopBannerLogo_logo_mobile__x4lpB"
@@ -32,7 +32,7 @@ exports[`Tester/TopBannerLogo (intern) WithAs play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TopBannerLogo (intern) WithAttributes play-test 1`] = `
+exports[`Tester/TopBanner/TopBannerLogo (intern) WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <a id="htmlId"
      class="dummyClassname TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
@@ -52,7 +52,7 @@ exports[`Tester/TopBannerLogo (intern) WithAttributes play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TopBannerLogo (intern) WithBreakpointM smoke-test 1`] = `
+exports[`Tester/TopBanner/TopBannerLogo (intern) WithBreakpointM smoke-test 1`] = `
 <div data-test-block="true">
   <a class="TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
      href="https://www.skatteetaten.no/"
@@ -69,7 +69,7 @@ exports[`Tester/TopBannerLogo (intern) WithBreakpointM smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TopBannerLogo (intern) WithLogoMobileLogoAltAndHref play-test 1`] = `
+exports[`Tester/TopBanner/TopBannerLogo (intern) WithLogoMobileLogoAltAndHref play-test 1`] = `
 <div data-test-block="true">
   <a class="TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
      href="#"
@@ -86,7 +86,7 @@ exports[`Tester/TopBannerLogo (intern) WithLogoMobileLogoAltAndHref play-test 1`
 </div>
 `;
 
-exports[`Tester/TopBannerLogo (intern) WithMobileScreen smoke-test 1`] = `
+exports[`Tester/TopBanner/TopBannerLogo (intern) WithMobileScreen smoke-test 1`] = `
 <div data-test-block="true">
   <a class="TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
      href="https://www.skatteetaten.no/"
@@ -103,7 +103,7 @@ exports[`Tester/TopBannerLogo (intern) WithMobileScreen smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TopBannerLogo (intern) WithRef play-test 1`] = `
+exports[`Tester/TopBanner/TopBannerLogo (intern) WithRef play-test 1`] = `
 <div data-test-block="true">
   <a class="TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
      href="https://www.skatteetaten.no/"

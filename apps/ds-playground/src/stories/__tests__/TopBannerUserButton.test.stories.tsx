@@ -22,7 +22,7 @@ const verifyAttribute =
 
 const meta = {
   component: TopBannerUserButton,
-  title: 'Tester/TopBannerUserButton (intern)',
+  title: 'Tester/TopBanner/TopBannerUserButton (intern)',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },
@@ -39,7 +39,7 @@ const meta = {
       control: 'inline-radio',
     },
     // Events
-    onUsername: { table: { disable: true } },
+    onUserClick: { table: { disable: true } },
   },
 } as Meta<typeof TopBannerUserButton>;
 export default meta;
@@ -97,7 +97,6 @@ export const Defaults = {
   name: 'Defaults (Username A2)',
   args: {
     ...defaultArgs,
-    children: 'Meg selv',
   },
   argTypes: {
     role: { table: { disable: false } },

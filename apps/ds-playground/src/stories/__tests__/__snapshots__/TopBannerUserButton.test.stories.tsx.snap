@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tester/TopBannerUserButton (intern) Defaults play-test 1`] = `
+exports[`Tester/TopBanner/TopBannerUserButton (intern) Defaults play-test 1`] = `
 <div data-test-block="true">
   <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
           type="button"
@@ -27,7 +27,7 @@ exports[`Tester/TopBannerUserButton (intern) Defaults play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TopBannerUserButton (intern) WithAllRoles play-test 1`] = `
+exports[`Tester/TopBanner/TopBannerUserButton (intern) WithAllRoles play-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
     <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL"
@@ -100,7 +100,7 @@ exports[`Tester/TopBannerUserButton (intern) WithAllRoles play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TopBannerUserButton (intern) WithAttributes play-test 1`] = `
+exports[`Tester/TopBanner/TopBannerUserButton (intern) WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <button id="htmlid"
           class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx dummyClassname"
@@ -130,7 +130,7 @@ exports[`Tester/TopBannerUserButton (intern) WithAttributes play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TopBannerUserButton (intern) WithBreakpointM smoke-test 1`] = `
+exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointM smoke-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
     <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL"
@@ -203,7 +203,7 @@ exports[`Tester/TopBannerUserButton (intern) WithBreakpointM smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TopBannerUserButton (intern) WithBreakpointS smoke-test 1`] = `
+exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointS smoke-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
     <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL"
@@ -276,7 +276,7 @@ exports[`Tester/TopBannerUserButton (intern) WithBreakpointS smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TopBannerUserButton (intern) WithBreakpointXS smoke-test 1`] = `
+exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointXS smoke-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
     <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL"
@@ -349,7 +349,7 @@ exports[`Tester/TopBannerUserButton (intern) WithBreakpointXS smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TopBannerUserButton (intern) WithChildren play-test 1`] = `
+exports[`Tester/TopBanner/TopBannerUserButton (intern) WithChildren play-test 1`] = `
 <div data-test-block="true">
   <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx  TopBannerUserButton_usernameButton__06VaY"
           type="button"
@@ -376,7 +376,7 @@ exports[`Tester/TopBannerUserButton (intern) WithChildren play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TopBannerUserButton (intern) WithMobileScreen smoke-test 1`] = `
+exports[`Tester/TopBanner/TopBannerUserButton (intern) WithMobileScreen smoke-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
     <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL"
@@ -449,7 +449,7 @@ exports[`Tester/TopBannerUserButton (intern) WithMobileScreen smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TopBannerUserButton (intern) WithRef play-test 1`] = `
+exports[`Tester/TopBanner/TopBannerUserButton (intern) WithRef play-test 1`] = `
 <div data-test-block="true">
   <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
           type="button"

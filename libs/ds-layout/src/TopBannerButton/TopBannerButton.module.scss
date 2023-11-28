@@ -10,9 +10,6 @@
   padding: var(--spacing-xs) var(--spacing-xxs) var(--spacing-xxs);
   border: 2px solid var(--palette-graphite-0);
   border-radius: var(--spacing-xs);
-  // stylelint-disable-next-line property-no-vendor-prefix
-  -webkit-appearance: none;
-  appearance: none;
   background-color: var(--palette-graphite-0);
   color: var(--semantic-interactive-main);
   cursor: pointer;
@@ -89,6 +86,7 @@
     }
 
     &:hover {
+      border-color: var(--semantic-interactive-main);
       background-color: var(--semantic-interactive-background);
     }
 

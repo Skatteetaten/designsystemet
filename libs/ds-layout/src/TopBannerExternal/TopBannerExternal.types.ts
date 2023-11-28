@@ -44,7 +44,7 @@ interface TopBannerCommonProps extends BaseProps {
   /** Teksten på username-knappen. Hva teksten skal være henger sammen med userRole. Når userRole er lik 'meg', settes username til 'Meg selv' automatisk og kan ikke overskrives. Hvis userRole er lik 'andre' eller 'virksomhet', så må username settes til hhv navnet på person det gjelder eller navnet på virksomheten. */
   username?: string;
   /** Callback når username-knapp trykkes på. Username-knappen vises når bruker er innlogget og må alltid ha en callback. Knappen kan brukes til rollebytte. Avhengig av rollen til bruker viser knappen automatisk forskjellig ikoner ut i fra den valgte rollen som userRole har fått. */
-  onUsername?: () => void;
+  onUserClick?: () => void;
   /** Meny-innhold første kolonne. Meny-knappen blir synlig når den har innhold. */
   firstColumn?: ReactNode;
   /** Meny-innhold andre kolonne */
@@ -55,8 +55,13 @@ interface TopBannerCommonProps extends BaseProps {
   children?: ReactNode;
   /** Overskriver default lenketekst. */
   skipLinkText?: TopBannerSkipLinkProps['children'];
-  /** Overskriver default verdi til href som flytter fokus til toppen av hovedinnholdet. */
-  skipLinkURL?: TopBannerSkipLinkProps['href'];
+  /** Overskriver default target verdi som fokus skal settes til når skipLink klikkes på. */
+  skipLinkTarget?: TopBannerSkipLinkProps['target'];
+  /**
+   * Focus settes default til main elementet når skipLink klikkes.
+   * Dersom main befinner seg i en shadow-DOM så må shadowRootNode angis for at fokus skal settes riktig.
+   */
+  skipLinkShadowRootNode?: TopBannerSkipLinkProps['shadowRootNode'];
 }
 
 export type TopBannerExternalProps = TopBannerCommonProps &

@@ -34,15 +34,16 @@ export const TopBannerExternal = forwardRef<
       logoURL,
       mobileLogo,
       secondColumn,
+      skipLinkShadowRootNode,
       skipLinkText,
-      skipLinkURL,
+      skipLinkTarget,
       thirdColumn,
       username,
       userRole,
       children,
       onLogIn,
       onLogOut,
-      onUsername,
+      onUserClick,
     },
     ref
   ): JSX.Element => {
@@ -98,7 +99,12 @@ export const TopBannerExternal = forwardRef<
         data-testid={dataTestId}
         className={className}
       >
-        <TopBannerSkipLink href={skipLinkURL}>{skipLinkText}</TopBannerSkipLink>
+        <TopBannerSkipLink
+          target={skipLinkTarget}
+          shadowRootNode={skipLinkShadowRootNode}
+        >
+          {skipLinkText}
+        </TopBannerSkipLink>
         <div className={styles.containerForMainMenu}>
           <div className={styles.topContainer}>
             <TopBannerLogo
@@ -112,7 +118,8 @@ export const TopBannerExternal = forwardRef<
               {children}
 
               <div className={styles.content}>
-                {/** TODO - FRONT-1161 Meny må lukkes når det gjøres et valg i den samt lukkes når navigerer ut av menyen */}
+                {/** TODO - FRONT-1161 Lukking når navigerer ut av menyen */}
+                {/** TODO - FRONT-1161 Avklaring på lukking av menyen når en handling utføres i menyinnholdet */}
                 {showMenu && (
                   <>
                     <TopBannerButton
@@ -144,11 +151,11 @@ export const TopBannerExternal = forwardRef<
 
                 {/** TODO - FRONT-1161 språkmeny */}
 
-                {onLogIn && onLogOut && userRole && (
+                {onLogOut && userRole && (
                   <>
                     <TopBannerUserButton
                       role={userRole}
-                      onUsername={onUsername}
+                      onUserClick={onUserClick}
                     >
                       {username}
                     </TopBannerUserButton>
@@ -162,7 +169,7 @@ export const TopBannerExternal = forwardRef<
                   </>
                 )}
 
-                {onLogIn && onLogOut && !userRole && (
+                {onLogIn && !userRole && (
                   <TopBannerButton
                     svgPath={LockOutlineSVGpath}
                     variant={'filled'}

@@ -14,7 +14,7 @@ import {
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { logoAsArr } from '../../../../../libs/ds-layout/src/TopBannerLogo/TopBannerLogo.types';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { getTopBannerSkipLinkHrefDefault } from '../../../../../libs/ds-layout/src/TopBannerSkipLink/defaults';
+import { getTopBannerSkipLinkTargetDefault } from '../../../../../libs/ds-layout/src/TopBannerSkipLink/defaults';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import {
   UserRole,
@@ -34,12 +34,13 @@ export default {
     // Props
     children: { control: 'text', table: { category: category.props } },
     skipLinkText: { table: { category: category.props } },
-    skipLinkURL: {
+    skipLinkTarget: {
       table: {
         category: category.props,
-        defaultValue: { summary: getTopBannerSkipLinkHrefDefault() },
+        defaultValue: { summary: getTopBannerSkipLinkTargetDefault() },
       },
     },
+    skipLinkShadowRootNode: { table: { category: category.props } },
     logo: {
       table: { category: category.props },
       control: 'select',
@@ -75,7 +76,7 @@ export default {
     // Events
     onLogIn: { control: { type: null }, table: { category: category.event } },
     onLogOut: { control: { type: null }, table: { category: category.event } },
-    onUsername: {
+    onUserClick: {
       control: { type: null },
       table: { category: category.event },
     },
@@ -90,7 +91,7 @@ export const Preview: StoryObj<typeof TopBannerExternal> = {
     // uten undefined så blir funksjonene initalisert med mockConstructor i Storybook
     onLogIn: undefined,
     onLogOut: undefined,
-    onUsername: undefined,
+    onUserClick: undefined,
   },
 };
 
@@ -135,12 +136,12 @@ export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
         userRole={userRole}
         onLogIn={handleLogIn}
         onLogOut={handleLogOut}
-        onUsername={(): void => modalRef.current?.showModal()}
+        onUserClick={(): void => modalRef.current?.showModal()}
       />
       <Modal ref={modalRef} title={'Dette er dine roller'}>
         <RadioGroup
           legend={'Velge en rolle'}
-          selectedValue={userRole}
+          selectedValue={userRole ?? ''}
           onChange={handleChangeRole}
         >
           <RadioGroup.Radio value={'meg'}>
@@ -205,12 +206,12 @@ export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
         userRole={userRole}
         onLogIn={handleLogIn}
         onLogOut={handleLogOut}
-        onUsername={(): void => modalRef.current?.showModal()}
+        onUserClick={(): void => modalRef.current?.showModal()}
       />
       <Modal ref={modalRef} title={'Dette er dine roller'}>
         <RadioGroup
           legend={'Velge en rolle'}
-          selectedValue={userRole}
+          selectedValue={userRole ?? ''}
           onChange={handleChangeRole}
         >
           <RadioGroup.Radio value={'meg'}>

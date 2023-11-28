@@ -137,5 +137,4 @@ code {
 .topbannerButtonContainer {
   display: flex;
   gap: var(--spacing-s);
-  width: fit-content;
 }

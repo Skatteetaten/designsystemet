@@ -31,7 +31,7 @@ const verifyAttribute =
 
 const meta = {
   component: TopBannerButton,
-  title: 'Tester/TopBannerButton (intern)',
+  title: 'Tester/TopBanner/TopBannerButton (intern)',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },

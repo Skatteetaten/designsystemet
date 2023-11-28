@@ -1,17 +1,18 @@
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { fireEvent, within } from '@storybook/testing-library';
+import { fireEvent, userEvent, within } from '@storybook/testing-library';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerSkipLink } from '../../../../../libs/ds-layout/src/TopBannerSkipLink/TopBannerSkipLink';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerSkipLinkProps } from '../../../../../libs/ds-layout/src/TopBannerSkipLink/TopBannerSkipLink.types';
+import { webComponent } from '../../../.storybook/webcomponent-decorator';
 
 const meta = {
   component: TopBannerSkipLink,
-  title: 'Tester/TopBannerSkipLink (intern)',
+  title: 'Tester/TopBanner/TopBannerSkipLink (intern)',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },
@@ -22,8 +23,10 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     children: { table: { disable: true } },
-    // HTML
-    href: { table: { disable: true } },
+    shadowRootNode: {
+      table: { disable: true },
+    },
+    target: { table: { disable: true } },
   },
 } satisfies Meta<typeof TopBannerSkipLink>;
 export default meta;
@@ -84,10 +87,7 @@ export const Defaults = {
   args: {
     ...defaultArgs,
   },
-  argTypes: {
-    href: { table: { disable: false } },
-    children: { table: { disable: false } },
-  },
+  argTypes: {},
   parameters: {
     imageSnapshot: {
       focus: `${wrapper} a`,
@@ -111,16 +111,16 @@ const MainTemplate: StoryFn<typeof TopBannerSkipLink> = (args) => (
   </>
 );
 
-export const WithHrefAndChildren = {
+export const WithTargetAndChildren = {
   render: MainTemplate,
-  name: 'With Href And Children (A3 delvis)',
+  name: 'With Target And Children (A3 delvis)',
   args: {
     ...defaultArgs,
-    href: `#${mainId}`,
+    target: `#${mainId}`,
     children: 'Snarvei til hovedinnhold',
   },
   argTypes: {
-    href: { table: { disable: false } },
+    target: { table: { disable: false } },
     children: { table: { disable: false } },
   },
   parameters: {
@@ -158,5 +158,54 @@ export const ClickSkipLink = {
     await skipLink.focus();
     await fireEvent.click(skipLink);
     await expect(main).toHaveFocus();
+  },
+} satisfies Story;
+
+const TemplateWithShadowDom: StoryFn<typeof TopBannerSkipLink> = (args) => {
+  // eslint-disable-next-line testing-library/no-node-access
+  const element = document.querySelector('skiplink-customelement');
+  const shadowRoot = element?.shadowRoot;
+  return (
+    <div>
+      <TopBannerSkipLink {...args} shadowRootNode={shadowRoot ?? undefined} />
+      <main>{'Hovedinnholdet på siden'}</main>
+    </div>
+  );
+};
+
+export const WithShadowDom = {
+  render: TemplateWithShadowDom,
+  name: 'With ShadowDom',
+  args: {
+    ...defaultArgs,
+  },
+  decorators: [webComponent],
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
+    customElementName: 'skiplink-customelement',
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    //skipLink finnes ikke utenfor shadowDom
+    await expect(canvas.queryByRole('link')).not.toBeInTheDocument();
+    // eslint-disable-next-line testing-library/no-node-access
+    const customElement = canvasElement.querySelector(`skiplink-customelement`);
+    await expect(customElement).toBeInTheDocument();
+    const skipLink =
+      customElement?.shadowRoot &&
+      // eslint-disable-next-line testing-library/no-node-access
+      customElement.shadowRoot.querySelector('a');
+
+    await expect(skipLink).toBeInTheDocument();
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    await userEvent.click(skipLink!);
+
+    const main =
+      customElement?.shadowRoot &&
+      // eslint-disable-next-line testing-library/no-node-access
+      customElement.shadowRoot.querySelector('main:focus');
+    await expect(main).toBeInTheDocument();
   },
 } satisfies Story;

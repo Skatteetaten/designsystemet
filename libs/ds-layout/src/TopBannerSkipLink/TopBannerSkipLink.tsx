@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { ArrowDownSVGpath, Icon } from '@skatteetaten/ds-icons';
 
-import { getTopBannerSkipLinkHrefDefault } from './defaults';
+import { getTopBannerSkipLinkTargetDefault } from './defaults';
 import { TopBannerSkipLinkProps } from './TopBannerSkipLink.types';
 
 import styles from './TopBannerSkipLink.module.scss';
@@ -19,7 +19,8 @@ export const TopBannerSkipLink = forwardRef<
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
-      href = getTopBannerSkipLinkHrefDefault(),
+      shadowRootNode,
+      target = getTopBannerSkipLinkTargetDefault(),
       children,
     },
     ref
@@ -29,7 +30,9 @@ export const TopBannerSkipLink = forwardRef<
     const handleClick = (event: React.SyntheticEvent): void => {
       event.preventDefault();
 
-      const container: HTMLElement | null = document.querySelector(href);
+      const container: HTMLElement | null = shadowRootNode
+        ? shadowRootNode.querySelector(target)
+        : document.querySelector(target);
       if (container) {
         container.tabIndex = -1;
         container.focus();
@@ -41,7 +44,7 @@ export const TopBannerSkipLink = forwardRef<
       <a
         ref={ref}
         id={id}
-        href={href}
+        href={target}
         className={`${styles.skipLink} ${className}`.trim()}
         lang={lang}
         data-testid={dataTestId}

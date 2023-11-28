@@ -1,7 +1,7 @@
-import { getTopBannerSkipLinkHrefDefault } from '../defaults';
+import { getTopBannerSkipLinkTargetDefault } from '../defaults';
 
 describe('TopBannerSkipLink default', () => {
-  it('når getTopBannerSkipLinkHrefDefault kalles, så returnerer den riktig verdi', () => {
-    expect(getTopBannerSkipLinkHrefDefault()).toBe('main:first-of-type');
+  it('når getTopBannerSkipLinkTargetDefault kalles, så returnerer den riktig verdi', () => {
+    expect(getTopBannerSkipLinkTargetDefault()).toBe('main');
   });
 });
