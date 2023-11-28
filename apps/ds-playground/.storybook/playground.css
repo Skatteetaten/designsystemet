@@ -139,22 +139,3 @@ code {
   gap: var(--spacing-s);
   width: fit-content;
 }
-
-.messagebox_container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-}
-
-.messagebox {
-  display: flex;
-  background-color: var(--semantic-warning-background);
-  padding: 10px;
-  gap: 5px;
-  align-items: center;
-}
-
-.messagebox svg {
-  fill: var(--semantic-warning-foreground);
-}

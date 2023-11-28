@@ -36,4 +36,6 @@ export interface TopBannerButtonProps
   title?: string;
   /** Definerer stilen til TopBannerButton. */
   variant?: TopBannerButtonVariant;
+  /** Om pil vises */
+  hasArrow?: boolean;
 }

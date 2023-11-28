@@ -43,6 +43,7 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     children: { table: { disable: true } },
+    hasArrow: { table: { disable: true } },
     svgPath: {
       table: { disable: true },
       options: Object.keys(SystemSVGPaths),
@@ -377,5 +378,39 @@ export const WithEventHandlers = {
     await expect(button).toBeInTheDocument();
     await userEvent.click(button);
     await waitFor(() => expect(args.onClick).toHaveBeenCalled());
+  },
+} satisfies Story;
+
+export const WithArrow = {
+  name: 'With Arrow',
+  args: {
+    ...defaultArgs,
+    hasArrow: true,
+  },
+  argTypes: {
+    hasArrow: { table: { disable: false } },
+    ariaExpanded: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await userEvent.click(button);
+  },
+} satisfies Story;
+
+export const WithArrowOnMobileScreen = {
+  name: 'With Arrow On Mobile Screen',
+  args: {
+    ...defaultArgs,
+    hasArrow: true,
+  },
+  argTypes: {
+    hasArrow: { table: { disable: false } },
+    ariaExpanded: { table: { disable: false } },
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: '--mobile',
+    },
   },
 } satisfies Story;
