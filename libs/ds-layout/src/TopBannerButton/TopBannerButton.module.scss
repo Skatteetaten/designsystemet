@@ -20,10 +20,19 @@
   font-weight: var(--font-weight-bold);
   line-height: var(--semantic-line-height-default);
 
+  .iconWrapper {
+    display: flex;
+    align-items: center;
+  }
+
   .icon {
     flex-shrink: 0;
     padding: var(--spacing-xs);
     fill: var(--semantic-interactive-main);
+  }
+
+  .arrowDesktop {
+    display: none;
   }
 
   &_filled {
@@ -63,12 +72,21 @@
   @media (min-width: $breakpoint-s) {
     height: fit-content;
     flex-direction: row;
+    align-items: center;
     padding: var(--spacing-xxs) var(--spacing-m);
     border-width: 3px;
     border-radius: var(--spacing-l);
     font-size: var(--font-size-m);
     gap: var(--spacing-xs);
     line-height: var(--semantic-line-height-buttons);
+
+    .arrowMobile {
+      display: none;
+    }
+
+    .arrowDesktop {
+      display: inline;
+    }
 
     &:hover {
       background-color: var(--semantic-interactive-background);
