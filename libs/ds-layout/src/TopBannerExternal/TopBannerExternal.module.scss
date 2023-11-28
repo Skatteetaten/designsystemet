@@ -4,13 +4,9 @@
   display: flex;
   max-width: var(--container-l);
   justify-content: space-between;
-  padding: var(--spacing-m) var(--spacing-xxs) var(--spacing-s);
+  padding: var(--spacing-m) var(--spacing-m) var(--spacing-s);
   margin: auto;
   gap: var(--spacing-s);
-
-  @media (min-width: $breakpoint-s) {
-    padding: var(--spacing-m) var(--spacing-s) var(--spacing-s);
-  }
 
   .contentContainer {
     display: flex;
