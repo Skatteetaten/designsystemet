@@ -121,19 +121,13 @@ export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
       <TopBannerExternal logoAs={'div'} />
       <TopBannerExternal
         firstColumn={
-          isLoggedIn && (
-            <LinkGroup>
-              <LinkGroup.Link href={'#storybook-root'}>
-                {'Skatt'}
-              </LinkGroup.Link>
-              <LinkGroup.Link href={'#storybook-root'}>
-                {'Avgift'}
-              </LinkGroup.Link>
-              <LinkGroup.Link href={'#storybook-root'}>
-                {'Folkeregisteret'}
-              </LinkGroup.Link>
-            </LinkGroup>
-          )
+          <LinkGroup>
+            <LinkGroup.Link href={'#storybook-root'}>{'Skatt'}</LinkGroup.Link>
+            <LinkGroup.Link href={'#storybook-root'}>{'Avgift'}</LinkGroup.Link>
+            <LinkGroup.Link href={'#storybook-root'}>
+              {'Folkeregisteret'}
+            </LinkGroup.Link>
+          </LinkGroup>
         }
         secondColumn={isLoggedIn ? 'Second column' : ''}
         thirdColumn={isLoggedIn ? 'Third column' : ''}
@@ -197,19 +191,13 @@ export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
       <TopBannerExternal logoAs={'div'} />
       <TopBannerExternal
         firstColumn={
-          isLoggedIn && (
-            <LinkGroup>
-              <LinkGroup.Link href={'#storybook-root'}>
-                {'Skatt'}
-              </LinkGroup.Link>
-              <LinkGroup.Link href={'#storybook-root'}>
-                {'Avgift'}
-              </LinkGroup.Link>
-              <LinkGroup.Link href={'#storybook-root'}>
-                {'Folkeregisteret'}
-              </LinkGroup.Link>
-            </LinkGroup>
-          )
+          <LinkGroup>
+            <LinkGroup.Link href={'#storybook-root'}>{'Skatt'}</LinkGroup.Link>
+            <LinkGroup.Link href={'#storybook-root'}>{'Avgift'}</LinkGroup.Link>
+            <LinkGroup.Link href={'#storybook-root'}>
+              {'Folkeregisteret'}
+            </LinkGroup.Link>
+          </LinkGroup>
         }
         secondColumn={isLoggedIn ? 'Second column' : ''}
         thirdColumn={isLoggedIn ? 'Third column' : ''}

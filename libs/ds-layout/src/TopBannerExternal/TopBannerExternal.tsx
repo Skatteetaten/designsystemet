@@ -55,18 +55,12 @@ export const TopBannerExternal = forwardRef<
       setIsMenuOpen(!isMenuOpen);
     };
 
-    const handleEscape = (event: KeyboardEvent): void => {
-      if (event.key === 'Escape') {
-        setIsMenuOpen(false);
-        menuButtonRef.current?.focus();
-      }
-    };
-
     useEffect(() => {
       if (!isMenuOpen) {
         return;
       }
 
+      // TODO - FRONT-1161 håndtere React portal slik at f.eks. lukking av hjelpetekst i mainMenu ikke lukker menyen
       const handleClickOutside = (event: MouseEvent): void => {
         const node = event.target as Node;
         if (menuRef.current && !menuRef.current.contains(node)) {
@@ -76,10 +70,8 @@ export const TopBannerExternal = forwardRef<
       };
 
       document.addEventListener('click', handleClickOutside, false);
-      document.addEventListener('keydown', handleEscape, false);
       return () => {
         document.removeEventListener('click', handleClickOutside, false);
-        document.removeEventListener('keydown', handleEscape, false);
       };
     }, [menuRef, isMenuOpen]);
 
