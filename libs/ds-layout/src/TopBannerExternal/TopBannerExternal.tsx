@@ -60,10 +60,20 @@ export const TopBannerExternal = forwardRef<
         return;
       }
 
-      // TODO - FRONT-1161 håndtere React portal slik at f.eks. lukking av hjelpetekst i mainMenu ikke lukker menyen
+      // TODO - FRONT-1161 lage en felles funksjon
       const handleClickOutside = (event: MouseEvent): void => {
         const node = event.target as Node;
-        if (menuRef.current && !menuRef.current.contains(node)) {
+        if (menuButtonRef.current?.contains(node) || !menuRef.current) {
+          return;
+        }
+
+        const rect = menuRef.current.getBoundingClientRect();
+        if (
+          rect.left > event.clientX ||
+          rect.right < event.clientX ||
+          rect.top > event.clientY ||
+          rect.bottom < event.clientY
+        ) {
           setIsMenuOpen(false);
           menuButtonRef.current?.focus();
         }
@@ -73,7 +83,7 @@ export const TopBannerExternal = forwardRef<
       return () => {
         document.removeEventListener('click', handleClickOutside, false);
       };
-    }, [menuRef, isMenuOpen]);
+    }, [isMenuOpen]);
 
     const showMenu = firstColumn || secondColumn || thirdColumn;
 
@@ -102,9 +112,9 @@ export const TopBannerExternal = forwardRef<
               {children}
 
               <div className={styles.content}>
-                {/** TODO - FRONT-1161 Meny må lukkes når det gjøres et valg i den og når navigert ferdig med tab */}
+                {/** TODO - FRONT-1161 Meny må lukkes når det gjøres et valg i den samt lukkes når navigerer ut av menyen */}
                 {showMenu && (
-                  <div ref={menuRef} className={styles.menuButton}>
+                  <>
                     <TopBannerButton
                       ref={menuButtonRef}
                       svgPath={isMenuOpen ? CancelSVGpath : MenuSVGpath}
@@ -113,9 +123,8 @@ export const TopBannerExternal = forwardRef<
                     >
                       {t('topbannerbutton.Menu')}
                     </TopBannerButton>
-
                     {isMenuOpen && (
-                      <div className={styles.mainMenu}>
+                      <div ref={menuRef} className={styles.mainMenu}>
                         <nav
                           aria-label={t('topbanner.NavAriaLabel')}
                           className={`${styles.columns} ${threeColumnsClassName} ${twoColumnsClassName}`}
@@ -130,7 +139,7 @@ export const TopBannerExternal = forwardRef<
                         </nav>
                       </div>
                     )}
-                  </div>
+                  </>
                 )}
 
                 {/** TODO - FRONT-1161 språkmeny */}

@@ -234,16 +234,3 @@ export const WithBreakpointM = {
     },
   },
 } satisfies Story;
-
-export const WithBreakpointL = {
-  render: TemplateWithAllRoles,
-  name: 'With Breakpoint-l (Username A2)',
-  args: {
-    ...defaultArgs,
-  },
-  parameters: {
-    viewport: {
-      defaultViewport: '--breakpoint-l',
-    },
-  },
-} satisfies Story;

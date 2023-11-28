@@ -4,7 +4,7 @@ export const userRoleArr = ['meg', 'andre', 'virksomhet'] as const;
 export type UserRole = (typeof userRoleArr)[number];
 
 export interface TopBannerUserButtonProps extends BaseProps {
-  /** Teksten på knappen. Hva teksten skal være henger sammen med userRole. Når rollen er 'meg', settes brukernavn til 'Meg selv' automatisk. Hvis rollen er 'andre', må det settes brukernavn til navnet på person det gjelder mens rollen 'virksomhet' settes navnet på virksomheten. */
+  /** Teksten på knappen. Hvis role er lik 'meg' settes automatisk teksten 'Meg selv' og kan ikke overskrives. */
   children?: string;
   /** Hvilken rolle innlogget bruker har. */
   role?: UserRole;

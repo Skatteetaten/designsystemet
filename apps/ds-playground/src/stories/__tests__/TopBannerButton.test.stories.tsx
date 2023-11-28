@@ -49,6 +49,7 @@ const meta = {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
     },
+    title: { table: { disable: true } },
     variant: {
       table: { disable: true },
       options: [...topBannerButtonVariantArr],
