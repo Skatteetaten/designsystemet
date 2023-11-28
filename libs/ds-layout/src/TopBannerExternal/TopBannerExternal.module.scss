@@ -53,13 +53,16 @@
   position: relative;
 }
 
+.menuButton {
+  height: 100%;
+}
+
 .mainMenu {
   position: absolute;
   z-index: 101;
   top: 6.5rem;
   right: 0;
   left: 0;
-  padding: 0 var(--spacing-m);
   background-color: var(--palette-graphite-5);
 
   @media (min-width: $breakpoint-m) {

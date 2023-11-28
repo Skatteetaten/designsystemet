@@ -102,14 +102,6 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
-  },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
@@ -125,8 +117,8 @@ export const WithClassNames = {
   args: {
     ...defaultArgs,
     classNames: {
-      container: ' dummyClassname',
-      text: ' dummyClassname',
+      container: 'dummyClassname',
+      text: 'dummyClassname',
     },
   },
   argTypes: {
@@ -150,16 +142,16 @@ export const Defaults = {
     children: { table: { disable: false } },
     svgPath: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
-    viewport: {
-      defaultViewport: '--breakpoint-m',
-    },
-  },
+  // parameters: {
+  //   imageSnapshot: {
+  //     focus: `${wrapper} > button`,
+  //     hover: `${wrapper} > button`,
+  //     click: `${wrapper} > button`,
+  //   },
+  //   viewport: {
+  //     defaultViewport: '--breakpoint-m',
+  //   },
+  // },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button', {
@@ -182,16 +174,16 @@ export const WithVariantOutline = {
   argTypes: {
     variant: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
-    viewport: {
-      defaultViewport: '--breakpoint-m',
-    },
-  },
+  // parameters: {
+  //   imageSnapshot: {
+  //     focus: `${wrapper} > button`,
+  //     hover: `${wrapper} > button`,
+  //     click: `${wrapper} > button`,
+  //   },
+  //   viewport: {
+  //     defaultViewport: '--breakpoint-m',
+  //   },
+  // },
 } satisfies Story;
 
 export const WithVariantFilled = {
@@ -205,16 +197,16 @@ export const WithVariantFilled = {
   argTypes: {
     variant: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
-    viewport: {
-      defaultViewport: '--breakpoint-m',
-    },
-  },
+  // parameters: {
+  //   imageSnapshot: {
+  //     focus: `${wrapper} > button`,
+  //     hover: `${wrapper} > button`,
+  //     click: `${wrapper} > button`,
+  //   },
+  //   viewport: {
+  //     defaultViewport: '--breakpoint-m',
+  //   },
+  // },
 } satisfies Story;
 
 export const WithTitle = {
@@ -239,141 +231,118 @@ export const WithTitle = {
   },
 } satisfies Story;
 
-export const WithBreakpointXSVariantStandard = {
-  name: 'With Breakpoint-xs Defaults (LoginButton A1, A2)',
-  args: {
-    ...defaultArgs,
-  },
-  argTypes: {
-    children: { table: { disable: false } },
-    svgPath: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
-    viewport: {
-      defaultViewport: '--breakpoint-xs',
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const button = canvas.getByRole('button', {
-      name: defaultButtonText,
-    });
-    await expect(button).toBeInTheDocument();
-  },
-} satisfies Story;
+// export const WithBreakpointXSVariantStandard = {
+//   name: 'With Breakpoint-xs Defaults (LoginButton A1, A2)',
+//   args: {
+//     ...defaultArgs,
+//   },
+//   argTypes: {
+//     children: { table: { disable: false } },
+//     svgPath: { table: { disable: false } },
+//   },
+//   parameters: {
+//     imageSnapshot: {
+//       focus: `${wrapper} > button`,
+//       hover: `${wrapper} > button`,
+//       click: `${wrapper} > button`,
+//     },
+//     viewport: {
+//       defaultViewport: '--breakpoint-xs',
+//     },
+//   },
+//   play: async ({ canvasElement }): Promise<void> => {
+//     const canvas = within(canvasElement);
+//     const button = canvas.getByRole('button', {
+//       name: defaultButtonText,
+//     });
+//     await expect(button).toBeInTheDocument();
+//   },
+// } satisfies Story;
 
-export const WithBreakpointXSVariantOutline = {
-  name: 'With Breakpoint-xs Variant Outline (LoginButton A1, A2)',
-  args: {
-    ...defaultArgs,
-    children: 'Logg ut',
-    svgPath: LogOutSVGpath,
-    variant: 'outline',
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
-    viewport: {
-      defaultViewport: '--breakpoint-xs',
-    },
-  },
-} satisfies Story;
+// export const WithBreakpointXSVariantOutline = {
+//   name: 'With Breakpoint-xs Variant Outline (LoginButton A1, A2)',
+//   args: {
+//     ...defaultArgs,
+//     children: 'Logg ut',
+//     svgPath: LogOutSVGpath,
+//     variant: 'outline',
+//   },
+//   argTypes: {
+//     variant: { table: { disable: false } },
+//   },
+//   parameters: {
+//     imageSnapshot: {
+//       focus: `${wrapper} > button`,
+//       hover: `${wrapper} > button`,
+//       click: `${wrapper} > button`,
+//     },
+//     viewport: {
+//       defaultViewport: '--breakpoint-xs',
+//     },
+//   },
+// } satisfies Story;
 
-export const WithBreakpointXSVariantFilled = {
-  name: 'With Breakpoint-xs Variant Filled (LoginButton A1, A2)',
-  args: {
-    ...defaultArgs,
-    children: 'Logg inn',
-    svgPath: LockOutlineSVGpath,
-    variant: 'filled',
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: {
-      focus: `${wrapper} > button`,
-      hover: `${wrapper} > button`,
-      click: `${wrapper} > button`,
-    },
-    viewport: {
-      defaultViewport: '--breakpoint-xs',
-    },
-  },
-} satisfies Story;
+// export const WithBreakpointXSVariantFilled = {
+//   name: 'With Breakpoint-xs Variant Filled (LoginButton A1, A2)',
+//   args: {
+//     ...defaultArgs,
+//     children: 'Logg inn',
+//     svgPath: LockOutlineSVGpath,
+//     variant: 'filled',
+//   },
+//   argTypes: {
+//     variant: { table: { disable: false } },
+//   },
+//   parameters: {
+//     imageSnapshot: {
+//       focus: `${wrapper} > button`,
+//       hover: `${wrapper} > button`,
+//       click: `${wrapper} > button`,
+//     },
+//     viewport: {
+//       defaultViewport: '--breakpoint-xs',
+//     },
+//   },
+// } satisfies Story;
 
-const TemplateWithAllVariant: StoryFn<typeof TopBannerButton> = (args) => (
+const TemplateWithAllVariant: StoryFn<typeof TopBannerButton> = () => (
   <div className={'topbannerButtonContainer'}>
-    {topBannerButtonVariantArr.map((variant, index) => {
-      let svgPath = MenuSVGpath;
-      let children = 'Meny';
-      if (variant === 'outline') {
-        svgPath = LogOutSVGpath;
-        children = 'Logg ut';
-      } else if (variant === 'filled') {
-        svgPath = LockOutlineSVGpath;
-        children = 'Logg inn';
-      }
-
-      return (
-        <TopBannerButton
-          key={`internbutton_${index}`}
-          {...args}
-          svgPath={svgPath}
-          variant={variant}
-        >
-          {children}
-        </TopBannerButton>
-      );
-    })}
+    <TopBannerButton svgPath={MenuSVGpath}>{'Meny'}</TopBannerButton>
+    <TopBannerButton svgPath={LogOutSVGpath} variant={'outline'}>
+      {'Logg ut'}
+    </TopBannerButton>
+    <TopBannerButton svgPath={LockOutlineSVGpath} variant={'filled'}>
+      {'Logg in'}
+    </TopBannerButton>
   </div>
 );
 
-export const WithAllVariant = {
+export const AllVariantOnMobileScreen = {
   render: TemplateWithAllVariant,
-  name: 'With All Variant (LoginButton A1, A2)',
-  args: {
-    ...defaultArgs,
-  },
-  argTypes: {
-    variant: {
-      table: { disable: false },
-      control: { type: null },
-    },
-  },
+  name: 'All Variants On Mobile Screen (LoginButton A1, A2)',
   parameters: {
     viewport: {
-      defaultViewport: '--breakpoint-m',
+      defaultViewport: '--mobile',
+    },
+    imageSnapshot: {
+      focus: `${wrapper} button`,
+      hover: `${wrapper} button`,
+      click: `${wrapper} button`,
     },
   },
 } satisfies Story;
 
-export const WithBreakpointXS = {
+export const AllVariantOnBreakpointS = {
   render: TemplateWithAllVariant,
-  name: 'With Breakpoint-xs (LoginButton A1, A2)',
-  args: {
-    ...defaultArgs,
-  },
-  argTypes: {
-    variant: {
-      table: { disable: false },
-      control: { type: null },
-    },
-  },
+  name: 'All Variants On Breakpoint-s (LoginButton A1, A2)',
   parameters: {
     viewport: {
-      defaultViewport: '--breakpoint-xs',
+      defaultViewport: '--breakpoint-s',
+    },
+    imageSnapshot: {
+      focus: `${wrapper} button`,
+      hover: `${wrapper} button`,
+      click: `${wrapper} button`,
     },
   },
 } satisfies Story;

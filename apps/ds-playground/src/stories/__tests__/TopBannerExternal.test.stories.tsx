@@ -2,11 +2,12 @@ import { Link } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
 import {
+  Footer,
   TopBannerExternal,
   TopBannerExternalProps,
 } from '@skatteetaten/ds-layout';
 import { expect } from '@storybook/jest';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { fireEvent, within } from '@storybook/testing-library';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
@@ -76,6 +77,7 @@ const loginText = dsI18n.t('ds_pages:topbannerbutton.Login');
 const logoutText = dsI18n.t('ds_pages:topbannerbutton.Logout');
 const themeText = dsI18n.t('ds_pages:topbanner.NavAriaLabel');
 const menuText = dsI18n.t('ds_pages:topbannerbutton.Menu');
+const skipLinkText = dsI18n.t('ds_pages:topbanner.SkipLinkText');
 const defaultArgs: TopBannerExternalProps = {
   // Uten undefined så blir funksjonene initalisert med mockConstructor i Storybook
   onLogIn: undefined,
@@ -86,7 +88,7 @@ const defaultArgs: TopBannerExternalProps = {
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ref: (instance: HTMLDivElement | null): void => {
+    ref: (instance: HTMLHeadElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
       }
@@ -101,7 +103,6 @@ export const WithRef = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const header = canvas.getByRole('banner');
-    await expect(header).toBeInTheDocument();
     await expect(header).toHaveAttribute('id', 'dummyIdForwardedFromRef');
   },
 } satisfies Story;
@@ -131,7 +132,7 @@ export const WithAttributes = {
 } satisfies Story;
 
 export const WithDefaults = {
-  name: 'With Defaults (A3, B1)',
+  name: 'With Defaults (A3 delvis, B1, B2)',
   args: {
     ...defaultArgs,
   },
@@ -140,8 +141,11 @@ export const WithDefaults = {
     const canvas = within(canvasElement);
     const header = canvas.getByRole('banner');
     expect(header.tagName).toBe('HEADER');
+    // eslint-disable-next-line testing-library/no-node-access
+    expect(header.firstChild).toHaveAttribute('href');
+    const skipLink = canvas.getByText(skipLinkText);
+    expect(skipLink).toBeInTheDocument();
 
-    // TODO FRONT-1161 test at skipLink finnes
     // TODO FRONT-1161 test at språkvelger finnes
 
     // eslint-disable-next-line testing-library/no-node-access
@@ -174,6 +178,103 @@ export const WithChildren = {
   },
 } satisfies Story;
 
+// TODO FRONT-1161 tester på logo props og reglene, ev. i Logo.test.storeis.tsx hvis det går....
+
+export const SkipLinkFocusedMobileScreen = {
+  name: 'SkipLink Focused On Mobile Screen (A3)',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: '--mobile',
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const skipLink = canvas.getByRole('link', {
+      name: skipLinkText,
+    });
+    await skipLink.focus();
+  },
+} satisfies Story;
+
+export const SkipLinkFocusedBreakpointXS = {
+  name: 'SkipLink Focused On Breakpoint-xs (A3)',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: '--breakpoint-xs',
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const skipLink = canvas.getByRole('link', {
+      name: skipLinkText,
+    });
+    await skipLink.focus();
+  },
+} satisfies Story;
+
+export const SkipLinkFocusedBreakpointS = {
+  name: 'SkipLink Focused On Breakpoint-s (A3)',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: '--breakpoint-s',
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const skipLink = canvas.getByRole('link', {
+      name: skipLinkText,
+    });
+    await skipLink.focus();
+  },
+} satisfies Story;
+
+export const SkipLinkFocusedBreakpointM = {
+  name: 'SkipLink Focused On Breakpoint-m (A3)',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: '--breakpoint-m',
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const skipLink = canvas.getByRole('link', {
+      name: skipLinkText,
+    });
+    await skipLink.focus();
+  },
+} satisfies Story;
+
+export const SkipLinkFocusedBreakpointL = {
+  name: 'SkipLink Focused On Breakpoint-l (A3)',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: '--breakpoint-l',
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const skipLink = canvas.getByRole('link', {
+      name: skipLinkText,
+    });
+    await skipLink.focus();
+  },
+} satisfies Story;
+
 export const ClickMainMenuOpenAndClose = {
   name: 'Click MainMenu Open And Close (MainMenu A1, A2 delvis, B1, B2, B3)',
   args: {
@@ -191,20 +292,41 @@ export const ClickMainMenuOpenAndClose = {
     const canvas = within(canvasElement);
     const menuButton = canvas.getByRole('button', { name: menuText });
     await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+    const menuSvg = canvas.getAllByRole('img', { hidden: true });
+    expect(menuSvg[3]).toBeInTheDocument();
+    expect(menuSvg[3]).toHaveAttribute('aria-hidden', 'true');
     await fireEvent.click(menuButton);
-
     await expect(menuButton).toHaveAttribute('aria-expanded', 'true');
     const menuContainer = canvas.getByRole('navigation', {
       name: themeText,
     });
     await expect(menuContainer).toBeInTheDocument();
+    expect(menuContainer.tagName).toBe('NAV');
+    expect(menuContainer).toHaveAttribute('aria-label', themeText);
     await fireEvent.click(menuButton);
     await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
     await expect(menuContainer).not.toBeInTheDocument();
   },
 } satisfies Story;
 
+const TemplateWithFooterOneColumn: StoryFn<TopBannerExternalProps> = (args) => {
+  return (
+    <>
+      <TopBannerExternal {...args} />
+      <Footer
+        titleFirstColumn={'Om Skatteetaten'}
+        firstColumn={
+          <div className={'dummyClassNamePinkBackground'}>
+            {'First column with pink background'}
+          </div>
+        }
+      />
+    </>
+  );
+};
+
 export const WithOneColumn = {
+  render: TemplateWithFooterOneColumn,
   name: 'With One Column (MainMenu A1)',
   args: {
     ...defaultArgs,
@@ -224,6 +346,7 @@ export const WithOneColumn = {
 } satisfies Story;
 
 export const WithOneColumnBreakpointS = {
+  render: TemplateWithFooterOneColumn,
   name: 'With One Column Breakpoint-s (MainMenu A1)',
   args: {
     ...defaultArgs,
@@ -248,6 +371,7 @@ export const WithOneColumnBreakpointS = {
 } satisfies Story;
 
 export const WithOneColumnBreakpointXS = {
+  render: TemplateWithFooterOneColumn,
   name: 'With One Column Breakpoint-xs (MainMenu A1)',
   args: {
     ...defaultArgs,
@@ -271,8 +395,32 @@ export const WithOneColumnBreakpointXS = {
   },
 } satisfies Story;
 
+const TemplateWithFooterTwoColumns: StoryFn<TopBannerExternalProps> = (
+  args
+) => {
+  return (
+    <>
+      <TopBannerExternal {...args} />
+      <Footer
+        titleFirstColumn={'Om Skatteetaten'}
+        firstColumn={
+          <div className={'dummyClassNamePinkBackground'}>
+            {'First column with pink background'}
+          </div>
+        }
+        secondColumn={
+          <div className={'dummyClassNamePinkBackground'}>
+            {'Second column with pink background'}
+          </div>
+        }
+      />
+    </>
+  );
+};
+
 export const WithTwoColumns = {
-  name: 'With FirstColumn SecondColumn And ClassNames (MainMenu A1)',
+  render: TemplateWithFooterTwoColumns,
+  name: 'With Two Columns (MainMenu A1)',
   args: {
     ...defaultArgs,
     firstColumn: (
@@ -296,6 +444,7 @@ export const WithTwoColumns = {
 } satisfies Story;
 
 export const WithTwoColumnsBreakpointS = {
+  render: TemplateWithFooterTwoColumns,
   name: 'With Two Columns Breakpoint-s (MainMenu A1)',
   args: {
     ...defaultArgs,
@@ -325,6 +474,7 @@ export const WithTwoColumnsBreakpointS = {
 } satisfies Story;
 
 export const WithTwoColumnsBreakpointXS = {
+  render: TemplateWithFooterTwoColumns,
   name: 'With Two Columns Breakpoint-xs (MainMenu A1)',
   args: {
     ...defaultArgs,
@@ -353,7 +503,36 @@ export const WithTwoColumnsBreakpointXS = {
   },
 } satisfies Story;
 
+const TemplateWithFooterThreeColumns: StoryFn<TopBannerExternalProps> = (
+  args
+) => {
+  return (
+    <>
+      <TopBannerExternal {...args} />
+      <Footer
+        titleFirstColumn={'Om Skatteetaten'}
+        firstColumn={
+          <div className={'dummyClassNamePinkBackground'}>
+            {'First column with pink background'}
+          </div>
+        }
+        secondColumn={
+          <div className={'dummyClassNamePinkBackground'}>
+            {'Second column with pink background'}
+          </div>
+        }
+        thirdColumn={
+          <div className={'dummyClassNamePinkBackground'}>
+            {'Third column with pink background'}
+          </div>
+        }
+      />
+    </>
+  );
+};
+
 export const WithThreeColumns = {
+  render: TemplateWithFooterThreeColumns,
   name: 'With Three Columns (MainMenu A1)',
   args: {
     ...defaultArgs,
@@ -383,6 +562,7 @@ export const WithThreeColumns = {
 } satisfies Story;
 
 export const WithThreeColumnsBreakpointS = {
+  render: TemplateWithFooterThreeColumns,
   name: 'With Three Columns Breakpoint-s (MainMenu A1)',
   args: {
     ...defaultArgs,
@@ -417,6 +597,7 @@ export const WithThreeColumnsBreakpointS = {
 } satisfies Story;
 
 export const WithThreeColumnsBreakpointXS = {
+  render: TemplateWithFooterThreeColumns,
   name: 'With Three Columns Breakpoint-xs (MainMenu A1)',
   args: {
     ...defaultArgs,
@@ -449,5 +630,3 @@ export const WithThreeColumnsBreakpointXS = {
     await fireEvent.click(menuButton);
   },
 } satisfies Story;
-
-// TODO FRONT-1161 tester på logo props og reglene, ev. i Logo.test.storeis.tsx hvis det går....

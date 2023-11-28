@@ -133,12 +133,15 @@ export const WithHrefAndChildren = {
     });
     await expect(skipLink).toBeInTheDocument();
     await expect(skipLink).toHaveAttribute('href', `#${mainId}`);
+    await fireEvent.click(skipLink);
+    const main = canvas.getByRole('main');
+    await expect(main).toHaveFocus();
   },
 } satisfies Story;
 
 export const ClickSkipLink = {
   render: MainTemplate,
-  name: 'Click SkipLink (A3, C1)',
+  name: 'Click SkipLink (A3, C1 delvis)',
   args: {
     ...defaultArgs,
   },
@@ -155,85 +158,5 @@ export const ClickSkipLink = {
     await skipLink.focus();
     await fireEvent.click(skipLink);
     await expect(main).toHaveFocus();
-  },
-} satisfies Story;
-
-export const WithMobileScreenAndFocused = {
-  name: 'With Small Screen And Focused (A3)',
-  args: {
-    ...defaultArgs,
-  },
-  parameters: {
-    viewport: {
-      defaultViewport: '--mobile',
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    await canvas.getByRole('link').focus();
-  },
-} satisfies Story;
-
-export const WithBreakpointXSAndFocused = {
-  name: 'With Breakpoint-xs And Focused (A3)',
-  args: {
-    ...defaultArgs,
-  },
-  parameters: {
-    viewport: {
-      defaultViewport: '--breakpoint-xs',
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    await canvas.getByRole('link').focus();
-  },
-} satisfies Story;
-
-export const WithBreakpointSAndFocused = {
-  name: 'With Breakpoint-s And Focused (A3)',
-  args: {
-    ...defaultArgs,
-  },
-  parameters: {
-    viewport: {
-      defaultViewport: '--breakpoint-s',
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    await canvas.getByRole('link').focus();
-  },
-} satisfies Story;
-
-export const WithBreakpointMAndFocused = {
-  name: 'With Breakpoint-m And Focused (A3)',
-  args: {
-    ...defaultArgs,
-  },
-  parameters: {
-    viewport: {
-      defaultViewport: '--breakpoint-m',
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    await canvas.getByRole('link').focus();
-  },
-} satisfies Story;
-
-export const WithBreakpointLAndFocused = {
-  name: 'With Breakpoint-l And Focused (A3)',
-  args: {
-    ...defaultArgs,
-  },
-  parameters: {
-    viewport: {
-      defaultViewport: '--breakpoint-l',
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    await canvas.getByRole('link').focus();
   },
 } satisfies Story;

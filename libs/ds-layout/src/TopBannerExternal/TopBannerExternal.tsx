@@ -18,7 +18,7 @@ import { TopBannerUserButton } from '../TopBannerUserButton/TopBannerUserButton'
 import styles from './TopBannerExternal.module.scss';
 
 export const TopBannerExternal = forwardRef<
-  HTMLDivElement,
+  HTMLHeadElement,
   TopBannerExternalProps
 >(
   (
@@ -112,7 +112,7 @@ export const TopBannerExternal = forwardRef<
               <div className={styles.content}>
                 {/** TODO - FRONT-1161 Meny må lukkes når det gjøres et valg i den og når navigert ferdig med tab */}
                 {showMenu && (
-                  <div ref={menuRef}>
+                  <div ref={menuRef} className={styles.menuButton}>
                     <TopBannerButton
                       ref={menuButtonRef}
                       svgPath={isMenuOpen ? CancelSVGpath : MenuSVGpath}
