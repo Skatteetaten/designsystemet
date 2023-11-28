@@ -316,7 +316,7 @@ const TemplateWithFooterOneColumn: StoryFn<TopBannerExternalProps> = (args) => {
       <Footer
         titleFirstColumn={'Om Skatteetaten'}
         firstColumn={
-          <div className={'dummyClassNamePinkBackground'}>
+          <div className={'dummyClassNameDarkPinkBackground'}>
             {'First column with pink background'}
           </div>
         }
@@ -404,12 +404,12 @@ const TemplateWithFooterTwoColumns: StoryFn<TopBannerExternalProps> = (
       <Footer
         titleFirstColumn={'Om Skatteetaten'}
         firstColumn={
-          <div className={'dummyClassNamePinkBackground'}>
+          <div className={'dummyClassNameDarkPinkBackground'}>
             {'First column with pink background'}
           </div>
         }
         secondColumn={
-          <div className={'dummyClassNamePinkBackground'}>
+          <div className={'dummyClassNameDarkPinkBackground'}>
             {'Second column with pink background'}
           </div>
         }
@@ -512,17 +512,17 @@ const TemplateWithFooterThreeColumns: StoryFn<TopBannerExternalProps> = (
       <Footer
         titleFirstColumn={'Om Skatteetaten'}
         firstColumn={
-          <div className={'dummyClassNamePinkBackground'}>
+          <div className={'dummyClassNameDarkPinkBackground'}>
             {'First column with pink background'}
           </div>
         }
         secondColumn={
-          <div className={'dummyClassNamePinkBackground'}>
+          <div className={'dummyClassNameDarkPinkBackground'}>
             {'Second column with pink background'}
           </div>
         }
         thirdColumn={
-          <div className={'dummyClassNamePinkBackground'}>
+          <div className={'dummyClassNameDarkPinkBackground'}>
             {'Third column with pink background'}
           </div>
         }

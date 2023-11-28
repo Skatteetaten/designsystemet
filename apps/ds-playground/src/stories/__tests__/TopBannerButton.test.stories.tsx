@@ -144,16 +144,13 @@ export const Defaults = {
     children: { table: { disable: false } },
     svgPath: { table: { disable: false } },
   },
-  // parameters: {
-  //   imageSnapshot: {
-  //     focus: `${wrapper} > button`,
-  //     hover: `${wrapper} > button`,
-  //     click: `${wrapper} > button`,
-  //   },
-  //   viewport: {
-  //     defaultViewport: '--breakpoint-m',
-  //   },
-  // },
+  parameters: {
+    imageSnapshot: {
+      focus: `${wrapper} > button`,
+      hover: `${wrapper} > button`,
+      click: `${wrapper} > button`,
+    },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button', {
@@ -176,16 +173,13 @@ export const WithVariantOutline = {
   argTypes: {
     variant: { table: { disable: false } },
   },
-  // parameters: {
-  //   imageSnapshot: {
-  //     focus: `${wrapper} > button`,
-  //     hover: `${wrapper} > button`,
-  //     click: `${wrapper} > button`,
-  //   },
-  //   viewport: {
-  //     defaultViewport: '--breakpoint-m',
-  //   },
-  // },
+  parameters: {
+    imageSnapshot: {
+      focus: `${wrapper} > button`,
+      hover: `${wrapper} > button`,
+      click: `${wrapper} > button`,
+    },
+  },
 } satisfies Story;
 
 export const WithVariantFilled = {
@@ -199,16 +193,13 @@ export const WithVariantFilled = {
   argTypes: {
     variant: { table: { disable: false } },
   },
-  // parameters: {
-  //   imageSnapshot: {
-  //     focus: `${wrapper} > button`,
-  //     hover: `${wrapper} > button`,
-  //     click: `${wrapper} > button`,
-  //   },
-  //   viewport: {
-  //     defaultViewport: '--breakpoint-m',
-  //   },
-  // },
+  parameters: {
+    imageSnapshot: {
+      focus: `${wrapper} > button`,
+      hover: `${wrapper} > button`,
+      click: `${wrapper} > button`,
+    },
+  },
 } satisfies Story;
 
 export const WithTitle = {
@@ -233,79 +224,76 @@ export const WithTitle = {
   },
 } satisfies Story;
 
-// export const WithBreakpointXSVariantStandard = {
-//   name: 'With Breakpoint-xs Defaults (LoginButton A1, A2)',
-//   args: {
-//     ...defaultArgs,
-//   },
-//   argTypes: {
-//     children: { table: { disable: false } },
-//     svgPath: { table: { disable: false } },
-//   },
-//   parameters: {
-//     imageSnapshot: {
-//       focus: `${wrapper} > button`,
-//       hover: `${wrapper} > button`,
-//       click: `${wrapper} > button`,
-//     },
-//     viewport: {
-//       defaultViewport: '--breakpoint-xs',
-//     },
-//   },
-//   play: async ({ canvasElement }): Promise<void> => {
-//     const canvas = within(canvasElement);
-//     const button = canvas.getByRole('button', {
-//       name: defaultButtonText,
-//     });
-//     await expect(button).toBeInTheDocument();
-//   },
-// } satisfies Story;
+export const DefaultsOnMobileScreen = {
+  name: 'Defaults On Mobile Screen  (LoginButton A1, A2)',
+  args: {
+    ...defaultArgs,
+  },
+  argTypes: {
+    children: { table: { disable: false } },
+    svgPath: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: {
+      focus: `${wrapper} > button`,
+      hover: `${wrapper} > button`,
+      click: `${wrapper} > button`,
+    },
+    viewport: {
+      defaultViewport: '--mobile',
+    },
+  },
+} satisfies Story;
 
-// export const WithBreakpointXSVariantOutline = {
-//   name: 'With Breakpoint-xs Variant Outline (LoginButton A1, A2)',
-//   args: {
-//     ...defaultArgs,
-//     children: 'Logg ut',
-//     svgPath: LogOutSVGpath,
-//     variant: 'outline',
-//   },
-//   argTypes: {
-//     variant: { table: { disable: false } },
-//   },
-//   parameters: {
-//     imageSnapshot: {
-//       focus: `${wrapper} > button`,
-//       hover: `${wrapper} > button`,
-//       click: `${wrapper} > button`,
-//     },
-//     viewport: {
-//       defaultViewport: '--breakpoint-xs',
-//     },
-//   },
-// } satisfies Story;
+export const VariantOutlineOnMobileScreen = {
+  name: 'Variant Outline On Mobile Screen  (LoginButton A1, A2)',
+  args: {
+    ...defaultArgs,
+    children: 'Logg ut',
+    svgPath: LogOutSVGpath,
+    variant: 'outline',
+  },
+  argTypes: {
+    children: { table: { disable: false } },
+    svgPath: { table: { disable: false } },
+    variant: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: {
+      focus: `${wrapper} > button`,
+      hover: `${wrapper} > button`,
+      click: `${wrapper} > button`,
+    },
+    viewport: {
+      defaultViewport: '--mobile',
+    },
+  },
+} satisfies Story;
 
-// export const WithBreakpointXSVariantFilled = {
-//   name: 'With Breakpoint-xs Variant Filled (LoginButton A1, A2)',
-//   args: {
-//     ...defaultArgs,
-//     children: 'Logg inn',
-//     svgPath: LockOutlineSVGpath,
-//     variant: 'filled',
-//   },
-//   argTypes: {
-//     variant: { table: { disable: false } },
-//   },
-//   parameters: {
-//     imageSnapshot: {
-//       focus: `${wrapper} > button`,
-//       hover: `${wrapper} > button`,
-//       click: `${wrapper} > button`,
-//     },
-//     viewport: {
-//       defaultViewport: '--breakpoint-xs',
-//     },
-//   },
-// } satisfies Story;
+export const VariantFilledOnMobileScreen = {
+  name: 'Variant Outline On Mobile Screen  (LoginButton A1, A2)',
+  args: {
+    ...defaultArgs,
+    children: 'Logg inn',
+    svgPath: LockOutlineSVGpath,
+    variant: 'filled',
+  },
+  argTypes: {
+    children: { table: { disable: false } },
+    svgPath: { table: { disable: false } },
+    variant: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: {
+      focus: `${wrapper} > button`,
+      hover: `${wrapper} > button`,
+      click: `${wrapper} > button`,
+    },
+    viewport: {
+      defaultViewport: '--mobile',
+    },
+  },
+} satisfies Story;
 
 const TemplateWithAllVariant: StoryFn<typeof TopBannerButton> = () => (
   <div className={'topbannerButtonContainer'}>
@@ -326,11 +314,6 @@ export const AllVariantOnMobileScreen = {
     viewport: {
       defaultViewport: '--mobile',
     },
-    imageSnapshot: {
-      focus: `${wrapper} button`,
-      hover: `${wrapper} button`,
-      click: `${wrapper} button`,
-    },
   },
 } satisfies Story;
 
@@ -340,11 +323,6 @@ export const AllVariantOnBreakpointS = {
   parameters: {
     viewport: {
       defaultViewport: '--breakpoint-s',
-    },
-    imageSnapshot: {
-      focus: `${wrapper} button`,
-      hover: `${wrapper} button`,
-      click: `${wrapper} button`,
     },
   },
 } satisfies Story;
