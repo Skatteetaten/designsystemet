@@ -116,7 +116,7 @@ export const Defaults = {
 } satisfies Story;
 
 export const WithChildren = {
-  name: 'With Children (A2)',
+  name: 'With Children (A3)',
   args: {
     ...defaultArgs,
     role: 'virksomhet',
@@ -156,7 +156,7 @@ const TemplateWithAllRoles: StoryFn<typeof TopBannerUserButton> = (args) => (
 
 export const WithAllRoles = {
   render: TemplateWithAllRoles,
-  name: 'With All Role (Username A2, A6, A7)',
+  name: 'With All Roles (Username A2, A6, A7)',
   args: {
     ...defaultArgs,
   },

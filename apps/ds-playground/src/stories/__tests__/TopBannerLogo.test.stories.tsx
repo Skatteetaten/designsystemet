@@ -51,7 +51,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const frontPageText = dsI18n.t('ds_pages:topbanner.SkeLogoLinkText');
+const logoLinkText = dsI18n.t('ds_pages:topbanner.SkeLogoLinkText');
 const logoText = dsI18n.t('ds_pages:topbanner.SkeLogoImageText');
 const defaultArgs: TopBannerLogoProps = {};
 
@@ -120,7 +120,7 @@ export const Defaults = {
     await expect(link).toBeInTheDocument();
     await expect(link).toHaveAttribute('href', 'https://www.skatteetaten.no/');
     const logo = canvas.getByRole('img', {
-      name: frontPageText,
+      name: logoLinkText,
     });
     await expect(logo).toBeInTheDocument();
   },
@@ -141,8 +141,7 @@ export const WithAs = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     // eslint-disable-next-line testing-library/no-node-access
-    const link = canvasElement.querySelector('a');
-    await expect(link).not.toBeInTheDocument();
+    await expect(canvasElement.querySelector('a')).not.toBeInTheDocument();
     const logo = canvas.getByRole('img', {
       name: logoText,
     });
@@ -151,7 +150,7 @@ export const WithAs = {
 } satisfies Story;
 
 export const WithLogoMobileLogoAltAndHref = {
-  name: 'With Logo MobileLogo Alt And Href (A8, A10)',
+  name: 'With Logo, MobileLogo, Alt, And Href (A8, A10)',
   args: {
     ...defaultArgs,
     logo: customLogo,

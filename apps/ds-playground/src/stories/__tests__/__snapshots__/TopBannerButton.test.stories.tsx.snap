@@ -1,29 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tester/TopBannerButton (intern) Defaults play-test 1`] = `
-<div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7"
-          type="button"
-  >
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-         viewbox="0 0 24 24"
-         focusable="false"
-         aria-hidden="true"
-         role="img"
-    >
-      <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
-      </path>
-    </svg>
-    <span class>
-      Meny
-    </span>
-  </button>
-</div>
-`;
-
-exports[`Tester/TopBannerButton (intern) WithAllVariant smoke-test 1`] = `
+exports[`Tester/TopBannerButton (intern) AllVariantOnBreakpointS smoke-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
+    <button class="TopBannerButton_button__5RUa7"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+        </path>
+      </svg>
+      <span class>
+        Meny
+      </span>
+    </button>
     <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_outline__bVRJP"
             type="button"
     >
@@ -53,10 +48,149 @@ exports[`Tester/TopBannerButton (intern) WithAllVariant smoke-test 1`] = `
         </path>
       </svg>
       <span class>
-        Logg inn
+        Logg in
       </span>
     </button>
   </div>
+</div>
+`;
+
+exports[`Tester/TopBannerButton (intern) AllVariantOnMobileScreen smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="topbannerButtonContainer">
+    <button class="TopBannerButton_button__5RUa7"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+        </path>
+      </svg>
+      <span class>
+        Meny
+      </span>
+    </button>
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_outline__bVRJP"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M14.1,15.6l2.6-2.6H7v-2h9.7l-2.6-2.6L15.5,7l5,5l-5,5L14.1,15.6 M19,3c1.1,0,2,0.9,2,2v4.7l-2-2V5H5v14h14v-2.7l2-2V19  c0,1.1-0.9,2-2,2H5c-1.1,0-2-0.9-2-2V5c0-1.1,0.9-2,2-2H19z">
+        </path>
+      </svg>
+      <span class>
+        Logg ut
+      </span>
+    </button>
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M12 17a2 2 0 0 1-2-2c0-1.11.89-2 2-2a2 2 0 0 1 0 4Zm6 3V10H6v10h12Zm0-12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10c0-1.11.89-2 2-2h1V6a5 5 0 1 1 10 0v2h1Zm-6-5a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3Z">
+        </path>
+      </svg>
+      <span class>
+        Logg in
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Tester/TopBannerButton (intern) Defaults play-test 1`] = `
+<div data-test-block="true">
+  <button class="TopBannerButton_button__5RUa7"
+          type="button"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+      </path>
+    </svg>
+    <span class>
+      Meny
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/TopBannerButton (intern) DefaultsOnMobileScreen smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="TopBannerButton_button__5RUa7"
+          type="button"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+      </path>
+    </svg>
+    <span class>
+      Meny
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/TopBannerButton (intern) VariantFilledOnMobileScreen smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
+          type="button"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="M12 17a2 2 0 0 1-2-2c0-1.11.89-2 2-2a2 2 0 0 1 0 4Zm6 3V10H6v10h12Zm0-12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10c0-1.11.89-2 2-2h1V6a5 5 0 1 1 10 0v2h1Zm-6-5a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3Z">
+      </path>
+    </svg>
+    <span class>
+      Logg inn
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/TopBannerButton (intern) VariantOutlineOnMobileScreen smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_outline__bVRJP"
+          type="button"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="M14.1,15.6l2.6-2.6H7v-2h9.7l-2.6-2.6L15.5,7l5,5l-5,5L14.1,15.6 M19,3c1.1,0,2,0.9,2,2v4.7l-2-2V5H5v14h14v-2.7l2-2V19  c0,1.1-0.9,2-2,2H5c-1.1,0-2-0.9-2-2V5c0-1.1,0.9-2,2-2H19z">
+      </path>
+    </svg>
+    <span class>
+      Logg ut
+    </span>
+  </button>
 </div>
 `;
 
@@ -84,111 +218,9 @@ exports[`Tester/TopBannerButton (intern) WithAttributes play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TopBannerButton (intern) WithBreakpointXS smoke-test 1`] = `
-<div data-test-block="true">
-  <div class="topbannerButtonContainer">
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_outline__bVRJP"
-            type="button"
-    >
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-hidden="true"
-           role="img"
-      >
-        <path d="M14.1,15.6l2.6-2.6H7v-2h9.7l-2.6-2.6L15.5,7l5,5l-5,5L14.1,15.6 M19,3c1.1,0,2,0.9,2,2v4.7l-2-2V5H5v14h14v-2.7l2-2V19  c0,1.1-0.9,2-2,2H5c-1.1,0-2-0.9-2-2V5c0-1.1,0.9-2,2-2H19z">
-        </path>
-      </svg>
-      <span class>
-        Logg ut
-      </span>
-    </button>
-    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
-            type="button"
-    >
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-hidden="true"
-           role="img"
-      >
-        <path d="M12 17a2 2 0 0 1-2-2c0-1.11.89-2 2-2a2 2 0 0 1 0 4Zm6 3V10H6v10h12Zm0-12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10c0-1.11.89-2 2-2h1V6a5 5 0 1 1 10 0v2h1Zm-6-5a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3Z">
-        </path>
-      </svg>
-      <span class>
-        Logg inn
-      </span>
-    </button>
-  </div>
-</div>
-`;
-
-exports[`Tester/TopBannerButton (intern) WithBreakpointXSVariantFilled smoke-test 1`] = `
-<div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
-          type="button"
-  >
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-         viewbox="0 0 24 24"
-         focusable="false"
-         aria-hidden="true"
-         role="img"
-    >
-      <path d="M12 17a2 2 0 0 1-2-2c0-1.11.89-2 2-2a2 2 0 0 1 0 4Zm6 3V10H6v10h12Zm0-12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10c0-1.11.89-2 2-2h1V6a5 5 0 1 1 10 0v2h1Zm-6-5a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3Z">
-      </path>
-    </svg>
-    <span class>
-      Logg inn
-    </span>
-  </button>
-</div>
-`;
-
-exports[`Tester/TopBannerButton (intern) WithBreakpointXSVariantOutline smoke-test 1`] = `
-<div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_outline__bVRJP"
-          type="button"
-  >
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-         viewbox="0 0 24 24"
-         focusable="false"
-         aria-hidden="true"
-         role="img"
-    >
-      <path d="M14.1,15.6l2.6-2.6H7v-2h9.7l-2.6-2.6L15.5,7l5,5l-5,5L14.1,15.6 M19,3c1.1,0,2,0.9,2,2v4.7l-2-2V5H5v14h14v-2.7l2-2V19  c0,1.1-0.9,2-2,2H5c-1.1,0-2-0.9-2-2V5c0-1.1,0.9-2,2-2H19z">
-      </path>
-    </svg>
-    <span class>
-      Logg ut
-    </span>
-  </button>
-</div>
-`;
-
-exports[`Tester/TopBannerButton (intern) WithBreakpointXSVariantStandard play-test 1`] = `
-<div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7"
-          type="button"
-  >
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-         viewbox="0 0 24 24"
-         focusable="false"
-         aria-hidden="true"
-         role="img"
-    >
-      <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
-      </path>
-    </svg>
-    <span class>
-      Meny
-    </span>
-  </button>
-</div>
-`;
-
 exports[`Tester/TopBannerButton (intern) WithClassNames play-test 1`] = `
 <div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7    dummyClassname"
+  <button class="TopBannerButton_button__5RUa7   dummyClassname"
           type="button"
   >
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
@@ -200,7 +232,7 @@ exports[`Tester/TopBannerButton (intern) WithClassNames play-test 1`] = `
       <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
       </path>
     </svg>
-    <span class=" dummyClassname">
+    <span class="dummyClassname">
       Meny
     </span>
   </button>
