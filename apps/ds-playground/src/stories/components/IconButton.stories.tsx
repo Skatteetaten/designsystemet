@@ -1,5 +1,6 @@
 import { IconButton, getIconButtonSizeDefault } from '@skatteetaten/ds-buttons';
 import {
+  dsI18n,
   getCommonButtonTypeDefault,
   sizeArr,
 } from '@skatteetaten/ds-core-utils';
@@ -17,6 +18,13 @@ export default {
   title: 'Komponenter/IconButton',
   argTypes: {
     // Props
+    hasSpinner: { table: { category: category.props } },
+    spinnerText: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: dsI18n.t('ds_status:spinner.LoadingLabel') },
+      },
+    },
     isOutlined: {
       table: {
         category: category.props,

@@ -1,5 +1,8 @@
 import { MegaButton } from '@skatteetaten/ds-buttons';
-import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  getCommonButtonTypeDefault,
+} from '@skatteetaten/ds-core-utils';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
@@ -11,6 +14,13 @@ export default {
   argTypes: {
     // Props
     children: { table: { category: category.props } },
+    hasSpinner: { table: { category: category.props } },
+    spinnerText: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: dsI18n.t('ds_status:spinner.LoadingLabel') },
+      },
+    },
     isExternal: {
       table: {
         category: category.props,

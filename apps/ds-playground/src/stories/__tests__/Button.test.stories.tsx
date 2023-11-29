@@ -34,6 +34,8 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     children: { table: { disable: true } },
+    hasSpinner: { table: { disable: true } },
+    spinnerText: { table: { disable: true } },
     svgPath: {
       table: { disable: true },
       options: Object.keys(SystemSVGPaths),
@@ -381,5 +383,86 @@ export const WithEventHandlers = {
     await waitFor(() => expect(args.onBlur).toHaveBeenCalled());
     await userEvent.click(button);
     await waitFor(() => expect(args.onClick).toHaveBeenCalled());
+  },
+} satisfies Story;
+
+const TemplateWithSpinner: StoryFn<typeof Button> = (args) => (
+  <>
+    <div className={'bottomSpacingXL'}>
+      <Button {...args} hasSpinner={false} className={'marginRightM'} />
+      <Button
+        {...args}
+        hasSpinner={false}
+        variant={'secondary'}
+        className={'marginRightM'}
+      />
+      <Button
+        {...args}
+        hasSpinner={false}
+        variant={'tertiary'}
+        className={'marginRightM'}
+      />
+      <Button {...args} hasSpinner={false} variant={'danger'} />
+    </div>
+    <div className={'bottomSpacingXL'}>
+      <Button {...args} className={'marginRightM'} />
+      <Button {...args} variant={'secondary'} className={'marginRightM'} />
+      <Button {...args} variant={'tertiary'} className={'marginRightM'} />
+      <Button {...args} variant={'danger'} />
+    </div>
+    <div className={'bottomSpacingXL'}>
+      <Button
+        {...args}
+        svgPath={SendSVGpath}
+        hasSpinner={false}
+        className={'marginRightM'}
+      />
+      <Button
+        {...args}
+        svgPath={SendSVGpath}
+        hasSpinner={false}
+        variant={'secondary'}
+        className={'marginRightM'}
+      />
+      <Button
+        {...args}
+        svgPath={SendSVGpath}
+        hasSpinner={false}
+        variant={'tertiary'}
+        className={'marginRightM'}
+      />
+      <Button
+        {...args}
+        svgPath={SendSVGpath}
+        hasSpinner={false}
+        variant={'danger'}
+      />
+    </div>
+    <Button {...args} svgPath={SendSVGpath} className={'marginRightM'} />
+    <Button
+      {...args}
+      svgPath={SendSVGpath}
+      variant={'secondary'}
+      className={'marginRightM'}
+    />
+    <Button
+      {...args}
+      svgPath={SendSVGpath}
+      variant={'tertiary'}
+      className={'marginRightM'}
+    />
+    <Button {...args} svgPath={SendSVGpath} variant={'danger'} />
+  </>
+);
+
+export const WithSpinner = {
+  render: TemplateWithSpinner,
+  name: 'With Spinner',
+  args: {
+    ...defaultArgs,
+    hasSpinner: true,
+  },
+  argTypes: {
+    hasSpinner: { table: { disable: false } },
   },
 } satisfies Story;

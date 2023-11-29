@@ -3,6 +3,7 @@ import {
   getInlineButtonPositionDefault,
 } from '@skatteetaten/ds-buttons';
 import {
+  dsI18n,
   getCommonButtonTypeDefault,
   positionArr,
 } from '@skatteetaten/ds-core-utils';
@@ -19,6 +20,13 @@ export default {
   argTypes: {
     // Props
     children: { table: { category: category.props } },
+    hasSpinner: { table: { category: category.props } },
+    spinnerText: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: dsI18n.t('ds_status:spinner.LoadingLabel') },
+      },
+    },
     iconPosition: {
       options: [...positionArr],
       control: 'radio',

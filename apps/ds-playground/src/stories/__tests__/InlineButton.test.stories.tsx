@@ -37,6 +37,8 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     children: { table: { disable: true } },
+    hasSpinner: { table: { disable: true } },
+    spinnerText: { table: { disable: true } },
     iconPosition: {
       table: { disable: true },
       options: [...positionArr],
@@ -127,7 +129,7 @@ export const Defaults = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const inlineButton = canvas.getByText(defaultButtonText);
+    const inlineButton = canvas.getByRole('button');
     await expect(inlineButton).toBeInTheDocument();
     await expect(inlineButton).toHaveAttribute(
       'type',
@@ -222,7 +224,7 @@ export const WithDisabled = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    expect(canvas.getByText(defaultButtonText)).toBeDisabled();
+    expect(canvas.getByRole('button')).toBeDisabled();
   },
 } satisfies Story;
 
@@ -318,7 +320,7 @@ export const WithEventHandlers = {
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const inlineButton = canvas.getByText('bruk knapp for å events');
+    const inlineButton = canvas.getByRole('button');
     await expect(inlineButton).toBeInTheDocument();
     await inlineButton.focus();
     await waitFor(() => expect(args.onFocus).toHaveBeenCalled());
@@ -326,5 +328,50 @@ export const WithEventHandlers = {
     await waitFor(() => expect(args.onBlur).toHaveBeenCalled());
     await userEvent.click(inlineButton);
     await waitFor(() => expect(args.onClick).toHaveBeenCalled());
+  },
+} satisfies Story;
+
+const TemplateWithSpinner: StoryFn<typeof InlineButton> = (args) => (
+  <>
+    <div className={'flex bottomSpacingXL'}>
+      <InlineButton {...args} hasSpinner={false} className={'marginRightM'} />
+      <InlineButton
+        {...args}
+        svgPath={AddOutlineSVGpath}
+        hasSpinner={false}
+        className={'marginRightM'}
+      />
+      <InlineButton
+        {...args}
+        svgPath={AddOutlineSVGpath}
+        iconPosition={'right'}
+        hasSpinner={false}
+      />
+    </div>
+    <div className={'flex'}>
+      <InlineButton {...args} className={'marginRightM'} />
+      <InlineButton
+        {...args}
+        svgPath={AddOutlineSVGpath}
+        className={'marginRightM'}
+      />
+      <InlineButton
+        {...args}
+        svgPath={AddOutlineSVGpath}
+        iconPosition={'right'}
+      />
+    </div>
+  </>
+);
+
+export const WithSpinner = {
+  render: TemplateWithSpinner,
+  name: 'With Spinner',
+  args: {
+    ...defaultArgs,
+    hasSpinner: true,
+  },
+  argTypes: {
+    hasSpinner: { table: { disable: false } },
   },
 } satisfies Story;

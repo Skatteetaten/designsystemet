@@ -28,6 +28,10 @@ export type MegaButtonDiscriminatedProp =
       /** Viser ikon som indikerer at knappen åpner en ekstern tjeneste. Brukes hvis knappen er en lenke til en side på et annet domene. */
       isExternal?: boolean;
       type?: never;
+      /** Om knappen skal inneholde Spinner. */
+      hasSpinner?: never;
+      /** Overskriver default tekst som leses opp av skjermleser når Spinner snurrer i knappen. */
+      spinnerText?: never;
     }
   | ({
       /** Hvis det er ønskelig å vise knappen som en lenke. Setter strengen til href attributtet på lenken. */
@@ -35,6 +39,10 @@ export type MegaButtonDiscriminatedProp =
       disabled?: boolean;
       /** Viser ikon som indikerer at knappen åpner en ekstern tjeneste. Brukes hvis knappen er en lenke til en side på et annet domene. */
       isExternal?: never;
+      /** Om knappen skal inneholde Spinner. */
+      hasSpinner?: boolean;
+      /** Overskriver default tekst som leses opp av skjermleser når Spinner snurrer i knappen. */
+      spinnerText?: string;
     } & Pick<ComponentPropsWithoutRef<'button'>, 'type'>);
 
 export interface MegaButtonComponentCommonProps

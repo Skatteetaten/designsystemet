@@ -39,6 +39,8 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     children: { table: { disable: true } },
+    hasSpinner: { table: { disable: true } },
+    spinnerText: { table: { disable: true } },
     isExternal: { table: { disable: true } },
     // HTML
     accessKey: {
@@ -124,7 +126,7 @@ export const Defaults = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const megaButton = canvas.getByText(defaultMegaButtonText);
+    const megaButton = canvas.getByRole('button');
     await expect(megaButton).toBeInTheDocument();
     await expect(megaButton).toHaveAttribute(
       'type',
@@ -211,7 +213,7 @@ export const WithDisabled = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    expect(canvas.getByText(defaultMegaButtonText)).toBeDisabled();
+    expect(canvas.getByRole('button')).toBeDisabled();
   },
 } satisfies Story;
 
@@ -310,7 +312,7 @@ export const AsLinkExternal = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const megaButton = canvas.getByText('Klikk her');
+    const megaButton = canvas.getByRole('button');
     await expect(megaButton).toBeInTheDocument();
     await expect(megaButton.tagName).toBe('A');
     await expect(megaButton).toHaveAttribute('role', 'button');
@@ -357,7 +359,7 @@ export const WithEventHandlers = {
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const megaButton = canvas.getByText('bruk knapp for å teste events');
+    const megaButton = canvas.getByRole('button');
     await expect(megaButton).toBeInTheDocument();
     await megaButton.focus();
     await waitFor(() => expect(args.onFocus).toHaveBeenCalled());
@@ -365,5 +367,26 @@ export const WithEventHandlers = {
     await waitFor(() => expect(args.onBlur).toHaveBeenCalled());
     await userEvent.click(megaButton);
     await waitFor(() => expect(args.onClick).toHaveBeenCalled());
+  },
+} satisfies Story;
+
+const TemplateWithSpinner: StoryFn<typeof MegaButton> = (args) => (
+  <>
+    <div className={'bottomSpacingXL'}>
+      <MegaButton>{defaultMegaButtonText}</MegaButton>
+    </div>
+    <MegaButton {...args}>{defaultMegaButtonText}</MegaButton>
+  </>
+);
+
+export const WithSpinner = {
+  render: TemplateWithSpinner,
+  name: 'With Spinner',
+  args: {
+    ...defaultArgs,
+    hasSpinner: true,
+  },
+  argTypes: {
+    hasSpinner: { table: { disable: false } },
   },
 } satisfies Story;
