@@ -63,8 +63,7 @@ export default async function (
   const publish: TargetConfiguration = {
     executor: 'nx:run-commands',
     options: {
-      command: 'npm publish {args.switches}',
-      cwd: `dist/libs/${projectName}`,
+      command: `npm publish dist/libs/${projectName} {args.switches}`,
     },
   };
 
@@ -132,6 +131,10 @@ export default async function (
   const packageJsonPath = joinPathFragments(projectConfig.root, 'package.json');
   updateJson(tree, packageJsonPath, (packageJson): object => {
     packageJson.groupId = 'no.skatteetaten.aurora';
+    packageJson.repository = {
+      type: 'git',
+      url: 'https://github.com/Skatteetaten/designsystemet.git',
+    };
     packageJson.publishConfig = {
       registry: 'https://nexus.sits.no/repository/npm-internal/',
     };
@@ -154,6 +157,14 @@ export default async function (
         options: {
           ...projectConfig?.targets.build.options,
           rollupConfig: [`libs/${projectName}/rollup.config.js`],
+          assets: [
+            ...projectConfig.targets.build.options.assets,
+            {
+              glob: 'LICENSE',
+              input: '.',
+              output: '.',
+            },
+          ],
         },
       },
       lint: {

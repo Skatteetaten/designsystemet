@@ -2,6 +2,11 @@
   "name": "@skatteetaten/ds-table",
   "version": "0.5.0",
   "groupId": "no.skatteetaten.aurora",
+  "homepage": "https://www.skatteetaten.no/stilogtone/designsystemet/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Skatteetaten/designsystemet.git"
+  },
   "publishConfig": {
     "registry": "https://nexus.sits.no/repository/npm-internal/"
   },
