@@ -129,13 +129,11 @@ export const ExampleImportant: StoryFn<typeof Modal> = () => {
             'Løsningen er ikke kommet i drift ennå eller tatt ned for vedlikehold.'
           }
         </Paragraph>
-        <Link
-          className={'modalLink'}
-          href={'#'}
-          onClick={(): void => ref.current?.close()}
-        >
-          {'Les mer på skatteetaten.no'}
-        </Link>
+        <div className={'modalLink'}>
+          <Link href={'#'} onClick={(): void => ref.current?.close()}>
+            {'Les mer på skatteetaten.no'}
+          </Link>
+        </div>
       </Modal>
     </>
   );
