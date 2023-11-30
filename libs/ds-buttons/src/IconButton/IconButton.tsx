@@ -60,7 +60,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
         {hasSpinner && (
           <Spinner
             className={styles.spinner}
-            color={'blue'}
+            color={disabled ? 'black' : 'blue'}
             size={size === 'extraSmall' ? 'small' : size}
             hideTitle
           >

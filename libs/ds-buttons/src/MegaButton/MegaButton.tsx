@@ -72,7 +72,7 @@ export const MegaButton = forwardRef<
         {hasSpinner && (
           <Spinner
             className={styles.spinner}
-            color={'white'}
+            color={disabled ? 'black' : 'white'}
             size={'large'}
             hideTitle
           >

@@ -92,6 +92,10 @@
     & .icon {
       fill: var(--semantic-interactive-foreground);
     }
+
+    & .spinner {
+      --spinner-color: var(--semantic-interactive-foreground);
+    }
   }
 
   &:disabled,

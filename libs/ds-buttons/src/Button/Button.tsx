@@ -41,7 +41,9 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     } ${withIconClassName} ${className}`;
     const hideClassName = hasSpinner ? styles.hide : '';
     const getSpinnerColor = (): SpinnerColor => {
-      if (variant === 'primary') {
+      if (disabled) {
+        return 'black';
+      } else if (variant === 'primary') {
         return 'white';
       } else if (variant === 'danger') {
         return 'black';

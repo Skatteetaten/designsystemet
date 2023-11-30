@@ -75,7 +75,7 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
         {hasSpinner && (
           <Spinner
             className={styles.spinner}
-            color={'blue'}
+            color={disabled ? 'black' : 'blue'}
             size={'small'}
             hideTitle
           >
