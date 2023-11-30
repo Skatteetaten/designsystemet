@@ -38,7 +38,7 @@ const meta = {
     // Props
     children: { table: { disable: true } },
     hasSpinner: { table: { disable: true } },
-    spinnerText: { table: { disable: true } },
+    spinnerTitle: { table: { disable: true } },
     iconPosition: {
       table: { disable: true },
       options: [...positionArr],

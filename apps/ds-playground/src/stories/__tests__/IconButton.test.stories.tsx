@@ -40,7 +40,7 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     hasSpinner: { table: { disable: true } },
-    spinnerText: { table: { disable: true } },
+    spinnerTitle: { table: { disable: true } },
     isOutlined: { table: { disable: true } },
     size: {
       table: { disable: true },

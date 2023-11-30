@@ -20,7 +20,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
       lang,
       'data-testid': dataTestId,
       size = getIconButtonSizeDefault(),
-      spinnerText,
+      spinnerTitle,
       svgPath,
       accessKey,
       disabled,
@@ -64,7 +64,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
             size={size === 'extraSmall' ? 'small' : size}
             hideTitle
           >
-            {spinnerText}
+            {spinnerTitle}
           </Spinner>
         )}
       </button>

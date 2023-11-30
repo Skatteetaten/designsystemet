@@ -35,7 +35,7 @@ const meta = {
     // Props
     children: { table: { disable: true } },
     hasSpinner: { table: { disable: true } },
-    spinnerText: { table: { disable: true } },
+    spinnerTitle: { table: { disable: true } },
     svgPath: {
       table: { disable: true },
       options: Object.keys(SystemSVGPaths),

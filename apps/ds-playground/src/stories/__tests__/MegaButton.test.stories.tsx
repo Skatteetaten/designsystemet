@@ -40,7 +40,7 @@ const meta = {
     // Props
     children: { table: { disable: true } },
     hasSpinner: { table: { disable: true } },
-    spinnerText: { table: { disable: true } },
+    spinnerTitle: { table: { disable: true } },
     isExternal: { table: { disable: true } },
     // HTML
     accessKey: {

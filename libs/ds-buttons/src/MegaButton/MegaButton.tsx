@@ -23,7 +23,7 @@ export const MegaButton = forwardRef<
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
-      spinnerText,
+      spinnerTitle,
       accessKey,
       disabled,
       href,
@@ -76,7 +76,7 @@ export const MegaButton = forwardRef<
             size={'large'}
             hideTitle
           >
-            {spinnerText}
+            {spinnerTitle}
           </Spinner>
         )}
       </Tag>

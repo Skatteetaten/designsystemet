@@ -34,5 +34,5 @@ export interface IconButtonProps
   /** Om knappen skal inneholde Spinner. */
   hasSpinner?: boolean;
   /** Overskriver default tekst som leses opp av skjermleser når Spinner snurrer i knappen. */
-  spinnerText?: string;
+  spinnerTitle?: string;
 }

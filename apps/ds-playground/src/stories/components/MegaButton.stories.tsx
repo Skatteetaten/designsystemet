@@ -15,7 +15,7 @@ export default {
     // Props
     children: { table: { category: category.props } },
     hasSpinner: { table: { category: category.props } },
-    spinnerText: {
+    spinnerTitle: {
       table: {
         category: category.props,
         defaultValue: { summary: dsI18n.t('ds_status:spinner.LoadingLabel') },

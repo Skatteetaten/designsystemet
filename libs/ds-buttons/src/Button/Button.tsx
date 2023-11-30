@@ -20,7 +20,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
-      spinnerText,
+      spinnerTitle,
       svgPath,
       variant = getButtonVariantDefault(),
       accessKey,
@@ -81,7 +81,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             size={'small'}
             hideTitle
           >
-            {spinnerText}
+            {spinnerTitle}
           </Spinner>
         )}
       </button>

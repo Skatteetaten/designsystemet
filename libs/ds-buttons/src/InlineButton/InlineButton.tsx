@@ -21,7 +21,7 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
       lang,
       'data-testid': dataTestId,
       iconPosition = getInlineButtonPositionDefault(),
-      spinnerText,
+      spinnerTitle,
       svgPath,
       accessKey,
       disabled,
@@ -79,7 +79,7 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
             size={'small'}
             hideTitle
           >
-            {spinnerText}
+            {spinnerTitle}
           </Spinner>
         )}
       </button>

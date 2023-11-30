@@ -31,7 +31,7 @@ export type MegaButtonDiscriminatedProp =
       /** Om knappen skal inneholde Spinner. */
       hasSpinner?: never;
       /** Overskriver default tekst som leses opp av skjermleser når Spinner snurrer i knappen. */
-      spinnerText?: never;
+      spinnerTitle?: never;
     }
   | ({
       /** Hvis det er ønskelig å vise knappen som en lenke. Setter strengen til href attributtet på lenken. */
@@ -42,7 +42,7 @@ export type MegaButtonDiscriminatedProp =
       /** Om knappen skal inneholde Spinner. */
       hasSpinner?: boolean;
       /** Overskriver default tekst som leses opp av skjermleser når Spinner snurrer i knappen. */
-      spinnerText?: string;
+      spinnerTitle?: string;
     } & Pick<ComponentPropsWithoutRef<'button'>, 'type'>);
 
 export interface MegaButtonComponentCommonProps
