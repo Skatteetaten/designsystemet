@@ -66,23 +66,23 @@ const meta = {
     secondColumn: { control: 'text', table: { disable: true } },
     thirdColumn: { control: 'text', table: { disable: true } },
     // Events
-    onLogIn: { table: { disable: true } },
-    onLogOut: { table: { disable: true } },
+    onLogInClick: { table: { disable: true } },
+    onLogOutClick: { table: { disable: true } },
     onUserClick: { table: { disable: true } },
   },
 } satisfies Meta<typeof TopBannerExternal>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const loginText = dsI18n.t('ds_pages:topbannerbutton.Login');
-const logoutText = dsI18n.t('ds_pages:topbannerbutton.Logout');
-const themeText = dsI18n.t('ds_pages:topbanner.NavAriaLabel');
-const menuText = dsI18n.t('ds_pages:topbannerbutton.Menu');
-const skipLinkText = dsI18n.t('ds_pages:topbanner.SkipLinkText');
+const loginText = dsI18n.t('ds_layout:topbannerbutton.Login');
+const logoutText = dsI18n.t('ds_layout:topbannerbutton.Logout');
+const themeText = dsI18n.t('ds_layout:topbanner.NavAriaLabel');
+const menuText = dsI18n.t('ds_layout:topbannerbutton.Menu');
+const skipLinkText = dsI18n.t('ds_layout:topbanner.SkipLinkText');
 const defaultArgs: TopBannerExternalProps = {
   // Uten undefined så blir funksjonene initalisert med mockConstructor i Storybook
-  onLogIn: undefined,
-  onLogOut: undefined,
+  onLogInClick: undefined,
+  onLogOutClick: undefined,
   onUserClick: undefined,
 };
 

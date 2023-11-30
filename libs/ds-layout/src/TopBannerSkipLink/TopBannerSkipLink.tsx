@@ -25,7 +25,7 @@ export const TopBannerSkipLink = forwardRef<
     },
     ref
   ): JSX.Element => {
-    const { t } = useTranslation('ds_pages', { i18n: dsI18n });
+    const { t } = useTranslation('ds_layout', { i18n: dsI18n });
 
     const handleClick = (event: React.SyntheticEvent): void => {
       event.preventDefault();

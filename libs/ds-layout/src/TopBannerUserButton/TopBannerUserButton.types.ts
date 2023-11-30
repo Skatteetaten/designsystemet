@@ -1,3 +1,5 @@
+import { MouseEventHandler } from 'react';
+
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 export const userRoleArr = ['meg', 'andre', 'virksomhet'] as const;
@@ -9,5 +11,5 @@ export interface TopBannerUserButtonProps extends BaseProps {
   /** Hvilken rolle innlogget bruker har. */
   role?: UserRole;
   /** Callback når knappen trykkes på. */
-  onUserClick?: () => void;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 }

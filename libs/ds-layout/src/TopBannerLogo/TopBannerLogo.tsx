@@ -33,7 +33,7 @@ export const TopBannerLogo = forwardRef<LogoRefHandle, TopBannerLogoProps>(
     },
     ref
   ): JSX.Element => {
-    const { t } = useTranslation('ds_pages', { i18n: dsI18n });
+    const { t } = useTranslation('ds_layout', { i18n: dsI18n });
 
     const logoRef = useRef<HTMLAnchorElement & HTMLDivElement>(null);
     useImperativeHandle(ref, () => ({

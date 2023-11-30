@@ -104,10 +104,10 @@ export const Defaults = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const usernameButtonText = canvas.getByText(
-      dsI18n.t('ds_pages:topbannerbutton.Myself')
+      dsI18n.t('ds_layout:topbannerbutton.Myself')
     );
     const title = canvas.getByText(
-      dsI18n.t('ds_pages:topbannerbutton.MyselfTitle')
+      dsI18n.t('ds_layout:topbannerbutton.MyselfTitle')
     );
     await expect(usernameButtonText).toBeInTheDocument();
     await expect(title).toBeInTheDocument();
@@ -168,13 +168,13 @@ export const WithAllRoles = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const titleSelf = canvas.getByText(
-      dsI18n.t('ds_pages:topbannerbutton.MyselfTitle')
+      dsI18n.t('ds_layout:topbannerbutton.MyselfTitle')
     );
     const titleWork = canvas.getByText(
-      dsI18n.t('ds_pages:topbannerbutton.CompanyTitle')
+      dsI18n.t('ds_layout:topbannerbutton.CompanyTitle')
     );
     const titleOther = canvas.getByText(
-      dsI18n.t('ds_pages:topbannerbutton.OtherTitle')
+      dsI18n.t('ds_layout:topbannerbutton.OtherTitle')
     );
     await expect(titleSelf).toBeInTheDocument();
     await expect(titleWork).toBeInTheDocument();
