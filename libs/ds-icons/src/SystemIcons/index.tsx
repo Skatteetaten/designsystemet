@@ -87,6 +87,7 @@ export * from './Lock';
 export * from './LockOpen';
 export * from './LockOutline';
 export * from './LockOutlineOpen';
+export * from './LogOut';
 export * from './Marriage';
 export * from './Menu';
 export * from './MenuDown';
