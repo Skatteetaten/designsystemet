@@ -56,20 +56,18 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
     if (imageSource) {
       panelGraphicClassName = styles.panel_graphicImage;
     } else if (renderIcon) {
-      panelGraphicClassName = hideGraphicMobile
-        ? styles.panel_graphicIconHideMobile
-        : styles.panel_graphicIcon;
+      panelGraphicClassName = `${styles.panel_graphicIcon} ${
+        hideGraphicMobile ? styles.panel_graphicIconHide : ''
+      }`;
     }
     const panelClassName =
       `${styles.panel} ${panelVariantClassName} ${panelColorClassName} ${panelPaddingClassName} ${panelSpacingClassName} ${panelGraphicClassName} ${className}`.trim();
 
     const graphicClassName = `${styles.panelGraphic} ${
-      hideGraphicMobile ? styles.panelGraphic_hide : ''
+      hideGraphicMobile ? styles.panelGraphicHide : ''
     }`.trim();
     const iconClassName = `${renderIcon ? graphicClassName : ''}`.trim();
-    const articleClassName = `${styles.panelArticle} ${
-      imageSource ? styles.panelArticle_illustration : ''
-    }`.trim();
+    const articleClassName = `${styles.panelArticle}`.trim();
 
     return (
       <div

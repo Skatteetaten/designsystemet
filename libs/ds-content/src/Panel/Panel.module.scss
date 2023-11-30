@@ -41,7 +41,7 @@ $border-outline: 6px;
         1fr;
       row-gap: var(--spacing-m);
 
-      &HideMobile {
+      &Hide {
         row-gap: 0;
       }
 
@@ -64,7 +64,7 @@ $border-outline: 6px;
     grid-area: graphic;
     line-height: 1;
 
-    &_hide {
+    &Hide {
       display: none;
 
       @media (min-width: $breakpoint-s) {
@@ -75,7 +75,6 @@ $border-outline: 6px;
     @media (min-width: $breakpoint-m) {
       width: auto;
       margin-right: 0;
-      grid-column: 1;
     }
   }
 
@@ -84,12 +83,6 @@ $border-outline: 6px;
     max-width: var(--semantic-responsive-article);
     margin: 0 auto;
     grid-area: article;
-
-    @media (min-width: $breakpoint-m) {
-      &_illustration {
-        grid-column: 2;
-      }
-    }
   }
 
   &Image {
