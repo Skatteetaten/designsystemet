@@ -216,8 +216,8 @@ exports[`Tester/Panel WithColorAndVariant smoke-test 1`] = `
 
 exports[`Tester/Panel WithHideGraphicMobileAndIcon smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicIcon__3nOV3 Panel_panel_graphicIcon_hide__p9yGi">
-    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphic_hide__exKT9">
+  <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicIcon__3nOV3 Panel_panel_graphicIconHide__WrI4N">
+    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphicHide__QsAnW">
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_extraLarge__CUqij "
            viewbox="0 0 24 24"
            focusable="false"
@@ -234,8 +234,8 @@ exports[`Tester/Panel WithHideGraphicMobileAndIcon smoke-test 1`] = `
       </p>
     </div>
   </div>
-  <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicIcon__3nOV3 Panel_panel_graphicIcon_hide__p9yGi">
-    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphic_hide__exKT9">
+  <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicIcon__3nOV3 Panel_panel_graphicIconHide__WrI4N">
+    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphicHide__QsAnW">
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_extraLarge__CUqij "
            viewbox="0 0 24 24"
            focusable="false"
@@ -257,8 +257,8 @@ exports[`Tester/Panel WithHideGraphicMobileAndIcon smoke-test 1`] = `
 
 exports[`Tester/Panel WithHideGraphicMobileAndIconDesktop smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicIcon__3nOV3 Panel_panel_graphicIcon_hide__p9yGi">
-    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphic_hide__exKT9">
+  <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicIcon__3nOV3 Panel_panel_graphicIconHide__WrI4N">
+    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphicHide__QsAnW">
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_extraLarge__CUqij "
            viewbox="0 0 24 24"
            focusable="false"
@@ -275,8 +275,8 @@ exports[`Tester/Panel WithHideGraphicMobileAndIconDesktop smoke-test 1`] = `
       </p>
     </div>
   </div>
-  <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicIcon__3nOV3 Panel_panel_graphicIcon_hide__p9yGi">
-    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphic_hide__exKT9">
+  <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicIcon__3nOV3 Panel_panel_graphicIconHide__WrI4N">
+    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphicHide__QsAnW">
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_extraLarge__CUqij "
            viewbox="0 0 24 24"
            focusable="false"
@@ -299,7 +299,7 @@ exports[`Tester/Panel WithHideGraphicMobileAndIconDesktop smoke-test 1`] = `
 exports[`Tester/Panel WithHideGraphicMobileAndImage smoke-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicImage__yJ2sd">
-    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphic_hide__exKT9">
+    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphicHide__QsAnW">
       <img src="farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg"
            alt
            class="Panel_panelImage__Onc4C"
@@ -312,7 +312,7 @@ exports[`Tester/Panel WithHideGraphicMobileAndImage smoke-test 1`] = `
     </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicImage__yJ2sd">
-    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphic_hide__exKT9">
+    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphicHide__QsAnW">
       <img src="farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg"
            alt
            class="Panel_panelImage__Onc4C"
@@ -330,7 +330,7 @@ exports[`Tester/Panel WithHideGraphicMobileAndImage smoke-test 1`] = `
 exports[`Tester/Panel WithHideGraphicMobileAndImageDesktop smoke-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicImage__yJ2sd">
-    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphic_hide__exKT9">
+    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphicHide__QsAnW">
       <img src="farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg"
            alt
            class="Panel_panelImage__Onc4C"
@@ -343,7 +343,7 @@ exports[`Tester/Panel WithHideGraphicMobileAndImageDesktop smoke-test 1`] = `
     </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicImage__yJ2sd">
-    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphic_hide__exKT9">
+    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphicHide__QsAnW">
       <img src="farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg"
            alt
            class="Panel_panelImage__Onc4C"
