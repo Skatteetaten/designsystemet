@@ -5,7 +5,7 @@ import {
   getSpinnerSizeDefault,
   getSpinnerTitlePositionDefault,
   spinnerSizeArr,
-} from '@skatteetaten/ds-status';
+} from '@skatteetaten/ds-progress';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
@@ -50,7 +50,7 @@ export default {
     },
   },
   parameters: {
-    version: getVersion('ds-status'),
+    version: getVersion('ds-progress'),
   },
 } satisfies Meta<typeof Spinner>;
 

@@ -31,6 +31,11 @@
             "glob": "libs/ds-table/README.md",
             "input": ".",
             "output": "."
+          },
+          {
+            "glob": "LICENSE",
+            "input": ".",
+            "output": "."
           }
         ],
         "babelUpwardRootMode": true
@@ -70,8 +75,8 @@
     "publish": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "npm publish {args.switches}",
-        "cwd": "dist/libs/ds-table"
+        "command": "npm publish dist/libs/ds-table {args.switches}",
+        "cwd": ""
       }
     }
   },
