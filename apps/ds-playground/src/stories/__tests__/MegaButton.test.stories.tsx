@@ -381,7 +381,7 @@ const TemplateWithSpinner: StoryFn<typeof MegaButton> = (args) => (
 
 export const WithSpinner = {
   render: TemplateWithSpinner,
-  name: 'With Spinner',
+  name: 'With Spinner (A7)',
   args: {
     ...defaultArgs,
     hasSpinner: true,

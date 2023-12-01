@@ -461,7 +461,7 @@ const TemplateWithSpinner: StoryFn<typeof IconButton> = (args) => (
 
 export const WithSpinner = {
   render: TemplateWithSpinner,
-  name: 'With Spinner',
+  name: 'With Spinner (A4)',
   args: {
     ...defaultArgs,
     hasSpinner: true,
