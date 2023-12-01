@@ -52,13 +52,17 @@
 .mainMenu {
   position: absolute;
   z-index: 101;
-  top: 6.5rem;
+  top: 6rem;
   right: 0;
   left: 0;
   background-color: var(--palette-graphite-5);
 
-  @media (min-width: $breakpoint-m) {
+  @media (min-width: $breakpoint-s) {
     top: 5.5rem;
+  }
+
+  @media (min-width: $breakpoint-m) {
+    top: 5rem;
   }
 
   .columns {
