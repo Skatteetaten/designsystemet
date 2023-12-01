@@ -8,6 +8,7 @@
 }
 
 .button {
+  position: relative;
   padding: 0;
   border: none;
   background-color: transparent;
@@ -72,4 +73,14 @@
       fill: var(--semantic-disabled-foreground);
     }
   }
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.spinner {
+  position: absolute;
+  top: calc(50% - 0.5 * var(--size-extra-small));
+  left: calc(50% - 0.5 * var(--size-extra-small));
 }

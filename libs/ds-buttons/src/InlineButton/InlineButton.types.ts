@@ -30,4 +30,8 @@ export interface InlineButtonProps
   iconPosition?: Position;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
   svgPath?: ReactElement;
+  /** Om knappen skal inneholde Spinner. */
+  hasSpinner?: boolean;
+  /** Overskriver default tekst som leses opp av skjermleser når Spinner snurrer i knappen. */
+  spinnerTitle?: string;
 }
