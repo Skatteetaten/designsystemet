@@ -25,11 +25,11 @@ export const TopBannerUserButton = forwardRef<
       'data-testid': dataTestId,
       role,
       children,
-      onUserClick,
+      onClick,
     },
     ref
   ): JSX.Element => {
-    const { t } = useTranslation('ds_pages', { i18n: dsI18n });
+    const { t } = useTranslation('ds_layout', { i18n: dsI18n });
 
     let buttonText = children;
     let roleSVGpath = PersonSVGpath;
@@ -64,7 +64,7 @@ export const TopBannerUserButton = forwardRef<
         variant={'filled'}
         svgPath={roleSVGpath}
         title={title}
-        onClick={onUserClick}
+        onClick={onClick}
       >
         {buttonText}
       </TopBannerButton>

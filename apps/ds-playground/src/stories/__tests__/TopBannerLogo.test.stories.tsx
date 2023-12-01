@@ -51,8 +51,8 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const logoLinkText = dsI18n.t('ds_pages:topbanner.SkeLogoLinkText');
-const logoText = dsI18n.t('ds_pages:topbanner.SkeLogoImageText');
+const logoLinkText = dsI18n.t('ds_layout:topbanner.SkeLogoLinkText');
+const logoText = dsI18n.t('ds_layout:topbanner.SkeLogoImageText');
 const defaultArgs: TopBannerLogoProps = {};
 
 export const WithRef = {

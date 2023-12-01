@@ -41,13 +41,13 @@ export const TopBannerExternal = forwardRef<
       username,
       userRole,
       children,
-      onLogIn,
-      onLogOut,
+      onLogInClick,
+      onLogOutClick,
       onUserClick,
     },
     ref
   ): JSX.Element => {
-    const { t } = useTranslation('ds_pages', { i18n: dsI18n });
+    const { t } = useTranslation('ds_layout', { i18n: dsI18n });
 
     const menuRef = useRef<HTMLDivElement>(null);
     const menuButtonRef = useRef<HTMLButtonElement>(null);
@@ -61,7 +61,6 @@ export const TopBannerExternal = forwardRef<
         return;
       }
 
-      // TODO - FRONT-1161 lage en felles funksjon
       const handleClickOutside = (event: MouseEvent): void => {
         const node = event.target as Node;
         if (menuButtonRef.current?.contains(node) || !menuRef.current) {
@@ -119,7 +118,7 @@ export const TopBannerExternal = forwardRef<
 
               <div className={styles.content}>
                 {/** TODO - FRONT-1161 Lukking når navigerer ut av menyen */}
-                {/** TODO - FRONT-1161 Avklaring på lukking av menyen når en handling utføres i menyinnholdet */}
+                {/** TODO - FRONT-1161 Lukking av menyen skal styres av konsument */}
                 {showMenu && (
                   <>
                     <TopBannerButton
@@ -151,29 +150,26 @@ export const TopBannerExternal = forwardRef<
 
                 {/** TODO - FRONT-1161 språkmeny */}
 
-                {onLogOut && userRole && (
+                {onLogOutClick && userRole && (
                   <>
-                    <TopBannerUserButton
-                      role={userRole}
-                      onUserClick={onUserClick}
-                    >
+                    <TopBannerUserButton role={userRole} onClick={onUserClick}>
                       {username}
                     </TopBannerUserButton>
                     <TopBannerButton
                       svgPath={LogOutSVGpath}
                       variant={'outline'}
-                      onClick={onLogOut}
+                      onClick={onLogOutClick}
                     >
                       {t('topbannerbutton.Logout')}
                     </TopBannerButton>
                   </>
                 )}
 
-                {onLogIn && !userRole && (
+                {onLogInClick && !userRole && (
                   <TopBannerButton
                     svgPath={LockOutlineSVGpath}
                     variant={'filled'}
-                    onClick={onLogIn}
+                    onClick={onLogInClick}
                   >
                     {t('topbannerbutton.Login')}
                   </TopBannerButton>

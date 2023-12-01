@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { MouseEventHandler, ReactNode } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -36,15 +36,15 @@ type TopBannerLogoDiscriminatedProps =
 
 interface TopBannerCommonProps extends BaseProps {
   /** Callback når Logg inn-knapp trykkes på. Om Logg inn-knappen er synlig eller ikke henger sammen med onLogIn, onLogOut og userRole. Knappen er synlig hvis userRole IKKE har en rolle og det finnes callback-funksjon for Logg inn- og Logg ut-knappen. */
-  onLogIn?: () => void;
+  onLogInClick?: MouseEventHandler<HTMLButtonElement>;
   /** Callback når Logg ut-knapp trykkes på. Om Logg ut-knappen er synlig eller ikke henger sammen med onLogIn, onLogOut og userRole. Knappen er synlig hvis userRole har en rolle og det finnes callback-funksjoner for Logg inn- og Logg ut-knappen. NB! Husk å nullstill userRole i onLogOut slik at Logg inn-knappen blir synlig. */
-  onLogOut?: () => void;
-  /** Hvilken rolle innloget bruker har. Hvis userRole er satt til 'meg', settes username til 'Meg selv' automatisk. Rollen som velges dikterer også hvilket ikon username-knappen får. */
+  onLogOutClick?: MouseEventHandler<HTMLButtonElement>;
+  /** Hvilken rolle innloget bruker har. Hvis userRole er satt til 'meg', settes username til 'Meg selv' automatisk. Rollen som velges dikterer også hvilket ikon user-knappen får. */
   userRole?: UserRole;
-  /** Teksten på username-knappen. Hva teksten skal være henger sammen med userRole. Når userRole er lik 'meg', settes username til 'Meg selv' automatisk og kan ikke overskrives. Hvis userRole er lik 'andre' eller 'virksomhet', så må username settes til hhv navnet på person det gjelder eller navnet på virksomheten. */
+  /** Teksten på user-knappen. Hva teksten skal være henger sammen med userRole. Når userRole er lik 'meg', settes username til 'Meg selv' automatisk og kan ikke overskrives. Hvis userRole er lik 'andre' eller 'virksomhet', så må username settes til hhv navnet på person det gjelder eller navnet på virksomheten. */
   username?: string;
-  /** Callback når username-knapp trykkes på. Username-knappen vises når bruker er innlogget og må alltid ha en callback. Knappen kan brukes til rollebytte. Avhengig av rollen til bruker viser knappen automatisk forskjellig ikoner ut i fra den valgte rollen som userRole har fått. */
-  onUserClick?: () => void;
+  /** Callback når user-knapp trykkes på. Username-knappen vises når bruker er innlogget og må alltid ha en callback. Knappen kan brukes til rollebytte. Avhengig av rollen til bruker viser knappen automatisk forskjellig ikoner ut i fra den valgte rollen som userRole har fått. */
+  onUserClick?: MouseEventHandler<HTMLButtonElement>;
   /** Meny-innhold første kolonne. Meny-knappen blir synlig når den har innhold. */
   firstColumn?: ReactNode;
   /** Meny-innhold andre kolonne */

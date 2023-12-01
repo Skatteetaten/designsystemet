@@ -32,7 +32,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const skipLinkText = 'ds_pages:topbanner.SkipLinkText';
+const skipLinkText = 'ds_layout:topbanner.SkipLinkText';
 const defaultArgs: TopBannerSkipLinkProps = {};
 
 export const WithRef = {

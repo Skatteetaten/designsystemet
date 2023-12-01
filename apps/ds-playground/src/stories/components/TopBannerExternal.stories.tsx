@@ -74,8 +74,14 @@ export default {
     secondColumn: { control: 'text', table: { category: category.props } },
     thirdColumn: { control: 'text', table: { category: category.props } },
     // Events
-    onLogIn: { control: { type: null }, table: { category: category.event } },
-    onLogOut: { control: { type: null }, table: { category: category.event } },
+    onLogInClick: {
+      control: { type: null },
+      table: { category: category.event },
+    },
+    onLogOutClick: {
+      control: { type: null },
+      table: { category: category.event },
+    },
     onUserClick: {
       control: { type: null },
       table: { category: category.event },
@@ -89,8 +95,8 @@ export default {
 export const Preview: StoryObj<typeof TopBannerExternal> = {
   args: {
     // uten undefined så blir funksjonene initalisert med mockConstructor i Storybook
-    onLogIn: undefined,
-    onLogOut: undefined,
+    onLogInClick: undefined,
+    onLogOutClick: undefined,
     onUserClick: undefined,
   },
 };
@@ -134,8 +140,8 @@ export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
         thirdColumn={isLoggedIn ? 'Third column' : ''}
         username={username}
         userRole={userRole}
-        onLogIn={handleLogIn}
-        onLogOut={handleLogOut}
+        onLogInClick={handleLogIn}
+        onLogOutClick={handleLogOut}
         onUserClick={(): void => modalRef.current?.showModal()}
       />
       <Modal ref={modalRef} title={'Dette er dine roller'}>
@@ -204,8 +210,8 @@ export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
         thirdColumn={isLoggedIn ? 'Third column' : ''}
         username={username}
         userRole={userRole}
-        onLogIn={handleLogIn}
-        onLogOut={handleLogOut}
+        onLogInClick={handleLogIn}
+        onLogOutClick={handleLogOut}
         onUserClick={(): void => modalRef.current?.showModal()}
       />
       <Modal ref={modalRef} title={'Dette er dine roller'}>
