@@ -50,7 +50,7 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                   </path>
                 </svg>
               </span>
-              <span class>
+              <span class="TopBannerButton_buttonText__guqHQ ">
                 Meny
               </span>
             </button>
@@ -366,7 +366,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
                   </path>
                 </svg>
               </span>
-              <span class>
+              <span class="TopBannerButton_buttonText__guqHQ ">
                 Logg inn
               </span>
             </button>
@@ -550,7 +550,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                   </path>
                 </svg>
               </span>
-              <span class>
+              <span class="TopBannerButton_buttonText__guqHQ ">
                 Meny
               </span>
             </button>
@@ -717,7 +717,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                   </path>
                 </svg>
               </span>
-              <span class>
+              <span class="TopBannerButton_buttonText__guqHQ ">
                 Meny
               </span>
             </button>
@@ -884,7 +884,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                   </path>
                 </svg>
               </span>
-              <span class>
+              <span class="TopBannerButton_buttonText__guqHQ ">
                 Meny
               </span>
             </button>
@@ -1052,7 +1052,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
                   </path>
                 </svg>
               </span>
-              <span class>
+              <span class="TopBannerButton_buttonText__guqHQ ">
                 Logg inn
               </span>
             </button>
@@ -1120,7 +1120,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                   </path>
                 </svg>
               </span>
-              <span class>
+              <span class="TopBannerButton_buttonText__guqHQ ">
                 Meny
               </span>
             </button>
@@ -1307,7 +1307,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                   </path>
                 </svg>
               </span>
-              <span class>
+              <span class="TopBannerButton_buttonText__guqHQ ">
                 Meny
               </span>
             </button>
@@ -1494,7 +1494,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                   </path>
                 </svg>
               </span>
-              <span class>
+              <span class="TopBannerButton_buttonText__guqHQ ">
                 Meny
               </span>
             </button>
@@ -1681,7 +1681,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                   </path>
                 </svg>
               </span>
-              <span class>
+              <span class="TopBannerButton_buttonText__guqHQ ">
                 Meny
               </span>
             </button>
@@ -1858,7 +1858,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                   </path>
                 </svg>
               </span>
-              <span class>
+              <span class="TopBannerButton_buttonText__guqHQ ">
                 Meny
               </span>
             </button>
@@ -2035,7 +2035,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                   </path>
                 </svg>
               </span>
-              <span class>
+              <span class="TopBannerButton_buttonText__guqHQ ">
                 Meny
               </span>
             </button>

@@ -32,6 +32,11 @@
     display: none;
   }
 
+  &Text {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
   &_filled {
     .icon {
       border-radius: 50%;

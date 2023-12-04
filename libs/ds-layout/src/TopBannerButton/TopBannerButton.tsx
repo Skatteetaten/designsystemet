@@ -1,7 +1,7 @@
 import { forwardRef, JSX } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-import { Icon, MenuDownSVGpath, MenuUpSVGpath } from '@skatteetaten/ds-icons';
+import { Icon, MenuDownSVGpath } from '@skatteetaten/ds-icons';
 
 import { TopBannerButtonProps } from './TopBannerButton.types';
 
@@ -47,18 +47,14 @@ export const TopBannerButton = forwardRef<
         <span className={styles.iconWrapper}>
           <Icon svgPath={svgPath} className={styles.icon} title={title} />
           {hasArrow && (
-            <Icon
-              svgPath={ariaExpanded ? MenuUpSVGpath : MenuDownSVGpath}
-              className={styles.arrowMobile}
-            />
+            <Icon svgPath={MenuDownSVGpath} className={styles.arrowMobile} />
           )}
         </span>
-        <span className={classNames?.text ?? ''}>{children}</span>
+        <span className={`${styles.buttonText} ${classNames?.text ?? ''}`}>
+          {children}
+        </span>
         {hasArrow && (
-          <Icon
-            svgPath={ariaExpanded ? MenuUpSVGpath : MenuDownSVGpath}
-            className={styles.arrowDesktop}
-          />
+          <Icon svgPath={MenuDownSVGpath} className={styles.arrowDesktop} />
         )}
       </button>
     );

@@ -35,6 +35,10 @@
       max-width: var(--container-l);
       box-sizing: border-box;
     }
+
+    @media (min-width: $breakpoint-l) {
+      padding-left: 0;
+    }
   }
 }
 
