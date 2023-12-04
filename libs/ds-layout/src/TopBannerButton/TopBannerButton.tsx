@@ -50,7 +50,9 @@ export const TopBannerButton = forwardRef<
             <Icon svgPath={MenuDownSVGpath} className={styles.arrowMobile} />
           )}
         </span>
-        <span className={classNames?.text ?? ''}>{children}</span>
+        <span className={`${styles.buttonText} ${classNames?.text ?? ''}`}>
+          {children}
+        </span>
         {hasArrow && (
           <Icon svgPath={MenuDownSVGpath} className={styles.arrowDesktop} />
         )}
