@@ -3,7 +3,6 @@
 .button {
   position: relative;
   display: flex;
-  overflow: hidden;
   height: 100%;
   flex-direction: column;
   align-items: center;
@@ -17,7 +16,6 @@
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-bold);
   line-height: var(--semantic-line-height-default);
-  white-space: nowrap;
 
   .iconWrapper {
     display: flex;
