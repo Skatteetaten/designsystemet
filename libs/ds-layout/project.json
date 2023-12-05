@@ -31,6 +31,11 @@
             "glob": "libs/ds-layout/README.md",
             "input": ".",
             "output": "."
+          },
+          {
+            "glob": "LICENSE",
+            "input": ".",
+            "output": "."
           }
         ],
         "babelUpwardRootMode": true
@@ -70,8 +75,7 @@
     "publish": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "npm publish {args.switches}",
-        "cwd": "dist/libs/ds-layout"
+        "command": "npm publish dist/libs/ds-layout {args.switches}"
       }
     }
   },

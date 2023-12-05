@@ -1,4 +1,4 @@
-# Skatteetatens designsystem ds-collections
+# Skatteetatens designsystem <%= name %>
 
 Designsystemet består av byggeklosser i form av React-komponenter som brukes til å lage Skatteetatens løsninger på digitale flater.
 
@@ -7,12 +7,6 @@ Designsystemet består av byggeklosser i form av React-komponenter som brukes ti
 På [kom i gang for utviklere](https://www.skatteetaten.no/stilogtone/designsystemet/kom-i-gang/for-utviklere/) finner du en oppskrift på hvordan du skal bruke komponentene.
 
 ## Installasjon
-
 ```
-npm i @skatteetaten/ds-collections
+npm i @skatteetaten/<%= name %>
 ```
-
-## Innhold
-
-- OpenClose
-- StepList
