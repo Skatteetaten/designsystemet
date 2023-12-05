@@ -32,21 +32,16 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    children: { table: { disable: true } },
-    role: {
-      table: { disable: true },
-      options: [...userRoleArr],
-      control: 'inline-radio',
-    },
+    user: { table: { disable: true } },
     // Events
-    onUserClick: { table: { disable: true } },
+    onClick: { table: { disable: true } },
   },
 } as Meta<typeof TopBannerUserButton>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 const defaultArgs: TopBannerUserButtonProps = {
-  role: 'meg',
+  user: { role: 'meg' },
 };
 
 export const WithRef = {
@@ -99,7 +94,7 @@ export const Defaults = {
     ...defaultArgs,
   },
   argTypes: {
-    role: { table: { disable: false } },
+    user: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -115,14 +110,13 @@ export const Defaults = {
 } satisfies Story;
 
 export const WithChildren = {
-  name: 'With Children (A3)',
+  name: 'With User (A3)',
   args: {
     ...defaultArgs,
-    role: 'virksomhet',
-    children: 'Navnet på virksomheten',
+    user: { role: 'virksomhet', name: 'Navnet på virksomheten' },
   },
   argTypes: {
-    children: { table: { disable: false } },
+    user: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -135,19 +129,17 @@ export const WithChildren = {
 const TemplateWithAllRoles: StoryFn<typeof TopBannerUserButton> = (args) => (
   <div className={'topbannerButtonContainer'}>
     {userRoleArr.map((role, index) => {
+      const name =
+        role === 'andre'
+          ? 'SØRUMSAND-SCHOENBERG WILLIAM'
+          : 'Navn på virksomhet';
       return (
         <TopBannerUserButton
           key={`user_${index}`}
           className={'bottomSpacingXL'}
           {...args}
-          role={role}
-        >
-          {`${
-            role === 'andre'
-              ? 'SØRUMSAND-SCHOENBERG WILLIAM'
-              : 'Navn på virksomhet'
-          }`}
-        </TopBannerUserButton>
+          user={{ role, name }}
+        />
       );
     })}
   </div>
@@ -160,7 +152,7 @@ export const WithAllRoles = {
     ...defaultArgs,
   },
   argTypes: {
-    role: {
+    user: {
       table: { disable: false },
       control: { type: null },
     },

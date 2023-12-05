@@ -47,8 +47,7 @@ export const TopBannerExternal = forwardRef<
       skipLinkText,
       skipLinkTarget,
       thirdColumn,
-      username,
-      userRole,
+      user,
       children,
       onLogInClick,
       onLogOutClick,
@@ -169,11 +168,9 @@ export const TopBannerExternal = forwardRef<
 
                 {/** TODO - FRONT-1161 språkmeny */}
 
-                {onLogOutClick && userRole && (
+                {onLogOutClick && user && (
                   <>
-                    <TopBannerUserButton role={userRole} onClick={onUserClick}>
-                      {username}
-                    </TopBannerUserButton>
+                    <TopBannerUserButton user={user} onClick={onUserClick} />
                     <TopBannerButton
                       svgPath={LogOutSVGpath}
                       variant={'outline'}
@@ -184,7 +181,7 @@ export const TopBannerExternal = forwardRef<
                   </>
                 )}
 
-                {onLogInClick && !userRole && (
+                {onLogInClick && !user && (
                   <TopBannerButton
                     svgPath={LockOutlineSVGpath}
                     variant={'filled'}

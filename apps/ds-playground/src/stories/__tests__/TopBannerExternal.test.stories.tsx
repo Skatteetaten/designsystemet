@@ -14,7 +14,6 @@ import { fireEvent, within } from '@storybook/testing-library';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { logoAsArr } from '../../../../../libs/ds-layout/src/TopBannerLogo/TopBannerLogo.types';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { userRoleArr } from '../../../../../libs/ds-layout/src/TopBannerUserButton/TopBannerUserButton.types';
 import { category } from '../../../.storybook/helpers';
 import customLogo from '../../assets/custom-logo.svg';
 import customMobileLogo from '../../assets/custom-mobile-logo.svg';
@@ -57,12 +56,7 @@ const meta = {
       control: 'inline-radio',
     },
     logoURL: { table: { disable: true } },
-    username: { table: { disable: true } },
-    userRole: {
-      table: { disable: true },
-      options: [...userRoleArr],
-      control: 'inline-radio',
-    },
+    user: { table: { disable: true } },
     firstColumn: { control: 'text', table: { disable: true } },
     secondColumn: { control: 'text', table: { disable: true } },
     thirdColumn: { control: 'text', table: { disable: true } },
