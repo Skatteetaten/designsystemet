@@ -9,7 +9,7 @@ import {
   updateProjectConfiguration,
   generateFiles,
 } from '@nx/devkit';
-import { Linter } from '@nx/linter';
+import { Linter } from '@nx/eslint';
 import { libraryGenerator } from '@nx/react';
 import { configurationGenerator, scssGenerator } from 'nx-stylelint';
 
