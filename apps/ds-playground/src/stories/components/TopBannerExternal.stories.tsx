@@ -2,7 +2,10 @@ import { useRef, useState } from 'react';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { RadioGroup } from '@skatteetaten/ds-forms';
-import { TopBannerExternal } from '@skatteetaten/ds-layout';
+import {
+  TopBannerExternal,
+  TopBannerExternalHandle,
+} from '@skatteetaten/ds-layout';
 import { Modal } from '@skatteetaten/ds-overlays';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
@@ -103,6 +106,7 @@ export const Preview: StoryObj<typeof TopBannerExternal> = {
 
 export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
   const modalRef = useRef<HTMLDialogElement>(null);
+  const topBannerRef = useRef<TopBannerExternalHandle>(null);
   const [username, setUsername] = useState<string>('');
   const [userRole, setUserRole] = useState<UserRole | undefined>(undefined);
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
@@ -123,17 +127,30 @@ export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
     setUsername('Knotten, Gudleik');
   };
 
+  const links = [
+    { href: '#storybook-root', text: 'Skatt' },
+    { href: '#storybook-root', text: 'Avgift' },
+    { href: '#storybook-root', text: 'Folkeregisteret' },
+  ];
+
   return (
     <>
-      <TopBannerExternal logoAs={'div'} />
       <TopBannerExternal
+        ref={topBannerRef}
         firstColumn={
           <LinkGroup>
-            <LinkGroup.Link href={'#storybook-root'}>{'Skatt'}</LinkGroup.Link>
-            <LinkGroup.Link href={'#storybook-root'}>{'Avgift'}</LinkGroup.Link>
-            <LinkGroup.Link href={'#storybook-root'}>
-              {'Folkeregisteret'}
-            </LinkGroup.Link>
+            {links.map((link, index) => (
+              <LinkGroup.Link
+                key={index}
+                href={link.href}
+                onClick={(e): void => {
+                  e.preventDefault();
+                  topBannerRef.current?.closeMenu?.();
+                }}
+              >
+                {link.text}
+              </LinkGroup.Link>
+            ))}
           </LinkGroup>
         }
         secondColumn={isLoggedIn ? 'Second column' : ''}
@@ -173,6 +190,7 @@ Example.parameters = {
 
 export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
   const modalRef = useRef<HTMLDialogElement>(null);
+  const topBannerRef = useRef<TopBannerExternalHandle>(null);
   const [username, setUsername] = useState<string>('');
   const [userRole, setUserRole] = useState<UserRole | undefined>(undefined);
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
@@ -193,17 +211,30 @@ export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
     setUsername('Knotten, Gudleik');
   };
 
+  const links = [
+    { href: '#storybook-root', text: 'Skatt' },
+    { href: '#storybook-root', text: 'Avgift' },
+    { href: '#storybook-root', text: 'Folkeregisteret' },
+  ];
+
   return (
     <>
-      <TopBannerExternal logoAs={'div'} />
       <TopBannerExternal
+        ref={topBannerRef}
         firstColumn={
           <LinkGroup>
-            <LinkGroup.Link href={'#storybook-root'}>{'Skatt'}</LinkGroup.Link>
-            <LinkGroup.Link href={'#storybook-root'}>{'Avgift'}</LinkGroup.Link>
-            <LinkGroup.Link href={'#storybook-root'}>
-              {'Folkeregisteret'}
-            </LinkGroup.Link>
+            {links.map((link, index) => (
+              <LinkGroup.Link
+                key={index}
+                href={link.href}
+                onClick={(e): void => {
+                  e.preventDefault();
+                  topBannerRef.current?.closeMenu?.();
+                }}
+              >
+                {link.text}
+              </LinkGroup.Link>
+            ))}
           </LinkGroup>
         }
         secondColumn={isLoggedIn ? 'Second column' : ''}

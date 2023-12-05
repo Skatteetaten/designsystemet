@@ -1,4 +1,10 @@
-import { forwardRef, useEffect, useRef, useState } from 'react';
+import {
+  forwardRef,
+  useEffect,
+  useImperativeHandle,
+  useRef,
+  useState,
+} from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
@@ -9,7 +15,10 @@ import {
   MenuSVGpath,
 } from '@skatteetaten/ds-icons';
 
-import { TopBannerExternalProps } from './TopBannerExternal.types';
+import {
+  TopBannerExternalProps,
+  TopBannerExternalHandle,
+} from './TopBannerExternal.types';
 import { TopBannerButton } from '../TopBannerButton/TopBannerButton';
 import { TopBannerLogo } from '../TopBannerLogo/TopBannerLogo';
 import { TopBannerSkipLink } from '../TopBannerSkipLink/TopBannerSkipLink';
@@ -18,7 +27,7 @@ import { TopBannerUserButton } from '../TopBannerUserButton/TopBannerUserButton'
 import styles from './TopBannerExternal.module.scss';
 
 export const TopBannerExternal = forwardRef<
-  HTMLHeadElement,
+  TopBannerExternalHandle,
   TopBannerExternalProps
 >(
   (
@@ -48,14 +57,11 @@ export const TopBannerExternal = forwardRef<
     ref
   ): JSX.Element => {
     const { t } = useTranslation('ds_layout', { i18n: dsI18n });
+    const innerRef = useRef<HTMLHeadElement>(null);
 
     const menuRef = useRef<HTMLDivElement>(null);
     const menuButtonRef = useRef<HTMLButtonElement>(null);
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-    const handleMenuClick = (): void => {
-      setIsMenuOpen(!isMenuOpen);
-    };
-
     useEffect(() => {
       if (!isMenuOpen) {
         return;
@@ -85,6 +91,20 @@ export const TopBannerExternal = forwardRef<
       };
     }, [isMenuOpen]);
 
+    useImperativeHandle(ref, () => ({
+      ...innerRef,
+      openMenu: (): void => {
+        setIsMenuOpen(true);
+      },
+      closeMenu: (): void => {
+        setIsMenuOpen(false);
+      },
+    }));
+
+    const handleMenuClick = (): void => {
+      setIsMenuOpen(!isMenuOpen);
+    };
+
     const showMenu = firstColumn || secondColumn || thirdColumn;
 
     const threeColumnsClassName = thirdColumn ? styles.columnsThree : '';
@@ -92,7 +112,7 @@ export const TopBannerExternal = forwardRef<
 
     return (
       <header
-        ref={ref}
+        ref={innerRef}
         id={id}
         lang={lang}
         data-testid={dataTestId}
@@ -118,7 +138,6 @@ export const TopBannerExternal = forwardRef<
 
               <div className={styles.content}>
                 {/** TODO - FRONT-1161 Lukking når navigerer ut av menyen */}
-                {/** TODO - FRONT-1161 Lukking av menyen skal styres av konsument */}
                 {showMenu && (
                   <>
                     <TopBannerButton

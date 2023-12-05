@@ -1,4 +1,4 @@
-import { MouseEventHandler, ReactNode } from 'react';
+import { MouseEventHandler, ReactNode, RefObject } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -66,3 +66,10 @@ interface TopBannerCommonProps extends BaseProps {
 
 export type TopBannerExternalProps = TopBannerCommonProps &
   TopBannerLogoDiscriminatedProps;
+
+export interface TopBannerExternalHandle extends RefObject<HTMLHeadElement> {
+  /* Åpner menyen*/
+  openMenu: () => void;
+  /* Lukker menyen*/
+  closeMenu: () => void;
+}

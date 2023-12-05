@@ -5,6 +5,7 @@ import {
   Footer,
   TopBannerExternal,
   TopBannerExternalProps,
+  TopBannerExternalHandle,
 } from '@skatteetaten/ds-layout';
 import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
@@ -89,9 +90,9 @@ const defaultArgs: TopBannerExternalProps = {
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ref: (instance: HTMLHeadElement | null): void => {
-      if (instance) {
-        instance.id = 'dummyIdForwardedFromRef';
+    ref: (instance: TopBannerExternalHandle | null): void => {
+      if (instance?.current) {
+        instance.current.id = 'dummyIdForwardedFromRef';
       }
     },
   },
@@ -196,7 +197,7 @@ export const SkipLinkFocusedMobileScreen = {
     const skipLink = canvas.getByRole('link', {
       name: skipLinkText,
     });
-    await skipLink.focus();
+    skipLink.focus();
   },
 } satisfies Story;
 
@@ -215,7 +216,7 @@ export const SkipLinkFocusedBreakpointXS = {
     const skipLink = canvas.getByRole('link', {
       name: skipLinkText,
     });
-    await skipLink.focus();
+    skipLink.focus();
   },
 } satisfies Story;
 
@@ -234,7 +235,7 @@ export const SkipLinkFocusedBreakpointS = {
     const skipLink = canvas.getByRole('link', {
       name: skipLinkText,
     });
-    await skipLink.focus();
+    skipLink.focus();
   },
 } satisfies Story;
 
@@ -253,7 +254,7 @@ export const SkipLinkFocusedBreakpointM = {
     const skipLink = canvas.getByRole('link', {
       name: skipLinkText,
     });
-    await skipLink.focus();
+    skipLink.focus();
   },
 } satisfies Story;
 
@@ -272,7 +273,7 @@ export const SkipLinkFocusedBreakpointL = {
     const skipLink = canvas.getByRole('link', {
       name: skipLinkText,
     });
-    await skipLink.focus();
+    skipLink.focus();
   },
 } satisfies Story;
 
