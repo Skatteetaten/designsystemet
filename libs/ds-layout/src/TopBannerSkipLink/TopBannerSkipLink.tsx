@@ -58,4 +58,4 @@ export const TopBannerSkipLink = forwardRef<
     );
   }
 );
-TopBannerSkipLink.displayName = 'SkipLink';
+TopBannerSkipLink.displayName = 'TopBannerSkipLink';

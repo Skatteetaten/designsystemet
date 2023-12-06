@@ -20,15 +20,6 @@ import {
 } from '../../../../../libs/ds-layout/src/TopBannerButton/TopBannerButton.types';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
-const verifyAttribute =
-  (attribute: string, expectedValue: string) =>
-  async ({ canvasElement }: { canvasElement: HTMLElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const button = canvas.getByRole('button');
-    await expect(button).toBeInTheDocument();
-    await expect(button).toHaveAttribute(attribute, expectedValue);
-  };
-
 const meta = {
   component: TopBannerButton,
   title: 'Tester/TopBanner/TopBannerButton (intern)',
@@ -86,7 +77,11 @@ export const WithRef = {
   parameters: {
     imageSnapshot: { disable: true },
   },
-  play: verifyAttribute('id', 'dummyIdForwardedFromRef'),
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await expect(button).toHaveAttribute('id', 'dummyIdForwardedFromRef');
+  },
 } satisfies Story;
 
 export const WithAttributes = {

@@ -81,4 +81,4 @@ export const TopBannerLogo = forwardRef<LogoRefHandle, TopBannerLogoProps>(
   }
 );
 
-TopBannerLogo.displayName = 'Logo';
+TopBannerLogo.displayName = 'TopBannerLogo';
