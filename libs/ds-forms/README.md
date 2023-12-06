@@ -20,3 +20,4 @@ npm i @skatteetaten/ds-forms
 - TextField
 - ErrorSummary
 - Fieldset
+- Select
