@@ -5,6 +5,7 @@ import { RadioGroup } from '@skatteetaten/ds-forms';
 import {
   TopBannerExternal,
   TopBannerExternalHandle,
+  User,
 } from '@skatteetaten/ds-layout';
 import { Modal } from '@skatteetaten/ds-overlays';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
@@ -19,10 +20,7 @@ import { logoAsArr } from '../../../../../libs/ds-layout/src/TopBannerLogo/TopBa
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { getTopBannerSkipLinkTargetDefault } from '../../../../../libs/ds-layout/src/TopBannerSkipLink/defaults';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import {
-  UserRole,
-  userRoleArr,
-} from '../../../../../libs/ds-layout/src/TopBannerUserButton/TopBannerUserButton.types';
+import { UserRole } from '../../../../../libs/ds-layout/src/TopBannerUserButton/TopBannerUserButton.types';
 import { category } from '../../../.storybook/helpers';
 import customLogo from '../../assets/custom-logo.svg';
 import customMobileLogo from '../../assets/custom-mobile-logo.svg';
@@ -67,12 +65,7 @@ export default {
         defaultValue: { summary: getTopBannerLogoHrefDefault() },
       },
     },
-    username: { table: { category: category.props } },
-    userRole: {
-      table: { category: category.props },
-      options: [...userRoleArr],
-      control: 'inline-radio',
-    },
+    user: { table: { category: category.props } },
     firstColumn: { control: 'text', table: { category: category.props } },
     secondColumn: { control: 'text', table: { category: category.props } },
     thirdColumn: { control: 'text', table: { category: category.props } },
@@ -107,13 +100,11 @@ export const Preview: StoryObj<typeof TopBannerExternal> = {
 export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
   const modalRef = useRef<HTMLDialogElement>(null);
   const topBannerRef = useRef<TopBannerExternalHandle>(null);
-  const [username, setUsername] = useState<string>('');
-  const [userRole, setUserRole] = useState<UserRole | undefined>(undefined);
+  const [user, setUser] = useState<User>();
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
 
   const handleLogOut = (): void => {
-    setUserRole(undefined);
-    setUsername('');
+    setUser(undefined);
     setIsLoggedIn(false);
   };
 
@@ -122,9 +113,16 @@ export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
   };
 
   const handleChangeRole = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    setUserRole(e.target.value as UserRole);
     setIsLoggedIn(true);
-    setUsername('Knotten, Gudleik');
+    const role = e.target.value as UserRole;
+    if (role === 'meg') {
+      setUser({ role });
+    } else {
+      setUser({
+        role,
+        name: 'Knotten, Gudleik',
+      });
+    }
   };
 
   const links = [
@@ -155,8 +153,7 @@ export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
         }
         secondColumn={isLoggedIn ? 'Second column' : ''}
         thirdColumn={isLoggedIn ? 'Third column' : ''}
-        username={username}
-        userRole={userRole}
+        user={user}
         onLogInClick={handleLogIn}
         onLogOutClick={handleLogOut}
         onUserClick={(): void => modalRef.current?.showModal()}
@@ -164,7 +161,7 @@ export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
       <Modal ref={modalRef} title={'Dette er dine roller'}>
         <RadioGroup
           legend={'Velge en rolle'}
-          selectedValue={userRole ?? ''}
+          selectedValue={user?.role ?? ''}
           onChange={handleChangeRole}
         >
           <RadioGroup.Radio value={'meg'}>
@@ -191,13 +188,11 @@ Example.parameters = {
 export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
   const modalRef = useRef<HTMLDialogElement>(null);
   const topBannerRef = useRef<TopBannerExternalHandle>(null);
-  const [username, setUsername] = useState<string>('');
-  const [userRole, setUserRole] = useState<UserRole | undefined>(undefined);
+  const [user, setUser] = useState<User>();
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
 
   const handleLogOut = (): void => {
-    setUserRole(undefined);
-    setUsername('');
+    setUser(undefined);
     setIsLoggedIn(false);
   };
 
@@ -206,9 +201,16 @@ export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
   };
 
   const handleChangeRole = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    setUserRole(e.target.value as UserRole);
     setIsLoggedIn(true);
-    setUsername('Knotten, Gudleik');
+    const role = e.target.value as UserRole;
+    if (role === 'meg') {
+      setUser({ role });
+    } else {
+      setUser({
+        role,
+        name: 'Knotten, Gudleik',
+      });
+    }
   };
 
   const links = [
@@ -239,8 +241,7 @@ export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
         }
         secondColumn={isLoggedIn ? 'Second column' : ''}
         thirdColumn={isLoggedIn ? 'Third column' : ''}
-        username={username}
-        userRole={userRole}
+        user={user}
         onLogInClick={handleLogIn}
         onLogOutClick={handleLogOut}
         onUserClick={(): void => modalRef.current?.showModal()}
@@ -248,7 +249,7 @@ export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
       <Modal ref={modalRef} title={'Dette er dine roller'}>
         <RadioGroup
           legend={'Velge en rolle'}
-          selectedValue={userRole ?? ''}
+          selectedValue={user?.role ?? ''}
           onChange={handleChangeRole}
         >
           <RadioGroup.Radio value={'meg'}>

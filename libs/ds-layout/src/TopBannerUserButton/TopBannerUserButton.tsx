@@ -23,25 +23,25 @@ export const TopBannerUserButton = forwardRef<
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
-      role,
-      children,
       onClick,
+      user,
     },
     ref
   ): JSX.Element => {
     const { t } = useTranslation('ds_layout', { i18n: dsI18n });
 
-    let buttonText = children;
+    const buttonText =
+      user.role === 'meg' ? t('topbannerbutton.Myself') : user.name;
+
     let roleSVGpath = PersonSVGpath;
     let title = '';
-    if (role === 'meg') {
-      buttonText = t('topbannerbutton.Myself');
+    if (user.role === 'meg') {
       roleSVGpath = PersonSVGpath;
       title = t('topbannerbutton.MyselfTitle');
-    } else if (role === 'virksomhet') {
+    } else if (user.role === 'virksomhet') {
       roleSVGpath = BriefcaseSVGpath;
       title = t('topbannerbutton.CompanyTitle');
-    } else if (role === 'andre') {
+    } else if (user.role === 'andre') {
       roleSVGpath = AccountMultipleSVGpath;
       title = t('topbannerbutton.OtherTitle');
     }
@@ -52,7 +52,7 @@ export const TopBannerUserButton = forwardRef<
         id={id}
         className={className}
         classNames={
-          role === 'meg'
+          user.role === 'meg'
             ? undefined
             : {
                 container: styles.usernameButton,

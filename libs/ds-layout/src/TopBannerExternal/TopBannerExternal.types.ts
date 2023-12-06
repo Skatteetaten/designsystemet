@@ -4,7 +4,17 @@ import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 import { LogoAs } from '../TopBannerLogo/TopBannerLogo.types';
 import { TopBannerSkipLinkProps } from '../TopBannerSkipLink/TopBannerSkipLink.types';
-import { UserRole } from '../TopBannerUserButton/TopBannerUserButton.types';
+
+type UserMyself = {
+  role: 'meg';
+};
+
+type UserOthers = {
+  role: 'andre' | 'virksomhet';
+  name: string;
+};
+
+export type User = UserMyself | UserOthers;
 
 type TopBannerLogoDiscriminatedProps =
   | {
@@ -39,10 +49,11 @@ interface TopBannerCommonProps extends BaseProps {
   onLogInClick?: MouseEventHandler<HTMLButtonElement>;
   /** Callback når Logg ut-knapp trykkes på. Om Logg ut-knappen er synlig eller ikke henger sammen med onLogIn, onLogOut og userRole. Knappen er synlig hvis userRole har en rolle og det finnes callback-funksjoner for Logg inn- og Logg ut-knappen. NB! Husk å nullstill userRole i onLogOut slik at Logg inn-knappen blir synlig. */
   onLogOutClick?: MouseEventHandler<HTMLButtonElement>;
-  /** Hvilken rolle innloget bruker har. Hvis userRole er satt til 'meg', settes username til 'Meg selv' automatisk. Rollen som velges dikterer også hvilket ikon user-knappen får. */
-  userRole?: UserRole;
-  /** Teksten på user-knappen. Hva teksten skal være henger sammen med userRole. Når userRole er lik 'meg', settes username til 'Meg selv' automatisk og kan ikke overskrives. Hvis userRole er lik 'andre' eller 'virksomhet', så må username settes til hhv navnet på person det gjelder eller navnet på virksomheten. */
-  username?: string;
+  /**
+   Styrer rolle og navn til innloget bruker. Hvis user.role er satt til 'meg', vises 'Meg selv' automatisk på user-knappen. Rollen som velges dikterer også hvilket ikon user-knappen får.
+   Hvis role ikke er lik 'meg' må user.name settes for å styre teksten på user-knappen.
+   */
+  user?: User;
   /** Callback når user-knapp trykkes på. Username-knappen vises når bruker er innlogget og må alltid ha en callback. Knappen kan brukes til rollebytte. Avhengig av rollen til bruker viser knappen automatisk forskjellig ikoner ut i fra den valgte rollen som userRole har fått. */
   onUserClick?: MouseEventHandler<HTMLButtonElement>;
   /** Meny-innhold første kolonne. Meny-knappen blir synlig når den har innhold. */
