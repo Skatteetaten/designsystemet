@@ -1,0 +1,275 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) Defaults play-test 1`] = `
+<div data-test-block="true">
+  <button class=" TopBannerLangPickerButton_button__pl57- "
+          tabindex="-1"
+  >
+    <span class="TopBannerLangPickerButton_iconWrapper__+hI0y">
+      <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
+           xmlns="http://www.w3.org/2000/svg"
+           viewbox="0 0 1100 800"
+           focusable="false"
+           aria-hidden="true"
+      >
+        <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
+                 style="fill: rgb(255, 255, 255);"
+        >
+        </polygon>
+        <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
+                 style="fill: rgb(255, 255, 255);"
+        >
+        </polygon>
+        <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
+                 style="fill: rgb(255, 255, 255);"
+        >
+        </polygon>
+        <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
+                 style="fill: rgb(255, 255, 255);"
+        >
+        </polygon>
+        <rect width="300"
+              height="300"
+              style="fill: rgb(239, 43, 45);"
+        >
+        </rect>
+        <rect x="500"
+              width="600"
+              height="300"
+              style="fill: rgb(239, 43, 45);"
+        >
+        </rect>
+        <rect y="500"
+              width="300"
+              height="300"
+              style="fill: rgb(239, 43, 45);"
+        >
+        </rect>
+        <rect x="500"
+              y="500"
+              width="600"
+              height="300"
+              style="fill: rgb(239, 43, 45);"
+        >
+        </rect>
+        <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
+                 style="fill: rgb(0, 40, 104);"
+        >
+        </polygon>
+      </svg>
+    </span>
+    <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+      Bokmål
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithAriaCurrent play-test 1`] = `
+<div data-test-block="true">
+  <button class="TopBannerLangPickerButton_buttonCurrent__y8Vxz TopBannerLangPickerButton_button__pl57- "
+          tabindex="-1"
+          aria-current="true"
+  >
+    <span class="TopBannerLangPickerButton_iconWrapper__+hI0y">
+      <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
+           xmlns="http://www.w3.org/2000/svg"
+           viewbox="0 0 1100 800"
+           focusable="false"
+           aria-hidden="true"
+      >
+        <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
+                 style="fill: rgb(255, 255, 255);"
+        >
+        </polygon>
+        <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
+                 style="fill: rgb(255, 255, 255);"
+        >
+        </polygon>
+        <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
+                 style="fill: rgb(255, 255, 255);"
+        >
+        </polygon>
+        <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
+                 style="fill: rgb(255, 255, 255);"
+        >
+        </polygon>
+        <rect width="300"
+              height="300"
+              style="fill: rgb(239, 43, 45);"
+        >
+        </rect>
+        <rect x="500"
+              width="600"
+              height="300"
+              style="fill: rgb(239, 43, 45);"
+        >
+        </rect>
+        <rect y="500"
+              width="300"
+              height="300"
+              style="fill: rgb(239, 43, 45);"
+        >
+        </rect>
+        <rect x="500"
+              y="500"
+              width="600"
+              height="300"
+              style="fill: rgb(239, 43, 45);"
+        >
+        </rect>
+        <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
+                 style="fill: rgb(0, 40, 104);"
+        >
+        </polygon>
+      </svg>
+    </span>
+    <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+      Bokmål
+    </span>
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz "
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <button id="htmlid"
+          class=" TopBannerLangPickerButton_button__pl57- dummyClassname"
+          lang="nb"
+          data-testid="123ID"
+          tabindex="-1"
+  >
+    <span class="TopBannerLangPickerButton_iconWrapper__+hI0y">
+      <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
+           xmlns="http://www.w3.org/2000/svg"
+           viewbox="0 0 1100 800"
+           focusable="false"
+           aria-hidden="true"
+      >
+        <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
+                 style="fill: rgb(255, 255, 255);"
+        >
+        </polygon>
+        <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
+                 style="fill: rgb(255, 255, 255);"
+        >
+        </polygon>
+        <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
+                 style="fill: rgb(255, 255, 255);"
+        >
+        </polygon>
+        <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
+                 style="fill: rgb(255, 255, 255);"
+        >
+        </polygon>
+        <rect width="300"
+              height="300"
+              style="fill: rgb(239, 43, 45);"
+        >
+        </rect>
+        <rect x="500"
+              width="600"
+              height="300"
+              style="fill: rgb(239, 43, 45);"
+        >
+        </rect>
+        <rect y="500"
+              width="300"
+              height="300"
+              style="fill: rgb(239, 43, 45);"
+        >
+        </rect>
+        <rect x="500"
+              y="500"
+              width="600"
+              height="300"
+              style="fill: rgb(239, 43, 45);"
+        >
+        </rect>
+        <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
+                 style="fill: rgb(0, 40, 104);"
+        >
+        </polygon>
+      </svg>
+    </span>
+    <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+      Bokmål
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithRef play-test 1`] = `
+<div data-test-block="true">
+  <button class=" TopBannerLangPickerButton_button__pl57- "
+          tabindex="-1"
+          id="dummyIdForwardedFromRef"
+  >
+    <span class="TopBannerLangPickerButton_iconWrapper__+hI0y">
+      <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
+           xmlns="http://www.w3.org/2000/svg"
+           viewbox="0 0 1100 800"
+           focusable="false"
+           aria-hidden="true"
+      >
+        <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
+                 style="fill: rgb(255, 255, 255);"
+        >
+        </polygon>
+        <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
+                 style="fill: rgb(255, 255, 255);"
+        >
+        </polygon>
+        <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
+                 style="fill: rgb(255, 255, 255);"
+        >
+        </polygon>
+        <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
+                 style="fill: rgb(255, 255, 255);"
+        >
+        </polygon>
+        <rect width="300"
+              height="300"
+              style="fill: rgb(239, 43, 45);"
+        >
+        </rect>
+        <rect x="500"
+              width="600"
+              height="300"
+              style="fill: rgb(239, 43, 45);"
+        >
+        </rect>
+        <rect y="500"
+              width="300"
+              height="300"
+              style="fill: rgb(239, 43, 45);"
+        >
+        </rect>
+        <rect x="500"
+              y="500"
+              width="600"
+              height="300"
+              style="fill: rgb(239, 43, 45);"
+        >
+        </rect>
+        <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
+                 style="fill: rgb(0, 40, 104);"
+        >
+        </polygon>
+      </svg>
+    </span>
+    <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+      Bokmål
+    </span>
+  </button>
+</div>
+`;
