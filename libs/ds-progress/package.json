@@ -1,6 +1,6 @@
 {
   "name": "@skatteetaten/ds-progress",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "groupId": "no.skatteetaten.aurora",
   "publishConfig": {
     "registry": "https://nexus.sits.no/repository/npm-internal/"
