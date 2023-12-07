@@ -1,10 +1,14 @@
 {
   "loginbutton.Title": "Logg inn",
   "logoutbutton.Title": "Logg ut",
-  "topbanner.InkLogoImageText": "Statens innkreving logo",
-  "topbanner.InkLogoLinkText": "Forside Statens innkreving",
-  "topbanner.LsoLogoImageText": "Lønnsstøtte",
-  "topbanner.LsoLogoLinkText": "Forside Lønnsstøtte",
-  "topbanner.SkeLogoImageText": "Skatteetaten logo",
-  "topbanner.SkeLogoLinkText": "Forside Skatteetaten"
+  "menubutton.Meny": "Meny",
+  "topbannerexternal.DrawerAriaLabel": "Temaoversikt",
+  "topbannerexternal.InkLogoImageText": "Statens innkreving logo",
+  "topbannerexternal.InkLogoLinkText": "Forside Statens innkreving",
+  "topbannerexternal.LsoLogoImageText": "Lønnsstøtte",
+  "topbannerexternal.LsoLogoLinkText": "Forside Lønnsstøtte",
+  "topbannerexternal.SkeLogoImageText": "Skatteetaten logo",
+  "topbannerexternal.SkeLogoLinkText": "Forside Skatteetaten",
+  "topbannerexternal.SkipLinkText": "Hopp til hovedinnhold",
+  "userbutton.Title": "Profil"
 }

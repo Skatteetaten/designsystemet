@@ -2,7 +2,6 @@ import {
   getParagraphVariantDefault,
   Heading,
   Paragraph,
-  paragraphVariantArr,
 } from '@skatteetaten/ds-typography';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
 
@@ -15,16 +14,13 @@ export default {
   title: 'Komponenter/Paragraph',
   argTypes: {
     // Props
-    children: { table: { category: category.props } },
+    children: { control: 'text', table: { category: category.props } },
     hasSpacing: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
     },
     variant: {
-      options: [...paragraphVariantArr],
-      control: 'radio',
       table: {
         category: category.props,
         defaultValue: { summary: getParagraphVariantDefault() },

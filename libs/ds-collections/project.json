@@ -6,10 +6,13 @@
   "tags": [],
   "targets": {
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/ds-collections/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "libs/ds-collections/**/*.{ts,tsx,js,jsx}",
+          "libs/ds-collections/package.json"
+        ]
       }
     },
     "build": {
@@ -35,16 +38,14 @@
             "output": "."
           }
         ],
-        "babelUpwardRootMode": true,
-        "updateBuildableProjectDepsInPackageJson": true
+        "babelUpwardRootMode": true
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/ds-collections/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/ds-collections/jest.config.ts"
       }
     },
     "stylelint": {

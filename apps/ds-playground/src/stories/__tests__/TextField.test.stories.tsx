@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { FocusEvent, ChangeEvent, useState } from 'react';
 
 import { formArrSize } from '@skatteetaten/ds-core-utils';
 import {
@@ -48,6 +48,10 @@ const meta = {
     classNames: {
       table: { disable: true },
     },
+    defaultValue: {
+      control: 'text',
+      table: { disable: true },
+    },
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
     hasError: { table: { disable: true } },
@@ -64,7 +68,6 @@ const meta = {
     titleHelpSvg: { table: { disable: true } },
     // HTML
     autoComplete: { table: { disable: true } },
-    defaultValue: { table: { disable: true } },
     disabled: { table: { disable: true } },
     inputMode: { table: { disable: true } },
     name: { table: { disable: true } },
@@ -95,7 +98,6 @@ const defaultArgs = {
 
 export const WithRef = {
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: TextboxRefHandle | null): void => {
@@ -104,21 +106,17 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: verifyAttribute('name', 'dummyNameForwardedFromRef'),
 } satisfies Story;
 
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
-
   args: {
     ...defaultArgs,
     id: 'htmlid',
@@ -126,14 +124,12 @@ export const WithAttributes = {
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -147,63 +143,53 @@ export const WithAttributes = {
 
 export const WithCustomClassNames = {
   name: 'With Custom ClassNames (FA3)',
-
   args: {
     ...defaultArgs,
     classNames: {
       container: ' dummyClassname',
       label: 'dummyClassname',
-      textbox: 'dummyClassname',
+      textbox: 'dummyClassnameFormContainer',
       errorMessage: 'dummyClassname',
     },
     hasError: true,
     errorMessage: errorMessageText,
   },
-
   argTypes: {
     classNames: {
       table: { disable: false },
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     // eslint-disable-next-line testing-library/no-node-access
     const container = canvasElement.querySelector(`${wrapper} > div`);
-    await expect(container).toHaveClass('dummyClassname');
-
+    const label = canvas.getByText(defaultLabelText);
     const textbox = canvas.getByRole('textbox');
-    await expect(textbox).toHaveClass('dummyClassname');
-
-    const label = canvas.getByLabelText(defaultLabelText);
-    await expect(label).toHaveClass('dummyClassname');
-
     // eslint-disable-next-line testing-library/no-node-access
     const errorMessageContainer = canvasElement.querySelector(
       '[id^=textFieldErrorId]>div'
     );
+    await expect(container).toHaveClass('dummyClassname');
+    await expect(label).toHaveClass('dummyClassname');
+    await expect(textbox).toHaveClass('dummyClassnameFormContainer');
     await expect(errorMessageContainer).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults Variant Medium (A1 delvis, A2 delvis, B2, FS-A2)',
-
+  name: 'Defaults Variant Medium (A1, A2, B2, FS-A2)',
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     label: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} input`,
       focus: `${wrapper} input`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox', { name: defaultLabelText });
@@ -223,37 +209,31 @@ export const Defaults = {
 } satisfies Story;
 
 export const WithVariantLarge = {
-  name: 'With Variant Large (A1 delvis)',
-
+  name: 'With Variant Large (A1)',
   args: {
     ...defaultArgs,
     variant: 'large',
   },
-
   argTypes: {
     variant: { table: { disable: false } },
   },
 } satisfies Story;
 
 export const WithAs = {
-  name: 'With As (A1 delvis, A2 delvis)',
-
+  name: 'With As (A1, A2)',
   args: {
     ...defaultArgs,
     as: 'textarea',
   },
-
   argTypes: {
     as: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} textarea`,
       focus: `${wrapper} textarea`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -262,18 +242,15 @@ export const WithAs = {
 } satisfies Story;
 
 export const WithDisabled = {
-  name: 'With Disabled (B1 delvis, B8 delvis)',
-
+  name: 'With Disabled (B1, B8)',
   args: {
     ...defaultArgs,
     disabled: true,
     value: valueText,
   },
-
   argTypes: {
     disabled: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -283,45 +260,36 @@ export const WithDisabled = {
 
 export const WithValue = {
   name: 'With Value',
-
   args: {
     ...defaultArgs,
     value: valueText,
   },
-
   argTypes: {
     value: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: verifyAttribute('value', valueText),
 } satisfies Story;
 
 export const WithDefaultValue = {
   name: 'With DefaultValue',
-
   args: {
     ...defaultArgs,
     defaultValue: valueText,
   },
-
   argTypes: {
     defaultValue: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: verifyAttribute('value', valueText),
 } satisfies Story;
 
 export const WithAutoCompleteInputModeNameAndPlaceholder = {
-  name: 'With AutoComplete InputMode Name And Placeholder (A3 delvis, A6 delvis, B1 delvis)',
-
+  name: 'With AutoComplete InputMode Name And Placeholder (A3, A6, B1)',
   args: {
     ...defaultArgs,
     autoComplete: 'given-name',
@@ -329,14 +297,12 @@ export const WithAutoCompleteInputModeNameAndPlaceholder = {
     name: 'test_name',
     placeholder: valueText,
   },
-
   argTypes: {
     autoComplete: { table: { disable: false } },
     inputMode: { table: { disable: false } },
     name: { table: { disable: false } },
     placeholder: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -348,18 +314,15 @@ export const WithAutoCompleteInputModeNameAndPlaceholder = {
 } satisfies Story;
 
 export const WithReadOnly = {
-  name: 'With ReadOnly (B1 delvis, B6 delvis)',
-
+  name: 'With ReadOnly (B1, B6)',
   args: {
     ...defaultArgs,
     value: valueText,
     readOnly: true,
   },
-
   argTypes: {
     readOnly: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -368,21 +331,17 @@ export const WithReadOnly = {
 } satisfies Story;
 
 export const WithRequired = {
-  name: 'With Required (B4 delvis)',
-
+  name: 'With Required (B4)',
   args: {
     ...defaultArgs,
     required: true,
   },
-
   argTypes: {
     required: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -391,14 +350,12 @@ export const WithRequired = {
 } satisfies Story;
 
 export const WithRequiredAndMark = {
-  name: 'With Required And Mark (B4 delvis, FS-A4 delvis)',
-
+  name: 'With Required And Mark (B4, FS-A4 delvis)',
   args: {
     ...defaultArgs,
     required: true,
     showRequiredMark: true,
   },
-
   argTypes: {
     required: { table: { disable: false } },
     showRequiredMark: { table: { disable: false } },
@@ -407,22 +364,18 @@ export const WithRequiredAndMark = {
 
 export const WithMinAndMaxLength = {
   name: 'With MinLength And MaxLength (A5, B1)',
-
   args: {
     ...defaultArgs,
     maxLength: 50,
     minLength: 10,
   },
-
   argTypes: {
     maxLength: { table: { disable: false } },
     minLength: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -433,20 +386,16 @@ export const WithMinAndMaxLength = {
 
 export const WithPattern = {
   name: 'With Pattern As Input (A5, B1)',
-
   args: {
     ...defaultArgs,
     pattern: '[a-z]',
   },
-
   argTypes: {
     pattern: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -456,18 +405,15 @@ export const WithPattern = {
 } satisfies Story;
 
 export const WithRows = {
-  name: 'With Rows As Textarea (A5 delvis)',
-
+  name: 'With Rows As Textarea (A5)',
   args: {
     ...defaultArgs,
     as: 'textarea',
     rows: 4,
   },
-
   argTypes: {
     rows: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -477,18 +423,14 @@ export const WithRows = {
 } satisfies Story;
 
 export const WithError = {
-  name: 'With ErrorMessage (B5 delvis)',
-
+  name: 'With ErrorMessage (B5)',
   args: {
     ...defaultArgs,
     errorMessage: errorMessageText,
   },
-
   argTypes: {
     errorMessage: { table: { disable: false } },
-    hasError: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -504,32 +446,28 @@ export const WithError = {
 } satisfies Story;
 
 export const WithErrorMessageAndHasError = {
-  name: 'With ErrorMessage And HasError (B5 delvis)',
-
+  name: 'With ErrorMessage And HasError (B5)',
   args: {
     ...defaultArgs,
     errorMessage: errorMessageText,
     hasError: true,
   },
-
   argTypes: {
     errorMessage: { table: { disable: false } },
     hasError: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} input`,
       focus: `${wrapper} input`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const textbox = canvas.getByRole('textbox');
-    const errorMessage = canvas.getByText(errorMessageText);
+    const textbox = canvas.getByRole('textbox', {
+      description: errorMessageText,
+    });
     const errorMessageContainer = canvas.getAllByRole('generic')[3];
-    await expect(errorMessage).toBeInTheDocument();
     await expect(errorMessageContainer).toBeInTheDocument();
     await expect(textbox).toHaveAttribute('aria-invalid', 'true');
     await expect(textbox).toHaveAttribute('aria-describedby');
@@ -538,16 +476,13 @@ export const WithErrorMessageAndHasError = {
 
 export const WithDescription = {
   name: 'With Description (FS-A3)',
-
   args: {
     ...defaultArgs,
     description: 'En liten beskrivelse tekst',
   },
-
   argTypes: {
     description: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const labelWithDescription = canvas.getByText('En liten beskrivelse tekst');
@@ -557,16 +492,13 @@ export const WithDescription = {
 
 export const WithHideLabel = {
   name: 'With HideLabel (B2)',
-
   args: {
     ...defaultArgs,
     hideLabel: true,
   },
-
   argTypes: {
     hideLabel: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox', { name: defaultLabelText });
@@ -576,16 +508,13 @@ export const WithHideLabel = {
 
 export const WithThousandSeparator = {
   name: 'With ThousandSeparator As Input (A8 delvis)',
-
   args: {
     ...defaultArgs,
     thousandSeparator: true,
   },
-
   argTypes: {
     thousandSeparator: { table: { disable: false } },
   },
-
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -648,15 +577,15 @@ const EventHandlersTemplate: StoryFn<typeof TextField> = (args) => {
     <TextField
       {...args}
       label={labelText}
-      onFocus={(event: React.FocusEvent<HTMLInputElement>): void => {
+      onFocus={(event: FocusEvent<HTMLInputElement>): void => {
         setLabelText('TextField har fått fokus');
         args.onFocus && args.onFocus(event);
       }}
-      onBlur={(event: React.FocusEvent<HTMLInputElement>): void => {
+      onBlur={(event: FocusEvent<HTMLInputElement>): void => {
         setLabelText('TextField har blitt blurret');
         args.onBlur && args.onBlur(event);
       }}
-      onChange={(event: React.ChangeEvent<HTMLInputElement>): void => {
+      onChange={(event: ChangeEvent<HTMLInputElement>): void => {
         setLabelText('TextField har blitt klikket på');
         args.onChange && args.onChange(event);
       }}
@@ -666,16 +595,13 @@ const EventHandlersTemplate: StoryFn<typeof TextField> = (args) => {
 
 export const WithEventHandlers = {
   render: EventHandlersTemplate,
-  name: 'With EventHandlers (A4 delvis)',
-
+  name: 'With EventHandlers (A4)',
   args: {
     ...defaultArgs,
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');

@@ -1,4 +1,6 @@
 /* eslint-disable sonarjs/no-duplicate-string */
+import { JSX } from 'react';
+
 import { MegaButton, Link } from '@skatteetaten/ds-buttons';
 import {
   Panel,
@@ -8,10 +10,6 @@ import {
   getPanelSubtitleAsDefault,
   getPanelTitleAsDefault,
   getPanelVariantDefault,
-  panelColorArr,
-  panelPaddingArr,
-  panelSpacingArr,
-  panelVariantArr,
 } from '@skatteetaten/ds-content';
 import { headingAsArr, subheadingAsArr } from '@skatteetaten/ds-core-utils';
 import { CheckIcon } from '@skatteetaten/ds-icons';
@@ -19,8 +17,9 @@ import { Paragraph } from '@skatteetaten/ds-typography';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
+import farmerIllustration from '../../assets/farmer-illustration.svg';
+import waitIllustration from '../../assets/wait-alert-illustration.png';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
-import illustrationSource from '../__tests__/testUtils/test_bonde.svg';
 import { getVersion } from '../utils/version.utils';
 
 export default {
@@ -33,7 +32,6 @@ export default {
       table: { category: category.props },
     },
     color: {
-      options: [...panelColorArr],
       control: 'inline-radio',
       table: {
         category: category.props,
@@ -45,15 +43,11 @@ export default {
     hideTitle: { table: { category: category.props } },
     imageSource: {
       control: 'select',
-      options: [
-        '',
-        'test_bonde.7eebe78d220ecf48b97e4811ac2c5210.svg',
-        'd52134bda41b5aa041ef.png',
-      ],
+      options: ['', farmerIllustration, waitIllustration],
       table: { category: category.props },
     },
+    imageSourceAltText: { table: { category: category.props } },
     padding: {
-      options: [...panelPaddingArr],
       control: 'inline-radio',
       table: {
         category: category.props,
@@ -65,7 +59,6 @@ export default {
       table: { category: category.props },
     },
     spacing: {
-      options: [...panelSpacingArr],
       control: 'inline-radio',
       table: {
         category: category.props,
@@ -73,7 +66,6 @@ export default {
       },
     },
     subtitle: {
-      control: 'text',
       table: { category: category.props },
     },
     subtitleAs: {
@@ -82,10 +74,10 @@ export default {
       table: {
         category: category.props,
         defaultValue: { summary: getPanelSubtitleAsDefault() },
+        type: { summary: subheadingAsArr },
       },
     },
     title: {
-      control: 'text',
       table: { category: category.props },
     },
     titleAs: {
@@ -94,10 +86,10 @@ export default {
       table: {
         category: category.props,
         defaultValue: { summary: getPanelTitleAsDefault() },
+        type: { summary: headingAsArr },
       },
     },
     variant: {
-      options: [...panelVariantArr],
       control: 'inline-radio',
       table: {
         category: category.props,
@@ -120,7 +112,7 @@ export const Example: StoryFn<typeof Panel> = (_args) => (
   <>
     <Panel
       title={'Når kommer skattepengene'}
-      imageSource={illustrationSource}
+      imageSource={farmerIllustration}
       padding={'mega'}
       spacing={'xxl'}
     >

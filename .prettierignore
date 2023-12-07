@@ -11,3 +11,5 @@ apps/ds-playground/coverage/
 apps/ds-playground/.nyc_output
 
 **/*stats.html
+
+/.nx/cache

@@ -1,10 +1,14 @@
-import { useState } from 'react';
+import { FocusEvent, MouseEvent, useState } from 'react';
 
 import {
   MegaButton,
   MegaButtonComponentCommonProps,
   MegaButtonDiscriminatedProp,
 } from '@skatteetaten/ds-buttons';
+import {
+  dsI18n,
+  getCommonButtonTypeDefault,
+} from '@skatteetaten/ds-core-utils';
 import { expect } from '@storybook/jest';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { userEvent, waitFor, within } from '@storybook/testing-library';
@@ -61,7 +65,6 @@ const defaultArgs: MegaButtonComponentCommonProps = {
 
 export const WithRef = {
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: HTMLButtonElement | null): void => {
@@ -70,21 +73,17 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: verifyAttribute('id', 'dummyIdForwardedFromRef'),
 } satisfies Story;
 
 export const WithAttributes = {
   name: 'With Attributes(FA2-5)',
-
   args: {
     ...defaultArgs,
     id: 'htmlId',
@@ -92,14 +91,12 @@ export const WithAttributes = {
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const megaButton = canvas.getByRole('button');
@@ -112,15 +109,12 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (A1, B2)',
-
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     children: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       focus: `${wrapper} > button`,
@@ -128,24 +122,24 @@ export const Defaults = {
       click: `${wrapper} > button`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const megaButton = canvas.getByText(defaultMegaButtonText);
     await expect(megaButton).toBeInTheDocument();
-    await expect(megaButton).toHaveAttribute('type', 'button');
+    await expect(megaButton).toHaveAttribute(
+      'type',
+      getCommonButtonTypeDefault()
+    );
   },
 } satisfies Story;
 
 export const WithLongText = {
   name: 'With Long Text (A2)',
-
   args: {
     ...defaultArgs,
     children:
       'Denne knappen har en veldig lang tekst. Så lang at den må brekke.',
   },
-
   argTypes: {
     children: { table: { disable: false } },
   },
@@ -153,12 +147,10 @@ export const WithLongText = {
 
 export const WithLongTextAndBreaking = {
   name: 'With Long Text And Breaking (A1, A2)',
-
   args: {
     ...defaultArgs,
     children: 'Denneknappenharenveldiglangtekst.Sålangatdenmåbrekke.',
   },
-
   argTypes: {
     children: { table: { disable: false } },
   },
@@ -166,23 +158,23 @@ export const WithLongTextAndBreaking = {
 
 export const WithExternalIcon = {
   name: 'With External Icon (A4, B5, B7)',
-
   args: {
     ...defaultArgs,
     isExternal: true,
     href: '#',
   },
-
   argTypes: {
     isExternal: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const megaButton = canvas.getByRole('button');
     // eslint-disable-next-line testing-library/no-node-access
     const svg = megaButton.querySelector('svg');
-    await expect(svg).toHaveAttribute('aria-label', 'Til et annet nettsted');
+    await expect(svg).toHaveAttribute(
+      'aria-label',
+      dsI18n.t('ds_buttons:shared.ExternalIcon')
+    );
     await expect(svg).toHaveAttribute('viewBox', '0 0 24 24');
     await expect(megaButton).toBeInTheDocument();
   },
@@ -190,7 +182,6 @@ export const WithExternalIcon = {
 
 export const WithLongTextAndExternalIcon = {
   name: 'With Long Text and External Icon (A2)',
-
   args: {
     ...defaultArgs,
     isExternal: true,
@@ -198,7 +189,6 @@ export const WithLongTextAndExternalIcon = {
     children:
       'Denne knappen har en veldig lang tekst. Icon skal da plasseres løpende etter tekster på siste linje',
   },
-
   argTypes: {
     children: { table: { disable: false } },
     isExternal: { table: { disable: false } },
@@ -212,16 +202,13 @@ const discriminatedProps: MegaButtonDiscriminatedProp = {
 
 export const WithDisabled = {
   name: 'With Disabled (B6)',
-
   args: {
     ...defaultArgs,
     ...discriminatedProps,
   },
-
   argTypes: {
     disabled: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     expect(canvas.getByText(defaultMegaButtonText)).toBeDisabled();
@@ -230,73 +217,58 @@ export const WithDisabled = {
 
 export const WithType = {
   name: 'With Type (B2)',
-
   args: {
     ...defaultArgs,
     type: 'submit',
   },
-
   argTypes: {
     type: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: verifyAttribute('type', 'submit'),
 } satisfies Story;
 
 export const WithAriaDescribedby = {
   name: 'With AriaDescribedby (B1)',
-
   args: {
     ...defaultArgs,
     ariaDescribedby: 'testid1234',
   },
-
   argTypes: {
     ariaDescribedby: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: verifyAttribute('aria-describedby', 'testid1234'),
 } satisfies Story;
 
 export const WithAccesskey = {
   name: 'With Accesskey (B4)',
-
   args: {
     children: defaultMegaButtonText,
     accessKey: 'j',
   },
-
   argTypes: {
     accessKey: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: verifyAttribute('accessKey', 'j'),
 } satisfies Story;
 
 export const AsLink = {
   name: 'As Link (B3)',
-
   args: {
     ...defaultArgs,
     href: 'https://www.skatteetaten.no',
   },
-
   argTypes: {
     href: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       focus: `${wrapper} > a`,
@@ -307,16 +279,13 @@ export const AsLink = {
 
 export const AsLinkEmptyString = {
   name: 'As Link with empty href (B3)',
-
   args: {
     ...defaultArgs,
     href: '',
   },
-
   argTypes: {
     href: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
@@ -324,25 +293,21 @@ export const AsLinkEmptyString = {
 
 export const AsLinkExternal = {
   name: 'As Link External (B3, A4)',
-
   args: {
     ...defaultArgs,
     href: 'https://www.skatteetaten.no',
     isExternal: true,
   },
-
   argTypes: {
     href: { table: { disable: false } },
     isExternal: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       focus: `${wrapper} > a`,
       hover: `${wrapper} > a`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const megaButton = canvas.getByText('Klikk her');
@@ -358,19 +323,19 @@ const EventHandlersTemplate: StoryFn<typeof MegaButton> = (args) => {
     <MegaButton
       {...args}
       onFocus={(
-        event: React.FocusEvent<HTMLButtonElement | HTMLAnchorElement>
+        event: FocusEvent<HTMLButtonElement | HTMLAnchorElement>
       ): void => {
         setButtonText('Knapp har fått fokus');
         args.onFocus && args.onFocus(event);
       }}
       onBlur={(
-        event: React.FocusEvent<HTMLButtonElement | HTMLAnchorElement>
+        event: FocusEvent<HTMLButtonElement | HTMLAnchorElement>
       ): void => {
         setButtonText('Knapp har blitt blurret');
         args.onBlur && args.onBlur(event);
       }}
       onClick={(
-        event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
+        event: MouseEvent<HTMLButtonElement | HTMLAnchorElement>
       ): void => {
         setButtonText('Knapp har blitt klikket på');
         args.onClick && args.onClick(event);
@@ -384,15 +349,12 @@ const EventHandlersTemplate: StoryFn<typeof MegaButton> = (args) => {
 export const WithEventHandlers = {
   render: EventHandlersTemplate,
   name: 'With EventHandlers (A2 delvis)',
-
   args: {
     ...defaultArgs,
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const megaButton = canvas.getByText('bruk knapp for å teste events');

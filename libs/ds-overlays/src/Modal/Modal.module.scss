@@ -1,0 +1,85 @@
+@import 'libs/ds-core-utils/src/styles.scss';
+
+.modal {
+  position: fixed;
+  min-width: calc(300px - 2 * var(--spacing-m));
+  max-width: calc(var(--semantic-responsive-article) - 2 * var(--spacing-m));
+  max-height: calc(100vh - 2 * var(--spacing-m));
+  box-sizing: border-box;
+  padding: 0;
+  border: 0.25rem solid var(--theme-primary);
+  background-color: var(--palette-graphite-0);
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 16%), 0 2px 4px -4px rgba(0, 0, 0, 16%);
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--semantic-line-height-article);
+  overflow-y: auto;
+
+  &::backdrop {
+    background: rgba(255, 255, 255, 80%);
+  }
+
+  &Container {
+    outline: none;
+  }
+
+  &Logo {
+    margin-bottom: var(--spacing-m);
+  }
+
+  &Heading {
+    padding-right: var(--spacing-xl);
+
+    &NoPadding {
+      padding-right: 0;
+    }
+  }
+
+  &Illustration {
+    width: 100%;
+    margin-bottom: var(--spacing-m);
+  }
+
+  &NoBorder {
+    border: none;
+  }
+
+  &PaddingNONE {
+    padding: 0;
+  }
+
+  &PaddingS {
+    padding: calc(var(--spacing-s) - 0.25rem);
+  }
+
+  &PaddingM {
+    padding: calc(var(--spacing-m) - 0.25rem);
+  }
+
+  &PaddingL {
+    padding: calc(var(--spacing-l) - 0.25rem);
+  }
+
+  &PaddingMEGA {
+    padding: calc(var(--spacing-mega) - 0.25rem);
+  }
+
+  &NoPaddingTop {
+    padding-top: 0;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: var(--spacing-s);
+
+  &:not(:active) > svg {
+    fill: var(--palette-graphite-100);
+  }
+}
+
+.srOnly {
+  @include sr-only;
+}

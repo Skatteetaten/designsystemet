@@ -8,7 +8,7 @@ import {
 } from '@skatteetaten/ds-core-utils';
 
 export interface OpenCloseProps extends BaseProps {
-  /** Posisjonen til ikonet: 'left', 'right'. */
+  /** Posisjonen til ikonet */
   iconPosition?: Position;
   /** Tekst på knappen */
   title: string;

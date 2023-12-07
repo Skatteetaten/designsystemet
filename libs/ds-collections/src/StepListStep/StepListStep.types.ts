@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactElement, ReactNode } from 'react';
 
 import { PanelProps } from '@skatteetaten/ds-content';
 import { BaseProps } from '@skatteetaten/ds-core-utils';
@@ -14,14 +14,14 @@ export const stepVariantArr = [
 export type StepVariant = (typeof stepVariantArr)[number];
 
 export interface StepListStepProps extends BaseProps {
-  /** Overstyrer standard tekst på edit-knapp*/
+  /** Overskriver default tekst på edit-knapp*/
   editButtonText?: string;
-  /** Overstyrer standard tekst på next-knapp*/
+  /** Overskriver default tekst på next-knapp*/
   nextButtonText?: string;
   /** Angir nummer på steget. */
   stepNumber: number;
-  /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
-  svgPath?: React.ReactElement;
+  /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
+  svgPath?: ReactElement;
   /** Dersom steget har et ikon som vises i stedet for stegnummer må det gjøres en vundering på om ikonet er meningsbærende og trenger en alternativ tekst.*/
   svgTitle?: string;
   /** Tittel på steget.*/

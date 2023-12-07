@@ -27,13 +27,11 @@ interface CheckboxCommonProps extends CheckboxPropsHTMLAttributes, BaseProps {
 
 type CheckboxDiscriminatedRequiredProps =
   | {
-      /** Om checkboksen er obligatorisk */
       required: boolean;
       /** Om obligatorisk checkboks skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
       showRequiredMark?: boolean;
     }
   | {
-      /** Om checkboksen er obligatorisk */
       required?: never;
       /** Om obligatorisk checkboks skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
       showRequiredMark?: never;

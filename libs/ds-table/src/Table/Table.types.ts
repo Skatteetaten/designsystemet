@@ -1,7 +1,9 @@
 import {
   Dispatch,
+  ForwardRefExoticComponent,
   PropsWithChildren,
   ReactNode,
+  RefAttributes,
   RefObject,
   SetStateAction,
 } from 'react';
@@ -15,14 +17,14 @@ import { TableRowProps } from '../TableRow/TableRow.types';
 import { TableSumProps } from '../TableSum/TableSum.types';
 
 export const tableVariantArr = ['standard', 'compact'] as const;
-export type TableVariant = typeof tableVariantArr[number];
+export type TableVariant = (typeof tableVariantArr)[number];
 
 export const tableCellAsArr = ['td', 'th'] as const;
-export type TableCellAs = typeof tableCellAsArr[number];
+export type TableCellAs = (typeof tableCellAsArr)[number];
 
 //TODO Skal bli en del av felles Position type?
 export const textAlignArr = ['left', 'right', 'center'] as const;
-export type TextAlignment = typeof textAlignArr[number];
+export type TextAlignment = (typeof textAlignArr)[number];
 
 export type sortDirection = 'none' | 'ascending' | 'descending';
 export interface SortState {
@@ -63,28 +65,28 @@ export interface TableProps extends BaseProps {
 }
 
 export interface TableComponent
-  extends React.ForwardRefExoticComponent<
-    TableProps & React.RefAttributes<HTMLTableElement>
+  extends ForwardRefExoticComponent<
+    TableProps & RefAttributes<HTMLTableElement>
   > {
-  Header: React.ForwardRefExoticComponent<
-    BaseProps & PropsWithChildren & React.RefAttributes<HTMLTableSectionElement>
+  Header: ForwardRefExoticComponent<
+    BaseProps & PropsWithChildren & RefAttributes<HTMLTableSectionElement>
   >;
-  HeaderCell: React.ForwardRefExoticComponent<
-    TableHeaderCellProps & React.RefAttributes<HTMLTableCellElement>
+  HeaderCell: ForwardRefExoticComponent<
+    TableHeaderCellProps & RefAttributes<HTMLTableCellElement>
   >;
-  Row: React.ForwardRefExoticComponent<
-    TableRowProps & React.RefAttributes<HTMLTableRowElement>
+  Row: ForwardRefExoticComponent<
+    TableRowProps & RefAttributes<HTMLTableRowElement>
   >;
-  EditableRow: React.ForwardRefExoticComponent<
-    TableEditableRowProps & React.RefAttributes<HTMLTableRowElement>
+  EditableRow: ForwardRefExoticComponent<
+    TableEditableRowProps & RefAttributes<HTMLTableRowElement>
   >;
-  DataCell: React.ForwardRefExoticComponent<
-    TableDataCellProps & React.RefAttributes<HTMLTableCellElement>
+  DataCell: ForwardRefExoticComponent<
+    TableDataCellProps & RefAttributes<HTMLTableCellElement>
   >;
-  Body: React.ForwardRefExoticComponent<
-    BaseProps & PropsWithChildren & React.RefAttributes<HTMLTableSectionElement>
+  Body: ForwardRefExoticComponent<
+    BaseProps & PropsWithChildren & RefAttributes<HTMLTableSectionElement>
   >;
-  Sum: React.ForwardRefExoticComponent<
-    TableSumProps & React.RefAttributes<HTMLTableRowElement>
+  Sum: ForwardRefExoticComponent<
+    TableSumProps & RefAttributes<HTMLTableRowElement>
   >;
 }

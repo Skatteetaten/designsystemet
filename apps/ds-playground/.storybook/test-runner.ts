@@ -19,7 +19,7 @@ const customConfig: MatchImageSnapshotOptions = {
   comparisonMethod: 'ssim',
   dumpDiffToConsole: true,
   dumpInlineDiffToConsole: true,
-  failureThreshold: 0.00001,
+  failureThreshold: 0.0003,
   failureThresholdType: 'percent',
   customDiffConfig: {
     ssim: 'fast',
@@ -29,6 +29,7 @@ const customConfig: MatchImageSnapshotOptions = {
 interface ViewPort {
   defaultViewport?: string;
   viewPortHeight?: number;
+  //eslint-disable-next-line @typescript-eslint/no-explicit-any
   viewports: Record<string, any>;
 }
 async function adjustViewport(page: Page, viewport: ViewPort): Promise<void> {

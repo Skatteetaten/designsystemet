@@ -1,8 +1,12 @@
-import { Children, forwardRef, isValidElement } from 'react';
+import { Children, forwardRef, isValidElement, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  getCommonClassNameDefault,
+  Separator,
+} from '@skatteetaten/ds-core-utils';
 import { Heading } from '@skatteetaten/ds-typography';
 
 import { FooterComponent, FooterProps } from './Footer.types';
@@ -57,10 +61,7 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(
         data-testid={dataTestId}
         className={className}
       >
-        <div className={styles.diagonals}>
-          <div className={styles.diagonalsLeft}></div>
-          <div className={styles.diagonalsRight}></div>
-        </div>
+        <Separator className={styles.separator} />
         <div className={styles.footer}>
           <div
             className={`${styles.columns} ${threeColumnsClassName} ${twoColumnsClassName}`}

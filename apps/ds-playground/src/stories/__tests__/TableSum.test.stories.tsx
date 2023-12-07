@@ -33,7 +33,6 @@ const Template: StoryFn<typeof Table.Sum> = (args) => (
 export const WithRef = {
   render: Template,
   name: 'With Ref (FA1)',
-
   args: {
     ref: (instance: HTMLTableRowElement | null): void => {
       if (instance) {
@@ -41,15 +40,12 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const table = canvas.getByRole('row');
@@ -61,25 +57,21 @@ export const WithRef = {
 export const WithAttributes = {
   render: Template,
   name: 'With Attributes (FA2-5)',
-
   args: {
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const sum = canvas.getByTestId('123ID');

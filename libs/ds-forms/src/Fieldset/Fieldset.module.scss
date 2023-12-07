@@ -4,6 +4,7 @@
   padding: 0;
   border: none;
   margin: 0;
+  overflow-wrap: anywhere;
 
   &_hasSpacing {
     margin-bottom: var(--spacing-m);
@@ -44,4 +45,7 @@
 
 .srOnly {
   @include sr-only;
+
+  width: 200px;
+  white-space: normal;
 }

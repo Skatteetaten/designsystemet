@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Spinner Defaults play-test 1`] = `
+<div data-test-block="true">
+  <div aria-live="polite"
+       aria-atomic="true"
+       class="Spinner_spinner__RJ9Al Spinner_spinner_black__-biVj Spinner_spinner_flexColumn__3SCpy Spinner_spinner_medium__kWbQU "
+  >
+    <div class="Spinner_spinnerAnimation__nAt8p ">
+    </div>
+    <span class="Spinner_spinnerTitle__4A7b4  Spinner_spinnerTitle_centerText__ud193">
+      Laster inn
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tester/Spinner WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <div aria-live="polite"
+       aria-atomic="true"
+       id="htmlid"
+       class="Spinner_spinner__RJ9Al Spinner_spinner_black__-biVj Spinner_spinner_flexColumn__3SCpy Spinner_spinner_medium__kWbQU dummyClassname"
+       lang="nb"
+       data-testid="123ID"
+  >
+    <div class="Spinner_spinnerAnimation__nAt8p ">
+    </div>
+    <span class="Spinner_spinnerTitle__4A7b4  Spinner_spinnerTitle_centerText__ud193">
+      Laster inn
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tester/Spinner WithColorsDarkBackground smoke-test 1`] = `
+<div data-test-block="true">
+  <div aria-live="polite"
+       aria-atomic="true"
+       class="Spinner_spinner__RJ9Al Spinner_spinner_white__YLIF- Spinner_spinner_flexColumn__3SCpy Spinner_spinner_medium__kWbQU "
+  >
+    <div class="Spinner_spinnerAnimation__nAt8p ">
+    </div>
+    <span class="Spinner_spinnerTitle__4A7b4  Spinner_spinnerTitle_centerText__ud193">
+      Laster inn
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tester/Spinner WithColorsLightBackground smoke-test 1`] = `
+<div data-test-block="true">
+  <div aria-live="polite"
+       aria-atomic="true"
+       class="Spinner_spinner__RJ9Al Spinner_spinner_black__-biVj Spinner_spinner_flexColumn__3SCpy Spinner_spinner_medium__kWbQU bottomSpacingXL"
+  >
+    <div class="Spinner_spinnerAnimation__nAt8p ">
+    </div>
+    <span class="Spinner_spinnerTitle__4A7b4  Spinner_spinnerTitle_centerText__ud193">
+      Henter innhold
+    </span>
+  </div>
+  <div aria-live="polite"
+       aria-atomic="true"
+       class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_medium__kWbQU "
+  >
+    <div class="Spinner_spinnerAnimation__nAt8p ">
+    </div>
+    <span class="Spinner_spinnerTitle__4A7b4  Spinner_spinnerTitle_centerText__ud193">
+      Henter innhold
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tester/Spinner WithHideText play-test 1`] = `
+<div data-test-block="true">
+  <div aria-live="polite"
+       aria-atomic="true"
+       class="Spinner_spinner__RJ9Al Spinner_spinner_black__-biVj Spinner_spinner_flexColumn__3SCpy Spinner_spinner_medium__kWbQU "
+  >
+    <div class="Spinner_spinnerAnimation__nAt8p ">
+    </div>
+    <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+      laster data
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tester/Spinner WithRef play-test 1`] = `
+<div data-test-block="true">
+  <div aria-live="polite"
+       aria-atomic="true"
+       class="Spinner_spinner__RJ9Al Spinner_spinner_black__-biVj Spinner_spinner_flexColumn__3SCpy Spinner_spinner_medium__kWbQU "
+       id="dummyIdForwardedFromRef"
+  >
+    <div class="Spinner_spinnerAnimation__nAt8p ">
+    </div>
+    <span class="Spinner_spinnerTitle__4A7b4  Spinner_spinnerTitle_centerText__ud193">
+      Laster inn
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tester/Spinner WithSizeAndPosition smoke-test 1`] = `
+<div data-test-block="true">
+  <div aria-live="polite"
+       aria-atomic="true"
+       class="Spinner_spinner__RJ9Al Spinner_spinner_black__-biVj Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt bottomSpacingXL"
+  >
+    <div class="Spinner_spinnerAnimation__nAt8p ">
+    </div>
+    <span class="Spinner_spinnerTitle__4A7b4  Spinner_spinnerTitle_centerText__ud193">
+      henter innhold
+    </span>
+  </div>
+  <div aria-live="polite"
+       aria-atomic="true"
+       class="Spinner_spinner__RJ9Al Spinner_spinner_black__-biVj Spinner_spinner_flexColumn__3SCpy Spinner_spinner_medium__kWbQU bottomSpacingXL"
+  >
+    <div class="Spinner_spinnerAnimation__nAt8p ">
+    </div>
+    <span class="Spinner_spinnerTitle__4A7b4  Spinner_spinnerTitle_centerText__ud193">
+      henter innhold
+    </span>
+  </div>
+  <div aria-live="polite"
+       aria-atomic="true"
+       class="Spinner_spinner__RJ9Al Spinner_spinner_black__-biVj Spinner_spinner_flexColumn__3SCpy Spinner_spinner_large__QByjP bottomSpacingXL"
+  >
+    <div class="Spinner_spinnerAnimation__nAt8p ">
+    </div>
+    <span class="Spinner_spinnerTitle__4A7b4  Spinner_spinnerTitle_centerText__ud193">
+      henter innhold
+    </span>
+  </div>
+  <div aria-live="polite"
+       aria-atomic="true"
+       class="Spinner_spinner__RJ9Al Spinner_spinner_black__-biVj Spinner_spinner_flexRow__hdMnc Spinner_spinner_small__2mxjt bottomSpacingXL"
+  >
+    <div class="Spinner_spinnerAnimation__nAt8p ">
+    </div>
+    <span class="Spinner_spinnerTitle__4A7b4  ">
+      henter innhold
+    </span>
+  </div>
+  <div aria-live="polite"
+       aria-atomic="true"
+       class="Spinner_spinner__RJ9Al Spinner_spinner_black__-biVj Spinner_spinner_flexRow__hdMnc Spinner_spinner_medium__kWbQU bottomSpacingXL"
+  >
+    <div class="Spinner_spinnerAnimation__nAt8p ">
+    </div>
+    <span class="Spinner_spinnerTitle__4A7b4  ">
+      henter innhold
+    </span>
+  </div>
+  <div aria-live="polite"
+       aria-atomic="true"
+       class="Spinner_spinner__RJ9Al Spinner_spinner_black__-biVj Spinner_spinner_flexRow__hdMnc Spinner_spinner_large__QByjP bottomSpacingXL"
+  >
+    <div class="Spinner_spinnerAnimation__nAt8p ">
+    </div>
+    <span class="Spinner_spinnerTitle__4A7b4  ">
+      henter innhold
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tester/Spinner WithSizeAndPositionLongText smoke-test 1`] = `
+<div data-test-block="true">
+  <div aria-live="polite"
+       aria-atomic="true"
+       class="Spinner_spinner__RJ9Al Spinner_spinner_black__-biVj Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt bottomSpacingXL"
+  >
+    <div class="Spinner_spinnerAnimation__nAt8p ">
+    </div>
+    <span class="Spinner_spinnerTitle__4A7b4  Spinner_spinnerTitle_centerText__ud193">
+      Henter årsmiddelkurs fra valutakurstjenesten
+    </span>
+  </div>
+  <div aria-live="polite"
+       aria-atomic="true"
+       class="Spinner_spinner__RJ9Al Spinner_spinner_black__-biVj Spinner_spinner_flexColumn__3SCpy Spinner_spinner_medium__kWbQU bottomSpacingXL"
+  >
+    <div class="Spinner_spinnerAnimation__nAt8p ">
+    </div>
+    <span class="Spinner_spinnerTitle__4A7b4  Spinner_spinnerTitle_centerText__ud193">
+      Henter årsmiddelkurs fra valutakurstjenesten
+    </span>
+  </div>
+  <div aria-live="polite"
+       aria-atomic="true"
+       class="Spinner_spinner__RJ9Al Spinner_spinner_black__-biVj Spinner_spinner_flexColumn__3SCpy Spinner_spinner_large__QByjP bottomSpacingXL"
+  >
+    <div class="Spinner_spinnerAnimation__nAt8p ">
+    </div>
+    <span class="Spinner_spinnerTitle__4A7b4  Spinner_spinnerTitle_centerText__ud193">
+      Henter årsmiddelkurs fra valutakurstjenesten
+    </span>
+  </div>
+  <div aria-live="polite"
+       aria-atomic="true"
+       class="Spinner_spinner__RJ9Al Spinner_spinner_black__-biVj Spinner_spinner_flexRow__hdMnc Spinner_spinner_small__2mxjt bottomSpacingXL"
+  >
+    <div class="Spinner_spinnerAnimation__nAt8p ">
+    </div>
+    <span class="Spinner_spinnerTitle__4A7b4  ">
+      Henter årsmiddelkurs fra valutakurstjenesten
+    </span>
+  </div>
+  <div aria-live="polite"
+       aria-atomic="true"
+       class="Spinner_spinner__RJ9Al Spinner_spinner_black__-biVj Spinner_spinner_flexRow__hdMnc Spinner_spinner_medium__kWbQU bottomSpacingXL"
+  >
+    <div class="Spinner_spinnerAnimation__nAt8p ">
+    </div>
+    <span class="Spinner_spinnerTitle__4A7b4  ">
+      Henter årsmiddelkurs fra valutakurstjenesten
+    </span>
+  </div>
+  <div aria-live="polite"
+       aria-atomic="true"
+       class="Spinner_spinner__RJ9Al Spinner_spinner_black__-biVj Spinner_spinner_flexRow__hdMnc Spinner_spinner_large__QByjP bottomSpacingXL"
+  >
+    <div class="Spinner_spinnerAnimation__nAt8p ">
+    </div>
+    <span class="Spinner_spinnerTitle__4A7b4  ">
+      Henter årsmiddelkurs fra valutakurstjenesten
+    </span>
+  </div>
+</div>
+`;

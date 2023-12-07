@@ -1,4 +1,4 @@
-import { forwardRef, useEffect, useRef, useState } from 'react';
+import { forwardRef, useEffect, useRef, useState, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
@@ -9,6 +9,7 @@ import {
   getHeaderCellAsDefault,
   getTableRowExpandButtonPositionDefault,
   getTableCellAlignmentDefault,
+  getTableSumAlignmentDefault,
 } from './defaults';
 import { TableComponent, TableProps } from './Table.types';
 import { TableBody } from '../TableBody/TableBody';
@@ -39,7 +40,6 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
       children,
     },
     ref
-    // eslint-disable-next-line sonarjs/cognitive-complexity
   ): JSX.Element => {
     const wrapperRef = useRef<HTMLDivElement>(null);
 
@@ -183,4 +183,5 @@ export {
   getTableCellAlignmentDefault,
   getTableRowExpandButtonPositionDefault,
   getTableVariantDefault,
+  getTableSumAlignmentDefault,
 };

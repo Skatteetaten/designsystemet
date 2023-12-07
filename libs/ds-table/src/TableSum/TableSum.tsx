@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 import { TableSumProps } from './TableSum.types';
+import { getTableSumAlignmentDefault } from '../Table/defaults';
 import { TableDataCell } from '../TableDataCell/TableDataCell';
 import { TableRow } from '../TableRow/TableRow';
 
@@ -16,8 +17,8 @@ export const TableSum = forwardRef<HTMLTableRowElement, TableSumProps>(
       className,
       lang,
       'data-testid': dataTestId,
-      labelAlignment,
-      valueAlignment,
+      labelAlignment = getTableSumAlignmentDefault(),
+      valueAlignment = getTableSumAlignmentDefault(),
       colSpan,
       hasTopSeparator,
       sumText,

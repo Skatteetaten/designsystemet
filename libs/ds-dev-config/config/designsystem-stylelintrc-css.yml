@@ -7,3 +7,11 @@ rules:
   selector-class-pattern:
     - '^[a-z][a-zA-Z0-9]+(_[a-z0-9]+)?$' # Denne sørger for at class selectors følger etablert konvensjon .lowerCamelCase_modifier
     - resolveNestedSelectors: true
+  color-no-hex:
+    - true
+    - message: 'Unngå HEX i kode. Bruk så langt det lar seg gjøre definerte farger fra designtokens. F.eks var(--graphite-70)' # Helst fra designtokens.
+      severity: 'warning'
+  color-named:
+    - never
+    - message: 'Unngå navn på farge i kode. Bruk så langt det lar seg gjøre definerte farger fra designtokens. F.eks var(--graphite-70)'
+      severity: 'warning'

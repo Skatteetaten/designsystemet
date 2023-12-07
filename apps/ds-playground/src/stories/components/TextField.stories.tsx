@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-import { formArrSize } from '@skatteetaten/ds-core-utils';
 import {
-  TextField,
-  textFieldAsArr,
-  getTextFieldVariantDefault,
-} from '@skatteetaten/ds-forms';
+  dsI18n,
+  formArrSize,
+  getCommonFormVariantDefault,
+} from '@skatteetaten/ds-core-utils';
+import { TextField, getTextFieldAsDefault } from '@skatteetaten/ds-forms';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
@@ -18,26 +18,30 @@ export default {
   argTypes: {
     // Props
     as: {
-      table: { category: category.props },
-      options: [...textFieldAsArr],
       control: 'inline-radio',
+      table: {
+        category: category.props,
+        defaultValue: { summary: getTextFieldAsDefault() },
+      },
     },
     variant: {
       options: [...formArrSize],
       control: 'inline-radio',
       table: {
         category: category.props,
-        defaultValue: { summary: getTextFieldVariantDefault() },
+        defaultValue: { summary: getCommonFormVariantDefault() },
+        type: { summary: formArrSize },
       },
     },
     autosize: { table: { category: category.props } },
     classNames: {
+      control: false,
       table: { category: category.props },
     },
+    defaultValue: { control: 'text', table: { category: category.props } },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasError: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
@@ -45,37 +49,41 @@ export default {
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
-      table: { category: category.props },
+      table: {
+        category: category.props,
+        defaultValue: { summary: 'HelpSimpleSVGpath' },
+      },
     },
     helpText: { table: { category: category.props } },
     hideLabel: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
     },
     label: { table: { category: category.props } },
     showRequiredMark: {
-      control: 'boolean',
       table: {
         category: category.props,
       },
     },
     thousandSeparator: { table: { category: category.props } },
-    titleHelpSvg: { table: { category: category.props } },
+    titleHelpSvg: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: dsI18n.t('Shared:shared.Help') },
+      },
+    },
     // HTML
     autoComplete: { table: { category: category.htmlAttribute } },
-    defaultValue: {
-      control: 'text',
-      table: { category: category.htmlAttribute },
-    },
     disabled: {
-      control: 'boolean',
       table: {
         category: category.htmlAttribute,
       },
     },
-    inputMode: { table: { category: category.htmlAttribute } },
+    inputMode: {
+      control: 'inline-radio',
+      table: { category: category.htmlAttribute },
+    },
     maxLength: { table: { category: category.htmlAttribute } },
     minLength: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },
@@ -83,7 +91,6 @@ export default {
     placeholder: { table: { category: category.htmlAttribute } },
     readOnly: { table: { category: category.htmlAttribute } },
     required: {
-      control: 'boolean',
       table: {
         category: category.htmlAttribute,
       },

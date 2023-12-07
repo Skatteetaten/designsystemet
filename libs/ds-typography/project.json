@@ -28,23 +28,24 @@
             "output": "."
           }
         ],
-        "babelUpwardRootMode": true,
-        "updateBuildableProjectDepsInPackageJson": true
+        "babelUpwardRootMode": true
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/ds-typography/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "libs/ds-typography/**/*.{ts,tsx,js,jsx}",
+          "libs/ds-typography/package.json"
+        ]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/ds-typography/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/ds-typography/jest.config.ts"
       }
     },
     "stylelint": {

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 
 import { Checkbox } from '@skatteetaten/ds-forms';
 import { expect } from '@storybook/jest';
@@ -31,6 +31,7 @@ const meta = {
     children: {
       table: { disable: true },
     },
+    defaultChecked: { table: { disable: true } },
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
     hasError: {
@@ -50,11 +51,6 @@ const meta = {
     },
     // HTML
     checked: {
-      table: {
-        disable: true,
-      },
-    },
-    defaultChecked: {
       table: {
         disable: true,
       },
@@ -92,7 +88,6 @@ const defaultArgs = {
 
 export const WithRef = {
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: HTMLInputElement | null): void => {
@@ -101,21 +96,17 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: verifyAttribute('name', 'dummyNameForwardedFromRef'),
 } satisfies Story;
 
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
-
   args: {
     ...defaultArgs,
     id: 'htmlid',
@@ -123,14 +114,12 @@ export const WithAttributes = {
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputNode = canvas.getByRole('checkbox');
@@ -144,15 +133,12 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (A1, B1)',
-
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     children: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} label`,
@@ -160,7 +146,6 @@ export const Defaults = {
       click: `${wrapper} label`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputNode = canvas.getByLabelText(defaultLabelText);
@@ -178,16 +163,13 @@ export const Defaults = {
 
 export const WithDescription = {
   name: 'With Description (A1)',
-
   args: {
     ...defaultArgs,
     description: 'En beskrivelse av punktet',
   },
-
   argTypes: {
     description: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} label`,
@@ -195,7 +177,6 @@ export const WithDescription = {
       click: `${wrapper} label`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const description = canvas.getByText('En beskrivelse av punktet');
@@ -205,7 +186,6 @@ export const WithDescription = {
 
 export const WithDescriptionAndLongText = {
   name: 'With Description And Long Text (A1)',
-
   args: {
     ...defaultArgs,
     children:
@@ -213,11 +193,9 @@ export const WithDescriptionAndLongText = {
     description:
       'Litt rart å ha en beskrivende tekst rett under en lang tekst, men sånn har det blitt',
   },
-
   argTypes: {
     description: { table: { disable: false } },
   },
-
   parameters: {
     viewport: {
       defaultViewport: '--breakpoint-xs',
@@ -227,13 +205,11 @@ export const WithDescriptionAndLongText = {
 
 export const WithDescriptionAndDisabled = {
   name: 'With Description And Disabled (A1)',
-
   args: {
     ...defaultArgs,
     description: 'En beskrivelse av punktet',
     disabled: true,
   },
-
   argTypes: {
     description: { table: { disable: false } },
     disabled: { table: { disable: false } },
@@ -242,17 +218,14 @@ export const WithDescriptionAndDisabled = {
 
 export const WithLongText = {
   name: 'With Long Text (A2)',
-
   args: {
     ...defaultArgs,
     children:
       'Får ekstra lang reisevei til jobb på grunn av levering til barnehage eller skolefritidsordning eller annen fritidsordning',
   },
-
   argTypes: {
     children: { table: { disable: false } },
   },
-
   parameters: {
     viewport: {
       defaultViewport: '--breakpoint-xs',
@@ -262,17 +235,14 @@ export const WithLongText = {
 
 export const WithLongTextAndBreaking = {
   name: 'With Long Text And Breaking (A2)',
-
   args: {
     ...defaultArgs,
     children:
       'Fårekstrareiseveitiljobbpågrunnavleveringtilbarnehageellerskolefritidsordning',
   },
-
   argTypes: {
     children: { table: { disable: false } },
   },
-
   parameters: {
     viewport: {
       defaultViewport: '--breakpoint-xs',
@@ -282,16 +252,13 @@ export const WithLongTextAndBreaking = {
 
 export const WithHideLabel = {
   name: 'With HideLabel (A2)',
-
   args: {
     ...defaultArgs,
     hideLabel: true,
   },
-
   argTypes: {
     hideLabel: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputNode = canvas.getByLabelText(defaultLabelText);
@@ -301,16 +268,13 @@ export const WithHideLabel = {
 
 export const WithChecked = {
   name: 'With Checked (A1, A3)',
-
   args: {
     ...defaultArgs,
     checked: true,
   },
-
   argTypes: {
     checked: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} label`,
@@ -318,7 +282,6 @@ export const WithChecked = {
       click: `${wrapper} label`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputNode = canvas.getByRole('checkbox');
@@ -329,16 +292,13 @@ export const WithChecked = {
 
 export const WithDisabled = {
   name: 'With Disabled (A1, A5 delvis, B2)',
-
   args: {
     ...defaultArgs,
     disabled: true,
   },
-
   argTypes: {
     disabled: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputNode = canvas.getByRole('checkbox');
@@ -348,18 +308,15 @@ export const WithDisabled = {
 
 export const WithDisabledAndChecked = {
   name: 'With Disabled And Checked (A1, A5 delvis, B2)',
-
   args: {
     ...defaultArgs,
     checked: true,
     disabled: true,
   },
-
   argTypes: {
     checked: { table: { disable: false } },
     disabled: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputNode = canvas.getByRole('checkbox');
@@ -370,16 +327,13 @@ export const WithDisabledAndChecked = {
 
 export const WithRequired = {
   name: 'With Required (B3)',
-
   args: {
     ...defaultArgs,
     required: true,
   },
-
   argTypes: {
     required: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputNode = canvas.getByRole('checkbox');
@@ -389,18 +343,15 @@ export const WithRequired = {
 
 export const WithRequiredAndMark = {
   name: 'With Required And Mark (A1, B3)',
-
   args: {
     ...defaultArgs,
     required: true,
     showRequiredMark: true,
   },
-
   argTypes: {
     required: { table: { disable: false } },
     showRequiredMark: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputNode = canvas.getByRole('checkbox');
@@ -410,24 +361,20 @@ export const WithRequiredAndMark = {
 
 export const WithRequiredAndChecked = {
   name: 'With Required And Checked (B3)',
-
   args: {
     ...defaultArgs,
     checked: true,
     required: true,
   },
-
   argTypes: {
     checked: { table: { disable: false } },
     required: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       disable: true,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputNode = canvas.getByRole('checkbox');
@@ -438,18 +385,15 @@ export const WithRequiredAndChecked = {
 
 export const WithError = {
   name: 'With Error And ErrorMessage (A1, B4)',
-
   args: {
     ...defaultArgs,
     errorMessage: defaultErrorMessage,
     hasError: true,
   },
-
   argTypes: {
     errorMessage: { table: { disable: false } },
     hasError: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} label`,
@@ -457,7 +401,6 @@ export const WithError = {
       click: `${wrapper} label`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const errorMessageNode = canvas.getAllByRole('generic')[6];
@@ -471,20 +414,17 @@ export const WithError = {
 
 export const WithDisabledAndRequired = {
   name: 'With Disabled And Required (A1)',
-
   args: {
     ...defaultArgs,
     disabled: true,
     required: true,
     showRequiredMark: true,
   },
-
   argTypes: {
     disabled: { table: { disable: false } },
     required: { table: { disable: false } },
     showRequiredMark: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputNode = canvas.getByRole('checkbox');
@@ -495,7 +435,6 @@ export const WithDisabledAndRequired = {
 
 export const WithErrorAndRequired = {
   name: 'With Error And Required (A1)',
-
   args: {
     ...defaultArgs,
     errorMessage: 'Feilmelding',
@@ -503,21 +442,18 @@ export const WithErrorAndRequired = {
     required: true,
     showRequiredMark: true,
   },
-
   argTypes: {
     errorMessage: { table: { disable: false } },
     hasError: { table: { disable: false } },
     required: { table: { disable: false } },
     showRequiredMark: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} label`,
       focus: `${wrapper} input`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputNode = canvas.getByRole('checkbox');
@@ -528,18 +464,15 @@ export const WithErrorAndRequired = {
 
 export const WithCheckedAndRequired = {
   name: 'With Checked And Required (B3)',
-
   args: {
     ...defaultArgs,
     checked: true,
     required: true,
   },
-
   argTypes: {
     checked: { table: { disable: false } },
     required: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputNode = canvas.getByRole('checkbox');
@@ -550,20 +483,16 @@ export const WithCheckedAndRequired = {
 
 export const WithAriaDescribedby = {
   name: 'With AriaDescribedby (B1)',
-
   args: {
     ...defaultArgs,
     ariaDescribedby: 'testID',
   },
-
   argTypes: {
     ariaDescribedby: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputNode = canvas.getByRole('checkbox');
@@ -577,39 +506,31 @@ export const WithAriaDescribedby = {
 
 export const WithValue = {
   name: 'With Value',
-
   args: {
     ...defaultArgs,
     value: 'test_value_checkbox',
   },
-
   argTypes: {
     value: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: verifyAttribute('value', 'test_value_checkbox'),
 } satisfies Story;
 
 export const WithDefaultChecked = {
   name: 'With DefaultChecked',
-
   args: {
     ...defaultArgs,
     defaultChecked: true,
   },
-
   argTypes: {
     defaultChecked: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputNode = canvas.getByRole('checkbox');
@@ -619,20 +540,16 @@ export const WithDefaultChecked = {
 
 export const WithName = {
   name: 'With Name',
-
   args: {
     ...defaultArgs,
     name: 'test_name_checkbox',
   },
-
   argTypes: {
     name: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: verifyAttribute('name', 'test_name_checkbox'),
 } satisfies Story;
 
@@ -641,7 +558,7 @@ const EventHandlersTemplate: StoryFn<typeof Checkbox> = (args) => {
   return (
     <Checkbox
       {...args}
-      onChange={(event: React.ChangeEvent<HTMLInputElement>): void => {
+      onChange={(event: ChangeEvent<HTMLInputElement>): void => {
         setLabelText('Checkbox har blitt klikket på');
         args.onChange && args.onChange(event);
       }}
@@ -654,15 +571,12 @@ const EventHandlersTemplate: StoryFn<typeof Checkbox> = (args) => {
 export const WithEventHandlers = {
   render: EventHandlersTemplate,
   name: 'With EventHandlers',
-
   args: {
     ...defaultArgs,
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputNode = canvas.getByRole('checkbox');

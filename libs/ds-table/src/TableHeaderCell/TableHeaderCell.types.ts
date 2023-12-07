@@ -1,11 +1,11 @@
-import { ReactNode } from 'react';
+import { HTMLProps, ReactNode } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 import { TableCellAs, TextAlignment } from '../Table/Table.types';
 
 type RequiredTableHeaderCellHTMLAttributes = Pick<
-  React.HTMLProps<HTMLTableCellElement>,
+  HTMLProps<HTMLTableCellElement>,
   'scope' | 'colSpan'
 >;
 type TableHeaderCellHTMLAttributes =

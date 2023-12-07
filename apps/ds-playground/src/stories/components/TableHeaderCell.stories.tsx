@@ -2,7 +2,6 @@ import {
   getHeaderCellAsDefault,
   getTableCellAlignmentDefault,
   Table,
-  tableCellAsArr,
 } from '@skatteetaten/ds-table';
 import { Meta, StoryObj } from '@storybook/react';
 
@@ -27,14 +26,12 @@ export default {
       },
     },
     as: {
-      options: [...tableCellAsArr],
       control: 'inline-radio',
       table: {
         defaultValue: { summary: getHeaderCellAsDefault() },
         category: category.props,
       },
     },
-
     // HTML
     colSpan: { table: { category: category.htmlAttribute } },
     scope: { table: { category: category.htmlAttribute } },

@@ -55,7 +55,6 @@ const defaultArgs = {
 export const WithRef = {
   render: Template,
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: HTMLInputElement | null): void => {
@@ -64,15 +63,12 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getByRole('radio');
@@ -83,7 +79,6 @@ export const WithRef = {
 export const WithAttributes = {
   render: Template,
   name: 'With Attributes (FA2-5)',
-
   args: {
     ...defaultArgs,
     id: 'htmlId',
@@ -91,14 +86,12 @@ export const WithAttributes = {
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[3];
@@ -112,16 +105,13 @@ export const WithAttributes = {
 
 export const Defaults = {
   render: Template,
-  name: 'Defaults (A1 delvis, A3 delvis)',
-
+  name: 'Defaults (A1, A3, B1)',
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     children: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} input[type='radio']`,
@@ -129,7 +119,6 @@ export const Defaults = {
       click: `${wrapper} input[type='radio']`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const input = canvas.getByRole('radio', { name: defaultLabelText });
@@ -140,17 +129,14 @@ export const Defaults = {
 
 export const WithDescription = {
   render: Template,
-  name: 'With Description (A3 delvis, A5)',
-
+  name: 'With Description (A3, A5)',
   args: {
     ...defaultArgs,
     description: 'En liten beskrivelse tekst',
   },
-
   argTypes: {
     description: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} input[type='radio']`,
@@ -169,12 +155,10 @@ export const WithDescription = {
 export const WithLongText = {
   render: Template,
   name: 'With Long Text (A2)',
-
   args: {
     children: loremIpsum,
     description: loremIpsum,
   },
-
   argTypes: {
     children: { table: { disable: false } },
     description: { table: { disable: false } },
@@ -184,12 +168,10 @@ export const WithLongText = {
 export const WithLongTextAndBreaking = {
   render: Template,
   name: 'With Long Text And Breaking',
-
   args: {
     children: loremIpsumWithoutSpaces,
     description: loremIpsumWithoutSpaces,
   },
-
   argTypes: {
     children: { table: { disable: false } },
     description: { table: { disable: false } },
@@ -199,20 +181,16 @@ export const WithLongTextAndBreaking = {
 export const WithValue = {
   render: Template,
   name: 'With Value',
-
   args: {
     ...defaultArgs,
     value: 'person',
   },
-
   argTypes: {
     value: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const input = canvas.getByRole('radio');
@@ -223,21 +201,17 @@ export const WithValue = {
 
 export const WithAriaDescribedby = {
   render: Template,
-  name: 'With AriaDescribedby (B4 delvis)',
-
+  name: 'With AriaDescribedby (B4)',
   args: {
     ...defaultArgs,
     ariaDescribedby: 'htmlId',
   },
-
   argTypes: {
     ariaDescribedby: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const input = canvas.getByRole('radio');
