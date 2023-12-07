@@ -1,0 +1,51 @@
+@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@import 'libs/ds-core-utils/src/styles.scss';
+
+.list {
+  position: absolute;
+  z-index: 102;
+  top: 4rem;
+  right: var(--spacing-m);
+  left: var(--spacing-m);
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--palette-graphite-70);
+  margin-top: var(--spacing-l);
+  list-style-type: none;
+
+  @media (min-width: $breakpoint-xs) {
+    right: auto;
+    left: auto;
+    max-width: 160px;
+  }
+
+  &::before {
+    position: absolute;
+    left: 50%;
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-top: 1px solid var(--palette-graphite-70);
+    border-left: 1px solid var(--palette-graphite-70);
+    margin-top: -14px;
+    background-color: var(--palette-graphite-0);
+    content: '';
+    transform: rotate(45deg);
+
+    @media (min-width: $breakpoint-xs) {
+      left: var(--spacing-m);
+    }
+  }
+
+  &Item {
+    border-bottom: 1px solid var(--palette-graphite-70);
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+}
+
+.srOnly {
+  @include sr-only;
+}
