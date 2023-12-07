@@ -6,7 +6,7 @@
   "tags": [],
   "targets": {
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
@@ -31,6 +31,11 @@
             "glob": "libs/ds-collections/README.md",
             "input": ".",
             "output": "."
+          },
+          {
+            "glob": "LICENSE",
+            "input": ".",
+            "output": "."
           }
         ],
         "babelUpwardRootMode": true
@@ -40,8 +45,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/ds-collections/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/ds-collections/jest.config.ts"
       }
     },
     "stylelint": {
@@ -70,8 +74,8 @@
     "publish": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "npm publish {args.switches}",
-        "cwd": "dist/libs/ds-collections"
+        "command": "npm publish dist/libs/ds-collections {args.switches}",
+        "cwd": ""
       }
     }
   },

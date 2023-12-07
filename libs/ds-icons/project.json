@@ -22,13 +22,18 @@
             "glob": "libs/ds-icons/README.md",
             "input": ".",
             "output": "."
+          },
+          {
+            "glob": "LICENSE",
+            "input": ".",
+            "output": "."
           }
         ],
         "babelUpwardRootMode": true
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
@@ -41,8 +46,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/ds-icons"],
       "options": {
-        "jestConfig": "libs/ds-icons/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/ds-icons/jest.config.ts"
       }
     },
     "stylelint": {
@@ -71,8 +75,7 @@
     "publish": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "npm publish {args.switches}",
-        "cwd": "dist/libs/ds-icons"
+        "command": "npm publish dist/libs/ds-icons {args.switches}"
       }
     }
   }

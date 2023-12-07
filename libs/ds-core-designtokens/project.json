@@ -23,6 +23,11 @@
             "output": "."
           },
           {
+            "glob": "LICENSE",
+            "input": ".",
+            "output": "."
+          },
+          {
             "glob": "*",
             "input": "libs/ds-core-designtokens/lib",
             "output": "."
@@ -32,7 +37,7 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
@@ -45,8 +50,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/ds-core-designtokens"],
       "options": {
-        "jestConfig": "libs/ds-core-designtokens/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/ds-core-designtokens/jest.config.ts"
       }
     },
     "stylelint": {
@@ -75,8 +79,8 @@
     "publish": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "npm publish {args.switches}",
-        "cwd": "dist/libs/ds-core-designtokens"
+        "command": "npm publish dist/libs/ds-core-designtokens {args.switches}",
+        "cwd": ""
       }
     }
   }

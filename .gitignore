@@ -39,6 +39,7 @@ testem.log
 .jest-image-snapshot-touched-files
 **/*stats.html
 *.dump
+.nx
 
 # System Files
 .DS_Store

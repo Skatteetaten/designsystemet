@@ -21,13 +21,18 @@
             "glob": "libs/ds-typography/README.md",
             "input": ".",
             "output": "."
+          },
+          {
+            "glob": "LICENSE",
+            "input": ".",
+            "output": "."
           }
         ],
         "babelUpwardRootMode": true
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
@@ -40,8 +45,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/ds-typography/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/ds-typography/jest.config.ts"
       }
     },
     "stylelint": {
@@ -70,8 +74,7 @@
     "publish": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "npm publish {args.switches}",
-        "cwd": "dist/libs/ds-typography"
+        "command": "npm publish  dist/libs/ds-typography {args.switches}"
       }
     }
   },

@@ -21,13 +21,18 @@
             "glob": "libs/ds-core-utils/README.md",
             "input": ".",
             "output": "."
+          },
+          {
+            "glob": "LICENSE",
+            "input": ".",
+            "output": "."
           }
         ],
         "babelUpwardRootMode": true
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
@@ -40,8 +45,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/ds-core-utils"],
       "options": {
-        "jestConfig": "libs/ds-core-utils/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/ds-core-utils/jest.config.ts"
       }
     },
     "stylelint": {
@@ -70,8 +74,7 @@
     "publish": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "npm publish {args.switches}",
-        "cwd": "dist/libs/ds-core-utils"
+        "command": "npm publish dist/libs/ds-core-utils {args.switches}"
       }
     }
   },
