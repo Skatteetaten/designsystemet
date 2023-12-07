@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 
 import { Button, Link } from '@skatteetaten/ds-buttons';
+import { CheckboxGroup, RadioGroup } from '@skatteetaten/ds-forms';
 import { InfoOutlineSVGpath } from '@skatteetaten/ds-icons';
 import {
   Modal,
@@ -129,13 +130,11 @@ export const ExampleImportant: StoryFn<typeof Modal> = () => {
             'Løsningen er ikke kommet i drift ennå eller tatt ned for vedlikehold.'
           }
         </Paragraph>
-        <Link
-          className={'modalLink'}
-          href={'#'}
-          onClick={(): void => ref.current?.close()}
-        >
-          {'Les mer på skatteetaten.no'}
-        </Link>
+        <div className={'modalLink'}>
+          <Link href={'#'} onClick={(): void => ref.current?.close()}>
+            {'Les mer på skatteetaten.no'}
+          </Link>
+        </div>
       </Modal>
     </>
   );
@@ -172,6 +171,54 @@ export const ExampleWait: StoryFn<typeof Modal> = () => {
         >
           {'Ja'}
         </Button>
+      </Modal>
+    </>
+  );
+};
+
+export const ExampleWithRadioGroup: StoryFn<typeof Modal> = () => {
+  const ref = useRef<HTMLDialogElement>(null);
+  return (
+    <>
+      <Button onClick={(): void => ref.current?.showModal()}>
+        {'Velg rolle'}
+      </Button>
+      <Modal ref={ref} title={'Dette er dine roller'}>
+        <RadioGroup legend={'Velge en rolle'}>
+          <RadioGroup.Radio value={'meg'}>
+            {'Innlogget som meg selv'}
+          </RadioGroup.Radio>
+          <RadioGroup.Radio value={'andre'}>
+            {'Innlogget som annen person'}
+          </RadioGroup.Radio>
+          <RadioGroup.Radio value={'virksomhet'}>
+            {'Innlogget som virksomhet'}
+          </RadioGroup.Radio>
+        </RadioGroup>
+      </Modal>
+    </>
+  );
+};
+
+export const ExampleWithCheckboxGroup: StoryFn<typeof Modal> = () => {
+  const ref = useRef<HTMLDialogElement>(null);
+  return (
+    <>
+      <Button onClick={(): void => ref.current?.showModal()}>
+        {'Velg rolle'}
+      </Button>
+      <Modal ref={ref} title={'Dette er dine roller'}>
+        <CheckboxGroup legend={'Velge en rolle'}>
+          <CheckboxGroup.Checkbox value={'meg'}>
+            {'Innlogget som meg selv'}
+          </CheckboxGroup.Checkbox>
+          <CheckboxGroup.Checkbox value={'andre'}>
+            {'Innlogget som annen person'}
+          </CheckboxGroup.Checkbox>
+          <CheckboxGroup.Checkbox value={'virksomhet'}>
+            {'Innlogget som virksomhet'}
+          </CheckboxGroup.Checkbox>
+        </CheckboxGroup>
       </Modal>
     </>
   );

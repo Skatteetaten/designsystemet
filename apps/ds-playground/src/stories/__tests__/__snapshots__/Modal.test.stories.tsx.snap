@@ -15,7 +15,9 @@ exports[`Tester/Modal ClickCloseButton play-test 1`] = `
   <dialog class="Modal_modal__JdsM-"
           aria-labelledby="modalHeadingId-:rh:"
   >
-    <div tabindex="-1">
+    <div tabindex="-1"
+         class="Modal_modalContainer__O6yz0"
+    >
       <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
               type="button"
       >
@@ -80,7 +82,9 @@ exports[`Tester/Modal Defaults play-test 1`] = `
           aria-labelledby="modalHeadingId-:r2:"
           open
   >
-    <div tabindex="-1">
+    <div tabindex="-1"
+         class="Modal_modalContainer__O6yz0"
+    >
       <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
               type="button"
       >
@@ -145,7 +149,9 @@ exports[`Tester/Modal VariantImportant play-test 1`] = `
           aria-labelledby="modalHeadingId-:r6:"
           open
   >
-    <div tabindex="-1">
+    <div tabindex="-1"
+         class="Modal_modalContainer__O6yz0"
+    >
       <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
               type="button"
       >
@@ -220,7 +226,9 @@ exports[`Tester/Modal VariantPlain play-test 1`] = `
           aria-labelledby="modalHeadingId-:r4:"
           open
   >
-    <div tabindex="-1">
+    <div tabindex="-1"
+         class="Modal_modalContainer__O6yz0"
+    >
       <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
               type="button"
       >
@@ -288,7 +296,9 @@ exports[`Tester/Modal WithAttributes play-test 1`] = `
           aria-labelledby="modalHeadingId-:r0:"
           open
   >
-    <div tabindex="-1">
+    <div tabindex="-1"
+         class="Modal_modalContainer__O6yz0"
+    >
       <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
               type="button"
       >
@@ -352,7 +362,9 @@ exports[`Tester/Modal WithAutoClose play-test 1`] = `
   <dialog class="Modal_modal__JdsM-"
           aria-labelledby="modalHeadingId-:rj:"
   >
-    <div tabindex="-1">
+    <div tabindex="-1"
+         class="Modal_modalContainer__O6yz0"
+    >
       <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
               type="button"
       >
@@ -417,7 +429,9 @@ exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
           aria-labelledby="modalHeadingId-:rl:"
           open
   >
-    <div tabindex="-1">
+    <div tabindex="-1"
+         class="Modal_modalContainer__O6yz0"
+    >
       <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
               type="button"
       >
@@ -482,7 +496,9 @@ exports[`Tester/Modal WithHideTitle play-test 1`] = `
           aria-labelledby="modalHeadingId-:rn:"
           open
   >
-    <div tabindex="-1">
+    <div tabindex="-1"
+         class="Modal_modalContainer__O6yz0"
+    >
       <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
               type="button"
       >
@@ -547,7 +563,9 @@ exports[`Tester/Modal WithImage play-test 1`] = `
           aria-labelledby="modalHeadingId-:r8:"
           open
   >
-    <div tabindex="-1">
+    <div tabindex="-1"
+         class="Modal_modalContainer__O6yz0"
+    >
       <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
               type="button"
       >
@@ -616,7 +634,9 @@ exports[`Tester/Modal WithPadding play-test 1`] = `
           aria-labelledby="modalHeadingId-:rd:"
           open
   >
-    <div tabindex="-1">
+    <div tabindex="-1"
+         class="Modal_modalContainer__O6yz0"
+    >
       <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
               type="button"
       >
@@ -681,7 +701,9 @@ exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
           aria-labelledby="modalHeadingId-:ra:"
           open
   >
-    <div tabindex="-1">
+    <div tabindex="-1"
+         class="Modal_modalContainer__O6yz0"
+    >
       <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
               type="button"
       >
@@ -746,7 +768,9 @@ exports[`Tester/Modal WithVerticalScrolling play-test 1`] = `
           aria-labelledby="modalHeadingId-:rf:"
           open
   >
-    <div tabindex="-1">
+    <div tabindex="-1"
+         class="Modal_modalContainer__O6yz0"
+    >
       <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
               type="button"
       >
@@ -793,7 +817,9 @@ exports[`Tester/Modal WithoutCloseButton play-test 1`] = `
           aria-labelledby="modalHeadingId-:rc:"
           open
   >
-    <div tabindex="-1">
+    <div tabindex="-1"
+         class="Modal_modalContainer__O6yz0"
+    >
       <div class="Modal_modalPaddingL__TAljg">
         <h1 id="modalHeadingId-:rc:"
             class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
