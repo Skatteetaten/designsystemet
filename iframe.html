@@ -385,12 +385,16 @@
     fill: lightgoldenrodyellow;
   }
 
+  .dummyClassname::placeholder {
+    color: darkblue;
+  }
+
   .dummyClassname:not(svg) {
     background-color: lightgoldenrodyellow;
   }
 
   svg.dummyClassname {
-    background-color: black;
+    background-color: darkblue;
   }
 
   .scrollToTopContainer svg.dummyClassname {
@@ -398,26 +402,31 @@
   }
 
   div#storybook-root .dummyClassname svg {
-    fill: black;
+    fill: darkblue;
   }
 
   .dummyClassname:disabled,
   .dummyClassname:hover,
   .dummyClassname:focus {
     background-color: darkred;
-    color: white;
+    color: lightskyblue;
   }
 
   div#storybook-root .dummyClassname:disabled svg,
   div#storybook-root .dummyClassname:hover svg,
   div#storybook-root .dummyClassname:focus svg {
-    fill: white;
+    fill: lightskyblue;
   }
 
   div#storybook-root .scrollToTopContainer .dummyClassname:disabled svg,
   div#storybook-root .scrollToTopContainer .dummyClassname:hover svg,
   div#storybook-root .scrollToTopContainer .dummyClassname:focus svg {
-    fill: black;
+    fill: darkblue;
+  }
+
+  .dummyClassnameFormContainer {
+    width: 100%;
+    max-width: 200px;
   }
 
   .dummyPanelOverridesWidthAndPadding {
@@ -441,7 +450,7 @@
           
       
           
-            window['FEATURES'] = {"warnOnLegacyHierarchySeparator":true,"buildStoriesJson":false,"storyStoreV7":true,"argTypeTargetsV7":true,"legacyDecoratorFileOrder":false};
+            window['FEATURES'] = {"warnOnLegacyHierarchySeparator":true,"buildStoriesJson":false,"storyStoreV7":true,"argTypeTargetsV7":true,"legacyDecoratorFileOrder":false,"disallowImplicitActionsInRenderV8":false};
           
       
           
@@ -454,8 +463,8 @@
             window['DOCS_OPTIONS'] = {"defaultName":"Docs","autodocs":true};</script><script type="module">import './sb-preview/runtime.js';
 
       
-      import './runtime-main.03364593.iframe.bundle.js';
+      import './runtime-main.76eca7c9.iframe.bundle.js';
       
-      import './2653.19402b82.iframe.bundle.js';
+      import './6572.565471e6.iframe.bundle.js';
       
-      import './main.83de0b8b.iframe.bundle.js';</script></body></html>
+      import './main.22ab3d4c.iframe.bundle.js';</script></body></html>
