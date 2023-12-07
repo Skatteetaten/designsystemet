@@ -1,4 +1,4 @@
-import React, { forwardRef, JSX, useRef, useState } from 'react';
+import React, { forwardRef, JSX, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
@@ -45,11 +45,15 @@ export const TopBannerLangPicker = forwardRef<
     const [selectedLang, setSelectedLang] = useState<Lang>(locale);
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
+    useEffect(() => {
+      document.documentElement.lang = selectedLang;
+    }, [selectedLang]);
+
     const handleMenuClick = (): void => {
       setIsMenuOpen(!isMenuOpen);
     };
 
-    const handleSelectLanguage = (
+    const handleLanguageClick = (
       e: React.MouseEvent<HTMLButtonElement>
     ): void => {
       const lang: Lang = e.currentTarget.lang as Lang;
@@ -117,7 +121,7 @@ export const TopBannerLangPicker = forwardRef<
                     lang={language.lang}
                     ariaCurrent={language.lang === selectedLang}
                     flagIcon={language.flagIcon}
-                    onClick={handleSelectLanguage}
+                    onClick={handleLanguageClick}
                   >
                     {language.displayName}
                   </TopBannerLangPicker.Button>

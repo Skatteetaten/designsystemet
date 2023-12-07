@@ -16,8 +16,7 @@
     "react-i18next": "^13",
     "@skatteetaten/ds-buttons": "*",
     "@skatteetaten/ds-core-utils": "*",
-    "@skatteetaten/ds-icons": "*",
-    "@skatteetaten/ds-progress": "*"
+    "@skatteetaten/ds-icons": "*"
   },
   "scripts": {}
 }

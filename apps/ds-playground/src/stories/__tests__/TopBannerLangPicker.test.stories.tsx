@@ -85,5 +85,8 @@ export const Defaults = {
   args: {
     ...defaultArgs,
   },
-  argTypes: {},
+  argTypes: { showSami: { table: { disable: false } } },
 } satisfies Story;
+
+// TODO - at WithLocale
+// TODO - WithoutSami
