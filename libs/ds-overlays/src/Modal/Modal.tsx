@@ -60,7 +60,11 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
         return;
       }
       const onClickOutside = (event: MouseEvent): void => {
-        if (!(event.target instanceof HTMLElement)) {
+        const element = event.target as HTMLElement;
+        if (
+          !(event.target instanceof HTMLElement) ||
+          element.tagName !== 'DIALOG'
+        ) {
           return;
         }
         const rect = event.target.getBoundingClientRect();
@@ -110,7 +114,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
           onClose?.();
         }}
       >
-        <div tabIndex={-1}>
+        <div tabIndex={-1} className={styles.modalContainer}>
           {!hideCloseButton && (
             <IconButton
               className={styles.closeButton}
