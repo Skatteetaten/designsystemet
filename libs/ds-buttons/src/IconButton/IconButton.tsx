@@ -5,6 +5,7 @@ import {
   getCommonClassNameDefault,
 } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
+import { Spinner } from '@skatteetaten/ds-progress';
 
 import { getIconButtonSizeDefault } from './defaults';
 import { IconButtonProps } from './IconButton.types';
@@ -18,15 +19,17 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
+      size = getIconButtonSizeDefault(),
+      spinnerTitle,
+      svgPath,
       accessKey,
+      disabled,
       title,
+      type = getCommonButtonTypeDefault(),
       ariaDescribedby,
       ariaExpanded,
-      size = getIconButtonSizeDefault(),
-      svgPath,
+      hasSpinner,
       isOutlined,
-      disabled,
-      type = getCommonButtonTypeDefault(),
       onClick,
       onBlur,
       onFocus,
@@ -51,7 +54,19 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
         onClick={onClick}
         onFocus={onFocus}
       >
-        <Icon className={styles.icon} svgPath={svgPath} title={title} />
+        {!hasSpinner && (
+          <Icon className={styles.icon} svgPath={svgPath} title={title} />
+        )}
+        {hasSpinner && (
+          <Spinner
+            className={styles.spinner}
+            color={disabled ? 'black' : 'blue'}
+            size={size === 'extraSmall' ? 'small' : size}
+            hideTitle
+          >
+            {spinnerTitle}
+          </Spinner>
+        )}
       </button>
     );
   }

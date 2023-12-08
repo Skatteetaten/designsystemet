@@ -6,7 +6,9 @@ exports[`Tester/MegaButton AsLink smoke-test 1`] = `
      href="https://www.skatteetaten.no"
      role="button"
   >
-    Klikk her
+    <span class>
+      Klikk her
+    </span>
   </a>
 </div>
 `;
@@ -16,7 +18,9 @@ exports[`Tester/MegaButton AsLinkEmptyString smoke-test 1`] = `
   <a class="MegaButton_button__njALO "
      href
   >
-    Klikk her
+    <span class>
+      Klikk her
+    </span>
   </a>
 </div>
 `;
@@ -27,7 +31,9 @@ exports[`Tester/MegaButton AsLinkExternal play-test 1`] = `
      href="https://www.skatteetaten.no"
      role="button"
   >
-    Klikk her
+    <span class>
+      Klikk her
+    </span>
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz MegaButton_icon__KSvBN"
          viewbox="0 0 24 24"
          focusable="false"
@@ -47,7 +53,9 @@ exports[`Tester/MegaButton Defaults play-test 1`] = `
   <button class="MegaButton_button__njALO "
           type="button"
   >
-    Klikk her
+    <span class>
+      Klikk her
+    </span>
   </button>
 </div>
 `;
@@ -58,7 +66,9 @@ exports[`Tester/MegaButton WithAccesskey play-test 1`] = `
           accesskey="j"
           type="button"
   >
-    Klikk her
+    <span class>
+      Klikk her
+    </span>
   </button>
 </div>
 `;
@@ -69,7 +79,9 @@ exports[`Tester/MegaButton WithAriaDescribedby play-test 1`] = `
           type="button"
           aria-describedby="testid1234"
   >
-    Klikk her
+    <span class>
+      Klikk her
+    </span>
   </button>
 </div>
 `;
@@ -82,7 +94,9 @@ exports[`Tester/MegaButton WithAttributes play-test 1`] = `
           data-testid="123ID"
           type="button"
   >
-    Klikk her
+    <span class>
+      Klikk her
+    </span>
   </button>
 </div>
 `;
@@ -93,7 +107,9 @@ exports[`Tester/MegaButton WithDisabled play-test 1`] = `
           disabled
           type="button"
   >
-    Klikk her
+    <span class>
+      Klikk her
+    </span>
   </button>
 </div>
 `;
@@ -103,7 +119,9 @@ exports[`Tester/MegaButton WithEventHandlers play-test 1`] = `
   <button class="MegaButton_button__njALO "
           type="button"
   >
-    Knapp har blitt klikket på
+    <span class>
+      Knapp har blitt klikket på
+    </span>
   </button>
 </div>
 `;
@@ -114,7 +132,9 @@ exports[`Tester/MegaButton WithExternalIcon play-test 1`] = `
      href="#"
      role="button"
   >
-    Klikk her
+    <span class>
+      Klikk her
+    </span>
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz MegaButton_icon__KSvBN"
          viewbox="0 0 24 24"
          focusable="false"
@@ -134,7 +154,9 @@ exports[`Tester/MegaButton WithLongText smoke-test 1`] = `
   <button class="MegaButton_button__njALO "
           type="button"
   >
-    Denne knappen har en veldig lang tekst. Så lang at den må brekke.
+    <span class>
+      Denne knappen har en veldig lang tekst. Så lang at den må brekke.
+    </span>
   </button>
 </div>
 `;
@@ -144,7 +166,9 @@ exports[`Tester/MegaButton WithLongTextAndBreaking smoke-test 1`] = `
   <button class="MegaButton_button__njALO "
           type="button"
   >
-    Denneknappenharenveldiglangtekst.Sålangatdenmåbrekke.
+    <span class>
+      Denneknappenharenveldiglangtekst.Sålangatdenmåbrekke.
+    </span>
   </button>
 </div>
 `;
@@ -155,7 +179,9 @@ exports[`Tester/MegaButton WithLongTextAndExternalIcon smoke-test 1`] = `
      href="#"
      role="button"
   >
-    Denne knappen har en veldig lang tekst. Icon skal da plasseres løpende etter tekster på siste linje
+    <span class>
+      Denne knappen har en veldig lang tekst. Icon skal da plasseres løpende etter tekster på siste linje
+    </span>
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz MegaButton_icon__KSvBN"
          viewbox="0 0 24 24"
          focusable="false"
@@ -176,7 +202,40 @@ exports[`Tester/MegaButton WithRef play-test 1`] = `
           type="button"
           id="dummyIdForwardedFromRef"
   >
-    Klikk her
+    <span class>
+      Klikk her
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/MegaButton WithSpinner smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="bottomSpacingXL">
+    <button class="MegaButton_button__njALO "
+            type="button"
+    >
+      <span class>
+        Klikk her
+      </span>
+    </button>
+  </div>
+  <button class="MegaButton_button__njALO "
+          type="button"
+  >
+    <span class="MegaButton_hide__Z-Kku">
+      Klikk her
+    </span>
+    <div aria-live="polite"
+         aria-atomic="true"
+         class="Spinner_spinner__RJ9Al Spinner_spinner_white__YLIF- Spinner_spinner_flexColumn__3SCpy Spinner_spinner_large__QByjP MegaButton_spinner__VJhxH"
+    >
+      <div class="Spinner_spinnerAnimation__nAt8p ">
+      </div>
+      <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+        Laster inn
+      </span>
+    </div>
   </button>
 </div>
 `;
@@ -186,7 +245,9 @@ exports[`Tester/MegaButton WithType play-test 1`] = `
   <button class="MegaButton_button__njALO "
           type="submit"
   >
-    Klikk her
+    <span class>
+      Klikk her
+    </span>
   </button>
 </div>
 `;

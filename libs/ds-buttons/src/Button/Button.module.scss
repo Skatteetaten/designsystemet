@@ -218,3 +218,13 @@
     }
   }
 }
+
+.hide {
+  visibility: hidden;
+}
+
+.spinner {
+  position: absolute;
+  top: calc(50% - 0.5 * var(--size-extra-small));
+  left: calc(50% - 0.5 * var(--size-extra-small));
+}

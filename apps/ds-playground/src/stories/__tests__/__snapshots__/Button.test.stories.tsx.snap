@@ -209,6 +209,297 @@ exports[`Tester/Button WithRef play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Button WithSpinner smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="bottomSpacingXL">
+    <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+            type="button"
+    >
+      <span class="Button_buttonText__JxyB+">
+        Klikk her
+      </span>
+    </button>
+    <button class="Button_button__pkuNv Button_button_secondary__KxQlU  marginRightM"
+            type="button"
+    >
+      <span class="Button_buttonText__JxyB+">
+        Klikk her
+      </span>
+    </button>
+    <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  marginRightM"
+            type="button"
+    >
+      <span class="Button_buttonText__JxyB+">
+        Klikk her
+      </span>
+    </button>
+    <button class="Button_button__pkuNv Button_button_danger__0CE32  "
+            type="button"
+    >
+      <span class="Button_buttonText__JxyB+">
+        Klikk her
+      </span>
+    </button>
+  </div>
+  <div class="bottomSpacingXL">
+    <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+            type="button"
+    >
+      <span class="Button_buttonText__JxyB+ Button_hide__dLd9W">
+        Klikk her
+      </span>
+      <div aria-live="polite"
+           aria-atomic="true"
+           class="Spinner_spinner__RJ9Al Spinner_spinner_white__YLIF- Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC"
+      >
+        <div class="Spinner_spinnerAnimation__nAt8p ">
+        </div>
+        <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+          Laster inn
+        </span>
+      </div>
+    </button>
+    <button class="Button_button__pkuNv Button_button_secondary__KxQlU  marginRightM"
+            type="button"
+    >
+      <span class="Button_buttonText__JxyB+ Button_hide__dLd9W">
+        Klikk her
+      </span>
+      <div aria-live="polite"
+           aria-atomic="true"
+           class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC"
+      >
+        <div class="Spinner_spinnerAnimation__nAt8p ">
+        </div>
+        <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+          Laster inn
+        </span>
+      </div>
+    </button>
+    <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  marginRightM"
+            type="button"
+    >
+      <span class="Button_buttonText__JxyB+ Button_hide__dLd9W">
+        Klikk her
+      </span>
+      <div aria-live="polite"
+           aria-atomic="true"
+           class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC"
+      >
+        <div class="Spinner_spinnerAnimation__nAt8p ">
+        </div>
+        <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+          Laster inn
+        </span>
+      </div>
+    </button>
+    <button class="Button_button__pkuNv Button_button_danger__0CE32  "
+            type="button"
+    >
+      <span class="Button_buttonText__JxyB+ Button_hide__dLd9W">
+        Klikk her
+      </span>
+      <div aria-live="polite"
+           aria-atomic="true"
+           class="Spinner_spinner__RJ9Al Spinner_spinner_black__-biVj Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC"
+      >
+        <div class="Spinner_spinnerAnimation__nAt8p ">
+        </div>
+        <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+          Laster inn
+        </span>
+      </div>
+    </button>
+  </div>
+  <div class="bottomSpacingXL">
+    <button class="Button_button__pkuNv Button_button_primary__8Ouwo Button_button_withIcon__P1eEM marginRightM"
+            type="button"
+    >
+      <span class="Button_iconWrapper__9FDzj">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Button_icon__9r5UK"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M2 3v7l15 2-15 2v7l21-9L2 3Z">
+          </path>
+        </svg>
+      </span>
+      <span class="Button_buttonText__JxyB+">
+        Klikk her
+      </span>
+    </button>
+    <button class="Button_button__pkuNv Button_button_secondary__KxQlU Button_button_withIcon__P1eEM marginRightM"
+            type="button"
+    >
+      <span class="Button_iconWrapper__9FDzj">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Button_icon__9r5UK"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M2 3v7l15 2-15 2v7l21-9L2 3Z">
+          </path>
+        </svg>
+      </span>
+      <span class="Button_buttonText__JxyB+">
+        Klikk her
+      </span>
+    </button>
+    <button class="Button_button__pkuNv Button_button_tertiary__HcHyd Button_button_withIcon__P1eEM marginRightM"
+            type="button"
+    >
+      <span class="Button_iconWrapper__9FDzj">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Button_icon__9r5UK"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M2 3v7l15 2-15 2v7l21-9L2 3Z">
+          </path>
+        </svg>
+      </span>
+      <span class="Button_buttonText__JxyB+">
+        Klikk her
+      </span>
+    </button>
+    <button class="Button_button__pkuNv Button_button_danger__0CE32 Button_button_withIcon__P1eEM "
+            type="button"
+    >
+      <span class="Button_iconWrapper__9FDzj">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Button_icon__9r5UK"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M2 3v7l15 2-15 2v7l21-9L2 3Z">
+          </path>
+        </svg>
+      </span>
+      <span class="Button_buttonText__JxyB+">
+        Klikk her
+      </span>
+    </button>
+  </div>
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo Button_button_withIcon__P1eEM marginRightM"
+          type="button"
+  >
+    <span class="Button_iconWrapper__9FDzj Button_hide__dLd9W">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Button_icon__9r5UK"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M2 3v7l15 2-15 2v7l21-9L2 3Z">
+        </path>
+      </svg>
+    </span>
+    <span class="Button_buttonText__JxyB+ Button_hide__dLd9W">
+      Klikk her
+    </span>
+    <div aria-live="polite"
+         aria-atomic="true"
+         class="Spinner_spinner__RJ9Al Spinner_spinner_white__YLIF- Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC"
+    >
+      <div class="Spinner_spinnerAnimation__nAt8p ">
+      </div>
+      <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+        Laster inn
+      </span>
+    </div>
+  </button>
+  <button class="Button_button__pkuNv Button_button_secondary__KxQlU Button_button_withIcon__P1eEM marginRightM"
+          type="button"
+  >
+    <span class="Button_iconWrapper__9FDzj Button_hide__dLd9W">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Button_icon__9r5UK"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M2 3v7l15 2-15 2v7l21-9L2 3Z">
+        </path>
+      </svg>
+    </span>
+    <span class="Button_buttonText__JxyB+ Button_hide__dLd9W">
+      Klikk her
+    </span>
+    <div aria-live="polite"
+         aria-atomic="true"
+         class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC"
+    >
+      <div class="Spinner_spinnerAnimation__nAt8p ">
+      </div>
+      <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+        Laster inn
+      </span>
+    </div>
+  </button>
+  <button class="Button_button__pkuNv Button_button_tertiary__HcHyd Button_button_withIcon__P1eEM marginRightM"
+          type="button"
+  >
+    <span class="Button_iconWrapper__9FDzj Button_hide__dLd9W">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Button_icon__9r5UK"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M2 3v7l15 2-15 2v7l21-9L2 3Z">
+        </path>
+      </svg>
+    </span>
+    <span class="Button_buttonText__JxyB+ Button_hide__dLd9W">
+      Klikk her
+    </span>
+    <div aria-live="polite"
+         aria-atomic="true"
+         class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC"
+    >
+      <div class="Spinner_spinnerAnimation__nAt8p ">
+      </div>
+      <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+        Laster inn
+      </span>
+    </div>
+  </button>
+  <button class="Button_button__pkuNv Button_button_danger__0CE32 Button_button_withIcon__P1eEM "
+          type="button"
+  >
+    <span class="Button_iconWrapper__9FDzj Button_hide__dLd9W">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Button_icon__9r5UK"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M2 3v7l15 2-15 2v7l21-9L2 3Z">
+        </path>
+      </svg>
+    </span>
+    <span class="Button_buttonText__JxyB+ Button_hide__dLd9W">
+      Klikk her
+    </span>
+    <div aria-live="polite"
+         aria-atomic="true"
+         class="Spinner_spinner__RJ9Al Spinner_spinner_black__-biVj Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC"
+    >
+      <div class="Spinner_spinnerAnimation__nAt8p ">
+      </div>
+      <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+        Laster inn
+      </span>
+    </div>
+  </button>
+</div>
+`;
+
 exports[`Tester/Button WithType play-test 1`] = `
 <div data-test-block="true">
   <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "

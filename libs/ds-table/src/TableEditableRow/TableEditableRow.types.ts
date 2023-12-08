@@ -16,8 +16,8 @@ export interface TableEditableRowProps extends BaseProps {
   editButtonAriaDescribedby?: string;
   /** Posisjonen til ikonet: 'left', 'right'. */
   editButtonPosition?: Position;
-  /** Callback når redigerknappen trykkes*/
+  /** Callback når redigerknappen trykkes. */
   onEdit?: () => void;
-  /** innhold i raden*/
+  /** Innhold i raden*/
   children?: ReactNode;
 }

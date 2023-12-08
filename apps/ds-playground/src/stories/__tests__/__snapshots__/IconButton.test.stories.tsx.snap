@@ -383,6 +383,265 @@ exports[`Tester/IconButton WithSizeSmallAndOutline smoke-test 1`] = `
 </div>
 `;
 
+exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="bottomSpacingXL">
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH marginRightM"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:ri:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:ri:">
+          dummy tekst accessible name
+        </title>
+        <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+        </path>
+      </svg>
+    </button>
+    <button class="IconButton_button__mw9sG IconButton_button_small__etst4 IconButton_button_outlined__aDbNH marginRightM"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:rj:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:rj:">
+          dummy tekst accessible name
+        </title>
+        <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+        </path>
+      </svg>
+    </button>
+    <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt IconButton_button_outlined__aDbNH marginRightM"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:rk:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:rk:">
+          dummy tekst accessible name
+        </title>
+        <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+        </path>
+      </svg>
+    </button>
+    <button class="IconButton_button__mw9sG IconButton_button_large__IejTf IconButton_button_outlined__aDbNH "
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:rl:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:rl:">
+          dummy tekst accessible name
+        </title>
+        <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+        </path>
+      </svg>
+    </button>
+  </div>
+  <div class="bottomSpacingXL">
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH marginRightM"
+            type="button"
+    >
+      <div aria-live="polite"
+           aria-atomic="true"
+           class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt IconButton_spinner__K5kgR"
+      >
+        <div class="Spinner_spinnerAnimation__nAt8p ">
+        </div>
+        <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+          Laster inn
+        </span>
+      </div>
+    </button>
+    <button class="IconButton_button__mw9sG IconButton_button_small__etst4 IconButton_button_outlined__aDbNH marginRightM"
+            type="button"
+    >
+      <div aria-live="polite"
+           aria-atomic="true"
+           class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt IconButton_spinner__K5kgR"
+      >
+        <div class="Spinner_spinnerAnimation__nAt8p ">
+        </div>
+        <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+          Laster inn
+        </span>
+      </div>
+    </button>
+    <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt IconButton_button_outlined__aDbNH marginRightM"
+            type="button"
+    >
+      <div aria-live="polite"
+           aria-atomic="true"
+           class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_medium__kWbQU IconButton_spinner__K5kgR"
+      >
+        <div class="Spinner_spinnerAnimation__nAt8p ">
+        </div>
+        <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+          Laster inn
+        </span>
+      </div>
+    </button>
+    <button class="IconButton_button__mw9sG IconButton_button_large__IejTf IconButton_button_outlined__aDbNH "
+            type="button"
+    >
+      <div aria-live="polite"
+           aria-atomic="true"
+           class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_large__QByjP IconButton_spinner__K5kgR"
+      >
+        <div class="Spinner_spinnerAnimation__nAt8p ">
+        </div>
+        <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+          Laster inn
+        </span>
+      </div>
+    </button>
+  </div>
+  <div class="bottomSpacingXL">
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY  marginRightM"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:rm:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:rm:">
+          dummy tekst accessible name
+        </title>
+        <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+        </path>
+      </svg>
+    </button>
+    <button class="IconButton_button__mw9sG IconButton_button_small__etst4  marginRightM"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:rn:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:rn:">
+          dummy tekst accessible name
+        </title>
+        <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+        </path>
+      </svg>
+    </button>
+    <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  marginRightM"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:ro:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:ro:">
+          dummy tekst accessible name
+        </title>
+        <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+        </path>
+      </svg>
+    </button>
+    <button class="IconButton_button__mw9sG IconButton_button_large__IejTf  "
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:rp:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:rp:">
+          dummy tekst accessible name
+        </title>
+        <path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 1 1 4 0v.29c2.97.88 5 3.61 5 6.71v6l2 2Zm-7 2a2 2 0 0 1-4 0">
+        </path>
+      </svg>
+    </button>
+  </div>
+  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY  marginRightM"
+          type="button"
+  >
+    <div aria-live="polite"
+         aria-atomic="true"
+         class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt IconButton_spinner__K5kgR"
+    >
+      <div class="Spinner_spinnerAnimation__nAt8p ">
+      </div>
+      <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+        Laster inn
+      </span>
+    </div>
+  </button>
+  <button class="IconButton_button__mw9sG IconButton_button_small__etst4  marginRightM"
+          type="button"
+  >
+    <div aria-live="polite"
+         aria-atomic="true"
+         class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt IconButton_spinner__K5kgR"
+    >
+      <div class="Spinner_spinnerAnimation__nAt8p ">
+      </div>
+      <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+        Laster inn
+      </span>
+    </div>
+  </button>
+  <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  marginRightM"
+          type="button"
+  >
+    <div aria-live="polite"
+         aria-atomic="true"
+         class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_medium__kWbQU IconButton_spinner__K5kgR"
+    >
+      <div class="Spinner_spinnerAnimation__nAt8p ">
+      </div>
+      <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+        Laster inn
+      </span>
+    </div>
+  </button>
+  <button class="IconButton_button__mw9sG IconButton_button_large__IejTf  "
+          type="button"
+  >
+    <div aria-live="polite"
+         aria-atomic="true"
+         class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_large__QByjP IconButton_spinner__K5kgR"
+    >
+      <div class="Spinner_spinnerAnimation__nAt8p ">
+      </div>
+      <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+        Laster inn
+      </span>
+    </div>
+  </button>
+</div>
+`;
+
 exports[`Tester/IconButton WithType play-test 1`] = `
 <div data-test-block="true">
   <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "

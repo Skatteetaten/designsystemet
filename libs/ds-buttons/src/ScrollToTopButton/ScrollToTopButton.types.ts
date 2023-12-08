@@ -9,7 +9,7 @@ export interface ScrollToTopButtonProps extends BaseProps {
     label?: string;
   };
   /**
-   * Focus settes til main elmementet når knappen klikkes.
+   * Focus settes til main elementet når knappen klikkes.
    * Dersom main befinner seg i en shadow-DOM så må shadowRootNode angis for at fokus skal settes riktig.
    */
   shadowRootNode?: Document | ShadowRoot;

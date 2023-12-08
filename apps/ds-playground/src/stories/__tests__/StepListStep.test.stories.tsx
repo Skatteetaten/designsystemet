@@ -174,9 +174,9 @@ export const WithEditAccessibleDescription = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const endreButton = canvas.getByText(
-      dsI18n.t('ds_collections:steplist.Edit')
-    );
+    const endreButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_collections:steplist.Edit'),
+    });
     expect(endreButton).toHaveAccessibleDescription('tittel');
   },
   parameters: {

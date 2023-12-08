@@ -3,7 +3,10 @@
 /* eslint-disable sonarjs/no-duplicate-string */
 
 import { Button, getButtonVariantDefault } from '@skatteetaten/ds-buttons';
-import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  getCommonButtonTypeDefault,
+} from '@skatteetaten/ds-core-utils';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
@@ -16,6 +19,13 @@ export default {
   argTypes: {
     // Props
     children: { table: { category: category.props } },
+    hasSpinner: { table: { category: category.props } },
+    spinnerTitle: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: dsI18n.t('ds_status:spinner.LoadingLabel') },
+      },
+    },
     svgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
