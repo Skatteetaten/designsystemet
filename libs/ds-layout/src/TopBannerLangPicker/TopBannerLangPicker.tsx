@@ -47,6 +47,10 @@ export const TopBannerLangPicker = forwardRef<
 
     useEffect(() => {
       document.documentElement.lang = selectedLang;
+    });
+
+    useEffect(() => {
+      document.documentElement.lang = selectedLang;
     }, [selectedLang]);
 
     const handleMenuClick = (): void => {

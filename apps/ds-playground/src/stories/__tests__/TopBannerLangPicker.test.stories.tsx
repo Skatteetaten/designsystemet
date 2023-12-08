@@ -1,8 +1,8 @@
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { expect } from '@storybook/jest';
 import { Meta, StoryObj } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 
-// import { wrapper } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerLangPicker } from '../../../../../libs/ds-layout/src/TopBannerLangPicker/TopBannerLangPicker';
 // eslint-disable-next-line @nx/enforce-module-boundaries
@@ -30,6 +30,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+const menuText = dsI18n.t('ds_layout:topbannerbutton.Menu');
 const bokmalText = 'Bokmål';
 const englishText = 'English';
 const defaultArgs: TopBannerLangPickerProps = {};
@@ -83,17 +84,21 @@ export const WithAttributes = {
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults (LanguagePicker A1, A2 delvis, A7)',
+  name: 'Defaults (LanguagePicker A1, A2 delvis, A4, A7, B1, B2, B3)',
   args: {
     ...defaultArgs,
   },
   argTypes: {},
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const menuButton = canvas.getByRole('button', { name: bokmalText });
+    const menuButton = canvas.getByRole('button', {
+      name: `${bokmalText} ${menuText}`,
+    });
     await expect(menuButton).toBeInTheDocument();
-    // const menuText = canvas.getByText('Meny'); TODO - teksten Meny-tekstvariabel
+    await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
 
+    await menuButton.click();
+    await expect(menuButton).toHaveAttribute('aria-expanded', 'true');
     const list = canvas.getByRole('list');
     await expect(list).toBeInTheDocument();
     await expect(list.tagName).toBe('UL');
@@ -109,7 +114,7 @@ export const Defaults = {
     const samiskButton = canvas.getByRole('button', { name: 'Sámegiella' });
     await expect(samiskButton).toHaveAttribute('lang', 'se');
     // eslint-disable-next-line testing-library/no-node-access
-    const html = canvasElement.querySelector('html');
+    const html = document.querySelector('html');
     await expect(html).toHaveAttribute('lang', 'nb');
   },
 } satisfies Story;
@@ -123,7 +128,8 @@ export const WithShowSami = {
   argTypes: { showSami: { table: { disable: false } } },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    // TODO - må antagelig trykke på meny-knapp først
+    const menuButton = canvas.getByRole('button');
+    await menuButton.click();
     const listItems = canvas.getAllByRole('listitem');
     await expect(listItems).toHaveLength(3);
     for (const item of listItems) {
@@ -133,7 +139,7 @@ export const WithShowSami = {
 } satisfies Story;
 
 export const WithLocale = {
-  name: 'With Locale (LanguagePicker A7)',
+  name: 'With Locale (LanguagePicker A7, A4, B2)',
   args: {
     ...defaultArgs,
     locale: 'en',
@@ -141,13 +147,18 @@ export const WithLocale = {
   argTypes: { locale: { table: { disable: false } } },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const menuButton = canvas.getByRole('button', { name: englishText });
+    const menuButton = canvas.getByRole('button', {
+      name: `${englishText} ${menuText}`,
+    });
     await expect(menuButton).toBeInTheDocument();
-    // TODO - må antagelig trykke på meny-knapp først
+
+    await menuButton.click();
     const englishButton = canvas.getByRole('button', { name: englishText });
     await expect(englishButton).toHaveAttribute('aria-current', 'true');
     // eslint-disable-next-line testing-library/no-node-access
-    const html = canvasElement.querySelector('html');
+    const html = document.querySelector('html');
     await expect(html).toHaveAttribute('lang', 'en');
   },
 } satisfies Story;
+
+// TODO Lukke menyskuffen når et språk valg gjøres A4
