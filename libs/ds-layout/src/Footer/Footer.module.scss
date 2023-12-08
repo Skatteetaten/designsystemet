@@ -15,13 +15,20 @@
   background-color: var(--theme-primary);
   color: var(--palette-graphite-0);
 
+  &Container {
+    max-width: calc(
+      var(--semantic-responsive-container) - 2 * var(--spacing-m)
+    );
+    margin: auto;
+
+    @media (min-width: $breakpoint-s) {
+      max-width: var(--semantic-responsive-container);
+    }
+  }
+
   .columns {
     display: grid;
-    width: 100%;
-    max-width: calc(
-      var(--semantic-responsive-container) - calc(var(--spacing-m) * 2)
-    );
-    margin: auto auto var(--spacing-mega);
+    margin-bottom: var(--spacing-mega);
     gap: var(--spacing-xl);
     grid-template-columns: 1fr;
 
@@ -41,29 +48,29 @@
       }
     }
   }
-}
 
-.logoContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--spacing-l);
-}
+  .logoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-l);
+  }
 
-.skatteetatenLogo {
-  width: 4rem;
-}
+  .skatteetatenLogo {
+    width: 4rem;
+  }
 
-.linkContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0;
-  margin-top: var(--spacing-xl);
-  margin-bottom: 0;
-  gap: var(--spacing-xs) var(--spacing-l);
+  .linkContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin-top: var(--spacing-xl);
+    margin-bottom: 0;
+    gap: var(--spacing-xs) var(--spacing-l);
 
-  .linkList {
-    list-style: none;
+    .linkList {
+      list-style: none;
+    }
   }
 }

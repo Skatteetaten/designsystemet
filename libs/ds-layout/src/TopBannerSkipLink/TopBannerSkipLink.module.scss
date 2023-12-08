@@ -31,13 +31,13 @@
     }
 
     @media (min-width: $breakpoint-m) {
-      width: 100%;
-      max-width: var(--container-l);
+      width: var(--container-m);
       box-sizing: border-box;
+      padding-left: 0;
     }
 
     @media (min-width: $breakpoint-l) {
-      padding-left: 0;
+      width: var(--container-l);
     }
   }
 }

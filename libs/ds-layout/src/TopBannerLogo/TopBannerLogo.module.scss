@@ -3,6 +3,7 @@
 .logoContainer {
   display: flex;
   width: fit-content;
+  height: 40px;
   padding: var(--spacing-xs);
 }
 
@@ -16,17 +17,12 @@
 }
 
 .logo {
-  width: 100%;
-  height: auto;
-
   &_mobile {
     display: inline-block;
-    width: 40px;
   }
 
   &_desktop {
     display: none;
-    width: 150px;
   }
 
   @media (min-width: $breakpoint-m) {

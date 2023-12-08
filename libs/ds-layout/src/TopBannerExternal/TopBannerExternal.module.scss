@@ -2,11 +2,25 @@
 
 .topContainer {
   display: flex;
-  max-width: var(--container-l);
+  width: calc(var(--container-xs) - 2 * var(--spacing-m));
   justify-content: space-between;
-  padding: var(--spacing-m) var(--spacing-m) var(--spacing-s);
+  padding-top: var(--spacing-s);
   margin: auto;
   gap: var(--spacing-s);
+
+  @media (min-width: $breakpoint-s) {
+    width: var(--container-s);
+    padding-top: var(--spacing-m);
+    padding-bottom: var(--spacing-s);
+  }
+
+  @media (min-width: $breakpoint-m) {
+    width: var(--container-m);
+  }
+
+  @media (min-width: $breakpoint-l) {
+    width: var(--container-l);
+  }
 
   .contentContainer {
     display: flex;
@@ -53,7 +67,7 @@
 .mainMenu {
   position: absolute;
   z-index: 101;
-  top: 6rem;
+  top: 5rem;
   right: 0;
   left: 0;
   background-color: var(--palette-graphite-5);
@@ -62,14 +76,10 @@
     top: 5.5rem;
   }
 
-  @media (min-width: $breakpoint-m) {
-    top: 5rem;
-  }
-
   .columns {
     display: grid;
     max-width: calc(
-      var(--semantic-responsive-container) - calc(var(--spacing-m) * 2)
+      var(--semantic-responsive-container) - 2 * var(--spacing-m)
     );
     padding: var(--spacing-xl) 0;
     margin: auto;
@@ -77,6 +87,8 @@
     grid-template-columns: 1fr;
 
     @media (min-width: $breakpoint-s) {
+      max-width: var(--semantic-responsive-container);
+
       &Three,
       &Two {
         grid-template-columns: 1fr 1fr;
