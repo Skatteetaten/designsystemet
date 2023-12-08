@@ -1,4 +1,4 @@
-# Skatteetatens designsystem
+# Skatteetatens designsystem ds-layout
 
 Designsystemet består av byggeklosser i form av React-komponenter som brukes til å lage Skatteetatens løsninger på digitale flater.
 

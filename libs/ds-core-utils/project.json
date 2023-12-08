@@ -32,7 +32,7 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
@@ -45,8 +45,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/ds-core-utils"],
       "options": {
-        "jestConfig": "libs/ds-core-utils/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/ds-core-utils/jest.config.ts"
       }
     },
     "stylelint": {
