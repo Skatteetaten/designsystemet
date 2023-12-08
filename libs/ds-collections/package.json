@@ -18,7 +18,8 @@
     "@skatteetaten/ds-icons": "*",
     "@skatteetaten/ds-buttons": "*",
     "@skatteetaten/ds-content": "*",
-    "@skatteetaten/ds-typography": "*"
+    "@skatteetaten/ds-typography": "*",
+    "@skatteetaten/ds-progress": "*"
   },
   "scripts": {}
 }

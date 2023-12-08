@@ -82,7 +82,7 @@ export const TopBannerLangPicker = forwardRef<
     if (showSami) {
       Object.assign(defaultLanguages, {
         sa: {
-          lang: 'sa',
+          lang: 'se',
           displayName: 'Sámegiella',
           flagIcon: <SamiFlagIcon />,
         },

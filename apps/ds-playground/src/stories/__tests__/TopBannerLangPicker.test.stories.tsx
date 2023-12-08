@@ -30,6 +30,8 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+const bokmalText = 'Bokmål';
+const englishText = 'English';
 const defaultArgs: TopBannerLangPickerProps = {};
 
 export const WithRef = {
@@ -81,12 +83,71 @@ export const WithAttributes = {
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults (LanguagePicker A1, A2 delvis)',
+  name: 'Defaults (LanguagePicker A1, A2 delvis, A7)',
   args: {
     ...defaultArgs,
   },
-  argTypes: { showSami: { table: { disable: false } } },
+  argTypes: {},
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const menuButton = canvas.getByRole('button', { name: bokmalText });
+    await expect(menuButton).toBeInTheDocument();
+    // const menuText = canvas.getByText('Meny'); TODO - teksten Meny-tekstvariabel
+
+    const list = canvas.getByRole('list');
+    await expect(list).toBeInTheDocument();
+    await expect(list.tagName).toBe('UL');
+    const listItems = canvas.getAllByRole('listitem');
+    await expect(listItems).toHaveLength(4);
+    const bokmalButton = canvas.getByRole('button', { name: bokmalText });
+    await expect(bokmalButton).toHaveAttribute('lang', 'nb');
+    await expect(bokmalButton).toHaveAttribute('aria-current', 'true');
+    const nynorskButton = canvas.getByRole('button', { name: 'Nynorsk' });
+    await expect(nynorskButton).toHaveAttribute('lang', 'nn');
+    const englishButton = canvas.getByRole('button', { name: englishText });
+    await expect(englishButton).toHaveAttribute('lang', 'en');
+    const samiskButton = canvas.getByRole('button', { name: 'Sámegiella' });
+    await expect(samiskButton).toHaveAttribute('lang', 'se');
+    // eslint-disable-next-line testing-library/no-node-access
+    const html = canvasElement.querySelector('html');
+    await expect(html).toHaveAttribute('lang', 'nb');
+  },
 } satisfies Story;
 
-// TODO - at WithLocale
-// TODO - WithoutSami
+export const WithShowSami = {
+  name: 'With ShowSami (LanguagePicker A2 delvis)',
+  args: {
+    ...defaultArgs,
+    showSami: false,
+  },
+  argTypes: { showSami: { table: { disable: false } } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    // TODO - må antagelig trykke på meny-knapp først
+    const listItems = canvas.getAllByRole('listitem');
+    await expect(listItems).toHaveLength(3);
+    for (const item of listItems) {
+      await expect(item).not.toHaveAttribute('lang', 'se');
+    }
+  },
+} satisfies Story;
+
+export const WithLocale = {
+  name: 'With Locale (LanguagePicker A7)',
+  args: {
+    ...defaultArgs,
+    locale: 'en',
+  },
+  argTypes: { locale: { table: { disable: false } } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const menuButton = canvas.getByRole('button', { name: englishText });
+    await expect(menuButton).toBeInTheDocument();
+    // TODO - må antagelig trykke på meny-knapp først
+    const englishButton = canvas.getByRole('button', { name: englishText });
+    await expect(englishButton).toHaveAttribute('aria-current', 'true');
+    // eslint-disable-next-line testing-library/no-node-access
+    const html = canvasElement.querySelector('html');
+    await expect(html).toHaveAttribute('lang', 'en');
+  },
+} satisfies Story;

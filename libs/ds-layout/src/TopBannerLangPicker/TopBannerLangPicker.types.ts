@@ -8,7 +8,7 @@ import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 import { TopBannerLangPickerButtonProps } from '../TopBannerLangPickerButton/TopBannerLangPickerButton.types';
 
-export const langArr = ['nb', 'nn', 'en', 'sa'] as const;
+export const langArr = ['nb', 'nn', 'en', 'se'] as const;
 export type Lang = (typeof langArr)[number];
 
 export interface TopBannerLangPickerProps extends BaseProps {
