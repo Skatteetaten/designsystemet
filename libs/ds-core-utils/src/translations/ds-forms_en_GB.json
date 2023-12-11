@@ -1,14 +1,18 @@
 {
   "datepicker.ChooseDate": "Choose date",
   "errorsummary.Title": "To continue you must correct {{errorAmount}} error(s):",
-  "fileuploader.AcceptedFileFormats": "Files you can upload:",
-  "fileuploader.AddFile": "Add file(s)",
-  "fileuploader.DeleteFile": "Delete file",
+  "fileuploader.AddMultipleLabel": "Add file(s)",
+  "fileuploader.AddSingleLabel": "Add file",
+  "fileuploader.DeleteLabel": "Delete file",
   "fileuploader.FileFormatError": "Can not upload {{filnavn}}. Please use an accepted file format.",
+  "fileuploader.FileIconLabel": "File",
   "fileuploader.FileSizeError": "We could not receive this file because it is too large. Files cannot exceed {{filstoerrelsegrense}} MB. You can try splitting the file into smaller files or using a format that takes up less space.",
+  "fileuploader.FormatLabel": "Files you can upload:",
   "fileuploader.GeneralDeleteError": "Can't delete file",
   "fileuploader.GeneralUploadError": "Can't upload file",
+  "fileuploader.InProgressLabel": "(Opplasting pågår)",
   "fileuploader.NoRightsToDeleteError": "You do not have permission to delete files",
   "fileuploader.NoRightsUploadError": "You do not have permission to upload files",
-  "fileuploader.UploadedHeading": "Uploaded:"
+  "fileuploader.UploadedHeading": "Uploaded:",
+  "fileuploader.UploadedSummary": "({{fileCount}} file(s) uploaded)"
 }

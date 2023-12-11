@@ -19,6 +19,7 @@ export const Spinner = forwardRef<HTMLDivElement, SpinnerProps>(
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
+      classNames,
       color = getSpinnerColorDefault(),
       titlePosition = getSpinnerTitlePositionDefault(),
       size = getSpinnerSizeDefault(),
@@ -47,7 +48,11 @@ export const Spinner = forwardRef<HTMLDivElement, SpinnerProps>(
         ? styles.spinner_flexRow
         : styles.spinner_flexColumn;
 
-    const concatenatedClassnames = `${styles.spinner} ${colorClassname} ${positionClassname} ${sizeClassname} ${className}`;
+    const concatenatedClassnames = `${
+      styles.spinner
+    } ${colorClassname} ${positionClassname} ${sizeClassname} ${className} ${
+      classNames?.container ?? ''
+    }`;
     return (
       <div
         ref={ref}
@@ -58,13 +63,17 @@ export const Spinner = forwardRef<HTMLDivElement, SpinnerProps>(
         lang={lang}
         data-testid={dataTestId}
       >
-        <div className={`${styles.spinnerAnimation} `} />
+        <div
+          className={`${styles.spinnerAnimation} ${
+            classNames?.animation ?? ''
+          }`}
+        />
         <span
           className={`${styles.spinnerTitle} ${
             hideTitle ? styles.srOnly : ''
           } ${
             titlePosition === 'bottom' ? styles.spinnerTitle_centerText : ''
-          }`}
+          } ${classNames?.title ?? ''}`}
         >
           {isRendered && (children ?? t('spinner.LoadingLabel'))}
         </span>
