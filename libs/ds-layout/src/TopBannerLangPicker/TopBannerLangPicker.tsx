@@ -91,7 +91,6 @@ export const TopBannerLangPicker = forwardRef<
       en: { lang: 'en', displayName: 'English', flagIcon: <EnglishFlagIcon /> },
     };
     if (showSami) {
-      console.log('Kommer jeg hit?');
       Object.assign(defaultLanguages, {
         se: {
           lang: 'se',

@@ -846,6 +846,51 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
         </a>
         <div class="TopBannerExternal_contentContainer__h2K6k">
           <div class="TopBannerExternal_content__obwYA">
+            <div class>
+              <div class>
+              </div>
+              <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+                      lang="nb"
+                      aria-expanded="false"
+                      type="button"
+              >
+                <span class="TopBannerButton_iconWrapper__bu153">
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+                    </path>
+                  </svg>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m7 10 5 5 5-5H7Z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="TopBannerButton_buttonText__guqHQ ">
+                  Bokmål
+                  <span class="TopBannerLangPicker_srOnly__33VA7">
+                    Meny
+                  </span>
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="m7 10 5 5 5-5H7Z">
+                  </path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>

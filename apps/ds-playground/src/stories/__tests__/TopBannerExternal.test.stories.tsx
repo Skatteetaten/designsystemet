@@ -142,12 +142,9 @@ export const WithDefaults = {
     const skipLink = canvas.getByText(skipLinkText);
     expect(skipLink).toBeInTheDocument();
 
-    // TODO FRONT-1161 test at språkvelger finnes
-
+    await expect(canvas.getByText(menuText)).toBeInTheDocument();
     // eslint-disable-next-line testing-library/no-node-access
     await expect(canvas.queryByText(loginText)).not.toBeInTheDocument();
-    // eslint-disable-next-line testing-library/no-node-access
-    await expect(canvas.queryByText(menuText)).not.toBeInTheDocument();
     // eslint-disable-next-line testing-library/no-node-access
     await expect(canvas.queryByText(logoutText)).not.toBeInTheDocument();
   },
