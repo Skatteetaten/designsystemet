@@ -38,6 +38,7 @@ export const TopBannerExternal = forwardRef<
       lang,
       'data-testid': dataTestId,
       firstColumn,
+      locale,
       logo,
       logoAltText,
       logoAs,
@@ -49,7 +50,9 @@ export const TopBannerExternal = forwardRef<
       skipLinkTarget,
       thirdColumn,
       user,
+      showSami,
       children,
+      onLanguageClick,
       onLogInClick,
       onLogOutClick,
       onUserClick,
@@ -167,7 +170,11 @@ export const TopBannerExternal = forwardRef<
                   </>
                 )}
 
-                <TopBannerLangPicker />
+                <TopBannerLangPicker
+                  locale={locale}
+                  showSami={showSami}
+                  onLanguageClick={onLanguageClick}
+                />
 
                 {onLogOutClick && user && (
                   <>

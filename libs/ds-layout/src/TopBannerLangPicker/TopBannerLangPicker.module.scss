@@ -22,15 +22,12 @@
   margin-top: var(--spacing-l);
 
   @media (min-width: $breakpoint-xs) {
-    // right: auto;
-    // left: auto;
+    left: auto;
     max-width: 167px;
   }
 
   &Arrow {
     position: absolute;
-
-    // z-index: -1;
     top: -8px;
     right: 20px;
     width: 1rem;

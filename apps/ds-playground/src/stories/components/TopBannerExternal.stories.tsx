@@ -11,6 +11,8 @@ import { Modal } from '@skatteetaten/ds-overlays';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
+import { dsI18n } from '../../../../../libs/ds-core-utils/src';
+// eslint-disable-next-line @nx/enforce-module-boundaries
 import {
   getTopBannerLogoAsDefault,
   getTopBannerLogoHrefDefault,
@@ -33,6 +35,8 @@ export default {
   title: 'Komponenter/TopBannerExternal',
   argTypes: {
     // Props
+    showSami: { table: { category: category.props } },
+    locale: { table: { category: category.props } },
     children: { control: 'text', table: { category: category.props } },
     skipLinkText: { table: { category: category.props } },
     skipLinkTarget: {
@@ -82,6 +86,10 @@ export default {
       control: { type: null },
       table: { category: category.event },
     },
+    onLanguageClick: {
+      control: { type: null },
+      table: { category: category.event },
+    },
   },
   parameters: {
     version: getVersion('ds-layout'),
@@ -102,6 +110,14 @@ export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
   const topBannerRef = useRef<TopBannerExternalHandle>(null);
   const [user, setUser] = useState<User>();
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+
+  const handleLanguageClick = (
+    e: React.MouseEvent<HTMLButtonElement>
+  ): void => {
+    const lang = e.currentTarget.lang;
+    const suffix = lang === 'en' ? '_GB' : '_NO';
+    dsI18n.changeLanguage(lang + suffix);
+  };
 
   const handleLogOut = (): void => {
     setUser(undefined);
@@ -154,6 +170,7 @@ export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
         secondColumn={isLoggedIn ? 'Second column' : ''}
         thirdColumn={isLoggedIn ? 'Third column' : ''}
         user={user}
+        onLanguageClick={handleLanguageClick}
         onLogInClick={handleLogIn}
         onLogOutClick={handleLogOut}
         onUserClick={(): void => modalRef.current?.showModal()}
@@ -192,6 +209,14 @@ export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
   const [user, setUser] = useState<User>();
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
 
+  const handleLanguageClick = (
+    e: React.MouseEvent<HTMLButtonElement>
+  ): void => {
+    const lang = e.currentTarget.lang;
+    const suffix = lang === 'en' ? '_GB' : '_NO';
+    dsI18n.changeLanguage(lang + suffix);
+  };
+
   const handleLogOut = (): void => {
     setUser(undefined);
     setIsLoggedIn(false);
@@ -243,6 +268,7 @@ export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
         secondColumn={isLoggedIn ? 'Second column' : ''}
         thirdColumn={isLoggedIn ? 'Third column' : ''}
         user={user}
+        onLanguageClick={handleLanguageClick}
         onLogInClick={handleLogIn}
         onLogOutClick={handleLogOut}
         onUserClick={(): void => modalRef.current?.showModal()}
