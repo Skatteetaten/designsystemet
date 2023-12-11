@@ -1,5 +1,6 @@
 import {
   ComponentPropsWithoutRef,
+  KeyboardEventHandler,
   MouseEventHandler,
   ReactElement,
   ReactNode,
@@ -12,13 +13,14 @@ export type TopBannerButtonVariant = (typeof topBannerButtonVariantArr)[number];
 
 type RequiredButtonHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'button'>,
-  'onClick'
+  'onClick' | 'onKeyDown'
 >;
 
 type ButtonHTMLAttributes = Partial<RequiredButtonHTMLAttributes>;
 interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
   ariaExpanded?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
+  onKeyDown?: KeyboardEventHandler<HTMLButtonElement>;
 }
 
 export interface TopBannerButtonProps

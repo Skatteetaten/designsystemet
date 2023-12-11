@@ -1,10 +1,14 @@
-import { ComponentPropsWithoutRef, MouseEventHandler } from 'react';
+import {
+  ComponentPropsWithoutRef,
+  KeyboardEventHandler,
+  MouseEventHandler,
+} from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 type RequiredButtonHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'button'>,
-  'onClick'
+  'onClick' | 'onKeyDown'
 >;
 
 type ButtonHTMLAttributes = Partial<RequiredButtonHTMLAttributes>;
@@ -12,6 +16,7 @@ type ButtonHTMLAttributes = Partial<RequiredButtonHTMLAttributes>;
 interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
   ariaCurrent?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
+  onKeyDown?: KeyboardEventHandler<HTMLButtonElement>;
 }
 
 export interface TopBannerLangPickerButtonProps

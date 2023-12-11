@@ -1,41 +1,56 @@
 @import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 @import 'libs/ds-core-utils/src/styles.scss';
 
-.list {
+.overlay {
+  position: fixed;
+  z-index: 999;
+  background: rgba(255, 255, 255, 80%);
+  inset: 0;
+}
+
+.menuButton {
+  z-index: 1000;
+}
+
+.menu {
   position: absolute;
-  z-index: 102;
+  z-index: 1000;
   top: 4rem;
   right: var(--spacing-m);
   left: var(--spacing-m);
   width: 100%;
-  padding: 0;
-  border: 1px solid var(--palette-graphite-70);
   margin-top: var(--spacing-l);
-  list-style-type: none;
 
   @media (min-width: $breakpoint-xs) {
-    right: auto;
-    left: auto;
-    max-width: 160px;
+    // right: auto;
+    // left: auto;
+    max-width: 167px;
   }
 
-  &::before {
+  &Arrow {
     position: absolute;
-    left: 50%;
-    display: inline-block;
-    width: 1.5rem;
-    height: 1.5rem;
-    border-top: 1px solid var(--palette-graphite-70);
-    border-left: 1px solid var(--palette-graphite-70);
-    margin-top: -14px;
-    background-color: var(--palette-graphite-0);
-    content: '';
-    transform: rotate(45deg);
 
-    @media (min-width: $breakpoint-xs) {
-      left: var(--spacing-m);
-    }
+    // z-index: -1;
+    top: -8px;
+    right: 20px;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid;
+    border-color: var(--palette-graphite-70);
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    background-color: var(--palette-graphite-0);
+    transform: rotate(45deg);
   }
+}
+
+.list {
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--palette-graphite-70);
+  margin: 0;
+  box-shadow: 3px 2px 5px 0 #d9d9d9;
+  list-style-type: none;
 
   &Item {
     border-bottom: 1px solid var(--palette-graphite-70);

@@ -24,6 +24,7 @@ export const TopBannerButton = forwardRef<
       ariaExpanded,
       hasArrow,
       onClick,
+      onKeyDown,
       children,
     },
     ref
@@ -43,6 +44,7 @@ export const TopBannerButton = forwardRef<
         aria-expanded={ariaExpanded}
         type={'button'}
         onClick={onClick}
+        onKeyDown={onKeyDown}
       >
         <span className={styles.iconWrapper}>
           <Icon svgPath={svgPath} className={styles.icon} title={title} />

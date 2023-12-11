@@ -39,8 +39,8 @@ export const TopBannerLangPicker = forwardRef<
   ): JSX.Element => {
     const { t } = useTranslation('ds_layout', { i18n: dsI18n });
 
-    const menuRef = useRef<HTMLUListElement>(null);
     const menuButtonRef = useRef<HTMLButtonElement>(null);
+    const menuRef = useRef<HTMLDivElement>(null);
 
     const [selectedLang, setSelectedLang] = useState<Lang>(locale);
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -64,8 +64,16 @@ export const TopBannerLangPicker = forwardRef<
       setSelectedLang(lang);
       setIsMenuOpen(false);
       menuButtonRef.current?.focus();
-
       onLanguageClick?.(e);
+    };
+
+    const handleCloseMenuKeyDown = (
+      e: React.KeyboardEvent<HTMLButtonElement>
+    ): void => {
+      e.stopPropagation();
+      if (!e.shiftKey && e.key === 'Tab') {
+        setIsMenuOpen(false);
+      }
     };
 
     // eslint-disable-next-line  @typescript-eslint/no-explicit-any
@@ -82,10 +90,10 @@ export const TopBannerLangPicker = forwardRef<
       },
       en: { lang: 'en', displayName: 'English', flagIcon: <EnglishFlagIcon /> },
     };
-
     if (showSami) {
+      console.log('Kommer jeg hit?');
       Object.assign(defaultLanguages, {
-        sa: {
+        se: {
           lang: 'se',
           displayName: 'Sámegiella',
           flagIcon: <SamiFlagIcon />,
@@ -101,38 +109,56 @@ export const TopBannerLangPicker = forwardRef<
         lang={lang}
         data-testid={dataTestId}
       >
-        {/** TODO - hardkodet icon må endres til riktig flag når nytt språk velges */}
+        <div className={isMenuOpen ? styles.overlay : ''} />
+
+        {/* TODO - hardkodet icon må endres til flag som også endres når nytt språk velges:
+         * {defaultLanguages[selectedLang].flagIcon}  */}
         <TopBannerButton
           ref={menuButtonRef}
           lang={selectedLang}
+          className={styles.menuButton}
           svgPath={MenuSVGpath}
           ariaExpanded={isMenuOpen}
           hasArrow
           onClick={handleMenuClick}
+          onKeyDown={(e) => {
+            e.stopPropagation();
+            if (e.shiftKey && e.key === 'Tab') {
+              setIsMenuOpen(false);
+            }
+          }}
         >
           {defaultLanguages[selectedLang].displayName}
           <span className={styles.srOnly}>{t('topbannerbutton.Menu')}</span>
         </TopBannerButton>
         {isMenuOpen && (
-          <ul ref={menuRef} className={styles.list}>
-            {Object.values(defaultLanguages).map((language, index) => {
-              return (
-                <li
-                  key={`${language.lang}-${index}`}
-                  className={styles.listItem}
-                >
-                  <TopBannerLangPicker.Button
-                    lang={language.lang}
-                    ariaCurrent={language.lang === selectedLang}
-                    flagIcon={language.flagIcon}
-                    onClick={handleLanguageClick}
+          <div ref={menuRef} className={styles.menu}>
+            <div className={styles.menuArrow} />
+            <ul className={styles.list}>
+              {Object.values(defaultLanguages).map((language, index) => {
+                return (
+                  <li
+                    key={`${language.lang}-${index}`}
+                    className={styles.listItem}
                   >
-                    {language.displayName}
-                  </TopBannerLangPicker.Button>
-                </li>
-              );
-            })}
-          </ul>
+                    <TopBannerLangPicker.Button
+                      lang={language.lang}
+                      ariaCurrent={language.lang === selectedLang}
+                      flagIcon={language.flagIcon}
+                      onClick={handleLanguageClick}
+                      onKeyDown={
+                        Object.keys(defaultLanguages).length === index + 1
+                          ? handleCloseMenuKeyDown
+                          : undefined
+                      }
+                    >
+                      {language.displayName}
+                    </TopBannerLangPicker.Button>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         )}
       </div>
     );

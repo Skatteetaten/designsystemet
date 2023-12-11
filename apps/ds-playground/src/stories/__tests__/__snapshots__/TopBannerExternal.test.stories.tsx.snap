@@ -54,6 +54,51 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                 Meny
               </span>
             </button>
+            <div class>
+              <div class>
+              </div>
+              <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+                      lang="nb"
+                      aria-expanded="false"
+                      type="button"
+              >
+                <span class="TopBannerButton_iconWrapper__bu153">
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+                    </path>
+                  </svg>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m7 10 5 5 5-5H7Z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="TopBannerButton_buttonText__guqHQ ">
+                  Bokmål
+                  <span class="TopBannerLangPicker_srOnly__33VA7">
+                    Meny
+                  </span>
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="m7 10 5 5 5-5H7Z">
+                  </path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -103,6 +148,51 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
         </a>
         <div class="TopBannerExternal_contentContainer__h2K6k">
           <div class="TopBannerExternal_content__obwYA">
+            <div class>
+              <div class>
+              </div>
+              <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+                      lang="nb"
+                      aria-expanded="false"
+                      type="button"
+              >
+                <span class="TopBannerButton_iconWrapper__bu153">
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+                    </path>
+                  </svg>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m7 10 5 5 5-5H7Z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="TopBannerButton_buttonText__guqHQ ">
+                  Bokmål
+                  <span class="TopBannerLangPicker_srOnly__33VA7">
+                    Meny
+                  </span>
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="m7 10 5 5 5-5H7Z">
+                  </path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -152,6 +242,51 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
         </a>
         <div class="TopBannerExternal_contentContainer__h2K6k">
           <div class="TopBannerExternal_content__obwYA">
+            <div class>
+              <div class>
+              </div>
+              <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+                      lang="nb"
+                      aria-expanded="false"
+                      type="button"
+              >
+                <span class="TopBannerButton_iconWrapper__bu153">
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+                    </path>
+                  </svg>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m7 10 5 5 5-5H7Z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="TopBannerButton_buttonText__guqHQ ">
+                  Bokmål
+                  <span class="TopBannerLangPicker_srOnly__33VA7">
+                    Meny
+                  </span>
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="m7 10 5 5 5-5H7Z">
+                  </path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -201,6 +336,51 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
         </a>
         <div class="TopBannerExternal_contentContainer__h2K6k">
           <div class="TopBannerExternal_content__obwYA">
+            <div class>
+              <div class>
+              </div>
+              <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+                      lang="nb"
+                      aria-expanded="false"
+                      type="button"
+              >
+                <span class="TopBannerButton_iconWrapper__bu153">
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+                    </path>
+                  </svg>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m7 10 5 5 5-5H7Z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="TopBannerButton_buttonText__guqHQ ">
+                  Bokmål
+                  <span class="TopBannerLangPicker_srOnly__33VA7">
+                    Meny
+                  </span>
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="m7 10 5 5 5-5H7Z">
+                  </path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -250,6 +430,51 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
         </a>
         <div class="TopBannerExternal_contentContainer__h2K6k">
           <div class="TopBannerExternal_content__obwYA">
+            <div class>
+              <div class>
+              </div>
+              <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+                      lang="nb"
+                      aria-expanded="false"
+                      type="button"
+              >
+                <span class="TopBannerButton_iconWrapper__bu153">
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+                    </path>
+                  </svg>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m7 10 5 5 5-5H7Z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="TopBannerButton_buttonText__guqHQ ">
+                  Bokmål
+                  <span class="TopBannerLangPicker_srOnly__33VA7">
+                    Meny
+                  </span>
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="m7 10 5 5 5-5H7Z">
+                  </path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -299,6 +524,51 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
         </a>
         <div class="TopBannerExternal_contentContainer__h2K6k">
           <div class="TopBannerExternal_content__obwYA">
+            <div class>
+              <div class>
+              </div>
+              <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+                      lang="nb"
+                      aria-expanded="false"
+                      type="button"
+              >
+                <span class="TopBannerButton_iconWrapper__bu153">
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+                    </path>
+                  </svg>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m7 10 5 5 5-5H7Z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="TopBannerButton_buttonText__guqHQ ">
+                  Bokmål
+                  <span class="TopBannerLangPicker_srOnly__33VA7">
+                    Meny
+                  </span>
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="m7 10 5 5 5-5H7Z">
+                  </path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -352,6 +622,51 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
         </a>
         <div class="TopBannerExternal_contentContainer__h2K6k">
           <div class="TopBannerExternal_content__obwYA">
+            <div class>
+              <div class>
+              </div>
+              <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+                      lang="nb"
+                      aria-expanded="false"
+                      type="button"
+              >
+                <span class="TopBannerButton_iconWrapper__bu153">
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+                    </path>
+                  </svg>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m7 10 5 5 5-5H7Z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="TopBannerButton_buttonText__guqHQ ">
+                  Bokmål
+                  <span class="TopBannerLangPicker_srOnly__33VA7">
+                    Meny
+                  </span>
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="m7 10 5 5 5-5H7Z">
+                  </path>
+                </svg>
+              </button>
+            </div>
             <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
                     type="button"
             >
@@ -419,24 +734,69 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
         </a>
         <div class="TopBannerExternal_contentContainer__h2K6k">
           <div class>
-            <label id="labelId-:r8:"
+            <label id="labelId-:rh:"
                    class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
-                   for="textFieldTextboxId-:r7:"
+                   for="textFieldTextboxId-:rg:"
             >
               Søk
             </label>
-            <input id="textFieldTextboxId-:r7:"
+            <input id="textFieldTextboxId-:rg:"
                    class="TextField_textbox__qbZlk"
                    placeholder="Søk"
                    value
             >
-            <div id="textFieldErrorId-:r6:"
+            <div id="textFieldErrorId-:rf:"
                  aria-live="assertive"
                  aria-atomic="true"
             >
             </div>
           </div>
           <div class="TopBannerExternal_content__obwYA">
+            <div class>
+              <div class>
+              </div>
+              <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+                      lang="nb"
+                      aria-expanded="false"
+                      type="button"
+              >
+                <span class="TopBannerButton_iconWrapper__bu153">
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+                    </path>
+                  </svg>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m7 10 5 5 5-5H7Z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="TopBannerButton_buttonText__guqHQ ">
+                  Bokmål
+                  <span class="TopBannerLangPicker_srOnly__33VA7">
+                    Meny
+                  </span>
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="m7 10 5 5 5-5H7Z">
+                  </path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -564,6 +924,51 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                   </div>
                 </div>
               </nav>
+            </div>
+            <div class>
+              <div class>
+              </div>
+              <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+                      lang="nb"
+                      aria-expanded="false"
+                      type="button"
+              >
+                <span class="TopBannerButton_iconWrapper__bu153">
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+                    </path>
+                  </svg>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m7 10 5 5 5-5H7Z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="TopBannerButton_buttonText__guqHQ ">
+                  Bokmål
+                  <span class="TopBannerLangPicker_srOnly__33VA7">
+                    Meny
+                  </span>
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="m7 10 5 5 5-5H7Z">
+                  </path>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
@@ -732,6 +1137,51 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                 </div>
               </nav>
             </div>
+            <div class>
+              <div class>
+              </div>
+              <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+                      lang="nb"
+                      aria-expanded="false"
+                      type="button"
+              >
+                <span class="TopBannerButton_iconWrapper__bu153">
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+                    </path>
+                  </svg>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m7 10 5 5 5-5H7Z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="TopBannerButton_buttonText__guqHQ ">
+                  Bokmål
+                  <span class="TopBannerLangPicker_srOnly__33VA7">
+                    Meny
+                  </span>
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="m7 10 5 5 5-5H7Z">
+                  </path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -899,6 +1349,51 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                 </div>
               </nav>
             </div>
+            <div class>
+              <div class>
+              </div>
+              <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+                      lang="nb"
+                      aria-expanded="false"
+                      type="button"
+              >
+                <span class="TopBannerButton_iconWrapper__bu153">
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+                    </path>
+                  </svg>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m7 10 5 5 5-5H7Z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="TopBannerButton_buttonText__guqHQ ">
+                  Bokmål
+                  <span class="TopBannerLangPicker_srOnly__33VA7">
+                    Meny
+                  </span>
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="m7 10 5 5 5-5H7Z">
+                  </path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -1038,6 +1533,51 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
         </a>
         <div class="TopBannerExternal_contentContainer__h2K6k">
           <div class="TopBannerExternal_content__obwYA">
+            <div class>
+              <div class>
+              </div>
+              <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+                      lang="nb"
+                      aria-expanded="false"
+                      type="button"
+              >
+                <span class="TopBannerButton_iconWrapper__bu153">
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+                    </path>
+                  </svg>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m7 10 5 5 5-5H7Z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="TopBannerButton_buttonText__guqHQ ">
+                  Bokmål
+                  <span class="TopBannerLangPicker_srOnly__33VA7">
+                    Meny
+                  </span>
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="m7 10 5 5 5-5H7Z">
+                  </path>
+                </svg>
+              </button>
+            </div>
             <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
                     type="button"
             >
@@ -1144,6 +1684,51 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                   </div>
                 </div>
               </nav>
+            </div>
+            <div class>
+              <div class>
+              </div>
+              <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+                      lang="nb"
+                      aria-expanded="false"
+                      type="button"
+              >
+                <span class="TopBannerButton_iconWrapper__bu153">
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+                    </path>
+                  </svg>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m7 10 5 5 5-5H7Z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="TopBannerButton_buttonText__guqHQ ">
+                  Bokmål
+                  <span class="TopBannerLangPicker_srOnly__33VA7">
+                    Meny
+                  </span>
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="m7 10 5 5 5-5H7Z">
+                  </path>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
@@ -1332,6 +1917,51 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                 </div>
               </nav>
             </div>
+            <div class>
+              <div class>
+              </div>
+              <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+                      lang="nb"
+                      aria-expanded="false"
+                      type="button"
+              >
+                <span class="TopBannerButton_iconWrapper__bu153">
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+                    </path>
+                  </svg>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m7 10 5 5 5-5H7Z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="TopBannerButton_buttonText__guqHQ ">
+                  Bokmål
+                  <span class="TopBannerLangPicker_srOnly__33VA7">
+                    Meny
+                  </span>
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="m7 10 5 5 5-5H7Z">
+                  </path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -1519,6 +2149,51 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                 </div>
               </nav>
             </div>
+            <div class>
+              <div class>
+              </div>
+              <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+                      lang="nb"
+                      aria-expanded="false"
+                      type="button"
+              >
+                <span class="TopBannerButton_iconWrapper__bu153">
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+                    </path>
+                  </svg>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m7 10 5 5 5-5H7Z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="TopBannerButton_buttonText__guqHQ ">
+                  Bokmål
+                  <span class="TopBannerLangPicker_srOnly__33VA7">
+                    Meny
+                  </span>
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="m7 10 5 5 5-5H7Z">
+                  </path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -1701,6 +2376,51 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                 </div>
               </nav>
             </div>
+            <div class>
+              <div class>
+              </div>
+              <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+                      lang="nb"
+                      aria-expanded="false"
+                      type="button"
+              >
+                <span class="TopBannerButton_iconWrapper__bu153">
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+                    </path>
+                  </svg>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m7 10 5 5 5-5H7Z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="TopBannerButton_buttonText__guqHQ ">
+                  Bokmål
+                  <span class="TopBannerLangPicker_srOnly__33VA7">
+                    Meny
+                  </span>
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="m7 10 5 5 5-5H7Z">
+                  </path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -1878,6 +2598,51 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                 </div>
               </nav>
             </div>
+            <div class>
+              <div class>
+              </div>
+              <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+                      lang="nb"
+                      aria-expanded="false"
+                      type="button"
+              >
+                <span class="TopBannerButton_iconWrapper__bu153">
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+                    </path>
+                  </svg>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m7 10 5 5 5-5H7Z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="TopBannerButton_buttonText__guqHQ ">
+                  Bokmål
+                  <span class="TopBannerLangPicker_srOnly__33VA7">
+                    Meny
+                  </span>
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="m7 10 5 5 5-5H7Z">
+                  </path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -2054,6 +2819,51 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                   </div>
                 </div>
               </nav>
+            </div>
+            <div class>
+              <div class>
+              </div>
+              <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+                      lang="nb"
+                      aria-expanded="false"
+                      type="button"
+              >
+                <span class="TopBannerButton_iconWrapper__bu153">
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
+                    </path>
+                  </svg>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m7 10 5 5 5-5H7Z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="TopBannerButton_buttonText__guqHQ ">
+                  Bokmål
+                  <span class="TopBannerLangPicker_srOnly__33VA7">
+                    Meny
+                  </span>
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="m7 10 5 5 5-5H7Z">
+                  </path>
+                </svg>
+              </button>
             </div>
           </div>
         </div>

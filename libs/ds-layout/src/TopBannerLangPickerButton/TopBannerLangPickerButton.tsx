@@ -20,6 +20,7 @@ export const TopBannerLangPickerButton = forwardRef<
       flagIcon,
       ariaCurrent,
       onClick,
+      onKeyDown,
       children,
     },
     ref
@@ -40,6 +41,7 @@ export const TopBannerLangPickerButton = forwardRef<
         data-testid={dataTestId}
         aria-current={ariaCurrent}
         onClick={onClick}
+        onKeyDown={onKeyDown}
       >
         <span className={styles.iconWrapper}>{flagIcon}</span>
         <span className={styles.buttonText}>{children}</span>

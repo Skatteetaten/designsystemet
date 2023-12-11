@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 
-import { LinkGroup } from '@skatteetaten/ds-buttons';
+import { Button, LinkGroup } from '@skatteetaten/ds-buttons';
 import { RadioGroup } from '@skatteetaten/ds-forms';
 import {
   TopBannerExternal,
@@ -174,6 +174,7 @@ export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
             {'Innlogget som virksomhet'}
           </RadioGroup.Radio>
         </RadioGroup>
+        <Button onClick={(): void => modalRef.current?.close()}>{'Ok'}</Button>
       </Modal>
     </>
   );
@@ -262,6 +263,7 @@ export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
             {'Innlogget som virksomhet'}
           </RadioGroup.Radio>
         </RadioGroup>
+        <Button onClick={(): void => modalRef.current?.close()}>{'Ok'}</Button>
       </Modal>
     </>
   );
