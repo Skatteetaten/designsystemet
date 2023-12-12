@@ -46,11 +46,7 @@ export enum Languages {
   Samisk = 'se_NO',
 }
 
-type LanguageMapping = {
-  [key: string]: Languages;
-};
-
-export const langToLocale: LanguageMapping = {
+export const langToLocale: { [key: string]: Languages } = {
   nb: Languages.Bokmal,
   nn: Languages.Nynorsk,
   en: Languages.Engelsk,

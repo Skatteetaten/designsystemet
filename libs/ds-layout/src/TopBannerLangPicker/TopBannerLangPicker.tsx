@@ -15,7 +15,7 @@ import {
   TopBannerLangPickerComponent,
   TopBannerLangPickerProps,
 } from './TopBannerLangPicker.types';
-import { convertLocaleToLang } from './utils';
+import { convertLocaleToLang, LanguageItems } from './utils';
 import { TopBannerButton } from '../TopBannerButton/TopBannerButton';
 import { TopBannerLangPickerButton } from '../TopBannerLangPickerButton/TopBannerLangPickerButton';
 
@@ -73,8 +73,7 @@ export const TopBannerLangPicker = forwardRef<
       }
     };
 
-    // eslint-disable-next-line  @typescript-eslint/no-explicit-any
-    const defaultLanguages: { [key: string]: any } = {
+    const defaultLanguages: LanguageItems = {
       nb: {
         lang: 'nb',
         displayName: 'Bokmål',
@@ -127,6 +126,7 @@ export const TopBannerLangPicker = forwardRef<
           {defaultLanguages[selectedLang].displayName}
           <span className={styles.srOnly}>{t('topbannerbutton.Menu')}</span>
         </TopBannerButton>
+
         {isMenuOpen && (
           <div ref={menuRef} className={styles.menu}>
             <div className={styles.menuArrow} />
