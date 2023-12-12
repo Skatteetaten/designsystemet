@@ -1,11 +1,7 @@
 import React, { forwardRef, JSX, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import {
-  dsI18n,
-  getCommonClassNameDefault,
-  Languages,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { MenuSVGpath } from '@skatteetaten/ds-icons';
 
 import { ReactComponent as EnglishFlagIcon } from './Assets/en-flag.svg';
@@ -19,6 +15,7 @@ import {
   TopBannerLangPickerComponent,
   TopBannerLangPickerProps,
 } from './TopBannerLangPicker.types';
+import { convertLocaleToLang } from './utils';
 import { TopBannerButton } from '../TopBannerButton/TopBannerButton';
 import { TopBannerLangPickerButton } from '../TopBannerLangPickerButton/TopBannerLangPickerButton';
 
@@ -44,10 +41,6 @@ export const TopBannerLangPicker = forwardRef<
 
     const menuButtonRef = useRef<HTMLButtonElement>(null);
     const menuRef = useRef<HTMLDivElement>(null);
-
-    const convertLocaleToLang = (locale: Languages): string => {
-      return locale.substring(0, locale.indexOf('_'));
-    };
 
     const [selectedLang, setSelectedLang] = useState<string>(
       convertLocaleToLang(locale)

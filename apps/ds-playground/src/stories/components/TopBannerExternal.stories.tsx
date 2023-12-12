@@ -14,6 +14,11 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { dsI18n, langToLocale } from '../../../../../libs/ds-core-utils/src';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import {
+  getTopBannerLangPickerLocaleDefault,
+  getTopBannerLangPickerShowSamiDefault,
+} from '../../../../../libs/ds-layout/src/TopBannerLangPicker/defaults';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import {
   getTopBannerLogoAsDefault,
   getTopBannerLogoHrefDefault,
 } from '../../../../../libs/ds-layout/src/TopBannerLogo/defaults';
@@ -35,8 +40,18 @@ export default {
   title: 'Komponenter/TopBannerExternal',
   argTypes: {
     // Props
-    showSami: { table: { category: category.props } },
-    locale: { table: { category: category.props } },
+    showSami: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: getTopBannerLangPickerShowSamiDefault() },
+      },
+    },
+    locale: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: getTopBannerLangPickerLocaleDefault() },
+      },
+    },
     children: { control: 'text', table: { category: category.props } },
     skipLinkText: { table: { category: category.props } },
     skipLinkTarget: {
