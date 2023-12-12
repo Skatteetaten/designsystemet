@@ -1,4 +1,4 @@
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { dsI18n, Languages } from '@skatteetaten/ds-core-utils';
 import { expect } from '@storybook/jest';
 import { Meta, StoryObj } from '@storybook/react';
 import { within } from '@storybook/testing-library';
@@ -142,7 +142,7 @@ export const WithLocale = {
   name: 'With Locale (LanguagePicker A7, A4, B2)',
   args: {
     ...defaultArgs,
-    locale: 'en',
+    locale: Languages.Engelsk,
   },
   argTypes: { locale: { table: { disable: false } } },
   play: async ({ canvasElement }): Promise<void> => {

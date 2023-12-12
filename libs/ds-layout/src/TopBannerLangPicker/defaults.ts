@@ -1,4 +1,5 @@
-import { Lang } from './TopBannerLangPicker.types';
+import { Languages } from '@skatteetaten/ds-core-utils';
 
 export const getTopBannerLangPickerShowSamiDefault = (): boolean => true;
-export const getTopBannerLangPickerLocaleDefault = (): Lang => 'nb';
+export const getTopBannerLangPickerLocaleDefault = (): Languages =>
+  Languages.Bokmal;

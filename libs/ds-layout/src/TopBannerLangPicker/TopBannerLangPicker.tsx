@@ -1,7 +1,11 @@
 import React, { forwardRef, JSX, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  getCommonClassNameDefault,
+  Languages,
+} from '@skatteetaten/ds-core-utils';
 import { MenuSVGpath } from '@skatteetaten/ds-icons';
 
 import { ReactComponent as EnglishFlagIcon } from './Assets/en-flag.svg';
@@ -12,7 +16,6 @@ import {
   getTopBannerLangPickerShowSamiDefault,
 } from './defaults';
 import {
-  Lang,
   TopBannerLangPickerComponent,
   TopBannerLangPickerProps,
 } from './TopBannerLangPicker.types';
@@ -42,7 +45,13 @@ export const TopBannerLangPicker = forwardRef<
     const menuButtonRef = useRef<HTMLButtonElement>(null);
     const menuRef = useRef<HTMLDivElement>(null);
 
-    const [selectedLang, setSelectedLang] = useState<Lang>(locale);
+    const convertLocaleToLang = (locale: Languages): string => {
+      return locale.substring(0, locale.indexOf('_'));
+    };
+
+    const [selectedLang, setSelectedLang] = useState<string>(
+      convertLocaleToLang(locale)
+    );
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
     useEffect(() => {
@@ -56,8 +65,7 @@ export const TopBannerLangPicker = forwardRef<
     const handleLanguageClick = (
       e: React.MouseEvent<HTMLButtonElement>
     ): void => {
-      const lang: Lang = e.currentTarget.lang as Lang;
-      setSelectedLang(lang);
+      setSelectedLang(e.currentTarget.lang);
       setIsMenuOpen(false);
       menuButtonRef.current?.focus();
       onLanguageClick?.(e);
@@ -73,7 +81,7 @@ export const TopBannerLangPicker = forwardRef<
     };
 
     // eslint-disable-next-line  @typescript-eslint/no-explicit-any
-    const defaultLanguages: { [index: string]: any } = {
+    const defaultLanguages: { [key: string]: any } = {
       nb: {
         lang: 'nb',
         displayName: 'Bokmål',

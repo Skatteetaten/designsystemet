@@ -1,8 +1,7 @@
 import { MouseEventHandler, ReactNode, RefObject } from 'react';
 
-import { BaseProps } from '@skatteetaten/ds-core-utils';
+import { BaseProps, Languages } from '@skatteetaten/ds-core-utils';
 
-import { Lang } from '../TopBannerLangPicker/TopBannerLangPicker.types';
 import { LogoAs } from '../TopBannerLogo/TopBannerLogo.types';
 import { TopBannerSkipLinkProps } from '../TopBannerSkipLink/TopBannerSkipLink.types';
 
@@ -46,11 +45,11 @@ type TopBannerLogoDiscriminatedProps =
     };
 
 interface TopBannerCommonProps extends BaseProps {
-  /** Hvilket språk som skal være forhåndsvalgt */
-  locale?: Lang;
+  /** Hvilket språk som skal være forhåndsvalgt. Default er bokmål (nb_NO) */
+  locale?: Languages;
   /** Callback når et språk trykkes på i språkvelgeren */
   onLanguageClick?: MouseEventHandler<HTMLButtonElement>;
-  /** Om samisk språk skal vises eller ikke. Default blir samisk vist. */
+  /** Om samisk språk skal vises eller ikke. Default er samisk med i språklisten det kan velges i fra. */
   showSami?: boolean;
   /** Callback når Logg inn-knapp trykkes på. Om Logg inn-knappen er synlig eller ikke henger sammen med onLogIn, onLogOut og userRole. Knappen er synlig hvis userRole IKKE har en rolle og det finnes callback-funksjon for Logg inn- og Logg ut-knappen. */
   onLogInClick?: MouseEventHandler<HTMLButtonElement>;

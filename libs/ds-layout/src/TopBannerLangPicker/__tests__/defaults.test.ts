@@ -1,3 +1,6 @@
+import { Languages } from '@skatteetaten/ds-core-utils';
+import { expect } from '@storybook/jest';
+
 import {
   getTopBannerLangPickerLocaleDefault,
   getTopBannerLangPickerShowSamiDefault,
@@ -8,6 +11,6 @@ describe('TopBannerLangPicker defaults', () => {
     expect(getTopBannerLangPickerShowSamiDefault()).toBe(true);
   });
   it('Når getTopBannerLangPickerLocaleDefault kalles, så returnerer den riktig verdi', () => {
-    expect(getTopBannerLangPickerLocaleDefault()).toBe('nb');
+    expect(getTopBannerLangPickerLocaleDefault()).toBe(Languages.Bokmal);
   });
 });

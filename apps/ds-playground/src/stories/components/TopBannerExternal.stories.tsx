@@ -11,7 +11,7 @@ import { Modal } from '@skatteetaten/ds-overlays';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { dsI18n } from '../../../../../libs/ds-core-utils/src';
+import { dsI18n, langToLocale } from '../../../../../libs/ds-core-utils/src';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import {
   getTopBannerLogoAsDefault,
@@ -115,8 +115,7 @@ export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
     e: React.MouseEvent<HTMLButtonElement>
   ): void => {
     const lang = e.currentTarget.lang;
-    const suffix = lang === 'en' ? '_GB' : '_NO';
-    dsI18n.changeLanguage(lang + suffix);
+    dsI18n.changeLanguage(langToLocale[lang]);
   };
 
   const handleLogOut = (): void => {
@@ -213,8 +212,7 @@ export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
     e: React.MouseEvent<HTMLButtonElement>
   ): void => {
     const lang = e.currentTarget.lang;
-    const suffix = lang === 'en' ? '_GB' : '_NO';
-    dsI18n.changeLanguage(lang + suffix);
+    dsI18n.changeLanguage(langToLocale[lang]);
   };
 
   const handleLogOut = (): void => {
