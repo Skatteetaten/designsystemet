@@ -12,6 +12,7 @@
   "fileuploader.InProgressLabel": "(Opplasting pågår)",
   "fileuploader.NoRightsToDeleteError": "Dus eai leat vuoigatvuođat sihkkot fiillaid",
   "fileuploader.NoRightsUploadError": "Dus ii leat vuoigatvuohta lasihit fiillaid",
+  "fileuploader.SuccessIconLabel": "(Fullført)",
   "fileuploader.UploadedHeading": "Lasihuvvon:",
   "fileuploader.UploadedSummary": "({{fileCount}} filer lastet opp)"
 }

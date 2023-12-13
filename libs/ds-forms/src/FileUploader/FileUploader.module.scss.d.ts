@@ -11,3 +11,4 @@ export const fileList: string;
 export const removePointerEvents: string;
 export const alert: string;
 export const spinner: string;
+export const innerLabel: string;

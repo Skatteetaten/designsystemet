@@ -69,7 +69,11 @@ export const FileUploaderFile = forwardRef<
                 </span>
               </>
             )}
-            <CheckIcon size={'medium'} className={styles.successIcon} />
+            <CheckIcon
+              className={styles.successIcon}
+              size={'medium'}
+              title={t('fileuploader.SuccessIconLabel')}
+            />
           </span>
           <span>
             <IconButton

@@ -58,7 +58,7 @@ export interface FileUploaderCommonProps
 }
 
 export interface UploadedFile {
-  /** Navn på filen*/
+  /** Navn på filen */
   name: string;
   /** lenke til nedlasting av filen */
   href?: string;

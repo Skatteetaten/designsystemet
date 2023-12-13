@@ -1,4 +1,4 @@
-import React, {
+import {
   ChangeEvent,
   DragEvent,
   forwardRef,
@@ -54,6 +54,7 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
 
     const id = externalId ?? generatedId;
     const fileformatsId = `${id}-accepted-formats`;
+    const buttonTextId = `${id}-upload-button`;
 
     const acceptedFormatsAsCommaSeparatedString =
       acceptedFileFormats?.join(', ');
@@ -73,7 +74,6 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
       if (isUploading) {
         return;
       }
-      console.log('filechange');
 
       const files = getFiles(event);
       if (invalidCharacterRegexp) {
@@ -95,25 +95,19 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
       }
     };
 
-    const handleDragEnter = (
-      event: React.DragEvent<HTMLButtonElement>
-    ): void => {
+    const handleDragEnter = (event: DragEvent<HTMLButtonElement>): void => {
       event.preventDefault();
       event.stopPropagation();
       setIsDragging(true);
     };
 
-    const handleDragLeave = (
-      event: React.DragEvent<HTMLButtonElement>
-    ): void => {
+    const handleDragLeave = (event: DragEvent<HTMLButtonElement>): void => {
       event.preventDefault();
       event.stopPropagation();
       setIsDragging(false);
     };
 
-    const handleDragOver = (
-      event: React.DragEvent<HTMLButtonElement>
-    ): void => {
+    const handleDragOver = (event: DragEvent<HTMLButtonElement>): void => {
       event.preventDefault();
       event.stopPropagation();
     };
@@ -147,7 +141,7 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
           className={`${styles.dropZone} ${
             hasError ? styles.dropZone_error : ''
           } ${isDragging && !isUploading ? styles.dropZone_dragging : ''}`}
-          aria-describedby={fileformatsId}
+          aria-describedby={`${buttonTextId} ${fileformatsId}`}
           onDragEnter={handleDragEnter}
           onDragLeave={handleDragLeave}
           onDragOver={handleDragOver}
@@ -168,13 +162,14 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
             ) : (
               <AttachFileIcon className={styles.icon} size={'large'} />
             )}
-            <div>{!isUploading && buttonText}</div>
+            <label className={styles.innerLabel} htmlFor={id}>
+              {!isUploading && buttonText}
+            </label>
             <input
               ref={inputRef}
               type={'file'}
               accept={acceptedFormatsAsCommaSeparatedString}
               multiple={multiple}
-              aria-hidden
               hidden
               onChange={handleFileChange}
             />

@@ -29,10 +29,7 @@ export const useFileUploader = <T,>(
           action.successFiles?.reduce((acc, curr) => {
             if (!acc.some((it) => it.name === curr.name)) {
               acc.push({ name: curr.name, href: curr?.href });
-            } else {
-              throw new Error(`file "${curr.name}" is already uploaded`);
             }
-
             return acc;
           }, state) ?? state
         );
@@ -41,8 +38,6 @@ export const useFileUploader = <T,>(
         return action.files.reduce((acc, curr) => {
           if (!acc.some((it) => it.name === curr.name)) {
             acc.push({ name: curr.name, href: curr.href });
-          } else {
-            throw new Error(`file "${curr.name}" is already uploaded`);
           }
           return acc;
         }, state);
@@ -112,9 +107,9 @@ export const useFileUploader = <T,>(
       return renderStatus(status);
     }
     if (status.hasUploadFailed && isUploadError(status.data)) {
-      return status.data?.map((error, index) => (
+      return status.data?.map((error) => (
         <>
-          <span key={index}>{`${error.error}:`}</span>
+          <span key={error.error}>{`${error.error}:`}</span>
           <List>
             {error.files.map((file) => (
               <List.Element key={file}>{file}</List.Element>

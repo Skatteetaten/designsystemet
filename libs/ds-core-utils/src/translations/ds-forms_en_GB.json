@@ -8,11 +8,12 @@
   "fileuploader.FileIconLabel": "File",
   "fileuploader.FileSizeError": "We could not receive this file because it is too large. Files cannot exceed {{filstoerrelsegrense}} MB. You can try splitting the file into smaller files or using a format that takes up less space.",
   "fileuploader.FormatLabel": "Files you can upload:",
-  "fileuploader.GeneralDeleteError": "Can't delete file",
+  "fileuploader.GeneralDeleteError": "Can't remove file",
   "fileuploader.GeneralUploadError": "Can't upload file",
   "fileuploader.InProgressLabel": "(Opplasting pågår)",
   "fileuploader.NoRightsToDeleteError": "You do not have permission to delete files",
   "fileuploader.NoRightsUploadError": "You do not have permission to upload files",
+  "fileuploader.SuccessIconLabel": "Completed",
   "fileuploader.UploadedHeading": "Uploaded:",
   "fileuploader.UploadedSummary": "({{fileCount}} file(s) uploaded)"
 }
