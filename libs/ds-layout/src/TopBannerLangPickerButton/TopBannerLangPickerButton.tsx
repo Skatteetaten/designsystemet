@@ -1,4 +1,4 @@
-import { forwardRef, JSX, useImperativeHandle, useRef } from 'react';
+import { forwardRef, JSX } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { CheckSVGpath, Icon } from '@skatteetaten/ds-icons';
@@ -25,16 +25,13 @@ export const TopBannerLangPickerButton = forwardRef<
     },
     ref
   ): JSX.Element => {
-    const buttonRef = useRef<HTMLButtonElement>(null);
-    useImperativeHandle(ref, () => buttonRef?.current as HTMLButtonElement);
-
     const concatenatedClassNames = `${
       ariaCurrent ? styles.buttonCurrent : ''
     } ${styles.button} ${className}`;
 
     return (
       <button
-        ref={buttonRef}
+        ref={ref}
         id={id}
         className={concatenatedClassNames}
         lang={lang}
@@ -43,7 +40,7 @@ export const TopBannerLangPickerButton = forwardRef<
         onClick={onClick}
         onKeyDown={onKeyDown}
       >
-        <span className={styles.iconWrapper}>{flagIcon}</span>
+        <span className={styles.flagWrapper}>{flagIcon}</span>
         <span className={styles.buttonText}>{children}</span>
         {ariaCurrent && <Icon svgPath={CheckSVGpath} />}
       </button>
