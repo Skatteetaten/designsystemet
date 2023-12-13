@@ -2,6 +2,7 @@ import {
   ComponentPropsWithoutRef,
   KeyboardEventHandler,
   MouseEventHandler,
+  JSX,
 } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
@@ -22,8 +23,8 @@ interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
 export interface TopBannerLangPickerButtonProps
   extends ButtonPropsHTMLAttributes,
     BaseProps {
-  /** flagg som somsvarer med språket */
+  /** Flagg som samsvarer med språket. */
   flagIcon: JSX.Element;
-  /** teksten på knappen */
+  /** Navn på språket. */
   children: string;
 }

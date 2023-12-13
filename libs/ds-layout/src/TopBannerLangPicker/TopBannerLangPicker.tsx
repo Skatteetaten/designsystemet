@@ -1,4 +1,12 @@
-import React, { forwardRef, JSX, useEffect, useRef, useState } from 'react';
+import React, {
+  forwardRef,
+  JSX,
+  useEffect,
+  useRef,
+  useState,
+  MouseEvent,
+  KeyboardEvent,
+} from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
@@ -55,9 +63,7 @@ export const TopBannerLangPicker = forwardRef<
       setIsMenuOpen(!isMenuOpen);
     };
 
-    const handleLanguageClick = (
-      e: React.MouseEvent<HTMLButtonElement>
-    ): void => {
+    const handleLanguageClick = (e: MouseEvent<HTMLButtonElement>): void => {
       setSelectedLang(e.currentTarget.lang);
       setIsMenuOpen(false);
       menuButtonRef.current?.focus();
@@ -65,7 +71,7 @@ export const TopBannerLangPicker = forwardRef<
     };
 
     const handleCloseMenuKeyDown = (
-      e: React.KeyboardEvent<HTMLButtonElement>
+      e: KeyboardEvent<HTMLButtonElement>
     ): void => {
       e.stopPropagation();
       if (!e.shiftKey && e.key === 'Tab') {
