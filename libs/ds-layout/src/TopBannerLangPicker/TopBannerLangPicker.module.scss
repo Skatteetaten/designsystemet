@@ -19,9 +19,12 @@
 
   .flagIcon {
     display: flex;
-    width: var(--size-medium);
     flex-shrink: 0;
     padding: var(--spacing-xs);
+
+    &Svg {
+      width: var(--size-medium);
+    }
   }
 
   &Text {
@@ -69,7 +72,6 @@
   &Arrow {
     position: absolute;
     top: -8px;
-    right: 34px;
     width: 1rem;
     height: 1rem;
     border: 1px solid;
@@ -81,12 +83,11 @@
   }
 
   @media (min-width: $breakpoint-xs) {
+    right: auto;
     left: auto;
-  }
 
-  @media (min-width: $breakpoint-s) {
     &Arrow {
-      right: 60px;
+      right: 50%;
     }
   }
 }

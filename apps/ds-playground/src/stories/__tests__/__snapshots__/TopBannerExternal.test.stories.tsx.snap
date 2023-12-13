@@ -69,6 +69,7 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
+                         class="TopBannerLangPicker_flagIconSvg__rO4YM"
                     >
                       <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                                style="fill: rgb(255, 255, 255);"
@@ -207,6 +208,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
+                         class="TopBannerLangPicker_flagIconSvg__rO4YM"
                     >
                       <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                                style="fill: rgb(255, 255, 255);"
@@ -345,6 +347,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
+                         class="TopBannerLangPicker_flagIconSvg__rO4YM"
                     >
                       <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                                style="fill: rgb(255, 255, 255);"
@@ -483,6 +486,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
+                         class="TopBannerLangPicker_flagIconSvg__rO4YM"
                     >
                       <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                                style="fill: rgb(255, 255, 255);"
@@ -621,6 +625,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
+                         class="TopBannerLangPicker_flagIconSvg__rO4YM"
                     >
                       <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                                style="fill: rgb(255, 255, 255);"
@@ -759,6 +764,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
+                         class="TopBannerLangPicker_flagIconSvg__rO4YM"
                     >
                       <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                                style="fill: rgb(255, 255, 255);"
@@ -901,6 +907,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
+                         class="TopBannerLangPicker_flagIconSvg__rO4YM"
                     >
                       <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                                style="fill: rgb(255, 255, 255);"
@@ -1075,6 +1082,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
+                         class="TopBannerLangPicker_flagIconSvg__rO4YM"
                     >
                       <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                                style="fill: rgb(255, 255, 255);"
@@ -1213,6 +1221,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
+                         class="TopBannerLangPicker_flagIconSvg__rO4YM"
                     >
                       <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                                style="fill: rgb(255, 255, 255);"
@@ -1381,6 +1390,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
+                         class="TopBannerLangPicker_flagIconSvg__rO4YM"
                     >
                       <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                                style="fill: rgb(255, 255, 255);"
@@ -1637,6 +1647,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
+                         class="TopBannerLangPicker_flagIconSvg__rO4YM"
                     >
                       <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                                style="fill: rgb(255, 255, 255);"
@@ -1893,6 +1904,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
+                         class="TopBannerLangPicker_flagIconSvg__rO4YM"
                     >
                       <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                                style="fill: rgb(255, 255, 255);"
@@ -2121,6 +2133,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
+                         class="TopBannerLangPicker_flagIconSvg__rO4YM"
                     >
                       <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                                style="fill: rgb(255, 255, 255);"
@@ -2317,6 +2330,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
+                         class="TopBannerLangPicker_flagIconSvg__rO4YM"
                     >
                       <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                                style="fill: rgb(255, 255, 255);"
@@ -2593,6 +2607,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
+                         class="TopBannerLangPicker_flagIconSvg__rO4YM"
                     >
                       <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                                style="fill: rgb(255, 255, 255);"
@@ -2869,6 +2884,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
+                         class="TopBannerLangPicker_flagIconSvg__rO4YM"
                     >
                       <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                                style="fill: rgb(255, 255, 255);"
@@ -3140,6 +3156,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
+                         class="TopBannerLangPicker_flagIconSvg__rO4YM"
                     >
                       <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                                style="fill: rgb(255, 255, 255);"
@@ -3406,6 +3423,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
+                         class="TopBannerLangPicker_flagIconSvg__rO4YM"
                     >
                       <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                                style="fill: rgb(255, 255, 255);"
@@ -3672,6 +3690,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
+                         class="TopBannerLangPicker_flagIconSvg__rO4YM"
                     >
                       <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                                style="fill: rgb(255, 255, 255);"

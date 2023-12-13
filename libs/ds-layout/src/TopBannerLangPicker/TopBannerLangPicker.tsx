@@ -83,21 +83,25 @@ export const TopBannerLangPicker = forwardRef<
       nb: {
         lang: 'nb',
         displayName: 'Bokmål',
-        flagIcon: <NorwegianFlagIcon />,
+        flagIcon: <NorwegianFlagIcon className={styles.flagIconSvg} />,
       },
       nn: {
         lang: 'nn',
         displayName: 'Nynorsk',
-        flagIcon: <NorwegianFlagIcon />,
+        flagIcon: <NorwegianFlagIcon className={styles.flagIconSvg} />,
       },
-      en: { lang: 'en', displayName: 'English', flagIcon: <EnglishFlagIcon /> },
+      en: {
+        lang: 'en',
+        displayName: 'English',
+        flagIcon: <EnglishFlagIcon className={styles.flagIconSvg} />,
+      },
     };
     if (showSami) {
       Object.assign(defaultLanguages, {
         se: {
           lang: 'se',
           displayName: 'Sámegiella',
-          flagIcon: <SamiFlagIcon />,
+          flagIcon: <SamiFlagIcon className={styles.flagIconSvg} />,
         },
       });
     }

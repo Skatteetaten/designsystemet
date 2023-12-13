@@ -16,7 +16,11 @@
 
   .flagWrapper {
     display: flex;
-    width: var(--size-medium);
+
+    // TODO - FRONT-1161: Kan det løses uten html-element som selector. Pga Safari må svg-en ha en størrelse direkte på seg.
+    svg {
+      width: var(--size-medium);
+    }
   }
 
   &Text {
