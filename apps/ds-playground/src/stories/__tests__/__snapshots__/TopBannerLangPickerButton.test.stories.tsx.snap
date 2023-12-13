@@ -3,7 +3,7 @@
 exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) Defaults play-test 1`] = `
 <div data-test-block="true">
   <button class=" TopBannerLangPickerButton_button__pl57- ">
-    <span class="TopBannerLangPickerButton_iconWrapper__+hI0y">
+    <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
       <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
            xmlns="http://www.w3.org/2000/svg"
            viewbox="0 0 1100 800"
@@ -68,7 +68,7 @@ exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithAriaCurrent pla
   <button class="TopBannerLangPickerButton_buttonCurrent__y8Vxz TopBannerLangPickerButton_button__pl57- "
           aria-current="true"
   >
-    <span class="TopBannerLangPickerButton_iconWrapper__+hI0y">
+    <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
       <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
            xmlns="http://www.w3.org/2000/svg"
            viewbox="0 0 1100 800"
@@ -144,7 +144,7 @@ exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithAttributes play
           lang="nb"
           data-testid="123ID"
   >
-    <span class="TopBannerLangPickerButton_iconWrapper__+hI0y">
+    <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
       <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
            xmlns="http://www.w3.org/2000/svg"
            viewbox="0 0 1100 800"
@@ -207,7 +207,7 @@ exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithAttributes play
 exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithEventHandlers play-test 1`] = `
 <div data-test-block="true">
   <button class=" TopBannerLangPickerButton_button__pl57- ">
-    <span class="TopBannerLangPickerButton_iconWrapper__+hI0y">
+    <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
       <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
            xmlns="http://www.w3.org/2000/svg"
            viewbox="0 0 1100 800"
@@ -272,7 +272,7 @@ exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithRef play-test 1
   <button class=" TopBannerLangPickerButton_button__pl57- "
           id="dummyIdForwardedFromRef"
   >
-    <span class="TopBannerLangPickerButton_iconWrapper__+hI0y">
+    <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
       <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
            xmlns="http://www.w3.org/2000/svg"
            viewbox="0 0 1100 800"

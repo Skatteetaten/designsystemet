@@ -64,13 +64,12 @@
   top: 4rem;
   right: var(--spacing-m);
   left: var(--spacing-m);
-  width: 100%;
   margin-top: var(--spacing-l);
 
   &Arrow {
     position: absolute;
     top: -8px;
-    right: 20px;
+    right: 34px;
     width: 1rem;
     height: 1rem;
     border: 1px solid;
@@ -83,10 +82,11 @@
 
   @media (min-width: $breakpoint-xs) {
     left: auto;
-    max-width: 167px;
+  }
 
+  @media (min-width: $breakpoint-s) {
     &Arrow {
-      right: 80px;
+      right: 60px;
     }
   }
 }
@@ -98,6 +98,10 @@
   margin: 0;
   box-shadow: 3px 2px 5px 0 #d9d9d9;
   list-style-type: none;
+
+  @media (min-width: $breakpoint-xs) {
+    width: 167px;
+  }
 
   &Item {
     border-bottom: 1px solid var(--palette-graphite-70);
