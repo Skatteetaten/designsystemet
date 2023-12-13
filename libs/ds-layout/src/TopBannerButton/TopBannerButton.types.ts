@@ -31,13 +31,11 @@ export interface TopBannerButtonProps
     text?: string;
   };
   /** Innhold/tekst på knappen. */
-  children: ReactNode;
+  children: ReactNode | ReactNode[];
   /** HTML-path node. */
-  svgPath: ReactElement;
+  svgPath?: ReactElement;
   /** Hvis svgPath er meningsbærende, må ha en beskrivende tekst */
   title?: string;
   /** Definerer stilen til TopBannerButton. */
   variant?: TopBannerButtonVariant;
-  /** Om pil vises */
-  hasArrow?: boolean;
 }

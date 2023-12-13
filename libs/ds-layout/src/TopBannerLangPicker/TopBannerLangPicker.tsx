@@ -2,7 +2,7 @@ import React, { forwardRef, JSX, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-import { MenuSVGpath } from '@skatteetaten/ds-icons';
+import { Icon, MenuDownSVGpath } from '@skatteetaten/ds-icons';
 
 import { ReactComponent as EnglishFlagIcon } from './Assets/en-flag.svg';
 import { ReactComponent as NorwegianFlagIcon } from './Assets/no-flag.svg';
@@ -105,16 +105,11 @@ export const TopBannerLangPicker = forwardRef<
         data-testid={dataTestId}
       >
         <div className={isMenuOpen ? styles.overlay : ''} />
-
-        {/* TODO - hardkodet icon må endres til flag som også endres når nytt språk velges:
-         * {defaultLanguages[selectedLang].flagIcon}  */}
         <TopBannerButton
           ref={menuButtonRef}
           lang={selectedLang}
           className={styles.menuButton}
-          svgPath={MenuSVGpath}
           ariaExpanded={isMenuOpen}
-          hasArrow
           onClick={handleMenuClick}
           onKeyDown={(e) => {
             e.stopPropagation();
@@ -123,8 +118,17 @@ export const TopBannerLangPicker = forwardRef<
             }
           }}
         >
-          {defaultLanguages[selectedLang].displayName}
+          <span className={styles.iconWrapper}>
+            <span className={styles.flagIcon}>
+              {defaultLanguages[selectedLang].flagIcon}
+            </span>
+            <Icon svgPath={MenuDownSVGpath} className={styles.arrowMobile} />
+          </span>
+          <span className={styles.menuButtonText}>
+            {defaultLanguages[selectedLang].displayName}
+          </span>
           <span className={styles.srOnly}>{t('topbannerbutton.Menu')}</span>
+          <Icon svgPath={MenuDownSVGpath} className={styles.arrowDesktop} />
         </TopBannerButton>
 
         {isMenuOpen && (

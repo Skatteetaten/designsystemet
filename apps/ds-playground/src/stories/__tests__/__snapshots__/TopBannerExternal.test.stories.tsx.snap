@@ -62,17 +62,61 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                       aria-expanded="false"
                       type="button"
               >
-                <span class="TopBannerButton_iconWrapper__bu153">
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                       viewbox="0 0 24 24"
-                       focusable="false"
-                       aria-hidden="true"
-                       role="img"
-                  >
-                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
-                    </path>
-                  </svg>
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                <span class="TopBannerLangPicker_iconWrapper__SFn8s">
+                  <span class="TopBannerLangPicker_flagIcon__LcfDc">
+                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
+                         xmlns="http://www.w3.org/2000/svg"
+                         viewbox="0 0 1100 800"
+                         focusable="false"
+                         aria-hidden="true"
+                    >
+                      <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <rect width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect y="500"
+                            width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            y="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
+                               style="fill: rgb(0, 40, 104);"
+                      >
+                      </polygon>
+                    </svg>
+                  </span>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -82,13 +126,13 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerButton_buttonText__guqHQ ">
+                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
                   Bokmål
-                  <span class="TopBannerLangPicker_srOnly__33VA7">
-                    Meny
-                  </span>
                 </span>
-                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                <span class="TopBannerLangPicker_srOnly__33VA7">
+                  Meny
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -156,17 +200,61 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
                       aria-expanded="false"
                       type="button"
               >
-                <span class="TopBannerButton_iconWrapper__bu153">
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                       viewbox="0 0 24 24"
-                       focusable="false"
-                       aria-hidden="true"
-                       role="img"
-                  >
-                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
-                    </path>
-                  </svg>
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                <span class="TopBannerLangPicker_iconWrapper__SFn8s">
+                  <span class="TopBannerLangPicker_flagIcon__LcfDc">
+                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
+                         xmlns="http://www.w3.org/2000/svg"
+                         viewbox="0 0 1100 800"
+                         focusable="false"
+                         aria-hidden="true"
+                    >
+                      <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <rect width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect y="500"
+                            width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            y="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
+                               style="fill: rgb(0, 40, 104);"
+                      >
+                      </polygon>
+                    </svg>
+                  </span>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -176,13 +264,13 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerButton_buttonText__guqHQ ">
+                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
                   Bokmål
-                  <span class="TopBannerLangPicker_srOnly__33VA7">
-                    Meny
-                  </span>
                 </span>
-                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                <span class="TopBannerLangPicker_srOnly__33VA7">
+                  Meny
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -250,17 +338,61 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
                       aria-expanded="false"
                       type="button"
               >
-                <span class="TopBannerButton_iconWrapper__bu153">
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                       viewbox="0 0 24 24"
-                       focusable="false"
-                       aria-hidden="true"
-                       role="img"
-                  >
-                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
-                    </path>
-                  </svg>
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                <span class="TopBannerLangPicker_iconWrapper__SFn8s">
+                  <span class="TopBannerLangPicker_flagIcon__LcfDc">
+                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
+                         xmlns="http://www.w3.org/2000/svg"
+                         viewbox="0 0 1100 800"
+                         focusable="false"
+                         aria-hidden="true"
+                    >
+                      <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <rect width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect y="500"
+                            width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            y="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
+                               style="fill: rgb(0, 40, 104);"
+                      >
+                      </polygon>
+                    </svg>
+                  </span>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -270,13 +402,13 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerButton_buttonText__guqHQ ">
+                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
                   Bokmål
-                  <span class="TopBannerLangPicker_srOnly__33VA7">
-                    Meny
-                  </span>
                 </span>
-                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                <span class="TopBannerLangPicker_srOnly__33VA7">
+                  Meny
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -344,17 +476,61 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
                       aria-expanded="false"
                       type="button"
               >
-                <span class="TopBannerButton_iconWrapper__bu153">
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                       viewbox="0 0 24 24"
-                       focusable="false"
-                       aria-hidden="true"
-                       role="img"
-                  >
-                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
-                    </path>
-                  </svg>
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                <span class="TopBannerLangPicker_iconWrapper__SFn8s">
+                  <span class="TopBannerLangPicker_flagIcon__LcfDc">
+                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
+                         xmlns="http://www.w3.org/2000/svg"
+                         viewbox="0 0 1100 800"
+                         focusable="false"
+                         aria-hidden="true"
+                    >
+                      <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <rect width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect y="500"
+                            width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            y="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
+                               style="fill: rgb(0, 40, 104);"
+                      >
+                      </polygon>
+                    </svg>
+                  </span>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -364,13 +540,13 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerButton_buttonText__guqHQ ">
+                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
                   Bokmål
-                  <span class="TopBannerLangPicker_srOnly__33VA7">
-                    Meny
-                  </span>
                 </span>
-                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                <span class="TopBannerLangPicker_srOnly__33VA7">
+                  Meny
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -438,17 +614,61 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
                       aria-expanded="false"
                       type="button"
               >
-                <span class="TopBannerButton_iconWrapper__bu153">
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                       viewbox="0 0 24 24"
-                       focusable="false"
-                       aria-hidden="true"
-                       role="img"
-                  >
-                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
-                    </path>
-                  </svg>
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                <span class="TopBannerLangPicker_iconWrapper__SFn8s">
+                  <span class="TopBannerLangPicker_flagIcon__LcfDc">
+                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
+                         xmlns="http://www.w3.org/2000/svg"
+                         viewbox="0 0 1100 800"
+                         focusable="false"
+                         aria-hidden="true"
+                    >
+                      <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <rect width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect y="500"
+                            width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            y="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
+                               style="fill: rgb(0, 40, 104);"
+                      >
+                      </polygon>
+                    </svg>
+                  </span>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -458,13 +678,13 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerButton_buttonText__guqHQ ">
+                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
                   Bokmål
-                  <span class="TopBannerLangPicker_srOnly__33VA7">
-                    Meny
-                  </span>
                 </span>
-                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                <span class="TopBannerLangPicker_srOnly__33VA7">
+                  Meny
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -532,17 +752,61 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
                       aria-expanded="false"
                       type="button"
               >
-                <span class="TopBannerButton_iconWrapper__bu153">
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                       viewbox="0 0 24 24"
-                       focusable="false"
-                       aria-hidden="true"
-                       role="img"
-                  >
-                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
-                    </path>
-                  </svg>
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                <span class="TopBannerLangPicker_iconWrapper__SFn8s">
+                  <span class="TopBannerLangPicker_flagIcon__LcfDc">
+                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
+                         xmlns="http://www.w3.org/2000/svg"
+                         viewbox="0 0 1100 800"
+                         focusable="false"
+                         aria-hidden="true"
+                    >
+                      <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <rect width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect y="500"
+                            width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            y="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
+                               style="fill: rgb(0, 40, 104);"
+                      >
+                      </polygon>
+                    </svg>
+                  </span>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -552,13 +816,13 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerButton_buttonText__guqHQ ">
+                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
                   Bokmål
-                  <span class="TopBannerLangPicker_srOnly__33VA7">
-                    Meny
-                  </span>
                 </span>
-                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                <span class="TopBannerLangPicker_srOnly__33VA7">
+                  Meny
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -630,17 +894,61 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
                       aria-expanded="false"
                       type="button"
               >
-                <span class="TopBannerButton_iconWrapper__bu153">
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                       viewbox="0 0 24 24"
-                       focusable="false"
-                       aria-hidden="true"
-                       role="img"
-                  >
-                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
-                    </path>
-                  </svg>
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                <span class="TopBannerLangPicker_iconWrapper__SFn8s">
+                  <span class="TopBannerLangPicker_flagIcon__LcfDc">
+                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
+                         xmlns="http://www.w3.org/2000/svg"
+                         viewbox="0 0 1100 800"
+                         focusable="false"
+                         aria-hidden="true"
+                    >
+                      <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <rect width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect y="500"
+                            width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            y="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
+                               style="fill: rgb(0, 40, 104);"
+                      >
+                      </polygon>
+                    </svg>
+                  </span>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -650,13 +958,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerButton_buttonText__guqHQ ">
+                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
                   Bokmål
-                  <span class="TopBannerLangPicker_srOnly__33VA7">
-                    Meny
-                  </span>
                 </span>
-                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                <span class="TopBannerLangPicker_srOnly__33VA7">
+                  Meny
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -734,18 +1042,18 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
         </a>
         <div class="TopBannerExternal_contentContainer__h2K6k">
           <div class>
-            <label id="labelId-:rh:"
+            <label id="labelId-:re:"
                    class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
-                   for="textFieldTextboxId-:rg:"
+                   for="textFieldTextboxId-:rd:"
             >
               Søk
             </label>
-            <input id="textFieldTextboxId-:rg:"
+            <input id="textFieldTextboxId-:rd:"
                    class="TextField_textbox__qbZlk"
                    placeholder="Søk"
                    value
             >
-            <div id="textFieldErrorId-:rf:"
+            <div id="textFieldErrorId-:rc:"
                  aria-live="assertive"
                  aria-atomic="true"
             >
@@ -760,17 +1068,61 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
                       aria-expanded="false"
                       type="button"
               >
-                <span class="TopBannerButton_iconWrapper__bu153">
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                       viewbox="0 0 24 24"
-                       focusable="false"
-                       aria-hidden="true"
-                       role="img"
-                  >
-                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
-                    </path>
-                  </svg>
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                <span class="TopBannerLangPicker_iconWrapper__SFn8s">
+                  <span class="TopBannerLangPicker_flagIcon__LcfDc">
+                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
+                         xmlns="http://www.w3.org/2000/svg"
+                         viewbox="0 0 1100 800"
+                         focusable="false"
+                         aria-hidden="true"
+                    >
+                      <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <rect width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect y="500"
+                            width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            y="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
+                               style="fill: rgb(0, 40, 104);"
+                      >
+                      </polygon>
+                    </svg>
+                  </span>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -780,13 +1132,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerButton_buttonText__guqHQ ">
+                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
                   Bokmål
-                  <span class="TopBannerLangPicker_srOnly__33VA7">
-                    Meny
-                  </span>
                 </span>
-                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                <span class="TopBannerLangPicker_srOnly__33VA7">
+                  Meny
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -854,17 +1206,61 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
                       aria-expanded="false"
                       type="button"
               >
-                <span class="TopBannerButton_iconWrapper__bu153">
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                       viewbox="0 0 24 24"
-                       focusable="false"
-                       aria-hidden="true"
-                       role="img"
-                  >
-                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
-                    </path>
-                  </svg>
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                <span class="TopBannerLangPicker_iconWrapper__SFn8s">
+                  <span class="TopBannerLangPicker_flagIcon__LcfDc">
+                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
+                         xmlns="http://www.w3.org/2000/svg"
+                         viewbox="0 0 1100 800"
+                         focusable="false"
+                         aria-hidden="true"
+                    >
+                      <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <rect width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect y="500"
+                            width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            y="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
+                               style="fill: rgb(0, 40, 104);"
+                      >
+                      </polygon>
+                    </svg>
+                  </span>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -874,13 +1270,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerButton_buttonText__guqHQ ">
+                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
                   Bokmål
-                  <span class="TopBannerLangPicker_srOnly__33VA7">
-                    Meny
-                  </span>
                 </span>
-                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                <span class="TopBannerLangPicker_srOnly__33VA7">
+                  Meny
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -978,17 +1374,61 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                       aria-expanded="false"
                       type="button"
               >
-                <span class="TopBannerButton_iconWrapper__bu153">
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                       viewbox="0 0 24 24"
-                       focusable="false"
-                       aria-hidden="true"
-                       role="img"
-                  >
-                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
-                    </path>
-                  </svg>
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                <span class="TopBannerLangPicker_iconWrapper__SFn8s">
+                  <span class="TopBannerLangPicker_flagIcon__LcfDc">
+                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
+                         xmlns="http://www.w3.org/2000/svg"
+                         viewbox="0 0 1100 800"
+                         focusable="false"
+                         aria-hidden="true"
+                    >
+                      <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <rect width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect y="500"
+                            width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            y="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
+                               style="fill: rgb(0, 40, 104);"
+                      >
+                      </polygon>
+                    </svg>
+                  </span>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -998,13 +1438,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerButton_buttonText__guqHQ ">
+                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
                   Bokmål
-                  <span class="TopBannerLangPicker_srOnly__33VA7">
-                    Meny
-                  </span>
                 </span>
-                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                <span class="TopBannerLangPicker_srOnly__33VA7">
+                  Meny
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1190,17 +1630,61 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                       aria-expanded="false"
                       type="button"
               >
-                <span class="TopBannerButton_iconWrapper__bu153">
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                       viewbox="0 0 24 24"
-                       focusable="false"
-                       aria-hidden="true"
-                       role="img"
-                  >
-                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
-                    </path>
-                  </svg>
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                <span class="TopBannerLangPicker_iconWrapper__SFn8s">
+                  <span class="TopBannerLangPicker_flagIcon__LcfDc">
+                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
+                         xmlns="http://www.w3.org/2000/svg"
+                         viewbox="0 0 1100 800"
+                         focusable="false"
+                         aria-hidden="true"
+                    >
+                      <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <rect width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect y="500"
+                            width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            y="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
+                               style="fill: rgb(0, 40, 104);"
+                      >
+                      </polygon>
+                    </svg>
+                  </span>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1210,13 +1694,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerButton_buttonText__guqHQ ">
+                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
                   Bokmål
-                  <span class="TopBannerLangPicker_srOnly__33VA7">
-                    Meny
-                  </span>
                 </span>
-                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                <span class="TopBannerLangPicker_srOnly__33VA7">
+                  Meny
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1402,17 +1886,61 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                       aria-expanded="false"
                       type="button"
               >
-                <span class="TopBannerButton_iconWrapper__bu153">
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                       viewbox="0 0 24 24"
-                       focusable="false"
-                       aria-hidden="true"
-                       role="img"
-                  >
-                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
-                    </path>
-                  </svg>
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                <span class="TopBannerLangPicker_iconWrapper__SFn8s">
+                  <span class="TopBannerLangPicker_flagIcon__LcfDc">
+                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
+                         xmlns="http://www.w3.org/2000/svg"
+                         viewbox="0 0 1100 800"
+                         focusable="false"
+                         aria-hidden="true"
+                    >
+                      <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <rect width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect y="500"
+                            width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            y="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
+                               style="fill: rgb(0, 40, 104);"
+                      >
+                      </polygon>
+                    </svg>
+                  </span>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1422,13 +1950,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerButton_buttonText__guqHQ ">
+                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
                   Bokmål
-                  <span class="TopBannerLangPicker_srOnly__33VA7">
-                    Meny
-                  </span>
                 </span>
-                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                <span class="TopBannerLangPicker_srOnly__33VA7">
+                  Meny
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1586,17 +2114,61 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
                       aria-expanded="false"
                       type="button"
               >
-                <span class="TopBannerButton_iconWrapper__bu153">
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                       viewbox="0 0 24 24"
-                       focusable="false"
-                       aria-hidden="true"
-                       role="img"
-                  >
-                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
-                    </path>
-                  </svg>
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                <span class="TopBannerLangPicker_iconWrapper__SFn8s">
+                  <span class="TopBannerLangPicker_flagIcon__LcfDc">
+                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
+                         xmlns="http://www.w3.org/2000/svg"
+                         viewbox="0 0 1100 800"
+                         focusable="false"
+                         aria-hidden="true"
+                    >
+                      <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <rect width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect y="500"
+                            width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            y="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
+                               style="fill: rgb(0, 40, 104);"
+                      >
+                      </polygon>
+                    </svg>
+                  </span>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1606,13 +2178,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerButton_buttonText__guqHQ ">
+                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
                   Bokmål
-                  <span class="TopBannerLangPicker_srOnly__33VA7">
-                    Meny
-                  </span>
                 </span>
-                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                <span class="TopBannerLangPicker_srOnly__33VA7">
+                  Meny
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1738,17 +2310,61 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                       aria-expanded="false"
                       type="button"
               >
-                <span class="TopBannerButton_iconWrapper__bu153">
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                       viewbox="0 0 24 24"
-                       focusable="false"
-                       aria-hidden="true"
-                       role="img"
-                  >
-                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
-                    </path>
-                  </svg>
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                <span class="TopBannerLangPicker_iconWrapper__SFn8s">
+                  <span class="TopBannerLangPicker_flagIcon__LcfDc">
+                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
+                         xmlns="http://www.w3.org/2000/svg"
+                         viewbox="0 0 1100 800"
+                         focusable="false"
+                         aria-hidden="true"
+                    >
+                      <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <rect width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect y="500"
+                            width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            y="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
+                               style="fill: rgb(0, 40, 104);"
+                      >
+                      </polygon>
+                    </svg>
+                  </span>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1758,13 +2374,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerButton_buttonText__guqHQ ">
+                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
                   Bokmål
-                  <span class="TopBannerLangPicker_srOnly__33VA7">
-                    Meny
-                  </span>
                 </span>
-                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                <span class="TopBannerLangPicker_srOnly__33VA7">
+                  Meny
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1970,17 +2586,61 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                       aria-expanded="false"
                       type="button"
               >
-                <span class="TopBannerButton_iconWrapper__bu153">
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                       viewbox="0 0 24 24"
-                       focusable="false"
-                       aria-hidden="true"
-                       role="img"
-                  >
-                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
-                    </path>
-                  </svg>
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                <span class="TopBannerLangPicker_iconWrapper__SFn8s">
+                  <span class="TopBannerLangPicker_flagIcon__LcfDc">
+                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
+                         xmlns="http://www.w3.org/2000/svg"
+                         viewbox="0 0 1100 800"
+                         focusable="false"
+                         aria-hidden="true"
+                    >
+                      <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <rect width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect y="500"
+                            width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            y="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
+                               style="fill: rgb(0, 40, 104);"
+                      >
+                      </polygon>
+                    </svg>
+                  </span>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1990,13 +2650,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerButton_buttonText__guqHQ ">
+                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
                   Bokmål
-                  <span class="TopBannerLangPicker_srOnly__33VA7">
-                    Meny
-                  </span>
                 </span>
-                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                <span class="TopBannerLangPicker_srOnly__33VA7">
+                  Meny
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2202,17 +2862,61 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                       aria-expanded="false"
                       type="button"
               >
-                <span class="TopBannerButton_iconWrapper__bu153">
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                       viewbox="0 0 24 24"
-                       focusable="false"
-                       aria-hidden="true"
-                       role="img"
-                  >
-                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
-                    </path>
-                  </svg>
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                <span class="TopBannerLangPicker_iconWrapper__SFn8s">
+                  <span class="TopBannerLangPicker_flagIcon__LcfDc">
+                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
+                         xmlns="http://www.w3.org/2000/svg"
+                         viewbox="0 0 1100 800"
+                         focusable="false"
+                         aria-hidden="true"
+                    >
+                      <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <rect width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect y="500"
+                            width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            y="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
+                               style="fill: rgb(0, 40, 104);"
+                      >
+                      </polygon>
+                    </svg>
+                  </span>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -2222,13 +2926,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerButton_buttonText__guqHQ ">
+                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
                   Bokmål
-                  <span class="TopBannerLangPicker_srOnly__33VA7">
-                    Meny
-                  </span>
                 </span>
-                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                <span class="TopBannerLangPicker_srOnly__33VA7">
+                  Meny
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2429,17 +3133,61 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                       aria-expanded="false"
                       type="button"
               >
-                <span class="TopBannerButton_iconWrapper__bu153">
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                       viewbox="0 0 24 24"
-                       focusable="false"
-                       aria-hidden="true"
-                       role="img"
-                  >
-                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
-                    </path>
-                  </svg>
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                <span class="TopBannerLangPicker_iconWrapper__SFn8s">
+                  <span class="TopBannerLangPicker_flagIcon__LcfDc">
+                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
+                         xmlns="http://www.w3.org/2000/svg"
+                         viewbox="0 0 1100 800"
+                         focusable="false"
+                         aria-hidden="true"
+                    >
+                      <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <rect width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect y="500"
+                            width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            y="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
+                               style="fill: rgb(0, 40, 104);"
+                      >
+                      </polygon>
+                    </svg>
+                  </span>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -2449,13 +3197,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerButton_buttonText__guqHQ ">
+                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
                   Bokmål
-                  <span class="TopBannerLangPicker_srOnly__33VA7">
-                    Meny
-                  </span>
                 </span>
-                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                <span class="TopBannerLangPicker_srOnly__33VA7">
+                  Meny
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2651,17 +3399,61 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                       aria-expanded="false"
                       type="button"
               >
-                <span class="TopBannerButton_iconWrapper__bu153">
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                       viewbox="0 0 24 24"
-                       focusable="false"
-                       aria-hidden="true"
-                       role="img"
-                  >
-                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
-                    </path>
-                  </svg>
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                <span class="TopBannerLangPicker_iconWrapper__SFn8s">
+                  <span class="TopBannerLangPicker_flagIcon__LcfDc">
+                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
+                         xmlns="http://www.w3.org/2000/svg"
+                         viewbox="0 0 1100 800"
+                         focusable="false"
+                         aria-hidden="true"
+                    >
+                      <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <rect width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect y="500"
+                            width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            y="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
+                               style="fill: rgb(0, 40, 104);"
+                      >
+                      </polygon>
+                    </svg>
+                  </span>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -2671,13 +3463,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerButton_buttonText__guqHQ ">
+                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
                   Bokmål
-                  <span class="TopBannerLangPicker_srOnly__33VA7">
-                    Meny
-                  </span>
                 </span>
-                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                <span class="TopBannerLangPicker_srOnly__33VA7">
+                  Meny
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2873,17 +3665,61 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                       aria-expanded="false"
                       type="button"
               >
-                <span class="TopBannerButton_iconWrapper__bu153">
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                       viewbox="0 0 24 24"
-                       focusable="false"
-                       aria-hidden="true"
-                       role="img"
-                  >
-                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z">
-                    </path>
-                  </svg>
-                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowMobile__Z2VQa"
+                <span class="TopBannerLangPicker_iconWrapper__SFn8s">
+                  <span class="TopBannerLangPicker_flagIcon__LcfDc">
+                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
+                         xmlns="http://www.w3.org/2000/svg"
+                         viewbox="0 0 1100 800"
+                         focusable="false"
+                         aria-hidden="true"
+                    >
+                      <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
+                               style="fill: rgb(255, 255, 255);"
+                      >
+                      </polygon>
+                      <rect width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect y="500"
+                            width="300"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <rect x="500"
+                            y="500"
+                            width="600"
+                            height="300"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </rect>
+                      <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
+                               style="fill: rgb(0, 40, 104);"
+                      >
+                      </polygon>
+                    </svg>
+                  </span>
+                  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -2893,13 +3729,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerButton_buttonText__guqHQ ">
+                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
                   Bokmål
-                  <span class="TopBannerLangPicker_srOnly__33VA7">
-                    Meny
-                  </span>
                 </span>
-                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_arrowDesktop__1124g"
+                <span class="TopBannerLangPicker_srOnly__33VA7">
+                  Meny
+                </span>
+                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"

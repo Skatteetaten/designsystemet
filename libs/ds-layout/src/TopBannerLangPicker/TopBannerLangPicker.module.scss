@@ -10,6 +10,52 @@
 
 .menuButton {
   z-index: 1000;
+
+  .iconWrapper {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-xs);
+  }
+
+  .flagIcon {
+    display: flex;
+    width: var(--size-medium);
+    flex-shrink: 0;
+    padding: var(--spacing-xs);
+  }
+
+  &Text {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .arrowMobile {
+    fill: var(--semantic-interactive-main);
+  }
+
+  .arrowDesktop {
+    display: none;
+    fill: var(--semantic-interactive-main);
+  }
+
+  &:active {
+    .arrowMobile,
+    .arrowDesktop {
+      fill: var(--semantic-interactive-foreground);
+    }
+  }
+
+  @media (min-width: $breakpoint-s) {
+    align-items: center;
+
+    .arrowMobile {
+      display: none;
+    }
+
+    .arrowDesktop {
+      display: inline;
+    }
+  }
 }
 
 .menu {
@@ -20,11 +66,6 @@
   left: var(--spacing-m);
   width: 100%;
   margin-top: var(--spacing-l);
-
-  @media (min-width: $breakpoint-xs) {
-    left: auto;
-    max-width: 167px;
-  }
 
   &Arrow {
     position: absolute;
@@ -38,6 +79,15 @@
     border-bottom-color: transparent;
     background-color: var(--palette-graphite-0);
     transform: rotate(45deg);
+  }
+
+  @media (min-width: $breakpoint-xs) {
+    left: auto;
+    max-width: 167px;
+
+    &Arrow {
+      right: 80px;
+    }
   }
 }
 
