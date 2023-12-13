@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, ChangeEvent, MouseEvent } from 'react';
 
 import { Button, LinkGroup } from '@skatteetaten/ds-buttons';
 import { RadioGroup } from '@skatteetaten/ds-forms';
@@ -126,9 +126,7 @@ export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
   const [user, setUser] = useState<User>();
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
 
-  const handleLanguageClick = (
-    e: React.MouseEvent<HTMLButtonElement>
-  ): void => {
+  const handleLanguageClick = (e: MouseEvent<HTMLButtonElement>): void => {
     const lang = e.currentTarget.lang;
     dsI18n.changeLanguage(langToLocale[lang]);
   };
@@ -142,7 +140,7 @@ export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
     modalRef.current?.showModal();
   };
 
-  const handleChangeRole = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const handleChangeRole = (e: ChangeEvent<HTMLInputElement>): void => {
     setIsLoggedIn(true);
     const role = e.target.value as UserRole;
     if (role === 'meg') {
@@ -223,9 +221,7 @@ export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
   const [user, setUser] = useState<User>();
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
 
-  const handleLanguageClick = (
-    e: React.MouseEvent<HTMLButtonElement>
-  ): void => {
+  const handleLanguageClick = (e: MouseEvent<HTMLButtonElement>): void => {
     const lang = e.currentTarget.lang;
     dsI18n.changeLanguage(langToLocale[lang]);
   };
@@ -239,7 +235,7 @@ export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
     modalRef.current?.showModal();
   };
 
-  const handleChangeRole = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const handleChangeRole = (e: ChangeEvent<HTMLInputElement>): void => {
     setIsLoggedIn(true);
     const role = e.target.value as UserRole;
     if (role === 'meg') {
