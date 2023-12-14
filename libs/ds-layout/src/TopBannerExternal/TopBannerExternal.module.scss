@@ -2,24 +2,16 @@
 
 .topContainer {
   display: flex;
-  width: calc(var(--container-xs) - 2 * var(--spacing-m));
+  max-width: var(--semantic-responsive-container);
   justify-content: space-between;
+  padding: var(--semantic-resposive-container-padding);
   padding-top: var(--spacing-s);
   margin: auto;
   gap: var(--spacing-s);
 
   @media (min-width: $breakpoint-s) {
-    width: var(--container-s);
     padding-top: var(--spacing-m);
     padding-bottom: var(--spacing-s);
-  }
-
-  @media (min-width: $breakpoint-m) {
-    width: var(--container-m);
-  }
-
-  @media (min-width: $breakpoint-l) {
-    width: var(--container-l);
   }
 
   .contentContainer {
