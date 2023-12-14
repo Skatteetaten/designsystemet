@@ -31,13 +31,9 @@
     }
 
     @media (min-width: $breakpoint-m) {
-      width: var(--container-m);
+      width: var(--semantic-responsive-container);
       box-sizing: border-box;
       padding-left: 0;
-    }
-
-    @media (min-width: $breakpoint-l) {
-      width: var(--container-l);
     }
   }
 }
