@@ -109,7 +109,7 @@ export const Defaults = {
   },
 } satisfies Story;
 
-export const WithChildren = {
+export const WithUser = {
   name: 'With User (A3)',
   args: {
     ...defaultArgs,

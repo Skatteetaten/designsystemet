@@ -349,33 +349,6 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointXS smoke-te
 </div>
 `;
 
-exports[`Tester/TopBanner/TopBannerUserButton (intern) WithChildren play-test 1`] = `
-<div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx  TopBannerUserButton_usernameButton__06VaY"
-          type="button"
-  >
-    <span class="TopBannerButton_iconWrapper__bu153">
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-labelledby="svgtitle-:r3:"
-           aria-hidden="false"
-           role="img"
-      >
-        <title id="svgtitle-:r3:">
-          Innlogget som virksomhet
-        </title>
-        <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
-        </path>
-      </svg>
-    </span>
-    <span class="TopBannerButton_buttonText__guqHQ TopBannerUserButton_usernameText__u85YY">
-      Navnet på virksomheten
-    </span>
-  </button>
-</div>
-`;
-
 exports[`Tester/TopBanner/TopBannerUserButton (intern) WithMobileScreen smoke-test 1`] = `
 <div data-test-block="true">
   <div class="topbannerButtonContainer">
@@ -472,6 +445,33 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithRef play-test 1`] = `
     </span>
     <span class="TopBannerButton_buttonText__guqHQ ">
       Meg selv
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerUserButton (intern) WithUser play-test 1`] = `
+<div data-test-block="true">
+  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx  TopBannerUserButton_usernameButton__06VaY"
+          type="button"
+  >
+    <span class="TopBannerButton_iconWrapper__bu153">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r3:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r3:">
+          Innlogget som virksomhet
+        </title>
+        <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+        </path>
+      </svg>
+    </span>
+    <span class="TopBannerButton_buttonText__guqHQ TopBannerUserButton_usernameText__u85YY">
+      Navnet på virksomheten
     </span>
   </button>
 </div>
