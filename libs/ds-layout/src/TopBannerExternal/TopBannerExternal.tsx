@@ -20,6 +20,7 @@ import {
   TopBannerExternalHandle,
 } from './TopBannerExternal.types';
 import { TopBannerButton } from '../TopBannerButton/TopBannerButton';
+import { TopBannerLangPicker } from '../TopBannerLangPicker/TopBannerLangPicker';
 import { TopBannerLogo } from '../TopBannerLogo/TopBannerLogo';
 import { TopBannerSkipLink } from '../TopBannerSkipLink/TopBannerSkipLink';
 import { TopBannerUserButton } from '../TopBannerUserButton/TopBannerUserButton';
@@ -37,6 +38,7 @@ export const TopBannerExternal = forwardRef<
       lang,
       'data-testid': dataTestId,
       firstColumn,
+      locale,
       logo,
       logoAltText,
       logoAs,
@@ -48,7 +50,9 @@ export const TopBannerExternal = forwardRef<
       skipLinkTarget,
       thirdColumn,
       user,
+      showSami,
       children,
+      onLanguageClick,
       onLogInClick,
       onLogOutClick,
       onUserClick,
@@ -166,7 +170,11 @@ export const TopBannerExternal = forwardRef<
                   </>
                 )}
 
-                {/** TODO - FRONT-1161 språkmeny */}
+                <TopBannerLangPicker
+                  locale={locale}
+                  showSami={showSami}
+                  onLanguageClick={onLanguageClick}
+                />
 
                 {onLogOutClick && user && (
                   <>

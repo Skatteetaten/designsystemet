@@ -2,12 +2,12 @@
   position: relative;
   display: flex;
   width: 100%;
-  box-sizing: border-box;
   margin-top: var(--spacing-xs);
 }
 
 .select {
   width: 100%;
+  box-sizing: border-box;
   padding: var(--spacing-xs) 2.5rem var(--spacing-xs) var(--spacing-s);
   border: none;
   border-radius: 0;
@@ -59,18 +59,16 @@
 
 .selectIcon {
   position: absolute;
-  right: 0;
-  display: flex;
+  right: 4px;
   align-self: center;
   padding: 3px 1px 1px 3px;
   border-left: 1px solid var(--palette-graphite-30);
-  margin-right: 4px;
   fill: var(--palette-azure-70);
-  line-height: var(--semantic-line-height-input);
+  pointer-events: none;
 
   &_large {
+    right: 5px;
     padding: var(--spacing-xs);
-    margin-right: 5px;
   }
 }
 

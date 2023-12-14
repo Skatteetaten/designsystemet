@@ -28,10 +28,6 @@
     fill: var(--semantic-interactive-main);
   }
 
-  .arrowDesktop {
-    display: none;
-  }
-
   &Text {
     overflow: hidden;
     white-space: nowrap;
@@ -81,14 +77,6 @@
     font-size: var(--font-size-m);
     gap: var(--spacing-xs);
     line-height: var(--semantic-line-height-buttons);
-
-    .arrowMobile {
-      display: none;
-    }
-
-    .arrowDesktop {
-      display: inline;
-    }
 
     &:hover {
       border-color: var(--semantic-interactive-main);

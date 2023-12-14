@@ -1,3 +1,5 @@
+import { ChangeEvent } from 'react';
+
 import {
   dsI18n,
   formArrSize,
@@ -90,7 +92,7 @@ const TemplateDefault: StoryFn<typeof DatePicker> = (args) => {
   return (
     <DatePicker
       {...args}
-      onChange={(e: React.ChangeEvent<HTMLInputElement>): void => {
+      onChange={(e: ChangeEvent<HTMLInputElement>): void => {
         setArgs({ value: e.target.value });
       }}
     />

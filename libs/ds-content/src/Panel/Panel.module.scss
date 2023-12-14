@@ -3,25 +3,16 @@
 
 $border-outline: 6px;
 
-// TODO FRONT-1006 layout - implementer layout-oppskrift på å få innhold i panel til å være alinget i forhold til hverandre
-
 .panel {
   --variant-outline-color: var(--palette-ochre-50);
   --variant-filled-color: var(--palette-ochre-10);
   --panel-padding: var(--spacing-xl);
 
-  display: flex;
+  display: grid;
   max-width: var(--container-m);
   box-sizing: border-box;
-  flex-direction: column;
+  grid-template: 'graphic' 'article' / 1fr;
   overflow-wrap: anywhere;
-  word-break: normal;
-
-  @media (min-width: $breakpoint-s) {
-    flex-direction: row;
-    justify-content: center;
-    gap: var(--spacing-m);
-  }
 
   &_outline {
     padding: calc(var(--panel-padding) - $border-outline);
@@ -36,55 +27,66 @@ $border-outline: 6px;
   }
 
   &_graphic {
-    @media (min-width: $breakpoint-s) {
-      &Image {
+    &Image {
+      @media (min-width: $breakpoint-s) {
         gap: var(--spacing-xxl);
+        grid-template: 'graphic article' /1fr 60%;
+      }
+    }
+
+    &Icon {
+      grid-template:
+        '. graphic .'
+        '. article .' / 1fr minmax(40px, var(--semantic-responsive-article))
+        1fr;
+      row-gap: var(--spacing-m);
+
+      &Hide {
+        row-gap: 0;
       }
 
-      &Icon {
-        gap: var(--spacing-m);
+      @media (min-width: $breakpoint-m) {
+        gap: normal var(--spacing-m);
+        grid-template:
+          'graphic article .' / 1fr minmax(
+            40px,
+            var(--semantic-responsive-article)
+          )
+          1fr;
       }
     }
   }
 
-  &Space {
-    flex: 0 2 auto;
+  &Graphic {
+    width: 100%;
+    margin: 0 auto;
+    grid-area: graphic;
+    line-height: 1;
 
-    @media (min-width: $breakpoint-s) {
-      flex-basis: 150px;
+    &Hide {
+      display: none;
+
+      @media (min-width: $breakpoint-s) {
+        display: block;
+      }
     }
 
-    &_hide {
-      display: none;
+    @media (min-width: $breakpoint-m) {
+      width: auto;
+      margin-right: 0;
     }
   }
 
   &Article {
+    width: 100%;
     max-width: var(--semantic-responsive-article);
-    flex: 0 1 var(--semantic-responsive-article);
+    margin: 0 auto;
+    grid-area: article;
   }
 
-  &Graphic {
-    padding-bottom: var(--spacing-s);
-
-    &_hide {
-      display: none;
-    }
-
-    @media (min-width: $breakpoint-s) {
-      display: block;
-      padding-bottom: 0;
-      text-align: right;
-    }
-  }
-
-  &ImageContainer {
-    flex: 0 2 40%;
-
-    &Image {
-      width: 100%;
-      height: auto;
-    }
+  &Image {
+    width: 100%;
+    max-height: 320px;
   }
 
   &_ochre {

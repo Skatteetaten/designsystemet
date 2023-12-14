@@ -1,6 +1,6 @@
 import { MouseEventHandler, ReactNode, RefObject } from 'react';
 
-import { BaseProps } from '@skatteetaten/ds-core-utils';
+import { BaseProps, Languages } from '@skatteetaten/ds-core-utils';
 
 import { LogoAs } from '../TopBannerLogo/TopBannerLogo.types';
 import { TopBannerSkipLinkProps } from '../TopBannerSkipLink/TopBannerSkipLink.types';
@@ -45,6 +45,12 @@ type TopBannerLogoDiscriminatedProps =
     };
 
 interface TopBannerCommonProps extends BaseProps {
+  /** Hvilket språk som skal være forhåndsvalgt i språkvelgeren. */
+  locale?: Languages;
+  /** Callback når et språk trykkes på i språkvelgeren. */
+  onLanguageClick?: MouseEventHandler<HTMLButtonElement>;
+  /** Om samisk språk skal vises eller ikke i språkvelgeren. */
+  showSami?: boolean;
   /** Callback når Logg inn-knapp trykkes på. Om Logg inn-knappen er synlig eller ikke henger sammen med onLogIn, onLogOut og userRole. Knappen er synlig hvis userRole IKKE har en rolle og det finnes callback-funksjon for Logg inn- og Logg ut-knappen. */
   onLogInClick?: MouseEventHandler<HTMLButtonElement>;
   /** Callback når Logg ut-knapp trykkes på. Om Logg ut-knappen er synlig eller ikke henger sammen med onLogIn, onLogOut og userRole. Knappen er synlig hvis userRole har en rolle og det finnes callback-funksjoner for Logg inn- og Logg ut-knappen. NB! Husk å nullstill userRole i onLogOut slik at Logg inn-knappen blir synlig. */
@@ -54,7 +60,7 @@ interface TopBannerCommonProps extends BaseProps {
    Hvis role ikke er lik 'meg' må user.name settes for å styre teksten på user-knappen.
    */
   user?: User;
-  /** Callback når user-knapp trykkes på. Username-knappen vises når bruker er innlogget og må alltid ha en callback. Knappen kan brukes til rollebytte. Avhengig av rollen til bruker viser knappen automatisk forskjellig ikoner ut i fra den valgte rollen som userRole har fått. */
+  /** Callback når user-knapp trykkes på. User-knappen vises når bruker er innlogget og må alltid ha en callback. Knappen kan brukes til rollebytte. Avhengig av rollen til bruker viser knappen automatisk forskjellig ikoner ut i fra den valgte rollen som userRole har fått. */
   onUserClick?: MouseEventHandler<HTMLButtonElement>;
   /** Meny-innhold første kolonne. Meny-knappen blir synlig når den har innhold. */
   firstColumn?: ReactNode;
@@ -79,8 +85,8 @@ export type TopBannerExternalProps = TopBannerCommonProps &
   TopBannerLogoDiscriminatedProps;
 
 export interface TopBannerExternalHandle extends RefObject<HTMLHeadElement> {
-  /* Åpner menyen*/
+  /* Åpner menyen */
   openMenu: () => void;
-  /* Lukker menyen*/
+  /* Lukker menyen */
   closeMenu: () => void;
 }

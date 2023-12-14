@@ -3,7 +3,7 @@
 .logoContainer {
   display: flex;
   width: fit-content;
-  height: 40px;
+  height: var(--size-extra-large);
   padding: var(--spacing-xs);
 }
 

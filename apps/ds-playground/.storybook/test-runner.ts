@@ -29,6 +29,7 @@ const customConfig: MatchImageSnapshotOptions = {
 interface ViewPort {
   defaultViewport?: string;
   viewPortHeight?: number;
+  //eslint-disable-next-line @typescript-eslint/no-explicit-any
   viewports: Record<string, any>;
 }
 async function adjustViewport(page: Page, viewport: ViewPort): Promise<void> {

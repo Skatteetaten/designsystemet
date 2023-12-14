@@ -1,6 +1,6 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, ChangeEvent, MouseEvent } from 'react';
 
-import { LinkGroup } from '@skatteetaten/ds-buttons';
+import { Button, LinkGroup } from '@skatteetaten/ds-buttons';
 import { RadioGroup } from '@skatteetaten/ds-forms';
 import {
   TopBannerExternal,
@@ -10,6 +10,13 @@ import {
 import { Modal } from '@skatteetaten/ds-overlays';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { dsI18n, langToLocale } from '../../../../../libs/ds-core-utils/src';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import {
+  getTopBannerLangPickerLocaleDefault,
+  getTopBannerLangPickerShowSamiDefault,
+} from '../../../../../libs/ds-layout/src/TopBannerLangPicker/defaults';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import {
   getTopBannerLogoAsDefault,
@@ -33,6 +40,18 @@ export default {
   title: 'Komponenter/TopBannerExternal',
   argTypes: {
     // Props
+    showSami: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: getTopBannerLangPickerShowSamiDefault() },
+      },
+    },
+    locale: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: getTopBannerLangPickerLocaleDefault() },
+      },
+    },
     children: { control: 'text', table: { category: category.props } },
     skipLinkText: { table: { category: category.props } },
     skipLinkTarget: {
@@ -82,6 +101,10 @@ export default {
       control: { type: null },
       table: { category: category.event },
     },
+    onLanguageClick: {
+      control: { type: null },
+      table: { category: category.event },
+    },
   },
   parameters: {
     version: getVersion('ds-layout'),
@@ -103,6 +126,11 @@ export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
   const [user, setUser] = useState<User>();
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
 
+  const handleLanguageClick = (e: MouseEvent<HTMLButtonElement>): void => {
+    const lang = e.currentTarget.lang;
+    dsI18n.changeLanguage(langToLocale[lang]);
+  };
+
   const handleLogOut = (): void => {
     setUser(undefined);
     setIsLoggedIn(false);
@@ -112,7 +140,7 @@ export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
     modalRef.current?.showModal();
   };
 
-  const handleChangeRole = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const handleChangeRole = (e: ChangeEvent<HTMLInputElement>): void => {
     setIsLoggedIn(true);
     const role = e.target.value as UserRole;
     if (role === 'meg') {
@@ -154,6 +182,7 @@ export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
         secondColumn={isLoggedIn ? 'Second column' : ''}
         thirdColumn={isLoggedIn ? 'Third column' : ''}
         user={user}
+        onLanguageClick={handleLanguageClick}
         onLogInClick={handleLogIn}
         onLogOutClick={handleLogOut}
         onUserClick={(): void => modalRef.current?.showModal()}
@@ -174,6 +203,7 @@ export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
             {'Innlogget som virksomhet'}
           </RadioGroup.Radio>
         </RadioGroup>
+        <Button onClick={(): void => modalRef.current?.close()}>{'Ok'}</Button>
       </Modal>
     </>
   );
@@ -191,6 +221,11 @@ export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
   const [user, setUser] = useState<User>();
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
 
+  const handleLanguageClick = (e: MouseEvent<HTMLButtonElement>): void => {
+    const lang = e.currentTarget.lang;
+    dsI18n.changeLanguage(langToLocale[lang]);
+  };
+
   const handleLogOut = (): void => {
     setUser(undefined);
     setIsLoggedIn(false);
@@ -200,7 +235,7 @@ export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
     modalRef.current?.showModal();
   };
 
-  const handleChangeRole = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const handleChangeRole = (e: ChangeEvent<HTMLInputElement>): void => {
     setIsLoggedIn(true);
     const role = e.target.value as UserRole;
     if (role === 'meg') {
@@ -242,6 +277,7 @@ export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
         secondColumn={isLoggedIn ? 'Second column' : ''}
         thirdColumn={isLoggedIn ? 'Third column' : ''}
         user={user}
+        onLanguageClick={handleLanguageClick}
         onLogInClick={handleLogIn}
         onLogOutClick={handleLogOut}
         onUserClick={(): void => modalRef.current?.showModal()}
@@ -262,6 +298,7 @@ export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
             {'Innlogget som virksomhet'}
           </RadioGroup.Radio>
         </RadioGroup>
+        <Button onClick={(): void => modalRef.current?.close()}>{'Ok'}</Button>
       </Modal>
     </>
   );
