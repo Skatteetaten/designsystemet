@@ -28,6 +28,11 @@ export default {
         defaultValue: { summary: dsI18n.t('ds_collections:steplist.Next') },
       },
     },
+    nextButtonWithSpinner: {
+      table: {
+        category: category.props,
+      },
+    },
     introTitle: {
       control: 'text',
       table: { category: category.props, type: { summary: 'string' } },

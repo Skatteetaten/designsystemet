@@ -31,6 +31,9 @@ const meta = {
     onNext: { table: { disable: true, category: category.props } },
     editButtonText: { table: { disable: true, category: category.props } },
     nextButtonText: { table: { disable: true, category: category.props } },
+    nextButtonWithSpinner: {
+      table: { disable: true, category: category.props },
+    },
     hasResultContentFullWidth: {
       table: { disable: true, category: category.props },
     },
@@ -181,5 +184,21 @@ export const WithEditAccessibleDescription = {
   },
   parameters: {
     imageSnapshot: { disable: true },
+  },
+} satisfies Story;
+
+export const NextButtonWithSpinner = {
+  render: Template,
+  name: 'With Spinner In Next Button',
+  args: {
+    stepNumber: 1,
+    variant: 'active',
+    title: 'tittel',
+    children: loremIpsum,
+    nextButtonWithSpinner: true,
+    onNext: (): void => console.log('next'),
+  },
+  argTypes: {
+    nextButtonWithSpinner: { table: { disable: false } },
   },
 } satisfies Story;
