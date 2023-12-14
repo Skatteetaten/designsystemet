@@ -14,7 +14,6 @@ import { fireEvent, within } from '@storybook/testing-library';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { logoAsArr } from '../../../../../libs/ds-layout/src/TopBannerLogo/TopBannerLogo.types';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { category } from '../../../.storybook/helpers';
 import customLogo from '../../assets/custom-logo.svg';
 import customMobileLogo from '../../assets/custom-mobile-logo.svg';
 import skeMobileLogo from '../../assets/ske-logo-mobile.svg';
@@ -32,9 +31,11 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    showSami: { table: { disable: true } },
+    locale: { table: { disable: true } },
     children: {
       control: 'text',
-      table: { disable: true, category: category.props },
+      table: { table: { disable: true } },
     },
     skipLinkText: { table: { disable: true } },
     skipLinkTarget: { table: { disable: true } },
@@ -61,6 +62,7 @@ const meta = {
     secondColumn: { control: 'text', table: { disable: true } },
     thirdColumn: { control: 'text', table: { disable: true } },
     // Events
+    onLanguageClick: { table: { disable: true } },
     onLogInClick: { table: { disable: true } },
     onLogOutClick: { table: { disable: true } },
     onUserClick: { table: { disable: true } },
@@ -142,12 +144,9 @@ export const WithDefaults = {
     const skipLink = canvas.getByText(skipLinkText);
     expect(skipLink).toBeInTheDocument();
 
-    // TODO FRONT-1161 test at språkvelger finnes
-
+    await expect(canvas.getByText(menuText)).toBeInTheDocument();
     // eslint-disable-next-line testing-library/no-node-access
     await expect(canvas.queryByText(loginText)).not.toBeInTheDocument();
-    // eslint-disable-next-line testing-library/no-node-access
-    await expect(canvas.queryByText(menuText)).not.toBeInTheDocument();
     // eslint-disable-next-line testing-library/no-node-access
     await expect(canvas.queryByText(logoutText)).not.toBeInTheDocument();
   },

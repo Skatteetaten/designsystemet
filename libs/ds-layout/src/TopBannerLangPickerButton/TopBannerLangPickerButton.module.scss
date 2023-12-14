@@ -1,0 +1,50 @@
+@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
+.button {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: var(--size-extra-large);
+  align-items: center;
+  padding: var(--spacing-s);
+  border: 0;
+  background-color: var(--palette-graphite-0);
+  color: var(--palette-graphite-100);
+  font-size: var(--font-size-m);
+  gap: var(--spacing-s);
+  line-height: var(--semantic-line-height-buttons);
+
+  .flagWrapper {
+    display: flex;
+
+    // TODO - FRONT-1161: Kan det løses uten html-element som selector. Pga Safari må svg-en ha en størrelse direkte på seg.
+    svg {
+      width: var(--size-medium);
+    }
+  }
+
+  &Text {
+    flex-grow: 1;
+    text-align: left;
+  }
+
+  &Current {
+    background-color: var(--palette-graphite-5);
+  }
+
+  &:hover {
+    background-color: var(--semantic-interactive-background);
+    color: var(--semantic-interactive-main);
+    cursor: pointer;
+  }
+
+  &:focus {
+    border: 2px solid var(--semantic-interactive-main);
+    outline: none;
+  }
+
+  &:active {
+    border-color: var(--semantic-interactive-foreground);
+    color: var(--semantic-interactive-foreground);
+  }
+}

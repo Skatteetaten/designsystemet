@@ -1,0 +1,118 @@
+@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@import 'libs/ds-core-utils/src/styles.scss';
+
+.overlay {
+  position: fixed;
+  z-index: 999;
+  background: rgba(255, 255, 255, 80%);
+  inset: 0;
+}
+
+.menuButton {
+  z-index: 1000;
+
+  .iconWrapper {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-xs);
+  }
+
+  .flagIcon {
+    display: flex;
+    flex-shrink: 0;
+    padding: var(--spacing-xs);
+
+    &Svg {
+      width: var(--size-medium);
+    }
+  }
+
+  &Text {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .arrowMobile {
+    fill: var(--semantic-interactive-main);
+  }
+
+  .arrowDesktop {
+    display: none;
+    fill: var(--semantic-interactive-main);
+  }
+
+  &:active {
+    .arrowMobile,
+    .arrowDesktop {
+      fill: var(--semantic-interactive-foreground);
+    }
+  }
+
+  @media (min-width: $breakpoint-s) {
+    align-items: center;
+
+    .arrowMobile {
+      display: none;
+    }
+
+    .arrowDesktop {
+      display: inline;
+    }
+  }
+}
+
+.menu {
+  position: absolute;
+  z-index: 1000;
+  top: 4rem;
+  right: var(--spacing-m);
+  left: var(--spacing-m);
+  margin-top: var(--spacing-l);
+
+  &Arrow {
+    position: absolute;
+    top: -8px;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid;
+    border-color: var(--palette-graphite-70);
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    background-color: var(--palette-graphite-0);
+    transform: rotate(45deg);
+  }
+
+  @media (min-width: $breakpoint-xs) {
+    right: auto;
+    left: auto;
+
+    &Arrow {
+      right: 50%;
+    }
+  }
+}
+
+.list {
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--palette-graphite-70);
+  margin: 0;
+  box-shadow: 3px 2px 5px 0 #d9d9d9;
+  list-style-type: none;
+
+  @media (min-width: $breakpoint-xs) {
+    width: 167px;
+  }
+
+  &Item {
+    border-bottom: 1px solid var(--palette-graphite-70);
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+}
+
+.srOnly {
+  @include sr-only;
+}

@@ -1,7 +1,7 @@
 import { forwardRef, JSX } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-import { Icon, MenuDownSVGpath } from '@skatteetaten/ds-icons';
+import { Icon } from '@skatteetaten/ds-icons';
 
 import { TopBannerButtonProps } from './TopBannerButton.types';
 
@@ -22,8 +22,8 @@ export const TopBannerButton = forwardRef<
       title,
       variant,
       ariaExpanded,
-      hasArrow,
       onClick,
+      onKeyDown,
       children,
     },
     ref
@@ -43,19 +43,19 @@ export const TopBannerButton = forwardRef<
         aria-expanded={ariaExpanded}
         type={'button'}
         onClick={onClick}
+        onKeyDown={onKeyDown}
       >
-        <span className={styles.iconWrapper}>
-          <Icon svgPath={svgPath} className={styles.icon} title={title} />
-          {hasArrow && (
-            <Icon svgPath={MenuDownSVGpath} className={styles.arrowMobile} />
-          )}
-        </span>
-        <span className={`${styles.buttonText} ${classNames?.text ?? ''}`}>
-          {children}
-        </span>
-        {hasArrow && (
-          <Icon svgPath={MenuDownSVGpath} className={styles.arrowDesktop} />
+        {svgPath && (
+          <>
+            <span className={styles.iconWrapper}>
+              <Icon svgPath={svgPath} className={styles.icon} title={title} />
+            </span>
+            <span className={`${styles.buttonText} ${classNames?.text ?? ''}`}>
+              {children}
+            </span>
+          </>
         )}
+        {!svgPath && children}
       </button>
     );
   }

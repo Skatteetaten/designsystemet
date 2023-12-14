@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { forwardRef, SyntheticEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
@@ -27,7 +27,7 @@ export const TopBannerSkipLink = forwardRef<
   ): JSX.Element => {
     const { t } = useTranslation('ds_layout', { i18n: dsI18n });
 
-    const handleClick = (event: React.SyntheticEvent): void => {
+    const handleClick = (event: SyntheticEvent): void => {
       event.preventDefault();
 
       const container: HTMLElement | null = shadowRootNode
@@ -58,4 +58,4 @@ export const TopBannerSkipLink = forwardRef<
     );
   }
 );
-TopBannerSkipLink.displayName = 'SkipLink';
+TopBannerSkipLink.displayName = 'TopBannerSkipLink';
