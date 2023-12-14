@@ -16,14 +16,9 @@
   color: var(--palette-graphite-0);
 
   &Container {
-    max-width: calc(
-      var(--semantic-responsive-container) - 2 * var(--spacing-m)
-    );
+    max-width: var(--semantic-responsive-container);
+    padding: var(--semantic-resposive-container-padding);
     margin: auto;
-
-    @media (min-width: $breakpoint-s) {
-      max-width: var(--semantic-responsive-container);
-    }
   }
 
   .columns {

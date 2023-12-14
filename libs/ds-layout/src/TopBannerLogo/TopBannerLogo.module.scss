@@ -5,6 +5,7 @@
   width: fit-content;
   height: var(--size-extra-large);
   padding: var(--spacing-xs);
+  margin-left: calc(-1 * var(--spacing-xs));
 }
 
 .logoAsLink {
