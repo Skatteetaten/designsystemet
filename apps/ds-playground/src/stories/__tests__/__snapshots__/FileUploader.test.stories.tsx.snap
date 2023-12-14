@@ -361,6 +361,7 @@ exports[`Tester/FileUploader WithUploadStatus smoke-test 1`] = `
             <a id=":rq:-file-dokumentasjon.pdf"
                class="Link_link__jeUpY  "
                href="https://www.skatteetaten.no/person/"
+               download
             >
               <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isCustom__nsOot"
                    viewbox="0 0 24 24"
@@ -542,6 +543,7 @@ exports[`Tester/FileUploader WithUploadStatus smoke-test 1`] = `
             <a id=":r15:-file-dokumentasjon.pdf"
                class="Link_link__jeUpY  "
                href="https://www.skatteetaten.no/person/"
+               download
             >
               <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isCustom__nsOot"
                    viewbox="0 0 24 24"
@@ -737,6 +739,7 @@ exports[`Tester/FileUploader WithUploadedFiles smoke-test 1`] = `
             <a id=":ra:-file-dokumentasjon.pdf"
                class="Link_link__jeUpY  "
                href="https://www.skatteetaten.no/person/"
+               download
             >
               <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isCustom__nsOot"
                    viewbox="0 0 24 24"
