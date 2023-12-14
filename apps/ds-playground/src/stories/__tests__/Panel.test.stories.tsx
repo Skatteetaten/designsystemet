@@ -605,13 +605,29 @@ const TemplateTwoPanelWithTextAndOneWithIcon: StoryFn<typeof Panel> = (
   </>
 );
 
-export const TextAlginedVertical = {
+export const TextAlignedVertical = {
   render: TemplateTwoPanelWithTextAndOneWithIcon,
   name: 'Text Aligned Vertical (A13)',
   args: {
     ...defaultArgs,
     renderIcon: (): JSX.Element => <InfoIcon size={'extraLarge'} />,
   },
+  argTypes: {
+    renderIcon: {
+      table: { disable: false },
+    },
+  },
+} satisfies Story;
+
+export const TextShortAndIcon = {
+  name: 'Text Short And Icon (A11)',
+
+  args: {
+    title: 'Kort tittel',
+    children: <Paragraph>{'Kort test ...'}</Paragraph>,
+    renderIcon: (): JSX.Element => <InfoIcon size={'large'} />,
+  },
+
   argTypes: {
     renderIcon: {
       table: { disable: false },
