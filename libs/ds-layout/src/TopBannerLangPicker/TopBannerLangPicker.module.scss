@@ -97,7 +97,7 @@
   padding: 0;
   border: 1px solid var(--palette-graphite-70);
   margin: 0;
-  box-shadow: 3px 2px 5px 0 #d9d9d9;
+  box-shadow: 3px 2px 5px 0 var(--semantic-divider-30);
   list-style-type: none;
 
   @media (min-width: $breakpoint-xs) {

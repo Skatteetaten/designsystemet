@@ -49,7 +49,7 @@ interface TopBannerCommonProps extends BaseProps {
   locale?: Languages;
   /** Callback når et språk trykkes på i språkvelgeren. */
   onLanguageClick?: MouseEventHandler<HTMLButtonElement>;
-  /** Om samisk språk skal vises eller ikke i språkvelgeren. */
+  /** Om samisk språk skal vises eller ikke i språkvelgeren. Samisk er med i listen over språk som default. */
   showSami?: boolean;
   /** Callback når Logg inn-knapp trykkes på. Om Logg inn-knappen er synlig eller ikke henger sammen med onLogIn, onLogOut og userRole. Knappen er synlig hvis userRole IKKE har en rolle og det finnes callback-funksjon for Logg inn- og Logg ut-knappen. */
   onLogInClick?: MouseEventHandler<HTMLButtonElement>;
