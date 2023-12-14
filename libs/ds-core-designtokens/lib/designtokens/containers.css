@@ -23,7 +23,6 @@
 @media (min-width: 480px) {
   :root,
   :host {
-    --semantic-responsive-container-padding: 0;
     --semantic-responsive-wide-content: var(--container-s);
   }
 }
@@ -33,6 +32,7 @@
   :root,
   :host {
     --semantic-responsive-container: var(--container-s);
+    --semantic-responsive-container-padding: 0;
     --semantic-responsive-article: var(--container-s);
     --semantic-responsive-wide-content: var(--container-wide-content);
   }
