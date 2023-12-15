@@ -1,12 +1,4 @@
-import React, {
-  forwardRef,
-  JSX,
-  useEffect,
-  useRef,
-  useState,
-  MouseEvent,
-  KeyboardEvent,
-} from 'react';
+import { forwardRef, JSX, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
@@ -63,7 +55,40 @@ export const TopBannerLangPicker = forwardRef<
       setIsMenuOpen(!isMenuOpen);
     };
 
-    const handleLanguageClick = (e: MouseEvent<HTMLButtonElement>): void => {
+    useEffect(() => {
+      if (!isMenuOpen) {
+        return;
+      }
+
+      const handleClickOutside = (event: MouseEvent): void => {
+        const node = event.target as Node;
+        if (
+          !menuButtonRef.current?.contains(node) &&
+          !menuRef.current?.contains(node)
+        ) {
+          setIsMenuOpen(false);
+          menuButtonRef.current?.focus();
+        }
+      };
+
+      const handleEscape = (e: KeyboardEvent): void => {
+        if (e.key === 'Escape') {
+          setIsMenuOpen(false);
+          menuButtonRef.current?.focus();
+        }
+      };
+
+      document.addEventListener('click', handleClickOutside, false);
+      document.addEventListener('keyup', handleEscape, false);
+      return () => {
+        document.removeEventListener('click', handleClickOutside, false);
+        document.removeEventListener('keyup', handleEscape, false);
+      };
+    }, [isMenuOpen]);
+
+    const handleLanguageClick = (
+      e: React.MouseEvent<HTMLButtonElement>
+    ): void => {
       setSelectedLang(e.currentTarget.lang);
       setIsMenuOpen(false);
       menuButtonRef.current?.focus();
@@ -71,7 +96,7 @@ export const TopBannerLangPicker = forwardRef<
     };
 
     const handleCloseMenuKeyDown = (
-      e: KeyboardEvent<HTMLButtonElement>
+      e: React.KeyboardEvent<HTMLButtonElement>
     ): void => {
       e.stopPropagation();
       if (!e.shiftKey && e.key === 'Tab') {
@@ -147,10 +172,7 @@ export const TopBannerLangPicker = forwardRef<
             <ul className={styles.list}>
               {Object.values(defaultLanguages).map((language, index) => {
                 return (
-                  <li
-                    key={`${language.lang}-${index}`}
-                    className={styles.listItem}
-                  >
+                  <li key={`${language.lang}`} className={styles.listItem}>
                     <TopBannerLangPicker.Button
                       lang={language.lang}
                       ariaCurrent={language.lang === selectedLang}

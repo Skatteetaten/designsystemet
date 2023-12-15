@@ -35,7 +35,7 @@ const meta = {
     locale: { table: { disable: true } },
     children: {
       control: 'text',
-      table: { table: { disable: true } },
+      table: { disable: true },
     },
     skipLinkText: { table: { disable: true } },
     skipLinkTarget: { table: { disable: true } },
@@ -134,7 +134,6 @@ export const WithDefaults = {
   args: {
     ...defaultArgs,
   },
-  argTypes: {},
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const header = canvas.getByRole('banner');
@@ -172,8 +171,6 @@ export const WithChildren = {
     expect(label).toBeInTheDocument();
   },
 } satisfies Story;
-
-// TODO FRONT-1161 tester på logo props og reglene, ev. i Logo.test.storeis.tsx hvis det går....
 
 export const SkipLinkFocusedMobileScreen = {
   name: 'SkipLink Focused On Mobile Screen (A3)',
@@ -625,3 +622,5 @@ export const WithThreeColumnsBreakpointXS = {
     await fireEvent.click(menuButton);
   },
 } satisfies Story;
+
+// TODO FRONT-1161 tester på logo props og reglene, ev. i Logo.test.storeis.tsx hvis det går....

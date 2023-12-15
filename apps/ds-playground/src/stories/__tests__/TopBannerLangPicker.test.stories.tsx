@@ -161,4 +161,30 @@ export const WithLocale = {
   },
 } satisfies Story;
 
-// TODO Lukke menyskuffen når et språk valg gjøres A4
+export const CloseMenuWhenClickOnLangButton = {
+  name: 'Close Menu When Click On LangButton (LanguagePicker A4)',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const menuButtonBokmal = canvas.getByRole('button', {
+      name: `${bokmalText} ${menuText}`,
+    });
+    await expect(menuButtonBokmal).toHaveAttribute('aria-expanded', 'false');
+
+    await menuButtonBokmal.click();
+    await expect(menuButtonBokmal).toHaveAttribute('aria-expanded', 'true');
+    const englishButton = canvas.getByRole('button', { name: englishText });
+
+    await englishButton.click();
+    await expect(englishButton).not.toBeInTheDocument();
+    const menuButtonEnglish = canvas.getByRole('button', {
+      name: `${englishText} ${menuText}`,
+    });
+    await expect(menuButtonEnglish).toHaveAttribute('aria-expanded', 'false');
+  },
+} satisfies Story;

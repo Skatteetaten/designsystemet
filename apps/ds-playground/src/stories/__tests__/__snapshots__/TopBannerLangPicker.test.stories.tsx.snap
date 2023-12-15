@@ -1,5 +1,124 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangButton play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <div class>
+    </div>
+    <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+            lang="en"
+            aria-expanded="false"
+            type="button"
+    >
+      <span class="TopBannerLangPicker_iconWrapper__SFn8s">
+        <span class="TopBannerLangPicker_flagIcon__LcfDc">
+          <svg id="Layer_1"
+               xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink"
+               x="0px"
+               y="0px"
+               viewbox="0 0 1000 600"
+               xml:space="preserve"
+               focusable="false"
+               aria-hidden="true"
+               class="TopBannerLangPicker_flagIconSvg__rO4YM"
+          >
+            <style type="text/css">
+              .st0{fill:#FFFFFF;}
+	.st1{fill:#012169;}
+	.st2{fill:#C8102E;}
+            </style>
+            <rect class="st0"
+                  width="1000"
+                  height="600"
+            >
+            </rect>
+            <g>
+              <polygon class="st1"
+                       points="165.8,200 0,200 0,117.1  "
+              >
+              </polygon>
+              <polygon class="st1"
+                       points="165.8,400 0,482.9 0,400  "
+              >
+              </polygon>
+              <polygon class="st1"
+                       points="600,600 965.8,600 600,417.1  "
+              >
+              </polygon>
+              <polygon class="st1"
+                       points="34.2,600 400,600 400,417.1  "
+              >
+              </polygon>
+              <polygon class="st1"
+                       points="400,0 34.2,0 400,182.9  "
+              >
+              </polygon>
+              <polygon class="st1"
+                       points="1000,400 1000,482.9 834.2,400  "
+              >
+              </polygon>
+              <polygon class="st1"
+                       points="965.8,0 600,0 600,182.9  "
+              >
+              </polygon>
+              <polygon class="st1"
+                       points="1000,117.1 1000,200 834.2,200  "
+              >
+              </polygon>
+              <polygon class="st2"
+                       points="1000,5.3 1000,50 700,200 610.6,200  "
+              >
+              </polygon>
+              <polygon class="st2"
+                       points="389.4,200 210.6,200 0,94.7 0,5.3  "
+              >
+              </polygon>
+              <polygon class="st2"
+                       points="389.4,400 0,594.7 0,505.3 210.6,400  "
+              >
+              </polygon>
+              <polygon class="st2"
+                       points="1000,505.3 1000,594.7 610.6,400 789.4,400  "
+              >
+              </polygon>
+              <polygon class="st2"
+                       points="1000,240 1000,360 560,360 560,600 440,600 440,360 0,360 0,240 440,240 440,0 560,0 560,240  "
+              >
+              </polygon>
+            </g>
+          </svg>
+        </span>
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="m7 10 5 5 5-5H7Z">
+          </path>
+        </svg>
+      </span>
+      <span class="TopBannerLangPicker_menuButtonText__NPaVk">
+        English
+      </span>
+      <span class="TopBannerLangPicker_srOnly__33VA7">
+        Meny
+      </span>
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="m7 10 5 5 5-5H7Z">
+        </path>
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = `
 <div data-test-block="true">
   <div class>
