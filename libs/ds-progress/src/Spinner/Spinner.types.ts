@@ -19,4 +19,9 @@ export interface SpinnerProps extends BaseProps {
   children?: string;
   /** Skjuler ledetekst, men er fortsatt synlig for skjermleser. */
   hideTitle?: boolean;
+  classNames?: {
+    container?: string;
+    animation?: string;
+    title?: string;
+  };
 }

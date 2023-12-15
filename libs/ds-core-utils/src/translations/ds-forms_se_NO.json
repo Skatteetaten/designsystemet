@@ -1,13 +1,18 @@
 {
   "errorsummary.Title": "Jus áigut viidáset de fertet divvut {{errorAmount}} boasttuvuođa:",
-  "fileuploader.AcceptedFileFormats": "Fiillaid maid sáhtát lasihit:",
-  "fileuploader.AddFile": "Lasit fiilla/fiillaid",
-  "fileuploader.DeleteFile": "Sihko fiilla",
+  "fileuploader.AddMultipleLabel": "Lasit fiilla/fiillaid",
+  "fileuploader.AddSingleLabel": "Lasit fiilla",
+  "fileuploader.DeleteLabel": "Sihko fiilla",
   "fileuploader.FileFormatError": "{{filnavn}} ii sáhte lasihuvvot. Lasit fiilla rievttes formáhtas.",
+  "fileuploader.FileIconLabel": "Fiilla",
   "fileuploader.FileSizeError": "Mii eat nagot vuostáiváldit fiilla. Fiillat eai sáhte leat stuorát go {{filstoerrelsegrense}} MB. Sáhtát geahččalit juohkit fiilla eanet osiide, dahje geavahit formáhta mii geavaha unnit saji.",
+  "fileuploader.FormatLabel": "Fiillaid maid sáhtát lasihit:",
   "fileuploader.GeneralDeleteError": "It sáhtán sihkkot fiilla",
   "fileuploader.GeneralUploadError": "It sáhtán lasihit fiilla",
+  "fileuploader.InProgressLabel": "(Opplasting pågår)",
   "fileuploader.NoRightsToDeleteError": "Dus eai leat vuoigatvuođat sihkkot fiillaid",
   "fileuploader.NoRightsUploadError": "Dus ii leat vuoigatvuohta lasihit fiillaid",
-  "fileuploader.UploadedHeading": "Lasihuvvon:"
+  "fileuploader.SuccessIconLabel": "(Fullført)",
+  "fileuploader.UploadedHeading": "Lasihuvvon:",
+  "fileuploader.UploadedSummary": "({{fileCount}} filer lastet opp)"
 }

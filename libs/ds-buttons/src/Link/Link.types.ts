@@ -4,7 +4,7 @@ import { BaseProps, LinkColor } from '@skatteetaten/ds-core-utils';
 
 type RequiredLinkHTMLAttributes = Pick<
   HTMLProps<HTMLAnchorElement>,
-  'href' | 'target' | 'onClick'
+  'href' | 'target' | 'onClick' | 'download'
 >;
 
 type LinkHTMLAttributes = Partial<RequiredLinkHTMLAttributes>;

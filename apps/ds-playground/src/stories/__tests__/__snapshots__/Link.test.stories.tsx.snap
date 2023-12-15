@@ -63,6 +63,17 @@ exports[`Tester/Link WithColor smoke-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Link WithDownload play-test 1`] = `
+<div data-test-block="true">
+  <a class="Link_link__jeUpY  "
+     href="#storybook-root"
+     download="testFil.txt"
+  >
+    Er du pendler?
+  </a>
+</div>
+`;
+
 exports[`Tester/Link WithExternalIcon play-test 1`] = `
 <div data-test-block="true">
   <a class="Link_link__jeUpY  "

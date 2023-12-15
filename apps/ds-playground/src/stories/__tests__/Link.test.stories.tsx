@@ -52,6 +52,7 @@ const meta = {
     // HTML
     href: { table: { disable: true } },
     target: { table: { disable: true } },
+    download: { table: { disable: true } },
     // Aria
     ariaDescribedby: { table: { disable: true } },
     // Events
@@ -266,6 +267,26 @@ export const WithTarget = {
     const link = canvas.getByRole('link');
     expect(link).toHaveAttribute('rel', 'noreferrer');
     expect(link).toHaveAttribute('target', '_blank');
+  },
+} satisfies Story;
+
+export const WithDownload = {
+  render: Template,
+  name: 'With Download',
+  args: {
+    ...defaultArgs,
+    download: 'testFil.txt',
+  },
+  argTypes: {
+    download: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const link = canvas.getByRole('link');
+    expect(link).toHaveAttribute('download', 'testFil.txt');
   },
 } satisfies Story;
 

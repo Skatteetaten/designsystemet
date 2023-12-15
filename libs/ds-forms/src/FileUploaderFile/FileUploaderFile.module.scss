@@ -1,0 +1,45 @@
+.successIcon {
+  margin-left: var(--spacing-s);
+  fill: var(--semantic-success-foreground);
+}
+
+.spinner {
+  display: inline-flex;
+  margin-left: var(--spacing-s);
+}
+
+.fileList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  &Item {
+    margin-bottom: var(--spacing-s);
+  }
+
+  &Icon {
+    margin-right: var(--spacing-s);
+  }
+
+  &Container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &Link {
+    margin-left: auto;
+  }
+
+  &File {
+    padding-top: var(--spacing-s);
+    padding-bottom: var(--spacing-s);
+    color: var(--palette-graphite-70);
+    line-height: var(--semantic-line-height-article);
+
+    &Error {
+      // bredde på IconButton + litt luft
+      margin-right: calc(var(--size-medium) + var(--spacing-s));
+      margin-left: var(--spacing-l);
+    }
+  }
+}
