@@ -1,13 +1,18 @@
 {
   "errorsummary.Title": "For å gå vidare må du rette opp {{errorAmount}} feil:",
-  "fileuploader.AcceptedFileFormats": "Filer du kan laste opp:",
-  "fileuploader.AddFile": "Legg til fil(er)",
-  "fileuploader.DeleteFile": "Fjern fil",
+  "fileuploader.AddMultipleLabel": "Legg til fil(er)",
+  "fileuploader.AddSingleLabel": "Legg til fil",
+  "fileuploader.DeleteLabel": "Fjern fil",
   "fileuploader.FileFormatError": "{{filnavn}} kan ikkje bli lasta opp. Last opp fila i riktig format.",
+  "fileuploader.FileIconLabel": "Fil",
   "fileuploader.FileSizeError": "Vi kan ikkje få denne fila fordi den er for stor. Filer kan ikkje overstige {{filstoerrelsegrense}} MB. Du kan prøve å dele opp i fleire mindre filer, eller bruke eit format som tek mindre plass.",
-  "fileuploader.GeneralDeleteError": "Kunne ikkje slette fil",
+  "fileuploader.FormatLabel": "Filer du kan laste opp:",
+  "fileuploader.GeneralDeleteError": "Kunne ikkje fjerne fil",
   "fileuploader.GeneralUploadError": "Kunne ikkje laste opp fil",
+  "fileuploader.InProgressLabel": "(Opplasting pågår)",
   "fileuploader.NoRightsToDeleteError": "Du har ikkje rettar til å slette filer",
   "fileuploader.NoRightsUploadError": "Du har ikkje rettar til å laste opp filer",
-  "fileuploader.UploadedHeading": "Lasta opp:"
+  "fileuploader.SuccessIconLabel": "(Fullført)",
+  "fileuploader.UploadedHeading": "Lasta opp:",
+  "fileuploader.UploadedSummary": "({{fileCount}} fil(er) lastet opp)"
 }

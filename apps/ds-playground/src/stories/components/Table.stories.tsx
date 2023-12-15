@@ -104,7 +104,9 @@ export const Preview: StoryObj<typeof Table> = {
             <Table.DataCell>{'9,000'}</Table.DataCell>
           </Table.Row>
         </Table.Body>
-        <Table.Sum colSpan={2}>{'32,000'}</Table.Sum>
+        <Table.Sum valueAlignment={'left'} colSpan={2}>
+          {'32,000'}
+        </Table.Sum>
       </>
     ),
   },

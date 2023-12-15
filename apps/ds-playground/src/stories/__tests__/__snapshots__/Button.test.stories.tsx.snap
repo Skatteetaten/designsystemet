@@ -250,11 +250,11 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
       </span>
       <div aria-live="polite"
            aria-atomic="true"
-           class="Spinner_spinner__RJ9Al Spinner_spinner_white__YLIF- Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC"
+           class="Spinner_spinner__RJ9Al Spinner_spinner_white__YLIF- Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC "
       >
         <div class="Spinner_spinnerAnimation__nAt8p ">
         </div>
-        <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+        <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193 ">
           Laster inn
         </span>
       </div>
@@ -267,11 +267,11 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
       </span>
       <div aria-live="polite"
            aria-atomic="true"
-           class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC"
+           class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC "
       >
         <div class="Spinner_spinnerAnimation__nAt8p ">
         </div>
-        <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+        <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193 ">
           Laster inn
         </span>
       </div>
@@ -284,11 +284,11 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
       </span>
       <div aria-live="polite"
            aria-atomic="true"
-           class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC"
+           class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC "
       >
         <div class="Spinner_spinnerAnimation__nAt8p ">
         </div>
-        <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+        <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193 ">
           Laster inn
         </span>
       </div>
@@ -301,11 +301,11 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
       </span>
       <div aria-live="polite"
            aria-atomic="true"
-           class="Spinner_spinner__RJ9Al Spinner_spinner_black__-biVj Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC"
+           class="Spinner_spinner__RJ9Al Spinner_spinner_black__-biVj Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC "
       >
         <div class="Spinner_spinnerAnimation__nAt8p ">
         </div>
-        <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+        <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193 ">
           Laster inn
         </span>
       </div>
@@ -404,11 +404,11 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
     </span>
     <div aria-live="polite"
          aria-atomic="true"
-         class="Spinner_spinner__RJ9Al Spinner_spinner_white__YLIF- Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC"
+         class="Spinner_spinner__RJ9Al Spinner_spinner_white__YLIF- Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC "
     >
       <div class="Spinner_spinnerAnimation__nAt8p ">
       </div>
-      <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+      <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193 ">
         Laster inn
       </span>
     </div>
@@ -432,11 +432,11 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
     </span>
     <div aria-live="polite"
          aria-atomic="true"
-         class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC"
+         class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC "
     >
       <div class="Spinner_spinnerAnimation__nAt8p ">
       </div>
-      <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+      <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193 ">
         Laster inn
       </span>
     </div>
@@ -460,11 +460,11 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
     </span>
     <div aria-live="polite"
          aria-atomic="true"
-         class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC"
+         class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC "
     >
       <div class="Spinner_spinnerAnimation__nAt8p ">
       </div>
-      <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+      <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193 ">
         Laster inn
       </span>
     </div>
@@ -488,11 +488,11 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
     </span>
     <div aria-live="polite"
          aria-atomic="true"
-         class="Spinner_spinner__RJ9Al Spinner_spinner_black__-biVj Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC"
+         class="Spinner_spinner__RJ9Al Spinner_spinner_black__-biVj Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC "
     >
       <div class="Spinner_spinnerAnimation__nAt8p ">
       </div>
-      <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193">
+      <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193 ">
         Laster inn
       </span>
     </div>
