@@ -1,5 +1,6 @@
 /* automatisk genererte types */
 export const overlay: string;
+export const container: string;
 export const menuButton: string;
 export const iconWrapper: string;
 export const flagIcon: string;

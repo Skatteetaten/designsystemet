@@ -26,6 +26,9 @@ const meta = {
     // Events
     onLanguageClick: { table: { disable: true } },
   },
+  parameters: {
+    layout: 'fullscreen',
+  },
 } as Meta<typeof TopBannerLangPicker>;
 export default meta;
 type Story = StoryObj<typeof meta>;

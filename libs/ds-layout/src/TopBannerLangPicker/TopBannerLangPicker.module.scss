@@ -3,9 +3,13 @@
 
 .overlay {
   position: fixed;
-  z-index: 999;
+  z-index: 800;
   background: rgba(255, 255, 255, 80%);
   inset: 0;
+}
+
+.container {
+  position: relative;
 }
 
 .menuButton {
@@ -62,9 +66,8 @@
 }
 
 .menu {
-  position: absolute;
+  position: fixed;
   z-index: 1000;
-  top: 4rem;
   right: var(--spacing-m);
   left: var(--spacing-m);
   margin-top: var(--spacing-l);
@@ -83,12 +86,15 @@
   }
 
   @media (min-width: $breakpoint-xs) {
-    right: auto;
     left: auto;
 
     &Arrow {
       right: 50%;
     }
+  }
+
+  @media (min-width: $breakpoint-s) {
+    right: auto;
   }
 }
 

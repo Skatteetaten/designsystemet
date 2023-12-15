@@ -1,4 +1,11 @@
-import { forwardRef, JSX, useEffect, useRef, useState } from 'react';
+import {
+  forwardRef,
+  JSX,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
@@ -47,13 +54,45 @@ export const TopBannerLangPicker = forwardRef<
     );
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
+    const [arrowPosition, setArrowPosition] = useState<number | undefined>(
+      undefined
+    );
+    useLayoutEffect(() => {
+      if (!isMenuOpen) {
+        return;
+      }
+
+      const handleOpenMenuClick = (): void => {
+        if (!menuButtonRef.current) {
+          return;
+        }
+
+        // TODO - FRONT-1161 Er det mulig å unngå hardkodet breakpoint, kan det endres til token
+        const media = window.matchMedia('(min-width: 640px)');
+        if (!media.matches) {
+          const { width, right } =
+            menuButtonRef.current.getBoundingClientRect();
+          const halfButtonWidth = width * 0.5;
+          const halfArrowWidth = 9;
+          const arrow =
+            window.innerWidth - right - halfArrowWidth + halfButtonWidth;
+          setArrowPosition(arrow);
+        } else {
+          setArrowPosition(undefined);
+        }
+      };
+
+      document.addEventListener('resize', handleOpenMenuClick, false);
+      document.addEventListener('click', handleOpenMenuClick, false);
+      return () => {
+        document.removeEventListener('resize', handleOpenMenuClick, false);
+        document.removeEventListener('click', handleOpenMenuClick, false);
+      };
+    }, [arrowPosition, isMenuOpen]);
+
     useEffect(() => {
       document.documentElement.lang = selectedLang;
     }, [selectedLang, setSelectedLang]);
-
-    const handleMenuClick = (): void => {
-      setIsMenuOpen(!isMenuOpen);
-    };
 
     useEffect(() => {
       if (!isMenuOpen) {
@@ -85,6 +124,10 @@ export const TopBannerLangPicker = forwardRef<
         document.removeEventListener('keyup', handleEscape, false);
       };
     }, [isMenuOpen]);
+
+    const handleMenuClick = (): void => {
+      setIsMenuOpen(!isMenuOpen);
+    };
 
     const handleLanguageClick = (
       e: React.MouseEvent<HTMLButtonElement>
@@ -135,7 +178,7 @@ export const TopBannerLangPicker = forwardRef<
       <div
         ref={ref}
         id={id}
-        className={className}
+        className={`${className} ${styles.container}`}
         lang={lang}
         data-testid={dataTestId}
       >
@@ -168,7 +211,14 @@ export const TopBannerLangPicker = forwardRef<
 
         {isMenuOpen && (
           <div ref={menuRef} className={styles.menu}>
-            <div className={styles.menuArrow} />
+            <div
+              className={styles.menuArrow}
+              style={
+                arrowPosition !== undefined
+                  ? { right: arrowPosition }
+                  : undefined
+              }
+            />
             <ul className={styles.list}>
               {Object.values(defaultLanguages).map((language, index) => {
                 return (

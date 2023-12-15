@@ -67,6 +67,9 @@ const meta = {
     onLogOutClick: { table: { disable: true } },
     onUserClick: { table: { disable: true } },
   },
+  parameters: {
+    layout: 'fullscreen',
+  },
 } satisfies Meta<typeof TopBannerExternal>;
 export default meta;
 type Story = StoryObj<typeof meta>;
