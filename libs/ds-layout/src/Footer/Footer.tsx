@@ -63,79 +63,83 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(
       >
         <Separator className={styles.separator} />
         <div className={styles.footer}>
-          <div
-            className={`${styles.columns} ${threeColumnsClassName} ${twoColumnsClassName}`}
-          >
-            <div>
-              <Heading as={'h2'} level={3} hasSpacing>
-                {titleFirstColumn}
-              </Heading>
-              <LinkGroup color={'white'}>
-                <LinkGroup.Link href={contactUsURL ?? t('shared.ContactUsURL')}>
-                  {t('shared.ContactUs')}
-                </LinkGroup.Link>
-                <LinkGroup.Link
-                  href={securityURL ?? t('shared.SecurityAndPrivacyURL')}
-                >
-                  {t('shared.SecurityAndPrivacy')}
-                </LinkGroup.Link>
-                <LinkGroup.Link
-                  href={
-                    accessibilityURL ?? t('shared.AccessibilityStatementURL')
-                  }
-                  target={'_blank'}
-                  isExternal
-                >
-                  {t('shared.AccessibilityStatement')}
-                </LinkGroup.Link>
-                {linksFirstColumn}
-              </LinkGroup>
-              {firstColumn}
-            </div>
-            {secondColumn && (
+          <div className={styles.footerContainer}>
+            <div
+              className={`${styles.columns} ${threeColumnsClassName} ${twoColumnsClassName}`}
+            >
               <div>
-                {titleSecondColumn && (
-                  <Heading as={'h2'} level={3} hasSpacing>
-                    {titleSecondColumn}
-                  </Heading>
+                <Heading as={'h2'} level={3} hasSpacing>
+                  {titleFirstColumn}
+                </Heading>
+                <LinkGroup color={'white'}>
+                  <LinkGroup.Link
+                    href={contactUsURL ?? t('shared.ContactUsURL')}
+                  >
+                    {t('shared.ContactUs')}
+                  </LinkGroup.Link>
+                  <LinkGroup.Link
+                    href={securityURL ?? t('shared.SecurityAndPrivacyURL')}
+                  >
+                    {t('shared.SecurityAndPrivacy')}
+                  </LinkGroup.Link>
+                  <LinkGroup.Link
+                    href={
+                      accessibilityURL ?? t('shared.AccessibilityStatementURL')
+                    }
+                    target={'_blank'}
+                    isExternal
+                  >
+                    {t('shared.AccessibilityStatement')}
+                  </LinkGroup.Link>
+                  {linksFirstColumn}
+                </LinkGroup>
+                {firstColumn}
+              </div>
+              {secondColumn && (
+                <div>
+                  {titleSecondColumn && (
+                    <Heading as={'h2'} level={3} hasSpacing>
+                      {titleSecondColumn}
+                    </Heading>
+                  )}
+                  {secondColumn}
+                </div>
+              )}
+              {thirdColumn && (
+                <div>
+                  {titleThirdColumn && (
+                    <Heading as={'h2'} level={3} hasSpacing>
+                      {titleThirdColumn}
+                    </Heading>
+                  )}
+                  {thirdColumn}
+                </div>
+              )}
+            </div>
+            {(!hideLogo || logos.length > 0) && (
+              <div className={styles.logoContainer}>
+                {!hideLogo && (
+                  <img
+                    className={styles.skatteetatenLogo}
+                    alt={t('shared.SkeLogoImageText')}
+                    src={logo}
+                  ></img>
                 )}
-                {secondColumn}
+                {logos}
               </div>
             )}
-            {thirdColumn && (
-              <div>
-                {titleThirdColumn && (
-                  <Heading as={'h2'} level={3} hasSpacing>
-                    {titleThirdColumn}
-                  </Heading>
-                )}
-                {thirdColumn}
-              </div>
+            {links.length > 0 && (
+              <ul className={styles.linkContainer}>
+                {links.map((link, index) => {
+                  return (
+                    <li key={index} className={styles.linkList}>
+                      {link}
+                    </li>
+                  );
+                })}
+              </ul>
             )}
           </div>
-          {(!hideLogo || logos.length > 0) && (
-            <div className={styles.logoContainer}>
-              {!hideLogo && (
-                <img
-                  className={styles.skatteetatenLogo}
-                  alt={t('shared.SkeLogoImageText')}
-                  src={logo}
-                ></img>
-              )}
-              {logos}
-            </div>
-          )}
-          {links.length > 0 && (
-            <ul className={styles.linkContainer}>
-              {links.map((link, index) => {
-                return (
-                  <li key={index} className={styles.linkList}>
-                    {link}
-                  </li>
-                );
-              })}
-            </ul>
-          )}
         </div>
       </footer>
     );

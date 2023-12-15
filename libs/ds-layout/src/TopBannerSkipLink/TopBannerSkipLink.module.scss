@@ -4,8 +4,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  display: flex;
-  justify-content: center;
+  display: block;
   background-color: var(--semantic-interactive-background);
   color: var(--semantic-interactive-main);
   font-size: var(--font-size-l);
@@ -22,22 +21,22 @@
 
   &Content {
     display: flex;
+    max-width: var(--semantic-responsive-container);
     align-items: center;
-    padding: var(--spacing-m);
+    justify-content: center;
+    padding: var(--semantic-responsive-container-padding);
+    padding-top: var(--spacing-m);
+    padding-bottom: var(--spacing-m);
+    margin: auto;
     gap: var(--spacing-s);
 
     @media (min-width: $breakpoint-s) {
-      padding: var(--spacing-s) var(--spacing-m);
+      padding-top: var(--spacing-s);
+      padding-bottom: var(--spacing-s);
     }
 
     @media (min-width: $breakpoint-m) {
-      width: 100%;
-      max-width: var(--container-l);
-      box-sizing: border-box;
-    }
-
-    @media (min-width: $breakpoint-l) {
-      padding-left: 0;
+      justify-content: flex-start;
     }
   }
 }
