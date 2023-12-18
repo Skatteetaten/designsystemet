@@ -9,7 +9,7 @@ import {
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-import { Icon, MenuDownSVGpath } from '@skatteetaten/ds-icons';
+import { Icon, MenuDownSVGpath, MenuUpSVGpath } from '@skatteetaten/ds-icons';
 
 import { ReactComponent as EnglishFlagIcon } from './Assets/en-flag.svg';
 import { ReactComponent as NorwegianFlagIcon } from './Assets/no-flag.svg';
@@ -189,7 +189,7 @@ export const TopBannerLangPicker = forwardRef<
           className={styles.menuButton}
           ariaExpanded={isMenuOpen}
           onClick={handleMenuClick}
-          onKeyDown={(e) => {
+          onKeyDown={(e): void => {
             e.stopPropagation();
             if (e.shiftKey && e.key === 'Tab') {
               setIsMenuOpen(false);
@@ -200,13 +200,19 @@ export const TopBannerLangPicker = forwardRef<
             <span className={styles.flagIcon}>
               {defaultLanguages[selectedLang].flagIcon}
             </span>
-            <Icon svgPath={MenuDownSVGpath} className={styles.arrowMobile} />
+            <Icon
+              svgPath={isMenuOpen ? MenuUpSVGpath : MenuDownSVGpath}
+              className={styles.arrowMobile}
+            />
           </span>
           <span className={styles.menuButtonText}>
             {defaultLanguages[selectedLang].displayName}
           </span>
           <span className={styles.srOnly}>{t('topbannerbutton.Menu')}</span>
-          <Icon svgPath={MenuDownSVGpath} className={styles.arrowDesktop} />
+          <Icon
+            svgPath={isMenuOpen ? MenuUpSVGpath : MenuDownSVGpath}
+            className={styles.arrowDesktop}
+          />
         </TopBannerButton>
 
         {isMenuOpen && (
