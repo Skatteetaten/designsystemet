@@ -31,7 +31,7 @@ const meta = {
     onNext: { table: { disable: true, category: category.props } },
     editButtonText: { table: { disable: true, category: category.props } },
     nextButtonText: { table: { disable: true, category: category.props } },
-    nextButtonWithSpinner: {
+    nextButtonHasSpinner: {
       table: { disable: true, category: category.props },
     },
     hasResultContentFullWidth: {
@@ -195,10 +195,10 @@ export const NextButtonWithSpinner = {
     variant: 'active',
     title: 'tittel',
     children: loremIpsum,
-    nextButtonWithSpinner: true,
+    nextButtonHasSpinner: true,
     onNext: (): void => console.log('next'),
   },
   argTypes: {
-    nextButtonWithSpinner: { table: { disable: false } },
+    nextButtonHasSpinner: { table: { disable: false } },
   },
 } satisfies Story;

@@ -19,7 +19,7 @@ export interface StepListStepProps extends BaseProps {
   /** Overskriver default tekst på next-knapp*/
   nextButtonText?: string;
   /** Om next-knapp skal inneholde Spinner */
-  nextButtonWithSpinner?: boolean;
+  nextButtonHasSpinner?: boolean;
   /** Angir nummer på steget. */
   stepNumber: number;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */

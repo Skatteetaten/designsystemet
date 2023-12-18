@@ -28,7 +28,7 @@ export default {
         defaultValue: { summary: dsI18n.t('ds_collections:steplist.Next') },
       },
     },
-    nextButtonWithSpinner: {
+    nextButtonHasSpinner: {
       table: {
         category: category.props,
       },
