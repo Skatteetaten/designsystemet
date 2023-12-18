@@ -1,15 +1,15 @@
 @import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 @import 'libs/ds-core-utils/src/styles.scss';
 
+.container {
+  position: relative;
+}
+
 .overlay {
   position: fixed;
   z-index: 800;
   background: rgba(255, 255, 255, 80%);
   inset: 0;
-}
-
-.container {
-  position: relative;
 }
 
 .menuButton {
@@ -31,36 +31,27 @@
     }
   }
 
-  &Text {
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
   .arrowMobile {
     fill: var(--semantic-interactive-main);
+
+    @media (min-width: $breakpoint-s) {
+      display: none;
+    }
   }
 
   .arrowDesktop {
     display: none;
     fill: var(--semantic-interactive-main);
+
+    @media (min-width: $breakpoint-s) {
+      display: inline;
+    }
   }
 
   &:active {
     .arrowMobile,
     .arrowDesktop {
       fill: var(--semantic-interactive-foreground);
-    }
-  }
-
-  @media (min-width: $breakpoint-s) {
-    align-items: center;
-
-    .arrowMobile {
-      display: none;
-    }
-
-    .arrowDesktop {
-      display: inline;
     }
   }
 }
@@ -74,11 +65,11 @@
 
   &Arrow {
     position: absolute;
-    top: -8px;
-    width: 1rem;
-    height: 1rem;
-    border: 1px solid;
-    border-color: var(--palette-graphite-70);
+    top: -0.75rem;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid var(--palette-graphite-70);
     border-right-color: transparent;
     border-bottom-color: transparent;
     background-color: var(--palette-graphite-0);
@@ -86,20 +77,26 @@
   }
 
   @media (min-width: $breakpoint-xs) {
-    left: auto;
+    position: absolute;
+    right: 0;
+    left: -80%;
 
     &Arrow {
-      right: 50%;
+      left: calc(50% + 0.75rem);
     }
   }
 
   @media (min-width: $breakpoint-s) {
-    right: auto;
+    left: calc(50% - 2rem);
+
+    &Arrow {
+      left: 1.25rem;
+    }
   }
 }
 
 .list {
-  width: 100%;
+  box-sizing: border-box;
   padding: 0;
   border: 1px solid var(--palette-graphite-70);
   margin: 0;
@@ -107,7 +104,7 @@
   list-style-type: none;
 
   @media (min-width: $breakpoint-xs) {
-    width: 167px;
+    width: 10.5rem;
   }
 
   &Item {

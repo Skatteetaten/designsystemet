@@ -57,6 +57,7 @@ export const TopBannerLangPicker = forwardRef<
     const [arrowPosition, setArrowPosition] = useState<number | undefined>(
       undefined
     );
+
     useLayoutEffect(() => {
       if (!isMenuOpen) {
         return;
@@ -68,14 +69,10 @@ export const TopBannerLangPicker = forwardRef<
         }
 
         // TODO - FRONT-1161 Er det mulig å unngå hardkodet breakpoint, kan det endres til token
-        const media = window.matchMedia('(min-width: 640px)');
+        const media = window.matchMedia('(min-width: 480px)');
         if (!media.matches) {
-          const { width, right } =
-            menuButtonRef.current.getBoundingClientRect();
-          const halfButtonWidth = width * 0.5;
-          const halfArrowWidth = 9;
-          const arrow =
-            window.innerWidth - right - halfArrowWidth + halfButtonWidth;
+          const { right } = menuButtonRef.current.getBoundingClientRect();
+          const arrow = window.innerWidth - right;
           setArrowPosition(arrow);
         } else {
           setArrowPosition(undefined);
@@ -205,9 +202,7 @@ export const TopBannerLangPicker = forwardRef<
               className={styles.arrowMobile}
             />
           </span>
-          <span className={styles.menuButtonText}>
-            {defaultLanguages[selectedLang].displayName}
-          </span>
+          {defaultLanguages[selectedLang].displayName}
           <span className={styles.srOnly}>{t('topbannerbutton.Menu')}</span>
           <Icon
             svgPath={isMenuOpen ? MenuUpSVGpath : MenuDownSVGpath}

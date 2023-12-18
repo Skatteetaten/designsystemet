@@ -127,9 +127,7 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-                  Bokmål
-                </span>
+                Bokmål
                 <span class="TopBannerLangPicker_srOnly__33VA7">
                   Meny
                 </span>
@@ -266,9 +264,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-                  Bokmål
-                </span>
+                Bokmål
                 <span class="TopBannerLangPicker_srOnly__33VA7">
                   Meny
                 </span>
@@ -405,9 +401,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-                  Bokmål
-                </span>
+                Bokmål
                 <span class="TopBannerLangPicker_srOnly__33VA7">
                   Meny
                 </span>
@@ -544,9 +538,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-                  Bokmål
-                </span>
+                Bokmål
                 <span class="TopBannerLangPicker_srOnly__33VA7">
                   Meny
                 </span>
@@ -683,9 +675,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-                  Bokmål
-                </span>
+                Bokmål
                 <span class="TopBannerLangPicker_srOnly__33VA7">
                   Meny
                 </span>
@@ -822,9 +812,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-                  Bokmål
-                </span>
+                Bokmål
                 <span class="TopBannerLangPicker_srOnly__33VA7">
                   Meny
                 </span>
@@ -965,9 +953,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-                  Bokmål
-                </span>
+                Bokmål
                 <span class="TopBannerLangPicker_srOnly__33VA7">
                   Meny
                 </span>
@@ -1140,9 +1126,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-                  Bokmål
-                </span>
+                Bokmål
                 <span class="TopBannerLangPicker_srOnly__33VA7">
                   Meny
                 </span>
@@ -1279,9 +1263,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-                  Bokmål
-                </span>
+                Bokmål
                 <span class="TopBannerLangPicker_srOnly__33VA7">
                   Meny
                 </span>
@@ -1448,9 +1430,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-                  Bokmål
-                </span>
+                Bokmål
                 <span class="TopBannerLangPicker_srOnly__33VA7">
                   Meny
                 </span>
@@ -1707,9 +1687,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-                  Bokmål
-                </span>
+                Bokmål
                 <span class="TopBannerLangPicker_srOnly__33VA7">
                   Meny
                 </span>
@@ -1966,9 +1944,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-                  Bokmål
-                </span>
+                Bokmål
                 <span class="TopBannerLangPicker_srOnly__33VA7">
                   Meny
                 </span>
@@ -2197,9 +2173,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-                  Bokmål
-                </span>
+                Bokmål
                 <span class="TopBannerLangPicker_srOnly__33VA7">
                   Meny
                 </span>
@@ -2394,9 +2368,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-                  Bokmål
-                </span>
+                Bokmål
                 <span class="TopBannerLangPicker_srOnly__33VA7">
                   Meny
                 </span>
@@ -2673,9 +2645,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-                  Bokmål
-                </span>
+                Bokmål
                 <span class="TopBannerLangPicker_srOnly__33VA7">
                   Meny
                 </span>
@@ -2952,9 +2922,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-                  Bokmål
-                </span>
+                Bokmål
                 <span class="TopBannerLangPicker_srOnly__33VA7">
                   Meny
                 </span>
@@ -3226,9 +3194,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-                  Bokmål
-                </span>
+                Bokmål
                 <span class="TopBannerLangPicker_srOnly__33VA7">
                   Meny
                 </span>
@@ -3495,9 +3461,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-                  Bokmål
-                </span>
+                Bokmål
                 <span class="TopBannerLangPicker_srOnly__33VA7">
                   Meny
                 </span>
@@ -3764,9 +3728,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                     </path>
                   </svg>
                 </span>
-                <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-                  Bokmål
-                </span>
+                Bokmål
                 <span class="TopBannerLangPicker_srOnly__33VA7">
                   Meny
                 </span>

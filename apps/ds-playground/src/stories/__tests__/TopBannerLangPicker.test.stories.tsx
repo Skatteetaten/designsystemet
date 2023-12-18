@@ -26,9 +26,6 @@ const meta = {
     // Events
     onLanguageClick: { table: { disable: true } },
   },
-  parameters: {
-    layout: 'fullscreen',
-  },
 } as Meta<typeof TopBannerLangPicker>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -122,8 +119,8 @@ export const Defaults = {
   },
 } satisfies Story;
 
-export const WithShowSami = {
-  name: 'With ShowSami (LanguagePicker A2 delvis)',
+export const WithoutSami = {
+  name: 'Without Sami (LanguagePicker A2 delvis)',
   args: {
     ...defaultArgs,
     showSami: false,
