@@ -108,6 +108,7 @@ export default {
   },
   parameters: {
     version: getVersion('ds-layout'),
+    layout: 'fullscreen',
   },
 } satisfies Meta<typeof TopBannerExternal>;
 

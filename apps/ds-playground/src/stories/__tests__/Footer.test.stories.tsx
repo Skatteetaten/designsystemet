@@ -33,6 +33,9 @@ const meta = {
     secondColumn: { table: { disable: true } },
     thirdColumn: { table: { disable: true } },
   },
+  parameters: {
+    layout: 'fullscreen',
+  },
 } satisfies Meta<typeof Footer>;
 export default meta;
 type Story = StoryObj<typeof meta>;
