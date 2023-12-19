@@ -69,13 +69,16 @@ export const TopBannerLangPicker = forwardRef<
         }
 
         // TODO - FRONT-1161 Er det mulig å unngå hardkodet breakpoint, kan det endres til token
-        const media = window.matchMedia('(min-width: 480px)');
+        const media = window.matchMedia('(min-width: 640px)');
         if (!media.matches) {
-          const { right } = menuButtonRef.current.getBoundingClientRect();
-          const arrow = window.innerWidth - right;
+          const { width, right } =
+            menuButtonRef.current.getBoundingClientRect();
+          const arrow = right - 0.5 * width - 16 - 10; // right side of button - half button width - left margin - half arrow width
           setArrowPosition(arrow);
         } else {
-          setArrowPosition(undefined);
+          const { width } = menuButtonRef.current.getBoundingClientRect();
+          const arrow = 0.5 * width - 10;
+          setArrowPosition(arrow);
         }
       };
 
@@ -212,14 +215,7 @@ export const TopBannerLangPicker = forwardRef<
 
         {isMenuOpen && (
           <div ref={menuRef} className={styles.menu}>
-            <div
-              className={styles.menuArrow}
-              style={
-                arrowPosition !== undefined
-                  ? { right: arrowPosition }
-                  : undefined
-              }
-            />
+            <div className={styles.menuArrow} style={{ left: arrowPosition }} />
             <ul className={styles.list}>
               {Object.values(defaultLanguages).map((language, index) => {
                 return (

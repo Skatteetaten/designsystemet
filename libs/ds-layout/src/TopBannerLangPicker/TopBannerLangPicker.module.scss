@@ -65,10 +65,10 @@
 
   &Arrow {
     position: absolute;
-    top: -0.75rem;
+    top: -0.625rem;
     display: block;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.25rem;
+    height: 1.25rem;
     border: 1px solid var(--palette-graphite-70);
     border-right-color: transparent;
     border-bottom-color: transparent;
@@ -76,22 +76,10 @@
     transform: rotate(45deg);
   }
 
-  @media (min-width: $breakpoint-xs) {
+  @media (min-width: $breakpoint-s) {
     position: absolute;
     right: 0;
-    left: -80%;
-
-    &Arrow {
-      left: calc(50% + 0.75rem);
-    }
-  }
-
-  @media (min-width: $breakpoint-s) {
-    left: calc(50% - 2rem);
-
-    &Arrow {
-      left: 1.25rem;
-    }
+    left: 0;
   }
 }
 
@@ -103,8 +91,8 @@
   box-shadow: 3px 2px 5px 0 var(--semantic-divider-30);
   list-style-type: none;
 
-  @media (min-width: $breakpoint-xs) {
-    width: 10.5rem;
+  @media (min-width: $breakpoint-s) {
+    width: 10.5rem; // TODO should start at breakpoint-xs
   }
 
   &Item {

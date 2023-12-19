@@ -46,8 +46,9 @@
   }
 
   &:active {
+    z-index: 1;
     background-color: var(--semantic-interactive-background);
-    box-shadow: inset 0 0 0 1px var(--semantic-interactive-main);
+    box-shadow: 0 0 0 2px var(--semantic-interactive-main);
     color: var(--semantic-interactive-foreground);
     text-decoration: underline;
   }
