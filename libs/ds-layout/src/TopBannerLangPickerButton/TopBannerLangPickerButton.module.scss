@@ -36,15 +36,20 @@
     background-color: var(--semantic-interactive-background);
     color: var(--semantic-interactive-main);
     cursor: pointer;
+    text-decoration: underline;
   }
 
   &:focus {
-    border: 2px solid var(--semantic-interactive-main);
+    z-index: 1;
+    box-shadow: 0 0 0 2px var(--semantic-interactive-main);
     outline: none;
   }
 
   &:active {
-    border-color: var(--semantic-interactive-foreground);
+    z-index: 1;
+    background-color: var(--semantic-interactive-background);
+    box-shadow: 0 0 0 2px var(--semantic-interactive-main);
     color: var(--semantic-interactive-foreground);
+    text-decoration: underline;
   }
 }

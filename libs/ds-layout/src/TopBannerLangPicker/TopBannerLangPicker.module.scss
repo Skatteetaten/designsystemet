@@ -1,9 +1,13 @@
 @import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 @import 'libs/ds-core-utils/src/styles.scss';
 
+.container {
+  position: relative;
+}
+
 .overlay {
   position: fixed;
-  z-index: 999;
+  z-index: 800;
   background: rgba(255, 255, 255, 80%);
   inset: 0;
 }
@@ -27,18 +31,21 @@
     }
   }
 
-  &Text {
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
   .arrowMobile {
     fill: var(--semantic-interactive-main);
+
+    @media (min-width: $breakpoint-s) {
+      display: none;
+    }
   }
 
   .arrowDesktop {
     display: none;
     fill: var(--semantic-interactive-main);
+
+    @media (min-width: $breakpoint-s) {
+      display: inline;
+    }
   }
 
   &:active {
@@ -47,61 +54,45 @@
       fill: var(--semantic-interactive-foreground);
     }
   }
-
-  @media (min-width: $breakpoint-s) {
-    align-items: center;
-
-    .arrowMobile {
-      display: none;
-    }
-
-    .arrowDesktop {
-      display: inline;
-    }
-  }
 }
 
 .menu {
-  position: absolute;
+  position: fixed;
   z-index: 1000;
-  top: 4rem;
   right: var(--spacing-m);
   left: var(--spacing-m);
   margin-top: var(--spacing-l);
 
   &Arrow {
     position: absolute;
-    top: -8px;
-    width: 1rem;
-    height: 1rem;
-    border: 1px solid;
-    border-color: var(--palette-graphite-70);
+    top: -0.625rem;
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 1px solid var(--palette-graphite-70);
     border-right-color: transparent;
     border-bottom-color: transparent;
     background-color: var(--palette-graphite-0);
     transform: rotate(45deg);
   }
 
-  @media (min-width: $breakpoint-xs) {
-    right: auto;
-    left: auto;
-
-    &Arrow {
-      right: 50%;
-    }
+  @media (min-width: $breakpoint-s) {
+    position: absolute;
+    right: 0;
+    left: 0;
   }
 }
 
 .list {
-  width: 100%;
+  box-sizing: border-box;
   padding: 0;
   border: 1px solid var(--palette-graphite-70);
   margin: 0;
   box-shadow: 3px 2px 5px 0 var(--semantic-divider-30);
   list-style-type: none;
 
-  @media (min-width: $breakpoint-xs) {
-    width: 167px;
+  @media (min-width: $breakpoint-s) {
+    width: 10.5rem; // TODO should start at breakpoint-xs
   }
 
   &Item {

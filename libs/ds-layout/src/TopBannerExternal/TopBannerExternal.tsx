@@ -140,7 +140,6 @@ export const TopBannerExternal = forwardRef<
               {children}
 
               <div className={styles.content}>
-                {/** TODO - FRONT-1161 Lukking når navigerer ut av menyen */}
                 {showMenu && (
                   <>
                     <TopBannerButton

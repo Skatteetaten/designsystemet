@@ -2,7 +2,7 @@
 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangButton play-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class=" TopBannerLangPicker_container__LVr42">
     <div class>
     </div>
     <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
@@ -99,9 +99,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangB
           </path>
         </svg>
       </span>
-      <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-        English
-      </span>
+      English
       <span class="TopBannerLangPicker_srOnly__33VA7">
         Meny
       </span>
@@ -121,7 +119,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangB
 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class=" TopBannerLangPicker_container__LVr42">
     <div class="TopBannerLangPicker_overlay__y50Yx">
     </div>
     <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
@@ -190,13 +188,11 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
              aria-hidden="true"
              role="img"
         >
-          <path d="m7 10 5 5 5-5H7Z">
+          <path d="m7 15 5-5 5 5H7Z">
           </path>
         </svg>
       </span>
-      <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-        Bokmål
-      </span>
+      Bokmål
       <span class="TopBannerLangPicker_srOnly__33VA7">
         Meny
       </span>
@@ -206,7 +202,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
            aria-hidden="true"
            role="img"
       >
-        <path d="m7 10 5 5 5-5H7Z">
+        <path d="m7 15 5-5 5 5H7Z">
         </path>
       </svg>
     </button>
@@ -516,7 +512,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <div id="htmlid"
-       class="dummyClassname"
+       class="dummyClassname TopBannerLangPicker_container__LVr42"
        lang="nb"
        data-testid="123ID"
   >
@@ -592,9 +588,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 
           </path>
         </svg>
       </span>
-      <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-        Bokmål
-      </span>
+      Bokmål
       <span class="TopBannerLangPicker_srOnly__33VA7">
         Meny
       </span>
@@ -614,7 +608,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 
 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class=" TopBannerLangPicker_container__LVr42">
     <div class="TopBannerLangPicker_overlay__y50Yx">
     </div>
     <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
@@ -707,13 +701,11 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
              aria-hidden="true"
              role="img"
         >
-          <path d="m7 10 5 5 5-5H7Z">
+          <path d="m7 15 5-5 5 5H7Z">
           </path>
         </svg>
       </span>
-      <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-        English
-      </span>
+      English
       <span class="TopBannerLangPicker_srOnly__33VA7">
         Meny
       </span>
@@ -723,7 +715,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
            aria-hidden="true"
            role="img"
       >
-        <path d="m7 10 5 5 5-5H7Z">
+        <path d="m7 15 5-5 5 5H7Z">
         </path>
       </svg>
     </button>
@@ -1032,7 +1024,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class
+  <div class=" TopBannerLangPicker_container__LVr42"
        id="dummyIdForwardedFromRef"
   >
     <div class>
@@ -1107,9 +1099,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-        Bokmål
-      </span>
+      Bokmål
       <span class="TopBannerLangPicker_srOnly__33VA7">
         Meny
       </span>
@@ -1127,9 +1117,9 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithShowSami play-test 1`] = `
+exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`] = `
 <div data-test-block="true">
-  <div class>
+  <div class=" TopBannerLangPicker_container__LVr42">
     <div class="TopBannerLangPicker_overlay__y50Yx">
     </div>
     <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
@@ -1198,13 +1188,11 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithShowSami play-test 1`
              aria-hidden="true"
              role="img"
         >
-          <path d="m7 10 5 5 5-5H7Z">
+          <path d="m7 15 5-5 5 5H7Z">
           </path>
         </svg>
       </span>
-      <span class="TopBannerLangPicker_menuButtonText__NPaVk">
-        Bokmål
-      </span>
+      Bokmål
       <span class="TopBannerLangPicker_srOnly__33VA7">
         Meny
       </span>
@@ -1214,7 +1202,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithShowSami play-test 1`
            aria-hidden="true"
            role="img"
       >
-        <path d="m7 10 5 5 5-5H7Z">
+        <path d="m7 15 5-5 5 5H7Z">
         </path>
       </svg>
     </button>

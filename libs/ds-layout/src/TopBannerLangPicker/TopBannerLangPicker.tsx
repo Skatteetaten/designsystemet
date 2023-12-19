@@ -1,8 +1,15 @@
-import { forwardRef, JSX, useEffect, useRef, useState } from 'react';
+import {
+  forwardRef,
+  JSX,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-import { Icon, MenuDownSVGpath } from '@skatteetaten/ds-icons';
+import { Icon, MenuDownSVGpath, MenuUpSVGpath } from '@skatteetaten/ds-icons';
 
 import { ReactComponent as EnglishFlagIcon } from './Assets/en-flag.svg';
 import { ReactComponent as NorwegianFlagIcon } from './Assets/no-flag.svg';
@@ -47,13 +54,45 @@ export const TopBannerLangPicker = forwardRef<
     );
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
+    const [arrowPosition, setArrowPosition] = useState<number | undefined>(
+      undefined
+    );
+
+    useLayoutEffect(() => {
+      if (!isMenuOpen) {
+        return;
+      }
+
+      const handleOpenMenuClick = (): void => {
+        if (!menuButtonRef.current) {
+          return;
+        }
+
+        // TODO - FRONT-1161 Er det mulig å unngå hardkodet breakpoint, kan det endres til token
+        const media = window.matchMedia('(min-width: 640px)');
+        if (!media.matches) {
+          const { width, right } =
+            menuButtonRef.current.getBoundingClientRect();
+          const arrow = right - 0.5 * width - 16 - 10; // right side of button - half button width - left margin - half arrow width
+          setArrowPosition(arrow);
+        } else {
+          const { width } = menuButtonRef.current.getBoundingClientRect();
+          const arrow = 0.5 * width - 10;
+          setArrowPosition(arrow);
+        }
+      };
+
+      document.addEventListener('resize', handleOpenMenuClick, false);
+      document.addEventListener('click', handleOpenMenuClick, false);
+      return () => {
+        document.removeEventListener('resize', handleOpenMenuClick, false);
+        document.removeEventListener('click', handleOpenMenuClick, false);
+      };
+    }, [arrowPosition, isMenuOpen]);
+
     useEffect(() => {
       document.documentElement.lang = selectedLang;
     }, [selectedLang, setSelectedLang]);
-
-    const handleMenuClick = (): void => {
-      setIsMenuOpen(!isMenuOpen);
-    };
 
     useEffect(() => {
       if (!isMenuOpen) {
@@ -85,6 +124,10 @@ export const TopBannerLangPicker = forwardRef<
         document.removeEventListener('keyup', handleEscape, false);
       };
     }, [isMenuOpen]);
+
+    const handleMenuClick = (): void => {
+      setIsMenuOpen(!isMenuOpen);
+    };
 
     const handleLanguageClick = (
       e: React.MouseEvent<HTMLButtonElement>
@@ -135,7 +178,7 @@ export const TopBannerLangPicker = forwardRef<
       <div
         ref={ref}
         id={id}
-        className={className}
+        className={`${className} ${styles.container}`}
         lang={lang}
         data-testid={dataTestId}
       >
@@ -146,7 +189,7 @@ export const TopBannerLangPicker = forwardRef<
           className={styles.menuButton}
           ariaExpanded={isMenuOpen}
           onClick={handleMenuClick}
-          onKeyDown={(e) => {
+          onKeyDown={(e): void => {
             e.stopPropagation();
             if (e.shiftKey && e.key === 'Tab') {
               setIsMenuOpen(false);
@@ -157,18 +200,22 @@ export const TopBannerLangPicker = forwardRef<
             <span className={styles.flagIcon}>
               {defaultLanguages[selectedLang].flagIcon}
             </span>
-            <Icon svgPath={MenuDownSVGpath} className={styles.arrowMobile} />
+            <Icon
+              svgPath={isMenuOpen ? MenuUpSVGpath : MenuDownSVGpath}
+              className={styles.arrowMobile}
+            />
           </span>
-          <span className={styles.menuButtonText}>
-            {defaultLanguages[selectedLang].displayName}
-          </span>
+          {defaultLanguages[selectedLang].displayName}
           <span className={styles.srOnly}>{t('topbannerbutton.Menu')}</span>
-          <Icon svgPath={MenuDownSVGpath} className={styles.arrowDesktop} />
+          <Icon
+            svgPath={isMenuOpen ? MenuUpSVGpath : MenuDownSVGpath}
+            className={styles.arrowDesktop}
+          />
         </TopBannerButton>
 
         {isMenuOpen && (
           <div ref={menuRef} className={styles.menu}>
-            <div className={styles.menuArrow} />
+            <div className={styles.menuArrow} style={{ left: arrowPosition }} />
             <ul className={styles.list}>
               {Object.values(defaultLanguages).map((language, index) => {
                 return (

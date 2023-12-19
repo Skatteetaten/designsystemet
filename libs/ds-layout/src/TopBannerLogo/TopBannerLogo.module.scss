@@ -3,6 +3,8 @@
 .logoContainer {
   display: flex;
   width: fit-content;
+  // stylelint-disable-next-line value-no-vendor-prefix
+  width: -moz-available; // to show logo in Firefox
   height: var(--size-extra-large);
   padding: var(--spacing-xs);
   margin-left: calc(-1 * var(--spacing-xs));

@@ -119,8 +119,8 @@ export const Defaults = {
   },
 } satisfies Story;
 
-export const WithShowSami = {
-  name: 'With ShowSami (LanguagePicker A2 delvis)',
+export const WithoutSami = {
+  name: 'Without Sami (LanguagePicker A2 delvis)',
   args: {
     ...defaultArgs,
     showSami: false,

@@ -1,10 +1,10 @@
 /* automatisk genererte types */
+export const container: string;
 export const overlay: string;
 export const menuButton: string;
 export const iconWrapper: string;
 export const flagIcon: string;
 export const flagIconSvg: string;
-export const menuButtonText: string;
 export const arrowMobile: string;
 export const arrowDesktop: string;
 export const menu: string;
