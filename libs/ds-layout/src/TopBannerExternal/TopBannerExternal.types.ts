@@ -15,6 +15,7 @@ type UserOthers = {
 };
 
 export type User = UserMyself | UserOthers;
+export type TopBannerMenu = 'Lang' | 'MainMenu' | 'None';
 
 type TopBannerLogoDiscriminatedProps =
   | {

@@ -2,7 +2,7 @@ import {
   forwardRef,
   JSX,
   useEffect,
-  useLayoutEffect,
+  useImperativeHandle,
   useRef,
   useState,
 } from 'react';
@@ -41,54 +41,25 @@ export const TopBannerLangPicker = forwardRef<
       locale = getTopBannerLangPickerLocaleDefault(),
       showSami = getTopBannerLangPickerShowSamiDefault(),
       onLanguageClick,
+      openMenu,
+      setOpenMenu,
+      menuButtonRef,
     },
     ref
   ): JSX.Element => {
     const { t } = useTranslation('ds_layout', { i18n: dsI18n });
 
-    const menuButtonRef = useRef<HTMLButtonElement>(null);
     const menuRef = useRef<HTMLDivElement>(null);
+    const menuButtonRefInternal = useRef<HTMLButtonElement>(null);
+    useImperativeHandle(
+      menuButtonRef,
+      () => menuButtonRef?.current as HTMLButtonElement
+    );
 
     const [selectedLang, setSelectedLang] = useState<string>(
       convertLocaleToLang(locale)
     );
-    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-
-    const [arrowPosition, setArrowPosition] = useState<number | undefined>(
-      undefined
-    );
-
-    useLayoutEffect(() => {
-      if (!isMenuOpen) {
-        return;
-      }
-
-      const handleOpenMenuClick = (): void => {
-        if (!menuButtonRef.current) {
-          return;
-        }
-
-        // TODO - FRONT-1161 Er det mulig å unngå hardkodet breakpoint, kan det endres til token
-        const media = window.matchMedia('(min-width: 640px)');
-        if (!media.matches) {
-          const { width, right } =
-            menuButtonRef.current.getBoundingClientRect();
-          const arrow = right - 0.5 * width - 16 - 10; // right side of button - half button width - left margin - half arrow width
-          setArrowPosition(arrow);
-        } else {
-          const { width } = menuButtonRef.current.getBoundingClientRect();
-          const arrow = 0.5 * width - 10;
-          setArrowPosition(arrow);
-        }
-      };
-
-      document.addEventListener('resize', handleOpenMenuClick, false);
-      document.addEventListener('click', handleOpenMenuClick, false);
-      return () => {
-        document.removeEventListener('resize', handleOpenMenuClick, false);
-        document.removeEventListener('click', handleOpenMenuClick, false);
-      };
-    }, [arrowPosition, isMenuOpen]);
+    const isMenuOpen = openMenu === 'Lang';
 
     useEffect(() => {
       document.documentElement.lang = selectedLang;
@@ -99,52 +70,36 @@ export const TopBannerLangPicker = forwardRef<
         return;
       }
 
-      const handleClickOutside = (event: MouseEvent): void => {
+      const handleOutsideMenuEvent: EventListener = (event): void => {
         const node = event.target as Node;
         if (
-          !menuButtonRef.current?.contains(node) &&
+          !menuButtonRefInternal?.current?.contains(node) &&
           !menuRef.current?.contains(node)
         ) {
-          setIsMenuOpen(false);
-          menuButtonRef.current?.focus();
+          setOpenMenu('None');
+          event.type === 'click' && menuButtonRefInternal?.current?.focus();
         }
       };
 
-      const handleEscape = (e: KeyboardEvent): void => {
-        if (e.key === 'Escape') {
-          setIsMenuOpen(false);
-          menuButtonRef.current?.focus();
-        }
-      };
-
-      document.addEventListener('click', handleClickOutside, false);
-      document.addEventListener('keyup', handleEscape, false);
+      document.addEventListener('focusin', handleOutsideMenuEvent);
+      document.addEventListener('click', handleOutsideMenuEvent);
       return () => {
-        document.removeEventListener('click', handleClickOutside, false);
-        document.removeEventListener('keyup', handleEscape, false);
+        document.removeEventListener('click', handleOutsideMenuEvent);
+        document.removeEventListener('focusin', handleOutsideMenuEvent);
       };
-    }, [isMenuOpen]);
-
-    const handleMenuClick = (): void => {
-      setIsMenuOpen(!isMenuOpen);
-    };
+    }, [isMenuOpen, setOpenMenu]);
 
     const handleLanguageClick = (
       e: React.MouseEvent<HTMLButtonElement>
     ): void => {
       setSelectedLang(e.currentTarget.lang);
-      setIsMenuOpen(false);
-      menuButtonRef.current?.focus();
+      setOpenMenu('None');
+      menuButtonRefInternal?.current?.focus();
       onLanguageClick?.(e);
     };
 
-    const handleCloseMenuKeyDown = (
-      e: React.KeyboardEvent<HTMLButtonElement>
-    ): void => {
-      e.stopPropagation();
-      if (!e.shiftKey && e.key === 'Tab') {
-        setIsMenuOpen(false);
-      }
+    const handleMenuClick = (): void => {
+      setOpenMenu(isMenuOpen ? 'None' : 'Lang');
     };
 
     const defaultLanguages: LanguageItems = {
@@ -184,17 +139,11 @@ export const TopBannerLangPicker = forwardRef<
       >
         <div className={isMenuOpen ? styles.overlay : ''} />
         <TopBannerButton
-          ref={menuButtonRef}
+          ref={menuButtonRefInternal}
           lang={selectedLang}
           className={styles.menuButton}
           ariaExpanded={isMenuOpen}
           onClick={handleMenuClick}
-          onKeyDown={(e): void => {
-            e.stopPropagation();
-            if (e.shiftKey && e.key === 'Tab') {
-              setIsMenuOpen(false);
-            }
-          }}
         >
           <span className={styles.iconWrapper}>
             <span className={styles.flagIcon}>
@@ -212,12 +161,12 @@ export const TopBannerLangPicker = forwardRef<
             className={styles.arrowDesktop}
           />
         </TopBannerButton>
+        <div className={styles.menuArrow} />
 
         {isMenuOpen && (
           <div ref={menuRef} className={styles.menu}>
-            <div className={styles.menuArrow} style={{ left: arrowPosition }} />
             <ul className={styles.list}>
-              {Object.values(defaultLanguages).map((language, index) => {
+              {Object.values(defaultLanguages).map((language) => {
                 return (
                   <li key={`${language.lang}`} className={styles.listItem}>
                     <TopBannerLangPicker.Button
@@ -225,11 +174,6 @@ export const TopBannerLangPicker = forwardRef<
                       ariaCurrent={language.lang === selectedLang}
                       flagIcon={language.flagIcon}
                       onClick={handleLanguageClick}
-                      onKeyDown={
-                        Object.keys(defaultLanguages).length === index + 1
-                          ? handleCloseMenuKeyDown
-                          : undefined
-                      }
                     >
                       {language.displayName}
                     </TopBannerLangPicker.Button>

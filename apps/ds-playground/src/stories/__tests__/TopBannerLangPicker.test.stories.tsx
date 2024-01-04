@@ -1,16 +1,32 @@
+import { useState } from 'react';
+
 import { dsI18n, Languages } from '@skatteetaten/ds-core-utils';
+import { TopBannerMenu } from '@skatteetaten/ds-layout';
 import { expect } from '@storybook/jest';
-import { Meta, StoryObj } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { userEvent, within } from '@storybook/testing-library';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerLangPicker } from '../../../../../libs/ds-layout/src/TopBannerLangPicker/TopBannerLangPicker';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerLangPickerProps } from '../../../../../libs/ds-layout/src/TopBannerLangPicker/TopBannerLangPicker.types';
 
+const LangPickerTemplate: StoryFn<typeof TopBannerLangPicker> = (args) => {
+  const [openMenuState, setOpenMenu] = useState<TopBannerMenu>('None');
+
+  return (
+    <TopBannerLangPicker
+      {...args}
+      openMenu={openMenuState}
+      setOpenMenu={setOpenMenu}
+    />
+  );
+};
+
 const meta = {
   component: TopBannerLangPicker,
   title: 'Tester/TopBanner/TopBannerLangPicker (intern)',
+  render: LangPickerTemplate,
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },
@@ -33,7 +49,10 @@ type Story = StoryObj<typeof meta>;
 const menuText = dsI18n.t('ds_layout:topbannerbutton.Menu');
 const bokmalText = 'Bokmål';
 const englishText = 'English';
-const defaultArgs: TopBannerLangPickerProps = {};
+const defaultArgs: TopBannerLangPickerProps = {
+  openMenu: 'None',
+  setOpenMenu: () => {},
+};
 
 export const WithRef = {
   name: 'With Ref (FA1)',
@@ -129,7 +148,7 @@ export const WithoutSami = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const menuButton = canvas.getByRole('button');
-    await menuButton.click();
+    await userEvent.click(menuButton);
     const listItems = canvas.getAllByRole('listitem');
     await expect(listItems).toHaveLength(3);
     for (const item of listItems) {

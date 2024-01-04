@@ -24,6 +24,7 @@ export const TopBannerButton = forwardRef<
       ariaExpanded,
       onClick,
       onKeyDown,
+      onFocus,
       children,
     },
     ref
@@ -42,6 +43,7 @@ export const TopBannerButton = forwardRef<
         data-testid={dataTestId}
         aria-expanded={ariaExpanded}
         type={'button'}
+        onFocus={onFocus}
         onClick={onClick}
         onKeyDown={onKeyDown}
       >

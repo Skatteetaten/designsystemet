@@ -113,6 +113,8 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangB
         </path>
       </svg>
     </button>
+    <div class="TopBannerLangPicker_menuArrow__cXG+p">
+    </div>
   </div>
 </div>
 `;
@@ -206,9 +208,9 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
         </path>
       </svg>
     </button>
+    <div class="TopBannerLangPicker_menuArrow__cXG+p">
+    </div>
     <div class="TopBannerLangPicker_menu__GFqIr">
-      <div class="TopBannerLangPicker_menuArrow__cXG+p">
-      </div>
       <ul class="TopBannerLangPicker_list__2dLA8">
         <li class="TopBannerLangPicker_listItem__sGReR">
           <button class="TopBannerLangPickerButton_buttonCurrent__y8Vxz TopBannerLangPickerButton_button__pl57- "
@@ -602,6 +604,8 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 
         </path>
       </svg>
     </button>
+    <div class="TopBannerLangPicker_menuArrow__cXG+p">
+    </div>
   </div>
 </div>
 `;
@@ -719,9 +723,9 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
         </path>
       </svg>
     </button>
+    <div class="TopBannerLangPicker_menuArrow__cXG+p">
+    </div>
     <div class="TopBannerLangPicker_menu__GFqIr">
-      <div class="TopBannerLangPicker_menuArrow__cXG+p">
-      </div>
       <ul class="TopBannerLangPicker_list__2dLA8">
         <li class="TopBannerLangPicker_listItem__sGReR">
           <button class=" TopBannerLangPickerButton_button__pl57- "
@@ -1113,6 +1117,8 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
         </path>
       </svg>
     </button>
+    <div class="TopBannerLangPicker_menuArrow__cXG+p">
+    </div>
   </div>
 </div>
 `;
@@ -1206,9 +1212,9 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
         </path>
       </svg>
     </button>
+    <div class="TopBannerLangPicker_menuArrow__cXG+p">
+    </div>
     <div class="TopBannerLangPicker_menu__GFqIr">
-      <div class="TopBannerLangPicker_menuArrow__cXG+p">
-      </div>
       <ul class="TopBannerLangPicker_list__2dLA8">
         <li class="TopBannerLangPicker_listItem__sGReR">
           <button class="TopBannerLangPickerButton_buttonCurrent__y8Vxz TopBannerLangPickerButton_button__pl57- "
