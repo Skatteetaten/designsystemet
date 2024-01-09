@@ -18,6 +18,7 @@ import {
 import {
   TopBannerExternalProps,
   TopBannerExternalHandle,
+  TopBannerMenu,
 } from './TopBannerExternal.types';
 import { TopBannerButton } from '../TopBannerButton/TopBannerButton';
 import { TopBannerLangPicker } from '../TopBannerLangPicker/TopBannerLangPicker';
@@ -64,48 +65,79 @@ export const TopBannerExternal = forwardRef<
 
     const menuRef = useRef<HTMLDivElement>(null);
     const menuButtonRef = useRef<HTMLButtonElement>(null);
-    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+    const languagePickerRef = useRef<HTMLDivElement>(null);
+    const languagePickerButtonRef = useRef<HTMLButtonElement>(null);
+    const [openMenu, setOpenMenu] = useState<TopBannerMenu>('None');
+    const isMenuOpen = openMenu === 'MainMenu';
+
+    const statusFlagRef = useRef({
+      focusCaptured: false,
+      clickCaptured: false,
+    });
+
     useEffect(() => {
-      if (!isMenuOpen) {
+      if (openMenu === 'None') {
         return;
       }
 
-      const handleClickOutside = (event: MouseEvent): void => {
-        const node = event.target as Node;
-        if (menuButtonRef.current?.contains(node) || !menuRef.current) {
-          return;
-        }
+      const currentButtonRef =
+        openMenu === 'Lang' ? languagePickerButtonRef : menuButtonRef;
 
-        const rect = menuRef.current.getBoundingClientRect();
-        if (
-          rect.left > event.clientX ||
-          rect.right < event.clientX ||
-          rect.top > event.clientY ||
-          rect.bottom < event.clientY
-        ) {
-          setIsMenuOpen(false);
-          menuButtonRef.current?.focus();
+      const handleEscape = (e: KeyboardEvent): void => {
+        if (e.key === 'Escape') {
+          setOpenMenu('None');
+          currentButtonRef?.current?.focus();
         }
       };
 
-      document.addEventListener('click', handleClickOutside, false);
+      /**
+       * Setter fokusflagg i en ref i stedet for å bruke contains(event.target) slik at detektering
+       * også fungerer i tilfelle med createPortal
+       */
+
+      const handleFocusOutside: EventListener = (_): void => {
+        if (!statusFlagRef.current.focusCaptured && isMenuOpen) {
+          setOpenMenu('None');
+        }
+
+        statusFlagRef.current.focusCaptured = false;
+      };
+
+      const handleClickOutside = (_: MouseEvent): void => {
+        if (!statusFlagRef.current.clickCaptured && isMenuOpen) {
+          setOpenMenu('None');
+        }
+        statusFlagRef.current.clickCaptured = false;
+      };
+
+      if (openMenu === 'MainMenu') {
+        document.addEventListener('click', handleClickOutside);
+        document.addEventListener('focusin', handleFocusOutside);
+      }
+
+      document.addEventListener('keydown', handleEscape);
+
       return () => {
-        document.removeEventListener('click', handleClickOutside, false);
+        document.removeEventListener('click', handleClickOutside);
+        document.removeEventListener('keydown', handleEscape);
+        document.removeEventListener('focusin', handleFocusOutside);
       };
-    }, [isMenuOpen]);
+    }, [openMenu, isMenuOpen]);
 
     useImperativeHandle(ref, () => ({
       ...innerRef,
       openMenu: (): void => {
-        setIsMenuOpen(true);
+        setOpenMenu('MainMenu');
       },
       closeMenu: (): void => {
-        setIsMenuOpen(false);
+        setOpenMenu('None');
       },
     }));
 
     const handleMenuClick = (): void => {
-      setIsMenuOpen(!isMenuOpen);
+      statusFlagRef.current.clickCaptured = true;
+      setOpenMenu(openMenu === 'MainMenu' ? 'None' : 'MainMenu');
     };
 
     const showMenu = firstColumn || secondColumn || thirdColumn;
@@ -144,14 +176,28 @@ export const TopBannerExternal = forwardRef<
                   <>
                     <TopBannerButton
                       ref={menuButtonRef}
-                      svgPath={isMenuOpen ? CancelSVGpath : MenuSVGpath}
+                      svgPath={
+                        openMenu === 'MainMenu' ? CancelSVGpath : MenuSVGpath
+                      }
                       ariaExpanded={isMenuOpen}
                       onClick={handleMenuClick}
+                      onFocus={() => {
+                        statusFlagRef.current.focusCaptured = isMenuOpen;
+                      }}
                     >
                       {t('topbannerbutton.Menu')}
                     </TopBannerButton>
                     {isMenuOpen && (
-                      <div ref={menuRef} className={styles.mainMenu}>
+                      <div
+                        ref={menuRef}
+                        className={styles.mainMenu}
+                        onFocus={() => {
+                          statusFlagRef.current.focusCaptured = isMenuOpen;
+                        }}
+                        onClick={() => {
+                          statusFlagRef.current.clickCaptured = isMenuOpen;
+                        }}
+                      >
                         <nav
                           aria-label={t('topbanner.NavAriaLabel')}
                           className={`${styles.columns} ${threeColumnsClassName} ${twoColumnsClassName}`}
@@ -170,8 +216,12 @@ export const TopBannerExternal = forwardRef<
                 )}
 
                 <TopBannerLangPicker
+                  ref={languagePickerRef}
                   locale={locale}
                   showSami={showSami}
+                  openMenu={openMenu}
+                  setOpenMenu={setOpenMenu}
+                  menuButtonRef={languagePickerButtonRef}
                   onLanguageClick={onLanguageClick}
                 />
 

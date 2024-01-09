@@ -1,5 +1,6 @@
 import {
   ComponentPropsWithoutRef,
+  FocusEventHandler,
   KeyboardEventHandler,
   MouseEventHandler,
   ReactElement,
@@ -21,6 +22,7 @@ interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
   ariaExpanded?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
   onKeyDown?: KeyboardEventHandler<HTMLButtonElement>;
+  onFocus?: FocusEventHandler<HTMLButtonElement>;
 }
 
 export interface TopBannerButtonProps

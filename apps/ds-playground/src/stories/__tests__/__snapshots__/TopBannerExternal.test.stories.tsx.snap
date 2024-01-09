@@ -141,6 +141,8 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                   </path>
                 </svg>
               </button>
+              <div class="TopBannerLangPicker_menuArrow__cXG+p">
+              </div>
             </div>
           </div>
         </div>
@@ -278,6 +280,8 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
                   </path>
                 </svg>
               </button>
+              <div class="TopBannerLangPicker_menuArrow__cXG+p">
+              </div>
             </div>
           </div>
         </div>
@@ -415,6 +419,8 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
                   </path>
                 </svg>
               </button>
+              <div class="TopBannerLangPicker_menuArrow__cXG+p">
+              </div>
             </div>
           </div>
         </div>
@@ -552,6 +558,8 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
                   </path>
                 </svg>
               </button>
+              <div class="TopBannerLangPicker_menuArrow__cXG+p">
+              </div>
             </div>
           </div>
         </div>
@@ -689,6 +697,8 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
                   </path>
                 </svg>
               </button>
+              <div class="TopBannerLangPicker_menuArrow__cXG+p">
+              </div>
             </div>
           </div>
         </div>
@@ -826,6 +836,8 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
                   </path>
                 </svg>
               </button>
+              <div class="TopBannerLangPicker_menuArrow__cXG+p">
+              </div>
             </div>
           </div>
         </div>
@@ -967,6 +979,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
                   </path>
                 </svg>
               </button>
+              <div class="TopBannerLangPicker_menuArrow__cXG+p">
+              </div>
             </div>
             <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
                     type="button"
@@ -1140,6 +1154,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
                   </path>
                 </svg>
               </button>
+              <div class="TopBannerLangPicker_menuArrow__cXG+p">
+              </div>
             </div>
           </div>
         </div>
@@ -1277,6 +1293,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
                   </path>
                 </svg>
               </button>
+              <div class="TopBannerLangPicker_menuArrow__cXG+p">
+              </div>
             </div>
           </div>
         </div>
@@ -1444,6 +1462,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                   </path>
                 </svg>
               </button>
+              <div class="TopBannerLangPicker_menuArrow__cXG+p">
+              </div>
             </div>
           </div>
         </div>
@@ -1701,6 +1721,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                   </path>
                 </svg>
               </button>
+              <div class="TopBannerLangPicker_menuArrow__cXG+p">
+              </div>
             </div>
           </div>
         </div>
@@ -1958,6 +1980,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                   </path>
                 </svg>
               </button>
+              <div class="TopBannerLangPicker_menuArrow__cXG+p">
+              </div>
             </div>
           </div>
         </div>
@@ -2187,6 +2211,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
                   </path>
                 </svg>
               </button>
+              <div class="TopBannerLangPicker_menuArrow__cXG+p">
+              </div>
             </div>
             <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
                     type="button"
@@ -2382,6 +2408,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                   </path>
                 </svg>
               </button>
+              <div class="TopBannerLangPicker_menuArrow__cXG+p">
+              </div>
             </div>
           </div>
         </div>
@@ -2659,6 +2687,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                   </path>
                 </svg>
               </button>
+              <div class="TopBannerLangPicker_menuArrow__cXG+p">
+              </div>
             </div>
           </div>
         </div>
@@ -2936,6 +2966,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                   </path>
                 </svg>
               </button>
+              <div class="TopBannerLangPicker_menuArrow__cXG+p">
+              </div>
             </div>
           </div>
         </div>
@@ -3208,6 +3240,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                   </path>
                 </svg>
               </button>
+              <div class="TopBannerLangPicker_menuArrow__cXG+p">
+              </div>
             </div>
           </div>
         </div>
@@ -3475,6 +3509,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                   </path>
                 </svg>
               </button>
+              <div class="TopBannerLangPicker_menuArrow__cXG+p">
+              </div>
             </div>
           </div>
         </div>
@@ -3742,6 +3778,8 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                   </path>
                 </svg>
               </button>
+              <div class="TopBannerLangPicker_menuArrow__cXG+p">
+              </div>
             </div>
           </div>
         </div>
