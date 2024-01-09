@@ -3,6 +3,7 @@ import {
   JSX,
   useEffect,
   useImperativeHandle,
+  useMemo,
   useRef,
   useState,
 } from 'react';
@@ -22,11 +23,24 @@ import {
   TopBannerLangPickerComponent,
   TopBannerLangPickerProps,
 } from './TopBannerLangPicker.types';
-import { convertLocaleToLang, LanguageItems } from './utils';
+import { convertLocaleToLang, getCurrentLanguages } from './utils';
 import { TopBannerButton } from '../TopBannerButton/TopBannerButton';
 import { TopBannerLangPickerButton } from '../TopBannerLangPickerButton/TopBannerLangPickerButton';
 
 import styles from './TopBannerLangPicker.module.scss';
+
+const getFlag = (lang: string): JSX.Element => {
+  switch (lang) {
+    case 'en':
+      return <EnglishFlagIcon className={styles.flagIconSvg} />;
+    case 'se':
+      return <SamiFlagIcon className={styles.flagIconSvg} />;
+    case 'nb':
+    case 'nn':
+    default:
+      return <NorwegianFlagIcon className={styles.flagIconSvg} />;
+  }
+};
 
 export const TopBannerLangPicker = forwardRef<
   HTMLDivElement,
@@ -38,7 +52,7 @@ export const TopBannerLangPicker = forwardRef<
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
-      locale = getTopBannerLangPickerLocaleDefault(),
+      defaultLocale = getTopBannerLangPickerLocaleDefault(),
       showSami = getTopBannerLangPickerShowSamiDefault(),
       onLanguageClick,
       openMenu,
@@ -53,20 +67,21 @@ export const TopBannerLangPicker = forwardRef<
     const menuButtonRefInternal = useRef<HTMLButtonElement>(null);
     useImperativeHandle(
       menuButtonRef,
-      () => menuButtonRef?.current as HTMLButtonElement
+      () => menuButtonRefInternal?.current as HTMLButtonElement
     );
-
     const [selectedLang, setSelectedLang] = useState<string>(
-      convertLocaleToLang(locale)
+      convertLocaleToLang(defaultLocale)
     );
-    const isMenuOpen = openMenu === 'Lang';
-
     useEffect(() => {
       document.documentElement.lang = selectedLang;
-    }, [selectedLang, setSelectedLang]);
+    }, [selectedLang]);
+    const languages = useMemo(() => getCurrentLanguages(showSami), [showSami]);
+    const [currentFocus, setCurrentFocus] = useState(-1);
 
+    const isMenuOpen = openMenu === 'Lang';
     useEffect(() => {
       if (!isMenuOpen) {
+        setCurrentFocus(-1);
         return;
       }
 
@@ -81,13 +96,30 @@ export const TopBannerLangPicker = forwardRef<
         }
       };
 
+      const handleKeyDown = (e: KeyboardEvent): void => {
+        const languageLength = Object.keys(languages).length;
+        if (e.key === 'ArrowUp' || (e.key === 'Tab' && e.shiftKey)) {
+          e.preventDefault();
+          setCurrentFocus((currentFocus) =>
+            currentFocus === 0 ? languageLength - 1 : currentFocus - 1
+          );
+        } else if (e.key === 'ArrowDown' || e.key === 'Tab') {
+          e.preventDefault();
+          setCurrentFocus((currentFocus) =>
+            currentFocus === languageLength - 1 ? 0 : currentFocus + 1
+          );
+        }
+      };
+
+      document.addEventListener('keydown', handleKeyDown);
       document.addEventListener('focusin', handleOutsideMenuEvent);
       document.addEventListener('click', handleOutsideMenuEvent);
       return () => {
+        document.removeEventListener('keydown', handleKeyDown);
         document.removeEventListener('click', handleOutsideMenuEvent);
         document.removeEventListener('focusin', handleOutsideMenuEvent);
       };
-    }, [isMenuOpen, setOpenMenu]);
+    }, [isMenuOpen, setOpenMenu, languages]);
 
     const handleLanguageClick = (
       e: React.MouseEvent<HTMLButtonElement>
@@ -101,33 +133,6 @@ export const TopBannerLangPicker = forwardRef<
     const handleMenuClick = (): void => {
       setOpenMenu(isMenuOpen ? 'None' : 'Lang');
     };
-
-    const defaultLanguages: LanguageItems = {
-      nb: {
-        lang: 'nb',
-        displayName: 'Bokmål',
-        flagIcon: <NorwegianFlagIcon className={styles.flagIconSvg} />,
-      },
-      nn: {
-        lang: 'nn',
-        displayName: 'Nynorsk',
-        flagIcon: <NorwegianFlagIcon className={styles.flagIconSvg} />,
-      },
-      en: {
-        lang: 'en',
-        displayName: 'English',
-        flagIcon: <EnglishFlagIcon className={styles.flagIconSvg} />,
-      },
-    };
-    if (showSami) {
-      Object.assign(defaultLanguages, {
-        se: {
-          lang: 'se',
-          displayName: 'Sámegiella',
-          flagIcon: <SamiFlagIcon className={styles.flagIconSvg} />,
-        },
-      });
-    }
 
     return (
       <div
@@ -144,17 +149,22 @@ export const TopBannerLangPicker = forwardRef<
           className={styles.menuButton}
           ariaExpanded={isMenuOpen}
           onClick={handleMenuClick}
+          onKeyDown={(e) => {
+            if (e.shiftKey && e.key === 'Tab') {
+              /* Stopper propagering slik at eventet ikke fanges av eventListener på document og vi
+                får tilbake standard oppførsel på tab og shift-tab. */
+              e.stopPropagation();
+            }
+          }}
         >
           <span className={styles.iconWrapper}>
-            <span className={styles.flagIcon}>
-              {defaultLanguages[selectedLang].flagIcon}
-            </span>
+            <span className={styles.flagIcon}>{getFlag(selectedLang)}</span>
             <Icon
               svgPath={isMenuOpen ? MenuUpSVGpath : MenuDownSVGpath}
               className={styles.arrowMobile}
             />
           </span>
-          {defaultLanguages[selectedLang].displayName}
+          {languages[selectedLang].displayName}
           <span className={styles.srOnly}>{t('topbannerbutton.Menu')}</span>
           <Icon
             svgPath={isMenuOpen ? MenuUpSVGpath : MenuDownSVGpath}
@@ -166,14 +176,27 @@ export const TopBannerLangPicker = forwardRef<
         {isMenuOpen && (
           <div ref={menuRef} className={styles.menu}>
             <ul className={styles.list}>
-              {Object.values(defaultLanguages).map((language) => {
+              {Object.values(languages).map((language, index) => {
                 return (
                   <li key={`${language.lang}`} className={styles.listItem}>
                     <TopBannerLangPicker.Button
                       lang={language.lang}
                       ariaCurrent={language.lang === selectedLang}
-                      flagIcon={language.flagIcon}
+                      flagIcon={getFlag(language.lang)}
+                      focus={index === currentFocus}
                       onClick={handleLanguageClick}
+                      onKeyDown={(e): void => {
+                        /* Hvis vi er på første eller siste element stopper vi propagering slik at
+                           eventet ikke fanges av eventListener på document og vi får tilbake
+                           standard oppførsel på tab og shift-tab. */
+                        if (
+                          (index === Object.keys(languages).length - 1 &&
+                            e.key === 'Tab') ||
+                          (index === 0 && e.shiftKey && e.key === 'Tab')
+                        ) {
+                          e.stopPropagation();
+                        }
+                      }}
                     >
                       {language.displayName}
                     </TopBannerLangPicker.Button>

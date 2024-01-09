@@ -12,8 +12,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangB
     >
       <span class="TopBannerLangPicker_iconWrapper__SFn8s">
         <span class="TopBannerLangPicker_flagIcon__LcfDc">
-          <svg id="Layer_1"
-               xmlns="http://www.w3.org/2000/svg"
+          <svg xmlns="http://www.w3.org/2000/svg"
                xmlns:xlink="http://www.w3.org/1999/xlink"
                x="0px"
                y="0px"
@@ -131,8 +130,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
     >
       <span class="TopBannerLangPicker_iconWrapper__SFn8s">
         <span class="TopBannerLangPicker_flagIcon__LcfDc">
-          <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-               xmlns="http://www.w3.org/2000/svg"
+          <svg xmlns="http://www.w3.org/2000/svg"
                viewbox="0 0 1100 800"
                focusable="false"
                aria-hidden="true"
@@ -218,8 +216,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
                   aria-current="true"
           >
             <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
-              <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                   xmlns="http://www.w3.org/2000/svg"
+              <svg xmlns="http://www.w3.org/2000/svg"
                    viewbox="0 0 1100 800"
                    focusable="false"
                    aria-hidden="true"
@@ -291,8 +288,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
                   aria-current="false"
           >
             <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
-              <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                   xmlns="http://www.w3.org/2000/svg"
+              <svg xmlns="http://www.w3.org/2000/svg"
                    viewbox="0 0 1100 800"
                    focusable="false"
                    aria-hidden="true"
@@ -355,8 +351,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
                   aria-current="false"
           >
             <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
-              <svg id="Layer_1"
-                   xmlns="http://www.w3.org/2000/svg"
+              <svg xmlns="http://www.w3.org/2000/svg"
                    xmlns:xlink="http://www.w3.org/1999/xlink"
                    x="0px"
                    y="0px"
@@ -443,8 +438,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
                   aria-current="false"
           >
             <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
-              <svg id="uuid-6951fa5c-db87-4944-bb36-a10985e758d2"
-                   xmlns="http://www.w3.org/2000/svg"
+              <svg xmlns="http://www.w3.org/2000/svg"
                    viewbox="0 0 808 600"
                    focusable="false"
                    aria-hidden="true"
@@ -527,8 +521,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 
     >
       <span class="TopBannerLangPicker_iconWrapper__SFn8s">
         <span class="TopBannerLangPicker_flagIcon__LcfDc">
-          <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-               xmlns="http://www.w3.org/2000/svg"
+          <svg xmlns="http://www.w3.org/2000/svg"
                viewbox="0 0 1100 800"
                focusable="false"
                aria-hidden="true"
@@ -622,8 +615,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
     >
       <span class="TopBannerLangPicker_iconWrapper__SFn8s">
         <span class="TopBannerLangPicker_flagIcon__LcfDc">
-          <svg id="Layer_1"
-               xmlns="http://www.w3.org/2000/svg"
+          <svg xmlns="http://www.w3.org/2000/svg"
                xmlns:xlink="http://www.w3.org/1999/xlink"
                x="0px"
                y="0px"
@@ -733,8 +725,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
                   aria-current="false"
           >
             <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
-              <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                   xmlns="http://www.w3.org/2000/svg"
+              <svg xmlns="http://www.w3.org/2000/svg"
                    viewbox="0 0 1100 800"
                    focusable="false"
                    aria-hidden="true"
@@ -797,8 +788,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
                   aria-current="false"
           >
             <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
-              <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                   xmlns="http://www.w3.org/2000/svg"
+              <svg xmlns="http://www.w3.org/2000/svg"
                    viewbox="0 0 1100 800"
                    focusable="false"
                    aria-hidden="true"
@@ -861,8 +851,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
                   aria-current="true"
           >
             <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
-              <svg id="Layer_1"
-                   xmlns="http://www.w3.org/2000/svg"
+              <svg xmlns="http://www.w3.org/2000/svg"
                    xmlns:xlink="http://www.w3.org/1999/xlink"
                    x="0px"
                    y="0px"
@@ -958,8 +947,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
                   aria-current="false"
           >
             <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
-              <svg id="uuid-6951fa5c-db87-4944-bb36-a10985e758d2"
-                   xmlns="http://www.w3.org/2000/svg"
+              <svg xmlns="http://www.w3.org/2000/svg"
                    viewbox="0 0 808 600"
                    focusable="false"
                    aria-hidden="true"
@@ -1040,8 +1028,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
     >
       <span class="TopBannerLangPicker_iconWrapper__SFn8s">
         <span class="TopBannerLangPicker_flagIcon__LcfDc">
-          <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-               xmlns="http://www.w3.org/2000/svg"
+          <svg xmlns="http://www.w3.org/2000/svg"
                viewbox="0 0 1100 800"
                focusable="false"
                aria-hidden="true"
@@ -1135,8 +1122,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
     >
       <span class="TopBannerLangPicker_iconWrapper__SFn8s">
         <span class="TopBannerLangPicker_flagIcon__LcfDc">
-          <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-               xmlns="http://www.w3.org/2000/svg"
+          <svg xmlns="http://www.w3.org/2000/svg"
                viewbox="0 0 1100 800"
                focusable="false"
                aria-hidden="true"
@@ -1222,8 +1208,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
                   aria-current="true"
           >
             <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
-              <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                   xmlns="http://www.w3.org/2000/svg"
+              <svg xmlns="http://www.w3.org/2000/svg"
                    viewbox="0 0 1100 800"
                    focusable="false"
                    aria-hidden="true"
@@ -1295,8 +1280,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
                   aria-current="false"
           >
             <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
-              <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                   xmlns="http://www.w3.org/2000/svg"
+              <svg xmlns="http://www.w3.org/2000/svg"
                    viewbox="0 0 1100 800"
                    focusable="false"
                    aria-hidden="true"
@@ -1359,8 +1343,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
                   aria-current="false"
           >
             <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
-              <svg id="Layer_1"
-                   xmlns="http://www.w3.org/2000/svg"
+              <svg xmlns="http://www.w3.org/2000/svg"
                    xmlns:xlink="http://www.w3.org/1999/xlink"
                    x="0px"
                    y="0px"

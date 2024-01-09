@@ -47,7 +47,7 @@ type TopBannerLogoDiscriminatedProps =
 
 interface TopBannerCommonProps extends BaseProps {
   /** Hvilket språk som skal være forhåndsvalgt i språkvelgeren. */
-  locale?: Languages;
+  defaultLocale?: Languages;
   /** Callback når et språk trykkes på i språkvelgeren. */
   onLanguageClick?: MouseEventHandler<HTMLButtonElement>;
   /** Om samisk språk skal vises eller ikke i språkvelgeren. Samisk er med i listen over språk som default. */

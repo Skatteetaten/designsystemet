@@ -23,6 +23,8 @@ interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
 export interface TopBannerLangPickerButtonProps
   extends ButtonPropsHTMLAttributes,
     BaseProps {
+  /**  Om komponenten skal være i fokus. */
+  focus?: boolean;
   /** Flagg som samsvarer med språket. */
   flagIcon: JSX.Element;
   /** Navn på språket. */

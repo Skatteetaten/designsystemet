@@ -32,7 +32,7 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     showSami: { table: { disable: true } },
-    locale: { table: { disable: true } },
+    defaultLocale: { table: { disable: true } },
     children: {
       control: 'text',
       table: { disable: true },

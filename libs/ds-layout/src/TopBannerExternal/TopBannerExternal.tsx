@@ -39,7 +39,7 @@ export const TopBannerExternal = forwardRef<
       lang,
       'data-testid': dataTestId,
       firstColumn,
-      locale,
+      defaultLocale,
       logo,
       logoAltText,
       logoAs,
@@ -217,7 +217,7 @@ export const TopBannerExternal = forwardRef<
 
                 <TopBannerLangPicker
                   ref={languagePickerRef}
-                  locale={locale}
+                  defaultLocale={defaultLocale}
                   showSami={showSami}
                   openMenu={openMenu}
                   setOpenMenu={setOpenMenu}
