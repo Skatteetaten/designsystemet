@@ -17,7 +17,11 @@ type UserOthers = {
 export type User = UserMyself | UserOthers;
 export type TopBannerMenu = 'Lang' | 'MainMenu' | 'None';
 
-type TopBannerLogoDiscriminatedProps =
+type SkipLink = Omit<TopBannerSkipLinkProps, 'children'> & {
+  text: TopBannerSkipLinkProps['children'];
+};
+
+type TopBannerLogo =
   | {
       /** Overskriver default logo. Må også angi logo for mobilvisning, alt-tekst og url. */
       logo?: never;
@@ -45,7 +49,7 @@ type TopBannerLogoDiscriminatedProps =
       logoAs?: Extract<LogoAs, 'div'>;
     };
 
-interface TopBannerCommonProps extends BaseProps {
+export interface TopBannerExternalProps extends BaseProps {
   /** Hvilket språk som skal være forhåndsvalgt i språkvelgeren. */
   defaultLocale?: Languages;
   /** Callback når et språk trykkes på i språkvelgeren. */
@@ -71,19 +75,22 @@ interface TopBannerCommonProps extends BaseProps {
   thirdColumn?: ReactNode;
   /** Tekst eller markup som blir plassert mellom logo og innbakte menyer og knapper. */
   children?: ReactNode;
-  /** Overskriver default lenketekst. */
-  skipLinkText?: TopBannerSkipLinkProps['children'];
-  /** Overskriver default target verdi som fokus skal settes til når skipLink klikkes på. */
-  skipLinkTarget?: TopBannerSkipLinkProps['target'];
   /**
+   * skipLink.text overskriver default lenketekst.
+   * skipLink.target overskriver default target verdi som fokus skal settes til når skipLink klikkes på.
    * Focus settes default til main elementet når skipLink klikkes.
    * Dersom main befinner seg i en shadow-DOM så må shadowRootNode angis for at fokus skal settes riktig.
    */
-  skipLinkShadowRootNode?: TopBannerSkipLinkProps['shadowRootNode'];
+  skipLink?: SkipLink;
+  /**
+   * logo.loge Overskriver default logo. Må også angi logo for mobilvisning, alt-tekst og url.
+   * logo.mobileLogo  Overskriver default logo for mobilvisning.
+   * logo.logoAltText Overskriver default alt-tekst for logo kun dersom logo og mobileLogo også endres. NB! Alt-tekst må være tilpasset om logo er en lenke eller ikke.
+   * logo.logoURL  Overskriver default URL.
+   * logo.logoAs HTML-tag for Logo. Styrer om logo skal kodes som en lenke eller ikke. Hvis default logo endres til å ikke være en lenke, så blir logoAltText automatisk tilpasset.
+   */
+  logo?: TopBannerLogo;
 }
-
-export type TopBannerExternalProps = TopBannerCommonProps &
-  TopBannerLogoDiscriminatedProps;
 
 export interface TopBannerExternalHandle extends RefObject<HTMLHeadElement> {
   /* Åpner menyen */

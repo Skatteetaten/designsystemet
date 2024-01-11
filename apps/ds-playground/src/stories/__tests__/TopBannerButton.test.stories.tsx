@@ -265,7 +265,7 @@ export const VariantOutlineOnMobileScreen = {
 } satisfies Story;
 
 export const VariantFilledOnMobileScreen = {
-  name: 'Variant Outline On Mobile Screen  (LoginButton A1, A2)',
+  name: 'Variant Filled On Mobile Screen  (LoginButton A1, A2)',
   args: {
     ...defaultArgs,
     children: 'Logg inn',

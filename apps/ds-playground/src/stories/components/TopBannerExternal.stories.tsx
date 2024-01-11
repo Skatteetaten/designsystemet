@@ -18,20 +18,9 @@ import {
   getTopBannerLangPickerShowSamiDefault,
 } from '../../../../../libs/ds-layout/src/TopBannerLangPicker/defaults';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import {
-  getTopBannerLogoAsDefault,
-  getTopBannerLogoHrefDefault,
-} from '../../../../../libs/ds-layout/src/TopBannerLogo/defaults';
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { logoAsArr } from '../../../../../libs/ds-layout/src/TopBannerLogo/TopBannerLogo.types';
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { getTopBannerSkipLinkTargetDefault } from '../../../../../libs/ds-layout/src/TopBannerSkipLink/defaults';
-// eslint-disable-next-line @nx/enforce-module-boundaries
 import { UserRole } from '../../../../../libs/ds-layout/src/TopBannerUserButton/TopBannerUserButton.types';
 import { category } from '../../../.storybook/helpers';
 import customLogo from '../../assets/custom-logo.svg';
-import customMobileLogo from '../../assets/custom-mobile-logo.svg';
-import skeMobileLogo from '../../assets/ske-logo-mobile.svg';
 import skeLogo from '../../assets/ske-logo.svg';
 import { getVersion } from '../utils/version.utils';
 
@@ -53,36 +42,11 @@ export default {
       },
     },
     children: { control: 'text', table: { category: category.props } },
-    skipLinkText: { table: { category: category.props } },
-    skipLinkTarget: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getTopBannerSkipLinkTargetDefault() },
-      },
-    },
-    skipLinkShadowRootNode: { table: { category: category.props } },
+    skipLink: { table: { category: category.props } },
     logo: {
       table: { category: category.props },
       control: 'select',
       options: ['', customLogo, skeLogo],
-    },
-    mobileLogo: {
-      table: { category: category.props },
-      control: 'select',
-      options: ['', customMobileLogo, skeMobileLogo],
-    },
-    logoAltText: { table: { category: category.props } },
-    logoAs: {
-      table: { category: category.props },
-      options: [...logoAsArr],
-      control: 'inline-radio',
-      defaultValue: { summary: getTopBannerLogoAsDefault() },
-    },
-    logoURL: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getTopBannerLogoHrefDefault() },
-      },
     },
     user: { table: { category: category.props } },
     firstColumn: { control: 'text', table: { category: category.props } },
