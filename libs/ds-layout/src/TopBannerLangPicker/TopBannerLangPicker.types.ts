@@ -14,7 +14,7 @@ import { TopBannerLangPickerButtonProps } from '../TopBannerLangPickerButton/Top
 
 export interface TopBannerLangPickerProps extends BaseProps {
   /** Hvilket språk som skal være forhåndsvalgt. */
-  locale?: Languages;
+  defaultLocale?: Languages;
   /** Callback når et språk trykkes på. */
   onLanguageClick?: MouseEventHandler<HTMLButtonElement>;
   /** Om samisk språk skal vises eller ikke. */

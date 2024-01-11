@@ -37,8 +37,11 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    locale: { table: { disable: true } },
+    defaultLocale: { table: { disable: true } },
     showSami: { table: { disable: true } },
+    openMenu: { table: { disable: true } },
+    setOpenMenu: { table: { disable: true } },
+    menuButtonRef: { table: { disable: true } },
     // Events
     onLanguageClick: { table: { disable: true } },
   },
@@ -161,9 +164,9 @@ export const WithLocale = {
   name: 'With Locale (LanguagePicker A7, A4, B2)',
   args: {
     ...defaultArgs,
-    locale: Languages.Engelsk,
+    defaultLocale: Languages.Engelsk,
   },
-  argTypes: { locale: { table: { disable: false } } },
+  argTypes: { defaultLocale: { table: { disable: false } } },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const menuButton = canvas.getByRole('button', {
@@ -205,5 +208,36 @@ export const CloseMenuWhenClickOnLangButton = {
       name: `${englishText} ${menuText}`,
     });
     await expect(menuButtonEnglish).toHaveAttribute('aria-expanded', 'false');
+  },
+} satisfies Story;
+
+export const WithKeyboardNavigation = {
+  name: 'Change focus when pressing arrow keys or tab (LanguagePicker C1)',
+  args: {
+    ...defaultArgs,
+    openMenu: 'Lang',
+  },
+
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const menuButton = canvas.getByRole('button');
+    await userEvent.click(menuButton);
+    const listItems = canvas.getAllByRole('listitem');
+
+    /* eslint-disable testing-library/no-node-access */
+    await userEvent.keyboard('[ArrowDown]');
+    await expect(listItems[0].firstChild).toHaveFocus();
+    await userEvent.keyboard('[ArrowDown]');
+    await expect(listItems[1].firstChild).toHaveFocus();
+    await userEvent.keyboard('[Tab]');
+    await expect(listItems[2].firstChild).toHaveFocus();
+    await userEvent.keyboard('[ArrowUp]');
+    await expect(listItems[1].firstChild).toHaveFocus();
+    /* eslint-enable testing-library/no-node-access */
+  },
+
+  parameters: {
+    HTMLSnapshot: { disable: true },
+    imageSnapshot: { disable: true },
   },
 } satisfies Story;

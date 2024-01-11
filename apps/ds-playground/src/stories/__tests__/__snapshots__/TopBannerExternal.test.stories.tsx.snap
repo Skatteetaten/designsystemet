@@ -64,8 +64,7 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
               >
                 <span class="TopBannerLangPicker_iconWrapper__SFn8s">
                   <span class="TopBannerLangPicker_flagIcon__LcfDc">
-                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                         xmlns="http://www.w3.org/2000/svg"
+                    <svg xmlns="http://www.w3.org/2000/svg"
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
@@ -203,8 +202,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
               >
                 <span class="TopBannerLangPicker_iconWrapper__SFn8s">
                   <span class="TopBannerLangPicker_flagIcon__LcfDc">
-                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                         xmlns="http://www.w3.org/2000/svg"
+                    <svg xmlns="http://www.w3.org/2000/svg"
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
@@ -342,8 +340,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
               >
                 <span class="TopBannerLangPicker_iconWrapper__SFn8s">
                   <span class="TopBannerLangPicker_flagIcon__LcfDc">
-                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                         xmlns="http://www.w3.org/2000/svg"
+                    <svg xmlns="http://www.w3.org/2000/svg"
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
@@ -481,8 +478,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
               >
                 <span class="TopBannerLangPicker_iconWrapper__SFn8s">
                   <span class="TopBannerLangPicker_flagIcon__LcfDc">
-                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                         xmlns="http://www.w3.org/2000/svg"
+                    <svg xmlns="http://www.w3.org/2000/svg"
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
@@ -620,8 +616,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
               >
                 <span class="TopBannerLangPicker_iconWrapper__SFn8s">
                   <span class="TopBannerLangPicker_flagIcon__LcfDc">
-                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                         xmlns="http://www.w3.org/2000/svg"
+                    <svg xmlns="http://www.w3.org/2000/svg"
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
@@ -759,8 +754,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
               >
                 <span class="TopBannerLangPicker_iconWrapper__SFn8s">
                   <span class="TopBannerLangPicker_flagIcon__LcfDc">
-                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                         xmlns="http://www.w3.org/2000/svg"
+                    <svg xmlns="http://www.w3.org/2000/svg"
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
@@ -902,8 +896,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
               >
                 <span class="TopBannerLangPicker_iconWrapper__SFn8s">
                   <span class="TopBannerLangPicker_flagIcon__LcfDc">
-                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                         xmlns="http://www.w3.org/2000/svg"
+                    <svg xmlns="http://www.w3.org/2000/svg"
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
@@ -1077,8 +1070,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
               >
                 <span class="TopBannerLangPicker_iconWrapper__SFn8s">
                   <span class="TopBannerLangPicker_flagIcon__LcfDc">
-                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                         xmlns="http://www.w3.org/2000/svg"
+                    <svg xmlns="http://www.w3.org/2000/svg"
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
@@ -1216,8 +1208,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
               >
                 <span class="TopBannerLangPicker_iconWrapper__SFn8s">
                   <span class="TopBannerLangPicker_flagIcon__LcfDc">
-                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                         xmlns="http://www.w3.org/2000/svg"
+                    <svg xmlns="http://www.w3.org/2000/svg"
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
@@ -1385,8 +1376,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
               >
                 <span class="TopBannerLangPicker_iconWrapper__SFn8s">
                   <span class="TopBannerLangPicker_flagIcon__LcfDc">
-                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                         xmlns="http://www.w3.org/2000/svg"
+                    <svg xmlns="http://www.w3.org/2000/svg"
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
@@ -1644,8 +1634,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
               >
                 <span class="TopBannerLangPicker_iconWrapper__SFn8s">
                   <span class="TopBannerLangPicker_flagIcon__LcfDc">
-                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                         xmlns="http://www.w3.org/2000/svg"
+                    <svg xmlns="http://www.w3.org/2000/svg"
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
@@ -1903,8 +1892,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
               >
                 <span class="TopBannerLangPicker_iconWrapper__SFn8s">
                   <span class="TopBannerLangPicker_flagIcon__LcfDc">
-                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                         xmlns="http://www.w3.org/2000/svg"
+                    <svg xmlns="http://www.w3.org/2000/svg"
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
@@ -2134,8 +2122,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
               >
                 <span class="TopBannerLangPicker_iconWrapper__SFn8s">
                   <span class="TopBannerLangPicker_flagIcon__LcfDc">
-                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                         xmlns="http://www.w3.org/2000/svg"
+                    <svg xmlns="http://www.w3.org/2000/svg"
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
@@ -2331,8 +2318,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
               >
                 <span class="TopBannerLangPicker_iconWrapper__SFn8s">
                   <span class="TopBannerLangPicker_flagIcon__LcfDc">
-                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                         xmlns="http://www.w3.org/2000/svg"
+                    <svg xmlns="http://www.w3.org/2000/svg"
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
@@ -2610,8 +2596,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
               >
                 <span class="TopBannerLangPicker_iconWrapper__SFn8s">
                   <span class="TopBannerLangPicker_flagIcon__LcfDc">
-                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                         xmlns="http://www.w3.org/2000/svg"
+                    <svg xmlns="http://www.w3.org/2000/svg"
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
@@ -2889,8 +2874,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
               >
                 <span class="TopBannerLangPicker_iconWrapper__SFn8s">
                   <span class="TopBannerLangPicker_flagIcon__LcfDc">
-                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                         xmlns="http://www.w3.org/2000/svg"
+                    <svg xmlns="http://www.w3.org/2000/svg"
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
@@ -3163,8 +3147,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
               >
                 <span class="TopBannerLangPicker_iconWrapper__SFn8s">
                   <span class="TopBannerLangPicker_flagIcon__LcfDc">
-                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                         xmlns="http://www.w3.org/2000/svg"
+                    <svg xmlns="http://www.w3.org/2000/svg"
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
@@ -3432,8 +3415,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
               >
                 <span class="TopBannerLangPicker_iconWrapper__SFn8s">
                   <span class="TopBannerLangPicker_flagIcon__LcfDc">
-                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                         xmlns="http://www.w3.org/2000/svg"
+                    <svg xmlns="http://www.w3.org/2000/svg"
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"
@@ -3701,8 +3683,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
               >
                 <span class="TopBannerLangPicker_iconWrapper__SFn8s">
                   <span class="TopBannerLangPicker_flagIcon__LcfDc">
-                    <svg id="uuid-b0272ea8-d483-4731-ab86-7400d47091d0"
-                         xmlns="http://www.w3.org/2000/svg"
+                    <svg xmlns="http://www.w3.org/2000/svg"
                          viewbox="0 0 1100 800"
                          focusable="false"
                          aria-hidden="true"

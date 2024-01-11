@@ -46,7 +46,7 @@ export default {
         defaultValue: { summary: getTopBannerLangPickerShowSamiDefault() },
       },
     },
-    locale: {
+    defaultLocale: {
       table: {
         category: category.props,
         defaultValue: { summary: getTopBannerLangPickerLocaleDefault() },
