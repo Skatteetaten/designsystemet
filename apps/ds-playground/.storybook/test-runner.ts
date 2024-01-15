@@ -205,12 +205,16 @@ const config: TestRunnerConfig = {
     await injectAxe(page);
     const storyContext = await getStoryContext(page, context);
     await adjustViewport(page, storyContext.parameters.viewport);
-    //await page.waitForLoadState('networkidle'); //TODO hvorfor har denne begynt å henge? kan den erstattes av domcontentloaded ? https://github.com/microsoft/playwright/issues/19835
     await page.waitForLoadState('domcontentloaded');
     await page.evaluate(async () => await document.fonts.ready);
   },
 
   async postRender(page, context): Promise<void> {
+    await page.waitForLoadState('domcontentloaded');
+    await page.waitForLoadState('load');
+    //await page.waitForLoadState('networkidle'); //TODO hvorfor har denne begynt å henge? kan den erstattes av domcontentloaded ? https://github.com/microsoft/playwright/issues/19835
+    await page.evaluate(async () => await document.fonts.ready);
+
     const storyContext = (await getStoryContext(page, context)) as StoryContext;
     await verifyAxeRules(page, storyContext);
     await verifyHTMLSnapshots(page, storyContext);
