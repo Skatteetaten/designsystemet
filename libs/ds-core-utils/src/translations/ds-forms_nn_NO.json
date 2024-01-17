@@ -1,4 +1,9 @@
 {
+  "datepicker.NextMonth": "Neste månad",
+  "datepicker.PreviousMonth": "Førre månad",
+  "datepicker.SelectMonth": "Velg månad",
+  "datepicker.Today": "I dag",
+  "datepicker.Year": "Årstal",
   "errorsummary.Title": "For å gå vidare må du rette opp {{errorAmount}} feil:",
   "fileuploader.AddMultipleLabel": "Legg til fil(er)",
   "fileuploader.AddSingleLabel": "Legg til fil",
@@ -14,5 +19,7 @@
   "fileuploader.NoRightsUploadError": "Du har ikkje rettar til å laste opp filer",
   "fileuploader.SuccessIconLabel": "(Fullført)",
   "fileuploader.UploadedHeading": "Lasta opp:",
-  "fileuploader.UploadedSummary": "({{fileCount}} fil(er) lastet opp)"
+  "fileuploader.UploadedSummary": "({{fileCount}} fil(er) lastet opp)",
+  "searchfield.ButtonTitle": "Søk",
+  "searchfield.ClearButtonTitle": "(Nullstill)"
 }

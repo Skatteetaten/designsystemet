@@ -14,5 +14,7 @@
   "fileuploader.NoRightsUploadError": "Dus ii leat vuoigatvuohta lasihit fiillaid",
   "fileuploader.SuccessIconLabel": "(Fullført)",
   "fileuploader.UploadedHeading": "Lasihuvvon:",
-  "fileuploader.UploadedSummary": "({{fileCount}} filer lastet opp)"
+  "fileuploader.UploadedSummary": "({{fileCount}} filer lastet opp)",
+  "searchfield.ButtonTitle": "(Søk)",
+  "searchfield.ClearButtonTitle": "(Nullstill)"
 }

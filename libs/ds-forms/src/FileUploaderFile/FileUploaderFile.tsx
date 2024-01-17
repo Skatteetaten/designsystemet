@@ -14,7 +14,6 @@ import { FileUploaderFileProps } from './FileUploaderFile.types';
 
 import styles from './FileUploaderFile.module.scss';
 
-//TODO håndtere whitespace i filnavn
 export const FileUploaderFile = forwardRef<
   HTMLLIElement,
   FileUploaderFileProps
@@ -25,8 +24,10 @@ export const FileUploaderFile = forwardRef<
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
+      fileIconTitle,
       href,
-      onClick,
+      successIconTitle,
+      onClickDelete,
       children,
     },
     ref
@@ -59,7 +60,7 @@ export const FileUploaderFile = forwardRef<
                 <FileOutlineIcon
                   className={styles.fileListIcon}
                   size={'small'}
-                  title={t('fileuploader.FileIconLabel')}
+                  title={fileIconTitle ?? t('fileuploader.FileIconLabel')}
                 />
                 <span
                   id={`${id}-file-${children}`}
@@ -72,7 +73,7 @@ export const FileUploaderFile = forwardRef<
             <CheckIcon
               className={styles.successIcon}
               size={'medium'}
-              title={t('fileuploader.SuccessIconLabel')}
+              title={successIconTitle ?? t('fileuploader.SuccessIconLabel')}
             />
           </span>
           <span>
@@ -80,7 +81,7 @@ export const FileUploaderFile = forwardRef<
               svgPath={CancelSVGpath}
               title={t('fileuploader.DeleteLabel')}
               ariaDescribedby={`${id}-file-${children}`}
-              onClick={onClick}
+              onClick={onClickDelete}
             />
           </span>
         </div>

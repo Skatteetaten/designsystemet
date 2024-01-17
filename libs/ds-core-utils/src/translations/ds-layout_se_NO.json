@@ -8,10 +8,10 @@
   "topbanner.SkeLogoLinkText": "Vearroetáhta ovdasiidu",
   "topbanner.SkipLinkText": "(Hopp til hovedinnhold)",
   "topbannerbutton.CompanyTitle": "(Innlogget som virksomhet)",
-  "topbannerbutton.Login": "(Logg inn)",
-  "topbannerbutton.Logout": "(Logg ut)",
-  "topbannerbutton.Menu": "(Meny)",
-  "topbannerbutton.Myself": "(Meg selv)",
-  "topbannerbutton.MyselfTitle": "(Innlogget som)",
+  "topbannerbutton.Login": "Sisačáliheapmi",
+  "topbannerbutton.Logout": "Čálit ologgos",
+  "topbannerbutton.Menu": "Fállu",
+  "topbannerbutton.Myself": "Mun ieš",
+  "topbannerbutton.MyselfTitle": "Guoskevaš",
   "topbannerbutton.OtherTitle": "(Innlogget som annen)"
 }

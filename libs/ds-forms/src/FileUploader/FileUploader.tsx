@@ -30,18 +30,28 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
       lang,
       'data-testid': dataTestId,
       acceptedFileFormats,
-      uploadResult,
-      buttonText: buttonTextExternal,
+      acceptedFileFormatsDescription,
+      acceptedFileFormatsDisplay,
+      description,
       errorMessage,
-      fileFormatsText,
-      helpProps,
-      invalidCharacterRegexp,
+      fileIconTitle,
+      helpSvgPath,
+      helpText,
+      label,
+      successIconTitle,
+      titleHelpSvg,
+      uploadResult,
       uploadedFiles,
+      invalidCharacterRegexp,
+      hideLabel,
+      showRequiredMark,
+      shouldNormalizeFileName,
       multiple,
       hasError,
       isUploading,
       onFileChange,
       onFileDelete,
+      children: buttonTextExternal,
     },
     ref
   ) => {
@@ -54,7 +64,6 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
 
     const id = externalId ?? generatedId;
     const fileformatsId = `${id}-accepted-formats`;
-    const buttonTextId = `${id}-upload-button`;
 
     const acceptedFormatsAsCommaSeparatedString =
       acceptedFileFormats?.join(', ');
@@ -76,7 +85,7 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
       }
 
       const files = getFiles(event);
-      if (invalidCharacterRegexp) {
+      if (shouldNormalizeFileName) {
         const normalizedFiles = files.map((file) => {
           const normalizedName = normalize(file, invalidCharacterRegexp);
           return new File([file], normalizedName);
@@ -115,8 +124,7 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
     const handleDeleteFile = (file: string): void => {
       if (onFileDelete?.(file)) {
         buttonRef.current?.focus();
-        //TODO oversettelser
-        setSrOnlyText(`${file} slettet`);
+        setSrOnlyText(t('fileuploader.DeleteConfirmation'));
       } else {
         setSrOnlyText(t('fileuploader.GeneralDeleteError'));
       }
@@ -133,21 +141,36 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
         lang={lang}
         data-testid={dataTestId}
       >
-        {helpProps && <LabelWithHelp {...helpProps} htmlFor={id} />}
+        {label && (
+          <LabelWithHelp
+            htmlFor={id}
+            hideLabel={hideLabel}
+            showRequiredMark={showRequiredMark}
+            description={description}
+            helpSvgPath={helpSvgPath}
+            helpText={helpText}
+            titleHelpSvg={titleHelpSvg}
+          >
+            {label}
+          </LabelWithHelp>
+        )}
+
         <button
           ref={buttonRef}
-          disabled={isUploading}
           id={id}
           className={`${styles.dropZone} ${
             hasError ? styles.dropZone_error : ''
           } ${isDragging && !isUploading ? styles.dropZone_dragging : ''}`}
-          aria-describedby={`${buttonTextId} ${fileformatsId}`}
+          disabled={isUploading}
+          aria-describedby={acceptedFileFormats ? fileformatsId : undefined}
           onDragEnter={handleDragEnter}
           onDragLeave={handleDragLeave}
           onDragOver={handleDragOver}
           onDrop={handleFileChange}
           onClick={(): void => {
-            inputRef?.current?.click();
+            if (!isUploading) {
+              inputRef?.current?.click();
+            }
           }}
         >
           <div className={styles.removePointerEvents}>
@@ -167,6 +190,7 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
             </label>
             <input
               ref={inputRef}
+              data-testid={`${dataTestId}-input`}
               type={'file'}
               accept={acceptedFormatsAsCommaSeparatedString}
               multiple={multiple}
@@ -177,10 +201,12 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
         </button>
         {acceptedFileFormats && (
           <span id={fileformatsId} className={styles.fileInfo}>
-            {fileFormatsText ?? `${t('fileuploader.FormatLabel')} `}
+            {acceptedFileFormatsDescription ??
+              `${t('fileuploader.FormatLabel')} `}
 
             <span className={styles.fileFormatList}>
-              {acceptedFormatsAsCommaSeparatedString}
+              {acceptedFileFormatsDisplay ??
+                acceptedFormatsAsCommaSeparatedString}
             </span>
           </span>
         )}
@@ -192,20 +218,21 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
         >
           {uploadResult?.statusMessage}
         </Alert>
-        <ul className={styles.fileList}>
-          {uploadedFiles?.map(
-            (file) =>
-              !file.errorMessage && (
-                <FileUploaderFile
-                  key={file.name}
-                  href={file.href}
-                  onClick={(): void => handleDeleteFile(file.name)}
-                >
-                  {file.name}
-                </FileUploaderFile>
-              )
-          )}
-        </ul>
+        {uploadedFiles && (
+          <ul className={styles.fileList}>
+            {uploadedFiles?.map((file) => (
+              <FileUploaderFile
+                key={file.name}
+                href={file.href}
+                successIconTitle={successIconTitle}
+                fileIconTitle={fileIconTitle}
+                onClickDelete={(): void => handleDeleteFile(file.name)}
+              >
+                {file.name}
+              </FileUploaderFile>
+            ))}
+          </ul>
+        )}
         <div
           className={styles.srOnly}
           aria-live={'polite'}
