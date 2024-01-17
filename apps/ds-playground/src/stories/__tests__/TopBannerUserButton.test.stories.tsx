@@ -109,23 +109,6 @@ export const Defaults = {
   },
 } satisfies Story;
 
-export const WithUser = {
-  name: 'With User (A3)',
-  args: {
-    ...defaultArgs,
-    user: { role: 'virksomhet', name: 'Navnet på virksomheten' },
-  },
-  argTypes: {
-    user: { table: { disable: false } },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    await expect(
-      canvas.getByText('Navnet på virksomheten')
-    ).toBeInTheDocument();
-  },
-} satisfies Story;
-
 const TemplateWithAllRoles: StoryFn<typeof TopBannerUserButton> = (args) => (
   <div className={'topbannerButtonContainer'}>
     {userRoleArr.map((role, index) => {
@@ -147,7 +130,7 @@ const TemplateWithAllRoles: StoryFn<typeof TopBannerUserButton> = (args) => (
 
 export const WithAllRoles = {
   render: TemplateWithAllRoles,
-  name: 'With All Roles (Username A2, A6, A7)',
+  name: 'With All Roles (Username A2, A3, A6, A7)',
   args: {
     ...defaultArgs,
   },
@@ -171,12 +154,20 @@ export const WithAllRoles = {
     await expect(titleSelf).toBeInTheDocument();
     await expect(titleWork).toBeInTheDocument();
     await expect(titleOther).toBeInTheDocument();
+
+    await expect(
+      canvas.getByText(dsI18n.t('ds_layout:topbannerbutton.Myself'))
+    ).toBeInTheDocument();
+    await expect(
+      canvas.getByText('SØRUMSAND-SCHOENBERG WILLIAM')
+    ).toBeInTheDocument();
+    await expect(canvas.getByText('Navn på virksomhet')).toBeInTheDocument();
   },
 } satisfies Story;
 
 export const WithMobileScreen = {
   render: TemplateWithAllRoles,
-  name: 'With Small Screen (Username A2)',
+  name: 'With Small Screen (Username A2, A5)',
   args: {
     ...defaultArgs,
   },
@@ -189,7 +180,7 @@ export const WithMobileScreen = {
 
 export const WithBreakpointXS = {
   render: TemplateWithAllRoles,
-  name: 'With Breakpoint-xs (Username A2)',
+  name: 'With Breakpoint-xs (Username A2, A5)',
   args: {
     ...defaultArgs,
   },
@@ -202,7 +193,7 @@ export const WithBreakpointXS = {
 
 export const WithBreakpointS = {
   render: TemplateWithAllRoles,
-  name: 'With Breakpoint-s (Username A2)',
+  name: 'With Breakpoint-s (Username A2, A5)',
   args: {
     ...defaultArgs,
   },
@@ -215,7 +206,7 @@ export const WithBreakpointS = {
 
 export const WithBreakpointM = {
   render: TemplateWithAllRoles,
-  name: 'With Breakpoint-m (Username A2)',
+  name: 'With Breakpoint-m (Username A2, A5)',
   args: {
     ...defaultArgs,
   },

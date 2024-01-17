@@ -59,14 +59,10 @@
 .mainMenu {
   position: absolute;
   z-index: 101;
-  top: 5rem;
+  top: 100%;
   right: 0;
   left: 0;
   background-color: var(--palette-graphite-5);
-
-  @media (min-width: $breakpoint-s) {
-    top: 5.5rem;
-  }
 
   .columns {
     display: grid;

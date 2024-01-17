@@ -9,14 +9,9 @@ import {
 } from '@skatteetaten/ds-layout';
 import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { fireEvent, within } from '@storybook/testing-library';
+import { userEvent, within } from '@storybook/testing-library';
 
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { logoAsArr } from '../../../../../libs/ds-layout/src/TopBannerLogo/TopBannerLogo.types';
-// eslint-disable-next-line @nx/enforce-module-boundaries
 import customLogo from '../../assets/custom-logo.svg';
-import customMobileLogo from '../../assets/custom-mobile-logo.svg';
-import skeMobileLogo from '../../assets/ske-logo-mobile.svg';
 import skeLogo from '../../assets/ske-logo.svg';
 
 const meta = {
@@ -37,26 +32,12 @@ const meta = {
       control: 'text',
       table: { disable: true },
     },
-    skipLinkText: { table: { disable: true } },
-    skipLinkTarget: { table: { disable: true } },
-    skipLinkShadowRootNode: { table: { disable: true } },
+    skipLink: { table: { disable: true } },
     logo: {
       table: { disable: true },
       control: 'select',
       options: ['', customLogo, skeLogo],
     },
-    mobileLogo: {
-      table: { disable: true },
-      control: 'select',
-      options: ['', customMobileLogo, skeMobileLogo],
-    },
-    logoAltText: { table: { disable: true } },
-    logoAs: {
-      table: { disable: true },
-      options: [...logoAsArr],
-      control: 'inline-radio',
-    },
-    logoURL: { table: { disable: true } },
     user: { table: { disable: true } },
     firstColumn: { control: 'text', table: { disable: true } },
     secondColumn: { control: 'text', table: { disable: true } },
@@ -290,7 +271,7 @@ export const ClickMainMenuOpenAndClose = {
     const menuSvg = canvas.getAllByRole('img', { hidden: true });
     expect(menuSvg[3]).toBeInTheDocument();
     expect(menuSvg[3]).toHaveAttribute('aria-hidden', 'true');
-    await fireEvent.click(menuButton);
+    await userEvent.click(menuButton);
     await expect(menuButton).toHaveAttribute('aria-expanded', 'true');
     const menuContainer = canvas.getByRole('navigation', {
       name: themeText,
@@ -298,7 +279,7 @@ export const ClickMainMenuOpenAndClose = {
     await expect(menuContainer).toBeInTheDocument();
     expect(menuContainer.tagName).toBe('NAV');
     expect(menuContainer).toHaveAttribute('aria-label', themeText);
-    await fireEvent.click(menuButton);
+    await userEvent.click(menuButton);
     await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
     await expect(menuContainer).not.toBeInTheDocument();
   },
@@ -322,7 +303,7 @@ const TemplateWithFooterOneColumn: StoryFn<TopBannerExternalProps> = (args) => {
 
 export const WithOneColumn = {
   render: TemplateWithFooterOneColumn,
-  name: 'With One Column (MainMenu A1)',
+  name: 'With One Column (A5, MainMenu A1)',
   args: {
     ...defaultArgs,
     firstColumn: (
@@ -336,7 +317,7 @@ export const WithOneColumn = {
     const menuButton = canvas.getByRole('button', {
       name: 'Meny',
     });
-    await fireEvent.click(menuButton);
+    await userEvent.click(menuButton);
   },
 } satisfies Story;
 
@@ -361,7 +342,7 @@ export const WithOneColumnBreakpointS = {
     const menuButton = canvas.getByRole('button', {
       name: 'Meny',
     });
-    await fireEvent.click(menuButton);
+    await userEvent.click(menuButton);
   },
 } satisfies Story;
 
@@ -386,7 +367,7 @@ export const WithOneColumnBreakpointXS = {
     const menuButton = canvas.getByRole('button', {
       name: 'Meny',
     });
-    await fireEvent.click(menuButton);
+    await userEvent.click(menuButton);
   },
 } satisfies Story;
 
@@ -434,7 +415,7 @@ export const WithTwoColumns = {
     const menuButton = canvas.getByRole('button', {
       name: 'Meny',
     });
-    await fireEvent.click(menuButton);
+    await userEvent.click(menuButton);
   },
 } satisfies Story;
 
@@ -464,7 +445,7 @@ export const WithTwoColumnsBreakpointS = {
     const menuButton = canvas.getByRole('button', {
       name: 'Meny',
     });
-    await fireEvent.click(menuButton);
+    await userEvent.click(menuButton);
   },
 } satisfies Story;
 
@@ -494,7 +475,7 @@ export const WithTwoColumnsBreakpointXS = {
     const menuButton = canvas.getByRole('button', {
       name: 'Meny',
     });
-    await fireEvent.click(menuButton);
+    await userEvent.click(menuButton);
   },
 } satisfies Story;
 
@@ -552,7 +533,7 @@ export const WithThreeColumns = {
     const menuButton = canvas.getByRole('button', {
       name: 'Meny',
     });
-    await fireEvent.click(menuButton);
+    await userEvent.click(menuButton);
   },
 } satisfies Story;
 
@@ -587,7 +568,7 @@ export const WithThreeColumnsBreakpointS = {
     const menuButton = canvas.getByRole('button', {
       name: 'Meny',
     });
-    await fireEvent.click(menuButton);
+    await userEvent.click(menuButton);
   },
 } satisfies Story;
 
@@ -622,8 +603,26 @@ export const WithThreeColumnsBreakpointXS = {
     const menuButton = canvas.getByRole('button', {
       name: 'Meny',
     });
-    await fireEvent.click(menuButton);
+    await userEvent.click(menuButton);
   },
 } satisfies Story;
 
-// TODO FRONT-1161 tester på logo props og reglene, ev. i Logo.test.storeis.tsx hvis det går....
+export const ClickLangPickerOpenAndClose = {
+  name: 'Click LanguagePicker Open And Close (LanguagePicker C2)',
+  parameters: {
+    imageSnapshot: { disable: true },
+    HTMLSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const languageButton = canvas.getByRole('button', { name: 'Bokmål Meny' });
+    await expect(languageButton).toHaveAttribute('aria-expanded', 'false');
+    await userEvent.click(languageButton);
+    await expect(languageButton).toHaveAttribute('aria-expanded', 'true');
+    await expect(canvas.getByText('Sámegiella')).toBeInTheDocument();
+
+    await userEvent.keyboard('[Escape]');
+    await expect(languageButton).toHaveAttribute('aria-expanded', 'false');
+    await expect(canvas.queryByText('Sámegiella')).not.toBeInTheDocument();
+  },
+} satisfies Story;

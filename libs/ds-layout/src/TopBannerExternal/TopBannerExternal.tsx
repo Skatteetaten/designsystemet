@@ -41,14 +41,8 @@ export const TopBannerExternal = forwardRef<
       firstColumn,
       defaultLocale,
       logo,
-      logoAltText,
-      logoAs,
-      logoURL,
-      mobileLogo,
       secondColumn,
-      skipLinkShadowRootNode,
-      skipLinkText,
-      skipLinkTarget,
+      skipLink,
       thirdColumn,
       user,
       showSami,
@@ -154,20 +148,14 @@ export const TopBannerExternal = forwardRef<
         className={className}
       >
         <TopBannerSkipLink
-          target={skipLinkTarget}
-          shadowRootNode={skipLinkShadowRootNode}
+          target={skipLink?.target}
+          shadowRootNode={skipLink?.shadowRootNode}
         >
-          {skipLinkText}
+          {skipLink?.text}
         </TopBannerSkipLink>
         <div className={styles.containerForMainMenu}>
           <div className={styles.topContainer}>
-            <TopBannerLogo
-              as={logoAs}
-              logo={logo}
-              mobileLogo={mobileLogo}
-              alt={logoAltText}
-              href={logoURL}
-            />
+            <TopBannerLogo {...logo} />
             <div className={styles.contentContainer}>
               {children}
 

@@ -37,11 +37,11 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithAllRoles play-test 1`
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r4:"
+             aria-labelledby="svgtitle-:r3:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r4:">
+          <title id="svgtitle-:r3:">
             Innlogget som
           </title>
           <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
@@ -59,11 +59,11 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithAllRoles play-test 1`
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r5:"
+             aria-labelledby="svgtitle-:r4:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r5:">
+          <title id="svgtitle-:r4:">
             Innlogget som annen
           </title>
           <path d="M15.94 14c5.735.35 6.043 3.62 6.06 3.97V20h-4v-2a5.321 5.321 0 0 0-2.06-4ZM9 14c6.65 0 6.982 3.61 7 3.971V20H2v-2.029C2.019 17.61 2.35 14 9 14Zm6-9a3.5 3.5 0 1 1 0 7 3.39 3.39 0 0 1-1.93-.59 5.001 5.001 0 0 0 0-5.82A3.39 3.39 0 0 1 15 5ZM9 5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Z">
@@ -81,11 +81,11 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithAllRoles play-test 1`
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r6:"
+             aria-labelledby="svgtitle-:r5:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r6:">
+          <title id="svgtitle-:r5:">
             Innlogget som virksomhet
           </title>
           <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
@@ -140,11 +140,11 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointM smoke-tes
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:rg:"
+             aria-labelledby="svgtitle-:rf:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:rg:">
+          <title id="svgtitle-:rf:">
             Innlogget som
           </title>
           <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
@@ -162,11 +162,11 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointM smoke-tes
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:rh:"
+             aria-labelledby="svgtitle-:rg:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:rh:">
+          <title id="svgtitle-:rg:">
             Innlogget som annen
           </title>
           <path d="M15.94 14c5.735.35 6.043 3.62 6.06 3.97V20h-4v-2a5.321 5.321 0 0 0-2.06-4ZM9 14c6.65 0 6.982 3.61 7 3.971V20H2v-2.029C2.019 17.61 2.35 14 9 14Zm6-9a3.5 3.5 0 1 1 0 7 3.39 3.39 0 0 1-1.93-.59 5.001 5.001 0 0 0 0-5.82A3.39 3.39 0 0 1 15 5ZM9 5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Z">
@@ -184,11 +184,11 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointM smoke-tes
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:ri:"
+             aria-labelledby="svgtitle-:rh:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:ri:">
+          <title id="svgtitle-:rh:">
             Innlogget som virksomhet
           </title>
           <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
@@ -213,11 +213,11 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointS smoke-tes
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:rd:"
+             aria-labelledby="svgtitle-:rc:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:rd:">
+          <title id="svgtitle-:rc:">
             Innlogget som
           </title>
           <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
@@ -235,11 +235,11 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointS smoke-tes
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:re:"
+             aria-labelledby="svgtitle-:rd:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:re:">
+          <title id="svgtitle-:rd:">
             Innlogget som annen
           </title>
           <path d="M15.94 14c5.735.35 6.043 3.62 6.06 3.97V20h-4v-2a5.321 5.321 0 0 0-2.06-4ZM9 14c6.65 0 6.982 3.61 7 3.971V20H2v-2.029C2.019 17.61 2.35 14 9 14Zm6-9a3.5 3.5 0 1 1 0 7 3.39 3.39 0 0 1-1.93-.59 5.001 5.001 0 0 0 0-5.82A3.39 3.39 0 0 1 15 5ZM9 5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Z">
@@ -257,11 +257,11 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointS smoke-tes
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:rf:"
+             aria-labelledby="svgtitle-:re:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:rf:">
+          <title id="svgtitle-:re:">
             Innlogget som virksomhet
           </title>
           <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
@@ -286,11 +286,11 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointXS smoke-te
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:ra:"
+             aria-labelledby="svgtitle-:r9:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:ra:">
+          <title id="svgtitle-:r9:">
             Innlogget som
           </title>
           <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
@@ -308,11 +308,11 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointXS smoke-te
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:rb:"
+             aria-labelledby="svgtitle-:ra:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:rb:">
+          <title id="svgtitle-:ra:">
             Innlogget som annen
           </title>
           <path d="M15.94 14c5.735.35 6.043 3.62 6.06 3.97V20h-4v-2a5.321 5.321 0 0 0-2.06-4ZM9 14c6.65 0 6.982 3.61 7 3.971V20H2v-2.029C2.019 17.61 2.35 14 9 14Zm6-9a3.5 3.5 0 1 1 0 7 3.39 3.39 0 0 1-1.93-.59 5.001 5.001 0 0 0 0-5.82A3.39 3.39 0 0 1 15 5ZM9 5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Z">
@@ -330,11 +330,11 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointXS smoke-te
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:rc:"
+             aria-labelledby="svgtitle-:rb:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:rc:">
+          <title id="svgtitle-:rb:">
             Innlogget som virksomhet
           </title>
           <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
@@ -359,11 +359,11 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithMobileScreen smoke-te
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r7:"
+             aria-labelledby="svgtitle-:r6:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r7:">
+          <title id="svgtitle-:r6:">
             Innlogget som
           </title>
           <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
@@ -381,11 +381,11 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithMobileScreen smoke-te
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r8:"
+             aria-labelledby="svgtitle-:r7:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r8:">
+          <title id="svgtitle-:r7:">
             Innlogget som annen
           </title>
           <path d="M15.94 14c5.735.35 6.043 3.62 6.06 3.97V20h-4v-2a5.321 5.321 0 0 0-2.06-4ZM9 14c6.65 0 6.982 3.61 7 3.971V20H2v-2.029C2.019 17.61 2.35 14 9 14Zm6-9a3.5 3.5 0 1 1 0 7 3.39 3.39 0 0 1-1.93-.59 5.001 5.001 0 0 0 0-5.82A3.39 3.39 0 0 1 15 5ZM9 5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Z">
@@ -403,11 +403,11 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithMobileScreen smoke-te
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r9:"
+             aria-labelledby="svgtitle-:r8:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r9:">
+          <title id="svgtitle-:r8:">
             Innlogget som virksomhet
           </title>
           <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
@@ -445,33 +445,6 @@ exports[`Tester/TopBanner/TopBannerUserButton (intern) WithRef play-test 1`] = `
     </span>
     <span class="TopBannerButton_buttonText__guqHQ ">
       Meg selv
-    </span>
-  </button>
-</div>
-`;
-
-exports[`Tester/TopBanner/TopBannerUserButton (intern) WithUser play-test 1`] = `
-<div data-test-block="true">
-  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx  TopBannerUserButton_usernameButton__06VaY"
-          type="button"
-  >
-    <span class="TopBannerButton_iconWrapper__bu153">
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-labelledby="svgtitle-:r3:"
-           aria-hidden="false"
-           role="img"
-      >
-        <title id="svgtitle-:r3:">
-          Innlogget som virksomhet
-        </title>
-        <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
-        </path>
-      </svg>
-    </span>
-    <span class="TopBannerButton_buttonText__guqHQ TopBannerUserButton_usernameText__u85YY">
-      Navnet på virksomheten
     </span>
   </button>
 </div>
