@@ -2,7 +2,7 @@ import { MouseEventHandler, ReactNode, RefObject } from 'react';
 
 import { BaseProps, Languages } from '@skatteetaten/ds-core-utils';
 
-import { LogoAs } from '../TopBannerLogo/TopBannerLogo.types';
+import { TopBannerLogoProps } from '../TopBannerLogo/TopBannerLogo.types';
 import { TopBannerSkipLinkProps } from '../TopBannerSkipLink/TopBannerSkipLink.types';
 
 type UserMyself = {
@@ -20,34 +20,6 @@ export type TopBannerMenu = 'Lang' | 'MainMenu' | 'None';
 type SkipLink = Omit<TopBannerSkipLinkProps, 'children'> & {
   text: TopBannerSkipLinkProps['children'];
 };
-
-type TopBannerLogo =
-  | {
-      /** Overskriver default logo. Må også angi logo for mobilvisning, alt-tekst og url. */
-      logo?: never;
-      /** Overskriver default logo for mobilvisning. */
-      mobileLogo?: never;
-      /** Overskriver default alt-tekst for logo kun dersom logo og mobileLogo også endres. NB! Alt-tekst må være tilpasset om logo er en lenke eller ikke.*/
-      logoAltText?: never;
-      /** Overskriver default URL. */
-      logoURL?: never;
-      /** HTML-tag for Logo. Styrer om logo skal kodes som en lenke eller ikke. Hvis default logo endres til å ikke være en lenke, så blir logoAltText automatisk tilpasset. */
-      logoAs?: LogoAs;
-    }
-  | {
-      logo: string;
-      mobileLogo: string;
-      logoAltText: string;
-      logoURL: string;
-      logoAs?: Extract<LogoAs, 'a'>;
-    }
-  | {
-      logo: string;
-      mobileLogo: string;
-      logoAltText: string;
-      logoURL?: never;
-      logoAs?: Extract<LogoAs, 'div'>;
-    };
 
 export interface TopBannerExternalProps extends BaseProps {
   /** Hvilket språk som skal være forhåndsvalgt i språkvelgeren. */
@@ -89,7 +61,7 @@ export interface TopBannerExternalProps extends BaseProps {
    * logo.logoURL  Overskriver default URL.
    * logo.logoAs HTML-tag for Logo. Styrer om logo skal kodes som en lenke eller ikke. Hvis default logo endres til å ikke være en lenke, så blir logoAltText automatisk tilpasset.
    */
-  logo?: TopBannerLogo;
+  logo?: TopBannerLogoProps;
 }
 
 export interface TopBannerExternalHandle extends RefObject<HTMLHeadElement> {
