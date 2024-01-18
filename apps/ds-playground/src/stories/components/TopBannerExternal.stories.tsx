@@ -18,7 +18,6 @@ import {
   getTopBannerLangPickerShowSamiDefault,
 } from '../../../../../libs/ds-layout/src/TopBannerLangPicker/defaults';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { UserRole } from '../../../../../libs/ds-layout/src/TopBannerUserButton/TopBannerUserButton.types';
 import { category } from '../../../.storybook/helpers';
 import customLogo from '../../assets/custom-logo.svg';
 import skeLogo from '../../assets/ske-logo.svg';
@@ -107,7 +106,7 @@ export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
 
   const handleChangeRole = (e: ChangeEvent<HTMLInputElement>): void => {
     setIsLoggedIn(true);
-    const role = e.target.value as UserRole;
+    const role = e.target.value as User['role'];
     if (role === 'meg') {
       setUser({ role });
     } else {
@@ -202,7 +201,7 @@ export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
 
   const handleChangeRole = (e: ChangeEvent<HTMLInputElement>): void => {
     setIsLoggedIn(true);
-    const role = e.target.value as UserRole;
+    const role = e.target.value as User['role'];
     if (role === 'meg') {
       setUser({ role });
     } else {

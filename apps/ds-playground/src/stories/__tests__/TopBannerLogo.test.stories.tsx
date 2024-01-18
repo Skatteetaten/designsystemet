@@ -153,6 +153,7 @@ export const WithLogoMobileLogoAltAndHref = {
   name: 'With Logo, MobileLogo, Alt, And Href (A8, A10)',
   args: {
     ...defaultArgs,
+    as: 'a',
     logo: customLogo,
     mobileLogo: customMobileLogo,
     alt: 'custom alt text',
