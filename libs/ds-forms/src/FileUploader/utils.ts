@@ -30,7 +30,6 @@ export const getFiles = (
   return [];
 };
 
-//TODO kan jeg forenkle dette som er kopiert fra legacy fileuploader
 const nonWordCharacterRegexp = /\W/g;
 const fileNameRegex = /\.(?=[^.]+$)/;
 export const normalize = (

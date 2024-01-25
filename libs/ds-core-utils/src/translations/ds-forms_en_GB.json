@@ -1,5 +1,10 @@
 {
   "datepicker.ChooseDate": "Choose date",
+  "datepicker.NextMonth": "Next month",
+  "datepicker.PreviousMonth": "Previous month",
+  "datepicker.SelectMonth": "Select month",
+  "datepicker.Today": "Today",
+  "datepicker.Year": "Year",
   "errorsummary.Title": "To continue you must correct {{errorAmount}} error(s):",
   "fileuploader.AddMultipleLabel": "Add file(s)",
   "fileuploader.AddSingleLabel": "Add file",
@@ -15,5 +20,7 @@
   "fileuploader.NoRightsUploadError": "You do not have permission to upload files",
   "fileuploader.SuccessIconLabel": "Completed",
   "fileuploader.UploadedHeading": "Uploaded:",
-  "fileuploader.UploadedSummary": "({{fileCount}} file(s) uploaded)"
+  "fileuploader.UploadedSummary": "({{fileCount}} file(s) uploaded)",
+  "searchfield.ButtonTitle": "Search",
+  "searchfield.ClearButtonTitle": "(Clear)"
 }

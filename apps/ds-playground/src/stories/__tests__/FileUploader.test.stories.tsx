@@ -1,11 +1,15 @@
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { FileUploader } from '@skatteetaten/ds-forms';
 import { FileUploaderProps } from '@skatteetaten/ds-forms';
 import { expect } from '@storybook/jest';
 import { StoryObj, Meta, StoryFn } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { userEvent, waitFor, within } from '@storybook/testing-library';
+//eslint-disable-next-line storybook/use-storybook-testing-library
+import { PointerEventsCheckLevel } from '@testing-library/user-event';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { category } from '../../../.storybook/helpers';
+import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {
   component: FileUploader,
@@ -19,34 +23,57 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    ///description: { table: { category: category.props } },
-    errorMessage: { table: { category: category.props } },
-    hasError: {
-      control: 'boolean',
+    description: { table: { category: category.props } },
+    helpSvgPath: {
+      options: Object.keys(SystemSVGPaths),
+      mapping: SystemSVGPaths,
+      table: {
+        category: category.props,
+        defaultValue: { summary: 'HelpSimpleSVGpath' },
+      },
+    },
+    helpText: { table: { category: category.props } },
+    hideLabel: {
       table: {
         category: category.props,
       },
     },
-    ///helpSvgPath: {
-    ///  options: Object.keys(SystemSVGPaths),
-    ///  mapping: SystemSVGPaths,
-    ///  table: { category: category.props },
-    ///},
-    ///helpText: { table: { category: category.props } },
-    ///hideLabel: {
-    ///  control: 'boolean',
-    ///  table: {
-    ///    category: category.props,
-    ///  },
-    ///},
-    ///label: { table: { category: category.props } },
-    ///showRequiredMark: {
-    ///  control: 'boolean',
-    ///  table: {
-    ///    category: category.props,
-    ///  },
-    ///},
+    label: { table: { category: category.props } },
+    showRequiredMark: {
+      table: {
+        category: category.props,
+      },
+    },
+
+    shouldNormalizeFileName: {
+      table: { category: category.props, disable: true },
+    },
+    errorMessage: { table: { category: category.props, disable: true } },
+    hasError: {
+      control: 'boolean',
+      table: {
+        category: category.props,
+        disable: true,
+      },
+    },
+
+    titleHelpSvg: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: dsI18n.t('Shared:shared.Help') },
+      },
+    },
     uploadedFiles: { table: { disable: true, category: category.props } },
+    acceptedFileFormatsDisplay: {
+      table: { disable: true, category: category.props },
+    },
+    acceptedFileFormatsDescription: {
+      table: { disable: true, category: category.props },
+    },
+    successIconTitle: { table: { disable: true, category: category.props } },
+    uploadResult: { table: { disable: true, category: category.props } },
+    children: { table: { disable: true, category: category.props } },
+    fileIconTitle: { table: { disable: true, category: category.props } },
     isUploading: { table: { disable: true, category: category.props } },
     invalidCharacterRegexp: {
       control: 'text',
@@ -57,19 +84,13 @@ const meta = {
     multiple: {
       table: { disable: true, category: category.htmlAttribute },
     },
-    // Aria
-    //ariaDescribedby: { table: { category: category.aria } },
-    //// Events
-    //onBlur: { ...htmlEventDescription },
-    //onChange: { ...htmlEventDescription },
-    //onFocus: { ...htmlEventDescription },
     // Events
     onFileDelete: {
-      table: { category: category.event },
+      table: { category: category.event, disable: true },
     },
     onFileChange: {
-      table: { category: category.event },
-    }, // Events
+      table: { category: category.event, disable: true },
+    },
   },
 } satisfies Meta<typeof FileUploader>;
 export default meta;
@@ -128,28 +149,13 @@ export const WithAttributes = {
 } satisfies Story;
 
 export const Defaults: StoryObj<FileUploaderProps> = {
-  name: 'Defaults (TODO)',
+  name: 'Defaults (A1 delvis)',
   argTypes: {},
-  args: {
-    //children: 'Ledetekst',
-    //helpProps: { helpText: 'Hjelpetekst', children: 'Ledetekst' },
-    //acceptedFileFormats: ['.pdf', '.jpeg'],
-    //uploadedFiles: [
-    //  {
-    //    name: 'feil.png',
-    //    errorMessage:
-    //      'Filen ble ikke lastet opp på grunn av sikkerhet. Last opp opplysningene i annet format.',
-    //  },
-    //  { name: 'test.pdf', href: 'https://i.imgur.com/guZeGcr.png' },
-    //  { name: 'test.jpg' },
-    //  { name: 'loading.jpg', isUploading: true },
-    //  {
-    //    name: 'test.png',
-    //    errorMessage:
-    //      'Får ikke lastet opp filnavn1.txt, fordi filen er ikke i riktig format.',
-    //    href: 'http://localhost:4400/designsystem_illustrasjon.png',
-    //  },
-    //],
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(
+      canvas.getByText(dsI18n.t('ds_forms:fileuploader.AddSingleLabel'))
+    ).toBeInTheDocument();
   },
 
   parameters: {
@@ -161,13 +167,11 @@ export const Defaults: StoryObj<FileUploaderProps> = {
 } satisfies Story;
 
 export const WithUploadedFiles: StoryObj<FileUploaderProps> = {
-  name: 'With Files (TODO)',
+  name: 'With Files (A5, B4 delvis)',
   argTypes: {},
   args: {
-    helpProps: {
-      helpText: 'Hjelpetekst',
-      children: 'Dokumentasjon og grunnlag',
-    },
+    helpText: 'Hjelpetekst',
+    label: 'Dokumentasjon og grunnlag',
     acceptedFileFormats: ['.pdf', '.jpeg'],
     uploadedFiles: [
       {
@@ -177,33 +181,61 @@ export const WithUploadedFiles: StoryObj<FileUploaderProps> = {
       { name: 'grunnlag.jpg' },
       {
         name: 'test.png',
-        errorMessage:
-          'Får ikke lastet opp filnavn1.txt, fordi filen er ikke i riktig format.',
         href: 'http://localhost:4400/designsystem_illustrasjon.png',
       },
     ],
   },
 
-  parameters: {},
-} satisfies Story;
-
-export const WithError: StoryObj<FileUploaderProps> = {
-  name: 'With Error (A4)',
-  argTypes: {},
-  args: {
-    helpProps: {
-      helpText: 'Hjelpetekst',
-      children: 'Hemmelig kode',
-    },
-    acceptedFileFormats: ['.java', '.cpp', '.py'],
-    hasError: true,
-    errorMessage: 'Du må laste opp en fil',
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(
+      canvas.getAllByText(dsI18n.t('ds_forms:fileuploader.FileIconLabel'))[0]
+    ).toBeInTheDocument();
+    await expect(
+      canvas.getAllByText(dsI18n.t('ds_forms:fileuploader.SuccessIconLabel'))[0]
+    ).toBeInTheDocument();
+    await expect(canvas.getByText('grunnlag.jpg')).toBeInTheDocument();
+    await expect(canvas.getByText('test.png')).toBeInTheDocument();
+    await expect(canvas.getByText('dokumentasjon.pdf')).toBeInTheDocument();
   },
 
   parameters: {},
 } satisfies Story;
 
-const UploadStatusTemplate: StoryFn<typeof FileUploader> = (args) => (
+export const WithIsUploading: StoryObj<FileUploaderProps> = {
+  name: 'With Uploading (A3 delvis, A2 delvis)',
+  argTypes: {},
+  args: {
+    isUploading: true,
+  },
+  parameters: {},
+} satisfies Story;
+
+export const WithError: StoryObj<FileUploaderProps> = {
+  name: 'With Error And Multiple(A4, A1 delvis)',
+  argTypes: {},
+  args: {
+    multiple: true,
+    helpText: 'Hjelpetekst',
+    label: 'Hemmelig kode',
+    acceptedFileFormats: ['.java', '.cpp', '.py'],
+    hasError: true,
+    errorMessage: 'Du må laste opp en fil',
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(
+      canvas.getByText('Du må laste opp en fil')
+    ).toBeInTheDocument();
+    await expect(
+      canvas.getByText(dsI18n.t('ds_forms:fileuploader.AddMultipleLabel'))
+    ).toBeInTheDocument();
+  },
+
+  parameters: {},
+} satisfies Story;
+
+const UploadResultTemplate: StoryFn<typeof FileUploader> = (args) => (
   <>
     <FileUploader
       {...args}
@@ -220,9 +252,9 @@ const UploadStatusTemplate: StoryFn<typeof FileUploader> = (args) => (
   </>
 );
 
-export const WithUploadStatus: StoryObj<FileUploaderProps> = {
-  name: 'With UploadStatus (A4)',
-  render: UploadStatusTemplate,
+export const WithUploadResult: StoryObj<FileUploaderProps> = {
+  name: 'With UploadResult (A4)',
+  render: UploadResultTemplate,
   argTypes: {},
   args: {
     acceptedFileFormats: ['.java', '.cpp', '.py'],
@@ -243,8 +275,11 @@ export const WithTextOverrides: StoryObj<FileUploaderProps> = {
   argTypes: {},
   args: {
     acceptedFileFormats: ['image/png'],
-    fileFormatsText: 'Tillatte filformater:_',
-    buttonText: 'Trykk eller dra og slipp filer her',
+    acceptedFileFormatsDescription: 'Tillatte filformater:_',
+    acceptedFileFormatsDisplay: 'bilder og dokumenter',
+    children: 'Trykk eller dra og slipp filer her',
+    uploadedFiles: [{ name: 'document.pdf' }],
+    successIconTitle: 'lastet opp',
   },
 
   play: async ({ canvasElement }): Promise<void> => {
@@ -252,10 +287,43 @@ export const WithTextOverrides: StoryObj<FileUploaderProps> = {
     await expect(
       canvas.getByText('Tillatte filformater:_')
     ).toBeInTheDocument();
+    await expect(canvas.getByText('bilder og dokumenter')).toBeInTheDocument();
     await expect(
       canvas.getByText('Trykk eller dra og slipp filer her')
     ).toBeInTheDocument();
   },
 
   parameters: {},
+} satisfies Story;
+
+export const WithFileChange: StoryObj<FileUploaderProps> = {
+  name: 'With File Change(A6)',
+  args: {
+    'data-testid': 'testid123',
+    helpText: 'Hjelpetekst',
+    label: 'Dokumentasjon og grunnlag',
+    uploadedFiles: [{ name: 'file.txt' }],
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const input = canvas.getByTestId('testid123-input');
+    const file = new File(['test'], 'test.txt', { type: 'txt' });
+    const user = userEvent.setup({
+      pointerEventsCheck: PointerEventsCheckLevel.Never,
+    });
+
+    await user.upload(input, file);
+    await waitFor(() => expect(args.onFileChange).toHaveBeenCalledWith([file]));
+
+    const deleteButton = canvas.getByTitle(
+      dsI18n.t('ds_forms:fileuploader.DeleteLabel')
+    );
+    await userEvent.click(deleteButton);
+    await waitFor(() =>
+      expect(args.onFileDelete).toHaveBeenCalledWith('file.txt')
+    );
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
 } satisfies Story;

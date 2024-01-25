@@ -1,10 +1,13 @@
 import { useState } from 'react';
 
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Checkbox, FileUploader } from '@skatteetaten/ds-forms';
 import { FileUploaderProps } from '@skatteetaten/ds-forms';
+import { Paragraph } from '@skatteetaten/ds-typography';
 import { StoryObj, Meta, StoryFn } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
+import { SystemSVGPaths } from '../utils/icon.systems';
 import { getVersion } from '../utils/version.utils';
 
 const meta = {
@@ -12,6 +15,9 @@ const meta = {
   title: 'Komponenter/FileUploader',
   argTypes: {
     // Props
+    acceptedFileFormatsDisplay: { table: { category: category.props } },
+    description: { table: { category: category.props } },
+    fileIconTitle: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasError: {
       control: 'boolean',
@@ -19,48 +25,55 @@ const meta = {
         category: category.props,
       },
     },
-    ///description: { table: { category: category.props } },
-    ///helpSvgPath: {
-    ///  options: Object.keys(SystemSVGPaths),
-    ///  mapping: SystemSVGPaths,
-    ///  table: { category: category.props },
-    ///},
-    ///helpText: { table: { category: category.props } },
-    ///hideLabel: {
-    ///  control: 'boolean',
-    ///  table: {
-    ///    category: category.props,
-    ///  },
-    ///},
-    ///label: { table: { category: category.props } },
-    ///showRequiredMark: {
-    ///  control: 'boolean',
-    ///  table: {
-    ///    category: category.props,
-    ///  },
-    ///},
-    uploadedFiles: { table: { category: category.props } },
-    isUploading: { table: { category: category.props } },
-    uploadResult: { table: { category: category.props } },
+    helpSvgPath: {
+      options: Object.keys(SystemSVGPaths),
+      mapping: SystemSVGPaths,
+      table: {
+        category: category.props,
+        defaultValue: { summary: 'HelpSimpleSVGpath' },
+      },
+    },
+    helpText: { table: { category: category.props } },
+    hideLabel: {
+      table: {
+        category: category.props,
+      },
+    },
     invalidCharacterRegexp: {
       control: 'text',
       table: { category: category.props },
     },
-    helpProps: { table: { category: category.props } },
+    isUploading: { table: { category: category.props } },
+    label: { table: { category: category.props } },
     acceptedFileFormats: { table: { category: category.props } },
+    shouldNormalizeFileName: { table: { category: category.props } },
+    showRequiredMark: {
+      table: {
+        category: category.props,
+      },
+    },
+    successIconTitle: { table: { category: category.props } },
+    titleHelpSvg: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: dsI18n.t('Shared:shared.Help') },
+      },
+    },
+    uploadedFiles: { table: { category: category.props } },
+    uploadResult: { table: { category: category.props } },
     // HTML
     multiple: {
       table: { category: category.htmlAttribute },
     },
-    buttonText: { table: { category: category.props } },
-    fileFormatsText: { table: { category: category.props } },
-    //// Events
+    children: { table: { category: category.props } },
+    acceptedFileFormatsDescription: { table: { category: category.props } },
+    // Events
     onFileDelete: {
       table: { category: category.event },
     },
     onFileChange: {
       table: { category: category.event },
-    }, // Events
+    },
   },
   parameters: {
     version: getVersion('ds-forms'),
@@ -71,21 +84,15 @@ type Story = StoryObj<typeof meta>;
 
 export const Preview: StoryObj<FileUploaderProps> = {
   args: {
-    helpProps: { helpText: 'Hjelpetekst', children: 'Ledetekst' },
+    helpText: 'Hjelpetekst',
+    label: 'Ledetekst',
     acceptedFileFormats: ['.pdf', '.jpeg'],
     uploadedFiles: [
-      {
-        name: 'feil.png',
-        errorMessage:
-          'Filen ble ikke lastet opp på grunn av sikkerhet. Last opp opplysningene i annet format.',
-      },
       { name: 'test.pdf', href: 'https://i.imgur.com/guZeGcr.png' },
       { name: 'test.jpg' },
       { name: 'loading.jpg' },
       {
         name: 'test.png',
-        errorMessage:
-          'Får ikke lastet opp filnavn1.txt, fordi filen er ikke i riktig format.',
         href: 'http://localhost:4400/designsystem_illustrasjon.png',
       },
     ],
@@ -99,14 +106,13 @@ export const Preview: StoryObj<FileUploaderProps> = {
 
 //TODO hvorfor henger storybook når jeg setter args som parameter her og mottar status 500?
 export const Example: StoryFn<typeof FileUploader> = () => {
-  //TODO
-  //eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const createMockPromises = (amount: number): Promise<any>[] => {
-    //TODO
-    //eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const promises: Promise<any>[] = [];
+  interface MockUploadedFile {
+    href?: string;
+  }
+  const createMockPromises = (amount: number): Promise<MockUploadedFile>[] => {
+    const promises: Promise<MockUploadedFile>[] = [];
     for (let i = 0; i < amount; i++) {
-      const promise = new Promise((resolve, reject) => {
+      const promise = new Promise<MockUploadedFile>((resolve, reject) => {
         if (Math.random() < 0.5) {
           resolve({ href: 'https://skatteetaten.github.io/designsystemet/' });
         } else {
@@ -129,6 +135,11 @@ export const Example: StoryFn<typeof FileUploader> = () => {
 
   return (
     <>
+      <Paragraph className={'dummyPanelOverridesWidthAndPadding'}>
+        {
+          'Dersom mockUpload er krysset av så vil det opprettes promises som har 50% sjangse for å rejecte. Da får man sett både vellykket og feilet opplasting. Når mockUpload er slått av forsøker eksempelet å laste opp til http://localhost:9090/test'
+        }
+      </Paragraph>
       <Checkbox
         checked={shouldMockUpload}
         onChange={() => setShouldMockUpload(!shouldMockUpload)}
@@ -136,20 +147,33 @@ export const Example: StoryFn<typeof FileUploader> = () => {
         {'Bruk mockUpload'}
       </Checkbox>
       <FileUploader
-        helpProps={{
-          children: 'Dokumentasjon og grunnlag',
-          helpText: 'Trenger du hjelp?',
-        }}
+        label={'Dokumentasjon og grunnlag'}
+        helpText={'Trenger du hjelp?'}
         acceptedFileFormats={['.pdf', '.jpeg', '.png']}
         invalidCharacterRegexp={/e/g}
+        shouldNormalizeFileName
         {...fileUploaderState}
         errorMessage={error ?? ''}
         hasError={!!error}
         multiple
         onFileDelete={(file: string): boolean => {
-          //TODO eksempel med HTTP DELETE kall her
-          remove(file);
-          return true;
+          if (shouldMockUpload) {
+            remove(file);
+            return true;
+          }
+          let deleteStatus = true;
+
+          fetch(uploadUrl, {
+            method: 'DELETE',
+          }).then((response) => {
+            console.log(response);
+            if (!response.ok) {
+              deleteStatus = false;
+            } else {
+              remove(file);
+            }
+          });
+          return deleteStatus;
         }}
         onFileChange={async (files: File[]): Promise<void> => {
           setLoading();
@@ -162,9 +186,7 @@ export const Example: StoryFn<typeof FileUploader> = () => {
           const succeeded: Array<{ name: string; href?: string }> = [];
           const failed: Array<{ name: string; reason: string }> = [];
 
-          //TODO
-          //eslint-disable-next-line @typescript-eslint/no-explicit-any
-          let uploadPromises: Promise<any>[] = [];
+          let uploadPromises: Promise<MockUploadedFile>[] = [];
 
           if (shouldMockUpload) {
             uploadPromises = createMockPromises(files.length);
