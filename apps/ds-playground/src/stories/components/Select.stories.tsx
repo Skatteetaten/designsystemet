@@ -5,7 +5,7 @@ import {
   formArrSize,
   getCommonFormVariantDefault,
 } from '@skatteetaten/ds-core-utils';
-import { Select, SelectProps } from '@skatteetaten/ds-forms';
+import { Select } from '@skatteetaten/ds-forms';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
@@ -98,8 +98,10 @@ type Story = StoryObj<typeof Select>;
 
 export const Preview: Story = {};
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const Example: Story = (args: SelectProps) => {
+export const Example: Story = (args) => {
   const [fruktOption, setFruktOption] = useState<number>(0);
   const [error, setError] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string>('');
