@@ -4,6 +4,7 @@ const config = getJestConfig();
 
 module.exports = {
   ...config,
+  bail: true,
   testTimeout: 30000,
   verbose: true,
   testMatch: [
