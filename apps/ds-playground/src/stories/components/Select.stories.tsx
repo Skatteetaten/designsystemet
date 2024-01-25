@@ -5,7 +5,7 @@ import {
   formArrSize,
   getCommonFormVariantDefault,
 } from '@skatteetaten/ds-core-utils';
-import { Select } from '@skatteetaten/ds-forms';
+import { Select, SelectProps } from '@skatteetaten/ds-forms';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
@@ -98,10 +98,8 @@ type Story = StoryObj<typeof Select>;
 
 export const Preview: Story = {};
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const Example: Story = (args) => {
+export const Example: Story = (args: SelectProps) => {
   const [fruktOption, setFruktOption] = useState<number>(0);
   const [error, setError] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string>('');
@@ -131,8 +129,8 @@ export const Example: Story = (args) => {
       helpText={'Velg frukten du liker best.'}
       errorMessage={errorMessage}
       hasError={error}
-      showRequiredMark
       required
+      showRequiredMark
       onBlur={handleBlur}
       onChange={handleChange}
     >
@@ -149,8 +147,15 @@ Example.parameters = {
     source: {
       type: 'code',
       language: 'tsx',
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
+      // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+      transformSource: (source) => {
+        return source.replace('args: SelectProps', '');
+      },
     },
   },
+  /* args i selve storyen må være med hvis ikke fungerer ikke dette under her */
   controls: {
     exclude: /.*/,
   },
