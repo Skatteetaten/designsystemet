@@ -146,10 +146,7 @@ Example.parameters = {
     source: {
       type: 'code',
       language: 'tsx',
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-expect-error
-      // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-      transformSource: (source) => {
+      transformSource: (source: string): string => {
         return source.replace('_args: SelectProps', '');
       },
     },
