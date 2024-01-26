@@ -6,7 +6,7 @@ import {
   getCommonFormVariantDefault,
 } from '@skatteetaten/ds-core-utils';
 import { Select, SelectProps } from '@skatteetaten/ds-forms';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -98,7 +98,7 @@ type Story = StoryObj<typeof Select>;
 
 export const Preview: Story = {};
 
-export const Example: Story = (_args: SelectProps) => {
+export const Example: StoryFn<typeof Select> = (_args: SelectProps) => {
   const [fruktOption, setFruktOption] = useState<number>(0);
   const [error, setError] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string>('');
@@ -146,7 +146,7 @@ Example.parameters = {
     source: {
       type: 'code',
       language: 'tsx',
-      transformSource: (source: string): string => {
+      transform: (source: string): string => {
         return source.replace('_args: SelectProps', '');
       },
     },
