@@ -98,8 +98,7 @@ type Story = StoryObj<typeof Select>;
 
 export const Preview: Story = {};
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const Example: Story = (args: SelectProps) => {
+export const Example: Story = (_args: SelectProps) => {
   const [fruktOption, setFruktOption] = useState<number>(0);
   const [error, setError] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string>('');
@@ -151,11 +150,11 @@ Example.parameters = {
       // @ts-expect-error
       // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
       transformSource: (source) => {
-        return source.replace('args: SelectProps', '');
+        return source.replace('_args: SelectProps', '');
       },
     },
   },
-  /* args i selve storyen må være med hvis ikke fungerer ikke dette under her */
+  /* _args i selve storyen må finnes slik at props i controls skjules og prefikses med _ for å unngå eslint klaging */
   controls: {
     exclude: /.*/,
   },
