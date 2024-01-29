@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { Checkbox, FileUploader } from '@skatteetaten/ds-forms';
+import { Checkbox, FileUploader, UploadedFile } from '@skatteetaten/ds-forms';
 import { FileUploaderProps } from '@skatteetaten/ds-forms';
 import { Paragraph } from '@skatteetaten/ds-typography';
 import { StoryObj, Meta, StoryFn } from '@storybook/react';
@@ -96,7 +96,7 @@ export const Preview: StoryObj<FileUploaderProps> = {
         href: 'http://localhost:4400/designsystem_illustrasjon.png',
       },
     ],
-    onFileDelete: (file: string): boolean => {
+    onFileDelete: (file: UploadedFile): boolean => {
       console.log(file);
 
       return true;
@@ -156,7 +156,7 @@ export const Example: StoryFn<typeof FileUploader> = () => {
         errorMessage={error ?? ''}
         hasError={!!error}
         multiple
-        onFileDelete={(file: string): boolean => {
+        onFileDelete={(file): boolean => {
           if (shouldMockUpload) {
             remove(file);
             return true;
@@ -166,7 +166,6 @@ export const Example: StoryFn<typeof FileUploader> = () => {
           fetch(uploadUrl, {
             method: 'DELETE',
           }).then((response) => {
-            console.log(response);
             if (!response.ok) {
               deleteStatus = false;
             } else {
@@ -183,7 +182,7 @@ export const Example: StoryFn<typeof FileUploader> = () => {
             return;
           }
 
-          const succeeded: Array<{ name: string; href?: string }> = [];
+          const succeeded: Array<UploadedFile> = [];
           const failed: Array<{ name: string; reason: string }> = [];
 
           let uploadPromises: Promise<MockUploadedFile>[] = [];
