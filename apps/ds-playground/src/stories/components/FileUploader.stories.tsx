@@ -137,7 +137,7 @@ export const Example: StoryFn<typeof FileUploader> = () => {
     <>
       <Paragraph className={'dummyPanelOverridesWidthAndPadding'}>
         {
-          'Dersom mockUpload er krysset av så vil det opprettes promises som har 50% sjangse for å rejecte. Da får man sett både vellykket og feilet opplasting. Når mockUpload er slått av forsøker eksempelet å laste opp til http://localhost:9090/test'
+          'Dersom mockUpload er krysset av så vil det opprettes promises som har 50% sannsynlighet for å rejecte. Da får man sett både vellykket og feilet opplasting. Når mockUpload er slått av forsøker eksempelet å laste opp til http://localhost:9090/test'
         }
       </Paragraph>
       <Checkbox
