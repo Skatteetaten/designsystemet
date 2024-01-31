@@ -25,25 +25,17 @@ export const useFileUploader = <T,>(
   ): Array<UploadedFile> => {
     switch (action.type) {
       case 'ERROR': {
-        return (
-          action.successFiles?.reduce((acc, curr) => {
-            if (!acc.some((it) => it.name === curr.name)) {
-              acc.push({ name: curr.name, href: curr?.href });
-            }
-            return acc;
-          }, state) ?? state
-        );
+        return action.successFiles ? state.concat(action.successFiles) : state;
       }
       case 'SUCCESS': {
-        return action.files.reduce((acc, curr) => {
-          if (!acc.some((it) => it.name === curr.name)) {
-            acc.push({ name: curr.name, href: curr.href });
-          }
-          return acc;
-        }, state);
+        return state.concat(action.files);
       }
       case 'REMOVE': {
-        return state.filter((file) => file.name !== action.file);
+        if (action.file.id) {
+          return state.filter((file) => file.id !== action.file.id);
+        } else {
+          return state.filter((file) => file.name !== action.file.name);
+        }
       }
     }
     return [...state];
@@ -59,6 +51,12 @@ export const useFileUploader = <T,>(
 
   const setSuccess: SuccessMethod<T> = (files, data) => {
     setIsUploading(false);
+    files.forEach((file) => {
+      if (file.id && state.some((it) => it.id === file.id)) {
+        throw Error('Filen er allerede i lista.');
+      }
+    });
+
     dispatch({ type: FileActionType.SUCCESS, files });
 
     const successStatus = dsI18n.t('ds_forms:fileuploader.UploadedSummary', {
@@ -74,8 +72,16 @@ export const useFileUploader = <T,>(
   };
 
   const setFailure: FailureMethod<T> = (files, errorMessage, succeeded?) => {
-    dispatch({ type: FileActionType.ERROR, files, successFiles: succeeded });
     setIsUploading(false);
+
+    dispatch({ type: FileActionType.ERROR, files, successFiles: succeeded });
+
+    files.forEach((file) => {
+      if (file.id && state.some((it) => it.id === file.id)) {
+        throw new Error('Filen er allerede i lista.');
+      }
+    });
+
     setUploadResult({ data: errorMessage, hasUploadFailed: true });
   };
   const remove: RemoveMethod = (file) => {

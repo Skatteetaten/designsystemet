@@ -320,7 +320,7 @@ export const WithFileChange: StoryObj<FileUploaderProps> = {
     );
     await userEvent.click(deleteButton);
     await waitFor(() =>
-      expect(args.onFileDelete).toHaveBeenCalledWith('file.txt')
+      expect(args.onFileDelete).toHaveBeenCalledWith({ name: 'file.txt' })
     );
   },
   parameters: {

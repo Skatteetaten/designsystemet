@@ -12,8 +12,6 @@ export type UploadResultData<T = FileUploaderError> = {
   hasUploadFailed?: boolean;
 };
 
-export type UploadedFileWithoutError = Pick<UploadedFile, 'name' | 'href'>;
-
 export enum FileActionType {
   SUCCESS = 'SUCCESS',
   ERROR = 'ERROR',
@@ -22,38 +20,35 @@ export enum FileActionType {
 
 interface FileActionSuccess {
   type: FileActionType.SUCCESS;
-  files: Array<UploadedFileWithoutError>;
+  files: Array<UploadedFile>;
 }
 
 interface FileActionError {
   type: FileActionType.ERROR;
   files: Array<UploadedFile>;
-  successFiles?: Array<UploadedFileWithoutError>;
+  successFiles?: Array<UploadedFile>;
 }
 
 interface FileActionDelete {
   type: FileActionType.REMOVE;
-  file: string;
+  file: UploadedFile;
 }
 
 export type FileAction = FileActionError | FileActionDelete | FileActionSuccess;
 
 export type FileUploaderError = Array<{ error: string; files: Array<string> }>;
 
-export type SuccessMethod<T> = (
-  files: Array<UploadedFileWithoutError>,
-  data?: T
-) => void;
+export type SuccessMethod<T> = (files: Array<UploadedFile>, data?: T) => void;
 
 export type LoadingMethod = () => void;
 
 export type FailureMethod<T> = (
-  files: Array<{ name: string; errorMessage: string }>,
+  files: Array<UploadedFile>,
   errorMessage: T,
-  succeededFiles?: Array<UploadedFileWithoutError>
+  succeededFiles?: Array<UploadedFile>
 ) => void;
 
-export type RemoveMethod = (file: string) => void;
+export type RemoveMethod = (file: UploadedFile) => void;
 
 export type UseFileUploaderReturn<T> = [
   state: FileUploaderState,
