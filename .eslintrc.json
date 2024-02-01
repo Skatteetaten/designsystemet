@@ -11,7 +11,9 @@
       "files": ["*.stories.tsx", "test-runner.ts"],
       "rules": {
         "jest/no-standalone-expect": "off",
-        "sonarjs/no-identical-functions": "off"
+        "sonarjs/no-identical-functions": "off",
+        /* CSF-3 render() funksjoner oppdages ikke som react-komponenter */
+        "react-hooks/rules-of-hooks": "off"
       }
     },
     {

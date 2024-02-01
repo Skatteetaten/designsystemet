@@ -1,19 +1,16 @@
 import { getListAsDefault, List, Paragraph } from '@skatteetaten/ds-typography';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
+import { exampleParameters } from '../utils/stories.utils';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: List,
   title: 'Komponenter/List/List',
   argTypes: {
     // Props
-    hasSpacing: {
-      table: {
-        category: category.props,
-      },
-    },
+    hasSpacing: { table: { category: category.props } },
     as: {
       control: 'inline-radio',
       table: {
@@ -21,16 +18,8 @@ export default {
         defaultValue: { summary: getListAsDefault() },
       },
     },
-    children: {
-      table: { category: category.props },
-    },
+    children: { table: { category: category.props } },
   },
-  parameters: {
-    version: getVersion('ds-typography'),
-  },
-} as Meta<typeof List>;
-
-export const Preview: StoryObj<typeof List> = {
   args: {
     children: [
       <List.Element key={'listElement1'}>
@@ -42,40 +31,45 @@ export const Preview: StoryObj<typeof List> = {
       <List.Element key={'listElement3'}>{'Snakk med andre.'}</List.Element>,
     ],
   },
-};
-
-export const Example: StoryFn<typeof List> = (_args) => (
-  <>
-    <Paragraph hasSpacing>{'På Min side finner du'}</Paragraph>
-    <List hasSpacing>
-      <List.Element key={'listElement_1'}>
-        {'din kontaktinformasjon'}
-      </List.Element>
-      <List.Element key={'listElement_2'}>
-        {'opplysningene dine i Folkeregisteret'}
-      </List.Element>
-      <List.Element key={'listElement_3'}>
-        {
-          'oversikt over skatten din, blant annet skattekort, skattemelding og skatteoppgjør'
-        }
-      </List.Element>
-      <List.Element key={'listElement_4'}>
-        {'kontonummeret du har registrert hos oss'}
-      </List.Element>
-      <List.Element key={'listElement_5'}>
-        {
-          'innboksen din med faktura, melding og brev fra Skatteetaten og Folkeregisteret'
-        }
-      </List.Element>
-    </List>
-    <Paragraph>
-      {'Du kan også endre mange av opplysningene dine på Min side.'}
-    </Paragraph>
-  </>
-);
-
-Example.parameters = {
-  controls: {
-    exclude: /.*/,
+  parameters: {
+    version: getVersion('ds-typography'),
   },
+} satisfies Meta<typeof List>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Preview: Story = {};
+
+export const Examples: Story = {
+  render: (_args) => (
+    <>
+      <Paragraph hasSpacing>{'På Min side finner du'}</Paragraph>
+      <List hasSpacing>
+        <List.Element key={'listElement_1'}>
+          {'din kontaktinformasjon'}
+        </List.Element>
+        <List.Element key={'listElement_2'}>
+          {'opplysningene dine i Folkeregisteret'}
+        </List.Element>
+        <List.Element key={'listElement_3'}>
+          {
+            'oversikt over skatten din, blant annet skattekort, skattemelding og skatteoppgjør'
+          }
+        </List.Element>
+        <List.Element key={'listElement_4'}>
+          {'kontonummeret du har registrert hos oss'}
+        </List.Element>
+        <List.Element key={'listElement_5'}>
+          {
+            'innboksen din med faktura, melding og brev fra Skatteetaten og Folkeregisteret'
+          }
+        </List.Element>
+      </List>
+      <Paragraph>
+        {'Du kan også endre mange av opplysningene dine på Min side.'}
+      </Paragraph>
+    </>
+  ),
 };
+Examples.parameters = exampleParameters;

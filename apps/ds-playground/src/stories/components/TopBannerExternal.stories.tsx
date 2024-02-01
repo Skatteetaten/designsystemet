@@ -8,7 +8,7 @@ import {
   User,
 } from '@skatteetaten/ds-layout';
 import { Modal } from '@skatteetaten/ds-overlays';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { dsI18n, langToLocale } from '../../../../../libs/ds-core-utils/src';
@@ -21,9 +21,10 @@ import {
 import { category } from '../../../.storybook/helpers';
 import customLogo from '../../assets/custom-logo.svg';
 import skeLogo from '../../assets/ske-logo.svg';
+import { exampleParameters } from '../utils/stories.utils';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: TopBannerExternal,
   title: 'Komponenter/TopBannerExternal',
   argTypes: {
@@ -69,208 +70,113 @@ export default {
       table: { category: category.event },
     },
   },
-  parameters: {
-    version: getVersion('ds-layout'),
-    layout: 'fullscreen',
-  },
-} satisfies Meta<typeof TopBannerExternal>;
-
-export const Preview: StoryObj<typeof TopBannerExternal> = {
   args: {
     // uten undefined så blir funksjonene initalisert med mockConstructor i Storybook
     onLogInClick: undefined,
     onLogOutClick: undefined,
     onUserClick: undefined,
   },
-};
+  parameters: {
+    version: getVersion('ds-layout'),
+    layout: 'fullscreen',
+  },
+} satisfies Meta<typeof TopBannerExternal>;
 
-export const Example: StoryFn<typeof TopBannerExternal> = (_args) => {
-  const modalRef = useRef<HTMLDialogElement>(null);
-  const topBannerRef = useRef<TopBannerExternalHandle>(null);
-  const [user, setUser] = useState<User>();
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-  const handleLanguageClick = (e: MouseEvent<HTMLButtonElement>): void => {
-    const lang = e.currentTarget.lang;
-    dsI18n.changeLanguage(langToLocale[lang]);
-  };
+export const Preview: Story = {};
 
-  const handleLogOut = (): void => {
-    setUser(undefined);
-    setIsLoggedIn(false);
-  };
+export const Examples: Story = {
+  render: (_args) => {
+    const modalRef = useRef<HTMLDialogElement>(null);
+    const topBannerRef = useRef<TopBannerExternalHandle>(null);
+    const [user, setUser] = useState<User>();
+    const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
 
-  const handleLogIn = (): void => {
-    modalRef.current?.showModal();
-  };
+    const handleLanguageClick = (e: MouseEvent<HTMLButtonElement>): void => {
+      const lang = e.currentTarget.lang;
+      dsI18n.changeLanguage(langToLocale[lang]);
+    };
 
-  const handleChangeRole = (e: ChangeEvent<HTMLInputElement>): void => {
-    setIsLoggedIn(true);
-    const role = e.target.value as User['role'];
-    if (role === 'meg') {
-      setUser({ role });
-    } else {
-      setUser({
-        role,
-        name: 'Knotten, Gudleik',
-      });
-    }
-  };
+    const handleLogOut = (): void => {
+      setUser(undefined);
+      setIsLoggedIn(false);
+    };
 
-  const links = [
-    { href: '#storybook-root', text: 'Skatt' },
-    { href: '#storybook-root', text: 'Avgift' },
-    { href: '#storybook-root', text: 'Folkeregisteret' },
-  ];
+    const handleLogIn = (): void => {
+      modalRef.current?.showModal();
+    };
 
-  return (
-    <>
-      <TopBannerExternal
-        ref={topBannerRef}
-        firstColumn={
-          <LinkGroup>
-            {links.map((link, index) => (
-              <LinkGroup.Link
-                key={index}
-                href={link.href}
-                onClick={(e): void => {
-                  e.preventDefault();
-                  topBannerRef.current?.closeMenu?.();
-                }}
-              >
-                {link.text}
-              </LinkGroup.Link>
-            ))}
-          </LinkGroup>
-        }
-        secondColumn={isLoggedIn ? 'Second column' : ''}
-        thirdColumn={isLoggedIn ? 'Third column' : ''}
-        user={user}
-        onLanguageClick={handleLanguageClick}
-        onLogInClick={handleLogIn}
-        onLogOutClick={handleLogOut}
-        onUserClick={(): void => modalRef.current?.showModal()}
-      />
-      <Modal ref={modalRef} title={'Dette er dine roller'}>
-        <RadioGroup
-          legend={'Velge en rolle'}
-          selectedValue={user?.role ?? ''}
-          onChange={handleChangeRole}
-        >
-          <RadioGroup.Radio value={'meg'}>
-            {'Innlogget som meg selv'}
-          </RadioGroup.Radio>
-          <RadioGroup.Radio value={'andre'}>
-            {'Innlogget som annen person'}
-          </RadioGroup.Radio>
-          <RadioGroup.Radio value={'virksomhet'}>
-            {'Innlogget som virksomhet'}
-          </RadioGroup.Radio>
-        </RadioGroup>
-        <Button onClick={(): void => modalRef.current?.close()}>{'Ok'}</Button>
-      </Modal>
-    </>
-  );
-};
+    const handleChangeRole = (e: ChangeEvent<HTMLInputElement>): void => {
+      setIsLoggedIn(true);
+      const role = e.target.value as User['role'];
+      if (role === 'meg') {
+        setUser({ role });
+      } else {
+        setUser({
+          role,
+          name: 'Knotten, Gudleik',
+        });
+      }
+    };
 
-Example.parameters = {
-  controls: {
-    exclude: /.*/,
+    const links = [
+      { href: '#storybook-root', text: 'Skatt' },
+      { href: '#storybook-root', text: 'Avgift' },
+      { href: '#storybook-root', text: 'Folkeregisteret' },
+    ];
+
+    return (
+      <>
+        <TopBannerExternal
+          ref={topBannerRef}
+          firstColumn={
+            <LinkGroup>
+              {links.map((link, index) => (
+                <LinkGroup.Link
+                  key={index}
+                  href={link.href}
+                  onClick={(e): void => {
+                    e.preventDefault();
+                    topBannerRef.current?.closeMenu?.();
+                  }}
+                >
+                  {link.text}
+                </LinkGroup.Link>
+              ))}
+            </LinkGroup>
+          }
+          secondColumn={isLoggedIn ? 'Second column' : ''}
+          thirdColumn={isLoggedIn ? 'Third column' : ''}
+          user={user}
+          onLanguageClick={handleLanguageClick}
+          onLogInClick={handleLogIn}
+          onLogOutClick={handleLogOut}
+          onUserClick={(): void => modalRef.current?.showModal()}
+        />
+        <Modal ref={modalRef} title={'Dette er dine roller'}>
+          <RadioGroup
+            legend={'Velge en rolle'}
+            selectedValue={user?.role ?? ''}
+            onChange={handleChangeRole}
+          >
+            <RadioGroup.Radio value={'meg'}>
+              {'Innlogget som meg selv'}
+            </RadioGroup.Radio>
+            <RadioGroup.Radio value={'andre'}>
+              {'Innlogget som annen person'}
+            </RadioGroup.Radio>
+            <RadioGroup.Radio value={'virksomhet'}>
+              {'Innlogget som virksomhet'}
+            </RadioGroup.Radio>
+          </RadioGroup>
+          <Button onClick={(): void => modalRef.current?.close()}>
+            {'Ok'}
+          </Button>
+        </Modal>
+      </>
+    );
   },
 };
-
-export const ExampleSource: StoryFn<typeof TopBannerExternal> = () => {
-  const modalRef = useRef<HTMLDialogElement>(null);
-  const topBannerRef = useRef<TopBannerExternalHandle>(null);
-  const [user, setUser] = useState<User>();
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
-
-  const handleLanguageClick = (e: MouseEvent<HTMLButtonElement>): void => {
-    const lang = e.currentTarget.lang;
-    dsI18n.changeLanguage(langToLocale[lang]);
-  };
-
-  const handleLogOut = (): void => {
-    setUser(undefined);
-    setIsLoggedIn(false);
-  };
-
-  const handleLogIn = (): void => {
-    modalRef.current?.showModal();
-  };
-
-  const handleChangeRole = (e: ChangeEvent<HTMLInputElement>): void => {
-    setIsLoggedIn(true);
-    const role = e.target.value as User['role'];
-    if (role === 'meg') {
-      setUser({ role });
-    } else {
-      setUser({
-        role,
-        name: 'Knotten, Gudleik',
-      });
-    }
-  };
-
-  const links = [
-    { href: '#storybook-root', text: 'Skatt' },
-    { href: '#storybook-root', text: 'Avgift' },
-    { href: '#storybook-root', text: 'Folkeregisteret' },
-  ];
-
-  return (
-    <>
-      <TopBannerExternal
-        ref={topBannerRef}
-        firstColumn={
-          <LinkGroup>
-            {links.map((link, index) => (
-              <LinkGroup.Link
-                key={index}
-                href={link.href}
-                onClick={(e): void => {
-                  e.preventDefault();
-                  topBannerRef.current?.closeMenu?.();
-                }}
-              >
-                {link.text}
-              </LinkGroup.Link>
-            ))}
-          </LinkGroup>
-        }
-        secondColumn={isLoggedIn ? 'Second column' : ''}
-        thirdColumn={isLoggedIn ? 'Third column' : ''}
-        user={user}
-        onLanguageClick={handleLanguageClick}
-        onLogInClick={handleLogIn}
-        onLogOutClick={handleLogOut}
-        onUserClick={(): void => modalRef.current?.showModal()}
-      />
-      <Modal ref={modalRef} title={'Dette er dine roller'}>
-        <RadioGroup
-          legend={'Velge en rolle'}
-          selectedValue={user?.role ?? ''}
-          onChange={handleChangeRole}
-        >
-          <RadioGroup.Radio value={'meg'}>
-            {'Innlogget som meg selv'}
-          </RadioGroup.Radio>
-          <RadioGroup.Radio value={'andre'}>
-            {'Innlogget som annen person'}
-          </RadioGroup.Radio>
-          <RadioGroup.Radio value={'virksomhet'}>
-            {'Innlogget som virksomhet'}
-          </RadioGroup.Radio>
-        </RadioGroup>
-        <Button onClick={(): void => modalRef.current?.close()}>{'Ok'}</Button>
-      </Modal>
-    </>
-  );
-};
-
-ExampleSource.tags = ['isHidden'];
-ExampleSource.parameters = {
-  controls: {
-    exclude: /.*/,
-  },
-};
+Examples.parameters = exampleParameters;

@@ -1,39 +1,25 @@
+import { JSX } from 'react';
+
 import { positionArr } from '@skatteetaten/ds-core-utils';
 import {
   getTableRowExpandButtonPositionDefault,
   Table,
 } from '@skatteetaten/ds-table';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Table.Row,
   title: 'Komponenter/Table/Row',
   argTypes: {
     // Props
-    children: { control: false, table: { category: category.props } },
-    isExpandable: {
-      table: {
-        category: category.props,
-      },
-    },
-    isExpanded: {
-      table: {
-        category: category.props,
-      },
-    },
-    expandButtonAriaDescribedby: {
-      table: {
-        category: category.aria,
-      },
-    },
-    expandButtonTitle: {
-      table: {
-        category: category.props,
-      },
-    },
+    children: { table: { category: category.props } },
+    isExpandable: { table: { category: category.props } },
+    isExpanded: { table: { category: category.props } },
+    expandButtonAriaDescribedby: { table: { category: category.aria } },
+    expandButtonTitle: { table: { category: category.props } },
     expandButtonPosition: {
       options: [...positionArr],
       control: 'radio',
@@ -45,40 +31,40 @@ export default {
     },
     expandableContent: {
       control: 'text',
-      table: {
-        category: category.props,
-      },
+      table: { category: category.props },
     },
     // Event
     onExpand: {
       control: false,
-      table: {
-        category: category.event,
-      },
+      table: { category: category.event },
     },
     onClose: {
       control: false,
-      table: {
-        category: category.event,
-      },
+      table: { category: category.event },
     },
+  },
+  args: {
+    children: [
+      <Table.DataCell key={'cell1'}>{'cell 1'}</Table.DataCell>,
+      <Table.DataCell key={'cell2'}>{'cell 2'}</Table.DataCell>,
+    ],
   },
   parameters: {
     version: getVersion('ds-table'),
   },
-} as Meta<typeof Table.Row>;
+} satisfies Meta<typeof Table.Row>;
 
-const TemplateDefault: StoryFn<typeof Table.Row> = (args) => (
-  <Table caption={'row example'}>
-    <Table.Body>
-      <Table.Row {...args}>
-        <Table.DataCell>{'example'}</Table.DataCell>
-        <Table.DataCell>{'row'}</Table.DataCell>
-      </Table.Row>
-    </Table.Body>
-  </Table>
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Preview = {
-  render: TemplateDefault,
-} satisfies StoryObj<typeof Table.Row>;
+export const Preview: Story = {
+  decorators: [
+    (Story): JSX.Element => (
+      <Table caption={'row example'}>
+        <Table.Body>
+          <Story />
+        </Table.Body>
+      </Table>
+    ),
+  ],
+};

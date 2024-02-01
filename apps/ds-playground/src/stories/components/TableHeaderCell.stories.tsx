@@ -8,7 +8,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Table.HeaderCell,
   title: 'Komponenter/Table/HeaderCell',
   argTypes: {
@@ -36,13 +36,16 @@ export default {
     colSpan: { table: { category: category.htmlAttribute } },
     scope: { table: { category: category.htmlAttribute } },
   },
+  args: {
+    children: 'header celle',
+    className: 'headerCellWidth',
+  },
   parameters: {
     version: getVersion('ds-table'),
   },
 } satisfies Meta<typeof Table.HeaderCell>;
 
-export const Preview = {
-  args: {
-    children: 'Example TableHeaderCell',
-  },
-} satisfies StoryObj<typeof Table.HeaderCell>;
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Preview: Story = {};

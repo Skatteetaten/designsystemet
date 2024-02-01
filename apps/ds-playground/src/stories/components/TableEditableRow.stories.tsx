@@ -1,22 +1,22 @@
+import { JSX } from 'react';
+
 import { positionArr } from '@skatteetaten/ds-core-utils';
 import {
   Table,
   getTableRowExpandButtonPositionDefault,
 } from '@skatteetaten/ds-table';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Table.EditableRow,
   title: 'komponenter/Table/EditableRow',
   argTypes: {
     // Props
-    children: { control: false, table: { category: category.props } },
-    editableContent: {
-      table: { category: category.props },
-    },
+    children: { table: { category: category.props } },
+    editableContent: { table: { category: category.props } },
     editButtonPosition: {
       control: 'radio',
       options: [...positionArr],
@@ -27,30 +27,32 @@ export default {
       },
     },
     // Aria
-    editButtonAriaDescribedby: {
-      table: { category: category.aria },
-    },
+    editButtonAriaDescribedby: { table: { category: category.aria } },
     // Event
-    onEdit: {
-      table: { category: category.event },
-    },
+    onEdit: { table: { category: category.event } },
+  },
+  args: {
+    children: [
+      <Table.DataCell key={'cell1'}>{'cell 1'}</Table.DataCell>,
+      <Table.DataCell key={'cell2'}>{'cell 2'}</Table.DataCell>,
+    ],
   },
   parameters: {
     version: getVersion('ds-table'),
   },
 } satisfies Meta<typeof Table.EditableRow>;
 
-const TemplateDefault: StoryFn<typeof Table.EditableRow> = (args) => (
-  <Table caption={'row example'}>
-    <Table.Body>
-      <Table.EditableRow {...args}>
-        <Table.DataCell>{'example'}</Table.DataCell>
-        <Table.DataCell>{'row'}</Table.DataCell>
-      </Table.EditableRow>
-    </Table.Body>
-  </Table>
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Preview = {
-  render: TemplateDefault,
-} satisfies StoryObj<typeof Table.EditableRow>;
+export const Preview: Story = {
+  decorators: [
+    (Story): JSX.Element => (
+      <Table caption={'editable row example'}>
+        <Table.Body>
+          <Story />
+        </Table.Body>
+      </Table>
+    ),
+  ],
+};

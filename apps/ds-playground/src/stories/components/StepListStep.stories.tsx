@@ -11,7 +11,7 @@ import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: StepList.Step,
   title: 'Komponenter/StepList/Step',
   argTypes: {
@@ -28,11 +28,7 @@ export default {
         defaultValue: { summary: dsI18n.t('ds_collections:steplist.Next') },
       },
     },
-    nextButtonHasSpinner: {
-      table: {
-        category: category.props,
-      },
-    },
+    nextButtonHasSpinner: { table: { category: category.props } },
     introTitle: {
       control: 'text',
       table: { category: category.props, type: { summary: 'string' } },
@@ -61,17 +57,13 @@ export default {
     },
     children: { table: { category: category.props }, control: 'text' },
     title: { table: { category: category.props } },
-    stepNumber: {
-      table: { category: category.props },
-    },
+    stepNumber: { table: { category: category.props } },
     svgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
       table: { category: category.props },
     },
-    svgTitle: {
-      table: { category: category.props },
-    },
+    svgTitle: { table: { category: category.props } },
     variant: {
       table: {
         category: category.props,
@@ -83,15 +75,17 @@ export default {
     onEdit: { table: { category: category.event } },
     onNext: { table: { category: category.event } },
   },
+  args: {
+    title: 'Overskrift',
+    children: 'Innhold',
+    stepNumber: 9,
+  },
   parameters: {
     version: getVersion('ds-collections'),
   },
 } satisfies Meta<typeof StepList.Step>;
 
-export const Preview = {
-  args: {
-    title: 'overskrift',
-    children: 'innhold',
-    stepNumber: 9,
-  },
-} satisfies StoryObj<typeof StepList.Step>;
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Preview: Story = {};

@@ -11,9 +11,10 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
+import { exampleParameters } from '../utils/stories.utils';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Button,
   title: 'Komponenter/Button',
   argTypes: {
@@ -38,14 +39,8 @@ export default {
       },
     },
     // HTML
-    accessKey: {
-      table: { category: category.htmlAttribute },
-    },
-    disabled: {
-      table: {
-        category: category.htmlAttribute,
-      },
-    },
+    accessKey: { table: { category: category.htmlAttribute } },
+    disabled: { table: { category: category.htmlAttribute } },
     type: {
       table: {
         category: category.htmlAttribute,
@@ -59,36 +54,37 @@ export default {
     onClick: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
   },
-  parameters: {
-    version: getVersion('ds-buttons'),
-  },
-} as Meta<typeof Button>;
-
-export const Preview: StoryObj<typeof Button> = {
   args: {
     children: 'Send inn skjema',
   },
-};
+  parameters: {
+    version: getVersion('ds-buttons'),
+  },
+} satisfies Meta<typeof Button>;
 
-export const Example: StoryFn<typeof Button> = (_args) => (
-  <>
-    <Button className={'exampleSpacing'}>{'Send inn skjema'}</Button>
-    <Button className={'exampleSpacing'} variant={'secondary'}>
-      {'Avbryt'}
-    </Button>
-    <div>
-      <Button className={'exampleSpacing'} variant={'tertiary'}>
-        {'Logg inn'}
-      </Button>
-    </div>
-    <Button className={'exampleSpacing'} variant={'danger'}>
-      {'Slett'}
-    </Button>
-  </>
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-Example.parameters = {
-  controls: {
-    exclude: /.*/,
+export const Preview: Story = {};
+
+export const Examples: Story = {
+  render: (_args) => {
+    return (
+      <>
+        <Button className={'exampleSpacing'}>{'Send inn skjema'}</Button>
+        <Button className={'exampleSpacing'} variant={'secondary'}>
+          {'Avbryt'}
+        </Button>
+        <div>
+          <Button className={'exampleSpacing'} variant={'tertiary'}>
+            {'Logg inn'}
+          </Button>
+        </div>
+        <Button className={'exampleSpacing'} variant={'danger'}>
+          {'Slett'}
+        </Button>
+      </>
+    );
   },
 };
+Examples.parameters = exampleParameters;
