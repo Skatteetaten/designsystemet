@@ -44,6 +44,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
       padding = getModalPaddingDefault(),
       title,
       variant = getModalVariantDefault(),
+      shadowRootNode,
       onClose,
       children,
     },
@@ -60,10 +61,13 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
         return;
       }
       const onClickOutside = (event: MouseEvent): void => {
-        const element = event.target as HTMLElement;
+        const element = shadowRootNode
+          ? (shadowRootNode?.activeElement as HTMLElement)
+          : (event.target as HTMLElement);
+        console.log(`klikker på ${element}`);
         if (
           !(event.target instanceof HTMLElement) ||
-          element.tagName !== 'DIALOG'
+          element?.tagName !== 'DIALOG'
         ) {
           return;
         }
@@ -78,12 +82,11 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
           modalRef.current?.close();
         }
       };
-
       document.addEventListener('click', onClickOutside, true);
       return () => {
         document.removeEventListener('click', onClickOutside, true);
       };
-    }, [modalRef, dismissOnOutsideClick, onClose]);
+    }, [modalRef, dismissOnOutsideClick, onClose, shadowRootNode]);
 
     const hideTitleClassName = hideTitle ? styles.srOnly : '';
     const hideOutlineClassName =
