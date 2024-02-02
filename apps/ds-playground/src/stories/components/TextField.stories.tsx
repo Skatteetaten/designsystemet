@@ -1,4 +1,4 @@
-import { useState, ChangeEvent, FocusEvent } from 'react';
+import { useState, ChangeEvent, FocusEvent, JSX } from 'react';
 
 import {
   dsI18n,
@@ -103,10 +103,10 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Preview: Story = {};
+export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
-  render: (_args) => {
+  render: (_args): JSX.Element => {
     const [creditInput, setCreditInput] = useState('10000');
 
     const [postaCodeInput, setPostaCodeInput] = useState('');
@@ -173,5 +173,5 @@ export const Examples: Story = {
       </form>
     );
   },
-};
+} satisfies Story;
 Examples.parameters = exampleParameters;

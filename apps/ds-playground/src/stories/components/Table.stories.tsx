@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react';
+import { ReactNode, useState, JSX } from 'react';
 
 import { Button, InlineButton } from '@skatteetaten/ds-buttons';
 import { densityArr } from '@skatteetaten/ds-core-utils';
@@ -93,10 +93,10 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Preview: Story = {};
+export const Preview: Story = {} satisfies Story;
 
 export const Variants: Story = {
-  render: (_args) => {
+  render: (_args): JSX.Element => {
     const klage = 'Klage på vedtak';
     return (
       <>
@@ -167,11 +167,11 @@ export const Variants: Story = {
       </>
     );
   },
-};
+} satisfies Story;
 Variants.parameters = exampleParameters;
 
 export const Sortable: Story = {
-  render: (_args) => {
+  render: (_args): JSX.Element => {
     const [sortState, setSortState] = useState<SortState>({
       direction: 'none',
     });
@@ -234,11 +234,11 @@ export const Sortable: Story = {
       </Table>
     );
   },
-};
+} satisfies Story;
 Sortable.parameters = exampleParameters;
 
 export const Expandable: Story = {
-  render: (_args) => {
+  render: (_args): JSX.Element => {
     const [sortState, setSortState] = useState<SortState>({
       direction: 'none',
     });
@@ -375,11 +375,11 @@ export const Expandable: Story = {
       </Table>
     );
   },
-};
+} satisfies Story;
 Expandable.parameters = exampleParameters;
 
 export const Editable: Story = {
-  render: (_args) => {
+  render: (_args): JSX.Element => {
     const [sortState, setSortState] = useState<SortState>({
       direction: 'none',
     });
@@ -489,11 +489,11 @@ export const Editable: Story = {
       </Table>
     );
   },
-};
+} satisfies Story;
 Editable.parameters = exampleParameters;
 
 export const WithEmptyHeaders: Story = {
-  render: (_args) => {
+  render: (_args): JSX.Element => {
     const [sortState, setSortState] = useState<SortState>({
       direction: 'none',
     });
@@ -635,5 +635,5 @@ export const WithEmptyHeaders: Story = {
       </>
     );
   },
-};
+} satisfies Story;
 WithEmptyHeaders.parameters = exampleParameters;

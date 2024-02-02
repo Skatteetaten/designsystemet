@@ -63,5 +63,5 @@ export const Examples: Story = {
       <ScrollToTopButton visibilityThreshold={0} />
     </div>
   ),
-};
+} satisfies Story;
 Examples.parameters = exampleParameters;

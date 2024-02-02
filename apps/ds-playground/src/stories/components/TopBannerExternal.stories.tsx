@@ -1,4 +1,4 @@
-import { useRef, useState, ChangeEvent, MouseEvent } from 'react';
+import { useRef, useState, ChangeEvent, MouseEvent, JSX } from 'react';
 
 import { Button, LinkGroup } from '@skatteetaten/ds-buttons';
 import { RadioGroup } from '@skatteetaten/ds-forms';
@@ -85,10 +85,10 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Preview: Story = {};
+export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
-  render: (_args) => {
+  render: (_args): JSX.Element => {
     const modalRef = useRef<HTMLDialogElement>(null);
     const topBannerRef = useRef<TopBannerExternalHandle>(null);
     const [user, setUser] = useState<User>();
@@ -178,5 +178,5 @@ export const Examples: Story = {
       </>
     );
   },
-};
+} satisfies Story;
 Examples.parameters = exampleParameters;

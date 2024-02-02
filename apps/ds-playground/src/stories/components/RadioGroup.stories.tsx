@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, JSX } from 'react';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
@@ -87,10 +87,10 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Preview: Story = {};
+export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
-  render: (_args) => {
+  render: (_args): JSX.Element => {
     const [type, setType] = useState<string>('foretak');
     const [svar, setSvar] = useState<string>('');
 
@@ -126,5 +126,5 @@ export const Examples: Story = {
       </>
     );
   },
-};
+} satisfies Story;
 Examples.parameters = exampleParameters;

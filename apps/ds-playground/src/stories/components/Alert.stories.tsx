@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { statusArr } from '@skatteetaten/ds-core-utils';
 import { Alert } from '@skatteetaten/ds-status';
 import { Meta, StoryObj } from '@storybook/react';
@@ -45,10 +47,10 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Preview: Story = {};
+export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
-  render: (_args) => {
+  render: (_args): JSX.Element => {
     return (
       <>
         <Alert
@@ -75,5 +77,5 @@ export const Examples: Story = {
       </>
     );
   },
-};
+} satisfies Story;
 Examples.parameters = exampleParameters;

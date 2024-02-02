@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, JSX } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { Checkbox } from '@skatteetaten/ds-forms';
@@ -45,10 +45,10 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Preview: Story = {};
+export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
-  render: (_args) => {
+  render: (_args): JSX.Element => {
     const [checked, setChecked] = useState(false);
     const [error, setError] = useState(false);
     return (
@@ -67,5 +67,5 @@ export const Examples: Story = {
       </>
     );
   },
-};
+} satisfies Story;
 Examples.parameters = exampleParameters;

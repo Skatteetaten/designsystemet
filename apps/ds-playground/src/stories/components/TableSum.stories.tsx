@@ -56,4 +56,4 @@ export const Preview: Story = {
       </Table>
     ),
   ],
-};
+} satisfies Story;

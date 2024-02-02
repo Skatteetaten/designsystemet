@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { Footer } from '@skatteetaten/ds-layout';
 import { Paragraph, Heading } from '@skatteetaten/ds-typography';
@@ -40,10 +42,10 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Preview: Story = {};
+export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
-  render: (_args) => {
+  render: (_args): JSX.Element => {
     return (
       <Footer
         titleFirstColumn={'Om Skatteetaten'}
@@ -110,5 +112,5 @@ export const Examples: Story = {
       </Footer>
     );
   },
-};
+} satisfies Story;
 Examples.parameters = exampleParameters;

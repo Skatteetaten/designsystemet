@@ -29,4 +29,4 @@ export const Preview: Story = {
     backgrounds: { default: 'themePrimary' },
   },
   render: (args) => <Footer.Link {...args}>{args.children}</Footer.Link>,
-};
+} satisfies Story;

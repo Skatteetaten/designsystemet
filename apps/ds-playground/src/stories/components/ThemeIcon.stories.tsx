@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { sizeArr } from '@skatteetaten/ds-core-utils';
 import {
   Icon,
@@ -57,10 +59,10 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Preview: Story = {};
+export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
-  render: (_args) => {
+  render: (_args): JSX.Element => {
     return (
       <>
         <Icon svgPath={GaveArvSVGpath} size={'medium'} variant={'themeIcon'} />
@@ -72,5 +74,5 @@ export const Examples: Story = {
       </>
     );
   },
-};
+} satisfies Story;
 Examples.parameters = exampleParameters;

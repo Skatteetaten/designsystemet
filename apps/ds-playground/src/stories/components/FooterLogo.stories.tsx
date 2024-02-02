@@ -29,4 +29,4 @@ export const Preview: Story = {
   parameters: {
     backgrounds: { default: 'themePrimary' },
   },
-};
+} satisfies Story;

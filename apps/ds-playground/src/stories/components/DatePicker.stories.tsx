@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useState, JSX } from 'react';
 
 import {
   dsI18n,
@@ -80,10 +80,10 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Preview: Story = {};
+export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
-  render: (_args) => {
+  render: (_args): JSX.Element => {
     const [value, setValue] = useState('');
     return (
       <DatePicker
@@ -95,5 +95,5 @@ export const Examples: Story = {
       />
     );
   },
-};
+} satisfies Story;
 Examples.parameters = exampleParameters;

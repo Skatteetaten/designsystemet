@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, JSX } from 'react';
 
 import { Button, Link } from '@skatteetaten/ds-buttons';
 import { RadioGroup } from '@skatteetaten/ds-forms';
@@ -79,7 +79,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {
-  render: (args) => {
+  render: (args): JSX.Element => {
     const ref = useRef<HTMLDialogElement>(null);
     return (
       <>
@@ -92,10 +92,10 @@ export const Preview: Story = {
       </>
     );
   },
-};
+} satisfies Story;
 
 export const Examples: Story = {
-  render: (_args) => {
+  render: (_args): JSX.Element => {
     const refModal = useRef<HTMLDialogElement>(null);
     const refModalRadioGroup = useRef<HTMLDialogElement>(null);
     const refModalImportant = useRef<HTMLDialogElement>(null);
@@ -211,5 +211,5 @@ export const Examples: Story = {
       </>
     );
   },
-};
+} satisfies Story;
 Examples.parameters = exampleParameters;

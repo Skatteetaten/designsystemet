@@ -1,4 +1,4 @@
-import { useId, useState } from 'react';
+import { useId, useState, JSX } from 'react';
 
 import { OpenClose, StepList } from '@skatteetaten/ds-collections';
 import { ErrorSummary, RadioGroup } from '@skatteetaten/ds-forms';
@@ -39,10 +39,10 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Preview: Story = {};
+export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
-  render: (_args) => {
+  render: (_args): JSX.Element => {
     const stepId = useId();
     const [activeStep, setActiveStep] = useState(1);
     const [step3, setStep3] = useState<string | undefined>(undefined);
@@ -206,5 +206,5 @@ export const Examples: Story = {
       </StepList>
     );
   },
-};
+} satisfies Story;
 Examples.parameters = exampleParameters;

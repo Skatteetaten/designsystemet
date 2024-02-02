@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
 /* eslint-disable sonarjs/no-duplicate-string */
+import { JSX } from 'react';
 
 import { Button, getButtonVariantDefault } from '@skatteetaten/ds-buttons';
 import {
@@ -65,10 +66,10 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Preview: Story = {};
+export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
-  render: (_args) => {
+  render: (_args): JSX.Element => {
     return (
       <>
         <Button className={'exampleSpacing'}>{'Send inn skjema'}</Button>
@@ -86,5 +87,5 @@ export const Examples: Story = {
       </>
     );
   },
-};
+} satisfies Story;
 Examples.parameters = exampleParameters;

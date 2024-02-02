@@ -51,9 +51,9 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Preview: Story = {};
+export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
   render: (_args) => <MegaButton>{'Se eller endre skattekortet'}</MegaButton>,
-};
+} satisfies Story;
 Examples.parameters = exampleParameters;
