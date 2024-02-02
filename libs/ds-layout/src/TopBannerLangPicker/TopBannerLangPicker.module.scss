@@ -1,5 +1,5 @@
 @import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
-@import 'libs/ds-core-utils/src/styles.scss';
+@import 'libs/ds-core-utils/src/styles';
 
 .container {
   position: relative;
@@ -9,7 +9,7 @@
 .overlay {
   position: fixed;
   z-index: 800;
-  background: rgba(255, 255, 255, 80%);
+  background: rgb(255 255 255 / 80%);
   inset: 0;
 }
 
