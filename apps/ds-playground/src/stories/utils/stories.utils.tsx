@@ -4,7 +4,9 @@ export const exampleParameters = {
       type: 'code',
       language: 'tsx',
       transform: (source: string): string => {
-        return source.replace('render: _args', 'const Examples = ()');
+        return source
+          .replace('render: (_args): JSX.Element', 'const Examples = ()')
+          .replace('satisfies Story', '');
       },
     },
   },
