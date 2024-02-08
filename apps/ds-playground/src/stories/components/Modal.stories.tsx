@@ -1,7 +1,7 @@
-import { useRef } from 'react';
+import { useRef, JSX } from 'react';
 
 import { Button, Link } from '@skatteetaten/ds-buttons';
-import { CheckboxGroup, RadioGroup } from '@skatteetaten/ds-forms';
+import { RadioGroup } from '@skatteetaten/ds-forms';
 import { InfoOutlineSVGpath } from '@skatteetaten/ds-icons';
 import {
   Modal,
@@ -11,14 +11,16 @@ import {
   getModalVariantDefault,
 } from '@skatteetaten/ds-overlays';
 import { Paragraph } from '@skatteetaten/ds-typography';
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import farmerIllustration from '../../assets/farmer-illustration.svg';
 import waitIllustration from '../../assets/wait-alert-illustration.png';
+import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
+import { exampleParameters } from '../utils/stories.utils';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Modal,
   title: 'Komponenter/Modal',
   argTypes: {
@@ -64,162 +66,150 @@ export default {
     // Events
     onClose: { control: { type: null }, table: { category: category.event } },
   },
+  args: {
+    children: <Paragraph>{loremIpsum}</Paragraph>,
+    title: 'Modal title',
+  },
   parameters: {
     version: getVersion('ds-overlays'),
   },
 } satisfies Meta<typeof Modal>;
 
-export const Preview: StoryFn<typeof Modal> = (args) => {
-  const ref = useRef<HTMLDialogElement>(null);
-  return (
-    <>
-      <Button onClick={(): void => ref.current?.showModal()}>
-        {'Åpne modal'}
-      </Button>
-      <Modal {...args} ref={ref}>
-        <Paragraph hasSpacing>
-          {
-            'Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?'
-          }
-        </Paragraph>
-        <div className={'flex'}>
-          <Button className={'marginRightM'}>{'Erstatt opplysninger'}</Button>
-          <Button
-            variant={'tertiary'}
-            onClick={(): void => ref.current?.close()}
-          >
-            {'Avbryt'}
-          </Button>
-        </div>
-      </Modal>
-    </>
-  );
-};
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-Preview.args = {
-  children: (
-    <>
-      <Paragraph hasSpacing>
-        {
-          'Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?'
-        }
-      </Paragraph>
-      <div className={'flex'}>
-        <Button className={'marginRightM'}>{'Erstatt opplysninger'}</Button>
-        <Button variant={'tertiary'}>{'Avbryt'}</Button>
-      </div>
-    </>
-  ),
-  title: 'Vil du erstatte nye opplysninger fra fil?',
-};
-
-export const ExampleImportant: StoryFn<typeof Modal> = () => {
-  const ref = useRef<HTMLDialogElement>(null);
-  return (
-    <>
-      <Button
-        variant={'tertiary'}
-        svgPath={InfoOutlineSVGpath}
-        onClick={(): void => ref.current?.showModal()}
-      >
-        {'Viktig driftsmelding'}
-      </Button>
-      <Modal ref={ref} variant={'important'} title={'Viktig melding!'}>
-        <Paragraph hasSpacing>
-          {
-            'Løsningen er ikke kommet i drift ennå eller tatt ned for vedlikehold.'
-          }
-        </Paragraph>
-        <div className={'modalLink'}>
-          <Link href={'#'} onClick={(): void => ref.current?.close()}>
-            {'Les mer på skatteetaten.no'}
-          </Link>
-        </div>
-      </Modal>
-    </>
-  );
-};
-
-export const ExampleWait: StoryFn<typeof Modal> = () => {
-  const ref = useRef<HTMLDialogElement>(null);
-  return (
-    <>
-      <Button
-        variant={'tertiary'}
-        svgPath={InfoOutlineSVGpath}
-        onClick={(): void => ref.current?.showModal()}
-      >
-        {'Vis ventevarsel'}
-      </Button>
-      <Modal
-        ref={ref}
-        title={'Hei, er du fortsatt her?'}
-        // husk å importere illustrasjonen
-        imageSource={waitIllustration}
-        imageSourceAltText={
-          'Illustrasjon av travel person med seks armer, opptatt med kontorarbeid.'
-        }
-      >
-        <Paragraph hasSpacing>
-          {
-            'Vi ser at du ikke har gjort noe på nettsiden på ei stund. Er du fortsatt her?'
-          }
-        </Paragraph>
-        <Button
-          className={'width100'}
-          onClick={(): void => ref.current?.close()}
-        >
-          {'Ja'}
+export const Preview: Story = {
+  render: (args): JSX.Element => {
+    const ref = useRef<HTMLDialogElement>(null);
+    return (
+      <>
+        <Button onClick={(): void => ref.current?.showModal()}>
+          {'Åpne modal'}
         </Button>
-      </Modal>
-    </>
-  );
-};
+        <Modal {...args} ref={ref}>
+          {args.children}
+        </Modal>
+      </>
+    );
+  },
+} satisfies Story;
 
-export const ExampleWithRadioGroup: StoryFn<typeof Modal> = () => {
-  const ref = useRef<HTMLDialogElement>(null);
-  return (
-    <>
-      <Button onClick={(): void => ref.current?.showModal()}>
-        {'Velg rolle'}
-      </Button>
-      <Modal ref={ref} title={'Dette er dine roller'}>
-        <RadioGroup legend={'Velge en rolle'}>
-          <RadioGroup.Radio value={'meg'}>
-            {'Innlogget som meg selv'}
-          </RadioGroup.Radio>
-          <RadioGroup.Radio value={'andre'}>
-            {'Innlogget som annen person'}
-          </RadioGroup.Radio>
-          <RadioGroup.Radio value={'virksomhet'}>
-            {'Innlogget som virksomhet'}
-          </RadioGroup.Radio>
-        </RadioGroup>
-      </Modal>
-    </>
-  );
-};
+export const Examples: Story = {
+  render: (_args): JSX.Element => {
+    const refModal = useRef<HTMLDialogElement>(null);
+    const refModalRadioGroup = useRef<HTMLDialogElement>(null);
+    const refModalImportant = useRef<HTMLDialogElement>(null);
+    const refModalWait = useRef<HTMLDialogElement>(null);
 
-export const ExampleWithCheckboxGroup: StoryFn<typeof Modal> = () => {
-  const ref = useRef<HTMLDialogElement>(null);
-  return (
-    <>
-      <Button onClick={(): void => ref.current?.showModal()}>
-        {'Velg rolle'}
-      </Button>
-      <Modal ref={ref} title={'Dette er dine roller'}>
-        <CheckboxGroup legend={'Velge en rolle'}>
-          <CheckboxGroup.Checkbox value={'meg'}>
-            {'Innlogget som meg selv'}
-          </CheckboxGroup.Checkbox>
-          <CheckboxGroup.Checkbox value={'andre'}>
-            {'Innlogget som annen person'}
-          </CheckboxGroup.Checkbox>
-          <CheckboxGroup.Checkbox value={'virksomhet'}>
-            {'Innlogget som virksomhet'}
-          </CheckboxGroup.Checkbox>
-        </CheckboxGroup>
-      </Modal>
-    </>
-  );
-};
+    return (
+      <>
+        <Button
+          className={'exampleSpacing'}
+          onClick={(): void => refModal.current?.showModal()}
+        >
+          {'Nye opplysninger'}
+        </Button>
+        <Modal
+          ref={refModal}
+          title={'Vil du erstatte nye opplysninger fra fil?'}
+        >
+          <Paragraph hasSpacing>
+            {
+              'Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?'
+            }
+          </Paragraph>
+          <div className={'flex'}>
+            <Button className={'marginRightM'}>{'Erstatt opplysninger'}</Button>
+            <Button
+              variant={'tertiary'}
+              onClick={(): void => refModal.current?.close()}
+            >
+              {'Avbryt'}
+            </Button>
+          </div>
+        </Modal>
+
+        <Button
+          className={'exampleSpacing'}
+          onClick={(): void => refModalRadioGroup.current?.showModal()}
+        >
+          {'Velg rolle'}
+        </Button>
+        <Modal ref={refModalRadioGroup} title={'Dette er dine roller'}>
+          <RadioGroup legend={'Velge en rolle'}>
+            <RadioGroup.Radio value={'meg'}>
+              {'Innlogget som meg selv'}
+            </RadioGroup.Radio>
+            <RadioGroup.Radio value={'andre'}>
+              {'Innlogget som annen person'}
+            </RadioGroup.Radio>
+            <RadioGroup.Radio value={'virksomhet'}>
+              {'Innlogget som virksomhet'}
+            </RadioGroup.Radio>
+          </RadioGroup>
+          <Button onClick={(): void => refModalRadioGroup.current?.close()}>
+            {'Ok'}
+          </Button>
+        </Modal>
+
+        <Button
+          className={'exampleSpacing'}
+          variant={'tertiary'}
+          svgPath={InfoOutlineSVGpath}
+          onClick={(): void => refModalImportant.current?.showModal()}
+        >
+          {'Viktig driftsmelding'}
+        </Button>
+        <Modal
+          ref={refModalImportant}
+          variant={'important'}
+          title={'Viktig melding!'}
+        >
+          <Paragraph hasSpacing>
+            {
+              'Løsningen er ikke kommet i drift ennå eller tatt ned for vedlikehold.'
+            }
+          </Paragraph>
+          <div className={'modalLink'}>
+            <Link
+              href={'#'}
+              onClick={(): void => refModalImportant.current?.close()}
+            >
+              {'Les mer på skatteetaten.no'}
+            </Link>
+          </div>
+        </Modal>
+
+        <Button
+          className={'exampleSpacing'}
+          variant={'tertiary'}
+          svgPath={InfoOutlineSVGpath}
+          onClick={(): void => refModalWait.current?.showModal()}
+        >
+          {'Vis ventevarsel'}
+        </Button>
+        <Modal
+          ref={refModalWait}
+          title={'Hei, er du fortsatt her?'}
+          imageSource={waitIllustration}
+          imageSourceAltText={
+            'Illustrasjon av travel person med seks armer, opptatt med kontorarbeid.'
+          }
+        >
+          <Paragraph hasSpacing>
+            {
+              'Vi ser at du ikke har gjort noe på nettsiden på ei stund. Er du fortsatt her?'
+            }
+          </Paragraph>
+          <Button
+            className={'width100'}
+            onClick={(): void => refModalWait.current?.close()}
+          >
+            {'Ja'}
+          </Button>
+        </Modal>
+      </>
+    );
+  },
+} satisfies Story;
+Examples.parameters = exampleParameters;

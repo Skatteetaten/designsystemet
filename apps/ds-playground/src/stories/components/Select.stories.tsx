@@ -1,15 +1,16 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useState, JSX } from 'react';
 
 import {
   dsI18n,
   formArrSize,
   getCommonFormVariantDefault,
 } from '@skatteetaten/ds-core-utils';
-import { Select, SelectProps } from '@skatteetaten/ds-forms';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Select } from '@skatteetaten/ds-forms';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
+import { exampleParameters } from '../utils/stories.utils';
 import { getVersion } from '../utils/version.utils';
 
 const meta = {
@@ -94,65 +95,53 @@ const meta = {
 } satisfies Meta<typeof Select>;
 
 export default meta;
-type Story = StoryObj<typeof Select>;
+type Story = StoryObj<typeof meta>;
 
-export const Preview: Story = {};
+export const Preview: Story = {} satisfies Story;
 
-export const Example: StoryFn<typeof Select> = (_args: SelectProps) => {
-  const [fruktOption, setFruktOption] = useState<number>(0);
-  const [error, setError] = useState<boolean>(false);
-  const [errorMessage, setErrorMessage] = useState<string>('');
+export const Examples: Story = {
+  render: (_args): JSX.Element => {
+    const [fruktOption, setFruktOption] = useState<number>(0);
+    const [error, setError] = useState<boolean>(false);
+    const [errorMessage, setErrorMessage] = useState<string>('');
 
-  const handleChange = (e: ChangeEvent<HTMLSelectElement>): void => {
-    onError(e);
-    setFruktOption(Number(e.target.value));
-  };
+    const handleChange = (e: ChangeEvent<HTMLSelectElement>): void => {
+      onError(e);
+      setFruktOption(Number(e.target.value));
+    };
 
-  const handleBlur = (e: ChangeEvent<HTMLSelectElement>): void => {
-    onError(e);
-  };
+    const handleBlur = (e: ChangeEvent<HTMLSelectElement>): void => {
+      onError(e);
+    };
 
-  const onError = (e: ChangeEvent<HTMLSelectElement>): void => {
-    setError(false);
-    setErrorMessage('');
-    if (e.target.validity.valueMissing) {
-      setError(true);
-      setErrorMessage('Fruktsort er påkrevd.');
-    }
-  };
+    const onError = (e: ChangeEvent<HTMLSelectElement>): void => {
+      setError(false);
+      setErrorMessage('');
+      if (e.target.validity.valueMissing) {
+        setError(true);
+        setErrorMessage('Fruktsort er påkrevd.');
+      }
+    };
 
-  return (
-    <Select
-      label={'Fruktsort'}
-      value={fruktOption}
-      helpText={'Velg frukten du liker best.'}
-      errorMessage={errorMessage}
-      hasError={error}
-      required
-      showRequiredMark
-      onBlur={handleBlur}
-      onChange={handleChange}
-    >
-      <Select.Option value={1}>{'Banan'}</Select.Option>
-      <Select.Option value={2}>{'Eple'}</Select.Option>
-      <Select.Option value={3}>{'Kiwi'}</Select.Option>
-      <Select.Option value={4}>{'Pære'}</Select.Option>
-      <Select.Option value={5}>{'Sitron'}</Select.Option>
-    </Select>
-  );
-};
-Example.parameters = {
-  docs: {
-    source: {
-      type: 'code',
-      language: 'tsx',
-      transform: (source: string): string => {
-        return source.replace('_args: SelectProps', '');
-      },
-    },
+    return (
+      <Select
+        label={'Fruktsort'}
+        value={fruktOption}
+        helpText={'Velg frukten du liker best.'}
+        errorMessage={errorMessage}
+        hasError={error}
+        required
+        showRequiredMark
+        onBlur={handleBlur}
+        onChange={handleChange}
+      >
+        <Select.Option value={1}>{'Banan'}</Select.Option>
+        <Select.Option value={2}>{'Eple'}</Select.Option>
+        <Select.Option value={3}>{'Kiwi'}</Select.Option>
+        <Select.Option value={4}>{'Pære'}</Select.Option>
+        <Select.Option value={5}>{'Sitron'}</Select.Option>
+      </Select>
+    );
   },
-  /* _args i selve storyen må finnes slik at props i controls skjules og prefikses med _ for å unngå eslint klaging */
-  controls: {
-    exclude: /.*/,
-  },
-};
+} satisfies Story;
+Examples.parameters = exampleParameters;
