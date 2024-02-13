@@ -1,0 +1,39 @@
+@import '~@skatteetaten/ds-core-designtokens/designtokens/breakpoints';
+@import 'libs/ds-core-utils/src/styles';
+
+.pagination {
+  display: flex;
+  padding: 0;
+  row-gap: var(--spacing-s);
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+  @media (min-width: $breakpoint-s) {
+    justify-content: space-between;
+    max-width: var(--container-wide-content);
+    row-gap: initial;
+  }
+  &List {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    column-gap: var(--spacing-s);
+  }
+  &Summary {
+    &_hide {
+      @include sr-only;
+    }
+  }
+  &Element {
+    display: flex;
+    align-items: center;
+  }
+
+  &Button {
+    padding: 0 8px;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "pagination.NextButtonTitle": "Neste",
+  "pagination.PageSummary": "Viser {{range}} av {{total}}",
+  "pagination.PreviousButtonTitle": "Forrige",
+  "pagination.WrapperAriaLabel": "Sidevelger"
+}
