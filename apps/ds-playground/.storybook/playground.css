@@ -138,3 +138,7 @@ code {
   display: flex;
   gap: var(--spacing-s);
 }
+
+.headerCellWidth {
+  width: 200px;
+}

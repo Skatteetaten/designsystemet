@@ -1,22 +1,20 @@
-import { ChangeEvent } from 'react';
+import { ChangeEvent, useState, JSX } from 'react';
 
 import {
   dsI18n,
   formArrSize,
   getCommonFormVariantDefault,
 } from '@skatteetaten/ds-core-utils';
-import { useArgs } from '@storybook/preview-api';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { DatePicker } from '../../../../../libs/ds-forms/src/DatePicker/DatePicker';
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { DatePickerProps } from '../../../../../libs/ds-forms/src/DatePicker/DatePicker.types';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
+import { exampleParameters } from '../utils/stories.utils';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: DatePicker,
   title: 'Komponenter/DatePicker (under utvikling)',
   argTypes: {
@@ -26,11 +24,7 @@ export default {
     description: { table: { category: category.props } },
     label: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
-    hasError: {
-      table: {
-        category: category.props,
-      },
-    },
+    hasError: { table: { category: category.props } },
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
@@ -40,16 +34,8 @@ export default {
       },
     },
     helpText: { table: { category: category.props } },
-    hideLabel: {
-      table: {
-        category: category.props,
-      },
-    },
-    showRequiredMark: {
-      table: {
-        category: category.props,
-      },
-    },
+    hideLabel: { table: { category: category.props } },
+    showRequiredMark: { table: { category: category.props } },
     titleHelpSvg: {
       table: {
         category: category.props,
@@ -72,9 +58,8 @@ export default {
     placeholder: { table: { category: category.htmlAttribute } },
     readOnly: { table: { category: category.htmlAttribute } },
     required: {
-      table: {
-        category: category.htmlAttribute,
-      },
+      control: 'boolean',
+      table: { category: category.htmlAttribute },
     },
     value: { table: { category: category.htmlAttribute } },
     // Events
@@ -82,32 +67,33 @@ export default {
     onChange: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
   },
-  parameters: {
-    version: getVersion('ds-forms'),
-  },
-} satisfies Meta<typeof DatePicker>;
-
-const TemplateDefault: StoryFn<typeof DatePicker> = (args) => {
-  const [, setArgs] = useArgs();
-  return (
-    <DatePicker
-      {...args}
-      onChange={(e: ChangeEvent<HTMLInputElement>): void => {
-        setArgs({ value: e.target.value });
-      }}
-    />
-  );
-};
-
-export const Preview: StoryObj<DatePickerProps> = {
-  render: TemplateDefault,
-  name: 'Default',
-  argTypes: {
-    defaultValue: { control: { disable: true } },
-  },
   args: {
     label: 'Fødselsdato',
     defaultValue: undefined,
     value: '',
   },
-} satisfies StoryObj<typeof DatePicker>;
+  parameters: {
+    version: getVersion('ds-forms'),
+  },
+} satisfies Meta<typeof DatePicker>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Preview: Story = {} satisfies Story;
+
+export const Examples: Story = {
+  render: (_args): JSX.Element => {
+    const [value, setValue] = useState('');
+    return (
+      <DatePicker
+        label={'Fødselsdato'}
+        value={value}
+        onChange={(e: ChangeEvent<HTMLInputElement>): void => {
+          setValue(e.target.value);
+        }}
+      />
+    );
+  },
+} satisfies Story;
+Examples.parameters = exampleParameters;

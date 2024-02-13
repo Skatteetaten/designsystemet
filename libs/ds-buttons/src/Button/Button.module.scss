@@ -3,13 +3,10 @@
 
   &::before {
     position: absolute;
-    top: -7px; // border: 2px + offset: 1px
-    right: -7px; // border: 2px + offset: 1px
-    bottom: -7px; // border: 2px + offset: 1px
-    left: -7px; // border: 2px + offset: 1px
     border: 2px solid var(--semantic-interactive-main);
     border-radius: 3rem;
     content: '';
+    inset: -7px; // border: 2px + offset: 1px
   }
 }
 

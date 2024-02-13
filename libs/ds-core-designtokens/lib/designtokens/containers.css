@@ -20,7 +20,7 @@
 }
 
 /* breakpoint-xs */
-@media (min-width: 480px) {
+@media (width >= 480px) {
   :root,
   :host {
     --semantic-responsive-wide-content: var(--container-s);
@@ -28,7 +28,7 @@
 }
 
 /* breakpoint-s */
-@media (min-width: 640px) {
+@media (width >= 640px) {
   :root,
   :host {
     --semantic-responsive-container: var(--container-s);
@@ -39,7 +39,7 @@
 }
 
 /* breakpoint-m */
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
   :root,
   :host {
     --semantic-responsive-container: var(--container-m);
@@ -50,7 +50,7 @@
 }
 
 /* breakpoint-l */
-@media (min-width: 1366px) {
+@media (width >= 1366px) {
   :root,
   :host {
     --semantic-responsive-container: var(--container-l);
