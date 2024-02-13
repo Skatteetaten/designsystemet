@@ -7,11 +7,6 @@ import { Paragraph } from '@skatteetaten/ds-typography';
 import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { fireEvent, userEvent, within } from '@storybook/testing-library';
-import {
-  screen,
-  shadowQueries,
-  within as shadowWithin,
-} from 'shadow-dom-testing-library';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
@@ -374,8 +369,6 @@ const TemplateWithShadowDom: StoryFn<typeof Modal> = (args) => {
       <Button onClick={(): void => ref.current?.showModal()}>
         {'Åpne modal'}
       </Button>
-      {/*       <main className={'modalContainer'} tabIndex={-1}>
-       */}{' '}
       <Modal ref={ref} {...args} shadowRootNode={shadowRoot ?? undefined}>
         <Paragraph hasSpacing>{loremIpsum}</Paragraph>
         <div className={'flex'}>
@@ -387,7 +380,6 @@ const TemplateWithShadowDom: StoryFn<typeof Modal> = (args) => {
           </Button>
         </div>
       </Modal>
-      {/*       </main> */}
     </>
   );
 };
@@ -409,41 +401,10 @@ export const WithShadowDom = {
     dismissOnOutsideClick: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    // const element = document.querySelector('scrolltotop-customelement');
-    // const shadowRoot = element?.shadowRoot;
     // eslint-disable-next-line testing-library/no-node-access
     const customElement = canvasElement.querySelector(
       'modal-customelement'
     ) as HTMLElement;
     await expect(customElement).toBeInTheDocument();
-    // eslint-disable-next-line testing-library/no-node-access
-    const button = customElement?.shadowRoot?.querySelector(
-      'button'
-    ) as HTMLInputElement;
-
-    //    await expect(button).toBeInTheDocument();
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    await userEvent.click(button);
-    // const dialog = await shadowQueries.findByShadowRole('dialog');
-
-    const d = shadowWithin(customElement).getByShadowRole('dialog');
-    //console.log(d);
-
-    await userEvent.click(d);
-
-    // eslint-disable-next-line testing-library/no-node-access
-    const dialogElement = customElement?.shadowRoot?.querySelector(
-      'dialog'
-    ) as HTMLDialogElement;
-
-    //    userEvent.click(dialogElement);
-
-    //    const modal = dialogElement;
-    // const backdrop = within(customElement).getByRole('dialog', {
-    //   hidden: true,
-    // });
-    // await userEvent.click(backdrop);
-    //    await expect(dialogElement.open).toBe(false);
   },
 } satisfies Story;

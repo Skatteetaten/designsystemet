@@ -56,6 +56,10 @@ const meta = {
         defaultValue: { summary: getModalPaddingDefault() },
       },
     },
+    shadowRootNode: {
+      control: false,
+      table: { control: false, category: category.props },
+    },
     title: { table: { category: category.props } },
     variant: {
       table: {

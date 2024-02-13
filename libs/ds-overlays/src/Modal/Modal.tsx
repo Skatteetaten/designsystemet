@@ -64,7 +64,6 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
         const element = shadowRootNode
           ? (shadowRootNode?.activeElement as HTMLElement)
           : (event.target as HTMLElement);
-        console.log(`klikker på ${element}`);
         if (
           !(event.target instanceof HTMLElement) ||
           element?.tagName !== 'DIALOG'
