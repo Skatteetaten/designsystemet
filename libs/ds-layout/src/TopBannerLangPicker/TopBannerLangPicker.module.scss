@@ -15,6 +15,7 @@
 
 .menuButton {
   z-index: 1000;
+  padding-right: var(--spacing-xs);
 
   .iconWrapper {
     display: flex;

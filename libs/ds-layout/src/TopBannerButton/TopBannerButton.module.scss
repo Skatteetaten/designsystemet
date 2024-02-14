@@ -71,7 +71,8 @@
     height: fit-content;
     flex-direction: row;
     align-items: center;
-    padding: var(--spacing-xxs) var(--spacing-s);
+    padding: var(--spacing-xxs) var(--spacing-s) var(--spacing-xxs)
+      var(--spacing-xs);
     border-width: 3px;
     border-radius: var(--spacing-l);
     font-size: var(--font-size-m);
