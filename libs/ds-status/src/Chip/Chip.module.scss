@@ -1,0 +1,43 @@
+@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
+.chip {
+  display: inline-flex;
+  justify-content: center;
+  border: 2px solid var(--palette-graphite-0);
+  border-radius: var(--spacing-xs);
+  background-color: var(--palette-ochre-10);
+  color: var(--palette-graphite-100);
+  font-size: var(--font-size-reference);
+  gap: var(--spacing-xs);
+  line-height: var(--semantic-line-height-buttons);
+
+  .iconWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &_yellow {
+    background-color: var(--palette-ochre-10);
+  }
+
+  &_red {
+    background-color: var(--palette-burgundy-10);
+  }
+
+  &_green {
+    background-color: var(--palette-forest-10);
+  }
+
+  &_grey {
+    background-color: var(--palette-graphite-10);
+  }
+
+  &_medium {
+    padding: var(--spacing-xs) var(--spacing-s);
+  }
+
+  &_small {
+    padding: var(--spacing-xxs) var(--spacing-s);
+  }
+}

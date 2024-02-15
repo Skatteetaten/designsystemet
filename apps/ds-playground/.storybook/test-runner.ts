@@ -227,7 +227,8 @@ const config: TestRunnerConfig = {
   async postRender(page, context): Promise<void> {
     await page.waitForLoadState('domcontentloaded');
     await page.waitForLoadState('load');
-    //await page.waitForLoadState('networkidle'); //TODO hvorfor har denne begynt å henge? kan den erstattes av domcontentloaded ? https://github.com/microsoft/playwright/issues/19835
+    //BUG: networkidle henger når man oppdaterer tester samtidig som devserver med HMR kjører. Fungerer etter npm run build && npm run start:static
+    await page.waitForLoadState('networkidle');
     await page.evaluate(async () => await document.fonts.ready);
 
     const storyContext = (await getStoryContext(page, context)) as StoryContext;
