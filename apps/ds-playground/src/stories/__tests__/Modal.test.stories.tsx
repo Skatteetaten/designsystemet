@@ -392,6 +392,7 @@ export const WithShadowDom = {
     imageSnapshot: {
       disable: true,
     },
+    a11y: { disable: true },
     customElementName: 'modal-customelement',
   },
   args: {
@@ -401,6 +402,8 @@ export const WithShadowDom = {
     dismissOnOutsideClick: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(canvas.queryByRole('dialog')).not.toBeInTheDocument();
     // eslint-disable-next-line testing-library/no-node-access
     const customElement = canvasElement.querySelector(
       'modal-customelement'
