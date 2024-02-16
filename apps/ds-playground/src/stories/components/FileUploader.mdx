@@ -10,4 +10,9 @@ import * as FileUploaderStories from './FileUploader.stories';
 
 ## Example
 
+Dersom mockUpload er krysset av så vil det opprettes promises som har 50% sannsynlighet for å rejecte. Da får man sett både vellykket og feilet opplasting. Når mockUpload er slått av forsøker eksempelet å laste opp til http://localhost:9090/test
+
+I eksemplet under brukes hooken useFileUploader til å styre tilstanden til komponenten. Alternativt
+kan man velge å styre tilstanden selv.
+
 <Canvas of={FileUploaderStories.Example} />

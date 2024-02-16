@@ -104,7 +104,7 @@ export interface UploadedFile {
   /**
    * Brukes som key i rendring av lista med filer og til å oppdage duplikat av fil.
    * Komponenten faller tilbake på filnavn som key hvis man ikke oppgir id.
-   * */
+   */
   id?: string;
 }
 
