@@ -1,0 +1,94 @@
+@import 'libs/ds-core-utils/src/styles';
+
+.container {
+  min-width: 10rem;
+  max-width: 25rem;
+}
+
+.icon {
+  fill: var(--semantic-interactive-main);
+}
+
+.dropZone {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-m);
+  border: 3px var(--semantic-interactive-main) dashed;
+  border-radius: 0.5rem;
+  margin-top: var(--spacing-xs);
+  margin-bottom: var(--spacing-s);
+  background: var(--palette-denim-5);
+  color: var(--semantic-interactive-main);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium);
+  line-height: var(--semantic-line-height-buttons);
+  text-align: center;
+
+  &_error:not(:focus, :hover) {
+    border: 3px var(--semantic-danger-foreground) solid;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:hover,
+  &_dragging {
+    border-style: solid;
+    background: var(--semantic-interactive-background);
+    box-shadow: 0 0 0 4px var(--semantic-interactive-background);
+  }
+
+  &:focus {
+    outline: 2px solid var(--semantic-interactive-main);
+    outline-offset: 2px;
+  }
+
+  &:active {
+    border-color: var(--semantic-interactive-foreground);
+    box-shadow: none;
+    color: var(--semantic-interactive-foreground);
+    outline: none;
+
+    .icon {
+      fill: var(--semantic-interactive-foreground);
+    }
+  }
+}
+
+.fileInfo {
+  color: var(--palette-graphite-70);
+  font-size: var(--font-size-s);
+}
+
+.srOnly {
+  @include sr-only;
+}
+
+.fileFormatList {
+  font-weight: var(--font-weight-bold);
+}
+
+.fileList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.removePointerEvents {
+  pointer-events: none;
+}
+
+.alert {
+  margin: var(--spacing-s) 0;
+}
+
+.spinner {
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--semantic-line-height-buttons);
+}
+
+.innerLabel {
+  display: block;
+}

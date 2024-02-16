@@ -1,0 +1,125 @@
+@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@import 'libs/ds-core-utils/src/styles';
+
+.container {
+  position: relative;
+  width: fit-content;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 800;
+  background: rgb(255 255 255 / 80%);
+  inset: 0;
+}
+
+.menuButton {
+  z-index: 1000;
+
+  .iconWrapper {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-xs);
+  }
+
+  .flagIcon {
+    display: flex;
+    flex-shrink: 0;
+    padding: var(--spacing-xxs);
+
+    &Svg {
+      width: var(--size-medium);
+    }
+  }
+
+  .arrowMobile {
+    fill: var(--semantic-interactive-main);
+
+    @media (min-width: $breakpoint-s) {
+      display: none;
+    }
+  }
+
+  .arrowDesktop {
+    display: none;
+    fill: var(--semantic-interactive-main);
+
+    @media (min-width: $breakpoint-s) {
+      display: inline;
+    }
+  }
+
+  &:active {
+    .arrowMobile,
+    .arrowDesktop {
+      fill: var(--semantic-interactive-foreground);
+    }
+  }
+}
+
+.menu {
+  position: fixed;
+  z-index: 1000;
+  right: var(--spacing-m);
+  left: var(--spacing-m);
+  margin-top: var(--spacing-l);
+
+  &Arrow {
+    position: absolute;
+    z-index: 1100;
+    bottom: -1.5rem;
+    left: 20%;
+    width: 0;
+    height: 0;
+    border-right: 17px solid transparent;
+    border-bottom: 17px solid var(--palette-graphite-70);
+    border-left: 17px solid transparent;
+
+    &:last-child {
+      display: none;
+    }
+
+    &::after {
+      position: relative;
+      top: -20px;
+      left: -17px;
+      width: 0;
+      height: 0;
+      border-right: 17px solid transparent;
+      border-bottom: 17px solid var(--palette-graphite-0);
+      border-left: 17px solid transparent;
+      content: '';
+    }
+  }
+
+  @media (min-width: $breakpoint-s) {
+    position: absolute;
+    right: 0;
+    left: 0;
+  }
+}
+
+.list {
+  box-sizing: border-box;
+  padding: 0;
+  border: 1px solid var(--palette-graphite-70);
+  margin: 0;
+  box-shadow: 3px 2px 5px 0 var(--semantic-divider-30);
+  list-style-type: none;
+
+  @media (min-width: $breakpoint-s) {
+    width: 10.5rem; // TODO should start at breakpoint-xs
+  }
+
+  &Item {
+    border-bottom: 1px solid var(--palette-graphite-70);
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+}
+
+.srOnly {
+  @include sr-only;
+}

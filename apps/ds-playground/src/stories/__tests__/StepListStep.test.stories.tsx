@@ -31,6 +31,9 @@ const meta = {
     onNext: { table: { disable: true, category: category.props } },
     editButtonText: { table: { disable: true, category: category.props } },
     nextButtonText: { table: { disable: true, category: category.props } },
+    nextButtonHasSpinner: {
+      table: { disable: true, category: category.props },
+    },
     hasResultContentFullWidth: {
       table: { disable: true, category: category.props },
     },
@@ -174,12 +177,28 @@ export const WithEditAccessibleDescription = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const endreButton = canvas.getByText(
-      dsI18n.t('ds_collections:steplist.Edit')
-    );
+    const endreButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_collections:steplist.Edit'),
+    });
     expect(endreButton).toHaveAccessibleDescription('tittel');
   },
   parameters: {
     imageSnapshot: { disable: true },
+  },
+} satisfies Story;
+
+export const NextButtonWithSpinner = {
+  render: Template,
+  name: 'With Spinner In Next Button',
+  args: {
+    stepNumber: 1,
+    variant: 'active',
+    title: 'tittel',
+    children: loremIpsum,
+    nextButtonHasSpinner: true,
+    onNext: (): void => console.log('next'),
+  },
+  argTypes: {
+    nextButtonHasSpinner: { table: { disable: false } },
   },
 } satisfies Story;

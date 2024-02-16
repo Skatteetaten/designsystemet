@@ -1,16 +1,16 @@
-@import 'libs/ds-core-utils/src/styles.scss';
+@import 'libs/ds-core-utils/src/styles';
 
 .wrapper {
   // stylelint-disable-next-line property-no-vendor-prefix
   -webkit-mask-image: linear-gradient(
     to right,
-    rgba(0, 0, 0, 100%) 80%,
-    rgba(0, 0, 0, 0%)
+    rgb(0 0 0 / 100%) 80%,
+    rgb(0 0 0 / 0%)
   );
   mask-image: linear-gradient(
     to right,
-    rgba(0, 0, 0, 100%) 80%,
-    rgba(0, 0, 0, 20%)
+    rgb(0 0 0 / 100%) 80%,
+    rgb(0 0 0 / 20%)
   );
   overflow-x: auto;
 
@@ -18,13 +18,13 @@
     // stylelint-disable-next-line property-no-vendor-prefix
     -webkit-mask-image: linear-gradient(
       to left,
-      rgba(0, 0, 0, 100%) 80%,
-      rgba(0, 0, 0, 0%)
+      rgb(0 0 0 / 100%) 80%,
+      rgb(0 0 0 / 0%)
     );
     mask-image: linear-gradient(
       to left,
-      rgba(0, 0, 0, 100%) 80%,
-      rgba(0, 0, 0, 20%)
+      rgb(0 0 0 / 100%) 80%,
+      rgb(0 0 0 / 20%)
     );
   }
 }

@@ -198,12 +198,12 @@ export const WithColorsDarkBackground = {
   },
 } satisfies Story;
 
-const spinnerText = 'laster data';
+const spinnerTitle = 'laster data';
 export const WithHideText = {
   name: 'With HideTitle (B1)',
   args: {
     hideTitle: true,
-    children: spinnerText,
+    children: spinnerTitle,
   },
   argTypes: {
     hideTitle: { table: { disable: false } },
@@ -211,7 +211,7 @@ export const WithHideText = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     // vi må bruke findBy i stedet for getBY her siden det er en liten delay før teksten rendres
-    const spinnerTextElement = await canvas.findByText(spinnerText);
-    await expect(spinnerTextElement).toBeInTheDocument();
+    const spinnerTitleElement = await canvas.findByText(spinnerTitle);
+    await expect(spinnerTitleElement).toBeInTheDocument();
   },
 } satisfies Story;

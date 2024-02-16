@@ -1,6 +1,6 @@
 {
   "name": "@skatteetaten/ds-layout",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "groupId": "no.skatteetaten.aurora",
   "homepage": "https://www.skatteetaten.no/stilogtone/designsystemet/",
   "repository": {
@@ -17,7 +17,8 @@
     "@skatteetaten/ds-buttons": "*",
     "@skatteetaten/ds-core-utils": "*",
     "@skatteetaten/ds-typography": "*",
-    "@skatteetaten/ds-icons": "*"
+    "@skatteetaten/ds-icons": "*",
+    "@skatteetaten/ds-progress": "*"
   },
   "scripts": {}
 }

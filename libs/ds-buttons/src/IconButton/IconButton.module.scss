@@ -3,13 +3,10 @@
 
   &::before {
     position: absolute;
-    top: -5px; // border: 2px + offset: 1px
-    right: -5px; // border: 2px + offset: 1px
-    bottom: -5px; // border: 2px + offset: 1px
-    left: -5px; // border: 2px + offset: 1px
     border: 2px solid var(--semantic-interactive-main);
     border-radius: 12rem;
     content: '';
+    inset: -5px; // border: 2px + offset: 1px
   }
 }
 
@@ -25,6 +22,10 @@
   & .icon {
     display: block;
     fill: var(--semantic-interactive-main);
+  }
+
+  & .spinner {
+    padding: var(--spacing-xxs);
   }
 
   &_extraSmall {
@@ -87,6 +88,10 @@
 
     & .icon {
       fill: var(--semantic-interactive-foreground);
+    }
+
+    & .spinner {
+      --spinner-color: var(--semantic-interactive-foreground);
     }
   }
 

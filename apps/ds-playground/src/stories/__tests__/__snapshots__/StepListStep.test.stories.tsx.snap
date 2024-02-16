@@ -1,5 +1,74 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Tester/StepList/Step NextButtonWithSpinner smoke-test 1`] = `
+<div data-test-block="true">
+  <ol class="StepList_stepList__XjLpY ">
+    <li class="StepListStep_step__js1fz StepListStep_step_active__Pthdd ">
+      <div class="StepListStep_stepSideWrapper__Mshb7 "
+           tabindex="-1"
+           aria-current="step"
+      >
+        <span class="StepListStep_stepCircle__wWmPq 
+        StepListStep_stepCircle_active__44uNJ">
+          1
+        </span>
+        <div class="StepListStep_stepLine__BOJMv ">
+        </div>
+      </div>
+      <h3 id="steptitle-:ra:"
+          class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+      >
+        tittel
+      </h3>
+      <div class="StepListStep_stepContent__1uagT   
+          ">
+        <div>
+          Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+        </div>
+        <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  StepListStep_stepEditButton__4I4jx"
+                type="button"
+                aria-describedby="steptitle-:ra:"
+        >
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
+            </path>
+          </svg>
+          <span class>
+            Endre
+          </span>
+        </button>
+      </div>
+      <div class="StepListStep_nextLine__hWgXS">
+      </div>
+      <span class="StepListStep_buttonWrapper__mewkO">
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+ Button_hide__dLd9W">
+            Neste
+          </span>
+          <div aria-live="polite"
+               aria-atomic="true"
+               class="Spinner_spinner__RJ9Al Spinner_spinner_white__YLIF- Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC "
+          >
+            <div class="Spinner_spinnerAnimation__nAt8p ">
+            </div>
+            <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193 ">
+              Laster inn
+            </span>
+          </div>
+        </button>
+      </span>
+    </li>
+  </ol>
+</div>
+`;
+
 exports[`Tester/StepList/Step WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <ol class="StepList_stepList__XjLpY ">
@@ -41,7 +110,9 @@ exports[`Tester/StepList/Step WithAttributes play-test 1`] = `
             <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
             </path>
           </svg>
-          Endre
+          <span class>
+            Endre
+          </span>
         </button>
       </div>
     </li>
@@ -87,7 +158,9 @@ exports[`Tester/StepList/Step WithEditAccessibleDescription play-test 1`] = `
             <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
             </path>
           </svg>
-          Endre
+          <span class>
+            Endre
+          </span>
         </button>
       </div>
       <div class="StepListStep_nextLine__hWgXS">
@@ -241,7 +314,9 @@ exports[`Tester/StepList/Step WithRef play-test 1`] = `
             <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
             </path>
           </svg>
-          Endre
+          <span class>
+            Endre
+          </span>
         </button>
       </div>
     </li>

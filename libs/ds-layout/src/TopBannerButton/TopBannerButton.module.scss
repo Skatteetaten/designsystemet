@@ -1,0 +1,143 @@
+@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
+.button {
+  position: relative;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-xs) var(--spacing-xxs) var(--spacing-xxs);
+  border: 2px solid var(--palette-graphite-0);
+  border-radius: var(--spacing-xs);
+  background-color: var(--palette-graphite-0);
+  color: var(--semantic-interactive-main);
+  cursor: pointer;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--semantic-line-height-default);
+
+  .iconWrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .icon {
+    flex-shrink: 0;
+    padding: var(--spacing-xs);
+    fill: var(--semantic-interactive-main);
+  }
+
+  &Text {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &_filled {
+    .icon {
+      border-radius: 50%;
+      background-color: var(--semantic-interactive-main);
+      fill: var(--palette-graphite-0);
+    }
+  }
+
+  &:hover {
+    background-color: var(--semantic-interactive-background);
+  }
+
+  &:focus {
+    border-color: var(--semantic-interactive-main);
+    outline: none;
+  }
+
+  &:active {
+    border-color: var(--semantic-interactive-foreground);
+    background-color: var(--semantic-interactive-background);
+    color: var(--semantic-interactive-foreground);
+
+    .icon {
+      fill: var(--semantic-interactive-foreground);
+    }
+  }
+
+  &_filled:active {
+    .icon {
+      background-color: var(--semantic-interactive-foreground);
+      fill: var(--palette-graphite-0);
+    }
+  }
+
+  @media (min-width: $breakpoint-s) {
+    height: fit-content;
+    flex-direction: row;
+    align-items: center;
+    padding: var(--spacing-xxs) var(--spacing-s);
+    border-width: 3px;
+    border-radius: var(--spacing-l);
+    font-size: var(--font-size-m);
+    gap: var(--spacing-xs);
+    line-height: var(--semantic-line-height-buttons);
+
+    &:hover {
+      border-color: var(--semantic-interactive-main);
+      background-color: var(--semantic-interactive-background);
+    }
+
+    &:focus {
+      &::before {
+        position: absolute;
+        border: 2px solid var(--semantic-interactive-main);
+        border-radius: 3rem;
+        content: '';
+        inset: -7px;
+      }
+    }
+
+    &:active {
+      &::before {
+        position: absolute;
+        border: 2px solid var(--semantic-interactive-main);
+        border-radius: 3rem;
+        content: '';
+        inset: -7px;
+      }
+
+      background-color: var(--semantic-interactive-background);
+      transform: translateY(2px);
+    }
+
+    &_outline {
+      border-color: var(--semantic-interactive-main);
+
+      &:active {
+        border-color: var(--semantic-interactive-main);
+        color: var(--semantic-interactive-main);
+
+        .icon {
+          fill: var(--semantic-interactive-main);
+        }
+      }
+    }
+
+    &_filled {
+      border-color: var(--semantic-interactive-main);
+      background-color: var(--semantic-interactive-main);
+      color: var(--palette-graphite-0);
+
+      &:hover {
+        border-color: var(--semantic-interactive-foreground);
+        background-color: var(--semantic-interactive-foreground);
+
+        .icon {
+          background-color: var(--semantic-interactive-foreground);
+        }
+      }
+
+      &:active {
+        border-color: var(--semantic-interactive-foreground);
+        background-color: var(--semantic-interactive-foreground);
+        color: var(--palette-graphite-0);
+      }
+    }
+  }
+}

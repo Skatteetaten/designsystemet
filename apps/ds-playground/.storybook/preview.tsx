@@ -27,7 +27,8 @@ const LanguageUpdater: Decorator = (Story, context) => {
   }, [context.parameters.locale, updateGlobals]);
   useEffect(() => {
     dsI18n.changeLanguage(locale);
-    document.documentElement.setAttribute('lang', locale);
+    const lang = locale.substring(0, locale.indexOf('_'));
+    document.documentElement.setAttribute('lang', lang);
   }, [locale]);
   return <Story />;
 };
@@ -70,7 +71,10 @@ const DSViewports = {
 
 const parameters = {
   actions: { argTypesRegex: '^on.*' },
-  controls: { sort: 'alpha', hideNoControlsWarning: true },
+  controls: {
+    sort: 'requiredFirst',
+    hideNoControlsWarning: true,
+  },
   viewport: { viewports: DSViewports },
   options: {
     storySort: {

@@ -5,7 +5,9 @@ exports[`Tester/InlineButton Defaults play-test 1`] = `
   <button class="InlineButton_button__2aGtg   "
           type="button"
   >
-    Legg til rapport
+    <span class>
+      Legg til rapport
+    </span>
   </button>
 </div>
 `;
@@ -16,7 +18,9 @@ exports[`Tester/InlineButton WithAccesskey play-test 1`] = `
           accesskey="j"
           type="button"
   >
-    Legg til rapport
+    <span class>
+      Legg til rapport
+    </span>
   </button>
 </div>
 `;
@@ -27,7 +31,9 @@ exports[`Tester/InlineButton WithAriaDescribedby play-test 1`] = `
           type="button"
           aria-describedby="testid1234"
   >
-    Legg til rapport
+    <span class>
+      Legg til rapport
+    </span>
   </button>
 </div>
 `;
@@ -40,7 +46,9 @@ exports[`Tester/InlineButton WithAttributes play-test 1`] = `
           data-testid="123ID"
           type="button"
   >
-    Legg til rapport
+    <span class>
+      Legg til rapport
+    </span>
   </button>
 </div>
 `;
@@ -59,7 +67,9 @@ exports[`Tester/InlineButton WithCustomIcon smoke-test 1`] = `
       <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z">
       </path>
     </svg>
-    Legg til rapport
+    <span class>
+      Legg til rapport
+    </span>
   </button>
 </div>
 `;
@@ -70,7 +80,9 @@ exports[`Tester/InlineButton WithDisabled play-test 1`] = `
           disabled
           type="button"
   >
-    Legg til rapport
+    <span class>
+      Legg til rapport
+    </span>
   </button>
 </div>
 `;
@@ -90,7 +102,9 @@ exports[`Tester/InlineButton WithDisabledAndIcon smoke-test 1`] = `
       <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
       </path>
     </svg>
-    Legg til rapport
+    <span class>
+      Legg til rapport
+    </span>
   </button>
 </div>
 `;
@@ -100,7 +114,9 @@ exports[`Tester/InlineButton WithEventHandlers play-test 1`] = `
   <button class="InlineButton_button__2aGtg   "
           type="button"
   >
-    Knapp har blitt klikket på
+    <span class>
+      Knapp har blitt klikket på
+    </span>
   </button>
 </div>
 `;
@@ -119,7 +135,9 @@ exports[`Tester/InlineButton WithIcon play-test 1`] = `
       <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
       </path>
     </svg>
-    Legg til rapport
+    <span class>
+      Legg til rapport
+    </span>
   </button>
 </div>
 `;
@@ -129,7 +147,9 @@ exports[`Tester/InlineButton WithIconRight smoke-test 1`] = `
   <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 "
           type="button"
   >
-    Legg til rapport
+    <span class>
+      Legg til rapport
+    </span>
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
          viewbox="0 0 24 24"
          focusable="false"
@@ -148,7 +168,9 @@ exports[`Tester/InlineButton WithLongText smoke-test 1`] = `
   <button class="InlineButton_button__2aGtg   "
           type="button"
   >
-    Denne knappen har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert. Denne knappen har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert.
+    <span class>
+      Denne knappen har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert. Denne knappen har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert.
+    </span>
   </button>
 </div>
 `;
@@ -167,7 +189,9 @@ exports[`Tester/InlineButton WithLongTextAndIcon smoke-test 1`] = `
       <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
       </path>
     </svg>
-    Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert. Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert.
+    <span class>
+      Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert. Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert.
+    </span>
   </button>
 </div>
 `;
@@ -178,8 +202,127 @@ exports[`Tester/InlineButton WithRef play-test 1`] = `
           type="button"
           id="dummyIdForwardedFromRef"
   >
-    Legg til rapport
+    <span class>
+      Legg til rapport
+    </span>
   </button>
+</div>
+`;
+
+exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="flex bottomSpacingXL">
+    <button class="InlineButton_button__2aGtg   marginRightM"
+            type="button"
+    >
+      <span class>
+        Legg til rapport
+      </span>
+    </button>
+    <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  marginRightM"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
+        </path>
+      </svg>
+      <span class>
+        Legg til rapport
+      </span>
+    </button>
+    <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 "
+            type="button"
+    >
+      <span class>
+        Legg til rapport
+      </span>
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
+        </path>
+      </svg>
+    </button>
+  </div>
+  <div class="flex">
+    <button class="InlineButton_button__2aGtg   marginRightM"
+            type="button"
+    >
+      <span class="InlineButton_hide__u3ooR">
+        Legg til rapport
+      </span>
+      <div aria-live="polite"
+           aria-atomic="true"
+           class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt InlineButton_spinner__GesB1 "
+      >
+        <div class="Spinner_spinnerAnimation__nAt8p ">
+        </div>
+        <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193 ">
+          Laster inn
+        </span>
+      </div>
+    </button>
+    <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  marginRightM"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU InlineButton_hide__u3ooR"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
+        </path>
+      </svg>
+      <span class="InlineButton_hide__u3ooR">
+        Legg til rapport
+      </span>
+      <div aria-live="polite"
+           aria-atomic="true"
+           class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt InlineButton_spinner__GesB1 "
+      >
+        <div class="Spinner_spinnerAnimation__nAt8p ">
+        </div>
+        <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193 ">
+          Laster inn
+        </span>
+      </div>
+    </button>
+    <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 "
+            type="button"
+    >
+      <span class="InlineButton_hide__u3ooR">
+        Legg til rapport
+      </span>
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU InlineButton_hide__u3ooR"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
+        </path>
+      </svg>
+      <div aria-live="polite"
+           aria-atomic="true"
+           class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt InlineButton_spinner__GesB1 "
+      >
+        <div class="Spinner_spinnerAnimation__nAt8p ">
+        </div>
+        <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193 ">
+          Laster inn
+        </span>
+      </div>
+    </button>
+  </div>
 </div>
 `;
 
@@ -188,7 +331,9 @@ exports[`Tester/InlineButton WithType play-test 1`] = `
   <button class="InlineButton_button__2aGtg   "
           type="submit"
   >
-    Legg til rapport
+    <span class>
+      Legg til rapport
+    </span>
   </button>
 </div>
 `;

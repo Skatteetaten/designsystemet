@@ -31,13 +31,10 @@ $radio-transform-x: 2px;
 
       &::before {
         position: absolute;
-        top: -8px;
-        right: -8px;
-        bottom: -8px;
-        left: -8px;
         border: 2px solid var(--semantic-interactive-main);
         border-radius: 50%;
         content: '';
+        inset: -8px;
       }
     }
 

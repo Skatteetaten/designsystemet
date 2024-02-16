@@ -6,6 +6,7 @@ import {
   getCommonClassNameDefault,
 } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
+import { Spinner, SpinnerColor } from '@skatteetaten/ds-progress';
 
 import { ButtonProps } from './Button.types';
 import { getButtonVariantDefault } from './defaults';
@@ -19,12 +20,14 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
+      spinnerTitle,
       svgPath,
       variant = getButtonVariantDefault(),
       accessKey,
       disabled,
       type = getCommonButtonTypeDefault(),
       ariaDescribedby,
+      hasSpinner,
       onBlur,
       onClick,
       onFocus,
@@ -36,6 +39,18 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const concatenatedClassName = `${styles.button} ${
       styles[`button_${variant}`]
     } ${withIconClassName} ${className}`;
+    const hideClassName = hasSpinner ? styles.hide : '';
+    const getSpinnerColor = (): SpinnerColor => {
+      if (disabled) {
+        return 'black';
+      } else if (variant === 'primary') {
+        return 'white';
+      } else if (variant === 'danger') {
+        return 'black';
+      } else {
+        return 'blue';
+      }
+    };
     return (
       <button
         ref={ref}
@@ -52,11 +67,23 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         onFocus={onFocus}
       >
         {svgPath && (
-          <span className={styles.iconWrapper}>
+          <span className={`${styles.iconWrapper} ${hideClassName}`.trim()}>
             <Icon className={styles.icon} svgPath={svgPath} />
           </span>
         )}
-        <span className={styles.buttonText}>{children}</span>
+        <span className={`${styles.buttonText} ${hideClassName}`.trim()}>
+          {children}
+        </span>
+        {hasSpinner && (
+          <Spinner
+            className={styles.spinner}
+            color={getSpinnerColor()}
+            size={'small'}
+            hideTitle
+          >
+            {spinnerTitle}
+          </Spinner>
+        )}
       </button>
     );
   }
