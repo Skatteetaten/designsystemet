@@ -54,7 +54,7 @@ const defaultChildren = [
   <ErrorSummary.Error key={'errorSummaryError_2'} referenceId={'id_2'}>
     {'Selger du varer og tjenester for egen regning?'}
   </ErrorSummary.Error>,
-  false, // So we know the following  bug is fixed: https://jira.sits.no/browse/FRONT-1508
+  false,
 ];
 
 export const WithRef = {
