@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Checkbox, FileUploader, UploadedFile } from '@skatteetaten/ds-forms';
 import { FileUploaderProps } from '@skatteetaten/ds-forms';
-import { Paragraph } from '@skatteetaten/ds-typography';
 import { StoryObj, Meta, StoryFn } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
@@ -135,11 +134,6 @@ export const Example: StoryFn<typeof FileUploader> = () => {
 
   return (
     <>
-      <Paragraph className={'dummyPanelOverridesWidthAndPadding'}>
-        {
-          'Dersom mockUpload er krysset av så vil det opprettes promises som har 50% sannsynlighet for å rejecte. Da får man sett både vellykket og feilet opplasting. Når mockUpload er slått av forsøker eksempelet å laste opp til http://localhost:9090/test'
-        }
-      </Paragraph>
       <Checkbox
         checked={shouldMockUpload}
         onChange={() => setShouldMockUpload(!shouldMockUpload)}
@@ -183,7 +177,8 @@ export const Example: StoryFn<typeof FileUploader> = () => {
           }
 
           const succeeded: Array<UploadedFile> = [];
-          const failed: Array<{ name: string; reason: string }> = [];
+          const failed: Array<{ name: string; reason: string; id?: string }> =
+            [];
 
           let uploadPromises: Promise<MockUploadedFile>[] = [];
 
@@ -212,12 +207,14 @@ export const Example: StoryFn<typeof FileUploader> = () => {
               succeeded.push({
                 name: files[index].name,
                 href: result.value.href,
+                id: Math.random().toString(36).substring(2, 10),
               });
             } else if (result.status === 'rejected') {
               console.log('REJECT', result);
               failed.push({
                 name: files[index].name,
                 reason: result.reason.statusText,
+                id: Math.random().toString(36).substring(2, 10),
               });
             }
           });
@@ -229,7 +226,15 @@ export const Example: StoryFn<typeof FileUploader> = () => {
                 name,
                 errorMessage: reason,
               })),
-              [{ error, files: failed.map((file) => file.name) }],
+              [
+                {
+                  error,
+                  files: failed.map(({ name, id }) => ({
+                    name,
+                    id,
+                  })),
+                },
+              ],
               succeeded
             );
           } else {

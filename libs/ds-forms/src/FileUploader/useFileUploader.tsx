@@ -89,6 +89,15 @@ export const useFileUploader = <T,>(
     setUploadResult(undefined);
   };
 
+  const hasNameAndId = (
+    value: unknown
+  ): value is { name: string; id?: string } =>
+    typeof value === 'object' &&
+    value !== null &&
+    'name' in value &&
+    typeof value.name === 'string' &&
+    (('id' in value && typeof value.id === 'string') || 'id'! in value);
+
   const isUploadError = (
     uploadStatusData: unknown
   ): uploadStatusData is FileUploaderError => {
@@ -96,7 +105,7 @@ export const useFileUploader = <T,>(
       Array.isArray(uploadStatusData) &&
       !uploadStatusData.some((data) => {
         if (Array.isArray(data.files)) {
-          if (data.files.some((file: unknown) => typeof file !== 'string')) {
+          if (data.files.some((file: unknown) => !hasNameAndId(file))) {
             return true;
           }
 
@@ -114,14 +123,16 @@ export const useFileUploader = <T,>(
     }
     if (status.hasUploadFailed && isUploadError(status.data)) {
       return status.data?.map((error) => (
-        <>
-          <span key={error.error}>{`${error.error}:`}</span>
+        <React.Fragment key={error.error}>
+          <span>{`${error.error}:`}</span>
           <List>
             {error.files.map((file) => (
-              <List.Element key={file}>{file}</List.Element>
+              <List.Element key={file.id ?? file.name}>
+                {file.name}
+              </List.Element>
             ))}
           </List>
-        </>
+        </React.Fragment>
       ));
     } else {
       return status.uploadedFilesMessage;
