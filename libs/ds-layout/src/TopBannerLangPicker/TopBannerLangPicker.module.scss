@@ -15,7 +15,6 @@
 
 .menuButton {
   z-index: 1000;
-  padding-right: var(--spacing-xs);
 
   .iconWrapper {
     display: flex;
@@ -97,6 +96,7 @@
     position: absolute;
     right: 0;
     left: 0;
+    padding-right: var(--spacing-xs);
   }
 }
 
