@@ -2,7 +2,7 @@
 
 .username {
   &Button {
-    max-width: 5.25rem;
+    max-width: 4.5rem;
 
     @media (min-width: $breakpoint-xs) {
       max-width: 6.25rem;
