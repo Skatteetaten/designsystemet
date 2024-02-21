@@ -56,20 +56,18 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
     if (imageSource) {
       panelGraphicClassName = styles.panel_graphicImage;
     } else if (renderIcon) {
-      panelGraphicClassName = styles.panel_graphicIcon;
+      panelGraphicClassName = `${styles.panel_graphicIcon} ${
+        hideGraphicMobile ? styles.panel_graphicIconHide : ''
+      }`;
     }
     const panelClassName =
       `${styles.panel} ${panelVariantClassName} ${panelColorClassName} ${panelPaddingClassName} ${panelSpacingClassName} ${panelGraphicClassName} ${className}`.trim();
 
     const graphicClassName = `${styles.panelGraphic} ${
-      hideGraphicMobile ? styles.panelGraphic_hide : ''
+      hideGraphicMobile ? styles.panelGraphicHide : ''
     }`.trim();
-    const spaceAndIconClassName = `${styles.panelSpace} ${
-      renderIcon ? graphicClassName : ''
-    }`.trim();
-    const spaceClassName = imageSource
-      ? styles.panelSpace_hide
-      : styles.panelSpace;
+    const iconClassName = `${renderIcon ? graphicClassName : ''}`.trim();
+    const articleClassName = `${styles.panelArticle}`.trim();
 
     return (
       <div
@@ -80,20 +78,18 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
         data-testid={dataTestId}
       >
         {!renderIcon && imageSource && (
-          <div className={`${graphicClassName} ${styles.panelImageContainer}`}>
+          <div className={`${graphicClassName}`}>
             <img
               src={imageSource}
               alt={imageSourceAltText ?? ''}
-              className={styles.panelImageContainerImage}
+              className={styles.panelImage}
             />
           </div>
         )}
-        {!imageSource && (
-          <div className={spaceAndIconClassName}>
-            {renderIcon && renderIcon()}
-          </div>
+        {!imageSource && renderIcon && (
+          <div className={iconClassName}>{renderIcon?.()}</div>
         )}
-        <div className={styles.panelArticle}>
+        <div className={articleClassName}>
           {title && (
             <Heading
               as={titleAs}
@@ -116,7 +112,6 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
           )}
           {children}
         </div>
-        <div className={spaceClassName}></div>
       </div>
     );
   }

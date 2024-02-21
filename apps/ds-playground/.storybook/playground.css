@@ -133,3 +133,8 @@ code {
   display: flex;
   justify-content: flex-end;
 }
+
+.topbannerButtonContainer {
+  display: flex;
+  gap: var(--spacing-s);
+}

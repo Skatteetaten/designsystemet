@@ -49,7 +49,9 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
               <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
               </path>
             </svg>
-            Endre
+            <span class>
+              Endre
+            </span>
           </button>
         </div>
       </li>
@@ -196,15 +198,11 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
           neutralt resultat
         </h3>
         <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0  StepListStep_resultIntro__Ok83p">
-          <div class="Panel_panelSpace__J2keW">
-          </div>
           <div class="Panel_panelArticle__4fhzq">
             <h3 class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ ">
               Intro til steget
             </h3>
             innhold
-          </div>
-          <div class="Panel_panelSpace__J2keW">
           </div>
         </div>
         <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_neutralResult__cWoyS  
@@ -257,7 +255,9 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
               <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
               </path>
             </svg>
-            Endre
+            <span class>
+              Endre
+            </span>
           </button>
         </div>
       </li>
@@ -404,15 +404,11 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
           neutralt resultat
         </h3>
         <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0  StepListStep_resultIntro__Ok83p">
-          <div class="Panel_panelSpace__J2keW">
-          </div>
           <div class="Panel_panelArticle__4fhzq">
             <h3 class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ ">
               Intro til steget
             </h3>
             innhold
-          </div>
-          <div class="Panel_panelSpace__J2keW">
           </div>
         </div>
         <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_neutralResult__cWoyS  
@@ -465,7 +461,9 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
               <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
               </path>
             </svg>
-            Endre
+            <span class>
+              Endre
+            </span>
           </button>
         </div>
       </li>
@@ -612,15 +610,11 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
           neutralt resultat
         </h3>
         <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0  StepListStep_resultIntro__Ok83p">
-          <div class="Panel_panelSpace__J2keW">
-          </div>
           <div class="Panel_panelArticle__4fhzq">
             <h3 class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ ">
               Intro til steget
             </h3>
             innhold
-          </div>
-          <div class="Panel_panelSpace__J2keW">
           </div>
         </div>
         <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_neutralResult__cWoyS  
@@ -751,8 +745,6 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
         Vårt veiledende svar
       </h3>
       <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_forest__8dVE7 Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0  StepListStep_resultIntro__Ok83p">
-        <div class="Panel_panelSpace__J2keW">
-        </div>
         <div class="Panel_panelArticle__4fhzq">
           <h4 class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ ">
             Virksomheten skal registreres som særavgiftspliktig.
@@ -760,8 +752,6 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
           <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
             For å bli registrert må du sende en søknad til Skatteetaten. Nedenfor beskriver vi hvordan du går frem og hva du må dokumentere.
           </p>
-        </div>
-        <div class="Panel_panelSpace__J2keW">
         </div>
       </div>
       <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_positiveResult__yObTM  
@@ -836,7 +826,9 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
               <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
               </path>
             </svg>
-            Endre
+            <span class>
+              Endre
+            </span>
           </button>
         </div>
       </li>
@@ -983,15 +975,11 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
           neutralt resultat
         </h3>
         <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0  StepListStep_resultIntro__Ok83p">
-          <div class="Panel_panelSpace__J2keW">
-          </div>
           <div class="Panel_panelArticle__4fhzq">
             <h3 class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ ">
               Intro til steget
             </h3>
             innhold
-          </div>
-          <div class="Panel_panelSpace__J2keW">
           </div>
         </div>
         <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_neutralResult__cWoyS  

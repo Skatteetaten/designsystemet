@@ -1,0 +1,17 @@
+import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import * as TopBannerExternalStories from './TopBannerExternal.stories';
+
+<Meta of={TopBannerExternalStories} />
+
+# TopBannerExternal
+
+<Primary />
+<Controls />
+
+## Example
+
+For å åpne eller lukke hovedmenyen kan man bruke ref.openMenu() og ref.closeMenu(). Eksempelet under
+viser et tilfelle hvor vi har navigasjonslenker i menyen og ønsker at menyen skal lukkes når lenkene
+brukes til å navgiere til ny side.
+
+<Canvas of={TopBannerExternalStories.ExampleSource} />

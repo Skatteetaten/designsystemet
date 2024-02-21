@@ -1,0 +1,46 @@
+@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
+.skipLink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-color: var(--semantic-interactive-background);
+  color: var(--semantic-interactive-main);
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--semantic-line-height-article);
+  transform: translateY(-200%);
+  transition: transform 0.3s;
+
+  &:focus {
+    position: static;
+    outline: 0;
+    transform: translateY(0);
+  }
+
+  &Content {
+    display: flex;
+    max-width: var(--semantic-responsive-container);
+    align-items: center;
+    justify-content: center;
+    padding: var(--semantic-responsive-container-padding);
+    padding-top: var(--spacing-m);
+    padding-bottom: var(--spacing-m);
+    margin: auto;
+    gap: var(--spacing-s);
+
+    @media (min-width: $breakpoint-s) {
+      padding-top: var(--spacing-s);
+      padding-bottom: var(--spacing-s);
+    }
+
+    @media (min-width: $breakpoint-m) {
+      justify-content: flex-start;
+    }
+  }
+}
+
+.icon {
+  fill: var(--semantic-interactive-main);
+}

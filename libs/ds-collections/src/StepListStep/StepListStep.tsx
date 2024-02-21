@@ -28,6 +28,7 @@ export const StepListStep = forwardRef<HTMLLIElement, StepListStepProps>(
       introTitle,
       introTitleAs,
       nextButtonText,
+      nextButtonHasSpinner,
       stepNumber,
       svgPath,
       svgTitle,
@@ -157,7 +158,7 @@ export const StepListStep = forwardRef<HTMLLIElement, StepListStepProps>(
           <>
             <div className={styles.nextLine}></div>
             <span className={styles.buttonWrapper}>
-              <Button onClick={onNext}>
+              <Button hasSpinner={nextButtonHasSpinner} onClick={onNext}>
                 {nextButtonText ?? t('steplist.Next')}
               </Button>
             </span>

@@ -27,6 +27,10 @@
     fill: var(--semantic-interactive-main);
   }
 
+  & .spinner {
+    padding: var(--spacing-xxs);
+  }
+
   &_extraSmall {
     padding: var(--spacing-xxs) var(--spacing-xxs);
     border-width: 1px;
@@ -87,6 +91,10 @@
 
     & .icon {
       fill: var(--semantic-interactive-foreground);
+    }
+
+    & .spinner {
+      --spinner-color: var(--semantic-interactive-foreground);
     }
   }
 

@@ -21,6 +21,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
       svgPath,
       href,
       target,
+      download,
       ariaDescribedby,
       onClick,
       children,
@@ -53,6 +54,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
         rel={target === '_blank' ? 'noreferrer' : undefined}
         target={target}
         aria-describedby={ariaDescribedby}
+        download={download}
         onClick={onClick}
       >
         {svgPath && (

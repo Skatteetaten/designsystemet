@@ -1,7 +1,7 @@
 {
   "name": "@skatteetaten/ds-overlays",
   "groupId": "no.skatteetaten.aurora",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "homepage": "https://www.skatteetaten.no/stilogtone/designsystemet/",
   "repository": {
     "type": "git",
@@ -17,7 +17,8 @@
     "@skatteetaten/ds-core-utils": "*",
     "@skatteetaten/ds-buttons": "*",
     "@skatteetaten/ds-icons": "*",
-    "@skatteetaten/ds-typography": "*"
+    "@skatteetaten/ds-typography": "*",
+    "@skatteetaten/ds-progress": "*"
   },
   "scripts": {}
 }

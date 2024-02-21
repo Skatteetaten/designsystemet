@@ -3,7 +3,7 @@ import {
   ComponentPropsWithoutRef,
   ForwardRefExoticComponent,
   RefAttributes,
-  JSX,
+  ReactNode,
 } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
@@ -44,7 +44,7 @@ interface RadioGroupComponentCommonProps
     RequiredFieldsetHTMLAttributes,
     BaseProps {
   /** Radio-komponenter */
-  children: JSX.Element | JSX.Element[];
+  children: ReactNode;
   /** Skjuler navn på gruppen, tilleggstekst og hjelpetekst, men er fortsatt synlig for skjermleser */
   hideLegend?: FieldsetProps['hideLegend'];
   /** Navn på gruppen. */

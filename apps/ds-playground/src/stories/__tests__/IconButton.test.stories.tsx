@@ -39,6 +39,8 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    hasSpinner: { table: { disable: true } },
+    spinnerTitle: { table: { disable: true } },
     isOutlined: { table: { disable: true } },
     size: {
       table: { disable: true },
@@ -390,5 +392,81 @@ export const WithEventHandlers = {
     await waitFor(() => expect(args.onBlur).toHaveBeenCalled());
     await userEvent.click(iconButton);
     await waitFor(() => expect(args.onClick).toHaveBeenCalled());
+  },
+} satisfies Story;
+
+const TemplateWithSpinner: StoryFn<typeof IconButton> = (args) => (
+  <>
+    <div className={'bottomSpacingXL'}>
+      <IconButton
+        {...args}
+        hasSpinner={false}
+        size={'extraSmall'}
+        className={'marginRightM'}
+        isOutlined
+      />
+      <IconButton
+        {...args}
+        hasSpinner={false}
+        size={'small'}
+        className={'marginRightM'}
+        isOutlined
+      />
+      <IconButton
+        {...args}
+        hasSpinner={false}
+        className={'marginRightM'}
+        isOutlined
+      />
+      <IconButton {...args} hasSpinner={false} size={'large'} isOutlined />
+    </div>
+    <div className={'bottomSpacingXL'}>
+      <IconButton
+        {...args}
+        size={'extraSmall'}
+        className={'marginRightM'}
+        isOutlined
+      />
+      <IconButton
+        {...args}
+        size={'small'}
+        className={'marginRightM'}
+        isOutlined
+      />
+      <IconButton {...args} className={'marginRightM'} isOutlined />
+      <IconButton {...args} size={'large'} isOutlined />
+    </div>
+    <div className={'bottomSpacingXL'}>
+      <IconButton
+        {...args}
+        hasSpinner={false}
+        size={'extraSmall'}
+        className={'marginRightM'}
+      />
+      <IconButton
+        {...args}
+        hasSpinner={false}
+        size={'small'}
+        className={'marginRightM'}
+      />
+      <IconButton {...args} hasSpinner={false} className={'marginRightM'} />
+      <IconButton {...args} hasSpinner={false} size={'large'} />
+    </div>
+    <IconButton {...args} size={'extraSmall'} className={'marginRightM'} />
+    <IconButton {...args} size={'small'} className={'marginRightM'} />
+    <IconButton {...args} className={'marginRightM'} />
+    <IconButton {...args} size={'large'} />
+  </>
+);
+
+export const WithSpinner = {
+  render: TemplateWithSpinner,
+  name: 'With Spinner (A4)',
+  args: {
+    ...defaultArgs,
+    hasSpinner: true,
+  },
+  argTypes: {
+    hasSpinner: { table: { disable: false } },
   },
 } satisfies Story;

@@ -1,0 +1,24 @@
+@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
+.username {
+  &Button {
+    max-width: 4.5rem;
+
+    @media (min-width: $breakpoint-xs) {
+      max-width: 6.25rem;
+    }
+
+    @media (min-width: $breakpoint-s) {
+      max-width: 10.75rem;
+    }
+
+    @media (min-width: $breakpoint-m) {
+      max-width: 20rem;
+    }
+  }
+
+  &Text {
+    width: 100%;
+    text-overflow: ellipsis;
+  }
+}

@@ -1,0 +1,451 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/TopBanner/TopBannerUserButton (intern) Defaults play-test 1`] = `
+<div data-test-block="true">
+  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
+          type="button"
+  >
+    <span class="TopBannerButton_iconWrapper__bu153">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r2:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r2:">
+          Innlogget som
+        </title>
+        <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+        </path>
+      </svg>
+    </span>
+    <span class="TopBannerButton_buttonText__guqHQ ">
+      Meg selv
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerUserButton (intern) WithAllRoles play-test 1`] = `
+<div data-test-block="true">
+  <div class="topbannerButtonContainer">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL"
+            type="button"
+    >
+      <span class="TopBannerButton_iconWrapper__bu153">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r3:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r3:">
+            Innlogget som
+          </title>
+          <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+          </path>
+        </svg>
+      </span>
+      <span class="TopBannerButton_buttonText__guqHQ ">
+        Meg selv
+      </span>
+    </button>
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY"
+            type="button"
+    >
+      <span class="TopBannerButton_iconWrapper__bu153">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r4:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r4:">
+            Innlogget som annen
+          </title>
+          <path d="M15.94 14c5.735.35 6.043 3.62 6.06 3.97V20h-4v-2a5.321 5.321 0 0 0-2.06-4ZM9 14c6.65 0 6.982 3.61 7 3.971V20H2v-2.029C2.019 17.61 2.35 14 9 14Zm6-9a3.5 3.5 0 1 1 0 7 3.39 3.39 0 0 1-1.93-.59 5.001 5.001 0 0 0 0-5.82A3.39 3.39 0 0 1 15 5ZM9 5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Z">
+          </path>
+        </svg>
+      </span>
+      <span class="TopBannerButton_buttonText__guqHQ TopBannerUserButton_usernameText__u85YY">
+        SØRUMSAND-SCHOENBERG WILLIAM
+      </span>
+    </button>
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY"
+            type="button"
+    >
+      <span class="TopBannerButton_iconWrapper__bu153">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r5:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r5:">
+            Innlogget som virksomhet
+          </title>
+          <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+          </path>
+        </svg>
+      </span>
+      <span class="TopBannerButton_buttonText__guqHQ TopBannerUserButton_usernameText__u85YY">
+        Navn på virksomhet
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerUserButton (intern) WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <button id="htmlid"
+          class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx dummyClassname"
+          lang="nb"
+          data-testid="123ID"
+          type="button"
+  >
+    <span class="TopBannerButton_iconWrapper__bu153">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r1:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r1:">
+          Innlogget som
+        </title>
+        <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+        </path>
+      </svg>
+    </span>
+    <span class="TopBannerButton_buttonText__guqHQ ">
+      Meg selv
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointM smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="topbannerButtonContainer">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL"
+            type="button"
+    >
+      <span class="TopBannerButton_iconWrapper__bu153">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:rf:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:rf:">
+            Innlogget som
+          </title>
+          <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+          </path>
+        </svg>
+      </span>
+      <span class="TopBannerButton_buttonText__guqHQ ">
+        Meg selv
+      </span>
+    </button>
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY"
+            type="button"
+    >
+      <span class="TopBannerButton_iconWrapper__bu153">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:rg:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:rg:">
+            Innlogget som annen
+          </title>
+          <path d="M15.94 14c5.735.35 6.043 3.62 6.06 3.97V20h-4v-2a5.321 5.321 0 0 0-2.06-4ZM9 14c6.65 0 6.982 3.61 7 3.971V20H2v-2.029C2.019 17.61 2.35 14 9 14Zm6-9a3.5 3.5 0 1 1 0 7 3.39 3.39 0 0 1-1.93-.59 5.001 5.001 0 0 0 0-5.82A3.39 3.39 0 0 1 15 5ZM9 5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Z">
+          </path>
+        </svg>
+      </span>
+      <span class="TopBannerButton_buttonText__guqHQ TopBannerUserButton_usernameText__u85YY">
+        SØRUMSAND-SCHOENBERG WILLIAM
+      </span>
+    </button>
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY"
+            type="button"
+    >
+      <span class="TopBannerButton_iconWrapper__bu153">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:rh:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:rh:">
+            Innlogget som virksomhet
+          </title>
+          <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+          </path>
+        </svg>
+      </span>
+      <span class="TopBannerButton_buttonText__guqHQ TopBannerUserButton_usernameText__u85YY">
+        Navn på virksomhet
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointS smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="topbannerButtonContainer">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL"
+            type="button"
+    >
+      <span class="TopBannerButton_iconWrapper__bu153">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:rc:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:rc:">
+            Innlogget som
+          </title>
+          <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+          </path>
+        </svg>
+      </span>
+      <span class="TopBannerButton_buttonText__guqHQ ">
+        Meg selv
+      </span>
+    </button>
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY"
+            type="button"
+    >
+      <span class="TopBannerButton_iconWrapper__bu153">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:rd:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:rd:">
+            Innlogget som annen
+          </title>
+          <path d="M15.94 14c5.735.35 6.043 3.62 6.06 3.97V20h-4v-2a5.321 5.321 0 0 0-2.06-4ZM9 14c6.65 0 6.982 3.61 7 3.971V20H2v-2.029C2.019 17.61 2.35 14 9 14Zm6-9a3.5 3.5 0 1 1 0 7 3.39 3.39 0 0 1-1.93-.59 5.001 5.001 0 0 0 0-5.82A3.39 3.39 0 0 1 15 5ZM9 5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Z">
+          </path>
+        </svg>
+      </span>
+      <span class="TopBannerButton_buttonText__guqHQ TopBannerUserButton_usernameText__u85YY">
+        SØRUMSAND-SCHOENBERG WILLIAM
+      </span>
+    </button>
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY"
+            type="button"
+    >
+      <span class="TopBannerButton_iconWrapper__bu153">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:re:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:re:">
+            Innlogget som virksomhet
+          </title>
+          <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+          </path>
+        </svg>
+      </span>
+      <span class="TopBannerButton_buttonText__guqHQ TopBannerUserButton_usernameText__u85YY">
+        Navn på virksomhet
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerUserButton (intern) WithBreakpointXS smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="topbannerButtonContainer">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL"
+            type="button"
+    >
+      <span class="TopBannerButton_iconWrapper__bu153">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r9:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r9:">
+            Innlogget som
+          </title>
+          <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+          </path>
+        </svg>
+      </span>
+      <span class="TopBannerButton_buttonText__guqHQ ">
+        Meg selv
+      </span>
+    </button>
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY"
+            type="button"
+    >
+      <span class="TopBannerButton_iconWrapper__bu153">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:ra:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:ra:">
+            Innlogget som annen
+          </title>
+          <path d="M15.94 14c5.735.35 6.043 3.62 6.06 3.97V20h-4v-2a5.321 5.321 0 0 0-2.06-4ZM9 14c6.65 0 6.982 3.61 7 3.971V20H2v-2.029C2.019 17.61 2.35 14 9 14Zm6-9a3.5 3.5 0 1 1 0 7 3.39 3.39 0 0 1-1.93-.59 5.001 5.001 0 0 0 0-5.82A3.39 3.39 0 0 1 15 5ZM9 5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Z">
+          </path>
+        </svg>
+      </span>
+      <span class="TopBannerButton_buttonText__guqHQ TopBannerUserButton_usernameText__u85YY">
+        SØRUMSAND-SCHOENBERG WILLIAM
+      </span>
+    </button>
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY"
+            type="button"
+    >
+      <span class="TopBannerButton_iconWrapper__bu153">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:rb:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:rb:">
+            Innlogget som virksomhet
+          </title>
+          <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+          </path>
+        </svg>
+      </span>
+      <span class="TopBannerButton_buttonText__guqHQ TopBannerUserButton_usernameText__u85YY">
+        Navn på virksomhet
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerUserButton (intern) WithMobileScreen smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="topbannerButtonContainer">
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL"
+            type="button"
+    >
+      <span class="TopBannerButton_iconWrapper__bu153">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r6:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r6:">
+            Innlogget som
+          </title>
+          <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+          </path>
+        </svg>
+      </span>
+      <span class="TopBannerButton_buttonText__guqHQ ">
+        Meg selv
+      </span>
+    </button>
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY"
+            type="button"
+    >
+      <span class="TopBannerButton_iconWrapper__bu153">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r7:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r7:">
+            Innlogget som annen
+          </title>
+          <path d="M15.94 14c5.735.35 6.043 3.62 6.06 3.97V20h-4v-2a5.321 5.321 0 0 0-2.06-4ZM9 14c6.65 0 6.982 3.61 7 3.971V20H2v-2.029C2.019 17.61 2.35 14 9 14Zm6-9a3.5 3.5 0 1 1 0 7 3.39 3.39 0 0 1-1.93-.59 5.001 5.001 0 0 0 0-5.82A3.39 3.39 0 0 1 15 5ZM9 5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Z">
+          </path>
+        </svg>
+      </span>
+      <span class="TopBannerButton_buttonText__guqHQ TopBannerUserButton_usernameText__u85YY">
+        SØRUMSAND-SCHOENBERG WILLIAM
+      </span>
+    </button>
+    <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx bottomSpacingXL TopBannerUserButton_usernameButton__06VaY"
+            type="button"
+    >
+      <span class="TopBannerButton_iconWrapper__bu153">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r8:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r8:">
+            Innlogget som virksomhet
+          </title>
+          <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+          </path>
+        </svg>
+      </span>
+      <span class="TopBannerButton_buttonText__guqHQ TopBannerUserButton_usernameText__u85YY">
+        Navn på virksomhet
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerUserButton (intern) WithRef play-test 1`] = `
+<div data-test-block="true">
+  <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
+          type="button"
+          id="dummyIdForwardedFromRef"
+  >
+    <span class="TopBannerButton_iconWrapper__bu153">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r0:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r0:">
+          Innlogget som
+        </title>
+        <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+        </path>
+      </svg>
+    </span>
+    <span class="TopBannerButton_buttonText__guqHQ ">
+      Meg selv
+    </span>
+  </button>
+</div>
+`;
