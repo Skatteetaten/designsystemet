@@ -32,7 +32,10 @@ export type UploadResult = {
 export interface FileUploaderCommonProps
   extends FileUploaderHTMLAttributes,
     BaseProps {
-  /** Aksepterte filformater */
+  /**
+   * Styrer hvilke filformater som er mulig å velge i operativsystemets filutforsker.
+   * Med Drag-and-drop vil det fortsatt være mulig å slippe inn alle filer.
+   */
   acceptedFileFormats?: Array<string>;
   /** Overskriver av default tekst for aksepterte filformater */
   acceptedFileFormatsDisplay?: string;
@@ -60,9 +63,14 @@ export interface FileUploaderCommonProps
   fileIconTitle?: string;
   /** Overskriver default tittel på ikonet som viser at opplasting av fil er vellykket */
   successIconTitle?: string;
-  /** Liste med opplastede filer som skal vises under filopplasteren */
+  /**
+   * Liste med opplastede filer som skal vises under filopplasteren.
+   * Det er mulig å angi href dersom filen skal kunne lastes ned igjen.
+   * Det er også mulig å angi en id som brukes til key i rendring av lista med filer.
+   * Hvis id ikke blir satt så faller komponenten tilbake på filnavn. Det betyr at dersom det er behov
+   * for å kunne laste opp flere ulike filer med identisk filnavn så er det nødvendig å anngi unik id.
+   */
   uploadedFiles?: Array<UploadedFile>;
-
   /**
    * Etter at en eller flere filer ble forsøkt lastet opp skal bruker få en oppsummering av
    * hvordan opplastingen gikk. uploadResult.hasUploadFailed angir om opplasting var vellykket og
@@ -85,7 +93,7 @@ export interface FileUploaderCommonProps
    * @param {string} file filen som skal fjernes
    * @returns {boolean} om DELETE kallet var vellykket
    */
-  onFileDelete?: (file: string) => boolean;
+  onFileDelete?: (file: UploadedFile) => boolean;
 }
 
 export interface UploadedFile {
@@ -93,6 +101,11 @@ export interface UploadedFile {
   name: string;
   /** lenke til nedlasting av filen */
   href?: string;
+  /**
+   * Brukes som key i rendring av lista med filer og til å oppdage duplikat av fil.
+   * Komponenten faller tilbake på filnavn som key hvis man ikke oppgir id.
+   */
+  id?: string;
 }
 
 type FileUploaderDiscriminatedErrorProps =
