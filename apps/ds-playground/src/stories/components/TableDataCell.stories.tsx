@@ -8,7 +8,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Table.DataCell,
   title: 'Komponenter/Table/DataCell',
   argTypes: {
@@ -32,17 +32,17 @@ export default {
     // HTML
     colSpan: { table: { category: category.htmlAttribute } },
     rowSpan: { table: { category: category.htmlAttribute } },
-    scope: {
-      table: { category: category.htmlAttribute },
-    },
+    scope: { table: { category: category.htmlAttribute } },
+  },
+  args: {
+    children: 'cell 1',
   },
   parameters: {
     version: getVersion('ds-table'),
   },
 } satisfies Meta<typeof Table.DataCell>;
 
-export const Preview = {
-  args: {
-    children: 'Example DataCell',
-  },
-} satisfies StoryObj<typeof Table.DataCell>;
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Preview: Story = {} satisfies Story;

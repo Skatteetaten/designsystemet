@@ -1,6 +1,5 @@
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { FileUploader } from '@skatteetaten/ds-forms';
-import { FileUploaderProps } from '@skatteetaten/ds-forms';
+import { FileUploader, FileUploaderProps } from '@skatteetaten/ds-forms';
 import { expect } from '@storybook/jest';
 import { StoryObj, Meta, StoryFn } from '@storybook/react';
 import { userEvent, waitFor, within } from '@storybook/testing-library';
@@ -320,7 +319,7 @@ export const WithFileChange: StoryObj<FileUploaderProps> = {
     );
     await userEvent.click(deleteButton);
     await waitFor(() =>
-      expect(args.onFileDelete).toHaveBeenCalledWith('file.txt')
+      expect(args.onFileDelete).toHaveBeenCalledWith({ name: 'file.txt' })
     );
   },
   parameters: {

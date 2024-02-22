@@ -81,8 +81,9 @@
 
     &::after {
       position: relative;
-      top: -20px;
+      top: 1px;
       left: -17px;
+      display: block;
       width: 0;
       height: 0;
       border-right: 17px solid transparent;
@@ -96,6 +97,7 @@
     position: absolute;
     right: 0;
     left: 0;
+    padding-right: var(--spacing-xs);
   }
 }
 

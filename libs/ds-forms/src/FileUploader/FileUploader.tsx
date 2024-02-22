@@ -13,7 +13,11 @@ import { AttachFileIcon } from '@skatteetaten/ds-icons';
 import { Spinner } from '@skatteetaten/ds-progress';
 import { Alert } from '@skatteetaten/ds-status';
 
-import { FileUploaderComponent, FileUploaderProps } from './FileUploader.types';
+import {
+  FileUploaderComponent,
+  FileUploaderProps,
+  UploadedFile,
+} from './FileUploader.types';
 import { useFileUploader } from './useFileUploader';
 import { getFiles, isChangeEvent, normalize } from './utils';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
@@ -121,9 +125,8 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
       event.stopPropagation();
     };
 
-    const handleDeleteFile = (file: string): void => {
+    const handleDeleteFile = (file: UploadedFile): void => {
       if (onFileDelete?.(file)) {
-        buttonRef.current?.focus();
         setSrOnlyText(t('fileuploader.DeleteConfirmation'));
       } else {
         setSrOnlyText(t('fileuploader.GeneralDeleteError'));
@@ -222,11 +225,11 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
           <ul className={styles.fileList}>
             {uploadedFiles?.map((file) => (
               <FileUploaderFile
-                key={file.name}
+                key={file.id ?? file.name}
                 href={file.href}
                 successIconTitle={successIconTitle}
                 fileIconTitle={fileIconTitle}
-                onClickDelete={(): void => handleDeleteFile(file.name)}
+                onClickDelete={(): void => handleDeleteFile(file)}
               >
                 {file.name}
               </FileUploaderFile>

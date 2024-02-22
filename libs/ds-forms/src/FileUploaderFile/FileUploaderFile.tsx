@@ -45,18 +45,19 @@ export const FileUploaderFile = forwardRef<
         data-testid={dataTestId}
       >
         <div className={styles.fileListContainer}>
-          <span>
+          <span className={styles.fileListGrid}>
             {href ? (
               <Link
                 id={`${id}-file-${children}`}
                 svgPath={FileOutlineSVGpath}
                 href={href}
+                className={styles.fileListText}
                 download
               >
                 {children}
               </Link>
             ) : (
-              <>
+              <span className={styles.fileListText}>
                 <FileOutlineIcon
                   className={styles.fileListIcon}
                   size={'small'}
@@ -68,7 +69,7 @@ export const FileUploaderFile = forwardRef<
                 >
                   {children}
                 </span>
-              </>
+              </span>
             )}
             <CheckIcon
               className={styles.successIcon}
@@ -79,6 +80,7 @@ export const FileUploaderFile = forwardRef<
           <span>
             <IconButton
               svgPath={CancelSVGpath}
+              className={styles.cancelIcon}
               title={t('fileuploader.DeleteLabel')}
               ariaDescribedby={`${id}-file-${children}`}
               onClick={onClickDelete}
