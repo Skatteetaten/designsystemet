@@ -1,11 +1,13 @@
+import { JSX } from 'react';
+
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Table, getTableSumAlignmentDefault } from '@skatteetaten/ds-table';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Table.Sum,
   title: 'Komponenter/Table/Sum',
   argTypes: {
@@ -32,27 +34,26 @@ export default {
         defaultValue: { summary: getTableSumAlignmentDefault() },
       },
     },
-    hasTopSeparator: {
-      table: { category: category.props },
-    },
-    colSpan: {
-      table: { category: category.htmlAttribute },
-    },
+    hasTopSeparator: { table: { category: category.props } },
+    colSpan: { table: { category: category.htmlAttribute } },
+  },
+  args: {
+    children: '1 000kr',
   },
   parameters: {
     version: getVersion('ds-table'),
   },
 } satisfies Meta<typeof Table.Sum>;
 
-const TemplateDefault: StoryFn<typeof Table.Sum> = (args) => (
-  <Table className={'width100'} caption={'testTable'}>
-    <Table.Sum {...args} />
-  </Table>
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Preview = {
-  render: TemplateDefault,
-  args: {
-    children: '1 000kr',
-  },
-} satisfies StoryObj<typeof Table.Sum>;
+export const Preview: Story = {
+  decorators: [
+    (Story): JSX.Element => (
+      <Table caption={'sum example'} className={'width100'}>
+        <Story />
+      </Table>
+    ),
+  ],
+} satisfies Story;

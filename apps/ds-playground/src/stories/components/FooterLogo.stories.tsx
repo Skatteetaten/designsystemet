@@ -1,37 +1,32 @@
 import { Footer } from '@skatteetaten/ds-layout';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
-import illustration from '../../assets/farmer-illustration.svg';
 import logo from '../../assets/ske-logo-horizontal-white.png';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Footer.Logo,
   title: 'Komponenter/Footer/Logo',
   argTypes: {
     // Props
-    children: { control: { type: null }, table: { category: category.props } },
+    children: { table: { category: category.props } },
+  },
+  args: {
+    children: (
+      <img className={'logoHeight'} alt={'Logo Skatteetaten'} src={logo}></img>
+    ),
   },
   parameters: {
     version: getVersion('ds-layout'),
   },
 } satisfies Meta<typeof Footer.Logo>;
 
-const Template: StoryFn<typeof Footer.Logo> = () => (
-  <Footer titleFirstColumn={'Om Skatteetaten'}>
-    <Footer.Logo>
-      <img className={'logoHeight'} alt={'Logo'} src={logo}></img>
-    </Footer.Logo>
-    <Footer.Logo>
-      <img className={'logoHeight'} alt={'Bilde'} src={illustration}></img>
-    </Footer.Logo>
-  </Footer>
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Preview = {
-  render: Template,
-  args: {
-    children: 'dummy',
+export const Preview: Story = {
+  parameters: {
+    backgrounds: { default: 'themePrimary' },
   },
-} satisfies StoryObj<typeof Footer.Logo>;
+} satisfies Story;

@@ -71,7 +71,10 @@ const DSViewports = {
 
 const parameters = {
   actions: { argTypesRegex: '^on.*' },
-  controls: { sort: 'alpha', hideNoControlsWarning: true },
+  controls: {
+    sort: 'requiredFirst',
+    hideNoControlsWarning: true,
+  },
   viewport: { viewports: DSViewports },
   options: {
     storySort: {

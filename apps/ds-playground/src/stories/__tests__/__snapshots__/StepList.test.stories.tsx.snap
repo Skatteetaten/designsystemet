@@ -725,11 +725,11 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
           <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
                viewbox="0 0 24 24"
                focusable="false"
-               aria-labelledby="svgtitle-:r1i:"
+               aria-labelledby="svgtitle-:r1f:"
                aria-hidden="false"
                role="img"
           >
-            <title id="svgtitle-:r1i:">
+            <title id="svgtitle-:r1f:">
               Fullført
             </title>
             <path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z">
@@ -750,7 +750,7 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
             Virksomheten skal registreres som særavgiftspliktig.
           </h4>
           <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
-            For å bli registrert må du sende en søknad til Skatteetaten. Nedenfor beskriver vi hvordan du går frem og hva du må dokumentere.
+            brødtekst
           </p>
         </div>
       </div>
@@ -758,19 +758,8 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
           ">
         <div>
           <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
-            Du må gjøre følgende:
+            brødtekst
           </p>
-          <ol class="List_list__xzA1c   ">
-            <li class="ListElement_element__B0xdX ">
-              Du må bestemme hvilken organisasjonsform som passer best.
-            </li>
-            <li class="ListElement_element__B0xdX ">
-              Registrere bedriften i Enhetsregisteret ved å fylle ut Samordnetregistermelding
-            </li>
-            <li class="ListElement_element__B0xdX ">
-              Dersom bedriften din har avgiftspliktig omsetning og/eller uttakoverstiger kr 50 000 i løpet av en 12 måneders periode, må duregistrere virksomheten i Merverdiavgiftsregisteret.
-            </li>
-          </ol>
         </div>
       </div>
     </li>
