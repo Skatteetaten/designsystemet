@@ -1,0 +1,437 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Pagination HidePageSummary smoke-test 1`] = `
+<div data-test-block="true">
+  <nav aria-label="sidevelger"
+       class="Pagination_pagination__lBs+M Pagination_pagination_summaryhidden__kPeON undefined"
+  >
+    <div class="Pagination_paginationSummary_hide__Jf-cV"
+         aria-live="polite"
+         aria-atomic="true"
+    >
+      Viser 41 - 50 av 50
+    </div>
+    <ul class="Pagination_paginationList__+WZ2R"
+        tabindex="-1"
+    >
+      <li class="Pagination_paginationElement__io2RM Pagination_paginationElement_leftArrow__IYuDk">
+        <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m16.9 17.98-6.1-6.1 6.1-6.1-1.8-1.9-8 8 8 8 1.8-1.9Z">
+            </path>
+          </svg>
+          <span class>
+            Forrige
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            1
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  Pagination_paginationElipsis__T7Grr">
+          ...
+        </p>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            4
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  Pagination_paginationButton__Z6pjl"
+                type="button"
+                aria-current="page"
+        >
+          <span class="Button_buttonText__JxyB+">
+            5
+          </span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`Tester/Pagination HidePrevNextButtonTitle smoke-test 1`] = `
+<div data-test-block="true">
+  <nav aria-label="sidevelger"
+       class="Pagination_pagination__lBs+M  undefined"
+  >
+    <div class
+         aria-live="polite"
+         aria-atomic="true"
+    >
+      Viser 41 - 50 av 50
+    </div>
+    <ul class="Pagination_paginationList__+WZ2R"
+        tabindex="-1"
+    >
+      <li class="Pagination_paginationElement__io2RM Pagination_paginationElement_leftArrow__IYuDk">
+        <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+                tabindex="-1"
+                type="button"
+        >
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-labelledby="svgtitle-:r3:"
+               aria-hidden="false"
+               role="img"
+          >
+            <title id="svgtitle-:r3:">
+              Forrige
+            </title>
+            <path d="m16.9 17.98-6.1-6.1 6.1-6.1-1.8-1.9-8 8 8 8 1.8-1.9Z">
+            </path>
+          </svg>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            1
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  Pagination_paginationElipsis__T7Grr">
+          ...
+        </p>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            4
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  Pagination_paginationButton__Z6pjl"
+                type="button"
+                aria-current="page"
+        >
+          <span class="Button_buttonText__JxyB+">
+            5
+          </span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`Tester/Pagination Sibling smoke-test 1`] = `
+<div data-test-block="true">
+  <nav aria-label="sidevelger"
+       class="Pagination_pagination__lBs+M  undefined"
+  >
+    <div class
+         aria-live="polite"
+         aria-atomic="true"
+    >
+      Viser 41 - 50 av 50
+    </div>
+    <ul class="Pagination_paginationList__+WZ2R"
+        tabindex="-1"
+    >
+      <li class="Pagination_paginationElement__io2RM Pagination_paginationElement_leftArrow__IYuDk">
+        <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m16.9 17.98-6.1-6.1 6.1-6.1-1.8-1.9-8 8 8 8 1.8-1.9Z">
+            </path>
+          </svg>
+          <span class>
+            Forrige
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            1
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            2
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            3
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            4
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  Pagination_paginationButton__Z6pjl"
+                type="button"
+                aria-current="page"
+        >
+          <span class="Button_buttonText__JxyB+">
+            5
+          </span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`Tester/Pagination WithAttributes smoke-test 1`] = `
+<div data-test-block="true">
+  <nav aria-label="sidevelger"
+       class="Pagination_pagination__lBs+M  undefined"
+  >
+    <div class
+         aria-live="polite"
+         aria-atomic="true"
+    >
+      Viser 41 - 50 av 50
+    </div>
+    <ul class="Pagination_paginationList__+WZ2R"
+        tabindex="-1"
+    >
+      <li class="Pagination_paginationElement__io2RM Pagination_paginationElement_leftArrow__IYuDk">
+        <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m16.9 17.98-6.1-6.1 6.1-6.1-1.8-1.9-8 8 8 8 1.8-1.9Z">
+            </path>
+          </svg>
+          <span class>
+            Forrige
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            1
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  Pagination_paginationElipsis__T7Grr">
+          ...
+        </p>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            4
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  Pagination_paginationButton__Z6pjl"
+                type="button"
+                aria-current="page"
+        >
+          <span class="Button_buttonText__JxyB+">
+            5
+          </span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`Tester/Pagination WithButtons smoke-test 1`] = `
+<div data-test-block="true">
+  <nav aria-label="sidevelger"
+       class="Pagination_pagination__lBs+M  undefined"
+  >
+    <div class
+         aria-live="polite"
+         aria-atomic="true"
+    >
+      Viser 41 - 50 av 50
+    </div>
+    <ul class="Pagination_paginationList__+WZ2R"
+        tabindex="-1"
+    >
+      <li class="Pagination_paginationElement__io2RM Pagination_paginationElement_leftArrow__IYuDk">
+        <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m16.9 17.98-6.1-6.1 6.1-6.1-1.8-1.9-8 8 8 8 1.8-1.9Z">
+            </path>
+          </svg>
+          <span class>
+            Forrige
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            1
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  Pagination_paginationElipsis__T7Grr">
+          ...
+        </p>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            4
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  Pagination_paginationButton__Z6pjl"
+                type="button"
+                aria-current="page"
+        >
+          <span class="Button_buttonText__JxyB+">
+            5
+          </span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`Tester/Pagination WithRef smoke-test 1`] = `
+<div data-test-block="true">
+  <nav aria-label="sidevelger"
+       class="Pagination_pagination__lBs+M  undefined"
+  >
+    <div class
+         aria-live="polite"
+         aria-atomic="true"
+    >
+      Viser 41 - 50 av 50
+    </div>
+    <ul class="Pagination_paginationList__+WZ2R"
+        tabindex="-1"
+        id="dummyIdForwardedFromRef"
+    >
+      <li class="Pagination_paginationElement__io2RM Pagination_paginationElement_leftArrow__IYuDk">
+        <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m16.9 17.98-6.1-6.1 6.1-6.1-1.8-1.9-8 8 8 8 1.8-1.9Z">
+            </path>
+          </svg>
+          <span class>
+            Forrige
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            1
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  Pagination_paginationElipsis__T7Grr">
+          ...
+        </p>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            4
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  Pagination_paginationButton__Z6pjl"
+                type="button"
+                aria-current="page"
+        >
+          <span class="Button_buttonText__JxyB+">
+            5
+          </span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;

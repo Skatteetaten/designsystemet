@@ -20,10 +20,24 @@ type RequiredButtonHTMLAttributes = Pick<
   'accessKey' | 'disabled' | 'type' | 'onBlur' | 'onClick' | 'onFocus'
 >;
 
+// TODO Vil ekstrakte enums fra ButtonAria['aria-current'] OG at disse vises i Storybook og som type-hints
+// Dvs boolean | "time" | "false" | "true" | "page" | "step" | "location" | "date" | undefined
+// type ButtonAria = Pick<ComponentPropsWithoutRef<'button'>, 'aria-current'>;
+
 type ButtonHTMLAttributes = Partial<RequiredButtonHTMLAttributes>;
 
 interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
   ariaDescribedby?: string;
+  // TODO For ariaCurrent så ønsker vi enums fra ButtonAria['aria-current'];
+  ariaCurrent?:
+    | boolean
+    | 'time'
+    | 'false'
+    | 'true'
+    | 'page'
+    | 'step'
+    | 'location'
+    | 'date';
   onBlur?: FocusEventHandler<HTMLButtonElement>;
   onClick?: MouseEventHandler<HTMLButtonElement>;
   onFocus?: FocusEventHandler<HTMLButtonElement>;

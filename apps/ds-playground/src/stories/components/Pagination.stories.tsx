@@ -324,6 +324,9 @@ const meta = {
     currentPage: {
       table: { category: category.props },
     },
+    defaultCurrentPage: {
+      table: { category: category.props },
+    },
     sibling: {
       table: {
         category: category.props,
@@ -351,11 +354,11 @@ const meta = {
     onChange: { table: { category: category.event } },
   },
   args: {
+    listLength: getDefaultListLength(),
+    listTotalLength: 70,
+    sibling: getDefaultSibling(),
+    defaultCurrentPage: 1,
     currentPage: 1,
-    listLength: 10,
-    listTotalLength: data.length,
-    sibling: 1,
-    hidePageSummary: true,
   },
   parameters: {
     version: getVersion('ds-progress'),
@@ -366,6 +369,13 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {} satisfies Story;
+
+/* const defaultArgs = {
+  listLength: getDefaultListLength(),
+  listTotalLength: 70,
+  defaultCurrentPage: 2,
+  sibling: getDefaultSibling(),
+}; */
 
 // Hjelpefunksjon for å vise hvordan pagination påvirker liste utenfor komponent
 const listWithLimit = (
@@ -385,24 +395,33 @@ const listWithLimit = (
     .slice(itemStart, itemStart + listSize);
 };
 
-export const Example: Story = {
-  args: {
-    currentPage: 1,
-    listLength: 5,
-    listTotalLength: data.length,
-    sibling: 2,
-  },
-  render: function Render(args): JSX.Element {
+export const Examples: Story = {
+  render: (_args): JSX.Element => {
     const [{ currentPage }, updateArgs] = useArgs();
+    const listLength = 5;
     const onChange = (page: number): void => {
       updateArgs({ currentPage: page });
     };
     return (
       <>
-        <List hasSpacing>
-          {listWithLimit(data, currentPage, args.listLength)}
-        </List>
-        <Pagination {...args} currentPage={currentPage} onChange={onChange} />
+        <List hasSpacing>{listWithLimit(data, currentPage, listLength)}</List>
+        {/* Controlled variant  */}
+        <Pagination
+          listLength={listLength}
+          listTotalLength={
+            data.length
+          } /* Ikke sett listTotalLength høyere enn størrelsen på mock-data. */
+          currentPage={currentPage}
+          onChange={onChange}
+        />
+
+        {/* Uncontrolled variant  */}
+        {/* <Pagination
+          listLength={10}
+          listTotalLength={90}
+          defaultCurrentPage={3}
+          sibling={2}
+        /> */}
       </>
     );
   },

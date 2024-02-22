@@ -3,37 +3,88 @@
 
 .pagination {
   display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   padding: 0;
   row-gap: var(--spacing-s);
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 100%;
+
   @media (min-width: $breakpoint-s) {
     justify-content: space-between;
-    max-width: var(--container-wide-content);
     row-gap: initial;
   }
+
   &List {
     display: flex;
+    flex: 1 1 100%;
     flex-wrap: wrap;
     justify-content: center;
-    list-style-type: none;
-    margin: 0;
     padding: 0;
-    column-gap: var(--spacing-s);
+    margin: 0;
+    column-gap: var(--spacing-xs);
+    list-style-type: none;
+
+    @media (min-width: $breakpoint-s) {
+      flex: 1 1 auto;
+      justify-content: end;
+
+      &_summaryhidden {
+        justify-content: center;
+      }
+    }
   }
+
   &Summary {
+    flex: 1 1 100%;
+
+    @media (min-width: $breakpoint-s) {
+      flex: 1 1 auto;
+    }
+
     &_hide {
       @include sr-only;
     }
   }
+
   &Element {
     display: flex;
     align-items: center;
+
+    &_leftArrow {
+      margin-right: 4px;
+    }
+
+    &_rightArrow {
+      margin-left: 4px;
+    }
+  }
+
+  &Button,
+  &Elipsis {
+    padding: 0 8px;
   }
 
   &Button {
+    min-width: 32px;
+    min-height: 32px;
     padding: 0 8px;
+    border: 0;
+    line-height: 2rem;
+
+    &:active {
+      color: var(--palette-azure-100);
+
+      &::before {
+        border-color: var(--palette-azure-100);
+        inset: -2px;
+      }
+    }
+
+    &:focus {
+      &::before {
+        inset: -2px;
+      }
+    }
   }
 }
