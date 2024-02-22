@@ -1,38 +1,32 @@
-import { Link } from '@skatteetaten/ds-buttons';
+import { Link, LinkProps } from '@skatteetaten/ds-buttons';
 import { Footer } from '@skatteetaten/ds-layout';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import LinkMeta from './Link.stories';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Link,
   title: 'Komponenter/Footer/Link',
   argTypes: {
     ...LinkMeta.argTypes,
     color: { table: { disable: true } },
   },
+  args: {
+    children: 'Satser',
+    href: '#',
+  },
   parameters: {
     version: getVersion('ds-layout'),
   },
-} satisfies Meta<typeof Link>;
+} satisfies Meta<LinkProps>;
 
-const Template: StoryFn<typeof Footer.Link> = () => (
-  <Footer titleFirstColumn={'Om Skatteetaten'}>
-    <Footer.Link href={'#'}>{'Satser'}</Footer.Link>
-    <Footer.Link href={'#'}>{'Skjema og tjenester'}</Footer.Link>
-    <Footer.Link href={'#'}>{'RSS'}</Footer.Link>
-    <Footer.Link href={'#'}>{'Tips oss'}</Footer.Link>
-    <Footer.Link href={'#'} isExternal>
-      {'Koronatiltak'}
-    </Footer.Link>
-  </Footer>
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Preview = {
-  render: Template,
-  args: {
-    children: 'dummy',
-    href: '#',
+export const Preview: Story = {
+  parameters: {
+    backgrounds: { default: 'themePrimary' },
   },
-} satisfies StoryObj<typeof Link>;
+  render: (args) => <Footer.Link {...args}>{args.children}</Footer.Link>,
+} satisfies Story;

@@ -6,12 +6,13 @@ import {
   getSpinnerTitlePositionDefault,
   spinnerSizeArr,
 } from '@skatteetaten/ds-progress';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
+import { exampleParameters } from '../utils/stories.utils';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Spinner,
   title: 'Komponenter/Spinner',
   argTypes: {
@@ -45,35 +46,34 @@ export default {
         defaultValue: { summary: getSpinnerColorDefault() },
       },
     },
-    hideTitle: {
-      table: { category: category.props },
-    },
+    hideTitle: { table: { category: category.props } },
   },
   parameters: {
     version: getVersion('ds-progress'),
   },
 } satisfies Meta<typeof Spinner>;
 
-export const Preview: StoryObj<typeof Spinner> = {};
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Example: StoryFn<typeof Spinner> = (_args) => (
-  <>
-    <Spinner
-      className={'bottomSpacingXL'}
-      size={'large'}
-      color={'blue'}
-      titlePosition={'right'}
-    >
-      {'Vent litt mens vi sjekker tidligere innsendte a-meldinger'}
-    </Spinner>
+export const Preview: Story = {} satisfies Story;
 
-    <Spinner size={'small'} color={'blue'} titlePosition={'right'}>
-      {'Vent litt mens vi sjekker tidligere innsendte a-meldinger'}
-    </Spinner>
-  </>
-);
-Example.parameters = {
-  controls: {
-    exclude: /.*/,
-  },
-};
+export const Examples: Story = {
+  render: (_args) => (
+    <>
+      <Spinner
+        className={'bottomSpacingXL'}
+        size={'large'}
+        color={'blue'}
+        titlePosition={'right'}
+      >
+        {'Vent litt mens vi sjekker tidligere innsendte a-meldinger'}
+      </Spinner>
+
+      <Spinner size={'small'} color={'blue'} titlePosition={'right'}>
+        {'Vent litt mens vi sjekker tidligere innsendte a-meldinger'}
+      </Spinner>
+    </>
+  ),
+} satisfies Story;
+Examples.parameters = exampleParameters;

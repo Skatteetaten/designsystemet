@@ -685,6 +685,13 @@ exports[`Tester/Modal WithPadding play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Modal WithShadowDom play-test 1`] = `
+<div data-test-block="true">
+  <modal-customelement>
+  </modal-customelement>
+</div>
+`;
+
 exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
 <div data-test-block="true">
   <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">

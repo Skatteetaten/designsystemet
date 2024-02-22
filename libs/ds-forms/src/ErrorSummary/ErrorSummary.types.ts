@@ -1,9 +1,4 @@
-import {
-  ForwardRefExoticComponent,
-  ReactNode,
-  RefAttributes,
-  JSX,
-} from 'react';
+import { ForwardRefExoticComponent, ReactNode, RefAttributes } from 'react';
 
 import { BaseProps, HeadingAs } from '@skatteetaten/ds-core-utils';
 
@@ -11,7 +6,7 @@ import { ErrorProps } from '../ErrorSummaryError/ErrorSummaryError.types';
 
 export interface ErrorSummaryProps extends BaseProps {
   /** Liste med feil */
-  children?: JSX.Element | JSX.Element[];
+  children?: ReactNode;
   /** Valgfritt innhold */
   content?: ReactNode;
   /** Mulighet til å angi shadowRootNode slik at fokus kan settes når elementet feilen hører til ligger i shadowDOM */

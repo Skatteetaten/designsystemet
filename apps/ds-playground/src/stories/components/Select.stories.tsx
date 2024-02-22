@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useState, JSX } from 'react';
 
 import {
   dsI18n,
@@ -6,13 +6,14 @@ import {
   getCommonFormVariantDefault,
 } from '@skatteetaten/ds-core-utils';
 import { Select } from '@skatteetaten/ds-forms';
-import { StoryObj, Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
+import { exampleParameters } from '../utils/stories.utils';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Select,
   title: 'Komponenter/Select/Select',
   argTypes: {
@@ -29,11 +30,7 @@ export default {
     },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
-    hasError: {
-      table: {
-        category: category.props,
-      },
-    },
+    hasError: { table: { category: category.props } },
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
@@ -43,11 +40,7 @@ export default {
       },
     },
     helpText: { table: { category: category.props } },
-    hideLabel: {
-      table: {
-        category: category.props,
-      },
-    },
+    hideLabel: { table: { category: category.props } },
     hidePlaceholder: { table: { category: category.props } },
     variant: {
       options: [...formArrSize],
@@ -59,11 +52,7 @@ export default {
       },
     },
     label: { table: { category: category.props } },
-    showRequiredMark: {
-      table: {
-        category: category.props,
-      },
-    },
+    showRequiredMark: { table: { category: category.props } },
     titleHelpSvg: {
       table: {
         category: category.props,
@@ -72,148 +61,79 @@ export default {
     },
     // HTML
     autoComplete: { table: { category: category.htmlAttribute } },
-    disabled: {
-      table: {
-        category: category.htmlAttribute,
-      },
-    },
+    disabled: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },
     required: {
-      table: {
-        category: category.htmlAttribute,
-      },
+      control: 'boolean',
+      table: { category: category.htmlAttribute },
     },
     // Events
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
   },
+  args: {
+    label: 'Farge',
+    children: [
+      <Select.Option key={'option1'} value={1}>
+        {'Blå'}
+      </Select.Option>,
+      <Select.Option key={'option2'} value={2}>
+        {'Gul'}
+      </Select.Option>,
+      <Select.Option key={'option3'} value={3}>
+        {'Grønn'}
+      </Select.Option>,
+      <Select.Option key={'option4'} value={4}>
+        {'Rød'}
+      </Select.Option>,
+    ],
+  },
   parameters: {
     version: getVersion('ds-forms'),
   },
 } satisfies Meta<typeof Select>;
 
-export const Preview: StoryObj<typeof Select> = {
-  args: {
-    label: 'Test',
-    children: (
-      <>
-        <Select.Option value={1}>{'Test 1'}</Select.Option>
-        <Select.Option value={2}>{'Test 2'}</Select.Option>
-      </>
-    ),
-  },
-};
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Example: StoryFn<typeof Select> = (_args) => {
-  const [fruktOption, setFruktOption] = useState(3);
+export const Preview: Story = {} satisfies Story;
 
-  const [fruktLargeOption, setFruktLargeOption] = useState(0);
-  const [error, setError] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
+export const Examples: Story = {
+  render: (_args): JSX.Element => {
+    const [fruktOption, setFruktOption] = useState<number>(0);
+    const [error, setError] = useState<boolean>(false);
+    const [errorMessage, setErrorMessage] = useState<string>('');
 
-  const onError = (e: ChangeEvent<HTMLSelectElement>): void => {
-    setError(false);
-    setErrorMessage('');
-    if (e.target.validity.valueMissing) {
-      setError(true);
-      setErrorMessage('Fruktsort er påkrevd.');
-    }
-  };
+    const handleChange = (e: ChangeEvent<HTMLSelectElement>): void => {
+      onError(e);
+      setFruktOption(Number(e.target.value));
+    };
 
-  return (
-    <>
+    const handleBlur = (e: ChangeEvent<HTMLSelectElement>): void => {
+      onError(e);
+    };
+
+    const onError = (e: ChangeEvent<HTMLSelectElement>): void => {
+      setError(false);
+      setErrorMessage('');
+      if (e.target.validity.valueMissing) {
+        setError(true);
+        setErrorMessage('Fruktsort er påkrevd.');
+      }
+    };
+
+    return (
       <Select
         label={'Fruktsort'}
         value={fruktOption}
-        helpText={'Velg den frukten du liker best.'}
-        onChange={(e: ChangeEvent<HTMLSelectElement>): void => {
-          setFruktOption(Number(e.target.value));
-        }}
-      >
-        <Select.Option value={1}>{'Banan'}</Select.Option>
-        <Select.Option value={2}>{'Eple'}</Select.Option>
-        <Select.Option value={3}>{'Kiwi'}</Select.Option>
-        <Select.Option value={4}>{'Pære'}</Select.Option>
-        <Select.Option value={5}>{'Sitron'}</Select.Option>
-      </Select>
-
-      <Select
-        label={'Fruktsort'}
-        value={fruktLargeOption}
-        helpText={'Velg den frukten du liker best.'}
+        helpText={'Velg frukten du liker best.'}
         errorMessage={errorMessage}
         hasError={error}
-        variant={'large'}
-        showRequiredMark
         required
-        onBlur={(e: ChangeEvent<HTMLSelectElement>): void => {
-          onError(e);
-        }}
-        onChange={(e: ChangeEvent<HTMLSelectElement>): void => {
-          onError(e);
-          setFruktLargeOption(Number(e.target.value));
-        }}
-      >
-        <Select.Option value={1}>{'Banan'}</Select.Option>
-        <Select.Option value={2}>{'Eple'}</Select.Option>
-        <Select.Option value={3}>{'Kiwi'}</Select.Option>
-        <Select.Option value={4}>{'Pære'}</Select.Option>
-        <Select.Option value={5}>{'Sitron'}</Select.Option>
-      </Select>
-    </>
-  );
-};
-
-export const ExampleSource: StoryFn<typeof Select> = () => {
-  const [fruktOption, setFruktOption] = useState(3);
-
-  const [fruktLargeOption, setFruktLargeOption] = useState(0);
-  const [error, setError] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
-
-  const onError = (e: ChangeEvent<HTMLSelectElement>): void => {
-    setError(false);
-    setErrorMessage('');
-    if (e.target.validity.valueMissing) {
-      setError(true);
-      setErrorMessage('Fruktsort er påkrevd.');
-    }
-  };
-
-  return (
-    <>
-      <Select
-        label={'Fruktsort'}
-        value={fruktOption}
-        helpText={'Velg den frukten du liker best.'}
-        onChange={(e: ChangeEvent<HTMLSelectElement>): void => {
-          setFruktOption(Number(e.target.value));
-        }}
-      >
-        <Select.Option value={1}>{'Banan'}</Select.Option>
-        <Select.Option value={2}>{'Eple'}</Select.Option>
-        <Select.Option value={3}>{'Kiwi'}</Select.Option>
-        <Select.Option value={4}>{'Pære'}</Select.Option>
-        <Select.Option value={5}>{'Sitron'}</Select.Option>
-      </Select>
-
-      <Select
-        label={'Fruktsort'}
-        value={fruktLargeOption}
-        helpText={'Velg den frukten du liker best.'}
-        errorMessage={errorMessage}
-        hasError={error}
-        variant={'large'}
         showRequiredMark
-        required
-        onBlur={(e: ChangeEvent<HTMLSelectElement>): void => {
-          onError(e);
-        }}
-        onChange={(e: ChangeEvent<HTMLSelectElement>): void => {
-          onError(e);
-          setFruktLargeOption(Number(e.target.value));
-        }}
+        onBlur={handleBlur}
+        onChange={handleChange}
       >
         <Select.Option value={1}>{'Banan'}</Select.Option>
         <Select.Option value={2}>{'Eple'}</Select.Option>
@@ -221,13 +141,7 @@ export const ExampleSource: StoryFn<typeof Select> = () => {
         <Select.Option value={4}>{'Pære'}</Select.Option>
         <Select.Option value={5}>{'Sitron'}</Select.Option>
       </Select>
-    </>
-  );
-};
-
-ExampleSource.tags = ['isHidden'];
-Example.parameters = {
-  controls: {
-    exclude: /.*/,
+    );
   },
-};
+} satisfies Story;
+Examples.parameters = exampleParameters;
