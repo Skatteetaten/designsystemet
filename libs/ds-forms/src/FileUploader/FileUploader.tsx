@@ -55,6 +55,7 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
       isUploading,
       onFileChange,
       onFileDelete,
+      onFileDownload,
       children: buttonTextExternal,
     },
     ref
@@ -92,7 +93,7 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
       if (shouldNormalizeFileName) {
         const normalizedFiles = files.map((file) => {
           const normalizedName = normalize(file, invalidCharacterRegexp);
-          return new File([file], normalizedName);
+          return new File([file], normalizedName, { type: file.type });
         });
         onFileChange?.(normalizedFiles);
       } else {
@@ -230,6 +231,9 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
                 successIconTitle={successIconTitle}
                 fileIconTitle={fileIconTitle}
                 onClickDelete={(): void => handleDeleteFile(file)}
+                onClick={(event): void => {
+                  onFileDownload?.(event, file);
+                }}
               >
                 {file.name}
               </FileUploaderFile>

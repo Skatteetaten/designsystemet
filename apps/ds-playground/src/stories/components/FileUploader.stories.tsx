@@ -58,6 +58,7 @@ const meta = {
     acceptedFileFormatsDescription: { table: { category: category.props } },
     // Events
     onFileDelete: { table: { category: category.event } },
+    onFileDownload: { table: { category: category.event } },
     onFileChange: { table: { category: category.event } },
   },
   args: {

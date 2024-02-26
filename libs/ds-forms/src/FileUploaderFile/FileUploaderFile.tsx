@@ -27,6 +27,7 @@ export const FileUploaderFile = forwardRef<
       fileIconTitle,
       href,
       successIconTitle,
+      onClick,
       onClickDelete,
       children,
     },
@@ -53,6 +54,7 @@ export const FileUploaderFile = forwardRef<
                 href={href}
                 className={styles.fileListText}
                 download
+                onClick={onClick}
               >
                 {children}
               </Link>

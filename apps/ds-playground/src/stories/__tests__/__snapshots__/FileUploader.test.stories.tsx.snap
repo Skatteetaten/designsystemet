@@ -253,26 +253,22 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
       >
         <div class="FileUploaderFile_fileListContainer__+8bue">
           <span class="FileUploaderFile_fileListGrid__Xh3QU">
-            <span class="FileUploaderFile_fileListText__ro0Ol">
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo FileUploaderFile_fileListIcon__Ze747"
+            <a id=":r1s:-file-file.txt"
+               class="Link_link__jeUpY  FileUploaderFile_fileListText__ro0Ol"
+               href="#"
+               download
+            >
+              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isCustom__nsOot"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1t:"
-                   aria-hidden="false"
+                   aria-hidden="true"
                    role="img"
               >
-                <title id="svgtitle-:r1t:">
-                  Fil
-                </title>
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm4 18H6V4h7v5h5v11Z">
                 </path>
               </svg>
-              <span id=":r1s:-file-file.txt"
-                    class="FileUploaderFile_fileListFile__YEohv"
-              >
-                file.txt
-              </span>
-            </span>
+              file.txt
+            </a>
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz FileUploaderFile_successIcon__BwhkS"
                  viewbox="0 0 24 24"
                  focusable="false"
