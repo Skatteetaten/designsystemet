@@ -1,8 +1,7 @@
 import { useState, JSX } from 'react';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { Checkbox, FileUploader } from '@skatteetaten/ds-forms';
-import { Paragraph } from '@skatteetaten/ds-typography';
+import { Checkbox, FileUploader, UploadedFile } from '@skatteetaten/ds-forms';
 import { StoryObj, Meta } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
@@ -74,7 +73,7 @@ const meta = {
         href: 'http://localhost:4400/designsystem_illustrasjon.png',
       },
     ],
-    onFileDelete: (file: string): boolean => {
+    onFileDelete: (file: UploadedFile): boolean => {
       console.log(file);
 
       return true;
@@ -124,11 +123,6 @@ export const Examples: Story = {
 
     return (
       <>
-        <Paragraph className={'dummyPanelOverridesWidthAndPadding'}>
-          {
-            'Dersom mockUpload er krysset av så vil det opprettes promises som har 50% sjangse for å rejecte. Da får man sett både vellykket og feilet opplasting. Når mockUpload er slått av forsøker eksempelet å laste opp til http://localhost:9090/test'
-          }
-        </Paragraph>
         <Checkbox
           checked={shouldMockUpload}
           onChange={() => setShouldMockUpload(!shouldMockUpload)}
@@ -145,7 +139,7 @@ export const Examples: Story = {
           errorMessage={error ?? ''}
           hasError={!!error}
           multiple
-          onFileDelete={(file: string): boolean => {
+          onFileDelete={(file): boolean => {
             if (shouldMockUpload) {
               remove(file);
               return true;
@@ -155,7 +149,6 @@ export const Examples: Story = {
             fetch(uploadUrl, {
               method: 'DELETE',
             }).then((response) => {
-              console.log(response);
               if (!response.ok) {
                 deleteStatus = false;
               } else {
@@ -172,8 +165,9 @@ export const Examples: Story = {
               return;
             }
 
-            const succeeded: Array<{ name: string; href?: string }> = [];
-            const failed: Array<{ name: string; reason: string }> = [];
+            const succeeded: Array<UploadedFile> = [];
+            const failed: Array<{ name: string; reason: string; id?: string }> =
+              [];
 
             let uploadPromises: Promise<MockUploadedFile>[] = [];
 
@@ -202,12 +196,14 @@ export const Examples: Story = {
                 succeeded.push({
                   name: files[index].name,
                   href: result.value.href,
+                  id: Math.random().toString(36).substring(2, 10),
                 });
               } else if (result.status === 'rejected') {
                 console.log('REJECT', result);
                 failed.push({
                   name: files[index].name,
                   reason: result.reason.statusText,
+                  id: Math.random().toString(36).substring(2, 10),
                 });
               }
             });
@@ -219,7 +215,15 @@ export const Examples: Story = {
                   name,
                   errorMessage: reason,
                 })),
-                [{ error, files: failed.map((file) => file.name) }],
+                [
+                  {
+                    error,
+                    files: failed.map(({ name, id }) => ({
+                      name,
+                      id,
+                    })),
+                  },
+                ],
                 succeeded
               );
             } else {
