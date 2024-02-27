@@ -14,9 +14,8 @@ import {
 } from '@skatteetaten/ds-core-utils';
 import { InfoIcon } from '@skatteetaten/ds-icons';
 import { Paragraph } from '@skatteetaten/ds-typography';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { expect, within } from '@storybook/test';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 import farmerIllustration from '../../assets/farmer-illustration.svg';

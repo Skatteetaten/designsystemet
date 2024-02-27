@@ -1,7 +1,6 @@
 import { RadioGroup } from '@skatteetaten/ds-forms';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { expect, within } from '@storybook/test';
 
 import {
   loremIpsum,

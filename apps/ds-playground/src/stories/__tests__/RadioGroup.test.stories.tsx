@@ -6,15 +6,9 @@ import {
   radioGroupVariantArr,
 } from '@skatteetaten/ds-forms';
 import { Heading } from '@skatteetaten/ds-typography';
-import { expect } from '@storybook/jest';
 import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import {
-  fireEvent,
-  userEvent,
-  waitFor,
-  within,
-} from '@storybook/testing-library';
+import { expect, fireEvent, userEvent, waitFor, within } from '@storybook/test';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
 

@@ -3,9 +3,8 @@ import { FocusEvent, MouseEvent, useState } from 'react';
 import { Button, buttonVariantArr } from '@skatteetaten/ds-buttons';
 import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';
 import { SendSVGpath } from '@skatteetaten/ds-icons';
-import { expect } from '@storybook/jest';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { userEvent, waitFor, within } from '@storybook/testing-library';
+import { expect, userEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';

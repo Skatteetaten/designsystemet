@@ -6,9 +6,8 @@ import {
   headingAsArr,
   positionArr,
 } from '@skatteetaten/ds-core-utils';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { fireEvent, within, waitFor } from '@storybook/testing-library';
+import { expect, fireEvent, within, waitFor } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 

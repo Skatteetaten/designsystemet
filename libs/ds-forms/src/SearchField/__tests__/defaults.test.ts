@@ -1,5 +1,3 @@
-import { expect } from '@storybook/jest';
-
 import {
   getSearchFieldHasSearchButtonIconDefault,
   getSearchFieldHideLabelDefault,

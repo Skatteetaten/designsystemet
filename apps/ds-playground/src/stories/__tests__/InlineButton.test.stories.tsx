@@ -6,9 +6,8 @@ import {
   positionArr,
 } from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath } from '@skatteetaten/ds-icons';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { userEvent, waitFor, within } from '@storybook/testing-library';
+import { expect, userEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';

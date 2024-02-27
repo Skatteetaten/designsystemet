@@ -4,9 +4,8 @@ import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Modal } from '@skatteetaten/ds-overlays';
 import { Paragraph } from '@skatteetaten/ds-typography';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { fireEvent, userEvent, within } from '@storybook/testing-library';
+import { expect, userEvent, fireEvent, within } from '@storybook/test';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';

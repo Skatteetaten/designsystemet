@@ -9,14 +9,8 @@ import {
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { searchArrSize, SearchField } from '@skatteetaten/ds-forms';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import {
-  fireEvent,
-  userEvent,
-  waitFor,
-  within,
-} from '@storybook/testing-library';
+import { fireEvent, userEvent, waitFor, within, expect } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries

@@ -1,8 +1,7 @@
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Table } from '@skatteetaten/ds-table';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { userEvent, within } from '@storybook/testing-library';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 const meta = {
   component: Table.Row,
@@ -101,6 +100,7 @@ export const WithExpandable = {
   args: {
     isExpandable: true,
     expandButtonAriaDescribedby: 'Id123',
+    onExpand: fn(),
   },
   argTypes: {
     isExpandable: { table: { disable: false } },
@@ -119,6 +119,8 @@ export const WithExpandable = {
     );
     await expect(iconButton).toHaveAttribute('aria-expanded', 'false');
     await userEvent.click(iconButton);
-    await expect(iconButton).toHaveAttribute('aria-expanded', 'true');
+    await waitFor(() =>
+      expect(iconButton).toHaveAttribute('aria-expanded', 'true')
+    );
   },
 } satisfies Story;
