@@ -99,7 +99,7 @@ export interface FileUploaderCommonProps
    * Kalles når fil skal lastes ned. Brukes om man trenger å overstyre standard oppførsel til
    * lenkene og initiere nedlasting selv.
    *
-   * @param {MouseEvent} event MouseEvent for anchor-som ble klikket på
+   * @param {MouseEvent} event MouseEvent for anchor som ble klikket på
    * @param {UploadedFile} file filen som skal fjernes
    */
   onFileDownload?: (
