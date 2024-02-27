@@ -17,7 +17,8 @@ import {
 } from './useFileUploader.types';
 
 export const useFileUploader = <T,>(
-  renderStatus?: (status: UploadResultData<T>) => ReactNode
+  renderStatus?: (status: UploadResultData<T>) => ReactNode,
+  initiallyUploadedFiles?: Array<UploadedFile>
 ): UseFileUploaderReturn<T> => {
   const reducer = (
     state: Array<UploadedFile>,
@@ -41,7 +42,7 @@ export const useFileUploader = <T,>(
     return [...state];
   };
 
-  const initialState: Array<UploadedFile> = [];
+  const initialState: Array<UploadedFile> = initiallyUploadedFiles ?? [];
   const [state, dispatch] = useReducer<
     (state: Array<UploadedFile>, action: FileAction) => Array<UploadedFile>
   >(reducer, initialState);

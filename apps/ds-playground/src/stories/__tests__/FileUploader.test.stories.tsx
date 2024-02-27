@@ -87,6 +87,9 @@ const meta = {
     onFileDelete: {
       table: { category: category.event, disable: true },
     },
+    onFileDownload: {
+      table: { category: category.event, disable: true },
+    },
     onFileChange: {
       table: { category: category.event, disable: true },
     },
@@ -301,7 +304,7 @@ export const WithFileChange: StoryObj<FileUploaderProps> = {
     'data-testid': 'testid123',
     helpText: 'Hjelpetekst',
     label: 'Dokumentasjon og grunnlag',
-    uploadedFiles: [{ name: 'file.txt' }],
+    uploadedFiles: [{ name: 'file.txt', href: '#' }],
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -319,7 +322,18 @@ export const WithFileChange: StoryObj<FileUploaderProps> = {
     );
     await userEvent.click(deleteButton);
     await waitFor(() =>
-      expect(args.onFileDelete).toHaveBeenCalledWith({ name: 'file.txt' })
+      expect(args.onFileDelete).toHaveBeenCalledWith({
+        name: 'file.txt',
+        href: '#',
+      })
+    );
+
+    await userEvent.click(canvas.getByText('file.txt'));
+    await waitFor(() =>
+      expect(args.onFileDownload).toHaveBeenCalledWith(expect.anything(), {
+        name: 'file.txt',
+        href: '#',
+      })
     );
   },
   parameters: {

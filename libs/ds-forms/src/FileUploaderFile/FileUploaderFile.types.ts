@@ -1,8 +1,15 @@
+import { HTMLProps } from 'react';
+
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-export interface FileUploaderFileProps extends BaseProps {
-  /** Link til nedlastning av filen */
-  href?: string;
+type RequiredLinkHTMLAttributes = Pick<
+  HTMLProps<HTMLAnchorElement>,
+  'href' | 'onClick'
+>;
+
+type LinkHTMLAttributes = Partial<RequiredLinkHTMLAttributes>;
+
+export interface FileUploaderFileProps extends BaseProps, LinkHTMLAttributes {
   /** Overskriver default tittel på fil-ikonet */
   fileIconTitle?: string;
   /** Callback som kalles ved klikk på slett-knappen*/
