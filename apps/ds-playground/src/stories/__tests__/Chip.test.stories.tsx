@@ -1,6 +1,6 @@
 import { sizeArr } from '@skatteetaten/ds-core-utils';
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
-import { Chip, chipVariants } from '@skatteetaten/ds-status';
+import { Chip } from '@skatteetaten/ds-status';
 import { expect } from '@storybook/jest';
 import { Meta, StoryObj } from '@storybook/react';
 import { within } from '@storybook/testing-library';
@@ -28,13 +28,11 @@ const meta = {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
     },
-    size: {
-      options: [sizeArr[1], sizeArr[2]],
-      control: 'radio',
+    color: {
       table: { disable: true },
     },
-    variant: {
-      options: chipVariants,
+    size: {
+      options: [sizeArr[1], sizeArr[2]],
       control: 'radio',
       table: { disable: true },
     },
@@ -98,52 +96,51 @@ export const WithAttributes = {
 } satisfies Story;
 
 export const DefaultYellow = {
-  name: 'Default Variant (yellow) (A3)',
+  name: 'Default Variant (ochre) (A3)',
   args: {
     ...defaultArgs,
-    variant: 'yellow',
   },
   argTypes: {
-    variant: {
+    color: {
       table: { disable: true },
     },
   },
 } satisfies Story;
 
 export const DefaultGreen = {
-  name: 'Variant (green) (A3)',
+  name: 'Variant (forest) (A3)',
   args: {
     ...defaultArgs,
-    variant: 'green',
+    color: 'forest',
   },
   argTypes: {
-    variant: {
+    color: {
       table: { disable: true },
     },
   },
 } satisfies Story;
 
 export const DefaultRed = {
-  name: 'Variant (red) (A3)',
+  name: 'Variant (burgundy) (A3)',
   args: {
     ...defaultArgs,
-    variant: 'red',
+    color: 'burgundy',
   },
   argTypes: {
-    variant: {
+    color: {
       table: { disable: true },
     },
   },
 } satisfies Story;
 
 export const DefaultGrey = {
-  name: 'Variant (grey) (A3)',
+  name: 'Variant (graphite) (A3)',
   args: {
     ...defaultArgs,
-    variant: 'grey',
+    color: 'graphite',
   },
   argTypes: {
-    variant: {
+    color: {
       table: { disable: true },
     },
   },
@@ -167,7 +164,7 @@ export const WithCustomIcon = {
   args: {
     ...defaultArgs,
     svgPath: WarningSVGpath,
-    variant: 'red',
+    color: 'burgundy',
   },
   argTypes: {
     svgPath: {

@@ -2,7 +2,7 @@
 
 exports[`Tester/Chip DefaultGreen smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="Chip_chip__L45zR Chip_chip_green__tDtT+ Chip_chip_medium__etsgc ">
+  <div class="Chip_chip__L45zR Chip_chip_forest__9K8Pw Chip_chip_medium__etsgc ">
     Særavgift
   </div>
 </div>
@@ -10,7 +10,7 @@ exports[`Tester/Chip DefaultGreen smoke-test 1`] = `
 
 exports[`Tester/Chip DefaultGrey smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="Chip_chip__L45zR Chip_chip_grey__UY0lo Chip_chip_medium__etsgc ">
+  <div class="Chip_chip__L45zR Chip_chip_graphite__ldLQ9 Chip_chip_medium__etsgc ">
     Særavgift
   </div>
 </div>
@@ -18,7 +18,7 @@ exports[`Tester/Chip DefaultGrey smoke-test 1`] = `
 
 exports[`Tester/Chip DefaultRed smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="Chip_chip__L45zR Chip_chip_red__BB3tt Chip_chip_medium__etsgc ">
+  <div class="Chip_chip__L45zR Chip_chip_burgundy__lnskp Chip_chip_medium__etsgc ">
     Særavgift
   </div>
 </div>
@@ -26,7 +26,7 @@ exports[`Tester/Chip DefaultRed smoke-test 1`] = `
 
 exports[`Tester/Chip DefaultYellow smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="Chip_chip__L45zR Chip_chip_yellow__xgxPh Chip_chip_medium__etsgc ">
+  <div class="Chip_chip__L45zR Chip_chip_ochre__6nG8s Chip_chip_medium__etsgc ">
     Særavgift
   </div>
 </div>
@@ -34,7 +34,7 @@ exports[`Tester/Chip DefaultYellow smoke-test 1`] = `
 
 exports[`Tester/Chip Small smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="Chip_chip__L45zR Chip_chip_yellow__xgxPh Chip_chip_small__mtn+q ">
+  <div class="Chip_chip__L45zR Chip_chip_ochre__6nG8s Chip_chip_small__mtn+q ">
     Særavgift
   </div>
 </div>
@@ -45,7 +45,7 @@ exports[`Tester/Chip WithAttributes play-test 1`] = `
   <div id="htmlId"
        lang="en"
        data-testid="123ID"
-       class="Chip_chip__L45zR Chip_chip_yellow__xgxPh Chip_chip_medium__etsgc dummyClassname"
+       class="Chip_chip__L45zR Chip_chip_ochre__6nG8s Chip_chip_medium__etsgc dummyClassname"
   >
     Særavgift
   </div>
@@ -54,7 +54,7 @@ exports[`Tester/Chip WithAttributes play-test 1`] = `
 
 exports[`Tester/Chip WithCustomIcon smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="Chip_chip__L45zR Chip_chip_red__BB3tt Chip_chip_medium__etsgc ">
+  <div class="Chip_chip__L45zR Chip_chip_burgundy__lnskp Chip_chip_medium__etsgc ">
     <div class="Chip_iconWrapper__KjHgM"
          aria-hidden="true"
     >
@@ -75,7 +75,7 @@ exports[`Tester/Chip WithCustomIcon smoke-test 1`] = `
 
 exports[`Tester/Chip WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class="Chip_chip__L45zR Chip_chip_yellow__xgxPh Chip_chip_medium__etsgc "
+  <div class="Chip_chip__L45zR Chip_chip_ochre__6nG8s Chip_chip_medium__etsgc "
        id="dummyIdForwardedFromRef"
   >
     Særavgift

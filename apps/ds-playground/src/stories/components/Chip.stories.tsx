@@ -1,6 +1,10 @@
-import { sizeArr } from '@skatteetaten/ds-core-utils';
+import { colorNamesArr, sizeArr } from '@skatteetaten/ds-core-utils';
 import { CheckSVGpath, WarningSVGpath } from '@skatteetaten/ds-icons';
-import { Chip } from '@skatteetaten/ds-status';
+import {
+  Chip,
+  getChipColorDefault,
+  getChipSizeDefault,
+} from '@skatteetaten/ds-status';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
@@ -8,7 +12,14 @@ import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
 import { getVersion } from '../utils/version.utils';
 
-const availableSizes = [sizeArr[1], sizeArr[2]];
+const chipColors = [
+  colorNamesArr[0],
+  colorNamesArr[1],
+  colorNamesArr[2],
+  colorNamesArr[5],
+];
+
+const chipSizes = [sizeArr[1], sizeArr[2]];
 
 const meta = {
   component: Chip,
@@ -16,18 +27,28 @@ const meta = {
   argTypes: {
     // Props
     children: { control: 'text', table: { category: category.props } },
+    color: {
+      table: {
+        type: { summary: chipColors },
+        category: category.props,
+        defaultValue: { summary: getChipColorDefault() },
+      },
+      control: 'radio',
+      options: chipColors,
+    },
+    size: {
+      options: chipSizes,
+      control: 'radio',
+      table: {
+        type: { summary: chipSizes },
+        category: category.props,
+        defaultValue: { summary: getChipSizeDefault() },
+      },
+    },
     svgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
       table: { category: category.props },
-    },
-    size: {
-      options: availableSizes,
-      control: 'radio',
-      table: {
-        category: category.props,
-        type: { summary: availableSizes },
-      },
     },
   },
   args: {
@@ -48,13 +69,13 @@ export const Examples: Story = {
     return (
       <div className={'flex gapXs'}>
         <Chip>{'Endret'}</Chip>
-        <Chip variant={'green'} svgPath={CheckSVGpath}>
+        <Chip color={'forest'} svgPath={CheckSVGpath}>
           {'Godkjent'}
         </Chip>
-        <Chip variant={'red'} svgPath={WarningSVGpath}>
+        <Chip color={'burgundy'} svgPath={WarningSVGpath}>
           {'Særavgift'}
         </Chip>
-        <Chip variant={'grey'}>{'Info'}</Chip>
+        <Chip color={'graphite'}>{'Info'}</Chip>
       </div>
     );
   },

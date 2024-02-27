@@ -9,6 +9,15 @@ export interface BaseProps extends BasePropsHTMLAttributes {
   'data-testid'?: string;
 }
 
+export const colorNamesArr = [
+  'ochre',
+  'forest',
+  'burgundy',
+  'denim',
+  'azure',
+  'graphite',
+] as const;
+
 export const sizeArr = [
   'extraSmall',
   'small',

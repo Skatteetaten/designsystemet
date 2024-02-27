@@ -1,4 +1,4 @@
-import { ChipSize, ChipVariant } from './Chip.types';
+import { ChipColor, ChipSize } from './Chip.types';
 
 export const getChipSizeDefault = (): ChipSize => 'medium';
-export const getChipVariantDefault = (): ChipVariant => 'yellow';
+export const getChipColorDefault = (): ChipColor => 'ochre';

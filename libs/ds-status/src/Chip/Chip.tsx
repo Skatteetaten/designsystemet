@@ -4,7 +4,7 @@ import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
 import { ChipProps } from './Chip.types';
-import { getChipSizeDefault, getChipVariantDefault } from './defaults';
+import { getChipColorDefault, getChipSizeDefault } from './defaults';
 
 import styles from './Chip.module.scss';
 
@@ -15,14 +15,14 @@ export const Chip = forwardRef<HTMLDivElement, ChipProps>(
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
-      variant = getChipVariantDefault(),
+      color = getChipColorDefault(),
       size = getChipSizeDefault(),
       svgPath,
       children,
     },
     ref
   ): JSX.Element => {
-    const variantClassName = styles[`chip_${variant}`];
+    const variantClassName = styles[`chip_${color}`];
     const sizeClassName = styles[`chip_${size}`];
 
     return (
@@ -45,3 +45,5 @@ export const Chip = forwardRef<HTMLDivElement, ChipProps>(
 );
 
 Chip.displayName = 'Chip';
+
+export { getChipColorDefault, getChipSizeDefault };

@@ -1,9 +1,9 @@
-import { getChipSizeDefault, getChipVariantDefault } from '../defaults';
+import { getChipSizeDefault, getChipColorDefault } from '../defaults';
 
 describe('Chip defaults', () => {
-  it('Når getChipVariantDefault kalles, så returnerer den riktig verdi', () => {
-    const renderDefault = getChipVariantDefault();
-    expect(renderDefault).toBe('yellow');
+  it('Når getChipColorDefault kalles, så returnerer den riktig verdi', () => {
+    const renderDefault = getChipColorDefault();
+    expect(renderDefault).toBe('ochre');
   });
 
   it('Når getChipSizeDefault kalles, så returnerer den riktig verdi', () => {
