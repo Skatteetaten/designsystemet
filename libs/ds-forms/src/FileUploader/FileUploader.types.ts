@@ -1,6 +1,7 @@
 import {
   ComponentPropsWithoutRef,
   ForwardRefExoticComponent,
+  MouseEvent,
   ReactNode,
   RefAttributes,
 } from 'react';
@@ -90,10 +91,21 @@ export interface FileUploaderCommonProps
   /**
    * Kalles når fil skal fjernes.
    *
-   * @param {string} file filen som skal fjernes
+   * @param {UploadedFile} file filen som skal fjernes
    * @returns {boolean} om DELETE kallet var vellykket
    */
-  onFileDelete?: (file: UploadedFile) => boolean;
+  onFileDelete?: (file: UploadedFile) => boolean | Promise<boolean>;
+  /**
+   * Kalles når fil skal lastes ned. Brukes om man trenger å overstyre standard oppførsel til
+   * lenkene og initiere nedlasting selv.
+   *
+   * @param {MouseEvent} event MouseEvent for anchor som ble klikket på
+   * @param {UploadedFile} file filen som skal fjernes
+   */
+  onFileDownload?: (
+    event: MouseEvent<HTMLAnchorElement>,
+    file: UploadedFile
+  ) => void;
 }
 
 export interface UploadedFile {

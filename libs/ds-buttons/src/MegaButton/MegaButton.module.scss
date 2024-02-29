@@ -3,13 +3,10 @@
 
   &::before {
     position: absolute;
-    top: -7px; // border: 2px + offset: 1px
-    right: -7px; // border: 2px + offset: 1px
-    bottom: -7px; // border: 2px + offset: 1px
-    left: -7px; // border: 2px + offset: 1px
     border: 2px solid var(--semantic-interactive-main);
     border-radius: 13px;
     content: '';
+    inset: -7px; // border: 2px + offset: 1px // border: 2px + offset: 1px // border: 2px + offset: 1px // border: 2px + offset: 1px
   }
 }
 
@@ -22,7 +19,7 @@
   border-color: var(--semantic-interactive-main);
   border-radius: 0.5rem;
   background-color: var(--semantic-interactive-main);
-  box-shadow: 0 7px 6px -6px rgba(0, 0, 0, 16%);
+  box-shadow: 0 7px 6px -6px rgb(0 0 0 / 16%);
   color: var(--palette-graphite-0);
   cursor: pointer;
   font-size: var(--font-size-l);

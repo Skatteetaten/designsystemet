@@ -71,7 +71,8 @@
     height: fit-content;
     flex-direction: row;
     align-items: center;
-    padding: var(--spacing-xxs) var(--spacing-s);
+    padding: var(--spacing-xxs) var(--spacing-s) var(--spacing-xxs)
+      var(--spacing-xs);
     border-width: 3px;
     border-radius: var(--spacing-l);
     font-size: var(--font-size-m);
@@ -86,26 +87,20 @@
     &:focus {
       &::before {
         position: absolute;
-        top: -7px;
-        right: -7px;
-        bottom: -7px;
-        left: -7px;
         border: 2px solid var(--semantic-interactive-main);
         border-radius: 3rem;
         content: '';
+        inset: -7px;
       }
     }
 
     &:active {
       &::before {
         position: absolute;
-        top: -7px;
-        right: -7px;
-        bottom: -7px;
-        left: -7px;
         border: 2px solid var(--semantic-interactive-main);
         border-radius: 3rem;
         content: '';
+        inset: -7px;
       }
 
       background-color: var(--semantic-interactive-background);

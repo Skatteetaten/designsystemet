@@ -1,5 +1,5 @@
 @import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
-@import 'libs/ds-core-utils/src/styles.scss';
+@import 'libs/ds-core-utils/src/styles';
 
 .container {
   position: relative;
@@ -9,7 +9,7 @@
 .overlay {
   position: fixed;
   z-index: 800;
-  background: rgba(255, 255, 255, 80%);
+  background: rgb(255 255 255 / 80%);
   inset: 0;
 }
 
@@ -55,6 +55,10 @@
       fill: var(--semantic-interactive-foreground);
     }
   }
+
+  @media (min-width: $breakpoint-s) {
+    padding-right: var(--spacing-xs);
+  }
 }
 
 .menu {
@@ -97,7 +101,6 @@
     position: absolute;
     right: 0;
     left: 0;
-    padding-right: var(--spacing-xs);
   }
 }
 

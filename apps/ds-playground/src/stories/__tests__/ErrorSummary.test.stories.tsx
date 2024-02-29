@@ -54,6 +54,7 @@ const defaultChildren = [
   <ErrorSummary.Error key={'errorSummaryError_2'} referenceId={'id_2'}>
     {'Selger du varer og tjenester for egen regning?'}
   </ErrorSummary.Error>,
+  false,
 ];
 
 export const WithRef = {
@@ -130,8 +131,8 @@ export const WithChildren = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const heading = canvas.getByRole('heading', { level: 2 });
-    await expect(heading).toBeInTheDocument();
+    const listItems = canvas.getAllByRole('listitem');
+    await expect(listItems).toHaveLength(2);
   },
 } satisfies Story;
 

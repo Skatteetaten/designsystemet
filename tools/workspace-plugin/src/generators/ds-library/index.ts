@@ -11,7 +11,7 @@ import {
 } from '@nx/devkit';
 import { Linter } from '@nx/eslint';
 import { libraryGenerator } from '@nx/react';
-import { configurationGenerator, scssGenerator } from 'nx-stylelint';
+import { configurationGenerator } from 'nx-stylelint';
 
 import { Schema } from './schema';
 
@@ -35,13 +35,12 @@ export default async function (
     bundler: 'rollup',
   });
 
-  //konfigurasjon for stylelint
+  // konfigurasjon for stylelint
   await configurationGenerator(tree, {
     project: projectName,
     skipFormat: false,
     formatter: 'string',
   });
-  await scssGenerator(tree, { project: projectName, skipFormat: false });
 
   const projectConfig = readProjectConfiguration(tree, projectName);
 
@@ -80,13 +79,13 @@ export default async function (
   updateJson(tree, babelrcPath, (babelrc): object => {
     babelrc.presets = undefined;
     babelrc.plugins = undefined;
-    babelrc.extends = '../../../../.babelrc';
+    babelrc.extends = '../../.babelrc';
     return babelrc;
   });
 
   const eslintrcPath = joinPathFragments(projectConfig.root, '.eslintrc.json');
   updateJson(tree, eslintrcPath, (eslintrc): object => {
-    eslintrc.extends = ['../../../../.eslintrc.json'];
+    eslintrc.extends = ['../../.eslintrc.json'];
     return eslintrc;
   });
 
@@ -147,6 +146,7 @@ export default async function (
   });
 
   const lint = projectConfig?.targets?.lint;
+  const stylelint = projectConfig?.targets?.stylelint;
   const projectConfigWithRollupOptions = {
     ...projectConfig,
     implicitDependencies: ['!ds-dev-config'],
@@ -174,6 +174,16 @@ export default async function (
           lintFilePatterns: [
             ...lint.options.lintFilePatterns,
             `libs/${projectName}/package.json`,
+          ],
+        },
+      },
+      stylelint: {
+        ...stylelint,
+        options: {
+          ...stylelint.options,
+          lintFilePatterns: [
+            ...stylelint.options.lintFilePatterns,
+            `libs/${projectName}/**/*.scss`,
           ],
         },
       },
