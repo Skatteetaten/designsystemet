@@ -1,6 +1,7 @@
 /* automatisk genererte types */
 export const chip: string;
 export const iconWrapper: string;
+export const icon: string;
 export const chip_ochre: string;
 export const chip_burgundy: string;
 export const chip_forest: string;

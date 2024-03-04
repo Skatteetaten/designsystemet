@@ -35,7 +35,7 @@ export const Chip = forwardRef<HTMLDivElement, ChipProps>(
       >
         {svgPath && (
           <div className={styles.iconWrapper} aria-hidden>
-            <Icon size={'small'} svgPath={svgPath} />
+            <Icon className={styles.icon} svgPath={svgPath} />
           </div>
         )}
         {children}
