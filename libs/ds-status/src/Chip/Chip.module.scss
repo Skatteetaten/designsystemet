@@ -38,6 +38,12 @@
   }
 
   &_small {
-    padding: var(--spacing-xxs) var(--spacing-s);
+    padding: 0 6px;
+    font-size: var(--font-size-s);
+    line-height: var(--semantic-line-height-default);
+
+    .iconWrapper .icon {
+      width: var(--size-extra-small);
+    }
   }
 }
