@@ -139,6 +139,6 @@ code {
   gap: var(--spacing-s);
 }
 
-.headerCellWidth {
-  width: 200px;
+.gapXs {
+  gap: var(--spacing-xs);
 }
