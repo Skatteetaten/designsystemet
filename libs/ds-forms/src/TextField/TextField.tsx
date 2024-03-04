@@ -90,7 +90,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
     const addSpacesOrCommas = (value: string): string =>
       value.replace(/\B(?=(\d{3})+(?!\d))/g, separator);
     const removeNonNumeric = (value: string): string =>
-      value.replace(/[^0-9]/g, '');
+      value.replace(/[^0-9-]|(?<=.)-/g, '');
 
     const handleChange = (
       e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
@@ -110,6 +110,12 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
     /* Slik at value har riktig format også før bruker begynner å skrive i feltet */
     if (thousandSeparator && value) {
       value = addSpacesOrCommas(removeNonNumeric(value.toString()));
+    }
+
+    if (thousandSeparator && defaultValue) {
+      defaultValue = addSpacesOrCommas(
+        removeNonNumeric(defaultValue.toString())
+      );
     }
 
     const isLarge = variant === 'large';

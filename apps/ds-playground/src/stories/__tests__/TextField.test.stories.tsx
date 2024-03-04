@@ -586,7 +586,6 @@ export const WithThousandSeparatorAndNegativeValue = {
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
-    console.log(textbox.clientHeight, textbox.getBoundingClientRect().height);
     await expect(textbox.tagName).toBe('INPUT');
     await textbox.focus();
     await userEvent.type(textbox, '-A10-000-');
