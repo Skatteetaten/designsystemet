@@ -1,9 +1,16 @@
 import { expect } from '@storybook/jest';
 
-import { getSearchFieldHasSearchButtonIconDefault } from '../defaults';
+import {
+  getSearchFieldHasSearchButtonIconDefault,
+  getSearchFieldHideLabelDefault,
+} from '../defaults';
 
-describe('TextField defaults', () => {
-  it('Når getTextFieldAsDefault kalles, så returnerer den riktig verdi', () => {
+describe('SearchField defaults', () => {
+  it('Når getSearchFieldHasSearchButtonIconDefault kalles, så returnerer den riktig verdi', () => {
     expect(getSearchFieldHasSearchButtonIconDefault()).toBe(true);
+  });
+
+  it('Når kalles getSearchFieldHideLabelDefault, så returnerer den riktig verdi', () => {
+    expect(getSearchFieldHideLabelDefault()).toBe(true);
   });
 });
