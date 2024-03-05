@@ -218,6 +218,7 @@ export const WithVariants = {
   name: 'With Variants (A1b, A2)',
   args: {
     ...defaultArgs,
+    hideLabel: false,
   },
   argTypes: {
     variant: { table: { disable: false } },
@@ -305,10 +306,11 @@ export const WithDefaultValue = {
 } satisfies Story;
 
 export const WithDescription = {
-  name: 'With Description (0b)',
+  name: 'With Description (0b, B2)',
   args: {
     ...defaultArgs,
     description: 'En liten beskrivelse tekst',
+    hideLabel: false,
   },
   argTypes: {
     description: { table: { disable: false } },
@@ -321,10 +323,11 @@ export const WithDescription = {
 } satisfies Story;
 
 export const WithHelpText = {
-  name: 'With HelpText (0b)',
+  name: 'With HelpText (0b, B2)',
   args: {
     ...defaultArgs,
     helpText: 'Hjelpetekst',
+    hideLabel: false,
   },
   argTypes: {
     helpText: { table: { disable: false } },
@@ -336,22 +339,6 @@ export const WithHelpText = {
     });
     await expect(helpButton).toBeInTheDocument();
     await fireEvent.click(helpButton);
-  },
-} satisfies Story;
-
-export const WithHideLabel = {
-  name: 'With HideLabel (0b, B2)',
-  args: {
-    ...defaultArgs,
-    hideLabel: true,
-  },
-  argTypes: {
-    hideLabel: { table: { disable: false } },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const searchbox = canvas.getByRole('searchbox', { name: defaultLabelText });
-    await expect(searchbox).toBeInTheDocument();
   },
 } satisfies Story;
 

@@ -273,6 +273,7 @@ export const Examples: Story = {
           value={value}
           results={results}
           placeholder={'Eksempel: tomat'}
+          hideLabel={false}
           onChange={(event) => {
             setValue(event.target.value);
           }}
@@ -290,6 +291,7 @@ export const Examples: Story = {
           value={simpleValue}
           results={simpleResults}
           placeholder={'Eksempel: agurk'}
+          hideLabel={false}
           onChange={(event) => {
             setSimpleValue(event.target.value);
           }}
@@ -301,7 +303,7 @@ export const Examples: Story = {
           }}
         />
         <form>
-          <SearchField label={'uncontrolled'} />
+          <SearchField label={'uncontrolled'} hideLabel={false} />
         </form>
       </>
     );

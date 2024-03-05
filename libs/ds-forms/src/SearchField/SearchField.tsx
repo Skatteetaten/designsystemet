@@ -18,7 +18,10 @@ import {
 } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath, SearchIcon } from '@skatteetaten/ds-icons';
 
-import { getSearchFieldHasSearchButtonIconDefault } from './defaults';
+import {
+  getSearchFieldHasSearchButtonIconDefault,
+  getSearchFieldHideLabelDefault,
+} from './defaults';
 import { SearchFieldComponent, SearchFieldProps } from './SearchField.types';
 import { searchInList } from './utils';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
@@ -50,7 +53,7 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
       readOnly,
       value,
       hasSearchButtonIcon = getSearchFieldHasSearchButtonIconDefault(),
-      hideLabel,
+      hideLabel = getSearchFieldHideLabelDefault(),
       onBlur,
       onChange,
       onFocus,
