@@ -58,7 +58,7 @@ exports[`Tester/Chip WithCustomIcon smoke-test 1`] = `
     <div class="Chip_iconWrapper__KjHgM"
          aria-hidden="true"
     >
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo "
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Chip_icon__H5mBf"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
