@@ -304,8 +304,8 @@ export const WithDefaultValueAndThousandSeparator = {
   play: verifyAttribute('value', '10 000'),
 } satisfies Story;
 
-export const WithDefaultValueAndAutoSize = {
-  name: 'With DefaultValue and Autosize',
+export const WithDefaultValueAndAutoSizeTextArea = {
+  name: 'With DefaultValue and Autosize TextArea',
   args: {
     ...defaultArgs,
     as: 'textarea',
@@ -317,7 +317,11 @@ export const WithDefaultValueAndAutoSize = {
     autosize: { table: { disable: false } },
   },
   parameters: {
-    imageSnapshot: { disable: true },
+    parameters: {
+      viewport: {
+        defaultViewport: '--breakpoint-xs',
+      },
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

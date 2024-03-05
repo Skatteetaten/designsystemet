@@ -155,7 +155,7 @@ exports[`Tester/TextField WithDefaultValue play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TextField WithDefaultValueAndAutoSize play-test 1`] = `
+exports[`Tester/TextField WithDefaultValueAndAutoSizeTextArea play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r11:"
