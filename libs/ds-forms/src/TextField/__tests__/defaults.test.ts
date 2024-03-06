@@ -1,5 +1,3 @@
-import { expect } from '@storybook/jest';
-
 import { getTextFieldAsDefault } from '../defaults';
 
 describe('TextField defaults', () => {

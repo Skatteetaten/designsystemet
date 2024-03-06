@@ -1,7 +1,6 @@
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { fireEvent, userEvent, within } from '@storybook/testing-library';
+import { expect, fireEvent, userEvent, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries

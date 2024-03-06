@@ -2,14 +2,8 @@ import { ChangeEvent, FocusEvent, useState } from 'react';
 
 import { dsI18n, formArrSize } from '@skatteetaten/ds-core-utils';
 import { Select } from '@skatteetaten/ds-forms';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import {
-  fireEvent,
-  userEvent,
-  waitFor,
-  within,
-} from '@storybook/testing-library';
+import { expect, fireEvent, userEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';

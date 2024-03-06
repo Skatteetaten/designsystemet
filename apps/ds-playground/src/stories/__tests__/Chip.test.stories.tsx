@@ -1,9 +1,8 @@
 import { sizeArr } from '@skatteetaten/ds-core-utils';
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
 import { Chip } from '@skatteetaten/ds-status';
-import { expect } from '@storybook/jest';
 import { Meta, StoryObj } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { expect, within } from '@storybook/test';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
 

@@ -1,6 +1,6 @@
 import { Blockquote, BlockquoteProps } from '@skatteetaten/ds-typography';
-import { expect } from '@storybook/jest';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { expect } from '@storybook/test';
 import { within } from '@storybook/testing-library';
 
 import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
