@@ -10,7 +10,7 @@ import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { userEvent, waitFor, within } from '@storybook/testing-library';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
+import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const verifyAttribute =
@@ -288,6 +288,54 @@ export const WithDefaultValue = {
   play: verifyAttribute('value', valueText),
 } satisfies Story;
 
+export const WithDefaultValueAndThousandSeparator = {
+  name: 'With DefaultValue and ThousandSeparator',
+  args: {
+    ...defaultArgs,
+    defaultValue: 10000,
+    thousandSeparator: true,
+  },
+  argTypes: {
+    defaultValue: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: verifyAttribute('value', '10 000'),
+} satisfies Story;
+
+export const WithDefaultValueAndAutoSizeTextArea = {
+  name: 'With DefaultValue and Autosize TextArea',
+  args: {
+    ...defaultArgs,
+    as: 'textarea',
+    defaultValue: loremIpsum,
+    autosize: true,
+  },
+  argTypes: {
+    defaultValue: { table: { disable: false } },
+    autosize: { table: { disable: false } },
+  },
+  parameters: {
+    parameters: {
+      viewport: {
+        defaultViewport: '--breakpoint-xs',
+      },
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox).toHaveValue(loremIpsum);
+    await expect(textbox.tagName).toBe('TEXTAREA');
+    const { scrollHeight } = textbox;
+    const includeBorderAndMore = textbox.offsetHeight - textbox.clientHeight;
+    await expect(textbox).toHaveStyle({
+      height: `${scrollHeight + includeBorderAndMore}px`,
+    });
+  },
+} satisfies Story;
+
 export const WithAutoCompleteInputModeNameAndPlaceholder = {
   name: 'With AutoComplete InputMode Name And Placeholder (A3, A6, B1)',
   args: {
@@ -523,6 +571,30 @@ export const WithThousandSeparator = {
     await userEvent.type(textbox, 'A10000');
     await waitFor(() => expect(args.onChange).toHaveBeenCalled());
     await expect(textbox).toHaveValue('10 000');
+  },
+} satisfies Story;
+
+export const WithThousandSeparatorAndNegativeValue = {
+  name: 'With ThousandSeparator and negative number value',
+  args: {
+    ...defaultArgs,
+    thousandSeparator: true,
+  },
+  argTypes: {
+    defaultValue: { table: { disable: false } },
+    thousandSeparator: { table: { disable: true } },
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox.tagName).toBe('INPUT');
+    await textbox.focus();
+    await userEvent.type(textbox, '-A10-000-');
+    await waitFor(() => expect(args.onChange).toHaveBeenCalled());
+    await expect(textbox).toHaveValue('-10 000');
   },
 } satisfies Story;
 
