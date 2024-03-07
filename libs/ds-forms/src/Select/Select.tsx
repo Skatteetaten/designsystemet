@@ -1,11 +1,11 @@
 import React, {
   ChangeEvent,
   forwardRef,
-  useEffect,
   useId,
   useImperativeHandle,
   useRef,
   JSX,
+  useLayoutEffect,
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -74,10 +74,10 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
     }`.trim();
 
     const placeholderPaletteGraphite50 = 'var(--palette-graphite-50)';
-    useEffect(() => {
+    useLayoutEffect(() => {
       changePlaceholderColor();
       // eslint-disable-next-line
-    }, []);
+    }, [value]);
 
     const handleChange = (e: ChangeEvent<HTMLSelectElement>): void => {
       changePlaceholderColor();
