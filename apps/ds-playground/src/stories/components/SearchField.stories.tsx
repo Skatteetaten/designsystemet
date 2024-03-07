@@ -68,7 +68,10 @@ const meta = {
       table: { category: category.htmlAttribute },
     },
     readOnly: { table: { category: category.htmlAttribute } },
-    value: { table: { category: category.htmlAttribute } },
+    value: {
+      control: 'text',
+      table: { category: category.htmlAttribute },
+    },
     // Events
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
