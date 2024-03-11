@@ -4,9 +4,9 @@ import {
   getDefaultSibling,
 } from '@skatteetaten/ds-navigation';
 import { List, Paragraph } from '@skatteetaten/ds-typography';
-import { jest, expect } from '@storybook/jest';
 import { useArgs } from '@storybook/preview-api';
 import { StoryObj, Meta } from '@storybook/react';
+import { fn, expect } from '@storybook/test';
 import { within, userEvent } from '@storybook/testing-library';
 
 const meta = {
@@ -39,7 +39,7 @@ const defaultArgs = {
   listLength: getDefaultListLength(),
   listTotalLength: 70,
   sibling: getDefaultSibling(),
-  onChange: jest.fn(),
+  onChange: fn(),
 };
 
 export const WithRef = {
