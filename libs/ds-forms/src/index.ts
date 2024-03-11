@@ -19,3 +19,5 @@ export * from './RadioGroup/RadioGroup';
 export * from './RadioGroup/RadioGroup.types';
 export * from './TextField/TextField';
 export * from './TextField/TextField.types';
+export * from './SearchField/SearchField';
+export * from './SearchField/SearchField.types';

@@ -43,5 +43,7 @@
   "fileuploader.UploadedHeading": "Uploaded:",
   "fileuploader.UploadedSummary": "({{fileCount}} file(s) uploaded)",
   "searchfield.ButtonTitle": "Search",
-  "searchfield.ClearButtonTitle": "(Clear)"
+  "searchfield.ClearButtonTitle": "(Clear)",
+  "searchfield.Focus": "Use up/down to choose options when they are shown",
+  "searchfield.NumberOfResults": "{{ant}} items shown."
 }

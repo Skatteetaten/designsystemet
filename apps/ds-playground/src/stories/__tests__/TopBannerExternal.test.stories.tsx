@@ -7,9 +7,8 @@ import {
   TopBannerExternalProps,
   TopBannerExternalHandle,
 } from '@skatteetaten/ds-layout';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { userEvent, within } from '@storybook/testing-library';
+import { expect, userEvent, within } from '@storybook/test';
 
 import customLogo from '../../assets/custom-logo.svg';
 import skeLogo from '../../assets/ske-logo.svg';

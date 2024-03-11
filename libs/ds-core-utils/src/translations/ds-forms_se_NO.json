@@ -39,5 +39,7 @@
   "fileuploader.UploadedHeading": "Lasihuvvon:",
   "fileuploader.UploadedSummary": "({{fileCount}} filer lastet opp)",
   "searchfield.ButtonTitle": "(Søk)",
-  "searchfield.ClearButtonTitle": "(Nullstill)"
+  "searchfield.ClearButtonTitle": "(Nullstill)",
+  "searchfield.Focus": "Geavat vulos/bajás boaluid válljet evttohusaid",
+  "searchfield.NumberOfResults": "{{ant}} evttohus/evttohusat."
 }

@@ -1,8 +1,7 @@
 import { ScrollToTopButton } from '@skatteetaten/ds-buttons';
 import { ExternalLayout, dsI18n } from '@skatteetaten/ds-core-utils';
-import { expect } from '@storybook/jest';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { userEvent, within } from '@storybook/testing-library';
+import { expect, userEvent, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';

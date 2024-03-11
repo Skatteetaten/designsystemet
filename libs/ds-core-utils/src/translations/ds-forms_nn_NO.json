@@ -43,5 +43,7 @@
   "fileuploader.UploadedHeading": "Lasta opp:",
   "fileuploader.UploadedSummary": "({{fileCount}} fil(er) lastet opp)",
   "searchfield.ButtonTitle": "Søk",
-  "searchfield.ClearButtonTitle": "(Nullstill)"
+  "searchfield.ClearButtonTitle": "(Nullstill)",
+  "searchfield.Focus": "Bruk piltastane ned/opp for å velje",
+  "searchfield.NumberOfResults": "{{ant}} forslag visast."
 }

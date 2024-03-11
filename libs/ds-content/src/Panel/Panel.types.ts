@@ -4,20 +4,17 @@ import {
   BaseProps,
   HeadingAs,
   SubheadingAs,
+  colorNamesArr,
 } from '@skatteetaten/ds-core-utils';
 import { IconProps } from '@skatteetaten/ds-icons';
 
 export const panelVariantArr = ['outline', 'filled'] as const;
 export type PanelVariant = (typeof panelVariantArr)[number];
 
-export const panelColorArr = [
-  'ochre',
-  'forest',
-  'burgundy',
-  'denim',
-  'graphite',
-] as const;
-export type PanelColor = (typeof panelColorArr)[number];
+export type PanelColor = Extract<
+  (typeof colorNamesArr)[number],
+  'ochre' | 'forest' | 'burgundy' | 'denim' | 'graphite'
+>;
 
 export const panelPaddingArr = ['s', 'm', 'l', 'xl', 'xxl', 'mega'] as const;
 export type PanelPadding = (typeof panelPaddingArr)[number];

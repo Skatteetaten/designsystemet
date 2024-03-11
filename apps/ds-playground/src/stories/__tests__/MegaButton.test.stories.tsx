@@ -9,9 +9,8 @@ import {
   dsI18n,
   getCommonButtonTypeDefault,
 } from '@skatteetaten/ds-core-utils';
-import { expect } from '@storybook/jest';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { userEvent, waitFor, within } from '@storybook/testing-library';
+import { expect, userEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 

@@ -11,7 +11,11 @@ import {
   getPanelTitleAsDefault,
   getPanelVariantDefault,
 } from '@skatteetaten/ds-content';
-import { headingAsArr, subheadingAsArr } from '@skatteetaten/ds-core-utils';
+import {
+  colorNamesArr,
+  headingAsArr,
+  subheadingAsArr,
+} from '@skatteetaten/ds-core-utils';
 import { CheckIcon } from '@skatteetaten/ds-icons';
 import { Paragraph } from '@skatteetaten/ds-typography';
 import { Meta, StoryObj } from '@storybook/react';
@@ -23,6 +27,14 @@ import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import { exampleParameters } from '../utils/stories.utils';
 import { getVersion } from '../utils/version.utils';
 
+const panelColorArr = [
+  colorNamesArr[0],
+  colorNamesArr[1],
+  colorNamesArr[2],
+  colorNamesArr[3],
+  colorNamesArr[5],
+];
+
 const meta = {
   component: Panel,
   title: 'Komponenter/Panel',
@@ -33,8 +45,10 @@ const meta = {
       table: { category: category.props },
     },
     color: {
+      options: panelColorArr,
       control: 'inline-radio',
       table: {
+        type: { summary: panelColorArr },
         category: category.props,
         defaultValue: { summary: getPanelColorDefault() },
       },

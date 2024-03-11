@@ -3,9 +3,8 @@ import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { GaveArvSVGpath, Icon } from '@skatteetaten/ds-icons';
 import { Footer, FooterProps } from '@skatteetaten/ds-layout';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { expect, within } from '@storybook/test';
 
 import logo from '../../assets/ske-logo-horizontal-white.png';
 
