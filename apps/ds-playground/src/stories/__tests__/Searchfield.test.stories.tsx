@@ -112,6 +112,7 @@ export const WithAttributes = {
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
+    hideLabel: false,
   },
   argTypes: {
     id: { table: { disable: false } },
@@ -131,15 +132,19 @@ export const WithAttributes = {
   },
 } satisfies Story;
 
+const longLabelText =
+  'Leter du etter en LAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANG gjenstand?';
 export const WithCustomClassNames = {
-  name: 'With Custom ClassNames (FA3)',
+  name: 'With Custom ClassNames and Long Label (FA3)',
   args: {
     ...defaultArgs,
+    label: longLabelText,
     classNames: {
       container: ' dummyClassname',
       label: 'dummyClassname',
       searchContainer: 'dummyClassnameFormContainer',
     },
+    hideLabel: false,
   },
   argTypes: {
     classNames: {
@@ -150,7 +155,7 @@ export const WithCustomClassNames = {
     const canvas = within(canvasElement);
     // eslint-disable-next-line testing-library/no-node-access
     const container = canvasElement.querySelector(`${wrapper} > div`);
-    const label = canvas.getByText(defaultLabelText);
+    const label = canvas.getByText(longLabelText);
     // eslint-disable-next-line testing-library/no-node-access
     const searchContainer = canvasElement.querySelector(
       `${wrapper} > div > div`
@@ -162,6 +167,25 @@ export const WithCustomClassNames = {
   },
 } satisfies Story;
 
+export const WithLongLabel = {
+  name: 'With Long Label',
+  args: {
+    ...defaultArgs,
+    label: longLabelText,
+    description: 'Med en LAAAAAAAAAAAAAAAAAAAAAAAAAAAAANG beskrivelse?',
+    helpText: 'hjelpetekst',
+    hideLabel: false,
+  },
+  argTypes: {
+    label: {
+      table: { disable: false },
+    },
+    hideLabel: {
+      table: { disable: false },
+    },
+  },
+} satisfies Story;
+
 export const Defaults = {
   name: 'Defaults Variant Medium (A1a, A2, A3, B1, B4)',
   args: {
@@ -169,6 +193,8 @@ export const Defaults = {
   },
   argTypes: {
     label: { table: { disable: false } },
+    helpText: { table: { disable: false } },
+    description: { table: { disable: false } },
   },
   parameters: {
     imageSnapshot: {

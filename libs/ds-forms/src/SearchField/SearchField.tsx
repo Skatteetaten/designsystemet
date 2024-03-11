@@ -243,7 +243,7 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
                 </ul>
               </div>
             )}
-            {showClearButton && !disabled && (
+            {showClearButton && !disabled && !readOnly && (
               <IconButton
                 type={'reset'}
                 className={styles.clearButton}

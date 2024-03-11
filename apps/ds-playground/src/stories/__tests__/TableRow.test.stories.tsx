@@ -1,7 +1,7 @@
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Table } from '@skatteetaten/ds-table';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { expect, fireEvent, fn, within } from '@storybook/test';
 
 const meta = {
   component: Table.Row,
@@ -110,7 +110,7 @@ export const WithExpandable = {
     imageSnapshot: { disable: true },
     HTMLSnapshot: { disable: true },
   },
-  play: async ({ canvasElement }): Promise<void> => {
+  play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
     const iconButton = canvas.getByRole('button');
     await expect(iconButton).toHaveAttribute('aria-describedby', 'Id123');
@@ -118,9 +118,12 @@ export const WithExpandable = {
       dsI18n.t('ds_tables:tablerow.Expandable')
     );
     await expect(iconButton).toHaveAttribute('aria-expanded', 'false');
-    await userEvent.click(iconButton);
-    await waitFor(() =>
-      expect(iconButton).toHaveAttribute('aria-expanded', 'true')
-    );
+    /*TODO etter bytte fra @storybook/jest til @storybook/test må denne testen bruke
+    fireevent i stedet for UserEvent. Med userEVent gir testen ustabilt resultat.
+    I tillegg ser det ut som visningen i interactions fanen i storybook ikke samsvarer med resultatet til testen.
+     */
+    await fireEvent.click(iconButton);
+    await expect(args.onExpand).toHaveBeenCalled();
+    await expect(iconButton).toHaveAttribute('aria-expanded', 'true');
   },
 } satisfies Story;

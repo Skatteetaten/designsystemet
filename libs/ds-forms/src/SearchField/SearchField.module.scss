@@ -3,11 +3,12 @@
 .searchContainer {
   position: relative;
   display: flex;
-  max-width: 25rem;
   margin-top: var(--spacing-xs);
 }
 
 .topContainer {
+  max-width: 25rem;
+
   --clear-button-top: 5px;
   --clear-button-right: var(--spacing-s);
   --search-result-padding: var(--spacing-xs) var(--spacing-s);
