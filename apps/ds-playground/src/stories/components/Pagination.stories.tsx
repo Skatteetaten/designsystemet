@@ -358,7 +358,6 @@ const meta = {
     listTotalLength: 70,
     sibling: getDefaultSibling(),
     defaultCurrentPage: 1,
-    currentPage: 1,
   },
   parameters: {
     version: getVersion('ds-progress'),
