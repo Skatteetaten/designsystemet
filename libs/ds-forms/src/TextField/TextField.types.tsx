@@ -91,9 +91,9 @@ type TextFieldDiscriminatedRequiredProps =
       showRequiredMark?: boolean;
     }
   | {
-      required?: never;
+      required?: never | false;
       /** Om obligatorisk TextField skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
-      showRequiredMark?: never;
+      showRequiredMark?: never | false;
     };
 
 type TextFieldDiscriminatedErrorProps =
