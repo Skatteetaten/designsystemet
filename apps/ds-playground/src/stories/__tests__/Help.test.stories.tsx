@@ -1,8 +1,7 @@
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
-import { expect } from '@storybook/jest';
 import { Meta, StoryObj } from '@storybook/react';
-import { fireEvent, within } from '@storybook/testing-library';
+import { expect, fireEvent, within } from '@storybook/test';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import {

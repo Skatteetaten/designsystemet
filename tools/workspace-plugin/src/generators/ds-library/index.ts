@@ -79,7 +79,7 @@ export default async function (
   updateJson(tree, babelrcPath, (babelrc): object => {
     babelrc.presets = undefined;
     babelrc.plugins = undefined;
-    babelrc.extends = '../../../../.babelrc';
+    babelrc.extends = '../../.babelrc';
     return babelrc;
   });
 

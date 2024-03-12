@@ -1,10 +1,11 @@
 import {
   ChangeEvent,
   forwardRef,
+  JSX,
   useId,
   useImperativeHandle,
+  useLayoutEffect,
   useRef,
-  JSX,
 } from 'react';
 
 import {
@@ -70,11 +71,26 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       textboxRef: textboxRef,
     }));
 
+    useLayoutEffect(() => {
+      if (autosize) {
+        resizeTextArea();
+      }
+    }, [autosize]);
+
+    const resizeTextArea = (): void => {
+      const textArea = textboxRef.current as HTMLTextAreaElement;
+      textArea.style.height = 'inherit';
+      const { scrollHeight } = textArea;
+      const includeBorderAndMore =
+        textArea.offsetHeight - textArea.clientHeight;
+      textArea.style.height = `${scrollHeight + includeBorderAndMore}px`;
+    };
+
     const separator = dsI18n.language === Languages.Engelsk ? ',' : ' ';
     const addSpacesOrCommas = (value: string): string =>
       value.replace(/\B(?=(\d{3})+(?!\d))/g, separator);
     const removeNonNumeric = (value: string): string =>
-      value.replace(/[^0-9]/g, '');
+      value.replace(/[^0-9-]|(?<=.)-/g, '');
 
     const handleChange = (
       e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
@@ -85,12 +101,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       }
 
       if (autosize) {
-        const textArea = textboxRef.current as HTMLTextAreaElement;
-        textArea.style.height = 'inherit';
-        const { scrollHeight } = textArea;
-        const includeBorderAndMore =
-          textArea.offsetHeight - textArea.clientHeight;
-        textArea.style.height = `${scrollHeight + includeBorderAndMore}px`;
+        resizeTextArea();
       }
 
       onChange?.(e);
@@ -99,6 +110,12 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
     /* Slik at value har riktig format også før bruker begynner å skrive i feltet */
     if (thousandSeparator && value) {
       value = addSpacesOrCommas(removeNonNumeric(value.toString()));
+    }
+
+    if (thousandSeparator && defaultValue) {
+      defaultValue = addSpacesOrCommas(
+        removeNonNumeric(defaultValue.toString())
+      );
     }
 
     const isLarge = variant === 'large';

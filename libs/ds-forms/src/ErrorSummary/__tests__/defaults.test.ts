@@ -1,5 +1,3 @@
-import { expect } from '@storybook/jest';
-
 import { getErrorSummaryTitleAsDefault } from '../defaults';
 
 describe('ErrorSummary defaults', () => {

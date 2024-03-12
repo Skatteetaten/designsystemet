@@ -1,5 +1,4 @@
 import { Languages } from '@skatteetaten/ds-core-utils';
-import { expect } from '@storybook/jest';
 
 import {
   getTopBannerLangPickerLocaleDefault,

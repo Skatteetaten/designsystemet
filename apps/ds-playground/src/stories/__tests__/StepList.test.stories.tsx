@@ -4,9 +4,8 @@ import { StepList, StepListProps } from '@skatteetaten/ds-collections';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { RadioGroup } from '@skatteetaten/ds-forms';
 import { Heading, List, Paragraph } from '@skatteetaten/ds-typography';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { userEvent, within } from '@storybook/testing-library';
+import { expect, userEvent, within } from '@storybook/test';
 
 import { category } from '../../../.storybook/helpers';
 

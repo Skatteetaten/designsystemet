@@ -1,5 +1,3 @@
-import { expect } from '@storybook/jest';
-
 import { getRadioGroupVariantDefault } from '../defaults';
 
 describe('RadioGroup defaults', () => {
