@@ -1,14 +1,14 @@
 import { sizeArr } from '@skatteetaten/ds-core-utils';
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
-import { Chip } from '@skatteetaten/ds-status';
+import { Tag } from '@skatteetaten/ds-status';
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {
-  component: Chip,
-  title: 'Tester/Chip',
+  component: Tag,
+  title: 'Tester/Tag',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },
@@ -36,7 +36,7 @@ const meta = {
       table: { disable: true },
     },
   },
-} satisfies Meta<typeof Chip>;
+} satisfies Meta<typeof Tag>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
