@@ -137,6 +137,7 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
       listTotalLength,
       hidePrevNextButtonTitle = getDefaultHidePrevNextButtonTitle(),
       hidePageSummary = getDefaultHidePageSummary(),
+      ariaLabel,
       onChange = (): void => {},
     },
     ref
@@ -274,12 +275,12 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
         className={paginationCss}
         lang={lang}
         data-testid={dataTestId}
-        aria-label={'sidevelger'}
+        aria-label={ariaLabel ? ariaLabel : t('pagination.WrapperAriaLabel')}
       >
         <div className={pageSummary} aria-live={'polite'} aria-atomic={'true'}>
           {showPaginationSummary}
         </div>
-        <ul ref={ref} id={id} lang={lang} className={listCss}>
+        <ul className={listCss}>
           {internalPage > 1 && arrowLeft(internalPage)}
           {lastPage > 1 && (
             <PaginationList
@@ -300,4 +301,9 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
 
 Pagination.displayName = 'Pagination';
 
-export { getDefaultListLength, getDefaultSibling };
+export {
+  getDefaultListLength,
+  getDefaultSibling,
+  getDefaultHidePageSummary,
+  getDefaultHidePrevNextButtonTitle,
+};

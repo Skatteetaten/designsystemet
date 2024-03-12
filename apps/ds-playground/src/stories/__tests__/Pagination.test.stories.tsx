@@ -234,6 +234,7 @@ export const WithListLimit: Story = {
     listLength: 6,
     listTotalLength: data.length * 7,
     sibling: getDefaultSibling(),
+    currentPage: 1,
   },
   render: (args): JSX.Element => {
     const [{ currentPage }, updateArgs] = useArgs();
@@ -263,6 +264,7 @@ export const WithListLimit: Story = {
             listLength={2}
             sibling={2}
             defaultCurrentPage={1}
+            ariaLabel={'Second landmark'}
             onChange={onChange}
           />
         </Paragraph>

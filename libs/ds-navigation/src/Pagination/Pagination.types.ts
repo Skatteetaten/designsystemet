@@ -12,6 +12,11 @@ export interface PaginationCommonProps extends BaseProps {
   /** Skjul område pagesummary */
   hidePageSummary?: boolean;
   /**
+   * Hvis mer enn én komponent pr side så må denne propen sette på minst én av komponentene.
+   * aria-label brukes på nav-elementet. Tekst endres hvis språk endres
+   */
+  ariaLabel?: string;
+  /**
    * callback når endring av sidenummer.
    * Ikke required, men gir ikke mening at en komponent skal endres til en annen page
    * uten at det påvirker "noe" utenfor
@@ -24,7 +29,7 @@ type PaginationDiscriminatedProp =
       /** Gjeldende side. Bruk av currentPage ekskluderer bruk av defaultCurrentPage */
       currentPage?: number;
       /**
-       * setter initiell aktiv side hvis komponenten er uncontrolled.
+       * Setter initiell aktiv side hvis komponenten er uncontrolled.
        * Eksluderer samtidig bruk av currentPage
        */
       defaultCurrentPage?: never;
@@ -33,7 +38,7 @@ type PaginationDiscriminatedProp =
       /** Gjeldende side. Bruk av currentPage ekskluderer bruk av defaultCurrentPage */
       currentPage?: never;
       /**
-       * setter initiell aktiv side hvis komponenten er uncontrolled.
+       * Setter initiell aktiv side hvis komponenten er uncontrolled.
        * Eksluderer samtidig bruk av currentPage
        */
       defaultCurrentPage?: number;

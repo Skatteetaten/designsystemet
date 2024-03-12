@@ -3,7 +3,7 @@
 exports[`Tester/Pagination Defaults smoke-test 1`] = `
 <div data-test-block="true">
   <nav class="Pagination_pagination__lBs+M"
-       aria-label="sidevelger"
+       aria-label="Sidevelger"
   >
     <div class
          aria-live="polite"
@@ -57,7 +57,7 @@ exports[`Tester/Pagination Defaults smoke-test 1`] = `
 exports[`Tester/Pagination HidePageSummary smoke-test 1`] = `
 <div data-test-block="true">
   <nav class="Pagination_pagination__lBs+M"
-       aria-label="sidevelger"
+       aria-label="Sidevelger"
   >
     <div class="Pagination_paginationSummary_hide__Jf-cV"
          aria-live="polite"
@@ -125,7 +125,7 @@ exports[`Tester/Pagination HidePageSummary smoke-test 1`] = `
 exports[`Tester/Pagination HidePrevNextButtonTitle smoke-test 1`] = `
 <div data-test-block="true">
   <nav class="Pagination_pagination__lBs+M"
-       aria-label="sidevelger"
+       aria-label="Sidevelger"
   >
     <div class
          aria-live="polite"
@@ -194,7 +194,7 @@ exports[`Tester/Pagination HidePrevNextButtonTitle smoke-test 1`] = `
 exports[`Tester/Pagination Sibling smoke-test 1`] = `
 <div data-test-block="true">
   <nav class="Pagination_pagination__lBs+M"
-       aria-label="sidevelger"
+       aria-label="Sidevelger"
   >
     <div class
          aria-live="polite"
@@ -274,78 +274,7 @@ exports[`Tester/Pagination WithAttributes play-test 1`] = `
        class="Pagination_pagination__lBs+M dummyClassname"
        lang="nb"
        data-testid="123ID"
-       aria-label="sidevelger"
-  >
-    <div class
-         aria-live="polite"
-         aria-atomic="true"
-    >
-      Viser 1–10 av 70
-    </div>
-    <ul id="htmlId"
-        lang="nb"
-        class="Pagination_paginationList__+WZ2R "
-    >
-      <li class="Pagination_paginationElement__io2RM">
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  Pagination_paginationButton__Z6pjl"
-                type="button"
-                aria-current="true"
-        >
-          <span class="Button_buttonText__JxyB+">
-            1
-          </span>
-        </button>
-      </li>
-      <li class="Pagination_paginationElement__io2RM">
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
-                type="button"
-        >
-          <span class="Button_buttonText__JxyB+">
-            2
-          </span>
-        </button>
-      </li>
-      <li class="Pagination_paginationElement__io2RM">
-        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  Pagination_paginationElipsis__T7Grr">
-          ...
-        </p>
-      </li>
-      <li class="Pagination_paginationElement__io2RM">
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
-                type="button"
-        >
-          <span class="Button_buttonText__JxyB+">
-            7
-          </span>
-        </button>
-      </li>
-      <li class="Pagination_paginationElement__io2RM">
-        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 Pagination_paginationButton__Z6pjl"
-                type="button"
-        >
-          <span class>
-            Neste
-          </span>
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
-               viewbox="0 0 24 24"
-               focusable="false"
-               aria-hidden="true"
-               role="img"
-          >
-            <path d="m7.1 5.8 6.1 6.1L7.1 18 9 19.9l8-8-8-8-1.9 1.9Z">
-            </path>
-          </svg>
-        </button>
-      </li>
-    </ul>
-  </nav>
-</div>
-`;
-
-exports[`Tester/Pagination WithButtons smoke-test 1`] = `
-<div data-test-block="true">
-  <nav class="Pagination_pagination__lBs+M"
-       aria-label="sidevelger"
+       aria-label="Sidevelger"
   >
     <div class
          aria-live="polite"
@@ -410,10 +339,232 @@ exports[`Tester/Pagination WithButtons smoke-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Pagination WithButtons smoke-test 1`] = `
+<div data-test-block="true">
+  <nav class="Pagination_pagination__lBs+M"
+       aria-label="Sidevelger"
+  >
+    <div class
+         aria-live="polite"
+         aria-atomic="true"
+    >
+      Viser 1–10 av 70
+    </div>
+    <ul class="Pagination_paginationList__+WZ2R ">
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  Pagination_paginationButton__Z6pjl"
+                type="button"
+                aria-current="true"
+        >
+          <span class="Button_buttonText__JxyB+">
+            1
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            2
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  Pagination_paginationElipsis__T7Grr">
+          ...
+        </p>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            7
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <span class>
+            Neste
+          </span>
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m7.1 5.8 6.1 6.1L7.1 18 9 19.9l8-8-8-8-1.9 1.9Z">
+            </path>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`Tester/Pagination WithListLimit smoke-test 1`] = `
+<div data-test-block="true">
+  <ul class="List_list__xzA1c List_list_withBullet__s5lqA List_list_hasSpacing__a4Kcg ">
+    <li class="ListElement_element__B0xdX ">
+      1 Donald Duck
+    </li>
+    <li class="ListElement_element__B0xdX ">
+      2 Robbie Wiliams
+    </li>
+    <li class="ListElement_element__B0xdX ">
+      3 Minnie Mouse
+    </li>
+    <li class="ListElement_element__B0xdX ">
+      4 Katy Perry
+    </li>
+    <li class="ListElement_element__B0xdX ">
+      5 Langbein
+    </li>
+  </ul>
+  <nav class="Pagination_pagination__lBs+M"
+       aria-label="Sidevelger"
+  >
+    <div class
+         aria-live="polite"
+         aria-atomic="true"
+    >
+      Viser 1–5 av 42
+    </div>
+    <ul class="Pagination_paginationList__+WZ2R ">
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  Pagination_paginationButton__Z6pjl"
+                type="button"
+                aria-current="true"
+        >
+          <span class="Button_buttonText__JxyB+">
+            1
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            2
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  Pagination_paginationElipsis__T7Grr">
+          ...
+        </p>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            9
+          </span>
+        </button>
+      </li>
+      <li class="Pagination_paginationElement__io2RM">
+        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 Pagination_paginationButton__Z6pjl"
+                type="button"
+        >
+          <span class>
+            Neste
+          </span>
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m7.1 5.8 6.1 6.1L7.1 18 9 19.9l8-8-8-8-1.9 1.9Z">
+            </path>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </nav>
+  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
+    <nav class="Pagination_pagination__lBs+M"
+         aria-label="Second landmark"
+    >
+      <div class
+           aria-live="polite"
+           aria-atomic="true"
+      >
+        Viser 1–2 av 8
+      </div>
+      <ul class="Pagination_paginationList__+WZ2R ">
+        <li class="Pagination_paginationElement__io2RM">
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  Pagination_paginationButton__Z6pjl"
+                  type="button"
+                  aria-current="true"
+          >
+            <span class="Button_buttonText__JxyB+">
+              1
+            </span>
+          </button>
+        </li>
+        <li class="Pagination_paginationElement__io2RM">
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              2
+            </span>
+          </button>
+        </li>
+        <li class="Pagination_paginationElement__io2RM">
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              3
+            </span>
+          </button>
+        </li>
+        <li class="Pagination_paginationElement__io2RM">
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              4
+            </span>
+          </button>
+        </li>
+        <li class="Pagination_paginationElement__io2RM">
+          <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 Pagination_paginationButton__Z6pjl"
+                  type="button"
+          >
+            <span class>
+              Neste
+            </span>
+            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+                 viewbox="0 0 24 24"
+                 focusable="false"
+                 aria-hidden="true"
+                 role="img"
+            >
+              <path d="m7.1 5.8 6.1 6.1L7.1 18 9 19.9l8-8-8-8-1.9 1.9Z">
+              </path>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </p>
+</div>
+`;
+
 exports[`Tester/Pagination WithMultiple smoke-test 1`] = `
 <div data-test-block="true">
   <nav class="Pagination_pagination__lBs+M"
-       aria-label="sidevelger"
+       aria-label="Sidevelger"
   >
     <div class
          aria-live="polite"
@@ -481,7 +632,7 @@ exports[`Tester/Pagination WithMultiple smoke-test 1`] = `
 exports[`Tester/Pagination WithPrevNextLabel play-test 1`] = `
 <div data-test-block="true">
   <nav class="Pagination_pagination__lBs+M"
-       aria-label="sidevelger"
+       aria-label="Sidevelger"
   >
     <div class
          aria-live="polite"
@@ -578,7 +729,7 @@ exports[`Tester/Pagination WithPrevNextLabel play-test 1`] = `
 exports[`Tester/Pagination WithRef smoke-test 1`] = `
 <div data-test-block="true">
   <nav class="Pagination_pagination__lBs+M"
-       aria-label="sidevelger"
+       aria-label="Sidevelger"
        id="dummyIdForwardedFromRef"
   >
     <div class
@@ -587,9 +738,7 @@ exports[`Tester/Pagination WithRef smoke-test 1`] = `
     >
       Viser 1–10 av 70
     </div>
-    <ul class="Pagination_paginationList__+WZ2R "
-        id="dummyIdForwardedFromRef"
-    >
+    <ul class="Pagination_paginationList__+WZ2R ">
       <li class="Pagination_paginationElement__io2RM">
         <button class="Button_button__pkuNv Button_button_primary__8Ouwo  Pagination_paginationButton__Z6pjl"
                 type="button"

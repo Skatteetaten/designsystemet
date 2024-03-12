@@ -2,6 +2,8 @@ import {
   Pagination,
   getDefaultListLength,
   getDefaultSibling,
+  getDefaultHidePageSummary,
+  getDefaultHidePrevNextButtonTitle,
 } from '@skatteetaten/ds-navigation';
 import { List } from '@skatteetaten/ds-typography';
 import { useArgs } from '@storybook/preview-api';
@@ -334,10 +336,16 @@ const meta = {
       },
     },
     hidePrevNextButtonTitle: {
-      table: { category: category.props },
+      table: {
+        category: category.props,
+        defaultValue: { summary: getDefaultHidePrevNextButtonTitle() },
+      },
     },
     hidePageSummary: {
-      table: { category: category.props },
+      table: {
+        category: category.props,
+        defaultValue: { summary: getDefaultHidePageSummary() },
+      },
     },
     listLength: {
       table: {
@@ -348,6 +356,11 @@ const meta = {
     listTotalLength: {
       table: {
         category: category.props,
+      },
+    },
+    ariaLabel: {
+      table: {
+        category: category.aria,
       },
     },
     // Event
