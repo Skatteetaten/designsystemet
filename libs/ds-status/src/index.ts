@@ -1,4 +1,4 @@
 export * from './Alert/Alert';
 export * from './Alert/Alert.types';
-export * from './Chip/Chip';
-export * from './Chip/Chip.types';
+export * from './Tag/Tag';
+export * from './Tag/Tag.types';

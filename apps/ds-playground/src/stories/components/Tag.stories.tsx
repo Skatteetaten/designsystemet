@@ -1,9 +1,9 @@
 import { colorNamesArr, sizeArr } from '@skatteetaten/ds-core-utils';
 import { CheckSVGpath, WarningSVGpath } from '@skatteetaten/ds-icons';
 import {
-  Chip,
-  getChipColorDefault,
-  getChipSizeDefault,
+  Tag,
+  getTagColorDefault,
+  getTagSizeDefault,
 } from '@skatteetaten/ds-status';
 import { Meta, StoryObj } from '@storybook/react';
 
@@ -12,37 +12,37 @@ import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
 import { getVersion } from '../utils/version.utils';
 
-const chipColors = [
+const tagColors = [
   colorNamesArr[0],
   colorNamesArr[1],
   colorNamesArr[2],
   colorNamesArr[5],
 ];
 
-const chipSizes = [sizeArr[1], sizeArr[2]];
+const tagSizes = [sizeArr[1], sizeArr[2]];
 
 const meta = {
-  component: Chip,
-  title: 'Komponenter/Chip',
+  component: Tag,
+  title: 'Komponenter/Tag',
   argTypes: {
     // Props
     children: { control: 'text', table: { category: category.props } },
     color: {
       table: {
-        type: { summary: chipColors },
+        type: { summary: tagColors },
         category: category.props,
-        defaultValue: { summary: getChipColorDefault() },
+        defaultValue: { summary: getTagColorDefault() },
       },
       control: 'radio',
-      options: chipColors,
+      options: tagColors,
     },
     size: {
-      options: chipSizes,
+      options: tagSizes,
       control: 'radio',
       table: {
-        type: { summary: chipSizes },
+        type: { summary: tagSizes },
         category: category.props,
-        defaultValue: { summary: getChipSizeDefault() },
+        defaultValue: { summary: getTagSizeDefault() },
       },
     },
     svgPath: {
@@ -57,7 +57,7 @@ const meta = {
   parameters: {
     version: getVersion('ds-status'),
   },
-} satisfies Meta<typeof Chip>;
+} satisfies Meta<typeof Tag>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -68,14 +68,14 @@ export const Examples: Story = {
   render: (_args): JSX.Element => {
     return (
       <div className={'flex gapXs'}>
-        <Chip>{'Endret'}</Chip>
-        <Chip color={'forest'} svgPath={CheckSVGpath}>
+        <Tag>{'Endret'}</Tag>
+        <Tag color={'forest'} svgPath={CheckSVGpath}>
           {'Godkjent'}
-        </Chip>
-        <Chip color={'burgundy'} svgPath={WarningSVGpath}>
+        </Tag>
+        <Tag color={'burgundy'} svgPath={WarningSVGpath}>
           {'Særavgift'}
-        </Chip>
-        <Chip color={'graphite'}>{'Info'}</Chip>
+        </Tag>
+        <Tag color={'graphite'}>{'Info'}</Tag>
       </div>
     );
   },

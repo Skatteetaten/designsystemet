@@ -3,27 +3,27 @@ import { forwardRef, JSX } from 'react';
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
-import { ChipProps } from './Chip.types';
-import { getChipColorDefault, getChipSizeDefault } from './defaults';
+import { getTagColorDefault, getTagSizeDefault } from './defaults';
+import { TagProps } from './Tag.types';
 
-import styles from './Chip.module.scss';
+import styles from './Tag.module.scss';
 
-export const Chip = forwardRef<HTMLDivElement, ChipProps>(
+export const Tag = forwardRef<HTMLDivElement, TagProps>(
   (
     {
       id,
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
-      color = getChipColorDefault(),
-      size = getChipSizeDefault(),
+      color = getTagColorDefault(),
+      size = getTagSizeDefault(),
       svgPath,
       children,
     },
     ref
   ): JSX.Element => {
-    const variantClassName = styles[`chip_${color}`];
-    const sizeClassName = styles[`chip_${size}`];
+    const variantClassName = styles[`tag_${color}`];
+    const sizeClassName = styles[`tag_${size}`];
 
     return (
       <div
@@ -31,7 +31,7 @@ export const Chip = forwardRef<HTMLDivElement, ChipProps>(
         id={id}
         lang={lang}
         data-testid={dataTestId}
-        className={`${styles.chip} ${variantClassName} ${sizeClassName} ${className}`}
+        className={`${styles.tag} ${variantClassName} ${sizeClassName} ${className}`}
       >
         {svgPath && (
           <div className={styles.iconWrapper} aria-hidden>
@@ -44,6 +44,6 @@ export const Chip = forwardRef<HTMLDivElement, ChipProps>(
   }
 );
 
-Chip.displayName = 'Chip';
+Tag.displayName = 'Tag';
 
-export { getChipColorDefault, getChipSizeDefault };
+export { getTagColorDefault, getTagSizeDefault };
