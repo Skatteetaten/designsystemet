@@ -19,7 +19,8 @@
     "@skatteetaten/ds-buttons": "*",
     "@skatteetaten/ds-typography": "*",
     "@skatteetaten/ds-progress": "*",
-    "@skatteetaten/ds-status": "*"
+    "@skatteetaten/ds-status": "*",
+    "date-fns": "3.4.0"
   },
   "scripts": {}
 }

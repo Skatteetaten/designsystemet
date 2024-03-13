@@ -5,10 +5,13 @@ import {
   formArrSize,
   getCommonFormVariantDefault,
 } from '@skatteetaten/ds-core-utils';
+import {
+  DatePicker,
+  getDatePickerDateFormat,
+  TextField,
+} from '@skatteetaten/ds-forms';
 import { Meta, StoryObj } from '@storybook/react';
 
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { DatePicker } from '../../../../../libs/ds-forms/src/DatePicker/DatePicker';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
@@ -16,12 +19,19 @@ import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: DatePicker,
-  title: 'Komponenter/DatePicker (under utvikling)',
+  title: 'Komponenter/DatePicker',
   argTypes: {
     // Props
     classNames: { table: { category: category.props } },
-    defaultValue: { table: { category: category.props } },
+    defaultValue: { table: { category: category.props }, control: 'date' },
+    value: { table: { category: category.props }, control: 'date' },
     description: { table: { category: category.props } },
+    dateFormat: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: getDatePickerDateFormat() },
+      },
+    },
     label: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasError: { table: { category: category.props } },
@@ -35,6 +45,15 @@ const meta = {
     },
     helpText: { table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
+    initialPickerDate: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: new Date() },
+      },
+      control: 'date',
+    },
+    minDate: { table: { category: category.props }, control: 'date' },
+    maxDate: { table: { category: category.props }, control: 'date' },
     showRequiredMark: { table: { category: category.props } },
     titleHelpSvg: {
       table: {
@@ -55,22 +74,23 @@ const meta = {
     autoComplete: { table: { category: category.htmlAttribute } },
     disabled: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },
-    placeholder: { table: { category: category.htmlAttribute } },
+    placeholder: {
+      defaultValue: { summary: dsI18n.t('ds_forms:datepicker.TypeOrSelect') },
+      table: { category: category.htmlAttribute },
+    },
     readOnly: { table: { category: category.htmlAttribute } },
     required: {
       control: 'boolean',
       table: { category: category.htmlAttribute },
     },
-    value: { table: { category: category.htmlAttribute } },
     // Events
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
+    onSelectDate: { table: { category: category.event } },
   },
   args: {
     label: 'Fødselsdato',
-    defaultValue: undefined,
-    value: '',
   },
   parameters: {
     version: getVersion('ds-forms'),
@@ -80,19 +100,72 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Preview: Story = {} satisfies Story;
+export const Preview: Story = {
+  render: (_args): JSX.Element => {
+    /* Fordi date control konverterer datoen til et UNIX-tidsstempel når verdien endres,
+    må den konverteres til et data objekt. Dette er en kjent begrensing som vil bli fikset
+    en gang i fremtiden står det i Storybook sin dokumentasjon over Controls. */
+    _args.defaultValue =
+      _args.defaultValue === undefined
+        ? undefined
+        : new Date(_args.defaultValue);
+    _args.value = _args.value === undefined ? undefined : new Date(_args.value);
+    _args.minDate =
+      _args.minDate === undefined ? undefined : new Date(_args.minDate);
+    _args.maxDate =
+      _args.maxDate === undefined ? undefined : new Date(_args.maxDate);
+    _args.initialPickerDate =
+      _args.initialPickerDate === undefined
+        ? undefined
+        : new Date(_args.initialPickerDate as Date);
+
+    return <DatePicker {..._args} />;
+  },
+} satisfies Story;
 
 export const Examples: Story = {
   render: (_args): JSX.Element => {
-    const [value, setValue] = useState('');
+    const [value, setValue] = useState<Date | undefined>(undefined);
+    const [error, setError] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
+
+    const handleBlur = (e: ChangeEvent<HTMLInputElement>): void => {
+      if (e.target.validity.valueMissing) {
+        setError(true);
+        setErrorMessage('Fødselsnummer er påkrevd.');
+      }
+    };
+
+    const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
+      setValue(new Date(e.target.value));
+      setError(false);
+      setErrorMessage('');
+    };
+
+    const handleSelect = (): void => {
+      setError(false);
+      setErrorMessage('');
+    };
+
     return (
-      <DatePicker
-        label={'Fødselsdato'}
-        value={value}
-        onChange={(e: ChangeEvent<HTMLInputElement>): void => {
-          setValue(e.target.value);
-        }}
-      />
+      <>
+        <DatePicker
+          label={'Fødselsdato'}
+          value={value}
+          errorMessage={errorMessage}
+          hasError={error}
+          required
+          showRequiredMark
+          onChange={handleChange}
+          onBlur={handleBlur}
+          onSelectDate={handleSelect}
+        />
+        <TextField
+          className={'textField300'}
+          label={'Andre opplysninger'}
+          as={'textarea'}
+        />
+      </>
     );
   },
 } satisfies Story;

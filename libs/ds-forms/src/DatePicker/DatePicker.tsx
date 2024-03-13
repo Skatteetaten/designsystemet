@@ -1,4 +1,14 @@
-import React, { forwardRef, useId, useState, JSX } from 'react';
+import React, {
+  forwardRef,
+  useId,
+  useState,
+  JSX,
+  ChangeEvent,
+  FocusEvent,
+  useRef,
+  useEffect,
+  useImperativeHandle,
+} from 'react';
 import { useTranslation } from 'react-i18next';
 
 import {
@@ -7,8 +17,12 @@ import {
   getCommonFormVariantDefault,
 } from '@skatteetaten/ds-core-utils';
 import { CalendarIcon } from '@skatteetaten/ds-icons';
+import { isValid } from 'date-fns';
 
 import { DatePickerProps } from './DatePicker.types';
+import { getDatePickerDateFormat } from './defaults';
+import { formatDateForInput, parseDateFromInput } from './utils';
+import { DatePickerCalendar } from '../DatePickerCalendar/DatePickerCalendar';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 
@@ -23,12 +37,17 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       lang,
       'data-testid': dataTestId,
       defaultValue,
+      dateFormat = getDatePickerDateFormat(),
       description,
       errorMessage,
       helpSvgPath,
       helpText,
       label,
+      initialPickerDate,
+      minDate,
+      maxDate,
       titleHelpSvg,
+      value,
       variant = getCommonFormVariantDefault(),
       autoComplete,
       disabled,
@@ -36,33 +55,104 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       placeholder,
       readOnly,
       required,
-      value,
       hasError,
       hideLabel,
       showRequiredMark,
       onBlur,
       onChange,
       onFocus,
+      onSelectDate,
     },
     ref
   ): JSX.Element => {
-    const { t } = useTranslation('Shared', { i18n: dsI18n });
+    const { t } = useTranslation('ds_forms', { i18n: dsI18n });
 
     const errorId = `datepickerErrorId-${useId()}`;
     const generatedId = `datepickerInputId-${useId()}`;
-    const datepickerId = externalId ?? generatedId;
+    const datePickerId = externalId ?? generatedId;
+
+    const calendarRef = useRef<HTMLDivElement>(null);
+    const calenderButtonRef = useRef<HTMLButtonElement>(null);
+    const inputRef = useRef<HTMLInputElement>(null);
+    useImperativeHandle(ref, () => inputRef?.current as HTMLInputElement);
 
     const [showCalendar, setShowCalendar] = useState(false);
 
-    const toggleCalendar = (): void => {
-      setShowCalendar(!showCalendar);
+    const [date, setDate] = React.useState(value);
+    const [formattedDate, setFormattedDate] = React.useState(
+      value ? formatDateForInput(dateFormat, value) : undefined
+    );
+
+    const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
+      const { value } = e.target as HTMLInputElement;
+      const date = parseDateFromInput(value);
+      setDate(isValid(date) ? date : undefined);
+      setFormattedDate(value);
+
+      onChange?.(e);
     };
 
-    // TODO FRONT-1346 - mangler riktig tekstvariabel
+    const handleBlur = (e: FocusEvent<HTMLInputElement>): void => {
+      const { value } = e.target as HTMLInputElement;
+      const date = parseDateFromInput(value);
+      isValid(date) && setFormattedDate(formatDateForInput(dateFormat, date));
+
+      onBlur?.(e);
+    };
+
+    const handleSelectDate = (date: Date): void => {
+      setDate(date);
+      setFormattedDate(formatDateForInput(dateFormat, date));
+      setShowCalendar(false);
+      inputRef.current?.focus();
+
+      onSelectDate?.(date);
+    };
+
+    useEffect(() => {
+      if (!showCalendar) {
+        return;
+      }
+
+      const handleOutside: EventListener = (event): void => {
+        const node = event.target as Node;
+        if (
+          !calendarRef?.current?.contains(node) &&
+          !calenderButtonRef?.current?.contains(node)
+        ) {
+          setShowCalendar(false);
+          event.type === 'click' && calenderButtonRef?.current?.focus();
+        }
+      };
+
+      const handleResize: EventListener = (e): void => {
+        if (e.type === 'resize') {
+          setShowCalendar(false);
+          calenderButtonRef?.current?.focus();
+        }
+      };
+
+      const handleEscape = (e: KeyboardEvent): void => {
+        if (e.key === 'Escape') {
+          setShowCalendar(false);
+          calenderButtonRef?.current?.focus();
+        }
+      };
+
+      document.addEventListener('click', handleOutside);
+      window.addEventListener('resize', handleResize);
+      document.addEventListener('keydown', handleEscape);
+      return () => {
+        document.removeEventListener('click', handleOutside);
+        window.removeEventListener('resize', handleResize);
+        document.removeEventListener('keydown', handleEscape);
+      };
+    }, [showCalendar]);
+
     const placeholderValue =
       placeholder?.trim() === ''
         ? undefined
-        : placeholder ?? t('shared.ChooseValue');
+        : placeholder ?? t('datepicker.TypeOrSelect');
 
     const isLarge = variant === 'large';
     const inputClassName = `${styles.input} ${
@@ -79,7 +169,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       >
         <LabelWithHelp
           className={classNames?.label ?? ''}
-          htmlFor={datepickerId}
+          htmlFor={datePickerId}
           hideLabel={hideLabel}
           showRequiredMark={showRequiredMark}
           description={description}
@@ -95,33 +185,40 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
           }`}
         >
           <input
-            ref={ref}
-            id={datepickerId}
+            ref={inputRef}
+            id={datePickerId}
             className={inputClassName}
             data-testid={dataTestId}
             autoComplete={autoComplete}
-            defaultValue={defaultValue}
             disabled={disabled}
             name={name}
             placeholder={placeholderValue}
             readOnly={readOnly}
             required={required}
-            value={value}
+            defaultValue={
+              defaultValue
+                ? formatDateForInput(dateFormat, defaultValue)
+                : undefined
+            }
+            value={formattedDate}
             aria-describedby={hasError ? errorId : undefined}
             aria-invalid={hasError ?? undefined}
-            onBlur={onBlur}
-            onChange={onChange}
+            onBlur={handleBlur}
+            onChange={handleChange}
             onFocus={onFocus}
           />
           {!readOnly && (
             <button
+              ref={calenderButtonRef}
               className={calendarButtonClassName}
               disabled={disabled}
               aria-expanded={showCalendar}
-              onClick={(): void => toggleCalendar()}
+              onClick={(): void => setShowCalendar(!showCalendar)}
             >
-              {/* TODO FRONT-1346 - mangler tekstvariabel */}
-              <CalendarIcon className={styles.icon} title={'Velg dato'} />
+              <CalendarIcon
+                className={styles.icon}
+                title={t('datepicker.ChooseDate')}
+              />
             </button>
           )}
         </div>
@@ -134,7 +231,13 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
         </ErrorMessage>
         {showCalendar && (
           <div className={styles.calendarContainer}>
-            {'TODO - FRONT-1346 Her kommer kalendervisning'}
+            <DatePickerCalendar
+              ref={calendarRef}
+              selectedDate={date || initialPickerDate}
+              minDate={minDate}
+              maxDate={maxDate}
+              onSelectDate={handleSelectDate}
+            />
           </div>
         )}
       </div>
@@ -143,3 +246,5 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
 );
 
 DatePicker.displayName = 'DatePicker';
+
+export { getDatePickerDateFormat };

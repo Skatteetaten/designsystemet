@@ -10,14 +10,7 @@ import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 
 type RequiredDatePickerHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'input'>,
-  | 'autoComplete'
-  | 'defaultValue'
-  | 'disabled'
-  | 'name'
-  | 'placeholder'
-  | 'readOnly'
-  | 'required'
-  | 'value'
+  'autoComplete' | 'disabled' | 'name' | 'placeholder' | 'readOnly' | 'required'
 >;
 
 type DatePickerHTMLAttributes = Partial<RequiredDatePickerHTMLAttributes>;
@@ -51,6 +44,20 @@ interface DatePickerCommonProps
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
   /** Definerer stilen til DatePicker */
   variant?: FormSize;
+  /** Hvilken dato som skal være satt (controlled state) */
+  value?: Date;
+  /** Hvilken dato som skal være satt (uncontrolled state) */
+  defaultValue?: Date;
+  /** Initielt uthevet dato */
+  initialPickerDate?: Date;
+  /** Minste tillatte dato */
+  minDate?: Date;
+  /** Maksimal tillatte dato */
+  maxDate?: Date;
+  /** Overskriver default datoformat for input-felt. Formater som kan brukes: https://date-fns.org/v3.3.1/docs/parse. */
+  dateFormat?: string;
+  /** Kalles når en dato-knapp klikkes på. */
+  onSelectDate?: (date: Date) => void;
 }
 
 export type DatePickerDiscriminatedRequiredProps =

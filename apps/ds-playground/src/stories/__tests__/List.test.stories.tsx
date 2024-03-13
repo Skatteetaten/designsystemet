@@ -1,4 +1,3 @@
-import { LinkGroup } from '@skatteetaten/ds-buttons';
 import {
   List,
   listAsArr,
@@ -223,7 +222,6 @@ export const WithSpacing = {
   },
 } satisfies Story;
 
-// TODO Fjerne andre elementer når testprosjektet (FRONT-1008) er på plass
 const TemplateWithVariantsAndAtLeast10ItemsAndOtherComponents: StoryFn<
   typeof List
 > = (args) => (
@@ -272,22 +270,6 @@ const TemplateWithVariantsAndAtLeast10ItemsAndOtherComponents: StoryFn<
         {'Snakk med andre aldri'}
       </List.Element>
     </List>
-    <Paragraph>
-      {
-        'Videre så er en liste med lenker også tatt med for å se hvordan det hele ser ut sammen.'
-      }
-    </Paragraph>
-    <LinkGroup>
-      <LinkGroup.Link key={'linkGroupLink_1'} href={'#storybook-root'}>
-        {'Er du pendler?'}
-      </LinkGroup.Link>
-      <LinkGroup.Link key={'linkGroupLink_2'} href={'#storybook-root'}>
-        {'Pendler du mye?'}
-      </LinkGroup.Link>
-      <LinkGroup.Link key={'linkGroupLink_3'} href={'#storybook-root'}>
-        {'Pendler du dagen lang?'}
-      </LinkGroup.Link>
-    </LinkGroup>
   </>
 );
 
