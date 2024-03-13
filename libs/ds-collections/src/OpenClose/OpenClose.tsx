@@ -5,6 +5,7 @@ import { Icon, ChevronDownSVGpath } from '@skatteetaten/ds-icons';
 
 import {
   getOpenCloseIconPositionDefault,
+  getOpenCloseShowUnderlineDefault,
   getOpenCloseVariantDefault,
 } from './defaults';
 import { OpenCloseProps } from './OpenClose.types';
@@ -24,7 +25,7 @@ export const OpenClose = forwardRef<HTMLButtonElement, OpenCloseProps>(
       iconPosition = getOpenCloseIconPositionDefault(),
       isExpanded: isExpandedExternal,
       isOnClickOnlyFiredOnOpen,
-      showUnderline,
+      showUnderline = getOpenCloseShowUnderlineDefault(),
       onClick,
       children,
     },
@@ -96,4 +97,8 @@ export const OpenClose = forwardRef<HTMLButtonElement, OpenCloseProps>(
 
 OpenClose.displayName = 'OpenClose';
 
-export { getOpenCloseIconPositionDefault, getOpenCloseVariantDefault };
+export {
+  getOpenCloseIconPositionDefault,
+  getOpenCloseShowUnderlineDefault,
+  getOpenCloseVariantDefault,
+};

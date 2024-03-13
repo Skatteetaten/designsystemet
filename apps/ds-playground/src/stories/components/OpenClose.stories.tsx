@@ -1,6 +1,7 @@
 import {
   OpenClose,
   getOpenCloseIconPositionDefault,
+  getOpenCloseShowUnderlineDefault,
   getOpenCloseVariantDefault,
 } from '@skatteetaten/ds-collections';
 import {
@@ -41,7 +42,12 @@ const meta = {
     },
     isOnClickOnlyFiredOnOpen: { table: { category: category.props } },
     isExpanded: { table: { category: category.props } },
-    showUnderline: { table: { category: category.props } },
+    showUnderline: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: getOpenCloseShowUnderlineDefault() },
+      },
+    },
     title: { table: { category: category.props } },
     titleAs: {
       options: ['div', ...headingAsArr],
