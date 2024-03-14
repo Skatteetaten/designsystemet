@@ -7,14 +7,24 @@ import {
   JSX,
 } from 'react';
 
-import { BaseProps, FormSize } from '@skatteetaten/ds-core-utils';
+import {
+  BaseProps,
+  FormDiscriminatedRequiredProps,
+  FormSize,
+} from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 import { SelectOptionProps } from '../SelectOption/SelectOption.types';
 
 type RequiredSelectHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'select'>,
-  'autoComplete' | 'disabled' | 'name' | 'required' | 'defaultValue' | 'value'
+  | 'autoComplete'
+  | 'disabled'
+  | 'form'
+  | 'name'
+  | 'required'
+  | 'defaultValue'
+  | 'value'
 >;
 
 type SelectHTMLAttributes = Partial<RequiredSelectHTMLAttributes>;
@@ -53,17 +63,6 @@ interface SelectCommonProps extends SelectPropsHTMLAttributes, BaseProps {
   /** SelectOption-komponenter */
   children: JSX.Element | JSX.Element[];
 }
-export type SelectDiscriminatedRequiredProps =
-  | {
-      required: true;
-      /** Om obligatorisk form-komponent skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
-      showRequiredMark?: boolean;
-    }
-  | {
-      required?: never;
-      /** Om obligatorisk form-komponent skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
-      showRequiredMark?: never;
-    };
 
 export type SelectDiscriminatedErrorProps =
   | {
@@ -80,7 +79,7 @@ export type SelectDiscriminatedErrorProps =
     };
 
 export type SelectProps = SelectCommonProps &
-  SelectDiscriminatedRequiredProps &
+  FormDiscriminatedRequiredProps &
   SelectDiscriminatedErrorProps;
 
 export interface SelectComponent

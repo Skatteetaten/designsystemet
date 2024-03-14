@@ -5,7 +5,11 @@ import {
   RefObject,
 } from 'react';
 
-import { BaseProps, FormSize } from '@skatteetaten/ds-core-utils';
+import {
+  BaseProps,
+  FormDiscriminatedRequiredProps,
+  FormSize,
+} from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 
@@ -21,6 +25,7 @@ type RequiredTextFieldHTMLAttributes = Pick<
   | 'autoComplete'
   | 'defaultValue'
   | 'disabled'
+  | 'form'
   | 'inputMode'
   | 'maxLength'
   | 'minLength'
@@ -84,18 +89,6 @@ type TextFieldDiscriminatedProps =
       autosize?: boolean;
     } & Pick<ComponentPropsWithoutRef<'textarea'>, 'rows'>);
 
-type TextFieldDiscriminatedRequiredProps =
-  | {
-      required: true;
-      /** Om obligatorisk TextField skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
-      showRequiredMark?: boolean;
-    }
-  | {
-      required?: never | false;
-      /** Om obligatorisk TextField skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
-      showRequiredMark?: never | false;
-    };
-
 type TextFieldDiscriminatedErrorProps =
   | {
       /** Tekst på feilmelding */
@@ -111,6 +104,6 @@ type TextFieldDiscriminatedErrorProps =
     };
 
 export type TextFieldProps = TextFieldCommonProps &
-  TextFieldDiscriminatedRequiredProps &
+  FormDiscriminatedRequiredProps &
   TextFieldDiscriminatedErrorProps &
   TextFieldDiscriminatedProps;

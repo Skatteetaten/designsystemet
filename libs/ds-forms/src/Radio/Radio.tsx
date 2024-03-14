@@ -15,6 +15,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
       lang,
       'data-testid': dataTestId,
       description,
+      form,
       value,
       ariaDescribedby,
       children,
@@ -49,6 +50,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
               ? undefined
               : context?.defaultValue === value
           }
+          form={form}
           value={value}
           type={'radio'}
           name={context?.name}

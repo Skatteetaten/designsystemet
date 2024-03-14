@@ -43,6 +43,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       autoComplete,
       defaultValue,
       disabled,
+      form,
       inputMode,
       maxLength,
       minLength,
@@ -154,6 +155,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
           autoComplete={autoComplete}
           defaultValue={defaultValue}
           disabled={disabled}
+          form={form}
           inputMode={inputMode}
           maxLength={maxLength}
           minLength={minLength}

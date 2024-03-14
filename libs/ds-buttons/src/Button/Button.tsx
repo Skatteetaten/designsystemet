@@ -25,6 +25,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       variant = getButtonVariantDefault(),
       accessKey,
       disabled,
+      form,
       type = getCommonButtonTypeDefault(),
       ariaDescribedby,
       hasSpinner,
@@ -61,6 +62,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         accessKey={accessKey}
         disabled={disabled}
         type={type}
+        form={form}
         aria-describedby={ariaDescribedby}
         onBlur={onBlur}
         onClick={onClick}

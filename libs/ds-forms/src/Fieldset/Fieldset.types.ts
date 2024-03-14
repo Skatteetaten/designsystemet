@@ -6,7 +6,7 @@ import { HelpProps } from '../Help/Help.types';
 
 type RequiredFieldsetHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'fieldset'>,
-  'disabled'
+  'disabled' | 'form'
 >;
 
 export interface FieldsetProps

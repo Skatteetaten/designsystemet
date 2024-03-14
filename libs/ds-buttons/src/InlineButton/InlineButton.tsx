@@ -25,6 +25,7 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
       svgPath,
       accessKey,
       disabled,
+      form,
       type = getCommonButtonTypeDefault(),
       ariaDescribedby,
       hasSpinner,
@@ -52,6 +53,7 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
         lang={lang}
         data-testid={dataTestId}
         accessKey={accessKey}
+        form={form}
         disabled={disabled}
         type={type}
         aria-describedby={ariaDescribedby}
