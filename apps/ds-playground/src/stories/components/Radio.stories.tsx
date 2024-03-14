@@ -13,6 +13,7 @@ const meta = {
     description: { table: { category: category.props } },
     // HTML
     value: { table: { category: category.htmlAttribute } },
+    form: { table: { category: category.htmlAttribute } },
     // Aria
     ariaDescribedby: { table: { category: category.aria } },
   },

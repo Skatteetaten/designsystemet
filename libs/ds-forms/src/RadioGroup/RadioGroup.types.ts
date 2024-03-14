@@ -31,7 +31,7 @@ type RequiredInputHTMLAttributes = Pick<
 
 type RequiredFieldsetHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'fieldset'>,
-  'disabled'
+  'disabled' | 'form'
 >;
 
 type InputHTMLAttributes = Partial<RequiredInputHTMLAttributes>;

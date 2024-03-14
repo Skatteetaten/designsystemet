@@ -4,7 +4,13 @@ import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 type RequiredCheckboxHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'input'>,
-  'defaultChecked' | 'checked' | 'disabled' | 'name' | 'value' | 'onChange'
+  | 'defaultChecked'
+  | 'checked'
+  | 'disabled'
+  | 'form'
+  | 'name'
+  | 'value'
+  | 'onChange'
 >;
 
 type CheckboxHTMLAttributes = Partial<RequiredCheckboxHTMLAttributes>;

@@ -9,7 +9,7 @@ import { BaseProps, Position } from '@skatteetaten/ds-core-utils';
 
 type RequiredMegaButtonHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'button'>,
-  'accessKey' | 'disabled' | 'type' | 'onBlur' | 'onClick' | 'onFocus'
+  'accessKey' | 'disabled' | 'form' | 'type' | 'onBlur' | 'onClick' | 'onFocus'
 >;
 
 type InlineButtonHTMLAttributes = Partial<RequiredMegaButtonHTMLAttributes>;

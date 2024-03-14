@@ -38,6 +38,7 @@ const meta = {
     },
     // HTML
     disabled: { table: { category: category.htmlAttribute } },
+    form: { table: { category: category.htmlAttribute } },
   },
   args: {
     legend: 'Hvilken periode trenger du bekreftelse for?',

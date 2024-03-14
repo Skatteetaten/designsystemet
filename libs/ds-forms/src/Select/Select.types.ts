@@ -14,7 +14,13 @@ import { SelectOptionProps } from '../SelectOption/SelectOption.types';
 
 type RequiredSelectHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'select'>,
-  'autoComplete' | 'disabled' | 'name' | 'required' | 'defaultValue' | 'value'
+  | 'autoComplete'
+  | 'disabled'
+  | 'form'
+  | 'name'
+  | 'required'
+  | 'defaultValue'
+  | 'value'
 >;
 
 type SelectHTMLAttributes = Partial<RequiredSelectHTMLAttributes>;

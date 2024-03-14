@@ -52,6 +52,11 @@ const meta = {
         disable: true,
       },
     },
+    form: {
+      table: {
+        disable: true,
+      },
+    },
   },
 } satisfies Meta<typeof CheckboxGroup>;
 export default meta;
@@ -118,12 +123,14 @@ export const WithAttributes = {
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
+    form: '123form',
   },
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+    form: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -132,6 +139,7 @@ export const WithAttributes = {
     await expect(fieldsetNode).toHaveClass('dummyClassname');
     await expect(fieldsetNode).toHaveAttribute('lang', 'nb');
     await expect(fieldsetNode).toHaveAttribute('data-testid', '123ID');
+    await expect(fieldsetNode).toHaveAttribute('form', '123form');
   },
 } satisfies Story;
 

@@ -21,6 +21,7 @@ type RequiredTextFieldHTMLAttributes = Pick<
   | 'autoComplete'
   | 'defaultValue'
   | 'disabled'
+  | 'form'
   | 'inputMode'
   | 'maxLength'
   | 'minLength'
