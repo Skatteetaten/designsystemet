@@ -188,6 +188,7 @@ export const WithLongTextAndIcon = {
   args: {
     ...defaultArgs,
     svgPath: AddOutlineSVGpath,
+    iconPosition: 'right',
     children:
       'Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert. ' +
       'Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert.',
