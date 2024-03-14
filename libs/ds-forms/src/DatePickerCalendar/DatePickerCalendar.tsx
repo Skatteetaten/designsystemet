@@ -16,6 +16,7 @@ import { Select } from '../Select/Select';
 import { TextField } from '../TextField/TextField';
 
 import styles from './DatePickerCalendar.module.scss';
+import { getDatePickerCalendarSelectedDateDefault } from './defaults';
 
 export const DatePickerCalendar = forwardRef<
   HTMLDivElement,
@@ -27,7 +28,7 @@ export const DatePickerCalendar = forwardRef<
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
-      selectedDate = new Date(),
+      selectedDate = getDatePickerCalendarSelectedDateDefault(),
       minDate,
       maxDate,
       onSelectDate,
@@ -203,10 +204,7 @@ export const DatePickerCalendar = forwardRef<
                   const buttonClassName =
                     `${styles.calendarTableDateButton} ${adjancentMonthClassName} ${todayClassName}`.trim();
 
-                  const ariaCurrent = isEqual(
-                    cell.date,
-                    selectedDate.setHours(0, 0, 0, 0)
-                  )
+                  const ariaCurrent = isEqual(cell.date, selectedDate)
                     ? 'date'
                     : undefined;
 

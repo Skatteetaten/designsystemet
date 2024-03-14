@@ -46,13 +46,7 @@ const meta = {
     },
     helpText: { table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
-    initialPickerDate: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: new Date() },
-      },
-      control: 'date',
-    },
+    initialPickerDate: { table: { category: category.props }, control: 'date' },
     minDate: { table: { category: category.props }, control: 'date' },
     maxDate: { table: { category: category.props }, control: 'date' },
     showRequiredMark: { table: { category: category.props } },
