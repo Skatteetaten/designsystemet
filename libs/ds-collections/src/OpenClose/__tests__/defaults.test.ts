@@ -1,6 +1,6 @@
 import {
   getOpenCloseIconPositionDefault,
-  getOpenCloseShowUnderlineDefault,
+  getOpenCloseUnderlineDefault,
   getOpenCloseVariantDefault,
 } from '../defaults';
 
@@ -9,8 +9,8 @@ describe('OpenClose defaults', () => {
     const renderDefault = getOpenCloseIconPositionDefault();
     expect(renderDefault).toBe('left');
   });
-  it('Når getOpenCloseShowUnderlineDefault kalles, så returnerer den riktig verdi', () => {
-    const renderDefault = getOpenCloseShowUnderlineDefault();
+  it('Når getOpenCloseUnderlineDefault kalles, så returnerer den riktig verdi', () => {
+    const renderDefault = getOpenCloseUnderlineDefault();
     expect(renderDefault).toBe(true);
   });
   it('Når getOpenCloseVariantDefault kalles, så returnerer den riktig verdi', () => {
