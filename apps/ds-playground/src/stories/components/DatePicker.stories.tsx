@@ -143,14 +143,8 @@ export const Examples: Story = {
         setErrorMessage('Fødselsnummer er påkrevd.');
       }
     };
-    // WIP: Konsumenten bør ikke bruke onChange for å oppdatere datoen som sendes til komponenten, de bør heller lytte på onSelectDate, da får de enten inn
-    // en dato eller null dersom datoen i feltet ikke er gyldig.
-    // const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
-    //   // setValue(new Date(e.target.value));
-    //   setError(false);
-    //   setErrorMessage('');
-    // };
 
+    // Ved å lytte på onSelectDate får man tilgang til dato (eller null dersom datoen i feltet ikke er gyldig).
     const handleSelect = (date: Date | null): void => {
       setValue(date);
       setError(false);
@@ -166,7 +160,6 @@ export const Examples: Story = {
           hasError={error}
           required
           showRequiredMark
-          // onChange={handleChange}
           onBlur={handleBlur}
           onSelectDate={handleSelect}
         />

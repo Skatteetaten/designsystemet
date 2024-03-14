@@ -151,7 +151,7 @@ export const DatePickerCalendar = forwardRef<
             >
               {monthNames.map((month: string, index: number): JSX.Element => {
                 return (
-                  <Select.Option key={index} value={index}>
+                  <Select.Option key={month} value={index}>
                     {month}
                   </Select.Option>
                 );
@@ -191,8 +191,8 @@ export const DatePickerCalendar = forwardRef<
             </tr>
           </thead>
           <tbody>
-            {rows.map((cells, rowIndex) => (
-              <tr key={`row-${selectedYear}-${rowIndex}`}>
+            {rows.map((cells, index) => (
+              <tr key={`row-${selectedYear}-${selectedMonthIndex}-${index}`}>
                 {cells.map((cell) => {
                   const adjancentMonthClassName = cell.isAdjacentMonth
                     ? styles.calendarTableDateButton_adjacentMonth
@@ -209,6 +209,7 @@ export const DatePickerCalendar = forwardRef<
                   )
                     ? 'date'
                     : undefined;
+
                   const ariaLabel = `${
                     cell.isToday ? t('datepicker.Today') : ''
                   } ${cell.date.getDate()}. ${

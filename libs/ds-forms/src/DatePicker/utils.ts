@@ -5,6 +5,9 @@ export const formatDateForInput = (dateFormat: string, date?: Date): string => {
 };
 
 const ALLOWED_INPUT_FORMATS = [
+  'dd.MM.yy',
+  'dd/MM/yy',
+  'dd-MM-yy',
   'dd.MM.yyyy',
   'dd/MM/yyyy',
   'dd-MM-yyyy',
@@ -22,4 +25,16 @@ export const parseDateFromInput = (value: string): Date | null => {
   }
 
   return null;
+};
+
+export const initFormattedDate = (
+  value: Date | null | undefined,
+  defaultValue: Date | null | undefined,
+  dateFormat: string
+): string | undefined => {
+  if (value) {
+    return formatDateForInput(dateFormat, value);
+  }
+
+  return defaultValue ? undefined : '';
 };

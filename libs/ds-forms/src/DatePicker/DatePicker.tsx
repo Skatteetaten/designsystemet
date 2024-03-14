@@ -21,7 +21,11 @@ import { isValid } from 'date-fns';
 
 import { DatePickerProps } from './DatePicker.types';
 import { getDatePickerDateFormat } from './defaults';
-import { formatDateForInput, parseDateFromInput } from './utils';
+import {
+  formatDateForInput,
+  initFormattedDate,
+  parseDateFromInput,
+} from './utils';
 import { DatePickerCalendar } from '../DatePickerCalendar/DatePickerCalendar';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
@@ -80,12 +84,9 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
 
     const [selectedDate, setSelectedDate] = React.useState(value);
     const [formattedDate, setFormattedDate] = React.useState(
-      value
-        ? formatDateForInput(dateFormat, value)
-        : defaultValue
-        ? undefined
-        : ''
+      initFormattedDate(value, defaultValue, dateFormat)
     );
+
     const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
       const { value } = e.target as HTMLInputElement;
       const date = parseDateFromInput(value);
