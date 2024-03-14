@@ -1,6 +1,9 @@
 import { ComponentPropsWithoutRef } from 'react';
 
-import { BaseProps } from '@skatteetaten/ds-core-utils';
+import {
+  BaseProps,
+  FormDiscriminatedRequiredProps,
+} from '@skatteetaten/ds-core-utils';
 
 type RequiredCheckboxHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'input'>,
@@ -31,18 +34,6 @@ interface CheckboxCommonProps extends CheckboxPropsHTMLAttributes, BaseProps {
   hideLabel?: boolean;
 }
 
-type CheckboxDiscriminatedRequiredProps =
-  | {
-      required: boolean;
-      /** Om obligatorisk checkboks skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
-      showRequiredMark?: boolean;
-    }
-  | {
-      required?: never;
-      /** Om obligatorisk checkboks skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
-      showRequiredMark?: never;
-    };
-
 type CheckboxDiscriminatedErrorProps =
   | {
       /** Tekst på feilmelding */
@@ -58,5 +49,5 @@ type CheckboxDiscriminatedErrorProps =
     };
 
 export type CheckboxProps = CheckboxCommonProps &
-  CheckboxDiscriminatedRequiredProps &
+  FormDiscriminatedRequiredProps &
   CheckboxDiscriminatedErrorProps;

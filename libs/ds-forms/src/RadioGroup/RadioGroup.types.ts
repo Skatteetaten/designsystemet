@@ -6,7 +6,10 @@ import {
   ReactNode,
 } from 'react';
 
-import { BaseProps } from '@skatteetaten/ds-core-utils';
+import {
+  BaseProps,
+  FormDiscriminatedRequiredProps,
+} from '@skatteetaten/ds-core-utils';
 
 import { FieldsetProps } from '../Fieldset/Fieldset.types';
 import { RadioProps } from '../Radio/Radio.types';
@@ -63,18 +66,6 @@ interface RadioGroupComponentCommonProps
   variant?: RadioGroupVariant;
 }
 
-type RadioGroupDiscriminatedRequiredProps =
-  | {
-      required: boolean;
-      /** Om obligatorisk gruppe skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
-      showRequiredMark?: FieldsetProps['showRequiredMark'];
-    }
-  | {
-      required?: never;
-      /** Om obligatorisk gruppe skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
-      showRequiredMark?: never;
-    };
-
 type RadioGroupDiscriminatedCheckedProps =
   | {
       /** Hvilke value som skal være satt til checked (controlled state) */
@@ -104,7 +95,7 @@ type RadioGroupDiscriminatedErrorProps =
     };
 
 export type RadioGroupProps = RadioGroupComponentCommonProps &
-  RadioGroupDiscriminatedRequiredProps &
+  FormDiscriminatedRequiredProps &
   RadioGroupDiscriminatedCheckedProps &
   RadioGroupDiscriminatedErrorProps;
 
