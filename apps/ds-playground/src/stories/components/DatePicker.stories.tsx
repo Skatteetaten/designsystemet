@@ -10,6 +10,7 @@ import {
   getDatePickerDateFormat,
   TextField,
 } from '@skatteetaten/ds-forms';
+import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
@@ -102,14 +103,16 @@ type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {
   render: (_args): JSX.Element => {
+    const [, setArgs] = useArgs();
     /* Fordi date control konverterer datoen til et UNIX-tidsstempel når verdien endres,
-    må den konverteres til et data objekt. Dette er en kjent begrensing som vil bli fikset
+     må den konverteres til et data objekt. Dette er en kjent begrensing som vil bli fikset
     en gang i fremtiden står det i Storybook sin dokumentasjon over Controls. */
-    _args.defaultValue =
-      _args.defaultValue === undefined
-        ? undefined
-        : new Date(_args.defaultValue);
-    _args.value = _args.value === undefined ? undefined : new Date(_args.value);
+
+    // Preview bør alltid være controlled, siden defaultValue må settes når komponenten rendres første gang.
+    _args.defaultValue = undefined;
+
+    // value settes til null dersom undefined for å unngå advarsel om controlled/uncontrolled.
+    _args.value = !_args.value ? null : new Date(_args.value);
     _args.minDate =
       _args.minDate === undefined ? undefined : new Date(_args.minDate);
     _args.maxDate =
@@ -119,13 +122,18 @@ export const Preview: Story = {
         ? undefined
         : new Date(_args.initialPickerDate as Date);
 
-    return <DatePicker {..._args} />;
+    const handleSelectDate = (date: Date | null): void => {
+      _args.onSelectDate?.(date);
+      setArgs({ value: date });
+    };
+
+    return <DatePicker {..._args} onSelectDate={handleSelectDate} />;
   },
 } satisfies Story;
 
 export const Examples: Story = {
   render: (_args): JSX.Element => {
-    const [value, setValue] = useState<Date | undefined>(undefined);
+    const [value, setValue] = useState<Date | null>(null);
     const [error, setError] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
 
@@ -135,14 +143,16 @@ export const Examples: Story = {
         setErrorMessage('Fødselsnummer er påkrevd.');
       }
     };
+    // WIP: Konsumenten bør ikke bruke onChange for å oppdatere datoen som sendes til komponenten, de bør heller lytte på onSelectDate, da får de enten inn
+    // en dato eller null dersom datoen i feltet ikke er gyldig.
+    // const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
+    //   // setValue(new Date(e.target.value));
+    //   setError(false);
+    //   setErrorMessage('');
+    // };
 
-    const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
-      setValue(new Date(e.target.value));
-      setError(false);
-      setErrorMessage('');
-    };
-
-    const handleSelect = (): void => {
+    const handleSelect = (date: Date | null): void => {
+      setValue(date);
       setError(false);
       setErrorMessage('');
     };
@@ -156,7 +166,7 @@ export const Examples: Story = {
           hasError={error}
           required
           showRequiredMark
-          onChange={handleChange}
+          // onChange={handleChange}
           onBlur={handleBlur}
           onSelectDate={handleSelect}
         />

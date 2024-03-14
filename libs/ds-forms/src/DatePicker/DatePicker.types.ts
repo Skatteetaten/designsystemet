@@ -45,9 +45,9 @@ interface DatePickerCommonProps
   /** Definerer stilen til DatePicker */
   variant?: FormSize;
   /** Hvilken dato som skal være satt (controlled state) */
-  value?: Date;
+  value?: Date | null;
   /** Hvilken dato som skal være satt (uncontrolled state) */
-  defaultValue?: Date;
+  defaultValue?: Date | null;
   /** Initielt uthevet dato */
   initialPickerDate?: Date;
   /** Minste tillatte dato */
@@ -57,7 +57,7 @@ interface DatePickerCommonProps
   /** Overskriver default datoformat for input-felt. Formater som kan brukes: https://date-fns.org/v3.3.1/docs/parse. */
   dateFormat?: string;
   /** Kalles når en dato-knapp klikkes på. */
-  onSelectDate?: (date: Date) => void;
+  onSelectDate?: (date: Date | null) => void;
 }
 
 export type DatePickerDiscriminatedRequiredProps =

@@ -78,36 +78,48 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
 
     const [showCalendar, setShowCalendar] = useState(false);
 
-    const [date, setDate] = React.useState(value);
+    const [selectedDate, setSelectedDate] = React.useState(value);
     const [formattedDate, setFormattedDate] = React.useState(
-      value ? formatDateForInput(dateFormat, value) : undefined
+      value
+        ? formatDateForInput(dateFormat, value)
+        : defaultValue
+        ? undefined
+        : ''
     );
-
     const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
       const { value } = e.target as HTMLInputElement;
       const date = parseDateFromInput(value);
-      setDate(isValid(date) ? date : undefined);
+      setSelectedDate(isValid(date) ? date : undefined);
       setFormattedDate(value);
-
       onChange?.(e);
     };
 
     const handleBlur = (e: FocusEvent<HTMLInputElement>): void => {
       const { value } = e.target as HTMLInputElement;
       const date = parseDateFromInput(value);
-      isValid(date) && setFormattedDate(formatDateForInput(dateFormat, date));
-
+      if (isValid(date)) {
+        setSelectedDate(date);
+        date && setFormattedDate(formatDateForInput(dateFormat, date));
+      }
+      onSelectDate?.(date);
       onBlur?.(e);
     };
 
     const handleSelectDate = (date: Date): void => {
-      setDate(date);
+      setSelectedDate(date);
       setFormattedDate(formatDateForInput(dateFormat, date));
       setShowCalendar(false);
       inputRef.current?.focus();
 
       onSelectDate?.(date);
     };
+
+    useEffect(() => {
+      if (value) {
+        setSelectedDate(value);
+        setFormattedDate(formatDateForInput(dateFormat, value));
+      }
+    }, [dateFormat, value]);
 
     useEffect(() => {
       if (!showCalendar) {
@@ -233,7 +245,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
           <div className={styles.calendarContainer}>
             <DatePickerCalendar
               ref={calendarRef}
-              selectedDate={date || initialPickerDate}
+              selectedDate={selectedDate || initialPickerDate}
               minDate={minDate}
               maxDate={maxDate}
               onSelectDate={handleSelectDate}

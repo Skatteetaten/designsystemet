@@ -13,7 +13,7 @@ const ALLOWED_INPUT_FORMATS = [
   'ddMMyyyy',
 ];
 
-export const parseDateFromInput = (value: string): Date => {
+export const parseDateFromInput = (value: string): Date | null => {
   for (const format of ALLOWED_INPUT_FORMATS) {
     const date = parse(value, format, new Date());
     if (isValid(date)) {
@@ -21,5 +21,5 @@ export const parseDateFromInput = (value: string): Date => {
     }
   }
 
-  return new Date('');
+  return null;
 };
