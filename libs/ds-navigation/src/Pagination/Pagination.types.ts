@@ -1,3 +1,5 @@
+import { RefObject } from 'react';
+
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 export interface PaginationCommonProps extends BaseProps {
@@ -46,3 +48,18 @@ type PaginationDiscriminatedProp =
 
 export type PaginationProps = PaginationCommonProps &
   PaginationDiscriminatedProp;
+
+export type PageOption = {
+  currentPage: number | undefined;
+  defaultCurrentPage: number | undefined;
+  onChange?: (page: number) => void;
+};
+
+export type PaginationListProps = {
+  firstPageRef?: RefObject<HTMLButtonElement>;
+  lastPageRef?: RefObject<HTMLButtonElement>;
+  lastPage: number;
+  internalPage: number;
+  sibling: number;
+  handleChange: (page: number) => void;
+};

@@ -11,26 +11,15 @@ import {
   getDefaultHidePageSummary,
   getDefaultHidePrevNextButtonTitle,
 } from './defaults';
-import { PaginationProps } from './Pagination.types';
+import {
+  PaginationProps,
+  PageOption,
+  PaginationListProps,
+} from './Pagination.types';
 
 import styles from './Pagination.module.scss';
 
 // TODO isvalid hvis new page > total allowed pages
-
-type PageOption = {
-  currentPage: number | undefined;
-  defaultCurrentPage: number | undefined;
-  onChange?: (page: number) => void;
-};
-
-type PaginationListProps = {
-  firstPageRef?: RefObject<HTMLButtonElement>;
-  lastPageRef?: RefObject<HTMLButtonElement>;
-  lastPage: number;
-  internalPage: number;
-  sibling: number;
-  handleChange: (page: number) => void;
-};
 
 const PaginationList = ({
   lastPage,
@@ -153,14 +142,6 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
     };
     if (sibling < 1) sibling = 1;
 
-    // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-    /*
-    Rekkefølge på det som bestemmer verdien til aktiv side:
-    1. currentPage - prop
-    2. defaultCurrentPage - prop
-    3. argument til useCurrentPage hvor vi hardkoder verdien og setter den til 1
-    
-    */
     // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
     const useCurrentPage = (value: number, option: PageOption) => {
       const [internalPage, setInternalPage] = useState<number>(() => {

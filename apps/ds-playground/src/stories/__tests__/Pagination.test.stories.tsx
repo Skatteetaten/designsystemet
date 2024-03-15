@@ -180,8 +180,8 @@ export const Sibling = {
         name: /\d/,
         current: false,
       });
-      const sider = pageButtons.map((button) => button.textContent);
-      await expect(sider).toEqual(expect.arrayContaining(['1', '2', '4', '5']));
+      const pages = pageButtons.map((button) => button.textContent);
+      await expect(pages).toEqual(expect.arrayContaining(['1', '2', '4', '5']));
     });
   },
 } satisfies Story;
