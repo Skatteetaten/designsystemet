@@ -1,13 +1,20 @@
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   Pagination,
   getDefaultListLength,
   getDefaultSibling,
 } from '@skatteetaten/ds-navigation';
-import { List, Paragraph } from '@skatteetaten/ds-typography';
+import { List } from '@skatteetaten/ds-typography';
 import { useArgs } from '@storybook/preview-api';
 import { StoryObj, Meta } from '@storybook/react';
-import { fn, expect } from '@storybook/test';
-import { within, userEvent } from '@storybook/testing-library';
+import {
+  fn,
+  expect,
+  fireEvent,
+  waitFor,
+  within,
+  // isInaccessible,
+} from '@storybook/test';
 
 const meta = {
   component: Pagination,
@@ -28,6 +35,7 @@ const meta = {
     sibling: { table: { disable: true } },
     hidePrevNextButtonTitle: { table: { disable: true } },
     hidePageSummary: { table: { disable: true }, control: null },
+    ariaLabel: { table: { disable: true } },
     onChange: { table: { disable: true } },
   },
 } satisfies Meta<typeof Pagination>;
@@ -95,18 +103,6 @@ export const Defaults = {
   },
 } satisfies Story;
 
-export const HidePageSummary = {
-  name: 'Hide Page Summary (A5)',
-  args: {
-    ...defaultArgs,
-    defaultCurrentPage: 1,
-    hidePageSummary: true,
-  },
-  argTypes: {
-    hidePageSummary: { table: true },
-  },
-} satisfies Story;
-
 export const HidePrevNextButtonTitle = {
   name: 'Hide Prev/Next-button Title (A1)',
   args: {
@@ -119,32 +115,140 @@ export const HidePrevNextButtonTitle = {
   },
 } satisfies Story;
 
+export const WithTextNextPref: Story = {
+  name: 'With Prev Next Text (A2)',
+  args: {
+    ...defaultArgs,
+    defaultCurrentPage: 2,
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const nextButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_navigation:pagination.NextButtonTitle'),
+    });
+    await expect(nextButton).toBeInTheDocument();
+    const previousButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_navigation:pagination.PreviousButtonTitle'),
+    });
+    await expect(previousButton).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithListLength: Story = {
+  name: 'With List Length (A3)',
+  args: {
+    ...defaultArgs,
+    listLength: 4,
+    defaultCurrentPage: 1,
+  },
+  argTypes: {
+    listLength: { table: true },
+  },
+  play: async ({ canvasElement, step }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const paginationStatus = canvas.getByText('Viser 1–4 av 70');
+    await expect(paginationStatus).toBeInTheDocument();
+    const nextButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_navigation:pagination.NextButtonTitle'),
+    });
+    await fireEvent.click(nextButton);
+    await step(
+      'Antall elementer på side er satt til 4 i testen. Beregnet verdier i pageSummary viser dette',
+      async () => {
+        const paginationStatusNextPage = canvas.getByText('Viser 5–8 av 70'); // Tankestrek
+        await expect(paginationStatusNextPage).toBeInTheDocument();
+      }
+    );
+  },
+} satisfies Story;
+
 export const Sibling = {
   name: 'Width Sibling (A4)',
   args: {
     ...defaultArgs,
-    defaultCurrentPage: 1,
+    defaultCurrentPage: 3,
     sibling: 2,
   },
   argTypes: {
     sibling: { table: true },
+    defaultCurrentPage: { table: true },
+  },
+  play: async ({ canvasElement, step }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await step('Sjekker om knapper med verdi 1,2,4,5 eksisterer', async () => {
+      const pageButtons = canvas.getAllByRole('button', {
+        name: /\d/,
+        current: false,
+      });
+      const sider = pageButtons.map((button) => button.textContent);
+      await expect(sider).toEqual(expect.arrayContaining(['1', '2', '4', '5']));
+    });
+  },
+} satisfies Story;
+
+// TODO: Utforske mer rundt mulighet for sr-only tester
+/* export const HidePageSummary = {
+  name: 'Hide Page Summary (A5)',
+  args: {
+    ...defaultArgs,
+    defaultCurrentPage: 1,
+    hidePageSummary: true,
+  },
+  argTypes: {
+    hidePageSummary: { table: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const paginationStatus = canvas.getByText('Viser 1–10 av 70');
+    await expect(paginationStatus).toBeInTheDocument();
+    await expect(isInaccessible(paginationStatus)).toBe(true);
+  },
+} satisfies Story; */
+
+export const WithNavigation: Story = {
+  name: 'With Navigation (A7, B2 delvis)',
+  args: {
+    ...defaultArgs,
+    defaultCurrentPage: 2,
   },
   parameters: {
     imageSnapshot: { disable: true },
   },
-} satisfies Story;
-
-export const WithButtons: Story = {
-  name: 'Button AriaCurrent (A2, B2)',
-  args: {
-    ...defaultArgs,
-    defaultCurrentPage: 1,
-  },
-  argTypes: {
-    sibling: { table: true },
-  },
-  render: function Render(args): JSX.Element {
-    return <Pagination {...args} />;
+  play: async ({ canvasElement, args, step }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await step('Klikk på side 7-knappen', async () => {
+      const pageButton = canvas.getByRole('button', {
+        name: '7',
+      });
+      await fireEvent.click(pageButton);
+      await waitFor(() => expect(args.onChange).toHaveBeenCalledWith(7));
+      const currentButton = canvas.getByRole('button', {
+        name: '7',
+      });
+      await expect(currentButton).toHaveAttribute('aria-current', 'true');
+    });
+    await step('Klikk på forrige-knappen', async () => {
+      const previousButton = canvas.getByRole('button', {
+        name: dsI18n.t('ds_navigation:pagination.PreviousButtonTitle'),
+      });
+      await fireEvent.click(previousButton);
+      await waitFor(() => expect(args.onChange).toHaveBeenCalledWith(6));
+      const currentButton = canvas.getByRole('button', {
+        name: '6',
+      });
+      await expect(currentButton).toHaveAttribute('aria-current', 'true');
+    });
+    await step('Klikk på neste-knappen', async () => {
+      const nextButton = canvas.getByRole('button', {
+        name: dsI18n.t('ds_navigation:pagination.NextButtonTitle'),
+      });
+      await fireEvent.click(nextButton);
+      await waitFor(() => expect(args.onChange).toHaveBeenCalledWith(7));
+      const currentButton = canvas.getByRole('button', {
+        name: '7',
+      });
+      await expect(currentButton).toHaveAttribute('aria-current', 'true');
+    });
   },
 } satisfies Story;
 
@@ -164,13 +268,13 @@ export const WithPrevNextLabel: Story = {
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
     const nextButton = canvas.getByRole('button', {
-      name: 'Neste',
+      name: dsI18n.t('ds_navigation:pagination.NextButtonTitle'),
     });
     await expect(nextButton).toBeInTheDocument();
-    await userEvent.click(nextButton);
+    await fireEvent.click(nextButton);
     await expect(args.onChange).toHaveBeenCalled();
     const previousButton = canvas.getByRole('button', {
-      name: 'Forrige',
+      name: dsI18n.t('ds_navigation:pagination.PreviousButtonTitle'),
     });
     await expect(previousButton).toBeInTheDocument();
   },
@@ -229,7 +333,7 @@ const listWithLimit = (
 };
 
 export const WithListLimit: Story = {
-  name: 'With List Limit (A3, A6, B3)',
+  name: 'With List Limit (A6, B3)',
   args: {
     listLength: 6,
     listTotalLength: data.length * 7,
@@ -258,28 +362,47 @@ export const WithListLimit: Story = {
           currentPage={currentPage}
           onChange={onChange}
         />
-        <Paragraph>
-          <Pagination
-            listTotalLength={8}
-            listLength={2}
-            sibling={2}
-            defaultCurrentPage={1}
-            ariaLabel={'Second landmark'}
-            onChange={onChange}
-          />
-        </Paragraph>
       </>
     );
   },
 } satisfies Story;
 
-export const WithMultiple: Story = {
-  name: 'With Focus (A6, A7, B1, B2, B4)',
+export const WithCustomAriaLabel: Story = {
+  name: 'With Custom Aria Label (B1 delvis)',
+  args: {
+    ...defaultArgs,
+    ariaLabel: 'Egen tekst på nav-elementets aria-label',
+    defaultCurrentPage: 1,
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  render: function Render(args): JSX.Element {
+    return <Pagination {...args} />;
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const nav = canvas.getByRole('navigation');
+    await expect(nav).toHaveAttribute(
+      'aria-label',
+      'Egen tekst på nav-elementets aria-label'
+    );
+  },
+} satisfies Story;
+
+export const WithPageSummary: Story = {
+  name: 'With Page Summary (A6)',
   args: {
     ...defaultArgs,
     defaultCurrentPage: 1,
   },
-  render: function Render(args): JSX.Element {
-    return <Pagination {...args} />;
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    // Antall elementer på side OG antall sider representert med siste page-button
+    const paginationStatus = canvas.getByText('Viser 1–10 av 70');
+    await expect(paginationStatus).toBeInTheDocument();
   },
 } satisfies Story;

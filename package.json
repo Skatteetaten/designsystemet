@@ -94,7 +94,6 @@
     "@nx/webpack": "17.1.3",
     "@nx/workspace": "17.1.3",
     "@rollup/plugin-url": "7.0.0",
-    "@skatteetaten/ci-scripts": "3.0.0",
     "@storybook/addon-a11y": "7.6.17",
     "@storybook/addon-coverage": "1.0.0",
     "@storybook/addon-interactions": "7.6.17",

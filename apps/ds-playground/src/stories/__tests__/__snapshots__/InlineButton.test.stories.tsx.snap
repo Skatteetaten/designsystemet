@@ -177,9 +177,12 @@ exports[`Tester/InlineButton WithLongText smoke-test 1`] = `
 
 exports[`Tester/InlineButton WithLongTextAndIcon smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  "
+  <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 "
           type="button"
   >
+    <span class>
+      Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert. Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert.
+    </span>
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
          viewbox="0 0 24 24"
          focusable="false"
@@ -189,9 +192,6 @@ exports[`Tester/InlineButton WithLongTextAndIcon smoke-test 1`] = `
       <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
       </path>
     </svg>
-    <span class>
-      Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert. Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert.
-    </span>
   </button>
 </div>
 `;
