@@ -47,7 +47,7 @@ interface DatePickerCommonProps
   /** Hvilken dato som skal være satt (controlled state) */
   value?: Date | null;
   /** Hvilken dato som skal være satt (uncontrolled state) */
-  defaultValue?: Date | null;
+  defaultValue?: Date;
   /** Initielt uthevet dato */
   initialPickerDate?: Date;
   /** Minste tillatte dato */
