@@ -48,6 +48,7 @@ const meta = {
     // HTML
     accessKey: { table: { disable: true } },
     disabled: { table: { disable: true } },
+    form: { table: { disable: true } },
     type: { table: { disable: true } },
     // Aria
     ariaDescribedby: { table: { disable: true } },
@@ -91,12 +92,14 @@ export const WithAttributes = {
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
+    form: 'formid123',
   },
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+    form: { table: { disable: false } },
   },
   parameters: {
     imageSnapshot: {
@@ -112,6 +115,7 @@ export const WithAttributes = {
     await expect(button).toHaveClass('dummyClassname');
     await expect(button).toHaveAttribute('lang', 'nb');
     await expect(button).toHaveAttribute('data-testid', '123ID');
+    await expect(button).toHaveAttribute('form', 'formid123');
   },
 } satisfies Story;
 

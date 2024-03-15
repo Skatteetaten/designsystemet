@@ -28,6 +28,7 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
       variant = getRadioGroupVariantDefault(),
       defaultValue,
       disabled,
+      form,
       name,
       required,
       hasError,
@@ -57,6 +58,7 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
         lang={lang}
         data-testid={dataTestId}
         disabled={disabled}
+        form={form}
         legend={legend}
         hideLegend={hideLegend}
         showRequiredMark={showRequiredMark}

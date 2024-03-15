@@ -43,6 +43,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
       value,
       autoComplete,
       disabled,
+      form,
       name,
       required,
       hasError,
@@ -124,6 +125,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
             data-testid={dataTestId}
             autoComplete={autoComplete}
             disabled={disabled}
+            form={form}
             name={name}
             required={required}
             value={value}

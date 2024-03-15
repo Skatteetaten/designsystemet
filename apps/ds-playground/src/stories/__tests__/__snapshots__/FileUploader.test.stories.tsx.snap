@@ -3,7 +3,8 @@
 exports[`Tester/FileUploader Defaults play-test 1`] = `
 <div data-test-block="true">
   <div class="FileUploader_container__IERNU ">
-    <button id=":r4:"
+    <button type="button"
+            id=":r4:"
             class="FileUploader_dropZone__YfvZ-  "
     >
       <div class="FileUploader_removePointerEvents__Ij6pE">
@@ -50,7 +51,8 @@ exports[`Tester/FileUploader WithAttributes play-test 1`] = `
        lang="en"
        data-testid="123ID"
   >
-    <button id="htmlId"
+    <button type="button"
+            id="htmlId"
             class="FileUploader_dropZone__YfvZ-  "
     >
       <div class="FileUploader_removePointerEvents__Ij6pE">
@@ -119,7 +121,8 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
         </path>
       </svg>
     </button>
-    <button id=":rn:"
+    <button type="button"
+            id=":rn:"
             class="FileUploader_dropZone__YfvZ- FileUploader_dropZone_error__PRhyM "
             aria-describedby=":rn:-accepted-formats"
     >
@@ -215,7 +218,8 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
         </path>
       </svg>
     </button>
-    <button id=":r1o:"
+    <button type="button"
+            id=":r1o:"
             class="FileUploader_dropZone__YfvZ-  "
     >
       <div class="FileUploader_removePointerEvents__Ij6pE">
@@ -319,7 +323,8 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
 exports[`Tester/FileUploader WithIsUploading smoke-test 1`] = `
 <div data-test-block="true">
   <div class="FileUploader_container__IERNU ">
-    <button id=":rm:"
+    <button type="button"
+            id=":rm:"
             class="FileUploader_dropZone__YfvZ-  "
             disabled
     >
@@ -366,7 +371,8 @@ exports[`Tester/FileUploader WithRef play-test 1`] = `
   <div class="FileUploader_container__IERNU "
        id="dummyIdForwardedFromRef"
   >
-    <button id=":r0:"
+    <button type="button"
+            id=":r0:"
             class="FileUploader_dropZone__YfvZ-  "
     >
       <div class="FileUploader_removePointerEvents__Ij6pE">
@@ -410,7 +416,8 @@ exports[`Tester/FileUploader WithRef play-test 1`] = `
 exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
 <div data-test-block="true">
   <div class="FileUploader_container__IERNU ">
-    <button id=":r1i:"
+    <button type="button"
+            id=":r1i:"
             class="FileUploader_dropZone__YfvZ-  "
             aria-describedby=":r1i:-accepted-formats"
     >
@@ -527,7 +534,8 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
 exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
 <div data-test-block="true">
   <div class="FileUploader_container__IERNU bottomSpacingXL">
-    <button id=":rs:"
+    <button type="button"
+            id=":rs:"
             class="FileUploader_dropZone__YfvZ-  "
             aria-describedby=":rs:-accepted-formats"
     >
@@ -712,7 +720,8 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
     </div>
   </div>
   <div class="FileUploader_container__IERNU ">
-    <button id=":r17:"
+    <button type="button"
+            id=":r17:"
             class="FileUploader_dropZone__YfvZ-  "
             aria-describedby=":r17:-accepted-formats"
     >
@@ -927,7 +936,8 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
         </path>
       </svg>
     </button>
-    <button id=":r6:"
+    <button type="button"
+            id=":r6:"
             class="FileUploader_dropZone__YfvZ-  "
             aria-describedby=":r6:-accepted-formats"
     >

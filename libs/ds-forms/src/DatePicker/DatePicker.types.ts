@@ -4,7 +4,11 @@ import {
   FocusEventHandler,
 } from 'react';
 
-import { BaseProps, FormSize } from '@skatteetaten/ds-core-utils';
+import {
+  BaseProps,
+  FormDiscriminatedRequiredProps,
+  FormSize,
+} from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 
@@ -60,18 +64,6 @@ interface DatePickerCommonProps
   onSelectDate?: (date: Date | null) => void;
 }
 
-export type DatePickerDiscriminatedRequiredProps =
-  | {
-      required: true;
-      /** Om obligatorisk form-komponent skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
-      showRequiredMark?: boolean;
-    }
-  | {
-      required?: never;
-      /** Om obligatorisk form-komponent skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
-      showRequiredMark?: never;
-    };
-
 export type DatePickerDiscriminatedErrorProps =
   | {
       /** Tekst på feilmelding */
@@ -87,5 +79,5 @@ export type DatePickerDiscriminatedErrorProps =
     };
 
 export type DatePickerProps = DatePickerCommonProps &
-  DatePickerDiscriminatedRequiredProps &
+  FormDiscriminatedRequiredProps &
   DatePickerDiscriminatedErrorProps;

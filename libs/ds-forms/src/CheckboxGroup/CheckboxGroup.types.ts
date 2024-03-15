@@ -12,7 +12,7 @@ import { FieldsetProps } from '../Fieldset/Fieldset.types';
 
 type RequiredCheckboxGroupHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'fieldset'>,
-  'disabled'
+  'disabled' | 'form'
 >;
 
 type CheckboxGroupHTMLAttributes = Partial<RequiredCheckboxGroupHTMLAttributes>;

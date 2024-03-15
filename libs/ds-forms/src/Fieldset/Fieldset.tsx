@@ -20,6 +20,7 @@ export const Fieldset = forwardRef<HTMLFieldSetElement, FieldsetProps>(
       legend,
       titleHelpSvg,
       disabled,
+      form,
       hasSpacing,
       hideLegend,
       showRequiredMark,
@@ -59,6 +60,7 @@ export const Fieldset = forwardRef<HTMLFieldSetElement, FieldsetProps>(
         className={`${styles.fieldset} ${hasSpacingClassName} ${className}`.trim()}
         lang={lang}
         disabled={disabled}
+        form={form}
       >
         <legend id={legendId} className={legendClassName}>
           {legend}
