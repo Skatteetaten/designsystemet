@@ -44,6 +44,7 @@ exports[`Tester/InlineButton WithAttributes play-test 1`] = `
           class="InlineButton_button__2aGtg   dummyClassname"
           lang="nb"
           data-testid="123ID"
+          form="formid123"
           type="button"
   >
     <span class>

@@ -25,6 +25,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       variant = getButtonVariantDefault(),
       accessKey,
       disabled,
+      form,
       type = getCommonButtonTypeDefault(),
       ariaDescribedby,
       ariaCurrent,
@@ -62,6 +63,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         accessKey={accessKey}
         disabled={disabled}
         type={type}
+        form={form}
         aria-current={ariaCurrent}
         aria-describedby={ariaDescribedby}
         onBlur={onBlur}

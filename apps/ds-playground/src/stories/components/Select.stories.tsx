@@ -62,6 +62,7 @@ const meta = {
     // HTML
     autoComplete: { table: { category: category.htmlAttribute } },
     disabled: { table: { category: category.htmlAttribute } },
+    form: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },
     required: {
       control: 'boolean',

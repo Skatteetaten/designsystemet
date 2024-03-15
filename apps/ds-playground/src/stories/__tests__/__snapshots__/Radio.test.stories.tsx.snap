@@ -85,6 +85,7 @@ exports[`Tester/RadioGroup/Radio WithAttributes play-test 1`] = `
           <input id="htmlId"
                  class="Radio_radioInput__gTlv0"
                  data-testid="123ID"
+                 form="formid123"
                  type="radio"
                  name="radioInputName-:r5:"
                  value

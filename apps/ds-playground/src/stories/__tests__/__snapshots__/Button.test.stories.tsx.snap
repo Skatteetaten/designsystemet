@@ -81,6 +81,7 @@ exports[`Tester/Button WithAttributes play-test 1`] = `
           lang="nb"
           data-testid="123ID"
           type="button"
+          form="formid123"
   >
     <span class="Button_buttonText__JxyB+">
       Klikk her

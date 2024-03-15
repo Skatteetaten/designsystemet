@@ -17,7 +17,7 @@ export type ButtonVariant = (typeof buttonVariantArr)[number];
 
 type RequiredButtonHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'button'>,
-  'accessKey' | 'disabled' | 'type' | 'onBlur' | 'onClick' | 'onFocus'
+  'accessKey' | 'disabled' | 'form' | 'type' | 'onBlur' | 'onClick' | 'onFocus'
 >;
 
 // TODO Vil ekstrakte enums fra ButtonAria['aria-current'] OG at disse vises i Storybook og som type-hints

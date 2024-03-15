@@ -62,6 +62,7 @@ exports[`Tester/Select/Select WithAttributes play-test 1`] = `
       <select id="htmlid"
               class="Select_select__-ENv1"
               data-testid="123ID"
+              form="form123"
               style="color: var(--palette-graphite-50);"
       >
         <option value>

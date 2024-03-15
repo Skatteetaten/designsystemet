@@ -1,6 +1,6 @@
 @import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
-.chip {
+.tag {
   display: inline-flex;
   justify-content: center;
   border: 2px solid var(--palette-graphite-0);
@@ -13,8 +13,14 @@
 
   .iconWrapper {
     display: flex;
+    width: var(--size-small);
     flex-direction: column;
+    align-items: center;
     justify-content: center;
+
+    .icon {
+      width: var(--size-small);
+    }
   }
 
   &_ochre {
@@ -34,10 +40,16 @@
   }
 
   &_medium {
-    padding: var(--spacing-xs) var(--spacing-s);
+    padding: var(--spacing-xxs) 6px;
   }
 
   &_small {
-    padding: var(--spacing-xxs) var(--spacing-s);
+    padding: 0 6px;
+    font-size: var(--font-size-s);
+    line-height: var(--semantic-line-height-default);
+
+    .iconWrapper .icon {
+      width: var(--size-extra-small);
+    }
   }
 }
