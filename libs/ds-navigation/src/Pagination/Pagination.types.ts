@@ -7,7 +7,7 @@ export interface PaginationCommonProps extends BaseProps {
   listLength?: number;
   /** Totalt antall elementer i liste */
   listTotalLength: number;
-  /** Maksiumum antall navigasjonselementer ved siden av aktiv side. Minimusverdi er 1 sibling */
+  /** Maksimum antall navigasjonselementer ved siden av aktiv side. Minimumsverdi er 1 sibling */
   sibling?: number;
   /** Skjul next/prev label */
   hidePrevNextButtonTitle?: boolean;
