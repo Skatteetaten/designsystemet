@@ -12,7 +12,7 @@ import { DatePickerCalendarProps } from '../../../../../libs/ds-forms/src/DatePi
 
 const DatesTemplate: StoryFn<typeof DatePickerCalendar> = (args) => {
   /* Fordi date control konverterer datoen til et UNIX-tidsstempel når verdien endres,
-    må den konverteres til et data objekt. Dette er en kjent begrensing som vil bli fikset
+    må den konverteres til et date objekt. Dette er en kjent begrensing som vil bli fikset
     en gang i fremtiden står det i Storybook sin dokumentasjon over Controls. */
   args.selectedDate = new Date(args.selectedDate as Date);
   args.minDate = new Date(args.minDate as Date);

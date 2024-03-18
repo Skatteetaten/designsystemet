@@ -99,7 +99,7 @@ export const Preview: Story = {
   render: (_args): JSX.Element => {
     const [, setArgs] = useArgs();
     /* Fordi date control konverterer datoen til et UNIX-tidsstempel når verdien endres,
-     må den konverteres til et data objekt. Dette er en kjent begrensing som vil bli fikset
+     må den konverteres til et date objekt. Dette er en kjent begrensing som vil bli fikset
     en gang i fremtiden står det i Storybook sin dokumentasjon over Controls. */
 
     // Preview bør alltid være controlled, siden defaultValue må settes når komponenten rendres første gang.

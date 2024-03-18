@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { IconButton } from '@skatteetaten/ds-buttons';
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { ArrowBackSVGpath, ArrowForwardSVGpath } from '@skatteetaten/ds-icons';
-import { isEqual } from 'date-fns';
+import { getWeek, isEqual } from 'date-fns';
 
 import { DatePickerCalendarProps } from './DatePickerCalendar.types';
 import {
@@ -192,47 +192,52 @@ export const DatePickerCalendar = forwardRef<
             </tr>
           </thead>
           <tbody>
-            {rows.map((cells, index) => (
-              <tr key={`row-${selectedYear}-${selectedMonthIndex}-${index}`}>
-                {cells.map((cell) => {
-                  const adjancentMonthClassName = cell.isAdjacentMonth
-                    ? styles.calendarTableDateButton_adjacentMonth
-                    : '';
-                  const todayClassName = cell.isToday
-                    ? styles.calendarTableDateButton_today
-                    : '';
-                  const buttonClassName =
-                    `${styles.calendarTableDateButton} ${adjancentMonthClassName} ${todayClassName}`.trim();
+            {rows.map((cells) => {
+              const weekIndex = getWeek(rows[0][0].date);
+              return (
+                <tr
+                  key={`row-${selectedYear}-${selectedMonthIndex}-${weekIndex}`}
+                >
+                  {cells.map((cell) => {
+                    const adjancentMonthClassName = cell.isAdjacentMonth
+                      ? styles.calendarTableDateButton_adjacentMonth
+                      : '';
+                    const todayClassName = cell.isToday
+                      ? styles.calendarTableDateButton_today
+                      : '';
+                    const buttonClassName =
+                      `${styles.calendarTableDateButton} ${adjancentMonthClassName} ${todayClassName}`.trim();
 
-                  const ariaCurrent = isEqual(cell.date, selectedDate)
-                    ? 'date'
-                    : undefined;
+                    const ariaCurrent = isEqual(cell.date, selectedDate)
+                      ? 'date'
+                      : undefined;
 
-                  const ariaLabel = `${
-                    cell.isToday ? t('datepicker.Today') : ''
-                  } ${cell.date.getDate()}. ${
-                    monthNames[cell.date.getMonth()]
-                  } ${cell.date.getFullYear()}`;
+                    const ariaLabel = `${
+                      cell.isToday ? t('datepicker.Today') : ''
+                    } ${cell.date.getDate()}. ${
+                      monthNames[cell.date.getMonth()]
+                    } ${cell.date.getFullYear()}`;
 
-                  return (
-                    <td key={`cell-${cell.date}`}>
-                      <button
-                        className={buttonClassName}
-                        type={'button'}
-                        disabled={cell.disabled}
-                        aria-current={ariaCurrent}
-                        aria-label={ariaLabel}
-                        onClick={(): void => {
-                          onSelectDate(cell.date);
-                        }}
-                      >
-                        {`${cell.text}`}
-                      </button>
-                    </td>
-                  );
-                })}
-              </tr>
-            ))}
+                    return (
+                      <td key={`cell-${cell.date}`}>
+                        <button
+                          className={buttonClassName}
+                          type={'button'}
+                          disabled={cell.disabled}
+                          aria-current={ariaCurrent}
+                          aria-label={ariaLabel}
+                          onClick={(): void => {
+                            onSelectDate(cell.date);
+                          }}
+                        >
+                          {`${cell.text}`}
+                        </button>
+                      </td>
+                    );
+                  })}
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
