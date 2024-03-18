@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import {
   Pagination,
   getDefaultListLength,
@@ -6,7 +8,6 @@ import {
   getDefaultHidePrevNextButtonTitle,
 } from '@skatteetaten/ds-navigation';
 import { List } from '@skatteetaten/ds-typography';
-import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryObj } from '@storybook/react';
 import { JSX } from 'react/jsx-runtime';
 
@@ -384,7 +385,7 @@ type Story = StoryObj<typeof meta>;
 export const Preview: Story = {} satisfies Story;
 
 // Hjelpefunksjon for å vise hvordan pagination påvirker liste utenfor komponent
-const listWithLimit = (
+const exampleListWithLimit = (
   data: List,
   start: number,
   listSize: number
@@ -402,20 +403,19 @@ const listWithLimit = (
 };
 
 export const Examples: Story = {
-  //TODO: Ha et eksempel som ikke viser useArgs. Kan f.eks ha ett eksempel med, og ett uten liste
   render: (_args): JSX.Element => {
-    const [{ currentPage }, updateArgs] = useArgs();
+    const [page, setPage] = useState(1);
     const listLength = 5;
     const onChange = (page: number): void => {
-      updateArgs({ currentPage: page });
+      setPage(page);
     };
     return (
       <>
-        <List hasSpacing>{listWithLimit(data, currentPage, listLength)}</List>
+        <List hasSpacing>{exampleListWithLimit(data, page, listLength)}</List>
         <Pagination
           listLength={listLength}
           listTotalLength={data.length}
-          currentPage={currentPage}
+          defaultCurrentPage={1}
           onChange={onChange}
         />
       </>

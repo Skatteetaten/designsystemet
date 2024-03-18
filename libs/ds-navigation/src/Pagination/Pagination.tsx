@@ -3,11 +3,11 @@ import { useTranslation } from 'react-i18next';
 
 import { InlineButton, Button, IconButton } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { Paragraph } from '@skatteetaten/ds-typography';
 import {
   ChevronLeftSVGpath,
   ChevronRightSVGpath,
 } from '@skatteetaten/ds-icons';
+import { Paragraph } from '@skatteetaten/ds-typography';
 
 import {
   getDefaultListLength,
@@ -144,7 +144,7 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
       defaultCurrentPage: defaultCurrentPage,
       onChange: onChange,
     };
-    if (sibling < 1) sibling = 1;
+    const pageSibling = sibling < 1 ? 1 : sibling;
 
     // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
     const useCurrentPage = (value: number, option: PageOption) => {
@@ -258,7 +258,7 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
           {lastPage > 1 && (
             <PaginationList
               lastPage={lastPage}
-              sibling={sibling}
+              sibling={pageSibling}
               internalPage={internalPage}
               handleChange={handleChange}
               firstPageRef={firstPageRef}

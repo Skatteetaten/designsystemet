@@ -12,7 +12,7 @@ describe('Pagination defaults', () => {
   });
   it('Når getDefaultSibling kalles så returnerer den riktig verdi', () => {
     const renderDefault = getDefaultSibling();
-    expect(renderDefault).toBe(1);
+    expect(renderDefault).toBe(3);
   });
   it('Når getDefaultHidePrevNextButtonTitle kalles så returnerer den riktig verdi', () => {
     const renderDefault = getDefaultHidePrevNextButtonTitle();
