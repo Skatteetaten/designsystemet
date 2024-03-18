@@ -3,15 +3,15 @@
   "topbanner.InkLogoLinkText": "Stáhta gáibideami ovdasiidu",
   "topbanner.LsoLogoImageText": "Bálkádoarjja dovdomearka",
   "topbanner.LsoLogoLinkText": "Bálkádoarjja ovdasiidu",
-  "topbanner.NavAriaLabel": "(Temaoversikt)",
+  "topbanner.NavAriaLabel": "Fáddábajilgovva",
   "topbanner.SkeLogoImageText": "Vearroetáhta dovdomearka",
   "topbanner.SkeLogoLinkText": "Vearroetáhta ovdasiidu",
-  "topbanner.SkipLinkText": "(Hopp til hovedinnhold)",
-  "topbannerbutton.CompanyTitle": "(Innlogget som virksomhet)",
+  "topbanner.SkipLinkText": "Váldosisdollui",
+  "topbannerbutton.CompanyTitle": "Sisačálihuvvon dego fitnodat",
   "topbannerbutton.Login": "Sisačáliheapmi",
   "topbannerbutton.Logout": "Čálit ologgos",
   "topbannerbutton.Menu": "Fállu",
   "topbannerbutton.Myself": "Mun ieš",
   "topbannerbutton.MyselfTitle": "Guoskevaš",
-  "topbannerbutton.OtherTitle": "(Innlogget som annen)"
+  "topbannerbutton.OtherTitle": "Sisačálihuvvon dego"
 }

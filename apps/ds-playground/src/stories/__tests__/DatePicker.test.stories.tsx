@@ -1,12 +1,11 @@
-import { ChangeEvent, FocusEvent, useState } from 'react';
+import React, { ChangeEvent, FocusEvent, useState } from 'react';
 
-import { formArrSize } from '@skatteetaten/ds-core-utils';
+import { dsI18n, formArrSize } from '@skatteetaten/ds-core-utils';
+import { DatePicker, TextField } from '@skatteetaten/ds-forms';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fireEvent, userEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { DatePicker } from '../../../../../libs/ds-forms/src/DatePicker/DatePicker';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const verifyAttribute =
@@ -20,7 +19,7 @@ const verifyAttribute =
 
 const meta = {
   component: DatePicker,
-  title: 'Tester/DatePicker (under utvikling)',
+  title: 'Tester/DatePicker/DatePicker',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },
@@ -31,7 +30,9 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     classNames: { table: { disable: true } },
-    defaultValue: { table: { disable: true } },
+    defaultValue: { table: { disable: true }, control: 'date' },
+    value: { table: { disable: true }, control: 'date' },
+    dateFormat: { table: { disable: true } },
     description: { table: { disable: true } },
     label: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
@@ -43,6 +44,9 @@ const meta = {
     },
     helpText: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
+    initialPickerDate: { table: { disable: true }, control: 'date' },
+    minDate: { table: { disable: true }, control: 'date' },
+    maxDate: { table: { disable: true }, control: 'date' },
     showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     variant: {
@@ -57,17 +61,17 @@ const meta = {
     placeholder: { table: { disable: true } },
     required: { table: { disable: true } },
     readOnly: { table: { disable: true } },
-    value: { table: { disable: true } },
     // Events
     onBlur: { table: { disable: true } },
     onChange: { table: { disable: true } },
     onFocus: { table: { disable: true } },
+    onSelectDate: { table: { disable: true } },
   },
 } satisfies Meta<typeof DatePicker>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const valueText = '01.01.2001';
+const valueDate = new Date(2024, 1, 1);
 const errorMessageText = 'Fødselsdato er obligatorisk';
 
 const defaultLabelText = 'Fødselsdato';
@@ -157,7 +161,7 @@ export const WithCustomClassNames = {
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults Variant Medium (A1, B2, B5)',
+  name: 'Defaults Variant Medium (A1, A2, B2, B5)',
   args: {
     ...defaultArgs,
   },
@@ -166,23 +170,27 @@ export const Defaults = {
   },
   parameters: {
     imageSnapshot: {
-      hover: `${wrapper} input`,
-      focus: `${wrapper} input`,
-      blur: `${wrapper} input`,
+      hover: [`${wrapper} input`, `${wrapper} button`],
+      focus: [`${wrapper} input`, `${wrapper} button`],
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const textbox = canvas.getByRole('textbox', { name: defaultLabelText });
-    await expect(textbox).toBeInTheDocument();
-    await expect(textbox).toBeEnabled();
-    await expect(textbox).toHaveAttribute('id');
-    await expect(textbox.tagName).toBe('INPUT');
-    await expect(textbox).not.toBeRequired();
-    await expect(textbox).not.toHaveAttribute('aria-invalid');
-    await expect(textbox).not.toHaveAttribute('aria-describedby');
-    // TODO Hent 'Velg dato' fra tekstlistekatalogen
-    const calendarButton = canvas.getByRole('button', { name: 'Velg dato' });
+    const input = canvas.getByRole('textbox', { name: defaultLabelText });
+    await expect(input).toBeInTheDocument();
+    await expect(input).toBeEnabled();
+    await expect(input).toHaveAttribute('id');
+    await expect(input).toHaveAttribute(
+      'placeholder',
+      dsI18n.t('ds_forms:datepicker.TypeOrSelect')
+    );
+    await expect(input.tagName).toBe('INPUT');
+    await expect(input).not.toBeRequired();
+    await expect(input).not.toHaveAttribute('aria-invalid');
+    await expect(input).not.toHaveAttribute('aria-describedby');
+    const calendarButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_forms:datepicker.ChooseDate'),
+    });
     await expect(calendarButton).toBeInTheDocument();
     await expect(calendarButton).toBeEnabled();
     await expect(calendarButton.tagName).toBe('BUTTON');
@@ -207,30 +215,12 @@ export const WithVariantLarge = {
   },
 } satisfies Story;
 
-export const WithVariantLargeAndLongText = {
-  name: 'With Variant Large And Long Text',
-  args: {
-    ...defaultArgs,
-    variant: 'large',
-    value: 'En lang tekst som ikke skal synes bak åpne ikonet',
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
-    value: { table: { disable: false } },
-  },
-  parameters: {
-    viewport: {
-      defaultViewport: '--mobile',
-    },
-  },
-} satisfies Story;
-
 export const WithDisabled = {
   name: 'With Disabled (B7)',
   args: {
     ...defaultArgs,
     disabled: true,
-    value: valueText,
+    value: valueDate,
   },
   argTypes: {
     disabled: { table: { disable: false } },
@@ -248,7 +238,7 @@ export const WithValue = {
   name: 'With Value (B1)',
   args: {
     ...defaultArgs,
-    value: valueText,
+    value: valueDate,
   },
   argTypes: {
     value: { table: { disable: false } },
@@ -256,14 +246,14 @@ export const WithValue = {
   parameters: {
     imageSnapshot: { disable: true },
   },
-  play: verifyAttribute('value', valueText),
+  play: verifyAttribute('value', '01.02.2024'),
 } satisfies Story;
 
 export const WithDefaultValue = {
   name: 'With DefaultValue',
   args: {
     ...defaultArgs,
-    defaultValue: valueText,
+    defaultValue: valueDate,
   },
   argTypes: {
     defaultValue: { table: { disable: false } },
@@ -271,7 +261,7 @@ export const WithDefaultValue = {
   parameters: {
     imageSnapshot: { disable: true },
   },
-  play: verifyAttribute('value', valueText),
+  play: verifyAttribute('value', '01.02.2024'),
 } satisfies Story;
 
 export const WithRequired = {
@@ -330,7 +320,7 @@ export const WithError = {
 } satisfies Story;
 
 export const WithErrorMessageAndHasError = {
-  name: 'With ErrorMessage And HasError (A1, A7, B4)',
+  name: 'With ErrorMessage And HasError (A1, A4, A7, B4)',
   args: {
     ...defaultArgs,
     errorMessage: errorMessageText,
@@ -342,8 +332,8 @@ export const WithErrorMessageAndHasError = {
   },
   parameters: {
     imageSnapshot: {
-      hover: `${wrapper} input`,
-      focus: `${wrapper} input`,
+      hover: [`${wrapper} input`, `${wrapper} button`],
+      focus: [`${wrapper} input`, `${wrapper} button`],
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -415,7 +405,7 @@ export const WithAutoCompleteNameAndPlaceholder = {
     ...defaultArgs,
     autoComplete: 'given-name',
     name: 'test_name',
-    placeholder: valueText,
+    placeholder: 'placeholdertekst',
   },
   argTypes: {
     autoComplete: { table: { disable: false } },
@@ -427,7 +417,7 @@ export const WithAutoCompleteNameAndPlaceholder = {
     const textbox = canvas.getByRole('textbox');
     await expect(textbox).toHaveAttribute('autocomplete', 'given-name');
     await expect(textbox).toHaveAttribute('name', 'test_name');
-    await expect(textbox).toHaveAttribute('placeholder', valueText);
+    await expect(textbox).toHaveAttribute('placeholder', 'placeholdertekst');
   },
 } satisfies Story;
 
@@ -451,7 +441,7 @@ export const WithReadOnly = {
   name: 'With ReadOnly (B6)',
   args: {
     ...defaultArgs,
-    value: valueText,
+    value: valueDate,
     readOnly: true,
   },
   argTypes: {
@@ -462,6 +452,90 @@ export const WithReadOnly = {
     const textbox = canvas.getByRole('textbox');
     await expect(textbox).toHaveAttribute('readonly');
     await expect(canvas.queryByRole('button')).not.toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithDateFormat = {
+  name: 'With DateFormat (A8)',
+  args: {
+    ...defaultArgs,
+    value: valueDate,
+    dateFormat: 'yyyy/MM/dd',
+  },
+  argTypes: {
+    dateFormat: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const input = canvas.getByRole('textbox');
+    await expect(input).toHaveValue('2024/02/01');
+
+    const calendarButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_forms:datepicker.ChooseDate'),
+    });
+    await fireEvent.click(calendarButton);
+    const dateButton = canvas.getByText('5');
+    await fireEvent.click(dateButton);
+    await expect(input).toHaveValue('2024/02/05');
+  },
+} satisfies Story;
+
+const DatesTemplate: StoryFn<typeof DatePicker> = (args) => {
+  /* Fordi date control konverterer datoen til et UNIX-tidsstempel når verdien endres,
+    må den konverteres til et date objekt. Dette er en kjent begrensing som vil bli fikset
+    en gang i fremtiden står det i Storybook sin dokumentasjon over Controls. */
+  args.initialPickerDate = new Date(args.initialPickerDate as Date);
+  return <DatePicker {...args} initialPickerDate={args.initialPickerDate} />;
+};
+
+export const WithInitialPickerDate = {
+  render: DatesTemplate,
+  name: 'With InitialPickerDate (Kalender B2)',
+  args: {
+    ...defaultArgs,
+    initialPickerDate: new Date('2024.01.31'),
+  },
+  argTypes: {
+    initialPickerDate: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const calendarButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_forms:datepicker.ChooseDate'),
+    });
+    await fireEvent.click(calendarButton);
+    const ariaCurrentButton = canvas.getByText('31');
+    await expect(ariaCurrentButton).toHaveAttribute('aria-current', 'date');
+  },
+} satisfies Story;
+
+export const GenerouslyWithFormatFromUser = {
+  name: 'Generously With Format From User (A3)',
+  args: {
+    ...defaultArgs,
+    value: valueDate,
+  },
+  argTypes: {},
+  parameters: {
+    imageSnapshot: { disable: true },
+    HTMLSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const input = canvas.getByRole('textbox');
+    input.focus();
+    const removeDate =
+      '{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}';
+
+    await userEvent.type(input, removeDate);
+    await userEvent.type(input, '0102');
+    await userEvent.tab();
+    await waitFor(() => expect(input).toHaveValue('01.02.2024'));
+
+    await userEvent.type(input, removeDate);
+    await userEvent.type(input, '010224');
+    await userEvent.tab();
+    await waitFor(() => expect(input).toHaveValue('01.02.2024'));
   },
 } satisfies Story;
 
@@ -495,13 +569,14 @@ export const WithEventHandlers = {
   },
   parameters: {
     imageSnapshot: { disable: true },
+    HTMLSnapshot: { disable: true },
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
     await textbox.focus();
     await waitFor(() => expect(args.onFocus).toHaveBeenCalled());
-    await userEvent.type(textbox, '02.02.2002');
+    await userEvent.type(textbox, '01.02.2002');
     await waitFor(() => expect(args.onChange).toHaveBeenCalled());
     await userEvent.tab();
     await waitFor(() => expect(args.onBlur).toHaveBeenCalled());
@@ -512,13 +587,11 @@ export const ClickCalendarButton = {
   name: 'Click CalendarButton On And Off (A1, A5, B5)',
   args: {
     ...defaultArgs,
+    value: valueDate,
   },
   parameters: {
-    imageSnapshot: {
-      hover: `${wrapper} input + button`,
-      focus: `${wrapper} input + button`,
-      blur: `${wrapper} input + button`,
-    },
+    imageSnapshot: { disable: true },
+    HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -527,6 +600,110 @@ export const ClickCalendarButton = {
     await expect(calendarButton).toHaveAttribute('aria-expanded', 'true');
     await fireEvent.click(calendarButton);
     await expect(calendarButton).toHaveAttribute('aria-expanded', 'false');
+    await fireEvent.click(calendarButton);
+  },
+} satisfies Story;
+
+export const ClickCalendarDateButton = {
+  name: 'Click CalendarDateButton (Kalender A2, A6)',
+  args: {
+    ...defaultArgs,
+    value: valueDate,
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+    HTMLSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const calendarButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_forms:datepicker.ChooseDate'),
+    });
+    await fireEvent.click(calendarButton);
+    const dateButton = canvas.getByText('5');
+    await fireEvent.click(dateButton);
+    await expect(calendarButton).toHaveAttribute('aria-expanded', 'false');
+    const input = canvas.getByRole('textbox');
+    await expect(input).toHaveValue('05.02.2024');
+  },
+} satisfies Story;
+
+export const ClickOutsideCalendar = {
+  name: 'Click Outside Calendar (Kalender A7)',
+  args: {
+    ...defaultArgs,
+    value: valueDate,
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+    HTMLSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const calendarButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_forms:datepicker.ChooseDate'),
+    });
+    await fireEvent.click(calendarButton);
+
+    await expect(calendarButton).toHaveAttribute('aria-expanded', 'true');
+    const calendarTable = canvas.getByRole('table');
+    await expect(calendarTable).toBeInTheDocument();
+
+    await fireEvent.click(canvas.getByLabelText(defaultLabelText));
+    await expect(calendarTable).not.toBeInTheDocument();
+    await expect(calendarButton).toHaveAttribute('aria-expanded', 'false');
+  },
+} satisfies Story;
+
+export const OpenCalendarEscape = {
+  name: 'Open Calender Escape ',
+  args: {
+    ...defaultArgs,
+    value: valueDate,
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+    HTMLSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const calendarButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_forms:datepicker.ChooseDate'),
+    });
+    await fireEvent.click(calendarButton);
+
+    await expect(calendarButton).toHaveAttribute('aria-expanded', 'true');
+    const calendarTable = canvas.getByRole('table');
+    await expect(calendarTable).toBeInTheDocument();
+
+    await userEvent.keyboard('[Escape]');
+    await expect(calendarTable).not.toBeInTheDocument();
+    await expect(calendarButton).toHaveAttribute('aria-expanded', 'false');
+  },
+} satisfies Story;
+
+const MovesOverTemplate: StoryFn<typeof DatePicker> = (args) => {
+  return (
+    <>
+      <DatePicker {...args} />
+      <TextField label={'Organisasjonsnummer'} />
+    </>
+  );
+};
+
+export const OpenCalendarMovesOver = {
+  render: MovesOverTemplate,
+  name: 'Open Calendar Moves Over (Kalender A1 delvis)',
+  args: {
+    ...defaultArgs,
+    value: valueDate,
+  },
+  parameters: {
+    HTMLSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const calendarButton = canvas.getByRole('button');
     await fireEvent.click(calendarButton);
   },
 } satisfies Story;
