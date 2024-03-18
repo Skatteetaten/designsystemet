@@ -4,6 +4,10 @@ import { useTranslation } from 'react-i18next';
 import { InlineButton, Button, IconButton } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Paragraph } from '@skatteetaten/ds-typography';
+import {
+  ChevronLeftSVGpath,
+  ChevronRightSVGpath,
+} from '@skatteetaten/ds-icons';
 
 import {
   getDefaultListLength,
@@ -175,11 +179,7 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
           {hidePrevNextButtonTitle && (
             <IconButton
               type={'button'}
-              svgPath={
-                <path
-                  d={'m16.9 17.98-6.1-6.1 6.1-6.1-1.8-1.9-8 8 8 8 1.8-1.9Z'}
-                />
-              }
+              svgPath={ChevronLeftSVGpath}
               title={t('pagination.PreviousButtonTitle')}
               onClick={() => handleChange(activePage - 1)}
             />
@@ -187,11 +187,7 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
           {!hidePrevNextButtonTitle && (
             <InlineButton
               iconPosition={'left'}
-              svgPath={
-                <path
-                  d={'m16.9 17.98-6.1-6.1 6.1-6.1-1.8-1.9-8 8 8 8 1.8-1.9Z'}
-                />
-              }
+              svgPath={ChevronLeftSVGpath}
               className={styles.paginationButton}
               onClick={() => handleChange(activePage - 1)}
             >
@@ -208,9 +204,7 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
           {hidePrevNextButtonTitle && (
             <IconButton
               type={'button'}
-              svgPath={
-                <path d={'m7.1 5.8 6.1 6.1L7.1 18 9 19.9l8-8-8-8-1.9 1.9Z'} />
-              }
+              svgPath={ChevronRightSVGpath}
               title={t('pagination.NextButtonTitle')}
               onClick={() => handleChange(activePage + 1)}
             />
@@ -218,9 +212,7 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
           {!hidePrevNextButtonTitle && (
             <InlineButton
               iconPosition={'right'}
-              svgPath={
-                <path d={'m7.1 5.8 6.1 6.1L7.1 18 9 19.9l8-8-8-8-1.9 1.9Z'} />
-              }
+              svgPath={ChevronRightSVGpath}
               className={styles.paginationButton}
               onClick={() => handleChange(activePage + 1)}
             >

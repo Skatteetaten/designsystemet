@@ -11,6 +11,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { JSX } from 'react/jsx-runtime';
 
 import { category } from '../../../.storybook/helpers';
+import { exampleParameters } from '../utils/stories.utils';
 import { getVersion } from '../utils/version.utils';
 
 const data = [
@@ -373,7 +374,7 @@ const meta = {
     defaultCurrentPage: 1,
   },
   parameters: {
-    version: getVersion('ds-progress'),
+    version: getVersion('ds-navigation'),
   },
 } satisfies Meta<typeof Pagination>;
 
@@ -381,13 +382,6 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {} satisfies Story;
-
-/* const defaultArgs = {
-  listLength: getDefaultListLength(),
-  listTotalLength: 70,
-  defaultCurrentPage: 2,
-  sibling: getDefaultSibling(),
-}; */
 
 // Hjelpefunksjon for å vise hvordan pagination påvirker liste utenfor komponent
 const listWithLimit = (
@@ -408,6 +402,7 @@ const listWithLimit = (
 };
 
 export const Examples: Story = {
+  //TODO: Ha et eksempel som ikke viser useArgs. Kan f.eks ha ett eksempel med, og ett uten liste
   render: (_args): JSX.Element => {
     const [{ currentPage }, updateArgs] = useArgs();
     const listLength = 5;
@@ -417,24 +412,15 @@ export const Examples: Story = {
     return (
       <>
         <List hasSpacing>{listWithLimit(data, currentPage, listLength)}</List>
-        {/* Controlled variant  */}
         <Pagination
           listLength={listLength}
-          listTotalLength={
-            data.length
-          } /* Ikke sett listTotalLength høyere enn størrelsen på mock-data. */
+          listTotalLength={data.length}
           currentPage={currentPage}
           onChange={onChange}
         />
-
-        {/* Uncontrolled variant  */}
-        {/* <Pagination
-          listLength={10}
-          listTotalLength={90}
-          defaultCurrentPage={3}
-          sibling={2}
-        /> */}
       </>
     );
   },
 } satisfies Story;
+
+Examples.parameters = exampleParameters;

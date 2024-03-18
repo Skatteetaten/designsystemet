@@ -262,9 +262,6 @@ export const WithPrevNextLabel: Story = {
   argTypes: {
     sibling: { table: true },
   },
-  render: function Render(args): JSX.Element {
-    return <Pagination {...args} />;
-  },
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
     const nextButton = canvas.getByRole('button', {
@@ -376,9 +373,6 @@ export const WithCustomAriaLabel: Story = {
   },
   parameters: {
     imageSnapshot: { disable: true },
-  },
-  render: function Render(args): JSX.Element {
-    return <Pagination {...args} />;
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
