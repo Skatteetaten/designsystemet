@@ -7,6 +7,7 @@ import { ArrowBackSVGpath, ArrowForwardSVGpath } from '@skatteetaten/ds-icons';
 import { getWeek, isEqual } from 'date-fns';
 
 import { DatePickerCalendarProps } from './DatePickerCalendar.types';
+import { getDatePickerCalendarSelectedDateDefault } from './defaults';
 import {
   getCalendarRows,
   getNameOfMonthsAndDays,
@@ -16,7 +17,6 @@ import { Select } from '../Select/Select';
 import { TextField } from '../TextField/TextField';
 
 import styles from './DatePickerCalendar.module.scss';
-import { getDatePickerCalendarSelectedDateDefault } from './defaults';
 
 export const DatePickerCalendar = forwardRef<
   HTMLDivElement,
@@ -192,8 +192,8 @@ export const DatePickerCalendar = forwardRef<
             </tr>
           </thead>
           <tbody>
-            {rows.map((cells) => {
-              const weekIndex = getWeek(rows[0][0].date);
+            {rows.map((cells, index) => {
+              const weekIndex = getWeek(rows[index][0].date);
               return (
                 <tr
                   key={`row-${selectedYear}-${selectedMonthIndex}-${weekIndex}`}
