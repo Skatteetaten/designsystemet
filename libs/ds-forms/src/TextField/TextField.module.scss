@@ -42,13 +42,13 @@
   }
 
   &:hover {
-    box-shadow: inset 0 0 0 2px var(--semantic-page-foreground);
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
     outline: 2px solid var(--semantic-interactive-background);
   }
 
   &:focus {
     box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
-    outline: 2px solid var(--semantic-interactive-background);
+    outline: 1px solid var(--semantic-interactive-main);
 
     &::selection {
       background: var(--semantic-interactive-background);
@@ -65,8 +65,12 @@
   }
 
   &:read-only:not(:disabled) {
-    padding: var(--spacing-s);
+    padding: var(--spacing-xs) var(--spacing-s);
     box-shadow: none;
     outline: 0;
+  }
+
+  &_large:read-only:not(:disabled) {
+    padding: var(--spacing-s);
   }
 }
