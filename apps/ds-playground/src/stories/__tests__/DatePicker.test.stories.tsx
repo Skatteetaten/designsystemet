@@ -530,12 +530,12 @@ export const GenerouslyWithFormatFromUser = {
     await userEvent.type(input, removeDate);
     await userEvent.type(input, '0102');
     await userEvent.tab();
-    await expect(input).toHaveValue('01.02.2024');
+    await waitFor(() => expect(input).toHaveValue('01.02.2024'));
 
     await userEvent.type(input, removeDate);
     await userEvent.type(input, '010224');
     await userEvent.tab();
-    await expect(input).toHaveValue('01.02.2024');
+    await waitFor(() => expect(input).toHaveValue('01.02.2024'));
   },
 } satisfies Story;
 
