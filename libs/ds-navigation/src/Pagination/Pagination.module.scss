@@ -58,11 +58,11 @@
     align-items: center;
 
     &_leftArrow {
-      margin-right: 4px;
+      margin-right: var(--spacing-xs);
     }
 
     &_rightArrow {
-      margin-left: 4px;
+      margin-left: var(--spacing-xs);
     }
   }
 
