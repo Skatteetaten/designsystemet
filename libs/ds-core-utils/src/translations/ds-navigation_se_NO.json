@@ -1,4 +1,5 @@
 {
+  "pagination.EllipsisAltText": "Čuokkis, čuokkis, čuokkis",
   "pagination.NextButtonTitle": "Boahtte",
   "pagination.PageSummary": "Čájeha {{range}} oktiibuot {{total}} bohtosis",
   "pagination.PreviousButtonTitle": "Ovddit",

@@ -7,7 +7,6 @@ import {
   ChevronLeftSVGpath,
   ChevronRightSVGpath,
 } from '@skatteetaten/ds-icons';
-import { Paragraph } from '@skatteetaten/ds-typography';
 
 import {
   getDefaultListLength,
@@ -94,13 +93,12 @@ const PaginationList = ({
   return barList.map((paging) => (
     <li key={paging} className={styles.paginationElement}>
       {isElipsis(paging) ? (
-        <Paragraph
+        <p
           className={styles.paginationElipsis}
-          //TODO må få en oversettelse for tekst
-          aria-label={'dot dot dot'}
+          aria-label={dsI18n.t('pagination.EllipsisAltText')}
         >
           {'...'}
-        </Paragraph>
+        </p>
       ) : (
         <Button
           ref={getRef({ paging, lastPage, firstPageRef, lastPageRef })}

@@ -104,7 +104,9 @@ exports[`Tester/Pagination HidePrevNextButtonTitle smoke-test 1`] = `
         </button>
       </li>
       <li class="Pagination_paginationElement__io2RM">
-        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  Pagination_paginationElipsis__T7Grr">
+        <p class="Pagination_paginationElipsis__T7Grr"
+           aria-label
+        >
           ...
         </p>
       </li>
@@ -311,7 +313,9 @@ exports[`Tester/Pagination WithAttributes play-test 1`] = `
         </button>
       </li>
       <li class="Pagination_paginationElement__io2RM">
-        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  Pagination_paginationElipsis__T7Grr">
+        <p class="Pagination_paginationElipsis__T7Grr"
+           aria-label
+        >
           ...
         </p>
       </li>
@@ -397,7 +401,9 @@ exports[`Tester/Pagination WithCustomAriaLabel play-test 1`] = `
         </button>
       </li>
       <li class="Pagination_paginationElement__io2RM">
-        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  Pagination_paginationElipsis__T7Grr">
+        <p class="Pagination_paginationElipsis__T7Grr"
+           aria-label
+        >
           ...
         </p>
       </li>
@@ -510,7 +516,9 @@ exports[`Tester/Pagination WithListLength play-test 1`] = `
         </button>
       </li>
       <li class="Pagination_paginationElement__io2RM">
-        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  Pagination_paginationElipsis__T7Grr">
+        <p class="Pagination_paginationElipsis__T7Grr"
+           aria-label
+        >
           ...
         </p>
       </li>
@@ -613,7 +621,9 @@ exports[`Tester/Pagination WithListLimit smoke-test 1`] = `
         </button>
       </li>
       <li class="Pagination_paginationElement__io2RM">
-        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  Pagination_paginationElipsis__T7Grr">
+        <p class="Pagination_paginationElipsis__T7Grr"
+           aria-label
+        >
           ...
         </p>
       </li>
@@ -689,7 +699,9 @@ exports[`Tester/Pagination WithNavigation play-test 1`] = `
         </button>
       </li>
       <li class="Pagination_paginationElement__io2RM">
-        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  Pagination_paginationElipsis__T7Grr">
+        <p class="Pagination_paginationElipsis__T7Grr"
+           aria-label
+        >
           ...
         </p>
       </li>
@@ -785,7 +797,9 @@ exports[`Tester/Pagination WithPageSummary play-test 1`] = `
         </button>
       </li>
       <li class="Pagination_paginationElement__io2RM">
-        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  Pagination_paginationElipsis__T7Grr">
+        <p class="Pagination_paginationElipsis__T7Grr"
+           aria-label
+        >
           ...
         </p>
       </li>
@@ -991,7 +1005,9 @@ exports[`Tester/Pagination WithRef smoke-test 1`] = `
         </button>
       </li>
       <li class="Pagination_paginationElement__io2RM">
-        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  Pagination_paginationElipsis__T7Grr">
+        <p class="Pagination_paginationElipsis__T7Grr"
+           aria-label
+        >
           ...
         </p>
       </li>

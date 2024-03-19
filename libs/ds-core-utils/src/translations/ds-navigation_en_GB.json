@@ -1,4 +1,5 @@
 {
+  "pagination.EllipsisAltText": "Dot, dot, dot",
   "pagination.NextButtonTitle": "Next",
   "pagination.PageSummary": "Shows {{range}} of {{total}}",
   "pagination.PreviousButtonTitle": "Previous",

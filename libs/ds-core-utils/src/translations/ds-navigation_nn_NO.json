@@ -1,4 +1,5 @@
 {
+  "pagination.EllipsisAltText": "Prikk, prikk, prikk",
   "pagination.NextButtonTitle": "Neste",
   "pagination.PageSummary": "Viser {{range}} av {{total}}",
   "pagination.PreviousButtonTitle": "Førre",
