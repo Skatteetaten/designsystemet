@@ -68,6 +68,7 @@ const meta = {
     // HTML
     autoComplete: { table: { category: category.htmlAttribute } },
     disabled: { table: { category: category.htmlAttribute } },
+    form: { table: { category: category.htmlAttribute } },
     inputMode: {
       control: 'inline-radio',
       table: { category: category.htmlAttribute },

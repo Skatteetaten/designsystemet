@@ -63,6 +63,7 @@ const meta = {
     // HTML
     accessKey: { table: { category: category.htmlAttribute } },
     disabled: { table: { category: category.htmlAttribute } },
+    form: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },
     placeholder: {
       table: { category: category.htmlAttribute },

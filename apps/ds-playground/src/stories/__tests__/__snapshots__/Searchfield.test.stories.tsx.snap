@@ -225,6 +225,7 @@ exports[`Tester/SearchField WithAttributes play-test 1`] = `
         <input id="htmlid-input"
                class="SearchField_input__kZKA0"
                data-testid="123ID"
+               form="123form"
                aria-describedby="htmlid-srFocus"
                type="search"
                value
