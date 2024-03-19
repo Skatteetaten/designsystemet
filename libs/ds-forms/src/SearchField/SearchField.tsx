@@ -48,6 +48,7 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
       variant = getCommonFormVariantDefault(),
       accessKey,
       disabled,
+      form,
       name,
       placeholder,
       readOnly,
@@ -185,6 +186,7 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
               accessKey={accessKey}
               defaultValue={defaultValue}
               disabled={disabled}
+              form={form}
               name={name}
               placeholder={placeholder}
               readOnly={readOnly}

@@ -61,6 +61,7 @@ const meta = {
     // HTML
     accessKey: { table: { disable: true } },
     disabled: { table: { disable: true } },
+    form: { table: { disable: true } },
     name: { table: { disable: true } },
     placeholder: { table: { disable: true } },
     readOnly: { table: { disable: true } },
@@ -113,12 +114,14 @@ export const WithAttributes = {
     lang: 'nb',
     'data-testid': '123ID',
     hideLabel: false,
+    form: '123form',
   },
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+    form: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -129,6 +132,7 @@ export const WithAttributes = {
     await expect(container).toHaveAttribute('id', 'htmlid');
     await expect(container).toHaveAttribute('lang', 'nb');
     await expect(searchbox).toHaveAttribute('data-testid', '123ID');
+    await expect(searchbox).toHaveAttribute('form', '123form');
   },
 } satisfies Story;
 

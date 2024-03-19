@@ -59,6 +59,11 @@ const meta = {
         disable: true,
       },
     },
+    form: {
+      table: {
+        disable: true,
+      },
+    },
     name: {
       table: {
         disable: true,
@@ -112,12 +117,14 @@ export const WithAttributes = {
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
+    form: '123form',
   },
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+    form: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -127,6 +134,7 @@ export const WithAttributes = {
     await expect(container).toHaveClass('dummyClassname');
     await expect(container).toHaveAttribute('lang', 'nb');
     await expect(inputNode).toHaveAttribute('data-testid', '123ID');
+    await expect(inputNode).toHaveAttribute('form', '123form');
   },
 } satisfies Story;
 

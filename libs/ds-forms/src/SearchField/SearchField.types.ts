@@ -21,6 +21,7 @@ type RequiredDatePickerHTMLAttributes = Pick<
   | 'accessKey'
   | 'defaultValue'
   | 'disabled'
+  | 'form'
   | 'name'
   | 'placeholder'
   | 'readOnly'
