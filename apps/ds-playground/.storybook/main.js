@@ -44,11 +44,9 @@ const config = {
   typescript: {
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
-      compilerOptions: {
-        shouldExtractLiteralValuesFromEnum: true,
-        allowSyntheticDefaultImports: false,
-        esModuleInterop: false,
-      },
+      tsconfigPath: path.resolve(__dirname, '../tsconfig.storybook.json'),
+      shouldRemoveUndefinedFromOptional: true,
+      shouldExtractLiteralValuesFromEnum: true,
     },
   },
   framework: {

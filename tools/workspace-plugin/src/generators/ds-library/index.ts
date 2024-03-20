@@ -132,7 +132,7 @@ export default async function (
     packageJson.groupId = 'no.skatteetaten.aurora';
     packageJson.repository = {
       type: 'git',
-      url: 'https://github.com/Skatteetaten/designsystemet.git',
+      url: 'git+https://github.com/Skatteetaten/designsystemet.git',
     };
     packageJson.publishConfig = {
       registry: 'https://nexus.sits.no/repository/npm-internal/',
@@ -141,7 +141,7 @@ export default async function (
       react: '^18',
     };
     packageJson.exports = undefined;
-    packageJson.script = { ...packageJson.script };
+    packageJson.scripts = { ...packageJson.scripts };
     return packageJson;
   });
 

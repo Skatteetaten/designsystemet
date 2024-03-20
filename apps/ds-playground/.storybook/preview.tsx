@@ -8,6 +8,7 @@ import {
 } from '@skatteetaten/ds-core-utils';
 import { useEffect, useGlobals } from '@storybook/preview-api';
 import { Decorator, Preview } from '@storybook/react';
+import * as MockDate from 'mockdate';
 
 import { category } from './helpers';
 
@@ -43,6 +44,14 @@ const testBlock: Decorator = (Story, context) => {
   } else {
     return <Story />;
   }
+};
+
+const mockDate: Decorator = (Story, context) => {
+  MockDate.reset();
+  if (context.parameters.mockDate) {
+    MockDate.set(context.parameters.mockDate);
+  }
+  return <Story />;
 };
 
 const makeViewPort = (
@@ -165,7 +174,12 @@ const globalTypes = {
 };
 
 const preview: Preview = {
-  decorators: [(Story): JSX.Element => <Story />, LanguageUpdater, testBlock],
+  decorators: [
+    (Story): JSX.Element => <Story />,
+    LanguageUpdater,
+    testBlock,
+    mockDate,
+  ],
   parameters,
   globalTypes,
   argTypes,

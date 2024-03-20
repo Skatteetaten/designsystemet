@@ -5,7 +5,7 @@
   "homepage": "https://www.skatteetaten.no/stilogtone/designsystemet/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Skatteetaten/designsystemet.git"
+    "url": "git+https://github.com/Skatteetaten/designsystemet.git"
   },
   "publishConfig": {
     "registry": "https://nexus.sits.no/repository/npm-internal/"
@@ -19,7 +19,8 @@
     "@skatteetaten/ds-buttons": "*",
     "@skatteetaten/ds-typography": "*",
     "@skatteetaten/ds-progress": "*",
-    "@skatteetaten/ds-status": "*"
+    "@skatteetaten/ds-status": "*",
+    "date-fns": "3.4.0"
   },
   "scripts": {}
 }
