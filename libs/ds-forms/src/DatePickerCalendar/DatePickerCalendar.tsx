@@ -1,4 +1,14 @@
-import { ChangeEvent, FocusEvent, forwardRef, useMemo, useState } from 'react';
+import {
+  ChangeEvent,
+  FocusEvent,
+  KeyboardEvent,
+  forwardRef,
+  useMemo,
+  useState,
+  useRef,
+  createRef,
+  RefObject,
+} from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
@@ -28,14 +38,22 @@ export const DatePickerCalendar = forwardRef<
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
-      selectedDate = getDatePickerCalendarSelectedDateDefault(),
       minDate,
       maxDate,
+      selectedDate = getDatePickerCalendarSelectedDateDefault(),
       onSelectDate,
+      onLastTabKey,
     },
     ref
   ): JSX.Element => {
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
+
+    // TODO - hvordan initialisere ref-en her, finne riktig gridIdx
+    const currentFocusGridIdxRef = useRef<string>('31');
+    interface gridIdx {
+      [idx: string]: RefObject<HTMLButtonElement>;
+    }
+    const dateButtonRefs = useRef<gridIdx>({});
 
     const [selectedMonthIndex, setSelectedMonthIndex] = useState(
       selectedDate.getMonth()
@@ -117,10 +135,98 @@ export const DatePickerCalendar = forwardRef<
       }
     };
 
-    const rows = useMemo(
+    const grid = useMemo(
       () => getCalendarRows(selectedYear, selectedMonthIndex, minDate, maxDate),
       [selectedMonthIndex, selectedYear, minDate, maxDate]
     );
+
+    const parseRowCol = (): { row: number; col: number } => {
+      const row = parseInt(currentFocusGridIdxRef.current[0]);
+      const col = parseInt(currentFocusGridIdxRef.current[1]);
+      console.log('parseRowCol row og col=' + row + ' ' + col);
+      return { row, col };
+    };
+
+    const updateFocus = (rowIdx: number, colIdx: number, date: Date): void => {
+      const weekIdx = getWeek(date);
+      currentFocusGridIdxRef.current = `${rowIdx}${colIdx}`;
+
+      console.log(
+        'updateFocus date and week og currentDateRef=' +
+          date +
+          ' ' +
+          weekIdx +
+          ' ' +
+          currentFocusGridIdxRef.current
+      );
+
+      const btnRef = dateButtonRefs.current[currentFocusGridIdxRef.current];
+      btnRef?.current?.focus();
+    };
+
+    const handleKeyDown = (
+      e: KeyboardEvent<HTMLButtonElement>,
+      calendarDate: Date
+    ): void => {
+      const cols = 7;
+      const rows = grid.length;
+      const { row, col } = parseRowCol();
+
+      // e.preventDefault();
+      // e.stopPropagation();
+
+      switch (e.key) {
+        case 'ArrowUp':
+          if (row > 0) {
+            updateFocus(row - 1, col, calendarDate);
+          } else {
+            onPrevMonth();
+            // TODO - skal settes til neste dato
+            updateFocus(grid.length - 1, col, calendarDate);
+          }
+          break;
+        case 'ArrowDown':
+          if (row < rows - 1) {
+            updateFocus(row + 1, col, calendarDate);
+          } else {
+            onNextMonth();
+            // TODO - skal settes til neste dato
+            updateFocus(0, col, calendarDate);
+          }
+          break;
+        case 'ArrowLeft':
+          if (col > 0) {
+            updateFocus(row, col - 1, calendarDate);
+          } else if (row > 0) {
+            updateFocus(row - 1, cols - 1, calendarDate);
+          } else {
+            onPrevMonth();
+            // TODO - skal settes til neste dato
+            updateFocus(grid.length - 1, 6, calendarDate);
+          }
+          break;
+        case 'ArrowRight':
+          if (col < cols - 1) {
+            updateFocus(row, col + 1, calendarDate);
+          } else if (row < rows - 1) {
+            updateFocus(row + 1, 0, calendarDate);
+          } else {
+            onNextMonth();
+            // TODO - skal settes til neste dato
+            updateFocus(0, 0, calendarDate);
+          }
+          break;
+        case 'Enter':
+          onSelectDate(calendarDate);
+          break;
+        case 'Tab':
+          e.preventDefault();
+          onLastTabKey && onLastTabKey();
+          break;
+        default:
+          return;
+      }
+    };
 
     const concatenatedClassName = `${styles.calendar} ${className}`;
 
@@ -192,13 +298,13 @@ export const DatePickerCalendar = forwardRef<
             </tr>
           </thead>
           <tbody>
-            {rows.map((cells, index) => {
-              const weekIndex = getWeek(rows[index][0].date);
+            {grid.map((cells, rowIdx) => {
+              const weekIdx = getWeek(grid[rowIdx][0].date);
               return (
                 <tr
-                  key={`row-${selectedYear}-${selectedMonthIndex}-${weekIndex}`}
+                  key={`row-${selectedYear}-${selectedMonthIndex}-${weekIdx}`}
                 >
-                  {cells.map((cell) => {
+                  {cells.map((cell, colIdx) => {
                     const adjancentMonthClassName = cell.isAdjacentMonth
                       ? styles.calendarTableDateButton_adjacentMonth
                       : '';
@@ -218,16 +324,41 @@ export const DatePickerCalendar = forwardRef<
                       monthNames[cell.date.getMonth()]
                     } ${cell.date.getFullYear()}`;
 
+                    const gridIdx = `${rowIdx}${colIdx}`;
+                    if (!dateButtonRefs.current[gridIdx]) {
+                      // TODO - test ut med Map() med key=gridIdx og value lik node og ikke createRef
+                      dateButtonRefs.current[gridIdx] = createRef();
+                    }
+                    if (ariaCurrent === 'date') {
+                      // currentDateRef.current = gridIdx;
+                    }
+                    const hasFocus = currentFocusGridIdxRef.current === gridIdx;
+                    if (hasFocus) {
+                      console.log(`HasFocus button=${cell.text} ${cell.date}`);
+                    }
+
                     return (
                       <td key={`cell-${cell.date}`}>
                         <button
+                          key={`btn-${cell.date}`}
+                          ref={dateButtonRefs.current[gridIdx]}
+                          /*ref={() => {
+                            if (!dateButtonRefs.current[gridIdx]) {
+                              // TODO - test ut med Map() med key=gridIdx og value lik node og ikke createRef
+                              dateButtonRefs.current[gridIdx] = createRef();
+                            }
+                          }}*/
                           className={buttonClassName}
                           type={'button'}
                           disabled={cell.disabled}
                           aria-current={ariaCurrent}
                           aria-label={ariaLabel}
+                          tabIndex={hasFocus ? 0 : -1}
                           onClick={(): void => {
                             onSelectDate(cell.date);
+                          }}
+                          onKeyDown={(e): void => {
+                            handleKeyDown(e, cell.date);
                           }}
                         >
                           {`${cell.text}`}

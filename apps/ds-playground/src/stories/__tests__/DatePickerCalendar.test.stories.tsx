@@ -40,14 +40,12 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    selectedDate: {
-      table: { disable: true },
-      control: 'date',
-    },
+    selectedDate: { table: { disable: true }, control: 'date' },
     minDate: { table: { disable: true }, control: 'date' },
     maxDate: { table: { disable: true }, control: 'date' },
     // Events
     onSelectDate: { table: { disable: true } },
+    onLastTabKey: { table: { disable: true } },
   },
   parameters: {
     mockDate: today,

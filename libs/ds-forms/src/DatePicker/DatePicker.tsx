@@ -115,6 +115,11 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       onSelectDate?.(date);
     };
 
+    const handleCloseCalendar = (): void => {
+      setShowCalendar(false);
+      calenderButtonRef?.current?.focus();
+    };
+
     useEffect(() => {
       if (value) {
         setSelectedDate(value);
@@ -140,15 +145,13 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
 
       const handleResize: EventListener = (e): void => {
         if (e.type === 'resize') {
-          setShowCalendar(false);
-          calenderButtonRef?.current?.focus();
+          handleCloseCalendar();
         }
       };
 
       const handleEscape = (e: KeyboardEvent): void => {
         if (e.key === 'Escape') {
-          setShowCalendar(false);
-          calenderButtonRef?.current?.focus();
+          handleCloseCalendar();
         }
       };
 
@@ -250,6 +253,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
               minDate={minDate}
               maxDate={maxDate}
               onSelectDate={handleSelectDate}
+              onLastTabKey={handleCloseCalendar}
             />
           </div>
         )}

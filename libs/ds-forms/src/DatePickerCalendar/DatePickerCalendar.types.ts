@@ -5,4 +5,5 @@ export interface DatePickerCalendarProps extends BaseProps {
   minDate?: Date;
   maxDate?: Date;
   onSelectDate: (date: Date) => void;
+  onLastTabKey?: () => void;
 }
