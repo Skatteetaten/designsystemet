@@ -1,0 +1,19 @@
+.layout {
+  max-width: var(--semantic-responsive-container);
+  box-sizing: border-box;
+  padding: var(--semantic-responsive-container-padding);
+  border: 3px solid var(--palette-burgundy-30);
+  margin: 0 auto !important;
+  background: var(--palette-graphite-0);
+  color: var(--palette-graphite-100);
+  text-align: center;
+}
+
+.article {
+  max-width: var(--semantic-responsive-article);
+  box-sizing: border-box;
+  border: 3px solid var(--palette-forest-30);
+  margin: 0 auto;
+  background: var(--palette-forest-10);
+  text-align: center;
+}

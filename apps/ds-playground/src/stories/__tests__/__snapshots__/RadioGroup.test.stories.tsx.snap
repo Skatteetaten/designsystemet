@@ -126,6 +126,7 @@ exports[`Tester/RadioGroup/RadioGroup WithAttributes play-test 1`] = `
             data-testid="123ID"
             class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le dummyClassname"
             lang="nb"
+            form="123form"
   >
     <legend id="legendId-:r8:"
             class="Fieldset_legend__8odl-"

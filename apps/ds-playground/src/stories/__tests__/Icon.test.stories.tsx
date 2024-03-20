@@ -5,9 +5,8 @@ import {
   AccountChildSVGpath,
   AndreForholdSVGpath,
 } from '@skatteetaten/ds-icons';
-import { expect } from '@storybook/jest';
 import { Meta, StoryObj } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { expect, within } from '@storybook/test';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { ThemeSVGPaths } from '../utils/icon.themes';
@@ -52,7 +51,6 @@ const defaultArgs: IconComponentCommonProps = {
 
 export const WithRef = {
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: SVGSVGElement | null): void => {
@@ -61,15 +59,12 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const icon = canvas.getByRole('img', { hidden: true });
@@ -79,7 +74,6 @@ export const WithRef = {
 
 export const WithAttributes = {
   name: 'With Attributes(FA2-5)',
-
   args: {
     ...defaultArgs,
     id: 'htmlid',
@@ -87,14 +81,12 @@ export const WithAttributes = {
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const icon = canvas.getByRole('img', { hidden: true });
@@ -107,17 +99,14 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Default - Variant SystemIcon (A1, B1, B5)',
-
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     svgPath: {
       table: { disable: false },
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const icon = canvas.getByRole('img', { hidden: true });
@@ -131,13 +120,11 @@ export const Defaults = {
 
 export const WithVariant = {
   name: 'With Variant ThemeIcon (A1)',
-
   args: {
     ...defaultArgs,
     svgPath: AndreForholdSVGpath,
     variant: 'themeIcon',
   },
-
   argTypes: {
     svgPath: {
       table: { disable: false },
@@ -145,7 +132,6 @@ export const WithVariant = {
       mapping: ThemeSVGPaths,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const icon = canvas.getByRole('img', { hidden: true });
@@ -157,12 +143,10 @@ export const WithVariant = {
 
 export const WithCustomSVG = {
   name: 'With Custom SVG (A4)',
-
   args: {
     ...defaultArgs,
     svgPath: <path d={'M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z'} />,
   },
-
   argTypes: {
     svgPath: {
       table: { disable: false },
@@ -173,20 +157,16 @@ export const WithCustomSVG = {
 
 export const WithTitle = {
   name: 'With Title (B3)',
-
   args: {
     ...defaultArgs,
     title: 'Min custom title beskrivelse',
   },
-
   argTypes: {
     title: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const icon = canvas.getByRole('img');
@@ -206,20 +186,16 @@ export const WithTitle = {
 
 export const WithAriaLabel = {
   name: 'With AriaLabel (B4)',
-
   args: {
     ...defaultArgs,
     ariaLabel: 'min custom aria-label beskrivelse',
   },
-
   argTypes: {
     ariaLabel: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const icon = canvas.getByRole('img');
@@ -238,18 +214,15 @@ export const WithAriaLabel = {
 
 export const SystemIconSizeSmall = {
   name: 'With Size Small - SystemIcon (A2)',
-
   args: {
     ...defaultArgs,
     svgPath: AccountChildSVGpath,
     variant: 'systemIcon',
     size: 'small',
   },
-
   argTypes: {
     size: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const icon = canvas.getByRole('img', { hidden: true });
@@ -259,18 +232,15 @@ export const SystemIconSizeSmall = {
 
 export const SystemIconSizeMedium = {
   name: 'With Size Medium - SystemIcon (A2)',
-
   args: {
     ...defaultArgs,
     svgPath: AccountChildSVGpath,
     variant: 'systemIcon',
     size: 'medium',
   },
-
   argTypes: {
     size: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const icon = canvas.getByRole('img', { hidden: true });
@@ -280,18 +250,15 @@ export const SystemIconSizeMedium = {
 
 export const SystemIconSizeLarge = {
   name: 'With Size Large - SystemIcon (A2)',
-
   args: {
     ...defaultArgs,
     svgPath: AccountChildSVGpath,
     variant: 'systemIcon',
     size: 'large',
   },
-
   argTypes: {
     size: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const icon = canvas.getByRole('img', { hidden: true });
@@ -301,18 +268,15 @@ export const SystemIconSizeLarge = {
 
 export const SystemIconSizeExtraLarge = {
   name: 'With Size Extra Large - SystemIcon (A2)',
-
   args: {
     ...defaultArgs,
     svgPath: AccountChildSVGpath,
     variant: 'systemIcon',
     size: 'extraLarge',
   },
-
   argTypes: {
     size: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const icon = canvas.getByRole('img', { hidden: true });
@@ -324,21 +288,18 @@ export const SystemIconSizeExtraLarge = {
 
 export const ThemeIconSizeMedium = {
   name: 'With Size Medium - ThemeIcon (A3)',
-
   args: {
     ...defaultArgs,
     svgPath: AndreForholdSVGpath,
     variant: 'themeIcon',
     size: 'medium',
   },
-
   argTypes: {
     size: {
       table: { disable: false },
       options: [sizeArr[2], sizeArr[3]],
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const icon = canvas.getByRole('img', { hidden: true });
@@ -348,21 +309,18 @@ export const ThemeIconSizeMedium = {
 
 export const ThemeIconSizeLarge = {
   name: 'With Size Large - ThemeIcon (A3)',
-
   args: {
     ...defaultArgs,
     svgPath: AndreForholdSVGpath,
     variant: 'themeIcon',
     size: 'large',
   },
-
   argTypes: {
     size: {
       table: { disable: false },
       options: [sizeArr[2], sizeArr[3]],
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const icon = canvas.getByRole('img', { hidden: true });

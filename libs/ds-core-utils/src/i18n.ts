@@ -22,6 +22,10 @@ import ds_layout_en_GB from './translations/ds-layout_en_GB.json';
 import ds_layout_nb_NO from './translations/ds-layout_nb_NO.json';
 import ds_layout_nn_NO from './translations/ds-layout_nn_NO.json';
 import ds_layout_se_NO from './translations/ds-layout_se_NO.json';
+import ds_overlays_en_GB from './translations/ds-overlays_en_GB.json';
+import ds_overlays_nb_NO from './translations/ds-overlays_nb_NO.json';
+import ds_overlays_nn_NO from './translations/ds-overlays_nn_NO.json';
+import ds_overlays_se_NO from './translations/ds-overlays_se_NO.json';
 import ds_status_en_GB from './translations/ds-status_en_GB.json';
 import ds_status_nb_NO from './translations/ds-status_nb_NO.json';
 import ds_status_nn_NO from './translations/ds-status_nn_NO.json';
@@ -42,6 +46,13 @@ export enum Languages {
   Samisk = 'se_NO',
 }
 
+export const langToLocale: { [key: string]: Languages } = {
+  nb: Languages.Bokmal,
+  nn: Languages.Nynorsk,
+  en: Languages.Engelsk,
+  se: Languages.Samisk,
+};
+
 export const resources = {
   en_GB: {
     Shared: Shared_en_GB,
@@ -49,7 +60,8 @@ export const resources = {
     ds_buttons: ds_buttons_en_GB,
     ds_collections: ds_collections_en_GB,
     ds_forms: ds_forms_en_GB,
-    ds_pages: ds_layout_en_GB,
+    ds_layout: ds_layout_en_GB,
+    ds_overlays: ds_overlays_en_GB,
     ds_status: ds_status_en_GB,
     ds_tables: ds_tables_en_GB,
   },
@@ -59,7 +71,8 @@ export const resources = {
     ds_buttons: ds_buttons_nb_NO,
     ds_collections: ds_collections_nb_NO,
     ds_forms: ds_forms_nb_NO,
-    ds_pages: ds_layout_nb_NO,
+    ds_layout: ds_layout_nb_NO,
+    ds_overlays: ds_overlays_nb_NO,
     ds_status: ds_status_nb_NO,
     ds_tables: ds_tables_nb_NO,
   },
@@ -69,7 +82,8 @@ export const resources = {
     ds_buttons: ds_buttons_nn_NO,
     ds_collections: ds_collections_nn_NO,
     ds_forms: ds_forms_nn_NO,
-    ds_pages: ds_layout_nn_NO,
+    ds_layout: ds_layout_nn_NO,
+    ds_overlays: ds_overlays_nn_NO,
     ds_status: ds_status_nn_NO,
     ds_tables: ds_tables_nn_NO,
   },
@@ -79,7 +93,8 @@ export const resources = {
     ds_buttons: ds_buttons_se_NO,
     ds_collections: ds_collections_se_NO,
     ds_forms: ds_forms_se_NO,
-    ds_pages: ds_layout_se_NO,
+    ds_layout: ds_layout_se_NO,
+    ds_overlays: ds_overlays_se_NO,
     ds_status: ds_status_se_NO,
     ds_tables: ds_tables_se_NO,
   },

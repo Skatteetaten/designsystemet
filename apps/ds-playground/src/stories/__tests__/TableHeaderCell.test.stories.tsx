@@ -1,7 +1,6 @@
 import { Table } from '@skatteetaten/ds-table';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { expect, within } from '@storybook/test';
 
 const meta = {
   component: Table.HeaderCell,
@@ -45,7 +44,6 @@ const Template: StoryFn<typeof Table.HeaderCell> = (args) => (
 export const WithRef = {
   render: Template,
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: HTMLTableCellElement | null): void => {
@@ -54,15 +52,12 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const table = canvas.getByRole('columnheader');
@@ -74,7 +69,6 @@ export const WithRef = {
 export const WithAttributes = {
   render: Template,
   name: 'With Attributes (FA2-5)',
-
   args: {
     ...defaultArgs,
     id: 'htmlId',
@@ -82,18 +76,15 @@ export const WithAttributes = {
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const dataCell = canvas.getByRole('columnheader');
@@ -107,19 +98,15 @@ export const WithAttributes = {
 export const WithChildren = {
   render: Template,
   name: 'With Children (Table A8)',
-
   args: {
     children: 'columnheader',
   },
-
   argTypes: {
     children: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const dataCell = canvas.getByText('columnheader');

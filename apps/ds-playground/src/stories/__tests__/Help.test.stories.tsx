@@ -1,7 +1,7 @@
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
-import { expect } from '@storybook/jest';
 import { Meta, StoryObj } from '@storybook/react';
-import { fireEvent, within } from '@storybook/testing-library';
+import { expect, fireEvent, within } from '@storybook/test';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import {
@@ -65,7 +65,9 @@ export const WithHelptext = {
     const helpButton = canvas.getByRole('button');
     await expect(helpButton).toBeInTheDocument();
     await expect(helpButton).toHaveAttribute('aria-expanded', 'false');
-    const helpSvg = canvas.getByLabelText('Hjelp', { selector: 'svg' });
+    const helpSvg = canvas.getByLabelText(dsI18n.t('Shared:shared.Help'), {
+      selector: 'svg',
+    });
     await expect(helpSvg).toBeInTheDocument();
   },
 } satisfies Story;
@@ -203,7 +205,7 @@ export const ClickCloseButton = {
     const canvas = within(canvasElement);
     const helpButton = canvas.getByRole('button');
     await fireEvent.click(helpButton);
-    const closeButton = canvas.getByTitle('Lukk');
+    const closeButton = canvas.getByTitle(dsI18n.t('Shared:shared.Close'));
     await expect(closeButton).toBeInTheDocument();
     const helpText = canvas.getByText(defaultHelpText);
     await fireEvent.click(closeButton);

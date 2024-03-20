@@ -1,8 +1,8 @@
 import { StepList, stepVariantArr } from '@skatteetaten/ds-collections';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TimersandSVGpath } from '@skatteetaten/ds-icons';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { expect, within } from '@storybook/test';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 import { category } from '../../../.storybook/helpers';
@@ -30,6 +30,9 @@ const meta = {
     onNext: { table: { disable: true, category: category.props } },
     editButtonText: { table: { disable: true, category: category.props } },
     nextButtonText: { table: { disable: true, category: category.props } },
+    nextButtonHasSpinner: {
+      table: { disable: true, category: category.props },
+    },
     hasResultContentFullWidth: {
       table: { disable: true, category: category.props },
     },
@@ -173,10 +176,28 @@ export const WithEditAccessibleDescription = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const endreButton = canvas.getByText('Endre');
+    const endreButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_collections:steplist.Edit'),
+    });
     expect(endreButton).toHaveAccessibleDescription('tittel');
   },
   parameters: {
     imageSnapshot: { disable: true },
+  },
+} satisfies Story;
+
+export const NextButtonWithSpinner = {
+  render: Template,
+  name: 'With Spinner In Next Button',
+  args: {
+    stepNumber: 1,
+    variant: 'active',
+    title: 'tittel',
+    children: loremIpsum,
+    nextButtonHasSpinner: true,
+    onNext: (): void => console.log('next'),
+  },
+  argTypes: {
+    nextButtonHasSpinner: { table: { disable: false } },
   },
 } satisfies Story;

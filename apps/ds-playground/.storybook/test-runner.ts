@@ -1,4 +1,3 @@
-import { expect } from '@storybook/jest';
 import { StoryContext } from '@storybook/react';
 import {
   getStoryContext,
@@ -11,6 +10,8 @@ import {
   MatchImageSnapshotOptions,
 } from 'jest-image-snapshot';
 import { Page } from 'playwright';
+
+import { env } from 'process';
 
 import { screenShotOptions } from '../src/stories/__tests__/testUtils/storybook.testing.utils';
 
@@ -29,6 +30,7 @@ const customConfig: MatchImageSnapshotOptions = {
 interface ViewPort {
   defaultViewport?: string;
   viewPortHeight?: number;
+  //eslint-disable-next-line @typescript-eslint/no-explicit-any
   viewports: Record<string, any>;
 }
 async function adjustViewport(page: Page, viewport: ViewPort): Promise<void> {
@@ -58,6 +60,9 @@ async function verifyFocusSnapshot(
   const imageFocused = await page.screenshot(screenShotOptions);
   expect(imageFocused).toMatchImageSnapshot({
     customSnapshotIdentifier: `${context.id}-focused${snapshotId ?? ''}-snap`,
+    customSnapshotsDir: `apps/ds-playground/src/stories/__tests__/__image_snapshots__/${
+      context.id.split('--')[0]
+    }`,
   });
   if (await elementToFocus.isVisible()) {
     await page.$eval(`${focus}`, (el: HTMLElement) => el.blur());
@@ -75,6 +80,9 @@ async function verifyHoverSnapshot(
   const imageHovered = await page.screenshot(screenShotOptions);
   expect(imageHovered).toMatchImageSnapshot({
     customSnapshotIdentifier: `${context.id}-hovered${snapshotId ?? ''}-snap`,
+    customSnapshotsDir: `apps/ds-playground/src/stories/__tests__/__image_snapshots__/${
+      context.id.split('--')[0]
+    }`,
   });
   await page.mouse.move(0, 0);
   await page.mouse.click(0, 0);
@@ -91,6 +99,9 @@ async function verifyClickSnapshot(
   const imageClicked = await page.screenshot(screenShotOptions);
   expect(imageClicked).toMatchImageSnapshot({
     customSnapshotIdentifier: `${context.id}-clicked${snapshotId ?? ''}-snap`,
+    customSnapshotsDir: `apps/ds-playground/src/stories/__tests__/__image_snapshots__/${
+      context.id.split('--')[0]
+    }`,
   });
   if (await elementToClick.isVisible()) {
     await page.$eval(`${click}`, (el: HTMLElement) => el.blur());
@@ -134,6 +145,9 @@ async function verifyImageSnapshots(
   const image = await page.screenshot();
   expect(image).toMatchImageSnapshot({
     customSnapshotIdentifier: `${context.id}-snap`,
+    customSnapshotsDir: `apps/ds-playground/src/stories/__tests__/__image_snapshots__/${
+      context.id.split('--')[0]
+    }`,
   });
   const hover = storyContext.parameters.imageSnapshot?.hover;
   await handleSnapshotSelectors(verifyHoverSnapshot, hover, page, context);
@@ -152,6 +166,9 @@ async function verifyImageSnapshots(
     const imageScrolled = await page.screenshot(screenShotOptions);
     expect(imageScrolled).toMatchImageSnapshot({
       customSnapshotIdentifier: `${context.id}-scrolled-snap`,
+      customSnapshotsDir: `apps/ds-playground/src/stories/__tests__/__image_snapshots__/${
+        context.id.split('--')[0]
+      }`,
     });
     await page.evaluate(() => {
       window.scrollTo(0, 0);
@@ -168,7 +185,7 @@ async function verifyHTMLSnapshots(
   }
   const elementHandler = await page.$('#storybook-root');
   const innerHTML = await elementHandler?.innerHTML();
-  expect(innerHTML).toMatchSnapshot();
+  await expect(innerHTML).toMatchSnapshot();
 }
 
 async function verifyAxeRules(
@@ -200,16 +217,19 @@ const config: TestRunnerConfig = {
     expect.extend({ toMatchImageSnapshot });
   },
 
-  async preRender(page, context) {
+  async preVisit(page, context) {
     await injectAxe(page);
     const storyContext = await getStoryContext(page, context);
     await adjustViewport(page, storyContext.parameters.viewport);
-    //await page.waitForLoadState('networkidle'); //TODO hvorfor har denne begynt å henge? kan den erstattes av domcontentloaded ? https://github.com/microsoft/playwright/issues/19835
-    await page.waitForLoadState('domcontentloaded');
-    await page.evaluate(async () => await document.fonts.ready);
   },
 
-  async postRender(page, context): Promise<void> {
+  async postVisit(page, context): Promise<void> {
+    await page.waitForLoadState('domcontentloaded');
+    await page.waitForLoadState('load');
+    //BUG: networkidle henger når man oppdaterer tester samtidig som devserver med HMR kjører. Fungerer etter npm run build && npm run start:static
+    !env.HMR && (await page.waitForLoadState('networkidle'));
+    await page.evaluate(async () => await document.fonts.ready);
+
     const storyContext = (await getStoryContext(page, context)) as StoryContext;
     await verifyAxeRules(page, storyContext);
     await verifyHTMLSnapshots(page, storyContext);

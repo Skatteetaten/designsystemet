@@ -1,40 +1,34 @@
-import { Link } from '@skatteetaten/ds-buttons';
+import { Link, LinkProps } from '@skatteetaten/ds-buttons';
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
+import { exampleParameters } from '../utils/stories.utils';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Link,
   title: 'Komponenter/Link',
   argTypes: {
     // Props
     children: { table: { category: category.props } },
     color: {
-      options: ['default', ...linkColorArr],
-      mapping: {
-        default: '',
-        ...linkColorArr,
-      },
-      defaultValue: 'default',
+      options: [undefined, ...linkColorArr],
       control: 'inline-radio',
       table: {
         category: category.props,
+        type: { summary: linkColorArr },
       },
     },
-
-    isExternal: {
-      control: 'boolean',
-      table: { category: category.props },
-    },
+    isExternal: { table: { category: category.props } },
     svgPath: {
-      options: [''].concat(Object.keys(SystemSVGPaths)),
+      options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
       table: { category: category.props },
     },
     // HTML
+    download: { table: { category: category.htmlAttribute } },
     href: { table: { category: category.htmlAttribute } },
     target: { table: { category: category.htmlAttribute } },
     // Aria
@@ -42,40 +36,39 @@ export default {
     // Events
     onClick: { ...htmlEventDescription },
   },
-  parameters: {
-    version: getVersion('ds-buttons'),
-  },
-} satisfies Meta<typeof Link>;
-
-export const Preview: StoryObj<typeof Link> = {
   args: {
     children: 'Er du pendler?',
     href: '#',
   },
-};
-
-export const Example: StoryFn<typeof Link> = (_args) => (
-  <>
-    <div className={'exampleSpacing'}>
-      <Link href={'#link'}>
-        {'Rettledning til RF-1167 Næringsoppgave 2 for 2020 (pdf)'}
-      </Link>
-    </div>
-    <div className={'exampleSpacing'}>
-      <Link href={'#link'} isExternal>
-        {'Kontakte Statens Vegvesen'}
-      </Link>
-    </div>
-    <div className={'exampleSpacing'}>
-      <Link href={'#link'} isExternal>
-        {'Brukerveiledning for bilforhandlere'}
-      </Link>
-    </div>
-  </>
-);
-
-Example.parameters = {
-  controls: {
-    exclude: /.*/,
+  parameters: {
+    version: getVersion('ds-buttons'),
   },
-};
+} satisfies Meta<LinkProps>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Preview: Story = {} satisfies Story;
+
+export const Examples: Story = {
+  render: (_args) => (
+    <>
+      <div className={'exampleSpacing'}>
+        <Link href={'#link'}>
+          {'Rettledning til RF-1167 Næringsoppgave 2 for 2020 (pdf)'}
+        </Link>
+      </div>
+      <div className={'exampleSpacing'}>
+        <Link href={'#link'} isExternal>
+          {'Kontakte Statens Vegvesen'}
+        </Link>
+      </div>
+      <div className={'exampleSpacing'}>
+        <Link href={'#link'} isExternal>
+          {'Brukerveiledning for bilforhandlere'}
+        </Link>
+      </div>
+    </>
+  ),
+} satisfies Story;
+Examples.parameters = exampleParameters;

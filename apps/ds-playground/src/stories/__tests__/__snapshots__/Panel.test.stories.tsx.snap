@@ -3,8 +3,6 @@
 exports[`Tester/Panel Defaults play-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
@@ -17,17 +15,68 @@ exports[`Tester/Panel Defaults play-test 1`] = `
         </span>
       </button>
     </div>
-    <div class="Panel_panelSpace__J2keW">
+  </div>
+</div>
+`;
+
+exports[`Tester/Panel TextAlignedVertical smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicIcon__3nOV3">
+    <div class="Panel_panelGraphic__7GPa9">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_extraLarge__CUqij "
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M13 9h-2V7h2v2Zm0 8h-2v-6h2v6ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+        </path>
+      </svg>
+    </div>
+    <div class="Panel_panelArticle__4fhzq">
+      <h3 class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ ">
+        En overskrift
+      </h3>
+      Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+    </div>
+  </div>
+  <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
+    <div class="Panel_panelArticle__4fhzq">
+      Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+    </div>
+  </div>
+  <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicIcon__3nOV3">
+    <div class="Panel_panelGraphic__7GPa9">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_extraLarge__CUqij "
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M13 9h-2V7h2v2Zm0 8h-2v-6h2v6ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+        </path>
+      </svg>
+    </div>
+    <div class="Panel_panelArticle__4fhzq">
+      <h3 class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ ">
+        En overskrift
+      </h3>
+      Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+    </div>
+  </div>
+  <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
+    <div class="Panel_panelArticle__4fhzq">
+      Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
     </div>
   </div>
 </div>
 `;
 
-exports[`Tester/Panel TextAlginedVertical smoke-test 1`] = `
+exports[`Tester/Panel TextShortAndIcon smoke-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicIcon__3nOV3">
-    <div class="Panel_panelSpace__J2keW Panel_panelGraphic__7GPa9">
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_extraLarge__CUqij "
+    <div class="Panel_panelGraphic__7GPa9">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -39,50 +88,11 @@ exports[`Tester/Panel TextAlginedVertical smoke-test 1`] = `
     </div>
     <div class="Panel_panelArticle__4fhzq">
       <h3 class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ ">
-        En overskrift
+        Kort tittel
       </h3>
-      Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
-    </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
-  </div>
-  <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
-    <div class="Panel_panelArticle__4fhzq">
-      Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
-    </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
-  </div>
-  <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicIcon__3nOV3">
-    <div class="Panel_panelSpace__J2keW Panel_panelGraphic__7GPa9">
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_extraLarge__CUqij "
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-hidden="true"
-           role="img"
-      >
-        <path d="M13 9h-2V7h2v2Zm0 8h-2v-6h2v6ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
-        </path>
-      </svg>
-    </div>
-    <div class="Panel_panelArticle__4fhzq">
-      <h3 class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ ">
-        En overskrift
-      </h3>
-      Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
-    </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
-  </div>
-  <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
-    <div class="Panel_panelArticle__4fhzq">
-      Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
-    </div>
-    <div class="Panel_panelSpace__J2keW">
+      <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
+        Kort test ...
+      </p>
     </div>
   </div>
 </div>
@@ -91,8 +101,6 @@ exports[`Tester/Panel TextAlginedVertical smoke-test 1`] = `
 exports[`Tester/Panel VariantFilled smoke-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
@@ -104,8 +112,6 @@ exports[`Tester/Panel VariantFilled smoke-test 1`] = `
           Trykk på meg
         </span>
       </button>
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
 </div>
@@ -118,8 +124,6 @@ exports[`Tester/Panel WithAttributes play-test 1`] = `
        lang="nb"
        data-testid="123ID"
   >
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
@@ -131,8 +135,6 @@ exports[`Tester/Panel WithAttributes play-test 1`] = `
           Trykk på meg
         </span>
       </button>
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
 </div>
@@ -141,8 +143,6 @@ exports[`Tester/Panel WithAttributes play-test 1`] = `
 exports[`Tester/Panel WithClassNameOverridesPanelWidthAndPadding smoke-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0  dummyPanelOverridesWidthAndPadding">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
@@ -155,8 +155,6 @@ exports[`Tester/Panel WithClassNameOverridesPanelWidthAndPadding smoke-test 1`] 
         </span>
       </button>
     </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
   </div>
 </div>
 `;
@@ -164,93 +162,53 @@ exports[`Tester/Panel WithClassNameOverridesPanelWidthAndPadding smoke-test 1`] 
 exports[`Tester/Panel WithColorAndVariant smoke-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       color: ochre
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_forest__8dVE7 Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       color: forest
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_burgundy__1e6o1 Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       color: burgundy
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_denim__yoKXF Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       color: denim
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_graphite__bIFDL Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       color: graphite
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       color: ochre
     </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_forest__8dVE7 Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       color: forest
     </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_burgundy__1e6o1 Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       color: burgundy
     </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_denim__yoKXF Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       color: denim
     </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_graphite__bIFDL Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       color: graphite
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
 </div>
@@ -258,8 +216,8 @@ exports[`Tester/Panel WithColorAndVariant smoke-test 1`] = `
 
 exports[`Tester/Panel WithHideGraphicMobileAndIcon smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicIcon__3nOV3">
-    <div class="Panel_panelSpace__J2keW Panel_panelGraphic__7GPa9 Panel_panelGraphic_hide__exKT9">
+  <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicIcon__3nOV3 Panel_panel_graphicIconHide__WrI4N">
+    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphicHide__QsAnW">
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_extraLarge__CUqij "
            viewbox="0 0 24 24"
            focusable="false"
@@ -274,12 +232,10 @@ exports[`Tester/Panel WithHideGraphicMobileAndIcon smoke-test 1`] = `
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
-  <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicIcon__3nOV3">
-    <div class="Panel_panelSpace__J2keW Panel_panelGraphic__7GPa9 Panel_panelGraphic_hide__exKT9">
+  <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicIcon__3nOV3 Panel_panel_graphicIconHide__WrI4N">
+    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphicHide__QsAnW">
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_extraLarge__CUqij "
            viewbox="0 0 24 24"
            focusable="false"
@@ -294,8 +250,6 @@ exports[`Tester/Panel WithHideGraphicMobileAndIcon smoke-test 1`] = `
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
 </div>
@@ -303,8 +257,8 @@ exports[`Tester/Panel WithHideGraphicMobileAndIcon smoke-test 1`] = `
 
 exports[`Tester/Panel WithHideGraphicMobileAndIconDesktop smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicIcon__3nOV3">
-    <div class="Panel_panelSpace__J2keW Panel_panelGraphic__7GPa9 Panel_panelGraphic_hide__exKT9">
+  <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicIcon__3nOV3 Panel_panel_graphicIconHide__WrI4N">
+    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphicHide__QsAnW">
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_extraLarge__CUqij "
            viewbox="0 0 24 24"
            focusable="false"
@@ -319,12 +273,10 @@ exports[`Tester/Panel WithHideGraphicMobileAndIconDesktop smoke-test 1`] = `
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
-  <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicIcon__3nOV3">
-    <div class="Panel_panelSpace__J2keW Panel_panelGraphic__7GPa9 Panel_panelGraphic_hide__exKT9">
+  <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicIcon__3nOV3 Panel_panel_graphicIconHide__WrI4N">
+    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphicHide__QsAnW">
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_extraLarge__CUqij "
            viewbox="0 0 24 24"
            focusable="false"
@@ -339,8 +291,6 @@ exports[`Tester/Panel WithHideGraphicMobileAndIconDesktop smoke-test 1`] = `
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
 </div>
@@ -349,33 +299,29 @@ exports[`Tester/Panel WithHideGraphicMobileAndIconDesktop smoke-test 1`] = `
 exports[`Tester/Panel WithHideGraphicMobileAndImage smoke-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicImage__yJ2sd">
-    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphic_hide__exKT9 Panel_panelImageContainer__cuT5S">
+    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphicHide__QsAnW">
       <img src="farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg"
            alt
-           class="Panel_panelImageContainerImage__YIhOY"
+           class="Panel_panelImage__Onc4C"
       >
     </div>
     <div class="Panel_panelArticle__4fhzq">
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-    </div>
-    <div class="Panel_panelSpace_hide__W74m6">
     </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicImage__yJ2sd">
-    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphic_hide__exKT9 Panel_panelImageContainer__cuT5S">
+    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphicHide__QsAnW">
       <img src="farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg"
            alt
-           class="Panel_panelImageContainerImage__YIhOY"
+           class="Panel_panelImage__Onc4C"
       >
     </div>
     <div class="Panel_panelArticle__4fhzq">
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-    </div>
-    <div class="Panel_panelSpace_hide__W74m6">
     </div>
   </div>
 </div>
@@ -384,33 +330,29 @@ exports[`Tester/Panel WithHideGraphicMobileAndImage smoke-test 1`] = `
 exports[`Tester/Panel WithHideGraphicMobileAndImageDesktop smoke-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicImage__yJ2sd">
-    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphic_hide__exKT9 Panel_panelImageContainer__cuT5S">
+    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphicHide__QsAnW">
       <img src="farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg"
            alt
-           class="Panel_panelImageContainerImage__YIhOY"
+           class="Panel_panelImage__Onc4C"
       >
     </div>
     <div class="Panel_panelArticle__4fhzq">
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-    </div>
-    <div class="Panel_panelSpace_hide__W74m6">
     </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicImage__yJ2sd">
-    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphic_hide__exKT9 Panel_panelImageContainer__cuT5S">
+    <div class="Panel_panelGraphic__7GPa9 Panel_panelGraphicHide__QsAnW">
       <img src="farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg"
            alt
-           class="Panel_panelImageContainerImage__YIhOY"
+           class="Panel_panelImage__Onc4C"
       >
     </div>
     <div class="Panel_panelArticle__4fhzq">
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-    </div>
-    <div class="Panel_panelSpace_hide__W74m6">
     </div>
   </div>
 </div>
@@ -419,8 +361,6 @@ exports[`Tester/Panel WithHideGraphicMobileAndImageDesktop smoke-test 1`] = `
 exports[`Tester/Panel WithHideSubtitle play-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       <h4 class="Heading_heading__7K0um Heading_heading_level5__CrIzo Heading_heading_hasSpacingExtraSmall__h-y9X Panel_srOnly__re7e0">
         Det er en undertittel
@@ -436,8 +376,6 @@ exports[`Tester/Panel WithHideSubtitle play-test 1`] = `
         </span>
       </button>
     </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
   </div>
 </div>
 `;
@@ -445,8 +383,6 @@ exports[`Tester/Panel WithHideSubtitle play-test 1`] = `
 exports[`Tester/Panel WithHideTitle play-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       <h3 class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Panel_srOnly__re7e0">
         Det er en tittel
@@ -462,8 +398,6 @@ exports[`Tester/Panel WithHideTitle play-test 1`] = `
         </span>
       </button>
     </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
   </div>
 </div>
 `;
@@ -471,7 +405,7 @@ exports[`Tester/Panel WithHideTitle play-test 1`] = `
 exports[`Tester/Panel WithIcon play-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicIcon__3nOV3">
-    <div class="Panel_panelSpace__J2keW Panel_panelGraphic__7GPa9">
+    <div class="Panel_panelGraphic__7GPa9">
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_extraLarge__CUqij "
            viewbox="0 0 24 24"
            focusable="false"
@@ -486,12 +420,10 @@ exports[`Tester/Panel WithIcon play-test 1`] = `
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicIcon__3nOV3">
-    <div class="Panel_panelSpace__J2keW Panel_panelGraphic__7GPa9">
+    <div class="Panel_panelGraphic__7GPa9">
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_extraLarge__CUqij "
            viewbox="0 0 24 24"
            focusable="false"
@@ -506,8 +438,6 @@ exports[`Tester/Panel WithIcon play-test 1`] = `
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
 </div>
@@ -516,7 +446,7 @@ exports[`Tester/Panel WithIcon play-test 1`] = `
 exports[`Tester/Panel WithIconMobile smoke-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicIcon__3nOV3">
-    <div class="Panel_panelSpace__J2keW Panel_panelGraphic__7GPa9">
+    <div class="Panel_panelGraphic__7GPa9">
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_extraLarge__CUqij "
            viewbox="0 0 24 24"
            focusable="false"
@@ -531,12 +461,10 @@ exports[`Tester/Panel WithIconMobile smoke-test 1`] = `
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicIcon__3nOV3">
-    <div class="Panel_panelSpace__J2keW Panel_panelGraphic__7GPa9">
+    <div class="Panel_panelGraphic__7GPa9">
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_extraLarge__CUqij "
            viewbox="0 0 24 24"
            focusable="false"
@@ -551,8 +479,6 @@ exports[`Tester/Panel WithIconMobile smoke-test 1`] = `
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
 </div>
@@ -561,33 +487,29 @@ exports[`Tester/Panel WithIconMobile smoke-test 1`] = `
 exports[`Tester/Panel WithImage play-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicImage__yJ2sd">
-    <div class="Panel_panelGraphic__7GPa9 Panel_panelImageContainer__cuT5S">
+    <div class="Panel_panelGraphic__7GPa9">
       <img src="farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg"
            alt
-           class="Panel_panelImageContainerImage__YIhOY"
+           class="Panel_panelImage__Onc4C"
       >
     </div>
     <div class="Panel_panelArticle__4fhzq">
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-    </div>
-    <div class="Panel_panelSpace_hide__W74m6">
     </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicImage__yJ2sd">
-    <div class="Panel_panelGraphic__7GPa9 Panel_panelImageContainer__cuT5S">
+    <div class="Panel_panelGraphic__7GPa9">
       <img src="farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg"
            alt
-           class="Panel_panelImageContainerImage__YIhOY"
+           class="Panel_panelImage__Onc4C"
       >
     </div>
     <div class="Panel_panelArticle__4fhzq">
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-    </div>
-    <div class="Panel_panelSpace_hide__W74m6">
     </div>
   </div>
 </div>
@@ -596,25 +518,23 @@ exports[`Tester/Panel WithImage play-test 1`] = `
 exports[`Tester/Panel WithImageMobile smoke-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicImage__yJ2sd">
-    <div class="Panel_panelGraphic__7GPa9 Panel_panelImageContainer__cuT5S">
+    <div class="Panel_panelGraphic__7GPa9">
       <img src="farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg"
            alt
-           class="Panel_panelImageContainerImage__YIhOY"
+           class="Panel_panelImage__Onc4C"
       >
     </div>
     <div class="Panel_panelArticle__4fhzq">
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-    </div>
-    <div class="Panel_panelSpace_hide__W74m6">
     </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicImage__yJ2sd">
-    <div class="Panel_panelGraphic__7GPa9 Panel_panelImageContainer__cuT5S">
+    <div class="Panel_panelGraphic__7GPa9">
       <img src="farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg"
            alt
-           class="Panel_panelImageContainerImage__YIhOY"
+           class="Panel_panelImage__Onc4C"
       >
     </div>
     <div class="Panel_panelArticle__4fhzq">
@@ -622,7 +542,36 @@ exports[`Tester/Panel WithImageMobile smoke-test 1`] = `
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
-    <div class="Panel_panelSpace_hide__W74m6">
+  </div>
+</div>
+`;
+
+exports[`Tester/Panel WithImageSourceAltText play-test 1`] = `
+<div data-test-block="true">
+  <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicImage__yJ2sd">
+    <div class="Panel_panelGraphic__7GPa9">
+      <img src="farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg"
+           alt="Bonde med ku"
+           class="Panel_panelImage__Onc4C"
+      >
+    </div>
+    <div class="Panel_panelArticle__4fhzq">
+      <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
+        Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+      </p>
+    </div>
+  </div>
+  <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0 Panel_panel_graphicImage__yJ2sd">
+    <div class="Panel_panelGraphic__7GPa9">
+      <img src="farmer-illustration.7eebe78d220ecf48b97e4811ac2c5210.svg"
+           alt="Bonde med ku"
+           class="Panel_panelImage__Onc4C"
+      >
+    </div>
+    <div class="Panel_panelArticle__4fhzq">
+      <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
+        Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+      </p>
     </div>
   </div>
 </div>
@@ -631,8 +580,6 @@ exports[`Tester/Panel WithImageMobile smoke-test 1`] = `
 exports[`Tester/Panel WithPadding smoke-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingS__Bmszn Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       <div>
         padding: s
@@ -640,13 +587,9 @@ exports[`Tester/Panel WithPadding smoke-test 1`] = `
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingS__Bmszn Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       <div>
         padding: s
@@ -655,12 +598,8 @@ exports[`Tester/Panel WithPadding smoke-test 1`] = `
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingM__udU1p Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       <div>
         padding: m
@@ -668,13 +607,9 @@ exports[`Tester/Panel WithPadding smoke-test 1`] = `
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingM__udU1p Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       <div>
         padding: m
@@ -683,12 +618,8 @@ exports[`Tester/Panel WithPadding smoke-test 1`] = `
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingL__mu+c9 Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       <div>
         padding: l
@@ -696,13 +627,9 @@ exports[`Tester/Panel WithPadding smoke-test 1`] = `
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingL__mu+c9 Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       <div>
         padding: l
@@ -711,12 +638,8 @@ exports[`Tester/Panel WithPadding smoke-test 1`] = `
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       <div>
         padding: xl
@@ -724,13 +647,9 @@ exports[`Tester/Panel WithPadding smoke-test 1`] = `
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       <div>
         padding: xl
@@ -739,12 +658,8 @@ exports[`Tester/Panel WithPadding smoke-test 1`] = `
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXXL__iRX4E Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       <div>
         padding: xxl
@@ -752,13 +667,9 @@ exports[`Tester/Panel WithPadding smoke-test 1`] = `
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingXXL__iRX4E Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       <div>
         padding: xxl
@@ -767,12 +678,8 @@ exports[`Tester/Panel WithPadding smoke-test 1`] = `
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingMEGA__6Cdzk Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       <div>
         padding: mega
@@ -780,13 +687,9 @@ exports[`Tester/Panel WithPadding smoke-test 1`] = `
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_filled__udR+n Panel_panel_ochre__1LtLP Panel_panel_paddingMEGA__6Cdzk Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       <div>
         padding: mega
@@ -794,8 +697,6 @@ exports[`Tester/Panel WithPadding smoke-test 1`] = `
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
 </div>
@@ -806,8 +707,6 @@ exports[`Tester/Panel WithRef play-test 1`] = `
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0"
        id="dummyIdForwardedFromRef"
   >
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
@@ -820,8 +719,6 @@ exports[`Tester/Panel WithRef play-test 1`] = `
         </span>
       </button>
     </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
   </div>
 </div>
 `;
@@ -829,75 +726,43 @@ exports[`Tester/Panel WithRef play-test 1`] = `
 exports[`Tester/Panel WithSpacing smoke-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       spacing: xxs
     </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXS__dwrHp">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       spacing: xs
     </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingS__k6311">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       spacing: s
     </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingM__IB7eJ">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       spacing: m
     </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingL__-PjAx">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       spacing: l
     </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXL__7QKaS">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       spacing: xl
     </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXL__IEIct">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       spacing: xxl
     </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
   </div>
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingMEGA__qZ2eb">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       spacing: mega
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
 </div>
@@ -906,8 +771,6 @@ exports[`Tester/Panel WithSpacing smoke-test 1`] = `
 exports[`Tester/Panel WithSubtitle play-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       <h4 class="Heading_heading__7K0um Heading_heading_level5__CrIzo Heading_heading_hasSpacingExtraSmall__h-y9X ">
         Det er en undertittel
@@ -916,8 +779,6 @@ exports[`Tester/Panel WithSubtitle play-test 1`] = `
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
   </div>
 </div>
 `;
@@ -925,8 +786,6 @@ exports[`Tester/Panel WithSubtitle play-test 1`] = `
 exports[`Tester/Panel WithSubtitleAs play-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       <h2 class="Heading_heading__7K0um Heading_heading_level5__CrIzo Heading_heading_hasSpacingExtraSmall__h-y9X ">
         Det er en undertittel med valgt heading nivå
@@ -942,8 +801,6 @@ exports[`Tester/Panel WithSubtitleAs play-test 1`] = `
         </span>
       </button>
     </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
   </div>
 </div>
 `;
@@ -951,8 +808,6 @@ exports[`Tester/Panel WithSubtitleAs play-test 1`] = `
 exports[`Tester/Panel WithTitle play-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       <h3 class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ ">
         Det er en tittel
@@ -961,8 +816,6 @@ exports[`Tester/Panel WithTitle play-test 1`] = `
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
-    <div class="Panel_panelSpace__J2keW">
-    </div>
   </div>
 </div>
 `;
@@ -970,8 +823,6 @@ exports[`Tester/Panel WithTitle play-test 1`] = `
 exports[`Tester/Panel WithTitleAs play-test 1`] = `
 <div data-test-block="true">
   <div class="Panel_panel__KlvnD Panel_panel_outline__vCwvp Panel_panel_ochre__1LtLP Panel_panel_paddingXL__HCgRu Panel_panel_spacingXXS__ljNS0">
-    <div class="Panel_panelSpace__J2keW">
-    </div>
     <div class="Panel_panelArticle__4fhzq">
       <h1 class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ ">
         Det er en tittel
@@ -986,8 +837,6 @@ exports[`Tester/Panel WithTitleAs play-test 1`] = `
           Trykk på meg
         </span>
       </button>
-    </div>
-    <div class="Panel_panelSpace__J2keW">
     </div>
   </div>
 </div>

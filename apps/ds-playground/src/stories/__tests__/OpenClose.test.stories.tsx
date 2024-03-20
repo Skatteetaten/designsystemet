@@ -6,9 +6,8 @@ import {
   headingAsArr,
   positionArr,
 } from '@skatteetaten/ds-core-utils';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { fireEvent, within, waitFor } from '@storybook/testing-library';
+import { expect, fireEvent, within, waitFor } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 
@@ -113,7 +112,6 @@ const defaultArgs: OpenCloseProps = {
 
 export const WithRef = {
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: HTMLButtonElement | null): void => {
@@ -122,15 +120,12 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     await expect(canvas.getByRole('button')).toHaveAttribute(
@@ -142,7 +137,6 @@ export const WithRef = {
 
 export const WithAttributes = {
   name: 'With Attributes(FA2-5)',
-
   args: {
     ...defaultArgs,
     id: elementId,
@@ -150,14 +144,12 @@ export const WithAttributes = {
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
@@ -170,15 +162,12 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (A2, B1)',
-
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     title: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       focus: `${wrapper} button`,
@@ -186,7 +175,6 @@ export const Defaults = {
       click: `${wrapper} button`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
@@ -206,12 +194,10 @@ export const Defaults = {
 
 export const WithIconRight = {
   name: 'With Icon Right (A2)',
-
   args: {
     ...defaultArgs,
     iconPosition: 'right',
   },
-
   argTypes: {
     iconPosition: { table: { disable: false } },
   },
@@ -234,11 +220,9 @@ const TemplateWithContext: StoryFn<typeof OpenClose> = (args) => (
 export const InContext = {
   render: TemplateWithContext,
   name: 'In Context (A1 delvis)',
-
   args: {
     ...defaultArgs,
   },
-
   parameters: {
     imageSnapshot: {
       disable: true,
@@ -246,28 +230,24 @@ export const InContext = {
   },
 } satisfies Story;
 
-export const WithUnderline = {
-  name: 'With Underline (A3)',
-
+export const WithoutUnderline = {
+  name: 'Without Underline (A3)',
   args: {
     ...defaultArgs,
-    showUnderline: true,
+    showUnderline: false,
   },
-
   argTypes: {
     showUnderline: { table: { disable: false } },
   },
 } satisfies Story;
 
-export const WithIconRightAndUnderline = {
-  name: 'With Icon Right And Underline (A2, A3)',
-
+export const WithIconRightAndNoUnderline = {
+  name: 'With Icon Right And No Underline (A2, A3)',
   args: {
     ...defaultArgs,
     iconPosition: 'right',
-    showUnderline: true,
+    showUnderline: false,
   },
-
   argTypes: {
     iconPosition: { table: { disable: false } },
     showUnderline: { table: { disable: false } },
@@ -276,12 +256,10 @@ export const WithIconRightAndUnderline = {
 
 export const Compact = {
   name: 'Compact (A1 delvis)',
-
   args: {
     ...defaultArgs,
     variant: 'compact',
   },
-
   argTypes: {
     variant: { table: { disable: false } },
   },
@@ -289,13 +267,11 @@ export const Compact = {
 
 export const CompactWithIconRight = {
   name: 'Compact With Icon Right (A1 delvis, A2)',
-
   args: {
     ...defaultArgs,
     variant: 'compact',
     iconPosition: 'right',
   },
-
   argTypes: {
     variant: { table: { disable: false } },
     iconPosition: { table: { disable: false } },
@@ -304,13 +280,11 @@ export const CompactWithIconRight = {
 
 export const CompactWithUnderline = {
   name: 'Compact With Underline (A1 delvis, A3)',
-
   args: {
     ...defaultArgs,
     variant: 'compact',
     showUnderline: true,
   },
-
   argTypes: {
     variant: { table: { disable: false } },
     showUnderline: { table: { disable: false } },
@@ -319,14 +293,12 @@ export const CompactWithUnderline = {
 
 export const CompactWithIconRightAndUnderline = {
   name: 'Compact With Icon Right And Underline (A1 delvis, A2, A3)',
-
   args: {
     ...defaultArgs,
     variant: 'compact',
     iconPosition: 'right',
     showUnderline: true,
   },
-
   argTypes: {
     variant: { table: { disable: false } },
     iconPosition: { table: { disable: false } },
@@ -336,16 +308,13 @@ export const CompactWithIconRightAndUnderline = {
 
 export const IsExpanded = {
   name: 'With IsExpanded (A4 delvis)',
-
   args: {
     ...defaultArgs,
     isExpanded: true,
   },
-
   argTypes: {
     isExpanded: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const content = await canvas.findByText(defaultContent);
@@ -357,13 +326,11 @@ export const IsExpanded = {
 
 export const CompactAndIsExpanded = {
   name: 'With Compact And IsExpanded (A4 delvis)',
-
   args: {
     ...defaultArgs,
     isExpanded: true,
     variant: 'compact',
   },
-
   argTypes: {
     isExpanded: { table: { disable: false } },
     variant: { table: { disable: false } },
@@ -372,13 +339,11 @@ export const CompactAndIsExpanded = {
 
 export const IconRightContent = {
   name: 'With IsExpanded And Icon Right (A1 delvis)',
-
   args: {
     ...defaultArgs,
     isExpanded: true,
     iconPosition: 'right',
   },
-
   argTypes: {
     isExpanded: { table: { disable: false } },
     iconPosition: { table: { disable: false } },
@@ -388,17 +353,14 @@ export const IconRightContent = {
 export const WithOnClick = {
   render: TemplateWithOnClick,
   name: 'With OnClick (A4 delvis, B1 delvis)',
-
   args: {
     ...defaultArgs,
   },
-
   parameters: {
     imageSnapshot: {
       disable: true,
     },
   },
-
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
@@ -416,22 +378,18 @@ export const WithOnClick = {
 export const WithIsOnClickOnlyFiredOnOpen = {
   render: TemplateWithOnClick,
   name: 'With IsOnClickOnlyFiredOnOpen (A4 delvis)',
-
   args: {
     ...defaultArgs,
     isOnClickOnlyFiredOnOpen: true,
   },
-
   argTypes: {
     isOnClickOnlyFiredOnOpen: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       disable: true,
     },
   },
-
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
@@ -444,17 +402,14 @@ export const WithIsOnClickOnlyFiredOnOpen = {
 export const WithChangingTitle = {
   render: TemplateWithChangingTitle,
   name: 'With Changing Title (A4 delvis)',
-
   args: {
     ...defaultArgs,
   },
-
   parameters: {
     imageSnapshot: {
       disable: true,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
@@ -469,17 +424,14 @@ export const WithChangingTitle = {
 export const WithTitleAs = {
   render: TemplateWithAllHeadings,
   name: 'With TitleAs (B2)',
-
   args: {
     ...defaultArgs,
   },
-
   parameters: {
     imageSnapshot: {
       disable: true,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const headings = canvas.getAllByRole('heading');
@@ -493,18 +445,15 @@ export const WithTitleAs = {
 
 export const WithLongTitle = {
   name: 'With Long Title (A1 delvis)',
-
   args: {
     ...defaultArgs,
     title:
       'Denneknappenharenveldiglangtekst.Dentekstengåroverflerelinjerfordidenersålangogdablirikonetriktigplassert.' +
       'Fordetkanjoskjeattittelengåroverflerelinjerhvisdeterenveldiglitenskjerm.Sådamåvisjekkeatdetikkeserrartut.',
   },
-
   argTypes: {
     title: { table: { disable: false } },
   },
-
   parameters: {
     viewport: {
       defaultViewport: '--breakpoint-xs',

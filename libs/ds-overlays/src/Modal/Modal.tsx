@@ -17,7 +17,12 @@ import {
 import { CancelSVGpath } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
-import { getModalPaddingDefault, getModalVariantDefault } from './defaults';
+import {
+  getModalDismissOnEscDefault,
+  getModalDismissOnOutsideClickDefault,
+  getModalPaddingDefault,
+  getModalVariantDefault,
+} from './defaults';
 import { ModalPadding, ModalProps } from './Modal.types';
 
 import styles from './Modal.module.scss';
@@ -30,7 +35,8 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
       classNames,
       lang,
       'data-testid': dataTestId,
-      disableAutoClose,
+      dismissOnEsc = getModalDismissOnEscDefault(),
+      dismissOnOutsideClick = getModalDismissOnOutsideClickDefault(),
       hideCloseButton,
       hideTitle,
       imageSource,
@@ -38,23 +44,30 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
       padding = getModalPaddingDefault(),
       title,
       variant = getModalVariantDefault(),
+      shadowRootNode,
       onClose,
       children,
     },
     ref
   ): JSX.Element => {
     const headingId = `modalHeadingId-${useId()}`;
-    const { t } = useTranslation('Shared', { i18n: dsI18n });
+    const { t } = useTranslation('ds_overlays', { i18n: dsI18n });
 
     const modalRef = useRef<HTMLDialogElement>(null);
     useImperativeHandle(ref, () => modalRef?.current as HTMLDialogElement);
 
     useEffect(() => {
-      if (disableAutoClose) {
+      if (!dismissOnOutsideClick) {
         return;
       }
       const onClickOutside = (event: MouseEvent): void => {
-        if (!(event.target instanceof HTMLElement)) {
+        const element = shadowRootNode
+          ? (shadowRootNode?.activeElement as HTMLElement)
+          : (event.target as HTMLElement);
+        if (
+          !(event.target instanceof HTMLElement) ||
+          element?.tagName !== 'DIALOG'
+        ) {
           return;
         }
         const rect = event.target.getBoundingClientRect();
@@ -64,16 +77,15 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
           rect.top > event.clientY ||
           rect.bottom < event.clientY
         ) {
-          onClose && onClose();
+          onClose?.();
           modalRef.current?.close();
         }
       };
-
       document.addEventListener('click', onClickOutside, true);
       return () => {
         document.removeEventListener('click', onClickOutside, true);
       };
-    }, [modalRef, disableAutoClose, onClose]);
+    }, [modalRef, dismissOnOutsideClick, onClose, shadowRootNode]);
 
     const hideTitleClassName = hideTitle ? styles.srOnly : '';
     const hideOutlineClassName =
@@ -97,47 +109,51 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
         data-testid={dataTestId}
         aria-labelledby={headingId}
         autoFocus
-        onCancel={onClose}
+        onCancel={(e): void => {
+          if (!dismissOnEsc) {
+            e.preventDefault();
+          }
+          onClose?.();
+        }}
       >
-        {imageSource && (
-          <img
-            src={imageSource}
-            alt={imageSourceAltText ?? ''}
-            className={`${styles.modalIllustration} ${
-              classNames?.image ?? ''
-            }`.trim()}
-          />
-        )}
-        <div
-          tabIndex={-1}
-          className={`${paddingClassName} ${noPaddingTop}`.trim()}
-        >
-          {variant === 'important' && (
-            <SkatteetatenLogo className={styles.modalLogo} />
-          )}
-          <Heading
-            className={`${styles.modalHeading} ${headingNoPaddingClassName} ${hideTitleClassName}`.trim()}
-            id={headingId}
-            as={'h1'}
-            level={3}
-            hasSpacing
-          >
-            {title}
-          </Heading>
+        <div tabIndex={-1} className={styles.modalContainer}>
           {!hideCloseButton && (
             <IconButton
               className={styles.closeButton}
               svgPath={CancelSVGpath}
-              title={t('shared.Close')}
+              title={t('modal.CloseModal')}
               onClick={(): void => {
-                onClose && onClose();
+                onClose?.();
                 modalRef.current?.close();
               }}
             />
           )}
-          {children}
+          {imageSource && (
+            <img
+              src={imageSource}
+              alt={imageSourceAltText ?? ''}
+              className={`${styles.modalIllustration} ${
+                classNames?.image ?? ''
+              }`.trim()}
+            />
+          )}
+          <div className={`${paddingClassName} ${noPaddingTop}`.trim()}>
+            {variant === 'important' && (
+              <SkatteetatenLogo className={styles.modalLogo} />
+            )}
+            <Heading
+              className={`${styles.modalHeading} ${headingNoPaddingClassName} ${hideTitleClassName}`.trim()}
+              id={headingId}
+              as={'h1'}
+              level={3}
+              hasSpacing
+            >
+              {title}
+            </Heading>
+            {children}
+          </div>
+          {variant === 'important' && <Separator />}
         </div>
-        {variant === 'important' && <Separator />}
       </dialog>
     );
   }
@@ -145,4 +161,9 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
 
 Modal.displayName = 'Modal';
 
-export { getModalPaddingDefault, getModalVariantDefault };
+export {
+  getModalPaddingDefault,
+  getModalVariantDefault,
+  getModalDismissOnOutsideClickDefault,
+  getModalDismissOnEscDefault,
+};

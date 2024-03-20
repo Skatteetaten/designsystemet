@@ -2,7 +2,7 @@ import {
   ComponentPropsWithoutRef,
   ForwardRefExoticComponent,
   RefAttributes,
-  JSX,
+  ReactNode,
 } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
@@ -12,7 +12,7 @@ import { FieldsetProps } from '../Fieldset/Fieldset.types';
 
 type RequiredCheckboxGroupHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'fieldset'>,
-  'disabled'
+  'disabled' | 'form'
 >;
 
 type CheckboxGroupHTMLAttributes = Partial<RequiredCheckboxGroupHTMLAttributes>;
@@ -21,7 +21,7 @@ interface CheckboxGroupCommonProps
   extends CheckboxGroupHTMLAttributes,
     BaseProps {
   /** Checkbox-komponenter */
-  children: JSX.Element | JSX.Element[];
+  children: ReactNode;
   /** Skjuler ledetekst, tilleggstekst og hjelpetekst, men er fortsatt synlig for skjermleser */
   hideLegend?: FieldsetProps['hideLegend'];
   /** Ledetekst til gruppen */

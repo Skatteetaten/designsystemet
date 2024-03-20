@@ -14,11 +14,16 @@
         "project": "libs/ds-core-utils/package.json",
         "entryFile": "libs/ds-core-utils/src/index.ts",
         "external": ["react/jsx-runtime"],
-        "rollupConfig": "@nx/react/plugins/bundle-rollup",
+        "rollupConfig": ["libs/ds-core-utils/rollup.config.js"],
         "compiler": "babel",
         "assets": [
           {
             "glob": "libs/ds-core-utils/README.md",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "LICENSE",
             "input": ".",
             "output": "."
           }
@@ -27,7 +32,7 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
@@ -40,8 +45,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/ds-core-utils"],
       "options": {
-        "jestConfig": "libs/ds-core-utils/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/ds-core-utils/jest.config.ts"
       }
     },
     "stylelint": {
@@ -70,9 +74,9 @@
     "publish": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "npm publish {args.switches}",
-        "cwd": "dist/libs/ds-core-utils"
+        "command": "npm publish dist/libs/ds-core-utils {args.switches}"
       }
     }
-  }
+  },
+  "implicitDependencies": ["!ds-dev-config"]
 }

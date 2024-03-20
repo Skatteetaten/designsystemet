@@ -23,6 +23,7 @@ exports[`Tester/Fieldset WithAttributes play-test 1`] = `
             data-testid="123ID"
             class="Fieldset_fieldset__gwnkr  dummyClassname"
             lang="nb"
+            form="123form"
   >
     <legend id="legendId-:r1:"
             class="Fieldset_legend__8odl-"

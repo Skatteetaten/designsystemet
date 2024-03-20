@@ -6,11 +6,10 @@ import {
   TextField,
   textFieldAsArr,
 } from '@skatteetaten/ds-forms';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { userEvent, waitFor, within } from '@storybook/testing-library';
+import { expect, userEvent, within, waitFor } from '@storybook/test';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
+import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const verifyAttribute =
@@ -69,6 +68,7 @@ const meta = {
     // HTML
     autoComplete: { table: { disable: true } },
     disabled: { table: { disable: true } },
+    form: { table: { disable: true } },
     inputMode: { table: { disable: true } },
     name: { table: { disable: true } },
     maxLength: { table: { disable: true } },
@@ -98,7 +98,6 @@ const defaultArgs = {
 
 export const WithRef = {
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: TextboxRefHandle | null): void => {
@@ -107,36 +106,32 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: verifyAttribute('name', 'dummyNameForwardedFromRef'),
 } satisfies Story;
 
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
-
   args: {
     ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
+    form: 'formid123',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+    form: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -145,6 +140,7 @@ export const WithAttributes = {
     await expect(container).toHaveClass('dummyClassname');
     await expect(container).toHaveAttribute('lang', 'nb');
     await expect(textbox).toHaveAttribute('data-testid', '123ID');
+    await expect(textbox).toHaveAttribute('form', 'formid123');
   },
 } satisfies Story;
 
@@ -185,22 +181,18 @@ export const WithCustomClassNames = {
 
 export const Defaults = {
   name: 'Defaults Variant Medium (A1, A2, B2, FS-A2)',
-
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     label: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} input`,
       focus: `${wrapper} input`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox', { name: defaultLabelText });
@@ -221,12 +213,10 @@ export const Defaults = {
 
 export const WithVariantLarge = {
   name: 'With Variant Large (A1)',
-
   args: {
     ...defaultArgs,
     variant: 'large',
   },
-
   argTypes: {
     variant: { table: { disable: false } },
   },
@@ -234,23 +224,19 @@ export const WithVariantLarge = {
 
 export const WithAs = {
   name: 'With As (A1, A2)',
-
   args: {
     ...defaultArgs,
     as: 'textarea',
   },
-
   argTypes: {
     as: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} textarea`,
       focus: `${wrapper} textarea`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -260,17 +246,14 @@ export const WithAs = {
 
 export const WithDisabled = {
   name: 'With Disabled (B1, B8)',
-
   args: {
     ...defaultArgs,
     disabled: true,
     value: valueText,
   },
-
   argTypes: {
     disabled: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -280,45 +263,84 @@ export const WithDisabled = {
 
 export const WithValue = {
   name: 'With Value',
-
   args: {
     ...defaultArgs,
     value: valueText,
   },
-
   argTypes: {
     value: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: verifyAttribute('value', valueText),
 } satisfies Story;
 
 export const WithDefaultValue = {
   name: 'With DefaultValue',
-
   args: {
     ...defaultArgs,
     defaultValue: valueText,
   },
-
   argTypes: {
     defaultValue: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: verifyAttribute('value', valueText),
+} satisfies Story;
+
+export const WithDefaultValueAndThousandSeparator = {
+  name: 'With DefaultValue and ThousandSeparator',
+  args: {
+    ...defaultArgs,
+    defaultValue: 10000,
+    thousandSeparator: true,
+  },
+  argTypes: {
+    defaultValue: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: verifyAttribute('value', '10 000'),
+} satisfies Story;
+
+export const WithDefaultValueAndAutoSizeTextArea = {
+  name: 'With DefaultValue and Autosize TextArea',
+  args: {
+    ...defaultArgs,
+    as: 'textarea',
+    defaultValue: loremIpsum,
+    autosize: true,
+  },
+  argTypes: {
+    defaultValue: { table: { disable: false } },
+    autosize: { table: { disable: false } },
+  },
+  parameters: {
+    parameters: {
+      viewport: {
+        defaultViewport: '--breakpoint-xs',
+      },
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox).toHaveValue(loremIpsum);
+    await expect(textbox.tagName).toBe('TEXTAREA');
+    const { scrollHeight } = textbox;
+    const includeBorderAndMore = textbox.offsetHeight - textbox.clientHeight;
+    await expect(textbox).toHaveStyle({
+      height: `${scrollHeight + includeBorderAndMore}px`,
+    });
+  },
 } satisfies Story;
 
 export const WithAutoCompleteInputModeNameAndPlaceholder = {
   name: 'With AutoComplete InputMode Name And Placeholder (A3, A6, B1)',
-
   args: {
     ...defaultArgs,
     autoComplete: 'given-name',
@@ -326,14 +348,12 @@ export const WithAutoCompleteInputModeNameAndPlaceholder = {
     name: 'test_name',
     placeholder: valueText,
   },
-
   argTypes: {
     autoComplete: { table: { disable: false } },
     inputMode: { table: { disable: false } },
     name: { table: { disable: false } },
     placeholder: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -346,17 +366,14 @@ export const WithAutoCompleteInputModeNameAndPlaceholder = {
 
 export const WithReadOnly = {
   name: 'With ReadOnly (B1, B6)',
-
   args: {
     ...defaultArgs,
     value: valueText,
     readOnly: true,
   },
-
   argTypes: {
     readOnly: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -366,20 +383,16 @@ export const WithReadOnly = {
 
 export const WithRequired = {
   name: 'With Required (B4)',
-
   args: {
     ...defaultArgs,
     required: true,
   },
-
   argTypes: {
     required: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -389,13 +402,11 @@ export const WithRequired = {
 
 export const WithRequiredAndMark = {
   name: 'With Required And Mark (B4, FS-A4 delvis)',
-
   args: {
     ...defaultArgs,
     required: true,
     showRequiredMark: true,
   },
-
   argTypes: {
     required: { table: { disable: false } },
     showRequiredMark: { table: { disable: false } },
@@ -404,22 +415,18 @@ export const WithRequiredAndMark = {
 
 export const WithMinAndMaxLength = {
   name: 'With MinLength And MaxLength (A5, B1)',
-
   args: {
     ...defaultArgs,
     maxLength: 50,
     minLength: 10,
   },
-
   argTypes: {
     maxLength: { table: { disable: false } },
     minLength: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -430,20 +437,16 @@ export const WithMinAndMaxLength = {
 
 export const WithPattern = {
   name: 'With Pattern As Input (A5, B1)',
-
   args: {
     ...defaultArgs,
     pattern: '[a-z]',
   },
-
   argTypes: {
     pattern: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -454,17 +457,14 @@ export const WithPattern = {
 
 export const WithRows = {
   name: 'With Rows As Textarea (A5)',
-
   args: {
     ...defaultArgs,
     as: 'textarea',
     rows: 4,
   },
-
   argTypes: {
     rows: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -527,16 +527,13 @@ export const WithErrorMessageAndHasError = {
 
 export const WithDescription = {
   name: 'With Description (FS-A3)',
-
   args: {
     ...defaultArgs,
     description: 'En liten beskrivelse tekst',
   },
-
   argTypes: {
     description: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const labelWithDescription = canvas.getByText('En liten beskrivelse tekst');
@@ -546,16 +543,13 @@ export const WithDescription = {
 
 export const WithHideLabel = {
   name: 'With HideLabel (B2)',
-
   args: {
     ...defaultArgs,
     hideLabel: true,
   },
-
   argTypes: {
     hideLabel: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox', { name: defaultLabelText });
@@ -565,16 +559,13 @@ export const WithHideLabel = {
 
 export const WithThousandSeparator = {
   name: 'With ThousandSeparator As Input (A8 delvis)',
-
   args: {
     ...defaultArgs,
     thousandSeparator: true,
   },
-
   argTypes: {
     thousandSeparator: { table: { disable: false } },
   },
-
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
@@ -583,6 +574,30 @@ export const WithThousandSeparator = {
     await userEvent.type(textbox, 'A10000');
     await waitFor(() => expect(args.onChange).toHaveBeenCalled());
     await expect(textbox).toHaveValue('10 000');
+  },
+} satisfies Story;
+
+export const WithThousandSeparatorAndNegativeValue = {
+  name: 'With ThousandSeparator and negative number value',
+  args: {
+    ...defaultArgs,
+    thousandSeparator: true,
+  },
+  argTypes: {
+    defaultValue: { table: { disable: false } },
+    thousandSeparator: { table: { disable: true } },
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox.tagName).toBe('INPUT');
+    await textbox.focus();
+    await userEvent.type(textbox, '-A10-000-');
+    await waitFor(() => expect(args.onChange).toHaveBeenCalled());
+    await expect(textbox).toHaveValue('-10 000');
   },
 } satisfies Story;
 
@@ -656,15 +671,12 @@ const EventHandlersTemplate: StoryFn<typeof TextField> = (args) => {
 export const WithEventHandlers = {
   render: EventHandlersTemplate,
   name: 'With EventHandlers (A4)',
-
   args: {
     ...defaultArgs,
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');

@@ -6,6 +6,7 @@ import {
   getCommonClassNameDefault,
 } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
+import { Spinner } from '@skatteetaten/ds-progress';
 
 import { getInlineButtonPositionDefault } from './defaults';
 import { InlineButtonProps } from './InlineButton.types';
@@ -20,11 +21,14 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
       lang,
       'data-testid': dataTestId,
       iconPosition = getInlineButtonPositionDefault(),
+      spinnerTitle,
       svgPath,
       accessKey,
       disabled,
+      form,
       type = getCommonButtonTypeDefault(),
       ariaDescribedby,
+      hasSpinner,
       onBlur,
       onClick,
       onFocus,
@@ -38,8 +42,8 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
     const withIconRightClassName = hasIconRight
       ? styles.button_withIconRight
       : '';
-
     const concatenatedClassName = `${styles.button} ${withIconLeftClassName} ${withIconRightClassName} ${className}`;
+    const hideClassName = hasSpinner ? styles.hide : '';
 
     return (
       <button
@@ -49,6 +53,7 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
         lang={lang}
         data-testid={dataTestId}
         accessKey={accessKey}
+        form={form}
         disabled={disabled}
         type={type}
         aria-describedby={ariaDescribedby}
@@ -56,9 +61,29 @@ export const InlineButton = forwardRef<HTMLButtonElement, InlineButtonProps>(
         onClick={onClick}
         onFocus={onFocus}
       >
-        {hasIconLeft && <Icon className={styles.icon} svgPath={svgPath} />}
-        {children}
-        {hasIconRight && <Icon className={styles.icon} svgPath={svgPath} />}
+        {hasIconLeft && (
+          <Icon
+            className={`${styles.icon} ${hideClassName}`.trim()}
+            svgPath={svgPath}
+          />
+        )}
+        <span className={hideClassName}>{children}</span>
+        {hasIconRight && (
+          <Icon
+            className={`${styles.icon} ${hideClassName}`.trim()}
+            svgPath={svgPath}
+          />
+        )}
+        {hasSpinner && (
+          <Spinner
+            className={styles.spinner}
+            color={disabled ? 'black' : 'blue'}
+            size={'small'}
+            hideTitle
+          >
+            {spinnerTitle}
+          </Spinner>
+        )}
       </button>
     );
   }

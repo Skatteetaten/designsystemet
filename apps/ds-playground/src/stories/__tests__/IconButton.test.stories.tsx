@@ -1,10 +1,12 @@
 import { FocusEvent, MouseEvent, useState } from 'react';
 
 import { IconButton, IconButtonProps } from '@skatteetaten/ds-buttons';
-import { sizeArr } from '@skatteetaten/ds-core-utils';
-import { expect } from '@storybook/jest';
+import {
+  getCommonButtonTypeDefault,
+  sizeArr,
+} from '@skatteetaten/ds-core-utils';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { userEvent, waitFor, within } from '@storybook/testing-library';
+import { expect, userEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -36,6 +38,8 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    hasSpinner: { table: { disable: true } },
+    spinnerTitle: { table: { disable: true } },
     isOutlined: { table: { disable: true } },
     size: {
       table: { disable: true },
@@ -73,7 +77,6 @@ const defaultArgs: IconButtonProps = {
 
 export const WithRef = {
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: HTMLButtonElement | null): void => {
@@ -82,23 +85,19 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       disable: true,
     },
   },
-
   play: verifyAttribute('id', 'dummyIdForwardedFromRef'),
 } satisfies Story;
 
 export const WithAttributes = {
   name: 'With Attributes(FA2-5)',
-
   args: {
     ...defaultArgs,
     id: 'htmlId',
@@ -106,14 +105,12 @@ export const WithAttributes = {
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const iconButton = canvas.getByRole('button');
@@ -126,16 +123,13 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (A1, B1, B2)',
-
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     svgPath: { table: { disable: false } },
     title: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} > button`,
@@ -143,11 +137,10 @@ export const Defaults = {
       click: `${wrapper} > button`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const iconButton = canvas.getByRole('button');
-    expect(iconButton).toHaveAttribute('type', 'button');
+    expect(iconButton).toHaveAttribute('type', getCommonButtonTypeDefault());
     // eslint-disable-next-line testing-library/no-node-access
     const svg = iconButton.querySelector('svg');
     await expect(svg).toHaveAttribute('viewBox', '0 0 24 24');
@@ -159,16 +152,13 @@ export const Defaults = {
 
 export const WithOutline = {
   name: 'With Outline (A1)',
-
   args: {
     ...defaultArgs,
     isOutlined: true,
   },
-
   argTypes: {
     isOutlined: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} > button`,
@@ -180,12 +170,10 @@ export const WithOutline = {
 
 export const WithCustomSVGPath = {
   name: 'With Custom SVGPath (A1)',
-
   args: {
     ...defaultArgs,
     svgPath: <path d={'M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z'} />,
   },
-
   argTypes: {
     svgPath: {
       table: { disable: false },
@@ -196,12 +184,10 @@ export const WithCustomSVGPath = {
 
 export const WithSizeExtraSmall = {
   name: 'With Size Extra Small (A1)',
-
   args: {
     ...defaultArgs,
     size: 'extraSmall',
   },
-
   argTypes: {
     size: { table: { disable: false } },
   },
@@ -209,12 +195,10 @@ export const WithSizeExtraSmall = {
 
 export const WithSizeSmall = {
   name: 'With Size Small (A1)',
-
   args: {
     ...defaultArgs,
     size: 'small',
   },
-
   argTypes: {
     size: { table: { disable: false } },
   },
@@ -222,12 +206,10 @@ export const WithSizeSmall = {
 
 export const WithSizeLarge = {
   name: 'With Size Large (A1)',
-
   args: {
     ...defaultArgs,
     size: 'large',
   },
-
   argTypes: {
     size: { table: { disable: false } },
   },
@@ -235,13 +217,11 @@ export const WithSizeLarge = {
 
 export const WithSizeExtraSmallAndOutline = {
   name: 'With Size Extra Small and Outline (A1)',
-
   args: {
     ...defaultArgs,
     size: 'extraSmall',
     isOutlined: true,
   },
-
   argTypes: {
     size: { table: { disable: false } },
     isOutlined: { table: { disable: false } },
@@ -250,13 +230,11 @@ export const WithSizeExtraSmallAndOutline = {
 
 export const WithSizeSmallAndOutline = {
   name: 'With Size Small and Outline (A1)',
-
   args: {
     ...defaultArgs,
     size: 'small',
     isOutlined: true,
   },
-
   argTypes: {
     size: { table: { disable: false } },
     isOutlined: { table: { disable: false } },
@@ -265,13 +243,11 @@ export const WithSizeSmallAndOutline = {
 
 export const WithSizeLargeAndOutline = {
   name: 'With Size Large and Outline (A1)',
-
   args: {
     ...defaultArgs,
     size: 'large',
     isOutlined: true,
   },
-
   argTypes: {
     size: { table: { disable: false } },
     isOutlined: { table: { disable: false } },
@@ -280,16 +256,13 @@ export const WithSizeLargeAndOutline = {
 
 export const WithDisabled = {
   name: 'With Disabled (B5)',
-
   args: {
     ...defaultArgs,
     disabled: true,
   },
-
   argTypes: {
     disabled: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     expect(canvas.getByRole('button')).toBeDisabled();
@@ -298,13 +271,11 @@ export const WithDisabled = {
 
 export const WithDisabledAndOutline = {
   name: 'With Disabled And Outline (B5)',
-
   args: {
     ...defaultArgs,
     isOutlined: true,
     disabled: true,
   },
-
   argTypes: {
     isOutlined: { table: { disable: false } },
     disabled: { table: { disable: false } },
@@ -313,85 +284,69 @@ export const WithDisabledAndOutline = {
 
 export const WithType = {
   name: 'With Type (B1)',
-
   args: {
     ...defaultArgs,
     type: 'submit',
   },
-
   argTypes: {
     type: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       disable: true,
     },
   },
-
   play: verifyAttribute('type', 'submit'),
 } satisfies Story;
 
 export const WithAriaDescribedby = {
   name: 'With AriaDescribedby (B3)',
-
   args: {
     ...defaultArgs,
     ariaDescribedby: 'araiDescId',
   },
-
   argTypes: {
     ariaDescribedby: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       disable: true,
     },
   },
-
   play: verifyAttribute('aria-describedby', 'araiDescId'),
 } satisfies Story;
 
 export const WithAriaExpanded = {
   name: 'With AriaExpanded (B6)',
-
   args: {
     ...defaultArgs,
     ariaExpanded: true,
   },
-
   argTypes: {
     ariaExpanded: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       disable: true,
     },
   },
-
   play: verifyAttribute('aria-expanded', 'true'),
 } satisfies Story;
 
 export const WithAccesskey = {
   name: 'With AccessKey (B4)',
-
   args: {
     ...defaultArgs,
     accessKey: 'a',
   },
-
   argTypes: {
     accessKey: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       disable: true,
     },
   },
-
   play: verifyAttribute('accessKey', 'a'),
 } satisfies Story;
 
@@ -420,15 +375,12 @@ const EventHandlersTemplate: StoryFn<typeof IconButton> = (args) => {
 export const WithEventHandlers = {
   render: EventHandlersTemplate,
   name: 'With EventHandlers (A2 delvis)',
-
   args: {
     ...defaultArgs,
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const iconButton = canvas.getByRole('button');
@@ -439,5 +391,81 @@ export const WithEventHandlers = {
     await waitFor(() => expect(args.onBlur).toHaveBeenCalled());
     await userEvent.click(iconButton);
     await waitFor(() => expect(args.onClick).toHaveBeenCalled());
+  },
+} satisfies Story;
+
+const TemplateWithSpinner: StoryFn<typeof IconButton> = (args) => (
+  <>
+    <div className={'bottomSpacingXL'}>
+      <IconButton
+        {...args}
+        hasSpinner={false}
+        size={'extraSmall'}
+        className={'marginRightM'}
+        isOutlined
+      />
+      <IconButton
+        {...args}
+        hasSpinner={false}
+        size={'small'}
+        className={'marginRightM'}
+        isOutlined
+      />
+      <IconButton
+        {...args}
+        hasSpinner={false}
+        className={'marginRightM'}
+        isOutlined
+      />
+      <IconButton {...args} hasSpinner={false} size={'large'} isOutlined />
+    </div>
+    <div className={'bottomSpacingXL'}>
+      <IconButton
+        {...args}
+        size={'extraSmall'}
+        className={'marginRightM'}
+        isOutlined
+      />
+      <IconButton
+        {...args}
+        size={'small'}
+        className={'marginRightM'}
+        isOutlined
+      />
+      <IconButton {...args} className={'marginRightM'} isOutlined />
+      <IconButton {...args} size={'large'} isOutlined />
+    </div>
+    <div className={'bottomSpacingXL'}>
+      <IconButton
+        {...args}
+        hasSpinner={false}
+        size={'extraSmall'}
+        className={'marginRightM'}
+      />
+      <IconButton
+        {...args}
+        hasSpinner={false}
+        size={'small'}
+        className={'marginRightM'}
+      />
+      <IconButton {...args} hasSpinner={false} className={'marginRightM'} />
+      <IconButton {...args} hasSpinner={false} size={'large'} />
+    </div>
+    <IconButton {...args} size={'extraSmall'} className={'marginRightM'} />
+    <IconButton {...args} size={'small'} className={'marginRightM'} />
+    <IconButton {...args} className={'marginRightM'} />
+    <IconButton {...args} size={'large'} />
+  </>
+);
+
+export const WithSpinner = {
+  render: TemplateWithSpinner,
+  name: 'With Spinner (A4)',
+  args: {
+    ...defaultArgs,
+    hasSpinner: true,
+  },
+  argTypes: {
+    hasSpinner: { table: { disable: false } },
   },
 } satisfies Story;

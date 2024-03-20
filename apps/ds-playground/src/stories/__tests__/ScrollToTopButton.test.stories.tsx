@@ -1,12 +1,7 @@
 import { ScrollToTopButton } from '@skatteetaten/ds-buttons';
-import { ExternalLayout } from '@skatteetaten/ds-core-utils';
-import { expect } from '@storybook/jest';
+import { ExternalLayout, dsI18n } from '@skatteetaten/ds-core-utils';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { userEvent, within } from '@storybook/testing-library';
-// @skatteeteaten/ds-core-designtokens er angitt som symlink i package.json
-// derfor vil typecheck feile hvis pakken ikke er bygget, derfor bryter vi nx module boundaries her
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import palette from 'libs/ds-core-designtokens/lib/designtokens/palette.json';
+import { expect, userEvent, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
@@ -24,7 +19,6 @@ const meta = {
     id: { table: { disable: true } },
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
-
     // Props
     classNames: {
       table: { disable: true },
@@ -37,13 +31,7 @@ const meta = {
   },
   parameters: {
     backgrounds: {
-      default: 'graphite-70',
-      values: [
-        {
-          name: 'graphite-70',
-          value: palette[':root,\n:host']['--palette-graphite-70'],
-        },
-      ],
+      default: 'grey',
     },
   },
 } satisfies Meta<typeof ScrollToTopButton>;
@@ -66,7 +54,6 @@ const defaultArgs = {
 export const WithRef = {
   render: Template,
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: HTMLButtonElement | null): void => {
@@ -75,17 +62,14 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       disable: true,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     expect(canvas.getByRole('button')).toHaveAttribute(
@@ -98,7 +82,6 @@ export const WithRef = {
 export const WithAttributes = {
   render: Template,
   name: 'With Attributes(FA2-5)',
-
   args: {
     ...defaultArgs,
     id: 'htmlId',
@@ -106,14 +89,12 @@ export const WithAttributes = {
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const scrollToTopButton = canvas.getByRole('button');
@@ -131,7 +112,6 @@ export const WithAttributes = {
 export const WithCustomClassNames = {
   render: Template,
   name: 'With Custom ClassNames (FA3)',
-
   args: {
     ...defaultArgs,
     classNames: {
@@ -142,13 +122,11 @@ export const WithCustomClassNames = {
       label: 'dummyClassname',
     },
   },
-
   argTypes: {
     classNames: {
       table: { disable: false },
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     /* eslint-disable testing-library/no-node-access */
@@ -159,7 +137,9 @@ export const WithCustomClassNames = {
     const iconContainer = button.querySelector('div');
     /* eslint-disable testing-library/no-node-access */
     const icon = canvas.getByRole('img', { hidden: true });
-    const label = canvas.getByText('Til toppen');
+    const label = canvas.getByText(
+      dsI18n.t('ds_buttons:scrolltotopbutton.Title')
+    );
     await expect(container).toHaveClass('dummyClassname');
     await expect(button).toHaveClass('dummyClassname');
     await expect(iconContainer).toHaveClass('dummyClassname');
@@ -171,15 +151,12 @@ export const WithCustomClassNames = {
 export const Defaults = {
   render: Template,
   name: 'Defaults (A1, A3, B4)',
-
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     visibilityThreshold: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} > div > main > div:nth-child(2) > button`,
@@ -187,7 +164,6 @@ export const Defaults = {
       click: `${wrapper} > div > main > div:nth-child(2) > button`,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const scrollToTopButton = canvas.getByText(defaultButtonText);
@@ -199,16 +175,13 @@ export const Defaults = {
 export const WithChildren = {
   render: Template,
   name: 'With Children (A2)',
-
   args: {
     ...defaultArgs,
     children: 'dummy string',
   },
-
   argTypes: {
     children: { table: { disable: false } },
   },
-
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     await expect(canvas.getByText(args.children ?? '')).toBeInTheDocument();
@@ -218,11 +191,9 @@ export const WithChildren = {
 export const WithMobileScreen = {
   render: Template,
   name: 'With Small Screen (A5)',
-
   args: {
     ...defaultArgs,
   },
-
   parameters: {
     viewport: {
       defaultViewport: '--breakpoint-xs',
@@ -233,11 +204,9 @@ export const WithMobileScreen = {
 export const WithWideScreen = {
   render: Template,
   name: 'With Wide Screen (A6)',
-
   args: {
     ...defaultArgs,
   },
-
   parameters: {
     viewport: {
       defaultViewport: '--breakpoint-xl',
@@ -248,16 +217,13 @@ export const WithWideScreen = {
 export const WithVisibilityThreshold = {
   render: Template,
   name: 'With VisibilityThreshold and Scrolling (A7, A8)',
-
   args: {
     ...defaultArgs,
     visibilityThreshold: 3,
   },
-
   argTypes: {
     visibilityThreshold: { table: { disable: false } },
   },
-
   parameters: {
     viewport: {
       defaultViewport: '--breakpoint-xl',
@@ -287,20 +253,16 @@ const TemplateWithShadowDom: StoryFn<typeof ScrollToTopButton> = (args) => {
 export const WithShadowDom = {
   render: TemplateWithShadowDom,
   name: 'With ShadowDom (B4)',
-
   args: {
     ...defaultArgs,
   },
-
   decorators: [webComponent],
-
   parameters: {
     imageSnapshot: {
       disable: true,
     },
     customElementName: 'scrolltotop-customelement',
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     //button finnes ikke utenfor shadowDom

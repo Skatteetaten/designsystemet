@@ -1,15 +1,9 @@
 import { ChangeEvent, FocusEvent, useState } from 'react';
 
-import { formArrSize } from '@skatteetaten/ds-core-utils';
+import { dsI18n, formArrSize } from '@skatteetaten/ds-core-utils';
 import { Select } from '@skatteetaten/ds-forms';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import {
-  fireEvent,
-  userEvent,
-  waitFor,
-  within,
-} from '@storybook/testing-library';
+import { expect, fireEvent, userEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -56,6 +50,7 @@ const meta = {
     // HTML
     autoComplete: { table: { disable: true } },
     disabled: { table: { disable: true } },
+    form: { table: { disable: true } },
     name: { table: { disable: true } },
     required: { table: { disable: true } },
     // Events
@@ -117,12 +112,14 @@ export const WithAttributes = {
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
+    form: 'form123',
   },
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+    form: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -132,6 +129,7 @@ export const WithAttributes = {
     await expect(selectNode).toHaveAttribute('data-testid', '123ID');
     await expect(container).toHaveClass('dummyClassname');
     await expect(container).toHaveAttribute('lang', 'nb');
+    await expect(selectNode).toHaveAttribute('form', 'form123');
   },
 } satisfies Story;
 
@@ -194,7 +192,9 @@ export const Defaults = {
     await expect(selectNode).toBeInTheDocument();
     await expect(selectNode).toBeEnabled();
     await expect(selectNode).toHaveValue('');
-    await expect(selectNode).toHaveTextContent('Velg');
+    await expect(selectNode).toHaveTextContent(
+      dsI18n.t('Shared:shared.ChooseValue')
+    );
     await expect(selectNode).toHaveAttribute('id');
     await expect(selectNode.tagName).toBe('SELECT');
     await expect(selectNode).not.toBeRequired();

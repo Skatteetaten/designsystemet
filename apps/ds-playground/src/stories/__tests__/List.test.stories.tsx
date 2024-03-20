@@ -1,13 +1,11 @@
-import { LinkGroup } from '@skatteetaten/ds-buttons';
 import {
   List,
   listAsArr,
   ListProps,
   Paragraph,
 } from '@skatteetaten/ds-typography';
-import { expect } from '@storybook/jest';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { expect, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 
@@ -52,7 +50,6 @@ const defaultArgs: ListProps = {
 
 export const WithRef = {
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: HTMLUListElement | null): void => {
@@ -61,15 +58,12 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const list = canvas.getByRole('list');
@@ -79,7 +73,6 @@ export const WithRef = {
 
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
-
   args: {
     ...defaultArgs,
     id: 'htmlid',
@@ -87,14 +80,12 @@ export const WithAttributes = {
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const list = canvas.getByRole('list');
@@ -107,18 +98,15 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults Variant Bullet (A1, B1, B2)',
-
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     children: {
       table: { disable: false },
       control: { type: null },
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const list = canvas.getByRole('list');
@@ -129,18 +117,15 @@ export const Defaults = {
 
 export const VariantNumber = {
   name: 'Variant Number(A1, B1)',
-
   args: {
     ...defaultArgs,
     as: 'ol',
   },
-
   argTypes: {
     as: {
       table: { disable: false },
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const list = canvas.getByRole('list');
@@ -151,7 +136,6 @@ export const VariantNumber = {
 
 export const WithLongTextAndBreaking = {
   name: 'With Long Text And Breaking (A1)',
-
   args: {
     ...defaultArgs,
     children: [
@@ -166,7 +150,6 @@ export const WithLongTextAndBreaking = {
       </List.Element>,
     ],
   },
-
   argTypes: {
     children: {
       table: { disable: false },
@@ -177,7 +160,6 @@ export const WithLongTextAndBreaking = {
 
 export const WithMarkup = {
   name: 'With Markup (A2, B2)',
-
   args: {
     ...defaultArgs,
     children: [
@@ -200,14 +182,12 @@ export const WithMarkup = {
       </List.Element>,
     ],
   },
-
   argTypes: {
     children: {
       table: { disable: false },
       control: { type: null },
     },
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} > ul > li a`,
@@ -233,18 +213,15 @@ const TemplateWithTwoParagraph: StoryFn<typeof List> = (args) => (
 export const WithSpacing = {
   render: TemplateWithTwoParagraph,
   name: 'With Spacing (A3)',
-
   args: {
     ...defaultArgs,
     hasSpacing: true,
   },
-
   argTypes: {
     hasSpacing: { table: { disable: false } },
   },
 } satisfies Story;
 
-// TODO Fjerne andre elementer når testprosjektet (FRONT-1008) er på plass
 const TemplateWithVariantsAndAtLeast10ItemsAndOtherComponents: StoryFn<
   typeof List
 > = (args) => (
@@ -293,29 +270,12 @@ const TemplateWithVariantsAndAtLeast10ItemsAndOtherComponents: StoryFn<
         {'Snakk med andre aldri'}
       </List.Element>
     </List>
-    <Paragraph>
-      {
-        'Videre så er en liste med lenker også tatt med for å se hvordan det hele ser ut sammen.'
-      }
-    </Paragraph>
-    <LinkGroup>
-      <LinkGroup.Link key={'linkGroupLink_1'} href={'#storybook-root'}>
-        {'Er du pendler?'}
-      </LinkGroup.Link>
-      <LinkGroup.Link key={'linkGroupLink_2'} href={'#storybook-root'}>
-        {'Pendler du mye?'}
-      </LinkGroup.Link>
-      <LinkGroup.Link key={'linkGroupLink_3'} href={'#storybook-root'}>
-        {'Pendler du dagen lang?'}
-      </LinkGroup.Link>
-    </LinkGroup>
   </>
 );
 
 export const WithBothVariantsAndAtLeast10NumberItems = {
   render: TemplateWithVariantsAndAtLeast10ItemsAndOtherComponents,
   name: 'With Both Variants And At Least 10 Number Items',
-
   args: {
     ...defaultArgs,
   },

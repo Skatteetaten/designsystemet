@@ -9,7 +9,7 @@ import { BaseProps, Position } from '@skatteetaten/ds-core-utils';
 
 type RequiredMegaButtonHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'button'>,
-  'accessKey' | 'disabled' | 'type' | 'onBlur' | 'onClick' | 'onFocus'
+  'accessKey' | 'disabled' | 'form' | 'type' | 'onBlur' | 'onClick' | 'onFocus'
 >;
 
 type InlineButtonHTMLAttributes = Partial<RequiredMegaButtonHTMLAttributes>;
@@ -28,6 +28,10 @@ export interface InlineButtonProps
   children: string;
   /** Posisjonen til ikonet: 'left', 'right'. */
   iconPosition?: Position;
-  /** HTML-path node. Forhåndsdefinerte paths kan importeres fra @skatteetaten/ds-icons pakke. Alternativt kan custom path sendes. */
+  /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
   svgPath?: ReactElement;
+  /** Om knappen skal inneholde Spinner. */
+  hasSpinner?: boolean;
+  /** Overskriver default tekst som leses opp av skjermleser når Spinner snurrer i knappen. */
+  spinnerTitle?: string;
 }

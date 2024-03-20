@@ -1,4 +1,4 @@
-@import 'libs/ds-core-utils/src/styles.scss';
+@import 'libs/ds-core-utils/src/styles';
 
 .modal {
   position: fixed;
@@ -9,14 +9,18 @@
   padding: 0;
   border: 0.25rem solid var(--theme-primary);
   background-color: var(--palette-graphite-0);
-  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 16%), 0 2px 4px -4px rgba(0, 0, 0, 16%);
+  box-shadow: 0 0 8px 2px rgb(0 0 0 / 16%), 0 2px 4px -4px rgb(0 0 0 / 16%);
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-regular);
   line-height: var(--semantic-line-height-article);
   overflow-y: auto;
 
   &::backdrop {
-    background: rgba(255, 255, 255, 80%);
+    background: rgb(255 255 255 / 80%);
+  }
+
+  &Container {
+    outline: none;
   }
 
   &Logo {

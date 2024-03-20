@@ -1,6 +1,6 @@
 import { Blockquote, BlockquoteProps } from '@skatteetaten/ds-typography';
-import { expect } from '@storybook/jest';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { expect } from '@storybook/test';
 import { within } from '@storybook/testing-library';
 
 import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
@@ -33,7 +33,6 @@ const defaultArgs = {
 
 export const WithRef = {
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: HTMLQuoteElement | null): void => {
@@ -42,15 +41,12 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const blockquote = canvas.getByText(loremIpsum);
@@ -60,7 +56,6 @@ export const WithRef = {
 
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
-
   args: {
     ...defaultArgs,
     id: 'htmlId',
@@ -68,14 +63,12 @@ export const WithAttributes = {
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const blockquote = canvas.getByText(loremIpsum);
@@ -88,11 +81,9 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (A1, B1)',
-
   args: {
     ...defaultArgs,
   },
-
   argTypes: {
     children: { table: { disable: false } },
   },
@@ -132,14 +123,12 @@ const TemplateWithMarkup: StoryFn<Exclude<BlockquoteProps, 'children'>> = (
 export const WithMarkup = {
   render: TemplateWithMarkup,
   name: 'With Markup (A2, B1)',
-
   argTypes: {
     children: {
       table: { disable: false },
       control: { type: null },
     },
   },
-
   args: {
     ...defaultArgs,
   },
@@ -161,12 +150,10 @@ const TemplateWithTwoBlockquotes: StoryFn<BlockquoteProps> = (args) => (
 export const WithSpacing = {
   render: TemplateWithTwoBlockquotes,
   name: 'With Spacing (A3)',
-
   args: {
     ...defaultArgs,
     hasSpacing: true,
   },
-
   argTypes: {
     hasSpacing: { table: { disable: false } },
   },

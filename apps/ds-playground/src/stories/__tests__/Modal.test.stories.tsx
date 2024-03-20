@@ -1,13 +1,14 @@
 import { useRef } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Modal } from '@skatteetaten/ds-overlays';
 import { Paragraph } from '@skatteetaten/ds-typography';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { fireEvent, userEvent, within } from '@storybook/testing-library';
+import { expect, userEvent, fireEvent, within } from '@storybook/test';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
+import { webComponent } from '../../../.storybook/webcomponent-decorator';
 import farmerIllustration from '../../assets/farmer-illustration.svg';
 import waitIllustration from '../../assets/wait-alert-illustration.png';
 
@@ -30,7 +31,8 @@ const meta = {
       table: { disable: true },
       control: 'text',
     },
-    disableAutoClose: { table: { disable: true } },
+    dismissOnEsc: { table: { disable: true } },
+    dismissOnOutsideClick: { table: { disable: true } },
     hideCloseButton: { table: { disable: true } },
     hideTitle: { table: { disable: true } },
     imageSource: {
@@ -40,6 +42,7 @@ const meta = {
     },
     imageSourceAltText: { table: { disable: true } },
     padding: { table: { disable: true } },
+    shadowRootNode: { table: { disable: true } },
     title: { table: { disable: true } },
     variant: {
       table: {
@@ -132,7 +135,9 @@ export const Defaults = {
     await expect(modal).toBeInTheDocument();
     const closeButton = canvas.getAllByRole('button')[0];
     await expect(closeButton).toBeInTheDocument();
-    await expect(canvas.getByTitle('Lukk')).toBeInTheDocument();
+    await expect(
+      canvas.getByTitle(dsI18n.t('ds_overlays:modal.CloseModal'))
+    ).toBeInTheDocument();
     await expect(modal.tagName).toBe('DIALOG');
     const heading = canvas.getByText(defaultTitle);
     await expect(heading.tagName).toBe('H1');
@@ -218,6 +223,7 @@ export const WithoutCloseButton = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
     await userEvent.click(button);
+    // TODO mangler test for WithCloseButton
   },
 } satisfies Story;
 
@@ -254,7 +260,7 @@ export const WithVerticalScrolling = {
   render: TemplateWithScroll,
   name: 'With Vertical Scrolling (A12)',
   args: {
-    children: loremIpsum + loremIpsum + loremIpsum + loremIpsum + loremIpsum,
+    children: loremIpsum.repeat(5),
   },
   argTypes: {
     children: { table: { disable: false } },
@@ -283,7 +289,9 @@ export const ClickCloseButton = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
     await userEvent.click(button);
-    const closeButton = canvas.getByTitle('Lukk');
+    const closeButton = canvas.getByTitle(
+      dsI18n.t('ds_overlays:modal.CloseModal')
+    );
     await userEvent.click(closeButton);
     await expect(canvas.queryByRole('dialog')).not.toBeInTheDocument();
   },
@@ -314,10 +322,10 @@ export const WithAutoCloseDisabled = {
   render: TemplateModal,
   name: 'With AutoClose Disabled (A14)',
   args: {
-    disableAutoClose: true,
+    dismissOnOutsideClick: false,
   },
   argTypes: {
-    disableAutoClose: { table: { disable: false } },
+    dismissOnOutsideClick: { table: { disable: false } },
   },
   parameters: {
     imageSnapshot: { disable: true },
@@ -347,5 +355,58 @@ export const WithHideTitle = {
     await userEvent.click(button);
     const heading = canvas.getByRole('heading', { level: 1 });
     await expect(heading).toBeInTheDocument();
+  },
+} satisfies Story;
+
+const TemplateWithShadowDom: StoryFn<typeof Modal> = (args) => {
+  // eslint-disable-next-line testing-library/no-node-access
+  const element = document.querySelector('modal-customelement');
+  const shadowRoot = element?.shadowRoot;
+  const ref = useRef<HTMLDialogElement>(null);
+  return (
+    <>
+      <Button onClick={(): void => ref.current?.showModal()}>
+        {'Åpne modal'}
+      </Button>
+      <Modal ref={ref} {...args} shadowRootNode={shadowRoot ?? undefined}>
+        <Paragraph hasSpacing>{loremIpsum}</Paragraph>
+        <div className={'flex'}>
+          <Button
+            variant={'primary'}
+            onClick={(): void => ref.current?.close()}
+          >
+            {'Lukk'}
+          </Button>
+        </div>
+      </Modal>
+    </>
+  );
+};
+
+export const WithShadowDom = {
+  render: TemplateWithShadowDom,
+  name: 'With ShadowDom Click Outside',
+  decorators: [webComponent],
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
+    a11y: { disable: true },
+    customElementName: 'modal-customelement',
+  },
+  args: {
+    dismissOnOutsideClick: true,
+  },
+  argTypes: {
+    dismissOnOutsideClick: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(canvas.queryByRole('dialog')).not.toBeInTheDocument();
+    // eslint-disable-next-line testing-library/no-node-access
+    const customElement = canvasElement.querySelector(
+      'modal-customelement'
+    ) as HTMLElement;
+    await expect(customElement).toBeInTheDocument();
   },
 } satisfies Story;

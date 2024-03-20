@@ -1,9 +1,8 @@
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
 import { ErrorSummary, TextField } from '@skatteetaten/ds-forms';
 import { Paragraph } from '@skatteetaten/ds-typography';
-import { expect } from '@storybook/jest';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { userEvent, waitFor, within } from '@storybook/testing-library';
+import { expect, userEvent, waitFor, within } from '@storybook/test';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
@@ -54,11 +53,11 @@ const defaultChildren = [
   <ErrorSummary.Error key={'errorSummaryError_2'} referenceId={'id_2'}>
     {'Selger du varer og tjenester for egen regning?'}
   </ErrorSummary.Error>,
+  false,
 ];
 
 export const WithRef = {
   name: 'With Ref (FA1)',
-
   args: {
     ref: (instance: HTMLDivElement | null): void => {
       if (instance) {
@@ -66,15 +65,12 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
@@ -84,7 +80,6 @@ export const WithRef = {
 
 export const WithAttributes = {
   name: 'With Attributes (FA2-5, B1)',
-
   args: {
     id: 'htmlId',
     className: 'dummyClassname',
@@ -92,14 +87,12 @@ export const WithAttributes = {
     'data-testid': '123ID',
     showErrorSummary: true,
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
@@ -113,7 +106,6 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Default (B2, B3 delvis)',
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
@@ -129,37 +121,31 @@ export const Defaults = {
 
 export const WithChildren = {
   name: 'With Children (A1, A2, A3 delvis)',
-
   args: {
     showErrorSummary: true,
     children: defaultChildren,
   },
-
   argTypes: {
     children: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const heading = canvas.getByRole('heading', { level: 2 });
-    await expect(heading).toBeInTheDocument();
+    const listItems = canvas.getAllByRole('listitem');
+    await expect(listItems).toHaveLength(2);
   },
 } satisfies Story;
 
 export const WithContent = {
   name: 'With Content (A1, A5, B1)',
-
   args: {
     showErrorSummary: true,
     title: 'Inntektsmottaker inneholder 2 feil:',
     content: <Paragraph>{loremIpsum}</Paragraph>,
   },
-
   argTypes: {
     content: { table: { disable: false } },
     title: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const icon = canvas.getByRole('img', { hidden: true });
@@ -170,13 +156,11 @@ export const WithContent = {
 
 export const WithChildrenAndContent = {
   name: 'With Children And Content (A1, A3 delvis, A5)',
-
   args: {
     showErrorSummary: true,
     children: defaultChildren,
     content: <Paragraph>{loremIpsum}</Paragraph>,
   },
-
   argTypes: {
     children: { table: { disable: false } },
     content: { table: { disable: false } },
@@ -185,18 +169,15 @@ export const WithChildrenAndContent = {
 
 export const WithChildrenAndContentMobile = {
   name: 'With Children And Content Mobile',
-
   args: {
     showErrorSummary: true,
     children: defaultChildren,
     content: <Paragraph>{loremIpsum}</Paragraph>,
   },
-
   argTypes: {
     children: { table: { disable: false } },
     content: { table: { disable: false } },
   },
-
   parameters: {
     viewport: {
       defaultViewport: '--mobile',
@@ -206,18 +187,15 @@ export const WithChildrenAndContentMobile = {
 
 export const WithChildrenAndContentBreakpointXs = {
   name: 'With Children And Content Breakpoint Xs',
-
   args: {
     showErrorSummary: true,
     children: defaultChildren,
     content: <Paragraph>{loremIpsum}</Paragraph>,
   },
-
   argTypes: {
     children: { table: { disable: false } },
     content: { table: { disable: false } },
   },
-
   parameters: {
     viewport: {
       defaultViewport: '--breakpoint-xs',
@@ -227,17 +205,14 @@ export const WithChildrenAndContentBreakpointXs = {
 
 export const WithTitleAs = {
   name: 'With TitleAs (A2)',
-
   args: {
     showErrorSummary: true,
     titleAs: 'h1',
     children: defaultChildren,
   },
-
   argTypes: {
     titleAs: { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const heading = canvas.getByRole('heading', { level: 1 });
@@ -267,7 +242,6 @@ const TemplateWithInput: StoryFn<typeof ErrorSummary> = () => (
 export const WithInput = {
   render: TemplateWithInput,
   name: 'With Input (A4)',
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
@@ -305,7 +279,6 @@ export const WithShadowRootNode = {
   render: TemplateWithShadowRootNode,
   name: 'With ShadowRootNode',
   decorators: [webComponent],
-
   parameters: {
     a11y: {
       //Stilen som slår av transitions og animations finnes ikke på innsiden av shadowDom
@@ -317,7 +290,6 @@ export const WithShadowRootNode = {
     },
     customElementName: 'errorsummary-customelement',
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     // errorLink finnes ikke utenfor shadowDom

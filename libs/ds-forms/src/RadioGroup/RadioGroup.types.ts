@@ -3,10 +3,13 @@ import {
   ComponentPropsWithoutRef,
   ForwardRefExoticComponent,
   RefAttributes,
-  JSX,
+  ReactNode,
 } from 'react';
 
-import { BaseProps } from '@skatteetaten/ds-core-utils';
+import {
+  BaseProps,
+  FormDiscriminatedRequiredProps,
+} from '@skatteetaten/ds-core-utils';
 
 import { FieldsetProps } from '../Fieldset/Fieldset.types';
 import { RadioProps } from '../Radio/Radio.types';
@@ -31,7 +34,7 @@ type RequiredInputHTMLAttributes = Pick<
 
 type RequiredFieldsetHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'fieldset'>,
-  'disabled'
+  'disabled' | 'form'
 >;
 
 type InputHTMLAttributes = Partial<RequiredInputHTMLAttributes>;
@@ -44,7 +47,7 @@ interface RadioGroupComponentCommonProps
     RequiredFieldsetHTMLAttributes,
     BaseProps {
   /** Radio-komponenter */
-  children: JSX.Element | JSX.Element[];
+  children: ReactNode;
   /** Skjuler navn på gruppen, tilleggstekst og hjelpetekst, men er fortsatt synlig for skjermleser */
   hideLegend?: FieldsetProps['hideLegend'];
   /** Navn på gruppen. */
@@ -62,18 +65,6 @@ interface RadioGroupComponentCommonProps
   /** Definerer stilen til gruppen. */
   variant?: RadioGroupVariant;
 }
-
-type RadioGroupDiscriminatedRequiredProps =
-  | {
-      required: boolean;
-      /** Om obligatorisk gruppe skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
-      showRequiredMark?: FieldsetProps['showRequiredMark'];
-    }
-  | {
-      required?: never;
-      /** Om obligatorisk gruppe skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
-      showRequiredMark?: never;
-    };
 
 type RadioGroupDiscriminatedCheckedProps =
   | {
@@ -104,7 +95,7 @@ type RadioGroupDiscriminatedErrorProps =
     };
 
 export type RadioGroupProps = RadioGroupComponentCommonProps &
-  RadioGroupDiscriminatedRequiredProps &
+  FormDiscriminatedRequiredProps &
   RadioGroupDiscriminatedCheckedProps &
   RadioGroupDiscriminatedErrorProps;
 

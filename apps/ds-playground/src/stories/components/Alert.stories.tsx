@@ -1,22 +1,22 @@
+import { JSX } from 'react';
+
 import { statusArr } from '@skatteetaten/ds-core-utils';
 import { Alert } from '@skatteetaten/ds-status';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
+import { exampleParameters } from '../utils/stories.utils';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Alert,
   title: 'Komponenter/Alert',
   argTypes: {
     // Props
-    children: { table: { category: category.props } },
-    showAlert: { control: 'boolean', table: { category: category.props } },
-    showCloseButton: {
-      control: 'boolean',
-      table: { category: category.props },
-    },
+    children: { control: 'text', table: { category: category.props } },
+    showAlert: { table: { category: category.props } },
+    showCloseButton: { table: { category: category.props } },
     svgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
@@ -27,53 +27,55 @@ export default {
       control: 'radio',
       table: {
         category: category.props,
+        type: { summary: statusArr },
       },
     },
     // Aria
     ariaLive: { table: { category: category.aria } },
   },
-  parameters: {
-    version: getVersion('ds-status'),
-  },
-} satisfies Meta<typeof Alert>;
-
-export const Preview: StoryObj<typeof Alert> = {
   args: {
     children:
       'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.',
     showAlert: true,
     variant: 'neutral',
   },
-};
-
-export const Example: StoryFn<typeof Alert> = (_args) => (
-  <>
-    <Alert
-      variant={'success'}
-      className={'bottomSpacingXL'}
-      showAlert
-      showCloseButton
-    >
-      {'Filen ble lastet opp'}
-    </Alert>
-    <Alert variant={'neutral'} className={'bottomSpacingXL'} showAlert>
-      {
-        'Disse feltene er låst for redigering fordi du har fått et varsel fra oss'
-      }
-    </Alert>
-    <Alert variant={'warning'} className={'bottomSpacingXL'} showAlert>
-      {
-        'Det finnes feil i kjøretøydata. Sjekk at dette ikke har avgiftsmessige konsekvenser.'
-      }
-    </Alert>
-    <Alert variant={'danger'} showAlert>
-      {'Strengt fortrolig (Kode 6)'}
-    </Alert>
-  </>
-);
-
-Example.parameters = {
-  controls: {
-    exclude: /.*/,
+  parameters: {
+    version: getVersion('ds-status'),
   },
-};
+} satisfies Meta<typeof Alert>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Preview: Story = {} satisfies Story;
+
+export const Examples: Story = {
+  render: (_args): JSX.Element => {
+    return (
+      <>
+        <Alert
+          variant={'success'}
+          className={'bottomSpacingXL'}
+          showAlert
+          showCloseButton
+        >
+          {'Filen ble lastet opp'}
+        </Alert>
+        <Alert variant={'neutral'} className={'bottomSpacingXL'} showAlert>
+          {
+            'Disse feltene er låst for redigering fordi du har fått et varsel fra oss'
+          }
+        </Alert>
+        <Alert variant={'warning'} className={'bottomSpacingXL'} showAlert>
+          {
+            'Det finnes feil i kjøretøydata. Sjekk at dette ikke har avgiftsmessige konsekvenser.'
+          }
+        </Alert>
+        <Alert variant={'danger'} showAlert>
+          {'Strengt fortrolig (Kode 6)'}
+        </Alert>
+      </>
+    );
+  },
+} satisfies Story;
+Examples.parameters = exampleParameters;

@@ -9,9 +9,8 @@ import {
 import { densityArr } from '@skatteetaten/ds-core-utils';
 import { SortState, Table, TableProps } from '@skatteetaten/ds-table';
 import { Heading } from '@skatteetaten/ds-typography';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { expect, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 
@@ -263,7 +262,6 @@ const TemplateExpandEditSort: StoryFn<typeof Table> = (args) => (
 export const WithRef = {
   render: Template,
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: HTMLTableElement | null): void => {
@@ -272,15 +270,12 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const table = canvas.getByRole('table');
@@ -292,7 +287,6 @@ export const WithRef = {
 export const WithAttributes = {
   render: Template,
   name: 'With Attributes (FA2-5)',
-
   args: {
     ...defaultArgs,
     id: 'htmlId',
@@ -300,14 +294,12 @@ export const WithAttributes = {
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const table = canvas.getByRole('table');
@@ -321,11 +313,9 @@ export const WithAttributes = {
 export const Defaults = {
   render: Template,
   name: 'Defaults (Table A1, A8, B1, B2, TableRow B1, A20)',
-
   args: {
     ...defaultArgs,
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     await expect(canvas.getByText(caption)).toBeInTheDocument();
@@ -336,12 +326,10 @@ export const Defaults = {
 export const WithVariantCompact = {
   render: TemplateExpandEditSort,
   name: 'Variant compact(Table A1, A3, TableHeader A2, TableRow A3, A17, A19, A20)',
-
   args: {
     ...defaultArgs,
     variant: 'compact',
   },
-
   argTypes: {
     variant: { table: { disable: false } },
   },
@@ -434,7 +422,6 @@ const TemplateAlignment: StoryFn<typeof Table> = (args) => (
 export const WithFullWidthAndTextAlignment = {
   render: TemplateAlignment,
   name: 'With Full Width, text Alignment (Table A4, A10, TableHeader A1, TableRow A2)',
-
   args: {
     ...defaultArgs,
     hasFullWidth: true,
@@ -444,11 +431,9 @@ export const WithFullWidthAndTextAlignment = {
 export const WithExpandEditSort = {
   render: TemplateExpandEditSort,
   name: 'With Expand Edit Sort (Table A9, A11, A14, A15, TableHeader A4, A5, A6, A7, B2, TableRow B3, A14, A15, A19)',
-
   args: {
     ...defaultArgs,
   },
-
   parameters: {
     imageSnapshot: {
       hover: [
@@ -473,11 +458,9 @@ export const WithExpandEditSort = {
 export const WithWideScreen = {
   render: TemplateExpandEditSort,
   name: 'With Wide screen (Table A1, A2)',
-
   args: {
     ...defaultArgs,
   },
-
   parameters: {
     viewport: {
       defaultViewport: '--breakpoint-m',

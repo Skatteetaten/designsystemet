@@ -4,12 +4,14 @@ const config = getJestConfig();
 
 module.exports = {
   ...config,
+  bail: true,
   testTimeout: 30000,
   verbose: true,
   testMatch: [
     '<rootDir>/apps/ds-playground/src/stories/__tests__/**/*test.stories.mdx',
     '<rootDir>/apps/ds-playground/src/stories/__tests__/**/*test.stories.@(js|jsx|ts|tsx)',
   ],
+  modulePathIgnorePatterns: ['<rootDir>/dist', '<rootDir>/.nx'],
   reporters: [
     ...config.reporters,
     'jest-image-snapshot/src/outdated-snapshot-reporter.js',

@@ -1,7 +1,17 @@
-# ds-overlays
+# Skatteetatens designsystem ds-overlays
 
-This library was generated with [Nx](https://nx.dev).
+Designsystemet består av byggeklosser i form av React-komponenter som brukes til å lage Skatteetatens løsninger på digitale flater.
 
-## Running unit tests
+## Kom i gang
 
-Run `nx test ds-overlays` to execute the unit tests via [Jest](https://jestjs.io).
+På [kom i gang for utviklere](https://www.skatteetaten.no/stilogtone/designsystemet/kom-i-gang/for-utviklere/) finner du en oppskrift på hvordan du skal bruke komponentene.
+
+## Installasjon
+
+```
+npm i @skatteetaten/ds-overlays
+```
+
+## Innhold
+
+- Modal

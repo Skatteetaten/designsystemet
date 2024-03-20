@@ -69,6 +69,7 @@ exports[`Tester/Checkbox WithAttributes play-test 1`] = `
     <input id="htmlid"
            class="Checkbox_input__fDeJ7"
            data-testid="123ID"
+           form="123form"
            type="checkbox"
            value
     >

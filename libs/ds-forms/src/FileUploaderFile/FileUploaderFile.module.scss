@@ -1,0 +1,62 @@
+.successIcon {
+  margin-top: var(--spacing-s);
+  margin-left: var(--spacing-s);
+  fill: var(--semantic-success-foreground);
+}
+
+.cancelIcon {
+  margin-top: 3px;
+}
+
+.spinner {
+  display: inline-flex;
+  margin-left: var(--spacing-s);
+}
+
+.fileList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  &Item {
+    margin-bottom: var(--spacing-s);
+  }
+
+  &Grid {
+    display: grid;
+    grid-template-areas: 'type check';
+  }
+
+  &Text {
+    padding: var(--spacing-s) 0;
+    grid-area: 'type';
+  }
+
+  &Icon {
+    margin-right: var(--spacing-s);
+    grid-area: 'check';
+  }
+
+  &Container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &Link {
+    margin-left: auto;
+  }
+
+  &File {
+    padding-top: var(--spacing-s);
+    padding-bottom: var(--spacing-s);
+    color: var(--palette-graphite-70);
+    grid-area: 'type';
+    line-height: var(--semantic-line-height-article);
+
+    &Error {
+      // bredde på IconButton + litt luft
+      margin-right: calc(var(--size-medium) + var(--spacing-s));
+      margin-left: var(--spacing-l);
+    }
+  }
+}

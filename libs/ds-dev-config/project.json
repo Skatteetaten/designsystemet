@@ -31,13 +31,18 @@
             "glob": "**/*",
             "input": "libs/ds-dev-config/build",
             "output": "build"
+          },
+          {
+            "glob": "LICENSE",
+            "input": ".",
+            "output": "."
           }
         ],
         "babelUpwardRootMode": true
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
@@ -50,8 +55,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/ds-dev-config"],
       "options": {
-        "jestConfig": "libs/ds-dev-config/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/ds-dev-config/jest.config.ts"
       }
     },
     "tsc": {
@@ -70,8 +74,7 @@
     "publish": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "npm publish {args.switches}",
-        "cwd": "dist/libs/ds-dev-config"
+        "command": "npm publish dist/libs/ds-dev-config {args.switches}"
       }
     }
   }

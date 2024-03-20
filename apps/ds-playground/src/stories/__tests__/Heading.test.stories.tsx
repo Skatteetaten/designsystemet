@@ -4,9 +4,8 @@ import {
   HeadingProps,
   headingLevelArr,
 } from '@skatteetaten/ds-typography';
-import { expect } from '@storybook/jest';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { expect, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 
@@ -47,7 +46,6 @@ const defaultArgs: HeadingProps = {
 
 export const WithRef = {
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: HTMLHeadingElement | null): void => {
@@ -56,13 +54,10 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: { imageSnapshot: { disable: true } },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const heading = canvas.getByRole('heading');
@@ -72,7 +67,6 @@ export const WithRef = {
 
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
-
   args: {
     ...defaultArgs,
     id: 'htmlId',
@@ -80,14 +74,12 @@ export const WithAttributes = {
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const heading = canvas.getByRole('heading');
@@ -113,11 +105,9 @@ const TemplateWithAllLevels: StoryFn<typeof Heading> = (args) => (
 export const Defaults = {
   render: TemplateWithAllLevels,
   name: 'Defaults All Levels (A1, A2)',
-
   args: {
     ...defaultArgs,
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const headings = canvas.getAllByRole('heading', { level: 2 });
@@ -133,11 +123,9 @@ export const Defaults = {
 export const DefaultsMobile = {
   render: TemplateWithAllLevels,
   name: 'Defaults All Levels On Small Screen (A1, A2)',
-
   args: {
     ...defaultArgs,
   },
-
   parameters: {
     viewport: {
       defaultViewport: '--breakpoint-xs',
@@ -148,12 +136,10 @@ export const DefaultsMobile = {
 export const LevelsWithSpacing = {
   render: TemplateWithAllLevels,
   name: 'With Spacing All Levels (A4)',
-
   args: {
     ...defaultArgs,
     hasSpacing: true,
   },
-
   argTypes: {
     hasSpacing: {
       table: { disable: false },
@@ -164,18 +150,15 @@ export const LevelsWithSpacing = {
 export const LevelsWithSpacingMobile = {
   render: TemplateWithAllLevels,
   name: 'With Spacing All Levels On Small Screen (A4)',
-
   args: {
     ...defaultArgs,
     hasSpacing: true,
   },
-
   argTypes: {
     hasSpacing: {
       table: { disable: false },
     },
   },
-
   parameters: {
     viewport: {
       defaultViewport: '--breakpoint-xs',
@@ -196,17 +179,14 @@ const AsTemplate: StoryFn<typeof Heading> = (args) => (
 export const WithAs = {
   render: AsTemplate,
   name: 'With As (B1)',
-
   args: {
     ...defaultArgs,
   },
-
   parameters: {
     viewport: {
       viewPortHeight: 1200,
     },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const headings = canvas.getAllByRole('heading');
@@ -236,19 +216,16 @@ const TemplateWithMarkup: StoryFn<typeof Heading> = (args) => (
 export const WithMarkup = {
   render: TemplateWithMarkup,
   name: 'With Markup And String (A3, B2)',
-
   args: {
     ...defaultArgs,
     children: 'Dette er den fineste string headingen uten markup',
   },
-
   argTypes: {
     children: {
       table: { disable: false },
       control: { type: null },
     },
   },
-
   parameters: {
     imageSnapshot: {
       hover: `${wrapper} > h2 > a`,

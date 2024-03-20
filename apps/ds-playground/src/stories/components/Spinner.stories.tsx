@@ -1,65 +1,79 @@
+import { dsI18n, sizeArr } from '@skatteetaten/ds-core-utils';
 import {
   Spinner,
-  spinnerColorArr,
-  spinnerPositionArr,
+  getSpinnerColorDefault,
+  getSpinnerSizeDefault,
+  getSpinnerTitlePositionDefault,
   spinnerSizeArr,
-} from '@skatteetaten/ds-status';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+} from '@skatteetaten/ds-progress';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
+import { exampleParameters } from '../utils/stories.utils';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: Spinner,
   title: 'Komponenter/Spinner',
   argTypes: {
     // Props
-    children: { table: { category: category.props }, control: 'text' },
+    children: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: dsI18n.t('ds_status:spinner.LoadingLabel') },
+      },
+    },
     size: {
-      table: { category: category.props },
-      control: 'inline-radio',
       options: [...spinnerSizeArr],
+      control: 'inline-radio',
+      table: {
+        category: category.props,
+        defaultValue: { summary: getSpinnerSizeDefault() },
+        type: { summary: sizeArr.slice(1, 4) },
+      },
     },
     titlePosition: {
-      table: { category: category.props },
       control: 'inline-radio',
-      options: [...spinnerPositionArr],
+      table: {
+        category: category.props,
+        defaultValue: { summary: getSpinnerTitlePositionDefault() },
+      },
     },
     color: {
-      table: { category: category.props },
       control: 'inline-radio',
-      options: [...spinnerColorArr],
+      table: {
+        category: category.props,
+        defaultValue: { summary: getSpinnerColorDefault() },
+      },
     },
-    hideTitle: {
-      control: 'boolean',
-      table: { category: category.props },
-    },
+    hideTitle: { table: { category: category.props } },
   },
   parameters: {
-    version: getVersion('ds-status'),
+    version: getVersion('ds-progress'),
   },
 } satisfies Meta<typeof Spinner>;
 
-export const Preview: StoryObj<typeof Spinner> = {};
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Example: StoryFn<typeof Spinner> = (_args) => (
-  <>
-    <Spinner
-      className={'bottomSpacingXL'}
-      size={'large'}
-      color={'blue'}
-      titlePosition={'right'}
-    >
-      {'Vent litt mens vi sjekker tidligere innsendte a-meldinger'}
-    </Spinner>
+export const Preview: Story = {} satisfies Story;
 
-    <Spinner size={'small'} color={'blue'} titlePosition={'right'}>
-      {'Vent litt mens vi sjekker tidligere innsendte a-meldinger'}
-    </Spinner>
-  </>
-);
-Example.parameters = {
-  controls: {
-    exclude: /.*/,
-  },
-};
+export const Examples: Story = {
+  render: (_args) => (
+    <>
+      <Spinner
+        className={'bottomSpacingXL'}
+        size={'large'}
+        color={'blue'}
+        titlePosition={'right'}
+      >
+        {'Vent litt mens vi sjekker tidligere innsendte a-meldinger'}
+      </Spinner>
+
+      <Spinner size={'small'} color={'blue'} titlePosition={'right'}>
+        {'Vent litt mens vi sjekker tidligere innsendte a-meldinger'}
+      </Spinner>
+    </>
+  ),
+} satisfies Story;
+Examples.parameters = exampleParameters;

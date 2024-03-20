@@ -4,24 +4,19 @@ def jenkinsfile
 
 def publishToNpmOverride = { Map<String, Object> props  ->
   if (props.publishToNpm) {
-    if (props.nodeVersion == '16'  || props.nodeVersion == '18') {
-      echo 'The registry is specified as a workaround for https://github.com/npm/cli/issues/2453'
-      sh "npx nx affected --head=HEAD --base=${props.scmVars.GIT_PREVIOUS_SUCCESSFUL_COMMIT ?: 'HEAD~1'} --target=publish --switches='--registry https://nexus.sits.no/repository/npm-internal/'"
-    } else {
-      sh "npx nx affected --head=HEAD --base=${props.scmVars.GIT_PREVIOUS_SUCCESSFUL_COMMIT ?: 'HEAD~1'} --target=publish --switches=''"
-    }
+    sh "npx nx affected --head=HEAD --base=${props.scmVars.GIT_PREVIOUS_SUCCESSFUL_COMMIT ?: 'HEAD~1'} --target=publish --switches=''"
   }
 }
 
+def publishToNpmJsOverride = { Map<String, Object> props  ->
+  if (props.npmjs.publish) {
+    sh "npx nx affected --head=HEAD --base=${props.scmVars.GIT_PREVIOUS_SUCCESSFUL_COMMIT ?: 'HEAD~1'} --target=publish --switches='--registry https://registry.npmjs.org/ --access public'"
+  }
+}
 
 def publishSnapshotToNpmOverride = { Map<String, Object> props  ->
   if (props.publishSnapshotToNpm) {
-    if (props.nodeVersion == '16' || props.nodeVersion == '18') {
-      echo 'The registry is specified as a workaround for https://github.com/npm/cli/issues/2453'
-      sh "npx nx affected --head=HEAD --base origin/master --target=publish --switches='--tag ${props.branchVersion} --registry https://nexus.sits.no/repository/npm-internal/'"
-    } else {
-      sh "npx nx affected --head=HEAD --base origin/master --target=publish --switches='--tag ${props.branchVersion}'"
-    }
+    sh "npx nx affected --head=HEAD --base origin/master --target=publish --switches='--tag ${props.branchVersion}'"
   }
 }
 
@@ -38,16 +33,27 @@ def overrides = [
     iqOrganizationName           : 'Team Designsystem',
     sonarQube                    : true,
     npmInstallCommand            : "ci",
-    nodeVersion                  : "18",
+    nodeVersion                  : "20",
     disableAllReports            : false,
     lineCoverageReport           : false,
     publishToNpm                 : true,
     publishToNpmOverride         : publishToNpmOverride,
+    publishToNpmJsOverride       : publishToNpmJsOverride,
     publishSnapshotToNpm         : true,
     publishSnapshotToNpmOverride : publishSnapshotToNpmOverride,
+    npmjs                    : [
+        publish              : env.BRANCH_NAME == "master",
+        prepareCmd           : "run build:preparePublish"
+    ],
+    github                 : [
+        enabled              : true,
+        push                 : env.BRANCH_NAME == "master",
+        repoUrl              : "https://github.com/Skatteetaten/designsystemet.git",
+        deployToGHPagesCmd   : "npm run deploy:gh-pages"
+    ],
     preCompile                   : preCompile,
     npmPublishFolder             : './dist/libs',
-    versionStrategy              : [[branch: 'master', versionHint: '0.5', minorOnPrefixes: 'release/']],
+    versionStrategy              : [[branch: 'master', versionHint: '0.6', minorOnPrefixes: 'release/']],
     createBuildEnvs              : { props -> "STORYBOOK_BUILD_VERSION=${props.version}" },
 ]
 

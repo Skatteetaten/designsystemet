@@ -1,39 +1,36 @@
 import { MegaButton } from '@skatteetaten/ds-buttons';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import {
+  dsI18n,
+  getCommonButtonTypeDefault,
+} from '@skatteetaten/ds-core-utils';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
+import { exampleParameters } from '../utils/stories.utils';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: MegaButton,
   title: 'Komponenter/MegaButton',
   argTypes: {
     // Props
     children: { table: { category: category.props } },
-    isExternal: {
-      control: 'boolean',
+    hasSpinner: { table: { category: category.props } },
+    spinnerTitle: {
       table: {
         category: category.props,
+        defaultValue: { summary: dsI18n.t('ds_status:spinner.LoadingLabel') },
       },
     },
+    isExternal: { table: { category: category.props } },
     // HTML
-    accessKey: {
-      control: 'text',
-      table: { category: category.htmlAttribute },
-    },
-    disabled: {
-      control: 'boolean',
-      table: {
-        category: category.htmlAttribute,
-      },
-    },
-    href: {
-      table: { category: category.htmlAttribute },
-    },
+    accessKey: { table: { category: category.htmlAttribute } },
+    disabled: { table: { category: category.htmlAttribute } },
+    href: { table: { category: category.htmlAttribute } },
     type: {
       table: {
         category: category.htmlAttribute,
-        defaultValue: { summary: 'button' },
+        defaultValue: { summary: getCommonButtonTypeDefault() },
       },
     },
     // Aria
@@ -43,23 +40,20 @@ export default {
     onFocus: { ...htmlEventDescription },
     onBlur: { ...htmlEventDescription },
   },
+  args: {
+    children: 'Klikk her',
+  },
   parameters: {
     version: getVersion('ds-buttons'),
   },
 } satisfies Meta<typeof MegaButton>;
 
-export const Preview: StoryObj<typeof MegaButton> = {
-  args: {
-    children: 'Klikk her',
-  },
-};
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Example: StoryFn<typeof MegaButton> = (_args) => (
-  <MegaButton>{'Se eller endre skattekortet'}</MegaButton>
-);
+export const Preview: Story = {} satisfies Story;
 
-Example.parameters = {
-  controls: {
-    exclude: /.*/,
-  },
-};
+export const Examples: Story = {
+  render: (_args) => <MegaButton>{'Se eller endre skattekortet'}</MegaButton>,
+} satisfies Story;
+Examples.parameters = exampleParameters;

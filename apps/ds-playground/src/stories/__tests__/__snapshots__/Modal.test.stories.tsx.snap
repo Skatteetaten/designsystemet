@@ -16,13 +16,8 @@ exports[`Tester/Modal ClickCloseButton play-test 1`] = `
           aria-labelledby="modalHeadingId-:rh:"
   >
     <div tabindex="-1"
-         class="Modal_modalPaddingL__TAljg"
+         class="Modal_modalContainer__O6yz0"
     >
-      <h1 id="modalHeadingId-:rh:"
-          class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
-      >
-        Vil du erstatte nye opplysninger fra fil?
-      </h1>
       <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
               type="button"
       >
@@ -34,30 +29,37 @@ exports[`Tester/Modal ClickCloseButton play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:ri:">
-            Lukk
+            Lukk dialogvindu
           </title>
           <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
           </path>
         </svg>
       </button>
-      <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
-        Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
-      </p>
-      <div class="flex">
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
-                type="button"
+      <div class="Modal_modalPaddingL__TAljg">
+        <h1 id="modalHeadingId-:rh:"
+            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
         >
-          <span class="Button_buttonText__JxyB+">
-            Erstatt opplysninger
-          </span>
-        </button>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
-                type="button"
-        >
-          <span class="Button_buttonText__JxyB+">
-            Avbryt
-          </span>
-        </button>
+          Vil du erstatte nye opplysninger fra fil?
+        </h1>
+        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+          Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
+        </p>
+        <div class="flex">
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              Erstatt opplysninger
+            </span>
+          </button>
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              Avbryt
+            </span>
+          </button>
+        </div>
       </div>
     </div>
   </dialog>
@@ -81,13 +83,8 @@ exports[`Tester/Modal Defaults play-test 1`] = `
           open
   >
     <div tabindex="-1"
-         class="Modal_modalPaddingL__TAljg"
+         class="Modal_modalContainer__O6yz0"
     >
-      <h1 id="modalHeadingId-:r2:"
-          class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
-      >
-        Vil du erstatte nye opplysninger fra fil?
-      </h1>
       <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
               type="button"
       >
@@ -99,30 +96,37 @@ exports[`Tester/Modal Defaults play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:r3:">
-            Lukk
+            Lukk dialogvindu
           </title>
           <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
           </path>
         </svg>
       </button>
-      <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
-        Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
-      </p>
-      <div class="flex">
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
-                type="button"
+      <div class="Modal_modalPaddingL__TAljg">
+        <h1 id="modalHeadingId-:r2:"
+            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
         >
-          <span class="Button_buttonText__JxyB+">
-            Erstatt opplysninger
-          </span>
-        </button>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
-                type="button"
-        >
-          <span class="Button_buttonText__JxyB+">
-            Avbryt
-          </span>
-        </button>
+          Vil du erstatte nye opplysninger fra fil?
+        </h1>
+        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+          Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
+        </p>
+        <div class="flex">
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              Erstatt opplysninger
+            </span>
+          </button>
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              Avbryt
+            </span>
+          </button>
+        </div>
       </div>
     </div>
   </dialog>
@@ -146,17 +150,8 @@ exports[`Tester/Modal VariantImportant play-test 1`] = `
           open
   >
     <div tabindex="-1"
-         class="Modal_modalPaddingL__TAljg"
+         class="Modal_modalContainer__O6yz0"
     >
-      <img class="SkatteetatenLogo_logo__v9edG Modal_modalLogo__jKJF2"
-           src="SKESquare40.a88db78d5543d5d19206800f9f8cf4cd.svg"
-           alt="Skatteetaten logo"
-      >
-      <h1 id="modalHeadingId-:r6:"
-          class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
-      >
-        Vil du erstatte nye opplysninger fra fil?
-      </h1>
       <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
               type="button"
       >
@@ -168,36 +163,47 @@ exports[`Tester/Modal VariantImportant play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:r7:">
-            Lukk
+            Lukk dialogvindu
           </title>
           <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
           </path>
         </svg>
       </button>
-      <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
-        Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
-      </p>
-      <div class="flex">
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
-                type="button"
+      <div class="Modal_modalPaddingL__TAljg">
+        <img class="SkatteetatenLogo_logo__v9edG Modal_modalLogo__jKJF2"
+             src="SKESquare40.a88db78d5543d5d19206800f9f8cf4cd.svg"
+             alt="Skatteetaten logo"
         >
-          <span class="Button_buttonText__JxyB+">
-            Erstatt opplysninger
-          </span>
-        </button>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
-                type="button"
+        <h1 id="modalHeadingId-:r6:"
+            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
         >
-          <span class="Button_buttonText__JxyB+">
-            Avbryt
-          </span>
-        </button>
+          Vil du erstatte nye opplysninger fra fil?
+        </h1>
+        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+          Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
+        </p>
+        <div class="flex">
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              Erstatt opplysninger
+            </span>
+          </button>
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              Avbryt
+            </span>
+          </button>
+        </div>
       </div>
-    </div>
-    <div class="Separator_separator__d97SR">
-      <div class="Separator_separatorLeft__pT4Sa">
-      </div>
-      <div class="Separator_separatorRight__G8gOn">
+      <div class="Separator_separator__d97SR">
+        <div class="Separator_separatorLeft__pT4Sa">
+        </div>
+        <div class="Separator_separatorRight__G8gOn">
+        </div>
       </div>
     </div>
   </dialog>
@@ -221,13 +227,8 @@ exports[`Tester/Modal VariantPlain play-test 1`] = `
           open
   >
     <div tabindex="-1"
-         class="Modal_modalPaddingL__TAljg"
+         class="Modal_modalContainer__O6yz0"
     >
-      <h1 id="modalHeadingId-:r4:"
-          class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
-      >
-        Vil du erstatte nye opplysninger fra fil?
-      </h1>
       <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
               type="button"
       >
@@ -239,30 +240,37 @@ exports[`Tester/Modal VariantPlain play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:r5:">
-            Lukk
+            Lukk dialogvindu
           </title>
           <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
           </path>
         </svg>
       </button>
-      <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
-        Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
-      </p>
-      <div class="flex">
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
-                type="button"
+      <div class="Modal_modalPaddingL__TAljg">
+        <h1 id="modalHeadingId-:r4:"
+            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
         >
-          <span class="Button_buttonText__JxyB+">
-            Erstatt opplysninger
-          </span>
-        </button>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
-                type="button"
-        >
-          <span class="Button_buttonText__JxyB+">
-            Avbryt
-          </span>
-        </button>
+          Vil du erstatte nye opplysninger fra fil?
+        </h1>
+        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+          Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
+        </p>
+        <div class="flex">
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              Erstatt opplysninger
+            </span>
+          </button>
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              Avbryt
+            </span>
+          </button>
+        </div>
       </div>
     </div>
   </dialog>
@@ -289,13 +297,8 @@ exports[`Tester/Modal WithAttributes play-test 1`] = `
           open
   >
     <div tabindex="-1"
-         class="Modal_modalPaddingL__TAljg"
+         class="Modal_modalContainer__O6yz0"
     >
-      <h1 id="modalHeadingId-:r0:"
-          class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
-      >
-        Vil du erstatte nye opplysninger fra fil?
-      </h1>
       <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
               type="button"
       >
@@ -307,30 +310,37 @@ exports[`Tester/Modal WithAttributes play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:r1:">
-            Lukk
+            Lukk dialogvindu
           </title>
           <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
           </path>
         </svg>
       </button>
-      <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
-        Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
-      </p>
-      <div class="flex">
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
-                type="button"
+      <div class="Modal_modalPaddingL__TAljg">
+        <h1 id="modalHeadingId-:r0:"
+            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
         >
-          <span class="Button_buttonText__JxyB+">
-            Erstatt opplysninger
-          </span>
-        </button>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
-                type="button"
-        >
-          <span class="Button_buttonText__JxyB+">
-            Avbryt
-          </span>
-        </button>
+          Vil du erstatte nye opplysninger fra fil?
+        </h1>
+        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+          Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
+        </p>
+        <div class="flex">
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              Erstatt opplysninger
+            </span>
+          </button>
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              Avbryt
+            </span>
+          </button>
+        </div>
       </div>
     </div>
   </dialog>
@@ -353,13 +363,8 @@ exports[`Tester/Modal WithAutoClose play-test 1`] = `
           aria-labelledby="modalHeadingId-:rj:"
   >
     <div tabindex="-1"
-         class="Modal_modalPaddingL__TAljg"
+         class="Modal_modalContainer__O6yz0"
     >
-      <h1 id="modalHeadingId-:rj:"
-          class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
-      >
-        Vil du erstatte nye opplysninger fra fil?
-      </h1>
       <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
               type="button"
       >
@@ -371,30 +376,37 @@ exports[`Tester/Modal WithAutoClose play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:rk:">
-            Lukk
+            Lukk dialogvindu
           </title>
           <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
           </path>
         </svg>
       </button>
-      <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
-        Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
-      </p>
-      <div class="flex">
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
-                type="button"
+      <div class="Modal_modalPaddingL__TAljg">
+        <h1 id="modalHeadingId-:rj:"
+            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
         >
-          <span class="Button_buttonText__JxyB+">
-            Erstatt opplysninger
-          </span>
-        </button>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
-                type="button"
-        >
-          <span class="Button_buttonText__JxyB+">
-            Avbryt
-          </span>
-        </button>
+          Vil du erstatte nye opplysninger fra fil?
+        </h1>
+        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+          Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
+        </p>
+        <div class="flex">
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              Erstatt opplysninger
+            </span>
+          </button>
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              Avbryt
+            </span>
+          </button>
+        </div>
       </div>
     </div>
   </dialog>
@@ -418,13 +430,8 @@ exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
           open
   >
     <div tabindex="-1"
-         class="Modal_modalPaddingL__TAljg"
+         class="Modal_modalContainer__O6yz0"
     >
-      <h1 id="modalHeadingId-:rl:"
-          class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
-      >
-        Vil du erstatte nye opplysninger fra fil?
-      </h1>
       <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
               type="button"
       >
@@ -436,30 +443,37 @@ exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:rm:">
-            Lukk
+            Lukk dialogvindu
           </title>
           <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
           </path>
         </svg>
       </button>
-      <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
-        Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
-      </p>
-      <div class="flex">
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
-                type="button"
+      <div class="Modal_modalPaddingL__TAljg">
+        <h1 id="modalHeadingId-:rl:"
+            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
         >
-          <span class="Button_buttonText__JxyB+">
-            Erstatt opplysninger
-          </span>
-        </button>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
-                type="button"
-        >
-          <span class="Button_buttonText__JxyB+">
-            Avbryt
-          </span>
-        </button>
+          Vil du erstatte nye opplysninger fra fil?
+        </h1>
+        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+          Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
+        </p>
+        <div class="flex">
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              Erstatt opplysninger
+            </span>
+          </button>
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              Avbryt
+            </span>
+          </button>
+        </div>
       </div>
     </div>
   </dialog>
@@ -483,13 +497,8 @@ exports[`Tester/Modal WithHideTitle play-test 1`] = `
           open
   >
     <div tabindex="-1"
-         class="Modal_modalPaddingL__TAljg"
+         class="Modal_modalContainer__O6yz0"
     >
-      <h1 id="modalHeadingId-:rn:"
-          class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv  Modal_srOnly__cHEpw"
-      >
-        Vil du erstatte nye opplysninger fra fil?
-      </h1>
       <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
               type="button"
       >
@@ -501,30 +510,37 @@ exports[`Tester/Modal WithHideTitle play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:ro:">
-            Lukk
+            Lukk dialogvindu
           </title>
           <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
           </path>
         </svg>
       </button>
-      <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
-        Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
-      </p>
-      <div class="flex">
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
-                type="button"
+      <div class="Modal_modalPaddingL__TAljg">
+        <h1 id="modalHeadingId-:rn:"
+            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv  Modal_srOnly__cHEpw"
         >
-          <span class="Button_buttonText__JxyB+">
-            Erstatt opplysninger
-          </span>
-        </button>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
-                type="button"
-        >
-          <span class="Button_buttonText__JxyB+">
-            Avbryt
-          </span>
-        </button>
+          Vil du erstatte nye opplysninger fra fil?
+        </h1>
+        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+          Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
+        </p>
+        <div class="flex">
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              Erstatt opplysninger
+            </span>
+          </button>
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              Avbryt
+            </span>
+          </button>
+        </div>
       </div>
     </div>
   </dialog>
@@ -547,18 +563,9 @@ exports[`Tester/Modal WithImage play-test 1`] = `
           aria-labelledby="modalHeadingId-:r8:"
           open
   >
-    <img src="wait-alert-illustration.png"
-         alt="Image alt tekst"
-         class="Modal_modalIllustration__Di203"
-    >
     <div tabindex="-1"
-         class="Modal_modalPaddingL__TAljg Modal_modalNoPaddingTop__sOcSE"
+         class="Modal_modalContainer__O6yz0"
     >
-      <h1 id="modalHeadingId-:r8:"
-          class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
-      >
-        Vil du erstatte nye opplysninger fra fil?
-      </h1>
       <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
               type="button"
       >
@@ -570,30 +577,41 @@ exports[`Tester/Modal WithImage play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:r9:">
-            Lukk
+            Lukk dialogvindu
           </title>
           <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
           </path>
         </svg>
       </button>
-      <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
-        Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
-      </p>
-      <div class="flex">
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
-                type="button"
+      <img src="wait-alert-illustration.png"
+           alt="Image alt tekst"
+           class="Modal_modalIllustration__Di203"
+      >
+      <div class="Modal_modalPaddingL__TAljg Modal_modalNoPaddingTop__sOcSE">
+        <h1 id="modalHeadingId-:r8:"
+            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
         >
-          <span class="Button_buttonText__JxyB+">
-            Erstatt opplysninger
-          </span>
-        </button>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
-                type="button"
-        >
-          <span class="Button_buttonText__JxyB+">
-            Avbryt
-          </span>
-        </button>
+          Vil du erstatte nye opplysninger fra fil?
+        </h1>
+        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+          Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
+        </p>
+        <div class="flex">
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              Erstatt opplysninger
+            </span>
+          </button>
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              Avbryt
+            </span>
+          </button>
+        </div>
       </div>
     </div>
   </dialog>
@@ -617,13 +635,8 @@ exports[`Tester/Modal WithPadding play-test 1`] = `
           open
   >
     <div tabindex="-1"
-         class="Modal_modalPaddingNONE__hHaff"
+         class="Modal_modalContainer__O6yz0"
     >
-      <h1 id="modalHeadingId-:rd:"
-          class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
-      >
-        Vil du erstatte nye opplysninger fra fil?
-      </h1>
       <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
               type="button"
       >
@@ -635,33 +648,47 @@ exports[`Tester/Modal WithPadding play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:re:">
-            Lukk
+            Lukk dialogvindu
           </title>
           <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
           </path>
         </svg>
       </button>
-      <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
-        Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
-      </p>
-      <div class="flex">
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
-                type="button"
+      <div class="Modal_modalPaddingNONE__hHaff">
+        <h1 id="modalHeadingId-:rd:"
+            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
         >
-          <span class="Button_buttonText__JxyB+">
-            Erstatt opplysninger
-          </span>
-        </button>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
-                type="button"
-        >
-          <span class="Button_buttonText__JxyB+">
-            Avbryt
-          </span>
-        </button>
+          Vil du erstatte nye opplysninger fra fil?
+        </h1>
+        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+          Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
+        </p>
+        <div class="flex">
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              Erstatt opplysninger
+            </span>
+          </button>
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              Avbryt
+            </span>
+          </button>
+        </div>
       </div>
     </div>
   </dialog>
+</div>
+`;
+
+exports[`Tester/Modal WithShadowDom play-test 1`] = `
+<div data-test-block="true">
+  <modal-customelement>
+  </modal-customelement>
 </div>
 `;
 
@@ -682,13 +709,8 @@ exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
           open
   >
     <div tabindex="-1"
-         class="Modal_modalPaddingL__TAljg"
+         class="Modal_modalContainer__O6yz0"
     >
-      <h1 id="modalHeadingId-:ra:"
-          class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
-      >
-        Vil du erstatte nye opplysninger fra fil?
-      </h1>
       <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
               type="button"
       >
@@ -700,30 +722,37 @@ exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:rb:">
-            Lukk
+            Lukk dialogvindu
           </title>
           <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
           </path>
         </svg>
       </button>
-      <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
-        Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
-      </p>
-      <div class="flex">
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
-                type="button"
+      <div class="Modal_modalPaddingL__TAljg">
+        <h1 id="modalHeadingId-:ra:"
+            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
         >
-          <span class="Button_buttonText__JxyB+">
-            Erstatt opplysninger
-          </span>
-        </button>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
-                type="button"
-        >
-          <span class="Button_buttonText__JxyB+">
-            Avbryt
-          </span>
-        </button>
+          Vil du erstatte nye opplysninger fra fil?
+        </h1>
+        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+          Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
+        </p>
+        <div class="flex">
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              Erstatt opplysninger
+            </span>
+          </button>
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              Avbryt
+            </span>
+          </button>
+        </div>
       </div>
     </div>
   </dialog>
@@ -747,13 +776,8 @@ exports[`Tester/Modal WithVerticalScrolling play-test 1`] = `
           open
   >
     <div tabindex="-1"
-         class="Modal_modalPaddingL__TAljg"
+         class="Modal_modalContainer__O6yz0"
     >
-      <h1 id="modalHeadingId-:rf:"
-          class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
-      >
-        Vil du erstatte nye opplysninger fra fil?
-      </h1>
       <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
               type="button"
       >
@@ -765,13 +789,20 @@ exports[`Tester/Modal WithVerticalScrolling play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:rg:">
-            Lukk
+            Lukk dialogvindu
           </title>
           <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
           </path>
         </svg>
       </button>
-      Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+      <div class="Modal_modalPaddingL__TAljg">
+        <h1 id="modalHeadingId-:rf:"
+            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
+        >
+          Vil du erstatte nye opplysninger fra fil?
+        </h1>
+        Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+      </div>
     </div>
   </dialog>
 </div>
@@ -794,31 +825,33 @@ exports[`Tester/Modal WithoutCloseButton play-test 1`] = `
           open
   >
     <div tabindex="-1"
-         class="Modal_modalPaddingL__TAljg"
+         class="Modal_modalContainer__O6yz0"
     >
-      <h1 id="modalHeadingId-:rc:"
-          class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
-      >
-        Vil du erstatte nye opplysninger fra fil?
-      </h1>
-      <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
-        Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
-      </p>
-      <div class="flex">
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
-                type="button"
+      <div class="Modal_modalPaddingL__TAljg">
+        <h1 id="modalHeadingId-:rc:"
+            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
         >
-          <span class="Button_buttonText__JxyB+">
-            Erstatt opplysninger
-          </span>
-        </button>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
-                type="button"
-        >
-          <span class="Button_buttonText__JxyB+">
-            Avbryt
-          </span>
-        </button>
+          Vil du erstatte nye opplysninger fra fil?
+        </h1>
+        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+          Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
+        </p>
+        <div class="flex">
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              Erstatt opplysninger
+            </span>
+          </button>
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+                  type="button"
+          >
+            <span class="Button_buttonText__JxyB+">
+              Avbryt
+            </span>
+          </button>
+        </div>
       </div>
     </div>
   </dialog>

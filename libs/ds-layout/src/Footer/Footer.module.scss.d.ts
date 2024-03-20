@@ -1,6 +1,7 @@
 /* automatisk genererte types */
 export const separator: string;
 export const footer: string;
+export const footerContainer: string;
 export const columns: string;
 export const columnsThree: string;
 export const columnsTwo: string;

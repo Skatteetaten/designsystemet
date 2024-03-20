@@ -9,9 +9,9 @@ import {
   updateProjectConfiguration,
   generateFiles,
 } from '@nx/devkit';
-import { Linter } from '@nx/linter';
+import { Linter } from '@nx/eslint';
 import { libraryGenerator } from '@nx/react';
-import { configurationGenerator, scssGenerator } from 'nx-stylelint';
+import { configurationGenerator } from 'nx-stylelint';
 
 import { Schema } from './schema';
 
@@ -35,13 +35,12 @@ export default async function (
     bundler: 'rollup',
   });
 
-  //konfigurasjon for stylelint
+  // konfigurasjon for stylelint
   await configurationGenerator(tree, {
     project: projectName,
     skipFormat: false,
     formatter: 'string',
   });
-  await scssGenerator(tree, { project: projectName, skipFormat: false });
 
   const projectConfig = readProjectConfiguration(tree, projectName);
 
@@ -63,8 +62,7 @@ export default async function (
   const publish: TargetConfiguration = {
     executor: 'nx:run-commands',
     options: {
-      command: 'npm publish {args.switches}',
-      cwd: `dist/libs/${projectName}`,
+      command: `npm publish dist/libs/${projectName} {args.switches}`,
     },
   };
 
@@ -81,13 +79,13 @@ export default async function (
   updateJson(tree, babelrcPath, (babelrc): object => {
     babelrc.presets = undefined;
     babelrc.plugins = undefined;
-    babelrc.extends = '../../../../.babelrc';
+    babelrc.extends = '../../.babelrc';
     return babelrc;
   });
 
   const eslintrcPath = joinPathFragments(projectConfig.root, '.eslintrc.json');
   updateJson(tree, eslintrcPath, (eslintrc): object => {
-    eslintrc.extends = ['../../../../.eslintrc.json'];
+    eslintrc.extends = ['../../.eslintrc.json'];
     return eslintrc;
   });
 
@@ -132,6 +130,10 @@ export default async function (
   const packageJsonPath = joinPathFragments(projectConfig.root, 'package.json');
   updateJson(tree, packageJsonPath, (packageJson): object => {
     packageJson.groupId = 'no.skatteetaten.aurora';
+    packageJson.repository = {
+      type: 'git',
+      url: 'git+https://github.com/Skatteetaten/designsystemet.git',
+    };
     packageJson.publishConfig = {
       registry: 'https://nexus.sits.no/repository/npm-internal/',
     };
@@ -139,10 +141,12 @@ export default async function (
       react: '^18',
     };
     packageJson.exports = undefined;
+    packageJson.scripts = { ...packageJson.scripts };
     return packageJson;
   });
 
   const lint = projectConfig?.targets?.lint;
+  const stylelint = projectConfig?.targets?.stylelint;
   const projectConfigWithRollupOptions = {
     ...projectConfig,
     implicitDependencies: ['!ds-dev-config'],
@@ -153,6 +157,14 @@ export default async function (
         options: {
           ...projectConfig?.targets.build.options,
           rollupConfig: [`libs/${projectName}/rollup.config.js`],
+          assets: [
+            ...projectConfig.targets.build.options.assets,
+            {
+              glob: 'LICENSE',
+              input: '.',
+              output: '.',
+            },
+          ],
         },
       },
       lint: {
@@ -162,6 +174,16 @@ export default async function (
           lintFilePatterns: [
             ...lint.options.lintFilePatterns,
             `libs/${projectName}/package.json`,
+          ],
+        },
+      },
+      stylelint: {
+        ...stylelint,
+        options: {
+          ...stylelint.options,
+          lintFilePatterns: [
+            ...stylelint.options.lintFilePatterns,
+            `libs/${projectName}/**/*.scss`,
           ],
         },
       },

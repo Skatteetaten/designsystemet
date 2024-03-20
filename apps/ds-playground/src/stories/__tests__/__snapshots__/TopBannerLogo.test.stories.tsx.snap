@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/TopBanner/TopBannerLogo (intern) Defaults play-test 1`] = `
+<div data-test-block="true">
+  <a class="TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
+     href="https://www.skatteetaten.no/"
+  >
+    <img class="TopBannerLogo_logo_mobile__x4lpB"
+         alt="Forside Skatteetaten"
+         src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
+    >
+    <img class="TopBannerLogo_logo_desktop__SI+eK"
+         alt="Forside Skatteetaten"
+         src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+    >
+  </a>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerLogo (intern) WithAs play-test 1`] = `
+<div data-test-block="true">
+  <div class="TopBannerLogo_logoContainer__-AsET">
+    <img class="TopBannerLogo_logo_mobile__x4lpB"
+         alt="Skatteetaten logo"
+         src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
+    >
+    <img class="TopBannerLogo_logo_desktop__SI+eK"
+         alt="Skatteetaten logo"
+         src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+    >
+  </div>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerLogo (intern) WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <a id="htmlId"
+     class="dummyClassname TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
+     lang="en"
+     data-testid="123ID"
+     href="https://www.skatteetaten.no/"
+  >
+    <img class="TopBannerLogo_logo_mobile__x4lpB"
+         alt="Forside Skatteetaten"
+         src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
+    >
+    <img class="TopBannerLogo_logo_desktop__SI+eK"
+         alt="Forside Skatteetaten"
+         src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+    >
+  </a>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerLogo (intern) WithBreakpointM smoke-test 1`] = `
+<div data-test-block="true">
+  <a class="TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
+     href="https://www.skatteetaten.no/"
+  >
+    <img class="TopBannerLogo_logo_mobile__x4lpB"
+         alt="Forside Skatteetaten"
+         src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
+    >
+    <img class="TopBannerLogo_logo_desktop__SI+eK"
+         alt="Forside Skatteetaten"
+         src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+    >
+  </a>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerLogo (intern) WithLogoMobileLogoAltAndHref play-test 1`] = `
+<div data-test-block="true">
+  <a class="TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
+     href="#"
+  >
+    <img class="TopBannerLogo_logo_mobile__x4lpB"
+         alt="custom alt text"
+         src="custom-mobile-logo.e7c1e07901657fb09f8543357f7fa867.svg"
+    >
+    <img class="TopBannerLogo_logo_desktop__SI+eK"
+         alt="custom alt text"
+         src="custom-logo.252414682ce8a77d1dfc266bb47a0e0e.svg"
+    >
+  </a>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerLogo (intern) WithMobileScreen smoke-test 1`] = `
+<div data-test-block="true">
+  <a class="TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
+     href="https://www.skatteetaten.no/"
+  >
+    <img class="TopBannerLogo_logo_mobile__x4lpB"
+         alt="Forside Skatteetaten"
+         src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
+    >
+    <img class="TopBannerLogo_logo_desktop__SI+eK"
+         alt="Forside Skatteetaten"
+         src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+    >
+  </a>
+</div>
+`;
+
+exports[`Tester/TopBanner/TopBannerLogo (intern) WithRef play-test 1`] = `
+<div data-test-block="true">
+  <a class="TopBannerLogo_logoContainer__-AsET TopBannerLogo_logoAsLink__30BPt"
+     href="https://www.skatteetaten.no/"
+     id="dummyIdForwardedFromRef"
+  >
+    <img class="TopBannerLogo_logo_mobile__x4lpB"
+         alt="Forside Skatteetaten"
+         src="ske-logo-mobile.c19c0351f0931cd93ae02f37a7fb7498.svg"
+    >
+    <img class="TopBannerLogo_logo_desktop__SI+eK"
+         alt="Forside Skatteetaten"
+         src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+    >
+  </a>
+</div>
+`;

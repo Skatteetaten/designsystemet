@@ -3,7 +3,11 @@ import { forwardRef, useState, MouseEvent } from 'react';
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon, ChevronDownSVGpath } from '@skatteetaten/ds-icons';
 
-import { getIconPositionDefault, getOpenCloseVariantDefault } from './defaults';
+import {
+  getOpenCloseIconPositionDefault,
+  getOpenCloseUnderlineDefault,
+  getOpenCloseVariantDefault,
+} from './defaults';
 import { OpenCloseProps } from './OpenClose.types';
 
 import styles from './OpenClose.module.scss';
@@ -18,10 +22,10 @@ export const OpenClose = forwardRef<HTMLButtonElement, OpenCloseProps>(
       title,
       titleAs: HeadingTag,
       variant = getOpenCloseVariantDefault(),
-      iconPosition = getIconPositionDefault(),
+      iconPosition = getOpenCloseIconPositionDefault(),
       isExpanded: isExpandedExternal,
       isOnClickOnlyFiredOnOpen,
-      showUnderline,
+      showUnderline = getOpenCloseUnderlineDefault(),
       onClick,
       children,
     },
@@ -92,3 +96,9 @@ export const OpenClose = forwardRef<HTMLButtonElement, OpenCloseProps>(
 );
 
 OpenClose.displayName = 'OpenClose';
+
+export {
+  getOpenCloseIconPositionDefault,
+  getOpenCloseUnderlineDefault,
+  getOpenCloseVariantDefault,
+};

@@ -1,23 +1,23 @@
+import { JSX } from 'react';
+
 import {
   getVisibilityThresholdDefault,
   ScrollToTopButton,
 } from '@skatteetaten/ds-buttons';
 import { ExternalLayout } from '@skatteetaten/ds-core-utils';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-// @skatteeteaten/ds-core-designtokens er angitt som symlink i package.json
-// derfor vil typecheck feile hvis pakken ikke er bygget, derfor bryter vi nx module boundaries her
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import palette from 'libs/ds-core-designtokens/lib/designtokens/palette.json';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
+import { exampleParameters } from '../utils/stories.utils';
 import { getVersion } from '../utils/version.utils';
 
-export default {
+const meta = {
   component: ScrollToTopButton,
   title: 'Komponenter/ScrollToTopButton',
   argTypes: {
     // Props
     classNames: {
+      control: false,
       table: { category: category.props },
     },
     visibilityThreshold: {
@@ -27,44 +27,41 @@ export default {
       },
     },
     shadowRootNode: {
-      table: { control: false, category: category.props },
+      control: false,
+      table: { category: category.props },
     },
     children: { table: { category: category.props } },
   },
+  args: {},
   parameters: {
     backgrounds: {
-      default: 'graphite-70',
-      values: [
-        {
-          name: 'graphite-70',
-          value: palette[':root,\n:host']['--palette-graphite-70'],
-        },
-      ],
+      default: 'grey',
     },
     version: getVersion('ds-buttons'),
   },
 } satisfies Meta<typeof ScrollToTopButton>;
 
-export const Preview: StoryObj<typeof ScrollToTopButton> = {
-  render: (args) => (
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Preview: Story = {
+  decorators: [
+    (Story): JSX.Element => (
+      <div className={'height100vh'}>
+        <main className={'scrollToTopContainer'} tabIndex={-1}>
+          <ExternalLayout />
+          <Story />
+        </main>
+      </div>
+    ),
+  ],
+};
+
+export const Examples: Story = {
+  render: (_args) => (
     <div className={'height100vh'}>
-      <main className={'scrollToTopContainer'} tabIndex={-1}>
-        <ExternalLayout />
-        <ScrollToTopButton {...args} />
-      </main>
+      <ScrollToTopButton visibilityThreshold={0} />
     </div>
   ),
-  args: {},
-};
-
-export const Example: StoryFn<typeof ScrollToTopButton> = (_args) => (
-  <div className={'height100vh'}>
-    <ScrollToTopButton visibilityThreshold={0} />
-  </div>
-);
-
-Example.parameters = {
-  controls: {
-    exclude: /.*/,
-  },
-};
+} satisfies Story;
+Examples.parameters = exampleParameters;

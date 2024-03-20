@@ -1,7 +1,6 @@
 import { ErrorMessage } from '@skatteetaten/ds-forms';
-import { expect } from '@storybook/jest';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { expect, within } from '@storybook/test';
 
 const meta = {
   component: ErrorMessage,
@@ -17,7 +16,6 @@ const meta = {
     // Props
     children: {
       table: { disable: true },
-      control: 'text',
     },
     showError: {
       table: { disable: true },
@@ -35,7 +33,6 @@ const defaultArgs = {
 
 export const WithRef = {
   name: 'With Ref (FA1)',
-
   args: {
     ...defaultArgs,
     ref: (instance: HTMLDivElement | null): void => {
@@ -44,15 +41,12 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
@@ -62,7 +56,6 @@ export const WithRef = {
 
 export const WithAttributes = {
   name: 'With Attributes (FA2-5, B1)',
-
   args: {
     ...defaultArgs,
     id: 'htmlId',
@@ -71,14 +64,12 @@ export const WithAttributes = {
     'data-testid': '123ID',
     showError: true,
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   play: async ({
     canvasElement,
   }: {
@@ -99,7 +90,6 @@ export const Defaults = {
   args: {
     ...defaultArgs,
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
@@ -141,10 +131,14 @@ export const WithLongText = {
   name: 'With Long Text (A3)',
   args: {
     ...defaultArgs,
-    id: 'errorId',
     showError: true,
     children:
       'Dette blir en veldig lang feilmelding for å teste om du oppfører seg om den skal.',
+  },
+  argTypes: {
+    children: {
+      table: { disable: false },
+    },
   },
 } satisfies Story;
 
@@ -157,7 +151,6 @@ export const WithLongTextAndBreaking = {
     children:
       'Detteblirenveldiglangfeilmeldingforåtesteomduoppførersegomdenskal.',
   },
-
   argTypes: {
     children: {
       table: { disable: false },

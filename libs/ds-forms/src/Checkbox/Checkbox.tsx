@@ -20,6 +20,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       checked,
       defaultChecked,
       disabled,
+      form,
       name,
       required,
       value,
@@ -70,6 +71,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           checked={checked}
           defaultChecked={defaultChecked}
           disabled={disabled}
+          form={form}
           name={name}
           required={isRequired}
           type={'checkbox'}

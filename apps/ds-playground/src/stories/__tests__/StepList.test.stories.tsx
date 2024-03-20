@@ -1,11 +1,13 @@
+import { useId, useState } from 'react';
+
 import { StepList, StepListProps } from '@skatteetaten/ds-collections';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { RadioGroup } from '@skatteetaten/ds-forms';
 import { Heading, List, Paragraph } from '@skatteetaten/ds-typography';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { userEvent, within } from '@storybook/testing-library';
+import { expect, userEvent, within } from '@storybook/test';
 
 import { category } from '../../../.storybook/helpers';
-import { Preview } from '../components/StepList.stories';
 
 const meta = {
   component: StepList,
@@ -193,22 +195,141 @@ export const WithBreakPointMobile = {
   },
 } satisfies Story;
 
+const TemplateMultipleSteps: StoryFn<typeof StepList> = () => {
+  const stepId = useId();
+  const [activeStep, setActiveStep] = useState(1);
+  const [step3, setStep3] = useState<string | undefined>(undefined);
+  const [hasStep3Error, setHasStep3Error] = useState(false);
+
+  const onNext = (): void => {
+    const nextStep = activeStep + 1;
+    setActiveStep(nextStep);
+    setTimeout((): void => {
+      // eslint-disable-next-line testing-library/no-node-access
+      const el = document.getElementById(`${stepId}-${nextStep}-focus-target`);
+      el?.focus();
+    }, 0);
+  };
+
+  return (
+    <StepList>
+      {activeStep >= 1 && (
+        <StepList.Step
+          id={`${stepId}-1`}
+          variant={activeStep === 1 ? 'active' : 'passive'}
+          title={'Hva holder du på med?'}
+          stepNumber={1}
+          onEdit={
+            activeStep > 1 && activeStep < 4
+              ? (): void => setActiveStep(1)
+              : undefined
+          }
+          onNext={onNext}
+        >
+          {'Varer og tjenester'}
+        </StepList.Step>
+      )}
+
+      {activeStep >= 2 && (
+        <StepList.Step
+          id={`${stepId}-2`}
+          variant={activeStep === 2 ? 'active' : 'passive'}
+          title={'Hva gjør du?'}
+          stepNumber={2}
+          onEdit={
+            activeStep > 2 && activeStep < 4
+              ? (): void => setActiveStep(2)
+              : undefined
+          }
+          onNext={onNext}
+        >
+          {'Selger'}
+        </StepList.Step>
+      )}
+
+      {activeStep >= 3 && (
+        <StepList.Step
+          id={`${stepId}-3`}
+          variant={activeStep === 3 ? 'active' : 'passive'}
+          title={'Salg av varer og tjenester'}
+          stepNumber={3}
+          onNext={(): void => {
+            if (step3) {
+              onNext();
+            } else {
+              setHasStep3Error(true);
+            }
+          }}
+        >
+          {activeStep === 3 ? (
+            <RadioGroup
+              id={'step3radio'}
+              legend={
+                'Selger du varer og tjenester for egen regning og risiko?'
+              }
+              errorMessage={'Kryss av hvorvidt du selger varer  og tjenester'}
+              hasError={hasStep3Error}
+              hideLegend
+              onChange={(e): void => {
+                setHasStep3Error(false);
+                setStep3(e.target.value);
+              }}
+            >
+              <RadioGroup.Radio value={'ja'}>{'Ja'}</RadioGroup.Radio>
+              <RadioGroup.Radio value={'nei'}>{'Nei'}</RadioGroup.Radio>
+            </RadioGroup>
+          ) : (
+            <div>{step3}</div>
+          )}
+        </StepList.Step>
+      )}
+
+      {activeStep >= 4 && step3 === 'ja' && (
+        <StepList.Step
+          id={`${stepId}-4`}
+          title={'Vårt veiledende svar'}
+          variant={'positiveResult'}
+          stepNumber={4}
+          introTitle={'Virksomheten skal registreres som særavgiftspliktig.'}
+          introTitleAs={'h4'}
+          introContent={<Paragraph>{'brødtekst'}</Paragraph>}
+        >
+          <Paragraph>{'brødtekst'}</Paragraph>
+        </StepList.Step>
+      )}
+
+      {activeStep >= 4 && step3 === 'nei' && (
+        <StepList.Step
+          id={`${stepId}-4`}
+          title={'neutralt resultat'}
+          variant={'neutralResult'}
+          stepNumber={4}
+        >
+          {'more brødtekst'}
+        </StepList.Step>
+      )}
+    </StepList>
+  );
+};
+
 export const WithMultipleSteps = {
   name: 'With steps (A6, A8, A9)',
-  render: Preview,
+  render: TemplateMultipleSteps,
   parameters: {
     imageSnapshot: { disable: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    await userEvent.click(canvas.getByText('Neste'));
-    await userEvent.click(canvas.getByText('Endre'));
-    await userEvent.click(canvas.getByText('Neste'));
-    await userEvent.click(canvas.getByText('Neste'));
-    await userEvent.click(canvas.getByText('Neste'));
+    const nextText = dsI18n.t('ds_collections:steplist.Next');
+    const editText = dsI18n.t('ds_collections:steplist.Edit');
+    await userEvent.click(canvas.getByText(nextText));
+    await userEvent.click(canvas.getByText(editText));
+    await userEvent.click(canvas.getByText(nextText));
+    await userEvent.click(canvas.getByText(nextText));
+    await userEvent.click(canvas.getByText(nextText));
     await userEvent.click(canvas.getByText('Ja'));
-    await userEvent.click(canvas.getByText('Neste'));
-    await expect(canvas.queryByText('Neste')).not.toBeInTheDocument();
-    await expect(canvas.queryByText('Endre')).not.toBeInTheDocument();
+    await userEvent.click(canvas.getByText(nextText));
+    await expect(canvas.queryByText(nextText)).not.toBeInTheDocument();
+    await expect(canvas.queryByText(editText)).not.toBeInTheDocument();
   },
 } satisfies Story;

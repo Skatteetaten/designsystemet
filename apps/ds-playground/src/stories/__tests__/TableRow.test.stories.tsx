@@ -1,7 +1,7 @@
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Table } from '@skatteetaten/ds-table';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { userEvent, within } from '@storybook/testing-library';
+import { expect, fireEvent, fn, within } from '@storybook/test';
 
 const meta = {
   component: Table.Row,
@@ -45,7 +45,6 @@ const Template: StoryFn<typeof Table.Row> = (args) => (
 export const WithRef = {
   render: Template,
   name: 'With Ref (FA1)',
-
   args: {
     ref: (instance: HTMLTableRowElement | null): void => {
       if (instance) {
@@ -53,15 +52,12 @@ export const WithRef = {
       }
     },
   },
-
   argTypes: {
     ref: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const table = canvas.getByRole('row');
@@ -73,25 +69,21 @@ export const WithRef = {
 export const WithAttributes = {
   render: Template,
   name: 'With Attributes (FA2-5)',
-
   args: {
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
   },
-
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
   },
-
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const row = canvas.getByRole('row');
@@ -105,29 +97,33 @@ export const WithAttributes = {
 export const WithExpandable = {
   render: Template,
   name: 'With Expandable (TableRow B6)',
-
   args: {
     isExpandable: true,
     expandButtonAriaDescribedby: 'Id123',
+    onExpand: fn(),
   },
-
   argTypes: {
     isExpandable: { table: { disable: false } },
     expandButtonAriaDescribedby: { table: { disable: false } },
   },
-
   parameters: {
     imageSnapshot: { disable: true },
     HTMLSnapshot: { disable: true },
   },
-
-  play: async ({ canvasElement }): Promise<void> => {
+  play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
     const iconButton = canvas.getByRole('button');
     await expect(iconButton).toHaveAttribute('aria-describedby', 'Id123');
-    await expect(iconButton).toHaveAccessibleName('Mer informasjon');
+    await expect(iconButton).toHaveAccessibleName(
+      dsI18n.t('ds_tables:tablerow.Expandable')
+    );
     await expect(iconButton).toHaveAttribute('aria-expanded', 'false');
-    await userEvent.click(iconButton);
+    /*TODO etter bytte fra @storybook/jest til @storybook/test må denne testen bruke
+    fireevent i stedet for UserEvent. Med userEVent gir testen ustabilt resultat.
+    I tillegg ser det ut som visningen i interactions fanen i storybook ikke samsvarer med resultatet til testen.
+     */
+    await fireEvent.click(iconButton);
+    await expect(args.onExpand).toHaveBeenCalled();
     await expect(iconButton).toHaveAttribute('aria-expanded', 'true');
   },
 } satisfies Story;
