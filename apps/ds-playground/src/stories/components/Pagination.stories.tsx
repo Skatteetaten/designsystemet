@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import {
   Pagination,
-  getDefaultListLength,
+  getDefaultPageSize,
   getDefaultSibling,
   getDefaultHidePageSummary,
   getDefaultHidePrevNextButtonTitle,
@@ -328,7 +328,7 @@ const meta = {
     currentPage: {
       table: { category: category.props },
     },
-    defaultCurrentPage: {
+    defaultCurrent: {
       table: { category: category.props },
     },
     sibling: {
@@ -349,13 +349,13 @@ const meta = {
         defaultValue: { summary: getDefaultHidePageSummary() },
       },
     },
-    listLength: {
+    pageSize: {
       table: {
         category: category.props,
-        defaultValue: { summary: getDefaultListLength() },
+        defaultValue: { summary: getDefaultPageSize() },
       },
     },
-    listTotalLength: {
+    totalItems: {
       table: {
         category: category.props,
       },
@@ -369,10 +369,10 @@ const meta = {
     onChange: { table: { category: category.event } },
   },
   args: {
-    listLength: getDefaultListLength(),
-    listTotalLength: 70,
+    pageSize: getDefaultPageSize(),
+    totalItems: 70,
     sibling: getDefaultSibling(),
-    defaultCurrentPage: 1,
+    defaultCurrent: 1,
   },
   parameters: {
     version: getVersion('ds-navigation'),
@@ -388,9 +388,9 @@ export const Preview: Story = {} satisfies Story;
 const exampleListWithLimit = (
   data: List,
   start: number,
-  listSize: number
+  pageSize: number
 ): JSX.Element[] => {
-  const itemStart = (start - 1) * listSize;
+  const itemStart = (start - 1) * pageSize;
   return data
     .map((e, i) => {
       return (
@@ -399,23 +399,23 @@ const exampleListWithLimit = (
         </List.Element>
       );
     })
-    .slice(itemStart, itemStart + listSize);
+    .slice(itemStart, itemStart + pageSize);
 };
 
 export const Examples: Story = {
   render: (_args): JSX.Element => {
     const [page, setPage] = useState(1);
-    const listLength = 5;
+    const pageSize = 5;
     const onChange = (page: number): void => {
       setPage(page);
     };
     return (
       <>
-        <List hasSpacing>{exampleListWithLimit(data, page, listLength)}</List>
+        <List hasSpacing>{exampleListWithLimit(data, page, pageSize)}</List>
         <Pagination
-          listLength={listLength}
-          listTotalLength={data.length}
-          defaultCurrentPage={1}
+          pageSize={pageSize}
+          totalItems={data.length}
+          defaultCurrent={1}
           onChange={onChange}
         />
       </>

@@ -1,13 +1,13 @@
 import {
-  getDefaultListLength,
+  getDefaultPageSize,
   getDefaultSibling,
   getDefaultHidePageSummary,
   getDefaultHidePrevNextButtonTitle,
 } from '../defaults';
 
 describe('Pagination defaults', () => {
-  it('Når getDefaultListLength kalles så returnerer den riktig verdi', () => {
-    const renderDefault = getDefaultListLength();
+  it('Når getDefaultPageSize kalles så returnerer den riktig verdi', () => {
+    const renderDefault = getDefaultPageSize();
     expect(renderDefault).toBe(10);
   });
   it('Når getDefaultSibling kalles så returnerer den riktig verdi', () => {

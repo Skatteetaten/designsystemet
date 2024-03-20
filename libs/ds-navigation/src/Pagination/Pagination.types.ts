@@ -4,9 +4,9 @@ import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 export interface PaginationCommonProps extends BaseProps {
   /** Antall elementer pr side */
-  listLength?: number;
+  pageSize?: number;
   /** Totalt antall elementer i liste */
-  listTotalLength: number;
+  totalItems: number;
   /** Maksimum antall navigasjonselementer ved siden av aktiv side. Minimumsverdi er 1 sibling */
   sibling?: number;
   /** Skjul next/prev label */
@@ -34,7 +34,7 @@ type PaginationDiscriminatedProp =
        * Setter initiell aktiv side hvis komponenten er uncontrolled.
        * Eksluderer samtidig bruk av currentPage
        */
-      defaultCurrentPage?: never;
+      defaultCurrent?: never;
     }
   | {
       /** Gjeldende side. Bruk av currentPage ekskluderer bruk av defaultCurrentPage */
@@ -43,7 +43,7 @@ type PaginationDiscriminatedProp =
        * Setter initiell aktiv side hvis komponenten er uncontrolled.
        * Eksluderer samtidig bruk av currentPage
        */
-      defaultCurrentPage?: number;
+      defaultCurrent?: number;
     };
 
 export type PaginationProps = PaginationCommonProps &
@@ -51,7 +51,7 @@ export type PaginationProps = PaginationCommonProps &
 
 export type PageOption = {
   currentPage: number | undefined;
-  defaultCurrentPage: number | undefined;
+  defaultCurrent: number | undefined;
   onChange?: (page: number) => void;
 };
 

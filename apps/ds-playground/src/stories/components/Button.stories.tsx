@@ -51,9 +51,7 @@ const meta = {
     },
     // Aria
     ariaCurrent: {
-      options: [false, true],
       table: { category: category.aria },
-      control: 'radio',
     },
     ariaDescribedby: { table: { category: category.aria } },
     // Events

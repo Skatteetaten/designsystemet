@@ -9,7 +9,7 @@ import {
 } from '@skatteetaten/ds-icons';
 
 import {
-  getDefaultListLength,
+  getDefaultPageSize,
   getDefaultSibling,
   getDefaultHidePageSummary,
   getDefaultHidePrevNextButtonTitle,
@@ -19,6 +19,12 @@ import {
   PageOption,
   PaginationListProps,
 } from './Pagination.types';
+import {
+  canHaveElipsisEnd,
+  canHaveElipsisStart,
+  getRange,
+  isElipsis,
+} from './utils';
 
 import styles from './Pagination.module.scss';
 
@@ -33,16 +39,6 @@ const PaginationList = ({
   lastPageRef,
 }: PaginationListProps): ReactNode => {
   const barList = [];
-  const getRange = (start: number, end: number): number[] =>
-    Array.from({ length: end - start + 1 }, (_, i) => start + i);
-
-  const canHaveElipsisEnd = (
-    active: number,
-    sibling: number,
-    lastPage: number
-  ): boolean => active + sibling + 1 < lastPage - 1;
-  const canHaveElipsisStart = (active: number, sibling: number): boolean =>
-    active - sibling - 1 > 2;
 
   let rangeStart = 2;
   let rangeEnd = lastPage - 1;
@@ -86,12 +82,8 @@ const PaginationList = ({
     return undefined;
   };
 
-  const isElipsis = (paging: string | number): boolean => {
-    return paging?.toString().match(/^elips/) ? true : false;
-  };
-
   return barList.map((paging) => (
-    <li key={paging} className={styles.paginationElement}>
+    <li key={paging}>
       {isElipsis(paging) ? (
         <p
           className={styles.paginationElipsis}
@@ -122,10 +114,10 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
       lang,
       'data-testid': dataTestId,
       currentPage,
-      defaultCurrentPage = 1,
+      defaultCurrent = 1,
       sibling = getDefaultSibling(),
-      listLength = getDefaultListLength(),
-      listTotalLength,
+      pageSize = getDefaultPageSize(),
+      totalItems,
       hidePrevNextButtonTitle = getDefaultHidePrevNextButtonTitle(),
       hidePageSummary = getDefaultHidePageSummary(),
       ariaLabel,
@@ -136,10 +128,10 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
     const { t } = useTranslation('ds_navigation', { i18n: dsI18n });
     const lastPageRef = useRef<HTMLButtonElement>(null);
     const firstPageRef = useRef<HTMLButtonElement>(null);
-    const lastPage = Math.ceil(listTotalLength / listLength);
+    const lastPage = Math.ceil(totalItems / pageSize);
     const option: PageOption = {
       currentPage: currentPage,
-      defaultCurrentPage: defaultCurrentPage,
+      defaultCurrent: defaultCurrent,
       onChange: onChange,
     };
     const pageSibling = sibling < 1 ? 1 : sibling;
@@ -149,8 +141,8 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
       const [internalPage, setInternalPage] = useState<number>(() => {
         if (option.currentPage) {
           return option.currentPage;
-        } else if (option.defaultCurrentPage) {
-          return option.defaultCurrentPage;
+        } else if (option.defaultCurrent) {
+          return option.defaultCurrent;
         } else {
           return value;
         }
@@ -159,8 +151,7 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
     };
 
     const [internalPage, setInteralPage] = useCurrentPage(1, option);
-    // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-    const handleChange = (page: number) => {
+    const handleChange = (page: number): void => {
       setInteralPage(page);
       if (page === 1) {
         firstPageRef?.current?.focus();
@@ -171,9 +162,8 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
     };
 
     const arrowLeft = (activePage: number): ReactNode => {
-      const cssLeft = `${styles.paginationElement} ${styles.paginationElement_leftArrow}`;
       return (
-        <li className={cssLeft}>
+        <li className={styles.paginationElement_leftArrow}>
           {hidePrevNextButtonTitle && (
             <IconButton
               type={'button'}
@@ -198,7 +188,7 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
 
     const arrowRight = (activePage: number): ReactNode => {
       return (
-        <li className={styles.paginationElement}>
+        <li className={styles.paginationElement_rightArrow}>
           {hidePrevNextButtonTitle && (
             <IconButton
               type={'button'}
@@ -224,10 +214,10 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
     const showPaginationSummary = dsI18n.t(
       'ds_navigation:pagination.PageSummary',
       {
-        range: `${internalPage * listLength + 1 - listLength}–${
-          internalPage * listLength
+        range: `${internalPage * pageSize + 1 - pageSize}–${
+          internalPage * pageSize
         }`,
-        total: listTotalLength,
+        total: totalItems,
       }
     );
     const pageSummary = `${
@@ -273,7 +263,7 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
 Pagination.displayName = 'Pagination';
 
 export {
-  getDefaultListLength,
+  getDefaultPageSize,
   getDefaultSibling,
   getDefaultHidePageSummary,
   getDefaultHidePrevNextButtonTitle,

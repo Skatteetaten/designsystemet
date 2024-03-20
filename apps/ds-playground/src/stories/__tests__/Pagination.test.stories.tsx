@@ -1,7 +1,7 @@
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   Pagination,
-  getDefaultListLength,
+  getDefaultPageSize,
   getDefaultSibling,
 } from '@skatteetaten/ds-navigation';
 import { List } from '@skatteetaten/ds-typography';
@@ -29,9 +29,9 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     currentPage: { table: { disable: true } },
-    defaultCurrentPage: { table: { disable: true } },
-    listLength: { table: { disable: true } },
-    listTotalLength: { table: { disable: true } },
+    defaultCurrent: { table: { disable: true } },
+    pageSize: { table: { disable: true } },
+    totalItems: { table: { disable: true } },
     sibling: { table: { disable: true } },
     hidePrevNextButtonTitle: { table: { disable: true } },
     hidePageSummary: { table: { disable: true }, control: null },
@@ -44,8 +44,8 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const defaultArgs = {
-  listLength: getDefaultListLength(),
-  listTotalLength: 70,
+  pageSize: getDefaultPageSize(),
+  totalItems: 70,
   sibling: getDefaultSibling(),
   onChange: fn(),
 };
@@ -54,7 +54,7 @@ export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
     ...defaultArgs,
-    defaultCurrentPage: 1,
+    defaultCurrent: 1,
     ref: (instance: HTMLElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -73,7 +73,7 @@ export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
     ...defaultArgs,
-    defaultCurrentPage: 1,
+    defaultCurrent: 1,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
@@ -98,8 +98,8 @@ export const WithAttributes = {
 export const Defaults = {
   name: 'Defaults',
   args: {
-    defaultCurrentPage: 1,
-    listTotalLength: 15,
+    defaultCurrent: 1,
+    totalItems: 15,
   },
 } satisfies Story;
 
@@ -107,7 +107,7 @@ export const HidePrevNextButtonTitle = {
   name: 'Hide Prev/Next-button Title (A1)',
   args: {
     ...defaultArgs,
-    defaultCurrentPage: 1,
+    defaultCurrent: 1,
     hidePrevNextButtonTitle: true,
   },
   argTypes: {
@@ -119,7 +119,7 @@ export const WithTextNextPref: Story = {
   name: 'With Prev Next Text (A2)',
   args: {
     ...defaultArgs,
-    defaultCurrentPage: 2,
+    defaultCurrent: 2,
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -138,11 +138,11 @@ export const WithListLength: Story = {
   name: 'With List Length (A3)',
   args: {
     ...defaultArgs,
-    listLength: 4,
-    defaultCurrentPage: 1,
+    pageSize: 4,
+    defaultCurrent: 1,
   },
   argTypes: {
-    listLength: { table: true },
+    pageSize: { table: true },
   },
   play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -166,12 +166,12 @@ export const Sibling = {
   name: 'Width Sibling (A4)',
   args: {
     ...defaultArgs,
-    defaultCurrentPage: 3,
+    defaultCurrent: 3,
     sibling: 2,
   },
   argTypes: {
     sibling: { table: true },
-    defaultCurrentPage: { table: true },
+    defaultCurrent: { table: true },
   },
   play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -191,7 +191,7 @@ export const Sibling = {
   name: 'Hide Page Summary (A5)',
   args: {
     ...defaultArgs,
-    defaultCurrentPage: 1,
+    defaultCurrent: 1,
     hidePageSummary: true,
   },
   argTypes: {
@@ -209,7 +209,7 @@ export const WithNavigation: Story = {
   name: 'With Navigation (A7, B2 delvis)',
   args: {
     ...defaultArgs,
-    defaultCurrentPage: 2,
+    defaultCurrent: 2,
   },
   parameters: {
     imageSnapshot: { disable: true },
@@ -256,7 +256,7 @@ export const WithPrevNextLabel: Story = {
   name: 'PrevNext Alternative Label (B5)',
   args: {
     ...defaultArgs,
-    defaultCurrentPage: 1,
+    defaultCurrent: 1,
     hidePrevNextButtonTitle: true,
   },
   argTypes: {
@@ -332,14 +332,14 @@ const listWithLimit = (
 export const WithListLimit: Story = {
   name: 'With List Limit (A6, B3)',
   args: {
-    listLength: 6,
-    listTotalLength: data.length * 7,
+    pageSize: 6,
+    totalItems: data.length * 7,
     sibling: getDefaultSibling(),
     currentPage: 1,
   },
   render: (args): JSX.Element => {
     const [{ currentPage }, updateArgs] = useArgs();
-    const listLength = 5;
+    const pageSize = 5;
     const onChange = (page: number): void => {
       updateArgs({ currentPage: page });
     };
@@ -350,12 +350,12 @@ export const WithListLimit: Story = {
           {listWithLimit(
             data.concat(data, data, data, data, data, data),
             currentPage,
-            listLength
+            pageSize
           )}
         </List>
         <Pagination
           {...args}
-          listLength={listLength}
+          pageSize={pageSize}
           currentPage={currentPage}
           onChange={onChange}
         />
@@ -369,7 +369,7 @@ export const WithCustomAriaLabel: Story = {
   args: {
     ...defaultArgs,
     ariaLabel: 'Egen tekst på nav-elementets aria-label',
-    defaultCurrentPage: 1,
+    defaultCurrent: 1,
   },
   parameters: {
     imageSnapshot: { disable: true },
@@ -388,7 +388,7 @@ export const WithPageSummary: Story = {
   name: 'With Page Summary (A6)',
   args: {
     ...defaultArgs,
-    defaultCurrentPage: 1,
+    defaultCurrent: 1,
   },
   parameters: {
     imageSnapshot: { disable: true },
