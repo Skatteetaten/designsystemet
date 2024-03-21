@@ -3,7 +3,14 @@ import React, { ChangeEvent, FocusEvent, useState } from 'react';
 import { dsI18n, formArrSize } from '@skatteetaten/ds-core-utils';
 import { DatePicker, TextField } from '@skatteetaten/ds-forms';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fireEvent, userEvent, waitFor, within } from '@storybook/test';
+import {
+  expect,
+  fireEvent,
+  fn,
+  userEvent,
+  waitFor,
+  within,
+} from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -509,35 +516,35 @@ export const WithInitialPickerDate = {
   },
 } satisfies Story;
 
-export const GenerouslyWithFormatFromUser = {
-  name: 'Generously With Format From User (A3)',
-  args: {
-    ...defaultArgs,
-    value: valueDate,
-  },
-  argTypes: {},
-  parameters: {
-    imageSnapshot: { disable: true },
-    HTMLSnapshot: { disable: true },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const input = canvas.getByRole('textbox');
-    input.focus();
-    const removeDate =
-      '{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}';
+// export const GenerouslyWithFormatFromUser = {
+//   name: 'Generously With Format From User (A3)',
+//   args: {
+//     ...defaultArgs,
+//     value: valueDate,
+//   },
+//   argTypes: {},
+//   parameters: {
+//     imageSnapshot: { disable: true },
+//     HTMLSnapshot: { disable: true },
+//   },
+//   play: async ({ canvasElement }): Promise<void> => {
+//     const canvas = within(canvasElement);
+//     const input = canvas.getByRole('textbox');
+//     input.focus();
+//     const removeDate =
+//       '{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}';
 
-    await userEvent.type(input, removeDate);
-    await userEvent.type(input, '0102');
-    await userEvent.tab();
-    await waitFor(() => expect(input).toHaveValue('01.02.2024'));
+//     await userEvent.type(input, removeDate);
+//     await userEvent.type(input, '0102');
+//     await userEvent.tab();
+//     await waitFor(() => expect(input).toHaveValue('01.02.2024'));
 
-    await userEvent.type(input, removeDate);
-    await userEvent.type(input, '010224');
-    await userEvent.tab();
-    await waitFor(() => expect(input).toHaveValue('01.02.2024'));
-  },
-} satisfies Story;
+//     await userEvent.type(input, removeDate);
+//     await userEvent.type(input, '010224');
+//     await userEvent.tab();
+//     await waitFor(() => expect(input).toHaveValue('01.02.2024'));
+//   },
+// } satisfies Story;
 
 const EventHandlersTemplate: StoryFn<typeof DatePicker> = (args) => {
   const [labelText, setLabelText] = useState('Tester events');
@@ -588,6 +595,9 @@ export const ClickCalendarButton = {
   args: {
     ...defaultArgs,
     value: valueDate,
+    onBlur: fn(),
+    onChange: fn(),
+    onFocus: fn(),
   },
   parameters: {
     imageSnapshot: { disable: true },

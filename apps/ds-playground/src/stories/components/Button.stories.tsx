@@ -50,6 +50,9 @@ const meta = {
       },
     },
     // Aria
+    ariaCurrent: {
+      table: { category: category.aria },
+    },
     ariaDescribedby: { table: { category: category.aria } },
     // Events
     onBlur: { ...htmlEventDescription },

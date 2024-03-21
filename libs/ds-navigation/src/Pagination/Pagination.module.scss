@@ -1,0 +1,96 @@
+@import '~@skatteetaten/ds-core-designtokens/designtokens/breakpoints';
+@import 'libs/ds-core-utils/src/styles';
+
+.pagination {
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  row-gap: var(--spacing-s);
+
+  @media (min-width: $breakpoint-s) {
+    justify-content: space-between;
+    row-gap: initial;
+  }
+
+  &List {
+    display: flex;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    column-gap: var(--spacing-xs);
+    list-style-type: none;
+
+    @media (min-width: $breakpoint-s) {
+      flex: 1 1 auto;
+      justify-content: end;
+
+      &_summaryhidden {
+        justify-content: center;
+      }
+    }
+  }
+
+  &Summary {
+    flex: 1 1 100%;
+
+    @media (min-width: $breakpoint-s) {
+      flex: 1 1 auto;
+    }
+
+    &_hide {
+      @include sr-only;
+    }
+  }
+
+  &Element {
+    &_leftArrow {
+      margin-right: var(--spacing-xs);
+    }
+
+    &_rightArrow {
+      margin-left: var(--spacing-xs);
+    }
+  }
+
+  &Elipsis {
+    line-height: 2rem;
+    margin-block: 0;
+  }
+
+  &Button,
+  &Elipsis {
+    padding: 0 8px;
+  }
+
+  &Button {
+    min-width: 32px;
+    min-height: 32px;
+    align-items: center;
+    border: 0;
+    line-height: 2rem;
+    transition: none;
+
+    &:active {
+      text-decoration: none;
+
+      &::before {
+        border-color: var(--palette-azure-100);
+        inset: -2px;
+      }
+    }
+
+    &:focus {
+      outline: 2px solid var(--palette-azure-70);
+      outline-offset: 2px;
+
+      &::before {
+        border: 0;
+      }
+    }
+  }
+}

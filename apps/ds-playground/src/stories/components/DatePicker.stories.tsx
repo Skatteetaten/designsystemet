@@ -96,6 +96,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {
+  //TODO FRONT-1346 Fjern bruk av underscore som prefix på variabler som er i bruk
   render: (_args): JSX.Element => {
     const [, setArgs] = useArgs();
     /* Fordi date control konverterer datoen til et UNIX-tidsstempel når verdien endres,
