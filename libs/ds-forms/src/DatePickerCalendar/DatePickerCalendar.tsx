@@ -1,27 +1,37 @@
 import {
   ChangeEvent,
-  FocusEvent,
-  KeyboardEvent,
-  forwardRef,
-  useMemo,
-  useState,
-  useRef,
   createRef,
+  FocusEvent,
+  forwardRef,
+  KeyboardEvent,
   RefObject,
+  useMemo,
+  useRef,
+  useState,
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { ArrowBackSVGpath, ArrowForwardSVGpath } from '@skatteetaten/ds-icons';
-import { getWeek, isEqual } from 'date-fns';
+import {
+  addDays,
+  getWeek,
+  getWeeksInMonth,
+  isEqual,
+  isMonday,
+  isSunday,
+  lastDayOfMonth,
+  startOfMonth,
+} from 'date-fns';
 
 import { DatePickerCalendarProps } from './DatePickerCalendar.types';
 import { getDatePickerCalendarSelectedDateDefault } from './defaults';
 import {
+  findValidYear,
   getCalendarRows,
   getNameOfMonthsAndDays,
-  findValidYear,
+  initialGridIdx,
 } from './utils';
 import { Select } from '../Select/Select';
 import { TextField } from '../TextField/TextField';
@@ -48,8 +58,7 @@ export const DatePickerCalendar = forwardRef<
   ): JSX.Element => {
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
 
-    // TODO - hvordan initialisere ref-en her, finne riktig gridIdx
-    const currentFocusGridIdxRef = useRef<string>('31');
+    const currentFocusGridIdxRef = useRef<string>(initialGridIdx(selectedDate));
     interface gridIdx {
       [idx: string]: RefObject<HTMLButtonElement>;
     }
@@ -135,98 +144,143 @@ export const DatePickerCalendar = forwardRef<
       }
     };
 
-    const grid = useMemo(
-      () => getCalendarRows(selectedYear, selectedMonthIndex, minDate, maxDate),
-      [selectedMonthIndex, selectedYear, minDate, maxDate]
-    );
-
-    const parseRowCol = (): { row: number; col: number } => {
+    const parseRowCol = (): {
+      currentRowIdx: number;
+      currentColIdx: number;
+    } => {
       const row = parseInt(currentFocusGridIdxRef.current[0]);
       const col = parseInt(currentFocusGridIdxRef.current[1]);
-      console.log('parseRowCol row og col=' + row + ' ' + col);
-      return { row, col };
+      return { currentRowIdx: row, currentColIdx: col };
     };
 
-    const updateFocus = (rowIdx: number, colIdx: number, date: Date): void => {
-      const weekIdx = getWeek(date);
-      currentFocusGridIdxRef.current = `${rowIdx}${colIdx}`;
-
-      console.log(
-        'updateFocus date and week og currentDateRef=' +
-          date +
-          ' ' +
-          weekIdx +
-          ' ' +
-          currentFocusGridIdxRef.current
-      );
-
-      const btnRef = dateButtonRefs.current[currentFocusGridIdxRef.current];
+    const updateFocus = (rowIdx: number, colIdx: number): void => {
+      const gridIdx = `${rowIdx}${colIdx}`;
+      currentFocusGridIdxRef.current = gridIdx;
+      const btnRef = dateButtonRefs.current[gridIdx];
       btnRef?.current?.focus();
     };
 
     const handleKeyDown = (
       e: KeyboardEvent<HTMLButtonElement>,
-      calendarDate: Date
+      buttonDate: Date
     ): void => {
-      const cols = 7;
-      const rows = grid.length;
-      const { row, col } = parseRowCol();
+      e.preventDefault();
 
-      // e.preventDefault();
-      // e.stopPropagation();
+      const [cols, rows] = [7, grid.length];
+      const { currentRowIdx, currentColIdx } = parseRowCol();
+      console.log(
+        `handleKeyDown currentGridIdx=${currentRowIdx}${currentColIdx}`
+      );
+
+      // TODO - sjekke om newFocusableDate er disabled før updateFocus for alle
 
       switch (e.key) {
-        case 'ArrowUp':
-          if (row > 0) {
-            updateFocus(row - 1, col, calendarDate);
-          } else {
+        case 'ArrowUp': {
+          const isArrowUpPrevMonth =
+            addDays(buttonDate, -7).getMonth() !== buttonDate.getMonth();
+          if (isArrowUpPrevMonth) {
+            const newFocusableDate = addDays(buttonDate, -7);
+            const weeksInPrevMonth = getWeeksInMonth(newFocusableDate, {
+              weekStartsOn: 1,
+            });
+            const [currentSecondRowIdx, prevSecondLastRowIdx, prevLastRowIdx] =
+              [1, weeksInPrevMonth - 2, weeksInPrevMonth - 1];
+
+            const isFirstDayInMonth = isMonday(startOfMonth(buttonDate));
+            const isCurrentRowIdxSameAsSecondRowIdx =
+              currentRowIdx === currentSecondRowIdx;
+            const newRowIdx =
+              isCurrentRowIdxSameAsSecondRowIdx || isFirstDayInMonth
+                ? prevLastRowIdx
+                : prevSecondLastRowIdx;
+
+            updateFocus(newRowIdx, currentColIdx);
             onPrevMonth();
-            // TODO - skal settes til neste dato
-            updateFocus(grid.length - 1, col, calendarDate);
+          } else if (currentRowIdx > 0) {
+            updateFocus(currentRowIdx - 1, currentColIdx);
           }
           break;
-        case 'ArrowDown':
-          if (row < rows - 1) {
-            updateFocus(row + 1, col, calendarDate);
-          } else {
+        }
+        case 'ArrowDown': {
+          const isArrowDownNextMonth =
+            addDays(buttonDate, 7).getMonth() !== buttonDate.getMonth();
+          if (isArrowDownNextMonth) {
+            const [currentSecondLastRowIdx, nextSecondRowIdx, nextFirstRowIdx] =
+              [grid.length - 2, 1, 0];
+
+            const isLastDayInMonth = isSunday(lastDayOfMonth(buttonDate));
+            const newRowIdx =
+              currentRowIdx === currentSecondLastRowIdx || isLastDayInMonth
+                ? nextFirstRowIdx
+                : nextSecondRowIdx;
+
+            updateFocus(newRowIdx, currentColIdx);
             onNextMonth();
-            // TODO - skal settes til neste dato
-            updateFocus(0, col, calendarDate);
+          } else if (currentRowIdx < rows - 1) {
+            updateFocus(currentRowIdx + 1, currentColIdx);
           }
           break;
-        case 'ArrowLeft':
-          if (col > 0) {
-            updateFocus(row, col - 1, calendarDate);
-          } else if (row > 0) {
-            updateFocus(row - 1, cols - 1, calendarDate);
-          } else {
+        }
+        case 'ArrowLeft': {
+          const isArrowLeftPrevMonth =
+            addDays(buttonDate, -1).getMonth() !== buttonDate.getMonth();
+          if (isArrowLeftPrevMonth) {
+            const newFocusableDate = addDays(buttonDate, -1);
+            const focusableDayIdx = newFocusableDate.getDay();
+            const newColIdx = isSunday(newFocusableDate)
+              ? 6
+              : focusableDayIdx - 1;
+
+            const weeksInPrevMonth = getWeeksInMonth(newFocusableDate, {
+              weekStartsOn: 1,
+            });
+            const newRowIdx = weeksInPrevMonth - 1;
+
+            updateFocus(newRowIdx, newColIdx);
             onPrevMonth();
-            // TODO - skal settes til neste dato
-            updateFocus(grid.length - 1, 6, calendarDate);
+          } else if (currentColIdx > 0) {
+            updateFocus(currentRowIdx, currentColIdx - 1);
+          } else if (currentRowIdx > 0) {
+            updateFocus(currentRowIdx - 1, cols - 1);
           }
           break;
-        case 'ArrowRight':
-          if (col < cols - 1) {
-            updateFocus(row, col + 1, calendarDate);
-          } else if (row < rows - 1) {
-            updateFocus(row + 1, 0, calendarDate);
-          } else {
+        }
+        case 'ArrowRight': {
+          const isArrowRightNextMonth =
+            addDays(buttonDate, 1).getMonth() !== buttonDate.getMonth();
+          if (isArrowRightNextMonth) {
+            const newFocusableDate = addDays(buttonDate, 1);
+            const focusableDayIdx = newFocusableDate.getDay();
+            const newColIdx = isSunday(newFocusableDate)
+              ? 6
+              : focusableDayIdx - 1;
+
+            updateFocus(0, newColIdx);
             onNextMonth();
-            // TODO - skal settes til neste dato
-            updateFocus(0, 0, calendarDate);
+          } else if (currentColIdx < cols - 1) {
+            updateFocus(currentRowIdx, currentColIdx + 1);
+          } else if (currentRowIdx < rows - 1) {
+            updateFocus(currentRowIdx + 1, 0);
           }
           break;
-        case 'Enter':
-          onSelectDate(calendarDate);
+        }
+        case 'Enter': {
+          onSelectDate(buttonDate);
           break;
-        case 'Tab':
-          e.preventDefault();
+        }
+        case 'Tab': {
           onLastTabKey && onLastTabKey();
           break;
+        }
         default:
           return;
       }
     };
+
+    const grid = useMemo(
+      () => getCalendarRows(selectedYear, selectedMonthIndex, minDate, maxDate),
+      [selectedYear, selectedMonthIndex, minDate, maxDate]
+    );
 
     const concatenatedClassName = `${styles.calendar} ${className}`;
 
@@ -242,7 +296,11 @@ export const DatePickerCalendar = forwardRef<
           <IconButton
             className={styles.calendarNavigationArrowIcon}
             svgPath={ArrowBackSVGpath}
-            title={t('datepicker.PreviousMonth')}
+            title={`${t('datepicker.PreviousMonth')} ${
+              monthNames[selectedMonthIndex === 0 ? 11 : selectedMonthIndex - 1]
+            } ${
+              selectedMonthIndex === 0 ? Number(selectedYear) - 1 : selectedYear
+            }`}
             type={'button'}
             disabled={isPrevMonthInvalid}
             onClick={(): void => onPrevMonth()}
@@ -276,7 +334,13 @@ export const DatePickerCalendar = forwardRef<
           <IconButton
             className={styles.calendarNavigationArrowIcon}
             svgPath={ArrowForwardSVGpath}
-            title={t('datepicker.NextMonth')}
+            title={`${t('datepicker.NextMonth')} ${
+              monthNames[selectedMonthIndex === 11 ? 0 : selectedMonthIndex + 1]
+            } ${
+              selectedMonthIndex === 11
+                ? Number(selectedYear) + 1
+                : selectedYear
+            }`}
             type={'button'}
             disabled={isNextMonthInvalid}
             onClick={(): void => onNextMonth()}
@@ -326,28 +390,15 @@ export const DatePickerCalendar = forwardRef<
 
                     const gridIdx = `${rowIdx}${colIdx}`;
                     if (!dateButtonRefs.current[gridIdx]) {
-                      // TODO - test ut med Map() med key=gridIdx og value lik node og ikke createRef
                       dateButtonRefs.current[gridIdx] = createRef();
                     }
-                    if (ariaCurrent === 'date') {
-                      // currentDateRef.current = gridIdx;
-                    }
                     const hasFocus = currentFocusGridIdxRef.current === gridIdx;
-                    if (hasFocus) {
-                      console.log(`HasFocus button=${cell.text} ${cell.date}`);
-                    }
 
                     return (
-                      <td key={`cell-${cell.date}`}>
+                      <td key={`cell-${cell.date.toDateString()}`}>
                         <button
-                          key={`btn-${cell.date}`}
+                          key={`btn-${cell.date.toLocaleString()}`}
                           ref={dateButtonRefs.current[gridIdx]}
-                          /*ref={() => {
-                            if (!dateButtonRefs.current[gridIdx]) {
-                              // TODO - test ut med Map() med key=gridIdx og value lik node og ikke createRef
-                              dateButtonRefs.current[gridIdx] = createRef();
-                            }
-                          }}*/
                           className={buttonClassName}
                           type={'button'}
                           disabled={cell.disabled}

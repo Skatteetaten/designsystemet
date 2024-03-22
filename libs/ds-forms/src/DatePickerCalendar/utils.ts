@@ -1,5 +1,12 @@
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { isAfter, isBefore, isToday } from 'date-fns';
+import {
+  addDays,
+  getWeekOfMonth,
+  isAfter,
+  isBefore,
+  isSunday,
+  isToday,
+} from 'date-fns';
 
 const lastValidYear: number = 9999;
 const sunday: number = 0;
@@ -174,4 +181,21 @@ export const getNameOfMonthsAndDays = (): {
 
 export function findValidYear(year: string | number): number {
   return year === '' || year === 0 ? new Date().getFullYear() : Number(year);
+}
+
+export function initialGridIdx(date: Date): string {
+  const dayIdx = date.getDay();
+  const colIdx = isSunday(date) ? 6 : dayIdx - 1;
+  const rowIdx = getWeekOfMonth(date, { weekStartsOn: 1 }) - 1;
+
+  return `${rowIdx}${colIdx}`;
+}
+
+export function findColIdxToNewFocusableDate(
+  buttonDate: Date,
+  amountDays: number
+): number {
+  const newFocusableDate = addDays(buttonDate, amountDays);
+  const focusableDayIdx = newFocusableDate.getDay();
+  return isSunday(newFocusableDate) ? 6 : focusableDayIdx - 1;
 }

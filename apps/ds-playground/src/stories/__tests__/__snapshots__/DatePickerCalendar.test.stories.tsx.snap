@@ -15,7 +15,7 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:ri:">
-            Forrige måned
+            Forrige måned Desember 2023
           </title>
           <path d="M22.3 10.8v1.8H5.5l5.2 5.1L9.3 19l-7.5-7.3 7.7-7.3 1.4 1.3-5.2 5.1h16.6Z">
           </path>
@@ -139,7 +139,7 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:rq:">
-            Neste måned
+            Neste måned Februar 2024
           </title>
           <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
           </path>
@@ -182,7 +182,7 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
                     type="button"
                     aria-current="date"
                     aria-label="I dag 1. Januar 2024"
-                    tabindex="-1"
+                    tabindex="0"
             >
               1
             </button>
@@ -386,7 +386,7 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     aria-label=" 23. Januar 2024"
-                    tabindex="0"
+                    tabindex="-1"
             >
               23
             </button>
@@ -527,7 +527,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:r9:">
-            Forrige måned
+            Forrige måned Desember 2023
           </title>
           <path d="M22.3 10.8v1.8H5.5l5.2 5.1L9.3 19l-7.5-7.3 7.7-7.3 1.4 1.3-5.2 5.1h16.6Z">
           </path>
@@ -651,7 +651,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:rh:">
-            Neste måned
+            Neste måned Februar 2024
           </title>
           <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
           </path>
@@ -694,7 +694,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
                     type="button"
                     aria-current="date"
                     aria-label="I dag 1. Januar 2024"
-                    tabindex="-1"
+                    tabindex="0"
             >
               1
             </button>
@@ -898,7 +898,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     aria-label=" 23. Januar 2024"
-                    tabindex="0"
+                    tabindex="-1"
             >
               23
             </button>
@@ -1035,7 +1035,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
              role="img"
         >
           <title id="svgtitle-:r1m:">
-            Forrige måned
+            Forrige måned Desember 2023
           </title>
           <path d="M22.3 10.8v1.8H5.5l5.2 5.1L9.3 19l-7.5-7.3 7.7-7.3 1.4 1.3-5.2 5.1h16.6Z">
           </path>
@@ -1159,7 +1159,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
              role="img"
         >
           <title id="svgtitle-:r1u:">
-            Neste måned
+            Neste måned Februar 2024
           </title>
           <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
           </path>
@@ -1202,7 +1202,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
                     type="button"
                     aria-current="date"
                     aria-label="I dag 1. Januar 2024"
-                    tabindex="-1"
+                    tabindex="0"
             >
               1
             </button>
@@ -1406,7 +1406,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     aria-label=" 23. Januar 2024"
-                    tabindex="0"
+                    tabindex="-1"
             >
               23
             </button>
@@ -1543,7 +1543,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:r1d:">
-            Forrige måned
+            Forrige måned Desember 2023
           </title>
           <path d="M22.3 10.8v1.8H5.5l5.2 5.1L9.3 19l-7.5-7.3 7.7-7.3 1.4 1.3-5.2 5.1h16.6Z">
           </path>
@@ -1667,7 +1667,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:r1l:">
-            Neste måned
+            Neste måned Februar 2024
           </title>
           <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
           </path>
@@ -1710,7 +1710,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
                     type="button"
                     aria-current="date"
                     aria-label="I dag 1. Januar 2024"
-                    tabindex="-1"
+                    tabindex="0"
             >
               1
             </button>
@@ -1922,7 +1922,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
                     type="button"
                     disabled
                     aria-label=" 23. Januar 2024"
-                    tabindex="0"
+                    tabindex="-1"
             >
               23
             </button>
@@ -2071,7 +2071,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:r14:">
-            Forrige måned
+            Forrige måned Desember 2023
           </title>
           <path d="M22.3 10.8v1.8H5.5l5.2 5.1L9.3 19l-7.5-7.3 7.7-7.3 1.4 1.3-5.2 5.1h16.6Z">
           </path>
@@ -2195,7 +2195,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:r1c:">
-            Neste måned
+            Neste måned Februar 2024
           </title>
           <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
           </path>
@@ -2239,7 +2239,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
                     disabled
                     aria-current="date"
                     aria-label="I dag 1. Januar 2024"
-                    tabindex="-1"
+                    tabindex="0"
             >
               1
             </button>
@@ -2456,7 +2456,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     aria-label=" 23. Januar 2024"
-                    tabindex="0"
+                    tabindex="-1"
             >
               23
             </button>
@@ -2595,7 +2595,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:r0:">
-            Forrige måned
+            Forrige måned Desember 2023
           </title>
           <path d="M22.3 10.8v1.8H5.5l5.2 5.1L9.3 19l-7.5-7.3 7.7-7.3 1.4 1.3-5.2 5.1h16.6Z">
           </path>
@@ -2719,7 +2719,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:r8:">
-            Neste måned
+            Neste måned Februar 2024
           </title>
           <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
           </path>
@@ -2762,7 +2762,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
                     type="button"
                     aria-current="date"
                     aria-label="I dag 1. Januar 2024"
-                    tabindex="-1"
+                    tabindex="0"
             >
               1
             </button>
@@ -2966,7 +2966,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     aria-label=" 23. Januar 2024"
-                    tabindex="0"
+                    tabindex="-1"
             >
               23
             </button>
@@ -3103,7 +3103,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
              role="img"
         >
           <title id="svgtitle-:rr:">
-            Forrige måned
+            Forrige måned Desember 2023
           </title>
           <path d="M22.3 10.8v1.8H5.5l5.2 5.1L9.3 19l-7.5-7.3 7.7-7.3 1.4 1.3-5.2 5.1h16.6Z">
           </path>
@@ -3227,7 +3227,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
              role="img"
         >
           <title id="svgtitle-:r13:">
-            Neste måned
+            Neste måned Februar 2024
           </title>
           <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
           </path>
@@ -3473,7 +3473,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     aria-label=" 23. Januar 2024"
-                    tabindex="0"
+                    tabindex="-1"
             >
               23
             </button>
@@ -3548,7 +3548,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
                     type="button"
                     aria-current="date"
                     aria-label=" 31. Januar 2024"
-                    tabindex="-1"
+                    tabindex="0"
             >
               31
             </button>

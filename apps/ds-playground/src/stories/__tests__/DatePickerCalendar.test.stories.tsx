@@ -117,14 +117,21 @@ export const Defaults = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
 
+    const prevArrowBtnText = `${dsI18n.t(
+      'ds_forms:datepicker.PreviousMonth'
+    )} ${dsI18n.t('ds_forms:datepicker.December')} 2023`;
+    const nextArrowBtnText = `${dsI18n.t(
+      'ds_forms:datepicker.NextMonth'
+    )} ${dsI18n.t('ds_forms:datepicker.February')} 2024`;
+
     await expect(
       canvas.getByRole('button', {
-        name: dsI18n.t('ds_forms:datepicker.PreviousMonth'),
+        name: prevArrowBtnText,
       })
     ).toBeInTheDocument();
     await expect(
       canvas.getByRole('button', {
-        name: dsI18n.t('ds_forms:datepicker.NextMonth'),
+        name: nextArrowBtnText,
       })
     ).toBeInTheDocument();
     await expect(
@@ -237,11 +244,17 @@ export const ClickAndChangeMonthAndYear = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
+    const prevArrowBtnText = `${dsI18n.t(
+      'ds_forms:datepicker.PreviousMonth'
+    )} ${dsI18n.t('ds_forms:datepicker.December')} 2023`;
     const prevButton = canvas.getByRole('button', {
-      name: dsI18n.t('ds_forms:datepicker.PreviousMonth'),
+      name: prevArrowBtnText,
     });
+    const nextArrowBtnText = `${dsI18n.t(
+      'ds_forms:datepicker.NextMonth'
+    )} ${dsI18n.t('ds_forms:datepicker.February')} 2024`;
     const nextButton = canvas.getByRole('button', {
-      name: dsI18n.t('ds_forms:datepicker.NextMonth'),
+      name: nextArrowBtnText,
     });
     const monthSelect = canvas.getByRole('combobox', {
       name: dsI18n.t('ds_forms:datepicker.SelectMonth'),
