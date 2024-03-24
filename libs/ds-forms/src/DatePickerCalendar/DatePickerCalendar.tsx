@@ -5,6 +5,7 @@ import {
   forwardRef,
   KeyboardEvent,
   RefObject,
+  useEffect,
   useMemo,
   useRef,
   useState,
@@ -72,6 +73,15 @@ export const DatePickerCalendar = forwardRef<
     );
     const [isPrevMonthInvalid, setIsPrevMonthInvalid] = useState(false);
     const [isNextMonthInvalid, setIsNextMonthInvalid] = useState(false);
+    const [shouldResetFocus, setShouldResetFocus] = useState(false);
+
+    useEffect(() => {
+      if (shouldResetFocus) {
+        const btnRef = dateButtonRefs.current[currentFocusGridIdxRef.current];
+        btnRef?.current?.focus();
+        setShouldResetFocus(false);
+      }
+    }, [shouldResetFocus]);
 
     const [firstValidYear, lastValidYear] = [1, 9999];
     const [january, december] = [0, 11];
@@ -196,6 +206,7 @@ export const DatePickerCalendar = forwardRef<
 
             updateFocus(newRowIdx, currentColIdx);
             onPrevMonth();
+            setShouldResetFocus(true);
           } else if (currentRowIdx > 0) {
             updateFocus(currentRowIdx - 1, currentColIdx);
           }
@@ -216,6 +227,7 @@ export const DatePickerCalendar = forwardRef<
 
             updateFocus(newRowIdx, currentColIdx);
             onNextMonth();
+            setShouldResetFocus(true);
           } else if (currentRowIdx < rows - 1) {
             updateFocus(currentRowIdx + 1, currentColIdx);
           }
@@ -238,6 +250,7 @@ export const DatePickerCalendar = forwardRef<
 
             updateFocus(newRowIdx, newColIdx);
             onPrevMonth();
+            setShouldResetFocus(true);
           } else if (currentColIdx > 0) {
             updateFocus(currentRowIdx, currentColIdx - 1);
           } else if (currentRowIdx > 0) {
@@ -257,6 +270,7 @@ export const DatePickerCalendar = forwardRef<
 
             updateFocus(0, newColIdx);
             onNextMonth();
+            setShouldResetFocus(true);
           } else if (currentColIdx < cols - 1) {
             updateFocus(currentRowIdx, currentColIdx + 1);
           } else if (currentRowIdx < rows - 1) {
