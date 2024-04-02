@@ -1,12 +1,5 @@
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-import {
-  addDays,
-  getWeekOfMonth,
-  isAfter,
-  isBefore,
-  isSunday,
-  isToday,
-} from 'date-fns';
+import { getWeekOfMonth, isAfter, isBefore, isSunday, isToday } from 'date-fns';
 
 const lastValidYear: number = 9999;
 const sunday: number = 0;
@@ -76,15 +69,6 @@ const makeCell = (
   };
 };
 
-const isDisabled = (date: Date, minDate?: Date, maxDate?: Date): boolean => {
-  minDate && minDate.setHours(0, 0, 0);
-  return (
-    (minDate ? isBefore(date, minDate) : false) ||
-    (maxDate ? isAfter(date, maxDate) : false) ||
-    date.getFullYear() > lastValidYear
-  );
-};
-
 function getCalendarCells(
   year: number,
   monthIndex: number,
@@ -148,6 +132,19 @@ export function getCalendarRows(
   return rows;
 }
 
+export const isDisabled = (
+  date: Date,
+  minDate?: Date,
+  maxDate?: Date
+): boolean => {
+  minDate && minDate.setHours(0, 0, 0);
+  return (
+    (minDate ? isBefore(date, minDate) : false) ||
+    (maxDate ? isAfter(date, maxDate) : false) ||
+    date.getFullYear() > lastValidYear
+  );
+};
+
 export const getNameOfMonthsAndDays = (): {
   monthNames: string[];
   dayNames: string[];
@@ -184,18 +181,8 @@ export function findValidYear(year: string | number): number {
 }
 
 export function initialGridIdx(date: Date): string {
-  const dayIdx = date.getDay();
-  const colIdx = isSunday(date) ? 6 : dayIdx - 1;
+  const colIdx = isSunday(date) ? 6 : date.getDay() - 1;
   const rowIdx = getWeekOfMonth(date, { weekStartsOn: 1 }) - 1;
 
   return `${rowIdx}${colIdx}`;
-}
-
-export function findColIdxToNewFocusableDate(
-  buttonDate: Date,
-  amountDays: number
-): number {
-  const newFocusableDate = addDays(buttonDate, amountDays);
-  const focusableDayIdx = newFocusableDate.getDay();
-  return isSunday(newFocusableDate) ? 6 : focusableDayIdx - 1;
 }

@@ -33,6 +33,7 @@ import {
   getCalendarRows,
   getNameOfMonthsAndDays,
   initialGridIdx,
+  isDisabled,
 } from './utils';
 import { Select } from '../Select/Select';
 import { TextField } from '../TextField/TextField';
@@ -154,51 +155,37 @@ export const DatePickerCalendar = forwardRef<
       }
     };
 
-    const parseRowCol = (): {
-      currentRowIdx: number;
-      currentColIdx: number;
-    } => {
-      const row = parseInt(currentFocusGridIdxRef.current[0]);
-      const col = parseInt(currentFocusGridIdxRef.current[1]);
-      return { currentRowIdx: row, currentColIdx: col };
-    };
-
-    const updateFocus = (rowIdx: number, colIdx: number): void => {
-      const gridIdx = `${rowIdx}${colIdx}`;
-      currentFocusGridIdxRef.current = gridIdx;
-      const btnRef = dateButtonRefs.current[gridIdx];
-      btnRef?.current?.focus();
-    };
-
-    const handleKeyDown = (
+    const handleArrowNavigation = (
       e: KeyboardEvent<HTMLButtonElement>,
-      buttonDate: Date
+      currentDate: Date
     ): void => {
       e.preventDefault();
 
       const [cols, rows] = [7, grid.length];
-      const { currentRowIdx, currentColIdx } = parseRowCol();
-      console.log(
-        `handleKeyDown currentGridIdx=${currentRowIdx}${currentColIdx}`
-      );
-
-      // TODO - sjekke om newFocusableDate er disabled før updateFocus for alle
+      const { currentRowIdx, currentColIdx } = parseRowAndColIdx();
 
       switch (e.key) {
         case 'ArrowUp': {
-          const isArrowUpPrevMonth =
-            addDays(buttonDate, -7).getMonth() !== buttonDate.getMonth();
-          if (isArrowUpPrevMonth) {
-            const newFocusableDate = addDays(buttonDate, -7);
+          const newFocusableDate = addDays(currentDate, -7);
+          if (isDisabled(newFocusableDate, minDate, maxDate)) {
+            break;
+          }
+
+          const isPrevMonth =
+            newFocusableDate.getMonth() !== currentDate.getMonth();
+          if (isPrevMonth) {
             const weeksInPrevMonth = getWeeksInMonth(newFocusableDate, {
               weekStartsOn: 1,
             });
-            const [currentSecondRowIdx, prevSecondLastRowIdx, prevLastRowIdx] =
-              [1, weeksInPrevMonth - 2, weeksInPrevMonth - 1];
+            const [secondRowIdx, prevSecondLastRowIdx, prevLastRowIdx] = [
+              1,
+              weeksInPrevMonth - 2,
+              weeksInPrevMonth - 1,
+            ];
 
-            const isFirstDayInMonth = isMonday(startOfMonth(buttonDate));
+            const isFirstDayInMonth = isMonday(startOfMonth(currentDate));
             const isCurrentRowIdxSameAsSecondRowIdx =
-              currentRowIdx === currentSecondRowIdx;
+              currentRowIdx === secondRowIdx;
             const newRowIdx =
               isCurrentRowIdxSameAsSecondRowIdx || isFirstDayInMonth
                 ? prevLastRowIdx
@@ -213,15 +200,23 @@ export const DatePickerCalendar = forwardRef<
           break;
         }
         case 'ArrowDown': {
-          const isArrowDownNextMonth =
-            addDays(buttonDate, 7).getMonth() !== buttonDate.getMonth();
-          if (isArrowDownNextMonth) {
-            const [currentSecondLastRowIdx, nextSecondRowIdx, nextFirstRowIdx] =
-              [grid.length - 2, 1, 0];
+          const newFocusableDate = addDays(currentDate, 7);
+          if (isDisabled(newFocusableDate, minDate, maxDate)) {
+            break;
+          }
 
-            const isLastDayInMonth = isSunday(lastDayOfMonth(buttonDate));
+          const isNextMonth =
+            newFocusableDate.getMonth() !== currentDate.getMonth();
+          if (isNextMonth) {
+            const [secondLastRowIdx, nextSecondRowIdx, nextFirstRowIdx] = [
+              rows - 2,
+              1,
+              0,
+            ];
+
+            const isLastDayInMonth = isSunday(lastDayOfMonth(currentDate));
             const newRowIdx =
-              currentRowIdx === currentSecondLastRowIdx || isLastDayInMonth
+              currentRowIdx === secondLastRowIdx || isLastDayInMonth
                 ? nextFirstRowIdx
                 : nextSecondRowIdx;
 
@@ -234,15 +229,17 @@ export const DatePickerCalendar = forwardRef<
           break;
         }
         case 'ArrowLeft': {
-          const isArrowLeftPrevMonth =
-            addDays(buttonDate, -1).getMonth() !== buttonDate.getMonth();
-          if (isArrowLeftPrevMonth) {
-            const newFocusableDate = addDays(buttonDate, -1);
-            const focusableDayIdx = newFocusableDate.getDay();
+          const newFocusableDate = addDays(currentDate, -1);
+          if (isDisabled(newFocusableDate, minDate, maxDate)) {
+            break;
+          }
+
+          const isPrevMonth =
+            newFocusableDate.getMonth() !== currentDate.getMonth();
+          if (isPrevMonth) {
             const newColIdx = isSunday(newFocusableDate)
               ? 6
-              : focusableDayIdx - 1;
-
+              : newFocusableDate.getDay() - 1;
             const weeksInPrevMonth = getWeeksInMonth(newFocusableDate, {
               weekStartsOn: 1,
             });
@@ -259,14 +256,17 @@ export const DatePickerCalendar = forwardRef<
           break;
         }
         case 'ArrowRight': {
-          const isArrowRightNextMonth =
-            addDays(buttonDate, 1).getMonth() !== buttonDate.getMonth();
-          if (isArrowRightNextMonth) {
-            const newFocusableDate = addDays(buttonDate, 1);
-            const focusableDayIdx = newFocusableDate.getDay();
+          const newFocusableDate = addDays(currentDate, 1);
+          if (isDisabled(newFocusableDate, minDate, maxDate)) {
+            break;
+          }
+
+          const isNextMonth =
+            newFocusableDate.getMonth() !== currentDate.getMonth();
+          if (isNextMonth) {
             const newColIdx = isSunday(newFocusableDate)
               ? 6
-              : focusableDayIdx - 1;
+              : newFocusableDate.getDay() - 1;
 
             updateFocus(0, newColIdx);
             onNextMonth();
@@ -279,7 +279,7 @@ export const DatePickerCalendar = forwardRef<
           break;
         }
         case 'Enter': {
-          onSelectDate(buttonDate);
+          onSelectDate(currentDate);
           break;
         }
         case 'Tab': {
@@ -289,6 +289,22 @@ export const DatePickerCalendar = forwardRef<
         default:
           return;
       }
+    };
+
+    const parseRowAndColIdx = (): {
+      currentRowIdx: number;
+      currentColIdx: number;
+    } => {
+      const rowIdx = parseInt(currentFocusGridIdxRef.current[0]);
+      const colIdx = parseInt(currentFocusGridIdxRef.current[1]);
+      return { currentRowIdx: rowIdx, currentColIdx: colIdx };
+    };
+
+    const updateFocus = (rowIdx: number, colIdx: number): void => {
+      const gridIdx = `${rowIdx}${colIdx}`;
+      currentFocusGridIdxRef.current = gridIdx;
+      const btnRef = dateButtonRefs.current[gridIdx];
+      btnRef?.current?.focus();
     };
 
     const grid = useMemo(
@@ -406,12 +422,12 @@ export const DatePickerCalendar = forwardRef<
                     if (!dateButtonRefs.current[gridIdx]) {
                       dateButtonRefs.current[gridIdx] = createRef();
                     }
+                    // TODO FRONT-1346 - ta høyde for at den kan være disabled?
                     const hasFocus = currentFocusGridIdxRef.current === gridIdx;
 
                     return (
-                      <td key={`cell-${cell.date.toDateString()}`}>
+                      <td key={`cell-${cell.date.toLocaleDateString()}`}>
                         <button
-                          key={`btn-${cell.date.toLocaleString()}`}
                           ref={dateButtonRefs.current[gridIdx]}
                           className={buttonClassName}
                           type={'button'}
@@ -423,7 +439,7 @@ export const DatePickerCalendar = forwardRef<
                             onSelectDate(cell.date);
                           }}
                           onKeyDown={(e): void => {
-                            handleKeyDown(e, cell.date);
+                            handleArrowNavigation(e, cell.date);
                           }}
                         >
                           {`${cell.text}`}
