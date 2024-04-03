@@ -18,6 +18,7 @@ import {
   addDays,
   getWeek,
   getWeeksInMonth,
+  isEqual,
   isMonday,
   isSunday,
   lastDayOfMonth,
@@ -59,19 +60,19 @@ export const DatePickerCalendar = forwardRef<
   ): JSX.Element => {
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
 
-    const [focusableDate] = useState(
+    const [firstFocusableDate] = useState(
       initialFocusableDate(selectedDate, minDate, maxDate)
     );
     const focusableDateGridIdxRef = useRef<string>(
-      initialGridIdx(focusableDate)
+      initialGridIdx(firstFocusableDate)
     );
     const dateButtonRefs = useRef<GridIdx>({});
 
     const [selectedMonthIndex, setSelectedMonthIndex] = useState(
-      focusableDate.getMonth()
+      firstFocusableDate.getMonth()
     );
     const [selectedYear, setSelectedYear] = useState<number | string>(
-      focusableDate.getFullYear()
+      firstFocusableDate.getFullYear()
     );
     const [isPrevMonthInvalid, setIsPrevMonthInvalid] = useState(false);
     const [isNextMonthInvalid, setIsNextMonthInvalid] = useState(false);
@@ -280,6 +281,7 @@ export const DatePickerCalendar = forwardRef<
           break;
         }
         case 'Tab': {
+          console.log('BLir tab kallet');
           onLastTabKey && onLastTabKey();
           break;
         }
@@ -411,6 +413,10 @@ export const DatePickerCalendar = forwardRef<
                       monthNames[cell.date.getMonth()]
                     } ${cell.date.getFullYear()}`;
 
+                    const ariaCurrent = isEqual(cell.date, firstFocusableDate)
+                      ? 'date'
+                      : undefined;
+
                     const gridIdx = `${rowIdx}${colIdx}`;
                     if (!dateButtonRefs.current[gridIdx]) {
                       dateButtonRefs.current[gridIdx] = createRef();
@@ -426,7 +432,7 @@ export const DatePickerCalendar = forwardRef<
                           type={'button'}
                           disabled={cell.disabled}
                           tabIndex={hasFocus ? 0 : -1}
-                          aria-current={hasFocus ? 'date' : undefined}
+                          aria-current={ariaCurrent}
                           aria-label={ariaLabel}
                           onClick={(): void => {
                             onSelectDate(cell.date);
