@@ -115,7 +115,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       onSelectDate?.(date);
     };
 
-    const handleCloseCalendar = (): void => {
+    const closeCalendar = (): void => {
       setShowCalendar(false);
       calenderButtonRef?.current?.focus();
     };
@@ -145,13 +145,13 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
 
       const handleResize: EventListener = (e): void => {
         if (e.type === 'resize') {
-          handleCloseCalendar();
+          closeCalendar();
         }
       };
 
       const handleEscape = (e: KeyboardEvent): void => {
         if (e.key === 'Escape') {
-          handleCloseCalendar();
+          closeCalendar();
         }
       };
 
@@ -253,7 +253,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
               minDate={minDate}
               maxDate={maxDate}
               onSelectDate={handleSelectDate}
-              onLastTabKey={handleCloseCalendar}
+              onLastTabKey={closeCalendar}
             />
           </div>
         )}

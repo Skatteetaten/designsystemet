@@ -186,3 +186,24 @@ export function initialGridIdx(date: Date): string {
 
   return `${rowIdx}${colIdx}`;
 }
+
+export const initialSelectableDate = (
+  selectedDate: Date,
+  minDate?: Date,
+  maxDate?: Date
+): Date => {
+  if (isDisabled(selectedDate, minDate, maxDate)) {
+    let newSelectedDate = undefined;
+    if (maxDate && isAfter(selectedDate, maxDate)) {
+      newSelectedDate = maxDate;
+    } else if (minDate && isBefore(selectedDate, minDate)) {
+      newSelectedDate = minDate;
+    }
+
+    if (newSelectedDate && !isDisabled(newSelectedDate, minDate, maxDate)) {
+      return newSelectedDate;
+    }
+  }
+
+  return selectedDate;
+};

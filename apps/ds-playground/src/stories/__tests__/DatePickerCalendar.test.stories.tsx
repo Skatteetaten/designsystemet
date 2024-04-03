@@ -27,7 +27,7 @@ const DatesTemplate: StoryFn<typeof DatePickerCalendar> = (args) => {
   );
 };
 
-const today = new Date('2024.01.01');
+const today = new Date('2024.01.15');
 const meta = {
   component: DatePickerCalendar,
   title: 'Tester/DatePicker/DatePickerCalendar',
@@ -152,23 +152,31 @@ export const Defaults = {
     const cells = calendarTable.querySelectorAll('td');
     // eslint-disable-next-line testing-library/no-node-access
     const buttons = calendarTable.querySelectorAll('button');
+    // eslint-disable-next-line testing-library/no-node-access
+    const focusableButtons = calendarTable.querySelectorAll(
+      'button[tabindex="0"]'
+    );
 
     await expect(calendarTable).toBeInTheDocument();
     await expect(caption).toBeInTheDocument();
     await expect(cells.length).toBe(buttons.length);
+    await expect(focusableButtons.length).toBe(1);
 
-    const firstDateButton = canvas.getAllByText('1')[0];
-    await expect(firstDateButton).toHaveAttribute(
+    const defaultSelectedDateButton = canvas.getAllByText('15')[0];
+    await expect(defaultSelectedDateButton).toHaveAttribute(
       'aria-label',
-      'I dag 1. Januar 2024'
+      'I dag 15. Januar 2024'
     );
-    const ariaCurrentButton = canvas.getAllByText('1')[0];
-    await expect(ariaCurrentButton).toHaveAttribute('aria-current', 'date');
+    await expect(defaultSelectedDateButton).toHaveAttribute(
+      'aria-current',
+      'date'
+    );
+    await expect(defaultSelectedDateButton).toHaveAttribute('tabindex', '0');
   },
 } satisfies Story;
 
-export const WithSelectedValue = {
-  name: 'WithSelectedValue (B2)',
+export const WithSelectedDate = {
+  name: 'WithSelectedDate (B2)',
   args: {
     ...defaultArgs,
     selectedDate: new Date('2024.01.31'),
@@ -178,8 +186,8 @@ export const WithSelectedValue = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const ariaCurrentButton = canvas.getByText('31');
-    await expect(ariaCurrentButton).toHaveAttribute('aria-current', 'date');
+    const selectedDateButton = canvas.getByText('31');
+    await expect(selectedDateButton).toHaveAttribute('aria-current', 'date');
   },
 } satisfies Story;
 
@@ -216,6 +224,28 @@ export const WithMaxDate = {
     // eslint-disable-next-line testing-library/no-node-access
     const disabledButtons = calendarTable.querySelectorAll('button:disabled');
     await expect(disabledButtons.length).toBe(20);
+  },
+} satisfies Story;
+
+export const WithMaxDateWhereSelectedDateIsWithinTheRange = {
+  name: 'With MaxDate Where Selected Date Is Within The Range',
+  args: {
+    ...defaultArgs,
+    selectedDate: new Date('2024.01.16'),
+    maxDate: new Date('2024.01.15'),
+  },
+  argTypes: {
+    selectedDate: { table: { disable: false } },
+    maxDate: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+
+    const oldSelectedDateButton = canvas.getByText('16');
+    await expect(oldSelectedDateButton).toHaveAttribute('tabindex', '-1');
+
+    const newSelectedDateButton = canvas.getByText('15');
+    await expect(newSelectedDateButton).toHaveAttribute('tabindex', '0');
   },
 } satisfies Story;
 

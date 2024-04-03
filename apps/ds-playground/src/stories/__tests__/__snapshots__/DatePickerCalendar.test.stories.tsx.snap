@@ -178,11 +178,10 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
       <tbody>
         <tr>
           <td>
-            <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-current="date"
-                    aria-label="I dag 1. Januar 2024"
-                    tabindex="0"
+                    tabindex="-1"
+                    aria-label=" 1. Januar 2024"
             >
               1
             </button>
@@ -190,8 +189,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 2. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 2. Januar 2024"
             >
               2
             </button>
@@ -199,8 +198,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 3. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 3. Januar 2024"
             >
               3
             </button>
@@ -208,8 +207,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 4. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 4. Januar 2024"
             >
               4
             </button>
@@ -217,8 +216,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 5. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 5. Januar 2024"
             >
               5
             </button>
@@ -226,8 +225,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 6. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 6. Januar 2024"
             >
               6
             </button>
@@ -235,8 +234,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 7. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 7. Januar 2024"
             >
               7
             </button>
@@ -246,8 +245,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 8. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 8. Januar 2024"
             >
               8
             </button>
@@ -255,8 +254,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 9. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 9. Januar 2024"
             >
               9
             </button>
@@ -264,8 +263,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 10. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 10. Januar 2024"
             >
               10
             </button>
@@ -273,8 +272,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 11. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 11. Januar 2024"
             >
               11
             </button>
@@ -282,8 +281,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 12. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 12. Januar 2024"
             >
               12
             </button>
@@ -291,8 +290,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 13. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 13. Januar 2024"
             >
               13
             </button>
@@ -300,8 +299,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 14. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 14. Januar 2024"
             >
               14
             </button>
@@ -309,10 +308,11 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
         </tr>
         <tr>
           <td>
-            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
                     type="button"
-                    aria-label=" 15. Januar 2024"
-                    tabindex="-1"
+                    tabindex="0"
+                    aria-current="date"
+                    aria-label="I dag 15. Januar 2024"
             >
               15
             </button>
@@ -320,8 +320,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 16. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 16. Januar 2024"
             >
               16
             </button>
@@ -329,8 +329,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 17. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 17. Januar 2024"
             >
               17
             </button>
@@ -338,8 +338,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 18. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 18. Januar 2024"
             >
               18
             </button>
@@ -347,8 +347,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 19. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 19. Januar 2024"
             >
               19
             </button>
@@ -356,8 +356,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 20. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 20. Januar 2024"
             >
               20
             </button>
@@ -365,8 +365,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 21. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 21. Januar 2024"
             >
               21
             </button>
@@ -376,8 +376,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 22. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 22. Januar 2024"
             >
               22
             </button>
@@ -385,8 +385,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 23. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 23. Januar 2024"
             >
               23
             </button>
@@ -394,8 +394,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 24. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 24. Januar 2024"
             >
               24
             </button>
@@ -403,8 +403,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 25. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 25. Januar 2024"
             >
               25
             </button>
@@ -412,8 +412,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 26. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 26. Januar 2024"
             >
               26
             </button>
@@ -421,8 +421,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 27. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 27. Januar 2024"
             >
               27
             </button>
@@ -430,8 +430,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 28. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 28. Januar 2024"
             >
               28
             </button>
@@ -441,8 +441,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 29. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 29. Januar 2024"
             >
               29
             </button>
@@ -450,8 +450,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 30. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 30. Januar 2024"
             >
               30
             </button>
@@ -459,8 +459,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 31. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 31. Januar 2024"
             >
               31
             </button>
@@ -468,8 +468,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
-                    aria-label=" 1. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 1. Februar 2024"
             >
               1
             </button>
@@ -477,8 +477,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
-                    aria-label=" 2. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 2. Februar 2024"
             >
               2
             </button>
@@ -486,8 +486,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
-                    aria-label=" 3. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 3. Februar 2024"
             >
               3
             </button>
@@ -495,8 +495,8 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
-                    aria-label=" 4. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 4. Februar 2024"
             >
               4
             </button>
@@ -690,11 +690,10 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
       <tbody>
         <tr>
           <td>
-            <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-current="date"
-                    aria-label="I dag 1. Januar 2024"
-                    tabindex="0"
+                    tabindex="-1"
+                    aria-label=" 1. Januar 2024"
             >
               1
             </button>
@@ -702,8 +701,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 2. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 2. Januar 2024"
             >
               2
             </button>
@@ -711,8 +710,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 3. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 3. Januar 2024"
             >
               3
             </button>
@@ -720,8 +719,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 4. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 4. Januar 2024"
             >
               4
             </button>
@@ -729,8 +728,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 5. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 5. Januar 2024"
             >
               5
             </button>
@@ -738,8 +737,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 6. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 6. Januar 2024"
             >
               6
             </button>
@@ -747,8 +746,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 7. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 7. Januar 2024"
             >
               7
             </button>
@@ -758,8 +757,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 8. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 8. Januar 2024"
             >
               8
             </button>
@@ -767,8 +766,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 9. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 9. Januar 2024"
             >
               9
             </button>
@@ -776,8 +775,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 10. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 10. Januar 2024"
             >
               10
             </button>
@@ -785,8 +784,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 11. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 11. Januar 2024"
             >
               11
             </button>
@@ -794,8 +793,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 12. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 12. Januar 2024"
             >
               12
             </button>
@@ -803,8 +802,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 13. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 13. Januar 2024"
             >
               13
             </button>
@@ -812,8 +811,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 14. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 14. Januar 2024"
             >
               14
             </button>
@@ -821,10 +820,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
         </tr>
         <tr>
           <td>
-            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
                     type="button"
-                    aria-label=" 15. Januar 2024"
-                    tabindex="-1"
+                    tabindex="0"
+                    aria-current="date"
+                    aria-label="I dag 15. Januar 2024"
             >
               15
             </button>
@@ -832,8 +832,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 16. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 16. Januar 2024"
             >
               16
             </button>
@@ -841,8 +841,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 17. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 17. Januar 2024"
             >
               17
             </button>
@@ -850,8 +850,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 18. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 18. Januar 2024"
             >
               18
             </button>
@@ -859,8 +859,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 19. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 19. Januar 2024"
             >
               19
             </button>
@@ -868,8 +868,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 20. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 20. Januar 2024"
             >
               20
             </button>
@@ -877,8 +877,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 21. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 21. Januar 2024"
             >
               21
             </button>
@@ -888,8 +888,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 22. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 22. Januar 2024"
             >
               22
             </button>
@@ -897,8 +897,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 23. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 23. Januar 2024"
             >
               23
             </button>
@@ -906,8 +906,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 24. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 24. Januar 2024"
             >
               24
             </button>
@@ -915,8 +915,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 25. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 25. Januar 2024"
             >
               25
             </button>
@@ -924,8 +924,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 26. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 26. Januar 2024"
             >
               26
             </button>
@@ -933,8 +933,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 27. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 27. Januar 2024"
             >
               27
             </button>
@@ -942,8 +942,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 28. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 28. Januar 2024"
             >
               28
             </button>
@@ -953,8 +953,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 29. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 29. Januar 2024"
             >
               29
             </button>
@@ -962,8 +962,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 30. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 30. Januar 2024"
             >
               30
             </button>
@@ -971,8 +971,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 31. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 31. Januar 2024"
             >
               31
             </button>
@@ -980,8 +980,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
-                    aria-label=" 1. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 1. Februar 2024"
             >
               1
             </button>
@@ -989,8 +989,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
-                    aria-label=" 2. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 2. Februar 2024"
             >
               2
             </button>
@@ -998,8 +998,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
-                    aria-label=" 3. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 3. Februar 2024"
             >
               3
             </button>
@@ -1007,8 +1007,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
-                    aria-label=" 4. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 4. Februar 2024"
             >
               4
             </button>
@@ -1030,11 +1030,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r1m:"
+             aria-labelledby="svgtitle-:r1v:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r1m:">
+          <title id="svgtitle-:r1v:">
             Forrige måned Desember 2023
           </title>
           <path d="M22.3 10.8v1.8H5.5l5.2 5.1L9.3 19l-7.5-7.3 7.7-7.3 1.4 1.3-5.2 5.1h16.6Z">
@@ -1043,14 +1043,14 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
       </button>
       <div class="DatePickerCalendar_calendarNavigationMonthAndYearContainer__i-9ID">
         <div class>
-          <label id="labelId-:r1p:"
+          <label id="labelId-:r22:"
                  class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
-                 for="selectId-:r1o:"
+                 for="selectId-:r21:"
           >
             Velg måned
           </label>
           <div class="Select_selectContainer__CfUZs DatePickerCalendar_calendarNavigationMonth__th-Oc">
-            <select id="selectId-:r1o:"
+            <select id="selectId-:r21:"
                     class="Select_select__-ENv1"
             >
               <option class
@@ -1124,24 +1124,24 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
               </path>
             </svg>
           </div>
-          <div id="selectErrorId-:r1n:"
+          <div id="selectErrorId-:r20:"
                aria-live="assertive"
                aria-atomic="true"
           >
           </div>
         </div>
         <div class="DatePickerCalendar_calendarNavigationYear__Icqmb">
-          <label id="labelId-:r1t:"
+          <label id="labelId-:r26:"
                  class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
-                 for="textFieldTextboxId-:r1s:"
+                 for="textFieldTextboxId-:r25:"
           >
             Årstall
           </label>
-          <input id="textFieldTextboxId-:r1s:"
+          <input id="textFieldTextboxId-:r25:"
                  class="TextField_textbox__qbZlk"
                  value="2024"
           >
-          <div id="textFieldErrorId-:r1r:"
+          <div id="textFieldErrorId-:r24:"
                aria-live="assertive"
                aria-atomic="true"
           >
@@ -1154,11 +1154,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r1u:"
+             aria-labelledby="svgtitle-:r27:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r1u:">
+          <title id="svgtitle-:r27:">
             Neste måned Februar 2024
           </title>
           <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
@@ -1198,11 +1198,10 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
       <tbody>
         <tr>
           <td>
-            <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-current="date"
-                    aria-label="I dag 1. Januar 2024"
-                    tabindex="0"
+                    tabindex="-1"
+                    aria-label=" 1. Januar 2024"
             >
               1
             </button>
@@ -1210,8 +1209,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 2. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 2. Januar 2024"
             >
               2
             </button>
@@ -1219,8 +1218,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 3. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 3. Januar 2024"
             >
               3
             </button>
@@ -1228,8 +1227,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 4. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 4. Januar 2024"
             >
               4
             </button>
@@ -1237,8 +1236,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 5. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 5. Januar 2024"
             >
               5
             </button>
@@ -1246,8 +1245,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 6. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 6. Januar 2024"
             >
               6
             </button>
@@ -1255,8 +1254,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 7. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 7. Januar 2024"
             >
               7
             </button>
@@ -1266,8 +1265,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 8. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 8. Januar 2024"
             >
               8
             </button>
@@ -1275,8 +1274,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 9. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 9. Januar 2024"
             >
               9
             </button>
@@ -1284,8 +1283,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 10. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 10. Januar 2024"
             >
               10
             </button>
@@ -1293,8 +1292,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 11. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 11. Januar 2024"
             >
               11
             </button>
@@ -1302,8 +1301,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 12. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 12. Januar 2024"
             >
               12
             </button>
@@ -1311,8 +1310,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 13. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 13. Januar 2024"
             >
               13
             </button>
@@ -1320,8 +1319,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 14. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 14. Januar 2024"
             >
               14
             </button>
@@ -1329,10 +1328,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
         </tr>
         <tr>
           <td>
-            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
                     type="button"
-                    aria-label=" 15. Januar 2024"
-                    tabindex="-1"
+                    tabindex="0"
+                    aria-current="date"
+                    aria-label="I dag 15. Januar 2024"
             >
               15
             </button>
@@ -1340,8 +1340,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 16. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 16. Januar 2024"
             >
               16
             </button>
@@ -1349,8 +1349,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 17. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 17. Januar 2024"
             >
               17
             </button>
@@ -1358,8 +1358,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 18. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 18. Januar 2024"
             >
               18
             </button>
@@ -1367,8 +1367,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 19. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 19. Januar 2024"
             >
               19
             </button>
@@ -1376,8 +1376,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 20. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 20. Januar 2024"
             >
               20
             </button>
@@ -1385,8 +1385,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 21. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 21. Januar 2024"
             >
               21
             </button>
@@ -1396,8 +1396,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 22. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 22. Januar 2024"
             >
               22
             </button>
@@ -1405,8 +1405,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 23. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 23. Januar 2024"
             >
               23
             </button>
@@ -1414,8 +1414,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 24. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 24. Januar 2024"
             >
               24
             </button>
@@ -1423,8 +1423,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 25. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 25. Januar 2024"
             >
               25
             </button>
@@ -1432,8 +1432,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 26. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 26. Januar 2024"
             >
               26
             </button>
@@ -1441,8 +1441,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 27. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 27. Januar 2024"
             >
               27
             </button>
@@ -1450,8 +1450,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 28. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 28. Januar 2024"
             >
               28
             </button>
@@ -1461,8 +1461,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 29. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 29. Januar 2024"
             >
               29
             </button>
@@ -1470,8 +1470,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 30. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 30. Januar 2024"
             >
               30
             </button>
@@ -1479,8 +1479,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 31. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 31. Januar 2024"
             >
               31
             </button>
@@ -1488,8 +1488,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
-                    aria-label=" 1. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 1. Februar 2024"
             >
               1
             </button>
@@ -1497,8 +1497,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
-                    aria-label=" 2. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 2. Februar 2024"
             >
               2
             </button>
@@ -1506,8 +1506,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
-                    aria-label=" 3. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 3. Februar 2024"
             >
               3
             </button>
@@ -1515,8 +1515,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
-                    aria-label=" 4. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 4. Februar 2024"
             >
               4
             </button>
@@ -1706,11 +1706,10 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
       <tbody>
         <tr>
           <td>
-            <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-current="date"
-                    aria-label="I dag 1. Januar 2024"
-                    tabindex="0"
+                    tabindex="-1"
+                    aria-label=" 1. Januar 2024"
             >
               1
             </button>
@@ -1718,8 +1717,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 2. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 2. Januar 2024"
             >
               2
             </button>
@@ -1727,8 +1726,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 3. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 3. Januar 2024"
             >
               3
             </button>
@@ -1736,8 +1735,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 4. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 4. Januar 2024"
             >
               4
             </button>
@@ -1745,8 +1744,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 5. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 5. Januar 2024"
             >
               5
             </button>
@@ -1754,8 +1753,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 6. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 6. Januar 2024"
             >
               6
             </button>
@@ -1763,8 +1762,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 7. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 7. Januar 2024"
             >
               7
             </button>
@@ -1774,8 +1773,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 8. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 8. Januar 2024"
             >
               8
             </button>
@@ -1783,8 +1782,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 9. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 9. Januar 2024"
             >
               9
             </button>
@@ -1792,8 +1791,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 10. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 10. Januar 2024"
             >
               10
             </button>
@@ -1801,8 +1800,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 11. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 11. Januar 2024"
             >
               11
             </button>
@@ -1810,8 +1809,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 12. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 12. Januar 2024"
             >
               12
             </button>
@@ -1819,8 +1818,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 13. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 13. Januar 2024"
             >
               13
             </button>
@@ -1828,8 +1827,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 14. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 14. Januar 2024"
             >
               14
             </button>
@@ -1837,10 +1836,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
         </tr>
         <tr>
           <td>
-            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
                     type="button"
-                    aria-label=" 15. Januar 2024"
-                    tabindex="-1"
+                    tabindex="0"
+                    aria-current="date"
+                    aria-label="I dag 15. Januar 2024"
             >
               15
             </button>
@@ -1849,8 +1849,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 16. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 16. Januar 2024"
             >
               16
             </button>
@@ -1859,8 +1859,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 17. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 17. Januar 2024"
             >
               17
             </button>
@@ -1869,8 +1869,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 18. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 18. Januar 2024"
             >
               18
             </button>
@@ -1879,8 +1879,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 19. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 19. Januar 2024"
             >
               19
             </button>
@@ -1889,8 +1889,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 20. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 20. Januar 2024"
             >
               20
             </button>
@@ -1899,8 +1899,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 21. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 21. Januar 2024"
             >
               21
             </button>
@@ -1911,8 +1911,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 22. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 22. Januar 2024"
             >
               22
             </button>
@@ -1921,8 +1921,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 23. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 23. Januar 2024"
             >
               23
             </button>
@@ -1931,8 +1931,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 24. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 24. Januar 2024"
             >
               24
             </button>
@@ -1941,8 +1941,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 25. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 25. Januar 2024"
             >
               25
             </button>
@@ -1951,8 +1951,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 26. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 26. Januar 2024"
             >
               26
             </button>
@@ -1961,8 +1961,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 27. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 27. Januar 2024"
             >
               27
             </button>
@@ -1971,8 +1971,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 28. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 28. Januar 2024"
             >
               28
             </button>
@@ -1983,8 +1983,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 29. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 29. Januar 2024"
             >
               29
             </button>
@@ -1993,8 +1993,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 30. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 30. Januar 2024"
             >
               30
             </button>
@@ -2003,8 +2003,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 31. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 31. Januar 2024"
             >
               31
             </button>
@@ -2013,8 +2013,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
                     disabled
-                    aria-label=" 1. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 1. Februar 2024"
             >
               1
             </button>
@@ -2023,8 +2023,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
                     disabled
-                    aria-label=" 2. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 2. Februar 2024"
             >
               2
             </button>
@@ -2033,8 +2033,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
                     disabled
-                    aria-label=" 3. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 3. Februar 2024"
             >
               3
             </button>
@@ -2043,8 +2043,536 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
                     disabled
-                    aria-label=" 4. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 4. Februar 2024"
+            >
+              4
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWithinTheRange play-test 1`] = `
+<div data-test-block="true">
+  <div class="DatePickerCalendar_calendar__MrP62 ">
+    <div class="DatePickerCalendar_calendarNavigation__pG+UM">
+      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  DatePickerCalendar_calendarNavigationArrowIcon__fUDs1"
+              type="button"
+      >
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r1m:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r1m:">
+            Forrige måned Desember 2023
+          </title>
+          <path d="M22.3 10.8v1.8H5.5l5.2 5.1L9.3 19l-7.5-7.3 7.7-7.3 1.4 1.3-5.2 5.1h16.6Z">
+          </path>
+        </svg>
+      </button>
+      <div class="DatePickerCalendar_calendarNavigationMonthAndYearContainer__i-9ID">
+        <div class>
+          <label id="labelId-:r1p:"
+                 class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+                 for="selectId-:r1o:"
+          >
+            Velg måned
+          </label>
+          <div class="Select_selectContainer__CfUZs DatePickerCalendar_calendarNavigationMonth__th-Oc">
+            <select id="selectId-:r1o:"
+                    class="Select_select__-ENv1"
+            >
+              <option class
+                      value="0"
+              >
+                Januar
+              </option>
+              <option class
+                      value="1"
+              >
+                Februar
+              </option>
+              <option class
+                      value="2"
+              >
+                Mars
+              </option>
+              <option class
+                      value="3"
+              >
+                April
+              </option>
+              <option class
+                      value="4"
+              >
+                Mai
+              </option>
+              <option class
+                      value="5"
+              >
+                Juni
+              </option>
+              <option class
+                      value="6"
+              >
+                Juli
+              </option>
+              <option class
+                      value="7"
+              >
+                August
+              </option>
+              <option class
+                      value="8"
+              >
+                September
+              </option>
+              <option class
+                      value="9"
+              >
+                Oktober
+              </option>
+              <option class
+                      value="10"
+              >
+                November
+              </option>
+              <option class
+                      value="11"
+              >
+                Desember
+              </option>
+            </select>
+            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
+                 viewbox="0 0 24 24"
+                 focusable="false"
+                 aria-hidden="true"
+                 role="img"
+            >
+              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              </path>
+            </svg>
+          </div>
+          <div id="selectErrorId-:r1n:"
+               aria-live="assertive"
+               aria-atomic="true"
+          >
+          </div>
+        </div>
+        <div class="DatePickerCalendar_calendarNavigationYear__Icqmb">
+          <label id="labelId-:r1t:"
+                 class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+                 for="textFieldTextboxId-:r1s:"
+          >
+            Årstall
+          </label>
+          <input id="textFieldTextboxId-:r1s:"
+                 class="TextField_textbox__qbZlk"
+                 value="2024"
+          >
+          <div id="textFieldErrorId-:r1r:"
+               aria-live="assertive"
+               aria-atomic="true"
+          >
+          </div>
+        </div>
+      </div>
+      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  DatePickerCalendar_calendarNavigationArrowIcon__fUDs1"
+              type="button"
+      >
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r1u:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r1u:">
+            Neste måned Februar 2024
+          </title>
+          <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <table class="DatePickerCalendar_calendarTable__zDKjI">
+      <caption class="DatePickerCalendar_srOnly__VfDJH">
+        Januar 2024
+      </caption>
+      <thead>
+        <tr>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Man
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Tir
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Ons
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Tor
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Fre
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Lør
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Søn
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 1. Januar 2024"
+            >
+              1
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 2. Januar 2024"
+            >
+              2
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 3. Januar 2024"
+            >
+              3
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 4. Januar 2024"
+            >
+              4
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 5. Januar 2024"
+            >
+              5
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 6. Januar 2024"
+            >
+              6
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 7. Januar 2024"
+            >
+              7
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 8. Januar 2024"
+            >
+              8
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 9. Januar 2024"
+            >
+              9
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 10. Januar 2024"
+            >
+              10
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 11. Januar 2024"
+            >
+              11
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 12. Januar 2024"
+            >
+              12
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 13. Januar 2024"
+            >
+              13
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 14. Januar 2024"
+            >
+              14
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
+                    type="button"
+                    tabindex="0"
+                    aria-current="date"
+                    aria-label="I dag 15. Januar 2024"
+            >
+              15
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 16. Januar 2024"
+            >
+              16
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 17. Januar 2024"
+            >
+              17
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 18. Januar 2024"
+            >
+              18
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 19. Januar 2024"
+            >
+              19
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 20. Januar 2024"
+            >
+              20
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 21. Januar 2024"
+            >
+              21
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 22. Januar 2024"
+            >
+              22
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 23. Januar 2024"
+            >
+              23
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 24. Januar 2024"
+            >
+              24
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 25. Januar 2024"
+            >
+              25
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 26. Januar 2024"
+            >
+              26
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 27. Januar 2024"
+            >
+              27
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 28. Januar 2024"
+            >
+              28
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 29. Januar 2024"
+            >
+              29
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 30. Januar 2024"
+            >
+              30
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 31. Januar 2024"
+            >
+              31
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 1. Februar 2024"
+            >
+              1
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 2. Februar 2024"
+            >
+              2
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 3. Februar 2024"
+            >
+              3
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 4. Februar 2024"
             >
               4
             </button>
@@ -2234,12 +2762,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
       <tbody>
         <tr>
           <td>
-            <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-current="date"
-                    aria-label="I dag 1. Januar 2024"
-                    tabindex="0"
+                    tabindex="-1"
+                    aria-label=" 1. Januar 2024"
             >
               1
             </button>
@@ -2248,8 +2775,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 2. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 2. Januar 2024"
             >
               2
             </button>
@@ -2258,8 +2785,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 3. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 3. Januar 2024"
             >
               3
             </button>
@@ -2268,8 +2795,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 4. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 4. Januar 2024"
             >
               4
             </button>
@@ -2278,8 +2805,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 5. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 5. Januar 2024"
             >
               5
             </button>
@@ -2288,8 +2815,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 6. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 6. Januar 2024"
             >
               6
             </button>
@@ -2298,8 +2825,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 7. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 7. Januar 2024"
             >
               7
             </button>
@@ -2310,8 +2837,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 8. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 8. Januar 2024"
             >
               8
             </button>
@@ -2320,8 +2847,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 9. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 9. Januar 2024"
             >
               9
             </button>
@@ -2330,8 +2857,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 10. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 10. Januar 2024"
             >
               10
             </button>
@@ -2340,8 +2867,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 11. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 11. Januar 2024"
             >
               11
             </button>
@@ -2350,8 +2877,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 12. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 12. Januar 2024"
             >
               12
             </button>
@@ -2360,8 +2887,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 13. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 13. Januar 2024"
             >
               13
             </button>
@@ -2370,8 +2897,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     disabled
-                    aria-label=" 14. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 14. Januar 2024"
             >
               14
             </button>
@@ -2379,10 +2906,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
         </tr>
         <tr>
           <td>
-            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
                     type="button"
-                    aria-label=" 15. Januar 2024"
-                    tabindex="-1"
+                    tabindex="0"
+                    aria-current="date"
+                    aria-label="I dag 15. Januar 2024"
             >
               15
             </button>
@@ -2390,8 +2918,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 16. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 16. Januar 2024"
             >
               16
             </button>
@@ -2399,8 +2927,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 17. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 17. Januar 2024"
             >
               17
             </button>
@@ -2408,8 +2936,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 18. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 18. Januar 2024"
             >
               18
             </button>
@@ -2417,8 +2945,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 19. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 19. Januar 2024"
             >
               19
             </button>
@@ -2426,8 +2954,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 20. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 20. Januar 2024"
             >
               20
             </button>
@@ -2435,8 +2963,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 21. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 21. Januar 2024"
             >
               21
             </button>
@@ -2446,8 +2974,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 22. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 22. Januar 2024"
             >
               22
             </button>
@@ -2455,8 +2983,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 23. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 23. Januar 2024"
             >
               23
             </button>
@@ -2464,8 +2992,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 24. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 24. Januar 2024"
             >
               24
             </button>
@@ -2473,8 +3001,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 25. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 25. Januar 2024"
             >
               25
             </button>
@@ -2482,8 +3010,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 26. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 26. Januar 2024"
             >
               26
             </button>
@@ -2491,8 +3019,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 27. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 27. Januar 2024"
             >
               27
             </button>
@@ -2500,8 +3028,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 28. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 28. Januar 2024"
             >
               28
             </button>
@@ -2511,8 +3039,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 29. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 29. Januar 2024"
             >
               29
             </button>
@@ -2520,8 +3048,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 30. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 30. Januar 2024"
             >
               30
             </button>
@@ -2529,8 +3057,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 31. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 31. Januar 2024"
             >
               31
             </button>
@@ -2538,8 +3066,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
-                    aria-label=" 1. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 1. Februar 2024"
             >
               1
             </button>
@@ -2547,8 +3075,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
-                    aria-label=" 2. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 2. Februar 2024"
             >
               2
             </button>
@@ -2556,8 +3084,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
-                    aria-label=" 3. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 3. Februar 2024"
             >
               3
             </button>
@@ -2565,8 +3093,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
-                    aria-label=" 4. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 4. Februar 2024"
             >
               4
             </button>
@@ -2758,11 +3286,10 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
       <tbody>
         <tr>
           <td>
-            <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-current="date"
-                    aria-label="I dag 1. Januar 2024"
-                    tabindex="0"
+                    tabindex="-1"
+                    aria-label=" 1. Januar 2024"
             >
               1
             </button>
@@ -2770,8 +3297,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 2. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 2. Januar 2024"
             >
               2
             </button>
@@ -2779,8 +3306,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 3. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 3. Januar 2024"
             >
               3
             </button>
@@ -2788,8 +3315,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 4. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 4. Januar 2024"
             >
               4
             </button>
@@ -2797,8 +3324,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 5. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 5. Januar 2024"
             >
               5
             </button>
@@ -2806,8 +3333,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 6. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 6. Januar 2024"
             >
               6
             </button>
@@ -2815,8 +3342,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 7. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 7. Januar 2024"
             >
               7
             </button>
@@ -2826,8 +3353,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 8. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 8. Januar 2024"
             >
               8
             </button>
@@ -2835,8 +3362,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 9. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 9. Januar 2024"
             >
               9
             </button>
@@ -2844,8 +3371,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 10. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 10. Januar 2024"
             >
               10
             </button>
@@ -2853,8 +3380,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 11. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 11. Januar 2024"
             >
               11
             </button>
@@ -2862,8 +3389,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 12. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 12. Januar 2024"
             >
               12
             </button>
@@ -2871,8 +3398,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 13. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 13. Januar 2024"
             >
               13
             </button>
@@ -2880,8 +3407,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 14. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 14. Januar 2024"
             >
               14
             </button>
@@ -2889,10 +3416,11 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
         </tr>
         <tr>
           <td>
-            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
                     type="button"
-                    aria-label=" 15. Januar 2024"
-                    tabindex="-1"
+                    tabindex="0"
+                    aria-current="date"
+                    aria-label="I dag 15. Januar 2024"
             >
               15
             </button>
@@ -2900,8 +3428,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 16. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 16. Januar 2024"
             >
               16
             </button>
@@ -2909,8 +3437,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 17. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 17. Januar 2024"
             >
               17
             </button>
@@ -2918,8 +3446,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 18. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 18. Januar 2024"
             >
               18
             </button>
@@ -2927,8 +3455,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 19. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 19. Januar 2024"
             >
               19
             </button>
@@ -2936,8 +3464,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 20. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 20. Januar 2024"
             >
               20
             </button>
@@ -2945,8 +3473,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 21. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 21. Januar 2024"
             >
               21
             </button>
@@ -2956,8 +3484,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 22. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 22. Januar 2024"
             >
               22
             </button>
@@ -2965,8 +3493,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 23. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 23. Januar 2024"
             >
               23
             </button>
@@ -2974,8 +3502,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 24. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 24. Januar 2024"
             >
               24
             </button>
@@ -2983,8 +3511,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 25. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 25. Januar 2024"
             >
               25
             </button>
@@ -2992,8 +3520,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 26. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 26. Januar 2024"
             >
               26
             </button>
@@ -3001,8 +3529,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 27. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 27. Januar 2024"
             >
               27
             </button>
@@ -3010,8 +3538,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 28. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 28. Januar 2024"
             >
               28
             </button>
@@ -3021,8 +3549,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 29. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 29. Januar 2024"
             >
               29
             </button>
@@ -3030,8 +3558,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 30. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 30. Januar 2024"
             >
               30
             </button>
@@ -3039,8 +3567,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 31. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 31. Januar 2024"
             >
               31
             </button>
@@ -3048,8 +3576,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
-                    aria-label=" 1. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 1. Februar 2024"
             >
               1
             </button>
@@ -3057,8 +3585,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
-                    aria-label=" 2. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 2. Februar 2024"
             >
               2
             </button>
@@ -3066,8 +3594,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
-                    aria-label=" 3. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 3. Februar 2024"
             >
               3
             </button>
@@ -3075,8 +3603,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
-                    aria-label=" 4. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 4. Februar 2024"
             >
               4
             </button>
@@ -3088,7 +3616,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = `
+exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
 <div data-test-block="true">
   <div class="DatePickerCalendar_calendar__MrP62 ">
     <div class="DatePickerCalendar_calendarNavigation__pG+UM">
@@ -3266,10 +3794,10 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
       <tbody>
         <tr>
           <td>
-            <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label="I dag 1. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 1. Januar 2024"
             >
               1
             </button>
@@ -3277,8 +3805,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 2. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 2. Januar 2024"
             >
               2
             </button>
@@ -3286,8 +3814,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 3. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 3. Januar 2024"
             >
               3
             </button>
@@ -3295,8 +3823,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 4. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 4. Januar 2024"
             >
               4
             </button>
@@ -3304,8 +3832,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 5. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 5. Januar 2024"
             >
               5
             </button>
@@ -3313,8 +3841,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 6. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 6. Januar 2024"
             >
               6
             </button>
@@ -3322,8 +3850,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 7. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 7. Januar 2024"
             >
               7
             </button>
@@ -3333,8 +3861,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 8. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 8. Januar 2024"
             >
               8
             </button>
@@ -3342,8 +3870,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 9. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 9. Januar 2024"
             >
               9
             </button>
@@ -3351,8 +3879,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 10. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 10. Januar 2024"
             >
               10
             </button>
@@ -3360,8 +3888,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 11. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 11. Januar 2024"
             >
               11
             </button>
@@ -3369,8 +3897,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 12. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 12. Januar 2024"
             >
               12
             </button>
@@ -3378,8 +3906,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 13. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 13. Januar 2024"
             >
               13
             </button>
@@ -3387,8 +3915,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 14. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 14. Januar 2024"
             >
               14
             </button>
@@ -3396,10 +3924,10 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
         </tr>
         <tr>
           <td>
-            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
                     type="button"
-                    aria-label=" 15. Januar 2024"
                     tabindex="-1"
+                    aria-label="I dag 15. Januar 2024"
             >
               15
             </button>
@@ -3407,8 +3935,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 16. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 16. Januar 2024"
             >
               16
             </button>
@@ -3416,8 +3944,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 17. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 17. Januar 2024"
             >
               17
             </button>
@@ -3425,8 +3953,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 18. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 18. Januar 2024"
             >
               18
             </button>
@@ -3434,8 +3962,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 19. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 19. Januar 2024"
             >
               19
             </button>
@@ -3443,8 +3971,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 20. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 20. Januar 2024"
             >
               20
             </button>
@@ -3452,8 +3980,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 21. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 21. Januar 2024"
             >
               21
             </button>
@@ -3463,8 +3991,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 22. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 22. Januar 2024"
             >
               22
             </button>
@@ -3472,8 +4000,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 23. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 23. Januar 2024"
             >
               23
             </button>
@@ -3481,8 +4009,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 24. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 24. Januar 2024"
             >
               24
             </button>
@@ -3490,8 +4018,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 25. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 25. Januar 2024"
             >
               25
             </button>
@@ -3499,8 +4027,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 26. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 26. Januar 2024"
             >
               26
             </button>
@@ -3508,8 +4036,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 27. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 27. Januar 2024"
             >
               27
             </button>
@@ -3517,8 +4045,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 28. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 28. Januar 2024"
             >
               28
             </button>
@@ -3528,8 +4056,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 29. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 29. Januar 2024"
             >
               29
             </button>
@@ -3537,8 +4065,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
-                    aria-label=" 30. Januar 2024"
                     tabindex="-1"
+                    aria-label=" 30. Januar 2024"
             >
               30
             </button>
@@ -3546,9 +4074,9 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
+                    tabindex="0"
                     aria-current="date"
                     aria-label=" 31. Januar 2024"
-                    tabindex="0"
             >
               31
             </button>
@@ -3556,8 +4084,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
-                    aria-label=" 1. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 1. Februar 2024"
             >
               1
             </button>
@@ -3565,8 +4093,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
-                    aria-label=" 2. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 2. Februar 2024"
             >
               2
             </button>
@@ -3574,8 +4102,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
-                    aria-label=" 3. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 3. Februar 2024"
             >
               3
             </button>
@@ -3583,8 +4111,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedValue play-test 1`] = 
           <td>
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
                     type="button"
-                    aria-label=" 4. Februar 2024"
                     tabindex="-1"
+                    aria-label=" 4. Februar 2024"
             >
               4
             </button>

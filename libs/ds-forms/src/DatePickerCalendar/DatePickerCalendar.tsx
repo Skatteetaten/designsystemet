@@ -19,7 +19,6 @@ import {
   addDays,
   getWeek,
   getWeeksInMonth,
-  isEqual,
   isMonday,
   isSunday,
   lastDayOfMonth,
@@ -33,6 +32,7 @@ import {
   getCalendarRows,
   getNameOfMonthsAndDays,
   initialGridIdx,
+  initialSelectableDate,
   isDisabled,
 } from './utils';
 import { Select } from '../Select/Select';
@@ -60,17 +60,22 @@ export const DatePickerCalendar = forwardRef<
   ): JSX.Element => {
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
 
-    const currentFocusGridIdxRef = useRef<string>(initialGridIdx(selectedDate));
+    const [selectableDate] = useState(
+      initialSelectableDate(selectedDate, minDate, maxDate)
+    );
+    const focusableDateGridIdxRef = useRef<string>(
+      initialGridIdx(selectableDate)
+    );
     interface gridIdx {
       [idx: string]: RefObject<HTMLButtonElement>;
     }
     const dateButtonRefs = useRef<gridIdx>({});
 
     const [selectedMonthIndex, setSelectedMonthIndex] = useState(
-      selectedDate.getMonth()
+      selectableDate.getMonth()
     );
     const [selectedYear, setSelectedYear] = useState<number | string>(
-      selectedDate.getFullYear()
+      selectableDate.getFullYear()
     );
     const [isPrevMonthInvalid, setIsPrevMonthInvalid] = useState(false);
     const [isNextMonthInvalid, setIsNextMonthInvalid] = useState(false);
@@ -78,7 +83,7 @@ export const DatePickerCalendar = forwardRef<
 
     useEffect(() => {
       if (shouldResetFocus) {
-        const btnRef = dateButtonRefs.current[currentFocusGridIdxRef.current];
+        const btnRef = dateButtonRefs.current[focusableDateGridIdxRef.current];
         btnRef?.current?.focus();
         setShouldResetFocus(false);
       }
@@ -155,16 +160,16 @@ export const DatePickerCalendar = forwardRef<
       }
     };
 
-    const handleArrowNavigation = (
-      e: KeyboardEvent<HTMLButtonElement>,
+    const handleKeyboardNavigation = (
+      event: KeyboardEvent<HTMLButtonElement>,
       currentDate: Date
     ): void => {
-      e.preventDefault();
+      event.preventDefault();
 
       const [cols, rows] = [7, grid.length];
       const { currentRowIdx, currentColIdx } = parseRowAndColIdx();
 
-      switch (e.key) {
+      switch (event.key) {
         case 'ArrowUp': {
           const newFocusableDate = addDays(currentDate, -7);
           if (isDisabled(newFocusableDate, minDate, maxDate)) {
@@ -295,14 +300,14 @@ export const DatePickerCalendar = forwardRef<
       currentRowIdx: number;
       currentColIdx: number;
     } => {
-      const rowIdx = parseInt(currentFocusGridIdxRef.current[0]);
-      const colIdx = parseInt(currentFocusGridIdxRef.current[1]);
+      const rowIdx = parseInt(focusableDateGridIdxRef.current[0]);
+      const colIdx = parseInt(focusableDateGridIdxRef.current[1]);
       return { currentRowIdx: rowIdx, currentColIdx: colIdx };
     };
 
     const updateFocus = (rowIdx: number, colIdx: number): void => {
       const gridIdx = `${rowIdx}${colIdx}`;
-      currentFocusGridIdxRef.current = gridIdx;
+      focusableDateGridIdxRef.current = gridIdx;
       const btnRef = dateButtonRefs.current[gridIdx];
       btnRef?.current?.focus();
     };
@@ -408,10 +413,6 @@ export const DatePickerCalendar = forwardRef<
                     const buttonClassName =
                       `${styles.calendarTableDateButton} ${adjancentMonthClassName} ${todayClassName}`.trim();
 
-                    const ariaCurrent = isEqual(cell.date, selectedDate)
-                      ? 'date'
-                      : undefined;
-
                     const ariaLabel = `${
                       cell.isToday ? t('datepicker.Today') : ''
                     } ${cell.date.getDate()}. ${
@@ -422,8 +423,8 @@ export const DatePickerCalendar = forwardRef<
                     if (!dateButtonRefs.current[gridIdx]) {
                       dateButtonRefs.current[gridIdx] = createRef();
                     }
-                    // TODO FRONT-1346 - ta høyde for at den kan være disabled?
-                    const hasFocus = currentFocusGridIdxRef.current === gridIdx;
+                    const hasFocus =
+                      focusableDateGridIdxRef.current === gridIdx;
 
                     return (
                       <td key={`cell-${cell.date.toLocaleDateString()}`}>
@@ -432,14 +433,14 @@ export const DatePickerCalendar = forwardRef<
                           className={buttonClassName}
                           type={'button'}
                           disabled={cell.disabled}
-                          aria-current={ariaCurrent}
-                          aria-label={ariaLabel}
                           tabIndex={hasFocus ? 0 : -1}
+                          aria-current={hasFocus ? 'date' : undefined}
+                          aria-label={ariaLabel}
                           onClick={(): void => {
                             onSelectDate(cell.date);
                           }}
-                          onKeyDown={(e): void => {
-                            handleArrowNavigation(e, cell.date);
+                          onKeyDown={(event): void => {
+                            handleKeyboardNavigation(event, cell.date);
                           }}
                         >
                           {`${cell.text}`}
