@@ -54,7 +54,7 @@ export const DatePickerCalendar = forwardRef<
       maxDate,
       selectedDate = getDatePickerCalendarSelectedDateDefault(),
       onSelectDate,
-      onLastTabKey,
+      onTabKeyOut,
     },
     ref
   ): JSX.Element => {
@@ -161,13 +161,12 @@ export const DatePickerCalendar = forwardRef<
       event: KeyboardEvent<HTMLButtonElement>,
       currentDate: Date
     ): void => {
-      event.preventDefault();
-
       const [cols, rows] = [7, grid.length];
       const { currentRowIdx, currentColIdx } = parseRowAndColIdx();
 
       switch (event.key) {
         case 'ArrowUp': {
+          event.preventDefault();
           const newFocusableDate = addDays(currentDate, -7);
           if (isDisabled(newFocusableDate, minDate, maxDate)) {
             break;
@@ -200,6 +199,7 @@ export const DatePickerCalendar = forwardRef<
           break;
         }
         case 'ArrowDown': {
+          event.preventDefault();
           const newFocusableDate = addDays(currentDate, 7);
           if (isDisabled(newFocusableDate, minDate, maxDate)) {
             break;
@@ -230,6 +230,7 @@ export const DatePickerCalendar = forwardRef<
           break;
         }
         case 'ArrowLeft': {
+          event.preventDefault();
           const newFocusableDate = addDays(currentDate, -1);
           if (isDisabled(newFocusableDate, minDate, maxDate)) {
             break;
@@ -255,6 +256,7 @@ export const DatePickerCalendar = forwardRef<
           break;
         }
         case 'ArrowRight': {
+          event.preventDefault();
           const newFocusableDate = addDays(currentDate, 1);
           if (isDisabled(newFocusableDate, minDate, maxDate)) {
             break;
@@ -276,13 +278,11 @@ export const DatePickerCalendar = forwardRef<
           }
           break;
         }
-        case 'Enter': {
-          onSelectDate(currentDate);
-          break;
-        }
         case 'Tab': {
-          console.log('BLir tab kallet');
-          onLastTabKey && onLastTabKey();
+          if (!event.shiftKey) {
+            event.preventDefault();
+            onTabKeyOut && onTabKeyOut();
+          }
           break;
         }
         default:

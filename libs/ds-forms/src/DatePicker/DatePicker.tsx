@@ -253,7 +253,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
               minDate={minDate}
               maxDate={maxDate}
               onSelectDate={handleSelectDate}
-              onLastTabKey={closeCalendar}
+              onTabKeyOut={closeCalendar}
             />
           </div>
         )}

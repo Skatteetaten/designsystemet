@@ -45,7 +45,7 @@ const meta = {
     maxDate: { table: { disable: true }, control: 'date' },
     // Events
     onSelectDate: { table: { disable: true } },
-    onLastTabKey: { table: { disable: true } },
+    onTabKeyOut: { table: { disable: true } },
   },
   parameters: {
     mockDate: today,
