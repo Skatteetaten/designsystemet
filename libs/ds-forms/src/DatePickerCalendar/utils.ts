@@ -180,28 +180,28 @@ export function findValidYear(year: string | number): number {
   return year === '' || year === 0 ? new Date().getFullYear() : Number(year);
 }
 
-export function initialGridIdx(date: Date): string {
-  const colIdx = isSunday(date) ? 6 : date.getDay() - 1;
-  const rowIdx = getWeekOfMonth(date, { weekStartsOn: 1 }) - 1;
+export function initialGridIdx(focusableDate: Date): string {
+  const colIdx = isSunday(focusableDate) ? 6 : focusableDate.getDay() - 1;
+  const rowIdx = getWeekOfMonth(focusableDate, { weekStartsOn: 1 }) - 1;
 
   return `${rowIdx}${colIdx}`;
 }
 
-export const initialSelectableDate = (
+export const initialFocusableDate = (
   selectedDate: Date,
   minDate?: Date,
   maxDate?: Date
 ): Date => {
   if (isDisabled(selectedDate, minDate, maxDate)) {
-    let newSelectedDate = undefined;
+    let focusableDate = undefined;
     if (maxDate && isAfter(selectedDate, maxDate)) {
-      newSelectedDate = maxDate;
+      focusableDate = maxDate;
     } else if (minDate && isBefore(selectedDate, minDate)) {
-      newSelectedDate = minDate;
+      focusableDate = minDate;
     }
 
-    if (newSelectedDate && !isDisabled(newSelectedDate, minDate, maxDate)) {
-      return newSelectedDate;
+    if (focusableDate && !isDisabled(focusableDate, minDate, maxDate)) {
+      return focusableDate;
     }
   }
 

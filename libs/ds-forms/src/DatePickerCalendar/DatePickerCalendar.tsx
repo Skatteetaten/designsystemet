@@ -4,7 +4,6 @@ import {
   FocusEvent,
   forwardRef,
   KeyboardEvent,
-  RefObject,
   useEffect,
   useMemo,
   useRef,
@@ -25,14 +24,14 @@ import {
   startOfMonth,
 } from 'date-fns';
 
-import { DatePickerCalendarProps } from './DatePickerCalendar.types';
+import { DatePickerCalendarProps, GridIdx } from './DatePickerCalendar.types';
 import { getDatePickerCalendarSelectedDateDefault } from './defaults';
 import {
   findValidYear,
   getCalendarRows,
   getNameOfMonthsAndDays,
   initialGridIdx,
-  initialSelectableDate,
+  initialFocusableDate,
   isDisabled,
 } from './utils';
 import { Select } from '../Select/Select';
@@ -60,22 +59,19 @@ export const DatePickerCalendar = forwardRef<
   ): JSX.Element => {
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
 
-    const [selectableDate] = useState(
-      initialSelectableDate(selectedDate, minDate, maxDate)
+    const [focusableDate] = useState(
+      initialFocusableDate(selectedDate, minDate, maxDate)
     );
     const focusableDateGridIdxRef = useRef<string>(
-      initialGridIdx(selectableDate)
+      initialGridIdx(focusableDate)
     );
-    interface gridIdx {
-      [idx: string]: RefObject<HTMLButtonElement>;
-    }
-    const dateButtonRefs = useRef<gridIdx>({});
+    const dateButtonRefs = useRef<GridIdx>({});
 
     const [selectedMonthIndex, setSelectedMonthIndex] = useState(
-      selectableDate.getMonth()
+      focusableDate.getMonth()
     );
     const [selectedYear, setSelectedYear] = useState<number | string>(
-      selectableDate.getFullYear()
+      focusableDate.getFullYear()
     );
     const [isPrevMonthInvalid, setIsPrevMonthInvalid] = useState(false);
     const [isNextMonthInvalid, setIsNextMonthInvalid] = useState(false);
@@ -179,22 +175,20 @@ export const DatePickerCalendar = forwardRef<
           const isPrevMonth =
             newFocusableDate.getMonth() !== currentDate.getMonth();
           if (isPrevMonth) {
-            const weeksInPrevMonth = getWeeksInMonth(newFocusableDate, {
+            const rowsInPrevMonth = getWeeksInMonth(newFocusableDate, {
               weekStartsOn: 1,
             });
-            const [secondRowIdx, prevSecondLastRowIdx, prevLastRowIdx] = [
-              1,
-              weeksInPrevMonth - 2,
-              weeksInPrevMonth - 1,
-            ];
+            const [
+              secondRowIdx,
+              secondLastRowIdxInPrevMonth,
+              lastRowIdxInPrevMonth,
+            ] = [1, rowsInPrevMonth - 2, rowsInPrevMonth - 1];
 
-            const isFirstDayInMonth = isMonday(startOfMonth(currentDate));
-            const isCurrentRowIdxSameAsSecondRowIdx =
-              currentRowIdx === secondRowIdx;
+            const isFirstDayInMonthMonday = isMonday(startOfMonth(currentDate));
             const newRowIdx =
-              isCurrentRowIdxSameAsSecondRowIdx || isFirstDayInMonth
-                ? prevLastRowIdx
-                : prevSecondLastRowIdx;
+              currentRowIdx === secondRowIdx || isFirstDayInMonthMonday
+                ? lastRowIdxInPrevMonth
+                : secondLastRowIdxInPrevMonth;
 
             updateFocus(newRowIdx, currentColIdx);
             onPrevMonth();
@@ -213,18 +207,19 @@ export const DatePickerCalendar = forwardRef<
           const isNextMonth =
             newFocusableDate.getMonth() !== currentDate.getMonth();
           if (isNextMonth) {
-            const [secondLastRowIdx, nextSecondRowIdx, nextFirstRowIdx] = [
-              rows - 2,
-              1,
-              0,
-            ];
+            const [
+              secondLastRowIdx,
+              secondRowIdxInNextMonth,
+              firstRowIdxInNextMonth,
+            ] = [rows - 2, 1, 0];
 
-            const isLastDayInMonth = isSunday(lastDayOfMonth(currentDate));
+            const isLastDayInMonthSunday = isSunday(
+              lastDayOfMonth(currentDate)
+            );
             const newRowIdx =
-              currentRowIdx === secondLastRowIdx || isLastDayInMonth
-                ? nextFirstRowIdx
-                : nextSecondRowIdx;
-
+              currentRowIdx === secondLastRowIdx || isLastDayInMonthSunday
+                ? firstRowIdxInNextMonth
+                : secondRowIdxInNextMonth;
             updateFocus(newRowIdx, currentColIdx);
             onNextMonth();
             setShouldResetFocus(true);
@@ -242,15 +237,13 @@ export const DatePickerCalendar = forwardRef<
           const isPrevMonth =
             newFocusableDate.getMonth() !== currentDate.getMonth();
           if (isPrevMonth) {
-            const newColIdx = isSunday(newFocusableDate)
-              ? 6
-              : newFocusableDate.getDay() - 1;
-            const weeksInPrevMonth = getWeeksInMonth(newFocusableDate, {
+            const rowsInPrevMonth = getWeeksInMonth(newFocusableDate, {
               weekStartsOn: 1,
             });
-            const newRowIdx = weeksInPrevMonth - 1;
-
-            updateFocus(newRowIdx, newColIdx);
+            updateFocus(
+              rowsInPrevMonth - 1,
+              isSunday(newFocusableDate) ? 6 : newFocusableDate.getDay() - 1
+            );
             onPrevMonth();
             setShouldResetFocus(true);
           } else if (currentColIdx > 0) {
@@ -269,11 +262,10 @@ export const DatePickerCalendar = forwardRef<
           const isNextMonth =
             newFocusableDate.getMonth() !== currentDate.getMonth();
           if (isNextMonth) {
-            const newColIdx = isSunday(newFocusableDate)
-              ? 6
-              : newFocusableDate.getDay() - 1;
-
-            updateFocus(0, newColIdx);
+            updateFocus(
+              0,
+              isSunday(newFocusableDate) ? 6 : newFocusableDate.getDay() - 1
+            );
             onNextMonth();
             setShouldResetFocus(true);
           } else if (currentColIdx < cols - 1) {
