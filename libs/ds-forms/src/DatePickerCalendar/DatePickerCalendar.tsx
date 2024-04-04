@@ -413,7 +413,7 @@ export const DatePickerCalendar = forwardRef<
                     } ${cell.date.getFullYear()}`;
 
                     const ariaCurrent = isEqual(cell.date, firstFocusableDate)
-                      ? 'date'
+                      ? 'true'
                       : undefined;
 
                     const gridIdx = `${rowIdx}${colIdx}`;

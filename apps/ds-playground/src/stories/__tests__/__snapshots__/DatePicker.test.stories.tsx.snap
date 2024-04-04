@@ -1083,7 +1083,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                         type="button"
                         tabindex="0"
-                        aria-current="date"
+                        aria-current="true"
                         aria-label=" 31. Januar 2024"
                 >
                   31

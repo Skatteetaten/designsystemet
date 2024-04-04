@@ -311,7 +311,7 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
                     type="button"
                     tabindex="0"
-                    aria-current="date"
+                    aria-current="true"
                     aria-label="I dag 15. Januar 2024"
             >
               15
@@ -823,7 +823,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
                     type="button"
                     tabindex="0"
-                    aria-current="date"
+                    aria-current="true"
                     aria-label="I dag 15. Januar 2024"
             >
               15
@@ -1331,7 +1331,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
                     type="button"
                     tabindex="0"
-                    aria-current="date"
+                    aria-current="true"
                     aria-label="I dag 15. Januar 2024"
             >
               15
@@ -1839,7 +1839,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
                     type="button"
                     tabindex="0"
-                    aria-current="date"
+                    aria-current="true"
                     aria-label="I dag 15. Januar 2024"
             >
               15
@@ -2367,7 +2367,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWith
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
                     type="button"
                     tabindex="0"
-                    aria-current="date"
+                    aria-current="true"
                     aria-label="I dag 15. Januar 2024"
             >
               15
@@ -2909,7 +2909,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
                     type="button"
                     tabindex="0"
-                    aria-current="date"
+                    aria-current="true"
                     aria-label="I dag 15. Januar 2024"
             >
               15
@@ -3419,7 +3419,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
                     type="button"
                     tabindex="0"
-                    aria-current="date"
+                    aria-current="true"
                     aria-label="I dag 15. Januar 2024"
             >
               15
@@ -4075,7 +4075,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
             <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
                     type="button"
                     tabindex="0"
-                    aria-current="date"
+                    aria-current="true"
                     aria-label=" 31. Januar 2024"
             >
               31

@@ -169,7 +169,7 @@ export const Defaults = {
     );
     await expect(defaultSelectedDateButton).toHaveAttribute(
       'aria-current',
-      'date'
+      'true'
     );
     await expect(defaultSelectedDateButton).toHaveAttribute('tabindex', '0');
   },
@@ -187,7 +187,7 @@ export const WithSelectedDate = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const selectedDateButton = canvas.getByText('31');
-    await expect(selectedDateButton).toHaveAttribute('aria-current', 'date');
+    await expect(selectedDateButton).toHaveAttribute('aria-current', 'true');
   },
 } satisfies Story;
 
