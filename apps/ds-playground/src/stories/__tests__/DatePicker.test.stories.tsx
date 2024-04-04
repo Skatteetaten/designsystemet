@@ -516,35 +516,37 @@ export const WithInitialPickerDate = {
   },
 } satisfies Story;
 
-// export const GenerouslyWithFormatFromUser = {
-//   name: 'Generously With Format From User (A3)',
-//   args: {
-//     ...defaultArgs,
-//     value: valueDate,
-//   },
-//   argTypes: {},
-//   parameters: {
-//     imageSnapshot: { disable: true },
-//     HTMLSnapshot: { disable: true },
-//   },
-//   play: async ({ canvasElement }): Promise<void> => {
-//     const canvas = within(canvasElement);
-//     const input = canvas.getByRole('textbox');
-//     input.focus();
-//     const removeDate =
-//       '{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}';
+export const GenerouslyWithFormatFromUser = {
+  name: 'Generously With Format From User (A3)',
+  args: {
+    ...defaultArgs,
+    value: valueDate,
+  },
+  argTypes: {},
+  parameters: {
+    imageSnapshot: { disable: true },
+    HTMLSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const input = canvas.getByRole('textbox');
+    input.focus();
+    const removeDate =
+      '{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}';
 
-//     await userEvent.type(input, removeDate);
-//     await userEvent.type(input, '0102');
-//     await userEvent.tab();
-//     await waitFor(() => expect(input).toHaveValue('01.02.2024'));
+    const user = userEvent.setup();
 
-//     await userEvent.type(input, removeDate);
-//     await userEvent.type(input, '010224');
-//     await userEvent.tab();
-//     await waitFor(() => expect(input).toHaveValue('01.02.2024'));
-//   },
-// } satisfies Story;
+    await user.keyboard(removeDate);
+    await user.keyboard('0102');
+    await user.tab();
+    await waitFor(() => expect(input).toHaveValue('01.02.2024'));
+
+    await user.keyboard(removeDate);
+    await user.keyboard('010224');
+    await user.tab();
+    await waitFor(() => expect(input).toHaveValue('01.02.2024'));
+  },
+} satisfies Story;
 
 const EventHandlersTemplate: StoryFn<typeof DatePicker> = (args) => {
   const [labelText, setLabelText] = useState('Tester events');
