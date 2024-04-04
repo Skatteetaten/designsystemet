@@ -81,11 +81,12 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
     useImperativeHandle(ref, () => inputRef?.current as HTMLInputElement);
 
     const [showCalendar, setShowCalendar] = useState(false);
-
     const [selectedDate, setSelectedDate] = React.useState(value);
     const [formattedDate, setFormattedDate] = React.useState(
       initFormattedDate(value, defaultValue, dateFormat)
     );
+
+    const preselectedDate = selectedDate || initialPickerDate;
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
       const { value } = e.target as HTMLInputElement;
@@ -249,7 +250,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
           <div className={styles.calendarContainer}>
             <DatePickerCalendar
               ref={calendarRef}
-              selectedDate={selectedDate || initialPickerDate}
+              selectedDate={preselectedDate}
               minDate={minDate}
               maxDate={maxDate}
               onSelectDate={handleSelectDate}
