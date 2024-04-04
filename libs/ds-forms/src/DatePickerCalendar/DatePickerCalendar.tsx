@@ -4,7 +4,6 @@ import {
   FocusEvent,
   forwardRef,
   KeyboardEvent,
-  useEffect,
   useMemo,
   useRef,
   useState,
@@ -78,15 +77,6 @@ export const DatePickerCalendar = forwardRef<
     );
     const [isPrevMonthInvalid, setIsPrevMonthInvalid] = useState(false);
     const [isNextMonthInvalid, setIsNextMonthInvalid] = useState(false);
-    const [shouldResetFocus, setShouldResetFocus] = useState(false);
-
-    useEffect(() => {
-      if (shouldResetFocus) {
-        const btnRef = dateButtonRefs.current[focusableDateGridIdxRef.current];
-        btnRef?.current?.focus();
-        setShouldResetFocus(false);
-      }
-    }, [shouldResetFocus]);
 
     const [firstValidYear, lastValidYear] = [1, 9999];
     const [january, december] = [0, 11];
@@ -194,7 +184,7 @@ export const DatePickerCalendar = forwardRef<
 
             updateFocus(newRowIdx, currentColIdx);
             onPrevMonth();
-            setShouldResetFocus(true);
+            resetFocus();
           } else if (currentRowIdx > 0) {
             updateFocus(currentRowIdx - 1, currentColIdx);
           }
@@ -225,7 +215,7 @@ export const DatePickerCalendar = forwardRef<
                 : secondRowIdxInNextMonth;
             updateFocus(newRowIdx, currentColIdx);
             onNextMonth();
-            setShouldResetFocus(true);
+            resetFocus();
           } else if (currentRowIdx < rows - 1) {
             updateFocus(currentRowIdx + 1, currentColIdx);
           }
@@ -249,7 +239,7 @@ export const DatePickerCalendar = forwardRef<
               isSunday(newFocusableDate) ? 6 : newFocusableDate.getDay() - 1
             );
             onPrevMonth();
-            setShouldResetFocus(true);
+            resetFocus();
           } else if (currentColIdx > 0) {
             updateFocus(currentRowIdx, currentColIdx - 1);
           } else if (currentRowIdx > 0) {
@@ -272,7 +262,7 @@ export const DatePickerCalendar = forwardRef<
               isSunday(newFocusableDate) ? 6 : newFocusableDate.getDay() - 1
             );
             onNextMonth();
-            setShouldResetFocus(true);
+            resetFocus();
           } else if (currentColIdx < cols - 1) {
             updateFocus(currentRowIdx, currentColIdx + 1);
           } else if (currentRowIdx < rows - 1) {
@@ -299,6 +289,13 @@ export const DatePickerCalendar = forwardRef<
       const rowIdx = parseInt(focusableDateGridIdxRef.current[0]);
       const colIdx = parseInt(focusableDateGridIdxRef.current[1]);
       return { currentRowIdx: rowIdx, currentColIdx: colIdx };
+    };
+
+    const resetFocus = (): void => {
+      setTimeout(() => {
+        const btnRef = dateButtonRefs.current[focusableDateGridIdxRef.current];
+        btnRef?.current?.focus();
+      });
     };
 
     const updateFocus = (rowIdx: number, colIdx: number): void => {
