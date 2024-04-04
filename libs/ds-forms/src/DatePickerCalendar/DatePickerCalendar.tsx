@@ -32,7 +32,7 @@ import {
   getCalendarRows,
   getNameOfMonthsAndDays,
   initialGridIdx,
-  initialFocusableDate,
+  getFirstFocusableDate,
   isDisabled,
 } from './utils';
 import { Select } from '../Select/Select';
@@ -60,8 +60,10 @@ export const DatePickerCalendar = forwardRef<
   ): JSX.Element => {
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
 
-    const [firstFocusableDate] = useState(
-      initialFocusableDate(selectedDate, minDate, maxDate)
+    const firstFocusableDate = getFirstFocusableDate(
+      selectedDate,
+      minDate,
+      maxDate
     );
     const focusableDateGridIdxRef = useRef<string>(
       initialGridIdx(firstFocusableDate)

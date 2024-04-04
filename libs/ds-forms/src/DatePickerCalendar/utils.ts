@@ -187,7 +187,7 @@ export function initialGridIdx(focusableDate: Date): string {
   return `${rowIdx}${colIdx}`;
 }
 
-export const initialFocusableDate = (
+export const getFirstFocusableDate = (
   selectedDate: Date,
   minDate?: Date,
   maxDate?: Date
