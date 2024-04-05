@@ -932,10 +932,10 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
             </tr>
             <tr>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
                         type="button"
                         tabindex="-1"
-                        aria-label=" 15. Januar 2024"
+                        aria-label="I dag 15. Januar 2024"
                 >
                   15
                 </button>
