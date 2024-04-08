@@ -1,12 +1,13 @@
-import { forwardRef, useState, useRef, ReactNode, RefObject } from 'react';
+import { forwardRef, useState, useRef, ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { InlineButton, Button, IconButton } from '@skatteetaten/ds-buttons';
+import { InlineButton, IconButton } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   ChevronLeftSVGpath,
   ChevronRightSVGpath,
 } from '@skatteetaten/ds-icons';
+import { TFunction } from 'i18next';
 
 import {
   getDefaultPageSize,
@@ -14,96 +15,58 @@ import {
   getDefaultHidePageSummary,
   getDefaultHidePrevNextButtonTitle,
 } from './defaults';
-import {
-  PaginationProps,
-  PageOption,
-  PaginationListProps,
-} from './Pagination.types';
-import {
-  canHaveElipsisEnd,
-  canHaveElipsisStart,
-  getRange,
-  isElipsis,
-} from './utils';
+import { PaginationProps, PageOption } from './Pagination.types';
+import { PaginationList } from '../PaginationList/PaginationList';
 
 import styles from './Pagination.module.scss';
 
 // TODO isvalid hvis new page > total allowed pages
 
-const PaginationList = ({
-  lastPage,
-  internalPage,
-  sibling,
+type FirstLastPageButtonProps = {
+  activePage: number;
+  navigateDirection: 'next' | 'previous';
+  hidePrevNextButtonTitle: boolean;
+  t: TFunction<'ds_navigation', undefined>;
+  handleChange: (page: number) => void;
+};
+
+const FirstLastPageButton = ({
+  activePage,
+  navigateDirection,
+  hidePrevNextButtonTitle,
+  t,
   handleChange,
-  firstPageRef,
-  lastPageRef,
-}: PaginationListProps): ReactNode => {
-  const barList = [];
-
-  let rangeStart = 2;
-  let rangeEnd = lastPage - 1;
-  barList.push(1);
-  if (canHaveElipsisStart(internalPage, sibling)) {
-    if (internalPage > 2) {
-      rangeStart = internalPage - sibling;
-    }
-    barList.push('elips1');
-  }
-  if (rangeStart < internalPage + 1) {
-    barList.push(...getRange(rangeStart, internalPage - 1));
-  }
-  if (internalPage > 1 && internalPage < lastPage) {
-    barList.push(internalPage);
-  }
-
-  if (canHaveElipsisEnd(internalPage, sibling, lastPage)) {
-    rangeEnd = internalPage + sibling;
-  }
-  if (rangeEnd > internalPage) {
-    barList.push(...getRange(internalPage + 1, rangeEnd));
-  }
-  if (canHaveElipsisEnd(internalPage, sibling, lastPage)) {
-    barList.push('elips2');
-  }
-  barList.push(lastPage);
-  const getRef = ({
-    paging,
-    lastPage,
-    firstPageRef,
-    lastPageRef,
-  }: {
-    paging: string | number;
-    lastPage: number;
-    firstPageRef: RefObject<HTMLButtonElement> | undefined;
-    lastPageRef: RefObject<HTMLButtonElement> | undefined;
-  }): RefObject<HTMLButtonElement> | undefined => {
-    if (paging === 1) return firstPageRef;
-    else if (paging === lastPage) return lastPageRef;
-    return undefined;
-  };
-
-  return barList.map((paging) => (
-    <li key={paging}>
-      {isElipsis(paging) ? (
-        <p
-          className={styles.paginationElipsis}
-          aria-label={dsI18n.t('pagination.EllipsisAltText')}
-        >
-          {'...'}
-        </p>
+}: FirstLastPageButtonProps): ReactNode => {
+  const style =
+    navigateDirection === 'previous'
+      ? styles.paginationElement_leftArrow
+      : styles.paginationElement_rightArrow;
+  const buttonTitle = t('pagination.NextButtonTitle');
+  const icon =
+    navigateDirection === 'previous' ? ChevronLeftSVGpath : ChevronRightSVGpath;
+  console.log(`activePage er ${activePage}`);
+  const multiplication = navigateDirection === 'next' ? 1 : -1;
+  return (
+    <li className={style}>
+      {hidePrevNextButtonTitle ? (
+        <IconButton
+          type={'button'}
+          svgPath={icon}
+          title={buttonTitle}
+          onClick={() => handleChange(activePage + multiplication)}
+        />
       ) : (
-        <Button
-          ref={getRef({ paging, lastPage, firstPageRef, lastPageRef })}
-          variant={paging === internalPage ? 'primary' : 'tertiary'}
+        <InlineButton
+          iconPosition={navigateDirection === 'previous' ? 'left' : 'right'}
+          svgPath={icon}
           className={styles.paginationButton}
-          ariaCurrent={paging === internalPage ? true : undefined}
-          onClick={() => handleChange(Number(paging))}
+          onClick={() => handleChange(activePage + multiplication)}
         >
-          {paging.toString()}
-        </Button>
+          {buttonTitle}
+        </InlineButton>
       )}
     </li>
-  ));
+  );
 };
 
 export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
@@ -152,6 +115,7 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
 
     const [internalPage, setInteralPage] = useCurrentPage(1, option);
     const handleChange = (page: number): void => {
+      console.log(`setinternatl page via handleChange. page ble ${page}`);
       setInteralPage(page);
       if (page === 1) {
         firstPageRef?.current?.focus();
@@ -161,7 +125,7 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
       onChange?.(page);
     };
 
-    const arrowLeft = (activePage: number): ReactNode => {
+    /*     const arrowLeft = (activePage: number): ReactNode => {
       return (
         <li className={styles.paginationElement_leftArrow}>
           {hidePrevNextButtonTitle && (
@@ -209,7 +173,7 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
           )}
         </li>
       );
-    };
+    }; */
 
     const showPaginationSummary = dsI18n.t(
       'ds_navigation:pagination.PageSummary',
@@ -220,6 +184,9 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
         total: totalItems,
       }
     );
+    if (showPaginationSummary === '') {
+      throw new Error('Feil! Mangler import av språk fra ds-core-utils?');
+    }
     const pageSummary = `${
       hidePageSummary ? styles.paginationSummary_hide : ''
     }`;
@@ -242,7 +209,15 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
           {showPaginationSummary}
         </div>
         <ul className={listCss}>
-          {internalPage > 1 && arrowLeft(internalPage)}
+          {internalPage > 1 && (
+            <FirstLastPageButton
+              activePage={internalPage}
+              navigateDirection={'previous'}
+              handleChange={handleChange}
+              t={t}
+              hidePrevNextButtonTitle={hidePrevNextButtonTitle}
+            />
+          )}
           {lastPage > 1 && (
             <PaginationList
               lastPage={lastPage}
@@ -253,7 +228,15 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
               lastPageRef={lastPageRef}
             />
           )}
-          {internalPage < lastPage && arrowRight(internalPage)}
+          {internalPage < lastPage && (
+            <FirstLastPageButton
+              activePage={internalPage}
+              navigateDirection={'next'}
+              handleChange={handleChange}
+              t={t}
+              hidePrevNextButtonTitle={hidePrevNextButtonTitle}
+            />
+          )}
         </ul>
       </nav>
     );
