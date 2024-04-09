@@ -23,7 +23,7 @@ import { DatePickerProps } from './DatePicker.types';
 import { getDatePickerDateFormat } from './defaults';
 import {
   formatDateForInput,
-  initFormattedDate,
+  initInputValue,
   parseDateFromInput,
 } from './utils';
 import { DatePickerCalendar } from '../DatePickerCalendar/DatePickerCalendar';
@@ -81,9 +81,10 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
     useImperativeHandle(ref, () => inputRef?.current as HTMLInputElement);
 
     const [showCalendar, setShowCalendar] = useState(false);
-    const [selectedDate, setSelectedDate] = useState(value);
-    const [formattedDate, setFormattedDate] = useState(
-      initFormattedDate(value, defaultValue, dateFormat)
+
+    const [selectedDate, setSelectedDate] = React.useState(value);
+    const [inputValue, setInputValue] = React.useState(
+      initInputValue(value, defaultValue, dateFormat)
     );
 
     const preselectedDate = selectedDate || initialPickerDate;
@@ -91,17 +92,20 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
     const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
       const { value } = e.target as HTMLInputElement;
       const date = parseDateFromInput(value);
+
       setSelectedDate(isValid(date) ? date : undefined);
-      setFormattedDate(value);
+      setInputValue(value);
       onChange?.(e);
     };
+
+    console.log('Hva er value', { value });
 
     const handleBlur = (e: FocusEvent<HTMLInputElement>): void => {
       const { value } = e.target as HTMLInputElement;
       const date = parseDateFromInput(value);
       if (isValid(date)) {
         setSelectedDate(date);
-        date && setFormattedDate(formatDateForInput(dateFormat, date));
+        date && setInputValue(formatDateForInput(dateFormat, date));
       }
       onSelectDate?.(date);
       onBlur?.(e);
@@ -109,7 +113,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
 
     const handleSelectDate = (date: Date): void => {
       setSelectedDate(date);
-      setFormattedDate(formatDateForInput(dateFormat, date));
+      setInputValue(formatDateForInput(dateFormat, date));
       setShowCalendar(false);
       inputRef.current?.focus();
 
@@ -124,7 +128,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
     useEffect(() => {
       if (value) {
         setSelectedDate(value);
-        setFormattedDate(formatDateForInput(dateFormat, value));
+        setInputValue(formatDateForInput(dateFormat, value));
       }
     }, [dateFormat, value]);
 
@@ -212,12 +216,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
             placeholder={placeholderValue}
             readOnly={readOnly}
             required={required}
-            defaultValue={
-              defaultValue
-                ? formatDateForInput(dateFormat, defaultValue)
-                : undefined
-            }
-            value={formattedDate}
+            value={inputValue}
             aria-describedby={hasError ? errorId : undefined}
             aria-invalid={hasError ?? undefined}
             onBlur={handleBlur}

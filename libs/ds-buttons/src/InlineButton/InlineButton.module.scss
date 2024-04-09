@@ -19,6 +19,7 @@
   line-height: var(--semantic-line-height-buttons);
   text-align: left;
   text-decoration-line: underline;
+  vertical-align: bottom;
 
   &_withIconLeft {
     @extend %with-icon;

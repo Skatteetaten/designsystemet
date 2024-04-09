@@ -1,0 +1,81 @@
+{
+  "name": "ds-navigation",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ds-navigation/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/ds-navigation/**/*.{ts,tsx,js,jsx}",
+          "libs/ds-navigation/package.json"
+        ]
+      }
+    },
+    "build": {
+      "executor": "@nx/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ds-navigation",
+        "tsConfig": "libs/ds-navigation/tsconfig.lib.json",
+        "project": "libs/ds-navigation/package.json",
+        "entryFile": "libs/ds-navigation/src/index.ts",
+        "external": ["react", "react-dom", "react/jsx-runtime"],
+        "rollupConfig": ["libs/ds-navigation/rollup.config.js"],
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/ds-navigation/README.md",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "LICENSE",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/ds-navigation/jest.config.ts"
+      }
+    },
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/ds-navigation/**/*.css",
+          "libs/ds-navigation/**/*.scss"
+        ]
+      }
+    },
+    "tsc": {
+      "executor": "@skatteetaten/ds-dev-config:tsCheck",
+      "options": {
+        "tsConfig": ["tsconfig.lib.json", "tsconfig.spec.json"]
+      }
+    },
+    "set-version": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm version {args.packageVersion} --no-git-tag",
+        "cwd": "libs/ds-navigation"
+      }
+    },
+    "publish": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm publish dist/libs/ds-navigation {args.switches}"
+      }
+    }
+  },
+  "implicitDependencies": ["!ds-dev-config"]
+}
