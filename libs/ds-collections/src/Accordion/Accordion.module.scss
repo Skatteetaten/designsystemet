@@ -1,0 +1,27 @@
+.accordion {
+  background-color: var(--semantic-page-background);
+
+  &_forest {
+    background-color: var(--palette-forest-10);
+  }
+
+  &_denim {
+    background-color: var(--palette-denim-10);
+  }
+
+  &_ochre {
+    background-color: var(--palette-ochre-10);
+  }
+
+  &_burgundy {
+    background-color: var(--palette-burgundy-10);
+  }
+
+  &_graphite {
+    background-color: var(--palette-graphite-5);
+  }
+}
+
+.iconRight > div button {
+  flex-direction: row-reverse;
+}
