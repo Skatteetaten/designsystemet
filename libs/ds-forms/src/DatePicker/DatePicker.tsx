@@ -216,6 +216,11 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
             placeholder={placeholderValue}
             readOnly={readOnly}
             required={required}
+            defaultValue={
+              defaultValue
+                ? formatDateForInput(dateFormat, defaultValue)
+                : undefined
+            }
             value={inputValue}
             aria-describedby={hasError ? errorId : undefined}
             aria-invalid={hasError ?? undefined}

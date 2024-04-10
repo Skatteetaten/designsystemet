@@ -64,6 +64,7 @@ export const DatePickerCalendar = forwardRef<
       minDate,
       maxDate
     );
+
     const focusableDateGridIdxRef = useRef<string>(
       initialGridIdx(firstFocusableDate)
     );
@@ -412,7 +413,10 @@ export const DatePickerCalendar = forwardRef<
                       monthNames[cell.date.getMonth()]
                     } ${cell.date.getFullYear()}`;
 
-                    const ariaCurrent = isEqual(cell.date, firstFocusableDate)
+                    const ariaCurrent = isEqual(
+                      cell.date,
+                      firstFocusableDate.setHours(0, 0, 0, 0)
+                    )
                       ? 'true'
                       : undefined;
 
