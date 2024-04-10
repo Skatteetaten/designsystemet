@@ -98,7 +98,12 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       onChange?.(e);
     };
 
-    console.log('Hva er value', { value });
+    const handleFocus = (e: FocusEvent<HTMLInputElement>): void => {
+      if (showCalendar) {
+        setShowCalendar(false);
+      }
+      onFocus?.(e);
+    };
 
     const handleBlur = (e: FocusEvent<HTMLInputElement>): void => {
       const { value } = e.target as HTMLInputElement;
@@ -116,7 +121,6 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       setInputValue(formatDateForInput(dateFormat, date));
       setShowCalendar(false);
       inputRef.current?.focus();
-
       onSelectDate?.(date);
     };
 
@@ -226,7 +230,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
             aria-invalid={hasError ?? undefined}
             onBlur={handleBlur}
             onChange={handleChange}
-            onFocus={onFocus}
+            onFocus={handleFocus}
           />
           {!readOnly && (
             <button
