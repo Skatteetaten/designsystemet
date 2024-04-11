@@ -91,7 +91,7 @@
         color: var(--palette-graphite-50);
       }
 
-      &[aria-current='date'] {
+      &[aria-current='true'] {
         background-color: var(--palette-azure-70);
         color: var(--palette-graphite-0);
       }
@@ -137,20 +137,20 @@
         border-color: var(--semantic-disabled-foreground);
       }
 
-      &[aria-current='date']:disabled,
-      &[aria-current='date']:disabled:hover,
-      &_today[aria-current='date']:disabled,
-      &_today[aria-current='date']:disabled:hover {
+      &[aria-current='true']:disabled,
+      &[aria-current='true']:disabled:hover,
+      &_today[aria-current='true']:disabled,
+      &_today[aria-current='true']:disabled:hover {
         background-color: var(--semantic-disabled-foreground);
         color: var(--palette-graphite-0);
       }
 
-      &_today[aria-current='date']::after,
-      &_today[aria-current='date']:disabled::after {
+      &_today[aria-current='true']::after,
+      &_today[aria-current='true']:disabled::after {
         border-color: var(--palette-graphite-0);
       }
 
-      &_today[aria-current='date']:focus::after {
+      &_today[aria-current='true']:focus::after {
         border-color: var(--palette-azure-70);
       }
     }
@@ -170,8 +170,8 @@
       &DateButton {
         width: 40px;
 
-        &_today[aria-current='date']::after,
-        &_today[aria-current='date']:disabled::after,
+        &_today[aria-current='true']::after,
+        &_today[aria-current='true']:disabled::after,
         &_today::after,
         &_today:disabled::after,
         &_today:active::after {
