@@ -87,6 +87,8 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       initInputValue(value, defaultValue, dateFormat)
     );
 
+    const preselectedDate = selectedDate || initialPickerDate;
+
     const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
       const { value } = e.target as HTMLInputElement;
       const date = parseDateFromInput(value);
@@ -94,6 +96,13 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       setSelectedDate(isValid(date) ? date : undefined);
       setInputValue(value);
       onChange?.(e);
+    };
+
+    const handleFocus = (e: FocusEvent<HTMLInputElement>): void => {
+      if (showCalendar) {
+        setShowCalendar(false);
+      }
+      onFocus?.(e);
     };
 
     const handleBlur = (e: FocusEvent<HTMLInputElement>): void => {
@@ -112,8 +121,12 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       setInputValue(formatDateForInput(dateFormat, date));
       setShowCalendar(false);
       inputRef.current?.focus();
-
       onSelectDate?.(date);
+    };
+
+    const closeCalendar = (): void => {
+      setShowCalendar(false);
+      calenderButtonRef?.current?.focus();
     };
 
     useEffect(() => {
@@ -141,15 +154,13 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
 
       const handleResize: EventListener = (e): void => {
         if (e.type === 'resize') {
-          setShowCalendar(false);
-          calenderButtonRef?.current?.focus();
+          closeCalendar();
         }
       };
 
       const handleEscape = (e: KeyboardEvent): void => {
         if (e.key === 'Escape') {
-          setShowCalendar(false);
-          calenderButtonRef?.current?.focus();
+          closeCalendar();
         }
       };
 
@@ -219,7 +230,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
             aria-invalid={hasError ?? undefined}
             onBlur={handleBlur}
             onChange={handleChange}
-            onFocus={onFocus}
+            onFocus={handleFocus}
           />
           {!readOnly && (
             <button
@@ -247,10 +258,11 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
           <div className={styles.calendarContainer}>
             <DatePickerCalendar
               ref={calendarRef}
-              selectedDate={selectedDate || initialPickerDate}
+              selectedDate={preselectedDate}
               minDate={minDate}
               maxDate={maxDate}
               onSelectDate={handleSelectDate}
+              onTabKeyOut={closeCalendar}
             />
           </div>
         )}

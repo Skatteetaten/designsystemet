@@ -24,6 +24,7 @@ const verifyAttribute =
     await expect(button).toHaveAttribute(attribute, expectedValue);
   };
 
+const today = new Date('2024.01.15');
 const meta = {
   component: DatePicker,
   title: 'Tester/DatePicker/DatePicker',
@@ -73,6 +74,9 @@ const meta = {
     onChange: { table: { disable: true } },
     onFocus: { table: { disable: true } },
     onSelectDate: { table: { disable: true } },
+  },
+  parameters: {
+    mockDate: today,
   },
 } satisfies Meta<typeof DatePicker>;
 export default meta;
@@ -512,7 +516,7 @@ export const WithInitialPickerDate = {
     });
     await fireEvent.click(calendarButton);
     const ariaCurrentButton = canvas.getByText('31');
-    await expect(ariaCurrentButton).toHaveAttribute('aria-current', 'date');
+    await expect(ariaCurrentButton).toHaveAttribute('aria-current', 'true');
   },
 } satisfies Story;
 

@@ -479,11 +479,11 @@ export const WithArrowKeyNavigation = {
   args: {
     ...defaultArgs,
     results: [
-      { description: 'Hydrogen' },
-      { description: 'Helium' },
-      { description: 'Litium' },
-      { description: 'Beryllium' },
-      { description: 'Bor' },
+      { description: 'Hydrogen', key: 'H' },
+      { description: 'Helium', key: 'He' },
+      { description: 'Litium', key: 'Li' },
+      { description: 'Beryllium', key: 'Be' },
+      { description: 'Bor', key: 'B' },
     ],
   },
   parameters: {
@@ -509,7 +509,10 @@ export const WithArrowKeyNavigation = {
     await expect(results[4]).toHaveFocus();
     await userEvent.keyboard('[Enter]');
     await waitFor(() =>
-      expect(args.onResultClick).toHaveBeenCalledWith({ description: 'Bor' })
+      expect(args.onResultClick).toHaveBeenCalledWith({
+        description: 'Bor',
+        key: 'B',
+      })
     );
   },
 } satisfies Story;

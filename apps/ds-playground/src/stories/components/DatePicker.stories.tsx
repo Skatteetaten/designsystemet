@@ -145,7 +145,6 @@ export const Examples: Story = {
       setError(false);
       setErrorMessage('');
     };
-
     return (
       <>
         <DatePicker
