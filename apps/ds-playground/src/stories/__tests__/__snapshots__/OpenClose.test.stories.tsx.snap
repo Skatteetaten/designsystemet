@@ -16,7 +16,7 @@ exports[`Tester/OpenClose Compact smoke-test 1`] = `
         <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
         </path>
       </svg>
-      <span class="OpenClose_title__tWrXz OpenClose_title_compact__8rSWt ">
+      <span class="OpenClose_title__tWrXz OpenClose_title_compact__8rSWt OpenClose_title_underline__WLqQJ">
         Er jeg pendler?
       </span>
     </button>
@@ -40,7 +40,7 @@ exports[`Tester/OpenClose CompactAndIsExpanded smoke-test 1`] = `
         <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
         </path>
       </svg>
-      <span class="OpenClose_title__tWrXz OpenClose_title_compact__8rSWt ">
+      <span class="OpenClose_title__tWrXz OpenClose_title_compact__8rSWt OpenClose_title_underline__WLqQJ">
         Er jeg pendler?
       </span>
     </button>
@@ -67,7 +67,7 @@ exports[`Tester/OpenClose CompactWithIconRight smoke-test 1`] = `
         <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
         </path>
       </svg>
-      <span class="OpenClose_title__tWrXz OpenClose_title_compact__8rSWt ">
+      <span class="OpenClose_title__tWrXz OpenClose_title_compact__8rSWt OpenClose_title_underline__WLqQJ">
         Er jeg pendler?
       </span>
     </button>
@@ -139,7 +139,7 @@ exports[`Tester/OpenClose Defaults play-test 1`] = `
         <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
         </path>
       </svg>
-      <span class="OpenClose_title__tWrXz  ">
+      <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
         Er jeg pendler?
       </span>
     </button>
@@ -163,7 +163,7 @@ exports[`Tester/OpenClose IconRightContent smoke-test 1`] = `
         <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
         </path>
       </svg>
-      <span class="OpenClose_title__tWrXz  ">
+      <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
         Er jeg pendler?
       </span>
     </button>
@@ -193,7 +193,7 @@ exports[`Tester/OpenClose InContext smoke-test 1`] = `
         <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
         </path>
       </svg>
-      <span class="OpenClose_title__tWrXz  ">
+      <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
         Er jeg pendler?
       </span>
     </button>
@@ -217,7 +217,7 @@ exports[`Tester/OpenClose IsExpanded play-test 1`] = `
         <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
         </path>
       </svg>
-      <span class="OpenClose_title__tWrXz  ">
+      <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
         Er jeg pendler?
       </span>
     </button>
@@ -247,7 +247,7 @@ exports[`Tester/OpenClose WithAttributes play-test 1`] = `
         <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
         </path>
       </svg>
-      <span class="OpenClose_title__tWrXz  ">
+      <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
         Er jeg pendler?
       </span>
     </button>
@@ -271,7 +271,7 @@ exports[`Tester/OpenClose WithChangingTitle play-test 1`] = `
         <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
         </path>
       </svg>
-      <span class="OpenClose_title__tWrXz  ">
+      <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
         OpenClose har blitt åpnet
       </span>
     </button>
@@ -298,7 +298,7 @@ exports[`Tester/OpenClose WithIconRight smoke-test 1`] = `
         <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
         </path>
       </svg>
-      <span class="OpenClose_title__tWrXz  ">
+      <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
         Er jeg pendler?
       </span>
     </button>
@@ -306,7 +306,7 @@ exports[`Tester/OpenClose WithIconRight smoke-test 1`] = `
 </div>
 `;
 
-exports[`Tester/OpenClose WithIconRightAndUnderline smoke-test 1`] = `
+exports[`Tester/OpenClose WithIconRightAndNoUnderline smoke-test 1`] = `
 <div data-test-block="true">
   <div class="OpenClose_tag__hWZ8z">
     <button class="OpenClose_openClose__HxKKD  OpenClose_openClose_hasIconRight__3rsup "
@@ -322,7 +322,7 @@ exports[`Tester/OpenClose WithIconRightAndUnderline smoke-test 1`] = `
         <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
         </path>
       </svg>
-      <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
+      <span class="OpenClose_title__tWrXz  ">
         Er jeg pendler?
       </span>
     </button>
@@ -346,7 +346,7 @@ exports[`Tester/OpenClose WithIsOnClickOnlyFiredOnOpen play-test 1`] = `
         <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
         </path>
       </svg>
-      <span class="OpenClose_title__tWrXz  ">
+      <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
         Er jeg pendler?
       </span>
     </button>
@@ -370,7 +370,7 @@ exports[`Tester/OpenClose WithLongTitle smoke-test 1`] = `
         <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
         </path>
       </svg>
-      <span class="OpenClose_title__tWrXz  ">
+      <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
         Denneknappenharenveldiglangtekst.Dentekstengåroverflerelinjerfordidenersålangogdablirikonetriktigplassert.Fordetkanjoskjeattittelengåroverflerelinjerhvisdeterenveldiglitenskjerm.Sådamåvisjekkeatdetikkeserrartut.
       </span>
     </button>
@@ -394,7 +394,7 @@ exports[`Tester/OpenClose WithOnClick play-test 1`] = `
         <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
         </path>
       </svg>
-      <span class="OpenClose_title__tWrXz  ">
+      <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
         Er jeg pendler?
       </span>
     </button>
@@ -419,7 +419,7 @@ exports[`Tester/OpenClose WithRef play-test 1`] = `
         <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
         </path>
       </svg>
-      <span class="OpenClose_title__tWrXz  ">
+      <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
         Er jeg pendler?
       </span>
     </button>
@@ -443,7 +443,7 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
         <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
         </path>
       </svg>
-      <span class="OpenClose_title__tWrXz  ">
+      <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
         Heading h1
       </span>
     </button>
@@ -462,7 +462,7 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
         <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
         </path>
       </svg>
-      <span class="OpenClose_title__tWrXz  ">
+      <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
         Heading h2
       </span>
     </button>
@@ -481,7 +481,7 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
         <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
         </path>
       </svg>
-      <span class="OpenClose_title__tWrXz  ">
+      <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
         Heading h3
       </span>
     </button>
@@ -500,7 +500,7 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
         <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
         </path>
       </svg>
-      <span class="OpenClose_title__tWrXz  ">
+      <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
         Heading h4
       </span>
     </button>
@@ -519,7 +519,7 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
         <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
         </path>
       </svg>
-      <span class="OpenClose_title__tWrXz  ">
+      <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
         Heading h5
       </span>
     </button>
@@ -538,7 +538,7 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
         <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
         </path>
       </svg>
-      <span class="OpenClose_title__tWrXz  ">
+      <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
         Heading h6
       </span>
     </button>
@@ -546,7 +546,7 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/OpenClose WithUnderline smoke-test 1`] = `
+exports[`Tester/OpenClose WithoutUnderline smoke-test 1`] = `
 <div data-test-block="true">
   <div class="OpenClose_tag__hWZ8z">
     <button class="OpenClose_openClose__HxKKD   "
@@ -562,7 +562,7 @@ exports[`Tester/OpenClose WithUnderline smoke-test 1`] = `
         <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
         </path>
       </svg>
-      <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
+      <span class="OpenClose_title__tWrXz  ">
         Er jeg pendler?
       </span>
     </button>

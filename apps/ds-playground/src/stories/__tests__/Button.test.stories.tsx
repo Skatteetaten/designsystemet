@@ -3,9 +3,8 @@ import { FocusEvent, MouseEvent, useState } from 'react';
 import { Button, buttonVariantArr } from '@skatteetaten/ds-buttons';
 import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';
 import { SendSVGpath } from '@skatteetaten/ds-icons';
-import { expect } from '@storybook/jest';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { userEvent, waitFor, within } from '@storybook/testing-library';
+import { expect, userEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -49,6 +48,7 @@ const meta = {
     // HTML
     accessKey: { table: { disable: true } },
     disabled: { table: { disable: true } },
+    form: { table: { disable: true } },
     type: { table: { disable: true } },
     // Aria
     ariaDescribedby: { table: { disable: true } },
@@ -92,12 +92,14 @@ export const WithAttributes = {
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
+    form: 'formid123',
   },
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+    form: { table: { disable: false } },
   },
   parameters: {
     imageSnapshot: {
@@ -113,6 +115,7 @@ export const WithAttributes = {
     await expect(button).toHaveClass('dummyClassname');
     await expect(button).toHaveAttribute('lang', 'nb');
     await expect(button).toHaveAttribute('data-testid', '123ID');
+    await expect(button).toHaveAttribute('form', 'formid123');
   },
 } satisfies Story;
 

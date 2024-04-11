@@ -6,9 +6,8 @@ import {
   headingAsArr,
   positionArr,
 } from '@skatteetaten/ds-core-utils';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { fireEvent, within, waitFor } from '@storybook/testing-library';
+import { expect, fireEvent, within, waitFor } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 
@@ -231,23 +230,23 @@ export const InContext = {
   },
 } satisfies Story;
 
-export const WithUnderline = {
-  name: 'With Underline (A3)',
+export const WithoutUnderline = {
+  name: 'Without Underline (A3)',
   args: {
     ...defaultArgs,
-    showUnderline: true,
+    showUnderline: false,
   },
   argTypes: {
     showUnderline: { table: { disable: false } },
   },
 } satisfies Story;
 
-export const WithIconRightAndUnderline = {
-  name: 'With Icon Right And Underline (A2, A3)',
+export const WithIconRightAndNoUnderline = {
+  name: 'With Icon Right And No Underline (A2, A3)',
   args: {
     ...defaultArgs,
     iconPosition: 'right',
-    showUnderline: true,
+    showUnderline: false,
   },
   argTypes: {
     iconPosition: { table: { disable: false } },

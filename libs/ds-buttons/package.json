@@ -1,11 +1,11 @@
 {
   "name": "@skatteetaten/ds-buttons",
   "groupId": "no.skatteetaten.aurora",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "homepage": "https://www.skatteetaten.no/stilogtone/designsystemet/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Skatteetaten/designsystemet.git"
+    "url": "git+https://github.com/Skatteetaten/designsystemet.git"
   },
   "publishConfig": {
     "registry": "https://nexus.sits.no/repository/npm-internal/"

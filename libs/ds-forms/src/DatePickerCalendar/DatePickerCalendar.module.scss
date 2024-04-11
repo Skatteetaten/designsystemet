@@ -1,0 +1,187 @@
+@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@import 'libs/ds-core-utils/src/styles.scss';
+
+.calendar {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  padding: var(--spacing-s) var(--spacing-xs);
+  border: 1px solid var(--palette-graphite-100);
+  background-color: var(--palette-graphite-0);
+
+  @media (min-width: $breakpoint-xs) {
+    padding: var(--spacing-m);
+  }
+
+  &Navigation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-xs);
+    gap: var(--spacing-xs);
+
+    &MonthAndYearContainer {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-evenly;
+      order: 1;
+    }
+
+    &ArrowIcon {
+      order: 0;
+    }
+
+    &Month {
+      width: 146px;
+    }
+
+    &Year {
+      width: 72px;
+    }
+
+    @media (min-width: $breakpoint-xs) {
+      flex-wrap: nowrap;
+      justify-content: center;
+      margin-bottom: var(--spacing-m);
+      gap: var(--spacing-l);
+
+      &MonthAndYearContainer {
+        width: auto;
+        order: unset;
+        gap: var(--spacing-m);
+      }
+
+      &ArrowIcon {
+        order: unset;
+      }
+
+      &Month {
+        width: 167px;
+      }
+
+      &Year {
+        width: 70px;
+      }
+    }
+  }
+
+  &Table {
+    border-spacing: 0 var(--spacing-xs);
+    font-size: var(--font-size-s);
+    text-align: center;
+
+    &HeaderCell {
+      font-weight: var(--font-weight-medium);
+    }
+
+    &DateButton {
+      position: relative;
+      width: 32px;
+      height: 30px;
+      padding: 0;
+      border: none;
+      border-radius: 0;
+      background-color: var(--semantic-page-background);
+      color: var(--semantic-interactive-main);
+      font-weight: var(--font-weight-bold);
+
+      &_adjacentMonth {
+        color: var(--palette-graphite-50);
+      }
+
+      &[aria-current='true'] {
+        background-color: var(--palette-azure-70);
+        color: var(--palette-graphite-0);
+      }
+
+      &_today::after {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        border: 3px solid var(--palette-azure-70);
+        border-radius: 50%;
+        content: '';
+      }
+
+      &:focus {
+        background-color: var(--semantic-page-background);
+        color: var(--semantic-interactive-main);
+        outline: 2px solid var(--semantic-interactive-main);
+      }
+
+      &:disabled,
+      &:disabled:hover {
+        background-color: var(--semantic-disabled-background);
+        color: var(--semantic-disabled-foreground);
+        cursor: not-allowed;
+      }
+
+      &:enabled:hover {
+        background-color: var(--semantic-interactive-background);
+        color: var(--semantic-interactive-main);
+        cursor: pointer;
+      }
+
+      &:enabled:active {
+        color: var(--semantic-interactive-foreground);
+        outline: 2px solid var(--semantic-interactive-foreground);
+      }
+
+      &_today:active::after {
+        border-color: var(--semantic-interactive-foreground);
+      }
+
+      &_today:disabled::after {
+        border-color: var(--semantic-disabled-foreground);
+      }
+
+      &[aria-current='true']:disabled,
+      &[aria-current='true']:disabled:hover,
+      &_today[aria-current='true']:disabled,
+      &_today[aria-current='true']:disabled:hover {
+        background-color: var(--semantic-disabled-foreground);
+        color: var(--palette-graphite-0);
+      }
+
+      &_today[aria-current='true']::after,
+      &_today[aria-current='true']:disabled::after {
+        border-color: var(--palette-graphite-0);
+      }
+
+      &_today[aria-current='true']:focus::after {
+        border-color: var(--palette-azure-70);
+      }
+    }
+
+    @media (min-width: $breakpoint-xs) {
+      padding-bottom: var(--spacing-s);
+      border-spacing: var(--spacing-m) var(--spacing-s);
+
+      &DateButton {
+        width: 100%;
+        min-width: 32px;
+        max-width: 40px;
+      }
+    }
+
+    @media (min-width: $breakpoint-s) {
+      &DateButton {
+        width: 40px;
+
+        &_today[aria-current='true']::after,
+        &_today[aria-current='true']:disabled::after,
+        &_today::after,
+        &_today:disabled::after,
+        &_today:active::after {
+          border-width: 4px;
+        }
+      }
+    }
+  }
+}
+
+.srOnly {
+  @include sr-only;
+}

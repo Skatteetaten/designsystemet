@@ -2,9 +2,8 @@ import { useState } from 'react';
 
 import { dsI18n, Languages } from '@skatteetaten/ds-core-utils';
 import { TopBannerMenu } from '@skatteetaten/ds-layout';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { userEvent, within } from '@storybook/testing-library';
+import { expect, userEvent, within } from '@storybook/test';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerLangPicker } from '../../../../../libs/ds-layout/src/TopBannerLangPicker/TopBannerLangPicker';

@@ -1,9 +1,8 @@
 import { ChangeEvent, useState } from 'react';
 
 import { Checkbox } from '@skatteetaten/ds-forms';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { userEvent, waitFor, within } from '@storybook/testing-library';
+import { expect, userEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 
@@ -56,6 +55,11 @@ const meta = {
       },
     },
     disabled: {
+      table: {
+        disable: true,
+      },
+    },
+    form: {
       table: {
         disable: true,
       },
@@ -113,12 +117,14 @@ export const WithAttributes = {
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
+    form: '123form',
   },
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+    form: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -128,6 +134,7 @@ export const WithAttributes = {
     await expect(container).toHaveClass('dummyClassname');
     await expect(container).toHaveAttribute('lang', 'nb');
     await expect(inputNode).toHaveAttribute('data-testid', '123ID');
+    await expect(inputNode).toHaveAttribute('form', '123form');
   },
 } satisfies Story;
 

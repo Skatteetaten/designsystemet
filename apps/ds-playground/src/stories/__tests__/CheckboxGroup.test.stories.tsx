@@ -1,8 +1,7 @@
 import { CheckboxGroup } from '@skatteetaten/ds-forms';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
-import { expect } from '@storybook/jest';
 import { Meta, StoryObj } from '@storybook/react';
-import { fireEvent, within } from '@storybook/testing-library';
+import { expect, fireEvent, within } from '@storybook/test';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
 
@@ -49,6 +48,11 @@ const meta = {
     titleHelpSvg: { table: { disable: true } },
     // HTML
     disabled: {
+      table: {
+        disable: true,
+      },
+    },
+    form: {
       table: {
         disable: true,
       },
@@ -119,12 +123,14 @@ export const WithAttributes = {
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
+    form: '123form',
   },
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+    form: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -133,6 +139,7 @@ export const WithAttributes = {
     await expect(fieldsetNode).toHaveClass('dummyClassname');
     await expect(fieldsetNode).toHaveAttribute('lang', 'nb');
     await expect(fieldsetNode).toHaveAttribute('data-testid', '123ID');
+    await expect(fieldsetNode).toHaveAttribute('form', '123form');
   },
 } satisfies Story;
 

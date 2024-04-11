@@ -1,7 +1,6 @@
 import { RadioGroup } from '@skatteetaten/ds-forms';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { expect, within } from '@storybook/test';
 
 import {
   loremIpsum,
@@ -29,6 +28,9 @@ const meta = {
     },
     // HTML
     value: {
+      table: { disable: true },
+    },
+    form: {
       table: { disable: true },
     },
     // Aria
@@ -85,12 +87,14 @@ export const WithAttributes = {
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
+    form: 'formid123',
   },
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+    form: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -100,6 +104,7 @@ export const WithAttributes = {
     await expect(container).toHaveAttribute('lang', 'nb');
     await expect(input).toHaveAttribute('id', 'htmlId');
     await expect(input).toHaveAttribute('data-testid', '123ID');
+    await expect(input).toHaveAttribute('form', 'formid123');
   },
 } satisfies Story;
 

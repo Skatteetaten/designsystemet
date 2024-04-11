@@ -9,13 +9,12 @@ extends:
   - 'plugin:jest-dom/recommended'
   - 'plugin:testing-library/react'
   - 'plugin:sonarjs/recommended'
-  - 'plugin:@nrwl/nx/react'
+  - 'plugin:@nx/react'
   - 'plugin:jsdoc/recommended'
   - prettier # has to be last in order to overwrite other configs
 overrides:
   - files: ['*.ts', '*.tsx']
-    extends:
-      ['plugin:@typescript-eslint/recommended', 'plugin:@nrwl/nx/typescript']
+    extends: ['plugin:@typescript-eslint/recommended', 'plugin:@nx/typescript']
     rules:
       'jsx-a11y/no-access-key': off # Vi bruker accessKey for Buttons
       '@typescript-eslint/no-namespace': off # namespace er nødvendig for å utvide JSX.IntrinsicElements med custom-elements
@@ -25,7 +24,7 @@ overrides:
         - 'argsIgnorePattern': '^_'
           'ignoreRestSiblings': true
   - files: ['*.js', '*.jsx']
-    extends: ['plugin:@nrwl/nx/javascript']
+    extends: ['plugin:@nx/javascript']
 parser: '@typescript-eslint/parser'
 parserOptions:
   ecmaFeatures:

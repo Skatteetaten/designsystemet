@@ -6,6 +6,10 @@ plugins:
   - stylelint-value-no-unknown-custom-properties
 rules:
   color-hex-length: long
+  scss/at-rule-no-unknown:
+    - true
+    - ignoreAtRules:
+        - container
   scss/at-import-partial-extension: null
   color-function-notation: null
   selector-class-pattern:

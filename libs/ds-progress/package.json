@@ -1,6 +1,6 @@
 {
   "name": "@skatteetaten/ds-progress",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "groupId": "no.skatteetaten.aurora",
   "publishConfig": {
     "registry": "https://nexus.sits.no/repository/npm-internal/"
@@ -11,5 +11,5 @@
     "react-i18next": "^13",
     "@skatteetaten/ds-core-utils": "*"
   },
-  "script": {}
+  "scripts": {}
 }

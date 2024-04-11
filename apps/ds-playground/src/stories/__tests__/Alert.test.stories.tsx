@@ -2,9 +2,8 @@ import { dsI18n, statusArr } from '@skatteetaten/ds-core-utils';
 import { LockSVGpath } from '@skatteetaten/ds-icons';
 import { Alert } from '@skatteetaten/ds-status';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
-import { expect } from '@storybook/jest';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { userEvent, waitFor, within } from '@storybook/testing-library';
+import { expect, fireEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -393,7 +392,12 @@ export const WithOnClickCloseButton = {
     const button = canvas.getByRole('button');
     await expect(button).toBeInTheDocument();
     await expect(canvas.getByText(defaultText)).toBeInTheDocument();
-    await userEvent.click(button);
+
+    /*TODO etter bytte fra @storybook/jest til @storybook/test må denne testen bruke
+    fireevent i stedet for UserEvent. Med userEVent gir testen ustabilt resultat.
+    I tillegg ser det ut som visningen i interactions fanen i storybook ikke samsvarer med resultatet til testen.
+     */
+    await fireEvent.click(button);
     const container = canvas.getAllByRole('generic')[1];
     // eslint-disable-next-line testing-library/no-node-access
     const alertNode = container.querySelector('div');

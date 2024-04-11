@@ -2,14 +2,28 @@
   position: relative;
   display: flex;
   width: 100%;
-  box-sizing: border-box;
+  max-width: 164px;
   margin-top: var(--spacing-xs);
 }
 
+.dateContainer:has(.input[aria-invalid='true']) {
+  box-shadow: 0 0 0 1px var(--semantic-danger-foreground);
+}
+
+.input[aria-invalid='true'] + button.calendarButton {
+  box-shadow: inset 0 0 0 1px var(--semantic-danger-foreground);
+
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+  }
+}
+
 .input {
+  position: relative;
   width: 100%;
-  padding: var(--spacing-xs) var(--spacing-xl) var(--spacing-xs)
-    var(--spacing-s);
+  padding: var(--spacing-xs) var(--spacing-s);
   border: none;
   border-radius: 0;
   // stylelint-disable-next-line property-no-vendor-prefix
@@ -24,13 +38,11 @@
   outline-offset: 0;
 
   &_large {
-    padding: var(--spacing-s) var(--spacing-xl) var(--spacing-s)
-      var(--spacing-s);
-    box-shadow: inset 0 0 0 2px var(--palette-graphite-100);
+    padding: var(--spacing-s);
   }
 
   &[aria-invalid='true'] {
-    box-shadow: inset 0 0 0 2px var(--semantic-danger-foreground);
+    box-shadow: inset 0 0 0 1px var(--semantic-danger-foreground);
   }
 
   &::placeholder {
@@ -38,17 +50,9 @@
   }
 
   &:hover {
-    box-shadow: inset 0 0 0 2px var(--semantic-page-foreground);
-    outline: 2px solid var(--semantic-interactive-background);
-  }
-
-  &:focus {
+    z-index: 1;
     box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
     outline: 2px solid var(--semantic-interactive-background);
-
-    &::selection {
-      background: var(--semantic-interactive-background);
-    }
   }
 
   &:disabled,
@@ -60,30 +64,40 @@
     outline: 0;
   }
 
+  &:enabled:focus,
   &:enabled:active {
-    box-shadow: inset 0 0 0 2px var(--semantic-interactive-foreground);
-    outline: 2px solid var(--semantic-interactive-background);
+    z-index: 1;
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+    outline: 1px solid var(--semantic-interactive-main);
+
+    &::selection {
+      background: var(--semantic-interactive-background);
+    }
   }
 
   &:read-only:not(:disabled) {
-    padding: var(--spacing-s);
+    padding: var(--spacing-xs) var(--spacing-s);
     box-shadow: none;
     outline: 0;
+  }
+
+  &_large:read-only:not(:disabled) {
+    padding: var(--spacing-s);
   }
 }
 
 .calendarButton {
-  position: absolute;
-  right: 0;
+  position: relative;
   display: flex;
+  flex-shrink: 0;
   align-items: center;
-  align-self: center;
-  padding: var(--spacing-xxs);
+  padding: var(--spacing-xs) var(--spacing-s);
   border: none;
   border-radius: 0;
-  margin-right: 4px;
+  margin-left: -1px;
   appearance: none;
-  background: #00000000;
+  background: var(--semantic-page-background);
+  box-shadow: inset 0 0 0 1px var(--palette-graphite-100);
   outline: 0;
 
   & .icon {
@@ -91,17 +105,24 @@
   }
 
   &_large {
-    padding: var(--spacing-xs);
-    margin-right: 5px;
+    padding: var(--spacing-s);
+
+    & .icon {
+      width: var(--size-large);
+      height: var(--size-large);
+    }
   }
 
-  &:focus {
-    background-color: var(--semantic-interactive-background);
+  &:focus,
+  &:hover {
+    z-index: 1;
     box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+    outline: 1px solid var(--semantic-interactive-main);
   }
 
-  &:disabled,
-  &:disabled:hover {
+  &:disabled {
+    background-color: var(--semantic-disabled-background);
+    box-shadow: inset 0 0 0 1px var(--semantic-disabled-foreground);
     color: var(--semantic-disabled-foreground);
     cursor: not-allowed;
     outline: 0;
@@ -111,23 +132,28 @@
     }
   }
 
-  &:enabled:active {
+  &:enabled:hover {
+    z-index: 1;
     background-color: var(--semantic-interactive-background);
-    box-shadow: inset 0 0 0 2px var(--semantic-interactive-foreground);
-
-    & .icon {
-      fill: var(--semantic-interactive-foreground);
-    }
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+    cursor: pointer;
+    outline: 2px solid var(--semantic-interactive-background);
   }
 
-  &:enabled:hover {
-    background-color: var(--semantic-interactive-background);
+  &:enabled:active {
+    background-color: var(--semantic-interactive-main);
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+    color: var(--semantic-page-background);
+    outline: 2px solid var(--semantic-interactive-background);
+
+    & .icon {
+      fill: var(--palette-graphite-0);
+    }
   }
 }
 
 .calendarContainer {
-  width: fit-content;
-  padding: var(--spacing-s);
-  border: 1px solid var(--palette-graphite-100);
-  margin-top: 10px;
+  position: absolute;
+  z-index: 500;
+  margin-top: var(--spacing-xs);
 }

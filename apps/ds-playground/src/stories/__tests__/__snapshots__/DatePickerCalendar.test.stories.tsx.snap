@@ -1,0 +1,4125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
+<div data-test-block="true">
+  <div class="DatePickerCalendar_calendar__MrP62 ">
+    <div class="DatePickerCalendar_calendarNavigation__pG+UM">
+      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  DatePickerCalendar_calendarNavigationArrowIcon__fUDs1"
+              type="button"
+      >
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:ri:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:ri:">
+            Forrige måned Desember 2023
+          </title>
+          <path d="M22.3 10.8v1.8H5.5l5.2 5.1L9.3 19l-7.5-7.3 7.7-7.3 1.4 1.3-5.2 5.1h16.6Z">
+          </path>
+        </svg>
+      </button>
+      <div class="DatePickerCalendar_calendarNavigationMonthAndYearContainer__i-9ID">
+        <div class>
+          <label id="labelId-:rl:"
+                 class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+                 for="selectId-:rk:"
+          >
+            Velg måned
+          </label>
+          <div class="Select_selectContainer__CfUZs DatePickerCalendar_calendarNavigationMonth__th-Oc">
+            <select id="selectId-:rk:"
+                    class="Select_select__-ENv1"
+            >
+              <option class
+                      value="0"
+              >
+                Januar
+              </option>
+              <option class
+                      value="1"
+              >
+                Februar
+              </option>
+              <option class
+                      value="2"
+              >
+                Mars
+              </option>
+              <option class
+                      value="3"
+              >
+                April
+              </option>
+              <option class
+                      value="4"
+              >
+                Mai
+              </option>
+              <option class
+                      value="5"
+              >
+                Juni
+              </option>
+              <option class
+                      value="6"
+              >
+                Juli
+              </option>
+              <option class
+                      value="7"
+              >
+                August
+              </option>
+              <option class
+                      value="8"
+              >
+                September
+              </option>
+              <option class
+                      value="9"
+              >
+                Oktober
+              </option>
+              <option class
+                      value="10"
+              >
+                November
+              </option>
+              <option class
+                      value="11"
+              >
+                Desember
+              </option>
+            </select>
+            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
+                 viewbox="0 0 24 24"
+                 focusable="false"
+                 aria-hidden="true"
+                 role="img"
+            >
+              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              </path>
+            </svg>
+          </div>
+          <div id="selectErrorId-:rj:"
+               aria-live="assertive"
+               aria-atomic="true"
+          >
+          </div>
+        </div>
+        <div class="DatePickerCalendar_calendarNavigationYear__Icqmb">
+          <label id="labelId-:rp:"
+                 class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+                 for="textFieldTextboxId-:ro:"
+          >
+            Årstall
+          </label>
+          <input id="textFieldTextboxId-:ro:"
+                 class="TextField_textbox__qbZlk"
+                 value="2024"
+          >
+          <div id="textFieldErrorId-:rn:"
+               aria-live="assertive"
+               aria-atomic="true"
+          >
+          </div>
+        </div>
+      </div>
+      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  DatePickerCalendar_calendarNavigationArrowIcon__fUDs1"
+              type="button"
+      >
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:rq:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:rq:">
+            Neste måned Februar 2024
+          </title>
+          <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <table class="DatePickerCalendar_calendarTable__zDKjI">
+      <caption class="DatePickerCalendar_srOnly__VfDJH">
+        Januar 2024
+      </caption>
+      <thead>
+        <tr>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Man
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Tir
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Ons
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Tor
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Fre
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Lør
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Søn
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 1. Januar 2024"
+            >
+              1
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 2. Januar 2024"
+            >
+              2
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 3. Januar 2024"
+            >
+              3
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 4. Januar 2024"
+            >
+              4
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 5. Januar 2024"
+            >
+              5
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 6. Januar 2024"
+            >
+              6
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 7. Januar 2024"
+            >
+              7
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 8. Januar 2024"
+            >
+              8
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 9. Januar 2024"
+            >
+              9
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 10. Januar 2024"
+            >
+              10
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 11. Januar 2024"
+            >
+              11
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 12. Januar 2024"
+            >
+              12
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 13. Januar 2024"
+            >
+              13
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 14. Januar 2024"
+            >
+              14
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
+                    type="button"
+                    tabindex="0"
+                    aria-current="true"
+                    aria-label="I dag 15. Januar 2024"
+            >
+              15
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 16. Januar 2024"
+            >
+              16
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 17. Januar 2024"
+            >
+              17
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 18. Januar 2024"
+            >
+              18
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 19. Januar 2024"
+            >
+              19
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 20. Januar 2024"
+            >
+              20
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 21. Januar 2024"
+            >
+              21
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 22. Januar 2024"
+            >
+              22
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 23. Januar 2024"
+            >
+              23
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 24. Januar 2024"
+            >
+              24
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 25. Januar 2024"
+            >
+              25
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 26. Januar 2024"
+            >
+              26
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 27. Januar 2024"
+            >
+              27
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 28. Januar 2024"
+            >
+              28
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 29. Januar 2024"
+            >
+              29
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 30. Januar 2024"
+            >
+              30
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 31. Januar 2024"
+            >
+              31
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 1. Februar 2024"
+            >
+              1
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 2. Februar 2024"
+            >
+              2
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 3. Februar 2024"
+            >
+              3
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 4. Februar 2024"
+            >
+              4
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <div id="htmlId"
+       class="DatePickerCalendar_calendar__MrP62 dummyClassname"
+       lang="en"
+       data-testid="123ID"
+  >
+    <div class="DatePickerCalendar_calendarNavigation__pG+UM">
+      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  DatePickerCalendar_calendarNavigationArrowIcon__fUDs1"
+              type="button"
+      >
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r9:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r9:">
+            Forrige måned Desember 2023
+          </title>
+          <path d="M22.3 10.8v1.8H5.5l5.2 5.1L9.3 19l-7.5-7.3 7.7-7.3 1.4 1.3-5.2 5.1h16.6Z">
+          </path>
+        </svg>
+      </button>
+      <div class="DatePickerCalendar_calendarNavigationMonthAndYearContainer__i-9ID">
+        <div class>
+          <label id="labelId-:rc:"
+                 class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+                 for="selectId-:rb:"
+          >
+            Velg måned
+          </label>
+          <div class="Select_selectContainer__CfUZs DatePickerCalendar_calendarNavigationMonth__th-Oc">
+            <select id="selectId-:rb:"
+                    class="Select_select__-ENv1"
+            >
+              <option class
+                      value="0"
+              >
+                Januar
+              </option>
+              <option class
+                      value="1"
+              >
+                Februar
+              </option>
+              <option class
+                      value="2"
+              >
+                Mars
+              </option>
+              <option class
+                      value="3"
+              >
+                April
+              </option>
+              <option class
+                      value="4"
+              >
+                Mai
+              </option>
+              <option class
+                      value="5"
+              >
+                Juni
+              </option>
+              <option class
+                      value="6"
+              >
+                Juli
+              </option>
+              <option class
+                      value="7"
+              >
+                August
+              </option>
+              <option class
+                      value="8"
+              >
+                September
+              </option>
+              <option class
+                      value="9"
+              >
+                Oktober
+              </option>
+              <option class
+                      value="10"
+              >
+                November
+              </option>
+              <option class
+                      value="11"
+              >
+                Desember
+              </option>
+            </select>
+            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
+                 viewbox="0 0 24 24"
+                 focusable="false"
+                 aria-hidden="true"
+                 role="img"
+            >
+              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              </path>
+            </svg>
+          </div>
+          <div id="selectErrorId-:ra:"
+               aria-live="assertive"
+               aria-atomic="true"
+          >
+          </div>
+        </div>
+        <div class="DatePickerCalendar_calendarNavigationYear__Icqmb">
+          <label id="labelId-:rg:"
+                 class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+                 for="textFieldTextboxId-:rf:"
+          >
+            Årstall
+          </label>
+          <input id="textFieldTextboxId-:rf:"
+                 class="TextField_textbox__qbZlk"
+                 value="2024"
+          >
+          <div id="textFieldErrorId-:re:"
+               aria-live="assertive"
+               aria-atomic="true"
+          >
+          </div>
+        </div>
+      </div>
+      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  DatePickerCalendar_calendarNavigationArrowIcon__fUDs1"
+              type="button"
+      >
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:rh:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:rh:">
+            Neste måned Februar 2024
+          </title>
+          <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <table class="DatePickerCalendar_calendarTable__zDKjI">
+      <caption class="DatePickerCalendar_srOnly__VfDJH">
+        Januar 2024
+      </caption>
+      <thead>
+        <tr>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Man
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Tir
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Ons
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Tor
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Fre
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Lør
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Søn
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 1. Januar 2024"
+            >
+              1
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 2. Januar 2024"
+            >
+              2
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 3. Januar 2024"
+            >
+              3
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 4. Januar 2024"
+            >
+              4
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 5. Januar 2024"
+            >
+              5
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 6. Januar 2024"
+            >
+              6
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 7. Januar 2024"
+            >
+              7
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 8. Januar 2024"
+            >
+              8
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 9. Januar 2024"
+            >
+              9
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 10. Januar 2024"
+            >
+              10
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 11. Januar 2024"
+            >
+              11
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 12. Januar 2024"
+            >
+              12
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 13. Januar 2024"
+            >
+              13
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 14. Januar 2024"
+            >
+              14
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
+                    type="button"
+                    tabindex="0"
+                    aria-current="true"
+                    aria-label="I dag 15. Januar 2024"
+            >
+              15
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 16. Januar 2024"
+            >
+              16
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 17. Januar 2024"
+            >
+              17
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 18. Januar 2024"
+            >
+              18
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 19. Januar 2024"
+            >
+              19
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 20. Januar 2024"
+            >
+              20
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 21. Januar 2024"
+            >
+              21
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 22. Januar 2024"
+            >
+              22
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 23. Januar 2024"
+            >
+              23
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 24. Januar 2024"
+            >
+              24
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 25. Januar 2024"
+            >
+              25
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 26. Januar 2024"
+            >
+              26
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 27. Januar 2024"
+            >
+              27
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 28. Januar 2024"
+            >
+              28
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 29. Januar 2024"
+            >
+              29
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 30. Januar 2024"
+            >
+              30
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 31. Januar 2024"
+            >
+              31
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 1. Februar 2024"
+            >
+              1
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 2. Februar 2024"
+            >
+              2
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 3. Februar 2024"
+            >
+              3
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 4. Februar 2024"
+            >
+              4
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="DatePickerCalendar_calendar__MrP62 ">
+    <div class="DatePickerCalendar_calendarNavigation__pG+UM">
+      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  DatePickerCalendar_calendarNavigationArrowIcon__fUDs1"
+              type="button"
+      >
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r1v:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r1v:">
+            Forrige måned Desember 2023
+          </title>
+          <path d="M22.3 10.8v1.8H5.5l5.2 5.1L9.3 19l-7.5-7.3 7.7-7.3 1.4 1.3-5.2 5.1h16.6Z">
+          </path>
+        </svg>
+      </button>
+      <div class="DatePickerCalendar_calendarNavigationMonthAndYearContainer__i-9ID">
+        <div class>
+          <label id="labelId-:r22:"
+                 class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+                 for="selectId-:r21:"
+          >
+            Velg måned
+          </label>
+          <div class="Select_selectContainer__CfUZs DatePickerCalendar_calendarNavigationMonth__th-Oc">
+            <select id="selectId-:r21:"
+                    class="Select_select__-ENv1"
+            >
+              <option class
+                      value="0"
+              >
+                Januar
+              </option>
+              <option class
+                      value="1"
+              >
+                Februar
+              </option>
+              <option class
+                      value="2"
+              >
+                Mars
+              </option>
+              <option class
+                      value="3"
+              >
+                April
+              </option>
+              <option class
+                      value="4"
+              >
+                Mai
+              </option>
+              <option class
+                      value="5"
+              >
+                Juni
+              </option>
+              <option class
+                      value="6"
+              >
+                Juli
+              </option>
+              <option class
+                      value="7"
+              >
+                August
+              </option>
+              <option class
+                      value="8"
+              >
+                September
+              </option>
+              <option class
+                      value="9"
+              >
+                Oktober
+              </option>
+              <option class
+                      value="10"
+              >
+                November
+              </option>
+              <option class
+                      value="11"
+              >
+                Desember
+              </option>
+            </select>
+            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
+                 viewbox="0 0 24 24"
+                 focusable="false"
+                 aria-hidden="true"
+                 role="img"
+            >
+              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              </path>
+            </svg>
+          </div>
+          <div id="selectErrorId-:r20:"
+               aria-live="assertive"
+               aria-atomic="true"
+          >
+          </div>
+        </div>
+        <div class="DatePickerCalendar_calendarNavigationYear__Icqmb">
+          <label id="labelId-:r26:"
+                 class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+                 for="textFieldTextboxId-:r25:"
+          >
+            Årstall
+          </label>
+          <input id="textFieldTextboxId-:r25:"
+                 class="TextField_textbox__qbZlk"
+                 value="2024"
+          >
+          <div id="textFieldErrorId-:r24:"
+               aria-live="assertive"
+               aria-atomic="true"
+          >
+          </div>
+        </div>
+      </div>
+      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  DatePickerCalendar_calendarNavigationArrowIcon__fUDs1"
+              type="button"
+      >
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r27:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r27:">
+            Neste måned Februar 2024
+          </title>
+          <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <table class="DatePickerCalendar_calendarTable__zDKjI">
+      <caption class="DatePickerCalendar_srOnly__VfDJH">
+        Januar 2024
+      </caption>
+      <thead>
+        <tr>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Man
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Tir
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Ons
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Tor
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Fre
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Lør
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Søn
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 1. Januar 2024"
+            >
+              1
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 2. Januar 2024"
+            >
+              2
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 3. Januar 2024"
+            >
+              3
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 4. Januar 2024"
+            >
+              4
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 5. Januar 2024"
+            >
+              5
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 6. Januar 2024"
+            >
+              6
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 7. Januar 2024"
+            >
+              7
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 8. Januar 2024"
+            >
+              8
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 9. Januar 2024"
+            >
+              9
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 10. Januar 2024"
+            >
+              10
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 11. Januar 2024"
+            >
+              11
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 12. Januar 2024"
+            >
+              12
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 13. Januar 2024"
+            >
+              13
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 14. Januar 2024"
+            >
+              14
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
+                    type="button"
+                    tabindex="0"
+                    aria-current="true"
+                    aria-label="I dag 15. Januar 2024"
+            >
+              15
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 16. Januar 2024"
+            >
+              16
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 17. Januar 2024"
+            >
+              17
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 18. Januar 2024"
+            >
+              18
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 19. Januar 2024"
+            >
+              19
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 20. Januar 2024"
+            >
+              20
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 21. Januar 2024"
+            >
+              21
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 22. Januar 2024"
+            >
+              22
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 23. Januar 2024"
+            >
+              23
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 24. Januar 2024"
+            >
+              24
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 25. Januar 2024"
+            >
+              25
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 26. Januar 2024"
+            >
+              26
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 27. Januar 2024"
+            >
+              27
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 28. Januar 2024"
+            >
+              28
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 29. Januar 2024"
+            >
+              29
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 30. Januar 2024"
+            >
+              30
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 31. Januar 2024"
+            >
+              31
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 1. Februar 2024"
+            >
+              1
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 2. Februar 2024"
+            >
+              2
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 3. Februar 2024"
+            >
+              3
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 4. Februar 2024"
+            >
+              4
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
+<div data-test-block="true">
+  <div class="DatePickerCalendar_calendar__MrP62 ">
+    <div class="DatePickerCalendar_calendarNavigation__pG+UM">
+      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  DatePickerCalendar_calendarNavigationArrowIcon__fUDs1"
+              type="button"
+      >
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r1d:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r1d:">
+            Forrige måned Desember 2023
+          </title>
+          <path d="M22.3 10.8v1.8H5.5l5.2 5.1L9.3 19l-7.5-7.3 7.7-7.3 1.4 1.3-5.2 5.1h16.6Z">
+          </path>
+        </svg>
+      </button>
+      <div class="DatePickerCalendar_calendarNavigationMonthAndYearContainer__i-9ID">
+        <div class>
+          <label id="labelId-:r1g:"
+                 class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+                 for="selectId-:r1f:"
+          >
+            Velg måned
+          </label>
+          <div class="Select_selectContainer__CfUZs DatePickerCalendar_calendarNavigationMonth__th-Oc">
+            <select id="selectId-:r1f:"
+                    class="Select_select__-ENv1"
+            >
+              <option class
+                      value="0"
+              >
+                Januar
+              </option>
+              <option class
+                      value="1"
+              >
+                Februar
+              </option>
+              <option class
+                      value="2"
+              >
+                Mars
+              </option>
+              <option class
+                      value="3"
+              >
+                April
+              </option>
+              <option class
+                      value="4"
+              >
+                Mai
+              </option>
+              <option class
+                      value="5"
+              >
+                Juni
+              </option>
+              <option class
+                      value="6"
+              >
+                Juli
+              </option>
+              <option class
+                      value="7"
+              >
+                August
+              </option>
+              <option class
+                      value="8"
+              >
+                September
+              </option>
+              <option class
+                      value="9"
+              >
+                Oktober
+              </option>
+              <option class
+                      value="10"
+              >
+                November
+              </option>
+              <option class
+                      value="11"
+              >
+                Desember
+              </option>
+            </select>
+            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
+                 viewbox="0 0 24 24"
+                 focusable="false"
+                 aria-hidden="true"
+                 role="img"
+            >
+              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              </path>
+            </svg>
+          </div>
+          <div id="selectErrorId-:r1e:"
+               aria-live="assertive"
+               aria-atomic="true"
+          >
+          </div>
+        </div>
+        <div class="DatePickerCalendar_calendarNavigationYear__Icqmb">
+          <label id="labelId-:r1k:"
+                 class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+                 for="textFieldTextboxId-:r1j:"
+          >
+            Årstall
+          </label>
+          <input id="textFieldTextboxId-:r1j:"
+                 class="TextField_textbox__qbZlk"
+                 value="2024"
+          >
+          <div id="textFieldErrorId-:r1i:"
+               aria-live="assertive"
+               aria-atomic="true"
+          >
+          </div>
+        </div>
+      </div>
+      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  DatePickerCalendar_calendarNavigationArrowIcon__fUDs1"
+              type="button"
+      >
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r1l:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r1l:">
+            Neste måned Februar 2024
+          </title>
+          <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <table class="DatePickerCalendar_calendarTable__zDKjI">
+      <caption class="DatePickerCalendar_srOnly__VfDJH">
+        Januar 2024
+      </caption>
+      <thead>
+        <tr>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Man
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Tir
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Ons
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Tor
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Fre
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Lør
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Søn
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 1. Januar 2024"
+            >
+              1
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 2. Januar 2024"
+            >
+              2
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 3. Januar 2024"
+            >
+              3
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 4. Januar 2024"
+            >
+              4
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 5. Januar 2024"
+            >
+              5
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 6. Januar 2024"
+            >
+              6
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 7. Januar 2024"
+            >
+              7
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 8. Januar 2024"
+            >
+              8
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 9. Januar 2024"
+            >
+              9
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 10. Januar 2024"
+            >
+              10
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 11. Januar 2024"
+            >
+              11
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 12. Januar 2024"
+            >
+              12
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 13. Januar 2024"
+            >
+              13
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 14. Januar 2024"
+            >
+              14
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
+                    type="button"
+                    tabindex="0"
+                    aria-current="true"
+                    aria-label="I dag 15. Januar 2024"
+            >
+              15
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 16. Januar 2024"
+            >
+              16
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 17. Januar 2024"
+            >
+              17
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 18. Januar 2024"
+            >
+              18
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 19. Januar 2024"
+            >
+              19
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 20. Januar 2024"
+            >
+              20
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 21. Januar 2024"
+            >
+              21
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 22. Januar 2024"
+            >
+              22
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 23. Januar 2024"
+            >
+              23
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 24. Januar 2024"
+            >
+              24
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 25. Januar 2024"
+            >
+              25
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 26. Januar 2024"
+            >
+              26
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 27. Januar 2024"
+            >
+              27
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 28. Januar 2024"
+            >
+              28
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 29. Januar 2024"
+            >
+              29
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 30. Januar 2024"
+            >
+              30
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 31. Januar 2024"
+            >
+              31
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 1. Februar 2024"
+            >
+              1
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 2. Februar 2024"
+            >
+              2
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 3. Februar 2024"
+            >
+              3
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 4. Februar 2024"
+            >
+              4
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWithinTheRange play-test 1`] = `
+<div data-test-block="true">
+  <div class="DatePickerCalendar_calendar__MrP62 ">
+    <div class="DatePickerCalendar_calendarNavigation__pG+UM">
+      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  DatePickerCalendar_calendarNavigationArrowIcon__fUDs1"
+              type="button"
+      >
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r1m:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r1m:">
+            Forrige måned Desember 2023
+          </title>
+          <path d="M22.3 10.8v1.8H5.5l5.2 5.1L9.3 19l-7.5-7.3 7.7-7.3 1.4 1.3-5.2 5.1h16.6Z">
+          </path>
+        </svg>
+      </button>
+      <div class="DatePickerCalendar_calendarNavigationMonthAndYearContainer__i-9ID">
+        <div class>
+          <label id="labelId-:r1p:"
+                 class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+                 for="selectId-:r1o:"
+          >
+            Velg måned
+          </label>
+          <div class="Select_selectContainer__CfUZs DatePickerCalendar_calendarNavigationMonth__th-Oc">
+            <select id="selectId-:r1o:"
+                    class="Select_select__-ENv1"
+            >
+              <option class
+                      value="0"
+              >
+                Januar
+              </option>
+              <option class
+                      value="1"
+              >
+                Februar
+              </option>
+              <option class
+                      value="2"
+              >
+                Mars
+              </option>
+              <option class
+                      value="3"
+              >
+                April
+              </option>
+              <option class
+                      value="4"
+              >
+                Mai
+              </option>
+              <option class
+                      value="5"
+              >
+                Juni
+              </option>
+              <option class
+                      value="6"
+              >
+                Juli
+              </option>
+              <option class
+                      value="7"
+              >
+                August
+              </option>
+              <option class
+                      value="8"
+              >
+                September
+              </option>
+              <option class
+                      value="9"
+              >
+                Oktober
+              </option>
+              <option class
+                      value="10"
+              >
+                November
+              </option>
+              <option class
+                      value="11"
+              >
+                Desember
+              </option>
+            </select>
+            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
+                 viewbox="0 0 24 24"
+                 focusable="false"
+                 aria-hidden="true"
+                 role="img"
+            >
+              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              </path>
+            </svg>
+          </div>
+          <div id="selectErrorId-:r1n:"
+               aria-live="assertive"
+               aria-atomic="true"
+          >
+          </div>
+        </div>
+        <div class="DatePickerCalendar_calendarNavigationYear__Icqmb">
+          <label id="labelId-:r1t:"
+                 class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+                 for="textFieldTextboxId-:r1s:"
+          >
+            Årstall
+          </label>
+          <input id="textFieldTextboxId-:r1s:"
+                 class="TextField_textbox__qbZlk"
+                 value="2024"
+          >
+          <div id="textFieldErrorId-:r1r:"
+               aria-live="assertive"
+               aria-atomic="true"
+          >
+          </div>
+        </div>
+      </div>
+      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  DatePickerCalendar_calendarNavigationArrowIcon__fUDs1"
+              type="button"
+      >
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r1u:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r1u:">
+            Neste måned Februar 2024
+          </title>
+          <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <table class="DatePickerCalendar_calendarTable__zDKjI">
+      <caption class="DatePickerCalendar_srOnly__VfDJH">
+        Januar 2024
+      </caption>
+      <thead>
+        <tr>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Man
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Tir
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Ons
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Tor
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Fre
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Lør
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Søn
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 1. Januar 2024"
+            >
+              1
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 2. Januar 2024"
+            >
+              2
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 3. Januar 2024"
+            >
+              3
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 4. Januar 2024"
+            >
+              4
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 5. Januar 2024"
+            >
+              5
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 6. Januar 2024"
+            >
+              6
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 7. Januar 2024"
+            >
+              7
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 8. Januar 2024"
+            >
+              8
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 9. Januar 2024"
+            >
+              9
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 10. Januar 2024"
+            >
+              10
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 11. Januar 2024"
+            >
+              11
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 12. Januar 2024"
+            >
+              12
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 13. Januar 2024"
+            >
+              13
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 14. Januar 2024"
+            >
+              14
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
+                    type="button"
+                    tabindex="0"
+                    aria-current="true"
+                    aria-label="I dag 15. Januar 2024"
+            >
+              15
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 16. Januar 2024"
+            >
+              16
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 17. Januar 2024"
+            >
+              17
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 18. Januar 2024"
+            >
+              18
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 19. Januar 2024"
+            >
+              19
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 20. Januar 2024"
+            >
+              20
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 21. Januar 2024"
+            >
+              21
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 22. Januar 2024"
+            >
+              22
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 23. Januar 2024"
+            >
+              23
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 24. Januar 2024"
+            >
+              24
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 25. Januar 2024"
+            >
+              25
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 26. Januar 2024"
+            >
+              26
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 27. Januar 2024"
+            >
+              27
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 28. Januar 2024"
+            >
+              28
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 29. Januar 2024"
+            >
+              29
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 30. Januar 2024"
+            >
+              30
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 31. Januar 2024"
+            >
+              31
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 1. Februar 2024"
+            >
+              1
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 2. Februar 2024"
+            >
+              2
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 3. Februar 2024"
+            >
+              3
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 4. Februar 2024"
+            >
+              4
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
+<div data-test-block="true">
+  <div class="DatePickerCalendar_calendar__MrP62 ">
+    <div class="DatePickerCalendar_calendarNavigation__pG+UM">
+      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  DatePickerCalendar_calendarNavigationArrowIcon__fUDs1"
+              type="button"
+      >
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r14:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r14:">
+            Forrige måned Desember 2023
+          </title>
+          <path d="M22.3 10.8v1.8H5.5l5.2 5.1L9.3 19l-7.5-7.3 7.7-7.3 1.4 1.3-5.2 5.1h16.6Z">
+          </path>
+        </svg>
+      </button>
+      <div class="DatePickerCalendar_calendarNavigationMonthAndYearContainer__i-9ID">
+        <div class>
+          <label id="labelId-:r17:"
+                 class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+                 for="selectId-:r16:"
+          >
+            Velg måned
+          </label>
+          <div class="Select_selectContainer__CfUZs DatePickerCalendar_calendarNavigationMonth__th-Oc">
+            <select id="selectId-:r16:"
+                    class="Select_select__-ENv1"
+            >
+              <option class
+                      value="0"
+              >
+                Januar
+              </option>
+              <option class
+                      value="1"
+              >
+                Februar
+              </option>
+              <option class
+                      value="2"
+              >
+                Mars
+              </option>
+              <option class
+                      value="3"
+              >
+                April
+              </option>
+              <option class
+                      value="4"
+              >
+                Mai
+              </option>
+              <option class
+                      value="5"
+              >
+                Juni
+              </option>
+              <option class
+                      value="6"
+              >
+                Juli
+              </option>
+              <option class
+                      value="7"
+              >
+                August
+              </option>
+              <option class
+                      value="8"
+              >
+                September
+              </option>
+              <option class
+                      value="9"
+              >
+                Oktober
+              </option>
+              <option class
+                      value="10"
+              >
+                November
+              </option>
+              <option class
+                      value="11"
+              >
+                Desember
+              </option>
+            </select>
+            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
+                 viewbox="0 0 24 24"
+                 focusable="false"
+                 aria-hidden="true"
+                 role="img"
+            >
+              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              </path>
+            </svg>
+          </div>
+          <div id="selectErrorId-:r15:"
+               aria-live="assertive"
+               aria-atomic="true"
+          >
+          </div>
+        </div>
+        <div class="DatePickerCalendar_calendarNavigationYear__Icqmb">
+          <label id="labelId-:r1b:"
+                 class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+                 for="textFieldTextboxId-:r1a:"
+          >
+            Årstall
+          </label>
+          <input id="textFieldTextboxId-:r1a:"
+                 class="TextField_textbox__qbZlk"
+                 value="2024"
+          >
+          <div id="textFieldErrorId-:r19:"
+               aria-live="assertive"
+               aria-atomic="true"
+          >
+          </div>
+        </div>
+      </div>
+      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  DatePickerCalendar_calendarNavigationArrowIcon__fUDs1"
+              type="button"
+      >
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r1c:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r1c:">
+            Neste måned Februar 2024
+          </title>
+          <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <table class="DatePickerCalendar_calendarTable__zDKjI">
+      <caption class="DatePickerCalendar_srOnly__VfDJH">
+        Januar 2024
+      </caption>
+      <thead>
+        <tr>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Man
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Tir
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Ons
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Tor
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Fre
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Lør
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Søn
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 1. Januar 2024"
+            >
+              1
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 2. Januar 2024"
+            >
+              2
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 3. Januar 2024"
+            >
+              3
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 4. Januar 2024"
+            >
+              4
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 5. Januar 2024"
+            >
+              5
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 6. Januar 2024"
+            >
+              6
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 7. Januar 2024"
+            >
+              7
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 8. Januar 2024"
+            >
+              8
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 9. Januar 2024"
+            >
+              9
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 10. Januar 2024"
+            >
+              10
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 11. Januar 2024"
+            >
+              11
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 12. Januar 2024"
+            >
+              12
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 13. Januar 2024"
+            >
+              13
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    disabled
+                    tabindex="-1"
+                    aria-label=" 14. Januar 2024"
+            >
+              14
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
+                    type="button"
+                    tabindex="0"
+                    aria-current="true"
+                    aria-label="I dag 15. Januar 2024"
+            >
+              15
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 16. Januar 2024"
+            >
+              16
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 17. Januar 2024"
+            >
+              17
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 18. Januar 2024"
+            >
+              18
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 19. Januar 2024"
+            >
+              19
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 20. Januar 2024"
+            >
+              20
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 21. Januar 2024"
+            >
+              21
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 22. Januar 2024"
+            >
+              22
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 23. Januar 2024"
+            >
+              23
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 24. Januar 2024"
+            >
+              24
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 25. Januar 2024"
+            >
+              25
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 26. Januar 2024"
+            >
+              26
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 27. Januar 2024"
+            >
+              27
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 28. Januar 2024"
+            >
+              28
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 29. Januar 2024"
+            >
+              29
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 30. Januar 2024"
+            >
+              30
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 31. Januar 2024"
+            >
+              31
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 1. Februar 2024"
+            >
+              1
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 2. Februar 2024"
+            >
+              2
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 3. Februar 2024"
+            >
+              3
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 4. Februar 2024"
+            >
+              4
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
+<div data-test-block="true">
+  <div class="DatePickerCalendar_calendar__MrP62 "
+       id="dummyIdForwardedFromRef"
+  >
+    <div class="DatePickerCalendar_calendarNavigation__pG+UM">
+      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  DatePickerCalendar_calendarNavigationArrowIcon__fUDs1"
+              type="button"
+      >
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r0:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r0:">
+            Forrige måned Desember 2023
+          </title>
+          <path d="M22.3 10.8v1.8H5.5l5.2 5.1L9.3 19l-7.5-7.3 7.7-7.3 1.4 1.3-5.2 5.1h16.6Z">
+          </path>
+        </svg>
+      </button>
+      <div class="DatePickerCalendar_calendarNavigationMonthAndYearContainer__i-9ID">
+        <div class>
+          <label id="labelId-:r3:"
+                 class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+                 for="selectId-:r2:"
+          >
+            Velg måned
+          </label>
+          <div class="Select_selectContainer__CfUZs DatePickerCalendar_calendarNavigationMonth__th-Oc">
+            <select id="selectId-:r2:"
+                    class="Select_select__-ENv1"
+            >
+              <option class
+                      value="0"
+              >
+                Januar
+              </option>
+              <option class
+                      value="1"
+              >
+                Februar
+              </option>
+              <option class
+                      value="2"
+              >
+                Mars
+              </option>
+              <option class
+                      value="3"
+              >
+                April
+              </option>
+              <option class
+                      value="4"
+              >
+                Mai
+              </option>
+              <option class
+                      value="5"
+              >
+                Juni
+              </option>
+              <option class
+                      value="6"
+              >
+                Juli
+              </option>
+              <option class
+                      value="7"
+              >
+                August
+              </option>
+              <option class
+                      value="8"
+              >
+                September
+              </option>
+              <option class
+                      value="9"
+              >
+                Oktober
+              </option>
+              <option class
+                      value="10"
+              >
+                November
+              </option>
+              <option class
+                      value="11"
+              >
+                Desember
+              </option>
+            </select>
+            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
+                 viewbox="0 0 24 24"
+                 focusable="false"
+                 aria-hidden="true"
+                 role="img"
+            >
+              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              </path>
+            </svg>
+          </div>
+          <div id="selectErrorId-:r1:"
+               aria-live="assertive"
+               aria-atomic="true"
+          >
+          </div>
+        </div>
+        <div class="DatePickerCalendar_calendarNavigationYear__Icqmb">
+          <label id="labelId-:r7:"
+                 class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+                 for="textFieldTextboxId-:r6:"
+          >
+            Årstall
+          </label>
+          <input id="textFieldTextboxId-:r6:"
+                 class="TextField_textbox__qbZlk"
+                 value="2024"
+          >
+          <div id="textFieldErrorId-:r5:"
+               aria-live="assertive"
+               aria-atomic="true"
+          >
+          </div>
+        </div>
+      </div>
+      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  DatePickerCalendar_calendarNavigationArrowIcon__fUDs1"
+              type="button"
+      >
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r8:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r8:">
+            Neste måned Februar 2024
+          </title>
+          <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <table class="DatePickerCalendar_calendarTable__zDKjI">
+      <caption class="DatePickerCalendar_srOnly__VfDJH">
+        Januar 2024
+      </caption>
+      <thead>
+        <tr>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Man
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Tir
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Ons
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Tor
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Fre
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Lør
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Søn
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 1. Januar 2024"
+            >
+              1
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 2. Januar 2024"
+            >
+              2
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 3. Januar 2024"
+            >
+              3
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 4. Januar 2024"
+            >
+              4
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 5. Januar 2024"
+            >
+              5
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 6. Januar 2024"
+            >
+              6
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 7. Januar 2024"
+            >
+              7
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 8. Januar 2024"
+            >
+              8
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 9. Januar 2024"
+            >
+              9
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 10. Januar 2024"
+            >
+              10
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 11. Januar 2024"
+            >
+              11
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 12. Januar 2024"
+            >
+              12
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 13. Januar 2024"
+            >
+              13
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 14. Januar 2024"
+            >
+              14
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
+                    type="button"
+                    tabindex="0"
+                    aria-current="true"
+                    aria-label="I dag 15. Januar 2024"
+            >
+              15
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 16. Januar 2024"
+            >
+              16
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 17. Januar 2024"
+            >
+              17
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 18. Januar 2024"
+            >
+              18
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 19. Januar 2024"
+            >
+              19
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 20. Januar 2024"
+            >
+              20
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 21. Januar 2024"
+            >
+              21
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 22. Januar 2024"
+            >
+              22
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 23. Januar 2024"
+            >
+              23
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 24. Januar 2024"
+            >
+              24
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 25. Januar 2024"
+            >
+              25
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 26. Januar 2024"
+            >
+              26
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 27. Januar 2024"
+            >
+              27
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 28. Januar 2024"
+            >
+              28
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 29. Januar 2024"
+            >
+              29
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 30. Januar 2024"
+            >
+              30
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 31. Januar 2024"
+            >
+              31
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 1. Februar 2024"
+            >
+              1
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 2. Februar 2024"
+            >
+              2
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 3. Februar 2024"
+            >
+              3
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 4. Februar 2024"
+            >
+              4
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
+<div data-test-block="true">
+  <div class="DatePickerCalendar_calendar__MrP62 ">
+    <div class="DatePickerCalendar_calendarNavigation__pG+UM">
+      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  DatePickerCalendar_calendarNavigationArrowIcon__fUDs1"
+              type="button"
+      >
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:rr:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:rr:">
+            Forrige måned Desember 2023
+          </title>
+          <path d="M22.3 10.8v1.8H5.5l5.2 5.1L9.3 19l-7.5-7.3 7.7-7.3 1.4 1.3-5.2 5.1h16.6Z">
+          </path>
+        </svg>
+      </button>
+      <div class="DatePickerCalendar_calendarNavigationMonthAndYearContainer__i-9ID">
+        <div class>
+          <label id="labelId-:ru:"
+                 class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+                 for="selectId-:rt:"
+          >
+            Velg måned
+          </label>
+          <div class="Select_selectContainer__CfUZs DatePickerCalendar_calendarNavigationMonth__th-Oc">
+            <select id="selectId-:rt:"
+                    class="Select_select__-ENv1"
+            >
+              <option class
+                      value="0"
+              >
+                Januar
+              </option>
+              <option class
+                      value="1"
+              >
+                Februar
+              </option>
+              <option class
+                      value="2"
+              >
+                Mars
+              </option>
+              <option class
+                      value="3"
+              >
+                April
+              </option>
+              <option class
+                      value="4"
+              >
+                Mai
+              </option>
+              <option class
+                      value="5"
+              >
+                Juni
+              </option>
+              <option class
+                      value="6"
+              >
+                Juli
+              </option>
+              <option class
+                      value="7"
+              >
+                August
+              </option>
+              <option class
+                      value="8"
+              >
+                September
+              </option>
+              <option class
+                      value="9"
+              >
+                Oktober
+              </option>
+              <option class
+                      value="10"
+              >
+                November
+              </option>
+              <option class
+                      value="11"
+              >
+                Desember
+              </option>
+            </select>
+            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
+                 viewbox="0 0 24 24"
+                 focusable="false"
+                 aria-hidden="true"
+                 role="img"
+            >
+              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              </path>
+            </svg>
+          </div>
+          <div id="selectErrorId-:rs:"
+               aria-live="assertive"
+               aria-atomic="true"
+          >
+          </div>
+        </div>
+        <div class="DatePickerCalendar_calendarNavigationYear__Icqmb">
+          <label id="labelId-:r12:"
+                 class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+                 for="textFieldTextboxId-:r11:"
+          >
+            Årstall
+          </label>
+          <input id="textFieldTextboxId-:r11:"
+                 class="TextField_textbox__qbZlk"
+                 value="2024"
+          >
+          <div id="textFieldErrorId-:r10:"
+               aria-live="assertive"
+               aria-atomic="true"
+          >
+          </div>
+        </div>
+      </div>
+      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  DatePickerCalendar_calendarNavigationArrowIcon__fUDs1"
+              type="button"
+      >
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r13:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r13:">
+            Neste måned Februar 2024
+          </title>
+          <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <table class="DatePickerCalendar_calendarTable__zDKjI">
+      <caption class="DatePickerCalendar_srOnly__VfDJH">
+        Januar 2024
+      </caption>
+      <thead>
+        <tr>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Man
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Tir
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Ons
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Tor
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Fre
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Lør
+          </th>
+          <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+            Søn
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 1. Januar 2024"
+            >
+              1
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 2. Januar 2024"
+            >
+              2
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 3. Januar 2024"
+            >
+              3
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 4. Januar 2024"
+            >
+              4
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 5. Januar 2024"
+            >
+              5
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 6. Januar 2024"
+            >
+              6
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 7. Januar 2024"
+            >
+              7
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 8. Januar 2024"
+            >
+              8
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 9. Januar 2024"
+            >
+              9
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 10. Januar 2024"
+            >
+              10
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 11. Januar 2024"
+            >
+              11
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 12. Januar 2024"
+            >
+              12
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 13. Januar 2024"
+            >
+              13
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 14. Januar 2024"
+            >
+              14
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
+                    type="button"
+                    tabindex="-1"
+                    aria-label="I dag 15. Januar 2024"
+            >
+              15
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 16. Januar 2024"
+            >
+              16
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 17. Januar 2024"
+            >
+              17
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 18. Januar 2024"
+            >
+              18
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 19. Januar 2024"
+            >
+              19
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 20. Januar 2024"
+            >
+              20
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 21. Januar 2024"
+            >
+              21
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 22. Januar 2024"
+            >
+              22
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 23. Januar 2024"
+            >
+              23
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 24. Januar 2024"
+            >
+              24
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 25. Januar 2024"
+            >
+              25
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 26. Januar 2024"
+            >
+              26
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 27. Januar 2024"
+            >
+              27
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 28. Januar 2024"
+            >
+              28
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 29. Januar 2024"
+            >
+              29
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 30. Januar 2024"
+            >
+              30
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                    type="button"
+                    tabindex="0"
+                    aria-current="true"
+                    aria-label=" 31. Januar 2024"
+            >
+              31
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 1. Februar 2024"
+            >
+              1
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 2. Februar 2024"
+            >
+              2
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 3. Februar 2024"
+            >
+              3
+            </button>
+          </td>
+          <td>
+            <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                    type="button"
+                    tabindex="-1"
+                    aria-label=" 4. Februar 2024"
+            >
+              4
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

@@ -1,7 +1,7 @@
 import { JSX } from 'react';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { Fieldset, TextField } from '@skatteetaten/ds-forms';
+import { Fieldset, DatePicker } from '@skatteetaten/ds-forms';
 import { Paragraph } from '@skatteetaten/ds-typography';
 import { Meta, StoryObj } from '@storybook/react';
 
@@ -38,6 +38,7 @@ const meta = {
     },
     // HTML
     disabled: { table: { category: category.htmlAttribute } },
+    form: { table: { category: category.htmlAttribute } },
   },
   args: {
     legend: 'Hvilken periode trenger du bekreftelse for?',
@@ -53,7 +54,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {} satisfies Story;
 
-// TODO Erstatt TextField med Datepicker i Example
 export const Examples: Story = {
   render: (_args): JSX.Element => {
     return (
@@ -61,11 +61,11 @@ export const Examples: Story = {
         legend={'Hvilken periode trenger du bekreftelse for?'}
         helpText={'Legg inn hvilken periode du trenger bekreftelse for.'}
       >
-        <TextField
+        <DatePicker
           className={'inlineBlock exampleSpacing'}
           label={'Fra dato (dd.mm.åååå)'}
         />
-        <TextField className={'inlineBlock'} label={'Til dato (dd.mm.åååå)'} />
+        <DatePicker className={'inlineBlock'} label={'Til dato (dd.mm.åååå)'} />
       </Fieldset>
     );
   },

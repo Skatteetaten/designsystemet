@@ -6,9 +6,8 @@ import {
   positionArr,
 } from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath } from '@skatteetaten/ds-icons';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { userEvent, waitFor, within } from '@storybook/testing-library';
+import { expect, userEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -52,6 +51,7 @@ const meta = {
     // HTML
     accessKey: { table: { disable: true } },
     disabled: { table: { disable: true } },
+    form: { table: { disable: true } },
     type: { table: { disable: true } },
     // Aria
     ariaDescribedby: { table: { disable: true } },
@@ -95,12 +95,14 @@ export const WithAttributes = {
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
+    form: 'formid123',
   },
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+    form: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -109,6 +111,7 @@ export const WithAttributes = {
     await expect(inlineButton).toHaveAttribute('id', 'htmlId');
     await expect(inlineButton).toHaveAttribute('lang', 'nb');
     await expect(inlineButton).toHaveAttribute('data-testid', '123ID');
+    await expect(inlineButton).toHaveAttribute('form', 'formid123');
   },
 } satisfies Story;
 
@@ -189,6 +192,7 @@ export const WithLongTextAndIcon = {
   args: {
     ...defaultArgs,
     svgPath: AddOutlineSVGpath,
+    iconPosition: 'right',
     children:
       'Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert. ' +
       'Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert.',

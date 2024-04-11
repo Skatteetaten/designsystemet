@@ -30,6 +30,7 @@ export const CheckboxGroup = forwardRef<
       legend,
       titleHelpSvg,
       disabled,
+      form,
       hasError,
       hideLegend,
       showRequiredMark,
@@ -47,6 +48,7 @@ export const CheckboxGroup = forwardRef<
         lang={lang}
         data-testid={dataTestId}
         disabled={disabled}
+        form={form}
         legend={legend}
         hideLegend={hideLegend}
         showRequiredMark={showRequiredMark}

@@ -1,6 +1,8 @@
 export * from './Checkbox/Checkbox';
 export * from './Checkbox/Checkbox.types';
 export * from './CheckboxGroup/CheckboxGroup';
+export * from './DatePicker/DatePicker.types';
+export * from './DatePicker/DatePicker';
 export * from './Select/Select';
 export * from './Select/Select.types';
 export * from './SelectOption/SelectOption.types';
@@ -19,3 +21,5 @@ export * from './RadioGroup/RadioGroup';
 export * from './RadioGroup/RadioGroup.types';
 export * from './TextField/TextField';
 export * from './TextField/TextField.types';
+export * from './SearchField/SearchField';
+export * from './SearchField/SearchField.types';

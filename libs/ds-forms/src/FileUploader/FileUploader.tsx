@@ -161,6 +161,7 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
 
         <button
           ref={buttonRef}
+          type={'button'}
           id={id}
           className={`${styles.dropZone} ${
             hasError ? styles.dropZone_error : ''

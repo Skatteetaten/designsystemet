@@ -1,7 +1,6 @@
 import { Table } from '@skatteetaten/ds-table';
-import { expect } from '@storybook/jest';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+import { expect, within } from '@storybook/test';
 
 const meta = {
   component: Table.Sum,

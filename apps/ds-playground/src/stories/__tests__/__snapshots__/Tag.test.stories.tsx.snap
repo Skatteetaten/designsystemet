@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Tag DefaultGreen smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="Tag_tag__skzXl Tag_tag_forest__MNVgc Tag_tag_medium__8+IxO ">
+    Særavgift
+  </div>
+</div>
+`;
+
+exports[`Tester/Tag DefaultGrey smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="Tag_tag__skzXl Tag_tag_graphite__sEySJ Tag_tag_medium__8+IxO ">
+    Særavgift
+  </div>
+</div>
+`;
+
+exports[`Tester/Tag DefaultRed smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="Tag_tag__skzXl Tag_tag_burgundy__f+F4b Tag_tag_medium__8+IxO ">
+    Særavgift
+  </div>
+</div>
+`;
+
+exports[`Tester/Tag DefaultYellow smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="Tag_tag__skzXl Tag_tag_ochre__9nXLJ Tag_tag_medium__8+IxO ">
+    Særavgift
+  </div>
+</div>
+`;
+
+exports[`Tester/Tag Small smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="Tag_tag__skzXl Tag_tag_ochre__9nXLJ Tag_tag_small__RIVpu ">
+    Særavgift
+  </div>
+</div>
+`;
+
+exports[`Tester/Tag WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <div id="htmlId"
+       lang="en"
+       data-testid="123ID"
+       class="Tag_tag__skzXl Tag_tag_ochre__9nXLJ Tag_tag_medium__8+IxO dummyClassname"
+  >
+    Særavgift
+  </div>
+</div>
+`;
+
+exports[`Tester/Tag WithCustomIcon smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="Tag_tag__skzXl Tag_tag_burgundy__f+F4b Tag_tag_medium__8+IxO ">
+    <div class="Tag_iconWrapper__q-kYu"
+         aria-hidden="true"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Tag_icon__0uJnR"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
+        </path>
+      </svg>
+    </div>
+    Særavgift
+  </div>
+</div>
+`;
+
+exports[`Tester/Tag WithRef play-test 1`] = `
+<div data-test-block="true">
+  <div class="Tag_tag__skzXl Tag_tag_ochre__9nXLJ Tag_tag_medium__8+IxO "
+       id="dummyIdForwardedFromRef"
+  >
+    Særavgift
+  </div>
+</div>
+`;
