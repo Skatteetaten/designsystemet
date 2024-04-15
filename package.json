@@ -60,6 +60,7 @@
     "downloadTranslations": "TEKSTLISTEKATALOG=designsystemet TEKSTLISTER='Shared,ds-alerts,ds-buttons,ds-forms,ds-layout,ds-tables,ds-status,ds-collections,ds-overlays' TRANSLATIONS_FOLDER='./libs/ds-core-utils/src/translations' ts-node  --project tsconfig.base.json  ./libs/ds-dev-config/src/scripts/downloadTranslations.ts"
   },
   "dependencies": {
+    "@floating-ui/react": "0.26.9",
     "@skatteetaten/ds-core-designtokens": "file:dist/libs/ds-core-designtokens",
     "@storybook/addon-essentials": "7.6.17",
     "@storybook/core-server": "7.6.17",

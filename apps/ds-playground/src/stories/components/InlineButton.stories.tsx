@@ -3,9 +3,9 @@ import {
   getInlineButtonPositionDefault,
 } from '@skatteetaten/ds-buttons';
 import {
+  buttonIconPositionArr,
   dsI18n,
   getCommonButtonTypeDefault,
-  positionArr,
 } from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath, CancelSVGpath } from '@skatteetaten/ds-icons';
 import { Meta, StoryObj } from '@storybook/react';
@@ -29,12 +29,12 @@ const meta = {
       },
     },
     iconPosition: {
-      options: [...positionArr],
+      options: [...buttonIconPositionArr],
       control: 'radio',
       table: {
         category: category.props,
         defaultValue: { summary: getInlineButtonPositionDefault() },
-        type: { summary: positionArr },
+        type: { summary: buttonIconPositionArr },
       },
     },
     svgPath: {

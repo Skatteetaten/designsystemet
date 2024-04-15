@@ -2,8 +2,8 @@ import { FocusEvent, MouseEvent, useState } from 'react';
 
 import { InlineButton } from '@skatteetaten/ds-buttons';
 import {
+  buttonIconPositionArr,
   getCommonButtonTypeDefault,
-  positionArr,
 } from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath } from '@skatteetaten/ds-icons';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
@@ -40,7 +40,7 @@ const meta = {
     spinnerTitle: { table: { disable: true } },
     iconPosition: {
       table: { disable: true },
-      options: [...positionArr],
+      options: [...buttonIconPositionArr],
       control: 'radio',
     },
     svgPath: {

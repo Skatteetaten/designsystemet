@@ -8,7 +8,11 @@ import {
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  getCommonClassNameDefault,
+  useMediaQuery,
+} from '@skatteetaten/ds-core-utils';
 import { ChevronDownSVGpath, ChevronUpSVGpath } from '@skatteetaten/ds-icons';
 
 import { TableRowProps } from './TableRow.types';
@@ -19,7 +23,6 @@ import {
   RowWithLeftSideExpandButton,
   RowWithRightSideExpandButton,
 } from '../TableRowWithIconButton/TableRowWithIconButton';
-import { useMediaQuery } from '../utils';
 
 export const TableRow = forwardRef<HTMLTableRowElement, TableRowProps>(
   (

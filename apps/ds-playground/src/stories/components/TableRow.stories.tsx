@@ -1,6 +1,5 @@
 import { JSX } from 'react';
 
-import { positionArr } from '@skatteetaten/ds-core-utils';
 import {
   getTableRowExpandButtonPositionDefault,
   Table,
@@ -21,12 +20,12 @@ const meta = {
     expandButtonAriaDescribedby: { table: { category: category.aria } },
     expandButtonTitle: { table: { category: category.props } },
     expandButtonPosition: {
-      options: [...positionArr],
-      control: 'radio',
+      //options: [...positionArr],
+      control: 'inline-radio',
       table: {
         defaultValue: { summary: getTableRowExpandButtonPositionDefault() },
         category: category.props,
-        type: { summary: positionArr },
+        //type: { summary: positionArr },
       },
     },
     expandableContent: {

@@ -1,104 +1,115 @@
-import { forwardRef, JSX, useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-
-import { IconButton } from '@skatteetaten/ds-buttons';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-import { CancelSVGpath } from '@skatteetaten/ds-icons';
-import { Heading, Paragraph } from '@skatteetaten/ds-typography';
+import { JSX, useEffect, useMemo, useRef, useState } from 'react';
 
 import {
-  getPopoverColorDefault,
-  getPopoverArrowPositionDefault,
-  getPopoverTitleAsDefault,
-} from './defaults';
-import { PopoverProps } from './Popover.types';
+  arrow,
+  autoUpdate,
+  flip,
+  offset,
+  shift,
+  useDismiss,
+  useFloating,
+  UseFloatingReturn,
+  useInteractions,
+} from '@floating-ui/react';
+import { useMediaQuery } from '@skatteetaten/ds-core-utils';
 
-import styles from './Popover.module.scss';
+import { getPopoverColorDefault, getPopoverPositionDefault } from './defaults';
+import {
+  PopoverComponent,
+  PopoverPosition,
+  PopoverProps,
+} from './Popover.types';
+import { PopoverContent } from '../PopoverContent/PopoverContent';
+import { PopoverContext } from '../PopoverContext/PopoverContext';
+import { PopoverTrigger } from '../PopoverTrigger/PopoverTrigger';
 
-export const Popover = forwardRef<HTMLDivElement, PopoverProps>(
-  (
-    {
-      id,
-      className = getCommonClassNameDefault(),
-      lang,
-      'data-testid': dataTestId,
-      // anchorEl,
-      arrowPosition = getPopoverArrowPositionDefault(),
-      color = getPopoverColorDefault(),
-      open,
-      title,
-      titleAs = getPopoverTitleAsDefault(),
-      // disableAutoDismiss,
-      onClose,
-      children,
-    },
-    ref
-  ): JSX.Element => {
-    const useMediaQuery = (query: string): boolean => {
-      const [matches, setMatches] = useState(false);
+export const Popover = ((props: PopoverProps): JSX.Element => {
+  const {
+    isOpen: controlledOpen,
+    position = getPopoverPositionDefault(),
+    disableAutoDismiss,
+    disableAutoDismissOnMobile,
+    children,
+  } = props;
+  const arrowRef = useRef<HTMLDivElement>(null);
 
-      useEffect(() => {
-        const media = window.matchMedia(query);
-        if (media.matches !== matches) {
-          setMatches(media.matches);
-        }
-        const listener = (): void => {
-          setMatches(media.matches);
-        };
-        media.addEventListener('change', listener);
-        return () => media.removeEventListener('change', listener);
-      }, [matches, query]);
+  const [internalOpen, setInternalOpen] = useState<boolean>(false);
+  const isOpen = controlledOpen ?? internalOpen;
+  const isMobile = !useMediaQuery('(min-width: 640px)');
+  const shouldAutoDismiss = Boolean(
+    !disableAutoDismiss &&
+      (!isMobile || (!disableAutoDismissOnMobile && isMobile))
+  );
+  const arrowLen = arrowRef.current?.offsetWidth ?? 0;
+  const floatingOffset = Math.sqrt(2 * arrowLen ** 2) / 2;
+  const kebabize = (str: PopoverPosition): string =>
+    str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
 
-      return matches;
+  const floatingData = useFloating({
+    open: isOpen,
+    onOpenChange: setInternalOpen,
+    placement: kebabize(position) as UseFloatingReturn['placement'],
+    whileElementsMounted: autoUpdate,
+    middleware: [
+      offset({ mainAxis: floatingOffset, alignmentAxis: -32 }),
+      flip(),
+      shift(),
+      arrow({ element: arrowRef }),
+    ],
+  });
+
+  const dismiss = useDismiss(floatingData.context, {
+    enabled: shouldAutoDismiss,
+    ancestorScroll: true,
+  });
+  const interactions = useInteractions([dismiss]);
+
+  useEffect(() => {
+    if (!isOpen || !shouldAutoDismiss) {
+      return;
+    }
+    const handleResize = (): void => {
+      setInternalOpen(false);
     };
 
-    const { t } = useTranslation('ds_status', { i18n: dsI18n });
-    const isBreakpointXs = useMediaQuery('(min-width: 480px)');
+    window.addEventListener('resize', handleResize);
 
-    const hiddenClassName = open ? styles.popoverHidden : '';
-    const colorClassName = styles[`popover_${color}`];
-    const popoverArrowPositionClassName =
-      styles[`popover_arrow${arrowPosition}`];
-    const arrowPositionClassName = styles[`popoverArrow_${arrowPosition}`];
-    return (
-      <div
-        ref={ref}
-        id={id}
-        lang={lang}
-        data-testid={dataTestId}
-        className={`${styles.popover} ${hiddenClassName} ${colorClassName} ${popoverArrowPositionClassName} ${className}`.trim()}
-        aria-hidden={!open}
-      >
-        <div className={styles.popoverContent}>
-          <div className={styles.popoverContentWrapper}>
-            {title && (
-              <Heading as={titleAs} level={4}>
-                {title}
-              </Heading>
-            )}
-            {typeof children === 'string' && <Paragraph>{children}</Paragraph>}
-            {typeof children !== 'string' && children}
-          </div>
-          <IconButton
-            className={styles.popoverContentCloseButton}
-            size={isBreakpointXs ? 'large' : 'small'}
-            svgPath={CancelSVGpath}
-            title={t('alert.CloseMessage')}
-            onClick={onClose}
-          />
-        </div>
-        <div
-          className={`${styles.popoverArrow} ${arrowPositionClassName}`.trim()}
-        ></div>
-      </div>
-    );
-  }
-);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [isOpen, shouldAutoDismiss]);
+
+  const value = useMemo(
+    () => ({
+      floatingData,
+      interactions,
+      arrowRef,
+      isOpen,
+      setIsOpen: setInternalOpen,
+      isMobile,
+      ...props,
+    }),
+    [
+      interactions,
+      props,
+      floatingData,
+      arrowRef,
+      isOpen,
+      setInternalOpen,
+      isMobile,
+    ]
+  );
+
+  return (
+    <PopoverContext.Provider value={value}>{children}</PopoverContext.Provider>
+  );
+}) as PopoverComponent;
 
 Popover.displayName = 'Popover';
 
-export {
-  getPopoverColorDefault,
-  getPopoverArrowPositionDefault,
-  getPopoverTitleAsDefault,
-};
+export { getPopoverColorDefault, getPopoverPositionDefault };
+
+Popover.Content = PopoverContent;
+Popover.Content.displayName = 'Popover.Content';
+Popover.Trigger = PopoverTrigger;
+Popover.Trigger.displayName = 'Popover.Trigger';

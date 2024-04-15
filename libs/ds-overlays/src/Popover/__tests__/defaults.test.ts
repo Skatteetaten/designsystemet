@@ -1,20 +1,12 @@
-import {
-  getPopoverArrowLocationDefault,
-  getPopoverColorDefault,
-  getPopoverTitleAsDefault,
-} from '../Popover';
+import { getPopoverPositionDefault, getPopoverColorDefault } from '../defaults';
 
 describe('Popover defaults', () => {
   it('Når getPopoverColorDefault kalles, så returnerer den riktig verdi', () => {
     const renderDefault = getPopoverColorDefault();
-    expect(renderDefault).toBe('ochre');
+    expect(renderDefault).toBe('forest');
   });
-  it('Når getPopoverArrowLocationDefault kalles, så returnerer den riktig verdi', () => {
-    const renderDefault = getPopoverArrowLocationDefault();
-    expect(renderDefault).toBe('bottomLeft');
-  });
-  it('Når getPopoverTitleAsDefault kalles, så returnerer den riktig verdi', () => {
-    const renderDefault = getPopoverTitleAsDefault();
-    expect(renderDefault).toBe('h3');
+  it('Når getPopoverPositionDefault kalles, så returnerer den riktig verdi', () => {
+    const renderDefault = getPopoverPositionDefault();
+    expect(renderDefault).toBe('bottomStart');
   });
 });

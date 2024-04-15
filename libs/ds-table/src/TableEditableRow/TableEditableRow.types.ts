@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 
 import { BaseProps, Position } from '@skatteetaten/ds-core-utils';
 
+type EditButtonPosition = Extract<Position, 'left' | 'right'>;
 export interface TableEditableRowProps extends BaseProps {
   /**
    * rendrer innholdet i redigeringsmodus
@@ -15,7 +16,7 @@ export interface TableEditableRowProps extends BaseProps {
    */
   editButtonAriaDescribedby?: string;
   /** Posisjonen til ikonet: 'left', 'right'. */
-  editButtonPosition?: Position;
+  editButtonPosition?: EditButtonPosition;
   /** Callback når redigerknappen trykkes. */
   onEdit?: () => void;
   /** Innhold i raden*/

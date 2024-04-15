@@ -1,35 +1,58 @@
-import { ReactNode } from 'react';
+import {
+  Dispatch,
+  FunctionComponent,
+  MutableRefObject,
+  ReactNode,
+  SetStateAction,
+} from 'react';
 
-import { BaseProps, HeadingAs } from '@skatteetaten/ds-core-utils';
+import { UseFloatingReturn, useInteractions } from '@floating-ui/react';
+import { colorNamesArr, positionArr } from '@skatteetaten/ds-core-utils';
 
-export const arrowPositionArr = [
-  'topRight',
-  'topLeft',
-  'bottomRight',
-  'bottomLeft',
+import { PopoverContent } from '../PopoverContent/PopoverContent';
+import { PopoverTrigger } from '../PopoverTrigger/PopoverTrigger';
+
+export type PopoverPosition = Extract<
+  (typeof positionArr)[number],
+  'topStart' | 'topEnd' | 'bottomStart' | 'bottomEnd'
+>;
+
+export type PopoverColor = Extract<
+  (typeof colorNamesArr)[number],
+  'ochre' | 'forest' | 'white'
+>;
+
+export const popoverColorArr = [
+  colorNamesArr[0],
+  colorNamesArr[1],
+  colorNamesArr[6],
 ] as const;
-export type ArrowPosition = (typeof arrowPositionArr)[number];
 
-export const popoverColorArr = ['forest', 'ochre', 'white'] as const;
-export type PopoverColor = (typeof popoverColorArr)[number];
-
-export interface PopoverProps extends BaseProps {
+export interface PopoverProps {
   /** Plassering av pilen */
-  arrowPosition?: ArrowPosition;
-  /** Tekst */
-  children: ReactNode;
+  position?: PopoverPosition;
   /** Bakgrunnsfarge */
   color?: PopoverColor;
   /** Om autolukking skal skrus av */
   disableAutoDismiss?: boolean;
-  /** Tittel */
-  title?: string;
-  /** Tittel as */
-  titleAs?: HeadingAs;
+  /** Om autolukking skal skrus av på enheter med smal skjerm */
+  disableAutoDismissOnMobile?: boolean;
   /** Om Popover er synlig */
-  open?: boolean;
-  /** Element Popover anchors to */
-  anchorEl?: Element | null;
-  /** Callback når Popover lukkes */
-  onClose?: () => void;
+  isOpen?: boolean;
+  /** Popover.Content og Popover.Trigger */
+  children?: ReactNode;
+}
+
+export interface PopoverComponent extends FunctionComponent<PopoverProps> {
+  Content: typeof PopoverContent;
+  Trigger: typeof PopoverTrigger;
+}
+
+export interface PopoverContextProps extends Exclude<PopoverProps, 'children'> {
+  arrowRef: MutableRefObject<HTMLDivElement | null>;
+  floatingData: UseFloatingReturn;
+  interactions: ReturnType<typeof useInteractions>;
+  isOpen: boolean;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
+  isMobile: boolean;
 }

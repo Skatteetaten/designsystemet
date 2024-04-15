@@ -1,16 +1,13 @@
 @import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
 .popover {
-  position: relative;
-  z-index: 1000;
+  --popover-max-height: 560px;
+
+  z-index: 100;
   width: fit-content;
-  max-width: $breakpoint-s;
+  max-width: var(--container-s);
   border: 1px solid var(--border-color);
   background-color: var(--background-color);
-
-  &Hidden {
-    display: none;
-  }
 
   &_forest {
     --background-color: var(--semantic-success-background);
@@ -27,18 +24,10 @@
     --border-color: var(--palette-graphite-100);
   }
 
-  &_arrowtopRight,
-  &_arrowtopLeft {
-    margin-top: var(--spacing-xl);
-  }
-
-  &_arrowbottomRight,
-  &_arrowbottomLeft {
-    margin-bottom: var(--spacing-xl);
-  }
-
   &Content {
     display: flex;
+    max-height: var(--popover-max-height);
+    overflow-y: auto;
 
     &Wrapper {
       flex-grow: 1;
@@ -69,32 +58,24 @@
     background-color: var(--background-color);
     transform: rotate(45deg);
 
-    &_topRight {
-      top: calc(-0.5 * var(--size-large) - 1px);
-      right: var(--size-extra-large);
-      border-right-color: transparent;
-      border-bottom-color: transparent;
-    }
-
-    &_topLeft {
-      top: calc(-0.5 * var(--size-large) - 1px);
-      left: var(--size-extra-large);
-      border-right-color: transparent;
-      border-bottom-color: transparent;
-    }
-
-    &_bottomRight {
-      right: var(--size-extra-large);
-      bottom: calc(-0.5 * var(--size-large) - 1px);
+    &_top {
       border-top-color: transparent;
       border-left-color: transparent;
     }
 
-    &_bottomLeft {
-      bottom: calc(-0.5 * var(--size-large) - 1px);
-      left: var(--size-extra-large);
-      border-top-color: transparent;
+    &_bottom {
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+    }
+
+    &_left {
+      border-bottom-color: transparent;
       border-left-color: transparent;
+    }
+
+    &_right {
+      border-top-color: transparent;
+      border-right-color: transparent;
     }
   }
 }
