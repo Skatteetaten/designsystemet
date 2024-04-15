@@ -35,6 +35,8 @@ export default {
     ariaDescribedby: { table: { category: category.aria } },
     //Events
     onClick: { ...htmlEventDescription },
+    onFocus: { ...htmlEventDescription },
+    onBlur: { ...htmlEventDescription },
   },
   parameters: {
     version: getVersion('ds-overlays'),
@@ -45,8 +47,8 @@ export const Preview: StoryObj<typeof Popover.Trigger> = {
   render: (args) => (
     <div className={'centerContent'}>
       <Popover>
-        <Popover.Content>{loremIpsum}</Popover.Content>
         <Popover.Trigger {...args} />
+        <Popover.Content>{loremIpsum}</Popover.Content>
       </Popover>
     </div>
   ),

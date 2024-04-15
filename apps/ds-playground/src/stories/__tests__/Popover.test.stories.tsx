@@ -40,7 +40,11 @@ const meta = {
     disableAutoDismissOnMobile: { table: { disable: true } },
     isOpen: { table: { disable: true } },
     position: { table: { disable: true } },
-    // Aria
+    shouldRestoreFocus: {
+      table: { disable: true },
+    },
+    // Event
+    onClose: { table: { disable: true } },
   },
   render: Template,
 } satisfies Meta<typeof Popover>;
@@ -63,20 +67,20 @@ export const Defaults = {
 const TemplateAllColors: StoryFn<typeof Popover> = (args) => (
   <div className={'flex gapS centerContent'}>
     <Popover color={'forest'} position={'topEnd'} isOpen {...args}>
-      <Popover.Content>{args.children}</Popover.Content>
       <Popover.Trigger size={'extraSmall'} />
+      <Popover.Content>{args.children}</Popover.Content>
     </Popover>
     <Popover color={'white'} position={'bottomEnd'} isOpen {...args}>
-      <Popover.Content>{args.children}</Popover.Content>
       <Popover.Trigger size={'small'} />
+      <Popover.Content>{args.children}</Popover.Content>
     </Popover>
     <Popover color={'ochre'} position={'topStart'} isOpen {...args}>
-      <Popover.Content>{args.children}</Popover.Content>
       <Popover.Trigger size={'medium'} />
+      <Popover.Content>{args.children}</Popover.Content>
     </Popover>
     <Popover color={'forest'} position={'bottomStart'} isOpen {...args}>
-      <Popover.Content>{args.children}</Popover.Content>
       <Popover.Trigger size={'large'} />
+      <Popover.Content>{args.children}</Popover.Content>
     </Popover>
   </div>
 );
@@ -101,7 +105,7 @@ export const WithOnClickTriggerAndCloseButton = {
     imageSnapshot: { disable: true },
     HTMLSnapshot: { disable: true },
   },
-  play: async ({ canvasElement }): Promise<void> => {
+  play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
     await expect(button).toBeInTheDocument();
@@ -114,6 +118,7 @@ export const WithOnClickTriggerAndCloseButton = {
     const closeButton = canvas.getByTitle(dsI18n.t('Shared:shared.Close'));
     await fireEvent.click(closeButton);
     await expect(canvas.queryByText(defaultText)).not.toBeInTheDocument();
+    await expect(args.onClose).toHaveBeenCalled();
   },
 } satisfies Story;
 

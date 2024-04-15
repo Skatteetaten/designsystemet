@@ -17,7 +17,6 @@ const meta = {
     className: { table: { disable: true } },
     id: { table: { disable: true } },
     lang: { table: { disable: true } },
-    onClose: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
     children: {

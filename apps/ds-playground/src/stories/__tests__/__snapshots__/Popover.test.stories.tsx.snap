@@ -3,6 +3,23 @@
 exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
 <div data-test-block="true">
   <div class="flex gapS centerContent">
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH "
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r3:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r3:">
+          Hjelp
+        </title>
+        <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+        </path>
+      </svg>
+    </button>
     <div tabindex="-1"
          class="PopoverContent_popover__1MWTw PopoverContent_popover_forest__WomGW"
          style="position: absolute; left: 0px; top: 0px; transform: translate(238px, 23px);"
@@ -17,11 +34,11 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
           <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
                viewbox="0 0 24 24"
                focusable="false"
-               aria-labelledby="svgtitle-:r3:"
+               aria-labelledby="svgtitle-:r4:"
                aria-hidden="false"
                role="img"
           >
-            <title id="svgtitle-:r3:">
+            <title id="svgtitle-:r4:">
               Lukk
             </title>
             <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
@@ -34,17 +51,17 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
       >
       </div>
     </div>
-    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH "
+    <button class="IconButton_button__mw9sG IconButton_button_small__etst4 IconButton_button_outlined__aDbNH "
             type="button"
     >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
            viewbox="0 0 24 24"
            focusable="false"
-           aria-labelledby="svgtitle-:r4:"
+           aria-labelledby="svgtitle-:r6:"
            aria-hidden="false"
            role="img"
       >
-        <title id="svgtitle-:r4:">
+        <title id="svgtitle-:r6:">
           Hjelp
         </title>
         <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
@@ -65,11 +82,11 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
           <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
                viewbox="0 0 24 24"
                focusable="false"
-               aria-labelledby="svgtitle-:r6:"
+               aria-labelledby="svgtitle-:r7:"
                aria-hidden="false"
                role="img"
           >
-            <title id="svgtitle-:r6:">
+            <title id="svgtitle-:r7:">
               Lukk
             </title>
             <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
@@ -82,17 +99,17 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
       >
       </div>
     </div>
-    <button class="IconButton_button__mw9sG IconButton_button_small__etst4 IconButton_button_outlined__aDbNH "
+    <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt IconButton_button_outlined__aDbNH "
             type="button"
     >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
            viewbox="0 0 24 24"
            focusable="false"
-           aria-labelledby="svgtitle-:r7:"
+           aria-labelledby="svgtitle-:r9:"
            aria-hidden="false"
            role="img"
       >
-        <title id="svgtitle-:r7:">
+        <title id="svgtitle-:r9:">
           Hjelp
         </title>
         <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
@@ -113,11 +130,11 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
           <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
                viewbox="0 0 24 24"
                focusable="false"
-               aria-labelledby="svgtitle-:r9:"
+               aria-labelledby="svgtitle-:ra:"
                aria-hidden="false"
                role="img"
           >
-            <title id="svgtitle-:r9:">
+            <title id="svgtitle-:ra:">
               Lukk
             </title>
             <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
@@ -130,17 +147,17 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
       >
       </div>
     </div>
-    <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt IconButton_button_outlined__aDbNH "
+    <button class="IconButton_button__mw9sG IconButton_button_large__IejTf IconButton_button_outlined__aDbNH "
             type="button"
     >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
            viewbox="0 0 24 24"
            focusable="false"
-           aria-labelledby="svgtitle-:ra:"
+           aria-labelledby="svgtitle-:rc:"
            aria-hidden="false"
            role="img"
       >
-        <title id="svgtitle-:ra:">
+        <title id="svgtitle-:rc:">
           Hjelp
         </title>
         <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
@@ -161,11 +178,11 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
           <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
                viewbox="0 0 24 24"
                focusable="false"
-               aria-labelledby="svgtitle-:rc:"
+               aria-labelledby="svgtitle-:rd:"
                aria-hidden="false"
                role="img"
           >
-            <title id="svgtitle-:rc:">
+            <title id="svgtitle-:rd:">
               Lukk
             </title>
             <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
@@ -178,23 +195,6 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
       >
       </div>
     </div>
-    <button class="IconButton_button__mw9sG IconButton_button_large__IejTf IconButton_button_outlined__aDbNH "
-            type="button"
-    >
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-labelledby="svgtitle-:rd:"
-           aria-hidden="false"
-           role="img"
-      >
-        <title id="svgtitle-:rd:">
-          Hjelp
-        </title>
-        <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
-        </path>
-      </svg>
-    </button>
   </div>
 </div>
 `;

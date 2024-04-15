@@ -13,7 +13,11 @@ import {
 } from '@floating-ui/react';
 import { useMediaQuery } from '@skatteetaten/ds-core-utils';
 
-import { getPopoverColorDefault, getPopoverPositionDefault } from './defaults';
+import {
+  getPopoverColorDefault,
+  getPopoverPositionDefault,
+  getPopoverRestoreFocusDefault,
+} from './defaults';
 import {
   PopoverComponent,
   PopoverPosition,
@@ -30,6 +34,7 @@ export const Popover = ((props: PopoverProps): JSX.Element => {
     disableAutoDismiss,
     disableAutoDismissOnMobile,
     children,
+    onClose,
   } = props;
   const arrowRef = useRef<HTMLDivElement>(null);
 
@@ -45,9 +50,14 @@ export const Popover = ((props: PopoverProps): JSX.Element => {
   const kebabize = (str: PopoverPosition): string =>
     str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
 
-  const floatingData = useFloating({
+  const floatingData = useFloating<HTMLButtonElement>({
     open: isOpen,
-    onOpenChange: setInternalOpen,
+    onOpenChange: (open) => {
+      setInternalOpen(open);
+      if (!open) {
+        onClose?.();
+      }
+    },
     placement: kebabize(position) as UseFloatingReturn['placement'],
     whileElementsMounted: autoUpdate,
     middleware: [
@@ -70,6 +80,7 @@ export const Popover = ((props: PopoverProps): JSX.Element => {
     }
     const handleResize = (): void => {
       setInternalOpen(false);
+      onClose?.();
     };
 
     window.addEventListener('resize', handleResize);
@@ -107,7 +118,11 @@ export const Popover = ((props: PopoverProps): JSX.Element => {
 
 Popover.displayName = 'Popover';
 
-export { getPopoverColorDefault, getPopoverPositionDefault };
+export {
+  getPopoverColorDefault,
+  getPopoverPositionDefault,
+  getPopoverRestoreFocusDefault,
+};
 
 Popover.Content = PopoverContent;
 Popover.Content.displayName = 'Popover.Content';

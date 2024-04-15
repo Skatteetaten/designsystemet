@@ -17,6 +17,4 @@ export type PopoverColor = (typeof popoverColorArr)[number];
 export interface PopoverContentProps extends BaseProps {
   /** Tekst */
   children: ReactNode;
-  /** Callback når Popover lukkes */
-  onClose?: () => void;
 }

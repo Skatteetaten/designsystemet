@@ -1,4 +1,8 @@
-import { getPopoverPositionDefault, getPopoverColorDefault } from '../defaults';
+import {
+  getPopoverPositionDefault,
+  getPopoverColorDefault,
+  getPopoverRestoreFocusDefault,
+} from '../defaults';
 
 describe('Popover defaults', () => {
   it('Når getPopoverColorDefault kalles, så returnerer den riktig verdi', () => {
@@ -8,5 +12,9 @@ describe('Popover defaults', () => {
   it('Når getPopoverPositionDefault kalles, så returnerer den riktig verdi', () => {
     const renderDefault = getPopoverPositionDefault();
     expect(renderDefault).toBe('bottomStart');
+  });
+  it('Når getPopoverRestoreFocusDefault kalles, så returnerer den riktig verdi', () => {
+    const renderDefault = getPopoverRestoreFocusDefault();
+    expect(renderDefault).toBe(true);
   });
 });

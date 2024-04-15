@@ -1,7 +1,12 @@
 import { useState, JSX } from 'react';
 
-import { Popover, popoverColorArr } from '@skatteetaten/ds-overlays';
-import { getTagColorDefault } from '@skatteetaten/ds-status';
+import {
+  getPopoverColorDefault,
+  getPopoverPositionDefault,
+  getPopoverRestoreFocusDefault,
+  Popover,
+  popoverColorArr,
+} from '@skatteetaten/ds-overlays';
 import { Table } from '@skatteetaten/ds-table';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 import { Meta, StoryObj } from '@storybook/react';
@@ -21,7 +26,7 @@ const meta = {
       table: {
         type: { summary: popoverColorArr },
         category: category.props,
-        defaultValue: { summary: getTagColorDefault() },
+        defaultValue: { summary: getPopoverColorDefault() },
       },
       control: 'radio',
     },
@@ -31,8 +36,15 @@ const meta = {
     position: {
       control: 'radio',
       table: { category: category.props },
+      defaultValue: { summary: getPopoverPositionDefault() },
+    },
+    shouldRestoreFocus: {
+      table: { category: category.props },
+      defaultValue: { summary: getPopoverRestoreFocusDefault() },
     },
     isOpen: { table: { category: category.props } },
+    //Events
+    onClose: { control: false, table: { category: category.props } },
   },
   parameters: {
     version: getVersion('ds-overlays'),
@@ -45,8 +57,8 @@ export const Preview: Story = {
   render: (args) => (
     <div className={'centerContent'}>
       <Popover {...args}>
-        <Popover.Content>{loremIpsum}</Popover.Content>
         <Popover.Trigger />
+        <Popover.Content>{loremIpsum}</Popover.Content>
       </Popover>
     </div>
   ),
@@ -116,12 +128,14 @@ export const Example: Story = {
 
         <Table caption={'Oppgaver'}>
           <Table.Header>
-            <Table.HeaderCell>{'Referansenummer'}</Table.HeaderCell>
-            <Table.HeaderCell>{'Dato'}</Table.HeaderCell>
-            <Table.HeaderCell>{'Filer'}</Table.HeaderCell>
-            <Table.HeaderCell>{'Brev'}</Table.HeaderCell>
-            <Table.HeaderCell>{'Vedtak'}</Table.HeaderCell>
-            <Table.HeaderCell as={'td'} />
+            <Table.Row>
+              <Table.HeaderCell>{'Referansenummer'}</Table.HeaderCell>
+              <Table.HeaderCell>{'Dato'}</Table.HeaderCell>
+              <Table.HeaderCell>{'Filer'}</Table.HeaderCell>
+              <Table.HeaderCell>{'Brev'}</Table.HeaderCell>
+              <Table.HeaderCell>{'Vedtak'}</Table.HeaderCell>
+              <Table.HeaderCell as={'td'} />
+            </Table.Row>
           </Table.Header>
           <Table.Body>
             <Table.Row expandButtonPosition={'right'} isExpandable>
@@ -175,13 +189,18 @@ export const Example: Story = {
           <Heading id={controlledId} as={'h2'} level={2}>
             {'Controlled Popover'}
           </Heading>
-          <Popover position={'bottomStart'} color={'ochre'} isOpen={isOpen}>
+          <Popover
+            position={'bottomStart'}
+            color={'ochre'}
+            isOpen={isOpen}
+            onClose={() => setIsOpen(false)}
+          >
             <Popover.Trigger
               ariaDescribedby={controlledId}
               className={'dummySpacingLeft'}
               onClick={() => setIsOpen(!isOpen)}
             />
-            <Popover.Content onClose={() => setIsOpen(false)}>
+            <Popover.Content>
               {
                 'Bolignummeret er et nummer som unikt identifiserer en leilighet. Nummeret består av en bokstav etterfulgt av fire tall, f.eks. H0101. Bolignummeret står som regel på et klistemerke i dørkarmen til inngangsdøren.'
               }

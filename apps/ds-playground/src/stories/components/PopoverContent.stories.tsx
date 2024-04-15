@@ -11,8 +11,6 @@ export default {
   argTypes: {
     // Props
     children: { table: { category: category.props } },
-    // Events
-    onClose: { control: { type: null }, table: { category: category.event } },
   },
   parameters: {
     version: getVersion('ds-overlays'),

@@ -7,7 +7,10 @@ import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath } from '@skatteetaten/ds-icons';
 
 import { PopoverContentProps } from './PopoverContent.types';
-import { getPopoverColorDefault } from '../Popover/defaults';
+import {
+  getPopoverColorDefault,
+  getPopoverRestoreFocusDefault,
+} from '../Popover/defaults';
 import { PopoverContext } from '../PopoverContext/PopoverContext';
 
 import styles from './PopoverContent.module.scss';
@@ -19,7 +22,6 @@ export const PopoverContent = forwardRef<HTMLDivElement, PopoverContentProps>(
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
-      onClose,
       children,
     },
     ref
@@ -32,6 +34,8 @@ export const PopoverContent = forwardRef<HTMLDivElement, PopoverContentProps>(
       setIsOpen,
       color = getPopoverColorDefault(),
       isMobile,
+      shouldRestoreFocus = getPopoverRestoreFocusDefault(),
+      onClose,
     } = useContext(PopoverContext);
     const { refs, floatingStyles, placement, middlewareData } = floatingData;
     const { getFloatingProps } = interactions;
@@ -75,6 +79,9 @@ export const PopoverContent = forwardRef<HTMLDivElement, PopoverContentProps>(
             onClick={() => {
               onClose?.();
               setIsOpen(false);
+              if (shouldRestoreFocus) {
+                refs.domReference.current?.focus();
+              }
             }}
           />
         </div>

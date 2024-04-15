@@ -43,7 +43,7 @@ export const positionArr = [
 export type Position = (typeof positionArr)[number];
 
 export const buttonIconPositionArr = ['left', 'right'] as const;
-export type ButtoniConPosition = Extract<Position, 'left' | 'right'>;
+export type ButtonIconPosition = Extract<Position, 'left' | 'right'>;
 
 export const linkColorArr = ['white'] as const;
 export type LinkColor = (typeof linkColorArr)[number];
