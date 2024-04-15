@@ -1,6 +1,11 @@
 import { JSX } from 'react';
 
-import { Accordion, AccordionItem } from '@skatteetaten/ds-collections';
+import {
+  Accordion,
+  AccordionItem,
+  getAccordionBackgroundColorDefault,
+  getAccordionIconPositionDefault,
+} from '@skatteetaten/ds-collections';
 import { PersonSVGpath } from '@skatteetaten/ds-icons';
 import { Meta, StoryObj } from '@storybook/react';
 
@@ -13,10 +18,25 @@ const defaultContent =
 
 const meta = {
   component: Accordion,
-  title: 'Komponenter/Accordion',
+  title: 'Komponenter/Accordion/Accordion',
   argTypes: {
     // Props
+    color: {
+      control: 'radio',
+      table: {
+        category: category.props,
+        defaultValue: { summary: getAccordionBackgroundColorDefault() },
+      },
+    },
+    iconPosition: {
+      control: 'radio',
+      table: {
+        category: category.props,
+        defaultValue: { summary: getAccordionIconPositionDefault() },
+      },
+    },
     children: { control: 'text', table: { category: category.props } },
+    onClick: { table: { category: category.event } },
   },
   args: {
     iconPosition: 'right',
@@ -49,8 +69,18 @@ export const Preview: Story = {} satisfies Story;
 export const Examples: Story = {
   render: (_args): JSX.Element => {
     return (
-      <Accordion color={'ochre'} iconPosition={'right'}>
-        <AccordionItem title={'Tittel'}>{defaultContent}</AccordionItem>
+      <Accordion>
+        <AccordionItem title={'Tittel brytes\r\n her'} subtitle={'Undertittel'}>
+          {defaultContent}
+        </AccordionItem>
+        <AccordionItem
+          title={'Dette er en lang tittel som går over flere linjer'}
+        >
+          {defaultContent}
+        </AccordionItem>
+        <AccordionItem title={'Tittel med custom ikon'} svgPath={PersonSVGpath}>
+          {defaultContent}
+        </AccordionItem>
       </Accordion>
     );
   },

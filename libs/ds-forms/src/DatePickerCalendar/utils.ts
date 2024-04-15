@@ -1,5 +1,5 @@
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { isAfter, isBefore, isToday } from 'date-fns';
+import { getWeekOfMonth, isAfter, isBefore, isSunday, isToday } from 'date-fns';
 
 const lastValidYear: number = 9999;
 const sunday: number = 0;
@@ -69,15 +69,6 @@ const makeCell = (
   };
 };
 
-const isDisabled = (date: Date, minDate?: Date, maxDate?: Date): boolean => {
-  minDate && minDate.setHours(0, 0, 0);
-  return (
-    (minDate ? isBefore(date, minDate) : false) ||
-    (maxDate ? isAfter(date, maxDate) : false) ||
-    date.getFullYear() > lastValidYear
-  );
-};
-
 function getCalendarCells(
   year: number,
   monthIndex: number,
@@ -141,6 +132,19 @@ export function getCalendarRows(
   return rows;
 }
 
+export const isDisabled = (
+  date: Date,
+  minDate?: Date,
+  maxDate?: Date
+): boolean => {
+  minDate && minDate.setHours(0, 0, 0);
+  return (
+    (minDate ? isBefore(date, minDate) : false) ||
+    (maxDate ? isAfter(date, maxDate) : false) ||
+    date.getFullYear() > lastValidYear
+  );
+};
+
 export const getNameOfMonthsAndDays = (): {
   monthNames: string[];
   dayNames: string[];
@@ -175,3 +179,31 @@ export const getNameOfMonthsAndDays = (): {
 export function findValidYear(year: string | number): number {
   return year === '' || year === 0 ? new Date().getFullYear() : Number(year);
 }
+
+export function initialGridIdx(focusableDate: Date): string {
+  const colIdx = isSunday(focusableDate) ? 6 : focusableDate.getDay() - 1;
+  const rowIdx = getWeekOfMonth(focusableDate, { weekStartsOn: 1 }) - 1;
+
+  return `${rowIdx}${colIdx}`;
+}
+
+export const getFirstFocusableDate = (
+  selectedDate: Date,
+  minDate?: Date,
+  maxDate?: Date
+): Date => {
+  if (isDisabled(selectedDate, minDate, maxDate)) {
+    let focusableDate = undefined;
+    if (maxDate && isAfter(selectedDate, maxDate)) {
+      focusableDate = maxDate;
+    } else if (minDate && isBefore(selectedDate, minDate)) {
+      focusableDate = minDate;
+    }
+
+    if (focusableDate && !isDisabled(focusableDate, minDate, maxDate)) {
+      return focusableDate;
+    }
+  }
+
+  return selectedDate;
+};

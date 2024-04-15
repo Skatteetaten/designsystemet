@@ -6,19 +6,19 @@ import {
   colorNamesArr,
 } from '@skatteetaten/ds-core-utils';
 
-export type AccordionColor = Extract<
-  (typeof colorNamesArr)[number],
-  'ochre' | 'forest' | 'burgundy' | 'graphite' | 'denim'
->;
+export type AccordionColor =
+  | Extract<
+      (typeof colorNamesArr)[number],
+      'ochre' | 'forest' | 'burgundy' | 'graphite' | 'denim'
+    >
+  | 'none';
 
 export interface AccordionProps extends BaseProps {
   /** Bakgrunnsfarge */
   color?: AccordionColor;
   /** Posisjonen til ikonet */
   iconPosition?: Position;
-  /** Om innholdet skal vises */
-  isExpanded?: boolean;
-  /** Callback når knappen OpenClose trykkes på */
+  /** Callback når Accordion trykkes på */
   onClick?: MouseEventHandler<HTMLButtonElement>;
   /** Tekst eller markup som vises/skjules. */
   children?: ReactNode;

@@ -4,7 +4,6 @@ import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { ChevronDownSVGpath, Icon } from '@skatteetaten/ds-icons';
 
 import { AccordionItemProps } from './AccordionItem.types';
-import { getAccordionItemHeadingAsDefault } from './defaults';
 
 import styles from './AccordionItem.module.scss';
 
@@ -17,7 +16,7 @@ export const AccordionItem = forwardRef<HTMLButtonElement, AccordionItemProps>(
       'data-testid': dataTestId,
       title,
       subtitle,
-      titleAs = getAccordionItemHeadingAsDefault(),
+      titleAs,
       isExpanded: isExpandedExternal,
       svgPath,
       onClick,
@@ -43,51 +42,49 @@ export const AccordionItem = forwardRef<HTMLButtonElement, AccordionItemProps>(
       isExpanded ? styles.icon_open : styles.icon_closed
     }`;
 
-    const headingClassNames = `${styles.header} ${
-      svgPath ? styles.header_hasIconRight : ''
+    const headerClassNames = `${styles.header} ${
+      svgPath ? styles.header_hasChevronLeft : ''
     }`;
 
     const classNames = `${styles.accordionItem} ${className}`;
 
-    const Tag = titleAs;
+    const Tag = titleAs ?? 'div';
 
     return (
-      <div className={classNames}>
+      <Tag className={classNames}>
         <button
           ref={ref}
           id={id}
-          className={headingClassNames}
+          className={headerClassNames}
           lang={lang}
           data-testid={dataTestId}
           aria-expanded={isExpanded}
           type={'button'}
           onClick={handleClick}
         >
+          {svgPath && (
+            <div className={styles.iconWrapper}>
+              <Icon svgPath={svgPath} className={iconClassName} />
+            </div>
+          )}
+
+          <div className={styles.titleWrapper}>
+            <span className={styles.title}>{title}</span>
+            {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
+          </div>
+
           <div className={styles.iconWrapper}>
             <Icon
               svgPath={ChevronDownSVGpath}
               className={animatedIconClassName}
             />
           </div>
-
-          <div className={styles.titleWrapper}>
-            <Tag className={styles.title}>{title}</Tag>
-            {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
-          </div>
-
-          {svgPath && (
-            <div className={styles.iconWrapper}>
-              <Icon svgPath={svgPath} className={iconClassName} />
-            </div>
-          )}
         </button>
 
         {isExpanded && <div className={styles.content}>{children}</div>}
-      </div>
+      </Tag>
     );
   }
 );
 
 AccordionItem.displayName = 'Accordion.Item';
-
-export { getAccordionItemHeadingAsDefault };

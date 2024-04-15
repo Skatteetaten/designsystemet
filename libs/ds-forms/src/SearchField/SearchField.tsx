@@ -229,7 +229,7 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
                     const hasFocus = currentFocus === index;
                     return (
                       <SearchFieldResult
-                        key={result.description}
+                        key={result.key ?? result.description}
                         hasFocus={hasFocus}
                         aria-selected={hasFocus}
                         role={'option'}

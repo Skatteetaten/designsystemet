@@ -20,8 +20,8 @@
   &_graphite {
     background-color: var(--palette-graphite-5);
   }
-}
 
-.iconRight > div button {
-  flex-direction: row-reverse;
+  &_hasChevronLeft .header {
+    flex-direction: row-reverse;
+  }
 }

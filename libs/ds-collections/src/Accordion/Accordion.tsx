@@ -3,7 +3,10 @@ import { forwardRef } from 'react';
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { AccordionProps } from './Accordion.types';
-import { getAccordionIconPositionDefault } from './defaults';
+import {
+  getAccordionBackgroundColorDefault,
+  getAccordionIconPositionDefault,
+} from './defaults';
 
 import styles from './Accordion.module.scss';
 
@@ -14,18 +17,18 @@ export const Accordion = forwardRef<HTMLDivElement, AccordionProps>(
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
-      color,
+      color = getAccordionBackgroundColorDefault(),
       iconPosition = getAccordionIconPositionDefault(),
       children,
     },
 
     ref
   ) => {
-    const hasIconRight = iconPosition === 'right';
+    const hasChevronLeft = iconPosition === 'left';
 
-    const colorClassName = color ? styles[`accordion_${color}`] : '';
+    const colorClassName = color !== 'none' ? styles[`accordion_${color}`] : '';
     const classNames = `${colorClassName} ${
-      hasIconRight && styles.iconRight
+      hasChevronLeft && styles.accordion_hasChevronLeft
     } ${className}`.trim();
 
     return (
@@ -44,4 +47,4 @@ export const Accordion = forwardRef<HTMLDivElement, AccordionProps>(
 
 Accordion.displayName = 'Accordion';
 
-export { getAccordionIconPositionDefault };
+export { getAccordionIconPositionDefault, getAccordionBackgroundColorDefault };
