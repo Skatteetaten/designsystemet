@@ -39,6 +39,7 @@ interface SearchFieldPropsHTMLAttributes extends SearchFieldHTMLAttributes {
 export interface SearchResult {
   title?: string;
   description: string;
+  key?: string;
 }
 
 interface SearchFieldCommonProps

@@ -3,7 +3,14 @@ import React, { ChangeEvent, FocusEvent, useState } from 'react';
 import { dsI18n, formArrSize } from '@skatteetaten/ds-core-utils';
 import { DatePicker, TextField } from '@skatteetaten/ds-forms';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fireEvent, userEvent, waitFor, within } from '@storybook/test';
+import {
+  expect,
+  fireEvent,
+  fn,
+  userEvent,
+  waitFor,
+  within,
+} from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -17,6 +24,7 @@ const verifyAttribute =
     await expect(button).toHaveAttribute(attribute, expectedValue);
   };
 
+const today = new Date('2024.01.15');
 const meta = {
   component: DatePicker,
   title: 'Tester/DatePicker/DatePicker',
@@ -66,6 +74,9 @@ const meta = {
     onChange: { table: { disable: true } },
     onFocus: { table: { disable: true } },
     onSelectDate: { table: { disable: true } },
+  },
+  parameters: {
+    mockDate: today,
   },
 } satisfies Meta<typeof DatePicker>;
 export default meta;
@@ -505,7 +516,7 @@ export const WithInitialPickerDate = {
     });
     await fireEvent.click(calendarButton);
     const ariaCurrentButton = canvas.getByText('31');
-    await expect(ariaCurrentButton).toHaveAttribute('aria-current', 'date');
+    await expect(ariaCurrentButton).toHaveAttribute('aria-current', 'true');
   },
 } satisfies Story;
 
@@ -527,14 +538,16 @@ export const GenerouslyWithFormatFromUser = {
     const removeDate =
       '{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}';
 
-    await userEvent.type(input, removeDate);
-    await userEvent.type(input, '0102');
-    await userEvent.tab();
+    const user = userEvent.setup();
+
+    await user.keyboard(removeDate);
+    await user.keyboard('0102');
+    await user.tab();
     await waitFor(() => expect(input).toHaveValue('01.02.2024'));
 
-    await userEvent.type(input, removeDate);
-    await userEvent.type(input, '010224');
-    await userEvent.tab();
+    await user.keyboard(removeDate);
+    await user.keyboard('010224');
+    await user.tab();
     await waitFor(() => expect(input).toHaveValue('01.02.2024'));
   },
 } satisfies Story;
@@ -588,6 +601,9 @@ export const ClickCalendarButton = {
   args: {
     ...defaultArgs,
     value: valueDate,
+    onBlur: fn(),
+    onChange: fn(),
+    onFocus: fn(),
   },
   parameters: {
     imageSnapshot: { disable: true },

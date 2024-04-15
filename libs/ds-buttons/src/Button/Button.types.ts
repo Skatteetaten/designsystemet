@@ -24,6 +24,7 @@ type ButtonHTMLAttributes = Partial<RequiredButtonHTMLAttributes>;
 
 interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
   ariaDescribedby?: string;
+  ariaCurrent?: ComponentPropsWithoutRef<'button'>['aria-current'];
   onBlur?: FocusEventHandler<HTMLButtonElement>;
   onClick?: MouseEventHandler<HTMLButtonElement>;
   onFocus?: FocusEventHandler<HTMLButtonElement>;

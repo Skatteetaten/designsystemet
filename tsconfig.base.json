@@ -27,6 +27,7 @@
       "@skatteetaten/ds-forms": ["libs/ds-forms/src/index.ts"],
       "@skatteetaten/ds-icons": ["libs/ds-icons/src/index.ts"],
       "@skatteetaten/ds-layout": ["libs/ds-layout/src/index.ts"],
+      "@skatteetaten/ds-navigation": ["libs/ds-navigation/src/index.ts"],
       "@skatteetaten/ds-overlays": ["libs/ds-overlays/src/index.ts"],
       "@skatteetaten/ds-progress": ["libs/ds-progress/src/index.ts"],
       "@skatteetaten/ds-status": ["libs/ds-status/src/index.ts"],

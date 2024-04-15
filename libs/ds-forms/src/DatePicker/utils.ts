@@ -27,7 +27,7 @@ export const parseDateFromInput = (value: string): Date | null => {
   return null;
 };
 
-export const initFormattedDate = (
+export const initInputValue = (
   value: Date | null | undefined,
   defaultValue: Date | null | undefined,
   dateFormat: string
