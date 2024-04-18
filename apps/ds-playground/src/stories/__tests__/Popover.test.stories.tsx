@@ -109,8 +109,10 @@ export const WithOnClickTriggerAndCloseButton = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
     await expect(button).toBeInTheDocument();
+    await expect(button).toHaveAttribute('aria-expanded', 'false');
     await expect(canvas.queryByText(defaultText)).not.toBeInTheDocument();
     await fireEvent.click(button);
+    await expect(button).toHaveAttribute('aria-expanded', 'true');
     await expect(canvas.getByText(defaultText)).toBeInTheDocument();
     await fireEvent.click(button);
     await expect(canvas.queryByText(defaultText)).not.toBeInTheDocument();
