@@ -16,6 +16,8 @@ export const colorNamesArr = [
   'denim',
   'azure',
   'graphite',
+  'white',
+  'black',
 ] as const;
 
 export const sizeArr = [
@@ -30,8 +32,18 @@ export type Size = (typeof sizeArr)[number];
 export const formArrSize = [sizeArr[2], sizeArr[3]] as const;
 export type FormSize = (typeof formArrSize)[number];
 
-export const positionArr = ['left', 'right'] as const;
+export const positionArr = [
+  'left',
+  'right',
+  'topStart',
+  'topEnd',
+  'bottomStart',
+  'bottomEnd',
+] as const;
 export type Position = (typeof positionArr)[number];
+
+export const buttonIconPositionArr = ['left', 'right'] as const;
+export type ButtonIconPosition = Extract<Position, 'left' | 'right'>;
 
 export const linkColorArr = ['white'] as const;
 export type LinkColor = (typeof linkColorArr)[number];

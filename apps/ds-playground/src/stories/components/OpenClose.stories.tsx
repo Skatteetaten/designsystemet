@@ -4,11 +4,7 @@ import {
   getOpenCloseUnderlineDefault,
   getOpenCloseVariantDefault,
 } from '@skatteetaten/ds-collections';
-import {
-  densityArr,
-  headingAsArr,
-  positionArr,
-} from '@skatteetaten/ds-core-utils';
+import { densityArr, headingAsArr } from '@skatteetaten/ds-core-utils';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 import { Meta, StoryObj } from '@storybook/react';
 
@@ -32,12 +28,10 @@ const meta = {
       table: { category: category.props },
     },
     iconPosition: {
-      options: [...positionArr],
       control: 'inline-radio',
       table: {
         category: category.props,
         defaultValue: { summary: getOpenCloseIconPositionDefault() },
-        type: { summary: positionArr },
       },
     },
     isOnClickOnlyFiredOnOpen: { table: { category: category.props } },

@@ -1,6 +1,5 @@
 import { JSX } from 'react';
 
-import { positionArr } from '@skatteetaten/ds-core-utils';
 import {
   Table,
   getTableRowExpandButtonPositionDefault,
@@ -19,11 +18,9 @@ const meta = {
     editableContent: { table: { category: category.props } },
     editButtonPosition: {
       control: 'radio',
-      options: [...positionArr],
       table: {
         category: category.props,
         defaultValue: { summary: getTableRowExpandButtonPositionDefault() },
-        type: { summary: positionArr },
       },
     },
     // Aria

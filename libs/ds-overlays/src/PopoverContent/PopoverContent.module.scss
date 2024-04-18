@@ -1,0 +1,81 @@
+@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
+.popover {
+  --popover-max-height: 560px;
+
+  z-index: 100;
+  width: fit-content;
+  max-width: var(--container-s);
+  border: 1px solid var(--border-color);
+  background-color: var(--background-color);
+
+  &_forest {
+    --background-color: var(--semantic-success-background);
+    --border-color: var(--semantic-success-foreground);
+  }
+
+  &_ochre {
+    --background-color: var(--semantic-warning-background);
+    --border-color: var(--semantic-warning-foreground);
+  }
+
+  &_white {
+    --background-color: var(--palette-graphite-0);
+    --border-color: var(--palette-graphite-100);
+  }
+
+  &Content {
+    display: flex;
+    max-height: var(--popover-max-height);
+    overflow-y: auto;
+
+    &Wrapper {
+      flex-grow: 1;
+      padding: var(--spacing-s) 0 var(--spacing-s) var(--spacing-s);
+      margin: 0;
+
+      @media (min-width: $breakpoint-xs) {
+        padding: var(--spacing-m) 0 var(--spacing-m) var(--spacing-m);
+      }
+    }
+
+    &CloseButton {
+      align-self: start;
+      margin: var(--spacing-s) var(--spacing-s) 0 0;
+
+      &:not(:active) > svg {
+        fill: var(--palette-graphite-100);
+      }
+    }
+  }
+
+  &Arrow {
+    position: absolute;
+    z-index: -1;
+    width: var(--size-large);
+    height: var(--size-large);
+    border: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    transform: rotate(45deg);
+
+    &_top {
+      border-top-color: transparent;
+      border-left-color: transparent;
+    }
+
+    &_bottom {
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+    }
+
+    &_left {
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+
+    &_right {
+      border-top-color: transparent;
+      border-right-color: transparent;
+    }
+  }
+}
