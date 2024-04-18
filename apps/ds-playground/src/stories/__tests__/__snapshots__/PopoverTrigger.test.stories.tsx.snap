@@ -5,6 +5,7 @@ exports[`Tester/Popover/Trigger WithAriaDescribedby play-test 1`] = `
   <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt IconButton_button_outlined__aDbNH "
           type="button"
           aria-describedby="araiDescId"
+          aria-expanded="false"
   >
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
          viewbox="0 0 24 24"
@@ -30,6 +31,7 @@ exports[`Tester/Popover/Trigger WithAttributes play-test 1`] = `
           lang="en"
           data-testid="123ID"
           type="button"
+          aria-expanded="false"
   >
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
          viewbox="0 0 24 24"
@@ -52,6 +54,7 @@ exports[`Tester/Popover/Trigger WithEventHandlers play-test 1`] = `
 <div data-test-block="true">
   <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt IconButton_button_outlined__aDbNH "
           type="button"
+          aria-expanded="true"
   >
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
          viewbox="0 0 24 24"
@@ -74,6 +77,7 @@ exports[`Tester/Popover/Trigger WithRef play-test 1`] = `
 <div data-test-block="true">
   <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt IconButton_button_outlined__aDbNH "
           type="button"
+          aria-expanded="false"
           id="dummyIdForwardedFromRef"
   >
     <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"

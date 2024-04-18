@@ -47,6 +47,7 @@ export const PopoverTrigger = forwardRef<
         svgPath={HelpSimpleSVGpath}
         size={size}
         ariaDescribedby={ariaDescribedby}
+        ariaExpanded={isOpen}
         isOutlined
         onClick={(event): void => {
           onClick?.(event);
