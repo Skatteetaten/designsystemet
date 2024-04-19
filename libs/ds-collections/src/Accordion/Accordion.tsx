@@ -6,6 +6,7 @@ import { AccordionProps } from './Accordion.types';
 import {
   getAccordionBackgroundColorDefault,
   getAccordionIconPositionDefault,
+  getAccordionSizeDefault,
 } from './defaults';
 
 import styles from './Accordion.module.scss';
@@ -18,17 +19,16 @@ export const Accordion = forwardRef<HTMLDivElement, AccordionProps>(
       lang,
       'data-testid': dataTestId,
       color = getAccordionBackgroundColorDefault(),
+      size = getAccordionSizeDefault(),
       iconPosition = getAccordionIconPositionDefault(),
       children,
     },
-
     ref
   ) => {
-    const hasChevronLeft = iconPosition === 'left';
-
     const colorClassName = color !== 'none' ? styles[`accordion_${color}`] : '';
-    const classNames = `${colorClassName} ${
-      hasChevronLeft && styles.accordion_hasChevronLeft
+    const sizeClassName = size !== 'medium' ? styles[`accordion_${size}`] : '';
+    const classNames = `${colorClassName} ${sizeClassName} ${
+      iconPosition === 'left' && styles.accordion_iconLeft
     } ${className}`.trim();
 
     return (
@@ -47,4 +47,8 @@ export const Accordion = forwardRef<HTMLDivElement, AccordionProps>(
 
 Accordion.displayName = 'Accordion';
 
-export { getAccordionIconPositionDefault, getAccordionBackgroundColorDefault };
+export {
+  getAccordionIconPositionDefault,
+  getAccordionBackgroundColorDefault,
+  getAccordionSizeDefault,
+};

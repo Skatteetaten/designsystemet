@@ -1,4 +1,7 @@
+@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
 .accordion {
+  min-width: 11rem;
   background-color: var(--semantic-page-background);
 
   &_forest {
@@ -21,7 +24,151 @@
     background-color: var(--palette-graphite-5);
   }
 
-  &_hasChevronLeft .header {
-    flex-direction: row-reverse;
+  &_iconLeft {
+    .header {
+      flex-direction: row-reverse;
+
+      &_withCustomIcon {
+        flex-direction: row;
+      }
+    }
+
+    .content {
+      margin-left: calc(var(--spacing-xl) + var(--spacing-s));
+    }
   }
+
+  &_small {
+    .title {
+      font-size: var(--font-size-m);
+    }
+
+    .iconWrapper {
+      height: calc(var(--font-size-m) * var(--semantic-line-height-default));
+
+      .icon {
+        height: var(--size-medium);
+      }
+    }
+  }
+
+  &_large {
+    .title {
+      font-size: var(--font-size-xl);
+    }
+
+    .iconWrapper {
+      height: calc(var(--font-size-xl) * var(--semantic-line-height-default));
+    }
+  }
+}
+
+.accordionItem {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: 0 -1px 0 0 var(--semantic-divider-100),
+    0 1px 0 0 var(--semantic-divider-100);
+}
+
+.accordionItem:has(+ .accordionItem) {
+  box-shadow: 0 -1px 0 0 var(--semantic-divider-100);
+}
+
+.titleWrapper {
+  flex: 1;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  padding: var(--spacing-s);
+  border: none;
+  background-color: transparent;
+  color: var(--semantic-interactive-main);
+  cursor: pointer;
+  font-weight: var(--font-weight-bold);
+  gap: var(--spacing-s);
+  line-height: var(--semantic-line-height-default);
+  overflow-wrap: anywhere;
+  text-align: left;
+
+  .icon {
+    fill: var(--semantic-interactive-main);
+    height: var(--size-large);
+    width: auto;
+  }
+
+  &:hover {
+    background-color: var(--semantic-interactive-background);
+  }
+
+  &:focus {
+    outline: 2px solid var(--semantic-interactive-main);
+    outline-offset: 2px;
+  }
+
+  &:active {
+    background-color: var(--semantic-interactive-background);
+    color: var(--semantic-interactive-foreground);
+    outline: 2px solid var(--semantic-interactive-foreground);
+    outline-offset: 2px;
+
+    .icon {
+      fill: var(--semantic-interactive-foreground);
+    }
+  }
+
+  @media (min-width: $breakpoint-xs) {
+    padding: var(--spacing-s) var(--spacing-m);
+  }
+}
+
+.iconWrapper {
+  display: flex;
+  height: calc(var(--font-size-l) * var(--semantic-line-height-default));
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  flex-shrink: 0;
+  transition: transform 0.14s linear;
+
+  &_open {
+    transform: scaleY(-1);
+  }
+
+  &_closed {
+    transform: scaleY(1);
+  }
+}
+
+.title {
+  margin: 0;
+  font-size: var(--font-size-l);
+  line-height: var(--semantic-line-height-default);
+  white-space: pre-line;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--palette-graphite-100);
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--semantic-line-height-article);
+
+  @media (min-width: $breakpoint-xs) {
+    padding-bottom: var(--spacing-s);
+    &_expanded {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.content {
+  padding: var(--spacing-s);
+  margin-left: 0;
 }

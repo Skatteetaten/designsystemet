@@ -1,11 +1,10 @@
-import { forwardRef, useState, MouseEvent } from 'react';
+import { MouseEvent, forwardRef, useState } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { ChevronDownSVGpath, Icon } from '@skatteetaten/ds-icons';
 
 import { AccordionItemProps } from './AccordionItem.types';
-
-import styles from './AccordionItem.module.scss';
+import styles from '../Accordion/Accordion.module.scss';
 
 export const AccordionItem = forwardRef<HTMLButtonElement, AccordionItemProps>(
   (
@@ -37,25 +36,28 @@ export const AccordionItem = forwardRef<HTMLButtonElement, AccordionItemProps>(
         ? isExpandedExternal
         : isExpandedInternal;
 
-    const iconClassName = `${styles.icon} ${styles.icon_active}`;
-    const animatedIconClassName = `${iconClassName}} ${
+    const iconClassName = `${styles.icon} ${
       isExpanded ? styles.icon_open : styles.icon_closed
     }`;
 
-    const headerClassNames = `${styles.header} ${
-      svgPath ? styles.header_hasChevronLeft : ''
+    const headerClassName = `${styles.header} ${
+      svgPath ? styles.header_withCustomIcon : ''
+    }`.trim();
+
+    const subtitleClassName = `${styles.subtitle} ${
+      isExpanded ? styles.subtitle_expanded : ''
     }`;
 
     const classNames = `${styles.accordionItem} ${className}`;
 
     const Tag = titleAs ?? 'div';
-
+    // Legg spacing på subtitlen
     return (
       <Tag className={classNames}>
         <button
           ref={ref}
           id={id}
-          className={headerClassNames}
+          className={headerClassName}
           lang={lang}
           data-testid={dataTestId}
           aria-expanded={isExpanded}
@@ -64,20 +66,17 @@ export const AccordionItem = forwardRef<HTMLButtonElement, AccordionItemProps>(
         >
           {svgPath && (
             <div className={styles.iconWrapper}>
-              <Icon svgPath={svgPath} className={iconClassName} />
+              <Icon svgPath={svgPath} className={styles.icon} />
             </div>
           )}
 
           <div className={styles.titleWrapper}>
             <span className={styles.title}>{title}</span>
-            {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
+            {subtitle && <p className={subtitleClassName}>{subtitle}</p>}
           </div>
 
           <div className={styles.iconWrapper}>
-            <Icon
-              svgPath={ChevronDownSVGpath}
-              className={animatedIconClassName}
-            />
+            <Icon svgPath={ChevronDownSVGpath} className={iconClassName} />
           </div>
         </button>
 

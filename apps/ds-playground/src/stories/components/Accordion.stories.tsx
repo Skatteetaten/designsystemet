@@ -5,8 +5,9 @@ import {
   AccordionItem,
   getAccordionBackgroundColorDefault,
   getAccordionIconPositionDefault,
+  getAccordionSizeDefault,
 } from '@skatteetaten/ds-collections';
-import { PersonSVGpath } from '@skatteetaten/ds-icons';
+import { PersonSVGpath, SkattetrekkSVGpath } from '@skatteetaten/ds-icons';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
@@ -21,11 +22,19 @@ const meta = {
   title: 'Komponenter/Accordion/Accordion',
   argTypes: {
     // Props
+    children: { control: false, table: { category: category.props } },
     color: {
       control: 'radio',
       table: {
         category: category.props,
         defaultValue: { summary: getAccordionBackgroundColorDefault() },
+      },
+    },
+    size: {
+      control: 'radio',
+      table: {
+        category: category.props,
+        defaultValue: { summary: getAccordionSizeDefault() },
       },
     },
     iconPosition: {
@@ -35,22 +44,31 @@ const meta = {
         defaultValue: { summary: getAccordionIconPositionDefault() },
       },
     },
-    children: { control: 'text', table: { category: category.props } },
-    onClick: { table: { category: category.event } },
   },
   args: {
     iconPosition: 'right',
     children: [
-      <AccordionItem key={'a1'} title={'Tittel'} subtitle={'Underittel her'}>
-        {defaultContent}
+      <AccordionItem key={'a1'} title={'Meg selv'} svgPath={PersonSVGpath}>
+        {
+          'Du må betale restskatten selv om du har endret etter fristen for skattemeldingen eller klaget. Hvis du ikke betaler restskatten i tide, løper det forsinkelsesrenter ved forfall frem til du betaler.'
+        }
       </AccordionItem>,
       <AccordionItem
         key={'a2'}
-        title={'Dette er en lang tittel som går over flere'}
+        title={`Tittel kan også\nbrytes over flere linjer.`}
       >
-        {defaultContent}
+        {
+          'Du må betale restskatten selv om du har endret etter fristen for skattemeldingen eller klaget. Hvis du ikke betaler restskatten i tide, løper det forsinkelsesrenter ved forfall frem til du betaler.'
+        }
       </AccordionItem>,
-      <AccordionItem key={'a3'} title={'Tredje Tittel'} svgPath={PersonSVGpath}>
+      <AccordionItem
+        key={'a3'}
+        title={'Skatt'}
+        subtitle={
+          'Skattekort, frikort, forskuddsskatt, skattemelding (selvangivelse)'
+        }
+        svgPath={SkattetrekkSVGpath}
+      >
         {defaultContent}
       </AccordionItem>,
     ],
@@ -70,11 +88,11 @@ export const Examples: Story = {
   render: (_args): JSX.Element => {
     return (
       <Accordion>
-        <AccordionItem title={'Tittel brytes\r\n her'} subtitle={'Undertittel'}>
+        <AccordionItem title={'Tittel'} subtitle={'Undertittel'}>
           {defaultContent}
         </AccordionItem>
         <AccordionItem
-          title={'Dette er en lang tittel som går over flere linjer'}
+          title={'Dette er en lang tittel som\nbrekkes på ny linje manuelt'}
         >
           {defaultContent}
         </AccordionItem>
