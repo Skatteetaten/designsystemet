@@ -4,16 +4,11 @@
   "sourceRoot": "libs/ds-overlays/src",
   "projectType": "library",
   "tags": [],
+  "implicitDependencies": ["!ds-dev-config"],
   "targets": {
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "libs/ds-overlays/**/*.{ts,tsx,js,jsx}",
-          "libs/ds-overlays/package.json"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "build": {
       "executor": "@nx/rollup:rollup",
@@ -76,6 +71,5 @@
         "command": "npm publish dist/libs/ds-overlays {args.switches}"
       }
     }
-  },
-  "implicitDependencies": ["!ds-dev-config"]
+  }
 }

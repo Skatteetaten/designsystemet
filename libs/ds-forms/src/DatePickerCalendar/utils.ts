@@ -1,8 +1,8 @@
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { getWeekOfMonth, isAfter, isBefore, isSunday, isToday } from 'date-fns';
 
-const lastValidYear: number = 9999;
-const sunday: number = 0;
+const lastValidYear = 9999;
+const sunday = 0;
 
 function getDaysFromPrevMonth(datesInSelectedMonth: Date[]): number {
   const firstDayInSelectedMonth = datesInSelectedMonth[0].getDay();

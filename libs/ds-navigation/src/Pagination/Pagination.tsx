@@ -121,7 +121,7 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
       hidePrevNextButtonTitle = getDefaultHidePrevNextButtonTitle(),
       hidePageSummary = getDefaultHidePageSummary(),
       ariaLabel,
-      onChange = (): void => {},
+      onChange,
     },
     ref
   ): JSX.Element => {

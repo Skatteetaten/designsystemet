@@ -36,10 +36,6 @@
       "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"],
       "cache": true
     },
-    "lint": {
-      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
-      "cache": true
-    },
     "stylelint": {
       "inputs": [
         "default",
@@ -62,10 +58,11 @@
           "codeCoverage": true
         }
       }
+    },
+    "@nx/eslint:lint": {
+      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
+      "cache": true
     }
-  },
-  "affected": {
-    "defaultBase": "origin/master"
   },
   "generators": {
     "@nx/react": {
@@ -84,5 +81,7 @@
       }
     }
   },
-  "defaultProject": "ds-playground"
+  "defaultProject": "ds-playground",
+  "useInferencePlugins": false,
+  "defaultBase": "origin/master"
 }

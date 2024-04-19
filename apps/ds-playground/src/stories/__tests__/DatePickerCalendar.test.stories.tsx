@@ -57,7 +57,9 @@ type Story = StoryObj<typeof meta>;
 
 const defaultArgs: DatePickerCalendarProps = {
   selectedDate: today,
-  onSelectDate: () => {},
+  onSelectDate: () => {
+    Function.prototype();
+  },
 };
 
 export const WithRef = {
