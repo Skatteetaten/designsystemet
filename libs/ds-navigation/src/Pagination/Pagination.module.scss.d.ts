@@ -6,5 +6,4 @@ export const paginationSummary: string;
 export const paginationSummary_hide: string;
 export const paginationElement_leftArrow: string;
 export const paginationElement_rightArrow: string;
-export const paginationElipsis: string;
 export const paginationButton: string;

@@ -62,4 +62,5 @@ export type PaginationListProps = {
   internalPage: number;
   sibling: number;
   handleChange: (page: number) => void;
+  hidePrevNextButtonTitle?: boolean;
 };

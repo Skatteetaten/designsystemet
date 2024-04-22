@@ -1,13 +1,13 @@
-import { forwardRef, useState, useRef, ReactNode } from 'react';
+import { forwardRef, useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { InlineButton, IconButton } from '@skatteetaten/ds-buttons';
+/* import { InlineButton, IconButton } from '@skatteetaten/ds-buttons'; */
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-import {
+/* import {
   ChevronLeftSVGpath,
   ChevronRightSVGpath,
-} from '@skatteetaten/ds-icons';
-import { TFunction } from 'i18next';
+} from '@skatteetaten/ds-icons'; */
+/* import { TFunction } from 'i18next'; */
 
 import {
   getDefaultPageSize,
@@ -17,20 +17,22 @@ import {
 } from './defaults';
 import { PaginationProps, PageOption } from './Pagination.types';
 import { PaginationList } from '../PaginationList/PaginationList';
+//import { PaginationSummary } from '../PaginationSummary/PaginationSummary';
 
-import styles from './Pagination.module.scss';
+import styles, { paginationList } from './Pagination.module.scss';
 
 // TODO isvalid hvis new page > total allowed pages
+// TODO hvorfor skilles det ikke på bruken av hidePrevNextButtonTitle i storyen docs
 
-type FirstLastPageButtonProps = {
+/* type FirstLastPageButtonProps = {
   activePage: number;
   navigateDirection: 'next' | 'previous';
   hidePrevNextButtonTitle: boolean;
   t: TFunction<'ds_navigation', undefined>;
   handleChange: (page: number) => void;
-};
+}; */
 
-const FirstLastPageButton = ({
+/* const FirstLastPageButton = ({
   activePage,
   navigateDirection,
   hidePrevNextButtonTitle,
@@ -67,7 +69,7 @@ const FirstLastPageButton = ({
       )}
     </li>
   );
-};
+}; */
 
 export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
   (
@@ -115,7 +117,6 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
 
     const [internalPage, setInteralPage] = useCurrentPage(1, option);
     const handleChange = (page: number): void => {
-      console.log(`setinternatl page via handleChange. page ble ${page}`);
       setInteralPage(page);
       if (page === 1) {
         firstPageRef?.current?.focus();
@@ -175,12 +176,14 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
       );
     }; */
 
+    const rangeTo =
+      internalPage * pageSize > totalItems
+        ? totalItems
+        : internalPage * pageSize;
     const showPaginationSummary = dsI18n.t(
       'ds_navigation:pagination.PageSummary',
       {
-        range: `${internalPage * pageSize + 1 - pageSize}–${
-          internalPage * pageSize
-        }`,
+        range: `${internalPage * pageSize + 1 - pageSize}–${rangeTo}`,
         total: totalItems,
       }
     );
@@ -208,8 +211,14 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
         <div className={pageSummary} aria-live={'polite'} aria-atomic={'true'}>
           {showPaginationSummary}
         </div>
+        {/*  <PaginationSummary
+          currentPage={internalPage}
+          pageSize={pageSize}
+          totalItems={totalItems}
+          description={showPaginationSummary}
+        /> */}
         <ul className={listCss}>
-          {internalPage > 1 && (
+          {/* {internalPage > 1 && (
             <FirstLastPageButton
               activePage={internalPage}
               navigateDirection={'previous'}
@@ -217,7 +226,7 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
               t={t}
               hidePrevNextButtonTitle={hidePrevNextButtonTitle}
             />
-          )}
+          )} */}
           {lastPage > 1 && (
             <PaginationList
               lastPage={lastPage}
@@ -226,9 +235,10 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
               handleChange={handleChange}
               firstPageRef={firstPageRef}
               lastPageRef={lastPageRef}
+              hidePrevNextButtonTitle={hidePrevNextButtonTitle}
             />
           )}
-          {internalPage < lastPage && (
+          {/* {internalPage < lastPage && (
             <FirstLastPageButton
               activePage={internalPage}
               navigateDirection={'next'}
@@ -236,7 +246,7 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
               t={t}
               hidePrevNextButtonTitle={hidePrevNextButtonTitle}
             />
-          )}
+          )} */}
         </ul>
       </nav>
     );
@@ -244,6 +254,8 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
 );
 
 Pagination.displayName = 'Pagination';
+Pagination.List = PaginationList;
+Pagination.List.displayName = 'Pagination.List';
 
 export {
   getDefaultPageSize,

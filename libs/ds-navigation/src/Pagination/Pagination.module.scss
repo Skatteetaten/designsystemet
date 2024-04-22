@@ -57,20 +57,11 @@
     }
   }
 
-  &Elipsis {
-    line-height: 2rem;
-    margin-block: 0;
-  }
-
-  &Button,
-  &Elipsis {
-    padding: 0 8px;
-  }
-
   &Button {
     min-width: 32px;
     min-height: 32px;
     align-items: center;
+    padding: 0 8px;
     border: 0;
     line-height: 2rem;
     transition: none;
