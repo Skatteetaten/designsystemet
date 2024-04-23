@@ -157,10 +157,6 @@
 
     @media (min-width: $breakpoint-xs) {
       padding: var(--spacing-s) var(--spacing-m);
-
-      &Indented {
-        margin-left: var(--spacing-xl);
-      }
     }
   }
 }
