@@ -735,7 +735,6 @@ export const WithShadowDom = {
     ref: { table: { disable: false } },
   },
   decorators: [webComponent],
-  //render: TemplateWithShadowDom,
   parameters: {
     imageSnapshot: { disable: true },
     HTMLSnapshot: { disable: true },
