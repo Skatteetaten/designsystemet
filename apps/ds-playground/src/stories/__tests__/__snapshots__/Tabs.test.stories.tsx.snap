@@ -1,0 +1,250 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Tabs/Tabs Defaults play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <div class="TabsList_tabList__vWYZt  "
+         role="tablist"
+         tabindex="-1"
+    >
+      <button id="ds-tab-id-tab1"
+              class="TabsTab_tab__W3ulY   TabsTab_tab_active__RkJBU  "
+              role="tab"
+              tabindex="0"
+              aria-selected="true"
+              aria-controls="ds-tab-panel-tab1"
+      >
+        Person
+      </button>
+      <button id="ds-tab-id-tab2"
+              class="TabsTab_tab__W3ulY     "
+              role="tab"
+              tabindex="-1"
+              aria-selected="false"
+              aria-controls="ds-tab-panel-tab2"
+      >
+        Bedrift
+      </button>
+      <button id="ds-tab-id-tab3"
+              class="TabsTab_tab__W3ulY     "
+              role="tab"
+              tabindex="-1"
+              aria-selected="false"
+              aria-controls="ds-tab-panel-tab3"
+      >
+        Rettskilder
+      </button>
+    </div>
+    <div id="ds-tab-panel-tab1"
+         class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-tab1"
+    >
+      Tabs.Panel Person
+    </div>
+    <div id="ds-tab-panel-tab2"
+         class="TabsPanel_panel__4lPgj  "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-tab2"
+    >
+      Tabs.Panel Bedrift
+    </div>
+    <div id="ds-tab-panel-tab3"
+         class="TabsPanel_panel__4lPgj  "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-tab3"
+    >
+      Tabs.Panel Rettskilder
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Tabs/Tabs WithIcon smoke-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <div class="TabsList_tabList__vWYZt  "
+         role="tablist"
+         tabindex="-1"
+    >
+      <button id="ds-tab-id-tab1"
+              class="TabsTab_tab__W3ulY   TabsTab_tab_active__RkJBU  "
+              role="tab"
+              tabindex="0"
+              aria-selected="true"
+              aria-controls="ds-tab-panel-tab1"
+      >
+        Person
+      </button>
+      <button id="ds-tab-id-tab2"
+              class="TabsTab_tab__W3ulY     "
+              role="tab"
+              tabindex="-1"
+              aria-selected="false"
+              aria-controls="ds-tab-panel-tab2"
+      >
+        Bedrift
+      </button>
+      <button id="ds-tab-id-tab3"
+              class="TabsTab_tab__W3ulY     "
+              role="tab"
+              tabindex="-1"
+              aria-selected="false"
+              aria-controls="ds-tab-panel-tab3"
+      >
+        Rettskilder
+      </button>
+    </div>
+    <div id="ds-tab-panel-tab1"
+         class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-tab1"
+    >
+      Tabs.Panel Person
+    </div>
+    <div id="ds-tab-panel-tab2"
+         class="TabsPanel_panel__4lPgj  "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-tab2"
+    >
+      Tabs.Panel Bedrift
+    </div>
+    <div id="ds-tab-panel-tab3"
+         class="TabsPanel_panel__4lPgj  "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-tab3"
+    >
+      Tabs.Panel Rettskilder
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Tabs/Tabs WithRef play-test 1`] = `
+<div data-test-block="true">
+  <div class
+       id="dummyIdForwardedFromRef"
+  >
+  </div>
+</div>
+`;
+
+exports[`Tester/Tabs/Tabs WithTabSelected play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <div class="TabsList_tabList__vWYZt  "
+         role="tablist"
+         tabindex="-1"
+    >
+      <button id="ds-tab-id-tab1"
+              class="TabsTab_tab__W3ulY   TabsTab_tab_active__RkJBU  "
+              role="tab"
+              tabindex="0"
+              aria-selected="true"
+              aria-controls="ds-tab-panel-tab1"
+      >
+        Person
+      </button>
+      <button id="ds-tab-id-tab2"
+              class="TabsTab_tab__W3ulY     "
+              role="tab"
+              tabindex="-1"
+              aria-selected="false"
+              aria-controls="ds-tab-panel-tab2"
+      >
+        Bedrift
+      </button>
+      <button id="ds-tab-id-tab3"
+              class="TabsTab_tab__W3ulY     "
+              role="tab"
+              tabindex="-1"
+              aria-selected="false"
+              aria-controls="ds-tab-panel-tab3"
+      >
+        Rettskilder
+      </button>
+    </div>
+    <div id="ds-tab-panel-tab1"
+         class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-tab1"
+    >
+      Tabs.Panel Person
+    </div>
+    <div id="ds-tab-panel-tab2"
+         class="TabsPanel_panel__4lPgj  "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-tab2"
+    >
+      Tabs.Panel Bedrift
+    </div>
+    <div id="ds-tab-panel-tab3"
+         class="TabsPanel_panel__4lPgj  "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-tab3"
+    >
+      Tabs.Panel Rettskilder
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Tabs/Tabs WithVariantSmall smoke-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <div class="TabsList_tabList__vWYZt  "
+         role="tablist"
+         tabindex="-1"
+    >
+      <button id="ds-tab-id-tab1"
+              class="TabsTab_tab__W3ulY TabsTab_tab_compact__iTTkr  TabsTab_tab_active__RkJBU  "
+              role="tab"
+              tabindex="0"
+              aria-selected="true"
+              aria-controls="ds-tab-panel-tab1"
+      >
+        Person
+      </button>
+      <button id="ds-tab-id-tab2"
+              class="TabsTab_tab__W3ulY TabsTab_tab_compact__iTTkr    "
+              role="tab"
+              tabindex="-1"
+              aria-selected="false"
+              aria-controls="ds-tab-panel-tab2"
+      >
+        Bedrift
+      </button>
+      <button id="ds-tab-id-tab3"
+              class="TabsTab_tab__W3ulY TabsTab_tab_compact__iTTkr    "
+              role="tab"
+              tabindex="-1"
+              aria-selected="false"
+              aria-controls="ds-tab-panel-tab3"
+      >
+        Rettskilder
+      </button>
+    </div>
+    <div id="ds-tab-panel-tab1"
+         class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-tab1"
+    >
+      Tabs.Panel Person
+    </div>
+    <div id="ds-tab-panel-tab2"
+         class="TabsPanel_panel__4lPgj  "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-tab2"
+    >
+      Tabs.Panel Bedrift
+    </div>
+    <div id="ds-tab-panel-tab3"
+         class="TabsPanel_panel__4lPgj  "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-tab3"
+    >
+      Tabs.Panel Rettskilder
+    </div>
+  </div>
+</div>
+`;

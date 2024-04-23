@@ -1,0 +1,15 @@
+@import '~@skatteetaten/ds-core-designtokens/designtokens/breakpoints';
+
+.tabList {
+  display: flex;
+
+  @media (min-width: $breakpoint-xs) {
+    border-bottom: 1px solid var(--semantic-interactive-main);
+  }
+
+  gap: var(--spacing-s);
+
+  &Multiline {
+    flex-wrap: wrap;
+  }
+}
