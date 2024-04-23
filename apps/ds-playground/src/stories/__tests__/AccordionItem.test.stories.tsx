@@ -10,12 +10,13 @@ import { wrapper } from './testUtils/storybook.testing.utils';
 
 const elementId = 'htmlId';
 const defaultTitle = 'Meg selv';
+const defaultSubtitle = 'Beskrivelse';
 const defaultContent =
   'Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.';
 
 const meta = {
   component: Accordion.Item,
-  title: 'Tester/Accordion/Accordion/Item',
+  title: 'Tester/Accordion/Item',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },
@@ -25,6 +26,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    classNames: { table: { disable: true } },
     children: { table: { disable: true } },
     isExpanded: { table: { disable: true } },
     svgPath: { table: { disable: true } },
@@ -35,6 +37,7 @@ const meta = {
     },
     title: { table: { disable: true } },
     subtitle: { table: { disable: true } },
+    // Events
     onClick: { table: { disable: true } },
   },
 } satisfies Meta<typeof Accordion.Item>;
@@ -158,8 +161,41 @@ export const Defaults = {
   },
 } satisfies Story;
 
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3, A10)',
+  args: {
+    ...defaultArgs,
+    subtitle: defaultSubtitle,
+    isExpanded: true,
+    classNames: {
+      container: ' dummyClassname',
+      title: 'dummyClassname',
+      subtitle: 'dummyClassname',
+      content: 'dummyClassname',
+    },
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    // eslint-disable-next-line testing-library/no-node-access
+    const container = canvas.getByRole('button');
+    const title = canvas.getByText(defaultTitle);
+    const subtitle = canvas.getByText(defaultSubtitle);
+    const content = canvas.getByText(defaultContent);
+
+    await expect(container).toHaveClass('dummyClassname');
+    await expect(title).toHaveClass('dummyClassname');
+    await expect(subtitle).toHaveClass('dummyClassname');
+    await expect(content).toHaveClass('dummyClassname');
+  },
+} satisfies Story;
+
 export const WithCustomIcon = {
-  name: 'With Custom Icon (A9)',
+  name: 'With Custom Icon (A8)',
   args: {
     ...defaultArgs,
     svgPath: PersonSVGpath,
@@ -172,7 +208,7 @@ export const WithCustomIcon = {
 } satisfies Story;
 
 export const IsExpanded = {
-  name: 'With IsExpanded (A4 delvis)',
+  name: 'With IsExpanded (A6 delvis)',
   args: {
     ...defaultArgs,
     isExpanded: true,
@@ -191,7 +227,7 @@ export const IsExpanded = {
 
 export const WithOnClick = {
   render: TemplateWithOnClick,
-  name: 'With OnClick (A4 delvis, B1 delvis)',
+  name: 'With OnClick (A5, B1,B2)',
   args: {
     ...defaultArgs,
   },
@@ -216,7 +252,7 @@ export const WithOnClick = {
 
 export const PersistFocusOnClick = {
   render: TemplateWithOnClick,
-  name: 'Persist Focus On Click (C1))',
+  name: 'With Persist Focus On Click (C1))',
   args: {
     ...defaultArgs,
   },
@@ -233,17 +269,33 @@ export const PersistFocusOnClick = {
     const user = userEvent.setup();
     await user.tab();
     await user.keyboard('{Space}');
-    await user.keyboard('{Enter}');
+    await waitFor(() => {
+      expect(button.matches(':focus')).toBe(true);
+    });
 
+    await user.keyboard('{Enter}');
     await waitFor(() => {
       expect(button.matches(':focus')).toBe(true);
     });
   },
 } satisfies Story;
 
+export const WithLineBreak = {
+  name: 'With Title Line Break (A3)',
+  args: {
+    ...defaultArgs,
+    title: 'Tittel som\nbrekker over flere\nlinjer',
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
+  },
+} satisfies Story;
+
 export const WithTitleAs = {
   render: TemplateWithAllHeadings,
-  name: 'With TitleAs (B2)',
+  name: 'With TitleAs (B3)',
   args: {
     ...defaultArgs,
   },

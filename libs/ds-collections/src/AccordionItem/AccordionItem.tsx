@@ -42,9 +42,10 @@ export const AccordionItem = forwardRef<HTMLButtonElement, AccordionItemProps>(
         ? isExpandedExternal
         : isExpandedInternal;
 
-    const hasChevronLeft = iconPosition === 'left' && !svgPath;
+    const shouldDisplayCustomIcon = iconPosition === 'right' && !!svgPath;
 
-    const shouldIndentContent = iconPosition === 'left' || !!svgPath;
+    const shouldIndentContent =
+      iconPosition === 'left' || shouldDisplayCustomIcon;
 
     const iconSize: Size = size === 'small' ? 'medium' : 'large';
 
@@ -58,8 +59,8 @@ export const AccordionItem = forwardRef<HTMLButtonElement, AccordionItemProps>(
     } ${size !== 'small' ? styles[`chevron_${size}`] : ''}`.trim();
 
     const headerClassNames = `${styles.header} ${
-      hasChevronLeft ? styles.header_iconLeft : ''
-    } ${size !== 'small' ? styles[`header_${size}`] : ''} ${
+      iconPosition === 'left' ? styles.header_iconLeft : ''
+    } ${size !== 'small' ? styles[`header_${size}`] : ''} ${className} ${
       classNames?.container ?? ''
     }`.trim();
 
@@ -79,45 +80,48 @@ export const AccordionItem = forwardRef<HTMLButtonElement, AccordionItemProps>(
       classNames?.content ?? ''
     }`.trim();
 
-    const concatenatedClassNames =
-      `${styles.accordionItem} ${className}`.trim();
-
     const Tag = titleAs ?? 'div';
 
     return (
-      <Tag className={concatenatedClassNames}>
-        <button
-          ref={ref}
-          id={id}
-          className={headerClassNames}
-          lang={lang}
-          data-testid={dataTestId}
-          aria-expanded={isExpanded}
-          type={'button'}
-          onClick={handleClick}
-        >
-          {svgPath && (
-            <div className={iconWrapperClassNames}>
-              <Icon svgPath={svgPath} size={iconSize} className={styles.icon} />
+      <>
+        <Tag className={styles.accordionItem}>
+          <button
+            ref={ref}
+            id={id}
+            className={headerClassNames}
+            lang={lang}
+            data-testid={dataTestId}
+            aria-expanded={isExpanded}
+            type={'button'}
+            onClick={handleClick}
+          >
+            {svgPath && iconPosition !== 'left' && (
+              <div className={iconWrapperClassNames}>
+                <Icon
+                  svgPath={svgPath}
+                  size={iconSize}
+                  className={styles.icon}
+                />
+              </div>
+            )}
+
+            <div className={styles.titleWrapper}>
+              <div className={titleClassNames}>{title}</div>
+              {subtitle && <p className={subtitleClassNames}>{subtitle}</p>}
             </div>
-          )}
 
-          <div className={styles.titleWrapper}>
-            <div className={titleClassNames}>{title}</div>
-            {subtitle && <p className={subtitleClassNames}>{subtitle}</p>}
-          </div>
-
-          <div className={iconWrapperClassNames}>
-            <Icon
-              svgPath={ChevronDownSVGpath}
-              size={iconSize}
-              className={chevronClassNames}
-            />
-          </div>
-        </button>
+            <div className={iconWrapperClassNames}>
+              <Icon
+                svgPath={ChevronDownSVGpath}
+                size={iconSize}
+                className={chevronClassNames}
+              />
+            </div>
+          </button>
+        </Tag>
 
         {isExpanded && <div className={contentClassNames}>{children}</div>}
-      </Tag>
+      </>
     );
   }
 );
