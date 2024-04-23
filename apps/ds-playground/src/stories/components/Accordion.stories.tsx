@@ -47,34 +47,12 @@ const meta = {
   args: {
     iconPosition: 'right',
     children: [
-      <Accordion.Item
-        key={'a1'}
-        title={'Meg selv'}
-        subtitle={
-          'Skattekort, frikort, forskuddsskatt, skatte-melding (selvangivelse)'
-        }
-        svgPath={PersonSVGpath}
-      >
+      <Accordion.Item key={'a1'} title={'Meg selv'}>
         {
           'Du må betale restskatten selv om du har endret etter fristen for skattemeldingen eller klaget. Hvis du ikke betaler restskatten i tide, løper det forsinkelsesrenter ved forfall frem til du betaler.'
         }
       </Accordion.Item>,
-      <Accordion.Item
-        key={'a2'}
-        title={`Tittel kan også\nbrytes over flere linjer.`}
-      >
-        {
-          'Du må betale restskatten selv om du har endret etter fristen for skattemeldingen eller klaget. Hvis du ikke betaler restskatten i tide, løper det forsinkelsesrenter ved forfall frem til du betaler.'
-        }
-      </Accordion.Item>,
-      <Accordion.Item
-        key={'a3'}
-        title={'Skatt'}
-        subtitle={
-          'Skattekort, frikort, forskuddsskatt, skattemelding (selvangivelse)'
-        }
-        svgPath={SkattetrekkSVGpath}
-      >
+      <Accordion.Item key={'a3'} title={'Skatt'}>
         {defaultContent}
       </Accordion.Item>,
     ],
@@ -93,18 +71,26 @@ export const Preview: Story = {} satisfies Story;
 export const Examples: Story = {
   render: (_args): JSX.Element => {
     return (
-      <Accordion>
-        <Accordion.Item title={'Tittel'} subtitle={'Undertittel'}>
-          {defaultContent}
-        </Accordion.Item>
+      <Accordion color={'graphite'} size={'small'}>
         <Accordion.Item
-          title={'Dette er en lang tittel som\nbrekkes på ny linje manuelt'}
-        >
-          {defaultContent}
-        </Accordion.Item>
-        <Accordion.Item
-          title={'Tittel med custom ikon'}
+          key={'a1'}
+          title={'Meg selv'}
+          subtitle={
+            'Skattekort, frikort, forskuddsskatt, skatte-melding (selvangivelse)'
+          }
           svgPath={PersonSVGpath}
+        >
+          {
+            'Du må betale restskatten selv om du har endret etter fristen for skattemeldingen eller klaget. Hvis du ikke betaler restskatten i tide, løper det forsinkelsesrenter ved forfall frem til du betaler.'
+          }
+        </Accordion.Item>
+        <Accordion.Item
+          key={'a3'}
+          title={'Skatt'}
+          subtitle={
+            'Skattekort, frikort, forskuddsskatt, skattemelding (selvangivelse)'
+          }
+          svgPath={SkattetrekkSVGpath}
         >
           {defaultContent}
         </Accordion.Item>
