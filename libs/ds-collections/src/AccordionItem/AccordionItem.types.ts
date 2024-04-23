@@ -3,11 +3,16 @@ import { MouseEventHandler, ReactElement, ReactNode } from 'react';
 import { BaseProps, HeadingAs } from '@skatteetaten/ds-core-utils';
 
 export interface AccordionItemProps extends BaseProps {
+  classNames?: {
+    container?: string;
+    title?: string;
+    subtitle?: string;
+    content?: string;
+  };
   /** Tekst på knappen */
-  // TODO: bør vi lage en stringish-type?
-  title: string | string[] | number;
+  title: string;
   /** Undertittel */
-  subtitle?: string | string[] | number;
+  subtitle?: string;
   /** Rendrer knappen som heading på gitt nivå */
   titleAs?: HeadingAs;
   /** Er skuffen åpen? */

@@ -1,10 +1,12 @@
-import { MouseEvent, forwardRef, useState } from 'react';
+import { MouseEvent, forwardRef, useContext, useState } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { Size, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { ChevronDownSVGpath, Icon } from '@skatteetaten/ds-icons';
 
 import { AccordionItemProps } from './AccordionItem.types';
-import styles from '../Accordion/Accordion.module.scss';
+import { getAccordionSizeDefault } from '../Accordion/defaults';
+import { AccordionContext } from '../AccordionContext/AccordionContext';
+import styles from '../AccordionItem/AccordionItem.module.scss';
 
 export const AccordionItem = forwardRef<HTMLButtonElement, AccordionItemProps>(
   (
@@ -13,6 +15,7 @@ export const AccordionItem = forwardRef<HTMLButtonElement, AccordionItemProps>(
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
+      classNames,
       title,
       subtitle,
       titleAs,
@@ -26,6 +29,9 @@ export const AccordionItem = forwardRef<HTMLButtonElement, AccordionItemProps>(
     const [isExpandedInternal, setIsExpandedInternal] =
       useState<boolean>(false);
 
+    const { size = getAccordionSizeDefault(), iconPosition } =
+      useContext(AccordionContext);
+
     const handleClick = (e: MouseEvent<HTMLButtonElement>): void => {
       onClick?.(e);
       setIsExpandedInternal(!isExpanded);
@@ -36,28 +42,54 @@ export const AccordionItem = forwardRef<HTMLButtonElement, AccordionItemProps>(
         ? isExpandedExternal
         : isExpandedInternal;
 
-    const iconClassName = `${styles.icon} ${
-      isExpanded ? styles.icon_open : styles.icon_closed
-    }`;
+    const hasChevronLeft = iconPosition === 'left' && !svgPath;
 
-    const headerClassName = `${styles.header} ${
-      svgPath ? styles.header_withCustomIcon : ''
+    const shouldIndentContent = iconPosition === 'left' || !!svgPath;
+
+    const iconSize: Size = size === 'small' ? 'medium' : 'large';
+
+    const iconWrapperClassNames = `${styles.iconWrapper} ${
+      size !== 'small' ? styles[`iconWrapper_${size}`] : ''
     }`.trim();
 
-    const subtitleClassName = `${styles.subtitle} ${
-      isExpanded ? styles.subtitle_expanded : ''
-    }`;
+    const chevronClassNames = `${styles.icon} ${
+      isExpanded ? styles.chevron_open : styles.chevron_closed
+      // eslint-disable-next-line sonarjs/no-nested-template-literals
+    } ${size !== 'small' ? styles[`chevron_${size}`] : ''}`.trim();
 
-    const classNames = `${styles.accordionItem} ${className}`;
+    const headerClassNames = `${styles.header} ${
+      hasChevronLeft ? styles.header_iconLeft : ''
+    } ${size !== 'small' ? styles[`header_${size}`] : ''} ${
+      classNames?.container ?? ''
+    }`.trim();
+
+    const titleClassNames = `${styles.title} ${
+      size !== 'small' ? styles[`title_${size}`] : ''
+    } ${classNames?.title ?? ''}`.trim();
+
+    const subtitleClassNames = `${styles.subtitle} ${
+      isExpanded ? styles.subtitle_expanded : ''
+    } ${size !== 'small' ? styles[`subtitle_${size}`] : ''} ${
+      classNames?.subtitle ?? ''
+    }`.trim();
+
+    const contentClassNames = `${styles.content} ${
+      size !== 'small' ? styles[`content_${size}`] : ''
+    } ${shouldIndentContent ? styles[`content_${size}Indented`] : ''} ${
+      classNames?.content ?? ''
+    }`.trim();
+
+    const concatenatedClassNames =
+      `${styles.accordionItem} ${className}`.trim();
 
     const Tag = titleAs ?? 'div';
-    // Legg spacing på subtitlen
+
     return (
-      <Tag className={classNames}>
+      <Tag className={concatenatedClassNames}>
         <button
           ref={ref}
           id={id}
-          className={headerClassName}
+          className={headerClassNames}
           lang={lang}
           data-testid={dataTestId}
           aria-expanded={isExpanded}
@@ -65,22 +97,26 @@ export const AccordionItem = forwardRef<HTMLButtonElement, AccordionItemProps>(
           onClick={handleClick}
         >
           {svgPath && (
-            <div className={styles.iconWrapper}>
-              <Icon svgPath={svgPath} className={styles.icon} />
+            <div className={iconWrapperClassNames}>
+              <Icon svgPath={svgPath} size={iconSize} className={styles.icon} />
             </div>
           )}
 
           <div className={styles.titleWrapper}>
-            <span className={styles.title}>{title}</span>
-            {subtitle && <p className={subtitleClassName}>{subtitle}</p>}
+            <div className={titleClassNames}>{title}</div>
+            {subtitle && <p className={subtitleClassNames}>{subtitle}</p>}
           </div>
 
-          <div className={styles.iconWrapper}>
-            <Icon svgPath={ChevronDownSVGpath} className={iconClassName} />
+          <div className={iconWrapperClassNames}>
+            <Icon
+              svgPath={ChevronDownSVGpath}
+              size={iconSize}
+              className={chevronClassNames}
+            />
           </div>
         </button>
 
-        {isExpanded && <div className={styles.content}>{children}</div>}
+        {isExpanded && <div className={contentClassNames}>{children}</div>}
       </Tag>
     );
   }

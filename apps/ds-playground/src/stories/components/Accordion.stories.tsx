@@ -2,7 +2,6 @@ import { JSX } from 'react';
 
 import {
   Accordion,
-  AccordionItem,
   getAccordionBackgroundColorDefault,
   getAccordionIconPositionDefault,
   getAccordionSizeDefault,
@@ -48,20 +47,27 @@ const meta = {
   args: {
     iconPosition: 'right',
     children: [
-      <AccordionItem key={'a1'} title={'Meg selv'} svgPath={PersonSVGpath}>
+      <Accordion.Item
+        key={'a1'}
+        title={'Meg selv'}
+        subtitle={
+          'Skattekort, frikort, forskuddsskatt, skatte-melding (selvangivelse)'
+        }
+        svgPath={PersonSVGpath}
+      >
         {
           'Du må betale restskatten selv om du har endret etter fristen for skattemeldingen eller klaget. Hvis du ikke betaler restskatten i tide, løper det forsinkelsesrenter ved forfall frem til du betaler.'
         }
-      </AccordionItem>,
-      <AccordionItem
+      </Accordion.Item>,
+      <Accordion.Item
         key={'a2'}
         title={`Tittel kan også\nbrytes over flere linjer.`}
       >
         {
           'Du må betale restskatten selv om du har endret etter fristen for skattemeldingen eller klaget. Hvis du ikke betaler restskatten i tide, løper det forsinkelsesrenter ved forfall frem til du betaler.'
         }
-      </AccordionItem>,
-      <AccordionItem
+      </Accordion.Item>,
+      <Accordion.Item
         key={'a3'}
         title={'Skatt'}
         subtitle={
@@ -70,7 +76,7 @@ const meta = {
         svgPath={SkattetrekkSVGpath}
       >
         {defaultContent}
-      </AccordionItem>,
+      </Accordion.Item>,
     ],
   },
 
@@ -88,17 +94,20 @@ export const Examples: Story = {
   render: (_args): JSX.Element => {
     return (
       <Accordion>
-        <AccordionItem title={'Tittel'} subtitle={'Undertittel'}>
+        <Accordion.Item title={'Tittel'} subtitle={'Undertittel'}>
           {defaultContent}
-        </AccordionItem>
-        <AccordionItem
+        </Accordion.Item>
+        <Accordion.Item
           title={'Dette er en lang tittel som\nbrekkes på ny linje manuelt'}
         >
           {defaultContent}
-        </AccordionItem>
-        <AccordionItem title={'Tittel med custom ikon'} svgPath={PersonSVGpath}>
+        </Accordion.Item>
+        <Accordion.Item
+          title={'Tittel med custom ikon'}
+          svgPath={PersonSVGpath}
+        >
           {defaultContent}
-        </AccordionItem>
+        </Accordion.Item>
       </Accordion>
     );
   },

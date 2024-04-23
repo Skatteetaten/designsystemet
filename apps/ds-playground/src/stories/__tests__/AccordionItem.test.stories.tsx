@@ -1,9 +1,10 @@
 import { MouseEvent } from 'react';
 
-import { AccordionItem, OpenCloseProps } from '@skatteetaten/ds-collections';
+import { Accordion, AccordionItemProps } from '@skatteetaten/ds-collections';
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
+import { PersonSVGpath } from '@skatteetaten/ds-icons';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fireEvent, waitFor, within } from '@storybook/test';
+import { expect, fireEvent, userEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 
@@ -13,7 +14,7 @@ const defaultContent =
   'Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.';
 
 const meta = {
-  component: AccordionItem,
+  component: Accordion.Item,
   title: 'Tester/Accordion/Accordion/Item',
   argTypes: {
     // Baseprops
@@ -36,43 +37,41 @@ const meta = {
     subtitle: { table: { disable: true } },
     onClick: { table: { disable: true } },
   },
-} satisfies Meta<typeof AccordionItem>;
+} satisfies Meta<typeof Accordion.Item>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const TemplateWithOnClick: StoryFn<typeof AccordionItem> = (args) => {
+const TemplateWithOnClick: StoryFn<typeof Accordion.Item> = (args) => {
   return (
-    <AccordionItem
+    <Accordion.Item
       {...args}
       onClick={(e: MouseEvent<HTMLButtonElement>): void => {
         args.onClick?.(e);
       }}
     >
-      {/* eslint-disable-next-line testing-library/no-node-access */}
       {args.children}
-    </AccordionItem>
+    </Accordion.Item>
   );
 };
 
-const TemplateWithAllHeadings: StoryFn<typeof AccordionItem> = (args) => (
+const TemplateWithAllHeadings: StoryFn<typeof Accordion.Item> = (args) => (
   <>
     {headingAsArr.map((headingLevel, item) => {
       return (
-        <AccordionItem
+        <Accordion.Item
           key={`level_${item}`}
           {...args}
           titleAs={headingLevel}
           title={`Heading ${headingLevel}`}
         >
-          {/* eslint-disable-next-line testing-library/no-node-access */}
           {args.children}
-        </AccordionItem>
+        </Accordion.Item>
       );
     })}
   </>
 );
 
-const defaultArgs: OpenCloseProps = {
+const defaultArgs: AccordionItemProps = {
   title: defaultTitle,
   children: defaultContent,
 };
@@ -159,6 +158,19 @@ export const Defaults = {
   },
 } satisfies Story;
 
+export const WithCustomIcon = {
+  name: 'With Custom Icon (A9)',
+  args: {
+    ...defaultArgs,
+    svgPath: PersonSVGpath,
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: false,
+    },
+  },
+} satisfies Story;
+
 export const IsExpanded = {
   name: 'With IsExpanded (A4 delvis)',
   args: {
@@ -199,6 +211,33 @@ export const WithOnClick = {
     await fireEvent.click(button);
     await expect(content).not.toBeInTheDocument();
     await waitFor(() => expect(args.onClick).toHaveBeenCalledTimes(2));
+  },
+} satisfies Story;
+
+export const PersistFocusOnClick = {
+  render: TemplateWithOnClick,
+  name: 'Persist Focus On Click (C1))',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await fireEvent.focus(button);
+
+    const user = userEvent.setup();
+    await user.tab();
+    await user.keyboard('{Space}');
+    await user.keyboard('{Enter}');
+
+    await waitFor(() => {
+      expect(button.matches(':focus')).toBe(true);
+    });
   },
 } satisfies Story;
 
