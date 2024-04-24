@@ -21,6 +21,9 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     children: { table: { disable: true } },
+    color: { table: { disable: true } },
+    size: { table: { disable: true } },
+    iconPosition: { table: { disable: true } },
   },
   args: {
     children: (
@@ -123,9 +126,6 @@ export const WithAttributes = {
 export const Defaults = {
   name: 'Defaults (A2, A4, A7 delvis)',
   args: defaultArgs,
-  argTypes: {
-    color: { table: { disable: false } },
-  },
 } satisfies Story;
 
 export const WithIconLeft = {
@@ -134,42 +134,25 @@ export const WithIconLeft = {
     iconPosition: 'left',
     ...defaultArgs,
   },
-  argTypes: {
-    color: { table: { disable: false } },
-  },
 } satisfies Story;
 
 export const WithAllColorVariants = {
   render: TemplateWithAllColors,
   name: 'With All Color Variants (A1)',
-  parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
-  },
   args: defaultArgs,
 } satisfies Story;
 
 export const WithSmall = {
   name: 'Variant Small (A7)',
   args: { size: 'small', ...defaultArgs },
-  argTypes: {
-    color: { table: { disable: false } },
-  },
 } satisfies Story;
 
 export const WithMedium = {
   name: 'Variant Medium (A7)',
   args: { size: 'medium', ...defaultArgs },
-  argTypes: {
-    color: { table: { disable: false } },
-  },
 } satisfies Story;
 
 export const WithLarge = {
   name: 'Variant Large (A7)',
   args: { size: 'large', ...defaultArgs },
-  argTypes: {
-    color: { table: { disable: false } },
-  },
 } satisfies Story;

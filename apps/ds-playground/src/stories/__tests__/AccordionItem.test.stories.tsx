@@ -275,7 +275,7 @@ export const PersistFocusOnClick = {
 
     await user.keyboard('{Enter}');
     await waitFor(() => {
-      expect(button.matches(':focus')).toBe(true);
+      expect(button).toHaveFocus();
     });
   },
 } satisfies Story;
