@@ -211,15 +211,18 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
       );
     };
 
+    const rangeTo =
+      internalPage * pageSize > totalItems
+        ? totalItems
+        : internalPage * pageSize;
     const showPaginationSummary = dsI18n.t(
       'ds_navigation:pagination.PageSummary',
       {
-        range: `${internalPage * pageSize + 1 - pageSize}–${
-          internalPage * pageSize
-        }`,
+        range: `${internalPage * pageSize + 1 - pageSize}–${rangeTo}`,
         total: totalItems,
       }
     );
+
     const pageSummary = `${
       hidePageSummary ? styles.paginationSummary_hide : ''
     }`;
