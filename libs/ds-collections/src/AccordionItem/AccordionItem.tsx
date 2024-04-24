@@ -54,9 +54,8 @@ export const AccordionItem = forwardRef<HTMLButtonElement, AccordionItemProps>(
     }`.trim();
 
     const chevronClassNames = `${styles.icon} ${
-      isExpanded ? styles.chevron_open : styles.chevron_closed
-      // eslint-disable-next-line sonarjs/no-nested-template-literals
-    } ${size !== 'small' ? styles[`chevron_${size}`] : ''}`.trim();
+      size !== 'small' ? styles[`chevron_${size}`] : ''
+    } ${isExpanded ? styles.chevron_open : styles.chevron_closed} `.trim();
 
     const headerClassNames = `${styles.header} ${
       iconPosition === 'left' ? styles.header_iconLeft : ''
