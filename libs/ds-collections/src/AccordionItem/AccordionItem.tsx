@@ -83,8 +83,8 @@ export const AccordionItem = forwardRef<HTMLButtonElement, AccordionItemProps>(
     const Tag = titleAs ?? 'div';
 
     return (
-      <>
-        <Tag className={styles.accordionItem}>
+      <div className={styles.accordionItem}>
+        <Tag className={styles.tag}>
           <button
             ref={ref}
             id={id}
@@ -121,7 +121,7 @@ export const AccordionItem = forwardRef<HTMLButtonElement, AccordionItemProps>(
         </Tag>
 
         {isExpanded && <div className={contentClassNames}>{children}</div>}
-      </>
+      </div>
     );
   }
 );

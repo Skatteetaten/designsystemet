@@ -1,5 +1,6 @@
 /* automatisk genererte types */
 export const accordionItem: string;
+export const tag: string;
 export const icon: string;
 export const chevron: string;
 export const chevron_open: string;
