@@ -10,7 +10,7 @@ import {
 import { Heading } from '@skatteetaten/ds-typography';
 
 import { FooterComponent, FooterProps } from './Footer.types';
-import logoEngelsk from './logo_eng.svg';
+import logoEngelsk from './logo_en.svg';
 import logoNorsk from './logo_no.svg';
 import { FooterLink } from '../FooterLink/FooterLink';
 import { FooterLogo } from '../FooterLogo/FooterLogo';
@@ -53,6 +53,9 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(
 
     const threeColumnsClassName = thirdColumn ? styles.columnsThree : '';
     const twoColumnsClassName = secondColumn ? styles.columnsTwo : '';
+
+    const logoClassNames =
+      lang === 'en' ? styles.skatteetatenLogo_en : styles.skatteetatenLogo;
 
     const logo = lang === 'en' ? logoEngelsk : logoNorsk;
 
@@ -123,7 +126,7 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(
               <div className={styles.logoContainer}>
                 {!hideLogo && (
                   <img
-                    className={styles.skatteetatenLogo}
+                    className={logoClassNames}
                     alt={t('shared.SkeLogoImageText')}
                     src={logo}
                   ></img>

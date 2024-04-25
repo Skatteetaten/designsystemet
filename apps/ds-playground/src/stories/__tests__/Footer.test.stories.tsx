@@ -492,3 +492,14 @@ export const WithOneColumnBreakpointM = {
     },
   },
 } satisfies Story;
+
+export const WithEnglishLogo = {
+  name: 'With English Logo',
+  args: {
+    ...defaultArgs,
+    lang: 'en',
+  },
+  argTypes: {
+    lang: { table: { disable: false } },
+  },
+} satisfies Story;
