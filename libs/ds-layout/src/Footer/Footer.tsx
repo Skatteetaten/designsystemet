@@ -10,7 +10,8 @@ import {
 import { Heading } from '@skatteetaten/ds-typography';
 
 import { FooterComponent, FooterProps } from './Footer.types';
-import logo from './logo.svg';
+import logoEngelsk from './logo_eng.svg';
+import logoNorsk from './logo_no.svg';
 import { FooterLink } from '../FooterLink/FooterLink';
 import { FooterLogo } from '../FooterLogo/FooterLogo';
 
@@ -52,6 +53,8 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(
 
     const threeColumnsClassName = thirdColumn ? styles.columnsThree : '';
     const twoColumnsClassName = secondColumn ? styles.columnsTwo : '';
+
+    const logo = lang === 'en' ? logoEngelsk : logoNorsk;
 
     return (
       <footer
