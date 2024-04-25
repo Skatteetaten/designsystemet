@@ -14,7 +14,7 @@ exports[`Tester/Accordion/Item Defaults play-test 1`] = `
           </div>
         </div>
         <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_closed__9xfBm AccordionItem_chevron_medium__EWnpR"
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_closed__9xfBm"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -44,7 +44,7 @@ exports[`Tester/Accordion/Item IsExpanded play-test 1`] = `
           </div>
         </div>
         <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_open__tRQlR AccordionItem_chevron_medium__EWnpR"
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_open__tRQlR"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -77,7 +77,7 @@ exports[`Tester/Accordion/Item PersistFocusOnClick play-test 1`] = `
           </div>
         </div>
         <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_open__tRQlR AccordionItem_chevron_medium__EWnpR"
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_open__tRQlR"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -113,7 +113,7 @@ exports[`Tester/Accordion/Item WithAttributes play-test 1`] = `
           </div>
         </div>
         <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_closed__9xfBm AccordionItem_chevron_medium__EWnpR"
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_closed__9xfBm"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -146,7 +146,7 @@ exports[`Tester/Accordion/Item WithCustomClassNames play-test 1`] = `
           </p>
         </div>
         <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_open__tRQlR AccordionItem_chevron_medium__EWnpR"
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_open__tRQlR"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -190,7 +190,7 @@ exports[`Tester/Accordion/Item WithCustomIcon smoke-test 1`] = `
           </div>
         </div>
         <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_closed__9xfBm AccordionItem_chevron_medium__EWnpR"
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_closed__9xfBm"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -222,7 +222,7 @@ linjer
           </div>
         </div>
         <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_closed__9xfBm AccordionItem_chevron_medium__EWnpR"
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_closed__9xfBm"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -252,7 +252,7 @@ exports[`Tester/Accordion/Item WithOnClick play-test 1`] = `
           </div>
         </div>
         <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_closed__9xfBm AccordionItem_chevron_medium__EWnpR"
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_closed__9xfBm"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -283,7 +283,7 @@ exports[`Tester/Accordion/Item WithRef play-test 1`] = `
           </div>
         </div>
         <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_closed__9xfBm AccordionItem_chevron_medium__EWnpR"
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_closed__9xfBm"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -313,7 +313,7 @@ exports[`Tester/Accordion/Item WithTitleAs play-test 1`] = `
           </div>
         </div>
         <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_closed__9xfBm AccordionItem_chevron_medium__EWnpR"
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_closed__9xfBm"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -338,7 +338,7 @@ exports[`Tester/Accordion/Item WithTitleAs play-test 1`] = `
           </div>
         </div>
         <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_closed__9xfBm AccordionItem_chevron_medium__EWnpR"
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_closed__9xfBm"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -363,7 +363,7 @@ exports[`Tester/Accordion/Item WithTitleAs play-test 1`] = `
           </div>
         </div>
         <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_closed__9xfBm AccordionItem_chevron_medium__EWnpR"
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_closed__9xfBm"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -388,7 +388,7 @@ exports[`Tester/Accordion/Item WithTitleAs play-test 1`] = `
           </div>
         </div>
         <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_closed__9xfBm AccordionItem_chevron_medium__EWnpR"
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_closed__9xfBm"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -413,7 +413,7 @@ exports[`Tester/Accordion/Item WithTitleAs play-test 1`] = `
           </div>
         </div>
         <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_closed__9xfBm AccordionItem_chevron_medium__EWnpR"
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_closed__9xfBm"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -438,7 +438,7 @@ exports[`Tester/Accordion/Item WithTitleAs play-test 1`] = `
           </div>
         </div>
         <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_closed__9xfBm AccordionItem_chevron_medium__EWnpR"
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_closed__9xfBm"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
