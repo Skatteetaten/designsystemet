@@ -17,7 +17,10 @@ export interface AccordionItemProps extends BaseProps {
   titleAs?: HeadingAs;
   /** Er skuffen åpen? */
   isExpanded?: boolean;
-  /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
+  /**
+   * HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes.
+   * Egendefinert radikon vises ikke dersom overordnet Accordion-komponent er satt med iconPosition = 'left'
+   **/
   svgPath?: ReactElement;
   /** Callback når AccordionItem trykkes på */
   onClick?: MouseEventHandler<HTMLButtonElement>;
