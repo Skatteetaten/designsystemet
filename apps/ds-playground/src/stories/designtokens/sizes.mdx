@@ -1,0 +1,13 @@
+import { Meta, Story, Canvas } from '@storybook/blocks';
+import { SizesTokenExamplesGenerator } from './SizesTokenExamplesGenerator';
+import { TokensList } from './TokensList';
+import { getVersion } from '../utils/version.utils';
+import * as SizesStories from './sizes.stories';
+
+<Meta of={SizesStories} />
+
+<SizesTokenExamplesGenerator />
+
+<Canvas withSource="none">
+  <Story of={SizesStories.Sizes} />
+</Canvas>

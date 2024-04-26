@@ -27,7 +27,7 @@ const getDirectories = (source) =>
 
 const config = {
   stories: [
-    '../src/stories/!(designtokens)/**/*.mdx',
+    '../src/stories/**/*.mdx',
     '../src/stories/**/*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [

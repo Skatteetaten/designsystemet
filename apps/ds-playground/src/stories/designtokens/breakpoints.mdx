@@ -1,0 +1,12 @@
+import { Meta, Story, Canvas } from '@storybook/blocks';
+import { TokensList } from './TokensList';
+import { getVersion } from '../utils/version.utils';
+import * as BreakpointsStories from './breakpoints.stories';
+
+# Breakpoints
+
+<Meta of={BreakpointsStories} />
+
+<Canvas withSource="none">
+  <Story of={BreakpointsStories.Breakpoints} />
+</Canvas>

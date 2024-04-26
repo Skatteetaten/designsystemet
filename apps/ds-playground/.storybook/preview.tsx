@@ -35,8 +35,7 @@ const LanguageUpdater: Decorator = (Story, context) => {
 };
 
 const testBlock: Decorator = (Story, context) => {
-  //TODO kind er deprecated
-  if (context.kind.includes('Tester')) {
+  if (context.title.startsWith('Tester')) {
     return (
       <div data-test-block>
         <Story />
