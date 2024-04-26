@@ -5,13 +5,14 @@ import { LinkGroup } from '@skatteetaten/ds-buttons';
 import {
   dsI18n,
   getCommonClassNameDefault,
+  Languages,
   Separator,
 } from '@skatteetaten/ds-core-utils';
 import { Heading } from '@skatteetaten/ds-typography';
 
 import { FooterComponent, FooterProps } from './Footer.types';
-import logoEngelsk from './logo_en.svg';
-import logoNorsk from './logo_no.svg';
+import defaultEnglishLogo from './logo_en.svg';
+import defaultNorwegainLogo from './logo_no.svg';
 import { FooterLink } from '../FooterLink/FooterLink';
 import { FooterLogo } from '../FooterLogo/FooterLogo';
 
@@ -54,10 +55,14 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(
     const threeColumnsClassName = thirdColumn ? styles.columnsThree : '';
     const twoColumnsClassName = secondColumn ? styles.columnsTwo : '';
 
+    const logo =
+      dsI18n.language === Languages.Engelsk
+        ? defaultEnglishLogo
+        : defaultNorwegainLogo;
     const logoClassNames =
-      lang === 'en' ? styles.skatteetatenLogo_en : styles.skatteetatenLogo;
-
-    const logo = lang === 'en' ? logoEngelsk : logoNorsk;
+      dsI18n.language === Languages.Engelsk
+        ? styles.skatteetatenLogo_en
+        : styles.skatteetatenLogo;
 
     return (
       <footer
