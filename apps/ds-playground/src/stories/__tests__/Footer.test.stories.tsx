@@ -20,7 +20,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    children: { table: { disable: true }, control: { type: null } },
+    children: { table: { disable: true }, control: { disable: true } },
     contactUsURL: { table: { disable: true } },
     securityURL: { table: { disable: true } },
     accessibilityURL: { table: { disable: true } },

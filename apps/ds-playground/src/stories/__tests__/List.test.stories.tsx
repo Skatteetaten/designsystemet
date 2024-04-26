@@ -104,7 +104,7 @@ export const Defaults = {
   argTypes: {
     children: {
       table: { disable: false },
-      control: { type: null },
+      control: { disable: true },
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -153,7 +153,7 @@ export const WithLongTextAndBreaking = {
   argTypes: {
     children: {
       table: { disable: false },
-      control: { type: null },
+      control: { disable: true },
     },
   },
 } satisfies Story;
@@ -185,7 +185,7 @@ export const WithMarkup = {
   argTypes: {
     children: {
       table: { disable: false },
-      control: { type: null },
+      control: { disable: true },
     },
   },
   parameters: {

@@ -62,7 +62,6 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getCommonFormVariantDefault() },
-        type: { summary: formArrSize },
       },
     },
     // HTML
@@ -70,8 +69,10 @@ const meta = {
     disabled: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },
     placeholder: {
-      defaultValue: { summary: dsI18n.t('ds_forms:datepicker.TypeOrSelect') },
-      table: { category: category.htmlAttribute },
+      table: {
+        category: category.htmlAttribute,
+        defaultValue: { summary: dsI18n.t('ds_forms:datepicker.TypeOrSelect') },
+      },
     },
     readOnly: { table: { category: category.htmlAttribute } },
     required: {

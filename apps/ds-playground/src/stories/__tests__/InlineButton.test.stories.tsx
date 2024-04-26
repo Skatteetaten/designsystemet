@@ -182,7 +182,7 @@ export const WithCustomIcon = {
   argTypes: {
     svgPath: {
       table: { disable: false },
-      control: { type: null },
+      control: { disable: true },
     },
   },
 } satisfies Story;

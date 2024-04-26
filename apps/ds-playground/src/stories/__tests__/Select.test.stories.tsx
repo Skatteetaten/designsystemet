@@ -22,7 +22,6 @@ const meta = {
     // Props
     children: {
       table: { disable: true },
-      control: { type: null },
     },
     classNames: { table: { disable: true } },
     defaultValue: { table: { disable: true } },

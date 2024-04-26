@@ -2,8 +2,7 @@ import React from 'react';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fireEvent } from '@storybook/test';
-import { within } from '@storybook/testing-library';
+import { expect, fireEvent, within } from '@storybook/test';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { DatePickerCalendar } from '../../../../../libs/ds-forms/src/DatePickerCalendar/DatePickerCalendar';

@@ -29,7 +29,6 @@ const meta = {
     children: { control: 'text', table: { category: category.props } },
     color: {
       table: {
-        type: { summary: tagColors },
         category: category.props,
         defaultValue: { summary: getTagColorDefault() },
       },
@@ -40,7 +39,6 @@ const meta = {
       options: tagSizes,
       control: 'radio',
       table: {
-        type: { summary: tagSizes },
         category: category.props,
         defaultValue: { summary: getTagSizeDefault() },
       },

@@ -24,7 +24,7 @@ const meta = {
     // Props
     children: {
       table: { disable: true },
-      control: { type: null },
+      control: { disable: true },
     },
     hasSpacing: { table: { disable: true } },
     color: {

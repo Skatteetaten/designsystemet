@@ -16,7 +16,6 @@ const meta = {
       control: 'inline-radio',
       table: {
         category: category.props,
-        type: { summary: headingAsArr },
       },
     },
     children: {

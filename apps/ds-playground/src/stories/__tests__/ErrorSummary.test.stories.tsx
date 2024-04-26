@@ -21,11 +21,11 @@ const meta = {
     // Props
     children: {
       table: { disable: true },
-      control: { type: null },
+      control: { disable: true },
     },
     content: {
       table: { disable: true },
-      control: { type: null },
+      control: { disable: true },
     },
     shadowRootNode: {
       table: { disable: true },

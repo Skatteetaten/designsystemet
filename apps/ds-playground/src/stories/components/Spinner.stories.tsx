@@ -1,4 +1,4 @@
-import { dsI18n, sizeArr } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   Spinner,
   getSpinnerColorDefault,
@@ -29,7 +29,6 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getSpinnerSizeDefault() },
-        type: { summary: sizeArr.slice(1, 4) },
       },
     },
     titlePosition: {

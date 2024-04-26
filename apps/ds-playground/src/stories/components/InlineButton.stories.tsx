@@ -34,7 +34,6 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getInlineButtonPositionDefault() },
-        type: { summary: buttonIconPositionArr },
       },
     },
     svgPath: {
