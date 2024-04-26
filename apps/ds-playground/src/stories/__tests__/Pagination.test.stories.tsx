@@ -212,6 +212,7 @@ export const WithNavigation: Story = {
   args: {
     ...defaultArgs,
     defaultCurrent: 2,
+    onChange: fn(),
   },
   parameters: {
     imageSnapshot: { disable: true },

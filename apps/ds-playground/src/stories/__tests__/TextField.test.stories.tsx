@@ -7,7 +7,7 @@ import {
   textFieldAsArr,
 } from '@skatteetaten/ds-forms';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, within, waitFor } from '@storybook/test';
+import { expect, userEvent, within, waitFor, fn } from '@storybook/test';
 
 import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -562,6 +562,7 @@ export const WithThousandSeparator = {
   args: {
     ...defaultArgs,
     thousandSeparator: true,
+    onChange: fn(),
   },
   argTypes: {
     thousandSeparator: { table: { disable: false } },
@@ -582,6 +583,7 @@ export const WithThousandSeparatorAndNegativeValue = {
   args: {
     ...defaultArgs,
     thousandSeparator: true,
+    onChange: fn(),
   },
   argTypes: {
     defaultValue: { table: { disable: false } },
@@ -673,6 +675,9 @@ export const WithEventHandlers = {
   name: 'With EventHandlers (A4)',
   args: {
     ...defaultArgs,
+    onFocus: fn(),
+    onBlur: fn(),
+    onChange: fn(),
   },
   parameters: {
     imageSnapshot: { disable: true },

@@ -3,7 +3,14 @@ import { ChangeEvent, FocusEvent, useState } from 'react';
 import { dsI18n, formArrSize } from '@skatteetaten/ds-core-utils';
 import { Select } from '@skatteetaten/ds-forms';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fireEvent, userEvent, waitFor, within } from '@storybook/test';
+import {
+  expect,
+  fireEvent,
+  fn,
+  userEvent,
+  waitFor,
+  within,
+} from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -501,6 +508,9 @@ export const WithEventHandlers = {
   name: 'With EventHandlers (A3)',
   args: {
     ...defaultArgs,
+    onFocus: fn(),
+    onBlur: fn(),
+    onChange: fn(),
   },
   parameters: {
     imageSnapshot: { disable: true },

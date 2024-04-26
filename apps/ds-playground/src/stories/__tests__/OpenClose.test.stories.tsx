@@ -7,7 +7,7 @@ import {
   headingAsArr,
 } from '@skatteetaten/ds-core-utils';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fireEvent, within, waitFor } from '@storybook/test';
+import { expect, fireEvent, within, waitFor, fn } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 
@@ -355,6 +355,7 @@ export const WithOnClick = {
   name: 'With OnClick (A4 delvis, B1 delvis)',
   args: {
     ...defaultArgs,
+    onClick: fn(),
   },
   parameters: {
     imageSnapshot: {
@@ -381,6 +382,7 @@ export const WithIsOnClickOnlyFiredOnOpen = {
   args: {
     ...defaultArgs,
     isOnClickOnlyFiredOnOpen: true,
+    onClick: fn(),
   },
   argTypes: {
     isOnClickOnlyFiredOnOpen: { table: { disable: false } },

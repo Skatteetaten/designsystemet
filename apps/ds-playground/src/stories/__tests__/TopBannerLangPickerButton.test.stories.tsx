@@ -1,7 +1,7 @@
 import { MouseEvent, useState } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, within, waitFor } from '@storybook/test';
+import { expect, userEvent, within, waitFor, fn } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
@@ -157,6 +157,7 @@ export const WithEventHandlers = {
   name: 'With EventHandlers (LanguagePicker A4)',
   args: {
     ...defaultArgs,
+    onClick: fn(),
   },
   parameters: {
     imageSnapshot: { disable: true },

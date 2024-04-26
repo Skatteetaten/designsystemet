@@ -579,6 +579,9 @@ export const WithEventHandlers = {
   name: 'With EventHandlers (A6)',
   args: {
     ...defaultArgs,
+    onFocus: fn(),
+    onBlur: fn(),
+    onChange: fn(),
   },
   parameters: {
     imageSnapshot: { disable: true },

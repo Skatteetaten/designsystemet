@@ -79,7 +79,6 @@ const DSViewports = {
 };
 
 const parameters = {
-  actions: { argTypesRegex: '^on.*' },
   controls: {
     sort: 'requiredFirst',
     hideNoControlsWarning: true,
