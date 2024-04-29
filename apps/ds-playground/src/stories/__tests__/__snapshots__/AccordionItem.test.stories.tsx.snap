@@ -1,0 +1,455 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Accordion/Item Defaults play-test 1`] = `
+<div data-test-block="true">
+  <div class="AccordionItem_accordionItem__m-eot">
+    <div class="AccordionItem_tag__eCsSL">
+      <button class="AccordionItem_header__erxD0  AccordionItem_header_medium__uP+op"
+              aria-expanded="false"
+              type="button"
+      >
+        <div class="AccordionItem_titleWrapper__tGvRR">
+          <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
+            Meg selv
+          </div>
+        </div>
+        <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_closed__9xfBm"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+            </path>
+          </svg>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Accordion/Item IsExpanded play-test 1`] = `
+<div data-test-block="true">
+  <div class="AccordionItem_accordionItem__m-eot">
+    <div class="AccordionItem_tag__eCsSL">
+      <button class="AccordionItem_header__erxD0  AccordionItem_header_medium__uP+op"
+              aria-expanded="true"
+              type="button"
+      >
+        <div class="AccordionItem_titleWrapper__tGvRR">
+          <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
+            Meg selv
+          </div>
+        </div>
+        <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_open__tRQlR"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+            </path>
+          </svg>
+        </div>
+      </button>
+    </div>
+    <div class="AccordionItem_content__gLNHN AccordionItem_content_medium__S1ZBr">
+      Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Accordion/Item PersistFocusOnClick play-test 1`] = `
+<div data-test-block="true">
+  <div class="AccordionItem_accordionItem__m-eot">
+    <div class="AccordionItem_tag__eCsSL">
+      <button class="AccordionItem_header__erxD0  AccordionItem_header_medium__uP+op"
+              aria-expanded="true"
+              type="button"
+      >
+        <div class="AccordionItem_titleWrapper__tGvRR">
+          <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
+            Meg selv
+          </div>
+        </div>
+        <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_open__tRQlR"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+            </path>
+          </svg>
+        </div>
+      </button>
+    </div>
+    <div class="AccordionItem_content__gLNHN AccordionItem_content_medium__S1ZBr">
+      Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Accordion/Item WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <div class="AccordionItem_accordionItem__m-eot">
+    <div class="AccordionItem_tag__eCsSL">
+      <button id="htmlId"
+              class="AccordionItem_header__erxD0  AccordionItem_header_medium__uP+op dummyClassname"
+              lang="nb"
+              data-testid="123ID"
+              aria-expanded="false"
+              type="button"
+      >
+        <div class="AccordionItem_titleWrapper__tGvRR">
+          <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
+            Meg selv
+          </div>
+        </div>
+        <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_closed__9xfBm"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+            </path>
+          </svg>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Accordion/Item WithCustomClassNames play-test 1`] = `
+<div data-test-block="true">
+  <div class="AccordionItem_accordionItem__m-eot">
+    <div class="AccordionItem_tag__eCsSL">
+      <button class="AccordionItem_header__erxD0  AccordionItem_header_medium__uP+op   dummyClassname"
+              aria-expanded="true"
+              type="button"
+      >
+        <div class="AccordionItem_titleWrapper__tGvRR">
+          <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj dummyClassname">
+            Meg selv
+          </div>
+          <p class="AccordionItem_subtitle__qhh61 AccordionItem_subtitle_expanded__tGWMb AccordionItem_subtitle_medium__FwG+J dummyClassname">
+            Beskrivelse
+          </p>
+        </div>
+        <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_open__tRQlR"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+            </path>
+          </svg>
+        </div>
+      </button>
+    </div>
+    <div class="AccordionItem_content__gLNHN AccordionItem_content_medium__S1ZBr  dummyClassname">
+      Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Accordion/Item WithCustomIcon smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="AccordionItem_accordionItem__m-eot">
+    <div class="AccordionItem_tag__eCsSL">
+      <button class="AccordionItem_header__erxD0  AccordionItem_header_medium__uP+op"
+              aria-expanded="false"
+              type="button"
+      >
+        <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+            </path>
+          </svg>
+        </div>
+        <div class="AccordionItem_titleWrapper__tGvRR">
+          <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
+            Meg selv
+          </div>
+        </div>
+        <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_closed__9xfBm"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+            </path>
+          </svg>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Accordion/Item WithLineBreak smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="AccordionItem_accordionItem__m-eot">
+    <div class="AccordionItem_tag__eCsSL">
+      <button class="AccordionItem_header__erxD0  AccordionItem_header_medium__uP+op"
+              aria-expanded="false"
+              type="button"
+      >
+        <div class="AccordionItem_titleWrapper__tGvRR">
+          <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
+            Tittel som
+brekker over flere
+linjer
+          </div>
+        </div>
+        <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_closed__9xfBm"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+            </path>
+          </svg>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Accordion/Item WithOnClick play-test 1`] = `
+<div data-test-block="true">
+  <div class="AccordionItem_accordionItem__m-eot">
+    <div class="AccordionItem_tag__eCsSL">
+      <button class="AccordionItem_header__erxD0  AccordionItem_header_medium__uP+op"
+              aria-expanded="false"
+              type="button"
+      >
+        <div class="AccordionItem_titleWrapper__tGvRR">
+          <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
+            Meg selv
+          </div>
+        </div>
+        <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_closed__9xfBm"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+            </path>
+          </svg>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Accordion/Item WithRef play-test 1`] = `
+<div data-test-block="true">
+  <div class="AccordionItem_accordionItem__m-eot">
+    <div class="AccordionItem_tag__eCsSL">
+      <button class="AccordionItem_header__erxD0  AccordionItem_header_medium__uP+op"
+              aria-expanded="false"
+              type="button"
+              id="dummyIdForwardedFromRef"
+      >
+        <div class="AccordionItem_titleWrapper__tGvRR">
+          <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
+            Meg selv
+          </div>
+        </div>
+        <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_closed__9xfBm"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+            </path>
+          </svg>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Accordion/Item WithTitleAs play-test 1`] = `
+<div data-test-block="true">
+  <div class="AccordionItem_accordionItem__m-eot">
+    <h1 class="AccordionItem_tag__eCsSL">
+      <button class="AccordionItem_header__erxD0  AccordionItem_header_medium__uP+op"
+              aria-expanded="false"
+              type="button"
+      >
+        <div class="AccordionItem_titleWrapper__tGvRR">
+          <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
+            Heading h1
+          </div>
+        </div>
+        <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_closed__9xfBm"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+            </path>
+          </svg>
+        </div>
+      </button>
+    </h1>
+  </div>
+  <div class="AccordionItem_accordionItem__m-eot">
+    <h2 class="AccordionItem_tag__eCsSL">
+      <button class="AccordionItem_header__erxD0  AccordionItem_header_medium__uP+op"
+              aria-expanded="false"
+              type="button"
+      >
+        <div class="AccordionItem_titleWrapper__tGvRR">
+          <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
+            Heading h2
+          </div>
+        </div>
+        <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_closed__9xfBm"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+            </path>
+          </svg>
+        </div>
+      </button>
+    </h2>
+  </div>
+  <div class="AccordionItem_accordionItem__m-eot">
+    <h3 class="AccordionItem_tag__eCsSL">
+      <button class="AccordionItem_header__erxD0  AccordionItem_header_medium__uP+op"
+              aria-expanded="false"
+              type="button"
+      >
+        <div class="AccordionItem_titleWrapper__tGvRR">
+          <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
+            Heading h3
+          </div>
+        </div>
+        <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_closed__9xfBm"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+            </path>
+          </svg>
+        </div>
+      </button>
+    </h3>
+  </div>
+  <div class="AccordionItem_accordionItem__m-eot">
+    <h4 class="AccordionItem_tag__eCsSL">
+      <button class="AccordionItem_header__erxD0  AccordionItem_header_medium__uP+op"
+              aria-expanded="false"
+              type="button"
+      >
+        <div class="AccordionItem_titleWrapper__tGvRR">
+          <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
+            Heading h4
+          </div>
+        </div>
+        <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_closed__9xfBm"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+            </path>
+          </svg>
+        </div>
+      </button>
+    </h4>
+  </div>
+  <div class="AccordionItem_accordionItem__m-eot">
+    <h5 class="AccordionItem_tag__eCsSL">
+      <button class="AccordionItem_header__erxD0  AccordionItem_header_medium__uP+op"
+              aria-expanded="false"
+              type="button"
+      >
+        <div class="AccordionItem_titleWrapper__tGvRR">
+          <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
+            Heading h5
+          </div>
+        </div>
+        <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_closed__9xfBm"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+            </path>
+          </svg>
+        </div>
+      </button>
+    </h5>
+  </div>
+  <div class="AccordionItem_accordionItem__m-eot">
+    <h6 class="AccordionItem_tag__eCsSL">
+      <button class="AccordionItem_header__erxD0  AccordionItem_header_medium__uP+op"
+              aria-expanded="false"
+              type="button"
+      >
+        <div class="AccordionItem_titleWrapper__tGvRR">
+          <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
+            Heading h6
+          </div>
+        </div>
+        <div class="AccordionItem_iconWrapper__uFOlV AccordionItem_iconWrapper_medium__aT7bh">
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o AccordionItem_icon__u4Hqu AccordionItem_chevron_medium__EWnpR AccordionItem_chevron_closed__9xfBm"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+            </path>
+          </svg>
+        </div>
+      </button>
+    </h6>
+  </div>
+</div>
+`;
