@@ -1,14 +1,15 @@
+import { StoryObj } from '@storybook/react';
+
 import { TokensList } from './TokensList';
-import { ExternalLayout, InternalLayout } from '@skatteetaten/ds-core-utils';
 import { getVersion } from '../utils/version.utils';
 
 export default {
-  title: 'Designtokens/Containers',
+  title: 'Designtokens/Sizes',
 };
 
-export const Containers = {
-  render: () => <TokensList tokenType={'containers'} />,
-  name: 'Containers',
+export const Sizes: StoryObj = {
+  render: () => <TokensList tokenType={'sizes'} />,
+  name: 'Sizes',
 
   parameters: {
     previewTabs: {

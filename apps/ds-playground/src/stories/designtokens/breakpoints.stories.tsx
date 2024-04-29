@@ -1,22 +1,20 @@
-import { SpacingTokenExamplesGenerator } from './SpacingTokenExamplesGenerator';
+import { StoryObj } from '@storybook/react';
+
 import { TokensList } from './TokensList';
 import { getVersion } from '../utils/version.utils';
 
 export default {
-  title: 'Designtokens/Spacing',
+  title: 'Designtokens/Breakpoints',
 };
 
-export const Spacing = {
-  render: () => <TokensList tokenType={'spacing'} />,
-  name: 'Spacing',
-
+export const Breakpoints: StoryObj = {
+  render: () => <TokensList tokenType={'breakpoints'} />,
   parameters: {
     previewTabs: {
       canvas: {
         hidden: true,
       },
     },
-
     viewMode: 'docs',
     version: getVersion('ds-core-designtokens'),
   },

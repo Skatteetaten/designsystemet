@@ -1,22 +1,19 @@
-import { SizesTokenExamplesGenerator } from './SizesTokenExamplesGenerator';
+import { StoryObj } from '@storybook/react';
+
 import { TokensList } from './TokensList';
 import { getVersion } from '../utils/version.utils';
 
 export default {
-  title: 'Designtokens/Sizes',
+  title: 'Designtokens/Spacing',
 };
-
-export const Sizes = {
-  render: () => <TokensList tokenType={'sizes'} />,
-  name: 'Sizes',
-
+export const Spacing: StoryObj = {
+  render: () => <TokensList tokenType={'spacing'} />,
   parameters: {
     previewTabs: {
       canvas: {
         hidden: true,
       },
     },
-
     viewMode: 'docs',
     version: getVersion('ds-core-designtokens'),
   },

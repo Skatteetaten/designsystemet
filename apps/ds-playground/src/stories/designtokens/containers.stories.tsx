@@ -1,22 +1,21 @@
-import { PaletteTokenExamplesGenerator } from './PaletteTokenExamplesGenerator';
+import { StoryObj } from '@storybook/react';
+
 import { TokensList } from './TokensList';
 import { getVersion } from '../utils/version.utils';
 
 export default {
-  title: 'Designtokens/Palette',
+  title: 'Designtokens/Containers',
 };
 
-export const Palette = {
-  render: () => <TokensList tokenType={'palette'} />,
-  name: 'Palette',
-
+export const Containers: StoryObj = {
+  render: () => <TokensList tokenType={'containers'} />,
+  name: 'Containers',
   parameters: {
     previewTabs: {
       canvas: {
         hidden: true,
       },
     },
-
     viewMode: 'docs',
     version: getVersion('ds-core-designtokens'),
   },
