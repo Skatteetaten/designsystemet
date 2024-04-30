@@ -1,4 +1,11 @@
-import { forwardRef, useState, useRef, ReactNode, RefObject } from 'react';
+import {
+  forwardRef,
+  useState,
+  useEffect,
+  useRef,
+  ReactNode,
+  RefObject,
+} from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { InlineButton, Button, IconButton } from '@skatteetaten/ds-buttons';
@@ -160,6 +167,15 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
       }
       onChange?.(page);
     };
+
+    const firstRender = useRef(true);
+    useEffect(() => {
+      if (!firstRender.current) {
+        setInteralPage(1);
+        onChange(1);
+      }
+      firstRender.current = false;
+    }, [onChange, setInteralPage, totalItems]);
 
     const arrowLeft = (activePage: number): ReactNode => {
       return (

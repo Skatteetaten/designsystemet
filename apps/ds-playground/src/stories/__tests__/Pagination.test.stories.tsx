@@ -1,3 +1,4 @@
+import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   Pagination,
@@ -5,7 +6,7 @@ import {
   getDefaultSibling,
 } from '@skatteetaten/ds-navigation';
 import { List } from '@skatteetaten/ds-typography';
-import { useArgs } from '@storybook/preview-api';
+import { useArgs, useState } from '@storybook/preview-api';
 import { StoryObj, Meta } from '@storybook/react';
 import {
   fn,
@@ -158,6 +159,64 @@ export const WithListLength: Story = {
         const paginationStatusNextPage = canvas.getByText('Viser 5–8 av 70'); // Tankestrek
         await expect(paginationStatusNextPage).toBeInTheDocument();
       }
+    );
+  },
+} satisfies Story;
+
+export const WithListLengthChange: Story = {
+  name: 'With Changed List Length (A3)',
+  args: {
+    ...defaultArgs,
+    defaultCurrent: undefined,
+    pageSize: 10,
+  },
+  argTypes: {
+    totalItems: { table: true },
+  },
+  play: async ({ canvasElement, step }): Promise<void> => {
+    const canvas = within(canvasElement);
+
+    await step(
+      'Reduser totalItems til 19 og sjekk om pageSummary viser riktig antall',
+      async () => {
+        const nextButton = canvas.getByRole('button', {
+          name: dsI18n.t('ds_navigation:pagination.NextButtonTitle'),
+        });
+        await fireEvent.click(nextButton);
+        const reduceButton = canvas.getByRole('button', {
+          name: 'Reduser totalItems til 19',
+        });
+        await fireEvent.click(reduceButton);
+        const paginationPageSummary = await canvas.findByText(
+          'Viser 1–10 av 19'
+        ); // Tankestrek
+        await expect(paginationPageSummary).toBeInTheDocument();
+      }
+    );
+  },
+  render: (args): JSX.Element => {
+    const [currentPage, setCurrentPage] = useState<number>(1);
+    const [{ totalItems }, updateArgs] = useArgs();
+    const onChange = (): void => {
+      updateArgs({ currentPage: 1 });
+      setCurrentPage(1);
+    };
+    const changeTotalItems = (): void => {
+      updateArgs({ totalItems: 19 });
+    };
+    return (
+      <>
+        <Pagination
+          {...args}
+          defaultCurrent={undefined}
+          currentPage={currentPage}
+          totalItems={totalItems}
+          onChange={onChange}
+        />
+        <Button variant={'secondary'} onClick={changeTotalItems}>
+          {'Reduser totalItems til 19'}
+        </Button>
+      </>
     );
   },
 } satisfies Story;
