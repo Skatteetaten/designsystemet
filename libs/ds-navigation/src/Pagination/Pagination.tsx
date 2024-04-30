@@ -168,9 +168,14 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
       onChange?.(page);
     };
 
+    const firstRender = useRef(false);
     useEffect(() => {
-      setInteralPage(1);
-    }, [totalItems, setInteralPage]);
+      if (firstRender.current) {
+        setInteralPage(1);
+        onChange(1);
+      }
+      firstRender.current = true;
+    }, [onChange, setInteralPage, totalItems]);
 
     const arrowLeft = (activePage: number): ReactNode => {
       return (
