@@ -21,13 +21,14 @@ export type AccordionSize = Extract<
   'small' | 'medium' | 'large'
 >;
 
+export type IconPosition = Extract<Position, 'left' | 'right'>;
 export interface AccordionProps extends BaseProps {
   /** Bakgrunnsfarge */
   color?: AccordionColor;
   /** Størrelse */
   size?: AccordionSize;
   /** Posisjonen til ikonet */
-  iconPosition?: Position;
+  iconPosition?: IconPosition;
   /** Tekst eller markup som vises/skjules. */
   children?: ReactNode;
 }

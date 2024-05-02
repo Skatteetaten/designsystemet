@@ -1,7 +1,5 @@
-import { Position } from '@skatteetaten/ds-core-utils';
+import { AccordionColor, AccordionSize, IconPosition } from './Accordion.types';
 
-import { AccordionColor, AccordionSize } from './Accordion.types';
-
-export const getAccordionIconPositionDefault = (): Position => 'right';
+export const getAccordionIconPositionDefault = (): IconPosition => 'right';
 export const getAccordionBackgroundColorDefault = (): AccordionColor => 'none';
 export const getAccordionSizeDefault = (): AccordionSize => 'medium';
