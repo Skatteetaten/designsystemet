@@ -21,7 +21,7 @@ export type AccordionSize = Extract<
   'small' | 'medium' | 'large'
 >;
 
-type IconPosition = Extract<Position, 'left' | 'right'>;
+export type IconPosition = Extract<Position, 'left' | 'right'>;
 export interface AccordionProps extends BaseProps {
   /** Bakgrunnsfarge */
   color?: AccordionColor;
