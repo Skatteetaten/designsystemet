@@ -4,7 +4,14 @@ import { Accordion, AccordionItemProps } from '@skatteetaten/ds-collections';
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
 import { PersonSVGpath } from '@skatteetaten/ds-icons';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fireEvent, userEvent, waitFor, within } from '@storybook/test';
+import {
+  expect,
+  fireEvent,
+  fn,
+  userEvent,
+  waitFor,
+  within,
+} from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 
@@ -230,6 +237,7 @@ export const WithOnClick = {
   name: 'With OnClick (A5, B1,B2)',
   args: {
     ...defaultArgs,
+    onClick: fn(),
   },
   parameters: {
     imageSnapshot: {
