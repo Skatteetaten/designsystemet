@@ -1,4 +1,11 @@
-import { forwardRef, useState, useRef, ReactNode, RefObject } from 'react';
+import {
+  forwardRef,
+  useState,
+  useEffect,
+  useRef,
+  ReactNode,
+  RefObject,
+} from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { InlineButton, Button, IconButton } from '@skatteetaten/ds-buttons';
@@ -161,6 +168,15 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
       onChange?.(page);
     };
 
+    const firstRender = useRef(true);
+    useEffect(() => {
+      if (!firstRender.current) {
+        setInteralPage(1);
+        onChange(1);
+      }
+      firstRender.current = false;
+    }, [onChange, setInteralPage, totalItems]);
+
     const arrowLeft = (activePage: number): ReactNode => {
       return (
         <li className={styles.paginationElement_leftArrow}>
@@ -211,15 +227,18 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
       );
     };
 
+    const rangeTo =
+      internalPage * pageSize > totalItems
+        ? totalItems
+        : internalPage * pageSize;
     const showPaginationSummary = dsI18n.t(
       'ds_navigation:pagination.PageSummary',
       {
-        range: `${internalPage * pageSize + 1 - pageSize}–${
-          internalPage * pageSize
-        }`,
+        range: `${internalPage * pageSize + 1 - pageSize}–${rangeTo}`,
         total: totalItems,
       }
     );
+
     const pageSummary = `${
       hidePageSummary ? styles.paginationSummary_hide : ''
     }`;
