@@ -172,7 +172,7 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
     useEffect(() => {
       if (!firstRender.current) {
         setInteralPage(1);
-        onChange(1);
+        onChange?.(1);
       }
       firstRender.current = false;
     }, [onChange, setInteralPage, totalItems]);
