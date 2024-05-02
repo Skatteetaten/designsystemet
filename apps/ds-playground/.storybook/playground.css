@@ -162,6 +162,11 @@ code {
   margin-left: var(--spacing-s);
 }
 
+.marginL {
+  margin-left: var(--spacing-l);
+  margin-right: var(--spacing-l);
+}
+
 .centerContent {
   min-height: 50vh;
   display: flex;
