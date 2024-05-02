@@ -406,18 +406,20 @@ const exampleListWithLimit = (
 
 export const Examples: Story = {
   render: (_args): JSX.Element => {
-    const [page, setPage] = useState(1);
+    const [currentPage, setCurrentPage] = useState(1);
     const pageSize = 5;
     const onChange = (page: number): void => {
-      setPage(page);
+      setCurrentPage(page);
     };
     return (
       <>
-        <List hasSpacing>{exampleListWithLimit(data, page, pageSize)}</List>
+        <List hasSpacing>
+          {exampleListWithLimit(data, currentPage, pageSize)}
+        </List>
         <Pagination
           pageSize={pageSize}
           totalItems={data.length}
-          defaultCurrent={1}
+          currentPage={currentPage}
           onChange={onChange}
         />
       </>

@@ -1532,7 +1532,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
         <div class="Footer_logoContainer__y1W2U">
           <img class="Footer_skatteetatenLogo__3QzcJ"
                alt="Skatteetaten logo"
-               src="logo.d90631b1a5ca8482a633564c695334ed.svg"
+               src="logo_no.d90631b1a5ca8482a633564c695334ed.svg"
           >
         </div>
       </div>
@@ -1790,7 +1790,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
         <div class="Footer_logoContainer__y1W2U">
           <img class="Footer_skatteetatenLogo__3QzcJ"
                alt="Skatteetaten logo"
-               src="logo.d90631b1a5ca8482a633564c695334ed.svg"
+               src="logo_no.d90631b1a5ca8482a633564c695334ed.svg"
           >
         </div>
       </div>
@@ -2048,7 +2048,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
         <div class="Footer_logoContainer__y1W2U">
           <img class="Footer_skatteetatenLogo__3QzcJ"
                alt="Skatteetaten logo"
-               src="logo.d90631b1a5ca8482a633564c695334ed.svg"
+               src="logo_no.d90631b1a5ca8482a633564c695334ed.svg"
           >
         </div>
       </div>
@@ -2466,7 +2466,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
         <div class="Footer_logoContainer__y1W2U">
           <img class="Footer_skatteetatenLogo__3QzcJ"
                alt="Skatteetaten logo"
-               src="logo.d90631b1a5ca8482a633564c695334ed.svg"
+               src="logo_no.d90631b1a5ca8482a633564c695334ed.svg"
           >
         </div>
       </div>
@@ -2744,7 +2744,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
         <div class="Footer_logoContainer__y1W2U">
           <img class="Footer_skatteetatenLogo__3QzcJ"
                alt="Skatteetaten logo"
-               src="logo.d90631b1a5ca8482a633564c695334ed.svg"
+               src="logo_no.d90631b1a5ca8482a633564c695334ed.svg"
           >
         </div>
       </div>
@@ -3022,7 +3022,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
         <div class="Footer_logoContainer__y1W2U">
           <img class="Footer_skatteetatenLogo__3QzcJ"
                alt="Skatteetaten logo"
-               src="logo.d90631b1a5ca8482a633564c695334ed.svg"
+               src="logo_no.d90631b1a5ca8482a633564c695334ed.svg"
           >
         </div>
       </div>
@@ -3290,7 +3290,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
         <div class="Footer_logoContainer__y1W2U">
           <img class="Footer_skatteetatenLogo__3QzcJ"
                alt="Skatteetaten logo"
-               src="logo.d90631b1a5ca8482a633564c695334ed.svg"
+               src="logo_no.d90631b1a5ca8482a633564c695334ed.svg"
           >
         </div>
       </div>
@@ -3558,7 +3558,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
         <div class="Footer_logoContainer__y1W2U">
           <img class="Footer_skatteetatenLogo__3QzcJ"
                alt="Skatteetaten logo"
-               src="logo.d90631b1a5ca8482a633564c695334ed.svg"
+               src="logo_no.d90631b1a5ca8482a633564c695334ed.svg"
           >
         </div>
       </div>
@@ -3826,7 +3826,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
         <div class="Footer_logoContainer__y1W2U">
           <img class="Footer_skatteetatenLogo__3QzcJ"
                alt="Skatteetaten logo"
-               src="logo.d90631b1a5ca8482a633564c695334ed.svg"
+               src="logo_no.d90631b1a5ca8482a633564c695334ed.svg"
           >
         </div>
       </div>

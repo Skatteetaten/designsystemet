@@ -53,6 +53,10 @@
 
   .skatteetatenLogo {
     width: 4rem;
+
+    &_en {
+      width: calc(4rem * 1.2);
+    }
   }
 
   .linkContainer {

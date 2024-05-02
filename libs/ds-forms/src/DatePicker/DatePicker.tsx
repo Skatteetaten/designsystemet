@@ -142,7 +142,10 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       }
 
       const handleOutside: EventListener = (event): void => {
-        const node = event.target as Node;
+        const composedPath = event.composedPath();
+        const node = (
+          composedPath.length > 0 ? composedPath[0] : event.target
+        ) as Node;
         if (
           !calendarRef?.current?.contains(node) &&
           !calenderButtonRef?.current?.contains(node)
@@ -235,6 +238,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
           {!readOnly && (
             <button
               ref={calenderButtonRef}
+              type={'button'}
               className={calendarButtonClassName}
               disabled={disabled}
               aria-expanded={showCalendar}
