@@ -7,7 +7,7 @@ import {
 } from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath } from '@skatteetaten/ds-icons';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, waitFor, within } from '@storybook/test';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -182,7 +182,7 @@ export const WithCustomIcon = {
   argTypes: {
     svgPath: {
       table: { disable: false },
-      control: { type: null },
+      control: { disable: true },
     },
   },
 } satisfies Story;
@@ -318,6 +318,9 @@ export const WithEventHandlers = {
   name: 'With EventHandlers (A2 delvis)',
   args: {
     ...defaultArgs,
+    onFocus: fn(),
+    onClick: fn(),
+    onBlur: fn(),
   },
   parameters: {
     imageSnapshot: { disable: true },

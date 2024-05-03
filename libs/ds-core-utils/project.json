@@ -4,6 +4,7 @@
   "sourceRoot": "libs/ds-core-utils/src",
   "projectType": "library",
   "tags": [],
+  "implicitDependencies": ["!ds-dev-config"],
   "targets": {
     "build": {
       "executor": "@nx/rollup:rollup",
@@ -33,13 +34,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "libs/ds-core-utils/**/*.{ts,tsx,js,jsx}",
-          "libs/ds-core-utils/package.json"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
@@ -77,6 +72,5 @@
         "command": "npm publish dist/libs/ds-core-utils {args.switches}"
       }
     }
-  },
-  "implicitDependencies": ["!ds-dev-config"]
+  }
 }

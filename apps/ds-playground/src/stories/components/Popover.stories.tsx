@@ -5,7 +5,6 @@ import {
   getPopoverPositionDefault,
   getPopoverRestoreFocusDefault,
   Popover,
-  popoverColorArr,
 } from '@skatteetaten/ds-overlays';
 import { Table } from '@skatteetaten/ds-table';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
@@ -24,7 +23,6 @@ const meta = {
     children: { control: false, table: { category: category.props } },
     color: {
       table: {
-        type: { summary: popoverColorArr },
         category: category.props,
         defaultValue: { summary: getPopoverColorDefault() },
       },
@@ -35,12 +33,16 @@ const meta = {
     disableAutoDismissOnMobile: { table: { category: category.props } },
     position: {
       control: 'radio',
-      table: { category: category.props },
-      defaultValue: { summary: getPopoverPositionDefault() },
+      table: {
+        category: category.props,
+        defaultValue: { summary: getPopoverPositionDefault().toString() },
+      },
     },
     shouldRestoreFocus: {
-      table: { category: category.props },
-      defaultValue: { summary: getPopoverRestoreFocusDefault() },
+      table: {
+        category: category.props,
+        defaultValue: { summary: getPopoverRestoreFocusDefault().toString() },
+      },
     },
     isOpen: { table: { category: category.props } },
     //Events

@@ -2,7 +2,7 @@ import { JSX } from 'react';
 
 import { Popover } from '@skatteetaten/ds-overlays';
 import { Meta, StoryObj } from '@storybook/react';
-import { expect, userEvent, waitFor, within } from '@storybook/test';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -116,6 +116,11 @@ export const WithAriaDescribedby = {
 
 export const WithEventHandlers = {
   name: 'With EventHandlers',
+  args: {
+    onFocus: fn(),
+    onBlur: fn(),
+    onClick: fn(),
+  },
   parameters: {
     imageSnapshot: { disable: true },
   },

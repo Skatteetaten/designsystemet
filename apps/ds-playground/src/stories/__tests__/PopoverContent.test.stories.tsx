@@ -109,7 +109,7 @@ export const WithMarkup = {
   argTypes: {
     children: {
       table: { disable: false },
-      control: { type: null },
+      control: { disable: true },
     },
   },
 } satisfies Story;

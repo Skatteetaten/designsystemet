@@ -35,8 +35,9 @@ const config = {
     '@storybook/addon-coverage',
     '@storybook/addon-a11y',
     '@storybook/addon-interactions',
-    'storybook-version',
+    //'storybook-version', TODO hva gjor vi med denne
     '@nx/react/plugins/storybook',
+    '@storybook/addon-mdx-gfm',
   ],
   core: {
     disableTelemetry: true,

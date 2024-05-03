@@ -167,7 +167,7 @@ export const WithShowRequiredMarkAndLegend = {
   argTypes: {
     legend: {
       table: { disable: true },
-      control: { type: null },
+      control: { disable: true },
     },
     showRequiredMark: { table: { disable: false } },
   },

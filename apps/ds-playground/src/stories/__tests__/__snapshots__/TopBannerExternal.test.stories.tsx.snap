@@ -975,24 +975,6 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
               <div class="TopBannerLangPicker_menuArrow__cXG+p">
               </div>
             </div>
-            <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
-                    type="button"
-            >
-              <span class="TopBannerButton_iconWrapper__bu153">
-                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                     viewbox="0 0 24 24"
-                     focusable="false"
-                     aria-hidden="true"
-                     role="img"
-                >
-                  <path d="M12 17a2 2 0 0 1-2-2c0-1.11.89-2 2-2a2 2 0 0 1 0 4Zm6 3V10H6v10h12Zm0-12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10c0-1.11.89-2 2-2h1V6a5 5 0 1 1 10 0v2h1Zm-6-5a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3Z">
-                  </path>
-                </svg>
-              </span>
-              <span class="TopBannerButton_buttonText__guqHQ ">
-                Logg inn
-              </span>
-            </button>
           </div>
         </div>
       </div>
@@ -1042,18 +1024,18 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
         </a>
         <div class="TopBannerExternal_contentContainer__h2K6k">
           <div class>
-            <label id="labelId-:re:"
+            <label id="labelId-:rc:"
                    class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
-                   for="textFieldTextboxId-:rd:"
+                   for="textFieldTextboxId-:rb:"
             >
               Søk
             </label>
-            <input id="textFieldTextboxId-:rd:"
+            <input id="textFieldTextboxId-:rb:"
                    class="TextField_textbox__qbZlk"
                    placeholder="Søk"
                    value
             >
-            <div id="textFieldErrorId-:rc:"
+            <div id="textFieldErrorId-:ra:"
                  aria-live="assertive"
                  aria-atomic="true"
             >
@@ -2201,24 +2183,6 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
               <div class="TopBannerLangPicker_menuArrow__cXG+p">
               </div>
             </div>
-            <button class="TopBannerButton_button__5RUa7 TopBannerButton_button_filled__oJNLx"
-                    type="button"
-            >
-              <span class="TopBannerButton_iconWrapper__bu153">
-                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerButton_icon__FyVd5"
-                     viewbox="0 0 24 24"
-                     focusable="false"
-                     aria-hidden="true"
-                     role="img"
-                >
-                  <path d="M12 17a2 2 0 0 1-2-2c0-1.11.89-2 2-2a2 2 0 0 1 0 4Zm6 3V10H6v10h12Zm0-12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10c0-1.11.89-2 2-2h1V6a5 5 0 1 1 10 0v2h1Zm-6-5a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3Z">
-                  </path>
-                </svg>
-              </span>
-              <span class="TopBannerButton_buttonText__guqHQ ">
-                Logg inn
-              </span>
-            </button>
           </div>
         </div>
       </div>

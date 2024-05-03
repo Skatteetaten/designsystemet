@@ -4,16 +4,11 @@
   "sourceRoot": "libs/ds-progress/src",
   "projectType": "library",
   "tags": [],
+  "implicitDependencies": ["!ds-dev-config"],
   "targets": {
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "libs/ds-progress/**/*.{ts,tsx,js,jsx}",
-          "libs/ds-progress/package.json"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "build": {
       "executor": "@nx/rollup:rollup",
@@ -71,6 +66,5 @@
         "command": "npm publish dist/libs/ds-progress {args.switches}"
       }
     }
-  },
-  "implicitDependencies": ["!ds-dev-config"]
+  }
 }

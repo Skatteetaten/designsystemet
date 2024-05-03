@@ -31,7 +31,6 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getTableVariantDefault() },
-        type: { summary: densityArr },
       },
     },
     showCaption: { table: { category: category.props } },

@@ -27,7 +27,6 @@ const meta = {
       control: 'radio',
       table: {
         category: category.props,
-        type: { summary: statusArr },
       },
     },
     // Aria

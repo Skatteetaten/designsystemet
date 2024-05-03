@@ -171,10 +171,6 @@ export default async function (
         ...lint,
         options: {
           ...lint.options,
-          lintFilePatterns: [
-            ...lint.options.lintFilePatterns,
-            `libs/${projectName}/package.json`,
-          ],
         },
       },
       stylelint: {

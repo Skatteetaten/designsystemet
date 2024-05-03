@@ -33,7 +33,6 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getIconButtonSizeDefault() },
-        type: { summary: availableSizes },
       },
     },
     svgPath: {

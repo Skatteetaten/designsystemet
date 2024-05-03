@@ -1,7 +1,7 @@
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Popover, popoverColorArr } from '@skatteetaten/ds-overlays';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, fireEvent, userEvent, within } from '@storybook/test';
+import { expect, fireEvent, fn, userEvent, within } from '@storybook/test';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 
@@ -99,7 +99,9 @@ export const AllColors = {
 
 export const WithOnClickTriggerAndCloseButton = {
   name: 'With OnClick Trigger Close Button (A9)',
-  args: {},
+  args: {
+    onClose: fn(),
+  },
 
   parameters: {
     imageSnapshot: { disable: true },

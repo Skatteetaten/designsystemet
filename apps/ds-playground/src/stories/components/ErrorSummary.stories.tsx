@@ -32,7 +32,6 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getErrorSummaryTitleAsDefault() },
-        type: { summary: headingAsArr },
       },
     },
   },

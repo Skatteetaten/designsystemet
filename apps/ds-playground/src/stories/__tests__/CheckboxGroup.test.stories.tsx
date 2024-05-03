@@ -19,7 +19,7 @@ const meta = {
     // Props
     children: {
       table: { disable: true },
-      control: { type: null },
+      control: { disable: true },
     },
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
@@ -184,7 +184,7 @@ export const LegendWithMarkup = {
     ),
   },
   argTypes: {
-    legend: { table: { disable: false }, control: { type: null } },
+    legend: { table: { disable: false }, control: { disable: true } },
   },
 } satisfies Story;
 
@@ -205,7 +205,7 @@ export const LegendWithMarkupAndRequiredMark = {
     showRequiredMark: true,
   },
   argTypes: {
-    legend: { table: { disable: false }, control: { type: null } },
+    legend: { table: { disable: false }, control: { disable: true } },
     showRequiredMark: { table: { disable: false } },
   },
 } satisfies Story;
