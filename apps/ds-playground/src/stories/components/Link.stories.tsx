@@ -18,7 +18,6 @@ const meta = {
       control: 'inline-radio',
       table: {
         category: category.props,
-        type: { summary: linkColorArr },
       },
     },
     isExternal: { table: { category: category.props } },

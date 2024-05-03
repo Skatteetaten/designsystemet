@@ -1,3 +1,5 @@
+import { ArgTypes } from '@storybook/react';
+
 export const category = {
   baseProps: 'BaseProps',
   props: 'Props',
@@ -6,18 +8,7 @@ export const category = {
   event: 'Event',
 };
 
-export type PartialArgTypes = {
-  table?: {
-    category: string;
-  };
-  control?: boolean;
-};
-
-export interface StoryPropsPartialInterface {
-  [key: string]: PartialArgTypes;
-}
-
-export const htmlEventDescription: PartialArgTypes = {
+export const htmlEventDescription: Partial<ArgTypes> = {
   table: { category: category.event },
-  control: false,
+  control: { disable: true },
 };

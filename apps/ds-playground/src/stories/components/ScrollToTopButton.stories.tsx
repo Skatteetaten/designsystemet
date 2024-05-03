@@ -23,7 +23,7 @@ const meta = {
     visibilityThreshold: {
       table: {
         category: category.props,
-        defaultValue: { summary: getVisibilityThresholdDefault() },
+        defaultValue: { summary: String(getVisibilityThresholdDefault()) },
       },
     },
     shadowRootNode: {

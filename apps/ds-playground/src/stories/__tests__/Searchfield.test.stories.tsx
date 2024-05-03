@@ -10,7 +10,14 @@ import {
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { searchArrSize, SearchField } from '@skatteetaten/ds-forms';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { fireEvent, userEvent, waitFor, within, expect } from '@storybook/test';
+import {
+  fireEvent,
+  userEvent,
+  waitFor,
+  within,
+  expect,
+  fn,
+} from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
@@ -444,6 +451,12 @@ export const WithEventHandlers = {
   name: 'With EventHandlers (A7)',
   args: {
     ...defaultArgs,
+    onFocus: fn(),
+    onBlur: fn(),
+    onSearchClick: fn(),
+    onSearch: fn(),
+    onChange: fn(),
+    onClear: fn(),
   },
   parameters: {
     imageSnapshot: { disable: true },
@@ -485,6 +498,7 @@ export const WithArrowKeyNavigation = {
       { description: 'Beryllium', key: 'Be' },
       { description: 'Bor', key: 'B' },
     ],
+    onResultClick: fn(),
   },
   parameters: {
     imageSnapshot: { disable: true },

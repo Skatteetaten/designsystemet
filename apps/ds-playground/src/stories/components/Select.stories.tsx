@@ -48,7 +48,6 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getCommonFormVariantDefault() },
-        type: { summary: formArrSize },
       },
     },
     label: { table: { category: category.props } },

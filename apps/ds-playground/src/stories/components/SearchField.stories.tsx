@@ -29,7 +29,9 @@ const meta = {
     hasSearchButtonIcon: {
       table: {
         category: category.props,
-        defaultValue: { summary: getSearchFieldHasSearchButtonIconDefault() },
+        defaultValue: {
+          summary: getSearchFieldHasSearchButtonIconDefault().toString(),
+        },
       },
     },
     defaultValue: { table: { category: category.props } },
@@ -57,7 +59,6 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getCommonFormVariantDefault() },
-        type: { summary: searchArrSize },
       },
     },
     // HTML

@@ -39,7 +39,6 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getPanelTitleAsDefault() },
-        type: { summary: [...headingAsArr] },
       },
     },
     titleAs: {
@@ -48,7 +47,6 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getStepListStepTitleAsDefault() },
-        type: { summary: [...headingAsArr] },
       },
     },
     introContent: {

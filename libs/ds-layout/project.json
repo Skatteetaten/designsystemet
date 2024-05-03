@@ -4,16 +4,11 @@
   "sourceRoot": "libs/ds-layout/src",
   "projectType": "library",
   "tags": [],
+  "implicitDependencies": ["!ds-dev-config"],
   "targets": {
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "libs/ds-layout/**/*.{ts,tsx,js,jsx}",
-          "libs/ds-layout/package.json"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "build": {
       "executor": "@nx/rollup:rollup",
@@ -77,6 +72,5 @@
         "command": "npm publish dist/libs/ds-layout {args.switches}"
       }
     }
-  },
-  "implicitDependencies": ["!ds-dev-config"]
+  }
 }

@@ -25,7 +25,6 @@ const meta = {
       control: 'inline-radio',
       table: {
         category: category.props,
-        type: { summary: linkColorArr },
       },
     },
     hasSpacing: { table: { category: category.props } },

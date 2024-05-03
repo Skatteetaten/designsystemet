@@ -39,7 +39,7 @@ const meta = {
     showUnderline: {
       table: {
         category: category.props,
-        defaultValue: { summary: getOpenCloseUnderlineDefault() },
+        defaultValue: { summary: getOpenCloseUnderlineDefault().toString() },
       },
     },
     title: { table: { category: category.props } },
@@ -49,7 +49,7 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: 'div' },
-        type: { summary: ['div', ...headingAsArr] },
+        type: { summary: ['div', ...headingAsArr].toString() },
       },
     },
     variant: {
@@ -58,7 +58,6 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getOpenCloseVariantDefault() },
-        type: { summary: densityArr },
       },
     },
     //Events

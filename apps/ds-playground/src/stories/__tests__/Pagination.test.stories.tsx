@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
@@ -35,7 +37,7 @@ const meta = {
     totalItems: { table: { disable: true } },
     sibling: { table: { disable: true } },
     hidePrevNextButtonTitle: { table: { disable: true } },
-    hidePageSummary: { table: { disable: true }, control: null },
+    hidePageSummary: { table: { disable: true }, control: false },
     ariaLabel: { table: { disable: true } },
     onChange: { table: { disable: true } },
   },
@@ -112,7 +114,7 @@ export const HidePrevNextButtonTitle = {
     hidePrevNextButtonTitle: true,
   },
   argTypes: {
-    hidePrevNextButtonTitle: { table: true },
+    hidePrevNextButtonTitle: { table: { disable: false } },
   },
 } satisfies Story;
 
@@ -143,7 +145,7 @@ export const WithListLength: Story = {
     defaultCurrent: 1,
   },
   argTypes: {
-    pageSize: { table: true },
+    pageSize: { table: { disable: false } },
   },
   play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -229,8 +231,8 @@ export const Sibling = {
     sibling: 2,
   },
   argTypes: {
-    sibling: { table: true },
-    defaultCurrent: { table: true },
+    sibling: { table: { disable: false } },
+    defaultCurrent: { table: { disable: false } },
   },
   play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -269,6 +271,7 @@ export const WithNavigation: Story = {
   args: {
     ...defaultArgs,
     defaultCurrent: 2,
+    onChange: fn(),
   },
   parameters: {
     imageSnapshot: { disable: true },
@@ -319,7 +322,7 @@ export const WithPrevNextLabel: Story = {
     hidePrevNextButtonTitle: true,
   },
   argTypes: {
-    sibling: { table: true },
+    sibling: { table: { disable: false } },
   },
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);

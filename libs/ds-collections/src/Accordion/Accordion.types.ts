@@ -42,5 +42,7 @@ export interface AccordionComponent
   >;
 }
 
-export interface AccordionContextProps
-  extends Exclude<AccordionProps, 'children' | 'color'> {}
+export type AccordionContextProps = Exclude<
+  AccordionProps,
+  'children' | 'color'
+>;

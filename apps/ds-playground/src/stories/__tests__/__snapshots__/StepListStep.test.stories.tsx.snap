@@ -15,33 +15,16 @@ exports[`Tester/StepList/Step NextButtonWithSpinner smoke-test 1`] = `
         <div class="StepListStep_stepLine__BOJMv ">
         </div>
       </div>
-      <h3 id="steptitle-:ra:"
+      <h3 id="steptitle-:r8:"
           class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
       >
         tittel
       </h3>
-      <div class="StepListStep_stepContent__1uagT   
+      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
           ">
         <div>
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
         </div>
-        <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  StepListStep_stepEditButton__4I4jx"
-                type="button"
-                aria-describedby="steptitle-:ra:"
-        >
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
-               viewbox="0 0 24 24"
-               focusable="false"
-               aria-hidden="true"
-               role="img"
-          >
-            <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
-            </path>
-          </svg>
-          <span class>
-            Endre
-          </span>
-        </button>
       </div>
       <div class="StepListStep_nextLine__hWgXS">
       </div>
@@ -93,27 +76,10 @@ exports[`Tester/StepList/Step WithAttributes play-test 1`] = `
       >
         title
       </h3>
-      <div class="StepListStep_stepContent__1uagT   
+      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
           ">
         <div>
         </div>
-        <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  StepListStep_stepEditButton__4I4jx"
-                type="button"
-                aria-describedby="steptitle-htmlid"
-        >
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
-               viewbox="0 0 24 24"
-               focusable="false"
-               aria-hidden="true"
-               role="img"
-          >
-            <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
-            </path>
-          </svg>
-          <span class>
-            Endre
-          </span>
-        </button>
       </div>
     </li>
   </ol>
@@ -135,7 +101,7 @@ exports[`Tester/StepList/Step WithEditAccessibleDescription play-test 1`] = `
         <div class="StepListStep_stepLine__BOJMv ">
         </div>
       </div>
-      <h3 id="steptitle-:r8:"
+      <h3 id="steptitle-:r6:"
           class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
       >
         tittel
@@ -147,7 +113,7 @@ exports[`Tester/StepList/Step WithEditAccessibleDescription play-test 1`] = `
         </div>
         <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  StepListStep_stepEditButton__4I4jx"
                 type="button"
-                aria-describedby="steptitle-:r8:"
+                aria-describedby="steptitle-:r6:"
         >
           <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
                viewbox="0 0 24 24"
@@ -163,17 +129,6 @@ exports[`Tester/StepList/Step WithEditAccessibleDescription play-test 1`] = `
           </span>
         </button>
       </div>
-      <div class="StepListStep_nextLine__hWgXS">
-      </div>
-      <span class="StepListStep_buttonWrapper__mewkO">
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
-                type="button"
-        >
-          <span class="Button_buttonText__JxyB+">
-            Neste
-          </span>
-        </button>
-      </span>
     </li>
   </ol>
 </div>
@@ -192,11 +147,11 @@ exports[`Tester/StepList/Step WithFullWidthResult smoke-test 1`] = `
           <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
                viewbox="0 0 24 24"
                focusable="false"
-               aria-labelledby="svgtitle-:r7:"
+               aria-labelledby="svgtitle-:r5:"
                aria-hidden="false"
                role="img"
           >
-            <title id="svgtitle-:r7:">
+            <title id="svgtitle-:r5:">
               Fullført
             </title>
             <path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z">
@@ -206,7 +161,7 @@ exports[`Tester/StepList/Step WithFullWidthResult smoke-test 1`] = `
         <div class="StepListStep_stepLine__BOJMv StepListStep_stepLine_neutralResult__s7I7X">
         </div>
       </div>
-      <h3 id="steptitle-:r6:"
+      <h3 id="steptitle-:r4:"
           class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
       >
         jeg er en tittel
@@ -235,11 +190,11 @@ exports[`Tester/StepList/Step WithIconTitleAS play-test 1`] = `
           <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
                viewbox="0 0 24 24"
                focusable="false"
-               aria-labelledby="svgtitle-:r5:"
+               aria-labelledby="svgtitle-:r3:"
                aria-hidden="false"
                role="img"
           >
-            <title id="svgtitle-:r5:">
+            <title id="svgtitle-:r3:">
               svg-tittel
             </title>
             <path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4V2Zm10 14.5-4-4-4 4V20h8v-3.5Zm-4-5 4-4V4H8v3.5l4 4ZM10 6h4v.75l-2 2-2-2V6Z">
@@ -249,7 +204,7 @@ exports[`Tester/StepList/Step WithIconTitleAS play-test 1`] = `
         <div class="StepListStep_stepLine__BOJMv ">
         </div>
       </div>
-      <h2 id="steptitle-:r4:"
+      <h2 id="steptitle-:r2:"
           class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
       >
         jeg er en tittel
@@ -260,17 +215,6 @@ exports[`Tester/StepList/Step WithIconTitleAS play-test 1`] = `
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
         </div>
       </div>
-      <div class="StepListStep_nextLine__hWgXS">
-      </div>
-      <span class="StepListStep_buttonWrapper__mewkO">
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
-                type="button"
-        >
-          <span class="Button_buttonText__JxyB+">
-            Neste
-          </span>
-        </button>
-      </span>
     </li>
   </ol>
 </div>
@@ -297,27 +241,10 @@ exports[`Tester/StepList/Step WithRef play-test 1`] = `
       >
         title
       </h3>
-      <div class="StepListStep_stepContent__1uagT   
+      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
           ">
         <div>
         </div>
-        <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  StepListStep_stepEditButton__4I4jx"
-                type="button"
-                aria-describedby="steptitle-:r0:"
-        >
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
-               viewbox="0 0 24 24"
-               focusable="false"
-               aria-hidden="true"
-               role="img"
-          >
-            <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
-            </path>
-          </svg>
-          <span class>
-            Endre
-          </span>
-        </button>
       </div>
     </li>
   </ol>

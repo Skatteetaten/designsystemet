@@ -25,21 +25,26 @@ const meta = {
   title: 'Komponenter/Modal',
   argTypes: {
     // Props
-    children: { control: { type: null }, table: { category: category.props } },
+    children: {
+      control: { disable: true },
+      table: { category: category.props },
+    },
     classNames: {
-      control: { type: null },
+      control: { disable: true },
       table: { category: category.props },
     },
     dismissOnEsc: {
       table: {
         category: category.props,
-        defaultValue: { summary: getModalDismissOnEscDefault() },
+        defaultValue: { summary: getModalDismissOnEscDefault().toString() },
       },
     },
     dismissOnOutsideClick: {
       table: {
         category: category.props,
-        defaultValue: { summary: getModalDismissOnOutsideClickDefault() },
+        defaultValue: {
+          summary: getModalDismissOnOutsideClickDefault().toString(),
+        },
       },
     },
     hideCloseButton: { table: { category: category.props } },
@@ -68,7 +73,10 @@ const meta = {
       },
     },
     // Events
-    onClose: { control: { type: null }, table: { category: category.event } },
+    onClose: {
+      control: { disable: true },
+      table: { category: category.event },
+    },
   },
   args: {
     children: <Paragraph>{loremIpsum}</Paragraph>,

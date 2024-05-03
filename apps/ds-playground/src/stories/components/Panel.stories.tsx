@@ -48,7 +48,6 @@ const meta = {
       options: panelColorArr,
       control: 'inline-radio',
       table: {
-        type: { summary: panelColorArr },
         category: category.props,
         defaultValue: { summary: getPanelColorDefault() },
       },
@@ -70,7 +69,7 @@ const meta = {
       },
     },
     renderIcon: {
-      control: { type: null },
+      control: { disable: true },
       table: { category: category.props },
     },
     spacing: {
@@ -87,7 +86,6 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getPanelSubtitleAsDefault() },
-        type: { summary: subheadingAsArr },
       },
     },
     title: { table: { category: category.props } },
@@ -97,7 +95,6 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getPanelTitleAsDefault() },
-        type: { summary: headingAsArr },
       },
     },
     variant: {

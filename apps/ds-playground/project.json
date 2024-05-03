@@ -3,6 +3,8 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/ds-playground/src",
   "projectType": "application",
+  "tags": [],
+  "namedInputs": {},
   "targets": {
     "serve": {
       "executor": "@nx/storybook:storybook",
@@ -27,15 +29,12 @@
         "ci": {
           "quiet": true
         },
-        "isVerbose": true
+        "isVerbose": {}
       }
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["apps/ds-playground/**/*.{ts,tsx,js,jsx}"]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "nx:run-commands",
@@ -75,7 +74,5 @@
         }
       }
     }
-  },
-  "tags": [],
-  "namedInputs": {}
+  }
 }

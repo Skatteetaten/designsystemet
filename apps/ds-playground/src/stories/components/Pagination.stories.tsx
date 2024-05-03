@@ -334,25 +334,27 @@ const meta = {
     sibling: {
       table: {
         category: category.props,
-        defaultValue: { summary: getDefaultSibling() },
+        defaultValue: { summary: getDefaultSibling().toString() },
       },
     },
     hidePrevNextButtonTitle: {
       table: {
         category: category.props,
-        defaultValue: { summary: getDefaultHidePrevNextButtonTitle() },
+        defaultValue: {
+          summary: getDefaultHidePrevNextButtonTitle().toString(),
+        },
       },
     },
     hidePageSummary: {
       table: {
         category: category.props,
-        defaultValue: { summary: getDefaultHidePageSummary() },
+        defaultValue: { summary: getDefaultHidePageSummary().toString() },
       },
     },
     pageSize: {
       table: {
         category: category.props,
-        defaultValue: { summary: getDefaultPageSize() },
+        defaultValue: { summary: getDefaultPageSize().toString() },
       },
     },
     totalItems: {

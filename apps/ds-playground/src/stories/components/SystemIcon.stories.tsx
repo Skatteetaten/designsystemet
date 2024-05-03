@@ -5,7 +5,6 @@ import {
   Icon,
   getIconVariantDefault,
   getIconSizeDefault,
-  iconVariantArr,
   DeploySVGpath,
   DeployIcon,
 } from '@skatteetaten/ds-icons';
@@ -25,7 +24,7 @@ const meta = {
       control: 'select',
       options: [...sizeArr].slice(1),
       table: {
-        type: { summary: [...sizeArr].slice(1) },
+        //type: { summary: [...sizeArr].slice(1) },
         category: category.props,
         defaultValue: { summary: getIconSizeDefault() },
       },
@@ -37,9 +36,8 @@ const meta = {
     },
     title: { table: { category: category.props } },
     variant: {
-      control: { type: null },
+      control: { disable: true },
       table: {
-        type: { summary: iconVariantArr },
         category: category.props,
         defaultValue: { summary: getIconVariantDefault() },
       },
