@@ -150,6 +150,10 @@ code {
   gap: var(--spacing-xs);
 }
 
+.gapXl {
+  gap: var(--spacing-xl);
+}
+
 .flexColumn {
   flex-direction: column;
 }

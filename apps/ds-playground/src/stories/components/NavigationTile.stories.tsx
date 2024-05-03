@@ -1,6 +1,10 @@
+import { AccountEnkSVGpath } from '@skatteetaten/ds-icons';
 import {
   NavigationTile,
   NavigationTileProps,
+  getNavigationTileHeadingAsDefault,
+  getNavigationTileHideArrowDefault,
+  getNavigationTileSizeDefault,
 } from '@skatteetaten/ds-navigation';
 import { Meta, StoryObj } from '@storybook/react';
 
@@ -18,12 +22,30 @@ const meta = {
   title: 'Komponenter/NavigationTile',
   argTypes: {
     // Props
-    children: { table: { category: category.props } },
+    title: { control: 'text', table: { category: category.props } },
+    titleAs: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: getNavigationTileHeadingAsDefault() },
+      },
+    },
+    description: { control: 'text', table: { category: category.props } },
     isExternal: { table: { category: category.props } },
-    hideArrowIcon: { table: { category: category.props } },
-    size: { table: { category: category.props } },
-    title: { table: { category: category.props } },
-    titleAs: { table: { category: category.props } },
+    hideArrowIcon: {
+      table: {
+        category: category.props,
+        defaultValue: {
+          summary: getNavigationTileHideArrowDefault().toString(),
+        },
+      },
+    },
+    size: {
+      control: 'radio',
+      table: {
+        category: category.props,
+        defaultValue: { summary: getNavigationTileSizeDefault() },
+      },
+    },
     svgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
@@ -40,7 +62,7 @@ const meta = {
   },
   args: {
     title: defaultTitle,
-    children: defaultDescription,
+    description: defaultDescription,
     href: '#',
   },
   parameters: {
@@ -55,13 +77,21 @@ export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
   render: (_args) => (
-    <nav className={'exampleSpacing gapXl'}>
-      <NavigationTile title={defaultTitle} href={'#'}>
-        {defaultDescription}
-      </NavigationTile>
-      <NavigationTile title={defaultTitle} href={'#'}>
-        {defaultDescription}
-      </NavigationTile>
+    <nav className={'flex gapXl'}>
+      <NavigationTile
+        title={defaultTitle}
+        description={defaultDescription}
+        href={'#'}
+        size={'extraLarge'}
+        svgPath={AccountEnkSVGpath}
+      />
+      <NavigationTile
+        title={defaultTitle}
+        description={defaultDescription}
+        href={'#'}
+        size={'extraLarge'}
+        svgPath={AccountEnkSVGpath}
+      />
     </nav>
   ),
 } satisfies Story;

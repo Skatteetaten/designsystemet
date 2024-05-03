@@ -1,11 +1,13 @@
 /* automatisk genererte types */
 export const icon: string;
+export const icon_large: string;
 export const icon_extraLarge: string;
 export const header: string;
 export const title: string;
 export const title_large: string;
 export const title_extraLarge: string;
 export const content: string;
+export const content_extraLarge: string;
 export const contentIndented: string;
 export const navigationTile: string;
 export const navigationTile_extraLarge: string;

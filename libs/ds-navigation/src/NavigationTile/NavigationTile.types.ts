@@ -31,6 +31,8 @@ export interface NavigationTileComponentCommonProps
   title: string | number | string[] | number[];
   /** Rendrer tittel som heading på gitt nivå */
   titleAs?: HeadingAs;
+  /** Beskrivelse */
+  description?: string | number | string[] | number[];
   /** Viser ikon etter lenketeksten som indikerer at lenken er til en side på et annet domene. Ignoreres dersom 'size' er 'extraLarge'. */
   isExternal?: boolean;
   /** Størrelse på tile */
@@ -39,8 +41,6 @@ export interface NavigationTileComponentCommonProps
   svgPath?: ReactElement;
   /** Skjuler pil-ikonet. Ikonet er alltid skjult dersom 'size' er 'extraLarge' eller dersom 'isExternal' er 'true' */
   hideArrowIcon?: boolean;
-  /** Beskrivelse. */
-  children?: string | number | string[] | number[];
 }
 
 export type NavigationTileProps = NavigationTileComponentCommonProps;
