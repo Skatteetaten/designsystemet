@@ -148,12 +148,16 @@
 
   &_medium,
   &_large {
-    &indented {
+    &Indented {
       margin-left: var(--spacing-xl);
     }
 
     @media (min-width: $breakpoint-xs) {
-      padding: var(--spacing-s) var(--spacing-m);
+      padding: var(--spacing-s) var(--spacing-m) var(--spacing-m);
     }
+  }
+
+  @media (min-width: $breakpoint-xs) {
+    padding-bottom: var(--spacing-m);
   }
 }
