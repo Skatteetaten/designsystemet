@@ -45,7 +45,7 @@ exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
             <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
               Meg selv
             </div>
-            <p class="AccordionItem_subtitle__qhh61  AccordionItem_subtitle_medium__FwG+J">
+            <p class="AccordionItem_subtitle__qhh61">
               Beskrivelse
             </p>
           </div>
@@ -73,7 +73,7 @@ exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
             <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
               Meg selv
             </div>
-            <p class="AccordionItem_subtitle__qhh61  AccordionItem_subtitle_medium__FwG+J">
+            <p class="AccordionItem_subtitle__qhh61">
               Beskrivelse
             </p>
           </div>
@@ -103,7 +103,7 @@ exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
             <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
               Meg selv
             </div>
-            <p class="AccordionItem_subtitle__qhh61  AccordionItem_subtitle_medium__FwG+J">
+            <p class="AccordionItem_subtitle__qhh61">
               Beskrivelse
             </p>
           </div>
@@ -131,7 +131,7 @@ exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
             <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
               Meg selv
             </div>
-            <p class="AccordionItem_subtitle__qhh61  AccordionItem_subtitle_medium__FwG+J">
+            <p class="AccordionItem_subtitle__qhh61">
               Beskrivelse
             </p>
           </div>
@@ -161,7 +161,7 @@ exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
             <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
               Meg selv
             </div>
-            <p class="AccordionItem_subtitle__qhh61  AccordionItem_subtitle_medium__FwG+J">
+            <p class="AccordionItem_subtitle__qhh61">
               Beskrivelse
             </p>
           </div>
@@ -189,7 +189,7 @@ exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
             <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
               Meg selv
             </div>
-            <p class="AccordionItem_subtitle__qhh61  AccordionItem_subtitle_medium__FwG+J">
+            <p class="AccordionItem_subtitle__qhh61">
               Beskrivelse
             </p>
           </div>
@@ -219,7 +219,7 @@ exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
             <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
               Meg selv
             </div>
-            <p class="AccordionItem_subtitle__qhh61  AccordionItem_subtitle_medium__FwG+J">
+            <p class="AccordionItem_subtitle__qhh61">
               Beskrivelse
             </p>
           </div>
@@ -247,7 +247,7 @@ exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
             <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
               Meg selv
             </div>
-            <p class="AccordionItem_subtitle__qhh61  AccordionItem_subtitle_medium__FwG+J">
+            <p class="AccordionItem_subtitle__qhh61">
               Beskrivelse
             </p>
           </div>
@@ -277,7 +277,7 @@ exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
             <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
               Meg selv
             </div>
-            <p class="AccordionItem_subtitle__qhh61  AccordionItem_subtitle_medium__FwG+J">
+            <p class="AccordionItem_subtitle__qhh61">
               Beskrivelse
             </p>
           </div>
@@ -305,7 +305,7 @@ exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
             <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
               Meg selv
             </div>
-            <p class="AccordionItem_subtitle__qhh61  AccordionItem_subtitle_medium__FwG+J">
+            <p class="AccordionItem_subtitle__qhh61">
               Beskrivelse
             </p>
           </div>
@@ -335,7 +335,7 @@ exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
             <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
               Meg selv
             </div>
-            <p class="AccordionItem_subtitle__qhh61  AccordionItem_subtitle_medium__FwG+J">
+            <p class="AccordionItem_subtitle__qhh61">
               Beskrivelse
             </p>
           </div>
@@ -363,7 +363,7 @@ exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
             <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj">
               Meg selv
             </div>
-            <p class="AccordionItem_subtitle__qhh61  AccordionItem_subtitle_medium__FwG+J">
+            <p class="AccordionItem_subtitle__qhh61">
               Beskrivelse
             </p>
           </div>
