@@ -23,6 +23,9 @@ const meta = {
   argTypes: {
     // Props
     title: { control: 'text', table: { category: category.props } },
+    classNames: {
+      table: { category: category.props },
+    },
     titleAs: {
       table: {
         category: category.props,

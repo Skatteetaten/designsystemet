@@ -1,4 +1,4 @@
-import { JSX, ReactNode, forwardRef } from 'react';
+import { JSX, forwardRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
@@ -29,6 +29,7 @@ export const NavigationTile = forwardRef<
       'data-testid': dataTestId,
       title,
       titleAs: TitleTag = getNavigationTileHeadingAsDefault(),
+      classNames,
       description,
       isExternal,
       hideArrowIcon = getNavigationTileHideArrowDefault(),
@@ -47,42 +48,19 @@ export const NavigationTile = forwardRef<
       size !== 'medium' ? styles[`icon_${size}`] : ''
     }`;
 
-    const contentClassNames = `${styles.content} ${
-      size === 'extraLarge' && styles.content_extraLarge
-    } ${size !== 'extraLarge' && svgPath ? styles.contentIndented : ''}`.trim();
+    const titleClassNames = `${styles.title} ${
+      size !== 'medium' ? styles[`title_${size}`] : ''
+    } ${classNames?.title}`.trim();
+
+    const descriptionClassNames = `${styles.description} ${
+      size === 'extraLarge' && styles.description_extraLarge
+    } ${size !== 'extraLarge' && svgPath ? styles.descriptionIndented : ''} ${
+      classNames?.description
+    }`.trim();
 
     const concatenatedClassName = `${styles.navigationTile} ${
       styles[`navigationTile_${size}`]
-    } ${className}`;
-
-    //TODO: pakke denne inn i memo? callback?
-    const renderLinkIcon = (): ReactNode => {
-      if (size === 'extraLarge') {
-        return null;
-      }
-
-      if (isExternal) {
-        return (
-          <ExternalIcon
-            size={'large'}
-            className={iconClassNames}
-            ariaLabel={t('shared.ExternalIcon')}
-          />
-        );
-      }
-
-      if (!hideArrowIcon) {
-        return (
-          <Icon
-            size={'large'}
-            svgPath={ArrowForwardSVGpath}
-            className={iconClassNames}
-          />
-        );
-      }
-
-      return null;
-    };
+    } ${className} ${classNames?.container}`.trim();
 
     return (
       <a
@@ -105,16 +83,26 @@ export const NavigationTile = forwardRef<
               className={iconClassNames}
             />
           )}
-          <TitleTag
-            className={`${styles.title} ${
-              size !== 'medium' ? styles[`title_${size}`] : ''
-            }`.trim()}
-          >
-            {title}
-          </TitleTag>
-          {renderLinkIcon()}
+          <TitleTag className={titleClassNames}>{title}</TitleTag>
+          {isExternal && size !== 'extraLarge' ? (
+            <ExternalIcon
+              size={'large'}
+              className={iconClassNames}
+              ariaLabel={t('shared.ExternalIcon')}
+            />
+          ) : null}
+
+          {!isExternal && !hideArrowIcon && size !== 'extraLarge' ? (
+            <Icon
+              size={'large'}
+              svgPath={ArrowForwardSVGpath}
+              className={iconClassNames}
+            />
+          ) : null}
         </div>
-        {description && <div className={contentClassNames}>{description}</div>}
+        {description && (
+          <div className={descriptionClassNames}>{description}</div>
+        )}
       </a>
     );
   }

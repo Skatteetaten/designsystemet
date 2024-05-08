@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { CalendarSVGpath } from '@skatteetaten/ds-icons';
+import { dsI18n, headingAsArr } from '@skatteetaten/ds-core-utils';
+import { AccountEnkSVGpath, CalendarSVGpath } from '@skatteetaten/ds-icons';
 import {
   NavigationTile,
   NavigationTileProps,
@@ -40,10 +40,13 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    title: { table: { disable: true } },
-    description: { table: { disable: true } },
+    classNames: { table: { disable: true } },
+    title: { control: 'text', table: { disable: true } },
+    titleAs: { table: { disable: true } },
+    description: { control: 'text', table: { disable: true } },
     isExternal: { table: { disable: true } },
-    hideLeftArrowIcon: { table: { disable: true } },
+    hideArrowIcon: { table: { disable: true } },
+    size: { table: { disable: true } },
     svgPath: {
       table: { disable: true },
       options: Object.keys(SystemSVGPaths),
@@ -55,10 +58,9 @@ const meta = {
     download: { table: { disable: true } },
     // Aria
     ariaDescribedby: { table: { disable: true } },
+    ariaLabel: { table: { disable: true } },
     // Events
-    onBlur: { table: { disable: true } },
     onClick: { table: { disable: true } },
-    onFocus: { table: { disable: true } },
   },
 } as Meta<typeof NavigationTile>;
 export default meta;
@@ -68,10 +70,47 @@ const Template: StoryFn<typeof NavigationTile> = (args) => (
   <NavigationTile {...args} onClick={(e): void => e.preventDefault()} />
 );
 
+const newTitleText = 'Ny tittel';
+const OnClickTemplate: StoryFn<typeof NavigationTile> = (args) => {
+  const [linkText, setLinkText] = useState(defaultTitle);
+  return (
+    <NavigationTile
+      {...args}
+      title={linkText}
+      onClick={(e): void => {
+        e.preventDefault();
+        setLinkText(newTitleText);
+        args.onClick && args.onClick(e);
+      }}
+    />
+  );
+};
+
+const TemplateWithAllHeadings: StoryFn<typeof NavigationTile> = (args) => (
+  <nav className={'flex flexColumn gapXs'}>
+    {headingAsArr.map((headingLevel, item) => {
+      return (
+        <NavigationTile
+          key={`level_${item}`}
+          {...args}
+          titleAs={headingLevel}
+          title={`Heading ${headingLevel}`}
+        />
+      );
+    })}
+  </nav>
+);
+
+const TemplateWithMultipleTiles: StortyFn<typeof NavigationTile> = (args) => (
+  <nav className={'flex gapS'}>
+    <NavigationTile {...args} />
+    <NavigationTile {...args} />
+  </nav>
+);
+
 const defaultArgs: NavigationTileProps = {
   title: defaultTitle,
   href: '#storybook-root',
-  description: defaultDescription,
 };
 
 export const WithRef = {
@@ -122,7 +161,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   render: Template,
-  name: 'Defaults (A???)',
+  name: 'Defaults (A1, A7)',
   args: {
     ...defaultArgs,
   },
@@ -141,20 +180,23 @@ export const Defaults = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
+    const title = canvas.getByRole('heading');
     await expect(link).not.toHaveAttribute('rel');
     await expect(link).not.toHaveAttribute('target');
+    await expect(title.tagName).toBe('H2');
   },
 } satisfies Story;
 
 export const WithIcon = {
   render: Template,
-  name: 'With Icon (A4, B2)',
+  name: 'With Icon (A2, B2)',
   args: {
     ...defaultArgs,
     svgPath: CalendarSVGpath,
   },
   argTypes: {
     svgPath: { table: { disable: false } },
+    size: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -168,13 +210,14 @@ export const WithIcon = {
 
 export const WithExternalIcon = {
   render: Template,
-  name: 'With External Icon (A5)',
+  name: 'With External Icon (A6)',
   args: {
     ...defaultArgs,
     isExternal: true,
   },
   argTypes: {
     isExternal: { table: { disable: false } },
+    size: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -189,9 +232,65 @@ export const WithExternalIcon = {
   },
 } satisfies Story;
 
+export const WithHiddenArrowIcon = {
+  render: Template,
+  name: 'With Hidden Arrow Icon (A5)',
+  args: {
+    ...defaultArgs,
+    hideArrowIcon: true,
+  },
+  argTypes: {
+    hideArrowIcon: { table: { disable: false } },
+    size: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithDescription = {
+  render: Template,
+  name: 'With Description (A4)',
+  args: {
+    ...defaultArgs,
+    description: defaultDescription,
+  },
+  argTypes: {
+    isExternal: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithSizeMedium = {
+  render: Template,
+  name: 'With Size Medium (A1)',
+  args: {
+    ...defaultArgs,
+    description: defaultDescription,
+    size: 'medium',
+  },
+} satisfies Story;
+
+export const WithSizeLarge = {
+  render: Template,
+  name: 'With Size Large (A1)',
+  args: {
+    ...defaultArgs,
+    description: defaultDescription,
+    size: 'large',
+  },
+} satisfies Story;
+
+export const WithSizeExtraLarge = {
+  render: Template,
+  name: 'With Size ExtraLarge (A1)',
+  args: {
+    ...defaultArgs,
+    description: defaultDescription,
+    size: 'extraLarge',
+    svgPath: AccountEnkSVGpath,
+  },
+} satisfies Story;
+
 export const WithTarget = {
   render: Template,
-  name: 'With Target (A2)',
+  name: 'With Target (A8)',
   args: {
     ...defaultArgs,
     target: '_blank',
@@ -212,7 +311,7 @@ export const WithTarget = {
 
 export const WithAriaDescribedby = {
   render: Template,
-  name: 'With AriaDescribedby (B3)',
+  name: 'With AriaDescribedby (B4)',
   args: {
     ...defaultArgs,
     ariaDescribedby: elementId,
@@ -225,22 +324,6 @@ export const WithAriaDescribedby = {
   },
   play: verifyAttribute('aria-describedby', elementId),
 } satisfies Story;
-
-const nyLinkText = 'Ny tittel';
-const OnClickTemplate: StoryFn<typeof NavigationTile> = (args) => {
-  const [linkText, setLinkText] = useState(defaultTitle);
-  return (
-    <NavigationTile
-      {...args}
-      title={linkText}
-      onClick={(e): void => {
-        e.preventDefault();
-        setLinkText(nyLinkText);
-        args.onClick && args.onClick(e);
-      }}
-    />
-  );
-};
 
 export const WithOnClick = {
   render: OnClickTemplate,
@@ -255,13 +338,69 @@ export const WithOnClick = {
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
-    await expect(link).toHaveTextContent(
-      'Klikk på lenken for å teste onClick event'
-    );
+    await expect(link).toHaveTextContent(defaultTitle);
     await userEvent.click(link);
-    await expect(link).toHaveTextContent(
-      'Ny lenketekst slik at vi ser at event fungerte'
-    );
+    await expect(link).toHaveTextContent('Ny tittel');
     await waitFor(() => expect(args.onClick).toHaveBeenCalled());
+  },
+} satisfies Story;
+
+export const WithTitleAs = {
+  render: TemplateWithAllHeadings,
+  name: 'With TitleAs (B3)',
+  args: {
+    ...defaultArgs,
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const headings = canvas.getAllByRole('heading');
+    for (const [index, heading] of headings.entries()) {
+      await expect(heading.tagName).toBe(
+        headingAsArr[index].toLocaleUpperCase()
+      );
+    }
+  },
+} satisfies Story;
+
+export const WithTilesInColumns = {
+  render: TemplateWithMultipleTiles,
+  name: 'With Tiles in Columns (A9)',
+  args: {
+    ...defaultArgs,
+    size: 'extraLarge',
+    svgPath: AccountEnkSVGpath,
+  },
+  argTypes: {
+    size: {
+      table: { disable: false },
+    },
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    ...defaultArgs,
+    description: defaultDescription,
+    classNames: {
+      container: ' dummyClassname',
+      title: 'dummyClassname',
+      description: 'dummyClassname',
+    },
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const container = canvas.getByRole('link');
+    const title = canvas.getByText(defaultTitle);
+    const description = canvas.getByText(defaultDescription);
+
+    await expect(container).toHaveClass('dummyClassname');
+    await expect(title).toHaveClass('dummyClassname');
+    await expect(description).toHaveClass('dummyClassname');
   },
 } satisfies Story;

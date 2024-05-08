@@ -4,7 +4,7 @@ import { BaseProps, HeadingAs, Size } from '@skatteetaten/ds-core-utils';
 
 type RequiredNavigationTileHTMLAttributes = Pick<
   HTMLProps<HTMLAnchorElement>,
-  'aria-label' | 'href' | 'target' | 'onClick'
+  'href' | 'target' | 'onClick'
 >;
 
 type NavigationTileHTMLAttributes =
@@ -27,15 +27,20 @@ export type NavigationTileSize = Extract<
 export interface NavigationTileComponentCommonProps
   extends NavigationTilePropsHTMLAttributes,
     BaseProps {
+  classNames?: {
+    container?: string;
+    title?: string;
+    description?: string;
+  };
   /** Tittel */
   title: string | number | string[] | number[];
   /** Rendrer tittel som heading på gitt nivå */
   titleAs?: HeadingAs;
   /** Beskrivelse */
   description?: string | number | string[] | number[];
-  /** Viser ikon etter lenketeksten som indikerer at lenken er til en side på et annet domene. Ignoreres dersom 'size' er 'extraLarge'. */
+  /** Viser ikon etter lenketeksten som indikerer at lenken er til en side på et annet domene. Ikon ikke synlig dersom 'size' er 'extraLarge'. */
   isExternal?: boolean;
-  /** Størrelse på tile */
+  /** Størrelse på NavigationTile */
   size?: NavigationTileSize;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
   svgPath?: ReactElement;
