@@ -141,7 +141,7 @@ exports[`Tester/Accordion/Item WithCustomClassNames play-test 1`] = `
           <div class="AccordionItem_title__HrXa8 AccordionItem_title_medium__o8stj dummyClassname">
             Meg selv
           </div>
-          <p class="AccordionItem_subtitle__qhh61 AccordionItem_subtitle_expanded__tGWMb AccordionItem_subtitle_medium__FwG+J dummyClassname">
+          <p class="AccordionItem_subtitle__qhh61 dummyClassname">
             Beskrivelse
           </p>
         </div>

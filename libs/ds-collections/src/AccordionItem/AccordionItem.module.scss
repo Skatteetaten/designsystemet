@@ -13,6 +13,10 @@
 
 .tag {
   margin: 0;
+
+  &:has(.header:focus) {
+    outline: 2px solid var(--palette-graphite-0);
+  }
 }
 
 .icon {
@@ -129,17 +133,6 @@
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-regular);
   line-height: var(--semantic-line-height-article);
-
-  @media (min-width: $breakpoint-xs) {
-    &_medium,
-    &_large {
-      padding-bottom: var(--spacing-s);
-    }
-
-    &_expanded {
-      padding-bottom: 0;
-    }
-  }
 }
 
 .content {
@@ -160,7 +153,11 @@
     }
 
     @media (min-width: $breakpoint-xs) {
-      padding: var(--spacing-s) var(--spacing-m);
+      padding: var(--spacing-s) var(--spacing-m) var(--spacing-m);
     }
+  }
+
+  @media (min-width: $breakpoint-xs) {
+    padding-bottom: var(--spacing-m);
   }
 }

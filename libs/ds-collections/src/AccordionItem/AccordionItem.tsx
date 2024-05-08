@@ -68,8 +68,6 @@ export const AccordionItem = forwardRef<HTMLButtonElement, AccordionItemProps>(
     } ${classNames?.title ?? ''}`.trim();
 
     const subtitleClassNames = `${styles.subtitle} ${
-      isExpanded ? styles.subtitle_expanded : ''
-    } ${size !== 'small' ? styles[`subtitle_${size}`] : ''} ${
       classNames?.subtitle ?? ''
     }`.trim();
 
