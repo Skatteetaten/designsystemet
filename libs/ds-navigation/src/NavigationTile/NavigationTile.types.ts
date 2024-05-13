@@ -1,22 +1,17 @@
-import { HTMLProps, MouseEventHandler, ReactElement } from 'react';
+import { HTMLProps, ReactElement } from 'react';
 
 import { BaseProps, HeadingAs, Size } from '@skatteetaten/ds-core-utils';
 
-type RequiredNavigationTileHTMLAttributes = Pick<
+type NavigationTileHTMLAttributes = Pick<
   HTMLProps<HTMLAnchorElement>,
-  'href' | 'target' | 'onClick'
+  'target' | 'onClick'
 >;
-
-type NavigationTileHTMLAttributes =
-  Partial<RequiredNavigationTileHTMLAttributes>;
 
 interface NavigationTilePropsHTMLAttributes
   extends NavigationTileHTMLAttributes {
   href: string;
-  target?: string;
   ariaDescribedby?: string;
   ariaLabel?: string;
-  onClick?: MouseEventHandler<HTMLAnchorElement>;
 }
 
 export type NavigationTileSize = Extract<
