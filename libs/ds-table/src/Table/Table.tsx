@@ -37,6 +37,7 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
       hasFullWidth,
       showCaption,
       setSortState,
+      rowInEditModeId: externalRowInEditModeId,
       children,
     },
     ref
@@ -47,7 +48,7 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
     const [shouldShowSRText, setShouldShowSRText] = useState<boolean>(false);
     const [shouldFadeLeft, setShouldFadeLeft] = useState<boolean>(false);
     const [rowInEditModeId, setRowInEditModeId] = useState<string | undefined>(
-      undefined
+      externalRowInEditModeId
     );
 
     if (caption === '') {
