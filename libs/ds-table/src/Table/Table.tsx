@@ -32,12 +32,12 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
       lang,
       'data-testid': dataTestId,
       caption,
+      rowInEditModeId: externalRowInEditModeId,
       variant = getTableVariantDefault(),
       sortState,
       hasFullWidth,
       showCaption,
       setSortState,
-      rowInEditModeId: externalRowInEditModeId,
       children,
     },
     ref
