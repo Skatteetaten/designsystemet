@@ -3,7 +3,6 @@ import { useState, JSX } from 'react';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Checkbox, FileUploader, UploadedFile } from '@skatteetaten/ds-forms';
 import { StoryObj, Meta } from '@storybook/react';
-
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
@@ -86,6 +85,108 @@ type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {} satisfies Story;
 
+//disabled da vi ønsker og ligne på fetch
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function mockFetch(
+  input: RequestInfo | URL,
+  init?: RequestInit,
+  feil?: boolean
+): Promise<Response> {
+  if (feil) {
+    return Promise.resolve(Response.json({}, { status: 400 }));
+  } else {
+    return Promise.resolve(Response.json({}));
+  }
+}
+
+export const SimpleCompleteExample: Story = {
+  render: (_args): JSX.Element => {
+    const [fileUploaderState, setSuccess, setLoading, setFailure, remove] =
+      FileUploader.useFileUploader(); //TODO import FileUploaderError
+
+    const [shouldError, setShouldError] = useState(false);
+    const uploadUrl = 'http://localhost:9090/test';
+
+    const onDelete = async (file: UploadedFile): Promise<boolean> => {
+      //TODO hvordan burde man håntere venting her??
+      const response = await mockFetch(
+        uploadUrl,
+        {
+          method: 'DELETE',
+        },
+        shouldError
+      );
+      if (!response.ok) {
+        return false;
+      } else {
+        remove(file);
+        return true;
+      }
+    };
+
+    const onChange = async (files: File[]): Promise<boolean> => {
+      //man må sjekke files.length i tillfellet noen drar på flere filer samtidig
+      if (
+        fileUploaderState.isUploading ||
+        fileUploaderState.uploadedFiles.length > 0 ||
+        files.length > 1
+      ) {
+        alert('Bare en fil om gangen'); //TODO Hvordan burde dette hånteres?
+        return Promise.reject();
+      }
+      setLoading();
+
+      const response = await mockFetch(
+        uploadUrl,
+        {
+          method: 'POST',
+          body: files[0],
+        },
+        shouldError
+      );
+
+      if (!response.ok) {
+        setFailure(files, [
+          {
+            error: 'det har skjedd noe feil',
+            files: [
+              {
+                name: files[0].name,
+                id: files[0].name,
+              },
+            ],
+          },
+        ]);
+        return false;
+      } else {
+        setSuccess(files);
+        return true;
+      }
+    };
+
+    return (
+      <>
+        <Checkbox
+          checked={shouldError}
+          onChange={() => setShouldError(!shouldError)}
+        >
+          {'Mock uploade og slett feiler 50% av tiden'}
+        </Checkbox>
+        <FileUploader
+          label={'Last opp et dokument'}
+          acceptedFileFormats={['.pdf', '.jpeg', '.png']}
+          multiple={false}
+          {...fileUploaderState}
+          onFileDelete={onDelete}
+          onFileChange={onChange}
+        />
+      </>
+    );
+  },
+} satisfies Story;
+
+SimpleCompleteExample.parameters = exampleParameters;
+
 //TODO hvorfor henger storybook når jeg setter args som parameter her og mottar status 500?
 export const Examples: Story = {
   render: (_args): JSX.Element => {
@@ -136,14 +237,14 @@ export const Examples: Story = {
           errorMessage={error ?? ''}
           hasError={!!error}
           multiple
-          onFileDelete={(file): boolean => {
+          onFileDelete={async (file): Promise<boolean> => {
             if (shouldMockUpload) {
               remove(file);
               return true;
             }
             let deleteStatus = true;
 
-            fetch(uploadUrl, {
+            await fetch(uploadUrl, {
               method: 'DELETE',
             }).then((response) => {
               if (!response.ok) {
