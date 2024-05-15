@@ -5,7 +5,6 @@ import { Table, getTableSumAlignmentDefault } from '@skatteetaten/ds-table';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Table.Sum,
@@ -39,9 +38,6 @@ const meta = {
   },
   args: {
     children: '1 000kr',
-  },
-  parameters: {
-    version: getVersion('ds-table'),
   },
 } satisfies Meta<typeof Table.Sum>;
 

@@ -7,7 +7,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Alert,
@@ -37,9 +36,6 @@ const meta = {
       'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.',
     showAlert: true,
     variant: 'neutral',
-  },
-  parameters: {
-    version: getVersion('ds-status'),
   },
 } satisfies Meta<typeof Alert>;
 

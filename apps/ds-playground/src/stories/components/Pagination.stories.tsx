@@ -13,7 +13,6 @@ import { JSX } from 'react/jsx-runtime';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const data = [
   {
@@ -375,9 +374,6 @@ const meta = {
     totalItems: 70,
     sibling: getDefaultSibling(),
     defaultCurrent: 1,
-  },
-  parameters: {
-    version: getVersion('ds-navigation'),
   },
 } satisfies Meta<typeof Pagination>;
 

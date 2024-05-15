@@ -13,7 +13,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Icon,
@@ -47,9 +46,6 @@ const meta = {
   },
   args: {
     svgPath: DeploySVGpath,
-  },
-  parameters: {
-    version: getVersion('ds-icons'),
   },
 } satisfies Meta<typeof Icon>;
 

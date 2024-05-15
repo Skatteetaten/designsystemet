@@ -6,7 +6,6 @@ import {
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Table.DataCell,
@@ -36,9 +35,6 @@ const meta = {
   },
   args: {
     children: 'cell 1',
-  },
-  parameters: {
-    version: getVersion('ds-table'),
   },
 } satisfies Meta<typeof Table.DataCell>;
 

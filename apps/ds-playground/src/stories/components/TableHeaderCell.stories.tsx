@@ -6,7 +6,6 @@ import {
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Table.HeaderCell,
@@ -39,9 +38,6 @@ const meta = {
   args: {
     children: 'header celle',
     className: 'headerCellWidth',
-  },
-  parameters: {
-    version: getVersion('ds-table'),
   },
 } satisfies Meta<typeof Table.HeaderCell>;
 

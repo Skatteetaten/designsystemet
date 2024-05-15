@@ -11,7 +11,6 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: ErrorSummary,
@@ -46,9 +45,6 @@ const meta = {
         {'Selger du varer og tjenester for egen regning?'}
       </ErrorSummary.Error>,
     ],
-  },
-  parameters: {
-    version: getVersion('ds-forms'),
   },
 } satisfies Meta<typeof ErrorSummary>;
 

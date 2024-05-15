@@ -7,7 +7,6 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -52,9 +51,6 @@ const meta = {
         {'Pendler du dagen lang?'}
       </LinkGroup.Link>,
     ],
-  },
-  parameters: {
-    version: getVersion('ds-buttons'),
   },
 } satisfies Meta<typeof LinkGroup>;
 

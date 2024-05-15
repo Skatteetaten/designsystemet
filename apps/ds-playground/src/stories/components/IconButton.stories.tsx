@@ -10,7 +10,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const availableSizes = [...sizeArr].slice(0, 4);
 
@@ -61,9 +60,6 @@ const meta = {
   args: {
     title: 'Skriv ut',
     svgPath: PrintSVGpath,
-  },
-  parameters: {
-    version: getVersion('ds-buttons'),
   },
 } satisfies Meta<typeof IconButton>;
 
