@@ -478,3 +478,12 @@ export const WithWideScreen = {
     },
   },
 } satisfies Story;
+
+export const WithFullWidthExpandableEdit = {
+  render: TemplateExpandEditSort,
+  name: 'With FullWidth Edit Expand Sort',
+  args: {
+    ...defaultArgs,
+    hasFullWidth: true,
+  },
+} satisfies Story;
