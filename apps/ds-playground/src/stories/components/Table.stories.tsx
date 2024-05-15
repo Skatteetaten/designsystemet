@@ -44,6 +44,7 @@ const meta = {
     },
     caption: { table: { category: category.props } },
     hasFullWidth: { table: { category: category.props } },
+    rowInEditModeId: { table: { category: category.props } },
   },
   parameters: {
     version: getVersion('ds-table'),

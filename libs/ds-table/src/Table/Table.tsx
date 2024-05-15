@@ -32,6 +32,7 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
       lang,
       'data-testid': dataTestId,
       caption,
+      rowInEditModeId: externalRowInEditModeId,
       variant = getTableVariantDefault(),
       sortState,
       hasFullWidth,
@@ -47,7 +48,7 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
     const [shouldShowSRText, setShouldShowSRText] = useState<boolean>(false);
     const [shouldFadeLeft, setShouldFadeLeft] = useState<boolean>(false);
     const [rowInEditModeId, setRowInEditModeId] = useState<string | undefined>(
-      undefined
+      externalRowInEditModeId
     );
 
     if (caption === '') {
