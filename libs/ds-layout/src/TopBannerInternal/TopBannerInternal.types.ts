@@ -11,7 +11,7 @@ type SkipLink = Omit<TopBannerSkipLinkProps, 'children'> & {
 export interface TopBannerInternalProps extends BaseProps {
   /** Overskrift eller navn på løsning. Merk at dette ikke gir heading-element i topbanner */
   title?: string;
-  /** valgfri undertittel */
+  /** Valgfri undertittel */
   description?: string;
   /** Kan brukes til å tydeliggjøre at man er i testmiljø */
   isUnderConstruction?: boolean;
