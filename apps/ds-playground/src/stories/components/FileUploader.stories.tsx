@@ -170,7 +170,7 @@ export const SimpleCompleteExample: Story = {
           checked={shouldError}
           onChange={() => setShouldError(!shouldError)}
         >
-          {'Mock uploade og slett feiler 50% av tiden'}
+          {'Feil netverkskallene'}
         </Checkbox>
         <FileUploader
           label={'Last opp et dokument'}
