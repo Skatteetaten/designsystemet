@@ -1,0 +1,21 @@
+import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import * as TopBannerInternalStories from './TopBannerInternal.stories';
+import { VersionBadge } from '../utils/VersionBadge';
+
+<Meta of={TopBannerInternalStories} />
+
+# TopBannerInternal
+
+<VersionBadge packageName={'layout'} />
+
+<Primary />
+
+```tsx
+import { TopBannerInternal } from '@skatteetaten/ds-layout';
+```
+
+<Controls />
+
+## Examples
+
+<Canvas of={TopBannerInternalStories.Examples} />
