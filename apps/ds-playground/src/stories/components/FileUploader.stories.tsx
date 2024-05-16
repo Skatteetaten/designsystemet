@@ -85,8 +85,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {} satisfies Story;
 
-//disabled da vi ønsker og ligne på fetch
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function mockFetch(feil?: boolean): Promise<Response> {
   await new Promise((r) => setTimeout(r, 500));
 
