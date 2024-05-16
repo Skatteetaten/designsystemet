@@ -87,63 +87,57 @@ export const Preview: Story = {} satisfies Story;
 
 //disabled da vi ønsker og ligne på fetch
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-function mockFetch(
-  input: RequestInfo | URL,
-  init?: RequestInit,
-  feil?: boolean
-): Promise<Response> {
+async function mockFetch(feil?: boolean): Promise<Response> {
+  await new Promise((r) => setTimeout(r, 500));
+
   if (feil) {
-    return Promise.resolve(Response.json({}, { status: 400 }));
+    return Response.json({}, { status: 400 });
   } else {
-    return Promise.resolve(Response.json({}));
+    return Response.json({});
   }
+}
+function mockUpload(_any: File, feil: boolean): Promise<Response> {
+  return mockFetch(feil);
+}
+function mockDelete(_any: any, feil: boolean): Promise<Response> {
+  return mockFetch(feil);
 }
 
 export const SimpleCompleteExample: Story = {
   render: (_args): JSX.Element => {
     const [fileUploaderState, setSuccess, setLoading, setFailure, remove] =
-      FileUploader.useFileUploader(); //TODO import FileUploaderError
+      FileUploader.useFileUploader();
 
     const [shouldError, setShouldError] = useState(false);
-    const uploadUrl = 'http://localhost:9090/test';
 
     const onDelete = async (file: UploadedFile): Promise<boolean> => {
-      //TODO hvordan burde man håntere venting her??
-      const response = await mockFetch(
-        uploadUrl,
-        {
-          method: 'DELETE',
-        },
-        shouldError
-      );
-      if (!response.ok) {
-        return false;
-      } else {
+      const response = await mockDelete(file.name, shouldError);
+      if (response.ok) {
         remove(file);
         return true;
+      } else {
+        return false;
       }
     };
 
     const onChange = async (files: File[]): Promise<boolean> => {
-      //man må sjekke files.length i tillfellet noen drar på flere filer samtidig
       if (
         fileUploaderState.isUploading ||
-        fileUploaderState.uploadedFiles.length > 0 ||
-        files.length > 1
+        fileUploaderState.uploadedFiles.length > 0
       ) {
-        alert('Bare en fil om gangen'); //TODO Hvordan burde dette hånteres?
+        alert('Du har allerede lastet opp en fil/holder på laste den opp');
         return Promise.reject();
       }
+      if (files.length > 1) {
+        alert(
+          'Det er ikke lov med flere filer (dette kan bare skje med drag and drop)'
+        );
+        return Promise.reject();
+      }
+
       setLoading();
 
-      const response = await mockFetch(
-        uploadUrl,
-        {
-          method: 'POST',
-          body: files[0],
-        },
-        shouldError
-      );
+      const response = await mockUpload(files[0], shouldError);
 
       if (!response.ok) {
         setFailure(files, [
@@ -170,7 +164,7 @@ export const SimpleCompleteExample: Story = {
           checked={shouldError}
           onChange={() => setShouldError(!shouldError)}
         >
-          {'Feil netverkskallene'}
+          {'La nettverkskall feile'}
         </Checkbox>
         <FileUploader
           label={'Last opp et dokument'}
