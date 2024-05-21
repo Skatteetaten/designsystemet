@@ -86,7 +86,7 @@ type Story = StoryObj<typeof meta>;
 export const Preview: Story = {} satisfies Story;
 
 async function mockFetch(feil?: boolean): Promise<Response> {
-  await new Promise((r) => setTimeout(r, 500));
+  await new Promise((r) => setTimeout(r, 5000));
 
   if (feil) {
     return Response.json({}, { status: 400 });
@@ -119,11 +119,8 @@ export const SimpleCompleteExample: Story = {
     };
 
     const onChange = async (files: File[]): Promise<boolean> => {
-      if (
-        fileUploaderState.isUploading ||
-        fileUploaderState.uploadedFiles.length > 0
-      ) {
-        alert('Du har allerede lastet opp en fil/holder på laste den opp');
+      if (fileUploaderState.uploadedFiles.length > 0) {
+        alert('Du har allerede lastet opp en fil');
         return Promise.reject();
       }
       if (files.length > 1) {
