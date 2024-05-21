@@ -86,7 +86,7 @@ type Story = StoryObj<typeof meta>;
 export const Preview: Story = {} satisfies Story;
 
 async function mockFetch(feil?: boolean): Promise<Response> {
-  await new Promise((r) => setTimeout(r, 5000));
+  await new Promise((r) => setTimeout(r, 500));
 
   if (feil) {
     return Response.json({}, { status: 400 });
