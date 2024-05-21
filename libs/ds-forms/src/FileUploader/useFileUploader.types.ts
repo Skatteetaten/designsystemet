@@ -38,7 +38,7 @@ export type FileAction = FileActionError | FileActionDelete | FileActionSuccess;
 
 export type FileUploaderError = Array<{
   error: string;
-  files: Array<{ name: string; reason?: string; id: string }>;
+  files: Array<{ name: string; reason?: string; id?: string }>;
 }>;
 
 export type SuccessMethod<T> = (files: Array<UploadedFile>, data?: T) => void;
