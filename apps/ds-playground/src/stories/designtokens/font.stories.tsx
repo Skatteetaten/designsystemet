@@ -1,7 +1,6 @@
 import { StoryObj } from '@storybook/react';
 
 import { TokensList } from './TokensList';
-import { getVersion } from '../utils/version.utils';
 
 export default {
   title: 'Designtokens/Font',
@@ -16,6 +15,5 @@ export const Font: StoryObj = {
       },
     },
     viewMode: 'docs',
-    version: getVersion('ds-core-designtokens'),
   },
 };

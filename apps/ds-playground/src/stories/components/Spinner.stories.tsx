@@ -10,7 +10,6 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Spinner,
@@ -46,9 +45,6 @@ const meta = {
       },
     },
     hideTitle: { table: { category: category.props } },
-  },
-  parameters: {
-    version: getVersion('ds-progress'),
   },
 } satisfies Meta<typeof Spinner>;
 

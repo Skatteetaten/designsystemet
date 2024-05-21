@@ -18,7 +18,6 @@ import farmerIllustration from '../../assets/farmer-illustration.svg';
 import waitIllustration from '../../assets/wait-alert-illustration.png';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Modal,
@@ -81,9 +80,6 @@ const meta = {
   args: {
     children: <Paragraph>{loremIpsum}</Paragraph>,
     title: 'Modal title',
-  },
-  parameters: {
-    version: getVersion('ds-overlays'),
   },
 } satisfies Meta<typeof Modal>;
 

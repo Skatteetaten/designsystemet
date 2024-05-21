@@ -9,7 +9,6 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: StepList.Step,
@@ -77,9 +76,6 @@ const meta = {
     title: 'Overskrift',
     children: 'Innhold',
     stepNumber: 9,
-  },
-  parameters: {
-    version: getVersion('ds-collections'),
   },
 } satisfies Meta<typeof StepList.Step>;
 

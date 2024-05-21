@@ -11,7 +11,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const exampleTitle = 'Hva er aksjesparekonto';
 const exampleContent =
@@ -66,9 +65,6 @@ const meta = {
   args: {
     children: loremIpsum,
     title: 'OpenClose title',
-  },
-  parameters: {
-    version: getVersion('ds-collections'),
   },
 } satisfies Meta<typeof OpenClose>;
 

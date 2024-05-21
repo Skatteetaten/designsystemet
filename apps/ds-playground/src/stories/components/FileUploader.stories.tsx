@@ -7,7 +7,6 @@ import { StoryObj, Meta } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: FileUploader,
@@ -79,9 +78,6 @@ const meta = {
 
       return true;
     },
-  },
-  parameters: {
-    version: getVersion('ds-forms'),
   },
 } satisfies Meta<typeof FileUploader>;
 
