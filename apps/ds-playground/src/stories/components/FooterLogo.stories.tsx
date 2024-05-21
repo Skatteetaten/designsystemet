@@ -3,7 +3,6 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import logo from '../../assets/ske-logo-horizontal-white.png';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Footer.Logo,
@@ -16,9 +15,6 @@ const meta = {
     children: (
       <img className={'logoHeight'} alt={'Logo Skatteetaten'} src={logo}></img>
     ),
-  },
-  parameters: {
-    version: getVersion('ds-layout'),
   },
 } satisfies Meta<typeof Footer.Logo>;
 

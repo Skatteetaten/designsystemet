@@ -55,7 +55,7 @@ export interface TopBannerExternalProps extends BaseProps {
    */
   skipLink?: SkipLink;
   /**
-   * logo.loge Overskriver default logo. Må også angi logo for mobilvisning, alt-tekst og url.
+   * logo.logo Overskriver default logo. Må også angi logo for mobilvisning, alt-tekst og url.
    * logo.mobileLogo  Overskriver default logo for mobilvisning.
    * logo.alt Overskriver default alt-tekst for logo kun dersom logo og mobileLogo også endres. NB! Alt-tekst må være tilpasset om logo er en lenke eller ikke.
    * logo.href  Overskriver default URL.

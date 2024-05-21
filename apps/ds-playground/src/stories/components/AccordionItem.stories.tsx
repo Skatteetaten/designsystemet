@@ -4,7 +4,6 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
-import { getVersion } from '../utils/version.utils';
 
 const defaultContent =
   'Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.';
@@ -58,10 +57,6 @@ const meta = {
     children: defaultContent,
     title: 'Meg selv',
     subtitle: 'Skattekort, frikort, forskuddsskatt, skattemelding',
-  },
-
-  parameters: {
-    version: getVersion('ds-status'),
   },
 } satisfies Meta<typeof Accordion.Item>;
 

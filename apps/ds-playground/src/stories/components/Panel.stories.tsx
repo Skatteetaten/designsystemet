@@ -25,7 +25,6 @@ import farmerIllustration from '../../assets/farmer-illustration.svg';
 import waitIllustration from '../../assets/wait-alert-illustration.png';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const panelColorArr = [
   colorNamesArr[0],
@@ -107,9 +106,6 @@ const meta = {
   },
   args: {
     children: loremIpsum,
-  },
-  parameters: {
-    version: getVersion('ds-content'),
   },
 } satisfies Meta<typeof Panel>;
 

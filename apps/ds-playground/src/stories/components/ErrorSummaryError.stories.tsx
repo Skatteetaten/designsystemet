@@ -2,7 +2,6 @@ import { ErrorSummary } from '@skatteetaten/ds-forms';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: ErrorSummary.Error,
@@ -15,9 +14,6 @@ const meta = {
   args: {
     children: 'Husk å fylle ut type varer',
     referenceId: 'id1',
-  },
-  parameters: {
-    version: getVersion('ds-forms'),
   },
 } satisfies Meta<typeof ErrorSummary.Error>;
 

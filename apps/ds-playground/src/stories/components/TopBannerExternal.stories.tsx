@@ -22,7 +22,6 @@ import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import customLogo from '../../assets/custom-logo.svg';
 import skeLogo from '../../assets/ske-logo.svg';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: TopBannerExternal,
@@ -75,7 +74,6 @@ const meta = {
     onUserClick: undefined,
   },
   parameters: {
-    version: getVersion('ds-layout'),
     layout: 'fullscreen',
   },
 } satisfies Meta<typeof TopBannerExternal>;

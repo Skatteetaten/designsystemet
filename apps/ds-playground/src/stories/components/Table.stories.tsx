@@ -17,7 +17,6 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Table,
@@ -44,9 +43,7 @@ const meta = {
     },
     caption: { table: { category: category.props } },
     hasFullWidth: { table: { category: category.props } },
-  },
-  parameters: {
-    version: getVersion('ds-table'),
+    rowInEditModeId: { table: { category: category.props } },
   },
   args: {
     caption: 'Dette er en tabell.',

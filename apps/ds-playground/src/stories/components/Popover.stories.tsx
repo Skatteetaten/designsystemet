@@ -13,7 +13,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Popover,
@@ -47,9 +46,6 @@ const meta = {
     isOpen: { table: { category: category.props } },
     //Events
     onClose: { control: false, table: { category: category.props } },
-  },
-  parameters: {
-    version: getVersion('ds-overlays'),
   },
 } satisfies Meta<typeof Popover>;
 export default meta;

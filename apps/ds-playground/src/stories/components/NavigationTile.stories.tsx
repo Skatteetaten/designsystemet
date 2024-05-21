@@ -13,7 +13,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const defaultTitle = 'Skatt';
 const defaultDescription =
@@ -76,9 +75,6 @@ const meta = {
     title: defaultTitle,
     description: defaultDescription,
     href: '#',
-  },
-  parameters: {
-    version: getVersion('ds-navigation'),
   },
 } satisfies Meta<NavigationTileProps>;
 
