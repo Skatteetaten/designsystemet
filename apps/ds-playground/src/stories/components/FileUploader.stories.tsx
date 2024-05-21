@@ -144,7 +144,6 @@ export const SimpleCompleteExample: Story = {
             files: [
               {
                 name: files[0].name,
-                id: files[0].name,
               },
             ],
           },
