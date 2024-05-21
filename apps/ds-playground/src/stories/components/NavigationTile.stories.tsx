@@ -1,3 +1,5 @@
+import { ReactElement } from 'react';
+
 import { AccountEnkSVGpath } from '@skatteetaten/ds-icons';
 import {
   NavigationTile,
@@ -20,6 +22,13 @@ const defaultDescription =
 const meta = {
   component: NavigationTile,
   title: 'Komponenter/NavigationTile',
+  render: (_args): ReactElement => {
+    return (
+      <nav aria-label={'Beskrivelse av navigasjonsflater'}>
+        <NavigationTile {..._args} />
+      </nav>
+    );
+  },
   argTypes: {
     // Props
     title: { control: 'text', table: { category: category.props } },
@@ -80,7 +89,10 @@ export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
   render: (_args) => (
-    <nav className={'flex gapXl'}>
+    <nav
+      className={'flex gapXl'}
+      aria-label={'Beskrivelse av navigasjonsflater'}
+    >
       <NavigationTile
         title={defaultTitle}
         description={defaultDescription}
