@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { JSX } from 'react';
 
 import { AccountEnkSVGpath } from '@skatteetaten/ds-icons';
 import {
@@ -21,13 +21,6 @@ const defaultDescription =
 const meta = {
   component: NavigationTile,
   title: 'Komponenter/NavigationTile',
-  render: (_args): ReactElement => {
-    return (
-      <nav aria-label={'Beskrivelse av navigasjonsflater'}>
-        <NavigationTile {..._args} />
-      </nav>
-    );
-  },
   argTypes: {
     // Props
     title: { control: 'text', table: { category: category.props } },
@@ -81,7 +74,13 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Preview: Story = {} satisfies Story;
+export const Preview: Story = {
+  render: (_args): JSX.Element => (
+    <nav aria-label={'Beskrivelse av navigasjonsflater'}>
+      <NavigationTile {..._args} />
+    </nav>
+  ),
+} satisfies Story;
 
 export const Examples: Story = {
   render: (_args) => (
