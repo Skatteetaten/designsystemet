@@ -60,7 +60,7 @@ exports[`Tester/Tabs/Tabs Defaults play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Tabs/Tabs WithIcon smoke-test 1`] = `
+exports[`Tester/Tabs/Tabs WithAriaRolesTabindex play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <div class="TabsList_tabList__vWYZt  "
@@ -115,6 +115,206 @@ exports[`Tester/Tabs/Tabs WithIcon smoke-test 1`] = `
          aria-labelledby="ds-tab-id-tab3"
     >
       Tabs.Panel Rettskilder
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Tabs/Tabs WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <div id="htmlId"
+       class="dummyClassname"
+       lang="nb"
+       data-testid="123ID"
+  >
+    <div class="TabsList_tabList__vWYZt  "
+         role="tablist"
+         tabindex="-1"
+    >
+      <button id="ds-tab-id-tab1"
+              class="TabsTab_tab__W3ulY   TabsTab_tab_active__RkJBU  "
+              role="tab"
+              tabindex="0"
+              aria-selected="true"
+              aria-controls="ds-tab-panel-tab1"
+      >
+        Person
+      </button>
+      <button id="ds-tab-id-tab2"
+              class="TabsTab_tab__W3ulY     "
+              role="tab"
+              tabindex="-1"
+              aria-selected="false"
+              aria-controls="ds-tab-panel-tab2"
+      >
+        Bedrift
+      </button>
+      <button id="ds-tab-id-tab3"
+              class="TabsTab_tab__W3ulY     "
+              role="tab"
+              tabindex="-1"
+              aria-selected="false"
+              aria-controls="ds-tab-panel-tab3"
+      >
+        Rettskilder
+      </button>
+    </div>
+    <div id="ds-tab-panel-tab1"
+         class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-tab1"
+    >
+      Tabs.Panel Person
+    </div>
+    <div id="ds-tab-panel-tab2"
+         class="TabsPanel_panel__4lPgj  "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-tab2"
+    >
+      Tabs.Panel Bedrift
+    </div>
+    <div id="ds-tab-panel-tab3"
+         class="TabsPanel_panel__4lPgj  "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-tab3"
+    >
+      Tabs.Panel Rettskilder
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Tabs/Tabs WithDefaultValue play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <div class="TabsList_tabList__vWYZt  "
+         role="tablist"
+         tabindex="-1"
+    >
+      <button id="ds-tab-id-tab1"
+              class="TabsTab_tab__W3ulY     "
+              role="tab"
+              tabindex="-1"
+              aria-selected="false"
+              aria-controls="ds-tab-panel-tab1"
+      >
+        Person
+      </button>
+      <button id="ds-tab-id-tab2"
+              class="TabsTab_tab__W3ulY   TabsTab_tab_active__RkJBU  "
+              role="tab"
+              tabindex="0"
+              aria-selected="true"
+              aria-controls="ds-tab-panel-tab2"
+      >
+        Bedrift
+      </button>
+      <button id="ds-tab-id-tab3"
+              class="TabsTab_tab__W3ulY     "
+              role="tab"
+              tabindex="-1"
+              aria-selected="false"
+              aria-controls="ds-tab-panel-tab3"
+      >
+        Rettskilder
+      </button>
+    </div>
+    <div id="ds-tab-panel-tab1"
+         class="TabsPanel_panel__4lPgj  "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-tab1"
+    >
+      Tabs.Panel Person
+    </div>
+    <div id="ds-tab-panel-tab2"
+         class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-tab2"
+    >
+      Tabs.Panel Bedrift
+    </div>
+    <div id="ds-tab-panel-tab3"
+         class="TabsPanel_panel__4lPgj  "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-tab3"
+    >
+      Tabs.Panel Rettskilder
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Tabs/Tabs WithMultiline smoke-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <div class="TabsList_tabList__vWYZt TabsList_tabList_multiline__EPlby "
+         role="tablist"
+         tabindex="-1"
+    >
+      <button id="ds-tab-id-tab1"
+              class="TabsTab_tab__W3ulY   TabsTab_tab_active__RkJBU  "
+              role="tab"
+              tabindex="0"
+              aria-selected="true"
+              aria-controls="ds-tab-panel-tab1"
+      >
+        Person
+      </button>
+      <button id="ds-tab-id-tab2"
+              class="TabsTab_tab__W3ulY     "
+              role="tab"
+              tabindex="-1"
+              aria-selected="false"
+              aria-controls="ds-tab-panel-tab2"
+      >
+        Bedrift
+      </button>
+      <button id="ds-tab-id-tab3"
+              class="TabsTab_tab__W3ulY     "
+              role="tab"
+              tabindex="-1"
+              aria-selected="false"
+              aria-controls="ds-tab-panel-tab3"
+      >
+        Ubehandlede saker (+99)
+      </button>
+      <button id="ds-tab-id-tab4"
+              class="TabsTab_tab__W3ulY     "
+              role="tab"
+              tabindex="-1"
+              aria-selected="false"
+              aria-controls="ds-tab-panel-tab4"
+      >
+        Behandlede saker (1)
+      </button>
+    </div>
+    <div id="ds-tab-panel-tab1"
+         class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-tab1"
+    >
+      Tabs.Panel - Person
+    </div>
+    <div id="ds-tab-panel-tab2"
+         class="TabsPanel_panel__4lPgj  "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-tab2"
+    >
+      Tabs.Panel - Bedrift
+    </div>
+    <div id="ds-tab-panel-tab3"
+         class="TabsPanel_panel__4lPgj  "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-tab3"
+    >
+      Tabs.Panel - Ubehandlede saker (+99)
+    </div>
+    <div id="ds-tab-panel-tab4"
+         class="TabsPanel_panel__4lPgj  "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-tab4"
+    >
+      Tabs.Panel - Behandlede
     </div>
   </div>
 </div>
@@ -129,7 +329,7 @@ exports[`Tester/Tabs/Tabs WithRef play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Tabs/Tabs WithTabSelected play-test 1`] = `
+exports[`Tester/Tabs/Tabs WithTabClick play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <div class="TabsList_tabList__vWYZt  "
@@ -184,6 +384,50 @@ exports[`Tester/Tabs/Tabs WithTabSelected play-test 1`] = `
          aria-labelledby="ds-tab-id-tab3"
     >
       Tabs.Panel Rettskilder
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Tabs/Tabs WithValue play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <div class="TabsList_tabList__vWYZt  "
+         role="tablist"
+         tabindex="-1"
+    >
+      <button id="ds-tab-id-tab1"
+              class="TabsTab_tab__W3ulY     "
+              role="tab"
+              tabindex="-1"
+              aria-selected="false"
+              aria-controls="ds-tab-panel-tab1"
+      >
+        Person
+      </button>
+      <button id="ds-tab-id-tab2"
+              class="TabsTab_tab__W3ulY   TabsTab_tab_active__RkJBU  "
+              role="tab"
+              tabindex="0"
+              aria-selected="true"
+              aria-controls="ds-tab-panel-tab2"
+      >
+        Bedrift
+      </button>
+    </div>
+    <div id="ds-tab-panel-tab1"
+         class="TabsPanel_panel__4lPgj  "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-tab1"
+    >
+      Tabs.Panel - Person
+    </div>
+    <div id="ds-tab-panel-tab2"
+         class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-tab2"
+    >
+      Tabs.Panel - Bedrift
     </div>
   </div>
 </div>

@@ -22,8 +22,8 @@ export interface TabsProps extends BaseProps {
   onChange?: (value: string) => void;
   /** Controlled selected value */
   value?: string;
-  /** If not controlled, a default-value needs to be set */
-  defaultValue: string;
+  /** If uncontrolled, a default-value needs to be set */
+  defaultValue?: string;
   /** Lar listen med tab'er flyte over flere linjer */
   isMultiline?: boolean;
   /** Varianter : prop for å sette enten small eller normal tab */
@@ -46,7 +46,7 @@ export type TabsArr = string[];
 export interface TabsContextProps
   extends Omit<TabsProps, 'children' | 'defaultValue'> {
   /** setter for activeTab */
-  setActiveTab: Dispatch<SetStateAction<string>>;
+  setActiveTab: (value: string) => void; //Dispatch<SetStateAction<string>>;
   /** tab som er aktiv - key er tabsKey */
   activeTab?: string;
   /** Liste med tabKeys */

@@ -32,20 +32,20 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const defaultArgs = {
-  children: 'Tabben',
+  children: 'Person',
 };
 
 const TemplateTabs: StoryFn<typeof Tabs.Tab> = (args) => {
   return (
     <Tabs defaultValue={'tab1'}>
       <Tabs.List>
-        <Tabs.Tab {...args} svgPath={PersonSVGpath} value={'tab1'}>
+        <Tabs.Tab {...args} value={'tab1'}>
           {'Person'}
         </Tabs.Tab>
-        <Tabs.Tab {...args} svgPath={LockSVGpath} value={'tab2'}>
+        <Tabs.Tab {...args} value={'tab2'}>
           {'Bedrift'}
         </Tabs.Tab>
-        <Tabs.Tab {...args} svgPath={DeploySVGpath} value={'tab3'}>
+        <Tabs.Tab {...args} value={'tab3'}>
           {'Astronaut'}
         </Tabs.Tab>
       </Tabs.List>
@@ -56,32 +56,149 @@ const TemplateTabs: StoryFn<typeof Tabs.Tab> = (args) => {
   );
 };
 
+const TemplateTabsTab: StoryFn<typeof Tabs.Tab> = (args) => {
+  return (
+    <Tabs defaultValue={'tab1'}>
+      <Tabs.List>
+        <Tabs.Tab {...args}>{args.children}</Tabs.Tab>
+        <Tabs.Tab value={'tab2'}>{'Bedrift'}</Tabs.Tab>
+      </Tabs.List>
+      <Tabs.Panel value={'tab1'}>{'Tabs.Panel Person'}</Tabs.Panel>
+      <Tabs.Panel value={'tab2'}>{'Tabs.Panel Bedrift'}</Tabs.Panel>
+    </Tabs>
+  );
+};
+
+const TemplateTabsIcon: StoryFn<typeof Tabs.Tab> = (args) => {
+  return (
+    <>
+      <Tabs defaultValue={'tab1'}>
+        <Tabs.List>
+          <Tabs.Tab {...args}>{args.children}</Tabs.Tab>
+          <Tabs.Tab {...args} svgPath={LockSVGpath} value={'tab2'}>
+            {'Bedrift'}
+          </Tabs.Tab>
+          <Tabs.Tab {...args} svgPath={DeploySVGpath} value={'tab3'}>
+            {'Astronaut'}
+          </Tabs.Tab>
+        </Tabs.List>
+        <Tabs.Panel value={'tab1'}>{'Tabs.Panel Person'}</Tabs.Panel>
+        <Tabs.Panel value={'tab2'}>{'Tabs.Panel Bedrift'}</Tabs.Panel>
+        <Tabs.Panel value={'tab3'}>{'Tabs.Panel Astronaut'}</Tabs.Panel>
+      </Tabs>
+
+      <Tabs defaultValue={'tab1'} variant={'compact'}>
+        <Tabs.List>
+          <Tabs.Tab {...args}>{'Person 2'}</Tabs.Tab>
+          <Tabs.Tab {...args} svgPath={LockSVGpath} value={'tab2'}>
+            {'Bedrift 2'}
+          </Tabs.Tab>
+          <Tabs.Tab {...args} svgPath={DeploySVGpath} value={'tab3'}>
+            {'Astronaut 2'}
+          </Tabs.Tab>
+        </Tabs.List>
+        <Tabs.Panel value={'tab1'}>
+          {'Tabs.Panel Person 2, variant compact'}
+        </Tabs.Panel>
+        <Tabs.Panel value={'tab2'}>
+          {'Tabs.Panel Bedrift 2, variant compact'}
+        </Tabs.Panel>
+        <Tabs.Panel value={'tab3'}>
+          {'Tabs.Panel Astronaut 2, variant compact'}
+        </Tabs.Panel>
+      </Tabs>
+    </>
+  );
+};
+
+const TemplateTabsBorder: StoryFn<typeof Tabs.Tab> = (args) => {
+  return (
+    <Tabs defaultValue={'tab1'} hasBorder>
+      <Tabs.List>
+        <Tabs.Tab {...args} svgPath={PersonSVGpath} value={'tab1'}>
+          {'Person'}
+        </Tabs.Tab>
+        <Tabs.Tab {...args} svgPath={LockSVGpath} value={'tab2'}>
+          {'Bedrift'}
+        </Tabs.Tab>
+      </Tabs.List>
+      <Tabs.Panel value={'tab1'}>{'Tabs.Panel Person'}</Tabs.Panel>
+      <Tabs.Panel value={'tab2'}>{'Tabs.Panel Bedrift'}</Tabs.Panel>
+    </Tabs>
+  );
+};
+
 export const Defaults = {
   name: 'Defaults (A2)',
-  render: TemplateTabs,
+  render: TemplateTabsTab,
   args: {
-    ...defaultArgs,
+    children: 'TabText',
     value: 'tab1',
   },
   argTypes: {
     svgPath: { table: { disable: false } },
   },
-  parameters: {},
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const tab = canvas.getByRole('tab', { name: 'Person' });
+    const tab = canvas.getByRole('tab', { name: 'TabText' });
     await expect(tab).toBeInTheDocument();
   },
 } satisfies Story;
 
-export const WithIcon = {
-  name: 'With Icon (A4)',
+export const WithAttributes = {
+  name: 'With Attributes (FA2-5, B1)',
   render: TemplateTabs,
   args: {
     ...defaultArgs,
-    value: 'tab2',
+    className: 'dummyClassname',
+    lang: 'nb',
+    'data-testid': '123ID',
+    value: 'TabValue',
+  },
+  argTypes: {
+    id: { table: { disable: false } },
+    className: { table: { disable: false } },
+    lang: { table: { disable: false } },
+    'data-testid': { table: { disable: false } },
+  },
+  play: async ({ canvasElement, step }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await step(
+      'Autogenerert id-attributt basert på tab name "tab2"',
+      async () => {
+        const tab = canvas.getByRole('tab', { name: 'Bedrift' });
+        await expect(tab).toHaveAttribute('id', 'ds-tab-id-tab2');
+      }
+    );
+  },
+} satisfies Story;
+
+//TODO-Opprett interaksjonstest av ikon eller fjern play-test
+export const WithIcon = {
+  name: 'With Icon (A4)',
+  render: TemplateTabsIcon,
+  args: {
+    ...defaultArgs,
+    svgPath: PersonSVGpath,
+    value: 'tab1',
   },
   parameters: {
     imageSnapshot: { disable: false },
+  },
+  play: async ({ canvasElement, step }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await step('Sjekk om svg-ikon finnes', async () => {
+      const tab = canvas.getByRole('tab', { name: 'Person' });
+      await expect(tab).toHaveAttribute('id', 'ds-tab-id-tab1');
+    });
+  },
+} satisfies Story;
+
+export const WithBorder = {
+  name: 'With Border (A1',
+  render: TemplateTabsBorder,
+  args: {
+    ...defaultArgs,
+    value: 'tab2',
   },
 } satisfies Story;

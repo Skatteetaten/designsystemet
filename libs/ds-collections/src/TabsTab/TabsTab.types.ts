@@ -23,6 +23,4 @@ export interface TabsTabComponent extends FunctionComponent<TabsTabProps> {
   svgPath?: ReactElement;
   /** unique key with reference to same key in tabs.panel */
   value: string;
-  /** varianter */
-  /* variant?: Variants; */
 }

@@ -15,17 +15,26 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
       lang,
       'data-testid': dataTestId,
       defaultValue,
+      value,
       isMultiline,
       children,
       hasBorder,
       variant = getTabsVariantDefault(),
+      onChange,
     },
     ref
   ): JSX.Element => {
-    const [activeTab, setActiveTab] = useState<string>(defaultValue);
+    const [activeTab, setInternalTab] = useState(value || defaultValue);
     const [tabs, setTabsInternal] = useState<TabsArr>([]);
     const [index, setIndex] = useState<number>(0);
     const [activeIndex, setActiveIndex] = useState<number>(0);
+    if (activeTab === undefined) {
+      throw new Error('prop defaultValue eller value må ha en verdi');
+    }
+    const setActiveTab = (value: string): void => {
+      setInternalTab(value);
+      if (value) onChange?.(value);
+    };
     return (
       <div
         ref={ref}

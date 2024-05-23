@@ -9,7 +9,7 @@
 
   gap: var(--spacing-s);
 
-  &Multiline {
+  &_multiline {
     flex-wrap: wrap;
   }
 }

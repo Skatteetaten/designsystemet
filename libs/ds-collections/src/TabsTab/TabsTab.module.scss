@@ -1,7 +1,7 @@
 .tab {
   padding: var(--spacing-s) var(--spacing-m);
   border: 0;
-  background-color: transparent; /* var(--palette-graphite-0); */
+  background-color: transparent;
   color: var(--front-color);
   cursor: pointer;
   font-size: var(--font-size-m);
@@ -14,8 +14,6 @@
 
   &:hover {
     background-color: var(--semantic-interactive-background);
-
-    --front-color: var(--semantic-interactive-main);
   }
 
   &:focus {
@@ -68,8 +66,6 @@
   &_active {
     background-color: var(--semantic-interactive-main);
     color: var(--palette-graphite-0);
-
-    /* color: var(--palette-graphite-0); */
     text-decoration: none;
 
     --front-color: var(--palette-graphite-0);
@@ -109,11 +105,3 @@
     padding-left: 0;
   }
 }
-
-/*
-rekkefølge::after
-
-1. hover
-2. focus
-3. active
-*/
