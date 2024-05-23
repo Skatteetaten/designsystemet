@@ -9,7 +9,7 @@
   }
 
   &_expanded {
-    padding: var(--spacing-xs) 0 0;
+    padding: var(--spacing-xs) var(--spacing-xs) 0;
   }
 
   &_compact {
@@ -23,6 +23,7 @@
   box-sizing: border-box;
   padding: var(--spacing-m) var(--spacing-l) var(--spacing-l);
   margin-top: var(--spacing-m);
+  margin-left: calc(var(--spacing-xs) * -1);
 }
 
 .expandedRowRight {
