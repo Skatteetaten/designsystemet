@@ -101,7 +101,7 @@ const TemplateWithAllHeadings: StoryFn<typeof NavigationTile> = (args) => (
   </nav>
 );
 
-const TemplateWithMultipleTiles: StortyFn<typeof NavigationTile> = (args) => (
+const TemplateWithMultipleTiles: StoryFn<typeof NavigationTile> = (args) => (
   <nav className={'flex gapS'}>
     <NavigationTile {...args} />
     <NavigationTile {...args} />

@@ -15,7 +15,7 @@ const meta = {
     // Props
     children: { control: false, table: { category: category.props } },
     classNames: {
-      control: { type: null },
+      control: { disable: true },
       table: { category: category.props },
     },
     title: {
@@ -46,7 +46,7 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: 'div' },
-        type: { summary: ['div', ...headingAsArr] },
+        type: { summary: ['div', ...headingAsArr].toString() },
       },
     },
     onClick: {
