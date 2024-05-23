@@ -165,7 +165,7 @@ export const WithListLength: Story = {
   },
 } satisfies Story;
 
-export const WithListLengthChange: Story = {
+export const WithListLengthChange = {
   name: 'With Changed List Length (A3)',
   args: {
     ...defaultArgs,
