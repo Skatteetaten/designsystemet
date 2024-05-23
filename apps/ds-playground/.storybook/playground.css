@@ -150,12 +150,21 @@ code {
   gap: var(--spacing-xs);
 }
 
+.gapXl {
+  gap: var(--spacing-xl);
+}
+
 .flexColumn {
   flex-direction: column;
 }
 
 .dummySpacingLeft {
   margin-left: var(--spacing-s);
+}
+
+.marginL {
+  margin-left: var(--spacing-l);
+  margin-right: var(--spacing-l);
 }
 
 .centerContent {

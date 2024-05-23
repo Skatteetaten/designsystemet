@@ -1,0 +1,21 @@
+import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import * as AccordionStories from './Accordion.stories';
+import { VersionBadge } from '../utils/VersionBadge';
+
+<Meta of={AccordionStories} />
+
+# Accordion
+
+<VersionBadge packageName={'collections'} />
+
+<Primary />
+
+```tsx
+import { Accordion } from '@skatteetaten/ds-collections';
+```
+
+<Controls />
+
+## Examples
+
+<Canvas of={AccordionStories.Examples} />

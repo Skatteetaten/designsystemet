@@ -8,7 +8,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import logo from '../../assets/ske-logo-horizontal-white.png';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 Footer.Link.displayName = 'Footer.Link';
 Footer.Logo.displayName = 'Footer.Logo';
@@ -34,7 +33,6 @@ const meta = {
     titleFirstColumn: 'Om Skatteetaten',
   },
   parameters: {
-    version: getVersion('ds-layout'),
     layout: 'fullscreen',
   },
 } satisfies Meta<typeof Footer>;

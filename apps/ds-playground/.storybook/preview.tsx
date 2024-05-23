@@ -35,7 +35,7 @@ const LanguageUpdater: Decorator = (Story, context) => {
 };
 
 const testBlock: Decorator = (Story, context) => {
-  if (context.kind.includes('Tester')) {
+  if (context.title.startsWith('Tester')) {
     return (
       <div data-test-block>
         <Story />
@@ -79,7 +79,6 @@ const DSViewports = {
 };
 
 const parameters = {
-  actions: { argTypesRegex: '^on.*' },
   controls: {
     sort: 'requiredFirst',
     hideNoControlsWarning: true,
@@ -116,13 +115,13 @@ const parameters = {
 
 const argTypes = {
   key: {
-    control: false,
+    control: { disable: true },
     description:
       'Spesielt string attributt som brukes for å iterere gjennom elementer',
     table: { type: { summary: 'string' }, category: category.baseProps },
   },
   ref: {
-    control: false,
+    control: { disable: true },
     description: 'React ref sendt gjennom React.forwardref',
     table: {
       type: { summary: 'React.ForwardedRef' },
@@ -154,7 +153,7 @@ const argTypes = {
     description: 'html data attributt som brukes for tester',
     table: { type: { summary: 'string' }, category: category.baseProps },
   },
-};
+} satisfies Preview['argTypes'];
 
 const langs = Object.entries(Languages).map(([key, value]) => ({
   title: key,
@@ -173,7 +172,7 @@ const globalTypes = {
   },
 };
 
-const preview: Preview = {
+const preview = {
   decorators: [
     (Story): JSX.Element => <Story />,
     LanguageUpdater,
@@ -183,5 +182,5 @@ const preview: Preview = {
   parameters,
   globalTypes,
   argTypes,
-};
+} satisfies Preview;
 export default preview;

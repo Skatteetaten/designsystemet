@@ -10,7 +10,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const tagColors = [
   colorNamesArr[0],
@@ -29,7 +28,6 @@ const meta = {
     children: { control: 'text', table: { category: category.props } },
     color: {
       table: {
-        type: { summary: tagColors },
         category: category.props,
         defaultValue: { summary: getTagColorDefault() },
       },
@@ -40,7 +38,6 @@ const meta = {
       options: tagSizes,
       control: 'radio',
       table: {
-        type: { summary: tagSizes },
         category: category.props,
         defaultValue: { summary: getTagSizeDefault() },
       },
@@ -53,9 +50,6 @@ const meta = {
   },
   args: {
     children: 'Endret',
-  },
-  parameters: {
-    version: getVersion('ds-status'),
   },
 } satisfies Meta<typeof Tag>;
 

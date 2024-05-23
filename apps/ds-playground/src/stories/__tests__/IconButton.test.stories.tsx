@@ -6,7 +6,7 @@ import {
   sizeArr,
 } from '@skatteetaten/ds-core-utils';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, userEvent, waitFor, within } from '@storybook/test';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -177,7 +177,7 @@ export const WithCustomSVGPath = {
   argTypes: {
     svgPath: {
       table: { disable: false },
-      control: { type: null },
+      control: { disable: true },
     },
   },
 } satisfies Story;
@@ -377,6 +377,9 @@ export const WithEventHandlers = {
   name: 'With EventHandlers (A2 delvis)',
   args: {
     ...defaultArgs,
+    onFocus: fn(),
+    onBlur: fn(),
+    onClick: fn(),
   },
   parameters: {
     imageSnapshot: { disable: true },

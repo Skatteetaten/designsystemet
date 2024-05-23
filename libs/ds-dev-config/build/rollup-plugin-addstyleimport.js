@@ -11,7 +11,7 @@ function addStyleImportPlugin() {
                 ? "$1\nimport './styles.css';\n"
                 : `$1\nimport './${filename.substr(
                     0,
-                    filename.indexOf('.')
+                    filename.search(/([.-])/)
                   )}/styles.css';\n`;
 
               const newCode = bundle[key].code.replace(

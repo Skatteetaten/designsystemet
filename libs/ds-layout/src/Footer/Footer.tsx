@@ -5,12 +5,14 @@ import { LinkGroup } from '@skatteetaten/ds-buttons';
 import {
   dsI18n,
   getCommonClassNameDefault,
+  Languages,
   Separator,
 } from '@skatteetaten/ds-core-utils';
 import { Heading } from '@skatteetaten/ds-typography';
 
 import { FooterComponent, FooterProps } from './Footer.types';
-import logo from './logo.svg';
+import defaultEnglishLogo from './logo_en.svg';
+import defaultNorwegainLogo from './logo_no.svg';
 import { FooterLink } from '../FooterLink/FooterLink';
 import { FooterLogo } from '../FooterLogo/FooterLogo';
 
@@ -52,6 +54,15 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(
 
     const threeColumnsClassName = thirdColumn ? styles.columnsThree : '';
     const twoColumnsClassName = secondColumn ? styles.columnsTwo : '';
+
+    const logo =
+      dsI18n.language === Languages.Engelsk
+        ? defaultEnglishLogo
+        : defaultNorwegainLogo;
+    const logoClassNames =
+      dsI18n.language === Languages.Engelsk
+        ? styles.skatteetatenLogo_en
+        : styles.skatteetatenLogo;
 
     return (
       <footer
@@ -120,7 +131,7 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(
               <div className={styles.logoContainer}>
                 {!hideLogo && (
                   <img
-                    className={styles.skatteetatenLogo}
+                    className={logoClassNames}
                     alt={t('shared.SkeLogoImageText')}
                     src={logo}
                   ></img>

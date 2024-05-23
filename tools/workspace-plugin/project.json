@@ -3,6 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "tools/workspace-plugin/src",
   "projectType": "library",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
@@ -37,15 +38,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "tools/workspace-plugin/**/*.ts",
-          "tools/workspace-plugin/package.json",
-          "tools/workspace-plugin/project.json",
-          "tools/workspace-plugin/generators.json"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
@@ -54,6 +47,5 @@
         "jestConfig": "tools/workspace-plugin/jest.config.ts"
       }
     }
-  },
-  "tags": []
+  }
 }

@@ -1,0 +1,26 @@
+import { Meta, Story, Canvas } from '@storybook/blocks';
+import { ExternalLayout, InternalLayout } from '@skatteetaten/ds-core-utils';
+import { VersionBadge } from '../utils/VersionBadge';
+import ContainersStories from './containers.stories';
+
+# Containers
+
+<VersionBadge packageName={'core-designtokens'} />
+
+## External layout
+
+<div className={'layoutContainer'}>
+  <ExternalLayout />
+</div>
+
+## Internal layout
+
+<div className={'layoutContainer'}>
+  <InternalLayout />
+</div>
+
+<Meta of={ContainersStories} />
+
+<Canvas withSource="none">
+  <Story of={ContainersStories.Containers} />
+</Canvas>

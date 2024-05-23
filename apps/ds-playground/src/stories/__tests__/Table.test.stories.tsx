@@ -37,6 +37,7 @@ const meta = {
     showCaption: { table: { disable: true } },
     sortState: { table: { disable: true } },
     setSortState: { table: { disable: true } },
+    rowInEditModeId: { table: { disable: true } },
     children: { table: { disable: true } },
   },
   args: {
@@ -199,6 +200,7 @@ const ExpandEditSortTable = (
           return (
             <Table.EditableRow
               key={index}
+              id={id}
               data-testid={`row-${index}`}
               editButtonAriaDescribedby={id}
               editButtonPosition={'left'}
@@ -452,6 +454,15 @@ export const WithExpandEditSort = {
         `${wrapper} [data-testid="header-avkastning"] button`,
       ],
     },
+  },
+} satisfies Story;
+
+export const WithDefaultRowInEditMode = {
+  render: TemplateExpandEditSort,
+  name: 'With Default Row In Edit Mode',
+  args: {
+    ...defaultArgs,
+    rowInEditModeId: '3vesy',
   },
 } satisfies Story;
 

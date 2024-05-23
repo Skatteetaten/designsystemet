@@ -11,7 +11,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const exampleTitle = 'Hva er aksjesparekonto';
 const exampleContent =
@@ -39,7 +38,7 @@ const meta = {
     showUnderline: {
       table: {
         category: category.props,
-        defaultValue: { summary: getOpenCloseUnderlineDefault() },
+        defaultValue: { summary: getOpenCloseUnderlineDefault().toString() },
       },
     },
     title: { table: { category: category.props } },
@@ -49,7 +48,7 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: 'div' },
-        type: { summary: ['div', ...headingAsArr] },
+        type: { summary: ['div', ...headingAsArr].toString() },
       },
     },
     variant: {
@@ -58,7 +57,6 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getOpenCloseVariantDefault() },
-        type: { summary: densityArr },
       },
     },
     //Events
@@ -67,9 +65,6 @@ const meta = {
   args: {
     children: loremIpsum,
     title: 'OpenClose title',
-  },
-  parameters: {
-    version: getVersion('ds-collections'),
   },
 } satisfies Meta<typeof OpenClose>;
 

@@ -136,7 +136,7 @@ export const WithAllRoles = {
   argTypes: {
     user: {
       table: { disable: false },
-      control: { type: null },
+      control: { disable: true },
     },
   },
   play: async ({ canvasElement }): Promise<void> => {

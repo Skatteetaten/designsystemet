@@ -13,7 +13,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: InlineButton,
@@ -34,7 +33,6 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getInlineButtonPositionDefault() },
-        type: { summary: buttonIconPositionArr },
       },
     },
     svgPath: {
@@ -61,9 +59,6 @@ const meta = {
   },
   args: {
     children: 'Legg til rapport',
-  },
-  parameters: {
-    version: getVersion('ds-buttons'),
   },
 } satisfies Meta<typeof InlineButton>;
 

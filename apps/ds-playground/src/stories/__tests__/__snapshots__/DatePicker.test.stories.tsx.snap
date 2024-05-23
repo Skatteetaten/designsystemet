@@ -15,7 +15,8 @@ exports[`Tester/DatePicker/DatePicker Defaults play-test 1`] = `
              placeholder="Skriv eller velg"
              value
       >
-      <button class="DatePicker_calendarButton__6sCKL"
+      <button type="button"
+              class="DatePicker_calendarButton__6sCKL"
               aria-expanded="false"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
@@ -60,7 +61,8 @@ exports[`Tester/DatePicker/DatePicker WithAttributes play-test 1`] = `
              placeholder="Skriv eller velg"
              value
       >
-      <button class="DatePicker_calendarButton__6sCKL"
+      <button type="button"
+              class="DatePicker_calendarButton__6sCKL"
               aria-expanded="false"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
@@ -104,7 +106,8 @@ exports[`Tester/DatePicker/DatePicker WithAutoCompleteNameAndPlaceholder play-te
              placeholder="placeholdertekst"
              value
       >
-      <button class="DatePicker_calendarButton__6sCKL"
+      <button type="button"
+              class="DatePicker_calendarButton__6sCKL"
               aria-expanded="false"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
@@ -148,7 +151,8 @@ exports[`Tester/DatePicker/DatePicker WithCustomClassNames play-test 1`] = `
              aria-invalid="true"
              value
       >
-      <button class="DatePicker_calendarButton__6sCKL"
+      <button type="button"
+              class="DatePicker_calendarButton__6sCKL"
               aria-expanded="false"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
@@ -204,7 +208,8 @@ exports[`Tester/DatePicker/DatePicker WithDateFormat play-test 1`] = `
              placeholder="Skriv eller velg"
              value="2024/02/05"
       >
-      <button class="DatePicker_calendarButton__6sCKL"
+      <button type="button"
+              class="DatePicker_calendarButton__6sCKL"
               aria-expanded="false"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
@@ -246,7 +251,8 @@ exports[`Tester/DatePicker/DatePicker WithDefaultValue play-test 1`] = `
              placeholder="Skriv eller velg"
              value="01.02.2024"
       >
-      <button class="DatePicker_calendarButton__6sCKL"
+      <button type="button"
+              class="DatePicker_calendarButton__6sCKL"
               aria-expanded="false"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
@@ -291,7 +297,8 @@ exports[`Tester/DatePicker/DatePicker WithDescription play-test 1`] = `
              placeholder="Skriv eller velg"
              value
       >
-      <button class="DatePicker_calendarButton__6sCKL"
+      <button type="button"
+              class="DatePicker_calendarButton__6sCKL"
               aria-expanded="false"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
@@ -334,7 +341,8 @@ exports[`Tester/DatePicker/DatePicker WithDisabled play-test 1`] = `
              placeholder="Skriv eller velg"
              value="01.02.2024"
       >
-      <button class="DatePicker_calendarButton__6sCKL"
+      <button type="button"
+              class="DatePicker_calendarButton__6sCKL"
               disabled
               aria-expanded="false"
       >
@@ -377,7 +385,8 @@ exports[`Tester/DatePicker/DatePicker WithError play-test 1`] = `
              placeholder="Skriv eller velg"
              value
       >
-      <button class="DatePicker_calendarButton__6sCKL"
+      <button type="button"
+              class="DatePicker_calendarButton__6sCKL"
               aria-expanded="false"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
@@ -421,7 +430,8 @@ exports[`Tester/DatePicker/DatePicker WithErrorMessageAndHasError play-test 1`] 
              aria-invalid="true"
              value
       >
-      <button class="DatePicker_calendarButton__6sCKL"
+      <button type="button"
+              class="DatePicker_calendarButton__6sCKL"
               aria-expanded="false"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
@@ -518,7 +528,8 @@ exports[`Tester/DatePicker/DatePicker WithHelpText play-test 1`] = `
              placeholder="Skriv eller velg"
              value
       >
-      <button class="DatePicker_calendarButton__6sCKL"
+      <button type="button"
+              class="DatePicker_calendarButton__6sCKL"
               aria-expanded="false"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
@@ -560,7 +571,8 @@ exports[`Tester/DatePicker/DatePicker WithHideLabel play-test 1`] = `
              placeholder="Skriv eller velg"
              value
       >
-      <button class="DatePicker_calendarButton__6sCKL"
+      <button type="button"
+              class="DatePicker_calendarButton__6sCKL"
               aria-expanded="false"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
@@ -602,7 +614,8 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
              placeholder="Skriv eller velg"
              value
       >
-      <button class="DatePicker_calendarButton__6sCKL"
+      <button type="button"
+              class="DatePicker_calendarButton__6sCKL"
               aria-expanded="true"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
@@ -1148,7 +1161,8 @@ exports[`Tester/DatePicker/DatePicker WithPlaceholderEmpty play-test 1`] = `
              class="DatePicker_input__vz7zh"
              value
       >
-      <button class="DatePicker_calendarButton__6sCKL"
+      <button type="button"
+              class="DatePicker_calendarButton__6sCKL"
               aria-expanded="false"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
@@ -1217,7 +1231,8 @@ exports[`Tester/DatePicker/DatePicker WithRef play-test 1`] = `
              value
              name="dummyNameForwardedFromRef"
       >
-      <button class="DatePicker_calendarButton__6sCKL"
+      <button type="button"
+              class="DatePicker_calendarButton__6sCKL"
               aria-expanded="false"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
@@ -1260,7 +1275,8 @@ exports[`Tester/DatePicker/DatePicker WithRequired play-test 1`] = `
              required
              value
       >
-      <button class="DatePicker_calendarButton__6sCKL"
+      <button type="button"
+              class="DatePicker_calendarButton__6sCKL"
               aria-expanded="false"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
@@ -1303,7 +1319,8 @@ exports[`Tester/DatePicker/DatePicker WithRequiredAndMark smoke-test 1`] = `
              required
              value
       >
-      <button class="DatePicker_calendarButton__6sCKL"
+      <button type="button"
+              class="DatePicker_calendarButton__6sCKL"
               aria-expanded="false"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
@@ -1345,7 +1362,8 @@ exports[`Tester/DatePicker/DatePicker WithValue play-test 1`] = `
              placeholder="Skriv eller velg"
              value="01.02.2024"
       >
-      <button class="DatePicker_calendarButton__6sCKL"
+      <button type="button"
+              class="DatePicker_calendarButton__6sCKL"
               aria-expanded="false"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
@@ -1387,7 +1405,8 @@ exports[`Tester/DatePicker/DatePicker WithVariantLarge smoke-test 1`] = `
              placeholder="Skriv eller velg"
              value
       >
-      <button class="DatePicker_calendarButton__6sCKL DatePicker_calendarButton_large__3mcID"
+      <button type="button"
+              class="DatePicker_calendarButton__6sCKL DatePicker_calendarButton_large__3mcID"
               aria-expanded="false"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"

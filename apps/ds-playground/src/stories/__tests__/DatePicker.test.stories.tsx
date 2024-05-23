@@ -13,6 +13,7 @@ import {
 } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
+import { webComponent } from '../../../.storybook/webcomponent-decorator';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const verifyAttribute =
@@ -579,6 +580,9 @@ export const WithEventHandlers = {
   name: 'With EventHandlers (A6)',
   args: {
     ...defaultArgs,
+    onFocus: fn(),
+    onBlur: fn(),
+    onChange: fn(),
   },
   parameters: {
     imageSnapshot: { disable: true },
@@ -721,5 +725,43 @@ export const OpenCalendarMovesOver = {
     const canvas = within(canvasElement);
     const calendarButton = canvas.getByRole('button');
     await fireEvent.click(calendarButton);
+  },
+} satisfies Story;
+
+export const WithShadowDom = {
+  name: 'With ShadowDom',
+  args: {
+    ...defaultArgs,
+    value: valueDate,
+  },
+  argTypes: {
+    ref: { table: { disable: false } },
+  },
+  decorators: [webComponent],
+  parameters: {
+    imageSnapshot: { disable: true },
+    HTMLSnapshot: { disable: true },
+    customElementName: 'calendar-customelement',
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const customElement = canvasElement.querySelector(`calendar-customelement`);
+
+    const shadowCanvas = within(
+      customElement!.shadowRoot!.firstElementChild as HTMLElement
+    );
+
+    const calendarButton = shadowCanvas.getByRole('button', {
+      name: dsI18n.t('ds_forms:datepicker.ChooseDate'),
+    });
+
+    await fireEvent.click(calendarButton);
+
+    await expect(calendarButton).toHaveAttribute('aria-expanded', 'true');
+    const calendarTable = shadowCanvas.getByRole('table');
+    await expect(calendarTable).toBeInTheDocument();
+
+    await fireEvent.click(shadowCanvas.getByLabelText(defaultLabelText));
+    await expect(calendarTable).not.toBeInTheDocument();
+    await expect(calendarButton).toHaveAttribute('aria-expanded', 'false');
   },
 } satisfies Story;

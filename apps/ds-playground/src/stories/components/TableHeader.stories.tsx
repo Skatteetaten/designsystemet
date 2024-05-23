@@ -2,7 +2,6 @@ import { Table } from '@skatteetaten/ds-table';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Table.Header,
@@ -20,9 +19,6 @@ const meta = {
         <Table.HeaderCell scope={'col'}>{'header cell 4'}</Table.HeaderCell>
       </Table.Row>,
     ],
-  },
-  parameters: {
-    version: getVersion('ds-table'),
   },
 } satisfies Meta<typeof Table.Header>;
 

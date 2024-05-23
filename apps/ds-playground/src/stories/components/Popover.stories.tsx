@@ -5,7 +5,6 @@ import {
   getPopoverPositionDefault,
   getPopoverRestoreFocusDefault,
   Popover,
-  popoverColorArr,
 } from '@skatteetaten/ds-overlays';
 import { Table } from '@skatteetaten/ds-table';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
@@ -14,7 +13,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Popover,
@@ -24,7 +22,6 @@ const meta = {
     children: { control: false, table: { category: category.props } },
     color: {
       table: {
-        type: { summary: popoverColorArr },
         category: category.props,
         defaultValue: { summary: getPopoverColorDefault() },
       },
@@ -35,19 +32,20 @@ const meta = {
     disableAutoDismissOnMobile: { table: { category: category.props } },
     position: {
       control: 'radio',
-      table: { category: category.props },
-      defaultValue: { summary: getPopoverPositionDefault() },
+      table: {
+        category: category.props,
+        defaultValue: { summary: getPopoverPositionDefault().toString() },
+      },
     },
     shouldRestoreFocus: {
-      table: { category: category.props },
-      defaultValue: { summary: getPopoverRestoreFocusDefault() },
+      table: {
+        category: category.props,
+        defaultValue: { summary: getPopoverRestoreFocusDefault().toString() },
+      },
     },
     isOpen: { table: { category: category.props } },
     //Events
     onClose: { ...htmlEventDescription, table: { disable: true } },
-  },
-  parameters: {
-    version: getVersion('ds-overlays'),
   },
 } satisfies Meta<typeof Popover>;
 export default meta;

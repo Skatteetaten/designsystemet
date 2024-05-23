@@ -16,7 +16,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: DatePicker,
@@ -62,7 +61,6 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getCommonFormVariantDefault() },
-        type: { summary: formArrSize },
       },
     },
     // HTML
@@ -70,8 +68,10 @@ const meta = {
     disabled: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },
     placeholder: {
-      defaultValue: { summary: dsI18n.t('ds_forms:datepicker.TypeOrSelect') },
-      table: { category: category.htmlAttribute },
+      table: {
+        category: category.htmlAttribute,
+        defaultValue: { summary: dsI18n.t('ds_forms:datepicker.TypeOrSelect') },
+      },
     },
     readOnly: { table: { category: category.htmlAttribute } },
     required: {
@@ -86,9 +86,6 @@ const meta = {
   },
   args: {
     label: 'Fødselsdato',
-  },
-  parameters: {
-    version: getVersion('ds-forms'),
   },
 } satisfies Meta<typeof DatePicker>;
 

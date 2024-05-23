@@ -8,7 +8,14 @@ import {
 import { Heading } from '@skatteetaten/ds-typography';
 import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fireEvent, userEvent, waitFor, within } from '@storybook/test';
+import {
+  expect,
+  fireEvent,
+  fn,
+  userEvent,
+  waitFor,
+  within,
+} from '@storybook/test';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
 
@@ -479,6 +486,7 @@ export const WithEventHandlers = {
   name: 'With EventHandlers',
   args: {
     ...defaultArgs,
+    onChange: fn(),
   },
   parameters: {
     imageSnapshot: { disable: true },
