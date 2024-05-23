@@ -90,14 +90,11 @@ export const useFileUploader = <T,>(
     setUploadResult(undefined);
   };
 
-  const hasNameAndId = (
-    value: unknown
-  ): value is { name: string; id?: string } =>
+  const hasName = (value: unknown): value is { name: string; id?: string } =>
     typeof value === 'object' &&
     value !== null &&
     'name' in value &&
-    typeof value.name === 'string' &&
-    (('id' in value && typeof value.id === 'string') || 'id'! in value);
+    typeof value.name === 'string';
 
   const isUploadError = (
     uploadStatusData: unknown
@@ -106,7 +103,7 @@ export const useFileUploader = <T,>(
       Array.isArray(uploadStatusData) &&
       !uploadStatusData.some((data) => {
         if (Array.isArray(data.files)) {
-          if (data.files.some((file: unknown) => !hasNameAndId(file))) {
+          if (data.files.some((file: unknown) => !hasName(file))) {
             return true;
           }
 
