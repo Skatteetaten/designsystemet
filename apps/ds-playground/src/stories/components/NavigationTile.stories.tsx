@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { AccountEnkSVGpath } from '@skatteetaten/ds-icons';
 import {
   NavigationTile,
@@ -72,11 +74,20 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Preview: Story = {} satisfies Story;
+export const Preview: Story = {
+  render: (_args): JSX.Element => (
+    <nav aria-label={'Beskrivelse av navigasjonsflater'}>
+      <NavigationTile {..._args} />
+    </nav>
+  ),
+} satisfies Story;
 
 export const Examples: Story = {
   render: (_args) => (
-    <nav className={'flex gapXl'}>
+    <nav
+      className={'flex gapXl'}
+      aria-label={'Beskrivelse av navigasjonsflater'}
+    >
       <NavigationTile
         title={defaultTitle}
         description={defaultDescription}
