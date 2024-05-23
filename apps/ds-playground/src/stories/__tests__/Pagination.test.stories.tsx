@@ -165,7 +165,7 @@ export const WithListLength: Story = {
   },
 } satisfies Story;
 
-export const WithListLengthChange: Story = {
+export const WithListLengthChange = {
   name: 'With Changed List Length (A3)',
   args: {
     ...defaultArgs,
@@ -173,7 +173,7 @@ export const WithListLengthChange: Story = {
     pageSize: 10,
   },
   argTypes: {
-    totalItems: { table: true },
+    totalItems: { table: { disable: false } },
   },
   play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);
