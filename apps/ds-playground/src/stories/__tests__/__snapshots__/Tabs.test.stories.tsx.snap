@@ -137,19 +137,19 @@ exports[`Tester/Tabs/Tabs WithTabSelected play-test 1`] = `
          tabindex="-1"
     >
       <button id="ds-tab-id-tab1"
-              class="TabsTab_tab__W3ulY   TabsTab_tab_active__RkJBU  "
+              class="TabsTab_tab__W3ulY     "
               role="tab"
-              tabindex="0"
-              aria-selected="true"
+              tabindex="-1"
+              aria-selected="false"
               aria-controls="ds-tab-panel-tab1"
       >
         Person
       </button>
       <button id="ds-tab-id-tab2"
-              class="TabsTab_tab__W3ulY     "
+              class="TabsTab_tab__W3ulY   TabsTab_tab_active__RkJBU  "
               role="tab"
-              tabindex="-1"
-              aria-selected="false"
+              tabindex="0"
+              aria-selected="true"
               aria-controls="ds-tab-panel-tab2"
       >
         Bedrift
@@ -165,14 +165,14 @@ exports[`Tester/Tabs/Tabs WithTabSelected play-test 1`] = `
       </button>
     </div>
     <div id="ds-tab-panel-tab1"
-         class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
+         class="TabsPanel_panel__4lPgj  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-tab1"
     >
       Tabs.Panel Person
     </div>
     <div id="ds-tab-panel-tab2"
-         class="TabsPanel_panel__4lPgj  "
+         class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
          role="tabpanel"
          aria-labelledby="ds-tab-id-tab2"
     >
@@ -189,7 +189,7 @@ exports[`Tester/Tabs/Tabs WithTabSelected play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Tabs/Tabs WithVariantSmall smoke-test 1`] = `
+exports[`Tester/Tabs/Tabs WithVariantCompact smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
     <div class="TabsList_tabList__vWYZt  "

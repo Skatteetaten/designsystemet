@@ -56,7 +56,7 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
   }
 ) as TabsComponent;
 
-export interface TabsTabComponent {}
+//export interface TabsTabComponent {}
 
 Tabs.displayName = 'Tabs';
 Tabs.List = TabsList;

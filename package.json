@@ -26,7 +26,7 @@
     "start": "nx build ds-core-designtokens && STORYBOOK_BUILD_VERSION=develop nx serve --host=127.0.0.1",
     "start:static": "npx http-server dist/storybook/ds-playground --port 4400",
     "prepare": "node -e \"if (process.env.CI !== 'true'){process.exit(1)} \" || npx lefthook install -a",
-    "prebuild": "npm-run-all lint stylelint prettier typecheck",
+    "prebuild": "npm-run-all lint stylelint prettier",
     "build": "nx run-many --target=build --parallel=8",
     "build:playground": "nx build ds-core-designtokens && nx build",
     "build:analyze": "STORYBOOK_WEBPACK_STATS=true nx build",

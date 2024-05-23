@@ -3,7 +3,6 @@ import { BriefcaseSVGpath } from '@skatteetaten/ds-icons';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Tabs.Tab,
@@ -22,9 +21,6 @@ const meta = {
   args: {
     children: 'TabKnapp',
     value: 'random',
-  },
-  parameters: {
-    version: getVersion('ds-collections'),
   },
 } satisfies Meta<typeof Tabs.Tab>;
 

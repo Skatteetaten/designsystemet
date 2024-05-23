@@ -173,7 +173,7 @@ export const WithListLengthChange: Story = {
     pageSize: 10,
   },
   argTypes: {
-    totalItems: { table: true },
+    totalItems: { table: { disable: false } },
   },
   play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);

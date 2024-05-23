@@ -2,7 +2,6 @@ import { Tabs } from '@skatteetaten/ds-collections';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Tabs.List,
@@ -20,9 +19,6 @@ const meta = {
         {'En tab til'}
       </Tabs.Tab>,
     ],
-  },
-  parameters: {
-    version: getVersion('ds-collections'),
   },
 } satisfies Meta<typeof Tabs.List>;
 

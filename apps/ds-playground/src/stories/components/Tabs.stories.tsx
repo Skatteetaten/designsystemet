@@ -10,7 +10,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Tabs,
@@ -28,9 +27,6 @@ const meta = {
   },
   args: {
     defaultValue: 'tab1',
-  },
-  parameters: {
-    version: getVersion('ds-collections'),
   },
 } satisfies Meta<typeof Tabs>;
 

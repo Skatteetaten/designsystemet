@@ -2,7 +2,6 @@ import { Tabs } from '@skatteetaten/ds-collections';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Tabs.Panel,
@@ -15,9 +14,6 @@ const meta = {
   args: {
     children: 'Innhold',
     value: 'random',
-  },
-  parameters: {
-    version: getVersion('ds-collections'),
   },
 } satisfies Meta<typeof Tabs.Panel>;
 
