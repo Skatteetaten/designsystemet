@@ -80,6 +80,10 @@
   padding: var(--spacing-xs) 0;
   grid-area: logo;
 
+  &:focus {
+    outline: none;
+  }
+
   &Image {
     display: block;
     width: 2rem;
@@ -90,6 +94,11 @@
       width: 2.5rem;
       height: 2.5rem;
     }
+  }
+
+  &:focus &Image {
+    outline: var(--palette-azure-30) 2px solid;
+    outline-offset: 2px;
   }
 }
 
@@ -110,12 +119,23 @@
     grid-template-columns: 32px 1fr fit-content(9.5rem);
 
     @media (min-width: $breakpoint-m) {
-      grid-template-areas: 'logo title children name';
-      grid-template-columns: 40px 1fr 1fr fit-content(15.75rem);
+      grid-template-areas: 'logo title name';
+      grid-template-columns: 40px 1fr fit-content(15.75rem);
     }
 
     @media (min-width: $breakpoint-l) {
-      grid-template-columns: 40px 1fr 1fr fit-content(var(--container-s));
+      grid-template-columns: 40px 1fr fit-content(var(--container-s));
+    }
+
+    &_withChildren {
+      @media (min-width: $breakpoint-m) {
+        grid-template-areas: 'logo title children name';
+        grid-template-columns: 40px 1fr 1fr fit-content(15.75rem);
+      }
+
+      @media (min-width: $breakpoint-l) {
+        grid-template-columns: 40px 1fr 1fr fit-content(var(--container-s));
+      }
     }
   }
 }

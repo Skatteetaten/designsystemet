@@ -11,6 +11,7 @@ export const logo: string;
 export const logoImage: string;
 export const topContainer: string;
 export const contentContainer: string;
+export const contentContainer_withChildren: string;
 export const nameContainer: string;
 export const nameContainerName: string;
 export const nameContainerIcon: string;

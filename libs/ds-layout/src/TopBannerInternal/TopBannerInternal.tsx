@@ -56,7 +56,11 @@ export const TopBannerInternal = forwardRef<
           </div>
         )}
         <div className={styles.topContainer}>
-          <div className={styles.contentContainer}>
+          <div
+            className={`${styles.contentContainer} ${
+              children ? styles.contentContainer_withChildren : ''
+            }`}
+          >
             <a className={styles.logo} href={logoHref} onClick={onLogoClick}>
               <img
                 className={styles.logoImage}
@@ -68,9 +72,11 @@ export const TopBannerInternal = forwardRef<
               {title && <span>{title}</span>}
               {description && <span>{description}</span>}
             </span>
-            <div className={styles.childrenContainer}>
-              {<div className={styles.alignRight}>{children}</div>}
-            </div>
+            {children && (
+              <div className={styles.childrenContainer}>
+                {<div className={styles.alignRight}>{children}</div>}
+              </div>
+            )}
             {user && (
               <div className={styles.nameContainer}>
                 <div>
