@@ -42,6 +42,7 @@ export const TopBannerInternal = forwardRef<
         className={`${styles.topBanner} ${className}`}
       >
         <TopBannerSkipLink
+          className={styles.skipLink}
           target={skipLink?.target}
           shadowRootNode={skipLink?.shadowRootNode}
         >

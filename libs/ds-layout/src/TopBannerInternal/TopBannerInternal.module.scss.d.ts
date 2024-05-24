@@ -14,3 +14,4 @@ export const contentContainer: string;
 export const nameContainer: string;
 export const nameContainerName: string;
 export const nameContainerIcon: string;
+export const skipLink: string;

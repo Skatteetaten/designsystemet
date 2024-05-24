@@ -150,3 +150,10 @@
     fill: var(--palette-graphite-0);
   }
 }
+
+.skipLink {
+  @media (min-width: $breakpoint-m) {
+    --skip-link-content-max-width: none;
+    --skip-link-content-margin: 0 var(--spacing-xl);
+  }
+}
