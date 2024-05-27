@@ -4,7 +4,7 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedBreakpointL play-test
 <div data-test-block="true">
   <header class="TopBannerInternal_topBanner__qkiyp ">
     <a href="main"
-       class="TopBannerSkipLink_skipLink__5N+l7"
+       class="TopBannerSkipLink_skipLink__5N+l7 TopBannerInternal_skipLink__zUMI2"
     >
       <span class="TopBannerSkipLink_skipLinkContent__T3QpL">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerSkipLink_icon__Xwbwo"
@@ -20,7 +20,7 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedBreakpointL play-test
       </span>
     </a>
     <div class="TopBannerInternal_topContainer__MOjfe">
-      <div class="TopBannerInternal_contentContainer__CPB4+">
+      <div class="TopBannerInternal_contentContainer__CPB4+ ">
         <a class="TopBannerInternal_logo__JYEkN"
            href="#"
         >
@@ -31,10 +31,6 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedBreakpointL play-test
         </a>
         <span class="TopBannerInternal_titleWrapper__6eIDB">
         </span>
-        <div class="TopBannerInternal_childrenContainer__-yXS6">
-          <div class="TopBannerInternal_alignRight__RWBkP">
-          </div>
-        </div>
       </div>
     </div>
   </header>
@@ -45,7 +41,7 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedMobileScreen play-tes
 <div data-test-block="true">
   <header class="TopBannerInternal_topBanner__qkiyp ">
     <a href="main"
-       class="TopBannerSkipLink_skipLink__5N+l7"
+       class="TopBannerSkipLink_skipLink__5N+l7 TopBannerInternal_skipLink__zUMI2"
     >
       <span class="TopBannerSkipLink_skipLinkContent__T3QpL">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerSkipLink_icon__Xwbwo"
@@ -61,7 +57,7 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedMobileScreen play-tes
       </span>
     </a>
     <div class="TopBannerInternal_topContainer__MOjfe">
-      <div class="TopBannerInternal_contentContainer__CPB4+">
+      <div class="TopBannerInternal_contentContainer__CPB4+ ">
         <a class="TopBannerInternal_logo__JYEkN"
            href="#"
         >
@@ -72,10 +68,6 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedMobileScreen play-tes
         </a>
         <span class="TopBannerInternal_titleWrapper__6eIDB">
         </span>
-        <div class="TopBannerInternal_childrenContainer__-yXS6">
-          <div class="TopBannerInternal_alignRight__RWBkP">
-          </div>
-        </div>
       </div>
     </div>
   </header>
@@ -90,7 +82,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithAttributes play-test 1`] = `
           class="TopBannerInternal_topBanner__qkiyp dummyClassname"
   >
     <a href="main"
-       class="TopBannerSkipLink_skipLink__5N+l7"
+       class="TopBannerSkipLink_skipLink__5N+l7 TopBannerInternal_skipLink__zUMI2"
     >
       <span class="TopBannerSkipLink_skipLinkContent__T3QpL">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerSkipLink_icon__Xwbwo"
@@ -106,7 +98,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithAttributes play-test 1`] = `
       </span>
     </a>
     <div class="TopBannerInternal_topContainer__MOjfe">
-      <div class="TopBannerInternal_contentContainer__CPB4+">
+      <div class="TopBannerInternal_contentContainer__CPB4+ ">
         <a class="TopBannerInternal_logo__JYEkN"
            href="#"
         >
@@ -117,10 +109,6 @@ exports[`Tester/TopBanner/TopBannerInternal WithAttributes play-test 1`] = `
         </a>
         <span class="TopBannerInternal_titleWrapper__6eIDB">
         </span>
-        <div class="TopBannerInternal_childrenContainer__-yXS6">
-          <div class="TopBannerInternal_alignRight__RWBkP">
-          </div>
-        </div>
       </div>
     </div>
   </header>
@@ -131,7 +119,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
 <div data-test-block="true">
   <header class="TopBannerInternal_topBanner__qkiyp ">
     <a href="main"
-       class="TopBannerSkipLink_skipLink__5N+l7"
+       class="TopBannerSkipLink_skipLink__5N+l7 TopBannerInternal_skipLink__zUMI2"
     >
       <span class="TopBannerSkipLink_skipLinkContent__T3QpL">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerSkipLink_icon__Xwbwo"
@@ -147,7 +135,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
       </span>
     </a>
     <div class="TopBannerInternal_topContainer__MOjfe">
-      <div class="TopBannerInternal_contentContainer__CPB4+">
+      <div class="TopBannerInternal_contentContainer__CPB4+ TopBannerInternal_contentContainer_withChildren__mZUUW">
         <a class="TopBannerInternal_logo__JYEkN"
            href="#"
         >
@@ -240,7 +228,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomLogo smoke-test 1`] = `
 <div data-test-block="true">
   <header class="TopBannerInternal_topBanner__qkiyp ">
     <a href="main"
-       class="TopBannerSkipLink_skipLink__5N+l7"
+       class="TopBannerSkipLink_skipLink__5N+l7 TopBannerInternal_skipLink__zUMI2"
     >
       <span class="TopBannerSkipLink_skipLinkContent__T3QpL">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerSkipLink_icon__Xwbwo"
@@ -256,7 +244,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomLogo smoke-test 1`] = `
       </span>
     </a>
     <div class="TopBannerInternal_topContainer__MOjfe">
-      <div class="TopBannerInternal_contentContainer__CPB4+">
+      <div class="TopBannerInternal_contentContainer__CPB4+ ">
         <a class="TopBannerInternal_logo__JYEkN"
            href="#"
         >
@@ -267,10 +255,6 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomLogo smoke-test 1`] = `
         </a>
         <span class="TopBannerInternal_titleWrapper__6eIDB">
         </span>
-        <div class="TopBannerInternal_childrenContainer__-yXS6">
-          <div class="TopBannerInternal_alignRight__RWBkP">
-          </div>
-        </div>
       </div>
     </div>
   </header>
@@ -281,7 +265,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomTheme smoke-test 1`] = `
 <div data-test-block="true">
   <header class="TopBannerInternal_topBanner__qkiyp dummyCustomTheme">
     <a href="main"
-       class="TopBannerSkipLink_skipLink__5N+l7"
+       class="TopBannerSkipLink_skipLink__5N+l7 TopBannerInternal_skipLink__zUMI2"
     >
       <span class="TopBannerSkipLink_skipLinkContent__T3QpL">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerSkipLink_icon__Xwbwo"
@@ -297,7 +281,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomTheme smoke-test 1`] = `
       </span>
     </a>
     <div class="TopBannerInternal_topContainer__MOjfe">
-      <div class="TopBannerInternal_contentContainer__CPB4+">
+      <div class="TopBannerInternal_contentContainer__CPB4+ ">
         <a class="TopBannerInternal_logo__JYEkN"
            href="#"
         >
@@ -308,10 +292,6 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomTheme smoke-test 1`] = `
         </a>
         <span class="TopBannerInternal_titleWrapper__6eIDB">
         </span>
-        <div class="TopBannerInternal_childrenContainer__-yXS6">
-          <div class="TopBannerInternal_alignRight__RWBkP">
-          </div>
-        </div>
       </div>
     </div>
   </header>
@@ -322,7 +302,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithDefaults play-test 1`] = `
 <div data-test-block="true">
   <header class="TopBannerInternal_topBanner__qkiyp ">
     <a href="main"
-       class="TopBannerSkipLink_skipLink__5N+l7"
+       class="TopBannerSkipLink_skipLink__5N+l7 TopBannerInternal_skipLink__zUMI2"
     >
       <span class="TopBannerSkipLink_skipLinkContent__T3QpL">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerSkipLink_icon__Xwbwo"
@@ -338,7 +318,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithDefaults play-test 1`] = `
       </span>
     </a>
     <div class="TopBannerInternal_topContainer__MOjfe">
-      <div class="TopBannerInternal_contentContainer__CPB4+">
+      <div class="TopBannerInternal_contentContainer__CPB4+ ">
         <a class="TopBannerInternal_logo__JYEkN"
            href="#"
         >
@@ -349,10 +329,6 @@ exports[`Tester/TopBanner/TopBannerInternal WithDefaults play-test 1`] = `
         </a>
         <span class="TopBannerInternal_titleWrapper__6eIDB">
         </span>
-        <div class="TopBannerInternal_childrenContainer__-yXS6">
-          <div class="TopBannerInternal_alignRight__RWBkP">
-          </div>
-        </div>
       </div>
     </div>
   </header>
@@ -363,7 +339,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithDemoMode play-test 1`] = `
 <div data-test-block="true">
   <header class="TopBannerInternal_topBanner__qkiyp ">
     <a href="main"
-       class="TopBannerSkipLink_skipLink__5N+l7"
+       class="TopBannerSkipLink_skipLink__5N+l7 TopBannerInternal_skipLink__zUMI2"
     >
       <span class="TopBannerSkipLink_skipLinkContent__T3QpL">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerSkipLink_icon__Xwbwo"
@@ -384,7 +360,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithDemoMode play-test 1`] = `
       </div>
     </div>
     <div class="TopBannerInternal_topContainer__MOjfe">
-      <div class="TopBannerInternal_contentContainer__CPB4+">
+      <div class="TopBannerInternal_contentContainer__CPB4+ ">
         <a class="TopBannerInternal_logo__JYEkN"
            href="#"
         >
@@ -395,10 +371,6 @@ exports[`Tester/TopBanner/TopBannerInternal WithDemoMode play-test 1`] = `
         </a>
         <span class="TopBannerInternal_titleWrapper__6eIDB">
         </span>
-        <div class="TopBannerInternal_childrenContainer__-yXS6">
-          <div class="TopBannerInternal_alignRight__RWBkP">
-          </div>
-        </div>
       </div>
     </div>
   </header>
@@ -409,7 +381,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLogoClick play-test 1`] = `
 <div data-test-block="true">
   <header class="TopBannerInternal_topBanner__qkiyp ">
     <a href="main"
-       class="TopBannerSkipLink_skipLink__5N+l7"
+       class="TopBannerSkipLink_skipLink__5N+l7 TopBannerInternal_skipLink__zUMI2"
     >
       <span class="TopBannerSkipLink_skipLinkContent__T3QpL">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerSkipLink_icon__Xwbwo"
@@ -425,7 +397,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLogoClick play-test 1`] = `
       </span>
     </a>
     <div class="TopBannerInternal_topContainer__MOjfe">
-      <div class="TopBannerInternal_contentContainer__CPB4+">
+      <div class="TopBannerInternal_contentContainer__CPB4+ ">
         <a class="TopBannerInternal_logo__JYEkN"
            href="#"
         >
@@ -436,10 +408,6 @@ exports[`Tester/TopBanner/TopBannerInternal WithLogoClick play-test 1`] = `
         </a>
         <span class="TopBannerInternal_titleWrapper__6eIDB">
         </span>
-        <div class="TopBannerInternal_childrenContainer__-yXS6">
-          <div class="TopBannerInternal_alignRight__RWBkP">
-          </div>
-        </div>
       </div>
     </div>
   </header>
@@ -450,7 +418,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke
 <div data-test-block="true">
   <header class="TopBannerInternal_topBanner__qkiyp ">
     <a href="main"
-       class="TopBannerSkipLink_skipLink__5N+l7"
+       class="TopBannerSkipLink_skipLink__5N+l7 TopBannerInternal_skipLink__zUMI2"
     >
       <span class="TopBannerSkipLink_skipLinkContent__T3QpL">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerSkipLink_icon__Xwbwo"
@@ -466,7 +434,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke
       </span>
     </a>
     <div class="TopBannerInternal_topContainer__MOjfe">
-      <div class="TopBannerInternal_contentContainer__CPB4+">
+      <div class="TopBannerInternal_contentContainer__CPB4+ ">
         <a class="TopBannerInternal_logo__JYEkN"
            href="#"
         >
@@ -483,10 +451,6 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke
             kaka er en løgnkaka er en løgnkaka er en løgnkaka er en løgn
           </span>
         </span>
-        <div class="TopBannerInternal_childrenContainer__-yXS6">
-          <div class="TopBannerInternal_alignRight__RWBkP">
-          </div>
-        </div>
         <div class="TopBannerInternal_nameContainer__sI7XR">
           <div>
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerInternal_nameContainerIcon__fpe+i"
@@ -515,7 +479,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithRef play-test 1`] = `
           id="dummyIdForwardedFromRef"
   >
     <a href="main"
-       class="TopBannerSkipLink_skipLink__5N+l7"
+       class="TopBannerSkipLink_skipLink__5N+l7 TopBannerInternal_skipLink__zUMI2"
     >
       <span class="TopBannerSkipLink_skipLinkContent__T3QpL">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerSkipLink_icon__Xwbwo"
@@ -531,7 +495,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithRef play-test 1`] = `
       </span>
     </a>
     <div class="TopBannerInternal_topContainer__MOjfe">
-      <div class="TopBannerInternal_contentContainer__CPB4+">
+      <div class="TopBannerInternal_contentContainer__CPB4+ ">
         <a class="TopBannerInternal_logo__JYEkN"
            href="#"
         >
@@ -542,10 +506,6 @@ exports[`Tester/TopBanner/TopBannerInternal WithRef play-test 1`] = `
         </a>
         <span class="TopBannerInternal_titleWrapper__6eIDB">
         </span>
-        <div class="TopBannerInternal_childrenContainer__-yXS6">
-          <div class="TopBannerInternal_alignRight__RWBkP">
-          </div>
-        </div>
       </div>
     </div>
   </header>
@@ -556,7 +516,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1
 <div data-test-block="true">
   <header class="TopBannerInternal_topBanner__qkiyp ">
     <a href="main"
-       class="TopBannerSkipLink_skipLink__5N+l7"
+       class="TopBannerSkipLink_skipLink__5N+l7 TopBannerInternal_skipLink__zUMI2"
     >
       <span class="TopBannerSkipLink_skipLinkContent__T3QpL">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerSkipLink_icon__Xwbwo"
@@ -572,7 +532,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1
       </span>
     </a>
     <div class="TopBannerInternal_topContainer__MOjfe">
-      <div class="TopBannerInternal_contentContainer__CPB4+">
+      <div class="TopBannerInternal_contentContainer__CPB4+ ">
         <a class="TopBannerInternal_logo__JYEkN"
            href="#"
         >
@@ -589,10 +549,6 @@ exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1
             kaka er en løgn
           </span>
         </span>
-        <div class="TopBannerInternal_childrenContainer__-yXS6">
-          <div class="TopBannerInternal_alignRight__RWBkP">
-          </div>
-        </div>
         <div class="TopBannerInternal_nameContainer__sI7XR">
           <div>
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerInternal_nameContainerIcon__fpe+i"
