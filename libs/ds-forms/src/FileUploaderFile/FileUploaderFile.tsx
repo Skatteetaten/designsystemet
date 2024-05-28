@@ -9,6 +9,7 @@ import {
   FileOutlineIcon,
   FileOutlineSVGpath,
 } from '@skatteetaten/ds-icons';
+import { Spinner } from '@skatteetaten/ds-progress';
 
 import { FileUploaderFileProps } from './FileUploaderFile.types';
 
@@ -27,6 +28,7 @@ export const FileUploaderFile = forwardRef<
       fileIconTitle,
       href,
       successIconTitle,
+      showSpinner,
       onClick,
       onClickDelete,
       children,
@@ -73,11 +75,22 @@ export const FileUploaderFile = forwardRef<
                 </span>
               </span>
             )}
-            <CheckIcon
-              className={styles.successIcon}
-              size={'medium'}
-              title={successIconTitle ?? t('fileuploader.SuccessIconLabel')}
-            />
+            {showSpinner ? (
+              <Spinner
+                className={styles.fileSpinner}
+                color={'blue'}
+                size={'medium'}
+                hideTitle
+              >
+                {t('fileuploader.DeleteInProgress')}
+              </Spinner>
+            ) : (
+              <CheckIcon
+                className={styles.successIcon}
+                size={'medium'}
+                title={successIconTitle ?? t('fileuploader.SuccessIconLabel')}
+              />
+            )}
           </span>
           <span>
             <IconButton

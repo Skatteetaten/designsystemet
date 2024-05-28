@@ -30,6 +30,7 @@
   "fileuploader.AddMultipleLabel": "Legg til fil(er)",
   "fileuploader.AddSingleLabel": "Legg til fil",
   "fileuploader.DeleteConfirmation": "Filen er fjernet",
+  "fileuploader.DeleteInProgress": "Fjerning pågår",
   "fileuploader.DeleteLabel": "Fjern fil",
   "fileuploader.FileFormatError": "{{filnavn}} kan ikke lastes opp. Last opp filen i riktig format.",
   "fileuploader.FileIconLabel": "Fil",
