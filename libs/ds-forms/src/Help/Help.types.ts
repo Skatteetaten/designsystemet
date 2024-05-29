@@ -1,5 +1,7 @@
 import { ReactElement } from 'react';
 
+export type OnHelpToggleHandler = (open: boolean) => void;
+
 export interface HelpProps {
   /** Skjuler hele komponenten, men er fortsatt synlig for skjermleser */
   hideHelp?: boolean;
@@ -13,4 +15,6 @@ export interface HelpProps {
   targetId?: string;
   /** Beskrivelse */
   description?: string;
+  /** Callback som kalles når hjelpetekst vises/skjules */
+  onHelpToggle?: OnHelpToggleHandler;
 }

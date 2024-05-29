@@ -5,6 +5,7 @@ import { expect, fireEvent, within } from '@storybook/test';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import {
+  getCommonOnHelpToggleStory,
   loremIpsumWithoutSpaces,
   wrapper,
 } from './testUtils/storybook.testing.utils';
@@ -27,6 +28,8 @@ const meta = {
     },
     titleHelpSvg: { table: { disable: true } },
     targetId: { table: { disable: true } },
+    // Events
+    onHelpToggle: { table: { disable: true } },
   },
 } satisfies Meta<typeof Help>;
 export default meta;
@@ -213,3 +216,7 @@ export const ClickCloseButton = {
     await expect(helpButton).toHaveFocus();
   },
 } satisfies Story;
+
+export const WithHelpTextToggleEvent = getCommonOnHelpToggleStory<
+  typeof meta
+>() satisfies Story;

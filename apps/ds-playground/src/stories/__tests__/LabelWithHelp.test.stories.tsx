@@ -3,6 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
 
 import {
+  getCommonOnHelpToggleStory,
   loremIpsumWithoutSpaces,
   wrapper,
 } from './testUtils/storybook.testing.utils';
@@ -37,6 +38,8 @@ const meta = {
     titleHelpSvg: { table: { disable: true } },
     // HTML
     htmlFor: { table: { disable: true } },
+    // Events
+    onHelpToggle: { table: { disable: true } },
   },
 } satisfies Meta<typeof LabelWithHelp>;
 export default meta;
@@ -208,3 +211,7 @@ export const WithLongChildren = {
     },
   },
 } satisfies Story;
+
+export const WithHelpToggleEvent = getCommonOnHelpToggleStory<Story>({
+  ...defaultArgs,
+}) satisfies Story;
