@@ -1,4 +1,4 @@
-import { FocusEvent, ChangeEvent, useState } from 'react';
+import { ChangeEvent, FocusEvent, useState } from 'react';
 
 import { formArrSize } from '@skatteetaten/ds-core-utils';
 import {
@@ -7,10 +7,14 @@ import {
   textFieldAsArr,
 } from '@skatteetaten/ds-forms';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, within, waitFor, fn } from '@storybook/test';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
-import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
+import {
+  getCommonOnHelpToggleStory,
+  loremIpsum,
+  wrapper,
+} from './testUtils/storybook.testing.utils';
 
 const verifyAttribute =
   (attribute: string, expectedValue: string) =>
@@ -693,3 +697,6 @@ export const WithEventHandlers = {
     await waitFor(() => expect(args.onBlur).toHaveBeenCalled());
   },
 } satisfies Story;
+export const WithHelpToggleEvent = getCommonOnHelpToggleStory<Story>({
+  ...defaultArgs,
+}) satisfies Story;

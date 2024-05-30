@@ -14,8 +14,15 @@ export const loremIpsumWithoutSpaces =
   'Loremipsumdolorsitamet.Allesomharlagetennettside,trengtlittfylltekstellerbaresurfetrundtpånettetharantageligvissettdisseordene,' +
   'etterfulgtaventilsynelatendeeviglangtekstfyltmedlatinskeliksomsetninger.';
 
-export function getCommonOnHelpToggleStory<T extends StoryObj['args']>(
-  additionalArgs?: StoryObj<T>['args']
+export function getCommonOnHelpToggleStory<
+  T extends StoryObj['args'] & {
+    helpText?: string;
+    onHelpToggle?: (open: boolean) => void;
+  }
+>(
+  additionalArgs?: T extends { args?: Record<string, unknown> }
+    ? T['args']
+    : undefined
 ): T {
   return {
     name: 'With onHelpToggle Event',

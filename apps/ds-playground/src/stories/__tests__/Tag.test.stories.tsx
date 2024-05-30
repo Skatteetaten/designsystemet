@@ -4,6 +4,7 @@ import { Tag } from '@skatteetaten/ds-status';
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
 
+import { getCommonOnHelpToggleStory } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {
@@ -171,3 +172,7 @@ export const WithCustomIcon = {
     },
   },
 } satisfies Story;
+
+export const WithHelpToggleEvent = getCommonOnHelpToggleStory<Story>({
+  ...defaultArgs,
+}) satisfies Story;
