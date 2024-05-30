@@ -18,8 +18,6 @@
 
   &:focus {
     margin: -2px 0;
-
-    /* ny border */
     background: linear-gradient(
           var(--palette-graphite-0),
           var(--palette-graphite-0)
@@ -50,11 +48,7 @@
         )
         calc(100% - 1px) 0;
     background-repeat: no-repeat;
-
-    /* And so on ... */
     background-size: 100% 2px, 2px 100%;
-
-    /* Orginal focus  */
     outline: var(--semantic-interactive-main) solid 2px;
     outline-offset: 0;
 

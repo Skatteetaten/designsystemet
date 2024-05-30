@@ -117,7 +117,6 @@ export const WithAttributes = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
-    //    const tab3 = canvas.getAllByRole('tab')[3];
     await expect(container).toHaveAttribute('id', 'htmlId');
     await expect(container).toHaveClass('dummyClassname');
     await expect(container).toHaveAttribute('lang', 'nb');
@@ -139,14 +138,6 @@ export const WithVariantCompact = {
   parameters: {
     imageSnapshot: { disable: false },
   },
-  /*   play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const firstTab = canvas.getByRole('tab', {
-      name: 'Person',
-    });
-    await expect(firstTab).toBeInTheDocument();
-    await expect(firstTab).toHaveAttribute('aria-selected', 'true');
-  }, */
 } satisfies Story;
 
 export const WithDefaultValue = {

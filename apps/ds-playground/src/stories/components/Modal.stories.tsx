@@ -120,9 +120,6 @@ export const Examples: Story = {
         <Modal
           ref={refModal}
           title={'Vil du erstatte nye opplysninger fra fil?'}
-          onClose={() => {
-            console.log('lukker mod1');
-          }}
         >
           <Paragraph hasSpacing>
             {

@@ -54,20 +54,4 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-  /*   play: async ({ canvasElement, step }): Promise<void> => {
-    const canvas = within(canvasElement);
-    await step(
-      'Autogenerert id-attributt basert på tab name "tab1"',
-      async () => {
-        const tabpanel = canvas.getByRole('tabpanel', {
-          name: 'Person',
-          hidden: true,
-        });
-        await expect(tabpanel).toHaveAttribute('id', 'ds-tab-panel-tab1');
-        await expect(tabpanel).toHaveClass('dummyClassname');
-        await expect(tabpanel).toHaveAttribute('lang', 'nb');
-        await expect(tabpanel).toHaveAttribute('data-testid', '123ID');
-      }
-    );
-  }, */
 } satisfies Story;
