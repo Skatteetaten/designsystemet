@@ -679,6 +679,74 @@ exports[`Tester/SearchField WithHelpText play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/SearchField WithHelpToggleEvent smoke-test 1`] = `
+<div data-test-block="true">
+  <div id="searchField-:r27:"
+       class="SearchField_topContainer__HErHa"
+  >
+    <label id="searchField-:r27:-label"
+           class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+           for="searchField-:r27:-input"
+    >
+      Hva leter du etter?
+    </label>
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6 Help_srOnly__svaKL"
+            type="button"
+            aria-describedby="searchField-:r27:-label"
+            aria-expanded="false"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r29:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r29:">
+          Hjelp
+        </title>
+        <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+        </path>
+      </svg>
+    </button>
+    <div class="SearchField_searchContainer__reYO5 ">
+      <div class="SearchField_inputWrapper__tdDWM">
+        <span id="searchField-:r27:-srFocus"
+              class="SearchField_srOnly__UzlHQ"
+        >
+          Bruk piltaster ned/opp for å velge forslag når de vises
+        </span>
+        <input id="searchField-:r27:-input"
+               class="SearchField_input__kZKA0"
+               aria-describedby="searchField-:r27:-srFocus"
+               type="search"
+               value
+        >
+        <span aria-live="assertive"
+              class="SearchField_srOnly__UzlHQ"
+        >
+        </span>
+      </div>
+      <button class="SearchField_searchButton__Cp7+G">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz SearchField_icon__55EOi"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r2a:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r2a:">
+            Søk
+          </title>
+          <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Tester/SearchField WithLongLabel smoke-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:r9:"
