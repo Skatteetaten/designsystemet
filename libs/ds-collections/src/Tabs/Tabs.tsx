@@ -15,12 +15,12 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
       lang,
       'data-testid': dataTestId,
       defaultValue,
-      value,
-      isMultiline,
-      children,
       hasBorder,
+      isMultiline,
+      value,
       variant = getTabsVariantDefault(),
       onChange,
+      children,
     },
     ref
   ): JSX.Element => {

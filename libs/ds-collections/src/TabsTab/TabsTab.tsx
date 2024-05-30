@@ -11,14 +11,13 @@ import styles from './TabsTab.module.scss';
 export const TabsTab = forwardRef<HTMLButtonElement, TabsTabProps>(
   (
     {
-      // id,
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
-      children,
       svgPath,
       value,
       onClick,
+      children,
     },
     ref
   ): JSX.Element => {
@@ -58,7 +57,6 @@ export const TabsTab = forwardRef<HTMLButtonElement, TabsTabProps>(
             } else {
               (current.parentElement?.lastChild as HTMLElement).focus();
             }
-
             break;
           }
           default:

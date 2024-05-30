@@ -49,7 +49,7 @@ export const TabsList = forwardRef<HTMLDivElement, TabsListProps>(
     },
     ref
   ): JSX.Element => {
-    const { index, isMultiline, ...context } = useContext(TabsContext);
+    const { isMultiline, ...context } = useContext(TabsContext);
     const multilineClassName = isMultiline ? styles.tabList_multiline : '';
     return (
       <div
