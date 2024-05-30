@@ -58,6 +58,7 @@ const meta = {
     onFileDelete: { table: { category: category.event } },
     onFileDownload: { table: { category: category.event } },
     onFileChange: { table: { category: category.event } },
+    onHelpToggle: { table: { category: category.event } },
   },
   args: {
     helpText: 'Hjelpetekst',
