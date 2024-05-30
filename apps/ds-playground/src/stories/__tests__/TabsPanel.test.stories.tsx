@@ -49,6 +49,9 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
+  parameters: {
+    HTMLSnapshot: { disable: true },
+  },
   play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);
     await step(
@@ -58,7 +61,10 @@ export const WithAttributes = {
           name: 'Person',
           hidden: true,
         });
-        await expect(tabpanel).toHaveAttribute('id', 'ds-tab-panel-tab1');
+        await expect(tabpanel).toHaveAttribute(
+          'id',
+          expect.stringMatching(/^ds-tab-panel-.*-tab1$/)
+        );
         await expect(tabpanel).toHaveClass('dummyClassname');
         await expect(tabpanel).toHaveAttribute('lang', 'nb');
         await expect(tabpanel).toHaveAttribute('data-testid', '123ID');

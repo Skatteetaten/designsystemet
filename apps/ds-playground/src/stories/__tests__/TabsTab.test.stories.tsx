@@ -156,20 +156,30 @@ export const WithAttributes = {
     value: 'TabValue',
   },
   argTypes: {
-    id: { table: { disable: false } },
+    id: { table: { disable: true } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
+  parameters: {
+    HTMLSnapshot: { disable: true },
+    imageSnapshot: { disable: false },
+  },
   play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);
+    const tab = canvas.getByRole('tab', { name: 'Bedrift' });
     await step(
       'Autogenerert id-attributt basert på tab name "tab2"',
       async () => {
-        const tab = canvas.getByRole('tab', { name: 'Bedrift' });
-        await expect(tab).toHaveAttribute('id', 'ds-tab-id-tab2');
+        await expect(tab).toHaveAttribute(
+          'id',
+          expect.stringMatching(/^ds-tab-id-.*-tab2$/)
+        );
       }
     );
+    await expect(tab).toHaveClass('dummyClassname');
+    await expect(tab).toHaveAttribute('lang', 'nb');
+    await expect(tab).toHaveAttribute('data-testid', '123ID');
   },
 } satisfies Story;
 
@@ -189,7 +199,10 @@ export const WithIcon = {
     const canvas = within(canvasElement);
     await step('Sjekk om svg-ikon finnes', async () => {
       const tab = canvas.getByRole('tab', { name: 'Person' });
-      await expect(tab).toHaveAttribute('id', 'ds-tab-id-tab1');
+      await expect(tab).toHaveAttribute(
+        'id',
+        expect.stringMatching(/^ds-tab-id-.*-tab1$/)
+      );
     });
   },
 } satisfies Story;

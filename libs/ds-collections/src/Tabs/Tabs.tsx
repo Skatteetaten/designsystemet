@@ -1,4 +1,4 @@
-import { forwardRef, useState } from 'react';
+import { forwardRef, useState, useId } from 'react';
 
 import { getCommonClassNameDefault, getTabsVariantDefault } from './defaults';
 import { TabsProps, TabsComponent, TabsArr } from './Tabs.types';
@@ -35,6 +35,7 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
       setInternalTab(value);
       if (value) onChange?.(value);
     };
+    const baseId = useId();
     return (
       <div
         ref={ref}
@@ -45,6 +46,7 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
       >
         <TabsContext.Provider
           value={{
+            baseId,
             setActiveTab,
             activeTab,
             variant,
@@ -64,8 +66,6 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
     );
   }
 ) as TabsComponent;
-
-//export interface TabsTabComponent {}
 
 Tabs.displayName = 'Tabs';
 Tabs.List = TabsList;

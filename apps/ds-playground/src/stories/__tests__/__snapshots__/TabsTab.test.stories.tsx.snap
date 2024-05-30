@@ -7,36 +7,36 @@ exports[`Tester/Tabs/Tab Defaults play-test 1`] = `
          role="tablist"
          tabindex="-1"
     >
-      <button id="ds-tab-id-tab1"
+      <button id="ds-tab-id-:r0:-tab1"
               class="TabsTab_tab__W3ulY   TabsTab_tab_active__RkJBU  "
               role="tab"
               tabindex="0"
               aria-selected="true"
-              aria-controls="ds-tab-panel-tab1"
+              aria-controls="ds-tab-panel-:r0:-tab1"
       >
         TabText
       </button>
-      <button id="ds-tab-id-tab2"
+      <button id="ds-tab-id-:r0:-tab2"
               class="TabsTab_tab__W3ulY     "
               role="tab"
               tabindex="-1"
               aria-selected="false"
-              aria-controls="ds-tab-panel-tab2"
+              aria-controls="ds-tab-panel-:r0:-tab2"
       >
         Bedrift
       </button>
     </div>
-    <div id="ds-tab-panel-tab1"
+    <div id="ds-tab-panel-:r0:-tab1"
          class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
          role="tabpanel"
-         aria-labelledby="ds-tab-id-tab1"
+         aria-labelledby="ds-tab-id-:r0:-tab1"
     >
       Tabs.Panel Person
     </div>
-    <div id="ds-tab-panel-tab2"
+    <div id="ds-tab-panel-:r0:-tab2"
          class="TabsPanel_panel__4lPgj  "
          role="tabpanel"
-         aria-labelledby="ds-tab-id-tab2"
+         aria-labelledby="ds-tab-id-:r0:-tab2"
     >
       Tabs.Panel Bedrift
     </div>
@@ -51,58 +51,58 @@ exports[`Tester/Tabs/Tab WithAttributes play-test 1`] = `
          role="tablist"
          tabindex="-1"
     >
-      <button id="ds-tab-id-tab1"
+      <button id="ds-tab-id-:r1:-tab1"
               class="TabsTab_tab__W3ulY   TabsTab_tab_active__RkJBU  dummyClassname"
               lang="nb"
               data-testid="123ID"
               role="tab"
               tabindex="0"
               aria-selected="true"
-              aria-controls="ds-tab-panel-tab1"
+              aria-controls="ds-tab-panel-:r1:-tab1"
       >
         Person
       </button>
-      <button id="ds-tab-id-tab2"
+      <button id="ds-tab-id-:r1:-tab2"
               class="TabsTab_tab__W3ulY     dummyClassname"
               lang="nb"
               data-testid="123ID"
               role="tab"
               tabindex="-1"
               aria-selected="false"
-              aria-controls="ds-tab-panel-tab2"
+              aria-controls="ds-tab-panel-:r1:-tab2"
       >
         Bedrift
       </button>
-      <button id="ds-tab-id-tab3"
+      <button id="ds-tab-id-:r1:-tab3"
               class="TabsTab_tab__W3ulY     dummyClassname"
               lang="nb"
               data-testid="123ID"
               role="tab"
               tabindex="-1"
               aria-selected="false"
-              aria-controls="ds-tab-panel-tab3"
+              aria-controls="ds-tab-panel-:r1:-tab3"
       >
         Astronaut
       </button>
     </div>
-    <div id="ds-tab-panel-tab1"
+    <div id="ds-tab-panel-:r1:-tab1"
          class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
          role="tabpanel"
-         aria-labelledby="ds-tab-id-tab1"
+         aria-labelledby="ds-tab-id-:r1:-tab1"
     >
       Tabs.Panel Person
     </div>
-    <div id="ds-tab-panel-tab2"
+    <div id="ds-tab-panel-:r1:-tab2"
          class="TabsPanel_panel__4lPgj  "
          role="tabpanel"
-         aria-labelledby="ds-tab-id-tab2"
+         aria-labelledby="ds-tab-id-:r1:-tab2"
     >
       Tabs.Panel Bedrift
     </div>
-    <div id="ds-tab-panel-tab3"
+    <div id="ds-tab-panel-:r1:-tab3"
          class="TabsPanel_panel__4lPgj  "
          role="tabpanel"
-         aria-labelledby="ds-tab-id-tab3"
+         aria-labelledby="ds-tab-id-:r1:-tab3"
     >
       Tabs.Panel Astronaut
     </div>
@@ -117,12 +117,12 @@ exports[`Tester/Tabs/Tab WithBorder smoke-test 1`] = `
          role="tablist"
          tabindex="-1"
     >
-      <button id="ds-tab-id-tab1"
+      <button id="ds-tab-id-:ra:-tab1"
               class="TabsTab_tab__W3ulY  TabsTab_tab_border__MtJfT TabsTab_tab_active__RkJBU TabsTab_tab_icon__pamQC "
               role="tab"
               tabindex="0"
               aria-selected="true"
-              aria-controls="ds-tab-panel-tab1"
+              aria-controls="ds-tab-panel-:ra:-tab1"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo "
              viewbox="0 0 24 24"
@@ -135,12 +135,12 @@ exports[`Tester/Tabs/Tab WithBorder smoke-test 1`] = `
         </svg>
         Person
       </button>
-      <button id="ds-tab-id-tab2"
+      <button id="ds-tab-id-:ra:-tab2"
               class="TabsTab_tab__W3ulY  TabsTab_tab_border__MtJfT  TabsTab_tab_icon__pamQC "
               role="tab"
               tabindex="-1"
               aria-selected="false"
-              aria-controls="ds-tab-panel-tab2"
+              aria-controls="ds-tab-panel-:ra:-tab2"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo "
              viewbox="0 0 24 24"
@@ -154,17 +154,17 @@ exports[`Tester/Tabs/Tab WithBorder smoke-test 1`] = `
         Bedrift
       </button>
     </div>
-    <div id="ds-tab-panel-tab1"
+    <div id="ds-tab-panel-:ra:-tab1"
          class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
          role="tabpanel"
-         aria-labelledby="ds-tab-id-tab1"
+         aria-labelledby="ds-tab-id-:ra:-tab1"
     >
       Tabs.Panel Person
     </div>
-    <div id="ds-tab-panel-tab2"
+    <div id="ds-tab-panel-:ra:-tab2"
          class="TabsPanel_panel__4lPgj  "
          role="tabpanel"
-         aria-labelledby="ds-tab-id-tab2"
+         aria-labelledby="ds-tab-id-:ra:-tab2"
     >
       Tabs.Panel Bedrift
     </div>
@@ -179,12 +179,12 @@ exports[`Tester/Tabs/Tab WithIcon play-test 1`] = `
          role="tablist"
          tabindex="-1"
     >
-      <button id="ds-tab-id-tab1"
+      <button id="ds-tab-id-:r2:-tab1"
               class="TabsTab_tab__W3ulY   TabsTab_tab_active__RkJBU TabsTab_tab_icon__pamQC "
               role="tab"
               tabindex="0"
               aria-selected="true"
-              aria-controls="ds-tab-panel-tab1"
+              aria-controls="ds-tab-panel-:r2:-tab1"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo "
              viewbox="0 0 24 24"
@@ -197,12 +197,12 @@ exports[`Tester/Tabs/Tab WithIcon play-test 1`] = `
         </svg>
         Person
       </button>
-      <button id="ds-tab-id-tab2"
+      <button id="ds-tab-id-:r2:-tab2"
               class="TabsTab_tab__W3ulY    TabsTab_tab_icon__pamQC "
               role="tab"
               tabindex="-1"
               aria-selected="false"
-              aria-controls="ds-tab-panel-tab2"
+              aria-controls="ds-tab-panel-:r2:-tab2"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo "
              viewbox="0 0 24 24"
@@ -215,12 +215,12 @@ exports[`Tester/Tabs/Tab WithIcon play-test 1`] = `
         </svg>
         Bedrift
       </button>
-      <button id="ds-tab-id-tab3"
+      <button id="ds-tab-id-:r2:-tab3"
               class="TabsTab_tab__W3ulY    TabsTab_tab_icon__pamQC "
               role="tab"
               tabindex="-1"
               aria-selected="false"
-              aria-controls="ds-tab-panel-tab3"
+              aria-controls="ds-tab-panel-:r2:-tab3"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo "
              viewbox="0 0 24 24"
@@ -234,24 +234,24 @@ exports[`Tester/Tabs/Tab WithIcon play-test 1`] = `
         Astronaut
       </button>
     </div>
-    <div id="ds-tab-panel-tab1"
+    <div id="ds-tab-panel-:r2:-tab1"
          class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
          role="tabpanel"
-         aria-labelledby="ds-tab-id-tab1"
+         aria-labelledby="ds-tab-id-:r2:-tab1"
     >
       Tabs.Panel Person
     </div>
-    <div id="ds-tab-panel-tab2"
+    <div id="ds-tab-panel-:r2:-tab2"
          class="TabsPanel_panel__4lPgj  "
          role="tabpanel"
-         aria-labelledby="ds-tab-id-tab2"
+         aria-labelledby="ds-tab-id-:r2:-tab2"
     >
       Tabs.Panel Bedrift
     </div>
-    <div id="ds-tab-panel-tab3"
+    <div id="ds-tab-panel-:r2:-tab3"
          class="TabsPanel_panel__4lPgj  "
          role="tabpanel"
-         aria-labelledby="ds-tab-id-tab3"
+         aria-labelledby="ds-tab-id-:r2:-tab3"
     >
       Tabs.Panel Astronaut
     </div>
@@ -261,12 +261,12 @@ exports[`Tester/Tabs/Tab WithIcon play-test 1`] = `
          role="tablist"
          tabindex="-1"
     >
-      <button id="ds-tab-id-tab1"
+      <button id="ds-tab-id-:r6:-tab1"
               class="TabsTab_tab__W3ulY TabsTab_tab_compact__iTTkr  TabsTab_tab_active__RkJBU TabsTab_tab_icon__pamQC "
               role="tab"
               tabindex="0"
               aria-selected="true"
-              aria-controls="ds-tab-panel-tab1"
+              aria-controls="ds-tab-panel-:r6:-tab1"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo "
              viewbox="0 0 24 24"
@@ -279,12 +279,12 @@ exports[`Tester/Tabs/Tab WithIcon play-test 1`] = `
         </svg>
         Person 2
       </button>
-      <button id="ds-tab-id-tab2"
+      <button id="ds-tab-id-:r6:-tab2"
               class="TabsTab_tab__W3ulY TabsTab_tab_compact__iTTkr   TabsTab_tab_icon__pamQC "
               role="tab"
               tabindex="-1"
               aria-selected="false"
-              aria-controls="ds-tab-panel-tab2"
+              aria-controls="ds-tab-panel-:r6:-tab2"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo "
              viewbox="0 0 24 24"
@@ -297,12 +297,12 @@ exports[`Tester/Tabs/Tab WithIcon play-test 1`] = `
         </svg>
         Bedrift 2
       </button>
-      <button id="ds-tab-id-tab3"
+      <button id="ds-tab-id-:r6:-tab3"
               class="TabsTab_tab__W3ulY TabsTab_tab_compact__iTTkr   TabsTab_tab_icon__pamQC "
               role="tab"
               tabindex="-1"
               aria-selected="false"
-              aria-controls="ds-tab-panel-tab3"
+              aria-controls="ds-tab-panel-:r6:-tab3"
       >
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo "
              viewbox="0 0 24 24"
@@ -316,24 +316,24 @@ exports[`Tester/Tabs/Tab WithIcon play-test 1`] = `
         Astronaut 2
       </button>
     </div>
-    <div id="ds-tab-panel-tab1"
+    <div id="ds-tab-panel-:r6:-tab1"
          class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
          role="tabpanel"
-         aria-labelledby="ds-tab-id-tab1"
+         aria-labelledby="ds-tab-id-:r6:-tab1"
     >
       Tabs.Panel Person 2, variant compact
     </div>
-    <div id="ds-tab-panel-tab2"
+    <div id="ds-tab-panel-:r6:-tab2"
          class="TabsPanel_panel__4lPgj  "
          role="tabpanel"
-         aria-labelledby="ds-tab-id-tab2"
+         aria-labelledby="ds-tab-id-:r6:-tab2"
     >
       Tabs.Panel Bedrift 2, variant compact
     </div>
-    <div id="ds-tab-panel-tab3"
+    <div id="ds-tab-panel-:r6:-tab3"
          class="TabsPanel_panel__4lPgj  "
          role="tabpanel"
-         aria-labelledby="ds-tab-id-tab3"
+         aria-labelledby="ds-tab-id-:r6:-tab3"
     >
       Tabs.Panel Astronaut 2, variant compact
     </div>

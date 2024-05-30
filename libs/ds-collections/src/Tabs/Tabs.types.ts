@@ -61,4 +61,6 @@ export interface TabsContextProps
   activeIndex: number;
   /** Setter for activeIndex */
   setActiveIndex: Dispatch<SetStateAction<number>>;
+  /** Unik id pr tab */
+  baseId: string;
 }

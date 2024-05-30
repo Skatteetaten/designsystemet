@@ -23,6 +23,7 @@ export const TabsTab = forwardRef<HTMLButtonElement, TabsTabProps>(
     ref
   ): JSX.Element => {
     const {
+      baseId,
       activeTab,
       setActiveTab,
       variant,
@@ -69,14 +70,14 @@ export const TabsTab = forwardRef<HTMLButtonElement, TabsTabProps>(
     return (
       <button
         ref={ref}
-        id={`ds-tab-id-${value}`}
+        id={`ds-tab-id-${baseId}-${value}`}
         className={`${tabClassName} ${variantClassName} ${borderClassName} ${activeClassName} ${withIconClassName} ${className}`}
         lang={lang}
         data-testid={dataTestId}
         role={'tab'}
         tabIndex={activeTab !== value ? -1 : 0}
         aria-selected={activeTab === value ?? false}
-        aria-controls={`ds-tab-panel-${value}`}
+        aria-controls={`ds-tab-panel-${baseId}-${value}`}
         onClick={(e): void => {
           setActiveTab(value);
           setActiveIndex(activeIndex);

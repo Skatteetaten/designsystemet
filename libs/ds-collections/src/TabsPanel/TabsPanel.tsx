@@ -18,19 +18,19 @@ export const TabsPanel = forwardRef<HTMLDivElement, TabsPanelProps>(
     },
     ref
   ): JSX.Element => {
-    const { activeTab } = useContext(TabsContext);
+    const { activeTab, baseId } = useContext(TabsContext);
     const panelClassName = `${styles.panel} ${
       activeTab === value ? styles.panel_active : ''
     }`;
     return (
       <div
         ref={ref}
-        id={`ds-tab-panel-${value}`}
+        id={`ds-tab-panel-${baseId}-${value}`}
         className={`${panelClassName} ${className}`}
         lang={lang}
         data-testid={dataTestId}
         role={'tabpanel'}
-        aria-labelledby={`ds-tab-id-${value}`}
+        aria-labelledby={`ds-tab-id-${baseId}-${value}`}
       >
         {children}
       </div>
