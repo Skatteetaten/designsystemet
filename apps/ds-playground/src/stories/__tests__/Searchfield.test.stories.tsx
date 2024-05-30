@@ -79,6 +79,7 @@ const meta = {
     onFocus: { table: { disable: true } },
     onSearch: { table: { disable: true } },
     onClear: { table: { disable: true } },
+    onHelpToggle: { table: { disable: true } },
     onSearchClick: { table: { disable: true } },
     onResultClick: { table: { disable: true } },
   },
@@ -544,4 +545,20 @@ export const WithAccesskey = {
     imageSnapshot: { disable: true },
   },
   play: verifyAttribute('accessKey', 'j'),
+} satisfies Story;
+
+export const WithHelpToggleEvent = {
+  name: 'With onHelpToggle Event',
+  args: {
+    ...defaultArgs,
+    helpText: 'Hjelpetekst',
+    onHelpToggle: (open: boolean): void => {
+      alert(open ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
+    },
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
+  },
 } satisfies Story;

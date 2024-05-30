@@ -5,7 +5,6 @@ import { expect, fireEvent, within } from '@storybook/test';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import {
-  getCommonOnHelpToggleStory,
   loremIpsumWithoutSpaces,
   wrapper,
 } from './testUtils/storybook.testing.utils';
@@ -217,6 +216,17 @@ export const ClickCloseButton = {
   },
 } satisfies Story;
 
-export const WithHelpTextToggleEvent = getCommonOnHelpToggleStory<
-  typeof meta
->() satisfies Story;
+export const WithHelpToggleEvent = {
+  name: 'With onHelpToggle Event',
+  args: {
+    helpText: 'Hjelpetekst',
+    onHelpToggle: (open: boolean): void => {
+      alert(open ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
+    },
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
+  },
+} satisfies Story;

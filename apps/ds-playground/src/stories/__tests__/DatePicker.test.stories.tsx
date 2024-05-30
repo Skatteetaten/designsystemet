@@ -75,6 +75,7 @@ const meta = {
     onChange: { table: { disable: true } },
     onFocus: { table: { disable: true } },
     onSelectDate: { table: { disable: true } },
+    onHelpToggle: { table: { disable: true } },
   },
   parameters: {
     mockDate: today,
@@ -763,5 +764,21 @@ export const WithShadowDom = {
     await fireEvent.click(shadowCanvas.getByLabelText(defaultLabelText));
     await expect(calendarTable).not.toBeInTheDocument();
     await expect(calendarButton).toHaveAttribute('aria-expanded', 'false');
+  },
+} satisfies Story;
+
+export const WithHelpToggleEvent = {
+  name: 'With onHelpToggle Event',
+  args: {
+    ...defaultArgs,
+    helpText: 'Hjelpetekst',
+    onHelpToggle: (open: boolean): void => {
+      alert(open ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
+    },
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
   },
 } satisfies Story;

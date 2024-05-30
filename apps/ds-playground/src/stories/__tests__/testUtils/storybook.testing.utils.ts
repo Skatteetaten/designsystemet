@@ -1,4 +1,3 @@
-import { StoryObj } from '@storybook/react';
 import { PageScreenshotOptions } from 'playwright';
 
 export const wrapper = '[data-test-block]';
@@ -13,30 +12,3 @@ export const loremIpsum =
 export const loremIpsumWithoutSpaces =
   'Loremipsumdolorsitamet.Allesomharlagetennettside,trengtlittfylltekstellerbaresurfetrundtpånettetharantageligvissettdisseordene,' +
   'etterfulgtaventilsynelatendeeviglangtekstfyltmedlatinskeliksomsetninger.';
-
-export function getCommonOnHelpToggleStory<
-  T extends StoryObj['args'] & {
-    helpText?: string;
-    onHelpToggle?: (open: boolean) => void;
-  }
->(
-  additionalArgs?: T extends { args?: Record<string, unknown> }
-    ? T['args']
-    : undefined
-): T {
-  return {
-    name: 'With onHelpToggle Event',
-    args: {
-      ...additionalArgs,
-      helpText: 'Hjelpetekst',
-      onHelpToggle: (open: boolean): void => {
-        alert(open ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-      },
-    },
-    parameters: {
-      imageSnapshot: {
-        disable: true,
-      },
-    },
-  } as unknown as T;
-}

@@ -3,7 +3,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
 
 import {
-  getCommonOnHelpToggleStory,
   loremIpsumWithoutSpaces,
   wrapper,
 } from './testUtils/storybook.testing.utils';
@@ -212,6 +211,18 @@ export const WithLongChildren = {
   },
 } satisfies Story;
 
-export const WithHelpToggleEvent = getCommonOnHelpToggleStory<Story>({
-  ...defaultArgs,
-}) satisfies Story;
+export const WithHelpToggleEvent = {
+  name: 'With onHelpToggle Event',
+  args: {
+    ...defaultArgs,
+    helpText: 'Hjelpetekst',
+    onHelpToggle: (open: boolean): void => {
+      alert(open ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
+    },
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
+  },
+} satisfies Story;

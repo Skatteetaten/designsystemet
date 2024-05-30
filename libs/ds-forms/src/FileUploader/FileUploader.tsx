@@ -56,6 +56,7 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
       onFileChange,
       onFileDelete,
       onFileDownload,
+      onHelpToggle,
       children: buttonTextExternal,
     },
     ref
@@ -154,6 +155,7 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
             helpSvgPath={helpSvgPath}
             helpText={helpText}
             titleHelpSvg={titleHelpSvg}
+            onHelpToggle={onHelpToggle}
           >
             {label}
           </LabelWithHelp>

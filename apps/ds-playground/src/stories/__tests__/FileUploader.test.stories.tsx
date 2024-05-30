@@ -92,6 +92,10 @@ const meta = {
     onFileChange: {
       table: { category: category.event, disable: true },
     },
+
+    onHelpToggle: {
+      table: { category: category.event, disable: true },
+    },
   },
 } satisfies Meta<typeof FileUploader>;
 export default meta;
@@ -340,5 +344,21 @@ export const WithFileChange: StoryObj<FileUploaderProps> = {
   },
   parameters: {
     imageSnapshot: { disable: true },
+  },
+} satisfies Story;
+
+export const WithHelpToggleEvent = {
+  name: 'With onHelpToggle Event',
+  args: {
+    label: 'Last opp filer',
+    helpText: 'Hjelpetekst',
+    onHelpToggle: (open: boolean): void => {
+      alert(open ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
+    },
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
   },
 } satisfies Story;
