@@ -3,8 +3,8 @@ import { ReactNode } from 'react';
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 export interface TabsPanelProps extends BaseProps {
-  /** innhold panelet  */
+  /** Innhold panelet  */
   children: ReactNode;
-  /** unique key with reference to same key in tabs.tab */
+  /** Verdien som lenker sammen Tabs.Tab og Tabs.Panel */
   value: string;
 }

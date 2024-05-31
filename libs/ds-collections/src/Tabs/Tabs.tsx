@@ -26,7 +26,7 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
     },
     ref
   ): JSX.Element => {
-    const [activeTab, setInternalTab] = useState(value || defaultValue);
+    const [activeTab, setInternalTab] = useState(value ?? defaultValue);
     const [tabs, setTabsInternal] = useState<TabsArr>([]);
     const [index, setIndex] = useState<number>(0);
     if (activeTab === undefined) {
@@ -73,3 +73,5 @@ Tabs.Panel = TabsPanel;
 Tabs.Panel.displayName = 'Tabs.Panel';
 Tabs.Tab = TabsTab;
 Tabs.Tab.displayName = 'Tabs.Tab';
+
+export { getTabsVariantDefault };

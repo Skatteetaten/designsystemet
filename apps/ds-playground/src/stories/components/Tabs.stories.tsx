@@ -1,4 +1,4 @@
-import { Tabs } from '@skatteetaten/ds-collections';
+import { Tabs, getTabsVariantDefault } from '@skatteetaten/ds-collections';
 import {
   AccountMultipleSVGpath,
   BriefcaseSVGpath,
@@ -20,7 +20,13 @@ const meta = {
     value: { control: 'text', table: { category: category.props } },
     defaultValue: { control: 'text', table: { category: category.props } },
     isMultiline: { table: { category: category.props } },
-    variant: { table: { category: category.props } },
+    variant: {
+      control: 'inline-radio',
+      table: {
+        category: category.props,
+        defaultValue: { summary: getTabsVariantDefault() },
+      },
+    },
     hasBorder: { table: { category: category.props } },
     //Events
     onChange: { ...htmlEventDescription },
@@ -36,6 +42,7 @@ type Story = StoryObj<typeof meta>;
 export const Preview: Story = {
   render: (args) => (
     <Tabs {...args}>
+      <div>{'hei'}</div>
       <Tabs.List key={'list1'}>
         <Tabs.Tab value={'tab1'}>{'Person'}</Tabs.Tab>
         <Tabs.Tab value={'tab2'}>{'Bedrift'}</Tabs.Tab>
