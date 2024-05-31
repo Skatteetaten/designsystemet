@@ -685,12 +685,12 @@ exports[`Tester/SearchField WithHelpToggleEvent smoke-test 1`] = `
        class="SearchField_topContainer__HErHa"
   >
     <label id="searchField-:r27:-label"
-           class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+           class="LabelWithHelp_label__59tP-"
            for="searchField-:r27:-input"
     >
       Hva leter du etter?
     </label>
-    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6 Help_srOnly__svaKL"
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
             type="button"
             aria-describedby="searchField-:r27:-label"
             aria-expanded="false"
