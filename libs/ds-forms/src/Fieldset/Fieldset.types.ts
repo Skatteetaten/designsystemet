@@ -30,4 +30,6 @@ export interface FieldsetProps
   titleHelpSvg?: HelpProps['titleHelpSvg'];
   /** Om legend skal markeres med stjerne */
   showRequiredMark?: boolean;
+  /** Callback som kalles når hjelpetekst vises/skjules */
+  onHelpToggle?: HelpProps['onHelpToggle'];
 }

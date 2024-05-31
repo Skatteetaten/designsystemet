@@ -271,3 +271,19 @@ export const WithLongLegend = {
     },
   },
 } satisfies Story;
+
+export const WithHelpToggleEvent = {
+  name: 'With onHelpToggle Event',
+  args: {
+    ...defaultArgs,
+    helpText: 'Hjelpetekst',
+    onHelpToggle: (open: boolean): void => {
+      alert(open ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
+    },
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
+  },
+} satisfies Story;
