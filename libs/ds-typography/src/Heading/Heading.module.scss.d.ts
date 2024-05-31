@@ -10,4 +10,4 @@ declare const classNames: {
   readonly heading_hasSpacingSmall: 'heading_hasSpacingSmall';
   readonly heading_hasSpacingMedium: 'heading_hasSpacingMedium';
 };
-export = classNames;
+export default classNames;

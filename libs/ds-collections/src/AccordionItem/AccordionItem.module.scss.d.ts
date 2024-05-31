@@ -26,4 +26,4 @@ declare const classNames: {
   readonly content_mediumIndented: 'content_mediumIndented';
   readonly content_largeIndented: 'content_largeIndented';
 };
-export = classNames;
+export default classNames;

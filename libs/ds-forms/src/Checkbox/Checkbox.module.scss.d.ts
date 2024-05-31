@@ -12,4 +12,4 @@ declare const classNames: {
   readonly labelContentDescription: 'labelContentDescription';
   readonly srOnly: 'srOnly';
 };
-export = classNames;
+export default classNames;

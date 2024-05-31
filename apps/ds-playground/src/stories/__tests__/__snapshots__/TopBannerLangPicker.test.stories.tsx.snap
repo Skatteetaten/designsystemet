@@ -2,16 +2,16 @@
 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangButton play-test 1`] = `
 <div data-test-block="true">
-  <div class=" TopBannerLangPicker_container__LVr42">
+  <div class=" _container_7cjjj_5">
     <div class>
     </div>
-    <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+    <button class="_button_197zg_1  _menuButton_7cjjj_17"
             lang="en"
             aria-expanded="false"
             type="button"
     >
-      <span class="TopBannerLangPicker_iconWrapper__SFn8s">
-        <span class="TopBannerLangPicker_flagIcon__LcfDc">
+      <span class="_iconWrapper_7cjjj_20">
+        <span class="_flagIcon_7cjjj_25">
           <svg xmlns="http://www.w3.org/2000/svg"
                xmlns:xlink="http://www.w3.org/1999/xlink"
                x="0px"
@@ -20,7 +20,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangB
                xml:space="preserve"
                focusable="false"
                aria-hidden="true"
-               class="TopBannerLangPicker_flagIconSvg__rO4YM"
+               class="_flagIconSvg_7cjjj_30"
           >
             <style type="text/css">
               .st0{fill:#FFFFFF;}
@@ -88,7 +88,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangB
             </g>
           </svg>
         </span>
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -99,10 +99,10 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangB
         </svg>
       </span>
       English
-      <span class="TopBannerLangPicker_srOnly__33VA7">
+      <span class="_srOnly_7cjjj_121">
         Meny
       </span>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -112,7 +112,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangB
         </path>
       </svg>
     </button>
-    <div class="TopBannerLangPicker_menuArrow__cXG+p">
+    <div class="_menuArrow_7cjjj_67">
     </div>
   </div>
 </div>
@@ -120,21 +120,21 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangB
 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = `
 <div data-test-block="true">
-  <div class=" TopBannerLangPicker_container__LVr42">
-    <div class="TopBannerLangPicker_overlay__y50Yx">
+  <div class=" _container_7cjjj_5">
+    <div class="_overlay_7cjjj_10">
     </div>
-    <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+    <button class="_button_197zg_1  _menuButton_7cjjj_17"
             lang="nb"
             aria-expanded="true"
             type="button"
     >
-      <span class="TopBannerLangPicker_iconWrapper__SFn8s">
-        <span class="TopBannerLangPicker_flagIcon__LcfDc">
+      <span class="_iconWrapper_7cjjj_20">
+        <span class="_flagIcon_7cjjj_25">
           <svg xmlns="http://www.w3.org/2000/svg"
                viewbox="0 0 1100 800"
                focusable="false"
                aria-hidden="true"
-               class="TopBannerLangPicker_flagIconSvg__rO4YM"
+               class="_flagIconSvg_7cjjj_30"
           >
             <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                      style="fill: rgb(255, 255, 255);"
@@ -182,7 +182,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
             </polygon>
           </svg>
         </span>
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -193,10 +193,10 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
         </svg>
       </span>
       Bokmål
-      <span class="TopBannerLangPicker_srOnly__33VA7">
+      <span class="_srOnly_7cjjj_121">
         Meny
       </span>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -206,21 +206,21 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
         </path>
       </svg>
     </button>
-    <div class="TopBannerLangPicker_menuArrow__cXG+p">
+    <div class="_menuArrow_7cjjj_67">
     </div>
-    <div class="TopBannerLangPicker_menu__GFqIr">
-      <ul class="TopBannerLangPicker_list__2dLA8">
-        <li class="TopBannerLangPicker_listItem__sGReR">
-          <button class="TopBannerLangPickerButton_buttonCurrent__y8Vxz TopBannerLangPickerButton_button__pl57- "
+    <div class="_menu_7cjjj_17">
+      <ul class="_list_7cjjj_101">
+        <li class="_listItem_7cjjj_114">
+          <button class="_buttonCurrent_1qb8h_25 _button_1qb8h_1 "
                   lang="nb"
                   aria-current="true"
           >
-            <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
+            <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
                    viewbox="0 0 1100 800"
                    focusable="false"
                    aria-hidden="true"
-                   class="TopBannerLangPicker_flagIconSvg__rO4YM"
+                   class="_flagIconSvg_7cjjj_30"
               >
                 <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                          style="fill: rgb(255, 255, 255);"
@@ -268,10 +268,10 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
                 </polygon>
               </svg>
             </span>
-            <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+            <span class="_buttonText_1qb8h_21">
               Bokmål
             </span>
-            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz "
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 "
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -282,17 +282,17 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
             </svg>
           </button>
         </li>
-        <li class="TopBannerLangPicker_listItem__sGReR">
-          <button class=" TopBannerLangPickerButton_button__pl57- "
+        <li class="_listItem_7cjjj_114">
+          <button class=" _button_1qb8h_1 "
                   lang="nn"
                   aria-current="false"
           >
-            <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
+            <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
                    viewbox="0 0 1100 800"
                    focusable="false"
                    aria-hidden="true"
-                   class="TopBannerLangPicker_flagIconSvg__rO4YM"
+                   class="_flagIconSvg_7cjjj_30"
               >
                 <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                          style="fill: rgb(255, 255, 255);"
@@ -340,17 +340,17 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
                 </polygon>
               </svg>
             </span>
-            <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+            <span class="_buttonText_1qb8h_21">
               Nynorsk
             </span>
           </button>
         </li>
-        <li class="TopBannerLangPicker_listItem__sGReR">
-          <button class=" TopBannerLangPickerButton_button__pl57- "
+        <li class="_listItem_7cjjj_114">
+          <button class=" _button_1qb8h_1 "
                   lang="en"
                   aria-current="false"
           >
-            <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
+            <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
                    xmlns:xlink="http://www.w3.org/1999/xlink"
                    x="0px"
@@ -359,7 +359,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
                    xml:space="preserve"
                    focusable="false"
                    aria-hidden="true"
-                   class="TopBannerLangPicker_flagIconSvg__rO4YM"
+                   class="_flagIconSvg_7cjjj_30"
               >
                 <style type="text/css">
                   .st0{fill:#FFFFFF;}
@@ -427,22 +427,22 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
                 </g>
               </svg>
             </span>
-            <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+            <span class="_buttonText_1qb8h_21">
               English
             </span>
           </button>
         </li>
-        <li class="TopBannerLangPicker_listItem__sGReR">
-          <button class=" TopBannerLangPickerButton_button__pl57- "
+        <li class="_listItem_7cjjj_114">
+          <button class=" _button_1qb8h_1 "
                   lang="se"
                   aria-current="false"
           >
-            <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
+            <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
                    viewbox="0 0 808 600"
                    focusable="false"
                    aria-hidden="true"
-                   class="TopBannerLangPicker_flagIconSvg__rO4YM"
+                   class="_flagIconSvg_7cjjj_30"
               >
                 <path d="m370,0v116.34c78.64,24.02,136,97.27,136,183.66s-57.36,159.64-136,183.66v116.34h438V0h-438Z"
                       style="fill: rgb(0, 53, 173);"
@@ -494,7 +494,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
                 </path>
               </svg>
             </span>
-            <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+            <span class="_buttonText_1qb8h_21">
               Sámegiella
             </span>
           </button>
@@ -508,24 +508,24 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <div id="htmlid"
-       class="dummyClassname TopBannerLangPicker_container__LVr42"
+       class="dummyClassname _container_7cjjj_5"
        lang="nb"
        data-testid="123ID"
   >
     <div class>
     </div>
-    <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+    <button class="_button_197zg_1  _menuButton_7cjjj_17"
             lang="nb"
             aria-expanded="false"
             type="button"
     >
-      <span class="TopBannerLangPicker_iconWrapper__SFn8s">
-        <span class="TopBannerLangPicker_flagIcon__LcfDc">
+      <span class="_iconWrapper_7cjjj_20">
+        <span class="_flagIcon_7cjjj_25">
           <svg xmlns="http://www.w3.org/2000/svg"
                viewbox="0 0 1100 800"
                focusable="false"
                aria-hidden="true"
-               class="TopBannerLangPicker_flagIconSvg__rO4YM"
+               class="_flagIconSvg_7cjjj_30"
           >
             <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                      style="fill: rgb(255, 255, 255);"
@@ -573,7 +573,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 
             </polygon>
           </svg>
         </span>
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -584,10 +584,10 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 
         </svg>
       </span>
       Bokmål
-      <span class="TopBannerLangPicker_srOnly__33VA7">
+      <span class="_srOnly_7cjjj_121">
         Meny
       </span>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -597,7 +597,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 
         </path>
       </svg>
     </button>
-    <div class="TopBannerLangPicker_menuArrow__cXG+p">
+    <div class="_menuArrow_7cjjj_67">
     </div>
   </div>
 </div>
@@ -605,16 +605,16 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 
 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] = `
 <div data-test-block="true">
-  <div class=" TopBannerLangPicker_container__LVr42">
-    <div class="TopBannerLangPicker_overlay__y50Yx">
+  <div class=" _container_7cjjj_5">
+    <div class="_overlay_7cjjj_10">
     </div>
-    <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+    <button class="_button_197zg_1  _menuButton_7cjjj_17"
             lang="en"
             aria-expanded="true"
             type="button"
     >
-      <span class="TopBannerLangPicker_iconWrapper__SFn8s">
-        <span class="TopBannerLangPicker_flagIcon__LcfDc">
+      <span class="_iconWrapper_7cjjj_20">
+        <span class="_flagIcon_7cjjj_25">
           <svg xmlns="http://www.w3.org/2000/svg"
                xmlns:xlink="http://www.w3.org/1999/xlink"
                x="0px"
@@ -623,7 +623,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
                xml:space="preserve"
                focusable="false"
                aria-hidden="true"
-               class="TopBannerLangPicker_flagIconSvg__rO4YM"
+               class="_flagIconSvg_7cjjj_30"
           >
             <style type="text/css">
               .st0{fill:#FFFFFF;}
@@ -691,7 +691,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
             </g>
           </svg>
         </span>
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -702,10 +702,10 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
         </svg>
       </span>
       English
-      <span class="TopBannerLangPicker_srOnly__33VA7">
+      <span class="_srOnly_7cjjj_121">
         Meny
       </span>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -715,21 +715,21 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
         </path>
       </svg>
     </button>
-    <div class="TopBannerLangPicker_menuArrow__cXG+p">
+    <div class="_menuArrow_7cjjj_67">
     </div>
-    <div class="TopBannerLangPicker_menu__GFqIr">
-      <ul class="TopBannerLangPicker_list__2dLA8">
-        <li class="TopBannerLangPicker_listItem__sGReR">
-          <button class=" TopBannerLangPickerButton_button__pl57- "
+    <div class="_menu_7cjjj_17">
+      <ul class="_list_7cjjj_101">
+        <li class="_listItem_7cjjj_114">
+          <button class=" _button_1qb8h_1 "
                   lang="nb"
                   aria-current="false"
           >
-            <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
+            <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
                    viewbox="0 0 1100 800"
                    focusable="false"
                    aria-hidden="true"
-                   class="TopBannerLangPicker_flagIconSvg__rO4YM"
+                   class="_flagIconSvg_7cjjj_30"
               >
                 <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                          style="fill: rgb(255, 255, 255);"
@@ -777,22 +777,22 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
                 </polygon>
               </svg>
             </span>
-            <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+            <span class="_buttonText_1qb8h_21">
               Bokmål
             </span>
           </button>
         </li>
-        <li class="TopBannerLangPicker_listItem__sGReR">
-          <button class=" TopBannerLangPickerButton_button__pl57- "
+        <li class="_listItem_7cjjj_114">
+          <button class=" _button_1qb8h_1 "
                   lang="nn"
                   aria-current="false"
           >
-            <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
+            <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
                    viewbox="0 0 1100 800"
                    focusable="false"
                    aria-hidden="true"
-                   class="TopBannerLangPicker_flagIconSvg__rO4YM"
+                   class="_flagIconSvg_7cjjj_30"
               >
                 <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                          style="fill: rgb(255, 255, 255);"
@@ -840,17 +840,17 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
                 </polygon>
               </svg>
             </span>
-            <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+            <span class="_buttonText_1qb8h_21">
               Nynorsk
             </span>
           </button>
         </li>
-        <li class="TopBannerLangPicker_listItem__sGReR">
-          <button class="TopBannerLangPickerButton_buttonCurrent__y8Vxz TopBannerLangPickerButton_button__pl57- "
+        <li class="_listItem_7cjjj_114">
+          <button class="_buttonCurrent_1qb8h_25 _button_1qb8h_1 "
                   lang="en"
                   aria-current="true"
           >
-            <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
+            <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
                    xmlns:xlink="http://www.w3.org/1999/xlink"
                    x="0px"
@@ -859,7 +859,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
                    xml:space="preserve"
                    focusable="false"
                    aria-hidden="true"
-                   class="TopBannerLangPicker_flagIconSvg__rO4YM"
+                   class="_flagIconSvg_7cjjj_30"
               >
                 <style type="text/css">
                   .st0{fill:#FFFFFF;}
@@ -927,10 +927,10 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
                 </g>
               </svg>
             </span>
-            <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+            <span class="_buttonText_1qb8h_21">
               English
             </span>
-            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz "
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 "
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -941,17 +941,17 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
             </svg>
           </button>
         </li>
-        <li class="TopBannerLangPicker_listItem__sGReR">
-          <button class=" TopBannerLangPickerButton_button__pl57- "
+        <li class="_listItem_7cjjj_114">
+          <button class=" _button_1qb8h_1 "
                   lang="se"
                   aria-current="false"
           >
-            <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
+            <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
                    viewbox="0 0 808 600"
                    focusable="false"
                    aria-hidden="true"
-                   class="TopBannerLangPicker_flagIconSvg__rO4YM"
+                   class="_flagIconSvg_7cjjj_30"
               >
                 <path d="m370,0v116.34c78.64,24.02,136,97.27,136,183.66s-57.36,159.64-136,183.66v116.34h438V0h-438Z"
                       style="fill: rgb(0, 53, 173);"
@@ -1003,7 +1003,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
                 </path>
               </svg>
             </span>
-            <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+            <span class="_buttonText_1qb8h_21">
               Sámegiella
             </span>
           </button>
@@ -1016,23 +1016,23 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class=" TopBannerLangPicker_container__LVr42"
+  <div class=" _container_7cjjj_5"
        id="dummyIdForwardedFromRef"
   >
     <div class>
     </div>
-    <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+    <button class="_button_197zg_1  _menuButton_7cjjj_17"
             lang="nb"
             aria-expanded="false"
             type="button"
     >
-      <span class="TopBannerLangPicker_iconWrapper__SFn8s">
-        <span class="TopBannerLangPicker_flagIcon__LcfDc">
+      <span class="_iconWrapper_7cjjj_20">
+        <span class="_flagIcon_7cjjj_25">
           <svg xmlns="http://www.w3.org/2000/svg"
                viewbox="0 0 1100 800"
                focusable="false"
                aria-hidden="true"
-               class="TopBannerLangPicker_flagIconSvg__rO4YM"
+               class="_flagIconSvg_7cjjj_30"
           >
             <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                      style="fill: rgb(255, 255, 255);"
@@ -1080,7 +1080,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
             </polygon>
           </svg>
         </span>
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1091,10 +1091,10 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
         </svg>
       </span>
       Bokmål
-      <span class="TopBannerLangPicker_srOnly__33VA7">
+      <span class="_srOnly_7cjjj_121">
         Meny
       </span>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -1104,7 +1104,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="TopBannerLangPicker_menuArrow__cXG+p">
+    <div class="_menuArrow_7cjjj_67">
     </div>
   </div>
 </div>
@@ -1112,21 +1112,21 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`] = `
 <div data-test-block="true">
-  <div class=" TopBannerLangPicker_container__LVr42">
-    <div class="TopBannerLangPicker_overlay__y50Yx">
+  <div class=" _container_7cjjj_5">
+    <div class="_overlay_7cjjj_10">
     </div>
-    <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+    <button class="_button_197zg_1  _menuButton_7cjjj_17"
             lang="nb"
             aria-expanded="true"
             type="button"
     >
-      <span class="TopBannerLangPicker_iconWrapper__SFn8s">
-        <span class="TopBannerLangPicker_flagIcon__LcfDc">
+      <span class="_iconWrapper_7cjjj_20">
+        <span class="_flagIcon_7cjjj_25">
           <svg xmlns="http://www.w3.org/2000/svg"
                viewbox="0 0 1100 800"
                focusable="false"
                aria-hidden="true"
-               class="TopBannerLangPicker_flagIconSvg__rO4YM"
+               class="_flagIconSvg_7cjjj_30"
           >
             <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                      style="fill: rgb(255, 255, 255);"
@@ -1174,7 +1174,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
             </polygon>
           </svg>
         </span>
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1185,10 +1185,10 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
         </svg>
       </span>
       Bokmål
-      <span class="TopBannerLangPicker_srOnly__33VA7">
+      <span class="_srOnly_7cjjj_121">
         Meny
       </span>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -1198,21 +1198,21 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
         </path>
       </svg>
     </button>
-    <div class="TopBannerLangPicker_menuArrow__cXG+p">
+    <div class="_menuArrow_7cjjj_67">
     </div>
-    <div class="TopBannerLangPicker_menu__GFqIr">
-      <ul class="TopBannerLangPicker_list__2dLA8">
-        <li class="TopBannerLangPicker_listItem__sGReR">
-          <button class="TopBannerLangPickerButton_buttonCurrent__y8Vxz TopBannerLangPickerButton_button__pl57- "
+    <div class="_menu_7cjjj_17">
+      <ul class="_list_7cjjj_101">
+        <li class="_listItem_7cjjj_114">
+          <button class="_buttonCurrent_1qb8h_25 _button_1qb8h_1 "
                   lang="nb"
                   aria-current="true"
           >
-            <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
+            <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
                    viewbox="0 0 1100 800"
                    focusable="false"
                    aria-hidden="true"
-                   class="TopBannerLangPicker_flagIconSvg__rO4YM"
+                   class="_flagIconSvg_7cjjj_30"
               >
                 <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                          style="fill: rgb(255, 255, 255);"
@@ -1260,10 +1260,10 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
                 </polygon>
               </svg>
             </span>
-            <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+            <span class="_buttonText_1qb8h_21">
               Bokmål
             </span>
-            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz "
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 "
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -1274,17 +1274,17 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
             </svg>
           </button>
         </li>
-        <li class="TopBannerLangPicker_listItem__sGReR">
-          <button class=" TopBannerLangPickerButton_button__pl57- "
+        <li class="_listItem_7cjjj_114">
+          <button class=" _button_1qb8h_1 "
                   lang="nn"
                   aria-current="false"
           >
-            <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
+            <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
                    viewbox="0 0 1100 800"
                    focusable="false"
                    aria-hidden="true"
-                   class="TopBannerLangPicker_flagIconSvg__rO4YM"
+                   class="_flagIconSvg_7cjjj_30"
               >
                 <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
                          style="fill: rgb(255, 255, 255);"
@@ -1332,17 +1332,17 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
                 </polygon>
               </svg>
             </span>
-            <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+            <span class="_buttonText_1qb8h_21">
               Nynorsk
             </span>
           </button>
         </li>
-        <li class="TopBannerLangPicker_listItem__sGReR">
-          <button class=" TopBannerLangPickerButton_button__pl57- "
+        <li class="_listItem_7cjjj_114">
+          <button class=" _button_1qb8h_1 "
                   lang="en"
                   aria-current="false"
           >
-            <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
+            <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
                    xmlns:xlink="http://www.w3.org/1999/xlink"
                    x="0px"
@@ -1351,7 +1351,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
                    xml:space="preserve"
                    focusable="false"
                    aria-hidden="true"
-                   class="TopBannerLangPicker_flagIconSvg__rO4YM"
+                   class="_flagIconSvg_7cjjj_30"
               >
                 <style type="text/css">
                   .st0{fill:#FFFFFF;}
@@ -1419,7 +1419,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
                 </g>
               </svg>
             </span>
-            <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+            <span class="_buttonText_1qb8h_21">
               English
             </span>
           </button>

@@ -13,4 +13,4 @@ declare const classNames: {
   readonly fileListFile: 'fileListFile';
   readonly fileListFileError: 'fileListFileError';
 };
-export = classNames;
+export default classNames;

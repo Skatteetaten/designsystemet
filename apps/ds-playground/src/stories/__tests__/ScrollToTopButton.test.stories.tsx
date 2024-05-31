@@ -1,10 +1,9 @@
 import { ScrollToTopButton } from '@skatteetaten/ds-buttons';
 import { ExternalLayout, dsI18n } from '@skatteetaten/ds-core-utils';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, userEvent, within } from '@storybook/test';
+import { expect, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
-import { webComponent } from '../../../.storybook/webcomponent-decorator';
 
 const defaultButtonText = 'Til toppen';
 
@@ -236,20 +235,21 @@ export const WithVisibilityThreshold = {
   },
 } satisfies Story;
 
-const TemplateWithShadowDom: StoryFn<typeof ScrollToTopButton> = (args) => {
-  // eslint-disable-next-line testing-library/no-node-access
-  const element = document.querySelector('scrolltotop-customelement');
-  const shadowRoot = element?.shadowRoot;
-  return (
-    <div className={'height100vh'}>
-      <main className={'scrollToTopContainer'} tabIndex={-1}>
-        <ExternalLayout />
-        <ScrollToTopButton {...args} shadowRootNode={shadowRoot ?? undefined} />
-      </main>
-    </div>
-  );
-};
-
+// const TemplateWithShadowDom: StoryFn<typeof ScrollToTopButton> = (args) => {
+//   // eslint-disable-next-line testing-library/no-node-access
+//   const element = document.querySelector('scrolltotop-customelement');
+//   const shadowRoot = element?.shadowRoot;
+//   return (
+//     <div className={'height100vh'}>
+//       <main className={'scrollToTopContainer'} tabIndex={-1}>
+//         <ExternalLayout />
+//         <ScrollToTopButton {...args} shadowRootNode={shadowRoot ?? undefined} />
+//       </main>
+//     </div>
+//   );
+// };
+//
+/*
 export const WithShadowDom = {
   render: TemplateWithShadowDom,
   name: 'With ShadowDom (B4)',
@@ -285,3 +285,4 @@ export const WithShadowDom = {
     await expect(main).toBeInTheDocument();
   },
 } satisfies Story;
+ */

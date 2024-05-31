@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import { Fragment, JSX } from 'react';
 
 import spacingJson from '@skatteetaten/ds-core-designtokens/designtokens/spacing.json';

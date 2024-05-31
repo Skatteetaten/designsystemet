@@ -4,4 +4,4 @@ declare const classNames: {
   readonly textbox_multiline: 'textbox_multiline';
   readonly textbox_autosize: 'textbox_autosize';
 };
-export = classNames;
+export default classNames;

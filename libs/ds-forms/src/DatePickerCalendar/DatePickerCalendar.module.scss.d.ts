@@ -12,4 +12,4 @@ declare const classNames: {
   readonly calendarTableDateButton_today: 'calendarTableDateButton_today';
   readonly srOnly: 'srOnly';
 };
-export = classNames;
+export default classNames;

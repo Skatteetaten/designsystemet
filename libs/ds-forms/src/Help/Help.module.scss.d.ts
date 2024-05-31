@@ -7,4 +7,4 @@ declare const classNames: {
   readonly helpBoxCloseButton: 'helpBoxCloseButton';
   readonly srOnly: 'srOnly';
 };
-export = classNames;
+export default classNames;

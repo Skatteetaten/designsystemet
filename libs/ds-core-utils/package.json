@@ -15,5 +15,7 @@
     "react": "^18",
     "react-i18next": "14.1.2"
   },
-  "scripts": {}
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
 }

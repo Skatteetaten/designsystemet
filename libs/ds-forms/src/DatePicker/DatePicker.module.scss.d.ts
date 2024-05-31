@@ -7,4 +7,4 @@ declare const classNames: {
   readonly calendarButton_large: 'calendarButton_large';
   readonly calendarContainer: 'calendarContainer';
 };
-export = classNames;
+export default classNames;

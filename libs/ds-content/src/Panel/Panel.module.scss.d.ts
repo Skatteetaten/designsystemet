@@ -30,4 +30,4 @@ declare const classNames: {
   readonly panel_spacingMEGA: 'panel_spacingMEGA';
   readonly srOnly: 'srOnly';
 };
-export = classNames;
+export default classNames;

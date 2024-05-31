@@ -5,4 +5,4 @@ declare const classNames: {
   readonly paragraph_hasSpacingLarge: 'paragraph_hasSpacingLarge';
   readonly paragraph_hasSpacingExtraLarge: 'paragraph_hasSpacingExtraLarge';
 };
-export = classNames;
+export default classNames;

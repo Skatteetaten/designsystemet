@@ -9,4 +9,4 @@ declare const classNames: {
   readonly tag_medium: 'tag_medium';
   readonly tag_small: 'tag_small';
 };
-export = classNames;
+export default classNames;

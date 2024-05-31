@@ -10,4 +10,4 @@ declare const classNames: {
   readonly themeIcon_medium: 'themeIcon_medium';
   readonly themeIcon_large: 'themeIcon_large';
 };
-export = classNames;
+export default classNames;

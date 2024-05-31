@@ -5,4 +5,4 @@ declare const classNames: {
   readonly icon_isCustom: 'icon_isCustom';
   readonly icon_isExternal: 'icon_isExternal';
 };
-export = classNames;
+export default classNames;

@@ -3,4 +3,4 @@ declare const classNames: {
   readonly radioGroupItemContainer_horizontal: 'radioGroupItemContainer_horizontal';
   readonly errorMessage: 'errorMessage';
 };
-export = classNames;
+export default classNames;

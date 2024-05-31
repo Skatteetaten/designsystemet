@@ -3,4 +3,4 @@ declare const classNames: {
   readonly separatorLeft: 'separatorLeft';
   readonly separatorRight: 'separatorRight';
 };
-export = classNames;
+export default classNames;

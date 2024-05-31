@@ -39,7 +39,7 @@
   "exclude": ["node_modules", "tmp"],
   "ts-node": {
     "compilerOptions": {
-      "target": "ES2017",
+      "target": "es2021",
       "module": "commonjs",
       "esModuleInterop": true
     }

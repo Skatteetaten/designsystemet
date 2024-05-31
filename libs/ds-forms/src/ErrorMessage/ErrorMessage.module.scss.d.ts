@@ -3,4 +3,4 @@ declare const classNames: {
   readonly errorMessageIcon: 'errorMessageIcon';
   readonly errorMessageText: 'errorMessageText';
 };
-export = classNames;
+export default classNames;

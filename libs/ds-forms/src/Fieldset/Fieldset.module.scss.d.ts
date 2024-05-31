@@ -9,4 +9,4 @@ declare const classNames: {
   readonly contentContainerNoMarginTop: 'contentContainerNoMarginTop';
   readonly srOnly: 'srOnly';
 };
-export = classNames;
+export default classNames;

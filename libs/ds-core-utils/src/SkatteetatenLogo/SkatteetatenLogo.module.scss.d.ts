@@ -1,4 +1,4 @@
 declare const classNames: {
   readonly logo: 'logo';
 };
-export = classNames;
+export default classNames;

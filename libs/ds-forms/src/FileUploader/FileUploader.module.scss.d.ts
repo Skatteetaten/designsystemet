@@ -13,4 +13,4 @@ declare const classNames: {
   readonly spinner: 'spinner';
   readonly innerLabel: 'innerLabel';
 };
-export = classNames;
+export default classNames;

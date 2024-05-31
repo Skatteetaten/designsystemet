@@ -5,4 +5,4 @@ declare const classNames: {
   readonly selectIcon: 'selectIcon';
   readonly selectIcon_large: 'selectIcon_large';
 };
-export = classNames;
+export default classNames;

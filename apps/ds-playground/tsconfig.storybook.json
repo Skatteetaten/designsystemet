@@ -1,9 +1,9 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "types": ["vite-plugin-svgr/client"],
+    "types": ["node", "vite-plugin-svgr/client"],
     "emitDecoratorMetadata": true,
-    "outDir": ""
+    "outDir": "../../dist/out-tsc"
   },
   "files": [
     "../../node_modules/@nx/react/typings/styled-jsx.d.ts",

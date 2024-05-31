@@ -13,5 +13,8 @@
   "devDependencies": {
     "postcss": "^8"
   },
-  "scripts": {}
+  "scripts": {},
+  "dependencies": {
+    "@swc/helpers": "~0.5.2"
+  }
 }

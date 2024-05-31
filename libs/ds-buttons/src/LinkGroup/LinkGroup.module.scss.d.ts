@@ -7,4 +7,4 @@ declare const classNames: {
   readonly icon_forward: 'icon_forward';
   readonly icon_down: 'icon_down';
 };
-export = classNames;
+export default classNames;

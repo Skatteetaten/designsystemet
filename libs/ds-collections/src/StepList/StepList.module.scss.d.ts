@@ -1,4 +1,4 @@
 declare const classNames: {
   readonly stepList: 'stepList';
 };
-export = classNames;
+export default classNames;

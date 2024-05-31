@@ -8,4 +8,4 @@ declare const classNames: {
   readonly button_large: 'button_large';
   readonly button_outlined: 'button_outlined';
 };
-export = classNames;
+export default classNames;

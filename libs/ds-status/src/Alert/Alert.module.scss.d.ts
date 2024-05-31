@@ -9,4 +9,4 @@ declare const classNames: {
   readonly alert_neutral: 'alert_neutral';
   readonly alert_warning: 'alert_warning';
 };
-export = classNames;
+export default classNames;

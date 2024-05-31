@@ -13,4 +13,4 @@ declare const classNames: {
   readonly searchResultContainer: 'searchResultContainer';
   readonly srOnly: 'srOnly';
 };
-export = classNames;
+export default classNames;

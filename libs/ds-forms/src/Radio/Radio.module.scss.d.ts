@@ -4,4 +4,4 @@ declare const classNames: {
   readonly radioLabel: 'radioLabel';
   readonly radioLabelDescription: 'radioLabelDescription';
 };
-export = classNames;
+export default classNames;

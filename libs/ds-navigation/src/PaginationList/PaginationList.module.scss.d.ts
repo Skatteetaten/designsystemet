@@ -1,5 +1,7 @@
-/* automatisk genererte types */
-export const button: string;
-export const elipsis: string;
-export const element_leftArrow: string;
-export const element_rightArrow: string;
+declare const classNames: {
+  readonly button: 'button';
+  readonly elipsis: 'elipsis';
+  readonly element_leftArrow: 'element_leftArrow';
+  readonly element_rightArrow: 'element_rightArrow';
+};
+export = classNames;

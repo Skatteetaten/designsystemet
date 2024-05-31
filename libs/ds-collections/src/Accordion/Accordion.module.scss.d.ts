@@ -6,4 +6,4 @@ declare const classNames: {
   readonly accordion_burgundy: 'accordion_burgundy';
   readonly accordion_graphite: 'accordion_graphite';
 };
-export = classNames;
+export default classNames;

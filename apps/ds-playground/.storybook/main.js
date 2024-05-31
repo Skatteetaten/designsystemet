@@ -177,7 +177,9 @@ const config = {
           root: '../../../',
         }),
         nxViteTsPaths(),
-        sassDts(),
+        sassDts({
+          esmExport: true,
+        }),
         react(),
       ],
       build: {

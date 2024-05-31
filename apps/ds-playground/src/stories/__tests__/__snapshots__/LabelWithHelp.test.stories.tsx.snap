@@ -3,7 +3,7 @@
 exports[`Tester/LabelWithHelp (intern) Defaults play-test 1`] = `
 <div data-test-block="true">
   <label id="labelId-:r2:"
-         class="LabelWithHelp_label__59tP-"
+         class="_label_348na_5"
   >
     Ledetekst
   </label>
@@ -14,7 +14,7 @@ exports[`Tester/LabelWithHelp (intern) WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <label id="htmlid"
          data-testid="123ID"
-         class="LabelWithHelp_label__59tP-   dummyClassname"
+         class="_label_348na_5   dummyClassname"
          lang="nb"
   >
     Ledetekst
@@ -79,11 +79,11 @@ exports[`Tester/LabelWithHelp (intern) WithCustomClassNames play-test 1`] = `
 exports[`Tester/LabelWithHelp (intern) WithDescription play-test 1`] = `
 <div data-test-block="true">
   <label id="labelId-:r3:"
-         class="LabelWithHelp_label__59tP-"
+         class="_label_348na_5"
   >
     Ledetekst
   </label>
-  <div class="Help_description__niabw">
+  <div class="_description_9anxz_17">
     Kort hjelpetekst
   </div>
 </div>
@@ -92,16 +92,16 @@ exports[`Tester/LabelWithHelp (intern) WithDescription play-test 1`] = `
 exports[`Tester/LabelWithHelp (intern) WithHelpTextSvgPathAndTitle play-test 1`] = `
 <div data-test-block="true">
   <label id="labelId-:r7:"
-         class="LabelWithHelp_label__59tP-"
+         class="_label_348na_5"
   >
     Ledetekst
   </label>
-  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+  <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_9anxz_27"
           type="button"
           aria-describedby="labelId-:r7:"
           aria-expanded="false"
   >
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r8:"
@@ -150,16 +150,16 @@ exports[`Tester/LabelWithHelp (intern) WithHelpToggleEvent smoke-test 1`] = `
 exports[`Tester/LabelWithHelp (intern) WithHideLabel play-test 1`] = `
 <div data-test-block="true">
   <label id="labelId-:r5:"
-         class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+         class="_label_348na_5  _srOnly_348na_18"
   >
     Ledetekst
   </label>
-  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6 Help_srOnly__svaKL"
+  <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_9anxz_27 _srOnly_9anxz_59"
           type="button"
           aria-describedby="labelId-:r5:"
           aria-expanded="false"
   >
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r6:"
@@ -173,7 +173,7 @@ exports[`Tester/LabelWithHelp (intern) WithHideLabel play-test 1`] = `
       </path>
     </svg>
   </button>
-  <div class="Help_description__niabw  Help_srOnly__svaKL">
+  <div class="_description_9anxz_17  _srOnly_9anxz_59">
     Kort hjelpetekst
   </div>
 </div>
@@ -182,7 +182,7 @@ exports[`Tester/LabelWithHelp (intern) WithHideLabel play-test 1`] = `
 exports[`Tester/LabelWithHelp (intern) WithLongChildren smoke-test 1`] = `
 <div data-test-block="true">
   <label id="labelId-:ra:"
-         class="LabelWithHelp_label__59tP-"
+         class="_label_348na_5"
   >
     Loremipsumdolorsitamet.Allesomharlagetennettside,trengtlittfylltekstellerbaresurfetrundtpånettetharantageligvissettdisseordene,etterfulgtaventilsynelatendeeviglangtekstfyltmedlatinskeliksomsetninger.
   </label>
@@ -192,7 +192,7 @@ exports[`Tester/LabelWithHelp (intern) WithLongChildren smoke-test 1`] = `
 exports[`Tester/LabelWithHelp (intern) WithRef play-test 1`] = `
 <div data-test-block="true">
   <label id="dummyIdForwardedFromRef"
-         class="LabelWithHelp_label__59tP-"
+         class="_label_348na_5"
   >
     Ledetekst
   </label>
@@ -202,7 +202,7 @@ exports[`Tester/LabelWithHelp (intern) WithRef play-test 1`] = `
 exports[`Tester/LabelWithHelp (intern) WithShowRequiredMark smoke-test 1`] = `
 <div data-test-block="true">
   <label id="labelId-:r4:"
-         class="LabelWithHelp_label__59tP- LabelWithHelp_label_required__KSuzW"
+         class="_label_348na_5 _label_required_348na_12"
   >
     Ledetekst
   </label>

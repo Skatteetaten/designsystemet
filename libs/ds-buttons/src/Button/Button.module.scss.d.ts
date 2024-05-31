@@ -11,4 +11,4 @@ declare const classNames: {
   readonly hide: 'hide';
   readonly spinner: 'spinner';
 };
-export = classNames;
+export default classNames;

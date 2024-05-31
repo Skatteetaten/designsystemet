@@ -3,4 +3,4 @@ declare const classNames: {
   readonly label_required: 'label_required';
   readonly srOnly: 'srOnly';
 };
-export = classNames;
+export default classNames;

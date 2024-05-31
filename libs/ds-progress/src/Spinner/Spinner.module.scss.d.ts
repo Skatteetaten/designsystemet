@@ -13,4 +13,4 @@ declare const classNames: {
   readonly spinnerTitle_centerText: 'spinnerTitle_centerText';
   readonly srOnly: 'srOnly';
 };
-export = classNames;
+export default classNames;

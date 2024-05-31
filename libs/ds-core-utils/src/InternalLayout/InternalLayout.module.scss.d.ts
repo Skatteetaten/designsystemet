@@ -5,4 +5,4 @@ declare const classNames: {
   readonly article: 'article';
   readonly wideContent: 'wideContent';
 };
-export = classNames;
+export default classNames;

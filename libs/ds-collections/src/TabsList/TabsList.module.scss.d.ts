@@ -1,3 +1,5 @@
-/* automatisk genererte types */
-export const tabList: string;
-export const tabList_multiline: string;
+declare const classNames: {
+  readonly tabList: 'tabList';
+  readonly tabList_multiline: 'tabList_multiline';
+};
+export default classNames;

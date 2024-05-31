@@ -6,4 +6,4 @@ declare const classNames: {
   readonly scrollToTopButtonIconContainerIcon: 'scrollToTopButtonIconContainerIcon';
   readonly scrollToTopButtonLabel: 'scrollToTopButtonLabel';
 };
-export = classNames;
+export default classNames;

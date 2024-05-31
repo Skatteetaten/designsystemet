@@ -15,4 +15,4 @@ declare const classNames: {
   readonly content_compact: 'content_compact';
   readonly content_hasIconRight: 'content_hasIconRight';
 };
-export = classNames;
+export default classNames;

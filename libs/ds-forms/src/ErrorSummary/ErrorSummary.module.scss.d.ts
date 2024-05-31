@@ -6,4 +6,4 @@ declare const classNames: {
   readonly content: 'content';
   readonly contentWithoutChildren: 'contentWithoutChildren';
 };
-export = classNames;
+export default classNames;

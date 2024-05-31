@@ -185,7 +185,9 @@ async function verifyHTMLSnapshots(
   }
   const elementHandler = await page.$('#storybook-root');
   const innerHTML = await elementHandler?.innerHTML();
-  await expect(innerHTML).toMatchSnapshot();
+  await expect(
+    innerHTML?.replaceAll('host.lima.internal', '127.0.0.1')
+  ).toMatchSnapshot();
 }
 
 async function verifyAxeRules(

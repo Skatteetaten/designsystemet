@@ -2,7 +2,7 @@
 
 exports[`Tester/Tag DefaultGreen smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="Tag_tag__skzXl Tag_tag_forest__MNVgc Tag_tag_medium__8+IxO ">
+  <div class="_tag_1ciua_1 _tag_forest_1ciua_28 _tag_medium_1ciua_34 ">
     Særavgift
   </div>
 </div>
@@ -10,7 +10,7 @@ exports[`Tester/Tag DefaultGreen smoke-test 1`] = `
 
 exports[`Tester/Tag DefaultGrey smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="Tag_tag__skzXl Tag_tag_graphite__sEySJ Tag_tag_medium__8+IxO ">
+  <div class="_tag_1ciua_1 _tag_graphite_1ciua_31 _tag_medium_1ciua_34 ">
     Særavgift
   </div>
 </div>
@@ -18,7 +18,7 @@ exports[`Tester/Tag DefaultGrey smoke-test 1`] = `
 
 exports[`Tester/Tag DefaultRed smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="Tag_tag__skzXl Tag_tag_burgundy__f+F4b Tag_tag_medium__8+IxO ">
+  <div class="_tag_1ciua_1 _tag_burgundy_1ciua_25 _tag_medium_1ciua_34 ">
     Særavgift
   </div>
 </div>
@@ -26,7 +26,7 @@ exports[`Tester/Tag DefaultRed smoke-test 1`] = `
 
 exports[`Tester/Tag DefaultYellow smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="Tag_tag__skzXl Tag_tag_ochre__9nXLJ Tag_tag_medium__8+IxO ">
+  <div class="_tag_1ciua_1 _tag_ochre_1ciua_22 _tag_medium_1ciua_34 ">
     Særavgift
   </div>
 </div>
@@ -34,7 +34,7 @@ exports[`Tester/Tag DefaultYellow smoke-test 1`] = `
 
 exports[`Tester/Tag Small smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="Tag_tag__skzXl Tag_tag_ochre__9nXLJ Tag_tag_small__RIVpu ">
+  <div class="_tag_1ciua_1 _tag_ochre_1ciua_22 _tag_small_1ciua_37 ">
     Særavgift
   </div>
 </div>
@@ -45,7 +45,7 @@ exports[`Tester/Tag WithAttributes play-test 1`] = `
   <div id="htmlId"
        lang="en"
        data-testid="123ID"
-       class="Tag_tag__skzXl Tag_tag_ochre__9nXLJ Tag_tag_medium__8+IxO dummyClassname"
+       class="_tag_1ciua_1 _tag_ochre_1ciua_22 _tag_medium_1ciua_34 dummyClassname"
   >
     Særavgift
   </div>
@@ -54,11 +54,11 @@ exports[`Tester/Tag WithAttributes play-test 1`] = `
 
 exports[`Tester/Tag WithCustomIcon smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="Tag_tag__skzXl Tag_tag_burgundy__f+F4b Tag_tag_medium__8+IxO ">
-    <div class="Tag_iconWrapper__q-kYu"
+  <div class="_tag_1ciua_1 _tag_burgundy_1ciua_25 _tag_medium_1ciua_34 ">
+    <div class="_iconWrapper_1ciua_12"
          aria-hidden="true"
     >
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Tag_icon__0uJnR"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1ciua_12"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -75,7 +75,7 @@ exports[`Tester/Tag WithCustomIcon smoke-test 1`] = `
 
 exports[`Tester/Tag WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class="Tag_tag__skzXl Tag_tag_ochre__9nXLJ Tag_tag_medium__8+IxO "
+  <div class="_tag_1ciua_1 _tag_ochre_1ciua_22 _tag_medium_1ciua_34 "
        id="dummyIdForwardedFromRef"
   >
     Særavgift

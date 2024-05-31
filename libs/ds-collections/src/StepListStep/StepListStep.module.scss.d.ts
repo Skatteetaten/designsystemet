@@ -26,4 +26,4 @@ declare const classNames: {
   readonly stepCircle_active: 'stepCircle_active';
   readonly buttonWrapper: 'buttonWrapper';
 };
-export = classNames;
+export default classNames;

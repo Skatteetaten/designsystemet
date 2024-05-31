@@ -5,7 +5,9 @@ declare const classNames: {
   readonly logoImage: 'logoImage';
   readonly topContainer: 'topContainer';
   readonly contentContainer: 'contentContainer';
+  readonly contentContainer_withChildren: 'contentContainer_withChildren';
   readonly nameContainer: 'nameContainer';
+  readonly skipLink: 'skipLink';
   readonly constructionBand: 'constructionBand';
   readonly constructionBandTitle: 'constructionBandTitle';
   readonly topBanner: 'topBanner';
