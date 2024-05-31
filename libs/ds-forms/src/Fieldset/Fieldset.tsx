@@ -24,6 +24,7 @@ export const Fieldset = forwardRef<HTMLFieldSetElement, FieldsetProps>(
       hasSpacing,
       hideLegend,
       showRequiredMark,
+      onHelpToggle,
       children,
     },
     ref
@@ -72,6 +73,7 @@ export const Fieldset = forwardRef<HTMLFieldSetElement, FieldsetProps>(
           targetId={legendId}
           titleHelpSvg={titleHelpSvg}
           description={description}
+          onHelpToggle={onHelpToggle}
         />
         <div
           className={`${styles.contentContainer} ${noMarginTopContentContainerClassName}`.trim()}
