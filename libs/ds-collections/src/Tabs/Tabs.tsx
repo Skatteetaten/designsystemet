@@ -3,7 +3,7 @@ import { forwardRef, useState, useId, JSX, useMemo } from 'react';
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { getTabsVariantDefault } from './defaults';
-import { TabsProps, TabsComponent, TabsArr } from './Tabs.types';
+import { TabsProps, TabsComponent } from './Tabs.types';
 import { TabsContext } from '../TabsContext/TabsContext';
 import { TabsList } from '../TabsList/TabsList';
 import { TabsPanel } from '../TabsPanel/TabsPanel';
@@ -26,8 +26,7 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
     },
     ref
   ): JSX.Element => {
-    const [activeTab, setInternalTab] = useState(value ?? defaultValue);
-    const [tabs, setTabsInternal] = useState<TabsArr>([]);
+    const [activeTab, setActiveTab] = useState(value ?? defaultValue);
     const [index, setIndex] = useState<number>(0);
     if (activeTab === undefined) {
       throw new Error('prop defaultValue eller value må ha en verdi');
@@ -38,27 +37,16 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
         activeTab,
         baseId,
         hasBorder,
-        setActiveTab: (value: string): void => {
-          setInternalTab(value);
+        setInternalActiveTab: (value: string): void => {
+          setActiveTab(value);
           if (value) onChange?.(value);
         },
         variant,
         isMultiline,
-        tabs,
-        setTabs: setTabsInternal,
         index,
         setIndex,
       }),
-      [
-        activeTab,
-        baseId,
-        hasBorder,
-        variant,
-        isMultiline,
-        tabs,
-        index,
-        onChange,
-      ]
+      [activeTab, baseId, hasBorder, variant, isMultiline, index, onChange]
     );
     return (
       <div
