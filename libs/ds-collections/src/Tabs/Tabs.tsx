@@ -1,4 +1,4 @@
-import { forwardRef, useState, useId, JSX } from 'react';
+import { forwardRef, useState, useId, JSX, useMemo } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
@@ -32,11 +32,34 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
     if (activeTab === undefined) {
       throw new Error('prop defaultValue eller value må ha en verdi');
     }
-    const setActiveTab = (value: string): void => {
-      setInternalTab(value);
-      if (value) onChange?.(value);
-    };
     const baseId = useId();
+    const contextValue = useMemo(
+      () => ({
+        activeTab,
+        baseId,
+        hasBorder,
+        setActiveTab: (value: string): void => {
+          setInternalTab(value);
+          if (value) onChange?.(value);
+        },
+        variant,
+        isMultiline,
+        tabs,
+        setTabs: setTabsInternal,
+        index,
+        setIndex,
+      }),
+      [
+        activeTab,
+        baseId,
+        hasBorder,
+        variant,
+        isMultiline,
+        tabs,
+        index,
+        onChange,
+      ]
+    );
     return (
       <div
         ref={ref}
@@ -45,20 +68,7 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
         lang={lang}
         data-testid={dataTestId}
       >
-        <TabsContext.Provider
-          value={{
-            activeTab,
-            baseId,
-            hasBorder,
-            setActiveTab,
-            variant,
-            isMultiline,
-            tabs,
-            setTabs: setTabsInternal,
-            index,
-            setIndex,
-          }}
-        >
+        <TabsContext.Provider value={contextValue}>
           {children}
         </TabsContext.Provider>
       </div>
