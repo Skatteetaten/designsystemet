@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { ReactElement, ReactNode } from 'react';
 
 export type OnHelpToggleHandler = (open: boolean) => void;
 
@@ -6,7 +6,7 @@ export interface HelpProps {
   /** Skjuler hele komponenten, men er fortsatt synlig for skjermleser */
   hideHelp?: boolean;
   /** Hjelpetekst */
-  helpText?: string;
+  helpText?: ReactNode;
   /** Overskriver default hjelpeikon */
   helpSvgPath?: ReactElement;
   /** Overskriver default tooltip-tekst til hjelpeikon */
