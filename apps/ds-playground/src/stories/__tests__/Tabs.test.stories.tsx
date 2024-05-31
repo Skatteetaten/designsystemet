@@ -3,8 +3,6 @@ import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
-/* import { wrapper } from './testUtils/storybook.testing.utils'; */
-
 const meta = {
   component: Tabs,
   title: 'Tester/Tabs/Tabs',

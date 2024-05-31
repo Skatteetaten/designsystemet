@@ -1,4 +1,4 @@
-import { KeyboardEvent, forwardRef, useCallback, useContext } from 'react';
+import { KeyboardEvent, forwardRef, useCallback, useContext, JSX } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
