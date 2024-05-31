@@ -57,6 +57,8 @@ const meta = {
         disable: true,
       },
     },
+    // Events
+    onHelpToggle: { table: { disable: true } },
   },
 } satisfies Meta<typeof CheckboxGroup>;
 export default meta;

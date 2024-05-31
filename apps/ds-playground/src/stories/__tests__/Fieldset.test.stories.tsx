@@ -38,6 +38,8 @@ const meta = {
     // HTML
     disabled: { table: { disable: true } },
     form: { table: { disable: true } },
+    // Events
+    onHelpToggle: { table: { disable: true } },
   },
 } satisfies Meta<typeof Fieldset>;
 export default meta;

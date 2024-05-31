@@ -59,6 +59,7 @@ const meta = {
     required: { table: { disable: true } },
     // Events
     onChange: { table: { disable: true } },
+    onHelpToggle: { table: { disable: true } },
   },
 } satisfies Meta<typeof RadioGroup>;
 export default meta;
