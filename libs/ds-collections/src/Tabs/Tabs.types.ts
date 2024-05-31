@@ -22,7 +22,7 @@ export interface TabsProps extends BaseProps {
    * value må oppdateres via onChange-eventet
    */
   defaultValue?: string;
-  /** Lar listen med tab'er flyte over flere linjer når hvis ikke plass på en linje */
+  /** Lar listen med tab'er flyte over flere linje hvis ikke plass på en linje */
   isMultiline?: boolean;
   /** Definerer stilen standard eller compact */
   variant?: TabsVariant;
