@@ -12,10 +12,10 @@ const meta = {
   },
   args: {
     children: [
-      <Tabs.Tab key={'t1'} value={'tab1'} index={1}>
+      <Tabs.Tab key={'t1'} value={'tab1'}>
         {'En tab'}
       </Tabs.Tab>,
-      <Tabs.Tab key={'t2'} value={'tab2'} index={2}>
+      <Tabs.Tab key={'t2'} value={'tab2'}>
         {'En tab til'}
       </Tabs.Tab>,
     ],

@@ -1,8 +1,8 @@
 import { KeyboardEvent, forwardRef, useCallback, useContext } from 'react';
 
+import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
-import { getCommonClassNameDefault } from './defaults';
 import { TabsTabProps } from './TabsTab.types';
 import { TabsContext } from '../TabsContext/TabsContext';
 
@@ -16,20 +16,12 @@ export const TabsTab = forwardRef<HTMLButtonElement, TabsTabProps>(
       'data-testid': dataTestId,
       svgPath,
       value,
-      onClick,
       children,
     },
     ref
   ): JSX.Element => {
-    const {
-      baseId,
-      activeTab,
-      setActiveTab,
-      variant,
-      hasBorder,
-      activeIndex,
-      setActiveIndex,
-    } = useContext(TabsContext);
+    const { activeTab, baseId, hasBorder, variant, setActiveTab } =
+      useContext(TabsContext);
     const tabClassName = styles.tab;
     const variantClassName = variant === 'compact' ? styles.tab_compact : '';
     const activeClassName = activeTab === value ? styles.tab_active : '';
@@ -76,10 +68,8 @@ export const TabsTab = forwardRef<HTMLButtonElement, TabsTabProps>(
         tabIndex={activeTab !== value ? -1 : 0}
         aria-selected={activeTab === value ?? false}
         aria-controls={`ds-tab-panel-${baseId}-${value}`}
-        onClick={(e): void => {
+        onClick={(): void => {
           setActiveTab(value);
-          setActiveIndex(activeIndex);
-          onClick?.(e);
         }}
         onKeyDown={(e): void => {
           handleKeyboardNavigation(e);

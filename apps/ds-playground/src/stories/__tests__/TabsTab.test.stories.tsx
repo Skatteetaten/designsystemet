@@ -20,12 +20,8 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     children: { table: { disable: true } },
-    index: { table: { disable: true } },
     svgPath: { table: { disable: true } },
     value: { table: { disable: true } },
-    // Events
-    onClick: { table: { disable: true } },
-    //    onChange: { table: { disable: true } },
   },
 } satisfies Meta<typeof Tabs.Tab>;
 export default meta;

@@ -2,7 +2,7 @@ import { Tabs } from '@skatteetaten/ds-collections';
 import { BriefcaseSVGpath } from '@skatteetaten/ds-icons';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
-import { category, htmlEventDescription } from '../../../.storybook/helpers';
+import { category } from '../../../.storybook/helpers';
 
 const meta = {
   component: Tabs.Tab,
@@ -13,10 +13,7 @@ const meta = {
     svgPath: {
       table: { category: category.props },
     },
-    index: { control: 'text', table: { category: category.props } },
     value: { control: 'text', table: { category: category.props } },
-    //Events
-    onClick: { ...htmlEventDescription, table: { disable: true } },
   },
   args: {
     children: 'TabKnapp',

@@ -2,7 +2,8 @@
 import { forwardRef, ReactNode, useContext } from 'react';
 import React from 'react';
 
-import { getCommonClassNameDefault } from './defaults';
+import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+
 import { TabsListProps, TabsListComponent } from './TabsList.types';
 import { TabsContextProps } from '../Tabs/Tabs.types';
 import { TabsContext } from '../TabsContext/TabsContext';

@@ -1,6 +1,8 @@
 import { forwardRef, useState, useId } from 'react';
 
-import { getCommonClassNameDefault, getTabsVariantDefault } from './defaults';
+import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+
+import { getTabsVariantDefault } from './defaults';
 import { TabsProps, TabsComponent, TabsArr } from './Tabs.types';
 import { TabsContext } from '../TabsContext/TabsContext';
 import { TabsList } from '../TabsList/TabsList';
@@ -27,7 +29,6 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
     const [activeTab, setInternalTab] = useState(value || defaultValue);
     const [tabs, setTabsInternal] = useState<TabsArr>([]);
     const [index, setIndex] = useState<number>(0);
-    const [activeIndex, setActiveIndex] = useState<number>(0);
     if (activeTab === undefined) {
       throw new Error('prop defaultValue eller value må ha en verdi');
     }
@@ -46,18 +47,16 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
       >
         <TabsContext.Provider
           value={{
-            baseId,
-            setActiveTab,
             activeTab,
-            variant,
+            baseId,
             hasBorder,
+            setActiveTab,
+            variant,
             isMultiline,
             tabs,
             setTabs: setTabsInternal,
             index,
             setIndex,
-            activeIndex,
-            setActiveIndex,
           }}
         >
           {children}

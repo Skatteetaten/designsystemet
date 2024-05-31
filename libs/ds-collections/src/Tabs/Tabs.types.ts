@@ -12,24 +12,24 @@ import { TabsList } from '../TabsList/TabsList';
 import { TabsPanel } from '../TabsPanel/TabsPanel';
 import { TabsTab } from '../TabsTab/TabsTab';
 
-export const statusArr = ['success', 'neutral', 'warning', 'danger'] as const;
-export type Status = (typeof statusArr)[number];
-
 export const tabsVariantArr = ['standard', 'compact'] as const;
 export type TabsVariant = (typeof tabsVariantArr)[number];
 export interface TabsProps extends BaseProps {
-  /** onChange callback for selected Tab */
-  onChange?: (value: string) => void;
-  /** Controlled selected value */
+  /** Verdi som bestemmer hvilke tab-element som skal ha aktiv-status når komponenten er controlled */
   value?: string;
-  /** If uncontrolled, a default-value needs to be set */
+  /**
+   * Verdi som bestemmer hvilke tab-element som skal ha aktiv-status når komponenten er uncontrolled.
+   * value må oppdateres via onChange-eventet
+   */
   defaultValue?: string;
-  /** Lar listen med tab'er flyte over flere linjer */
+  /** Lar listen med tab'er flyte over flere linjer når hvis ikke plass på en linje */
   isMultiline?: boolean;
-  /** Varianter : prop for å sette enten small eller normal tab */
+  /** Definerer stilen standard eller compact */
   variant?: TabsVariant;
-  /** border på tab-elementen hvis prop er satt */
+  /** Border på tab-elementen */
   hasBorder?: boolean;
+  /** onChange callback hvor value har verdien til aktiv Tab-element */
+  onChange?: (value: string) => void;
   /** Tabs.List og Tabs.Panel */
   children?: ReactNode;
 }
@@ -45,22 +45,18 @@ export type TabsArr = string[];
 
 export interface TabsContextProps
   extends Omit<TabsProps, 'children' | 'defaultValue'> {
-  /** setter for activeTab */
-  setActiveTab: (value: string) => void; //Dispatch<SetStateAction<string>>;
-  /** tab som er aktiv - key er tabsKey */
+  /** Setter for activeTab */
+  setActiveTab: (value: string) => void;
+  /** Tab som er aktiv - key er tabsKey */
   activeTab?: string;
   /** Liste med tabKeys */
   tabs: TabsArr;
   /** Setter for liste med tabKeys */
   setTabs?: Dispatch<SetStateAction<TabsArr>>;
-  /** teller for å sette index på array of Tabs.Tab */
+  /** Teller for å sette index på array of Tabs.Tab */
   index?: number;
   /** Setter for Index */
   setIndex: Dispatch<SetStateAction<number>>;
-  /** teller for å sette activeIndex på array of Tabs.TabList */
-  activeIndex: number;
-  /** Setter for activeIndex */
-  setActiveIndex: Dispatch<SetStateAction<number>>;
   /** Unik id pr tab */
   baseId: string;
 }
