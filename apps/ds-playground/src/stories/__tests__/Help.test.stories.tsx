@@ -220,8 +220,8 @@ export const WithHelpToggleEvent = {
   name: 'With onHelpToggle Event',
   args: {
     helpText: 'Hjelpetekst',
-    onHelpToggle: (open: boolean): void => {
-      alert(open ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
+    onHelpToggle: (isOpen: boolean): void => {
+      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
     },
   },
   parameters: {

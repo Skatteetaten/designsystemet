@@ -1,6 +1,6 @@
 import { ReactElement, ReactNode } from 'react';
 
-export type OnHelpToggleHandler = (open: boolean) => void;
+export type OnHelpToggleHandler = (isOpen: boolean) => void;
 
 export interface HelpProps {
   /** Skjuler hele komponenten, men er fortsatt synlig for skjermleser */

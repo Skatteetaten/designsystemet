@@ -553,8 +553,8 @@ export const WithHelpToggleEvent = {
     ...defaultArgs,
     helpText: 'Hjelpetekst',
     hideLabel: false,
-    onHelpToggle: (open: boolean): void => {
-      alert(open ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
+    onHelpToggle: (isOpen: boolean): void => {
+      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
     },
   },
   parameters: {

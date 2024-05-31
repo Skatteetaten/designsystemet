@@ -352,8 +352,8 @@ export const WithHelpToggleEvent = {
   args: {
     label: 'Last opp filer',
     helpText: 'Hjelpetekst',
-    onHelpToggle: (open: boolean): void => {
-      alert(open ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
+    onHelpToggle: (isOpen: boolean): void => {
+      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
     },
   },
   parameters: {
