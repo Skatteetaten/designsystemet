@@ -132,18 +132,17 @@ export const Example: Story = {
               <Table.HeaderCell>{'Filer'}</Table.HeaderCell>
               <Table.HeaderCell>{'Brev'}</Table.HeaderCell>
               <Table.HeaderCell>{'Vedtak'}</Table.HeaderCell>
-              <Table.HeaderCell as={'td'} />
             </Table.Row>
           </Table.Header>
           <Table.Body>
-            <Table.Row expandButtonPosition={'right'} isExpandable>
+            <Table.Row>
               <Table.DataCell>{'Wake Up Call'}</Table.DataCell>
               <Table.DataCell>{'10.01.2024'}</Table.DataCell>
               <Table.DataCell>{'3 filer'}</Table.DataCell>
               <Table.DataCell>{'4 brev'}</Table.DataCell>
               <Table.DataCell>{'5 vedtak'}</Table.DataCell>
             </Table.Row>
-            <Table.Row expandButtonPosition={'right'} isExpandable>
+            <Table.Row>
               <Table.DataCell>{'A Cat Nap'}</Table.DataCell>
               <Table.DataCell>{'9.01.2024'}</Table.DataCell>
               <Table.DataCell>
@@ -166,14 +165,14 @@ export const Example: Story = {
               <Table.DataCell>{'4 brev'}</Table.DataCell>
               <Table.DataCell>{'5 vedtak'}</Table.DataCell>
             </Table.Row>
-            <Table.Row expandButtonPosition={'right'} isExpandable>
+            <Table.Row>
               <Table.DataCell>{'Down And Out'}</Table.DataCell>
               <Table.DataCell>{'8.01.2024'}</Table.DataCell>
               <Table.DataCell>{'3 filer'}</Table.DataCell>
               <Table.DataCell>{'4 brev'}</Table.DataCell>
               <Table.DataCell>{'5 vedtak'}</Table.DataCell>
             </Table.Row>
-            <Table.Row expandButtonPosition={'right'} isExpandable>
+            <Table.Row>
               <Table.DataCell>{'Back to Square One'}</Table.DataCell>
               <Table.DataCell>{'7.01.2024'}</Table.DataCell>
               <Table.DataCell>{'3 filer'}</Table.DataCell>
