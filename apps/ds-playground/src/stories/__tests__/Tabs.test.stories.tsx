@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Tabs, TabsProps } from '@skatteetaten/ds-collections';
 import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';

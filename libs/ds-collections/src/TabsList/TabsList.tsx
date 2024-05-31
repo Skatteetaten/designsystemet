@@ -1,5 +1,5 @@
 /* eslint-disable array-callback-return */
-import { forwardRef, ReactNode, useContext, JSX } from 'react';
+import { forwardRef, ReactNode, useContext, useMemo, JSX } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
@@ -16,19 +16,23 @@ const TabRenderComponent = ({
   children: ReactNode;
   context: TabsContextProps;
 }): string | JSX.Element | JSX.Element[] => {
+  const contextValue = useMemo(() => context, [context]);
   switch (typeof children) {
     case 'string':
       return children;
     case 'object':
       if (Array.isArray(children)) {
         return children.map((child, index) => (
-          <TabsContext.Provider key={index} value={{ ...context, index }}>
+          <TabsContext.Provider
+            key={context.value}
+            value={{ ...contextValue, index }}
+          >
             {child}
           </TabsContext.Provider>
         ));
       } else {
         return (
-          <TabsContext.Provider key={0} value={{ ...context, index: 0 }}>
+          <TabsContext.Provider key={0} value={{ ...contextValue, index: 0 }}>
             {children}
           </TabsContext.Provider>
         );

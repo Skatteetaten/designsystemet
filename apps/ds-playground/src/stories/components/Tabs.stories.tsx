@@ -42,7 +42,6 @@ type Story = StoryObj<typeof meta>;
 export const Preview: Story = {
   render: (args) => (
     <Tabs {...args}>
-      <div>{'hei'}</div>
       <Tabs.List key={'list1'}>
         <Tabs.Tab value={'tab1'}>{'Person'}</Tabs.Tab>
         <Tabs.Tab value={'tab2'}>{'Bedrift'}</Tabs.Tab>

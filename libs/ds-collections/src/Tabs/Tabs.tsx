@@ -1,9 +1,9 @@
-import { forwardRef, useState, useId, JSX } from 'react';
+import { forwardRef, useState, useId, JSX, useMemo } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { getTabsVariantDefault } from './defaults';
-import { TabsProps, TabsComponent, TabsArr } from './Tabs.types';
+import { TabsProps, TabsComponent } from './Tabs.types';
 import { TabsContext } from '../TabsContext/TabsContext';
 import { TabsList } from '../TabsList/TabsList';
 import { TabsPanel } from '../TabsPanel/TabsPanel';
@@ -26,17 +26,28 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
     },
     ref
   ): JSX.Element => {
-    const [activeTab, setInternalTab] = useState(value ?? defaultValue);
-    const [tabs, setTabsInternal] = useState<TabsArr>([]);
+    const [activeTab, setActiveTab] = useState(value ?? defaultValue);
     const [index, setIndex] = useState<number>(0);
     if (activeTab === undefined) {
       throw new Error('prop defaultValue eller value må ha en verdi');
     }
-    const setActiveTab = (value: string): void => {
-      setInternalTab(value);
-      if (value) onChange?.(value);
-    };
     const baseId = useId();
+    const contextValue = useMemo(
+      () => ({
+        activeTab,
+        baseId,
+        hasBorder,
+        setInternalActiveTab: (value: string): void => {
+          setActiveTab(value);
+          if (value) onChange?.(value);
+        },
+        variant,
+        isMultiline,
+        index,
+        setIndex,
+      }),
+      [activeTab, baseId, hasBorder, variant, isMultiline, index, onChange]
+    );
     return (
       <div
         ref={ref}
@@ -45,20 +56,7 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
         lang={lang}
         data-testid={dataTestId}
       >
-        <TabsContext.Provider
-          value={{
-            activeTab,
-            baseId,
-            hasBorder,
-            setActiveTab,
-            variant,
-            isMultiline,
-            tabs,
-            setTabs: setTabsInternal,
-            index,
-            setIndex,
-          }}
-        >
+        <TabsContext.Provider value={contextValue}>
           {children}
         </TabsContext.Provider>
       </div>

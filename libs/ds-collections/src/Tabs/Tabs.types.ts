@@ -46,11 +46,9 @@ export type TabsArr = string[];
 export interface TabsContextProps
   extends Omit<TabsProps, 'children' | 'defaultValue'> {
   /** Setter for activeTab */
-  setActiveTab: (value: string) => void;
+  setInternalActiveTab: (value: string) => void;
   /** Tab som er aktiv - key er tabsKey */
   activeTab?: string;
-  /** Liste med tabKeys */
-  tabs: TabsArr;
   /** Setter for liste med tabKeys */
   setTabs?: Dispatch<SetStateAction<TabsArr>>;
   /** Teller for å sette index på array of Tabs.Tab */

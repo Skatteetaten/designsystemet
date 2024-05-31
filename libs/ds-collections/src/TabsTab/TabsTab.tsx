@@ -20,7 +20,7 @@ export const TabsTab = forwardRef<HTMLButtonElement, TabsTabProps>(
     },
     ref
   ): JSX.Element => {
-    const { activeTab, baseId, hasBorder, variant, setActiveTab } =
+    const { activeTab, baseId, hasBorder, variant, setInternalActiveTab } =
       useContext(TabsContext);
     const tabClassName = styles.tab;
     const variantClassName = variant === 'compact' ? styles.tab_compact : '';
@@ -69,7 +69,7 @@ export const TabsTab = forwardRef<HTMLButtonElement, TabsTabProps>(
         aria-selected={activeTab === value ?? false}
         aria-controls={`ds-tab-panel-${baseId}-${value}`}
         onClick={(): void => {
-          setActiveTab(value);
+          setInternalActiveTab(value);
         }}
         onKeyDown={(e): void => {
           handleKeyboardNavigation(e);
