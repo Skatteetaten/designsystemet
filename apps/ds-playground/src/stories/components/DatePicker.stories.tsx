@@ -82,6 +82,7 @@ const meta = {
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
+    onHelpToggle: { table: { category: category.event } },
     onSelectDate: { table: { category: category.event } },
   },
   args: {

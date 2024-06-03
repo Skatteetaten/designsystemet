@@ -26,4 +26,6 @@ export interface LabelWithHelpProps
   titleHelpSvg?: HelpProps['titleHelpSvg'];
   /** Om obligatorisk label skal markeres med stjerne */
   showRequiredMark?: boolean;
+  /** Callback som kalles når hjelpetekst vises/skjules */
+  onHelpToggle?: HelpProps['onHelpToggle'];
 }

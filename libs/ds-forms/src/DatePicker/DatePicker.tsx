@@ -65,6 +65,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       onBlur,
       onChange,
       onFocus,
+      onHelpToggle,
       onSelectDate,
     },
     ref
@@ -204,6 +205,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
           helpSvgPath={helpSvgPath}
           helpText={helpText}
           titleHelpSvg={titleHelpSvg}
+          onHelpToggle={onHelpToggle}
         >
           {label}
         </LabelWithHelp>

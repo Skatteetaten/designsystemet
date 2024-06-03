@@ -63,6 +63,7 @@ const meta = {
     onBlur: { table: { disable: true } },
     onChange: { table: { disable: true } },
     onFocus: { table: { disable: true } },
+    onHelpToggle: { table: { disable: true } },
   },
 } satisfies Meta<typeof Select>;
 export default meta;
@@ -524,5 +525,21 @@ export const WithEventHandlers = {
     await waitFor(() => expect(args.onChange).toHaveBeenCalled());
     await userEvent.tab();
     await waitFor(() => expect(args.onBlur).toHaveBeenCalled());
+  },
+} satisfies Story;
+
+export const WithHelpToggleEvent = {
+  name: 'With onHelpToggle Event',
+  args: {
+    ...defaultArgs,
+    helpText: 'Hjelpetekst',
+    onHelpToggle: (isOpen: boolean): void => {
+      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
+    },
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
   },
 } satisfies Story;

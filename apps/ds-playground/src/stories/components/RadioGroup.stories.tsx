@@ -64,6 +64,7 @@ const meta = {
     },
     // Events
     onChange: { ...htmlEventDescription },
+    onHelpToggle: { table: { category: category.event } },
   },
   args: {
     legend: 'Type virksomhet',

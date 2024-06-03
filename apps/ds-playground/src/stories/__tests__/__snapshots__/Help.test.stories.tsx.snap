@@ -109,6 +109,29 @@ exports[`Tester/Help (intern) WithHelpTextAndDescription smoke-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Help (intern) WithHelpToggleEvent smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+          type="button"
+          aria-expanded="false"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:rc:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:rc:">
+        Hjelp
+      </title>
+      <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
 exports[`Tester/Help (intern) WithHelptext play-test 1`] = `
 <div data-test-block="true">
   <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
