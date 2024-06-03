@@ -88,7 +88,7 @@ export const Popover = ((props: PopoverProps): JSX.Element => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, [isOpen, shouldAutoDismiss]);
+  }, [isOpen, shouldAutoDismiss, onClose]);
 
   const value = useMemo(
     () => ({
