@@ -203,3 +203,19 @@ export const NextButtonWithSpinner = {
     nextButtonHasSpinner: { table: { disable: false } },
   },
 } satisfies Story;
+
+export const NextButtonWithDisabled = {
+  render: Template,
+  name: 'With Disabled Next Button',
+  args: {
+    stepNumber: 1,
+    variant: 'active',
+    title: 'tittel',
+    children: loremIpsum,
+    nextButtonProps: { disabled: true },
+    onNext: (): void => console.log('next'),
+  },
+  argTypes: {
+    nextButtonHasSpinner: { table: { disable: false } },
+  },
+} satisfies Story;
