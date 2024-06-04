@@ -30,6 +30,11 @@ const meta = {
         category: category.props,
       },
     },
+    isDefaultExpanded: {
+      table: {
+        category: category.props,
+      },
+    },
     isExpanded: {
       table: {
         category: category.props,

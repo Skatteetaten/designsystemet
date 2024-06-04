@@ -15,7 +15,9 @@ export interface AccordionItemProps extends BaseProps {
   subtitle?: string;
   /** Rendrer knappen som heading på gitt nivå */
   titleAs?: HeadingAs;
-  /** Er skuffen åpen? */
+  /** Er skuffen åpen når siden lastes? (Ukontrollert tilstand) */
+  isDefaultExpanded?: boolean;
+  /** Er skuffen åpen? (Kontrollert tilstand) */
   isExpanded?: boolean;
   /**
    * HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes.
