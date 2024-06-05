@@ -1,7 +1,6 @@
 @import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
 .childrenContainer {
-  margin-top: var(--spacing-s);
   grid-area: children;
 }
 
@@ -150,6 +149,7 @@
 
   @media (min-width: $breakpoint-m) {
     max-width: 15.75rem;
+    padding-top: var(--spacing-xxs);
   }
 
   @media (min-width: $breakpoint-l) {
