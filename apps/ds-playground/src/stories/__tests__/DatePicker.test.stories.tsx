@@ -537,20 +537,19 @@ export const GenerouslyWithFormatFromUser = {
     const canvas = within(canvasElement);
     const input = canvas.getByRole('textbox');
     input.focus();
-    const removeDate =
-      '{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}';
 
     const user = userEvent.setup();
 
-    await user.keyboard(removeDate);
-    await user.keyboard('0102');
-    await user.tab();
-    await waitFor(() => expect(input).toHaveValue('01.02.2024'));
+    await fireEvent.change(input, { target: { value: '0103' } });
 
-    await user.keyboard(removeDate);
-    await user.keyboard('010224');
     await user.tab();
-    await waitFor(() => expect(input).toHaveValue('01.02.2024'));
+    await waitFor(() => expect(input).toHaveValue('01.03.2024'));
+    input.focus();
+
+    await fireEvent.change(input, { target: { value: '0104' } });
+    await user.tab();
+
+    await waitFor(() => expect(input).toHaveValue('01.04.2024'));
   },
 } satisfies Story;
 

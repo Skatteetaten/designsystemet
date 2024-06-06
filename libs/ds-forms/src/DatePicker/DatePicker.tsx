@@ -9,6 +9,7 @@ import React, {
   useEffect,
   useImperativeHandle,
 } from 'react';
+import { flushSync } from 'react-dom';
 import { useTranslation } from 'react-i18next';
 
 import {
@@ -95,7 +96,9 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       const date = parseDateFromInput(value);
 
       setSelectedDate(isValid(date) ? date : undefined);
-      setInputValue(value);
+      flushSync(() => {
+        setInputValue(value);
+      });
       onChange?.(e);
     };
 

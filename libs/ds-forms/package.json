@@ -20,7 +20,8 @@
     "@skatteetaten/ds-typography": "*",
     "@skatteetaten/ds-progress": "*",
     "@skatteetaten/ds-status": "*",
-    "date-fns": "3.4.0"
+    "date-fns": "3.4.0",
+    "react-dom": "^18"
   },
   "scripts": {}
 }

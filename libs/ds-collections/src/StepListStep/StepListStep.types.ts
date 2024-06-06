@@ -1,9 +1,9 @@
 import { ReactElement, ReactNode } from 'react';
 
+import { ButtonProps } from '@skatteetaten/ds-buttons';
 import { PanelProps } from '@skatteetaten/ds-content';
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 import { HeadingProps } from '@skatteetaten/ds-typography';
-import { ButtonProps } from '@skatteetaten/ds-buttons';
 
 export const stepVariantArr = [
   'active',
