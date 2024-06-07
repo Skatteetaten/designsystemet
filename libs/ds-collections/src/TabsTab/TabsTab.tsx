@@ -4,6 +4,7 @@ import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 
 import { TabsTabProps } from './TabsTab.types';
+import { valueRegex } from '../Tabs/utils';
 import { TabsContext } from '../TabsContext/TabsContext';
 
 import styles from './TabsTab.module.scss';
@@ -27,6 +28,12 @@ export const TabsTab = forwardRef<HTMLButtonElement, TabsTabProps>(
     const activeClassName = activeTab === value ? styles.tab_active : '';
     const borderClassName = hasBorder ? styles.tab_border : '';
     const withIconClassName = svgPath ? styles.tab_icon : '';
+
+    if (!valueRegex.test(value)) {
+      throw new Error(
+        'Value kan kun inneholde tegn som er gyldig i en html id.'
+      );
+    }
 
     const handleKeyboardNavigation = useCallback(
       (event: KeyboardEvent<HTMLButtonElement>): void => {
