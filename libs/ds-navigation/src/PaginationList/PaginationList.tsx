@@ -7,7 +7,6 @@ import {
   ChevronLeftSVGpath,
   ChevronRightSVGpath,
 } from '@skatteetaten/ds-icons';
-import { TFunction } from 'i18next';
 
 import {
   canHaveElipsisEnd,
@@ -15,17 +14,12 @@ import {
   getRange,
   isElipsis,
 } from './utils';
-import { PaginationListProps } from '../Pagination/Pagination.types';
+import {
+  FirstLastPageButtonProps,
+  PaginationListProps,
+} from '../Pagination/Pagination.types';
 
 import styles from './PaginationList.module.scss';
-
-type FirstLastPageButtonProps = {
-  activePage: number;
-  navigateDirection: 'next' | 'previous';
-  hidePrevNextButtonTitle?: boolean;
-  t: TFunction<'ds_navigation', undefined>;
-  handleChange: (page: number) => void;
-};
 
 const FirstLastPageButton = ({
   activePage,
@@ -102,7 +96,7 @@ export const PaginationList = ({
     if (internalPage > 2) {
       rangeStart = internalPage - sibling;
     }
-    barList.push('elips1');
+    barList.push('elipsbeforeactive');
   }
   if (rangeStart < internalPage + 1) {
     barList.push(...getRange(rangeStart, internalPage - 1));
@@ -117,7 +111,7 @@ export const PaginationList = ({
     barList.push(...getRange(internalPage + 1, rangeEnd));
   }
   if (canHaveElipsisEnd(internalPage, sibling, lastPage)) {
-    barList.push('elips2');
+    barList.push('elipsafteractive');
   }
   barList.push(lastPage);
 

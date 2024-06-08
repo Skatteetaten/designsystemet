@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   Pagination,
@@ -7,15 +9,8 @@ import {
 import { List } from '@skatteetaten/ds-typography';
 import { useArgs } from '@storybook/preview-api';
 import { StoryObj, Meta } from '@storybook/react';
-import {
-  fn,
-  expect,
-  fireEvent,
-  waitFor,
-  within,
-  // isInaccessible,
-} from '@storybook/test';
-import { useState } from 'react';
+import { fn, expect, fireEvent, waitFor, within } from '@storybook/test';
+import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
   component: Pagination,
@@ -37,7 +32,12 @@ const meta = {
     hidePrevNextButtonTitle: { table: { disable: true } },
     hidePageSummary: { table: { disable: true }, control: null },
     ariaLabel: { table: { disable: true } },
+    // Event
     onChange: { table: { disable: true } },
+  },
+  args: {
+    defaultCurrent: undefined,
+    currentPage: undefined,
   },
 } satisfies Meta<typeof Pagination>;
 
@@ -338,7 +338,7 @@ export const WithListLimit: Story = {
     sibling: getDefaultSibling(),
     currentPage: 1,
   },
-  render: (args): JSX.Element => {
+  render: function Render(args): JSX.Element {
     const [{ currentPage }, updateArgs] = useArgs();
     const pageSize = 5;
     const onChange = (page: number): void => {
@@ -403,31 +403,36 @@ export const WithPageSummary: Story = {
 } satisfies Story;
 
 export const WithControlled: Story = {
-  name: 'With Controlled',
-  args: {
-    /* ...defaultArgs, */
-    totalItems: 30,
-    currentPage: 2,
-  },
   parameters: {
+    ...exampleParameters,
     imageSnapshot: { disable: true },
   },
-  play: async ({ canvasElement }): Promise<void> => {
+  args: { totalItems: 10 },
+  play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
     // Antall elementer på side OG antall sider representert med siste page-button
     const paginationStatus = canvas.getByText('Viser 1–5 av 30');
     await expect(paginationStatus).toBeInTheDocument();
+    const nextButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_navigation:pagination.NextButtonTitle'),
+    });
+    await fireEvent.click(nextButton);
+    await waitFor(() => expect(args.onChange).toHaveBeenCalled);
+    const currentButton = canvas.getByRole('button', {
+      name: '2',
+    });
+    await expect(currentButton).toHaveAttribute('aria-current', 'true');
   },
-  render: function Render(args): JSX.Element {
+  render: function Render(): JSX.Element {
     const [page, setPage] = useState(1);
-    const pageSize = 5;
     const onChange = (page: number): void => {
       setPage(page);
     };
     return (
       <Pagination
-        {...args}
-        pageSize={pageSize}
+        totalItems={30}
+        sibling={1}
+        pageSize={5}
         currentPage={page}
         onChange={onChange}
       />

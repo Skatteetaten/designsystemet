@@ -1,13 +1,7 @@
 import { forwardRef, useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
-/* import { InlineButton, IconButton } from '@skatteetaten/ds-buttons'; */
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-/* import {
-  ChevronLeftSVGpath,
-  ChevronRightSVGpath,
-} from '@skatteetaten/ds-icons'; */
-/* import { TFunction } from 'i18next'; */
 
 import {
   getDefaultPageSize,
@@ -15,11 +9,7 @@ import {
   getDefaultHidePageSummary,
   getDefaultHidePrevNextButtonTitle,
 } from './defaults';
-import {
-  PaginationProps,
-  PageOption,
-  PaginationComponent,
-} from './Pagination.types';
+import { PaginationProps, PaginationComponent } from './Pagination.types';
 import { PaginationList } from '../PaginationList/PaginationList';
 
 import styles from './Pagination.module.scss';
@@ -34,7 +24,7 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
       className,
       lang,
       'data-testid': dataTestId,
-      currentPage,
+      currentPage: externalCurrentPage,
       defaultCurrent = 1,
       sibling = getDefaultSibling(),
       pageSize = getDefaultPageSize(),
@@ -50,30 +40,11 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
     const lastPageRef = useRef<HTMLButtonElement>(null);
     const firstPageRef = useRef<HTMLButtonElement>(null);
     const lastPage = Math.ceil(totalItems / pageSize);
-    const option: PageOption = {
-      currentPage: currentPage,
-      defaultCurrent: defaultCurrent,
-      onChange: onChange,
-    };
+    const currentPage = externalCurrentPage ?? defaultCurrent;
     const pageSibling = sibling < 1 ? 1 : sibling;
-
-    // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-    const useCurrentPage = (value: number, option: PageOption) => {
-      const [internalPage, setInternalPage] = useState<number>(() => {
-        if (option.currentPage) {
-          return option.currentPage;
-        } else if (option.defaultCurrent) {
-          return option.defaultCurrent;
-        } else {
-          return value;
-        }
-      });
-      return [internalPage, setInternalPage] as const;
-    };
-
-    const [internalPage, setInteralPage] = useCurrentPage(1, option);
+    const [internalPage, setInternalPage] = useState<number>(currentPage);
     const handleChange = (page: number): void => {
-      setInteralPage(page);
+      setInternalPage(page);
       if (page === 1) {
         firstPageRef?.current?.focus();
       } else if (page === lastPage) {
@@ -81,56 +52,6 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
       }
       onChange?.(page);
     };
-
-    /*     const arrowLeft = (activePage: number): ReactNode => {
-      return (
-        <li className={styles.paginationElement_leftArrow}>
-          {hidePrevNextButtonTitle && (
-            <IconButton
-              type={'button'}
-              svgPath={ChevronLeftSVGpath}
-              title={t('pagination.PreviousButtonTitle')}
-              onClick={() => handleChange(activePage - 1)}
-            />
-          )}
-          {!hidePrevNextButtonTitle && (
-            <InlineButton
-              iconPosition={'left'}
-              svgPath={ChevronLeftSVGpath}
-              className={styles.paginationButton}
-              onClick={() => handleChange(activePage - 1)}
-            >
-              {t('pagination.PreviousButtonTitle')}
-            </InlineButton>
-          )}
-        </li>
-      );
-    };
-
-    const arrowRight = (activePage: number): ReactNode => {
-      return (
-        <li className={styles.paginationElement_rightArrow}>
-          {hidePrevNextButtonTitle && (
-            <IconButton
-              type={'button'}
-              svgPath={ChevronRightSVGpath}
-              title={t('pagination.NextButtonTitle')}
-              onClick={() => handleChange(activePage + 1)}
-            />
-          )}
-          {!hidePrevNextButtonTitle && (
-            <InlineButton
-              iconPosition={'right'}
-              svgPath={ChevronRightSVGpath}
-              className={styles.paginationButton}
-              onClick={() => handleChange(activePage + 1)}
-            >
-              {t('pagination.NextButtonTitle')}
-            </InlineButton>
-          )}
-        </li>
-      );
-    }; */
 
     const rangeTo =
       internalPage * pageSize > totalItems
@@ -149,9 +70,7 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
     const pageSummary = `${
       hidePageSummary ? styles.paginationSummary_hide : ''
     }`;
-    const paginationCss = `${styles.pagination} ${
-      className ? className : ''
-    }`.trim();
+    const paginationCss = `${styles.pagination} ${className ?? ''}`.trim();
     const listCss = `${styles.paginationList} ${
       hidePageSummary ? styles.paginationList_summaryhidden : ''
     }`;
@@ -162,7 +81,7 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
         className={paginationCss}
         lang={lang}
         data-testid={dataTestId}
-        aria-label={ariaLabel ? ariaLabel : t('pagination.WrapperAriaLabel')}
+        aria-label={ariaLabel ?? t('pagination.WrapperAriaLabel')}
       >
         <div className={pageSummary} aria-live={'polite'} aria-atomic={'true'}>
           {showPaginationSummary}

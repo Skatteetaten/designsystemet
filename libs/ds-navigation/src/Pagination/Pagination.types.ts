@@ -1,6 +1,7 @@
 import { ForwardRefExoticComponent, RefAttributes, RefObject } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
+import { TFunction } from 'i18next';
 
 import { PaginationList } from '../PaginationList/PaginationList';
 
@@ -72,4 +73,12 @@ export type PaginationListProps = {
   sibling: number;
   handleChange: (page: number) => void;
   hidePrevNextButtonTitle?: boolean;
+};
+
+export type FirstLastPageButtonProps = {
+  activePage: number;
+  navigateDirection: 'next' | 'previous';
+  hidePrevNextButtonTitle?: boolean;
+  t: TFunction<'ds_navigation', undefined>;
+  handleChange: (page: number) => void;
 };
