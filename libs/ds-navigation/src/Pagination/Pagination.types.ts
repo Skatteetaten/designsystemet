@@ -59,12 +59,6 @@ export interface PaginationComponent
   List: typeof PaginationList;
 }
 
-export type PageOption = PaginationDiscriminatedProp & {
-  // currentPage?: number;
-  // defaultCurrent?: number;
-  onChange?: (page: number) => void;
-};
-
 export type PaginationListProps = {
   firstPageRef?: RefObject<HTMLButtonElement>;
   lastPageRef?: RefObject<HTMLButtonElement>;
