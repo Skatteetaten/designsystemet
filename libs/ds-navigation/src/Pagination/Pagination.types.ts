@@ -1,6 +1,8 @@
-import { RefObject } from 'react';
+import { ForwardRefExoticComponent, RefAttributes, RefObject } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
+
+import { PaginationList } from '../PaginationList/PaginationList';
 
 export interface PaginationCommonProps extends BaseProps {
   /** Antall elementer pr side */
@@ -49,9 +51,16 @@ type PaginationDiscriminatedProp =
 export type PaginationProps = PaginationCommonProps &
   PaginationDiscriminatedProp;
 
-export type PageOption = {
-  currentPage: number | undefined;
-  defaultCurrent: number | undefined;
+export interface PaginationComponent
+  extends ForwardRefExoticComponent<
+    PaginationProps & RefAttributes<HTMLElement>
+  > {
+  List: typeof PaginationList;
+}
+
+export type PageOption = PaginationDiscriminatedProp & {
+  // currentPage?: number;
+  // defaultCurrent?: number;
   onChange?: (page: number) => void;
 };
 

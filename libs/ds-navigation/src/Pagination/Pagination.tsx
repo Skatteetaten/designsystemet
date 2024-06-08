@@ -15,63 +15,19 @@ import {
   getDefaultHidePageSummary,
   getDefaultHidePrevNextButtonTitle,
 } from './defaults';
-import { PaginationProps, PageOption } from './Pagination.types';
+import {
+  PaginationProps,
+  PageOption,
+  PaginationComponent,
+} from './Pagination.types';
 import { PaginationList } from '../PaginationList/PaginationList';
-//import { PaginationSummary } from '../PaginationSummary/PaginationSummary';
 
-import styles, { paginationList } from './Pagination.module.scss';
+import styles from './Pagination.module.scss';
 
 // TODO isvalid hvis new page > total allowed pages
 // TODO hvorfor skilles det ikke på bruken av hidePrevNextButtonTitle i storyen docs
 
-/* type FirstLastPageButtonProps = {
-  activePage: number;
-  navigateDirection: 'next' | 'previous';
-  hidePrevNextButtonTitle: boolean;
-  t: TFunction<'ds_navigation', undefined>;
-  handleChange: (page: number) => void;
-}; */
-
-/* const FirstLastPageButton = ({
-  activePage,
-  navigateDirection,
-  hidePrevNextButtonTitle,
-  t,
-  handleChange,
-}: FirstLastPageButtonProps): ReactNode => {
-  const style =
-    navigateDirection === 'previous'
-      ? styles.paginationElement_leftArrow
-      : styles.paginationElement_rightArrow;
-  const buttonTitle = t('pagination.NextButtonTitle');
-  const icon =
-    navigateDirection === 'previous' ? ChevronLeftSVGpath : ChevronRightSVGpath;
-  console.log(`activePage er ${activePage}`);
-  const multiplication = navigateDirection === 'next' ? 1 : -1;
-  return (
-    <li className={style}>
-      {hidePrevNextButtonTitle ? (
-        <IconButton
-          type={'button'}
-          svgPath={icon}
-          title={buttonTitle}
-          onClick={() => handleChange(activePage + multiplication)}
-        />
-      ) : (
-        <InlineButton
-          iconPosition={navigateDirection === 'previous' ? 'left' : 'right'}
-          svgPath={icon}
-          className={styles.paginationButton}
-          onClick={() => handleChange(activePage + multiplication)}
-        >
-          {buttonTitle}
-        </InlineButton>
-      )}
-    </li>
-  );
-}; */
-
-export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
+export const Pagination = forwardRef<HTMLElement, PaginationProps>(
   (
     {
       id,
@@ -89,7 +45,7 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
       onChange = (): void => {},
     },
     ref
-  ): JSX.Element => {
+  ) => {
     const { t } = useTranslation('ds_navigation', { i18n: dsI18n });
     const lastPageRef = useRef<HTMLButtonElement>(null);
     const firstPageRef = useRef<HTMLButtonElement>(null);
@@ -211,22 +167,8 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
         <div className={pageSummary} aria-live={'polite'} aria-atomic={'true'}>
           {showPaginationSummary}
         </div>
-        {/*  <PaginationSummary
-          currentPage={internalPage}
-          pageSize={pageSize}
-          totalItems={totalItems}
-          description={showPaginationSummary}
-        /> */}
+
         <ul className={listCss}>
-          {/* {internalPage > 1 && (
-            <FirstLastPageButton
-              activePage={internalPage}
-              navigateDirection={'previous'}
-              handleChange={handleChange}
-              t={t}
-              hidePrevNextButtonTitle={hidePrevNextButtonTitle}
-            />
-          )} */}
           {lastPage > 1 && (
             <PaginationList
               lastPage={lastPage}
@@ -238,20 +180,11 @@ export const Pagination = forwardRef<HTMLUListElement, PaginationProps>(
               hidePrevNextButtonTitle={hidePrevNextButtonTitle}
             />
           )}
-          {/* {internalPage < lastPage && (
-            <FirstLastPageButton
-              activePage={internalPage}
-              navigateDirection={'next'}
-              handleChange={handleChange}
-              t={t}
-              hidePrevNextButtonTitle={hidePrevNextButtonTitle}
-            />
-          )} */}
         </ul>
       </nav>
     );
   }
-);
+) as PaginationComponent;
 
 Pagination.displayName = 'Pagination';
 Pagination.List = PaginationList;

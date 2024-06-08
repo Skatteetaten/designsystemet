@@ -38,10 +38,12 @@ const FirstLastPageButton = ({
     navigateDirection === 'previous'
       ? styles.element_leftArrow
       : styles.element_rightArrow;
-  const buttonTitle = t('pagination.NextButtonTitle');
+  const buttonTitle =
+    navigateDirection === 'previous'
+      ? t('pagination.PreviousButtonTitle')
+      : t('pagination.NextButtonTitle');
   const icon =
     navigateDirection === 'previous' ? ChevronLeftSVGpath : ChevronRightSVGpath;
-  console.log(`activePage er ${activePage}`);
   const multiplication = navigateDirection === 'next' ? 1 : -1;
   return (
     <li className={style}>
@@ -90,7 +92,7 @@ export const PaginationList = ({
   firstPageRef,
   lastPageRef,
   hidePrevNextButtonTitle,
-}: PaginationListProps): ReactNode => {
+}: PaginationListProps): JSX.Element => {
   const { t } = useTranslation('ds_navigation', { i18n: dsI18n });
   const barList = [];
   let rangeStart = 2;
@@ -108,7 +110,6 @@ export const PaginationList = ({
   if (internalPage > 1 && internalPage < lastPage) {
     barList.push(internalPage);
   }
-
   if (canHaveElipsisEnd(internalPage, sibling, lastPage)) {
     rangeEnd = internalPage + sibling;
   }

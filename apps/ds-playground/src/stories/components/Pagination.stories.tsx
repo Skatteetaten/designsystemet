@@ -423,4 +423,26 @@ export const Examples: Story = {
   },
 } satisfies Story;
 
+export const ExampleControlled: Story = {
+  render: (_args): JSX.Element => {
+    const [page, setPage] = useState(1);
+    const pageSize = 5;
+    const onChange = (page: number): void => {
+      setPage(page);
+    };
+    return (
+      <>
+        <List hasSpacing>{exampleListWithLimit(data, page, pageSize)}</List>
+        <Pagination
+          pageSize={pageSize}
+          totalItems={data.length}
+          currentPage={page}
+          onChange={onChange}
+        />
+      </>
+    );
+  },
+} satisfies Story;
+
 Examples.parameters = exampleParameters;
+ExampleControlled.parameters = exampleParameters;

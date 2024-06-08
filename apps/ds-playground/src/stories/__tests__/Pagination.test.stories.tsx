@@ -15,6 +15,7 @@ import {
   within,
   // isInaccessible,
 } from '@storybook/test';
+import { useState } from 'react';
 
 const meta = {
   component: Pagination,
@@ -153,7 +154,7 @@ export const WithListLength: Story = {
     });
     await fireEvent.click(nextButton);
     await step(
-      'Antall elementer på side er satt til 4 i testen. Beregnet verdier i pageSummary viser dette',
+      'Antall elementer på side er satt til 4 i testen. Beregnet verdier er nå økt og pageSummary viser dette',
       async () => {
         const paginationStatusNextPage = canvas.getByText('Viser 5–8 av 70'); // Tankestrek
         await expect(paginationStatusNextPage).toBeInTheDocument();
@@ -398,5 +399,38 @@ export const WithPageSummary: Story = {
     // Antall elementer på side OG antall sider representert med siste page-button
     const paginationStatus = canvas.getByText('Viser 1–10 av 70');
     await expect(paginationStatus).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithControlled: Story = {
+  name: 'With Controlled',
+  args: {
+    /* ...defaultArgs, */
+    totalItems: 30,
+    currentPage: 2,
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    // Antall elementer på side OG antall sider representert med siste page-button
+    const paginationStatus = canvas.getByText('Viser 1–5 av 30');
+    await expect(paginationStatus).toBeInTheDocument();
+  },
+  render: function Render(args): JSX.Element {
+    const [page, setPage] = useState(1);
+    const pageSize = 5;
+    const onChange = (page: number): void => {
+      setPage(page);
+    };
+    return (
+      <Pagination
+        {...args}
+        pageSize={pageSize}
+        currentPage={page}
+        onChange={onChange}
+      />
+    );
   },
 } satisfies Story;
