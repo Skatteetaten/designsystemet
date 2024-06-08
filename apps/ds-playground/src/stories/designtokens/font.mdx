@@ -1,0 +1,41 @@
+import { Meta, Story, Canvas } from '@storybook/blocks';
+import { FontTokenExamplesGenerator } from './FontTokenExamplesGenerator';
+import * as FontStories from './font.stories';
+import { VersionBadge } from '../utils/VersionBadge';
+
+# Font
+
+<VersionBadge packageName={'core-designtokens'} />
+
+<Meta of={FontStories} />
+
+## Font-size
+
+<FontTokenExamplesGenerator
+  propertyType={'font-size'}
+  sampleText={
+    'Skatteetaten ønsker å gjøre det enklere å gjøre rett og vanskeligere å gjøre feil'
+  }
+/>
+
+## Font-weight
+
+<FontTokenExamplesGenerator
+  propertyType={'font-weight'}
+  sampleText={
+    'Skatteetaten ønsker å gjøre det enklere å gjøre rett og vanskeligere å gjøre feil'
+  }
+/>
+
+## Line-height
+
+<FontTokenExamplesGenerator
+  propertyType={'line-height'}
+  sampleText={
+    'Skatteetaten ønsker å gjøre det enklere å gjøre rett og vanskeligere å gjøre feil, redusere skattekriminalitet, forvalte informasjon for å bidra til forenkling og digitalisering, jobbe sammen fra start og sist, bruke data, analyse og maskinlæring i stor skala i oppgaveløsningen. Alt for å sikre finansieringen av velferdsstaten.'
+  }
+/>
+
+<Canvas withSource="none">
+  <Story of={FontStories.Font} />
+</Canvas>

@@ -8,7 +8,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Fieldset,
@@ -39,13 +38,12 @@ const meta = {
     // HTML
     disabled: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },
+    // Events
+    onHelpToggle: { table: { category: category.event } },
   },
   args: {
     legend: 'Hvilken periode trenger du bekreftelse for?',
     children: <Paragraph>{'Innhold'}</Paragraph>,
-  },
-  parameters: {
-    version: getVersion('ds-forms'),
   },
 } satisfies Meta<typeof Fieldset>;
 

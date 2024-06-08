@@ -6,7 +6,6 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: ErrorMessage,
@@ -19,9 +18,6 @@ const meta = {
   args: {
     children: 'Skriv fødselsdatoen med følgende format: DD.MM.ÅÅÅÅ',
     showError: true,
-  },
-  parameters: {
-    version: getVersion('ds-forms'),
   },
 } satisfies Meta<typeof ErrorMessage>;
 

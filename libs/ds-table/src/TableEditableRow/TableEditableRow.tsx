@@ -7,7 +7,11 @@ import {
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  getCommonClassNameDefault,
+  useMediaQuery,
+} from '@skatteetaten/ds-core-utils';
 import { EditSVGpath } from '@skatteetaten/ds-icons';
 
 import { TableEditableRowProps } from './TableEditableRow.types';
@@ -18,7 +22,6 @@ import {
   RowWithLeftSideExpandButton,
   RowWithRightSideExpandButton,
 } from '../TableRowWithIconButton/TableRowWithIconButton';
-import { useMediaQuery } from '../utils';
 
 import styles from './TableEditableRow.module.scss';
 export const TableEditableRow = forwardRef<

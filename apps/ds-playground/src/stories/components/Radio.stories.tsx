@@ -2,7 +2,6 @@ import { RadioGroup } from '@skatteetaten/ds-forms';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: RadioGroup.Radio,
@@ -19,9 +18,6 @@ const meta = {
   },
   args: {
     children: 'Enkeltpersonsforetak',
-  },
-  parameters: {
-    version: getVersion('ds-forms'),
   },
 } satisfies Meta<typeof RadioGroup.Radio>;
 

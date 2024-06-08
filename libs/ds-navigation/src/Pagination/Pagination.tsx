@@ -32,7 +32,7 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
       hidePrevNextButtonTitle = getDefaultHidePrevNextButtonTitle(),
       hidePageSummary = getDefaultHidePageSummary(),
       ariaLabel,
-      onChange = (): void => {},
+      onChange,
     },
     ref
   ) => {

@@ -11,7 +11,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Select,
@@ -48,7 +47,6 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getCommonFormVariantDefault() },
-        type: { summary: formArrSize },
       },
     },
     label: { table: { category: category.props } },
@@ -72,6 +70,7 @@ const meta = {
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
+    onHelpToggle: { table: { category: category.event } },
   },
   args: {
     label: 'Farge',
@@ -89,9 +88,6 @@ const meta = {
         {'Rød'}
       </Select.Option>,
     ],
-  },
-  parameters: {
-    version: getVersion('ds-forms'),
   },
 } satisfies Meta<typeof Select>;
 

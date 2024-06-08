@@ -2,8 +2,7 @@ import React from 'react';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fireEvent } from '@storybook/test';
-import { within } from '@storybook/testing-library';
+import { expect, fireEvent, within } from '@storybook/test';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { DatePickerCalendar } from '../../../../../libs/ds-forms/src/DatePickerCalendar/DatePickerCalendar';
@@ -27,7 +26,7 @@ const DatesTemplate: StoryFn<typeof DatePickerCalendar> = (args) => {
   );
 };
 
-const today = new Date('2024.01.01');
+const today = new Date('2024.01.15');
 const meta = {
   component: DatePickerCalendar,
   title: 'Tester/DatePicker/DatePickerCalendar',
@@ -40,14 +39,12 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    selectedDate: {
-      table: { disable: true },
-      control: 'date',
-    },
+    selectedDate: { table: { disable: true }, control: 'date' },
     minDate: { table: { disable: true }, control: 'date' },
     maxDate: { table: { disable: true }, control: 'date' },
     // Events
     onSelectDate: { table: { disable: true } },
+    onTabKeyOut: { table: { disable: true } },
   },
   parameters: {
     mockDate: today,
@@ -59,7 +56,9 @@ type Story = StoryObj<typeof meta>;
 
 const defaultArgs: DatePickerCalendarProps = {
   selectedDate: today,
-  onSelectDate: () => {},
+  onSelectDate: () => {
+    Function.prototype();
+  },
 };
 
 export const WithRef = {
@@ -119,14 +118,21 @@ export const Defaults = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
 
+    const prevArrowBtnText = `${dsI18n.t(
+      'ds_forms:datepicker.PreviousMonth'
+    )} ${dsI18n.t('ds_forms:datepicker.December')} 2023`;
+    const nextArrowBtnText = `${dsI18n.t(
+      'ds_forms:datepicker.NextMonth'
+    )} ${dsI18n.t('ds_forms:datepicker.February')} 2024`;
+
     await expect(
       canvas.getByRole('button', {
-        name: dsI18n.t('ds_forms:datepicker.PreviousMonth'),
+        name: prevArrowBtnText,
       })
     ).toBeInTheDocument();
     await expect(
       canvas.getByRole('button', {
-        name: dsI18n.t('ds_forms:datepicker.NextMonth'),
+        name: nextArrowBtnText,
       })
     ).toBeInTheDocument();
     await expect(
@@ -147,23 +153,31 @@ export const Defaults = {
     const cells = calendarTable.querySelectorAll('td');
     // eslint-disable-next-line testing-library/no-node-access
     const buttons = calendarTable.querySelectorAll('button');
+    // eslint-disable-next-line testing-library/no-node-access
+    const focusableButtons = calendarTable.querySelectorAll(
+      'button[tabindex="0"]'
+    );
 
     await expect(calendarTable).toBeInTheDocument();
     await expect(caption).toBeInTheDocument();
     await expect(cells.length).toBe(buttons.length);
+    await expect(focusableButtons.length).toBe(1);
 
-    const firstDateButton = canvas.getAllByText('1')[0];
-    await expect(firstDateButton).toHaveAttribute(
+    const defaultSelectedDateButton = canvas.getAllByText('15')[0];
+    await expect(defaultSelectedDateButton).toHaveAttribute(
       'aria-label',
-      'I dag 1. Januar 2024'
+      'I dag 15. Januar 2024'
     );
-    const ariaCurrentButton = canvas.getAllByText('1')[0];
-    await expect(ariaCurrentButton).toHaveAttribute('aria-current', 'date');
+    await expect(defaultSelectedDateButton).toHaveAttribute(
+      'aria-current',
+      'true'
+    );
+    await expect(defaultSelectedDateButton).toHaveAttribute('tabindex', '0');
   },
 } satisfies Story;
 
-export const WithSelectedValue = {
-  name: 'WithSelectedValue (B2)',
+export const WithSelectedDate = {
+  name: 'WithSelectedDate (B2)',
   args: {
     ...defaultArgs,
     selectedDate: new Date('2024.01.31'),
@@ -173,8 +187,8 @@ export const WithSelectedValue = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const ariaCurrentButton = canvas.getByText('31');
-    await expect(ariaCurrentButton).toHaveAttribute('aria-current', 'date');
+    const selectedDateButton = canvas.getByText('31');
+    await expect(selectedDateButton).toHaveAttribute('aria-current', 'true');
   },
 } satisfies Story;
 
@@ -214,6 +228,28 @@ export const WithMaxDate = {
   },
 } satisfies Story;
 
+export const WithMaxDateWhereSelectedDateIsWithinTheRange = {
+  name: 'With MaxDate Where Selected Date Is Within The Range',
+  args: {
+    ...defaultArgs,
+    selectedDate: new Date('2024.01.16'),
+    maxDate: new Date('2024.01.15'),
+  },
+  argTypes: {
+    selectedDate: { table: { disable: false } },
+    maxDate: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+
+    const oldSelectedDateButton = canvas.getByText('16');
+    await expect(oldSelectedDateButton).toHaveAttribute('tabindex', '-1');
+
+    const newSelectedDateButton = canvas.getByText('15');
+    await expect(newSelectedDateButton).toHaveAttribute('tabindex', '0');
+  },
+} satisfies Story;
+
 export const WithBreakpointMobile = {
   name: 'With Breakpoint-mobile (A1 delvis)',
   args: {
@@ -239,11 +275,17 @@ export const ClickAndChangeMonthAndYear = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
+    const prevArrowBtnText = `${dsI18n.t(
+      'ds_forms:datepicker.PreviousMonth'
+    )} ${dsI18n.t('ds_forms:datepicker.December')} 2023`;
     const prevButton = canvas.getByRole('button', {
-      name: dsI18n.t('ds_forms:datepicker.PreviousMonth'),
+      name: prevArrowBtnText,
     });
+    const nextArrowBtnText = `${dsI18n.t(
+      'ds_forms:datepicker.NextMonth'
+    )} ${dsI18n.t('ds_forms:datepicker.February')} 2024`;
     const nextButton = canvas.getByRole('button', {
-      name: dsI18n.t('ds_forms:datepicker.NextMonth'),
+      name: nextArrowBtnText,
     });
     const monthSelect = canvas.getByRole('combobox', {
       name: dsI18n.t('ds_forms:datepicker.SelectMonth'),

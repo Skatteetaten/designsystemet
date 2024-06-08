@@ -78,7 +78,7 @@ const meta = {
     },
     renderIcon: {
       table: { disable: true },
-      control: { type: null },
+      control: { disable: true },
     },
     spacing: {
       table: { disable: true },
@@ -517,7 +517,7 @@ export const WithColorAndVariant = {
   argTypes: {
     color: {
       table: { disable: false },
-      control: { type: null },
+      control: { disable: true },
     },
   },
 } satisfies Story;
@@ -543,7 +543,7 @@ export const WithSpacing = {
   argTypes: {
     spacing: {
       table: { disable: false },
-      control: { type: null },
+      control: { disable: true },
     },
   },
 } satisfies Story;
@@ -581,7 +581,7 @@ export const WithPadding = {
   argTypes: {
     padding: {
       table: { disable: false },
-      control: { type: null },
+      control: { disable: true },
     },
   },
   parameters: {

@@ -8,7 +8,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -45,6 +44,8 @@ const meta = {
     // HTML
     disabled: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },
+    // Events
+    onHelpToggle: { table: { category: category.event } },
   },
   args: {
     children: [
@@ -59,9 +60,6 @@ const meta = {
       </CheckboxGroup.Checkbox>,
     ],
     legend: 'Velg det som passer deg',
-  },
-  parameters: {
-    version: getVersion('ds-forms'),
   },
 } satisfies Meta<typeof CheckboxGroup>;
 

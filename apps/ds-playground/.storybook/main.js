@@ -35,7 +35,6 @@ const config = {
     '@storybook/addon-coverage',
     '@storybook/addon-a11y',
     '@storybook/addon-interactions',
-    'storybook-version',
     '@nx/react/plugins/storybook',
   ],
   core: {

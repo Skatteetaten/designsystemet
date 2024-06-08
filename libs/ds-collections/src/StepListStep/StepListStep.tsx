@@ -27,6 +27,7 @@ export const StepListStep = forwardRef<HTMLLIElement, StepListStepProps>(
       introContent,
       introTitle,
       introTitleAs,
+      nextButtonProps,
       nextButtonText,
       nextButtonHasSpinner,
       stepNumber,
@@ -41,14 +42,13 @@ export const StepListStep = forwardRef<HTMLLIElement, StepListStepProps>(
       children,
     },
     ref
-    // eslint-disable-next-line sonarjs/cognitive-complexity
   ): JSX.Element => {
     const { t } = useTranslation('ds_collections', { i18n: dsI18n });
     const innerRef = useRef<HTMLDivElement>(null);
     const generatedId = useId();
     const titleId = `steptitle-${id ?? generatedId}`;
 
-    const circleClassName = `${styles.stepCircle} 
+    const circleClassName = `${styles.stepCircle}
         ${styles[`stepCircle_${variant}`]}`;
 
     const stepVariantClassName = styles[`step_${variant}`];
@@ -133,7 +133,7 @@ export const StepListStep = forwardRef<HTMLLIElement, StepListStepProps>(
         <div
           className={`${styles.stepContent} ${
             onEdit ? '' : styles.stepContent_noButton
-          } ${stepContentVariantClassName} 
+          } ${stepContentVariantClassName}
           `}
         >
           <div>{children}</div>
@@ -158,7 +158,11 @@ export const StepListStep = forwardRef<HTMLLIElement, StepListStepProps>(
           <>
             <div className={styles.nextLine}></div>
             <span className={styles.buttonWrapper}>
-              <Button hasSpinner={nextButtonHasSpinner} onClick={onNext}>
+              <Button
+                hasSpinner={nextButtonHasSpinner}
+                onClick={onNext}
+                {...nextButtonProps}
+              >
                 {nextButtonText ?? t('steplist.Next')}
               </Button>
             </span>

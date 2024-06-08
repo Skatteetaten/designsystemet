@@ -2,7 +2,7 @@ import { ChangeEvent, useState } from 'react';
 
 import { Checkbox } from '@skatteetaten/ds-forms';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, waitFor, within } from '@storybook/test';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 
@@ -580,6 +580,7 @@ export const WithEventHandlers = {
   name: 'With EventHandlers',
   args: {
     ...defaultArgs,
+    onChange: fn(),
   },
   parameters: {
     imageSnapshot: { disable: true },

@@ -2,7 +2,7 @@ import { StepList, stepVariantArr } from '@skatteetaten/ds-collections';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TimersandSVGpath } from '@skatteetaten/ds-icons';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { expect, fn, within } from '@storybook/test';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 import { category } from '../../../.storybook/helpers';
@@ -62,6 +62,7 @@ type Story = StoryObj<typeof meta>;
 const defaultArgs = {
   stepNumber: 1,
   title: 'title',
+  onNext: fn(),
 };
 const Template: StoryFn<typeof StepList.Step> = (args) => (
   <StepList>
@@ -170,6 +171,7 @@ export const WithEditAccessibleDescription = {
     variant: 'active',
     title: 'tittel',
     children: loremIpsum,
+    onEdit: fn(),
   },
   argTypes: {
     title: { table: { disable: false } },
@@ -195,6 +197,22 @@ export const NextButtonWithSpinner = {
     title: 'tittel',
     children: loremIpsum,
     nextButtonHasSpinner: true,
+    onNext: (): void => console.log('next'),
+  },
+  argTypes: {
+    nextButtonHasSpinner: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const NextButtonWithDisabled = {
+  render: Template,
+  name: 'With Disabled Next Button',
+  args: {
+    stepNumber: 1,
+    variant: 'active',
+    title: 'tittel',
+    children: loremIpsum,
+    nextButtonProps: { disabled: true },
     onNext: (): void => console.log('next'),
   },
   argTypes: {

@@ -1,0 +1,504 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/NavigationTile Defaults play-test 1`] = `
+<div data-test-block="true">
+  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+     href="#storybook-root"
+  >
+    <div class="NavigationTile_header__xVyS1">
+      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+        Skatt
+      </h2>
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Tester/NavigationTile WithAriaDescribedby play-test 1`] = `
+<div data-test-block="true">
+  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+     href="#storybook-root"
+     aria-describedby="htmlId"
+  >
+    <div class="NavigationTile_header__xVyS1">
+      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+        Skatt
+      </h2>
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Tester/NavigationTile WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <a id="htmlId"
+     class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j dummyClassname undefined"
+     lang="nb"
+     data-testid="123ID"
+     href="#storybook-root"
+  >
+    <div class="NavigationTile_header__xVyS1">
+      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+        Skatt
+      </h2>
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Tester/NavigationTile WithCustomClassNames play-test 1`] = `
+<div data-test-block="true">
+  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j   dummyClassname"
+     href="#storybook-root"
+  >
+    <div class="NavigationTile_header__xVyS1">
+      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh dummyClassname">
+        Skatt
+      </h2>
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+    </div>
+    <div class="NavigationTile_description__6bVcu false  dummyClassname">
+      Skattekort, frikort, forskuddsskatt, skattemelding (selvangivelse), skatteoppgjør, skattelister. Tema og fradrag som hjelper deg til å få riktig skatt.
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Tester/NavigationTile WithDescription smoke-test 1`] = `
+<div data-test-block="true">
+  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+     href="#storybook-root"
+  >
+    <div class="NavigationTile_header__xVyS1">
+      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+        Skatt
+      </h2>
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+    </div>
+    <div class="NavigationTile_description__6bVcu false  undefined">
+      Skattekort, frikort, forskuddsskatt, skattemelding (selvangivelse), skatteoppgjør, skattelister. Tema og fradrag som hjelper deg til å få riktig skatt.
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Tester/NavigationTile WithExternalIcon play-test 1`] = `
+<div data-test-block="true">
+  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+     href="#storybook-root"
+  >
+    <div class="NavigationTile_header__xVyS1">
+      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+        Skatt
+      </h2>
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-label="Til et annet nettsted"
+           aria-hidden="false"
+           role="img"
+      >
+        <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7Zm5 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z">
+        </path>
+      </svg>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Tester/NavigationTile WithHiddenArrowIcon smoke-test 1`] = `
+<div data-test-block="true">
+  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+     href="#storybook-root"
+  >
+    <div class="NavigationTile_header__xVyS1">
+      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+        Skatt
+      </h2>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Tester/NavigationTile WithIcon play-test 1`] = `
+<div data-test-block="true">
+  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+     href="#storybook-root"
+  >
+    <div class="NavigationTile_header__xVyS1">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M19 19H5V8h14v11ZM16 1v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2Zm1 11h-5v5h5v-5Z">
+        </path>
+      </svg>
+      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+        Skatt
+      </h2>
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Tester/NavigationTile WithOnClick play-test 1`] = `
+<div data-test-block="true">
+  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+     href="#storybook-root"
+  >
+    <div class="NavigationTile_header__xVyS1">
+      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+        Ny tittel
+      </h2>
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Tester/NavigationTile WithRef play-test 1`] = `
+<div data-test-block="true">
+  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+     href="#storybook-root"
+     id="dummyIdForwardedFromRef"
+  >
+    <div class="NavigationTile_header__xVyS1">
+      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+        Skatt
+      </h2>
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Tester/NavigationTile WithSizeExtraLarge smoke-test 1`] = `
+<div data-test-block="true">
+  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_extraLarge__sU6OC  undefined"
+     href="#storybook-root"
+  >
+    <div class="NavigationTile_header__xVyS1">
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_extraLarge__CUqij NavigationTile_icon__MA-yg NavigationTile_icon_extraLarge__7Wuo5"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M18 13c.6 0 1 .4 1 .9v.9h2c.6 0 1 .4 1 .9v4.2c0 .5-.4.9-1 .9h-8c-.6 0-1-.4-1-.9v-4.2c0-.5.4-.9 1-.9h2v-.9c0-.5.4-.9 1-.9h2Zm-8 0c.6 0 1.1 0 1.6.1-.1.2-2.3 1.3-1.7 5.9H2v-2c0-2.2 3.6-4 8-4Zm8 1h-2v.899h2V14ZM10 3c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4Z">
+        </path>
+      </svg>
+      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_extraLarge__HEPNv undefined">
+        Skatt
+      </h2>
+    </div>
+    <div class="NavigationTile_description__6bVcu NavigationTile_description_extraLarge__CP6sK  undefined">
+      Skattekort, frikort, forskuddsskatt, skattemelding (selvangivelse), skatteoppgjør, skattelister. Tema og fradrag som hjelper deg til å få riktig skatt.
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Tester/NavigationTile WithSizeLarge smoke-test 1`] = `
+<div data-test-block="true">
+  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+     href="#storybook-root"
+  >
+    <div class="NavigationTile_header__xVyS1">
+      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+        Skatt
+      </h2>
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+    </div>
+    <div class="NavigationTile_description__6bVcu false  undefined">
+      Skattekort, frikort, forskuddsskatt, skattemelding (selvangivelse), skatteoppgjør, skattelister. Tema og fradrag som hjelper deg til å få riktig skatt.
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Tester/NavigationTile WithSizeMedium smoke-test 1`] = `
+<div data-test-block="true">
+  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_medium__afnsR  undefined"
+     href="#storybook-root"
+  >
+    <div class="NavigationTile_header__xVyS1">
+      <h2 class="NavigationTile_title__Lxw5R  undefined">
+        Skatt
+      </h2>
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg "
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+    </div>
+    <div class="NavigationTile_description__6bVcu false  undefined">
+      Skattekort, frikort, forskuddsskatt, skattemelding (selvangivelse), skatteoppgjør, skattelister. Tema og fradrag som hjelper deg til å få riktig skatt.
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Tester/NavigationTile WithTarget play-test 1`] = `
+<div data-test-block="true">
+  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+     href="#storybook-root"
+     rel="noreferrer"
+     target="_blank"
+  >
+    <div class="NavigationTile_header__xVyS1">
+      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+        Skatt
+      </h2>
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        </path>
+      </svg>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Tester/NavigationTile WithTilesInColumns smoke-test 1`] = `
+<div data-test-block="true">
+  <nav class="flex gapS">
+    <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_extraLarge__sU6OC  undefined"
+       href="#storybook-root"
+    >
+      <div class="NavigationTile_header__xVyS1">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_extraLarge__CUqij NavigationTile_icon__MA-yg NavigationTile_icon_extraLarge__7Wuo5"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M18 13c.6 0 1 .4 1 .9v.9h2c.6 0 1 .4 1 .9v4.2c0 .5-.4.9-1 .9h-8c-.6 0-1-.4-1-.9v-4.2c0-.5.4-.9 1-.9h2v-.9c0-.5.4-.9 1-.9h2Zm-8 0c.6 0 1.1 0 1.6.1-.1.2-2.3 1.3-1.7 5.9H2v-2c0-2.2 3.6-4 8-4Zm8 1h-2v.899h2V14ZM10 3c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4Z">
+          </path>
+        </svg>
+        <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_extraLarge__HEPNv undefined">
+          Skatt
+        </h2>
+      </div>
+    </a>
+    <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_extraLarge__sU6OC  undefined"
+       href="#storybook-root"
+    >
+      <div class="NavigationTile_header__xVyS1">
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_extraLarge__CUqij NavigationTile_icon__MA-yg NavigationTile_icon_extraLarge__7Wuo5"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M18 13c.6 0 1 .4 1 .9v.9h2c.6 0 1 .4 1 .9v4.2c0 .5-.4.9-1 .9h-8c-.6 0-1-.4-1-.9v-4.2c0-.5.4-.9 1-.9h2v-.9c0-.5.4-.9 1-.9h2Zm-8 0c.6 0 1.1 0 1.6.1-.1.2-2.3 1.3-1.7 5.9H2v-2c0-2.2 3.6-4 8-4Zm8 1h-2v.899h2V14ZM10 3c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4Z">
+          </path>
+        </svg>
+        <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_extraLarge__HEPNv undefined">
+          Skatt
+        </h2>
+      </div>
+    </a>
+  </nav>
+</div>
+`;
+
+exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
+<div data-test-block="true">
+  <nav class="flex flexColumn gapXs">
+    <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+       href="#storybook-root"
+    >
+      <div class="NavigationTile_header__xVyS1">
+        <h1 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+          Heading h1
+        </h1>
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+          </path>
+        </svg>
+      </div>
+    </a>
+    <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+       href="#storybook-root"
+    >
+      <div class="NavigationTile_header__xVyS1">
+        <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+          Heading h2
+        </h2>
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+          </path>
+        </svg>
+      </div>
+    </a>
+    <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+       href="#storybook-root"
+    >
+      <div class="NavigationTile_header__xVyS1">
+        <h3 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+          Heading h3
+        </h3>
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+          </path>
+        </svg>
+      </div>
+    </a>
+    <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+       href="#storybook-root"
+    >
+      <div class="NavigationTile_header__xVyS1">
+        <h4 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+          Heading h4
+        </h4>
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+          </path>
+        </svg>
+      </div>
+    </a>
+    <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+       href="#storybook-root"
+    >
+      <div class="NavigationTile_header__xVyS1">
+        <h5 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+          Heading h5
+        </h5>
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+          </path>
+        </svg>
+      </div>
+    </a>
+    <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+       href="#storybook-root"
+    >
+      <div class="NavigationTile_header__xVyS1">
+        <h6 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+          Heading h6
+        </h6>
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+          </path>
+        </svg>
+      </div>
+    </a>
+  </nav>
+</div>
+`;

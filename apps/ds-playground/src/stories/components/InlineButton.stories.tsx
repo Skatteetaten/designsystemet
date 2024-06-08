@@ -3,9 +3,9 @@ import {
   getInlineButtonPositionDefault,
 } from '@skatteetaten/ds-buttons';
 import {
+  buttonIconPositionArr,
   dsI18n,
   getCommonButtonTypeDefault,
-  positionArr,
 } from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath, CancelSVGpath } from '@skatteetaten/ds-icons';
 import { Meta, StoryObj } from '@storybook/react';
@@ -13,7 +13,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: InlineButton,
@@ -29,12 +28,11 @@ const meta = {
       },
     },
     iconPosition: {
-      options: [...positionArr],
+      options: [...buttonIconPositionArr],
       control: 'radio',
       table: {
         category: category.props,
         defaultValue: { summary: getInlineButtonPositionDefault() },
-        type: { summary: positionArr },
       },
     },
     svgPath: {
@@ -61,9 +59,6 @@ const meta = {
   },
   args: {
     children: 'Legg til rapport',
-  },
-  parameters: {
-    version: getVersion('ds-buttons'),
   },
 } satisfies Meta<typeof InlineButton>;
 

@@ -37,6 +37,7 @@ const meta = {
     showCaption: { table: { disable: true } },
     sortState: { table: { disable: true } },
     setSortState: { table: { disable: true } },
+    rowInEditModeId: { table: { disable: true } },
     children: { table: { disable: true } },
   },
   args: {
@@ -199,6 +200,7 @@ const ExpandEditSortTable = (
           return (
             <Table.EditableRow
               key={index}
+              id={id}
               data-testid={`row-${index}`}
               editButtonAriaDescribedby={id}
               editButtonPosition={'left'}
@@ -455,6 +457,15 @@ export const WithExpandEditSort = {
   },
 } satisfies Story;
 
+export const WithDefaultRowInEditMode = {
+  render: TemplateExpandEditSort,
+  name: 'With Default Row In Edit Mode',
+  args: {
+    ...defaultArgs,
+    rowInEditModeId: '3vesy',
+  },
+} satisfies Story;
+
 export const WithWideScreen = {
   render: TemplateExpandEditSort,
   name: 'With Wide screen (Table A1, A2)',
@@ -465,5 +476,14 @@ export const WithWideScreen = {
     viewport: {
       defaultViewport: '--breakpoint-m',
     },
+  },
+} satisfies Story;
+
+export const WithFullWidthExpandableEdit = {
+  render: TemplateExpandEditSort,
+  name: 'With FullWidth Edit Expand Sort',
+  args: {
+    ...defaultArgs,
+    hasFullWidth: true,
   },
 } satisfies Story;

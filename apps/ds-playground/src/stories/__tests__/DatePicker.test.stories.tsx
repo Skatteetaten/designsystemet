@@ -13,6 +13,7 @@ import {
 } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
+import { webComponent } from '../../../.storybook/webcomponent-decorator';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const verifyAttribute =
@@ -24,6 +25,7 @@ const verifyAttribute =
     await expect(button).toHaveAttribute(attribute, expectedValue);
   };
 
+const today = new Date('2024.01.15');
 const meta = {
   component: DatePicker,
   title: 'Tester/DatePicker/DatePicker',
@@ -73,6 +75,10 @@ const meta = {
     onChange: { table: { disable: true } },
     onFocus: { table: { disable: true } },
     onSelectDate: { table: { disable: true } },
+    onHelpToggle: { table: { disable: true } },
+  },
+  parameters: {
+    mockDate: today,
   },
 } satisfies Meta<typeof DatePicker>;
 export default meta;
@@ -512,39 +518,41 @@ export const WithInitialPickerDate = {
     });
     await fireEvent.click(calendarButton);
     const ariaCurrentButton = canvas.getByText('31');
-    await expect(ariaCurrentButton).toHaveAttribute('aria-current', 'date');
+    await expect(ariaCurrentButton).toHaveAttribute('aria-current', 'true');
   },
 } satisfies Story;
 
-// export const GenerouslyWithFormatFromUser = {
-//   name: 'Generously With Format From User (A3)',
-//   args: {
-//     ...defaultArgs,
-//     value: valueDate,
-//   },
-//   argTypes: {},
-//   parameters: {
-//     imageSnapshot: { disable: true },
-//     HTMLSnapshot: { disable: true },
-//   },
-//   play: async ({ canvasElement }): Promise<void> => {
-//     const canvas = within(canvasElement);
-//     const input = canvas.getByRole('textbox');
-//     input.focus();
-//     const removeDate =
-//       '{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}';
+export const GenerouslyWithFormatFromUser = {
+  name: 'Generously With Format From User (A3)',
+  args: {
+    ...defaultArgs,
+    value: valueDate,
+  },
+  argTypes: {},
+  parameters: {
+    imageSnapshot: { disable: true },
+    HTMLSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const input = canvas.getByRole('textbox');
+    input.focus();
+    const removeDate =
+      '{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}';
 
-//     await userEvent.type(input, removeDate);
-//     await userEvent.type(input, '0102');
-//     await userEvent.tab();
-//     await waitFor(() => expect(input).toHaveValue('01.02.2024'));
+    const user = userEvent.setup();
 
-//     await userEvent.type(input, removeDate);
-//     await userEvent.type(input, '010224');
-//     await userEvent.tab();
-//     await waitFor(() => expect(input).toHaveValue('01.02.2024'));
-//   },
-// } satisfies Story;
+    await user.keyboard(removeDate);
+    await user.keyboard('0102');
+    await user.tab();
+    await waitFor(() => expect(input).toHaveValue('01.02.2024'));
+
+    await user.keyboard(removeDate);
+    await user.keyboard('010224');
+    await user.tab();
+    await waitFor(() => expect(input).toHaveValue('01.02.2024'));
+  },
+} satisfies Story;
 
 const EventHandlersTemplate: StoryFn<typeof DatePicker> = (args) => {
   const [labelText, setLabelText] = useState('Tester events');
@@ -573,6 +581,9 @@ export const WithEventHandlers = {
   name: 'With EventHandlers (A6)',
   args: {
     ...defaultArgs,
+    onFocus: fn(),
+    onBlur: fn(),
+    onChange: fn(),
   },
   parameters: {
     imageSnapshot: { disable: true },
@@ -715,5 +726,59 @@ export const OpenCalendarMovesOver = {
     const canvas = within(canvasElement);
     const calendarButton = canvas.getByRole('button');
     await fireEvent.click(calendarButton);
+  },
+} satisfies Story;
+
+export const WithShadowDom = {
+  name: 'With ShadowDom',
+  args: {
+    ...defaultArgs,
+    value: valueDate,
+  },
+  argTypes: {
+    ref: { table: { disable: false } },
+  },
+  decorators: [webComponent],
+  parameters: {
+    imageSnapshot: { disable: true },
+    HTMLSnapshot: { disable: true },
+    customElementName: 'calendar-customelement',
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const customElement = canvasElement.querySelector(`calendar-customelement`);
+
+    const shadowCanvas = within(
+      customElement!.shadowRoot!.firstElementChild as HTMLElement
+    );
+
+    const calendarButton = shadowCanvas.getByRole('button', {
+      name: dsI18n.t('ds_forms:datepicker.ChooseDate'),
+    });
+
+    await fireEvent.click(calendarButton);
+
+    await expect(calendarButton).toHaveAttribute('aria-expanded', 'true');
+    const calendarTable = shadowCanvas.getByRole('table');
+    await expect(calendarTable).toBeInTheDocument();
+
+    await fireEvent.click(shadowCanvas.getByLabelText(defaultLabelText));
+    await expect(calendarTable).not.toBeInTheDocument();
+    await expect(calendarButton).toHaveAttribute('aria-expanded', 'false');
+  },
+} satisfies Story;
+
+export const WithHelpToggleEvent = {
+  name: 'With onHelpToggle Event',
+  args: {
+    ...defaultArgs,
+    helpText: 'Hjelpetekst',
+    onHelpToggle: (isOpen: boolean): void => {
+      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
+    },
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
   },
 } satisfies Story;

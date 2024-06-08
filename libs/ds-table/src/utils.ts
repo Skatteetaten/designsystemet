@@ -1,27 +1,7 @@
-import { useEffect, useState } from 'react';
-
 import { Density, Size } from '@skatteetaten/ds-core-utils';
 import { TFunction } from 'i18next';
 
 import { SortState } from './Table/Table.types';
-
-export const useMediaQuery = (query: string): boolean => {
-  const [matches, setMatches] = useState(false);
-
-  useEffect(() => {
-    const media = window.matchMedia(query);
-    if (media.matches !== matches) {
-      setMatches(media.matches);
-    }
-    const listener = (): void => {
-      setMatches(media.matches);
-    };
-    media.addEventListener('change', listener);
-    return () => media.removeEventListener('change', listener);
-  }, [matches, query]);
-
-  return matches;
-};
 
 export const getIconButtonSize = (
   isDesktop: boolean,

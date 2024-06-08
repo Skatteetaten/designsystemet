@@ -7,7 +7,6 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: StepList,
@@ -30,9 +29,6 @@ const meta = {
         {'Innhold'}
       </StepList.Step>,
     ],
-  },
-  parameters: {
-    version: getVersion('ds-collections'),
   },
 } satisfies Meta<typeof StepList>;
 

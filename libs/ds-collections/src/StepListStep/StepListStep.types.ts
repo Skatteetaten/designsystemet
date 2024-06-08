@@ -3,6 +3,7 @@ import { ReactElement, ReactNode } from 'react';
 import { PanelProps } from '@skatteetaten/ds-content';
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 import { HeadingProps } from '@skatteetaten/ds-typography';
+import { ButtonProps } from '@skatteetaten/ds-buttons';
 
 export const stepVariantArr = [
   'active',
@@ -18,6 +19,8 @@ export interface StepListStepProps extends BaseProps {
   editButtonText?: string;
   /** Overskriver default tekst på next-knapp*/
   nextButtonText?: string;
+  /** props til nextButton. Se Button-komponenten for api-dokumentasjon. */
+  nextButtonProps?: Omit<ButtonProps, 'children' | 'onClick'>;
   /** Om next-knapp skal inneholde Spinner */
   nextButtonHasSpinner?: boolean;
   /** Angir nummer på steget. */

@@ -698,6 +698,85 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/RadioGroup/RadioGroup WithHelpToggleEvent smoke-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
+    <legend id="legendId-:r3e:"
+            class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+    >
+      Type virksomhet
+    </legend>
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+            type="button"
+            aria-describedby="legendId-:r3e:"
+            aria-expanded="false"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r3f:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r3f:">
+          Hjelp
+        </title>
+        <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+        </path>
+      </svg>
+    </button>
+    <div class="Fieldset_contentContainer__fJcfT">
+      <div class="RadioGroup_radioGroupItemContainer__AINZK">
+        <div class="Radio_radio__Fh+3R">
+          <input id="radioInputId-:r3g:"
+                 class="Radio_radioInput__gTlv0"
+                 type="radio"
+                 name="radioInputName-:r3d:"
+                 value="foretak"
+          >
+          <label class="Radio_radioLabel__lJQhF"
+                 for="radioInputId-:r3g:"
+          >
+            Enkeltpersonsforetak
+          </label>
+        </div>
+        <div class="Radio_radio__Fh+3R">
+          <input id="radioInputId-:r3h:"
+                 class="Radio_radioInput__gTlv0"
+                 type="radio"
+                 name="radioInputName-:r3d:"
+                 value="selskap"
+          >
+          <label class="Radio_radioLabel__lJQhF"
+                 for="radioInputId-:r3h:"
+          >
+            Aksjeselskap
+          </label>
+        </div>
+        <div class="Radio_radio__Fh+3R">
+          <input id="radioInputId-:r3i:"
+                 class="Radio_radioInput__gTlv0"
+                 type="radio"
+                 name="radioInputName-:r3d:"
+                 value="annet"
+          >
+          <label class="Radio_radioLabel__lJQhF"
+                 for="radioInputId-:r3i:"
+          >
+            Annet
+          </label>
+        </div>
+      </div>
+      <div id="radioErrorId-:r3c:"
+           aria-live="assertive"
+           aria-atomic="true"
+      >
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
 exports[`Tester/RadioGroup/RadioGroup WithHideLegend play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">

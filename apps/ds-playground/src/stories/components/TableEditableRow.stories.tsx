@@ -1,6 +1,5 @@
 import { JSX } from 'react';
 
-import { positionArr } from '@skatteetaten/ds-core-utils';
 import {
   Table,
   getTableRowExpandButtonPositionDefault,
@@ -8,7 +7,6 @@ import {
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Table.EditableRow,
@@ -19,11 +17,9 @@ const meta = {
     editableContent: { table: { category: category.props } },
     editButtonPosition: {
       control: 'radio',
-      options: [...positionArr],
       table: {
         category: category.props,
         defaultValue: { summary: getTableRowExpandButtonPositionDefault() },
-        type: { summary: positionArr },
       },
     },
     // Aria
@@ -36,9 +32,6 @@ const meta = {
       <Table.DataCell key={'cell1'}>{'cell 1'}</Table.DataCell>,
       <Table.DataCell key={'cell2'}>{'cell 2'}</Table.DataCell>,
     ],
-  },
-  parameters: {
-    version: getVersion('ds-table'),
   },
 } satisfies Meta<typeof Table.EditableRow>;
 

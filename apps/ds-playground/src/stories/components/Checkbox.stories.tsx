@@ -6,7 +6,6 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Checkbox,
@@ -37,9 +36,6 @@ const meta = {
   },
   args: {
     children: 'Jeg har lest og forstått innholdet',
-  },
-  parameters: {
-    version: getVersion('ds-forms'),
   },
 } satisfies Meta<typeof Checkbox>;
 

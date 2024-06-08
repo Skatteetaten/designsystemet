@@ -1,6 +1,5 @@
 import { JSX } from 'react';
 
-import { positionArr } from '@skatteetaten/ds-core-utils';
 import {
   getTableRowExpandButtonPositionDefault,
   Table,
@@ -8,7 +7,6 @@ import {
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Table.Row,
@@ -21,12 +19,12 @@ const meta = {
     expandButtonAriaDescribedby: { table: { category: category.aria } },
     expandButtonTitle: { table: { category: category.props } },
     expandButtonPosition: {
-      options: [...positionArr],
-      control: 'radio',
+      //options: [...positionArr],
+      control: 'inline-radio',
       table: {
         defaultValue: { summary: getTableRowExpandButtonPositionDefault() },
         category: category.props,
-        type: { summary: positionArr },
+        //type: { summary: positionArr },
       },
     },
     expandableContent: {
@@ -48,9 +46,6 @@ const meta = {
       <Table.DataCell key={'cell1'}>{'cell 1'}</Table.DataCell>,
       <Table.DataCell key={'cell2'}>{'cell 2'}</Table.DataCell>,
     ],
-  },
-  parameters: {
-    version: getVersion('ds-table'),
   },
 } satisfies Meta<typeof Table.Row>;
 

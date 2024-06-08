@@ -25,7 +25,6 @@ import farmerIllustration from '../../assets/farmer-illustration.svg';
 import waitIllustration from '../../assets/wait-alert-illustration.png';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const panelColorArr = [
   colorNamesArr[0],
@@ -48,7 +47,6 @@ const meta = {
       options: panelColorArr,
       control: 'inline-radio',
       table: {
-        type: { summary: panelColorArr },
         category: category.props,
         defaultValue: { summary: getPanelColorDefault() },
       },
@@ -70,7 +68,7 @@ const meta = {
       },
     },
     renderIcon: {
-      control: { type: null },
+      control: { disable: true },
       table: { category: category.props },
     },
     spacing: {
@@ -87,7 +85,6 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getPanelSubtitleAsDefault() },
-        type: { summary: subheadingAsArr },
       },
     },
     title: { table: { category: category.props } },
@@ -97,7 +94,6 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getPanelTitleAsDefault() },
-        type: { summary: headingAsArr },
       },
     },
     variant: {
@@ -110,9 +106,6 @@ const meta = {
   },
   args: {
     children: loremIpsum,
-  },
-  parameters: {
-    version: getVersion('ds-content'),
   },
 } satisfies Meta<typeof Panel>;
 

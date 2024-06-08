@@ -599,6 +599,72 @@ exports[`Tester/Select/Select WithHelpText play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Select/Select WithHelpToggleEvent smoke-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:r2i:"
+           class="LabelWithHelp_label__59tP-"
+           for="selectId-:r2h:"
+    >
+      Ledetekst
+    </label>
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+            type="button"
+            aria-describedby="labelId-:r2i:"
+            aria-expanded="false"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r2j:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r2j:">
+          Hjelp
+        </title>
+        <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+        </path>
+      </svg>
+    </button>
+    <div class="Select_selectContainer__CfUZs ">
+      <select id="selectId-:r2h:"
+              class="Select_select__-ENv1"
+              style="color: var(--palette-graphite-50);"
+      >
+        <option value>
+          Velg
+        </option>
+        <option class
+                value="option1"
+        >
+          Test 1
+        </option>
+        <option class
+                value="option2"
+        >
+          Test 2
+        </option>
+      </select>
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+        </path>
+      </svg>
+    </div>
+    <div id="selectErrorId-:r2g:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Tester/Select/Select WithHideLabel play-test 1`] = `
 <div data-test-block="true">
   <div class>

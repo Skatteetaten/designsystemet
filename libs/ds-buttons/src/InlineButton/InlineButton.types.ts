@@ -5,7 +5,7 @@ import {
   ReactElement,
 } from 'react';
 
-import { BaseProps, Position } from '@skatteetaten/ds-core-utils';
+import { BaseProps, ButtonIconPosition } from '@skatteetaten/ds-core-utils';
 
 type RequiredMegaButtonHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'button'>,
@@ -27,7 +27,7 @@ export interface InlineButtonProps
   /** Tekst på knapp. */
   children: string;
   /** Posisjonen til ikonet: 'left', 'right'. */
-  iconPosition?: Position;
+  iconPosition?: ButtonIconPosition;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
   svgPath?: ReactElement;
   /** Om knappen skal inneholde Spinner. */

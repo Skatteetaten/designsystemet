@@ -1,7 +1,6 @@
 import { Blockquote, BlockquoteProps } from '@skatteetaten/ds-typography';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect } from '@storybook/test';
-import { within } from '@storybook/testing-library';
+import { expect, within } from '@storybook/test';
 
 import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
 
@@ -126,7 +125,7 @@ export const WithMarkup = {
   argTypes: {
     children: {
       table: { disable: false },
-      control: { type: null },
+      control: { disable: true },
     },
   },
   args: {

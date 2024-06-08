@@ -23,7 +23,7 @@ import { DatePickerProps } from './DatePicker.types';
 import { getDatePickerDateFormat } from './defaults';
 import {
   formatDateForInput,
-  initFormattedDate,
+  initInputValue,
   parseDateFromInput,
 } from './utils';
 import { DatePickerCalendar } from '../DatePickerCalendar/DatePickerCalendar';
@@ -65,6 +65,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       onBlur,
       onChange,
       onFocus,
+      onHelpToggle,
       onSelectDate,
     },
     ref
@@ -83,16 +84,26 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
     const [showCalendar, setShowCalendar] = useState(false);
 
     const [selectedDate, setSelectedDate] = React.useState(value);
-    const [formattedDate, setFormattedDate] = React.useState(
-      initFormattedDate(value, defaultValue, dateFormat)
+    const [inputValue, setInputValue] = React.useState(
+      initInputValue(value, defaultValue, dateFormat)
     );
+
+    const preselectedDate = selectedDate || initialPickerDate;
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
       const { value } = e.target as HTMLInputElement;
       const date = parseDateFromInput(value);
+
       setSelectedDate(isValid(date) ? date : undefined);
-      setFormattedDate(value);
+      setInputValue(value);
       onChange?.(e);
+    };
+
+    const handleFocus = (e: FocusEvent<HTMLInputElement>): void => {
+      if (showCalendar) {
+        setShowCalendar(false);
+      }
+      onFocus?.(e);
     };
 
     const handleBlur = (e: FocusEvent<HTMLInputElement>): void => {
@@ -100,7 +111,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       const date = parseDateFromInput(value);
       if (isValid(date)) {
         setSelectedDate(date);
-        date && setFormattedDate(formatDateForInput(dateFormat, date));
+        date && setInputValue(formatDateForInput(dateFormat, date));
       }
       onSelectDate?.(date);
       onBlur?.(e);
@@ -108,17 +119,21 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
 
     const handleSelectDate = (date: Date): void => {
       setSelectedDate(date);
-      setFormattedDate(formatDateForInput(dateFormat, date));
+      setInputValue(formatDateForInput(dateFormat, date));
       setShowCalendar(false);
       inputRef.current?.focus();
-
       onSelectDate?.(date);
+    };
+
+    const closeCalendar = (): void => {
+      setShowCalendar(false);
+      calenderButtonRef?.current?.focus();
     };
 
     useEffect(() => {
       if (value) {
         setSelectedDate(value);
-        setFormattedDate(formatDateForInput(dateFormat, value));
+        setInputValue(formatDateForInput(dateFormat, value));
       }
     }, [dateFormat, value]);
 
@@ -128,7 +143,10 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       }
 
       const handleOutside: EventListener = (event): void => {
-        const node = event.target as Node;
+        const composedPath = event.composedPath();
+        const node = (
+          composedPath.length > 0 ? composedPath[0] : event.target
+        ) as Node;
         if (
           !calendarRef?.current?.contains(node) &&
           !calenderButtonRef?.current?.contains(node)
@@ -140,15 +158,13 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
 
       const handleResize: EventListener = (e): void => {
         if (e.type === 'resize') {
-          setShowCalendar(false);
-          calenderButtonRef?.current?.focus();
+          closeCalendar();
         }
       };
 
       const handleEscape = (e: KeyboardEvent): void => {
         if (e.key === 'Escape') {
-          setShowCalendar(false);
-          calenderButtonRef?.current?.focus();
+          closeCalendar();
         }
       };
 
@@ -189,6 +205,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
           helpSvgPath={helpSvgPath}
           helpText={helpText}
           titleHelpSvg={titleHelpSvg}
+          onHelpToggle={onHelpToggle}
         >
           {label}
         </LabelWithHelp>
@@ -213,16 +230,17 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
                 ? formatDateForInput(dateFormat, defaultValue)
                 : undefined
             }
-            value={formattedDate}
+            value={inputValue}
             aria-describedby={hasError ? errorId : undefined}
             aria-invalid={hasError ?? undefined}
             onBlur={handleBlur}
             onChange={handleChange}
-            onFocus={onFocus}
+            onFocus={handleFocus}
           />
           {!readOnly && (
             <button
               ref={calenderButtonRef}
+              type={'button'}
               className={calendarButtonClassName}
               disabled={disabled}
               aria-expanded={showCalendar}
@@ -246,10 +264,11 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
           <div className={styles.calendarContainer}>
             <DatePickerCalendar
               ref={calendarRef}
-              selectedDate={selectedDate || initialPickerDate}
+              selectedDate={preselectedDate}
               minDate={minDate}
               maxDate={maxDate}
               onSelectDate={handleSelectDate}
+              onTabKeyOut={closeCalendar}
             />
           </div>
         )}

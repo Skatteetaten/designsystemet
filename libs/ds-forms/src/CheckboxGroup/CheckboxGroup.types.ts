@@ -37,6 +37,9 @@ interface CheckboxGroupCommonProps
   /** Om obligatorisk gruppe skal markeres med stjerne */
   showRequiredMark?: FieldsetProps['showRequiredMark'];
   /* Hvis innføring av required på Group, se commit 05e7ac89ac3b132d37d18aed55a933573b3beb70 */
+
+  /** Callback som kalles når hjelpetekst vises/skjules */
+  onHelpToggle?: FieldsetProps['onHelpToggle'];
 }
 
 type CheckboxGroupDiscriminatedErrorProps =

@@ -9,7 +9,6 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: ScrollToTopButton,
@@ -23,7 +22,7 @@ const meta = {
     visibilityThreshold: {
       table: {
         category: category.props,
-        defaultValue: { summary: getVisibilityThresholdDefault() },
+        defaultValue: { summary: String(getVisibilityThresholdDefault()) },
       },
     },
     shadowRootNode: {
@@ -37,7 +36,6 @@ const meta = {
     backgrounds: {
       default: 'grey',
     },
-    version: getVersion('ds-buttons'),
   },
 } satisfies Meta<typeof ScrollToTopButton>;
 

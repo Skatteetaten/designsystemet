@@ -38,6 +38,8 @@ const meta = {
     // HTML
     disabled: { table: { disable: true } },
     form: { table: { disable: true } },
+    // Events
+    onHelpToggle: { table: { disable: true } },
   },
 } satisfies Meta<typeof Fieldset>;
 export default meta;
@@ -167,7 +169,7 @@ export const WithShowRequiredMarkAndLegend = {
   argTypes: {
     legend: {
       table: { disable: true },
-      control: { type: null },
+      control: { disable: true },
     },
     showRequiredMark: { table: { disable: false } },
   },
@@ -268,6 +270,22 @@ export const WithLongLegend = {
   parameters: {
     viewport: {
       defaultViewport: '--mobile',
+    },
+  },
+} satisfies Story;
+
+export const WithHelpToggleEvent = {
+  name: 'With onHelpToggle Event',
+  args: {
+    ...defaultArgs,
+    helpText: 'Hjelpetekst',
+    onHelpToggle: (isOpen: boolean): void => {
+      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
+    },
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
     },
   },
 } satisfies Story;

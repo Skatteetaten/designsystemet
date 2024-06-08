@@ -62,6 +62,8 @@ interface SelectCommonProps extends SelectPropsHTMLAttributes, BaseProps {
   variant?: FormSize;
   /** SelectOption-komponenter */
   children: JSX.Element | JSX.Element[];
+  /** Callback som kalles når hjelpetekst vises/skjules */
+  onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
 }
 
 export type SelectDiscriminatedErrorProps =

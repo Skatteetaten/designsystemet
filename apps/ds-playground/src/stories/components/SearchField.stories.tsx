@@ -15,7 +15,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: SearchField,
@@ -29,7 +28,9 @@ const meta = {
     hasSearchButtonIcon: {
       table: {
         category: category.props,
-        defaultValue: { summary: getSearchFieldHasSearchButtonIconDefault() },
+        defaultValue: {
+          summary: getSearchFieldHasSearchButtonIconDefault().toString(),
+        },
       },
     },
     defaultValue: { table: { category: category.props } },
@@ -57,7 +58,6 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getCommonFormVariantDefault() },
-        type: { summary: searchArrSize },
       },
     },
     // HTML
@@ -78,15 +78,13 @@ const meta = {
     onChange: { ...htmlEventDescription },
     onClear: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
+    onHelpToggle: { table: { category: category.event } },
     onResultClick: { ...htmlEventDescription },
     onSearch: { ...htmlEventDescription },
     onSearchClick: { ...htmlEventDescription },
   },
   args: {
     label: 'Søk etter grønnsaker',
-  },
-  parameters: {
-    version: getVersion('ds-forms'),
   },
 } satisfies Meta<typeof SearchField>;
 

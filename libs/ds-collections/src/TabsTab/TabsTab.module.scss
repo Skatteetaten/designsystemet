@@ -1,0 +1,101 @@
+.tab {
+  padding: var(--spacing-s) var(--spacing-m);
+  border: 0;
+  background-color: transparent;
+  color: var(--front-color);
+  cursor: pointer;
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--semantic-line-height-buttons);
+  text-decoration: underline;
+  white-space: nowrap;
+
+  --front-color: var(--semantic-interactive-main);
+
+  &:hover {
+    background-color: var(--semantic-interactive-background);
+  }
+
+  &:focus {
+    margin: -2px 0;
+    background: linear-gradient(
+          var(--palette-graphite-0),
+          var(--palette-graphite-0)
+        )
+        0 100%,
+      linear-gradient(var(--palette-graphite-0), var(--palette-graphite-0)) 0 0,
+      linear-gradient(var(--palette-graphite-0), var(--palette-graphite-0)) 0 0,
+      linear-gradient(var(--palette-graphite-0), var(--palette-graphite-0)) 100%
+        0,
+      linear-gradient(
+          var(--semantic-interactive-main),
+          var(--semantic-interactive-main)
+        )
+        0 calc(100% - 1px),
+      linear-gradient(
+          var(--semantic-interactive-main),
+          var(--semantic-interactive-main)
+        )
+        1px 0,
+      linear-gradient(
+          var(--semantic-interactive-main),
+          var(--semantic-interactive-main)
+        )
+        0 1px,
+      linear-gradient(
+          var(--semantic-interactive-main),
+          var(--semantic-interactive-main)
+        )
+        calc(100% - 1px) 0;
+    background-repeat: no-repeat;
+    background-size: 100% 2px, 2px 100%;
+    outline: var(--semantic-interactive-main) solid 2px;
+    outline-offset: 0;
+
+    &:hover {
+      background-color: var(--semantic-interactive-background);
+    }
+  }
+
+  &_active {
+    background-color: var(--semantic-interactive-main);
+    color: var(--palette-graphite-0);
+    text-decoration: none;
+
+    --front-color: var(--palette-graphite-0);
+
+    &:hover,
+    &:focus,
+    &:hover:focus {
+      background-color: var(--semantic-interactive-main);
+      color: var(--palette-graphite-0);
+
+      --front-color: var(--palette-graphite-0);
+    }
+  }
+
+  svg {
+    margin: 0 var(--spacing-s);
+    fill: var(--front-color);
+    vertical-align: text-bottom;
+  }
+
+  &_compact {
+    padding: var(--spacing-xs) var(--spacing-s);
+    margin: 0;
+    font-size: var(--font-size-s);
+  }
+
+  &_border {
+    border: 1px solid var(--semantic-interactive-main);
+    margin-bottom: -1px;
+
+    &:focus {
+      margin-top: -1px;
+    }
+  }
+
+  &_icon {
+    padding-left: 0;
+  }
+}
