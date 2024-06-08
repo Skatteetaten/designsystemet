@@ -10,6 +10,7 @@ import { List } from '@skatteetaten/ds-typography';
 import { useArgs } from '@storybook/preview-api';
 import { StoryObj, Meta } from '@storybook/react';
 import { fn, expect, fireEvent, waitFor, within } from '@storybook/test';
+
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
@@ -30,7 +31,7 @@ const meta = {
     totalItems: { table: { disable: true } },
     sibling: { table: { disable: true } },
     hidePrevNextButtonTitle: { table: { disable: true } },
-    hidePageSummary: { table: { disable: true }, control: null },
+    hidePageSummary: { table: { disable: true }, control: false },
     ariaLabel: { table: { disable: true } },
     // Event
     onChange: { table: { disable: true } },
@@ -112,7 +113,7 @@ export const HidePrevNextButtonTitle = {
     hidePrevNextButtonTitle: true,
   },
   argTypes: {
-    hidePrevNextButtonTitle: { table: true },
+    hidePrevNextButtonTitle: { table: { disable: false } },
   },
 } satisfies Story;
 
@@ -143,7 +144,7 @@ export const WithListLength: Story = {
     defaultCurrent: 1,
   },
   argTypes: {
-    pageSize: { table: true },
+    pageSize: { table: { disable: false } },
   },
   play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -171,8 +172,8 @@ export const Sibling = {
     sibling: 2,
   },
   argTypes: {
-    sibling: { table: true },
-    defaultCurrent: { table: true },
+    sibling: { table: { disable: false } },
+    defaultCurrent: { table: { disable: false } },
   },
   play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -186,25 +187,6 @@ export const Sibling = {
     });
   },
 } satisfies Story;
-
-// TODO: Utforske mer rundt mulighet for sr-only tester
-/* export const HidePageSummary = {
-  name: 'Hide Page Summary (A5)',
-  args: {
-    ...defaultArgs,
-    defaultCurrent: 1,
-    hidePageSummary: true,
-  },
-  argTypes: {
-    hidePageSummary: { table: true },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const paginationStatus = canvas.getByText('Viser 1–10 av 70');
-    await expect(paginationStatus).toBeInTheDocument();
-    await expect(isInaccessible(paginationStatus)).toBe(true);
-  },
-} satisfies Story; */
 
 export const WithNavigation: Story = {
   name: 'With Navigation (A7, B2 delvis)',
@@ -261,7 +243,7 @@ export const WithPrevNextLabel: Story = {
     hidePrevNextButtonTitle: true,
   },
   argTypes: {
-    sibling: { table: true },
+    sibling: { table: { disable: false } },
   },
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
