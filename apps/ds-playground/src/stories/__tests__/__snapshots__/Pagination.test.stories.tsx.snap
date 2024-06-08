@@ -13,7 +13,7 @@ exports[`Tester/Pagination Defaults smoke-test 1`] = `
     </div>
     <ul class="Pagination_paginationList__+WZ2R ">
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  PaginationList_button__Ph9Zq"
                 type="button"
                 aria-current="true"
         >
@@ -23,7 +23,7 @@ exports[`Tester/Pagination Defaults smoke-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -31,8 +31,8 @@ exports[`Tester/Pagination Defaults smoke-test 1`] = `
           </span>
         </button>
       </li>
-      <li class="Pagination_paginationElement_rightArrow__-WBFr">
-        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 Pagination_paginationButton__Z6pjl"
+      <li class="PaginationList_element_rightArrow__HLDcn">
+        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class>
@@ -67,7 +67,7 @@ exports[`Tester/Pagination HidePrevNextButtonTitle smoke-test 1`] = `
     </div>
     <ul class="Pagination_paginationList__+WZ2R ">
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  PaginationList_button__Ph9Zq"
                 type="button"
                 aria-current="true"
         >
@@ -77,7 +77,7 @@ exports[`Tester/Pagination HidePrevNextButtonTitle smoke-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -86,7 +86,7 @@ exports[`Tester/Pagination HidePrevNextButtonTitle smoke-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -95,7 +95,7 @@ exports[`Tester/Pagination HidePrevNextButtonTitle smoke-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -104,14 +104,14 @@ exports[`Tester/Pagination HidePrevNextButtonTitle smoke-test 1`] = `
         </button>
       </li>
       <li>
-        <p class="Pagination_paginationElipsis__T7Grr"
+        <p class="PaginationList_elipsis__651o9"
            aria-label
         >
           ...
         </p>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -119,7 +119,7 @@ exports[`Tester/Pagination HidePrevNextButtonTitle smoke-test 1`] = `
           </span>
         </button>
       </li>
-      <li class="Pagination_paginationElement_rightArrow__-WBFr">
+      <li class="PaginationList_element_rightArrow__HLDcn">
         <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
                 type="button"
         >
@@ -155,8 +155,8 @@ exports[`Tester/Pagination Sibling play-test 1`] = `
       Viser 21–30 av 70
     </div>
     <ul class="Pagination_paginationList__+WZ2R ">
-      <li class="Pagination_paginationElement_leftArrow__IYuDk">
-        <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  Pagination_paginationButton__Z6pjl"
+      <li class="PaginationList_element_leftArrow__TNkEq">
+        <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
@@ -174,7 +174,7 @@ exports[`Tester/Pagination Sibling play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -183,7 +183,7 @@ exports[`Tester/Pagination Sibling play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -192,7 +192,7 @@ exports[`Tester/Pagination Sibling play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  PaginationList_button__Ph9Zq"
                 type="button"
                 aria-current="true"
         >
@@ -202,7 +202,7 @@ exports[`Tester/Pagination Sibling play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -211,7 +211,7 @@ exports[`Tester/Pagination Sibling play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -220,7 +220,7 @@ exports[`Tester/Pagination Sibling play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -229,7 +229,7 @@ exports[`Tester/Pagination Sibling play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -237,8 +237,8 @@ exports[`Tester/Pagination Sibling play-test 1`] = `
           </span>
         </button>
       </li>
-      <li class="Pagination_paginationElement_rightArrow__-WBFr">
-        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 Pagination_paginationButton__Z6pjl"
+      <li class="PaginationList_element_rightArrow__HLDcn">
+        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class>
@@ -276,7 +276,7 @@ exports[`Tester/Pagination WithAttributes play-test 1`] = `
     </div>
     <ul class="Pagination_paginationList__+WZ2R ">
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  PaginationList_button__Ph9Zq"
                 type="button"
                 aria-current="true"
         >
@@ -286,7 +286,7 @@ exports[`Tester/Pagination WithAttributes play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -295,7 +295,7 @@ exports[`Tester/Pagination WithAttributes play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -304,7 +304,7 @@ exports[`Tester/Pagination WithAttributes play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -313,14 +313,14 @@ exports[`Tester/Pagination WithAttributes play-test 1`] = `
         </button>
       </li>
       <li>
-        <p class="Pagination_paginationElipsis__T7Grr"
+        <p class="PaginationList_elipsis__651o9"
            aria-label
         >
           ...
         </p>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -328,8 +328,105 @@ exports[`Tester/Pagination WithAttributes play-test 1`] = `
           </span>
         </button>
       </li>
-      <li class="Pagination_paginationElement_rightArrow__-WBFr">
-        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 Pagination_paginationButton__Z6pjl"
+      <li class="PaginationList_element_rightArrow__HLDcn">
+        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 PaginationList_button__Ph9Zq"
+                type="button"
+        >
+          <span class>
+            Neste
+          </span>
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m7.1 5.8 6.1 6.1L7.1 18 9 19.9l8-8-8-8-1.9 1.9Z">
+            </path>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`Tester/Pagination WithControlled play-test 1`] = `
+<div data-test-block="true">
+  <nav class="Pagination_pagination__lBs+M"
+       aria-label="Sidevelger"
+  >
+    <div class
+         aria-live="polite"
+         aria-atomic="true"
+    >
+      Viser 6–10 av 30
+    </div>
+    <ul class="Pagination_paginationList__+WZ2R ">
+      <li class="PaginationList_element_leftArrow__TNkEq">
+        <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  PaginationList_button__Ph9Zq"
+                type="button"
+        >
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m16.9 17.98-6.1-6.1 6.1-6.1-1.8-1.9-8 8 8 8 1.8-1.9Z">
+            </path>
+          </svg>
+          <span class>
+            Forrige
+          </span>
+        </button>
+      </li>
+      <li>
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            1
+          </span>
+        </button>
+      </li>
+      <li>
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  PaginationList_button__Ph9Zq"
+                type="button"
+                aria-current="true"
+        >
+          <span class="Button_buttonText__JxyB+">
+            2
+          </span>
+        </button>
+      </li>
+      <li>
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            3
+          </span>
+        </button>
+      </li>
+      <li>
+        <p class="PaginationList_elipsis__651o9"
+           aria-label
+        >
+          ...
+        </p>
+      </li>
+      <li>
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            6
+          </span>
+        </button>
+      </li>
+      <li class="PaginationList_element_rightArrow__HLDcn">
+        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class>
@@ -364,7 +461,7 @@ exports[`Tester/Pagination WithCustomAriaLabel play-test 1`] = `
     </div>
     <ul class="Pagination_paginationList__+WZ2R ">
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  PaginationList_button__Ph9Zq"
                 type="button"
                 aria-current="true"
         >
@@ -374,7 +471,7 @@ exports[`Tester/Pagination WithCustomAriaLabel play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -383,7 +480,7 @@ exports[`Tester/Pagination WithCustomAriaLabel play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -392,7 +489,7 @@ exports[`Tester/Pagination WithCustomAriaLabel play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -401,14 +498,14 @@ exports[`Tester/Pagination WithCustomAriaLabel play-test 1`] = `
         </button>
       </li>
       <li>
-        <p class="Pagination_paginationElipsis__T7Grr"
+        <p class="PaginationList_elipsis__651o9"
            aria-label
         >
           ...
         </p>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -416,8 +513,8 @@ exports[`Tester/Pagination WithCustomAriaLabel play-test 1`] = `
           </span>
         </button>
       </li>
-      <li class="Pagination_paginationElement_rightArrow__-WBFr">
-        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 Pagination_paginationButton__Z6pjl"
+      <li class="PaginationList_element_rightArrow__HLDcn">
+        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class>
@@ -451,8 +548,8 @@ exports[`Tester/Pagination WithListLength play-test 1`] = `
       Viser 5–8 av 70
     </div>
     <ul class="Pagination_paginationList__+WZ2R ">
-      <li class="Pagination_paginationElement_leftArrow__IYuDk">
-        <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  Pagination_paginationButton__Z6pjl"
+      <li class="PaginationList_element_leftArrow__TNkEq">
+        <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
@@ -470,7 +567,7 @@ exports[`Tester/Pagination WithListLength play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -479,7 +576,7 @@ exports[`Tester/Pagination WithListLength play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  PaginationList_button__Ph9Zq"
                 type="button"
                 aria-current="true"
         >
@@ -489,7 +586,7 @@ exports[`Tester/Pagination WithListLength play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -498,7 +595,7 @@ exports[`Tester/Pagination WithListLength play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -507,7 +604,7 @@ exports[`Tester/Pagination WithListLength play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -516,14 +613,14 @@ exports[`Tester/Pagination WithListLength play-test 1`] = `
         </button>
       </li>
       <li>
-        <p class="Pagination_paginationElipsis__T7Grr"
+        <p class="PaginationList_elipsis__651o9"
            aria-label
         >
           ...
         </p>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -531,8 +628,8 @@ exports[`Tester/Pagination WithListLength play-test 1`] = `
           </span>
         </button>
       </li>
-      <li class="Pagination_paginationElement_rightArrow__-WBFr">
-        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 Pagination_paginationButton__Z6pjl"
+      <li class="PaginationList_element_rightArrow__HLDcn">
+        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class>
@@ -584,7 +681,7 @@ exports[`Tester/Pagination WithListLimit smoke-test 1`] = `
     </div>
     <ul class="Pagination_paginationList__+WZ2R ">
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  PaginationList_button__Ph9Zq"
                 type="button"
                 aria-current="true"
         >
@@ -594,7 +691,7 @@ exports[`Tester/Pagination WithListLimit smoke-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -603,7 +700,7 @@ exports[`Tester/Pagination WithListLimit smoke-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -612,7 +709,7 @@ exports[`Tester/Pagination WithListLimit smoke-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -621,14 +718,14 @@ exports[`Tester/Pagination WithListLimit smoke-test 1`] = `
         </button>
       </li>
       <li>
-        <p class="Pagination_paginationElipsis__T7Grr"
+        <p class="PaginationList_elipsis__651o9"
            aria-label
         >
           ...
         </p>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -636,8 +733,8 @@ exports[`Tester/Pagination WithListLimit smoke-test 1`] = `
           </span>
         </button>
       </li>
-      <li class="Pagination_paginationElement_rightArrow__-WBFr">
-        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 Pagination_paginationButton__Z6pjl"
+      <li class="PaginationList_element_rightArrow__HLDcn">
+        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class>
@@ -671,8 +768,8 @@ exports[`Tester/Pagination WithNavigation play-test 1`] = `
       Viser 61–70 av 70
     </div>
     <ul class="Pagination_paginationList__+WZ2R ">
-      <li class="Pagination_paginationElement_leftArrow__IYuDk">
-        <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  Pagination_paginationButton__Z6pjl"
+      <li class="PaginationList_element_leftArrow__TNkEq">
+        <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
@@ -690,7 +787,7 @@ exports[`Tester/Pagination WithNavigation play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -699,14 +796,14 @@ exports[`Tester/Pagination WithNavigation play-test 1`] = `
         </button>
       </li>
       <li>
-        <p class="Pagination_paginationElipsis__T7Grr"
+        <p class="PaginationList_elipsis__651o9"
            aria-label
         >
           ...
         </p>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -715,7 +812,7 @@ exports[`Tester/Pagination WithNavigation play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -724,7 +821,7 @@ exports[`Tester/Pagination WithNavigation play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -733,7 +830,7 @@ exports[`Tester/Pagination WithNavigation play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  PaginationList_button__Ph9Zq"
                 type="button"
                 aria-current="true"
         >
@@ -760,7 +857,7 @@ exports[`Tester/Pagination WithPageSummary play-test 1`] = `
     </div>
     <ul class="Pagination_paginationList__+WZ2R ">
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  PaginationList_button__Ph9Zq"
                 type="button"
                 aria-current="true"
         >
@@ -770,7 +867,7 @@ exports[`Tester/Pagination WithPageSummary play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -779,7 +876,7 @@ exports[`Tester/Pagination WithPageSummary play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -788,7 +885,7 @@ exports[`Tester/Pagination WithPageSummary play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -797,14 +894,14 @@ exports[`Tester/Pagination WithPageSummary play-test 1`] = `
         </button>
       </li>
       <li>
-        <p class="Pagination_paginationElipsis__T7Grr"
+        <p class="PaginationList_elipsis__651o9"
            aria-label
         >
           ...
         </p>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -812,8 +909,8 @@ exports[`Tester/Pagination WithPageSummary play-test 1`] = `
           </span>
         </button>
       </li>
-      <li class="Pagination_paginationElement_rightArrow__-WBFr">
-        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 Pagination_paginationButton__Z6pjl"
+      <li class="PaginationList_element_rightArrow__HLDcn">
+        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class>
@@ -847,7 +944,7 @@ exports[`Tester/Pagination WithPrevNextLabel play-test 1`] = `
       Viser 11–20 av 70
     </div>
     <ul class="Pagination_paginationList__+WZ2R ">
-      <li class="Pagination_paginationElement_leftArrow__IYuDk">
+      <li class="PaginationList_element_leftArrow__TNkEq">
         <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
                 type="button"
         >
@@ -867,7 +964,7 @@ exports[`Tester/Pagination WithPrevNextLabel play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -876,7 +973,7 @@ exports[`Tester/Pagination WithPrevNextLabel play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  PaginationList_button__Ph9Zq"
                 type="button"
                 aria-current="true"
         >
@@ -886,7 +983,7 @@ exports[`Tester/Pagination WithPrevNextLabel play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -895,7 +992,7 @@ exports[`Tester/Pagination WithPrevNextLabel play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -904,7 +1001,7 @@ exports[`Tester/Pagination WithPrevNextLabel play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -913,7 +1010,7 @@ exports[`Tester/Pagination WithPrevNextLabel play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -922,7 +1019,7 @@ exports[`Tester/Pagination WithPrevNextLabel play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -930,7 +1027,7 @@ exports[`Tester/Pagination WithPrevNextLabel play-test 1`] = `
           </span>
         </button>
       </li>
-      <li class="Pagination_paginationElement_rightArrow__-WBFr">
+      <li class="PaginationList_element_rightArrow__HLDcn">
         <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
                 type="button"
         >
@@ -968,7 +1065,7 @@ exports[`Tester/Pagination WithRef smoke-test 1`] = `
     </div>
     <ul class="Pagination_paginationList__+WZ2R ">
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  PaginationList_button__Ph9Zq"
                 type="button"
                 aria-current="true"
         >
@@ -978,7 +1075,7 @@ exports[`Tester/Pagination WithRef smoke-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -987,7 +1084,7 @@ exports[`Tester/Pagination WithRef smoke-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -996,7 +1093,7 @@ exports[`Tester/Pagination WithRef smoke-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -1005,14 +1102,14 @@ exports[`Tester/Pagination WithRef smoke-test 1`] = `
         </button>
       </li>
       <li>
-        <p class="Pagination_paginationElipsis__T7Grr"
+        <p class="PaginationList_elipsis__651o9"
            aria-label
         >
           ...
         </p>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -1020,8 +1117,8 @@ exports[`Tester/Pagination WithRef smoke-test 1`] = `
           </span>
         </button>
       </li>
-      <li class="Pagination_paginationElement_rightArrow__-WBFr">
-        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 Pagination_paginationButton__Z6pjl"
+      <li class="PaginationList_element_rightArrow__HLDcn">
+        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class>
@@ -1055,8 +1152,8 @@ exports[`Tester/Pagination WithTextNextPref play-test 1`] = `
       Viser 11–20 av 70
     </div>
     <ul class="Pagination_paginationList__+WZ2R ">
-      <li class="Pagination_paginationElement_leftArrow__IYuDk">
-        <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  Pagination_paginationButton__Z6pjl"
+      <li class="PaginationList_element_leftArrow__TNkEq">
+        <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
@@ -1074,7 +1171,7 @@ exports[`Tester/Pagination WithTextNextPref play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -1083,7 +1180,7 @@ exports[`Tester/Pagination WithTextNextPref play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  PaginationList_button__Ph9Zq"
                 type="button"
                 aria-current="true"
         >
@@ -1093,7 +1190,7 @@ exports[`Tester/Pagination WithTextNextPref play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -1102,7 +1199,7 @@ exports[`Tester/Pagination WithTextNextPref play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -1111,7 +1208,7 @@ exports[`Tester/Pagination WithTextNextPref play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -1120,7 +1217,7 @@ exports[`Tester/Pagination WithTextNextPref play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -1129,7 +1226,7 @@ exports[`Tester/Pagination WithTextNextPref play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  Pagination_paginationButton__Z6pjl"
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class="Button_buttonText__JxyB+">
@@ -1137,8 +1234,8 @@ exports[`Tester/Pagination WithTextNextPref play-test 1`] = `
           </span>
         </button>
       </li>
-      <li class="Pagination_paginationElement_rightArrow__-WBFr">
-        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 Pagination_paginationButton__Z6pjl"
+      <li class="PaginationList_element_rightArrow__HLDcn">
+        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 PaginationList_button__Ph9Zq"
                 type="button"
         >
           <span class>
