@@ -89,7 +89,6 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
       >
         <div className={pageSummary} aria-live={'polite'} aria-atomic={'true'}>
           {showPaginationSummary}
-          {`currentPage: ${currentPage} internalPage: ${internalPage}`}
         </div>
 
         <ul className={listCss}>
