@@ -1,4 +1,4 @@
-import { forwardRef, useState, useRef } from 'react';
+import { forwardRef, useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -52,7 +52,11 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
       }
       onChange?.(page);
     };
-
+    useEffect(() => {
+      if (currentPage > 0 && currentPage <= lastPage) {
+        setInternalPage(currentPage);
+      }
+    }, [currentPage, lastPage]);
     const rangeTo =
       internalPage * pageSize > totalItems
         ? totalItems
@@ -85,6 +89,7 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
       >
         <div className={pageSummary} aria-live={'polite'} aria-atomic={'true'}>
           {showPaginationSummary}
+          {`currentPage: ${currentPage} internalPage: ${internalPage}`}
         </div>
 
         <ul className={listCss}>
