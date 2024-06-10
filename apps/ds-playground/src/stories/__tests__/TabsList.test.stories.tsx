@@ -6,8 +6,6 @@ const meta = {
   title: 'Tester/Tabs/List',
   argTypes: {
     // Baseprops
-    ref: { table: { disable: true } },
-    key: { table: { disable: true } },
     className: { table: { disable: true } },
     id: { table: { disable: true } },
     lang: { table: { disable: true } },
@@ -15,11 +13,11 @@ const meta = {
     // Props
     children: { table: { disable: false } },
   },
-} satisfies Meta<typeof Tabs.Panel>;
+} satisfies Meta<typeof Tabs.List>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const TemplateTabsList: StoryFn<typeof Tabs> = (args) => {
+const TemplateTabsList: StoryFn<typeof Tabs.List> = (args) => {
   return (
     <Tabs defaultValue={'tab1'}>
       <Tabs.List {...args}>
