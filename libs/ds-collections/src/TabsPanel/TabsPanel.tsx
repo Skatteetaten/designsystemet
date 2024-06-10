@@ -3,6 +3,7 @@ import { forwardRef, useContext } from 'react';
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { TabsPanelProps } from './TabsPanel.types';
+import { valueRegex } from '../Tabs/utils';
 import { TabsContext } from '../TabsContext/TabsContext';
 
 import styles from './TabsPanel.module.scss';
@@ -23,6 +24,13 @@ export const TabsPanel = forwardRef<HTMLDivElement, TabsPanelProps>(
     const panelClassName = `${styles.panel} ${
       activeTab === value ? styles.panel_active : ''
     }`;
+
+    if (!valueRegex.test(value)) {
+      throw new Error(
+        'Value kan kun inneholde tegn som er gyldig i en html id.'
+      );
+    }
+
     return (
       <div
         ref={ref}

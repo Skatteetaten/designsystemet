@@ -17,40 +17,12 @@
   }
 
   &:focus {
-    margin: -2px 0;
-    background: linear-gradient(
-          var(--palette-graphite-0),
-          var(--palette-graphite-0)
-        )
-        0 100%,
-      linear-gradient(var(--palette-graphite-0), var(--palette-graphite-0)) 0 0,
-      linear-gradient(var(--palette-graphite-0), var(--palette-graphite-0)) 0 0,
-      linear-gradient(var(--palette-graphite-0), var(--palette-graphite-0)) 100%
-        0,
-      linear-gradient(
-          var(--semantic-interactive-main),
-          var(--semantic-interactive-main)
-        )
-        0 calc(100% - 1px),
-      linear-gradient(
-          var(--semantic-interactive-main),
-          var(--semantic-interactive-main)
-        )
-        1px 0,
-      linear-gradient(
-          var(--semantic-interactive-main),
-          var(--semantic-interactive-main)
-        )
-        0 1px,
-      linear-gradient(
-          var(--semantic-interactive-main),
-          var(--semantic-interactive-main)
-        )
-        calc(100% - 1px) 0;
     background-repeat: no-repeat;
     background-size: 100% 2px, 2px 100%;
+    box-shadow: 0 0 0 2px var(--palette-graphite-0),
+      0 0 0 1px inset var(--semantic-interactive-main);
     outline: var(--semantic-interactive-main) solid 2px;
-    outline-offset: 0;
+    outline-offset: 2px;
 
     &:hover {
       background-color: var(--semantic-interactive-background);
@@ -88,10 +60,11 @@
 
   &_border {
     border: 1px solid var(--semantic-interactive-main);
+    margin-top: -1px;
     margin-bottom: -1px;
 
     &:focus {
-      margin-top: -1px;
+      box-shadow: 0 0 0 2px var(--palette-graphite-0);
     }
   }
 

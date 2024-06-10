@@ -24,7 +24,7 @@ const TabRenderComponent = ({
       if (Array.isArray(children)) {
         return children.map((child, index) => (
           <TabsContext.Provider
-            key={context.value}
+            key={`${context.value}-${index}`}
             value={{ ...contextValue, index }}
           >
             {child}

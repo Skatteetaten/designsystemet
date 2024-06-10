@@ -30,6 +30,7 @@ const meta = {
     onNext: { table: { disable: true, category: category.props } },
     editButtonText: { table: { disable: true, category: category.props } },
     nextButtonText: { table: { disable: true, category: category.props } },
+    nextButtonProps: { table: { disable: true, category: category.props } },
     nextButtonHasSpinner: {
       table: { disable: true, category: category.props },
     },
@@ -216,6 +217,6 @@ export const NextButtonWithDisabled = {
     onNext: (): void => console.log('next'),
   },
   argTypes: {
-    nextButtonHasSpinner: { table: { disable: false } },
+    nextButtonProps: { table: { disable: false } },
   },
 } satisfies Story;
