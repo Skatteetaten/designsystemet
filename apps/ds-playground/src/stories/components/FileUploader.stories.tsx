@@ -3,6 +3,7 @@ import { useState, JSX } from 'react';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Checkbox, FileUploader, UploadedFile } from '@skatteetaten/ds-forms';
 import { StoryObj, Meta } from '@storybook/react';
+
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
