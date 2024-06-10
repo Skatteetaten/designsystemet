@@ -56,32 +56,4 @@
       margin-left: var(--spacing-xs);
     }
   }
-
-  &Button {
-    min-width: 32px;
-    min-height: 32px;
-    align-items: center;
-    padding: 0 8px;
-    border: 0;
-    line-height: 2rem;
-    transition: none;
-
-    &:active {
-      text-decoration: none;
-
-      &::before {
-        border-color: var(--palette-azure-100);
-        inset: -2px;
-      }
-    }
-
-    &:focus {
-      outline: 2px solid var(--palette-azure-70);
-      outline-offset: 2px;
-
-      &::before {
-        border: 0;
-      }
-    }
-  }
 }

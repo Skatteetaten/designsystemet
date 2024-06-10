@@ -14,9 +14,6 @@ import { PaginationList } from '../PaginationList/PaginationList';
 
 import styles from './Pagination.module.scss';
 
-// TODO isvalid hvis new page > total allowed pages
-// TODO hvorfor skilles det ikke på bruken av hidePrevNextButtonTitle i storyen docs
-
 export const Pagination = forwardRef<HTMLElement, PaginationProps>(
   (
     {

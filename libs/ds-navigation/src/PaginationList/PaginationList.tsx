@@ -166,6 +166,4 @@ export const PaginationList = ({
   );
 };
 
-if (process.env['NODE_ENV'] !== 'production') {
-  PaginationList.displayName = 'PaginationList';
-}
+PaginationList.displayName = 'PaginationList';

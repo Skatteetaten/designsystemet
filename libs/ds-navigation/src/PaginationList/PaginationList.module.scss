@@ -4,7 +4,7 @@
   min-width: 32px;
   min-height: 32px;
   align-items: center;
-  padding: 0 8px;
+  padding: 0 var(--spacing-s);
   border: 0;
   line-height: 2rem;
   transition: none;
@@ -29,7 +29,7 @@
 }
 
 .elipsis {
-  padding: 0 8px;
+  padding: 0 var(--spacing-s);
   line-height: 2rem;
   margin-block: 0;
 }
