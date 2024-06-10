@@ -23,7 +23,6 @@ const meta = {
   argTypes: {
     // Props
     classNames: { table: { category: category.props } },
-    defaultValue: { table: { category: category.props }, control: 'date' },
     value: { table: { category: category.props }, control: 'date' },
     description: { table: { category: category.props } },
     dateFormat: {
@@ -99,9 +98,6 @@ export const Preview: Story = {
     /* Fordi date control konverterer datoen til et UNIX-tidsstempel når verdien endres,
      må den konverteres til et date objekt. Dette er en kjent begrensing som vil bli fikset
     en gang i fremtiden står det i Storybook sin dokumentasjon over Controls. */
-
-    // Preview bør alltid være controlled, siden defaultValue må settes når komponenten rendres første gang.
-    _args.defaultValue = undefined;
 
     // value settes til null dersom undefined for å unngå advarsel om controlled/uncontrolled.
     _args.value = !_args.value ? null : new Date(_args.value);

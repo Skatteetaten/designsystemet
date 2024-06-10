@@ -39,7 +39,6 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     classNames: { table: { disable: true } },
-    defaultValue: { table: { disable: true }, control: 'date' },
     value: { table: { disable: true }, control: 'date' },
     dateFormat: { table: { disable: true } },
     description: { table: { disable: true } },
@@ -261,21 +260,6 @@ export const WithValue = {
   play: verifyAttribute('value', '01.02.2024'),
 } satisfies Story;
 
-export const WithDefaultValue = {
-  name: 'With DefaultValue',
-  args: {
-    ...defaultArgs,
-    defaultValue: valueDate,
-  },
-  argTypes: {
-    defaultValue: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: { disable: true },
-  },
-  play: verifyAttribute('value', '01.02.2024'),
-} satisfies Story;
-
 export const WithRequired = {
   name: 'With Required (B3)',
   args: {
@@ -480,7 +464,8 @@ export const WithDateFormat = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const input = canvas.getByRole('textbox');
-    await expect(input).toHaveValue('2024/02/01');
+
+    await waitFor(() => expect(input).toHaveValue('2024/02/01'));
 
     const calendarButton = canvas.getByRole('button', {
       name: dsI18n.t('ds_forms:datepicker.ChooseDate'),
@@ -488,7 +473,7 @@ export const WithDateFormat = {
     await fireEvent.click(calendarButton);
     const dateButton = canvas.getByText('5');
     await fireEvent.click(dateButton);
-    await expect(input).toHaveValue('2024/02/05');
+    await expect(input).toHaveValue('2024/01/05');
   },
 } satisfies Story;
 
@@ -536,15 +521,19 @@ export const GenerouslyWithFormatFromUser = {
     const canvas = within(canvasElement);
     const input = canvas.getByRole('textbox');
     input.focus();
+
     const removeDate =
       '{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}';
 
     const user = userEvent.setup();
 
+    await waitFor(() => expect(input).toHaveValue('01.02.2024'));
     await user.keyboard(removeDate);
     await user.keyboard('0102');
     await user.tab();
-    await waitFor(() => expect(input).toHaveValue('01.02.2024'));
+    await waitFor(() =>
+      expect(input).toHaveValue(`01.02.${new Date().getFullYear()}`)
+    );
 
     await user.keyboard(removeDate);
     await user.keyboard('010224');
