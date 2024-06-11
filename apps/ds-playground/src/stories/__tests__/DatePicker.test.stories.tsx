@@ -781,3 +781,37 @@ export const WithHelpToggleEvent = {
     },
   },
 } satisfies Story;
+
+export const HideCalendarOnResizeWidth = {
+  name: 'Hide Calendar On Window Resize (Kalender A4)',
+  args: {
+    ...defaultArgs,
+    value: valueDate,
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+    HTMLSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const calendarButton = canvas.getByRole('button');
+    await fireEvent.click(calendarButton);
+    const calendarTable = canvas.getByRole('table');
+    await expect(calendarTable).toBeInTheDocument();
+
+    // kalender lukkes _ikke_ dersom vinduet blir bredere
+    window.innerWidth = window.innerWidth + 100;
+    await fireEvent.resize(window);
+    await expect(calendarTable).toBeInTheDocument();
+
+    // kalender lukkes _ikke_ dersom vinduet blir lavere
+    window.innerHeight = window.innerHeight - 100;
+    await fireEvent.resize(window);
+    await expect(calendarTable).toBeInTheDocument();
+
+    // kalender lukkes dersom vinduet blir smalere
+    window.innerWidth = window.innerWidth - 100;
+    await fireEvent.resize(window);
+    await expect(calendarTable).not.toBeInTheDocument();
+  },
+} satisfies Story;
