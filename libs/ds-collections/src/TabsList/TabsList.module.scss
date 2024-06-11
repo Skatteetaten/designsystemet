@@ -2,14 +2,15 @@
 
 .tabList {
   display: flex;
-
-  @media (min-width: $breakpoint-xs) {
-    border-bottom: 1px solid var(--semantic-interactive-main);
-  }
-
+  border-bottom: 1px solid var(--semantic-interactive-main);
   gap: var(--spacing-s);
 
   &_multiline {
     flex-wrap: wrap;
+    border-bottom: none;
+
+    @media (min-width: $breakpoint-xs) {
+      border-bottom: 1px solid var(--semantic-interactive-main);
+    }
   }
 }

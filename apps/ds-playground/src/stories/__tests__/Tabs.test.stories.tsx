@@ -32,6 +32,7 @@ type Story = StoryObj<typeof meta>;
 
 const defaultArgs: TabsProps = {
   onChange: fn(),
+  defaultValue: 'tab1',
 };
 
 const TemplateTabs: StoryFn<typeof Tabs> = (args) => {
@@ -59,7 +60,6 @@ export const Defaults = {
   render: TemplateTabs,
   args: {
     ...defaultArgs,
-    defaultValue: 'tab1',
   },
   argTypes: {
     defaultValue: { table: { disable: false } },
@@ -80,7 +80,6 @@ export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
     ...defaultArgs,
-    defaultValue: 'tab1',
     ref: (instance: HTMLDivElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -129,7 +128,6 @@ export const WithVariantCompact = {
   render: TemplateTabs,
   args: {
     ...defaultArgs,
-    defaultValue: 'tab1',
     variant: 'compact',
   },
   argTypes: {
@@ -165,8 +163,8 @@ export const WithValue = {
   name: 'With Value',
   args: {
     ...defaultArgs,
+    defaultValue: undefined,
     value: 'tab2',
-    onChange: fn(),
   },
   render: (args): JSX.Element => {
     const [{ value }, updateArgs] = useArgs();
@@ -208,7 +206,6 @@ export const WithAriaRolesTabindex = {
   render: TemplateTabs,
   args: {
     ...defaultArgs,
-    defaultValue: 'tab1',
     onChange: fn(),
   },
   parameters: {
@@ -244,7 +241,6 @@ export const WithMultiline = {
   args: {
     ...defaultArgs,
     isMultiline: true,
-    defaultValue: 'tab1',
   },
   argTypes: {
     isMultiline: { table: { disable: false } },
@@ -280,7 +276,6 @@ export const WithTabClick = {
   render: TemplateTabs,
   args: {
     ...defaultArgs,
-    defaultValue: 'tab1',
     onChange: fn(),
   },
   parameters: {

@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { Tabs, getTabsVariantDefault } from '@skatteetaten/ds-collections';
 import {
   AccountMultipleSVGpath,

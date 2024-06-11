@@ -14,7 +14,28 @@ import { TabsTab } from '../TabsTab/TabsTab';
 
 export const tabsVariantArr = ['standard', 'compact'] as const;
 export type TabsVariant = (typeof tabsVariantArr)[number];
-export interface TabsProps extends BaseProps {
+
+type TabsDiscriminatedValueProps =
+  | {
+      /** Verdi som bestemmer hvilke tab-element som skal ha aktiv-status når komponenten er controlled */
+      value: string;
+      /**
+       * Verdi som bestemmer hvilke tab-element som skal ha aktiv-status når komponenten er uncontrolled.
+       * value må oppdateres via onChange-eventet
+       */
+      defaultValue?: string;
+    }
+  | {
+      /** Verdi som bestemmer hvilke tab-element som skal ha aktiv-status når komponenten er controlled */
+      value?: string;
+      /**
+       * Verdi som bestemmer hvilke tab-element som skal ha aktiv-status når komponenten er uncontrolled.
+       * value må oppdateres via onChange-eventet
+       */
+      defaultValue: string;
+    };
+
+interface TabsCommonProps extends BaseProps {
   /** Verdi som bestemmer hvilke tab-element som skal ha aktiv-status når komponenten er controlled */
   value?: string;
   /**
@@ -33,6 +54,8 @@ export interface TabsProps extends BaseProps {
   /** Tabs.List og Tabs.Panel */
   children?: ReactNode;
 }
+
+export type TabsProps = TabsCommonProps & TabsDiscriminatedValueProps;
 
 export interface TabsComponent
   extends ForwardRefExoticComponent<TabsProps & RefAttributes<HTMLDivElement>> {
