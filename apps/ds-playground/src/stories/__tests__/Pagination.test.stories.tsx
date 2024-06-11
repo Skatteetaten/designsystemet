@@ -320,7 +320,7 @@ export const WithListLimit: Story = {
     sibling: getDefaultSibling(),
     currentPage: 1,
   },
-  render: function Render(args): JSX.Element {
+  render: (args): JSX.Element => {
     const [{ currentPage }, updateArgs] = useArgs();
     const pageSize = 5;
     const onChange = (page: number): void => {

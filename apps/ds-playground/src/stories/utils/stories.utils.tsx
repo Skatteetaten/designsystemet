@@ -6,10 +6,6 @@ export const exampleParameters = {
       transform: (source: string): string => {
         return source
           .replace('render: (_args): JSX.Element', 'const Examples = ()')
-          .replace(
-            'render: function Render(_args): JSX.Element ',
-            'const Examples = () => '
-          )
           .replace('satisfies Story', '');
       },
     },
