@@ -243,7 +243,7 @@ export const WithPrevNextLabel: Story = {
     hidePrevNextButtonTitle: true,
   },
   argTypes: {
-    sibling: { table: { disable: false } },
+    hidePrevNextButtonTitle: { table: { disable: false } },
   },
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -354,6 +354,9 @@ export const WithCustomAriaLabel: Story = {
     ariaLabel: 'Egen tekst på nav-elementets aria-label',
     defaultCurrent: 1,
   },
+  argTypes: {
+    ariaLabel: { table: { disable: false } },
+  },
   parameters: {
     imageSnapshot: { disable: true },
   },
@@ -390,6 +393,9 @@ export const WithHiddenPageSummary: Story = {
     ...defaultArgs,
     hidePageSummary: true,
     defaultCurrent: 1,
+  },
+  argTypes: {
+    hidePageSummary: { table: { disable: false } },
   },
   play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);
