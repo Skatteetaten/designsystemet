@@ -1,4 +1,6 @@
-/* automatisk genererte types */
-export const radioGroupItemContainer: string;
-export const radioGroupItemContainer_horizontal: string;
-export const errorMessage: string;
+declare const classNames: {
+  readonly radioGroupItemContainer: 'radioGroupItemContainer';
+  readonly radioGroupItemContainer_horizontal: 'radioGroupItemContainer_horizontal';
+  readonly errorMessage: 'errorMessage';
+};
+export = classNames;

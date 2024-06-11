@@ -1,14 +1,16 @@
-/* automatisk genererte types */
-export const container: string;
-export const icon: string;
-export const dropZone: string;
-export const dropZone_error: string;
-export const dropZone_dragging: string;
-export const fileInfo: string;
-export const srOnly: string;
-export const fileFormatList: string;
-export const fileList: string;
-export const removePointerEvents: string;
-export const alert: string;
-export const spinner: string;
-export const innerLabel: string;
+declare const classNames: {
+  readonly container: 'container';
+  readonly icon: 'icon';
+  readonly dropZone: 'dropZone';
+  readonly dropZone_error: 'dropZone_error';
+  readonly dropZone_dragging: 'dropZone_dragging';
+  readonly fileInfo: 'fileInfo';
+  readonly srOnly: 'srOnly';
+  readonly fileFormatList: 'fileFormatList';
+  readonly fileList: 'fileList';
+  readonly removePointerEvents: 'removePointerEvents';
+  readonly alert: 'alert';
+  readonly spinner: 'spinner';
+  readonly innerLabel: 'innerLabel';
+};
+export = classNames;

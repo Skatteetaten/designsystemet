@@ -43,5 +43,6 @@
       "module": "commonjs",
       "esModuleInterop": true
     }
-  }
+  },
+  "files": ["types/svg.d.ts"]
 }

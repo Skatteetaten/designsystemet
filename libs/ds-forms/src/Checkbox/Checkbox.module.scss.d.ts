@@ -1,13 +1,15 @@
-/* automatisk genererte types */
-export const container: string;
-export const containerSpacingBottom: string;
-export const input: string;
-export const label: string;
-export const label_error: string;
-export const labelCheckbox: string;
-export const labelCheckboxCheck: string;
-export const labelCheckbox_error: string;
-export const labelContent: string;
-export const labelContent_required: string;
-export const labelContentDescription: string;
-export const srOnly: string;
+declare const classNames: {
+  readonly container: 'container';
+  readonly containerSpacingBottom: 'containerSpacingBottom';
+  readonly input: 'input';
+  readonly label: 'label';
+  readonly label_error: 'label_error';
+  readonly labelCheckbox: 'labelCheckbox';
+  readonly labelCheckboxCheck: 'labelCheckboxCheck';
+  readonly labelCheckbox_error: 'labelCheckbox_error';
+  readonly labelContent: 'labelContent';
+  readonly labelContent_required: 'labelContent_required';
+  readonly labelContentDescription: 'labelContentDescription';
+  readonly srOnly: 'srOnly';
+};
+export = classNames;

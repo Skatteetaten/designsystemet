@@ -1,12 +1,14 @@
-/* automatisk genererte types */
-export const separator: string;
-export const footer: string;
-export const footerContainer: string;
-export const columns: string;
-export const columnsThree: string;
-export const columnsTwo: string;
-export const logoContainer: string;
-export const skatteetatenLogo: string;
-export const skatteetatenLogo_en: string;
-export const linkContainer: string;
-export const linkList: string;
+declare const classNames: {
+  readonly separator: 'separator';
+  readonly footer: 'footer';
+  readonly columnsThree: 'columnsThree';
+  readonly columnsTwo: 'columnsTwo';
+  readonly footerContainer: 'footerContainer';
+  readonly columns: 'columns';
+  readonly logoContainer: 'logoContainer';
+  readonly skatteetatenLogo: 'skatteetatenLogo';
+  readonly skatteetatenLogo_en: 'skatteetatenLogo_en';
+  readonly linkContainer: 'linkContainer';
+  readonly linkList: 'linkList';
+};
+export = classNames;

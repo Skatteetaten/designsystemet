@@ -1,2 +1,4 @@
-/* automatisk genererte types */
-export const errorMessage: string;
+declare const classNames: {
+  readonly errorMessage: 'errorMessage';
+};
+export = classNames;

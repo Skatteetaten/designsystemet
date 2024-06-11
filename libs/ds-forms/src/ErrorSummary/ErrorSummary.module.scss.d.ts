@@ -1,7 +1,9 @@
-/* automatisk genererte types */
-export const errorSummary: string;
-export const iconContainer: string;
-export const icon: string;
-export const summaryContainer: string;
-export const content: string;
-export const contentWithoutChildren: string;
+declare const classNames: {
+  readonly errorSummary: 'errorSummary';
+  readonly iconContainer: 'iconContainer';
+  readonly icon: 'icon';
+  readonly summaryContainer: 'summaryContainer';
+  readonly content: 'content';
+  readonly contentWithoutChildren: 'contentWithoutChildren';
+};
+export = classNames;

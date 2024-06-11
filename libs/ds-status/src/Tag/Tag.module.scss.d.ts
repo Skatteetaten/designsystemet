@@ -1,10 +1,12 @@
-/* automatisk genererte types */
-export const tag: string;
-export const iconWrapper: string;
-export const icon: string;
-export const tag_ochre: string;
-export const tag_burgundy: string;
-export const tag_forest: string;
-export const tag_graphite: string;
-export const tag_medium: string;
-export const tag_small: string;
+declare const classNames: {
+  readonly tag: 'tag';
+  readonly iconWrapper: 'iconWrapper';
+  readonly icon: 'icon';
+  readonly tag_ochre: 'tag_ochre';
+  readonly tag_burgundy: 'tag_burgundy';
+  readonly tag_forest: 'tag_forest';
+  readonly tag_graphite: 'tag_graphite';
+  readonly tag_medium: 'tag_medium';
+  readonly tag_small: 'tag_small';
+};
+export = classNames;

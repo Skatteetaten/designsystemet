@@ -1,9 +1,11 @@
-/* automatisk genererte types */
-export const button: string;
-export const icon: string;
-export const spinner: string;
-export const button_extraSmall: string;
-export const button_small: string;
-export const button_medium: string;
-export const button_large: string;
-export const button_outlined: string;
+declare const classNames: {
+  readonly button: 'button';
+  readonly icon: 'icon';
+  readonly spinner: 'spinner';
+  readonly button_extraSmall: 'button_extraSmall';
+  readonly button_small: 'button_small';
+  readonly button_medium: 'button_medium';
+  readonly button_large: 'button_large';
+  readonly button_outlined: 'button_outlined';
+};
+export = classNames;

@@ -1,4 +1,6 @@
-/* automatisk genererte types */
-export const separator: string;
-export const separatorLeft: string;
-export const separatorRight: string;
+declare const classNames: {
+  readonly separator: 'separator';
+  readonly separatorLeft: 'separatorLeft';
+  readonly separatorRight: 'separatorRight';
+};
+export = classNames;

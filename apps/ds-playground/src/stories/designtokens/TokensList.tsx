@@ -1,12 +1,11 @@
 import { JSX } from 'react';
 
-/* eslint-disable @typescript-eslint/no-var-requires */
-const breakpointsJson = require('@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json');
-const containersJson = require('@skatteetaten/ds-core-designtokens/designtokens/containers.json');
-const fontJson = require('@skatteetaten/ds-core-designtokens/designtokens/font.json');
-const paletteJson = require('@skatteetaten/ds-core-designtokens/designtokens/palette.json');
-const sizesJson = require('@skatteetaten/ds-core-designtokens/designtokens/sizes.json');
-const spacingJson = require('@skatteetaten/ds-core-designtokens/designtokens/spacing.json');
+import breakpointsJson from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
+import containersJson from '@skatteetaten/ds-core-designtokens/designtokens/containers.json';
+import fontJson from '@skatteetaten/ds-core-designtokens/designtokens/font.json';
+import paletteJson from '@skatteetaten/ds-core-designtokens/designtokens/palette.json';
+import sizesJson from '@skatteetaten/ds-core-designtokens/designtokens/sizes.json';
+import spacingJson from '@skatteetaten/ds-core-designtokens/designtokens/spacing.json';
 
 interface TokensListProps {
   tokenType:

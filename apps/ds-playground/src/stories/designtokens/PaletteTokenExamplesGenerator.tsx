@@ -1,10 +1,8 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 import { Fragment, JSX } from 'react';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
+import paletteJson from '@skatteetaten/ds-core-designtokens/designtokens/palette.json';
 import { CopySVGpath } from '@skatteetaten/ds-icons';
-
-const paletteJson = require('@skatteetaten/ds-core-designtokens/designtokens/palette.json');
 
 export const PaletteTokenExamplesGenerator = (): JSX.Element => {
   const colorsTokens: { [key: string]: string } = paletteJson[':root,\n:host'];

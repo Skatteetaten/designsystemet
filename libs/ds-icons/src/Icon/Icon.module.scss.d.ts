@@ -1,11 +1,13 @@
-/* automatisk genererte types */
-export const systemIcon: string;
-export const systemIcon_small: string;
-export const systemIcon_medium: string;
-export const systemIcon_large: string;
-export const systemIcon_extraLarge: string;
-export const themeIcon: string;
-export const themeIcon_small: string;
-export const themeIcon_extraLarge: string;
-export const themeIcon_medium: string;
-export const themeIcon_large: string;
+declare const classNames: {
+  readonly systemIcon: 'systemIcon';
+  readonly systemIcon_small: 'systemIcon_small';
+  readonly systemIcon_medium: 'systemIcon_medium';
+  readonly systemIcon_large: 'systemIcon_large';
+  readonly systemIcon_extraLarge: 'systemIcon_extraLarge';
+  readonly themeIcon: 'themeIcon';
+  readonly themeIcon_small: 'themeIcon_small';
+  readonly themeIcon_extraLarge: 'themeIcon_extraLarge';
+  readonly themeIcon_medium: 'themeIcon_medium';
+  readonly themeIcon_large: 'themeIcon_large';
+};
+export = classNames;

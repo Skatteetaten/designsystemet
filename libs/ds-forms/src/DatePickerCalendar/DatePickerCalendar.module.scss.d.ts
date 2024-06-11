@@ -1,13 +1,15 @@
-/* automatisk genererte types */
-export const calendar: string;
-export const calendarNavigation: string;
-export const calendarNavigationMonthAndYearContainer: string;
-export const calendarNavigationArrowIcon: string;
-export const calendarNavigationMonth: string;
-export const calendarNavigationYear: string;
-export const calendarTable: string;
-export const calendarTableHeaderCell: string;
-export const calendarTableDateButton: string;
-export const calendarTableDateButton_adjacentMonth: string;
-export const calendarTableDateButton_today: string;
-export const srOnly: string;
+declare const classNames: {
+  readonly calendar: 'calendar';
+  readonly calendarNavigation: 'calendarNavigation';
+  readonly calendarNavigationMonthAndYearContainer: 'calendarNavigationMonthAndYearContainer';
+  readonly calendarNavigationArrowIcon: 'calendarNavigationArrowIcon';
+  readonly calendarNavigationMonth: 'calendarNavigationMonth';
+  readonly calendarNavigationYear: 'calendarNavigationYear';
+  readonly calendarTable: 'calendarTable';
+  readonly calendarTableDateButton: 'calendarTableDateButton';
+  readonly calendarTableHeaderCell: 'calendarTableHeaderCell';
+  readonly calendarTableDateButton_adjacentMonth: 'calendarTableDateButton_adjacentMonth';
+  readonly calendarTableDateButton_today: 'calendarTableDateButton_today';
+  readonly srOnly: 'srOnly';
+};
+export = classNames;

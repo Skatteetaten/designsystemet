@@ -1,4 +1,6 @@
-/* automatisk genererte types */
-export const label: string;
-export const label_required: string;
-export const srOnly: string;
+declare const classNames: {
+  readonly label: 'label';
+  readonly label_required: 'label_required';
+  readonly srOnly: 'srOnly';
+};
+export = classNames;

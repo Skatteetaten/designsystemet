@@ -1,5 +1,6 @@
-/* automatisk genererte types */
-export const errorMessage: string;
-export const errormessage: string;
-export const errorMessageIcon: string;
-export const errorMessageText: string;
+declare const classNames: {
+  readonly errorMessage: 'errorMessage';
+  readonly errorMessageIcon: 'errorMessageIcon';
+  readonly errorMessageText: 'errorMessageText';
+};
+export = classNames;

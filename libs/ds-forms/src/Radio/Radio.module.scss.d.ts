@@ -1,5 +1,7 @@
-/* automatisk genererte types */
-export const radio: string;
-export const radioInput: string;
-export const radioLabel: string;
-export const radioLabelDescription: string;
+declare const classNames: {
+  readonly radio: 'radio';
+  readonly radioInput: 'radioInput';
+  readonly radioLabel: 'radioLabel';
+  readonly radioLabelDescription: 'radioLabelDescription';
+};
+export = classNames;

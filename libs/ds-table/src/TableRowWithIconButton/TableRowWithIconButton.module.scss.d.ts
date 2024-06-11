@@ -1,8 +1,10 @@
-/* automatisk genererte types */
-export const buttonCell: string;
-export const buttonCell_expanded: string;
-export const buttonCell_compact: string;
-export const expandableContent: string;
-export const expandedRowRight: string;
-export const row_noBorder: string;
-export const hideIcon: string;
+declare const classNames: {
+  readonly buttonCell: 'buttonCell';
+  readonly buttonCell_expanded: 'buttonCell_expanded';
+  readonly buttonCell_compact: 'buttonCell_compact';
+  readonly expandableContent: 'expandableContent';
+  readonly expandedRowRight: 'expandedRowRight';
+  readonly row_noBorder: 'row_noBorder';
+  readonly hideIcon: 'hideIcon';
+};
+export = classNames;

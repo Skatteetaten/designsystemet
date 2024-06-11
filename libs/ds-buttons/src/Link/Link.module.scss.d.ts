@@ -1,6 +1,8 @@
-/* automatisk genererte types */
-export const link_white: string;
-export const link: string;
-export const icon: string;
-export const icon_isCustom: string;
-export const icon_isExternal: string;
+declare const classNames: {
+  readonly link_white: 'link_white';
+  readonly link: 'link';
+  readonly icon: 'icon';
+  readonly icon_isCustom: 'icon_isCustom';
+  readonly icon_isExternal: 'icon_isExternal';
+};
+export = classNames;

@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "types": ["vite-plugin-svgr/client"],
     "emitDecoratorMetadata": true,
     "outDir": ""
   },

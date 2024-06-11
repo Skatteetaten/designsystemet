@@ -1,6 +1,8 @@
-/* automatisk genererte types */
-export const layout: string;
-export const aside: string;
-export const main: string;
-export const article: string;
-export const wideContent: string;
+declare const classNames: {
+  readonly layout: 'layout';
+  readonly aside: 'aside';
+  readonly main: 'main';
+  readonly article: 'article';
+  readonly wideContent: 'wideContent';
+};
+export = classNames;
