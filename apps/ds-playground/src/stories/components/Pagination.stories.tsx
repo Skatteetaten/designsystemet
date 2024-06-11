@@ -341,7 +341,7 @@ const exampleListWithLimit = (
 };
 
 export const Controlled: Story = {
-  render: function Render(_args): JSX.Element {
+  render: (_args): JSX.Element => {
     const [page, setPage] = useState(1);
     const pageSize = 5;
     const onChange = (page: number): void => {
@@ -369,7 +369,7 @@ export const Controlled: Story = {
 } satisfies Story;
 
 export const Uncontrolled: Story = {
-  render: function Render(_args): JSX.Element {
+  render: (_args): JSX.Element => {
     return <Pagination pageSize={10} totalItems={40} defaultCurrent={3} />;
   },
 } satisfies Story;

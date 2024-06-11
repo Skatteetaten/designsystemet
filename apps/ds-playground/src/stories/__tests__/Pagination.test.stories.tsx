@@ -431,7 +431,7 @@ export const WithControlled: Story = {
     });
     await expect(currentButton).toHaveAttribute('aria-current', 'true');
   },
-  render: function Render(): JSX.Element {
+  render: (_args): JSX.Element => {
     const [page, setPage] = useState(1);
     const onChange = (page: number): void => {
       setPage(page);
