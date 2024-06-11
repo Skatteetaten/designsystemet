@@ -69,7 +69,7 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
       throw new Error('Feil! Mangler import av språk fra ds-core-utils?');
     }
     const pageSummary = `${
-      hidePageSummary ? styles.paginationSummary_hide : ''
+      hidePageSummary ? styles.pagination_summaryhide : ''
     }`;
     const paginationCss = `${styles.pagination} ${className ?? ''}`.trim();
     const listCss = `${styles.paginationList} ${

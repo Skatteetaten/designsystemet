@@ -536,6 +536,94 @@ exports[`Tester/Pagination WithCustomAriaLabel play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Pagination WithHiddenPageSummary play-test 1`] = `
+<div data-test-block="true">
+  <nav class="Pagination_pagination__lBs+M"
+       aria-label="Sidevelger"
+  >
+    <div class="Pagination_pagination_summaryhide__ZrraI"
+         aria-live="polite"
+         aria-atomic="true"
+    >
+      Viser 1–10 av 70
+    </div>
+    <ul class="Pagination_paginationList__+WZ2R Pagination_paginationList_summaryhidden__DTSsA">
+      <li>
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  PaginationList_button__Ph9Zq"
+                type="button"
+                aria-current="true"
+        >
+          <span class="Button_buttonText__JxyB+">
+            1
+          </span>
+        </button>
+      </li>
+      <li>
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            2
+          </span>
+        </button>
+      </li>
+      <li>
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            3
+          </span>
+        </button>
+      </li>
+      <li>
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            4
+          </span>
+        </button>
+      </li>
+      <li>
+        <p class="PaginationList_elipsis__651o9"
+           aria-label
+        >
+          ...
+        </p>
+      </li>
+      <li>
+        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  PaginationList_button__Ph9Zq"
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            7
+          </span>
+        </button>
+      </li>
+      <li class="PaginationList_element_rightArrow__HLDcn">
+        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 PaginationList_button__Ph9Zq"
+                type="button"
+        >
+          <span class>
+            Neste
+          </span>
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="m7.1 5.8 6.1 6.1L7.1 18 9 19.9l8-8-8-8-1.9 1.9Z">
+            </path>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
 exports[`Tester/Pagination WithListLength play-test 1`] = `
 <div data-test-block="true">
   <nav class="Pagination_pagination__lBs+M"

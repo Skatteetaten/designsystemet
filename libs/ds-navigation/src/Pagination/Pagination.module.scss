@@ -35,16 +35,8 @@
     }
   }
 
-  &Summary {
-    flex: 1 1 100%;
-
-    @media (min-width: $breakpoint-s) {
-      flex: 1 1 auto;
-    }
-
-    &_hide {
-      @include sr-only;
-    }
+  &_summaryhide {
+    @include sr-only;
   }
 
   &Element {

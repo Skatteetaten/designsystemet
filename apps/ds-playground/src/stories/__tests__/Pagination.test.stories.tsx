@@ -384,6 +384,26 @@ export const WithPageSummary: Story = {
   },
 } satisfies Story;
 
+export const WithHiddenPageSummary: Story = {
+  name: 'With Page Summary Hidden (A5)',
+  args: {
+    ...defaultArgs,
+    hidePageSummary: true,
+    defaultCurrent: 1,
+  },
+  play: async ({ canvasElement, step }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await step(
+      'Summary er skjult for bruker, men synlig for skjermleser',
+      async () => {
+        const paginationStatus = canvas.getByText('Viser 1–10 av 70');
+        await expect(paginationStatus).toBeInTheDocument();
+        await expect(paginationStatus).toHaveStyle({ width: '1px' });
+      }
+    );
+  },
+} satisfies Story;
+
 export const WithControlled: Story = {
   parameters: {
     ...exampleParameters,
