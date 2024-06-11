@@ -35,16 +35,8 @@
     }
   }
 
-  &Summary {
-    flex: 1 1 100%;
-
-    @media (min-width: $breakpoint-s) {
-      flex: 1 1 auto;
-    }
-
-    &_hide {
-      @include sr-only;
-    }
+  &_summaryhide {
+    @include sr-only;
   }
 
   &Element {
@@ -54,43 +46,6 @@
 
     &_rightArrow {
       margin-left: var(--spacing-xs);
-    }
-  }
-
-  &Elipsis {
-    line-height: 2rem;
-    margin-block: 0;
-  }
-
-  &Button,
-  &Elipsis {
-    padding: 0 8px;
-  }
-
-  &Button {
-    min-width: 32px;
-    min-height: 32px;
-    align-items: center;
-    border: 0;
-    line-height: 2rem;
-    transition: none;
-
-    &:active {
-      text-decoration: none;
-
-      &::before {
-        border-color: var(--palette-azure-100);
-        inset: -2px;
-      }
-    }
-
-    &:focus {
-      outline: 2px solid var(--palette-azure-70);
-      outline-offset: 2px;
-
-      &::before {
-        border: 0;
-      }
     }
   }
 }

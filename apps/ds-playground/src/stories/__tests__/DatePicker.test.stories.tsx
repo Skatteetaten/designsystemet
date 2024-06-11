@@ -393,6 +393,8 @@ export const WithHelpText = {
     });
     await expect(helpButton).toBeInTheDocument();
     await fireEvent.click(helpButton);
+    const helpText = canvas.getByText('Hjelpetekst');
+    await expect(helpText).toBeInTheDocument();
   },
 } satisfies Story;
 
