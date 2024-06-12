@@ -159,10 +159,14 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
         }
       };
 
+      let previousWidth = window.innerWidth;
       const handleResize: EventListener = (e): void => {
-        if (e.type === 'resize') {
+        const newWidth = window.innerWidth;
+
+        if (e.type === 'resize' && newWidth < previousWidth) {
           closeCalendar();
         }
+        previousWidth = newWidth;
       };
 
       const handleEscape = (e: KeyboardEvent): void => {
