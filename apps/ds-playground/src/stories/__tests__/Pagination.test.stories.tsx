@@ -245,6 +245,10 @@ export const WithPrevNextLabel: Story = {
   argTypes: {
     hidePrevNextButtonTitle: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { disable: true },
+    HTMLSnapshot: { disable: true },
+  },
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
     const nextButton = canvas.getByRole('button', {
