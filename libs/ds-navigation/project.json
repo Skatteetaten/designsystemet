@@ -4,16 +4,11 @@
   "sourceRoot": "libs/ds-navigation/src",
   "projectType": "library",
   "tags": [],
+  "implicitDependencies": ["!ds-dev-config"],
   "targets": {
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "libs/ds-navigation/**/*.{ts,tsx,js,jsx}",
-          "libs/ds-navigation/package.json"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "build": {
       "executor": "@nx/rollup:rollup",
@@ -76,6 +71,5 @@
         "command": "npm publish dist/libs/ds-navigation {args.switches}"
       }
     }
-  },
-  "implicitDependencies": ["!ds-dev-config"]
+  }
 }

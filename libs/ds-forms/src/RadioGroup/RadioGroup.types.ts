@@ -64,6 +64,8 @@ interface RadioGroupComponentCommonProps
   name?: string;
   /** Definerer stilen til gruppen. */
   variant?: RadioGroupVariant;
+  /** Callback som kalles når hjelpetekst vises/skjules */
+  onHelpToggle?: FieldsetProps['onHelpToggle'];
 }
 
 type RadioGroupDiscriminatedCheckedProps =

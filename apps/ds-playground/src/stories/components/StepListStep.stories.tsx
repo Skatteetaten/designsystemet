@@ -9,7 +9,6 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: StepList.Step,
@@ -20,6 +19,11 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: dsI18n.t('ds_collections:steplist.Edit') },
+      },
+    },
+    nextButtonProps: {
+      table: {
+        category: category.props,
       },
     },
     nextButtonText: {
@@ -39,7 +43,6 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getPanelTitleAsDefault() },
-        type: { summary: [...headingAsArr] },
       },
     },
     titleAs: {
@@ -48,7 +51,6 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getStepListStepTitleAsDefault() },
-        type: { summary: [...headingAsArr] },
       },
     },
     introContent: {
@@ -79,9 +81,6 @@ const meta = {
     title: 'Overskrift',
     children: 'Innhold',
     stepNumber: 9,
-  },
-  parameters: {
-    version: getVersion('ds-collections'),
   },
 } satisfies Meta<typeof StepList.Step>;
 

@@ -53,7 +53,9 @@ const bokmalText = 'Bokmål';
 const englishText = 'English';
 const defaultArgs: TopBannerLangPickerProps = {
   openMenu: 'None',
-  setOpenMenu: () => {},
+  setOpenMenu: () => {
+    Function.prototype();
+  },
 };
 
 export const WithRef = {

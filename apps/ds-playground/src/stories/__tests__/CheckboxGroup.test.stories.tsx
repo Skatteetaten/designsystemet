@@ -19,7 +19,7 @@ const meta = {
     // Props
     children: {
       table: { disable: true },
-      control: { type: null },
+      control: { disable: true },
     },
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
@@ -57,6 +57,8 @@ const meta = {
         disable: true,
       },
     },
+    // Events
+    onHelpToggle: { table: { disable: true } },
   },
 } satisfies Meta<typeof CheckboxGroup>;
 export default meta;
@@ -184,7 +186,7 @@ export const LegendWithMarkup = {
     ),
   },
   argTypes: {
-    legend: { table: { disable: false }, control: { type: null } },
+    legend: { table: { disable: false }, control: { disable: true } },
   },
 } satisfies Story;
 
@@ -205,7 +207,7 @@ export const LegendWithMarkupAndRequiredMark = {
     showRequiredMark: true,
   },
   argTypes: {
-    legend: { table: { disable: false }, control: { type: null } },
+    legend: { table: { disable: false }, control: { disable: true } },
     showRequiredMark: { table: { disable: false } },
   },
 } satisfies Story;
@@ -322,5 +324,21 @@ export const WithDescription = {
     const canvas = within(canvasElement);
     const description = canvas.getByText('Vi trenger å vite om du har barn.');
     await expect(description).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithHelpToggleEvent = {
+  name: 'With onHelpToggle Event',
+  args: {
+    ...defaultArgs,
+    helpText: 'Hjelpetekst',
+    onHelpToggle: (isOpen: boolean): void => {
+      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
+    },
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
   },
 } satisfies Story;

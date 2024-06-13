@@ -1,7 +1,7 @@
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { FileUploader, FileUploaderProps } from '@skatteetaten/ds-forms';
 import { StoryObj, Meta, StoryFn } from '@storybook/react';
-import { expect, userEvent, waitFor, within } from '@storybook/test';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 //eslint-disable-next-line storybook/use-storybook-testing-library
 import { PointerEventsCheckLevel } from '@testing-library/user-event';
 
@@ -90,6 +90,10 @@ const meta = {
       table: { category: category.event, disable: true },
     },
     onFileChange: {
+      table: { category: category.event, disable: true },
+    },
+
+    onHelpToggle: {
       table: { category: category.event, disable: true },
     },
   },
@@ -304,6 +308,9 @@ export const WithFileChange: StoryObj<FileUploaderProps> = {
     helpText: 'Hjelpetekst',
     label: 'Dokumentasjon og grunnlag',
     uploadedFiles: [{ name: 'file.txt', href: '#' }],
+    onFileDownload: fn(),
+    onFileChange: fn(),
+    onFileDelete: fn(),
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -337,5 +344,21 @@ export const WithFileChange: StoryObj<FileUploaderProps> = {
   },
   parameters: {
     imageSnapshot: { disable: true },
+  },
+} satisfies Story;
+
+export const WithHelpToggleEvent = {
+  name: 'With onHelpToggle Event',
+  args: {
+    label: 'Last opp filer',
+    helpText: 'Hjelpetekst',
+    onHelpToggle: (isOpen: boolean): void => {
+      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
+    },
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
   },
 } satisfies Story;

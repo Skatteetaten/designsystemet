@@ -7,7 +7,6 @@ import { StoryObj, Meta } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: FileUploader,
@@ -60,6 +59,7 @@ const meta = {
     onFileDelete: { table: { category: category.event } },
     onFileDownload: { table: { category: category.event } },
     onFileChange: { table: { category: category.event } },
+    onHelpToggle: { table: { category: category.event } },
   },
   args: {
     helpText: 'Hjelpetekst',
@@ -80,15 +80,102 @@ const meta = {
       return true;
     },
   },
-  parameters: {
-    version: getVersion('ds-forms'),
-  },
 } satisfies Meta<typeof FileUploader>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {} satisfies Story;
+
+async function mockFetch(feil?: boolean): Promise<Response> {
+  await new Promise((r) => setTimeout(r, 500));
+
+  if (feil) {
+    return Response.json({}, { status: 400 });
+  } else {
+    return Response.json({});
+  }
+}
+function mockUpload(_any: File, feil: boolean): Promise<Response> {
+  return mockFetch(feil);
+}
+function mockDelete(_any: any, feil: boolean): Promise<Response> {
+  return mockFetch(feil);
+}
+
+export const SimpleCompleteExample: Story = {
+  render: (_args): JSX.Element => {
+    const [fileUploaderState, setSuccess, setLoading, setFailure, remove] =
+      FileUploader.useFileUploader();
+
+    const [shouldError, setShouldError] = useState(false);
+
+    const onDelete = async (file: UploadedFile): Promise<boolean> => {
+      const response = await mockDelete(file.name, shouldError);
+      if (response.ok) {
+        remove(file);
+        return true;
+      } else {
+        return false;
+      }
+    };
+
+    const onChange = async (files: File[]): Promise<boolean> => {
+      if (fileUploaderState.uploadedFiles.length > 0) {
+        alert('Du har allerede lastet opp en fil');
+        return Promise.reject();
+      }
+      if (files.length > 1) {
+        alert(
+          'Det er ikke lov med flere filer (dette kan bare skje med drag and drop)'
+        );
+        return Promise.reject();
+      }
+
+      setLoading();
+
+      const response = await mockUpload(files[0], shouldError);
+
+      if (!response.ok) {
+        setFailure(files, [
+          {
+            error: 'det har skjedd noe feil',
+            files: [
+              {
+                name: files[0].name,
+              },
+            ],
+          },
+        ]);
+        return false;
+      } else {
+        setSuccess(files);
+        return true;
+      }
+    };
+
+    return (
+      <>
+        <Checkbox
+          checked={shouldError}
+          onChange={() => setShouldError(!shouldError)}
+        >
+          {'La nettverkskall feile'}
+        </Checkbox>
+        <FileUploader
+          label={'Last opp et dokument'}
+          acceptedFileFormats={['.pdf', '.jpeg', '.png']}
+          multiple={false}
+          {...fileUploaderState}
+          onFileDelete={onDelete}
+          onFileChange={onChange}
+        />
+      </>
+    );
+  },
+} satisfies Story;
+
+SimpleCompleteExample.parameters = exampleParameters;
 
 //TODO hvorfor henger storybook når jeg setter args som parameter her og mottar status 500?
 export const Examples: Story = {
@@ -140,14 +227,14 @@ export const Examples: Story = {
           errorMessage={error ?? ''}
           hasError={!!error}
           multiple
-          onFileDelete={(file): boolean => {
+          onFileDelete={async (file): Promise<boolean> => {
             if (shouldMockUpload) {
               remove(file);
               return true;
             }
             let deleteStatus = true;
 
-            fetch(uploadUrl, {
+            await fetch(uploadUrl, {
               method: 'DELETE',
             }).then((response) => {
               if (!response.ok) {

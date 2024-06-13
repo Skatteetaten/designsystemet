@@ -10,7 +10,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -65,6 +64,7 @@ const meta = {
     },
     // Events
     onChange: { ...htmlEventDescription },
+    onHelpToggle: { table: { category: category.event } },
   },
   args: {
     legend: 'Type virksomhet',
@@ -79,9 +79,6 @@ const meta = {
         {'Annet'}
       </RadioGroup.Radio>,
     ],
-  },
-  parameters: {
-    version: getVersion('ds-forms'),
   },
 } satisfies Meta<typeof RadioGroup>;
 

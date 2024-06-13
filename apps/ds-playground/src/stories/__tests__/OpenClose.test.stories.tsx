@@ -2,12 +2,12 @@ import { MouseEvent, useState } from 'react';
 
 import { OpenClose, OpenCloseProps } from '@skatteetaten/ds-collections';
 import {
+  buttonIconPositionArr,
   densityArr,
   headingAsArr,
-  positionArr,
 } from '@skatteetaten/ds-core-utils';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fireEvent, within, waitFor } from '@storybook/test';
+import { expect, fireEvent, within, waitFor, fn } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 
@@ -39,7 +39,7 @@ const meta = {
     },
     iconPosition: {
       table: { disable: true },
-      options: [...positionArr],
+      options: [...buttonIconPositionArr],
       control: 'inline-radio',
     },
     isExpanded: { table: { disable: true } },
@@ -355,6 +355,7 @@ export const WithOnClick = {
   name: 'With OnClick (A4 delvis, B1 delvis)',
   args: {
     ...defaultArgs,
+    onClick: fn(),
   },
   parameters: {
     imageSnapshot: {
@@ -381,6 +382,7 @@ export const WithIsOnClickOnlyFiredOnOpen = {
   args: {
     ...defaultArgs,
     isOnClickOnlyFiredOnOpen: true,
+    onClick: fn(),
   },
   argTypes: {
     isOnClickOnlyFiredOnOpen: { table: { disable: false } },

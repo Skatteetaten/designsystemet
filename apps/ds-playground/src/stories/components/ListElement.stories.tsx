@@ -2,7 +2,6 @@ import { List } from '@skatteetaten/ds-typography';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: List.Element,
@@ -16,9 +15,6 @@ const meta = {
   },
   args: {
     children: 'Kjenner du behovet til brukeren?',
-  },
-  parameters: {
-    version: getVersion('ds-typography'),
   },
 } satisfies Meta<typeof List.Element>;
 

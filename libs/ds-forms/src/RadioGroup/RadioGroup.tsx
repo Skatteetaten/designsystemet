@@ -35,6 +35,7 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
       hideLegend,
       showRequiredMark,
       onChange,
+      onHelpToggle,
       children,
     },
     ref
@@ -67,6 +68,7 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
         helpText={helpText}
         titleHelpSvg={titleHelpSvg}
         hasSpacing
+        onHelpToggle={onHelpToggle}
       >
         <div className={radioGroupItemContainer}>
           <RadioGroupContext.Provider

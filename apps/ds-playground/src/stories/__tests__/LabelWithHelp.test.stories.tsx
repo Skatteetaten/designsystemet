@@ -37,6 +37,8 @@ const meta = {
     titleHelpSvg: { table: { disable: true } },
     // HTML
     htmlFor: { table: { disable: true } },
+    // Events
+    onHelpToggle: { table: { disable: true } },
   },
 } satisfies Meta<typeof LabelWithHelp>;
 export default meta;
@@ -205,6 +207,22 @@ export const WithLongChildren = {
   parameters: {
     viewport: {
       defaultViewport: '--mobile',
+    },
+  },
+} satisfies Story;
+
+export const WithHelpToggleEvent = {
+  name: 'With onHelpToggle Event',
+  args: {
+    ...defaultArgs,
+    helpText: 'Hjelpetekst',
+    onHelpToggle: (isOpen: boolean): void => {
+      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
+    },
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
     },
   },
 } satisfies Story;

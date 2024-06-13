@@ -1,0 +1,16 @@
+import { Meta, Story, Canvas } from '@storybook/blocks';
+import { PaletteTokenExamplesGenerator } from './PaletteTokenExamplesGenerator';
+import * as PaletteStories from './palette.stories';
+import { VersionBadge } from '../utils/VersionBadge';
+
+# Palette
+
+<VersionBadge packageName={'core-designtokens'} />
+
+<Meta of={PaletteStories} />
+
+<PaletteTokenExamplesGenerator />
+
+<Canvas withSource="none">
+  <Story of={PaletteStories.Palette} />
+</Canvas>

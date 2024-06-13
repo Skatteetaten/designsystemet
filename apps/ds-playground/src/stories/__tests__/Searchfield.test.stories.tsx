@@ -10,7 +10,14 @@ import {
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { searchArrSize, SearchField } from '@skatteetaten/ds-forms';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { fireEvent, userEvent, waitFor, within, expect } from '@storybook/test';
+import {
+  fireEvent,
+  userEvent,
+  waitFor,
+  within,
+  expect,
+  fn,
+} from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
@@ -72,6 +79,7 @@ const meta = {
     onFocus: { table: { disable: true } },
     onSearch: { table: { disable: true } },
     onClear: { table: { disable: true } },
+    onHelpToggle: { table: { disable: true } },
     onSearchClick: { table: { disable: true } },
     onResultClick: { table: { disable: true } },
   },
@@ -444,6 +452,12 @@ export const WithEventHandlers = {
   name: 'With EventHandlers (A7)',
   args: {
     ...defaultArgs,
+    onFocus: fn(),
+    onBlur: fn(),
+    onSearchClick: fn(),
+    onSearch: fn(),
+    onChange: fn(),
+    onClear: fn(),
   },
   parameters: {
     imageSnapshot: { disable: true },
@@ -485,6 +499,7 @@ export const WithArrowKeyNavigation = {
       { description: 'Beryllium', key: 'Be' },
       { description: 'Bor', key: 'B' },
     ],
+    onResultClick: fn(),
   },
   parameters: {
     imageSnapshot: { disable: true },
@@ -530,4 +545,21 @@ export const WithAccesskey = {
     imageSnapshot: { disable: true },
   },
   play: verifyAttribute('accessKey', 'j'),
+} satisfies Story;
+
+export const WithHelpToggleEvent = {
+  name: 'With onHelpToggle Event',
+  args: {
+    ...defaultArgs,
+    helpText: 'Hjelpetekst',
+    hideLabel: false,
+    onHelpToggle: (isOpen: boolean): void => {
+      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
+    },
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
+  },
 } satisfies Story;

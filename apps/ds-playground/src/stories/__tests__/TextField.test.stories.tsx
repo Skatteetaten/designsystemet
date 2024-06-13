@@ -1,4 +1,4 @@
-import { FocusEvent, ChangeEvent, useState } from 'react';
+import { ChangeEvent, FocusEvent, useState } from 'react';
 
 import { formArrSize } from '@skatteetaten/ds-core-utils';
 import {
@@ -7,7 +7,7 @@ import {
   textFieldAsArr,
 } from '@skatteetaten/ds-forms';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, within, waitFor } from '@storybook/test';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -83,6 +83,7 @@ const meta = {
     onBlur: { table: { disable: true } },
     onChange: { table: { disable: true } },
     onFocus: { table: { disable: true } },
+    onHelpToggle: { table: { disable: true } },
   },
 } satisfies Meta<typeof TextField>;
 export default meta;
@@ -562,6 +563,7 @@ export const WithThousandSeparator = {
   args: {
     ...defaultArgs,
     thousandSeparator: true,
+    onChange: fn(),
   },
   argTypes: {
     thousandSeparator: { table: { disable: false } },
@@ -582,6 +584,7 @@ export const WithThousandSeparatorAndNegativeValue = {
   args: {
     ...defaultArgs,
     thousandSeparator: true,
+    onChange: fn(),
   },
   argTypes: {
     defaultValue: { table: { disable: false } },
@@ -673,6 +676,9 @@ export const WithEventHandlers = {
   name: 'With EventHandlers (A4)',
   args: {
     ...defaultArgs,
+    onFocus: fn(),
+    onBlur: fn(),
+    onChange: fn(),
   },
   parameters: {
     imageSnapshot: { disable: true },
@@ -686,5 +692,21 @@ export const WithEventHandlers = {
     await waitFor(() => expect(args.onChange).toHaveBeenCalled());
     await userEvent.tab();
     await waitFor(() => expect(args.onBlur).toHaveBeenCalled());
+  },
+} satisfies Story;
+
+export const WithHelpToggleEvent = {
+  name: 'With onHelpToggle Event',
+  args: {
+    ...defaultArgs,
+    helpText: 'Hjelpetekst',
+    onHelpToggle: (isOpen: boolean): void => {
+      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
+    },
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
   },
 } satisfies Story;

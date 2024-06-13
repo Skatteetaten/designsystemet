@@ -18,11 +18,10 @@ import {
   getTopBannerLangPickerShowSamiDefault,
 } from '../../../../../libs/ds-layout/src/TopBannerLangPicker/defaults';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { category } from '../../../.storybook/helpers';
+import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import customLogo from '../../assets/custom-logo.svg';
 import skeLogo from '../../assets/ske-logo.svg';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: TopBannerExternal,
@@ -32,7 +31,9 @@ const meta = {
     showSami: {
       table: {
         category: category.props,
-        defaultValue: { summary: getTopBannerLangPickerShowSamiDefault() },
+        defaultValue: {
+          summary: String(getTopBannerLangPickerShowSamiDefault()),
+        },
       },
     },
     defaultLocale: {
@@ -54,20 +55,16 @@ const meta = {
     thirdColumn: { control: 'text', table: { category: category.props } },
     // Events
     onLogInClick: {
-      control: { type: null },
-      table: { category: category.event },
+      ...htmlEventDescription,
     },
     onLogOutClick: {
-      control: { type: null },
-      table: { category: category.event },
+      ...htmlEventDescription,
     },
     onUserClick: {
-      control: { type: null },
-      table: { category: category.event },
+      ...htmlEventDescription,
     },
     onLanguageClick: {
-      control: { type: null },
-      table: { category: category.event },
+      ...htmlEventDescription,
     },
   },
   args: {
@@ -77,7 +74,6 @@ const meta = {
     onUserClick: undefined,
   },
   parameters: {
-    version: getVersion('ds-layout'),
     layout: 'fullscreen',
   },
 } satisfies Meta<typeof TopBannerExternal>;

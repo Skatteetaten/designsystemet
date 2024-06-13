@@ -4,18 +4,13 @@ import {
   getOpenCloseUnderlineDefault,
   getOpenCloseVariantDefault,
 } from '@skatteetaten/ds-collections';
-import {
-  densityArr,
-  headingAsArr,
-  positionArr,
-} from '@skatteetaten/ds-core-utils';
+import { densityArr, headingAsArr } from '@skatteetaten/ds-core-utils';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const exampleTitle = 'Hva er aksjesparekonto';
 const exampleContent =
@@ -32,12 +27,10 @@ const meta = {
       table: { category: category.props },
     },
     iconPosition: {
-      options: [...positionArr],
       control: 'inline-radio',
       table: {
         category: category.props,
         defaultValue: { summary: getOpenCloseIconPositionDefault() },
-        type: { summary: positionArr },
       },
     },
     isOnClickOnlyFiredOnOpen: { table: { category: category.props } },
@@ -45,7 +38,7 @@ const meta = {
     showUnderline: {
       table: {
         category: category.props,
-        defaultValue: { summary: getOpenCloseUnderlineDefault() },
+        defaultValue: { summary: getOpenCloseUnderlineDefault().toString() },
       },
     },
     title: { table: { category: category.props } },
@@ -55,7 +48,7 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: 'div' },
-        type: { summary: ['div', ...headingAsArr] },
+        type: { summary: ['div', ...headingAsArr].toString() },
       },
     },
     variant: {
@@ -64,7 +57,6 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getOpenCloseVariantDefault() },
-        type: { summary: densityArr },
       },
     },
     //Events
@@ -73,9 +65,6 @@ const meta = {
   args: {
     children: loremIpsum,
     title: 'OpenClose title',
-  },
-  parameters: {
-    version: getVersion('ds-collections'),
   },
 } satisfies Meta<typeof OpenClose>;
 

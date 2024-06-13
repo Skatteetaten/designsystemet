@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-nocheck
-/* eslint-disable sonarjs/no-duplicate-string */
 import { JSX } from 'react';
 
 import { Button, getButtonVariantDefault } from '@skatteetaten/ds-buttons';
@@ -13,7 +10,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Button,
@@ -61,9 +57,6 @@ const meta = {
   },
   args: {
     children: 'Send inn skjema',
-  },
-  parameters: {
-    version: getVersion('ds-buttons'),
   },
 } satisfies Meta<typeof Button>;
 

@@ -60,6 +60,8 @@ export interface TableProps extends BaseProps {
   showCaption?: boolean;
   /** Oppdaterer sorteringstilstand når sorterbar kolonneheader klikkes */
   setSortState?: Dispatch<SetStateAction<SortState>>;
+  /** Id til rad som skal være i redigeringsmodus når tabellen rendres. */
+  rowInEditModeId?: string;
   /**  Innholdet i tabellen  */
   children?: ReactNode;
 }

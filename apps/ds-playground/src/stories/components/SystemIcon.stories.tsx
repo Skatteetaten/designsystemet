@@ -5,7 +5,6 @@ import {
   Icon,
   getIconVariantDefault,
   getIconSizeDefault,
-  iconVariantArr,
   DeploySVGpath,
   DeployIcon,
 } from '@skatteetaten/ds-icons';
@@ -14,7 +13,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Icon,
@@ -25,7 +23,7 @@ const meta = {
       control: 'select',
       options: [...sizeArr].slice(1),
       table: {
-        type: { summary: [...sizeArr].slice(1) },
+        //type: { summary: [...sizeArr].slice(1) },
         category: category.props,
         defaultValue: { summary: getIconSizeDefault() },
       },
@@ -37,9 +35,8 @@ const meta = {
     },
     title: { table: { category: category.props } },
     variant: {
-      control: { type: null },
+      control: { disable: true },
       table: {
-        type: { summary: iconVariantArr },
         category: category.props,
         defaultValue: { summary: getIconVariantDefault() },
       },
@@ -49,9 +46,6 @@ const meta = {
   },
   args: {
     svgPath: DeploySVGpath,
-  },
-  parameters: {
-    version: getVersion('ds-icons'),
   },
 } satisfies Meta<typeof Icon>;
 

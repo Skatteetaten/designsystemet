@@ -1,0 +1,227 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="flex gapS centerContent">
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH "
+            type="button"
+            aria-expanded="true"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r3:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r3:">
+          Hjelp
+        </title>
+        <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+        </path>
+      </svg>
+    </button>
+    <div tabindex="-1"
+         class="PopoverContent_popover__1MWTw PopoverContent_popover_forest__WomGW"
+         style="position: absolute; left: 0px; top: 0px; transform: translate(238px, 23px);"
+    >
+      <div class="PopoverContent_popoverContent__f8q8d">
+        <div class="PopoverContent_popoverContentWrapper__7J2T2">
+          Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+        </div>
+        <button class="IconButton_button__mw9sG IconButton_button_large__IejTf  PopoverContent_popoverContentCloseButton__fYPMv"
+                type="button"
+        >
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-labelledby="svgtitle-:r4:"
+               aria-hidden="false"
+               role="img"
+          >
+            <title id="svgtitle-:r4:">
+              Lukk
+            </title>
+            <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+            </path>
+          </svg>
+        </button>
+      </div>
+      <div class="PopoverContent_popoverArrow__JmFGE PopoverContent_popoverArrow_top__gL3Ms"
+           style="bottom: -13px; left: 85px;"
+      >
+      </div>
+    </div>
+    <button class="IconButton_button__mw9sG IconButton_button_small__etst4 IconButton_button_outlined__aDbNH "
+            type="button"
+            aria-expanded="true"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r6:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r6:">
+          Hjelp
+        </title>
+        <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+        </path>
+      </svg>
+    </button>
+    <div tabindex="-1"
+         class="PopoverContent_popover__1MWTw PopoverContent_popover_white__ZIpeZ"
+         style="position: absolute; left: 0px; top: 0px; transform: translate(238px, 213px);"
+    >
+      <div class="PopoverContent_popoverContent__f8q8d">
+        <div class="PopoverContent_popoverContentWrapper__7J2T2">
+          Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+        </div>
+        <button class="IconButton_button__mw9sG IconButton_button_large__IejTf  PopoverContent_popoverContentCloseButton__fYPMv"
+                type="button"
+        >
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-labelledby="svgtitle-:r7:"
+               aria-hidden="false"
+               role="img"
+          >
+            <title id="svgtitle-:r7:">
+              Lukk
+            </title>
+            <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+            </path>
+          </svg>
+        </button>
+      </div>
+      <div class="PopoverContent_popoverArrow__JmFGE PopoverContent_popoverArrow_bottom__pTKfu"
+           style="top: -13px; left: 117px;"
+      >
+      </div>
+    </div>
+    <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt IconButton_button_outlined__aDbNH "
+            type="button"
+            aria-expanded="true"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r9:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r9:">
+          Hjelp
+        </title>
+        <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+        </path>
+      </svg>
+    </button>
+    <div tabindex="-1"
+         class="PopoverContent_popover__1MWTw PopoverContent_popover_ochre__Dic6d"
+         style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 18px);"
+    >
+      <div class="PopoverContent_popoverContent__f8q8d">
+        <div class="PopoverContent_popoverContentWrapper__7J2T2">
+          Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+        </div>
+        <button class="IconButton_button__mw9sG IconButton_button_large__IejTf  PopoverContent_popoverContentCloseButton__fYPMv"
+                type="button"
+        >
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-labelledby="svgtitle-:ra:"
+               aria-hidden="false"
+               role="img"
+          >
+            <title id="svgtitle-:ra:">
+              Lukk
+            </title>
+            <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+            </path>
+          </svg>
+        </button>
+      </div>
+      <div class="PopoverContent_popoverArrow__JmFGE PopoverContent_popoverArrow_top__gL3Ms"
+           style="bottom: -13px; left: 392px;"
+      >
+      </div>
+    </div>
+    <button class="IconButton_button__mw9sG IconButton_button_large__IejTf IconButton_button_outlined__aDbNH "
+            type="button"
+            aria-expanded="true"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:rc:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:rc:">
+          Hjelp
+        </title>
+        <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+        </path>
+      </svg>
+    </button>
+    <div tabindex="-1"
+         class="PopoverContent_popover__1MWTw PopoverContent_popover_forest__WomGW"
+         style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 222px);"
+    >
+      <div class="PopoverContent_popoverContent__f8q8d">
+        <div class="PopoverContent_popoverContentWrapper__7J2T2">
+          Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+        </div>
+        <button class="IconButton_button__mw9sG IconButton_button_large__IejTf  PopoverContent_popoverContentCloseButton__fYPMv"
+                type="button"
+        >
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-labelledby="svgtitle-:rd:"
+               aria-hidden="false"
+               role="img"
+          >
+            <title id="svgtitle-:rd:">
+              Lukk
+            </title>
+            <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+            </path>
+          </svg>
+        </button>
+      </div>
+      <div class="PopoverContent_popoverArrow__JmFGE PopoverContent_popoverArrow_bottom__pTKfu"
+           style="top: -13px; left: 438px;"
+      >
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Popover/Popover Defaults play-test 1`] = `
+<div data-test-block="true">
+  <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt IconButton_button_outlined__aDbNH "
+          type="button"
+          aria-expanded="false"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:r1:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:r1:">
+        Hjelp
+      </title>
+      <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+      </path>
+    </svg>
+  </button>
+</div>
+`;

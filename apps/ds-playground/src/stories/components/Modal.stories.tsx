@@ -18,28 +18,32 @@ import farmerIllustration from '../../assets/farmer-illustration.svg';
 import waitIllustration from '../../assets/wait-alert-illustration.png';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: Modal,
   title: 'Komponenter/Modal',
   argTypes: {
     // Props
-    children: { control: { type: null }, table: { category: category.props } },
+    children: {
+      control: { disable: true },
+      table: { category: category.props },
+    },
     classNames: {
-      control: { type: null },
+      control: { disable: true },
       table: { category: category.props },
     },
     dismissOnEsc: {
       table: {
         category: category.props,
-        defaultValue: { summary: getModalDismissOnEscDefault() },
+        defaultValue: { summary: getModalDismissOnEscDefault().toString() },
       },
     },
     dismissOnOutsideClick: {
       table: {
         category: category.props,
-        defaultValue: { summary: getModalDismissOnOutsideClickDefault() },
+        defaultValue: {
+          summary: getModalDismissOnOutsideClickDefault().toString(),
+        },
       },
     },
     hideCloseButton: { table: { category: category.props } },
@@ -68,14 +72,14 @@ const meta = {
       },
     },
     // Events
-    onClose: { control: { type: null }, table: { category: category.event } },
+    onClose: {
+      control: { disable: true },
+      table: { category: category.event },
+    },
   },
   args: {
     children: <Paragraph>{loremIpsum}</Paragraph>,
     title: 'Modal title',
-  },
-  parameters: {
-    version: getVersion('ds-overlays'),
   },
 } satisfies Meta<typeof Modal>;
 
@@ -139,7 +143,13 @@ export const Examples: Story = {
         >
           {'Velg rolle'}
         </Button>
-        <Modal ref={refModalRadioGroup} title={'Dette er dine roller'}>
+        <Modal
+          ref={refModalRadioGroup}
+          title={'Dette er dine roller'}
+          onClose={() => {
+            console.log('lukker mod2');
+          }}
+        >
           <RadioGroup legend={'Velge en rolle'}>
             <RadioGroup.Radio value={'meg'}>
               {'Innlogget som meg selv'}

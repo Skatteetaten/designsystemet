@@ -1,10 +1,10 @@
 {
   "name": "@skatteetaten/ds-navigation",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "groupId": "no.skatteetaten.aurora",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Skatteetaten/designsystemet.git"
+    "url": "git+https://github.com/Skatteetaten/designsystemet.git"
   },
   "publishConfig": {
     "registry": "https://nexus.sits.no/repository/npm-internal/"
@@ -18,5 +18,5 @@
     "@skatteetaten/ds-icons": "*",
     "@skatteetaten/ds-progress": "*"
   },
-  "script": {}
+  "scripts": {}
 }

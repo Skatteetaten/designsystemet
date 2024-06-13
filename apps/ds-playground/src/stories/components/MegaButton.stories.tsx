@@ -7,7 +7,6 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
-import { getVersion } from '../utils/version.utils';
 
 const meta = {
   component: MegaButton,
@@ -42,9 +41,6 @@ const meta = {
   },
   args: {
     children: 'Klikk her',
-  },
-  parameters: {
-    version: getVersion('ds-buttons'),
   },
 } satisfies Meta<typeof MegaButton>;
 

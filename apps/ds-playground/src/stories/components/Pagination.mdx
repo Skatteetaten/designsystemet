@@ -1,9 +1,12 @@
 import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
 import * as PaginationStories from './Pagination.stories';
+import { VersionBadge } from '../utils/VersionBadge';
 
 <Meta of={PaginationStories} />
 
 # Pagination
+
+<VersionBadge packageName={'navigation'} />
 
 <Primary />
 
@@ -13,6 +16,10 @@ import { Pagination } from '@skatteetaten/ds-navigation';
 
 <Controls />
 
-## Examples
+## Controlled Example
 
-<Canvas of={PaginationStories.Examples} />
+<Canvas of={PaginationStories.Controlled} />
+
+## Uncontrolled Example
+
+<Canvas of={PaginationStories.Uncontrolled} />

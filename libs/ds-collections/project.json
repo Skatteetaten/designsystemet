@@ -4,16 +4,11 @@
   "sourceRoot": "libs/ds-collections/src",
   "projectType": "library",
   "tags": [],
+  "implicitDependencies": ["!ds-dev-config"],
   "targets": {
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "libs/ds-collections/**/*.{ts,tsx,js,jsx}",
-          "libs/ds-collections/package.json"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "build": {
       "executor": "@nx/rollup:rollup",
@@ -78,6 +73,5 @@
         "cwd": ""
       }
     }
-  },
-  "implicitDependencies": ["!ds-dev-config"]
+  }
 }

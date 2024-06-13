@@ -7,9 +7,11 @@ import {
   Position,
 } from '@skatteetaten/ds-core-utils';
 
+type IconPosition = Extract<Position, 'left' | 'right'>;
+
 export interface OpenCloseProps extends BaseProps {
   /** Posisjonen til ikonet */
-  iconPosition?: Position;
+  iconPosition?: IconPosition;
   /** Tekst på knappen */
   title: string;
   /** Rendrer knappen som heading på gitt nivå */

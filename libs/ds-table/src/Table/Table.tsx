@@ -32,6 +32,7 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
       lang,
       'data-testid': dataTestId,
       caption,
+      rowInEditModeId: externalRowInEditModeId,
       variant = getTableVariantDefault(),
       sortState,
       hasFullWidth,
@@ -46,9 +47,10 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
     const [isTableScrollable, setIsTableScrollable] = useState<boolean>(false);
     const [shouldShowSRText, setShouldShowSRText] = useState<boolean>(false);
     const [shouldFadeLeft, setShouldFadeLeft] = useState<boolean>(false);
-    const [rowInEditModeId, setRowInEditModeId] = useState<string | undefined>(
-      undefined
-    );
+    const [internalRowInEditModeId, setInternalRowInEditModeId] = useState<
+      string | undefined
+    >(externalRowInEditModeId);
+    const rowInEditModeId = externalRowInEditModeId ?? internalRowInEditModeId;
 
     if (caption === '') {
       throw new Error('Empty string is not a valid caption.');
@@ -137,7 +139,7 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
           setSortState,
           variant,
           rowInEditModeId,
-          setRowInEditModeId,
+          setRowInEditModeId: setInternalRowInEditModeId,
         }}
       >
         <div ref={wrapperRef} className={wrapperClassName}>

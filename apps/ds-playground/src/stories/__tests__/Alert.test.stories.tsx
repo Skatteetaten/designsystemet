@@ -314,12 +314,6 @@ export const WithMarkup = {
     ),
     showAlert: true,
   },
-  argTypes: {
-    children: {
-      table: { disable: false },
-      control: { type: null },
-    },
-  },
 } satisfies Story;
 
 export const WithCustomIcon = {
@@ -346,7 +340,6 @@ export const WithCustomSVGPath = {
   argTypes: {
     svgPath: {
       table: { disable: false },
-      control: { type: null },
     },
   },
 } satisfies Story;

@@ -8,7 +8,14 @@ import {
 import { Heading } from '@skatteetaten/ds-typography';
 import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fireEvent, userEvent, waitFor, within } from '@storybook/test';
+import {
+  expect,
+  fireEvent,
+  fn,
+  userEvent,
+  waitFor,
+  within,
+} from '@storybook/test';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
 
@@ -52,6 +59,7 @@ const meta = {
     required: { table: { disable: true } },
     // Events
     onChange: { table: { disable: true } },
+    onHelpToggle: { table: { disable: true } },
   },
 } satisfies Meta<typeof RadioGroup>;
 export default meta;
@@ -479,6 +487,7 @@ export const WithEventHandlers = {
   name: 'With EventHandlers',
   args: {
     ...defaultArgs,
+    onChange: fn(),
   },
   parameters: {
     imageSnapshot: { disable: true },
@@ -497,5 +506,21 @@ export const WithEventHandlers = {
         })
       )
     );
+  },
+} satisfies Story;
+
+export const WithHelpToggleEvent = {
+  name: 'With onHelpToggle Event',
+  args: {
+    ...defaultArgs,
+    helpText: 'Hjelpetekst',
+    onHelpToggle: (isOpen: boolean): void => {
+      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
+    },
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
   },
 } satisfies Story;
