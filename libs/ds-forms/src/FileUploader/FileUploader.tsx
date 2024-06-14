@@ -64,9 +64,13 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
     const inputRef = useRef<HTMLInputElement>(null);
     const buttonRef = useRef<HTMLButtonElement>(null);
+    const afterDeleteFocusRef = useRef<HTMLDivElement>(null);
     const [srOnlyText, setSrOnlyText] = useState<string>();
     const [isDragging, setIsDragging] = useState<boolean>(false);
     const generatedId = useId();
+    const [filesPendingDelete, setFilesPendingDelete] = useState<
+      Record<string, boolean>
+    >({});
 
     const id = externalId ?? generatedId;
     const fileformatsId = `${id}-accepted-formats`;
@@ -127,8 +131,28 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
       event.stopPropagation();
     };
 
-    const handleDeleteFile = (file: UploadedFile): void => {
-      if (onFileDelete?.(file)) {
+    const handleDeleteFile = async (file: UploadedFile): Promise<void> => {
+      if (!onFileDelete) {
+        return;
+      }
+
+      const key = file.id ?? file.name;
+      /**
+       * Her er det viktig at en funksjon sendes inn til setState for å få tak i prevState.
+       * Hvis dette ikke gjøres oppstår en race-condition dersom man sletter to filer samtidig.
+       */
+
+      const timeoutId = setTimeout((): void => {
+        setFilesPendingDelete((prevState) => ({ ...prevState, [key]: true }));
+      }, 1000);
+
+      const deletedPromise = onFileDelete(file);
+      const deleted = await deletedPromise;
+      // hvis sletting er ferdig innen 1 sek skal vi ikke vise spinner
+      clearTimeout(timeoutId);
+
+      if (deleted) {
+        afterDeleteFocusRef.current?.focus();
         setSrOnlyText(t('fileuploader.DeleteConfirmation'));
       } else {
         setSrOnlyText(t('fileuploader.GeneralDeleteError'));
@@ -136,6 +160,8 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
       setTimeout(() => {
         setSrOnlyText('');
       }, 3000);
+
+      setFilesPendingDelete((prevState) => ({ ...prevState, [key]: false }));
     };
     const concatenatedClassnames = `${styles.container} ${className}`;
 
@@ -161,6 +187,7 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
           </LabelWithHelp>
         )}
 
+        <div ref={afterDeleteFocusRef} tabIndex={-1} />
         <button
           ref={buttonRef}
           type={'button'}
@@ -233,10 +260,11 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
                 href={file.href}
                 successIconTitle={successIconTitle}
                 fileIconTitle={fileIconTitle}
-                onClickDelete={(): void => handleDeleteFile(file)}
+                showSpinner={filesPendingDelete[file.id ?? file.name]}
                 onClick={(event): void => {
                   onFileDownload?.(event, file);
                 }}
+                onClickDelete={() => handleDeleteFile(file)}
               >
                 {file.name}
               </FileUploaderFile>
