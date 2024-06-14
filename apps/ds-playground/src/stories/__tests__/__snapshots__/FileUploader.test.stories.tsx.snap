@@ -356,6 +356,8 @@ exports[`Tester/FileUploader WithHelpToggleEvent smoke-test 1`] = `
         </path>
       </svg>
     </button>
+    <div tabindex="-1">
+    </div>
     <button type="button"
             id=":r20:"
             class="FileUploader_dropZone__YfvZ-  "
