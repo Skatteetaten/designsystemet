@@ -16,6 +16,7 @@ export const Help = ({
   hideHelp,
   targetId,
   titleHelpSvg,
+  onHelpToggle,
 }: HelpProps): JSX.Element => {
   const { t } = useTranslation('Shared', { i18n: dsI18n });
 
@@ -26,12 +27,14 @@ export const Help = ({
   const titleHelpIcon = titleHelpSvg ?? t('shared.Help');
 
   const toggleHelpText = (): void => {
+    onHelpToggle?.(!showHelpText);
     setShowHelpText(!showHelpText);
   };
 
   const closeHelpText = (): void => {
     setShowHelpText(false);
     helpButtonRef.current?.focus();
+    onHelpToggle?.(false);
   };
 
   const marginTopClassName = showHelpText ? styles.descriptionMarginTop : '';

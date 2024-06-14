@@ -1,13 +1,16 @@
-import { RefObject } from 'react';
+import { ForwardRefExoticComponent, RefAttributes, RefObject } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
+import { TFunction } from 'i18next';
+
+import { PaginationList } from '../PaginationList/PaginationList';
 
 export interface PaginationCommonProps extends BaseProps {
   /** Antall elementer pr side */
   pageSize?: number;
   /** Totalt antall elementer i liste */
   totalItems: number;
-  /** Maksimum antall navigasjonselementer ved siden av aktiv side. Minimumsverdi er 1 sibling */
+  /** Minimum antall navigasjonselementer ved siden av aktiv side. Minimumsverdi er 1 sibling */
   sibling?: number;
   /** Skjul next/prev label */
   hidePrevNextButtonTitle?: boolean;
@@ -49,11 +52,12 @@ type PaginationDiscriminatedProp =
 export type PaginationProps = PaginationCommonProps &
   PaginationDiscriminatedProp;
 
-export type PageOption = {
-  currentPage: number | undefined;
-  defaultCurrent: number | undefined;
-  onChange?: (page: number) => void;
-};
+export interface PaginationComponent
+  extends ForwardRefExoticComponent<
+    PaginationProps & RefAttributes<HTMLElement>
+  > {
+  List: typeof PaginationList;
+}
 
 export type PaginationListProps = {
   firstPageRef?: RefObject<HTMLButtonElement>;
@@ -61,5 +65,14 @@ export type PaginationListProps = {
   lastPage: number;
   internalPage: number;
   sibling: number;
+  handleChange: (page: number) => void;
+  hidePrevNextButtonTitle?: boolean;
+};
+
+export type FirstLastPageButtonProps = {
+  activePage: number;
+  navigateDirection: 'next' | 'previous';
+  hidePrevNextButtonTitle?: boolean;
+  t: TFunction<'ds_navigation', undefined>;
   handleChange: (page: number) => void;
 };

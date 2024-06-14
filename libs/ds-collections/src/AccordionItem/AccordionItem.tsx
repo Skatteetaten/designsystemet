@@ -19,6 +19,7 @@ export const AccordionItem = forwardRef<HTMLButtonElement, AccordionItemProps>(
       title,
       subtitle,
       titleAs,
+      isDefaultExpanded,
       isExpanded: isExpandedExternal,
       svgPath,
       onClick,
@@ -26,8 +27,9 @@ export const AccordionItem = forwardRef<HTMLButtonElement, AccordionItemProps>(
     },
     ref
   ) => {
-    const [isExpandedInternal, setIsExpandedInternal] =
-      useState<boolean>(false);
+    const [isExpandedInternal, setIsExpandedInternal] = useState<boolean>(
+      isDefaultExpanded ?? false
+    );
 
     const { size = getAccordionSizeDefault(), iconPosition } =
       useContext(AccordionContext);

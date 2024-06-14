@@ -1,0 +1,7 @@
+.panel {
+  display: none;
+
+  &_active {
+    display: block;
+  }
+}

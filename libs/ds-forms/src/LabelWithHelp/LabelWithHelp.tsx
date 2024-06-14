@@ -22,6 +22,7 @@ export const LabelWithHelp = forwardRef<HTMLLabelElement, LabelWithHelpProps>(
       hideLabel,
       showRequiredMark,
       children,
+      onHelpToggle,
     },
     ref
   ): JSX.Element => {
@@ -52,6 +53,7 @@ export const LabelWithHelp = forwardRef<HTMLLabelElement, LabelWithHelpProps>(
           targetId={labelId}
           titleHelpSvg={titleHelpSvg}
           description={description}
+          onHelpToggle={onHelpToggle}
         />
       </>
     );

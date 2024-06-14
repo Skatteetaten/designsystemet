@@ -90,6 +90,7 @@ const meta = {
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
+    onHelpToggle: { table: { category: category.event } },
   },
   args: {
     label: 'Navn',

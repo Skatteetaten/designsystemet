@@ -59,6 +59,7 @@ const meta = {
     required: { table: { disable: true } },
     // Events
     onChange: { table: { disable: true } },
+    onHelpToggle: { table: { disable: true } },
   },
 } satisfies Meta<typeof RadioGroup>;
 export default meta;
@@ -505,5 +506,21 @@ export const WithEventHandlers = {
         })
       )
     );
+  },
+} satisfies Story;
+
+export const WithHelpToggleEvent = {
+  name: 'With onHelpToggle Event',
+  args: {
+    ...defaultArgs,
+    helpText: 'Hjelpetekst',
+    onHelpToggle: (isOpen: boolean): void => {
+      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
+    },
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
   },
 } satisfies Story;

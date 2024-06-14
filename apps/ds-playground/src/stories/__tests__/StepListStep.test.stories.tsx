@@ -30,6 +30,7 @@ const meta = {
     onNext: { table: { disable: true, category: category.props } },
     editButtonText: { table: { disable: true, category: category.props } },
     nextButtonText: { table: { disable: true, category: category.props } },
+    nextButtonProps: { table: { disable: true, category: category.props } },
     nextButtonHasSpinner: {
       table: { disable: true, category: category.props },
     },
@@ -201,5 +202,21 @@ export const NextButtonWithSpinner = {
   },
   argTypes: {
     nextButtonHasSpinner: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const NextButtonWithDisabled = {
+  render: Template,
+  name: 'With Disabled Next Button',
+  args: {
+    stepNumber: 1,
+    variant: 'active',
+    title: 'tittel',
+    children: loremIpsum,
+    nextButtonProps: { disabled: true },
+    onNext: (): void => console.log('next'),
+  },
+  argTypes: {
+    nextButtonProps: { table: { disable: false } },
   },
 } satisfies Story;

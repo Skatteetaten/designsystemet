@@ -70,6 +70,8 @@ interface SearchFieldCommonProps
   variant?: SearchSize;
   /** Kalles ved trykk på knappen for resetting av søkefeltet */
   onClear?: MouseEventHandler<HTMLButtonElement>;
+  /** Callback som kalles når hjelpetekst vises/skjules */
+  onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
   /** Kalles med enter-knapp i søkefeltet */
   onSearch?: KeyboardEventHandler<HTMLInputElement>;
   /** Kalles ved trykk på søkeknappen */

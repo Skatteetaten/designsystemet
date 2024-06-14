@@ -9,6 +9,7 @@ import React, {
   useEffect,
   useImperativeHandle,
 } from 'react';
+import { flushSync } from 'react-dom';
 import { useTranslation } from 'react-i18next';
 
 import {
@@ -65,6 +66,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       onBlur,
       onChange,
       onFocus,
+      onHelpToggle,
       onSelectDate,
     },
     ref
@@ -94,7 +96,9 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       const date = parseDateFromInput(value);
 
       setSelectedDate(isValid(date) ? date : undefined);
-      setInputValue(value);
+      flushSync(() => {
+        setInputValue(value);
+      });
       onChange?.(e);
     };
 
@@ -155,10 +159,14 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
         }
       };
 
+      let previousWidth = window.innerWidth;
       const handleResize: EventListener = (e): void => {
-        if (e.type === 'resize') {
+        const newWidth = window.innerWidth;
+
+        if (e.type === 'resize' && newWidth < previousWidth) {
           closeCalendar();
         }
+        previousWidth = newWidth;
       };
 
       const handleEscape = (e: KeyboardEvent): void => {
@@ -204,6 +212,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
           helpSvgPath={helpSvgPath}
           helpText={helpText}
           titleHelpSvg={titleHelpSvg}
+          onHelpToggle={onHelpToggle}
         >
           {label}
         </LabelWithHelp>

@@ -60,6 +60,8 @@ interface DatePickerCommonProps
   maxDate?: Date;
   /** Overskriver default datoformat for input-felt. Formater som kan brukes: https://date-fns.org/v3.3.1/docs/parse. */
   dateFormat?: string;
+  /** Callback som kalles når hjelpetekst vises/skjules */
+  onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
   /** Kalles når en dato-knapp klikkes på. */
   onSelectDate?: (date: Date | null) => void;
 }

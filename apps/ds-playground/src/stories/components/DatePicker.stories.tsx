@@ -82,6 +82,7 @@ const meta = {
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
+    onHelpToggle: { table: { category: category.event } },
     onSelectDate: { table: { category: category.event } },
   },
   args: {
@@ -93,33 +94,32 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {
-  //TODO FRONT-1346 Fjern bruk av underscore som prefix på variabler som er i bruk
-  render: (_args): JSX.Element => {
+  render: (args): JSX.Element => {
     const [, setArgs] = useArgs();
     /* Fordi date control konverterer datoen til et UNIX-tidsstempel når verdien endres,
      må den konverteres til et date objekt. Dette er en kjent begrensing som vil bli fikset
     en gang i fremtiden står det i Storybook sin dokumentasjon over Controls. */
 
     // Preview bør alltid være controlled, siden defaultValue må settes når komponenten rendres første gang.
-    _args.defaultValue = undefined;
+    args.defaultValue = undefined;
 
     // value settes til null dersom undefined for å unngå advarsel om controlled/uncontrolled.
-    _args.value = !_args.value ? null : new Date(_args.value);
-    _args.minDate =
-      _args.minDate === undefined ? undefined : new Date(_args.minDate);
-    _args.maxDate =
-      _args.maxDate === undefined ? undefined : new Date(_args.maxDate);
-    _args.initialPickerDate =
-      _args.initialPickerDate === undefined
+    args.value = !args.value ? null : new Date(args.value);
+    args.minDate =
+      args.minDate === undefined ? undefined : new Date(args.minDate);
+    args.maxDate =
+      args.maxDate === undefined ? undefined : new Date(args.maxDate);
+    args.initialPickerDate =
+      args.initialPickerDate === undefined
         ? undefined
-        : new Date(_args.initialPickerDate as Date);
+        : new Date(args.initialPickerDate as Date);
 
     const handleSelectDate = (date: Date | null): void => {
-      _args.onSelectDate?.(date);
+      args.onSelectDate?.(date);
       setArgs({ value: date });
     };
 
-    return <DatePicker {..._args} onSelectDate={handleSelectDate} />;
+    return <DatePicker {...args} onSelectDate={handleSelectDate} />;
   },
 } satisfies Story;
 
