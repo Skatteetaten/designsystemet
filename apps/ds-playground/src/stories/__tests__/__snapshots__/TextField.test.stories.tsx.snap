@@ -601,6 +601,69 @@ exports[`Tester/TextField WithRows play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/TextField WithTextAreaAutoSizeInModal play-test 1`] = `
+<div data-test-block="true">
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+          type="button"
+  >
+    <span class="Button_buttonText__JxyB+">
+      Vis modal
+    </span>
+  </button>
+  <dialog class="Modal_modal__JdsM-"
+          aria-labelledby="modalHeadingId-:r2n:"
+          open
+  >
+    <div tabindex="-1"
+         class="Modal_modalContainer__O6yz0"
+    >
+      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
+              type="button"
+      >
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r2o:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r2o:">
+            Lukk dialogvindu
+          </title>
+          <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+          </path>
+        </svg>
+      </button>
+      <div class="Modal_modalPaddingL__TAljg">
+        <h1 id="modalHeadingId-:r2n:"
+            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
+        >
+          Modal med textarea
+        </h1>
+        <div class>
+          <label id="labelId-:r2r:"
+                 class="LabelWithHelp_label__59tP-"
+                 for="textFieldTextboxId-:r2q:"
+          >
+            Navn
+          </label>
+          <textarea id="textFieldTextboxId-:r2q:"
+                    class="TextField_textbox__qbZlk  TextField_textbox_multiline__dzg2r TextField_textbox_autosize__Ws65A"
+                    style="height: 0px;"
+          >
+          </textarea>
+          <div id="textFieldErrorId-:r2p:"
+               aria-live="assertive"
+               aria-atomic="true"
+          >
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+</div>
+`;
+
 exports[`Tester/TextField WithThousandSeparator play-test 1`] = `
 <div data-test-block="true">
   <div class>
