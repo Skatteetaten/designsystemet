@@ -30,7 +30,7 @@
 
   &_autosize {
     overflow: hidden;
-    min-height: calc(var(--semantic-line-height-input) * 2);
+    min-height: calc(2lh + calc(var(--spacing-s) * 2));
     resize: none;
   }
 
