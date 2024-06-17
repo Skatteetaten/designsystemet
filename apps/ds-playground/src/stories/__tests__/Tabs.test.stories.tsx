@@ -272,7 +272,7 @@ export const WithMultiline = {
 } satisfies Story;
 
 export const WithTabClick = {
-  name: 'With Tab Click (A2, B2, B3)',
+  name: 'With Tab Click (A2, B2, B3, B4)',
   render: TemplateTabs,
   args: {
     ...defaultArgs,

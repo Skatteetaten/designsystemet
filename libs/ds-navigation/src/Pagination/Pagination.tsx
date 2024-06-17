@@ -66,7 +66,7 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
       }
     );
     if (showPaginationSummary === '') {
-      throw new Error('Feil! Mangler import av språk fra ds-core-utils?');
+      throw new Error('Feil! Mangler importert språk fra ds-core-utils?');
     }
     const pageSummary = `${
       hidePageSummary ? styles.pagination_summaryhide : ''
