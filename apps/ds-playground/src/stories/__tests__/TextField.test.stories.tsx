@@ -697,6 +697,22 @@ export const WithEventHandlers = {
   },
 } satisfies Story;
 
+export const WithHelpToggleEvent = {
+  name: 'With onHelpToggle Event',
+  args: {
+    ...defaultArgs,
+    helpText: 'Hjelpetekst',
+    onHelpToggle: (isOpen: boolean): void => {
+      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
+    },
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
+  },
+} satisfies Story;
+
 const TextAreaInModalTemplate: StoryFn<typeof TextField> = (args) => {
   const modalRef = useRef<HTMLDialogElement>(null);
   return (
@@ -714,22 +730,6 @@ const TextAreaInModalTemplate: StoryFn<typeof TextField> = (args) => {
     </>
   );
 };
-
-export const WithHelpToggleEvent = {
-  name: 'With onHelpToggle Event',
-  args: {
-    ...defaultArgs,
-    helpText: 'Hjelpetekst',
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
-  },
-  parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
-  },
-} satisfies Story;
 
 export const WithTextAreaAutoSizeInModal = {
   name: 'With textarea AutoSize in Modal',
