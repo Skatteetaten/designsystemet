@@ -72,7 +72,7 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
         aria-live={getAriaLive()}
         aria-atomic
       >
-        {showAlertContent && (
+        {showAlertContent && children && (
           <div className={`${styles.alert} ${variantClassName} ${className}`}>
             <span className={styles.iconWrapper}>
               <Icon size={'large'} svgPath={svg} className={styles.icon} />

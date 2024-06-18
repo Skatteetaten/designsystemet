@@ -51,6 +51,7 @@ const defaultText =
   'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.';
 
 const defaultArgs = {
+  showAlert: false,
   children: defaultText,
   variant: statusArr[1],
 };
