@@ -13,6 +13,9 @@
   transform: translateY(-200%);
   transition: transform 0.3s;
 
+  --skip-link-content-max-width: var(--semantic-responsive-container);
+  --skip-link-content-margin: auto;
+
   &:focus {
     position: static;
     outline: 0;
@@ -21,13 +24,13 @@
 
   &Content {
     display: flex;
-    max-width: var(--semantic-responsive-container);
+    max-width: var(--skip-link-content-max-width);
     align-items: center;
     justify-content: center;
     padding: var(--semantic-responsive-container-padding);
     padding-top: var(--spacing-m);
     padding-bottom: var(--spacing-m);
-    margin: auto;
+    margin: var(--skip-link-content-margin);
     gap: var(--spacing-s);
 
     @media (min-width: $breakpoint-s) {

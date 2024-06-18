@@ -22,6 +22,7 @@ export const PopoverTrigger = forwardRef<
       title,
       ariaDescribedby,
       size,
+      svgPath,
       onClick,
       onBlur,
       onFocus,
@@ -44,7 +45,7 @@ export const PopoverTrigger = forwardRef<
         lang={lang}
         data-testid={dataTestId}
         title={titleHelpIcon}
-        svgPath={HelpSimpleSVGpath}
+        svgPath={svgPath ?? HelpSimpleSVGpath}
         size={size}
         ariaDescribedby={ariaDescribedby}
         ariaExpanded={isOpen}

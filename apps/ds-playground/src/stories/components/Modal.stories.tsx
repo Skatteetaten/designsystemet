@@ -143,7 +143,13 @@ export const Examples: Story = {
         >
           {'Velg rolle'}
         </Button>
-        <Modal ref={refModalRadioGroup} title={'Dette er dine roller'}>
+        <Modal
+          ref={refModalRadioGroup}
+          title={'Dette er dine roller'}
+          onClose={() => {
+            console.log('lukker mod2');
+          }}
+        >
           <RadioGroup legend={'Velge en rolle'}>
             <RadioGroup.Radio value={'meg'}>
               {'Innlogget som meg selv'}

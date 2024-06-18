@@ -58,6 +58,7 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
       onBlur,
       onChange,
       onFocus,
+      onHelpToggle,
       onSearch,
       onSearchClick,
       onClear,
@@ -166,6 +167,7 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
           helpSvgPath={helpSvgPath}
           helpText={helpText}
           titleHelpSvg={titleHelpSvg}
+          onHelpToggle={onHelpToggle}
         >
           {label}
         </LabelWithHelp>

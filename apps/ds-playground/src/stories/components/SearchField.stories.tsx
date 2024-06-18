@@ -78,6 +78,7 @@ const meta = {
     onChange: { ...htmlEventDescription },
     onClear: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
+    onHelpToggle: { table: { category: category.event } },
     onResultClick: { ...htmlEventDescription },
     onSearch: { ...htmlEventDescription },
     onSearchClick: { ...htmlEventDescription },

@@ -21,6 +21,11 @@ const meta = {
         defaultValue: { summary: dsI18n.t('ds_collections:steplist.Edit') },
       },
     },
+    nextButtonProps: {
+      table: {
+        category: category.props,
+      },
+    },
     nextButtonText: {
       table: {
         category: category.props,

@@ -53,7 +53,7 @@ def overrides = [
     ],
     preCompile                   : preCompile,
     npmPublishFolder             : './dist/libs',
-    versionStrategy              : [[branch: 'master', versionHint: '0.7', minorOnPrefixes: 'release/']],
+    versionStrategy              : [[branch: 'master', versionHint: '1', minorOnPrefixes: 'release/']],
     createBuildEnvs              : { props -> "STORYBOOK_BUILD_VERSION=${props.version}" },
 ]
 

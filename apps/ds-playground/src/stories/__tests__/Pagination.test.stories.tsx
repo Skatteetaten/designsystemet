@@ -1,6 +1,5 @@
-import { JSX } from 'react';
+import { useState } from 'react';
 
-import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   Pagination,
@@ -8,16 +7,11 @@ import {
   getDefaultSibling,
 } from '@skatteetaten/ds-navigation';
 import { List } from '@skatteetaten/ds-typography';
-import { useArgs, useState } from '@storybook/preview-api';
+import { useArgs } from '@storybook/preview-api';
 import { StoryObj, Meta } from '@storybook/react';
-import {
-  fn,
-  expect,
-  fireEvent,
-  waitFor,
-  within,
-  // isInaccessible,
-} from '@storybook/test';
+import { fn, expect, fireEvent, waitFor, within } from '@storybook/test';
+
+import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
   component: Pagination,
@@ -39,7 +33,12 @@ const meta = {
     hidePrevNextButtonTitle: { table: { disable: true } },
     hidePageSummary: { table: { disable: true }, control: false },
     ariaLabel: { table: { disable: true } },
+    // Event
     onChange: { table: { disable: true } },
+  },
+  args: {
+    defaultCurrent: undefined,
+    currentPage: undefined,
   },
 } satisfies Meta<typeof Pagination>;
 
@@ -156,69 +155,11 @@ export const WithListLength: Story = {
     });
     await fireEvent.click(nextButton);
     await step(
-      'Antall elementer på side er satt til 4 i testen. Beregnet verdier i pageSummary viser dette',
+      'Antall elementer på side er satt til 4 i testen. Beregnet verdier er nå økt og pageSummary viser dette',
       async () => {
         const paginationStatusNextPage = canvas.getByText('Viser 5–8 av 70'); // Tankestrek
         await expect(paginationStatusNextPage).toBeInTheDocument();
       }
-    );
-  },
-} satisfies Story;
-
-export const WithListLengthChange = {
-  name: 'With Changed List Length (A3)',
-  args: {
-    ...defaultArgs,
-    defaultCurrent: undefined,
-    pageSize: 10,
-  },
-  argTypes: {
-    totalItems: { table: { disable: false } },
-  },
-  play: async ({ canvasElement, step }): Promise<void> => {
-    const canvas = within(canvasElement);
-
-    await step(
-      'Reduser totalItems til 19 og sjekk om pageSummary viser riktig antall',
-      async () => {
-        const nextButton = canvas.getByRole('button', {
-          name: dsI18n.t('ds_navigation:pagination.NextButtonTitle'),
-        });
-        await fireEvent.click(nextButton);
-        const reduceButton = canvas.getByRole('button', {
-          name: 'Reduser totalItems til 19',
-        });
-        await fireEvent.click(reduceButton);
-        const paginationPageSummary = await canvas.findByText(
-          'Viser 1–10 av 19'
-        ); // Tankestrek
-        await expect(paginationPageSummary).toBeInTheDocument();
-      }
-    );
-  },
-  render: (args): JSX.Element => {
-    const [currentPage, setCurrentPage] = useState<number>(1);
-    const [{ totalItems }, updateArgs] = useArgs();
-    const onChange = (): void => {
-      updateArgs({ currentPage: 1 });
-      setCurrentPage(1);
-    };
-    const changeTotalItems = (): void => {
-      updateArgs({ totalItems: 19 });
-    };
-    return (
-      <>
-        <Pagination
-          {...args}
-          defaultCurrent={undefined}
-          currentPage={currentPage}
-          totalItems={totalItems}
-          onChange={onChange}
-        />
-        <Button variant={'secondary'} onClick={changeTotalItems}>
-          {'Reduser totalItems til 19'}
-        </Button>
-      </>
     );
   },
 } satisfies Story;
@@ -247,31 +188,11 @@ export const Sibling = {
   },
 } satisfies Story;
 
-// TODO: Utforske mer rundt mulighet for sr-only tester
-/* export const HidePageSummary = {
-  name: 'Hide Page Summary (A5)',
-  args: {
-    ...defaultArgs,
-    defaultCurrent: 1,
-    hidePageSummary: true,
-  },
-  argTypes: {
-    hidePageSummary: { table: true },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const paginationStatus = canvas.getByText('Viser 1–10 av 70');
-    await expect(paginationStatus).toBeInTheDocument();
-    await expect(isInaccessible(paginationStatus)).toBe(true);
-  },
-} satisfies Story; */
-
 export const WithNavigation: Story = {
   name: 'With Navigation (A7, B2 delvis)',
   args: {
     ...defaultArgs,
     defaultCurrent: 2,
-    onChange: fn(),
   },
   parameters: {
     imageSnapshot: { disable: true },
@@ -322,7 +243,11 @@ export const WithPrevNextLabel: Story = {
     hidePrevNextButtonTitle: true,
   },
   argTypes: {
-    sibling: { table: { disable: false } },
+    hidePrevNextButtonTitle: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+    HTMLSnapshot: { disable: true },
   },
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -433,6 +358,9 @@ export const WithCustomAriaLabel: Story = {
     ariaLabel: 'Egen tekst på nav-elementets aria-label',
     defaultCurrent: 1,
   },
+  argTypes: {
+    ariaLabel: { table: { disable: false } },
+  },
   parameters: {
     imageSnapshot: { disable: true },
   },
@@ -460,5 +388,66 @@ export const WithPageSummary: Story = {
     // Antall elementer på side OG antall sider representert med siste page-button
     const paginationStatus = canvas.getByText('Viser 1–10 av 70');
     await expect(paginationStatus).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithHiddenPageSummary: Story = {
+  name: 'With Page Summary Hidden (A5)',
+  args: {
+    ...defaultArgs,
+    hidePageSummary: true,
+    defaultCurrent: 1,
+  },
+  argTypes: {
+    hidePageSummary: { table: { disable: false } },
+  },
+  play: async ({ canvasElement, step }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await step(
+      'Summary er skjult for bruker, men synlig for skjermleser',
+      async () => {
+        const paginationStatus = canvas.getByText('Viser 1–10 av 70');
+        await expect(paginationStatus).toBeInTheDocument();
+        await expect(paginationStatus).toHaveStyle({ width: '1px' });
+      }
+    );
+  },
+} satisfies Story;
+
+export const WithControlled: Story = {
+  parameters: {
+    ...exampleParameters,
+    imageSnapshot: { disable: true },
+  },
+  args: { totalItems: 10 },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    // Antall elementer på side OG antall sider representert med siste page-button
+    const paginationStatus = canvas.getByText('Viser 1–5 av 30');
+    await expect(paginationStatus).toBeInTheDocument();
+    const nextButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_navigation:pagination.NextButtonTitle'),
+    });
+    await fireEvent.click(nextButton);
+    await waitFor(() => expect(args.onChange).toHaveBeenCalled);
+    const currentButton = canvas.getByRole('button', {
+      name: '2',
+    });
+    await expect(currentButton).toHaveAttribute('aria-current', 'true');
+  },
+  render: (_args): JSX.Element => {
+    const [page, setPage] = useState(1);
+    const onChange = (page: number): void => {
+      setPage(page);
+    };
+    return (
+      <Pagination
+        totalItems={30}
+        sibling={1}
+        pageSize={5}
+        currentPage={page}
+        onChange={onChange}
+      />
+    );
   },
 } satisfies Story;

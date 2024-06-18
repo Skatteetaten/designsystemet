@@ -60,6 +60,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       onBlur,
       onChange,
       onFocus,
+      onHelpToggle,
     },
     ref
   ): JSX.Element => {
@@ -144,6 +145,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
           helpSvgPath={helpSvgPath}
           helpText={helpText}
           titleHelpSvg={titleHelpSvg}
+          onHelpToggle={onHelpToggle}
         >
           {label}
         </LabelWithHelp>

@@ -34,6 +34,7 @@ export const CheckboxGroup = forwardRef<
       hasError,
       hideLegend,
       showRequiredMark,
+      onHelpToggle,
       children,
     },
     ref
@@ -57,6 +58,7 @@ export const CheckboxGroup = forwardRef<
         helpText={helpText}
         titleHelpSvg={titleHelpSvg}
         hasSpacing
+        onHelpToggle={onHelpToggle}
       >
         <CheckboxContext.Provider
           value={{

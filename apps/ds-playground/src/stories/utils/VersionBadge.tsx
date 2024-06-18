@@ -16,20 +16,12 @@ export const VersionBadge = ({ packageName }: VersionBadgeProps): ReactNode => {
     color = 'blue';
   }
 
-  const normalizedPackageName = packageName.replace('-', '--');
-  const buildVersion = process.env['STORYBOOK_BUILD_VERSION'];
-  if (buildVersion?.includes('SNAPSHOT')) {
-    return (
-      <img
-        src={`https://img.shields.io/badge/%40skatteetaten%2Fds--${normalizedPackageName}-${version}--${buildVersion}-${color}`}
-        alt={`@skatteetaten/ds-${packageName}@${version}-${buildVersion}`}
-      />
-    );
-  }
+  const normalizedPackageName = packageName.replaceAll('-', '--');
+  const normalizedVersion = version.replaceAll('-', '--').replaceAll('_', '__');
 
   return (
     <img
-      src={`https://img.shields.io/badge/%40skatteetaten%2Fds--${normalizedPackageName}-${version}-${color}`}
+      src={`https://img.shields.io/badge/%40skatteetaten%2Fds--${normalizedPackageName}-${normalizedVersion}-${color}?logo=npm`}
       alt={`@skatteetaten/ds-${packageName}@${version}`}
     />
   );

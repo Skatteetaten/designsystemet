@@ -27,6 +27,8 @@ const meta = {
     },
     titleHelpSvg: { table: { disable: true } },
     targetId: { table: { disable: true } },
+    // Events
+    onHelpToggle: { table: { disable: true } },
   },
 } satisfies Meta<typeof Help>;
 export default meta;
@@ -211,5 +213,20 @@ export const ClickCloseButton = {
     await fireEvent.click(closeButton);
     await expect(helpText).not.toBeInTheDocument();
     await expect(helpButton).toHaveFocus();
+  },
+} satisfies Story;
+
+export const WithHelpToggleEvent = {
+  name: 'With onHelpToggle Event',
+  args: {
+    helpText: 'Hjelpetekst',
+    onHelpToggle: (isOpen: boolean): void => {
+      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
+    },
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
   },
 } satisfies Story;
