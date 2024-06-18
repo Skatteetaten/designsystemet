@@ -1,4 +1,4 @@
-import { ChangeEvent, FocusEvent, useState } from 'react';
+import { FocusEvent, ChangeEvent, useState, useRef } from 'react';
 
 import { formArrSize } from '@skatteetaten/ds-core-utils';
 import {
@@ -11,6 +11,8 @@ import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
+import { Modal } from '@skatteetaten/ds-overlays';
+import { Button } from '@skatteetaten/ds-buttons';
 
 const verifyAttribute =
   (attribute: string, expectedValue: string) =>
@@ -708,5 +710,49 @@ export const WithHelpToggleEvent = {
     imageSnapshot: {
       disable: true,
     },
+  },
+} satisfies Story;
+
+const TextAreaInModalTemplate: StoryFn<typeof TextField> = (args) => {
+  const modalRef = useRef<HTMLDialogElement>(null);
+  return (
+    <>
+      <Button
+        onClick={() => {
+          modalRef.current?.show();
+        }}
+      >
+        {'Vis modal'}
+      </Button>
+      <Modal ref={modalRef} title={'Modal med textarea'}>
+        <TextField {...args} />
+      </Modal>
+    </>
+  );
+};
+
+export const WithTextAreaAutoSizeInModal = {
+  name: 'With textarea AutoSize in Modal',
+  render: TextAreaInModalTemplate,
+  args: {
+    ...defaultArgs,
+    as: 'textarea',
+    autosize: true,
+  },
+  argTypes: {
+    defaultValue: { table: { disable: false } },
+    autosize: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+
+    const button = canvas.getByRole('button');
+    await userEvent.click(button);
+
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox.tagName).toBe('TEXTAREA');
+    await expect(textbox).toHaveStyle({
+      height: '64px',
+    });
   },
 } satisfies Story;
