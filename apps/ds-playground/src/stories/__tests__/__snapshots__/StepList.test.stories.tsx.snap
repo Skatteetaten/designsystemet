@@ -19,7 +19,7 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
         <div class="StepListStep_stepSideWrapper__Mshb7 "
              tabindex="-1"
         >
-          <span class="StepListStep_stepCircle__wWmPq 
+          <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_passive__dU8i1">
             1
           </span>
@@ -31,7 +31,7 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
         >
           besvart
         </h3>
-        <div class="StepListStep_stepContent__1uagT   
+        <div class="StepListStep_stepContent__1uagT  
           ">
           <div>
             brødtekst
@@ -59,7 +59,7 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
         <div class="StepListStep_stepSideWrapper__Mshb7 "
              tabindex="-1"
         >
-          <span class="StepListStep_stepCircle__wWmPq 
+          <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_passive__dU8i1">
             2
           </span>
@@ -71,7 +71,7 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
         >
           besvart 2
         </h3>
-        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
+        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l 
           ">
           <div>
             brødtekst
@@ -83,7 +83,7 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
              tabindex="-1"
              aria-current="step"
         >
-          <span class="StepListStep_stepCircle__wWmPq 
+          <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_active__44uNJ">
             3
           </span>
@@ -95,7 +95,7 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
         >
           aktivt
         </h3>
-        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
+        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l 
           ">
           <div>
             brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst
@@ -118,7 +118,7 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
              tabindex="-1"
              aria-current="step"
         >
-          <span class="StepListStep_stepCircle__wWmPq 
+          <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_positiveResult__UJmXI">
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
                  viewbox="0 0 24 24"
@@ -142,7 +142,7 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
         >
           positivt resultat
         </h3>
-        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_positiveResult__yObTM  
+        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_positiveResult__yObTM 
           ">
           <div>
             <h3 class="Heading_heading__7K0um Heading_heading_level4__KEMPA  ">
@@ -173,7 +173,7 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
              tabindex="-1"
              aria-current="step"
         >
-          <span class="StepListStep_stepCircle__wWmPq 
+          <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_neutralResult__FtI1x">
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
                  viewbox="0 0 24 24"
@@ -205,7 +205,7 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
             innhold
           </div>
         </div>
-        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_neutralResult__cWoyS  
+        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_neutralResult__cWoyS 
           ">
           <div>
             more brødtekst
@@ -225,7 +225,7 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
         <div class="StepListStep_stepSideWrapper__Mshb7 "
              tabindex="-1"
         >
-          <span class="StepListStep_stepCircle__wWmPq 
+          <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_passive__dU8i1">
             1
           </span>
@@ -237,7 +237,7 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
         >
           besvart
         </h3>
-        <div class="StepListStep_stepContent__1uagT   
+        <div class="StepListStep_stepContent__1uagT  
           ">
           <div>
             brødtekst
@@ -265,7 +265,7 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
         <div class="StepListStep_stepSideWrapper__Mshb7 "
              tabindex="-1"
         >
-          <span class="StepListStep_stepCircle__wWmPq 
+          <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_passive__dU8i1">
             2
           </span>
@@ -277,7 +277,7 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
         >
           besvart 2
         </h3>
-        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
+        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l 
           ">
           <div>
             brødtekst
@@ -289,7 +289,7 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
              tabindex="-1"
              aria-current="step"
         >
-          <span class="StepListStep_stepCircle__wWmPq 
+          <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_active__44uNJ">
             3
           </span>
@@ -301,7 +301,7 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
         >
           aktivt
         </h3>
-        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
+        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l 
           ">
           <div>
             brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst
@@ -324,7 +324,7 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
              tabindex="-1"
              aria-current="step"
         >
-          <span class="StepListStep_stepCircle__wWmPq 
+          <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_positiveResult__UJmXI">
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
                  viewbox="0 0 24 24"
@@ -348,7 +348,7 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
         >
           positivt resultat
         </h3>
-        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_positiveResult__yObTM  
+        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_positiveResult__yObTM 
           ">
           <div>
             <h3 class="Heading_heading__7K0um Heading_heading_level4__KEMPA  ">
@@ -379,7 +379,7 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
              tabindex="-1"
              aria-current="step"
         >
-          <span class="StepListStep_stepCircle__wWmPq 
+          <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_neutralResult__FtI1x">
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
                  viewbox="0 0 24 24"
@@ -411,7 +411,7 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
             innhold
           </div>
         </div>
-        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_neutralResult__cWoyS  
+        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_neutralResult__cWoyS 
           ">
           <div>
             more brødtekst
@@ -431,7 +431,7 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
         <div class="StepListStep_stepSideWrapper__Mshb7 "
              tabindex="-1"
         >
-          <span class="StepListStep_stepCircle__wWmPq 
+          <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_passive__dU8i1">
             1
           </span>
@@ -443,7 +443,7 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
         >
           besvart
         </h3>
-        <div class="StepListStep_stepContent__1uagT   
+        <div class="StepListStep_stepContent__1uagT  
           ">
           <div>
             brødtekst
@@ -471,7 +471,7 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
         <div class="StepListStep_stepSideWrapper__Mshb7 "
              tabindex="-1"
         >
-          <span class="StepListStep_stepCircle__wWmPq 
+          <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_passive__dU8i1">
             2
           </span>
@@ -483,7 +483,7 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
         >
           besvart 2
         </h3>
-        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
+        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l 
           ">
           <div>
             brødtekst
@@ -495,7 +495,7 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
              tabindex="-1"
              aria-current="step"
         >
-          <span class="StepListStep_stepCircle__wWmPq 
+          <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_active__44uNJ">
             3
           </span>
@@ -507,7 +507,7 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
         >
           aktivt
         </h3>
-        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
+        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l 
           ">
           <div>
             brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst
@@ -530,7 +530,7 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
              tabindex="-1"
              aria-current="step"
         >
-          <span class="StepListStep_stepCircle__wWmPq 
+          <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_positiveResult__UJmXI">
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
                  viewbox="0 0 24 24"
@@ -554,7 +554,7 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
         >
           positivt resultat
         </h3>
-        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_positiveResult__yObTM  
+        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_positiveResult__yObTM 
           ">
           <div>
             <h3 class="Heading_heading__7K0um Heading_heading_level4__KEMPA  ">
@@ -585,7 +585,7 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
              tabindex="-1"
              aria-current="step"
         >
-          <span class="StepListStep_stepCircle__wWmPq 
+          <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_neutralResult__FtI1x">
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
                  viewbox="0 0 24 24"
@@ -617,7 +617,7 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
             innhold
           </div>
         </div>
-        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_neutralResult__cWoyS  
+        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_neutralResult__cWoyS 
           ">
           <div>
             more brødtekst
@@ -639,7 +639,7 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
            id=":r10:-1-focus-target"
            tabindex="-1"
       >
-        <span class="StepListStep_stepCircle__wWmPq 
+        <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_passive__dU8i1">
           1
         </span>
@@ -651,7 +651,7 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
       >
         Hva holder du på med?
       </h3>
-      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
+      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l 
           ">
         <div>
           Varer og tjenester
@@ -665,7 +665,7 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
            id=":r10:-2-focus-target"
            tabindex="-1"
       >
-        <span class="StepListStep_stepCircle__wWmPq 
+        <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_passive__dU8i1">
           2
         </span>
@@ -677,7 +677,7 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
       >
         Hva gjør du?
       </h3>
-      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
+      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l 
           ">
         <div>
           Selger
@@ -691,7 +691,7 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
            id=":r10:-3-focus-target"
            tabindex="-1"
       >
-        <span class="StepListStep_stepCircle__wWmPq 
+        <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_passive__dU8i1">
           3
         </span>
@@ -703,7 +703,7 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
       >
         Salg av varer og tjenester
       </h3>
-      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
+      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l 
           ">
         <div>
           <div>
@@ -720,7 +720,7 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
            tabindex="-1"
            aria-current="step"
       >
-        <span class="StepListStep_stepCircle__wWmPq 
+        <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_positiveResult__UJmXI">
           <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
                viewbox="0 0 24 24"
@@ -754,7 +754,7 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
           </p>
         </div>
       </div>
-      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_positiveResult__yObTM  
+      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_positiveResult__yObTM 
           ">
         <div>
           <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf  ">
@@ -785,7 +785,7 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
         <div class="StepListStep_stepSideWrapper__Mshb7 "
              tabindex="-1"
         >
-          <span class="StepListStep_stepCircle__wWmPq 
+          <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_passive__dU8i1">
             1
           </span>
@@ -797,7 +797,7 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
         >
           besvart
         </h3>
-        <div class="StepListStep_stepContent__1uagT   
+        <div class="StepListStep_stepContent__1uagT  
           ">
           <div>
             brødtekst
@@ -825,7 +825,7 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
         <div class="StepListStep_stepSideWrapper__Mshb7 "
              tabindex="-1"
         >
-          <span class="StepListStep_stepCircle__wWmPq 
+          <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_passive__dU8i1">
             2
           </span>
@@ -837,7 +837,7 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
         >
           besvart 2
         </h3>
-        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
+        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l 
           ">
           <div>
             brødtekst
@@ -849,7 +849,7 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
              tabindex="-1"
              aria-current="step"
         >
-          <span class="StepListStep_stepCircle__wWmPq 
+          <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_active__44uNJ">
             3
           </span>
@@ -861,7 +861,7 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
         >
           aktivt
         </h3>
-        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
+        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l 
           ">
           <div>
             brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst
@@ -884,7 +884,7 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
              tabindex="-1"
              aria-current="step"
         >
-          <span class="StepListStep_stepCircle__wWmPq 
+          <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_positiveResult__UJmXI">
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
                  viewbox="0 0 24 24"
@@ -908,7 +908,7 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
         >
           positivt resultat
         </h3>
-        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_positiveResult__yObTM  
+        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_positiveResult__yObTM 
           ">
           <div>
             <h3 class="Heading_heading__7K0um Heading_heading_level4__KEMPA  ">
@@ -939,7 +939,7 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
              tabindex="-1"
              aria-current="step"
         >
-          <span class="StepListStep_stepCircle__wWmPq 
+          <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_neutralResult__FtI1x">
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
                  viewbox="0 0 24 24"
@@ -971,7 +971,7 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
             innhold
           </div>
         </div>
-        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_neutralResult__cWoyS  
+        <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_neutralResult__cWoyS 
           ">
           <div>
             more brødtekst

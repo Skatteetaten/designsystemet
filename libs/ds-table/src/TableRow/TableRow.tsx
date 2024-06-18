@@ -55,10 +55,7 @@ export const TableRow = forwardRef<HTMLTableRowElement, TableRowProps>(
     const { t } = useTranslation('ds_tables', { i18n: dsI18n });
     const isDesktop = useMediaQuery('(min-width: 1024px)');
 
-    const isExpanded =
-      isExpandedExternal !== undefined
-        ? isExpandedExternal
-        : isExpandedInternal;
+    const isExpanded = isExpandedExternal ?? isExpandedInternal;
 
     useEffect(() => {
       setIsExpandedInternal(false);

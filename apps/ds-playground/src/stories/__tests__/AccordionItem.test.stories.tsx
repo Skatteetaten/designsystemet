@@ -36,6 +36,7 @@ const meta = {
     classNames: { table: { disable: true } },
     children: { table: { disable: true } },
     isExpanded: { table: { disable: true } },
+    isDefaultExpanded: { table: { disable: true } },
     svgPath: { table: { disable: true } },
     titleAs: {
       options: [...headingAsArr],
@@ -222,6 +223,24 @@ export const IsExpanded = {
   },
   argTypes: {
     isExpanded: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const content = await canvas.findByText(defaultContent);
+    await expect(content).toBeInTheDocument();
+    const button = canvas.getByRole('button');
+    await expect(button).toHaveAttribute('aria-expanded', 'true');
+  },
+} satisfies Story;
+
+export const IsDefaultExpanded = {
+  name: 'With IsDefaultExpanded (A6 delvis)',
+  args: {
+    ...defaultArgs,
+    isDefaultExpanded: true,
+  },
+  argTypes: {
+    isDefaultExpanded: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

@@ -67,6 +67,8 @@ export interface TextFieldCommonProps
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
   /** Definerer stilen til TextField */
   variant?: FormSize;
+  /** Callback som kalles når hjelpetekst vises/skjules */
+  onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
 }
 
 type TextFieldDiscriminatedProps =

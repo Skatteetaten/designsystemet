@@ -1,5 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Tester/StepList/Step NextButtonWithDisabled smoke-test 1`] = `
+<div data-test-block="true">
+  <ol class="StepList_stepList__XjLpY ">
+    <li class="StepListStep_step__js1fz StepListStep_step_active__Pthdd ">
+      <div class="StepListStep_stepSideWrapper__Mshb7 "
+           tabindex="-1"
+           aria-current="step"
+      >
+        <span class="StepListStep_stepCircle__wWmPq
+        StepListStep_stepCircle_active__44uNJ">
+          1
+        </span>
+        <div class="StepListStep_stepLine__BOJMv ">
+        </div>
+      </div>
+      <h3 id="steptitle-:r9:"
+          class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+      >
+        tittel
+      </h3>
+      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l 
+          ">
+        <div>
+          Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+        </div>
+      </div>
+      <div class="StepListStep_nextLine__hWgXS">
+      </div>
+      <span class="StepListStep_buttonWrapper__mewkO">
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+                disabled
+                type="button"
+        >
+          <span class="Button_buttonText__JxyB+">
+            Neste
+          </span>
+        </button>
+      </span>
+    </li>
+  </ol>
+</div>
+`;
+
 exports[`Tester/StepList/Step NextButtonWithSpinner smoke-test 1`] = `
 <div data-test-block="true">
   <ol class="StepList_stepList__XjLpY ">
@@ -8,7 +51,7 @@ exports[`Tester/StepList/Step NextButtonWithSpinner smoke-test 1`] = `
            tabindex="-1"
            aria-current="step"
       >
-        <span class="StepListStep_stepCircle__wWmPq 
+        <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_active__44uNJ">
           1
         </span>
@@ -20,7 +63,7 @@ exports[`Tester/StepList/Step NextButtonWithSpinner smoke-test 1`] = `
       >
         tittel
       </h3>
-      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
+      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l 
           ">
         <div>
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
@@ -64,7 +107,7 @@ exports[`Tester/StepList/Step WithAttributes play-test 1`] = `
            id="htmlid-focus-target"
            tabindex="-1"
       >
-        <span class="StepListStep_stepCircle__wWmPq 
+        <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_passive__dU8i1">
           1
         </span>
@@ -76,7 +119,7 @@ exports[`Tester/StepList/Step WithAttributes play-test 1`] = `
       >
         title
       </h3>
-      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
+      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l 
           ">
         <div>
         </div>
@@ -94,7 +137,7 @@ exports[`Tester/StepList/Step WithEditAccessibleDescription play-test 1`] = `
            tabindex="-1"
            aria-current="step"
       >
-        <span class="StepListStep_stepCircle__wWmPq 
+        <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_active__44uNJ">
           1
         </span>
@@ -106,7 +149,7 @@ exports[`Tester/StepList/Step WithEditAccessibleDescription play-test 1`] = `
       >
         tittel
       </h3>
-      <div class="StepListStep_stepContent__1uagT   
+      <div class="StepListStep_stepContent__1uagT  
           ">
         <div>
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
@@ -142,7 +185,7 @@ exports[`Tester/StepList/Step WithFullWidthResult smoke-test 1`] = `
            tabindex="-1"
            aria-current="step"
       >
-        <span class="StepListStep_stepCircle__wWmPq 
+        <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_neutralResult__FtI1x">
           <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
                viewbox="0 0 24 24"
@@ -166,7 +209,7 @@ exports[`Tester/StepList/Step WithFullWidthResult smoke-test 1`] = `
       >
         jeg er en tittel
       </h3>
-      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_neutralResult__cWoyS StepListStep_stepContent_fullWidth__ExysN 
+      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_neutralResult__cWoyS StepListStep_stepContent_fullWidth__ExysN
           ">
         <div>
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
@@ -185,7 +228,7 @@ exports[`Tester/StepList/Step WithIconTitleAS play-test 1`] = `
            tabindex="-1"
            aria-current="step"
       >
-        <span class="StepListStep_stepCircle__wWmPq 
+        <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_active__44uNJ">
           <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
                viewbox="0 0 24 24"
@@ -209,7 +252,7 @@ exports[`Tester/StepList/Step WithIconTitleAS play-test 1`] = `
       >
         jeg er en tittel
       </h2>
-      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
+      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l 
           ">
         <div>
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
@@ -229,7 +272,7 @@ exports[`Tester/StepList/Step WithRef play-test 1`] = `
       <div class="StepListStep_stepSideWrapper__Mshb7 "
            tabindex="-1"
       >
-        <span class="StepListStep_stepCircle__wWmPq 
+        <span class="StepListStep_stepCircle__wWmPq
         StepListStep_stepCircle_passive__dU8i1">
           1
         </span>
@@ -241,7 +284,7 @@ exports[`Tester/StepList/Step WithRef play-test 1`] = `
       >
         title
       </h3>
-      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l  
+      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l 
           ">
         <div>
         </div>

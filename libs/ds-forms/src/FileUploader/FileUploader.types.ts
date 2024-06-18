@@ -103,6 +103,8 @@ export interface FileUploaderCommonProps
     event: MouseEvent<HTMLAnchorElement>,
     file: UploadedFile
   ) => void;
+  /** Callback som kalles når hjelpetekst vises/skjules */
+  onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
 }
 
 export interface UploadedFile {

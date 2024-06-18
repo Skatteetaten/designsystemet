@@ -53,6 +53,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
       onBlur,
       onChange,
       onFocus,
+      onHelpToggle,
       children,
     },
     ref
@@ -110,6 +111,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
           helpSvgPath={helpSvgPath}
           helpText={helpText}
           titleHelpSvg={titleHelpSvg}
+          onHelpToggle={onHelpToggle}
         >
           {label}
         </LabelWithHelp>

@@ -74,6 +74,7 @@ const meta = {
     onChange: { table: { disable: true } },
     onFocus: { table: { disable: true } },
     onSelectDate: { table: { disable: true } },
+    onHelpToggle: { table: { disable: true } },
   },
   parameters: {
     mockDate: today,
@@ -376,6 +377,8 @@ export const WithHelpText = {
     });
     await expect(helpButton).toBeInTheDocument();
     await fireEvent.click(helpButton);
+    const helpText = canvas.getByText('Hjelpetekst');
+    await expect(helpText).toBeInTheDocument();
   },
 } satisfies Story;
 
@@ -522,23 +525,18 @@ export const GenerouslyWithFormatFromUser = {
     const input = canvas.getByRole('textbox');
     input.focus();
 
-    const removeDate =
-      '{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}';
-
     const user = userEvent.setup();
 
-    await waitFor(() => expect(input).toHaveValue('01.02.2024'));
-    await user.keyboard(removeDate);
-    await user.keyboard('0102');
-    await user.tab();
-    await waitFor(() =>
-      expect(input).toHaveValue(`01.02.${new Date().getFullYear()}`)
-    );
+    await fireEvent.change(input, { target: { value: '0103' } });
 
-    await user.keyboard(removeDate);
-    await user.keyboard('010224');
     await user.tab();
-    await waitFor(() => expect(input).toHaveValue('01.02.2024'));
+    await waitFor(() => expect(input).toHaveValue('01.03.2024'));
+    input.focus();
+
+    await fireEvent.change(input, { target: { value: '0104' } });
+    await user.tab();
+
+    await waitFor(() => expect(input).toHaveValue('01.04.2024'));
   },
 } satisfies Story;
 
@@ -752,5 +750,55 @@ export const WithShadowDom = {
     await fireEvent.click(shadowCanvas.getByLabelText(defaultLabelText));
     await expect(calendarTable).not.toBeInTheDocument();
     await expect(calendarButton).toHaveAttribute('aria-expanded', 'false');
+  },
+} satisfies Story;
+
+export const WithHelpToggleEvent = {
+  name: 'With onHelpToggle Event',
+  args: {
+    ...defaultArgs,
+    helpText: 'Hjelpetekst',
+    onHelpToggle: (isOpen: boolean): void => {
+      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
+    },
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
+  },
+} satisfies Story;
+
+export const HideCalendarOnResizeWidth = {
+  name: 'Hide Calendar On Window Resize (Kalender A4)',
+  args: {
+    ...defaultArgs,
+    value: valueDate,
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+    HTMLSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const calendarButton = canvas.getByRole('button');
+    await fireEvent.click(calendarButton);
+    const calendarTable = canvas.getByRole('table');
+    await expect(calendarTable).toBeInTheDocument();
+
+    // kalender lukkes _ikke_ dersom vinduet blir bredere
+    window.innerWidth = window.innerWidth + 100;
+    await fireEvent.resize(window);
+    await expect(calendarTable).toBeInTheDocument();
+
+    // kalender lukkes _ikke_ dersom vinduet blir lavere
+    window.innerHeight = window.innerHeight - 100;
+    await fireEvent.resize(window);
+    await expect(calendarTable).toBeInTheDocument();
+
+    // kalender lukkes dersom vinduet blir smalere
+    window.innerWidth = window.innerWidth - 100;
+    await fireEvent.resize(window);
+    await expect(calendarTable).not.toBeInTheDocument();
   },
 } satisfies Story;

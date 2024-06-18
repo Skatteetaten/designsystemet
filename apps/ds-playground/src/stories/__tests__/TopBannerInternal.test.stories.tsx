@@ -7,6 +7,7 @@ import { TopBannerInternal } from '@skatteetaten/ds-layout';
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, fireEvent, fn, within } from '@storybook/test';
 
+import { wrapper } from './testUtils/storybook.testing.utils';
 import customLogo from '../../assets/custom-mobile-logo.svg';
 
 const meta = {
@@ -198,6 +199,9 @@ export const WithTitleDescriptionUser = {
     viewport: {
       defaultViewport: '--breakpoint-l',
     },
+    imageSnapshot: {
+      focus: `${wrapper} > header > div > div > a`,
+    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -207,6 +211,7 @@ export const WithTitleDescriptionUser = {
     await expect(description).toBeInTheDocument();
   },
 } satisfies Story;
+
 export const WithLongTitleDescriptionMobile = {
   name: 'With Long Title description Username (A2, A4, A7)',
   argTypes: {

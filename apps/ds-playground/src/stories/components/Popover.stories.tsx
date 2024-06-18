@@ -10,7 +10,7 @@ import { Table } from '@skatteetaten/ds-table';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { category } from '../../../.storybook/helpers';
+import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import { exampleParameters } from '../utils/stories.utils';
 
@@ -45,7 +45,7 @@ const meta = {
     },
     isOpen: { table: { category: category.props } },
     //Events
-    onClose: { control: false, table: { category: category.props } },
+    onClose: { ...htmlEventDescription, table: { disable: true } },
   },
 } satisfies Meta<typeof Popover>;
 export default meta;
