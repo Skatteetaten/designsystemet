@@ -39,6 +39,8 @@ const meta = {
     accessKey: { table: { category: category.htmlAttribute } },
     disabled: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },
+    href: { table: { category: category.htmlAttribute } },
+    isExternal: { table: { category: category.props } },
     type: {
       table: {
         category: category.htmlAttribute,

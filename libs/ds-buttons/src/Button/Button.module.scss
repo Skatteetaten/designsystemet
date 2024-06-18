@@ -43,11 +43,17 @@
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-bold);
   line-height: var(--semantic-line-height-buttons);
+  text-decoration-line: none;
   transition: 0.15s;
   will-change: transform;
 
   &_withIcon {
     padding-right: var(--spacing-l);
+    text-align: left;
+  }
+
+  &_withIconRight {
+    padding-left: var(--spacing-l);
     text-align: left;
   }
 
@@ -62,6 +68,10 @@
     display: inline;
     margin: 0 var(--spacing-xs) 0 0;
     background-color: inherit;
+
+    &External {
+      margin: 0 0 0 var(--spacing-xs);
+    }
   }
 
   & .buttonText {
