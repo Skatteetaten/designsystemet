@@ -32,7 +32,6 @@ const meta = {
         defaultValue: { summary: dsI18n.t('ds_collections:steplist.Next') },
       },
     },
-    nextButtonHasSpinner: { table: { category: category.props } },
     introTitle: {
       control: 'text',
       table: { category: category.props, type: { summary: 'string' } },
