@@ -8,6 +8,7 @@
   border: none;
   border-radius: 0;
   margin-top: var(--spacing-xs);
+
   // stylelint-disable-next-line property-no-vendor-prefix
   -webkit-appearance: none;
   appearance: none;
@@ -29,6 +30,7 @@
 
   &_autosize {
     overflow: hidden;
+    min-height: calc(2lh + calc(var(--spacing-s) * 2));
     resize: none;
   }
 
