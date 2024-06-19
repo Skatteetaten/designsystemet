@@ -4,6 +4,7 @@ import { Tabs, TabsProps } from '@skatteetaten/ds-collections';
 import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { Button } from '@skatteetaten/ds-buttons';
 
 const meta = {
   component: Tabs,
@@ -166,6 +167,9 @@ export const WithValue = {
     defaultValue: undefined,
     value: 'tab2',
   },
+  argTypes: {
+    value: { table: { disable: false } },
+  },
   render: (args): JSX.Element => {
     const [{ value }, updateArgs] = useArgs();
     const onChange = (val: string): void => {
@@ -191,13 +195,22 @@ export const WithValue = {
   parameters: {
     imageSnapshot: { disable: true },
   },
-  play: async ({ canvasElement }): Promise<void> => {
+  play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
     const secondTab = canvas.getByRole('tab', {
       name: 'Bedrift',
     });
     await expect(secondTab).toBeInTheDocument();
     await expect(secondTab).toHaveAttribute('aria-selected', 'true');
+    args.value = 'tab1';
+
+    // const button = canvas.getByRole('button');
+    // await userEvent.click(button);
+
+    const firsttab = canvas.getByRole('tab', {
+      name: 'Person',
+    });
+    await expect(firsttab).toHaveAttribute('aria-selected', 'true');
   },
 } satisfies Story;
 
