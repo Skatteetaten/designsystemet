@@ -644,7 +644,7 @@ exports[`Tester/TextField WithRows play-test 1`] = `
 
 exports[`Tester/TextField WithTextAreaAutoSizeInModal play-test 1`] = `
 <div data-test-block="true">
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
           type="button"
   >
     <span class="Button_buttonText__JxyB+">
