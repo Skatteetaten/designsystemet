@@ -61,7 +61,7 @@ interface DatePickerCommonProps
   dateFormat?: string;
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
-  /** Kalles når en dato-knapp klikkes på. */
+  /** Callback som kalles når dato-verdien endres. */
   onSelectDate?: (date: Date | null) => void;
 }
 
