@@ -6,19 +6,16 @@ interface AlertHTMLAttributes {
   ariaLive?: ComponentPropsWithoutRef<'div'>['aria-live'];
 }
 
-type FalseValue = false;
-type TrueValue = true;
-
 type AlertShow =
   | {
       /** Bryter som kontrollerer om alerten er visuelt synlig */
-      showAlert: FalseValue;
+      showAlert: false;
       /** Tekst eller markup for meldingen.*/
       children?: ReactNode;
     }
   | {
       /** Bryter som kontrollerer om alerten er visuelt synlig */
-      showAlert: TrueValue;
+      showAlert: true;
       /** Tekst eller markup for meldingen */
       children: ReactNode;
     };
@@ -26,10 +23,10 @@ type AlertShow =
 export type AlertProps = AlertHTMLAttributes &
   BaseProps &
   AlertShow & {
-    /** Om Alert skal ha lukke-knapp */
-    showCloseButton?: boolean;
     /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
     svgPath?: ReactElement;
     /** Definerer stilen */
     variant: Status;
+    /** Callback til lukk-knapp  */
+    onClose?: () => void;
   };
