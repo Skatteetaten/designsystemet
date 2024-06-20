@@ -131,6 +131,7 @@ const ExpandEditSortTable = (
             {'Dekningsgrad'}
           </Table.HeaderCell>
           <Table.HeaderCell
+            alignment={'right'}
             data-testid={'header-belop'}
             scope={'col'}
             sortKey={'amount'}
@@ -139,7 +140,7 @@ const ExpandEditSortTable = (
             {'Beløp'}
           </Table.HeaderCell>
           <Table.HeaderCell
-            alignment={'right'}
+            alignment={'center'}
             scope={'col'}
             sortKey={'month'}
             isSortable
@@ -161,7 +162,7 @@ const ExpandEditSortTable = (
         {sortedData.map(({ isExpandable, id, rowData }, index) => {
           const content = (
             <>
-              <Table.DataCell alignment={'right'} id={id}>
+              <Table.DataCell alignment={'left'} id={id}>
                 {rowData.coverage}
               </Table.DataCell>
               <Table.DataCell alignment={'right'}>
