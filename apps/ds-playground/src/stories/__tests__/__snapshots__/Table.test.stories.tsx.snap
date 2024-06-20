@@ -213,7 +213,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
               data-testid="header-belop"
               scope="col"
           >
@@ -236,7 +236,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
+          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_center__1aSLj "
               scope="col"
           >
             <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_standard__I+g27"
@@ -310,7 +310,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             </button>
           </td>
           <td id="s5f0e"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  "
+              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
           >
             100 %
           </td>
@@ -363,7 +363,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             </div>
           </td>
           <td id="3vesy"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  "
+              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
           >
             50 %
           </td>
@@ -403,7 +403,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             </button>
           </td>
           <td id="16prz"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  "
+              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
           >
             20 %
           </td>
@@ -442,7 +442,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             </button>
           </td>
           <td id="3xpjb"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  "
+              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
           >
             30 %
           </td>
@@ -512,7 +512,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
               data-testid="header-belop"
               scope="col"
           >
@@ -535,7 +535,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
+          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_center__1aSLj "
               scope="col"
           >
             <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_standard__I+g27"
@@ -608,7 +608,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             </button>
           </td>
           <td id="s5f0e"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  "
+              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
           >
             100 %
           </td>
@@ -647,7 +647,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             </button>
           </td>
           <td id="3vesy"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  "
+              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
           >
             50 %
           </td>
@@ -686,7 +686,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             </button>
           </td>
           <td id="16prz"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  "
+              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
           >
             20 %
           </td>
@@ -725,7 +725,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             </button>
           </td>
           <td id="3xpjb"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  "
+              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
           >
             30 %
           </td>
@@ -872,7 +872,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
               data-testid="header-belop"
               scope="col"
           >
@@ -895,7 +895,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
+          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_center__1aSLj "
               scope="col"
           >
             <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_standard__I+g27"
@@ -968,7 +968,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             </button>
           </td>
           <td id="s5f0e"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  "
+              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
           >
             100 %
           </td>
@@ -1007,7 +1007,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             </button>
           </td>
           <td id="3vesy"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  "
+              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
           >
             50 %
           </td>
@@ -1046,7 +1046,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             </button>
           </td>
           <td id="16prz"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  "
+              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
           >
             20 %
           </td>
@@ -1085,7 +1085,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             </button>
           </td>
           <td id="3xpjb"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  "
+              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
           >
             30 %
           </td>
@@ -1442,7 +1442,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
               data-testid="header-belop"
               scope="col"
           >
@@ -1465,7 +1465,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
+          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_center__1aSLj "
               scope="col"
           >
             <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_compact__-SSF+"
@@ -1538,7 +1538,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             </button>
           </td>
           <td id="s5f0e"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_right__5f8tM  "
+              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_left__+6UbM  "
           >
             100 %
           </td>
@@ -1577,7 +1577,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             </button>
           </td>
           <td id="3vesy"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_right__5f8tM  "
+              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_left__+6UbM  "
           >
             50 %
           </td>
@@ -1616,7 +1616,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             </button>
           </td>
           <td id="16prz"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_right__5f8tM  "
+              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_left__+6UbM  "
           >
             20 %
           </td>
@@ -1655,7 +1655,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             </button>
           </td>
           <td id="3xpjb"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_right__5f8tM  "
+              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_left__+6UbM  "
           >
             30 %
           </td>
@@ -1725,7 +1725,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
               data-testid="header-belop"
               scope="col"
           >
@@ -1748,7 +1748,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
+          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_center__1aSLj "
               scope="col"
           >
             <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_standard__I+g27"
@@ -1821,7 +1821,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             </button>
           </td>
           <td id="s5f0e"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  "
+              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
           >
             100 %
           </td>
@@ -1860,7 +1860,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             </button>
           </td>
           <td id="3vesy"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  "
+              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
           >
             50 %
           </td>
@@ -1899,7 +1899,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             </button>
           </td>
           <td id="16prz"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  "
+              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
           >
             20 %
           </td>
@@ -1938,7 +1938,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             </button>
           </td>
           <td id="3xpjb"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  "
+              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
           >
             30 %
           </td>
