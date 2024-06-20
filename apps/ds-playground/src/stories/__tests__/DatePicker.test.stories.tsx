@@ -22,7 +22,9 @@ const verifyAttribute =
     const canvas = within(canvasElement);
     const button = canvas.getByRole('textbox');
     await expect(button).toBeInTheDocument();
-    await expect(button).toHaveAttribute(attribute, expectedValue);
+    await waitFor(() =>
+      expect(button).toHaveAttribute(attribute, expectedValue)
+    );
   };
 
 const today = new Date('2024.01.15');
