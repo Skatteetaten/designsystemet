@@ -1,8 +1,11 @@
 @import '../shared';
 
 .headerCell {
+  --text-align: left;
+
   border-bottom: solid 2px var(--semantic-divider-100);
   font-weight: var(--font-weight-bold);
+  text-align: var(--text-align);
   vertical-align: top;
 
   &_noPadding {
@@ -17,7 +20,7 @@
     cursor: pointer;
     font: inherit;
     outline: inherit;
-    text-align: left;
+    text-align: var(--text-align);
     vertical-align: top;
 
     &Icon {
@@ -47,15 +50,15 @@
   }
 
   &_left {
-    text-align: left;
+    --text-align: left;
   }
 
   &_right {
-    text-align: right;
+    --text-align: right;
   }
 
   &_center {
-    text-align: center;
+    --text-align: center;
   }
 
   &_row {
