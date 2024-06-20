@@ -13,4 +13,4 @@ declare const classNames: {
   readonly listItem: 'listItem';
   readonly srOnly: 'srOnly';
 };
-export = classNames;
+export default classNames;

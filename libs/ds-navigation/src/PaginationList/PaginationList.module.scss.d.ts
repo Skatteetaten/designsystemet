@@ -4,4 +4,4 @@ declare const classNames: {
   readonly element_leftArrow: 'element_leftArrow';
   readonly element_rightArrow: 'element_rightArrow';
 };
-export = classNames;
+export default classNames;

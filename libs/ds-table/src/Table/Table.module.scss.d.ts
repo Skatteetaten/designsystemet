@@ -10,4 +10,4 @@ declare const classNames: {
   readonly table_compact: 'table_compact';
   readonly hidden: 'hidden';
 };
-export = classNames;
+export default classNames;

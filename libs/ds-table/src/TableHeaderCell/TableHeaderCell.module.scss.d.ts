@@ -10,4 +10,4 @@ declare const classNames: {
   readonly headerCell_row: 'headerCell_row';
   readonly headerCell_compact: 'headerCell_compact';
 };
-export = classNames;
+export default classNames;

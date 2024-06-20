@@ -6,4 +6,4 @@ declare const classNames: {
   readonly button_filled: 'button_filled';
   readonly button_outline: 'button_outline';
 };
-export = classNames;
+export default classNames;

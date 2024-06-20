@@ -8,4 +8,4 @@ declare const classNames: {
   readonly expandableContent: 'expandableContent';
   readonly srOnly: 'srOnly';
 };
-export = classNames;
+export default classNames;

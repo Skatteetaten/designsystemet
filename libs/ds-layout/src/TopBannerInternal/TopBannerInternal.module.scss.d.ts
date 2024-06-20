@@ -16,4 +16,4 @@ declare const classNames: {
   readonly nameContainerName: 'nameContainerName';
   readonly nameContainerIcon: 'nameContainerIcon';
 };
-export = classNames;
+export default classNames;

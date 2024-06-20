@@ -4,4 +4,4 @@ declare const classNames: {
   readonly buttonText: 'buttonText';
   readonly buttonCurrent: 'buttonCurrent';
 };
-export = classNames;
+export default classNames;

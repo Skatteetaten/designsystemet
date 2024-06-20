@@ -12,4 +12,4 @@ declare const classNames: {
   readonly columns: 'columns';
   readonly column: 'column';
 };
-export = classNames;
+export default classNames;

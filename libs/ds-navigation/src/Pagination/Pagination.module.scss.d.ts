@@ -6,4 +6,4 @@ declare const classNames: {
   readonly paginationElement_leftArrow: 'paginationElement_leftArrow';
   readonly paginationElement_rightArrow: 'paginationElement_rightArrow';
 };
-export = classNames;
+export default classNames;

@@ -4,4 +4,4 @@ declare const classNames: {
   readonly logo_mobile: 'logo_mobile';
   readonly logo_desktop: 'logo_desktop';
 };
-export = classNames;
+export default classNames;

@@ -7,4 +7,4 @@ declare const classNames: {
   readonly row_noBorder: 'row_noBorder';
   readonly hideIcon: 'hideIcon';
 };
-export = classNames;
+export default classNames;

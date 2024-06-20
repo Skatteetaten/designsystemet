@@ -12,4 +12,4 @@ declare const classNames: {
   readonly popoverArrow_left: 'popoverArrow_left';
   readonly popoverArrow_right: 'popoverArrow_right';
 };
-export = classNames;
+export default classNames;

@@ -15,4 +15,4 @@ declare const classNames: {
   readonly closeButton: 'closeButton';
   readonly srOnly: 'srOnly';
 };
-export = classNames;
+export default classNames;

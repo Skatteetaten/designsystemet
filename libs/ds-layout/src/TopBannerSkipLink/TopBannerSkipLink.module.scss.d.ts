@@ -3,4 +3,4 @@ declare const classNames: {
   readonly skipLinkContent: 'skipLinkContent';
   readonly icon: 'icon';
 };
-export = classNames;
+export default classNames;

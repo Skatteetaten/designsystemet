@@ -11,4 +11,4 @@ declare const classNames: {
   readonly linkContainer: 'linkContainer';
   readonly linkList: 'linkList';
 };
-export = classNames;
+export default classNames;

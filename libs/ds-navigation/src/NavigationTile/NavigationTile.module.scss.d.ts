@@ -18,4 +18,4 @@ declare const classNames: {
   readonly iconWrapper_medium: 'iconWrapper_medium';
   readonly iconWrapper_large: 'iconWrapper_large';
 };
-export = classNames;
+export default classNames;

@@ -7,4 +7,4 @@ declare const classNames: {
   readonly dataCell_center: 'dataCell_center';
   readonly dataCell_compact: 'dataCell_compact';
 };
-export = classNames;
+export default classNames;
