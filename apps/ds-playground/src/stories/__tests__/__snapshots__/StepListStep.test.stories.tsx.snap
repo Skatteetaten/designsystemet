@@ -29,7 +29,7 @@ exports[`Tester/StepList/Step NextButtonWithDisabled smoke-test 1`] = `
       <div class="StepListStep_nextLine__hWgXS">
       </div>
       <span class="StepListStep_buttonWrapper__mewkO">
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
                 disabled
                 type="button"
         >
@@ -72,7 +72,7 @@ exports[`Tester/StepList/Step NextButtonWithSpinner smoke-test 1`] = `
       <div class="StepListStep_nextLine__hWgXS">
       </div>
       <span class="StepListStep_buttonWrapper__mewkO">
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+        <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
                 type="button"
         >
           <span class="Button_buttonText__JxyB+ Button_hide__dLd9W">

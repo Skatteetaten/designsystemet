@@ -1,11 +1,13 @@
 /* eslint-disable jsx-a11y/no-access-key */
 import { forwardRef, JSX } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import {
+  dsI18n,
   getCommonButtonTypeDefault,
   getCommonClassNameDefault,
 } from '@skatteetaten/ds-core-utils';
-import { Icon } from '@skatteetaten/ds-icons';
+import { ExternalIcon, Icon } from '@skatteetaten/ds-icons';
 import { Spinner, SpinnerColor } from '@skatteetaten/ds-progress';
 
 import { ButtonProps } from './Button.types';
@@ -13,7 +15,10 @@ import { getButtonVariantDefault } from './defaults';
 
 import styles from './Button.module.scss';
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = forwardRef<
+  HTMLButtonElement | HTMLAnchorElement,
+  ButtonProps
+>(
   (
     {
       id,
@@ -26,10 +31,12 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       accessKey,
       disabled,
       form,
+      href,
       type = getCommonButtonTypeDefault(),
       ariaDescribedby,
       ariaCurrent,
       hasSpinner,
+      isExternal,
       onBlur,
       onClick,
       onFocus,
@@ -37,10 +44,15 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ): JSX.Element => {
-    const withIconClassName = svgPath ? styles.button_withIcon : '';
+    const { t } = useTranslation('ds_buttons', { i18n: dsI18n });
+    const withIconClassName =
+      !isExternal && svgPath ? styles.button_withIcon : '';
+    const withIconRightClassName = isExternal
+      ? styles.button_withIconRight
+      : '';
     const concatenatedClassName = `${styles.button} ${
       styles[`button_${variant}`]
-    } ${withIconClassName} ${className}`;
+    } ${withIconClassName} ${withIconRightClassName} ${className}`;
     const hideClassName = hasSpinner ? styles.hide : '';
     const getSpinnerColor = (): SpinnerColor => {
       if (disabled) {
@@ -53,24 +65,33 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         return 'blue';
       }
     };
+
+    const Tag = href !== undefined ? 'a' : 'button';
+
     return (
-      <button
-        ref={ref}
+      <Tag
+        ref={
+          ref as (
+            instance: HTMLButtonElement | HTMLAnchorElement | null
+          ) => void
+        }
         id={id}
         className={concatenatedClassName}
         lang={lang}
         data-testid={dataTestId}
         accessKey={accessKey}
         disabled={disabled}
-        type={type}
+        href={href}
         form={form}
+        type={href !== undefined ? undefined : type}
         aria-current={ariaCurrent}
         aria-describedby={ariaDescribedby}
+        role={href ? 'button' : undefined}
         onBlur={onBlur}
         onClick={onClick}
         onFocus={onFocus}
       >
-        {svgPath && (
+        {!isExternal && svgPath && (
           <span className={`${styles.iconWrapper} ${hideClassName}`.trim()}>
             <Icon className={styles.icon} svgPath={svgPath} />
           </span>
@@ -78,6 +99,14 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         <span className={`${styles.buttonText} ${hideClassName}`.trim()}>
           {children}
         </span>
+        {isExternal && (
+          <span className={`${styles.iconWrapper} ${hideClassName}`.trim()}>
+            <ExternalIcon
+              className={`${styles.icon} ${styles.iconExternal} ${hideClassName}`.trim()}
+              ariaLabel={t('shared.ExternalIcon')}
+            />
+          </span>
+        )}
         {hasSpinner && (
           <Spinner
             className={styles.spinner}
@@ -88,7 +117,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             {spinnerTitle}
           </Spinner>
         )}
-      </button>
+      </Tag>
     );
   }
 );
