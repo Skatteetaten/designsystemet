@@ -1,6 +1,9 @@
 import { format, isValid, parse } from 'date-fns';
 
-export const formatDateForInput = (dateFormat: string, date?: Date): string => {
+export const formatDateForInput = (
+  dateFormat: string,
+  date?: Date | null
+): string => {
   return !isValid(date) ? '' : format(date as Date, dateFormat);
 };
 
@@ -25,16 +28,4 @@ export const parseDateFromInput = (value: string): Date | null => {
   }
 
   return null;
-};
-
-export const initInputValue = (
-  value: Date | null | undefined,
-  defaultValue: Date | null | undefined,
-  dateFormat: string
-): string | undefined => {
-  if (value) {
-    return formatDateForInput(dateFormat, value);
-  }
-
-  return defaultValue ? undefined : '';
 };
