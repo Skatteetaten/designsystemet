@@ -1,18 +1,18 @@
 import { FocusEvent, ChangeEvent, useState, useRef } from 'react';
 
+import { Button } from '@skatteetaten/ds-buttons';
 import { formArrSize } from '@skatteetaten/ds-core-utils';
 import {
   TextboxRefHandle,
   TextField,
   textFieldAsArr,
 } from '@skatteetaten/ds-forms';
+import { Modal } from '@skatteetaten/ds-overlays';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
-import { Modal } from '@skatteetaten/ds-overlays';
-import { Button } from '@skatteetaten/ds-buttons';
 
 const verifyAttribute =
   (attribute: string, expectedValue: string) =>
