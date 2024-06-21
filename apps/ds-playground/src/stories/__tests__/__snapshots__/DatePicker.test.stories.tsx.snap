@@ -818,6 +818,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
               </label>
               <input id="textFieldTextboxId-:r32:"
                      class="TextField_textbox__qbZlk"
+                     inputmode="numeric"
                      value="2024"
               >
               <div id="textFieldErrorId-:r31:"
