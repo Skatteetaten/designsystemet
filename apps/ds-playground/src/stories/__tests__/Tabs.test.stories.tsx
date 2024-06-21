@@ -212,11 +212,9 @@ export const WithValue = {
     await expect(secondTab).toHaveAttribute('aria-selected', 'true');
 
     await step('Endrer prop til person-tab', async () => {
-      const button = canvas.getByRole('button', { name: 'ToggleTab' });
+      const button = await canvas.findByRole('button', { name: 'ToggleTab' });
       await fireEvent.click(button);
-      // Tvinge kjøring av script til å vente på endring i komponent
-      await new Promise((r) => setTimeout(r, 1000));
-      const firsttab = canvas.getByRole('tab', {
+      const firsttab = await canvas.findByRole('tab', {
         name: 'Person',
       });
       await expect(firsttab).toHaveAttribute('aria-selected', 'true');
