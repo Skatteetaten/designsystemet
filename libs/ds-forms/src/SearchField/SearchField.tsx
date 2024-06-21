@@ -279,7 +279,7 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
                   title={searchButtonTitle ?? t('searchfield.ButtonTitle')}
                 />
               ) : (
-                t('searchfield.ButtonTitle')
+                searchButtonTitle ?? t('searchfield.ButtonTitle')
               )}
             </button>
           )}
