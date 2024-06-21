@@ -1,9 +1,17 @@
 import { JSX } from 'react';
 
+import { Button } from '@skatteetaten/ds-buttons';
 import { Tabs, TabsProps } from '@skatteetaten/ds-collections';
 import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import {
+  expect,
+  fireEvent,
+  fn,
+  userEvent,
+  waitFor,
+  within,
+} from '@storybook/test';
 
 const meta = {
   component: Tabs,
@@ -46,11 +54,11 @@ const TemplateTabs: StoryFn<typeof Tabs> = (args) => {
       <Tabs.List>
         <Tabs.Tab value={'tab1'}>{'Person'}</Tabs.Tab>
         <Tabs.Tab value={'tab2'}>{'Bedrift'}</Tabs.Tab>
-        <Tabs.Tab value={'tab3'}>{'Rettskilder'}</Tabs.Tab>
+        <Tabs.Tab value={'tab3'}>{'Organisasjon'}</Tabs.Tab>
       </Tabs.List>
       <Tabs.Panel value={'tab1'}>{'Tabs.Panel Person'}</Tabs.Panel>
       <Tabs.Panel value={'tab2'}>{'Tabs.Panel Bedrift'}</Tabs.Panel>
-      <Tabs.Panel value={'tab3'}>{'Tabs.Panel Rettskilder'}</Tabs.Panel>
+      <Tabs.Panel value={'tab3'}>{'Tabs.Panel Organisasjon'}</Tabs.Panel>
     </Tabs>
   );
 };
@@ -171,45 +179,48 @@ export const WithValue = {
   },
   render: (args): JSX.Element => {
     const [{ value }, updateArgs] = useArgs();
-    const onChange = (val: string): void => {
-      updateArgs({ value: val });
+    const toggleTab = (): void => {
+      if (value === 'tab1') {
+        updateArgs({ value: 'tab2' });
+      } else {
+        updateArgs({ value: 'tab1' });
+      }
     };
     return (
-      <Tabs
-        value={value}
-        {...args}
-        onChange={(e): void => {
-          onChange(e);
-        }}
-      >
-        <Tabs.List>
-          <Tabs.Tab value={'tab1'}>{'Person'}</Tabs.Tab>
-          <Tabs.Tab value={'tab2'}>{'Bedrift'}</Tabs.Tab>
-        </Tabs.List>
-        <Tabs.Panel value={'tab1'}>{'Tabs.Panel - Person'}</Tabs.Panel>
-        <Tabs.Panel value={'tab2'}>{'Tabs.Panel - Bedrift'}</Tabs.Panel>
-      </Tabs>
+      <>
+        <Tabs {...args} value={value}>
+          <Tabs.List>
+            <Tabs.Tab value={'tab1'}>{'Person'}</Tabs.Tab>
+            <Tabs.Tab value={'tab2'}>{'Bedrift'}</Tabs.Tab>
+          </Tabs.List>
+          <Tabs.Panel value={'tab1'}>{'Tabs.Panel - Person'}</Tabs.Panel>
+          <Tabs.Panel value={'tab2'}>{'Tabs.Panel - Bedrift'}</Tabs.Panel>
+        </Tabs>
+        <Button onClick={toggleTab}>{'ToggleTab'}</Button>
+      </>
     );
   },
   parameters: {
     imageSnapshot: { disable: true },
   },
-  play: async ({ canvasElement, args }): Promise<void> => {
+  play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);
     const secondTab = canvas.getByRole('tab', {
       name: 'Bedrift',
     });
     await expect(secondTab).toBeInTheDocument();
     await expect(secondTab).toHaveAttribute('aria-selected', 'true');
-    args.value = 'tab1';
 
-    // const button = canvas.getByRole('button');
-    // await userEvent.click(button);
-
-    const firsttab = canvas.getByRole('tab', {
-      name: 'Person',
+    await step('Endrer prop til person-tab', async () => {
+      const button = canvas.getByRole('button', { name: 'ToggleTab' });
+      await fireEvent.click(button);
+      // Tvinge kjøring av script til å vente på endring i komponent
+      await new Promise((r) => setTimeout(r, 1000));
+      const firsttab = canvas.getByRole('tab', {
+        name: 'Person',
+      });
+      await expect(firsttab).toHaveAttribute('aria-selected', 'true');
     });
-    await expect(firsttab).toHaveAttribute('aria-selected', 'true');
   },
 } satisfies Story;
 

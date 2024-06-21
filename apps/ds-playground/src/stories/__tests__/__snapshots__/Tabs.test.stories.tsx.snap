@@ -32,7 +32,7 @@ exports[`Tester/Tabs/Tabs Defaults play-test 1`] = `
               aria-selected="false"
               aria-controls="ds-tab-panel-:r0:-tab3"
       >
-        Rettskilder
+        Organisasjon
       </button>
     </div>
     <div id="ds-tab-panel-:r0:-tab1"
@@ -54,7 +54,7 @@ exports[`Tester/Tabs/Tabs Defaults play-test 1`] = `
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r0:-tab3"
     >
-      Tabs.Panel Rettskilder
+      Tabs.Panel Organisasjon
     </div>
   </div>
 </div>
@@ -92,7 +92,7 @@ exports[`Tester/Tabs/Tabs WithAriaRolesTabindex play-test 1`] = `
               aria-selected="false"
               aria-controls="ds-tab-panel-:r6:-tab3"
       >
-        Rettskilder
+        Organisasjon
       </button>
     </div>
     <div id="ds-tab-panel-:r6:-tab1"
@@ -114,7 +114,7 @@ exports[`Tester/Tabs/Tabs WithAriaRolesTabindex play-test 1`] = `
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r6:-tab3"
     >
-      Tabs.Panel Rettskilder
+      Tabs.Panel Organisasjon
     </div>
   </div>
 </div>
@@ -156,7 +156,7 @@ exports[`Tester/Tabs/Tabs WithAttributes play-test 1`] = `
               aria-selected="false"
               aria-controls="ds-tab-panel-:r2:-tab3"
       >
-        Rettskilder
+        Organisasjon
       </button>
     </div>
     <div id="ds-tab-panel-:r2:-tab1"
@@ -178,7 +178,7 @@ exports[`Tester/Tabs/Tabs WithAttributes play-test 1`] = `
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r2:-tab3"
     >
-      Tabs.Panel Rettskilder
+      Tabs.Panel Organisasjon
     </div>
   </div>
 </div>
@@ -216,7 +216,7 @@ exports[`Tester/Tabs/Tabs WithDefaultValue play-test 1`] = `
               aria-selected="false"
               aria-controls="ds-tab-panel-:r4:-tab3"
       >
-        Rettskilder
+        Organisasjon
       </button>
     </div>
     <div id="ds-tab-panel-:r4:-tab1"
@@ -238,7 +238,7 @@ exports[`Tester/Tabs/Tabs WithDefaultValue play-test 1`] = `
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r4:-tab3"
     >
-      Tabs.Panel Rettskilder
+      Tabs.Panel Organisasjon
     </div>
   </div>
 </div>
@@ -361,7 +361,7 @@ exports[`Tester/Tabs/Tabs WithTabClick play-test 1`] = `
               aria-selected="false"
               aria-controls="ds-tab-panel-:r8:-tab3"
       >
-        Rettskilder
+        Organisasjon
       </button>
     </div>
     <div id="ds-tab-panel-:r8:-tab1"
@@ -383,7 +383,7 @@ exports[`Tester/Tabs/Tabs WithTabClick play-test 1`] = `
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r8:-tab3"
     >
-      Tabs.Panel Rettskilder
+      Tabs.Panel Organisasjon
     </div>
   </div>
 </div>
@@ -397,39 +397,46 @@ exports[`Tester/Tabs/Tabs WithValue play-test 1`] = `
          tabindex="-1"
     >
       <button id="ds-tab-id-:r5:-tab1"
-              class="TabsTab_tab__W3ulY     "
+              class="TabsTab_tab__W3ulY   TabsTab_tab_active__RkJBU  "
               role="tab"
-              tabindex="-1"
-              aria-selected="false"
+              tabindex="0"
+              aria-selected="true"
               aria-controls="ds-tab-panel-:r5:-tab1"
       >
         Person
       </button>
       <button id="ds-tab-id-:r5:-tab2"
-              class="TabsTab_tab__W3ulY   TabsTab_tab_active__RkJBU  "
+              class="TabsTab_tab__W3ulY     "
               role="tab"
-              tabindex="0"
-              aria-selected="true"
+              tabindex="-1"
+              aria-selected="false"
               aria-controls="ds-tab-panel-:r5:-tab2"
       >
         Bedrift
       </button>
     </div>
     <div id="ds-tab-panel-:r5:-tab1"
-         class="TabsPanel_panel__4lPgj  "
+         class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r5:-tab1"
     >
       Tabs.Panel - Person
     </div>
     <div id="ds-tab-panel-:r5:-tab2"
-         class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
+         class="TabsPanel_panel__4lPgj  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r5:-tab2"
     >
       Tabs.Panel - Bedrift
     </div>
   </div>
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+          type="button"
+  >
+    <span class="Button_buttonText__JxyB+">
+      ToggleTab
+    </span>
+  </button>
 </div>
 `;
 
@@ -465,7 +472,7 @@ exports[`Tester/Tabs/Tabs WithVariantCompact smoke-test 1`] = `
               aria-selected="false"
               aria-controls="ds-tab-panel-:r3:-tab3"
       >
-        Rettskilder
+        Organisasjon
       </button>
     </div>
     <div id="ds-tab-panel-:r3:-tab1"
@@ -487,7 +494,7 @@ exports[`Tester/Tabs/Tabs WithVariantCompact smoke-test 1`] = `
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r3:-tab3"
     >
-      Tabs.Panel Rettskilder
+      Tabs.Panel Organisasjon
     </div>
   </div>
 </div>
