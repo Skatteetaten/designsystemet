@@ -413,6 +413,23 @@ export const WithCustomButtonTitles = {
   },
 } satisfies Story;
 
+export const WithCustomButtonTitleText = {
+  name: 'With Custom Button Title Text (A2)',
+  args: {
+    ...defaultArgs,
+    searchButtonTitle: 'search test',
+    hasSearchButtonIcon: false,
+  },
+  argTypes: {
+    readOnly: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const searchButton = canvas.getByText('search test');
+    await expect(searchButton).toBeInTheDocument();
+  },
+} satisfies Story;
+
 const EventHandlersTemplate: StoryFn<typeof SearchField> = (args) => {
   const [labelText, setLabelText] = useState('Tester events');
   return (
