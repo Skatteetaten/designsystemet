@@ -73,32 +73,6 @@ exports[`Tester/NavigationTile WithAttributes play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/NavigationTile WithAttributes play-test 2`] = `
-<div data-test-block="true">
-  <a id="htmlId"
-     class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j dummyClassname undefined"
-     lang="nb"
-     data-testid="123ID"
-     href="#storybook-root"
-  >
-    <div class="NavigationTile_header__xVyS1">
-      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
-        Skatt
-      </h2>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-hidden="true"
-           role="img"
-      >
-        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
-        </path>
-      </svg>
-    </div>
-  </a>
-</div>
-`;
-
 exports[`Tester/NavigationTile WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
   <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j   dummyClassname"
