@@ -7,7 +7,7 @@ exports[`Tester/Panel Defaults play-test 1`] = `
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-      <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+      <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
               type="button"
       >
         <span class="Button_buttonText__JxyB+">
@@ -105,7 +105,7 @@ exports[`Tester/Panel VariantFilled smoke-test 1`] = `
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-      <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+      <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
               type="button"
       >
         <span class="Button_buttonText__JxyB+">
@@ -128,7 +128,7 @@ exports[`Tester/Panel WithAttributes play-test 1`] = `
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-      <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+      <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
               type="button"
       >
         <span class="Button_buttonText__JxyB+">
@@ -147,7 +147,7 @@ exports[`Tester/Panel WithClassNameOverridesPanelWidthAndPadding smoke-test 1`] 
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-      <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+      <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
               type="button"
       >
         <span class="Button_buttonText__JxyB+">
@@ -368,7 +368,7 @@ exports[`Tester/Panel WithHideSubtitle play-test 1`] = `
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-      <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+      <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
               type="button"
       >
         <span class="Button_buttonText__JxyB+">
@@ -390,7 +390,7 @@ exports[`Tester/Panel WithHideTitle play-test 1`] = `
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-      <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+      <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
               type="button"
       >
         <span class="Button_buttonText__JxyB+">
@@ -711,7 +711,7 @@ exports[`Tester/Panel WithRef play-test 1`] = `
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-      <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+      <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
               type="button"
       >
         <span class="Button_buttonText__JxyB+">
@@ -793,7 +793,7 @@ exports[`Tester/Panel WithSubtitleAs play-test 1`] = `
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-      <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+      <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
               type="button"
       >
         <span class="Button_buttonText__JxyB+">
@@ -830,7 +830,7 @@ exports[`Tester/Panel WithTitleAs play-test 1`] = `
       <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-      <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+      <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
               type="button"
       >
         <span class="Button_buttonText__JxyB+">

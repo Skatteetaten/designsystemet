@@ -5,7 +5,7 @@ exports[`Tester/Modal ClickCloseButton play-test 1`] = `
   <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
           type="button"
   >
     <span class="Button_buttonText__JxyB+">
@@ -45,14 +45,14 @@ exports[`Tester/Modal ClickCloseButton play-test 1`] = `
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo   marginRightM"
                   type="button"
           >
             <span class="Button_buttonText__JxyB+">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   "
                   type="button"
           >
             <span class="Button_buttonText__JxyB+">
@@ -71,7 +71,7 @@ exports[`Tester/Modal Defaults play-test 1`] = `
   <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
           type="button"
   >
     <span class="Button_buttonText__JxyB+">
@@ -112,14 +112,14 @@ exports[`Tester/Modal Defaults play-test 1`] = `
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo   marginRightM"
                   type="button"
           >
             <span class="Button_buttonText__JxyB+">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   "
                   type="button"
           >
             <span class="Button_buttonText__JxyB+">
@@ -138,7 +138,7 @@ exports[`Tester/Modal VariantImportant play-test 1`] = `
   <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
           type="button"
   >
     <span class="Button_buttonText__JxyB+">
@@ -183,14 +183,14 @@ exports[`Tester/Modal VariantImportant play-test 1`] = `
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo   marginRightM"
                   type="button"
           >
             <span class="Button_buttonText__JxyB+">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   "
                   type="button"
           >
             <span class="Button_buttonText__JxyB+">
@@ -215,7 +215,7 @@ exports[`Tester/Modal VariantPlain play-test 1`] = `
   <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
           type="button"
   >
     <span class="Button_buttonText__JxyB+">
@@ -256,14 +256,14 @@ exports[`Tester/Modal VariantPlain play-test 1`] = `
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo   marginRightM"
                   type="button"
           >
             <span class="Button_buttonText__JxyB+">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   "
                   type="button"
           >
             <span class="Button_buttonText__JxyB+">
@@ -282,7 +282,7 @@ exports[`Tester/Modal WithAttributes play-test 1`] = `
   <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
           type="button"
   >
     <span class="Button_buttonText__JxyB+">
@@ -326,14 +326,14 @@ exports[`Tester/Modal WithAttributes play-test 1`] = `
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo   marginRightM"
                   type="button"
           >
             <span class="Button_buttonText__JxyB+">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   "
                   type="button"
           >
             <span class="Button_buttonText__JxyB+">
@@ -352,7 +352,7 @@ exports[`Tester/Modal WithAutoClose play-test 1`] = `
   <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
           type="button"
   >
     <span class="Button_buttonText__JxyB+">
@@ -392,14 +392,14 @@ exports[`Tester/Modal WithAutoClose play-test 1`] = `
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo   marginRightM"
                   type="button"
           >
             <span class="Button_buttonText__JxyB+">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   "
                   type="button"
           >
             <span class="Button_buttonText__JxyB+">
@@ -418,7 +418,7 @@ exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
   <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
           type="button"
   >
     <span class="Button_buttonText__JxyB+">
@@ -459,14 +459,14 @@ exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo   marginRightM"
                   type="button"
           >
             <span class="Button_buttonText__JxyB+">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   "
                   type="button"
           >
             <span class="Button_buttonText__JxyB+">
@@ -485,7 +485,7 @@ exports[`Tester/Modal WithHideTitle play-test 1`] = `
   <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
           type="button"
   >
     <span class="Button_buttonText__JxyB+">
@@ -526,14 +526,14 @@ exports[`Tester/Modal WithHideTitle play-test 1`] = `
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo   marginRightM"
                   type="button"
           >
             <span class="Button_buttonText__JxyB+">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   "
                   type="button"
           >
             <span class="Button_buttonText__JxyB+">
@@ -552,7 +552,7 @@ exports[`Tester/Modal WithImage play-test 1`] = `
   <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
           type="button"
   >
     <span class="Button_buttonText__JxyB+">
@@ -597,14 +597,14 @@ exports[`Tester/Modal WithImage play-test 1`] = `
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo   marginRightM"
                   type="button"
           >
             <span class="Button_buttonText__JxyB+">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   "
                   type="button"
           >
             <span class="Button_buttonText__JxyB+">
@@ -623,7 +623,7 @@ exports[`Tester/Modal WithPadding play-test 1`] = `
   <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
           type="button"
   >
     <span class="Button_buttonText__JxyB+">
@@ -664,14 +664,14 @@ exports[`Tester/Modal WithPadding play-test 1`] = `
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo   marginRightM"
                   type="button"
           >
             <span class="Button_buttonText__JxyB+">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   "
                   type="button"
           >
             <span class="Button_buttonText__JxyB+">
@@ -697,7 +697,7 @@ exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
   <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
           type="button"
   >
     <span class="Button_buttonText__JxyB+">
@@ -738,14 +738,14 @@ exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo   marginRightM"
                   type="button"
           >
             <span class="Button_buttonText__JxyB+">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   "
                   type="button"
           >
             <span class="Button_buttonText__JxyB+">
@@ -764,7 +764,7 @@ exports[`Tester/Modal WithVerticalScrolling play-test 1`] = `
   <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
           type="button"
   >
     <span class="Button_buttonText__JxyB+">
@@ -813,7 +813,7 @@ exports[`Tester/Modal WithoutCloseButton play-test 1`] = `
   <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo  "
+  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
           type="button"
   >
     <span class="Button_buttonText__JxyB+">
@@ -837,14 +837,14 @@ exports[`Tester/Modal WithoutCloseButton play-test 1`] = `
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="Button_button__pkuNv Button_button_primary__8Ouwo  marginRightM"
+          <button class="Button_button__pkuNv Button_button_primary__8Ouwo   marginRightM"
                   type="button"
           >
             <span class="Button_buttonText__JxyB+">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd  "
+          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   "
                   type="button"
           >
             <span class="Button_buttonText__JxyB+">

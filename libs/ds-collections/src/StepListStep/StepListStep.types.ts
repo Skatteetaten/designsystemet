@@ -5,6 +5,11 @@ import { PanelProps } from '@skatteetaten/ds-content';
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 import { HeadingProps } from '@skatteetaten/ds-typography';
 
+// eslint-disable @typescript-eslint/no-explicit-any
+type DistributiveOmit<T, K extends PropertyKey> = T extends any
+  ? Omit<T, K>
+  : never;
+
 export const stepVariantArr = [
   'active',
   'passive',
@@ -20,9 +25,7 @@ export interface StepListStepProps extends BaseProps {
   /** Overskriver default tekst på next-knapp*/
   nextButtonText?: string;
   /** props til nextButton. Se Button-komponenten for api-dokumentasjon. */
-  nextButtonProps?: Omit<ButtonProps, 'children' | 'onClick'>;
-  /** Om next-knapp skal inneholde Spinner */
-  nextButtonHasSpinner?: boolean;
+  nextButtonProps?: DistributiveOmit<ButtonProps, 'children' | 'onClick'>;
   /** Angir nummer på steget. */
   stepNumber: number;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
