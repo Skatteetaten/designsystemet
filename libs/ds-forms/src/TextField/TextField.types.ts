@@ -53,6 +53,8 @@ export interface TextFieldCommonProps
     textbox?: string;
     errorMessage?: string;
   };
+  /** Tekst på feilmelding */
+  errorMessage?: string;
   /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */
   hideLabel?: boolean;
   /** Input eller textarea ledetekst */
@@ -91,21 +93,6 @@ type TextFieldDiscriminatedProps =
       autosize?: boolean;
     } & Pick<ComponentPropsWithoutRef<'textarea'>, 'rows'>);
 
-type TextFieldDiscriminatedErrorProps =
-  | {
-      /** Tekst på feilmelding */
-      errorMessage: string;
-      /** Om TextField har en feil */
-      hasError?: boolean;
-    }
-  | {
-      /** Tekst på feilmelding */
-      errorMessage?: never;
-      /** Om TextField har en feil */
-      hasError?: never;
-    };
-
 export type TextFieldProps = TextFieldCommonProps &
   FormRequiredProps &
-  TextFieldDiscriminatedErrorProps &
   TextFieldDiscriminatedProps;

@@ -65,7 +65,6 @@ export const Examples: Story = {
           label={'År'}
           value={1009}
           errorMessage={'Inntekståret må være etter 2008'}
-          hasError={state.hasError}
           required
         />
         <TextField
@@ -73,17 +72,19 @@ export const Examples: Story = {
           label={'E-post'}
           value={'Ola.Normann.no'}
           errorMessage={
-            'E-posten ser ikke riktig ut. Skriv slik: ola.normann@norge.no'
+            state.hasError
+              ? 'E-posten ser ikke riktig ut. Skriv slik: ola.normann@norge.no'
+              : undefined
           }
-          hasError={state.hasError}
           required
         />
         <TextField
           className={'bottomSpacingXL'}
           id={'input_dager'}
           label={'Antall dager i Norge i perioden/inntekståret'}
-          errorMessage={'Antall dager må fylles ut.'}
-          hasError={state.hasError}
+          errorMessage={
+            state.hasError ? 'Antall dager må fylles ut.' : undefined
+          }
           required
         />
         <ErrorSummary id={'errorSummary1'} showErrorSummary={state.hasError}>

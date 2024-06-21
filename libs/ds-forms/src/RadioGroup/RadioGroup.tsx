@@ -34,7 +34,6 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
       form,
       name,
       required,
-      hasError,
       hideLegend,
       showRequiredMark,
       onChange,
@@ -78,10 +77,10 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
           <RadioGroupContext.Provider
             value={{
               defaultValue,
-              errorId: hasError ? errorId : '',
+              errorId: errorMessage ? errorId : '',
               name: nameId,
               selectedValue,
-              hasError: hasError ?? undefined,
+              hasError: !!errorMessage || undefined,
               required,
               onChange,
             }}
@@ -92,9 +91,9 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
         <ErrorMessage
           className={styles.errorMessage}
           id={errorId}
-          showError={hasError}
+          showError={!!errorMessage}
         >
-          {errorMessage ?? ''}
+          {errorMessage}
         </ErrorMessage>
       </Fieldset>
     );

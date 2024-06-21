@@ -31,7 +31,6 @@ export const CheckboxGroup = forwardRef<
       titleHelpSvg,
       disabled,
       form,
-      hasError,
       hideLegend,
       showRequiredMark,
       onHelpToggle,
@@ -62,7 +61,7 @@ export const CheckboxGroup = forwardRef<
       >
         <CheckboxContext.Provider
           value={{
-            errorId: hasError ? errorId : undefined,
+            errorId: errorMessage ? errorId : undefined,
           }}
         >
           {children}
@@ -70,9 +69,9 @@ export const CheckboxGroup = forwardRef<
         <ErrorMessage
           className={styles.errorMessage}
           id={errorId}
-          showError={hasError}
+          showError={!!errorMessage}
         >
-          {errorMessage ?? ''}
+          {errorMessage}
         </ErrorMessage>
       </Fieldset>
     );

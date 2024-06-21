@@ -33,11 +33,6 @@ const meta = {
     defaultChecked: { table: { disable: true } },
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
-    hasError: {
-      table: {
-        disable: true,
-      },
-    },
     hideLabel: {
       table: {
         disable: true,
@@ -391,15 +386,13 @@ export const WithRequiredAndChecked = {
 } satisfies Story;
 
 export const WithError = {
-  name: 'With Error And ErrorMessage (A1, B4)',
+  name: 'With ErrorMessage (A1, B4)',
   args: {
     ...defaultArgs,
     errorMessage: defaultErrorMessage,
-    hasError: true,
   },
   argTypes: {
     errorMessage: { table: { disable: false } },
-    hasError: { table: { disable: false } },
   },
   parameters: {
     imageSnapshot: {
@@ -445,13 +438,11 @@ export const WithErrorAndRequired = {
   args: {
     ...defaultArgs,
     errorMessage: 'Feilmelding',
-    hasError: true,
     required: true,
     showRequiredMark: true,
   },
   argTypes: {
     errorMessage: { table: { disable: false } },
-    hasError: { table: { disable: false } },
     required: { table: { disable: false } },
     showRequiredMark: { table: { disable: false } },
   },

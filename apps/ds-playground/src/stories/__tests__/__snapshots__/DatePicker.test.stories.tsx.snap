@@ -327,50 +327,7 @@ exports[`Tester/DatePicker/DatePicker WithDisabled play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/DatePicker/DatePicker WithError play-test 1`] = `
-<div data-test-block="true">
-  <div class>
-    <label id="labelId-:r17:"
-           class="LabelWithHelp_label__59tP-"
-           for="datepickerInputId-:r16:"
-    >
-      Fødselsdato
-    </label>
-    <div class="DatePicker_dateContainer__WILQF ">
-      <input id="datepickerInputId-:r16:"
-             class="DatePicker_input__vz7zh"
-             placeholder="Skriv eller velg"
-             value
-      >
-      <button type="button"
-              class="DatePicker_calendarButton__6sCKL"
-              aria-expanded="false"
-      >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-labelledby="svgtitle-:r18:"
-             aria-hidden="false"
-             role="img"
-        >
-          <title id="svgtitle-:r18:">
-            Velg dato
-          </title>
-          <path d="M19 19H5V8h14v11ZM16 1v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2Zm1 11h-5v5h5v-5Z">
-          </path>
-        </svg>
-      </button>
-    </div>
-    <div id="datepickerErrorId-:r15:"
-         aria-live="assertive"
-         aria-atomic="true"
-    >
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Tester/DatePicker/DatePicker WithErrorMessageAndHasError play-test 1`] = `
+exports[`Tester/DatePicker/DatePicker WithErrorMessage play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r1b:"

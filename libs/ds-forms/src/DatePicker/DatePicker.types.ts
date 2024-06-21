@@ -34,6 +34,8 @@ interface DatePickerCommonProps
     dateContainer?: string;
     errorMessage?: string;
   };
+  /** Tekst på feilmelding */
+  errorMessage?: string;
   /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */
   hideLabel?: boolean;
   /** Ledetekst */
@@ -65,20 +67,4 @@ interface DatePickerCommonProps
   onSelectDate?: (date: Date | null) => void;
 }
 
-export type DatePickerDiscriminatedErrorProps =
-  | {
-      /** Tekst på feilmelding */
-      errorMessage: string;
-      /** Om form-komponent har en feil */
-      hasError?: boolean;
-    }
-  | {
-      /** Tekst på feilmelding */
-      errorMessage?: never;
-      /** Om form-komponent har en feil */
-      hasError?: never;
-    };
-
-export type DatePickerProps = DatePickerCommonProps &
-  FormRequiredProps &
-  DatePickerDiscriminatedErrorProps;
+export type DatePickerProps = DatePickerCommonProps & FormRequiredProps;

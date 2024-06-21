@@ -16,7 +16,6 @@ const meta = {
     defaultChecked: { table: { category: category.props } },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
-    hasError: { table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
     showRequiredMark: { table: { category: category.props } },
     // HTML
@@ -47,20 +46,32 @@ export const Preview: Story = {} satisfies Story;
 export const Examples: Story = {
   render: (_args): JSX.Element => {
     const [checked, setChecked] = useState(false);
-    const [error, setError] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
     return (
       <>
         <Checkbox
           className={'exampleSpacing'}
-          errorMessage={'Du må lese og forstå innholdet for å gå videre.'}
+          errorMessage={errorMessage}
           checked={checked}
-          hasError={error}
           required
-          onChange={(): void => setChecked(!checked)}
+          onChange={(): void => {
+            setChecked(!checked);
+            setErrorMessage('');
+          }}
         >
           {'Jeg har lest og forstått innholdet'}
         </Checkbox>
-        <Button onClick={(): void => setError(!checked)}>{'Send'}</Button>
+        <Button
+          onClick={(): void => {
+            if (!checked) {
+              setErrorMessage(
+                'Du må lese og forstå innholdet for å gå videre.'
+              );
+            }
+          }}
+        >
+          {'Send'}
+        </Button>
       </>
     );
   },

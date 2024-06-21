@@ -22,6 +22,8 @@ interface CheckboxGroupCommonProps
     BaseProps {
   /** Checkbox-komponenter */
   children: ReactNode;
+  /** Tekst på feilmelding */
+  errorMessage?: string;
   /** Skjuler ledetekst, tilleggstekst og hjelpetekst, men er fortsatt synlig for skjermleser */
   hideLegend?: FieldsetProps['hideLegend'];
   /** Ledetekst til gruppen */
@@ -42,22 +44,7 @@ interface CheckboxGroupCommonProps
   onHelpToggle?: FieldsetProps['onHelpToggle'];
 }
 
-type CheckboxGroupDiscriminatedErrorProps =
-  | {
-      /** Tekst på feilmelding */
-      errorMessage: string;
-      /** Om gruppen har en feil */
-      hasError?: boolean;
-    }
-  | {
-      /** Tekst på feilmelding */
-      errorMessage?: never;
-      /** Om gruppen har en feil */
-      hasError?: never;
-    };
-
-export type CheckboxGroupProps = CheckboxGroupCommonProps &
-  CheckboxGroupDiscriminatedErrorProps;
+export type CheckboxGroupProps = CheckboxGroupCommonProps;
 
 export interface CheckboxGroupComponent
   extends ForwardRefExoticComponent<

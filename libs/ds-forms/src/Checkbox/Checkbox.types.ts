@@ -25,26 +25,8 @@ interface CheckboxCommonProps extends CheckboxPropsHTMLAttributes, BaseProps {
   description?: string;
   /** Tekst på feilmelding */
   errorMessage?: string;
-  /** Om checkbox har en feil */
-  hasError?: boolean;
   /** Skjuler ledeteksten men synlig for skjermleser */
   hideLabel?: boolean;
 }
 
-type CheckboxDiscriminatedErrorProps =
-  | {
-      /** Tekst på feilmelding */
-      errorMessage: string;
-      /** Om checkbox har en feil */
-      hasError?: boolean;
-    }
-  | {
-      /** Tekst på feilmelding */
-      errorMessage?: never;
-      /** Om checkbox har en feil */
-      hasError?: never;
-    };
-
-export type CheckboxProps = CheckboxCommonProps &
-  FormRequiredProps &
-  CheckboxDiscriminatedErrorProps;
+export type CheckboxProps = CheckboxCommonProps & FormRequiredProps;

@@ -55,7 +55,6 @@ const meta = {
     },
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
-    hasError: { table: { disable: true } },
     helpSvgPath: {
       table: { disable: true },
       options: Object.keys(SystemSVGPaths),
@@ -157,7 +156,6 @@ export const WithCustomClassNames = {
       textbox: 'dummyClassnameFormContainer',
       errorMessage: 'dummyClassname',
     },
-    hasError: true,
     errorMessage: errorMessageText,
   },
   argTypes: {
@@ -476,11 +474,10 @@ export const WithRows = {
   },
 } satisfies Story;
 
-export const WithError = {
-  name: 'With ErrorMessage (B5)',
+export const WithoutError = {
+  name: 'Without ErrorMessage (B5)',
   args: {
     ...defaultArgs,
-    errorMessage: errorMessageText,
   },
   argTypes: {
     errorMessage: { table: { disable: false } },
@@ -497,18 +494,20 @@ export const WithError = {
     await expect(textbox).not.toHaveAttribute('aria-invalid', 'true');
     await expect(textbox).not.toHaveAttribute('aria-describedby');
   },
+  parameters: {
+    imageSnapshot: { disable: true },
+    HTMLSnapshot: { disable: true },
+  },
 } satisfies Story;
 
-export const WithErrorMessageAndHasError = {
-  name: 'With ErrorMessage And HasError (B5)',
+export const WithErrorMessage = {
+  name: 'With ErrorMessage(B5)',
   args: {
     ...defaultArgs,
     errorMessage: errorMessageText,
-    hasError: true,
   },
   argTypes: {
     errorMessage: { table: { disable: false } },
-    hasError: { table: { disable: false } },
   },
   parameters: {
     imageSnapshot: {

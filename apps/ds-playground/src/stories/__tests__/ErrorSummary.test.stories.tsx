@@ -228,7 +228,6 @@ const TemplateWithInput: StoryFn<typeof ErrorSummary> = () => (
       label={'År'}
       value={1009}
       errorMessage={'Inntekståret må være etter 2008'}
-      hasError
       required
     />
     <ErrorSummary showErrorSummary>
@@ -263,7 +262,6 @@ const TemplateWithShadowRootNode: StoryFn<typeof ErrorSummary> = () => {
         label={'År'}
         value={1009}
         errorMessage={'Inntekståret må være etter 2008'}
-        hasError
         required
       />
       <ErrorSummary shadowRootNode={shadowRoot ?? undefined} showErrorSummary>
