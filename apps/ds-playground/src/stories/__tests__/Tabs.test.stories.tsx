@@ -4,14 +4,7 @@ import { Button } from '@skatteetaten/ds-buttons';
 import { Tabs, TabsProps } from '@skatteetaten/ds-collections';
 import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import {
-  expect,
-  fireEvent,
-  fn,
-  userEvent,
-  waitFor,
-  within,
-} from '@storybook/test';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 const meta = {
   component: Tabs,
@@ -205,20 +198,37 @@ export const WithValue = {
   },
   play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);
-    const secondTab = canvas.getByRole('tab', {
-      name: 'Bedrift',
-    });
-    await expect(secondTab).toBeInTheDocument();
-    await expect(secondTab).toHaveAttribute('aria-selected', 'true');
+    await step(
+      'Sjekker om Bedrift-tab finne og har attribut aria-selected:true',
+      async () => {
+        const secondTab = await canvas.findByRole('tab', {
+          name: 'Bedrift',
+          selected: true,
+        });
+        await expect(secondTab).toBeInTheDocument();
+      }
+    );
 
-    await step('Endrer prop til person-tab', async () => {
-      const button = await canvas.findByRole('button', { name: 'ToggleTab' });
-      await fireEvent.click(button);
-      const firsttab = await canvas.findByRole('tab', {
-        name: 'Person',
-      });
-      await expect(firsttab).toHaveAttribute('aria-selected', 'true');
-    });
+    await step(
+      'Endrer value-prop utenfra og forventer at Person-tab er aktiv',
+      async () => {
+        const button = await canvas.findByRole('button', { name: 'ToggleTab' });
+        await userEvent.click(button);
+        const firsttab = await canvas.findByRole('tab', {
+          name: 'Person',
+          selected: true,
+        });
+        await expect(firsttab).toBeInTheDocument();
+      }
+    );
+
+    await step(
+      'Ingen test - Nullstiller - Toggler aktiv tab tilbake til tab2/Bedrift for å kunne kjøre test i nettelser flere ganger',
+      async () => {
+        const button = await canvas.findByRole('button', { name: 'ToggleTab' });
+        await userEvent.click(button);
+      }
+    );
   },
 } satisfies Story;
 
