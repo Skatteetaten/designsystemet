@@ -1,5 +1,6 @@
 import { JSX } from 'react';
 
+import { Button } from '@skatteetaten/ds-buttons';
 import { Tabs, TabsProps } from '@skatteetaten/ds-collections';
 import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
@@ -46,11 +47,11 @@ const TemplateTabs: StoryFn<typeof Tabs> = (args) => {
       <Tabs.List>
         <Tabs.Tab value={'tab1'}>{'Person'}</Tabs.Tab>
         <Tabs.Tab value={'tab2'}>{'Bedrift'}</Tabs.Tab>
-        <Tabs.Tab value={'tab3'}>{'Rettskilder'}</Tabs.Tab>
+        <Tabs.Tab value={'tab3'}>{'Organisasjon'}</Tabs.Tab>
       </Tabs.List>
       <Tabs.Panel value={'tab1'}>{'Tabs.Panel Person'}</Tabs.Panel>
       <Tabs.Panel value={'tab2'}>{'Tabs.Panel Bedrift'}</Tabs.Panel>
-      <Tabs.Panel value={'tab3'}>{'Tabs.Panel Rettskilder'}</Tabs.Panel>
+      <Tabs.Panel value={'tab3'}>{'Tabs.Panel Organisasjon'}</Tabs.Panel>
     </Tabs>
   );
 };
@@ -166,38 +167,68 @@ export const WithValue = {
     defaultValue: undefined,
     value: 'tab2',
   },
+  argTypes: {
+    value: { table: { disable: false } },
+  },
   render: (args): JSX.Element => {
     const [{ value }, updateArgs] = useArgs();
-    const onChange = (val: string): void => {
-      updateArgs({ value: val });
+    const toggleTab = (): void => {
+      if (value === 'tab1') {
+        updateArgs({ value: 'tab2' });
+      } else {
+        updateArgs({ value: 'tab1' });
+      }
     };
     return (
-      <Tabs
-        value={value}
-        {...args}
-        onChange={(e): void => {
-          onChange(e);
-        }}
-      >
-        <Tabs.List>
-          <Tabs.Tab value={'tab1'}>{'Person'}</Tabs.Tab>
-          <Tabs.Tab value={'tab2'}>{'Bedrift'}</Tabs.Tab>
-        </Tabs.List>
-        <Tabs.Panel value={'tab1'}>{'Tabs.Panel - Person'}</Tabs.Panel>
-        <Tabs.Panel value={'tab2'}>{'Tabs.Panel - Bedrift'}</Tabs.Panel>
-      </Tabs>
+      <>
+        <Tabs {...args} value={value}>
+          <Tabs.List>
+            <Tabs.Tab value={'tab1'}>{'Person'}</Tabs.Tab>
+            <Tabs.Tab value={'tab2'}>{'Bedrift'}</Tabs.Tab>
+          </Tabs.List>
+          <Tabs.Panel value={'tab1'}>{'Tabs.Panel - Person'}</Tabs.Panel>
+          <Tabs.Panel value={'tab2'}>{'Tabs.Panel - Bedrift'}</Tabs.Panel>
+        </Tabs>
+        <Button onClick={toggleTab}>{'ToggleTab'}</Button>
+      </>
     );
   },
   parameters: {
     imageSnapshot: { disable: true },
   },
-  play: async ({ canvasElement }): Promise<void> => {
+  play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);
-    const secondTab = canvas.getByRole('tab', {
-      name: 'Bedrift',
-    });
-    await expect(secondTab).toBeInTheDocument();
-    await expect(secondTab).toHaveAttribute('aria-selected', 'true');
+    await step(
+      'Sjekker om Bedrift-tab finnes og har attribut aria-selected:true',
+      async () => {
+        const secondTab = await canvas.findByRole('tab', {
+          name: 'Bedrift',
+          selected: true,
+        });
+        await expect(secondTab).toBeInTheDocument();
+      }
+    );
+
+    await step(
+      'Endrer value-prop utenfra og forventer at Person-tab er aktiv',
+      async () => {
+        const button = await canvas.findByRole('button', { name: 'ToggleTab' });
+        await userEvent.click(button);
+        const firsttab = await canvas.findByRole('tab', {
+          name: 'Person',
+          selected: true,
+        });
+        await expect(firsttab).toBeInTheDocument();
+      }
+    );
+
+    await step(
+      'Ingen test - Nullstiller - Toggler aktiv tab tilbake til tab2/Bedrift for å kunne kjøre test i nettelser flere ganger',
+      async () => {
+        const button = await canvas.findByRole('button', { name: 'ToggleTab' });
+        await userEvent.click(button);
+      }
+    );
   },
 } satisfies Story;
 
