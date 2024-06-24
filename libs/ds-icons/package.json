@@ -13,7 +13,7 @@
   "peerDependencies": {
     "i18next": "^23",
     "react": "^18",
-    "react-i18next": "^13",
+    "react-i18next": "^14",
     "@skatteetaten/ds-core-utils": "*"
   },
   "scripts": {}
