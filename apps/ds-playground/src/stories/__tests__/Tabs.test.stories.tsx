@@ -199,7 +199,7 @@ export const WithValue = {
   play: async ({ canvasElement, step }): Promise<void> => {
     const canvas = within(canvasElement);
     await step(
-      'Sjekker om Bedrift-tab finne og har attribut aria-selected:true',
+      'Sjekker om Bedrift-tab finnes og har attribut aria-selected:true',
       async () => {
         const secondTab = await canvas.findByRole('tab', {
           name: 'Bedrift',
