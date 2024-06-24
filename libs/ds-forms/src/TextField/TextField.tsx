@@ -13,6 +13,7 @@ import {
   getCommonClassNameDefault,
   getCommonFormVariantDefault,
   Languages,
+  useValidateFormRequiredProps,
 } from '@skatteetaten/ds-core-utils';
 
 import { getTextFieldAsDefault } from './defaults';
@@ -64,15 +65,10 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
     },
     ref
   ): JSX.Element => {
+    useValidateFormRequiredProps({ required, showRequiredMark });
     const errorId = `textFieldErrorId-${useId()}`;
     const generatedId = `textFieldTextboxId-${useId()}`;
     const textboxId = externalId ?? generatedId;
-
-    if (!required && showRequiredMark === true) {
-      throw new Error(
-        `showRequiredMark === true is not a valid value when required equals ${typeof required}`
-      );
-    }
 
     const textboxRef = useRef<HTMLTextAreaElement & HTMLInputElement>(null);
     useImperativeHandle(ref, () => ({
