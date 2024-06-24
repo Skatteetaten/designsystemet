@@ -60,14 +60,8 @@ export type SubheadingAs = (typeof subheadingAsArr)[number];
 export const densityArr = ['standard', 'compact'] as const;
 export type Density = (typeof densityArr)[number];
 
-export type FormDiscriminatedRequiredProps =
-  | {
-      required: true;
-      /** Om obligatorisk TextField skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
-      showRequiredMark?: boolean;
-    }
-  | {
-      required?: never | false;
-      /** Om obligatorisk TextField skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
-      showRequiredMark?: never | false;
-    };
+export type FormRequiredProps = {
+  required?: boolean;
+  /** Om obligatorisk TextField skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
+  showRequiredMark?: boolean;
+};

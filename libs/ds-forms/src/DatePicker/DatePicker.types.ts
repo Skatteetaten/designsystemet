@@ -6,7 +6,7 @@ import {
 
 import {
   BaseProps,
-  FormDiscriminatedRequiredProps,
+  FormRequiredProps,
   FormSize,
 } from '@skatteetaten/ds-core-utils';
 
@@ -80,5 +80,5 @@ export type DatePickerDiscriminatedErrorProps =
     };
 
 export type DatePickerProps = DatePickerCommonProps &
-  FormDiscriminatedRequiredProps &
+  FormRequiredProps &
   DatePickerDiscriminatedErrorProps;

@@ -68,6 +68,12 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
     const generatedId = `textFieldTextboxId-${useId()}`;
     const textboxId = externalId ?? generatedId;
 
+    if (!required && showRequiredMark === true) {
+      throw new Error(
+        `showRequiredMark === true is not a valid value when required equals ${typeof required}`
+      );
+    }
+
     const textboxRef = useRef<HTMLTextAreaElement & HTMLInputElement>(null);
     useImperativeHandle(ref, () => ({
       textboxRef: textboxRef,
