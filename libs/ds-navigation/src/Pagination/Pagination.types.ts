@@ -63,7 +63,7 @@ export type PaginationListProps = {
   firstPageRef?: RefObject<HTMLButtonElement>;
   lastPageRef?: RefObject<HTMLButtonElement>;
   lastPage: number;
-  internalPage: number;
+  currentPage: number;
   sibling: number;
   handleChange: (page: number) => void;
   hidePrevNextButtonTitle?: boolean;
