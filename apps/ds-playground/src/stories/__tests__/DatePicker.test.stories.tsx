@@ -628,9 +628,9 @@ export const ClickCalendarDateButton = {
     const calendarButton = canvas.getByRole('button', {
       name: dsI18n.t('ds_forms:datepicker.ChooseDate'),
     });
-    await fireEvent.click(calendarButton);
+    await userEvent.click(calendarButton);
     const dateButton = canvas.getByText('5');
-    await fireEvent.click(dateButton);
+    await userEvent.click(dateButton);
     await expect(calendarButton).toHaveAttribute('aria-expanded', 'false');
     const input = canvas.getByRole('textbox');
     await expect(input).toHaveValue('05.02.2024');
