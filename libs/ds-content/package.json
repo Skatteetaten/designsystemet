@@ -15,7 +15,7 @@
     "@skatteetaten/ds-core-utils": "*",
     "@skatteetaten/ds-typography": "*",
     "@skatteetaten/ds-icons": "*",
-    "react-i18next": "^13",
+    "react-i18next": "^14",
     "i18next": "^23"
   },
   "scripts": {}

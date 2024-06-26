@@ -1,18 +1,18 @@
 import { FocusEvent, ChangeEvent, useState, useRef } from 'react';
 
+import { Button } from '@skatteetaten/ds-buttons';
 import { formArrSize } from '@skatteetaten/ds-core-utils';
 import {
   TextboxRefHandle,
   TextField,
   textFieldAsArr,
 } from '@skatteetaten/ds-forms';
+import { Modal } from '@skatteetaten/ds-overlays';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
-import { Modal } from '@skatteetaten/ds-overlays';
-import { Button } from '@skatteetaten/ds-buttons';
 
 const verifyAttribute =
   (attribute: string, expectedValue: string) =>
@@ -751,8 +751,10 @@ export const WithTextAreaAutoSizeInModal = {
 
     const textbox = canvas.getByRole('textbox');
     await expect(textbox.tagName).toBe('TEXTAREA');
-    await expect(textbox).toHaveStyle({
-      height: '64px',
-    });
+    await waitFor(() =>
+      expect(textbox).toHaveStyle({
+        height: '64px',
+      })
+    );
   },
 } satisfies Story;

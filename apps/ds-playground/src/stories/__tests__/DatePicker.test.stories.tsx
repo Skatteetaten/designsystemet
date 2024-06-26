@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FocusEvent, useState } from 'react';
+import { ChangeEvent, FocusEvent, useState } from 'react';
 
 import { dsI18n, formArrSize } from '@skatteetaten/ds-core-utils';
 import { DatePicker, TextField } from '@skatteetaten/ds-forms';

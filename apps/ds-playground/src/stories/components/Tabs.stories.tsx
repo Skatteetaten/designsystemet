@@ -45,29 +45,29 @@ export const Preview: Story = {
   render: (args) => (
     <Tabs {...args}>
       <Tabs.List key={'list1'}>
-        <Tabs.Tab value={'tab1'}>{'Person'}</Tabs.Tab>
-        <Tabs.Tab value={'tab2'}>{'Bedrift'}</Tabs.Tab>
-        <Tabs.Tab value={'tab3'}>{'Rettskilder'}</Tabs.Tab>
-        <Tabs.Tab value={'tab4'}>{'Ubehandlede oppgaver (+9)'}</Tabs.Tab>
-        <Tabs.Tab value={'tab5'}>{'Nye oppgaver (+28)'}</Tabs.Tab>
-        <Tabs.Tab value={'tab6'}>{'Alle oppgaver (+37)'}</Tabs.Tab>
-        <Tabs.Tab value={'tab7'}>{'Ingen oppgaver (+46)'}</Tabs.Tab>
+        <Tabs.Tab value={'tab1'}>{'Alle oppgaver'}</Tabs.Tab>
+        <Tabs.Tab value={'tab2'}>{'Prioritert'}</Tabs.Tab>
+        <Tabs.Tab value={'tab3'}>{'Nye'}</Tabs.Tab>
+        <Tabs.Tab value={'tab4'}>{'Mine oppgaver'}</Tabs.Tab>
+        <Tabs.Tab value={'tab5'}>{'Utgått frist (+99)'}</Tabs.Tab>
+        <Tabs.Tab value={'tab6'}>{'Nylig endret'}</Tabs.Tab>
+        <Tabs.Tab value={'tab7'}>{'Arkitverte (18)'}</Tabs.Tab>
       </Tabs.List>
       <Tabs.Panel key={'panel1'} value={'tab1'}>
-        {'Person - Tabs.Panel 1'}
+        {'Alle oppgaver - Tabs.Panel 1'}
       </Tabs.Panel>
       <Tabs.Panel key={'panel2'} value={'tab2'}>
-        {'Bedrift - Innhold i Tabs.Panel 2'}
+        {'Prioritert - Innhold i Tabs.Panel 2'}
       </Tabs.Panel>
       <Tabs.Panel key={'panel3'} value={'tab3'}>
-        {'Rettskilder - Innhold i Tabs.Panel 3'}
+        {'Nye - Innhold i Tabs.Panel 3'}
       </Tabs.Panel>
       <Tabs.Panel value={'tab4'}>
-        {'Oppgaver - ubehandlede. Panel 4'}
+        {'Mine oppgaver - ubehandlede. Panel 4'}
       </Tabs.Panel>
-      <Tabs.Panel value={'tab5'}>{'Oppgaver - Nye. Panel 5'}</Tabs.Panel>
-      <Tabs.Panel value={'tab6'}>{'Oppgaver - Alle. Panel 6'}</Tabs.Panel>
-      <Tabs.Panel value={'tab7'}>{'Oppgaver - Ingen. Panel 7'}</Tabs.Panel>
+      <Tabs.Panel value={'tab5'}>{'Utgått frist - Nye. Panel 5'}</Tabs.Panel>
+      <Tabs.Panel value={'tab6'}>{'Nylig endret - Alle. Panel 6'}</Tabs.Panel>
+      <Tabs.Panel value={'tab7'}>{'Arkitverte - Ingen. Panel 7'}</Tabs.Panel>
     </Tabs>
   ),
 } satisfies Story;
