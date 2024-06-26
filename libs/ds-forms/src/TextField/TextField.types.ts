@@ -7,7 +7,7 @@ import {
 
 import {
   BaseProps,
-  FormDiscriminatedRequiredProps,
+  FormRequiredProps,
   FormSize,
 } from '@skatteetaten/ds-core-utils';
 
@@ -106,6 +106,6 @@ type TextFieldDiscriminatedErrorProps =
     };
 
 export type TextFieldProps = TextFieldCommonProps &
-  FormDiscriminatedRequiredProps &
+  FormRequiredProps &
   TextFieldDiscriminatedErrorProps &
   TextFieldDiscriminatedProps;

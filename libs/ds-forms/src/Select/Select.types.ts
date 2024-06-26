@@ -9,7 +9,7 @@ import {
 
 import {
   BaseProps,
-  FormDiscriminatedRequiredProps,
+  FormRequiredProps,
   FormSize,
 } from '@skatteetaten/ds-core-utils';
 
@@ -81,7 +81,7 @@ export type SelectDiscriminatedErrorProps =
     };
 
 export type SelectProps = SelectCommonProps &
-  FormDiscriminatedRequiredProps &
+  FormRequiredProps &
   SelectDiscriminatedErrorProps;
 
 export interface SelectComponent

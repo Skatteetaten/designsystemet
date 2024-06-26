@@ -16,8 +16,8 @@ export const buttonVariantArr = [
 export type ButtonVariant = (typeof buttonVariantArr)[number];
 
 type RequiredButtonHTMLAttributes = Pick<
-  ComponentPropsWithoutRef<'button'>,
-  'accessKey' | 'disabled' | 'form' | 'type' | 'onBlur' | 'onClick' | 'onFocus'
+  ComponentPropsWithoutRef<'button' | 'a'>,
+  'accessKey' | 'type'
 >;
 
 type ButtonHTMLAttributes = Partial<RequiredButtonHTMLAttributes>;
@@ -25,12 +25,34 @@ type ButtonHTMLAttributes = Partial<RequiredButtonHTMLAttributes>;
 interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
   ariaDescribedby?: string;
   ariaCurrent?: ComponentPropsWithoutRef<'button'>['aria-current'];
-  onBlur?: FocusEventHandler<HTMLButtonElement>;
-  onClick?: MouseEventHandler<HTMLButtonElement>;
-  onFocus?: FocusEventHandler<HTMLButtonElement>;
+  onBlur?: FocusEventHandler<HTMLButtonElement | HTMLAnchorElement>;
+  onClick?: MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>;
+  onFocus?: FocusEventHandler<HTMLButtonElement | HTMLAnchorElement>;
 }
 
-export interface ButtonProps extends ButtonPropsHTMLAttributes, BaseProps {
+interface ButtonAsLink {
+  /** Hvis det er ønskelig å vise knappen som en lenke. Setter strengen til href attributtet på lenken. */
+  href: string;
+  disabled?: never | false;
+  form?: never;
+  /** Viser ikon som indikerer at knappen åpner en ekstern tjeneste. Brukes hvis knappen er en lenke til en side på et annet domene. */
+  isExternal?: boolean;
+  type?: never;
+}
+
+type ButtonAsButton = {
+  /** Hvis det er ønskelig å vise knappen som en lenke. Setter strengen til href attributtet på lenken. */
+  href?: never;
+  disabled?: boolean;
+  /** Viser ikon som indikerer at knappen åpner en ekstern tjeneste. Brukes hvis knappen er en lenke til en side på et annet domene. */
+  isExternal?: never | false;
+} & Pick<ComponentPropsWithoutRef<'button'>, 'type' | 'form'>;
+
+export type ButtonDiscriminatedProps = ButtonAsLink | ButtonAsButton;
+
+export interface ButtonCommonProps
+  extends ButtonPropsHTMLAttributes,
+    BaseProps {
   /** Tekst på knapp. */
   children: string;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
@@ -42,3 +64,5 @@ export interface ButtonProps extends ButtonPropsHTMLAttributes, BaseProps {
   /** Overskriver default tekst som leses opp av skjermleser når Spinner snurrer i knappen. */
   spinnerTitle?: string;
 }
+
+export type ButtonProps = ButtonCommonProps & ButtonDiscriminatedProps;

@@ -160,6 +160,33 @@ const langs = Object.entries(Languages).map(([key, value]) => ({
   value,
 }));
 
+const Spacing = [
+  { title: 'On', value: 'spacing' },
+  { title: 'Off', value: 'no-spacing' },
+];
+
+const clearStyles = (element: HTMLElement): void => {
+  for (const className of Object.values(Spacing)) {
+    element.classList.remove(className.value);
+  }
+};
+
+const applyStyle = (element: HTMLElement, className: string): void => {
+  element.classList.add(className);
+};
+
+const SpacingUpdater: Decorator = (Story, context) => {
+  useEffect(() => {
+    const body = window.document.body;
+    clearStyles(body);
+    applyStyle(body, context.globals.spacing);
+    return () => {
+      clearStyles(body);
+    };
+  }, [context.globals.spacing]);
+  return <Story />;
+};
+
 const globalTypes = {
   locale: {
     name: 'Locale',
@@ -170,6 +197,16 @@ const globalTypes = {
       items: [...langs, { title: 'key', value: 'cimode' }],
     },
   },
+  spacing: {
+    name: 'Spacing',
+    description: 'Remove padding and margin around component',
+    defaultValue: Spacing[0].value,
+    toolbar: {
+      title: 'Margin',
+      icon: 'browser',
+      items: Spacing,
+    },
+  },
 };
 
 const preview = {
@@ -178,6 +215,7 @@ const preview = {
     LanguageUpdater,
     testBlock,
     mockDate,
+    SpacingUpdater,
   ],
   parameters,
   globalTypes,

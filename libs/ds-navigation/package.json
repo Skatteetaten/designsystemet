@@ -11,12 +11,12 @@
   },
   "peerDependencies": {
     "react": "^18",
-    "react-i18next": "^13",
+    "react-i18next": "^14",
     "i18next": "^23",
-    "@skatteetaten/ds-buttons": "*",
-    "@skatteetaten/ds-core-utils": "*",
-    "@skatteetaten/ds-icons": "*",
-    "@skatteetaten/ds-progress": "*"
+    "@skatteetaten/ds-buttons": "1.0.0",
+    "@skatteetaten/ds-core-utils": "1.0.0",
+    "@skatteetaten/ds-icons": "1.0.0",
+    "@skatteetaten/ds-progress": "1.0.0"
   },
   "scripts": {}
 }

@@ -1,7 +1,10 @@
 import { FocusEvent, MouseEvent, useState } from 'react';
 
 import { Button, buttonVariantArr } from '@skatteetaten/ds-buttons';
-import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  getCommonButtonTypeDefault,
+} from '@skatteetaten/ds-core-utils';
 import { SendSVGpath } from '@skatteetaten/ds-icons';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
@@ -45,19 +48,22 @@ const meta = {
       options: [...buttonVariantArr],
       control: 'radio',
     },
+    isExternal: { table: { disable: true } },
     // HTML
     accessKey: { table: { disable: true } },
     disabled: { table: { disable: true } },
+    href: { table: { disable: true } },
     form: { table: { disable: true } },
     type: { table: { disable: true } },
     // Aria
     ariaDescribedby: { table: { disable: true } },
+    ariaCurrent: { table: { disable: true } },
     // Events
     onBlur: { table: { disable: true } },
     onClick: { table: { disable: true } },
     onFocus: { table: { disable: true } },
   },
-} as Meta<typeof Button>;
+} satisfies Meta<typeof Button>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
@@ -470,5 +476,30 @@ export const WithSpinner = {
   },
   argTypes: {
     hasSpinner: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithExternalIcon = {
+  name: 'With External Icon (A7, B6)',
+  args: {
+    ...defaultArgs,
+    isExternal: true,
+    children: 'Til altinn.no',
+    href: '#',
+  },
+  argTypes: {
+    isExternal: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const megaButton = canvas.getByRole('button');
+    // eslint-disable-next-line testing-library/no-node-access
+    const svg = megaButton.querySelector('svg');
+    await expect(svg).toHaveAttribute(
+      'aria-label',
+      dsI18n.t('ds_buttons:shared.ExternalIcon')
+    );
+    await expect(svg).toHaveAttribute('viewBox', '0 0 24 24');
+    await expect(megaButton).toBeInTheDocument();
   },
 } satisfies Story;

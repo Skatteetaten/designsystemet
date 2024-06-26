@@ -50,7 +50,7 @@ interface SearchFieldCommonProps
     label?: string;
     searchContainer?: string;
   };
-  /** Overskriver default  tooltip-tekst til søkeknappen */
+  /** Overskriver default  tooltip-tekst til nullstill-knappen */
   clearButtonTitle?: string;
   /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */
   hideLabel?: boolean;

@@ -6,7 +6,7 @@ import {
 
 import {
   BaseProps,
-  FormDiscriminatedRequiredProps,
+  FormRequiredProps,
   FormSize,
 } from '@skatteetaten/ds-core-utils';
 
@@ -48,10 +48,9 @@ interface DatePickerCommonProps
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
   /** Definerer stilen til DatePicker */
   variant?: FormSize;
-  /** Hvilken dato som skal være satt (controlled state) */
+  /** Hvilken dato som skal være satt. */
   value?: Date | null;
-  /** Hvilken dato som skal være satt (uncontrolled state) */
-  defaultValue?: Date;
+
   /** Initielt uthevet dato. (Hvis value har en dato, så blir den datoen uthevet istedenfor.) */
   initialPickerDate?: Date;
   /** Minste tillatte dato */
@@ -62,7 +61,7 @@ interface DatePickerCommonProps
   dateFormat?: string;
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
-  /** Kalles når en dato-knapp klikkes på. */
+  /** Callback som kalles når dato-verdien endres. */
   onSelectDate?: (date: Date | null) => void;
 }
 
@@ -81,5 +80,5 @@ export type DatePickerDiscriminatedErrorProps =
     };
 
 export type DatePickerProps = DatePickerCommonProps &
-  FormDiscriminatedRequiredProps &
+  FormRequiredProps &
   DatePickerDiscriminatedErrorProps;

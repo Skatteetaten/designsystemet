@@ -92,14 +92,14 @@ exports[`Tester/DatePicker/DatePicker WithAttributes play-test 1`] = `
 exports[`Tester/DatePicker/DatePicker WithAutoCompleteNameAndPlaceholder play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label id="labelId-:r22:"
+    <label id="labelId-:r1u:"
            class="LabelWithHelp_label__59tP-"
-           for="datepickerInputId-:r21:"
+           for="datepickerInputId-:r1t:"
     >
       Fødselsdato
     </label>
     <div class="DatePicker_dateContainer__WILQF ">
-      <input id="datepickerInputId-:r21:"
+      <input id="datepickerInputId-:r1t:"
              class="DatePicker_input__vz7zh"
              autocomplete="given-name"
              name="test_name"
@@ -113,11 +113,11 @@ exports[`Tester/DatePicker/DatePicker WithAutoCompleteNameAndPlaceholder play-te
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r23:"
+             aria-labelledby="svgtitle-:r1v:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r23:">
+          <title id="svgtitle-:r1v:">
             Velg dato
           </title>
           <path d="M19 19H5V8h14v11ZM16 1v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2Zm1 11h-5v5h5v-5Z">
@@ -125,7 +125,7 @@ exports[`Tester/DatePicker/DatePicker WithAutoCompleteNameAndPlaceholder play-te
         </svg>
       </button>
     </div>
-    <div id="datepickerErrorId-:r20:"
+    <div id="datepickerErrorId-:r1s:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -196,17 +196,17 @@ exports[`Tester/DatePicker/DatePicker WithCustomClassNames play-test 1`] = `
 exports[`Tester/DatePicker/DatePicker WithDateFormat play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label id="labelId-:r2d:"
+    <label id="labelId-:r29:"
            class="LabelWithHelp_label__59tP-"
-           for="datepickerInputId-:r2c:"
+           for="datepickerInputId-:r28:"
     >
       Fødselsdato
     </label>
     <div class="DatePicker_dateContainer__WILQF ">
-      <input id="datepickerInputId-:r2c:"
+      <input id="datepickerInputId-:r28:"
              class="DatePicker_input__vz7zh"
              placeholder="Skriv eller velg"
-             value="2024/02/05"
+             value="2024/01/05"
       >
       <button type="button"
               class="DatePicker_calendarButton__6sCKL"
@@ -215,11 +215,11 @@ exports[`Tester/DatePicker/DatePicker WithDateFormat play-test 1`] = `
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r2e:"
+             aria-labelledby="svgtitle-:r2a:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r2e:">
+          <title id="svgtitle-:r2a:">
             Velg dato
           </title>
           <path d="M19 19H5V8h14v11ZM16 1v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2Zm1 11h-5v5h5v-5Z">
@@ -227,50 +227,7 @@ exports[`Tester/DatePicker/DatePicker WithDateFormat play-test 1`] = `
         </svg>
       </button>
     </div>
-    <div id="datepickerErrorId-:r2b:"
-         aria-live="assertive"
-         aria-atomic="true"
-    >
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Tester/DatePicker/DatePicker WithDefaultValue play-test 1`] = `
-<div data-test-block="true">
-  <div class>
-    <label id="labelId-:rv:"
-           class="LabelWithHelp_label__59tP-"
-           for="datepickerInputId-:ru:"
-    >
-      Fødselsdato
-    </label>
-    <div class="DatePicker_dateContainer__WILQF ">
-      <input id="datepickerInputId-:ru:"
-             class="DatePicker_input__vz7zh"
-             placeholder="Skriv eller velg"
-             value="01.02.2024"
-      >
-      <button type="button"
-              class="DatePicker_calendarButton__6sCKL"
-              aria-expanded="false"
-      >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-labelledby="svgtitle-:r10:"
-             aria-hidden="false"
-             role="img"
-        >
-          <title id="svgtitle-:r10:">
-            Velg dato
-          </title>
-          <path d="M19 19H5V8h14v11ZM16 1v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2Zm1 11h-5v5h5v-5Z">
-          </path>
-        </svg>
-      </button>
-    </div>
-    <div id="datepickerErrorId-:rt:"
+    <div id="datepickerErrorId-:r27:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -282,9 +239,9 @@ exports[`Tester/DatePicker/DatePicker WithDefaultValue play-test 1`] = `
 exports[`Tester/DatePicker/DatePicker WithDescription play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label id="labelId-:r1k:"
+    <label id="labelId-:r1g:"
            class="LabelWithHelp_label__59tP-"
-           for="datepickerInputId-:r1j:"
+           for="datepickerInputId-:r1f:"
     >
       Fødselsdato
     </label>
@@ -292,7 +249,7 @@ exports[`Tester/DatePicker/DatePicker WithDescription play-test 1`] = `
       En liten beskrivelse tekst
     </div>
     <div class="DatePicker_dateContainer__WILQF ">
-      <input id="datepickerInputId-:r1j:"
+      <input id="datepickerInputId-:r1f:"
              class="DatePicker_input__vz7zh"
              placeholder="Skriv eller velg"
              value
@@ -304,11 +261,11 @@ exports[`Tester/DatePicker/DatePicker WithDescription play-test 1`] = `
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r1l:"
+             aria-labelledby="svgtitle-:r1h:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r1l:">
+          <title id="svgtitle-:r1h:">
             Velg dato
           </title>
           <path d="M19 19H5V8h14v11ZM16 1v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2Zm1 11h-5v5h5v-5Z">
@@ -316,7 +273,7 @@ exports[`Tester/DatePicker/DatePicker WithDescription play-test 1`] = `
         </svg>
       </button>
     </div>
-    <div id="datepickerErrorId-:r1i:"
+    <div id="datepickerErrorId-:r1e:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -373,6 +330,49 @@ exports[`Tester/DatePicker/DatePicker WithDisabled play-test 1`] = `
 exports[`Tester/DatePicker/DatePicker WithError play-test 1`] = `
 <div data-test-block="true">
   <div class>
+    <label id="labelId-:r17:"
+           class="LabelWithHelp_label__59tP-"
+           for="datepickerInputId-:r16:"
+    >
+      Fødselsdato
+    </label>
+    <div class="DatePicker_dateContainer__WILQF ">
+      <input id="datepickerInputId-:r16:"
+             class="DatePicker_input__vz7zh"
+             placeholder="Skriv eller velg"
+             value
+      >
+      <button type="button"
+              class="DatePicker_calendarButton__6sCKL"
+              aria-expanded="false"
+      >
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r18:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r18:">
+            Velg dato
+          </title>
+          <path d="M19 19H5V8h14v11ZM16 1v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2Zm1 11h-5v5h5v-5Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div id="datepickerErrorId-:r15:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/DatePicker/DatePicker WithErrorMessageAndHasError play-test 1`] = `
+<div data-test-block="true">
+  <div class>
     <label id="labelId-:r1b:"
            class="LabelWithHelp_label__59tP-"
            for="datepickerInputId-:r1a:"
@@ -383,6 +383,8 @@ exports[`Tester/DatePicker/DatePicker WithError play-test 1`] = `
       <input id="datepickerInputId-:r1a:"
              class="DatePicker_input__vz7zh"
              placeholder="Skriv eller velg"
+             aria-describedby="datepickerErrorId-:r19:"
+             aria-invalid="true"
              value
       >
       <button type="button"
@@ -408,51 +410,6 @@ exports[`Tester/DatePicker/DatePicker WithError play-test 1`] = `
          aria-live="assertive"
          aria-atomic="true"
     >
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Tester/DatePicker/DatePicker WithErrorMessageAndHasError play-test 1`] = `
-<div data-test-block="true">
-  <div class>
-    <label id="labelId-:r1f:"
-           class="LabelWithHelp_label__59tP-"
-           for="datepickerInputId-:r1e:"
-    >
-      Fødselsdato
-    </label>
-    <div class="DatePicker_dateContainer__WILQF ">
-      <input id="datepickerInputId-:r1e:"
-             class="DatePicker_input__vz7zh"
-             placeholder="Skriv eller velg"
-             aria-describedby="datepickerErrorId-:r1d:"
-             aria-invalid="true"
-             value
-      >
-      <button type="button"
-              class="DatePicker_calendarButton__6sCKL"
-              aria-expanded="false"
-      >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-labelledby="svgtitle-:r1g:"
-             aria-hidden="false"
-             role="img"
-        >
-          <title id="svgtitle-:r1g:">
-            Velg dato
-          </title>
-          <path d="M19 19H5V8h14v11ZM16 1v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2Zm1 11h-5v5h5v-5Z">
-          </path>
-        </svg>
-      </button>
-    </div>
-    <div id="datepickerErrorId-:r1d:"
-         aria-live="assertive"
-         aria-atomic="true"
-    >
       <div class="ErrorMessage_errorMessage__508oW ">
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
              viewbox="0 0 24 24"
@@ -475,25 +432,25 @@ exports[`Tester/DatePicker/DatePicker WithErrorMessageAndHasError play-test 1`] 
 exports[`Tester/DatePicker/DatePicker WithHelpText play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label id="labelId-:r1o:"
+    <label id="labelId-:r1k:"
            class="LabelWithHelp_label__59tP-"
-           for="datepickerInputId-:r1n:"
+           for="datepickerInputId-:r1j:"
     >
       Fødselsdato
     </label>
     <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
             type="button"
-            aria-describedby="labelId-:r1o:"
+            aria-describedby="labelId-:r1k:"
             aria-expanded="true"
     >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
            viewbox="0 0 24 24"
            focusable="false"
-           aria-labelledby="svgtitle-:r1p:"
+           aria-labelledby="svgtitle-:r1l:"
            aria-hidden="false"
            role="img"
       >
-        <title id="svgtitle-:r1p:">
+        <title id="svgtitle-:r1l:">
           Hjelp
         </title>
         <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
@@ -510,11 +467,11 @@ exports[`Tester/DatePicker/DatePicker WithHelpText play-test 1`] = `
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r1r:"
+             aria-labelledby="svgtitle-:r1n:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r1r:">
+          <title id="svgtitle-:r1n:">
             Lukk
           </title>
           <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
@@ -523,7 +480,7 @@ exports[`Tester/DatePicker/DatePicker WithHelpText play-test 1`] = `
       </button>
     </div>
     <div class="DatePicker_dateContainer__WILQF ">
-      <input id="datepickerInputId-:r1n:"
+      <input id="datepickerInputId-:r1j:"
              class="DatePicker_input__vz7zh"
              placeholder="Skriv eller velg"
              value
@@ -535,11 +492,11 @@ exports[`Tester/DatePicker/DatePicker WithHelpText play-test 1`] = `
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r1q:"
+             aria-labelledby="svgtitle-:r1m:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r1q:">
+          <title id="svgtitle-:r1m:">
             Velg dato
           </title>
           <path d="M19 19H5V8h14v11ZM16 1v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2Zm1 11h-5v5h5v-5Z">
@@ -547,7 +504,7 @@ exports[`Tester/DatePicker/DatePicker WithHelpText play-test 1`] = `
         </svg>
       </button>
     </div>
-    <div id="datepickerErrorId-:r1m:"
+    <div id="datepickerErrorId-:r1i:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -559,25 +516,25 @@ exports[`Tester/DatePicker/DatePicker WithHelpText play-test 1`] = `
 exports[`Tester/DatePicker/DatePicker WithHelpToggleEvent smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label id="labelId-:r69:"
+    <label id="labelId-:r65:"
            class="LabelWithHelp_label__59tP-"
-           for="datepickerInputId-:r68:"
+           for="datepickerInputId-:r64:"
     >
       Fødselsdato
     </label>
     <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
             type="button"
-            aria-describedby="labelId-:r69:"
+            aria-describedby="labelId-:r65:"
             aria-expanded="false"
     >
       <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
            viewbox="0 0 24 24"
            focusable="false"
-           aria-labelledby="svgtitle-:r6a:"
+           aria-labelledby="svgtitle-:r66:"
            aria-hidden="false"
            role="img"
       >
-        <title id="svgtitle-:r6a:">
+        <title id="svgtitle-:r66:">
           Hjelp
         </title>
         <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
@@ -585,7 +542,7 @@ exports[`Tester/DatePicker/DatePicker WithHelpToggleEvent smoke-test 1`] = `
       </svg>
     </button>
     <div class="DatePicker_dateContainer__WILQF ">
-      <input id="datepickerInputId-:r68:"
+      <input id="datepickerInputId-:r64:"
              class="DatePicker_input__vz7zh"
              placeholder="Skriv eller velg"
              value
@@ -597,11 +554,11 @@ exports[`Tester/DatePicker/DatePicker WithHelpToggleEvent smoke-test 1`] = `
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r6b:"
+             aria-labelledby="svgtitle-:r67:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r6b:">
+          <title id="svgtitle-:r67:">
             Velg dato
           </title>
           <path d="M19 19H5V8h14v11ZM16 1v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2Zm1 11h-5v5h5v-5Z">
@@ -609,7 +566,7 @@ exports[`Tester/DatePicker/DatePicker WithHelpToggleEvent smoke-test 1`] = `
         </svg>
       </button>
     </div>
-    <div id="datepickerErrorId-:r67:"
+    <div id="datepickerErrorId-:r63:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -621,14 +578,14 @@ exports[`Tester/DatePicker/DatePicker WithHelpToggleEvent smoke-test 1`] = `
 exports[`Tester/DatePicker/DatePicker WithHideLabel play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label id="labelId-:r1u:"
+    <label id="labelId-:r1q:"
            class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
-           for="datepickerInputId-:r1t:"
+           for="datepickerInputId-:r1p:"
     >
       Fødselsdato
     </label>
     <div class="DatePicker_dateContainer__WILQF ">
-      <input id="datepickerInputId-:r1t:"
+      <input id="datepickerInputId-:r1p:"
              class="DatePicker_input__vz7zh"
              placeholder="Skriv eller velg"
              value
@@ -640,11 +597,11 @@ exports[`Tester/DatePicker/DatePicker WithHideLabel play-test 1`] = `
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r1v:"
+             aria-labelledby="svgtitle-:r1r:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r1v:">
+          <title id="svgtitle-:r1r:">
             Velg dato
           </title>
           <path d="M19 19H5V8h14v11ZM16 1v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2Zm1 11h-5v5h5v-5Z">
@@ -652,7 +609,7 @@ exports[`Tester/DatePicker/DatePicker WithHideLabel play-test 1`] = `
         </svg>
       </button>
     </div>
-    <div id="datepickerErrorId-:r1s:"
+    <div id="datepickerErrorId-:r1o:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -664,14 +621,14 @@ exports[`Tester/DatePicker/DatePicker WithHideLabel play-test 1`] = `
 exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label id="labelId-:r2q:"
+    <label id="labelId-:r2m:"
            class="LabelWithHelp_label__59tP-"
-           for="datepickerInputId-:r2p:"
+           for="datepickerInputId-:r2l:"
     >
       Fødselsdato
     </label>
     <div class="DatePicker_dateContainer__WILQF ">
-      <input id="datepickerInputId-:r2p:"
+      <input id="datepickerInputId-:r2l:"
              class="DatePicker_input__vz7zh"
              placeholder="Skriv eller velg"
              value
@@ -683,11 +640,11 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r2r:"
+             aria-labelledby="svgtitle-:r2n:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r2r:">
+          <title id="svgtitle-:r2n:">
             Velg dato
           </title>
           <path d="M19 19H5V8h14v11ZM16 1v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2Zm1 11h-5v5h5v-5Z">
@@ -695,7 +652,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
         </svg>
       </button>
     </div>
-    <div id="datepickerErrorId-:r2o:"
+    <div id="datepickerErrorId-:r2k:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -709,11 +666,11 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
                  viewbox="0 0 24 24"
                  focusable="false"
-                 aria-labelledby="svgtitle-:r2s:"
+                 aria-labelledby="svgtitle-:r2o:"
                  aria-hidden="false"
                  role="img"
             >
-              <title id="svgtitle-:r2s:">
+              <title id="svgtitle-:r2o:">
                 Forrige måned Desember 2023
               </title>
               <path d="M22.3 10.8v1.8H5.5l5.2 5.1L9.3 19l-7.5-7.3 7.7-7.3 1.4 1.3-5.2 5.1h16.6Z">
@@ -722,14 +679,14 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
           </button>
           <div class="DatePickerCalendar_calendarNavigationMonthAndYearContainer__i-9ID">
             <div class>
-              <label id="labelId-:r2v:"
+              <label id="labelId-:r2r:"
                      class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
-                     for="selectId-:r2u:"
+                     for="selectId-:r2q:"
               >
                 Velg måned
               </label>
               <div class="Select_selectContainer__CfUZs DatePickerCalendar_calendarNavigationMonth__th-Oc">
-                <select id="selectId-:r2u:"
+                <select id="selectId-:r2q:"
                         class="Select_select__-ENv1"
                 >
                   <option class
@@ -803,24 +760,25 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                   </path>
                 </svg>
               </div>
-              <div id="selectErrorId-:r2t:"
+              <div id="selectErrorId-:r2p:"
                    aria-live="assertive"
                    aria-atomic="true"
               >
               </div>
             </div>
             <div class="DatePickerCalendar_calendarNavigationYear__Icqmb">
-              <label id="labelId-:r33:"
+              <label id="labelId-:r2v:"
                      class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
-                     for="textFieldTextboxId-:r32:"
+                     for="textFieldTextboxId-:r2u:"
               >
                 Årstall
               </label>
-              <input id="textFieldTextboxId-:r32:"
+              <input id="textFieldTextboxId-:r2u:"
                      class="TextField_textbox__qbZlk"
+                     inputmode="numeric"
                      value="2024"
               >
-              <div id="textFieldErrorId-:r31:"
+              <div id="textFieldErrorId-:r2t:"
                    aria-live="assertive"
                    aria-atomic="true"
               >
@@ -833,11 +791,11 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
             <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
                  viewbox="0 0 24 24"
                  focusable="false"
-                 aria-labelledby="svgtitle-:r34:"
+                 aria-labelledby="svgtitle-:r30:"
                  aria-hidden="false"
                  role="img"
             >
-              <title id="svgtitle-:r34:">
+              <title id="svgtitle-:r30:">
                 Neste måned Februar 2024
               </title>
               <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
@@ -1212,14 +1170,14 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
 exports[`Tester/DatePicker/DatePicker WithPlaceholderEmpty play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label id="labelId-:r26:"
+    <label id="labelId-:r22:"
            class="LabelWithHelp_label__59tP-"
-           for="datepickerInputId-:r25:"
+           for="datepickerInputId-:r21:"
     >
       Fødselsdato
     </label>
     <div class="DatePicker_dateContainer__WILQF ">
-      <input id="datepickerInputId-:r25:"
+      <input id="datepickerInputId-:r21:"
              class="DatePicker_input__vz7zh"
              value
       >
@@ -1230,11 +1188,11 @@ exports[`Tester/DatePicker/DatePicker WithPlaceholderEmpty play-test 1`] = `
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r27:"
+             aria-labelledby="svgtitle-:r23:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r27:">
+          <title id="svgtitle-:r23:">
             Velg dato
           </title>
           <path d="M19 19H5V8h14v11ZM16 1v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2Zm1 11h-5v5h5v-5Z">
@@ -1242,7 +1200,7 @@ exports[`Tester/DatePicker/DatePicker WithPlaceholderEmpty play-test 1`] = `
         </svg>
       </button>
     </div>
-    <div id="datepickerErrorId-:r24:"
+    <div id="datepickerErrorId-:r20:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -1254,21 +1212,21 @@ exports[`Tester/DatePicker/DatePicker WithPlaceholderEmpty play-test 1`] = `
 exports[`Tester/DatePicker/DatePicker WithReadOnly play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label id="labelId-:r2a:"
+    <label id="labelId-:r26:"
            class="LabelWithHelp_label__59tP-"
-           for="datepickerInputId-:r29:"
+           for="datepickerInputId-:r25:"
     >
       Fødselsdato
     </label>
     <div class="DatePicker_dateContainer__WILQF ">
-      <input id="datepickerInputId-:r29:"
+      <input id="datepickerInputId-:r25:"
              class="DatePicker_input__vz7zh"
              placeholder="Skriv eller velg"
              readonly
              value="01.02.2024"
       >
     </div>
-    <div id="datepickerErrorId-:r28:"
+    <div id="datepickerErrorId-:r24:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -1324,8 +1282,52 @@ exports[`Tester/DatePicker/DatePicker WithRef play-test 1`] = `
 exports[`Tester/DatePicker/DatePicker WithRequired play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label id="labelId-:r13:"
+    <label id="labelId-:rv:"
            class="LabelWithHelp_label__59tP-"
+           for="datepickerInputId-:ru:"
+    >
+      Fødselsdato
+    </label>
+    <div class="DatePicker_dateContainer__WILQF ">
+      <input id="datepickerInputId-:ru:"
+             class="DatePicker_input__vz7zh"
+             placeholder="Skriv eller velg"
+             required
+             value
+      >
+      <button type="button"
+              class="DatePicker_calendarButton__6sCKL"
+              aria-expanded="false"
+      >
+        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r10:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r10:">
+            Velg dato
+          </title>
+          <path d="M19 19H5V8h14v11ZM16 1v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2Zm1 11h-5v5h5v-5Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div id="datepickerErrorId-:rt:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/DatePicker/DatePicker WithRequiredAndMark smoke-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:r13:"
+           class="LabelWithHelp_label__59tP- LabelWithHelp_label_required__KSuzW"
            for="datepickerInputId-:r12:"
     >
       Fødselsdato
@@ -1357,50 +1359,6 @@ exports[`Tester/DatePicker/DatePicker WithRequired play-test 1`] = `
       </button>
     </div>
     <div id="datepickerErrorId-:r11:"
-         aria-live="assertive"
-         aria-atomic="true"
-    >
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Tester/DatePicker/DatePicker WithRequiredAndMark smoke-test 1`] = `
-<div data-test-block="true">
-  <div class>
-    <label id="labelId-:r17:"
-           class="LabelWithHelp_label__59tP- LabelWithHelp_label_required__KSuzW"
-           for="datepickerInputId-:r16:"
-    >
-      Fødselsdato
-    </label>
-    <div class="DatePicker_dateContainer__WILQF ">
-      <input id="datepickerInputId-:r16:"
-             class="DatePicker_input__vz7zh"
-             placeholder="Skriv eller velg"
-             required
-             value
-      >
-      <button type="button"
-              class="DatePicker_calendarButton__6sCKL"
-              aria-expanded="false"
-      >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-labelledby="svgtitle-:r18:"
-             aria-hidden="false"
-             role="img"
-        >
-          <title id="svgtitle-:r18:">
-            Velg dato
-          </title>
-          <path d="M19 19H5V8h14v11ZM16 1v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2Zm1 11h-5v5h5v-5Z">
-          </path>
-        </svg>
-      </button>
-    </div>
-    <div id="datepickerErrorId-:r15:"
          aria-live="assertive"
          aria-atomic="true"
     >

@@ -1,9 +1,6 @@
 import { ComponentPropsWithoutRef } from 'react';
 
-import {
-  BaseProps,
-  FormDiscriminatedRequiredProps,
-} from '@skatteetaten/ds-core-utils';
+import { BaseProps, FormRequiredProps } from '@skatteetaten/ds-core-utils';
 
 type RequiredCheckboxHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'input'>,
@@ -49,5 +46,5 @@ type CheckboxDiscriminatedErrorProps =
     };
 
 export type CheckboxProps = CheckboxCommonProps &
-  FormDiscriminatedRequiredProps &
+  FormRequiredProps &
   CheckboxDiscriminatedErrorProps;

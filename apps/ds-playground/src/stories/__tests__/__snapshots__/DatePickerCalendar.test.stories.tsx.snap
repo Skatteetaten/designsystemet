@@ -119,6 +119,7 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           </label>
           <input id="textFieldTextboxId-:ro:"
                  class="TextField_textbox__qbZlk"
+                 inputmode="numeric"
                  value="2024"
           >
           <div id="textFieldErrorId-:rn:"
@@ -631,6 +632,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           </label>
           <input id="textFieldTextboxId-:rf:"
                  class="TextField_textbox__qbZlk"
+                 inputmode="numeric"
                  value="2024"
           >
           <div id="textFieldErrorId-:re:"
@@ -1139,6 +1141,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           </label>
           <input id="textFieldTextboxId-:r25:"
                  class="TextField_textbox__qbZlk"
+                 inputmode="numeric"
                  value="2024"
           >
           <div id="textFieldErrorId-:r24:"
@@ -1647,6 +1650,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
           </label>
           <input id="textFieldTextboxId-:r1j:"
                  class="TextField_textbox__qbZlk"
+                 inputmode="numeric"
                  value="2024"
           >
           <div id="textFieldErrorId-:r1i:"
@@ -2175,6 +2179,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWith
           </label>
           <input id="textFieldTextboxId-:r1s:"
                  class="TextField_textbox__qbZlk"
+                 inputmode="numeric"
                  value="2024"
           >
           <div id="textFieldErrorId-:r1r:"
@@ -2703,6 +2708,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           </label>
           <input id="textFieldTextboxId-:r1a:"
                  class="TextField_textbox__qbZlk"
+                 inputmode="numeric"
                  value="2024"
           >
           <div id="textFieldErrorId-:r19:"
@@ -3227,6 +3233,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           </label>
           <input id="textFieldTextboxId-:r6:"
                  class="TextField_textbox__qbZlk"
+                 inputmode="numeric"
                  value="2024"
           >
           <div id="textFieldErrorId-:r5:"
@@ -3735,6 +3742,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
           </label>
           <input id="textFieldTextboxId-:r11:"
                  class="TextField_textbox__qbZlk"
+                 inputmode="numeric"
                  value="2024"
           >
           <div id="textFieldErrorId-:r10:"

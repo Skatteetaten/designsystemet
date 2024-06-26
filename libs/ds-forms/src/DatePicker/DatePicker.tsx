@@ -1,32 +1,28 @@
 import React, {
-  forwardRef,
-  useId,
-  useState,
-  JSX,
   ChangeEvent,
   FocusEvent,
-  useRef,
+  JSX,
+  forwardRef,
   useEffect,
+  useId,
   useImperativeHandle,
+  useRef,
+  useState,
 } from 'react';
-import { flushSync } from 'react-dom';
 import { useTranslation } from 'react-i18next';
 
 import {
   dsI18n,
   getCommonClassNameDefault,
   getCommonFormVariantDefault,
+  useValidateFormRequiredProps,
 } from '@skatteetaten/ds-core-utils';
 import { CalendarIcon } from '@skatteetaten/ds-icons';
 import { isValid } from 'date-fns';
 
 import { DatePickerProps } from './DatePicker.types';
 import { getDatePickerDateFormat } from './defaults';
-import {
-  formatDateForInput,
-  initInputValue,
-  parseDateFromInput,
-} from './utils';
+import { formatDateForInput, parseDateFromInput } from './utils';
 import { DatePickerCalendar } from '../DatePickerCalendar/DatePickerCalendar';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
@@ -41,7 +37,6 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       classNames,
       lang,
       'data-testid': dataTestId,
-      defaultValue,
       dateFormat = getDatePickerDateFormat(),
       description,
       errorMessage,
@@ -71,6 +66,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
     },
     ref
   ): JSX.Element => {
+    useValidateFormRequiredProps({ required, showRequiredMark });
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
 
     const errorId = `datepickerErrorId-${useId()}`;
@@ -81,24 +77,23 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
     const calenderButtonRef = useRef<HTMLButtonElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
     useImperativeHandle(ref, () => inputRef?.current as HTMLInputElement);
-
     const [showCalendar, setShowCalendar] = useState(false);
 
-    const [selectedDate, setSelectedDate] = React.useState(value);
     const [inputValue, setInputValue] = React.useState(
-      initInputValue(value, defaultValue, dateFormat)
+      formatDateForInput(dateFormat, value)
     );
 
-    const preselectedDate = selectedDate || initialPickerDate;
+    useEffect(() => {
+      setInputValue(formatDateForInput(dateFormat, value));
+    }, [dateFormat, value]);
+
+    const parsedDateFromInput = parseDateFromInput(inputValue) ?? undefined;
+    const preselectedDate = isValid(parsedDateFromInput)
+      ? parsedDateFromInput
+      : initialPickerDate;
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
-      const { value } = e.target as HTMLInputElement;
-      const date = parseDateFromInput(value);
-
-      setSelectedDate(isValid(date) ? date : undefined);
-      flushSync(() => {
-        setInputValue(value);
-      });
+      setInputValue(e.target.value);
       onChange?.(e);
     };
 
@@ -113,7 +108,6 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       const { value } = e.target as HTMLInputElement;
       const date = parseDateFromInput(value);
       if (isValid(date)) {
-        setSelectedDate(date);
         date && setInputValue(formatDateForInput(dateFormat, date));
       }
       onSelectDate?.(date);
@@ -121,7 +115,6 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
     };
 
     const handleSelectDate = (date: Date): void => {
-      setSelectedDate(date);
       setInputValue(formatDateForInput(dateFormat, date));
       setShowCalendar(false);
       inputRef.current?.focus();
@@ -132,13 +125,6 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       setShowCalendar(false);
       calenderButtonRef?.current?.focus();
     };
-
-    useEffect(() => {
-      if (value) {
-        setSelectedDate(value);
-        setInputValue(formatDateForInput(dateFormat, value));
-      }
-    }, [dateFormat, value]);
 
     useEffect(() => {
       if (!showCalendar) {
@@ -232,11 +218,6 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
             placeholder={placeholderValue}
             readOnly={readOnly}
             required={required}
-            defaultValue={
-              defaultValue
-                ? formatDateForInput(dateFormat, defaultValue)
-                : undefined
-            }
             value={inputValue}
             aria-describedby={hasError ? errorId : undefined}
             aria-invalid={hasError ?? undefined}

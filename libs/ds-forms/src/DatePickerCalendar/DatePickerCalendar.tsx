@@ -355,6 +355,7 @@ export const DatePickerCalendar = forwardRef<
               className={styles.calendarNavigationYear}
               value={selectedYear}
               label={t('datepicker.Year')}
+              inputMode={'numeric'}
               hideLabel
               onChange={handleYearChange}
               onBlur={handleYearBlur}

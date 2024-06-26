@@ -1,4 +1,4 @@
-import { forwardRef, useState, useId, JSX, useMemo } from 'react';
+import { forwardRef, useState, useId, JSX, useMemo, useEffect } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
@@ -27,9 +27,13 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
     ref
   ): JSX.Element => {
     const [activeTab, setActiveTab] = useState(value ?? defaultValue);
+    useEffect(() => {
+      if (!value) return;
+      setActiveTab(value);
+    }, [value]);
     const [index, setIndex] = useState<number>(0);
     if (activeTab === undefined) {
-      throw new Error('prop defaultValue eller value må ha en verdi');
+      throw new Error(`prop 'defaultValue' eller 'value' må ha en satt verdi`);
     }
     const baseId = useId();
     const contextValue = useMemo(

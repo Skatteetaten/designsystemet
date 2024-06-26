@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FocusEvent, useState } from 'react';
+import { ChangeEvent, FocusEvent, useState } from 'react';
 
 import { dsI18n, formArrSize } from '@skatteetaten/ds-core-utils';
 import { DatePicker, TextField } from '@skatteetaten/ds-forms';
@@ -22,7 +22,9 @@ const verifyAttribute =
     const canvas = within(canvasElement);
     const button = canvas.getByRole('textbox');
     await expect(button).toBeInTheDocument();
-    await expect(button).toHaveAttribute(attribute, expectedValue);
+    await waitFor(() =>
+      expect(button).toHaveAttribute(attribute, expectedValue)
+    );
   };
 
 const today = new Date('2024.01.15');
@@ -39,7 +41,6 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     classNames: { table: { disable: true } },
-    defaultValue: { table: { disable: true }, control: 'date' },
     value: { table: { disable: true }, control: 'date' },
     dateFormat: { table: { disable: true } },
     description: { table: { disable: true } },
@@ -262,21 +263,6 @@ export const WithValue = {
   play: verifyAttribute('value', '01.02.2024'),
 } satisfies Story;
 
-export const WithDefaultValue = {
-  name: 'With DefaultValue',
-  args: {
-    ...defaultArgs,
-    defaultValue: valueDate,
-  },
-  argTypes: {
-    defaultValue: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: { disable: true },
-  },
-  play: verifyAttribute('value', '01.02.2024'),
-} satisfies Story;
-
 export const WithRequired = {
   name: 'With Required (B3)',
   args: {
@@ -483,7 +469,8 @@ export const WithDateFormat = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const input = canvas.getByRole('textbox');
-    await expect(input).toHaveValue('2024/02/01');
+
+    await waitFor(() => expect(input).toHaveValue('2024/02/01'));
 
     const calendarButton = canvas.getByRole('button', {
       name: dsI18n.t('ds_forms:datepicker.ChooseDate'),
@@ -491,7 +478,7 @@ export const WithDateFormat = {
     await fireEvent.click(calendarButton);
     const dateButton = canvas.getByText('5');
     await fireEvent.click(dateButton);
-    await expect(input).toHaveValue('2024/02/05');
+    await expect(input).toHaveValue('2024/01/05');
   },
 } satisfies Story;
 
@@ -641,9 +628,9 @@ export const ClickCalendarDateButton = {
     const calendarButton = canvas.getByRole('button', {
       name: dsI18n.t('ds_forms:datepicker.ChooseDate'),
     });
-    await fireEvent.click(calendarButton);
+    await userEvent.click(calendarButton);
     const dateButton = canvas.getByText('5');
-    await fireEvent.click(dateButton);
+    await userEvent.click(dateButton);
     await expect(calendarButton).toHaveAttribute('aria-expanded', 'false');
     const input = canvas.getByRole('textbox');
     await expect(input).toHaveValue('05.02.2024');

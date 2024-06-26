@@ -13,6 +13,7 @@ import {
   dsI18n,
   getCommonClassNameDefault,
   getCommonFormVariantDefault,
+  useValidateFormRequiredProps,
 } from '@skatteetaten/ds-core-utils';
 import { ChevronDownSVGpath, Icon } from '@skatteetaten/ds-icons';
 
@@ -58,6 +59,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
     },
     ref
   ): JSX.Element => {
+    useValidateFormRequiredProps({ required, showRequiredMark });
     const { t } = useTranslation('Shared', { i18n: dsI18n });
 
     const selectRef = useRef<HTMLSelectElement>(null);

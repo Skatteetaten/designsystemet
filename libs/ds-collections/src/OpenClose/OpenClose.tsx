@@ -56,7 +56,7 @@ export const OpenClose = forwardRef<HTMLButtonElement, OpenCloseProps>(
       ? styles.openClose_hasIconRight
       : '';
     const compactClassName = isCompact ? styles.openClose_compact : '';
-    const openCloseClassName = `${styles.openClose} ${compactClassName} ${iconRightClassName} ${className}`;
+    const openCloseClassName = `${styles.openClose} ${compactClassName} ${iconRightClassName}`;
     const iconClassName = `${styles.icon} ${styles.icon_active} ${
       isExpanded ? styles.icon_open : styles.icon_closed
     } ${isCompact ? styles.icon_compact : ''}`;
@@ -68,7 +68,7 @@ export const OpenClose = forwardRef<HTMLButtonElement, OpenCloseProps>(
     } ${hasIconRight ? styles.content_hasIconRight : ''}`;
 
     return (
-      <>
+      <div className={className}>
         <Tag className={styles.tag}>
           <button
             ref={ref}
@@ -90,7 +90,7 @@ export const OpenClose = forwardRef<HTMLButtonElement, OpenCloseProps>(
           </button>
         </Tag>
         {isExpanded && <div className={contentClassName}>{children}</div>}
-      </>
+      </div>
     );
   }
 );
