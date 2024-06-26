@@ -14,12 +14,12 @@
     "i18next": "^23",
     "react": "^18",
     "react-i18next": "^14",
-    "@skatteetaten/ds-core-utils": "*",
-    "@skatteetaten/ds-icons": "*",
-    "@skatteetaten/ds-buttons": "*",
-    "@skatteetaten/ds-content": "*",
-    "@skatteetaten/ds-typography": "*",
-    "@skatteetaten/ds-progress": "*"
+    "@skatteetaten/ds-core-utils": "1.0.0",
+    "@skatteetaten/ds-icons": "1.0.0",
+    "@skatteetaten/ds-buttons": "1.0.0",
+    "@skatteetaten/ds-content": "1.0.0",
+    "@skatteetaten/ds-typography": "1.0.0",
+    "@skatteetaten/ds-progress": "1.0.0"
   },
   "scripts": {}
 }
