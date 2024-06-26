@@ -41,7 +41,7 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
     const [internalPage, setInternalPage] = useState<number>(defaultCurrent);
     const currentPage = externalCurrentPage ?? internalPage;
 
-    if (currentPage < 0 || currentPage > lastPage) {
+    if (currentPage <= 0 || currentPage > lastPage) {
       throw new Error(
         `currentPage må være fra og med 0 til og med ${lastPage} (lastPage).`
       );
