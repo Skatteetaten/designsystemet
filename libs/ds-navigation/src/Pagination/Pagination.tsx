@@ -1,4 +1,4 @@
-import { forwardRef, useState, useRef, useEffect } from 'react';
+import { forwardRef, useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -37,9 +37,16 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
     const lastPageRef = useRef<HTMLButtonElement>(null);
     const firstPageRef = useRef<HTMLButtonElement>(null);
     const lastPage = Math.ceil(totalItems / pageSize);
-    const currentPage = externalCurrentPage ?? defaultCurrent;
     const pageSibling = sibling < 1 ? 1 : sibling;
-    const [internalPage, setInternalPage] = useState<number>(currentPage);
+    const [internalPage, setInternalPage] = useState<number>(defaultCurrent);
+    const currentPage = externalCurrentPage ?? internalPage;
+
+    if (currentPage <= 0 || currentPage > lastPage) {
+      throw new Error(
+        `currentPage må være fra og med 0 til og med ${lastPage} (lastPage).`
+      );
+    }
+
     const handleChange = (page: number): void => {
       setInternalPage(page);
       if (page === 1) {
@@ -49,19 +56,12 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
       }
       onChange?.(page);
     };
-    useEffect(() => {
-      if (currentPage > 0 && currentPage <= lastPage) {
-        setInternalPage(currentPage);
-      }
-    }, [currentPage, lastPage]);
     const rangeTo =
-      internalPage * pageSize > totalItems
-        ? totalItems
-        : internalPage * pageSize;
+      currentPage * pageSize > totalItems ? totalItems : currentPage * pageSize;
     const showPaginationSummary = dsI18n.t(
       'ds_navigation:pagination.PageSummary',
       {
-        range: `${internalPage * pageSize + 1 - pageSize}–${rangeTo}`,
+        range: `${currentPage * pageSize + 1 - pageSize}–${rangeTo}`,
         total: totalItems,
       }
     );
@@ -93,7 +93,7 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
             <PaginationList
               lastPage={lastPage}
               sibling={pageSibling}
-              internalPage={internalPage}
+              currentPage={currentPage}
               handleChange={handleChange}
               firstPageRef={firstPageRef}
               lastPageRef={lastPageRef}
