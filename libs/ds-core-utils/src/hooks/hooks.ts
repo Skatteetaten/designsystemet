@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import { FormRequiredProps } from '../base-props.types';
 
 export const useMediaQuery = (query: string): boolean => {
