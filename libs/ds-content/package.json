@@ -12,9 +12,9 @@
   },
   "peerDependencies": {
     "react": "^18",
-    "@skatteetaten/ds-core-utils": "*",
-    "@skatteetaten/ds-typography": "*",
-    "@skatteetaten/ds-icons": "*",
+    "@skatteetaten/ds-core-utils": "1.0.0",
+    "@skatteetaten/ds-typography": "1.0.0",
+    "@skatteetaten/ds-icons": "1.0.0",
     "react-i18next": "^14",
     "i18next": "^23"
   },
