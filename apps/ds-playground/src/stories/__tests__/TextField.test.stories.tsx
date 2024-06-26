@@ -751,8 +751,10 @@ export const WithTextAreaAutoSizeInModal = {
 
     const textbox = canvas.getByRole('textbox');
     await expect(textbox.tagName).toBe('TEXTAREA');
-    await expect(textbox).toHaveStyle({
-      height: '64px',
-    });
+    await waitFor(() =>
+      expect(textbox).toHaveStyle({
+        height: '64px',
+      })
+    );
   },
 } satisfies Story;
