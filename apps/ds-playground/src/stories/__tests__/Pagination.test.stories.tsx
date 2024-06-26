@@ -161,6 +161,11 @@ export const WithListLength: Story = {
         await expect(paginationStatusNextPage).toBeInTheDocument();
       }
     );
+    await fireEvent.click(nextButton);
+    await step('Test 9-12', async () => {
+      const paginationStatusNextPage = canvas.getByText('Viser 9–12 av 70'); // Tankestrek
+      await expect(paginationStatusNextPage).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 
