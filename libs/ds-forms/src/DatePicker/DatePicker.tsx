@@ -15,6 +15,7 @@ import {
   dsI18n,
   getCommonClassNameDefault,
   getCommonFormVariantDefault,
+  useValidateFormRequiredProps,
 } from '@skatteetaten/ds-core-utils';
 import { CalendarIcon } from '@skatteetaten/ds-icons';
 import { isValid } from 'date-fns';
@@ -65,6 +66,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
     },
     ref
   ): JSX.Element => {
+    useValidateFormRequiredProps({ required, showRequiredMark });
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
 
     const errorId = `datepickerErrorId-${useId()}`;

@@ -1,6 +1,9 @@
 import { forwardRef, useContext, useId, JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import {
+  getCommonClassNameDefault,
+  useValidateFormRequiredProps,
+} from '@skatteetaten/ds-core-utils';
 
 import { CheckboxProps } from './Checkbox.types';
 import { CheckboxContext } from '../CheckboxContext/CheckboxContext';
@@ -33,6 +36,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     },
     ref
   ): JSX.Element => {
+    useValidateFormRequiredProps({ required, showRequiredMark });
     const context = useContext(CheckboxContext);
     const errorIdExternal = context?.errorId;
 

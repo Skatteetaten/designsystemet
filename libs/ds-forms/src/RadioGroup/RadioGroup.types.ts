@@ -6,10 +6,7 @@ import {
   ReactNode,
 } from 'react';
 
-import {
-  BaseProps,
-  FormDiscriminatedRequiredProps,
-} from '@skatteetaten/ds-core-utils';
+import { BaseProps, FormRequiredProps } from '@skatteetaten/ds-core-utils';
 
 import { FieldsetProps } from '../Fieldset/Fieldset.types';
 import { RadioProps } from '../Radio/Radio.types';
@@ -97,7 +94,7 @@ type RadioGroupDiscriminatedErrorProps =
     };
 
 export type RadioGroupProps = RadioGroupComponentCommonProps &
-  FormDiscriminatedRequiredProps &
+  FormRequiredProps &
   RadioGroupDiscriminatedCheckedProps &
   RadioGroupDiscriminatedErrorProps;
 

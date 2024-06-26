@@ -13,6 +13,7 @@ import {
   getCommonClassNameDefault,
   getCommonFormVariantDefault,
   Languages,
+  useValidateFormRequiredProps,
 } from '@skatteetaten/ds-core-utils';
 
 import { getTextFieldAsDefault } from './defaults';
@@ -64,6 +65,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
     },
     ref
   ): JSX.Element => {
+    useValidateFormRequiredProps({ required, showRequiredMark });
     const errorId = `textFieldErrorId-${useId()}`;
     const generatedId = `textFieldTextboxId-${useId()}`;
     const textboxId = externalId ?? generatedId;
