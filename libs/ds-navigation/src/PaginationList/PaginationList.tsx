@@ -80,7 +80,7 @@ const getFirstOrLastRef = ({
 
 export const PaginationList = ({
   lastPage,
-  internalPage,
+  currentPage,
   sibling,
   handleChange,
   firstPageRef,
@@ -92,34 +92,34 @@ export const PaginationList = ({
   let rangeStart = 2;
   let rangeEnd = lastPage - 1;
   barList.push(1);
-  if (canHaveElipsisStart(internalPage, sibling)) {
-    if (internalPage > 2) {
-      rangeStart = internalPage - sibling;
+  if (canHaveElipsisStart(currentPage, sibling)) {
+    if (currentPage > 2) {
+      rangeStart = currentPage - sibling;
     }
     barList.push('elipsbeforeactive');
   }
-  if (rangeStart < internalPage + 1) {
-    barList.push(...getRange(rangeStart, internalPage - 1));
+  if (rangeStart < currentPage + 1) {
+    barList.push(...getRange(rangeStart, currentPage - 1));
   }
-  if (internalPage > 1 && internalPage < lastPage) {
-    barList.push(internalPage);
+  if (currentPage > 1 && currentPage < lastPage) {
+    barList.push(currentPage);
   }
-  if (canHaveElipsisEnd(internalPage, sibling, lastPage)) {
-    rangeEnd = internalPage + sibling;
+  if (canHaveElipsisEnd(currentPage, sibling, lastPage)) {
+    rangeEnd = currentPage + sibling;
   }
-  if (rangeEnd > internalPage) {
-    barList.push(...getRange(internalPage + 1, rangeEnd));
+  if (rangeEnd > currentPage) {
+    barList.push(...getRange(currentPage + 1, rangeEnd));
   }
-  if (canHaveElipsisEnd(internalPage, sibling, lastPage)) {
+  if (canHaveElipsisEnd(currentPage, sibling, lastPage)) {
     barList.push('elipsafteractive');
   }
   barList.push(lastPage);
 
   return (
     <>
-      {internalPage > 1 && (
+      {currentPage > 1 && (
         <FirstLastPageButton
-          activePage={internalPage}
+          activePage={currentPage}
           navigateDirection={'previous'}
           handleChange={handleChange}
           t={t}
@@ -143,9 +143,9 @@ export const PaginationList = ({
                 firstPageRef,
                 lastPageRef,
               })}
-              variant={paging === internalPage ? 'primary' : 'tertiary'}
+              variant={paging === currentPage ? 'primary' : 'tertiary'}
               className={styles.button}
-              ariaCurrent={paging === internalPage ? true : undefined}
+              ariaCurrent={paging === currentPage ? true : undefined}
               onClick={() => handleChange(Number(paging))}
             >
               {paging.toString()}
@@ -153,9 +153,9 @@ export const PaginationList = ({
           )}
         </li>
       ))}
-      {internalPage < lastPage && (
+      {currentPage < lastPage && (
         <FirstLastPageButton
-          activePage={internalPage}
+          activePage={currentPage}
           navigateDirection={'next'}
           handleChange={handleChange}
           t={t}
