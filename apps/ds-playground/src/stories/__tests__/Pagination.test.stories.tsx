@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   Pagination,
@@ -9,9 +7,14 @@ import {
 import { List } from '@skatteetaten/ds-typography';
 import { useArgs } from '@storybook/preview-api';
 import { StoryObj, Meta } from '@storybook/react';
-import { fn, expect, fireEvent, waitFor, within } from '@storybook/test';
-
-import { exampleParameters } from '../utils/stories.utils';
+import {
+  fn,
+  expect,
+  fireEvent,
+  waitFor,
+  within,
+  userEvent,
+} from '@storybook/test';
 
 const meta = {
   component: Pagination,
@@ -421,10 +424,12 @@ export const WithHiddenPageSummary: Story = {
 
 export const WithControlled: Story = {
   parameters: {
-    ...exampleParameters,
     imageSnapshot: { disable: true },
   },
-  args: { totalItems: 10 },
+  args: { totalItems: 30, sibling: 1, pageSize: 5, currentPage: 1 },
+  argTypes: {
+    currentPage: { table: { disable: false } },
+  },
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
     // Antall elementer på side OG antall sider representert med siste page-button
@@ -433,26 +438,21 @@ export const WithControlled: Story = {
     const nextButton = canvas.getByRole('button', {
       name: dsI18n.t('ds_navigation:pagination.NextButtonTitle'),
     });
-    await fireEvent.click(nextButton);
+    await userEvent.click(nextButton);
     await waitFor(() => expect(args.onChange).toHaveBeenCalled);
-    const currentButton = canvas.getByRole('button', {
+    const currentButton = await canvas.findByRole('button', {
       name: '2',
+      current: true,
     });
-    await expect(currentButton).toHaveAttribute('aria-current', 'true');
+    await expect(currentButton).toBeInTheDocument();
   },
-  render: (_args): JSX.Element => {
-    const [page, setPage] = useState(1);
+  render: (args): JSX.Element => {
+    const [{ currentPage }, setPage] = useArgs();
     const onChange = (page: number): void => {
-      setPage(page);
+      setPage({ currentPage: page });
     };
     return (
-      <Pagination
-        totalItems={30}
-        sibling={1}
-        pageSize={5}
-        currentPage={page}
-        onChange={onChange}
-      />
+      <Pagination {...args} currentPage={currentPage} onChange={onChange} />
     );
   },
 } satisfies Story;
