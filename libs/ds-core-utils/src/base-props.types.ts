@@ -62,6 +62,6 @@ export type Density = (typeof densityArr)[number];
 
 export type FormRequiredProps = {
   required?: boolean;
-  /** Om obligatorisk TextField skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
+  /** Om obligatorisk skjemafelt skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
   showRequiredMark?: boolean;
 };
