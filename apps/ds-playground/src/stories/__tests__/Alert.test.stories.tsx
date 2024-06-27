@@ -2,8 +2,9 @@ import { dsI18n, statusArr } from '@skatteetaten/ds-core-utils';
 import { LockSVGpath } from '@skatteetaten/ds-icons';
 import { Alert } from '@skatteetaten/ds-status';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
+import { useArgs } from '@storybook/preview-api';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, fireEvent, waitFor, within } from '@storybook/test';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -27,9 +28,6 @@ const meta = {
     showAlert: {
       table: { disable: true },
     },
-    showCloseButton: {
-      table: { disable: true },
-    },
     svgPath: {
       table: { disable: true },
       options: Object.keys(SystemSVGPaths),
@@ -40,6 +38,8 @@ const meta = {
       control: 'radio',
       table: { disable: true },
     },
+    // Events
+    onClose: { table: { disable: true } },
     // Aria
     ariaLive: { table: { disable: true } },
   },
@@ -246,7 +246,6 @@ export const AllVariants = {
   name: 'All Variants (A1)',
   args: {
     ...defaultArgs,
-    showCloseButton: true,
     showAlert: true,
   },
 } satisfies Story;
@@ -256,7 +255,6 @@ export const AllVariantsMobile = {
   name: 'All Variants On Small Screen (A1)',
   args: {
     ...defaultArgs,
-    showCloseButton: true,
     showAlert: true,
   },
   parameters: {
@@ -272,7 +270,6 @@ export const WithLongText = {
     ...defaultArgs,
     children:
       'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon. Dersom teksten går over flere linjer, så vil ikonene beholde plasseringen sin.',
-    showCloseButton: true,
     showAlert: true,
   },
   argTypes: {
@@ -288,7 +285,6 @@ export const WithLongTextAndBreaking = {
     ...defaultArgs,
     children:
       'Avvistavkortutsteder.Takontaktmedkortutstederformerinformasjon.Dersomtekstengåroverflerelinjer,såvilikonenebeholdeplasseringensin.',
-    showCloseButton: true,
     showAlert: true,
   },
   argTypes: {
@@ -349,11 +345,8 @@ export const WithCloseButton = {
   name: 'With Close Button (A4)',
   args: {
     ...defaultArgs,
-    showCloseButton: true,
     showAlert: true,
-  },
-  argTypes: {
-    showCloseButton: { table: { disable: false } },
+    onClose: fn(),
   },
   parameters: {
     imageSnapshot: {
@@ -361,40 +354,41 @@ export const WithCloseButton = {
       hover: `${wrapper} button`,
     },
   },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const iconButton = canvas.getByRole('button');
-    await expect(iconButton).toBeInTheDocument();
-    const svg = canvas.getByTitle(dsI18n.t('ds_status:alert.CloseMessage'));
-    await expect(svg).toBeInTheDocument();
-  },
 } satisfies Story;
 
-export const WithOnClickCloseButton = {
+export const WithCloseOnClickButton = {
   name: 'With OnClick Close Button (A4)',
   args: {
     ...defaultArgs,
-    showCloseButton: true,
     showAlert: true,
   },
   parameters: {
     imageSnapshot: { disable: true },
-    HTMLSnapshot: { disable: true },
+  },
+  render: (args): JSX.Element => {
+    const [, setArgs] = useArgs();
+    return (
+      <Alert
+        {...args}
+        onClose={() => {
+          setArgs({ showAlert: false });
+        }}
+      >
+        {args.children}
+      </Alert>
+    );
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const button = canvas.getByRole('button');
-    await expect(button).toBeInTheDocument();
-    await expect(canvas.getByText(defaultText)).toBeInTheDocument();
 
-    /*TODO etter bytte fra @storybook/jest til @storybook/test må denne testen bruke
-    fireevent i stedet for UserEvent. Med userEVent gir testen ustabilt resultat.
-    I tillegg ser det ut som visningen i interactions fanen i storybook ikke samsvarer med resultatet til testen.
-     */
-    await fireEvent.click(button);
-    const container = canvas.getAllByRole('generic')[1];
-    // eslint-disable-next-line testing-library/no-node-access
-    const alertNode = container.querySelector('div');
+    const alertNode = canvas.getByText(defaultText);
+    await expect(alertNode).toBeInTheDocument();
+
+    const iconButton = canvas.getByRole('button');
+    await expect(iconButton).toBeInTheDocument();
+    const svg = canvas.getByTitle(dsI18n.t('ds_status:alert.CloseMessage'));
+    await expect(svg).toBeInTheDocument();
+    await userEvent.click(iconButton);
     await waitFor(() => expect(alertNode).not.toBeInTheDocument());
   },
 } satisfies Story;
