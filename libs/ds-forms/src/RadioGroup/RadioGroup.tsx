@@ -1,6 +1,9 @@
 import { forwardRef, useId, JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import {
+  getCommonClassNameDefault,
+  useValidateFormRequiredProps,
+} from '@skatteetaten/ds-core-utils';
 
 import { getRadioGroupVariantDefault } from './defaults';
 import { RadioGroupComponent, RadioGroupProps } from './RadioGroup.types';
@@ -31,7 +34,6 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
       form,
       name,
       required,
-      hasError,
       hideLegend,
       showRequiredMark,
       onChange,
@@ -40,6 +42,7 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
     },
     ref
   ): JSX.Element => {
+    useValidateFormRequiredProps({ required, showRequiredMark });
     const errorId = `radioErrorId-${useId()}`;
     const uniqueNameId = `radioInputName-${useId()}`;
     const nameId = name ?? uniqueNameId;
@@ -74,10 +77,10 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
           <RadioGroupContext.Provider
             value={{
               defaultValue,
-              errorId: hasError ? errorId : '',
+              errorId: errorMessage ? errorId : '',
               name: nameId,
               selectedValue,
-              hasError: hasError ?? undefined,
+              hasError: !!errorMessage || undefined,
               required,
               onChange,
             }}
@@ -88,9 +91,9 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
         <ErrorMessage
           className={styles.errorMessage}
           id={errorId}
-          showError={hasError}
+          showError={!!errorMessage}
         >
-          {errorMessage ?? ''}
+          {errorMessage}
         </ErrorMessage>
       </Fieldset>
     );

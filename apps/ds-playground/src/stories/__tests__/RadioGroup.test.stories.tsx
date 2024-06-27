@@ -35,7 +35,6 @@ const meta = {
     defaultValue: { table: { disable: true } },
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
-    hasError: { table: { disable: true } },
     helpSvgPath: {
       table: { disable: true },
       options: Object.keys(SystemSVGPaths),
@@ -342,12 +341,11 @@ export const WithName = {
   },
 } satisfies Story;
 
-export const WithErrorMessage = {
+export const WithoutErrorMessage = {
   render: Template,
-  name: 'With ErrorMessage (B4)',
+  name: 'Without ErrorMessage (B4)',
   args: {
     ...defaultArgs,
-    errorMessage: 'Feilmelding',
   },
   argTypes: {
     errorMessage: { table: { disable: false } },
@@ -363,21 +361,22 @@ export const WithErrorMessage = {
       expect(radio).not.toHaveAttribute('aria-describedby');
     });
   },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
 } satisfies Story;
 
-export const WithErrorMessageAndHasError = {
+export const WithErrorMessage = {
   render: Template,
-  name: 'With ErrorMessage And HasError (B4, A3)',
+  name: 'With ErrorMessage (B4, A3)',
   args: {
     ...defaultArgs,
     errorMessage: 'Feilmelding',
-    hasError: true,
     selectedValue: selectedValue,
     defaultValue: undefined,
   },
   argTypes: {
     errorMessage: { table: { disable: false } },
-    hasError: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -396,9 +395,9 @@ export const WithErrorMessageAndHasError = {
   },
 } satisfies Story;
 
-export const WithHasErrorAndAriaDescribedby = {
+export const WithErrorMessageAndAriaDescribedby = {
   render: Template,
-  name: 'With HasError And AriaDescribedby (B4)',
+  name: 'With ErrorMessage And AriaDescribedby (B4)',
   args: {
     ...defaultArgs,
     children: [
@@ -410,11 +409,8 @@ export const WithHasErrorAndAriaDescribedby = {
       </RadioGroup.Radio>,
     ],
     errorMessage: 'Feilmelding',
-    hasError: true,
   },
-  argTypes: {
-    hasError: { table: { disable: false } },
-  },
+  argTypes: {},
   parameters: {
     imageSnapshot: { disable: true },
   },

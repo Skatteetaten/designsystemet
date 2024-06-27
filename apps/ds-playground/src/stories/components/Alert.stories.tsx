@@ -14,8 +14,11 @@ const meta = {
   argTypes: {
     // Props
     children: { control: 'text', table: { category: category.props } },
-    showAlert: { table: { category: category.props } },
-    showCloseButton: { table: { category: category.props } },
+    showAlert: {
+      table: { category: category.props },
+      control: 'radio',
+      options: [true, false],
+    },
     svgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
@@ -30,6 +33,8 @@ const meta = {
     },
     // Aria
     ariaLive: { table: { category: category.aria } },
+    // Events
+    onClose: { table: { category: category.event } },
   },
   args: {
     children:
@@ -48,12 +53,7 @@ export const Examples: Story = {
   render: (_args): JSX.Element => {
     return (
       <>
-        <Alert
-          variant={'success'}
-          className={'bottomSpacingXL'}
-          showAlert
-          showCloseButton
-        >
+        <Alert variant={'success'} className={'bottomSpacingXL'} showAlert>
           {'Filen ble lastet opp'}
         </Alert>
         <Alert variant={'neutral'} className={'bottomSpacingXL'} showAlert>

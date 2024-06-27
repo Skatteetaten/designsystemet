@@ -1,4 +1,4 @@
-import { forwardRef, useEffect, useState, JSX } from 'react';
+import { forwardRef, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
@@ -27,18 +27,13 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
       variant,
       ariaLive,
       showAlert,
-      showCloseButton,
       children,
+      onClose,
     },
     ref
   ): JSX.Element => {
     const variantClassName = styles[`alert_${variant}`];
     const { t } = useTranslation('ds_status', { i18n: dsI18n });
-    const [showAlertContent, setShowAlertContent] = useState(showAlert);
-
-    useEffect(() => {
-      setShowAlertContent(showAlert);
-    }, [showAlert]);
 
     let svg;
     if (svgPath) {
@@ -72,19 +67,21 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
         aria-live={getAriaLive()}
         aria-atomic
       >
-        {showAlertContent && (
+        {showAlert && children && (
           <div className={`${styles.alert} ${variantClassName} ${className}`}>
             <span className={styles.iconWrapper}>
               <Icon size={'large'} svgPath={svg} className={styles.icon} />
             </span>
             <span className={styles.content}>{children}</span>
-            {showCloseButton && (
+            {onClose && (
               <IconButton
                 className={styles.closeButton}
                 size={'small'}
                 svgPath={CancelSVGpath}
                 title={t('alert.CloseMessage')}
-                onClick={(): void => setShowAlertContent(false)}
+                onClick={(): void => {
+                  onClose?.();
+                }}
               />
             )}
           </div>

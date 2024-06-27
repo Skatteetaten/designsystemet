@@ -23,7 +23,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
     </button>
     <div tabindex="-1"
          class="PopoverContent_popover__1MWTw PopoverContent_popover_forest__WomGW"
-         style="position: absolute; left: 0px; top: 0px; transform: translate(238px, 23px);"
+         style="position: absolute; left: 0px; top: 0px; transform: translate(238px, 7px);"
     >
       <div class="PopoverContent_popoverContent__f8q8d">
         <div class="PopoverContent_popoverContentWrapper__7J2T2">
@@ -72,7 +72,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
     </button>
     <div tabindex="-1"
          class="PopoverContent_popover__1MWTw PopoverContent_popover_white__ZIpeZ"
-         style="position: absolute; left: 0px; top: 0px; transform: translate(238px, 213px);"
+         style="position: absolute; left: 0px; top: 0px; transform: translate(238px, 197px);"
     >
       <div class="PopoverContent_popoverContent__f8q8d">
         <div class="PopoverContent_popoverContentWrapper__7J2T2">
@@ -121,7 +121,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
     </button>
     <div tabindex="-1"
          class="PopoverContent_popover__1MWTw PopoverContent_popover_ochre__Dic6d"
-         style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 18px);"
+         style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 2px);"
     >
       <div class="PopoverContent_popoverContent__f8q8d">
         <div class="PopoverContent_popoverContentWrapper__7J2T2">
@@ -170,7 +170,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
     </button>
     <div tabindex="-1"
          class="PopoverContent_popover__1MWTw PopoverContent_popover_forest__WomGW"
-         style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 222px);"
+         style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 206px);"
     >
       <div class="PopoverContent_popoverContent__f8q8d">
         <div class="PopoverContent_popoverContentWrapper__7J2T2">

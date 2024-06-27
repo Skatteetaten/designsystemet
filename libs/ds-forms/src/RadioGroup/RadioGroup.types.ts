@@ -6,10 +6,7 @@ import {
   ReactNode,
 } from 'react';
 
-import {
-  BaseProps,
-  FormDiscriminatedRequiredProps,
-} from '@skatteetaten/ds-core-utils';
+import { BaseProps, FormRequiredProps } from '@skatteetaten/ds-core-utils';
 
 import { FieldsetProps } from '../Fieldset/Fieldset.types';
 import { RadioProps } from '../Radio/Radio.types';
@@ -48,6 +45,8 @@ interface RadioGroupComponentCommonProps
     BaseProps {
   /** Radio-komponenter */
   children: ReactNode;
+  /** Tekst på feilmelding */
+  errorMessage?: string;
   /** Skjuler navn på gruppen, tilleggstekst og hjelpetekst, men er fortsatt synlig for skjermleser */
   hideLegend?: FieldsetProps['hideLegend'];
   /** Navn på gruppen. */
@@ -82,24 +81,9 @@ type RadioGroupDiscriminatedCheckedProps =
       defaultValue?: string | number;
     };
 
-type RadioGroupDiscriminatedErrorProps =
-  | {
-      /** Tekst på feilmelding */
-      errorMessage: string;
-      /** Om gruppen har en feil */
-      hasError?: boolean;
-    }
-  | {
-      /** Tekst på feilmelding */
-      errorMessage?: never;
-      /** Om gruppen har en feil */
-      hasError?: never;
-    };
-
 export type RadioGroupProps = RadioGroupComponentCommonProps &
-  FormDiscriminatedRequiredProps &
-  RadioGroupDiscriminatedCheckedProps &
-  RadioGroupDiscriminatedErrorProps;
+  FormRequiredProps &
+  RadioGroupDiscriminatedCheckedProps;
 
 export interface RadioGroupComponent
   extends ForwardRefExoticComponent<

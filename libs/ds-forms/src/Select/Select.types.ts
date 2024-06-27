@@ -9,7 +9,7 @@ import {
 
 import {
   BaseProps,
-  FormDiscriminatedRequiredProps,
+  FormRequiredProps,
   FormSize,
 } from '@skatteetaten/ds-core-utils';
 
@@ -64,25 +64,11 @@ interface SelectCommonProps extends SelectPropsHTMLAttributes, BaseProps {
   children: JSX.Element | JSX.Element[];
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
+  /** Tekst på feilmelding */
+  errorMessage?: string;
 }
 
-export type SelectDiscriminatedErrorProps =
-  | {
-      /** Tekst på feilmelding */
-      errorMessage: string;
-      /** Om form-komponent har en feil */
-      hasError?: boolean;
-    }
-  | {
-      /** Tekst på feilmelding */
-      errorMessage?: never;
-      /** Om form-komponent har en feil */
-      hasError?: never;
-    };
-
-export type SelectProps = SelectCommonProps &
-  FormDiscriminatedRequiredProps &
-  SelectDiscriminatedErrorProps;
+export type SelectProps = SelectCommonProps & FormRequiredProps;
 
 export interface SelectComponent
   extends ForwardRefExoticComponent<

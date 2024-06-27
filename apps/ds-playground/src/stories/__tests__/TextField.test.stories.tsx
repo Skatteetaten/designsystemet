@@ -1,11 +1,13 @@
-import { ChangeEvent, FocusEvent, useState } from 'react';
+import { FocusEvent, ChangeEvent, useState, useRef } from 'react';
 
+import { Button } from '@skatteetaten/ds-buttons';
 import { formArrSize } from '@skatteetaten/ds-core-utils';
 import {
   TextboxRefHandle,
   TextField,
   textFieldAsArr,
 } from '@skatteetaten/ds-forms';
+import { Modal } from '@skatteetaten/ds-overlays';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
@@ -53,7 +55,6 @@ const meta = {
     },
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
-    hasError: { table: { disable: true } },
     helpSvgPath: {
       table: { disable: true },
       options: Object.keys(SystemSVGPaths),
@@ -155,7 +156,6 @@ export const WithCustomClassNames = {
       textbox: 'dummyClassnameFormContainer',
       errorMessage: 'dummyClassname',
     },
-    hasError: true,
     errorMessage: errorMessageText,
   },
   argTypes: {
@@ -474,11 +474,10 @@ export const WithRows = {
   },
 } satisfies Story;
 
-export const WithError = {
-  name: 'With ErrorMessage (B5)',
+export const WithoutError = {
+  name: 'Without ErrorMessage (B5)',
   args: {
     ...defaultArgs,
-    errorMessage: errorMessageText,
   },
   argTypes: {
     errorMessage: { table: { disable: false } },
@@ -495,18 +494,20 @@ export const WithError = {
     await expect(textbox).not.toHaveAttribute('aria-invalid', 'true');
     await expect(textbox).not.toHaveAttribute('aria-describedby');
   },
+  parameters: {
+    imageSnapshot: { disable: true },
+    HTMLSnapshot: { disable: true },
+  },
 } satisfies Story;
 
-export const WithErrorMessageAndHasError = {
-  name: 'With ErrorMessage And HasError (B5)',
+export const WithErrorMessage = {
+  name: 'With ErrorMessage(B5)',
   args: {
     ...defaultArgs,
     errorMessage: errorMessageText,
-    hasError: true,
   },
   argTypes: {
     errorMessage: { table: { disable: false } },
-    hasError: { table: { disable: false } },
   },
   parameters: {
     imageSnapshot: {
@@ -708,5 +709,51 @@ export const WithHelpToggleEvent = {
     imageSnapshot: {
       disable: true,
     },
+  },
+} satisfies Story;
+
+const TextAreaInModalTemplate: StoryFn<typeof TextField> = (args) => {
+  const modalRef = useRef<HTMLDialogElement>(null);
+  return (
+    <>
+      <Button
+        onClick={() => {
+          modalRef.current?.show();
+        }}
+      >
+        {'Vis modal'}
+      </Button>
+      <Modal ref={modalRef} title={'Modal med textarea'}>
+        <TextField {...args} />
+      </Modal>
+    </>
+  );
+};
+
+export const WithTextAreaAutoSizeInModal = {
+  name: 'With textarea AutoSize in Modal',
+  render: TextAreaInModalTemplate,
+  args: {
+    ...defaultArgs,
+    as: 'textarea',
+    autosize: true,
+  },
+  argTypes: {
+    defaultValue: { table: { disable: false } },
+    autosize: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+
+    const button = canvas.getByRole('button');
+    await userEvent.click(button);
+
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox.tagName).toBe('TEXTAREA');
+    await waitFor(() =>
+      expect(textbox).toHaveStyle({
+        height: '64px',
+      })
+    );
   },
 } satisfies Story;

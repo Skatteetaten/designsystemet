@@ -13,6 +13,7 @@ import {
   getCommonClassNameDefault,
   getCommonFormVariantDefault,
   Languages,
+  useValidateFormRequiredProps,
 } from '@skatteetaten/ds-core-utils';
 
 import { getTextFieldAsDefault } from './defaults';
@@ -54,7 +55,6 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       required,
       rows,
       value,
-      hasError,
       hideLabel,
       showRequiredMark,
       onBlur,
@@ -64,6 +64,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
     },
     ref
   ): JSX.Element => {
+    useValidateFormRequiredProps({ required, showRequiredMark });
     const errorId = `textFieldErrorId-${useId()}`;
     const generatedId = `textFieldTextboxId-${useId()}`;
     const textboxId = externalId ?? generatedId;
@@ -168,18 +169,18 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
           required={required}
           rows={rows}
           value={value}
-          aria-describedby={hasError ? errorId : undefined}
-          aria-invalid={hasError ?? undefined}
+          aria-describedby={errorMessage ? errorId : undefined}
+          aria-invalid={!!errorMessage || undefined}
           onBlur={onBlur}
           onChange={handleChange}
           onFocus={onFocus}
         />
         <ErrorMessage
           id={errorId}
-          showError={hasError}
-          className={classNames?.errorMessage ?? ''}
+          showError={!!errorMessage}
+          className={classNames?.errorMessage}
         >
-          {errorMessage ?? ''}
+          {errorMessage}
         </ErrorMessage>
       </div>
     );

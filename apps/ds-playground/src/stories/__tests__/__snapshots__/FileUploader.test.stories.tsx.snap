@@ -3,6 +3,8 @@
 exports[`Tester/FileUploader Defaults play-test 1`] = `
 <div data-test-block="true">
   <div class="FileUploader_container__IERNU ">
+    <div tabindex="-1">
+    </div>
     <button type="button"
             id=":r4:"
             class="FileUploader_dropZone__YfvZ-  "
@@ -51,6 +53,8 @@ exports[`Tester/FileUploader WithAttributes play-test 1`] = `
        lang="en"
        data-testid="123ID"
   >
+    <div tabindex="-1">
+    </div>
     <button type="button"
             id="htmlId"
             class="FileUploader_dropZone__YfvZ-  "
@@ -121,6 +125,8 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
         </path>
       </svg>
     </button>
+    <div tabindex="-1">
+    </div>
     <button type="button"
             id=":rn:"
             class="FileUploader_dropZone__YfvZ- FileUploader_dropZone_error__PRhyM "
@@ -218,6 +224,8 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
         </path>
       </svg>
     </button>
+    <div tabindex="-1">
+    </div>
     <button type="button"
             id=":r1o:"
             class="FileUploader_dropZone__YfvZ-  "
@@ -348,6 +356,8 @@ exports[`Tester/FileUploader WithHelpToggleEvent smoke-test 1`] = `
         </path>
       </svg>
     </button>
+    <div tabindex="-1">
+    </div>
     <button type="button"
             id=":r20:"
             class="FileUploader_dropZone__YfvZ-  "
@@ -393,6 +403,8 @@ exports[`Tester/FileUploader WithHelpToggleEvent smoke-test 1`] = `
 exports[`Tester/FileUploader WithIsUploading smoke-test 1`] = `
 <div data-test-block="true">
   <div class="FileUploader_container__IERNU ">
+    <div tabindex="-1">
+    </div>
     <button type="button"
             id=":rm:"
             class="FileUploader_dropZone__YfvZ-  "
@@ -441,6 +453,8 @@ exports[`Tester/FileUploader WithRef play-test 1`] = `
   <div class="FileUploader_container__IERNU "
        id="dummyIdForwardedFromRef"
   >
+    <div tabindex="-1">
+    </div>
     <button type="button"
             id=":r0:"
             class="FileUploader_dropZone__YfvZ-  "
@@ -486,6 +500,8 @@ exports[`Tester/FileUploader WithRef play-test 1`] = `
 exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
 <div data-test-block="true">
   <div class="FileUploader_container__IERNU ">
+    <div tabindex="-1">
+    </div>
     <button type="button"
             id=":r1i:"
             class="FileUploader_dropZone__YfvZ-  "
@@ -604,6 +620,8 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
 exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
 <div data-test-block="true">
   <div class="FileUploader_container__IERNU bottomSpacingXL">
+    <div tabindex="-1">
+    </div>
     <button type="button"
             id=":rs:"
             class="FileUploader_dropZone__YfvZ-  "
@@ -790,6 +808,8 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
     </div>
   </div>
   <div class="FileUploader_container__IERNU ">
+    <div tabindex="-1">
+    </div>
     <button type="button"
             id=":r17:"
             class="FileUploader_dropZone__YfvZ-  "
@@ -1006,6 +1026,8 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
         </path>
       </svg>
     </button>
+    <div tabindex="-1">
+    </div>
     <button type="button"
             id=":r6:"
             class="FileUploader_dropZone__YfvZ-  "

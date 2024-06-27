@@ -20,23 +20,6 @@ exports[`Tester/Alert AllVariants smoke-test 1`] = `
       <span class="Alert_content__t0Gya">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
-      <button class="IconButton_button__mw9sG IconButton_button_small__etst4  Alert_closeButton__REXjl"
-              type="button"
-      >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-labelledby="svgtitle-:r7:"
-             aria-hidden="false"
-             role="img"
-        >
-          <title id="svgtitle-:r7:">
-            Lukk melding
-          </title>
-          <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
-          </path>
-        </svg>
-      </button>
     </div>
   </div>
   <div aria-live="polite"
@@ -57,23 +40,6 @@ exports[`Tester/Alert AllVariants smoke-test 1`] = `
       <span class="Alert_content__t0Gya">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
-      <button class="IconButton_button__mw9sG IconButton_button_small__etst4  Alert_closeButton__REXjl"
-              type="button"
-      >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-labelledby="svgtitle-:r9:"
-             aria-hidden="false"
-             role="img"
-        >
-          <title id="svgtitle-:r9:">
-            Lukk melding
-          </title>
-          <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
-          </path>
-        </svg>
-      </button>
     </div>
   </div>
   <div aria-live="polite"
@@ -94,23 +60,6 @@ exports[`Tester/Alert AllVariants smoke-test 1`] = `
       <span class="Alert_content__t0Gya">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
-      <button class="IconButton_button__mw9sG IconButton_button_small__etst4  Alert_closeButton__REXjl"
-              type="button"
-      >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-labelledby="svgtitle-:rb:"
-             aria-hidden="false"
-             role="img"
-        >
-          <title id="svgtitle-:rb:">
-            Lukk melding
-          </title>
-          <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
-          </path>
-        </svg>
-      </button>
     </div>
   </div>
   <div aria-live="assertive"
@@ -131,23 +80,6 @@ exports[`Tester/Alert AllVariants smoke-test 1`] = `
       <span class="Alert_content__t0Gya">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
-      <button class="IconButton_button__mw9sG IconButton_button_small__etst4  Alert_closeButton__REXjl"
-              type="button"
-      >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-labelledby="svgtitle-:rd:"
-             aria-hidden="false"
-             role="img"
-        >
-          <title id="svgtitle-:rd:">
-            Lukk melding
-          </title>
-          <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
-          </path>
-        </svg>
-      </button>
     </div>
   </div>
 </div>
@@ -173,23 +105,6 @@ exports[`Tester/Alert AllVariantsMobile smoke-test 1`] = `
       <span class="Alert_content__t0Gya">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
-      <button class="IconButton_button__mw9sG IconButton_button_small__etst4  Alert_closeButton__REXjl"
-              type="button"
-      >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-labelledby="svgtitle-:rf:"
-             aria-hidden="false"
-             role="img"
-        >
-          <title id="svgtitle-:rf:">
-            Lukk melding
-          </title>
-          <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
-          </path>
-        </svg>
-      </button>
     </div>
   </div>
   <div aria-live="polite"
@@ -210,23 +125,6 @@ exports[`Tester/Alert AllVariantsMobile smoke-test 1`] = `
       <span class="Alert_content__t0Gya">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
-      <button class="IconButton_button__mw9sG IconButton_button_small__etst4  Alert_closeButton__REXjl"
-              type="button"
-      >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-labelledby="svgtitle-:rh:"
-             aria-hidden="false"
-             role="img"
-        >
-          <title id="svgtitle-:rh:">
-            Lukk melding
-          </title>
-          <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
-          </path>
-        </svg>
-      </button>
     </div>
   </div>
   <div aria-live="polite"
@@ -247,23 +145,6 @@ exports[`Tester/Alert AllVariantsMobile smoke-test 1`] = `
       <span class="Alert_content__t0Gya">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
-      <button class="IconButton_button__mw9sG IconButton_button_small__etst4  Alert_closeButton__REXjl"
-              type="button"
-      >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-labelledby="svgtitle-:rj:"
-             aria-hidden="false"
-             role="img"
-        >
-          <title id="svgtitle-:rj:">
-            Lukk melding
-          </title>
-          <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
-          </path>
-        </svg>
-      </button>
     </div>
   </div>
   <div aria-live="assertive"
@@ -284,23 +165,6 @@ exports[`Tester/Alert AllVariantsMobile smoke-test 1`] = `
       <span class="Alert_content__t0Gya">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
-      <button class="IconButton_button__mw9sG IconButton_button_small__etst4  Alert_closeButton__REXjl"
-              type="button"
-      >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-labelledby="svgtitle-:rl:"
-             aria-hidden="false"
-             role="img"
-        >
-          <title id="svgtitle-:rl:">
-            Lukk melding
-          </title>
-          <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
-          </path>
-        </svg>
-      </button>
     </div>
   </div>
 </div>
@@ -493,7 +357,7 @@ exports[`Tester/Alert WithAttributes play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Alert WithCloseButton play-test 1`] = `
+exports[`Tester/Alert WithCloseButton smoke-test 1`] = `
 <div data-test-block="true">
   <div aria-live="polite"
        aria-atomic="true"
@@ -519,11 +383,11 @@ exports[`Tester/Alert WithCloseButton play-test 1`] = `
         <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:ru:"
+             aria-labelledby="svgtitle-:rk:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:ru:">
+          <title id="svgtitle-:rk:">
             Lukk melding
           </title>
           <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
@@ -531,6 +395,15 @@ exports[`Tester/Alert WithCloseButton play-test 1`] = `
         </svg>
       </button>
     </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Alert WithCloseOnClickButton play-test 1`] = `
+<div data-test-block="true">
+  <div aria-live="polite"
+       aria-atomic="true"
+  >
   </div>
 </div>
 `;
@@ -605,23 +478,6 @@ exports[`Tester/Alert WithLongText smoke-test 1`] = `
       <span class="Alert_content__t0Gya">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon. Dersom teksten går over flere linjer, så vil ikonene beholde plasseringen sin.
       </span>
-      <button class="IconButton_button__mw9sG IconButton_button_small__etst4  Alert_closeButton__REXjl"
-              type="button"
-      >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-labelledby="svgtitle-:rn:"
-             aria-hidden="false"
-             role="img"
-        >
-          <title id="svgtitle-:rn:">
-            Lukk melding
-          </title>
-          <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
-          </path>
-        </svg>
-      </button>
     </div>
   </div>
 </div>
@@ -647,23 +503,6 @@ exports[`Tester/Alert WithLongTextAndBreaking smoke-test 1`] = `
       <span class="Alert_content__t0Gya">
         Avvistavkortutsteder.Takontaktmedkortutstederformerinformasjon.Dersomtekstengåroverflerelinjer,såvilikonenebeholdeplasseringensin.
       </span>
-      <button class="IconButton_button__mw9sG IconButton_button_small__etst4  Alert_closeButton__REXjl"
-              type="button"
-      >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-labelledby="svgtitle-:rp:"
-             aria-hidden="false"
-             role="img"
-        >
-          <title id="svgtitle-:rp:">
-            Lukk melding
-          </title>
-          <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
-          </path>
-        </svg>
-      </button>
     </div>
   </div>
 </div>

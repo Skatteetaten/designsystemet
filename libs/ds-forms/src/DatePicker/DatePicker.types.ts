@@ -6,7 +6,7 @@ import {
 
 import {
   BaseProps,
-  FormDiscriminatedRequiredProps,
+  FormRequiredProps,
   FormSize,
 } from '@skatteetaten/ds-core-utils';
 
@@ -25,15 +25,18 @@ interface DatePickerPropsHTMLAttributes extends DatePickerHTMLAttributes {
   onFocus?: FocusEventHandler<HTMLInputElement>;
 }
 
-interface DatePickerCommonProps
+export interface DatePickerProps
   extends DatePickerPropsHTMLAttributes,
-    BaseProps {
+    BaseProps,
+    FormRequiredProps {
   classNames?: {
     container?: string;
     label?: string;
     dateContainer?: string;
     errorMessage?: string;
   };
+  /** Tekst på feilmelding */
+  errorMessage?: string;
   /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */
   hideLabel?: boolean;
   /** Ledetekst */
@@ -48,10 +51,9 @@ interface DatePickerCommonProps
   titleHelpSvg?: LabelWithHelpProps['titleHelpSvg'];
   /** Definerer stilen til DatePicker */
   variant?: FormSize;
-  /** Hvilken dato som skal være satt (controlled state) */
+  /** Hvilken dato som skal være satt. */
   value?: Date | null;
-  /** Hvilken dato som skal være satt (uncontrolled state) */
-  defaultValue?: Date;
+
   /** Initielt uthevet dato. (Hvis value har en dato, så blir den datoen uthevet istedenfor.) */
   initialPickerDate?: Date;
   /** Minste tillatte dato */
@@ -62,24 +64,6 @@ interface DatePickerCommonProps
   dateFormat?: string;
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
-  /** Kalles når en dato-knapp klikkes på. */
+  /** Callback som kalles når dato-verdien endres. */
   onSelectDate?: (date: Date | null) => void;
 }
-
-export type DatePickerDiscriminatedErrorProps =
-  | {
-      /** Tekst på feilmelding */
-      errorMessage: string;
-      /** Om form-komponent har en feil */
-      hasError?: boolean;
-    }
-  | {
-      /** Tekst på feilmelding */
-      errorMessage?: never;
-      /** Om form-komponent har en feil */
-      hasError?: never;
-    };
-
-export type DatePickerProps = DatePickerCommonProps &
-  FormDiscriminatedRequiredProps &
-  DatePickerDiscriminatedErrorProps;

@@ -23,7 +23,6 @@ const meta = {
   argTypes: {
     // Props
     classNames: { table: { category: category.props } },
-    defaultValue: { table: { category: category.props }, control: 'date' },
     value: { table: { category: category.props }, control: 'date' },
     description: { table: { category: category.props } },
     dateFormat: {
@@ -34,7 +33,6 @@ const meta = {
     },
     label: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
-    hasError: { table: { category: category.props } },
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
@@ -100,9 +98,6 @@ export const Preview: Story = {
      må den konverteres til et date objekt. Dette er en kjent begrensing som vil bli fikset
     en gang i fremtiden står det i Storybook sin dokumentasjon over Controls. */
 
-    // Preview bør alltid være controlled, siden defaultValue må settes når komponenten rendres første gang.
-    args.defaultValue = undefined;
-
     // value settes til null dersom undefined for å unngå advarsel om controlled/uncontrolled.
     args.value = !args.value ? null : new Date(args.value);
     args.minDate =
@@ -126,12 +121,10 @@ export const Preview: Story = {
 export const Examples: Story = {
   render: (_args): JSX.Element => {
     const [value, setValue] = useState<Date | null>(null);
-    const [error, setError] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
 
     const handleBlur = (e: ChangeEvent<HTMLInputElement>): void => {
       if (e.target.validity.valueMissing) {
-        setError(true);
         setErrorMessage('Fødselsnummer er påkrevd.');
       }
     };
@@ -139,7 +132,6 @@ export const Examples: Story = {
     // Ved å lytte på onSelectDate får man tilgang til dato (eller null dersom datoen i feltet ikke er gyldig).
     const handleSelect = (date: Date | null): void => {
       setValue(date);
-      setError(false);
       setErrorMessage('');
     };
     return (
@@ -148,7 +140,6 @@ export const Examples: Story = {
           label={'Fødselsdato'}
           value={value}
           errorMessage={errorMessage}
-          hasError={error}
           required
           showRequiredMark
           onBlur={handleBlur}

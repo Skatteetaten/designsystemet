@@ -13,9 +13,14 @@ function addStyleImportPlugin() {
                     0,
                     filename.search(/([.-])/)
                   )}/styles.css';\n`;
+              const lastImport = bundle[key].imports.slice(-1);
 
+              const searchRegex = new RegExp(
+                `(^import.*${lastImport}';$)`,
+                'gm'
+              );
               const newCode = bundle[key].code.replace(
-                /(import\s[^;]*;)(?![\s\S]*import\s)/gs,
+                searchRegex,
                 replacementValue
               );
 

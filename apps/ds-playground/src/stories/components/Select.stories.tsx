@@ -29,7 +29,6 @@ const meta = {
     },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
-    hasError: { table: { category: category.props } },
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
@@ -99,7 +98,6 @@ export const Preview: Story = {} satisfies Story;
 export const Examples: Story = {
   render: (_args): JSX.Element => {
     const [fruktOption, setFruktOption] = useState<number>(0);
-    const [error, setError] = useState<boolean>(false);
     const [errorMessage, setErrorMessage] = useState<string>('');
 
     const handleChange = (e: ChangeEvent<HTMLSelectElement>): void => {
@@ -112,10 +110,8 @@ export const Examples: Story = {
     };
 
     const onError = (e: ChangeEvent<HTMLSelectElement>): void => {
-      setError(false);
       setErrorMessage('');
       if (e.target.validity.valueMissing) {
-        setError(true);
         setErrorMessage('Fruktsort er påkrevd.');
       }
     };
@@ -126,7 +122,6 @@ export const Examples: Story = {
         value={fruktOption}
         helpText={'Velg frukten du liker best.'}
         errorMessage={errorMessage}
-        hasError={error}
         required
         showRequiredMark
         onBlur={handleBlur}

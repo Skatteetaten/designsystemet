@@ -38,7 +38,6 @@ export const Examples: Story = {
           label={'Fødselsdato'}
           value={'17.5.19'}
           errorMessage={'Skriv fødselsdatoen med følgende format: DD.MM.ÅÅÅÅ'}
-          hasError
         />
         <Button
           variant={'secondary'}

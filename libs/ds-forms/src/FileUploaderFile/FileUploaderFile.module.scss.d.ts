@@ -1,6 +1,7 @@
 /* automatisk genererte types */
 export const successIcon: string;
 export const cancelIcon: string;
+export const fileSpinner: string;
 export const spinner: string;
 export const fileList: string;
 export const fileListItem: string;

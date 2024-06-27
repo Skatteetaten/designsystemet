@@ -267,8 +267,11 @@ const TemplateMultipleSteps: StoryFn<typeof StepList> = () => {
               legend={
                 'Selger du varer og tjenester for egen regning og risiko?'
               }
-              errorMessage={'Kryss av hvorvidt du selger varer  og tjenester'}
-              hasError={hasStep3Error}
+              errorMessage={
+                hasStep3Error
+                  ? 'Kryss av hvorvidt du selger varer  og tjenester'
+                  : undefined
+              }
               hideLegend
               onChange={(e): void => {
                 setHasStep3Error(false);

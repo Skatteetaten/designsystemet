@@ -8,10 +8,7 @@ import {
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-import {
-  UploadResultData,
-  UseFileUploaderReturn,
-} from './useFileUploader.types';
+import { useFileUploader } from './useFileUploader';
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 
 type RequiredFileUploaderHTMLAttributes = Pick<
@@ -42,6 +39,8 @@ export interface FileUploaderCommonProps
   acceptedFileFormatsDisplay?: string;
   /** Overskriver tekst på filopplaster-knappen */
   children?: string;
+  /** Tekst på feilmelding */
+  errorMessage?: string;
   /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */
   hideLabel?: LabelWithHelpProps['hideLabel'];
   /** Ledetekst */
@@ -122,28 +121,11 @@ export interface UploadedFile {
   id?: string;
 }
 
-type FileUploaderDiscriminatedErrorProps =
-  | {
-      /** Tekst på feilmelding */
-      errorMessage: string;
-      /** Om FileUploader har en feil */
-      hasError?: boolean;
-    }
-  | {
-      /** Tekst på feilmelding */
-      errorMessage?: never;
-      /** Om FileUploader har en feil */
-      hasError?: never;
-    };
-
-export type FileUploaderProps = FileUploaderCommonProps &
-  FileUploaderDiscriminatedErrorProps;
+export type FileUploaderProps = FileUploaderCommonProps;
 
 export interface FileUploaderComponent
   extends ForwardRefExoticComponent<
     FileUploaderProps & RefAttributes<HTMLDivElement>
   > {
-  useFileUploader: <T>(
-    renderStatus?: (status: UploadResultData<T>) => ReactNode
-  ) => UseFileUploaderReturn<T>;
+  useFileUploader: typeof useFileUploader;
 }

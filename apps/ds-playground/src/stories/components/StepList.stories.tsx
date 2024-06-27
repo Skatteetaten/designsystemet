@@ -125,9 +125,10 @@ export const Examples: Story = {
                     'Selger du varer og tjenester for egen regning og risiko? Selger du varer og tjenester for egen regning og risiko? Selger du varer og tjenester for egen regning og risiko?'
                   }
                   errorMessage={
-                    'Kryss av hvorvidt du selger varer  og tjenester'
+                    hasStep3Error
+                      ? 'Kryss av hvorvidt du selger varer  og tjenester'
+                      : undefined
                   }
-                  hasError={hasStep3Error}
                   hideLegend
                   onChange={(e): void => {
                     setHasStep3Error(false);
