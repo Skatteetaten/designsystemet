@@ -367,7 +367,6 @@ export const WithCloseOnClickButton = {
   },
   render: (args): JSX.Element => {
     const [, setArgs] = useArgs();
-    console.log(args);
     return (
       <Alert
         {...args}
