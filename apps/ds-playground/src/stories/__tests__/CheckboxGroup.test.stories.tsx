@@ -23,11 +23,6 @@ const meta = {
     },
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
-    hasError: {
-      table: {
-        disable: true,
-      },
-    },
     helpSvgPath: {
       table: { disable: true },
       options: Object.keys(SystemSVGPaths),
@@ -271,11 +266,9 @@ export const WithError = {
   name: 'With Error (A1, B5)',
   args: {
     ...defaultArgs,
-    hasError: true,
     errorMessage: defaultErrorMessage,
   },
   argTypes: {
-    hasError: { table: { disable: false } },
     errorMessage: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {

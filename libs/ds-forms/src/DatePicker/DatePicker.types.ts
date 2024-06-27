@@ -25,15 +25,18 @@ interface DatePickerPropsHTMLAttributes extends DatePickerHTMLAttributes {
   onFocus?: FocusEventHandler<HTMLInputElement>;
 }
 
-interface DatePickerCommonProps
+export interface DatePickerProps
   extends DatePickerPropsHTMLAttributes,
-    BaseProps {
+    BaseProps,
+    FormRequiredProps {
   classNames?: {
     container?: string;
     label?: string;
     dateContainer?: string;
     errorMessage?: string;
   };
+  /** Tekst på feilmelding */
+  errorMessage?: string;
   /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */
   hideLabel?: boolean;
   /** Ledetekst */
@@ -64,21 +67,3 @@ interface DatePickerCommonProps
   /** Callback som kalles når dato-verdien endres. */
   onSelectDate?: (date: Date | null) => void;
 }
-
-export type DatePickerDiscriminatedErrorProps =
-  | {
-      /** Tekst på feilmelding */
-      errorMessage: string;
-      /** Om form-komponent har en feil */
-      hasError?: boolean;
-    }
-  | {
-      /** Tekst på feilmelding */
-      errorMessage?: never;
-      /** Om form-komponent har en feil */
-      hasError?: never;
-    };
-
-export type DatePickerProps = DatePickerCommonProps &
-  FormRequiredProps &
-  DatePickerDiscriminatedErrorProps;

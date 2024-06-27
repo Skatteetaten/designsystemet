@@ -55,7 +55,6 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       placeholder,
       readOnly,
       required,
-      hasError,
       hideLabel,
       showRequiredMark,
       onBlur,
@@ -219,8 +218,8 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
             readOnly={readOnly}
             required={required}
             value={inputValue}
-            aria-describedby={hasError ? errorId : undefined}
-            aria-invalid={hasError ?? undefined}
+            aria-describedby={errorMessage ? errorId : undefined}
+            aria-invalid={!!errorMessage || undefined}
             onBlur={handleBlur}
             onChange={handleChange}
             onFocus={handleFocus}
@@ -243,10 +242,10 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
         </div>
         <ErrorMessage
           id={errorId}
-          showError={hasError}
+          showError={!!errorMessage}
           className={classNames?.errorMessage ?? ''}
         >
-          {errorMessage ?? ''}
+          {errorMessage}
         </ErrorMessage>
         {showCalendar && (
           <div className={styles.calendarContainer}>

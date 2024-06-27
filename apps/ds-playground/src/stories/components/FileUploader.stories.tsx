@@ -17,12 +17,6 @@ const meta = {
     description: { table: { category: category.props } },
     fileIconTitle: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
-    hasError: {
-      control: 'boolean',
-      table: {
-        category: category.props,
-      },
-    },
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
@@ -110,13 +104,11 @@ export const SimpleCompleteExample: Story = {
 
     const [shouldError, setShouldError] = useState(false);
 
-    const [hasError, setHasError] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
 
     const onDelete = async (file: UploadedFile): Promise<boolean> => {
       const response = await mockDelete(file.name, shouldError);
       if (response.ok) {
-        setHasError(false);
         remove(file);
         return true;
       } else {
@@ -125,19 +117,16 @@ export const SimpleCompleteExample: Story = {
     };
 
     const onChange = async (files: File[]): Promise<boolean> => {
-      setHasError(false);
       if (fileUploaderState.uploadedFiles.length > 0) {
         setErrorMessage(
           'Du har allerede lastet opp en fil. Fjern filen først om du ønsker å laste opp en annen fil i stedet'
         );
-        setHasError(true);
         return Promise.reject();
       }
       if (files.length > 1) {
         setErrorMessage(
           'Det er ikke lov med flere filer (dette kan bare skje med drag and drop)'
         );
-        setHasError(true);
         return Promise.reject();
       }
 
@@ -177,7 +166,6 @@ export const SimpleCompleteExample: Story = {
           multiple={false}
           {...fileUploaderState}
           errorMessage={errorMessage}
-          hasError={hasError}
           onFileDelete={onDelete}
           onFileChange={onChange}
         />
@@ -236,7 +224,6 @@ export const Examples: Story = {
           shouldNormalizeFileName
           {...fileUploaderState}
           errorMessage={error ?? ''}
-          hasError={!!error}
           multiple
           onFileDelete={async (file): Promise<boolean> => {
             await new Promise((_) => setTimeout(_, 1500));

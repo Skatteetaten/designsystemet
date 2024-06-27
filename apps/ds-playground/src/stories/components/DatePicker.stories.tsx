@@ -33,7 +33,6 @@ const meta = {
     },
     label: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
-    hasError: { table: { category: category.props } },
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
@@ -122,12 +121,10 @@ export const Preview: Story = {
 export const Examples: Story = {
   render: (_args): JSX.Element => {
     const [value, setValue] = useState<Date | null>(null);
-    const [error, setError] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
 
     const handleBlur = (e: ChangeEvent<HTMLInputElement>): void => {
       if (e.target.validity.valueMissing) {
-        setError(true);
         setErrorMessage('Fødselsnummer er påkrevd.');
       }
     };
@@ -135,7 +132,6 @@ export const Examples: Story = {
     // Ved å lytte på onSelectDate får man tilgang til dato (eller null dersom datoen i feltet ikke er gyldig).
     const handleSelect = (date: Date | null): void => {
       setValue(date);
-      setError(false);
       setErrorMessage('');
     };
     return (
@@ -144,7 +140,6 @@ export const Examples: Story = {
           label={'Fødselsdato'}
           value={value}
           errorMessage={errorMessage}
-          hasError={error}
           required
           showRequiredMark
           onBlur={handleBlur}

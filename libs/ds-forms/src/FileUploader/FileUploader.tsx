@@ -51,7 +51,6 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
       showRequiredMark,
       shouldNormalizeFileName,
       multiple,
-      hasError,
       isUploading,
       onFileChange,
       onFileDelete,
@@ -193,7 +192,7 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
           type={'button'}
           id={id}
           className={`${styles.dropZone} ${
-            hasError ? styles.dropZone_error : ''
+            errorMessage ? styles.dropZone_error : ''
           } ${isDragging && !isUploading ? styles.dropZone_dragging : ''}`}
           disabled={isUploading}
           aria-describedby={acceptedFileFormats ? fileformatsId : undefined}
@@ -244,7 +243,7 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
             </span>
           </span>
         )}
-        <ErrorMessage showError={hasError}>{errorMessage ?? ''}</ErrorMessage>
+        <ErrorMessage showError={!!errorMessage}>{errorMessage}</ErrorMessage>
         <Alert
           showAlert={!!uploadResult}
           className={styles.alert}

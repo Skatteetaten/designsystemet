@@ -46,7 +46,6 @@ const meta = {
     description: { table: { disable: true } },
     label: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
-    hasError: { table: { disable: true } },
     helpSvgPath: {
       table: { disable: true },
       options: Object.keys(SystemSVGPaths),
@@ -148,7 +147,6 @@ export const WithCustomClassNames = {
       dateContainer: 'dummyClassnameFormContainer',
       errorMessage: 'dummyClassname',
     },
-    hasError: true,
     errorMessage: errorMessageText,
   },
   argTypes: {
@@ -295,11 +293,10 @@ export const WithRequiredAndMark = {
   },
 } satisfies Story;
 
-export const WithError = {
-  name: 'With ErrorMessage (B4)',
+export const WithoutErrorMessage = {
+  name: 'Without ErrorMessage (A1, A4, A7, B4)',
   args: {
     ...defaultArgs,
-    errorMessage: errorMessageText,
   },
   argTypes: {
     errorMessage: { table: { disable: false } },
@@ -316,18 +313,20 @@ export const WithError = {
     await expect(textbox).not.toHaveAttribute('aria-invalid', 'true');
     await expect(textbox).not.toHaveAttribute('aria-describedby');
   },
+  parameters: {
+    imageSnapshot: { disable: true },
+    HTMLSnapshot: { disable: true },
+  },
 } satisfies Story;
 
-export const WithErrorMessageAndHasError = {
-  name: 'With ErrorMessage And HasError (A1, A4, A7, B4)',
+export const WithErrorMessage = {
+  name: 'With ErrorMessage (A1, A4, A7, B4)',
   args: {
     ...defaultArgs,
     errorMessage: errorMessageText,
-    hasError: true,
   },
   argTypes: {
     errorMessage: { table: { disable: false } },
-    hasError: { table: { disable: false } },
   },
   parameters: {
     imageSnapshot: {

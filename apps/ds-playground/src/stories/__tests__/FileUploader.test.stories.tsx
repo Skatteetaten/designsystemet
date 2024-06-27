@@ -47,14 +47,6 @@ const meta = {
       table: { category: category.props, disable: true },
     },
     errorMessage: { table: { category: category.props, disable: true } },
-    hasError: {
-      control: 'boolean',
-      table: {
-        category: category.props,
-        disable: true,
-      },
-    },
-
     titleHelpSvg: {
       table: {
         category: category.props,
@@ -224,7 +216,6 @@ export const WithError: StoryObj<FileUploaderProps> = {
     helpText: 'Hjelpetekst',
     label: 'Hemmelig kode',
     acceptedFileFormats: ['.java', '.cpp', '.py'],
-    hasError: true,
     errorMessage: 'Du må laste opp en fil',
   },
   play: async ({ canvasElement }): Promise<void> => {
