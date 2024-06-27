@@ -60,8 +60,8 @@ export type SubheadingAs = (typeof subheadingAsArr)[number];
 export const densityArr = ['standard', 'compact'] as const;
 export type Density = (typeof densityArr)[number];
 
-export type FormRequiredProps = {
+export interface FormRequiredProps {
   required?: boolean;
   /** Om obligatorisk skjemafelt skal markeres med stjerne. Forutsetter at required er tatt i bruk. */
   showRequiredMark?: boolean;
-};
+}

@@ -18,7 +18,10 @@ interface CheckboxPropsHTMLAttributes extends CheckboxHTMLAttributes {
   ariaDescribedby?: string;
 }
 
-interface CheckboxCommonProps extends CheckboxPropsHTMLAttributes, BaseProps {
+export interface CheckboxProps
+  extends CheckboxPropsHTMLAttributes,
+    BaseProps,
+    FormRequiredProps {
   /** Ledetekst til checkboxen */
   children: string;
   /** Tilleggstekst til ledeteksten */
@@ -28,5 +31,3 @@ interface CheckboxCommonProps extends CheckboxPropsHTMLAttributes, BaseProps {
   /** Skjuler ledeteksten men synlig for skjermleser */
   hideLabel?: boolean;
 }
-
-export type CheckboxProps = CheckboxCommonProps & FormRequiredProps;

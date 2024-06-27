@@ -25,9 +25,10 @@ interface DatePickerPropsHTMLAttributes extends DatePickerHTMLAttributes {
   onFocus?: FocusEventHandler<HTMLInputElement>;
 }
 
-interface DatePickerCommonProps
+export interface DatePickerProps
   extends DatePickerPropsHTMLAttributes,
-    BaseProps {
+    BaseProps,
+    FormRequiredProps {
   classNames?: {
     container?: string;
     label?: string;
@@ -66,5 +67,3 @@ interface DatePickerCommonProps
   /** Callback som kalles når dato-verdien endres. */
   onSelectDate?: (date: Date | null) => void;
 }
-
-export type DatePickerProps = DatePickerCommonProps & FormRequiredProps;
