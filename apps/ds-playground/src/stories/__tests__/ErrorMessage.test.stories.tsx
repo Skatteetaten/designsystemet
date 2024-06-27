@@ -28,6 +28,7 @@ type Story = StoryObj<typeof meta>;
 const defaultText = 'Feilmelding';
 
 const defaultArgs = {
+  showError: false,
   children: defaultText,
 };
 

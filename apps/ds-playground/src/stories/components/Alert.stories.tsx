@@ -14,7 +14,11 @@ const meta = {
   argTypes: {
     // Props
     children: { control: 'text', table: { category: category.props } },
-    showAlert: { table: { category: category.props } },
+    showAlert: {
+      table: { category: category.props },
+      control: 'radio',
+      options: [true, false],
+    },
     showCloseButton: { table: { category: category.props } },
     svgPath: {
       options: Object.keys(SystemSVGPaths),
