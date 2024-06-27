@@ -45,6 +45,8 @@ interface RadioGroupComponentCommonProps
     BaseProps {
   /** Radio-komponenter */
   children: ReactNode;
+  /** Tekst på feilmelding */
+  errorMessage?: string;
   /** Skjuler navn på gruppen, tilleggstekst og hjelpetekst, men er fortsatt synlig for skjermleser */
   hideLegend?: FieldsetProps['hideLegend'];
   /** Navn på gruppen. */
@@ -79,24 +81,9 @@ type RadioGroupDiscriminatedCheckedProps =
       defaultValue?: string | number;
     };
 
-type RadioGroupDiscriminatedErrorProps =
-  | {
-      /** Tekst på feilmelding */
-      errorMessage: string;
-      /** Om gruppen har en feil */
-      hasError?: boolean;
-    }
-  | {
-      /** Tekst på feilmelding */
-      errorMessage?: never;
-      /** Om gruppen har en feil */
-      hasError?: never;
-    };
-
 export type RadioGroupProps = RadioGroupComponentCommonProps &
   FormRequiredProps &
-  RadioGroupDiscriminatedCheckedProps &
-  RadioGroupDiscriminatedErrorProps;
+  RadioGroupDiscriminatedCheckedProps;
 
 export interface RadioGroupComponent
   extends ForwardRefExoticComponent<

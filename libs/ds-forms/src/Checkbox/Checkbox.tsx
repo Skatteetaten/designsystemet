@@ -28,7 +28,6 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       required,
       value,
       ariaDescribedby,
-      hasError: hasErrorExternal,
       hideLabel,
       showRequiredMark,
       onChange,
@@ -45,7 +44,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     const uniqueErrorId = `checkboxErrorId-${useId()}`;
     const errorIdInternal = errorIdExternal ?? uniqueErrorId;
     const hasErrorInternal =
-      errorIdExternal && !checked ? true : hasErrorExternal;
+      errorIdExternal && !checked ? true : !!errorMessage;
     const isRequired = required && !checked;
 
     const spacingBottomClassName = context ? styles.containerSpacingBottom : '';
@@ -81,7 +80,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           type={'checkbox'}
           value={value}
           aria-describedby={ariaDescribedbyInput || undefined}
-          aria-invalid={hasErrorInternal ?? undefined}
+          aria-invalid={hasErrorInternal || undefined}
           onChange={onChange}
         />
         <label
@@ -102,7 +101,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
         </label>
         {!context && (
           <ErrorMessage id={errorIdInternal} showError={hasErrorInternal}>
-            {errorMessage ?? ''}
+            {errorMessage}
           </ErrorMessage>
         )}
       </div>

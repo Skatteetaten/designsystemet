@@ -36,7 +36,6 @@ const meta = {
     placeholder: { table: { disable: true } },
     description: { table: { disable: true } },
     errorMessage: { table: { disable: true } },
-    hasError: { table: { disable: true } },
     helpSvgPath: {
       table: { disable: true },
       options: Object.keys(SystemSVGPaths),
@@ -150,7 +149,6 @@ export const WithCustomClassNames = {
       selectContainer: 'dummyClassnameFormContainer',
       errorMessage: 'dummyClassname',
     },
-    hasError: true,
     errorMessage: errorMessageText,
   },
   argTypes: {
@@ -378,39 +376,14 @@ export const WithRequiredAndMark = {
   },
 } satisfies Story;
 
-export const WithError = {
-  name: 'With ErrorMessage (B5)',
+export const WithErrorMessage = {
+  name: 'With ErrorMessage (A4 delvis, B5 delvis)',
   args: {
     ...defaultArgs,
     errorMessage: errorMessageText,
   },
   argTypes: {
     errorMessage: { table: { disable: false } },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const selectNode = canvas.getByRole('combobox');
-    // eslint-disable-next-line testing-library/no-node-access
-    const errorMessageContainer = canvasElement.querySelector(
-      '[id^=selectErrorId]'
-    );
-    await expect(errorMessageContainer).toBeInTheDocument();
-    await expect(canvas.queryByText(errorMessageText)).not.toBeInTheDocument();
-    await expect(selectNode).not.toHaveAttribute('aria-invalid', 'true');
-    await expect(selectNode).not.toHaveAttribute('aria-describedby');
-  },
-} satisfies Story;
-
-export const WithErrorMessageAndHasError = {
-  name: 'With ErrorMessage And HasError (A4 delvis, B5 delvis)',
-  args: {
-    ...defaultArgs,
-    errorMessage: errorMessageText,
-    hasError: true,
-  },
-  argTypes: {
-    errorMessage: { table: { disable: false } },
-    hasError: { table: { disable: false } },
   },
   parameters: {
     imageSnapshot: {

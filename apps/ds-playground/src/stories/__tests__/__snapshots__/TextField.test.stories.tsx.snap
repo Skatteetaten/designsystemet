@@ -250,29 +250,7 @@ exports[`Tester/TextField WithDisabled play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/TextField WithError play-test 1`] = `
-<div data-test-block="true">
-  <div class>
-    <label id="labelId-:r1p:"
-           class="LabelWithHelp_label__59tP-"
-           for="textFieldTextboxId-:r1o:"
-    >
-      Navn
-    </label>
-    <input id="textFieldTextboxId-:r1o:"
-           class="TextField_textbox__qbZlk"
-           value
-    >
-    <div id="textFieldErrorId-:r1n:"
-         aria-live="assertive"
-         aria-atomic="true"
-    >
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Tester/TextField WithErrorMessageAndHasError play-test 1`] = `
+exports[`Tester/TextField WithErrorMessage play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r1s:"

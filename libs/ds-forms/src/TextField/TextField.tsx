@@ -55,7 +55,6 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       required,
       rows,
       value,
-      hasError,
       hideLabel,
       showRequiredMark,
       onBlur,
@@ -170,18 +169,18 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
           required={required}
           rows={rows}
           value={value}
-          aria-describedby={hasError ? errorId : undefined}
-          aria-invalid={hasError ?? undefined}
+          aria-describedby={errorMessage ? errorId : undefined}
+          aria-invalid={!!errorMessage || undefined}
           onBlur={onBlur}
           onChange={handleChange}
           onFocus={onFocus}
         />
         <ErrorMessage
           id={errorId}
-          showError={hasError}
-          className={classNames?.errorMessage ?? ''}
+          showError={!!errorMessage}
+          className={classNames?.errorMessage}
         >
-          {errorMessage ?? ''}
+          {errorMessage}
         </ErrorMessage>
       </div>
     );

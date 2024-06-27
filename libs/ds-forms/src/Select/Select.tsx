@@ -47,7 +47,6 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
       form,
       name,
       required,
-      hasError,
       hideLabel,
       hidePlaceholder,
       showRequiredMark,
@@ -134,8 +133,8 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
             required={required}
             value={value}
             defaultValue={defaultValue}
-            aria-describedby={hasError ? errorId : undefined}
-            aria-invalid={hasError ?? undefined}
+            aria-describedby={errorMessage ? errorId : undefined}
+            aria-invalid={!!errorMessage || undefined}
             onBlur={onBlur}
             onChange={handleChange}
             onFocus={onFocus}
@@ -151,8 +150,8 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
         </div>
         <ErrorMessage
           id={errorId}
-          showError={hasError}
-          className={classNames?.errorMessage ?? ''}
+          showError={!!errorMessage}
+          className={classNames?.errorMessage}
         >
           {errorMessage ?? ''}
         </ErrorMessage>

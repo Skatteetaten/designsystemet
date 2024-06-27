@@ -43,7 +43,6 @@ const meta = {
     },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
-    hasError: { table: { category: category.props } },
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
@@ -107,7 +106,6 @@ export const Examples: Story = {
     const [creditInput, setCreditInput] = useState('10000');
 
     const [postaCodeInput, setPostaCodeInput] = useState('');
-    const [error, setError] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
 
     const [infoInput, setInfoInput] = useState('');
@@ -128,7 +126,6 @@ export const Examples: Story = {
           label={'Postnummer'}
           as={'input'}
           className={'textField150'}
-          hasError={error}
           errorMessage={errorMessage}
           value={postaCodeInput}
           maxLength={4}
@@ -136,10 +133,8 @@ export const Examples: Story = {
           required
           showRequiredMark
           onChange={(e: ChangeEvent<HTMLInputElement>): void => {
-            setError(false);
             setErrorMessage('');
             if (e.target.value.length > 0 && isNaN(Number(e.target.value))) {
-              setError(true);
               setErrorMessage('Postnummer kan kun inneholde tall.');
             }
 
@@ -147,11 +142,9 @@ export const Examples: Story = {
           }}
           onBlur={(e: FocusEvent<HTMLInputElement>): void => {
             if (e.target.validity.patternMismatch) {
-              setError(true);
               setErrorMessage('Postnummer må inneholde fire tall.');
             }
             if (e.target.validity.valueMissing) {
-              setError(true);
               setErrorMessage('Postnummer er påkrevd.');
             }
           }}
