@@ -3,7 +3,7 @@
   "compilerOptions": {
     "types": ["node", "vite-plugin-svgr/client", "vite/client"],
     "emitDecoratorMetadata": true,
-    "outDir": "../../dist/out-tsc",
+    "outDir": "../../dist/out-tsc"
   },
   "files": [
     "../../node_modules/@nx/react/typings/styled-jsx.d.ts",
