@@ -83,7 +83,7 @@ exports[`Tester/Footer Defaults play-test 1`] = `
         <div class="_logoContainer_15okz_42">
           <img class="_skatteetatenLogo_15okz_48"
                alt="Skatteetaten logo"
-               src="http://127.0.0.1:4400/assets/logo_no-DaLMx-Kr.svg"
+               src="[REMOVED]"
           >
         </div>
       </div>
@@ -179,7 +179,7 @@ exports[`Tester/Footer WithAttributes play-test 1`] = `
         <div class="_logoContainer_15okz_42">
           <img class="_skatteetatenLogo_15okz_48"
                alt="Skatteetaten logo"
-               src="http://127.0.0.1:4400/assets/logo_no-DaLMx-Kr.svg"
+               src="[REMOVED]"
           >
         </div>
       </div>
@@ -271,11 +271,11 @@ exports[`Tester/Footer WithCustomLogo smoke-test 1`] = `
         <div class="_logoContainer_15okz_42">
           <img class="_skatteetatenLogo_15okz_48"
                alt="Skatteetaten logo"
-               src="http://127.0.0.1:4400/assets/logo_no-DaLMx-Kr.svg"
+               src="[REMOVED]"
           >
           <div class>
             <img class="logoHeight"
-                 src="http://127.0.0.1:4400/assets/ske-logo-horizontal-white-KFAj09zZ.png"
+                 src="[REMOVED]"
                  alt="Skatteetaten logo"
             >
           </div>
@@ -380,7 +380,7 @@ exports[`Tester/Footer WithCustomURL play-test 1`] = `
         <div class="_logoContainer_15okz_42">
           <img class="_skatteetatenLogo_15okz_48"
                alt="Skatteetaten logo"
-               src="http://127.0.0.1:4400/assets/logo_no-DaLMx-Kr.svg"
+               src="[REMOVED]"
           >
         </div>
       </div>
@@ -558,7 +558,7 @@ exports[`Tester/Footer WithLinks play-test 1`] = `
         <div class="_logoContainer_15okz_42">
           <img class="_skatteetatenLogo_15okz_48"
                alt="Skatteetaten logo"
-               src="http://127.0.0.1:4400/assets/logo_no-DaLMx-Kr.svg"
+               src="[REMOVED]"
           >
         </div>
         <ul class="_linkContainer_15okz_54">
@@ -766,7 +766,7 @@ exports[`Tester/Footer WithOneColumnBreakpointM smoke-test 1`] = `
         <div class="_logoContainer_15okz_42">
           <img class="_skatteetatenLogo_15okz_48"
                alt="Skatteetaten logo"
-               src="http://127.0.0.1:4400/assets/logo_no-DaLMx-Kr.svg"
+               src="[REMOVED]"
           >
         </div>
       </div>
@@ -927,7 +927,7 @@ exports[`Tester/Footer WithOneColumnBreakpointS smoke-test 1`] = `
         <div class="_logoContainer_15okz_42">
           <img class="_skatteetatenLogo_15okz_48"
                alt="Skatteetaten logo"
-               src="http://127.0.0.1:4400/assets/logo_no-DaLMx-Kr.svg"
+               src="[REMOVED]"
           >
         </div>
       </div>
@@ -1088,7 +1088,7 @@ exports[`Tester/Footer WithOneColumnBreakpointXs smoke-test 1`] = `
         <div class="_logoContainer_15okz_42">
           <img class="_skatteetatenLogo_15okz_48"
                alt="Skatteetaten logo"
-               src="http://127.0.0.1:4400/assets/logo_no-DaLMx-Kr.svg"
+               src="[REMOVED]"
           >
         </div>
       </div>
@@ -1182,7 +1182,7 @@ exports[`Tester/Footer WithRef play-test 1`] = `
         <div class="_logoContainer_15okz_42">
           <img class="_skatteetatenLogo_15okz_48"
                alt="Skatteetaten logo"
-               src="http://127.0.0.1:4400/assets/logo_no-DaLMx-Kr.svg"
+               src="[REMOVED]"
           >
         </div>
       </div>
@@ -1419,7 +1419,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointL smoke-test 1`] = `
         <div class="_logoContainer_15okz_42">
           <img class="_skatteetatenLogo_15okz_48"
                alt="Skatteetaten logo"
-               src="http://127.0.0.1:4400/assets/logo_no-DaLMx-Kr.svg"
+               src="[REMOVED]"
           >
         </div>
       </div>
@@ -1656,7 +1656,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointM smoke-test 1`] = `
         <div class="_logoContainer_15okz_42">
           <img class="_skatteetatenLogo_15okz_48"
                alt="Skatteetaten logo"
-               src="http://127.0.0.1:4400/assets/logo_no-DaLMx-Kr.svg"
+               src="[REMOVED]"
           >
         </div>
       </div>
@@ -1893,7 +1893,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointS smoke-test 1`] = `
         <div class="_logoContainer_15okz_42">
           <img class="_skatteetatenLogo_15okz_48"
                alt="Skatteetaten logo"
-               src="http://127.0.0.1:4400/assets/logo_no-DaLMx-Kr.svg"
+               src="[REMOVED]"
           >
         </div>
       </div>
@@ -2130,7 +2130,7 @@ exports[`Tester/Footer WithThreeColumnsBreakpointXs smoke-test 1`] = `
         <div class="_logoContainer_15okz_42">
           <img class="_skatteetatenLogo_15okz_48"
                alt="Skatteetaten logo"
-               src="http://127.0.0.1:4400/assets/logo_no-DaLMx-Kr.svg"
+               src="[REMOVED]"
           >
         </div>
       </div>
@@ -2317,7 +2317,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointM smoke-test 1`] = `
         <div class="_logoContainer_15okz_42">
           <img class="_skatteetatenLogo_15okz_48"
                alt="Skatteetaten logo"
-               src="http://127.0.0.1:4400/assets/logo_no-DaLMx-Kr.svg"
+               src="[REMOVED]"
           >
         </div>
       </div>
@@ -2504,7 +2504,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointS smoke-test 1`] = `
         <div class="_logoContainer_15okz_42">
           <img class="_skatteetatenLogo_15okz_48"
                alt="Skatteetaten logo"
-               src="http://127.0.0.1:4400/assets/logo_no-DaLMx-Kr.svg"
+               src="[REMOVED]"
           >
         </div>
       </div>
@@ -2691,7 +2691,7 @@ exports[`Tester/Footer WithTwoColumnsBreakpointXs smoke-test 1`] = `
         <div class="_logoContainer_15okz_42">
           <img class="_skatteetatenLogo_15okz_48"
                alt="Skatteetaten logo"
-               src="http://127.0.0.1:4400/assets/logo_no-DaLMx-Kr.svg"
+               src="[REMOVED]"
           >
         </div>
       </div>

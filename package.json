@@ -29,6 +29,7 @@
     "prebuild": "npm-run-all lint:fix stylelint prettier typecheck",
     "build": "nx run-many --target=build --parallel=8",
     "build:playground": "nx build ds-core-designtokens && nx build",
+    "build:testmode": "nx build ds-core-designtokens && nx build ds-playground --parallel=8 -- --test",
     "build:analyze": "STORYBOOK_WEBPACK_STATS=true nx build",
     "build:preparePublish": "ts-node  --project tsconfig.base.json  ./libs/ds-dev-config/src/scripts/preparePublish.ts",
     "deploy:gh-pages": "gh-pages -d dist/storybook/ds-playground -p 0 -r https://github.com/Skatteetaten/designsystemet.git",

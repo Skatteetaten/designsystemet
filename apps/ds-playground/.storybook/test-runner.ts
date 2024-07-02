@@ -186,7 +186,7 @@ async function verifyHTMLSnapshots(
   const elementHandler = await page.$('#storybook-root');
   const innerHTML = await elementHandler?.innerHTML();
   await expect(
-    innerHTML?.replaceAll('host.lima.internal', '127.0.0.1')
+    innerHTML?.replaceAll(/src="[^"]*"/g, 'src="[REMOVED]"')
   ).toMatchSnapshot();
 }
 
@@ -217,6 +217,26 @@ const config: TestRunnerConfig = {
       ...customConfig,
     });
     expect.extend({ toMatchImageSnapshot });
+
+    //expect.addSnapshotSerializer({
+    //  test(val) {
+    //    return typeof val === 'string';
+    //  },
+    //  //serialize(
+    //  //  val: any,
+    //  //  config: Config,
+    //  //  indentation: string,
+    //  //  depth: number,
+    //  //  refs: Refs,
+    //  //  printer: Printer
+    //  //) {
+    //  //  return printer(val, config, indentation, depth, refs);
+    //  //},
+    //  print(val, print, indent, options, colors) {
+    //    //return val.replace(/src="(.*)"/, 'src="REMOVED"');
+    //    return indent(val);
+    //  },
+    //});
   },
 
   async preVisit(page, context) {

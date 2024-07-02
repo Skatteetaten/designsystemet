@@ -2,26 +2,26 @@
 
 exports[`Tester/Modal ClickCloseButton play-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+  <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
+  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
           type="button"
   >
-    <span class="Button_buttonText__JxyB+">
+    <span class="_buttonText_q67d9_69">
       Åpne modal
     </span>
   </button>
-  <dialog class="Modal_modal__JdsM-"
+  <dialog class="_modal_125nh_5"
           aria-labelledby="modalHeadingId-:rh:"
   >
     <div tabindex="-1"
-         class="Modal_modalContainer__O6yz0"
+         class="_modalContainer_125nh_23"
     >
-      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
+      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:ri:"
@@ -35,27 +35,27 @@ exports[`Tester/Modal ClickCloseButton play-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="Modal_modalPaddingL__TAljg">
+      <div class="_modalPaddingL_125nh_51">
         <h1 id="modalHeadingId-:rh:"
-            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
+            class="_heading_ppf3o_1 _heading_level3_ppf3o_32 _heading_hasSpacingSmall_ppf3o_52 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+        <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="Button_button__pkuNv Button_button_primary__8Ouwo   marginRightM"
+          <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
                   type="button"
           >
-            <span class="Button_buttonText__JxyB+">
+            <span class="_buttonText_q67d9_69">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   "
+          <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
                   type="button"
           >
-            <span class="Button_buttonText__JxyB+">
+            <span class="_buttonText_q67d9_69">
               Avbryt
             </span>
           </button>
@@ -68,27 +68,27 @@ exports[`Tester/Modal ClickCloseButton play-test 1`] = `
 
 exports[`Tester/Modal Defaults play-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+  <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
+  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
           type="button"
   >
-    <span class="Button_buttonText__JxyB+">
+    <span class="_buttonText_q67d9_69">
       Åpne modal
     </span>
   </button>
-  <dialog class="Modal_modal__JdsM-"
+  <dialog class="_modal_125nh_5"
           aria-labelledby="modalHeadingId-:r2:"
           open
   >
     <div tabindex="-1"
-         class="Modal_modalContainer__O6yz0"
+         class="_modalContainer_125nh_23"
     >
-      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
+      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3:"
@@ -102,27 +102,27 @@ exports[`Tester/Modal Defaults play-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="Modal_modalPaddingL__TAljg">
+      <div class="_modalPaddingL_125nh_51">
         <h1 id="modalHeadingId-:r2:"
-            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
+            class="_heading_ppf3o_1 _heading_level3_ppf3o_32 _heading_hasSpacingSmall_ppf3o_52 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+        <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="Button_button__pkuNv Button_button_primary__8Ouwo   marginRightM"
+          <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
                   type="button"
           >
-            <span class="Button_buttonText__JxyB+">
+            <span class="_buttonText_q67d9_69">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   "
+          <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
                   type="button"
           >
-            <span class="Button_buttonText__JxyB+">
+            <span class="_buttonText_q67d9_69">
               Avbryt
             </span>
           </button>
@@ -135,27 +135,27 @@ exports[`Tester/Modal Defaults play-test 1`] = `
 
 exports[`Tester/Modal VariantImportant play-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+  <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
+  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
           type="button"
   >
-    <span class="Button_buttonText__JxyB+">
+    <span class="_buttonText_q67d9_69">
       Åpne modal
     </span>
   </button>
-  <dialog class="Modal_modal__JdsM- Modal_modalNoBorder__YIHxf"
+  <dialog class="_modal_125nh_5 _modalNoBorder_125nh_39"
           aria-labelledby="modalHeadingId-:r6:"
           open
   >
     <div tabindex="-1"
-         class="Modal_modalContainer__O6yz0"
+         class="_modalContainer_125nh_23"
     >
-      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
+      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r7:"
@@ -169,40 +169,40 @@ exports[`Tester/Modal VariantImportant play-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="Modal_modalPaddingL__TAljg">
-        <img class="SkatteetatenLogo_logo__v9edG Modal_modalLogo__jKJF2"
-             src="SKESquare40.a88db78d5543d5d19206800f9f8cf4cd.svg"
+      <div class="_modalPaddingL_125nh_51">
+        <img class="_logo_1juh7_1 _modalLogo_125nh_26"
+             src="[REMOVED]"
              alt="Skatteetaten logo"
         >
         <h1 id="modalHeadingId-:r6:"
-            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
+            class="_heading_ppf3o_1 _heading_level3_ppf3o_32 _heading_hasSpacingSmall_ppf3o_52 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+        <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="Button_button__pkuNv Button_button_primary__8Ouwo   marginRightM"
+          <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
                   type="button"
           >
-            <span class="Button_buttonText__JxyB+">
+            <span class="_buttonText_q67d9_69">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   "
+          <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
                   type="button"
           >
-            <span class="Button_buttonText__JxyB+">
+            <span class="_buttonText_q67d9_69">
               Avbryt
             </span>
           </button>
         </div>
       </div>
-      <div class="Separator_separator__d97SR">
-        <div class="Separator_separatorLeft__pT4Sa">
+      <div class="_separator_11id6_1">
+        <div class="_separatorLeft_11id6_5">
         </div>
-        <div class="Separator_separatorRight__G8gOn">
+        <div class="_separatorRight_11id6_13">
         </div>
       </div>
     </div>
@@ -212,27 +212,27 @@ exports[`Tester/Modal VariantImportant play-test 1`] = `
 
 exports[`Tester/Modal VariantPlain play-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+  <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
+  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
           type="button"
   >
-    <span class="Button_buttonText__JxyB+">
+    <span class="_buttonText_q67d9_69">
       Åpne modal
     </span>
   </button>
-  <dialog class="Modal_modal__JdsM- Modal_modalNoBorder__YIHxf"
+  <dialog class="_modal_125nh_5 _modalNoBorder_125nh_39"
           aria-labelledby="modalHeadingId-:r4:"
           open
   >
     <div tabindex="-1"
-         class="Modal_modalContainer__O6yz0"
+         class="_modalContainer_125nh_23"
     >
-      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
+      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r5:"
@@ -246,27 +246,27 @@ exports[`Tester/Modal VariantPlain play-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="Modal_modalPaddingL__TAljg">
+      <div class="_modalPaddingL_125nh_51">
         <h1 id="modalHeadingId-:r4:"
-            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
+            class="_heading_ppf3o_1 _heading_level3_ppf3o_32 _heading_hasSpacingSmall_ppf3o_52 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+        <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="Button_button__pkuNv Button_button_primary__8Ouwo   marginRightM"
+          <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
                   type="button"
           >
-            <span class="Button_buttonText__JxyB+">
+            <span class="_buttonText_q67d9_69">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   "
+          <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
                   type="button"
           >
-            <span class="Button_buttonText__JxyB+">
+            <span class="_buttonText_q67d9_69">
               Avbryt
             </span>
           </button>
@@ -279,30 +279,30 @@ exports[`Tester/Modal VariantPlain play-test 1`] = `
 
 exports[`Tester/Modal WithAttributes play-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+  <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
+  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
           type="button"
   >
-    <span class="Button_buttonText__JxyB+">
+    <span class="_buttonText_q67d9_69">
       Åpne modal
     </span>
   </button>
   <dialog id="htmlId"
-          class="Modal_modal__JdsM-  dummyClassname"
+          class="_modal_125nh_5  dummyClassname"
           lang="nb"
           data-testid="123ID"
           aria-labelledby="modalHeadingId-:r0:"
           open
   >
     <div tabindex="-1"
-         class="Modal_modalContainer__O6yz0"
+         class="_modalContainer_125nh_23"
     >
-      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
+      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1:"
@@ -316,27 +316,27 @@ exports[`Tester/Modal WithAttributes play-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="Modal_modalPaddingL__TAljg">
+      <div class="_modalPaddingL_125nh_51">
         <h1 id="modalHeadingId-:r0:"
-            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
+            class="_heading_ppf3o_1 _heading_level3_ppf3o_32 _heading_hasSpacingSmall_ppf3o_52 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+        <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="Button_button__pkuNv Button_button_primary__8Ouwo   marginRightM"
+          <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
                   type="button"
           >
-            <span class="Button_buttonText__JxyB+">
+            <span class="_buttonText_q67d9_69">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   "
+          <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
                   type="button"
           >
-            <span class="Button_buttonText__JxyB+">
+            <span class="_buttonText_q67d9_69">
               Avbryt
             </span>
           </button>
@@ -349,26 +349,26 @@ exports[`Tester/Modal WithAttributes play-test 1`] = `
 
 exports[`Tester/Modal WithAutoClose play-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+  <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
+  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
           type="button"
   >
-    <span class="Button_buttonText__JxyB+">
+    <span class="_buttonText_q67d9_69">
       Åpne modal
     </span>
   </button>
-  <dialog class="Modal_modal__JdsM-"
+  <dialog class="_modal_125nh_5"
           aria-labelledby="modalHeadingId-:rj:"
   >
     <div tabindex="-1"
-         class="Modal_modalContainer__O6yz0"
+         class="_modalContainer_125nh_23"
     >
-      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
+      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rk:"
@@ -382,27 +382,27 @@ exports[`Tester/Modal WithAutoClose play-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="Modal_modalPaddingL__TAljg">
+      <div class="_modalPaddingL_125nh_51">
         <h1 id="modalHeadingId-:rj:"
-            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
+            class="_heading_ppf3o_1 _heading_level3_ppf3o_32 _heading_hasSpacingSmall_ppf3o_52 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+        <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="Button_button__pkuNv Button_button_primary__8Ouwo   marginRightM"
+          <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
                   type="button"
           >
-            <span class="Button_buttonText__JxyB+">
+            <span class="_buttonText_q67d9_69">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   "
+          <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
                   type="button"
           >
-            <span class="Button_buttonText__JxyB+">
+            <span class="_buttonText_q67d9_69">
               Avbryt
             </span>
           </button>
@@ -415,27 +415,27 @@ exports[`Tester/Modal WithAutoClose play-test 1`] = `
 
 exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+  <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
+  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
           type="button"
   >
-    <span class="Button_buttonText__JxyB+">
+    <span class="_buttonText_q67d9_69">
       Åpne modal
     </span>
   </button>
-  <dialog class="Modal_modal__JdsM-"
+  <dialog class="_modal_125nh_5"
           aria-labelledby="modalHeadingId-:rl:"
           open
   >
     <div tabindex="-1"
-         class="Modal_modalContainer__O6yz0"
+         class="_modalContainer_125nh_23"
     >
-      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
+      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rm:"
@@ -449,27 +449,27 @@ exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="Modal_modalPaddingL__TAljg">
+      <div class="_modalPaddingL_125nh_51">
         <h1 id="modalHeadingId-:rl:"
-            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
+            class="_heading_ppf3o_1 _heading_level3_ppf3o_32 _heading_hasSpacingSmall_ppf3o_52 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+        <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="Button_button__pkuNv Button_button_primary__8Ouwo   marginRightM"
+          <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
                   type="button"
           >
-            <span class="Button_buttonText__JxyB+">
+            <span class="_buttonText_q67d9_69">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   "
+          <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
                   type="button"
           >
-            <span class="Button_buttonText__JxyB+">
+            <span class="_buttonText_q67d9_69">
               Avbryt
             </span>
           </button>
@@ -482,27 +482,27 @@ exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
 
 exports[`Tester/Modal WithHideTitle play-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+  <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
+  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
           type="button"
   >
-    <span class="Button_buttonText__JxyB+">
+    <span class="_buttonText_q67d9_69">
       Åpne modal
     </span>
   </button>
-  <dialog class="Modal_modal__JdsM-"
+  <dialog class="_modal_125nh_5"
           aria-labelledby="modalHeadingId-:rn:"
           open
   >
     <div tabindex="-1"
-         class="Modal_modalContainer__O6yz0"
+         class="_modalContainer_125nh_23"
     >
-      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
+      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:ro:"
@@ -516,27 +516,27 @@ exports[`Tester/Modal WithHideTitle play-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="Modal_modalPaddingL__TAljg">
+      <div class="_modalPaddingL_125nh_51">
         <h1 id="modalHeadingId-:rn:"
-            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv  Modal_srOnly__cHEpw"
+            class="_heading_ppf3o_1 _heading_level3_ppf3o_32 _heading_hasSpacingSmall_ppf3o_52 _modalHeading_125nh_29  _srOnly_125nh_71"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+        <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="Button_button__pkuNv Button_button_primary__8Ouwo   marginRightM"
+          <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
                   type="button"
           >
-            <span class="Button_buttonText__JxyB+">
+            <span class="_buttonText_q67d9_69">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   "
+          <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
                   type="button"
           >
-            <span class="Button_buttonText__JxyB+">
+            <span class="_buttonText_q67d9_69">
               Avbryt
             </span>
           </button>
@@ -549,27 +549,27 @@ exports[`Tester/Modal WithHideTitle play-test 1`] = `
 
 exports[`Tester/Modal WithImage play-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+  <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
+  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
           type="button"
   >
-    <span class="Button_buttonText__JxyB+">
+    <span class="_buttonText_q67d9_69">
       Åpne modal
     </span>
   </button>
-  <dialog class="Modal_modal__JdsM-"
+  <dialog class="_modal_125nh_5"
           aria-labelledby="modalHeadingId-:r8:"
           open
   >
     <div tabindex="-1"
-         class="Modal_modalContainer__O6yz0"
+         class="_modalContainer_125nh_23"
     >
-      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
+      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r9:"
@@ -583,31 +583,31 @@ exports[`Tester/Modal WithImage play-test 1`] = `
           </path>
         </svg>
       </button>
-      <img src="wait-alert-illustration.png"
+      <img src="[REMOVED]"
            alt="Image alt tekst"
-           class="Modal_modalIllustration__Di203"
+           class="_modalIllustration_125nh_35"
       >
-      <div class="Modal_modalPaddingL__TAljg Modal_modalNoPaddingTop__sOcSE">
+      <div class="_modalPaddingL_125nh_51 _modalNoPaddingTop_125nh_57">
         <h1 id="modalHeadingId-:r8:"
-            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
+            class="_heading_ppf3o_1 _heading_level3_ppf3o_32 _heading_hasSpacingSmall_ppf3o_52 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+        <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="Button_button__pkuNv Button_button_primary__8Ouwo   marginRightM"
+          <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
                   type="button"
           >
-            <span class="Button_buttonText__JxyB+">
+            <span class="_buttonText_q67d9_69">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   "
+          <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
                   type="button"
           >
-            <span class="Button_buttonText__JxyB+">
+            <span class="_buttonText_q67d9_69">
               Avbryt
             </span>
           </button>
@@ -620,27 +620,27 @@ exports[`Tester/Modal WithImage play-test 1`] = `
 
 exports[`Tester/Modal WithPadding play-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+  <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
+  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
           type="button"
   >
-    <span class="Button_buttonText__JxyB+">
+    <span class="_buttonText_q67d9_69">
       Åpne modal
     </span>
   </button>
-  <dialog class="Modal_modal__JdsM-"
+  <dialog class="_modal_125nh_5"
           aria-labelledby="modalHeadingId-:rd:"
           open
   >
     <div tabindex="-1"
-         class="Modal_modalContainer__O6yz0"
+         class="_modalContainer_125nh_23"
     >
-      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
+      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:re:"
@@ -654,27 +654,27 @@ exports[`Tester/Modal WithPadding play-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="Modal_modalPaddingNONE__hHaff">
+      <div class="_modalPaddingNONE_125nh_42">
         <h1 id="modalHeadingId-:rd:"
-            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
+            class="_heading_ppf3o_1 _heading_level3_ppf3o_32 _heading_hasSpacingSmall_ppf3o_52 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+        <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="Button_button__pkuNv Button_button_primary__8Ouwo   marginRightM"
+          <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
                   type="button"
           >
-            <span class="Button_buttonText__JxyB+">
+            <span class="_buttonText_q67d9_69">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   "
+          <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
                   type="button"
           >
-            <span class="Button_buttonText__JxyB+">
+            <span class="_buttonText_q67d9_69">
               Avbryt
             </span>
           </button>
@@ -694,27 +694,27 @@ exports[`Tester/Modal WithShadowDom play-test 1`] = `
 
 exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+  <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
+  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
           type="button"
   >
-    <span class="Button_buttonText__JxyB+">
+    <span class="_buttonText_q67d9_69">
       Åpne modal
     </span>
   </button>
-  <dialog class="Modal_modal__JdsM-"
+  <dialog class="_modal_125nh_5"
           aria-labelledby="modalHeadingId-:ra:"
           open
   >
     <div tabindex="-1"
-         class="Modal_modalContainer__O6yz0"
+         class="_modalContainer_125nh_23"
     >
-      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
+      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rb:"
@@ -728,27 +728,27 @@ exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="Modal_modalPaddingL__TAljg">
+      <div class="_modalPaddingL_125nh_51">
         <h1 id="modalHeadingId-:ra:"
-            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
+            class="_heading_ppf3o_1 _heading_level3_ppf3o_32 _heading_hasSpacingSmall_ppf3o_52 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+        <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="Button_button__pkuNv Button_button_primary__8Ouwo   marginRightM"
+          <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
                   type="button"
           >
-            <span class="Button_buttonText__JxyB+">
+            <span class="_buttonText_q67d9_69">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   "
+          <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
                   type="button"
           >
-            <span class="Button_buttonText__JxyB+">
+            <span class="_buttonText_q67d9_69">
               Avbryt
             </span>
           </button>
@@ -761,27 +761,27 @@ exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
 
 exports[`Tester/Modal WithVerticalScrolling play-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+  <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
+  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
           type="button"
   >
-    <span class="Button_buttonText__JxyB+">
+    <span class="_buttonText_q67d9_69">
       Åpne modal
     </span>
   </button>
-  <dialog class="Modal_modal__JdsM-"
+  <dialog class="_modal_125nh_5"
           aria-labelledby="modalHeadingId-:rf:"
           open
   >
     <div tabindex="-1"
-         class="Modal_modalContainer__O6yz0"
+         class="_modalContainer_125nh_23"
     >
-      <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  Modal_closeButton__PGrRw"
+      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rg:"
@@ -795,9 +795,9 @@ exports[`Tester/Modal WithVerticalScrolling play-test 1`] = `
           </path>
         </svg>
       </button>
-      <div class="Modal_modalPaddingL__TAljg">
+      <div class="_modalPaddingL_125nh_51">
         <h1 id="modalHeadingId-:rf:"
-            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
+            class="_heading_ppf3o_1 _heading_level3_ppf3o_32 _heading_hasSpacingSmall_ppf3o_52 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
@@ -810,44 +810,44 @@ exports[`Tester/Modal WithVerticalScrolling play-test 1`] = `
 
 exports[`Tester/Modal WithoutCloseButton play-test 1`] = `
 <div data-test-block="true">
-  <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+  <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
+  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
           type="button"
   >
-    <span class="Button_buttonText__JxyB+">
+    <span class="_buttonText_q67d9_69">
       Åpne modal
     </span>
   </button>
-  <dialog class="Modal_modal__JdsM-"
+  <dialog class="_modal_125nh_5"
           aria-labelledby="modalHeadingId-:rc:"
           open
   >
     <div tabindex="-1"
-         class="Modal_modalContainer__O6yz0"
+         class="_modalContainer_125nh_23"
     >
-      <div class="Modal_modalPaddingL__TAljg">
+      <div class="_modalPaddingL_125nh_51">
         <h1 id="modalHeadingId-:rc:"
-            class="Heading_heading__7K0um Heading_heading_level3__T5BVI Heading_heading_hasSpacingSmall__ofrX+ Modal_modalHeading__PFiZv"
+            class="_heading_ppf3o_1 _heading_level3_ppf3o_32 _heading_hasSpacingSmall_ppf3o_52 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_standard__ObBkf Paragraph_paragraph_hasSpacingLarge__6x1nL ">
+        <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="Button_button__pkuNv Button_button_primary__8Ouwo   marginRightM"
+          <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
                   type="button"
           >
-            <span class="Button_buttonText__JxyB+">
+            <span class="_buttonText_q67d9_69">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   "
+          <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
                   type="button"
           >
-            <span class="Button_buttonText__JxyB+">
+            <span class="_buttonText_q67d9_69">
               Avbryt
             </span>
           </button>

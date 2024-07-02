@@ -83,7 +83,7 @@ exports[`Tester/LabelWithHelp (intern) WithDescription play-test 1`] = `
   >
     Ledetekst
   </label>
-  <div class="_description_9anxz_17">
+  <div class="_description_10ldw_17">
     Kort hjelpetekst
   </div>
 </div>
@@ -96,7 +96,7 @@ exports[`Tester/LabelWithHelp (intern) WithHelpTextSvgPathAndTitle play-test 1`]
   >
     Ledetekst
   </label>
-  <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_9anxz_27"
+  <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
           type="button"
           aria-describedby="labelId-:r7:"
           aria-expanded="false"
@@ -121,16 +121,16 @@ exports[`Tester/LabelWithHelp (intern) WithHelpTextSvgPathAndTitle play-test 1`]
 exports[`Tester/LabelWithHelp (intern) WithHelpToggleEvent smoke-test 1`] = `
 <div data-test-block="true">
   <label id="labelId-:rb:"
-         class="LabelWithHelp_label__59tP-"
+         class="_label_348na_5"
   >
     Ledetekst
   </label>
-  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+  <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
           type="button"
           aria-describedby="labelId-:rb:"
           aria-expanded="false"
   >
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:rc:"
@@ -154,7 +154,7 @@ exports[`Tester/LabelWithHelp (intern) WithHideLabel play-test 1`] = `
   >
     Ledetekst
   </label>
-  <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_9anxz_27 _srOnly_9anxz_59"
+  <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27 _srOnly_10ldw_59"
           type="button"
           aria-describedby="labelId-:r5:"
           aria-expanded="false"
@@ -173,7 +173,7 @@ exports[`Tester/LabelWithHelp (intern) WithHideLabel play-test 1`] = `
       </path>
     </svg>
   </button>
-  <div class="_description_9anxz_17  _srOnly_9anxz_59">
+  <div class="_description_10ldw_17  _srOnly_10ldw_59">
     Kort hjelpetekst
   </div>
 </div>

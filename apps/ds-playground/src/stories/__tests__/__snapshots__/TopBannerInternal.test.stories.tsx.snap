@@ -2,12 +2,12 @@
 
 exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedBreakpointL play-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_un2r6_58 ">
+  <header class="_topBanner_192u7_57 ">
     <a href="main"
-       class="_skipLink_qpdl0_1"
+       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
     >
-      <span class="_skipLinkContent_qpdl0_19">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_qpdl0_42"
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -19,22 +19,18 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedBreakpointL play-test
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topContainer_un2r6_84">
-      <div class="_contentContainer_un2r6_92">
-        <a class="_logo_un2r6_67"
+    <div class="_topContainer_192u7_90">
+      <div class="_contentContainer_192u7_98 ">
+        <a class="_logo_192u7_66"
            href="#"
         >
-          <img class="_logoImage_un2r6_71"
-               src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M0%2032H32V0H0V32ZM31.2647%2031.2647H0.735294V0.735294H31.2647V31.2647ZM15.6066%2022.0333C10.2389%2022.0333%205.88599%2019.662%205.88599%2016.7318H5.88966C5.88966%2013.8054%2010.2316%2011.4341%2015.5919%2011.4304V8.81641C17.2536%208.81641%2018.8382%209.04435%2020.2058%209.44508L15.6139%2014.0701V16.7318L20.2058%2012.0591C23.2573%2012.9524%2025.3308%2014.7098%2025.3308%2016.7318C25.3308%2019.6583%2020.9742%2022.0333%2015.6066%2022.0333Z'%20fill='white'/%3e%3c/svg%3e"
+          <img class="_logoImage_192u7_73"
+               src="[REMOVED]"
                alt="til startsiden kakeportalen"
           >
         </a>
-        <span class="_titleWrapper_un2r6_11">
+        <span class="_titleWrapper_192u7_10">
         </span>
-        <div class="_childrenContainer_un2r6_1">
-          <div class="_alignRight_un2r6_6">
-          </div>
-        </div>
       </div>
     </div>
   </header>
@@ -43,12 +39,12 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedBreakpointL play-test
 
 exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedMobileScreen play-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_un2r6_58 ">
+  <header class="_topBanner_192u7_57 ">
     <a href="main"
-       class="_skipLink_qpdl0_1"
+       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
     >
-      <span class="_skipLinkContent_qpdl0_19">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_qpdl0_42"
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -60,22 +56,18 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedMobileScreen play-tes
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topContainer_un2r6_84">
-      <div class="_contentContainer_un2r6_92">
-        <a class="_logo_un2r6_67"
+    <div class="_topContainer_192u7_90">
+      <div class="_contentContainer_192u7_98 ">
+        <a class="_logo_192u7_66"
            href="#"
         >
-          <img class="_logoImage_un2r6_71"
-               src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M0%2032H32V0H0V32ZM31.2647%2031.2647H0.735294V0.735294H31.2647V31.2647ZM15.6066%2022.0333C10.2389%2022.0333%205.88599%2019.662%205.88599%2016.7318H5.88966C5.88966%2013.8054%2010.2316%2011.4341%2015.5919%2011.4304V8.81641C17.2536%208.81641%2018.8382%209.04435%2020.2058%209.44508L15.6139%2014.0701V16.7318L20.2058%2012.0591C23.2573%2012.9524%2025.3308%2014.7098%2025.3308%2016.7318C25.3308%2019.6583%2020.9742%2022.0333%2015.6066%2022.0333Z'%20fill='white'/%3e%3c/svg%3e"
+          <img class="_logoImage_192u7_73"
+               src="[REMOVED]"
                alt="til startsiden kakeportalen"
           >
         </a>
-        <span class="_titleWrapper_un2r6_11">
+        <span class="_titleWrapper_192u7_10">
         </span>
-        <div class="_childrenContainer_un2r6_1">
-          <div class="_alignRight_un2r6_6">
-          </div>
-        </div>
       </div>
     </div>
   </header>
@@ -87,13 +79,13 @@ exports[`Tester/TopBanner/TopBannerInternal WithAttributes play-test 1`] = `
   <header id="htmlId"
           lang="nb"
           data-testid="123ID"
-          class="_topBanner_un2r6_58 dummyClassname"
+          class="_topBanner_192u7_57 dummyClassname"
   >
     <a href="main"
-       class="_skipLink_qpdl0_1"
+       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
     >
-      <span class="_skipLinkContent_qpdl0_19">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_qpdl0_42"
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -105,22 +97,18 @@ exports[`Tester/TopBanner/TopBannerInternal WithAttributes play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topContainer_un2r6_84">
-      <div class="_contentContainer_un2r6_92">
-        <a class="_logo_un2r6_67"
+    <div class="_topContainer_192u7_90">
+      <div class="_contentContainer_192u7_98 ">
+        <a class="_logo_192u7_66"
            href="#"
         >
-          <img class="_logoImage_un2r6_71"
-               src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M0%2032H32V0H0V32ZM31.2647%2031.2647H0.735294V0.735294H31.2647V31.2647ZM15.6066%2022.0333C10.2389%2022.0333%205.88599%2019.662%205.88599%2016.7318H5.88966C5.88966%2013.8054%2010.2316%2011.4341%2015.5919%2011.4304V8.81641C17.2536%208.81641%2018.8382%209.04435%2020.2058%209.44508L15.6139%2014.0701V16.7318L20.2058%2012.0591C23.2573%2012.9524%2025.3308%2014.7098%2025.3308%2016.7318C25.3308%2019.6583%2020.9742%2022.0333%2015.6066%2022.0333Z'%20fill='white'/%3e%3c/svg%3e"
+          <img class="_logoImage_192u7_73"
+               src="[REMOVED]"
                alt="til startsiden kakeportalen"
           >
         </a>
-        <span class="_titleWrapper_un2r6_11">
+        <span class="_titleWrapper_192u7_10">
         </span>
-        <div class="_childrenContainer_un2r6_1">
-          <div class="_alignRight_un2r6_6">
-          </div>
-        </div>
       </div>
     </div>
   </header>
@@ -129,12 +117,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithAttributes play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_un2r6_58 ">
+  <header class="_topBanner_192u7_57 ">
     <a href="main"
-       class="_skipLink_qpdl0_1"
+       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
     >
-      <span class="_skipLinkContent_qpdl0_19">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_qpdl0_42"
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -146,17 +134,17 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topContainer_un2r6_84">
-      <div class="_contentContainer_un2r6_92">
-        <a class="_logo_un2r6_67"
+    <div class="_topContainer_192u7_90">
+      <div class="_contentContainer_192u7_98 _contentContainer_withChildren_192u7_117">
+        <a class="_logo_192u7_66"
            href="#"
         >
-          <img class="_logoImage_un2r6_71"
-               src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M0%2032H32V0H0V32ZM31.2647%2031.2647H0.735294V0.735294H31.2647V31.2647ZM15.6066%2022.0333C10.2389%2022.0333%205.88599%2019.662%205.88599%2016.7318H5.88966C5.88966%2013.8054%2010.2316%2011.4341%2015.5919%2011.4304V8.81641C17.2536%208.81641%2018.8382%209.04435%2020.2058%209.44508L15.6139%2014.0701V16.7318L20.2058%2012.0591C23.2573%2012.9524%2025.3308%2014.7098%2025.3308%2016.7318C25.3308%2019.6583%2020.9742%2022.0333%2015.6066%2022.0333Z'%20fill='white'/%3e%3c/svg%3e"
+          <img class="_logoImage_192u7_73"
+               src="[REMOVED]"
                alt="til startsiden kakeportalen"
           >
         </a>
-        <span class="_titleWrapper_un2r6_11">
+        <span class="_titleWrapper_192u7_10">
           <span>
             Saksbehandlingsløsning med en overskrift som er lang
           </span>
@@ -164,8 +152,8 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
             En sekundær overskrift som også er lang
           </span>
         </span>
-        <div class="_childrenContainer_un2r6_1">
-          <div class="_alignRight_un2r6_6">
+        <div class="_childrenContainer_192u7_1">
+          <div class="_alignRight_192u7_5">
             <a class="_link_1y34f_1 _link_white_1y34f_1 marginL"
                href="/hjelp"
             >
@@ -214,9 +202,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
             </button>
           </div>
         </div>
-        <div class="_nameContainer_un2r6_111">
+        <div class="_nameContainer_192u7_128">
           <div>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _nameContainerIcon_un2r6_134"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _nameContainerIcon_192u7_152"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -226,7 +214,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
               </path>
             </svg>
           </div>
-          <span class="_nameContainerName_un2r6_129">
+          <span class="_nameContainerName_192u7_147">
             Johansen, Krystall Pepsi
           </span>
         </div>
@@ -238,12 +226,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithCustomLogo smoke-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_un2r6_58 ">
+  <header class="_topBanner_192u7_57 ">
     <a href="main"
-       class="_skipLink_qpdl0_1"
+       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
     >
-      <span class="_skipLinkContent_qpdl0_19">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_qpdl0_42"
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -255,22 +243,18 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomLogo smoke-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topContainer_un2r6_84">
-      <div class="_contentContainer_un2r6_92">
-        <a class="_logo_un2r6_67"
+    <div class="_topContainer_192u7_90">
+      <div class="_contentContainer_192u7_98 ">
+        <a class="_logo_192u7_66"
            href="#"
         >
-          <img class="_logoImage_un2r6_71"
-               src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20id='uuid-f322c5d9-df43-406c-9279-e9d4b350e7d9'%20data-name='Layer%201'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2040%2040'%3e%3crect%20x='-.15'%20width='40'%20height='40'%20style='fill:%20%236f2c3f;%20stroke-width:%200px;'/%3e%3cg%3e%3cpath%20d='m5.14,4.1h3.61v11.52h6.54v3.06H5.14V4.1Z'%20style='fill:%20%23fff;%20stroke-width:%200px;'/%3e%3cpath%20d='m15.55,11.42c0-4.36,2.79-7.6,7.2-7.6s7.22,3.24,7.22,7.6-2.79,7.6-7.22,7.6-7.2-3.24-7.2-7.6Zm10.74,0c0-2.65-1.16-4.69-3.53-4.69s-3.55,2.04-3.55,4.69,1.2,4.67,3.55,4.67,3.53-2.02,3.53-4.67Z'%20style='fill:%20%23fff;%20stroke-width:%200px;'/%3e%3c/g%3e%3cg%3e%3cpath%20d='m7.09,34.09c-1.26-1.39-1.96-3.3-1.96-5.52s.77-4.3,2.16-5.69c1.2-1.22,2.89-1.94,4.99-1.94,3.75,0,5.99,2,6.46,5.06h-3.51c-.27-1.18-1.24-2.08-2.83-2.08-2.41,0-3.61,2-3.61,4.65s1.39,4.65,3.67,4.65c1.9,0,3.02-1.26,3.16-2.55v-.04h-2.73v-2.65h6.07v7.83h-2.53l-.2-1.75h-.04c-.96,1.49-2.39,2.08-4.14,2.08-2.08,0-3.77-.73-4.97-2.04Z'%20style='fill:%20%23fff;%20stroke-width:%200px;'/%3e%3cpath%20d='m20.14,28.54c0-4.36,2.79-7.6,7.2-7.6s7.22,3.24,7.22,7.6-2.79,7.6-7.22,7.6-7.2-3.24-7.2-7.6Zm10.74,0c0-2.65-1.16-4.69-3.53-4.69s-3.55,2.04-3.55,4.69,1.2,4.67,3.55,4.67,3.53-2.02,3.53-4.67Z'%20style='fill:%20%23fff;%20stroke-width:%200px;'/%3e%3c/g%3e%3c/svg%3e"
+          <img class="_logoImage_192u7_73"
+               src="[REMOVED]"
                alt="til startsiden kakeportalen"
           >
         </a>
-        <span class="_titleWrapper_un2r6_11">
+        <span class="_titleWrapper_192u7_10">
         </span>
-        <div class="_childrenContainer_un2r6_1">
-          <div class="_alignRight_un2r6_6">
-          </div>
-        </div>
       </div>
     </div>
   </header>
@@ -279,12 +263,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomLogo smoke-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithCustomTheme smoke-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_un2r6_58 dummyCustomTheme">
+  <header class="_topBanner_192u7_57 dummyCustomTheme">
     <a href="main"
-       class="_skipLink_qpdl0_1"
+       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
     >
-      <span class="_skipLinkContent_qpdl0_19">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_qpdl0_42"
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -296,22 +280,18 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomTheme smoke-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topContainer_un2r6_84">
-      <div class="_contentContainer_un2r6_92">
-        <a class="_logo_un2r6_67"
+    <div class="_topContainer_192u7_90">
+      <div class="_contentContainer_192u7_98 ">
+        <a class="_logo_192u7_66"
            href="#"
         >
-          <img class="_logoImage_un2r6_71"
-               src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M0%2032H32V0H0V32ZM31.2647%2031.2647H0.735294V0.735294H31.2647V31.2647ZM15.6066%2022.0333C10.2389%2022.0333%205.88599%2019.662%205.88599%2016.7318H5.88966C5.88966%2013.8054%2010.2316%2011.4341%2015.5919%2011.4304V8.81641C17.2536%208.81641%2018.8382%209.04435%2020.2058%209.44508L15.6139%2014.0701V16.7318L20.2058%2012.0591C23.2573%2012.9524%2025.3308%2014.7098%2025.3308%2016.7318C25.3308%2019.6583%2020.9742%2022.0333%2015.6066%2022.0333Z'%20fill='white'/%3e%3c/svg%3e"
+          <img class="_logoImage_192u7_73"
+               src="[REMOVED]"
                alt="til startsiden kakeportalen"
           >
         </a>
-        <span class="_titleWrapper_un2r6_11">
+        <span class="_titleWrapper_192u7_10">
         </span>
-        <div class="_childrenContainer_un2r6_1">
-          <div class="_alignRight_un2r6_6">
-          </div>
-        </div>
       </div>
     </div>
   </header>
@@ -320,12 +300,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomTheme smoke-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithDefaults play-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_un2r6_58 ">
+  <header class="_topBanner_192u7_57 ">
     <a href="main"
-       class="_skipLink_qpdl0_1"
+       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
     >
-      <span class="_skipLinkContent_qpdl0_19">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_qpdl0_42"
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -337,22 +317,18 @@ exports[`Tester/TopBanner/TopBannerInternal WithDefaults play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topContainer_un2r6_84">
-      <div class="_contentContainer_un2r6_92">
-        <a class="_logo_un2r6_67"
+    <div class="_topContainer_192u7_90">
+      <div class="_contentContainer_192u7_98 ">
+        <a class="_logo_192u7_66"
            href="#"
         >
-          <img class="_logoImage_un2r6_71"
-               src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M0%2032H32V0H0V32ZM31.2647%2031.2647H0.735294V0.735294H31.2647V31.2647ZM15.6066%2022.0333C10.2389%2022.0333%205.88599%2019.662%205.88599%2016.7318H5.88966C5.88966%2013.8054%2010.2316%2011.4341%2015.5919%2011.4304V8.81641C17.2536%208.81641%2018.8382%209.04435%2020.2058%209.44508L15.6139%2014.0701V16.7318L20.2058%2012.0591C23.2573%2012.9524%2025.3308%2014.7098%2025.3308%2016.7318C25.3308%2019.6583%2020.9742%2022.0333%2015.6066%2022.0333Z'%20fill='white'/%3e%3c/svg%3e"
+          <img class="_logoImage_192u7_73"
+               src="[REMOVED]"
                alt="til startsiden kakeportalen"
           >
         </a>
-        <span class="_titleWrapper_un2r6_11">
+        <span class="_titleWrapper_192u7_10">
         </span>
-        <div class="_childrenContainer_un2r6_1">
-          <div class="_alignRight_un2r6_6">
-          </div>
-        </div>
       </div>
     </div>
   </header>
@@ -361,12 +337,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithDefaults play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithDemoMode play-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_un2r6_58 ">
+  <header class="_topBanner_192u7_57 ">
     <a href="main"
-       class="_skipLink_qpdl0_1"
+       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
     >
-      <span class="_skipLinkContent_qpdl0_19">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_qpdl0_42"
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -378,27 +354,23 @@ exports[`Tester/TopBanner/TopBannerInternal WithDemoMode play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_constructionBand_un2r6_28">
-      <div class="_constructionBandTitle_un2r6_33">
+    <div class="_constructionBand_192u7_27">
+      <div class="_constructionBandTitle_192u7_32">
         demo
       </div>
     </div>
-    <div class="_topContainer_un2r6_84">
-      <div class="_contentContainer_un2r6_92">
-        <a class="_logo_un2r6_67"
+    <div class="_topContainer_192u7_90">
+      <div class="_contentContainer_192u7_98 ">
+        <a class="_logo_192u7_66"
            href="#"
         >
-          <img class="_logoImage_un2r6_71"
-               src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M0%2032H32V0H0V32ZM31.2647%2031.2647H0.735294V0.735294H31.2647V31.2647ZM15.6066%2022.0333C10.2389%2022.0333%205.88599%2019.662%205.88599%2016.7318H5.88966C5.88966%2013.8054%2010.2316%2011.4341%2015.5919%2011.4304V8.81641C17.2536%208.81641%2018.8382%209.04435%2020.2058%209.44508L15.6139%2014.0701V16.7318L20.2058%2012.0591C23.2573%2012.9524%2025.3308%2014.7098%2025.3308%2016.7318C25.3308%2019.6583%2020.9742%2022.0333%2015.6066%2022.0333Z'%20fill='white'/%3e%3c/svg%3e"
+          <img class="_logoImage_192u7_73"
+               src="[REMOVED]"
                alt="til startsiden kakeportalen"
           >
         </a>
-        <span class="_titleWrapper_un2r6_11">
+        <span class="_titleWrapper_192u7_10">
         </span>
-        <div class="_childrenContainer_un2r6_1">
-          <div class="_alignRight_un2r6_6">
-          </div>
-        </div>
       </div>
     </div>
   </header>
@@ -407,12 +379,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithDemoMode play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithLogoClick play-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_un2r6_58 ">
+  <header class="_topBanner_192u7_57 ">
     <a href="main"
-       class="_skipLink_qpdl0_1"
+       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
     >
-      <span class="_skipLinkContent_qpdl0_19">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_qpdl0_42"
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -424,22 +396,18 @@ exports[`Tester/TopBanner/TopBannerInternal WithLogoClick play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topContainer_un2r6_84">
-      <div class="_contentContainer_un2r6_92">
-        <a class="_logo_un2r6_67"
+    <div class="_topContainer_192u7_90">
+      <div class="_contentContainer_192u7_98 ">
+        <a class="_logo_192u7_66"
            href="#"
         >
-          <img class="_logoImage_un2r6_71"
-               src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M0%2032H32V0H0V32ZM31.2647%2031.2647H0.735294V0.735294H31.2647V31.2647ZM15.6066%2022.0333C10.2389%2022.0333%205.88599%2019.662%205.88599%2016.7318H5.88966C5.88966%2013.8054%2010.2316%2011.4341%2015.5919%2011.4304V8.81641C17.2536%208.81641%2018.8382%209.04435%2020.2058%209.44508L15.6139%2014.0701V16.7318L20.2058%2012.0591C23.2573%2012.9524%2025.3308%2014.7098%2025.3308%2016.7318C25.3308%2019.6583%2020.9742%2022.0333%2015.6066%2022.0333Z'%20fill='white'/%3e%3c/svg%3e"
+          <img class="_logoImage_192u7_73"
+               src="[REMOVED]"
                alt="til startsiden kakeportalen"
           >
         </a>
-        <span class="_titleWrapper_un2r6_11">
+        <span class="_titleWrapper_192u7_10">
         </span>
-        <div class="_childrenContainer_un2r6_1">
-          <div class="_alignRight_un2r6_6">
-          </div>
-        </div>
       </div>
     </div>
   </header>
@@ -448,12 +416,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithLogoClick play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_un2r6_58 ">
+  <header class="_topBanner_192u7_57 ">
     <a href="main"
-       class="_skipLink_qpdl0_1"
+       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
     >
-      <span class="_skipLinkContent_qpdl0_19">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_qpdl0_42"
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -465,17 +433,17 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topContainer_un2r6_84">
-      <div class="_contentContainer_un2r6_92">
-        <a class="_logo_un2r6_67"
+    <div class="_topContainer_192u7_90">
+      <div class="_contentContainer_192u7_98 ">
+        <a class="_logo_192u7_66"
            href="#"
         >
-          <img class="_logoImage_un2r6_71"
-               src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M0%2032H32V0H0V32ZM31.2647%2031.2647H0.735294V0.735294H31.2647V31.2647ZM15.6066%2022.0333C10.2389%2022.0333%205.88599%2019.662%205.88599%2016.7318H5.88966C5.88966%2013.8054%2010.2316%2011.4341%2015.5919%2011.4304V8.81641C17.2536%208.81641%2018.8382%209.04435%2020.2058%209.44508L15.6139%2014.0701V16.7318L20.2058%2012.0591C23.2573%2012.9524%2025.3308%2014.7098%2025.3308%2016.7318C25.3308%2019.6583%2020.9742%2022.0333%2015.6066%2022.0333Z'%20fill='white'/%3e%3c/svg%3e"
+          <img class="_logoImage_192u7_73"
+               src="[REMOVED]"
                alt="til startsiden kakeportalen"
           >
         </a>
-        <span class="_titleWrapper_un2r6_11">
+        <span class="_titleWrapper_192u7_10">
           <span>
             kakeportalen kakeportalen kakeportalen kakeportalen
           </span>
@@ -483,13 +451,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke
             kaka er en løgnkaka er en løgnkaka er en løgnkaka er en løgn
           </span>
         </span>
-        <div class="_childrenContainer_un2r6_1">
-          <div class="_alignRight_un2r6_6">
-          </div>
-        </div>
-        <div class="_nameContainer_un2r6_111">
+        <div class="_nameContainer_192u7_128">
           <div>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _nameContainerIcon_un2r6_134"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _nameContainerIcon_192u7_152"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -499,7 +463,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke
               </path>
             </svg>
           </div>
-          <span class="_nameContainerName_un2r6_129">
+          <span class="_nameContainerName_192u7_147">
             Sandra Saksbehandler
           </span>
         </div>
@@ -511,14 +475,14 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke
 
 exports[`Tester/TopBanner/TopBannerInternal WithRef play-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_un2r6_58 "
+  <header class="_topBanner_192u7_57 "
           id="dummyIdForwardedFromRef"
   >
     <a href="main"
-       class="_skipLink_qpdl0_1"
+       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
     >
-      <span class="_skipLinkContent_qpdl0_19">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_qpdl0_42"
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -530,22 +494,18 @@ exports[`Tester/TopBanner/TopBannerInternal WithRef play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topContainer_un2r6_84">
-      <div class="_contentContainer_un2r6_92">
-        <a class="_logo_un2r6_67"
+    <div class="_topContainer_192u7_90">
+      <div class="_contentContainer_192u7_98 ">
+        <a class="_logo_192u7_66"
            href="#"
         >
-          <img class="_logoImage_un2r6_71"
-               src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M0%2032H32V0H0V32ZM31.2647%2031.2647H0.735294V0.735294H31.2647V31.2647ZM15.6066%2022.0333C10.2389%2022.0333%205.88599%2019.662%205.88599%2016.7318H5.88966C5.88966%2013.8054%2010.2316%2011.4341%2015.5919%2011.4304V8.81641C17.2536%208.81641%2018.8382%209.04435%2020.2058%209.44508L15.6139%2014.0701V16.7318L20.2058%2012.0591C23.2573%2012.9524%2025.3308%2014.7098%2025.3308%2016.7318C25.3308%2019.6583%2020.9742%2022.0333%2015.6066%2022.0333Z'%20fill='white'/%3e%3c/svg%3e"
+          <img class="_logoImage_192u7_73"
+               src="[REMOVED]"
                alt="til startsiden kakeportalen"
           >
         </a>
-        <span class="_titleWrapper_un2r6_11">
+        <span class="_titleWrapper_192u7_10">
         </span>
-        <div class="_childrenContainer_un2r6_1">
-          <div class="_alignRight_un2r6_6">
-          </div>
-        </div>
       </div>
     </div>
   </header>
@@ -554,12 +514,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithRef play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1`] = `
 <div data-test-block="true">
-  <header class="_topBanner_un2r6_58 ">
+  <header class="_topBanner_192u7_57 ">
     <a href="main"
-       class="_skipLink_qpdl0_1"
+       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
     >
-      <span class="_skipLinkContent_qpdl0_19">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_qpdl0_42"
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -571,17 +531,17 @@ exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="_topContainer_un2r6_84">
-      <div class="_contentContainer_un2r6_92">
-        <a class="_logo_un2r6_67"
+    <div class="_topContainer_192u7_90">
+      <div class="_contentContainer_192u7_98 ">
+        <a class="_logo_192u7_66"
            href="#"
         >
-          <img class="_logoImage_un2r6_71"
-               src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M0%2032H32V0H0V32ZM31.2647%2031.2647H0.735294V0.735294H31.2647V31.2647ZM15.6066%2022.0333C10.2389%2022.0333%205.88599%2019.662%205.88599%2016.7318H5.88966C5.88966%2013.8054%2010.2316%2011.4341%2015.5919%2011.4304V8.81641C17.2536%208.81641%2018.8382%209.04435%2020.2058%209.44508L15.6139%2014.0701V16.7318L20.2058%2012.0591C23.2573%2012.9524%2025.3308%2014.7098%2025.3308%2016.7318C25.3308%2019.6583%2020.9742%2022.0333%2015.6066%2022.0333Z'%20fill='white'/%3e%3c/svg%3e"
+          <img class="_logoImage_192u7_73"
+               src="[REMOVED]"
                alt="til startsiden kakeportalen"
           >
         </a>
-        <span class="_titleWrapper_un2r6_11">
+        <span class="_titleWrapper_192u7_10">
           <span>
             kakeportalen
           </span>
@@ -589,13 +549,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1
             kaka er en løgn
           </span>
         </span>
-        <div class="_childrenContainer_un2r6_1">
-          <div class="_alignRight_un2r6_6">
-          </div>
-        </div>
-        <div class="_nameContainer_un2r6_111">
+        <div class="_nameContainer_192u7_128">
           <div>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _nameContainerIcon_un2r6_134"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _nameContainerIcon_192u7_152"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -605,7 +561,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1
               </path>
             </svg>
           </div>
-          <span class="_nameContainerName_un2r6_129">
+          <span class="_nameContainerName_192u7_147">
             Sandra Saksbehandler
           </span>
         </div>
