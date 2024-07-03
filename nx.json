@@ -1,4 +1,5 @@
 {
+  "parallel": 8,
   "pluginsConfig": {
     "@nx/js": {
       "analyzeSourceFiles": true
