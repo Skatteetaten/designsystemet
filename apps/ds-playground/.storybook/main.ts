@@ -1,4 +1,5 @@
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
+import { StorybookConfig } from '@storybook/react-vite';
 import sassDts from 'vite-plugin-sass-dts';
 import svgr from 'vite-plugin-svgr';
 
@@ -6,11 +7,11 @@ import { readdirSync, readFileSync } from 'fs';
 import path from 'node:path';
 import { join } from 'path';
 
-const readJsonFile = (path) => {
+const readJsonFile = (path: string): Record<string, string> => {
   const file = readFileSync(path, 'utf8');
   return JSON.parse(file);
 };
-const getDirectories = (source) =>
+const getDirectories = (source: string): Array<string> =>
   readdirSync(source, {
     withFileTypes: true,
   })
@@ -22,11 +23,11 @@ const packageVersions = directories.reduce((previousValue, currentValue) => {
   const json = readJsonFile(path.resolve('libs', currentValue, 'package.json'));
   return {
     ...previousValue,
-    [`${json.name.split('ds-').pop().replaceAll('-', '_')}`]: json.version,
+    [`${json.name?.split('ds-')?.pop()?.replaceAll('-', '_')}`]: json.version,
   };
 }, {});
 
-const config = {
+const config: StorybookConfig = {
   stories: [
     '../src/stories/**/*.mdx',
     '../src/stories/**/*.stories.@(js|jsx|ts|tsx)',
@@ -56,11 +57,12 @@ const config = {
   docs: {
     autodocs: true,
   },
-  async viteFinal(config, { configType }) {
+  async viteFinal(config) {
     const { mergeConfig } = await import('vite');
     const viteTsconfig = await import('vite-tsconfig-paths');
     const viteTsConfigPaths = viteTsconfig.default;
-    const conf = mergeConfig(config, {
+
+    return mergeConfig(config, {
       resolve: {
         alias: [
           {
@@ -108,20 +110,9 @@ const config = {
         sassDts({
           esmExport: true,
         }),
-        //react(),
-        //EnvironmentPlugin(packageVersions),
       ],
-      build: {
-        //commonjsOptions: { transformMixedEsModules: true }, // Change
-      },
+      build: {},
     });
-    conf.plugins = conf.plugins?.filter((plugin) => {
-      console.log(plugin?.name);
-      console.log(plugin[0]?.name);
-      return !(Array.isArray(plugin) && plugin[0].name === 'vite:react-babel');
-    });
-
-    return conf;
   },
 };
 
