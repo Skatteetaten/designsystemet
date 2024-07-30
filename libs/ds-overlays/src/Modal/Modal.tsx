@@ -109,11 +109,13 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
         data-testid={dataTestId}
         aria-labelledby={headingId}
         autoFocus
-        onCancel={(e): void => {
-          if (!dismissOnEsc) {
+        /* Merk at onCancel kan ikke brukes til å hindre lukking fordi to trykk på esc lukker allikevel i chrome  */
+        onKeyDown={(e) => {
+          if (!dismissOnEsc && e.key === 'Escape') {
             e.preventDefault();
+          } else {
+            onClose?.();
           }
-          onClose?.();
         }}
       >
         <div tabIndex={-1} className={styles.modalContainer}>
