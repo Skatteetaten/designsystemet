@@ -53,6 +53,10 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
     const headingId = `modalHeadingId-${useId()}`;
     const { t } = useTranslation('ds_overlays', { i18n: dsI18n });
 
+    const statusFlagRef = useRef({
+      mouseDownCaptured: false,
+    });
+
     const modalRef = useRef<HTMLDialogElement>(null);
     useImperativeHandle(ref, () => modalRef?.current as HTMLDialogElement);
 
@@ -61,6 +65,9 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
         return;
       }
       const onClickOutside = (event: MouseEvent): void => {
+        if (event.type === 'mousedown') {
+          statusFlagRef.current.mouseDownCaptured = false;
+        }
         const element = shadowRootNode
           ? (shadowRootNode?.activeElement as HTMLElement)
           : (event.target as HTMLElement);
@@ -77,15 +84,31 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
           rect.top > event.clientY ||
           rect.bottom < event.clientY
         ) {
-          onClose?.();
-          modalRef.current?.close();
+          if (
+            event.type === 'mouseup' &&
+            statusFlagRef.current.mouseDownCaptured
+          ) {
+            onClose?.();
+            modalRef.current?.close();
+          } else {
+            statusFlagRef.current.mouseDownCaptured = true;
+            return;
+          }
         }
       };
-      document.addEventListener('click', onClickOutside, true);
+      document.addEventListener('mouseup', onClickOutside);
+      document.addEventListener('mousedown', onClickOutside);
       return () => {
-        document.removeEventListener('click', onClickOutside, true);
+        document.removeEventListener('mouseup', onClickOutside);
+        document.removeEventListener('mousedown', onClickOutside);
       };
-    }, [modalRef, dismissOnOutsideClick, onClose, shadowRootNode]);
+    }, [
+      modalRef,
+      dismissOnOutsideClick,
+      onClose,
+      shadowRootNode,
+      modalRef?.current?.open,
+    ]);
 
     const hideTitleClassName = hideTitle ? styles.srOnly : '';
     const hideOutlineClassName =
