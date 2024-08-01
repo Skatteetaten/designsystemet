@@ -63,9 +63,13 @@ export const Fieldset = forwardRef<HTMLFieldSetElement, FieldsetProps>(
         disabled={disabled}
         form={form}
       >
-        <legend id={legendId} className={legendClassName}>
+        <legend id={legendId} className={styles.srOnly}>
           {legend}
         </legend>
+
+        <div className={legendClassName} aria-hidden={'true'}>
+          {legend}
+        </div>
         <Help
           helpSvgPath={helpSvgPath}
           helpText={helpText}
