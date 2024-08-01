@@ -4,10 +4,15 @@ exports[`Tester/RadioGroup/RadioGroup Defaults play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:re:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Type virksomhet
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Type virksomhet
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
@@ -64,10 +69,15 @@ exports[`Tester/RadioGroup/RadioGroup VariantHorizontal smoke-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:rk:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Type virksomhet
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Type virksomhet
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK RadioGroup_radioGroupItemContainer_horizontal__CuruZ">
         <div class="Radio_radio__Fh+3R">
@@ -129,10 +139,15 @@ exports[`Tester/RadioGroup/RadioGroup WithAttributes play-test 1`] = `
             form="123form"
   >
     <legend id="legendId-:r8:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Type virksomhet
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Type virksomhet
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
@@ -189,10 +204,15 @@ exports[`Tester/RadioGroup/RadioGroup WithDefaultValue play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:r16:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Type virksomhet
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Type virksomhet
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
@@ -250,10 +270,15 @@ exports[`Tester/RadioGroup/RadioGroup WithDescription play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:r34:"
-            class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+            class="Fieldset_srOnly__7qh39"
     >
       Type virksomhet
     </legend>
+    <div class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+         aria-hidden="true"
+    >
+      Type virksomhet
+    </div>
     <div class="Help_description__niabw">
       Vi trenger å vite din type virksomhet.
     </div>
@@ -315,10 +340,15 @@ exports[`Tester/RadioGroup/RadioGroup WithDisabled play-test 1`] = `
             disabled
   >
     <legend id="legendId-:r1c:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Type virksomhet
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Type virksomhet
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
@@ -376,10 +406,15 @@ exports[`Tester/RadioGroup/RadioGroup WithErrorMessage play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:r2g:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Type virksomhet
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Type virksomhet
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
@@ -457,10 +492,15 @@ exports[`Tester/RadioGroup/RadioGroup WithErrorMessageAndAriaDescribedby play-te
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:r2n:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Type virksomhet
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Type virksomhet
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
@@ -507,10 +547,15 @@ exports[`Tester/RadioGroup/RadioGroup WithEventHandlers play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:r3a:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Type virksomhet
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Type virksomhet
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
@@ -541,10 +586,15 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:r2s:"
-            class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+            class="Fieldset_srOnly__7qh39"
     >
       Type virksomhet
     </legend>
+    <div class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+         aria-hidden="true"
+    >
+      Type virksomhet
+    </div>
     <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
             type="button"
             aria-describedby="legendId-:r2s:"
@@ -642,10 +692,15 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpToggleEvent smoke-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:r3e:"
-            class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+            class="Fieldset_srOnly__7qh39"
     >
       Type virksomhet
     </legend>
+    <div class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+         aria-hidden="true"
+    >
+      Type virksomhet
+    </div>
     <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
             type="button"
             aria-describedby="legendId-:r3e:"
@@ -721,10 +776,15 @@ exports[`Tester/RadioGroup/RadioGroup WithHideLegend play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:rq:"
-            class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+            class="Fieldset_srOnly__7qh39"
     >
       Type virksomhet
     </legend>
+    <div class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+         aria-hidden="true"
+    >
+      Type virksomhet
+    </div>
     <div class="Fieldset_contentContainer__fJcfT Fieldset_contentContainerNoMarginTop__YkL1P">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
@@ -781,10 +841,15 @@ exports[`Tester/RadioGroup/RadioGroup WithName play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:r24:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Type virksomhet
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Type virksomhet
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
@@ -843,10 +908,15 @@ exports[`Tester/RadioGroup/RadioGroup WithRef play-test 1`] = `
             id="dummyIdForwardedFromRef"
   >
     <legend id="legendId-:r2:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Type virksomhet
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Type virksomhet
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
@@ -903,10 +973,15 @@ exports[`Tester/RadioGroup/RadioGroup WithRequired play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:r1i:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Type virksomhet
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Type virksomhet
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
@@ -966,10 +1041,15 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMark smoke-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:r1o:"
-            class="Fieldset_legend__8odl- Fieldset_legend_required__U4xWm"
+            class="Fieldset_srOnly__7qh39"
     >
       Type virksomhet
     </legend>
+    <div class="Fieldset_legend__8odl- Fieldset_legend_required__U4xWm"
+         aria-hidden="true"
+    >
+      Type virksomhet
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
@@ -1029,7 +1109,7 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMarkAndLegendAsMarkup smoke
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:r1u:"
-            class="Fieldset_legend__8odl- Fieldset_legendWithMarkup_required__WcdUI"
+            class="Fieldset_srOnly__7qh39"
     >
       <h4 class="Heading_heading__7K0um Heading_heading_level3__T5BVI  ">
         Type virksomhet
@@ -1038,6 +1118,16 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMarkAndLegendAsMarkup smoke
         Med virksomhet så menes bla bla
       </span>
     </legend>
+    <div class="Fieldset_legend__8odl- Fieldset_legendWithMarkup_required__WcdUI"
+         aria-hidden="true"
+    >
+      <h4 class="Heading_heading__7K0um Heading_heading_level3__T5BVI  ">
+        Type virksomhet
+      </h4>
+      <span>
+        Med virksomhet så menes bla bla
+      </span>
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
@@ -1097,10 +1187,15 @@ exports[`Tester/RadioGroup/RadioGroup WithSelectedValue play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:r10:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Type virksomhet
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Type virksomhet
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
@@ -1158,10 +1253,15 @@ exports[`Tester/RadioGroup/RadioGroup WithoutErrorMessage play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:r2a:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Type virksomhet
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Type virksomhet
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
