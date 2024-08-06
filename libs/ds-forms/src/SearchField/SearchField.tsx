@@ -160,7 +160,7 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
       >
         <LabelWithHelp
           id={labelId}
-          className={classNames?.label ?? ''}
+          classNames={classNames}
           htmlFor={inputId}
           hideLabel={hideLabel}
           description={description}
@@ -183,7 +183,7 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
             <input
               ref={inputRef}
               id={inputId}
-              className={styles.input}
+              className={`${styles.input} ${classNames?.textbox ?? ''}`.trim()}
               data-testid={dataTestId}
               accessKey={accessKey}
               defaultValue={defaultValue}

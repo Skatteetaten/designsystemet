@@ -12,6 +12,7 @@ const meta = {
   title: 'Komponenter/Checkbox',
   argTypes: {
     // Props
+    classNames: { table: { category: category.props } },
     children: { table: { category: category.props } },
     defaultChecked: { table: { category: category.props } },
     description: { table: { category: category.props } },

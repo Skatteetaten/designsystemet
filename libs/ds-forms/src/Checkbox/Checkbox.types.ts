@@ -22,6 +22,7 @@ export interface CheckboxProps
   extends CheckboxPropsHTMLAttributes,
     BaseProps,
     FormRequiredProps {
+  classNames?: { errorMessage?: string; label?: string };
   /** Ledetekst til checkboxen */
   children: string;
   /** Tilleggstekst til ledeteksten */

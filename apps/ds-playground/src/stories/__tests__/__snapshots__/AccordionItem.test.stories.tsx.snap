@@ -166,7 +166,7 @@ exports[`Tester/Accordion/Item WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
   <div class="AccordionItem_accordionItem__m-eot">
     <div class="AccordionItem_tag__eCsSL">
-      <button class="AccordionItem_header__erxD0  AccordionItem_header_medium__uP+op   dummyClassname"
+      <button class="AccordionItem_header__erxD0  AccordionItem_header_medium__uP+op  dummyClassname"
               aria-expanded="true"
               type="button"
       >

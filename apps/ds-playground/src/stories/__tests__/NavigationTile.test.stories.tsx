@@ -383,7 +383,7 @@ export const WithCustomClassNames = {
     ...defaultArgs,
     description: defaultDescription,
     classNames: {
-      container: ' dummyClassname',
+      container: 'dummyClassname',
       title: 'dummyClassname',
       description: 'dummyClassname',
     },

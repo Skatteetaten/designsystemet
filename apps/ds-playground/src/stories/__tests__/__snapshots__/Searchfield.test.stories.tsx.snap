@@ -361,10 +361,10 @@ exports[`Tester/SearchField WithCustomButtonTitles play-test 1`] = `
 exports[`Tester/SearchField WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:r6:"
-       class="SearchField_topContainer__HErHa     dummyClassname"
+       class="SearchField_topContainer__HErHa    dummyClassname"
   >
     <label id="searchField-:r6:-label"
-           class="LabelWithHelp_label__59tP-   dummyClassname"
+           class="LabelWithHelp_label__59tP-    dummyClassname"
            for="searchField-:r6:-input"
     >
       Leter du etter en LAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANG gjenstand?
@@ -656,7 +656,7 @@ exports[`Tester/SearchField WithHelpText play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="Help_helpBox__nbhjO">
+    <div class="Help_helpBox__nbhjO  undefined">
       <span class="Help_helpBoxText__j6sH7">
         Hjelpetekst
       </span>

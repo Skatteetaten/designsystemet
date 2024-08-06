@@ -31,6 +31,7 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
     {
       id: externalId,
       className = getCommonClassNameDefault(),
+      classNames,
       lang,
       'data-testid': dataTestId,
       acceptedFileFormats,
@@ -162,7 +163,9 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
 
       setFilesPendingDelete((prevState) => ({ ...prevState, [key]: false }));
     };
-    const concatenatedClassnames = `${styles.container} ${className}`;
+    const concatenatedClassnames = `${styles.container} ${className} ${
+      classNames?.container ?? ''
+    }`;
 
     return (
       <div
@@ -173,6 +176,7 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
       >
         {label && (
           <LabelWithHelp
+            classNames={classNames}
             htmlFor={id}
             hideLabel={hideLabel}
             showRequiredMark={showRequiredMark}
@@ -243,7 +247,12 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
             </span>
           </span>
         )}
-        <ErrorMessage showError={!!errorMessage}>{errorMessage}</ErrorMessage>
+        <ErrorMessage
+          className={classNames?.errorMessage}
+          showError={!!errorMessage}
+        >
+          {errorMessage}
+        </ErrorMessage>
         <Alert
           showAlert={!!uploadResult}
           className={styles.alert}

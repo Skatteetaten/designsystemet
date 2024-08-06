@@ -142,7 +142,7 @@ export const WithCustomClassNames = {
   args: {
     ...defaultArgs,
     classNames: {
-      container: ' dummyClassname',
+      container: 'dummyClassname',
       label: 'dummyClassname',
       dateContainer: 'dummyClassnameFormContainer',
       errorMessage: 'dummyClassname',

@@ -8,6 +8,7 @@ import {
   BaseProps,
   FormRequiredProps,
   FormSize,
+  Prettify,
 } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
@@ -29,12 +30,13 @@ export interface DatePickerProps
   extends DatePickerPropsHTMLAttributes,
     BaseProps,
     FormRequiredProps {
-  classNames?: {
-    container?: string;
-    label?: string;
-    dateContainer?: string;
-    errorMessage?: string;
-  };
+  classNames?: Prettify<
+    {
+      container?: string;
+      dateContainer?: string;
+      errorMessage?: string;
+    } & LabelWithHelpProps['classNames']
+  >;
   /** Tekst på feilmelding */
   errorMessage?: string;
   /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */

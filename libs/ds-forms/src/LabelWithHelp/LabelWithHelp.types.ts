@@ -12,6 +12,9 @@ type RequiredLabelHTMLAttributes = Pick<
 export interface LabelWithHelpProps
   extends RequiredLabelHTMLAttributes,
     BaseProps {
+  classNames?: {
+    label?: string;
+  } & HelpProps['classNames'];
   /** Ledetekst */
   children: string;
   /** Skjuler hele komponenten men er fortsatt synlig for skjermleser */

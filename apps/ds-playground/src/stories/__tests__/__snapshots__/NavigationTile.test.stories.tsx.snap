@@ -75,7 +75,7 @@ exports[`Tester/NavigationTile WithAttributes play-test 1`] = `
 
 exports[`Tester/NavigationTile WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
-  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j   dummyClassname"
+  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  dummyClassname"
      href="#storybook-root"
   >
     <div class="NavigationTile_header__xVyS1">
