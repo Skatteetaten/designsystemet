@@ -53,6 +53,7 @@ const meta = {
     target: { table: { disable: true } },
     download: { table: { disable: true } },
     // Aria
+    ariaCurrent: { table: { disable: true } },
     ariaDescribedby: { table: { disable: true } },
     // Events
     onBlur: { table: { disable: true } },
@@ -303,6 +304,18 @@ export const WithAriaDescribedby = {
     imageSnapshot: { disable: true },
   },
   play: verifyAttribute('aria-describedby', elementId),
+} satisfies Story;
+
+export const WithAriaCurrent = {
+  name: 'With AriaCurrent',
+  args: {
+    ...defaultArgs,
+    ariaCurrent: true,
+  },
+  argTypes: {
+    ariaCurrent: { table: { disable: false } },
+  },
+  play: verifyAttribute('aria-current', 'true'),
 } satisfies Story;
 
 const nyLinkText = 'Ny lenketekst slik at vi ser at event fungerte';

@@ -1,4 +1,9 @@
-import { HTMLProps, MouseEventHandler, ReactElement } from 'react';
+import {
+  ComponentPropsWithoutRef,
+  HTMLProps,
+  MouseEventHandler,
+  ReactElement,
+} from 'react';
 
 import { BaseProps, LinkColor } from '@skatteetaten/ds-core-utils';
 
@@ -12,6 +17,7 @@ type LinkHTMLAttributes = Partial<RequiredLinkHTMLAttributes>;
 interface LinkPropsHTMLAttributes extends LinkHTMLAttributes {
   href: string;
   target?: string;
+  ariaCurrent?: ComponentPropsWithoutRef<'a'>['aria-current'];
   ariaDescribedby?: string;
   onClick?: MouseEventHandler<HTMLAnchorElement>;
 }

@@ -23,6 +23,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
       target,
       download,
       ariaDescribedby,
+      ariaCurrent,
       onClick,
       children,
     },
@@ -53,6 +54,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
         href={href}
         rel={target === '_blank' ? 'noreferrer' : undefined}
         target={target}
+        aria-current={ariaCurrent}
         aria-describedby={ariaDescribedby}
         download={download}
         onClick={onClick}
