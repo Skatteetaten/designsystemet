@@ -138,7 +138,7 @@ exports[`Tester/DatePicker/DatePicker WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
   <div class="dummyClassname">
     <label id="labelId-:ra:"
-           class="LabelWithHelp_label__59tP-   dummyClassname"
+           class="LabelWithHelp_label__59tP-    dummyClassname"
            for="datepickerInputId-:r9:"
     >
       Fødselsdato
@@ -414,7 +414,7 @@ exports[`Tester/DatePicker/DatePicker WithHelpText play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="Help_helpBox__nbhjO">
+    <div class="Help_helpBox__nbhjO  undefined">
       <span class="Help_helpBoxText__j6sH7">
         Hjelpetekst
       </span>

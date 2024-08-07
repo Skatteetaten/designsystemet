@@ -22,6 +22,60 @@ exports[`Tester/LabelWithHelp (intern) WithAttributes play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/LabelWithHelp (intern) WithCustomClassNames play-test 1`] = `
+<div data-test-block="true">
+  <label id="labelId-:rd:"
+         class="LabelWithHelp_label__59tP-    dummyClassname"
+  >
+    Ledetekst
+  </label>
+  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+          type="button"
+          aria-describedby="labelId-:rd:"
+          aria-expanded="true"
+  >
+    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:re:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:re:">
+        Hjelp
+      </title>
+      <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+      </path>
+    </svg>
+  </button>
+  <div class="Help_helpBox__nbhjO  dummyClassname dummyClassname">
+    <span class="Help_helpBoxText__j6sH7">
+      hjelp
+    </span>
+    <button class="IconButton_button__mw9sG IconButton_button_small__etst4  Help_helpBoxCloseButton__RueX2"
+            type="button"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:rf:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:rf:">
+          Lukk
+        </title>
+        <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+        </path>
+      </svg>
+    </button>
+  </div>
+  <div class="Help_description__niabw Help_descriptionMarginTop__YMqoC  dummyClassname">
+    beskrivelse
+  </div>
+</div>
+`;
+
 exports[`Tester/LabelWithHelp (intern) WithDescription play-test 1`] = `
 <div data-test-block="true">
   <label id="labelId-:r3:"

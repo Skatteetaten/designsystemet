@@ -104,7 +104,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
         className={`${className} ${classNames?.container ?? ''}`.trim()}
       >
         <LabelWithHelp
-          className={classNames?.label ?? ''}
+          classNames={classNames}
           htmlFor={selectId}
           hideLabel={hideLabel}
           showRequiredMark={showRequiredMark}

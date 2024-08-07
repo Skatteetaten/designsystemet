@@ -39,6 +39,23 @@ exports[`Tester/Fieldset WithAttributes play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Fieldset WithCustomClassNames play-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="Fieldset_fieldset__gwnkr">
+    <legend id="legendId-:rg:"
+            class="Fieldset_legend__8odl-    dummyClassname"
+    >
+      Ledetekst
+    </legend>
+    <div class="Fieldset_contentContainer__fJcfT">
+      <div>
+        Innhold
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
 exports[`Tester/Fieldset WithDescription play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr">

@@ -13,6 +13,7 @@ const meta = {
   title: 'Komponenter/FileUploader',
   argTypes: {
     // Props
+    classNames: { table: { category: category.props } },
     acceptedFileFormatsDisplay: { table: { category: category.props } },
     description: { table: { category: category.props } },
     fileIconTitle: { table: { category: category.props } },

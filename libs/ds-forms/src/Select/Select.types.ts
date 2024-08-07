@@ -11,6 +11,7 @@ import {
   BaseProps,
   FormRequiredProps,
   FormSize,
+  Prettify,
 } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
@@ -36,12 +37,14 @@ interface SelectPropsHTMLAttributes extends SelectHTMLAttributes {
 }
 
 interface SelectCommonProps extends SelectPropsHTMLAttributes, BaseProps {
-  classNames?: {
-    container?: string;
-    label?: string;
-    selectContainer?: string;
-    errorMessage?: string;
-  };
+  classNames?: Prettify<
+    {
+      container?: string;
+      label?: string;
+      selectContainer?: string;
+      errorMessage?: string;
+    } & LabelWithHelpProps['classNames']
+  >;
   /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */
   hideLabel?: boolean;
   /** Ledetekst */

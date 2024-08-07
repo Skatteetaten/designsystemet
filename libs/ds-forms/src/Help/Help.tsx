@@ -17,6 +17,8 @@ export const Help = ({
   targetId,
   titleHelpSvg,
   onHelpToggle,
+  className,
+  classNames,
 }: HelpProps): JSX.Element => {
   const { t } = useTranslation('Shared', { i18n: dsI18n });
 
@@ -56,7 +58,11 @@ export const Help = ({
         />
       )}
       {helpText && showHelpText && (
-        <div className={`${styles.helpBox} ${hideHelpClassName}`.trim()}>
+        <div
+          className={`${styles.helpBox} ${hideHelpClassName} ${className} ${
+            classNames?.helpText ?? ''
+          }`.trim()}
+        >
           <span className={styles.helpBoxText}>{helpText}</span>
           <IconButton
             className={styles.helpBoxCloseButton}
@@ -69,7 +75,11 @@ export const Help = ({
       )}
       {description && (
         <div
-          className={`${styles.description} ${marginTopClassName} ${hideHelpClassName}`.trim()}
+          className={`${
+            styles.description
+          } ${marginTopClassName} ${hideHelpClassName} ${
+            classNames?.description ?? ''
+          }`.trim()}
         >
           {description}
         </div>

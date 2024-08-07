@@ -5,7 +5,7 @@ import {
   ReactNode,
 } from 'react';
 
-import { BaseProps } from '@skatteetaten/ds-core-utils';
+import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
 import { CheckboxProps } from '../Checkbox/Checkbox.types';
 import { FieldsetProps } from '../Fieldset/Fieldset.types';
@@ -20,6 +20,9 @@ type CheckboxGroupHTMLAttributes = Partial<RequiredCheckboxGroupHTMLAttributes>;
 interface CheckboxGroupCommonProps
   extends CheckboxGroupHTMLAttributes,
     BaseProps {
+  classNames?: Prettify<
+    { errorMessage?: string } & FieldsetProps['classNames']
+  >;
   /** Checkbox-komponenter */
   children: ReactNode;
   /** Tekst på feilmelding */

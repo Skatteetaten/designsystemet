@@ -1,6 +1,6 @@
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
 import { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { expect, fireEvent, within } from '@storybook/test';
 
 import {
   loremIpsumWithoutSpaces,
@@ -24,6 +24,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    classNames: { table: { disable: true } },
     children: { table: { disable: true } },
     description: { table: { disable: true } },
     helpText: { table: { disable: true } },
@@ -224,5 +225,35 @@ export const WithHelpToggleEvent = {
     imageSnapshot: {
       disable: true,
     },
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    ...defaultArgs,
+    classNames: {
+      label: 'dummyClassname',
+      description: 'dummyClassname',
+      helpText: 'dummyClassname',
+    },
+    description: 'beskrivelse',
+    helpText: 'hjelp',
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    // eslint-disable-next-line testing-library/no-node-access
+    const label = canvas.getByText(defaultChildrenText);
+    await expect(label).toHaveClass('dummyClassname');
+    await expect(canvas.getByText('beskrivelse')).toHaveClass('dummyClassname');
+
+    await fireEvent.click(canvas.getByRole('button'));
+    const helpText = canvas.getByText('hjelp').parentElement;
+    await expect(helpText).toHaveClass('dummyClassname');
   },
 } satisfies Story;

@@ -138,7 +138,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
         lang={lang}
       >
         <LabelWithHelp
-          className={classNames?.label ?? ''}
+          classNames={classNames}
           htmlFor={textboxId}
           hideLabel={hideLabel}
           showRequiredMark={showRequiredMark}

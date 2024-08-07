@@ -189,7 +189,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
         lang={lang}
       >
         <LabelWithHelp
-          className={classNames?.label ?? ''}
+          classNames={classNames}
           htmlFor={datePickerId}
           hideLabel={hideLabel}
           showRequiredMark={showRequiredMark}

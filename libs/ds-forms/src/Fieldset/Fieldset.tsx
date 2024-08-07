@@ -12,6 +12,7 @@ export const Fieldset = forwardRef<HTMLFieldSetElement, FieldsetProps>(
     {
       id,
       className = getCommonClassNameDefault(),
+      classNames,
       lang,
       'data-testid': dataTestId,
       description,
@@ -50,8 +51,11 @@ export const Fieldset = forwardRef<HTMLFieldSetElement, FieldsetProps>(
     const noMarginTopContentContainerClassName = hideLegend
       ? styles.contentContainerNoMarginTop
       : '';
-    const legendClassName =
-      `${styles.legend} ${requiredMarkClassName} ${hideLegendClassName} ${noMarginBottomLegendClassName}`.trim();
+    const legendClassName = `${
+      styles.legend
+    } ${requiredMarkClassName} ${hideLegendClassName} ${noMarginBottomLegendClassName} ${
+      classNames?.legend ?? ''
+    }`.trim();
 
     return (
       <fieldset
@@ -67,6 +71,7 @@ export const Fieldset = forwardRef<HTMLFieldSetElement, FieldsetProps>(
           {legend}
         </legend>
         <Help
+          classNames={classNames}
           helpSvgPath={helpSvgPath}
           helpText={helpText}
           hideHelp={hideLegend}

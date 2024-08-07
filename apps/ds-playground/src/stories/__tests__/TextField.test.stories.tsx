@@ -151,11 +151,15 @@ export const WithCustomClassNames = {
   args: {
     ...defaultArgs,
     classNames: {
-      container: ' dummyClassname',
+      container: 'dummyClassname',
       label: 'dummyClassname',
-      textbox: 'dummyClassnameFormContainer',
       errorMessage: 'dummyClassname',
+      textbox: 'dummyClassname',
+      description: 'dummyClassname',
+      helpText: 'dummyClassname',
     },
+    description: 'beskrivelse',
+    helpText: 'HJEEEEEEELP',
     errorMessage: errorMessageText,
   },
   argTypes: {
@@ -168,15 +172,15 @@ export const WithCustomClassNames = {
     // eslint-disable-next-line testing-library/no-node-access
     const container = canvasElement.querySelector(`${wrapper} > div`);
     const label = canvas.getByText(defaultLabelText);
-    const textbox = canvas.getByRole('textbox');
     // eslint-disable-next-line testing-library/no-node-access
     const errorMessageContainer = canvasElement.querySelector(
       '[id^=textFieldErrorId]>div'
     );
     await expect(container).toHaveClass('dummyClassname');
     await expect(label).toHaveClass('dummyClassname');
-    await expect(textbox).toHaveClass('dummyClassnameFormContainer');
     await expect(errorMessageContainer).toHaveClass('dummyClassname');
+    await expect(canvas.getByText('beskrivelse')).toHaveClass('dummyClassname');
+    await expect(canvas.getByRole('textbox')).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 

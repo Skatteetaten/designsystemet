@@ -1,5 +1,9 @@
 import { HTMLAttributes } from 'react';
 
+export type Prettify<T> = {
+  [K in keyof T]: T[K];
+} & unknown;
+
 type BasePropsHTMLAttributes = Pick<
   HTMLAttributes<Record<string, never>>,
   'className' | 'id' | 'lang'

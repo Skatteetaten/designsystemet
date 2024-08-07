@@ -185,6 +185,108 @@ exports[`Tester/RadioGroup/RadioGroup WithAttributes play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/RadioGroup/RadioGroup WithCustomClassNames play-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
+    <legend id="legendId-:r3l:"
+            class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu dummyClassname"
+    >
+      Type virksomhet
+    </legend>
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+            type="button"
+            aria-describedby="legendId-:r3l:"
+            aria-expanded="false"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r3m:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r3m:">
+          Hjelp
+        </title>
+        <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+        </path>
+      </svg>
+    </button>
+    <div class="Help_description__niabw   dummyClassname">
+      beskrivelse
+    </div>
+    <div class="Fieldset_contentContainer__fJcfT">
+      <div class="RadioGroup_radioGroupItemContainer__AINZK">
+        <div class="Radio_radio__Fh+3R">
+          <input id="radioInputId-:r3n:"
+                 class="Radio_radioInput__gTlv0"
+                 type="radio"
+                 name="radioInputName-:r3k:"
+                 aria-describedby="radioErrorId-:r3j:"
+                 aria-invalid="true"
+                 value="foretak"
+          >
+          <label class="Radio_radioLabel__lJQhF"
+                 for="radioInputId-:r3n:"
+          >
+            Enkeltpersonsforetak
+          </label>
+        </div>
+        <div class="Radio_radio__Fh+3R">
+          <input id="radioInputId-:r3o:"
+                 class="Radio_radioInput__gTlv0"
+                 type="radio"
+                 name="radioInputName-:r3k:"
+                 aria-describedby="radioErrorId-:r3j:"
+                 aria-invalid="true"
+                 value="selskap"
+          >
+          <label class="Radio_radioLabel__lJQhF"
+                 for="radioInputId-:r3o:"
+          >
+            Aksjeselskap
+          </label>
+        </div>
+        <div class="Radio_radio__Fh+3R">
+          <input id="radioInputId-:r3p:"
+                 class="Radio_radioInput__gTlv0"
+                 type="radio"
+                 name="radioInputName-:r3k:"
+                 aria-describedby="radioErrorId-:r3j:"
+                 aria-invalid="true"
+                 value="annet"
+          >
+          <label class="Radio_radioLabel__lJQhF"
+                 for="radioInputId-:r3p:"
+          >
+            Annet
+          </label>
+        </div>
+      </div>
+      <div id="radioErrorId-:r3j:"
+           aria-live="assertive"
+           aria-atomic="true"
+      >
+        <div class="ErrorMessage_errorMessage__508oW RadioGroup_errorMessage__LCaF+ dummyClassname">
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+            </path>
+          </svg>
+          <p class="ErrorMessage_errorMessageText__e27TU">
+            feil
+          </p>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
 exports[`Tester/RadioGroup/RadioGroup WithDefaultValue play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
@@ -564,7 +666,7 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="Help_helpBox__nbhjO">
+    <div class="Help_helpBox__nbhjO  undefined">
       <span class="Help_helpBoxText__j6sH7">
         Vi trenger å vite din type virksomhet.
       </span>

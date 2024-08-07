@@ -1,5 +1,7 @@
 import { ReactElement, ReactNode } from 'react';
 
+import { BaseProps } from '@skatteetaten/ds-core-utils';
+
 export type OnHelpToggleHandler = (isOpen: boolean) => void;
 
 export interface HelpProps {
@@ -17,4 +19,9 @@ export interface HelpProps {
   description?: string;
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: OnHelpToggleHandler;
+  className?: BaseProps['className'];
+  classNames?: {
+    helpText?: string;
+    description?: string;
+  };
 }

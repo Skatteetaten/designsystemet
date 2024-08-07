@@ -16,6 +16,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     {
       id: idExternal,
       className = getCommonClassNameDefault(),
+      classNames,
       lang,
       'data-testid': dataTestId,
       description,
@@ -85,7 +86,9 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
         />
         <label
           htmlFor={inputIdInternal}
-          className={`${styles.label} ${labelErrorClassName}`}
+          className={`${styles.label} ${labelErrorClassName} ${
+            classNames?.label ?? ''
+          }`}
         >
           <span className={`${styles.labelCheckbox} ${checkboxErrorClassName}`}>
             <span className={styles.labelCheckboxCheck}></span>
@@ -100,7 +103,11 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           </span>
         </label>
         {!context && (
-          <ErrorMessage id={errorIdInternal} showError={hasErrorInternal}>
+          <ErrorMessage
+            id={errorIdInternal}
+            className={classNames?.errorMessage}
+            showError={hasErrorInternal}
+          >
             {errorMessage}
           </ErrorMessage>
         )}

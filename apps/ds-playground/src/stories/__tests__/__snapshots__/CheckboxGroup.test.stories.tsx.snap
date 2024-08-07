@@ -16,7 +16,7 @@ exports[`Tester/CheckboxGroup Defaults play-test 1`] = `
                value
         >
         <label for="checkboxInputId-:ri:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -36,7 +36,7 @@ exports[`Tester/CheckboxGroup Defaults play-test 1`] = `
                value
         >
         <label for="checkboxInputId-:rk:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -56,7 +56,7 @@ exports[`Tester/CheckboxGroup Defaults play-test 1`] = `
                value
         >
         <label for="checkboxInputId-:rm:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -102,7 +102,7 @@ exports[`Tester/CheckboxGroup LegendWithMarkup smoke-test 1`] = `
                value
         >
         <label for="checkboxInputId-:rq:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -122,7 +122,7 @@ exports[`Tester/CheckboxGroup LegendWithMarkup smoke-test 1`] = `
                value
         >
         <label for="checkboxInputId-:rs:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -142,7 +142,7 @@ exports[`Tester/CheckboxGroup LegendWithMarkup smoke-test 1`] = `
                value
         >
         <label for="checkboxInputId-:ru:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -188,7 +188,7 @@ exports[`Tester/CheckboxGroup LegendWithMarkupAndRequiredMark smoke-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r12:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -208,7 +208,7 @@ exports[`Tester/CheckboxGroup LegendWithMarkupAndRequiredMark smoke-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r14:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -228,7 +228,7 @@ exports[`Tester/CheckboxGroup LegendWithMarkupAndRequiredMark smoke-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r16:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -272,7 +272,7 @@ exports[`Tester/CheckboxGroup WithAttributes play-test 1`] = `
                value
         >
         <label for="checkboxInputId-:ra:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -292,7 +292,7 @@ exports[`Tester/CheckboxGroup WithAttributes play-test 1`] = `
                value
         >
         <label for="checkboxInputId-:rc:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -312,7 +312,7 @@ exports[`Tester/CheckboxGroup WithAttributes play-test 1`] = `
                value
         >
         <label for="checkboxInputId-:re:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -329,6 +329,127 @@ exports[`Tester/CheckboxGroup WithAttributes play-test 1`] = `
            aria-live="assertive"
            aria-atomic="true"
       >
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/CheckboxGroup WithCustomClassNames play-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
+    <legend id="legendId-:r3d:"
+            class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu dummyClassname"
+    >
+      Velg det som passer deg
+    </legend>
+    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+            type="button"
+            aria-describedby="legendId-:r3d:"
+            aria-expanded="false"
+    >
+      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-labelledby="svgtitle-:r3e:"
+           aria-hidden="false"
+           role="img"
+      >
+        <title id="svgtitle-:r3e:">
+          Hjelp
+        </title>
+        <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
+        </path>
+      </svg>
+    </button>
+    <div class="Help_description__niabw   dummyClassname">
+      beskrivelse
+    </div>
+    <div class="Fieldset_contentContainer__fJcfT">
+      <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+        <input id="checkboxInputId-:r3f:"
+               class="Checkbox_input__fDeJ7"
+               type="checkbox"
+               aria-describedby="checkboxGroupErrorId-:r3c:"
+               aria-invalid="true"
+               value
+        >
+        <label for="checkboxInputId-:r3f:"
+               class="Checkbox_label__sEFOt  "
+        >
+          <span class="Checkbox_labelCheckbox__TIE0R Checkbox_labelCheckbox_error__TDi7U">
+            <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+            </span>
+          </span>
+          <span class="Checkbox_labelContent__Nf+Nz ">
+            <span class>
+              Har barn over 16 år
+            </span>
+          </span>
+        </label>
+      </div>
+      <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+        <input id="checkboxInputId-:r3h:"
+               class="Checkbox_input__fDeJ7"
+               type="checkbox"
+               aria-describedby="checkboxGroupErrorId-:r3c:"
+               aria-invalid="true"
+               value
+        >
+        <label for="checkboxInputId-:r3h:"
+               class="Checkbox_label__sEFOt  "
+        >
+          <span class="Checkbox_labelCheckbox__TIE0R Checkbox_labelCheckbox_error__TDi7U">
+            <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+            </span>
+          </span>
+          <span class="Checkbox_labelContent__Nf+Nz ">
+            <span class>
+              Har barn under 12 år
+            </span>
+          </span>
+        </label>
+      </div>
+      <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
+        <input id="checkboxInputId-:r3j:"
+               class="Checkbox_input__fDeJ7"
+               type="checkbox"
+               aria-describedby="checkboxGroupErrorId-:r3c:"
+               aria-invalid="true"
+               value
+        >
+        <label for="checkboxInputId-:r3j:"
+               class="Checkbox_label__sEFOt  "
+        >
+          <span class="Checkbox_labelCheckbox__TIE0R Checkbox_labelCheckbox_error__TDi7U">
+            <span class="Checkbox_labelCheckboxCheck__x9xdZ">
+            </span>
+          </span>
+          <span class="Checkbox_labelContent__Nf+Nz ">
+            <span class>
+              Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov
+            </span>
+          </span>
+        </label>
+      </div>
+      <div id="checkboxGroupErrorId-:r3c:"
+           aria-live="assertive"
+           aria-atomic="true"
+      >
+        <div class="ErrorMessage_errorMessage__508oW CheckboxGroup_errorMessage__+zJdH dummyClassname">
+          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+            </path>
+          </svg>
+          <p class="ErrorMessage_errorMessageText__e27TU">
+            Velg minst ett av alternativene
+          </p>
+        </div>
       </div>
     </div>
   </fieldset>
@@ -354,7 +475,7 @@ exports[`Tester/CheckboxGroup WithDescription play-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r2t:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -374,7 +495,7 @@ exports[`Tester/CheckboxGroup WithDescription play-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r2v:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -394,7 +515,7 @@ exports[`Tester/CheckboxGroup WithDescription play-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r31:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -435,7 +556,7 @@ exports[`Tester/CheckboxGroup WithDisabled play-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r1i:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -455,7 +576,7 @@ exports[`Tester/CheckboxGroup WithDisabled play-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r1k:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -475,7 +596,7 @@ exports[`Tester/CheckboxGroup WithDisabled play-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r1m:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -517,7 +638,7 @@ exports[`Tester/CheckboxGroup WithDisabledAndChecked smoke-test 1`] = `
                checked
         >
         <label for="checkboxInputId-:r1q:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -537,7 +658,7 @@ exports[`Tester/CheckboxGroup WithDisabledAndChecked smoke-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r1s:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -557,7 +678,7 @@ exports[`Tester/CheckboxGroup WithDisabledAndChecked smoke-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r1u:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -598,7 +719,7 @@ exports[`Tester/CheckboxGroup WithError play-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r2a:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R Checkbox_labelCheckbox_error__TDi7U">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -620,7 +741,7 @@ exports[`Tester/CheckboxGroup WithError play-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r2c:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R Checkbox_labelCheckbox_error__TDi7U">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -642,7 +763,7 @@ exports[`Tester/CheckboxGroup WithError play-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r2e:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R Checkbox_labelCheckbox_error__TDi7U">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -714,7 +835,7 @@ exports[`Tester/CheckboxGroup WithHelpToggleEvent smoke-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r36:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -734,7 +855,7 @@ exports[`Tester/CheckboxGroup WithHelpToggleEvent smoke-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r38:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -754,7 +875,7 @@ exports[`Tester/CheckboxGroup WithHelpToggleEvent smoke-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r3a:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -804,7 +925,7 @@ exports[`Tester/CheckboxGroup WithHelptext play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="Help_helpBox__nbhjO">
+    <div class="Help_helpBox__nbhjO  undefined">
       <span class="Help_helpBoxText__j6sH7">
         Vi trenger å vite om du har barn.
       </span>
@@ -834,7 +955,7 @@ exports[`Tester/CheckboxGroup WithHelptext play-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r2k:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -854,7 +975,7 @@ exports[`Tester/CheckboxGroup WithHelptext play-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r2m:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -874,7 +995,7 @@ exports[`Tester/CheckboxGroup WithHelptext play-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r2o:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -913,7 +1034,7 @@ exports[`Tester/CheckboxGroup WithHideLegend play-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r1a:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -933,7 +1054,7 @@ exports[`Tester/CheckboxGroup WithHideLegend play-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r1c:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -953,7 +1074,7 @@ exports[`Tester/CheckboxGroup WithHideLegend play-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r1e:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -994,7 +1115,7 @@ exports[`Tester/CheckboxGroup WithRef play-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r2:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -1014,7 +1135,7 @@ exports[`Tester/CheckboxGroup WithRef play-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r4:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -1034,7 +1155,7 @@ exports[`Tester/CheckboxGroup WithRef play-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r6:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -1073,7 +1194,7 @@ exports[`Tester/CheckboxGroup WithRequiredMark smoke-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r22:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -1093,7 +1214,7 @@ exports[`Tester/CheckboxGroup WithRequiredMark smoke-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r24:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
@@ -1113,7 +1234,7 @@ exports[`Tester/CheckboxGroup WithRequiredMark smoke-test 1`] = `
                value
         >
         <label for="checkboxInputId-:r26:"
-               class="Checkbox_label__sEFOt "
+               class="Checkbox_label__sEFOt  "
         >
           <span class="Checkbox_labelCheckbox__TIE0R ">
             <span class="Checkbox_labelCheckboxCheck__x9xdZ">
