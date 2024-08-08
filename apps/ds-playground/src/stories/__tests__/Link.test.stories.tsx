@@ -315,6 +315,9 @@ export const WithAriaCurrent = {
   argTypes: {
     ariaCurrent: { table: { disable: false } },
   },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
   play: verifyAttribute('aria-current', 'true'),
 } satisfies Story;
 
