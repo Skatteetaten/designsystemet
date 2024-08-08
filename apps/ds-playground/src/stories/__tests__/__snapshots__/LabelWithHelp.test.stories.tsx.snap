@@ -25,16 +25,16 @@ exports[`Tester/LabelWithHelp (intern) WithAttributes play-test 1`] = `
 exports[`Tester/LabelWithHelp (intern) WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
   <label id="labelId-:rd:"
-         class="LabelWithHelp_label__59tP-    dummyClassname"
+         class="_label_348na_5    dummyClassname"
   >
     Ledetekst
   </label>
-  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+  <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
           type="button"
           aria-describedby="labelId-:rd:"
           aria-expanded="true"
   >
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:re:"
@@ -48,14 +48,14 @@ exports[`Tester/LabelWithHelp (intern) WithCustomClassNames play-test 1`] = `
       </path>
     </svg>
   </button>
-  <div class="Help_helpBox__nbhjO  dummyClassname dummyClassname">
-    <span class="Help_helpBoxText__j6sH7">
+  <div class="_helpBox_10ldw_31  dummyClassname dummyClassname">
+    <span class="_helpBoxText_10ldw_44">
       hjelp
     </span>
-    <button class="IconButton_button__mw9sG IconButton_button_small__etst4  Help_helpBoxCloseButton__RueX2"
+    <button class="_button_g87u5_1 _button_small_g87u5_37  _helpBoxCloseButton_10ldw_51"
             type="button"
     >
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:rf:"
@@ -70,7 +70,7 @@ exports[`Tester/LabelWithHelp (intern) WithCustomClassNames play-test 1`] = `
       </svg>
     </button>
   </div>
-  <div class="Help_description__niabw Help_descriptionMarginTop__YMqoC  dummyClassname">
+  <div class="_description_10ldw_17 _descriptionMarginTop_10ldw_23  dummyClassname">
     beskrivelse
   </div>
 </div>
