@@ -26,8 +26,8 @@ export const useValidateFormRequiredProps = ({
 }: FormRequiredProps): void => {
   useEffect(() => {
     if (!required && showRequiredMark === true) {
-      throw new Error(
-        `Invalid configuration: 'showRequiredMark' cannot be true when 'required' is of type '${required?.valueOf()}'.`
+      console.warn(
+        `Configuration warning: 'showRequiredMark' is set to 'true' while 'required' is '${required?.valueOf()}'. The required mark will be displayed, but the field will not be mandatory.`
       );
     }
   }, [required, showRequiredMark]);
