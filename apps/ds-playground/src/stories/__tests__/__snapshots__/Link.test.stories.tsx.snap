@@ -12,7 +12,7 @@ exports[`Tester/Link Defaults play-test 1`] = `
 
 exports[`Tester/Link WithAriaCurrent play-test 1`] = `
 <div data-test-block="true">
-  <a class="Link_link__jeUpY  "
+  <a class="_link_1y34f_1  "
      href="#storybook-root"
      aria-current="true"
   >
