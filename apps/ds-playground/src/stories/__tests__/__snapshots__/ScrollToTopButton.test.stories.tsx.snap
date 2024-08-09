@@ -328,6 +328,13 @@ exports[`Tester/ScrollToTopButton WithRef play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/ScrollToTopButton WithShadowDom play-test 1`] = `
+<div data-test-block="true">
+  <scrolltotop-customelement>
+  </scrolltotop-customelement>
+</div>
+`;
+
 exports[`Tester/ScrollToTopButton WithVisibilityThreshold smoke-test 1`] = `
 <div data-test-block="true">
   <div class="height100vh">
