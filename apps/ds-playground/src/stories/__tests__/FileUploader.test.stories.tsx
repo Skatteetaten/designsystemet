@@ -177,6 +177,7 @@ export const WithUploadedFiles: StoryObj<FileUploaderProps> = {
         href: 'https://www.skatteetaten.no/person/',
       },
       { name: 'grunnlag.jpg' },
+      { name: 'Screen_Shot_2023_08_03_at_14_48_38_PM_111.jpg' },
       {
         name: 'test.png',
         href: 'http://localhost:4400/designsystem_illustrasjon.png',

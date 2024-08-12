@@ -1,7 +1,10 @@
 .successIcon {
-  margin-top: var(--spacing-s);
   margin-left: var(--spacing-s);
   fill: var(--semantic-success-foreground);
+
+  &LinkMargin {
+    margin-top: var(--spacing-s);
+  }
 }
 
 .cancelIcon {
@@ -34,6 +37,7 @@
   &Text {
     padding: var(--spacing-s) 0;
     grid-area: 'type';
+    white-space: nowrap;
   }
 
   &Icon {
@@ -56,6 +60,8 @@
     color: var(--palette-graphite-70);
     grid-area: 'type';
     line-height: var(--semantic-line-height-article);
+    overflow-wrap: anywhere;
+    white-space: initial;
 
     &Error {
       // bredde på IconButton + litt luft
