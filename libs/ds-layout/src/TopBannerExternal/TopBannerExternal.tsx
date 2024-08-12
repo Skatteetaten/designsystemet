@@ -67,7 +67,8 @@ export const TopBannerExternal = forwardRef<
 
     const statusFlagRef = useRef({
       focusCaptured: false,
-      clickCaptured: false,
+      mouseUpCaptured: false,
+      mouseDownCaptured: false,
     });
 
     useEffect(() => {
@@ -98,22 +99,29 @@ export const TopBannerExternal = forwardRef<
         statusFlagRef.current.focusCaptured = false;
       };
 
-      const handleClickOutside = (_: MouseEvent): void => {
-        if (!statusFlagRef.current.clickCaptured && isMenuOpen) {
+      const handleClickOutside = (event: MouseEvent): void => {
+        if (event.target === menuButtonRef.current) {
+          return;
+        }
+        const clickCaptured =
+          statusFlagRef.current.mouseDownCaptured ||
+          statusFlagRef.current.mouseUpCaptured;
+        if (!clickCaptured && isMenuOpen) {
           setOpenMenu('None');
         }
-        statusFlagRef.current.clickCaptured = false;
+        statusFlagRef.current.mouseUpCaptured = false;
+        statusFlagRef.current.mouseDownCaptured = false;
       };
 
       if (openMenu === 'MainMenu') {
-        document.addEventListener('click', handleClickOutside);
+        document.addEventListener('mouseup', handleClickOutside);
         document.addEventListener('focusin', handleFocusOutside);
       }
 
       document.addEventListener('keydown', handleEscape);
 
       return () => {
-        document.removeEventListener('click', handleClickOutside);
+        document.removeEventListener('mouseup', handleClickOutside);
         document.removeEventListener('keydown', handleEscape);
         document.removeEventListener('focusin', handleFocusOutside);
       };
@@ -130,8 +138,9 @@ export const TopBannerExternal = forwardRef<
     }));
 
     const handleMenuClick = (): void => {
-      statusFlagRef.current.clickCaptured = true;
-      setOpenMenu(openMenu === 'MainMenu' ? 'None' : 'MainMenu');
+      setOpenMenu((openMenu) =>
+        openMenu === 'MainMenu' ? 'None' : 'MainMenu'
+      );
     };
 
     const showMenu = firstColumn || secondColumn || thirdColumn;
@@ -182,8 +191,11 @@ export const TopBannerExternal = forwardRef<
                         onFocus={() => {
                           statusFlagRef.current.focusCaptured = isMenuOpen;
                         }}
-                        onClick={() => {
-                          statusFlagRef.current.clickCaptured = isMenuOpen;
+                        onMouseUp={() => {
+                          statusFlagRef.current.mouseUpCaptured = isMenuOpen;
+                        }}
+                        onMouseDown={() => {
+                          statusFlagRef.current.mouseDownCaptured = isMenuOpen;
                         }}
                       >
                         <nav
