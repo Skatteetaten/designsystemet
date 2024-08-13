@@ -67,6 +67,7 @@
 
   &:read-only:not(:disabled) {
     padding: var(--spacing-xs) var(--spacing-s);
+    background-color: transparent;
     box-shadow: none;
     outline: 0;
   }
