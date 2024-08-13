@@ -80,29 +80,7 @@ const config: StorybookConfig = {
         'import.meta.env.DS_VERSIONS': { ...packageVersions },
       },
       plugins: [
-        svgr({
-          svgrOptions: {
-            exportType: 'named',
-            ref: true,
-            svgo: false,
-            titleProp: true,
-          },
-          include: '**/*.svg',
-          exclude: [
-            'libs/ds-core-utils/src/SkatteetatenLogo/SKESquare40.svg',
-            'libs/ds-layout/src/Footer/logo_en.svg',
-            'libs/ds-layout/src/Footer/logo_no.svg',
-            'libs/ds-layout/src/TopBannerLogo/ske-logo-mobile.svg',
-            'libs/ds-layout/src/TopBannerLogo/ske-logo-en.svg',
-            'libs/ds-layout/src/TopBannerLogo/ske-logo.svg',
-            'libs/ds-layout/src/TopBannerInternal/logo-sak.svg',
-            'apps/ds-playground/src/assets/custom-logo.svg',
-            'apps/ds-playground/src/assets/ske-logo.svg',
-            'apps/ds-playground/src/assets/farmer-illustration.svg',
-            'apps/ds-playground/src/assets/custom-mobile-logo.svg',
-          ],
-        }),
-
+        svgr(),
         viteTsConfigPaths({
           root: '../../',
         }),

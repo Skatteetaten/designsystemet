@@ -12,9 +12,9 @@ import { useTranslation } from 'react-i18next';
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon, MenuDownSVGpath, MenuUpSVGpath } from '@skatteetaten/ds-icons';
 
-import { ReactComponent as EnglishFlagIcon } from './Assets/en-flag.svg';
-import { ReactComponent as NorwegianFlagIcon } from './Assets/no-flag.svg';
-import { ReactComponent as SamiFlagIcon } from './Assets/sa-flag.svg';
+import EnglishFlagIcon from './Assets/en-flag.svg?react';
+import NorwegianFlagIcon from './Assets/no-flag.svg?react';
+import SamiFlagIcon from './Assets/sa-flag.svg?react';
 import {
   getTopBannerLangPickerLocaleDefault,
   getTopBannerLangPickerShowSamiDefault,

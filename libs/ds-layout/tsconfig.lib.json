@@ -6,7 +6,8 @@
       "node",
       "@nx/react/typings/cssmodule.d.ts",
       "@nx/react/typings/image.d.ts",
-      "../../types/i18next.d.ts"
+      "../../types/i18next.d.ts",
+      "vite-plugin-svgr/client"
     ]
   },
   "exclude": [
