@@ -104,7 +104,7 @@ const config: StorybookConfig = {
         }),
 
         viteTsConfigPaths({
-          root: '../../../',
+          root: '../../',
         }),
         nxViteTsPaths(),
         sassDts({
