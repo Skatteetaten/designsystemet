@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "types": ["node", "vite-plugin-svgr/client", "vite/client"],
+    "types": ["node", "vite/client"],
     "emitDecoratorMetadata": true,
     "outDir": "../../dist/out-tsc"
   },

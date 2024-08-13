@@ -1,7 +1,8 @@
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { StorybookConfig } from '@storybook/react-vite';
+import svgr from '@svgr/rollup';
 import sassDts from 'vite-plugin-sass-dts';
-import svgr from 'vite-plugin-svgr';
+//import svgr from 'vite-plugin-svgr';
 
 import { readdirSync, readFileSync } from 'fs';
 import path from 'node:path';
