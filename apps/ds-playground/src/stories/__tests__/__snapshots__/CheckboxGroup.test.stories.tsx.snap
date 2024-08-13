@@ -4,10 +4,15 @@ exports[`Tester/CheckboxGroup Defaults play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:rh:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Velg det som passer deg
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Velg det som passer deg
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
         <input id="checkboxInputId-:ri:"
@@ -83,7 +88,7 @@ exports[`Tester/CheckboxGroup LegendWithMarkup smoke-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:rp:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       <h1 class="Heading_heading__7K0um Heading_heading_level3__T5BVI  ">
         Dette er en Heading i legend
@@ -94,6 +99,18 @@ exports[`Tester/CheckboxGroup LegendWithMarkup smoke-test 1`] = `
         </em>
       </p>
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      <h1 class="Heading_heading__7K0um Heading_heading_level3__T5BVI  ">
+        Dette er en Heading i legend
+      </h1>
+      <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_ingress__K1ALx  ">
+        <em>
+          Dette er en italic Paragraph med ingress variant i legend
+        </em>
+      </p>
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
         <input id="checkboxInputId-:rq:"
@@ -169,7 +186,7 @@ exports[`Tester/CheckboxGroup LegendWithMarkupAndRequiredMark smoke-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:r11:"
-            class="Fieldset_legend__8odl- Fieldset_legendWithMarkup_required__WcdUI"
+            class="Fieldset_srOnly__7qh39"
     >
       <h1 class="Heading_heading__7K0um Heading_heading_level3__T5BVI  ">
         Dette er en Heading i legend
@@ -180,6 +197,18 @@ exports[`Tester/CheckboxGroup LegendWithMarkupAndRequiredMark smoke-test 1`] = `
         </em>
       </p>
     </legend>
+    <div class="Fieldset_legend__8odl- Fieldset_legendWithMarkup_required__WcdUI"
+         aria-hidden="true"
+    >
+      <h1 class="Heading_heading__7K0um Heading_heading_level3__T5BVI  ">
+        Dette er en Heading i legend
+      </h1>
+      <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_ingress__K1ALx  ">
+        <em>
+          Dette er en italic Paragraph med ingress variant i legend
+        </em>
+      </p>
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
         <input id="checkboxInputId-:r12:"
@@ -260,10 +289,15 @@ exports[`Tester/CheckboxGroup WithAttributes play-test 1`] = `
             form="123form"
   >
     <legend id="legendId-:r9:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Velg det som passer deg
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Velg det som passer deg
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
         <input id="checkboxInputId-:ra:"
@@ -460,10 +494,15 @@ exports[`Tester/CheckboxGroup WithDescription play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:r2s:"
-            class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+            class="Fieldset_srOnly__7qh39"
     >
       Velg det som passer deg
     </legend>
+    <div class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+         aria-hidden="true"
+    >
+      Velg det som passer deg
+    </div>
     <div class="Help_description__niabw">
       Vi trenger å vite om du har barn.
     </div>
@@ -544,10 +583,15 @@ exports[`Tester/CheckboxGroup WithDisabled play-test 1`] = `
             disabled
   >
     <legend id="legendId-:r1h:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Velg det som passer deg
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Velg det som passer deg
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
         <input id="checkboxInputId-:r1i:"
@@ -625,10 +669,15 @@ exports[`Tester/CheckboxGroup WithDisabledAndChecked smoke-test 1`] = `
             disabled
   >
     <legend id="legendId-:r1p:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Velg det som passer deg
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Velg det som passer deg
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
         <input id="checkboxInputId-:r1q:"
@@ -705,10 +754,15 @@ exports[`Tester/CheckboxGroup WithError play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:r29:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Velg det som passer deg
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Velg det som passer deg
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
         <input id="checkboxInputId-:r2a:"
@@ -804,10 +858,15 @@ exports[`Tester/CheckboxGroup WithHelpToggleEvent smoke-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:r34:"
-            class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+            class="Fieldset_srOnly__7qh39"
     >
       Velg det som passer deg
     </legend>
+    <div class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+         aria-hidden="true"
+    >
+      Velg det som passer deg
+    </div>
     <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
             type="button"
             aria-describedby="legendId-:r34:"
@@ -902,10 +961,15 @@ exports[`Tester/CheckboxGroup WithHelptext play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:r2i:"
-            class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+            class="Fieldset_srOnly__7qh39"
     >
       Velg det som passer deg
     </legend>
+    <div class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+         aria-hidden="true"
+    >
+      Velg det som passer deg
+    </div>
     <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
             type="button"
             aria-describedby="legendId-:r2i:"
@@ -1022,10 +1086,15 @@ exports[`Tester/CheckboxGroup WithHideLegend play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:r19:"
-            class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+            class="Fieldset_srOnly__7qh39"
     >
       Velg det som passer deg
     </legend>
+    <div class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+         aria-hidden="true"
+    >
+      Velg det som passer deg
+    </div>
     <div class="Fieldset_contentContainer__fJcfT Fieldset_contentContainerNoMarginTop__YkL1P">
       <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
         <input id="checkboxInputId-:r1a:"
@@ -1103,10 +1172,15 @@ exports[`Tester/CheckboxGroup WithRef play-test 1`] = `
             id="dummyIdForwardedFromRef"
   >
     <legend id="legendId-:r1:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Velg det som passer deg
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Velg det som passer deg
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
         <input id="checkboxInputId-:r2:"
@@ -1182,10 +1256,15 @@ exports[`Tester/CheckboxGroup WithRequiredMark smoke-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:r21:"
-            class="Fieldset_legend__8odl- Fieldset_legend_required__U4xWm"
+            class="Fieldset_srOnly__7qh39"
     >
       Velg det som passer deg
     </legend>
+    <div class="Fieldset_legend__8odl- Fieldset_legend_required__U4xWm"
+         aria-hidden="true"
+    >
+      Velg det som passer deg
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div class="Checkbox_container__xhXb4 Checkbox_containerSpacingBottom__qV7LR ">
         <input id="checkboxInputId-:r22:"

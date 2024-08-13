@@ -155,7 +155,7 @@ export const Defaults = {
     const fieldsetNode = canvas.getByRole('group');
     await expect(fieldsetNode).toBeInTheDocument();
     await expect(fieldsetNode.tagName).toBe('FIELDSET');
-    const legendNode = canvas.getByText(defaultLegendText);
+    const legendNode = canvas.getAllByText(defaultLegendText)[0];
     await expect(legendNode).toBeInTheDocument();
     await expect(legendNode.tagName).toBe('LEGEND');
     const inputNodes = canvas.getAllByRole('checkbox');
@@ -219,7 +219,7 @@ export const WithHideLegend = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const legendNode = canvas.getByText(defaultLegendText);
+    const legendNode = canvas.getAllByText(defaultLegendText)[0];
     await expect(legendNode).toBeInTheDocument();
   },
 } satisfies Story;

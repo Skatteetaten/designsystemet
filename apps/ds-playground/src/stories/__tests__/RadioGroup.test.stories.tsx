@@ -167,7 +167,7 @@ export const Defaults = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const fieldset = canvas.getByRole('group');
-    const legend = canvas.getByText(defaultLegendText);
+    const legend = canvas.getAllByText(defaultLegendText)[0];
     const radios = canvas.getAllByRole('radio');
     await expect(fieldset).toBeInTheDocument();
     await expect(fieldset.tagName).toBe('FIELDSET');
@@ -203,7 +203,7 @@ export const WithHideLegend = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const legend = canvas.getByText(defaultLegendText);
+    const legend = canvas.getAllByText(defaultLegendText)[0];
     await expect(legend).toBeInTheDocument();
   },
 } satisfies Story;

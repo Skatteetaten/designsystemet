@@ -4,10 +4,15 @@ exports[`Tester/RadioGroup/Radio Defaults play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:ra:"
-            class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+            class="Fieldset_srOnly__7qh39"
     >
       radio example
     </legend>
+    <div class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+         aria-hidden="true"
+    >
+      radio example
+    </div>
     <div class="Fieldset_contentContainer__fJcfT Fieldset_contentContainerNoMarginTop__YkL1P">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
@@ -38,10 +43,15 @@ exports[`Tester/RadioGroup/Radio WithAriaDescribedby play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:ru:"
-            class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+            class="Fieldset_srOnly__7qh39"
     >
       radio example
     </legend>
+    <div class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+         aria-hidden="true"
+    >
+      radio example
+    </div>
     <div class="Fieldset_contentContainer__fJcfT Fieldset_contentContainerNoMarginTop__YkL1P">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
@@ -73,10 +83,15 @@ exports[`Tester/RadioGroup/Radio WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:r6:"
-            class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+            class="Fieldset_srOnly__7qh39"
     >
       radio example
     </legend>
+    <div class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+         aria-hidden="true"
+    >
+      radio example
+    </div>
     <div class="Fieldset_contentContainer__fJcfT Fieldset_contentContainerNoMarginTop__YkL1P">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R dummyClassname"
@@ -111,10 +126,15 @@ exports[`Tester/RadioGroup/Radio WithDescription play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:re:"
-            class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+            class="Fieldset_srOnly__7qh39"
     >
       radio example
     </legend>
+    <div class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+         aria-hidden="true"
+    >
+      radio example
+    </div>
     <div class="Fieldset_contentContainer__fJcfT Fieldset_contentContainerNoMarginTop__YkL1P">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
@@ -148,10 +168,15 @@ exports[`Tester/RadioGroup/Radio WithLongText smoke-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:ri:"
-            class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+            class="Fieldset_srOnly__7qh39"
     >
       radio example
     </legend>
+    <div class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+         aria-hidden="true"
+    >
+      radio example
+    </div>
     <div class="Fieldset_contentContainer__fJcfT Fieldset_contentContainerNoMarginTop__YkL1P">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
@@ -185,10 +210,15 @@ exports[`Tester/RadioGroup/Radio WithLongTextAndBreaking smoke-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:rm:"
-            class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+            class="Fieldset_srOnly__7qh39"
     >
       radio example
     </legend>
+    <div class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+         aria-hidden="true"
+    >
+      radio example
+    </div>
     <div class="Fieldset_contentContainer__fJcfT Fieldset_contentContainerNoMarginTop__YkL1P">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
@@ -222,10 +252,15 @@ exports[`Tester/RadioGroup/Radio WithRef play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:r2:"
-            class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+            class="Fieldset_srOnly__7qh39"
     >
       radio example
     </legend>
+    <div class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+         aria-hidden="true"
+    >
+      radio example
+    </div>
     <div class="Fieldset_contentContainer__fJcfT Fieldset_contentContainerNoMarginTop__YkL1P">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
@@ -256,10 +291,15 @@ exports[`Tester/RadioGroup/Radio WithValue play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:rq:"
-            class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+            class="Fieldset_srOnly__7qh39"
     >
       radio example
     </legend>
+    <div class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+         aria-hidden="true"
+    >
+      radio example
+    </div>
     <div class="Fieldset_contentContainer__fJcfT Fieldset_contentContainerNoMarginTop__YkL1P">
       <div class="RadioGroup_radioGroupItemContainer__AINZK">
         <div class="Radio_radio__Fh+3R">
