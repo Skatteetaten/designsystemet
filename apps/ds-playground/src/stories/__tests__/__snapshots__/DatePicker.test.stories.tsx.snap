@@ -206,7 +206,7 @@ exports[`Tester/DatePicker/DatePicker WithDateFormat play-test 1`] = `
       <input id="datepickerInputId-:r28:"
              class="DatePicker_input__vz7zh"
              placeholder="Skriv eller velg"
-             value="2024/01/05"
+             value="2024/02/05"
       >
       <button type="button"
               class="DatePicker_calendarButton__6sCKL"
