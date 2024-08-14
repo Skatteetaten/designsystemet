@@ -373,10 +373,15 @@ exports[`Tester/CheckboxGroup WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:r3d:"
-            class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu dummyClassname"
+            class="Fieldset_srOnly__7qh39"
     >
       Velg det som passer deg
     </legend>
+    <div class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu dummyClassname"
+         aria-hidden="true"
+    >
+      Velg det som passer deg
+    </div>
     <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
             type="button"
             aria-describedby="legendId-:r3d:"
