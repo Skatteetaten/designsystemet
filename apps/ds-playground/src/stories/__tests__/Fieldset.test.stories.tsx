@@ -306,7 +306,7 @@ export const WithCustomClassNames = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const legend = canvas.getByText(defaultLegendText);
+    const legend = canvas.getAllByText(defaultLegendText)[1];
     await expect(legend).toHaveClass('dummyClassname');
   },
 } satisfies Story;
