@@ -53,10 +53,15 @@ exports[`Tester/Fieldset WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr">
     <legend id="legendId-:rg:"
-            class="Fieldset_legend__8odl-    dummyClassname"
+            class="Fieldset_srOnly__7qh39"
     >
       Ledetekst
     </legend>
+    <div class="Fieldset_legend__8odl-    dummyClassname"
+         aria-hidden="true"
+    >
+      Ledetekst
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div>
         Innhold
