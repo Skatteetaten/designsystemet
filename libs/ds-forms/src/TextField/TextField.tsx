@@ -94,7 +94,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       value.replace(/\B(?=(\d{3})+(?!\d))/g, separator);
     const removeNonNumeric = (value: string): string => {
       const trimmed = value.trim();
-      const isNegative = /^[-]/.test(trimmed);
+      const isNegative = /^-/.test(trimmed);
       const numberOnly = trimmed.replaceAll(/\D+/g, '');
       return isNegative ? `-${numberOnly}` : numberOnly;
     };
