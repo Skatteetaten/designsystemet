@@ -92,8 +92,12 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
     const separator = dsI18n.language === Languages.Engelsk ? ',' : ' ';
     const addSpacesOrCommas = (value: string): string =>
       value.replace(/\B(?=(\d{3})+(?!\d))/g, separator);
-    const removeNonNumeric = (value: string): string =>
-      value.replace(/[^0-9-]|(?<=.)-/g, '');
+    const removeNonNumeric = (value: string): string => {
+      const trimmed = value.trim();
+      const isNegative = /^-/.test(trimmed);
+      const numberOnly = trimmed.replaceAll(/\D+/g, '');
+      return isNegative ? `-${numberOnly}` : numberOnly;
+    };
 
     const handleChange = (
       e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
