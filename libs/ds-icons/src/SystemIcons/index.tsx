@@ -92,6 +92,7 @@ export * from './Marriage';
 export * from './Menu';
 export * from './MenuDown';
 export * from './MenuUp';
+export * from './Minus';
 export * from './More';
 export * from './MoveUp';
 export * from './PDFFile';

@@ -53,7 +53,7 @@ exports[`Tester/Icon Gallery SystemIcons smoke-test 1`] = `
        aria-hidden="true"
        role="img"
   >
-    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z">
+    <path d="M19 10.75H13.25V5H10.75V10.75H5V13.25H10.75V19H13.25V13.25H19V10.75Z">
     </path>
   </svg>
   <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz "
@@ -828,6 +828,15 @@ exports[`Tester/Icon Gallery SystemIcons smoke-test 1`] = `
        role="img"
   >
     <path d="m7 15 5-5 5 5H7Z">
+    </path>
+  </svg>
+  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz "
+       viewbox="0 0 24 24"
+       focusable="false"
+       aria-hidden="true"
+       role="img"
+  >
+    <path d="M19 11H5V13.5H19V11Z">
     </path>
   </svg>
   <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz "
