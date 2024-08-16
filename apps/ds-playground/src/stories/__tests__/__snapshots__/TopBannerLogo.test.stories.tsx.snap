@@ -11,7 +11,7 @@ exports[`Tester/TopBanner/TopBannerLogo (intern) Defaults play-test 1`] = `
     >
     <img class="TopBannerLogo_logo_desktop__SI+eK"
          alt="Forside Skatteetaten"
-         src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+         src="ske-logo.6857ed9029924d50231d4cd375c166dd.svg"
     >
   </a>
 </div>
@@ -26,7 +26,7 @@ exports[`Tester/TopBanner/TopBannerLogo (intern) WithAs play-test 1`] = `
     >
     <img class="TopBannerLogo_logo_desktop__SI+eK"
          alt="Skatteetaten logo"
-         src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+         src="ske-logo.6857ed9029924d50231d4cd375c166dd.svg"
     >
   </div>
 </div>
@@ -46,7 +46,7 @@ exports[`Tester/TopBanner/TopBannerLogo (intern) WithAttributes play-test 1`] = 
     >
     <img class="TopBannerLogo_logo_desktop__SI+eK"
          alt="Forside Skatteetaten"
-         src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+         src="ske-logo.6857ed9029924d50231d4cd375c166dd.svg"
     >
   </a>
 </div>
@@ -63,7 +63,7 @@ exports[`Tester/TopBanner/TopBannerLogo (intern) WithBreakpointM smoke-test 1`] 
     >
     <img class="TopBannerLogo_logo_desktop__SI+eK"
          alt="Forside Skatteetaten"
-         src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+         src="ske-logo.6857ed9029924d50231d4cd375c166dd.svg"
     >
   </a>
 </div>
@@ -97,7 +97,7 @@ exports[`Tester/TopBanner/TopBannerLogo (intern) WithMobileScreen smoke-test 1`]
     >
     <img class="TopBannerLogo_logo_desktop__SI+eK"
          alt="Forside Skatteetaten"
-         src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+         src="ske-logo.6857ed9029924d50231d4cd375c166dd.svg"
     >
   </a>
 </div>
@@ -115,7 +115,7 @@ exports[`Tester/TopBanner/TopBannerLogo (intern) WithRef play-test 1`] = `
     >
     <img class="TopBannerLogo_logo_desktop__SI+eK"
          alt="Forside Skatteetaten"
-         src="ske-logo.efcae54a4ea6b0ab43b2b65cd3ca166f.svg"
+         src="ske-logo.6857ed9029924d50231d4cd375c166dd.svg"
     >
   </a>
 </div>
