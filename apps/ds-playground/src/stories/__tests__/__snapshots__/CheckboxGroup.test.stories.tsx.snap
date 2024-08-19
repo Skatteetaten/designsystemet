@@ -994,7 +994,7 @@ exports[`Tester/CheckboxGroup WithHelptext play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="Help_helpBox__nbhjO  undefined">
+    <div class="Help_helpBox__nbhjO">
       <span class="Help_helpBoxText__j6sH7">
         Vi trenger å vite om du har barn.
       </span>
