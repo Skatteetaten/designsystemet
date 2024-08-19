@@ -721,7 +721,7 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="Help_helpBox__nbhjO  undefined">
+    <div class="Help_helpBox__nbhjO">
       <span class="Help_helpBoxText__j6sH7">
         Vi trenger å vite din type virksomhet.
       </span>
