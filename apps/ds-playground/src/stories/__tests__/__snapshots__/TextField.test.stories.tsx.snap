@@ -10,7 +10,7 @@ exports[`Tester/TextField Defaults play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:rc:"
-           class="_textbox_e4g4c_5"
+           class="_textbox_1lamq_5"
            value
     >
     <div id="textFieldErrorId-:rb:"
@@ -32,7 +32,7 @@ exports[`Tester/TextField WithAs play-test 1`] = `
       Navn
     </label>
     <textarea id="textFieldTextboxId-:ri:"
-              class="_textbox_e4g4c_5  _textbox_multiline_e4g4c_25"
+              class="_textbox_1lamq_5  _textbox_multiline_1lamq_25"
     >
     </textarea>
     <div id="textFieldErrorId-:rh:"
@@ -56,7 +56,7 @@ exports[`Tester/TextField WithAttributes play-test 1`] = `
       Navn
     </label>
     <input id="htmlid"
-           class="_textbox_e4g4c_5"
+           class="_textbox_1lamq_5"
            data-testid="123ID"
            form="formid123"
            value
@@ -80,7 +80,7 @@ exports[`Tester/TextField WithAutoCompleteInputModeNameAndPlaceholder play-test 
       Navn
     </label>
     <input id="textFieldTextboxId-:r14:"
-           class="_textbox_e4g4c_5"
+           class="_textbox_1lamq_5"
            autocomplete="given-name"
            inputmode="text"
            name="test_name"
@@ -128,7 +128,7 @@ exports[`Tester/TextField WithCustomClassNames play-test 1`] = `
       beskrivelse
     </div>
     <input id="textFieldTextboxId-:r7:"
-           class="_textbox_e4g4c_5    dummyClassname"
+           class="_textbox_1lamq_5    dummyClassname"
            aria-describedby="textFieldErrorId-:r6:"
            aria-invalid="true"
            value
@@ -166,7 +166,7 @@ exports[`Tester/TextField WithDefaultValue play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:rr:"
-           class="_textbox_e4g4c_5"
+           class="_textbox_1lamq_5"
            value="Kari Nordmann"
     >
     <div id="textFieldErrorId-:rq:"
@@ -188,7 +188,7 @@ exports[`Tester/TextField WithDefaultValueAndAutoSizeTextArea play-test 1`] = `
       Navn
     </label>
     <textarea id="textFieldTextboxId-:r11:"
-              class="_textbox_e4g4c_5  _textbox_multiline_e4g4c_25 _textbox_autosize_e4g4c_29"
+              class="_textbox_1lamq_5  _textbox_multiline_1lamq_25 _textbox_autosize_1lamq_29"
               style="height: 88px;"
     >
       Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
@@ -212,7 +212,7 @@ exports[`Tester/TextField WithDefaultValueAndThousandSeparator play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:ru:"
-           class="_textbox_e4g4c_5"
+           class="_textbox_1lamq_5"
            value="10 000"
     >
     <div id="textFieldErrorId-:rt:"
@@ -237,7 +237,7 @@ exports[`Tester/TextField WithDescription play-test 1`] = `
       En liten beskrivelse tekst
     </div>
     <input id="textFieldTextboxId-:r20:"
-           class="_textbox_e4g4c_5"
+           class="_textbox_1lamq_5"
            value
     >
     <div id="textFieldErrorId-:r1v:"
@@ -259,7 +259,7 @@ exports[`Tester/TextField WithDisabled play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:rl:"
-           class="_textbox_e4g4c_5"
+           class="_textbox_1lamq_5"
            disabled
            value="Kari Nordmann"
     >
@@ -282,7 +282,7 @@ exports[`Tester/TextField WithErrorMessage play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:r1s:"
-           class="_textbox_e4g4c_5"
+           class="_textbox_1lamq_5"
            aria-describedby="textFieldErrorId-:r1r:"
            aria-invalid="true"
            value
@@ -320,7 +320,7 @@ exports[`Tester/TextField WithEventHandlers play-test 1`] = `
       TextField har blitt blurret
     </label>
     <input id="textFieldTextboxId-:r2m:"
-           class="_textbox_e4g4c_5"
+           class="_textbox_1lamq_5"
            value
     >
     <div id="textFieldErrorId-:r2l:"
@@ -361,7 +361,7 @@ exports[`Tester/TextField WithHelpText play-test 1`] = `
       </svg>
     </button>
     <input id="textFieldTextboxId-:r2c:"
-           class="_textbox_e4g4c_5"
+           class="_textbox_1lamq_5"
            value
     >
     <div id="textFieldErrorId-:r2b:"
@@ -405,7 +405,7 @@ exports[`Tester/TextField WithHelpTextAndDescription smoke-test 1`] = `
       En liten beskrivelse tekst
     </div>
     <input id="textFieldTextboxId-:r2h:"
-           class="_textbox_e4g4c_5"
+           class="_textbox_1lamq_5"
            value
     >
     <div id="textFieldErrorId-:r2g:"
@@ -446,7 +446,7 @@ exports[`Tester/TextField WithHelpToggleEvent smoke-test 1`] = `
       </svg>
     </button>
     <input id="textFieldTextboxId-:r2p:"
-           class="_textbox_e4g4c_5"
+           class="_textbox_1lamq_5"
            value
     >
     <div id="textFieldErrorId-:r2o:"
@@ -468,7 +468,7 @@ exports[`Tester/TextField WithHideLabel play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:r23:"
-           class="_textbox_e4g4c_5"
+           class="_textbox_1lamq_5"
            value
     >
     <div id="textFieldErrorId-:r22:"
@@ -490,7 +490,7 @@ exports[`Tester/TextField WithMinAndMaxLength play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:r1g:"
-           class="_textbox_e4g4c_5"
+           class="_textbox_1lamq_5"
            maxlength="50"
            minlength="10"
            value
@@ -514,7 +514,7 @@ exports[`Tester/TextField WithPattern play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:r1j:"
-           class="_textbox_e4g4c_5"
+           class="_textbox_1lamq_5"
            pattern="[a-z]"
            value
     >
@@ -537,7 +537,7 @@ exports[`Tester/TextField WithReadOnly play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:r17:"
-           class="_textbox_e4g4c_5"
+           class="_textbox_1lamq_5"
            readonly
            value="Kari Nordmann"
     >
@@ -560,7 +560,7 @@ exports[`Tester/TextField WithRef play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:r1:"
-           class="_textbox_e4g4c_5"
+           class="_textbox_1lamq_5"
            value
            name="dummyNameForwardedFromRef"
     >
@@ -583,7 +583,7 @@ exports[`Tester/TextField WithRequired play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:r1a:"
-           class="_textbox_e4g4c_5"
+           class="_textbox_1lamq_5"
            required
            value
     >
@@ -606,7 +606,7 @@ exports[`Tester/TextField WithRequiredAndMark smoke-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:r1d:"
-           class="_textbox_e4g4c_5"
+           class="_textbox_1lamq_5"
            required
            value
     >
@@ -629,7 +629,7 @@ exports[`Tester/TextField WithRows play-test 1`] = `
       Navn
     </label>
     <textarea id="textFieldTextboxId-:r1m:"
-              class="_textbox_e4g4c_5  _textbox_multiline_e4g4c_25"
+              class="_textbox_1lamq_5  _textbox_multiline_1lamq_25"
               rows="4"
     >
     </textarea>
@@ -644,10 +644,10 @@ exports[`Tester/TextField WithRows play-test 1`] = `
 
 exports[`Tester/TextField WithTextAreaAutoSizeInModal play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Vis modal
     </span>
   </button>
@@ -689,7 +689,7 @@ exports[`Tester/TextField WithTextAreaAutoSizeInModal play-test 1`] = `
             Navn
           </label>
           <textarea id="textFieldTextboxId-:r2v:"
-                    class="_textbox_e4g4c_5  _textbox_multiline_e4g4c_25 _textbox_autosize_e4g4c_29"
+                    class="_textbox_1lamq_5  _textbox_multiline_1lamq_25 _textbox_autosize_1lamq_29"
                     style="height: 0px;"
           >
           </textarea>
@@ -715,7 +715,7 @@ exports[`Tester/TextField WithThousandSeparator play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:r26:"
-           class="_textbox_e4g4c_5"
+           class="_textbox_1lamq_5"
            value
     >
     <div id="textFieldErrorId-:r25:"
@@ -737,7 +737,7 @@ exports[`Tester/TextField WithThousandSeparatorAndNegativeValue play-test 1`] = 
       Navn
     </label>
     <input id="textFieldTextboxId-:r29:"
-           class="_textbox_e4g4c_5"
+           class="_textbox_1lamq_5"
            value
     >
     <div id="textFieldErrorId-:r28:"
@@ -759,7 +759,7 @@ exports[`Tester/TextField WithValue play-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:ro:"
-           class="_textbox_e4g4c_5"
+           class="_textbox_1lamq_5"
            value="Kari Nordmann"
     >
     <div id="textFieldErrorId-:rn:"
@@ -781,7 +781,7 @@ exports[`Tester/TextField WithVariantLarge smoke-test 1`] = `
       Navn
     </label>
     <input id="textFieldTextboxId-:rf:"
-           class="_textbox_e4g4c_5 _textbox_large_e4g4c_22"
+           class="_textbox_1lamq_5 _textbox_large_1lamq_22"
            value
     >
     <div id="textFieldErrorId-:re:"

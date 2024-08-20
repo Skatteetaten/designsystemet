@@ -839,7 +839,7 @@ exports[`Tester/Icon Gallery SystemIcons smoke-test 1`] = `
     <path d="M19 11H5V13.5H19V11Z">
     </path>
   </svg>
-  <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz "
+  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 "
        viewbox="0 0 24 24"
        focusable="false"
        aria-hidden="true"

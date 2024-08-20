@@ -2,10 +2,10 @@
 
 exports[`Tester/Button Defaults play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Klikk her
     </span>
   </button>
@@ -14,10 +14,10 @@ exports[`Tester/Button Defaults play-test 1`] = `
 
 exports[`Tester/Button VariantDanger play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_q67d9_1 _button_danger_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_danger_6ybyo_1   "
           type="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Klikk her
     </span>
   </button>
@@ -26,10 +26,10 @@ exports[`Tester/Button VariantDanger play-test 1`] = `
 
 exports[`Tester/Button VariantSecondary play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_q67d9_1 _button_secondary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_secondary_6ybyo_1   "
           type="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Klikk her
     </span>
   </button>
@@ -38,10 +38,10 @@ exports[`Tester/Button VariantSecondary play-test 1`] = `
 
 exports[`Tester/Button VariantTertiary play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
           type="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Klikk her
     </span>
   </button>
@@ -50,11 +50,11 @@ exports[`Tester/Button VariantTertiary play-test 1`] = `
 
 exports[`Tester/Button WithAccesskey play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           accesskey="j"
           type="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Klikk her
     </span>
   </button>
@@ -63,11 +63,11 @@ exports[`Tester/Button WithAccesskey play-test 1`] = `
 
 exports[`Tester/Button WithAriaDescribedby play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="button"
           aria-describedby="testid1234"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Klikk her
     </span>
   </button>
@@ -77,13 +77,13 @@ exports[`Tester/Button WithAriaDescribedby play-test 1`] = `
 exports[`Tester/Button WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <button id="htmlid"
-          class="_button_q67d9_1 _button_primary_q67d9_1   dummyClassname"
+          class="_button_6ybyo_1 _button_primary_6ybyo_1   dummyClassname"
           lang="nb"
           data-testid="123ID"
           form="formid123"
           type="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Klikk her
     </span>
   </button>
@@ -92,11 +92,11 @@ exports[`Tester/Button WithAttributes play-test 1`] = `
 
 exports[`Tester/Button WithDisabled play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           disabled
           type="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Klikk her
     </span>
   </button>
@@ -105,12 +105,12 @@ exports[`Tester/Button WithDisabled play-test 1`] = `
 
 exports[`Tester/Button WithDisabledAndIcon smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_q67d9_1 _button_primary_q67d9_1 _button_withIcon_q67d9_47  "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1 _button_withIcon_6ybyo_47  "
           disabled
           type="button"
   >
-    <span class="_iconWrapper_q67d9_25">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_q67d9_25"
+    <span class="_iconWrapper_6ybyo_25">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -120,7 +120,7 @@ exports[`Tester/Button WithDisabledAndIcon smoke-test 1`] = `
         </path>
       </svg>
     </span>
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Klikk her
     </span>
   </button>
@@ -129,10 +129,10 @@ exports[`Tester/Button WithDisabledAndIcon smoke-test 1`] = `
 
 exports[`Tester/Button WithEventHandlers play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Knapp har blitt klikket på
     </span>
   </button>
@@ -141,15 +141,15 @@ exports[`Tester/Button WithEventHandlers play-test 1`] = `
 
 exports[`Tester/Button WithExternalIcon play-test 1`] = `
 <div data-test-block="true">
-  <a class="_button_q67d9_1 _button_primary_q67d9_1  _button_withIconRight_q67d9_51 "
+  <a class="_button_6ybyo_1 _button_primary_6ybyo_1  _button_withIconRight_6ybyo_51 "
      href="#"
      role="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Til altinn.no
     </span>
-    <span class="_iconWrapper_q67d9_25">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_q67d9_25 _iconExternal_q67d9_66"
+    <span class="_iconWrapper_6ybyo_25">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25 _iconExternal_6ybyo_66"
            viewbox="0 0 24 24"
            focusable="false"
            aria-label="Til et annet nettsted"
@@ -166,11 +166,11 @@ exports[`Tester/Button WithExternalIcon play-test 1`] = `
 
 exports[`Tester/Button WithIcon play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_q67d9_1 _button_primary_q67d9_1 _button_withIcon_q67d9_47  "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1 _button_withIcon_6ybyo_47  "
           type="button"
   >
-    <span class="_iconWrapper_q67d9_25">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_q67d9_25"
+    <span class="_iconWrapper_6ybyo_25">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -180,7 +180,7 @@ exports[`Tester/Button WithIcon play-test 1`] = `
         </path>
       </svg>
     </span>
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Klikk her
     </span>
   </button>
@@ -189,10 +189,10 @@ exports[`Tester/Button WithIcon play-test 1`] = `
 
 exports[`Tester/Button WithLongText smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles. Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles
     </span>
   </button>
@@ -201,11 +201,11 @@ exports[`Tester/Button WithLongText smoke-test 1`] = `
 
 exports[`Tester/Button WithLongTextAndIcon smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_q67d9_1 _button_primary_q67d9_1 _button_withIcon_q67d9_47  "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1 _button_withIcon_6ybyo_47  "
           type="button"
   >
-    <span class="_iconWrapper_q67d9_25">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_q67d9_25"
+    <span class="_iconWrapper_6ybyo_25">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -215,7 +215,7 @@ exports[`Tester/Button WithLongTextAndIcon smoke-test 1`] = `
         </path>
       </svg>
     </span>
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres. Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres.
     </span>
   </button>
@@ -224,11 +224,11 @@ exports[`Tester/Button WithLongTextAndIcon smoke-test 1`] = `
 
 exports[`Tester/Button WithRef play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="button"
           id="dummyIdForwardedFromRef"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Klikk her
     </span>
   </button>
@@ -238,45 +238,45 @@ exports[`Tester/Button WithRef play-test 1`] = `
 exports[`Tester/Button WithSpinner smoke-test 1`] = `
 <div data-test-block="true">
   <div class="bottomSpacingXL">
-    <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
+    <button class="_button_6ybyo_1 _button_primary_6ybyo_1   marginRightM"
             type="button"
     >
-      <span class="_buttonText_q67d9_69">
+      <span class="_buttonText_6ybyo_69">
         Klikk her
       </span>
     </button>
-    <button class="_button_q67d9_1 _button_secondary_q67d9_1   marginRightM"
+    <button class="_button_6ybyo_1 _button_secondary_6ybyo_1   marginRightM"
             type="button"
     >
-      <span class="_buttonText_q67d9_69">
+      <span class="_buttonText_6ybyo_69">
         Klikk her
       </span>
     </button>
-    <button class="_button_q67d9_1 _button_tertiary_q67d9_1   marginRightM"
+    <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   marginRightM"
             type="button"
     >
-      <span class="_buttonText_q67d9_69">
+      <span class="_buttonText_6ybyo_69">
         Klikk her
       </span>
     </button>
-    <button class="_button_q67d9_1 _button_danger_q67d9_1   "
+    <button class="_button_6ybyo_1 _button_danger_6ybyo_1   "
             type="button"
     >
-      <span class="_buttonText_q67d9_69">
+      <span class="_buttonText_6ybyo_69">
         Klikk her
       </span>
     </button>
   </div>
   <div class="bottomSpacingXL">
-    <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
+    <button class="_button_6ybyo_1 _button_primary_6ybyo_1   marginRightM"
             type="button"
     >
-      <span class="_buttonText_q67d9_69 _hide_q67d9_149">
+      <span class="_buttonText_6ybyo_69 _hide_6ybyo_149">
         Klikk her
       </span>
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_white_wnf1f_19 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_q67d9_153 "
+           class="_spinner_wnf1f_5 _spinner_white_wnf1f_19 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
       >
         <div class="_spinnerAnimation_wnf1f_40 ">
         </div>
@@ -285,15 +285,15 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
         </span>
       </div>
     </button>
-    <button class="_button_q67d9_1 _button_secondary_q67d9_1   marginRightM"
+    <button class="_button_6ybyo_1 _button_secondary_6ybyo_1   marginRightM"
             type="button"
     >
-      <span class="_buttonText_q67d9_69 _hide_q67d9_149">
+      <span class="_buttonText_6ybyo_69 _hide_6ybyo_149">
         Klikk her
       </span>
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_q67d9_153 "
+           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
       >
         <div class="_spinnerAnimation_wnf1f_40 ">
         </div>
@@ -302,15 +302,15 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
         </span>
       </div>
     </button>
-    <button class="_button_q67d9_1 _button_tertiary_q67d9_1   marginRightM"
+    <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   marginRightM"
             type="button"
     >
-      <span class="_buttonText_q67d9_69 _hide_q67d9_149">
+      <span class="_buttonText_6ybyo_69 _hide_6ybyo_149">
         Klikk her
       </span>
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_q67d9_153 "
+           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
       >
         <div class="_spinnerAnimation_wnf1f_40 ">
         </div>
@@ -319,15 +319,15 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
         </span>
       </div>
     </button>
-    <button class="_button_q67d9_1 _button_danger_q67d9_1   "
+    <button class="_button_6ybyo_1 _button_danger_6ybyo_1   "
             type="button"
     >
-      <span class="_buttonText_q67d9_69 _hide_q67d9_149">
+      <span class="_buttonText_6ybyo_69 _hide_6ybyo_149">
         Klikk her
       </span>
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_black_wnf1f_13 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_q67d9_153 "
+           class="_spinner_wnf1f_5 _spinner_black_wnf1f_13 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
       >
         <div class="_spinnerAnimation_wnf1f_40 ">
         </div>
@@ -338,11 +338,11 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
     </button>
   </div>
   <div class="bottomSpacingXL">
-    <button class="_button_q67d9_1 _button_primary_q67d9_1 _button_withIcon_q67d9_47  marginRightM"
+    <button class="_button_6ybyo_1 _button_primary_6ybyo_1 _button_withIcon_6ybyo_47  marginRightM"
             type="button"
     >
-      <span class="_iconWrapper_q67d9_25">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_q67d9_25"
+      <span class="_iconWrapper_6ybyo_25">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -352,15 +352,15 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_buttonText_q67d9_69">
+      <span class="_buttonText_6ybyo_69">
         Klikk her
       </span>
     </button>
-    <button class="_button_q67d9_1 _button_secondary_q67d9_1 _button_withIcon_q67d9_47  marginRightM"
+    <button class="_button_6ybyo_1 _button_secondary_6ybyo_1 _button_withIcon_6ybyo_47  marginRightM"
             type="button"
     >
-      <span class="_iconWrapper_q67d9_25">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_q67d9_25"
+      <span class="_iconWrapper_6ybyo_25">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -370,15 +370,15 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_buttonText_q67d9_69">
+      <span class="_buttonText_6ybyo_69">
         Klikk her
       </span>
     </button>
-    <button class="_button_q67d9_1 _button_tertiary_q67d9_1 _button_withIcon_q67d9_47  marginRightM"
+    <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1 _button_withIcon_6ybyo_47  marginRightM"
             type="button"
     >
-      <span class="_iconWrapper_q67d9_25">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_q67d9_25"
+      <span class="_iconWrapper_6ybyo_25">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -388,15 +388,15 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_buttonText_q67d9_69">
+      <span class="_buttonText_6ybyo_69">
         Klikk her
       </span>
     </button>
-    <button class="_button_q67d9_1 _button_danger_q67d9_1 _button_withIcon_q67d9_47  "
+    <button class="_button_6ybyo_1 _button_danger_6ybyo_1 _button_withIcon_6ybyo_47  "
             type="button"
     >
-      <span class="_iconWrapper_q67d9_25">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_q67d9_25"
+      <span class="_iconWrapper_6ybyo_25">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -406,16 +406,16 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_buttonText_q67d9_69">
+      <span class="_buttonText_6ybyo_69">
         Klikk her
       </span>
     </button>
   </div>
-  <button class="_button_q67d9_1 _button_primary_q67d9_1 _button_withIcon_q67d9_47  marginRightM"
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1 _button_withIcon_6ybyo_47  marginRightM"
           type="button"
   >
-    <span class="_iconWrapper_q67d9_25 _hide_q67d9_149">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_q67d9_25"
+    <span class="_iconWrapper_6ybyo_25 _hide_6ybyo_149">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -425,12 +425,12 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
         </path>
       </svg>
     </span>
-    <span class="_buttonText_q67d9_69 _hide_q67d9_149">
+    <span class="_buttonText_6ybyo_69 _hide_6ybyo_149">
       Klikk her
     </span>
     <div aria-live="polite"
          aria-atomic="true"
-         class="_spinner_wnf1f_5 _spinner_white_wnf1f_19 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_q67d9_153 "
+         class="_spinner_wnf1f_5 _spinner_white_wnf1f_19 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
     >
       <div class="_spinnerAnimation_wnf1f_40 ">
       </div>
@@ -439,11 +439,11 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
       </span>
     </div>
   </button>
-  <button class="_button_q67d9_1 _button_secondary_q67d9_1 _button_withIcon_q67d9_47  marginRightM"
+  <button class="_button_6ybyo_1 _button_secondary_6ybyo_1 _button_withIcon_6ybyo_47  marginRightM"
           type="button"
   >
-    <span class="_iconWrapper_q67d9_25 _hide_q67d9_149">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_q67d9_25"
+    <span class="_iconWrapper_6ybyo_25 _hide_6ybyo_149">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -453,12 +453,12 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
         </path>
       </svg>
     </span>
-    <span class="_buttonText_q67d9_69 _hide_q67d9_149">
+    <span class="_buttonText_6ybyo_69 _hide_6ybyo_149">
       Klikk her
     </span>
     <div aria-live="polite"
          aria-atomic="true"
-         class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_q67d9_153 "
+         class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
     >
       <div class="_spinnerAnimation_wnf1f_40 ">
       </div>
@@ -467,11 +467,11 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
       </span>
     </div>
   </button>
-  <button class="_button_q67d9_1 _button_tertiary_q67d9_1 _button_withIcon_q67d9_47  marginRightM"
+  <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1 _button_withIcon_6ybyo_47  marginRightM"
           type="button"
   >
-    <span class="_iconWrapper_q67d9_25 _hide_q67d9_149">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_q67d9_25"
+    <span class="_iconWrapper_6ybyo_25 _hide_6ybyo_149">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -481,12 +481,12 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
         </path>
       </svg>
     </span>
-    <span class="_buttonText_q67d9_69 _hide_q67d9_149">
+    <span class="_buttonText_6ybyo_69 _hide_6ybyo_149">
       Klikk her
     </span>
     <div aria-live="polite"
          aria-atomic="true"
-         class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_q67d9_153 "
+         class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
     >
       <div class="_spinnerAnimation_wnf1f_40 ">
       </div>
@@ -495,11 +495,11 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
       </span>
     </div>
   </button>
-  <button class="_button_q67d9_1 _button_danger_q67d9_1 _button_withIcon_q67d9_47  "
+  <button class="_button_6ybyo_1 _button_danger_6ybyo_1 _button_withIcon_6ybyo_47  "
           type="button"
   >
-    <span class="_iconWrapper_q67d9_25 _hide_q67d9_149">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_q67d9_25"
+    <span class="_iconWrapper_6ybyo_25 _hide_6ybyo_149">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -509,12 +509,12 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
         </path>
       </svg>
     </span>
-    <span class="_buttonText_q67d9_69 _hide_q67d9_149">
+    <span class="_buttonText_6ybyo_69 _hide_6ybyo_149">
       Klikk her
     </span>
     <div aria-live="polite"
          aria-atomic="true"
-         class="_spinner_wnf1f_5 _spinner_black_wnf1f_13 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_q67d9_153 "
+         class="_spinner_wnf1f_5 _spinner_black_wnf1f_13 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
     >
       <div class="_spinnerAnimation_wnf1f_40 ">
       </div>
@@ -528,10 +528,10 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
 
 exports[`Tester/Button WithType play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="submit"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Klikk her
     </span>
   </button>

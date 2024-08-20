@@ -13,20 +13,20 @@ exports[`Tester/Pagination Defaults smoke-test 1`] = `
     </div>
     <ul class="_paginationList_1frpa_20 ">
       <li>
-        <button class="_button_q67d9_1 _button_primary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             2
           </span>
         </button>
@@ -67,38 +67,38 @@ exports[`Tester/Pagination HidePrevNextButtonTitle smoke-test 1`] = `
     </div>
     <ul class="_paginationList_1frpa_20 ">
       <li>
-        <button class="_button_q67d9_1 _button_primary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             2
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             3
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             4
           </span>
         </button>
@@ -111,10 +111,10 @@ exports[`Tester/Pagination HidePrevNextButtonTitle smoke-test 1`] = `
         </p>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             7
           </span>
         </button>
@@ -174,65 +174,65 @@ exports[`Tester/Pagination Sibling play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             2
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_primary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             3
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             4
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             5
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             6
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             7
           </span>
         </button>
@@ -276,38 +276,38 @@ exports[`Tester/Pagination WithAttributes play-test 1`] = `
     </div>
     <ul class="_paginationList_1frpa_20 ">
       <li>
-        <button class="_button_q67d9_1 _button_primary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             2
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             3
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             4
           </span>
         </button>
@@ -320,10 +320,10 @@ exports[`Tester/Pagination WithAttributes play-test 1`] = `
         </p>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             7
           </span>
         </button>
@@ -382,29 +382,29 @@ exports[`Tester/Pagination WithControlled play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_primary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             2
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             3
           </span>
         </button>
@@ -417,10 +417,10 @@ exports[`Tester/Pagination WithControlled play-test 1`] = `
         </p>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             6
           </span>
         </button>
@@ -461,38 +461,38 @@ exports[`Tester/Pagination WithCustomAriaLabel play-test 1`] = `
     </div>
     <ul class="_paginationList_1frpa_20 ">
       <li>
-        <button class="_button_q67d9_1 _button_primary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             2
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             3
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             4
           </span>
         </button>
@@ -505,10 +505,10 @@ exports[`Tester/Pagination WithCustomAriaLabel play-test 1`] = `
         </p>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             7
           </span>
         </button>
@@ -549,38 +549,38 @@ exports[`Tester/Pagination WithHiddenPageSummary play-test 1`] = `
     </div>
     <ul class="_paginationList_1frpa_20 _paginationList_summaryhidden_1frpa_35">
       <li>
-        <button class="_button_q67d9_1 _button_primary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             2
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             3
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             4
           </span>
         </button>
@@ -593,10 +593,10 @@ exports[`Tester/Pagination WithHiddenPageSummary play-test 1`] = `
         </p>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             7
           </span>
         </button>
@@ -655,56 +655,56 @@ exports[`Tester/Pagination WithListLength play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             2
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_primary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             3
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             4
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             5
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             6
           </span>
         </button>
@@ -717,10 +717,10 @@ exports[`Tester/Pagination WithListLength play-test 1`] = `
         </p>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             18
           </span>
         </button>
@@ -778,38 +778,38 @@ exports[`Tester/Pagination WithListLimit smoke-test 1`] = `
     </div>
     <ul class="_paginationList_1frpa_20 ">
       <li>
-        <button class="_button_q67d9_1 _button_primary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             2
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             3
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             4
           </span>
         </button>
@@ -822,10 +822,10 @@ exports[`Tester/Pagination WithListLimit smoke-test 1`] = `
         </p>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             9
           </span>
         </button>
@@ -884,10 +884,10 @@ exports[`Tester/Pagination WithNavigation play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
@@ -900,38 +900,38 @@ exports[`Tester/Pagination WithNavigation play-test 1`] = `
         </p>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             4
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             5
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             6
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_primary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             7
           </span>
         </button>
@@ -954,38 +954,38 @@ exports[`Tester/Pagination WithPageSummary play-test 1`] = `
     </div>
     <ul class="_paginationList_1frpa_20 ">
       <li>
-        <button class="_button_q67d9_1 _button_primary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             2
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             3
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             4
           </span>
         </button>
@@ -998,10 +998,10 @@ exports[`Tester/Pagination WithPageSummary play-test 1`] = `
         </p>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             7
           </span>
         </button>
@@ -1043,38 +1043,38 @@ exports[`Tester/Pagination WithRef smoke-test 1`] = `
     </div>
     <ul class="_paginationList_1frpa_20 ">
       <li>
-        <button class="_button_q67d9_1 _button_primary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             2
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             3
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             4
           </span>
         </button>
@@ -1087,10 +1087,10 @@ exports[`Tester/Pagination WithRef smoke-test 1`] = `
         </p>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             7
           </span>
         </button>
@@ -1149,65 +1149,65 @@ exports[`Tester/Pagination WithTextNextPref play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_primary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             2
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             3
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             4
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             5
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             6
           </span>
         </button>
       </li>
       <li>
-        <button class="_button_q67d9_1 _button_tertiary_q67d9_1   _button_2o1sv_5"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             7
           </span>
         </button>

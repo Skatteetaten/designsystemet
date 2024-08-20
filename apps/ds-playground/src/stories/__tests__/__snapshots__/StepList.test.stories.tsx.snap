@@ -104,10 +104,10 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
         <div class="_nextLine_14g5z_278">
         </div>
         <span class="_buttonWrapper_14g5z_274">
-          <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+          <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Neste
             </span>
           </button>
@@ -310,10 +310,10 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
         <div class="_nextLine_14g5z_278">
         </div>
         <span class="_buttonWrapper_14g5z_274">
-          <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+          <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Neste
             </span>
           </button>
@@ -516,10 +516,10 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
         <div class="_nextLine_14g5z_278">
         </div>
         <span class="_buttonWrapper_14g5z_274">
-          <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+          <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Neste
             </span>
           </button>
@@ -870,10 +870,10 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
         <div class="_nextLine_14g5z_278">
         </div>
         <span class="_buttonWrapper_14g5z_274">
-          <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+          <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Neste
             </span>
           </button>

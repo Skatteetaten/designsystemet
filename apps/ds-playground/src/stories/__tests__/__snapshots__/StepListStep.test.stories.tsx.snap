@@ -29,11 +29,11 @@ exports[`Tester/StepList/Step NextButtonWithDisabled smoke-test 1`] = `
       <div class="_nextLine_14g5z_278">
       </div>
       <span class="_buttonWrapper_14g5z_274">
-        <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
                 disabled
                 type="button"
         >
-          <span class="_buttonText_q67d9_69">
+          <span class="_buttonText_6ybyo_69">
             Neste
           </span>
         </button>
@@ -72,15 +72,15 @@ exports[`Tester/StepList/Step NextButtonWithSpinner smoke-test 1`] = `
       <div class="_nextLine_14g5z_278">
       </div>
       <span class="_buttonWrapper_14g5z_274">
-        <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
                 type="button"
         >
-          <span class="_buttonText_q67d9_69 _hide_q67d9_149">
+          <span class="_buttonText_6ybyo_69 _hide_6ybyo_149">
             Neste
           </span>
           <div aria-live="polite"
                aria-atomic="true"
-               class="_spinner_wnf1f_5 _spinner_white_wnf1f_19 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_q67d9_153 "
+               class="_spinner_wnf1f_5 _spinner_white_wnf1f_19 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
           >
             <div class="_spinnerAnimation_wnf1f_40 ">
             </div>

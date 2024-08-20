@@ -7,10 +7,10 @@ exports[`Tester/Panel Defaults play-test 1`] = `
       <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-      <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+      <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
               type="button"
       >
-        <span class="_buttonText_q67d9_69">
+        <span class="_buttonText_6ybyo_69">
           Trykk på meg
         </span>
       </button>
@@ -105,10 +105,10 @@ exports[`Tester/Panel VariantFilled smoke-test 1`] = `
       <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-      <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+      <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
               type="button"
       >
-        <span class="_buttonText_q67d9_69">
+        <span class="_buttonText_6ybyo_69">
           Trykk på meg
         </span>
       </button>
@@ -128,10 +128,10 @@ exports[`Tester/Panel WithAttributes play-test 1`] = `
       <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-      <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+      <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
               type="button"
       >
-        <span class="_buttonText_q67d9_69">
+        <span class="_buttonText_6ybyo_69">
           Trykk på meg
         </span>
       </button>
@@ -147,10 +147,10 @@ exports[`Tester/Panel WithClassNameOverridesPanelWidthAndPadding smoke-test 1`] 
       <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-      <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+      <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
               type="button"
       >
-        <span class="_buttonText_q67d9_69">
+        <span class="_buttonText_6ybyo_69">
           Trykk på meg
         </span>
       </button>
@@ -368,10 +368,10 @@ exports[`Tester/Panel WithHideSubtitle play-test 1`] = `
       <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-      <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+      <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
               type="button"
       >
-        <span class="_buttonText_q67d9_69">
+        <span class="_buttonText_6ybyo_69">
           Trykk på meg
         </span>
       </button>
@@ -390,10 +390,10 @@ exports[`Tester/Panel WithHideTitle play-test 1`] = `
       <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-      <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+      <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
               type="button"
       >
-        <span class="_buttonText_q67d9_69">
+        <span class="_buttonText_6ybyo_69">
           Trykk på meg
         </span>
       </button>
@@ -711,10 +711,10 @@ exports[`Tester/Panel WithRef play-test 1`] = `
       <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-      <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+      <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
               type="button"
       >
-        <span class="_buttonText_q67d9_69">
+        <span class="_buttonText_6ybyo_69">
           Trykk på meg
         </span>
       </button>
@@ -793,10 +793,10 @@ exports[`Tester/Panel WithSubtitleAs play-test 1`] = `
       <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-      <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+      <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
               type="button"
       >
-        <span class="_buttonText_q67d9_69">
+        <span class="_buttonText_6ybyo_69">
           Trykk på meg
         </span>
       </button>
@@ -830,10 +830,10 @@ exports[`Tester/Panel WithTitleAs play-test 1`] = `
       <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
-      <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+      <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
               type="button"
       >
-        <span class="_buttonText_q67d9_69">
+        <span class="_buttonText_6ybyo_69">
           Trykk på meg
         </span>
       </button>

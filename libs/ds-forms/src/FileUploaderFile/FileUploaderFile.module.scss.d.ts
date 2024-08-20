@@ -1,5 +1,6 @@
 declare const classNames: {
   readonly successIcon: 'successIcon';
+  readonly successIconLinkMargin: 'successIconLinkMargin';
   readonly cancelIcon: 'cancelIcon';
   readonly fileSpinner: 'fileSpinner';
   readonly spinner: 'spinner';

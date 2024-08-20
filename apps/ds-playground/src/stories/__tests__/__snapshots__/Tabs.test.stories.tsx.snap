@@ -430,10 +430,10 @@ exports[`Tester/Tabs/Tabs WithValue play-test 1`] = `
       Tabs.Panel - Bedrift
     </div>
   </div>
-  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       ToggleTab
     </span>
   </button>

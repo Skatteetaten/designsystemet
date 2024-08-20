@@ -5,10 +5,10 @@ exports[`Tester/Modal ClickCloseButton play-test 1`] = `
   <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Åpne modal
     </span>
   </button>
@@ -45,17 +45,17 @@ exports[`Tester/Modal ClickCloseButton play-test 1`] = `
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
+          <button class="_button_6ybyo_1 _button_primary_6ybyo_1   marginRightM"
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Avbryt
             </span>
           </button>
@@ -71,10 +71,10 @@ exports[`Tester/Modal Defaults play-test 1`] = `
   <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Åpne modal
     </span>
   </button>
@@ -112,17 +112,17 @@ exports[`Tester/Modal Defaults play-test 1`] = `
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
+          <button class="_button_6ybyo_1 _button_primary_6ybyo_1   marginRightM"
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Avbryt
             </span>
           </button>
@@ -138,10 +138,10 @@ exports[`Tester/Modal VariantImportant play-test 1`] = `
   <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Åpne modal
     </span>
   </button>
@@ -183,17 +183,17 @@ exports[`Tester/Modal VariantImportant play-test 1`] = `
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
+          <button class="_button_6ybyo_1 _button_primary_6ybyo_1   marginRightM"
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Avbryt
             </span>
           </button>
@@ -215,10 +215,10 @@ exports[`Tester/Modal VariantPlain play-test 1`] = `
   <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Åpne modal
     </span>
   </button>
@@ -256,17 +256,17 @@ exports[`Tester/Modal VariantPlain play-test 1`] = `
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
+          <button class="_button_6ybyo_1 _button_primary_6ybyo_1   marginRightM"
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Avbryt
             </span>
           </button>
@@ -282,10 +282,10 @@ exports[`Tester/Modal WithAttributes play-test 1`] = `
   <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Åpne modal
     </span>
   </button>
@@ -326,17 +326,17 @@ exports[`Tester/Modal WithAttributes play-test 1`] = `
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
+          <button class="_button_6ybyo_1 _button_primary_6ybyo_1   marginRightM"
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Avbryt
             </span>
           </button>
@@ -352,10 +352,10 @@ exports[`Tester/Modal WithAutoClose play-test 1`] = `
   <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Åpne modal
     </span>
   </button>
@@ -392,17 +392,17 @@ exports[`Tester/Modal WithAutoClose play-test 1`] = `
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
+          <button class="_button_6ybyo_1 _button_primary_6ybyo_1   marginRightM"
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Avbryt
             </span>
           </button>
@@ -418,10 +418,10 @@ exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
   <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Åpne modal
     </span>
   </button>
@@ -459,17 +459,17 @@ exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
+          <button class="_button_6ybyo_1 _button_primary_6ybyo_1   marginRightM"
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Avbryt
             </span>
           </button>
@@ -485,10 +485,10 @@ exports[`Tester/Modal WithHideTitle play-test 1`] = `
   <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Åpne modal
     </span>
   </button>
@@ -526,17 +526,17 @@ exports[`Tester/Modal WithHideTitle play-test 1`] = `
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
+          <button class="_button_6ybyo_1 _button_primary_6ybyo_1   marginRightM"
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Avbryt
             </span>
           </button>
@@ -552,10 +552,10 @@ exports[`Tester/Modal WithImage play-test 1`] = `
   <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Åpne modal
     </span>
   </button>
@@ -597,17 +597,17 @@ exports[`Tester/Modal WithImage play-test 1`] = `
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
+          <button class="_button_6ybyo_1 _button_primary_6ybyo_1   marginRightM"
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Avbryt
             </span>
           </button>
@@ -623,10 +623,10 @@ exports[`Tester/Modal WithPadding play-test 1`] = `
   <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Åpne modal
     </span>
   </button>
@@ -664,17 +664,17 @@ exports[`Tester/Modal WithPadding play-test 1`] = `
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
+          <button class="_button_6ybyo_1 _button_primary_6ybyo_1   marginRightM"
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Avbryt
             </span>
           </button>
@@ -697,10 +697,10 @@ exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
   <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Åpne modal
     </span>
   </button>
@@ -738,17 +738,17 @@ exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
+          <button class="_button_6ybyo_1 _button_primary_6ybyo_1   marginRightM"
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Avbryt
             </span>
           </button>
@@ -764,10 +764,10 @@ exports[`Tester/Modal WithVerticalScrolling play-test 1`] = `
   <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Åpne modal
     </span>
   </button>
@@ -813,10 +813,10 @@ exports[`Tester/Modal WithoutCloseButton play-test 1`] = `
   <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <button class="_button_q67d9_1 _button_primary_q67d9_1   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="button"
   >
-    <span class="_buttonText_q67d9_69">
+    <span class="_buttonText_6ybyo_69">
       Åpne modal
     </span>
   </button>
@@ -837,17 +837,17 @@ exports[`Tester/Modal WithoutCloseButton play-test 1`] = `
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
-          <button class="_button_q67d9_1 _button_primary_q67d9_1   marginRightM"
+          <button class="_button_6ybyo_1 _button_primary_6ybyo_1   marginRightM"
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Erstatt opplysninger
             </span>
           </button>
-          <button class="_button_q67d9_1 _button_tertiary_q67d9_1   "
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                   type="button"
           >
-            <span class="_buttonText_q67d9_69">
+            <span class="_buttonText_6ybyo_69">
               Avbryt
             </span>
           </button>
