@@ -4,10 +4,15 @@ exports[`Tester/Fieldset Defaults play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr">
     <legend id="legendId-:r2:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Ledetekst
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Ledetekst
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div>
         Innhold
@@ -26,10 +31,37 @@ exports[`Tester/Fieldset WithAttributes play-test 1`] = `
             form="123form"
   >
     <legend id="legendId-:r1:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Ledetekst
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Ledetekst
+    </div>
+    <div class="Fieldset_contentContainer__fJcfT">
+      <div>
+        Innhold
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/Fieldset WithCustomClassNames play-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="Fieldset_fieldset__gwnkr">
+    <legend id="legendId-:rg:"
+            class="Fieldset_srOnly__7qh39"
+    >
+      Ledetekst
+    </legend>
+    <div class="Fieldset_legend__8odl-    dummyClassname"
+         aria-hidden="true"
+    >
+      Ledetekst
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div>
         Innhold
@@ -43,10 +75,15 @@ exports[`Tester/Fieldset WithDescription play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr">
     <legend id="legendId-:r3:"
-            class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+            class="Fieldset_srOnly__7qh39"
     >
       Ledetekst
     </legend>
+    <div class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+         aria-hidden="true"
+    >
+      Ledetekst
+    </div>
     <div class="Help_description__niabw">
       Kort hjelpetekst
     </div>
@@ -65,10 +102,15 @@ exports[`Tester/Fieldset WithDisabled play-test 1`] = `
             disabled
   >
     <legend id="legendId-:r9:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Ledetekst
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Ledetekst
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div>
         Innhold
@@ -82,10 +124,15 @@ exports[`Tester/Fieldset WithHelpTextSvgPathAndTitle play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr">
     <legend id="legendId-:ra:"
-            class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+            class="Fieldset_srOnly__7qh39"
     >
       Ledetekst
     </legend>
+    <div class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+         aria-hidden="true"
+    >
+      Ledetekst
+    </div>
     <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
             type="button"
             aria-describedby="legendId-:ra:"
@@ -118,10 +165,15 @@ exports[`Tester/Fieldset WithHelpToggleEvent smoke-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr">
     <legend id="legendId-:re:"
-            class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+            class="Fieldset_srOnly__7qh39"
     >
       Ledetekst
     </legend>
+    <div class="Fieldset_legend__8odl-   Fieldset_legendNoMarginBottom__UO3iu"
+         aria-hidden="true"
+    >
+      Ledetekst
+    </div>
     <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
             type="button"
             aria-describedby="legendId-:re:"
@@ -154,10 +206,15 @@ exports[`Tester/Fieldset WithHideLegend play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr">
     <legend id="legendId-:r6:"
-            class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39 Fieldset_legendNoMarginBottom__UO3iu"
+            class="Fieldset_srOnly__7qh39"
     >
       Ledetekst
     </legend>
+    <div class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39 Fieldset_legendNoMarginBottom__UO3iu"
+         aria-hidden="true"
+    >
+      Ledetekst
+    </div>
     <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6 Help_srOnly__svaKL"
             type="button"
             aria-describedby="legendId-:r6:"
@@ -193,10 +250,15 @@ exports[`Tester/Fieldset WithLongLegend smoke-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr">
     <legend id="legendId-:rd:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Loremipsumdolorsitamet.Allesomharlagetennettside,trengtlittfylltekstellerbaresurfetrundtpånettetharantageligvissettdisseordene,etterfulgtaventilsynelatendeeviglangtekstfyltmedlatinskeliksomsetninger.
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Loremipsumdolorsitamet.Allesomharlagetennettside,trengtlittfylltekstellerbaresurfetrundtpånettetharantageligvissettdisseordene,etterfulgtaventilsynelatendeeviglangtekstfyltmedlatinskeliksomsetninger.
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div>
         Innhold
@@ -212,10 +274,15 @@ exports[`Tester/Fieldset WithRef play-test 1`] = `
             id="dummyIdForwardedFromRef"
   >
     <legend id="legendId-:r0:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Ledetekst
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Ledetekst
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div>
         Innhold
@@ -229,10 +296,15 @@ exports[`Tester/Fieldset WithShowRequiredMark smoke-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr">
     <legend id="legendId-:r4:"
-            class="Fieldset_legend__8odl- Fieldset_legend_required__U4xWm"
+            class="Fieldset_srOnly__7qh39"
     >
       Ledetekst
     </legend>
+    <div class="Fieldset_legend__8odl- Fieldset_legend_required__U4xWm"
+         aria-hidden="true"
+    >
+      Ledetekst
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div>
         Innhold
@@ -246,7 +318,7 @@ exports[`Tester/Fieldset WithShowRequiredMarkAndLegend smoke-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr">
     <legend id="legendId-:r5:"
-            class="Fieldset_legend__8odl- Fieldset_legendWithMarkup_required__WcdUI"
+            class="Fieldset_srOnly__7qh39"
     >
       <h1 class="Heading_heading__7K0um Heading_heading_level3__T5BVI  ">
         Dette er en Heading i legend
@@ -257,6 +329,18 @@ exports[`Tester/Fieldset WithShowRequiredMarkAndLegend smoke-test 1`] = `
         </em>
       </p>
     </legend>
+    <div class="Fieldset_legend__8odl- Fieldset_legendWithMarkup_required__WcdUI"
+         aria-hidden="true"
+    >
+      <h1 class="Heading_heading__7K0um Heading_heading_level3__T5BVI  ">
+        Dette er en Heading i legend
+      </h1>
+      <p class="Paragraph_paragraph__NPzKO Paragraph_paragraph_ingress__K1ALx  ">
+        <em>
+          Dette er en italic Paragraph med ingress variant i legend
+        </em>
+      </p>
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div>
         Innhold
@@ -270,10 +354,15 @@ exports[`Tester/Fieldset WithSpacing smoke-test 1`] = `
 <div data-test-block="true">
   <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
     <legend id="legendId-:r8:"
-            class="Fieldset_legend__8odl-"
+            class="Fieldset_srOnly__7qh39"
     >
       Ledetekst
     </legend>
+    <div class="Fieldset_legend__8odl-"
+         aria-hidden="true"
+    >
+      Ledetekst
+    </div>
     <div class="Fieldset_contentContainer__fJcfT">
       <div>
         Innhold

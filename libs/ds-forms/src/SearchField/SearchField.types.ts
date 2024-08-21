@@ -8,7 +8,7 @@ import {
   RefAttributes,
 } from 'react';
 
-import { BaseProps, sizeArr } from '@skatteetaten/ds-core-utils';
+import { BaseProps, Prettify, sizeArr } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 import { SearchFieldResultProps } from '../SearchFieldResult/SearchFieldResult.types';
@@ -45,11 +45,13 @@ export interface SearchResult {
 interface SearchFieldCommonProps
   extends SearchFieldPropsHTMLAttributes,
     BaseProps {
-  classNames?: {
-    container?: string;
-    label?: string;
-    searchContainer?: string;
-  };
+  classNames?: Prettify<
+    {
+      container?: string;
+      textbox?: string;
+      searchContainer?: string;
+    } & LabelWithHelpProps['classNames']
+  >;
   /** Overskriver default  tooltip-tekst til nullstill-knappen */
   clearButtonTitle?: string;
   /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */

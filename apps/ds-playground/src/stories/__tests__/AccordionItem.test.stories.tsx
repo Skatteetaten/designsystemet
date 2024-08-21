@@ -176,7 +176,7 @@ export const WithCustomClassNames = {
     subtitle: defaultSubtitle,
     isExpanded: true,
     classNames: {
-      container: ' dummyClassname',
+      container: 'dummyClassname',
       title: 'dummyClassname',
       subtitle: 'dummyClassname',
       content: 'dummyClassname',

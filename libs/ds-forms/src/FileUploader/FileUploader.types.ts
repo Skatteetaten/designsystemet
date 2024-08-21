@@ -6,7 +6,7 @@ import {
   RefAttributes,
 } from 'react';
 
-import { BaseProps } from '@skatteetaten/ds-core-utils';
+import { BaseProps, Prettify } from '@skatteetaten/ds-core-utils';
 
 import { useFileUploader } from './useFileUploader';
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
@@ -30,6 +30,12 @@ export type UploadResult = {
 export interface FileUploaderCommonProps
   extends FileUploaderHTMLAttributes,
     BaseProps {
+  classNames?: Prettify<
+    {
+      errorMessage?: string;
+      container?: string;
+    } & LabelWithHelpProps['classNames']
+  >;
   /**
    * Styrer hvilke filformater som er mulig å velge i operativsystemets filutforsker.
    * Med Drag-and-drop vil det fortsatt være mulig å slippe inn alle filer.

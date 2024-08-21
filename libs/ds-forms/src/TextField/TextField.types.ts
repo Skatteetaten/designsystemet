@@ -9,6 +9,7 @@ import {
   BaseProps,
   FormRequiredProps,
   FormSize,
+  Prettify,
 } from '@skatteetaten/ds-core-utils';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
@@ -47,12 +48,13 @@ interface TextFieldPropsHTMLAttributes extends TextFieldHTMLAttributes {
 export interface TextFieldCommonProps
   extends TextFieldPropsHTMLAttributes,
     BaseProps {
-  classNames?: {
-    container?: string;
-    label?: string;
-    textbox?: string;
-    errorMessage?: string;
-  };
+  classNames?: Prettify<
+    {
+      container?: string;
+      textbox?: string;
+      errorMessage?: string;
+    } & LabelWithHelpProps['classNames']
+  >;
   /** Tekst på feilmelding */
   errorMessage?: string;
   /** Skjuler label, tilleggstekst og hjelpeteskt, men er fortsatt synlig for skjermleser. */

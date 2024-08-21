@@ -27,6 +27,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    classNames: { table: { disable: true } },
     children: {
       table: { disable: true },
     },
@@ -581,5 +582,33 @@ export const WithEventHandlers = {
     const inputNode = canvas.getByRole('checkbox');
     await userEvent.click(inputNode);
     await waitFor(() => expect(args.onChange).toHaveBeenCalled());
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    ...defaultArgs,
+    classNames: {
+      label: 'dummyClassname',
+      errorMessage: 'dummyClassname',
+    },
+    errorMessage: defaultErrorMessage,
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const label = canvas.getByText(defaultLabelText);
+    const errorMessageContainer = canvasElement.querySelector(
+      '[id^=checkboxErrorId]>div'
+    );
+    await expect(label?.parentElement?.parentElement).toHaveClass(
+      'dummyClassname'
+    );
+    await expect(errorMessageContainer).toHaveClass('dummyClassname');
   },
 } satisfies Story;

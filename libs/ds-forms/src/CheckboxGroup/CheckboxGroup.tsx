@@ -21,6 +21,7 @@ export const CheckboxGroup = forwardRef<
     {
       id,
       className = getCommonClassNameDefault(),
+      classNames,
       lang,
       'data-testid': dataTestId,
       description,
@@ -45,6 +46,7 @@ export const CheckboxGroup = forwardRef<
         ref={ref}
         id={id}
         className={className}
+        classNames={classNames}
         lang={lang}
         data-testid={dataTestId}
         disabled={disabled}
@@ -67,7 +69,9 @@ export const CheckboxGroup = forwardRef<
           {children}
         </CheckboxContext.Provider>
         <ErrorMessage
-          className={styles.errorMessage}
+          className={`${styles.errorMessage} ${
+            classNames?.errorMessage ?? ''
+          }`.trim()}
           id={errorId}
           showError={!!errorMessage}
         >

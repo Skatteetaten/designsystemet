@@ -86,7 +86,7 @@ export const TopBannerLangPicker = forwardRef<
       }
 
       const handleOutsideMenuEvent: EventListener = (event): void => {
-        const node = event.target as Node;
+        const node = event.composedPath()[0] as Node;
         if (
           !menuButtonRefInternal?.current?.contains(node) &&
           !menuRef.current?.contains(node)

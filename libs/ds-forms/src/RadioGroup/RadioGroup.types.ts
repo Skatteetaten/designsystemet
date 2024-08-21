@@ -6,7 +6,11 @@ import {
   ReactNode,
 } from 'react';
 
-import { BaseProps, FormRequiredProps } from '@skatteetaten/ds-core-utils';
+import {
+  BaseProps,
+  FormRequiredProps,
+  Prettify,
+} from '@skatteetaten/ds-core-utils';
 
 import { FieldsetProps } from '../Fieldset/Fieldset.types';
 import { RadioProps } from '../Radio/Radio.types';
@@ -43,6 +47,9 @@ interface RadioGroupComponentCommonProps
   extends InputPropsHTMLAttributes,
     RequiredFieldsetHTMLAttributes,
     BaseProps {
+  classNames?: Prettify<
+    { errorMessage?: string } & FieldsetProps['classNames']
+  >;
   /** Radio-komponenter */
   children: ReactNode;
   /** Tekst på feilmelding */

@@ -7,7 +7,7 @@ export const formatDateForInput = (
   return !isValid(date) ? '' : format(date as Date, dateFormat);
 };
 
-const ALLOWED_INPUT_FORMATS = [
+const COMMON_INPUT_FORMATS = [
   'dd.MM.yy',
   'dd/MM/yy',
   'dd-MM-yy',
@@ -19,8 +19,15 @@ const ALLOWED_INPUT_FORMATS = [
   'ddMMyyyy',
 ];
 
-export const parseDateFromInput = (value: string): Date | null => {
-  for (const format of ALLOWED_INPUT_FORMATS) {
+export const parseDateFromInput = (
+  value: string,
+  dateFormat: string
+): Date | null => {
+  const dateFormats = Array.from(
+    new Set([...COMMON_INPUT_FORMATS, dateFormat])
+  );
+
+  for (const format of dateFormats) {
     const date = parse(value, format, new Date());
     if (isValid(date)) {
       return date;

@@ -138,7 +138,7 @@ exports[`Tester/DatePicker/DatePicker WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
   <div class="dummyClassname">
     <label id="labelId-:ra:"
-           class="LabelWithHelp_label__59tP-   dummyClassname"
+           class="LabelWithHelp_label__59tP-    dummyClassname"
            for="datepickerInputId-:r9:"
     >
       Fødselsdato
@@ -206,7 +206,7 @@ exports[`Tester/DatePicker/DatePicker WithDateFormat play-test 1`] = `
       <input id="datepickerInputId-:r28:"
              class="DatePicker_input__vz7zh"
              placeholder="Skriv eller velg"
-             value="2024/01/05"
+             value="2024/02/05"
       >
       <button type="button"
               class="DatePicker_calendarButton__6sCKL"

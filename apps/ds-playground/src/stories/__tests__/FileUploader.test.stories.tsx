@@ -21,6 +21,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    classNames: { table: { disable: true } },
     description: { table: { category: category.props } },
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
@@ -176,6 +177,7 @@ export const WithUploadedFiles: StoryObj<FileUploaderProps> = {
         href: 'https://www.skatteetaten.no/person/',
       },
       { name: 'grunnlag.jpg' },
+      { name: 'Screen_Shot_2023_08_03_at_14_48_38_PM_111.jpg' },
       {
         name: 'test.png',
         href: 'http://localhost:4400/designsystem_illustrasjon.png',
@@ -351,5 +353,26 @@ export const WithHelpToggleEvent = {
     imageSnapshot: {
       disable: true,
     },
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    classNames: {
+      container: 'dummyClassname',
+      errorMessage: 'dummyClassname',
+    },
+    errorMessage: 'feil',
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    // eslint-disable-next-line testing-library/no-node-access
+    const container = canvasElement.querySelector(`${wrapper} > div`);
+    await expect(container).toHaveClass('dummyClassname');
   },
 } satisfies Story;

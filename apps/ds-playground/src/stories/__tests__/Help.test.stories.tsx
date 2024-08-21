@@ -18,6 +18,7 @@ const meta = {
   argTypes: {
     // Props
     description: { table: { disable: true } },
+    classNames: { table: { disable: true } },
     hideHelp: { table: { disable: true } },
     helpText: { table: { disable: true } },
     helpSvgPath: {

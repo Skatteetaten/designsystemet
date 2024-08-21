@@ -142,7 +142,7 @@ export const WithCustomClassNames = {
   args: {
     ...defaultArgs,
     classNames: {
-      container: ' dummyClassname',
+      container: 'dummyClassname',
       label: 'dummyClassname',
       dateContainer: 'dummyClassnameFormContainer',
       errorMessage: 'dummyClassname',
@@ -477,7 +477,7 @@ export const WithDateFormat = {
     await fireEvent.click(calendarButton);
     const dateButton = canvas.getByText('5');
     await fireEvent.click(dateButton);
-    await expect(input).toHaveValue('2024/01/05');
+    await expect(input).toHaveValue('2024/02/05');
   },
 } satisfies Story;
 

@@ -10,6 +10,17 @@ exports[`Tester/Link Defaults play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Link WithAriaCurrent play-test 1`] = `
+<div data-test-block="true">
+  <a class="Link_link__jeUpY  "
+     href="#storybook-root"
+     aria-current="true"
+  >
+    Er du pendler?
+  </a>
+</div>
+`;
+
 exports[`Tester/Link WithAriaDescribedby play-test 1`] = `
 <div data-test-block="true">
   <a class="Link_link__jeUpY  "

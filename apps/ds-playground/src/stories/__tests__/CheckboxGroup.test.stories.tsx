@@ -17,6 +17,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    classNames: { table: { disable: true } },
     children: {
       table: { disable: true },
       control: { disable: true },
@@ -154,7 +155,7 @@ export const Defaults = {
     const fieldsetNode = canvas.getByRole('group');
     await expect(fieldsetNode).toBeInTheDocument();
     await expect(fieldsetNode.tagName).toBe('FIELDSET');
-    const legendNode = canvas.getByText(defaultLegendText);
+    const legendNode = canvas.getAllByText(defaultLegendText)[0];
     await expect(legendNode).toBeInTheDocument();
     await expect(legendNode.tagName).toBe('LEGEND');
     const inputNodes = canvas.getAllByRole('checkbox');
@@ -218,7 +219,7 @@ export const WithHideLegend = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const legendNode = canvas.getByText(defaultLegendText);
+    const legendNode = canvas.getAllByText(defaultLegendText)[0];
     await expect(legendNode).toBeInTheDocument();
   },
 } satisfies Story;
@@ -333,5 +334,35 @@ export const WithHelpToggleEvent = {
     imageSnapshot: {
       disable: true,
     },
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    ...defaultArgs,
+    classNames: {
+      legend: 'dummyClassname',
+      errorMessage: 'dummyClassname',
+      description: 'dummyClassname',
+      helpText: 'dummyClassname',
+    },
+    description: 'beskrivelse',
+    helpText: 'HJEEEEEEELP',
+    errorMessage: defaultErrorMessage,
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    // eslint-disable-next-line testing-library/no-node-access
+    const errorMessageContainer = canvasElement.querySelector(
+      '[id^=checkboxGroupErrorId]>div'
+    );
+    await expect(errorMessageContainer).toHaveClass('dummyClassname');
+    await expect(canvas.getByText('beskrivelse')).toHaveClass('dummyClassname');
   },
 } satisfies Story;

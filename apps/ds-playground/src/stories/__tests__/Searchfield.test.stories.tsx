@@ -152,7 +152,7 @@ export const WithCustomClassNames = {
     ...defaultArgs,
     label: longLabelText,
     classNames: {
-      container: ' dummyClassname',
+      container: 'dummyClassname',
       label: 'dummyClassname',
       searchContainer: 'dummyClassnameFormContainer',
     },

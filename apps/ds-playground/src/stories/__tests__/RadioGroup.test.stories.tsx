@@ -17,6 +17,7 @@ import {
   within,
 } from '@storybook/test';
 
+import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {
@@ -31,6 +32,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    classNames: { table: { category: category.props } },
     children: { table: { disable: true } },
     defaultValue: { table: { disable: true } },
     description: { table: { disable: true } },
@@ -165,7 +167,7 @@ export const Defaults = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const fieldset = canvas.getByRole('group');
-    const legend = canvas.getByText(defaultLegendText);
+    const legend = canvas.getAllByText(defaultLegendText)[0];
     const radios = canvas.getAllByRole('radio');
     await expect(fieldset).toBeInTheDocument();
     await expect(fieldset.tagName).toBe('FIELDSET');
@@ -201,7 +203,7 @@ export const WithHideLegend = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const legend = canvas.getByText(defaultLegendText);
+    const legend = canvas.getAllByText(defaultLegendText)[0];
     await expect(legend).toBeInTheDocument();
   },
 } satisfies Story;
@@ -518,5 +520,35 @@ export const WithHelpToggleEvent = {
     imageSnapshot: {
       disable: true,
     },
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    ...defaultArgs,
+    classNames: {
+      legend: 'dummyClassname',
+      errorMessage: 'dummyClassname',
+      description: 'dummyClassname',
+      helpText: 'dummyClassname',
+    },
+    description: 'beskrivelse',
+    helpText: 'HJEEEEEEELP',
+    errorMessage: 'feil',
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    // eslint-disable-next-line testing-library/no-node-access
+    const errorMessageContainer = canvasElement.querySelector(
+      '[id^= radioErrorId]>div'
+    );
+    await expect(errorMessageContainer).toHaveClass('dummyClassname');
+    await expect(canvas.getByText('beskrivelse')).toHaveClass('dummyClassname');
   },
 } satisfies Story;

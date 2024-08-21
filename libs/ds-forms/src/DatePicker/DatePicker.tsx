@@ -86,7 +86,8 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       setInputValue(formatDateForInput(dateFormat, value));
     }, [dateFormat, value]);
 
-    const parsedDateFromInput = parseDateFromInput(inputValue) ?? undefined;
+    const parsedDateFromInput =
+      parseDateFromInput(inputValue, dateFormat) ?? undefined;
     const preselectedDate = isValid(parsedDateFromInput)
       ? parsedDateFromInput
       : initialPickerDate;
@@ -105,7 +106,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
 
     const handleBlur = (e: FocusEvent<HTMLInputElement>): void => {
       const { value } = e.target as HTMLInputElement;
-      const date = parseDateFromInput(value);
+      const date = parseDateFromInput(value, dateFormat);
       if (isValid(date)) {
         date && setInputValue(formatDateForInput(dateFormat, date));
       }
@@ -189,7 +190,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
         lang={lang}
       >
         <LabelWithHelp
-          className={classNames?.label ?? ''}
+          classNames={classNames}
           htmlFor={datePickerId}
           hideLabel={hideLabel}
           showRequiredMark={showRequiredMark}

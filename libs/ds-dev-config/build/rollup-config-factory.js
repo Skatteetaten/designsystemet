@@ -1,4 +1,5 @@
 const nrwlConfig = require('@nx/react/plugins/bundle-rollup');
+const url = require('@rollup/plugin-url');
 const autoprefixer = require('autoprefixer');
 const glob = require('glob');
 const postcss = require('rollup-plugin-postcss');
@@ -80,6 +81,15 @@ const createRollupConfig = (
   const postCssPlugins = bundleCss(pathToCSS, outputDir);
   plugins.splice(postCssPluginIndex, 1);
 
+  let urlPluginIndex;
+  const [urlPLuginName] = [url().name];
+  for (const index of plugins.keys()) {
+    if (plugins[index].name === urlPLuginName) {
+      urlPluginIndex = index;
+    }
+  }
+  plugins.splice(urlPluginIndex, 1);
+
   return {
     ...config,
     input: {
@@ -91,6 +101,7 @@ const createRollupConfig = (
       entryFileNames: '[name].esm.js',
     },
     plugins: [
+      url({ limit: 20480 }),
       ...plugins,
       ...postCssPlugins,
       addStyleImportPlugin(),

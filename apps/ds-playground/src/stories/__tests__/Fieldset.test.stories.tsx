@@ -22,6 +22,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    classNames: { table: { disable: true } },
     children: { table: { disable: true } },
     description: { table: { disable: true } },
     hasSpacing: { table: { disable: true } },
@@ -188,7 +189,7 @@ export const WithHideLegend = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const legend = canvas.getByText(defaultLegendText);
+    const legend = canvas.getAllByText(defaultLegendText)[0];
     const descriptionNode = canvas.getByText(defaultDescription);
     const helpButtonNode = canvas.getByRole('button');
     await expect(legend).toBeInTheDocument();
@@ -253,7 +254,7 @@ export const WithHelpTextSvgPathAndTitle = {
     await expect(helpButton).toBeInTheDocument();
     const svgNode = canvas.getByLabelText('Tooltip', { selector: 'svg' });
     await expect(svgNode).toBeInTheDocument();
-    const legend = canvas.getByText(defaultLegendText);
+    const legend = canvas.getAllByText(defaultLegendText)[0];
     await expect(helpButton).toHaveAttribute('aria-describedby', legend.id);
   },
 } satisfies Story;
@@ -287,5 +288,25 @@ export const WithHelpToggleEvent = {
     imageSnapshot: {
       disable: true,
     },
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    ...defaultArgs,
+    classNames: {
+      legend: 'dummyClassname',
+    },
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const legend = canvas.getAllByText(defaultLegendText)[1];
+    await expect(legend).toHaveClass('dummyClassname');
   },
 } satisfies Story;

@@ -30,6 +30,7 @@ const meta = {
     href: { table: { category: category.htmlAttribute } },
     target: { table: { category: category.htmlAttribute } },
     // Aria
+    ariaCurrent: { table: { category: category.aria } },
     ariaDescribedby: { table: { category: category.aria } },
     // Events
     onClick: { ...htmlEventDescription },

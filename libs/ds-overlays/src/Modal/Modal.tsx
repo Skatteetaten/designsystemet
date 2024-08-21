@@ -1,9 +1,9 @@
 import {
   forwardRef,
-  useEffect,
   useId,
   useImperativeHandle,
   useRef,
+  MouseEvent,
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -44,6 +44,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
       padding = getModalPaddingDefault(),
       title,
       variant = getModalVariantDefault(),
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       shadowRootNode,
       onClose,
       children,
@@ -53,39 +54,45 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
     const headingId = `modalHeadingId-${useId()}`;
     const { t } = useTranslation('ds_overlays', { i18n: dsI18n });
 
+    const statusFlagRef = useRef({
+      mouseDownCaptured: false,
+    });
+
     const modalRef = useRef<HTMLDialogElement>(null);
     useImperativeHandle(ref, () => modalRef?.current as HTMLDialogElement);
 
-    useEffect(() => {
-      if (!dismissOnOutsideClick) {
+    const isClickOutside = (event: MouseEvent): boolean => {
+      if (!(event.target instanceof HTMLElement)) {
+        return true;
+      }
+      const rect = event.target.getBoundingClientRect();
+      return (
+        rect.left > event.clientX ||
+        rect.right < event.clientX ||
+        rect.top > event.clientY ||
+        rect.bottom < event.clientY
+      );
+    };
+
+    const handleMouseEvent = (event: MouseEvent): void => {
+      if (!dismissOnOutsideClick || !(event.target instanceof HTMLElement)) {
         return;
       }
-      const onClickOutside = (event: MouseEvent): void => {
-        const element = shadowRootNode
-          ? (shadowRootNode?.activeElement as HTMLElement)
-          : (event.target as HTMLElement);
+      if (event.type === 'mousedown') {
+        statusFlagRef.current.mouseDownCaptured = false;
+      }
+      if (isClickOutside(event)) {
         if (
-          !(event.target instanceof HTMLElement) ||
-          element?.tagName !== 'DIALOG'
-        ) {
-          return;
-        }
-        const rect = event.target.getBoundingClientRect();
-        if (
-          rect.left > event.clientX ||
-          rect.right < event.clientX ||
-          rect.top > event.clientY ||
-          rect.bottom < event.clientY
+          event.type === 'mouseup' &&
+          statusFlagRef.current.mouseDownCaptured
         ) {
           onClose?.();
           modalRef.current?.close();
+        } else {
+          statusFlagRef.current.mouseDownCaptured = true;
         }
-      };
-      document.addEventListener('click', onClickOutside, true);
-      return () => {
-        document.removeEventListener('click', onClickOutside, true);
-      };
-    }, [modalRef, dismissOnOutsideClick, onClose, shadowRootNode]);
+      }
+    };
 
     const hideTitleClassName = hideTitle ? styles.srOnly : '';
     const hideOutlineClassName =
@@ -109,12 +116,16 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
         data-testid={dataTestId}
         aria-labelledby={headingId}
         autoFocus
-        onCancel={(e): void => {
-          if (!dismissOnEsc) {
+        /* Merk at onCancel kan ikke brukes til å hindre lukking fordi to trykk på esc lukker allikevel i chrome  */
+        onKeyDown={(e) => {
+          if (!dismissOnEsc && e.key === 'Escape') {
             e.preventDefault();
+          } else {
+            onClose?.();
           }
-          onClose?.();
         }}
+        onMouseUp={handleMouseEvent}
+        onMouseDown={handleMouseEvent}
       >
         <div tabIndex={-1} className={styles.modalContainer}>
           {!hideCloseButton && (

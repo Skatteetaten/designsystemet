@@ -12,6 +12,7 @@ export const LabelWithHelp = forwardRef<HTMLLabelElement, LabelWithHelpProps>(
     {
       id: idExternal,
       className = getCommonClassNameDefault(),
+      classNames,
       lang,
       'data-testid': dataTestId,
       description,
@@ -31,8 +32,11 @@ export const LabelWithHelp = forwardRef<HTMLLabelElement, LabelWithHelpProps>(
 
     const requiredMarkClassName = showRequiredMark ? styles.label_required : '';
     const hideLabelClassName = hideLabel ? styles.srOnly : '';
-    const concatenatedClassName =
-      `${styles.label} ${requiredMarkClassName} ${hideLabelClassName} ${className}`.trim();
+    const concatenatedClassName = `${
+      styles.label
+    } ${requiredMarkClassName} ${hideLabelClassName} ${className} ${
+      classNames?.label ?? ''
+    }`.trim();
 
     return (
       <>
@@ -47,6 +51,8 @@ export const LabelWithHelp = forwardRef<HTMLLabelElement, LabelWithHelpProps>(
           {children}
         </label>
         <Help
+          className={classNames?.helpText}
+          classNames={classNames}
           helpSvgPath={helpSvgPath}
           helpText={helpText}
           hideHelp={hideLabel}

@@ -43,7 +43,7 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
 
     if (currentPage <= 0 || currentPage > lastPage) {
       throw new Error(
-        `currentPage må være fra og med 0 til og med ${lastPage} (lastPage).`
+        `currentPage må være fra og med 1 til og med ${lastPage} (lastPage).`
       );
     }
 
