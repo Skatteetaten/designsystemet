@@ -1,14 +1,16 @@
-/* automatisk genererte types */
-export const searchContainer: string;
-export const topContainer: string;
-export const topContainer_large: string;
-export const topContainer_extraLarge: string;
-export const clearButton: string;
-export const inputWrapper: string;
-export const input: string;
-export const searchButton: string;
-export const icon: string;
-export const searchButton_large: string;
-export const searchButton_extraLarge: string;
-export const searchResultContainer: string;
-export const srOnly: string;
+declare const classNames: {
+  readonly searchContainer: 'searchContainer';
+  readonly topContainer: 'topContainer';
+  readonly topContainer_large: 'topContainer_large';
+  readonly topContainer_extraLarge: 'topContainer_extraLarge';
+  readonly clearButton: 'clearButton';
+  readonly inputWrapper: 'inputWrapper';
+  readonly input: 'input';
+  readonly searchButton: 'searchButton';
+  readonly icon: 'icon';
+  readonly searchButton_large: 'searchButton_large';
+  readonly searchButton_extraLarge: 'searchButton_extraLarge';
+  readonly searchResultContainer: 'searchResultContainer';
+  readonly srOnly: 'srOnly';
+};
+export default classNames;

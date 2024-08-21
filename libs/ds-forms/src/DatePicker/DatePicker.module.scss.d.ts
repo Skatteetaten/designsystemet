@@ -1,8 +1,10 @@
-/* automatisk genererte types */
-export const dateContainer: string;
-export const input: string;
-export const calendarButton: string;
-export const input_large: string;
-export const icon: string;
-export const calendarButton_large: string;
-export const calendarContainer: string;
+declare const classNames: {
+  readonly dateContainer: 'dateContainer';
+  readonly input: 'input';
+  readonly calendarButton: 'calendarButton';
+  readonly input_large: 'input_large';
+  readonly icon: 'icon';
+  readonly calendarButton_large: 'calendarButton_large';
+  readonly calendarContainer: 'calendarContainer';
+};
+export default classNames;

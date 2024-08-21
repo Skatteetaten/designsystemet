@@ -2,7 +2,7 @@
 
 exports[`Tester/InlineButton Defaults play-test 1`] = `
 <div data-test-block="true">
-  <button class="InlineButton_button__2aGtg   "
+  <button class="_button_1dutd_1   "
           type="button"
   >
     <span class>
@@ -14,7 +14,7 @@ exports[`Tester/InlineButton Defaults play-test 1`] = `
 
 exports[`Tester/InlineButton WithAccesskey play-test 1`] = `
 <div data-test-block="true">
-  <button class="InlineButton_button__2aGtg   "
+  <button class="_button_1dutd_1   "
           accesskey="j"
           type="button"
   >
@@ -27,7 +27,7 @@ exports[`Tester/InlineButton WithAccesskey play-test 1`] = `
 
 exports[`Tester/InlineButton WithAriaDescribedby play-test 1`] = `
 <div data-test-block="true">
-  <button class="InlineButton_button__2aGtg   "
+  <button class="_button_1dutd_1   "
           type="button"
           aria-describedby="testid1234"
   >
@@ -41,7 +41,7 @@ exports[`Tester/InlineButton WithAriaDescribedby play-test 1`] = `
 exports[`Tester/InlineButton WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <button id="htmlId"
-          class="InlineButton_button__2aGtg   dummyClassname"
+          class="_button_1dutd_1   dummyClassname"
           lang="nb"
           data-testid="123ID"
           form="formid123"
@@ -56,10 +56,10 @@ exports[`Tester/InlineButton WithAttributes play-test 1`] = `
 
 exports[`Tester/InlineButton WithCustomIcon smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  "
+  <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  "
           type="button"
   >
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -77,7 +77,7 @@ exports[`Tester/InlineButton WithCustomIcon smoke-test 1`] = `
 
 exports[`Tester/InlineButton WithDisabled play-test 1`] = `
 <div data-test-block="true">
-  <button class="InlineButton_button__2aGtg   "
+  <button class="_button_1dutd_1   "
           disabled
           type="button"
   >
@@ -90,11 +90,11 @@ exports[`Tester/InlineButton WithDisabled play-test 1`] = `
 
 exports[`Tester/InlineButton WithDisabledAndIcon smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  "
+  <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  "
           disabled
           type="button"
   >
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -112,7 +112,7 @@ exports[`Tester/InlineButton WithDisabledAndIcon smoke-test 1`] = `
 
 exports[`Tester/InlineButton WithEventHandlers play-test 1`] = `
 <div data-test-block="true">
-  <button class="InlineButton_button__2aGtg   "
+  <button class="_button_1dutd_1   "
           type="button"
   >
     <span class>
@@ -124,10 +124,10 @@ exports[`Tester/InlineButton WithEventHandlers play-test 1`] = `
 
 exports[`Tester/InlineButton WithIcon play-test 1`] = `
 <div data-test-block="true">
-  <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  "
+  <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  "
           type="button"
   >
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -145,13 +145,13 @@ exports[`Tester/InlineButton WithIcon play-test 1`] = `
 
 exports[`Tester/InlineButton WithIconRight smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 "
+  <button class="_button_1dutd_1  _button_withIconRight_1dutd_6 "
           type="button"
   >
     <span class>
       Legg til rapport
     </span>
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -166,7 +166,7 @@ exports[`Tester/InlineButton WithIconRight smoke-test 1`] = `
 
 exports[`Tester/InlineButton WithLongText smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="InlineButton_button__2aGtg   "
+  <button class="_button_1dutd_1   "
           type="button"
   >
     <span class>
@@ -178,13 +178,13 @@ exports[`Tester/InlineButton WithLongText smoke-test 1`] = `
 
 exports[`Tester/InlineButton WithLongTextAndIcon smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 "
+  <button class="_button_1dutd_1  _button_withIconRight_1dutd_6 "
           type="button"
   >
     <span class>
       Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert. Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert.
     </span>
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -199,7 +199,7 @@ exports[`Tester/InlineButton WithLongTextAndIcon smoke-test 1`] = `
 
 exports[`Tester/InlineButton WithRef play-test 1`] = `
 <div data-test-block="true">
-  <button class="InlineButton_button__2aGtg   "
+  <button class="_button_1dutd_1   "
           type="button"
           id="dummyIdForwardedFromRef"
   >
@@ -213,17 +213,17 @@ exports[`Tester/InlineButton WithRef play-test 1`] = `
 exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
 <div data-test-block="true">
   <div class="flex bottomSpacingXL">
-    <button class="InlineButton_button__2aGtg   marginRightM"
+    <button class="_button_1dutd_1   marginRightM"
             type="button"
     >
       <span class>
         Legg til rapport
       </span>
     </button>
-    <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  marginRightM"
+    <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  marginRightM"
             type="button"
     >
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -236,13 +236,13 @@ exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
         Legg til rapport
       </span>
     </button>
-    <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 "
+    <button class="_button_1dutd_1  _button_withIconRight_1dutd_6 "
             type="button"
     >
       <span class>
         Legg til rapport
       </span>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -254,27 +254,27 @@ exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
     </button>
   </div>
   <div class="flex">
-    <button class="InlineButton_button__2aGtg   marginRightM"
+    <button class="_button_1dutd_1   marginRightM"
             type="button"
     >
-      <span class="InlineButton_hide__u3ooR">
+      <span class="_hide_1dutd_60">
         Legg til rapport
       </span>
       <div aria-live="polite"
            aria-atomic="true"
-           class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt InlineButton_spinner__GesB1 "
+           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_1dutd_64 "
       >
-        <div class="Spinner_spinnerAnimation__nAt8p ">
+        <div class="_spinnerAnimation_wnf1f_40 ">
         </div>
-        <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193 ">
+        <span class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 ">
           Laster inn
         </span>
       </div>
     </button>
-    <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  marginRightM"
+    <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  marginRightM"
             type="button"
     >
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU InlineButton_hide__u3ooR"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32 _hide_1dutd_60"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -283,27 +283,27 @@ exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
         <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
         </path>
       </svg>
-      <span class="InlineButton_hide__u3ooR">
+      <span class="_hide_1dutd_60">
         Legg til rapport
       </span>
       <div aria-live="polite"
            aria-atomic="true"
-           class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt InlineButton_spinner__GesB1 "
+           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_1dutd_64 "
       >
-        <div class="Spinner_spinnerAnimation__nAt8p ">
+        <div class="_spinnerAnimation_wnf1f_40 ">
         </div>
-        <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193 ">
+        <span class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 ">
           Laster inn
         </span>
       </div>
     </button>
-    <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 "
+    <button class="_button_1dutd_1  _button_withIconRight_1dutd_6 "
             type="button"
     >
-      <span class="InlineButton_hide__u3ooR">
+      <span class="_hide_1dutd_60">
         Legg til rapport
       </span>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU InlineButton_hide__u3ooR"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32 _hide_1dutd_60"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -314,11 +314,11 @@ exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
       </svg>
       <div aria-live="polite"
            aria-atomic="true"
-           class="Spinner_spinner__RJ9Al Spinner_spinner_blue__khcHU Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt InlineButton_spinner__GesB1 "
+           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_1dutd_64 "
       >
-        <div class="Spinner_spinnerAnimation__nAt8p ">
+        <div class="_spinnerAnimation_wnf1f_40 ">
         </div>
-        <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193 ">
+        <span class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 ">
           Laster inn
         </span>
       </div>
@@ -329,7 +329,7 @@ exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
 
 exports[`Tester/InlineButton WithType play-test 1`] = `
 <div data-test-block="true">
-  <button class="InlineButton_button__2aGtg   "
+  <button class="_button_1dutd_1   "
           type="submit"
   >
     <span class>

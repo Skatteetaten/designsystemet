@@ -1,2 +1,4 @@
-/* automatisk genererte types */
-export const logo: string;
+declare const classNames: {
+  readonly logo: 'logo';
+};
+export default classNames;

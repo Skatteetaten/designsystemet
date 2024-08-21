@@ -1,6 +1,6 @@
-import { getJestProjects } from '@nx/jest';
+import { getJestProjectsAsync } from '@nx/jest';
 
 export default {
-  projects: getJestProjects(),
+  projects: getJestProjectsAsync(),
   setupFilesAfterEnv: ['./jest-setup.js'],
 };

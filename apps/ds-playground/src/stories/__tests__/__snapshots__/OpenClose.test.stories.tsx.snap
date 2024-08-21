@@ -3,12 +3,12 @@
 exports[`Tester/OpenClose Compact smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="OpenClose_tag__hWZ8z">
-      <button class="OpenClose_openClose__HxKKD OpenClose_openClose_compact__TuMGQ "
+    <div class="_tag_y76ob_1">
+      <button class="_openClose_y76ob_5 _openClose_compact_y76ob_18 "
               aria-expanded="false"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_closed__ubP4N OpenClose_icon_compact__Nl-IS"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 _icon_compact_y76ob_53"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -17,7 +17,7 @@ exports[`Tester/OpenClose Compact smoke-test 1`] = `
           <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
           </path>
         </svg>
-        <span class="OpenClose_title__tWrXz OpenClose_title_compact__8rSWt OpenClose_title_underline__WLqQJ">
+        <span class="_title_y76ob_57 _title_compact_y76ob_66 _title_underline_y76ob_61">
           Er jeg pendler?
         </span>
       </button>
@@ -29,12 +29,12 @@ exports[`Tester/OpenClose Compact smoke-test 1`] = `
 exports[`Tester/OpenClose CompactAndIsExpanded smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="OpenClose_tag__hWZ8z">
-      <button class="OpenClose_openClose__HxKKD OpenClose_openClose_compact__TuMGQ "
+    <div class="_tag_y76ob_1">
+      <button class="_openClose_y76ob_5 _openClose_compact_y76ob_18 "
               aria-expanded="true"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_open__3ueiR OpenClose_icon_compact__Nl-IS"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y76ob_37 _icon_active_y76ob_37 _icon_open_y76ob_47 _icon_compact_y76ob_53"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -43,12 +43,12 @@ exports[`Tester/OpenClose CompactAndIsExpanded smoke-test 1`] = `
           <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
           </path>
         </svg>
-        <span class="OpenClose_title__tWrXz OpenClose_title_compact__8rSWt OpenClose_title_underline__WLqQJ">
+        <span class="_title_y76ob_57 _title_compact_y76ob_66 _title_underline_y76ob_61">
           Er jeg pendler?
         </span>
       </button>
     </div>
-    <div class="OpenClose_content__SuoX1 OpenClose_content_compact__Hh-8S ">
+    <div class="_content_y76ob_70 _content_compact_y76ob_75 ">
       En pendler er en lønnstaker som overnatter borte på grunn av jobb. Hvis du er pendler kan du ha krav på fradrag for dine merkostnader til kost, losji og reiser til og fra pendlerboligen.
     </div>
   </div>
@@ -58,12 +58,12 @@ exports[`Tester/OpenClose CompactAndIsExpanded smoke-test 1`] = `
 exports[`Tester/OpenClose CompactWithIconRight smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="OpenClose_tag__hWZ8z">
-      <button class="OpenClose_openClose__HxKKD OpenClose_openClose_compact__TuMGQ OpenClose_openClose_hasIconRight__3rsup"
+    <div class="_tag_y76ob_1">
+      <button class="_openClose_y76ob_5 _openClose_compact_y76ob_18 _openClose_hasIconRight_y76ob_21"
               aria-expanded="false"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_closed__ubP4N OpenClose_icon_compact__Nl-IS"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 _icon_compact_y76ob_53"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -72,7 +72,7 @@ exports[`Tester/OpenClose CompactWithIconRight smoke-test 1`] = `
           <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
           </path>
         </svg>
-        <span class="OpenClose_title__tWrXz OpenClose_title_compact__8rSWt OpenClose_title_underline__WLqQJ">
+        <span class="_title_y76ob_57 _title_compact_y76ob_66 _title_underline_y76ob_61">
           Er jeg pendler?
         </span>
       </button>
@@ -84,12 +84,12 @@ exports[`Tester/OpenClose CompactWithIconRight smoke-test 1`] = `
 exports[`Tester/OpenClose CompactWithIconRightAndUnderline smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="OpenClose_tag__hWZ8z">
-      <button class="OpenClose_openClose__HxKKD OpenClose_openClose_compact__TuMGQ OpenClose_openClose_hasIconRight__3rsup"
+    <div class="_tag_y76ob_1">
+      <button class="_openClose_y76ob_5 _openClose_compact_y76ob_18 _openClose_hasIconRight_y76ob_21"
               aria-expanded="false"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_closed__ubP4N OpenClose_icon_compact__Nl-IS"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 _icon_compact_y76ob_53"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -98,7 +98,7 @@ exports[`Tester/OpenClose CompactWithIconRightAndUnderline smoke-test 1`] = `
           <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
           </path>
         </svg>
-        <span class="OpenClose_title__tWrXz OpenClose_title_compact__8rSWt OpenClose_title_underline__WLqQJ">
+        <span class="_title_y76ob_57 _title_compact_y76ob_66 _title_underline_y76ob_61">
           Er jeg pendler?
         </span>
       </button>
@@ -110,12 +110,12 @@ exports[`Tester/OpenClose CompactWithIconRightAndUnderline smoke-test 1`] = `
 exports[`Tester/OpenClose CompactWithUnderline smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="OpenClose_tag__hWZ8z">
-      <button class="OpenClose_openClose__HxKKD OpenClose_openClose_compact__TuMGQ "
+    <div class="_tag_y76ob_1">
+      <button class="_openClose_y76ob_5 _openClose_compact_y76ob_18 "
               aria-expanded="false"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_closed__ubP4N OpenClose_icon_compact__Nl-IS"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 _icon_compact_y76ob_53"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -124,7 +124,7 @@ exports[`Tester/OpenClose CompactWithUnderline smoke-test 1`] = `
           <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
           </path>
         </svg>
-        <span class="OpenClose_title__tWrXz OpenClose_title_compact__8rSWt OpenClose_title_underline__WLqQJ">
+        <span class="_title_y76ob_57 _title_compact_y76ob_66 _title_underline_y76ob_61">
           Er jeg pendler?
         </span>
       </button>
@@ -136,12 +136,12 @@ exports[`Tester/OpenClose CompactWithUnderline smoke-test 1`] = `
 exports[`Tester/OpenClose Defaults play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="OpenClose_tag__hWZ8z">
-      <button class="OpenClose_openClose__HxKKD  "
+    <div class="_tag_y76ob_1">
+      <button class="_openClose_y76ob_5  "
               aria-expanded="false"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_closed__ubP4N "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -150,7 +150,7 @@ exports[`Tester/OpenClose Defaults play-test 1`] = `
           <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
           </path>
         </svg>
-        <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
+        <span class="_title_y76ob_57  _title_underline_y76ob_61">
           Er jeg pendler?
         </span>
       </button>
@@ -162,12 +162,12 @@ exports[`Tester/OpenClose Defaults play-test 1`] = `
 exports[`Tester/OpenClose IconRightContent smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="OpenClose_tag__hWZ8z">
-      <button class="OpenClose_openClose__HxKKD  OpenClose_openClose_hasIconRight__3rsup"
+    <div class="_tag_y76ob_1">
+      <button class="_openClose_y76ob_5  _openClose_hasIconRight_y76ob_21"
               aria-expanded="true"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_open__3ueiR "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_open_y76ob_47 "
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -176,12 +176,12 @@ exports[`Tester/OpenClose IconRightContent smoke-test 1`] = `
           <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
           </path>
         </svg>
-        <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
+        <span class="_title_y76ob_57  _title_underline_y76ob_61">
           Er jeg pendler?
         </span>
       </button>
     </div>
-    <div class="OpenClose_content__SuoX1  OpenClose_content_hasIconRight__YULhj">
+    <div class="_content_y76ob_70  _content_hasIconRight_y76ob_80">
       En pendler er en lønnstaker som overnatter borte på grunn av jobb. Hvis du er pendler kan du ha krav på fradrag for dine merkostnader til kost, losji og reiser til og fra pendlerboligen.
     </div>
   </div>
@@ -194,12 +194,12 @@ exports[`Tester/OpenClose InContext smoke-test 1`] = `
     I Skatteetaten definerer vi om du er pendler ut fra at en rekke vilkår må være oppfylt. For å få fradragene må du blant annet være lønnstaker og overnatte borte på grunn av jobb. Pendlerfradrag gis kun for reiseutgifter som du selv (pendleren) har for å besøke hjemmet ditt, ikke for familie som kommer på besøk til din pendlerbolig.
   </div>
   <div class>
-    <div class="OpenClose_tag__hWZ8z">
-      <button class="OpenClose_openClose__HxKKD  "
+    <div class="_tag_y76ob_1">
+      <button class="_openClose_y76ob_5  "
               aria-expanded="false"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_closed__ubP4N "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -208,7 +208,7 @@ exports[`Tester/OpenClose InContext smoke-test 1`] = `
           <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
           </path>
         </svg>
-        <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
+        <span class="_title_y76ob_57  _title_underline_y76ob_61">
           Er jeg pendler?
         </span>
       </button>
@@ -220,12 +220,12 @@ exports[`Tester/OpenClose InContext smoke-test 1`] = `
 exports[`Tester/OpenClose IsExpanded play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="OpenClose_tag__hWZ8z">
-      <button class="OpenClose_openClose__HxKKD  "
+    <div class="_tag_y76ob_1">
+      <button class="_openClose_y76ob_5  "
               aria-expanded="true"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_open__3ueiR "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_open_y76ob_47 "
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -234,12 +234,12 @@ exports[`Tester/OpenClose IsExpanded play-test 1`] = `
           <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
           </path>
         </svg>
-        <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
+        <span class="_title_y76ob_57  _title_underline_y76ob_61">
           Er jeg pendler?
         </span>
       </button>
     </div>
-    <div class="OpenClose_content__SuoX1  ">
+    <div class="_content_y76ob_70  ">
       En pendler er en lønnstaker som overnatter borte på grunn av jobb. Hvis du er pendler kan du ha krav på fradrag for dine merkostnader til kost, losji og reiser til og fra pendlerboligen.
     </div>
   </div>
@@ -249,15 +249,15 @@ exports[`Tester/OpenClose IsExpanded play-test 1`] = `
 exports[`Tester/OpenClose WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <div class="dummyClassname">
-    <div class="OpenClose_tag__hWZ8z">
+    <div class="_tag_y76ob_1">
       <button id="htmlId"
-              class="OpenClose_openClose__HxKKD  "
+              class="_openClose_y76ob_5  "
               lang="nb"
               data-testid="123ID"
               aria-expanded="false"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_closed__ubP4N "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -266,7 +266,7 @@ exports[`Tester/OpenClose WithAttributes play-test 1`] = `
           <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
           </path>
         </svg>
-        <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
+        <span class="_title_y76ob_57  _title_underline_y76ob_61">
           Er jeg pendler?
         </span>
       </button>
@@ -278,12 +278,12 @@ exports[`Tester/OpenClose WithAttributes play-test 1`] = `
 exports[`Tester/OpenClose WithChangingTitle play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="OpenClose_tag__hWZ8z">
-      <button class="OpenClose_openClose__HxKKD  "
+    <div class="_tag_y76ob_1">
+      <button class="_openClose_y76ob_5  "
               aria-expanded="true"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_open__3ueiR "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_open_y76ob_47 "
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -292,12 +292,12 @@ exports[`Tester/OpenClose WithChangingTitle play-test 1`] = `
           <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
           </path>
         </svg>
-        <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
+        <span class="_title_y76ob_57  _title_underline_y76ob_61">
           OpenClose har blitt åpnet
         </span>
       </button>
     </div>
-    <div class="OpenClose_content__SuoX1  ">
+    <div class="_content_y76ob_70  ">
       En pendler er en lønnstaker som overnatter borte på grunn av jobb. Hvis du er pendler kan du ha krav på fradrag for dine merkostnader til kost, losji og reiser til og fra pendlerboligen.
     </div>
   </div>
@@ -307,12 +307,12 @@ exports[`Tester/OpenClose WithChangingTitle play-test 1`] = `
 exports[`Tester/OpenClose WithIconRight smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="OpenClose_tag__hWZ8z">
-      <button class="OpenClose_openClose__HxKKD  OpenClose_openClose_hasIconRight__3rsup"
+    <div class="_tag_y76ob_1">
+      <button class="_openClose_y76ob_5  _openClose_hasIconRight_y76ob_21"
               aria-expanded="false"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_closed__ubP4N "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -321,7 +321,7 @@ exports[`Tester/OpenClose WithIconRight smoke-test 1`] = `
           <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
           </path>
         </svg>
-        <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
+        <span class="_title_y76ob_57  _title_underline_y76ob_61">
           Er jeg pendler?
         </span>
       </button>
@@ -333,12 +333,12 @@ exports[`Tester/OpenClose WithIconRight smoke-test 1`] = `
 exports[`Tester/OpenClose WithIconRightAndNoUnderline smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="OpenClose_tag__hWZ8z">
-      <button class="OpenClose_openClose__HxKKD  OpenClose_openClose_hasIconRight__3rsup"
+    <div class="_tag_y76ob_1">
+      <button class="_openClose_y76ob_5  _openClose_hasIconRight_y76ob_21"
               aria-expanded="false"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_closed__ubP4N "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -347,7 +347,7 @@ exports[`Tester/OpenClose WithIconRightAndNoUnderline smoke-test 1`] = `
           <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
           </path>
         </svg>
-        <span class="OpenClose_title__tWrXz  ">
+        <span class="_title_y76ob_57  ">
           Er jeg pendler?
         </span>
       </button>
@@ -359,12 +359,12 @@ exports[`Tester/OpenClose WithIconRightAndNoUnderline smoke-test 1`] = `
 exports[`Tester/OpenClose WithIsOnClickOnlyFiredOnOpen play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="OpenClose_tag__hWZ8z">
-      <button class="OpenClose_openClose__HxKKD  "
+    <div class="_tag_y76ob_1">
+      <button class="_openClose_y76ob_5  "
               aria-expanded="false"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_closed__ubP4N "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -373,7 +373,7 @@ exports[`Tester/OpenClose WithIsOnClickOnlyFiredOnOpen play-test 1`] = `
           <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
           </path>
         </svg>
-        <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
+        <span class="_title_y76ob_57  _title_underline_y76ob_61">
           Er jeg pendler?
         </span>
       </button>
@@ -385,12 +385,12 @@ exports[`Tester/OpenClose WithIsOnClickOnlyFiredOnOpen play-test 1`] = `
 exports[`Tester/OpenClose WithLongTitle smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="OpenClose_tag__hWZ8z">
-      <button class="OpenClose_openClose__HxKKD  "
+    <div class="_tag_y76ob_1">
+      <button class="_openClose_y76ob_5  "
               aria-expanded="false"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_closed__ubP4N "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -399,7 +399,7 @@ exports[`Tester/OpenClose WithLongTitle smoke-test 1`] = `
           <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
           </path>
         </svg>
-        <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
+        <span class="_title_y76ob_57  _title_underline_y76ob_61">
           Denneknappenharenveldiglangtekst.Dentekstengåroverflerelinjerfordidenersålangogdablirikonetriktigplassert.Fordetkanjoskjeattittelengåroverflerelinjerhvisdeterenveldiglitenskjerm.Sådamåvisjekkeatdetikkeserrartut.
         </span>
       </button>
@@ -411,12 +411,12 @@ exports[`Tester/OpenClose WithLongTitle smoke-test 1`] = `
 exports[`Tester/OpenClose WithOnClick play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="OpenClose_tag__hWZ8z">
-      <button class="OpenClose_openClose__HxKKD  "
+    <div class="_tag_y76ob_1">
+      <button class="_openClose_y76ob_5  "
               aria-expanded="false"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_closed__ubP4N "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -425,7 +425,7 @@ exports[`Tester/OpenClose WithOnClick play-test 1`] = `
           <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
           </path>
         </svg>
-        <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
+        <span class="_title_y76ob_57  _title_underline_y76ob_61">
           Er jeg pendler?
         </span>
       </button>
@@ -437,13 +437,13 @@ exports[`Tester/OpenClose WithOnClick play-test 1`] = `
 exports[`Tester/OpenClose WithRef play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="OpenClose_tag__hWZ8z">
-      <button class="OpenClose_openClose__HxKKD  "
+    <div class="_tag_y76ob_1">
+      <button class="_openClose_y76ob_5  "
               aria-expanded="false"
               type="button"
               id="dummyIdForwardedFromRef"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_closed__ubP4N "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -452,7 +452,7 @@ exports[`Tester/OpenClose WithRef play-test 1`] = `
           <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
           </path>
         </svg>
-        <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
+        <span class="_title_y76ob_57  _title_underline_y76ob_61">
           Er jeg pendler?
         </span>
       </button>
@@ -464,12 +464,12 @@ exports[`Tester/OpenClose WithRef play-test 1`] = `
 exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <h1 class="OpenClose_tag__hWZ8z">
-      <button class="OpenClose_openClose__HxKKD  "
+    <h1 class="_tag_y76ob_1">
+      <button class="_openClose_y76ob_5  "
               aria-expanded="false"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_closed__ubP4N "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -478,19 +478,19 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
           <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
           </path>
         </svg>
-        <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
+        <span class="_title_y76ob_57  _title_underline_y76ob_61">
           Heading h1
         </span>
       </button>
     </h1>
   </div>
   <div class>
-    <h2 class="OpenClose_tag__hWZ8z">
-      <button class="OpenClose_openClose__HxKKD  "
+    <h2 class="_tag_y76ob_1">
+      <button class="_openClose_y76ob_5  "
               aria-expanded="false"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_closed__ubP4N "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -499,19 +499,19 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
           <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
           </path>
         </svg>
-        <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
+        <span class="_title_y76ob_57  _title_underline_y76ob_61">
           Heading h2
         </span>
       </button>
     </h2>
   </div>
   <div class>
-    <h3 class="OpenClose_tag__hWZ8z">
-      <button class="OpenClose_openClose__HxKKD  "
+    <h3 class="_tag_y76ob_1">
+      <button class="_openClose_y76ob_5  "
               aria-expanded="false"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_closed__ubP4N "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -520,19 +520,19 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
           <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
           </path>
         </svg>
-        <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
+        <span class="_title_y76ob_57  _title_underline_y76ob_61">
           Heading h3
         </span>
       </button>
     </h3>
   </div>
   <div class>
-    <h4 class="OpenClose_tag__hWZ8z">
-      <button class="OpenClose_openClose__HxKKD  "
+    <h4 class="_tag_y76ob_1">
+      <button class="_openClose_y76ob_5  "
               aria-expanded="false"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_closed__ubP4N "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -541,19 +541,19 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
           <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
           </path>
         </svg>
-        <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
+        <span class="_title_y76ob_57  _title_underline_y76ob_61">
           Heading h4
         </span>
       </button>
     </h4>
   </div>
   <div class>
-    <h5 class="OpenClose_tag__hWZ8z">
-      <button class="OpenClose_openClose__HxKKD  "
+    <h5 class="_tag_y76ob_1">
+      <button class="_openClose_y76ob_5  "
               aria-expanded="false"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_closed__ubP4N "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -562,19 +562,19 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
           <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
           </path>
         </svg>
-        <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
+        <span class="_title_y76ob_57  _title_underline_y76ob_61">
           Heading h5
         </span>
       </button>
     </h5>
   </div>
   <div class>
-    <h6 class="OpenClose_tag__hWZ8z">
-      <button class="OpenClose_openClose__HxKKD  "
+    <h6 class="_tag_y76ob_1">
+      <button class="_openClose_y76ob_5  "
               aria-expanded="false"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_closed__ubP4N "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -583,7 +583,7 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
           <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
           </path>
         </svg>
-        <span class="OpenClose_title__tWrXz  OpenClose_title_underline__WLqQJ">
+        <span class="_title_y76ob_57  _title_underline_y76ob_61">
           Heading h6
         </span>
       </button>
@@ -595,12 +595,12 @@ exports[`Tester/OpenClose WithTitleAs play-test 1`] = `
 exports[`Tester/OpenClose WithoutUnderline smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="OpenClose_tag__hWZ8z">
-      <button class="OpenClose_openClose__HxKKD  "
+    <div class="_tag_y76ob_1">
+      <button class="_openClose_y76ob_5  "
               aria-expanded="false"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o OpenClose_icon__aE-c6 OpenClose_icon_active__ZZeR8 OpenClose_icon_closed__ubP4N "
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_y76ob_37 _icon_active_y76ob_37 _icon_closed_y76ob_50 "
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -609,7 +609,7 @@ exports[`Tester/OpenClose WithoutUnderline smoke-test 1`] = `
           <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
           </path>
         </svg>
-        <span class="OpenClose_title__tWrXz  ">
+        <span class="_title_y76ob_57  ">
           Er jeg pendler?
         </span>
       </button>

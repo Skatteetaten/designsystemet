@@ -4,10 +4,10 @@
   "type": "commonjs",
   "generators": "./generators.json",
   "dependencies": {
-    "@nx/devkit": "18.3.3",
-    "@nx/react": "18.3.3",
     "nx-stylelint": "17.1.1",
     "tslib": "2.6.2",
-    "@nx/eslint": "18.3.3"
+    "@nx/devkit": "19.4.0",
+    "@nx/eslint": "19.4.0",
+    "@nx/react": "19.4.0"
   }
 }

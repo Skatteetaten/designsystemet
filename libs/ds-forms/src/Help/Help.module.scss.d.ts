@@ -1,9 +1,10 @@
-/* automatisk genererte types */
-export const description: string;
-export const descriptionMarginTop: string;
-export const helpButton: string;
-export const helpBox: string;
-export const animationhelpbox: string;
-export const helpBoxText: string;
-export const helpBoxCloseButton: string;
-export const srOnly: string;
+declare const classNames: {
+  readonly description: 'description';
+  readonly descriptionMarginTop: 'descriptionMarginTop';
+  readonly helpButton: 'helpButton';
+  readonly helpBox: 'helpBox';
+  readonly helpBoxText: 'helpBoxText';
+  readonly helpBoxCloseButton: 'helpBoxCloseButton';
+  readonly srOnly: 'srOnly';
+};
+export default classNames;

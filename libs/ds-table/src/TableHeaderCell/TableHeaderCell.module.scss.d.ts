@@ -1,11 +1,13 @@
-/* automatisk genererte types */
-export const headerCell_standard: string;
-export const headerCell: string;
-export const headerCell_noPadding: string;
-export const headerCellSortButton: string;
-export const headerCellSortButtonIcon: string;
-export const headerCell_left: string;
-export const headerCell_right: string;
-export const headerCell_center: string;
-export const headerCell_row: string;
-export const headerCell_compact: string;
+declare const classNames: {
+  readonly headerCell_standard: 'headerCell_standard';
+  readonly headerCell: 'headerCell';
+  readonly headerCell_noPadding: 'headerCell_noPadding';
+  readonly headerCellSortButton: 'headerCellSortButton';
+  readonly headerCellSortButtonIcon: 'headerCellSortButtonIcon';
+  readonly headerCell_left: 'headerCell_left';
+  readonly headerCell_right: 'headerCell_right';
+  readonly headerCell_center: 'headerCell_center';
+  readonly headerCell_row: 'headerCell_row';
+  readonly headerCell_compact: 'headerCell_compact';
+};
+export default classNames;

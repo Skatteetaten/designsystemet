@@ -1,18 +1,19 @@
-/* automatisk genererte types */
-export const childrenContainer: string;
-export const alignRight: string;
-export const titleWrapper: string;
-export const constructionBand: string;
-export const constructionBandTitle: string;
-export const scroll: string;
-export const topBanner: string;
-export const link: string;
-export const logo: string;
-export const logoImage: string;
-export const topContainer: string;
-export const contentContainer: string;
-export const contentContainer_withChildren: string;
-export const nameContainer: string;
-export const nameContainerName: string;
-export const nameContainerIcon: string;
-export const skipLink: string;
+declare const classNames: {
+  readonly childrenContainer: 'childrenContainer';
+  readonly alignRight: 'alignRight';
+  readonly titleWrapper: 'titleWrapper';
+  readonly logoImage: 'logoImage';
+  readonly topContainer: 'topContainer';
+  readonly contentContainer: 'contentContainer';
+  readonly contentContainer_withChildren: 'contentContainer_withChildren';
+  readonly nameContainer: 'nameContainer';
+  readonly skipLink: 'skipLink';
+  readonly constructionBand: 'constructionBand';
+  readonly constructionBandTitle: 'constructionBandTitle';
+  readonly topBanner: 'topBanner';
+  readonly link: 'link';
+  readonly logo: 'logo';
+  readonly nameContainerName: 'nameContainerName';
+  readonly nameContainerIcon: 'nameContainerIcon';
+};
+export default classNames;

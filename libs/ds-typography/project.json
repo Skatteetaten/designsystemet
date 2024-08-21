@@ -16,7 +16,7 @@
         "entryFile": "libs/ds-typography/src/index.ts",
         "external": ["react/jsx-runtime"],
         "rollupConfig": ["libs/ds-typography/rollup.config.js"],
-        "compiler": "babel",
+        "compiler": "swc",
         "assets": [
           {
             "glob": "libs/ds-typography/README.md",

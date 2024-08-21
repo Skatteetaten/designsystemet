@@ -6,7 +6,7 @@ module.exports = {
   ...config,
   bail: true,
   testTimeout: 30000,
-  verbose: true,
+  verbose: false,
   testMatch: [
     '<rootDir>/apps/ds-playground/src/stories/__tests__/**/*test.stories.mdx',
     '<rootDir>/apps/ds-playground/src/stories/__tests__/**/*test.stories.@(js|jsx|ts|tsx)',
