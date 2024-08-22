@@ -44,7 +44,14 @@ const bundleCss = (pathToCSS, outputDir) => {
   const config = [];
   const files = glob.sync(pathToCSS);
   files.forEach((file) => {
-    const scopedSubFolder = path.dirname(file).split(path.sep).pop();
+    let scoppedSubFolder;
+    const parts = path.dirname(file).split(path.sep);
+    const srcIndex = parts.indexOf('src');
+    if (srcIndex === -1) {
+      throw new Error(`path did not contain 'src' segment: ${file}`);
+    } else {
+      scopedSubFolder = parts.slice(srcIndex + 1).join(path.sep);
+    }
     config.push(
       postcss({
         plugins: [autoprefixer],
@@ -100,11 +107,13 @@ const createRollupConfig = (
           ...configEntry,
           dir: outputDir,
           entryFileNames: '[name].esm.js',
+          preserveModules: true,
         }))
       : {
           ...config.output,
           dir: outputDir,
           entryFileNames: '[name].esm.js',
+          preserveModules: true,
         },
     plugins: [
       url({ limit: 20480 }),
