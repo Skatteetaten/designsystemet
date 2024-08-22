@@ -7,54 +7,40 @@ import React, {
   useState,
 } from 'react';
 
-import { Link } from '@skatteetaten/ds-buttons';
+import { Button } from '@skatteetaten/ds-buttons';
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
-import { BreadcrumbsProps } from './Breadcrumbs.types';
+import { BreadcrumbsComponent, BreadcrumbsProps } from './Breadcrumbs.types';
+import { BreadcrumbItem } from '../BreadcrumbItem/BreadcrumbItem';
+import { BreadcrumbLink } from '../BreadcrumbLink/BreadcrumbLink';
 
 import styles from './Breadcrumbs.module.scss';
 
-type BreadcrumbLinkProps = {
-  href: string;
-  children: string;
-};
-
-const BreadcrumbLink = ({
-  href,
-  children,
-}: BreadcrumbLinkProps): JSX.Element => {
-  return (
-    <Link className={styles.breadcrumbsLink} href={href}>
-      {children}
-    </Link>
-  );
-};
-
-type BreadcrumbItemProps = {
-  children: React.ReactNode;
-};
-
-const BreadcrumbItem = (props: BreadcrumbItemProps): JSX.Element => {
-  return <li>{props.children}</li>;
-};
-
-const BreadcrumbSeparator = (): JSX.Element => {
-  return <span aria-hidden={'true'}>{'/'}</span>;
-};
-
-type BreadcrumbListProps = {
-  shouldCollapse: boolean;
-  children: React.ReactNode;
-};
+// const BreadcrumbSeparator = (): JSX.Element => {
+//   return <span aria-hidden={'true'}>{'/'}</span>;
+// };
 
 const LINE_HEIGHT = 26.656;
 
-const BreadcrumbList = forwardRef<HTMLOListElement, BreadcrumbListProps>(
-  ({ children }, ref): JSX.Element => {
+export const Breadcrumbs = forwardRef<HTMLElement, BreadcrumbsProps>(
+  (
+    {
+      id,
+      className = getCommonClassNameDefault(),
+      lang,
+      'data-testid': dataTestId,
+      // shouldCollapse = true,
+      children,
+    },
+    ref
+  ): JSX.Element => {
+    // const { t } = useTranslation('ds_buttons', { i18n: dsI18n });
+
     const [isCollapsed, setIsCollaped] = useState(false);
     const listRef = useRef<HTMLOListElement>(null);
-    const prevWidth = useRef(window.innerWidth);
-    // useImperativeHandle(ref, () => listRef?.current);
+    // const prevWidth = useRef(window.innerWidth);
+
+    useImperativeHandle(ref, () => listRef?.current as HTMLOListElement);
 
     // når vinduet resizes:
     // 1. blir det mindre og vi har allerede kollapset, ikke endre noen regler for rendring
@@ -86,73 +72,42 @@ const BreadcrumbList = forwardRef<HTMLOListElement, BreadcrumbListProps>(
 
     const childrenAsArray = React.Children.toArray(children);
 
-    return (
-      <ol ref={listRef} className={styles.breadcrumbsList}>
-        {!isCollapsed || childrenAsArray.length < 3 ? (
-          childrenAsArray
-        ) : (
-          <>
-            {childrenAsArray[0]}
-            <button>{'...'}</button>
-            {childrenAsArray[childrenAsArray.length - 1]}
-          </>
-        )}
-      </ol>
-    );
-  }
-);
-
-export const Breadcrumbs = forwardRef<HTMLElement, BreadcrumbsProps>(
-  (
-    {
-      id,
-      className = getCommonClassNameDefault(),
-      lang,
-      'data-testid': dataTestId,
-      // isCollapsed = true,
-    },
-    ref
-  ): JSX.Element => {
-    // const { t } = useTranslation('ds_buttons', { i18n: dsI18n });
-
+    //TODO: bør vi ta ut en egen listcomponent her for å få plassert baseprops også på nav/ol
     return (
       <nav
-        ref={ref}
         id={id}
         className={className}
         lang={lang}
         data-testid={dataTestId}
         aria-label={'brødsmuler (hent fra tekstslistekatalogen)'}
       >
-        <BreadcrumbList shouldCollapse>
-          <BreadcrumbItem>
-            <BreadcrumbLink href={'#'}>{'Første element'}</BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbLink href={'#'}>{'Neste side2'}</BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbLink href={'#'}>{'Bank og innskudd'}</BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbLink href={'#'}>{'Neste side'}</BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbLink href={'#'}>{'Neste side'}</BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbLink href={'#'}>{'Siste element'}</BreadcrumbLink>
-          </BreadcrumbItem>
-        </BreadcrumbList>
+        <ol ref={listRef} className={styles.breadcrumbsList}>
+          {!isCollapsed || childrenAsArray.length < 3 ? (
+            childrenAsArray
+          ) : (
+            <>
+              <Button
+                variant={'tertiary'}
+                onClick={() => {
+                  /* fjern kollapse */
+                }}
+              >
+                {'...'}
+              </Button>
+              {childrenAsArray[childrenAsArray.length - 2]}
+              <span aria-hidden>{'/'}</span>
+              {childrenAsArray[childrenAsArray.length - 1]}
+            </>
+          )}
+        </ol>
       </nav>
     );
   }
-);
+) as BreadcrumbsComponent;
 
 Breadcrumbs.displayName = 'Breadcrumbs';
-BreadcrumbList.displayName = 'BreadcrumbsList';
+Breadcrumbs.Item = BreadcrumbItem;
+Breadcrumbs.Item.displayName = 'BreadcrumbItem';
+
+Breadcrumbs.Link = BreadcrumbLink;
+Breadcrumbs.Link.displayName = 'BreadcrumbLink';
