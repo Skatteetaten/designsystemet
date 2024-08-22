@@ -35,6 +35,11 @@ const meta = {
     },
     isOnClickOnlyFiredOnOpen: { table: { category: category.props } },
     isExpanded: { table: { category: category.props } },
+    isDefaultExpanded: {
+      table: {
+        category: category.props,
+      },
+    },
     showUnderline: {
       table: {
         category: category.props,
