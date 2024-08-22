@@ -20,6 +20,8 @@ export interface OpenCloseProps extends BaseProps {
   variant?: Density;
   /** Om innholdet skal vises */
   isExpanded?: boolean;
+  /** Om innholdet  skal vises når siden lastes? (Ukontrollert tilstand) */
+  isDefaultExpanded?: boolean;
   /** Om onClick bare skal kalles når innholdet åpnes */
   isOnClickOnlyFiredOnOpen?: boolean;
   /** Om teksten på knappen skal ha understrek */
