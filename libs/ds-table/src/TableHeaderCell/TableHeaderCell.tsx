@@ -62,8 +62,6 @@ export const TableHeaderCell = forwardRef<
           case 'descending':
             direction = 'none';
             break;
-          case 'none':
-            direction = 'ascending';
         }
       }
       if (context?.setSortState) {
