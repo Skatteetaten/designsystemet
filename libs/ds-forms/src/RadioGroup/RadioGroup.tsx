@@ -1,4 +1,4 @@
-import { forwardRef, useId, JSX } from 'react';
+import { forwardRef, useId, JSX, useRef } from 'react';
 
 import {
   getCommonClassNameDefault,
@@ -37,7 +37,8 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
       required,
       hideLegend,
       showRequiredMark,
-      onChange,
+      onBlur: onBlurExternal,
+      onChange: onChangeExternal,
       onHelpToggle,
       children,
     },
@@ -54,7 +55,7 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
         : '';
     const radioGroupItemContainer =
       `${styles.radioGroupItemContainer} ${variantClassName}`.trim();
-
+    const radioGroupRef = useRef<HTMLDivElement>(null);
     return (
       <Fieldset
         ref={ref}
@@ -75,7 +76,7 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
         hasSpacing
         onHelpToggle={onHelpToggle}
       >
-        <div className={radioGroupItemContainer}>
+        <div ref={radioGroupRef} className={radioGroupItemContainer}>
           <RadioGroupContext.Provider
             value={{
               defaultValue,
@@ -84,7 +85,42 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
               selectedValue,
               hasError: !!errorMessage || undefined,
               required,
-              onChange,
+              onBlur: (event): void => {
+                const blurredButton = event.target as HTMLInputElement;
+                const blurredButtonName = blurredButton.name;
+
+                // Finn det klikkede elementet
+                const clickedElement = event.relatedTarget;
+                let clickedButtonName;
+
+                if (
+                  clickedElement instanceof HTMLInputElement &&
+                  clickedElement.type === 'radio'
+                ) {
+                  clickedButtonName = clickedElement.name;
+                } else if (clickedElement instanceof HTMLLabelElement) {
+                  const inputElement = document.getElementById(
+                    clickedElement.htmlFor
+                  ) as HTMLInputElement;
+                  clickedButtonName = inputElement.name;
+                }
+
+                // Sjekk om de tilhører samme gruppe
+                if (clickedButtonName !== blurredButtonName) {
+                  if (onBlurExternal) onBlurExternal?.(event);
+                  console.log(
+                    'onBlur på radio gruppe ble trigget ved klikk eller tab til utenfor gruppen'
+                  );
+                }
+                // else {
+                //   console.log(
+                //     'blur ble trigget ved klikk på en radio-knapp eller label i samme gruppe'
+                //   );
+                // }
+              },
+              onChange: (event): void => {
+                onChangeExternal?.(event);
+              },
             }}
           >
             {children}

@@ -176,6 +176,9 @@
     "webpack-merge": "5.8.0"
   },
   "overrides": {
-    "execa": "5.1.1"
+    "execa": "5.1.1",
+    "react-element-to-jsx-string": {
+      "@base2/pretty-print-object": "1.0.2"
+    }
   }
 }

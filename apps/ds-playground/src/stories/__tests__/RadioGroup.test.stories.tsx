@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, FocusEvent, useState } from 'react';
 
 import {
   RadioGroup,
@@ -60,6 +60,7 @@ const meta = {
     required: { table: { disable: true } },
     // Events
     onChange: { table: { disable: true } },
+    onBlur: { table: { disable: true } },
     onHelpToggle: { table: { disable: true } },
   },
 } satisfies Meta<typeof RadioGroup>;
@@ -471,11 +472,17 @@ const EventHandlersTemplate: StoryFn<typeof RadioGroup> = (args) => {
     <RadioGroup
       {...args}
       onChange={(event: ChangeEvent<HTMLInputElement>): void => {
-        setLabelText('Radio har blitt klikket på');
+        setLabelText('Radio har blitt endret på');
         args.onChange && args.onChange(event);
       }}
+      onBlur={(event: FocusEvent<HTMLInputElement>): void => {
+        setLabelText('Radiogruppe har mistet fokus (onBlur)');
+        args.onBlur && args.onBlur(event);
+      }}
     >
-      <RadioGroup.Radio value={'selskap'}>{labelText}</RadioGroup.Radio>
+      <RadioGroup.Radio value={'selskap'}>{'Selskap'}</RadioGroup.Radio>
+      <RadioGroup.Radio value={'bedrift'}>{'Bedrift'}</RadioGroup.Radio>
+      <div>{labelText}</div>
     </RadioGroup>
   );
 };
@@ -504,6 +511,28 @@ export const WithEventHandlers = {
         })
       )
     );
+  },
+} satisfies Story;
+
+export const WithOnBlur = {
+  render: EventHandlersTemplate,
+  name: 'With onBlur',
+  args: {
+    ...defaultArgs,
+    onBlur: fn(),
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const radios = canvas.getAllByRole('radio') as HTMLInputElement[];
+    const radio = radios.find((radio) => radio.value === 'selskap');
+    if (radio) {
+      await userEvent.click(radio);
+    }
+    await expect(radio).toBeChecked();
+    await waitFor(() => expect(args.onBlur).toHaveBeenCalled());
   },
 } satisfies Story;
 
