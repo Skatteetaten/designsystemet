@@ -24,6 +24,7 @@ exports[`Tester/RadioGroup/RadioGroup Defaults play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rf:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -37,6 +38,7 @@ exports[`Tester/RadioGroup/RadioGroup Defaults play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rg:"
+                 tabindex="-1"
           >
             Aksjeselskap
           </label>
@@ -50,6 +52,7 @@ exports[`Tester/RadioGroup/RadioGroup Defaults play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rh:"
+                 tabindex="-1"
           >
             Annet
           </label>
@@ -89,6 +92,7 @@ exports[`Tester/RadioGroup/RadioGroup VariantHorizontal smoke-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rl:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -102,6 +106,7 @@ exports[`Tester/RadioGroup/RadioGroup VariantHorizontal smoke-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rm:"
+                 tabindex="-1"
           >
             Aksjeselskap
           </label>
@@ -115,6 +120,7 @@ exports[`Tester/RadioGroup/RadioGroup VariantHorizontal smoke-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rn:"
+                 tabindex="-1"
           >
             Annet
           </label>
@@ -159,6 +165,7 @@ exports[`Tester/RadioGroup/RadioGroup WithAttributes play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r9:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -172,6 +179,7 @@ exports[`Tester/RadioGroup/RadioGroup WithAttributes play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:ra:"
+                 tabindex="-1"
           >
             Aksjeselskap
           </label>
@@ -185,6 +193,7 @@ exports[`Tester/RadioGroup/RadioGroup WithAttributes play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rb:"
+                 tabindex="-1"
           >
             Annet
           </label>
@@ -203,7 +212,7 @@ exports[`Tester/RadioGroup/RadioGroup WithAttributes play-test 1`] = `
 exports[`Tester/RadioGroup/RadioGroup WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
   <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
-    <legend id="legendId-:r3l:"
+    <legend id="legendId-:r3q:"
             class="_srOnly_s6jvz_39"
     >
       Type virksomhet
@@ -215,17 +224,17 @@ exports[`Tester/RadioGroup/RadioGroup WithCustomClassNames play-test 1`] = `
     </div>
     <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
             type="button"
-            aria-describedby="legendId-:r3l:"
+            aria-describedby="legendId-:r3q:"
             aria-expanded="false"
     >
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
            viewbox="0 0 24 24"
            focusable="false"
-           aria-labelledby="svgtitle-:r3m:"
+           aria-labelledby="svgtitle-:r3r:"
            aria-hidden="false"
            role="img"
       >
-        <title id="svgtitle-:r3m:">
+        <title id="svgtitle-:r3r:">
           Hjelp
         </title>
         <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
@@ -238,52 +247,55 @@ exports[`Tester/RadioGroup/RadioGroup WithCustomClassNames play-test 1`] = `
     <div class="_contentContainer_s6jvz_32">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
-          <input id="radioInputId-:r3n:"
+          <input id="radioInputId-:r3s:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r3k:"
-                 aria-describedby="radioErrorId-:r3j:"
+                 name="radioInputName-:r3p:"
+                 aria-describedby="radioErrorId-:r3o:"
                  aria-invalid="true"
                  value="foretak"
           >
           <label class="_radioLabel_1ybg2_87"
-                 for="radioInputId-:r3n:"
+                 for="radioInputId-:r3s:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
         </div>
         <div class="_radio_1ybg2_1">
-          <input id="radioInputId-:r3o:"
+          <input id="radioInputId-:r3t:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r3k:"
-                 aria-describedby="radioErrorId-:r3j:"
+                 name="radioInputName-:r3p:"
+                 aria-describedby="radioErrorId-:r3o:"
                  aria-invalid="true"
                  value="selskap"
           >
           <label class="_radioLabel_1ybg2_87"
-                 for="radioInputId-:r3o:"
+                 for="radioInputId-:r3t:"
+                 tabindex="-1"
           >
             Aksjeselskap
           </label>
         </div>
         <div class="_radio_1ybg2_1">
-          <input id="radioInputId-:r3p:"
+          <input id="radioInputId-:r3u:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r3k:"
-                 aria-describedby="radioErrorId-:r3j:"
+                 name="radioInputName-:r3p:"
+                 aria-describedby="radioErrorId-:r3o:"
                  aria-invalid="true"
                  value="annet"
           >
           <label class="_radioLabel_1ybg2_87"
-                 for="radioInputId-:r3p:"
+                 for="radioInputId-:r3u:"
+                 tabindex="-1"
           >
             Annet
           </label>
         </div>
       </div>
-      <div id="radioErrorId-:r3j:"
+      <div id="radioErrorId-:r3o:"
            aria-live="assertive"
            aria-atomic="true"
       >
@@ -331,6 +343,7 @@ exports[`Tester/RadioGroup/RadioGroup WithDefaultValue play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r17:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -344,6 +357,7 @@ exports[`Tester/RadioGroup/RadioGroup WithDefaultValue play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r18:"
+                 tabindex="-1"
           >
             Aksjeselskap
           </label>
@@ -358,6 +372,7 @@ exports[`Tester/RadioGroup/RadioGroup WithDefaultValue play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r19:"
+                 tabindex="-1"
           >
             Annet
           </label>
@@ -400,6 +415,7 @@ exports[`Tester/RadioGroup/RadioGroup WithDescription play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r35:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -413,6 +429,7 @@ exports[`Tester/RadioGroup/RadioGroup WithDescription play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r36:"
+                 tabindex="-1"
           >
             Aksjeselskap
           </label>
@@ -426,6 +443,7 @@ exports[`Tester/RadioGroup/RadioGroup WithDescription play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r37:"
+                 tabindex="-1"
           >
             Annet
           </label>
@@ -467,6 +485,7 @@ exports[`Tester/RadioGroup/RadioGroup WithDisabled play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r1d:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -480,6 +499,7 @@ exports[`Tester/RadioGroup/RadioGroup WithDisabled play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r1e:"
+                 tabindex="-1"
           >
             Aksjeselskap
           </label>
@@ -494,6 +514,7 @@ exports[`Tester/RadioGroup/RadioGroup WithDisabled play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r1f:"
+                 tabindex="-1"
           >
             Annet
           </label>
@@ -535,6 +556,7 @@ exports[`Tester/RadioGroup/RadioGroup WithErrorMessage play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r2h:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -550,6 +572,7 @@ exports[`Tester/RadioGroup/RadioGroup WithErrorMessage play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r2i:"
+                 tabindex="-1"
           >
             Aksjeselskap
           </label>
@@ -566,6 +589,7 @@ exports[`Tester/RadioGroup/RadioGroup WithErrorMessage play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r2j:"
+                 tabindex="-1"
           >
             Annet
           </label>
@@ -621,6 +645,7 @@ exports[`Tester/RadioGroup/RadioGroup WithErrorMessageAndAriaDescribedby play-te
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r2o:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -674,6 +699,7 @@ exports[`Tester/RadioGroup/RadioGroup WithEventHandlers play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r3b:"
+                 tabindex="-1"
           >
             Radio har blitt klikket på
           </label>
@@ -754,6 +780,7 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r2u:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -767,6 +794,7 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r2v:"
+                 tabindex="-1"
           >
             Aksjeselskap
           </label>
@@ -780,6 +808,7 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r30:"
+                 tabindex="-1"
           >
             Annet
           </label>
@@ -798,7 +827,7 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpText play-test 1`] = `
 exports[`Tester/RadioGroup/RadioGroup WithHelpToggleEvent smoke-test 1`] = `
 <div data-test-block="true">
   <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
-    <legend id="legendId-:r3e:"
+    <legend id="legendId-:r3j:"
             class="_srOnly_s6jvz_39"
     >
       Type virksomhet
@@ -810,17 +839,17 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpToggleEvent smoke-test 1`] = `
     </div>
     <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
             type="button"
-            aria-describedby="legendId-:r3e:"
+            aria-describedby="legendId-:r3j:"
             aria-expanded="false"
     >
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
            viewbox="0 0 24 24"
            focusable="false"
-           aria-labelledby="svgtitle-:r3f:"
+           aria-labelledby="svgtitle-:r3k:"
            aria-hidden="false"
            role="img"
       >
-        <title id="svgtitle-:r3f:">
+        <title id="svgtitle-:r3k:">
           Hjelp
         </title>
         <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
@@ -830,46 +859,49 @@ exports[`Tester/RadioGroup/RadioGroup WithHelpToggleEvent smoke-test 1`] = `
     <div class="_contentContainer_s6jvz_32">
       <div class="_radioGroupItemContainer_1f9v8_5">
         <div class="_radio_1ybg2_1">
-          <input id="radioInputId-:r3g:"
+          <input id="radioInputId-:r3l:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r3d:"
+                 name="radioInputName-:r3i:"
                  value="foretak"
           >
           <label class="_radioLabel_1ybg2_87"
-                 for="radioInputId-:r3g:"
+                 for="radioInputId-:r3l:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
         </div>
         <div class="_radio_1ybg2_1">
-          <input id="radioInputId-:r3h:"
+          <input id="radioInputId-:r3m:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r3d:"
+                 name="radioInputName-:r3i:"
                  value="selskap"
           >
           <label class="_radioLabel_1ybg2_87"
-                 for="radioInputId-:r3h:"
+                 for="radioInputId-:r3m:"
+                 tabindex="-1"
           >
             Aksjeselskap
           </label>
         </div>
         <div class="_radio_1ybg2_1">
-          <input id="radioInputId-:r3i:"
+          <input id="radioInputId-:r3n:"
                  class="_radioInput_1ybg2_5"
                  type="radio"
-                 name="radioInputName-:r3d:"
+                 name="radioInputName-:r3i:"
                  value="annet"
           >
           <label class="_radioLabel_1ybg2_87"
-                 for="radioInputId-:r3i:"
+                 for="radioInputId-:r3n:"
+                 tabindex="-1"
           >
             Annet
           </label>
         </div>
       </div>
-      <div id="radioErrorId-:r3c:"
+      <div id="radioErrorId-:r3h:"
            aria-live="assertive"
            aria-atomic="true"
       >
@@ -903,6 +935,7 @@ exports[`Tester/RadioGroup/RadioGroup WithHideLegend play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rr:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -916,6 +949,7 @@ exports[`Tester/RadioGroup/RadioGroup WithHideLegend play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rs:"
+                 tabindex="-1"
           >
             Aksjeselskap
           </label>
@@ -929,6 +963,7 @@ exports[`Tester/RadioGroup/RadioGroup WithHideLegend play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rt:"
+                 tabindex="-1"
           >
             Annet
           </label>
@@ -968,6 +1003,7 @@ exports[`Tester/RadioGroup/RadioGroup WithName play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r25:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -981,6 +1017,7 @@ exports[`Tester/RadioGroup/RadioGroup WithName play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r26:"
+                 tabindex="-1"
           >
             Aksjeselskap
           </label>
@@ -994,12 +1031,78 @@ exports[`Tester/RadioGroup/RadioGroup WithName play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r27:"
+                 tabindex="-1"
           >
             Annet
           </label>
         </div>
       </div>
       <div id="radioErrorId-:r22:"
+           aria-live="assertive"
+           aria-atomic="true"
+      >
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`Tester/RadioGroup/RadioGroup WithOnBlurEvent play-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+    <legend id="legendId-:r3e:"
+            class="_srOnly_s6jvz_39"
+    >
+      Type virksomhet
+    </legend>
+    <div class="_legend_s6jvz_15"
+         aria-hidden="true"
+    >
+      Type virksomhet
+    </div>
+    <div class="_contentContainer_s6jvz_32">
+      <div class="_radioGroupItemContainer_1f9v8_5">
+        <div class="_radio_1ybg2_1">
+          <input id="radioInputId-:r3f:"
+                 class="_radioInput_1ybg2_5"
+                 type="radio"
+                 name="radioInputName-:r3d:"
+                 value="voksen"
+          >
+          <label class="_radioLabel_1ybg2_87"
+                 for="radioInputId-:r3f:"
+                 tabindex="-1"
+          >
+            Voksen
+          </label>
+        </div>
+        <div class="_radio_1ybg2_1">
+          <input id="radioInputId-:r3g:"
+                 class="_radioInput_1ybg2_5"
+                 type="radio"
+                 name="radioInputName-:r3d:"
+                 value="barn"
+          >
+          <label class="_radioLabel_1ybg2_87"
+                 for="radioInputId-:r3g:"
+                 tabindex="-1"
+          >
+            Barn
+          </label>
+        </div>
+        <label for="testid">
+          Inputfelt
+        </label>
+        <input type="text"
+               id="testid"
+               data-testid="testinputid"
+               value="Annen input som skal få fokus"
+        >
+        <div>
+          Radiogruppe har mistet fokus (onBlur)
+        </div>
+      </div>
+      <div id="radioErrorId-:r3c:"
            aria-live="assertive"
            aria-atomic="true"
       >
@@ -1035,6 +1138,7 @@ exports[`Tester/RadioGroup/RadioGroup WithRef play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r3:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -1048,6 +1152,7 @@ exports[`Tester/RadioGroup/RadioGroup WithRef play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r4:"
+                 tabindex="-1"
           >
             Aksjeselskap
           </label>
@@ -1061,6 +1166,7 @@ exports[`Tester/RadioGroup/RadioGroup WithRef play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r5:"
+                 tabindex="-1"
           >
             Annet
           </label>
@@ -1101,6 +1207,7 @@ exports[`Tester/RadioGroup/RadioGroup WithRequired play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r1j:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -1115,6 +1222,7 @@ exports[`Tester/RadioGroup/RadioGroup WithRequired play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r1k:"
+                 tabindex="-1"
           >
             Aksjeselskap
           </label>
@@ -1129,6 +1237,7 @@ exports[`Tester/RadioGroup/RadioGroup WithRequired play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r1l:"
+                 tabindex="-1"
           >
             Annet
           </label>
@@ -1169,6 +1278,7 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMark smoke-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r1p:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -1183,6 +1293,7 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMark smoke-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r1q:"
+                 tabindex="-1"
           >
             Aksjeselskap
           </label>
@@ -1197,6 +1308,7 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMark smoke-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r1r:"
+                 tabindex="-1"
           >
             Annet
           </label>
@@ -1247,6 +1359,7 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMarkAndLegendAsMarkup smoke
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r1v:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -1261,6 +1374,7 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMarkAndLegendAsMarkup smoke
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r20:"
+                 tabindex="-1"
           >
             Aksjeselskap
           </label>
@@ -1275,6 +1389,7 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMarkAndLegendAsMarkup smoke
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r21:"
+                 tabindex="-1"
           >
             Annet
           </label>
@@ -1314,6 +1429,7 @@ exports[`Tester/RadioGroup/RadioGroup WithSelectedValue play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r11:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -1327,6 +1443,7 @@ exports[`Tester/RadioGroup/RadioGroup WithSelectedValue play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r12:"
+                 tabindex="-1"
           >
             Aksjeselskap
           </label>
@@ -1341,6 +1458,7 @@ exports[`Tester/RadioGroup/RadioGroup WithSelectedValue play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r13:"
+                 tabindex="-1"
           >
             Annet
           </label>
@@ -1380,6 +1498,7 @@ exports[`Tester/RadioGroup/RadioGroup WithoutErrorMessage play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r2b:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -1393,6 +1512,7 @@ exports[`Tester/RadioGroup/RadioGroup WithoutErrorMessage play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r2c:"
+                 tabindex="-1"
           >
             Aksjeselskap
           </label>
@@ -1406,6 +1526,7 @@ exports[`Tester/RadioGroup/RadioGroup WithoutErrorMessage play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r2d:"
+                 tabindex="-1"
           >
             Annet
           </label>

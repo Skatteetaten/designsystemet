@@ -489,9 +489,11 @@ const OnBlurHandlerTemplate: StoryFn<typeof RadioGroup> = (args) => {
     >
       <RadioGroup.Radio value={'voksen'}>{'Voksen'}</RadioGroup.Radio>
       <RadioGroup.Radio value={'barn'}>{'Barn'}</RadioGroup.Radio>
+      <label htmlFor={'testid'}>{'Inputfelt'}</label>
       <input
         type={'text'}
         value={'Annen input som skal få fokus'}
+        id={'testid'}
         data-testid={'testinputid'}
         onChange={fn()}
       />
