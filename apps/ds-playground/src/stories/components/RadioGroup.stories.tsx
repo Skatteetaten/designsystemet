@@ -62,6 +62,7 @@ const meta = {
       table: { category: category.htmlAttribute },
     },
     // Events
+    onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
     onHelpToggle: { table: { category: category.event } },
   },

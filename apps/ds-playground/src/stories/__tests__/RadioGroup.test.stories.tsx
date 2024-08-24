@@ -527,9 +527,9 @@ export const WithEventHandlers = {
   },
 } satisfies Story;
 
-export const WithOnBlur = {
+export const WithOnBlurEvent = {
   render: OnBlurHandlerTemplate,
-  name: 'With onBlur',
+  name: 'With onBlur Event',
   args: {
     ...defaultArgs,
     onBlur: fn(),

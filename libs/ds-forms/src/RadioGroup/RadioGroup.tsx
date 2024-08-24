@@ -1,4 +1,4 @@
-import { forwardRef, useId, JSX, useRef } from 'react';
+import { forwardRef, useId, JSX, useRef, FocusEvent } from 'react';
 
 import {
   getCommonClassNameDefault,
@@ -56,6 +56,25 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
     const radioGroupItemContainer =
       `${styles.radioGroupItemContainer} ${variantClassName}`.trim();
     const radioGroupRef = useRef<HTMLDivElement>(null);
+    const handleBlur = (event: FocusEvent<HTMLInputElement, Element>): void => {
+      const blurredRadio = event.target as HTMLInputElement;
+      const clickedElement = event.relatedTarget;
+      let clickedRadioName;
+      if (
+        clickedElement instanceof HTMLInputElement &&
+        clickedElement.type === 'radio'
+      ) {
+        clickedRadioName = clickedElement.name;
+      } else if (clickedElement instanceof HTMLLabelElement) {
+        const inputElement = document.getElementById(
+          clickedElement.htmlFor
+        ) as HTMLInputElement;
+        clickedRadioName = inputElement.name;
+      }
+      if (clickedRadioName !== blurredRadio.name && onBlurExternal) {
+        onBlurExternal?.(event);
+      }
+    };
     return (
       <Fieldset
         ref={ref}
@@ -85,27 +104,7 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
               selectedValue,
               hasError: !!errorMessage || undefined,
               required,
-              onBlur: (event): void => {
-                const blurredButton = event.target as HTMLInputElement;
-                const blurredButtonName = blurredButton.name;
-                const clickedElement = event.relatedTarget;
-                let clickedButtonName;
-
-                if (
-                  clickedElement instanceof HTMLInputElement &&
-                  clickedElement.type === 'radio'
-                ) {
-                  clickedButtonName = clickedElement.name;
-                } else if (clickedElement instanceof HTMLLabelElement) {
-                  const inputElement = document.getElementById(
-                    clickedElement.htmlFor
-                  ) as HTMLInputElement;
-                  clickedButtonName = inputElement.name;
-                }
-                if (clickedButtonName !== blurredButtonName && onBlurExternal) {
-                  onBlurExternal?.(event);
-                }
-              },
+              onBlur: handleBlur,
               onChange: (event): void => {
                 onChangeExternal?.(event);
               },
