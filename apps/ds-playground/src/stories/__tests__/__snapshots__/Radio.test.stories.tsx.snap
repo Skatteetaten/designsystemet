@@ -24,6 +24,7 @@ exports[`Tester/RadioGroup/Radio Defaults play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rb:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -64,6 +65,7 @@ exports[`Tester/RadioGroup/Radio WithAriaDescribedby play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rv:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -107,6 +109,7 @@ exports[`Tester/RadioGroup/Radio WithAttributes play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="htmlId"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -146,6 +149,7 @@ exports[`Tester/RadioGroup/Radio WithDescription play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rf:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
             <span class="_radioLabelDescription_1ybg2_100">
@@ -188,6 +192,7 @@ exports[`Tester/RadioGroup/Radio WithLongText smoke-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rj:"
+                 tabindex="-1"
           >
             Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
             <span class="_radioLabelDescription_1ybg2_100">
@@ -230,6 +235,7 @@ exports[`Tester/RadioGroup/Radio WithLongTextAndBreaking smoke-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rn:"
+                 tabindex="-1"
           >
             Loremipsumdolorsitamet.Allesomharlagetennettside,trengtlittfylltekstellerbaresurfetrundtpånettetharantageligvissettdisseordene,etterfulgtaventilsynelatendeeviglangtekstfyltmedlatinskeliksomsetninger.
             <span class="_radioLabelDescription_1ybg2_100">
@@ -272,6 +278,7 @@ exports[`Tester/RadioGroup/Radio WithRef play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r3:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -311,6 +318,7 @@ exports[`Tester/RadioGroup/Radio WithValue play-test 1`] = `
           >
           <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rr:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>

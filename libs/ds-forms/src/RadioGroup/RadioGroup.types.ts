@@ -74,6 +74,10 @@ interface RadioGroupComponentCommonProps
   variant?: RadioGroupVariant;
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: FieldsetProps['onHelpToggle'];
+  /**
+   * Shadowrootnode
+   */
+  shadowRootNode?: Document | ShadowRoot;
 }
 
 type RadioGroupDiscriminatedCheckedProps =

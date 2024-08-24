@@ -160,6 +160,7 @@
     "postcss-js": "4.0.1",
     "prettier": "2.8.8",
     "rollup-plugin-visualizer": "5.9.2",
+    "shadow-dom-testing-library": "1.11.2",
     "sonarqube-scanner": "3.5.0",
     "style-loader": "3.3.3",
     "stylelint": "16.2.1",

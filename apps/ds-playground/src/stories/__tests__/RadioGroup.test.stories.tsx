@@ -9,8 +9,10 @@ import { Heading } from '@skatteetaten/ds-typography';
 import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { within as shadowWithin } from 'shadow-dom-testing-library';
 
 import { category } from '../../../.storybook/helpers';
+import { webComponent } from '../../../.storybook/webcomponent-decorator';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const meta = {
@@ -476,9 +478,13 @@ const EventHandlersTemplate: StoryFn<typeof RadioGroup> = (args) => {
 
 const OnBlurHandlerTemplate: StoryFn<typeof RadioGroup> = (args) => {
   const [statusText, setStatusText] = useState('');
+  // eslint-disable-next-line testing-library/no-node-access
+  const element = document.querySelector('radiogroup-customelement');
+  const shadowRoot = element?.shadowRoot;
   return (
     <RadioGroup
       {...args}
+      shadowRootNode={shadowRoot ?? undefined}
       onChange={(event: ChangeEvent<HTMLInputElement>): void => {
         args.onChange && args.onChange(event);
       }}
@@ -489,12 +495,14 @@ const OnBlurHandlerTemplate: StoryFn<typeof RadioGroup> = (args) => {
     >
       <RadioGroup.Radio value={'voksen'}>{'Voksen'}</RadioGroup.Radio>
       <RadioGroup.Radio value={'barn'}>{'Barn'}</RadioGroup.Radio>
-      <input
-        type={'text'}
-        value={'Annen input som skal få fokus'}
-        data-testid={'testinputid'}
-        onChange={fn()}
-      />
+      <label>
+        {'FeltForFokus'}
+        <input
+          type={'text'}
+          value={'Annen input som skal få fokus'}
+          onChange={fn()}
+        />
+      </label>
       <div>{statusText}</div>
     </RadioGroup>
   );
@@ -530,23 +538,39 @@ export const WithEventHandlers = {
 export const WithOnBlurEvent = {
   render: OnBlurHandlerTemplate,
   name: 'With onBlur Event',
+  decorators: [webComponent],
   args: {
     ...defaultArgs,
     onBlur: fn(),
   },
   parameters: {
     imageSnapshot: { disable: true },
+    customElementName: 'radiogroup-customelement',
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const radios = canvas.getAllByRole('radio') as HTMLInputElement[];
-    const radio = radios.find((radio) => radio.value === 'voksen');
+    await expect(canvas.queryByRole('radio')).not.toBeInTheDocument();
+    // eslint-disable-next-line testing-library/no-node-access
+    const customElement = canvasElement.querySelector(
+      'radiogroup-customelement'
+    ) as HTMLElement;
+    await expect(customElement).toBeInTheDocument();
+    const shadowCanvas = shadowWithin(canvasElement);
+    const radioGroup = await shadowCanvas.findAllByShadowRole<HTMLInputElement>(
+      'radio'
+    );
+    const radio = radioGroup?.find((radio) => radio.value === 'voksen');
     if (radio) {
       await userEvent.click(radio);
     }
     await expect(radio).toBeChecked();
-
-    const input = canvas.getByTestId('testinputid');
+    const shadowRadio = await shadowCanvas.findByShadowRole('radio', {
+      name: 'Barn',
+    });
+    await userEvent.click(shadowRadio);
+    const input = shadowCanvas.getByShadowLabelText('FeltForFokus', {
+      selector: 'input',
+    });
     await userEvent.click(input);
     await waitFor(() => expect(args.onBlur).toHaveBeenCalled());
   },

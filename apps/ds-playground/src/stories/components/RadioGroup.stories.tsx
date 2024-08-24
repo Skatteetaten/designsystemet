@@ -22,6 +22,7 @@ const meta = {
   argTypes: {
     // Props
     children: { table: { category: category.props } },
+    classNames: { table: { category: category.props } },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     helpSvgPath: {
