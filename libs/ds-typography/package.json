@@ -16,5 +16,7 @@
     "react-i18next": "^14",
     "@skatteetaten/ds-core-utils": "1.1.0"
   },
-  "scripts": {}
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
 }

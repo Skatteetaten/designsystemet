@@ -114,7 +114,7 @@ export const Defaults = {
     for (const [index, heading] of headings.entries()) {
       await expect(heading).toBeInTheDocument();
       await expect(heading.classList.toString()).toContain(
-        `Heading_heading_level${headingLevelArr[index]}`
+        `heading_level${headingLevelArr[index]}`
       );
     }
   },

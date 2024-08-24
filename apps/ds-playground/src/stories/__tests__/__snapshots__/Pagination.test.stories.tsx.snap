@@ -2,7 +2,7 @@
 
 exports[`Tester/Pagination Defaults smoke-test 1`] = `
 <div data-test-block="true">
-  <nav class="Pagination_pagination__lBs+M"
+  <nav class="_pagination_1frpa_5"
        aria-label="Sidevelger"
   >
     <div class
@@ -11,34 +11,34 @@ exports[`Tester/Pagination Defaults smoke-test 1`] = `
     >
       Viser 1–10 av 15
     </div>
-    <ul class="Pagination_paginationList__+WZ2R ">
+    <ul class="_paginationList_1frpa_20 ">
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             2
           </span>
         </button>
       </li>
-      <li class="PaginationList_element_rightArrow__HLDcn">
-        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 PaginationList_button__Ph9Zq"
+      <li class="_element_rightArrow_2o1sv_38">
+        <button class="_button_1dutd_1  _button_withIconRight_1dutd_6 _button_2o1sv_5"
                 type="button"
         >
           <span class>
             Neste
           </span>
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -56,7 +56,7 @@ exports[`Tester/Pagination Defaults smoke-test 1`] = `
 
 exports[`Tester/Pagination HidePrevNextButtonTitle smoke-test 1`] = `
 <div data-test-block="true">
-  <nav class="Pagination_pagination__lBs+M"
+  <nav class="_pagination_1frpa_5"
        aria-label="Sidevelger"
   >
     <div class
@@ -65,65 +65,65 @@ exports[`Tester/Pagination HidePrevNextButtonTitle smoke-test 1`] = `
     >
       Viser 1–10 av 70
     </div>
-    <ul class="Pagination_paginationList__+WZ2R ">
+    <ul class="_paginationList_1frpa_20 ">
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             2
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             3
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             4
           </span>
         </button>
       </li>
       <li>
-        <p class="PaginationList_elipsis__651o9"
+        <p class="_elipsis_2o1sv_29"
            aria-label
         >
           ...
         </p>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             7
           </span>
         </button>
       </li>
-      <li class="PaginationList_element_rightArrow__HLDcn">
-        <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+      <li class="_element_rightArrow_2o1sv_38">
+        <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                 type="button"
         >
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r3:"
@@ -145,7 +145,7 @@ exports[`Tester/Pagination HidePrevNextButtonTitle smoke-test 1`] = `
 
 exports[`Tester/Pagination Sibling play-test 1`] = `
 <div data-test-block="true">
-  <nav class="Pagination_pagination__lBs+M"
+  <nav class="_pagination_1frpa_5"
        aria-label="Sidevelger"
   >
     <div class
@@ -154,12 +154,12 @@ exports[`Tester/Pagination Sibling play-test 1`] = `
     >
       Viser 21–30 av 70
     </div>
-    <ul class="Pagination_paginationList__+WZ2R ">
-      <li class="PaginationList_element_leftArrow__TNkEq">
-        <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  PaginationList_button__Ph9Zq"
+    <ul class="_paginationList_1frpa_20 ">
+      <li class="_element_leftArrow_2o1sv_35">
+        <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  _button_2o1sv_5"
                 type="button"
         >
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -174,77 +174,77 @@ exports[`Tester/Pagination Sibling play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             2
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             3
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             4
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             5
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             6
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             7
           </span>
         </button>
       </li>
-      <li class="PaginationList_element_rightArrow__HLDcn">
-        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 PaginationList_button__Ph9Zq"
+      <li class="_element_rightArrow_2o1sv_38">
+        <button class="_button_1dutd_1  _button_withIconRight_1dutd_6 _button_2o1sv_5"
                 type="button"
         >
           <span class>
             Neste
           </span>
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -263,7 +263,7 @@ exports[`Tester/Pagination Sibling play-test 1`] = `
 exports[`Tester/Pagination WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <nav id="htmlId"
-       class="Pagination_pagination__lBs+M dummyClassname"
+       class="_pagination_1frpa_5 dummyClassname"
        lang="nb"
        data-testid="123ID"
        aria-label="Sidevelger"
@@ -274,68 +274,68 @@ exports[`Tester/Pagination WithAttributes play-test 1`] = `
     >
       Viser 1–10 av 70
     </div>
-    <ul class="Pagination_paginationList__+WZ2R ">
+    <ul class="_paginationList_1frpa_20 ">
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             2
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             3
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             4
           </span>
         </button>
       </li>
       <li>
-        <p class="PaginationList_elipsis__651o9"
+        <p class="_elipsis_2o1sv_29"
            aria-label
         >
           ...
         </p>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             7
           </span>
         </button>
       </li>
-      <li class="PaginationList_element_rightArrow__HLDcn">
-        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 PaginationList_button__Ph9Zq"
+      <li class="_element_rightArrow_2o1sv_38">
+        <button class="_button_1dutd_1  _button_withIconRight_1dutd_6 _button_2o1sv_5"
                 type="button"
         >
           <span class>
             Neste
           </span>
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -353,7 +353,7 @@ exports[`Tester/Pagination WithAttributes play-test 1`] = `
 
 exports[`Tester/Pagination WithControlled play-test 1`] = `
 <div data-test-block="true">
-  <nav class="Pagination_pagination__lBs+M"
+  <nav class="_pagination_1frpa_5"
        aria-label="Sidevelger"
   >
     <div class
@@ -362,12 +362,12 @@ exports[`Tester/Pagination WithControlled play-test 1`] = `
     >
       Viser 6–10 av 30
     </div>
-    <ul class="Pagination_paginationList__+WZ2R ">
-      <li class="PaginationList_element_leftArrow__TNkEq">
-        <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  PaginationList_button__Ph9Zq"
+    <ul class="_paginationList_1frpa_20 ">
+      <li class="_element_leftArrow_2o1sv_35">
+        <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  _button_2o1sv_5"
                 type="button"
         >
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -382,57 +382,57 @@ exports[`Tester/Pagination WithControlled play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             2
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             3
           </span>
         </button>
       </li>
       <li>
-        <p class="PaginationList_elipsis__651o9"
+        <p class="_elipsis_2o1sv_29"
            aria-label
         >
           ...
         </p>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             6
           </span>
         </button>
       </li>
-      <li class="PaginationList_element_rightArrow__HLDcn">
-        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 PaginationList_button__Ph9Zq"
+      <li class="_element_rightArrow_2o1sv_38">
+        <button class="_button_1dutd_1  _button_withIconRight_1dutd_6 _button_2o1sv_5"
                 type="button"
         >
           <span class>
             Neste
           </span>
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -450,7 +450,7 @@ exports[`Tester/Pagination WithControlled play-test 1`] = `
 
 exports[`Tester/Pagination WithCustomAriaLabel play-test 1`] = `
 <div data-test-block="true">
-  <nav class="Pagination_pagination__lBs+M"
+  <nav class="_pagination_1frpa_5"
        aria-label="Egen tekst på nav-elementets aria-label"
   >
     <div class
@@ -459,68 +459,68 @@ exports[`Tester/Pagination WithCustomAriaLabel play-test 1`] = `
     >
       Viser 1–10 av 70
     </div>
-    <ul class="Pagination_paginationList__+WZ2R ">
+    <ul class="_paginationList_1frpa_20 ">
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             2
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             3
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             4
           </span>
         </button>
       </li>
       <li>
-        <p class="PaginationList_elipsis__651o9"
+        <p class="_elipsis_2o1sv_29"
            aria-label
         >
           ...
         </p>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             7
           </span>
         </button>
       </li>
-      <li class="PaginationList_element_rightArrow__HLDcn">
-        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 PaginationList_button__Ph9Zq"
+      <li class="_element_rightArrow_2o1sv_38">
+        <button class="_button_1dutd_1  _button_withIconRight_1dutd_6 _button_2o1sv_5"
                 type="button"
         >
           <span class>
             Neste
           </span>
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -538,77 +538,77 @@ exports[`Tester/Pagination WithCustomAriaLabel play-test 1`] = `
 
 exports[`Tester/Pagination WithHiddenPageSummary play-test 1`] = `
 <div data-test-block="true">
-  <nav class="Pagination_pagination__lBs+M"
+  <nav class="_pagination_1frpa_5"
        aria-label="Sidevelger"
   >
-    <div class="Pagination_pagination_summaryhide__ZrraI"
+    <div class="_pagination_summaryhide_1frpa_39"
          aria-live="polite"
          aria-atomic="true"
     >
       Viser 1–10 av 70
     </div>
-    <ul class="Pagination_paginationList__+WZ2R Pagination_paginationList_summaryhidden__DTSsA">
+    <ul class="_paginationList_1frpa_20 _paginationList_summaryhidden_1frpa_35">
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             2
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             3
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             4
           </span>
         </button>
       </li>
       <li>
-        <p class="PaginationList_elipsis__651o9"
+        <p class="_elipsis_2o1sv_29"
            aria-label
         >
           ...
         </p>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             7
           </span>
         </button>
       </li>
-      <li class="PaginationList_element_rightArrow__HLDcn">
-        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 PaginationList_button__Ph9Zq"
+      <li class="_element_rightArrow_2o1sv_38">
+        <button class="_button_1dutd_1  _button_withIconRight_1dutd_6 _button_2o1sv_5"
                 type="button"
         >
           <span class>
             Neste
           </span>
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -626,7 +626,7 @@ exports[`Tester/Pagination WithHiddenPageSummary play-test 1`] = `
 
 exports[`Tester/Pagination WithListLength play-test 1`] = `
 <div data-test-block="true">
-  <nav class="Pagination_pagination__lBs+M"
+  <nav class="_pagination_1frpa_5"
        aria-label="Sidevelger"
   >
     <div class
@@ -635,12 +635,12 @@ exports[`Tester/Pagination WithListLength play-test 1`] = `
     >
       Viser 9–12 av 70
     </div>
-    <ul class="Pagination_paginationList__+WZ2R ">
-      <li class="PaginationList_element_leftArrow__TNkEq">
-        <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  PaginationList_button__Ph9Zq"
+    <ul class="_paginationList_1frpa_20 ">
+      <li class="_element_leftArrow_2o1sv_35">
+        <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  _button_2o1sv_5"
                 type="button"
         >
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -655,84 +655,84 @@ exports[`Tester/Pagination WithListLength play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             2
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             3
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             4
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             5
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             6
           </span>
         </button>
       </li>
       <li>
-        <p class="PaginationList_elipsis__651o9"
+        <p class="_elipsis_2o1sv_29"
            aria-label
         >
           ...
         </p>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             18
           </span>
         </button>
       </li>
-      <li class="PaginationList_element_rightArrow__HLDcn">
-        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 PaginationList_button__Ph9Zq"
+      <li class="_element_rightArrow_2o1sv_38">
+        <button class="_button_1dutd_1  _button_withIconRight_1dutd_6 _button_2o1sv_5"
                 type="button"
         >
           <span class>
             Neste
           </span>
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -750,24 +750,24 @@ exports[`Tester/Pagination WithListLength play-test 1`] = `
 
 exports[`Tester/Pagination WithListLimit smoke-test 1`] = `
 <div data-test-block="true">
-  <ul class="List_list__xzA1c List_list_withBullet__s5lqA List_list_hasSpacing__a4Kcg ">
-    <li class="ListElement_element__B0xdX ">
+  <ul class="_list_1xbs1_1 _list_withBullet_1xbs1_8 _list_hasSpacing_1xbs1_11 ">
+    <li class="_element_bxsik_1 ">
       1 Donald Duck
     </li>
-    <li class="ListElement_element__B0xdX ">
+    <li class="_element_bxsik_1 ">
       2 Robbie Wiliams
     </li>
-    <li class="ListElement_element__B0xdX ">
+    <li class="_element_bxsik_1 ">
       3 Minnie Mouse
     </li>
-    <li class="ListElement_element__B0xdX ">
+    <li class="_element_bxsik_1 ">
       4 Katy Perry
     </li>
-    <li class="ListElement_element__B0xdX ">
+    <li class="_element_bxsik_1 ">
       5 Langbein
     </li>
   </ul>
-  <nav class="Pagination_pagination__lBs+M"
+  <nav class="_pagination_1frpa_5"
        aria-label="Sidevelger"
   >
     <div class
@@ -776,68 +776,68 @@ exports[`Tester/Pagination WithListLimit smoke-test 1`] = `
     >
       Viser 1–5 av 42
     </div>
-    <ul class="Pagination_paginationList__+WZ2R ">
+    <ul class="_paginationList_1frpa_20 ">
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             2
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             3
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             4
           </span>
         </button>
       </li>
       <li>
-        <p class="PaginationList_elipsis__651o9"
+        <p class="_elipsis_2o1sv_29"
            aria-label
         >
           ...
         </p>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             9
           </span>
         </button>
       </li>
-      <li class="PaginationList_element_rightArrow__HLDcn">
-        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 PaginationList_button__Ph9Zq"
+      <li class="_element_rightArrow_2o1sv_38">
+        <button class="_button_1dutd_1  _button_withIconRight_1dutd_6 _button_2o1sv_5"
                 type="button"
         >
           <span class>
             Neste
           </span>
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -855,7 +855,7 @@ exports[`Tester/Pagination WithListLimit smoke-test 1`] = `
 
 exports[`Tester/Pagination WithNavigation play-test 1`] = `
 <div data-test-block="true">
-  <nav class="Pagination_pagination__lBs+M"
+  <nav class="_pagination_1frpa_5"
        aria-label="Sidevelger"
   >
     <div class
@@ -864,12 +864,12 @@ exports[`Tester/Pagination WithNavigation play-test 1`] = `
     >
       Viser 61–70 av 70
     </div>
-    <ul class="Pagination_paginationList__+WZ2R ">
-      <li class="PaginationList_element_leftArrow__TNkEq">
-        <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  PaginationList_button__Ph9Zq"
+    <ul class="_paginationList_1frpa_20 ">
+      <li class="_element_leftArrow_2o1sv_35">
+        <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  _button_2o1sv_5"
                 type="button"
         >
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -884,54 +884,54 @@ exports[`Tester/Pagination WithNavigation play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <p class="PaginationList_elipsis__651o9"
+        <p class="_elipsis_2o1sv_29"
            aria-label
         >
           ...
         </p>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             4
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             5
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             6
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             7
           </span>
         </button>
@@ -943,7 +943,7 @@ exports[`Tester/Pagination WithNavigation play-test 1`] = `
 
 exports[`Tester/Pagination WithPageSummary play-test 1`] = `
 <div data-test-block="true">
-  <nav class="Pagination_pagination__lBs+M"
+  <nav class="_pagination_1frpa_5"
        aria-label="Sidevelger"
   >
     <div class
@@ -952,68 +952,68 @@ exports[`Tester/Pagination WithPageSummary play-test 1`] = `
     >
       Viser 1–10 av 70
     </div>
-    <ul class="Pagination_paginationList__+WZ2R ">
+    <ul class="_paginationList_1frpa_20 ">
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             2
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             3
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             4
           </span>
         </button>
       </li>
       <li>
-        <p class="PaginationList_elipsis__651o9"
+        <p class="_elipsis_2o1sv_29"
            aria-label
         >
           ...
         </p>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             7
           </span>
         </button>
       </li>
-      <li class="PaginationList_element_rightArrow__HLDcn">
-        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 PaginationList_button__Ph9Zq"
+      <li class="_element_rightArrow_2o1sv_38">
+        <button class="_button_1dutd_1  _button_withIconRight_1dutd_6 _button_2o1sv_5"
                 type="button"
         >
           <span class>
             Neste
           </span>
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1031,7 +1031,7 @@ exports[`Tester/Pagination WithPageSummary play-test 1`] = `
 
 exports[`Tester/Pagination WithRef smoke-test 1`] = `
 <div data-test-block="true">
-  <nav class="Pagination_pagination__lBs+M"
+  <nav class="_pagination_1frpa_5"
        aria-label="Sidevelger"
        id="dummyIdForwardedFromRef"
   >
@@ -1041,68 +1041,68 @@ exports[`Tester/Pagination WithRef smoke-test 1`] = `
     >
       Viser 1–10 av 70
     </div>
-    <ul class="Pagination_paginationList__+WZ2R ">
+    <ul class="_paginationList_1frpa_20 ">
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             2
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             3
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             4
           </span>
         </button>
       </li>
       <li>
-        <p class="PaginationList_elipsis__651o9"
+        <p class="_elipsis_2o1sv_29"
            aria-label
         >
           ...
         </p>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             7
           </span>
         </button>
       </li>
-      <li class="PaginationList_element_rightArrow__HLDcn">
-        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 PaginationList_button__Ph9Zq"
+      <li class="_element_rightArrow_2o1sv_38">
+        <button class="_button_1dutd_1  _button_withIconRight_1dutd_6 _button_2o1sv_5"
                 type="button"
         >
           <span class>
             Neste
           </span>
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1120,7 +1120,7 @@ exports[`Tester/Pagination WithRef smoke-test 1`] = `
 
 exports[`Tester/Pagination WithTextNextPref play-test 1`] = `
 <div data-test-block="true">
-  <nav class="Pagination_pagination__lBs+M"
+  <nav class="_pagination_1frpa_5"
        aria-label="Sidevelger"
   >
     <div class
@@ -1129,12 +1129,12 @@ exports[`Tester/Pagination WithTextNextPref play-test 1`] = `
     >
       Viser 11–20 av 70
     </div>
-    <ul class="Pagination_paginationList__+WZ2R ">
-      <li class="PaginationList_element_leftArrow__TNkEq">
-        <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  PaginationList_button__Ph9Zq"
+    <ul class="_paginationList_1frpa_20 ">
+      <li class="_element_leftArrow_2o1sv_35">
+        <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  _button_2o1sv_5"
                 type="button"
         >
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1149,77 +1149,77 @@ exports[`Tester/Pagination WithTextNextPref play-test 1`] = `
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             1
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   _button_2o1sv_5"
                 type="button"
                 aria-current="true"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             2
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             3
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             4
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             5
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             6
           </span>
         </button>
       </li>
       <li>
-        <button class="Button_button__pkuNv Button_button_tertiary__HcHyd   PaginationList_button__Ph9Zq"
+        <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   _button_2o1sv_5"
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             7
           </span>
         </button>
       </li>
-      <li class="PaginationList_element_rightArrow__HLDcn">
-        <button class="InlineButton_button__2aGtg  InlineButton_button_withIconRight__FUld4 PaginationList_button__Ph9Zq"
+      <li class="_element_rightArrow_2o1sv_38">
+        <button class="_button_1dutd_1  _button_withIconRight_1dutd_6 _button_2o1sv_5"
                 type="button"
         >
           <span class>
             Neste
           </span>
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"

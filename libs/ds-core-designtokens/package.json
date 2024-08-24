@@ -13,5 +13,6 @@
   "devDependencies": {
     "postcss": "^8"
   },
-  "scripts": {}
+  "scripts": {},
+  "dependencies": {}
 }

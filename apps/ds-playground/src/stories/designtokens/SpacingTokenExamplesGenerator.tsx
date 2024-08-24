@@ -1,28 +1,31 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import { Fragment, JSX } from 'react';
 
-const spacingJson = require('@skatteetaten/ds-core-designtokens/designtokens/spacing.json');
+import spacingJson from '@skatteetaten/ds-core-designtokens/designtokens/spacing.json';
 
 export const SpacingTokenExamplesGenerator = (): JSX.Element => {
   const spacingsTokens = spacingJson[':root,\n:host'];
 
   return (
     <>
-      {Object.keys(spacingsTokens).map((value: string, index: number) => {
-        const spacingClassName = `spacingToken${index}`;
-        const cssRule = `.${spacingClassName} { height: ${spacingsTokens[value]}; }`;
+      {(Object.keys(spacingsTokens) as Array<keyof typeof spacingsTokens>).map(
+        (value, index) => {
+          const spacingClassName = `spacingToken${index}`;
+          const cssRule = `.${spacingClassName} { height: ${spacingsTokens[value]}; }`;
 
-        return (
-          <Fragment key={index}>
-            <style>{cssRule}</style>
-            <p className={'tokenValue'}>
-              <strong>{`${value} (${spacingsTokens[value]})`}</strong>
-            </p>
+          return (
+            <Fragment key={index}>
+              <style>{cssRule}</style>
+              <p className={'tokenValue'}>
+                <strong>{`${value} (${spacingsTokens[value]})`}</strong>
+              </p>
 
-            <div className={`spacingTokenExample ${spacingClassName}`}></div>
-          </Fragment>
-        );
-      })}
+              <div className={`spacingTokenExample ${spacingClassName}`}></div>
+            </Fragment>
+          );
+        }
+      )}
     </>
   );
 };

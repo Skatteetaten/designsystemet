@@ -7,12 +7,13 @@ interface VersionBadgeProps {
 export const VersionBadge = ({ packageName }: VersionBadgeProps): ReactNode => {
   let color = 'green';
 
-  let version = process.env[`@skatteetaten/ds-${packageName}`] ?? '..';
-  if (process.env['NODE_ENV'] === 'development') {
+  let version =
+    import.meta.env.DS_VERSIONS[`${packageName.replaceAll('-', '_')}`] ?? '..';
+  if (import.meta.env.MODE === 'development') {
     color = 'red';
     version = 'developing';
   }
-  if (process.env['STORYBOOK_BUILD_VERSION']?.includes('SNAPSHOT')) {
+  if (import.meta.env['STORYBOOK_BUILD_VERSION']?.includes('SNAPSHOT')) {
     color = 'blue';
   }
 

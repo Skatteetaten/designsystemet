@@ -1,2 +1,4 @@
-/* automatisk genererte types */
-export const element: string;
+declare const classNames: {
+  readonly element: 'element';
+};
+export default classNames;

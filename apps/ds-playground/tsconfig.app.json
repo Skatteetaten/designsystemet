@@ -2,12 +2,13 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
-    "types": ["node"]
+    "types": ["node", "vite/client"]
   },
   "files": [
     "../../node_modules/@nx/react/typings/cssmodule.d.ts",
     "../../node_modules/@nx/react/typings/image.d.ts",
-    "../../types/i18next.d.ts"
+    "../../types/i18next.d.ts",
+    "../../types/vite-env.d.ts"
   ],
   "exclude": [
     "jest.config.ts",

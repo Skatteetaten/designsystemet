@@ -20,7 +20,7 @@
         "entryFile": "libs/ds-table/src/index.ts",
         "external": ["react/jsx-runtime"],
         "rollupConfig": ["libs/ds-table/rollup.config.js"],
-        "compiler": "babel",
+        "compiler": "swc",
         "assets": [
           {
             "glob": "libs/ds-table/README.md",

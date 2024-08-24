@@ -1,6 +1,8 @@
-/* automatisk genererte types */
-export const paragraph: string;
-export const paragraph_standard: string;
-export const paragraph_ingress: string;
-export const paragraph_hasSpacingLarge: string;
-export const paragraph_hasSpacingExtraLarge: string;
+declare const classNames: {
+  readonly paragraph: 'paragraph';
+  readonly paragraph_standard: 'paragraph_standard';
+  readonly paragraph_ingress: 'paragraph_ingress';
+  readonly paragraph_hasSpacingLarge: 'paragraph_hasSpacingLarge';
+  readonly paragraph_hasSpacingExtraLarge: 'paragraph_hasSpacingExtraLarge';
+};
+export default classNames;

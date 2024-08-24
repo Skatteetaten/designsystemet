@@ -1,7 +1,9 @@
-/* automatisk genererte types */
-export const pagination: string;
-export const paginationList: string;
-export const paginationList_summaryhidden: string;
-export const pagination_summaryhide: string;
-export const paginationElement_leftArrow: string;
-export const paginationElement_rightArrow: string;
+declare const classNames: {
+  readonly pagination: 'pagination';
+  readonly paginationList: 'paginationList';
+  readonly paginationList_summaryhidden: 'paginationList_summaryhidden';
+  readonly pagination_summaryhide: 'pagination_summaryhide';
+  readonly paginationElement_leftArrow: 'paginationElement_leftArrow';
+  readonly paginationElement_rightArrow: 'paginationElement_rightArrow';
+};
+export default classNames;

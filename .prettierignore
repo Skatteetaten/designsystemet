@@ -13,3 +13,4 @@ apps/ds-playground/.nyc_output
 **/*stats.html
 
 /.nx/cache
+/.nx/workspace-data

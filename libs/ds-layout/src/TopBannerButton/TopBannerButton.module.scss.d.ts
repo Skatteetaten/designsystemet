@@ -1,7 +1,9 @@
-/* automatisk genererte types */
-export const button: string;
-export const iconWrapper: string;
-export const icon: string;
-export const buttonText: string;
-export const button_filled: string;
-export const button_outline: string;
+declare const classNames: {
+  readonly button: 'button';
+  readonly iconWrapper: 'iconWrapper';
+  readonly icon: 'icon';
+  readonly buttonText: 'buttonText';
+  readonly button_filled: 'button_filled';
+  readonly button_outline: 'button_outline';
+};
+export default classNames;

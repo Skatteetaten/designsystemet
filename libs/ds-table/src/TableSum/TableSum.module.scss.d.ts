@@ -1,3 +1,5 @@
-/* automatisk genererte types */
-export const sum: string;
-export const sum_topSeparator: string;
+declare const classNames: {
+  readonly sum: 'sum';
+  readonly sum_topSeparator: 'sum_topSeparator';
+};
+export default classNames;

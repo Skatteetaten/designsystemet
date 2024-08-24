@@ -59,9 +59,9 @@ export const Help = ({
       )}
       {helpText && showHelpText && (
         <div
-          className={`${styles.helpBox} ${hideHelpClassName} ${className} ${
-            classNames?.helpText ?? ''
-          }`.trim()}
+          className={`${styles.helpBox} ${hideHelpClassName} ${
+            className ?? ''
+          } ${classNames?.helpText ?? ''}`.trim()}
         >
           <span className={styles.helpBoxText}>{helpText}</span>
           <IconButton
