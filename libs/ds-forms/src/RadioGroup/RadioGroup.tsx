@@ -88,8 +88,6 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
               onBlur: (event): void => {
                 const blurredButton = event.target as HTMLInputElement;
                 const blurredButtonName = blurredButton.name;
-
-                // Finn det klikkede elementet
                 const clickedElement = event.relatedTarget;
                 let clickedButtonName;
 
@@ -104,19 +102,9 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
                   ) as HTMLInputElement;
                   clickedButtonName = inputElement.name;
                 }
-
-                // Sjekk om de tilhører samme gruppe
-                if (clickedButtonName !== blurredButtonName) {
-                  if (onBlurExternal) onBlurExternal?.(event);
-                  console.log(
-                    'onBlur på radio gruppe ble trigget ved klikk eller tab til utenfor gruppen'
-                  );
+                if (clickedButtonName !== blurredButtonName && onBlurExternal) {
+                  onBlurExternal?.(event);
                 }
-                // else {
-                //   console.log(
-                //     'blur ble trigget ved klikk på en radio-knapp eller label i samme gruppe'
-                //   );
-                // }
               },
               onChange: (event): void => {
                 onChangeExternal?.(event);

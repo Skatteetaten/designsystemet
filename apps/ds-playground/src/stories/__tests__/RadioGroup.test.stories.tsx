@@ -8,14 +8,7 @@ import {
 import { Heading } from '@skatteetaten/ds-typography';
 import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import {
-  expect,
-  fireEvent,
-  fn,
-  userEvent,
-  waitFor,
-  within,
-} from '@storybook/test';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -444,7 +437,7 @@ export const WithHelpText = {
       description: defaultLegendText,
     });
     await expect(helpButton).toBeInTheDocument();
-    await fireEvent.click(helpButton);
+    await userEvent.click(helpButton);
   },
 } satisfies Story;
 
@@ -472,17 +465,37 @@ const EventHandlersTemplate: StoryFn<typeof RadioGroup> = (args) => {
     <RadioGroup
       {...args}
       onChange={(event: ChangeEvent<HTMLInputElement>): void => {
-        setLabelText('Radio har blitt endret på');
+        setLabelText('Radio har blitt klikket på');
+        args.onChange && args.onChange(event);
+      }}
+    >
+      <RadioGroup.Radio value={'selskap'}>{labelText}</RadioGroup.Radio>
+    </RadioGroup>
+  );
+};
+
+const OnBlurHandlerTemplate: StoryFn<typeof RadioGroup> = (args) => {
+  const [statusText, setStatusText] = useState('');
+  return (
+    <RadioGroup
+      {...args}
+      onChange={(event: ChangeEvent<HTMLInputElement>): void => {
         args.onChange && args.onChange(event);
       }}
       onBlur={(event: FocusEvent<HTMLInputElement>): void => {
-        setLabelText('Radiogruppe har mistet fokus (onBlur)');
+        setStatusText('Radiogruppe har mistet fokus (onBlur)');
         args.onBlur && args.onBlur(event);
       }}
     >
-      <RadioGroup.Radio value={'selskap'}>{'Selskap'}</RadioGroup.Radio>
-      <RadioGroup.Radio value={'bedrift'}>{'Bedrift'}</RadioGroup.Radio>
-      <div>{labelText}</div>
+      <RadioGroup.Radio value={'voksen'}>{'Voksen'}</RadioGroup.Radio>
+      <RadioGroup.Radio value={'barn'}>{'Barn'}</RadioGroup.Radio>
+      <input
+        type={'text'}
+        value={'Annen input som skal få fokus'}
+        data-testid={'testinputid'}
+        onChange={fn()}
+      />
+      <div>{statusText}</div>
     </RadioGroup>
   );
 };
@@ -515,7 +528,7 @@ export const WithEventHandlers = {
 } satisfies Story;
 
 export const WithOnBlur = {
-  render: EventHandlersTemplate,
+  render: OnBlurHandlerTemplate,
   name: 'With onBlur',
   args: {
     ...defaultArgs,
@@ -527,11 +540,14 @@ export const WithOnBlur = {
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const radios = canvas.getAllByRole('radio') as HTMLInputElement[];
-    const radio = radios.find((radio) => radio.value === 'selskap');
+    const radio = radios.find((radio) => radio.value === 'voksen');
     if (radio) {
       await userEvent.click(radio);
     }
     await expect(radio).toBeChecked();
+
+    const input = canvas.getByTestId('testinputid');
+    await userEvent.click(input);
     await waitFor(() => expect(args.onBlur).toHaveBeenCalled());
   },
 } satisfies Story;
