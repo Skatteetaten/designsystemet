@@ -1,9 +1,4 @@
-.breadcrumbsList {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  gap: 0 var(--spacing-s);
-  list-style-type: none;
+.breadcrumbs {
+  overflow: clip visible;
+  min-height: 24px;
 }

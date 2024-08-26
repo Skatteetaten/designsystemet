@@ -1,0 +1,7 @@
+.breadcrumbItem {
+  list-style-type: none;
+
+  &Separator:last-of-type {
+    display: none;
+  }
+}

@@ -4,6 +4,8 @@ import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { BreadcrumbItemProps } from './BreadcrumbItem.types';
 
+import styles from './BreadcrumbItem.module.scss';
+
 export const BreadcrumbItem = forwardRef<HTMLLIElement, BreadcrumbItemProps>(
   (
     {
@@ -16,16 +18,24 @@ export const BreadcrumbItem = forwardRef<HTMLLIElement, BreadcrumbItemProps>(
     },
     ref
   ) => {
+    const concatenatedClassNames =
+      `${styles.breadcrumbItem} ${className}`.trim();
+
     return (
-      <li
-        ref={ref}
-        id={id}
-        className={className}
-        lang={lang}
-        data-testid={dataTestId}
-      >
-        {children}
-      </li>
+      <>
+        <li
+          ref={ref}
+          id={id}
+          className={concatenatedClassNames}
+          lang={lang}
+          data-testid={dataTestId}
+        >
+          {children}
+        </li>
+        <span className={styles.breadcrumbItemSeparator} aria-hidden={'true'}>
+          {'/'}
+        </span>
+      </>
     );
   }
 );

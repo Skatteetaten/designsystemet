@@ -1,0 +1,24 @@
+.breadcrumbsList {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  gap: 0 var(--spacing-s);
+  overflow-x: hidden;
+  white-space: nowrap;
+
+  &Collapsed {
+    flex-wrap: wrap;
+  }
+
+  &Expanded {
+    overflow: visible;
+    flex-wrap: wrap;
+    white-space: inherit;
+  }
+}
+
+.expandButton {
+  display: flex;
+  align-items: center;
+}

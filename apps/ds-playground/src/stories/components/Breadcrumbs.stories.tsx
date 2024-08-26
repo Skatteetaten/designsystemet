@@ -9,27 +9,30 @@ const meta = {
   title: 'Komponenter/Breadcrumbs/Breadcrumbs',
   argTypes: {
     shouldCollapse: { table: { category: category.props } },
+    children: { table: { category: category.props } },
   },
   args: {
     children: (
       <Breadcrumbs shouldCollapse>
-        <Breadcrumbs.Item>
-          <Breadcrumbs.Link href={'#'}>
-            {'Bedrift og organisasjon'}
-          </Breadcrumbs.Link>
-        </Breadcrumbs.Item>
-        <Breadcrumbs.Item>
-          <Breadcrumbs.Link href={'#'}>{'Avgifter'}</Breadcrumbs.Link>
-        </Breadcrumbs.Item>
-        <Breadcrumbs.Item>
-          <Breadcrumbs.Link href={'#'}>
-            {'Avgifter på bil og kjøretøy'}
-          </Breadcrumbs.Link>
-        </Breadcrumbs.Item>
+        <Breadcrumbs.List>
+          <Breadcrumbs.Item>
+            <Breadcrumbs.Link href={'#'}>
+              {'Bedrift og organisasjon'}
+            </Breadcrumbs.Link>
+          </Breadcrumbs.Item>
+          <Breadcrumbs.Item>
+            <Breadcrumbs.Link href={'#'}>{'Avgifter'}</Breadcrumbs.Link>
+          </Breadcrumbs.Item>
+          <Breadcrumbs.Item>
+            <Breadcrumbs.Link href={'#'}>
+              {'Avgifter på bil og kjøretøy'}
+            </Breadcrumbs.Link>
+          </Breadcrumbs.Item>
 
-        <Breadcrumbs.Item>
-          <Breadcrumbs.Link href={'#'}>{'Vektårsavgift'}</Breadcrumbs.Link>
-        </Breadcrumbs.Item>
+          <Breadcrumbs.Item>
+            <Breadcrumbs.Link href={'#'}>{'Vektårsavgift'}</Breadcrumbs.Link>
+          </Breadcrumbs.Item>
+        </Breadcrumbs.List>
       </Breadcrumbs>
     ),
   },
@@ -43,23 +46,24 @@ export const Preview: Story = {} satisfies Story;
 export const Examples: Story = {
   render: (_args) => (
     <Breadcrumbs shouldCollapse>
-      <Breadcrumbs.Item>
-        <Breadcrumbs.Link href={'#'}>
-          {'Bedrift og organisasjon'}
-        </Breadcrumbs.Link>
-      </Breadcrumbs.Item>
-      <Breadcrumbs.Item>
-        <Breadcrumbs.Link href={'#'}>{'Avgifter'}</Breadcrumbs.Link>
-      </Breadcrumbs.Item>
-      <Breadcrumbs.Item>
-        <Breadcrumbs.Link href={'#'}>
-          {'Avgifter på bil og kjøretøy'}
-        </Breadcrumbs.Link>
-      </Breadcrumbs.Item>
-
-      <Breadcrumbs.Item>
-        <Breadcrumbs.Link href={'#'}>{'Vektårsavgift'}</Breadcrumbs.Link>
-      </Breadcrumbs.Item>
+      <Breadcrumbs.List>
+        <Breadcrumbs.Item>
+          <Breadcrumbs.Link href={'#'}>
+            {'Bedrift og organisasjon'}
+          </Breadcrumbs.Link>
+        </Breadcrumbs.Item>
+        <Breadcrumbs.Item>
+          <Breadcrumbs.Link href={'#'}>{'Avgifter'}</Breadcrumbs.Link>
+        </Breadcrumbs.Item>
+        <Breadcrumbs.Item>
+          <Breadcrumbs.Link href={'#'}>
+            {'Avgifter på bil og kjøretøy'}
+          </Breadcrumbs.Link>
+        </Breadcrumbs.Item>
+        <Breadcrumbs.Item>
+          <Breadcrumbs.Link href={'#'}>{'Vektårsavgift'}</Breadcrumbs.Link>
+        </Breadcrumbs.Item>
+      </Breadcrumbs.List>
     </Breadcrumbs>
   ),
 } satisfies Story;
