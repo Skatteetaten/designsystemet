@@ -28,6 +28,7 @@ export const getScreenReaderSortDirectionText = (
     case 'descending':
       return t('table.SortedDescending');
     case 'none':
+      return t('table.NotSorted');
     default:
       return '';
   }
