@@ -39,6 +39,7 @@ const meta = {
       control: 'text',
       table: { category: category.props },
     },
+    shadowRootNode: { table: { category: category.props } },
     showRequiredMark: { table: { category: category.props } },
     titleHelpSvg: {
       table: {

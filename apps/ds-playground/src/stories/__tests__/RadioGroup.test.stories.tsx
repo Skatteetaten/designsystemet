@@ -40,6 +40,7 @@ const meta = {
     helpText: { table: { disable: true } },
     hideLegend: { table: { disable: true } },
     legend: { table: { disable: true } },
+    shadowRootNode: { table: { disable: true } },
     showRequiredMark: { table: { disable: true } },
     selectedValue: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
@@ -484,6 +485,7 @@ const OnBlurHandlerTemplate: StoryFn<typeof RadioGroup> = (args) => {
   return (
     <RadioGroup
       {...args}
+      legend={'Voksen eller barn'}
       shadowRootNode={shadowRoot ?? undefined}
       onChange={(event: ChangeEvent<HTMLInputElement>): void => {
         args.onChange && args.onChange(event);
