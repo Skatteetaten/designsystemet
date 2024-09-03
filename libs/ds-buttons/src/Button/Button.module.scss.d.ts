@@ -1,14 +1,16 @@
-/* automatisk genererte types */
-export const button_danger: string;
-export const button_tertiary: string;
-export const button_secondary: string;
-export const button_primary: string;
-export const iconWrapper: string;
-export const icon: string;
-export const button: string;
-export const button_withIcon: string;
-export const button_withIconRight: string;
-export const iconExternal: string;
-export const buttonText: string;
-export const hide: string;
-export const spinner: string;
+declare const classNames: {
+  readonly button_danger: 'button_danger';
+  readonly button_tertiary: 'button_tertiary';
+  readonly button_secondary: 'button_secondary';
+  readonly button_primary: 'button_primary';
+  readonly iconWrapper: 'iconWrapper';
+  readonly icon: 'icon';
+  readonly button: 'button';
+  readonly button_withIcon: 'button_withIcon';
+  readonly button_withIconRight: 'button_withIconRight';
+  readonly iconExternal: 'iconExternal';
+  readonly buttonText: 'buttonText';
+  readonly hide: 'hide';
+  readonly spinner: 'spinner';
+};
+export default classNames;

@@ -185,7 +185,9 @@ async function verifyHTMLSnapshots(
   }
   const elementHandler = await page.$('#storybook-root');
   const innerHTML = await elementHandler?.innerHTML();
-  await expect(innerHTML).toMatchSnapshot();
+  await expect(
+    innerHTML?.replaceAll(/src="[^"]*"/g, 'src="[REMOVED]"')
+  ).toMatchSnapshot();
 }
 
 async function verifyAxeRules(

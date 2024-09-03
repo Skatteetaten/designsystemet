@@ -102,8 +102,8 @@ const createRollupConfig = (
     },
     plugins: [
       url({ limit: 20480 }),
-      ...plugins,
       ...postCssPlugins,
+      ...plugins,
       addStyleImportPlugin(),
       visualizer({ filename: `${outputDir.split('/').pop()}-stats.html` }),
     ],

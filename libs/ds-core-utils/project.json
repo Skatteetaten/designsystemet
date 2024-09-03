@@ -16,7 +16,7 @@
         "entryFile": "libs/ds-core-utils/src/index.ts",
         "external": ["react/jsx-runtime"],
         "rollupConfig": ["libs/ds-core-utils/rollup.config.js"],
-        "compiler": "babel",
+        "compiler": "swc",
         "assets": [
           {
             "glob": "libs/ds-core-utils/README.md",

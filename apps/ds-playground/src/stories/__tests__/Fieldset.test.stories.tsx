@@ -189,7 +189,7 @@ export const WithHideLegend = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const legend = canvas.getByText(defaultLegendText);
+    const legend = canvas.getAllByText(defaultLegendText)[0];
     const descriptionNode = canvas.getByText(defaultDescription);
     const helpButtonNode = canvas.getByRole('button');
     await expect(legend).toBeInTheDocument();
@@ -254,7 +254,7 @@ export const WithHelpTextSvgPathAndTitle = {
     await expect(helpButton).toBeInTheDocument();
     const svgNode = canvas.getByLabelText('Tooltip', { selector: 'svg' });
     await expect(svgNode).toBeInTheDocument();
-    const legend = canvas.getByText(defaultLegendText);
+    const legend = canvas.getAllByText(defaultLegendText)[0];
     await expect(helpButton).toHaveAttribute('aria-describedby', legend.id);
   },
 } satisfies Story;
@@ -306,7 +306,7 @@ export const WithCustomClassNames = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const legend = canvas.getByText(defaultLegendText);
+    const legend = canvas.getAllByText(defaultLegendText)[1];
     await expect(legend).toHaveClass('dummyClassname');
   },
 } satisfies Story;

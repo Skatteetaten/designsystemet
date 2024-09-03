@@ -63,7 +63,6 @@ const meta = {
     uploadedFiles: [
       { name: 'test.pdf', href: 'https://i.imgur.com/guZeGcr.png' },
       { name: 'test.jpg' },
-      { name: 'loading.jpg' },
       {
         name: 'test.png',
         href: 'http://localhost:4400/designsystem_illustrasjon.png',

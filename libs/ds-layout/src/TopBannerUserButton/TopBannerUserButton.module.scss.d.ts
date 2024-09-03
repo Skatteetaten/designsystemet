@@ -1,3 +1,5 @@
-/* automatisk genererte types */
-export const usernameButton: string;
-export const usernameText: string;
+declare const classNames: {
+  readonly usernameButton: 'usernameButton';
+  readonly usernameText: 'usernameText';
+};
+export default classNames;

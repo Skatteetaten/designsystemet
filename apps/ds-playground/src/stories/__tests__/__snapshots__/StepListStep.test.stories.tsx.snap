@@ -2,38 +2,38 @@
 
 exports[`Tester/StepList/Step NextButtonWithDisabled smoke-test 1`] = `
 <div data-test-block="true">
-  <ol class="StepList_stepList__XjLpY ">
-    <li class="StepListStep_step__js1fz StepListStep_step_active__Pthdd ">
-      <div class="StepListStep_stepSideWrapper__Mshb7 "
+  <ol class="_stepList_bc059_1 ">
+    <li class="_step_14g5z_1 _step_active_14g5z_50 ">
+      <div class="_stepSideWrapper_14g5z_143 "
            tabindex="-1"
            aria-current="step"
       >
-        <span class="StepListStep_stepCircle__wWmPq
-        StepListStep_stepCircle_active__44uNJ">
+        <span class="_stepCircle_14g5z_193
+        _stepCircle_active_14g5z_218">
           1
         </span>
-        <div class="StepListStep_stepLine__BOJMv ">
+        <div class="_stepLine_14g5z_1 ">
         </div>
       </div>
       <h3 id="steptitle-:r9:"
-          class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+          class="_heading_ppf3o_1 _heading_level5_ppf3o_45  _stepHeading_14g5z_75"
       >
         tittel
       </h3>
-      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l 
+      <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 
           ">
         <div>
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
         </div>
       </div>
-      <div class="StepListStep_nextLine__hWgXS">
+      <div class="_nextLine_14g5z_278">
       </div>
-      <span class="StepListStep_buttonWrapper__mewkO">
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
+      <span class="_buttonWrapper_14g5z_274">
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
                 disabled
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+">
+          <span class="_buttonText_6ybyo_69">
             Neste
           </span>
         </button>
@@ -45,46 +45,46 @@ exports[`Tester/StepList/Step NextButtonWithDisabled smoke-test 1`] = `
 
 exports[`Tester/StepList/Step NextButtonWithSpinner smoke-test 1`] = `
 <div data-test-block="true">
-  <ol class="StepList_stepList__XjLpY ">
-    <li class="StepListStep_step__js1fz StepListStep_step_active__Pthdd ">
-      <div class="StepListStep_stepSideWrapper__Mshb7 "
+  <ol class="_stepList_bc059_1 ">
+    <li class="_step_14g5z_1 _step_active_14g5z_50 ">
+      <div class="_stepSideWrapper_14g5z_143 "
            tabindex="-1"
            aria-current="step"
       >
-        <span class="StepListStep_stepCircle__wWmPq
-        StepListStep_stepCircle_active__44uNJ">
+        <span class="_stepCircle_14g5z_193
+        _stepCircle_active_14g5z_218">
           1
         </span>
-        <div class="StepListStep_stepLine__BOJMv ">
+        <div class="_stepLine_14g5z_1 ">
         </div>
       </div>
       <h3 id="steptitle-:r8:"
-          class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+          class="_heading_ppf3o_1 _heading_level5_ppf3o_45  _stepHeading_14g5z_75"
       >
         tittel
       </h3>
-      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l 
+      <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 
           ">
         <div>
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
         </div>
       </div>
-      <div class="StepListStep_nextLine__hWgXS">
+      <div class="_nextLine_14g5z_278">
       </div>
-      <span class="StepListStep_buttonWrapper__mewkO">
-        <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
+      <span class="_buttonWrapper_14g5z_274">
+        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
                 type="button"
         >
-          <span class="Button_buttonText__JxyB+ Button_hide__dLd9W">
+          <span class="_buttonText_6ybyo_69 _hide_6ybyo_149">
             Neste
           </span>
           <div aria-live="polite"
                aria-atomic="true"
-               class="Spinner_spinner__RJ9Al Spinner_spinner_white__YLIF- Spinner_spinner_flexColumn__3SCpy Spinner_spinner_small__2mxjt Button_spinner__zF-nC "
+               class="_spinner_wnf1f_5 _spinner_white_wnf1f_19 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
           >
-            <div class="Spinner_spinnerAnimation__nAt8p ">
+            <div class="_spinnerAnimation_wnf1f_40 ">
             </div>
-            <span class="Spinner_spinnerTitle__4A7b4 Spinner_srOnly__eRxJZ Spinner_spinnerTitle_centerText__ud193 ">
+            <span class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 ">
               Laster inn
             </span>
           </div>
@@ -97,29 +97,29 @@ exports[`Tester/StepList/Step NextButtonWithSpinner smoke-test 1`] = `
 
 exports[`Tester/StepList/Step WithAttributes play-test 1`] = `
 <div data-test-block="true">
-  <ol class="StepList_stepList__XjLpY ">
+  <ol class="_stepList_bc059_1 ">
     <li id="htmlid"
-        class="StepListStep_step__js1fz StepListStep_step_passive__MQSNI dummyClassname"
+        class="_step_14g5z_1 _step_passive_14g5z_55 dummyClassname"
         lang="nb"
         data-testid="123ID"
     >
-      <div class="StepListStep_stepSideWrapper__Mshb7 "
+      <div class="_stepSideWrapper_14g5z_143 "
            id="htmlid-focus-target"
            tabindex="-1"
       >
-        <span class="StepListStep_stepCircle__wWmPq
-        StepListStep_stepCircle_passive__dU8i1">
+        <span class="_stepCircle_14g5z_193
+        _stepCircle_passive_14g5z_215">
           1
         </span>
-        <div class="StepListStep_stepLine__BOJMv ">
+        <div class="_stepLine_14g5z_1 ">
         </div>
       </div>
       <h3 id="steptitle-htmlid"
-          class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+          class="_heading_ppf3o_1 _heading_level5_ppf3o_45  _stepHeading_14g5z_75"
       >
         title
       </h3>
-      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l 
+      <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 
           ">
         <div>
         </div>
@@ -131,34 +131,34 @@ exports[`Tester/StepList/Step WithAttributes play-test 1`] = `
 
 exports[`Tester/StepList/Step WithEditAccessibleDescription play-test 1`] = `
 <div data-test-block="true">
-  <ol class="StepList_stepList__XjLpY ">
-    <li class="StepListStep_step__js1fz StepListStep_step_active__Pthdd ">
-      <div class="StepListStep_stepSideWrapper__Mshb7 "
+  <ol class="_stepList_bc059_1 ">
+    <li class="_step_14g5z_1 _step_active_14g5z_50 ">
+      <div class="_stepSideWrapper_14g5z_143 "
            tabindex="-1"
            aria-current="step"
       >
-        <span class="StepListStep_stepCircle__wWmPq
-        StepListStep_stepCircle_active__44uNJ">
+        <span class="_stepCircle_14g5z_193
+        _stepCircle_active_14g5z_218">
           1
         </span>
-        <div class="StepListStep_stepLine__BOJMv ">
+        <div class="_stepLine_14g5z_1 ">
         </div>
       </div>
       <h3 id="steptitle-:r6:"
-          class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+          class="_heading_ppf3o_1 _heading_level5_ppf3o_45  _stepHeading_14g5z_75"
       >
         tittel
       </h3>
-      <div class="StepListStep_stepContent__1uagT  
+      <div class="_stepContent_14g5z_86  
           ">
         <div>
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
         </div>
-        <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  StepListStep_stepEditButton__4I4jx"
+        <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  _stepEditButton_14g5z_46"
                 type="button"
                 aria-describedby="steptitle-:r6:"
         >
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -179,15 +179,15 @@ exports[`Tester/StepList/Step WithEditAccessibleDescription play-test 1`] = `
 
 exports[`Tester/StepList/Step WithFullWidthResult smoke-test 1`] = `
 <div data-test-block="true">
-  <ol class="StepList_stepList__XjLpY ">
-    <li class="StepListStep_step__js1fz StepListStep_step_neutralResult__2WfLh ">
-      <div class="StepListStep_stepSideWrapper__Mshb7 StepListStep_stepSideWrapper_result__yMOyt"
+  <ol class="_stepList_bc059_1 ">
+    <li class="_step_14g5z_1 _step_neutralResult_14g5z_60 ">
+      <div class="_stepSideWrapper_14g5z_143 _stepSideWrapper_result_14g5z_149"
            tabindex="-1"
            aria-current="step"
       >
-        <span class="StepListStep_stepCircle__wWmPq
-        StepListStep_stepCircle_neutralResult__FtI1x">
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
+        <span class="_stepCircle_14g5z_193
+        _stepCircle_neutralResult_14g5z_232">
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_14g5z_241"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r5:"
@@ -201,15 +201,15 @@ exports[`Tester/StepList/Step WithFullWidthResult smoke-test 1`] = `
             </path>
           </svg>
         </span>
-        <div class="StepListStep_stepLine__BOJMv StepListStep_stepLine_neutralResult__s7I7X">
+        <div class="_stepLine_14g5z_1 _stepLine_neutralResult_14g5z_1">
         </div>
       </div>
       <h3 id="steptitle-:r4:"
-          class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+          class="_heading_ppf3o_1 _heading_level5_ppf3o_45  _stepHeading_14g5z_75"
       >
         jeg er en tittel
       </h3>
-      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l StepListStep_stepContent_neutralResult__cWoyS StepListStep_stepContent_fullWidth__ExysN
+      <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 _stepContent_neutralResult_14g5z_106 _stepContent_fullWidth_14g5z_134
           ">
         <div>
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
@@ -222,15 +222,15 @@ exports[`Tester/StepList/Step WithFullWidthResult smoke-test 1`] = `
 
 exports[`Tester/StepList/Step WithIconTitleAS play-test 1`] = `
 <div data-test-block="true">
-  <ol class="StepList_stepList__XjLpY ">
-    <li class="StepListStep_step__js1fz StepListStep_step_active__Pthdd ">
-      <div class="StepListStep_stepSideWrapper__Mshb7 "
+  <ol class="_stepList_bc059_1 ">
+    <li class="_step_14g5z_1 _step_active_14g5z_50 ">
+      <div class="_stepSideWrapper_14g5z_143 "
            tabindex="-1"
            aria-current="step"
       >
-        <span class="StepListStep_stepCircle__wWmPq
-        StepListStep_stepCircle_active__44uNJ">
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz StepListStep_stepCircleIcon__ceFIe"
+        <span class="_stepCircle_14g5z_193
+        _stepCircle_active_14g5z_218">
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_14g5z_241"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r3:"
@@ -244,15 +244,15 @@ exports[`Tester/StepList/Step WithIconTitleAS play-test 1`] = `
             </path>
           </svg>
         </span>
-        <div class="StepListStep_stepLine__BOJMv ">
+        <div class="_stepLine_14g5z_1 ">
         </div>
       </div>
       <h2 id="steptitle-:r2:"
-          class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+          class="_heading_ppf3o_1 _heading_level5_ppf3o_45  _stepHeading_14g5z_75"
       >
         jeg er en tittel
       </h2>
-      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l 
+      <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 
           ">
         <div>
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
@@ -265,26 +265,26 @@ exports[`Tester/StepList/Step WithIconTitleAS play-test 1`] = `
 
 exports[`Tester/StepList/Step WithRef play-test 1`] = `
 <div data-test-block="true">
-  <ol class="StepList_stepList__XjLpY ">
-    <li class="StepListStep_step__js1fz StepListStep_step_passive__MQSNI "
+  <ol class="_stepList_bc059_1 ">
+    <li class="_step_14g5z_1 _step_passive_14g5z_55 "
         id="dummyIdForwardedFromRef"
     >
-      <div class="StepListStep_stepSideWrapper__Mshb7 "
+      <div class="_stepSideWrapper_14g5z_143 "
            tabindex="-1"
       >
-        <span class="StepListStep_stepCircle__wWmPq
-        StepListStep_stepCircle_passive__dU8i1">
+        <span class="_stepCircle_14g5z_193
+        _stepCircle_passive_14g5z_215">
           1
         </span>
-        <div class="StepListStep_stepLine__BOJMv ">
+        <div class="_stepLine_14g5z_1 ">
         </div>
       </div>
       <h3 id="steptitle-:r0:"
-          class="Heading_heading__7K0um Heading_heading_level5__CrIzo  StepListStep_stepHeading__Jg3rf"
+          class="_heading_ppf3o_1 _heading_level5_ppf3o_45  _stepHeading_14g5z_75"
       >
         title
       </h3>
-      <div class="StepListStep_stepContent__1uagT StepListStep_stepContent_noButton__JAD3l 
+      <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 
           ">
         <div>
         </div>

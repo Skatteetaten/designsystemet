@@ -3,12 +3,12 @@
 exports[`Tester/Tabs/Tabs Defaults play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="TabsList_tabList__vWYZt  "
+    <div class="_tabList_ibyzk_1  "
          role="tablist"
          tabindex="-1"
     >
       <button id="ds-tab-id-:r0:-tab1"
-              class="TabsTab_tab__W3ulY   TabsTab_tab_active__RkJBU  "
+              class="_tab_1dx22_1   _tab_active_1dx22_27  "
               role="tab"
               tabindex="0"
               aria-selected="true"
@@ -17,7 +17,7 @@ exports[`Tester/Tabs/Tabs Defaults play-test 1`] = `
         Person
       </button>
       <button id="ds-tab-id-:r0:-tab2"
-              class="TabsTab_tab__W3ulY     "
+              class="_tab_1dx22_1     "
               role="tab"
               tabindex="-1"
               aria-selected="false"
@@ -26,7 +26,7 @@ exports[`Tester/Tabs/Tabs Defaults play-test 1`] = `
         Bedrift
       </button>
       <button id="ds-tab-id-:r0:-tab3"
-              class="TabsTab_tab__W3ulY     "
+              class="_tab_1dx22_1     "
               role="tab"
               tabindex="-1"
               aria-selected="false"
@@ -36,21 +36,21 @@ exports[`Tester/Tabs/Tabs Defaults play-test 1`] = `
       </button>
     </div>
     <div id="ds-tab-panel-:r0:-tab1"
-         class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
+         class="_panel_1bj6c_1 _panel_active_1bj6c_4 "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r0:-tab1"
     >
       Tabs.Panel Person
     </div>
     <div id="ds-tab-panel-:r0:-tab2"
-         class="TabsPanel_panel__4lPgj  "
+         class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r0:-tab2"
     >
       Tabs.Panel Bedrift
     </div>
     <div id="ds-tab-panel-:r0:-tab3"
-         class="TabsPanel_panel__4lPgj  "
+         class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r0:-tab3"
     >
@@ -63,12 +63,12 @@ exports[`Tester/Tabs/Tabs Defaults play-test 1`] = `
 exports[`Tester/Tabs/Tabs WithAriaRolesTabindex play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="TabsList_tabList__vWYZt  "
+    <div class="_tabList_ibyzk_1  "
          role="tablist"
          tabindex="-1"
     >
       <button id="ds-tab-id-:r6:-tab1"
-              class="TabsTab_tab__W3ulY   TabsTab_tab_active__RkJBU  "
+              class="_tab_1dx22_1   _tab_active_1dx22_27  "
               role="tab"
               tabindex="0"
               aria-selected="true"
@@ -77,7 +77,7 @@ exports[`Tester/Tabs/Tabs WithAriaRolesTabindex play-test 1`] = `
         Person
       </button>
       <button id="ds-tab-id-:r6:-tab2"
-              class="TabsTab_tab__W3ulY     "
+              class="_tab_1dx22_1     "
               role="tab"
               tabindex="-1"
               aria-selected="false"
@@ -86,7 +86,7 @@ exports[`Tester/Tabs/Tabs WithAriaRolesTabindex play-test 1`] = `
         Bedrift
       </button>
       <button id="ds-tab-id-:r6:-tab3"
-              class="TabsTab_tab__W3ulY     "
+              class="_tab_1dx22_1     "
               role="tab"
               tabindex="-1"
               aria-selected="false"
@@ -96,21 +96,21 @@ exports[`Tester/Tabs/Tabs WithAriaRolesTabindex play-test 1`] = `
       </button>
     </div>
     <div id="ds-tab-panel-:r6:-tab1"
-         class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
+         class="_panel_1bj6c_1 _panel_active_1bj6c_4 "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r6:-tab1"
     >
       Tabs.Panel Person
     </div>
     <div id="ds-tab-panel-:r6:-tab2"
-         class="TabsPanel_panel__4lPgj  "
+         class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r6:-tab2"
     >
       Tabs.Panel Bedrift
     </div>
     <div id="ds-tab-panel-:r6:-tab3"
-         class="TabsPanel_panel__4lPgj  "
+         class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r6:-tab3"
     >
@@ -127,12 +127,12 @@ exports[`Tester/Tabs/Tabs WithAttributes play-test 1`] = `
        lang="nb"
        data-testid="123ID"
   >
-    <div class="TabsList_tabList__vWYZt  "
+    <div class="_tabList_ibyzk_1  "
          role="tablist"
          tabindex="-1"
     >
       <button id="ds-tab-id-:r2:-tab1"
-              class="TabsTab_tab__W3ulY   TabsTab_tab_active__RkJBU  "
+              class="_tab_1dx22_1   _tab_active_1dx22_27  "
               role="tab"
               tabindex="0"
               aria-selected="true"
@@ -141,7 +141,7 @@ exports[`Tester/Tabs/Tabs WithAttributes play-test 1`] = `
         Person
       </button>
       <button id="ds-tab-id-:r2:-tab2"
-              class="TabsTab_tab__W3ulY     "
+              class="_tab_1dx22_1     "
               role="tab"
               tabindex="-1"
               aria-selected="false"
@@ -150,7 +150,7 @@ exports[`Tester/Tabs/Tabs WithAttributes play-test 1`] = `
         Bedrift
       </button>
       <button id="ds-tab-id-:r2:-tab3"
-              class="TabsTab_tab__W3ulY     "
+              class="_tab_1dx22_1     "
               role="tab"
               tabindex="-1"
               aria-selected="false"
@@ -160,21 +160,21 @@ exports[`Tester/Tabs/Tabs WithAttributes play-test 1`] = `
       </button>
     </div>
     <div id="ds-tab-panel-:r2:-tab1"
-         class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
+         class="_panel_1bj6c_1 _panel_active_1bj6c_4 "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r2:-tab1"
     >
       Tabs.Panel Person
     </div>
     <div id="ds-tab-panel-:r2:-tab2"
-         class="TabsPanel_panel__4lPgj  "
+         class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r2:-tab2"
     >
       Tabs.Panel Bedrift
     </div>
     <div id="ds-tab-panel-:r2:-tab3"
-         class="TabsPanel_panel__4lPgj  "
+         class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r2:-tab3"
     >
@@ -187,12 +187,12 @@ exports[`Tester/Tabs/Tabs WithAttributes play-test 1`] = `
 exports[`Tester/Tabs/Tabs WithDefaultValue play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="TabsList_tabList__vWYZt  "
+    <div class="_tabList_ibyzk_1  "
          role="tablist"
          tabindex="-1"
     >
       <button id="ds-tab-id-:r4:-tab1"
-              class="TabsTab_tab__W3ulY     "
+              class="_tab_1dx22_1     "
               role="tab"
               tabindex="-1"
               aria-selected="false"
@@ -201,7 +201,7 @@ exports[`Tester/Tabs/Tabs WithDefaultValue play-test 1`] = `
         Person
       </button>
       <button id="ds-tab-id-:r4:-tab2"
-              class="TabsTab_tab__W3ulY   TabsTab_tab_active__RkJBU  "
+              class="_tab_1dx22_1   _tab_active_1dx22_27  "
               role="tab"
               tabindex="0"
               aria-selected="true"
@@ -210,7 +210,7 @@ exports[`Tester/Tabs/Tabs WithDefaultValue play-test 1`] = `
         Bedrift
       </button>
       <button id="ds-tab-id-:r4:-tab3"
-              class="TabsTab_tab__W3ulY     "
+              class="_tab_1dx22_1     "
               role="tab"
               tabindex="-1"
               aria-selected="false"
@@ -220,21 +220,21 @@ exports[`Tester/Tabs/Tabs WithDefaultValue play-test 1`] = `
       </button>
     </div>
     <div id="ds-tab-panel-:r4:-tab1"
-         class="TabsPanel_panel__4lPgj  "
+         class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r4:-tab1"
     >
       Tabs.Panel Person
     </div>
     <div id="ds-tab-panel-:r4:-tab2"
-         class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
+         class="_panel_1bj6c_1 _panel_active_1bj6c_4 "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r4:-tab2"
     >
       Tabs.Panel Bedrift
     </div>
     <div id="ds-tab-panel-:r4:-tab3"
-         class="TabsPanel_panel__4lPgj  "
+         class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r4:-tab3"
     >
@@ -247,12 +247,12 @@ exports[`Tester/Tabs/Tabs WithDefaultValue play-test 1`] = `
 exports[`Tester/Tabs/Tabs WithMultiline smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="TabsList_tabList__vWYZt TabsList_tabList_multiline__EPlby "
+    <div class="_tabList_ibyzk_1 _tabList_multiline_ibyzk_6 "
          role="tablist"
          tabindex="-1"
     >
       <button id="ds-tab-id-:r7:-tab1"
-              class="TabsTab_tab__W3ulY   TabsTab_tab_active__RkJBU  "
+              class="_tab_1dx22_1   _tab_active_1dx22_27  "
               role="tab"
               tabindex="0"
               aria-selected="true"
@@ -261,7 +261,7 @@ exports[`Tester/Tabs/Tabs WithMultiline smoke-test 1`] = `
         Person
       </button>
       <button id="ds-tab-id-:r7:-tab2"
-              class="TabsTab_tab__W3ulY     "
+              class="_tab_1dx22_1     "
               role="tab"
               tabindex="-1"
               aria-selected="false"
@@ -270,7 +270,7 @@ exports[`Tester/Tabs/Tabs WithMultiline smoke-test 1`] = `
         Bedrift
       </button>
       <button id="ds-tab-id-:r7:-tab3"
-              class="TabsTab_tab__W3ulY     "
+              class="_tab_1dx22_1     "
               role="tab"
               tabindex="-1"
               aria-selected="false"
@@ -279,7 +279,7 @@ exports[`Tester/Tabs/Tabs WithMultiline smoke-test 1`] = `
         Ubehandlede saker (+99)
       </button>
       <button id="ds-tab-id-:r7:-tab4"
-              class="TabsTab_tab__W3ulY     "
+              class="_tab_1dx22_1     "
               role="tab"
               tabindex="-1"
               aria-selected="false"
@@ -289,28 +289,28 @@ exports[`Tester/Tabs/Tabs WithMultiline smoke-test 1`] = `
       </button>
     </div>
     <div id="ds-tab-panel-:r7:-tab1"
-         class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
+         class="_panel_1bj6c_1 _panel_active_1bj6c_4 "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r7:-tab1"
     >
       Tabs.Panel - Person
     </div>
     <div id="ds-tab-panel-:r7:-tab2"
-         class="TabsPanel_panel__4lPgj  "
+         class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r7:-tab2"
     >
       Tabs.Panel - Bedrift
     </div>
     <div id="ds-tab-panel-:r7:-tab3"
-         class="TabsPanel_panel__4lPgj  "
+         class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r7:-tab3"
     >
       Tabs.Panel - Ubehandlede saker (+99)
     </div>
     <div id="ds-tab-panel-:r7:-tab4"
-         class="TabsPanel_panel__4lPgj  "
+         class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r7:-tab4"
     >
@@ -332,12 +332,12 @@ exports[`Tester/Tabs/Tabs WithRef play-test 1`] = `
 exports[`Tester/Tabs/Tabs WithTabClick play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="TabsList_tabList__vWYZt  "
+    <div class="_tabList_ibyzk_1  "
          role="tablist"
          tabindex="-1"
     >
       <button id="ds-tab-id-:r8:-tab1"
-              class="TabsTab_tab__W3ulY     "
+              class="_tab_1dx22_1     "
               role="tab"
               tabindex="-1"
               aria-selected="false"
@@ -346,7 +346,7 @@ exports[`Tester/Tabs/Tabs WithTabClick play-test 1`] = `
         Person
       </button>
       <button id="ds-tab-id-:r8:-tab2"
-              class="TabsTab_tab__W3ulY   TabsTab_tab_active__RkJBU  "
+              class="_tab_1dx22_1   _tab_active_1dx22_27  "
               role="tab"
               tabindex="0"
               aria-selected="true"
@@ -355,7 +355,7 @@ exports[`Tester/Tabs/Tabs WithTabClick play-test 1`] = `
         Bedrift
       </button>
       <button id="ds-tab-id-:r8:-tab3"
-              class="TabsTab_tab__W3ulY     "
+              class="_tab_1dx22_1     "
               role="tab"
               tabindex="-1"
               aria-selected="false"
@@ -365,21 +365,21 @@ exports[`Tester/Tabs/Tabs WithTabClick play-test 1`] = `
       </button>
     </div>
     <div id="ds-tab-panel-:r8:-tab1"
-         class="TabsPanel_panel__4lPgj  "
+         class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r8:-tab1"
     >
       Tabs.Panel Person
     </div>
     <div id="ds-tab-panel-:r8:-tab2"
-         class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
+         class="_panel_1bj6c_1 _panel_active_1bj6c_4 "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r8:-tab2"
     >
       Tabs.Panel Bedrift
     </div>
     <div id="ds-tab-panel-:r8:-tab3"
-         class="TabsPanel_panel__4lPgj  "
+         class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r8:-tab3"
     >
@@ -392,12 +392,12 @@ exports[`Tester/Tabs/Tabs WithTabClick play-test 1`] = `
 exports[`Tester/Tabs/Tabs WithValue play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="TabsList_tabList__vWYZt  "
+    <div class="_tabList_ibyzk_1  "
          role="tablist"
          tabindex="-1"
     >
       <button id="ds-tab-id-:r5:-tab1"
-              class="TabsTab_tab__W3ulY     "
+              class="_tab_1dx22_1     "
               role="tab"
               tabindex="-1"
               aria-selected="false"
@@ -406,7 +406,7 @@ exports[`Tester/Tabs/Tabs WithValue play-test 1`] = `
         Person
       </button>
       <button id="ds-tab-id-:r5:-tab2"
-              class="TabsTab_tab__W3ulY   TabsTab_tab_active__RkJBU  "
+              class="_tab_1dx22_1   _tab_active_1dx22_27  "
               role="tab"
               tabindex="0"
               aria-selected="true"
@@ -416,24 +416,24 @@ exports[`Tester/Tabs/Tabs WithValue play-test 1`] = `
       </button>
     </div>
     <div id="ds-tab-panel-:r5:-tab1"
-         class="TabsPanel_panel__4lPgj  "
+         class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r5:-tab1"
     >
       Tabs.Panel - Person
     </div>
     <div id="ds-tab-panel-:r5:-tab2"
-         class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
+         class="_panel_1bj6c_1 _panel_active_1bj6c_4 "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r5:-tab2"
     >
       Tabs.Panel - Bedrift
     </div>
   </div>
-  <button class="Button_button__pkuNv Button_button_primary__8Ouwo   "
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="button"
   >
-    <span class="Button_buttonText__JxyB+">
+    <span class="_buttonText_6ybyo_69">
       ToggleTab
     </span>
   </button>
@@ -443,12 +443,12 @@ exports[`Tester/Tabs/Tabs WithValue play-test 1`] = `
 exports[`Tester/Tabs/Tabs WithVariantCompact smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="TabsList_tabList__vWYZt  "
+    <div class="_tabList_ibyzk_1  "
          role="tablist"
          tabindex="-1"
     >
       <button id="ds-tab-id-:r3:-tab1"
-              class="TabsTab_tab__W3ulY TabsTab_tab_compact__iTTkr  TabsTab_tab_active__RkJBU  "
+              class="_tab_1dx22_1 _tab_compact_1dx22_43  _tab_active_1dx22_27  "
               role="tab"
               tabindex="0"
               aria-selected="true"
@@ -457,7 +457,7 @@ exports[`Tester/Tabs/Tabs WithVariantCompact smoke-test 1`] = `
         Person
       </button>
       <button id="ds-tab-id-:r3:-tab2"
-              class="TabsTab_tab__W3ulY TabsTab_tab_compact__iTTkr    "
+              class="_tab_1dx22_1 _tab_compact_1dx22_43    "
               role="tab"
               tabindex="-1"
               aria-selected="false"
@@ -466,7 +466,7 @@ exports[`Tester/Tabs/Tabs WithVariantCompact smoke-test 1`] = `
         Bedrift
       </button>
       <button id="ds-tab-id-:r3:-tab3"
-              class="TabsTab_tab__W3ulY TabsTab_tab_compact__iTTkr    "
+              class="_tab_1dx22_1 _tab_compact_1dx22_43    "
               role="tab"
               tabindex="-1"
               aria-selected="false"
@@ -476,21 +476,21 @@ exports[`Tester/Tabs/Tabs WithVariantCompact smoke-test 1`] = `
       </button>
     </div>
     <div id="ds-tab-panel-:r3:-tab1"
-         class="TabsPanel_panel__4lPgj TabsPanel_panel_active__pqi5b "
+         class="_panel_1bj6c_1 _panel_active_1bj6c_4 "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r3:-tab1"
     >
       Tabs.Panel Person
     </div>
     <div id="ds-tab-panel-:r3:-tab2"
-         class="TabsPanel_panel__4lPgj  "
+         class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r3:-tab2"
     >
       Tabs.Panel Bedrift
     </div>
     <div id="ds-tab-panel-:r3:-tab3"
-         class="TabsPanel_panel__4lPgj  "
+         class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r3:-tab3"
     >

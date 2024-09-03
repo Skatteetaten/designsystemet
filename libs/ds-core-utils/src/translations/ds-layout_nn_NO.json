@@ -7,11 +7,11 @@
   "topbanner.SkeLogoImageText": "Skatteetaten logo",
   "topbanner.SkeLogoLinkText": "Forside Skatteetaten",
   "topbanner.SkipLinkText": "Hopp til hovedinnhald",
-  "topbannerbutton.CompanyTitle": "(Innlogget som virksomhet)",
+  "topbannerbutton.CompanyTitle": "Innlogga som verksemd",
   "topbannerbutton.Login": "Logg inn",
   "topbannerbutton.Logout": "Logg ut",
   "topbannerbutton.Menu": "Meny",
-  "topbannerbutton.Myself": "(Meg selv)",
-  "topbannerbutton.MyselfTitle": "(Innlogget)",
-  "topbannerbutton.OtherTitle": "(Innlogget som annen)"
+  "topbannerbutton.Myself": "Meg sjølv",
+  "topbannerbutton.MyselfTitle": "Innlogga",
+  "topbannerbutton.OtherTitle": "Innlogga som annan"
 }

@@ -4,22 +4,22 @@ exports[`Tester/DatePicker/DatePicker Defaults play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:rf:"
-           class="LabelWithHelp_label__59tP-"
+           class="_label_348na_5"
            for="datepickerInputId-:re:"
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_dateContainer__WILQF ">
+    <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:re:"
-             class="DatePicker_input__vz7zh"
+             class="_input_13xkq_9"
              placeholder="Skriv eller velg"
              value
       >
       <button type="button"
-              class="DatePicker_calendarButton__6sCKL"
+              class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rg:"
@@ -49,23 +49,23 @@ exports[`Tester/DatePicker/DatePicker WithAttributes play-test 1`] = `
        lang="nb"
   >
     <label id="labelId-:r6:"
-           class="LabelWithHelp_label__59tP-"
+           class="_label_348na_5"
            for="htmlid"
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_dateContainer__WILQF ">
+    <div class="_dateContainer_13xkq_1 ">
       <input id="htmlid"
-             class="DatePicker_input__vz7zh"
+             class="_input_13xkq_9"
              data-testid="123ID"
              placeholder="Skriv eller velg"
              value
       >
       <button type="button"
-              class="DatePicker_calendarButton__6sCKL"
+              class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r7:"
@@ -93,24 +93,24 @@ exports[`Tester/DatePicker/DatePicker WithAutoCompleteNameAndPlaceholder play-te
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r1u:"
-           class="LabelWithHelp_label__59tP-"
+           class="_label_348na_5"
            for="datepickerInputId-:r1t:"
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_dateContainer__WILQF ">
+    <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:r1t:"
-             class="DatePicker_input__vz7zh"
+             class="_input_13xkq_9"
              autocomplete="given-name"
              name="test_name"
              placeholder="placeholdertekst"
              value
       >
       <button type="button"
-              class="DatePicker_calendarButton__6sCKL"
+              class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1v:"
@@ -138,24 +138,24 @@ exports[`Tester/DatePicker/DatePicker WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
   <div class="dummyClassname">
     <label id="labelId-:ra:"
-           class="LabelWithHelp_label__59tP-    dummyClassname"
+           class="_label_348na_5    dummyClassname"
            for="datepickerInputId-:r9:"
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_dateContainer__WILQF dummyClassnameFormContainer">
+    <div class="_dateContainer_13xkq_1 dummyClassnameFormContainer">
       <input id="datepickerInputId-:r9:"
-             class="DatePicker_input__vz7zh"
+             class="_input_13xkq_9"
              placeholder="Skriv eller velg"
              aria-describedby="datepickerErrorId-:r8:"
              aria-invalid="true"
              value
       >
       <button type="button"
-              class="DatePicker_calendarButton__6sCKL"
+              class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rb:"
@@ -174,8 +174,8 @@ exports[`Tester/DatePicker/DatePicker WithCustomClassNames play-test 1`] = `
          aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="ErrorMessage_errorMessage__508oW dummyClassname">
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
+      <div class="_errorMessage_1c261_13 dummyClassname">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1c261_24"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -184,7 +184,7 @@ exports[`Tester/DatePicker/DatePicker WithCustomClassNames play-test 1`] = `
           <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
           </path>
         </svg>
-        <p class="ErrorMessage_errorMessageText__e27TU">
+        <p class="_errorMessageText_1c261_29">
           Fødselsdato er obligatorisk
         </p>
       </div>
@@ -197,22 +197,22 @@ exports[`Tester/DatePicker/DatePicker WithDateFormat play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r29:"
-           class="LabelWithHelp_label__59tP-"
+           class="_label_348na_5"
            for="datepickerInputId-:r28:"
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_dateContainer__WILQF ">
+    <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:r28:"
-             class="DatePicker_input__vz7zh"
+             class="_input_13xkq_9"
              placeholder="Skriv eller velg"
-             value="2024/01/05"
+             value="2024/02/05"
       >
       <button type="button"
-              class="DatePicker_calendarButton__6sCKL"
+              class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2a:"
@@ -240,25 +240,25 @@ exports[`Tester/DatePicker/DatePicker WithDescription play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r1g:"
-           class="LabelWithHelp_label__59tP-"
+           class="_label_348na_5"
            for="datepickerInputId-:r1f:"
     >
       Fødselsdato
     </label>
-    <div class="Help_description__niabw">
+    <div class="_description_10ldw_17">
       En liten beskrivelse tekst
     </div>
-    <div class="DatePicker_dateContainer__WILQF ">
+    <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:r1f:"
-             class="DatePicker_input__vz7zh"
+             class="_input_13xkq_9"
              placeholder="Skriv eller velg"
              value
       >
       <button type="button"
-              class="DatePicker_calendarButton__6sCKL"
+              class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1h:"
@@ -286,24 +286,24 @@ exports[`Tester/DatePicker/DatePicker WithDisabled play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:rn:"
-           class="LabelWithHelp_label__59tP-"
+           class="_label_348na_5"
            for="datepickerInputId-:rm:"
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_dateContainer__WILQF ">
+    <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:rm:"
-             class="DatePicker_input__vz7zh"
+             class="_input_13xkq_9"
              disabled
              placeholder="Skriv eller velg"
              value="01.02.2024"
       >
       <button type="button"
-              class="DatePicker_calendarButton__6sCKL"
+              class="_calendarButton_13xkq_13"
               disabled
               aria-expanded="false"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:ro:"
@@ -331,24 +331,24 @@ exports[`Tester/DatePicker/DatePicker WithErrorMessage play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r1b:"
-           class="LabelWithHelp_label__59tP-"
+           class="_label_348na_5"
            for="datepickerInputId-:r1a:"
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_dateContainer__WILQF ">
+    <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:r1a:"
-             class="DatePicker_input__vz7zh"
+             class="_input_13xkq_9"
              placeholder="Skriv eller velg"
              aria-describedby="datepickerErrorId-:r19:"
              aria-invalid="true"
              value
       >
       <button type="button"
-              class="DatePicker_calendarButton__6sCKL"
+              class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1c:"
@@ -367,8 +367,8 @@ exports[`Tester/DatePicker/DatePicker WithErrorMessage play-test 1`] = `
          aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="ErrorMessage_errorMessage__508oW ">
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
+      <div class="_errorMessage_1c261_13 ">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1c261_24"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -377,7 +377,7 @@ exports[`Tester/DatePicker/DatePicker WithErrorMessage play-test 1`] = `
           <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
           </path>
         </svg>
-        <p class="ErrorMessage_errorMessageText__e27TU">
+        <p class="_errorMessageText_1c261_29">
           Fødselsdato er obligatorisk
         </p>
       </div>
@@ -390,17 +390,17 @@ exports[`Tester/DatePicker/DatePicker WithHelpText play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r1k:"
-           class="LabelWithHelp_label__59tP-"
+           class="_label_348na_5"
            for="datepickerInputId-:r1j:"
     >
       Fødselsdato
     </label>
-    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+    <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
             type="button"
             aria-describedby="labelId-:r1k:"
             aria-expanded="true"
     >
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r1l:"
@@ -414,14 +414,14 @@ exports[`Tester/DatePicker/DatePicker WithHelpText play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="Help_helpBox__nbhjO  undefined">
-      <span class="Help_helpBoxText__j6sH7">
+    <div class="_helpBox_10ldw_31">
+      <span class="_helpBoxText_10ldw_44">
         Hjelpetekst
       </span>
-      <button class="IconButton_button__mw9sG IconButton_button_small__etst4  Help_helpBoxCloseButton__RueX2"
+      <button class="_button_g87u5_1 _button_small_g87u5_37  _helpBoxCloseButton_10ldw_51"
               type="button"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1n:"
@@ -436,17 +436,17 @@ exports[`Tester/DatePicker/DatePicker WithHelpText play-test 1`] = `
         </svg>
       </button>
     </div>
-    <div class="DatePicker_dateContainer__WILQF ">
+    <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:r1j:"
-             class="DatePicker_input__vz7zh"
+             class="_input_13xkq_9"
              placeholder="Skriv eller velg"
              value
       >
       <button type="button"
-              class="DatePicker_calendarButton__6sCKL"
+              class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1m:"
@@ -474,17 +474,17 @@ exports[`Tester/DatePicker/DatePicker WithHelpToggleEvent smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r65:"
-           class="LabelWithHelp_label__59tP-"
+           class="_label_348na_5"
            for="datepickerInputId-:r64:"
     >
       Fødselsdato
     </label>
-    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+    <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
             type="button"
             aria-describedby="labelId-:r65:"
             aria-expanded="false"
     >
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r66:"
@@ -498,17 +498,17 @@ exports[`Tester/DatePicker/DatePicker WithHelpToggleEvent smoke-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="DatePicker_dateContainer__WILQF ">
+    <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:r64:"
-             class="DatePicker_input__vz7zh"
+             class="_input_13xkq_9"
              placeholder="Skriv eller velg"
              value
       >
       <button type="button"
-              class="DatePicker_calendarButton__6sCKL"
+              class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r67:"
@@ -536,22 +536,22 @@ exports[`Tester/DatePicker/DatePicker WithHideLabel play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r1q:"
-           class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+           class="_label_348na_5  _srOnly_348na_18"
            for="datepickerInputId-:r1p:"
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_dateContainer__WILQF ">
+    <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:r1p:"
-             class="DatePicker_input__vz7zh"
+             class="_input_13xkq_9"
              placeholder="Skriv eller velg"
              value
       >
       <button type="button"
-              class="DatePicker_calendarButton__6sCKL"
+              class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1r:"
@@ -579,22 +579,22 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r2m:"
-           class="LabelWithHelp_label__59tP-"
+           class="_label_348na_5"
            for="datepickerInputId-:r2l:"
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_dateContainer__WILQF ">
+    <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:r2l:"
-             class="DatePicker_input__vz7zh"
+             class="_input_13xkq_9"
              placeholder="Skriv eller velg"
              value
       >
       <button type="button"
-              class="DatePicker_calendarButton__6sCKL"
+              class="_calendarButton_13xkq_13"
               aria-expanded="true"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2n:"
@@ -614,13 +614,13 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
          aria-atomic="true"
     >
     </div>
-    <div class="DatePicker_calendarContainer__4MXih">
-      <div class="DatePickerCalendar_calendar__MrP62 ">
-        <div class="DatePickerCalendar_calendarNavigation__pG+UM">
-          <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  DatePickerCalendar_calendarNavigationArrowIcon__fUDs1"
+    <div class="_calendarContainer_13xkq_130">
+      <div class="_calendar_948m6_5 ">
+        <div class="_calendarNavigation_948m6_18">
+          <button class="_button_g87u5_1 _button_medium_g87u5_45  _calendarNavigationArrowIcon_948m6_33"
                   type="button"
           >
-            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:r2o:"
@@ -634,17 +634,17 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
               </path>
             </svg>
           </button>
-          <div class="DatePickerCalendar_calendarNavigationMonthAndYearContainer__i-9ID">
+          <div class="_calendarNavigationMonthAndYearContainer_948m6_26">
             <div class>
               <label id="labelId-:r2r:"
-                     class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+                     class="_label_348na_5  _srOnly_348na_18"
                      for="selectId-:r2q:"
               >
                 Velg måned
               </label>
-              <div class="Select_selectContainer__CfUZs DatePickerCalendar_calendarNavigationMonth__th-Oc">
+              <div class="_selectContainer_1mv9o_1 _calendarNavigationMonth_948m6_26">
                 <select id="selectId-:r2q:"
-                        class="Select_select__-ENv1"
+                        class="_select_1mv9o_1"
                 >
                   <option class
                           value="0"
@@ -707,7 +707,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                     Desember
                   </option>
                 </select>
-                <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz Select_selectIcon__ywv2N"
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -723,15 +723,15 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
               >
               </div>
             </div>
-            <div class="DatePickerCalendar_calendarNavigationYear__Icqmb">
+            <div class="_calendarNavigationYear_948m6_39">
               <label id="labelId-:r2v:"
-                     class="LabelWithHelp_label__59tP-  LabelWithHelp_srOnly__uWL7Z"
+                     class="_label_348na_5  _srOnly_348na_18"
                      for="textFieldTextboxId-:r2u:"
               >
                 Årstall
               </label>
               <input id="textFieldTextboxId-:r2u:"
-                     class="TextField_textbox__qbZlk"
+                     class="_textbox_1lamq_5"
                      inputmode="numeric"
                      value="2024"
               >
@@ -742,10 +742,10 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
               </div>
             </div>
           </div>
-          <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  DatePickerCalendar_calendarNavigationArrowIcon__fUDs1"
+          <button class="_button_g87u5_1 _button_medium_g87u5_45  _calendarNavigationArrowIcon_948m6_33"
                   type="button"
           >
-            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:r30:"
@@ -760,31 +760,31 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
             </svg>
           </button>
         </div>
-        <table class="DatePickerCalendar_calendarTable__zDKjI">
-          <caption class="DatePickerCalendar_srOnly__VfDJH">
+        <table class="_calendarTable_948m6_64">
+          <caption class="_srOnly_948m6_153">
             Januar 2024
           </caption>
           <thead>
             <tr>
-              <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+              <th class="_calendarTableHeaderCell_948m6_69">
                 Man
               </th>
-              <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+              <th class="_calendarTableHeaderCell_948m6_69">
                 Tir
               </th>
-              <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+              <th class="_calendarTableHeaderCell_948m6_69">
                 Ons
               </th>
-              <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+              <th class="_calendarTableHeaderCell_948m6_69">
                 Tor
               </th>
-              <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+              <th class="_calendarTableHeaderCell_948m6_69">
                 Fre
               </th>
-              <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+              <th class="_calendarTableHeaderCell_948m6_69">
                 Lør
               </th>
-              <th class="DatePickerCalendar_calendarTableHeaderCell__ycSvV">
+              <th class="_calendarTableHeaderCell_948m6_69">
                 Søn
               </th>
             </tr>
@@ -792,7 +792,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
           <tbody>
             <tr>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 1. Januar 2024"
@@ -801,7 +801,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 2. Januar 2024"
@@ -810,7 +810,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 3. Januar 2024"
@@ -819,7 +819,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 4. Januar 2024"
@@ -828,7 +828,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 5. Januar 2024"
@@ -837,7 +837,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 6. Januar 2024"
@@ -846,7 +846,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 7. Januar 2024"
@@ -857,7 +857,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
             </tr>
             <tr>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 8. Januar 2024"
@@ -866,7 +866,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 9. Januar 2024"
@@ -875,7 +875,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 10. Januar 2024"
@@ -884,7 +884,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 11. Januar 2024"
@@ -893,7 +893,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 12. Januar 2024"
@@ -902,7 +902,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 13. Januar 2024"
@@ -911,7 +911,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 14. Januar 2024"
@@ -922,7 +922,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
             </tr>
             <tr>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr  DatePickerCalendar_calendarTableDateButton_today__eAaxy"
+                <button class="_calendarTableDateButton_948m6_72  _calendarTableDateButton_today_948m6_90"
                         type="button"
                         tabindex="-1"
                         aria-label="I dag 15. Januar 2024"
@@ -931,7 +931,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 16. Januar 2024"
@@ -940,7 +940,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 17. Januar 2024"
@@ -949,7 +949,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 18. Januar 2024"
@@ -958,7 +958,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 19. Januar 2024"
@@ -967,7 +967,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 20. Januar 2024"
@@ -976,7 +976,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 21. Januar 2024"
@@ -987,7 +987,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
             </tr>
             <tr>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 22. Januar 2024"
@@ -996,7 +996,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 23. Januar 2024"
@@ -1005,7 +1005,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 24. Januar 2024"
@@ -1014,7 +1014,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 25. Januar 2024"
@@ -1023,7 +1023,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 26. Januar 2024"
@@ -1032,7 +1032,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 27. Januar 2024"
@@ -1041,7 +1041,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 28. Januar 2024"
@@ -1052,7 +1052,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
             </tr>
             <tr>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 29. Januar 2024"
@@ -1061,7 +1061,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="-1"
                         aria-label=" 30. Januar 2024"
@@ -1070,7 +1070,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr"
+                <button class="_calendarTableDateButton_948m6_72"
                         type="button"
                         tabindex="0"
                         aria-current="true"
@@ -1080,7 +1080,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                <button class="_calendarTableDateButton_948m6_72 _calendarTableDateButton_adjacentMonth_948m6_83"
                         type="button"
                         tabindex="-1"
                         aria-label=" 1. Februar 2024"
@@ -1089,7 +1089,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                <button class="_calendarTableDateButton_948m6_72 _calendarTableDateButton_adjacentMonth_948m6_83"
                         type="button"
                         tabindex="-1"
                         aria-label=" 2. Februar 2024"
@@ -1098,7 +1098,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                <button class="_calendarTableDateButton_948m6_72 _calendarTableDateButton_adjacentMonth_948m6_83"
                         type="button"
                         tabindex="-1"
                         aria-label=" 3. Februar 2024"
@@ -1107,7 +1107,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
                 </button>
               </td>
               <td>
-                <button class="DatePickerCalendar_calendarTableDateButton__puJOr DatePickerCalendar_calendarTableDateButton_adjacentMonth__B0fnM"
+                <button class="_calendarTableDateButton_948m6_72 _calendarTableDateButton_adjacentMonth_948m6_83"
                         type="button"
                         tabindex="-1"
                         aria-label=" 4. Februar 2024"
@@ -1128,21 +1128,21 @@ exports[`Tester/DatePicker/DatePicker WithPlaceholderEmpty play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r22:"
-           class="LabelWithHelp_label__59tP-"
+           class="_label_348na_5"
            for="datepickerInputId-:r21:"
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_dateContainer__WILQF ">
+    <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:r21:"
-             class="DatePicker_input__vz7zh"
+             class="_input_13xkq_9"
              value
       >
       <button type="button"
-              class="DatePicker_calendarButton__6sCKL"
+              class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r23:"
@@ -1170,14 +1170,14 @@ exports[`Tester/DatePicker/DatePicker WithReadOnly play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r26:"
-           class="LabelWithHelp_label__59tP-"
+           class="_label_348na_5"
            for="datepickerInputId-:r25:"
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_dateContainer__WILQF ">
+    <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:r25:"
-             class="DatePicker_input__vz7zh"
+             class="_input_13xkq_9"
              placeholder="Skriv eller velg"
              readonly
              value="01.02.2024"
@@ -1196,23 +1196,23 @@ exports[`Tester/DatePicker/DatePicker WithRef play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r2:"
-           class="LabelWithHelp_label__59tP-"
+           class="_label_348na_5"
            for="datepickerInputId-:r1:"
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_dateContainer__WILQF ">
+    <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:r1:"
-             class="DatePicker_input__vz7zh"
+             class="_input_13xkq_9"
              placeholder="Skriv eller velg"
              value
              name="dummyNameForwardedFromRef"
       >
       <button type="button"
-              class="DatePicker_calendarButton__6sCKL"
+              class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3:"
@@ -1240,23 +1240,23 @@ exports[`Tester/DatePicker/DatePicker WithRequired play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:rv:"
-           class="LabelWithHelp_label__59tP-"
+           class="_label_348na_5"
            for="datepickerInputId-:ru:"
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_dateContainer__WILQF ">
+    <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:ru:"
-             class="DatePicker_input__vz7zh"
+             class="_input_13xkq_9"
              placeholder="Skriv eller velg"
              required
              value
       >
       <button type="button"
-              class="DatePicker_calendarButton__6sCKL"
+              class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r10:"
@@ -1284,23 +1284,23 @@ exports[`Tester/DatePicker/DatePicker WithRequiredAndMark smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:r13:"
-           class="LabelWithHelp_label__59tP- LabelWithHelp_label_required__KSuzW"
+           class="_label_348na_5 _label_required_348na_12"
            for="datepickerInputId-:r12:"
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_dateContainer__WILQF ">
+    <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:r12:"
-             class="DatePicker_input__vz7zh"
+             class="_input_13xkq_9"
              placeholder="Skriv eller velg"
              required
              value
       >
       <button type="button"
-              class="DatePicker_calendarButton__6sCKL"
+              class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r14:"
@@ -1328,22 +1328,22 @@ exports[`Tester/DatePicker/DatePicker WithValue play-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:rr:"
-           class="LabelWithHelp_label__59tP-"
+           class="_label_348na_5"
            for="datepickerInputId-:rq:"
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_dateContainer__WILQF ">
+    <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:rq:"
-             class="DatePicker_input__vz7zh"
+             class="_input_13xkq_9"
              placeholder="Skriv eller velg"
              value="01.02.2024"
       >
       <button type="button"
-              class="DatePicker_calendarButton__6sCKL"
+              class="_calendarButton_13xkq_13"
               aria-expanded="false"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rs:"
@@ -1371,22 +1371,22 @@ exports[`Tester/DatePicker/DatePicker WithVariantLarge smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
     <label id="labelId-:rj:"
-           class="LabelWithHelp_label__59tP-"
+           class="_label_348na_5"
            for="datepickerInputId-:ri:"
     >
       Fødselsdato
     </label>
-    <div class="DatePicker_dateContainer__WILQF ">
+    <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:ri:"
-             class="DatePicker_input__vz7zh DatePicker_input_large__ynP5U"
+             class="_input_13xkq_9 _input_large_13xkq_36"
              placeholder="Skriv eller velg"
              value
       >
       <button type="button"
-              class="DatePicker_calendarButton__6sCKL DatePicker_calendarButton_large__3mcID"
+              class="_calendarButton_13xkq_13 _calendarButton_large_13xkq_91"
               aria-expanded="false"
       >
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz DatePicker_icon__ykYkn"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_13xkq_88"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rk:"

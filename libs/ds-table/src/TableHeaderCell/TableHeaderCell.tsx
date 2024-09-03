@@ -55,13 +55,20 @@ export const TableHeaderCell = forwardRef<
     const handleOnSort = (): void => {
       let direction: sortDirection = 'ascending';
       if (context?.sortState?.sortKey === sortKey) {
-        direction =
-          context?.sortState?.direction === 'ascending'
-            ? 'descending'
-            : 'ascending';
+        switch (context?.sortState?.direction) {
+          case 'ascending':
+            direction = 'descending';
+            break;
+          case 'descending':
+            direction = 'none';
+            break;
+        }
       }
       if (context?.setSortState) {
-        context?.setSortState({ sortKey: sortKey, direction });
+        context?.setSortState({
+          sortKey: direction !== 'none' ? sortKey : undefined,
+          direction,
+        });
       }
 
       context?.setRowInEditModeId(undefined);

@@ -20,7 +20,7 @@
         "entryFile": "libs/ds-collections/src/index.ts",
         "external": ["react/jsx-runtime"],
         "rollupConfig": ["libs/ds-collections/rollup.config.js"],
-        "compiler": "babel",
+        "compiler": "swc",
         "assets": [
           {
             "glob": "libs/ds-collections/README.md",

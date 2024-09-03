@@ -1,5 +1,7 @@
-/* automatisk genererte types */
-export const button: string;
-export const icon: string;
-export const hide: string;
-export const spinner: string;
+declare const classNames: {
+  readonly button: 'button';
+  readonly icon: 'icon';
+  readonly hide: 'hide';
+  readonly spinner: 'spinner';
+};
+export default classNames;

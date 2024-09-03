@@ -1,5 +1,7 @@
-/* automatisk genererte types */
-export const button: string;
-export const flagWrapper: string;
-export const buttonText: string;
-export const buttonCurrent: string;
+declare const classNames: {
+  readonly button: 'button';
+  readonly flagWrapper: 'flagWrapper';
+  readonly buttonText: 'buttonText';
+  readonly buttonCurrent: 'buttonCurrent';
+};
+export default classNames;

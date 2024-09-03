@@ -118,10 +118,12 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
         autoFocus
         /* Merk at onCancel kan ikke brukes til å hindre lukking fordi to trykk på esc lukker allikevel i chrome  */
         onKeyDown={(e) => {
-          if (!dismissOnEsc && e.key === 'Escape') {
-            e.preventDefault();
-          } else {
-            onClose?.();
+          if (e.key === 'Escape') {
+            if (dismissOnEsc) {
+              onClose?.();
+            } else {
+              e.preventDefault();
+            }
           }
         }}
         onMouseUp={handleMouseEvent}

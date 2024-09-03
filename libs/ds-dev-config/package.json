@@ -1,7 +1,7 @@
 {
   "name": "@skatteetaten/ds-dev-config",
   "groupId": "no.skatteetaten.aurora",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://www.skatteetaten.no/stilogtone/designsystemet/",
   "repository": {
     "type": "git",
@@ -15,5 +15,9 @@
     "@nx/eslint-plugin": "15.0.0"
   },
   "executors": "executors.json",
-  "scripts": {}
+  "scripts": {},
+  "dependencies": {
+    "@swc/helpers": "~0.5.2"
+  },
+  "devDependencies": {}
 }

@@ -50,16 +50,23 @@ export const FileUploaderFile = forwardRef<
         <div className={styles.fileListContainer}>
           <span className={styles.fileListGrid}>
             {href ? (
-              <Link
-                id={`${id}-file-${children}`}
-                svgPath={FileOutlineSVGpath}
-                href={href}
-                className={styles.fileListText}
-                download
-                onClick={onClick}
-              >
-                {children}
-              </Link>
+              <>
+                <Link
+                  id={`${id}-file-${children}`}
+                  svgPath={FileOutlineSVGpath}
+                  href={href}
+                  className={styles.fileListText}
+                  download
+                  onClick={onClick}
+                >
+                  {children}
+                </Link>
+                <CheckIcon
+                  className={`${styles.successIcon} ${styles.successIconLinkMargin}`}
+                  size={'medium'}
+                  title={successIconTitle ?? t('fileuploader.SuccessIconLabel')}
+                />
+              </>
             ) : (
               <span className={styles.fileListText}>
                 <FileOutlineIcon
@@ -73,9 +80,15 @@ export const FileUploaderFile = forwardRef<
                 >
                   {children}
                 </span>
+
+                <CheckIcon
+                  className={styles.successIcon}
+                  size={'medium'}
+                  title={successIconTitle ?? t('fileuploader.SuccessIconLabel')}
+                />
               </span>
             )}
-            {showSpinner ? (
+            {showSpinner && (
               <Spinner
                 className={styles.fileSpinner}
                 color={'blue'}
@@ -84,12 +97,6 @@ export const FileUploaderFile = forwardRef<
               >
                 {t('fileuploader.DeleteInProgress')}
               </Spinner>
-            ) : (
-              <CheckIcon
-                className={styles.successIcon}
-                size={'medium'}
-                title={successIconTitle ?? t('fileuploader.SuccessIconLabel')}
-              />
             )}
           </span>
           <span>
