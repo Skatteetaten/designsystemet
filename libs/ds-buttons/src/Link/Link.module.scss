@@ -41,7 +41,15 @@
     }
   }
 
-  &:active .icon {
-    fill: var(--semantic-interactive-foreground);
+  &:focus .icon {
+    fill: var(--palette-graphite-0);
+  }
+
+  &:focus:hover .icon {
+    fill: var(--semantic-interactive-main);
+  }
+
+  &:hover:active .icon {
+    fill: var(--palette-graphite-0);
   }
 }
