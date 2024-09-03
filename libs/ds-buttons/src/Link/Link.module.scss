@@ -31,6 +31,9 @@
 
     &:focus {
       @extend %focus;
+
+      --semantic-interactive-main: var(--theme-primary);
+      --semantic-interactive-background: var(--palette-graphite-0);
     }
 
     &:active {
