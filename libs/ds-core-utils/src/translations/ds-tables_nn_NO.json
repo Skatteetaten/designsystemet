@@ -2,6 +2,7 @@
   "pagination.Back": "Tilbake",
   "pagination.Forward": "Fram",
   "pagination.Title": "Viser {view} av {total}",
+  "table.NotSorted": "Ikkje sortert",
   "table.Sortable": "Sorterbar",
   "table.SortedAscending": "Sortert stigande",
   "table.SortedDescending": "Sortert søkkande",
