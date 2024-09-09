@@ -2,6 +2,7 @@
   "pagination.Back": "Back",
   "pagination.Forward": "Forward",
   "pagination.Title": "Shows {view} of {total}",
+  "table.NotSorted": "Not sorted",
   "table.Sortable": "Sortable",
   "table.SortedAscending": "Sorted ascending",
   "table.SortedDescending": "Sorted descending",
