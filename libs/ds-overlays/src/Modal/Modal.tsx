@@ -73,22 +73,17 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
     };
 
     const handleMouseEvent = (event: MouseEvent): void => {
-      console.log('handleMouseEvent');
       if (!dismissOnOutsideClick || !(event.target instanceof HTMLElement)) {
-        console.log('!dismissOnOutsideClick');
         return;
       }
       if (event.type === 'mousedown') {
-        console.log('event.type === mousedown');
         statusFlagRef.current.mouseDownCaptured = false;
       }
       if (isClickOutside(event)) {
-        console.log('isClickOutside');
         if (
           event.type === 'mouseup' &&
           statusFlagRef.current.mouseDownCaptured
         ) {
-          console.log('%c Kaller onClose', 'color: red');
           onClose?.();
           modalRef.current?.close();
         } else {
