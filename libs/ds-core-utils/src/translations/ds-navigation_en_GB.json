@@ -1,4 +1,6 @@
 {
+  "breadcrumbs.ExpandAltText": "(Display full path)",
+  "breadcrumbs.NavAriaLabel": "You are here:",
   "pagination.EllipsisAltText": "Dot, dot, dot",
   "pagination.NextButtonTitle": "Next",
   "pagination.PageSummary": "Shows {{range}} of {{total}}",

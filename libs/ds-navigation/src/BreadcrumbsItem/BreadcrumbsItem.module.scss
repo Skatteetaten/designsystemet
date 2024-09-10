@@ -1,0 +1,13 @@
+.breadcrumbsItem {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  color: var(--palette-graphite-100);
+  font-size: var(--font-size-m);
+  gap: 0 var(--spacing-s);
+  list-style-type: none;
+
+  &:last-child &Separator {
+    display: none;
+  }
+}

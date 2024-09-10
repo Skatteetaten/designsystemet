@@ -1,0 +1,575 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Breadcrumbs/Breadcrumbs Defaults smoke-test 1`] = `
+<div data-test-block="true">
+  <nav class
+       aria-label="Du er her:"
+  >
+    <ol class="_breadcrumbsList_p1lxe_1">
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Bedrift og organisasjon
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Avgifter
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Avgifter på bil og kjøretøy
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1"
+          aria-current="page"
+      >
+        Vektårsavgift
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+    </ol>
+  </nav>
+</div>
+`;
+
+exports[`Tester/Breadcrumbs/Breadcrumbs WithAriaLabel play-test 1`] = `
+<div data-test-block="true">
+  <nav class
+       aria-label="Du er her:"
+  >
+    <ol class="_breadcrumbsList_p1lxe_1  _breadcrumbsListExpanded_p1lxe_18">
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Bedrift og organisasjon
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Avgifter
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Avgifter på bil og kjøretøy
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Vektårsavgift
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          VH89236
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Bla bla bla
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          En siste link
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+    </ol>
+  </nav>
+</div>
+`;
+
+exports[`Tester/Breadcrumbs/Breadcrumbs WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <nav id="htmlId"
+       class="dummyClassname"
+       lang="nb"
+       data-testid="123ID"
+       aria-label="Du er her:"
+  >
+    <ol class="_breadcrumbsList_p1lxe_1">
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Bedrift og organisasjon
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Avgifter
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Avgifter på bil og kjøretøy
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1"
+          aria-current="page"
+      >
+        Vektårsavgift
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+    </ol>
+  </nav>
+</div>
+`;
+
+exports[`Tester/Breadcrumbs/Breadcrumbs WithCollapsed play-test 1`] = `
+<div data-test-block="true">
+  <nav class
+       aria-label="Du er her:"
+  >
+    <ol class="_breadcrumbsList_p1lxe_1 _breadcrumbsListCollapsed_p1lxe_14">
+      <li class="_expandButtonWrapper_p1lxe_22">
+        <button class="_button_g87u5_1 _button_medium_g87u5_45  "
+                type="button"
+        >
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-labelledby="svgtitle-:r0:"
+               aria-hidden="false"
+               role="img"
+          >
+            <title id="svgtitle-:r0:">
+              Vis hele stien
+            </title>
+            <path d="M16 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm-6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm-6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Z">
+            </path>
+          </svg>
+        </button>
+        <span aria-hidden="true">
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Bla bla bla
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          En siste link
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+    </ol>
+  </nav>
+</div>
+`;
+
+exports[`Tester/Breadcrumbs/Breadcrumbs WithExpandClickAndFocus play-test 1`] = `
+<div data-test-block="true">
+  <nav class
+       aria-label="Du er her:"
+  >
+    <ol class="_breadcrumbsList_p1lxe_1  _breadcrumbsListExpanded_p1lxe_18">
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Bedrift og organisasjon
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Avgifter
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Avgifter på bil og kjøretøy
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Vektårsavgift
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          VH89236
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Bla bla bla
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          En siste link
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+    </ol>
+  </nav>
+</div>
+`;
+
+exports[`Tester/Breadcrumbs/Breadcrumbs WithNavigation smoke-test 1`] = `
+<div data-test-block="true">
+  <nav class
+       aria-label="Du er her:"
+  >
+    <ol class="_breadcrumbsList_p1lxe_1 _breadcrumbsListCollapsed_p1lxe_14">
+      <li class="_expandButtonWrapper_p1lxe_22">
+        <button class="_button_g87u5_1 _button_medium_g87u5_45  "
+                type="button"
+        >
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-labelledby="svgtitle-:r2:"
+               aria-hidden="false"
+               role="img"
+          >
+            <title id="svgtitle-:r2:">
+              Vis hele stien
+            </title>
+            <path d="M16 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm-6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm-6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Z">
+            </path>
+          </svg>
+        </button>
+        <span aria-hidden="true">
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Bla bla bla
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          En siste link
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+    </ol>
+  </nav>
+</div>
+`;
+
+exports[`Tester/Breadcrumbs/Breadcrumbs WithRef play-test 1`] = `
+<div data-test-block="true">
+  <nav class
+       aria-label="Du er her:"
+       id="dummyIdForwardedFromRef"
+  >
+    <ol class="_breadcrumbsList_p1lxe_1">
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Bedrift og organisasjon
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Avgifter
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Avgifter på bil og kjøretøy
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1"
+          aria-current="page"
+      >
+        Vektårsavgift
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+    </ol>
+  </nav>
+</div>
+`;
+
+exports[`Tester/Breadcrumbs/Breadcrumbs WithoutCollapse play-test 1`] = `
+<div data-test-block="true">
+  <nav class
+       aria-label="Du er her:"
+  >
+    <ol class="_breadcrumbsList_p1lxe_1  _breadcrumbsListExpanded_p1lxe_18">
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Bedrift og organisasjon
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Avgifter
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Avgifter på bil og kjøretøy
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Vektårsavgift
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          VH89236
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          Bla bla bla
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+      <li class="_breadcrumbsItem_1jlx4_1">
+        <a class="_link_1y34f_1  "
+           href="#"
+        >
+          En siste link
+        </a>
+        <span class="_breadcrumbsItemSeparator_1jlx4_10"
+              aria-hidden="true"
+        >
+          /
+        </span>
+      </li>
+    </ol>
+  </nav>
+</div>
+`;

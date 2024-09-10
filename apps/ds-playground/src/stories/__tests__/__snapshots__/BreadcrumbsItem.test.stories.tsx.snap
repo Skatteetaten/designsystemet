@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Breadcrumbs/Item WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <ol>
+    <li id="htmlId"
+        class="_breadcrumbsItem_1jlx4_1 dummyClassname"
+        lang="nb"
+        data-testid="123ID"
+    >
+      <a class="_link_1y34f_1  "
+         href="#"
+      >
+        Bedrift og organisasjon
+      </a>
+      <span class="_breadcrumbsItemSeparator_1jlx4_10"
+            aria-hidden="true"
+      >
+        /
+      </span>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`Tester/Breadcrumbs/Item WithIsCurrentPage play-test 1`] = `
+<div data-test-block="true">
+  <ol>
+    <li class="_breadcrumbsItem_1jlx4_1"
+        aria-current="page"
+    >
+      <a class="_link_1y34f_1  "
+         href="#"
+      >
+        Bedrift og organisasjon
+      </a>
+      <span class="_breadcrumbsItemSeparator_1jlx4_10"
+            aria-hidden="true"
+      >
+        /
+      </span>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`Tester/Breadcrumbs/Item WithRef play-test 1`] = `
+<div data-test-block="true">
+  <ol>
+    <li class="_breadcrumbsItem_1jlx4_1"
+        id="dummyIdForwardedFromRef"
+    >
+      <a class="_link_1y34f_1  "
+         href="#"
+      >
+        Bedrift og organisasjon
+      </a>
+      <span class="_breadcrumbsItemSeparator_1jlx4_10"
+            aria-hidden="true"
+      >
+        /
+      </span>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`Tester/Breadcrumbs/Item WithSeparatorHidden play-test 1`] = `
+<div data-test-block="true">
+  <ol>
+    <li class="_breadcrumbsItem_1jlx4_1">
+      <a class="_link_1y34f_1  "
+         href="#"
+      >
+        Bedrift og organisasjon
+      </a>
+      <span class="_breadcrumbsItemSeparator_1jlx4_10"
+            aria-hidden="true"
+      >
+        /
+      </span>
+    </li>
+  </ol>
+</div>
+`;

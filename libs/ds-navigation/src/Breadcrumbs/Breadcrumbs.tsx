@@ -1,13 +1,12 @@
 import { JSX, forwardRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { BreadcrumbsComponent, BreadcrumbsProps } from './Breadcrumbs.types';
-import { BreadcrumbItem } from '../BreadcrumbItem/BreadcrumbItem';
-import { BreadcrumbLink } from '../BreadcrumbLink/BreadcrumbLink';
-import { BreadcrumbList } from '../BreadcrumbList/BreadcrumbList';
-
-import styles from './Breadcrumbs.module.scss';
+import { BreadcrumbsItem } from '../BreadcrumbsItem/BreadcrumbsItem';
+import { BreadcrumbsLink } from '../BreadcrumbsLink/BreadcrumbsLink';
+import { BreadcrumbsList } from '../BreadcrumbsList/BreadcrumbsList';
 
 export const Breadcrumbs = forwardRef<HTMLElement, BreadcrumbsProps>(
   (
@@ -20,18 +19,16 @@ export const Breadcrumbs = forwardRef<HTMLElement, BreadcrumbsProps>(
     },
     ref
   ): JSX.Element => {
-    // const { t } = useTranslation('ds_buttons', { i18n: dsI18n });
-
-    const concatenatedClassNames = `${styles.breadcrumbs} ${className}`.trim();
+    const { t } = useTranslation('ds_navigation', { i18n: dsI18n });
 
     return (
       <nav
         ref={ref}
         id={id}
-        className={concatenatedClassNames}
+        className={className}
         lang={lang}
         data-testid={dataTestId}
-        aria-label={'brødsmuler (hent fra tekstslistekatalogen)'}
+        aria-label={t('breadcrumbs.NavAriaLabel')}
       >
         {children}
       </nav>
@@ -41,11 +38,11 @@ export const Breadcrumbs = forwardRef<HTMLElement, BreadcrumbsProps>(
 
 Breadcrumbs.displayName = 'Breadcrumbs';
 
-Breadcrumbs.List = BreadcrumbList;
-Breadcrumbs.List.displayName = 'BreadcrumbList';
+Breadcrumbs.List = BreadcrumbsList;
+Breadcrumbs.List.displayName = 'BreadcrumbsList';
 
-Breadcrumbs.Item = BreadcrumbItem;
-Breadcrumbs.Item.displayName = 'BreadcrumbItem';
+Breadcrumbs.Item = BreadcrumbsItem;
+Breadcrumbs.Item.displayName = 'BreadcrumbsItem';
 
-Breadcrumbs.Link = BreadcrumbLink;
-Breadcrumbs.Link.displayName = 'BreadcrumbLink';
+Breadcrumbs.Link = BreadcrumbsLink;
+Breadcrumbs.Link.displayName = 'BreadcrumbsLink';
