@@ -154,10 +154,10 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
         </span>
         <div class="_childrenContainer_192u7_1">
           <div class="_alignRight_192u7_5">
-            <a class="_link_1y34f_1 _link_white_1y34f_1 marginL"
+            <a class="_link_bev6k_1 _link_white_bev6k_1 marginL"
                href="/hjelp"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_1y34f_27 _icon_isCustom_1y34f_33"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_bev6k_29 _icon_isCustom_bev6k_35"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-hidden="true"

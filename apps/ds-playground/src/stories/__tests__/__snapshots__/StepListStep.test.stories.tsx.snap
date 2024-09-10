@@ -16,7 +16,7 @@ exports[`Tester/StepList/Step NextButtonWithDisabled smoke-test 1`] = `
         </div>
       </div>
       <h3 id="steptitle-:r9:"
-          class="_heading_ppf3o_1 _heading_level5_ppf3o_45  _stepHeading_14g5z_75"
+          class="_heading_lxscd_1 _heading_level5_lxscd_47  _stepHeading_14g5z_75"
       >
         tittel
       </h3>
@@ -59,7 +59,7 @@ exports[`Tester/StepList/Step NextButtonWithSpinner smoke-test 1`] = `
         </div>
       </div>
       <h3 id="steptitle-:r8:"
-          class="_heading_ppf3o_1 _heading_level5_ppf3o_45  _stepHeading_14g5z_75"
+          class="_heading_lxscd_1 _heading_level5_lxscd_47  _stepHeading_14g5z_75"
       >
         tittel
       </h3>
@@ -115,7 +115,7 @@ exports[`Tester/StepList/Step WithAttributes play-test 1`] = `
         </div>
       </div>
       <h3 id="steptitle-htmlid"
-          class="_heading_ppf3o_1 _heading_level5_ppf3o_45  _stepHeading_14g5z_75"
+          class="_heading_lxscd_1 _heading_level5_lxscd_47  _stepHeading_14g5z_75"
       >
         title
       </h3>
@@ -145,7 +145,7 @@ exports[`Tester/StepList/Step WithEditAccessibleDescription play-test 1`] = `
         </div>
       </div>
       <h3 id="steptitle-:r6:"
-          class="_heading_ppf3o_1 _heading_level5_ppf3o_45  _stepHeading_14g5z_75"
+          class="_heading_lxscd_1 _heading_level5_lxscd_47  _stepHeading_14g5z_75"
       >
         tittel
       </h3>
@@ -205,7 +205,7 @@ exports[`Tester/StepList/Step WithFullWidthResult smoke-test 1`] = `
         </div>
       </div>
       <h3 id="steptitle-:r4:"
-          class="_heading_ppf3o_1 _heading_level5_ppf3o_45  _stepHeading_14g5z_75"
+          class="_heading_lxscd_1 _heading_level5_lxscd_47  _stepHeading_14g5z_75"
       >
         jeg er en tittel
       </h3>
@@ -248,7 +248,7 @@ exports[`Tester/StepList/Step WithIconTitleAS play-test 1`] = `
         </div>
       </div>
       <h2 id="steptitle-:r2:"
-          class="_heading_ppf3o_1 _heading_level5_ppf3o_45  _stepHeading_14g5z_75"
+          class="_heading_lxscd_1 _heading_level5_lxscd_47  _stepHeading_14g5z_75"
       >
         jeg er en tittel
       </h2>
@@ -280,7 +280,7 @@ exports[`Tester/StepList/Step WithRef play-test 1`] = `
         </div>
       </div>
       <h3 id="steptitle-:r0:"
-          class="_heading_ppf3o_1 _heading_level5_ppf3o_45  _stepHeading_14g5z_75"
+          class="_heading_lxscd_1 _heading_level5_lxscd_47  _stepHeading_14g5z_75"
       >
         title
       </h3>

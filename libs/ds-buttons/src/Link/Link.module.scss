@@ -27,18 +27,16 @@
     &:focus {
       @extend %focus;
 
-      box-shadow: 0 0 0 5px var(--semantic-interactive-main);
+      --semantic-interactive-main: var(--palette-graphite-0);
+      --semantic-interactive-background: var(--theme-primary);
+
       color: var(--theme-primary);
-      outline: 2px solid var(--theme-primary);
       text-decoration: underline;
     }
 
     &:hover {
       --semantic-interactive-main: var(--theme-primary);
       --semantic-interactive-background: var(--palette-graphite-0);
-
-      box-shadow: none;
-      outline: none;
     }
 
     &:active {
@@ -46,6 +44,10 @@
 
       --semantic-interactive-foreground: var(--palette-graphite-0);
       --theme-primary: var(--palette-graphite-100);
+    }
+
+    &:hover:active {
+      text-decoration: underline;
     }
   }
 }

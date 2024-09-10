@@ -2,19 +2,19 @@
 
 exports[`Tester/Heading Defaults play-test 1`] = `
 <div data-test-block="true">
-  <h2 class="_heading_ppf3o_1 _heading_level1_ppf3o_14  ">
+  <h2 class="_heading_lxscd_1 _heading_level1_lxscd_16  ">
     Heading level 1
   </h2>
-  <h2 class="_heading_ppf3o_1 _heading_level2_ppf3o_23  ">
+  <h2 class="_heading_lxscd_1 _heading_level2_lxscd_25  ">
     Heading level 2
   </h2>
-  <h2 class="_heading_ppf3o_1 _heading_level3_ppf3o_32  ">
+  <h2 class="_heading_lxscd_1 _heading_level3_lxscd_34  ">
     Heading level 3
   </h2>
-  <h2 class="_heading_ppf3o_1 _heading_level4_ppf3o_41  ">
+  <h2 class="_heading_lxscd_1 _heading_level4_lxscd_43  ">
     Heading level 4
   </h2>
-  <h2 class="_heading_ppf3o_1 _heading_level5_ppf3o_45  ">
+  <h2 class="_heading_lxscd_1 _heading_level5_lxscd_47  ">
     Heading level 5
   </h2>
 </div>
@@ -22,19 +22,19 @@ exports[`Tester/Heading Defaults play-test 1`] = `
 
 exports[`Tester/Heading DefaultsMobile smoke-test 1`] = `
 <div data-test-block="true">
-  <h2 class="_heading_ppf3o_1 _heading_level1_ppf3o_14  ">
+  <h2 class="_heading_lxscd_1 _heading_level1_lxscd_16  ">
     Heading level 1
   </h2>
-  <h2 class="_heading_ppf3o_1 _heading_level2_ppf3o_23  ">
+  <h2 class="_heading_lxscd_1 _heading_level2_lxscd_25  ">
     Heading level 2
   </h2>
-  <h2 class="_heading_ppf3o_1 _heading_level3_ppf3o_32  ">
+  <h2 class="_heading_lxscd_1 _heading_level3_lxscd_34  ">
     Heading level 3
   </h2>
-  <h2 class="_heading_ppf3o_1 _heading_level4_ppf3o_41  ">
+  <h2 class="_heading_lxscd_1 _heading_level4_lxscd_43  ">
     Heading level 4
   </h2>
-  <h2 class="_heading_ppf3o_1 _heading_level5_ppf3o_45  ">
+  <h2 class="_heading_lxscd_1 _heading_level5_lxscd_47  ">
     Heading level 5
   </h2>
 </div>
@@ -42,19 +42,19 @@ exports[`Tester/Heading DefaultsMobile smoke-test 1`] = `
 
 exports[`Tester/Heading LevelsWithSpacing smoke-test 1`] = `
 <div data-test-block="true">
-  <h2 class="_heading_ppf3o_1 _heading_level1_ppf3o_14 _heading_hasSpacingMedium_ppf3o_55 ">
+  <h2 class="_heading_lxscd_1 _heading_level1_lxscd_16 _heading_hasSpacingMedium_lxscd_57 ">
     Heading level 1
   </h2>
-  <h2 class="_heading_ppf3o_1 _heading_level2_ppf3o_23 _heading_hasSpacingSmallMobileMediumOtherwise_ppf3o_58 ">
+  <h2 class="_heading_lxscd_1 _heading_level2_lxscd_25 _heading_hasSpacingSmallMobileMediumOtherwise_lxscd_60 ">
     Heading level 2
   </h2>
-  <h2 class="_heading_ppf3o_1 _heading_level3_ppf3o_32 _heading_hasSpacingSmall_ppf3o_52 ">
+  <h2 class="_heading_lxscd_1 _heading_level3_lxscd_34 _heading_hasSpacingSmall_lxscd_54 ">
     Heading level 3
   </h2>
-  <h2 class="_heading_ppf3o_1 _heading_level4_ppf3o_41 _heading_hasSpacingSmall_ppf3o_52 ">
+  <h2 class="_heading_lxscd_1 _heading_level4_lxscd_43 _heading_hasSpacingSmall_lxscd_54 ">
     Heading level 4
   </h2>
-  <h2 class="_heading_ppf3o_1 _heading_level5_ppf3o_45 _heading_hasSpacingExtraSmall_ppf3o_49 ">
+  <h2 class="_heading_lxscd_1 _heading_level5_lxscd_47 _heading_hasSpacingExtraSmall_lxscd_51 ">
     Heading level 5
   </h2>
 </div>
@@ -62,19 +62,19 @@ exports[`Tester/Heading LevelsWithSpacing smoke-test 1`] = `
 
 exports[`Tester/Heading LevelsWithSpacingMobile smoke-test 1`] = `
 <div data-test-block="true">
-  <h2 class="_heading_ppf3o_1 _heading_level1_ppf3o_14 _heading_hasSpacingMedium_ppf3o_55 ">
+  <h2 class="_heading_lxscd_1 _heading_level1_lxscd_16 _heading_hasSpacingMedium_lxscd_57 ">
     Heading level 1
   </h2>
-  <h2 class="_heading_ppf3o_1 _heading_level2_ppf3o_23 _heading_hasSpacingSmallMobileMediumOtherwise_ppf3o_58 ">
+  <h2 class="_heading_lxscd_1 _heading_level2_lxscd_25 _heading_hasSpacingSmallMobileMediumOtherwise_lxscd_60 ">
     Heading level 2
   </h2>
-  <h2 class="_heading_ppf3o_1 _heading_level3_ppf3o_32 _heading_hasSpacingSmall_ppf3o_52 ">
+  <h2 class="_heading_lxscd_1 _heading_level3_lxscd_34 _heading_hasSpacingSmall_lxscd_54 ">
     Heading level 3
   </h2>
-  <h2 class="_heading_ppf3o_1 _heading_level4_ppf3o_41 _heading_hasSpacingSmall_ppf3o_52 ">
+  <h2 class="_heading_lxscd_1 _heading_level4_lxscd_43 _heading_hasSpacingSmall_lxscd_54 ">
     Heading level 4
   </h2>
-  <h2 class="_heading_ppf3o_1 _heading_level5_ppf3o_45 _heading_hasSpacingExtraSmall_ppf3o_49 ">
+  <h2 class="_heading_lxscd_1 _heading_level5_lxscd_47 _heading_hasSpacingExtraSmall_lxscd_51 ">
     Heading level 5
   </h2>
 </div>
@@ -82,22 +82,22 @@ exports[`Tester/Heading LevelsWithSpacingMobile smoke-test 1`] = `
 
 exports[`Tester/Heading WithAs play-test 1`] = `
 <div data-test-block="true">
-  <h1 class="_heading_ppf3o_1 _heading_level2_ppf3o_23  ">
+  <h1 class="_heading_lxscd_1 _heading_level2_lxscd_25  ">
     Heading h1
   </h1>
-  <h2 class="_heading_ppf3o_1 _heading_level2_ppf3o_23  ">
+  <h2 class="_heading_lxscd_1 _heading_level2_lxscd_25  ">
     Heading h2
   </h2>
-  <h3 class="_heading_ppf3o_1 _heading_level2_ppf3o_23  ">
+  <h3 class="_heading_lxscd_1 _heading_level2_lxscd_25  ">
     Heading h3
   </h3>
-  <h4 class="_heading_ppf3o_1 _heading_level2_ppf3o_23  ">
+  <h4 class="_heading_lxscd_1 _heading_level2_lxscd_25  ">
     Heading h4
   </h4>
-  <h5 class="_heading_ppf3o_1 _heading_level2_ppf3o_23  ">
+  <h5 class="_heading_lxscd_1 _heading_level2_lxscd_25  ">
     Heading h5
   </h5>
-  <h6 class="_heading_ppf3o_1 _heading_level2_ppf3o_23  ">
+  <h6 class="_heading_lxscd_1 _heading_level2_lxscd_25  ">
     Heading h6
   </h6>
 </div>
@@ -106,7 +106,7 @@ exports[`Tester/Heading WithAs play-test 1`] = `
 exports[`Tester/Heading WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <h2 id="htmlId"
-      class="_heading_ppf3o_1 _heading_level2_ppf3o_23  dummyClassname"
+      class="_heading_lxscd_1 _heading_level2_lxscd_25  dummyClassname"
       lang="nb"
       data-testid="123ID"
   >
@@ -117,7 +117,7 @@ exports[`Tester/Heading WithAttributes play-test 1`] = `
 
 exports[`Tester/Heading WithMarkup smoke-test 1`] = `
 <div data-test-block="true">
-  <h2 class="_heading_ppf3o_1 _heading_level2_ppf3o_23 _heading_hasSpacingSmallMobileMediumOtherwise_ppf3o_58 ">
+  <h2 class="_heading_lxscd_1 _heading_level2_lxscd_25 _heading_hasSpacingSmallMobileMediumOtherwise_lxscd_60 ">
     Dette er den
     <a href="https://skatteetaten.no">
       fyneste markup headingen
@@ -136,7 +136,7 @@ exports[`Tester/Heading WithMarkup smoke-test 1`] = `
     </code>
     med spacing under og en skrivefeil
   </h2>
-  <h2 class="_heading_ppf3o_1 _heading_level2_ppf3o_23  ">
+  <h2 class="_heading_lxscd_1 _heading_level2_lxscd_25  ">
     Dette er den fineste string headingen uten markup
   </h2>
 </div>
@@ -144,7 +144,7 @@ exports[`Tester/Heading WithMarkup smoke-test 1`] = `
 
 exports[`Tester/Heading WithRef play-test 1`] = `
 <div data-test-block="true">
-  <h2 class="_heading_ppf3o_1 _heading_level2_ppf3o_23  "
+  <h2 class="_heading_lxscd_1 _heading_level2_lxscd_25  "
       id="dummyIdForwardedFromRef"
   >
     Dette er en heading

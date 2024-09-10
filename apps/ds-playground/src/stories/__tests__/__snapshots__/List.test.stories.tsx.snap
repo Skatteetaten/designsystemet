@@ -3,13 +3,13 @@
 exports[`Tester/List/List Defaults play-test 1`] = `
 <div data-test-block="true">
   <ul class="_list_1xbs1_1 _list_withBullet_1xbs1_8  ">
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Kjenner du behovet til brukeren?
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Snakk med andre.
     </li>
   </ul>
@@ -19,13 +19,13 @@ exports[`Tester/List/List Defaults play-test 1`] = `
 exports[`Tester/List/List VariantNumber play-test 1`] = `
 <div data-test-block="true">
   <ol class="_list_1xbs1_1   ">
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Kjenner du behovet til brukeren?
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Snakk med andre.
     </li>
   </ol>
@@ -39,13 +39,13 @@ exports[`Tester/List/List WithAttributes play-test 1`] = `
       lang="nb"
       data-testid="123ID"
   >
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Kjenner du behovet til brukeren?
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Snakk med andre.
     </li>
   </ul>
@@ -54,55 +54,55 @@ exports[`Tester/List/List WithAttributes play-test 1`] = `
 
 exports[`Tester/List/List WithBothVariantsAndAtLeast10NumberItems smoke-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15  ">
+  <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17  ">
     Her kan du se hvordan de forskjellige variantene til en list ser ut sammen med andre elementer med veksling av luft under listene.
   </p>
   <ul class="_list_1xbs1_1 _list_withBullet_1xbs1_8  ">
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Kjenner du behovet til brukeren?
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Snakk med andre.
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Kjenner du behovet?
     </li>
   </ul>
-  <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15  ">
+  <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17  ">
     Den første listen kan veksle mellom variantene en liste har.
   </p>
   <ol class="_list_1xbs1_1   ">
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Kjenner du behovet til brukeren?
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Snakk med andre
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Kjenner du behovet?
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Snakk med andre når som helst
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Kjenner du behovet?
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Snakk med andre ofte
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Snakk med andre aldri
     </li>
   </ol>
@@ -112,10 +112,10 @@ exports[`Tester/List/List WithBothVariantsAndAtLeast10NumberItems smoke-test 1`]
 exports[`Tester/List/List WithLongTextAndBreaking smoke-test 1`] = `
 <div data-test-block="true">
   <ul class="_list_1xbs1_1 _list_withBullet_1xbs1_8  ">
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Denne listItem har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert, brekke over flere linjer og får et hengende innrykk.
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       DennelistItemharenveldiglangtekst.Sålangatdentvingerframlinjeskiftmedtekstsomalltidervenstrejustertbrekkeoverflerelinjerogfårethengendeinntrykk.
     </li>
   </ul>
@@ -125,19 +125,19 @@ exports[`Tester/List/List WithLongTextAndBreaking smoke-test 1`] = `
 exports[`Tester/List/List WithMarkup smoke-test 1`] = `
 <div data-test-block="true">
   <ul class="_list_1xbs1_1 _list_withBullet_1xbs1_8  ">
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Kjenner du behovet til
       <strong>
         brukeren?
       </strong>
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Behovet til brukeren er veldig viktig.
       <a href="#storybook-root">
         Er du sikker på at du kjenner behovet til brukeren?
       </a>
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Snakk med andre om
       <em>
         italic,
@@ -159,13 +159,13 @@ exports[`Tester/List/List WithRef play-test 1`] = `
   <ul class="_list_1xbs1_1 _list_withBullet_1xbs1_8  "
       id="dummyIdForwardedFromRef"
   >
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Kjenner du behovet til brukeren?
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Snakk med andre.
     </li>
   </ul>
@@ -174,21 +174,21 @@ exports[`Tester/List/List WithRef play-test 1`] = `
 
 exports[`Tester/List/List WithSpacing smoke-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15 _paragraph_hasSpacingLarge_iocao_21 ">
+  <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
     Jeg er et tekstavsnitt uten innrykk. Denne teksten skulle bli ca. to linjer lang, men jeg trenger litt mer innhold for å bli to linjer lang. Derfor fortsetter jeg å skrive på dette tekstavsnittet uten innrykk og etter en stund blir denne teksten ca to linjer lang.
   </p>
   <ul class="_list_1xbs1_1 _list_withBullet_1xbs1_8 _list_hasSpacing_1xbs1_11 ">
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Kjenner du behovet til brukeren?
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Er du sikker på at du kjenner behovet til brukeren?
     </li>
-    <li class="_element_bxsik_1 ">
+    <li class="_element_sq04k_1 ">
       Snakk med andre.
     </li>
   </ul>
-  <p class="_paragraph_iocao_1 _paragraph_standard_iocao_15  ">
+  <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17  ">
     Jeg er et tekstavsnitt uten innrykk. Denne teksten skulle bli ca. to linjer lang, men jeg trenger litt mer innhold for å bli to linjer lang. Derfor fortsetter jeg å skrive på dette tekstavsnittet uten innrykk og etter en stund blir denne teksten ca to linjer lang.
   </p>
 </div>

@@ -2,7 +2,7 @@
 
 exports[`Tester/Blockquote Defaults smoke-test 1`] = `
 <div data-test-block="true">
-  <blockquote class="_blockquote_semcm_1  ">
+  <blockquote class="_blockquote_1xsll_1  ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </blockquote>
 </div>
@@ -11,7 +11,7 @@ exports[`Tester/Blockquote Defaults smoke-test 1`] = `
 exports[`Tester/Blockquote WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <blockquote id="htmlId"
-              class="_blockquote_semcm_1  dummyClassname"
+              class="_blockquote_1xsll_1  dummyClassname"
               lang="nb"
               data-testid="123ID"
   >
@@ -22,7 +22,7 @@ exports[`Tester/Blockquote WithAttributes play-test 1`] = `
 
 exports[`Tester/Blockquote WithMarkup smoke-test 1`] = `
 <div data-test-block="true">
-  <blockquote class="_blockquote_semcm_1  ">
+  <blockquote class="_blockquote_1xsll_1  ">
     <div>
       Manowar Manowar living on the road
       <a href="https://en.wikipedia.org/wiki/Manowar">
@@ -69,7 +69,7 @@ exports[`Tester/Blockquote WithMarkup smoke-test 1`] = `
 
 exports[`Tester/Blockquote WithRef play-test 1`] = `
 <div data-test-block="true">
-  <blockquote class="_blockquote_semcm_1  "
+  <blockquote class="_blockquote_1xsll_1  "
               id="dummyIdForwardedFromRef"
   >
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
@@ -79,10 +79,10 @@ exports[`Tester/Blockquote WithRef play-test 1`] = `
 
 exports[`Tester/Blockquote WithSpacing smoke-test 1`] = `
 <div data-test-block="true">
-  <blockquote class="_blockquote_semcm_1 _blockquote_hasSpacing_semcm_18 ">
+  <blockquote class="_blockquote_1xsll_1 _blockquote_hasSpacing_1xsll_20 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </blockquote>
-  <blockquote class="_blockquote_semcm_1 _blockquote_hasSpacing_semcm_18 ">
+  <blockquote class="_blockquote_1xsll_1 _blockquote_hasSpacing_1xsll_20 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </blockquote>
 </div>

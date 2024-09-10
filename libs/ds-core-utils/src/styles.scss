@@ -27,6 +27,14 @@
     background-color: var(--semantic-interactive-foreground);
     color: var(--palette-graphite-0);
   }
+
+  &:focus:hover {
+    text-decoration: underline;
+  }
+
+  &:hover:active {
+    text-decoration: none;
+  }
 }
 
 @mixin sr-only {
