@@ -117,11 +117,13 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           >
             Årstall
           </label>
-          <input id="textFieldTextboxId-:ro:"
-                 class="_textbox_1lamq_5"
-                 inputmode="numeric"
-                 value="2024"
-          >
+          <div class="_inputWrapper_jd6ca_6">
+            <input id="textFieldTextboxId-:ro:"
+                   class="_textbox_jd6ca_12"
+                   inputmode="numeric"
+                   value="2024"
+            >
+          </div>
           <div id="textFieldErrorId-:rn:"
                aria-live="assertive"
                aria-atomic="true"
@@ -630,11 +632,13 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           >
             Årstall
           </label>
-          <input id="textFieldTextboxId-:rf:"
-                 class="_textbox_1lamq_5"
-                 inputmode="numeric"
-                 value="2024"
-          >
+          <div class="_inputWrapper_jd6ca_6">
+            <input id="textFieldTextboxId-:rf:"
+                   class="_textbox_jd6ca_12"
+                   inputmode="numeric"
+                   value="2024"
+            >
+          </div>
           <div id="textFieldErrorId-:re:"
                aria-live="assertive"
                aria-atomic="true"
@@ -1139,11 +1143,13 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           >
             Årstall
           </label>
-          <input id="textFieldTextboxId-:r25:"
-                 class="_textbox_1lamq_5"
-                 inputmode="numeric"
-                 value="2024"
-          >
+          <div class="_inputWrapper_jd6ca_6">
+            <input id="textFieldTextboxId-:r25:"
+                   class="_textbox_jd6ca_12"
+                   inputmode="numeric"
+                   value="2024"
+            >
+          </div>
           <div id="textFieldErrorId-:r24:"
                aria-live="assertive"
                aria-atomic="true"
@@ -1648,11 +1654,13 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
           >
             Årstall
           </label>
-          <input id="textFieldTextboxId-:r1j:"
-                 class="_textbox_1lamq_5"
-                 inputmode="numeric"
-                 value="2024"
-          >
+          <div class="_inputWrapper_jd6ca_6">
+            <input id="textFieldTextboxId-:r1j:"
+                   class="_textbox_jd6ca_12"
+                   inputmode="numeric"
+                   value="2024"
+            >
+          </div>
           <div id="textFieldErrorId-:r1i:"
                aria-live="assertive"
                aria-atomic="true"
@@ -2177,11 +2185,13 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWith
           >
             Årstall
           </label>
-          <input id="textFieldTextboxId-:r1s:"
-                 class="_textbox_1lamq_5"
-                 inputmode="numeric"
-                 value="2024"
-          >
+          <div class="_inputWrapper_jd6ca_6">
+            <input id="textFieldTextboxId-:r1s:"
+                   class="_textbox_jd6ca_12"
+                   inputmode="numeric"
+                   value="2024"
+            >
+          </div>
           <div id="textFieldErrorId-:r1r:"
                aria-live="assertive"
                aria-atomic="true"
@@ -2706,11 +2716,13 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           >
             Årstall
           </label>
-          <input id="textFieldTextboxId-:r1a:"
-                 class="_textbox_1lamq_5"
-                 inputmode="numeric"
-                 value="2024"
-          >
+          <div class="_inputWrapper_jd6ca_6">
+            <input id="textFieldTextboxId-:r1a:"
+                   class="_textbox_jd6ca_12"
+                   inputmode="numeric"
+                   value="2024"
+            >
+          </div>
           <div id="textFieldErrorId-:r19:"
                aria-live="assertive"
                aria-atomic="true"
@@ -3231,11 +3243,13 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           >
             Årstall
           </label>
-          <input id="textFieldTextboxId-:r6:"
-                 class="_textbox_1lamq_5"
-                 inputmode="numeric"
-                 value="2024"
-          >
+          <div class="_inputWrapper_jd6ca_6">
+            <input id="textFieldTextboxId-:r6:"
+                   class="_textbox_jd6ca_12"
+                   inputmode="numeric"
+                   value="2024"
+            >
+          </div>
           <div id="textFieldErrorId-:r5:"
                aria-live="assertive"
                aria-atomic="true"
@@ -3740,11 +3754,13 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
           >
             Årstall
           </label>
-          <input id="textFieldTextboxId-:r11:"
-                 class="_textbox_1lamq_5"
-                 inputmode="numeric"
-                 value="2024"
-          >
+          <div class="_inputWrapper_jd6ca_6">
+            <input id="textFieldTextboxId-:r11:"
+                   class="_textbox_jd6ca_12"
+                   inputmode="numeric"
+                   value="2024"
+            >
+          </div>
           <div id="textFieldErrorId-:r10:"
                aria-live="assertive"
                aria-atomic="true"
