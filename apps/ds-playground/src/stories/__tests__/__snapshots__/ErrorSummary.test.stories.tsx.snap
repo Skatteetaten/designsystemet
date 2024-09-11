@@ -346,13 +346,15 @@ exports[`Tester/ErrorSummary/ErrorSummary WithInput play-test 1`] = `
     >
       År
     </label>
-    <input id="input_aar"
-           class="_textbox_1lamq_5"
-           required
-           aria-describedby="textFieldErrorId-:rh:"
-           aria-invalid="true"
-           value="1009"
-    >
+    <div class="_inputWrapper_jd6ca_6">
+      <input id="input_aar"
+             class="_textbox_jd6ca_12"
+             required
+             aria-describedby="textFieldErrorId-:rh:"
+             aria-invalid="true"
+             value="1009"
+      >
+    </div>
     <div id="textFieldErrorId-:rh:"
          aria-live="assertive"
          aria-atomic="true"

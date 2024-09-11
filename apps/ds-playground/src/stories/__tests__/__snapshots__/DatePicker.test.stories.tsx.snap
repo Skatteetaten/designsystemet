@@ -730,11 +730,13 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
               >
                 Årstall
               </label>
-              <input id="textFieldTextboxId-:r2u:"
-                     class="_textbox_1lamq_5"
-                     inputmode="numeric"
-                     value="2024"
-              >
+              <div class="_inputWrapper_jd6ca_6">
+                <input id="textFieldTextboxId-:r2u:"
+                       class="_textbox_jd6ca_12"
+                       inputmode="numeric"
+                       value="2024"
+                >
+              </div>
               <div id="textFieldErrorId-:r2t:"
                    aria-live="assertive"
                    aria-atomic="true"

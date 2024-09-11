@@ -1,4 +1,4 @@
-import { FocusEvent, ChangeEvent, useState, useRef } from 'react';
+import { FocusEvent, ChangeEvent, useState, useRef, JSX } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { formArrSize } from '@skatteetaten/ds-core-utils';
@@ -759,5 +759,34 @@ export const WithTextAreaAutoSizeInModal = {
         height: '64px',
       })
     );
+  },
+} satisfies Story;
+
+export const WithDataList = {
+  name: 'With  Datalist (A13, A14)',
+  render: (): JSX.Element => (
+    <>
+      <TextField label={'nettlesere'} list={'browsers'} />
+      <datalist id={'browsers'}>
+        <option value={'Edge'} />
+        <option value={'Firefox'} />
+        <option value={'Chrome'} />
+        <option value={'Opera'} />
+        <option value={'Safari'} />
+      </datalist>
+    </>
+  ),
+  args: {
+    ...defaultArgs,
+  },
+  argTypes: {
+    defaultValue: { table: { disable: false } },
+    autosize: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+
+    const textbox = canvas.getByRole('combobox');
+    await expect(textbox).toHaveAttribute('list', 'browsers');
   },
 } satisfies Story;

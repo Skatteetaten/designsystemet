@@ -799,11 +799,13 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
             >
               Søk
             </label>
-            <input id="textFieldTextboxId-:rb:"
-                   class="_textbox_1lamq_5"
-                   placeholder="Søk"
-                   value
-            >
+            <div class="_inputWrapper_jd6ca_6">
+              <input id="textFieldTextboxId-:rb:"
+                     class="_textbox_jd6ca_12"
+                     placeholder="Søk"
+                     value
+              >
+            </div>
             <div id="textFieldErrorId-:ra:"
                  aria-live="assertive"
                  aria-atomic="true"
