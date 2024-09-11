@@ -27,9 +27,6 @@
     &:focus {
       @extend %focus;
 
-      --semantic-interactive-main: var(--palette-graphite-0);
-      --semantic-interactive-background: var(--theme-primary);
-
       color: var(--theme-primary);
       text-decoration: underline;
     }

@@ -2,7 +2,7 @@
 
 exports[`Tester/Modal ClickCloseButton play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+  <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
   <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
@@ -37,11 +37,11 @@ exports[`Tester/Modal ClickCloseButton play-test 1`] = `
       </button>
       <div class="_modalPaddingL_125nh_51">
         <h1 id="modalHeadingId-:rh:"
-            class="_heading_lxscd_1 _heading_level3_lxscd_34 _heading_hasSpacingSmall_lxscd_54 _modalHeading_125nh_29"
+            class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+        <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -68,7 +68,7 @@ exports[`Tester/Modal ClickCloseButton play-test 1`] = `
 
 exports[`Tester/Modal Defaults play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+  <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
   <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
@@ -104,11 +104,11 @@ exports[`Tester/Modal Defaults play-test 1`] = `
       </button>
       <div class="_modalPaddingL_125nh_51">
         <h1 id="modalHeadingId-:r2:"
-            class="_heading_lxscd_1 _heading_level3_lxscd_34 _heading_hasSpacingSmall_lxscd_54 _modalHeading_125nh_29"
+            class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+        <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -135,7 +135,7 @@ exports[`Tester/Modal Defaults play-test 1`] = `
 
 exports[`Tester/Modal VariantImportant play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+  <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
   <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
@@ -175,11 +175,11 @@ exports[`Tester/Modal VariantImportant play-test 1`] = `
              alt="Skatteetaten logo"
         >
         <h1 id="modalHeadingId-:r6:"
-            class="_heading_lxscd_1 _heading_level3_lxscd_34 _heading_hasSpacingSmall_lxscd_54 _modalHeading_125nh_29"
+            class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+        <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -212,7 +212,7 @@ exports[`Tester/Modal VariantImportant play-test 1`] = `
 
 exports[`Tester/Modal VariantPlain play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+  <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
   <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
@@ -248,11 +248,11 @@ exports[`Tester/Modal VariantPlain play-test 1`] = `
       </button>
       <div class="_modalPaddingL_125nh_51">
         <h1 id="modalHeadingId-:r4:"
-            class="_heading_lxscd_1 _heading_level3_lxscd_34 _heading_hasSpacingSmall_lxscd_54 _modalHeading_125nh_29"
+            class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+        <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -279,7 +279,7 @@ exports[`Tester/Modal VariantPlain play-test 1`] = `
 
 exports[`Tester/Modal WithAttributes play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+  <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
   <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
@@ -318,11 +318,11 @@ exports[`Tester/Modal WithAttributes play-test 1`] = `
       </button>
       <div class="_modalPaddingL_125nh_51">
         <h1 id="modalHeadingId-:r0:"
-            class="_heading_lxscd_1 _heading_level3_lxscd_34 _heading_hasSpacingSmall_lxscd_54 _modalHeading_125nh_29"
+            class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+        <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -349,7 +349,7 @@ exports[`Tester/Modal WithAttributes play-test 1`] = `
 
 exports[`Tester/Modal WithAutoClose play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+  <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
   <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
@@ -384,11 +384,11 @@ exports[`Tester/Modal WithAutoClose play-test 1`] = `
       </button>
       <div class="_modalPaddingL_125nh_51">
         <h1 id="modalHeadingId-:rj:"
-            class="_heading_lxscd_1 _heading_level3_lxscd_34 _heading_hasSpacingSmall_lxscd_54 _modalHeading_125nh_29"
+            class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+        <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -415,7 +415,7 @@ exports[`Tester/Modal WithAutoClose play-test 1`] = `
 
 exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+  <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
   <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
@@ -451,11 +451,11 @@ exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
       </button>
       <div class="_modalPaddingL_125nh_51">
         <h1 id="modalHeadingId-:rl:"
-            class="_heading_lxscd_1 _heading_level3_lxscd_34 _heading_hasSpacingSmall_lxscd_54 _modalHeading_125nh_29"
+            class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+        <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -482,7 +482,7 @@ exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
 
 exports[`Tester/Modal WithHideTitle play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+  <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
   <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
@@ -518,11 +518,11 @@ exports[`Tester/Modal WithHideTitle play-test 1`] = `
       </button>
       <div class="_modalPaddingL_125nh_51">
         <h1 id="modalHeadingId-:rn:"
-            class="_heading_lxscd_1 _heading_level3_lxscd_34 _heading_hasSpacingSmall_lxscd_54 _modalHeading_125nh_29  _srOnly_125nh_71"
+            class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 _modalHeading_125nh_29  _srOnly_125nh_71"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+        <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -549,7 +549,7 @@ exports[`Tester/Modal WithHideTitle play-test 1`] = `
 
 exports[`Tester/Modal WithImage play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+  <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
   <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
@@ -589,11 +589,11 @@ exports[`Tester/Modal WithImage play-test 1`] = `
       >
       <div class="_modalPaddingL_125nh_51 _modalNoPaddingTop_125nh_57">
         <h1 id="modalHeadingId-:r8:"
-            class="_heading_lxscd_1 _heading_level3_lxscd_34 _heading_hasSpacingSmall_lxscd_54 _modalHeading_125nh_29"
+            class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+        <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -620,7 +620,7 @@ exports[`Tester/Modal WithImage play-test 1`] = `
 
 exports[`Tester/Modal WithPadding play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+  <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
   <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
@@ -656,11 +656,11 @@ exports[`Tester/Modal WithPadding play-test 1`] = `
       </button>
       <div class="_modalPaddingNONE_125nh_42">
         <h1 id="modalHeadingId-:rd:"
-            class="_heading_lxscd_1 _heading_level3_lxscd_34 _heading_hasSpacingSmall_lxscd_54 _modalHeading_125nh_29"
+            class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+        <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -694,7 +694,7 @@ exports[`Tester/Modal WithShadowDom play-test 1`] = `
 
 exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+  <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
   <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
@@ -730,11 +730,11 @@ exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
       </button>
       <div class="_modalPaddingL_125nh_51">
         <h1 id="modalHeadingId-:ra:"
-            class="_heading_lxscd_1 _heading_level3_lxscd_34 _heading_hasSpacingSmall_lxscd_54 _modalHeading_125nh_29"
+            class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+        <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">
@@ -761,7 +761,7 @@ exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
 
 exports[`Tester/Modal WithVerticalScrolling play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+  <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
   <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
@@ -797,7 +797,7 @@ exports[`Tester/Modal WithVerticalScrolling play-test 1`] = `
       </button>
       <div class="_modalPaddingL_125nh_51">
         <h1 id="modalHeadingId-:rf:"
-            class="_heading_lxscd_1 _heading_level3_lxscd_34 _heading_hasSpacingSmall_lxscd_54 _modalHeading_125nh_29"
+            class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
@@ -810,7 +810,7 @@ exports[`Tester/Modal WithVerticalScrolling play-test 1`] = `
 
 exports[`Tester/Modal WithoutCloseButton play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+  <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
   <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
@@ -829,11 +829,11 @@ exports[`Tester/Modal WithoutCloseButton play-test 1`] = `
     >
       <div class="_modalPaddingL_125nh_51">
         <h1 id="modalHeadingId-:rc:"
-            class="_heading_lxscd_1 _heading_level3_lxscd_34 _heading_hasSpacingSmall_lxscd_54 _modalHeading_125nh_29"
+            class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+        <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
           Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
         </p>
         <div class="flex">

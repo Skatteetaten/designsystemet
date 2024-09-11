@@ -2,10 +2,10 @@
 
 exports[`Tester/Paragraph Defaults smoke-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17  ">
+  <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17  ">
+  <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
 </div>
@@ -13,7 +13,7 @@ exports[`Tester/Paragraph Defaults smoke-test 1`] = `
 
 exports[`Tester/Paragraph IsPElement play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17  ">
+  <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
 </div>
@@ -21,10 +21,10 @@ exports[`Tester/Paragraph IsPElement play-test 1`] = `
 
 exports[`Tester/Paragraph VariantIngress smoke-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_xqdol_1 _paragraph_ingress_xqdol_20  ">
+  <p class="_paragraph_32eqi_1 _paragraph_ingress_32eqi_20  ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <p class="_paragraph_xqdol_1 _paragraph_ingress_xqdol_20  ">
+  <p class="_paragraph_32eqi_1 _paragraph_ingress_32eqi_20  ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
 </div>
@@ -32,10 +32,10 @@ exports[`Tester/Paragraph VariantIngress smoke-test 1`] = `
 
 exports[`Tester/Paragraph VariantIngressWithSpacing smoke-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_xqdol_1 _paragraph_ingress_xqdol_20 _paragraph_hasSpacingExtraLarge_xqdol_26 ">
+  <p class="_paragraph_32eqi_1 _paragraph_ingress_32eqi_20 _paragraph_hasSpacingExtraLarge_32eqi_26 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <p class="_paragraph_xqdol_1 _paragraph_ingress_xqdol_20 _paragraph_hasSpacingExtraLarge_xqdol_26 ">
+  <p class="_paragraph_32eqi_1 _paragraph_ingress_32eqi_20 _paragraph_hasSpacingExtraLarge_32eqi_26 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
 </div>
@@ -44,7 +44,7 @@ exports[`Tester/Paragraph VariantIngressWithSpacing smoke-test 1`] = `
 exports[`Tester/Paragraph WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <p id="htmlId"
-     class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17  dummyClassname"
+     class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  dummyClassname"
      lang="nb"
      data-testid="123ID"
   >
@@ -55,7 +55,7 @@ exports[`Tester/Paragraph WithAttributes play-test 1`] = `
 
 exports[`Tester/Paragraph WithMarkup smoke-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17  ">
+  <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
     <span>
       Tekstavsnitt som kan inneholde en lengre tekst. Husk å følge klarspråkprinsippene når en skriver tekster. I dette tilfellet skriver bare litt ekstra tekst for å få litt
       <strong>
@@ -97,7 +97,7 @@ exports[`Tester/Paragraph WithMarkup smoke-test 1`] = `
 
 exports[`Tester/Paragraph WithRef play-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17  "
+  <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  "
      id="dummyIdForwardedFromRef"
   >
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
@@ -107,10 +107,10 @@ exports[`Tester/Paragraph WithRef play-test 1`] = `
 
 exports[`Tester/Paragraph WithSpacing smoke-test 1`] = `
 <div data-test-block="true">
-  <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+  <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
-  <p class="_paragraph_xqdol_1 _paragraph_standard_xqdol_17 _paragraph_hasSpacingLarge_xqdol_23 ">
+  <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
     Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
   </p>
 </div>
