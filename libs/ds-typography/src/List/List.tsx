@@ -39,5 +39,6 @@ export const List = forwardRef<AnyHTMLListElement, ListProps>(
 
 List.displayName = 'List';
 List.Element = ListElement;
+List.Element.displayName = 'List.Element';
 
 export { getListAsDefault };
