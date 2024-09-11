@@ -82,5 +82,6 @@ export const ErrorSummary = forwardRef<HTMLDivElement, ErrorSummaryProps>(
 
 ErrorSummary.displayName = 'ErrorSummary';
 ErrorSummary.Error = ErrorSummaryError;
+ErrorSummary.Error.displayName = 'ErrorSummary.Error';
 
 export { getErrorSummaryTitleAsDefault };

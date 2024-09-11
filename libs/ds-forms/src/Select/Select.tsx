@@ -162,3 +162,4 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
 
 Select.displayName = 'Select';
 Select.Option = SelectOption;
+Select.Option.displayName = 'Select.Option';
