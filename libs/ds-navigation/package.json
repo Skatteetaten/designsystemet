@@ -1,6 +1,6 @@
 {
   "name": "@skatteetaten/ds-navigation",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "groupId": "no.skatteetaten.aurora",
   "repository": {
     "type": "git",
@@ -13,10 +13,10 @@
     "react": "^18",
     "react-i18next": "^14",
     "i18next": "^23",
-    "@skatteetaten/ds-buttons": "1.1.0",
-    "@skatteetaten/ds-core-utils": "1.1.0",
-    "@skatteetaten/ds-icons": "1.1.0",
-    "@skatteetaten/ds-progress": "1.1.0"
+    "@skatteetaten/ds-buttons": "1.1.1",
+    "@skatteetaten/ds-core-utils": "1.1.1",
+    "@skatteetaten/ds-icons": "1.1.1",
+    "@skatteetaten/ds-progress": "1.1.1"
   },
   "scripts": {}
 }
