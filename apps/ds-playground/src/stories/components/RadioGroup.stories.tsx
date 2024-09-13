@@ -23,7 +23,6 @@ const meta = {
     // Props
     classNames: { table: { category: category.props } },
     children: { table: { category: category.props } },
-    classNames: { table: { category: category.props } },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     helpSvgPath: {
