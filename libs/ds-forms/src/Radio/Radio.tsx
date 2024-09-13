@@ -58,8 +58,9 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
           aria-describedby={ariaDescribedbyInput || undefined}
           aria-invalid={context?.hasError}
           onChange={context?.onChange}
+          onBlur={context?.onBlur}
         />
-        <label className={styles.radioLabel} htmlFor={inputId}>
+        <label className={styles.radioLabel} htmlFor={inputId} tabIndex={-1}>
           {children}
           {description && (
             <span className={styles.radioLabelDescription}>{description}</span>
