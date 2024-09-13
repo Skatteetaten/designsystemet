@@ -1,16 +1,18 @@
-/* automatisk genererte types */
-export const modal: string;
-export const modalContainer: string;
-export const modalLogo: string;
-export const modalHeading: string;
-export const modalHeadingNoPadding: string;
-export const modalIllustration: string;
-export const modalNoBorder: string;
-export const modalPaddingNONE: string;
-export const modalPaddingS: string;
-export const modalPaddingM: string;
-export const modalPaddingL: string;
-export const modalPaddingMEGA: string;
-export const modalNoPaddingTop: string;
-export const closeButton: string;
-export const srOnly: string;
+declare const classNames: {
+  readonly modal: 'modal';
+  readonly modalContainer: 'modalContainer';
+  readonly modalLogo: 'modalLogo';
+  readonly modalHeading: 'modalHeading';
+  readonly modalHeadingNoPadding: 'modalHeadingNoPadding';
+  readonly modalIllustration: 'modalIllustration';
+  readonly modalNoBorder: 'modalNoBorder';
+  readonly modalPaddingNONE: 'modalPaddingNONE';
+  readonly modalPaddingS: 'modalPaddingS';
+  readonly modalPaddingM: 'modalPaddingM';
+  readonly modalPaddingL: 'modalPaddingL';
+  readonly modalPaddingMEGA: 'modalPaddingMEGA';
+  readonly modalNoPaddingTop: 'modalNoPaddingTop';
+  readonly closeButton: 'closeButton';
+  readonly srOnly: 'srOnly';
+};
+export default classNames;

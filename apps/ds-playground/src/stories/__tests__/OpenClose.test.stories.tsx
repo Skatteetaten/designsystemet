@@ -43,6 +43,7 @@ const meta = {
       control: 'inline-radio',
     },
     isExpanded: { table: { disable: true } },
+    isDefaultExpanded: { table: { disable: true } },
     isOnClickOnlyFiredOnOpen: { table: { disable: true } },
     titleAs: {
       options: [...headingAsArr],
@@ -461,5 +462,27 @@ export const WithLongTitle = {
     viewport: {
       defaultViewport: '--breakpoint-xs',
     },
+  },
+} satisfies Story;
+
+export const IsDefaultExpanded = {
+  name: 'With IsDefaultExpanded',
+  args: {
+    ...defaultArgs,
+    isDefaultExpanded: true,
+  },
+  argTypes: {
+    isDefaultExpanded: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+    HTMLSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const content = await canvas.findByText(defaultContent);
+    await expect(content).toBeInTheDocument();
+    const button = canvas.getByRole('button');
+    await expect(button).toHaveAttribute('aria-expanded', 'true');
   },
 } satisfies Story;

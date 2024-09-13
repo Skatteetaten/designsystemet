@@ -48,6 +48,7 @@ export const Accordion = forwardRef<HTMLDivElement, AccordionProps>(
 
 Accordion.displayName = 'Accordion';
 Accordion.Item = AccordionItem;
+Accordion.Item.displayName = 'Accordion.Item';
 
 export {
   getAccordionIconPositionDefault,

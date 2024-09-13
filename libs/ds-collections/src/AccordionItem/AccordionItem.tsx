@@ -125,4 +125,4 @@ export const AccordionItem = forwardRef<HTMLButtonElement, AccordionItemProps>(
   }
 );
 
-AccordionItem.displayName = 'Accordion.Item';
+AccordionItem.displayName = 'AccordionItem';

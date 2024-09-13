@@ -15,5 +15,9 @@
     "@nx/eslint-plugin": "15.0.0"
   },
   "executors": "executors.json",
-  "scripts": {}
+  "scripts": {},
+  "dependencies": {
+    "@swc/helpers": "~0.5.2"
+  },
+  "devDependencies": {}
 }

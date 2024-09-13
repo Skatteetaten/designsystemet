@@ -1,16 +1,18 @@
-/* automatisk genererte types */
-export const tag: string;
-export const openClose: string;
-export const openClose_compact: string;
-export const openClose_hasIconRight: string;
-export const icon_active: string;
-export const icon: string;
-export const icon_open: string;
-export const icon_closed: string;
-export const icon_compact: string;
-export const title: string;
-export const title_underline: string;
-export const title_compact: string;
-export const content: string;
-export const content_compact: string;
-export const content_hasIconRight: string;
+declare const classNames: {
+  readonly tag: 'tag';
+  readonly openClose: 'openClose';
+  readonly openClose_compact: 'openClose_compact';
+  readonly openClose_hasIconRight: 'openClose_hasIconRight';
+  readonly icon_active: 'icon_active';
+  readonly icon: 'icon';
+  readonly icon_open: 'icon_open';
+  readonly icon_closed: 'icon_closed';
+  readonly icon_compact: 'icon_compact';
+  readonly title: 'title';
+  readonly title_underline: 'title_underline';
+  readonly title_compact: 'title_compact';
+  readonly content: 'content';
+  readonly content_compact: 'content_compact';
+  readonly content_hasIconRight: 'content_hasIconRight';
+};
+export default classNames;

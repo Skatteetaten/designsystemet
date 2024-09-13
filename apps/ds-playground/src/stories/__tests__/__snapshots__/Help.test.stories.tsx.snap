@@ -2,11 +2,11 @@
 
 exports[`Tester/Help (intern) ClickCloseButton play-test 1`] = `
 <div data-test-block="true">
-  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+  <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
           type="button"
           aria-expanded="false"
   >
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:ra:"
@@ -25,11 +25,11 @@ exports[`Tester/Help (intern) ClickCloseButton play-test 1`] = `
 
 exports[`Tester/Help (intern) ClickHelpButton play-test 1`] = `
 <div data-test-block="true">
-  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+  <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
           type="button"
           aria-expanded="false"
   >
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r8:"
@@ -53,7 +53,7 @@ exports[`Tester/Help (intern) Defaults play-test 1`] = `
 
 exports[`Tester/Help (intern) WithDescription play-test 1`] = `
 <div data-test-block="true">
-  <div class="Help_description__niabw">
+  <div class="_description_10ldw_17">
     En liten beskrivelse
   </div>
 </div>
@@ -61,12 +61,12 @@ exports[`Tester/Help (intern) WithDescription play-test 1`] = `
 
 exports[`Tester/Help (intern) WithHelpSvgPathTitleHelpSvgAndTargetId play-test 1`] = `
 <div data-test-block="true">
-  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+  <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
           type="button"
           aria-describedby="storybook-root"
           aria-expanded="false"
   >
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r6:"
@@ -85,11 +85,11 @@ exports[`Tester/Help (intern) WithHelpSvgPathTitleHelpSvgAndTargetId play-test 1
 
 exports[`Tester/Help (intern) WithHelpTextAndDescription smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+  <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
           type="button"
           aria-expanded="false"
   >
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r2:"
@@ -103,7 +103,7 @@ exports[`Tester/Help (intern) WithHelpTextAndDescription smoke-test 1`] = `
       </path>
     </svg>
   </button>
-  <div class="Help_description__niabw">
+  <div class="_description_10ldw_17">
     En liten beskrivelse
   </div>
 </div>
@@ -111,11 +111,11 @@ exports[`Tester/Help (intern) WithHelpTextAndDescription smoke-test 1`] = `
 
 exports[`Tester/Help (intern) WithHelpToggleEvent smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+  <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
           type="button"
           aria-expanded="false"
   >
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:rc:"
@@ -134,11 +134,11 @@ exports[`Tester/Help (intern) WithHelpToggleEvent smoke-test 1`] = `
 
 exports[`Tester/Help (intern) WithHelptext play-test 1`] = `
 <div data-test-block="true">
-  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+  <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
           type="button"
           aria-expanded="false"
   >
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r0:"
@@ -157,11 +157,11 @@ exports[`Tester/Help (intern) WithHelptext play-test 1`] = `
 
 exports[`Tester/Help (intern) WithHideHelp play-test 1`] = `
 <div data-test-block="true">
-  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6 Help_srOnly__svaKL"
+  <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27 _srOnly_10ldw_59"
           type="button"
           aria-expanded="false"
   >
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r7:"
@@ -175,7 +175,7 @@ exports[`Tester/Help (intern) WithHideHelp play-test 1`] = `
       </path>
     </svg>
   </button>
-  <div class="Help_description__niabw  Help_srOnly__svaKL">
+  <div class="_description_10ldw_17  _srOnly_10ldw_59">
     En liten beskrivelse
   </div>
 </div>
@@ -183,11 +183,11 @@ exports[`Tester/Help (intern) WithHideHelp play-test 1`] = `
 
 exports[`Tester/Help (intern) WithLongHelpTextAndDescription smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH Help_helpButton__I0E-6"
+  <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
           type="button"
           aria-expanded="false"
   >
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r4:"
@@ -201,7 +201,7 @@ exports[`Tester/Help (intern) WithLongHelpTextAndDescription smoke-test 1`] = `
       </path>
     </svg>
   </button>
-  <div class="Help_description__niabw">
+  <div class="_description_10ldw_17">
     Loremipsumdolorsitamet.Allesomharlagetennettside,trengtlittfylltekstellerbaresurfetrundtpånettetharantageligvissettdisseordene,etterfulgtaventilsynelatendeeviglangtekstfyltmedlatinskeliksomsetninger.
   </div>
 </div>

@@ -2,12 +2,12 @@
 
 exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedBreakpointL play-test 1`] = `
 <div data-test-block="true">
-  <header class="TopBannerInternal_topBanner__qkiyp ">
+  <header class="_topBanner_192u7_57 ">
     <a href="main"
-       class="TopBannerSkipLink_skipLink__5N+l7 TopBannerInternal_skipLink__zUMI2"
+       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
     >
-      <span class="TopBannerSkipLink_skipLinkContent__T3QpL">
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerSkipLink_icon__Xwbwo"
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -19,17 +19,17 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedBreakpointL play-test
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="TopBannerInternal_topContainer__MOjfe">
-      <div class="TopBannerInternal_contentContainer__CPB4+ ">
-        <a class="TopBannerInternal_logo__JYEkN"
+    <div class="_topContainer_192u7_90">
+      <div class="_contentContainer_192u7_98 ">
+        <a class="_logo_192u7_66"
            href="#"
         >
-          <img class="TopBannerInternal_logoImage__g5BAe"
-               src="logo-sak.65d5566ee5e27437137f13d4a5bfef7e.svg"
+          <img class="_logoImage_192u7_73"
+               src="[REMOVED]"
                alt="til startsiden kakeportalen"
           >
         </a>
-        <span class="TopBannerInternal_titleWrapper__6eIDB">
+        <span class="_titleWrapper_192u7_10">
         </span>
       </div>
     </div>
@@ -39,12 +39,12 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedBreakpointL play-test
 
 exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedMobileScreen play-test 1`] = `
 <div data-test-block="true">
-  <header class="TopBannerInternal_topBanner__qkiyp ">
+  <header class="_topBanner_192u7_57 ">
     <a href="main"
-       class="TopBannerSkipLink_skipLink__5N+l7 TopBannerInternal_skipLink__zUMI2"
+       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
     >
-      <span class="TopBannerSkipLink_skipLinkContent__T3QpL">
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerSkipLink_icon__Xwbwo"
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -56,17 +56,17 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedMobileScreen play-tes
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="TopBannerInternal_topContainer__MOjfe">
-      <div class="TopBannerInternal_contentContainer__CPB4+ ">
-        <a class="TopBannerInternal_logo__JYEkN"
+    <div class="_topContainer_192u7_90">
+      <div class="_contentContainer_192u7_98 ">
+        <a class="_logo_192u7_66"
            href="#"
         >
-          <img class="TopBannerInternal_logoImage__g5BAe"
-               src="logo-sak.65d5566ee5e27437137f13d4a5bfef7e.svg"
+          <img class="_logoImage_192u7_73"
+               src="[REMOVED]"
                alt="til startsiden kakeportalen"
           >
         </a>
-        <span class="TopBannerInternal_titleWrapper__6eIDB">
+        <span class="_titleWrapper_192u7_10">
         </span>
       </div>
     </div>
@@ -79,13 +79,13 @@ exports[`Tester/TopBanner/TopBannerInternal WithAttributes play-test 1`] = `
   <header id="htmlId"
           lang="nb"
           data-testid="123ID"
-          class="TopBannerInternal_topBanner__qkiyp dummyClassname"
+          class="_topBanner_192u7_57 dummyClassname"
   >
     <a href="main"
-       class="TopBannerSkipLink_skipLink__5N+l7 TopBannerInternal_skipLink__zUMI2"
+       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
     >
-      <span class="TopBannerSkipLink_skipLinkContent__T3QpL">
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerSkipLink_icon__Xwbwo"
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -97,17 +97,17 @@ exports[`Tester/TopBanner/TopBannerInternal WithAttributes play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="TopBannerInternal_topContainer__MOjfe">
-      <div class="TopBannerInternal_contentContainer__CPB4+ ">
-        <a class="TopBannerInternal_logo__JYEkN"
+    <div class="_topContainer_192u7_90">
+      <div class="_contentContainer_192u7_98 ">
+        <a class="_logo_192u7_66"
            href="#"
         >
-          <img class="TopBannerInternal_logoImage__g5BAe"
-               src="logo-sak.65d5566ee5e27437137f13d4a5bfef7e.svg"
+          <img class="_logoImage_192u7_73"
+               src="[REMOVED]"
                alt="til startsiden kakeportalen"
           >
         </a>
-        <span class="TopBannerInternal_titleWrapper__6eIDB">
+        <span class="_titleWrapper_192u7_10">
         </span>
       </div>
     </div>
@@ -117,12 +117,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithAttributes play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
 <div data-test-block="true">
-  <header class="TopBannerInternal_topBanner__qkiyp ">
+  <header class="_topBanner_192u7_57 ">
     <a href="main"
-       class="TopBannerSkipLink_skipLink__5N+l7 TopBannerInternal_skipLink__zUMI2"
+       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
     >
-      <span class="TopBannerSkipLink_skipLinkContent__T3QpL">
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerSkipLink_icon__Xwbwo"
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -134,17 +134,17 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="TopBannerInternal_topContainer__MOjfe">
-      <div class="TopBannerInternal_contentContainer__CPB4+ TopBannerInternal_contentContainer_withChildren__mZUUW">
-        <a class="TopBannerInternal_logo__JYEkN"
+    <div class="_topContainer_192u7_90">
+      <div class="_contentContainer_192u7_98 _contentContainer_withChildren_192u7_117">
+        <a class="_logo_192u7_66"
            href="#"
         >
-          <img class="TopBannerInternal_logoImage__g5BAe"
-               src="logo-sak.65d5566ee5e27437137f13d4a5bfef7e.svg"
+          <img class="_logoImage_192u7_73"
+               src="[REMOVED]"
                alt="til startsiden kakeportalen"
           >
         </a>
-        <span class="TopBannerInternal_titleWrapper__6eIDB">
+        <span class="_titleWrapper_192u7_10">
           <span>
             Saksbehandlingsløsning med en overskrift som er lang
           </span>
@@ -152,12 +152,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
             En sekundær overskrift som også er lang
           </span>
         </span>
-        <div class="TopBannerInternal_childrenContainer__-yXS6">
-          <div class="TopBannerInternal_alignRight__RWBkP">
-            <a class="Link_link__jeUpY Link_link_white__bmeQu marginL"
+        <div class="_childrenContainer_192u7_1">
+          <div class="_alignRight_192u7_5">
+            <a class="_link_1tclx_1 _link_white_1tclx_1 marginL"
                href="/hjelp"
             >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo Link_icon__iy55p Link_icon_isCustom__nsOot"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1tclx_35 _icon_isCustom_1tclx_41"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-hidden="true"
@@ -168,10 +168,10 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
               </svg>
               Hjelp
             </a>
-            <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  marginL"
+            <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  marginL"
                     type="button"
             >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-hidden="true"
@@ -184,10 +184,10 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
                 Tilpass løsningen
               </span>
             </button>
-            <button class="InlineButton_button__2aGtg InlineButton_button_withIconLeft__wsxa+  marginL"
+            <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  marginL"
                     type="button"
             >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz InlineButton_icon__YMesU"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-hidden="true"
@@ -202,9 +202,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
             </button>
           </div>
         </div>
-        <div class="TopBannerInternal_nameContainer__sI7XR">
+        <div class="_nameContainer_192u7_128">
           <div>
-            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerInternal_nameContainerIcon__fpe+i"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _nameContainerIcon_192u7_152"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -214,7 +214,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
               </path>
             </svg>
           </div>
-          <span class="TopBannerInternal_nameContainerName__amREt">
+          <span class="_nameContainerName_192u7_147">
             Johansen, Krystall Pepsi
           </span>
         </div>
@@ -226,12 +226,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithCustomLogo smoke-test 1`] = `
 <div data-test-block="true">
-  <header class="TopBannerInternal_topBanner__qkiyp ">
+  <header class="_topBanner_192u7_57 ">
     <a href="main"
-       class="TopBannerSkipLink_skipLink__5N+l7 TopBannerInternal_skipLink__zUMI2"
+       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
     >
-      <span class="TopBannerSkipLink_skipLinkContent__T3QpL">
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerSkipLink_icon__Xwbwo"
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -243,17 +243,17 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomLogo smoke-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="TopBannerInternal_topContainer__MOjfe">
-      <div class="TopBannerInternal_contentContainer__CPB4+ ">
-        <a class="TopBannerInternal_logo__JYEkN"
+    <div class="_topContainer_192u7_90">
+      <div class="_contentContainer_192u7_98 ">
+        <a class="_logo_192u7_66"
            href="#"
         >
-          <img class="TopBannerInternal_logoImage__g5BAe"
-               src="custom-mobile-logo.e7c1e07901657fb09f8543357f7fa867.svg"
+          <img class="_logoImage_192u7_73"
+               src="[REMOVED]"
                alt="til startsiden kakeportalen"
           >
         </a>
-        <span class="TopBannerInternal_titleWrapper__6eIDB">
+        <span class="_titleWrapper_192u7_10">
         </span>
       </div>
     </div>
@@ -263,12 +263,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomLogo smoke-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithCustomTheme smoke-test 1`] = `
 <div data-test-block="true">
-  <header class="TopBannerInternal_topBanner__qkiyp dummyCustomTheme">
+  <header class="_topBanner_192u7_57 dummyCustomTheme">
     <a href="main"
-       class="TopBannerSkipLink_skipLink__5N+l7 TopBannerInternal_skipLink__zUMI2"
+       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
     >
-      <span class="TopBannerSkipLink_skipLinkContent__T3QpL">
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerSkipLink_icon__Xwbwo"
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -280,17 +280,17 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomTheme smoke-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="TopBannerInternal_topContainer__MOjfe">
-      <div class="TopBannerInternal_contentContainer__CPB4+ ">
-        <a class="TopBannerInternal_logo__JYEkN"
+    <div class="_topContainer_192u7_90">
+      <div class="_contentContainer_192u7_98 ">
+        <a class="_logo_192u7_66"
            href="#"
         >
-          <img class="TopBannerInternal_logoImage__g5BAe"
-               src="logo-sak.65d5566ee5e27437137f13d4a5bfef7e.svg"
+          <img class="_logoImage_192u7_73"
+               src="[REMOVED]"
                alt="til startsiden kakeportalen"
           >
         </a>
-        <span class="TopBannerInternal_titleWrapper__6eIDB">
+        <span class="_titleWrapper_192u7_10">
         </span>
       </div>
     </div>
@@ -300,12 +300,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomTheme smoke-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithDefaults play-test 1`] = `
 <div data-test-block="true">
-  <header class="TopBannerInternal_topBanner__qkiyp ">
+  <header class="_topBanner_192u7_57 ">
     <a href="main"
-       class="TopBannerSkipLink_skipLink__5N+l7 TopBannerInternal_skipLink__zUMI2"
+       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
     >
-      <span class="TopBannerSkipLink_skipLinkContent__T3QpL">
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerSkipLink_icon__Xwbwo"
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -317,17 +317,17 @@ exports[`Tester/TopBanner/TopBannerInternal WithDefaults play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="TopBannerInternal_topContainer__MOjfe">
-      <div class="TopBannerInternal_contentContainer__CPB4+ ">
-        <a class="TopBannerInternal_logo__JYEkN"
+    <div class="_topContainer_192u7_90">
+      <div class="_contentContainer_192u7_98 ">
+        <a class="_logo_192u7_66"
            href="#"
         >
-          <img class="TopBannerInternal_logoImage__g5BAe"
-               src="logo-sak.65d5566ee5e27437137f13d4a5bfef7e.svg"
+          <img class="_logoImage_192u7_73"
+               src="[REMOVED]"
                alt="til startsiden kakeportalen"
           >
         </a>
-        <span class="TopBannerInternal_titleWrapper__6eIDB">
+        <span class="_titleWrapper_192u7_10">
         </span>
       </div>
     </div>
@@ -337,12 +337,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithDefaults play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithDemoMode play-test 1`] = `
 <div data-test-block="true">
-  <header class="TopBannerInternal_topBanner__qkiyp ">
+  <header class="_topBanner_192u7_57 ">
     <a href="main"
-       class="TopBannerSkipLink_skipLink__5N+l7 TopBannerInternal_skipLink__zUMI2"
+       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
     >
-      <span class="TopBannerSkipLink_skipLinkContent__T3QpL">
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerSkipLink_icon__Xwbwo"
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -354,22 +354,22 @@ exports[`Tester/TopBanner/TopBannerInternal WithDemoMode play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="TopBannerInternal_constructionBand__JY5iz">
-      <div class="TopBannerInternal_constructionBandTitle__0Y3Xr">
+    <div class="_constructionBand_192u7_27">
+      <div class="_constructionBandTitle_192u7_32">
         demo
       </div>
     </div>
-    <div class="TopBannerInternal_topContainer__MOjfe">
-      <div class="TopBannerInternal_contentContainer__CPB4+ ">
-        <a class="TopBannerInternal_logo__JYEkN"
+    <div class="_topContainer_192u7_90">
+      <div class="_contentContainer_192u7_98 ">
+        <a class="_logo_192u7_66"
            href="#"
         >
-          <img class="TopBannerInternal_logoImage__g5BAe"
-               src="logo-sak.65d5566ee5e27437137f13d4a5bfef7e.svg"
+          <img class="_logoImage_192u7_73"
+               src="[REMOVED]"
                alt="til startsiden kakeportalen"
           >
         </a>
-        <span class="TopBannerInternal_titleWrapper__6eIDB">
+        <span class="_titleWrapper_192u7_10">
         </span>
       </div>
     </div>
@@ -379,12 +379,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithDemoMode play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithLogoClick play-test 1`] = `
 <div data-test-block="true">
-  <header class="TopBannerInternal_topBanner__qkiyp ">
+  <header class="_topBanner_192u7_57 ">
     <a href="main"
-       class="TopBannerSkipLink_skipLink__5N+l7 TopBannerInternal_skipLink__zUMI2"
+       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
     >
-      <span class="TopBannerSkipLink_skipLinkContent__T3QpL">
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerSkipLink_icon__Xwbwo"
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -396,17 +396,17 @@ exports[`Tester/TopBanner/TopBannerInternal WithLogoClick play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="TopBannerInternal_topContainer__MOjfe">
-      <div class="TopBannerInternal_contentContainer__CPB4+ ">
-        <a class="TopBannerInternal_logo__JYEkN"
+    <div class="_topContainer_192u7_90">
+      <div class="_contentContainer_192u7_98 ">
+        <a class="_logo_192u7_66"
            href="#"
         >
-          <img class="TopBannerInternal_logoImage__g5BAe"
-               src="logo-sak.65d5566ee5e27437137f13d4a5bfef7e.svg"
+          <img class="_logoImage_192u7_73"
+               src="[REMOVED]"
                alt="til startsiden kakeportalen"
           >
         </a>
-        <span class="TopBannerInternal_titleWrapper__6eIDB">
+        <span class="_titleWrapper_192u7_10">
         </span>
       </div>
     </div>
@@ -416,12 +416,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithLogoClick play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke-test 1`] = `
 <div data-test-block="true">
-  <header class="TopBannerInternal_topBanner__qkiyp ">
+  <header class="_topBanner_192u7_57 ">
     <a href="main"
-       class="TopBannerSkipLink_skipLink__5N+l7 TopBannerInternal_skipLink__zUMI2"
+       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
     >
-      <span class="TopBannerSkipLink_skipLinkContent__T3QpL">
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerSkipLink_icon__Xwbwo"
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -433,17 +433,17 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="TopBannerInternal_topContainer__MOjfe">
-      <div class="TopBannerInternal_contentContainer__CPB4+ ">
-        <a class="TopBannerInternal_logo__JYEkN"
+    <div class="_topContainer_192u7_90">
+      <div class="_contentContainer_192u7_98 ">
+        <a class="_logo_192u7_66"
            href="#"
         >
-          <img class="TopBannerInternal_logoImage__g5BAe"
-               src="logo-sak.65d5566ee5e27437137f13d4a5bfef7e.svg"
+          <img class="_logoImage_192u7_73"
+               src="[REMOVED]"
                alt="til startsiden kakeportalen"
           >
         </a>
-        <span class="TopBannerInternal_titleWrapper__6eIDB">
+        <span class="_titleWrapper_192u7_10">
           <span>
             kakeportalen kakeportalen kakeportalen kakeportalen
           </span>
@@ -451,9 +451,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke
             kaka er en løgnkaka er en løgnkaka er en løgnkaka er en løgn
           </span>
         </span>
-        <div class="TopBannerInternal_nameContainer__sI7XR">
+        <div class="_nameContainer_192u7_128">
           <div>
-            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerInternal_nameContainerIcon__fpe+i"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _nameContainerIcon_192u7_152"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -463,7 +463,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke
               </path>
             </svg>
           </div>
-          <span class="TopBannerInternal_nameContainerName__amREt">
+          <span class="_nameContainerName_192u7_147">
             Sandra Saksbehandler
           </span>
         </div>
@@ -475,14 +475,14 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke
 
 exports[`Tester/TopBanner/TopBannerInternal WithRef play-test 1`] = `
 <div data-test-block="true">
-  <header class="TopBannerInternal_topBanner__qkiyp "
+  <header class="_topBanner_192u7_57 "
           id="dummyIdForwardedFromRef"
   >
     <a href="main"
-       class="TopBannerSkipLink_skipLink__5N+l7 TopBannerInternal_skipLink__zUMI2"
+       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
     >
-      <span class="TopBannerSkipLink_skipLinkContent__T3QpL">
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerSkipLink_icon__Xwbwo"
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -494,17 +494,17 @@ exports[`Tester/TopBanner/TopBannerInternal WithRef play-test 1`] = `
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="TopBannerInternal_topContainer__MOjfe">
-      <div class="TopBannerInternal_contentContainer__CPB4+ ">
-        <a class="TopBannerInternal_logo__JYEkN"
+    <div class="_topContainer_192u7_90">
+      <div class="_contentContainer_192u7_98 ">
+        <a class="_logo_192u7_66"
            href="#"
         >
-          <img class="TopBannerInternal_logoImage__g5BAe"
-               src="logo-sak.65d5566ee5e27437137f13d4a5bfef7e.svg"
+          <img class="_logoImage_192u7_73"
+               src="[REMOVED]"
                alt="til startsiden kakeportalen"
           >
         </a>
-        <span class="TopBannerInternal_titleWrapper__6eIDB">
+        <span class="_titleWrapper_192u7_10">
         </span>
       </div>
     </div>
@@ -514,12 +514,12 @@ exports[`Tester/TopBanner/TopBannerInternal WithRef play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1`] = `
 <div data-test-block="true">
-  <header class="TopBannerInternal_topBanner__qkiyp ">
+  <header class="_topBanner_192u7_57 ">
     <a href="main"
-       class="TopBannerSkipLink_skipLink__5N+l7 TopBannerInternal_skipLink__zUMI2"
+       class="_skipLink_1qmlj_1 _skipLink_192u7_159"
     >
-      <span class="TopBannerSkipLink_skipLinkContent__T3QpL">
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerSkipLink_icon__Xwbwo"
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -531,17 +531,17 @@ exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1
         Hopp til hovedinnhold
       </span>
     </a>
-    <div class="TopBannerInternal_topContainer__MOjfe">
-      <div class="TopBannerInternal_contentContainer__CPB4+ ">
-        <a class="TopBannerInternal_logo__JYEkN"
+    <div class="_topContainer_192u7_90">
+      <div class="_contentContainer_192u7_98 ">
+        <a class="_logo_192u7_66"
            href="#"
         >
-          <img class="TopBannerInternal_logoImage__g5BAe"
-               src="logo-sak.65d5566ee5e27437137f13d4a5bfef7e.svg"
+          <img class="_logoImage_192u7_73"
+               src="[REMOVED]"
                alt="til startsiden kakeportalen"
           >
         </a>
-        <span class="TopBannerInternal_titleWrapper__6eIDB">
+        <span class="_titleWrapper_192u7_10">
           <span>
             kakeportalen
           </span>
@@ -549,9 +549,9 @@ exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1
             kaka er en løgn
           </span>
         </span>
-        <div class="TopBannerInternal_nameContainer__sI7XR">
+        <div class="_nameContainer_192u7_128">
           <div>
-            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerInternal_nameContainerIcon__fpe+i"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _nameContainerIcon_192u7_152"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -561,7 +561,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1
               </path>
             </svg>
           </div>
-          <span class="TopBannerInternal_nameContainerName__amREt">
+          <span class="_nameContainerName_192u7_147">
             Sandra Saksbehandler
           </span>
         </div>

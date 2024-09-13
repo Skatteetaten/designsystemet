@@ -61,7 +61,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
       >
         {svgPath && (
           <Icon
-            size={'small'}
+            size={'medium'}
             svgPath={svgPath}
             className={`${styles.icon} ${styles.icon_isCustom}`}
           />
@@ -69,7 +69,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
         {children}
         {isExternal && (
           <ExternalIcon
-            size={'small'}
+            size={'medium'}
             className={`${styles.icon} ${styles.icon_isExternal}`}
             ariaLabel={t('shared.ExternalIcon')}
           />

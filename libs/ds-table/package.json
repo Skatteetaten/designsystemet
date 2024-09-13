@@ -19,5 +19,7 @@
     "@skatteetaten/ds-buttons": "1.1.1",
     "@skatteetaten/ds-progress": "1.1.1"
   },
-  "scripts": {}
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
 }

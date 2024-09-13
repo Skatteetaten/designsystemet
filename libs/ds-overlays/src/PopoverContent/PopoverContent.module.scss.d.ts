@@ -1,13 +1,15 @@
-/* automatisk genererte types */
-export const popover: string;
-export const popover_forest: string;
-export const popover_ochre: string;
-export const popover_white: string;
-export const popoverContent: string;
-export const popoverContentWrapper: string;
-export const popoverContentCloseButton: string;
-export const popoverArrow: string;
-export const popoverArrow_top: string;
-export const popoverArrow_bottom: string;
-export const popoverArrow_left: string;
-export const popoverArrow_right: string;
+declare const classNames: {
+  readonly popover: 'popover';
+  readonly popover_forest: 'popover_forest';
+  readonly popover_ochre: 'popover_ochre';
+  readonly popover_white: 'popover_white';
+  readonly popoverContent: 'popoverContent';
+  readonly popoverContentWrapper: 'popoverContentWrapper';
+  readonly popoverContentCloseButton: 'popoverContentCloseButton';
+  readonly popoverArrow: 'popoverArrow';
+  readonly popoverArrow_top: 'popoverArrow_top';
+  readonly popoverArrow_bottom: 'popoverArrow_bottom';
+  readonly popoverArrow_left: 'popoverArrow_left';
+  readonly popoverArrow_right: 'popoverArrow_right';
+};
+export default classNames;

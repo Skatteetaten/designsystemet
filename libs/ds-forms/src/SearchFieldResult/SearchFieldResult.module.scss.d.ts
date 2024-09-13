@@ -1,3 +1,5 @@
-/* automatisk genererte types */
-export const searchResult: string;
-export const searchResultTitle: string;
+declare const classNames: {
+  readonly searchResult: 'searchResult';
+  readonly searchResultTitle: 'searchResultTitle';
+};
+export default classNames;

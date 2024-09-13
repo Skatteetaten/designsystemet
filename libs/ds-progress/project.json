@@ -20,7 +20,7 @@
         "entryFile": "libs/ds-progress/src/index.ts",
         "external": ["react", "react-dom", "react/jsx-runtime"],
         "rollupConfig": ["libs/ds-progress/rollup.config.js"],
-        "compiler": "babel",
+        "compiler": "swc",
         "assets": [
           {
             "glob": "libs/ds-progress/README.md",
