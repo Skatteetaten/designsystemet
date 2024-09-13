@@ -1,17 +1,15 @@
 .breadcrumbsList {
   display: flex;
-  width: auto;
-  min-width: 100%;
-  min-height: 2rem;
   flex-wrap: nowrap;
   align-items: center;
   padding: 0;
   margin: 0;
-  gap: 0 var(--spacing-s);
-  overflow-x: hidden;
+  line-height: var(--semantic-line-height-buttons);
+  overflow-x: clip;
   white-space: nowrap;
 
   &Collapsed {
+    overflow: visible;
     flex-wrap: wrap;
     white-space: inherit;
   }
@@ -24,4 +22,7 @@
 .expandButtonWrapper {
   display: flex;
   align-items: center;
+  padding-right: var(--spacing-s);
+  gap: 0 var(--spacing-s);
+  list-style-type: none;
 }

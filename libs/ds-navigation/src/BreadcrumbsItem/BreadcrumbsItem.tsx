@@ -34,12 +34,6 @@ export const BreadcrumbsItem = forwardRef<HTMLLIElement, BreadcrumbsItemProps>(
           aria-current={isCurrentPage ? 'page' : undefined}
         >
           {children}
-          <span
-            className={styles.breadcrumbsItemSeparator}
-            aria-hidden={'true'}
-          >
-            {'/'}
-          </span>
         </li>
       </BreadcrumbsItemContext.Provider>
     );

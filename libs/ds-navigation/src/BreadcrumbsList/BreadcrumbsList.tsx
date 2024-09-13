@@ -54,11 +54,11 @@ export const BreadcrumbsList = forwardRef<
             ) {
               setThreshold(entry.target.scrollWidth);
             }
-
+            console.log({ threshold });
             setIsOverflowing(
               threshold ? threshold > entry.target.clientWidth : false
             );
-          }, 10);
+          }, 0);
         }
       });
 
@@ -109,7 +109,7 @@ export const BreadcrumbsList = forwardRef<
                 svgPath={VerticalDotsSVGpath}
                 onClick={handleExpand}
               />
-              <span aria-hidden>{'/'}</span>
+              <span>{'/'}</span>
             </li>
             {childrenAsArray.slice(-2)}
           </>

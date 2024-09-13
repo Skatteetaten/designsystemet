@@ -154,8 +154,8 @@ export const WithCollapsed = {
 
     const expandButton = await canvas.findByRole('button');
     await expect(expandButton).toBeInTheDocument();
-    const links = canvas.getAllByRole('link');
-    await expect(links.length).toEqual(2);
+    const listItems = canvas.getAllByRole('listitem');
+    await expect(listItems.length).toEqual(3);
   },
 } satisfies Story;
 
@@ -187,8 +187,8 @@ export const WithoutCollapse = {
   render: WithoutCollapseTemplate,
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const links = canvas.getAllByRole('link');
-    await expect(links.length).toEqual(breadcrumbsData.length);
+    const listItems = canvas.getAllByRole('listitem');
+    await expect(listItems.length).toEqual(breadcrumbsData.length);
   },
 } satisfies Story;
 

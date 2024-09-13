@@ -11,10 +11,11 @@ export const BreadcrumbsLink = forwardRef<
 >(({ href, children, ...rest }: BreadcrumbsLinkProps, ref): JSX.Element => {
   const { isCurrentPage } = useContext(BreadcrumbsItemContext);
 
+  // TODO - hvilke props skal til hvor?
   return isCurrentPage ? (
     <span {...rest}>{children}</span>
   ) : (
-    <Link ref={ref} href={href} {...rest}>
+    <Link ref={ref} {...rest} href={href}>
       {children}
     </Link>
   );

@@ -106,18 +106,3 @@ export const WithIsCurrentPage = {
     await expect(container).toHaveAttribute('aria-current', 'page');
   },
 } satisfies Story;
-
-export const WithSeparatorHidden = {
-  name: 'With Separator Hidden (B2)',
-  args: defaultArgs,
-  parameters: {
-    imageSnapshot: {
-      disable: true,
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const separator = canvas.getByText('/');
-    await expect(separator).toHaveAttribute('aria-hidden', 'true');
-  },
-} satisfies Story;
