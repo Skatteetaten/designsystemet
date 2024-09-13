@@ -320,10 +320,10 @@ exports[`Tester/Fieldset WithShowRequiredMarkAndLegend smoke-test 1`] = `
     <legend id="legendId-:r5:"
             class="_srOnly_s6jvz_39"
     >
-      <h1 class="_heading_ppf3o_1 _heading_level3_ppf3o_32  ">
+      <h1 class="_heading_1okn6_1 _heading_level3_1okn6_34  ">
         Dette er en Heading i legend
       </h1>
-      <p class="_paragraph_iocao_1 _paragraph_ingress_iocao_18  ">
+      <p class="_paragraph_32eqi_1 _paragraph_ingress_32eqi_20  ">
         <em>
           Dette er en italic Paragraph med ingress variant i legend
         </em>
@@ -332,10 +332,10 @@ exports[`Tester/Fieldset WithShowRequiredMarkAndLegend smoke-test 1`] = `
     <div class="_legend_s6jvz_15 _legendWithMarkup_required_s6jvz_23"
          aria-hidden="true"
     >
-      <h1 class="_heading_ppf3o_1 _heading_level3_ppf3o_32  ">
+      <h1 class="_heading_1okn6_1 _heading_level3_1okn6_34  ">
         Dette er en Heading i legend
       </h1>
-      <p class="_paragraph_iocao_1 _paragraph_ingress_iocao_18  ">
+      <p class="_paragraph_32eqi_1 _paragraph_ingress_32eqi_20  ">
         <em>
           Dette er en italic Paragraph med ingress variant i legend
         </em>
