@@ -1,12 +1,4 @@
-import {
-  forwardRef,
-  useId,
-  JSX,
-  useRef,
-  FocusEvent,
-  ChangeEvent,
-  useMemo,
-} from 'react';
+import { forwardRef, useId, JSX, FocusEvent, ChangeEvent } from 'react';
 
 import {
   getCommonClassNameDefault,
@@ -64,48 +56,36 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
         : '';
     const radioGroupItemContainer =
       `${styles.radioGroupItemContainer} ${variantClassName}`.trim();
-    const radioGroupRef = useRef<HTMLDivElement>(null);
 
-    const radioContext = useMemo(() => {
-      const handleBlur = (
-        event: FocusEvent<HTMLInputElement, Element>
-      ): void => {
-        const blurredRadio = event.target as HTMLInputElement;
-        const clickedElement = event.relatedTarget;
-        let clickedRadioName;
-        // hvis klikk på selve input-elementet med type=radio
-        if (
-          clickedElement instanceof HTMLInputElement &&
-          clickedElement.type === 'radio'
-        ) {
-          clickedRadioName = clickedElement.name;
-        } else if (clickedElement instanceof HTMLLabelElement) {
-          // Hvis klikk på label elementet tilknyttet input element
-          let inputElement;
-          if (shadowRootNode) {
-            inputElement = shadowRootNode.getElementById(
-              clickedElement.htmlFor
-            ) as HTMLInputElement;
-          } else {
-            inputElement = document.getElementById(
-              clickedElement.htmlFor
-            ) as HTMLInputElement;
-          }
-          clickedRadioName = inputElement.name;
+    const handleBlur = (event: FocusEvent<HTMLInputElement, Element>): void => {
+      const blurredRadio = event.target as HTMLInputElement;
+      const clickedElement = event.relatedTarget;
+      let clickedRadioName;
+      if (
+        clickedElement instanceof HTMLInputElement &&
+        clickedElement.type === 'radio'
+      ) {
+        clickedRadioName = clickedElement.name;
+      } else if (clickedElement instanceof HTMLLabelElement) {
+        let inputElement;
+        if (shadowRootNode) {
+          inputElement = shadowRootNode.getElementById(
+            clickedElement.htmlFor
+          ) as HTMLInputElement;
+        } else {
+          inputElement = document.getElementById(
+            clickedElement.htmlFor
+          ) as HTMLInputElement;
         }
-
-        if (clickedRadioName !== blurredRadio.name && onBlurExternal) {
-          onBlurExternal?.(event);
-        }
-      };
-
-      return {
-        onBlur: handleBlur,
-        onChange: (event: ChangeEvent<HTMLInputElement>): void => {
-          onChangeExternal?.(event);
-        },
-      };
-    }, [onBlurExternal, shadowRootNode, onChangeExternal]);
+        clickedRadioName = inputElement.name;
+      }
+      if (clickedRadioName !== blurredRadio.name && onBlurExternal) {
+        onBlurExternal?.(event);
+      }
+    };
+    const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
+      onChangeExternal?.(event);
+    };
     return (
       <Fieldset
         ref={ref}
@@ -126,7 +106,7 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
         hasSpacing
         onHelpToggle={onHelpToggle}
       >
-        <div ref={radioGroupRef} className={radioGroupItemContainer}>
+        <div className={radioGroupItemContainer}>
           <RadioGroupContext.Provider
             value={{
               defaultValue,
@@ -135,7 +115,8 @@ export const RadioGroup = forwardRef<HTMLFieldSetElement, RadioGroupProps>(
               name: nameId,
               hasError: !!errorMessage || undefined,
               required,
-              ...radioContext,
+              onChange: handleChange,
+              onBlur: handleBlur,
             }}
           >
             {children}

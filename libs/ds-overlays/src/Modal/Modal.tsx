@@ -44,6 +44,8 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
       padding = getModalPaddingDefault(),
       title,
       variant = getModalVariantDefault(),
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      shadowRootNode,
       onClose,
       children,
     },
