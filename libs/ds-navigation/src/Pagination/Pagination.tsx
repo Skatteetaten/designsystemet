@@ -14,6 +14,33 @@ import { PaginationList } from '../PaginationList/PaginationList';
 
 import styles from './Pagination.module.scss';
 
+const validPropRanges = ({
+  totalItems,
+  currentPage,
+  lastPage,
+}: {
+  totalItems: number;
+  currentPage: number;
+  lastPage: number;
+}): boolean => {
+  if (totalItems < 1) {
+    // Ingen elementer å vise.
+    return false;
+  } else if (lastPage < currentPage) {
+    // Skal ikke skje. currentPage er større en total *
+    console.log(
+      'Pagination: currentPage er høyere enn maks totalElementer * antallElementerPrSide'
+    );
+    return false;
+  } else if (currentPage <= 0) {
+    console.log(
+      `Pagination: currentPage må være fra og med 1 til og med ${lastPage}.`
+    );
+    return false;
+  }
+  return true;
+};
+
 export const Pagination = forwardRef<HTMLElement, PaginationProps>(
   (
     {
@@ -41,12 +68,14 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
     const [internalPage, setInternalPage] = useState<number>(defaultCurrent);
     const currentPage = externalCurrentPage ?? internalPage;
 
-    if (currentPage <= 0 || currentPage > lastPage) {
-      throw new Error(
+    if (!validPropRanges({ totalItems, currentPage, lastPage })) {
+      return null;
+    }
+    /* if (currentPage <= 0 || currentPage > lastPage) {
+      console.log(
         `currentPage må være fra og med 1 til og med ${lastPage} (lastPage).`
       );
-    }
-
+    } */
     const handleChange = (page: number): void => {
       setInternalPage(page);
       if (page === 1) {
