@@ -1,11 +1,5 @@
 @import 'libs/ds-core-utils/src/styles';
 
-.inputWrapper {
-  position: relative;
-  display: flex;
-  margin-top: var(--spacing-xs);
-}
-
 .textbox {
   display: block;
   width: 100%;
@@ -13,6 +7,7 @@
   padding: var(--spacing-xs) var(--spacing-s);
   border: none;
   border-radius: 0;
+  margin-top: var(--spacing-xs);
 
   // stylelint-disable-next-line property-no-vendor-prefix
   -webkit-appearance: none;
@@ -24,29 +19,12 @@
   line-height: var(--semantic-line-height-input);
   outline-offset: 0;
 
-  &[list] {
-    // Calc = størrelse på knapp + spacing på begge sider
-    padding: var(--spacing-xs) calc(2 * var(--spacing-xs) + var(--size-medium))
-      var(--spacing-xs) var(--spacing-s);
-  }
-
   &_large {
     padding: var(--spacing-s);
   }
 
-  &_large[list] {
-    // Calc = størrelse på knapp + spacing på begge sider
-    padding: var(--spacing-s) calc(2 * var(--spacing-s) + var(--size-medium))
-      var(--spacing-s) var(--spacing-s);
-  }
-
   &::-webkit-calendar-picker-indicator {
     display: none !important;
-  }
-
-  // iOS
-  &::-webkit-list-button {
-    opacity: 0 !important;
   }
 
   input::-webkit-textfield-decoration-container {
@@ -105,38 +83,4 @@
   &_large:read-only:not(:disabled) {
     padding: var(--spacing-s);
   }
-
-  /*
-  På iOS Safari er innebygget ikon for datalist skjult men fortsatt klikkbart.
-  Det må være mindre padding slik at vårt ikon og usynlig ikon alignes.
-  På desktop Safari inneholder feltet mer whitespace enn andre nettlesere derfor gir det også mening
-  med mindre padding der.
-   */
-  &_safari[list] {
-    padding-right: var(--size-small);
-  }
-}
-
-.dataListArrow {
-  position: absolute;
-  right: 4px;
-  align-self: center;
-  padding: 3px 1px 1px 3px;
-  fill: var(--semantic-interactive-main);
-  pointer-events: none;
-
-  &_large {
-    right: 5px;
-    padding: var(--spacing-xs);
-  }
-}
-
-.textbox:disabled + .dataListArrow {
-  fill: var(--semantic-disabled-foreground);
-}
-
-.textbox:enabled:active + .dataListArrow {
-  border-left: none;
-  background-color: var(--semantic-interactive-background);
-  fill: var(--semantic-interactive-foreground);
 }
