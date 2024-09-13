@@ -91,4 +91,4 @@ export const TabsTab = forwardRef<HTMLButtonElement, TabsTabProps>(
   }
 );
 
-TabsTab.displayName = 'Tabs.Tab';
+TabsTab.displayName = 'TabsTab';

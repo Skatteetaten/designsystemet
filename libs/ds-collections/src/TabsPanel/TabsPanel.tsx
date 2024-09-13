@@ -47,4 +47,4 @@ export const TabsPanel = forwardRef<HTMLDivElement, TabsPanelProps>(
   }
 );
 
-TabsPanel.displayName = 'Tabs.Panel';
+TabsPanel.displayName = 'TabsPanel';
