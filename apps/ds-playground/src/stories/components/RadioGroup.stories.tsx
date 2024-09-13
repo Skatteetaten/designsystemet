@@ -39,6 +39,7 @@ const meta = {
       control: 'text',
       table: { category: category.props },
     },
+    shadowRootNode: { table: { category: category.props } },
     showRequiredMark: { table: { category: category.props } },
     titleHelpSvg: {
       table: {
@@ -63,6 +64,7 @@ const meta = {
       table: { category: category.htmlAttribute },
     },
     // Events
+    onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
     onHelpToggle: { table: { category: category.event } },
   },

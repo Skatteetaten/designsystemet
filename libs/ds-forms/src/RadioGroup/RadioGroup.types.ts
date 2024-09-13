@@ -4,6 +4,7 @@ import {
   ForwardRefExoticComponent,
   RefAttributes,
   ReactNode,
+  FocusEventHandler,
 } from 'react';
 
 import {
@@ -26,11 +27,12 @@ export interface RadioGroupContextProps {
   hasError?: boolean;
   required?: boolean;
   onChange?: ChangeEventHandler<HTMLInputElement>;
+  onBlur?: FocusEventHandler<HTMLInputElement>;
 }
 
 type RequiredInputHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'input'>,
-  'onChange'
+  'onChange' | 'onBlur'
 >;
 
 type RequiredFieldsetHTMLAttributes = Pick<
@@ -72,6 +74,8 @@ interface RadioGroupComponentCommonProps
   variant?: RadioGroupVariant;
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: FieldsetProps['onHelpToggle'];
+  /** Shadowrootnode */
+  shadowRootNode?: Document | ShadowRoot;
 }
 
 type RadioGroupDiscriminatedCheckedProps =
