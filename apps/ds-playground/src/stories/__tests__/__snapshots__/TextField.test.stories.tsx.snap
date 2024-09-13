@@ -769,7 +769,7 @@ exports[`Tester/TextField WithTextAreaAutoSizeInModal play-test 1`] = `
       </button>
       <div class="_modalPaddingL_125nh_51">
         <h1 id="modalHeadingId-:r2s:"
-            class="_heading_ppf3o_1 _heading_level3_ppf3o_32 _heading_hasSpacingSmall_ppf3o_52 _modalHeading_125nh_29"
+            class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 _modalHeading_125nh_29"
         >
           Modal med textarea
         </h1>
