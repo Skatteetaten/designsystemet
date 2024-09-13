@@ -15,7 +15,7 @@ import {
   getCommonFormVariantDefault,
   useValidateFormRequiredProps,
 } from '@skatteetaten/ds-core-utils';
-import { ChevronDownSVGpath, Icon } from '@skatteetaten/ds-icons';
+import { ChevronDownIcon } from '@skatteetaten/ds-icons';
 
 import { SelectComponent, SelectProps } from './Select.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
@@ -146,7 +146,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
             )}
             {children}
           </select>
-          <Icon className={selectIconClassName} svgPath={ChevronDownSVGpath} />
+          <ChevronDownIcon className={selectIconClassName} />
         </div>
         <ErrorMessage
           id={errorId}
@@ -162,3 +162,4 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
 
 Select.displayName = 'Select';
 Select.Option = SelectOption;
+Select.Option.displayName = 'Select.Option';

@@ -64,7 +64,10 @@ const meta = {
     },
     // HTML
     autoComplete: { table: { category: category.htmlAttribute } },
-    disabled: { table: { category: category.htmlAttribute } },
+    disabled: {
+      control: 'boolean',
+      table: { category: category.htmlAttribute },
+    },
     form: { table: { category: category.htmlAttribute } },
     inputMode: {
       control: 'inline-radio',
@@ -85,6 +88,7 @@ const meta = {
       control: 'text',
       table: { category: category.htmlAttribute },
     },
+    list: { control: 'text', table: { category: category.htmlAttribute } },
     // Events
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
@@ -125,6 +129,7 @@ export const Examples: Story = {
         <TextField
           label={'Postnummer'}
           as={'input'}
+          name={'test'}
           className={'textField150'}
           errorMessage={errorMessage}
           value={postaCodeInput}
@@ -160,6 +165,14 @@ export const Examples: Story = {
             setInfoInput(e.target.value)
           }
         />
+        <TextField label={'Nettleser'} list={'browsers'} />
+        <datalist id={'browsers'}>
+          <option value={'Edge'} />
+          <option value={'Firefox'} />
+          <option value={'Chrome'} />
+          <option value={'Opera'} />
+          <option value={'Safari'} />
+        </datalist>
       </form>
     );
   },

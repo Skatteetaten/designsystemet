@@ -1218,7 +1218,7 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMarkAndLegendAsMarkup smoke
     <legend id="legendId-:r1u:"
             class="_srOnly_s6jvz_39"
     >
-      <h4 class="_heading_ppf3o_1 _heading_level3_ppf3o_32  ">
+      <h4 class="_heading_1okn6_1 _heading_level3_1okn6_34  ">
         Type virksomhet
       </h4>
       <span>
@@ -1228,7 +1228,7 @@ exports[`Tester/RadioGroup/RadioGroup WithRequiredAndMarkAndLegendAsMarkup smoke
     <div class="_legend_s6jvz_15 _legendWithMarkup_required_s6jvz_23"
          aria-hidden="true"
     >
-      <h4 class="_heading_ppf3o_1 _heading_level3_ppf3o_32  ">
+      <h4 class="_heading_1okn6_1 _heading_level3_1okn6_34  ">
         Type virksomhet
       </h4>
       <span>

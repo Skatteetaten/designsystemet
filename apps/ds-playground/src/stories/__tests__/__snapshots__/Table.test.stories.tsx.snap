@@ -474,6 +474,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
     <div class="_hidden_1kbf9_45"
          aria-live="polite"
     >
+      Ikke sortert
     </div>
   </div>
 </div>
@@ -757,6 +758,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
     <div class="_hidden_1kbf9_45"
          aria-live="polite"
     >
+      Ikke sortert
     </div>
   </div>
 </div>
@@ -1117,6 +1119,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
     <div class="_hidden_1kbf9_45"
          aria-live="polite"
     >
+      Ikke sortert
     </div>
   </div>
 </div>
@@ -1687,6 +1690,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
     <div class="_hidden_1kbf9_45"
          aria-live="polite"
     >
+      Ikke sortert
     </div>
   </div>
 </div>
@@ -1970,6 +1974,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
     <div class="_hidden_1kbf9_45"
          aria-live="polite"
     >
+      Ikke sortert
     </div>
   </div>
 </div>

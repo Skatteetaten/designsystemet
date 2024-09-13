@@ -21,6 +21,7 @@ const meta = {
   title: 'Komponenter/RadioGroup/RadioGroup',
   argTypes: {
     // Props
+    classNames: { table: { category: category.props } },
     children: { table: { category: category.props } },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },

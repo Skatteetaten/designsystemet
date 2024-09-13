@@ -8,7 +8,7 @@
 
   .icon {
     background-color: inherit;
-    fill: var(--semantic-interactive-main);
+    fill: currentcolor;
     transform: translate(0, var(--spacing-xs));
     vertical-align: top;
 
@@ -24,24 +24,27 @@
   &_white {
     --semantic-interactive-main: var(--palette-graphite-0);
 
+    &:focus {
+      @extend %focus;
+
+      color: var(--theme-primary);
+      text-decoration: underline;
+    }
+
     &:hover {
       --semantic-interactive-main: var(--theme-primary);
       --semantic-interactive-background: var(--palette-graphite-0);
     }
 
-    &:focus {
-      @extend %focus;
-    }
-
     &:active {
       @extend %focus;
 
-      --semantic-interactive-foreground: var(--theme-primary);
-      --semantic-interactive-background: var(--palette-graphite-0);
+      --semantic-interactive-foreground: var(--palette-graphite-0);
+      --theme-primary: var(--palette-graphite-100);
     }
-  }
 
-  &:active .icon {
-    fill: var(--semantic-interactive-foreground);
+    &:hover:active {
+      text-decoration: underline;
+    }
   }
 }
