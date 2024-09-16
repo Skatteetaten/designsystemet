@@ -23,6 +23,7 @@ const meta = {
   title: 'Komponenter/Table/Table',
   argTypes: {
     // Props
+    canBeManuallyFocused: { table: { category: category.props } },
     children: { control: false, table: { category: category.props } },
     variant: {
       options: [...densityArr],

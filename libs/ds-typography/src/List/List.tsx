@@ -16,6 +16,7 @@ export const List = forwardRef<AnyHTMLListElement, ListProps>(
       lang,
       'data-testid': dataTestId,
       as: Tag = getListAsDefault(),
+      canBeManuallyFocused,
       hasSpacing,
       children,
     },
@@ -30,6 +31,7 @@ export const List = forwardRef<AnyHTMLListElement, ListProps>(
         className={`${styles.list} ${bulletClassName} ${spacingClassName} ${className}`}
         lang={lang}
         data-testid={dataTestId}
+        tabIndex={canBeManuallyFocused ? -1 : undefined}
       >
         {children}
       </Tag>

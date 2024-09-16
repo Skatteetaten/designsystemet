@@ -32,6 +32,8 @@ export const panelSpacingArr = [
 export type PanelSpacing = (typeof panelSpacingArr)[number];
 
 export interface PanelComponentCommonProps extends BaseProps {
+  /** Lar heading i komponenten være fokuserbar ved å sett tabIndex: -1 */
+  canManuallySetTitleFocus?: boolean;
   /** Tekst eller markup for Panel. */
   children: ReactNode;
   /** Farge på border eller bakgrunn for Panel avhengig av variant som er valgt. */

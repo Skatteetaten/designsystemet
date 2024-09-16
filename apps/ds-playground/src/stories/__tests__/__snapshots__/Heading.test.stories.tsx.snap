@@ -115,11 +115,21 @@ exports[`Tester/Heading WithAttributes play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Heading WithCanBeManuallyFocused play-test 1`] = `
+<div data-test-block="true">
+  <h2 class="_heading_1okn6_1 _heading_level2_1okn6_25  "
+      tabindex="-1"
+  >
+    Dette er en heading
+  </h2>
+</div>
+`;
+
 exports[`Tester/Heading WithMarkup smoke-test 1`] = `
 <div data-test-block="true">
   <h2 class="_heading_1okn6_1 _heading_level2_1okn6_25 _heading_hasSpacingSmallMobileMediumOtherwise_1okn6_60 ">
     Dette er den
-    <a href="https://skatteetaten.no">
+    <a href="https://www.skatteetaten.no">
       fyneste markup headingen
     </a>
     <em>

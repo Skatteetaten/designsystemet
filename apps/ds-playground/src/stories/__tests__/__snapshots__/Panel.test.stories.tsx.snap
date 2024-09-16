@@ -140,6 +140,30 @@ exports[`Tester/Panel WithAttributes play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Panel WithCanManuallySetTitleFocuse play-test 1`] = `
+<div data-test-block="true">
+  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
+    <div class="_panelArticle_ymo8g_64">
+      <h3 class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 "
+          tabindex="-1"
+      >
+        Tittel i Panel
+      </h3>
+      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
+        Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+      </p>
+      <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+              type="button"
+      >
+        <span class="_buttonText_6ybyo_69">
+          Trykk på meg
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Tester/Panel WithClassNameOverridesPanelWidthAndPadding smoke-test 1`] = `
 <div data-test-block="true">
   <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112  dummyPanelOverridesWidthAndPadding">

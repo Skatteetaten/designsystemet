@@ -15,6 +15,7 @@ export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
       'data-testid': dataTestId,
       as: Tag,
       level,
+      canBeManuallyFocused,
       hasSpacing,
       children,
     },
@@ -40,6 +41,7 @@ export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
         className={`${styles.heading} ${levelClassName} ${spacingClassName} ${className}`}
         lang={lang}
         data-testid={dataTestId}
+        tabIndex={canBeManuallyFocused ? -1 : undefined}
       >
         {children}
       </Tag>

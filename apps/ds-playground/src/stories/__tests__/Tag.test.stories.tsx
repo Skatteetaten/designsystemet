@@ -18,6 +18,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    canBeManuallyFocused: { table: { disable: false } },
     children: {
       table: { disable: false },
       control: 'text',
@@ -132,7 +133,7 @@ export const DefaultRed = {
   },
 } satisfies Story;
 
-export const DefaultGrey = {
+export const DefaultGrey: Story = {
   name: 'Variant (graphite) (A3)',
   args: {
     ...defaultArgs,
@@ -169,5 +170,23 @@ export const WithCustomIcon = {
     svgPath: {
       table: { disable: false },
     },
+  },
+} satisfies Story;
+
+export const WithCanBeManuallyFocused: Story = {
+  args: {
+    ...defaultArgs,
+    svgPath: WarningSVGpath,
+    canBeManuallyFocused: true,
+  },
+  argTypes: {
+    canBeManuallyFocused: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const tag = canvas.getByText(defaultText);
+    tag.focus();
+    await expect(tag).toBeInTheDocument();
+    await expect(tag).toHaveAttribute('tabIndex', '-1');
   },
 } satisfies Story;

@@ -16,6 +16,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    canBeManuallyFocused: { table: { disable: true } },
     children: {
       table: { disable: true },
       control: 'text',
@@ -155,5 +156,24 @@ export const WithSpacing = {
   },
   argTypes: {
     hasSpacing: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithCanBeManuallyFocused: Story = {
+  name: 'With Can Receive Focus',
+  render: (args) => <Blockquote {...args}>{'Litt fylltekst'}</Blockquote>,
+  args: {
+    ...defaultArgs,
+    canBeManuallyFocused: true,
+  },
+  argTypes: {
+    canBeManuallyFocused: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const blockquote = canvas.getByText('Litt fylltekst');
+    blockquote.focus();
+    await expect(blockquote).toBeInTheDocument();
+    await expect(blockquote).toHaveAttribute('tabIndex', '-1');
   },
 } satisfies Story;

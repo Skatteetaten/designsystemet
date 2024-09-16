@@ -109,6 +109,24 @@ exports[`Tester/List/List WithBothVariantsAndAtLeast10NumberItems smoke-test 1`]
 </div>
 `;
 
+exports[`Tester/List/List WithCanBeManuallyFocused play-test 1`] = `
+<div data-test-block="true">
+  <ul class="_list_1xbs1_1 _list_withBullet_1xbs1_8  "
+      tabindex="-1"
+  >
+    <li class="_element_1wu1m_1 ">
+      Kjenner du behovet til brukeren?
+    </li>
+    <li class="_element_1wu1m_1 ">
+      Er du sikker på at du kjenner behovet til brukeren?
+    </li>
+    <li class="_element_1wu1m_1 ">
+      Snakk med andre.
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`Tester/List/List WithLongTextAndBreaking smoke-test 1`] = `
 <div data-test-block="true">
   <ul class="_list_1xbs1_1 _list_withBullet_1xbs1_8  ">
