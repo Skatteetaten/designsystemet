@@ -106,3 +106,19 @@ export const WithIsCurrentPage = {
     await expect(container).toHaveAttribute('aria-current', 'page');
   },
 } satisfies Story;
+
+export const WithAriaCurrent = {
+  name: 'With AriaCurrent (B3)',
+  args: {
+    ...defaultArgs,
+    ariaCurrent: 'page',
+  },
+  argTypes: {
+    isCurrentPage: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const container = canvas.getByRole('listitem');
+    await expect(container).toHaveAttribute('aria-current', 'page');
+  },
+} satisfies Story;

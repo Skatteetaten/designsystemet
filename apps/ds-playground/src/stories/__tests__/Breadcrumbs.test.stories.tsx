@@ -102,9 +102,6 @@ const breadcrumbsData = [
   { key: 'i2', href: '#', title: 'Avgifter' },
   { key: 'i3', href: '#', title: 'Avgifter på bil og kjøretøy' },
   { key: 'i4', href: '#', title: 'Vektårsavgift' },
-  { key: 'i5', href: '#', title: 'VH89236' },
-  { key: 'i6', href: '#', title: 'Bla bla bla' },
-  { key: 'i7', href: '#', title: 'En siste link' },
 ];
 
 const DefaultTemplate = (): JSX.Element => {
@@ -141,7 +138,7 @@ const WithoutCollapseTemplate = (): JSX.Element => {
   );
 };
 
-export const WithCollapsed = {
+export const WithCollapse = {
   name: 'With Collapse (A1)',
   parameters: {
     viewport: {
@@ -151,7 +148,6 @@ export const WithCollapsed = {
   render: DefaultTemplate,
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-
     const expandButton = await canvas.findByRole('button');
     await expect(expandButton).toBeInTheDocument();
     const listItems = canvas.getAllByRole('listitem');
@@ -218,9 +214,6 @@ export const WithNavigation = {
   name: 'With Navigation',
   parameters: {
     imageSnapshot: { disable: true },
-    viewport: {
-      defaultViewport: '--mobile',
-    },
   },
   render: (): JSX.Element => {
     const [breadcrumbs, setBreadcrumbs] = useState(breadcrumbsData);

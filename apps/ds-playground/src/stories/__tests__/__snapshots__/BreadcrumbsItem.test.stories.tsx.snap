@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Tester/Breadcrumbs/Item WithAriaCurrent play-test 1`] = `
+<div data-test-block="true">
+  <ol>
+    <li class="_breadcrumbsItem_12l2m_1"
+        aria-current="page"
+    >
+      <a class="_link_1tclx_1  "
+         href="#"
+      >
+        Bedrift og organisasjon
+      </a>
+    </li>
+  </ol>
+</div>
+`;
+
 exports[`Tester/Breadcrumbs/Item WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <ol>

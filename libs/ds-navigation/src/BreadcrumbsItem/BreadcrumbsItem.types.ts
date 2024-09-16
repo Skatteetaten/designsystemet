@@ -1,10 +1,14 @@
+import { ComponentPropsWithoutRef } from 'react';
+
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-// interface BreadcrumbsItemHTMLAttributes {
-//   ariaCurrent?: ComponentPropsWithoutRef<'li'>['aria-current'];
-// }
+interface BreadcrumbsItemHTMLAttributes {
+  ariaCurrent?: ComponentPropsWithoutRef<'li'>['aria-current'];
+}
 
-export interface BreadcrumbsItemProps extends BaseProps {
+export interface BreadcrumbsItemProps
+  extends BreadcrumbsItemHTMLAttributes,
+    BaseProps {
   /** Sett til 'true' på det siste elementet i brødsmulestien. */
   isCurrentPage?: boolean;
   /** Breadcrumbs.Link */

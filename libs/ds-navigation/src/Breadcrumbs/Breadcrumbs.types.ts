@@ -22,6 +22,6 @@ export interface BreadcrumbsComponent
     BreadcrumbsItemProps & RefAttributes<HTMLLIElement>
   >;
   Link: ForwardRefExoticComponent<
-    BreadcrumbsLinkProps & RefAttributes<HTMLAnchorElement>
+    BreadcrumbsLinkProps & RefAttributes<HTMLAnchorElement | HTMLSpanElement>
   >;
 }

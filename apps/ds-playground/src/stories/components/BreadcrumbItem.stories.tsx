@@ -31,6 +31,8 @@ const meta = {
       },
     },
     children: { control: false, table: { category: category.props } },
+    // Aria
+    ariaCurrent: { table: { category: category.aria } },
   },
   args: {
     children: (

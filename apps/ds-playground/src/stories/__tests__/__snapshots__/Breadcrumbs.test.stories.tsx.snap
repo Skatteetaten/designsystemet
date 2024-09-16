@@ -5,7 +5,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs Defaults smoke-test 1`] = `
   <nav class
        aria-label="Du er her:"
   >
-    <ol class="_breadcrumbsList_18d82_1">
+    <ol class="_breadcrumbsList_1hflf_1">
       <li class="_breadcrumbsItem_12l2m_1">
         <a class="_link_1tclx_1  "
            href="#"
@@ -44,7 +44,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithAriaLabel play-test 1`] = `
   <nav class
        aria-label="Du er her:"
   >
-    <ol class="_breadcrumbsList_18d82_1  _breadcrumbsListExpanded_18d82_16">
+    <ol class="_breadcrumbsList_1hflf_1  _breadcrumbsListExpanded_1hflf_17">
       <li class="_breadcrumbsItem_12l2m_1">
         <a class="_link_1tclx_1  "
            href="#"
@@ -66,32 +66,11 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithAriaLabel play-test 1`] = `
           Avgifter på bil og kjøretøy
         </a>
       </li>
-      <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
-           href="#"
-        >
-          Vektårsavgift
-        </a>
-      </li>
-      <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
-           href="#"
-        >
-          VH89236
-        </a>
-      </li>
-      <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
-           href="#"
-        >
-          Bla bla bla
-        </a>
-      </li>
       <li class="_breadcrumbsItem_12l2m_1"
           aria-current="page"
       >
         <span>
-          En siste link
+          Vektårsavgift
         </span>
       </li>
     </ol>
@@ -107,7 +86,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithAttributes play-test 1`] = `
        data-testid="123ID"
        aria-label="Du er her:"
   >
-    <ol class="_breadcrumbsList_18d82_1">
+    <ol class="_breadcrumbsList_1hflf_1">
       <li class="_breadcrumbsItem_12l2m_1">
         <a class="_link_1tclx_1  "
            href="#"
@@ -141,13 +120,13 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithAttributes play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Breadcrumbs/Breadcrumbs WithCollapsed play-test 1`] = `
+exports[`Tester/Breadcrumbs/Breadcrumbs WithCollapse play-test 1`] = `
 <div data-test-block="true">
   <nav class
        aria-label="Du er her:"
   >
-    <ol class="_breadcrumbsList_18d82_1 _breadcrumbsListCollapsed_18d82_11">
-      <li class="_expandButtonWrapper_18d82_20">
+    <ol class="_breadcrumbsList_1hflf_1 _breadcrumbsListCollapsed_1hflf_12">
+      <li class="_expandButtonWrapper_1hflf_21">
         <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                 type="button"
         >
@@ -173,14 +152,14 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithCollapsed play-test 1`] = `
         <a class="_link_1tclx_1  "
            href="#"
         >
-          Bla bla bla
+          Avgifter på bil og kjøretøy
         </a>
       </li>
       <li class="_breadcrumbsItem_12l2m_1"
           aria-current="page"
       >
         <span>
-          En siste link
+          Vektårsavgift
         </span>
       </li>
     </ol>
@@ -193,7 +172,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithExpandClickAndFocus play-test 1`] = 
   <nav class
        aria-label="Du er her:"
   >
-    <ol class="_breadcrumbsList_18d82_1  _breadcrumbsListExpanded_18d82_16">
+    <ol class="_breadcrumbsList_1hflf_1  _breadcrumbsListExpanded_1hflf_17">
       <li class="_breadcrumbsItem_12l2m_1">
         <a class="_link_1tclx_1  "
            href="#"
@@ -215,32 +194,11 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithExpandClickAndFocus play-test 1`] = 
           Avgifter på bil og kjøretøy
         </a>
       </li>
-      <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
-           href="#"
-        >
-          Vektårsavgift
-        </a>
-      </li>
-      <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
-           href="#"
-        >
-          VH89236
-        </a>
-      </li>
-      <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
-           href="#"
-        >
-          Bla bla bla
-        </a>
-      </li>
       <li class="_breadcrumbsItem_12l2m_1"
           aria-current="page"
       >
         <span>
-          En siste link
+          Vektårsavgift
         </span>
       </li>
     </ol>
@@ -253,41 +211,33 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithNavigation smoke-test 1`] = `
   <nav class
        aria-label="Du er her:"
   >
-    <ol class="_breadcrumbsList_18d82_1 _breadcrumbsListCollapsed_18d82_11">
-      <li class="_expandButtonWrapper_18d82_20">
-        <button class="_button_g87u5_1 _button_medium_g87u5_45  "
-                type="button"
+    <ol class="_breadcrumbsList_1hflf_1">
+      <li class="_breadcrumbsItem_12l2m_1">
+        <a class="_link_1tclx_1  "
+           href="#"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
-               viewbox="0 0 24 24"
-               focusable="false"
-               aria-labelledby="svgtitle-:r2:"
-               aria-hidden="false"
-               role="img"
-          >
-            <title id="svgtitle-:r2:">
-              Vis hele stien
-            </title>
-            <path d="M16 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm-6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm-6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Z">
-            </path>
-          </svg>
-        </button>
-        <span>
-          /
-        </span>
+          Bedrift og organisasjon
+        </a>
       </li>
       <li class="_breadcrumbsItem_12l2m_1">
         <a class="_link_1tclx_1  "
            href="#"
         >
-          Bla bla bla
+          Avgifter
+        </a>
+      </li>
+      <li class="_breadcrumbsItem_12l2m_1">
+        <a class="_link_1tclx_1  "
+           href="#"
+        >
+          Avgifter på bil og kjøretøy
         </a>
       </li>
       <li class="_breadcrumbsItem_12l2m_1"
           aria-current="page"
       >
         <span>
-          En siste link
+          Vektårsavgift
         </span>
       </li>
     </ol>
@@ -301,7 +251,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithRef play-test 1`] = `
        aria-label="Du er her:"
        id="dummyIdForwardedFromRef"
   >
-    <ol class="_breadcrumbsList_18d82_1">
+    <ol class="_breadcrumbsList_1hflf_1">
       <li class="_breadcrumbsItem_12l2m_1">
         <a class="_link_1tclx_1  "
            href="#"
@@ -340,7 +290,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithoutCollapse play-test 1`] = `
   <nav class
        aria-label="Du er her:"
   >
-    <ol class="_breadcrumbsList_18d82_1  _breadcrumbsListExpanded_18d82_16">
+    <ol class="_breadcrumbsList_1hflf_1  _breadcrumbsListExpanded_1hflf_17">
       <li class="_breadcrumbsItem_12l2m_1">
         <a class="_link_1tclx_1  "
            href="#"
@@ -362,32 +312,11 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithoutCollapse play-test 1`] = `
           Avgifter på bil og kjøretøy
         </a>
       </li>
-      <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
-           href="#"
-        >
-          Vektårsavgift
-        </a>
-      </li>
-      <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
-           href="#"
-        >
-          VH89236
-        </a>
-      </li>
-      <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
-           href="#"
-        >
-          Bla bla bla
-        </a>
-      </li>
       <li class="_breadcrumbsItem_12l2m_1"
           aria-current="page"
       >
         <span>
-          En siste link
+          Vektårsavgift
         </span>
       </li>
     </ol>

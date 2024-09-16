@@ -27,13 +27,13 @@ export const BreadcrumbsList = forwardRef<
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
-      children,
       shouldCollapse = getBreadcrumbsListShouldCollapseDefault(),
+      children,
     },
     ref
   ): JSX.Element => {
     const { t } = useTranslation('ds_navigation', { i18n: dsI18n });
-    const [threshold, setThreshold] = useState<number | undefined>();
+    const [listWidth, setListWidth] = useState<number | undefined>();
     const [isOverflowing, setIsOverflowing] = useState(false);
     const [isExpandedByUser, setIsExpandedByUser] = useState(false);
     const listRef = useRef<HTMLOListElement>(null);
@@ -49,14 +49,13 @@ export const BreadcrumbsList = forwardRef<
         for (const entry of entries) {
           setTimeout(() => {
             if (
-              !threshold &&
+              !listWidth &&
               entry.target.scrollWidth > entry.target.clientWidth
             ) {
-              setThreshold(entry.target.scrollWidth);
+              setListWidth(entry.target.scrollWidth);
             }
-            console.log({ threshold });
             setIsOverflowing(
-              threshold ? threshold > entry.target.clientWidth : false
+              listWidth ? listWidth > entry.target.clientWidth : false
             );
           }, 0);
         }
@@ -67,7 +66,7 @@ export const BreadcrumbsList = forwardRef<
       return () => {
         resizeObserver.disconnect();
       };
-    }, [shouldCollapse, threshold]);
+    }, [shouldCollapse, listWidth]);
 
     const handleExpand = (): void => {
       setIsExpandedByUser(true);
@@ -81,6 +80,7 @@ export const BreadcrumbsList = forwardRef<
 
     const childrenAsArray = React.Children.toArray(children);
 
+    // TODO, rewrite denne
     const isCollapsed =
       shouldCollapse &&
       isOverflowing &&
@@ -90,7 +90,9 @@ export const BreadcrumbsList = forwardRef<
     const concatenatedClassNames = `${styles.breadcrumbsList} ${
       isCollapsed ? styles.breadcrumbsListCollapsed : ''
     } ${
-      isExpandedByUser || !shouldCollapse ? styles.breadcrumbsListExpanded : ''
+      isExpandedByUser || !shouldCollapse || childrenAsArray.length < 4
+        ? styles.breadcrumbsListExpanded
+        : ''
     } ${className}`.trim();
 
     return (

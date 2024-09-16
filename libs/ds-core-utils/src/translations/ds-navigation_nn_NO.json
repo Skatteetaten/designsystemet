@@ -1,6 +1,6 @@
 {
-  "breadcrumbs.ExpandAltText": "(Vis hele stien)",
-  "breadcrumbs.NavAriaLabel": "(Du er her:)",
+  "breadcrumbs.ExpandAltText": "Vis heile stien",
+  "breadcrumbs.NavAriaLabel": "Du er her:",
   "pagination.EllipsisAltText": "Prikk, prikk, prikk",
   "pagination.NextButtonTitle": "Neste",
   "pagination.PageSummary": "Viser {{range}} av {{total}}",

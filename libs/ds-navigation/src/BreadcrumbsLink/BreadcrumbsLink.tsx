@@ -6,16 +6,21 @@ import { BreadcrumbsLinkProps } from './BreadcrumbsLink.types';
 import { BreadcrumbsItemContext } from '../BreadcrumbsItemContext/BreadcrumbsItemContext';
 
 export const BreadcrumbsLink = forwardRef<
-  HTMLAnchorElement,
+  HTMLAnchorElement | HTMLSpanElement,
   BreadcrumbsLinkProps
 >(({ href, children, ...rest }: BreadcrumbsLinkProps, ref): JSX.Element => {
   const { isCurrentPage } = useContext(BreadcrumbsItemContext);
 
-  // TODO - hvilke props skal til hvor?
-  return isCurrentPage ? (
-    <span {...rest}>{children}</span>
-  ) : (
-    <Link ref={ref} {...rest} href={href}>
+  if (isCurrentPage) {
+    return (
+      <span ref={ref as React.Ref<HTMLSpanElement>} {...rest}>
+        {children}
+      </span>
+    );
+  }
+
+  return (
+    <Link ref={ref as React.Ref<HTMLAnchorElement>} href={href} {...rest}>
       {children}
     </Link>
   );

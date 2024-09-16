@@ -15,6 +15,7 @@ export const BreadcrumbsItem = forwardRef<HTMLLIElement, BreadcrumbsItemProps>(
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
+      ariaCurrent,
       isCurrentPage = getBreadcrumbsItemIsCurrentPageDefault(),
       children,
     },
@@ -31,7 +32,7 @@ export const BreadcrumbsItem = forwardRef<HTMLLIElement, BreadcrumbsItemProps>(
           className={concatenatedClassNames}
           lang={lang}
           data-testid={dataTestId}
-          aria-current={isCurrentPage ? 'page' : undefined}
+          aria-current={isCurrentPage ? 'page' : ariaCurrent}
         >
           {children}
         </li>
