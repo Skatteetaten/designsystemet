@@ -27,22 +27,19 @@ const validPropRanges = ({
     // Ingen elementer å vise.
     return false;
   } else if (totalItems / pageSize < currentPage) {
-    // currentPage er større en total / pageSize
     console.log(
-      'Pagination: currentPage er høyere enn maks totalElementer / antallElementerPrSide'
+      'Pagination: currentPage er høyere enn maks totalItems / pageSize'
     );
     return false;
   } else if (currentPage <= 0) {
-    // Konsumentkode har satt currentPage til lavere enn mulig/lovlig.
     console.log(
-      `Pagination: currentPage må være fra og med 1 til og med ${
-        totalItems * pageSize
-      }.`
+      `Pagination: currentPage må være fra og med 1 til og med ${Math.ceil(
+        totalItems / pageSize
+      )}.`
     );
     return false;
   } else if (pageSize <= 0) {
-    // Konsumentkode har satt currentPage til lavere enn mulig/lovlig.
-    console.log(`Pagination: pageSize er mindre enn null.`);
+    console.log(`Pagination: pageSize er mindre enn 0.`);
     return false;
   }
   return true;
