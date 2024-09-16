@@ -14,28 +14,35 @@ import { PaginationList } from '../PaginationList/PaginationList';
 
 import styles from './Pagination.module.scss';
 
+type ValidationProps = Required<
+  Pick<PaginationProps, 'currentPage' | 'pageSize' | 'totalItems'>
+>;
+
 const validPropRanges = ({
-  totalItems,
   currentPage,
-  lastPage,
-}: {
-  totalItems: number;
-  currentPage: number;
-  lastPage: number;
-}): boolean => {
+  pageSize,
+  totalItems,
+}: ValidationProps): boolean => {
   if (totalItems < 1) {
     // Ingen elementer å vise.
     return false;
-  } else if (lastPage < currentPage) {
-    // Skal ikke skje. currentPage er større en total *
+  } else if (totalItems / pageSize < currentPage) {
+    // currentPage er større en total / pageSize
     console.log(
-      'Pagination: currentPage er høyere enn maks totalElementer * antallElementerPrSide'
+      'Pagination: currentPage er høyere enn maks totalElementer / antallElementerPrSide'
     );
     return false;
   } else if (currentPage <= 0) {
+    // Konsumentkode har satt currentPage til lavere enn mulig/lovlig.
     console.log(
-      `Pagination: currentPage må være fra og med 1 til og med ${lastPage}.`
+      `Pagination: currentPage må være fra og med 1 til og med ${
+        totalItems * pageSize
+      }.`
     );
+    return false;
+  } else if (pageSize <= 0) {
+    // Konsumentkode har satt currentPage til lavere enn mulig/lovlig.
+    console.log(`Pagination: pageSize er mindre enn null.`);
     return false;
   }
   return true;
@@ -68,14 +75,9 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>(
     const [internalPage, setInternalPage] = useState<number>(defaultCurrent);
     const currentPage = externalCurrentPage ?? internalPage;
 
-    if (!validPropRanges({ totalItems, currentPage, lastPage })) {
+    if (!validPropRanges({ totalItems, currentPage, pageSize })) {
       return null;
     }
-    /* if (currentPage <= 0 || currentPage > lastPage) {
-      console.log(
-        `currentPage må være fra og med 1 til og med ${lastPage} (lastPage).`
-      );
-    } */
     const handleChange = (page: number): void => {
       setInternalPage(page);
       if (page === 1) {
