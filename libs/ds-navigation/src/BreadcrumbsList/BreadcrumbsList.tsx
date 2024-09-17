@@ -3,6 +3,7 @@ import React, {
   forwardRef,
   useEffect,
   useImperativeHandle,
+  useLayoutEffect,
   useRef,
   useState,
 } from 'react';
@@ -33,43 +34,57 @@ export const BreadcrumbsList = forwardRef<
     ref
   ): JSX.Element => {
     const { t } = useTranslation('ds_navigation', { i18n: dsI18n });
-    const [listWidth, setListWidth] = useState<number | undefined>();
-    const [isOverflowing, setIsOverflowing] = useState(false);
-    const [isExpandedByUser, setIsExpandedByUser] = useState(false);
+    const [renderState, setRenderState] = useState<
+      'collapsable' | 'collapsed' | 'expanded'
+    >(shouldCollapse ? 'collapsable' : 'expanded');
+    const [totalWidth, setTotalWidth] = useState(0);
     const listRef = useRef<HTMLOListElement>(null);
 
     useImperativeHandle(ref, () => listRef.current as HTMLOListElement);
 
+    useLayoutEffect(() => {
+      if (!shouldCollapse) return;
+
+      setTimeout(() => {
+        if (listRef.current) {
+          const children = listRef.current.children;
+          let width = 0;
+          Array.from(children).forEach((child) => {
+            width += (child as HTMLElement).offsetWidth;
+          });
+          setTotalWidth(width);
+        }
+      });
+    }, [shouldCollapse]);
+
     useEffect(() => {
       if (!shouldCollapse) return;
 
+      const handleResize = (): void => {
+        if (renderState === 'expanded') return;
+
+        if (listRef.current) {
+          if (totalWidth !== 0 && totalWidth > listRef.current.clientWidth) {
+            setRenderState('collapsed');
+          } else {
+            setRenderState('collapsable');
+          }
+        }
+      };
+
       if (!listRef.current) return;
 
-      const resizeObserver = new ResizeObserver((entries) => {
-        for (const entry of entries) {
-          setTimeout(() => {
-            if (
-              !listWidth &&
-              entry.target.scrollWidth > entry.target.clientWidth
-            ) {
-              setListWidth(entry.target.scrollWidth);
-            }
-            setIsOverflowing(
-              listWidth ? listWidth > entry.target.clientWidth : false
-            );
-          }, 0);
-        }
-      });
+      const resizeObserver = new ResizeObserver(handleResize);
 
       resizeObserver.observe(listRef.current);
 
       return () => {
         resizeObserver.disconnect();
       };
-    }, [shouldCollapse, listWidth]);
+    }, [renderState, shouldCollapse, totalWidth]);
 
     const handleExpand = (): void => {
-      setIsExpandedByUser(true);
+      setRenderState('expanded');
       setTimeout(() => {
         if (listRef.current) {
           const childLinkElements = [...listRef.current.querySelectorAll('a')];
@@ -80,20 +95,7 @@ export const BreadcrumbsList = forwardRef<
 
     const childrenAsArray = React.Children.toArray(children);
 
-    // TODO, rewrite denne
-    const isCollapsed =
-      shouldCollapse &&
-      isOverflowing &&
-      childrenAsArray.length > 3 &&
-      !isExpandedByUser;
-
-    const concatenatedClassNames = `${styles.breadcrumbsList} ${
-      isCollapsed ? styles.breadcrumbsListCollapsed : ''
-    } ${
-      isExpandedByUser || !shouldCollapse || childrenAsArray.length < 4
-        ? styles.breadcrumbsListExpanded
-        : ''
-    } ${className}`.trim();
+    const concatenatedClassNames = `${styles.breadcrumbsList} ${className}`;
 
     return (
       <ol
@@ -103,7 +105,10 @@ export const BreadcrumbsList = forwardRef<
         data-testid={dataTestId}
         className={concatenatedClassNames}
       >
-        {isCollapsed ? (
+        {['collapsable', 'expanded'].includes(renderState) ||
+        childrenAsArray.length <= 3 ? (
+          childrenAsArray
+        ) : (
           <>
             <li className={styles.expandButtonWrapper}>
               <IconButton
@@ -115,8 +120,6 @@ export const BreadcrumbsList = forwardRef<
             </li>
             {childrenAsArray.slice(-2)}
           </>
-        ) : (
-          childrenAsArray
         )}
       </ol>
     );
