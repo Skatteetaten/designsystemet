@@ -790,3 +790,48 @@ export const WithDataList = {
     await expect(textbox).toHaveAttribute('list', 'browsers');
   },
 } satisfies Story;
+
+export const WithControlledValueAndAutoSizeTextArea = {
+  name: 'With Controlled Value and Autosize TextArea',
+  render: (args): JSX.Element => {
+    const [value, setValue] = useState(loremIpsum);
+
+    return (
+      <>
+        <TextField
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          {...args}
+        />
+        <Button onClick={() => setValue('')}>{'Nullstill'}</Button>
+      </>
+    );
+  },
+  args: {
+    ...defaultArgs,
+    as: 'textarea',
+    autosize: true,
+  },
+  argTypes: {
+    value: { table: { disable: false } },
+    autosize: { table: { disable: false } },
+  },
+  parameters: {
+    parameters: {
+      viewport: {
+        defaultViewport: '--breakpoint-xs',
+      },
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox).toHaveValue(loremIpsum);
+    await expect(textbox.tagName).toBe('TEXTAREA');
+    const { scrollHeight } = textbox;
+    const includeBorderAndMore = textbox.offsetHeight - textbox.clientHeight;
+    await expect(textbox).toHaveStyle({
+      height: `${scrollHeight + includeBorderAndMore}px`,
+    });
+  },
+} satisfies Story;

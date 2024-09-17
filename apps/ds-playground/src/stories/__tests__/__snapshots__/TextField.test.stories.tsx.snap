@@ -104,6 +104,39 @@ exports[`Tester/TextField WithAutoCompleteInputModeNameAndPlaceholder play-test 
 </div>
 `;
 
+exports[`Tester/TextField WithControlledValueAndAutoSizeTextArea play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <label id="labelId-:r37:"
+           class="_label_348na_5"
+           for="textFieldTextboxId-:r36:"
+    >
+      Navn
+    </label>
+    <div class="_inputWrapper_jd6ca_6">
+      <textarea id="textFieldTextboxId-:r36:"
+                class="_textbox_jd6ca_12  _textbox_multiline_jd6ca_52 _textbox_autosize_jd6ca_56"
+                style="height: 88px;"
+      >
+        Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+      </textarea>
+    </div>
+    <div id="textFieldErrorId-:r35:"
+         aria-live="assertive"
+         aria-atomic="true"
+    >
+    </div>
+  </div>
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+          type="button"
+  >
+    <span class="_buttonText_6ybyo_69">
+      Nullstill
+    </span>
+  </button>
+</div>
+`;
+
 exports[`Tester/TextField WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
   <div class="dummyClassname">
