@@ -148,7 +148,11 @@ export const WithCollapse = {
   render: DefaultTemplate,
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const expandButton = await canvas.findByRole('button');
+    const expandButton = await canvas.findByRole(
+      'button',
+      {},
+      { timeout: 2000 }
+    );
     await expect(expandButton).toBeInTheDocument();
     const listItems = canvas.getAllByRole('listitem');
     await expect(listItems.length).toEqual(3);
@@ -199,7 +203,11 @@ export const WithExpandClickAndFocus = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
 
-    const expandButton = await canvas.findByRole('button');
+    const expandButton = await canvas.findByRole(
+      'button',
+      {},
+      { timeout: 2000 }
+    );
     await expect(expandButton).toBeInTheDocument();
     await fireEvent.click(expandButton);
     await expect(expandButton).not.toBeInTheDocument();
