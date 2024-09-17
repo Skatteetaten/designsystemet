@@ -54,7 +54,7 @@ export const BreadcrumbsList = forwardRef<
           });
           setTotalWidth(width);
         }
-      });
+      }, 100);
     }, [shouldCollapse]);
 
     useEffect(() => {
@@ -73,6 +73,8 @@ export const BreadcrumbsList = forwardRef<
       };
 
       if (!listRef.current) return;
+
+      handleResize();
 
       const resizeObserver = new ResizeObserver(handleResize);
 
@@ -95,6 +97,8 @@ export const BreadcrumbsList = forwardRef<
 
     const childrenAsArray = React.Children.toArray(children);
 
+    console.log('Skal være 598:', totalWidth);
+
     const concatenatedClassNames = `${styles.breadcrumbsList} ${className}`;
 
     return (
@@ -112,6 +116,7 @@ export const BreadcrumbsList = forwardRef<
           <>
             <li className={styles.expandButtonWrapper}>
               <IconButton
+                size={'small'}
                 title={t('breadcrumbs.ExpandAltText')}
                 svgPath={VerticalDotsSVGpath}
                 onClick={handleExpand}

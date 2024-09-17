@@ -41,7 +41,9 @@ const meta = {
             {'Avgifter på bil og kjøretøy'}
           </Breadcrumbs.Link>
         </Breadcrumbs.Item>
-        <Breadcrumbs.Item isCurrentPage>{'Vektårsavgift'}</Breadcrumbs.Item>
+        <Breadcrumbs.Item isCurrentPage>
+          <Breadcrumbs.Link href={'#'}>{'Vektårsavgift'}</Breadcrumbs.Link>
+        </Breadcrumbs.Item>
       </Breadcrumbs.List>
     ),
   },
