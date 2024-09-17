@@ -5,7 +5,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs Defaults smoke-test 1`] = `
   <nav class
        aria-label="Du er her:"
   >
-    <ol class="_breadcrumbsList_1hflf_1">
+    <ol class="_breadcrumbsList_1vlvd_1 ">
       <li class="_breadcrumbsItem_12l2m_1">
         <a class="_link_1tclx_1  "
            href="#"
@@ -44,7 +44,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithAriaLabel play-test 1`] = `
   <nav class
        aria-label="Du er her:"
   >
-    <ol class="_breadcrumbsList_1hflf_1  _breadcrumbsListExpanded_1hflf_17">
+    <ol class="_breadcrumbsList_1vlvd_1 ">
       <li class="_breadcrumbsItem_12l2m_1">
         <a class="_link_1tclx_1  "
            href="#"
@@ -86,7 +86,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithAttributes play-test 1`] = `
        data-testid="123ID"
        aria-label="Du er her:"
   >
-    <ol class="_breadcrumbsList_1hflf_1">
+    <ol class="_breadcrumbsList_1vlvd_1 ">
       <li class="_breadcrumbsItem_12l2m_1">
         <a class="_link_1tclx_1  "
            href="#"
@@ -125,19 +125,19 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithCollapse play-test 1`] = `
   <nav class
        aria-label="Du er her:"
   >
-    <ol class="_breadcrumbsList_1hflf_1 _breadcrumbsListCollapsed_1hflf_12">
-      <li class="_expandButtonWrapper_1hflf_21">
-        <button class="_button_g87u5_1 _button_medium_g87u5_45  "
+    <ol class="_breadcrumbsList_1vlvd_1 ">
+      <li class="_expandButtonWrapper_1vlvd_11">
+        <button class="_button_g87u5_1 _button_small_g87u5_37  "
                 type="button"
         >
           <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                viewbox="0 0 24 24"
                focusable="false"
-               aria-labelledby="svgtitle-:r0:"
+               aria-labelledby="svgtitle-:r1:"
                aria-hidden="false"
                role="img"
           >
-            <title id="svgtitle-:r0:">
+            <title id="svgtitle-:r1:">
               Vis hele stien
             </title>
             <path d="M16 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm-6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm-6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Z">
@@ -172,7 +172,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithExpandClickAndFocus play-test 1`] = 
   <nav class
        aria-label="Du er her:"
   >
-    <ol class="_breadcrumbsList_1hflf_1  _breadcrumbsListExpanded_1hflf_17">
+    <ol class="_breadcrumbsList_1vlvd_1 ">
       <li class="_breadcrumbsItem_12l2m_1">
         <a class="_link_1tclx_1  "
            href="#"
@@ -211,7 +211,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithNavigation smoke-test 1`] = `
   <nav class
        aria-label="Du er her:"
   >
-    <ol class="_breadcrumbsList_1hflf_1">
+    <ol class="_breadcrumbsList_1vlvd_1 ">
       <li class="_breadcrumbsItem_12l2m_1">
         <a class="_link_1tclx_1  "
            href="#"
@@ -251,7 +251,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithRef play-test 1`] = `
        aria-label="Du er her:"
        id="dummyIdForwardedFromRef"
   >
-    <ol class="_breadcrumbsList_1hflf_1">
+    <ol class="_breadcrumbsList_1vlvd_1 ">
       <li class="_breadcrumbsItem_12l2m_1">
         <a class="_link_1tclx_1  "
            href="#"
@@ -290,7 +290,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithoutCollapse play-test 1`] = `
   <nav class
        aria-label="Du er her:"
   >
-    <ol class="_breadcrumbsList_1hflf_1  _breadcrumbsListExpanded_1hflf_17">
+    <ol class="_breadcrumbsList_1vlvd_1 ">
       <li class="_breadcrumbsItem_12l2m_1">
         <a class="_link_1tclx_1  "
            href="#"
