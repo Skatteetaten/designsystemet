@@ -8,6 +8,26 @@ import { VersionBadge } from '../utils/VersionBadge';
 
 <VersionBadge packageName={'navigation'} />
 
+## Regler for bruk av props i kombinasjon med andre props
+
+Komponenten vil vise summary og lenker i de tilfellene hvor det er mulig å regne ut. Vi har noen regler som må følges for at utregning skal være mulig. Denne listen med regler viser hva som forhindrer komponenten å rendres:
+
+### totalItems / pageSize < currentPage
+
+Dette betyr at gjeldende side må være større enn totalt antall elementer delt på sidestørrelse.
+
+### currentPage < 1
+
+Aktiv side kan ikke være mindre enn side 1
+
+### totalItems < 1
+
+Komponenten skal ikke vises hvis det ikke eksisterer noen sider man kan navigere til. Vi har i tillegg en regel som bare skjuler pagineringslenkene hvis totalItems er større enn pageSize
+
+### pageSize < 1
+
+Paginering skal bare vises hvis man har spesifisert antall sider til å være én eller mer.
+
 <Primary />
 
 ```tsx
