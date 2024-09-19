@@ -116,9 +116,8 @@ exports[`Tester/TextField WithControlledValueAndAutoSizeTextArea play-test 1`] =
     <div class="_inputWrapper_jd6ca_6">
       <textarea id="textFieldTextboxId-:r36:"
                 class="_textbox_jd6ca_12  _textbox_multiline_jd6ca_52 _textbox_autosize_jd6ca_56"
-                style="height: 88px;"
+                style="height: 64px;"
       >
-        Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </textarea>
     </div>
     <div id="textFieldErrorId-:r35:"
