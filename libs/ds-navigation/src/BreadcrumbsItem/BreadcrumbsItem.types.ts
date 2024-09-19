@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef } from 'react';
+import { ComponentPropsWithoutRef, ReactNode } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
@@ -12,7 +12,7 @@ export interface BreadcrumbsItemProps
   /** Sett til 'true' på det siste elementet i brødsmulestien. */
   isCurrentPage?: boolean;
   /** Breadcrumbs.Link */
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export type BreadcrumbsItemContextProps = Pick<
