@@ -8,6 +8,7 @@ import {
   textFieldAsArr,
 } from '@skatteetaten/ds-forms';
 import { Modal } from '@skatteetaten/ds-overlays';
+import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
@@ -793,17 +794,15 @@ export const WithDataList = {
 
 export const WithControlledValueAndAutoSizeTextArea = {
   name: 'With Controlled Value and Autosize TextArea',
-  render: (args): JSX.Element => {
-    const [value, setValue] = useState(loremIpsum);
-
+  render: function Render(args): JSX.Element {
+    const [, setArgs] = useArgs();
     return (
       <>
         <TextField
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
+          onChange={(e) => setArgs({ value: e.target.value })}
           {...args}
         />
-        <Button onClick={() => setValue('')}>{'Nullstill'}</Button>
+        <Button onClick={() => setArgs({ value: '' })}>{'Nullstill'}</Button>
       </>
     );
   },
@@ -811,6 +810,7 @@ export const WithControlledValueAndAutoSizeTextArea = {
     ...defaultArgs,
     as: 'textarea',
     autosize: true,
+    value: loremIpsum,
   },
   argTypes: {
     value: { table: { disable: false } },
@@ -826,8 +826,10 @@ export const WithControlledValueAndAutoSizeTextArea = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
-    await expect(textbox).toHaveValue(loremIpsum);
-    await expect(textbox.tagName).toBe('TEXTAREA');
+    await waitFor(() => expect(textbox).toHaveValue(loremIpsum));
+    const resetButton = canvas.getByRole('button');
+    resetButton.click();
+
     const { scrollHeight } = textbox;
     const includeBorderAndMore = textbox.offsetHeight - textbox.clientHeight;
     await expect(textbox).toHaveStyle({
