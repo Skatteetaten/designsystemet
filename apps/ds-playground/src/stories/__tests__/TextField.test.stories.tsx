@@ -8,6 +8,7 @@ import {
   textFieldAsArr,
 } from '@skatteetaten/ds-forms';
 import { Modal } from '@skatteetaten/ds-overlays';
+import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
@@ -788,5 +789,51 @@ export const WithDataList = {
 
     const textbox = canvas.getByRole('combobox');
     await expect(textbox).toHaveAttribute('list', 'browsers');
+  },
+} satisfies Story;
+
+export const WithControlledValueAndAutoSizeTextArea = {
+  name: 'With Controlled Value and Autosize TextArea',
+  render: function Render(args): JSX.Element {
+    const [, setArgs] = useArgs();
+    return (
+      <>
+        <TextField
+          onChange={(e) => setArgs({ value: e.target.value })}
+          {...args}
+        />
+        <Button onClick={() => setArgs({ value: '' })}>{'Nullstill'}</Button>
+      </>
+    );
+  },
+  args: {
+    ...defaultArgs,
+    as: 'textarea',
+    autosize: true,
+    value: loremIpsum,
+  },
+  argTypes: {
+    value: { table: { disable: false } },
+    autosize: { table: { disable: false } },
+  },
+  parameters: {
+    parameters: {
+      viewport: {
+        defaultViewport: '--breakpoint-xs',
+      },
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await waitFor(() => expect(textbox).toHaveValue(loremIpsum));
+    const resetButton = canvas.getByRole('button');
+    resetButton.click();
+
+    const { scrollHeight } = textbox;
+    const includeBorderAndMore = textbox.offsetHeight - textbox.clientHeight;
+    await expect(textbox).toHaveStyle({
+      height: `${scrollHeight + includeBorderAndMore}px`,
+    });
   },
 } satisfies Story;

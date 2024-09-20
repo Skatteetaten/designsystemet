@@ -82,7 +82,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       if (autosize) {
         resizeTextArea();
       }
-    }, [autosize]);
+    }, [autosize, value]);
 
     const resizeTextArea = (): void => {
       const textArea = textboxRef.current as HTMLTextAreaElement;
@@ -111,10 +111,9 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
         input.value = addSpacesOrCommas(removeNonNumeric(input.value));
       }
 
-      if (autosize) {
+      if (autosize && defaultValue !== undefined) {
         resizeTextArea();
       }
-
       onChange?.(e);
     };
 
