@@ -133,11 +133,11 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithCollapse play-test 1`] = `
           <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                viewbox="0 0 24 24"
                focusable="false"
-               aria-labelledby="svgtitle-:r1:"
+               aria-labelledby="svgtitle-:r4:"
                aria-hidden="false"
                role="img"
           >
-            <title id="svgtitle-:r1:">
+            <title id="svgtitle-:r4:">
               Vis hele stien
             </title>
             <path d="M16 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm-6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm-6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Z">

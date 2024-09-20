@@ -1,7 +1,6 @@
 import React, {
   JSX,
   forwardRef,
-  useEffect,
   useImperativeHandle,
   useRef,
   useState,
@@ -9,7 +8,11 @@ import React, {
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  getCommonClassNameDefault,
+  useMediaQuery,
+} from '@skatteetaten/ds-core-utils';
 import { VerticalDotsSVGpath } from '@skatteetaten/ds-icons';
 
 import { BreadcrumbsListProps } from './BreadcrumbsList.types';
@@ -33,69 +36,17 @@ export const BreadcrumbsList = forwardRef<
     ref
   ): JSX.Element => {
     const { t } = useTranslation('ds_navigation', { i18n: dsI18n });
-    const [renderState, setRenderState] = useState<
-      'collapsable' | 'collapsed' | 'expanded'
-    >(shouldCollapse ? 'collapsable' : 'expanded');
-    const [totalWidth, setTotalWidth] = useState(0);
-    const [fontsLoaded, setFontsLoaded] = useState(false);
-    const listRef = useRef<HTMLOListElement>(null);
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const isMobile = !useMediaQuery('(min-width: 640px)');
+
+    const isCollapsed = shouldCollapse && !isExpanded && isMobile;
 
     useImperativeHandle(ref, () => listRef.current as HTMLOListElement);
-
-    useEffect(() => {
-      if (document.fonts.status === 'loaded') {
-        setFontsLoaded(true);
-      } else {
-        document.fonts.ready.then(() => {
-          setFontsLoaded(true);
-        });
-      }
-    }, []);
-
-    useEffect(() => {
-      if (!shouldCollapse) return;
-      if (!fontsLoaded) return;
-
-      if (listRef.current) {
-        const children = listRef.current.children;
-        let width = 0;
-        Array.from(children).forEach((child) => {
-          width += (child as HTMLElement).offsetWidth;
-        });
-        setTotalWidth(width);
-      }
-    }, [fontsLoaded, shouldCollapse]);
-
-    useEffect(() => {
-      if (!shouldCollapse) return;
-
-      const handleResize = (): void => {
-        if (renderState === 'expanded') return;
-
-        if (listRef.current) {
-          if (totalWidth !== 0 && totalWidth > listRef.current.clientWidth) {
-            setRenderState('collapsed');
-          } else {
-            setRenderState('collapsable');
-          }
-        }
-      };
-
-      if (!listRef.current) return;
-
-      handleResize();
-
-      const resizeObserver = new ResizeObserver(handleResize);
-
-      resizeObserver.observe(listRef.current);
-
-      return () => {
-        resizeObserver.disconnect();
-      };
-    }, [renderState, shouldCollapse, totalWidth]);
+    const listRef = useRef<HTMLOListElement>(null);
 
     const handleExpand = (): void => {
-      setRenderState('expanded');
+      setIsExpanded(true);
       setTimeout(() => {
         if (listRef.current) {
           const childLinkElements = [...listRef.current.querySelectorAll('a')];
@@ -105,8 +56,6 @@ export const BreadcrumbsList = forwardRef<
     };
 
     const childrenAsArray = React.Children.toArray(children);
-
-    console.log('Skal være 598:', totalWidth);
 
     const concatenatedClassNames = `${styles.breadcrumbsList} ${className}`;
 
@@ -118,8 +67,7 @@ export const BreadcrumbsList = forwardRef<
         data-testid={dataTestId}
         className={concatenatedClassNames}
       >
-        {['collapsable', 'expanded'].includes(renderState) ||
-        childrenAsArray.length <= 3 ? (
+        {!isCollapsed || childrenAsArray.length <= 3 ? (
           childrenAsArray
         ) : (
           <>

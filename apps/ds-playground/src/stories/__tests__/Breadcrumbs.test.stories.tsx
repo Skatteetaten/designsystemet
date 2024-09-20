@@ -142,17 +142,13 @@ export const WithCollapse = {
   name: 'With Collapse (A1)',
   parameters: {
     viewport: {
-      defaultViewport: '--mobile',
+      defaultViewport: '--breakpoint-xs',
     },
   },
   render: DefaultTemplate,
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const expandButton = await canvas.findByRole(
-      'button',
-      {},
-      { timeout: 2000 }
-    );
+    const expandButton = await canvas.findByRole('button');
     await expect(expandButton).toBeInTheDocument();
     const listItems = canvas.getAllByRole('listitem');
     await expect(listItems.length).toEqual(3);
@@ -181,7 +177,7 @@ export const WithoutCollapse = {
   name: 'Without Collapse (A2)',
   parameters: {
     viewport: {
-      defaultViewport: '--mobile',
+      defaultViewport: '--breakpoint-xs',
     },
   },
   render: WithoutCollapseTemplate,
@@ -196,18 +192,14 @@ export const WithExpandClickAndFocus = {
   name: 'With Expand Click And Focus(A4 delvis, C1)',
   parameters: {
     viewport: {
-      defaultViewport: '--mobile',
+      defaultViewport: '--breakpoint-xs',
     },
   },
   render: DefaultTemplate,
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
 
-    const expandButton = await canvas.findByRole(
-      'button',
-      {},
-      { timeout: 2000 }
-    );
+    const expandButton = await canvas.findByRole('button');
     await expect(expandButton).toBeInTheDocument();
     await fireEvent.click(expandButton);
     await expect(expandButton).not.toBeInTheDocument();
