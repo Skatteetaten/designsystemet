@@ -47,6 +47,10 @@ const config: StorybookConfig = {
     reactDocgenTypescriptOptions: {
       tsconfigPath: path.resolve(__dirname, '../tsconfig.storybook.json'),
       shouldRemoveUndefinedFromOptional: true,
+      // Default propfilter fjerner props definert i node_modules slik at HTML-props forsvinner
+      propFilter: (_prop) => {
+        return true;
+      },
       shouldExtractLiteralValuesFromEnum: true,
     },
   },

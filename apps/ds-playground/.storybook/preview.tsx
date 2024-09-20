@@ -82,6 +82,7 @@ const DSViewports = {
 };
 
 const parameters = {
+  docs: { controls: { sort: 'requiredFirst' } },
   controls: {
     sort: 'requiredFirst',
     hideNoControlsWarning: true,
