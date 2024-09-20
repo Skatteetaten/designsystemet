@@ -3,7 +3,6 @@ import React, {
   forwardRef,
   useEffect,
   useImperativeHandle,
-  useLayoutEffect,
   useRef,
   useState,
 } from 'react';
@@ -38,24 +37,34 @@ export const BreadcrumbsList = forwardRef<
       'collapsable' | 'collapsed' | 'expanded'
     >(shouldCollapse ? 'collapsable' : 'expanded');
     const [totalWidth, setTotalWidth] = useState(0);
+    const [fontsLoaded, setFontsLoaded] = useState(false);
     const listRef = useRef<HTMLOListElement>(null);
 
     useImperativeHandle(ref, () => listRef.current as HTMLOListElement);
 
-    useLayoutEffect(() => {
-      if (!shouldCollapse) return;
+    useEffect(() => {
+      if (document.fonts.status === 'loaded') {
+        setFontsLoaded(true);
+      } else {
+        document.fonts.ready.then(() => {
+          setFontsLoaded(true);
+        });
+      }
+    }, []);
 
-      setTimeout(() => {
-        if (listRef.current) {
-          const children = listRef.current.children;
-          let width = 0;
-          Array.from(children).forEach((child) => {
-            width += (child as HTMLElement).offsetWidth;
-          });
-          setTotalWidth(width);
-        }
-      }, 100);
-    }, [shouldCollapse]);
+    useEffect(() => {
+      if (!shouldCollapse) return;
+      if (!fontsLoaded) return;
+
+      if (listRef.current) {
+        const children = listRef.current.children;
+        let width = 0;
+        Array.from(children).forEach((child) => {
+          width += (child as HTMLElement).offsetWidth;
+        });
+        setTotalWidth(width);
+      }
+    }, [fontsLoaded, shouldCollapse]);
 
     useEffect(() => {
       if (!shouldCollapse) return;
