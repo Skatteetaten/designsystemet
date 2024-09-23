@@ -39,7 +39,6 @@ const meta = {
   title: 'Komponenter/Panel',
   argTypes: {
     // Props
-    canManuallySetTitleFocus: { table: { category: category.props } },
     children: {
       control: 'text',
       table: { category: category.props },

@@ -47,7 +47,6 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
-    canManuallySetTitleFocus: { table: { disable: true } },
     children: {
       table: { disable: true },
       control: 'text',
@@ -643,24 +642,5 @@ export const TextShortAndIcon = {
     renderIcon: {
       table: { disable: false },
     },
-  },
-} satisfies Story;
-
-export const WithCanManuallySetTitleFocuse = {
-  args: {
-    ...defaultArgs,
-    title: 'Tittel i Panel',
-    canManuallySetTitleFocus: true,
-  },
-  argTypes: {
-    canManuallySetTitleFocus: { table: { disable: false } },
-  },
-  parameters: { imageSnapshot: { disable: true } },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const panelHeading = canvas.getByRole('heading', { level: 3 });
-    panelHeading.focus();
-    await expect(panelHeading).toBeInTheDocument();
-    await expect(panelHeading).toHaveAttribute('tabIndex', '-1');
   },
 } satisfies Story;

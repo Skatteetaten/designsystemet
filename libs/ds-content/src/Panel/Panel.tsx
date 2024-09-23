@@ -22,7 +22,6 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
-      canManuallySetTitleFocus,
       color = getPanelColorDefault(),
       imageSource,
       imageSourceAltText,
@@ -97,7 +96,6 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
               level={3}
               className={hideTitle ? styles.srOnly : ''}
               hasSpacing={!subtitle || hideSubtitle}
-              canBeManuallyFocused={canManuallySetTitleFocus}
             >
               {title}
             </Heading>
