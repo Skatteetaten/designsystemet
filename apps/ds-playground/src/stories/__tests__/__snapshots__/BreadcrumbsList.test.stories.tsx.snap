@@ -28,12 +28,12 @@ exports[`Tester/Breadcrumbs/List WithAttributes play-test 1`] = `
         Avgifter på bil og kjøretøy
       </a>
     </li>
-    <li class="_breadcrumbsItem_12l2m_1">
-      <a class="_link_1tclx_1  "
-         href="#"
-      >
+    <li class="_breadcrumbsItem_12l2m_1"
+        aria-current="page"
+    >
+      <span>
         Vektårsavgift
-      </a>
+      </span>
     </li>
   </ol>
 </div>
@@ -44,6 +44,41 @@ exports[`Tester/Breadcrumbs/List WithRef play-test 1`] = `
   <ol class="_breadcrumbsList_1vlvd_1 "
       id="dummyIdForwardedFromRef"
   >
+    <li class="_breadcrumbsItem_12l2m_1">
+      <a class="_link_1tclx_1  "
+         href="#"
+      >
+        Bedrift og organisasjon
+      </a>
+    </li>
+    <li class="_breadcrumbsItem_12l2m_1">
+      <a class="_link_1tclx_1  "
+         href="#"
+      >
+        Avgifter
+      </a>
+    </li>
+    <li class="_breadcrumbsItem_12l2m_1">
+      <a class="_link_1tclx_1  "
+         href="#"
+      >
+        Avgifter på bil og kjøretøy
+      </a>
+    </li>
+    <li class="_breadcrumbsItem_12l2m_1"
+        aria-current="page"
+    >
+      <span>
+        Vektårsavgift
+      </span>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`Tester/Breadcrumbs/List WithoutIsShowLastItemAsCurrentPage play-test 1`] = `
+<div data-test-block="true">
+  <ol class="_breadcrumbsList_1vlvd_1 ">
     <li class="_breadcrumbsItem_12l2m_1">
       <a class="_link_1tclx_1  "
          href="#"

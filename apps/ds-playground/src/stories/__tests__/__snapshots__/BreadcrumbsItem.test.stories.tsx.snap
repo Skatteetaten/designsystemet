@@ -34,20 +34,6 @@ exports[`Tester/Breadcrumbs/Item WithAttributes play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Breadcrumbs/Item WithIsCurrentPage play-test 1`] = `
-<div data-test-block="true">
-  <ol>
-    <li class="_breadcrumbsItem_12l2m_1"
-        aria-current="page"
-    >
-      <span>
-        Bedrift og organisasjon
-      </span>
-    </li>
-  </ol>
-</div>
-`;
-
 exports[`Tester/Breadcrumbs/Item WithRef play-test 1`] = `
 <div data-test-block="true">
   <ol>

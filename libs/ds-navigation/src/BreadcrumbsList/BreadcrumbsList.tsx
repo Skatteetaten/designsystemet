@@ -16,7 +16,11 @@ import {
 import { VerticalDotsSVGpath } from '@skatteetaten/ds-icons';
 
 import { BreadcrumbsListProps } from './BreadcrumbsList.types';
-import { getBreadcrumbsListShouldCollapseDefault } from './defaults';
+import {
+  getBreadcrumbsListShouldCollapseDefault,
+  getBreadcrumbsListShowLastItemAsCurrentPageDefault,
+} from './defaults';
+import { BreadcrumbsListContext } from '../BreadcrumbsListContext/BreadcrumbsListContext';
 
 import styles from './BreadcrumbsList.module.scss';
 
@@ -31,6 +35,7 @@ export const BreadcrumbsList = forwardRef<
       lang,
       'data-testid': dataTestId,
       shouldCollapse = getBreadcrumbsListShouldCollapseDefault(),
+      showLastItemAsCurrentPage = getBreadcrumbsListShowLastItemAsCurrentPageDefault(),
       children,
     },
     ref
@@ -60,34 +65,41 @@ export const BreadcrumbsList = forwardRef<
     const concatenatedClassNames = `${styles.breadcrumbsList} ${className}`;
 
     return (
-      <ol
-        ref={listRef}
-        id={id}
-        lang={lang}
-        data-testid={dataTestId}
-        className={concatenatedClassNames}
+      <BreadcrumbsListContext.Provider
+        value={{ showLastItemAsCurrentPage, itemCount: childrenAsArray.length }}
       >
-        {!isCollapsed || childrenAsArray.length <= 3 ? (
-          childrenAsArray
-        ) : (
-          <>
-            <li className={styles.expandButtonWrapper}>
-              <IconButton
-                size={'small'}
-                title={t('breadcrumbs.ExpandAltText')}
-                svgPath={VerticalDotsSVGpath}
-                onClick={handleExpand}
-              />
-              <span>{'/'}</span>
-            </li>
-            {childrenAsArray.slice(-2)}
-          </>
-        )}
-      </ol>
+        <ol
+          ref={listRef}
+          id={id}
+          lang={lang}
+          data-testid={dataTestId}
+          className={concatenatedClassNames}
+        >
+          {!isCollapsed || childrenAsArray.length <= 3 ? (
+            childrenAsArray
+          ) : (
+            <>
+              <li className={styles.expandButtonWrapper}>
+                <IconButton
+                  size={'small'}
+                  title={t('breadcrumbs.ExpandAltText')}
+                  svgPath={VerticalDotsSVGpath}
+                  onClick={handleExpand}
+                />
+                <span>{'/'}</span>
+              </li>
+              {childrenAsArray.slice(-2)}
+            </>
+          )}
+        </ol>
+      </BreadcrumbsListContext.Provider>
     );
   }
 );
 
 BreadcrumbsList.displayName = 'BreadcrumbsList';
 
-export { getBreadcrumbsListShouldCollapseDefault };
+export {
+  getBreadcrumbsListShouldCollapseDefault,
+  getBreadcrumbsListShowLastItemAsCurrentPageDefault,
+};

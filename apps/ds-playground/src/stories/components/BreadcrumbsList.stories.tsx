@@ -1,6 +1,7 @@
 import {
   Breadcrumbs,
   getBreadcrumbsListShouldCollapseDefault,
+  getBreadcrumbsListShowLastItemAsCurrentPageDefault,
 } from '@skatteetaten/ds-navigation';
 import { Meta, StoryObj } from '@storybook/react';
 
@@ -32,6 +33,15 @@ const meta = {
         category: category.props,
         defaultValue: {
           summary: getBreadcrumbsListShouldCollapseDefault().toString(),
+        },
+      },
+    },
+    showLastItemAsCurrentPage: {
+      table: {
+        category: category.props,
+        defaultValue: {
+          summary:
+            getBreadcrumbsListShowLastItemAsCurrentPageDefault().toString(),
         },
       },
     },

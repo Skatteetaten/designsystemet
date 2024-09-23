@@ -41,7 +41,7 @@ const meta = {
             {'Avgifter på bil og kjøretøy'}
           </Breadcrumbs.Link>
         </Breadcrumbs.Item>
-        <Breadcrumbs.Item isCurrentPage>
+        <Breadcrumbs.Item>
           <Breadcrumbs.Link href={'#'}>{'Vektårsavgift'}</Breadcrumbs.Link>
         </Breadcrumbs.Item>
       </Breadcrumbs.List>
@@ -71,7 +71,7 @@ export const Examples: Story = {
             {'Avgifter på bil og kjøretøy'}
           </Breadcrumbs.Link>
         </Breadcrumbs.Item>
-        <Breadcrumbs.Item isCurrentPage>
+        <Breadcrumbs.Item>
           <Breadcrumbs.Link href={'#'}>{'Vektårsavgift'}</Breadcrumbs.Link>
         </Breadcrumbs.Item>
       </Breadcrumbs.List>

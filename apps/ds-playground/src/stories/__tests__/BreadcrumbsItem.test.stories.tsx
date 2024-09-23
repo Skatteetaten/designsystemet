@@ -34,14 +34,12 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     children: { table: { disable: true } },
-    isCurrentPage: { table: { disable: true } },
   },
 } satisfies Meta<typeof Breadcrumbs.Item>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 const defaultArgs: BreadcrumbsItemProps = {
-  isCurrentPage: false,
   children: (
     <Breadcrumbs.Link href={'#'}>{'Bedrift og organisasjon'}</Breadcrumbs.Link>
   ),
@@ -91,31 +89,13 @@ export const WithAttributes = {
   },
 } satisfies Story;
 
-export const WithIsCurrentPage = {
-  name: 'With IsCurrentPage (B3)',
-  args: {
-    ...defaultArgs,
-    isCurrentPage: true,
-  },
-  argTypes: {
-    isCurrentPage: { table: { disable: false } },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const container = canvas.getByRole('listitem');
-    await expect(container).toHaveAttribute('aria-current', 'page');
-  },
-} satisfies Story;
-
 export const WithAriaCurrent = {
   name: 'With AriaCurrent (B3)',
   args: {
     ...defaultArgs,
     ariaCurrent: 'page',
   },
-  argTypes: {
-    isCurrentPage: { table: { disable: false } },
-  },
+  argTypes: {},
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getByRole('listitem');

@@ -1,7 +1,4 @@
-import {
-  Breadcrumbs,
-  getBreadcrumbsItemIsCurrentPageDefault,
-} from '@skatteetaten/ds-navigation';
+import { Breadcrumbs } from '@skatteetaten/ds-navigation';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
@@ -21,15 +18,6 @@ const meta = {
   title: 'Komponenter/Breadcrumbs/Item',
   argTypes: {
     // Props
-    isCurrentPage: {
-      control: { type: 'boolean' },
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getBreadcrumbsItemIsCurrentPageDefault().toString(),
-        },
-      },
-    },
     children: { control: false, table: { category: category.props } },
     // Aria
     ariaCurrent: { table: { category: category.aria } },

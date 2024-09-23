@@ -28,6 +28,7 @@ const meta = {
     // Props
     children: { table: { disable: true } },
     shouldCollapse: { table: { disable: true } },
+    showLastItemAsCurrentPage: { table: { disable: true } },
   },
   args: {
     children: [
@@ -92,5 +93,19 @@ export const WithAttributes = {
     await expect(container).toHaveAttribute('id', elementId);
     await expect(container).toHaveAttribute('lang', 'nb');
     await expect(container).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithoutIsShowLastItemAsCurrentPage = {
+  name: 'Without Show Last Item As Current Page (B3)',
+  args: {
+    showLastItemAsCurrentPage: false,
+  },
+  argTypes: { showLastItemAsCurrentPage: { table: { disable: false } } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const listItems = canvas.getAllByRole('listitem');
+    const lastItem = listItems[listItems.length - 1];
+    await expect(lastItem).not.toHaveAttribute('aria-current', 'page');
   },
 } satisfies Story;

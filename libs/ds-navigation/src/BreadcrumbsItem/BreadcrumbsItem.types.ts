@@ -9,13 +9,8 @@ interface BreadcrumbsItemHTMLAttributes {
 export interface BreadcrumbsItemProps
   extends BreadcrumbsItemHTMLAttributes,
     BaseProps {
-  /** Sett til 'true' på det siste elementet i brødsmulestien. */
-  isCurrentPage?: boolean;
   /** Breadcrumbs.Link */
   children: ReactNode;
 }
 
-export type BreadcrumbsItemContextProps = Pick<
-  BreadcrumbsItemProps,
-  'isCurrentPage'
->;
+export type BreadcrumbsItemContextProps = { isCurrentPage?: boolean };

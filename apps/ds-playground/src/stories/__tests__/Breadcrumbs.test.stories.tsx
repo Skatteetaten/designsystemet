@@ -37,7 +37,7 @@ const meta = {
             {'Avgifter på bil og kjøretøy'}
           </Breadcrumbs.Link>
         </Breadcrumbs.Item>
-        <Breadcrumbs.Item isCurrentPage>
+        <Breadcrumbs.Item>
           <Breadcrumbs.Link href={'#'}>{'Vektårsavgift'}</Breadcrumbs.Link>
         </Breadcrumbs.Item>
       </Breadcrumbs.List>
@@ -108,11 +108,8 @@ const DefaultTemplate = (): JSX.Element => {
   return (
     <Breadcrumbs>
       <Breadcrumbs.List>
-        {breadcrumbsData.map((item, index) => (
-          <Breadcrumbs.Item
-            key={item.key}
-            isCurrentPage={index === breadcrumbsData.length - 1}
-          >
+        {breadcrumbsData.map((item) => (
+          <Breadcrumbs.Item key={item.key}>
             <Breadcrumbs.Link href={item.href}>{item.title}</Breadcrumbs.Link>
           </Breadcrumbs.Item>
         ))}
@@ -125,11 +122,8 @@ const WithoutCollapseTemplate = (): JSX.Element => {
   return (
     <Breadcrumbs>
       <Breadcrumbs.List shouldCollapse={false}>
-        {breadcrumbsData.map((item, index) => (
-          <Breadcrumbs.Item
-            key={item.key}
-            isCurrentPage={index === breadcrumbsData.length - 1}
-          >
+        {breadcrumbsData.map((item) => (
+          <Breadcrumbs.Item key={item.key}>
             <Breadcrumbs.Link href={item.href}>{item.title}</Breadcrumbs.Link>
           </Breadcrumbs.Item>
         ))}
@@ -224,16 +218,11 @@ export const WithNavigation = {
       );
     };
 
-    const lastItemKey = breadcrumbs[breadcrumbs.length - 1].key;
-
     return (
       <Breadcrumbs>
         <Breadcrumbs.List>
           {breadcrumbs.map((item) => (
-            <Breadcrumbs.Item
-              key={item.key}
-              isCurrentPage={item.key === lastItemKey}
-            >
+            <Breadcrumbs.Item key={item.key}>
               <Breadcrumbs.Link
                 href={item.href}
                 onClick={(e) => {
