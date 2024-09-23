@@ -12,4 +12,6 @@ export interface ParagraphProps extends BaseProps {
   hasSpacing?: boolean;
   /** Definerer stilen til avsnittet */
   variant?: ParagraphVariant;
+  /** Lar komponenten være fokuserbar ved å sett tabIndex: -1 */
+  canBeManuallyFocused?: boolean;
 }

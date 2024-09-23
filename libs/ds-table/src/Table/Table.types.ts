@@ -64,6 +64,8 @@ export interface TableProps extends BaseProps {
   rowInEditModeId?: string;
   /**  Innholdet i tabellen  */
   children?: ReactNode;
+  /** Lar komponenten være fokuserbar ved å sett tabIndex: -1 */
+  canBeManuallyFocused?: boolean;
 }
 
 export interface TableComponent

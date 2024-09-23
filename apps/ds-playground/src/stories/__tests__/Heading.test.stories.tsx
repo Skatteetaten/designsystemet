@@ -21,6 +21,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    canBeManuallyFocused: { table: { disable: true } },
     children: {
       table: { disable: true },
       control: 'text',
@@ -202,7 +203,7 @@ const TemplateWithMarkup: StoryFn<typeof Heading> = (args) => (
   <>
     <Heading {...args} hasSpacing>
       {'Dette er den '}
-      <a href={'https://skatteetaten.no'}>{'fyneste markup headingen'}</a>
+      <a href={'https://www.skatteetaten.no'}>{'fyneste markup headingen'}</a>
       <em>{' som finnes i italic '}</em>
       <strong>{'og strong '}</strong>
       <mark>{'mark '}</mark>
@@ -231,5 +232,23 @@ export const WithMarkup = {
       hover: `${wrapper} > h2 > a`,
       focus: `${wrapper} > h2 > a`,
     },
+  },
+} satisfies Story;
+
+export const WithCanBeManuallyFocused: Story = {
+  render: (args) => <Heading {...args} />,
+  args: {
+    ...defaultArgs,
+    canBeManuallyFocused: true,
+  },
+  argTypes: {
+    canBeManuallyFocused: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const heading = canvas.getByRole('heading');
+    heading.focus();
+    await expect(heading).toBeInTheDocument();
+    await expect(heading).toHaveAttribute('tabIndex', '-1');
   },
 } satisfies Story;

@@ -35,6 +35,7 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
       rowInEditModeId: externalRowInEditModeId,
       variant = getTableVariantDefault(),
       sortState,
+      canBeManuallyFocused,
       hasFullWidth,
       showCaption,
       setSortState,
@@ -149,6 +150,7 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
             className={concatenatedClassName}
             lang={lang}
             data-testid={dataTestId}
+            tabIndex={canBeManuallyFocused ? -1 : undefined}
           >
             <caption className={captionClassName}>{caption}</caption>
             {children}

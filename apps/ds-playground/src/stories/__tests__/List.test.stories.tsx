@@ -21,6 +21,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    canBeManuallyFocused: { table: { disable: true } },
     children: {
       table: { disable: true },
     },
@@ -278,5 +279,23 @@ export const WithBothVariantsAndAtLeast10NumberItems = {
   name: 'With Both Variants And At Least 10 Number Items',
   args: {
     ...defaultArgs,
+  },
+} satisfies Story;
+
+export const WithCanBeManuallyFocused: Story = {
+  name: 'With Can Receive Focus',
+  args: {
+    ...defaultArgs,
+    canBeManuallyFocused: true,
+  },
+  argTypes: {
+    canBeManuallyFocused: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const list = canvas.getByRole('list');
+    list.focus();
+    await expect(list).toBeInTheDocument();
+    await expect(list).toHaveAttribute('tabIndex', '-1');
   },
 } satisfies Story;

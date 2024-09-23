@@ -14,6 +14,7 @@ const meta = {
   title: 'Komponenter/Paragraph',
   argTypes: {
     // Props
+    canBeManuallyFocused: { table: { category: category.props } },
     children: { control: 'text', table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
     variant: {

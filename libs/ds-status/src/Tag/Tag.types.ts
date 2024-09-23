@@ -18,4 +18,6 @@ export interface TagProps extends BaseProps {
   color?: TagColor;
   /** Definerer størrelsen */
   size?: TagSize;
+  /** Lar komponenten være fokuserbar ved å sett tabIndex: -1 */
+  canBeManuallyFocused?: boolean;
 }

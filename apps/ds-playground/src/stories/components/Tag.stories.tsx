@@ -25,6 +25,7 @@ const meta = {
   title: 'Komponenter/Tag',
   argTypes: {
     // Props
+    canBeManuallyFocused: { table: { category: category.props } },
     children: { control: 'text', table: { category: category.props } },
     color: {
       table: {

@@ -14,6 +14,8 @@ export interface ListProps extends BaseProps {
   hasSpacing?: boolean;
   /** Listelementer */
   children?: JSX.Element | JSX.Element[];
+  /** Lar komponenten være fokuserbar ved å sett tabIndex: -1 */
+  canBeManuallyFocused?: boolean;
 }
 
 export interface ListComponent

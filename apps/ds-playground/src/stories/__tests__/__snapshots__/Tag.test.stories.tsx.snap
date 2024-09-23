@@ -52,6 +52,29 @@ exports[`Tester/Tag WithAttributes play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Tag WithCanBeManuallyFocused play-test 1`] = `
+<div data-test-block="true">
+  <div class="_tag_1ciua_1 _tag_ochre_1ciua_22 _tag_medium_1ciua_34 "
+       tabindex="-1"
+  >
+    <div class="_iconWrapper_1ciua_12"
+         aria-hidden="true"
+    >
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1ciua_12"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
+        </path>
+      </svg>
+    </div>
+    Særavgift
+  </div>
+</div>
+`;
+
 exports[`Tester/Tag WithCustomIcon smoke-test 1`] = `
 <div data-test-block="true">
   <div class="_tag_1ciua_1 _tag_burgundy_1ciua_25 _tag_medium_1ciua_34 ">

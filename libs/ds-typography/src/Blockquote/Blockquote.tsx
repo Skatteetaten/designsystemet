@@ -13,6 +13,7 @@ export const Blockquote = forwardRef<HTMLQuoteElement, BlockquoteProps>(
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
+      canBeManuallyFocused,
       hasSpacing,
       children,
     },
@@ -26,6 +27,7 @@ export const Blockquote = forwardRef<HTMLQuoteElement, BlockquoteProps>(
         className={`${styles.blockquote} ${spacingClassName} ${className}`}
         lang={lang}
         data-testid={dataTestId}
+        tabIndex={canBeManuallyFocused ? -1 : undefined}
       >
         {children}
       </blockquote>

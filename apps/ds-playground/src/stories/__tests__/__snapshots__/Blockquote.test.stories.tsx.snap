@@ -20,6 +20,16 @@ exports[`Tester/Blockquote WithAttributes play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Blockquote WithCanBeManuallyFocused play-test 1`] = `
+<div data-test-block="true">
+  <blockquote class="_blockquote_1nr5u_1  "
+              tabindex="-1"
+  >
+    Litt fylltekst
+  </blockquote>
+</div>
+`;
+
 exports[`Tester/Blockquote WithMarkup smoke-test 1`] = `
 <div data-test-block="true">
   <blockquote class="_blockquote_1nr5u_1  ">

@@ -180,6 +180,96 @@ exports[`Tester/Table/Table WithAttributes play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Table/Table WithCanBeManuallyFocused play-test 1`] = `
+<div data-test-block="true">
+  <div class=" ">
+    <table class="_table_1kbf9_15  _table_standard_1kbf9_38 "
+           tabindex="-1"
+    >
+      <caption class="_tableCaption_1kbf9_22 _hidden_1kbf9_45 _tableCaption_standard_1kbf9_28">
+        tabellcaption
+      </caption>
+      <thead>
+        <tr class>
+          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
+              scope="col"
+          >
+            Category
+          </th>
+          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
+              scope="col"
+          >
+            Items
+          </th>
+          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
+              scope="col"
+          >
+            Expenditure
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class>
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20 _dataCell_rowspan_1ot0q_16 rowSpanRight"
+              rowspan="2"
+          >
+            Edible
+          </td>
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
+            Donuts
+          </td>
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
+            3,000
+          </td>
+        </tr>
+        <tr class>
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
+            Cake
+          </td>
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
+            3,000
+          </td>
+        </tr>
+        <tr class>
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20 _dataCell_rowspan_1ot0q_16 rowSpanRight"
+              rowspan="2"
+          >
+            Non-Edible
+          </td>
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
+            Stationery
+          </td>
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
+            18,000
+          </td>
+        </tr>
+        <tr class>
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
+            Batteries
+          </td>
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
+            9,000
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr class>
+          <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 "
+              colspan="2"
+              scope="row"
+          >
+            Sum
+          </th>
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 ">
+            32,000
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+`;
+
 exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
 <div data-test-block="true">
   <div class=" ">
