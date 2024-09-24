@@ -44,6 +44,7 @@
     }
 
     &:hover:active {
+      color: var(--theme-primary);
       text-decoration: underline;
     }
   }
