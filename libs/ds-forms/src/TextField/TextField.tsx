@@ -15,7 +15,6 @@ import {
   Languages,
   useValidateFormRequiredProps,
 } from '@skatteetaten/ds-core-utils';
-import { ChevronDownIcon } from '@skatteetaten/ds-icons';
 
 import { getTextFieldAsDefault } from './defaults';
 import { TextboxRefHandle, TextFieldProps } from './TextField.types';
@@ -23,8 +22,6 @@ import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 
 import styles from './TextField.module.scss';
-
-const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
 export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
   (
@@ -136,7 +133,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       isLarge ? styles.textbox_large : ''
     } ${multilineTextboxClassName} ${autosizeTextarea} ${
       classNames?.textbox ?? ''
-    } ${isSafari ? styles.textbox_safari : ''}`.trim();
+    }`.trim();
 
     return (
       <div
@@ -156,41 +153,32 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
         >
           {label}
         </LabelWithHelp>
-        <div className={styles.inputWrapper}>
-          <Tag
-            ref={textboxRef}
-            id={textboxId}
-            className={textboxClassName}
-            data-testid={dataTestId}
-            autoComplete={autoComplete}
-            defaultValue={defaultValue}
-            disabled={disabled}
-            form={form}
-            inputMode={inputMode}
-            list={list}
-            maxLength={maxLength}
-            minLength={minLength}
-            name={name}
-            pattern={pattern}
-            placeholder={placeholder}
-            readOnly={readOnly}
-            required={required}
-            rows={rows}
-            value={value}
-            aria-describedby={errorMessage ? errorId : undefined}
-            aria-invalid={!!errorMessage || undefined}
-            onBlur={onBlur}
-            onChange={handleChange}
-            onFocus={onFocus}
-          />
-          {list && (
-            <ChevronDownIcon
-              className={`${styles.dataListArrow} ${
-                isLarge ? styles.dataListArrow_large : ''
-              }`.trim()}
-            />
-          )}
-        </div>
+        <Tag
+          ref={textboxRef}
+          id={textboxId}
+          className={textboxClassName}
+          data-testid={dataTestId}
+          autoComplete={autoComplete}
+          defaultValue={defaultValue}
+          disabled={disabled}
+          form={form}
+          inputMode={inputMode}
+          list={list}
+          maxLength={maxLength}
+          minLength={minLength}
+          name={name}
+          pattern={pattern}
+          placeholder={placeholder}
+          readOnly={readOnly}
+          required={required}
+          rows={rows}
+          value={value}
+          aria-describedby={errorMessage ? errorId : undefined}
+          aria-invalid={!!errorMessage || undefined}
+          onBlur={onBlur}
+          onChange={handleChange}
+          onFocus={onFocus}
+        />
         <ErrorMessage
           id={errorId}
           showError={!!errorMessage}

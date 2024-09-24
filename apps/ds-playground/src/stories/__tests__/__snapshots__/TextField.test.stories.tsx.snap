@@ -9,12 +9,10 @@ exports[`Tester/TextField Defaults play-test 1`] = `
     >
       Navn
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="textFieldTextboxId-:rc:"
-             class="_textbox_jd6ca_12"
-             value
-      >
-    </div>
+    <input id="textFieldTextboxId-:rc:"
+           class="_textbox_1rnbk_5"
+           value
+    >
     <div id="textFieldErrorId-:rb:"
          aria-live="assertive"
          aria-atomic="true"
@@ -33,12 +31,10 @@ exports[`Tester/TextField WithAs play-test 1`] = `
     >
       Navn
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <textarea id="textFieldTextboxId-:ri:"
-                class="_textbox_jd6ca_12  _textbox_multiline_jd6ca_52"
-      >
-      </textarea>
-    </div>
+    <textarea id="textFieldTextboxId-:ri:"
+              class="_textbox_1rnbk_5  _textbox_multiline_1rnbk_31"
+    >
+    </textarea>
     <div id="textFieldErrorId-:rh:"
          aria-live="assertive"
          aria-atomic="true"
@@ -59,14 +55,12 @@ exports[`Tester/TextField WithAttributes play-test 1`] = `
     >
       Navn
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="htmlid"
-             class="_textbox_jd6ca_12"
-             data-testid="123ID"
-             form="formid123"
-             value
-      >
-    </div>
+    <input id="htmlid"
+           class="_textbox_1rnbk_5"
+           data-testid="123ID"
+           form="formid123"
+           value
+    >
     <div id="textFieldErrorId-:r3:"
          aria-live="assertive"
          aria-atomic="true"
@@ -85,16 +79,14 @@ exports[`Tester/TextField WithAutoCompleteInputModeNameAndPlaceholder play-test 
     >
       Navn
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="textFieldTextboxId-:r14:"
-             class="_textbox_jd6ca_12"
-             autocomplete="given-name"
-             inputmode="text"
-             name="test_name"
-             placeholder="Kari Nordmann"
-             value
-      >
-    </div>
+    <input id="textFieldTextboxId-:r14:"
+           class="_textbox_1rnbk_5"
+           autocomplete="given-name"
+           inputmode="text"
+           name="test_name"
+           placeholder="Kari Nordmann"
+           value
+    >
     <div id="textFieldErrorId-:r13:"
          aria-live="assertive"
          aria-atomic="true"
@@ -107,20 +99,18 @@ exports[`Tester/TextField WithAutoCompleteInputModeNameAndPlaceholder play-test 
 exports[`Tester/TextField WithControlledValueAndAutoSizeTextArea play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label id="labelId-:r37:"
+    <label id="labelId-:r36:"
            class="_label_348na_5"
-           for="textFieldTextboxId-:r36:"
+           for="textFieldTextboxId-:r35:"
     >
       Navn
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <textarea id="textFieldTextboxId-:r36:"
-                class="_textbox_jd6ca_12  _textbox_multiline_jd6ca_52 _textbox_autosize_jd6ca_56"
-                style="height: 64px;"
-      >
-      </textarea>
-    </div>
-    <div id="textFieldErrorId-:r35:"
+    <textarea id="textFieldTextboxId-:r35:"
+              class="_textbox_1rnbk_5  _textbox_multiline_1rnbk_31 _textbox_autosize_1rnbk_35"
+              style="height: 64px;"
+    >
+    </textarea>
+    <div id="textFieldErrorId-:r34:"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -167,14 +157,12 @@ exports[`Tester/TextField WithCustomClassNames play-test 1`] = `
     <div class="_description_10ldw_17   dummyClassname">
       beskrivelse
     </div>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="textFieldTextboxId-:r7:"
-             class="_textbox_jd6ca_12    dummyClassname"
-             aria-describedby="textFieldErrorId-:r6:"
-             aria-invalid="true"
-             value
-      >
-    </div>
+    <input id="textFieldTextboxId-:r7:"
+           class="_textbox_1rnbk_5    dummyClassname"
+           aria-describedby="textFieldErrorId-:r6:"
+           aria-invalid="true"
+           value
+    >
     <div id="textFieldErrorId-:r6:"
          aria-live="assertive"
          aria-atomic="true"
@@ -207,22 +195,11 @@ exports[`Tester/TextField WithDataList play-test 1`] = `
     >
       nettlesere
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="textFieldTextboxId-:r32:"
-             class="_textbox_jd6ca_12"
-             list="browsers"
-             value
-      >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _dataListArrow_jd6ca_98"
-           viewbox="0 0 24 24"
-           focusable="false"
-           aria-hidden="true"
-           role="img"
-      >
-        <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
-        </path>
-      </svg>
-    </div>
+    <input id="textFieldTextboxId-:r32:"
+           class="_textbox_1rnbk_5"
+           list="browsers"
+           value
+    >
     <div id="textFieldErrorId-:r31:"
          aria-live="assertive"
          aria-atomic="true"
@@ -253,12 +230,10 @@ exports[`Tester/TextField WithDefaultValue play-test 1`] = `
     >
       Navn
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="textFieldTextboxId-:rr:"
-             class="_textbox_jd6ca_12"
-             value="Kari Nordmann"
-      >
-    </div>
+    <input id="textFieldTextboxId-:rr:"
+           class="_textbox_1rnbk_5"
+           value="Kari Nordmann"
+    >
     <div id="textFieldErrorId-:rq:"
          aria-live="assertive"
          aria-atomic="true"
@@ -277,14 +252,12 @@ exports[`Tester/TextField WithDefaultValueAndAutoSizeTextArea play-test 1`] = `
     >
       Navn
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <textarea id="textFieldTextboxId-:r11:"
-                class="_textbox_jd6ca_12  _textbox_multiline_jd6ca_52 _textbox_autosize_jd6ca_56"
-                style="height: 88px;"
-      >
-        Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
-      </textarea>
-    </div>
+    <textarea id="textFieldTextboxId-:r11:"
+              class="_textbox_1rnbk_5  _textbox_multiline_1rnbk_31 _textbox_autosize_1rnbk_35"
+              style="height: 88px;"
+    >
+      Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+    </textarea>
     <div id="textFieldErrorId-:r10:"
          aria-live="assertive"
          aria-atomic="true"
@@ -303,12 +276,10 @@ exports[`Tester/TextField WithDefaultValueAndThousandSeparator play-test 1`] = `
     >
       Navn
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="textFieldTextboxId-:ru:"
-             class="_textbox_jd6ca_12"
-             value="10 000"
-      >
-    </div>
+    <input id="textFieldTextboxId-:ru:"
+           class="_textbox_1rnbk_5"
+           value="10 000"
+    >
     <div id="textFieldErrorId-:rt:"
          aria-live="assertive"
          aria-atomic="true"
@@ -330,12 +301,10 @@ exports[`Tester/TextField WithDescription play-test 1`] = `
     <div class="_description_10ldw_17">
       En liten beskrivelse tekst
     </div>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="textFieldTextboxId-:r20:"
-             class="_textbox_jd6ca_12"
-             value
-      >
-    </div>
+    <input id="textFieldTextboxId-:r20:"
+           class="_textbox_1rnbk_5"
+           value
+    >
     <div id="textFieldErrorId-:r1v:"
          aria-live="assertive"
          aria-atomic="true"
@@ -354,13 +323,11 @@ exports[`Tester/TextField WithDisabled play-test 1`] = `
     >
       Navn
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="textFieldTextboxId-:rl:"
-             class="_textbox_jd6ca_12"
-             disabled
-             value="Kari Nordmann"
-      >
-    </div>
+    <input id="textFieldTextboxId-:rl:"
+           class="_textbox_1rnbk_5"
+           disabled
+           value="Kari Nordmann"
+    >
     <div id="textFieldErrorId-:rk:"
          aria-live="assertive"
          aria-atomic="true"
@@ -379,14 +346,12 @@ exports[`Tester/TextField WithErrorMessage play-test 1`] = `
     >
       Navn
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="textFieldTextboxId-:r1s:"
-             class="_textbox_jd6ca_12"
-             aria-describedby="textFieldErrorId-:r1r:"
-             aria-invalid="true"
-             value
-      >
-    </div>
+    <input id="textFieldTextboxId-:r1s:"
+           class="_textbox_1rnbk_5"
+           aria-describedby="textFieldErrorId-:r1r:"
+           aria-invalid="true"
+           value
+    >
     <div id="textFieldErrorId-:r1r:"
          aria-live="assertive"
          aria-atomic="true"
@@ -419,12 +384,10 @@ exports[`Tester/TextField WithEventHandlers play-test 1`] = `
     >
       TextField har blitt blurret
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="textFieldTextboxId-:r2m:"
-             class="_textbox_jd6ca_12"
-             value
-      >
-    </div>
+    <input id="textFieldTextboxId-:r2m:"
+           class="_textbox_1rnbk_5"
+           value
+    >
     <div id="textFieldErrorId-:r2l:"
          aria-live="assertive"
          aria-atomic="true"
@@ -462,12 +425,10 @@ exports[`Tester/TextField WithHelpText play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="textFieldTextboxId-:r2c:"
-             class="_textbox_jd6ca_12"
-             value
-      >
-    </div>
+    <input id="textFieldTextboxId-:r2c:"
+           class="_textbox_1rnbk_5"
+           value
+    >
     <div id="textFieldErrorId-:r2b:"
          aria-live="assertive"
          aria-atomic="true"
@@ -508,12 +469,10 @@ exports[`Tester/TextField WithHelpTextAndDescription smoke-test 1`] = `
     <div class="_description_10ldw_17">
       En liten beskrivelse tekst
     </div>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="textFieldTextboxId-:r2h:"
-             class="_textbox_jd6ca_12"
-             value
-      >
-    </div>
+    <input id="textFieldTextboxId-:r2h:"
+           class="_textbox_1rnbk_5"
+           value
+    >
     <div id="textFieldErrorId-:r2g:"
          aria-live="assertive"
          aria-atomic="true"
@@ -551,12 +510,10 @@ exports[`Tester/TextField WithHelpToggleEvent smoke-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="textFieldTextboxId-:r2p:"
-             class="_textbox_jd6ca_12"
-             value
-      >
-    </div>
+    <input id="textFieldTextboxId-:r2p:"
+           class="_textbox_1rnbk_5"
+           value
+    >
     <div id="textFieldErrorId-:r2o:"
          aria-live="assertive"
          aria-atomic="true"
@@ -575,12 +532,10 @@ exports[`Tester/TextField WithHideLabel play-test 1`] = `
     >
       Navn
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="textFieldTextboxId-:r23:"
-             class="_textbox_jd6ca_12"
-             value
-      >
-    </div>
+    <input id="textFieldTextboxId-:r23:"
+           class="_textbox_1rnbk_5"
+           value
+    >
     <div id="textFieldErrorId-:r22:"
          aria-live="assertive"
          aria-atomic="true"
@@ -599,14 +554,12 @@ exports[`Tester/TextField WithMinAndMaxLength play-test 1`] = `
     >
       Navn
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="textFieldTextboxId-:r1g:"
-             class="_textbox_jd6ca_12"
-             maxlength="50"
-             minlength="10"
-             value
-      >
-    </div>
+    <input id="textFieldTextboxId-:r1g:"
+           class="_textbox_1rnbk_5"
+           maxlength="50"
+           minlength="10"
+           value
+    >
     <div id="textFieldErrorId-:r1f:"
          aria-live="assertive"
          aria-atomic="true"
@@ -625,13 +578,11 @@ exports[`Tester/TextField WithPattern play-test 1`] = `
     >
       Navn
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="textFieldTextboxId-:r1j:"
-             class="_textbox_jd6ca_12"
-             pattern="[a-z]"
-             value
-      >
-    </div>
+    <input id="textFieldTextboxId-:r1j:"
+           class="_textbox_1rnbk_5"
+           pattern="[a-z]"
+           value
+    >
     <div id="textFieldErrorId-:r1i:"
          aria-live="assertive"
          aria-atomic="true"
@@ -650,13 +601,11 @@ exports[`Tester/TextField WithReadOnly play-test 1`] = `
     >
       Navn
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="textFieldTextboxId-:r17:"
-             class="_textbox_jd6ca_12"
-             readonly
-             value="Kari Nordmann"
-      >
-    </div>
+    <input id="textFieldTextboxId-:r17:"
+           class="_textbox_1rnbk_5"
+           readonly
+           value="Kari Nordmann"
+    >
     <div id="textFieldErrorId-:r16:"
          aria-live="assertive"
          aria-atomic="true"
@@ -675,13 +624,11 @@ exports[`Tester/TextField WithRef play-test 1`] = `
     >
       Navn
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="textFieldTextboxId-:r1:"
-             class="_textbox_jd6ca_12"
-             value
-             name="dummyNameForwardedFromRef"
-      >
-    </div>
+    <input id="textFieldTextboxId-:r1:"
+           class="_textbox_1rnbk_5"
+           value
+           name="dummyNameForwardedFromRef"
+    >
     <div id="textFieldErrorId-:r0:"
          aria-live="assertive"
          aria-atomic="true"
@@ -700,13 +647,11 @@ exports[`Tester/TextField WithRequired play-test 1`] = `
     >
       Navn
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="textFieldTextboxId-:r1a:"
-             class="_textbox_jd6ca_12"
-             required
-             value
-      >
-    </div>
+    <input id="textFieldTextboxId-:r1a:"
+           class="_textbox_1rnbk_5"
+           required
+           value
+    >
     <div id="textFieldErrorId-:r19:"
          aria-live="assertive"
          aria-atomic="true"
@@ -725,13 +670,11 @@ exports[`Tester/TextField WithRequiredAndMark smoke-test 1`] = `
     >
       Navn
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="textFieldTextboxId-:r1d:"
-             class="_textbox_jd6ca_12"
-             required
-             value
-      >
-    </div>
+    <input id="textFieldTextboxId-:r1d:"
+           class="_textbox_1rnbk_5"
+           required
+           value
+    >
     <div id="textFieldErrorId-:r1c:"
          aria-live="assertive"
          aria-atomic="true"
@@ -750,13 +693,11 @@ exports[`Tester/TextField WithRows play-test 1`] = `
     >
       Navn
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <textarea id="textFieldTextboxId-:r1m:"
-                class="_textbox_jd6ca_12  _textbox_multiline_jd6ca_52"
-                rows="4"
-      >
-      </textarea>
-    </div>
+    <textarea id="textFieldTextboxId-:r1m:"
+              class="_textbox_1rnbk_5  _textbox_multiline_1rnbk_31"
+              rows="4"
+    >
+    </textarea>
     <div id="textFieldErrorId-:r1l:"
          aria-live="assertive"
          aria-atomic="true"
@@ -812,13 +753,11 @@ exports[`Tester/TextField WithTextAreaAutoSizeInModal play-test 1`] = `
           >
             Navn
           </label>
-          <div class="_inputWrapper_jd6ca_6">
-            <textarea id="textFieldTextboxId-:r2v:"
-                      class="_textbox_jd6ca_12  _textbox_multiline_jd6ca_52 _textbox_autosize_jd6ca_56"
-                      style="height: 0px;"
-            >
-            </textarea>
-          </div>
+          <textarea id="textFieldTextboxId-:r2v:"
+                    class="_textbox_1rnbk_5  _textbox_multiline_1rnbk_31 _textbox_autosize_1rnbk_35"
+                    style="height: 0px;"
+          >
+          </textarea>
           <div id="textFieldErrorId-:r2u:"
                aria-live="assertive"
                aria-atomic="true"
@@ -840,12 +779,10 @@ exports[`Tester/TextField WithThousandSeparator play-test 1`] = `
     >
       Navn
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="textFieldTextboxId-:r26:"
-             class="_textbox_jd6ca_12"
-             value
-      >
-    </div>
+    <input id="textFieldTextboxId-:r26:"
+           class="_textbox_1rnbk_5"
+           value
+    >
     <div id="textFieldErrorId-:r25:"
          aria-live="assertive"
          aria-atomic="true"
@@ -864,12 +801,10 @@ exports[`Tester/TextField WithThousandSeparatorAndNegativeValue play-test 1`] = 
     >
       Navn
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="textFieldTextboxId-:r29:"
-             class="_textbox_jd6ca_12"
-             value
-      >
-    </div>
+    <input id="textFieldTextboxId-:r29:"
+           class="_textbox_1rnbk_5"
+           value
+    >
     <div id="textFieldErrorId-:r28:"
          aria-live="assertive"
          aria-atomic="true"
@@ -888,12 +823,10 @@ exports[`Tester/TextField WithValue play-test 1`] = `
     >
       Navn
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="textFieldTextboxId-:ro:"
-             class="_textbox_jd6ca_12"
-             value="Kari Nordmann"
-      >
-    </div>
+    <input id="textFieldTextboxId-:ro:"
+           class="_textbox_1rnbk_5"
+           value="Kari Nordmann"
+    >
     <div id="textFieldErrorId-:rn:"
          aria-live="assertive"
          aria-atomic="true"
@@ -912,12 +845,10 @@ exports[`Tester/TextField WithVariantLarge smoke-test 1`] = `
     >
       Navn
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <input id="textFieldTextboxId-:rf:"
-             class="_textbox_jd6ca_12 _textbox_large_jd6ca_37"
-             value
-      >
-    </div>
+    <input id="textFieldTextboxId-:rf:"
+           class="_textbox_1rnbk_5 _textbox_large_1rnbk_22"
+           value
+    >
     <div id="textFieldErrorId-:re:"
          aria-live="assertive"
          aria-atomic="true"
