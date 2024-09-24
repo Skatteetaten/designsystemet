@@ -1,0 +1,21 @@
+import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import * as BreadcrumbsStories from './Breadcrumbs.stories';
+import { VersionBadge } from '../utils/VersionBadge';
+
+<Meta of={BreadcrumbsStories} />
+
+# Breadcrumbs
+
+<VersionBadge packageName={'navigation'} />
+
+<Primary />
+
+```tsx
+import { Breadcrumbs } from '@skatteetaten/ds-navigation';
+```
+
+<Controls />
+
+## Examples
+
+<Canvas of={BreadcrumbsStories.Examples} />

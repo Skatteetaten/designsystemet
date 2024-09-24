@@ -1,0 +1,17 @@
+.breadcrumbsList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  line-height: var(--semantic-line-height-buttons);
+  white-space: nowrap;
+}
+
+.expandButtonWrapper {
+  display: flex;
+  align-items: center;
+  padding-right: var(--spacing-s);
+  gap: 0 var(--spacing-s);
+  list-style-type: none;
+}

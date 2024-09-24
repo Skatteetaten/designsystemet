@@ -1,0 +1,11 @@
+.breadcrumbsItem {
+  padding: 0;
+  color: var(--palette-graphite-100);
+  list-style-type: none;
+
+  &:not(:last-child)::after {
+    margin: 0 var(--spacing-s);
+    color: var(--palette-graphite-100);
+    content: '/';
+  }
+}
