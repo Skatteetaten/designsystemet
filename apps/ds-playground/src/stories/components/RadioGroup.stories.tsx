@@ -98,9 +98,7 @@ export const Examples: Story = {
       <>
         <RadioGroup
           legend={'Type virksomhet'}
-          errorMessage={'Valg av type virksomhet er påkrevd.'}
           selectedValue={type}
-          showRequiredMark
           required
           onChange={(e): void => setType(e.target.value)}
         >
