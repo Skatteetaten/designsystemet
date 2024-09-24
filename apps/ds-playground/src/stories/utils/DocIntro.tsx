@@ -1,4 +1,6 @@
 import { ReactNode } from 'react';
+import { Paragraph } from '@skatteetaten/ds-typography';
+import { Link } from '@skatteetaten/ds-buttons';
 
 interface DocIntroProps {
   name: string;
@@ -7,13 +9,11 @@ interface DocIntroProps {
 
 export const DocIntro = ({ name, url }: DocIntroProps): ReactNode => {
   return (
-    <p>
-      <b>
-        {`Se `}
-        <a href={url}>{name}</a>
-        {` på stil og tone for eksempler og
+    <Paragraph variant={'ingress'}>
+      {`Se `}
+      <Link href={url}>{name}</Link>
+      {` på stil og tone for eksempler og
         retningslinjer for denne komponenten.`}
-      </b>
-    </p>
+    </Paragraph>
   );
 };
