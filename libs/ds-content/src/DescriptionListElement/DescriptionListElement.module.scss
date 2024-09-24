@@ -1,0 +1,14 @@
+.term {
+  display: inline-block;
+  font-weight: var(--description-dt-weight);
+}
+
+.description {
+  margin: var(--description-list-dd-margin);
+  font-weight: var(--description-dd-weight);
+  text-align: var(--description-list-dd-align);
+}
+
+.container {
+  display: contents;
+}
