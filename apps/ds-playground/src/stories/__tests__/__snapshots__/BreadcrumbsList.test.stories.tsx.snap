@@ -8,21 +8,21 @@ exports[`Tester/Breadcrumbs/List WithAttributes play-test 1`] = `
       class="_breadcrumbsList_1vlvd_1 dummyClassname"
   >
     <li class="_breadcrumbsItem_12l2m_1">
-      <a class="_link_1tclx_1  "
+      <a class="_link_1qzdp_1  "
          href="#"
       >
         Bedrift og organisasjon
       </a>
     </li>
     <li class="_breadcrumbsItem_12l2m_1">
-      <a class="_link_1tclx_1  "
+      <a class="_link_1qzdp_1  "
          href="#"
       >
         Avgifter
       </a>
     </li>
     <li class="_breadcrumbsItem_12l2m_1">
-      <a class="_link_1tclx_1  "
+      <a class="_link_1qzdp_1  "
          href="#"
       >
         Avgifter på bil og kjøretøy
@@ -45,21 +45,21 @@ exports[`Tester/Breadcrumbs/List WithRef play-test 1`] = `
       id="dummyIdForwardedFromRef"
   >
     <li class="_breadcrumbsItem_12l2m_1">
-      <a class="_link_1tclx_1  "
+      <a class="_link_1qzdp_1  "
          href="#"
       >
         Bedrift og organisasjon
       </a>
     </li>
     <li class="_breadcrumbsItem_12l2m_1">
-      <a class="_link_1tclx_1  "
+      <a class="_link_1qzdp_1  "
          href="#"
       >
         Avgifter
       </a>
     </li>
     <li class="_breadcrumbsItem_12l2m_1">
-      <a class="_link_1tclx_1  "
+      <a class="_link_1qzdp_1  "
          href="#"
       >
         Avgifter på bil og kjøretøy
@@ -80,28 +80,28 @@ exports[`Tester/Breadcrumbs/List WithoutIsShowLastItemAsCurrentPage play-test 1`
 <div data-test-block="true">
   <ol class="_breadcrumbsList_1vlvd_1 ">
     <li class="_breadcrumbsItem_12l2m_1">
-      <a class="_link_1tclx_1  "
+      <a class="_link_1qzdp_1  "
          href="#"
       >
         Bedrift og organisasjon
       </a>
     </li>
     <li class="_breadcrumbsItem_12l2m_1">
-      <a class="_link_1tclx_1  "
+      <a class="_link_1qzdp_1  "
          href="#"
       >
         Avgifter
       </a>
     </li>
     <li class="_breadcrumbsItem_12l2m_1">
-      <a class="_link_1tclx_1  "
+      <a class="_link_1qzdp_1  "
          href="#"
       >
         Avgifter på bil og kjøretøy
       </a>
     </li>
     <li class="_breadcrumbsItem_12l2m_1">
-      <a class="_link_1tclx_1  "
+      <a class="_link_1qzdp_1  "
          href="#"
       >
         Vektårsavgift

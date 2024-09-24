@@ -7,21 +7,21 @@ exports[`Tester/Breadcrumbs/Breadcrumbs Defaults smoke-test 1`] = `
   >
     <ol class="_breadcrumbsList_1vlvd_1 ">
       <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
+        <a class="_link_1qzdp_1  "
            href="#"
         >
           Bedrift og organisasjon
         </a>
       </li>
       <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
+        <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter
         </a>
       </li>
       <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
+        <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter på bil og kjøretøy
@@ -46,21 +46,21 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithAriaLabel play-test 1`] = `
   >
     <ol class="_breadcrumbsList_1vlvd_1 ">
       <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
+        <a class="_link_1qzdp_1  "
            href="#"
         >
           Bedrift og organisasjon
         </a>
       </li>
       <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
+        <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter
         </a>
       </li>
       <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
+        <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter på bil og kjøretøy
@@ -88,21 +88,21 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithAttributes play-test 1`] = `
   >
     <ol class="_breadcrumbsList_1vlvd_1 ">
       <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
+        <a class="_link_1qzdp_1  "
            href="#"
         >
           Bedrift og organisasjon
         </a>
       </li>
       <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
+        <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter
         </a>
       </li>
       <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
+        <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter på bil og kjøretøy
@@ -149,7 +149,7 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithCollapse play-test 1`] = `
         </span>
       </li>
       <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
+        <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter på bil og kjøretøy
@@ -174,21 +174,21 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithExpandClickAndFocus play-test 1`] = 
   >
     <ol class="_breadcrumbsList_1vlvd_1 ">
       <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
+        <a class="_link_1qzdp_1  "
            href="#"
         >
           Bedrift og organisasjon
         </a>
       </li>
       <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
+        <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter
         </a>
       </li>
       <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
+        <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter på bil og kjøretøy
@@ -213,21 +213,21 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithNavigation smoke-test 1`] = `
   >
     <ol class="_breadcrumbsList_1vlvd_1 ">
       <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
+        <a class="_link_1qzdp_1  "
            href="#"
         >
           Bedrift og organisasjon
         </a>
       </li>
       <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
+        <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter
         </a>
       </li>
       <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
+        <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter på bil og kjøretøy
@@ -253,21 +253,21 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithRef play-test 1`] = `
   >
     <ol class="_breadcrumbsList_1vlvd_1 ">
       <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
+        <a class="_link_1qzdp_1  "
            href="#"
         >
           Bedrift og organisasjon
         </a>
       </li>
       <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
+        <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter
         </a>
       </li>
       <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
+        <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter på bil og kjøretøy
@@ -292,21 +292,21 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithoutCollapse play-test 1`] = `
   >
     <ol class="_breadcrumbsList_1vlvd_1 ">
       <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
+        <a class="_link_1qzdp_1  "
            href="#"
         >
           Bedrift og organisasjon
         </a>
       </li>
       <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
+        <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter
         </a>
       </li>
       <li class="_breadcrumbsItem_12l2m_1">
-        <a class="_link_1tclx_1  "
+        <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter på bil og kjøretøy
