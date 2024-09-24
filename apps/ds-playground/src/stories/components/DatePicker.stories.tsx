@@ -141,7 +141,6 @@ export const Examples: Story = {
           value={value}
           errorMessage={errorMessage}
           required
-          showRequiredMark
           onBlur={handleBlur}
           onSelectDate={handleSelect}
         />

@@ -136,7 +136,6 @@ export const Examples: Story = {
           maxLength={4}
           pattern={'\\d{4}'}
           required
-          showRequiredMark
           onChange={(e: ChangeEvent<HTMLInputElement>): void => {
             setErrorMessage('');
             if (e.target.value.length > 0 && isNaN(Number(e.target.value))) {
