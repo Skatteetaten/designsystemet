@@ -99,20 +99,18 @@ exports[`Tester/TextField WithAutoCompleteInputModeNameAndPlaceholder play-test 
 exports[`Tester/TextField WithControlledValueAndAutoSizeTextArea play-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <label id="labelId-:r37:"
+    <label id="labelId-:r36:"
            class="_label_348na_5"
-           for="textFieldTextboxId-:r36:"
+           for="textFieldTextboxId-:r35:"
     >
       Navn
     </label>
-    <div class="_inputWrapper_jd6ca_6">
-      <textarea id="textFieldTextboxId-:r36:"
-                class="_textbox_jd6ca_12  _textbox_multiline_jd6ca_52 _textbox_autosize_jd6ca_56"
-                style="height: 64px;"
-      >
-      </textarea>
-    </div>
-    <div id="textFieldErrorId-:r35:"
+    <textarea id="textFieldTextboxId-:r35:"
+              class="_textbox_1rnbk_5  _textbox_multiline_1rnbk_31 _textbox_autosize_1rnbk_35"
+              style="height: 64px;"
+    >
+    </textarea>
+    <div id="textFieldErrorId-:r34:"
          aria-live="assertive"
          aria-atomic="true"
     >
