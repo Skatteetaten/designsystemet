@@ -10,7 +10,6 @@ export const ChatBubbleOutlineSVGpath = (
     }
     fillRule={'evenodd'}
     clipRule={'evenodd'}
-    fill={'#1A1A1A'}
   />
 );
 
