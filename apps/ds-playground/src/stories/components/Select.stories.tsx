@@ -123,7 +123,6 @@ export const Examples: Story = {
         helpText={'Velg frukten du liker best.'}
         errorMessage={errorMessage}
         required
-        showRequiredMark
         onBlur={handleBlur}
         onChange={handleChange}
       >
