@@ -71,8 +71,12 @@ const meta = {
     autoComplete: {
       table: {
         disable: true,
-        defaultValue: { summary: getCommonAutoCompleteDefault() },
+        defaultValue: {
+          summary: getCommonAutoCompleteDefault(),
+        },
+        type: { summary: 'string' },
       },
+      type: 'string',
       control: 'text',
     },
     disabled: { table: { disable: true } },

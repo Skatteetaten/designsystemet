@@ -77,6 +77,7 @@ const meta = {
         category: category.htmlAttribute,
         defaultValue: { summary: getCommonAutoCompleteDefault() },
       },
+      type: 'string',
     },
     disabled: { table: { disable: true, category: category.htmlAttribute } },
     form: { table: { disable: true, category: category.htmlAttribute } },

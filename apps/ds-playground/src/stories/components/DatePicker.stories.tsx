@@ -3,6 +3,7 @@ import { ChangeEvent, useState, JSX } from 'react';
 import {
   dsI18n,
   formArrSize,
+  getAutoCompletePropDescription,
   getCommonAutoCompleteDefault,
   getCommonFormVariantDefault,
 } from '@skatteetaten/ds-core-utils';
@@ -67,7 +68,10 @@ const meta = {
       table: {
         category: category.htmlAttribute,
         defaultValue: { summary: getCommonAutoCompleteDefault() },
+        type: { summary: 'string' },
       },
+      type: 'string',
+      description: getAutoCompletePropDescription(),
     },
     disabled: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },

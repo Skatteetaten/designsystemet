@@ -8,3 +8,5 @@ export const getCommonButtonTypeDefault =
 export const getCommonFormVariantDefault = (): FormSize => 'medium';
 export const getCommonAutoCompleteDefault =
   (): ComponentPropsWithoutRef<'input'>['autoComplete'] => 'off';
+export const getAutoCompletePropDescription = (): string =>
+  'Beskriver hvilke type funksjonalitet native autocomplete skal tilby. Se <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete" target="msndoc">MDN</a>';

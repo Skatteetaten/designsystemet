@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
-import { Paragraph } from '@skatteetaten/ds-typography';
+
 import { Link } from '@skatteetaten/ds-buttons';
+import { Paragraph } from '@skatteetaten/ds-typography';
 
 interface DocIntroProps {
   name: string;

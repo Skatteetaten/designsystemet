@@ -72,6 +72,7 @@ const meta = {
     // HTML
     autoComplete: {
       table: { disable: true, category: category.htmlAttribute },
+      type: 'string',
     },
     disabled: { table: { disable: true, category: category.htmlAttribute } },
     form: { table: { disable: true, category: category.htmlAttribute } },
