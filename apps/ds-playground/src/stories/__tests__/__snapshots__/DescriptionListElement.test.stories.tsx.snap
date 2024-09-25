@@ -4,13 +4,13 @@ exports[`Tester/DescriptionList/Element WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <dl>
     <dt id="htmlId"
-        class="_term_1bsgs_1 dummyClassname"
+        class="_term_ywtjl_1 dummyClassname"
         lang="nb"
         data-testid="123ID"
     >
       Ansvarlig fagperson
     </dt>
-    <dd class="_description_1bsgs_6">
+    <dd class="_description_ywtjl_6">
       Kenneth Performance
     </dd>
   </dl>
@@ -20,13 +20,13 @@ exports[`Tester/DescriptionList/Element WithAttributes play-test 1`] = `
 exports[`Tester/DescriptionList/Element WithRef play-test 1`] = `
 <div data-test-block="true">
   <dl>
-    <dt class="_term_1bsgs_1"
+    <dt class="_term_ywtjl_1"
         data-testid="123ID"
         id="dummyIdForwardedFromRef"
     >
       Ansvarlig fagperson
     </dt>
-    <dd class="_description_1bsgs_6">
+    <dd class="_description_ywtjl_6">
       Kenneth Performance
     </dd>
   </dl>
