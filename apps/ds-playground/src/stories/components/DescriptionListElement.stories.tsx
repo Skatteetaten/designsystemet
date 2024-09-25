@@ -9,7 +9,9 @@ const meta = {
   argTypes: {
     // Props
     children: {
-      control: { disable: true },
+      table: { category: category.props },
+    },
+    term: {
       table: { category: category.props },
     },
   },
