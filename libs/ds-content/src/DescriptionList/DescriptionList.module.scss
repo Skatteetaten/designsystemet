@@ -1,0 +1,54 @@
+@import '~@skatteetaten/ds-core-designtokens/designtokens/breakpoints';
+
+.spacing {
+  padding-bottom: var(--spacing-l);
+}
+
+.descriptionList {
+  --description-list-dd-margin: 0;
+  --description-dd-weight: var(--font-weight-regular);
+  --description-dt-weight: var(--font-weight-bold);
+
+  &DescriptionBold {
+    --description-dd-weight: var(--font-weight-bold);
+  }
+
+  &TermRegular {
+    --description-dt-weight: var(--font-weight-regular);
+  }
+
+  display: grid;
+  margin: 0;
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-regular);
+  gap: var(--spacing-s);
+  line-height: var(--semantic-line-height-default);
+
+  &_horizontal {
+    gap: var(--spacing-l);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    line-height: var(--semantic-line-height-article);
+  }
+
+  &_vertical {
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: repeat(auto-fill, 1fr);
+    line-height: var(--semantic-line-height-default);
+
+    &Vertical {
+      gap: 0;
+      grid-template-columns: max-content;
+
+      --description-list-dd-margin: 0 0 var(--spacing-s);
+    }
+  }
+
+  &_small {
+    font-size: var(--font-size-s);
+  }
+}
+
+.childWrapper {
+  display: flex;
+  gap: var(--spacing-m);
+}
