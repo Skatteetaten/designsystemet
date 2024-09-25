@@ -153,6 +153,7 @@ export const WithAttributes = {
     await expect(container).toHaveAttribute('lang', 'nb');
     await expect(searchbox).toHaveAttribute('data-testid', '123ID');
     await expect(searchbox).toHaveAttribute('form', '123form');
+    await expect(searchbox).toHaveAttribute('autocomplete', 'off');
   },
 } satisfies Story;
 
