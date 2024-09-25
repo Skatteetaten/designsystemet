@@ -6,37 +6,43 @@ exports[`Tester/Breadcrumbs/Breadcrumbs Defaults smoke-test 1`] = `
        aria-label="Du er her:"
   >
     <ol class="_breadcrumbsList_17e64_1 ">
-      <li class="_breadcrumbsItem_1ow4d_1">
+      <li class="_breadcrumbsItem_1ojdc_1">
         <a class="_link_1qzdp_1  "
            href="#"
         >
           Bedrift og organisasjon
         </a>
-        <span aria-hidden="true">
+        <span class="_separator_1ojdc_8"
+              aria-hidden="true"
+        >
           /
         </span>
       </li>
-      <li class="_breadcrumbsItem_1ow4d_1">
+      <li class="_breadcrumbsItem_1ojdc_1">
         <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter
         </a>
-        <span aria-hidden="true">
+        <span class="_separator_1ojdc_8"
+              aria-hidden="true"
+        >
           /
         </span>
       </li>
-      <li class="_breadcrumbsItem_1ow4d_1">
+      <li class="_breadcrumbsItem_1ojdc_1">
         <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter på bil og kjøretøy
         </a>
-        <span aria-hidden="true">
+        <span class="_separator_1ojdc_8"
+              aria-hidden="true"
+        >
           /
         </span>
       </li>
-      <li class="_breadcrumbsItem_1ow4d_1"
+      <li class="_breadcrumbsItem_1ojdc_1"
           aria-current="page"
       >
         <span>
@@ -54,37 +60,43 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithAriaLabel play-test 1`] = `
        aria-label="Du er her:"
   >
     <ol class="_breadcrumbsList_17e64_1 ">
-      <li class="_breadcrumbsItem_1ow4d_1">
+      <li class="_breadcrumbsItem_1ojdc_1">
         <a class="_link_1qzdp_1  "
            href="#"
         >
           Bedrift og organisasjon
         </a>
-        <span aria-hidden="true">
+        <span class="_separator_1ojdc_8"
+              aria-hidden="true"
+        >
           /
         </span>
       </li>
-      <li class="_breadcrumbsItem_1ow4d_1">
+      <li class="_breadcrumbsItem_1ojdc_1">
         <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter
         </a>
-        <span aria-hidden="true">
+        <span class="_separator_1ojdc_8"
+              aria-hidden="true"
+        >
           /
         </span>
       </li>
-      <li class="_breadcrumbsItem_1ow4d_1">
+      <li class="_breadcrumbsItem_1ojdc_1">
         <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter på bil og kjøretøy
         </a>
-        <span aria-hidden="true">
+        <span class="_separator_1ojdc_8"
+              aria-hidden="true"
+        >
           /
         </span>
       </li>
-      <li class="_breadcrumbsItem_1ow4d_1"
+      <li class="_breadcrumbsItem_1ojdc_1"
           aria-current="page"
       >
         <span>
@@ -105,37 +117,43 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithAttributes play-test 1`] = `
        aria-label="Du er her:"
   >
     <ol class="_breadcrumbsList_17e64_1 ">
-      <li class="_breadcrumbsItem_1ow4d_1">
+      <li class="_breadcrumbsItem_1ojdc_1">
         <a class="_link_1qzdp_1  "
            href="#"
         >
           Bedrift og organisasjon
         </a>
-        <span aria-hidden="true">
+        <span class="_separator_1ojdc_8"
+              aria-hidden="true"
+        >
           /
         </span>
       </li>
-      <li class="_breadcrumbsItem_1ow4d_1">
+      <li class="_breadcrumbsItem_1ojdc_1">
         <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter
         </a>
-        <span aria-hidden="true">
+        <span class="_separator_1ojdc_8"
+              aria-hidden="true"
+        >
           /
         </span>
       </li>
-      <li class="_breadcrumbsItem_1ow4d_1">
+      <li class="_breadcrumbsItem_1ojdc_1">
         <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter på bil og kjøretøy
         </a>
-        <span aria-hidden="true">
+        <span class="_separator_1ojdc_8"
+              aria-hidden="true"
+        >
           /
         </span>
       </li>
-      <li class="_breadcrumbsItem_1ow4d_1"
+      <li class="_breadcrumbsItem_1ojdc_1"
           aria-current="page"
       >
         <span>
@@ -175,17 +193,19 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithCollapse play-test 1`] = `
           /
         </span>
       </li>
-      <li class="_breadcrumbsItem_1ow4d_1">
+      <li class="_breadcrumbsItem_1ojdc_1">
         <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter på bil og kjøretøy
         </a>
-        <span aria-hidden="true">
+        <span class="_separator_1ojdc_8"
+              aria-hidden="true"
+        >
           /
         </span>
       </li>
-      <li class="_breadcrumbsItem_1ow4d_1"
+      <li class="_breadcrumbsItem_1ojdc_1"
           aria-current="page"
       >
         <span>
@@ -203,37 +223,43 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithExpandClickAndFocus play-test 1`] = 
        aria-label="Du er her:"
   >
     <ol class="_breadcrumbsList_17e64_1 ">
-      <li class="_breadcrumbsItem_1ow4d_1">
+      <li class="_breadcrumbsItem_1ojdc_1">
         <a class="_link_1qzdp_1  "
            href="#"
         >
           Bedrift og organisasjon
         </a>
-        <span aria-hidden="true">
+        <span class="_separator_1ojdc_8"
+              aria-hidden="true"
+        >
           /
         </span>
       </li>
-      <li class="_breadcrumbsItem_1ow4d_1">
+      <li class="_breadcrumbsItem_1ojdc_1">
         <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter
         </a>
-        <span aria-hidden="true">
+        <span class="_separator_1ojdc_8"
+              aria-hidden="true"
+        >
           /
         </span>
       </li>
-      <li class="_breadcrumbsItem_1ow4d_1">
+      <li class="_breadcrumbsItem_1ojdc_1">
         <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter på bil og kjøretøy
         </a>
-        <span aria-hidden="true">
+        <span class="_separator_1ojdc_8"
+              aria-hidden="true"
+        >
           /
         </span>
       </li>
-      <li class="_breadcrumbsItem_1ow4d_1"
+      <li class="_breadcrumbsItem_1ojdc_1"
           aria-current="page"
       >
         <span>
@@ -251,37 +277,43 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithNavigation smoke-test 1`] = `
        aria-label="Du er her:"
   >
     <ol class="_breadcrumbsList_17e64_1 ">
-      <li class="_breadcrumbsItem_1ow4d_1">
+      <li class="_breadcrumbsItem_1ojdc_1">
         <a class="_link_1qzdp_1  "
            href="#"
         >
           Bedrift og organisasjon
         </a>
-        <span aria-hidden="true">
+        <span class="_separator_1ojdc_8"
+              aria-hidden="true"
+        >
           /
         </span>
       </li>
-      <li class="_breadcrumbsItem_1ow4d_1">
+      <li class="_breadcrumbsItem_1ojdc_1">
         <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter
         </a>
-        <span aria-hidden="true">
+        <span class="_separator_1ojdc_8"
+              aria-hidden="true"
+        >
           /
         </span>
       </li>
-      <li class="_breadcrumbsItem_1ow4d_1">
+      <li class="_breadcrumbsItem_1ojdc_1">
         <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter på bil og kjøretøy
         </a>
-        <span aria-hidden="true">
+        <span class="_separator_1ojdc_8"
+              aria-hidden="true"
+        >
           /
         </span>
       </li>
-      <li class="_breadcrumbsItem_1ow4d_1"
+      <li class="_breadcrumbsItem_1ojdc_1"
           aria-current="page"
       >
         <span>
@@ -300,37 +332,43 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithRef play-test 1`] = `
        id="dummyIdForwardedFromRef"
   >
     <ol class="_breadcrumbsList_17e64_1 ">
-      <li class="_breadcrumbsItem_1ow4d_1">
+      <li class="_breadcrumbsItem_1ojdc_1">
         <a class="_link_1qzdp_1  "
            href="#"
         >
           Bedrift og organisasjon
         </a>
-        <span aria-hidden="true">
+        <span class="_separator_1ojdc_8"
+              aria-hidden="true"
+        >
           /
         </span>
       </li>
-      <li class="_breadcrumbsItem_1ow4d_1">
+      <li class="_breadcrumbsItem_1ojdc_1">
         <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter
         </a>
-        <span aria-hidden="true">
+        <span class="_separator_1ojdc_8"
+              aria-hidden="true"
+        >
           /
         </span>
       </li>
-      <li class="_breadcrumbsItem_1ow4d_1">
+      <li class="_breadcrumbsItem_1ojdc_1">
         <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter på bil og kjøretøy
         </a>
-        <span aria-hidden="true">
+        <span class="_separator_1ojdc_8"
+              aria-hidden="true"
+        >
           /
         </span>
       </li>
-      <li class="_breadcrumbsItem_1ow4d_1"
+      <li class="_breadcrumbsItem_1ojdc_1"
           aria-current="page"
       >
         <span>
@@ -348,37 +386,43 @@ exports[`Tester/Breadcrumbs/Breadcrumbs WithoutCollapse play-test 1`] = `
        aria-label="Du er her:"
   >
     <ol class="_breadcrumbsList_17e64_1 ">
-      <li class="_breadcrumbsItem_1ow4d_1">
+      <li class="_breadcrumbsItem_1ojdc_1">
         <a class="_link_1qzdp_1  "
            href="#"
         >
           Bedrift og organisasjon
         </a>
-        <span aria-hidden="true">
+        <span class="_separator_1ojdc_8"
+              aria-hidden="true"
+        >
           /
         </span>
       </li>
-      <li class="_breadcrumbsItem_1ow4d_1">
+      <li class="_breadcrumbsItem_1ojdc_1">
         <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter
         </a>
-        <span aria-hidden="true">
+        <span class="_separator_1ojdc_8"
+              aria-hidden="true"
+        >
           /
         </span>
       </li>
-      <li class="_breadcrumbsItem_1ow4d_1">
+      <li class="_breadcrumbsItem_1ojdc_1">
         <a class="_link_1qzdp_1  "
            href="#"
         >
           Avgifter på bil og kjøretøy
         </a>
-        <span aria-hidden="true">
+        <span class="_separator_1ojdc_8"
+              aria-hidden="true"
+        >
           /
         </span>
       </li>
-      <li class="_breadcrumbsItem_1ow4d_1"
+      <li class="_breadcrumbsItem_1ojdc_1"
           aria-current="page"
       >
         <span>

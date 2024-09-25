@@ -7,37 +7,43 @@ exports[`Tester/Breadcrumbs/List WithAttributes play-test 1`] = `
       data-testid="123ID"
       class="_breadcrumbsList_17e64_1 dummyClassname"
   >
-    <li class="_breadcrumbsItem_1ow4d_1">
+    <li class="_breadcrumbsItem_1ojdc_1">
       <a class="_link_1qzdp_1  "
          href="#"
       >
         Bedrift og organisasjon
       </a>
-      <span aria-hidden="true">
+      <span class="_separator_1ojdc_8"
+            aria-hidden="true"
+      >
         /
       </span>
     </li>
-    <li class="_breadcrumbsItem_1ow4d_1">
+    <li class="_breadcrumbsItem_1ojdc_1">
       <a class="_link_1qzdp_1  "
          href="#"
       >
         Avgifter
       </a>
-      <span aria-hidden="true">
+      <span class="_separator_1ojdc_8"
+            aria-hidden="true"
+      >
         /
       </span>
     </li>
-    <li class="_breadcrumbsItem_1ow4d_1">
+    <li class="_breadcrumbsItem_1ojdc_1">
       <a class="_link_1qzdp_1  "
          href="#"
       >
         Avgifter på bil og kjøretøy
       </a>
-      <span aria-hidden="true">
+      <span class="_separator_1ojdc_8"
+            aria-hidden="true"
+      >
         /
       </span>
     </li>
-    <li class="_breadcrumbsItem_1ow4d_1"
+    <li class="_breadcrumbsItem_1ojdc_1"
         aria-current="page"
     >
       <span>
@@ -53,37 +59,43 @@ exports[`Tester/Breadcrumbs/List WithRef play-test 1`] = `
   <ol class="_breadcrumbsList_17e64_1 "
       id="dummyIdForwardedFromRef"
   >
-    <li class="_breadcrumbsItem_1ow4d_1">
+    <li class="_breadcrumbsItem_1ojdc_1">
       <a class="_link_1qzdp_1  "
          href="#"
       >
         Bedrift og organisasjon
       </a>
-      <span aria-hidden="true">
+      <span class="_separator_1ojdc_8"
+            aria-hidden="true"
+      >
         /
       </span>
     </li>
-    <li class="_breadcrumbsItem_1ow4d_1">
+    <li class="_breadcrumbsItem_1ojdc_1">
       <a class="_link_1qzdp_1  "
          href="#"
       >
         Avgifter
       </a>
-      <span aria-hidden="true">
+      <span class="_separator_1ojdc_8"
+            aria-hidden="true"
+      >
         /
       </span>
     </li>
-    <li class="_breadcrumbsItem_1ow4d_1">
+    <li class="_breadcrumbsItem_1ojdc_1">
       <a class="_link_1qzdp_1  "
          href="#"
       >
         Avgifter på bil og kjøretøy
       </a>
-      <span aria-hidden="true">
+      <span class="_separator_1ojdc_8"
+            aria-hidden="true"
+      >
         /
       </span>
     </li>
-    <li class="_breadcrumbsItem_1ow4d_1"
+    <li class="_breadcrumbsItem_1ojdc_1"
         aria-current="page"
     >
       <span>
@@ -97,37 +109,43 @@ exports[`Tester/Breadcrumbs/List WithRef play-test 1`] = `
 exports[`Tester/Breadcrumbs/List WithoutIsShowLastItemAsCurrentPage play-test 1`] = `
 <div data-test-block="true">
   <ol class="_breadcrumbsList_17e64_1 ">
-    <li class="_breadcrumbsItem_1ow4d_1">
+    <li class="_breadcrumbsItem_1ojdc_1">
       <a class="_link_1qzdp_1  "
          href="#"
       >
         Bedrift og organisasjon
       </a>
-      <span aria-hidden="true">
+      <span class="_separator_1ojdc_8"
+            aria-hidden="true"
+      >
         /
       </span>
     </li>
-    <li class="_breadcrumbsItem_1ow4d_1">
+    <li class="_breadcrumbsItem_1ojdc_1">
       <a class="_link_1qzdp_1  "
          href="#"
       >
         Avgifter
       </a>
-      <span aria-hidden="true">
+      <span class="_separator_1ojdc_8"
+            aria-hidden="true"
+      >
         /
       </span>
     </li>
-    <li class="_breadcrumbsItem_1ow4d_1">
+    <li class="_breadcrumbsItem_1ojdc_1">
       <a class="_link_1qzdp_1  "
          href="#"
       >
         Avgifter på bil og kjøretøy
       </a>
-      <span aria-hidden="true">
+      <span class="_separator_1ojdc_8"
+            aria-hidden="true"
+      >
         /
       </span>
     </li>
-    <li class="_breadcrumbsItem_1ow4d_1">
+    <li class="_breadcrumbsItem_1ojdc_1">
       <a class="_link_1qzdp_1  "
          href="#"
       >
