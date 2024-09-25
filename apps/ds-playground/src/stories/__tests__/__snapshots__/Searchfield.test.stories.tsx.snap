@@ -20,6 +20,7 @@ exports[`Tester/SearchField Defaults play-test 1`] = `
         </span>
         <input id="searchField-:rd:-input"
                class="_input_hryzl_42"
+               autocomplete="off"
                aria-describedby="searchField-:rd:-srFocus"
                type="search"
                value
@@ -70,6 +71,7 @@ exports[`Tester/SearchField WithAccesskey play-test 1`] = `
         <input id="searchField-:r26:-input"
                class="_input_hryzl_42"
                accesskey="j"
+               autocomplete="off"
                aria-describedby="searchField-:r26:-srFocus"
                type="search"
                value
@@ -119,6 +121,7 @@ exports[`Tester/SearchField WithArrowKeyNavigation play-test 1`] = `
         </span>
         <input id="searchField-:r23:-input"
                class="_input_hryzl_42"
+               autocomplete="off"
                aria-describedby="searchField-:r23:-srFocus"
                type="search"
                value
@@ -226,6 +229,7 @@ exports[`Tester/SearchField WithAttributes play-test 1`] = `
                class="_input_hryzl_42"
                data-testid="123ID"
                form="123form"
+               autocomplete="off"
                aria-describedby="htmlid-srFocus"
                type="search"
                value
@@ -275,6 +279,7 @@ exports[`Tester/SearchField WithCustomButtonTitleText play-test 1`] = `
         </span>
         <input id="searchField-:r1t:-input"
                class="_input_hryzl_42"
+               autocomplete="off"
                aria-describedby="searchField-:r1t:-srFocus"
                type="search"
                value
@@ -312,6 +317,7 @@ exports[`Tester/SearchField WithCustomButtonTitles play-test 1`] = `
         </span>
         <input id="searchField-:r1p:-input"
                class="_input_hryzl_42"
+               autocomplete="off"
                aria-describedby="searchField-:r1p:-srFocus"
                type="search"
                value="skattekort"
@@ -378,6 +384,7 @@ exports[`Tester/SearchField WithCustomClassNames play-test 1`] = `
         </span>
         <input id="searchField-:r6:-input"
                class="_input_hryzl_42"
+               autocomplete="off"
                aria-describedby="searchField-:r6:-srFocus"
                type="search"
                value
@@ -427,6 +434,7 @@ exports[`Tester/SearchField WithDefaultValue play-test 1`] = `
         </span>
         <input id="searchField-:r1a:-input"
                class="_input_hryzl_42"
+               autocomplete="off"
                aria-describedby="searchField-:r1a:-srFocus"
                type="search"
                value="skattekort"
@@ -496,6 +504,7 @@ exports[`Tester/SearchField WithDescription play-test 1`] = `
         </span>
         <input id="searchField-:r1e:-input"
                class="_input_hryzl_42"
+               autocomplete="off"
                aria-describedby="searchField-:r1e:-srFocus"
                type="search"
                value
@@ -546,6 +555,7 @@ exports[`Tester/SearchField WithDisabled play-test 1`] = `
         <input id="searchField-:r13:-input"
                class="_input_hryzl_42"
                disabled
+               autocomplete="off"
                aria-describedby="searchField-:r13:-srFocus"
                type="search"
                value="skattekort"
@@ -597,6 +607,7 @@ exports[`Tester/SearchField WithEventHandlers play-test 1`] = `
         </span>
         <input id="searchField-:r1v:-input"
                class="_input_hryzl_42"
+               autocomplete="off"
                aria-describedby="searchField-:r1v:-srFocus"
                type="search"
                value
@@ -687,6 +698,7 @@ exports[`Tester/SearchField WithHelpText play-test 1`] = `
         </span>
         <input id="searchField-:r1h:-input"
                class="_input_hryzl_42"
+               autocomplete="off"
                aria-describedby="searchField-:r1h:-srFocus"
                type="search"
                value
@@ -755,6 +767,7 @@ exports[`Tester/SearchField WithHelpToggleEvent smoke-test 1`] = `
         </span>
         <input id="searchField-:r29:-input"
                class="_input_hryzl_42"
+               autocomplete="off"
                aria-describedby="searchField-:r29:-srFocus"
                type="search"
                value
@@ -826,6 +839,7 @@ exports[`Tester/SearchField WithLongLabel smoke-test 1`] = `
         </span>
         <input id="searchField-:r9:-input"
                class="_input_hryzl_42"
+               autocomplete="off"
                aria-describedby="searchField-:r9:-srFocus"
                type="search"
                value
@@ -877,6 +891,7 @@ exports[`Tester/SearchField WithNameAndPlaceholder play-test 1`] = `
                class="_input_hryzl_42"
                name="test_name"
                placeholder="skattekort"
+               autocomplete="off"
                aria-describedby="searchField-:r1m:-srFocus"
                type="search"
                value
@@ -926,6 +941,7 @@ exports[`Tester/SearchField WithRef play-test 1`] = `
         </span>
         <input id="searchField-:r0:-input"
                class="_input_hryzl_42"
+               autocomplete="off"
                aria-describedby="searchField-:r0:-srFocus"
                type="search"
                value
@@ -976,6 +992,7 @@ exports[`Tester/SearchField WithValue play-test 1`] = `
         </span>
         <input id="searchField-:r16:-input"
                class="_input_hryzl_42"
+               autocomplete="off"
                aria-describedby="searchField-:r16:-srFocus"
                type="search"
                value="skattekort"
@@ -1042,6 +1059,7 @@ exports[`Tester/SearchField WithVariantLargeAndLongText smoke-test 1`] = `
         </span>
         <input id="searchField-:rv:-input"
                class="_input_hryzl_42"
+               autocomplete="off"
                aria-describedby="searchField-:rv:-srFocus"
                type="search"
                value="En lang tekst som ikke skal synes bak reset-ikonet"
@@ -1108,6 +1126,7 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
         </span>
         <input id="searchField-:rg:-input"
                class="_input_hryzl_42"
+               autocomplete="off"
                aria-describedby="searchField-:rg:-srFocus"
                type="search"
                value
@@ -1152,6 +1171,7 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
         </span>
         <input id="searchField-:rj:-input"
                class="_input_hryzl_42"
+               autocomplete="off"
                aria-describedby="searchField-:rj:-srFocus"
                type="search"
                value
@@ -1196,6 +1216,7 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
         </span>
         <input id="searchField-:rm:-input"
                class="_input_hryzl_42"
+               autocomplete="off"
                aria-describedby="searchField-:rm:-srFocus"
                type="search"
                value
@@ -1245,6 +1266,7 @@ exports[`Tester/SearchField WithVariantsNoIcon smoke-test 1`] = `
         </span>
         <input id="searchField-:rp:-input"
                class="_input_hryzl_42"
+               autocomplete="off"
                aria-describedby="searchField-:rp:-srFocus"
                type="search"
                value
@@ -1277,6 +1299,7 @@ exports[`Tester/SearchField WithVariantsNoIcon smoke-test 1`] = `
         </span>
         <input id="searchField-:rr:-input"
                class="_input_hryzl_42"
+               autocomplete="off"
                aria-describedby="searchField-:rr:-srFocus"
                type="search"
                value
@@ -1309,6 +1332,7 @@ exports[`Tester/SearchField WithVariantsNoIcon smoke-test 1`] = `
         </span>
         <input id="searchField-:rt:-input"
                class="_input_hryzl_42"
+               autocomplete="off"
                aria-describedby="searchField-:rt:-srFocus"
                type="search"
                value

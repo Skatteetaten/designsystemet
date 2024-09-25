@@ -7,7 +7,10 @@ import {
   JSX,
 } from 'react';
 
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  getCommonAutoCompleteDefault,
+} from '@skatteetaten/ds-core-utils';
 import { searchArrSize, SearchField } from '@skatteetaten/ds-forms';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import {
@@ -21,6 +24,7 @@ import {
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
+import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const verifyAttribute =
@@ -66,13 +70,20 @@ const meta = {
       control: 'inline-radio',
     },
     // HTML
-    accessKey: { table: { disable: true } },
-    disabled: { table: { disable: true } },
-    form: { table: { disable: true } },
-    name: { table: { disable: true } },
-    placeholder: { table: { disable: true } },
-    readOnly: { table: { disable: true } },
-    value: { table: { disable: true } },
+    accessKey: { table: { disable: true, category: category.htmlAttribute } },
+    autoComplete: {
+      table: {
+        disable: true,
+        category: category.htmlAttribute,
+        defaultValue: { summary: getCommonAutoCompleteDefault() },
+      },
+    },
+    disabled: { table: { disable: true, category: category.htmlAttribute } },
+    form: { table: { disable: true, category: category.htmlAttribute } },
+    name: { table: { disable: true, category: category.htmlAttribute } },
+    placeholder: { table: { disable: true, category: category.htmlAttribute } },
+    readOnly: { table: { disable: true, category: category.htmlAttribute } },
+    value: { table: { disable: true, category: category.htmlAttribute } },
     // Events
     onBlur: { table: { disable: true } },
     onChange: { table: { disable: true } },
@@ -130,6 +141,7 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
     form: { table: { disable: false } },
+    autoComplete: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

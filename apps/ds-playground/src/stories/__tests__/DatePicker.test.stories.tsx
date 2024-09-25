@@ -1,6 +1,10 @@
 import { ChangeEvent, FocusEvent, useState } from 'react';
 
-import { dsI18n, formArrSize } from '@skatteetaten/ds-core-utils';
+import {
+  dsI18n,
+  formArrSize,
+  getCommonAutoCompleteDefault,
+} from '@skatteetaten/ds-core-utils';
 import { DatePicker, TextField } from '@skatteetaten/ds-forms';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import {
@@ -64,7 +68,13 @@ const meta = {
       control: 'inline-radio',
     },
     // HTML
-    autoComplete: { table: { disable: true } },
+    autoComplete: {
+      table: {
+        disable: true,
+        defaultValue: { summary: getCommonAutoCompleteDefault() },
+      },
+      control: 'text',
+    },
     disabled: { table: { disable: true } },
     name: { table: { disable: true } },
     placeholder: { table: { disable: true } },
@@ -125,6 +135,7 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+    autoComplete: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -134,6 +145,7 @@ export const WithAttributes = {
     await expect(container).toHaveClass('dummyClassname');
     await expect(container).toHaveAttribute('lang', 'nb');
     await expect(textbox).toHaveAttribute('data-testid', '123ID');
+    await expect(textbox).toHaveAttribute('autocomplete', 'off');
   },
 } satisfies Story;
 

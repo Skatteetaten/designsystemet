@@ -3,6 +3,7 @@ import { useState, ChangeEvent, FocusEvent, JSX } from 'react';
 import {
   dsI18n,
   formArrSize,
+  getCommonAutoCompleteDefault,
   getCommonFormVariantDefault,
 } from '@skatteetaten/ds-core-utils';
 import { TextField, getTextFieldAsDefault } from '@skatteetaten/ds-forms';
@@ -63,7 +64,12 @@ const meta = {
       },
     },
     // HTML
-    autoComplete: { table: { category: category.htmlAttribute } },
+    autoComplete: {
+      table: {
+        category: category.htmlAttribute,
+        defaultValue: { summary: getCommonAutoCompleteDefault() },
+      },
+    },
     disabled: {
       control: 'boolean',
       table: { category: category.htmlAttribute },

@@ -15,6 +15,7 @@ import {
   dsI18n,
   getCommonClassNameDefault,
   getCommonFormVariantDefault,
+  getCommonAutoCompleteDefault,
 } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath, SearchIcon } from '@skatteetaten/ds-icons';
 
@@ -46,6 +47,7 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
       titleHelpSvg,
       searchButtonTitle,
       variant = getCommonFormVariantDefault(),
+      autoComplete = getCommonAutoCompleteDefault(),
       accessKey,
       disabled,
       form,
@@ -193,6 +195,7 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
               placeholder={placeholder}
               readOnly={readOnly}
               value={value}
+              autoComplete={autoComplete}
               aria-describedby={srFocusId}
               aria-owns={shouldShowResults ? resultsId : undefined}
               type={'search'}
