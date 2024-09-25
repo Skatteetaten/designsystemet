@@ -86,7 +86,7 @@ export const BreadcrumbsList = forwardRef<
                   svgPath={VerticalDotsSVGpath}
                   onClick={handleExpand}
                 />
-                <span>{'/'}</span>
+                <span aria-hidden={'true'}>{'/'}</span>
               </li>
               {childrenAsArray.slice(-2)}
             </>

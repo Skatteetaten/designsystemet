@@ -27,7 +27,7 @@ export const BreadcrumbsItem = forwardRef<HTMLLIElement, BreadcrumbsItemProps>(
     },
     ref
   ) => {
-    const [isCurrentPage, setIsCurrentPage] = useState(false);
+    const [isLastItem, setIsLastItem] = useState(false);
     const { itemCount, showLastItemAsCurrentPage } = useContext(
       BreadcrumbsListContext
     );
@@ -37,27 +37,38 @@ export const BreadcrumbsItem = forwardRef<HTMLLIElement, BreadcrumbsItemProps>(
     useImperativeHandle(ref, () => itemRef.current as HTMLLIElement);
 
     useEffect(() => {
-      if (itemRef.current?.nextSibling || !showLastItemAsCurrentPage) {
-        setIsCurrentPage(false);
+      if (itemRef.current?.nextSibling) {
+        setIsLastItem(false);
       } else {
-        setIsCurrentPage(true);
+        setIsLastItem(true);
       }
     }, [itemCount, showLastItemAsCurrentPage]);
 
     const concatenatedClassNames =
       `${styles.breadcrumbsItem} ${className}`.trim();
 
+    const displayAsCurrentPage = isLastItem && showLastItemAsCurrentPage;
+
     return (
-      <BreadcrumbsItemContext.Provider value={{ isCurrentPage }}>
+      <BreadcrumbsItemContext.Provider
+        value={{
+          displayAsCurrentPage: isLastItem && showLastItemAsCurrentPage,
+        }}
+      >
         <li
           ref={itemRef}
           id={id}
           className={concatenatedClassNames}
           lang={lang}
           data-testid={dataTestId}
-          aria-current={isCurrentPage ? 'page' : ariaCurrent}
+          aria-current={displayAsCurrentPage ? 'page' : ariaCurrent}
         >
           {children}
+          {!isLastItem && (
+            <span className={styles.separator} aria-hidden={'true'}>
+              {'/'}
+            </span>
+          )}
         </li>
       </BreadcrumbsItemContext.Provider>
     );

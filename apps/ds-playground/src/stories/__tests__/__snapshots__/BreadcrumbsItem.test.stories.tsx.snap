@@ -3,7 +3,7 @@
 exports[`Tester/Breadcrumbs/Item WithAriaCurrent play-test 1`] = `
 <div data-test-block="true">
   <ol>
-    <li class="_breadcrumbsItem_12l2m_1"
+    <li class="_breadcrumbsItem_1ow4d_1"
         aria-current="page"
     >
       <a class="_link_1qzdp_1  "
@@ -20,7 +20,7 @@ exports[`Tester/Breadcrumbs/Item WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <ol>
     <li id="htmlId"
-        class="_breadcrumbsItem_12l2m_1 dummyClassname"
+        class="_breadcrumbsItem_1ow4d_1 dummyClassname"
         lang="nb"
         data-testid="123ID"
     >
@@ -37,7 +37,7 @@ exports[`Tester/Breadcrumbs/Item WithAttributes play-test 1`] = `
 exports[`Tester/Breadcrumbs/Item WithRef play-test 1`] = `
 <div data-test-block="true">
   <ol>
-    <li class="_breadcrumbsItem_12l2m_1"
+    <li class="_breadcrumbsItem_1ow4d_1"
         id="dummyIdForwardedFromRef"
     >
       <a class="_link_1qzdp_1  "

@@ -9,9 +9,9 @@ export const BreadcrumbsLink = forwardRef<
   HTMLAnchorElement | HTMLSpanElement,
   BreadcrumbsLinkProps
 >(({ href, children, ...rest }: BreadcrumbsLinkProps, ref): JSX.Element => {
-  const { isCurrentPage } = useContext(BreadcrumbsItemContext);
+  const { displayAsCurrentPage } = useContext(BreadcrumbsItemContext);
 
-  if (isCurrentPage) {
+  if (displayAsCurrentPage) {
     return (
       <span ref={ref as React.Ref<HTMLSpanElement>} {...rest}>
         {children}
