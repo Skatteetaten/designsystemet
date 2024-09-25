@@ -26,7 +26,7 @@
 
   &_horizontal {
     gap: var(--spacing-l);
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
     line-height: var(--semantic-line-height-article);
   }
 
@@ -37,7 +37,7 @@
 
     &Vertical {
       gap: 0;
-      grid-template-columns: max-content;
+      grid-template-columns: minmax(min-content, 1fr);
 
       --description-list-dd-margin: 0 0 var(--spacing-s);
     }
