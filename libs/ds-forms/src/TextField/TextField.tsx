@@ -116,9 +116,9 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
 
       const selectionLength =
         (input.selectionEnd || 0) - (input.selectionStart || 0);
-
       if (
         e.key === 'Backspace' &&
+        e.getModifierState('Meta') === false &&
         cursorPosition > 0 &&
         isPreviousCharacterSeparator &&
         selectionLength === 0
