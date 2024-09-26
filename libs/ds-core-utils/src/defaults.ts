@@ -9,4 +9,4 @@ export const getCommonFormVariantDefault = (): FormSize => 'medium';
 export const getCommonAutoCompleteDefault =
   (): ComponentPropsWithoutRef<'input'>['autoComplete'] => 'off';
 export const getAutoCompletePropDescription = (): string =>
-  'Beskriver hvilken type funksjonalitet native autocomplete skal tilby. Se <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete" target="msndoc">MDN</a>';
+  'Verdien til autoComplete må være "on", "off" eller en av de andre lovlige verdiene beskrevet på <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete" target="msndoc">MDN</a>';
