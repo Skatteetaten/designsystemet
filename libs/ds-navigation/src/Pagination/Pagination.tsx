@@ -26,9 +26,9 @@ const validPropRanges = ({
   if (totalItems < 1) {
     // Ingen elementer å vise.
     return false;
-  } else if (totalItems / pageSize < currentPage) {
+  } else if (Math.ceil(totalItems / pageSize) < currentPage) {
     console.log(
-      'Pagination: currentPage er høyere enn maks totalItems / pageSize'
+      'Pagination: currentPage er høyere enn totalItems / pageSize avrundet opp'
     );
     return false;
   } else if (currentPage <= 0) {
