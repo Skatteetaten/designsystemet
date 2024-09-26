@@ -13,4 +13,4 @@ export interface BreadcrumbsItemProps
   children: ReactNode;
 }
 
-export type BreadcrumbsItemContextProps = { isCurrentPage?: boolean };
+export type BreadcrumbsItemContextProps = { displayAsCurrentPage?: boolean };
