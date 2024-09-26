@@ -119,6 +119,7 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           </label>
           <input id="textFieldTextboxId-:ro:"
                  class="_textbox_1rnbk_5"
+                 autocomplete="off"
                  inputmode="numeric"
                  value="2024"
           >
@@ -632,6 +633,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           </label>
           <input id="textFieldTextboxId-:rf:"
                  class="_textbox_1rnbk_5"
+                 autocomplete="off"
                  inputmode="numeric"
                  value="2024"
           >
@@ -1141,6 +1143,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           </label>
           <input id="textFieldTextboxId-:r25:"
                  class="_textbox_1rnbk_5"
+                 autocomplete="off"
                  inputmode="numeric"
                  value="2024"
           >
@@ -1650,6 +1653,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
           </label>
           <input id="textFieldTextboxId-:r1j:"
                  class="_textbox_1rnbk_5"
+                 autocomplete="off"
                  inputmode="numeric"
                  value="2024"
           >
@@ -2179,6 +2183,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWith
           </label>
           <input id="textFieldTextboxId-:r1s:"
                  class="_textbox_1rnbk_5"
+                 autocomplete="off"
                  inputmode="numeric"
                  value="2024"
           >
@@ -2708,6 +2713,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           </label>
           <input id="textFieldTextboxId-:r1a:"
                  class="_textbox_1rnbk_5"
+                 autocomplete="off"
                  inputmode="numeric"
                  value="2024"
           >
@@ -3233,6 +3239,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           </label>
           <input id="textFieldTextboxId-:r6:"
                  class="_textbox_1rnbk_5"
+                 autocomplete="off"
                  inputmode="numeric"
                  value="2024"
           >
@@ -3742,6 +3749,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
           </label>
           <input id="textFieldTextboxId-:r11:"
                  class="_textbox_1rnbk_5"
+                 autocomplete="off"
                  inputmode="numeric"
                  value="2024"
           >

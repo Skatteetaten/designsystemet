@@ -2,6 +2,8 @@ import React, { JSX, useMemo, useState } from 'react';
 
 import {
   dsI18n,
+  getAutoCompletePropDescription,
+  getCommonAutoCompleteDefault,
   getCommonFormVariantDefault,
 } from '@skatteetaten/ds-core-utils';
 import {
@@ -61,7 +63,18 @@ const meta = {
       },
     },
     // HTML
-    accessKey: { table: { category: category.htmlAttribute } },
+    accessKey: {
+      table: { category: category.htmlAttribute },
+    },
+    autoComplete: {
+      table: {
+        category: category.htmlAttribute,
+        defaultValue: { summary: getCommonAutoCompleteDefault() },
+        type: { summary: 'string' },
+      },
+      type: 'string',
+      description: getAutoCompletePropDescription(),
+    },
     disabled: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },

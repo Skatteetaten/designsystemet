@@ -12,6 +12,7 @@ exports[`Tester/DatePicker/DatePicker Defaults play-test 1`] = `
     <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:re:"
              class="_input_13xkq_9"
+             autocomplete="off"
              placeholder="Skriv eller velg"
              value
       >
@@ -58,6 +59,7 @@ exports[`Tester/DatePicker/DatePicker WithAttributes play-test 1`] = `
       <input id="htmlid"
              class="_input_13xkq_9"
              data-testid="123ID"
+             autocomplete="off"
              placeholder="Skriv eller velg"
              value
       >
@@ -146,6 +148,7 @@ exports[`Tester/DatePicker/DatePicker WithCustomClassNames play-test 1`] = `
     <div class="_dateContainer_13xkq_1 dummyClassnameFormContainer">
       <input id="datepickerInputId-:r9:"
              class="_input_13xkq_9"
+             autocomplete="off"
              placeholder="Skriv eller velg"
              aria-describedby="datepickerErrorId-:r8:"
              aria-invalid="true"
@@ -205,6 +208,7 @@ exports[`Tester/DatePicker/DatePicker WithDateFormat play-test 1`] = `
     <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:r28:"
              class="_input_13xkq_9"
+             autocomplete="off"
              placeholder="Skriv eller velg"
              value="2024/02/05"
       >
@@ -251,6 +255,7 @@ exports[`Tester/DatePicker/DatePicker WithDescription play-test 1`] = `
     <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:r1f:"
              class="_input_13xkq_9"
+             autocomplete="off"
              placeholder="Skriv eller velg"
              value
       >
@@ -294,6 +299,7 @@ exports[`Tester/DatePicker/DatePicker WithDisabled play-test 1`] = `
     <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:rm:"
              class="_input_13xkq_9"
+             autocomplete="off"
              disabled
              placeholder="Skriv eller velg"
              value="01.02.2024"
@@ -339,6 +345,7 @@ exports[`Tester/DatePicker/DatePicker WithErrorMessage play-test 1`] = `
     <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:r1a:"
              class="_input_13xkq_9"
+             autocomplete="off"
              placeholder="Skriv eller velg"
              aria-describedby="datepickerErrorId-:r19:"
              aria-invalid="true"
@@ -439,6 +446,7 @@ exports[`Tester/DatePicker/DatePicker WithHelpText play-test 1`] = `
     <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:r1j:"
              class="_input_13xkq_9"
+             autocomplete="off"
              placeholder="Skriv eller velg"
              value
       >
@@ -501,6 +509,7 @@ exports[`Tester/DatePicker/DatePicker WithHelpToggleEvent smoke-test 1`] = `
     <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:r64:"
              class="_input_13xkq_9"
+             autocomplete="off"
              placeholder="Skriv eller velg"
              value
       >
@@ -544,6 +553,7 @@ exports[`Tester/DatePicker/DatePicker WithHideLabel play-test 1`] = `
     <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:r1p:"
              class="_input_13xkq_9"
+             autocomplete="off"
              placeholder="Skriv eller velg"
              value
       >
@@ -587,6 +597,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
     <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:r2l:"
              class="_input_13xkq_9"
+             autocomplete="off"
              placeholder="Skriv eller velg"
              value
       >
@@ -732,6 +743,7 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
               </label>
               <input id="textFieldTextboxId-:r2u:"
                      class="_textbox_1rnbk_5"
+                     autocomplete="off"
                      inputmode="numeric"
                      value="2024"
               >
@@ -1136,6 +1148,7 @@ exports[`Tester/DatePicker/DatePicker WithPlaceholderEmpty play-test 1`] = `
     <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:r21:"
              class="_input_13xkq_9"
+             autocomplete="off"
              value
       >
       <button type="button"
@@ -1178,6 +1191,7 @@ exports[`Tester/DatePicker/DatePicker WithReadOnly play-test 1`] = `
     <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:r25:"
              class="_input_13xkq_9"
+             autocomplete="off"
              placeholder="Skriv eller velg"
              readonly
              value="01.02.2024"
@@ -1204,6 +1218,7 @@ exports[`Tester/DatePicker/DatePicker WithRef play-test 1`] = `
     <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:r1:"
              class="_input_13xkq_9"
+             autocomplete="off"
              placeholder="Skriv eller velg"
              value
              name="dummyNameForwardedFromRef"
@@ -1248,6 +1263,7 @@ exports[`Tester/DatePicker/DatePicker WithRequired play-test 1`] = `
     <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:ru:"
              class="_input_13xkq_9"
+             autocomplete="off"
              placeholder="Skriv eller velg"
              required
              value
@@ -1292,6 +1308,7 @@ exports[`Tester/DatePicker/DatePicker WithRequiredAndMark smoke-test 1`] = `
     <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:r12:"
              class="_input_13xkq_9"
+             autocomplete="off"
              placeholder="Skriv eller velg"
              required
              value
@@ -1336,6 +1353,7 @@ exports[`Tester/DatePicker/DatePicker WithValue play-test 1`] = `
     <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:rq:"
              class="_input_13xkq_9"
+             autocomplete="off"
              placeholder="Skriv eller velg"
              value="01.02.2024"
       >
@@ -1379,6 +1397,7 @@ exports[`Tester/DatePicker/DatePicker WithVariantLarge smoke-test 1`] = `
     <div class="_dateContainer_13xkq_1 ">
       <input id="datepickerInputId-:ri:"
              class="_input_13xkq_9 _input_large_13xkq_36"
+             autocomplete="off"
              placeholder="Skriv eller velg"
              value
       >

@@ -12,6 +12,7 @@ import {
   dsI18n,
   getCommonClassNameDefault,
   getCommonFormVariantDefault,
+  getCommonAutoCompleteDefault,
   Languages,
   useValidateFormRequiredProps,
 } from '@skatteetaten/ds-core-utils';
@@ -41,7 +42,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       thousandSeparator,
       titleHelpSvg,
       variant = getCommonFormVariantDefault(),
-      autoComplete,
+      autoComplete = getCommonAutoCompleteDefault(),
       defaultValue,
       disabled,
       form,

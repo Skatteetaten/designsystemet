@@ -348,6 +348,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithInput play-test 1`] = `
     </label>
     <input id="input_aar"
            class="_textbox_1rnbk_5"
+           autocomplete="off"
            required
            aria-describedby="textFieldErrorId-:rh:"
            aria-invalid="true"
