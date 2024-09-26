@@ -2,6 +2,7 @@ import {
   ChangeEvent,
   forwardRef,
   JSX,
+  ModifierKey,
   useId,
   useImperativeHandle,
   useLayoutEffect,
@@ -101,12 +102,92 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       return isNegative ? `-${numberOnly}` : numberOnly;
     };
 
+    const handleKeyDown = (
+      e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>
+    ): void => {
+      if (!thousandSeparator) return;
+
+      const input = e.currentTarget;
+      const cursorPosition = input.selectionStart || 0;
+      const value = input.value;
+      const isPreviousCharacterSeparator = /[, ]/.test(
+        value[cursorPosition - 1]
+      );
+      const selectionLength =
+        (input.selectionEnd || 0) - (input.selectionStart || 0);
+
+      const modifierKeys: readonly ModifierKey[] = [
+        'Alt',
+        'AltGraph',
+        'Control',
+        'Meta',
+        'Shift',
+      ] as const;
+      const isAnyModifierKeyPressed = modifierKeys.some((key) =>
+        e.getModifierState(key)
+      );
+
+      if (
+        e.key === 'Backspace' &&
+        !isAnyModifierKeyPressed &&
+        cursorPosition > 0 &&
+        isPreviousCharacterSeparator &&
+        selectionLength === 0
+      ) {
+        e.preventDefault();
+
+        const deletePosition = cursorPosition - 1;
+
+        const newValue =
+          value.slice(0, deletePosition - 1) + value.slice(cursorPosition);
+
+        const formattedValue = addSpacesOrCommas(removeNonNumeric(newValue));
+
+        const separatorsInOldValue = value.match(/[, ]/g)?.length || 0;
+        const separatorsInNewValue = formattedValue.match(/[, ]/g)?.length || 0;
+
+        // hvis det ble fjernet en separator, må vi flytte markøren et ekstra hopp til venstre, med mindre vi sletter den første separatoren.
+        const separatorWasRemoved =
+          separatorsInOldValue > separatorsInNewValue && cursorPosition > 2;
+
+        input.value = formattedValue;
+
+        const newPosition = deletePosition - 1 - (separatorWasRemoved ? 1 : 0);
+
+        requestAnimationFrame(() => {
+          input.setSelectionRange(newPosition, newPosition);
+        });
+      }
+    };
+
     const handleChange = (
       e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
     ): void => {
       if (thousandSeparator) {
         const input = e.target as HTMLInputElement;
-        input.value = addSpacesOrCommas(removeNonNumeric(input.value));
+        const cursorPosition = input.selectionStart || 0;
+        const oldValue = input.value;
+
+        const digitsBeforeCursor = oldValue
+          .substring(0, cursorPosition)
+          .replace(/\D/g, '').length;
+
+        const formattedValue = addSpacesOrCommas(removeNonNumeric(input.value));
+        input.value = formattedValue;
+
+        let newPosition = 0;
+        let digitCount = 0;
+        for (let i = 0; i < formattedValue.length; i++) {
+          if (/\d/.test(formattedValue[i])) {
+            digitCount++;
+            if (digitCount > digitsBeforeCursor) {
+              break;
+            }
+          }
+          newPosition = i + 1;
+        }
+
+        input.setSelectionRange(newPosition, newPosition);
       }
 
       if (autosize && defaultValue !== undefined) {
@@ -179,6 +260,7 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
           onBlur={onBlur}
           onChange={handleChange}
           onFocus={onFocus}
+          onKeyDown={handleKeyDown}
         />
         <ErrorMessage
           id={errorId}
