@@ -8,15 +8,12 @@ export default {
 
 export const Palette: StoryObj = {
   render: () => <TokensList tokenType={'palette'} />,
-  name: 'Palette',
-
   parameters: {
     previewTabs: {
       canvas: {
         hidden: true,
       },
     },
-
     viewMode: 'docs',
   },
 };

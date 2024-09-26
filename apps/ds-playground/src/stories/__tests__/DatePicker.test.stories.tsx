@@ -751,7 +751,7 @@ export const WithShadowDom = {
     const customElement = canvasElement.querySelector(`calendar-customelement`);
 
     const shadowCanvas = within(
-      customElement!.shadowRoot!.firstElementChild as HTMLElement
+      customElement?.shadowRoot?.firstElementChild as HTMLElement
     );
 
     const calendarButton = shadowCanvas.getByRole('button', {
