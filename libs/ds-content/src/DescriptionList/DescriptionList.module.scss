@@ -21,11 +21,11 @@
   margin: 0;
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-regular);
-  gap: var(--spacing-s);
+  gap: var(--spacing-s) var(--spacing-m);
   line-height: var(--semantic-line-height-default);
 
   &_horizontal {
-    gap: var(--spacing-l);
+    gap: var(--spacing-m) var(--spacing-l);
     grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
     line-height: var(--semantic-line-height-article);
   }
