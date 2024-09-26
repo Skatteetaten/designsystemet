@@ -23,6 +23,14 @@
     padding: var(--spacing-s);
   }
 
+  &::-webkit-calendar-picker-indicator {
+    display: none !important;
+  }
+
+  input::-webkit-textfield-decoration-container {
+    display: none;
+  }
+
   &_multiline {
     padding: var(--spacing-s);
     overflow-y: auto;

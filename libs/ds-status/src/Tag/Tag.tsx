@@ -15,6 +15,7 @@ export const Tag = forwardRef<HTMLDivElement, TagProps>(
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
+      canBeManuallyFocused,
       color = getTagColorDefault(),
       size = getTagSizeDefault(),
       svgPath,
@@ -32,6 +33,7 @@ export const Tag = forwardRef<HTMLDivElement, TagProps>(
         lang={lang}
         data-testid={dataTestId}
         className={`${styles.tag} ${variantClassName} ${sizeClassName} ${className}`}
+        tabIndex={canBeManuallyFocused ? -1 : undefined}
       >
         {svgPath && (
           <div className={styles.iconWrapper} aria-hidden>

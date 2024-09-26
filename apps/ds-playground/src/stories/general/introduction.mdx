@@ -22,7 +22,7 @@ import { Link } from '@skatteetaten/ds-buttons';
 <Paragraph hasSpacing>
   <b>
     version:
-    <> {process.env.STORYBOOK_BUILD_VERSION ?? 'develop'}</>
+    <> {import.meta.env.STORYBOOK_BUILD_VERSION ?? 'develop'}</>
   </b>
 </Paragraph>
 

@@ -33,7 +33,7 @@ export interface ModalProps extends BaseProps {
   imageSource?: string;
   /** Alt tekst til illustrasjonsbilde. Hvis bildet er meningsbærende, legg på alt tekst. */
   imageSourceAltText?: string;
-  /* Modal i shadowndom */
+  /* Modal i shadowndom - Deprecated: Prop skal fjernes ved lansering av neste major versjon  */
   shadowRootNode?: Document | ShadowRoot;
   /** Callback når modalen lukkes */
   onClose?: () => void;

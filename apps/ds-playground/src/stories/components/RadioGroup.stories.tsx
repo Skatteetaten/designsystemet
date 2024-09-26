@@ -21,6 +21,7 @@ const meta = {
   title: 'Komponenter/RadioGroup/RadioGroup',
   argTypes: {
     // Props
+    classNames: { table: { category: category.props } },
     children: { table: { category: category.props } },
     description: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
@@ -38,6 +39,7 @@ const meta = {
       control: 'text',
       table: { category: category.props },
     },
+    shadowRootNode: { table: { category: category.props } },
     showRequiredMark: { table: { category: category.props } },
     titleHelpSvg: {
       table: {
@@ -62,6 +64,7 @@ const meta = {
       table: { category: category.htmlAttribute },
     },
     // Events
+    onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
     onHelpToggle: { table: { category: category.event } },
   },
@@ -95,9 +98,7 @@ export const Examples: Story = {
       <>
         <RadioGroup
           legend={'Type virksomhet'}
-          errorMessage={'Valg av type virksomhet er påkrevd.'}
           selectedValue={type}
-          showRequiredMark
           required
           onChange={(e): void => setType(e.target.value)}
         >

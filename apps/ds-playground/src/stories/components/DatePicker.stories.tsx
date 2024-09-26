@@ -3,6 +3,8 @@ import { ChangeEvent, useState, JSX } from 'react';
 import {
   dsI18n,
   formArrSize,
+  getAutoCompletePropDescription,
+  getCommonAutoCompleteDefault,
   getCommonFormVariantDefault,
 } from '@skatteetaten/ds-core-utils';
 import {
@@ -62,7 +64,15 @@ const meta = {
       },
     },
     // HTML
-    autoComplete: { table: { category: category.htmlAttribute } },
+    autoComplete: {
+      table: {
+        category: category.htmlAttribute,
+        defaultValue: { summary: getCommonAutoCompleteDefault() },
+        type: { summary: 'string' },
+      },
+      type: 'string',
+      description: getAutoCompletePropDescription(),
+    },
     disabled: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },
     placeholder: {
@@ -141,7 +151,6 @@ export const Examples: Story = {
           value={value}
           errorMessage={errorMessage}
           required
-          showRequiredMark
           onBlur={handleBlur}
           onSelectDate={handleSelect}
         />

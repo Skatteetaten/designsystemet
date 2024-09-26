@@ -20,7 +20,7 @@
         "entryFile": "libs/ds-overlays/src/index.ts",
         "external": ["react", "react-dom", "react/jsx-runtime"],
         "rollupConfig": ["libs/ds-overlays/rollup.config.js"],
-        "compiler": "babel",
+        "compiler": "swc",
         "assets": [
           {
             "glob": "libs/ds-overlays/README.md",

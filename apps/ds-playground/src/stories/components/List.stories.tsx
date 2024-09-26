@@ -9,7 +9,6 @@ const meta = {
   title: 'Komponenter/List/List',
   argTypes: {
     // Props
-    hasSpacing: { table: { category: category.props } },
     as: {
       control: 'inline-radio',
       table: {
@@ -17,7 +16,9 @@ const meta = {
         defaultValue: { summary: getListAsDefault() },
       },
     },
+    canBeManuallyFocused: { table: { category: category.props } },
     children: { table: { category: category.props } },
+    hasSpacing: { table: { category: category.props } },
   },
   args: {
     children: [

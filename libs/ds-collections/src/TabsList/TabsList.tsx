@@ -71,4 +71,4 @@ export const TabsList = forwardRef<HTMLDivElement, TabsListProps>(
   }
 ) as TabsListComponent;
 
-TabsList.displayName = 'Tabs.List';
+TabsList.displayName = 'TabsList';

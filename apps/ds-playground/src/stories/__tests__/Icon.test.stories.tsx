@@ -137,7 +137,7 @@ export const WithVariant = {
     const icon = canvas.getByRole('img', { hidden: true });
     await expect(icon).toBeInTheDocument();
     await expect(icon).toHaveAttribute('viewBox', '0 0 48 48');
-    await expect(icon.classList.toString()).toContain('Icon_themeIcon_medium');
+    await expect(icon.classList.toString()).toContain('themeIcon_medium');
   },
 } satisfies Story;
 
@@ -226,7 +226,7 @@ export const SystemIconSizeSmall = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const icon = canvas.getByRole('img', { hidden: true });
-    await expect(icon.classList.toString()).toContain('Icon_systemIcon_small');
+    await expect(icon.classList.toString()).toContain('systemIcon_small');
   },
 } satisfies Story;
 
@@ -244,7 +244,7 @@ export const SystemIconSizeMedium = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const icon = canvas.getByRole('img', { hidden: true });
-    await expect(icon.classList.toString()).toContain('Icon_systemIcon_medium');
+    await expect(icon.classList.toString()).toContain('systemIcon_medium');
   },
 } satisfies Story;
 
@@ -262,7 +262,7 @@ export const SystemIconSizeLarge = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const icon = canvas.getByRole('img', { hidden: true });
-    await expect(icon.classList.toString()).toContain('Icon_systemIcon_large');
+    await expect(icon.classList.toString()).toContain('systemIcon_large');
   },
 } satisfies Story;
 
@@ -280,9 +280,7 @@ export const SystemIconSizeExtraLarge = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const icon = canvas.getByRole('img', { hidden: true });
-    await expect(icon.classList.toString()).toContain(
-      'Icon_systemIcon_extraLarge'
-    );
+    await expect(icon.classList.toString()).toContain('systemIcon_extraLarge');
   },
 } satisfies Story;
 
@@ -303,7 +301,7 @@ export const ThemeIconSizeMedium = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const icon = canvas.getByRole('img', { hidden: true });
-    await expect(icon.classList.toString()).toContain('Icon_themeIcon_medium');
+    await expect(icon.classList.toString()).toContain('themeIcon_medium');
   },
 } satisfies Story;
 
@@ -324,6 +322,6 @@ export const ThemeIconSizeLarge = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const icon = canvas.getByRole('img', { hidden: true });
-    await expect(icon.classList.toString()).toContain('Icon_themeIcon_large');
+    await expect(icon.classList.toString()).toContain('themeIcon_large');
   },
 } satisfies Story;

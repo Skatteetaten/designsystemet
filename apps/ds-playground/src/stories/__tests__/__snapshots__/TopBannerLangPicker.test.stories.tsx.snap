@@ -2,93 +2,44 @@
 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangButton play-test 1`] = `
 <div data-test-block="true">
-  <div class=" TopBannerLangPicker_container__LVr42">
+  <div class=" _container_7cjjj_5">
     <div class>
     </div>
-    <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+    <button class="_button_197zg_1  _menuButton_7cjjj_17"
             lang="en"
             aria-expanded="false"
             type="button"
     >
-      <span class="TopBannerLangPicker_iconWrapper__SFn8s">
-        <span class="TopBannerLangPicker_flagIcon__LcfDc">
+      <span class="_iconWrapper_7cjjj_20">
+        <span class="_flagIcon_7cjjj_25">
           <svg xmlns="http://www.w3.org/2000/svg"
-               xmlns:xlink="http://www.w3.org/1999/xlink"
-               x="0px"
-               y="0px"
-               viewbox="0 0 1000 600"
                xml:space="preserve"
-               focusable="false"
                aria-hidden="true"
-               class="TopBannerLangPicker_flagIconSvg__rO4YM"
+               viewbox="0 0 1000 600"
+               class="_flagIconSvg_7cjjj_30"
           >
-            <style type="text/css">
-              .st0{fill:#FFFFFF;}
-	.st1{fill:#012169;}
-	.st2{fill:#C8102E;}
+            <style>
+              .en-flag_svg__st1{fill:#012169}.en-flag_svg__st2{fill:#c8102e}
             </style>
-            <rect class="st0"
-                  width="1000"
-                  height="600"
+            <path d="M0 0h1000v600H0z"
+                  style="fill: rgb(255, 255, 255);"
             >
-            </rect>
-            <g>
-              <polygon class="st1"
-                       points="165.8,200 0,200 0,117.1  "
-              >
-              </polygon>
-              <polygon class="st1"
-                       points="165.8,400 0,482.9 0,400  "
-              >
-              </polygon>
-              <polygon class="st1"
-                       points="600,600 965.8,600 600,417.1  "
-              >
-              </polygon>
-              <polygon class="st1"
-                       points="34.2,600 400,600 400,417.1  "
-              >
-              </polygon>
-              <polygon class="st1"
-                       points="400,0 34.2,0 400,182.9  "
-              >
-              </polygon>
-              <polygon class="st1"
-                       points="1000,400 1000,482.9 834.2,400  "
-              >
-              </polygon>
-              <polygon class="st1"
-                       points="965.8,0 600,0 600,182.9  "
-              >
-              </polygon>
-              <polygon class="st1"
-                       points="1000,117.1 1000,200 834.2,200  "
-              >
-              </polygon>
-              <polygon class="st2"
-                       points="1000,5.3 1000,50 700,200 610.6,200  "
-              >
-              </polygon>
-              <polygon class="st2"
-                       points="389.4,200 210.6,200 0,94.7 0,5.3  "
-              >
-              </polygon>
-              <polygon class="st2"
-                       points="389.4,400 0,594.7 0,505.3 210.6,400  "
-              >
-              </polygon>
-              <polygon class="st2"
-                       points="1000,505.3 1000,594.7 610.6,400 789.4,400  "
-              >
-              </polygon>
-              <polygon class="st2"
-                       points="1000,240 1000,360 560,360 560,600 440,600 440,360 0,360 0,240 440,240 440,0 560,0 560,240  "
-              >
-              </polygon>
-            </g>
+            </path>
+            <path d="M165.8 200H0v-82.9zM165.8 400 0 482.9V400zM600 600h365.8L600 417.1zM34.2 600H400V417.1zM400 0H34.2L400 182.9zM1000 400v82.9L834.2 400zM965.8 0H600v182.9zM1000 117.1V200H834.2z"
+                  class="en-flag_svg__st1"
+            >
+            </path>
+            <path d="M1000 5.3V50L700 200h-89.4zM389.4 200H210.6L0 94.7V5.3zM389.4 400 0 594.7v-89.4L210.6 400zM1000 505.3v89.4L610.6 400h178.8z"
+                  class="en-flag_svg__st2"
+            >
+            </path>
+            <path d="M1000 240v120H560v240H440V360H0V240h440V0h120v240z"
+                  class="en-flag_svg__st2"
+            >
+            </path>
           </svg>
         </span>
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -99,10 +50,10 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangB
         </svg>
       </span>
       English
-      <span class="TopBannerLangPicker_srOnly__33VA7">
+      <span class="_srOnly_7cjjj_121">
         Meny
       </span>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -112,7 +63,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangB
         </path>
       </svg>
     </button>
-    <div class="TopBannerLangPicker_menuArrow__cXG+p">
+    <div class="_menuArrow_7cjjj_67">
     </div>
   </div>
 </div>
@@ -120,69 +71,36 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangB
 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = `
 <div data-test-block="true">
-  <div class=" TopBannerLangPicker_container__LVr42">
-    <div class="TopBannerLangPicker_overlay__y50Yx">
+  <div class=" _container_7cjjj_5">
+    <div class="_overlay_7cjjj_10">
     </div>
-    <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+    <button class="_button_197zg_1  _menuButton_7cjjj_17"
             lang="nb"
             aria-expanded="true"
             type="button"
     >
-      <span class="TopBannerLangPicker_iconWrapper__SFn8s">
-        <span class="TopBannerLangPicker_flagIcon__LcfDc">
+      <span class="_iconWrapper_7cjjj_20">
+        <span class="_flagIcon_7cjjj_25">
           <svg xmlns="http://www.w3.org/2000/svg"
-               viewbox="0 0 1100 800"
-               focusable="false"
                aria-hidden="true"
-               class="TopBannerLangPicker_flagIconSvg__rO4YM"
+               viewbox="0 0 1100 800"
+               class="_flagIconSvg_7cjjj_30"
           >
-            <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
-                     style="fill: rgb(255, 255, 255);"
+            <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
+                  style="fill: rgb(255, 255, 255);"
             >
-            </polygon>
-            <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
-                     style="fill: rgb(255, 255, 255);"
-            >
-            </polygon>
-            <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
-                     style="fill: rgb(255, 255, 255);"
-            >
-            </polygon>
-            <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
-                     style="fill: rgb(255, 255, 255);"
-            >
-            </polygon>
-            <rect width="300"
-                  height="300"
+            </path>
+            <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
                   style="fill: rgb(239, 43, 45);"
             >
-            </rect>
-            <rect x="500"
-                  width="600"
-                  height="300"
-                  style="fill: rgb(239, 43, 45);"
+            </path>
+            <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
+                  style="fill: rgb(0, 40, 104);"
             >
-            </rect>
-            <rect y="500"
-                  width="300"
-                  height="300"
-                  style="fill: rgb(239, 43, 45);"
-            >
-            </rect>
-            <rect x="500"
-                  y="500"
-                  width="600"
-                  height="300"
-                  style="fill: rgb(239, 43, 45);"
-            >
-            </rect>
-            <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
-                     style="fill: rgb(0, 40, 104);"
-            >
-            </polygon>
+            </path>
           </svg>
         </span>
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -193,10 +111,10 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
         </svg>
       </span>
       Bokmål
-      <span class="TopBannerLangPicker_srOnly__33VA7">
+      <span class="_srOnly_7cjjj_121">
         Meny
       </span>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -206,72 +124,39 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
         </path>
       </svg>
     </button>
-    <div class="TopBannerLangPicker_menuArrow__cXG+p">
+    <div class="_menuArrow_7cjjj_67">
     </div>
-    <div class="TopBannerLangPicker_menu__GFqIr">
-      <ul class="TopBannerLangPicker_list__2dLA8">
-        <li class="TopBannerLangPicker_listItem__sGReR">
-          <button class="TopBannerLangPickerButton_buttonCurrent__y8Vxz TopBannerLangPickerButton_button__pl57- "
+    <div class="_menu_7cjjj_17">
+      <ul class="_list_7cjjj_101">
+        <li class="_listItem_7cjjj_114">
+          <button class="_buttonCurrent_1qb8h_25 _button_1qb8h_1 "
                   lang="nb"
                   aria-current="true"
           >
-            <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
+            <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
-                   viewbox="0 0 1100 800"
-                   focusable="false"
                    aria-hidden="true"
-                   class="TopBannerLangPicker_flagIconSvg__rO4YM"
+                   viewbox="0 0 1100 800"
+                   class="_flagIconSvg_7cjjj_30"
               >
-                <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
-                         style="fill: rgb(255, 255, 255);"
+                <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
+                      style="fill: rgb(255, 255, 255);"
                 >
-                </polygon>
-                <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
-                         style="fill: rgb(255, 255, 255);"
-                >
-                </polygon>
-                <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
-                         style="fill: rgb(255, 255, 255);"
-                >
-                </polygon>
-                <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
-                         style="fill: rgb(255, 255, 255);"
-                >
-                </polygon>
-                <rect width="300"
-                      height="300"
+                </path>
+                <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
                       style="fill: rgb(239, 43, 45);"
                 >
-                </rect>
-                <rect x="500"
-                      width="600"
-                      height="300"
-                      style="fill: rgb(239, 43, 45);"
+                </path>
+                <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
+                      style="fill: rgb(0, 40, 104);"
                 >
-                </rect>
-                <rect y="500"
-                      width="300"
-                      height="300"
-                      style="fill: rgb(239, 43, 45);"
-                >
-                </rect>
-                <rect x="500"
-                      y="500"
-                      width="600"
-                      height="300"
-                      style="fill: rgb(239, 43, 45);"
-                >
-                </rect>
-                <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
-                         style="fill: rgb(0, 40, 104);"
-                >
-                </polygon>
+                </path>
               </svg>
             </span>
-            <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+            <span class="_buttonText_1qb8h_21">
               Bokmål
             </span>
-            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz "
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 "
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -282,219 +167,120 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
             </svg>
           </button>
         </li>
-        <li class="TopBannerLangPicker_listItem__sGReR">
-          <button class=" TopBannerLangPickerButton_button__pl57- "
+        <li class="_listItem_7cjjj_114">
+          <button class=" _button_1qb8h_1 "
                   lang="nn"
                   aria-current="false"
           >
-            <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
+            <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
-                   viewbox="0 0 1100 800"
-                   focusable="false"
                    aria-hidden="true"
-                   class="TopBannerLangPicker_flagIconSvg__rO4YM"
+                   viewbox="0 0 1100 800"
+                   class="_flagIconSvg_7cjjj_30"
               >
-                <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
-                         style="fill: rgb(255, 255, 255);"
+                <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
+                      style="fill: rgb(255, 255, 255);"
                 >
-                </polygon>
-                <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
-                         style="fill: rgb(255, 255, 255);"
-                >
-                </polygon>
-                <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
-                         style="fill: rgb(255, 255, 255);"
-                >
-                </polygon>
-                <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
-                         style="fill: rgb(255, 255, 255);"
-                >
-                </polygon>
-                <rect width="300"
-                      height="300"
+                </path>
+                <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
                       style="fill: rgb(239, 43, 45);"
                 >
-                </rect>
-                <rect x="500"
-                      width="600"
-                      height="300"
-                      style="fill: rgb(239, 43, 45);"
+                </path>
+                <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
+                      style="fill: rgb(0, 40, 104);"
                 >
-                </rect>
-                <rect y="500"
-                      width="300"
-                      height="300"
-                      style="fill: rgb(239, 43, 45);"
-                >
-                </rect>
-                <rect x="500"
-                      y="500"
-                      width="600"
-                      height="300"
-                      style="fill: rgb(239, 43, 45);"
-                >
-                </rect>
-                <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
-                         style="fill: rgb(0, 40, 104);"
-                >
-                </polygon>
+                </path>
               </svg>
             </span>
-            <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+            <span class="_buttonText_1qb8h_21">
               Nynorsk
             </span>
           </button>
         </li>
-        <li class="TopBannerLangPicker_listItem__sGReR">
-          <button class=" TopBannerLangPickerButton_button__pl57- "
+        <li class="_listItem_7cjjj_114">
+          <button class=" _button_1qb8h_1 "
                   lang="en"
                   aria-current="false"
           >
-            <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
+            <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
-                   xmlns:xlink="http://www.w3.org/1999/xlink"
-                   x="0px"
-                   y="0px"
-                   viewbox="0 0 1000 600"
                    xml:space="preserve"
-                   focusable="false"
                    aria-hidden="true"
-                   class="TopBannerLangPicker_flagIconSvg__rO4YM"
+                   viewbox="0 0 1000 600"
+                   class="_flagIconSvg_7cjjj_30"
               >
-                <style type="text/css">
-                  .st0{fill:#FFFFFF;}
-	.st1{fill:#012169;}
-	.st2{fill:#C8102E;}
+                <style>
+                  .en-flag_svg__st1{fill:#012169}.en-flag_svg__st2{fill:#c8102e}
                 </style>
-                <rect class="st0"
-                      width="1000"
-                      height="600"
+                <path d="M0 0h1000v600H0z"
+                      style="fill: rgb(255, 255, 255);"
                 >
-                </rect>
-                <g>
-                  <polygon class="st1"
-                           points="165.8,200 0,200 0,117.1  "
-                  >
-                  </polygon>
-                  <polygon class="st1"
-                           points="165.8,400 0,482.9 0,400  "
-                  >
-                  </polygon>
-                  <polygon class="st1"
-                           points="600,600 965.8,600 600,417.1  "
-                  >
-                  </polygon>
-                  <polygon class="st1"
-                           points="34.2,600 400,600 400,417.1  "
-                  >
-                  </polygon>
-                  <polygon class="st1"
-                           points="400,0 34.2,0 400,182.9  "
-                  >
-                  </polygon>
-                  <polygon class="st1"
-                           points="1000,400 1000,482.9 834.2,400  "
-                  >
-                  </polygon>
-                  <polygon class="st1"
-                           points="965.8,0 600,0 600,182.9  "
-                  >
-                  </polygon>
-                  <polygon class="st1"
-                           points="1000,117.1 1000,200 834.2,200  "
-                  >
-                  </polygon>
-                  <polygon class="st2"
-                           points="1000,5.3 1000,50 700,200 610.6,200  "
-                  >
-                  </polygon>
-                  <polygon class="st2"
-                           points="389.4,200 210.6,200 0,94.7 0,5.3  "
-                  >
-                  </polygon>
-                  <polygon class="st2"
-                           points="389.4,400 0,594.7 0,505.3 210.6,400  "
-                  >
-                  </polygon>
-                  <polygon class="st2"
-                           points="1000,505.3 1000,594.7 610.6,400 789.4,400  "
-                  >
-                  </polygon>
-                  <polygon class="st2"
-                           points="1000,240 1000,360 560,360 560,600 440,600 440,360 0,360 0,240 440,240 440,0 560,0 560,240  "
-                  >
-                  </polygon>
-                </g>
+                </path>
+                <path d="M165.8 200H0v-82.9zM165.8 400 0 482.9V400zM600 600h365.8L600 417.1zM34.2 600H400V417.1zM400 0H34.2L400 182.9zM1000 400v82.9L834.2 400zM965.8 0H600v182.9zM1000 117.1V200H834.2z"
+                      class="en-flag_svg__st1"
+                >
+                </path>
+                <path d="M1000 5.3V50L700 200h-89.4zM389.4 200H210.6L0 94.7V5.3zM389.4 400 0 594.7v-89.4L210.6 400zM1000 505.3v89.4L610.6 400h178.8z"
+                      class="en-flag_svg__st2"
+                >
+                </path>
+                <path d="M1000 240v120H560v240H440V360H0V240h440V0h120v240z"
+                      class="en-flag_svg__st2"
+                >
+                </path>
               </svg>
             </span>
-            <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+            <span class="_buttonText_1qb8h_21">
               English
             </span>
           </button>
         </li>
-        <li class="TopBannerLangPicker_listItem__sGReR">
-          <button class=" TopBannerLangPickerButton_button__pl57- "
+        <li class="_listItem_7cjjj_114">
+          <button class=" _button_1qb8h_1 "
                   lang="se"
                   aria-current="false"
           >
-            <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
+            <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
-                   viewbox="0 0 808 600"
-                   focusable="false"
                    aria-hidden="true"
-                   class="TopBannerLangPicker_flagIconSvg__rO4YM"
+                   viewbox="0 0 808 600"
+                   class="_flagIconSvg_7cjjj_30"
               >
-                <path d="m370,0v116.34c78.64,24.02,136,97.27,136,183.66s-57.36,159.64-136,183.66v116.34h438V0h-438Z"
+                <path d="M370 0v116.34c78.64 24.02 136 97.27 136 183.66s-57.36 159.64-136 183.66V600h438V0H370Z"
                       style="fill: rgb(0, 53, 173);"
                 >
                 </path>
-                <path d="m474,300c0-68.53-43.31-127.13-104-149.88v299.76c60.69-22.75,104-81.35,104-149.88Z"
+                <path d="M474 300c0-68.53-43.31-127.13-104-149.88v299.76c60.69-22.75 104-81.35 104-149.88Z"
                       style="fill: rgb(0, 53, 173);"
                 >
                 </path>
-                <path d="m370,116.34V0h-56v108c19.47,0,38.28,2.92,56,8.34Z"
+                <path d="M370 116.34V0h-56v108c19.47 0 38.28 2.92 56 8.34ZM314 492v108h56V483.66c-17.72 5.42-36.53 8.34-56 8.34ZM370 449.88V150.12c-17.44-6.54-36.31-10.12-56-10.12v320c19.69 0 38.56-3.58 56-10.12Z"
                       style="fill: rgb(255, 206, 0);"
                 >
                 </path>
-                <path d="m314,492v108h56v-116.34c-17.72,5.42-36.53,8.34-56,8.34Z"
-                      style="fill: rgb(255, 206, 0);"
-                >
-                </path>
-                <path d="m370,449.88V150.12c-17.44-6.54-36.31-10.12-56-10.12v320c19.69,0,38.56-3.58,56-10.12Z"
-                      style="fill: rgb(255, 206, 0);"
-                >
-                </path>
-                <path d="m258,449.92c17.43,6.51,36.3,10.08,56,10.08V140c-19.7,0-38.57,3.57-56,10.08v299.83Z"
+                <path d="M258 449.92c17.43 6.51 36.3 10.08 56 10.08V140c-19.7 0-38.57 3.57-56 10.08v299.83ZM314 108V0h-56v116.31c17.72-5.39 36.52-8.31 56-8.31ZM258 483.69V600h56V492c-19.48 0-38.28-2.91-56-8.31Z"
                       style="fill: rgb(0, 114, 41);"
                 >
                 </path>
-                <path d="m314,108V0h-56v116.31c17.72-5.39,36.52-8.31,56-8.31Z"
-                      style="fill: rgb(0, 114, 41);"
-                >
-                </path>
-                <path d="m258,483.69v116.31h56v-108c-19.48,0-38.28-2.91-56-8.31Z"
-                      style="fill: rgb(0, 114, 41);"
-                >
-                </path>
-                <path d="m122,300c0-86.56,57.28-159.73,136-183.69V0H0v600h258v-116.31c-78.72-23.97-136-97.14-136-183.69Z"
+                <path d="M122 300c0-86.56 57.28-159.73 136-183.69V0H0v600h258V483.69C179.28 459.72 122 386.55 122 300Z"
                       style="fill: rgb(220, 36, 31);"
                 >
                 </path>
-                <path d="m154,300c0,68.66,43.26,127.22,104,149.92V150.08c-60.74,22.7-104,81.25-104,149.92Z"
+                <path d="M154 300c0 68.66 43.26 127.22 104 149.92V150.08c-60.74 22.7-104 81.25-104 149.92Z"
                       style="fill: rgb(220, 36, 31);"
                 >
                 </path>
-                <path d="m258,449.92c-60.74-22.7-104-81.25-104-149.92s43.26-127.22,104-149.92c17.43-6.51,36.3-10.08,56-10.08v-32c-19.48,0-38.28,2.91-56,8.31-78.72,23.97-136,97.14-136,183.69s57.28,159.73,136,183.69c17.72,5.39,36.52,8.31,56,8.31v-32c-19.7,0-38.57-3.57-56-10.08Z"
+                <path d="M258 449.92c-60.74-22.7-104-81.25-104-149.92s43.26-127.22 104-149.92c17.43-6.51 36.3-10.08 56-10.08v-32c-19.48 0-38.28 2.91-56 8.31-78.72 23.97-136 97.14-136 183.69s57.28 159.73 136 183.69c17.72 5.39 36.52 8.31 56 8.31v-32c-19.7 0-38.57-3.57-56-10.08Z"
                       style="fill: rgb(0, 53, 173);"
                 >
                 </path>
-                <path d="m314,140c19.69,0,38.56,3.58,56,10.12,60.69,22.75,104,81.35,104,149.88s-43.31,127.13-104,149.88c-17.44,6.54-36.31,10.12-56,10.12v32c19.47,0,38.28-2.92,56-8.34,78.64-24.02,136-97.27,136-183.66s-57.36-159.64-136-183.66c-17.72-5.42-36.53-8.34-56-8.34v32Z"
+                <path d="M314 140c19.69 0 38.56 3.58 56 10.12 60.69 22.75 104 81.35 104 149.88s-43.31 127.13-104 149.88c-17.44 6.54-36.31 10.12-56 10.12v32c19.47 0 38.28-2.92 56-8.34 78.64-24.02 136-97.27 136-183.66s-57.36-159.64-136-183.66c-17.72-5.42-36.53-8.34-56-8.34v32Z"
                       style="fill: rgb(220, 36, 31);"
                 >
                 </path>
               </svg>
             </span>
-            <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+            <span class="_buttonText_1qb8h_21">
               Sámegiella
             </span>
           </button>
@@ -508,72 +294,39 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <div id="htmlid"
-       class="dummyClassname TopBannerLangPicker_container__LVr42"
+       class="dummyClassname _container_7cjjj_5"
        lang="nb"
        data-testid="123ID"
   >
     <div class>
     </div>
-    <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+    <button class="_button_197zg_1  _menuButton_7cjjj_17"
             lang="nb"
             aria-expanded="false"
             type="button"
     >
-      <span class="TopBannerLangPicker_iconWrapper__SFn8s">
-        <span class="TopBannerLangPicker_flagIcon__LcfDc">
+      <span class="_iconWrapper_7cjjj_20">
+        <span class="_flagIcon_7cjjj_25">
           <svg xmlns="http://www.w3.org/2000/svg"
-               viewbox="0 0 1100 800"
-               focusable="false"
                aria-hidden="true"
-               class="TopBannerLangPicker_flagIconSvg__rO4YM"
+               viewbox="0 0 1100 800"
+               class="_flagIconSvg_7cjjj_30"
           >
-            <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
-                     style="fill: rgb(255, 255, 255);"
+            <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
+                  style="fill: rgb(255, 255, 255);"
             >
-            </polygon>
-            <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
-                     style="fill: rgb(255, 255, 255);"
-            >
-            </polygon>
-            <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
-                     style="fill: rgb(255, 255, 255);"
-            >
-            </polygon>
-            <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
-                     style="fill: rgb(255, 255, 255);"
-            >
-            </polygon>
-            <rect width="300"
-                  height="300"
+            </path>
+            <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
                   style="fill: rgb(239, 43, 45);"
             >
-            </rect>
-            <rect x="500"
-                  width="600"
-                  height="300"
-                  style="fill: rgb(239, 43, 45);"
+            </path>
+            <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
+                  style="fill: rgb(0, 40, 104);"
             >
-            </rect>
-            <rect y="500"
-                  width="300"
-                  height="300"
-                  style="fill: rgb(239, 43, 45);"
-            >
-            </rect>
-            <rect x="500"
-                  y="500"
-                  width="600"
-                  height="300"
-                  style="fill: rgb(239, 43, 45);"
-            >
-            </rect>
-            <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
-                     style="fill: rgb(0, 40, 104);"
-            >
-            </polygon>
+            </path>
           </svg>
         </span>
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -584,10 +337,10 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 
         </svg>
       </span>
       Bokmål
-      <span class="TopBannerLangPicker_srOnly__33VA7">
+      <span class="_srOnly_7cjjj_121">
         Meny
       </span>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -597,7 +350,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 
         </path>
       </svg>
     </button>
-    <div class="TopBannerLangPicker_menuArrow__cXG+p">
+    <div class="_menuArrow_7cjjj_67">
     </div>
   </div>
 </div>
@@ -605,93 +358,44 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 
 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] = `
 <div data-test-block="true">
-  <div class=" TopBannerLangPicker_container__LVr42">
-    <div class="TopBannerLangPicker_overlay__y50Yx">
+  <div class=" _container_7cjjj_5">
+    <div class="_overlay_7cjjj_10">
     </div>
-    <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+    <button class="_button_197zg_1  _menuButton_7cjjj_17"
             lang="en"
             aria-expanded="true"
             type="button"
     >
-      <span class="TopBannerLangPicker_iconWrapper__SFn8s">
-        <span class="TopBannerLangPicker_flagIcon__LcfDc">
+      <span class="_iconWrapper_7cjjj_20">
+        <span class="_flagIcon_7cjjj_25">
           <svg xmlns="http://www.w3.org/2000/svg"
-               xmlns:xlink="http://www.w3.org/1999/xlink"
-               x="0px"
-               y="0px"
-               viewbox="0 0 1000 600"
                xml:space="preserve"
-               focusable="false"
                aria-hidden="true"
-               class="TopBannerLangPicker_flagIconSvg__rO4YM"
+               viewbox="0 0 1000 600"
+               class="_flagIconSvg_7cjjj_30"
           >
-            <style type="text/css">
-              .st0{fill:#FFFFFF;}
-	.st1{fill:#012169;}
-	.st2{fill:#C8102E;}
+            <style>
+              .en-flag_svg__st1{fill:#012169}.en-flag_svg__st2{fill:#c8102e}
             </style>
-            <rect class="st0"
-                  width="1000"
-                  height="600"
+            <path d="M0 0h1000v600H0z"
+                  style="fill: rgb(255, 255, 255);"
             >
-            </rect>
-            <g>
-              <polygon class="st1"
-                       points="165.8,200 0,200 0,117.1  "
-              >
-              </polygon>
-              <polygon class="st1"
-                       points="165.8,400 0,482.9 0,400  "
-              >
-              </polygon>
-              <polygon class="st1"
-                       points="600,600 965.8,600 600,417.1  "
-              >
-              </polygon>
-              <polygon class="st1"
-                       points="34.2,600 400,600 400,417.1  "
-              >
-              </polygon>
-              <polygon class="st1"
-                       points="400,0 34.2,0 400,182.9  "
-              >
-              </polygon>
-              <polygon class="st1"
-                       points="1000,400 1000,482.9 834.2,400  "
-              >
-              </polygon>
-              <polygon class="st1"
-                       points="965.8,0 600,0 600,182.9  "
-              >
-              </polygon>
-              <polygon class="st1"
-                       points="1000,117.1 1000,200 834.2,200  "
-              >
-              </polygon>
-              <polygon class="st2"
-                       points="1000,5.3 1000,50 700,200 610.6,200  "
-              >
-              </polygon>
-              <polygon class="st2"
-                       points="389.4,200 210.6,200 0,94.7 0,5.3  "
-              >
-              </polygon>
-              <polygon class="st2"
-                       points="389.4,400 0,594.7 0,505.3 210.6,400  "
-              >
-              </polygon>
-              <polygon class="st2"
-                       points="1000,505.3 1000,594.7 610.6,400 789.4,400  "
-              >
-              </polygon>
-              <polygon class="st2"
-                       points="1000,240 1000,360 560,360 560,600 440,600 440,360 0,360 0,240 440,240 440,0 560,0 560,240  "
-              >
-              </polygon>
-            </g>
+            </path>
+            <path d="M165.8 200H0v-82.9zM165.8 400 0 482.9V400zM600 600h365.8L600 417.1zM34.2 600H400V417.1zM400 0H34.2L400 182.9zM1000 400v82.9L834.2 400zM965.8 0H600v182.9zM1000 117.1V200H834.2z"
+                  class="en-flag_svg__st1"
+            >
+            </path>
+            <path d="M1000 5.3V50L700 200h-89.4zM389.4 200H210.6L0 94.7V5.3zM389.4 400 0 594.7v-89.4L210.6 400zM1000 505.3v89.4L610.6 400h178.8z"
+                  class="en-flag_svg__st2"
+            >
+            </path>
+            <path d="M1000 240v120H560v240H440V360H0V240h440V0h120v240z"
+                  class="en-flag_svg__st2"
+            >
+            </path>
           </svg>
         </span>
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -702,10 +406,10 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
         </svg>
       </span>
       English
-      <span class="TopBannerLangPicker_srOnly__33VA7">
+      <span class="_srOnly_7cjjj_121">
         Meny
       </span>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -715,222 +419,107 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
         </path>
       </svg>
     </button>
-    <div class="TopBannerLangPicker_menuArrow__cXG+p">
+    <div class="_menuArrow_7cjjj_67">
     </div>
-    <div class="TopBannerLangPicker_menu__GFqIr">
-      <ul class="TopBannerLangPicker_list__2dLA8">
-        <li class="TopBannerLangPicker_listItem__sGReR">
-          <button class=" TopBannerLangPickerButton_button__pl57- "
+    <div class="_menu_7cjjj_17">
+      <ul class="_list_7cjjj_101">
+        <li class="_listItem_7cjjj_114">
+          <button class=" _button_1qb8h_1 "
                   lang="nb"
                   aria-current="false"
           >
-            <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
+            <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
-                   viewbox="0 0 1100 800"
-                   focusable="false"
                    aria-hidden="true"
-                   class="TopBannerLangPicker_flagIconSvg__rO4YM"
+                   viewbox="0 0 1100 800"
+                   class="_flagIconSvg_7cjjj_30"
               >
-                <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
-                         style="fill: rgb(255, 255, 255);"
+                <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
+                      style="fill: rgb(255, 255, 255);"
                 >
-                </polygon>
-                <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
-                         style="fill: rgb(255, 255, 255);"
-                >
-                </polygon>
-                <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
-                         style="fill: rgb(255, 255, 255);"
-                >
-                </polygon>
-                <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
-                         style="fill: rgb(255, 255, 255);"
-                >
-                </polygon>
-                <rect width="300"
-                      height="300"
+                </path>
+                <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
                       style="fill: rgb(239, 43, 45);"
                 >
-                </rect>
-                <rect x="500"
-                      width="600"
-                      height="300"
-                      style="fill: rgb(239, 43, 45);"
+                </path>
+                <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
+                      style="fill: rgb(0, 40, 104);"
                 >
-                </rect>
-                <rect y="500"
-                      width="300"
-                      height="300"
-                      style="fill: rgb(239, 43, 45);"
-                >
-                </rect>
-                <rect x="500"
-                      y="500"
-                      width="600"
-                      height="300"
-                      style="fill: rgb(239, 43, 45);"
-                >
-                </rect>
-                <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
-                         style="fill: rgb(0, 40, 104);"
-                >
-                </polygon>
+                </path>
               </svg>
             </span>
-            <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+            <span class="_buttonText_1qb8h_21">
               Bokmål
             </span>
           </button>
         </li>
-        <li class="TopBannerLangPicker_listItem__sGReR">
-          <button class=" TopBannerLangPickerButton_button__pl57- "
+        <li class="_listItem_7cjjj_114">
+          <button class=" _button_1qb8h_1 "
                   lang="nn"
                   aria-current="false"
           >
-            <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
+            <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
-                   viewbox="0 0 1100 800"
-                   focusable="false"
                    aria-hidden="true"
-                   class="TopBannerLangPicker_flagIconSvg__rO4YM"
+                   viewbox="0 0 1100 800"
+                   class="_flagIconSvg_7cjjj_30"
               >
-                <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
-                         style="fill: rgb(255, 255, 255);"
+                <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
+                      style="fill: rgb(255, 255, 255);"
                 >
-                </polygon>
-                <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
-                         style="fill: rgb(255, 255, 255);"
-                >
-                </polygon>
-                <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
-                         style="fill: rgb(255, 255, 255);"
-                >
-                </polygon>
-                <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
-                         style="fill: rgb(255, 255, 255);"
-                >
-                </polygon>
-                <rect width="300"
-                      height="300"
+                </path>
+                <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
                       style="fill: rgb(239, 43, 45);"
                 >
-                </rect>
-                <rect x="500"
-                      width="600"
-                      height="300"
-                      style="fill: rgb(239, 43, 45);"
+                </path>
+                <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
+                      style="fill: rgb(0, 40, 104);"
                 >
-                </rect>
-                <rect y="500"
-                      width="300"
-                      height="300"
-                      style="fill: rgb(239, 43, 45);"
-                >
-                </rect>
-                <rect x="500"
-                      y="500"
-                      width="600"
-                      height="300"
-                      style="fill: rgb(239, 43, 45);"
-                >
-                </rect>
-                <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
-                         style="fill: rgb(0, 40, 104);"
-                >
-                </polygon>
+                </path>
               </svg>
             </span>
-            <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+            <span class="_buttonText_1qb8h_21">
               Nynorsk
             </span>
           </button>
         </li>
-        <li class="TopBannerLangPicker_listItem__sGReR">
-          <button class="TopBannerLangPickerButton_buttonCurrent__y8Vxz TopBannerLangPickerButton_button__pl57- "
+        <li class="_listItem_7cjjj_114">
+          <button class="_buttonCurrent_1qb8h_25 _button_1qb8h_1 "
                   lang="en"
                   aria-current="true"
           >
-            <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
+            <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
-                   xmlns:xlink="http://www.w3.org/1999/xlink"
-                   x="0px"
-                   y="0px"
-                   viewbox="0 0 1000 600"
                    xml:space="preserve"
-                   focusable="false"
                    aria-hidden="true"
-                   class="TopBannerLangPicker_flagIconSvg__rO4YM"
+                   viewbox="0 0 1000 600"
+                   class="_flagIconSvg_7cjjj_30"
               >
-                <style type="text/css">
-                  .st0{fill:#FFFFFF;}
-	.st1{fill:#012169;}
-	.st2{fill:#C8102E;}
+                <style>
+                  .en-flag_svg__st1{fill:#012169}.en-flag_svg__st2{fill:#c8102e}
                 </style>
-                <rect class="st0"
-                      width="1000"
-                      height="600"
+                <path d="M0 0h1000v600H0z"
+                      style="fill: rgb(255, 255, 255);"
                 >
-                </rect>
-                <g>
-                  <polygon class="st1"
-                           points="165.8,200 0,200 0,117.1  "
-                  >
-                  </polygon>
-                  <polygon class="st1"
-                           points="165.8,400 0,482.9 0,400  "
-                  >
-                  </polygon>
-                  <polygon class="st1"
-                           points="600,600 965.8,600 600,417.1  "
-                  >
-                  </polygon>
-                  <polygon class="st1"
-                           points="34.2,600 400,600 400,417.1  "
-                  >
-                  </polygon>
-                  <polygon class="st1"
-                           points="400,0 34.2,0 400,182.9  "
-                  >
-                  </polygon>
-                  <polygon class="st1"
-                           points="1000,400 1000,482.9 834.2,400  "
-                  >
-                  </polygon>
-                  <polygon class="st1"
-                           points="965.8,0 600,0 600,182.9  "
-                  >
-                  </polygon>
-                  <polygon class="st1"
-                           points="1000,117.1 1000,200 834.2,200  "
-                  >
-                  </polygon>
-                  <polygon class="st2"
-                           points="1000,5.3 1000,50 700,200 610.6,200  "
-                  >
-                  </polygon>
-                  <polygon class="st2"
-                           points="389.4,200 210.6,200 0,94.7 0,5.3  "
-                  >
-                  </polygon>
-                  <polygon class="st2"
-                           points="389.4,400 0,594.7 0,505.3 210.6,400  "
-                  >
-                  </polygon>
-                  <polygon class="st2"
-                           points="1000,505.3 1000,594.7 610.6,400 789.4,400  "
-                  >
-                  </polygon>
-                  <polygon class="st2"
-                           points="1000,240 1000,360 560,360 560,600 440,600 440,360 0,360 0,240 440,240 440,0 560,0 560,240  "
-                  >
-                  </polygon>
-                </g>
+                </path>
+                <path d="M165.8 200H0v-82.9zM165.8 400 0 482.9V400zM600 600h365.8L600 417.1zM34.2 600H400V417.1zM400 0H34.2L400 182.9zM1000 400v82.9L834.2 400zM965.8 0H600v182.9zM1000 117.1V200H834.2z"
+                      class="en-flag_svg__st1"
+                >
+                </path>
+                <path d="M1000 5.3V50L700 200h-89.4zM389.4 200H210.6L0 94.7V5.3zM389.4 400 0 594.7v-89.4L210.6 400zM1000 505.3v89.4L610.6 400h178.8z"
+                      class="en-flag_svg__st2"
+                >
+                </path>
+                <path d="M1000 240v120H560v240H440V360H0V240h440V0h120v240z"
+                      class="en-flag_svg__st2"
+                >
+                </path>
               </svg>
             </span>
-            <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+            <span class="_buttonText_1qb8h_21">
               English
             </span>
-            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz "
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 "
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -941,69 +530,52 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
             </svg>
           </button>
         </li>
-        <li class="TopBannerLangPicker_listItem__sGReR">
-          <button class=" TopBannerLangPickerButton_button__pl57- "
+        <li class="_listItem_7cjjj_114">
+          <button class=" _button_1qb8h_1 "
                   lang="se"
                   aria-current="false"
           >
-            <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
+            <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
-                   viewbox="0 0 808 600"
-                   focusable="false"
                    aria-hidden="true"
-                   class="TopBannerLangPicker_flagIconSvg__rO4YM"
+                   viewbox="0 0 808 600"
+                   class="_flagIconSvg_7cjjj_30"
               >
-                <path d="m370,0v116.34c78.64,24.02,136,97.27,136,183.66s-57.36,159.64-136,183.66v116.34h438V0h-438Z"
+                <path d="M370 0v116.34c78.64 24.02 136 97.27 136 183.66s-57.36 159.64-136 183.66V600h438V0H370Z"
                       style="fill: rgb(0, 53, 173);"
                 >
                 </path>
-                <path d="m474,300c0-68.53-43.31-127.13-104-149.88v299.76c60.69-22.75,104-81.35,104-149.88Z"
+                <path d="M474 300c0-68.53-43.31-127.13-104-149.88v299.76c60.69-22.75 104-81.35 104-149.88Z"
                       style="fill: rgb(0, 53, 173);"
                 >
                 </path>
-                <path d="m370,116.34V0h-56v108c19.47,0,38.28,2.92,56,8.34Z"
+                <path d="M370 116.34V0h-56v108c19.47 0 38.28 2.92 56 8.34ZM314 492v108h56V483.66c-17.72 5.42-36.53 8.34-56 8.34ZM370 449.88V150.12c-17.44-6.54-36.31-10.12-56-10.12v320c19.69 0 38.56-3.58 56-10.12Z"
                       style="fill: rgb(255, 206, 0);"
                 >
                 </path>
-                <path d="m314,492v108h56v-116.34c-17.72,5.42-36.53,8.34-56,8.34Z"
-                      style="fill: rgb(255, 206, 0);"
-                >
-                </path>
-                <path d="m370,449.88V150.12c-17.44-6.54-36.31-10.12-56-10.12v320c19.69,0,38.56-3.58,56-10.12Z"
-                      style="fill: rgb(255, 206, 0);"
-                >
-                </path>
-                <path d="m258,449.92c17.43,6.51,36.3,10.08,56,10.08V140c-19.7,0-38.57,3.57-56,10.08v299.83Z"
+                <path d="M258 449.92c17.43 6.51 36.3 10.08 56 10.08V140c-19.7 0-38.57 3.57-56 10.08v299.83ZM314 108V0h-56v116.31c17.72-5.39 36.52-8.31 56-8.31ZM258 483.69V600h56V492c-19.48 0-38.28-2.91-56-8.31Z"
                       style="fill: rgb(0, 114, 41);"
                 >
                 </path>
-                <path d="m314,108V0h-56v116.31c17.72-5.39,36.52-8.31,56-8.31Z"
-                      style="fill: rgb(0, 114, 41);"
-                >
-                </path>
-                <path d="m258,483.69v116.31h56v-108c-19.48,0-38.28-2.91-56-8.31Z"
-                      style="fill: rgb(0, 114, 41);"
-                >
-                </path>
-                <path d="m122,300c0-86.56,57.28-159.73,136-183.69V0H0v600h258v-116.31c-78.72-23.97-136-97.14-136-183.69Z"
+                <path d="M122 300c0-86.56 57.28-159.73 136-183.69V0H0v600h258V483.69C179.28 459.72 122 386.55 122 300Z"
                       style="fill: rgb(220, 36, 31);"
                 >
                 </path>
-                <path d="m154,300c0,68.66,43.26,127.22,104,149.92V150.08c-60.74,22.7-104,81.25-104,149.92Z"
+                <path d="M154 300c0 68.66 43.26 127.22 104 149.92V150.08c-60.74 22.7-104 81.25-104 149.92Z"
                       style="fill: rgb(220, 36, 31);"
                 >
                 </path>
-                <path d="m258,449.92c-60.74-22.7-104-81.25-104-149.92s43.26-127.22,104-149.92c17.43-6.51,36.3-10.08,56-10.08v-32c-19.48,0-38.28,2.91-56,8.31-78.72,23.97-136,97.14-136,183.69s57.28,159.73,136,183.69c17.72,5.39,36.52,8.31,56,8.31v-32c-19.7,0-38.57-3.57-56-10.08Z"
+                <path d="M258 449.92c-60.74-22.7-104-81.25-104-149.92s43.26-127.22 104-149.92c17.43-6.51 36.3-10.08 56-10.08v-32c-19.48 0-38.28 2.91-56 8.31-78.72 23.97-136 97.14-136 183.69s57.28 159.73 136 183.69c17.72 5.39 36.52 8.31 56 8.31v-32c-19.7 0-38.57-3.57-56-10.08Z"
                       style="fill: rgb(0, 53, 173);"
                 >
                 </path>
-                <path d="m314,140c19.69,0,38.56,3.58,56,10.12,60.69,22.75,104,81.35,104,149.88s-43.31,127.13-104,149.88c-17.44,6.54-36.31,10.12-56,10.12v32c19.47,0,38.28-2.92,56-8.34,78.64-24.02,136-97.27,136-183.66s-57.36-159.64-136-183.66c-17.72-5.42-36.53-8.34-56-8.34v32Z"
+                <path d="M314 140c19.69 0 38.56 3.58 56 10.12 60.69 22.75 104 81.35 104 149.88s-43.31 127.13-104 149.88c-17.44 6.54-36.31 10.12-56 10.12v32c19.47 0 38.28-2.92 56-8.34 78.64-24.02 136-97.27 136-183.66s-57.36-159.64-136-183.66c-17.72-5.42-36.53-8.34-56-8.34v32Z"
                       style="fill: rgb(220, 36, 31);"
                 >
                 </path>
               </svg>
             </span>
-            <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+            <span class="_buttonText_1qb8h_21">
               Sámegiella
             </span>
           </button>
@@ -1016,71 +588,38 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class=" TopBannerLangPicker_container__LVr42"
+  <div class=" _container_7cjjj_5"
        id="dummyIdForwardedFromRef"
   >
     <div class>
     </div>
-    <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+    <button class="_button_197zg_1  _menuButton_7cjjj_17"
             lang="nb"
             aria-expanded="false"
             type="button"
     >
-      <span class="TopBannerLangPicker_iconWrapper__SFn8s">
-        <span class="TopBannerLangPicker_flagIcon__LcfDc">
+      <span class="_iconWrapper_7cjjj_20">
+        <span class="_flagIcon_7cjjj_25">
           <svg xmlns="http://www.w3.org/2000/svg"
-               viewbox="0 0 1100 800"
-               focusable="false"
                aria-hidden="true"
-               class="TopBannerLangPicker_flagIconSvg__rO4YM"
+               viewbox="0 0 1100 800"
+               class="_flagIconSvg_7cjjj_30"
           >
-            <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
-                     style="fill: rgb(255, 255, 255);"
+            <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
+                  style="fill: rgb(255, 255, 255);"
             >
-            </polygon>
-            <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
-                     style="fill: rgb(255, 255, 255);"
-            >
-            </polygon>
-            <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
-                     style="fill: rgb(255, 255, 255);"
-            >
-            </polygon>
-            <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
-                     style="fill: rgb(255, 255, 255);"
-            >
-            </polygon>
-            <rect width="300"
-                  height="300"
+            </path>
+            <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
                   style="fill: rgb(239, 43, 45);"
             >
-            </rect>
-            <rect x="500"
-                  width="600"
-                  height="300"
-                  style="fill: rgb(239, 43, 45);"
+            </path>
+            <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
+                  style="fill: rgb(0, 40, 104);"
             >
-            </rect>
-            <rect y="500"
-                  width="300"
-                  height="300"
-                  style="fill: rgb(239, 43, 45);"
-            >
-            </rect>
-            <rect x="500"
-                  y="500"
-                  width="600"
-                  height="300"
-                  style="fill: rgb(239, 43, 45);"
-            >
-            </rect>
-            <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
-                     style="fill: rgb(0, 40, 104);"
-            >
-            </polygon>
+            </path>
           </svg>
         </span>
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1091,10 +630,10 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
         </svg>
       </span>
       Bokmål
-      <span class="TopBannerLangPicker_srOnly__33VA7">
+      <span class="_srOnly_7cjjj_121">
         Meny
       </span>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -1104,7 +643,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="TopBannerLangPicker_menuArrow__cXG+p">
+    <div class="_menuArrow_7cjjj_67">
     </div>
   </div>
 </div>
@@ -1112,69 +651,36 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
 
 exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`] = `
 <div data-test-block="true">
-  <div class=" TopBannerLangPicker_container__LVr42">
-    <div class="TopBannerLangPicker_overlay__y50Yx">
+  <div class=" _container_7cjjj_5">
+    <div class="_overlay_7cjjj_10">
     </div>
-    <button class="TopBannerButton_button__5RUa7  TopBannerLangPicker_menuButton__74qQI"
+    <button class="_button_197zg_1  _menuButton_7cjjj_17"
             lang="nb"
             aria-expanded="true"
             type="button"
     >
-      <span class="TopBannerLangPicker_iconWrapper__SFn8s">
-        <span class="TopBannerLangPicker_flagIcon__LcfDc">
+      <span class="_iconWrapper_7cjjj_20">
+        <span class="_flagIcon_7cjjj_25">
           <svg xmlns="http://www.w3.org/2000/svg"
-               viewbox="0 0 1100 800"
-               focusable="false"
                aria-hidden="true"
-               class="TopBannerLangPicker_flagIconSvg__rO4YM"
+               viewbox="0 0 1100 800"
+               class="_flagIconSvg_7cjjj_30"
           >
-            <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
-                     style="fill: rgb(255, 255, 255);"
+            <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
+                  style="fill: rgb(255, 255, 255);"
             >
-            </polygon>
-            <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
-                     style="fill: rgb(255, 255, 255);"
-            >
-            </polygon>
-            <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
-                     style="fill: rgb(255, 255, 255);"
-            >
-            </polygon>
-            <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
-                     style="fill: rgb(255, 255, 255);"
-            >
-            </polygon>
-            <rect width="300"
-                  height="300"
+            </path>
+            <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
                   style="fill: rgb(239, 43, 45);"
             >
-            </rect>
-            <rect x="500"
-                  width="600"
-                  height="300"
-                  style="fill: rgb(239, 43, 45);"
+            </path>
+            <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
+                  style="fill: rgb(0, 40, 104);"
             >
-            </rect>
-            <rect y="500"
-                  width="300"
-                  height="300"
-                  style="fill: rgb(239, 43, 45);"
-            >
-            </rect>
-            <rect x="500"
-                  y="500"
-                  width="600"
-                  height="300"
-                  style="fill: rgb(239, 43, 45);"
-            >
-            </rect>
-            <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
-                     style="fill: rgb(0, 40, 104);"
-            >
-            </polygon>
+            </path>
           </svg>
         </span>
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowMobile__6Gl2n"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -1185,10 +691,10 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
         </svg>
       </span>
       Bokmål
-      <span class="TopBannerLangPicker_srOnly__33VA7">
+      <span class="_srOnly_7cjjj_121">
         Meny
       </span>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TopBannerLangPicker_arrowDesktop__o2TzT"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -1198,72 +704,39 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
         </path>
       </svg>
     </button>
-    <div class="TopBannerLangPicker_menuArrow__cXG+p">
+    <div class="_menuArrow_7cjjj_67">
     </div>
-    <div class="TopBannerLangPicker_menu__GFqIr">
-      <ul class="TopBannerLangPicker_list__2dLA8">
-        <li class="TopBannerLangPicker_listItem__sGReR">
-          <button class="TopBannerLangPickerButton_buttonCurrent__y8Vxz TopBannerLangPickerButton_button__pl57- "
+    <div class="_menu_7cjjj_17">
+      <ul class="_list_7cjjj_101">
+        <li class="_listItem_7cjjj_114">
+          <button class="_buttonCurrent_1qb8h_25 _button_1qb8h_1 "
                   lang="nb"
                   aria-current="true"
           >
-            <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
+            <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
-                   viewbox="0 0 1100 800"
-                   focusable="false"
                    aria-hidden="true"
-                   class="TopBannerLangPicker_flagIconSvg__rO4YM"
+                   viewbox="0 0 1100 800"
+                   class="_flagIconSvg_7cjjj_30"
               >
-                <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
-                         style="fill: rgb(255, 255, 255);"
+                <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
+                      style="fill: rgb(255, 255, 255);"
                 >
-                </polygon>
-                <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
-                         style="fill: rgb(255, 255, 255);"
-                >
-                </polygon>
-                <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
-                         style="fill: rgb(255, 255, 255);"
-                >
-                </polygon>
-                <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
-                         style="fill: rgb(255, 255, 255);"
-                >
-                </polygon>
-                <rect width="300"
-                      height="300"
+                </path>
+                <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
                       style="fill: rgb(239, 43, 45);"
                 >
-                </rect>
-                <rect x="500"
-                      width="600"
-                      height="300"
-                      style="fill: rgb(239, 43, 45);"
+                </path>
+                <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
+                      style="fill: rgb(0, 40, 104);"
                 >
-                </rect>
-                <rect y="500"
-                      width="300"
-                      height="300"
-                      style="fill: rgb(239, 43, 45);"
-                >
-                </rect>
-                <rect x="500"
-                      y="500"
-                      width="600"
-                      height="300"
-                      style="fill: rgb(239, 43, 45);"
-                >
-                </rect>
-                <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
-                         style="fill: rgb(0, 40, 104);"
-                >
-                </polygon>
+                </path>
               </svg>
             </span>
-            <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+            <span class="_buttonText_1qb8h_21">
               Bokmål
             </span>
-            <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz "
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 "
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -1274,152 +747,70 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
             </svg>
           </button>
         </li>
-        <li class="TopBannerLangPicker_listItem__sGReR">
-          <button class=" TopBannerLangPickerButton_button__pl57- "
+        <li class="_listItem_7cjjj_114">
+          <button class=" _button_1qb8h_1 "
                   lang="nn"
                   aria-current="false"
           >
-            <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
+            <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
-                   viewbox="0 0 1100 800"
-                   focusable="false"
                    aria-hidden="true"
-                   class="TopBannerLangPicker_flagIconSvg__rO4YM"
+                   viewbox="0 0 1100 800"
+                   class="_flagIconSvg_7cjjj_30"
               >
-                <polygon points="500 0 450 0 450 350 1100 350 1100 300 500 300 500 0"
-                         style="fill: rgb(255, 255, 255);"
+                <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
+                      style="fill: rgb(255, 255, 255);"
                 >
-                </polygon>
-                <polygon points="450 450 450 800 500 800 500 500 1100 500 1100 450 450 450"
-                         style="fill: rgb(255, 255, 255);"
-                >
-                </polygon>
-                <polygon points="350 450 0 450 0 500 300 500 300 800 350 800 350 450"
-                         style="fill: rgb(255, 255, 255);"
-                >
-                </polygon>
-                <polygon points="350 350 350 0 300 0 300 300 0 300 0 350 350 350"
-                         style="fill: rgb(255, 255, 255);"
-                >
-                </polygon>
-                <rect width="300"
-                      height="300"
+                </path>
+                <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
                       style="fill: rgb(239, 43, 45);"
                 >
-                </rect>
-                <rect x="500"
-                      width="600"
-                      height="300"
-                      style="fill: rgb(239, 43, 45);"
+                </path>
+                <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
+                      style="fill: rgb(0, 40, 104);"
                 >
-                </rect>
-                <rect y="500"
-                      width="300"
-                      height="300"
-                      style="fill: rgb(239, 43, 45);"
-                >
-                </rect>
-                <rect x="500"
-                      y="500"
-                      width="600"
-                      height="300"
-                      style="fill: rgb(239, 43, 45);"
-                >
-                </rect>
-                <polygon points="450 350 450 0 350 0 350 350 0 350 0 450 350 450 350 800 450 800 450 450 1100 450 1100 350 450 350"
-                         style="fill: rgb(0, 40, 104);"
-                >
-                </polygon>
+                </path>
               </svg>
             </span>
-            <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+            <span class="_buttonText_1qb8h_21">
               Nynorsk
             </span>
           </button>
         </li>
-        <li class="TopBannerLangPicker_listItem__sGReR">
-          <button class=" TopBannerLangPickerButton_button__pl57- "
+        <li class="_listItem_7cjjj_114">
+          <button class=" _button_1qb8h_1 "
                   lang="en"
                   aria-current="false"
           >
-            <span class="TopBannerLangPickerButton_flagWrapper__liIgj">
+            <span class="_flagWrapper_1qb8h_15">
               <svg xmlns="http://www.w3.org/2000/svg"
-                   xmlns:xlink="http://www.w3.org/1999/xlink"
-                   x="0px"
-                   y="0px"
-                   viewbox="0 0 1000 600"
                    xml:space="preserve"
-                   focusable="false"
                    aria-hidden="true"
-                   class="TopBannerLangPicker_flagIconSvg__rO4YM"
+                   viewbox="0 0 1000 600"
+                   class="_flagIconSvg_7cjjj_30"
               >
-                <style type="text/css">
-                  .st0{fill:#FFFFFF;}
-	.st1{fill:#012169;}
-	.st2{fill:#C8102E;}
+                <style>
+                  .en-flag_svg__st1{fill:#012169}.en-flag_svg__st2{fill:#c8102e}
                 </style>
-                <rect class="st0"
-                      width="1000"
-                      height="600"
+                <path d="M0 0h1000v600H0z"
+                      style="fill: rgb(255, 255, 255);"
                 >
-                </rect>
-                <g>
-                  <polygon class="st1"
-                           points="165.8,200 0,200 0,117.1  "
-                  >
-                  </polygon>
-                  <polygon class="st1"
-                           points="165.8,400 0,482.9 0,400  "
-                  >
-                  </polygon>
-                  <polygon class="st1"
-                           points="600,600 965.8,600 600,417.1  "
-                  >
-                  </polygon>
-                  <polygon class="st1"
-                           points="34.2,600 400,600 400,417.1  "
-                  >
-                  </polygon>
-                  <polygon class="st1"
-                           points="400,0 34.2,0 400,182.9  "
-                  >
-                  </polygon>
-                  <polygon class="st1"
-                           points="1000,400 1000,482.9 834.2,400  "
-                  >
-                  </polygon>
-                  <polygon class="st1"
-                           points="965.8,0 600,0 600,182.9  "
-                  >
-                  </polygon>
-                  <polygon class="st1"
-                           points="1000,117.1 1000,200 834.2,200  "
-                  >
-                  </polygon>
-                  <polygon class="st2"
-                           points="1000,5.3 1000,50 700,200 610.6,200  "
-                  >
-                  </polygon>
-                  <polygon class="st2"
-                           points="389.4,200 210.6,200 0,94.7 0,5.3  "
-                  >
-                  </polygon>
-                  <polygon class="st2"
-                           points="389.4,400 0,594.7 0,505.3 210.6,400  "
-                  >
-                  </polygon>
-                  <polygon class="st2"
-                           points="1000,505.3 1000,594.7 610.6,400 789.4,400  "
-                  >
-                  </polygon>
-                  <polygon class="st2"
-                           points="1000,240 1000,360 560,360 560,600 440,600 440,360 0,360 0,240 440,240 440,0 560,0 560,240  "
-                  >
-                  </polygon>
-                </g>
+                </path>
+                <path d="M165.8 200H0v-82.9zM165.8 400 0 482.9V400zM600 600h365.8L600 417.1zM34.2 600H400V417.1zM400 0H34.2L400 182.9zM1000 400v82.9L834.2 400zM965.8 0H600v182.9zM1000 117.1V200H834.2z"
+                      class="en-flag_svg__st1"
+                >
+                </path>
+                <path d="M1000 5.3V50L700 200h-89.4zM389.4 200H210.6L0 94.7V5.3zM389.4 400 0 594.7v-89.4L210.6 400zM1000 505.3v89.4L610.6 400h178.8z"
+                      class="en-flag_svg__st2"
+                >
+                </path>
+                <path d="M1000 240v120H560v240H440V360H0V240h440V0h120v240z"
+                      class="en-flag_svg__st2"
+                >
+                </path>
               </svg>
             </span>
-            <span class="TopBannerLangPickerButton_buttonText__rrVmL">
+            <span class="_buttonText_1qb8h_21">
               English
             </span>
           </button>

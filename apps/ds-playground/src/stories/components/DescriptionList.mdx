@@ -1,0 +1,29 @@
+import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import * as DescriptionListSTories from './DescriptionList.stories';
+import { VersionBadge } from '../utils/VersionBadge';
+import { DocIntro } from '../utils/DocIntro';
+
+<Meta of={DescriptionListSTories} />
+
+# DescriptionList (beta)
+
+<VersionBadge packageName={'content'} />
+
+<DocIntro
+  name="DescriptionList"
+  url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/descriptionlist/"
+/>
+
+DescriptionList er i Beta. Det kan komme endringer.
+
+<Primary />
+
+```tsx
+import { DescriptionList } from '@skatteetaten/ds-content';
+```
+
+<Controls />
+
+## Examples
+
+<Canvas of={DescriptionListSTories.Examples} />

@@ -15,6 +15,7 @@ export const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(
       lang,
       'data-testid': dataTestId,
       variant = getParagraphVariantDefault(),
+      canBeManuallyFocused,
       hasSpacing,
       children,
     },
@@ -38,6 +39,7 @@ export const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(
         className={concatenatedClassName}
         lang={lang}
         data-testid={dataTestId}
+        tabIndex={canBeManuallyFocused ? -1 : undefined}
       >
         {children}
       </p>

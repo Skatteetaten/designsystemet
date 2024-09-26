@@ -1,0 +1,452 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/DescriptionList/DescriptionList Defaults play-test 1`] = `
+<div data-test-block="true">
+  <dl class="_descriptionList_s6bg4_5 _descriptionList_vertical_s6bg4_27">
+    <dt class="_term_ywtjl_1">
+      Saksbehandler
+    </dt>
+    <dd class="_description_ywtjl_6">
+      Kenneth Performance
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Status
+    </dt>
+    <dd class="_description_ywtjl_6">
+      Under behandling
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Sist endret
+    </dt>
+    <dd class="_description_ywtjl_6">
+      30.12.2013
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Frist
+    </dt>
+    <dd class="_description_ywtjl_6">
+      30.12.2013
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Farge
+    </dt>
+    <dd class="_description_ywtjl_6">
+      Smaragdgrønn
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Først endret
+    </dt>
+    <dd class="_description_ywtjl_6">
+      30.12.2010
+    </dd>
+  </dl>
+</div>
+`;
+
+exports[`Tester/DescriptionList/DescriptionList WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <dl id="htmlId"
+      class="_descriptionList_s6bg4_5 _descriptionList_vertical_s6bg4_27     dummyClassname"
+      lang="nb"
+      data-testid="123ID"
+  >
+    <dt class="_term_ywtjl_1">
+      Saksbehandler
+    </dt>
+    <dd class="_description_ywtjl_6">
+      Kenneth Performance
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Status
+    </dt>
+    <dd class="_description_ywtjl_6">
+      Under behandling
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Sist endret
+    </dt>
+    <dd class="_description_ywtjl_6">
+      30.12.2013
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Frist
+    </dt>
+    <dd class="_description_ywtjl_6">
+      30.12.2013
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Farge
+    </dt>
+    <dd class="_description_ywtjl_6">
+      Smaragdgrønn
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Først endret
+    </dt>
+    <dd class="_description_ywtjl_6">
+      30.12.2010
+    </dd>
+  </dl>
+</div>
+`;
+
+exports[`Tester/DescriptionList/DescriptionList WithIsVerticalOnMobile smoke-test 1`] = `
+<div data-test-block="true">
+  <dl class="_descriptionList_s6bg4_5 _descriptionList_vertical_s6bg4_27">
+    <dt class="_term_ywtjl_1">
+      Saksbehandler
+    </dt>
+    <dd class="_description_ywtjl_6">
+      Kenneth Performance
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Status
+    </dt>
+    <dd class="_description_ywtjl_6">
+      Under behandling
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Sist endret
+    </dt>
+    <dd class="_description_ywtjl_6">
+      30.12.2013
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Frist
+    </dt>
+    <dd class="_description_ywtjl_6">
+      30.12.2013
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Farge
+    </dt>
+    <dd class="_description_ywtjl_6">
+      Smaragdgrønn
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Først endret
+    </dt>
+    <dd class="_description_ywtjl_6">
+      30.12.2010
+    </dd>
+  </dl>
+</div>
+`;
+
+exports[`Tester/DescriptionList/DescriptionList WithRef play-test 1`] = `
+<div data-test-block="true">
+  <dl class="_descriptionList_s6bg4_5 _descriptionList_vertical_s6bg4_27"
+      data-testid="123ID"
+      id="dummyIdForwardedFromRef"
+  >
+    <dt class="_term_ywtjl_1">
+      Saksbehandler
+    </dt>
+    <dd class="_description_ywtjl_6">
+      Kenneth Performance
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Status
+    </dt>
+    <dd class="_description_ywtjl_6">
+      Under behandling
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Sist endret
+    </dt>
+    <dd class="_description_ywtjl_6">
+      30.12.2013
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Frist
+    </dt>
+    <dd class="_description_ywtjl_6">
+      30.12.2013
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Farge
+    </dt>
+    <dd class="_description_ywtjl_6">
+      Smaragdgrønn
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Først endret
+    </dt>
+    <dd class="_description_ywtjl_6">
+      30.12.2010
+    </dd>
+  </dl>
+</div>
+`;
+
+exports[`Tester/DescriptionList/DescriptionList WithSizeSmallAndBold smoke-test 1`] = `
+<div data-test-block="true">
+  <dl class="_descriptionList_s6bg4_5 _descriptionList_vertical_s6bg4_27  _descriptionList_small_s6bg4_37 _descriptionListTermRegular_s6bg4_19 _descriptionListDescriptionBold_s6bg4_16">
+    <dt class="_term_ywtjl_1">
+      Saksbehandler
+    </dt>
+    <dd class="_description_ywtjl_6">
+      Kenneth Performance
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Status
+    </dt>
+    <dd class="_description_ywtjl_6">
+      Under behandling
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Sist endret
+    </dt>
+    <dd class="_description_ywtjl_6">
+      30.12.2013
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Frist
+    </dt>
+    <dd class="_description_ywtjl_6">
+      30.12.2013
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Farge
+    </dt>
+    <dd class="_description_ywtjl_6">
+      Smaragdgrønn
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Først endret
+    </dt>
+    <dd class="_description_ywtjl_6">
+      30.12.2010
+    </dd>
+  </dl>
+</div>
+`;
+
+exports[`Tester/DescriptionList/DescriptionList WithSpacing smoke-test 1`] = `
+<div data-test-block="true">
+  <dl class="_descriptionList_s6bg4_5 _descriptionList_vertical_s6bg4_27 _spacing_s6bg4_1">
+    <dt class="_term_ywtjl_1">
+      Saksbehandler
+    </dt>
+    <dd class="_description_ywtjl_6">
+      Kenneth Performance
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Status
+    </dt>
+    <dd class="_description_ywtjl_6">
+      Under behandling
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Sist endret
+    </dt>
+    <dd class="_description_ywtjl_6">
+      30.12.2013
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Frist
+    </dt>
+    <dd class="_description_ywtjl_6">
+      30.12.2013
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Farge
+    </dt>
+    <dd class="_description_ywtjl_6">
+      Smaragdgrønn
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Først endret
+    </dt>
+    <dd class="_description_ywtjl_6">
+      30.12.2010
+    </dd>
+  </dl>
+</div>
+`;
+
+exports[`Tester/DescriptionList/DescriptionList WithVariantHorizontal smoke-test 1`] = `
+<div data-test-block="true">
+  <dl class="_descriptionList_s6bg4_5 _descriptionList_horizontal_s6bg4_22 _spacing_s6bg4_1">
+    <div class="_childWrapper_s6bg4_41">
+      <dt class="_term_ywtjl_1">
+        Saksbehandler
+      </dt>
+      <dd class="_description_ywtjl_6">
+        Kenneth Performance
+      </dd>
+    </div>
+    <div class="_childWrapper_s6bg4_41">
+      <dt class="_term_ywtjl_1">
+        Status
+      </dt>
+      <dd class="_description_ywtjl_6">
+        Under behandling
+      </dd>
+    </div>
+    <div class="_childWrapper_s6bg4_41">
+      <dt class="_term_ywtjl_1">
+        Sist endret
+      </dt>
+      <dd class="_description_ywtjl_6">
+        30.12.2013
+      </dd>
+    </div>
+    <div class="_childWrapper_s6bg4_41">
+      <dt class="_term_ywtjl_1">
+        Frist
+      </dt>
+      <dd class="_description_ywtjl_6">
+        30.12.2013
+      </dd>
+    </div>
+    <div class="_childWrapper_s6bg4_41">
+      <dt class="_term_ywtjl_1">
+        Farge
+      </dt>
+      <dd class="_description_ywtjl_6">
+        Smaragdgrønn
+      </dd>
+    </div>
+    <div class="_childWrapper_s6bg4_41">
+      <dt class="_term_ywtjl_1">
+        Først endret
+      </dt>
+      <dd class="_description_ywtjl_6">
+        30.12.2010
+      </dd>
+    </div>
+  </dl>
+  <dl class="_descriptionList_s6bg4_5 _descriptionList_horizontal_s6bg4_22">
+    <div>
+      <dt class="_term_ywtjl_1">
+        Saksbehandler
+      </dt>
+      <dd class="_description_ywtjl_6">
+        Kenneth Performance
+      </dd>
+    </div>
+    <div>
+      <dt class="_term_ywtjl_1">
+        Status
+      </dt>
+      <dd class="_description_ywtjl_6">
+        Under behandling
+      </dd>
+    </div>
+    <div>
+      <dt class="_term_ywtjl_1">
+        Sist endret
+      </dt>
+      <dd class="_description_ywtjl_6">
+        30.12.2013
+      </dd>
+    </div>
+    <div>
+      <dt class="_term_ywtjl_1">
+        Frist
+      </dt>
+      <dd class="_description_ywtjl_6">
+        30.12.2013
+      </dd>
+    </div>
+    <div>
+      <dt class="_term_ywtjl_1">
+        Farge
+      </dt>
+      <dd class="_description_ywtjl_6">
+        Smaragdgrønn
+      </dd>
+    </div>
+    <div>
+      <dt class="_term_ywtjl_1">
+        Først endret
+      </dt>
+      <dd class="_description_ywtjl_6">
+        30.12.2010
+      </dd>
+    </div>
+  </dl>
+</div>
+`;
+
+exports[`Tester/DescriptionList/DescriptionList WithVariantVertial smoke-test 1`] = `
+<div data-test-block="true">
+  <dl class="_descriptionList_s6bg4_5 _descriptionList_vertical_s6bg4_27 _spacing_s6bg4_1">
+    <dt class="_term_ywtjl_1">
+      Saksbehandler
+    </dt>
+    <dd class="_description_ywtjl_6">
+      Kenneth Performance
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Status
+    </dt>
+    <dd class="_description_ywtjl_6">
+      Under behandling
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Sist endret
+    </dt>
+    <dd class="_description_ywtjl_6">
+      30.12.2013
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Frist
+    </dt>
+    <dd class="_description_ywtjl_6">
+      30.12.2013
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Farge
+    </dt>
+    <dd class="_description_ywtjl_6">
+      Smaragdgrønn
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Først endret
+    </dt>
+    <dd class="_description_ywtjl_6">
+      30.12.2010
+    </dd>
+  </dl>
+  <dl class="_descriptionList_s6bg4_5 _descriptionList_verticalVertical_s6bg4_32">
+    <dt class="_term_ywtjl_1">
+      Saksbehandler
+    </dt>
+    <dd class="_description_ywtjl_6">
+      Kenneth Performance
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Status
+    </dt>
+    <dd class="_description_ywtjl_6">
+      Under behandling
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Sist endret
+    </dt>
+    <dd class="_description_ywtjl_6">
+      30.12.2013
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Frist
+    </dt>
+    <dd class="_description_ywtjl_6">
+      30.12.2013
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Farge
+    </dt>
+    <dd class="_description_ywtjl_6">
+      Smaragdgrønn
+    </dd>
+    <dt class="_term_ywtjl_1">
+      Først endret
+    </dt>
+    <dd class="_description_ywtjl_6">
+      30.12.2010
+    </dd>
+  </dl>
+</div>
+`;

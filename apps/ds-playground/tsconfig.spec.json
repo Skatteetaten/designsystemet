@@ -3,7 +3,7 @@
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
     "module": "commonjs",
-    "types": ["jest", "node", "@testing-library/jest-dom"]
+    "types": ["jest", "node", "@testing-library/jest-dom", "vite/client"]
   },
   "include": [
     "jest.config.ts",
@@ -15,6 +15,7 @@
   "files": [
     "../../node_modules/@nx/react/typings/cssmodule.d.ts",
     "../../node_modules/@nx/react/typings/image.d.ts",
-    "../../types/i18next.d.ts"
+    "../../types/i18next.d.ts",
+    "../../types/vite-env.d.ts"
   ]
 }

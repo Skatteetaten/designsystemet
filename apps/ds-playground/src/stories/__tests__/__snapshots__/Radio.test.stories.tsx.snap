@@ -2,28 +2,29 @@
 
 exports[`Tester/RadioGroup/Radio Defaults play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
+  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
     <legend id="legendId-:ra:"
-            class="Fieldset_srOnly__7qh39"
+            class="_srOnly_s6jvz_39"
     >
       radio example
     </legend>
-    <div class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+    <div class="_legend_s6jvz_15  _srOnly_s6jvz_39"
          aria-hidden="true"
     >
       radio example
     </div>
-    <div class="Fieldset_contentContainer__fJcfT Fieldset_contentContainerNoMarginTop__YkL1P">
-      <div class="RadioGroup_radioGroupItemContainer__AINZK">
-        <div class="Radio_radio__Fh+3R">
+    <div class="_contentContainer_s6jvz_32 _contentContainerNoMarginTop_s6jvz_35">
+      <div class="_radioGroupItemContainer_1f9v8_5">
+        <div class="_radio_1ybg2_1">
           <input id="radioInputId-:rb:"
-                 class="Radio_radioInput__gTlv0"
+                 class="_radioInput_1ybg2_5"
                  type="radio"
                  name="radioInputName-:r9:"
                  value
           >
-          <label class="Radio_radioLabel__lJQhF"
+          <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rb:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -41,29 +42,30 @@ exports[`Tester/RadioGroup/Radio Defaults play-test 1`] = `
 
 exports[`Tester/RadioGroup/Radio WithAriaDescribedby play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
+  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
     <legend id="legendId-:ru:"
-            class="Fieldset_srOnly__7qh39"
+            class="_srOnly_s6jvz_39"
     >
       radio example
     </legend>
-    <div class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+    <div class="_legend_s6jvz_15  _srOnly_s6jvz_39"
          aria-hidden="true"
     >
       radio example
     </div>
-    <div class="Fieldset_contentContainer__fJcfT Fieldset_contentContainerNoMarginTop__YkL1P">
-      <div class="RadioGroup_radioGroupItemContainer__AINZK">
-        <div class="Radio_radio__Fh+3R">
+    <div class="_contentContainer_s6jvz_32 _contentContainerNoMarginTop_s6jvz_35">
+      <div class="_radioGroupItemContainer_1f9v8_5">
+        <div class="_radio_1ybg2_1">
           <input id="radioInputId-:rv:"
-                 class="Radio_radioInput__gTlv0"
+                 class="_radioInput_1ybg2_5"
                  type="radio"
                  name="radioInputName-:rt:"
                  aria-describedby="htmlId"
                  value
           >
-          <label class="Radio_radioLabel__lJQhF"
+          <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rv:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -81,32 +83,33 @@ exports[`Tester/RadioGroup/Radio WithAriaDescribedby play-test 1`] = `
 
 exports[`Tester/RadioGroup/Radio WithAttributes play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
+  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
     <legend id="legendId-:r6:"
-            class="Fieldset_srOnly__7qh39"
+            class="_srOnly_s6jvz_39"
     >
       radio example
     </legend>
-    <div class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+    <div class="_legend_s6jvz_15  _srOnly_s6jvz_39"
          aria-hidden="true"
     >
       radio example
     </div>
-    <div class="Fieldset_contentContainer__fJcfT Fieldset_contentContainerNoMarginTop__YkL1P">
-      <div class="RadioGroup_radioGroupItemContainer__AINZK">
-        <div class="Radio_radio__Fh+3R dummyClassname"
+    <div class="_contentContainer_s6jvz_32 _contentContainerNoMarginTop_s6jvz_35">
+      <div class="_radioGroupItemContainer_1f9v8_5">
+        <div class="_radio_1ybg2_1 dummyClassname"
              lang="nb"
         >
           <input id="htmlId"
-                 class="Radio_radioInput__gTlv0"
+                 class="_radioInput_1ybg2_5"
                  data-testid="123ID"
                  form="formid123"
                  type="radio"
                  name="radioInputName-:r5:"
                  value
           >
-          <label class="Radio_radioLabel__lJQhF"
+          <label class="_radioLabel_1ybg2_87"
                  for="htmlId"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -124,31 +127,32 @@ exports[`Tester/RadioGroup/Radio WithAttributes play-test 1`] = `
 
 exports[`Tester/RadioGroup/Radio WithDescription play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
+  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
     <legend id="legendId-:re:"
-            class="Fieldset_srOnly__7qh39"
+            class="_srOnly_s6jvz_39"
     >
       radio example
     </legend>
-    <div class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+    <div class="_legend_s6jvz_15  _srOnly_s6jvz_39"
          aria-hidden="true"
     >
       radio example
     </div>
-    <div class="Fieldset_contentContainer__fJcfT Fieldset_contentContainerNoMarginTop__YkL1P">
-      <div class="RadioGroup_radioGroupItemContainer__AINZK">
-        <div class="Radio_radio__Fh+3R">
+    <div class="_contentContainer_s6jvz_32 _contentContainerNoMarginTop_s6jvz_35">
+      <div class="_radioGroupItemContainer_1f9v8_5">
+        <div class="_radio_1ybg2_1">
           <input id="radioInputId-:rf:"
-                 class="Radio_radioInput__gTlv0"
+                 class="_radioInput_1ybg2_5"
                  type="radio"
                  name="radioInputName-:rd:"
                  value
           >
-          <label class="Radio_radioLabel__lJQhF"
+          <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rf:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
-            <span class="Radio_radioLabelDescription__29Ec0">
+            <span class="_radioLabelDescription_1ybg2_100">
               En liten beskrivelse tekst
             </span>
           </label>
@@ -166,31 +170,32 @@ exports[`Tester/RadioGroup/Radio WithDescription play-test 1`] = `
 
 exports[`Tester/RadioGroup/Radio WithLongText smoke-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
+  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
     <legend id="legendId-:ri:"
-            class="Fieldset_srOnly__7qh39"
+            class="_srOnly_s6jvz_39"
     >
       radio example
     </legend>
-    <div class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+    <div class="_legend_s6jvz_15  _srOnly_s6jvz_39"
          aria-hidden="true"
     >
       radio example
     </div>
-    <div class="Fieldset_contentContainer__fJcfT Fieldset_contentContainerNoMarginTop__YkL1P">
-      <div class="RadioGroup_radioGroupItemContainer__AINZK">
-        <div class="Radio_radio__Fh+3R">
+    <div class="_contentContainer_s6jvz_32 _contentContainerNoMarginTop_s6jvz_35">
+      <div class="_radioGroupItemContainer_1f9v8_5">
+        <div class="_radio_1ybg2_1">
           <input id="radioInputId-:rj:"
-                 class="Radio_radioInput__gTlv0"
+                 class="_radioInput_1ybg2_5"
                  type="radio"
                  name="radioInputName-:rh:"
                  value
           >
-          <label class="Radio_radioLabel__lJQhF"
+          <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rj:"
+                 tabindex="-1"
           >
             Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
-            <span class="Radio_radioLabelDescription__29Ec0">
+            <span class="_radioLabelDescription_1ybg2_100">
               Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
             </span>
           </label>
@@ -208,31 +213,32 @@ exports[`Tester/RadioGroup/Radio WithLongText smoke-test 1`] = `
 
 exports[`Tester/RadioGroup/Radio WithLongTextAndBreaking smoke-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
+  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
     <legend id="legendId-:rm:"
-            class="Fieldset_srOnly__7qh39"
+            class="_srOnly_s6jvz_39"
     >
       radio example
     </legend>
-    <div class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+    <div class="_legend_s6jvz_15  _srOnly_s6jvz_39"
          aria-hidden="true"
     >
       radio example
     </div>
-    <div class="Fieldset_contentContainer__fJcfT Fieldset_contentContainerNoMarginTop__YkL1P">
-      <div class="RadioGroup_radioGroupItemContainer__AINZK">
-        <div class="Radio_radio__Fh+3R">
+    <div class="_contentContainer_s6jvz_32 _contentContainerNoMarginTop_s6jvz_35">
+      <div class="_radioGroupItemContainer_1f9v8_5">
+        <div class="_radio_1ybg2_1">
           <input id="radioInputId-:rn:"
-                 class="Radio_radioInput__gTlv0"
+                 class="_radioInput_1ybg2_5"
                  type="radio"
                  name="radioInputName-:rl:"
                  value
           >
-          <label class="Radio_radioLabel__lJQhF"
+          <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rn:"
+                 tabindex="-1"
           >
             Loremipsumdolorsitamet.Allesomharlagetennettside,trengtlittfylltekstellerbaresurfetrundtpånettetharantageligvissettdisseordene,etterfulgtaventilsynelatendeeviglangtekstfyltmedlatinskeliksomsetninger.
-            <span class="Radio_radioLabelDescription__29Ec0">
+            <span class="_radioLabelDescription_1ybg2_100">
               Loremipsumdolorsitamet.Allesomharlagetennettside,trengtlittfylltekstellerbaresurfetrundtpånettetharantageligvissettdisseordene,etterfulgtaventilsynelatendeeviglangtekstfyltmedlatinskeliksomsetninger.
             </span>
           </label>
@@ -250,28 +256,29 @@ exports[`Tester/RadioGroup/Radio WithLongTextAndBreaking smoke-test 1`] = `
 
 exports[`Tester/RadioGroup/Radio WithRef play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
+  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
     <legend id="legendId-:r2:"
-            class="Fieldset_srOnly__7qh39"
+            class="_srOnly_s6jvz_39"
     >
       radio example
     </legend>
-    <div class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+    <div class="_legend_s6jvz_15  _srOnly_s6jvz_39"
          aria-hidden="true"
     >
       radio example
     </div>
-    <div class="Fieldset_contentContainer__fJcfT Fieldset_contentContainerNoMarginTop__YkL1P">
-      <div class="RadioGroup_radioGroupItemContainer__AINZK">
-        <div class="Radio_radio__Fh+3R">
+    <div class="_contentContainer_s6jvz_32 _contentContainerNoMarginTop_s6jvz_35">
+      <div class="_radioGroupItemContainer_1f9v8_5">
+        <div class="_radio_1ybg2_1">
           <input id="radioInputId-:r3:"
-                 class="Radio_radioInput__gTlv0"
+                 class="_radioInput_1ybg2_5"
                  type="radio"
                  name="dummyIdForwardedFromRef"
                  value
           >
-          <label class="Radio_radioLabel__lJQhF"
+          <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:r3:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>
@@ -289,28 +296,29 @@ exports[`Tester/RadioGroup/Radio WithRef play-test 1`] = `
 
 exports[`Tester/RadioGroup/Radio WithValue play-test 1`] = `
 <div data-test-block="true">
-  <fieldset class="Fieldset_fieldset__gwnkr Fieldset_fieldset_hasSpacing__966Le">
+  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
     <legend id="legendId-:rq:"
-            class="Fieldset_srOnly__7qh39"
+            class="_srOnly_s6jvz_39"
     >
       radio example
     </legend>
-    <div class="Fieldset_legend__8odl-  Fieldset_srOnly__7qh39"
+    <div class="_legend_s6jvz_15  _srOnly_s6jvz_39"
          aria-hidden="true"
     >
       radio example
     </div>
-    <div class="Fieldset_contentContainer__fJcfT Fieldset_contentContainerNoMarginTop__YkL1P">
-      <div class="RadioGroup_radioGroupItemContainer__AINZK">
-        <div class="Radio_radio__Fh+3R">
+    <div class="_contentContainer_s6jvz_32 _contentContainerNoMarginTop_s6jvz_35">
+      <div class="_radioGroupItemContainer_1f9v8_5">
+        <div class="_radio_1ybg2_1">
           <input id="radioInputId-:rr:"
-                 class="Radio_radioInput__gTlv0"
+                 class="_radioInput_1ybg2_5"
                  type="radio"
                  name="radioInputName-:rp:"
                  value="person"
           >
-          <label class="Radio_radioLabel__lJQhF"
+          <label class="_radioLabel_1ybg2_87"
                  for="radioInputId-:rr:"
+                 tabindex="-1"
           >
             Enkeltpersonsforetak
           </label>

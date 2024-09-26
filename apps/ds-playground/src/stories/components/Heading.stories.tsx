@@ -17,6 +17,7 @@ const meta = {
         category: category.props,
       },
     },
+    canBeManuallyFocused: { table: { category: category.props } },
     children: {
       control: 'text',
       table: { category: category.props },

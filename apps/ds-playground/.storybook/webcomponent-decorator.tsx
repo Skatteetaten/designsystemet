@@ -58,16 +58,18 @@ export const webComponent: Decorator = function (Story, context) {
 
       shadowRoot.appendChild(this.mountPoint);
 
-      if (process.env['NODE_ENV'] === 'development') {
+      if (import.meta.env.MODE === 'development') {
         for (const tag of document.head.querySelectorAll('style')) {
           const clone = tag.cloneNode(true);
           shadowRoot.appendChild(clone);
         }
       } else {
-        const cssLink = document.createElement('link');
-        cssLink.href = 'main.css';
-        cssLink.rel = 'stylesheet';
-        shadowRoot.appendChild(cssLink);
+        for (const tag of document.head.querySelectorAll('link')) {
+          if (tag.rel === 'stylesheet') {
+            const clone = tag.cloneNode(true);
+            shadowRoot.appendChild(clone);
+          }
+        }
       }
 
       this.root = createRoot(this.mountPoint);

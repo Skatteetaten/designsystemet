@@ -1,11 +1,13 @@
-/* automatisk genererte types */
-export const heading: string;
-export const heading_level1: string;
-export const heading_level2: string;
-export const heading_level3: string;
-export const heading_level4: string;
-export const heading_level5: string;
-export const heading_hasSpacingExtraSmall: string;
-export const heading_hasSpacingSmall: string;
-export const heading_hasSpacingMedium: string;
-export const heading_hasSpacingSmallMobileMediumOtherwise: string;
+declare const classNames: {
+  readonly heading: 'heading';
+  readonly heading_level1: 'heading_level1';
+  readonly heading_level2: 'heading_level2';
+  readonly heading_level3: 'heading_level3';
+  readonly heading_hasSpacingSmallMobileMediumOtherwise: 'heading_hasSpacingSmallMobileMediumOtherwise';
+  readonly heading_level4: 'heading_level4';
+  readonly heading_level5: 'heading_level5';
+  readonly heading_hasSpacingExtraSmall: 'heading_hasSpacingExtraSmall';
+  readonly heading_hasSpacingSmall: 'heading_hasSpacingSmall';
+  readonly heading_hasSpacingMedium: 'heading_hasSpacingMedium';
+};
+export default classNames;

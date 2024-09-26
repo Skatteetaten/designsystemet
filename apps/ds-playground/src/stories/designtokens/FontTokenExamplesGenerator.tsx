@@ -1,7 +1,11 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import { Fragment, JSX } from 'react';
 
-const fontJson = require('@skatteetaten/ds-core-designtokens/designtokens/font.json');
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-ignore
+import fontJson from '@skatteetaten/ds-core-designtokens/designtokens/font.json';
+/* eslint-enable @typescript-eslint/ban-ts-comment */
 
 interface FontTokenExamplesGeneratorProps {
   propertyType: 'font-size' | 'font-weight' | 'line-height';
@@ -16,7 +20,7 @@ export const FontTokenExamplesGenerator = ({
 
   const tokens = Object.keys(fontTokens).filter((key) =>
     key.includes(propertyType)
-  );
+  ) as Array<keyof typeof fontTokens>;
 
   const isFontSize = propertyType === 'font-size';
   const isFontWeight = propertyType === 'font-weight';

@@ -17,8 +17,10 @@ function createIndexFile(iconSubPath) {
     files.forEach(function (file) {
       if (file.indexOf('.tsx') > -1) {
         const filename = file.replace('.tsx', '');
-        const exportStatement = `export * from './${filename}';${endOfLine}`;
-        writeStream.write(exportStatement);
+        if (filename !== 'index') {
+          const exportStatement = `export * from './${filename}';${endOfLine}`;
+          writeStream.write(exportStatement);
+        }
       }
     });
     writeStream.end();

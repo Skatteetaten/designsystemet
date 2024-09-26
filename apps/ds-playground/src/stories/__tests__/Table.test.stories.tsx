@@ -27,6 +27,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    canBeManuallyFocused: { table: { disable: true } },
     caption: { table: { disable: true } },
     variant: {
       table: { disable: true },
@@ -486,5 +487,23 @@ export const WithFullWidthExpandableEdit = {
   args: {
     ...defaultArgs,
     hasFullWidth: true,
+  },
+} satisfies Story;
+
+export const WithCanBeManuallyFocused: Story = {
+  render: Template,
+  args: {
+    ...defaultArgs,
+    canBeManuallyFocused: true,
+  },
+  argTypes: {
+    canBeManuallyFocused: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const table = canvas.getByRole('table');
+    table.focus();
+    await expect(table).toBeInTheDocument();
+    await expect(table).toHaveAttribute('tabIndex', '-1');
   },
 } satisfies Story;

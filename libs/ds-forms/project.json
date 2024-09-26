@@ -16,7 +16,7 @@
         "entryFile": "libs/ds-forms/src/index.ts",
         "external": ["react/jsx-runtime"],
         "rollupConfig": ["libs/ds-forms/rollup.config.js"],
-        "compiler": "babel",
+        "compiler": "swc",
         "assets": [
           {
             "glob": "libs/ds-forms/README.md",

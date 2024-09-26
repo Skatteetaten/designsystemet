@@ -12,6 +12,7 @@ const meta = {
   title: 'Komponenter/Blockquote',
   argTypes: {
     // Props
+    canBeManuallyFocused: { table: { category: category.props } },
     children: {
       control: 'text',
       table: { category: category.props },

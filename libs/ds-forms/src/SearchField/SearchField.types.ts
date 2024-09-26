@@ -19,6 +19,7 @@ export type SearchSize = (typeof searchArrSize)[number];
 type RequiredDatePickerHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'input'>,
   | 'accessKey'
+  | 'autoComplete'
   | 'defaultValue'
   | 'disabled'
   | 'form'

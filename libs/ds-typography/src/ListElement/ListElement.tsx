@@ -31,4 +31,4 @@ export const ListElement = forwardRef<HTMLLIElement, ListElementProps>(
   }
 );
 
-ListElement.displayName = 'List.Element';
+ListElement.displayName = 'ListElement';

@@ -13,6 +13,7 @@ import { useTranslation } from 'react-i18next';
 
 import {
   dsI18n,
+  getCommonAutoCompleteDefault,
   getCommonClassNameDefault,
   getCommonFormVariantDefault,
   useValidateFormRequiredProps,
@@ -49,7 +50,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       titleHelpSvg,
       value,
       variant = getCommonFormVariantDefault(),
-      autoComplete,
+      autoComplete = getCommonAutoCompleteDefault(),
       disabled,
       name,
       placeholder,

@@ -1,1 +1,1 @@
-export const valueRegex = /^[\w:.-_]*$/;
+export const valueRegex = /^[A-Za-z][\w\-.:]*$/;

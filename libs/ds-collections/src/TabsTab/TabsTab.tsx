@@ -73,7 +73,7 @@ export const TabsTab = forwardRef<HTMLButtonElement, TabsTabProps>(
         data-testid={dataTestId}
         role={'tab'}
         tabIndex={activeTab !== value ? -1 : 0}
-        aria-selected={activeTab === value ?? false}
+        aria-selected={activeTab === value}
         aria-controls={`ds-tab-panel-${baseId}-${value}`}
         onClick={(): void => {
           setInternalActiveTab(value);
@@ -91,4 +91,4 @@ export const TabsTab = forwardRef<HTMLButtonElement, TabsTabProps>(
   }
 );
 
-TabsTab.displayName = 'Tabs.Tab';
+TabsTab.displayName = 'TabsTab';

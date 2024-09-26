@@ -2,14 +2,14 @@
 
 exports[`Tester/NavigationTile Defaults play-test 1`] = `
 <div data-test-block="true">
-  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+  <a class="_navigationTile_ylhfc_50 _navigationTile_large_ylhfc_89  undefined"
      href="#storybook-root"
   >
-    <div class="NavigationTile_header__xVyS1">
-      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+    <div class="_header_ylhfc_12">
+      <h2 class="_title_ylhfc_17 _title_large_ylhfc_27 undefined">
         Skatt
       </h2>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ylhfc_1 _icon_large_ylhfc_5"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -25,15 +25,15 @@ exports[`Tester/NavigationTile Defaults play-test 1`] = `
 
 exports[`Tester/NavigationTile WithAriaDescribedby play-test 1`] = `
 <div data-test-block="true">
-  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+  <a class="_navigationTile_ylhfc_50 _navigationTile_large_ylhfc_89  undefined"
      href="#storybook-root"
      aria-describedby="htmlId"
   >
-    <div class="NavigationTile_header__xVyS1">
-      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+    <div class="_header_ylhfc_12">
+      <h2 class="_title_ylhfc_17 _title_large_ylhfc_27 undefined">
         Skatt
       </h2>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ylhfc_1 _icon_large_ylhfc_5"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -50,16 +50,16 @@ exports[`Tester/NavigationTile WithAriaDescribedby play-test 1`] = `
 exports[`Tester/NavigationTile WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <a id="htmlId"
-     class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j dummyClassname undefined"
+     class="_navigationTile_ylhfc_50 _navigationTile_large_ylhfc_89 dummyClassname undefined"
      lang="nb"
      data-testid="123ID"
      href="#storybook-root"
   >
-    <div class="NavigationTile_header__xVyS1">
-      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+    <div class="_header_ylhfc_12">
+      <h2 class="_title_ylhfc_17 _title_large_ylhfc_27 undefined">
         Skatt
       </h2>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ylhfc_1 _icon_large_ylhfc_5"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -75,14 +75,14 @@ exports[`Tester/NavigationTile WithAttributes play-test 1`] = `
 
 exports[`Tester/NavigationTile WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
-  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  dummyClassname"
+  <a class="_navigationTile_ylhfc_50 _navigationTile_large_ylhfc_89  dummyClassname"
      href="#storybook-root"
   >
-    <div class="NavigationTile_header__xVyS1">
-      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh dummyClassname">
+    <div class="_header_ylhfc_12">
+      <h2 class="_title_ylhfc_17 _title_large_ylhfc_27 dummyClassname">
         Skatt
       </h2>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ylhfc_1 _icon_large_ylhfc_5"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -92,7 +92,7 @@ exports[`Tester/NavigationTile WithCustomClassNames play-test 1`] = `
         </path>
       </svg>
     </div>
-    <div class="NavigationTile_description__6bVcu false  dummyClassname">
+    <div class="_description_ylhfc_34 false  dummyClassname">
       Skattekort, frikort, forskuddsskatt, skattemelding (selvangivelse), skatteoppgjør, skattelister. Tema og fradrag som hjelper deg til å få riktig skatt.
     </div>
   </a>
@@ -101,14 +101,14 @@ exports[`Tester/NavigationTile WithCustomClassNames play-test 1`] = `
 
 exports[`Tester/NavigationTile WithDescription smoke-test 1`] = `
 <div data-test-block="true">
-  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+  <a class="_navigationTile_ylhfc_50 _navigationTile_large_ylhfc_89  undefined"
      href="#storybook-root"
   >
-    <div class="NavigationTile_header__xVyS1">
-      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+    <div class="_header_ylhfc_12">
+      <h2 class="_title_ylhfc_17 _title_large_ylhfc_27 undefined">
         Skatt
       </h2>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ylhfc_1 _icon_large_ylhfc_5"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -118,7 +118,7 @@ exports[`Tester/NavigationTile WithDescription smoke-test 1`] = `
         </path>
       </svg>
     </div>
-    <div class="NavigationTile_description__6bVcu false  undefined">
+    <div class="_description_ylhfc_34 false  undefined">
       Skattekort, frikort, forskuddsskatt, skattemelding (selvangivelse), skatteoppgjør, skattelister. Tema og fradrag som hjelper deg til å få riktig skatt.
     </div>
   </a>
@@ -127,14 +127,14 @@ exports[`Tester/NavigationTile WithDescription smoke-test 1`] = `
 
 exports[`Tester/NavigationTile WithExternalIcon play-test 1`] = `
 <div data-test-block="true">
-  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+  <a class="_navigationTile_ylhfc_50 _navigationTile_large_ylhfc_89  undefined"
      href="#storybook-root"
   >
-    <div class="NavigationTile_header__xVyS1">
-      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+    <div class="_header_ylhfc_12">
+      <h2 class="_title_ylhfc_17 _title_large_ylhfc_27 undefined">
         Skatt
       </h2>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ylhfc_1 _icon_large_ylhfc_5"
            viewbox="0 0 24 24"
            focusable="false"
            aria-label="Til et annet nettsted"
@@ -151,11 +151,11 @@ exports[`Tester/NavigationTile WithExternalIcon play-test 1`] = `
 
 exports[`Tester/NavigationTile WithHiddenArrowIcon smoke-test 1`] = `
 <div data-test-block="true">
-  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+  <a class="_navigationTile_ylhfc_50 _navigationTile_large_ylhfc_89  undefined"
      href="#storybook-root"
   >
-    <div class="NavigationTile_header__xVyS1">
-      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+    <div class="_header_ylhfc_12">
+      <h2 class="_title_ylhfc_17 _title_large_ylhfc_27 undefined">
         Skatt
       </h2>
     </div>
@@ -165,11 +165,11 @@ exports[`Tester/NavigationTile WithHiddenArrowIcon smoke-test 1`] = `
 
 exports[`Tester/NavigationTile WithIcon play-test 1`] = `
 <div data-test-block="true">
-  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+  <a class="_navigationTile_ylhfc_50 _navigationTile_large_ylhfc_89  undefined"
      href="#storybook-root"
   >
-    <div class="NavigationTile_header__xVyS1">
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+    <div class="_header_ylhfc_12">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ylhfc_1 _icon_large_ylhfc_5"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -178,10 +178,10 @@ exports[`Tester/NavigationTile WithIcon play-test 1`] = `
         <path d="M19 19H5V8h14v11ZM16 1v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2Zm1 11h-5v5h5v-5Z">
         </path>
       </svg>
-      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+      <h2 class="_title_ylhfc_17 _title_large_ylhfc_27 undefined">
         Skatt
       </h2>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ylhfc_1 _icon_large_ylhfc_5"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -197,14 +197,14 @@ exports[`Tester/NavigationTile WithIcon play-test 1`] = `
 
 exports[`Tester/NavigationTile WithOnClick play-test 1`] = `
 <div data-test-block="true">
-  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+  <a class="_navigationTile_ylhfc_50 _navigationTile_large_ylhfc_89  undefined"
      href="#storybook-root"
   >
-    <div class="NavigationTile_header__xVyS1">
-      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+    <div class="_header_ylhfc_12">
+      <h2 class="_title_ylhfc_17 _title_large_ylhfc_27 undefined">
         Ny tittel
       </h2>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ylhfc_1 _icon_large_ylhfc_5"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -220,15 +220,15 @@ exports[`Tester/NavigationTile WithOnClick play-test 1`] = `
 
 exports[`Tester/NavigationTile WithRef play-test 1`] = `
 <div data-test-block="true">
-  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+  <a class="_navigationTile_ylhfc_50 _navigationTile_large_ylhfc_89  undefined"
      href="#storybook-root"
      id="dummyIdForwardedFromRef"
   >
-    <div class="NavigationTile_header__xVyS1">
-      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+    <div class="_header_ylhfc_12">
+      <h2 class="_title_ylhfc_17 _title_large_ylhfc_27 undefined">
         Skatt
       </h2>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ylhfc_1 _icon_large_ylhfc_5"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -244,11 +244,11 @@ exports[`Tester/NavigationTile WithRef play-test 1`] = `
 
 exports[`Tester/NavigationTile WithSizeExtraLarge smoke-test 1`] = `
 <div data-test-block="true">
-  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_extraLarge__sU6OC  undefined"
+  <a class="_navigationTile_ylhfc_50 _navigationTile_extraLarge_ylhfc_81  undefined"
      href="#storybook-root"
   >
-    <div class="NavigationTile_header__xVyS1">
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_extraLarge__CUqij NavigationTile_icon__MA-yg NavigationTile_icon_extraLarge__7Wuo5"
+    <div class="_header_ylhfc_12">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_extraLarge_6zbcy_17 _icon_ylhfc_1 _icon_extraLarge_ylhfc_8"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -257,11 +257,11 @@ exports[`Tester/NavigationTile WithSizeExtraLarge smoke-test 1`] = `
         <path d="M18 13c.6 0 1 .4 1 .9v.9h2c.6 0 1 .4 1 .9v4.2c0 .5-.4.9-1 .9h-8c-.6 0-1-.4-1-.9v-4.2c0-.5.4-.9 1-.9h2v-.9c0-.5.4-.9 1-.9h2Zm-8 0c.6 0 1.1 0 1.6.1-.1.2-2.3 1.3-1.7 5.9H2v-2c0-2.2 3.6-4 8-4Zm8 1h-2v.899h2V14ZM10 3c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4Z">
         </path>
       </svg>
-      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_extraLarge__HEPNv undefined">
+      <h2 class="_title_ylhfc_17 _title_extraLarge_ylhfc_30 undefined">
         Skatt
       </h2>
     </div>
-    <div class="NavigationTile_description__6bVcu NavigationTile_description_extraLarge__CP6sK  undefined">
+    <div class="_description_ylhfc_34 _description_extraLarge_ylhfc_42  undefined">
       Skattekort, frikort, forskuddsskatt, skattemelding (selvangivelse), skatteoppgjør, skattelister. Tema og fradrag som hjelper deg til å få riktig skatt.
     </div>
   </a>
@@ -270,14 +270,14 @@ exports[`Tester/NavigationTile WithSizeExtraLarge smoke-test 1`] = `
 
 exports[`Tester/NavigationTile WithSizeLarge smoke-test 1`] = `
 <div data-test-block="true">
-  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+  <a class="_navigationTile_ylhfc_50 _navigationTile_large_ylhfc_89  undefined"
      href="#storybook-root"
   >
-    <div class="NavigationTile_header__xVyS1">
-      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+    <div class="_header_ylhfc_12">
+      <h2 class="_title_ylhfc_17 _title_large_ylhfc_27 undefined">
         Skatt
       </h2>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ylhfc_1 _icon_large_ylhfc_5"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -287,7 +287,7 @@ exports[`Tester/NavigationTile WithSizeLarge smoke-test 1`] = `
         </path>
       </svg>
     </div>
-    <div class="NavigationTile_description__6bVcu false  undefined">
+    <div class="_description_ylhfc_34 false  undefined">
       Skattekort, frikort, forskuddsskatt, skattemelding (selvangivelse), skatteoppgjør, skattelister. Tema og fradrag som hjelper deg til å få riktig skatt.
     </div>
   </a>
@@ -296,14 +296,14 @@ exports[`Tester/NavigationTile WithSizeLarge smoke-test 1`] = `
 
 exports[`Tester/NavigationTile WithSizeMedium smoke-test 1`] = `
 <div data-test-block="true">
-  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_medium__afnsR  undefined"
+  <a class="_navigationTile_ylhfc_50 _navigationTile_medium_ylhfc_89  undefined"
      href="#storybook-root"
   >
-    <div class="NavigationTile_header__xVyS1">
-      <h2 class="NavigationTile_title__Lxw5R  undefined">
+    <div class="_header_ylhfc_12">
+      <h2 class="_title_ylhfc_17  undefined">
         Skatt
       </h2>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg "
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ylhfc_1 "
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -313,7 +313,7 @@ exports[`Tester/NavigationTile WithSizeMedium smoke-test 1`] = `
         </path>
       </svg>
     </div>
-    <div class="NavigationTile_description__6bVcu false  undefined">
+    <div class="_description_ylhfc_34 false  undefined">
       Skattekort, frikort, forskuddsskatt, skattemelding (selvangivelse), skatteoppgjør, skattelister. Tema og fradrag som hjelper deg til å få riktig skatt.
     </div>
   </a>
@@ -322,16 +322,16 @@ exports[`Tester/NavigationTile WithSizeMedium smoke-test 1`] = `
 
 exports[`Tester/NavigationTile WithTarget play-test 1`] = `
 <div data-test-block="true">
-  <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+  <a class="_navigationTile_ylhfc_50 _navigationTile_large_ylhfc_89  undefined"
      href="#storybook-root"
      rel="noreferrer"
      target="_blank"
   >
-    <div class="NavigationTile_header__xVyS1">
-      <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+    <div class="_header_ylhfc_12">
+      <h2 class="_title_ylhfc_17 _title_large_ylhfc_27 undefined">
         Skatt
       </h2>
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ylhfc_1 _icon_large_ylhfc_5"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -348,11 +348,11 @@ exports[`Tester/NavigationTile WithTarget play-test 1`] = `
 exports[`Tester/NavigationTile WithTilesInColumns smoke-test 1`] = `
 <div data-test-block="true">
   <nav class="flex gapS">
-    <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_extraLarge__sU6OC  undefined"
+    <a class="_navigationTile_ylhfc_50 _navigationTile_extraLarge_ylhfc_81  undefined"
        href="#storybook-root"
     >
-      <div class="NavigationTile_header__xVyS1">
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_extraLarge__CUqij NavigationTile_icon__MA-yg NavigationTile_icon_extraLarge__7Wuo5"
+      <div class="_header_ylhfc_12">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_extraLarge_6zbcy_17 _icon_ylhfc_1 _icon_extraLarge_ylhfc_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -361,16 +361,16 @@ exports[`Tester/NavigationTile WithTilesInColumns smoke-test 1`] = `
           <path d="M18 13c.6 0 1 .4 1 .9v.9h2c.6 0 1 .4 1 .9v4.2c0 .5-.4.9-1 .9h-8c-.6 0-1-.4-1-.9v-4.2c0-.5.4-.9 1-.9h2v-.9c0-.5.4-.9 1-.9h2Zm-8 0c.6 0 1.1 0 1.6.1-.1.2-2.3 1.3-1.7 5.9H2v-2c0-2.2 3.6-4 8-4Zm8 1h-2v.899h2V14ZM10 3c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4Z">
           </path>
         </svg>
-        <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_extraLarge__HEPNv undefined">
+        <h2 class="_title_ylhfc_17 _title_extraLarge_ylhfc_30 undefined">
           Skatt
         </h2>
       </div>
     </a>
-    <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_extraLarge__sU6OC  undefined"
+    <a class="_navigationTile_ylhfc_50 _navigationTile_extraLarge_ylhfc_81  undefined"
        href="#storybook-root"
     >
-      <div class="NavigationTile_header__xVyS1">
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_extraLarge__CUqij NavigationTile_icon__MA-yg NavigationTile_icon_extraLarge__7Wuo5"
+      <div class="_header_ylhfc_12">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_extraLarge_6zbcy_17 _icon_ylhfc_1 _icon_extraLarge_ylhfc_8"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -379,7 +379,7 @@ exports[`Tester/NavigationTile WithTilesInColumns smoke-test 1`] = `
           <path d="M18 13c.6 0 1 .4 1 .9v.9h2c.6 0 1 .4 1 .9v4.2c0 .5-.4.9-1 .9h-8c-.6 0-1-.4-1-.9v-4.2c0-.5.4-.9 1-.9h2v-.9c0-.5.4-.9 1-.9h2Zm-8 0c.6 0 1.1 0 1.6.1-.1.2-2.3 1.3-1.7 5.9H2v-2c0-2.2 3.6-4 8-4Zm8 1h-2v.899h2V14ZM10 3c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4Z">
           </path>
         </svg>
-        <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_extraLarge__HEPNv undefined">
+        <h2 class="_title_ylhfc_17 _title_extraLarge_ylhfc_30 undefined">
           Skatt
         </h2>
       </div>
@@ -391,14 +391,14 @@ exports[`Tester/NavigationTile WithTilesInColumns smoke-test 1`] = `
 exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
 <div data-test-block="true">
   <nav class="flex flexColumn gapXs">
-    <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+    <a class="_navigationTile_ylhfc_50 _navigationTile_large_ylhfc_89  undefined"
        href="#storybook-root"
     >
-      <div class="NavigationTile_header__xVyS1">
-        <h1 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+      <div class="_header_ylhfc_12">
+        <h1 class="_title_ylhfc_17 _title_large_ylhfc_27 undefined">
           Heading h1
         </h1>
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ylhfc_1 _icon_large_ylhfc_5"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -409,14 +409,14 @@ exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
         </svg>
       </div>
     </a>
-    <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+    <a class="_navigationTile_ylhfc_50 _navigationTile_large_ylhfc_89  undefined"
        href="#storybook-root"
     >
-      <div class="NavigationTile_header__xVyS1">
-        <h2 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+      <div class="_header_ylhfc_12">
+        <h2 class="_title_ylhfc_17 _title_large_ylhfc_27 undefined">
           Heading h2
         </h2>
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ylhfc_1 _icon_large_ylhfc_5"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -427,14 +427,14 @@ exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
         </svg>
       </div>
     </a>
-    <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+    <a class="_navigationTile_ylhfc_50 _navigationTile_large_ylhfc_89  undefined"
        href="#storybook-root"
     >
-      <div class="NavigationTile_header__xVyS1">
-        <h3 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+      <div class="_header_ylhfc_12">
+        <h3 class="_title_ylhfc_17 _title_large_ylhfc_27 undefined">
           Heading h3
         </h3>
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ylhfc_1 _icon_large_ylhfc_5"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -445,14 +445,14 @@ exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
         </svg>
       </div>
     </a>
-    <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+    <a class="_navigationTile_ylhfc_50 _navigationTile_large_ylhfc_89  undefined"
        href="#storybook-root"
     >
-      <div class="NavigationTile_header__xVyS1">
-        <h4 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+      <div class="_header_ylhfc_12">
+        <h4 class="_title_ylhfc_17 _title_large_ylhfc_27 undefined">
           Heading h4
         </h4>
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ylhfc_1 _icon_large_ylhfc_5"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -463,14 +463,14 @@ exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
         </svg>
       </div>
     </a>
-    <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+    <a class="_navigationTile_ylhfc_50 _navigationTile_large_ylhfc_89  undefined"
        href="#storybook-root"
     >
-      <div class="NavigationTile_header__xVyS1">
-        <h5 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+      <div class="_header_ylhfc_12">
+        <h5 class="_title_ylhfc_17 _title_large_ylhfc_27 undefined">
           Heading h5
         </h5>
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ylhfc_1 _icon_large_ylhfc_5"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -481,14 +481,14 @@ exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
         </svg>
       </div>
     </a>
-    <a class="NavigationTile_navigationTile__j79hT NavigationTile_navigationTile_large__YhG-j  undefined"
+    <a class="_navigationTile_ylhfc_50 _navigationTile_large_ylhfc_89  undefined"
        href="#storybook-root"
     >
-      <div class="NavigationTile_header__xVyS1">
-        <h6 class="NavigationTile_title__Lxw5R NavigationTile_title_large__moMGh undefined">
+      <div class="_header_ylhfc_12">
+        <h6 class="_title_ylhfc_17 _title_large_ylhfc_27 undefined">
           Heading h6
         </h6>
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_large__c527o NavigationTile_icon__MA-yg NavigationTile_icon_large__NTrdv"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_ylhfc_1 _icon_large_ylhfc_5"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"

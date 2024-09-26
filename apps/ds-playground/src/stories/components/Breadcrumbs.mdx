@@ -1,0 +1,29 @@
+import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import * as BreadcrumbsStories from './Breadcrumbs.stories';
+import { VersionBadge } from '../utils/VersionBadge';
+import { DocIntro } from '../utils/DocIntro';
+
+<Meta of={BreadcrumbsStories} />
+
+# Breadcrumbs (beta)
+
+<VersionBadge packageName={'navigation'} />
+
+<DocIntro
+  name="Breadcrumbs"
+  url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/breadcrumbs/"
+/>
+
+Breadcrumbs er i Beta. Det kan komme endringer.
+
+<Primary />
+
+```tsx
+import { Breadcrumbs } from '@skatteetaten/ds-navigation';
+```
+
+<Controls />
+
+## Examples
+
+<Canvas of={BreadcrumbsStories.Examples} />

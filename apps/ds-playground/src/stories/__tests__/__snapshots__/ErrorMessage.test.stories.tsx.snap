@@ -17,8 +17,8 @@ exports[`Tester/ErrorMessage WithAttributes play-test 1`] = `
        aria-live="assertive"
        aria-atomic="true"
   >
-    <div class="ErrorMessage_errorMessage__508oW dummyClassname">
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
+    <div class="_errorMessage_1c261_13 dummyClassname">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1c261_24"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -27,7 +27,7 @@ exports[`Tester/ErrorMessage WithAttributes play-test 1`] = `
         <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
         </path>
       </svg>
-      <p class="ErrorMessage_errorMessageText__e27TU">
+      <p class="_errorMessageText_1c261_29">
         Feilmelding
       </p>
     </div>
@@ -41,8 +41,8 @@ exports[`Tester/ErrorMessage WithLongText smoke-test 1`] = `
     <div aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="ErrorMessage_errorMessage__508oW ">
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
+      <div class="_errorMessage_1c261_13 ">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1c261_24"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -51,7 +51,7 @@ exports[`Tester/ErrorMessage WithLongText smoke-test 1`] = `
           <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
           </path>
         </svg>
-        <p class="ErrorMessage_errorMessageText__e27TU">
+        <p class="_errorMessageText_1c261_29">
           Dette blir en veldig lang feilmelding for å teste om du oppfører seg om den skal.
         </p>
       </div>
@@ -66,8 +66,8 @@ exports[`Tester/ErrorMessage WithLongTextAndBreaking smoke-test 1`] = `
     <div aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="ErrorMessage_errorMessage__508oW ">
-        <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
+      <div class="_errorMessage_1c261_13 ">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1c261_24"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -76,7 +76,7 @@ exports[`Tester/ErrorMessage WithLongTextAndBreaking smoke-test 1`] = `
           <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
           </path>
         </svg>
-        <p class="ErrorMessage_errorMessageText__e27TU">
+        <p class="_errorMessageText_1c261_29">
           Detteblirenveldiglangfeilmeldingforåtesteomduoppførersegomdenskal.
         </p>
       </div>
@@ -90,8 +90,8 @@ exports[`Tester/ErrorMessage WithPElement play-test 1`] = `
   <div aria-live="assertive"
        aria-atomic="true"
   >
-    <div class="ErrorMessage_errorMessage__508oW ">
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_small__Yzxmo ErrorMessage_errorMessageIcon__2N-Qa"
+    <div class="_errorMessage_1c261_13 ">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1c261_24"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -100,7 +100,7 @@ exports[`Tester/ErrorMessage WithPElement play-test 1`] = `
         <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
         </path>
       </svg>
-      <p class="ErrorMessage_errorMessageText__e27TU">
+      <p class="_errorMessageText_1c261_29">
         Feilmelding
       </p>
     </div>

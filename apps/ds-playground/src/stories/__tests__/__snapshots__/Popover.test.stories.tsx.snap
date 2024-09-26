@@ -3,11 +3,11 @@
 exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
 <div data-test-block="true">
   <div class="flex gapS centerContent">
-    <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY IconButton_button_outlined__aDbNH "
+    <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 "
             type="button"
             aria-expanded="true"
     >
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r3:"
@@ -22,17 +22,17 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
       </svg>
     </button>
     <div tabindex="-1"
-         class="PopoverContent_popover__1MWTw PopoverContent_popover_forest__WomGW"
+         class="_popover_12pml_1 _popover_forest_12pml_9"
          style="position: absolute; left: 0px; top: 0px; transform: translate(238px, 7px);"
     >
-      <div class="PopoverContent_popoverContent__f8q8d">
-        <div class="PopoverContent_popoverContentWrapper__7J2T2">
+      <div class="_popoverContent_12pml_21">
+        <div class="_popoverContentWrapper_12pml_26">
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
         </div>
-        <button class="IconButton_button__mw9sG IconButton_button_large__IejTf  PopoverContent_popoverContentCloseButton__fYPMv"
+        <button class="_button_g87u5_1 _button_large_g87u5_52  _popoverContentCloseButton_12pml_36"
                 type="button"
         >
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r4:"
@@ -47,16 +47,16 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
           </svg>
         </button>
       </div>
-      <div class="PopoverContent_popoverArrow__JmFGE PopoverContent_popoverArrow_top__gL3Ms"
+      <div class="_popoverArrow_12pml_43 _popoverArrow_top_12pml_52"
            style="bottom: -13px; left: 85px;"
       >
       </div>
     </div>
-    <button class="IconButton_button__mw9sG IconButton_button_small__etst4 IconButton_button_outlined__aDbNH "
+    <button class="_button_g87u5_1 _button_small_g87u5_37 _button_outlined_g87u5_91 "
             type="button"
             aria-expanded="true"
     >
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r6:"
@@ -71,17 +71,17 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
       </svg>
     </button>
     <div tabindex="-1"
-         class="PopoverContent_popover__1MWTw PopoverContent_popover_white__ZIpeZ"
+         class="_popover_12pml_1 _popover_white_12pml_17"
          style="position: absolute; left: 0px; top: 0px; transform: translate(238px, 197px);"
     >
-      <div class="PopoverContent_popoverContent__f8q8d">
-        <div class="PopoverContent_popoverContentWrapper__7J2T2">
+      <div class="_popoverContent_12pml_21">
+        <div class="_popoverContentWrapper_12pml_26">
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
         </div>
-        <button class="IconButton_button__mw9sG IconButton_button_large__IejTf  PopoverContent_popoverContentCloseButton__fYPMv"
+        <button class="_button_g87u5_1 _button_large_g87u5_52  _popoverContentCloseButton_12pml_36"
                 type="button"
         >
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r7:"
@@ -96,16 +96,16 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
           </svg>
         </button>
       </div>
-      <div class="PopoverContent_popoverArrow__JmFGE PopoverContent_popoverArrow_bottom__pTKfu"
+      <div class="_popoverArrow_12pml_43 _popoverArrow_bottom_12pml_56"
            style="top: -13px; left: 117px;"
       >
       </div>
     </div>
-    <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt IconButton_button_outlined__aDbNH "
+    <button class="_button_g87u5_1 _button_medium_g87u5_45 _button_outlined_g87u5_91 "
             type="button"
             aria-expanded="true"
     >
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r9:"
@@ -120,17 +120,17 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
       </svg>
     </button>
     <div tabindex="-1"
-         class="PopoverContent_popover__1MWTw PopoverContent_popover_ochre__Dic6d"
+         class="_popover_12pml_1 _popover_ochre_12pml_13"
          style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 2px);"
     >
-      <div class="PopoverContent_popoverContent__f8q8d">
-        <div class="PopoverContent_popoverContentWrapper__7J2T2">
+      <div class="_popoverContent_12pml_21">
+        <div class="_popoverContentWrapper_12pml_26">
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
         </div>
-        <button class="IconButton_button__mw9sG IconButton_button_large__IejTf  PopoverContent_popoverContentCloseButton__fYPMv"
+        <button class="_button_g87u5_1 _button_large_g87u5_52  _popoverContentCloseButton_12pml_36"
                 type="button"
         >
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:ra:"
@@ -145,16 +145,16 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
           </svg>
         </button>
       </div>
-      <div class="PopoverContent_popoverArrow__JmFGE PopoverContent_popoverArrow_top__gL3Ms"
+      <div class="_popoverArrow_12pml_43 _popoverArrow_top_12pml_52"
            style="bottom: -13px; left: 392px;"
       >
       </div>
     </div>
-    <button class="IconButton_button__mw9sG IconButton_button_large__IejTf IconButton_button_outlined__aDbNH "
+    <button class="_button_g87u5_1 _button_large_g87u5_52 _button_outlined_g87u5_91 "
             type="button"
             aria-expanded="true"
     >
-      <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:rc:"
@@ -169,17 +169,17 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
       </svg>
     </button>
     <div tabindex="-1"
-         class="PopoverContent_popover__1MWTw PopoverContent_popover_forest__WomGW"
+         class="_popover_12pml_1 _popover_forest_12pml_9"
          style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 206px);"
     >
-      <div class="PopoverContent_popoverContent__f8q8d">
-        <div class="PopoverContent_popoverContentWrapper__7J2T2">
+      <div class="_popoverContent_12pml_21">
+        <div class="_popoverContentWrapper_12pml_26">
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
         </div>
-        <button class="IconButton_button__mw9sG IconButton_button_large__IejTf  PopoverContent_popoverContentCloseButton__fYPMv"
+        <button class="_button_g87u5_1 _button_large_g87u5_52  _popoverContentCloseButton_12pml_36"
                 type="button"
         >
-          <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:rd:"
@@ -194,7 +194,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
           </svg>
         </button>
       </div>
-      <div class="PopoverContent_popoverArrow__JmFGE PopoverContent_popoverArrow_bottom__pTKfu"
+      <div class="_popoverArrow_12pml_43 _popoverArrow_bottom_12pml_56"
            style="top: -13px; left: 438px;"
       >
       </div>
@@ -205,11 +205,11 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
 
 exports[`Tester/Popover/Popover Defaults play-test 1`] = `
 <div data-test-block="true">
-  <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt IconButton_button_outlined__aDbNH "
+  <button class="_button_g87u5_1 _button_medium_g87u5_45 _button_outlined_g87u5_91 "
           type="button"
           aria-expanded="false"
   >
-    <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r1:"

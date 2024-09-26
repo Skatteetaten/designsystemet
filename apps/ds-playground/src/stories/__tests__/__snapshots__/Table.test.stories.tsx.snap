@@ -3,23 +3,23 @@
 exports[`Tester/Table/Table Defaults play-test 1`] = `
 <div data-test-block="true">
   <div class=" ">
-    <table class="Table_table__VhSJI  Table_table_standard__8JWMb ">
-      <caption class="Table_tableCaption__zTm5t Table_hidden__N7qKc Table_tableCaption_standard__Nhqht">
+    <table class="_table_1kbf9_15  _table_standard_1kbf9_38 ">
+      <caption class="_tableCaption_1kbf9_22 _hidden_1kbf9_45 _tableCaption_standard_1kbf9_28">
         tabellcaption
       </caption>
       <thead>
         <tr class>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
               scope="col"
           >
             Category
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
               scope="col"
           >
             Items
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
               scope="col"
           >
             Expenditure
@@ -28,57 +28,57 @@ exports[`Tester/Table/Table Defaults play-test 1`] = `
       </thead>
       <tbody>
         <tr class>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM TableDataCell_dataCell_rowspan__-FmXM rowSpanRight"
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20 _dataCell_rowspan_1ot0q_16 rowSpanRight"
               rowspan="2"
           >
             Edible
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             Donuts
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             3,000
           </td>
         </tr>
         <tr class>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             Cake
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             3,000
           </td>
         </tr>
         <tr class>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM TableDataCell_dataCell_rowspan__-FmXM rowSpanRight"
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20 _dataCell_rowspan_1ot0q_16 rowSpanRight"
               rowspan="2"
           >
             Non-Edible
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             Stationery
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             18,000
           </td>
         </tr>
         <tr class>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             Batteries
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             9,000
           </td>
         </tr>
       </tbody>
       <tfoot>
         <tr class>
-          <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR "
+          <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 "
               colspan="2"
               scope="row"
           >
             Sum
           </th>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 ">
             32,000
           </td>
         </tr>
@@ -92,26 +92,26 @@ exports[`Tester/Table/Table WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <div class=" ">
     <table id="htmlId"
-           class="Table_table__VhSJI  Table_table_standard__8JWMb dummyClassname"
+           class="_table_1kbf9_15  _table_standard_1kbf9_38 dummyClassname"
            lang="nb"
            data-testid="123ID"
     >
-      <caption class="Table_tableCaption__zTm5t Table_hidden__N7qKc Table_tableCaption_standard__Nhqht">
+      <caption class="_tableCaption_1kbf9_22 _hidden_1kbf9_45 _tableCaption_standard_1kbf9_28">
         tabellcaption
       </caption>
       <thead>
         <tr class>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
               scope="col"
           >
             Category
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
               scope="col"
           >
             Items
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
               scope="col"
           >
             Expenditure
@@ -120,57 +120,147 @@ exports[`Tester/Table/Table WithAttributes play-test 1`] = `
       </thead>
       <tbody>
         <tr class>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM TableDataCell_dataCell_rowspan__-FmXM rowSpanRight"
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20 _dataCell_rowspan_1ot0q_16 rowSpanRight"
               rowspan="2"
           >
             Edible
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             Donuts
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             3,000
           </td>
         </tr>
         <tr class>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             Cake
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             3,000
           </td>
         </tr>
         <tr class>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM TableDataCell_dataCell_rowspan__-FmXM rowSpanRight"
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20 _dataCell_rowspan_1ot0q_16 rowSpanRight"
               rowspan="2"
           >
             Non-Edible
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             Stationery
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             18,000
           </td>
         </tr>
         <tr class>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             Batteries
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             9,000
           </td>
         </tr>
       </tbody>
       <tfoot>
         <tr class>
-          <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR "
+          <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 "
               colspan="2"
               scope="row"
           >
             Sum
           </th>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 ">
+            32,000
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Tester/Table/Table WithCanBeManuallyFocused play-test 1`] = `
+<div data-test-block="true">
+  <div class=" ">
+    <table class="_table_1kbf9_15  _table_standard_1kbf9_38 "
+           tabindex="-1"
+    >
+      <caption class="_tableCaption_1kbf9_22 _hidden_1kbf9_45 _tableCaption_standard_1kbf9_28">
+        tabellcaption
+      </caption>
+      <thead>
+        <tr class>
+          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
+              scope="col"
+          >
+            Category
+          </th>
+          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
+              scope="col"
+          >
+            Items
+          </th>
+          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
+              scope="col"
+          >
+            Expenditure
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class>
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20 _dataCell_rowspan_1ot0q_16 rowSpanRight"
+              rowspan="2"
+          >
+            Edible
+          </td>
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
+            Donuts
+          </td>
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
+            3,000
+          </td>
+        </tr>
+        <tr class>
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
+            Cake
+          </td>
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
+            3,000
+          </td>
+        </tr>
+        <tr class>
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20 _dataCell_rowspan_1ot0q_16 rowSpanRight"
+              rowspan="2"
+          >
+            Non-Edible
+          </td>
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
+            Stationery
+          </td>
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
+            18,000
+          </td>
+        </tr>
+        <tr class>
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
+            Batteries
+          </td>
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
+            9,000
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr class>
+          <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 "
+              colspan="2"
+              scope="row"
+          >
+            Sum
+          </th>
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 ">
             32,000
           </td>
         </tr>
@@ -183,22 +273,22 @@ exports[`Tester/Table/Table WithAttributes play-test 1`] = `
 exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
 <div data-test-block="true">
   <div class=" ">
-    <table class="Table_table__VhSJI  Table_table_standard__8JWMb ">
-      <caption class="Table_tableCaption__zTm5t Table_hidden__N7qKc Table_tableCaption_standard__Nhqht">
+    <table class="_table_1kbf9_15  _table_standard_1kbf9_38 ">
+      <caption class="_tableCaption_1kbf9_22 _hidden_1kbf9_45 _tableCaption_standard_1kbf9_28">
         Månedoversikt
       </caption>
       <thead>
         <tr class>
-          <td class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 ">
+          <td class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 ">
           </td>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_left_1525d_51 "
               scope="col"
           >
-            <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_standard__I+g27"
+            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
                     type="button"
             >
               Dekningsgrad
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TableHeaderCell_headerCellSortButtonIcon__Pk3Mp"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rv:"
@@ -213,15 +303,15 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
+          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_right_1525d_54 "
               data-testid="header-belop"
               scope="col"
           >
-            <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_standard__I+g27"
+            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
                     type="button"
             >
               Beløp
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TableHeaderCell_headerCellSortButtonIcon__Pk3Mp"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r10:"
@@ -236,14 +326,14 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_center__1aSLj "
+          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_center_1525d_57 "
               scope="col"
           >
-            <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_standard__I+g27"
+            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
                     type="button"
             >
               Måned
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TableHeaderCell_headerCellSortButtonIcon__Pk3Mp"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r11:"
@@ -258,15 +348,15 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
+          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_right_1525d_54 "
               data-testid="header-avkastning"
               scope="col"
           >
-            <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_standard__I+g27"
+            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
                     type="button"
             >
               Avkastning
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TableHeaderCell_headerCellSortButtonIcon__Pk3Mp"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r12:"
@@ -288,13 +378,13 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             class=" "
             data-testid="row-0"
         >
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableRowWithIconButton_buttonCell__Ogf4J  ">
-            <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+            <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                     disabled
                     type="button"
                     aria-describedby="s5f0e"
             >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r14:"
@@ -310,31 +400,31 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             </button>
           </td>
           <td id="s5f0e"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
+              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  "
           >
             100 %
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             5426
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_center__kQKfP  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26  ">
             Januar
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             1000
           </td>
         </tr>
         <tr id="3vesy"
-            class="TableEditableRow_editableRow_expanded__5K9q5 "
+            class="_editableRow_expanded_1xi8g_5 "
             data-testid="row-1"
         >
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableRowWithIconButton_buttonCell__Ogf4J  TableRowWithIconButton_buttonCell_expanded__-PT1s">
-            <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  TableRowWithIconButton_hideIcon__Cf7Ih"
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  _buttonCell_expanded_1lgas_10">
+            <button class="_button_g87u5_1 _button_medium_g87u5_45  _hideIcon_1lgas_34"
                     disabled
                     type="button"
                     aria-describedby="3vesy"
             >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r16:"
@@ -348,12 +438,12 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
                 </path>
               </svg>
             </button>
-            <div class="TableRowWithIconButton_expandableContent__0-lPA TableEditableRow_expandableContent__mhrU2"
+            <div class="_expandableContent_1lgas_18 _expandableContent_1xi8g_47"
                  style="width: 515px;"
             >
-              <div class="TableEditableRow_editableRowTriangle__0Sqqp">
+              <div class="_editableRowTriangle_1xi8g_21">
               </div>
-              <span class="TableEditableRow_srOnly__eSu2u"
+              <span class="_srOnly_1xi8g_54"
                     tabindex="-1"
               >
                 Rediger data
@@ -363,17 +453,17 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             </div>
           </td>
           <td id="3vesy"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
+              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  "
           >
             50 %
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             5432
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_center__kQKfP  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26  ">
             Februar
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             500
           </td>
         </tr>
@@ -381,13 +471,13 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             class=" "
             data-testid="row-2"
         >
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableRowWithIconButton_buttonCell__Ogf4J  ">
-            <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+            <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                     disabled
                     type="button"
                     aria-describedby="16prz"
             >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r18:"
@@ -403,30 +493,30 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             </button>
           </td>
           <td id="16prz"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
+              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  "
           >
             20 %
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             4899
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_center__kQKfP  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26  ">
             Mars
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             2000
           </td>
         </tr>
         <tr class
             data-testid="row-expand-3"
         >
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableRowWithIconButton_buttonCell__Ogf4J  ">
-            <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+            <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                     type="button"
                     aria-describedby="3xpjb"
                     aria-expanded="false"
             >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r19:"
@@ -442,38 +532,39 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             </button>
           </td>
           <td id="3xpjb"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
+              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  "
           >
             30 %
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             2344
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_center__kQKfP  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26  ">
             April
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             1055
           </td>
         </tr>
       </tbody>
       <tfoot>
         <tr class>
-          <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR TableSum_sum_topSeparator__Ggyn4"
+          <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 _sum_topSeparator_16rlo_5"
               colspan="4"
               scope="row"
           >
             Sum
           </th>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR TableSum_sum_topSeparator__Ggyn4">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 _sum_topSeparator_16rlo_5">
             4555
           </td>
         </tr>
       </tfoot>
     </table>
-    <div class="Table_hidden__N7qKc"
+    <div class="_hidden_1kbf9_45"
          aria-live="polite"
     >
+      Ikke sortert
     </div>
   </div>
 </div>
@@ -482,22 +573,22 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
 exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
 <div data-test-block="true">
   <div class=" ">
-    <table class="Table_table__VhSJI  Table_table_standard__8JWMb ">
-      <caption class="Table_tableCaption__zTm5t Table_hidden__N7qKc Table_tableCaption_standard__Nhqht">
+    <table class="_table_1kbf9_15  _table_standard_1kbf9_38 ">
+      <caption class="_tableCaption_1kbf9_22 _hidden_1kbf9_45 _tableCaption_standard_1kbf9_28">
         Månedoversikt
       </caption>
       <thead>
         <tr class>
-          <td class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 ">
+          <td class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 ">
           </td>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_left_1525d_51 "
               scope="col"
           >
-            <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_standard__I+g27"
+            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
                     type="button"
             >
               Dekningsgrad
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TableHeaderCell_headerCellSortButtonIcon__Pk3Mp"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rb:"
@@ -512,15 +603,15 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
+          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_right_1525d_54 "
               data-testid="header-belop"
               scope="col"
           >
-            <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_standard__I+g27"
+            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
                     type="button"
             >
               Beløp
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TableHeaderCell_headerCellSortButtonIcon__Pk3Mp"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rc:"
@@ -535,14 +626,14 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_center__1aSLj "
+          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_center_1525d_57 "
               scope="col"
           >
-            <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_standard__I+g27"
+            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
                     type="button"
             >
               Måned
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TableHeaderCell_headerCellSortButtonIcon__Pk3Mp"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rd:"
@@ -557,15 +648,15 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
+          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_right_1525d_54 "
               data-testid="header-avkastning"
               scope="col"
           >
-            <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_standard__I+g27"
+            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
                     type="button"
             >
               Avkastning
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TableHeaderCell_headerCellSortButtonIcon__Pk3Mp"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:re:"
@@ -587,12 +678,12 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             class=" "
             data-testid="row-0"
         >
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableRowWithIconButton_buttonCell__Ogf4J  ">
-            <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+            <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                     type="button"
                     aria-describedby="s5f0e"
             >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rg:"
@@ -608,17 +699,17 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             </button>
           </td>
           <td id="s5f0e"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
+              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  "
           >
             100 %
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             5426
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_center__kQKfP  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26  ">
             Januar
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             1000
           </td>
         </tr>
@@ -626,12 +717,12 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             class=" "
             data-testid="row-1"
         >
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableRowWithIconButton_buttonCell__Ogf4J  ">
-            <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+            <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                     type="button"
                     aria-describedby="3vesy"
             >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:ri:"
@@ -647,17 +738,17 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             </button>
           </td>
           <td id="3vesy"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
+              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  "
           >
             50 %
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             5432
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_center__kQKfP  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26  ">
             Februar
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             500
           </td>
         </tr>
@@ -665,12 +756,12 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             class=" "
             data-testid="row-2"
         >
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableRowWithIconButton_buttonCell__Ogf4J  ">
-            <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+            <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                     type="button"
                     aria-describedby="16prz"
             >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rk:"
@@ -686,30 +777,30 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             </button>
           </td>
           <td id="16prz"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
+              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  "
           >
             20 %
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             4899
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_center__kQKfP  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26  ">
             Mars
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             2000
           </td>
         </tr>
         <tr class
             data-testid="row-expand-3"
         >
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableRowWithIconButton_buttonCell__Ogf4J  ">
-            <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+            <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                     type="button"
                     aria-describedby="3xpjb"
                     aria-expanded="false"
             >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rl:"
@@ -725,38 +816,39 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             </button>
           </td>
           <td id="3xpjb"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
+              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  "
           >
             30 %
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             2344
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_center__kQKfP  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26  ">
             April
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             1055
           </td>
         </tr>
       </tbody>
       <tfoot>
         <tr class>
-          <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR TableSum_sum_topSeparator__Ggyn4"
+          <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 _sum_topSeparator_16rlo_5"
               colspan="4"
               scope="row"
           >
             Sum
           </th>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR TableSum_sum_topSeparator__Ggyn4">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 _sum_topSeparator_16rlo_5">
             4555
           </td>
         </tr>
       </tfoot>
     </table>
-    <div class="Table_hidden__N7qKc"
+    <div class="_hidden_1kbf9_45"
          aria-live="polite"
     >
+      Ikke sortert
     </div>
   </div>
 </div>
@@ -765,33 +857,33 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
 exports[`Tester/Table/Table WithFullWidthAndTextAlignment smoke-test 1`] = `
 <div data-test-block="true">
   <div class=" ">
-    <table class="Table_table__VhSJI Table_table_fullWidth__iZSij Table_table_standard__8JWMb ">
-      <caption class="Table_tableCaption__zTm5t Table_hidden__N7qKc Table_tableCaption_standard__Nhqht">
+    <table class="_table_1kbf9_15 _table_fullWidth_1kbf9_35 _table_standard_1kbf9_38 ">
+      <caption class="_tableCaption_1kbf9_22 _hidden_1kbf9_45 _tableCaption_standard_1kbf9_28">
         tabellcaption
       </caption>
       <thead>
         <tr class>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
               scope="col"
           >
             left
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_center__1aSLj "
+          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_center_1525d_57 "
               scope="col"
           >
             center
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_right__UCGmP "
+          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_right_1525d_54 "
               scope="col"
           >
             right
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
               scope="col"
           >
             default
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_right__UCGmP "
+          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_right_1525d_54 "
               scope="col"
           >
             right
@@ -800,36 +892,36 @@ exports[`Tester/Table/Table WithFullWidthAndTextAlignment smoke-test 1`] = `
       </thead>
       <tbody>
         <tr class>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             left
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_center__kQKfP  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26  ">
             center
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             right
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             default
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             left
           </td>
         </tr>
         <tr class>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             left
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_center__kQKfP  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26  ">
             center
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             right
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             default
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             right
           </td>
         </tr>
@@ -842,22 +934,22 @@ exports[`Tester/Table/Table WithFullWidthAndTextAlignment smoke-test 1`] = `
 exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
 <div data-test-block="true">
   <div class=" ">
-    <table class="Table_table__VhSJI Table_table_fullWidth__iZSij Table_table_standard__8JWMb ">
-      <caption class="Table_tableCaption__zTm5t Table_hidden__N7qKc Table_tableCaption_standard__Nhqht">
+    <table class="_table_1kbf9_15 _table_fullWidth_1kbf9_35 _table_standard_1kbf9_38 ">
+      <caption class="_tableCaption_1kbf9_22 _hidden_1kbf9_45 _tableCaption_standard_1kbf9_28">
         Månedoversikt
       </caption>
       <thead>
         <tr class>
-          <td class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 ">
+          <td class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 ">
           </td>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_left_1525d_51 "
               scope="col"
           >
-            <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_standard__I+g27"
+            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
                     type="button"
             >
               Dekningsgrad
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TableHeaderCell_headerCellSortButtonIcon__Pk3Mp"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1l:"
@@ -872,15 +964,15 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
+          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_right_1525d_54 "
               data-testid="header-belop"
               scope="col"
           >
-            <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_standard__I+g27"
+            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
                     type="button"
             >
               Beløp
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TableHeaderCell_headerCellSortButtonIcon__Pk3Mp"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1m:"
@@ -895,14 +987,14 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_center__1aSLj "
+          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_center_1525d_57 "
               scope="col"
           >
-            <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_standard__I+g27"
+            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
                     type="button"
             >
               Måned
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TableHeaderCell_headerCellSortButtonIcon__Pk3Mp"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1n:"
@@ -917,15 +1009,15 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
+          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_right_1525d_54 "
               data-testid="header-avkastning"
               scope="col"
           >
-            <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_standard__I+g27"
+            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
                     type="button"
             >
               Avkastning
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TableHeaderCell_headerCellSortButtonIcon__Pk3Mp"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1o:"
@@ -947,12 +1039,12 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             class=" "
             data-testid="row-0"
         >
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableRowWithIconButton_buttonCell__Ogf4J  ">
-            <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+            <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                     type="button"
                     aria-describedby="s5f0e"
             >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1q:"
@@ -968,17 +1060,17 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             </button>
           </td>
           <td id="s5f0e"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
+              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  "
           >
             100 %
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             5426
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_center__kQKfP  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26  ">
             Januar
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             1000
           </td>
         </tr>
@@ -986,12 +1078,12 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             class=" "
             data-testid="row-1"
         >
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableRowWithIconButton_buttonCell__Ogf4J  ">
-            <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+            <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                     type="button"
                     aria-describedby="3vesy"
             >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1s:"
@@ -1007,17 +1099,17 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             </button>
           </td>
           <td id="3vesy"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
+              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  "
           >
             50 %
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             5432
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_center__kQKfP  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26  ">
             Februar
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             500
           </td>
         </tr>
@@ -1025,12 +1117,12 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             class=" "
             data-testid="row-2"
         >
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableRowWithIconButton_buttonCell__Ogf4J  ">
-            <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+            <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                     type="button"
                     aria-describedby="16prz"
             >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1u:"
@@ -1046,30 +1138,30 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             </button>
           </td>
           <td id="16prz"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
+              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  "
           >
             20 %
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             4899
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_center__kQKfP  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26  ">
             Mars
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             2000
           </td>
         </tr>
         <tr class
             data-testid="row-expand-3"
         >
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableRowWithIconButton_buttonCell__Ogf4J  ">
-            <button class="IconButton_button__mw9sG IconButton_button_medium__8KBUt  "
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+            <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                     type="button"
                     aria-describedby="3xpjb"
                     aria-expanded="false"
             >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1v:"
@@ -1085,38 +1177,39 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             </button>
           </td>
           <td id="3xpjb"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
+              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  "
           >
             30 %
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             2344
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_center__kQKfP  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26  ">
             April
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             1055
           </td>
         </tr>
       </tbody>
       <tfoot>
         <tr class>
-          <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR TableSum_sum_topSeparator__Ggyn4"
+          <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 _sum_topSeparator_16rlo_5"
               colspan="4"
               scope="row"
           >
             Sum
           </th>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR TableSum_sum_topSeparator__Ggyn4">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 _sum_topSeparator_16rlo_5">
             4555
           </td>
         </tr>
       </tfoot>
     </table>
-    <div class="Table_hidden__N7qKc"
+    <div class="_hidden_1kbf9_45"
          aria-live="polite"
     >
+      Ikke sortert
     </div>
   </div>
 </div>
@@ -1125,25 +1218,25 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
 exports[`Tester/Table/Table WithRef play-test 1`] = `
 <div data-test-block="true">
   <div class=" ">
-    <table class="Table_table__VhSJI  Table_table_standard__8JWMb "
+    <table class="_table_1kbf9_15  _table_standard_1kbf9_38 "
            id="dummyIdForwardedFromRef"
     >
-      <caption class="Table_tableCaption__zTm5t Table_hidden__N7qKc Table_tableCaption_standard__Nhqht">
+      <caption class="_tableCaption_1kbf9_22 _hidden_1kbf9_45 _tableCaption_standard_1kbf9_28">
         tabellcaption
       </caption>
       <thead>
         <tr class>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
               scope="col"
           >
             Category
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
               scope="col"
           >
             Items
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
               scope="col"
           >
             Expenditure
@@ -1152,57 +1245,57 @@ exports[`Tester/Table/Table WithRef play-test 1`] = `
       </thead>
       <tbody>
         <tr class>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM TableDataCell_dataCell_rowspan__-FmXM rowSpanRight"
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20 _dataCell_rowspan_1ot0q_16 rowSpanRight"
               rowspan="2"
           >
             Edible
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             Donuts
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             3,000
           </td>
         </tr>
         <tr class>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             Cake
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             3,000
           </td>
         </tr>
         <tr class>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM TableDataCell_dataCell_rowspan__-FmXM rowSpanRight"
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20 _dataCell_rowspan_1ot0q_16 rowSpanRight"
               rowspan="2"
           >
             Non-Edible
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             Stationery
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             18,000
           </td>
         </tr>
         <tr class>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             Batteries
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
             9,000
           </td>
         </tr>
       </tbody>
       <tfoot>
         <tr class>
-          <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR "
+          <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 "
               colspan="2"
               scope="row"
           >
             Sum
           </th>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 ">
             32,000
           </td>
         </tr>
@@ -1218,24 +1311,24 @@ exports[`Tester/Table/Table WithScrollbar smoke-test 1`] = `
     Table med Scrollbar
   </p>
   <div class="scrollTableWrapper">
-    <div class="Table_wrapper__cQelY ">
-      <table class="Table_table__VhSJI  Table_table_standard__8JWMb ">
-        <caption class="Table_tableCaption__zTm5t Table_hidden__N7qKc Table_tableCaption_standard__Nhqht">
+    <div class="_wrapper_1kbf9_5 ">
+      <table class="_table_1kbf9_15  _table_standard_1kbf9_38 ">
+        <caption class="_tableCaption_1kbf9_22 _hidden_1kbf9_45 _tableCaption_standard_1kbf9_28">
           tabellcaption
         </caption>
         <thead>
           <tr class>
-            <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 "
+            <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
                 scope="col"
             >
               Forename
             </th>
-            <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 "
+            <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
                 scope="col"
             >
               Surname
             </th>
-            <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 "
+            <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
                 scope="col"
             >
               email
@@ -1244,35 +1337,35 @@ exports[`Tester/Table/Table WithScrollbar smoke-test 1`] = `
         </thead>
         <tbody>
           <tr class>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               Otto
             </td>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               Octavius
             </td>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               doc.ock@example.org
             </td>
           </tr>
           <tr class>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               Norman
             </td>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               Osbourne
             </td>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               norman.osbourne@example.org
             </td>
           </tr>
           <tr class>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               Curt
             </td>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               Connors
             </td>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               curt.connors@example.org
             </td>
           </tr>
@@ -1281,24 +1374,24 @@ exports[`Tester/Table/Table WithScrollbar smoke-test 1`] = `
     </div>
   </div>
   <div class="scrollTableWrapperSuccess">
-    <div class="Table_wrapper__cQelY ">
-      <table class="Table_table__VhSJI  Table_table_standard__8JWMb ">
-        <caption class="Table_tableCaption__zTm5t Table_hidden__N7qKc Table_tableCaption_standard__Nhqht">
+    <div class="_wrapper_1kbf9_5 ">
+      <table class="_table_1kbf9_15  _table_standard_1kbf9_38 ">
+        <caption class="_tableCaption_1kbf9_22 _hidden_1kbf9_45 _tableCaption_standard_1kbf9_28">
           tabellcaption
         </caption>
         <thead>
           <tr class>
-            <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 "
+            <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
                 scope="col"
             >
               Forename
             </th>
-            <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 "
+            <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
                 scope="col"
             >
               Surname
             </th>
-            <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 "
+            <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
                 scope="col"
             >
               email
@@ -1307,35 +1400,35 @@ exports[`Tester/Table/Table WithScrollbar smoke-test 1`] = `
         </thead>
         <tbody>
           <tr class>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               Otto
             </td>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               Octavius
             </td>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               doc.ock@example.org
             </td>
           </tr>
           <tr class>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               Norman
             </td>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               Osbourne
             </td>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               norman.osbourne@example.org
             </td>
           </tr>
           <tr class>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               Curt
             </td>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               Connors
             </td>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               curt.connors@example.org
             </td>
           </tr>
@@ -1344,24 +1437,24 @@ exports[`Tester/Table/Table WithScrollbar smoke-test 1`] = `
     </div>
   </div>
   <div class="scrollTableWrapperWarning">
-    <div class="Table_wrapper__cQelY ">
-      <table class="Table_table__VhSJI  Table_table_standard__8JWMb ">
-        <caption class="Table_tableCaption__zTm5t Table_hidden__N7qKc Table_tableCaption_standard__Nhqht">
+    <div class="_wrapper_1kbf9_5 ">
+      <table class="_table_1kbf9_15  _table_standard_1kbf9_38 ">
+        <caption class="_tableCaption_1kbf9_22 _hidden_1kbf9_45 _tableCaption_standard_1kbf9_28">
           tabellcaption
         </caption>
         <thead>
           <tr class>
-            <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 "
+            <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
                 scope="col"
             >
               Forename
             </th>
-            <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 "
+            <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
                 scope="col"
             >
               Surname
             </th>
-            <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 "
+            <th class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 "
                 scope="col"
             >
               email
@@ -1370,35 +1463,35 @@ exports[`Tester/Table/Table WithScrollbar smoke-test 1`] = `
         </thead>
         <tbody>
           <tr class>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               Otto
             </td>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               Octavius
             </td>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               doc.ock@example.org
             </td>
           </tr>
           <tr class>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               Norman
             </td>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               Osbourne
             </td>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               norman.osbourne@example.org
             </td>
           </tr>
           <tr class>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               Curt
             </td>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               Connors
             </td>
-            <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  ">
+            <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  ">
               curt.connors@example.org
             </td>
           </tr>
@@ -1412,22 +1505,22 @@ exports[`Tester/Table/Table WithScrollbar smoke-test 1`] = `
 exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
 <div data-test-block="true">
   <div class=" ">
-    <table class="Table_table__VhSJI  Table_table_compact__MEM6O ">
-      <caption class="Table_tableCaption__zTm5t Table_hidden__N7qKc Table_tableCaption_compact__AmeMW">
+    <table class="_table_1kbf9_15  _table_compact_1kbf9_41 ">
+      <caption class="_tableCaption_1kbf9_22 _hidden_1kbf9_45 _tableCaption_compact_1kbf9_31">
         Månedoversikt
       </caption>
       <thead>
         <tr class>
-          <td class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_compact__-SSF+  TableHeaderCell_headerCell_left__HuGJ2 ">
+          <td class="_headerCell_1525d_1 _headerCell_compact_1525d_63  _headerCell_left_1525d_51 ">
           </td>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_left_1525d_51 "
               scope="col"
           >
-            <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_compact__-SSF+"
+            <button class="_headerCellSortButton_1525d_20 _headerCell_compact_1525d_63"
                     type="button"
             >
               Dekningsgrad
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TableHeaderCell_headerCellSortButtonIcon__Pk3Mp"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r0:"
@@ -1442,15 +1535,15 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
+          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_right_1525d_54 "
               data-testid="header-belop"
               scope="col"
           >
-            <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_compact__-SSF+"
+            <button class="_headerCellSortButton_1525d_20 _headerCell_compact_1525d_63"
                     type="button"
             >
               Beløp
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TableHeaderCell_headerCellSortButtonIcon__Pk3Mp"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1:"
@@ -1465,14 +1558,14 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_center__1aSLj "
+          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_center_1525d_57 "
               scope="col"
           >
-            <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_compact__-SSF+"
+            <button class="_headerCellSortButton_1525d_20 _headerCell_compact_1525d_63"
                     type="button"
             >
               Måned
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TableHeaderCell_headerCellSortButtonIcon__Pk3Mp"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r2:"
@@ -1487,15 +1580,15 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
+          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_right_1525d_54 "
               data-testid="header-avkastning"
               scope="col"
           >
-            <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_compact__-SSF+"
+            <button class="_headerCellSortButton_1525d_20 _headerCell_compact_1525d_63"
                     type="button"
             >
               Avkastning
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TableHeaderCell_headerCellSortButtonIcon__Pk3Mp"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r3:"
@@ -1517,12 +1610,12 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             class=" "
             data-testid="row-0"
         >
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_left__+6UbM  TableRowWithIconButton_buttonCell__Ogf4J TableRowWithIconButton_buttonCell_compact__yXcNT ">
-            <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY  "
+          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1 _buttonCell_compact_1lgas_13 ">
+            <button class="_button_g87u5_1 _button_extraSmall_g87u5_29  "
                     type="button"
                     aria-describedby="s5f0e"
             >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r5:"
@@ -1538,17 +1631,17 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             </button>
           </td>
           <td id="s5f0e"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_left__+6UbM  "
+              class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20  "
           >
             100 %
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23  ">
             5426
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_center__kQKfP  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_center_1ot0q_26  ">
             Januar
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23  ">
             1000
           </td>
         </tr>
@@ -1556,12 +1649,12 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             class=" "
             data-testid="row-1"
         >
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_left__+6UbM  TableRowWithIconButton_buttonCell__Ogf4J TableRowWithIconButton_buttonCell_compact__yXcNT ">
-            <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY  "
+          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1 _buttonCell_compact_1lgas_13 ">
+            <button class="_button_g87u5_1 _button_extraSmall_g87u5_29  "
                     type="button"
                     aria-describedby="3vesy"
             >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r7:"
@@ -1577,17 +1670,17 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             </button>
           </td>
           <td id="3vesy"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_left__+6UbM  "
+              class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20  "
           >
             50 %
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23  ">
             5432
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_center__kQKfP  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_center_1ot0q_26  ">
             Februar
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23  ">
             500
           </td>
         </tr>
@@ -1595,12 +1688,12 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             class=" "
             data-testid="row-2"
         >
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_left__+6UbM  TableRowWithIconButton_buttonCell__Ogf4J TableRowWithIconButton_buttonCell_compact__yXcNT ">
-            <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY  "
+          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1 _buttonCell_compact_1lgas_13 ">
+            <button class="_button_g87u5_1 _button_extraSmall_g87u5_29  "
                     type="button"
                     aria-describedby="16prz"
             >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r9:"
@@ -1616,30 +1709,30 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             </button>
           </td>
           <td id="16prz"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_left__+6UbM  "
+              class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20  "
           >
             20 %
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23  ">
             4899
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_center__kQKfP  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_center_1ot0q_26  ">
             Mars
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23  ">
             2000
           </td>
         </tr>
         <tr class
             data-testid="row-expand-3"
         >
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_left__+6UbM  TableRowWithIconButton_buttonCell__Ogf4J TableRowWithIconButton_buttonCell_compact__yXcNT ">
-            <button class="IconButton_button__mw9sG IconButton_button_extraSmall__3+QfY  "
+          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1 _buttonCell_compact_1lgas_13 ">
+            <button class="_button_g87u5_1 _button_extraSmall_g87u5_29  "
                     type="button"
                     aria-describedby="3xpjb"
                     aria-expanded="false"
             >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:ra:"
@@ -1655,38 +1748,39 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             </button>
           </td>
           <td id="3xpjb"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_left__+6UbM  "
+              class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20  "
           >
             30 %
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23  ">
             2344
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_center__kQKfP  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_center_1ot0q_26  ">
             April
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23  ">
             1055
           </td>
         </tr>
       </tbody>
       <tfoot>
         <tr class>
-          <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR TableSum_sum_topSeparator__Ggyn4"
+          <th class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23  _sum_16rlo_1 _sum_topSeparator_16rlo_5"
               colspan="4"
               scope="row"
           >
             Sum
           </th>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_compact__uYHIK TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR TableSum_sum_topSeparator__Ggyn4">
+          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_right_1ot0q_23  _sum_16rlo_1 _sum_topSeparator_16rlo_5">
             4555
           </td>
         </tr>
       </tfoot>
     </table>
-    <div class="Table_hidden__N7qKc"
+    <div class="_hidden_1kbf9_45"
          aria-live="polite"
     >
+      Ikke sortert
     </div>
   </div>
 </div>
@@ -1695,22 +1789,22 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
 exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
 <div data-test-block="true">
   <div class=" ">
-    <table class="Table_table__VhSJI  Table_table_standard__8JWMb ">
-      <caption class="Table_tableCaption__zTm5t Table_hidden__N7qKc Table_tableCaption_standard__Nhqht">
+    <table class="_table_1kbf9_15  _table_standard_1kbf9_38 ">
+      <caption class="_tableCaption_1kbf9_22 _hidden_1kbf9_45 _tableCaption_standard_1kbf9_28">
         Månedoversikt
       </caption>
       <thead>
         <tr class>
-          <td class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_standard__I+g27  TableHeaderCell_headerCell_left__HuGJ2 ">
+          <td class="_headerCell_1525d_1 _headerCell_standard_1525d_1  _headerCell_left_1525d_51 ">
           </td>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_left__HuGJ2 "
+          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_left_1525d_51 "
               scope="col"
           >
-            <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_standard__I+g27"
+            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
                     type="button"
             >
               Dekningsgrad
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TableHeaderCell_headerCellSortButtonIcon__Pk3Mp"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1a:"
@@ -1725,15 +1819,15 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
+          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_right_1525d_54 "
               data-testid="header-belop"
               scope="col"
           >
-            <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_standard__I+g27"
+            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
                     type="button"
             >
               Beløp
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TableHeaderCell_headerCellSortButtonIcon__Pk3Mp"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1b:"
@@ -1748,14 +1842,14 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_center__1aSLj "
+          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_center_1525d_57 "
               scope="col"
           >
-            <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_standard__I+g27"
+            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
                     type="button"
             >
               Måned
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TableHeaderCell_headerCellSortButtonIcon__Pk3Mp"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1c:"
@@ -1770,15 +1864,15 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
               </svg>
             </button>
           </th>
-          <th class="TableHeaderCell_headerCell__3iEUX TableHeaderCell_headerCell_noPadding__3BrOH  TableHeaderCell_headerCell_right__UCGmP "
+          <th class="_headerCell_1525d_1 _headerCell_noPadding_1525d_17  _headerCell_right_1525d_54 "
               data-testid="header-avkastning"
               scope="col"
           >
-            <button class="TableHeaderCell_headerCellSortButton__vlnLu TableHeaderCell_headerCell_standard__I+g27"
+            <button class="_headerCellSortButton_1525d_20 _headerCell_standard_1525d_1"
                     type="button"
             >
               Avkastning
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz TableHeaderCell_headerCellSortButtonIcon__Pk3Mp"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1d:"
@@ -1800,12 +1894,12 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             class=" "
             data-testid="row-0"
         >
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableRowWithIconButton_buttonCell__Ogf4J  ">
-            <button class="IconButton_button__mw9sG IconButton_button_large__IejTf  "
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+            <button class="_button_g87u5_1 _button_large_g87u5_52  "
                     type="button"
                     aria-describedby="s5f0e"
             >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1f:"
@@ -1821,17 +1915,17 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             </button>
           </td>
           <td id="s5f0e"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
+              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  "
           >
             100 %
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             5426
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_center__kQKfP  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26  ">
             Januar
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             1000
           </td>
         </tr>
@@ -1839,12 +1933,12 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             class=" "
             data-testid="row-1"
         >
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableRowWithIconButton_buttonCell__Ogf4J  ">
-            <button class="IconButton_button__mw9sG IconButton_button_large__IejTf  "
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+            <button class="_button_g87u5_1 _button_large_g87u5_52  "
                     type="button"
                     aria-describedby="3vesy"
             >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1h:"
@@ -1860,17 +1954,17 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             </button>
           </td>
           <td id="3vesy"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
+              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  "
           >
             50 %
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             5432
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_center__kQKfP  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26  ">
             Februar
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             500
           </td>
         </tr>
@@ -1878,12 +1972,12 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             class=" "
             data-testid="row-2"
         >
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableRowWithIconButton_buttonCell__Ogf4J  ">
-            <button class="IconButton_button__mw9sG IconButton_button_large__IejTf  "
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+            <button class="_button_g87u5_1 _button_large_g87u5_52  "
                     type="button"
                     aria-describedby="16prz"
             >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1j:"
@@ -1899,30 +1993,30 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             </button>
           </td>
           <td id="16prz"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
+              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  "
           >
             20 %
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             4899
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_center__kQKfP  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26  ">
             Mars
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             2000
           </td>
         </tr>
         <tr class
             data-testid="row-expand-3"
         >
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  TableRowWithIconButton_buttonCell__Ogf4J  ">
-            <button class="IconButton_button__mw9sG IconButton_button_large__IejTf  "
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+            <button class="_button_g87u5_1 _button_large_g87u5_52  "
                     type="button"
                     aria-describedby="3xpjb"
                     aria-expanded="false"
             >
-              <svg class="Icon_systemIcon__1p1Xl Icon_systemIcon_medium__VmCFz IconButton_icon__1J4sN"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1k:"
@@ -1938,38 +2032,39 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             </button>
           </td>
           <td id="3xpjb"
-              class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_left__+6UbM  "
+              class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  "
           >
             30 %
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             2344
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_center__kQKfP  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_center_1ot0q_26  ">
             April
           </td>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  ">
             1055
           </td>
         </tr>
       </tbody>
       <tfoot>
         <tr class>
-          <th class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR TableSum_sum_topSeparator__Ggyn4"
+          <th class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 _sum_topSeparator_16rlo_5"
               colspan="4"
               scope="row"
           >
             Sum
           </th>
-          <td class="TableDataCell_dataCell__fJqtw TableDataCell_dataCell_standard__ZVYHE TableDataCell_dataCell_right__5f8tM  TableSum_sum__JNHMR TableSum_sum_topSeparator__Ggyn4">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_right_1ot0q_23  _sum_16rlo_1 _sum_topSeparator_16rlo_5">
             4555
           </td>
         </tr>
       </tfoot>
     </table>
-    <div class="Table_hidden__N7qKc"
+    <div class="_hidden_1kbf9_45"
          aria-live="polite"
     >
+      Ikke sortert
     </div>
   </div>
 </div>

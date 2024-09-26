@@ -1,4 +1,4 @@
-import { FocusEvent, ChangeEvent, useState, useRef } from 'react';
+import { FocusEvent, ChangeEvent, useState, useRef, JSX } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { formArrSize } from '@skatteetaten/ds-core-utils';
@@ -8,10 +8,12 @@ import {
   textFieldAsArr,
 } from '@skatteetaten/ds-forms';
 import { Modal } from '@skatteetaten/ds-overlays';
+import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
+import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const verifyAttribute =
@@ -36,54 +38,58 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     as: {
-      table: { disable: true },
+      table: { disable: true, category: category.props },
       options: [...textFieldAsArr],
       control: 'inline-radio',
     },
     variant: {
-      table: { disable: true },
+      table: { disable: true, category: category.props },
       options: [...formArrSize],
       control: 'inline-radio',
     },
-    autosize: { table: { disable: true } },
+    autosize: { table: { disable: true, category: category.props } },
     classNames: {
-      table: { disable: true },
+      table: { disable: true, category: category.props },
     },
     defaultValue: {
       control: 'text',
-      table: { disable: true },
+      table: { disable: true, category: category.props },
     },
-    description: { table: { disable: true } },
-    errorMessage: { table: { disable: true } },
+    description: { table: { disable: true, category: category.props } },
+    errorMessage: { table: { disable: true, category: category.props } },
     helpSvgPath: {
-      table: { disable: true },
+      table: { disable: true, category: category.props },
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
     },
-    helpText: { table: { disable: true } },
-    hideLabel: { table: { disable: true } },
-    label: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
-    thousandSeparator: { table: { disable: true } },
-    titleHelpSvg: { table: { disable: true } },
+    helpText: { table: { disable: true, category: category.props } },
+    hideLabel: { table: { disable: true, category: category.props } },
+    label: { table: { disable: true, category: category.props } },
+    list: { table: { disable: true, category: category.props } },
+    showRequiredMark: { table: { disable: true, category: category.props } },
+    thousandSeparator: { table: { disable: true, category: category.props } },
+    titleHelpSvg: { table: { disable: true, category: category.props } },
     // HTML
-    autoComplete: { table: { disable: true } },
-    disabled: { table: { disable: true } },
-    form: { table: { disable: true } },
-    inputMode: { table: { disable: true } },
-    name: { table: { disable: true } },
-    maxLength: { table: { disable: true } },
-    minLength: { table: { disable: true } },
-    pattern: { table: { disable: true } },
-    placeholder: { table: { disable: true } },
-    readOnly: { table: { disable: true } },
-    required: { table: { disable: true } },
-    rows: { table: { disable: true } },
-    value: { table: { disable: true } },
+    autoComplete: {
+      table: { disable: true, category: category.htmlAttribute },
+      type: 'string',
+    },
+    disabled: { table: { disable: true, category: category.htmlAttribute } },
+    form: { table: { disable: true, category: category.htmlAttribute } },
+    inputMode: { table: { disable: true, category: category.htmlAttribute } },
+    name: { table: { disable: true, category: category.htmlAttribute } },
+    maxLength: { table: { disable: true, category: category.htmlAttribute } },
+    minLength: { table: { disable: true, category: category.htmlAttribute } },
+    pattern: { table: { disable: true, category: category.htmlAttribute } },
+    placeholder: { table: { disable: true, category: category.htmlAttribute } },
+    readOnly: { table: { disable: true, category: category.htmlAttribute } },
+    required: { table: { disable: true, category: category.htmlAttribute } },
+    rows: { table: { disable: true, category: category.htmlAttribute } },
+    value: { table: { disable: true, category: category.htmlAttribute } },
     // Events
-    onBlur: { table: { disable: true } },
-    onChange: { table: { disable: true } },
-    onFocus: { table: { disable: true } },
+    onBlur: { table: { disable: true, category: category.event } },
+    onChange: { table: { disable: true, category: category.event } },
+    onFocus: { table: { disable: true, category: category.event } },
     onHelpToggle: { table: { disable: true } },
   },
 } satisfies Meta<typeof TextField>;
@@ -133,6 +139,7 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
     form: { table: { disable: false } },
+    autoComplete: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -143,6 +150,7 @@ export const WithAttributes = {
     await expect(container).toHaveAttribute('lang', 'nb');
     await expect(textbox).toHaveAttribute('data-testid', '123ID');
     await expect(textbox).toHaveAttribute('form', 'formid123');
+    await expect(textbox).toHaveAttribute('autocomplete', 'off');
   },
 } satisfies Story;
 
@@ -759,5 +767,81 @@ export const WithTextAreaAutoSizeInModal = {
         height: '64px',
       })
     );
+  },
+} satisfies Story;
+
+export const WithDataList = {
+  name: 'With  Datalist (A13, A14)',
+  render: (): JSX.Element => (
+    <>
+      <TextField label={'nettlesere'} list={'browsers'} />
+      <datalist id={'browsers'}>
+        <option value={'Edge'} />
+        <option value={'Firefox'} />
+        <option value={'Chrome'} />
+        <option value={'Opera'} />
+        <option value={'Safari'} />
+      </datalist>
+    </>
+  ),
+  args: {
+    ...defaultArgs,
+  },
+  argTypes: {
+    defaultValue: { table: { disable: false } },
+    autosize: { table: { disable: false } },
+    list: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+
+    const textbox = canvas.getByRole('combobox');
+    await expect(textbox).toHaveAttribute('list', 'browsers');
+  },
+} satisfies Story;
+
+export const WithControlledValueAndAutoSizeTextArea = {
+  name: 'With Controlled Value and Autosize TextArea',
+  render: function Render(args): JSX.Element {
+    const [, setArgs] = useArgs();
+    return (
+      <>
+        <TextField
+          onChange={(e) => setArgs({ value: e.target.value })}
+          {...args}
+        />
+        <Button onClick={() => setArgs({ value: '' })}>{'Nullstill'}</Button>
+      </>
+    );
+  },
+  args: {
+    ...defaultArgs,
+    as: 'textarea',
+    autosize: true,
+    value: loremIpsum,
+  },
+  argTypes: {
+    value: { table: { disable: false } },
+    autosize: { table: { disable: false } },
+  },
+  parameters: {
+    parameters: {
+      viewport: {
+        defaultViewport: '--breakpoint-xs',
+      },
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox');
+    await waitFor(() => expect(textbox).toHaveValue(loremIpsum));
+    const resetButton = canvas.getByRole('button');
+    resetButton.click();
+
+    const { scrollHeight } = textbox;
+    const includeBorderAndMore = textbox.offsetHeight - textbox.clientHeight;
+    await expect(textbox).toHaveStyle({
+      height: `${scrollHeight + includeBorderAndMore}px`,
+    });
   },
 } satisfies Story;

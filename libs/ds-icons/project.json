@@ -16,7 +16,7 @@
         "entryFile": "libs/ds-icons/src/index.ts",
         "external": ["react/jsx-runtime"],
         "rollupConfig": ["libs/ds-icons/rollup.config.js"],
-        "compiler": "babel",
+        "compiler": "swc",
         "assets": [
           {
             "glob": "libs/ds-icons/README.md",

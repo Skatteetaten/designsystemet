@@ -16,7 +16,7 @@
         "entryFile": "libs/ds-buttons/src/index.ts",
         "external": ["react/jsx-runtime"],
         "rollupConfig": ["libs/ds-buttons/rollup.config.js"],
-        "compiler": "babel",
+        "compiler": "swc",
         "assets": [
           {
             "glob": "libs/ds-buttons/README.md",

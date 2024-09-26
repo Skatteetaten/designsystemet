@@ -24,6 +24,7 @@ export const OpenClose = forwardRef<HTMLButtonElement, OpenCloseProps>(
       variant = getOpenCloseVariantDefault(),
       iconPosition = getOpenCloseIconPositionDefault(),
       isExpanded: isExpandedExternal,
+      isDefaultExpanded,
       isOnClickOnlyFiredOnOpen,
       showUnderline = getOpenCloseUnderlineDefault(),
       onClick,
@@ -31,8 +32,9 @@ export const OpenClose = forwardRef<HTMLButtonElement, OpenCloseProps>(
     },
     ref
   ) => {
-    const [isExpandedInternal, setIsExpandedInternal] =
-      useState<boolean>(false);
+    const [isExpandedInternal, setIsExpandedInternal] = useState<boolean>(
+      isDefaultExpanded ?? false
+    );
 
     const isExpanded =
       isExpandedExternal !== undefined

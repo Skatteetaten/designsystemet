@@ -1,10 +1,12 @@
-/* automatisk genererte types */
-export const fieldset: string;
-export const fieldset_hasSpacing: string;
-export const legend: string;
-export const legend_required: string;
-export const legendWithMarkup_required: string;
-export const legendNoMarginBottom: string;
-export const contentContainer: string;
-export const contentContainerNoMarginTop: string;
-export const srOnly: string;
+declare const classNames: {
+  readonly fieldset: 'fieldset';
+  readonly fieldset_hasSpacing: 'fieldset_hasSpacing';
+  readonly legend: 'legend';
+  readonly legend_required: 'legend_required';
+  readonly legendWithMarkup_required: 'legendWithMarkup_required';
+  readonly legendNoMarginBottom: 'legendNoMarginBottom';
+  readonly contentContainer: 'contentContainer';
+  readonly contentContainerNoMarginTop: 'contentContainerNoMarginTop';
+  readonly srOnly: 'srOnly';
+};
+export default classNames;

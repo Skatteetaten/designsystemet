@@ -1,6 +1,8 @@
-/* automatisk genererte types */
-export const tab: string;
-export const tab_active: string;
-export const tab_compact: string;
-export const tab_border: string;
-export const tab_icon: string;
+declare const classNames: {
+  readonly tab: 'tab';
+  readonly tab_active: 'tab_active';
+  readonly tab_compact: 'tab_compact';
+  readonly tab_border: 'tab_border';
+  readonly tab_icon: 'tab_icon';
+};
+export default classNames;

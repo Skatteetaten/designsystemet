@@ -20,6 +20,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    canBeManuallyFocused: { table: { disable: true } },
     children: {
       table: { disable: true },
       control: 'text',
@@ -205,5 +206,23 @@ export const VariantIngressWithSpacing = {
   argTypes: {
     hasSpacing: { table: { disable: false } },
     variant: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithCanBeManuallyFocused: Story = {
+  render: TemplateWithTwoParagraphs,
+  args: {
+    ...defaultArgs,
+    canBeManuallyFocused: true,
+  },
+  argTypes: {
+    canBeManuallyFocused: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const paragraph = canvas.getAllByText(loremIpsum)[1];
+    paragraph.focus();
+    await expect(paragraph).toBeInTheDocument();
+    await expect(paragraph).toHaveAttribute('tabIndex', '-1');
   },
 } satisfies Story;

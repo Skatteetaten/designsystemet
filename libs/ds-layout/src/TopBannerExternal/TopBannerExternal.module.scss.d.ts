@@ -1,13 +1,15 @@
-/* automatisk genererte types */
-export const topContainer: string;
-export const contentContainer: string;
-export const content: string;
-export const separator: string;
-export const separatorLeft: string;
-export const separatorRight: string;
-export const containerForMainMenu: string;
-export const mainMenu: string;
-export const columns: string;
-export const columnsThree: string;
-export const columnsTwo: string;
-export const column: string;
+declare const classNames: {
+  readonly topContainer: 'topContainer';
+  readonly mainMenu: 'mainMenu';
+  readonly columnsThree: 'columnsThree';
+  readonly columnsTwo: 'columnsTwo';
+  readonly contentContainer: 'contentContainer';
+  readonly content: 'content';
+  readonly separator: 'separator';
+  readonly separatorLeft: 'separatorLeft';
+  readonly separatorRight: 'separatorRight';
+  readonly containerForMainMenu: 'containerForMainMenu';
+  readonly columns: 'columns';
+  readonly column: 'column';
+};
+export default classNames;

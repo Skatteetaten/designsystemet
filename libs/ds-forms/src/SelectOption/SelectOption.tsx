@@ -31,4 +31,4 @@ export const SelectOption = forwardRef<HTMLOptionElement, SelectOptionProps>(
   }
 );
 
-SelectOption.displayName = 'Select.Option';
+SelectOption.displayName = 'SelectOption';

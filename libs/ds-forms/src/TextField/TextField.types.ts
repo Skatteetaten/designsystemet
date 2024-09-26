@@ -84,11 +84,13 @@ type TextFieldDiscriminatedProps =
       /** Textarea høyden justerer seg automatisk for å tilpasse seg lengden på innholdet */
       autosize?: never;
       rows?: never;
-    } & Pick<ComponentPropsWithoutRef<'input'>, 'pattern'>)
+    } & Pick<ComponentPropsWithoutRef<'input'>, 'pattern' | 'list'>)
   | ({
       /** Tusenskilletegn for heltall som bruker mellomrom eller komma som skilletegn avhengig av språket som er valgt og fjerner ikke numeriske tegn */
       thousandSeparator?: never;
       pattern?: never;
+      /** list er i beta. Dere må selv ta stilling til om dere vil ta den i bruk. */
+      list?: never;
       /** HTML-tag for TextField: input eller textarea. */
       as: Extract<TextFieldAs, 'textarea'>;
       /** Textarea høyden justerer seg automatisk for å tilpasse seg lengden på innholdet */
