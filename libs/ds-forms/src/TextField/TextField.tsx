@@ -2,6 +2,7 @@ import {
   ChangeEvent,
   forwardRef,
   JSX,
+  ModifierKey,
   useId,
   useImperativeHandle,
   useLayoutEffect,
@@ -109,16 +110,26 @@ export const TextField = forwardRef<TextboxRefHandle, TextFieldProps>(
       const input = e.currentTarget;
       const cursorPosition = input.selectionStart || 0;
       const value = input.value;
-
       const isPreviousCharacterSeparator = /[, ]/.test(
         value[cursorPosition - 1]
       );
-
       const selectionLength =
         (input.selectionEnd || 0) - (input.selectionStart || 0);
+
+      const modifierKeys: readonly ModifierKey[] = [
+        'Alt',
+        'AltGraph',
+        'Control',
+        'Meta',
+        'Shift',
+      ] as const;
+      const isAnyModifierKeyPressed = modifierKeys.some((key) =>
+        e.getModifierState(key)
+      );
+
       if (
         e.key === 'Backspace' &&
-        e.getModifierState('Meta') === false &&
+        !isAnyModifierKeyPressed &&
         cursorPosition > 0 &&
         isPreviousCharacterSeparator &&
         selectionLength === 0
