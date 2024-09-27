@@ -1,0 +1,11 @@
+import{j as r}from"./jsx-runtime-Nms4Y4qS.js";import{a as s,d as g}from"./index-DMYlLpXe.js";import{d,a as b}from"./index-CI44Z2h3.js";import{b as y,i as h}from"./index-DcL_RvKM.js";import{c as e,h as o}from"./helpers-CDRJ97Ot.js";import{S as n}from"./icon.systems-Cj7Nt_Zb.js";import{e as f}from"./stories.utils-DTsHYhvm.js";import{b as S}from"./base-props.types-BkCKQDF7.js";const x={component:s,title:"Komponenter/InlineButton",argTypes:{children:{table:{category:e.props}},hasSpinner:{table:{category:e.props}},spinnerTitle:{table:{category:e.props,defaultValue:{summary:d.t("ds_status:spinner.LoadingLabel")}}},iconPosition:{options:[...S],control:"radio",table:{category:e.props,defaultValue:{summary:g()}}},svgPath:{options:Object.keys(n),mapping:n,table:{category:e.props}},accessKey:{table:{category:e.htmlAttribute}},disabled:{table:{category:e.htmlAttribute}},form:{table:{category:e.htmlAttribute}},type:{table:{category:e.htmlAttribute,defaultValue:{summary:b()}}},ariaDescribedby:{table:{category:e.aria}},onClick:{...o},onFocus:{...o},onBlur:{...o}},args:{children:"Legg til rapport"}},a={},t={render:v=>r.jsxs("div",{className:"flex",children:[r.jsx(s,{className:"exampleSpacing",svgPath:y,children:"Legg til"}),r.jsx(s,{className:"exampleSpacing",svgPath:h,iconPosition:"right",children:"Fjern"})]})};t.parameters=f;var i,l,p;a.parameters={...a.parameters,docs:{...(i=a.parameters)==null?void 0:i.docs,source:{originalSource:"{} satisfies Story",...(p=(l=a.parameters)==null?void 0:l.docs)==null?void 0:p.source}}};var c,m,u;t.parameters={...t.parameters,docs:{...(c=t.parameters)==null?void 0:c.docs,source:{originalSource:`{
+  render: _args => <div className={'flex'}>
+      <InlineButton className={'exampleSpacing'} svgPath={AddOutlineSVGpath}>
+        {'Legg til'}
+      </InlineButton>
+      <InlineButton className={'exampleSpacing'} svgPath={CancelSVGpath} iconPosition={'right'}>
+        {'Fjern'}
+      </InlineButton>
+    </div>
+} satisfies Story`,...(u=(m=t.parameters)==null?void 0:m.docs)==null?void 0:u.source}}};const P=["Preview","Examples"],O=Object.freeze(Object.defineProperty({__proto__:null,Examples:t,Preview:a,__namedExportsOrder:P,default:x},Symbol.toStringTag,{value:"Module"}));export{t as E,O as I};
+//# sourceMappingURL=InlineButton.stories-BkKfLym8.js.map
