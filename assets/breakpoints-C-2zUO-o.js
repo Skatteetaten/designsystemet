@@ -1,5 +1,0 @@
-import{j as o}from"./jsx-runtime-Nms4Y4qS.js";import{useMDXComponents as e}from"./index-DlpNa54Y.js";import{M as s,d as i,f as m}from"./index-BkS9PS_W.js";import{B as a,a as p}from"./breakpoints.stories-CfKoFX1t.js";import{V as c}from"./VersionBadge-CCDIWqrv.js";import"./index-BwDkhjyp.js";import"./_commonjsHelpers-BosuxZz1.js";import"./iframe-Dj_qoO9_.js";import"../sb-preview/runtime.js";import"./index-B8XB3FuZ.js";import"./index-B8K4vdXH.js";import"./index-DrFu-skq.js";import"./TokensList-DJi1x4m_.js";import"./breakpoints-DU3zZRP4.js";function r(t){const n={h1:"h1",...e(),...t.components};return o.jsxs(o.Fragment,{children:[o.jsx(n.h1,{id:"breakpoints",children:"Breakpoints"}),`
-`,o.jsx(c,{packageName:"core-designtokens"}),`
-`,o.jsx(s,{of:a}),`
-`,o.jsx(i,{withSource:"none",children:o.jsx(m,{of:p})})]})}function X(t={}){const{wrapper:n}={...e(),...t.components};return n?o.jsx(n,{...t,children:o.jsx(r,{...t})}):r(t)}export{X as default};
-//# sourceMappingURL=breakpoints-C-2zUO-o.js.map

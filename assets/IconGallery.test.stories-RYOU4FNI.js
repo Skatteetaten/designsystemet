@@ -1,8 +1,0 @@
-import{j as e}from"./jsx-runtime-Nms4Y4qS.js";import{I as o}from"./index-nyVGXzax.js";import{S as d}from"./icon.systems-Dz6DRmJR.js";import{T as b}from"./icon.themes-IW5NaD7P.js";import"./index-BwDkhjyp.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-e2J6NVvS.js";import"./icon.utils-CFaC4F3v.js";const v={component:o,title:"Tester/Icon Gallery",argTypes:{key:{table:{disable:!0}},ref:{table:{disable:!0}},className:{table:{disable:!0}},id:{table:{disable:!0}},lang:{table:{disable:!0}},"data-testid":{table:{disable:!0}},size:{table:{disable:!0}},svgPath:{table:{disable:!0}},title:{table:{disable:!0}},variant:{table:{disable:!0},control:"text"},ariaLabel:{table:{disable:!0}}}},I=()=>e.jsx(e.Fragment,{children:Object.entries(d).map(([s,r])=>e.jsx(o,{svgPath:r},s))}),u=()=>e.jsx(e.Fragment,{children:Object.entries(b).map(([s,r])=>e.jsx(o,{svgPath:r,variant:"themeIcon"},s))}),t={render:I,name:"SystemIcons Image Snaphot"},a={render:u,name:"ThemeIcons Image Snaphot"};var m,n,c;t.parameters={...t.parameters,docs:{...(m=t.parameters)==null?void 0:m.docs,source:{originalSource:`{
-  render: TemplateSystemIcons,
-  name: 'SystemIcons Image Snaphot'
-} as Story`,...(c=(n=t.parameters)==null?void 0:n.docs)==null?void 0:c.source}}};var l,i,p;a.parameters={...a.parameters,docs:{...(l=a.parameters)==null?void 0:l.docs,source:{originalSource:`{
-  render: TemplateThemeIcons,
-  name: 'ThemeIcons Image Snaphot'
-} as Story`,...(p=(i=a.parameters)==null?void 0:i.docs)==null?void 0:p.source}}};const G=["SystemIcons","ThemeIcons"];export{t as SystemIcons,a as ThemeIcons,G as __namedExportsOrder,v as default};
-//# sourceMappingURL=IconGallery.test.stories-RYOU4FNI.js.map
