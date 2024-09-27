@@ -44,10 +44,6 @@ code {
 }
 
 .introImageContainer {
-  background-color: var(--palette-denim-10);
-}
-
-.introImageContainer {
   margin-bottom: var(--spacing-xl) !important;
   background-color: var(--palette-denim-10);
 }

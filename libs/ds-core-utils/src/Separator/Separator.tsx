@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { forwardRef, JSX } from 'react';
 
 import { BaseProps } from '../base-props.types';
 import { getCommonClassNameDefault } from '../defaults';

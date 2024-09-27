@@ -492,7 +492,7 @@ export const WithEventHandlers = {
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const selectNode = canvas.getByRole('combobox');
-    await selectNode.focus();
+    selectNode.focus();
     await waitFor(() => expect(args.onFocus).toHaveBeenCalled());
     await userEvent.selectOptions(selectNode, valueOption2);
     await waitFor(() => expect(args.onChange).toHaveBeenCalled());

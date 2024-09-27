@@ -585,7 +585,7 @@ export const WithThousandSeparator = {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
     await expect(textbox.tagName).toBe('INPUT');
-    await textbox.focus();
+    textbox.focus();
     await userEvent.type(textbox, 'A10000');
     await waitFor(() => expect(args.onChange).toHaveBeenCalled());
     await expect(textbox).toHaveValue('10 000');
@@ -610,7 +610,7 @@ export const WithThousandSeparatorAndNegativeValue = {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
     await expect(textbox.tagName).toBe('INPUT');
-    await textbox.focus();
+    textbox.focus();
     await userEvent.type(textbox, '-A10-000-');
     await waitFor(() => expect(args.onChange).toHaveBeenCalled());
     await expect(textbox).toHaveValue('-10 000');
@@ -699,7 +699,7 @@ export const WithEventHandlers = {
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
-    await textbox.focus();
+    textbox.focus();
     await waitFor(() => expect(args.onFocus).toHaveBeenCalled());
     await userEvent.type(textbox, 'Olav Nordmann');
     await waitFor(() => expect(args.onChange).toHaveBeenCalled());

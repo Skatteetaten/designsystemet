@@ -3,6 +3,7 @@ import {
   createRef,
   FocusEvent,
   forwardRef,
+  JSX,
   KeyboardEvent,
   useMemo,
   useRef,

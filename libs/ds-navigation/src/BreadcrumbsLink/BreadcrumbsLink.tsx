@@ -1,4 +1,4 @@
-import { forwardRef, useContext } from 'react';
+import { forwardRef, JSX, useContext } from 'react';
 
 import { Link } from '@skatteetaten/ds-buttons';
 
