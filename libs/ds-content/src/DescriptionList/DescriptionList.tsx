@@ -1,7 +1,9 @@
 import { Children, forwardRef } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-import { useMediaQuery } from '@skatteetaten/ds-core-utils';
+import {
+  getCommonClassNameDefault,
+  useMediaQuery,
+} from '@skatteetaten/ds-core-utils';
 
 import {
   getDescriptionDirectionDefault,

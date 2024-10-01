@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   Pagination,

@@ -52,6 +52,10 @@ const defaultArgs: TableProps = {
   caption,
 };
 
+const editableContent = (): ReactNode => (
+  <div className={'emptyExpandedTableRow'}></div>
+);
+
 const ExpandEditSortTable = (
   args: TableProps & RefAttributes<HTMLTableElement>
 ): ReactElement => {
@@ -206,9 +210,7 @@ const ExpandEditSortTable = (
               data-testid={`row-${index}`}
               editButtonAriaDescribedby={id}
               editButtonPosition={'left'}
-              editableContent={(): ReactNode => (
-                <div className={'emptyExpandedTableRow'}></div>
-              )}
+              editableContent={editableContent}
             >
               {content}
             </Table.EditableRow>

@@ -93,7 +93,7 @@ async function mockFetch(feil?: boolean): Promise<Response> {
 function mockUpload(_any: File, feil: boolean): Promise<Response> {
   return mockFetch(feil);
 }
-function mockDelete(_any: any, feil: boolean): Promise<Response> {
+function mockDelete(_any: unknown, feil: boolean): Promise<Response> {
   return mockFetch(feil);
 }
 

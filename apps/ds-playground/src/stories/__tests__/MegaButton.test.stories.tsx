@@ -363,7 +363,7 @@ export const WithEventHandlers = {
     const canvas = within(canvasElement);
     const megaButton = canvas.getByRole('button');
     await expect(megaButton).toBeInTheDocument();
-    await megaButton.focus();
+    megaButton.focus();
     await waitFor(() => expect(args.onFocus).toHaveBeenCalled());
     await userEvent.tab();
     await waitFor(() => expect(args.onBlur).toHaveBeenCalled());

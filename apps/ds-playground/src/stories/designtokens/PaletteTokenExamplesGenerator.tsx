@@ -29,7 +29,7 @@ export const PaletteTokenExamplesGenerator = (): JSX.Element => {
           const cssRule = `.${colorClassName} { background: ${colorsTokens[key]}; width: 2rem; height: 2rem; }`;
 
           return (
-            <Fragment key={index}>
+            <Fragment key={key}>
               <style>{cssRule}</style>
               <tr key={key} className={'paletteTableRow'}>
                 <td>

@@ -16,7 +16,7 @@ export const SizesTokenExamplesGenerator = (): JSX.Element => {
           const cssRule = `.${sizeClassName} { height: ${sizeValue}; width: ${sizeValue}; }`;
 
           return (
-            <Fragment key={index}>
+            <Fragment key={value}>
               <style>{cssRule}</style>
               <p className={'tokenValue'}>
                 <strong>{`${value} (${sizesTokens[value]})`}</strong>
