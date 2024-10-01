@@ -97,9 +97,13 @@
     }
   }
 
-  @media (min-width: $breakpoint-s) {
+  @media (min-width: $breakpoint-xs) {
     position: absolute;
     right: 0;
+    left: auto;
+  }
+
+  @media (min-width: $breakpoint-s) {
     left: 0;
   }
 }
@@ -112,8 +116,8 @@
   box-shadow: 3px 2px 5px 0 var(--semantic-divider-30);
   list-style-type: none;
 
-  @media (min-width: $breakpoint-s) {
-    width: 10.5rem; // TODO should start at breakpoint-xs
+  @media (min-width: $breakpoint-xs) {
+    width: 10.5rem;
   }
 
   &Item {

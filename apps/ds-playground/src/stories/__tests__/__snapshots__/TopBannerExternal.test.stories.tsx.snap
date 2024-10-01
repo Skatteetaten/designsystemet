@@ -54,20 +54,20 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                 Meny
               </span>
             </button>
-            <div class=" _container_7cjjj_5">
+            <div class=" _container_bpls9_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_7cjjj_17"
+              <button class="_button_197zg_1  _menuButton_bpls9_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_7cjjj_20">
-                  <span class="_flagIcon_7cjjj_25">
+                <span class="_iconWrapper_bpls9_20">
+                  <span class="_flagIcon_bpls9_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_7cjjj_30"
+                         class="_flagIconSvg_bpls9_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
@@ -83,7 +83,7 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_bpls9_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -94,10 +94,10 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_7cjjj_121">
+                <span class="_srOnly_bpls9_126">
                   Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_bpls9_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -107,7 +107,7 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_7cjjj_67">
+              <div class="_menuArrow_bpls9_67">
               </div>
             </div>
           </div>
@@ -159,20 +159,20 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
         </a>
         <div class="_contentContainer_18mb7_17">
           <div class="_content_18mb7_17">
-            <div class=" _container_7cjjj_5">
+            <div class=" _container_bpls9_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_7cjjj_17"
+              <button class="_button_197zg_1  _menuButton_bpls9_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_7cjjj_20">
-                  <span class="_flagIcon_7cjjj_25">
+                <span class="_iconWrapper_bpls9_20">
+                  <span class="_flagIcon_bpls9_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_7cjjj_30"
+                         class="_flagIconSvg_bpls9_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
@@ -188,7 +188,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_bpls9_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -199,10 +199,10 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_7cjjj_121">
+                <span class="_srOnly_bpls9_126">
                   Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_bpls9_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -212,7 +212,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_7cjjj_67">
+              <div class="_menuArrow_bpls9_67">
               </div>
             </div>
           </div>
@@ -264,20 +264,20 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
         </a>
         <div class="_contentContainer_18mb7_17">
           <div class="_content_18mb7_17">
-            <div class=" _container_7cjjj_5">
+            <div class=" _container_bpls9_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_7cjjj_17"
+              <button class="_button_197zg_1  _menuButton_bpls9_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_7cjjj_20">
-                  <span class="_flagIcon_7cjjj_25">
+                <span class="_iconWrapper_bpls9_20">
+                  <span class="_flagIcon_bpls9_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_7cjjj_30"
+                         class="_flagIconSvg_bpls9_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
@@ -293,7 +293,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_bpls9_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -304,10 +304,10 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_7cjjj_121">
+                <span class="_srOnly_bpls9_126">
                   Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_bpls9_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -317,7 +317,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_7cjjj_67">
+              <div class="_menuArrow_bpls9_67">
               </div>
             </div>
           </div>
@@ -369,20 +369,20 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
         </a>
         <div class="_contentContainer_18mb7_17">
           <div class="_content_18mb7_17">
-            <div class=" _container_7cjjj_5">
+            <div class=" _container_bpls9_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_7cjjj_17"
+              <button class="_button_197zg_1  _menuButton_bpls9_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_7cjjj_20">
-                  <span class="_flagIcon_7cjjj_25">
+                <span class="_iconWrapper_bpls9_20">
+                  <span class="_flagIcon_bpls9_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_7cjjj_30"
+                         class="_flagIconSvg_bpls9_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
@@ -398,7 +398,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_bpls9_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -409,10 +409,10 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_7cjjj_121">
+                <span class="_srOnly_bpls9_126">
                   Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_bpls9_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -422,7 +422,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_7cjjj_67">
+              <div class="_menuArrow_bpls9_67">
               </div>
             </div>
           </div>
@@ -474,20 +474,20 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
         </a>
         <div class="_contentContainer_18mb7_17">
           <div class="_content_18mb7_17">
-            <div class=" _container_7cjjj_5">
+            <div class=" _container_bpls9_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_7cjjj_17"
+              <button class="_button_197zg_1  _menuButton_bpls9_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_7cjjj_20">
-                  <span class="_flagIcon_7cjjj_25">
+                <span class="_iconWrapper_bpls9_20">
+                  <span class="_flagIcon_bpls9_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_7cjjj_30"
+                         class="_flagIconSvg_bpls9_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
@@ -503,7 +503,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_bpls9_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -514,10 +514,10 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_7cjjj_121">
+                <span class="_srOnly_bpls9_126">
                   Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_bpls9_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -527,7 +527,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_7cjjj_67">
+              <div class="_menuArrow_bpls9_67">
               </div>
             </div>
           </div>
@@ -579,20 +579,20 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
         </a>
         <div class="_contentContainer_18mb7_17">
           <div class="_content_18mb7_17">
-            <div class=" _container_7cjjj_5">
+            <div class=" _container_bpls9_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_7cjjj_17"
+              <button class="_button_197zg_1  _menuButton_bpls9_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_7cjjj_20">
-                  <span class="_flagIcon_7cjjj_25">
+                <span class="_iconWrapper_bpls9_20">
+                  <span class="_flagIcon_bpls9_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_7cjjj_30"
+                         class="_flagIconSvg_bpls9_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
@@ -608,7 +608,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_bpls9_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -619,10 +619,10 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_7cjjj_121">
+                <span class="_srOnly_bpls9_126">
                   Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_bpls9_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -632,7 +632,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_7cjjj_67">
+              <div class="_menuArrow_bpls9_67">
               </div>
             </div>
           </div>
@@ -688,20 +688,20 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
         </a>
         <div class="_contentContainer_18mb7_17">
           <div class="_content_18mb7_17">
-            <div class=" _container_7cjjj_5">
+            <div class=" _container_bpls9_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_7cjjj_17"
+              <button class="_button_197zg_1  _menuButton_bpls9_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_7cjjj_20">
-                  <span class="_flagIcon_7cjjj_25">
+                <span class="_iconWrapper_bpls9_20">
+                  <span class="_flagIcon_bpls9_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_7cjjj_30"
+                         class="_flagIconSvg_bpls9_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
@@ -717,7 +717,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_bpls9_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -728,10 +728,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_7cjjj_121">
+                <span class="_srOnly_bpls9_126">
                   Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_bpls9_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -741,7 +741,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_7cjjj_67">
+              <div class="_menuArrow_bpls9_67">
               </div>
             </div>
           </div>
@@ -812,20 +812,20 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
             </div>
           </div>
           <div class="_content_18mb7_17">
-            <div class=" _container_7cjjj_5">
+            <div class=" _container_bpls9_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_7cjjj_17"
+              <button class="_button_197zg_1  _menuButton_bpls9_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_7cjjj_20">
-                  <span class="_flagIcon_7cjjj_25">
+                <span class="_iconWrapper_bpls9_20">
+                  <span class="_flagIcon_bpls9_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_7cjjj_30"
+                         class="_flagIconSvg_bpls9_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
@@ -841,7 +841,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_bpls9_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -852,10 +852,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_7cjjj_121">
+                <span class="_srOnly_bpls9_126">
                   Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_bpls9_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -865,7 +865,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_7cjjj_67">
+              <div class="_menuArrow_bpls9_67">
               </div>
             </div>
           </div>
@@ -917,20 +917,20 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
         </a>
         <div class="_contentContainer_18mb7_17">
           <div class="_content_18mb7_17">
-            <div class=" _container_7cjjj_5">
+            <div class=" _container_bpls9_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_7cjjj_17"
+              <button class="_button_197zg_1  _menuButton_bpls9_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_7cjjj_20">
-                  <span class="_flagIcon_7cjjj_25">
+                <span class="_iconWrapper_bpls9_20">
+                  <span class="_flagIcon_bpls9_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_7cjjj_30"
+                         class="_flagIconSvg_bpls9_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
@@ -946,7 +946,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_bpls9_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -957,10 +957,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_7cjjj_121">
+                <span class="_srOnly_bpls9_126">
                   Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_bpls9_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -970,7 +970,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_7cjjj_67">
+              <div class="_menuArrow_bpls9_67">
               </div>
             </div>
           </div>
@@ -1052,20 +1052,20 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                 </div>
               </nav>
             </div>
-            <div class=" _container_7cjjj_5">
+            <div class=" _container_bpls9_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_7cjjj_17"
+              <button class="_button_197zg_1  _menuButton_bpls9_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_7cjjj_20">
-                  <span class="_flagIcon_7cjjj_25">
+                <span class="_iconWrapper_bpls9_20">
+                  <span class="_flagIcon_bpls9_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_7cjjj_30"
+                         class="_flagIconSvg_bpls9_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
@@ -1081,7 +1081,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_bpls9_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1092,10 +1092,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_7cjjj_121">
+                <span class="_srOnly_bpls9_126">
                   Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_bpls9_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1105,7 +1105,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_7cjjj_67">
+              <div class="_menuArrow_bpls9_67">
               </div>
             </div>
           </div>
@@ -1277,20 +1277,20 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                 </div>
               </nav>
             </div>
-            <div class=" _container_7cjjj_5">
+            <div class=" _container_bpls9_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_7cjjj_17"
+              <button class="_button_197zg_1  _menuButton_bpls9_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_7cjjj_20">
-                  <span class="_flagIcon_7cjjj_25">
+                <span class="_iconWrapper_bpls9_20">
+                  <span class="_flagIcon_bpls9_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_7cjjj_30"
+                         class="_flagIconSvg_bpls9_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
@@ -1306,7 +1306,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_bpls9_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1317,10 +1317,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_7cjjj_121">
+                <span class="_srOnly_bpls9_126">
                   Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_bpls9_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1330,7 +1330,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_7cjjj_67">
+              <div class="_menuArrow_bpls9_67">
               </div>
             </div>
           </div>
@@ -1502,20 +1502,20 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                 </div>
               </nav>
             </div>
-            <div class=" _container_7cjjj_5">
+            <div class=" _container_bpls9_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_7cjjj_17"
+              <button class="_button_197zg_1  _menuButton_bpls9_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_7cjjj_20">
-                  <span class="_flagIcon_7cjjj_25">
+                <span class="_iconWrapper_bpls9_20">
+                  <span class="_flagIcon_bpls9_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_7cjjj_30"
+                         class="_flagIconSvg_bpls9_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
@@ -1531,7 +1531,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_bpls9_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1542,10 +1542,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_7cjjj_121">
+                <span class="_srOnly_bpls9_126">
                   Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_bpls9_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1555,7 +1555,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_7cjjj_67">
+              <div class="_menuArrow_bpls9_67">
               </div>
             </div>
           </div>
@@ -1699,20 +1699,20 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
         </a>
         <div class="_contentContainer_18mb7_17">
           <div class="_content_18mb7_17">
-            <div class=" _container_7cjjj_5">
+            <div class=" _container_bpls9_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_7cjjj_17"
+              <button class="_button_197zg_1  _menuButton_bpls9_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_7cjjj_20">
-                  <span class="_flagIcon_7cjjj_25">
+                <span class="_iconWrapper_bpls9_20">
+                  <span class="_flagIcon_bpls9_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_7cjjj_30"
+                         class="_flagIconSvg_bpls9_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
@@ -1728,7 +1728,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_bpls9_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1739,10 +1739,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_7cjjj_121">
+                <span class="_srOnly_bpls9_126">
                   Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_bpls9_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1752,7 +1752,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_7cjjj_67">
+              <div class="_menuArrow_bpls9_67">
               </div>
             </div>
           </div>
@@ -1844,20 +1844,20 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                 </div>
               </nav>
             </div>
-            <div class=" _container_7cjjj_5">
+            <div class=" _container_bpls9_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_7cjjj_17"
+              <button class="_button_197zg_1  _menuButton_bpls9_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_7cjjj_20">
-                  <span class="_flagIcon_7cjjj_25">
+                <span class="_iconWrapper_bpls9_20">
+                  <span class="_flagIcon_bpls9_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_7cjjj_30"
+                         class="_flagIconSvg_bpls9_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
@@ -1873,7 +1873,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_bpls9_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -1884,10 +1884,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_7cjjj_121">
+                <span class="_srOnly_bpls9_126">
                   Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_bpls9_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -1897,7 +1897,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_7cjjj_67">
+              <div class="_menuArrow_bpls9_67">
               </div>
             </div>
           </div>
@@ -2089,20 +2089,20 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                 </div>
               </nav>
             </div>
-            <div class=" _container_7cjjj_5">
+            <div class=" _container_bpls9_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_7cjjj_17"
+              <button class="_button_197zg_1  _menuButton_bpls9_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_7cjjj_20">
-                  <span class="_flagIcon_7cjjj_25">
+                <span class="_iconWrapper_bpls9_20">
+                  <span class="_flagIcon_bpls9_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_7cjjj_30"
+                         class="_flagIconSvg_bpls9_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
@@ -2118,7 +2118,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_bpls9_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -2129,10 +2129,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_7cjjj_121">
+                <span class="_srOnly_bpls9_126">
                   Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_bpls9_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2142,7 +2142,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_7cjjj_67">
+              <div class="_menuArrow_bpls9_67">
               </div>
             </div>
           </div>
@@ -2334,20 +2334,20 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                 </div>
               </nav>
             </div>
-            <div class=" _container_7cjjj_5">
+            <div class=" _container_bpls9_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_7cjjj_17"
+              <button class="_button_197zg_1  _menuButton_bpls9_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_7cjjj_20">
-                  <span class="_flagIcon_7cjjj_25">
+                <span class="_iconWrapper_bpls9_20">
+                  <span class="_flagIcon_bpls9_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_7cjjj_30"
+                         class="_flagIconSvg_bpls9_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
@@ -2363,7 +2363,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_bpls9_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -2374,10 +2374,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_7cjjj_121">
+                <span class="_srOnly_bpls9_126">
                   Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_bpls9_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2387,7 +2387,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_7cjjj_67">
+              <div class="_menuArrow_bpls9_67">
               </div>
             </div>
           </div>
@@ -2574,20 +2574,20 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                 </div>
               </nav>
             </div>
-            <div class=" _container_7cjjj_5">
+            <div class=" _container_bpls9_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_7cjjj_17"
+              <button class="_button_197zg_1  _menuButton_bpls9_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_7cjjj_20">
-                  <span class="_flagIcon_7cjjj_25">
+                <span class="_iconWrapper_bpls9_20">
+                  <span class="_flagIcon_bpls9_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_7cjjj_30"
+                         class="_flagIconSvg_bpls9_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
@@ -2603,7 +2603,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_bpls9_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -2614,10 +2614,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_7cjjj_121">
+                <span class="_srOnly_bpls9_126">
                   Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_bpls9_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2627,7 +2627,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_7cjjj_67">
+              <div class="_menuArrow_bpls9_67">
               </div>
             </div>
           </div>
@@ -2809,20 +2809,20 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                 </div>
               </nav>
             </div>
-            <div class=" _container_7cjjj_5">
+            <div class=" _container_bpls9_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_7cjjj_17"
+              <button class="_button_197zg_1  _menuButton_bpls9_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_7cjjj_20">
-                  <span class="_flagIcon_7cjjj_25">
+                <span class="_iconWrapper_bpls9_20">
+                  <span class="_flagIcon_bpls9_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_7cjjj_30"
+                         class="_flagIconSvg_bpls9_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
@@ -2838,7 +2838,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_bpls9_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -2849,10 +2849,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_7cjjj_121">
+                <span class="_srOnly_bpls9_126">
                   Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_bpls9_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -2862,7 +2862,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_7cjjj_67">
+              <div class="_menuArrow_bpls9_67">
               </div>
             </div>
           </div>
@@ -3044,20 +3044,20 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                 </div>
               </nav>
             </div>
-            <div class=" _container_7cjjj_5">
+            <div class=" _container_bpls9_5">
               <div class>
               </div>
-              <button class="_button_197zg_1  _menuButton_7cjjj_17"
+              <button class="_button_197zg_1  _menuButton_bpls9_17"
                       lang="nb"
                       aria-expanded="false"
                       type="button"
               >
-                <span class="_iconWrapper_7cjjj_20">
-                  <span class="_flagIcon_7cjjj_25">
+                <span class="_iconWrapper_bpls9_20">
+                  <span class="_flagIcon_bpls9_25">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          aria-hidden="true"
                          viewbox="0 0 1100 800"
-                         class="_flagIconSvg_7cjjj_30"
+                         class="_flagIconSvg_bpls9_30"
                     >
                       <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
@@ -3073,7 +3073,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                       </path>
                     </svg>
                   </span>
-                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_7cjjj_33"
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_bpls9_33"
                        viewbox="0 0 24 24"
                        focusable="false"
                        aria-hidden="true"
@@ -3084,10 +3084,10 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                   </svg>
                 </span>
                 Bokmål
-                <span class="_srOnly_7cjjj_121">
+                <span class="_srOnly_bpls9_126">
                   Meny
                 </span>
-                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_7cjjj_41"
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_bpls9_41"
                      viewbox="0 0 24 24"
                      focusable="false"
                      aria-hidden="true"
@@ -3097,7 +3097,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                   </path>
                 </svg>
               </button>
-              <div class="_menuArrow_7cjjj_67">
+              <div class="_menuArrow_bpls9_67">
               </div>
             </div>
           </div>
