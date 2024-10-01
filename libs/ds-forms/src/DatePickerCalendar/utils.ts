@@ -51,50 +51,68 @@ interface Cell {
   disabled: boolean;
 }
 
-const makeCell = (
-  date: Date,
-  isToday: boolean,
-  isAdjacentMonth: boolean,
-  minDate?: Date,
-  maxDate?: Date
-): Cell => {
-  const text = String(date.getDate());
-  const disabled = isDisabled(date, minDate, maxDate);
-  return {
-    date,
-    text,
-    disabled,
-    isAdjacentMonth,
-    isToday,
-  };
-};
-
 function getCalendarCells(
   year: number,
   monthIndex: number,
   minDate?: Date,
-  maxDate?: Date
+  maxDate?: Date,
+  disabledDates?: Date[]
 ): Cell[] {
   const dates = getDatesInMonth(year, monthIndex);
   const cells: Cell[] = [];
 
   const daysFromPrevMonth = getDaysFromPrevMonth(dates);
   const lastDateInPrevMonth = getLastDateInPrevMonth(year, monthIndex);
+
   for (let i = 0; i < daysFromPrevMonth; i++) {
     const date = new Date(lastDateInPrevMonth);
-    cells.unshift(makeCell(date, isToday(date), true, minDate, maxDate));
+
+    const cell: Cell = {
+      date,
+      isAdjacentMonth: true,
+      disabled:
+        disabledDates?.some((d) => d.getTime() === date.getTime()) ||
+        isNotInAllowedRange(date, minDate, maxDate),
+      isToday: isToday(date),
+      text: String(date.getDate()),
+    };
+
+    cells.unshift(cell);
+
     lastDateInPrevMonth.setDate(lastDateInPrevMonth.getDate() - 1);
   }
 
   dates.forEach((date) => {
-    cells.push(makeCell(date, isToday(date), false, minDate, maxDate));
+    const cell: Cell = {
+      date,
+      isAdjacentMonth: false,
+      disabled:
+        disabledDates?.some((d) => d.getTime() === date.getTime()) ||
+        isNotInAllowedRange(date, minDate, maxDate),
+      isToday: isToday(date),
+      text: String(date.getDate()),
+    };
+
+    cells.push(cell);
   });
 
   const daysFromNextMonth = getDaysFromNextMonth(dates);
   const firstDateInNextMonth = getFirstDateInNextMonth(year, monthIndex);
   for (let i = 0; i < daysFromNextMonth; i++) {
     const date = new Date(firstDateInNextMonth);
-    cells.push(makeCell(date, isToday(date), true, minDate, maxDate));
+
+    const cell: Cell = {
+      date,
+      isAdjacentMonth: true,
+      disabled:
+        disabledDates?.some((d) => d.getTime() === date.getTime()) ||
+        isNotInAllowedRange(date, minDate, maxDate),
+      isToday: isToday(date),
+      text: String(date.getDate()),
+    };
+
+    cells.push(cell);
+
     firstDateInNextMonth.setDate(firstDateInNextMonth.getDate() + 1);
   }
 
@@ -120,10 +138,17 @@ export function getCalendarRows(
   year: number | string,
   monthIndex: number,
   minDate?: Date,
-  maxDate?: Date
+  maxDate?: Date,
+  disabledDates?: Date[]
 ): Array<Cell>[] {
   year = findValidYear(year);
-  const cells = getCalendarCells(year, monthIndex, minDate, maxDate);
+  const cells = getCalendarCells(
+    year,
+    monthIndex,
+    minDate,
+    maxDate,
+    disabledDates
+  );
   const rows: Array<Cell>[] = [];
   for (let i = 0; i < cells.length; i += 7) {
     rows.push(cells.slice(i, i + 7));
@@ -132,7 +157,7 @@ export function getCalendarRows(
   return rows;
 }
 
-export const isDisabled = (
+export const isNotInAllowedRange = (
   date: Date,
   minDate?: Date,
   maxDate?: Date
@@ -192,7 +217,7 @@ export const getFirstFocusableDate = (
   minDate?: Date,
   maxDate?: Date
 ): Date => {
-  if (isDisabled(selectedDate, minDate, maxDate)) {
+  if (isNotInAllowedRange(selectedDate, minDate, maxDate)) {
     let focusableDate = undefined;
     if (maxDate && isAfter(selectedDate, maxDate)) {
       focusableDate = maxDate;
@@ -200,7 +225,10 @@ export const getFirstFocusableDate = (
       focusableDate = minDate;
     }
 
-    if (focusableDate && !isDisabled(focusableDate, minDate, maxDate)) {
+    if (
+      focusableDate &&
+      !isNotInAllowedRange(focusableDate, minDate, maxDate)
+    ) {
       return focusableDate;
     }
   }

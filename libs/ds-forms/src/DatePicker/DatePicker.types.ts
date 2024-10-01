@@ -55,9 +55,10 @@ export interface DatePickerProps
   variant?: FormSize;
   /** Hvilken dato som skal være satt. */
   value?: Date | null;
-
   /** Initielt uthevet dato. (Hvis value har en dato, så blir den datoen uthevet istedenfor.) */
   initialPickerDate?: Date;
+  /** Liste med deaktiverte datoer. for eksempel helligdager. */
+  disabledDates?: Date[];
   /** Minste tillatte dato */
   minDate?: Date;
   /** Maksimal tillatte dato */

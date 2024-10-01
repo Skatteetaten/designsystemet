@@ -33,7 +33,7 @@ import {
   getNameOfMonthsAndDays,
   initialGridIdx,
   getFirstFocusableDate,
-  isDisabled,
+  isNotInAllowedRange,
 } from './utils';
 import { Select } from '../Select/Select';
 import { TextField } from '../TextField/TextField';
@@ -50,6 +50,7 @@ export const DatePickerCalendar = forwardRef<
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
+      disabledDates,
       minDate,
       maxDate,
       selectedDate = getDatePickerCalendarSelectedDateDefault(),
@@ -162,7 +163,7 @@ export const DatePickerCalendar = forwardRef<
         case 'ArrowUp': {
           event.preventDefault();
           const newFocusableDate = addDays(currentDate, -7);
-          if (isDisabled(newFocusableDate, minDate, maxDate)) {
+          if (isNotInAllowedRange(newFocusableDate, minDate, maxDate)) {
             break;
           }
 
@@ -195,7 +196,7 @@ export const DatePickerCalendar = forwardRef<
         case 'ArrowDown': {
           event.preventDefault();
           const newFocusableDate = addDays(currentDate, 7);
-          if (isDisabled(newFocusableDate, minDate, maxDate)) {
+          if (isNotInAllowedRange(newFocusableDate, minDate, maxDate)) {
             break;
           }
 
@@ -226,7 +227,7 @@ export const DatePickerCalendar = forwardRef<
         case 'ArrowLeft': {
           event.preventDefault();
           const newFocusableDate = addDays(currentDate, -1);
-          if (isDisabled(newFocusableDate, minDate, maxDate)) {
+          if (isNotInAllowedRange(newFocusableDate, minDate, maxDate)) {
             break;
           }
 
@@ -252,7 +253,7 @@ export const DatePickerCalendar = forwardRef<
         case 'ArrowRight': {
           event.preventDefault();
           const newFocusableDate = addDays(currentDate, 1);
-          if (isDisabled(newFocusableDate, minDate, maxDate)) {
+          if (isNotInAllowedRange(newFocusableDate, minDate, maxDate)) {
             break;
           }
 
@@ -308,8 +309,15 @@ export const DatePickerCalendar = forwardRef<
     };
 
     const grid = useMemo(
-      () => getCalendarRows(selectedYear, selectedMonthIndex, minDate, maxDate),
-      [selectedYear, selectedMonthIndex, minDate, maxDate]
+      () =>
+        getCalendarRows(
+          selectedYear,
+          selectedMonthIndex,
+          minDate,
+          maxDate,
+          disabledDates
+        ),
+      [selectedYear, selectedMonthIndex, minDate, maxDate, disabledDates]
     );
 
     const concatenatedClassName = `${styles.calendar} ${className}`;

@@ -39,6 +39,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    disabledDates: { table: { disable: true } },
     selectedDate: { table: { disable: true }, control: 'date' },
     minDate: { table: { disable: true }, control: 'date' },
     maxDate: { table: { disable: true }, control: 'date' },
@@ -304,5 +305,23 @@ export const ClickAndChangeMonthAndYear = {
     await fireEvent.click(nextButton);
     await expect(monthSelect).toHaveValue('0');
     await expect(yearInput).toHaveValue('2024');
+  },
+} satisfies Story;
+
+export const WithDisabledDates = {
+  name: 'With DisabledDates',
+  args: {
+    ...defaultArgs,
+    disabledDates: [new Date('2024.01.6'), new Date('2024.02.01')],
+  },
+  argTypes: {
+    minDate: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const calendarTable = canvas.getByRole('table');
+    // eslint-disable-next-line testing-library/no-node-access
+    const disabledButtons = calendarTable.querySelectorAll('button:disabled');
+    await expect(disabledButtons.length).toBe(2);
   },
 } satisfies Story;

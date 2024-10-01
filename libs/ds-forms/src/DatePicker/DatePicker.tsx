@@ -39,6 +39,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       lang,
       'data-testid': dataTestId,
       dateFormat = getDatePickerDateFormat(),
+      disabledDates,
       description,
       errorMessage,
       helpSvgPath,
@@ -253,6 +254,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
           <div className={styles.calendarContainer}>
             <DatePickerCalendar
               ref={calendarRef}
+              disabledDates={disabledDates}
               selectedDate={preselectedDate}
               minDate={minDate}
               maxDate={maxDate}
