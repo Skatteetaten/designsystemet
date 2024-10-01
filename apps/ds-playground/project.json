@@ -60,7 +60,13 @@
           "tsconfig.spec.json",
           "tsconfig.storybook.json"
         ]
-      }
+      },
+      "dependsOn": [
+        {
+          "projects": "ds-core-designtokens",
+          "target": "build"
+        }
+      ]
     },
     "static-storybook": {
       "executor": "@nx/web:file-server",
