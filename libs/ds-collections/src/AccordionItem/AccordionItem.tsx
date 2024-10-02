@@ -118,8 +118,11 @@ export const AccordionItem = forwardRef<HTMLButtonElement, AccordionItemProps>(
             </div>
           </button>
         </Tag>
-
-        {isExpanded && <div className={contentClassNames}>{children}</div>}
+        <div
+          className={isExpanded ? contentClassNames : styles.content_collapsed}
+        >
+          {children}
+        </div>
       </div>
     );
   }
