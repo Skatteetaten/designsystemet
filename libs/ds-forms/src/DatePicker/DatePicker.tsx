@@ -165,7 +165,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       document.addEventListener('click', handleOutside);
       window.addEventListener('resize', handleResize);
       document.addEventListener('keydown', handleEscape);
-      return () => {
+      return (): void => {
         document.removeEventListener('click', handleOutside);
         window.removeEventListener('resize', handleResize);
         document.removeEventListener('keydown', handleEscape);
@@ -175,7 +175,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
     const placeholderValue =
       placeholder?.trim() === ''
         ? undefined
-        : placeholder ?? t('datepicker.TypeOrSelect');
+        : (placeholder ?? t('datepicker.TypeOrSelect'));
 
     const isLarge = variant === 'large';
     const inputClassName = `${styles.input} ${

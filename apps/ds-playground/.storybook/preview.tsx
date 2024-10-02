@@ -184,7 +184,7 @@ const SpacingUpdater: Decorator = (Story, context) => {
     const body = window.document.body;
     clearStyles(body);
     applyStyle(body, context.globals.spacing);
-    return () => {
+    return (): void => {
       clearStyles(body);
     };
   }, [context.globals.spacing]);
@@ -221,8 +221,10 @@ const preview = {
     mockDate,
     SpacingUpdater,
   ],
+
   parameters,
   globalTypes,
   argTypes,
+  tags: ['autodocs'],
 } satisfies Preview;
 export default preview;

@@ -114,7 +114,7 @@ export const TopBannerLangPicker = forwardRef<
       document.addEventListener('keydown', handleKeyDown);
       document.addEventListener('focusin', handleOutsideMenuEvent);
       document.addEventListener('click', handleOutsideMenuEvent);
-      return () => {
+      return (): void => {
         document.removeEventListener('keydown', handleKeyDown);
         document.removeEventListener('click', handleOutsideMenuEvent);
         document.removeEventListener('focusin', handleOutsideMenuEvent);
