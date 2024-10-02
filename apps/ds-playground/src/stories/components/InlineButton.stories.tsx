@@ -3,7 +3,6 @@ import {
   getInlineButtonPositionDefault,
 } from '@skatteetaten/ds-buttons';
 import {
-  buttonIconPositionArr,
   dsI18n,
   getCommonButtonTypeDefault,
 } from '@skatteetaten/ds-core-utils';
@@ -28,7 +27,6 @@ const meta = {
       },
     },
     iconPosition: {
-      options: [...buttonIconPositionArr],
       control: 'radio',
       table: {
         category: category.props,

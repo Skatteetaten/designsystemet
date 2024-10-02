@@ -5,7 +5,9 @@ import {
   ReactElement,
 } from 'react';
 
-import { BaseProps, ButtonIconPosition } from '@skatteetaten/ds-core-utils';
+import { BaseProps, Position } from '@skatteetaten/ds-core-utils';
+
+export type ButtonIconPosition = Extract<Position, 'left' | 'right'>;
 
 type RequiredMegaButtonHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'button'>,

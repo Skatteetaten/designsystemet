@@ -23,13 +23,13 @@
     "registry": "https://nexus.sits.no/repository/npm-internal/"
   },
   "scripts": {
-    "start": "nx build ds-core-designtokens && STORYBOOK_BUILD_VERSION=develop nx serve --host=127.0.0.1",
+    "start": "STORYBOOK_BUILD_VERSION=develop nx serve --host=127.0.0.1",
     "start:static": "npx http-server dist/storybook/ds-playground --port 4400",
     "prepare": "node -e \"if (process.env.CI !== 'true'){process.exit(1)} \" || npx lefthook install -a",
     "prebuild": "npm-run-all lint:fix stylelint prettier typecheck",
     "build": "nx run-many --target=build --parallel=8",
-    "build:playground": "nx build ds-core-designtokens && nx build",
-    "build:testmode": "nx build ds-core-designtokens && nx build ds-playground --parallel=8 -- --test",
+    "build:playground": "nx build",
+    "build:testmode": "nx build ds-playground --parallel=8 -- --test",
     "build:analyze": "STORYBOOK_WEBPACK_STATS=true nx build",
     "build:preparePublish": "ts-node  --project tsconfig.base.json  ./libs/ds-dev-config/src/scripts/preparePublish.ts",
     "deploy:gh-pages": "gh-pages --nojekyll -d dist/storybook/ds-playground -p 0 -r https://github.com/Skatteetaten/designsystemet.git",

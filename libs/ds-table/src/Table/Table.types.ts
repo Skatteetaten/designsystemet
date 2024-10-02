@@ -8,7 +8,7 @@ import {
   SetStateAction,
 } from 'react';
 
-import { BaseProps, Density } from '@skatteetaten/ds-core-utils';
+import { BaseProps, Density, Position } from '@skatteetaten/ds-core-utils';
 
 import { TableDataCellProps } from '../TableDataCell/TableDataCell.types';
 import { TableEditableRowProps } from '../TableEditableRow/TableEditableRow.types';
@@ -22,9 +22,7 @@ export type TableVariant = (typeof tableVariantArr)[number];
 export const tableCellAsArr = ['td', 'th'] as const;
 export type TableCellAs = (typeof tableCellAsArr)[number];
 
-//TODO Skal bli en del av felles Position type?
-export const textAlignArr = ['left', 'right', 'center'] as const;
-export type TextAlignment = (typeof textAlignArr)[number];
+export type TextAlignment = Extract<Position, 'left' | 'right' | 'center'>;
 
 export type sortDirection = 'none' | 'ascending' | 'descending';
 export interface SortState {

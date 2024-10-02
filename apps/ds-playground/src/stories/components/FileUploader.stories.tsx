@@ -176,7 +176,6 @@ export const SimpleCompleteExample: Story = {
 
 SimpleCompleteExample.parameters = exampleParameters;
 
-//TODO hvorfor henger storybook når jeg setter args som parameter her og mottar status 500?
 export const Examples: Story = {
   render: (_args): JSX.Element => {
     interface MockUploadedFile {
