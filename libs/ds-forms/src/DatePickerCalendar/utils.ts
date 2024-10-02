@@ -1,5 +1,12 @@
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { getWeekOfMonth, isAfter, isBefore, isSunday, isToday } from 'date-fns';
+import {
+  addDays,
+  getWeekOfMonth,
+  isAfter,
+  isBefore,
+  isSunday,
+  isToday,
+} from 'date-fns';
 
 const lastValidYear = 9999;
 const sunday = 0;
@@ -170,6 +177,63 @@ export const isNotInAllowedRange = (
   );
 };
 
+export const findNextAvailableDate = (
+  startDate: Date,
+  disabledDates?: Date[]
+): Date => {
+  let currentDate = addDays(startDate, 1);
+
+  // fjern alle datoer som er etter datoen vi ser på
+  const disabledDatesAfterCurrentDate = disabledDates?.filter((date) =>
+    isAfter(date, addDays(currentDate, -1))
+  );
+
+  // safeguard infinite loop
+  const maxDate = new Date('2100-01-01');
+
+  // Loop until we find a date that is not in the disabledDates array
+  while (
+    disabledDatesAfterCurrentDate?.find(
+      // eslint-disable-next-line no-loop-func
+      (disabledDate) => currentDate.getTime() === disabledDate.getTime()
+    ) &&
+    isBefore(currentDate, maxDate)
+  ) {
+    currentDate = addDays(currentDate, 1); // Increment the date by 1 day
+  }
+
+  return currentDate;
+};
+
+export const findPreviousAvailableDate = (
+  startDate: Date,
+  disabledDates?: Date[]
+): Date => {
+  let currentDate = addDays(startDate, -1);
+
+  // fjern alle datoer som er etter datoen vi ser på
+  const disabledDatesBeforeCurrentDate = disabledDates?.filter((date) =>
+    isBefore(date, addDays(currentDate, 1))
+  );
+
+  // safeguard infinite loop
+  // todo kan det løses bedre med en annen algoritme?
+  const minDate = new Date('1000-01-01');
+
+  // Loop until we find a date that is not in the disabledDates array
+  while (
+    disabledDatesBeforeCurrentDate?.find(
+      // eslint-disable-next-line no-loop-func
+      (disabledDate) => currentDate.getTime() === disabledDate.getTime()
+    ) &&
+    isBefore(minDate, currentDate)
+  ) {
+    currentDate = addDays(currentDate, -1);
+  }
+
+  return currentDate;
+};
+
 export const getNameOfMonthsAndDays = (): {
   monthNames: string[];
   dayNames: string[];
@@ -205,7 +269,7 @@ export function findValidYear(year: string | number): number {
   return year === '' || year === 0 ? new Date().getFullYear() : Number(year);
 }
 
-export function initialGridIdx(focusableDate: Date): string {
+export function getGridIdxForDate(focusableDate: Date): string {
   const colIdx = isSunday(focusableDate) ? 6 : focusableDate.getDay() - 1;
   const rowIdx = getWeekOfMonth(focusableDate, { weekStartsOn: 1 }) - 1;
 

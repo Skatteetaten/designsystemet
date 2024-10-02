@@ -312,7 +312,11 @@ export const WithDisabledDates = {
   name: 'With DisabledDates',
   args: {
     ...defaultArgs,
-    disabledDates: [new Date('2024.01.6'), new Date('2024.02.01')],
+    disabledDates: [
+      new Date('2024.01.04'),
+      new Date('2024.01.18'),
+      new Date('2024.02.01'),
+    ],
   },
   argTypes: {
     minDate: { table: { disable: false } },
@@ -322,6 +326,6 @@ export const WithDisabledDates = {
     const calendarTable = canvas.getByRole('table');
     // eslint-disable-next-line testing-library/no-node-access
     const disabledButtons = calendarTable.querySelectorAll('button:disabled');
-    await expect(disabledButtons.length).toBe(2);
+    await expect(disabledButtons.length).toBe(3);
   },
 } satisfies Story;
