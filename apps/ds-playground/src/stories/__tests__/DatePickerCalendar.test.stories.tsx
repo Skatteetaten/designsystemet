@@ -314,8 +314,16 @@ export const WithDisabledDates = {
     ...defaultArgs,
     disabledDates: [
       new Date('2024.01.04'),
-      new Date('2024.01.18'),
-      new Date('2024.02.01'),
+      new Date('2024.01.06'),
+      new Date('2024.01.07'),
+      new Date('2024.01.13'),
+      new Date('2024.01.14'),
+      new Date('2024.01.21'),
+      new Date('2024.01.20'),
+      new Date('2024.01.27'),
+      new Date('2024.01.28'),
+      new Date('2024.02.03'),
+      new Date('2024.02.04'),
     ],
   },
   argTypes: {

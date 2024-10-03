@@ -181,25 +181,24 @@ export const findNextAvailableDate = (
   startDate: Date,
   disabledDates?: Date[]
 ): Date => {
-  let currentDate = addDays(startDate, 1);
+  if (!disabledDates || disabledDates.length === 0) {
+    return addDays(startDate, 1);
+  }
 
-  // fjern alle datoer som er etter datoen vi ser på
-  const disabledDatesAfterCurrentDate = disabledDates?.filter((date) =>
-    isAfter(date, addDays(currentDate, -1))
+  const maxDate = new Date().setFullYear(lastValidYear);
+  const disabledTimestamps = new Set(
+    disabledDates.map((date) => date.getTime())
   );
 
-  // safeguard infinite loop
-  const maxDate = new Date('2100-01-01');
+  let currentDate = addDays(startDate, 1);
+  let currentTimestamp = currentDate.getTime();
 
-  // Loop until we find a date that is not in the disabledDates array
   while (
-    disabledDatesAfterCurrentDate?.find(
-      // eslint-disable-next-line no-loop-func
-      (disabledDate) => currentDate.getTime() === disabledDate.getTime()
-    ) &&
+    disabledTimestamps.has(currentTimestamp) &&
     isBefore(currentDate, maxDate)
   ) {
-    currentDate = addDays(currentDate, 1); // Increment the date by 1 day
+    currentDate = addDays(currentDate, 1);
+    currentTimestamp = currentDate.getTime();
   }
 
   return currentDate;
@@ -209,26 +208,24 @@ export const findPreviousAvailableDate = (
   startDate: Date,
   disabledDates?: Date[]
 ): Date => {
-  let currentDate = addDays(startDate, -1);
+  if (!disabledDates || disabledDates.length === 0) {
+    return addDays(startDate, -1);
+  }
 
-  // fjern alle datoer som er etter datoen vi ser på
-  const disabledDatesBeforeCurrentDate = disabledDates?.filter((date) =>
-    isBefore(date, addDays(currentDate, 1))
+  const minDate = new Date('1000-01-01');
+  const disabledTimestamps = new Set(
+    disabledDates.map((date) => date.getTime())
   );
 
-  // safeguard infinite loop
-  // todo kan det løses bedre med en annen algoritme?
-  const minDate = new Date('1000-01-01');
+  let currentDate = addDays(startDate, -1);
+  let currentTimestamp = currentDate.getTime();
 
-  // Loop until we find a date that is not in the disabledDates array
   while (
-    disabledDatesBeforeCurrentDate?.find(
-      // eslint-disable-next-line no-loop-func
-      (disabledDate) => currentDate.getTime() === disabledDate.getTime()
-    ) &&
+    disabledTimestamps.has(currentTimestamp) &&
     isBefore(minDate, currentDate)
   ) {
     currentDate = addDays(currentDate, -1);
+    currentTimestamp = currentDate.getTime();
   }
 
   return currentDate;

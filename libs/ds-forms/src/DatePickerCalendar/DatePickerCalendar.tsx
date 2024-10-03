@@ -74,18 +74,6 @@ export const DatePickerCalendar = forwardRef<
     const [isPrevMonthInvalid, setIsPrevMonthInvalid] = useState(false);
     const [isNextMonthInvalid, setIsNextMonthInvalid] = useState(false);
 
-    const grid = useMemo(
-      () =>
-        getCalendarRows(
-          selectedYear,
-          selectedMonthIndex,
-          minDate,
-          maxDate,
-          disabledDates
-        ),
-      [selectedYear, selectedMonthIndex, minDate, maxDate, disabledDates]
-    );
-
     const [firstValidYear, lastValidYear] = [1, 9999];
     const [january, december] = [0, 11];
     const { monthNames, dayNames } = getNameOfMonthsAndDays();
@@ -246,6 +234,18 @@ export const DatePickerCalendar = forwardRef<
           return;
       }
     };
+
+    const grid = useMemo(
+      () =>
+        getCalendarRows(
+          selectedYear,
+          selectedMonthIndex,
+          minDate,
+          maxDate,
+          disabledDates
+        ),
+      [selectedYear, selectedMonthIndex, minDate, maxDate, disabledDates]
+    );
 
     const concatenatedClassName = `${styles.calendar} ${className}`;
 
