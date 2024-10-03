@@ -108,7 +108,7 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
 
       document.addEventListener('focusin', handleOutsideMenuEvent);
       document.addEventListener('click', handleOutsideMenuEvent);
-      return () => {
+      return (): void => {
         document.removeEventListener('click', handleOutsideMenuEvent);
         document.removeEventListener('focusin', handleOutsideMenuEvent);
       };
@@ -282,7 +282,7 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
                   title={searchButtonTitle ?? t('searchfield.ButtonTitle')}
                 />
               ) : (
-                searchButtonTitle ?? t('searchfield.ButtonTitle')
+                (searchButtonTitle ?? t('searchfield.ButtonTitle'))
               )}
             </button>
           )}

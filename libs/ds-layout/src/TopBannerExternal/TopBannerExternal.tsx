@@ -121,7 +121,7 @@ export const TopBannerExternal = forwardRef<
 
       document.addEventListener('keydown', handleEscape);
 
-      return () => {
+      return (): void => {
         document.removeEventListener('mouseup', handleClickOutside);
         document.removeEventListener('keydown', handleEscape);
         document.removeEventListener('focusin', handleFocusOutside);
