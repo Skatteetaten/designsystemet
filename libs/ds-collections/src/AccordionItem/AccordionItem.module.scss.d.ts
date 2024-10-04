@@ -22,6 +22,7 @@ declare const classNames: {
   readonly title_medium: 'title_medium';
   readonly title_large: 'title_large';
   readonly subtitle: 'subtitle';
+  readonly content_collapsed: 'content_collapsed';
   readonly content_smallIndented: 'content_smallIndented';
   readonly content_mediumIndented: 'content_mediumIndented';
   readonly content_largeIndented: 'content_largeIndented';

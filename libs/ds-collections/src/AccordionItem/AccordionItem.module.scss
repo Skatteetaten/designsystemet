@@ -140,6 +140,10 @@
   font-size: var(--font-size-reference);
   font-weight: var(--font-weight-regular);
 
+  &_collapsed {
+    display: none;
+  }
+
   &_small {
     &Indented {
       margin-left: calc(var(--spacing-xl) - var(--spacing-xs));
