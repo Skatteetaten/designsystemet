@@ -273,7 +273,6 @@ export const WithOnClick = {
     await expect(button).toHaveAttribute('aria-expanded', 'true');
     await expect(content).toBeVisible();
     await fireEvent.click(button);
-    // TODO
     await expect(content).not.toBeVisible();
     await waitFor(() => expect(args.onClick).toHaveBeenCalledTimes(2));
   },
