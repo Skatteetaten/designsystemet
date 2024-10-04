@@ -327,13 +327,13 @@ export const WithDisabledDates = {
     ],
   },
   argTypes: {
-    minDate: { table: { disable: false } },
+    disabledDates: { table: { disable: false } },
   },
-  play: async ({ canvasElement }): Promise<void> => {
+  play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const calendarTable = canvas.getByRole('table');
     // eslint-disable-next-line testing-library/no-node-access
     const disabledButtons = calendarTable.querySelectorAll('button:disabled');
-    await expect(disabledButtons.length).toBe(3);
+    await expect(disabledButtons.length).toBe(args.disabledDates?.length);
   },
 } satisfies Story;
