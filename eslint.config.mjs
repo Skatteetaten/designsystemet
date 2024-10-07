@@ -1,6 +1,6 @@
 import noInlineStyles from 'eslint-plugin-no-inline-styles';
 import parser from 'jsonc-eslint-parser';
-import devConfig from './libs/ds-dev-config/config/designsystem-eslint.js';
+import devConfig from './libs/ds-dev-config/config/designsystem-eslint.mjs';
 import { fixupConfigRules } from '@eslint/compat';
 
 export default [
