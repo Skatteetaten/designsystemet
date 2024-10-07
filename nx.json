@@ -22,7 +22,7 @@
       "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
       "!{projectRoot}/tsconfig.spec.json",
       "!{projectRoot}/jest.config.[jt]s",
-      "!{projectRoot}/eslint.config.mjs",
+      "!{projectRoot}/eslint.config.js",
       "!{projectRoot}/.storybook/**/*",
       "!{projectRoot}/**/*.stories.@(js|jsx|ts|tsx|mdx)",
       "!{projectRoot}/.stylelintrc(.(json|yml|yaml|js))?",
@@ -80,7 +80,7 @@
     "@nx/eslint:lint": {
       "inputs": [
         "default",
-        "{workspaceRoot}/eslint.config.mjs"
+        "{workspaceRoot}/eslint.config.js"
       ],
       "cache": true
     },

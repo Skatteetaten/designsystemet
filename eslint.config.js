@@ -1,29 +1,17 @@
-import nx from '@nx/eslint-plugin';
-import { fixupPluginRules } from '@eslint/compat';
+import noInlineStyles from 'eslint-plugin-no-inline-styles';
 import parser from 'jsonc-eslint-parser';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-import js from '@eslint/js';
-import { FlatCompat } from '@eslint/eslintrc';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-});
+import devConfig from './libs/ds-dev-config/config/designsystem-eslint.js';
+import { fixupConfigRules } from '@eslint/compat';
 
 export default [
   {
-    ignores: ['**/*', '**/node_modules'],
+    ignores: ['**/node_modules'],
   },
-  ...fixupPluginRules(
-    compat.extends('./libs/ds-dev-config/config/designsystem-eslintrc.yml')
-  ),
+  ...fixupConfigRules(devConfig),
   {
     plugins: {
-      '@nx': nx,
+      // '@nx': nx,
+      'no-inline-styles': noInlineStyles,
     },
   },
   {
@@ -66,7 +54,7 @@ export default [
           ],
         },
       ],
-
+      'no-inline-styles/no-inline-styles': 2,
       'sonarjs/cognitive-complexity': 'off',
     },
   },

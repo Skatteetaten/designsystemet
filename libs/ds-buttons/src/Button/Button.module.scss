@@ -16,7 +16,7 @@
 }
 
 %disabled {
-  border-color: var(--semantic-disabled-foreground);
+    border-color: var(--semantic-disabled-foreground);
   background-color: var(--semantic-disabled-background);
   color: var(--semantic-disabled-foreground);
   cursor: not-allowed;
