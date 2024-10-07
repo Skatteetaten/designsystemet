@@ -41,7 +41,8 @@ export const RowWithLeftSideExpandButton = forwardRef<
       focusButton: (): void => {
         buttonRef?.current?.focus();
       },
-      rowRef: rowRef,
+      buttonRef,
+      rowRef,
     }));
     const expandableWrapperRef = useRef<HTMLDivElement | null>(null);
 
@@ -146,7 +147,8 @@ export const RowWithRightSideExpandButton = forwardRef<
       focusButton: (): void => {
         buttonRef?.current?.focus();
       },
-      rowRef: rowRef,
+      buttonRef,
+      rowRef,
     }));
     return (
       <>

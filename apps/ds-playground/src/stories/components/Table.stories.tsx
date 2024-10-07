@@ -219,10 +219,8 @@ export const Sortable: Story = {
           </Table.Row>
         </Table.Header>
         <Table.Body>
-          {sortedData.map((row, index) => (
-            /* hvis ikke index tas med i key slik at de blir unike når tabellen sorteres
-            så blir voiceover i Safari forvirret og hopper over rader */
-            <Table.Row key={`${row.player}-${index}`}>
+          {sortedData.map((row) => (
+            <Table.Row key={row.player}>
               <Table.DataCell alignment={'center'}>{row.player}</Table.DataCell>
               <Table.DataCell alignment={'right'}>{row.score}</Table.DataCell>
             </Table.Row>
@@ -350,10 +348,10 @@ export const Expandable: Story = {
           </Table.Row>
         </Table.Header>
         <Table.Body>
-          {sortedData.map((row, index) => {
+          {sortedData.map((row) => {
             return (
               <Table.Row
-                key={`${row.id}-${index}`}
+                key={row.id}
                 expandButtonPosition={'right'}
                 expandableContent={
                   <div className={'emptyExpandedTableRow'}></div>
@@ -449,10 +447,10 @@ export const Editable: Story = {
           </Table.Row>
         </Table.Header>
         <Table.Body>
-          {sortedData.map((row, index) => {
+          {sortedData.map((row) => {
             return (
               <Table.EditableRow
-                key={`${row.id}-${index}`}
+                key={row.id}
                 editableContent={(closeEditing: () => void): ReactNode => (
                   <div className={'emptyExpandedTableRow'}>
                     <Button
@@ -601,9 +599,9 @@ export const WithEmptyHeaders: Story = {
             </Table.Row>
           </Table.Header>
           <Table.Body>
-            {sortedData.map((row, index) => {
+            {sortedData.map((row) => {
               return (
-                <Table.Row key={`${row.id}-${index}`}>
+                <Table.Row key={row.id}>
                   <Table.DataCell id={row.id}>{row.deadline}</Table.DataCell>
                   <Table.DataCell>{row.category}</Table.DataCell>
                   <Table.DataCell>{row.task}</Table.DataCell>
