@@ -30,7 +30,6 @@ export default [
       'jest-dom': jestDomPlugin,
       'testing-library': testingLibraryPlugin,
       sonarjs: sonarjsPlugin,
-      '@nx': nxPlugin,
       jsdoc: jsdocPlugin,
       '@typescript-eslint': tseslint,
       import: importPlugin,
@@ -49,6 +48,7 @@ export default [
       globals: {
         ...GLOBALS_BROWSER_FIX,
         ...globals.node,
+        ...globals.jest,
       },
     },
     settings: {
@@ -67,7 +67,6 @@ export default [
       ...jestDomPlugin.configs.recommended.rules,
       ...testingLibraryPlugin.configs['react'].rules,
       ...sonarjsPlugin.configs.recommended.rules,
-      ...nxPlugin.configs['react'].rules,
       ...jsdocPlugin.configs.recommended.rules,
       'react/jsx-boolean-value': 'error',
       'react/jsx-curly-brace-presence': [

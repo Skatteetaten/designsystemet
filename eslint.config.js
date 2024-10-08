@@ -1,22 +1,25 @@
+import nxPlugin from '@nx/eslint-plugin';
 import noInlineStyles from 'eslint-plugin-no-inline-styles';
 import parser from 'jsonc-eslint-parser';
-import devConfig from './libs/ds-dev-config/config/designsystem-eslint.mjs';
-import { fixupConfigRules } from '@eslint/compat';
+import devConfig from './libs/ds-dev-config/config/designsystem-eslint.js';
+import { fixupConfigRules, fixupPluginRules } from '@eslint/compat';
 
 export default [
   {
-    ignores: ['**/node_modules'],
+    ignores: ['**/.*', '**/node_modules/*'],
+  },
+  {
+    plugins: {
+      '@nx': nxPlugin,
+      'no-inline-styles': fixupPluginRules(noInlineStyles),
+    },
+    rules: {
+      ...nxPlugin.configs['react'].rules,
+    },
   },
   ...fixupConfigRules(devConfig),
   {
-    plugins: {
-      // '@nx': nx,
-      'no-inline-styles': noInlineStyles,
-    },
-  },
-  {
     files: ['**/*.stories.tsx', '**/test-runner.ts'],
-
     rules: {
       'jest/no-standalone-expect': 'off',
       'sonarjs/no-identical-functions': 'off',
@@ -31,7 +34,6 @@ export default [
       '**/__tests__/*.test.storiesof.stories.tsx',
       '**/*.stories.tsx',
     ],
-
     rules: {
       'sonarjs/no-duplicate-string': 'off',
     },
@@ -56,6 +58,8 @@ export default [
       ],
       'no-inline-styles/no-inline-styles': 2,
       'sonarjs/cognitive-complexity': 'off',
+      'sonarjs/jsx-no-constructed-context-values': 'warn',
+      'sonarjs/no-array-index-key': 'warn',
     },
   },
   {
