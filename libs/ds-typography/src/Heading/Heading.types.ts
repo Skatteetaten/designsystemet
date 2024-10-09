@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ElementRef, ReactNode, RefObject } from 'react';
 
 import { BaseProps, HeadingAs } from '@skatteetaten/ds-core-utils';
 
@@ -16,4 +16,6 @@ export interface HeadingProps extends BaseProps {
   level: HeadingLevel;
   /** Lar komponenten være fokuserbar ved å sett tabIndex: -1 */
   canBeManuallyFocused?: boolean;
+  /** Heading custom ref */
+  //headingRef?: RefObject<HTMLInputElement>;
 }

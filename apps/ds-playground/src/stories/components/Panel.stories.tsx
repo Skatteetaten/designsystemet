@@ -1,8 +1,9 @@
 /* eslint-disable sonarjs/no-duplicate-string */
-import { JSX } from 'react';
+import { JSX, RefObject } from 'react';
 
 import { MegaButton, Link } from '@skatteetaten/ds-buttons';
 import {
+  ComponentParent,
   Panel,
   getPanelColorDefault,
   getPanelPaddingDefault,
@@ -39,6 +40,7 @@ const meta = {
   title: 'Komponenter/Panel',
   argTypes: {
     // Props
+    canManuallySetTitleFocus: { table: { category: category.props } },
     children: {
       control: 'text',
       table: { category: category.props },
@@ -155,6 +157,7 @@ export const Examples: Story = {
           }
         </Paragraph>
       </Panel>
+      <ComponentParent>{'Liksompanel1'}</ComponentParent>
     </>
   ),
 } satisfies Story;

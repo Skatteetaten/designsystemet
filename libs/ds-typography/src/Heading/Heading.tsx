@@ -1,4 +1,4 @@
-import { forwardRef, JSX } from 'react';
+import { forwardRef, JSX, RefObject, useImperativeHandle } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
@@ -6,7 +6,13 @@ import { HeadingProps } from './Heading.types';
 
 import styles from './Heading.module.scss';
 
-export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
+// Define the type for the refs object
+interface InputAndButtonRefs {
+  headingRef: RefObject<HTMLHeadingElement>;
+  buttonRef: RefObject<HTMLButtonElement>;
+}
+
+export const Heading = forwardRef<InputAndButtonRefs, HeadingProps>(
   (
     {
       id,
@@ -18,6 +24,7 @@ export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
       canBeManuallyFocused,
       hasSpacing,
       children,
+      // headingRef,
     },
     ref
   ): JSX.Element => {
@@ -34,9 +41,14 @@ export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
         spacingClassName = styles.heading_hasSpacingExtraSmall;
       }
     }
+    /*     useImperativeHandle(ref, () => ({
+      headingRef,
+      buttonRef,
+    })) */
+    const { headingRef, buttonRef } = ref as unknown as InputAndButtonRefs;
     return (
       <Tag
-        ref={ref}
+        ref={headingRef}
         id={id}
         className={`${styles.heading} ${levelClassName} ${spacingClassName} ${className}`}
         lang={lang}
@@ -44,6 +56,10 @@ export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
         tabIndex={canBeManuallyFocused ? -1 : undefined}
       >
         {children}
+        <h2>{'h2'}</h2>
+        <button ref={buttonRef} type={'button'} id={'buttid'}>
+          {'Knappen'}
+        </button>
       </Tag>
     );
   }

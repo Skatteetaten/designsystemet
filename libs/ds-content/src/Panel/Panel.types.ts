@@ -1,4 +1,4 @@
-import { ReactElement, ReactNode } from 'react';
+import { ElementRef, ReactElement, ReactNode, RefObject } from 'react';
 
 import {
   BaseProps,
@@ -32,6 +32,8 @@ export const panelSpacingArr = [
 export type PanelSpacing = (typeof panelSpacingArr)[number];
 
 export interface PanelComponentCommonProps extends BaseProps {
+  /** Lar heading i komponenten være fokuserbar ved å sett tabIndex: -1 */
+  canManuallySetTitleFocus?: boolean;
   /** Tekst eller markup for Panel. */
   children: ReactNode;
   /** Farge på border eller bakgrunn for Panel avhengig av variant som er valgt. */
@@ -56,6 +58,8 @@ export interface PanelComponentCommonProps extends BaseProps {
   titleAs?: HeadingAs;
   /** Definerer stilen til Panel. */
   variant?: PanelVariant;
+  /** Ref for Panel Header (H1-H6) */
+  //headingRef: RefObject<HTMLInputElement>;
 }
 
 export type PanelDiscriminatedGraphicProps =
