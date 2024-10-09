@@ -97,7 +97,7 @@ export const Defaults = {
     await expect(container).toBeInTheDocument();
     await expect(container).toHaveAttribute('aria-live', 'assertive');
     await expect(container).toHaveAttribute('aria-atomic');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const textNode = container.querySelector('p');
     await expect(textNode).not.toBeInTheDocument();
   },

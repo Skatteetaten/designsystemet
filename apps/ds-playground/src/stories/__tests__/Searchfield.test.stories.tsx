@@ -23,7 +23,6 @@ import {
 } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
-// eslint-disable-next-line @nx/enforce-module-boundaries
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
@@ -179,14 +178,14 @@ export const WithCustomClassNames = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    // eslint-disable-next-line testing-library/no-node-access
+
     const container = canvasElement.querySelector(`${wrapper} > div`);
     const label = canvas.getByText(longLabelText);
-    // eslint-disable-next-line testing-library/no-node-access
+
     const searchContainer = canvasElement.querySelector(
       `${wrapper} > div > div`
     );
-    // eslint-disable-next-line testing-library/no-node-access
+
     await expect(container).toHaveClass('dummyClassname');
     await expect(label).toHaveClass('dummyClassname');
     await expect(searchContainer).toHaveClass('dummyClassnameFormContainer');

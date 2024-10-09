@@ -3,7 +3,6 @@ import { WarningSVGpath } from '@skatteetaten/ds-icons';
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, fireEvent, within } from '@storybook/test';
 
-// eslint-disable-next-line @nx/enforce-module-boundaries
 import {
   loremIpsumWithoutSpaces,
   wrapper,
@@ -42,7 +41,6 @@ const defaultHelpText =
 export const Defaults = {
   name: 'Defaults',
   play: async ({ canvasElement }): Promise<void> => {
-    // eslint-disable-next-line testing-library/no-node-access
     const helpButton = canvasElement.querySelector('button');
     await expect(helpButton).not.toBeInTheDocument();
   },

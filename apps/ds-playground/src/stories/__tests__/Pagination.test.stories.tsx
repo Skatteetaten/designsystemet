@@ -307,10 +307,10 @@ const data = [
   },
 ];
 
-type List = typeof data;
+type DataList = typeof data;
 
 const listWithLimit = (
-  data: List,
+  data: DataList,
   start: number,
   listSize: number
 ): JSX.Element[] => {

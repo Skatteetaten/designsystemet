@@ -148,13 +148,13 @@ export const Defaults = {
     ).toBeInTheDocument();
 
     const calendarTable = canvas.getByRole('table');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const caption = calendarTable.querySelector('caption');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const cells = calendarTable.querySelectorAll('td');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const buttons = calendarTable.querySelectorAll('button');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const focusableButtons = calendarTable.querySelectorAll(
       'button[tabindex="0"]'
     );
@@ -205,7 +205,7 @@ export const WithMinDate = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const calendarTable = canvas.getByRole('table');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const disabledButtons = calendarTable.querySelectorAll('button:disabled');
     await expect(disabledButtons.length).toBe(14);
   },
@@ -223,7 +223,7 @@ export const WithMaxDate = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const calendarTable = canvas.getByRole('table');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const disabledButtons = calendarTable.querySelectorAll('button:disabled');
     await expect(disabledButtons.length).toBe(20);
   },
@@ -334,7 +334,7 @@ export const WithDisabledDates = {
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const calendarTable = canvas.getByRole('table');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const disabledButtons = calendarTable.querySelectorAll('button:disabled');
     await expect(disabledButtons.length).toBe(args.disabledDates?.length);
   },

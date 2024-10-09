@@ -51,7 +51,6 @@ type Story = StoryObj<typeof meta>;
 
 const Template: StoryFn<typeof RadioGroup.Radio> = (args) => (
   <RadioGroup legend={'radio example'} hideLegend>
-    {/* eslint-disable-next-line testing-library/no-node-access */}
     <RadioGroup.Radio {...args}>{args.children}</RadioGroup.Radio>
   </RadioGroup>
 );

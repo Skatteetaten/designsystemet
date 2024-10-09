@@ -106,7 +106,7 @@ export const WithDefaults = {
     const canvas = within(canvasElement);
     const header = canvas.getByRole('banner');
     await expect(header.tagName).toBe('HEADER');
-    // eslint-disable-next-line testing-library/no-node-access
+
     await expect(header.firstChild).toHaveAttribute('href');
     const skipLink = canvas.getByText(skipLinkText);
     await expect(skipLink).toBeInTheDocument();

@@ -11,69 +11,32 @@
     "importHelpers": true,
     "target": "es2021",
     "module": "esnext",
-    "lib": [
-      "es2021",
-      "dom",
-      "dom.iterable"
-    ],
+    "lib": ["es2021", "dom", "dom.iterable"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@skatteetaten/ds-buttons": [
-        "libs/ds-buttons/src/index.ts"
-      ],
-      "@skatteetaten/ds-collections": [
-        "libs/ds-collections/src/index.ts"
-      ],
-      "@skatteetaten/ds-content": [
-        "libs/ds-content/src/index.ts"
-      ],
+      "@skatteetaten/ds-buttons": ["libs/ds-buttons/src/index.ts"],
+      "@skatteetaten/ds-collections": ["libs/ds-collections/src/index.ts"],
+      "@skatteetaten/ds-content": ["libs/ds-content/src/index.ts"],
       "@skatteetaten/ds-core-designtokens": [
         "libs/ds-core-designtokens/src/index.ts"
       ],
-      "@skatteetaten/ds-core-utils": [
-        "libs/ds-core-utils/src/index.ts"
-      ],
-      "@skatteetaten/ds-dev-config": [
-        "libs/ds-dev-config/src/index.ts"
-      ],
-      "@skatteetaten/ds-forms": [
-        "libs/ds-forms/src/index.ts"
-      ],
-      "@skatteetaten/ds-icons": [
-        "libs/ds-icons/src/index.ts"
-      ],
-      "@skatteetaten/ds-layout": [
-        "libs/ds-layout/src/index.ts"
-      ],
-      "@skatteetaten/ds-navigation": [
-        "libs/ds-navigation/src/index.ts"
-      ],
-      "@skatteetaten/ds-overlays": [
-        "libs/ds-overlays/src/index.ts"
-      ],
-      "@skatteetaten/ds-progress": [
-        "libs/ds-progress/src/index.ts"
-      ],
-      "@skatteetaten/ds-status": [
-        "libs/ds-status/src/index.ts"
-      ],
-      "@skatteetaten/ds-table": [
-        "libs/ds-table/src/index.ts"
-      ],
-      "@skatteetaten/ds-typography": [
-        "libs/ds-typography/src/index.ts"
-      ],
-      "@skatteetaten/workspace-plugin": [
-        "tools/workspace-plugin/src/index.ts"
-      ]
+      "@skatteetaten/ds-core-utils": ["libs/ds-core-utils/src/index.ts"],
+      "@skatteetaten/ds-dev-config": ["libs/ds-dev-config/src/index.ts"],
+      "@skatteetaten/ds-forms": ["libs/ds-forms/src/index.ts"],
+      "@skatteetaten/ds-icons": ["libs/ds-icons/src/index.ts"],
+      "@skatteetaten/ds-layout": ["libs/ds-layout/src/index.ts"],
+      "@skatteetaten/ds-navigation": ["libs/ds-navigation/src/index.ts"],
+      "@skatteetaten/ds-overlays": ["libs/ds-overlays/src/index.ts"],
+      "@skatteetaten/ds-progress": ["libs/ds-progress/src/index.ts"],
+      "@skatteetaten/ds-status": ["libs/ds-status/src/index.ts"],
+      "@skatteetaten/ds-table": ["libs/ds-table/src/index.ts"],
+      "@skatteetaten/ds-typography": ["libs/ds-typography/src/index.ts"],
+      "@skatteetaten/workspace-plugin": ["tools/workspace-plugin/src/index.ts"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ],
+  "exclude": ["node_modules", "tmp"],
   "ts-node": {
     "compilerOptions": {
       "target": "es2021",
@@ -81,8 +44,5 @@
       "esModuleInterop": true
     }
   },
-  "files": [
-    "types/svg.d.ts",
-    "types/vite-env.d.ts"
-  ]
+  "files": ["types/svg.d.ts", "types/vite-env.d.ts"]
 }

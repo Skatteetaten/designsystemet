@@ -119,7 +119,7 @@ export const Defaults = {
     const canvas = within(canvasElement);
     const fieldset = canvas.getByRole('group');
     await expect(fieldset.tagName).toBe('FIELDSET');
-    // eslint-disable-next-line testing-library/no-node-access
+
     await expect(fieldset.firstElementChild?.tagName).toBe('LEGEND');
   },
 } satisfies Story;

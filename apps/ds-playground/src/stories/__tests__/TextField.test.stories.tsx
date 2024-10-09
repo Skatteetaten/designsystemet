@@ -177,10 +177,10 @@ export const WithCustomClassNames = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    // eslint-disable-next-line testing-library/no-node-access
+
     const container = canvasElement.querySelector(`${wrapper} > div`);
     const label = canvas.getByText(defaultLabelText);
-    // eslint-disable-next-line testing-library/no-node-access
+
     const errorMessageContainer = canvasElement.querySelector(
       '[id^=textFieldErrorId]>div'
     );
@@ -216,7 +216,7 @@ export const Defaults = {
     await expect(textbox).not.toBeRequired();
     await expect(textbox).not.toHaveAttribute('aria-invalid');
     await expect(textbox).not.toHaveAttribute('aria-describedby');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const errorMessageContainer = canvasElement.querySelector(
       '[id^=textFieldErrorId]'
     );
@@ -497,7 +497,7 @@ export const WithoutError = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const errorMessageContainer = canvasElement.querySelector(
       '[id^=textFieldErrorId]'
     );

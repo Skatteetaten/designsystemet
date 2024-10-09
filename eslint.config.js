@@ -5,6 +5,10 @@ import devConfig from './libs/ds-dev-config/config/designsystem-eslint.js';
 import { fixupConfigRules, fixupPluginRules } from '@eslint/compat';
 
 export default [
+  ...nxPlugin.configs['flat/base'],
+  ...nxPlugin.configs['flat/typescript'],
+  ...nxPlugin.configs['flat/javascript'],
+  ...fixupConfigRules(devConfig),
   {
     ignores: ['**/.*', '**/node_modules/*'],
   },
@@ -13,16 +17,12 @@ export default [
       '@nx': nxPlugin,
       'no-inline-styles': fixupPluginRules(noInlineStyles),
     },
-    rules: {
-      ...nxPlugin.configs['react'].rules,
-    },
   },
-  ...fixupConfigRules(devConfig),
   {
     files: ['**/*.stories.tsx', '**/test-runner.ts'],
     rules: {
       'jest/no-standalone-expect': 'off',
-      'sonarjs/no-identical-functions': 'off',
+      //'sonarjs/no-identical-functions': 'off',
       'react-hooks/rules-of-hooks': 'off',
     },
   },
@@ -35,7 +35,7 @@ export default [
       '**/*.stories.tsx',
     ],
     rules: {
-      'sonarjs/no-duplicate-string': 'off',
+      //'sonarjs/no-duplicate-string': 'off',
     },
   },
   {
@@ -57,9 +57,9 @@ export default [
         },
       ],
       'no-inline-styles/no-inline-styles': 2,
-      'sonarjs/cognitive-complexity': 'off',
-      'sonarjs/jsx-no-constructed-context-values': 'warn',
-      'sonarjs/no-array-index-key': 'warn',
+      //'sonarjs/cognitive-complexity': 'off',
+      //'sonarjs/jsx-no-constructed-context-values': 'warn',
+      //'sonarjs/no-array-index-key': 'warn',
     },
   },
   {

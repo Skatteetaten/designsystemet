@@ -17,7 +17,6 @@ import {
   getTopBannerLangPickerLocaleDefault,
   getTopBannerLangPickerShowSamiDefault,
 } from '../../../../../libs/ds-layout/src/TopBannerLangPicker/defaults';
-// eslint-disable-next-line @nx/enforce-module-boundaries
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import customLogo from '../../assets/custom-logo.svg';
 import skeLogo from '../../assets/ske-logo.svg';

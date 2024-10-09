@@ -193,7 +193,7 @@ export const WithImage = {
     const button = canvas.getByRole('button');
     await userEvent.click(button);
     const modal = canvas.getByRole('dialog');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const image = modal.querySelector('img');
     await expect(image).toBeInTheDocument();
     await expect(image).toHaveAttribute('alt', 'Image alt tekst');
@@ -359,7 +359,6 @@ export const WithHideTitle = {
 } satisfies Story;
 
 const TemplateWithShadowDom: StoryFn<typeof Modal> = (args) => {
-  // eslint-disable-next-line testing-library/no-node-access
   const element = document.querySelector('modal-customelement');
   const shadowRoot = element?.shadowRoot;
   const ref = useRef<HTMLDialogElement>(null);
@@ -403,7 +402,7 @@ export const WithShadowDom = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     await expect(canvas.queryByRole('dialog')).not.toBeInTheDocument();
-    // eslint-disable-next-line testing-library/no-node-access
+
     const customElement = canvasElement.querySelector(
       'modal-customelement'
     ) as HTMLElement;

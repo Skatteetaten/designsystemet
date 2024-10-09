@@ -4,6 +4,7 @@
   "version": "1.4.0",
   "license": "Apache-2.0",
   "homepage": "https://www.skatteetaten.no/stilogtone/designsystemet/",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Skatteetaten/designsystemet.git"
@@ -21,6 +22,5 @@
   },
   "scripts": {},
   "dependencies": {},
-  "devDependencies": {},
-  "type": "module"
+  "devDependencies": {}
 }

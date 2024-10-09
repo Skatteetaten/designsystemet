@@ -158,14 +158,14 @@ export const WithCustomClassNames = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    // eslint-disable-next-line testing-library/no-node-access
+
     const container = canvasElement.querySelector(`${wrapper} > div`);
     const label = canvas.getByText(defaultLabelText);
-    // eslint-disable-next-line testing-library/no-node-access
+
     const selectContainer = canvasElement.querySelector(
       `${wrapper} > div > div`
     );
-    // eslint-disable-next-line testing-library/no-node-access
+
     const errorMessageContainer = canvasElement.querySelector(
       '[id^=selectErrorId]>div'
     );
@@ -205,7 +205,7 @@ export const Defaults = {
     await expect(selectNode).not.toBeRequired();
     await expect(selectNode).not.toHaveAttribute('aria-invalid');
     await expect(selectNode).not.toHaveAttribute('aria-describedby');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const errorMessageContainer = canvasElement.querySelector(
       '[id^=selectErrorId]'
     );

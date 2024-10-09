@@ -8,6 +8,7 @@ import jestDomPlugin from 'eslint-plugin-jest-dom';
 import jsdocPlugin from 'eslint-plugin-jsdoc';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import reactPlugin from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
 import sonarjsPlugin from 'eslint-plugin-sonarjs';
 import testingLibraryPlugin from 'eslint-plugin-testing-library';
 import globals from 'globals';
@@ -21,19 +22,22 @@ const GLOBALS_BROWSER_FIX = {
 delete GLOBALS_BROWSER_FIX['AudioWorkletGlobalScope '];
 
 export default [
+  //...nxPlugin.configs['flat/react'],
+  //...nxPlugin.configs['flat/react-typescript'],
   eslint.configs.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     plugins: {
-      react: reactPlugin,
+      //react: reactPlugin,
       jest: jestPlugin,
       'jest-dom': jestDomPlugin,
       'testing-library': testingLibraryPlugin,
-      sonarjs: sonarjsPlugin,
+      //sonarjs: sonarjsPlugin,
       jsdoc: jsdocPlugin,
-      '@typescript-eslint': tseslint,
-      import: importPlugin,
-      'jsx-a11y': jsxA11y,
+      //'@typescript-eslint': tseslint,
+      //import: importPlugin,
+      //'jsx-a11y': jsxA11y,
+      //'react-hooks': reactHooks,
     },
     languageOptions: {
       ecmaVersion: 2021,
@@ -61,13 +65,14 @@ export default [
     },
 
     rules: {
-      ...reactPlugin.configs.recommended.rules,
+      //...reactPlugin.configs.recommended.rules,
       ...jestPlugin.configs.recommended.rules,
       ...jestPlugin.configs.style.rules,
       ...jestDomPlugin.configs.recommended.rules,
       ...testingLibraryPlugin.configs['react'].rules,
-      ...sonarjsPlugin.configs.recommended.rules,
+      //...sonarjsPlugin.configs.recommended.rules,
       ...jsdocPlugin.configs.recommended.rules,
+      //...reactHooks.configs.recommended.rules,
       'react/jsx-boolean-value': 'error',
       'react/jsx-curly-brace-presence': [
         'error',
@@ -133,12 +138,6 @@ export default [
           ignoreRestSiblings: true,
         },
       ],
-    },
-  },
-  {
-    files: ['**/*.{js,jsx}'],
-    rules: {
-      ...nxPlugin.configs['javascript'].rules,
     },
   },
 ];

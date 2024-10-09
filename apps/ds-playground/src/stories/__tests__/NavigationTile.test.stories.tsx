@@ -201,7 +201,7 @@ export const WithIcon = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const svg = link.querySelector('svg');
     await expect(svg).toHaveAttribute('aria-hidden', 'true');
     await expect(svg).toHaveAttribute('viewBox', systemIconViewBox);
@@ -222,7 +222,7 @@ export const WithExternalIcon = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const svg = link.querySelector('svg');
     await expect(svg).toHaveAttribute(
       'aria-label',

@@ -161,7 +161,6 @@ export const ClickSkipLink = {
 } satisfies Story;
 
 const TemplateWithShadowDom: StoryFn<typeof TopBannerSkipLink> = (args) => {
-  // eslint-disable-next-line testing-library/no-node-access
   const element = document.querySelector('skiplink-customelement');
   const shadowRoot = element?.shadowRoot;
   return (
@@ -189,13 +188,11 @@ export const WithShadowDom = {
     const canvas = within(canvasElement);
     //skipLink finnes ikke utenfor shadowDom
     await expect(canvas.queryByRole('link')).not.toBeInTheDocument();
-    // eslint-disable-next-line testing-library/no-node-access
+
     const customElement = canvasElement.querySelector(`skiplink-customelement`);
     await expect(customElement).toBeInTheDocument();
     const skipLink =
-      customElement?.shadowRoot &&
-      // eslint-disable-next-line testing-library/no-node-access
-      customElement.shadowRoot.querySelector('a');
+      customElement?.shadowRoot && customElement.shadowRoot.querySelector('a');
 
     await expect(skipLink).toBeInTheDocument();
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
@@ -203,7 +200,6 @@ export const WithShadowDom = {
 
     const main =
       customElement?.shadowRoot &&
-      // eslint-disable-next-line testing-library/no-node-access
       customElement.shadowRoot.querySelector('main:focus');
     await expect(main).toBeInTheDocument();
   },

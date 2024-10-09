@@ -125,7 +125,7 @@ export const Defaults = {
     await expect(container).toBeInTheDocument();
     await expect(container).toHaveAttribute('aria-live', 'polite');
     await expect(container).toHaveAttribute('aria-atomic');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const alertNode = container.querySelector('div');
     await expect(alertNode).not.toBeInTheDocument();
   },
@@ -146,10 +146,10 @@ export const DefaultsWithMessage = {
     const container = canvas.getAllByRole('generic')[1];
     await expect(container).toBeInTheDocument();
     await expect(container).toHaveAttribute('aria-live', 'polite');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const alertNode = container.querySelector('div');
     await expect(alertNode).toBeInTheDocument();
-    // eslint-disable-next-line testing-library/no-node-access
+
     const iconButtonNode = container.querySelector('button');
     await expect(iconButtonNode).not.toBeInTheDocument();
   },
