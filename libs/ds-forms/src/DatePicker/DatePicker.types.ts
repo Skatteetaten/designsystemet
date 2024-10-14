@@ -57,7 +57,7 @@ export interface DatePickerProps
   value?: Date | null;
   /** Initielt uthevet dato. (Hvis value har en dato, så blir den datoen uthevet istedenfor.) */
   initialPickerDate?: Date;
-  /** Liste med deaktiverte datoer. for eksempel helligdager. */
+  /** Liste med deaktiverte datoer. For eksempel helligdager/helg. */
   disabledDates?: Date[];
   /** Minste tillatte dato */
   minDate?: Date;
