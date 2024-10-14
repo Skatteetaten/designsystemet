@@ -245,13 +245,14 @@ export const getFirstFocusableDate = (
 
 export const findNextAvailableDate = (
   startDate: Date,
-  disabledDates?: Date[]
+  disabledDates?: Date[],
+  maxDate?: Date
 ): Date => {
   if (!disabledDates || disabledDates.length === 0) {
     return addDays(startDate, 1);
   }
 
-  const maxDate = new Date().setFullYear(lastValidYear);
+  const maxNextDate = maxDate ?? new Date().setFullYear(lastValidYear);
   const disabledTimestamps = new Set(
     disabledDates.map((date) => date.getTime())
   );
@@ -261,7 +262,7 @@ export const findNextAvailableDate = (
 
   while (
     disabledTimestamps.has(currentTimestamp) &&
-    isBefore(currentDate, maxDate)
+    isBefore(currentDate, maxNextDate)
   ) {
     currentDate = addDays(currentDate, 1);
     currentTimestamp = currentDate.getTime();
@@ -272,13 +273,14 @@ export const findNextAvailableDate = (
 
 export const findPreviousAvailableDate = (
   startDate: Date,
-  disabledDates?: Date[]
+  disabledDates?: Date[],
+  minDate?: Date
 ): Date => {
   if (!disabledDates || disabledDates.length === 0) {
     return addDays(startDate, -1);
   }
 
-  const minDate = new Date('1000-01-01');
+  const minPrevDate = minDate ?? new Date('0001-01-01');
   const disabledTimestamps = new Set(
     disabledDates.map((date) => date.getTime())
   );
@@ -288,7 +290,7 @@ export const findPreviousAvailableDate = (
 
   while (
     disabledTimestamps.has(currentTimestamp) &&
-    isBefore(minDate, currentDate)
+    isBefore(minPrevDate, currentDate)
   ) {
     currentDate = addDays(currentDate, -1);
     currentTimestamp = currentDate.getTime();

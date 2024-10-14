@@ -1762,6 +1762,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
           <td>
             <button class="_calendarTableDateButton_948m6_72"
                     type="button"
+                    disabled
                     tabindex="-1"
                     aria-label=" 6. Januar 2024"
             >
@@ -1771,6 +1772,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
           <td>
             <button class="_calendarTableDateButton_948m6_72"
                     type="button"
+                    disabled
                     tabindex="-1"
                     aria-label=" 7. Januar 2024"
             >
@@ -1827,6 +1829,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
           <td>
             <button class="_calendarTableDateButton_948m6_72"
                     type="button"
+                    disabled
                     tabindex="-1"
                     aria-label=" 13. Januar 2024"
             >
@@ -1836,6 +1839,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
           <td>
             <button class="_calendarTableDateButton_948m6_72"
                     type="button"
+                    disabled
                     tabindex="-1"
                     aria-label=" 14. Januar 2024"
             >
@@ -1875,7 +1879,6 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
           <td>
             <button class="_calendarTableDateButton_948m6_72"
                     type="button"
-                    disabled
                     tabindex="-1"
                     aria-label=" 18. Januar 2024"
             >
@@ -1894,6 +1897,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
           <td>
             <button class="_calendarTableDateButton_948m6_72"
                     type="button"
+                    disabled
                     tabindex="-1"
                     aria-label=" 20. Januar 2024"
             >
@@ -1903,6 +1907,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
           <td>
             <button class="_calendarTableDateButton_948m6_72"
                     type="button"
+                    disabled
                     tabindex="-1"
                     aria-label=" 21. Januar 2024"
             >
@@ -1959,6 +1964,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
           <td>
             <button class="_calendarTableDateButton_948m6_72"
                     type="button"
+                    disabled
                     tabindex="-1"
                     aria-label=" 27. Januar 2024"
             >
@@ -1968,6 +1974,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
           <td>
             <button class="_calendarTableDateButton_948m6_72"
                     type="button"
+                    disabled
                     tabindex="-1"
                     aria-label=" 28. Januar 2024"
             >
@@ -2006,7 +2013,6 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
           <td>
             <button class="_calendarTableDateButton_948m6_72 _calendarTableDateButton_adjacentMonth_948m6_83"
                     type="button"
-                    disabled
                     tabindex="-1"
                     aria-label=" 1. Februar 2024"
             >
@@ -2025,6 +2031,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
           <td>
             <button class="_calendarTableDateButton_948m6_72 _calendarTableDateButton_adjacentMonth_948m6_83"
                     type="button"
+                    disabled
                     tabindex="-1"
                     aria-label=" 3. Februar 2024"
             >
@@ -2034,6 +2041,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
           <td>
             <button class="_calendarTableDateButton_948m6_72 _calendarTableDateButton_adjacentMonth_948m6_83"
                     type="button"
+                    disabled
                     tabindex="-1"
                     aria-label=" 4. Februar 2024"
             >

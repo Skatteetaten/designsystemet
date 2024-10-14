@@ -145,11 +145,7 @@ export const DatePickerCalendar = forwardRef<
       }
     };
 
-    const updateFocus = (
-      currentDate: Date,
-      dateToFocus: Date,
-      isPrevMonth: boolean
-    ): void => {
+    const updateFocus = (currentDate: Date, dateToFocus: Date): void => {
       if (isNotInAllowedRange(dateToFocus, minDate, maxDate)) {
         return;
       }
@@ -163,7 +159,7 @@ export const DatePickerCalendar = forwardRef<
         !isMonthInvalid(
           dateToFocus.getMonth(),
           dateToFocus.getFullYear(),
-          isPrevMonth
+          dateToFocus.getMonth() < currentDate.getMonth()
         )
       ) {
         setSelectedMonthIndex(dateToFocus.getMonth());
@@ -191,36 +187,40 @@ export const DatePickerCalendar = forwardRef<
           event.preventDefault();
           const newFocusableDate = findPreviousAvailableDate(
             addDays(currentDate, -6),
-            disabledDates
+            disabledDates,
+            minDate
           );
-          updateFocus(currentDate, newFocusableDate, true);
+          updateFocus(currentDate, newFocusableDate);
           break;
         }
         case 'ArrowDown': {
           event.preventDefault();
           const newFocusableDate = findNextAvailableDate(
             addDays(currentDate, 6),
-            disabledDates
+            disabledDates,
+            maxDate
           );
-          updateFocus(currentDate, newFocusableDate, false);
+          updateFocus(currentDate, newFocusableDate);
           break;
         }
         case 'ArrowLeft': {
           event.preventDefault();
           const newFocusableDate = findPreviousAvailableDate(
             currentDate,
-            disabledDates
+            disabledDates,
+            minDate
           );
-          updateFocus(currentDate, newFocusableDate, true);
+          updateFocus(currentDate, newFocusableDate);
           break;
         }
         case 'ArrowRight': {
           event.preventDefault();
           const newFocusableDate = findNextAvailableDate(
             currentDate,
-            disabledDates
+            disabledDates,
+            maxDate
           );
-          updateFocus(currentDate, newFocusableDate, false);
+          updateFocus(currentDate, newFocusableDate);
           break;
         }
         case 'Tab': {

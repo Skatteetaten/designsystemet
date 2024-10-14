@@ -325,6 +325,8 @@ export const WithDisabledDates = {
       new Date('2024.02.03'),
       new Date('2024.02.04'),
     ],
+    minDate: new Date('2023.12.01'),
+    maxDate: new Date('2024.02.10'),
   },
   argTypes: {
     disabledDates: { table: { disable: false } },
