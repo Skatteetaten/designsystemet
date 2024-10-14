@@ -185,7 +185,7 @@ const ExpandEditSortTable = (
           if (isExpandable) {
             return (
               <Table.Row
-                key={`${id}${index}`}
+                key={id}
                 data-testid={`row-expand-${index}`}
                 expandButtonAriaDescribedby={id}
                 expandableContent={
