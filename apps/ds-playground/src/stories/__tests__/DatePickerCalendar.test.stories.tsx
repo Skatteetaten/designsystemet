@@ -26,7 +26,7 @@ const DatesTemplate: StoryFn<typeof DatePickerCalendar> = (args) => {
   );
 };
 
-const today = new Date('2024.01.15');
+const today = new Date('2024-01-15');
 const meta = {
   component: DatePickerCalendar,
   title: 'Tester/DatePicker/DatePickerCalendar',
@@ -181,7 +181,7 @@ export const WithSelectedDate = {
   name: 'WithSelectedDate (B2)',
   args: {
     ...defaultArgs,
-    selectedDate: new Date('2024.01.31'),
+    selectedDate: new Date('2024-01-31'),
   },
   argTypes: {
     selectedDate: { table: { disable: false } },
@@ -197,7 +197,7 @@ export const WithMinDate = {
   name: 'With MinDate (A3 delvis)',
   args: {
     ...defaultArgs,
-    minDate: new Date('2024.01.15'),
+    minDate: new Date('2024-01-15'),
   },
   argTypes: {
     minDate: { table: { disable: false } },
@@ -215,7 +215,7 @@ export const WithMaxDate = {
   name: 'With MaxDate (A3 delvis)',
   args: {
     ...defaultArgs,
-    maxDate: new Date('2024.01.15'),
+    maxDate: new Date('2024-01-15'),
   },
   argTypes: {
     maxDate: { table: { disable: false } },
@@ -233,8 +233,8 @@ export const WithMaxDateWhereSelectedDateIsWithinTheRange = {
   name: 'With MaxDate Where Selected Date Is Within The Range',
   args: {
     ...defaultArgs,
-    selectedDate: new Date('2024.01.16'),
-    maxDate: new Date('2024.01.15'),
+    selectedDate: new Date('2024-01-16'),
+    maxDate: new Date('2024-01-15'),
   },
   argTypes: {
     selectedDate: { table: { disable: false } },
@@ -313,20 +313,20 @@ export const WithDisabledDates = {
   args: {
     ...defaultArgs,
     disabledDates: [
-      new Date('2024.01.04'),
-      new Date('2024.01.06'),
-      new Date('2024.01.07'),
-      new Date('2024.01.13'),
-      new Date('2024.01.14'),
-      new Date('2024.01.21'),
-      new Date('2024.01.20'),
-      new Date('2024.01.27'),
-      new Date('2024.01.28'),
-      new Date('2024.02.03'),
-      new Date('2024.02.04'),
+      new Date('2024-01-04'),
+      new Date('2024-01-06'),
+      new Date('2024-01-07'),
+      new Date('2024-01-13'),
+      new Date('2024-01-14'),
+      new Date('2024-01-21'),
+      new Date('2024-01-20'),
+      new Date('2024-01-27'),
+      new Date('2024-01-28'),
+      new Date('2024-02-03'),
+      new Date('2024-02-04'),
     ],
-    minDate: new Date('2023.12.01'),
-    maxDate: new Date('2024.02.10'),
+    minDate: new Date('2023-12-01'),
+    maxDate: new Date('2024-02-10'),
   },
   argTypes: {
     disabledDates: { table: { disable: false } },
