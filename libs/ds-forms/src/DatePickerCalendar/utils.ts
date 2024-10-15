@@ -4,10 +4,10 @@ import {
   getWeekOfMonth,
   isAfter,
   isBefore,
-  isSameDay,
   isSunday,
   isToday,
   isValid,
+  isWithinInterval,
 } from 'date-fns';
 
 const lastValidYear = 9999;
@@ -171,20 +171,16 @@ export const isWithinMinMaxRange = (
   minDate?: Date,
   maxDate?: Date
 ): boolean => {
-  if (minDate) minDate.setHours(0, 0, 0, 0);
-  if (maxDate) maxDate.setHours(23, 59, 59, 999);
+  const firstValidDate = new Date('0001-01-01');
+  const lastValidDate = new Date();
+  lastValidDate.setMonth(11);
+  lastValidDate.setDate(31);
+  lastValidDate.setFullYear(lastValidYear);
 
-  const isAfterMinDate =
-    minDate && isValid(minDate)
-      ? isAfter(date, minDate) || isSameDay(date, minDate)
-      : true;
-  const isBeforeMaxDate =
-    maxDate && isValid(maxDate)
-      ? isBefore(date, maxDate) || isSameDay(date, maxDate)
-      : true;
-  const isBeforeLastYear = date.getFullYear() < lastValidYear;
+  const start = minDate && isValid(minDate) ? minDate : firstValidDate;
+  const end = maxDate && isValid(maxDate) ? maxDate : lastValidDate;
 
-  return isAfterMinDate && isBeforeMaxDate && isBeforeLastYear;
+  return isWithinInterval(date, { start, end });
 };
 
 export const getNameOfMonthsAndDays = (): {
