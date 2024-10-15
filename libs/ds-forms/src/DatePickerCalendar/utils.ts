@@ -4,8 +4,10 @@ import {
   getWeekOfMonth,
   isAfter,
   isBefore,
+  isSameDay,
   isSunday,
   isToday,
+  isValid,
 } from 'date-fns';
 
 const lastValidYear = 9999;
@@ -79,7 +81,7 @@ function getCalendarCells(
       isAdjacentMonth: true,
       disabled:
         disabledDates?.some((d) => d.getTime() === date.getTime()) ||
-        isNotInAllowedRange(date, minDate, maxDate),
+        !isWithinMinMaxRange(date, minDate, maxDate),
       isToday: isToday(date),
       text: String(date.getDate()),
     };
@@ -95,7 +97,7 @@ function getCalendarCells(
       isAdjacentMonth: false,
       disabled:
         disabledDates?.some((d) => d.getTime() === date.getTime()) ||
-        isNotInAllowedRange(date, minDate, maxDate),
+        !isWithinMinMaxRange(date, minDate, maxDate),
       isToday: isToday(date),
       text: String(date.getDate()),
     };
@@ -113,7 +115,7 @@ function getCalendarCells(
       isAdjacentMonth: true,
       disabled:
         disabledDates?.some((d) => d.getTime() === date.getTime()) ||
-        isNotInAllowedRange(date, minDate, maxDate),
+        !isWithinMinMaxRange(date, minDate, maxDate),
       isToday: isToday(date),
       text: String(date.getDate()),
     };
@@ -164,17 +166,25 @@ export function getCalendarRows(
   return rows;
 }
 
-export const isNotInAllowedRange = (
+export const isWithinMinMaxRange = (
   date: Date,
   minDate?: Date,
   maxDate?: Date
 ): boolean => {
-  minDate && minDate.setHours(0, 0, 0);
-  return (
-    (minDate ? isBefore(date, minDate) : false) ||
-    (maxDate ? isAfter(date, maxDate) : false) ||
-    date.getFullYear() > lastValidYear
-  );
+  if (minDate) minDate.setHours(0, 0, 0, 0);
+  if (maxDate) maxDate.setHours(23, 59, 59, 999);
+
+  const isAfterMinDate =
+    minDate && isValid(minDate)
+      ? isAfter(date, minDate) || isSameDay(date, minDate)
+      : true;
+  const isBeforeMaxDate =
+    maxDate && isValid(maxDate)
+      ? isBefore(date, maxDate) || isSameDay(date, maxDate)
+      : true;
+  const isBeforeLastYear = date.getFullYear() < lastValidYear;
+
+  return isAfterMinDate && isBeforeMaxDate && isBeforeLastYear;
 };
 
 export const getNameOfMonthsAndDays = (): {
@@ -224,7 +234,7 @@ export const getFirstFocusableDate = (
   minDate?: Date,
   maxDate?: Date
 ): Date => {
-  if (isNotInAllowedRange(selectedDate, minDate, maxDate)) {
+  if (!isWithinMinMaxRange(selectedDate, minDate, maxDate)) {
     let focusableDate = undefined;
     if (maxDate && isAfter(selectedDate, maxDate)) {
       focusableDate = maxDate;
@@ -232,10 +242,7 @@ export const getFirstFocusableDate = (
       focusableDate = minDate;
     }
 
-    if (
-      focusableDate &&
-      !isNotInAllowedRange(focusableDate, minDate, maxDate)
-    ) {
+    if (focusableDate && isWithinMinMaxRange(focusableDate, minDate, maxDate)) {
       return focusableDate;
     }
   }

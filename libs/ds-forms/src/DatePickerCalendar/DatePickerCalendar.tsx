@@ -24,7 +24,7 @@ import {
   getNameOfMonthsAndDays,
   getGridIdxForDate,
   getFirstFocusableDate,
-  isNotInAllowedRange,
+  isWithinMinMaxRange,
   findNextAvailableDate,
   findPreviousAvailableDate,
 } from './utils';
@@ -146,7 +146,7 @@ export const DatePickerCalendar = forwardRef<
     };
 
     const updateFocus = (currentDate: Date, dateToFocus: Date): void => {
-      if (isNotInAllowedRange(dateToFocus, minDate, maxDate)) {
+      if (!isWithinMinMaxRange(dateToFocus, minDate, maxDate)) {
         return;
       }
 
