@@ -1,0 +1,38 @@
+.chip {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  padding: var(--spacing-xs) var(--spacing-m);
+  border: 1px solid var(--semantic-interactive-main);
+  border-radius: 2.75rem;
+  background-color: var(--palette-denim-5);
+  color: var(--semantic-interactive-main);
+  cursor: pointer;
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--semantic-line-height-default);
+  text-decoration-line: none;
+
+  &:hover {
+    background-color: var(--semantic-interactive-background);
+  }
+
+  &:focus {
+    outline: 2px solid var(--semantic-interactive-main);
+    outline-offset: 2px;
+  }
+
+  &_selected {
+    background-color: var(--semantic-interactive-main);
+    color: var(--palette-graphite-0);
+
+    &:hover {
+      background-color: var(--semantic-interactive-background);
+    }
+
+    &:focus {
+      outline: 2px solid var(--semantic-interactive-main);
+      outline-offset: 2px;
+    }
+  }
+}

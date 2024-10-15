@@ -1,0 +1,27 @@
+import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import * as ChipStories from './Chip.stories';
+import { VersionBadge } from '../utils/VersionBadge';
+import { DocIntro } from '../utils/DocIntro';
+
+<Meta of={ChipStories} />
+
+# Chip
+
+<VersionBadge packageName={'buttons'} />
+
+<DocIntro
+  name="Chip"
+  url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/chip/"
+/>
+
+<Primary />
+
+```tsx
+import { Chip } from '@skatteetaten/ds-buttons';
+```
+
+<Controls />
+
+## Examples
+
+<Canvas of={ChipStories.Examples} />
