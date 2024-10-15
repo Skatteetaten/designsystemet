@@ -258,9 +258,15 @@ export const findNextAvailableDate = (
     return addDays(startDate, 1);
   }
 
+  startDate.setHours(0, 0, 0);
+  maxDate?.setHours(0, 0, 0);
+
   const maxNextDate = maxDate ?? new Date().setFullYear(lastValidYear);
   const disabledTimestamps = new Set(
-    disabledDates.map((date) => date.getTime())
+    disabledDates.map((date) => {
+      date.setHours(0, 0, 0);
+      return date.getTime();
+    })
   );
 
   let currentDate = addDays(startDate, 1);
@@ -286,9 +292,15 @@ export const findPreviousAvailableDate = (
     return addDays(startDate, -1);
   }
 
+  startDate.setHours(0, 0, 0);
+  minDate?.setHours(0, 0, 0);
+
   const minPrevDate = minDate ?? new Date('0001-01-01');
   const disabledTimestamps = new Set(
-    disabledDates.map((date) => date.getTime())
+    disabledDates.map((date) => {
+      date.setHours(0, 0, 0);
+      return date.getTime();
+    })
   );
 
   let currentDate = addDays(startDate, -1);
