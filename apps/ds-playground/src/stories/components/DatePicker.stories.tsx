@@ -132,6 +132,7 @@ export const Preview: Story = {
 export const Examples: Story = {
   render: (_args): JSX.Element => {
     const [value, setValue] = useState<Date | null>(null);
+    const [inputValue, setInputValue] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
     const minDate = new Date(2024, 6, 1);
@@ -140,7 +141,11 @@ export const Examples: Story = {
     // Ved å lytte på onSelectDate får man tilgang til dato (eller null dersom datoen i feltet ikke er gyldig).
     const handleSelect = (date: Date | null): void => {
       if (date === null) {
-        setErrorMessage('Ugyldig dato');
+        const errorMessage =
+          inputValue !== ''
+            ? 'Datoen har ikke rett format. Skriv slik: 17.05.2024.'
+            : 'Dato må fylles ut eller velges.';
+        setErrorMessage(errorMessage);
       } else if (!isWithinInterval(date, { start: minDate, end: maxDate })) {
         // isWithinInterval og format kommer fra date-fns
         setErrorMessage(
@@ -162,6 +167,7 @@ export const Examples: Story = {
           minDate={minDate}
           required
           onSelectDate={handleSelect}
+          onChange={(e) => setInputValue(e.target.value)}
         />
         <TextField
           className={'textField300'}
