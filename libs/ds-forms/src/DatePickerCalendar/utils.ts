@@ -178,6 +178,8 @@ export const isWithinMinMaxRange = (
   lastValidDate.setDate(31);
   lastValidDate.setFullYear(lastValidYear);
 
+  minDate?.setHours(0, 0, 0);
+
   const start = minDate && isValid(minDate) ? minDate : firstValidDate;
   const end = maxDate && isValid(maxDate) ? maxDate : lastValidDate;
 
