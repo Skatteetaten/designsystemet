@@ -2,7 +2,7 @@ import {
   ComponentPropsWithoutRef,
   KeyboardEventHandler,
   MouseEventHandler,
-  JSX,
+  ReactNode,
 } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
@@ -26,7 +26,7 @@ export interface TopBannerLangPickerButtonProps
   /**  Om komponenten skal være i fokus. */
   focus?: boolean;
   /** Flagg som samsvarer med språket. */
-  flagIcon: JSX.Element;
+  flagIcon: ReactNode;
   /** Navn på språket. */
   children: string;
 }

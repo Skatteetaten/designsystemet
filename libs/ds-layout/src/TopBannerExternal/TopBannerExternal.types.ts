@@ -2,6 +2,7 @@ import { MouseEventHandler, ReactNode, RefObject } from 'react';
 
 import { BaseProps, Languages } from '@skatteetaten/ds-core-utils';
 
+import { TopBannerLangPickerProps } from '../TopBannerLangPicker/TopBannerLangPicker.types';
 import { TopBannerLogoProps } from '../TopBannerLogo/TopBannerLogo.types';
 import { TopBannerSkipLinkProps } from '../TopBannerSkipLink/TopBannerSkipLink.types';
 
@@ -62,6 +63,8 @@ export interface TopBannerExternalProps extends BaseProps {
    * logo.as HTML-tag for Logo. Styrer om logo skal kodes som en lenke eller ikke. Hvis default logo endres til å ikke være en lenke, så blir logoAltText automatisk tilpasset.
    */
   logo?: TopBannerLogoProps;
+  /** Legger til flere alternativer i språkvelgeren. */
+  additionalLanguages?: TopBannerLangPickerProps['additionalLanguages'];
 }
 
 export interface TopBannerExternalHandle extends RefObject<HTMLHeadElement> {

@@ -106,9 +106,15 @@
   @media (min-width: $breakpoint-s) {
     left: 0;
   }
+
+  @media (min-width: $breakpoint-m) {
+    left: auto;
+  }
 }
 
 .list {
+  overflow: auto;
+  max-height: calc(100vh - 100px);
   box-sizing: border-box;
   padding: 0;
   border: 1px solid var(--palette-graphite-70);

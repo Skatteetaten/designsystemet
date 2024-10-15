@@ -46,6 +46,7 @@ export const TopBannerExternal = forwardRef<
       skipLink,
       thirdColumn,
       user,
+      additionalLanguages,
       showSami,
       children,
       onLanguageClick,
@@ -223,6 +224,7 @@ export const TopBannerExternal = forwardRef<
                   openMenu={openMenu}
                   setOpenMenu={setOpenMenu}
                   menuButtonRef={languagePickerButtonRef}
+                  additionalLanguages={additionalLanguages}
                   onLanguageClick={onLanguageClick}
                 />
 
