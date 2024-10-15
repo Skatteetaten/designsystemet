@@ -4,6 +4,7 @@ import {
   getWeekOfMonth,
   isAfter,
   isBefore,
+  isSameDay,
   isSunday,
   isToday,
   isValid,
@@ -80,7 +81,7 @@ function getCalendarCells(
       date,
       isAdjacentMonth: true,
       disabled:
-        disabledDates?.some((d) => d.getTime() === date.getTime()) ||
+        disabledDates?.some((d) => isSameDay(d, date)) ||
         !isWithinMinMaxRange(date, minDate, maxDate),
       isToday: isToday(date),
       text: String(date.getDate()),
@@ -96,7 +97,7 @@ function getCalendarCells(
       date,
       isAdjacentMonth: false,
       disabled:
-        disabledDates?.some((d) => d.getTime() === date.getTime()) ||
+        disabledDates?.some((d) => isSameDay(d, date)) ||
         !isWithinMinMaxRange(date, minDate, maxDate),
       isToday: isToday(date),
       text: String(date.getDate()),
@@ -114,7 +115,7 @@ function getCalendarCells(
       date,
       isAdjacentMonth: true,
       disabled:
-        disabledDates?.some((d) => d.getTime() === date.getTime()) ||
+        disabledDates?.some((d) => isSameDay(d, date)) ||
         !isWithinMinMaxRange(date, minDate, maxDate),
       isToday: isToday(date),
       text: String(date.getDate()),
