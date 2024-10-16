@@ -1,9 +1,19 @@
-import { ReactNode } from 'react';
+import { ElementRef, ReactNode, Ref } from 'react';
 
 import { BaseProps, Position } from '@skatteetaten/ds-core-utils';
 
 type EditButtonPosition = Extract<Position, 'left' | 'right'>;
 export interface TableEditableRowProps extends BaseProps {
+  /**
+   * Ref til redigeringsknappen. Kan brukes til å sette fokus i avanserte tabeller hvor den innebyggede
+   * fokushåndteringen ikke er tilstrekkelig.
+   */
+  editButtonRef?: Ref<ElementRef<'button'>>;
+  /**
+   * Ref til innholdet til rad i redigeringsmodus. Kan brukes til å sette fokus i avanserte tabeller hvor den innebyggede
+   * fokushåndteringen ikke er tilstrekkelig.
+   */
+  editableContentRef?: Ref<ElementRef<'span'>>;
   /**
    * rendrer innholdet i redigeringsmodus
    *
@@ -19,6 +29,6 @@ export interface TableEditableRowProps extends BaseProps {
   editButtonPosition?: EditButtonPosition;
   /** Callback når redigerknappen trykkes. */
   onEdit?: () => void;
-  /** Innhold i raden*/
+  /** Innhold i raden */
   children?: ReactNode;
 }
