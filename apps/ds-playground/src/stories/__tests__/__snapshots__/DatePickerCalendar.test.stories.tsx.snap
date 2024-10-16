@@ -1851,8 +1851,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
           <td>
             <button class="_calendarTableDateButton_948m6_72  _calendarTableDateButton_today_948m6_90"
                     type="button"
-                    tabindex="0"
-                    aria-current="true"
+                    tabindex="-1"
                     aria-label="I dag 15. Januar 2024"
             >
               15
@@ -1861,7 +1860,8 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
           <td>
             <button class="_calendarTableDateButton_948m6_72"
                     type="button"
-                    tabindex="-1"
+                    tabindex="0"
+                    aria-current="true"
                     aria-label=" 16. Januar 2024"
             >
               16
