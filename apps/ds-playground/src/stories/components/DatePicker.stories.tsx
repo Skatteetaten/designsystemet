@@ -150,7 +150,10 @@ export const Examples: Story = {
       } else if (!isWithinInterval(date, { start: minDate, end: maxDate })) {
         // isWithinInterval og format kommer fra date-fns
         setErrorMessage(
-          `Dato må være mellom ${format(minDate, 'dd.MM.yyyy')} og ${format(maxDate, 'dd.MM.yyyy.')}.`
+          `Dato må være mellom ${format(minDate, 'dd.MM.yyyy')} og ${format(
+            maxDate,
+            'dd.MM.yyyy.'
+          )}.`
         );
       } else {
         setErrorMessage('');
