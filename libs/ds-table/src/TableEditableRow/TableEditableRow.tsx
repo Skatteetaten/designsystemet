@@ -24,6 +24,7 @@ import {
 } from '../TableRowWithIconButton/TableRowWithIconButton';
 
 import styles from './TableEditableRow.module.scss';
+
 export const TableEditableRow = forwardRef<
   HTMLTableRowElement,
   TableEditableRowProps
@@ -34,6 +35,8 @@ export const TableEditableRow = forwardRef<
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
+      editButtonRef,
+      editableContentRef,
       editableContent,
       editButtonAriaDescribedby,
       editButtonPosition = getTableRowExpandButtonPositionDefault(),
@@ -44,6 +47,17 @@ export const TableEditableRow = forwardRef<
   ) => {
     const rowWithButtonRef = useRef<RowWithExpandButtonHandle>(null);
     const srOnlySpanRef = useRef<HTMLSpanElement | null>(null);
+
+    useImperativeHandle(
+      editButtonRef,
+      () => rowWithButtonRef?.current?.buttonRef?.current as HTMLButtonElement
+    );
+
+    useImperativeHandle(
+      editableContentRef,
+      () => srOnlySpanRef?.current as HTMLSpanElement
+    );
+
     useImperativeHandle(
       ref,
       () => rowWithButtonRef?.current?.rowRef?.current as HTMLTableRowElement

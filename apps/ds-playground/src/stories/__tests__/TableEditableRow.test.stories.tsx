@@ -1,6 +1,6 @@
 import { Table } from '@skatteetaten/ds-table';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { expect, fireEvent, within } from '@storybook/test';
 
 const meta = {
   component: Table.EditableRow,
@@ -17,6 +17,8 @@ const meta = {
     editableContent: { table: { disable: true } },
     editButtonAriaDescribedby: { table: { disable: true } },
     editButtonPosition: { table: { disable: true } },
+    editButtonRef: { table: { disable: true } },
+    editableContentRef: { table: { disable: true } },
     onEdit: { table: { disable: true } },
     children: { table: { disable: true } },
   },
@@ -56,6 +58,61 @@ export const WithRef = {
     const table = canvas.getByRole('row');
     await expect(table).toBeInTheDocument();
     await expect(table).toHaveAttribute('id', 'dummyIdForwardedFromRef');
+  },
+} satisfies Story;
+
+export const WithEditButtonRef = {
+  render: Template,
+  name: 'With EditButtonRef',
+  args: {
+    editButtonRef: (instance: HTMLButtonElement | null): void => {
+      if (instance) {
+        instance.id = 'dummyIdForwardedFromRef';
+      }
+    },
+  },
+  argTypes: {
+    ref: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+    HTMLSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const editButton = canvas.getByRole('button');
+    await expect(editButton).toBeInTheDocument();
+    await expect(editButton).toHaveAttribute('id', 'dummyIdForwardedFromRef');
+  },
+} satisfies Story;
+
+export const WithEditableContentRef = {
+  render: Template,
+  name: 'With EditableContentRef',
+  args: {
+    editableContentRef: (instance: HTMLSpanElement | null): void => {
+      if (instance) {
+        instance.id = 'dummyIdForwardedFromRef';
+      }
+    },
+  },
+  argTypes: {
+    ref: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+    HTMLSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const editButton = canvas.getByRole('button');
+    await fireEvent.click(editButton);
+    const editableContent = canvas.getByText('Rediger data');
+    await expect(editableContent).toBeInTheDocument();
+    await expect(editableContent).toHaveAttribute(
+      'id',
+      'dummyIdForwardedFromRef'
+    );
   },
 } satisfies Story;
 
