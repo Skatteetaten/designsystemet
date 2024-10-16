@@ -53,7 +53,6 @@
     "prettier": "nx format:check",
     "prettier:fix": "nx format",
     "sonarqube": "sonar-scanner",
-    "nxversion": "nx report",
     "generate:iconIndexFiles": "node ./libs/ds-icons/src/createIconIndexFiles.js",
     "generate:designtokens": "node ./libs/ds-core-designtokens/scripts/CSStoJS.js && nx format ds-core-designtokens",
     "docker:start": "docker run -d --rm --name snapshotscontainer -p 3000:3000 -e 'CONNECTION_TIMEOUT=600000' -v $(pwd)/dist/storybook/ds-playground:/opt/ds-playground -e ALLOW_FILE_PROTOCOL=true browserless/chrome:1.59.0-puppeteer-20.2.1",
