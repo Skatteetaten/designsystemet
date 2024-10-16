@@ -35,6 +35,7 @@ const meta = {
       },
     },
     label: { table: { category: category.props } },
+    disabledDates: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),

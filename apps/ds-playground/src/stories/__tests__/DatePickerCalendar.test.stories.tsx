@@ -26,7 +26,7 @@ const DatesTemplate: StoryFn<typeof DatePickerCalendar> = (args) => {
   );
 };
 
-const today = new Date('2024.01.15');
+const today = new Date('2024-01-15');
 const meta = {
   component: DatePickerCalendar,
   title: 'Tester/DatePicker/DatePickerCalendar',
@@ -39,6 +39,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    disabledDates: { table: { disable: true } },
     selectedDate: { table: { disable: true }, control: 'date' },
     minDate: { table: { disable: true }, control: 'date' },
     maxDate: { table: { disable: true }, control: 'date' },
@@ -180,7 +181,7 @@ export const WithSelectedDate = {
   name: 'WithSelectedDate (B2)',
   args: {
     ...defaultArgs,
-    selectedDate: new Date('2024.01.31'),
+    selectedDate: new Date('2024-01-31'),
   },
   argTypes: {
     selectedDate: { table: { disable: false } },
@@ -196,7 +197,7 @@ export const WithMinDate = {
   name: 'With MinDate (A3 delvis)',
   args: {
     ...defaultArgs,
-    minDate: new Date('2024.01.15'),
+    minDate: new Date('2024-01-15'),
   },
   argTypes: {
     minDate: { table: { disable: false } },
@@ -214,7 +215,7 @@ export const WithMaxDate = {
   name: 'With MaxDate (A3 delvis)',
   args: {
     ...defaultArgs,
-    maxDate: new Date('2024.01.15'),
+    maxDate: new Date('2024-01-15'),
   },
   argTypes: {
     maxDate: { table: { disable: false } },
@@ -232,8 +233,8 @@ export const WithMaxDateWhereSelectedDateIsWithinTheRange = {
   name: 'With MaxDate Where Selected Date Is Within The Range',
   args: {
     ...defaultArgs,
-    selectedDate: new Date('2024.01.16'),
-    maxDate: new Date('2024.01.15'),
+    selectedDate: new Date('2024-01-16'),
+    maxDate: new Date('2024-01-15'),
   },
   argTypes: {
     selectedDate: { table: { disable: false } },
@@ -304,5 +305,37 @@ export const ClickAndChangeMonthAndYear = {
     await fireEvent.click(nextButton);
     await expect(monthSelect).toHaveValue('0');
     await expect(yearInput).toHaveValue('2024');
+  },
+} satisfies Story;
+
+export const WithDisabledDates = {
+  name: 'With DisabledDates',
+  args: {
+    ...defaultArgs,
+    disabledDates: [
+      new Date('2024-01-04'),
+      new Date('2024-01-06'),
+      new Date('2024-01-07'),
+      new Date('2024.01-13'),
+      new Date('2024-01-14'),
+      new Date('2024-01-20'),
+      new Date('2024-01-21'),
+      new Date('2024-01-27'),
+      new Date('2024-01-28'),
+      new Date('2024-02-03T09:40:00'),
+      new Date(2024, 1, 4),
+    ],
+    minDate: new Date('2023-12-01'),
+    maxDate: new Date('2024-02-10'),
+  },
+  argTypes: {
+    disabledDates: { table: { disable: false } },
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const calendarTable = canvas.getByRole('table');
+    // eslint-disable-next-line testing-library/no-node-access
+    const disabledButtons = calendarTable.querySelectorAll('button:disabled');
+    await expect(disabledButtons.length).toBe(args.disabledDates?.length);
   },
 } satisfies Story;

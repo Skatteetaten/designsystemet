@@ -14,16 +14,7 @@ import { useTranslation } from 'react-i18next';
 import { IconButton } from '@skatteetaten/ds-buttons';
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { ArrowBackSVGpath, ArrowForwardSVGpath } from '@skatteetaten/ds-icons';
-import {
-  addDays,
-  getWeek,
-  getWeeksInMonth,
-  isEqual,
-  isMonday,
-  isSunday,
-  lastDayOfMonth,
-  startOfMonth,
-} from 'date-fns';
+import { addDays, getWeek, isEqual } from 'date-fns';
 
 import { DatePickerCalendarProps, GridIdx } from './DatePickerCalendar.types';
 import { getDatePickerCalendarSelectedDateDefault } from './defaults';
@@ -31,9 +22,11 @@ import {
   findValidYear,
   getCalendarRows,
   getNameOfMonthsAndDays,
-  initialGridIdx,
+  getGridIdxForDate,
   getFirstFocusableDate,
-  isDisabled,
+  isWithinMinMaxRange,
+  findNextAvailableDate,
+  findPreviousAvailableDate,
 } from './utils';
 import { Select } from '../Select/Select';
 import { TextField } from '../TextField/TextField';
@@ -50,6 +43,7 @@ export const DatePickerCalendar = forwardRef<
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
+      disabledDates,
       minDate,
       maxDate,
       selectedDate = getDatePickerCalendarSelectedDateDefault(),
@@ -67,7 +61,7 @@ export const DatePickerCalendar = forwardRef<
     );
 
     const focusableDateGridIdxRef = useRef<string>(
-      initialGridIdx(firstFocusableDate)
+      getGridIdxForDate(firstFocusableDate)
     );
     const dateButtonRefs = useRef<GridIdx>({});
 
@@ -151,125 +145,82 @@ export const DatePickerCalendar = forwardRef<
       }
     };
 
+    const updateFocus = (currentDate: Date, dateToFocus: Date): void => {
+      if (!isWithinMinMaxRange(dateToFocus, minDate, maxDate)) {
+        return;
+      }
+
+      const isDifferentMonth =
+        dateToFocus.getMonth() !== currentDate.getMonth();
+      const isNewYear = dateToFocus.getFullYear() !== currentDate.getFullYear();
+
+      if (
+        isDifferentMonth &&
+        !isMonthInvalid(
+          dateToFocus.getMonth(),
+          dateToFocus.getFullYear(),
+          dateToFocus.getMonth() < currentDate.getMonth()
+        )
+      ) {
+        setSelectedMonthIndex(dateToFocus.getMonth());
+        if (isNewYear) {
+          setSelectedYear(dateToFocus.getFullYear());
+        }
+      }
+
+      setTimeout(() => {
+        const gridIdx = getGridIdxForDate(dateToFocus);
+        if (gridIdx) {
+          focusableDateGridIdxRef.current = gridIdx;
+          const btnRef = dateButtonRefs.current[gridIdx].current;
+          btnRef?.focus();
+        }
+      }, 0);
+    };
+
     const handleKeyboardNavigation = (
       event: KeyboardEvent<HTMLButtonElement>,
       currentDate: Date
     ): void => {
-      const [cols, rows] = [7, grid.length];
-      const { currentRowIdx, currentColIdx } = parseRowAndColIdx();
-
       switch (event.key) {
         case 'ArrowUp': {
           event.preventDefault();
-          const newFocusableDate = addDays(currentDate, -7);
-          if (isDisabled(newFocusableDate, minDate, maxDate)) {
-            break;
-          }
-
-          const isPrevMonth =
-            newFocusableDate.getMonth() !== currentDate.getMonth();
-          if (isPrevMonth) {
-            const rowsInPrevMonth = getWeeksInMonth(newFocusableDate, {
-              weekStartsOn: 1,
-            });
-            const [
-              secondRowIdx,
-              secondLastRowIdxInPrevMonth,
-              lastRowIdxInPrevMonth,
-            ] = [1, rowsInPrevMonth - 2, rowsInPrevMonth - 1];
-
-            const isFirstDayInMonthMonday = isMonday(startOfMonth(currentDate));
-            const newRowIdx =
-              currentRowIdx === secondRowIdx || isFirstDayInMonthMonday
-                ? lastRowIdxInPrevMonth
-                : secondLastRowIdxInPrevMonth;
-
-            updateFocus(newRowIdx, currentColIdx);
-            onPrevMonth();
-            resetFocus();
-          } else if (currentRowIdx > 0) {
-            updateFocus(currentRowIdx - 1, currentColIdx);
-          }
+          const newFocusableDate = findPreviousAvailableDate(
+            addDays(currentDate, -6),
+            disabledDates,
+            minDate
+          );
+          updateFocus(currentDate, newFocusableDate);
           break;
         }
         case 'ArrowDown': {
           event.preventDefault();
-          const newFocusableDate = addDays(currentDate, 7);
-          if (isDisabled(newFocusableDate, minDate, maxDate)) {
-            break;
-          }
-
-          const isNextMonth =
-            newFocusableDate.getMonth() !== currentDate.getMonth();
-          if (isNextMonth) {
-            const [
-              secondLastRowIdx,
-              secondRowIdxInNextMonth,
-              firstRowIdxInNextMonth,
-            ] = [rows - 2, 1, 0];
-
-            const isLastDayInMonthSunday = isSunday(
-              lastDayOfMonth(currentDate)
-            );
-            const newRowIdx =
-              currentRowIdx === secondLastRowIdx || isLastDayInMonthSunday
-                ? firstRowIdxInNextMonth
-                : secondRowIdxInNextMonth;
-            updateFocus(newRowIdx, currentColIdx);
-            onNextMonth();
-            resetFocus();
-          } else if (currentRowIdx < rows - 1) {
-            updateFocus(currentRowIdx + 1, currentColIdx);
-          }
+          const newFocusableDate = findNextAvailableDate(
+            addDays(currentDate, 6),
+            disabledDates,
+            maxDate
+          );
+          updateFocus(currentDate, newFocusableDate);
           break;
         }
         case 'ArrowLeft': {
           event.preventDefault();
-          const newFocusableDate = addDays(currentDate, -1);
-          if (isDisabled(newFocusableDate, minDate, maxDate)) {
-            break;
-          }
-
-          const isPrevMonth =
-            newFocusableDate.getMonth() !== currentDate.getMonth();
-          if (isPrevMonth) {
-            const rowsInPrevMonth = getWeeksInMonth(newFocusableDate, {
-              weekStartsOn: 1,
-            });
-            updateFocus(
-              rowsInPrevMonth - 1,
-              isSunday(newFocusableDate) ? 6 : newFocusableDate.getDay() - 1
-            );
-            onPrevMonth();
-            resetFocus();
-          } else if (currentColIdx > 0) {
-            updateFocus(currentRowIdx, currentColIdx - 1);
-          } else if (currentRowIdx > 0) {
-            updateFocus(currentRowIdx - 1, cols - 1);
-          }
+          const newFocusableDate = findPreviousAvailableDate(
+            currentDate,
+            disabledDates,
+            minDate
+          );
+          updateFocus(currentDate, newFocusableDate);
           break;
         }
         case 'ArrowRight': {
           event.preventDefault();
-          const newFocusableDate = addDays(currentDate, 1);
-          if (isDisabled(newFocusableDate, minDate, maxDate)) {
-            break;
-          }
-
-          const isNextMonth =
-            newFocusableDate.getMonth() !== currentDate.getMonth();
-          if (isNextMonth) {
-            updateFocus(
-              0,
-              isSunday(newFocusableDate) ? 6 : newFocusableDate.getDay() - 1
-            );
-            onNextMonth();
-            resetFocus();
-          } else if (currentColIdx < cols - 1) {
-            updateFocus(currentRowIdx, currentColIdx + 1);
-          } else if (currentRowIdx < rows - 1) {
-            updateFocus(currentRowIdx + 1, 0);
-          }
+          const newFocusableDate = findNextAvailableDate(
+            currentDate,
+            disabledDates,
+            maxDate
+          );
+          updateFocus(currentDate, newFocusableDate);
           break;
         }
         case 'Tab': {
@@ -284,32 +235,16 @@ export const DatePickerCalendar = forwardRef<
       }
     };
 
-    const parseRowAndColIdx = (): {
-      currentRowIdx: number;
-      currentColIdx: number;
-    } => {
-      const rowIdx = parseInt(focusableDateGridIdxRef.current[0]);
-      const colIdx = parseInt(focusableDateGridIdxRef.current[1]);
-      return { currentRowIdx: rowIdx, currentColIdx: colIdx };
-    };
-
-    const resetFocus = (): void => {
-      setTimeout(() => {
-        const btnRef = dateButtonRefs.current[focusableDateGridIdxRef.current];
-        btnRef?.current?.focus();
-      });
-    };
-
-    const updateFocus = (rowIdx: number, colIdx: number): void => {
-      const gridIdx = `${rowIdx}${colIdx}`;
-      focusableDateGridIdxRef.current = gridIdx;
-      const btnRef = dateButtonRefs.current[gridIdx];
-      btnRef?.current?.focus();
-    };
-
     const grid = useMemo(
-      () => getCalendarRows(selectedYear, selectedMonthIndex, minDate, maxDate),
-      [selectedYear, selectedMonthIndex, minDate, maxDate]
+      () =>
+        getCalendarRows(
+          selectedYear,
+          selectedMonthIndex,
+          minDate,
+          maxDate,
+          disabledDates
+        ),
+      [selectedYear, selectedMonthIndex, minDate, maxDate, disabledDates]
     );
 
     const concatenatedClassName = `${styles.calendar} ${className}`;
@@ -423,9 +358,11 @@ export const DatePickerCalendar = forwardRef<
                       : undefined;
 
                     const gridIdx = `${rowIdx}${colIdx}`;
+
                     if (!dateButtonRefs.current[gridIdx]) {
                       dateButtonRefs.current[gridIdx] = createRef();
                     }
+
                     const hasFocus =
                       focusableDateGridIdxRef.current === gridIdx;
 
