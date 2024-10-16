@@ -54,11 +54,10 @@ export const DatePickerCalendar = forwardRef<
   ): JSX.Element => {
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
 
-    const firstFocusableDate = getFirstFocusableDate(
-      selectedDate,
-      minDate,
-      maxDate
-    );
+    const firstFocusableDate =
+      disabledDates && disabledDates.length > 0
+        ? findNextAvailableDate(selectedDate)
+        : getFirstFocusableDate(selectedDate, minDate, maxDate);
 
     const focusableDateGridIdxRef = useRef<string>(
       getGridIdxForDate(firstFocusableDate)
