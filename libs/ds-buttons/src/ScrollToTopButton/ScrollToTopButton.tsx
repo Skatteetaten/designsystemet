@@ -33,7 +33,7 @@ export const ScrollToTopButton = forwardRef<
       };
 
       window.addEventListener('scroll', onScroll);
-      return () => window.removeEventListener('scroll', onScroll);
+      return (): void => window.removeEventListener('scroll', onScroll);
     }, [visibilityThreshold]);
 
     const { t } = useTranslation('ds_buttons', { i18n: dsI18n });

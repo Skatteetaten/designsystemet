@@ -1,4 +1,4 @@
-import { ElementRef, ReactNode, RefObject } from 'react';
+import { ReactNode } from 'react';
 
 import { BaseProps, HeadingAs } from '@skatteetaten/ds-core-utils';
 

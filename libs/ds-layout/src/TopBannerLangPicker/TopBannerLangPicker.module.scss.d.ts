@@ -8,8 +8,8 @@ declare const classNames: {
   readonly arrowMobile: 'arrowMobile';
   readonly arrowDesktop: 'arrowDesktop';
   readonly menu: 'menu';
-  readonly list: 'list';
   readonly menuArrow: 'menuArrow';
+  readonly list: 'list';
   readonly listItem: 'listItem';
   readonly srOnly: 'srOnly';
 };

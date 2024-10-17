@@ -2,6 +2,7 @@ import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { StorybookConfig } from '@storybook/react-vite';
 import svgr from '@svgr/rollup';
 import sassDts from 'vite-plugin-sass-dts';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 import { readdirSync, readFileSync } from 'fs';
 import path from 'node:path';
@@ -58,13 +59,9 @@ const config: StorybookConfig = {
     name: '@storybook/react-vite',
     options: {},
   },
-  docs: {
-    autodocs: true,
-  },
+  docs: {},
   async viteFinal(config) {
     const { mergeConfig } = await import('vite');
-    const viteTsconfig = await import('vite-tsconfig-paths');
-    const viteTsConfigPaths = viteTsconfig.default;
 
     return mergeConfig(config, {
       resolve: {
@@ -85,7 +82,7 @@ const config: StorybookConfig = {
       },
       plugins: [
         svgr(),
-        viteTsConfigPaths({
+        tsconfigPaths({
           root: '../../',
         }),
         nxViteTsPaths(),

@@ -1,12 +1,4 @@
-import {
-  ElementRef,
-  forwardRef,
-  JSX,
-  ReactNode,
-  RefObject,
-  useImperativeHandle,
-  useRef,
-} from 'react';
+import { forwardRef, JSX, ReactNode, useImperativeHandle } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Heading } from '@skatteetaten/ds-typography';
@@ -23,19 +15,14 @@ import { PanelPadding, PanelProps, PanelSpacing } from './Panel.types';
 
 import styles from './Panel.module.scss';
 
-interface InputAndButtonRefs {
-  headingRef: RefObject<HTMLHeadingElement>;
-  buttonRef: RefObject<HTMLButtonElement>;
-  focus: () => void;
-}
-
-export const Panel = forwardRef<InputAndButtonRefs, PanelProps>(
+export const Panel = forwardRef<HTMLDivElement, PanelProps>(
   (
     {
       id,
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
+      headingRef,
       canManuallySetTitleFocus,
       color = getPanelColorDefault(),
       imageSource,
@@ -84,28 +71,12 @@ export const Panel = forwardRef<InputAndButtonRefs, PanelProps>(
     }`.trim();
     const iconClassName = `${renderIcon ? graphicClassName : ''}`.trim();
     const articleClassName = `${styles.panelArticle}`.trim();
-
-    const headingRef = useRef<HTMLHeadElement>(null);
-    const buttonRef = useRef<HTMLButtonElement>(null);
-
-    useImperativeHandle(ref, () => {
-      return {
-        focus: () => {
-          headingRef?.current?.focus();
-        },
-        headingRef,
-        buttonRef,
-        // get heading() {
-        //   return headingRef.current;
-        // },
-        // get button() {
-        //   return buttonRef.current;
-        // },
-      };
+    useImperativeHandle(headingRef, () => {
+      headingRef?.current as HTMLDivElement;
     });
     return (
       <div
-        //ref={ref}
+        ref={ref}
         id={id}
         className={panelClassName}
         lang={lang}
@@ -126,7 +97,7 @@ export const Panel = forwardRef<InputAndButtonRefs, PanelProps>(
         <div className={articleClassName}>
           {title && (
             <Heading
-              ref={ref}
+              ref={headingRef}
               as={titleAs}
               level={3}
               className={hideTitle ? styles.srOnly : ''}
@@ -165,7 +136,7 @@ export {
   getPanelSubtitleAsDefault,
   getPanelPaddingDefault,
 };
-
+/* 
 export const ComponentParent = forwardRef<
   HTMLDivElement,
   { children: ReactNode }
@@ -203,3 +174,4 @@ export const ComponentGrandChild = forwardRef<
     </div>
   );
 });
+ */

@@ -1,4 +1,4 @@
-import { forwardRef, SyntheticEvent } from 'react';
+import { forwardRef, SyntheticEvent, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';

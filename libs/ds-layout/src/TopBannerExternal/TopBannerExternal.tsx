@@ -4,6 +4,7 @@ import {
   useImperativeHandle,
   useRef,
   useState,
+  JSX,
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -120,7 +121,7 @@ export const TopBannerExternal = forwardRef<
 
       document.addEventListener('keydown', handleEscape);
 
-      return () => {
+      return (): void => {
         document.removeEventListener('mouseup', handleClickOutside);
         document.removeEventListener('keydown', handleEscape);
         document.removeEventListener('focusin', handleFocusOutside);

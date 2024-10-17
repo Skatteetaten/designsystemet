@@ -120,7 +120,7 @@ export const Defaults = {
     await expect(menuButton).toBeInTheDocument();
     await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
 
-    await menuButton.click();
+    await userEvent.click(menuButton);
     await expect(menuButton).toHaveAttribute('aria-expanded', 'true');
     const list = canvas.getByRole('list');
     await expect(list).toBeInTheDocument();
@@ -175,7 +175,7 @@ export const WithLocale = {
     });
     await expect(menuButton).toBeInTheDocument();
 
-    await menuButton.click();
+    await userEvent.click(menuButton);
     const englishButton = canvas.getByRole('button', { name: englishText });
     await expect(englishButton).toHaveAttribute('aria-current', 'true');
     // eslint-disable-next-line testing-library/no-node-access
@@ -199,11 +199,11 @@ export const CloseMenuWhenClickOnLangButton = {
     });
     await expect(menuButtonBokmal).toHaveAttribute('aria-expanded', 'false');
 
-    await menuButtonBokmal.click();
+    await userEvent.click(menuButtonBokmal);
     await expect(menuButtonBokmal).toHaveAttribute('aria-expanded', 'true');
     const englishButton = canvas.getByRole('button', { name: englishText });
 
-    await englishButton.click();
+    await userEvent.click(englishButton);
     await expect(englishButton).not.toBeInTheDocument();
     const menuButtonEnglish = canvas.getByRole('button', {
       name: `${englishText} ${menuText}`,

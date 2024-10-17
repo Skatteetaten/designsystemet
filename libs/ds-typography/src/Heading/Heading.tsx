@@ -6,13 +6,7 @@ import { HeadingProps } from './Heading.types';
 
 import styles from './Heading.module.scss';
 
-// Define the type for the refs object
-interface InputAndButtonRefs {
-  headingRef: RefObject<HTMLHeadingElement>;
-  buttonRef: RefObject<HTMLButtonElement>;
-}
-
-export const Heading = forwardRef<InputAndButtonRefs, HeadingProps>(
+export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
   (
     {
       id,
@@ -24,7 +18,6 @@ export const Heading = forwardRef<InputAndButtonRefs, HeadingProps>(
       canBeManuallyFocused,
       hasSpacing,
       children,
-      // headingRef,
     },
     ref
   ): JSX.Element => {
@@ -41,14 +34,9 @@ export const Heading = forwardRef<InputAndButtonRefs, HeadingProps>(
         spacingClassName = styles.heading_hasSpacingExtraSmall;
       }
     }
-    /*     useImperativeHandle(ref, () => ({
-      headingRef,
-      buttonRef,
-    })) */
-    const { headingRef, buttonRef } = ref as unknown as InputAndButtonRefs;
     return (
       <Tag
-        ref={headingRef}
+        ref={ref}
         id={id}
         className={`${styles.heading} ${levelClassName} ${spacingClassName} ${className}`}
         lang={lang}
@@ -56,10 +44,6 @@ export const Heading = forwardRef<InputAndButtonRefs, HeadingProps>(
         tabIndex={canBeManuallyFocused ? -1 : undefined}
       >
         {children}
-        <h2>{'h2'}</h2>
-        <button ref={buttonRef} type={'button'} id={'buttid'}>
-          {'Knappen'}
-        </button>
       </Tag>
     );
   }

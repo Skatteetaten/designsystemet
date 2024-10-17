@@ -1,8 +1,5 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 import { JSX } from 'react';
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 import breakpoints from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
 import {
   dsI18n,
@@ -18,8 +15,6 @@ import { category } from './helpers';
 import '@skatteetaten/ds-core-designtokens/index.css';
 import './playground.css';
 import '../src/stories/designtokens/designtokens.css';
-//const breakpoints = require('@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json');
-//TODO hvorfor feiler typecheck når breakpoints importeres med import i stedet for require
 
 const LanguageUpdater: Decorator = (Story, context) => {
   const [{ locale }, updateGlobals] = useGlobals();
@@ -184,7 +179,7 @@ const SpacingUpdater: Decorator = (Story, context) => {
     const body = window.document.body;
     clearStyles(body);
     applyStyle(body, context.globals.spacing);
-    return () => {
+    return (): void => {
       clearStyles(body);
     };
   }, [context.globals.spacing]);
@@ -221,8 +216,10 @@ const preview = {
     mockDate,
     SpacingUpdater,
   ],
+
   parameters,
   globalTypes,
   argTypes,
+  tags: ['autodocs'],
 } satisfies Preview;
 export default preview;

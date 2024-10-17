@@ -595,7 +595,7 @@ export const WithEventHandlers = {
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
-    await textbox.focus();
+    textbox.focus();
     await waitFor(() => expect(args.onFocus).toHaveBeenCalled());
     await userEvent.type(textbox, '01.02.2002');
     await waitFor(() => expect(args.onChange).toHaveBeenCalled());
@@ -751,7 +751,7 @@ export const WithShadowDom = {
     const customElement = canvasElement.querySelector(`calendar-customelement`);
 
     const shadowCanvas = within(
-      customElement!.shadowRoot!.firstElementChild as HTMLElement
+      customElement?.shadowRoot?.firstElementChild as HTMLElement
     );
 
     const calendarButton = shadowCanvas.getByRole('button', {

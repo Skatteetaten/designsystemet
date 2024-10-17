@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { colorNamesArr, sizeArr } from '@skatteetaten/ds-core-utils';
 import { CheckSVGpath, WarningSVGpath } from '@skatteetaten/ds-icons';
 import {

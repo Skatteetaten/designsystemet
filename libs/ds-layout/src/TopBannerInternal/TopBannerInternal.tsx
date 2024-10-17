@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { forwardRef, JSX } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { PersonIcon } from '@skatteetaten/ds-icons';

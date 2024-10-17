@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, JSX } from 'react';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Breadcrumbs } from '@skatteetaten/ds-navigation';

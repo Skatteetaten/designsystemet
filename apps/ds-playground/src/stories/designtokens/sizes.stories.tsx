@@ -8,15 +8,12 @@ export default {
 
 export const Sizes: StoryObj = {
   render: () => <TokensList tokenType={'sizes'} />,
-  name: 'Sizes',
-
   parameters: {
     previewTabs: {
       canvas: {
         hidden: true,
       },
     },
-
     viewMode: 'docs',
   },
 };

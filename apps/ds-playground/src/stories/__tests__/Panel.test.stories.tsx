@@ -335,7 +335,7 @@ export const WithImage = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const images = canvas.getAllByRole('img', { hidden: true });
+    const images = canvas.getAllByRole('presentation', { hidden: true });
     images.forEach((img) => {
       expect(img).toBeInTheDocument();
       expect(img).toHaveAttribute('alt', '');

@@ -1,4 +1,4 @@
-import { ChangeEvent, useState, JSX } from 'react';
+import { useState, JSX } from 'react';
 
 import {
   dsI18n,
@@ -14,6 +14,7 @@ import {
 } from '@skatteetaten/ds-forms';
 import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryObj } from '@storybook/react';
+import { isWithinInterval, format } from 'date-fns';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -34,6 +35,7 @@ const meta = {
       },
     },
     label: { table: { category: category.props } },
+    disabledDates: { table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
@@ -131,18 +133,30 @@ export const Preview: Story = {
 export const Examples: Story = {
   render: (_args): JSX.Element => {
     const [value, setValue] = useState<Date | null>(null);
+    const [inputValue, setInputValue] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
-    const handleBlur = (e: ChangeEvent<HTMLInputElement>): void => {
-      if (e.target.validity.valueMissing) {
-        setErrorMessage('Fødselsnummer er påkrevd.');
-      }
-    };
+    const minDate = new Date(2024, 6, 1);
+    const maxDate = new Date(2024, 12, 1);
 
     // Ved å lytte på onSelectDate får man tilgang til dato (eller null dersom datoen i feltet ikke er gyldig).
     const handleSelect = (date: Date | null): void => {
+      if (date === null) {
+        const errorMessage =
+          inputValue !== ''
+            ? 'Datoen har ikke rett format. Skriv slik: 17.05.2024.'
+            : 'Dato må fylles ut eller velges.';
+        setErrorMessage(errorMessage);
+      } else if (!isWithinInterval(date, { start: minDate, end: maxDate })) {
+        // isWithinInterval og format kommer fra date-fns
+        setErrorMessage(
+          `Dato må være mellom ${format(minDate, 'dd.MM.yyyy')} og ${format(maxDate, 'dd.MM.yyyy.')}.`
+        );
+      } else {
+        setErrorMessage('');
+      }
+
       setValue(date);
-      setErrorMessage('');
     };
     return (
       <>
@@ -150,9 +164,11 @@ export const Examples: Story = {
           label={'Fødselsdato'}
           value={value}
           errorMessage={errorMessage}
+          maxDate={maxDate}
+          minDate={minDate}
           required
-          onBlur={handleBlur}
           onSelectDate={handleSelect}
+          onChange={(e) => setInputValue(e.target.value)}
         />
         <TextField
           className={'textField300'}

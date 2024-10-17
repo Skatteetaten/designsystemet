@@ -1,4 +1,4 @@
-import { ReactNode, RefObject } from 'react';
+import { ReactNode, RefObject, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Button, IconButton, InlineButton } from '@skatteetaten/ds-buttons';

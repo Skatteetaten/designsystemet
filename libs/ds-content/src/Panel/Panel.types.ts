@@ -1,4 +1,4 @@
-import { ElementRef, ReactElement, ReactNode, RefObject } from 'react';
+import { ElementRef, ReactElement, ReactNode, Ref, RefObject } from 'react';
 
 import {
   BaseProps,
@@ -60,6 +60,7 @@ export interface PanelComponentCommonProps extends BaseProps {
   variant?: PanelVariant;
   /** Ref for Panel Header (H1-H6) */
   //headingRef: RefObject<HTMLInputElement>;
+  headingRef?: Ref<HTMLHeadingElement>;
 }
 
 export type PanelDiscriminatedGraphicProps =

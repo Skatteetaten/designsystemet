@@ -8,7 +8,6 @@ export default {
 
 export const Containers: StoryObj = {
   render: () => <TokensList tokenType={'containers'} />,
-  name: 'Containers',
   parameters: {
     previewTabs: {
       canvas: {

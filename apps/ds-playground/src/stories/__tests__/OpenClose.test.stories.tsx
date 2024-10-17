@@ -1,11 +1,7 @@
 import { MouseEvent, useState } from 'react';
 
 import { OpenClose, OpenCloseProps } from '@skatteetaten/ds-collections';
-import {
-  buttonIconPositionArr,
-  densityArr,
-  headingAsArr,
-} from '@skatteetaten/ds-core-utils';
+import { densityArr, headingAsArr } from '@skatteetaten/ds-core-utils';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fireEvent, within, waitFor, fn } from '@storybook/test';
 
@@ -39,8 +35,6 @@ const meta = {
     },
     iconPosition: {
       table: { disable: true },
-      options: [...buttonIconPositionArr],
-      control: 'inline-radio',
     },
     isExpanded: { table: { disable: true } },
     isDefaultExpanded: { table: { disable: true } },
