@@ -54,10 +54,22 @@ export const DatePickerCalendar = forwardRef<
   ): JSX.Element => {
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
 
+    const disabledDateTimestamps = useMemo(
+      () =>
+        new Set(
+          disabledDates?.map((date) => {
+            date.setHours(0, 0, 0);
+            return date.getTime();
+          })
+        ),
+      [disabledDates]
+    );
+
     const firstFocusableDate = getFirstFocusableDate(
       selectedDate,
       minDate,
-      maxDate
+      maxDate,
+      disabledDateTimestamps
     );
 
     const focusableDateGridIdxRef = useRef<string>(
@@ -187,7 +199,7 @@ export const DatePickerCalendar = forwardRef<
           event.preventDefault();
           const newFocusableDate = findPreviousAvailableDate(
             addDays(currentDate, -6),
-            disabledDates,
+            disabledDateTimestamps,
             minDate
           );
           updateFocus(currentDate, newFocusableDate);
@@ -197,7 +209,7 @@ export const DatePickerCalendar = forwardRef<
           event.preventDefault();
           const newFocusableDate = findNextAvailableDate(
             addDays(currentDate, 6),
-            disabledDates,
+            disabledDateTimestamps,
             maxDate
           );
           updateFocus(currentDate, newFocusableDate);
@@ -207,7 +219,7 @@ export const DatePickerCalendar = forwardRef<
           event.preventDefault();
           const newFocusableDate = findPreviousAvailableDate(
             currentDate,
-            disabledDates,
+            disabledDateTimestamps,
             minDate
           );
           updateFocus(currentDate, newFocusableDate);
@@ -217,7 +229,7 @@ export const DatePickerCalendar = forwardRef<
           event.preventDefault();
           const newFocusableDate = findNextAvailableDate(
             currentDate,
-            disabledDates,
+            disabledDateTimestamps,
             maxDate
           );
           updateFocus(currentDate, newFocusableDate);

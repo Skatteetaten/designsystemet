@@ -231,49 +231,68 @@ export function getGridIdxForDate(focusableDate: Date): string {
 export const getFirstFocusableDate = (
   selectedDate: Date,
   minDate?: Date,
-  maxDate?: Date
+  maxDate?: Date,
+  disabledDatesTimestamps?: Set<number>
 ): Date => {
-  if (!isWithinMinMaxRange(selectedDate, minDate, maxDate)) {
-    let focusableDate = undefined;
-    if (maxDate && isAfter(selectedDate, maxDate)) {
-      focusableDate = maxDate;
-    } else if (minDate && isBefore(selectedDate, minDate)) {
-      focusableDate = minDate;
+  let focusableDate = selectedDate;
+  focusableDate.setHours(0, 0, 0);
+
+  if (maxDate && isAfter(selectedDate, maxDate)) {
+    focusableDate = maxDate;
+    if (disabledDatesTimestamps?.has(focusableDate.getTime())) {
+      focusableDate = findPreviousAvailableDate(
+        focusableDate,
+        disabledDatesTimestamps,
+        minDate
+      );
     }
 
-    if (focusableDate && isWithinMinMaxRange(focusableDate, minDate, maxDate)) {
-      return focusableDate;
+    return focusableDate;
+  } else if (minDate && isBefore(selectedDate, minDate)) {
+    focusableDate = minDate;
+    if (disabledDatesTimestamps?.has(focusableDate.getTime())) {
+      focusableDate = findNextAvailableDate(
+        focusableDate,
+        disabledDatesTimestamps,
+        minDate
+      );
     }
+    return focusableDate;
   }
 
-  return selectedDate;
+  if (disabledDatesTimestamps?.has(focusableDate.getTime())) {
+    focusableDate = findNextAvailableDate(
+      focusableDate,
+      disabledDatesTimestamps,
+      maxDate
+    );
+  }
+
+  return focusableDate;
 };
 
 export const findNextAvailableDate = (
   startDate: Date,
-  disabledDates?: Date[],
+  disabledDatesTimestamps?: Set<number>,
   maxDate?: Date
 ): Date => {
-  if (!disabledDates || disabledDates.length === 0) {
+  if (!disabledDatesTimestamps || disabledDatesTimestamps.size === 0) {
     return addDays(startDate, 1);
   }
 
   startDate.setHours(0, 0, 0);
   maxDate?.setHours(0, 0, 0);
 
-  const maxNextDate = maxDate ?? new Date().setFullYear(lastValidYear);
-  const disabledTimestamps = new Set(
-    disabledDates.map((date) => {
-      date.setHours(0, 0, 0);
-      return date.getTime();
-    })
-  );
+  const maxNextDate =
+    maxDate && isValid(maxDate)
+      ? maxDate
+      : new Date().setFullYear(lastValidYear);
 
   let currentDate = addDays(startDate, 1);
   let currentTimestamp = currentDate.getTime();
 
   while (
-    disabledTimestamps.has(currentTimestamp) &&
+    disabledDatesTimestamps.has(currentTimestamp) &&
     isBefore(currentDate, maxNextDate)
   ) {
     currentDate = addDays(currentDate, 1);
@@ -285,29 +304,23 @@ export const findNextAvailableDate = (
 
 export const findPreviousAvailableDate = (
   startDate: Date,
-  disabledDates?: Date[],
+  disabledDatesTimestamps?: Set<number>,
   minDate?: Date
 ): Date => {
-  if (!disabledDates || disabledDates.length === 0) {
+  if (!disabledDatesTimestamps || disabledDatesTimestamps.size === 0) {
     return addDays(startDate, -1);
   }
-
   startDate.setHours(0, 0, 0);
   minDate?.setHours(0, 0, 0);
 
-  const minPrevDate = minDate ?? new Date('0001-01-01');
-  const disabledTimestamps = new Set(
-    disabledDates.map((date) => {
-      date.setHours(0, 0, 0);
-      return date.getTime();
-    })
-  );
+  const minPrevDate =
+    minDate && isValid(minDate) ? minDate : new Date('0001-01-01');
 
   let currentDate = addDays(startDate, -1);
   let currentTimestamp = currentDate.getTime();
 
   while (
-    disabledTimestamps.has(currentTimestamp) &&
+    disabledDatesTimestamps.has(currentTimestamp) &&
     isBefore(minPrevDate, currentDate)
   ) {
     currentDate = addDays(currentDate, -1);
