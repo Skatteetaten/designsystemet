@@ -1,4 +1,4 @@
-import { JSX, useRef } from 'react';
+import { JSX, useEffect, useRef } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import {
@@ -121,7 +121,7 @@ const defaultArgs = {
   ),
 };
 
-export const WithPanelHeadingRef = {
+export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
     ...defaultArgs,
@@ -553,7 +553,7 @@ const TemplateWithAllPaddings: StoryFn<typeof Panel> = (args) => (
   <>
     {panelPaddingArr.map((padding, index) => {
       return (
-        <>
+        <div key={index}>
           <Panel key={`panel1_${index}`} {...args} padding={padding}>
             <div>{`padding: ${padding}`}</div>
             <Paragraph>{loremIpsum}</Paragraph>
@@ -567,7 +567,7 @@ const TemplateWithAllPaddings: StoryFn<typeof Panel> = (args) => (
             <div>{`padding: ${padding}`}</div>
             <Paragraph>{loremIpsum}</Paragraph>
           </Panel>
-        </>
+        </div>
       );
     })}
   </>
@@ -598,7 +598,7 @@ const TemplateTwoPanelWithTextAndOneWithIcon: StoryFn<typeof Panel> = (
   <>
     {panelVariantArr.map((variant, index) => {
       return (
-        <>
+        <div key={index}>
           <Panel
             key={`panel1_${index}`}
             variant={variant}
@@ -610,7 +610,7 @@ const TemplateTwoPanelWithTextAndOneWithIcon: StoryFn<typeof Panel> = (
           <Panel key={`panel2_${index}`} variant={variant}>
             {loremIpsum}
           </Panel>
-        </>
+        </div>
       );
     })}
   </>
@@ -665,9 +665,15 @@ export const WithCanManuallySetTitleFocus = {
   },
 } satisfies Story;
 
-export const SetTitleFocus: Story = {
+export const WithPanelHeadingRef: Story = {
+  name: 'With Panel Heading Ref',
   render: (args): JSX.Element => {
     const headingRef = useRef<HTMLHeadingElement>(null);
+    useEffect(() => {
+      if (headingRef.current !== null) {
+        headingRef.current.id = 'dummyIdForwardedFromRef';
+      }
+    }, []);
     return (
       <>
         <Panel {...args} headingRef={headingRef}>
@@ -687,11 +693,6 @@ export const SetTitleFocus: Story = {
     ...defaultArgs,
     title: 'Panel Header skal kunne få fokus',
     canManuallySetTitleFocus: true,
-    headingRef: (instance: HTMLHeadingElement | null): void => {
-      if (instance) {
-        instance.id = 'dummyIdForwardedFromRef';
-      }
-    },
     variant: 'outline',
   },
   argTypes: {
@@ -703,7 +704,8 @@ export const SetTitleFocus: Story = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
     await userEvent.click(button);
-
-    //panelHeading.focus();
+    const panelHeading = canvas.getByRole('heading', { level: 3 });
+    await expect(panelHeading).toHaveAttribute('id', 'dummyIdForwardedFromRef');
+    await expect(panelHeading).toHaveFocus();
   },
 } satisfies Story;
