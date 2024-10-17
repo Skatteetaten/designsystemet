@@ -339,3 +339,19 @@ export const WithDisabledDates = {
     await expect(disabledButtons.length).toBe(args.disabledDates?.length);
   },
 } satisfies Story;
+
+export const WithDisabledDateAsValue = {
+  name: 'With DisabledDate As Value',
+  args: {
+    ...defaultArgs,
+    disabledDates: [new Date('2024-01-15')],
+  },
+  argTypes: {
+    disabledDates: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const focusedButton = canvas.getByText('16');
+    await expect(focusedButton).toHaveAttribute('tabindex', '0');
+  },
+} satisfies Story;
