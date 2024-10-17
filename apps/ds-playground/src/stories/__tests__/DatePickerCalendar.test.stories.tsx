@@ -316,7 +316,7 @@ export const WithDisabledDates = {
       new Date('2024-01-04'),
       new Date('2024-01-06'),
       new Date('2024-01-07'),
-      new Date('2024.01-13'),
+      new Date('2024-01-13'),
       new Date('2024-01-14'),
       new Date('2024-01-20'),
       new Date('2024-01-21'),
@@ -337,5 +337,21 @@ export const WithDisabledDates = {
     // eslint-disable-next-line testing-library/no-node-access
     const disabledButtons = calendarTable.querySelectorAll('button:disabled');
     await expect(disabledButtons.length).toBe(args.disabledDates?.length);
+  },
+} satisfies Story;
+
+export const WithDisabledDateAsValue = {
+  name: 'With DisabledDate As Value',
+  args: {
+    ...defaultArgs,
+    disabledDates: [new Date('2024-01-15')],
+  },
+  argTypes: {
+    disabledDates: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const focusedButton = canvas.getByText('16');
+    await expect(focusedButton).toHaveAttribute('tabindex', '0');
   },
 } satisfies Story;
