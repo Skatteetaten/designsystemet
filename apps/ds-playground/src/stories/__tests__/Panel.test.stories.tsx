@@ -1,4 +1,4 @@
-import { JSX, ReactNode, RefObject, useRef } from 'react';
+import { JSX, useRef } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import {
@@ -15,7 +15,7 @@ import {
 import { InfoIcon } from '@skatteetaten/ds-icons';
 import { Paragraph } from '@skatteetaten/ds-typography';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { expect, userEvent, within } from '@storybook/test';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 import farmerIllustration from '../../assets/farmer-illustration.svg';
@@ -121,11 +121,11 @@ const defaultArgs = {
   ),
 };
 
-export const WithRef = {
+export const WithPanelHeadingRef = {
   name: 'With Ref (FA1)',
   args: {
     ...defaultArgs,
-    ref: (instance: HTMLParagraphElement | null): void => {
+    ref: (instance: HTMLHeadingElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
       }
@@ -665,32 +665,17 @@ export const WithCanManuallySetTitleFocus = {
   },
 } satisfies Story;
 
-const TemplateHeaderFocus: StoryFn<typeof Panel> = (args) => <></>;
-interface InputAndButtonRefs {
-  headingRef: RefObject<HTMLHeadingElement>;
-  buttonRef: RefObject<HTMLButtonElement>;
-}
-
-// ref: (instance: HTMLParagraphElement | null): void => {
-//     if (instance) {
-//       instance.id = 'dummyIdForwardedFromRef';
-//     }
-//   },
-
 export const SetTitleFocus: Story = {
   render: (args): JSX.Element => {
-    const refPanelHead = useRef<HTMLHeadingElement>(null);
-    const refPanelButton = useRef<HTMLButtonElement>(null);
-    const ref = useRef<InputAndButtonRefs>({ refPanelHead, refPanelButton });
+    const headingRef = useRef<HTMLHeadingElement>(null);
     return (
       <>
-        <Panel ref={ref} {...args} variant={'outline'}>
+        <Panel {...args} headingRef={headingRef}>
           <Paragraph>{loremIpsum}</Paragraph>
         </Panel>
         <Button
           onClick={(): void => {
-            console.log(`klikk på knapp ${ref}`);
-            ref.current?.focus();
+            headingRef.current?.focus();
           }}
         >
           {'Sett fokus på Panel Header'}
@@ -702,14 +687,23 @@ export const SetTitleFocus: Story = {
     ...defaultArgs,
     title: 'Panel Header skal kunne få fokus',
     canManuallySetTitleFocus: true,
+    headingRef: (instance: HTMLHeadingElement | null): void => {
+      if (instance) {
+        instance.id = 'dummyIdForwardedFromRef';
+      }
+    },
+    variant: 'outline',
   },
   argTypes: {
     canManuallySetTitleFocus: { table: { disable: false } },
+    ref: { table: { disable: false } },
   },
   parameters: { imageSnapshot: { disable: true } },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    // const panelHeading = canvas.getByRole('heading', { level: 3 });
-    // panelHeading.focus();
+    const button = canvas.getByRole('button');
+    await userEvent.click(button);
+
+    //panelHeading.focus();
   },
 } satisfies Story;

@@ -1,4 +1,4 @@
-import { forwardRef, JSX, ReactNode, useImperativeHandle } from 'react';
+import { forwardRef, JSX, useImperativeHandle, useRef } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Heading } from '@skatteetaten/ds-typography';
@@ -39,7 +39,6 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
       hideTitle,
       renderIcon,
       children,
-      //      headingRef: externalHeadingRef,
     },
     ref
   ): JSX.Element => {
@@ -71,9 +70,11 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
     }`.trim();
     const iconClassName = `${renderIcon ? graphicClassName : ''}`.trim();
     const articleClassName = `${styles.panelArticle}`.trim();
-    useImperativeHandle(headingRef, () => {
-      headingRef?.current as HTMLDivElement;
-    });
+    const panelHeadingRef = useRef<HTMLHeadingElement>(null);
+    useImperativeHandle(
+      headingRef,
+      () => panelHeadingRef?.current as HTMLHeadingElement
+    );
     return (
       <div
         ref={ref}
@@ -97,7 +98,7 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
         <div className={articleClassName}>
           {title && (
             <Heading
-              ref={headingRef}
+              ref={panelHeadingRef}
               as={titleAs}
               level={3}
               className={hideTitle ? styles.srOnly : ''}
@@ -109,12 +110,10 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
           )}
           {subtitle && (
             <Heading
-              //              ref={{ headingRef, dummyRef }}
               as={subtitleAs}
               level={5}
               className={hideSubtitle ? styles.srOnly : ''}
               hasSpacing
-              // headingRef={headingRef}
             >
               {subtitle}
             </Heading>

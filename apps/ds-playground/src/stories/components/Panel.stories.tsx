@@ -1,9 +1,8 @@
 /* eslint-disable sonarjs/no-duplicate-string */
-import { JSX, RefObject } from 'react';
+import { JSX, useRef } from 'react';
 
-import { MegaButton, Link } from '@skatteetaten/ds-buttons';
+import { MegaButton, Link, Button } from '@skatteetaten/ds-buttons';
 import {
-  ComponentParent,
   Panel,
   getPanelColorDefault,
   getPanelPaddingDefault,
@@ -53,6 +52,7 @@ const meta = {
         defaultValue: { summary: getPanelColorDefault() },
       },
     },
+    headingRef: { table: { category: category.props } },
     hideGraphicMobile: { table: { category: category.props } },
     hideSubtitle: { table: { category: category.props } },
     hideTitle: { table: { category: category.props } },
@@ -117,48 +117,70 @@ type Story = StoryObj<typeof meta>;
 export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
-  render: (_args) => (
-    <>
-      <Panel
-        title={'Når kommer skattepengene'}
-        imageSource={farmerIllustration}
-        padding={'mega'}
-        spacing={'xxl'}
-      >
-        <Paragraph hasSpacing>
-          <Link href={'#'}>
-            {'Vi varsler deg når skatteoppgjøret ditt er klart.'}
-          </Link>
-        </Paragraph>
-        <Paragraph hasSpacing>
-          {
-            'Vi kan dessverre ikke gi deg en konkret dato for når du får oppgjøret ditt, verken på telefon, facebook eller chat.'
-          }
-        </Paragraph>
-        <Paragraph hasSpacing>{'Logg inn:'}</Paragraph>
-        <MegaButton>{'Sjekk skatten'}</MegaButton>
-        <Paragraph className={'dummySpacingTop'}>
-          {
-            'Ser du etter skattemeldingen? Hvis du oppdager feil eller har mottatt nye eller forsinkede oppplysniger, kan du fortsatt '
-          }
-          <Link href={'#'}>{'se, endre og levere skattemeldingen'}</Link>
-          {'.'}
-        </Paragraph>
-      </Panel>
-      <Panel
-        title={'Virksomheten skal registreres som særavgiftspliktig'}
-        variant={'filled'}
-        color={'forest'}
-        renderIcon={(): JSX.Element => <CheckIcon size={'extraLarge'} />}
-      >
-        <Paragraph>
-          {
-            'For å bli registrert må du sende en søknad til Skatteetaten. Nedenfor beskriver vi hvordan du går frem og hva du må dokumentere.'
-          }
-        </Paragraph>
-      </Panel>
-      <ComponentParent>{'Liksompanel1'}</ComponentParent>
-    </>
-  ),
+  render: (_args): JSX.Element => {
+    const headingRef = useRef<HTMLHeadingElement>(null);
+    return (
+      <>
+        <Panel
+          title={'Når kommer skattepengene'}
+          imageSource={farmerIllustration}
+          padding={'mega'}
+          spacing={'xxl'}
+        >
+          <Paragraph hasSpacing>
+            <Link href={'#'}>
+              {'Vi varsler deg når skatteoppgjøret ditt er klart.'}
+            </Link>
+          </Paragraph>
+          <Paragraph hasSpacing>
+            {
+              'Vi kan dessverre ikke gi deg en konkret dato for når du får oppgjøret ditt, verken på telefon, facebook eller chat.'
+            }
+          </Paragraph>
+          <Paragraph hasSpacing>{'Logg inn:'}</Paragraph>
+          <MegaButton>{'Sjekk skatten'}</MegaButton>
+          <Paragraph className={'dummySpacingTop'}>
+            {
+              'Ser du etter skattemeldingen? Hvis du oppdager feil eller har mottatt nye eller forsinkede oppplysniger, kan du fortsatt '
+            }
+            <Link href={'#'}>{'se, endre og levere skattemeldingen'}</Link>
+            {'.'}
+          </Paragraph>
+        </Panel>
+
+        <Panel
+          title={'Virksomheten skal registreres som særavgiftspliktig'}
+          variant={'filled'}
+          color={'forest'}
+          spacing={'xxl'}
+          renderIcon={(): JSX.Element => <CheckIcon size={'extraLarge'} />}
+        >
+          <Paragraph>
+            {
+              'For å bli registrert må du sende en søknad til Skatteetaten. Nedenfor beskriver vi hvordan du går frem og hva du må dokumentere.'
+            }
+          </Paragraph>
+        </Panel>
+
+        <Panel
+          title={'Panel med tittel som skal få fokus'}
+          variant={'outline'}
+          color={'denim'}
+          headingRef={headingRef}
+          canManuallySetTitleFocus
+        >
+          <Paragraph>{`Panel hvor man har en tittel/heading.
+          Denne kan få programatisk fokus. Test ved å klikke på knappen med tastaturet.`}</Paragraph>
+        </Panel>
+        <Button
+          onClick={(): void => {
+            headingRef.current?.focus();
+          }}
+        >
+          {'Sett fokus på Panel Header'}
+        </Button>
+      </>
+    );
+  },
 } satisfies Story;
 Examples.parameters = exampleParameters;
