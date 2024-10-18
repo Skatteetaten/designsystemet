@@ -1,12 +1,4 @@
-import {
-  ElementRef,
-  forwardRef,
-  JSX,
-  ReactNode,
-  RefObject,
-  useImperativeHandle,
-  useRef,
-} from 'react';
+import { forwardRef, JSX, useImperativeHandle, useRef } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Heading } from '@skatteetaten/ds-typography';
@@ -23,19 +15,14 @@ import { PanelPadding, PanelProps, PanelSpacing } from './Panel.types';
 
 import styles from './Panel.module.scss';
 
-interface InputAndButtonRefs {
-  headingRef: RefObject<HTMLHeadingElement>;
-  buttonRef: RefObject<HTMLButtonElement>;
-  focus: () => void;
-}
-
-export const Panel = forwardRef<InputAndButtonRefs, PanelProps>(
+export const Panel = forwardRef<HTMLDivElement, PanelProps>(
   (
     {
       id,
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
+      headingRef,
       canManuallySetTitleFocus,
       color = getPanelColorDefault(),
       imageSource,
@@ -52,7 +39,6 @@ export const Panel = forwardRef<InputAndButtonRefs, PanelProps>(
       hideTitle,
       renderIcon,
       children,
-      //      headingRef: externalHeadingRef,
     },
     ref
   ): JSX.Element => {
@@ -84,28 +70,14 @@ export const Panel = forwardRef<InputAndButtonRefs, PanelProps>(
     }`.trim();
     const iconClassName = `${renderIcon ? graphicClassName : ''}`.trim();
     const articleClassName = `${styles.panelArticle}`.trim();
-
-    const headingRef = useRef<HTMLHeadElement>(null);
-    const buttonRef = useRef<HTMLButtonElement>(null);
-
-    useImperativeHandle(ref, () => {
-      return {
-        focus: () => {
-          headingRef?.current?.focus();
-        },
-        headingRef,
-        buttonRef,
-        // get heading() {
-        //   return headingRef.current;
-        // },
-        // get button() {
-        //   return buttonRef.current;
-        // },
-      };
-    });
+    const panelHeadingRef = useRef<HTMLHeadingElement>(null);
+    useImperativeHandle(
+      headingRef,
+      () => panelHeadingRef?.current as HTMLHeadingElement
+    );
     return (
       <div
-        //ref={ref}
+        ref={ref}
         id={id}
         className={panelClassName}
         lang={lang}
@@ -126,7 +98,7 @@ export const Panel = forwardRef<InputAndButtonRefs, PanelProps>(
         <div className={articleClassName}>
           {title && (
             <Heading
-              ref={ref}
+              ref={panelHeadingRef}
               as={titleAs}
               level={3}
               className={hideTitle ? styles.srOnly : ''}
@@ -138,12 +110,10 @@ export const Panel = forwardRef<InputAndButtonRefs, PanelProps>(
           )}
           {subtitle && (
             <Heading
-              //              ref={{ headingRef, dummyRef }}
               as={subtitleAs}
               level={5}
               className={hideSubtitle ? styles.srOnly : ''}
               hasSpacing
-              // headingRef={headingRef}
             >
               {subtitle}
             </Heading>
@@ -165,41 +135,3 @@ export {
   getPanelSubtitleAsDefault,
   getPanelPaddingDefault,
 };
-
-export const ComponentParent = forwardRef<
-  HTMLDivElement,
-  { children: ReactNode }
->(({ children }, ref): JSX.Element => {
-  return <ComponentChild>{children}</ComponentChild>;
-});
-
-export const ComponentChild = forwardRef<
-  HTMLDivElement,
-  { level1?: string; children: ReactNode }
->(({ level1, children }, ref): JSX.Element => {
-  return (
-    <div ref={ref}>
-      {level1}
-      {children}
-    </div>
-  );
-});
-
-export const ComponentGrandChild = forwardRef<
-  HTMLDivElement,
-  { children: JSX.Element }
->(({ children }, ref): JSX.Element => {
-  return (
-    <div ref={ref}>
-      {children}
-      <label>
-        Input 1:
-        <input id={'id1'} />
-      </label>
-      <label>
-        Input 2:
-        <input id={'id2'} />
-      </label>
-    </div>
-  );
-});

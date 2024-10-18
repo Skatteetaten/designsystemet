@@ -1,4 +1,4 @@
-import { forwardRef, JSX, RefObject, useImperativeHandle } from 'react';
+import { forwardRef, JSX } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
