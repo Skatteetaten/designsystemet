@@ -1,4 +1,4 @@
-import { ReactElement, ReactNode, Ref, RefObject } from 'react';
+import { ReactElement, ReactNode, Ref } from 'react';
 
 import {
   BaseProps,
@@ -91,7 +91,3 @@ export type PanelDiscriminatedGraphicProps =
 
 export type PanelProps = PanelComponentCommonProps &
   PanelDiscriminatedGraphicProps;
-
-export type PanelHeadingHandle = {
-  headingRef: RefObject<HTMLHeadingElement>;
-};
