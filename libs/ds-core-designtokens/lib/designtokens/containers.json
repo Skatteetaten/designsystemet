@@ -14,12 +14,12 @@
     "--semantic-responsive-internal-aside": "var(--container-xs)",
     "--semantic-responsive-wide-content": "var(--container-xs)"
   },
-  "@media (min-width: 480px)": {
+  "@media (width >= 480px)": {
     ":root,\n  :host": {
       "--semantic-responsive-wide-content": "var(--container-s)"
     }
   },
-  "@media (min-width: 640px)": {
+  "@media (width >= 640px)": {
     ":root,\n  :host": {
       "--semantic-responsive-container": "var(--container-s)",
       "--semantic-responsive-container-padding": "0",
@@ -27,7 +27,7 @@
       "--semantic-responsive-wide-content": "var(--container-wide-content)"
     }
   },
-  "@media (min-width: 1024px)": {
+  "@media (width >= 1024px)": {
     ":root,\n  :host": {
       "--semantic-responsive-container": "var(--container-m)",
       "--semantic-responsive-internal-container-display": "grid",
@@ -35,7 +35,7 @@
       "--semantic-responsive-internal-aside": "var(--container-aside)"
     }
   },
-  "@media (min-width: 1366px)": {
+  "@media (width >= 1366px)": {
     ":root,\n  :host": {
       "--semantic-responsive-container": "var(--container-l)"
     }
