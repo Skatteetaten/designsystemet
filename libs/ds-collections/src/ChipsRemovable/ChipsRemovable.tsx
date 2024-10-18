@@ -5,6 +5,7 @@ import { CancelSVGpath, Icon } from '@skatteetaten/ds-icons';
 
 import { ChipsRemovableProps } from './ChipsRemovable.types';
 import styles from '../Chips/Chips.module.scss';
+import { getChipDefaultSize } from '../Chips/defaults';
 
 export const ChipsRemovable = forwardRef<
   HTMLButtonElement,
@@ -16,13 +17,14 @@ export const ChipsRemovable = forwardRef<
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
-      //size = getChipDefaultSize(),
+      size = getChipDefaultSize(),
       onClose,
       children,
     },
     ref
   ): JSX.Element => {
-    const concatenatedClassName = `${styles.chip} ${className}`.trim();
+    const concatenatedClassName =
+      `${styles.chip} ${size === 'small' ? styles.chip_small : ''} ${className}`.trim();
 
     return (
       <button

@@ -10,6 +10,7 @@ import {
 import { ChipsToggleProps } from './ChipsToggle.types';
 import { getChipsToggleDefaultShowCheckmark } from './defaults';
 import styles from '../Chips/Chips.module.scss';
+import { getChipDefaultSize } from '../Chips/defaults';
 
 export const ChipsToggle = forwardRef<HTMLButtonElement, ChipsToggleProps>(
   (
@@ -18,7 +19,7 @@ export const ChipsToggle = forwardRef<HTMLButtonElement, ChipsToggleProps>(
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
-      //size = getChipDefaultSize(),
+      size = getChipDefaultSize(),
       isSelected: externalIsSelected = false,
       showCheckmark = getChipsToggleDefaultShowCheckmark(),
       children,
@@ -28,7 +29,7 @@ export const ChipsToggle = forwardRef<HTMLButtonElement, ChipsToggleProps>(
     const [pressed, setPressed] = useState(externalIsSelected);
 
     const concatenatedClassName =
-      `${styles.chip} ${pressed ? styles.chip_selected : ''} ${showCheckmark ? styles.chip_withCheckmark : ''} ${className}`.trim();
+      `${styles.chip} ${size === 'small' ? styles.chip_small : ''} ${pressed ? styles.chip_selected : ''} ${showCheckmark ? styles.chip_withCheckmark : ''} ${className}`.trim();
 
     const handlePressed = (): void => {
       setPressed((prevIsPressed) => !prevIsPressed);
@@ -49,7 +50,7 @@ export const ChipsToggle = forwardRef<HTMLButtonElement, ChipsToggleProps>(
           <Icon
             className={styles.icon}
             svgPath={pressed ? CompletedSVGpath : CircleRingSVGpath}
-            size={'medium'}
+            size={size}
             title={'TODO: legg inn tittel'}
           />
         ) : null}

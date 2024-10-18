@@ -7,17 +7,20 @@
 }
 
 .chip {
-  --chip-font-size: var(--font-weight-medium);
+  --chip-font-size: var(--font-size-medium);
+  --chip-padding: var(--spacing-xs) var(--spacing-m);
+  --chip-checkmark-padding: var(--spacing-xs) var(--spacing-m) var(--spacing-xs)
+    var(--spacing-s);
 
   display: inline-flex;
   align-items: center;
-  padding: var(--spacing-xs) var(--spacing-m);
+  padding: var(--chip-padding);
   border: 1px solid var(--semantic-interactive-main);
   border-radius: 2.75rem;
   background-color: var(--palette-denim-5);
   color: var(--semantic-interactive-main);
   cursor: pointer;
-  font-size: var(--font-size-m);
+  font-size: var(--chip-font-size);
   font-weight: var(--font-weight-medium);
   gap: var(--spacing-xs);
   line-height: var(--semantic-line-height-default);
@@ -32,9 +35,15 @@
     outline-offset: 2px;
   }
 
-  &_withCheckmark {
-    padding: var(--spacing-xs) var(--spacing-m) var(--spacing-xs)
+  &_small {
+    --chip-font-size: var(--font-size-s);
+    --chip-padding: var(--spacing-xxs) 12px;
+    --chip-checkmark-padding: var(--spacing-xxs) 12px var(--spacing-xxs)
       var(--spacing-s);
+  }
+
+  &_withCheckmark {
+    padding: var(--chip-checkmark-padding);
   }
 
   &_selected {
