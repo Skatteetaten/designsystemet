@@ -1,7 +1,16 @@
-.chip {
-  position: relative;
+.chipsList {
   display: inline-flex;
-  align-items: baseline;
+  padding: 0;
+  margin: 0;
+  gap: var(--spacing-s);
+  list-style-type: none;
+}
+
+.chip {
+  --chip-font-size: var(--font-weight-medium);
+
+  display: inline-flex;
+  align-items: center;
   padding: var(--spacing-xs) var(--spacing-m);
   border: 1px solid var(--semantic-interactive-main);
   border-radius: 2.75rem;
@@ -10,6 +19,7 @@
   cursor: pointer;
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-medium);
+  gap: var(--spacing-xs);
   line-height: var(--semantic-line-height-default);
   text-decoration-line: none;
 
@@ -22,17 +32,31 @@
     outline-offset: 2px;
   }
 
+  &_withCheckmark {
+    padding: var(--spacing-xs) var(--spacing-m) var(--spacing-xs)
+      var(--spacing-s);
+  }
+
   &_selected {
     background-color: var(--semantic-interactive-main);
     color: var(--palette-graphite-0);
 
     &:hover {
-      background-color: var(--semantic-interactive-background);
+      border-color: var(--semantic-interactive-foreground);
+      background-color: var(--semantic-interactive-foreground);
     }
 
     &:focus {
       outline: 2px solid var(--semantic-interactive-main);
       outline-offset: 2px;
     }
+  }
+}
+
+.icon {
+  fill: currentcolor;
+
+  &_close {
+    padding-top: var(--spacing-xxs);
   }
 }

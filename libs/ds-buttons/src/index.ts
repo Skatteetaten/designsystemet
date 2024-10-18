@@ -1,5 +1,3 @@
-export * from './Chip/Chip';
-export * from './Chip/Chip.types';
 export * from './Button/Button';
 export * from './Button/Button.types';
 export * from './IconButton/IconButton';
