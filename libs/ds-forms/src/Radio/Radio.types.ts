@@ -4,7 +4,7 @@ import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 type RequiredInputHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'input'>,
-  'value' | 'form'
+  'value' | 'form' | 'onBlur' | 'onChange' | 'onFocus'
 >;
 
 type InputHTMLAttributes = Partial<RequiredInputHTMLAttributes>;

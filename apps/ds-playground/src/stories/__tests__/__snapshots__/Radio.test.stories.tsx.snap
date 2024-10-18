@@ -168,6 +168,46 @@ exports[`Tester/RadioGroup/Radio WithDescription play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/RadioGroup/Radio WithEventHandlers play-test 1`] = `
+<div data-test-block="true">
+  <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">
+    <legend id="legendId-:r12:"
+            class="_srOnly_s6jvz_39"
+    >
+      radio example
+    </legend>
+    <div class="_legend_s6jvz_15  _srOnly_s6jvz_39"
+         aria-hidden="true"
+    >
+      radio example
+    </div>
+    <div class="_contentContainer_s6jvz_32 _contentContainerNoMarginTop_s6jvz_35">
+      <div class="_radioGroupItemContainer_1f9v8_5">
+        <div class="_radio_1ybg2_1">
+          <input id="radioInputId-:r13:"
+                 class="_radioInput_1ybg2_5"
+                 type="radio"
+                 name="radioInputName-:r11:"
+                 value
+          >
+          <label class="_radioLabel_1ybg2_87"
+                 for="radioInputId-:r13:"
+                 tabindex="-1"
+          >
+            Enkeltpersonsforetak Radio har mistet fokus
+          </label>
+        </div>
+      </div>
+      <div id="radioErrorId-:r10:"
+           aria-live="assertive"
+           aria-atomic="true"
+      >
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
 exports[`Tester/RadioGroup/Radio WithLongText smoke-test 1`] = `
 <div data-test-block="true">
   <fieldset class="_fieldset_s6jvz_5 _fieldset_hasSpacing_s6jvz_11">

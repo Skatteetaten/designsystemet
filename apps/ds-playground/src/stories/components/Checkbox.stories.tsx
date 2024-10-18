@@ -32,7 +32,9 @@ const meta = {
     // Aria
     ariaDescribedby: { table: { category: category.aria } },
     // Events
+    onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
+    onFocus: { ...htmlEventDescription },
   },
   args: {
     children: 'Jeg har lest og forstått innholdet',
@@ -45,7 +47,7 @@ type Story = StoryObj<typeof meta>;
 export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
-  render: (_args): JSX.Element => {
+  render: (args): JSX.Element => {
     const [checked, setChecked] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
     return (
@@ -58,6 +60,12 @@ export const Examples: Story = {
           onChange={(): void => {
             setChecked(!checked);
             setErrorMessage('');
+          }}
+          onBlur={(event): void => {
+            args?.onBlur && args.onBlur(event);
+          }}
+          onFocus={(event): void => {
+            args?.onFocus && args.onFocus(event);
           }}
         >
           {'Jeg har lest og forstått innholdet'}

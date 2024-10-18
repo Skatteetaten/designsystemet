@@ -32,6 +32,8 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       hideLabel,
       showRequiredMark,
       onChange,
+      onBlur,
+      onFocus,
       children,
     },
     ref
@@ -82,7 +84,9 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           value={value}
           aria-describedby={ariaDescribedbyInput || undefined}
           aria-invalid={hasErrorInternal || undefined}
+          onBlur={onBlur}
           onChange={onChange}
+          onFocus={onFocus}
         />
         <label
           htmlFor={inputIdInternal}
