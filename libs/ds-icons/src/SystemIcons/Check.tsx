@@ -4,7 +4,11 @@ import { Icon } from '../Icon/Icon';
 import { IconPropsWithoutSvgPath } from '../Icon/Icon.types';
 
 export const CheckSVGpath = (
-  <path d={'M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z'} />
+  <path
+    d={
+      'M19.94 6.71L19.24 6L9 16.23L5.26 12.5L4.91 12.85L3.5 14.26L9 19.76L21 7.76L19.94 6.71Z'
+    }
+  />
 );
 
 export function CheckIcon(props: IconPropsWithoutSvgPath): JSX.Element {

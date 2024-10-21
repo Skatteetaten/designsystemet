@@ -21,7 +21,7 @@ exports[`Tester/Accordion/Accordion Defaults smoke-test 1`] = `
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
@@ -59,7 +59,7 @@ exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
@@ -90,7 +90,7 @@ exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
@@ -123,7 +123,7 @@ exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
@@ -154,7 +154,7 @@ exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
@@ -187,7 +187,7 @@ exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
@@ -218,7 +218,7 @@ exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
@@ -251,7 +251,7 @@ exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
@@ -282,7 +282,7 @@ exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
@@ -315,7 +315,7 @@ exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
@@ -346,7 +346,7 @@ exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
@@ -379,7 +379,7 @@ exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
@@ -410,7 +410,7 @@ exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
@@ -449,7 +449,7 @@ exports[`Tester/Accordion/Accordion WithAttributes play-test 1`] = `
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
@@ -484,7 +484,7 @@ exports[`Tester/Accordion/Accordion WithIconLeft smoke-test 1`] = `
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
@@ -519,7 +519,7 @@ exports[`Tester/Accordion/Accordion WithLarge smoke-test 1`] = `
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
@@ -554,7 +554,7 @@ exports[`Tester/Accordion/Accordion WithMedium smoke-test 1`] = `
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
@@ -591,7 +591,7 @@ exports[`Tester/Accordion/Accordion WithRef play-test 1`] = `
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
@@ -626,7 +626,7 @@ exports[`Tester/Accordion/Accordion WithSmall smoke-test 1`] = `
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>

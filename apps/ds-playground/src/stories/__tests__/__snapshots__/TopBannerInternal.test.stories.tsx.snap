@@ -13,7 +13,7 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedBreakpointL play-test
              aria-hidden="true"
              role="img"
         >
-          <path d="M11.1 1.5h1.8v16.8l5.1-5.2 1.3 1.4L12 22l-7.3-7.6L6 13l5.1 5.2V1.5Z">
+          <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
           </path>
         </svg>
         Hopp til hovedinnhold
@@ -50,7 +50,7 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedMobileScreen play-tes
              aria-hidden="true"
              role="img"
         >
-          <path d="M11.1 1.5h1.8v16.8l5.1-5.2 1.3 1.4L12 22l-7.3-7.6L6 13l5.1 5.2V1.5Z">
+          <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
           </path>
         </svg>
         Hopp til hovedinnhold
@@ -91,7 +91,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithAttributes play-test 1`] = `
              aria-hidden="true"
              role="img"
         >
-          <path d="M11.1 1.5h1.8v16.8l5.1-5.2 1.3 1.4L12 22l-7.3-7.6L6 13l5.1 5.2V1.5Z">
+          <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
           </path>
         </svg>
         Hopp til hovedinnhold
@@ -128,7 +128,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
              aria-hidden="true"
              role="img"
         >
-          <path d="M11.1 1.5h1.8v16.8l5.1-5.2 1.3 1.4L12 22l-7.3-7.6L6 13l5.1 5.2V1.5Z">
+          <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
           </path>
         </svg>
         Hopp til hovedinnhold
@@ -237,7 +237,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomLogo smoke-test 1`] = `
              aria-hidden="true"
              role="img"
         >
-          <path d="M11.1 1.5h1.8v16.8l5.1-5.2 1.3 1.4L12 22l-7.3-7.6L6 13l5.1 5.2V1.5Z">
+          <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
           </path>
         </svg>
         Hopp til hovedinnhold
@@ -274,7 +274,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomTheme smoke-test 1`] = `
              aria-hidden="true"
              role="img"
         >
-          <path d="M11.1 1.5h1.8v16.8l5.1-5.2 1.3 1.4L12 22l-7.3-7.6L6 13l5.1 5.2V1.5Z">
+          <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
           </path>
         </svg>
         Hopp til hovedinnhold
@@ -311,7 +311,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithDefaults play-test 1`] = `
              aria-hidden="true"
              role="img"
         >
-          <path d="M11.1 1.5h1.8v16.8l5.1-5.2 1.3 1.4L12 22l-7.3-7.6L6 13l5.1 5.2V1.5Z">
+          <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
           </path>
         </svg>
         Hopp til hovedinnhold
@@ -348,7 +348,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithDemoMode play-test 1`] = `
              aria-hidden="true"
              role="img"
         >
-          <path d="M11.1 1.5h1.8v16.8l5.1-5.2 1.3 1.4L12 22l-7.3-7.6L6 13l5.1 5.2V1.5Z">
+          <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
           </path>
         </svg>
         Hopp til hovedinnhold
@@ -390,7 +390,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLogoClick play-test 1`] = `
              aria-hidden="true"
              role="img"
         >
-          <path d="M11.1 1.5h1.8v16.8l5.1-5.2 1.3 1.4L12 22l-7.3-7.6L6 13l5.1 5.2V1.5Z">
+          <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
           </path>
         </svg>
         Hopp til hovedinnhold
@@ -427,7 +427,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke
              aria-hidden="true"
              role="img"
         >
-          <path d="M11.1 1.5h1.8v16.8l5.1-5.2 1.3 1.4L12 22l-7.3-7.6L6 13l5.1 5.2V1.5Z">
+          <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
           </path>
         </svg>
         Hopp til hovedinnhold
@@ -488,7 +488,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithRef play-test 1`] = `
              aria-hidden="true"
              role="img"
         >
-          <path d="M11.1 1.5h1.8v16.8l5.1-5.2 1.3 1.4L12 22l-7.3-7.6L6 13l5.1 5.2V1.5Z">
+          <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
           </path>
         </svg>
         Hopp til hovedinnhold
@@ -525,7 +525,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1
              aria-hidden="true"
              role="img"
         >
-          <path d="M11.1 1.5h1.8v16.8l5.1-5.2 1.3 1.4L12 22l-7.3-7.6L6 13l5.1 5.2V1.5Z">
+          <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
           </path>
         </svg>
         Hopp til hovedinnhold

@@ -5,7 +5,9 @@ import { IconPropsWithoutSvgPath } from '../Icon/Icon.types';
 
 export const ArrowUpSVGpath = (
   <path
-    d={'M12.9 22h-1.8V5.2L6 10.4 4.7 9 12 1.5l7.3 7.6-1.3 1.4-5.1-5.2V22Z'}
+    d={
+      'M20 9.86L12 3L4 9.86L5.67 11.8L10.75 7.45V21H13.25V7.45L18.33 11.8L20 9.86Z'
+    }
   />
 );
 

@@ -4,7 +4,11 @@ import { Icon } from '../Icon/Icon';
 import { IconPropsWithoutSvgPath } from '../Icon/Icon.types';
 
 export const ChevronLeftSVGpath = (
-  <path d={'m16.9 17.98-6.1-6.1 6.1-6.1-1.8-1.9-8 8 8 8 1.8-1.9Z'} />
+  <path
+    d={
+      'M15.9 17.98L9.8 11.88L15.9 5.78L14.1 3.88L6.1 11.88L14.1 19.88L15.9 17.98Z'
+    }
+  />
 );
 
 export function ChevronLeftIcon(props: IconPropsWithoutSvgPath): JSX.Element {
