@@ -1,4 +1,4 @@
-import { JSX, useEffect, useRef } from 'react';
+import { Fragment, JSX, useEffect, useRef } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import {
@@ -553,21 +553,16 @@ const TemplateWithAllPaddings: StoryFn<typeof Panel> = (args) => (
   <>
     {panelPaddingArr.map((padding, index) => {
       return (
-        <div key={index}>
-          <Panel key={`panel1_${index}`} {...args} padding={padding}>
+        <Fragment key={index}>
+          <Panel {...args} padding={padding}>
             <div>{`padding: ${padding}`}</div>
             <Paragraph>{loremIpsum}</Paragraph>
           </Panel>
-          <Panel
-            key={`panel2_${index}`}
-            {...args}
-            padding={padding}
-            variant={'filled'}
-          >
+          <Panel {...args} padding={padding} variant={'filled'}>
             <div>{`padding: ${padding}`}</div>
             <Paragraph>{loremIpsum}</Paragraph>
           </Panel>
-        </div>
+        </Fragment>
       );
     })}
   </>
