@@ -1,7 +1,7 @@
 import { RadioGroup } from '@skatteetaten/ds-forms';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { category } from '../../../.storybook/helpers';
+import { category, htmlEventDescription } from '../../../.storybook/helpers';
 
 const meta = {
   component: RadioGroup.Radio,
@@ -15,6 +15,10 @@ const meta = {
     form: { table: { category: category.htmlAttribute } },
     // Aria
     ariaDescribedby: { table: { category: category.aria } },
+    // Events
+    onBlur: { ...htmlEventDescription },
+    onChange: { ...htmlEventDescription },
+    onFocus: { ...htmlEventDescription },
   },
   args: {
     children: 'Enkeltpersonsforetak',

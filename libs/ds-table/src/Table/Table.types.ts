@@ -43,6 +43,7 @@ export interface TableContextProps {
 export type RowWithExpandButtonHandle = {
   focusButton: () => void;
   rowRef: RefObject<HTMLTableRowElement>;
+  buttonRef: RefObject<HTMLButtonElement>;
 };
 
 export interface TableProps extends BaseProps {

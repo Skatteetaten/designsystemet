@@ -1,4 +1,4 @@
-import { JSX } from 'react';
+import { Fragment, JSX, useEffect, useRef } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import {
@@ -15,7 +15,7 @@ import {
 import { InfoIcon } from '@skatteetaten/ds-icons';
 import { Paragraph } from '@skatteetaten/ds-typography';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { expect, userEvent, within } from '@storybook/test';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 import farmerIllustration from '../../assets/farmer-illustration.svg';
@@ -47,6 +47,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    canManuallySetTitleFocus: { table: { disable: true } },
     children: {
       table: { disable: true },
       control: 'text',
@@ -124,7 +125,7 @@ export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
     ...defaultArgs,
-    ref: (instance: HTMLParagraphElement | null): void => {
+    ref: (instance: HTMLHeadingElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
       }
@@ -552,21 +553,16 @@ const TemplateWithAllPaddings: StoryFn<typeof Panel> = (args) => (
   <>
     {panelPaddingArr.map((padding, index) => {
       return (
-        <>
-          <Panel key={`panel1_${index}`} {...args} padding={padding}>
+        <Fragment key={index}>
+          <Panel {...args} padding={padding}>
             <div>{`padding: ${padding}`}</div>
             <Paragraph>{loremIpsum}</Paragraph>
           </Panel>
-          <Panel
-            key={`panel2_${index}`}
-            {...args}
-            padding={padding}
-            variant={'filled'}
-          >
+          <Panel {...args} padding={padding} variant={'filled'}>
             <div>{`padding: ${padding}`}</div>
             <Paragraph>{loremIpsum}</Paragraph>
           </Panel>
-        </>
+        </Fragment>
       );
     })}
   </>
@@ -597,7 +593,7 @@ const TemplateTwoPanelWithTextAndOneWithIcon: StoryFn<typeof Panel> = (
   <>
     {panelVariantArr.map((variant, index) => {
       return (
-        <>
+        <div key={index}>
           <Panel
             key={`panel1_${index}`}
             variant={variant}
@@ -609,7 +605,7 @@ const TemplateTwoPanelWithTextAndOneWithIcon: StoryFn<typeof Panel> = (
           <Panel key={`panel2_${index}`} variant={variant}>
             {loremIpsum}
           </Panel>
-        </>
+        </div>
       );
     })}
   </>
@@ -642,5 +638,69 @@ export const TextShortAndIcon = {
     renderIcon: {
       table: { disable: false },
     },
+  },
+} satisfies Story;
+
+export const WithCanManuallySetTitleFocus = {
+  args: {
+    ...defaultArgs,
+    title: 'Tittel i Panel',
+    canManuallySetTitleFocus: true,
+  },
+  argTypes: {
+    canManuallySetTitleFocus: { table: { disable: false } },
+  },
+  parameters: { imageSnapshot: { disable: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const panelHeading = canvas.getByRole('heading', { level: 3 });
+    panelHeading.focus();
+    await expect(panelHeading).toBeInTheDocument();
+    await expect(panelHeading).toHaveAttribute('tabIndex', '-1');
+  },
+} satisfies Story;
+
+export const WithPanelHeadingRef: Story = {
+  name: 'With Panel Heading Ref',
+  render: (args): JSX.Element => {
+    const headingRef = useRef<HTMLHeadingElement>(null);
+    useEffect(() => {
+      if (headingRef.current !== null) {
+        headingRef.current.id = 'dummyIdForwardedFromRef';
+      }
+    }, []);
+    return (
+      <>
+        <Panel {...args} headingRef={headingRef}>
+          <Paragraph>{loremIpsum}</Paragraph>
+        </Panel>
+        <Button
+          onClick={(): void => {
+            headingRef.current?.focus();
+          }}
+        >
+          {'Sett fokus på Panel Header'}
+        </Button>
+      </>
+    );
+  },
+  args: {
+    ...defaultArgs,
+    title: 'Panel Header skal kunne få fokus',
+    canManuallySetTitleFocus: true,
+    variant: 'outline',
+  },
+  argTypes: {
+    canManuallySetTitleFocus: { table: { disable: false } },
+    ref: { table: { disable: false } },
+  },
+  parameters: { imageSnapshot: { disable: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await userEvent.click(button);
+    const panelHeading = canvas.getByRole('heading', { level: 3 });
+    await expect(panelHeading).toHaveAttribute('id', 'dummyIdForwardedFromRef');
+    await expect(panelHeading).toHaveFocus();
   },
 } satisfies Story;
