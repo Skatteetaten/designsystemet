@@ -1,4 +1,4 @@
-import { forwardRef, JSX } from 'react';
+import { forwardRef, JSX, useImperativeHandle, useRef } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath, Icon } from '@skatteetaten/ds-icons';
@@ -23,19 +23,36 @@ export const ChipsRemovable = forwardRef<
     },
     ref
   ): JSX.Element => {
+    const chipRef = useRef<HTMLButtonElement>(null);
+
+    useImperativeHandle(ref, () => chipRef.current as HTMLButtonElement);
+
     const concatenatedClassName =
       `${styles.chip} ${size === 'small' ? styles.chip_small : ''} ${className}`.trim();
 
+    const getSibling = (): HTMLButtonElement | null => {
+      return (
+        (chipRef.current?.parentElement?.previousElementSibling?.querySelector(
+          'button'
+        ) ??
+          chipRef.current?.parentElement?.nextElementSibling?.querySelector(
+            'button'
+          )) ||
+        null
+      );
+    };
+
     return (
       <button
-        ref={ref}
+        ref={chipRef}
         type={'button'}
         id={id}
         className={concatenatedClassName}
         lang={lang}
         data-testid={dataTestId}
         onClick={() => {
-          //todo add handler
+          getSibling()?.focus();
+          // TODO: dersom første element fjernes, må vi også kunne fokusere neste. Dette fungerer ikke nå.
           onClose?.();
         }}
       >

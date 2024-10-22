@@ -87,9 +87,7 @@ export const Examples: Story = {
               <Chips.Removable
                 key={c}
                 onClose={() => {
-                  setFilter((x) =>
-                    x.length === 1 ? options : x.filter((y) => y !== c)
-                  );
+                  setFilter((x) => x.filter((y) => y !== c));
                 }}
               >
                 {c}
