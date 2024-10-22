@@ -18,6 +18,7 @@ export const ChipsRemovable = forwardRef<
       lang,
       'data-testid': dataTestId,
       size = getChipDefaultSize(),
+      disabled,
       onClose,
       children,
     },
@@ -28,7 +29,7 @@ export const ChipsRemovable = forwardRef<
     useImperativeHandle(ref, () => chipRef.current as HTMLButtonElement);
 
     const concatenatedClassName =
-      `${styles.chip} ${size === 'small' ? styles.chip_small : ''} ${className}`.trim();
+      `${styles.chip} ${styles.chip_removable} ${size === 'small' ? styles.chip_small : ''} ${className}`.trim();
 
     const getSibling = (): HTMLButtonElement | null => {
       return (
@@ -46,6 +47,7 @@ export const ChipsRemovable = forwardRef<
       <button
         ref={chipRef}
         type={'button'}
+        disabled={disabled}
         id={id}
         className={concatenatedClassName}
         lang={lang}

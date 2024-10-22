@@ -32,6 +32,17 @@ const meta = {
       },
     },
     children: { control: false, table: { category: category.props } },
+    // HTML
+    disabled: {
+      table: {
+        category: category.htmlAttribute,
+      },
+    },
+
+    // Aria
+    ariaPressed: {
+      table: { category: category.aria },
+    },
   },
   args: {
     children: 'Trondheim',

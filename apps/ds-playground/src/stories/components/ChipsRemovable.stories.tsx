@@ -16,6 +16,12 @@ const meta = {
       },
     },
     children: { control: false, table: { category: category.props } },
+    // HTML
+    disabled: {
+      table: {
+        category: category.htmlAttribute,
+      },
+    },
     // Events
     onClose: { control: false, table: { category: category.event } },
   },

@@ -19,6 +19,7 @@ export const ChipsToggle = forwardRef<HTMLButtonElement, ChipsToggleProps>(
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
+      disabled,
       size = getChipDefaultSize(),
       isSelected: externalIsSelected = false,
       showCheckmark = getChipsToggleDefaultShowCheckmark(),
@@ -40,6 +41,7 @@ export const ChipsToggle = forwardRef<HTMLButtonElement, ChipsToggleProps>(
         ref={ref}
         type={'button'}
         id={id}
+        disabled={disabled}
         className={concatenatedClassName}
         lang={lang}
         data-testid={dataTestId}

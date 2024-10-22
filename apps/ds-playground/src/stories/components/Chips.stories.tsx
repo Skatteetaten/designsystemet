@@ -21,6 +21,7 @@ const meta = {
   component: Chips,
   title: 'Komponenter/Chips/Chips',
   argTypes: {
+    // Props
     children: { table: { category: category.props } },
   },
   args: {

@@ -6,11 +6,22 @@
   list-style-type: none;
 }
 
+%disabled {
+  border-color: var(--semantic-disabled-foreground);
+  background-color: var(--semantic-disabled-background);
+  color: var(--semantic-disabled-foreground);
+  cursor: not-allowed;
+  text-decoration: none;
+  transform: none;
+}
+
 .chip {
   --chip-font-size: var(--font-size-medium);
   --chip-padding: var(--spacing-xs) var(--spacing-m);
   --chip-checkmark-padding: var(--spacing-xs) var(--spacing-m) var(--spacing-xs)
     var(--spacing-s);
+  --chip-removable-padding: var(--spacing-xs) var(--spacing-s) var(--spacing-xs)
+    var(--spacing-m);
 
   display: inline-flex;
   align-items: center;
@@ -40,10 +51,16 @@
     --chip-padding: var(--spacing-xxs) var(--spacing-s-plus);
     --chip-checkmark-padding: var(--spacing-xxs) var(--spacing-s-plus)
       var(--spacing-xxs) var(--spacing-s);
+    --chip-removable-padding: var(--spacing-xxs) var(--spacing-s)
+      var(--spacing-xxs) var(--spacing-s-plus);
   }
 
   &_withCheckmark {
     padding: var(--chip-checkmark-padding);
+  }
+
+  &_removable {
+    padding: var(--chip-removable-padding);
   }
 
   &_selected {
@@ -59,6 +76,12 @@
       outline: 2px solid var(--semantic-interactive-main);
       outline-offset: 2px;
     }
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:active {
+    @extend %disabled;
   }
 }
 
