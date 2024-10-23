@@ -3,10 +3,10 @@
 exports[`Tester/Chips/Toggle Defaults play-test 1`] = `
 <div data-test-block="true">
   <button type="button"
-          class="_chip_lobvp_5  _chip_withCheckmark_lobvp_58"
+          class="_chip_gy89d_5  _chip_withCheckmark_gy89d_58"
           aria-pressed="false"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_lobvp_76"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_gy89d_76"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -24,12 +24,12 @@ exports[`Tester/Chips/Toggle WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <button type="button"
           id="htmlId"
-          class="_chip_lobvp_5  _chip_withCheckmark_lobvp_58 dummyClassname"
+          class="_chip_gy89d_5  _chip_withCheckmark_gy89d_58 dummyClassname"
           lang="nb"
           data-testid="123ID"
           aria-pressed="false"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_lobvp_76"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_gy89d_76"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -46,11 +46,11 @@ exports[`Tester/Chips/Toggle WithAttributes play-test 1`] = `
 exports[`Tester/Chips/Toggle WithRef play-test 1`] = `
 <div data-test-block="true">
   <button type="button"
-          class="_chip_lobvp_5  _chip_withCheckmark_lobvp_58"
+          class="_chip_gy89d_5  _chip_withCheckmark_gy89d_58"
           aria-pressed="false"
           id="dummyIdForwardedFromRef"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_lobvp_76"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_gy89d_76"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -67,10 +67,10 @@ exports[`Tester/Chips/Toggle WithRef play-test 1`] = `
 exports[`Tester/Chips/Toggle WithSelected play-test 1`] = `
 <div data-test-block="true">
   <button type="button"
-          class="_chip_lobvp_5  _chip_withCheckmark_lobvp_58"
+          class="_chip_gy89d_5  _chip_withCheckmark_gy89d_58"
           aria-pressed="true"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_lobvp_76"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_gy89d_76"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -87,10 +87,10 @@ exports[`Tester/Chips/Toggle WithSelected play-test 1`] = `
 exports[`Tester/Chips/Toggle WithSizeSmall smoke-test 1`] = `
 <div data-test-block="true">
   <button type="button"
-          class="_chip_lobvp_5 _chip_small_lobvp_50 _chip_withCheckmark_lobvp_58"
+          class="_chip_gy89d_5 _chip_small_gy89d_50 _chip_withCheckmark_gy89d_58"
           aria-pressed="false"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_lobvp_76"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_gy89d_76"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -107,7 +107,7 @@ exports[`Tester/Chips/Toggle WithSizeSmall smoke-test 1`] = `
 exports[`Tester/Chips/Toggle WithoutCheckmark play-test 1`] = `
 <div data-test-block="true">
   <button type="button"
-          class="_chip_lobvp_5"
+          class="_chip_gy89d_5"
           aria-pressed="false"
   >
     Trondheim

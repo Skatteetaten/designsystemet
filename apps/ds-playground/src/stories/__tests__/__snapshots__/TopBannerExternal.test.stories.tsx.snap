@@ -69,7 +69,7 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                          viewbox="0 0 1100 800"
                          class="_flagIconSvg_bpls9_30"
                     >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                      <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
                       >
                       </path>
@@ -77,7 +77,7 @@ exports[`Tester/TopBanner/TopBannerExternal ClickMainMenuOpenAndClose play-test 
                             style="fill: rgb(239, 43, 45);"
                       >
                       </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
                             style="fill: rgb(0, 40, 104);"
                       >
                       </path>
@@ -174,7 +174,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
                          viewbox="0 0 1100 800"
                          class="_flagIconSvg_bpls9_30"
                     >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                      <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
                       >
                       </path>
@@ -182,7 +182,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointL play-test
                             style="fill: rgb(239, 43, 45);"
                       >
                       </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
                             style="fill: rgb(0, 40, 104);"
                       >
                       </path>
@@ -279,7 +279,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
                          viewbox="0 0 1100 800"
                          class="_flagIconSvg_bpls9_30"
                     >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                      <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
                       >
                       </path>
@@ -287,7 +287,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointM play-test
                             style="fill: rgb(239, 43, 45);"
                       >
                       </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
                             style="fill: rgb(0, 40, 104);"
                       >
                       </path>
@@ -384,7 +384,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
                          viewbox="0 0 1100 800"
                          class="_flagIconSvg_bpls9_30"
                     >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                      <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
                       >
                       </path>
@@ -392,7 +392,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointS play-test
                             style="fill: rgb(239, 43, 45);"
                       >
                       </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
                             style="fill: rgb(0, 40, 104);"
                       >
                       </path>
@@ -489,7 +489,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
                          viewbox="0 0 1100 800"
                          class="_flagIconSvg_bpls9_30"
                     >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                      <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
                       >
                       </path>
@@ -497,7 +497,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedBreakpointXS play-tes
                             style="fill: rgb(239, 43, 45);"
                       >
                       </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
                             style="fill: rgb(0, 40, 104);"
                       >
                       </path>
@@ -594,7 +594,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
                          viewbox="0 0 1100 800"
                          class="_flagIconSvg_bpls9_30"
                     >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                      <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
                       >
                       </path>
@@ -602,7 +602,7 @@ exports[`Tester/TopBanner/TopBannerExternal SkipLinkFocusedMobileScreen play-tes
                             style="fill: rgb(239, 43, 45);"
                       >
                       </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
                             style="fill: rgb(0, 40, 104);"
                       >
                       </path>
@@ -703,7 +703,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
                          viewbox="0 0 1100 800"
                          class="_flagIconSvg_bpls9_30"
                     >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                      <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
                       >
                       </path>
@@ -711,7 +711,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithAttributes play-test 1`] = `
                             style="fill: rgb(239, 43, 45);"
                       >
                       </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
                             style="fill: rgb(0, 40, 104);"
                       >
                       </path>
@@ -827,7 +827,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
                          viewbox="0 0 1100 800"
                          class="_flagIconSvg_bpls9_30"
                     >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                      <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
                       >
                       </path>
@@ -835,7 +835,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
                             style="fill: rgb(239, 43, 45);"
                       >
                       </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
                             style="fill: rgb(0, 40, 104);"
                       >
                       </path>
@@ -932,7 +932,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
                          viewbox="0 0 1100 800"
                          class="_flagIconSvg_bpls9_30"
                     >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                      <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
                       >
                       </path>
@@ -940,7 +940,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithDefaults play-test 1`] = `
                             style="fill: rgb(239, 43, 45);"
                       >
                       </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
                             style="fill: rgb(0, 40, 104);"
                       >
                       </path>
@@ -1067,7 +1067,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                          viewbox="0 0 1100 800"
                          class="_flagIconSvg_bpls9_30"
                     >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                      <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
                       >
                       </path>
@@ -1075,7 +1075,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumn play-test 1`] = `
                             style="fill: rgb(239, 43, 45);"
                       >
                       </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
                             style="fill: rgb(0, 40, 104);"
                       >
                       </path>
@@ -1292,7 +1292,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                          viewbox="0 0 1100 800"
                          class="_flagIconSvg_bpls9_30"
                     >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                      <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
                       >
                       </path>
@@ -1300,7 +1300,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointS play-test 1
                             style="fill: rgb(239, 43, 45);"
                       >
                       </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
                             style="fill: rgb(0, 40, 104);"
                       >
                       </path>
@@ -1517,7 +1517,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                          viewbox="0 0 1100 800"
                          class="_flagIconSvg_bpls9_30"
                     >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                      <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
                       >
                       </path>
@@ -1525,7 +1525,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithOneColumnBreakpointXS play-test 
                             style="fill: rgb(239, 43, 45);"
                       >
                       </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
                             style="fill: rgb(0, 40, 104);"
                       >
                       </path>
@@ -1714,7 +1714,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
                          viewbox="0 0 1100 800"
                          class="_flagIconSvg_bpls9_30"
                     >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                      <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
                       >
                       </path>
@@ -1722,7 +1722,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithRef play-test 1`] = `
                             style="fill: rgb(239, 43, 45);"
                       >
                       </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
                             style="fill: rgb(0, 40, 104);"
                       >
                       </path>
@@ -1859,7 +1859,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                          viewbox="0 0 1100 800"
                          class="_flagIconSvg_bpls9_30"
                     >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                      <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
                       >
                       </path>
@@ -1867,7 +1867,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumns play-test 1`] = `
                             style="fill: rgb(239, 43, 45);"
                       >
                       </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
                             style="fill: rgb(0, 40, 104);"
                       >
                       </path>
@@ -2104,7 +2104,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                          viewbox="0 0 1100 800"
                          class="_flagIconSvg_bpls9_30"
                     >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                      <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
                       >
                       </path>
@@ -2112,7 +2112,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointS play-tes
                             style="fill: rgb(239, 43, 45);"
                       >
                       </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
                             style="fill: rgb(0, 40, 104);"
                       >
                       </path>
@@ -2349,7 +2349,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                          viewbox="0 0 1100 800"
                          class="_flagIconSvg_bpls9_30"
                     >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                      <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
                       >
                       </path>
@@ -2357,7 +2357,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithThreeColumnsBreakpointXS play-te
                             style="fill: rgb(239, 43, 45);"
                       >
                       </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
                             style="fill: rgb(0, 40, 104);"
                       >
                       </path>
@@ -2589,7 +2589,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                          viewbox="0 0 1100 800"
                          class="_flagIconSvg_bpls9_30"
                     >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                      <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
                       >
                       </path>
@@ -2597,7 +2597,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumns play-test 1`] = `
                             style="fill: rgb(239, 43, 45);"
                       >
                       </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
                             style="fill: rgb(0, 40, 104);"
                       >
                       </path>
@@ -2824,7 +2824,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                          viewbox="0 0 1100 800"
                          class="_flagIconSvg_bpls9_30"
                     >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                      <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
                       >
                       </path>
@@ -2832,7 +2832,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointS play-test 
                             style="fill: rgb(239, 43, 45);"
                       >
                       </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
                             style="fill: rgb(0, 40, 104);"
                       >
                       </path>
@@ -3059,7 +3059,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                          viewbox="0 0 1100 800"
                          class="_flagIconSvg_bpls9_30"
                     >
-                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                      <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
                             style="fill: rgb(255, 255, 255);"
                       >
                       </path>
@@ -3067,7 +3067,7 @@ exports[`Tester/TopBanner/TopBannerExternal WithTwoColumnsBreakpointXS play-test
                             style="fill: rgb(239, 43, 45);"
                       >
                       </path>
-                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
                             style="fill: rgb(0, 40, 104);"
                       >
                       </path>

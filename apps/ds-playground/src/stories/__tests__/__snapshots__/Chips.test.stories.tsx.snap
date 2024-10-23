@@ -2,10 +2,10 @@
 
 exports[`Tester/Chips/Chips Defaults smoke-test 1`] = `
 <div data-test-block="true">
-  <ul class="_chipsList_lobvp_5">
+  <ul class="_chipsList_gy89d_5">
     <li>
       <button type="button"
-              class="_chip_lobvp_5"
+              class="_chip_gy89d_5"
               aria-pressed="false"
       >
         Trondheim
@@ -13,10 +13,10 @@ exports[`Tester/Chips/Chips Defaults smoke-test 1`] = `
     </li>
     <li>
       <button type="button"
-              class="_chip_lobvp_5  _chip_withCheckmark_lobvp_58"
+              class="_chip_gy89d_5  _chip_withCheckmark_gy89d_58"
               aria-pressed="false"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_lobvp_76"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_gy89d_76"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -30,10 +30,10 @@ exports[`Tester/Chips/Chips Defaults smoke-test 1`] = `
     </li>
     <li>
       <button type="button"
-              class="_chip_lobvp_5 _chip_removable_lobvp_61"
+              class="_chip_gy89d_5 _chip_removable_gy89d_61"
       >
         Oslo
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_lobvp_76"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_gy89d_76"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r5:"
@@ -54,12 +54,12 @@ exports[`Tester/Chips/Chips Defaults smoke-test 1`] = `
 
 exports[`Tester/Chips/Chips WithAriaLabel play-test 1`] = `
 <div data-test-block="true">
-  <ul class="_chipsList_lobvp_5"
+  <ul class="_chipsList_gy89d_5"
       aria-label="Kontorsted"
   >
     <li>
       <button type="button"
-              class="_chip_lobvp_5"
+              class="_chip_gy89d_5"
               aria-pressed="false"
       >
         Trondheim
@@ -67,10 +67,10 @@ exports[`Tester/Chips/Chips WithAriaLabel play-test 1`] = `
     </li>
     <li>
       <button type="button"
-              class="_chip_lobvp_5  _chip_withCheckmark_lobvp_58"
+              class="_chip_gy89d_5  _chip_withCheckmark_gy89d_58"
               aria-pressed="false"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_lobvp_76"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_gy89d_76"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -84,10 +84,10 @@ exports[`Tester/Chips/Chips WithAriaLabel play-test 1`] = `
     </li>
     <li>
       <button type="button"
-              class="_chip_lobvp_5 _chip_removable_lobvp_61"
+              class="_chip_gy89d_5 _chip_removable_gy89d_61"
       >
         Oslo
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_lobvp_76"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_gy89d_76"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r7:"
@@ -109,13 +109,13 @@ exports[`Tester/Chips/Chips WithAriaLabel play-test 1`] = `
 exports[`Tester/Chips/Chips WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <ul id="htmlId"
-      class="_chipsList_lobvp_5 dummyClassname"
+      class="_chipsList_gy89d_5 dummyClassname"
       lang="nb"
       data-testid="123ID"
   >
     <li>
       <button type="button"
-              class="_chip_lobvp_5"
+              class="_chip_gy89d_5"
               aria-pressed="false"
       >
         Trondheim
@@ -123,10 +123,10 @@ exports[`Tester/Chips/Chips WithAttributes play-test 1`] = `
     </li>
     <li>
       <button type="button"
-              class="_chip_lobvp_5  _chip_withCheckmark_lobvp_58"
+              class="_chip_gy89d_5  _chip_withCheckmark_gy89d_58"
               aria-pressed="false"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_lobvp_76"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_gy89d_76"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -140,10 +140,10 @@ exports[`Tester/Chips/Chips WithAttributes play-test 1`] = `
     </li>
     <li>
       <button type="button"
-              class="_chip_lobvp_5 _chip_removable_lobvp_61"
+              class="_chip_gy89d_5 _chip_removable_gy89d_61"
       >
         Oslo
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_lobvp_76"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_gy89d_76"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r3:"
@@ -164,13 +164,13 @@ exports[`Tester/Chips/Chips WithAttributes play-test 1`] = `
 
 exports[`Tester/Chips/Chips WithCloseAndFocusNext play-test 1`] = `
 <div data-test-block="true">
-  <ul class="_chipsList_lobvp_5">
+  <ul class="_chipsList_gy89d_5">
     <li>
       <button type="button"
-              class="_chip_lobvp_5 _chip_removable_lobvp_61"
+              class="_chip_gy89d_5 _chip_removable_gy89d_61"
       >
         Trondheim
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_lobvp_76"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_gy89d_76"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r8:"
@@ -187,10 +187,10 @@ exports[`Tester/Chips/Chips WithCloseAndFocusNext play-test 1`] = `
     </li>
     <li>
       <button type="button"
-              class="_chip_lobvp_5 _chip_removable_lobvp_61"
+              class="_chip_gy89d_5 _chip_removable_gy89d_61"
       >
         Oslo
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_lobvp_76"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_gy89d_76"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rb:"
@@ -211,7 +211,7 @@ exports[`Tester/Chips/Chips WithCloseAndFocusNext play-test 1`] = `
 
 exports[`Tester/Chips/Chips WithCloseLastChip play-test 1`] = `
 <div data-test-block="true">
-  <span class="_srOnly_lobvp_83"
+  <span class="_srOnly_gy89d_83"
         tabindex="-1"
   >
     Ingen flere filtre
@@ -221,12 +221,12 @@ exports[`Tester/Chips/Chips WithCloseLastChip play-test 1`] = `
 
 exports[`Tester/Chips/Chips WithRef play-test 1`] = `
 <div data-test-block="true">
-  <ul class="_chipsList_lobvp_5"
+  <ul class="_chipsList_gy89d_5"
       id="dummyIdForwardedFromRef"
   >
     <li>
       <button type="button"
-              class="_chip_lobvp_5"
+              class="_chip_gy89d_5"
               aria-pressed="false"
       >
         Trondheim
@@ -234,10 +234,10 @@ exports[`Tester/Chips/Chips WithRef play-test 1`] = `
     </li>
     <li>
       <button type="button"
-              class="_chip_lobvp_5  _chip_withCheckmark_lobvp_58"
+              class="_chip_gy89d_5  _chip_withCheckmark_gy89d_58"
               aria-pressed="false"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_lobvp_76"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_gy89d_76"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -251,10 +251,10 @@ exports[`Tester/Chips/Chips WithRef play-test 1`] = `
     </li>
     <li>
       <button type="button"
-              class="_chip_lobvp_5 _chip_removable_lobvp_61"
+              class="_chip_gy89d_5 _chip_removable_gy89d_61"
       >
         Oslo
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_lobvp_76"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_gy89d_76"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1:"
