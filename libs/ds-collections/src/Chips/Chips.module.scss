@@ -82,7 +82,10 @@
 
   &:disabled,
   &:disabled:hover,
-  &:disabled:active {
+  &:disabled:active,
+  &:disabled[aria-pressed='true'],
+  &:disabled[aria-pressed='true']:hover,
+  &:disabled[aria-pressed='true']:active {
     @extend %disabled;
   }
 }
