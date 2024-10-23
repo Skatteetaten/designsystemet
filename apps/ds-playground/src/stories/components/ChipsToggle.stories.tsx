@@ -2,6 +2,7 @@ import {
   Chips,
   getChipsToggleDefaultShowCheckmark,
   getChipsToggleDefaultIsSelected,
+  getChipDefaultSize,
 } from '@skatteetaten/ds-collections';
 import { Meta, StoryObj } from '@storybook/react';
 
@@ -16,7 +17,7 @@ const meta = {
       control: 'radio',
       table: {
         category: category.props,
-        //defaultValue: { summary: getChipDefaultSize() },
+        defaultValue: { summary: getChipDefaultSize() },
       },
     },
     isSelected: {
@@ -30,7 +31,9 @@ const meta = {
       control: 'boolean',
       table: {
         category: category.props,
-        summary: { defaultValue: getChipsToggleDefaultShowCheckmark() },
+        defaultValue: {
+          summary: getChipsToggleDefaultShowCheckmark().toString(),
+        },
       },
     },
     children: { control: false, table: { category: category.props } },

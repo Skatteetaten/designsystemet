@@ -1,4 +1,4 @@
-import { Chips } from '@skatteetaten/ds-collections';
+import { Chips, getChipDefaultSize } from '@skatteetaten/ds-collections';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
@@ -12,7 +12,7 @@ const meta = {
       control: 'radio',
       table: {
         category: category.props,
-        //defaultValue: { summary: getChipDefaultSize() },
+        defaultValue: { summary: getChipDefaultSize() },
       },
     },
     children: { control: false, table: { category: category.props } },

@@ -61,4 +61,8 @@ export const ChipsToggle = forwardRef<HTMLButtonElement, ChipsToggleProps>(
 
 ChipsToggle.displayName = 'ChipsToggle';
 
-export { getChipsToggleDefaultShowCheckmark, getChipsToggleDefaultIsSelected };
+export {
+  getChipsToggleDefaultShowCheckmark,
+  getChipsToggleDefaultIsSelected,
+  getChipDefaultSize,
+};
