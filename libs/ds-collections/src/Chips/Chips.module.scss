@@ -1,3 +1,5 @@
+@import 'libs/ds-core-utils/src/styles';
+
 .chipsList {
   display: inline-flex;
   padding: 0;
@@ -91,4 +93,8 @@
   &_close {
     padding-top: var(--spacing-xxs);
   }
+}
+
+.srOnly {
+  @include sr-only;
 }

@@ -40,3 +40,7 @@ export interface ChipsComponent
     ChipsRemovableProps & RefAttributes<HTMLButtonElement>
   >;
 }
+
+export type ChipsContextProps = {
+  updateFocus: (removedChip: HTMLButtonElement) => void;
+};

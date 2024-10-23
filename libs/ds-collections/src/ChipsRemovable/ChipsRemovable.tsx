@@ -1,4 +1,10 @@
-import { forwardRef, JSX, useImperativeHandle, useRef } from 'react';
+import {
+  forwardRef,
+  JSX,
+  useContext,
+  useImperativeHandle,
+  useRef,
+} from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath, Icon } from '@skatteetaten/ds-icons';
@@ -6,6 +12,7 @@ import { CancelSVGpath, Icon } from '@skatteetaten/ds-icons';
 import { ChipsRemovableProps } from './ChipsRemovable.types';
 import styles from '../Chips/Chips.module.scss';
 import { getChipDefaultSize } from '../Chips/defaults';
+import { ChipsContext } from '../ChipsContext/ChipsContext';
 
 export const ChipsRemovable = forwardRef<
   HTMLButtonElement,
@@ -24,6 +31,8 @@ export const ChipsRemovable = forwardRef<
     },
     ref
   ): JSX.Element => {
+    const { updateFocus } = useContext(ChipsContext);
+
     const chipRef = useRef<HTMLButtonElement>(null);
 
     useImperativeHandle(ref, () => chipRef.current as HTMLButtonElement);
@@ -31,16 +40,12 @@ export const ChipsRemovable = forwardRef<
     const concatenatedClassName =
       `${styles.chip} ${styles.chip_removable} ${size === 'small' ? styles.chip_small : ''} ${className}`.trim();
 
-    const getSibling = (): HTMLButtonElement | null => {
-      return (
-        (chipRef.current?.parentElement?.previousElementSibling?.querySelector(
-          'button'
-        ) ??
-          chipRef.current?.parentElement?.nextElementSibling?.querySelector(
-            'button'
-          )) ||
-        null
-      );
+    const handleOnClose = (): void => {
+      if (chipRef.current) {
+        updateFocus(chipRef.current);
+      }
+
+      onClose?.();
     };
 
     return (
@@ -52,11 +57,7 @@ export const ChipsRemovable = forwardRef<
         className={concatenatedClassName}
         lang={lang}
         data-testid={dataTestId}
-        onClick={() => {
-          getSibling()?.focus();
-          // TODO: dersom første element fjernes, må vi også kunne fokusere neste. Dette fungerer ikke nå.
-          onClose?.();
-        }}
+        onClick={handleOnClose}
       >
         {children}
         <Icon
