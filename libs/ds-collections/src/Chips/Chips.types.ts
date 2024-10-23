@@ -26,9 +26,9 @@ export interface ChipHTMLAttributes {
 }
 
 export interface ChipCommonProps extends BaseProps, ChipHTMLAttributes {
-  /** Størrelse på Chip */
+  /** Størrelse på Chip. */
   size?: ChipSize;
-  /** Tekst i Chip */
+  /** Tekst i Chip. */
   children: string | string[];
 }
 

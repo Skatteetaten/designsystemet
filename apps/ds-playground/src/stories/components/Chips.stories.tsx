@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, JSX } from 'react';
 
 import { Chips, ChipsProps } from '@skatteetaten/ds-collections';
 import { Heading } from '@skatteetaten/ds-typography';

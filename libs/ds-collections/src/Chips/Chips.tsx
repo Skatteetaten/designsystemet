@@ -1,4 +1,11 @@
-import { Children, JSX, forwardRef, useImperativeHandle, useRef } from 'react';
+import {
+  Children,
+  JSX,
+  forwardRef,
+  useImperativeHandle,
+  useMemo,
+  useRef,
+} from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
@@ -26,30 +33,34 @@ export const Chips = forwardRef<HTMLUListElement, ChipsProps>(
 
     useImperativeHandle(ref, () => listRef.current as HTMLUListElement);
 
-    const updateFocus = (removedChip: HTMLButtonElement): void => {
-      if (!listRef.current || !removedChip.parentElement) return;
+    const updateFocus = useMemo(
+      () =>
+        (removedChip: HTMLButtonElement): void => {
+          if (!listRef.current || !removedChip.parentElement) return;
 
-      const listItemsArray = Array.from(listRef.current.children);
+          const listItemsArray = Array.from(listRef.current.children);
 
-      if (listItemsArray.length === 1) {
-        // fjerner siste chip, sett fokus til skjult tekst
-        setTimeout(() => noFiltersRef.current?.focus(), 0);
-        return;
-      }
+          if (listItemsArray.length === 1) {
+            // fjerner siste chip, sett fokus til skjult tekst
+            setTimeout(() => noFiltersRef.current?.focus(), 0);
+            return;
+          }
 
-      const indexOfRemovedChip = listItemsArray.indexOf(
-        removedChip.parentElement
-      );
+          const indexOfRemovedChip = listItemsArray.indexOf(
+            removedChip.parentElement
+          );
 
-      const indexToFocus =
-        indexOfRemovedChip === listItemsArray.length - 1
-          ? listItemsArray.length - 2
-          : indexOfRemovedChip;
+          const indexToFocus =
+            indexOfRemovedChip === listItemsArray.length - 1
+              ? listItemsArray.length - 2
+              : indexOfRemovedChip;
 
-      setTimeout(() => {
-        listItemsArray[indexToFocus]?.querySelector('button')?.focus();
-      }, 0);
-    };
+          setTimeout(() => {
+            listItemsArray[indexToFocus]?.querySelector('button')?.focus();
+          }, 0);
+        },
+      []
+    );
 
     const concatenatedClassname = `${styles.chipsList} ${className}`.trim();
 
