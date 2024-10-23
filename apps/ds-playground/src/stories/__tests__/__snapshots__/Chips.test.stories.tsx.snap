@@ -1,0 +1,274 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Chips/Chips Defaults smoke-test 1`] = `
+<div data-test-block="true">
+  <ul class="_chipsList_lobvp_5">
+    <li>
+      <button type="button"
+              class="_chip_lobvp_5"
+              aria-pressed="false"
+      >
+        Trondheim
+      </button>
+    </li>
+    <li>
+      <button type="button"
+              class="_chip_lobvp_5  _chip_withCheckmark_lobvp_58"
+              aria-pressed="false"
+      >
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_lobvp_76"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M12 20a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm0-18a10 10 0 1 0 0 20 10 10 0 0 0 0-20Z">
+          </path>
+        </svg>
+        Bergen
+      </button>
+    </li>
+    <li>
+      <button type="button"
+              class="_chip_lobvp_5 _chip_removable_lobvp_61"
+      >
+        Oslo
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_lobvp_76"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r5:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r5:">
+            Fjern filter TODO
+          </title>
+          <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+          </path>
+        </svg>
+      </button>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Tester/Chips/Chips WithAriaLabel play-test 1`] = `
+<div data-test-block="true">
+  <ul class="_chipsList_lobvp_5"
+      aria-label="Kontorsted"
+  >
+    <li>
+      <button type="button"
+              class="_chip_lobvp_5"
+              aria-pressed="false"
+      >
+        Trondheim
+      </button>
+    </li>
+    <li>
+      <button type="button"
+              class="_chip_lobvp_5  _chip_withCheckmark_lobvp_58"
+              aria-pressed="false"
+      >
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_lobvp_76"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M12 20a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm0-18a10 10 0 1 0 0 20 10 10 0 0 0 0-20Z">
+          </path>
+        </svg>
+        Bergen
+      </button>
+    </li>
+    <li>
+      <button type="button"
+              class="_chip_lobvp_5 _chip_removable_lobvp_61"
+      >
+        Oslo
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_lobvp_76"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r7:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r7:">
+            Fjern filter TODO
+          </title>
+          <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+          </path>
+        </svg>
+      </button>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Tester/Chips/Chips WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <ul id="htmlId"
+      class="_chipsList_lobvp_5 dummyClassname"
+      lang="nb"
+      data-testid="123ID"
+  >
+    <li>
+      <button type="button"
+              class="_chip_lobvp_5"
+              aria-pressed="false"
+      >
+        Trondheim
+      </button>
+    </li>
+    <li>
+      <button type="button"
+              class="_chip_lobvp_5  _chip_withCheckmark_lobvp_58"
+              aria-pressed="false"
+      >
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_lobvp_76"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M12 20a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm0-18a10 10 0 1 0 0 20 10 10 0 0 0 0-20Z">
+          </path>
+        </svg>
+        Bergen
+      </button>
+    </li>
+    <li>
+      <button type="button"
+              class="_chip_lobvp_5 _chip_removable_lobvp_61"
+      >
+        Oslo
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_lobvp_76"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r3:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r3:">
+            Fjern filter TODO
+          </title>
+          <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+          </path>
+        </svg>
+      </button>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Tester/Chips/Chips WithCloseAndFocusNext play-test 1`] = `
+<div data-test-block="true">
+  <ul class="_chipsList_lobvp_5">
+    <li>
+      <button type="button"
+              class="_chip_lobvp_5 _chip_removable_lobvp_61"
+      >
+        Trondheim
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_lobvp_76"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r8:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r8:">
+            Fjern filter TODO
+          </title>
+          <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+          </path>
+        </svg>
+      </button>
+    </li>
+    <li>
+      <button type="button"
+              class="_chip_lobvp_5 _chip_removable_lobvp_61"
+      >
+        Oslo
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_lobvp_76"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:rb:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:rb:">
+            Fjern filter TODO
+          </title>
+          <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+          </path>
+        </svg>
+      </button>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Tester/Chips/Chips WithCloseLastChip play-test 1`] = `
+<div data-test-block="true">
+  <span class="_srOnly_lobvp_83"
+        tabindex="-1"
+  >
+    Ingen flere filtre
+  </span>
+</div>
+`;
+
+exports[`Tester/Chips/Chips WithRef play-test 1`] = `
+<div data-test-block="true">
+  <ul class="_chipsList_lobvp_5"
+      id="dummyIdForwardedFromRef"
+  >
+    <li>
+      <button type="button"
+              class="_chip_lobvp_5"
+              aria-pressed="false"
+      >
+        Trondheim
+      </button>
+    </li>
+    <li>
+      <button type="button"
+              class="_chip_lobvp_5  _chip_withCheckmark_lobvp_58"
+              aria-pressed="false"
+      >
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_lobvp_76"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M12 20a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm0-18a10 10 0 1 0 0 20 10 10 0 0 0 0-20Z">
+          </path>
+        </svg>
+        Bergen
+      </button>
+    </li>
+    <li>
+      <button type="button"
+              class="_chip_lobvp_5 _chip_removable_lobvp_61"
+      >
+        Oslo
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_lobvp_76"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r1:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r1:">
+            Fjern filter TODO
+          </title>
+          <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+          </path>
+        </svg>
+      </button>
+    </li>
+  </ul>
+</div>
+`;

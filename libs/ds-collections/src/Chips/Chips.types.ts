@@ -17,14 +17,17 @@ interface ChipsHTMLAttributes {
 }
 
 export interface ChipsProps extends BaseProps, ChipsHTMLAttributes {
-  /** Array med Chips.Chip */
+  /** Liste med Chips.Toggle eller Chips.Removable */
   children?: ReactNode;
 }
 
-export interface ChipCommonProps extends BaseProps {
+export interface ChipHTMLAttributes {
+  disabled?: ComponentPropsWithoutRef<'button'>['disabled'];
+}
+
+export interface ChipCommonProps extends BaseProps, ChipHTMLAttributes {
   /** Størrelse på Chip */
   size?: ChipSize;
-  disabled?: boolean;
   /** Tekst i Chip */
   children: string | string[];
 }
@@ -42,5 +45,5 @@ export interface ChipsComponent
 }
 
 export type ChipsContextProps = {
-  updateFocus: (removedChip: HTMLButtonElement) => void;
+  updateFocus?: (removedChip: HTMLButtonElement) => void;
 };

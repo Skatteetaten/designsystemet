@@ -1,6 +1,7 @@
 import {
   Chips,
   getChipsToggleDefaultShowCheckmark,
+  getChipsToggleDefaultIsSelected,
 } from '@skatteetaten/ds-collections';
 import { Meta, StoryObj } from '@storybook/react';
 
@@ -22,6 +23,7 @@ const meta = {
       control: 'boolean',
       table: {
         category: category.props,
+        defaultValue: { summary: getChipsToggleDefaultIsSelected().toString() },
       },
     },
     showCheckmark: {
@@ -38,11 +40,8 @@ const meta = {
         category: category.htmlAttribute,
       },
     },
-
-    // Aria
-    ariaPressed: {
-      table: { category: category.aria },
-    },
+    // Events
+    onClick: { table: { category: category.event } },
   },
   args: {
     children: 'Trondheim',

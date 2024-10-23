@@ -42,7 +42,7 @@ export const ChipsRemovable = forwardRef<
 
     const handleOnClose = (): void => {
       if (chipRef.current) {
-        updateFocus(chipRef.current);
+        updateFocus?.(chipRef.current);
       }
 
       onClose?.();
@@ -64,7 +64,7 @@ export const ChipsRemovable = forwardRef<
           className={styles.icon}
           svgPath={CancelSVGpath}
           size={'small'}
-          title={'TODO: legg inn tittel'}
+          title={'Fjern filter TODO'}
         />
       </button>
     );

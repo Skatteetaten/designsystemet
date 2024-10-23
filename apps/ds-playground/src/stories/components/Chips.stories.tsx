@@ -10,7 +10,7 @@ import { exampleParameters } from '../utils/stories.utils';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 Chips.Toggle = { ...Chips.Toggle };
-Chips.Toggle.displayName = 'Chips.Chip';
+Chips.Toggle.displayName = 'Chips.Toggle';
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -26,9 +26,11 @@ const meta = {
   },
   args: {
     children: [
-      <Chips.Toggle key={'trd'}>{'Trondheim'}</Chips.Toggle>,
+      <Chips.Toggle key={'trd'} showCheckmark={false}>
+        {'Trondheim'}
+      </Chips.Toggle>,
       <Chips.Toggle key={'bgo'}>{'Bergen'}</Chips.Toggle>,
-      <Chips.Toggle key={'osl'}>{'Oslo'}</Chips.Toggle>,
+      <Chips.Removable key={'osl'}>{'Oslo'}</Chips.Removable>,
     ],
   },
 } satisfies Meta<ChipsProps>;
@@ -38,7 +40,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {} satisfies Story;
 
-const options = [
+const lokasjoner = [
   'Ål',
   'Bjørnafjorden',
   'Evje og Hornnes',
@@ -46,9 +48,13 @@ const options = [
   'Trondheim',
 ];
 
+const dager = ['Mandag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag'];
+
 export const Examples: Story = {
   render: (_args): JSX.Element => {
-    const [filter, setFilter] = useState(options);
+    const [filter, setFilter] = useState(lokasjoner);
+    const [valgteDager, setValgteDater] = useState<string[]>([]);
+    const [valgteLokasjoner, setValgteLokasjoner] = useState<string[]>([]);
 
     return (
       <div className={'flex flexColumn gapXl'}>
@@ -57,13 +63,22 @@ export const Examples: Story = {
             {'Kontorsted'}
           </Heading>
           <Chips>
-            <Chips.Toggle showCheckmark={false}>{'Ål'}</Chips.Toggle>
-            <Chips.Toggle showCheckmark={false}>{'Bjørnafjorden'}</Chips.Toggle>
-            <Chips.Toggle showCheckmark={false}>
-              {'Evje og Hornnes'}
-            </Chips.Toggle>
-            <Chips.Toggle showCheckmark={false}>{'Hamar'}</Chips.Toggle>
-            <Chips.Toggle showCheckmark={false}>{'Trondheim'}</Chips.Toggle>
+            {lokasjoner.map((lokasjon) => (
+              <Chips.Toggle
+                key={lokasjon}
+                showCheckmark={false}
+                isSelected={valgteLokasjoner.includes(lokasjon)}
+                onClick={() =>
+                  setValgteLokasjoner(
+                    valgteLokasjoner.includes(lokasjon)
+                      ? valgteLokasjoner.filter((x) => x !== lokasjon)
+                      : [...valgteLokasjoner, lokasjon]
+                  )
+                }
+              >
+                {lokasjon}
+              </Chips.Toggle>
+            ))}
           </Chips>
         </div>
 
@@ -72,11 +87,21 @@ export const Examples: Story = {
             {'Jeg kan kontaktes på'}
           </Heading>
           <Chips>
-            <Chips.Toggle>{'Mandag'}</Chips.Toggle>
-            <Chips.Toggle>{'Tirsdag'}</Chips.Toggle>
-            <Chips.Toggle>{'Onsdag'}</Chips.Toggle>
-            <Chips.Toggle>{'Torsdag'}</Chips.Toggle>
-            <Chips.Toggle>{'Fredag'}</Chips.Toggle>
+            {dager.map((dag) => (
+              <Chips.Toggle
+                key={dag}
+                isSelected={valgteDager.includes(dag)}
+                onClick={() =>
+                  setValgteDater(
+                    valgteDager.includes(dag)
+                      ? valgteDager.filter((x) => x !== dag)
+                      : [...valgteDager, dag]
+                  )
+                }
+              >
+                {dag}
+              </Chips.Toggle>
+            ))}
           </Chips>
         </div>
         <div>

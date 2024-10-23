@@ -65,7 +65,7 @@
     padding: var(--chip-removable-padding);
   }
 
-  &_selected {
+  &[aria-pressed='true'] {
     background-color: var(--semantic-interactive-main);
     color: var(--palette-graphite-0);
 

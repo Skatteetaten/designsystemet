@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Chips/Removable Defaults smoke-test 1`] = `
+<div data-test-block="true">
+  <button type="button"
+          class="_chip_lobvp_5 _chip_removable_lobvp_61"
+  >
+    Trondheim
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_lobvp_76"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:r2:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:r2:">
+        Fjern filter TODO
+      </title>
+      <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/Chips/Removable WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <button type="button"
+          id="htmlId"
+          class="_chip_lobvp_5 _chip_removable_lobvp_61  dummyClassname"
+          lang="nb"
+          data-testid="123ID"
+  >
+    Trondheim
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_lobvp_76"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:r1:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:r1:">
+        Fjern filter TODO
+      </title>
+      <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/Chips/Removable WithCloseIconAltText play-test 1`] = `
+<div data-test-block="true">
+  <button type="button"
+          class="_chip_lobvp_5 _chip_removable_lobvp_61"
+  >
+    Trondheim
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_lobvp_76"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:r4:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:r4:">
+        Fjern filter TODO
+      </title>
+      <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/Chips/Removable WithRef play-test 1`] = `
+<div data-test-block="true">
+  <button type="button"
+          class="_chip_lobvp_5 _chip_removable_lobvp_61"
+          id="dummyIdForwardedFromRef"
+  >
+    Trondheim
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_lobvp_76"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:r0:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:r0:">
+        Fjern filter TODO
+      </title>
+      <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+      </path>
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`Tester/Chips/Removable WithSizeSmall smoke-test 1`] = `
+<div data-test-block="true">
+  <button type="button"
+          class="_chip_lobvp_5 _chip_removable_lobvp_61 _chip_small_lobvp_50"
+  >
+    Trondheim
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_lobvp_76"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-labelledby="svgtitle-:r3:"
+         aria-hidden="false"
+         role="img"
+    >
+      <title id="svgtitle-:r3:">
+        Fjern filter TODO
+      </title>
+      <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
+      </path>
+    </svg>
+  </button>
+</div>
+`;

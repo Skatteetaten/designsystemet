@@ -55,6 +55,14 @@ export const Chips = forwardRef<HTMLUListElement, ChipsProps>(
 
     const childrenAsArray = Children.toArray(children);
 
+    if (childrenAsArray.length === 0) {
+      return (
+        <span ref={noFiltersRef} className={styles.srOnly} tabIndex={-1}>
+          {'Ingen flere filtre'}
+        </span>
+      );
+    }
+
     return (
       <ChipsContext.Provider value={{ updateFocus }}>
         <ul
@@ -68,11 +76,6 @@ export const Chips = forwardRef<HTMLUListElement, ChipsProps>(
           {childrenAsArray.map((child, index) => {
             return <li key={index}>{child}</li>;
           })}
-          {childrenAsArray.length === 0 ? (
-            <span ref={noFiltersRef} className={styles.srOnly} tabIndex={-1}>
-              {'Ingen flere filtre'}
-            </span>
-          ) : null}
         </ul>
       </ChipsContext.Provider>
     );
