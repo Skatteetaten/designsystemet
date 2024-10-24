@@ -1,4 +1,5 @@
 import { Chips, ChipsRemovableProps } from '@skatteetaten/ds-collections';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
 
@@ -104,7 +105,9 @@ export const WithCloseIconAltText = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const icon = canvas.getByTitle('Fjern filter TODO');
+    const icon = canvas.getByTitle(
+      dsI18n.t('ds_collections:chips.RemoveFilter')
+    );
     await expect(icon).toBeInTheDocument();
   },
 } satisfies Story;

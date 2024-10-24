@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import { Chips, ChipsProps } from '@skatteetaten/ds-collections';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, userEvent, within } from '@storybook/test';
 
@@ -157,7 +158,7 @@ export const WithCloseLastChip = {
     await userEvent.click(chips[2]);
     await userEvent.click(chips[1]);
     await userEvent.click(chips[0]);
-    const span = canvas.getByText('Ingen flere filtre');
+    const span = canvas.getByText(dsI18n.t('ds_collections:chips.NoFilters'));
     await expect(span).toHaveFocus();
   },
 } satisfies Story;

@@ -5,8 +5,9 @@ import {
   useImperativeHandle,
   useRef,
 } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath, Icon } from '@skatteetaten/ds-icons';
 
 import { ChipsRemovableProps } from './ChipsRemovable.types';
@@ -31,6 +32,7 @@ export const ChipsRemovable = forwardRef<
     },
     ref
   ): JSX.Element => {
+    const { t } = useTranslation('ds_collections', { i18n: dsI18n });
     const { updateFocus } = useContext(ChipsContext);
 
     const chipRef = useRef<HTMLButtonElement>(null);
@@ -64,7 +66,7 @@ export const ChipsRemovable = forwardRef<
           className={styles.icon}
           svgPath={CancelSVGpath}
           size={'small'}
-          title={'Fjern filter TODO'}
+          title={t('chips.RemoveFilter')}
         />
       </button>
     );

@@ -41,7 +41,7 @@ exports[`Tester/Chips/Chips Defaults smoke-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:r5:">
-            Fjern filter TODO
+            Fjern filter
           </title>
           <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
           </path>
@@ -95,7 +95,7 @@ exports[`Tester/Chips/Chips WithAriaLabel play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:r7:">
-            Fjern filter TODO
+            Fjern filter
           </title>
           <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
           </path>
@@ -151,7 +151,7 @@ exports[`Tester/Chips/Chips WithAttributes play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:r3:">
-            Fjern filter TODO
+            Fjern filter
           </title>
           <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
           </path>
@@ -178,7 +178,7 @@ exports[`Tester/Chips/Chips WithCloseAndFocusNext play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:r8:">
-            Fjern filter TODO
+            Fjern filter
           </title>
           <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
           </path>
@@ -198,7 +198,7 @@ exports[`Tester/Chips/Chips WithCloseAndFocusNext play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:rb:">
-            Fjern filter TODO
+            Fjern filter
           </title>
           <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
           </path>
@@ -262,7 +262,7 @@ exports[`Tester/Chips/Chips WithRef play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:r1:">
-            Fjern filter TODO
+            Fjern filter
           </title>
           <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z">
           </path>

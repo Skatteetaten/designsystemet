@@ -1,4 +1,6 @@
 {
+  "chips.NoFilters": "No more filters",
+  "chips.RemoveFilter": "Remove filter",
   "steplist.Edit": "Edit",
   "steplist.Next": "Next",
   "steplist.ResultStepIconText": "Completed"

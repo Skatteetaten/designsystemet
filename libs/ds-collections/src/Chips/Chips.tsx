@@ -6,8 +6,9 @@ import {
   useMemo,
   useRef,
 } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 
 import { ChipsComponent, ChipsProps } from './Chips.types';
 import { ChipsContext } from '../ChipsContext/ChipsContext';
@@ -28,6 +29,7 @@ export const Chips = forwardRef<HTMLUListElement, ChipsProps>(
     },
     ref
   ): JSX.Element => {
+    const { t } = useTranslation('ds_collections', { i18n: dsI18n });
     const listRef = useRef<HTMLUListElement>(null);
     const noFiltersRef = useRef<HTMLSpanElement>(null);
 
@@ -69,7 +71,7 @@ export const Chips = forwardRef<HTMLUListElement, ChipsProps>(
     if (childrenAsArray.length === 0) {
       return (
         <span ref={noFiltersRef} className={styles.srOnly} tabIndex={-1}>
-          {'Ingen flere filtre'}
+          {t('chips.NoFilters')}
         </span>
       );
     }
