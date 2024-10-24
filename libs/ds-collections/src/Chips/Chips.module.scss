@@ -2,6 +2,7 @@
 
 .chipsList {
   display: inline-flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
   gap: var(--spacing-s);
@@ -92,10 +93,6 @@
 
 .icon {
   fill: currentcolor;
-
-  &_close {
-    padding-top: var(--spacing-xxs);
-  }
 }
 
 .srOnly {

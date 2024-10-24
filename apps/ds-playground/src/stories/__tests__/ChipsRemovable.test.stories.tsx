@@ -17,9 +17,11 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     size: { table: { disable: true } },
-    disabled: { table: { disable: true } },
-    onClose: { table: { disable: true } },
     children: { table: { disable: true } },
+    // HTML
+    disabled: { table: { disable: true } },
+    // Events
+    onClose: { table: { disable: true } },
   },
 } satisfies Meta<typeof Chips.Removable>;
 export default meta;
@@ -78,7 +80,7 @@ export const WithAttributes = {
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults (A2, A4,A5 delvis, A7, B1, B4)',
+  name: 'Defaults (A2, A3, B3 delvis)',
   args: {
     ...defaultArgs,
   },

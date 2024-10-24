@@ -23,6 +23,8 @@ const meta = {
   argTypes: {
     // Props
     children: { table: { category: category.props } },
+    // Aria
+    ariaLabel: { table: { category: category.aria } },
   },
   args: {
     children: [
@@ -53,8 +55,14 @@ const dager = ['Mandag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag'];
 export const Examples: Story = {
   render: (_args): JSX.Element => {
     const [filter, setFilter] = useState(lokasjoner);
-    const [valgteDager, setValgteDater] = useState<string[]>([]);
-    const [valgteLokasjoner, setValgteLokasjoner] = useState<string[]>([]);
+    const [valgteDager, setValgteDater] = useState<string[]>([
+      dager[0],
+      dager[2],
+    ]);
+    const [valgteLokasjoner, setValgteLokasjoner] = useState<string[]>([
+      lokasjoner[1],
+      lokasjoner[3],
+    ]);
 
     return (
       <div className={'flex flexColumn gapXl'}>

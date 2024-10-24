@@ -1,6 +1,9 @@
 import { ChipCommonProps } from '../Chips/Chips.types';
 
 export interface ChipsRemovableProps extends ChipCommonProps {
-  /** Callback som kalles når Chip skal lukkes. */
+  /**
+   * Callback-funksjon som utføres når brukeren klikker på chipen.
+   * Denne funksjonen kan brukes til å håndtere fjerning av chipen fra visningen.
+   */
   onClose?: () => void;
 }

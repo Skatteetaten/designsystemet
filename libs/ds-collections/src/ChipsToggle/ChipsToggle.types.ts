@@ -3,10 +3,13 @@ import { BaseProps } from '@skatteetaten/ds-core-utils';
 import { ChipCommonProps } from '../Chips/Chips.types';
 
 export interface ChipsToggleProps extends ChipCommonProps, BaseProps {
-  /** Skal Chip vises med avmerkingsikon. */
+  /** Angir om et avmerkingsikon (checkmark) skal vises i chipen. */
   showCheckmark?: boolean;
-  /** Er Chip valgt.  */
+  /**
+   * Angir om chipen er i valgt tilstand.
+   * Når true, vil chipen vises med valgt styling og eventuelt avmerkingsikon hvis showCheckmark er true.
+   */
   isSelected?: boolean;
-  /** Callback som kalles når Chip klikkes på. */
+  /** Callback-funksjon som utføres når brukeren klikker på chipen. */
   onClick?: () => void;
 }

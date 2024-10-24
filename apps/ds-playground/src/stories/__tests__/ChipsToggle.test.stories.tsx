@@ -17,11 +17,13 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     size: { table: { disable: true } },
-    disabled: { table: { disable: true } },
-    showCheckmark: { table: { disable: true } },
     isSelected: { table: { disable: true } },
-    onClick: { table: { disable: true } },
+    showCheckmark: { table: { disable: true } },
     children: { table: { disable: true } },
+    // HTML
+    disabled: { table: { disable: true } },
+    // Events
+    onClick: { table: { disable: true } },
   },
 } satisfies Meta<typeof Chips.Toggle>;
 export default meta;
