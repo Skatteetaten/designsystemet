@@ -33,7 +33,6 @@ export const PopoverContent = forwardRef<HTMLDivElement, PopoverContentProps>(
       isOpen,
       setIsOpen,
       color = getPopoverColorDefault(),
-      isMobile,
       shouldRestoreFocus = getPopoverRestoreFocusDefault(),
       onClose,
     } = useContext(PopoverContext);
@@ -73,7 +72,6 @@ export const PopoverContent = forwardRef<HTMLDivElement, PopoverContentProps>(
           <div className={styles.popoverContentWrapper}>{children}</div>
           <IconButton
             className={styles.popoverContentCloseButton}
-            size={isMobile ? 'small' : 'large'}
             svgPath={CancelSVGpath}
             title={t('shared.Close')}
             onClick={() => {

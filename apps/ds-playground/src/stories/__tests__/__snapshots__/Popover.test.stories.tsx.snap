@@ -29,7 +29,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
         <div class="_popoverContentWrapper_12pml_26">
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
         </div>
-        <button class="_button_g87u5_1 _button_large_g87u5_52  _popoverContentCloseButton_12pml_36"
+        <button class="_button_g87u5_1 _button_medium_g87u5_45  _popoverContentCloseButton_12pml_36"
                 type="button"
         >
           <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
@@ -78,7 +78,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
         <div class="_popoverContentWrapper_12pml_26">
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
         </div>
-        <button class="_button_g87u5_1 _button_large_g87u5_52  _popoverContentCloseButton_12pml_36"
+        <button class="_button_g87u5_1 _button_medium_g87u5_45  _popoverContentCloseButton_12pml_36"
                 type="button"
         >
           <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
@@ -127,7 +127,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
         <div class="_popoverContentWrapper_12pml_26">
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
         </div>
-        <button class="_button_g87u5_1 _button_large_g87u5_52  _popoverContentCloseButton_12pml_36"
+        <button class="_button_g87u5_1 _button_medium_g87u5_45  _popoverContentCloseButton_12pml_36"
                 type="button"
         >
           <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
@@ -176,7 +176,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
         <div class="_popoverContentWrapper_12pml_26">
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
         </div>
-        <button class="_button_g87u5_1 _button_large_g87u5_52  _popoverContentCloseButton_12pml_36"
+        <button class="_button_g87u5_1 _button_medium_g87u5_45  _popoverContentCloseButton_12pml_36"
                 type="button"
         >
           <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
