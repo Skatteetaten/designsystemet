@@ -12,8 +12,9 @@ import {
   getChipsToggleDefaultShowCheckmark,
   getChipsToggleDefaultIsSelected,
 } from './defaults';
-import styles from '../Chips/Chips.module.scss';
 import { getChipDefaultSize } from '../Chips/defaults';
+
+import styles from './ChipsToggle.module.scss';
 
 export const ChipsToggle = forwardRef<HTMLButtonElement, ChipsToggleProps>(
   (
@@ -32,7 +33,7 @@ export const ChipsToggle = forwardRef<HTMLButtonElement, ChipsToggleProps>(
     ref
   ): JSX.Element => {
     const concatenatedClassName =
-      `${styles.chip} ${size === 'small' ? styles.chip_small : ''} ${showCheckmark ? styles.chip_withCheckmark : ''} ${className}`.trim();
+      `${styles.toggleChip} ${size === 'small' ? styles.toggleChip_small : ''} ${showCheckmark ? styles.toggleChip_withCheckmark : ''} ${className}`.trim();
 
     return (
       <button

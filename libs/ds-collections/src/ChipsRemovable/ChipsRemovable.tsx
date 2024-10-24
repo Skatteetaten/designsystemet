@@ -11,9 +11,10 @@ import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath, Icon } from '@skatteetaten/ds-icons';
 
 import { ChipsRemovableProps } from './ChipsRemovable.types';
-import styles from '../Chips/Chips.module.scss';
 import { getChipDefaultSize } from '../Chips/defaults';
 import { ChipsContext } from '../ChipsContext/ChipsContext';
+
+import styles from './ChipsRemovable.module.scss';
 
 export const ChipsRemovable = forwardRef<
   HTMLButtonElement,
@@ -40,7 +41,7 @@ export const ChipsRemovable = forwardRef<
     useImperativeHandle(ref, () => chipRef.current as HTMLButtonElement);
 
     const concatenatedClassName =
-      `${styles.chip} ${styles.chip_removable} ${size === 'small' ? styles.chip_small : ''} ${className}`.trim();
+      `${styles.removableChip} ${size === 'small' ? styles.removableChip_small : ''} ${className}`.trim();
 
     const handleOnClose = (): void => {
       if (chipRef.current) {
