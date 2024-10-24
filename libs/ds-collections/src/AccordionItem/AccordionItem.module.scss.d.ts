@@ -3,7 +3,6 @@ declare const classNames: {
   readonly tag: 'tag';
   readonly header: 'header';
   readonly icon: 'icon';
-  readonly chevron: 'chevron';
   readonly chevron_open: 'chevron_open';
   readonly chevron_closed: 'chevron_closed';
   readonly chevron_medium: 'chevron_medium';

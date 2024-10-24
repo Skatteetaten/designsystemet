@@ -57,6 +57,7 @@ const meta = {
       options: [...panelColorArr],
       control: 'inline-radio',
     },
+    headingRef: { table: { disable: true }, control: { disable: true } },
     hideGraphicMobile: { table: { disable: true } },
     hideSubtitle: {
       table: { disable: true },
@@ -692,7 +693,7 @@ export const WithPanelHeadingRef: Story = {
   },
   argTypes: {
     canManuallySetTitleFocus: { table: { disable: false } },
-    ref: { table: { disable: false } },
+    headingRef: { table: { disable: false } },
   },
   parameters: { imageSnapshot: { disable: true } },
   play: async ({ canvasElement }): Promise<void> => {

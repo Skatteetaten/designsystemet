@@ -1,4 +1,4 @@
-@import 'libs/ds-core-utils/src/styles';
+@use 'libs/ds-core-utils/src/styles' as styles;
 
 .spinner {
   --spinner-size: var(--size-small);
@@ -80,5 +80,5 @@
 }
 
 .srOnly {
-  @include sr-only;
+  @include styles.sr-only;
 }

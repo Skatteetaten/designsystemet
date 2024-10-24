@@ -276,11 +276,11 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
       </span>
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_white_wnf1f_19 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
+           class="_spinner_1imbs_5 _spinner_white_1imbs_19 _spinner_flexColumn_1imbs_32 _spinner_small_1imbs_22 _spinner_6ybyo_153 "
       >
-        <div class="_spinnerAnimation_wnf1f_40 ">
+        <div class="_spinnerAnimation_1imbs_40 ">
         </div>
-        <span class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 ">
+        <span class="_spinnerTitle_1imbs_59 _srOnly_1imbs_70 _spinnerTitle_centerText_1imbs_66 ">
           Laster inn
         </span>
       </div>
@@ -293,11 +293,11 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
       </span>
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
+           class="_spinner_1imbs_5 _spinner_blue_1imbs_16 _spinner_flexColumn_1imbs_32 _spinner_small_1imbs_22 _spinner_6ybyo_153 "
       >
-        <div class="_spinnerAnimation_wnf1f_40 ">
+        <div class="_spinnerAnimation_1imbs_40 ">
         </div>
-        <span class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 ">
+        <span class="_spinnerTitle_1imbs_59 _srOnly_1imbs_70 _spinnerTitle_centerText_1imbs_66 ">
           Laster inn
         </span>
       </div>
@@ -310,11 +310,11 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
       </span>
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
+           class="_spinner_1imbs_5 _spinner_blue_1imbs_16 _spinner_flexColumn_1imbs_32 _spinner_small_1imbs_22 _spinner_6ybyo_153 "
       >
-        <div class="_spinnerAnimation_wnf1f_40 ">
+        <div class="_spinnerAnimation_1imbs_40 ">
         </div>
-        <span class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 ">
+        <span class="_spinnerTitle_1imbs_59 _srOnly_1imbs_70 _spinnerTitle_centerText_1imbs_66 ">
           Laster inn
         </span>
       </div>
@@ -327,11 +327,11 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
       </span>
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_black_wnf1f_13 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
+           class="_spinner_1imbs_5 _spinner_black_1imbs_13 _spinner_flexColumn_1imbs_32 _spinner_small_1imbs_22 _spinner_6ybyo_153 "
       >
-        <div class="_spinnerAnimation_wnf1f_40 ">
+        <div class="_spinnerAnimation_1imbs_40 ">
         </div>
-        <span class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 ">
+        <span class="_spinnerTitle_1imbs_59 _srOnly_1imbs_70 _spinnerTitle_centerText_1imbs_66 ">
           Laster inn
         </span>
       </div>
@@ -430,11 +430,11 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
     </span>
     <div aria-live="polite"
          aria-atomic="true"
-         class="_spinner_wnf1f_5 _spinner_white_wnf1f_19 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
+         class="_spinner_1imbs_5 _spinner_white_1imbs_19 _spinner_flexColumn_1imbs_32 _spinner_small_1imbs_22 _spinner_6ybyo_153 "
     >
-      <div class="_spinnerAnimation_wnf1f_40 ">
+      <div class="_spinnerAnimation_1imbs_40 ">
       </div>
-      <span class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 ">
+      <span class="_spinnerTitle_1imbs_59 _srOnly_1imbs_70 _spinnerTitle_centerText_1imbs_66 ">
         Laster inn
       </span>
     </div>
@@ -458,11 +458,11 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
     </span>
     <div aria-live="polite"
          aria-atomic="true"
-         class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
+         class="_spinner_1imbs_5 _spinner_blue_1imbs_16 _spinner_flexColumn_1imbs_32 _spinner_small_1imbs_22 _spinner_6ybyo_153 "
     >
-      <div class="_spinnerAnimation_wnf1f_40 ">
+      <div class="_spinnerAnimation_1imbs_40 ">
       </div>
-      <span class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 ">
+      <span class="_spinnerTitle_1imbs_59 _srOnly_1imbs_70 _spinnerTitle_centerText_1imbs_66 ">
         Laster inn
       </span>
     </div>
@@ -486,11 +486,11 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
     </span>
     <div aria-live="polite"
          aria-atomic="true"
-         class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
+         class="_spinner_1imbs_5 _spinner_blue_1imbs_16 _spinner_flexColumn_1imbs_32 _spinner_small_1imbs_22 _spinner_6ybyo_153 "
     >
-      <div class="_spinnerAnimation_wnf1f_40 ">
+      <div class="_spinnerAnimation_1imbs_40 ">
       </div>
-      <span class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 ">
+      <span class="_spinnerTitle_1imbs_59 _srOnly_1imbs_70 _spinnerTitle_centerText_1imbs_66 ">
         Laster inn
       </span>
     </div>
@@ -514,11 +514,11 @@ exports[`Tester/Button WithSpinner smoke-test 1`] = `
     </span>
     <div aria-live="polite"
          aria-atomic="true"
-         class="_spinner_wnf1f_5 _spinner_black_wnf1f_13 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_6ybyo_153 "
+         class="_spinner_1imbs_5 _spinner_black_1imbs_13 _spinner_flexColumn_1imbs_32 _spinner_small_1imbs_22 _spinner_6ybyo_153 "
     >
-      <div class="_spinnerAnimation_wnf1f_40 ">
+      <div class="_spinnerAnimation_1imbs_40 ">
       </div>
-      <span class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 ">
+      <span class="_spinnerTitle_1imbs_59 _srOnly_1imbs_70 _spinnerTitle_centerText_1imbs_66 ">
         Laster inn
       </span>
     </div>
