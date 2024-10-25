@@ -191,7 +191,7 @@ exports[`Tester/Checkbox WithCustomClassNames play-test 1`] = `
              aria-hidden="true"
              role="img"
         >
-          <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+          <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
           </path>
         </svg>
         <p class="_errorMessageText_1c261_29">
@@ -463,7 +463,7 @@ exports[`Tester/Checkbox WithError play-test 1`] = `
              aria-hidden="true"
              role="img"
         >
-          <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+          <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
           </path>
         </svg>
         <p class="_errorMessageText_1c261_29">
@@ -510,7 +510,7 @@ exports[`Tester/Checkbox WithErrorAndRequired play-test 1`] = `
              aria-hidden="true"
              role="img"
         >
-          <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+          <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
           </path>
         </svg>
         <p class="_errorMessageText_1c261_29">

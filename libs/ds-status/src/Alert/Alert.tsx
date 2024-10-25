@@ -6,7 +6,6 @@ import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import {
   CancelSVGpath,
   CompletedSVGpath,
-  ErrorSVGpath,
   Icon,
   InfoSVGpath,
   WarningSVGpath,
@@ -42,8 +41,6 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
       svg = CompletedSVGpath;
     } else if (variant === 'neutral') {
       svg = InfoSVGpath;
-    } else if (variant === 'warning') {
-      svg = ErrorSVGpath;
     } else {
       svg = WarningSVGpath;
     }
