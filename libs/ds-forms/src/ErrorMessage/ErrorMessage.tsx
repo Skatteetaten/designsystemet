@@ -1,7 +1,7 @@
 import { forwardRef, JSX } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-import { ErrorIcon } from '@skatteetaten/ds-icons';
+import { Icon, WarningSVGpath } from '@skatteetaten/ds-icons';
 
 import { ErrorMessageProps } from './ErrorMessage.types';
 
@@ -30,7 +30,11 @@ export const ErrorMessage = forwardRef<HTMLDivElement, ErrorMessageProps>(
       >
         {showError && (
           <div className={`${styles.errorMessage} ${className}`}>
-            <ErrorIcon size={'small'} className={styles.errorMessageIcon} />
+            <Icon
+              svgPath={WarningSVGpath}
+              size={'small'}
+              className={styles.errorMessageIcon}
+            />
             <p className={styles.errorMessageText}>{children}</p>
           </div>
         )}

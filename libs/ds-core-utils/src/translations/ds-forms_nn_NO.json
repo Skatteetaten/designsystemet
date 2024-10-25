@@ -30,10 +30,11 @@
   "fileuploader.AddMultipleLabel": "Legg til fil(er)",
   "fileuploader.AddSingleLabel": "Legg til fil",
   "fileuploader.DeleteConfirmation": "Fila er fjerna",
+  "fileuploader.DeleteInProgress": "Fila held på å bli fjerna",
   "fileuploader.DeleteLabel": "Fjern fil",
   "fileuploader.FileFormatError": "{{filnavn}} kan ikkje bli lasta opp. Last opp fila i riktig format.",
   "fileuploader.FileIconLabel": "Fil",
-  "fileuploader.FileSizeError": "Vi kan ikkje få denne fila fordi den er for stor. Filer kan ikkje overstige {{filstoerrelsegrense}} MB. Du kan prøve å dele opp i fleire mindre filer, eller bruke eit format som tek mindre plass.",
+  "fileuploader.FileSizeError": "Vi kan ikkje ta imot denne fila fordi den er for stor. Filer kan ikkje overstige {{filstoerrelsegrense}} MB. Du kan prøve å dele opp i fleire mindre filer, eller bruke eit format som tek mindre plass.",
   "fileuploader.FormatLabel": "Filer du kan laste opp:",
   "fileuploader.GeneralDeleteError": "Kunne ikkje fjerne fil",
   "fileuploader.GeneralUploadError": "Kunne ikkje laste opp fil",
@@ -42,9 +43,9 @@
   "fileuploader.NoRightsUploadError": "Du har ikkje rett til å laste opp filer",
   "fileuploader.SuccessIconLabel": "(Fullført)",
   "fileuploader.UploadedHeading": "Lasta opp:",
-  "fileuploader.UploadedSummary": "({{fileCount}} fil(er) lastet opp)",
+  "fileuploader.UploadedSummary": "({{fileCount}} fil(er) lasta opp)",
   "searchfield.ButtonTitle": "Søk",
   "searchfield.ClearButtonTitle": "Nullstill",
   "searchfield.Focus": "Bruk piltastane ned og opp for å velje",
-  "searchfield.NumberOfResults": "{{ant}} forslag visast."
+  "searchfield.NumberOfResults": "{{ant}} forslag blir vist."
 }

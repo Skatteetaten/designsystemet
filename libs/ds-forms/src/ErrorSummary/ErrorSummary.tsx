@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-import { ErrorIcon } from '@skatteetaten/ds-icons';
+import { Icon, WarningSVGpath } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
 import { getErrorSummaryTitleAsDefault } from './defaults';
@@ -47,7 +47,11 @@ export const ErrorSummary = forwardRef<HTMLDivElement, ErrorSummaryProps>(
         {showErrorSummary && (
           <div className={`${styles.errorSummary} ${className}`}>
             <div className={styles.iconContainer}>
-              <ErrorIcon className={styles.icon} size={'large'} />
+              <Icon
+                svgPath={WarningSVGpath}
+                className={styles.icon}
+                size={'large'}
+              />
             </div>
             <div className={styles.summaryContainer}>
               <Heading as={titleAs} level={4} hasSpacing>
