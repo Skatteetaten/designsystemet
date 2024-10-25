@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Chips/Toggle Defaults play-test 1`] = `
+<div data-test-block="true">
+  <button type="button"
+          class="_toggleChip_1rezz_1  _toggleChip_withCheckmark_1rezz_42"
+          aria-pressed="false"
+  >
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1rezz_57"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="M12 20a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm0-18a10 10 0 1 0 0 20 10 10 0 0 0 0-20Z">
+      </path>
+    </svg>
+    Trondheim
+  </button>
+</div>
+`;
+
+exports[`Tester/Chips/Toggle WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <button type="button"
+          id="htmlId"
+          class="_toggleChip_1rezz_1  _toggleChip_withCheckmark_1rezz_42 dummyClassname"
+          lang="nb"
+          data-testid="123ID"
+          aria-pressed="false"
+  >
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1rezz_57"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="M12 20a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm0-18a10 10 0 1 0 0 20 10 10 0 0 0 0-20Z">
+      </path>
+    </svg>
+    Trondheim
+  </button>
+</div>
+`;
+
+exports[`Tester/Chips/Toggle WithRef play-test 1`] = `
+<div data-test-block="true">
+  <button type="button"
+          class="_toggleChip_1rezz_1  _toggleChip_withCheckmark_1rezz_42"
+          aria-pressed="false"
+          id="dummyIdForwardedFromRef"
+  >
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1rezz_57"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="M12 20a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm0-18a10 10 0 1 0 0 20 10 10 0 0 0 0-20Z">
+      </path>
+    </svg>
+    Trondheim
+  </button>
+</div>
+`;
+
+exports[`Tester/Chips/Toggle WithSelected play-test 1`] = `
+<div data-test-block="true">
+  <button type="button"
+          class="_toggleChip_1rezz_1  _toggleChip_withCheckmark_1rezz_42"
+          aria-pressed="true"
+  >
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1rezz_57"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10a10 10 0 0 1 0-20Zm-1 14.5 7-7-1.41-1.41L11 13.67l-3.09-3.08L6.5 12l4.5 4.5Z">
+      </path>
+    </svg>
+    Trondheim
+  </button>
+</div>
+`;
+
+exports[`Tester/Chips/Toggle WithSizeSmall smoke-test 1`] = `
+<div data-test-block="true">
+  <button type="button"
+          class="_toggleChip_1rezz_1 _toggleChip_small_1rezz_36 _toggleChip_withCheckmark_1rezz_42"
+          aria-pressed="false"
+  >
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_1rezz_57"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="M12 20a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm0-18a10 10 0 1 0 0 20 10 10 0 0 0 0-20Z">
+      </path>
+    </svg>
+    Trondheim
+  </button>
+</div>
+`;
+
+exports[`Tester/Chips/Toggle WithoutCheckmark play-test 1`] = `
+<div data-test-block="true">
+  <button type="button"
+          class="_toggleChip_1rezz_1"
+          aria-pressed="false"
+  >
+    Trondheim
+  </button>
+</div>
+`;
