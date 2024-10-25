@@ -6,7 +6,7 @@ import { IconPropsWithoutSvgPath } from '../Icon/Icon.types';
 export const ArrowForwardSVGpath = (
   <path
     d={
-      'M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z'
+      'M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z'
     }
   />
 );

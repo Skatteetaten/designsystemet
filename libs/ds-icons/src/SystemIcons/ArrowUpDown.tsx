@@ -6,8 +6,10 @@ import { IconPropsWithoutSvgPath } from '../Icon/Icon.types';
 export const ArrowUpDownSVGpath = (
   <path
     d={
-      'm7 1.9 5.6 5.8-1.1 1.2-3.6-3.8v17H6.1v-17L2.6 8.9 1.4 7.6 7 1.9Zm10.9 0v17l3.5-3.8 1.2 1.3-5.6 5.7-5.6-5.8 1.1-1.2 3.6 3.8v-17h1.8Z'
+      'M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z'
     }
+    fillRule={'evenodd'}
+    clipRule={'evenodd'}
   />
 );
 

@@ -1,4 +1,4 @@
-@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints' as styles;
 
 .accordionItem {
   padding: 0;
@@ -26,8 +26,6 @@
 }
 
 .chevron {
-  padding-top: var(--spacing-xs);
-
   &_open {
     transform: scaleY(-1);
   }
@@ -37,11 +35,11 @@
   }
 
   &_medium {
-    padding-top: 1px;
+    padding-top: 0;
   }
 
   &_large {
-    padding-top: var(--spacing-xxs);
+    padding-top: 0;
   }
 }
 
@@ -86,7 +84,7 @@
 
   &_medium,
   &_large {
-    @media (min-width: $breakpoint-xs) {
+    @media (min-width: styles.$breakpoint-xs) {
       padding: var(--spacing-s) var(--spacing-m);
     }
   }
@@ -156,12 +154,12 @@
       margin-left: var(--spacing-xl);
     }
 
-    @media (min-width: $breakpoint-xs) {
+    @media (min-width: styles.$breakpoint-xs) {
       padding: var(--spacing-s) var(--spacing-m) var(--spacing-m);
     }
   }
 
-  @media (min-width: $breakpoint-xs) {
+  @media (min-width: styles.$breakpoint-xs) {
     padding-bottom: var(--spacing-m);
   }
 }

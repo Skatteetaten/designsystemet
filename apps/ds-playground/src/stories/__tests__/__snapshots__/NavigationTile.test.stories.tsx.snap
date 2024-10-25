@@ -15,7 +15,7 @@ exports[`Tester/NavigationTile Defaults play-test 1`] = `
            aria-hidden="true"
            role="img"
       >
-        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
     </div>
@@ -39,7 +39,7 @@ exports[`Tester/NavigationTile WithAriaDescribedby play-test 1`] = `
            aria-hidden="true"
            role="img"
       >
-        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
     </div>
@@ -65,7 +65,7 @@ exports[`Tester/NavigationTile WithAttributes play-test 1`] = `
            aria-hidden="true"
            role="img"
       >
-        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
     </div>
@@ -88,7 +88,7 @@ exports[`Tester/NavigationTile WithCustomClassNames play-test 1`] = `
            aria-hidden="true"
            role="img"
       >
-        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
     </div>
@@ -114,7 +114,7 @@ exports[`Tester/NavigationTile WithDescription smoke-test 1`] = `
            aria-hidden="true"
            role="img"
       >
-        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
     </div>
@@ -187,7 +187,7 @@ exports[`Tester/NavigationTile WithIcon play-test 1`] = `
            aria-hidden="true"
            role="img"
       >
-        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
     </div>
@@ -210,7 +210,7 @@ exports[`Tester/NavigationTile WithOnClick play-test 1`] = `
            aria-hidden="true"
            role="img"
       >
-        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
     </div>
@@ -234,7 +234,7 @@ exports[`Tester/NavigationTile WithRef play-test 1`] = `
            aria-hidden="true"
            role="img"
       >
-        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
     </div>
@@ -283,7 +283,7 @@ exports[`Tester/NavigationTile WithSizeLarge smoke-test 1`] = `
            aria-hidden="true"
            role="img"
       >
-        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
     </div>
@@ -309,7 +309,7 @@ exports[`Tester/NavigationTile WithSizeMedium smoke-test 1`] = `
            aria-hidden="true"
            role="img"
       >
-        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
     </div>
@@ -337,7 +337,7 @@ exports[`Tester/NavigationTile WithTarget play-test 1`] = `
            aria-hidden="true"
            role="img"
       >
-        <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+        <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
     </div>
@@ -404,7 +404,7 @@ exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
              aria-hidden="true"
              role="img"
         >
-          <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+          <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
           </path>
         </svg>
       </div>
@@ -422,7 +422,7 @@ exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
              aria-hidden="true"
              role="img"
         >
-          <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+          <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
           </path>
         </svg>
       </div>
@@ -440,7 +440,7 @@ exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
              aria-hidden="true"
              role="img"
         >
-          <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+          <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
           </path>
         </svg>
       </div>
@@ -458,7 +458,7 @@ exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
              aria-hidden="true"
              role="img"
         >
-          <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+          <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
           </path>
         </svg>
       </div>
@@ -476,7 +476,7 @@ exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
              aria-hidden="true"
              role="img"
         >
-          <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+          <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
           </path>
         </svg>
       </div>
@@ -494,7 +494,7 @@ exports[`Tester/NavigationTile WithTitleAs play-test 1`] = `
              aria-hidden="true"
              role="img"
         >
-          <path d="M1.8 12.6v-1.8h16.8l-5.2-5.1 1.4-1.3 7.5 7.3-7.7 7.3-1.4-1.3 5.2-5.1H1.8Z">
+          <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
           </path>
         </svg>
       </div>

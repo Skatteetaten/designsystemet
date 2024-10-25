@@ -52,7 +52,10 @@ const meta = {
         defaultValue: { summary: getPanelColorDefault() },
       },
     },
-    headingRef: { table: { category: category.props } },
+    headingRef: {
+      table: { category: category.props },
+      control: { disable: true },
+    },
     hideGraphicMobile: { table: { category: category.props } },
     hideSubtitle: { table: { category: category.props } },
     hideTitle: { table: { category: category.props } },

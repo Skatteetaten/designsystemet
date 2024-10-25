@@ -1,8 +1,8 @@
 import { ReactNode, useState, JSX } from 'react';
 
 import { Button, InlineButton } from '@skatteetaten/ds-buttons';
-import { Checkbox } from '@skatteetaten/ds-forms';
 import { densityArr } from '@skatteetaten/ds-core-utils';
+import { Checkbox } from '@skatteetaten/ds-forms';
 import {
   CopySVGpath,
   DeleteSVGpath,
