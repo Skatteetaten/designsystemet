@@ -11,8 +11,8 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, userEvent, within } from '@storybook/test';
 
 import customLogo from '../../assets/custom-logo.svg';
-import { ReactComponent as flagFinland } from '../../assets/fi-flag.svg';
-import { ReactComponent as flagPlaceholder } from '../../assets/Flag_placeholder.svg';
+import { ReactComponent as FlagFinland } from '../../assets/fi-flag.svg';
+import { ReactComponent as FlagPlaceholder } from '../../assets/Flag_placeholder.svg';
 import skeLogo from '../../assets/ske-logo.svg';
 
 const meta = {
@@ -629,7 +629,6 @@ export const ClickLangPickerOpenAndClose = {
   },
 } satisfies Story;
 
-//TODO
 export const WithExtraLangs = {
   name: 'Extra Languages in LanguagePicker',
   args: {
@@ -637,97 +636,97 @@ export const WithExtraLangs = {
       {
         displayName: 'Suomi',
         lang: 'fi',
-        flag: flagFinland,
+        flag: FlagFinland,
       },
       {
         displayName: 'Dansk',
         lang: 'da',
-        flag: flagPlaceholder,
+        flag: FlagPlaceholder,
       },
       {
         displayName: 'Svenska',
         lang: 'sv',
-        flag: flagPlaceholder,
+        flag: FlagPlaceholder,
       },
       {
         displayName: 'íslenska',
         lang: 'is',
-        flag: flagPlaceholder,
+        flag: FlagPlaceholder,
       },
       {
         displayName: 'Deutsch',
         lang: 'de',
-        flag: flagPlaceholder,
+        flag: FlagPlaceholder,
       },
       {
         displayName: 'Español',
         lang: 'es',
-        flag: flagPlaceholder,
+        flag: FlagPlaceholder,
       },
       {
         displayName: 'Français',
         lang: 'fr',
-        flag: flagPlaceholder,
+        flag: FlagPlaceholder,
       },
       {
         displayName: 'Italiano',
         lang: 'it',
-        flag: flagPlaceholder,
+        flag: FlagPlaceholder,
       },
       {
         displayName: 'Português',
         lang: 'pt',
-        flag: flagPlaceholder,
+        flag: FlagPlaceholder,
       },
       {
         displayName: 'Nederlands',
         lang: 'nl',
-        flag: flagPlaceholder,
+        flag: FlagPlaceholder,
       },
       {
         displayName: 'Ελληνικά',
         lang: 'el',
-        flag: flagPlaceholder,
+        flag: FlagPlaceholder,
       },
       {
         displayName: '中文',
         lang: 'zh',
-        flag: flagPlaceholder,
+        flag: FlagPlaceholder,
       },
       {
         displayName: '日本語',
         lang: 'ja',
-        flag: flagPlaceholder,
+        flag: FlagPlaceholder,
       },
       {
         displayName: '한국어',
         lang: 'ko',
-        flag: flagPlaceholder,
+        flag: FlagPlaceholder,
       },
       {
         displayName: 'العربية',
         lang: 'ar',
-        flag: flagPlaceholder,
+        flag: FlagPlaceholder,
       },
       {
         displayName: 'हिन्दी',
         lang: 'hi',
-        flag: flagPlaceholder,
+        flag: FlagPlaceholder,
       },
       {
         displayName: 'Türkçe',
         lang: 'tr',
-        flag: flagPlaceholder,
+        flag: FlagPlaceholder,
       },
       {
         displayName: 'Polski',
         lang: 'pl',
-        flag: flagPlaceholder,
+        flag: FlagPlaceholder,
       },
       {
         displayName: 'עברית',
         lang: 'he',
-        flag: flagPlaceholder,
+        flag: FlagPlaceholder,
       },
     ],
   },
