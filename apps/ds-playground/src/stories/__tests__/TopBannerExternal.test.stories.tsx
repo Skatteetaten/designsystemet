@@ -11,6 +11,8 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, userEvent, within } from '@storybook/test';
 
 import customLogo from '../../assets/custom-logo.svg';
+import { ReactComponent as FlagFinland } from '../../assets/fi-flag.svg';
+import { ReactComponent as FlagPlaceholder } from '../../assets/Flag_placeholder.svg';
 import skeLogo from '../../assets/ske-logo.svg';
 
 const meta = {
@@ -41,6 +43,7 @@ const meta = {
     firstColumn: { control: 'text', table: { disable: true } },
     secondColumn: { control: 'text', table: { disable: true } },
     thirdColumn: { control: 'text', table: { disable: true } },
+    additionalLanguages: { table: { disable: true } },
     // Events
     onLanguageClick: { table: { disable: true } },
     onLogInClick: { table: { disable: true } },
@@ -623,5 +626,136 @@ export const ClickLangPickerOpenAndClose = {
     await userEvent.keyboard('[Escape]');
     await expect(languageButton).toHaveAttribute('aria-expanded', 'false');
     await expect(canvas.queryByText('Sámegiella')).not.toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithExtraLangs = {
+  name: 'Extra Languages in LanguagePicker',
+  args: {
+    additionalLanguages: [
+      {
+        displayName: 'Suomi',
+        lang: 'fi',
+        flag: FlagFinland,
+      },
+      {
+        displayName: 'Dansk',
+        lang: 'da',
+        flag: FlagPlaceholder,
+      },
+      {
+        displayName: 'Svenska',
+        lang: 'sv',
+        flag: FlagPlaceholder,
+      },
+      {
+        displayName: 'íslenska',
+        lang: 'is',
+        flag: FlagPlaceholder,
+      },
+      {
+        displayName: 'Deutsch',
+        lang: 'de',
+        flag: FlagPlaceholder,
+      },
+      {
+        displayName: 'Español',
+        lang: 'es',
+        flag: FlagPlaceholder,
+      },
+      {
+        displayName: 'Français',
+        lang: 'fr',
+        flag: FlagPlaceholder,
+      },
+      {
+        displayName: 'Italiano',
+        lang: 'it',
+        flag: FlagPlaceholder,
+      },
+      {
+        displayName: 'Português',
+        lang: 'pt',
+        flag: FlagPlaceholder,
+      },
+      {
+        displayName: 'Nederlands',
+        lang: 'nl',
+        flag: FlagPlaceholder,
+      },
+      {
+        displayName: 'Ελληνικά',
+        lang: 'el',
+        flag: FlagPlaceholder,
+      },
+      {
+        displayName: '中文',
+        lang: 'zh',
+        flag: FlagPlaceholder,
+      },
+      {
+        displayName: '日本語',
+        lang: 'ja',
+        flag: FlagPlaceholder,
+      },
+      {
+        displayName: '한국어',
+        lang: 'ko',
+        flag: FlagPlaceholder,
+      },
+      {
+        displayName: 'العربية',
+        lang: 'ar',
+        flag: FlagPlaceholder,
+      },
+      {
+        displayName: 'हिन्दी',
+        lang: 'hi',
+        flag: FlagPlaceholder,
+      },
+      {
+        displayName: 'Türkçe',
+        lang: 'tr',
+        flag: FlagPlaceholder,
+      },
+      {
+        displayName: 'Polski',
+        lang: 'pl',
+        flag: FlagPlaceholder,
+      },
+      {
+        displayName: 'עברית',
+        lang: 'he',
+        flag: FlagPlaceholder,
+      },
+    ],
+  },
+  argTypes: {
+    additionalLanguages: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+    HTMLSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const languageButton = canvas.getByRole('button', { name: 'Bokmål Meny' });
+    await userEvent.click(languageButton);
+    const fin = canvas.getByRole('button', { name: 'Suomi' });
+    await expect(fin).toBeInTheDocument();
+    await expect(fin).toHaveAttribute('lang', 'fi');
+
+    const it = canvas.getByRole('button', { name: 'Italiano' });
+    await expect(it).toBeInTheDocument();
+    await expect(it).toHaveAttribute('lang', 'it');
+
+    const sv = canvas.getByRole('button', { name: 'Svenska' });
+    await expect(sv).toBeInTheDocument();
+    await expect(sv).toHaveAttribute('lang', 'sv');
+
+    await userEvent.click(fin);
+    await expect(
+      canvas.getByRole('button', { name: 'Suomi Meny' })
+    ).toBeInTheDocument();
   },
 } satisfies Story;

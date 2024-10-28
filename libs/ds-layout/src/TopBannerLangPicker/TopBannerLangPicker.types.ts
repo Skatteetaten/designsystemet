@@ -1,6 +1,7 @@
 import {
   Dispatch,
   ForwardRefExoticComponent,
+  FunctionComponent,
   MouseEventHandler,
   RefAttributes,
   RefObject,
@@ -9,8 +10,11 @@ import {
 
 import { BaseProps, Languages } from '@skatteetaten/ds-core-utils';
 
+import { LanguageItem } from './utils';
 import { TopBannerMenu } from '../TopBannerExternal/TopBannerExternal.types';
 import { TopBannerLangPickerButtonProps } from '../TopBannerLangPickerButton/TopBannerLangPickerButton.types';
+
+type AdditionalLanguages = Array<LanguageItem & { flag: FunctionComponent }>;
 
 export interface TopBannerLangPickerProps extends BaseProps {
   /** Hvilket språk som skal være forhåndsvalgt. */
@@ -24,6 +28,7 @@ export interface TopBannerLangPickerProps extends BaseProps {
   /** Setter hvilken meny som er åpen*/
   setOpenMenu: Dispatch<SetStateAction<TopBannerMenu>>;
   menuButtonRef?: RefObject<HTMLButtonElement>;
+  additionalLanguages?: AdditionalLanguages;
 }
 
 export interface TopBannerLangPickerComponent

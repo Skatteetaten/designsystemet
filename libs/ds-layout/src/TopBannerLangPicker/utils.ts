@@ -1,5 +1,7 @@
 import { Languages } from '@skatteetaten/ds-core-utils';
 
+import { TopBannerLangPickerProps } from './TopBannerLangPicker.types';
+
 export const convertLocaleToLang = (locale: Languages): string => {
   return locale.substring(0, locale.indexOf('_'));
 };
@@ -13,7 +15,10 @@ export type LanguageItems = {
   [key: string]: LanguageItem;
 };
 
-export const getCurrentLanguages = (includeSami: boolean): LanguageItems => {
+export const getCurrentLanguages = (
+  includeSami: boolean,
+  additionalLanguages: TopBannerLangPickerProps['additionalLanguages'] = []
+): LanguageItems => {
   const defaultLanguages: LanguageItems = {
     nb: {
       lang: 'nb',
@@ -35,5 +40,13 @@ export const getCurrentLanguages = (includeSami: boolean): LanguageItems => {
     },
   };
 
-  return includeSami ? { ...defaultLanguages, ...se } : defaultLanguages;
+  const additionalLanguagesAsObject =
+    additionalLanguages?.reduce<LanguageItems>((acc, curr) => {
+      acc[curr.lang] = curr;
+      return acc;
+    }, {});
+
+  return includeSami
+    ? { ...defaultLanguages, ...se, ...additionalLanguagesAsObject }
+    : { ...defaultLanguages, ...additionalLanguagesAsObject };
 };
