@@ -277,7 +277,6 @@ export const WithEventHandlers = {
       async () => {
         await userEvent.click(inputNode);
         await waitFor(() => expect(args.onChange).toHaveBeenCalled());
-        inputNode.focus();
         await expect(inputNode).toHaveFocus();
       }
     );
