@@ -31,7 +31,7 @@ const verifyAttribute =
     );
   };
 
-const today = new Date('2024.01.15');
+const today = new Date('2024-01-15');
 const meta = {
   component: DatePicker,
   title: 'Tester/DatePicker/DatePicker',
@@ -510,7 +510,7 @@ export const WithInitialPickerDate = {
   name: 'With InitialPickerDate (Kalender B2)',
   args: {
     ...defaultArgs,
-    initialPickerDate: new Date('2024.01.31'),
+    initialPickerDate: new Date('2024-01-31'),
   },
   argTypes: {
     initialPickerDate: { table: { disable: false } },
