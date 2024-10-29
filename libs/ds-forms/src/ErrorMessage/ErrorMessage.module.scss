@@ -1,11 +1,13 @@
 @keyframes errormessage {
   from {
+    height: 0;
     opacity: 0;
     pointer-events: none;
     transform: translate3d(0, -20px, 0);
   }
 
   to {
+    height: auto;
     opacity: 1;
     pointer-events: auto;
     transform: translate3d(0, 0, 0);
@@ -18,7 +20,6 @@
   animation-duration: 0.3s;
   animation-fill-mode: both;
   animation-name: errormessage;
-  animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
   gap: var(--spacing-s);
   overflow-wrap: anywhere;
   word-break: normal;
