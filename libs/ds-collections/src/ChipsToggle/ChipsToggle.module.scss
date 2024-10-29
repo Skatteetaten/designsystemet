@@ -1,6 +1,6 @@
 %disabled {
-  border-color: var(--semantic-disabled-foreground);
   background-color: var(--semantic-disabled-background);
+  box-shadow: 0 0 0 1px var(--semantic-disabled-foreground);
   color: var(--semantic-disabled-foreground);
   cursor: not-allowed;
   text-decoration: none;
@@ -16,9 +16,10 @@
   display: inline-flex;
   align-items: center;
   padding: var(--chip-padding);
-  border: 1px solid var(--semantic-interactive-main);
+  border: none;
   border-radius: 2.75rem;
   background-color: var(--palette-denim-5);
+  box-shadow: 0 0 0 1px var(--semantic-interactive-main);
   color: var(--semantic-interactive-main);
   cursor: pointer;
   font-size: var(--chip-font-size);
@@ -33,7 +34,7 @@
 
   &:focus {
     outline: 2px solid var(--semantic-interactive-main);
-    outline-offset: 2px;
+    outline-offset: 3px;
   }
 
   &_small {

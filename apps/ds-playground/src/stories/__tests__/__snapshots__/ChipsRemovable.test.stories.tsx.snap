@@ -3,10 +3,10 @@
 exports[`Tester/Chips/Removable Defaults smoke-test 1`] = `
 <div data-test-block="true">
   <button type="button"
-          class="_removableChip_h3oaq_1"
+          class="_removableChip_zdnya_1"
   >
     Trondheim
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_h3oaq_40"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_zdnya_41"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r2:"
@@ -27,12 +27,12 @@ exports[`Tester/Chips/Removable WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <button type="button"
           id="htmlId"
-          class="_removableChip_h3oaq_1  dummyClassname"
+          class="_removableChip_zdnya_1  dummyClassname"
           lang="nb"
           data-testid="123ID"
   >
     Trondheim
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_h3oaq_40"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_zdnya_41"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r1:"
@@ -52,10 +52,10 @@ exports[`Tester/Chips/Removable WithAttributes play-test 1`] = `
 exports[`Tester/Chips/Removable WithCloseIconAltText play-test 1`] = `
 <div data-test-block="true">
   <button type="button"
-          class="_removableChip_h3oaq_1"
+          class="_removableChip_zdnya_1"
   >
     Trondheim
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_h3oaq_40"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_zdnya_41"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r4:"
@@ -75,11 +75,11 @@ exports[`Tester/Chips/Removable WithCloseIconAltText play-test 1`] = `
 exports[`Tester/Chips/Removable WithRef play-test 1`] = `
 <div data-test-block="true">
   <button type="button"
-          class="_removableChip_h3oaq_1"
+          class="_removableChip_zdnya_1"
           id="dummyIdForwardedFromRef"
   >
     Trondheim
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_h3oaq_40"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_zdnya_41"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r0:"
@@ -99,10 +99,10 @@ exports[`Tester/Chips/Removable WithRef play-test 1`] = `
 exports[`Tester/Chips/Removable WithSizeSmall smoke-test 1`] = `
 <div data-test-block="true">
   <button type="button"
-          class="_removableChip_h3oaq_1 _removableChip_small_h3oaq_35"
+          class="_removableChip_zdnya_1 _removableChip_small_zdnya_36"
   >
     Trondheim
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_h3oaq_40"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _icon_zdnya_41"
          viewbox="0 0 24 24"
          focusable="false"
          aria-labelledby="svgtitle-:r3:"
