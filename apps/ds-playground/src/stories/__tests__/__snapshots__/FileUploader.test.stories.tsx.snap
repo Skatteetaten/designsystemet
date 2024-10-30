@@ -130,8 +130,8 @@ exports[`Tester/FileUploader WithCustomClassNames play-test 1`] = `
     <div aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="_errorMessage_1c261_13 dummyClassname">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1c261_24"
+      <div class="_errorMessage_1kdf4_15 dummyClassname">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1kdf4_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -140,7 +140,7 @@ exports[`Tester/FileUploader WithCustomClassNames play-test 1`] = `
           <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
           </path>
         </svg>
-        <p class="_errorMessageText_1c261_29">
+        <p class="_errorMessageText_1kdf4_30">
           feil
         </p>
       </div>
@@ -227,8 +227,8 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
     <div aria-live="assertive"
          aria-atomic="true"
     >
-      <div class="_errorMessage_1c261_13 ">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1c261_24"
+      <div class="_errorMessage_1kdf4_15 ">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1kdf4_25"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -237,7 +237,7 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
           <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
           </path>
         </svg>
-        <p class="_errorMessageText_1c261_29">
+        <p class="_errorMessageText_1kdf4_30">
           Du må laste opp en fil
         </p>
       </div>
