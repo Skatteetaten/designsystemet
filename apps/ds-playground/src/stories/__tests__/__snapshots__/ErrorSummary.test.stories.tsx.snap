@@ -347,7 +347,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithInput play-test 1`] = `
       År
     </label>
     <input id="input_aar"
-           class="_textbox_1rnbk_5"
+           class="_textbox_1b2vd_5"
            autocomplete="off"
            required
            aria-describedby="textFieldErrorId-:rh:"
