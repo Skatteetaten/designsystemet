@@ -29,9 +29,9 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
           >
             Velg måned
           </label>
-          <div class="_selectContainer_1mv9o_1 _calendarNavigationMonth_feosd_26">
+          <div class="_selectContainer_tyi6s_1 _calendarNavigationMonth_feosd_26">
             <select id="selectId-:rk:"
-                    class="_select_1mv9o_1"
+                    class="_select_tyi6s_1"
             >
               <option class
                       value="0"
@@ -94,7 +94,7 @@ exports[`Tester/DatePicker/DatePickerCalendar Defaults play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_tyi6s_50"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -543,9 +543,9 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
           >
             Velg måned
           </label>
-          <div class="_selectContainer_1mv9o_1 _calendarNavigationMonth_feosd_26">
+          <div class="_selectContainer_tyi6s_1 _calendarNavigationMonth_feosd_26">
             <select id="selectId-:rb:"
-                    class="_select_1mv9o_1"
+                    class="_select_tyi6s_1"
             >
               <option class
                       value="0"
@@ -608,7 +608,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithAttributes play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_tyi6s_50"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -1053,9 +1053,9 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
           >
             Velg måned
           </label>
-          <div class="_selectContainer_1mv9o_1 _calendarNavigationMonth_feosd_26">
+          <div class="_selectContainer_tyi6s_1 _calendarNavigationMonth_feosd_26">
             <select id="selectId-:r21:"
-                    class="_select_1mv9o_1"
+                    class="_select_tyi6s_1"
             >
               <option class
                       value="0"
@@ -1118,7 +1118,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithBreakpointMobile smoke-test 1`
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_tyi6s_50"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -1563,9 +1563,9 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDateAsValue play-test 
           >
             Velg måned
           </label>
-          <div class="_selectContainer_1mv9o_1 _calendarNavigationMonth_feosd_26">
+          <div class="_selectContainer_tyi6s_1 _calendarNavigationMonth_feosd_26">
             <select id="selectId-:r2s:"
-                    class="_select_1mv9o_1"
+                    class="_select_tyi6s_1"
             >
               <option class
                       value="0"
@@ -1628,7 +1628,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDateAsValue play-test 
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_tyi6s_50"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -2074,9 +2074,9 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
           >
             Velg måned
           </label>
-          <div class="_selectContainer_1mv9o_1 _calendarNavigationMonth_feosd_26">
+          <div class="_selectContainer_tyi6s_1 _calendarNavigationMonth_feosd_26">
             <select id="selectId-:r2j:"
-                    class="_select_1mv9o_1"
+                    class="_select_tyi6s_1"
             >
               <option class
                       value="0"
@@ -2139,7 +2139,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithDisabledDates play-test 1`] = 
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_tyi6s_50"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -2595,9 +2595,9 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
           >
             Velg måned
           </label>
-          <div class="_selectContainer_1mv9o_1 _calendarNavigationMonth_feosd_26">
+          <div class="_selectContainer_tyi6s_1 _calendarNavigationMonth_feosd_26">
             <select id="selectId-:r1f:"
-                    class="_select_1mv9o_1"
+                    class="_select_tyi6s_1"
             >
               <option class
                       value="0"
@@ -2660,7 +2660,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDate play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_tyi6s_50"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -3125,9 +3125,9 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWith
           >
             Velg måned
           </label>
-          <div class="_selectContainer_1mv9o_1 _calendarNavigationMonth_feosd_26">
+          <div class="_selectContainer_tyi6s_1 _calendarNavigationMonth_feosd_26">
             <select id="selectId-:r1o:"
-                    class="_select_1mv9o_1"
+                    class="_select_tyi6s_1"
             >
               <option class
                       value="0"
@@ -3190,7 +3190,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMaxDateWhereSelectedDateIsWith
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_tyi6s_50"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -3655,9 +3655,9 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
           >
             Velg måned
           </label>
-          <div class="_selectContainer_1mv9o_1 _calendarNavigationMonth_feosd_26">
+          <div class="_selectContainer_tyi6s_1 _calendarNavigationMonth_feosd_26">
             <select id="selectId-:r16:"
-                    class="_select_1mv9o_1"
+                    class="_select_tyi6s_1"
             >
               <option class
                       value="0"
@@ -3720,7 +3720,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithMinDate play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_tyi6s_50"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -4181,9 +4181,9 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
           >
             Velg måned
           </label>
-          <div class="_selectContainer_1mv9o_1 _calendarNavigationMonth_feosd_26">
+          <div class="_selectContainer_tyi6s_1 _calendarNavigationMonth_feosd_26">
             <select id="selectId-:r2:"
-                    class="_select_1mv9o_1"
+                    class="_select_tyi6s_1"
             >
               <option class
                       value="0"
@@ -4246,7 +4246,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithRef play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_tyi6s_50"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
@@ -4691,9 +4691,9 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
           >
             Velg måned
           </label>
-          <div class="_selectContainer_1mv9o_1 _calendarNavigationMonth_feosd_26">
+          <div class="_selectContainer_tyi6s_1 _calendarNavigationMonth_feosd_26">
             <select id="selectId-:rt:"
-                    class="_select_1mv9o_1"
+                    class="_select_tyi6s_1"
             >
               <option class
                       value="0"
@@ -4756,7 +4756,7 @@ exports[`Tester/DatePicker/DatePickerCalendar WithSelectedDate play-test 1`] = `
                 Desember
               </option>
             </select>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_tyi6s_50"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
