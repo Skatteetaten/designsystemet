@@ -9,9 +9,9 @@ exports[`Tester/Select/Select Defaults play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_1mv9o_1 ">
+    <div class="_selectContainer_10qr4_1 ">
       <select id="selectId-:re:"
-              class="_select_1mv9o_1"
+              class="_select_10qr4_1"
               style="color: var(--palette-graphite-50);"
       >
         <option value>
@@ -28,7 +28,7 @@ exports[`Tester/Select/Select Defaults play-test 1`] = `
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_10qr4_50"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -58,9 +58,9 @@ exports[`Tester/Select/Select WithAttributes play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_1mv9o_1 ">
+    <div class="_selectContainer_10qr4_1 ">
       <select id="htmlid"
-              class="_select_1mv9o_1"
+              class="_select_10qr4_1"
               data-testid="123ID"
               form="form123"
               style="color: var(--palette-graphite-50);"
@@ -79,7 +79,7 @@ exports[`Tester/Select/Select WithAttributes play-test 1`] = `
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_10qr4_50"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -107,9 +107,9 @@ exports[`Tester/Select/Select WithAutoCompleteNameAndPlaceholder play-test 1`] =
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_1mv9o_1 ">
+    <div class="_selectContainer_10qr4_1 ">
       <select id="selectId-:r16:"
-              class="_select_1mv9o_1"
+              class="_select_10qr4_1"
               autocomplete="given-name"
               name="test_name"
               style="color: var(--palette-graphite-50);"
@@ -128,7 +128,7 @@ exports[`Tester/Select/Select WithAutoCompleteNameAndPlaceholder play-test 1`] =
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_10qr4_50"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -156,9 +156,9 @@ exports[`Tester/Select/Select WithCustomClassNames play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_1mv9o_1 dummyClassnameFormContainer">
+    <div class="_selectContainer_10qr4_1 dummyClassnameFormContainer">
       <select id="selectId-:r9:"
-              class="_select_1mv9o_1"
+              class="_select_10qr4_1"
               aria-describedby="selectErrorId-:r8:"
               aria-invalid="true"
               style="color: var(--palette-graphite-50);"
@@ -177,7 +177,7 @@ exports[`Tester/Select/Select WithCustomClassNames play-test 1`] = `
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_10qr4_50"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -219,9 +219,9 @@ exports[`Tester/Select/Select WithDefaultValue play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_1mv9o_1 ">
+    <div class="_selectContainer_10qr4_1 ">
       <select id="selectId-:r12:"
-              class="_select_1mv9o_1"
+              class="_select_10qr4_1"
       >
         <option value>
           Velg
@@ -238,7 +238,7 @@ exports[`Tester/Select/Select WithDefaultValue play-test 1`] = `
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_10qr4_50"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -269,9 +269,9 @@ exports[`Tester/Select/Select WithDescription play-test 1`] = `
     <div class="_description_10ldw_17">
       En liten beskrivelse tekst
     </div>
-    <div class="_selectContainer_1mv9o_1 ">
+    <div class="_selectContainer_10qr4_1 ">
       <select id="selectId-:r1r:"
-              class="_select_1mv9o_1"
+              class="_select_10qr4_1"
               style="color: var(--palette-graphite-50);"
       >
         <option value>
@@ -288,7 +288,7 @@ exports[`Tester/Select/Select WithDescription play-test 1`] = `
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_10qr4_50"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -316,9 +316,9 @@ exports[`Tester/Select/Select WithDisabled play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_1mv9o_1 ">
+    <div class="_selectContainer_10qr4_1 ">
       <select id="selectId-:rq:"
-              class="_select_1mv9o_1"
+              class="_select_10qr4_1"
               disabled
       >
         <option value>
@@ -335,7 +335,7 @@ exports[`Tester/Select/Select WithDisabled play-test 1`] = `
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_10qr4_50"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -363,9 +363,9 @@ exports[`Tester/Select/Select WithErrorMessage play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_1mv9o_1 ">
+    <div class="_selectContainer_10qr4_1 ">
       <select id="selectId-:r1m:"
-              class="_select_1mv9o_1"
+              class="_select_10qr4_1"
               aria-describedby="selectErrorId-:r1l:"
               aria-invalid="true"
               style="color: var(--palette-graphite-50);"
@@ -384,7 +384,7 @@ exports[`Tester/Select/Select WithErrorMessage play-test 1`] = `
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_10qr4_50"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -426,9 +426,9 @@ exports[`Tester/Select/Select WithEventHandlers play-test 1`] = `
     >
       Select har blitt blurret
     </label>
-    <div class="_selectContainer_1mv9o_1 ">
+    <div class="_selectContainer_10qr4_1 ">
       <select id="selectId-:r29:"
-              class="_select_1mv9o_1"
+              class="_select_10qr4_1"
               style
       >
         <option value>
@@ -445,7 +445,7 @@ exports[`Tester/Select/Select WithEventHandlers play-test 1`] = `
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_10qr4_50"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -514,9 +514,9 @@ exports[`Tester/Select/Select WithHelpText play-test 1`] = `
         </svg>
       </button>
     </div>
-    <div class="_selectContainer_1mv9o_1 ">
+    <div class="_selectContainer_10qr4_1 ">
       <select id="selectId-:r23:"
-              class="_select_1mv9o_1"
+              class="_select_10qr4_1"
               style="color: var(--palette-graphite-50);"
       >
         <option value>
@@ -533,7 +533,7 @@ exports[`Tester/Select/Select WithHelpText play-test 1`] = `
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_10qr4_50"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -580,9 +580,9 @@ exports[`Tester/Select/Select WithHelpToggleEvent smoke-test 1`] = `
         </path>
       </svg>
     </button>
-    <div class="_selectContainer_1mv9o_1 ">
+    <div class="_selectContainer_10qr4_1 ">
       <select id="selectId-:r2d:"
-              class="_select_1mv9o_1"
+              class="_select_10qr4_1"
               style="color: var(--palette-graphite-50);"
       >
         <option value>
@@ -599,7 +599,7 @@ exports[`Tester/Select/Select WithHelpToggleEvent smoke-test 1`] = `
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_10qr4_50"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -627,9 +627,9 @@ exports[`Tester/Select/Select WithHideLabel play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_1mv9o_1 ">
+    <div class="_selectContainer_10qr4_1 ">
       <select id="selectId-:r1v:"
-              class="_select_1mv9o_1"
+              class="_select_10qr4_1"
               style="color: var(--palette-graphite-50);"
       >
         <option value>
@@ -646,7 +646,7 @@ exports[`Tester/Select/Select WithHideLabel play-test 1`] = `
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_10qr4_50"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -674,9 +674,9 @@ exports[`Tester/Select/Select WithHidePlaceholder play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_1mv9o_1 ">
+    <div class="_selectContainer_10qr4_1 ">
       <select id="selectId-:r1a:"
-              class="_select_1mv9o_1"
+              class="_select_10qr4_1"
       >
         <option class
                 value="option1"
@@ -689,7 +689,7 @@ exports[`Tester/Select/Select WithHidePlaceholder play-test 1`] = `
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_10qr4_50"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -717,9 +717,9 @@ exports[`Tester/Select/Select WithRef play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_1mv9o_1 ">
+    <div class="_selectContainer_10qr4_1 ">
       <select id="selectId-:r1:"
-              class="_select_1mv9o_1"
+              class="_select_10qr4_1"
               name="dummyNameForwardedFromRef"
               style="color: var(--palette-graphite-50);"
       >
@@ -737,7 +737,7 @@ exports[`Tester/Select/Select WithRef play-test 1`] = `
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_10qr4_50"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -765,9 +765,9 @@ exports[`Tester/Select/Select WithRequired play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_1mv9o_1 ">
+    <div class="_selectContainer_10qr4_1 ">
       <select id="selectId-:r1e:"
-              class="_select_1mv9o_1"
+              class="_select_10qr4_1"
               required
               style="color: var(--palette-graphite-50);"
       >
@@ -785,7 +785,7 @@ exports[`Tester/Select/Select WithRequired play-test 1`] = `
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_10qr4_50"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -813,9 +813,9 @@ exports[`Tester/Select/Select WithRequiredAndMark smoke-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_1mv9o_1 ">
+    <div class="_selectContainer_10qr4_1 ">
       <select id="selectId-:r1i:"
-              class="_select_1mv9o_1"
+              class="_select_10qr4_1"
               required
               style="color: var(--palette-graphite-50);"
       >
@@ -833,7 +833,7 @@ exports[`Tester/Select/Select WithRequiredAndMark smoke-test 1`] = `
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_10qr4_50"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -861,9 +861,9 @@ exports[`Tester/Select/Select WithValue play-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_1mv9o_1 ">
+    <div class="_selectContainer_10qr4_1 ">
       <select id="selectId-:ru:"
-              class="_select_1mv9o_1"
+              class="_select_10qr4_1"
       >
         <option value>
           Velg
@@ -879,7 +879,7 @@ exports[`Tester/Select/Select WithValue play-test 1`] = `
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_10qr4_50"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -907,9 +907,9 @@ exports[`Tester/Select/Select WithVariantLarge smoke-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_1mv9o_1 ">
+    <div class="_selectContainer_10qr4_1 ">
       <select id="selectId-:ri:"
-              class="_select_1mv9o_1 _select_large_1mv9o_24"
+              class="_select_10qr4_1 _select_large_10qr4_24"
               style="color: var(--palette-graphite-50);"
       >
         <option value>
@@ -926,7 +926,7 @@ exports[`Tester/Select/Select WithVariantLarge smoke-test 1`] = `
           Test 2
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50 _selectIcon_large_1mv9o_58"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_10qr4_50 _selectIcon_large_10qr4_58"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -954,9 +954,9 @@ exports[`Tester/Select/Select WithVariantLargeAndLongText smoke-test 1`] = `
     >
       Ledetekst
     </label>
-    <div class="_selectContainer_1mv9o_1 ">
+    <div class="_selectContainer_10qr4_1 ">
       <select id="selectId-:rm:"
-              class="_select_1mv9o_1 _select_large_1mv9o_24"
+              class="_select_10qr4_1 _select_large_10qr4_24"
       >
         <option class
                 value="option1"
@@ -964,7 +964,7 @@ exports[`Tester/Select/Select WithVariantLargeAndLongText smoke-test 1`] = `
           En lang tekst som ikke skal synes bak åpne ikonet
         </option>
       </select>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_1mv9o_50 _selectIcon_large_1mv9o_58"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _selectIcon_10qr4_50 _selectIcon_large_10qr4_58"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
