@@ -6,5 +6,6 @@ declare const classNames: {
   readonly expandedRowRight: 'expandedRowRight';
   readonly row_noBorder: 'row_noBorder';
   readonly hideIcon: 'hideIcon';
+  readonly srOnly: 'srOnly';
 };
 export default classNames;

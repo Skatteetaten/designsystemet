@@ -390,7 +390,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             class=" "
             data-testid="row-0"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5  ">
             <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                     disabled
                     type="button"
@@ -430,8 +430,8 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             class="_editableRow_expanded_1xi8g_5 "
             data-testid="row-1"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  _buttonCell_expanded_1lgas_10">
-            <button class="_button_g87u5_1 _button_medium_g87u5_45  _hideIcon_1lgas_34"
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5  _buttonCell_expanded_1rqke_14">
+            <button class="_button_g87u5_1 _button_medium_g87u5_45  _hideIcon_1rqke_38"
                     disabled
                     type="button"
                     aria-describedby="3vesy"
@@ -450,7 +450,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
                 </path>
               </svg>
             </button>
-            <div class="_expandableContent_1lgas_18 _expandableContent_1xi8g_47"
+            <div class="_expandableContent_1rqke_22 _expandableContent_1xi8g_47"
                  style="width: 515px;"
             >
               <div class="_editableRowTriangle_1xi8g_21">
@@ -483,7 +483,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
             class=" "
             data-testid="row-2"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5  ">
             <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                     disabled
                     type="button"
@@ -522,7 +522,7 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
         <tr class
             data-testid="row-expand-3"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5  ">
             <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                     type="button"
                     aria-describedby="3xpjb"
@@ -702,7 +702,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             class=" "
             data-testid="row-0"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5  ">
             <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                     type="button"
                     aria-describedby="s5f0e"
@@ -741,7 +741,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             class=" "
             data-testid="row-1"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5  ">
             <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                     type="button"
                     aria-describedby="3vesy"
@@ -780,7 +780,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
             class=" "
             data-testid="row-2"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5  ">
             <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                     type="button"
                     aria-describedby="16prz"
@@ -818,7 +818,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
         <tr class
             data-testid="row-expand-3"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5  ">
             <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                     type="button"
                     aria-describedby="3xpjb"
@@ -1075,7 +1075,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             class=" "
             data-testid="row-0"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5  ">
             <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                     type="button"
                     aria-describedby="s5f0e"
@@ -1114,7 +1114,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             class=" "
             data-testid="row-1"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5  ">
             <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                     type="button"
                     aria-describedby="3vesy"
@@ -1153,7 +1153,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
             class=" "
             data-testid="row-2"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5  ">
             <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                     type="button"
                     aria-describedby="16prz"
@@ -1191,7 +1191,7 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
         <tr class
             data-testid="row-expand-3"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5  ">
             <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                     type="button"
                     aria-describedby="3xpjb"
@@ -1658,7 +1658,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             class=" "
             data-testid="row-0"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1 _buttonCell_compact_1lgas_13 ">
+          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5 _buttonCell_compact_1rqke_17 ">
             <button class="_button_g87u5_1 _button_extraSmall_g87u5_29  "
                     type="button"
                     aria-describedby="s5f0e"
@@ -1697,7 +1697,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             class=" "
             data-testid="row-1"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1 _buttonCell_compact_1lgas_13 ">
+          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5 _buttonCell_compact_1rqke_17 ">
             <button class="_button_g87u5_1 _button_extraSmall_g87u5_29  "
                     type="button"
                     aria-describedby="3vesy"
@@ -1736,7 +1736,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
             class=" "
             data-testid="row-2"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1 _buttonCell_compact_1lgas_13 ">
+          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5 _buttonCell_compact_1rqke_17 ">
             <button class="_button_g87u5_1 _button_extraSmall_g87u5_29  "
                     type="button"
                     aria-describedby="16prz"
@@ -1774,7 +1774,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
         <tr class
             data-testid="row-expand-3"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1 _buttonCell_compact_1lgas_13 ">
+          <td class="_dataCell_1ot0q_1 _dataCell_compact_1ot0q_29 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5 _buttonCell_compact_1rqke_17 ">
             <button class="_button_g87u5_1 _button_extraSmall_g87u5_29  "
                     type="button"
                     aria-describedby="3xpjb"
@@ -1954,7 +1954,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             class=" "
             data-testid="row-0"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5  ">
             <button class="_button_g87u5_1 _button_large_g87u5_52  "
                     type="button"
                     aria-describedby="s5f0e"
@@ -1993,7 +1993,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             class=" "
             data-testid="row-1"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5  ">
             <button class="_button_g87u5_1 _button_large_g87u5_52  "
                     type="button"
                     aria-describedby="3vesy"
@@ -2032,7 +2032,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
             class=" "
             data-testid="row-2"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5  ">
             <button class="_button_g87u5_1 _button_large_g87u5_52  "
                     type="button"
                     aria-describedby="16prz"
@@ -2070,7 +2070,7 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
         <tr class
             data-testid="row-expand-3"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5  ">
             <button class="_button_g87u5_1 _button_large_g87u5_52  "
                     type="button"
                     aria-describedby="3xpjb"
