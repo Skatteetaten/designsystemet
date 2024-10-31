@@ -14,7 +14,9 @@ const meta = {
   argTypes: {
     // Props
     children: { table: { category: category.props } },
+    editButtonRef: { table: { category: category.props } },
     editableContent: { table: { category: category.props } },
+    editableContentRef: { table: { category: category.props } },
     editButtonPosition: {
       control: 'radio',
       table: {

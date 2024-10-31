@@ -39,6 +39,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       lang,
       'data-testid': dataTestId,
       dateFormat = getDatePickerDateFormat(),
+      disabledDates,
       description,
       errorMessage,
       helpSvgPath,
@@ -84,7 +85,24 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
     );
 
     useEffect(() => {
-      setInputValue(formatDateForInput(dateFormat, value));
+      const currentTextInput = inputRef.current?.value;
+
+      const isCurrentInputValidDate = isValid(
+        parseDateFromInput(currentTextInput ?? '', dateFormat)
+      );
+
+      /**
+       * Oppdaterer verdien i inputfeltet hvis én av følgende betingelser er oppfylt:
+       * 1. Eksisterende tekstverdi er en gyldig dato
+       * 2. Inputfeltet er tomt
+       * 3. En gyldig dato sendes inn via 'value'-prop
+       */
+      const shouldUpdateInputValue =
+        isCurrentInputValidDate || currentTextInput === '' || !!value;
+
+      if (shouldUpdateInputValue) {
+        setInputValue(formatDateForInput(dateFormat, value));
+      }
     }, [dateFormat, value]);
 
     const parsedDateFromInput =
@@ -165,7 +183,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       document.addEventListener('click', handleOutside);
       window.addEventListener('resize', handleResize);
       document.addEventListener('keydown', handleEscape);
-      return () => {
+      return (): void => {
         document.removeEventListener('click', handleOutside);
         window.removeEventListener('resize', handleResize);
         document.removeEventListener('keydown', handleEscape);
@@ -175,7 +193,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
     const placeholderValue =
       placeholder?.trim() === ''
         ? undefined
-        : placeholder ?? t('datepicker.TypeOrSelect');
+        : (placeholder ?? t('datepicker.TypeOrSelect'));
 
     const isLarge = variant === 'large';
     const inputClassName = `${styles.input} ${
@@ -253,6 +271,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
           <div className={styles.calendarContainer}>
             <DatePickerCalendar
               ref={calendarRef}
+              disabledDates={disabledDates}
               selectedDate={preselectedDate}
               minDate={minDate}
               maxDate={maxDate}

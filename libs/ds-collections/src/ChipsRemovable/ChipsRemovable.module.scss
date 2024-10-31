@@ -1,0 +1,54 @@
+%disabled {
+  background-color: var(--semantic-disabled-background);
+  box-shadow: 0 0 0 1px var(--semantic-disabled-foreground);
+  color: var(--semantic-disabled-foreground);
+  cursor: not-allowed;
+  text-decoration: none;
+  transform: none;
+}
+
+.removableChip {
+  --chip-font-size: var(--font-size-medium);
+  --chip-padding: var(--spacing-xs) var(--spacing-s) var(--spacing-xs)
+    var(--spacing-m);
+
+  display: inline-flex;
+  align-items: center;
+  padding: var(--chip-padding);
+  border: none;
+  border-radius: 2.75rem;
+  background-color: var(--palette-denim-5);
+  box-shadow: 0 0 0 1px var(--semantic-interactive-main);
+  color: var(--semantic-interactive-main);
+  cursor: pointer;
+  font-size: var(--chip-font-size);
+  font-weight: var(--font-weight-medium);
+  gap: var(--spacing-xs);
+  line-height: var(--semantic-line-height-default);
+  text-decoration-line: none;
+
+  &:hover {
+    background-color: var(--semantic-interactive-background);
+  }
+
+  &:focus {
+    outline: 2px solid var(--semantic-interactive-main);
+    outline-offset: 3px;
+  }
+
+  &_small {
+    --chip-font-size: var(--font-size-s);
+    --chip-padding: var(--spacing-xxs) var(--spacing-s) var(--spacing-xxs)
+      var(--spacing-s-plus);
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:active {
+    @extend %disabled;
+  }
+}
+
+.icon {
+  fill: currentcolor;
+}

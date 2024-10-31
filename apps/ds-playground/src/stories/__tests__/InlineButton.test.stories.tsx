@@ -1,10 +1,7 @@
 import { FocusEvent, MouseEvent, useState } from 'react';
 
 import { InlineButton } from '@skatteetaten/ds-buttons';
-import {
-  buttonIconPositionArr,
-  getCommonButtonTypeDefault,
-} from '@skatteetaten/ds-core-utils';
+import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath } from '@skatteetaten/ds-icons';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
@@ -40,8 +37,6 @@ const meta = {
     spinnerTitle: { table: { disable: true } },
     iconPosition: {
       table: { disable: true },
-      options: [...buttonIconPositionArr],
-      control: 'radio',
     },
     svgPath: {
       table: { disable: true },
@@ -329,7 +324,7 @@ export const WithEventHandlers = {
     const canvas = within(canvasElement);
     const inlineButton = canvas.getByRole('button');
     await expect(inlineButton).toBeInTheDocument();
-    await inlineButton.focus();
+    inlineButton.focus();
     await waitFor(() => expect(args.onFocus).toHaveBeenCalled());
     await userEvent.tab();
     await waitFor(() => expect(args.onBlur).toHaveBeenCalled());

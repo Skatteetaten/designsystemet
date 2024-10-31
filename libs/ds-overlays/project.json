@@ -63,7 +63,13 @@
       "options": {
         "command": "npm version {args.packageVersion} --no-git-tag",
         "cwd": "libs/ds-overlays"
-      }
+      },
+      "dependsOn": [
+        {
+          "projects": "ds-core-designtokens",
+          "target": "build"
+        }
+      ]
     },
     "publish": {
       "executor": "nx:run-commands",

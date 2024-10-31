@@ -1,0 +1,78 @@
+%disabled {
+  background-color: var(--semantic-disabled-background);
+  box-shadow: 0 0 0 1px var(--semantic-disabled-foreground);
+  color: var(--semantic-disabled-foreground);
+  cursor: not-allowed;
+  text-decoration: none;
+  transform: none;
+}
+
+.toggleChip {
+  --chip-font-size: var(--font-size-medium);
+  --chip-padding: var(--spacing-xs) var(--spacing-m);
+  --chip-checkmark-padding: var(--spacing-xs) var(--spacing-m) var(--spacing-xs)
+    var(--spacing-s);
+
+  display: inline-flex;
+  align-items: center;
+  padding: var(--chip-padding);
+  border: none;
+  border-radius: 2.75rem;
+  background-color: var(--palette-denim-5);
+  box-shadow: 0 0 0 1px var(--semantic-interactive-main);
+  color: var(--semantic-interactive-main);
+  cursor: pointer;
+  font-size: var(--chip-font-size);
+  font-weight: var(--font-weight-medium);
+  gap: var(--spacing-xs);
+  line-height: var(--semantic-line-height-default);
+  text-decoration-line: none;
+
+  &:hover {
+    background-color: var(--semantic-interactive-background);
+  }
+
+  &:focus {
+    outline: 2px solid var(--semantic-interactive-main);
+    outline-offset: 3px;
+  }
+
+  &_small {
+    --chip-font-size: var(--font-size-s);
+    --chip-padding: var(--spacing-xxs) var(--spacing-s-plus);
+    --chip-checkmark-padding: var(--spacing-xxs) var(--spacing-s-plus)
+      var(--spacing-xxs) var(--spacing-s);
+  }
+
+  &_withCheckmark {
+    padding: var(--chip-checkmark-padding);
+  }
+
+  &[aria-pressed='true'] {
+    background-color: var(--semantic-interactive-main);
+    color: var(--palette-graphite-0);
+
+    &:hover {
+      border-color: var(--semantic-interactive-foreground);
+      background-color: var(--semantic-interactive-foreground);
+    }
+
+    &:focus {
+      outline: 2px solid var(--semantic-interactive-main);
+      outline-offset: 2px;
+    }
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:active,
+  &:disabled[aria-pressed='true'],
+  &:disabled[aria-pressed='true']:hover,
+  &:disabled[aria-pressed='true']:active {
+    @extend %disabled;
+  }
+}
+
+.icon {
+  fill: currentcolor;
+}

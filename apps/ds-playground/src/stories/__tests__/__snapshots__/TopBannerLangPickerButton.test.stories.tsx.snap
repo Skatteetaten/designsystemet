@@ -8,7 +8,7 @@ exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) Defaults play-test 
            aria-hidden="true"
            viewbox="0 0 1100 800"
       >
-        <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
+        <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
               style="fill: rgb(255, 255, 255);"
         >
         </path>
@@ -16,7 +16,7 @@ exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) Defaults play-test 
               style="fill: rgb(239, 43, 45);"
         >
         </path>
-        <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
+        <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
               style="fill: rgb(0, 40, 104);"
         >
         </path>
@@ -39,7 +39,7 @@ exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithAriaCurrent pla
            aria-hidden="true"
            viewbox="0 0 1100 800"
       >
-        <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
+        <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
               style="fill: rgb(255, 255, 255);"
         >
         </path>
@@ -47,7 +47,7 @@ exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithAriaCurrent pla
               style="fill: rgb(239, 43, 45);"
         >
         </path>
-        <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
+        <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
               style="fill: rgb(0, 40, 104);"
         >
         </path>
@@ -62,7 +62,7 @@ exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithAriaCurrent pla
          aria-hidden="true"
          role="img"
     >
-      <path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z">
+      <path d="M19.94 6.71L19.24 6L9 16.23L5.26 12.5L4.91 12.85L3.5 14.26L9 19.76L21 7.76L19.94 6.71Z">
       </path>
     </svg>
   </button>
@@ -81,7 +81,7 @@ exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithAttributes play
            aria-hidden="true"
            viewbox="0 0 1100 800"
       >
-        <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
+        <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
               style="fill: rgb(255, 255, 255);"
         >
         </path>
@@ -89,7 +89,7 @@ exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithAttributes play
               style="fill: rgb(239, 43, 45);"
         >
         </path>
-        <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
+        <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
               style="fill: rgb(0, 40, 104);"
         >
         </path>
@@ -110,7 +110,7 @@ exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithEventHandlers p
            aria-hidden="true"
            viewbox="0 0 1100 800"
       >
-        <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
+        <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
               style="fill: rgb(255, 255, 255);"
         >
         </path>
@@ -118,7 +118,7 @@ exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithEventHandlers p
               style="fill: rgb(239, 43, 45);"
         >
         </path>
-        <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
+        <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
               style="fill: rgb(0, 40, 104);"
         >
         </path>
@@ -141,7 +141,7 @@ exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithRef play-test 1
            aria-hidden="true"
            viewbox="0 0 1100 800"
       >
-        <path d="M500 0h-50v350h650v-50H500V0zM450 450v350h50V500h600v-50H450zM350 450H0v50h300v300h50V450zM350 350V0h-50v300H0v50h350z"
+        <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
               style="fill: rgb(255, 255, 255);"
         >
         </path>
@@ -149,7 +149,7 @@ exports[`Tester/TopBanner/TopBannerLangPickerButton (intern) WithRef play-test 1
               style="fill: rgb(239, 43, 45);"
         >
         </path>
-        <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350H450z"
+        <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
               style="fill: rgb(0, 40, 104);"
         >
         </path>

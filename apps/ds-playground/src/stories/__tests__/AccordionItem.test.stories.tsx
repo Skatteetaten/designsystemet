@@ -1,7 +1,8 @@
-import { MouseEvent } from 'react';
+import { MouseEvent, JSX, useState } from 'react';
 
 import { Accordion, AccordionItemProps } from '@skatteetaten/ds-collections';
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
+import { Checkbox } from '@skatteetaten/ds-forms';
 import { PersonSVGpath } from '@skatteetaten/ds-icons';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import {
@@ -161,7 +162,7 @@ export const Defaults = {
     const title = canvas.getByText(defaultTitle);
     await expect(title).toBeInTheDocument();
     const content = canvas.queryByText(defaultContent);
-    await expect(content).not.toBeInTheDocument();
+    await expect(content).not.toBeVisible();
     // eslint-disable-next-line testing-library/no-node-access
     const svg = button.querySelector('svg');
     await expect(svg).toBeInTheDocument();
@@ -227,7 +228,7 @@ export const IsExpanded = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const content = await canvas.findByText(defaultContent);
-    await expect(content).toBeInTheDocument();
+    await expect(content).toBeVisible();
     const button = canvas.getByRole('button');
     await expect(button).toHaveAttribute('aria-expanded', 'true');
   },
@@ -245,7 +246,7 @@ export const IsDefaultExpanded = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const content = await canvas.findByText(defaultContent);
-    await expect(content).toBeInTheDocument();
+    await expect(content).toBeVisible();
     const button = canvas.getByRole('button');
     await expect(button).toHaveAttribute('aria-expanded', 'true');
   },
@@ -270,9 +271,9 @@ export const WithOnClick = {
     await fireEvent.click(button);
     const content = canvas.getByText(defaultContent);
     await expect(button).toHaveAttribute('aria-expanded', 'true');
-    await expect(content).toBeInTheDocument();
+    await expect(content).toBeVisible();
     await fireEvent.click(button);
-    await expect(content).not.toBeInTheDocument();
+    await expect(content).not.toBeVisible();
     await waitFor(() => expect(args.onClick).toHaveBeenCalledTimes(2));
   },
 } satisfies Story;
@@ -339,5 +340,58 @@ export const WithTitleAs = {
         headingAsArr[index].toLocaleUpperCase()
       );
     }
+  },
+} satisfies Story;
+
+const StatefulChild = (): JSX.Element => {
+  const [isChecked, setIsChecked] = useState(false);
+  return (
+    <Checkbox
+      checked={isChecked}
+      onChange={(e) => {
+        setIsChecked(e.target.checked);
+      }}
+    >
+      {`${isChecked ? 'Jeg er valgt' : 'Klikk meg'}`}
+    </Checkbox>
+  );
+};
+
+export const WithPersistedState = {
+  render: function Render(): JSX.Element {
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    return (
+      <Accordion.Item
+        title={'Meg selv'}
+        isExpanded={isExpanded}
+        onClick={() => setIsExpanded((prevIsExpanded) => !prevIsExpanded)}
+      >
+        <StatefulChild />
+      </Accordion.Item>
+    );
+  },
+  name: 'With Persisted State',
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await userEvent.click(button);
+    let checkbox = canvas.getByRole('checkbox');
+    await userEvent.click(checkbox);
+
+    await userEvent.click(button);
+    await userEvent.click(button);
+
+    checkbox = canvas.getByRole('checkbox');
+
+    await waitFor(() => expect(checkbox).toBeChecked());
   },
 } satisfies Story;

@@ -2,6 +2,7 @@ import { ReactNode, useState, JSX } from 'react';
 
 import { Button, InlineButton } from '@skatteetaten/ds-buttons';
 import { densityArr } from '@skatteetaten/ds-core-utils';
+import { Checkbox } from '@skatteetaten/ds-forms';
 import {
   CopySVGpath,
   DeleteSVGpath,
@@ -219,10 +220,8 @@ export const Sortable: Story = {
           </Table.Row>
         </Table.Header>
         <Table.Body>
-          {sortedData.map((row, index) => (
-            /* hvis ikke index tas med i key slik at de blir unike når tabellen sorteres
-            så blir voiceover i Safari forvirret og hopper over rader */
-            <Table.Row key={`${row.player}-${index}`}>
+          {sortedData.map((row) => (
+            <Table.Row key={row.player}>
               <Table.DataCell alignment={'center'}>{row.player}</Table.DataCell>
               <Table.DataCell alignment={'right'}>{row.score}</Table.DataCell>
             </Table.Row>
@@ -350,10 +349,10 @@ export const Expandable: Story = {
           </Table.Row>
         </Table.Header>
         <Table.Body>
-          {sortedData.map((row, index) => {
+          {sortedData.map((row) => {
             return (
               <Table.Row
-                key={`${row.id}-${index}`}
+                key={row.id}
                 expandButtonPosition={'right'}
                 expandableContent={
                   <div className={'emptyExpandedTableRow'}></div>
@@ -449,10 +448,10 @@ export const Editable: Story = {
           </Table.Row>
         </Table.Header>
         <Table.Body>
-          {sortedData.map((row, index) => {
+          {sortedData.map((row) => {
             return (
               <Table.EditableRow
-                key={`${row.id}-${index}`}
+                key={row.id}
                 editableContent={(closeEditing: () => void): ReactNode => (
                   <div className={'emptyExpandedTableRow'}>
                     <Button
@@ -601,9 +600,9 @@ export const WithEmptyHeaders: Story = {
             </Table.Row>
           </Table.Header>
           <Table.Body>
-            {sortedData.map((row, index) => {
+            {sortedData.map((row) => {
               return (
-                <Table.Row key={`${row.id}-${index}`}>
+                <Table.Row key={row.id}>
                   <Table.DataCell id={row.id}>{row.deadline}</Table.DataCell>
                   <Table.DataCell>{row.category}</Table.DataCell>
                   <Table.DataCell>{row.task}</Table.DataCell>
@@ -634,3 +633,119 @@ export const WithEmptyHeaders: Story = {
   },
 } satisfies Story;
 WithEmptyHeaders.parameters = exampleParameters;
+
+export const Selectable: Story = {
+  render: (_args): JSX.Element => {
+    const items = [
+      {
+        fastsatt: '31.01.2018',
+        avgiftstype: 'OR',
+        avgiftsgruppe: '525',
+        beloep: '6045',
+        status: 'Iverksatt',
+        id: '1',
+      },
+      {
+        fastsatt: '31.05.2018',
+        avgiftstype: 'BR',
+        avgiftsgruppe: '525',
+        beloep: '6033',
+        status: 'Iverksatt',
+        id: '2',
+      },
+      {
+        fastsatt: '02.03.2018',
+        avgiftstype: 'AR',
+        avgiftsgruppe: '525',
+        beloep: '6064',
+        status: 'Under arbeid',
+        id: '3',
+      },
+      {
+        fastsatt: '03.03.2018',
+        avgiftstype: 'DR',
+        avgiftsgruppe: '525',
+        beloep: '6064',
+        status: 'Under arbeid',
+        id: '4',
+      },
+      {
+        fastsatt: '04.01.2018',
+        avgiftstype: 'BR',
+        avgiftsgruppe: '525',
+        beloep: '6064',
+        status: 'Under arbeid',
+        id: '5',
+      },
+    ];
+    const [checkedState, setCheckedState] = useState<Array<number>>([]);
+    const [isAllChecked, setIsAllChecked] = useState<boolean>(false);
+
+    return (
+      <Table caption={'avgiftsstatus'}>
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell>
+              <Checkbox
+                checked={isAllChecked}
+                hideLabel
+                onChange={() => {
+                  if (isAllChecked) {
+                    setCheckedState([]);
+                  }
+
+                  setIsAllChecked(!isAllChecked);
+                }}
+              >
+                {'velg alle rader'}
+              </Checkbox>
+            </Table.HeaderCell>
+            <Table.HeaderCell>{'Fastsatt'}</Table.HeaderCell>
+            <Table.HeaderCell>{'avgiftstype'}</Table.HeaderCell>
+            <Table.HeaderCell>{'avgiftsgruppe'}</Table.HeaderCell>
+            <Table.HeaderCell>{'Beløp'}</Table.HeaderCell>
+            <Table.HeaderCell>{'Status'}</Table.HeaderCell>
+          </Table.Row>
+        </Table.Header>
+        <Table.Body>
+          {items.map((item, index) => (
+            <Table.Row key={item.id}>
+              <Table.DataCell>
+                <Checkbox
+                  checked={
+                    isAllChecked || checkedState.some((it) => it === index)
+                  }
+                  hideLabel
+                  onChange={(event) => {
+                    if (isAllChecked) {
+                      setCheckedState(
+                        Array.from(Array(items.length).keys()).filter(
+                          (it) => it !== index
+                        )
+                      );
+                      setIsAllChecked(false);
+                    } else if (event.target.checked) {
+                      setCheckedState([index, ...checkedState]);
+                    } else {
+                      setCheckedState(
+                        checkedState.filter((it) => it !== index)
+                      );
+                    }
+                  }}
+                >{`Velg ${item.fastsatt}`}</Checkbox>
+              </Table.DataCell>
+              <Table.DataCell as={'th'} scope={'row'}>
+                {item.fastsatt}
+              </Table.DataCell>
+              <Table.DataCell>{item.avgiftstype}</Table.DataCell>
+              <Table.DataCell>{item.avgiftsgruppe}</Table.DataCell>
+              <Table.DataCell>{item.beloep}</Table.DataCell>
+              <Table.DataCell>{item.status}</Table.DataCell>
+            </Table.Row>
+          ))}
+        </Table.Body>
+      </Table>
+    );
+  },
+} satisfies Story;
+Selectable.parameters = exampleParameters;

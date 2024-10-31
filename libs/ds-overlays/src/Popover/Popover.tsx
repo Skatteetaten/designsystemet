@@ -85,7 +85,7 @@ export const Popover = ((props: PopoverProps): JSX.Element => {
 
     window.addEventListener('resize', handleResize);
 
-    return () => {
+    return (): void => {
       window.removeEventListener('resize', handleResize);
     };
   }, [isOpen, shouldAutoDismiss, onClose]);

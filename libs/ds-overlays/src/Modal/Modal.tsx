@@ -4,6 +4,7 @@ import {
   useImperativeHandle,
   useRef,
   MouseEvent,
+  JSX,
 } from 'react';
 import { useTranslation } from 'react-i18next';
 

@@ -1,5 +1,5 @@
 @import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
-@import 'libs/ds-core-utils/src/styles.scss';
+@import 'libs/ds-core-utils/src/styles';
 
 .calendar {
   display: flex;
@@ -35,10 +35,15 @@
 
     &Month {
       width: 146px;
+      margin-top: 0;
     }
 
     &Year {
       width: 72px;
+
+      & input {
+        margin-top: 0;
+      }
     }
 
     @media (min-width: $breakpoint-xs) {

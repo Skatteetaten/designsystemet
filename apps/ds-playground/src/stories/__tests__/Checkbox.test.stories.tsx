@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, FocusEvent, useState } from 'react';
 
 import { Checkbox } from '@skatteetaten/ds-forms';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
@@ -74,7 +74,9 @@ const meta = {
     // Aria
     ariaDescribedby: { table: { disable: true } },
     // Events
+    onBlur: { table: { disable: true } },
     onChange: { table: { disable: true } },
+    onFocus: { table: { disable: true } },
   },
 } satisfies Meta<typeof Checkbox>;
 export default meta;
@@ -557,9 +559,17 @@ const EventHandlersTemplate: StoryFn<typeof Checkbox> = (args) => {
   return (
     <Checkbox
       {...args}
+      onBlur={(event: FocusEvent<HTMLInputElement>): void => {
+        setLabelText('Checkbox har mistet fokus');
+        args.onBlur && args.onBlur(event);
+      }}
       onChange={(event: ChangeEvent<HTMLInputElement>): void => {
         setLabelText('Checkbox har blitt klikket på');
         args.onChange && args.onChange(event);
+      }}
+      onFocus={(event: FocusEvent<HTMLInputElement>): void => {
+        setLabelText('Checkbox har fått fokus');
+        args.onFocus && args.onFocus(event);
       }}
     >
       {labelText}
@@ -572,7 +582,9 @@ export const WithEventHandlers = {
   name: 'With EventHandlers',
   args: {
     ...defaultArgs,
+    onBlur: fn(),
     onChange: fn(),
+    onFocus: fn(),
   },
   parameters: {
     imageSnapshot: { disable: true },
@@ -582,6 +594,10 @@ export const WithEventHandlers = {
     const inputNode = canvas.getByRole('checkbox');
     await userEvent.click(inputNode);
     await waitFor(() => expect(args.onChange).toHaveBeenCalled());
+    inputNode.focus();
+    await expect(inputNode).toHaveFocus();
+    inputNode.blur();
+    await expect(inputNode).not.toHaveFocus();
   },
 } satisfies Story;
 

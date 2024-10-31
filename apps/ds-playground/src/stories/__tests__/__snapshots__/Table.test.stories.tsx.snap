@@ -291,14 +291,17 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:rv:"
+                   aria-labelledby="svgtitle-:rs:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:rv:">
+                <title id="svgtitle-:rs:">
                   Sorterbar
                 </title>
-                <path d="m7 1.9 5.6 5.8-1.1 1.2-3.6-3.8v17H6.1v-17L2.6 8.9 1.4 7.6 7 1.9Zm10.9 0v17l3.5-3.8 1.2 1.3-5.6 5.7-5.6-5.8 1.1-1.2 3.6 3.8v-17h1.8Z">
+                <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                >
                 </path>
               </svg>
             </button>
@@ -314,14 +317,17 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r10:"
+                   aria-labelledby="svgtitle-:rt:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r10:">
+                <title id="svgtitle-:rt:">
                   Sorterbar
                 </title>
-                <path d="m7 1.9 5.6 5.8-1.1 1.2-3.6-3.8v17H6.1v-17L2.6 8.9 1.4 7.6 7 1.9Zm10.9 0v17l3.5-3.8 1.2 1.3-5.6 5.7-5.6-5.8 1.1-1.2 3.6 3.8v-17h1.8Z">
+                <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                >
                 </path>
               </svg>
             </button>
@@ -336,14 +342,17 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r11:"
+                   aria-labelledby="svgtitle-:ru:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r11:">
+                <title id="svgtitle-:ru:">
                   Sorterbar
                 </title>
-                <path d="m7 1.9 5.6 5.8-1.1 1.2-3.6-3.8v17H6.1v-17L2.6 8.9 1.4 7.6 7 1.9Zm10.9 0v17l3.5-3.8 1.2 1.3-5.6 5.7-5.6-5.8 1.1-1.2 3.6 3.8v-17h1.8Z">
+                <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                >
                 </path>
               </svg>
             </button>
@@ -359,14 +368,17 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r12:"
+                   aria-labelledby="svgtitle-:rv:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r12:">
+                <title id="svgtitle-:rv:">
                   Sorterbar
                 </title>
-                <path d="m7 1.9 5.6 5.8-1.1 1.2-3.6-3.8v17H6.1v-17L2.6 8.9 1.4 7.6 7 1.9Zm10.9 0v17l3.5-3.8 1.2 1.3-5.6 5.7-5.6-5.8 1.1-1.2 3.6 3.8v-17h1.8Z">
+                <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                >
                 </path>
               </svg>
             </button>
@@ -387,11 +399,11 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r14:"
+                   aria-labelledby="svgtitle-:r11:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r14:">
+                <title id="svgtitle-:r11:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
@@ -427,11 +439,11 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r16:"
+                   aria-labelledby="svgtitle-:r13:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r16:">
+                <title id="svgtitle-:r13:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
@@ -480,11 +492,11 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r18:"
+                   aria-labelledby="svgtitle-:r15:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r18:">
+                <title id="svgtitle-:r15:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
@@ -519,14 +531,14 @@ exports[`Tester/Table/Table WithDefaultRowInEditMode smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r19:"
+                   aria-labelledby="svgtitle-:r16:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r19:">
+                <title id="svgtitle-:r16:">
                   Mer informasjon
                 </title>
-                <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+                <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
                 </path>
               </svg>
             </button>
@@ -598,7 +610,10 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
                 <title id="svgtitle-:rb:">
                   Sorterbar
                 </title>
-                <path d="m7 1.9 5.6 5.8-1.1 1.2-3.6-3.8v17H6.1v-17L2.6 8.9 1.4 7.6 7 1.9Zm10.9 0v17l3.5-3.8 1.2 1.3-5.6 5.7-5.6-5.8 1.1-1.2 3.6 3.8v-17h1.8Z">
+                <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                >
                 </path>
               </svg>
             </button>
@@ -621,7 +636,10 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
                 <title id="svgtitle-:rc:">
                   Sorterbar
                 </title>
-                <path d="m7 1.9 5.6 5.8-1.1 1.2-3.6-3.8v17H6.1v-17L2.6 8.9 1.4 7.6 7 1.9Zm10.9 0v17l3.5-3.8 1.2 1.3-5.6 5.7-5.6-5.8 1.1-1.2 3.6 3.8v-17h1.8Z">
+                <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                >
                 </path>
               </svg>
             </button>
@@ -643,7 +661,10 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
                 <title id="svgtitle-:rd:">
                   Sorterbar
                 </title>
-                <path d="m7 1.9 5.6 5.8-1.1 1.2-3.6-3.8v17H6.1v-17L2.6 8.9 1.4 7.6 7 1.9Zm10.9 0v17l3.5-3.8 1.2 1.3-5.6 5.7-5.6-5.8 1.1-1.2 3.6 3.8v-17h1.8Z">
+                <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                >
                 </path>
               </svg>
             </button>
@@ -666,7 +687,10 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
                 <title id="svgtitle-:re:">
                   Sorterbar
                 </title>
-                <path d="m7 1.9 5.6 5.8-1.1 1.2-3.6-3.8v17H6.1v-17L2.6 8.9 1.4 7.6 7 1.9Zm10.9 0v17l3.5-3.8 1.2 1.3-5.6 5.7-5.6-5.8 1.1-1.2 3.6 3.8v-17h1.8Z">
+                <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                >
                 </path>
               </svg>
             </button>
@@ -810,7 +834,7 @@ exports[`Tester/Table/Table WithExpandEditSort smoke-test 1`] = `
                 <title id="svgtitle-:rl:">
                   Mer informasjon
                 </title>
-                <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+                <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
                 </path>
               </svg>
             </button>
@@ -952,14 +976,17 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1l:"
+                   aria-labelledby="svgtitle-:r1i:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1l:">
+                <title id="svgtitle-:r1i:">
                   Sorterbar
                 </title>
-                <path d="m7 1.9 5.6 5.8-1.1 1.2-3.6-3.8v17H6.1v-17L2.6 8.9 1.4 7.6 7 1.9Zm10.9 0v17l3.5-3.8 1.2 1.3-5.6 5.7-5.6-5.8 1.1-1.2 3.6 3.8v-17h1.8Z">
+                <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                >
                 </path>
               </svg>
             </button>
@@ -975,14 +1002,17 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1m:"
+                   aria-labelledby="svgtitle-:r1j:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1m:">
+                <title id="svgtitle-:r1j:">
                   Sorterbar
                 </title>
-                <path d="m7 1.9 5.6 5.8-1.1 1.2-3.6-3.8v17H6.1v-17L2.6 8.9 1.4 7.6 7 1.9Zm10.9 0v17l3.5-3.8 1.2 1.3-5.6 5.7-5.6-5.8 1.1-1.2 3.6 3.8v-17h1.8Z">
+                <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                >
                 </path>
               </svg>
             </button>
@@ -997,14 +1027,17 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1n:"
+                   aria-labelledby="svgtitle-:r1k:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1n:">
+                <title id="svgtitle-:r1k:">
                   Sorterbar
                 </title>
-                <path d="m7 1.9 5.6 5.8-1.1 1.2-3.6-3.8v17H6.1v-17L2.6 8.9 1.4 7.6 7 1.9Zm10.9 0v17l3.5-3.8 1.2 1.3-5.6 5.7-5.6-5.8 1.1-1.2 3.6 3.8v-17h1.8Z">
+                <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                >
                 </path>
               </svg>
             </button>
@@ -1020,14 +1053,17 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1o:"
+                   aria-labelledby="svgtitle-:r1l:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1o:">
+                <title id="svgtitle-:r1l:">
                   Sorterbar
                 </title>
-                <path d="m7 1.9 5.6 5.8-1.1 1.2-3.6-3.8v17H6.1v-17L2.6 8.9 1.4 7.6 7 1.9Zm10.9 0v17l3.5-3.8 1.2 1.3-5.6 5.7-5.6-5.8 1.1-1.2 3.6 3.8v-17h1.8Z">
+                <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                >
                 </path>
               </svg>
             </button>
@@ -1047,11 +1083,11 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1q:"
+                   aria-labelledby="svgtitle-:r1n:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1q:">
+                <title id="svgtitle-:r1n:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
@@ -1086,11 +1122,11 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1s:"
+                   aria-labelledby="svgtitle-:r1p:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1s:">
+                <title id="svgtitle-:r1p:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
@@ -1125,11 +1161,11 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1u:"
+                   aria-labelledby="svgtitle-:r1r:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1u:">
+                <title id="svgtitle-:r1r:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
@@ -1164,14 +1200,14 @@ exports[`Tester/Table/Table WithFullWidthExpandableEdit smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1v:"
+                   aria-labelledby="svgtitle-:r1s:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1v:">
+                <title id="svgtitle-:r1s:">
                   Mer informasjon
                 </title>
-                <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+                <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
                 </path>
               </svg>
             </button>
@@ -1530,7 +1566,10 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
                 <title id="svgtitle-:r0:">
                   Sorterbar
                 </title>
-                <path d="m7 1.9 5.6 5.8-1.1 1.2-3.6-3.8v17H6.1v-17L2.6 8.9 1.4 7.6 7 1.9Zm10.9 0v17l3.5-3.8 1.2 1.3-5.6 5.7-5.6-5.8 1.1-1.2 3.6 3.8v-17h1.8Z">
+                <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                >
                 </path>
               </svg>
             </button>
@@ -1553,7 +1592,10 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
                 <title id="svgtitle-:r1:">
                   Sorterbar
                 </title>
-                <path d="m7 1.9 5.6 5.8-1.1 1.2-3.6-3.8v17H6.1v-17L2.6 8.9 1.4 7.6 7 1.9Zm10.9 0v17l3.5-3.8 1.2 1.3-5.6 5.7-5.6-5.8 1.1-1.2 3.6 3.8v-17h1.8Z">
+                <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                >
                 </path>
               </svg>
             </button>
@@ -1575,7 +1617,10 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
                 <title id="svgtitle-:r2:">
                   Sorterbar
                 </title>
-                <path d="m7 1.9 5.6 5.8-1.1 1.2-3.6-3.8v17H6.1v-17L2.6 8.9 1.4 7.6 7 1.9Zm10.9 0v17l3.5-3.8 1.2 1.3-5.6 5.7-5.6-5.8 1.1-1.2 3.6 3.8v-17h1.8Z">
+                <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                >
                 </path>
               </svg>
             </button>
@@ -1598,7 +1643,10 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
                 <title id="svgtitle-:r3:">
                   Sorterbar
                 </title>
-                <path d="m7 1.9 5.6 5.8-1.1 1.2-3.6-3.8v17H6.1v-17L2.6 8.9 1.4 7.6 7 1.9Zm10.9 0v17l3.5-3.8 1.2 1.3-5.6 5.7-5.6-5.8 1.1-1.2 3.6 3.8v-17h1.8Z">
+                <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                >
                 </path>
               </svg>
             </button>
@@ -1742,7 +1790,7 @@ exports[`Tester/Table/Table WithVariantCompact smoke-test 1`] = `
                 <title id="svgtitle-:ra:">
                   Mer informasjon
                 </title>
-                <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+                <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
                 </path>
               </svg>
             </button>
@@ -1807,14 +1855,17 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1a:"
+                   aria-labelledby="svgtitle-:r17:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1a:">
+                <title id="svgtitle-:r17:">
                   Sorterbar
                 </title>
-                <path d="m7 1.9 5.6 5.8-1.1 1.2-3.6-3.8v17H6.1v-17L2.6 8.9 1.4 7.6 7 1.9Zm10.9 0v17l3.5-3.8 1.2 1.3-5.6 5.7-5.6-5.8 1.1-1.2 3.6 3.8v-17h1.8Z">
+                <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                >
                 </path>
               </svg>
             </button>
@@ -1830,14 +1881,17 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1b:"
+                   aria-labelledby="svgtitle-:r18:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1b:">
+                <title id="svgtitle-:r18:">
                   Sorterbar
                 </title>
-                <path d="m7 1.9 5.6 5.8-1.1 1.2-3.6-3.8v17H6.1v-17L2.6 8.9 1.4 7.6 7 1.9Zm10.9 0v17l3.5-3.8 1.2 1.3-5.6 5.7-5.6-5.8 1.1-1.2 3.6 3.8v-17h1.8Z">
+                <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                >
                 </path>
               </svg>
             </button>
@@ -1852,14 +1906,17 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1c:"
+                   aria-labelledby="svgtitle-:r19:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1c:">
+                <title id="svgtitle-:r19:">
                   Sorterbar
                 </title>
-                <path d="m7 1.9 5.6 5.8-1.1 1.2-3.6-3.8v17H6.1v-17L2.6 8.9 1.4 7.6 7 1.9Zm10.9 0v17l3.5-3.8 1.2 1.3-5.6 5.7-5.6-5.8 1.1-1.2 3.6 3.8v-17h1.8Z">
+                <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                >
                 </path>
               </svg>
             </button>
@@ -1875,14 +1932,17 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _headerCellSortButtonIcon_1525d_31"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1d:"
+                   aria-labelledby="svgtitle-:r1a:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1d:">
+                <title id="svgtitle-:r1a:">
                   Sorterbar
                 </title>
-                <path d="m7 1.9 5.6 5.8-1.1 1.2-3.6-3.8v17H6.1v-17L2.6 8.9 1.4 7.6 7 1.9Zm10.9 0v17l3.5-3.8 1.2 1.3-5.6 5.7-5.6-5.8 1.1-1.2 3.6 3.8v-17h1.8Z">
+                <path d="M7 4L12 8.95937L10.6364 10.2719L7.96364 7.61875V20H6.03636V7.61875L3.36364 10.2719L2 8.95937L7 4ZM17 21L12 16.0406L13.3636 14.7281L16.0364 17.3813V5H17.9636V17.3813L20.6364 14.7281L22 16.0406L17 21Z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                >
                 </path>
               </svg>
             </button>
@@ -1902,11 +1962,11 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1f:"
+                   aria-labelledby="svgtitle-:r1c:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1f:">
+                <title id="svgtitle-:r1c:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
@@ -1941,11 +2001,11 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1h:"
+                   aria-labelledby="svgtitle-:r1e:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1h:">
+                <title id="svgtitle-:r1e:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
@@ -1980,11 +2040,11 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1j:"
+                   aria-labelledby="svgtitle-:r1g:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1j:">
+                <title id="svgtitle-:r1g:">
                   Rediger rad
                 </title>
                 <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
@@ -2019,14 +2079,14 @@ exports[`Tester/Table/Table WithWideScreen smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1k:"
+                   aria-labelledby="svgtitle-:r1h:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1k:">
+                <title id="svgtitle-:r1h:">
                   Mer informasjon
                 </title>
-                <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+                <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
                 </path>
               </svg>
             </button>

@@ -15,7 +15,7 @@ export const SpacingTokenExamplesGenerator = (): JSX.Element => {
           const cssRule = `.${spacingClassName} { height: ${spacingsTokens[value]}; }`;
 
           return (
-            <Fragment key={index}>
+            <Fragment key={value}>
               <style>{cssRule}</style>
               <p className={'tokenValue'}>
                 <strong>{`${value} (${spacingsTokens[value]})`}</strong>

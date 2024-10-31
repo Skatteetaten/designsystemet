@@ -51,7 +51,13 @@
       "executor": "@skatteetaten/ds-dev-config:tsCheck",
       "options": {
         "tsConfig": ["tsconfig.lib.json", "tsconfig.spec.json"]
-      }
+      },
+      "dependsOn": [
+        {
+          "projects": "ds-core-designtokens",
+          "target": "build"
+        }
+      ]
     },
     "set-version": {
       "executor": "nx:run-commands",

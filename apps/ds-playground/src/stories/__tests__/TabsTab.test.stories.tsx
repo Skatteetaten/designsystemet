@@ -179,7 +179,6 @@ export const WithAttributes = {
   },
 } satisfies Story;
 
-//TODO-Opprett interaksjonstest av ikon eller fjern play-test
 export const WithIcon = {
   name: 'With Icon (A4)',
   render: TemplateTabsIcon,
@@ -195,10 +194,8 @@ export const WithIcon = {
     const canvas = within(canvasElement);
     await step('Sjekk om svg-ikon finnes', async () => {
       const tab = canvas.getByRole('tab', { name: 'Person' });
-      await expect(tab).toHaveAttribute(
-        'id',
-        expect.stringMatching(/^ds-tab-id-.*-tab1$/)
-      );
+      const svg = tab.querySelector('svg');
+      await expect(svg).toBeInTheDocument();
     });
   },
 } satisfies Story;

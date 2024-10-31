@@ -53,6 +53,7 @@ const meta = {
     firstColumn: { control: 'text', table: { category: category.props } },
     secondColumn: { control: 'text', table: { category: category.props } },
     thirdColumn: { control: 'text', table: { category: category.props } },
+    additionalLanguages: { table: { category: category.props } },
     // Events
     onLogInClick: {
       ...htmlEventDescription,

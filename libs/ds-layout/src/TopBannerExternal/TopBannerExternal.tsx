@@ -4,6 +4,7 @@ import {
   useImperativeHandle,
   useRef,
   useState,
+  JSX,
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -45,6 +46,7 @@ export const TopBannerExternal = forwardRef<
       skipLink,
       thirdColumn,
       user,
+      additionalLanguages,
       showSami,
       children,
       onLanguageClick,
@@ -120,7 +122,7 @@ export const TopBannerExternal = forwardRef<
 
       document.addEventListener('keydown', handleEscape);
 
-      return () => {
+      return (): void => {
         document.removeEventListener('mouseup', handleClickOutside);
         document.removeEventListener('keydown', handleEscape);
         document.removeEventListener('focusin', handleFocusOutside);
@@ -222,6 +224,7 @@ export const TopBannerExternal = forwardRef<
                   openMenu={openMenu}
                   setOpenMenu={setOpenMenu}
                   menuButtonRef={languagePickerButtonRef}
+                  additionalLanguages={additionalLanguages}
                   onLanguageClick={onLanguageClick}
                 />
 

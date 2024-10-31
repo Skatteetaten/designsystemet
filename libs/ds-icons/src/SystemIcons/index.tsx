@@ -131,6 +131,7 @@ export * from './Timelapse';
 export * from './Timeline';
 export * from './Timersand';
 export * from './Twitter';
+export * from './Undo';
 export * from './Up';
 export * from './Update';
 export * from './Upload';

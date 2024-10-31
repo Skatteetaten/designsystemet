@@ -1,6 +1,7 @@
 import {
   forwardRef,
   JSX,
+  ReactNode,
   useEffect,
   useImperativeHandle,
   useMemo,
@@ -29,7 +30,15 @@ import { TopBannerLangPickerButton } from '../TopBannerLangPickerButton/TopBanne
 
 import styles from './TopBannerLangPicker.module.scss';
 
-const getFlag = (lang: string): JSX.Element => {
+const getFlag = (
+  lang: string,
+  additionalLanguages: TopBannerLangPickerProps['additionalLanguages'] = []
+): ReactNode => {
+  for (const language of additionalLanguages) {
+    if (language.lang === lang) {
+      return language.flag({ className: styles.flagIconSvg });
+    }
+  }
   switch (lang) {
     case 'en':
       return <EnglishFlagIcon className={styles.flagIconSvg} />;
@@ -54,6 +63,7 @@ export const TopBannerLangPicker = forwardRef<
       'data-testid': dataTestId,
       defaultLocale = getTopBannerLangPickerLocaleDefault(),
       showSami = getTopBannerLangPickerShowSamiDefault(),
+      additionalLanguages,
       onLanguageClick,
       openMenu,
       setOpenMenu,
@@ -75,7 +85,10 @@ export const TopBannerLangPicker = forwardRef<
     useEffect(() => {
       document.documentElement.lang = selectedLang;
     }, [selectedLang]);
-    const languages = useMemo(() => getCurrentLanguages(showSami), [showSami]);
+    const languages = useMemo(
+      () => getCurrentLanguages(showSami, additionalLanguages),
+      [showSami, additionalLanguages]
+    );
     const [currentFocus, setCurrentFocus] = useState(-1);
 
     const isMenuOpen = openMenu === 'Lang';
@@ -114,7 +127,7 @@ export const TopBannerLangPicker = forwardRef<
       document.addEventListener('keydown', handleKeyDown);
       document.addEventListener('focusin', handleOutsideMenuEvent);
       document.addEventListener('click', handleOutsideMenuEvent);
-      return () => {
+      return (): void => {
         document.removeEventListener('keydown', handleKeyDown);
         document.removeEventListener('click', handleOutsideMenuEvent);
         document.removeEventListener('focusin', handleOutsideMenuEvent);
@@ -158,7 +171,9 @@ export const TopBannerLangPicker = forwardRef<
           }}
         >
           <span className={styles.iconWrapper}>
-            <span className={styles.flagIcon}>{getFlag(selectedLang)}</span>
+            <span className={styles.flagIcon}>
+              {getFlag(selectedLang, additionalLanguages)}
+            </span>
             <Icon
               svgPath={isMenuOpen ? MenuUpSVGpath : MenuDownSVGpath}
               className={styles.arrowMobile}
@@ -182,7 +197,7 @@ export const TopBannerLangPicker = forwardRef<
                     <TopBannerLangPicker.Button
                       lang={language.lang}
                       ariaCurrent={language.lang === selectedLang}
-                      flagIcon={getFlag(language.lang)}
+                      flagIcon={getFlag(language.lang, additionalLanguages)}
                       focus={index === currentFocus}
                       onClick={handleLanguageClick}
                       onKeyDown={(e): void => {

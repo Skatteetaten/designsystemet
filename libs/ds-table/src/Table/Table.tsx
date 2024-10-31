@@ -89,7 +89,7 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
 
       wrapper?.addEventListener('scroll', handleScroll);
 
-      return () => {
+      return (): void => {
         wrapper?.removeEventListener('scroll', handleScroll);
       };
     }, []);

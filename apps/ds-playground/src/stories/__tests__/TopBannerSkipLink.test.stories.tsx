@@ -77,7 +77,7 @@ export const WithAttributes = {
     await expect(skipLink).toHaveClass('dummyClassname');
     await expect(skipLink).toHaveAttribute('lang', 'nb');
     await expect(skipLink).toHaveAttribute('data-testid', '123ID');
-    await skipLink.focus();
+    skipLink.focus();
   },
 } satisfies Story;
 
@@ -154,7 +154,7 @@ export const ClickSkipLink = {
     const skipLink = canvas.getByRole('link', {
       name: dsI18n.t(skipLinkText),
     });
-    await skipLink.focus();
+    skipLink.focus();
     await fireEvent.click(skipLink);
     await expect(main).toHaveFocus();
   },

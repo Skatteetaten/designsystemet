@@ -3,29 +3,32 @@
 exports[`Tester/Accordion/Accordion Defaults smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="_accordionItem_s20jy_1">
-      <div class="_tag_s20jy_11">
-        <button class="_header_s20jy_14  _header_medium_s20jy_75"
+    <div class="_accordionItem_1iwhu_1">
+      <div class="_tag_1iwhu_11">
+        <button class="_header_1iwhu_14  _header_medium_1iwhu_72"
                 aria-expanded="false"
                 type="button"
         >
-          <div class="_titleWrapper_s20jy_80">
-            <div class="_title_s20jy_80 _title_medium_s20jy_104">
+          <div class="_titleWrapper_1iwhu_77">
+            <div class="_title_1iwhu_77 _title_medium_1iwhu_101">
               Meg selv
             </div>
           </div>
-          <div class="_iconWrapper_s20jy_84 _iconWrapper_medium_s20jy_90">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_s20jy_18 _chevron_medium_s20jy_33 _chevron_closed_s20jy_30"
+          <div class="_iconWrapper_1iwhu_81 _iconWrapper_medium_1iwhu_87">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1iwhu_18 _chevron_medium_1iwhu_30 _chevron_closed_1iwhu_27"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
         </button>
+      </div>
+      <div class="_content_collapsed_1iwhu_121">
+        Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.
       </div>
     </div>
   </div>
@@ -35,350 +38,386 @@ exports[`Tester/Accordion/Accordion Defaults smoke-test 1`] = `
 exports[`Tester/Accordion/Accordion WithAllColorVariants smoke-test 1`] = `
 <div data-test-block="true">
   <div class="bottomSpacingXL">
-    <div class="_accordionItem_s20jy_1">
-      <div class="_tag_s20jy_11">
-        <button class="_header_s20jy_14  _header_medium_s20jy_75"
+    <div class="_accordionItem_1iwhu_1">
+      <div class="_tag_1iwhu_11">
+        <button class="_header_1iwhu_14  _header_medium_1iwhu_72"
                 aria-expanded="false"
                 type="button"
         >
-          <div class="_titleWrapper_s20jy_80">
-            <div class="_title_s20jy_80 _title_medium_s20jy_104">
+          <div class="_titleWrapper_1iwhu_77">
+            <div class="_title_1iwhu_77 _title_medium_1iwhu_101">
               Meg selv
             </div>
-            <p class="_subtitle_s20jy_111">
+            <p class="_subtitle_1iwhu_108">
               Beskrivelse
             </p>
           </div>
-          <div class="_iconWrapper_s20jy_84 _iconWrapper_medium_s20jy_90">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_s20jy_18 _chevron_medium_s20jy_33 _chevron_closed_s20jy_30"
+          <div class="_iconWrapper_1iwhu_81 _iconWrapper_medium_1iwhu_87">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1iwhu_18 _chevron_medium_1iwhu_30 _chevron_closed_1iwhu_27"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
         </button>
       </div>
+      <div class="_content_collapsed_1iwhu_121">
+        Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.
+      </div>
     </div>
-    <div class="_accordionItem_s20jy_1">
-      <div class="_tag_s20jy_11">
-        <button class="_header_s20jy_14  _header_medium_s20jy_75"
+    <div class="_accordionItem_1iwhu_1">
+      <div class="_tag_1iwhu_11">
+        <button class="_header_1iwhu_14  _header_medium_1iwhu_72"
                 aria-expanded="false"
                 type="button"
         >
-          <div class="_titleWrapper_s20jy_80">
-            <div class="_title_s20jy_80 _title_medium_s20jy_104">
+          <div class="_titleWrapper_1iwhu_77">
+            <div class="_title_1iwhu_77 _title_medium_1iwhu_101">
               Meg selv
             </div>
-            <p class="_subtitle_s20jy_111">
+            <p class="_subtitle_1iwhu_108">
               Beskrivelse
             </p>
           </div>
-          <div class="_iconWrapper_s20jy_84 _iconWrapper_medium_s20jy_90">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_s20jy_18 _chevron_medium_s20jy_33 _chevron_closed_s20jy_30"
+          <div class="_iconWrapper_1iwhu_81 _iconWrapper_medium_1iwhu_87">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1iwhu_18 _chevron_medium_1iwhu_30 _chevron_closed_1iwhu_27"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
         </button>
+      </div>
+      <div class="_content_collapsed_1iwhu_121">
+        Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.
       </div>
     </div>
   </div>
   <div class="_accordion_burgundy_1hopi_14 bottomSpacingXL">
-    <div class="_accordionItem_s20jy_1">
-      <div class="_tag_s20jy_11">
-        <button class="_header_s20jy_14  _header_medium_s20jy_75"
+    <div class="_accordionItem_1iwhu_1">
+      <div class="_tag_1iwhu_11">
+        <button class="_header_1iwhu_14  _header_medium_1iwhu_72"
                 aria-expanded="false"
                 type="button"
         >
-          <div class="_titleWrapper_s20jy_80">
-            <div class="_title_s20jy_80 _title_medium_s20jy_104">
+          <div class="_titleWrapper_1iwhu_77">
+            <div class="_title_1iwhu_77 _title_medium_1iwhu_101">
               Meg selv
             </div>
-            <p class="_subtitle_s20jy_111">
+            <p class="_subtitle_1iwhu_108">
               Beskrivelse
             </p>
           </div>
-          <div class="_iconWrapper_s20jy_84 _iconWrapper_medium_s20jy_90">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_s20jy_18 _chevron_medium_s20jy_33 _chevron_closed_s20jy_30"
+          <div class="_iconWrapper_1iwhu_81 _iconWrapper_medium_1iwhu_87">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1iwhu_18 _chevron_medium_1iwhu_30 _chevron_closed_1iwhu_27"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
         </button>
       </div>
+      <div class="_content_collapsed_1iwhu_121">
+        Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.
+      </div>
     </div>
-    <div class="_accordionItem_s20jy_1">
-      <div class="_tag_s20jy_11">
-        <button class="_header_s20jy_14  _header_medium_s20jy_75"
+    <div class="_accordionItem_1iwhu_1">
+      <div class="_tag_1iwhu_11">
+        <button class="_header_1iwhu_14  _header_medium_1iwhu_72"
                 aria-expanded="false"
                 type="button"
         >
-          <div class="_titleWrapper_s20jy_80">
-            <div class="_title_s20jy_80 _title_medium_s20jy_104">
+          <div class="_titleWrapper_1iwhu_77">
+            <div class="_title_1iwhu_77 _title_medium_1iwhu_101">
               Meg selv
             </div>
-            <p class="_subtitle_s20jy_111">
+            <p class="_subtitle_1iwhu_108">
               Beskrivelse
             </p>
           </div>
-          <div class="_iconWrapper_s20jy_84 _iconWrapper_medium_s20jy_90">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_s20jy_18 _chevron_medium_s20jy_33 _chevron_closed_s20jy_30"
+          <div class="_iconWrapper_1iwhu_81 _iconWrapper_medium_1iwhu_87">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1iwhu_18 _chevron_medium_1iwhu_30 _chevron_closed_1iwhu_27"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
         </button>
+      </div>
+      <div class="_content_collapsed_1iwhu_121">
+        Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.
       </div>
     </div>
   </div>
   <div class="_accordion_denim_1hopi_8 bottomSpacingXL">
-    <div class="_accordionItem_s20jy_1">
-      <div class="_tag_s20jy_11">
-        <button class="_header_s20jy_14  _header_medium_s20jy_75"
+    <div class="_accordionItem_1iwhu_1">
+      <div class="_tag_1iwhu_11">
+        <button class="_header_1iwhu_14  _header_medium_1iwhu_72"
                 aria-expanded="false"
                 type="button"
         >
-          <div class="_titleWrapper_s20jy_80">
-            <div class="_title_s20jy_80 _title_medium_s20jy_104">
+          <div class="_titleWrapper_1iwhu_77">
+            <div class="_title_1iwhu_77 _title_medium_1iwhu_101">
               Meg selv
             </div>
-            <p class="_subtitle_s20jy_111">
+            <p class="_subtitle_1iwhu_108">
               Beskrivelse
             </p>
           </div>
-          <div class="_iconWrapper_s20jy_84 _iconWrapper_medium_s20jy_90">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_s20jy_18 _chevron_medium_s20jy_33 _chevron_closed_s20jy_30"
+          <div class="_iconWrapper_1iwhu_81 _iconWrapper_medium_1iwhu_87">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1iwhu_18 _chevron_medium_1iwhu_30 _chevron_closed_1iwhu_27"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
         </button>
       </div>
+      <div class="_content_collapsed_1iwhu_121">
+        Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.
+      </div>
     </div>
-    <div class="_accordionItem_s20jy_1">
-      <div class="_tag_s20jy_11">
-        <button class="_header_s20jy_14  _header_medium_s20jy_75"
+    <div class="_accordionItem_1iwhu_1">
+      <div class="_tag_1iwhu_11">
+        <button class="_header_1iwhu_14  _header_medium_1iwhu_72"
                 aria-expanded="false"
                 type="button"
         >
-          <div class="_titleWrapper_s20jy_80">
-            <div class="_title_s20jy_80 _title_medium_s20jy_104">
+          <div class="_titleWrapper_1iwhu_77">
+            <div class="_title_1iwhu_77 _title_medium_1iwhu_101">
               Meg selv
             </div>
-            <p class="_subtitle_s20jy_111">
+            <p class="_subtitle_1iwhu_108">
               Beskrivelse
             </p>
           </div>
-          <div class="_iconWrapper_s20jy_84 _iconWrapper_medium_s20jy_90">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_s20jy_18 _chevron_medium_s20jy_33 _chevron_closed_s20jy_30"
+          <div class="_iconWrapper_1iwhu_81 _iconWrapper_medium_1iwhu_87">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1iwhu_18 _chevron_medium_1iwhu_30 _chevron_closed_1iwhu_27"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
         </button>
+      </div>
+      <div class="_content_collapsed_1iwhu_121">
+        Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.
       </div>
     </div>
   </div>
   <div class="_accordion_forest_1hopi_5 bottomSpacingXL">
-    <div class="_accordionItem_s20jy_1">
-      <div class="_tag_s20jy_11">
-        <button class="_header_s20jy_14  _header_medium_s20jy_75"
+    <div class="_accordionItem_1iwhu_1">
+      <div class="_tag_1iwhu_11">
+        <button class="_header_1iwhu_14  _header_medium_1iwhu_72"
                 aria-expanded="false"
                 type="button"
         >
-          <div class="_titleWrapper_s20jy_80">
-            <div class="_title_s20jy_80 _title_medium_s20jy_104">
+          <div class="_titleWrapper_1iwhu_77">
+            <div class="_title_1iwhu_77 _title_medium_1iwhu_101">
               Meg selv
             </div>
-            <p class="_subtitle_s20jy_111">
+            <p class="_subtitle_1iwhu_108">
               Beskrivelse
             </p>
           </div>
-          <div class="_iconWrapper_s20jy_84 _iconWrapper_medium_s20jy_90">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_s20jy_18 _chevron_medium_s20jy_33 _chevron_closed_s20jy_30"
+          <div class="_iconWrapper_1iwhu_81 _iconWrapper_medium_1iwhu_87">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1iwhu_18 _chevron_medium_1iwhu_30 _chevron_closed_1iwhu_27"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
         </button>
       </div>
+      <div class="_content_collapsed_1iwhu_121">
+        Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.
+      </div>
     </div>
-    <div class="_accordionItem_s20jy_1">
-      <div class="_tag_s20jy_11">
-        <button class="_header_s20jy_14  _header_medium_s20jy_75"
+    <div class="_accordionItem_1iwhu_1">
+      <div class="_tag_1iwhu_11">
+        <button class="_header_1iwhu_14  _header_medium_1iwhu_72"
                 aria-expanded="false"
                 type="button"
         >
-          <div class="_titleWrapper_s20jy_80">
-            <div class="_title_s20jy_80 _title_medium_s20jy_104">
+          <div class="_titleWrapper_1iwhu_77">
+            <div class="_title_1iwhu_77 _title_medium_1iwhu_101">
               Meg selv
             </div>
-            <p class="_subtitle_s20jy_111">
+            <p class="_subtitle_1iwhu_108">
               Beskrivelse
             </p>
           </div>
-          <div class="_iconWrapper_s20jy_84 _iconWrapper_medium_s20jy_90">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_s20jy_18 _chevron_medium_s20jy_33 _chevron_closed_s20jy_30"
+          <div class="_iconWrapper_1iwhu_81 _iconWrapper_medium_1iwhu_87">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1iwhu_18 _chevron_medium_1iwhu_30 _chevron_closed_1iwhu_27"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
         </button>
+      </div>
+      <div class="_content_collapsed_1iwhu_121">
+        Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.
       </div>
     </div>
   </div>
   <div class="_accordion_graphite_1hopi_17 bottomSpacingXL">
-    <div class="_accordionItem_s20jy_1">
-      <div class="_tag_s20jy_11">
-        <button class="_header_s20jy_14  _header_medium_s20jy_75"
+    <div class="_accordionItem_1iwhu_1">
+      <div class="_tag_1iwhu_11">
+        <button class="_header_1iwhu_14  _header_medium_1iwhu_72"
                 aria-expanded="false"
                 type="button"
         >
-          <div class="_titleWrapper_s20jy_80">
-            <div class="_title_s20jy_80 _title_medium_s20jy_104">
+          <div class="_titleWrapper_1iwhu_77">
+            <div class="_title_1iwhu_77 _title_medium_1iwhu_101">
               Meg selv
             </div>
-            <p class="_subtitle_s20jy_111">
+            <p class="_subtitle_1iwhu_108">
               Beskrivelse
             </p>
           </div>
-          <div class="_iconWrapper_s20jy_84 _iconWrapper_medium_s20jy_90">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_s20jy_18 _chevron_medium_s20jy_33 _chevron_closed_s20jy_30"
+          <div class="_iconWrapper_1iwhu_81 _iconWrapper_medium_1iwhu_87">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1iwhu_18 _chevron_medium_1iwhu_30 _chevron_closed_1iwhu_27"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
         </button>
       </div>
+      <div class="_content_collapsed_1iwhu_121">
+        Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.
+      </div>
     </div>
-    <div class="_accordionItem_s20jy_1">
-      <div class="_tag_s20jy_11">
-        <button class="_header_s20jy_14  _header_medium_s20jy_75"
+    <div class="_accordionItem_1iwhu_1">
+      <div class="_tag_1iwhu_11">
+        <button class="_header_1iwhu_14  _header_medium_1iwhu_72"
                 aria-expanded="false"
                 type="button"
         >
-          <div class="_titleWrapper_s20jy_80">
-            <div class="_title_s20jy_80 _title_medium_s20jy_104">
+          <div class="_titleWrapper_1iwhu_77">
+            <div class="_title_1iwhu_77 _title_medium_1iwhu_101">
               Meg selv
             </div>
-            <p class="_subtitle_s20jy_111">
+            <p class="_subtitle_1iwhu_108">
               Beskrivelse
             </p>
           </div>
-          <div class="_iconWrapper_s20jy_84 _iconWrapper_medium_s20jy_90">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_s20jy_18 _chevron_medium_s20jy_33 _chevron_closed_s20jy_30"
+          <div class="_iconWrapper_1iwhu_81 _iconWrapper_medium_1iwhu_87">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1iwhu_18 _chevron_medium_1iwhu_30 _chevron_closed_1iwhu_27"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
         </button>
+      </div>
+      <div class="_content_collapsed_1iwhu_121">
+        Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.
       </div>
     </div>
   </div>
   <div class="_accordion_ochre_1hopi_11 bottomSpacingXL">
-    <div class="_accordionItem_s20jy_1">
-      <div class="_tag_s20jy_11">
-        <button class="_header_s20jy_14  _header_medium_s20jy_75"
+    <div class="_accordionItem_1iwhu_1">
+      <div class="_tag_1iwhu_11">
+        <button class="_header_1iwhu_14  _header_medium_1iwhu_72"
                 aria-expanded="false"
                 type="button"
         >
-          <div class="_titleWrapper_s20jy_80">
-            <div class="_title_s20jy_80 _title_medium_s20jy_104">
+          <div class="_titleWrapper_1iwhu_77">
+            <div class="_title_1iwhu_77 _title_medium_1iwhu_101">
               Meg selv
             </div>
-            <p class="_subtitle_s20jy_111">
+            <p class="_subtitle_1iwhu_108">
               Beskrivelse
             </p>
           </div>
-          <div class="_iconWrapper_s20jy_84 _iconWrapper_medium_s20jy_90">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_s20jy_18 _chevron_medium_s20jy_33 _chevron_closed_s20jy_30"
+          <div class="_iconWrapper_1iwhu_81 _iconWrapper_medium_1iwhu_87">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1iwhu_18 _chevron_medium_1iwhu_30 _chevron_closed_1iwhu_27"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
         </button>
       </div>
+      <div class="_content_collapsed_1iwhu_121">
+        Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.
+      </div>
     </div>
-    <div class="_accordionItem_s20jy_1">
-      <div class="_tag_s20jy_11">
-        <button class="_header_s20jy_14  _header_medium_s20jy_75"
+    <div class="_accordionItem_1iwhu_1">
+      <div class="_tag_1iwhu_11">
+        <button class="_header_1iwhu_14  _header_medium_1iwhu_72"
                 aria-expanded="false"
                 type="button"
         >
-          <div class="_titleWrapper_s20jy_80">
-            <div class="_title_s20jy_80 _title_medium_s20jy_104">
+          <div class="_titleWrapper_1iwhu_77">
+            <div class="_title_1iwhu_77 _title_medium_1iwhu_101">
               Meg selv
             </div>
-            <p class="_subtitle_s20jy_111">
+            <p class="_subtitle_1iwhu_108">
               Beskrivelse
             </p>
           </div>
-          <div class="_iconWrapper_s20jy_84 _iconWrapper_medium_s20jy_90">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_s20jy_18 _chevron_medium_s20jy_33 _chevron_closed_s20jy_30"
+          <div class="_iconWrapper_1iwhu_81 _iconWrapper_medium_1iwhu_87">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1iwhu_18 _chevron_medium_1iwhu_30 _chevron_closed_1iwhu_27"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
         </button>
+      </div>
+      <div class="_content_collapsed_1iwhu_121">
+        Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.
       </div>
     </div>
   </div>
@@ -392,29 +431,32 @@ exports[`Tester/Accordion/Accordion WithAttributes play-test 1`] = `
        id="htmlId"
        data-testid="123ID"
   >
-    <div class="_accordionItem_s20jy_1">
-      <div class="_tag_s20jy_11">
-        <button class="_header_s20jy_14  _header_medium_s20jy_75"
+    <div class="_accordionItem_1iwhu_1">
+      <div class="_tag_1iwhu_11">
+        <button class="_header_1iwhu_14  _header_medium_1iwhu_72"
                 aria-expanded="false"
                 type="button"
         >
-          <div class="_titleWrapper_s20jy_80">
-            <div class="_title_s20jy_80 _title_medium_s20jy_104">
+          <div class="_titleWrapper_1iwhu_77">
+            <div class="_title_1iwhu_77 _title_medium_1iwhu_101">
               Meg selv
             </div>
           </div>
-          <div class="_iconWrapper_s20jy_84 _iconWrapper_medium_s20jy_90">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_s20jy_18 _chevron_medium_s20jy_33 _chevron_closed_s20jy_30"
+          <div class="_iconWrapper_1iwhu_81 _iconWrapper_medium_1iwhu_87">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1iwhu_18 _chevron_medium_1iwhu_30 _chevron_closed_1iwhu_27"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
         </button>
+      </div>
+      <div class="_content_collapsed_1iwhu_121">
+        Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.
       </div>
     </div>
   </div>
@@ -424,29 +466,32 @@ exports[`Tester/Accordion/Accordion WithAttributes play-test 1`] = `
 exports[`Tester/Accordion/Accordion WithIconLeft smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="_accordionItem_s20jy_1">
-      <div class="_tag_s20jy_11">
-        <button class="_header_s20jy_14 _header_iconLeft_s20jy_71 _header_medium_s20jy_75"
+    <div class="_accordionItem_1iwhu_1">
+      <div class="_tag_1iwhu_11">
+        <button class="_header_1iwhu_14 _header_iconLeft_1iwhu_68 _header_medium_1iwhu_72"
                 aria-expanded="false"
                 type="button"
         >
-          <div class="_titleWrapper_s20jy_80">
-            <div class="_title_s20jy_80 _title_medium_s20jy_104">
+          <div class="_titleWrapper_1iwhu_77">
+            <div class="_title_1iwhu_77 _title_medium_1iwhu_101">
               Meg selv
             </div>
           </div>
-          <div class="_iconWrapper_s20jy_84 _iconWrapper_medium_s20jy_90">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_s20jy_18 _chevron_medium_s20jy_33 _chevron_closed_s20jy_30"
+          <div class="_iconWrapper_1iwhu_81 _iconWrapper_medium_1iwhu_87">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1iwhu_18 _chevron_medium_1iwhu_30 _chevron_closed_1iwhu_27"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
         </button>
+      </div>
+      <div class="_content_collapsed_1iwhu_121">
+        Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.
       </div>
     </div>
   </div>
@@ -456,29 +501,32 @@ exports[`Tester/Accordion/Accordion WithIconLeft smoke-test 1`] = `
 exports[`Tester/Accordion/Accordion WithLarge smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="_accordionItem_s20jy_1">
-      <div class="_tag_s20jy_11">
-        <button class="_header_s20jy_14  _header_large_s20jy_75"
+    <div class="_accordionItem_1iwhu_1">
+      <div class="_tag_1iwhu_11">
+        <button class="_header_1iwhu_14  _header_large_1iwhu_72"
                 aria-expanded="false"
                 type="button"
         >
-          <div class="_titleWrapper_s20jy_80">
-            <div class="_title_s20jy_80 _title_large_s20jy_107">
+          <div class="_titleWrapper_1iwhu_77">
+            <div class="_title_1iwhu_77 _title_large_1iwhu_104">
               Meg selv
             </div>
           </div>
-          <div class="_iconWrapper_s20jy_84 _iconWrapper_large_s20jy_93">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_s20jy_18 _chevron_large_s20jy_36 _chevron_closed_s20jy_30"
+          <div class="_iconWrapper_1iwhu_81 _iconWrapper_large_1iwhu_90">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1iwhu_18 _chevron_large_1iwhu_33 _chevron_closed_1iwhu_27"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
         </button>
+      </div>
+      <div class="_content_collapsed_1iwhu_121">
+        Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.
       </div>
     </div>
   </div>
@@ -488,29 +536,32 @@ exports[`Tester/Accordion/Accordion WithLarge smoke-test 1`] = `
 exports[`Tester/Accordion/Accordion WithMedium smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="_accordionItem_s20jy_1">
-      <div class="_tag_s20jy_11">
-        <button class="_header_s20jy_14  _header_medium_s20jy_75"
+    <div class="_accordionItem_1iwhu_1">
+      <div class="_tag_1iwhu_11">
+        <button class="_header_1iwhu_14  _header_medium_1iwhu_72"
                 aria-expanded="false"
                 type="button"
         >
-          <div class="_titleWrapper_s20jy_80">
-            <div class="_title_s20jy_80 _title_medium_s20jy_104">
+          <div class="_titleWrapper_1iwhu_77">
+            <div class="_title_1iwhu_77 _title_medium_1iwhu_101">
               Meg selv
             </div>
           </div>
-          <div class="_iconWrapper_s20jy_84 _iconWrapper_medium_s20jy_90">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_s20jy_18 _chevron_medium_s20jy_33 _chevron_closed_s20jy_30"
+          <div class="_iconWrapper_1iwhu_81 _iconWrapper_medium_1iwhu_87">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1iwhu_18 _chevron_medium_1iwhu_30 _chevron_closed_1iwhu_27"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
         </button>
+      </div>
+      <div class="_content_collapsed_1iwhu_121">
+        Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.
       </div>
     </div>
   </div>
@@ -522,29 +573,32 @@ exports[`Tester/Accordion/Accordion WithRef play-test 1`] = `
   <div class
        id="dummyIdForwardedFromRef"
   >
-    <div class="_accordionItem_s20jy_1">
-      <div class="_tag_s20jy_11">
-        <button class="_header_s20jy_14  _header_medium_s20jy_75"
+    <div class="_accordionItem_1iwhu_1">
+      <div class="_tag_1iwhu_11">
+        <button class="_header_1iwhu_14  _header_medium_1iwhu_72"
                 aria-expanded="false"
                 type="button"
         >
-          <div class="_titleWrapper_s20jy_80">
-            <div class="_title_s20jy_80 _title_medium_s20jy_104">
+          <div class="_titleWrapper_1iwhu_77">
+            <div class="_title_1iwhu_77 _title_medium_1iwhu_101">
               Meg selv
             </div>
           </div>
-          <div class="_iconWrapper_s20jy_84 _iconWrapper_medium_s20jy_90">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_s20jy_18 _chevron_medium_s20jy_33 _chevron_closed_s20jy_30"
+          <div class="_iconWrapper_1iwhu_81 _iconWrapper_medium_1iwhu_87">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1iwhu_18 _chevron_medium_1iwhu_30 _chevron_closed_1iwhu_27"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
         </button>
+      </div>
+      <div class="_content_collapsed_1iwhu_121">
+        Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.
       </div>
     </div>
   </div>
@@ -554,29 +608,32 @@ exports[`Tester/Accordion/Accordion WithRef play-test 1`] = `
 exports[`Tester/Accordion/Accordion WithSmall smoke-test 1`] = `
 <div data-test-block="true">
   <div class>
-    <div class="_accordionItem_s20jy_1">
-      <div class="_tag_s20jy_11">
-        <button class="_header_s20jy_14"
+    <div class="_accordionItem_1iwhu_1">
+      <div class="_tag_1iwhu_11">
+        <button class="_header_1iwhu_14"
                 aria-expanded="false"
                 type="button"
         >
-          <div class="_titleWrapper_s20jy_80">
-            <div class="_title_s20jy_80">
+          <div class="_titleWrapper_1iwhu_77">
+            <div class="_title_1iwhu_77">
               Meg selv
             </div>
           </div>
-          <div class="_iconWrapper_s20jy_84">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_s20jy_18  _chevron_closed_s20jy_30"
+          <div class="_iconWrapper_1iwhu_81">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1iwhu_18  _chevron_closed_1iwhu_27"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-hidden="true"
                  role="img"
             >
-              <path d="m18.1 6.98-6.1 6.1-6.1-6.1L4 8.88l8 8 8-8-1.9-1.9Z">
+              <path d="M18.1 7.98001L12 14.08L5.9 7.98001L4 9.88L12 17.88L20 9.88L18.1 7.98001Z">
               </path>
             </svg>
           </div>
         </button>
+      </div>
+      <div class="_content_collapsed_1iwhu_121">
+        Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.
       </div>
     </div>
   </div>

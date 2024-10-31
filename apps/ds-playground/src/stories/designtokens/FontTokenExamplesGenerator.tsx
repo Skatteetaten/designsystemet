@@ -28,7 +28,7 @@ export const FontTokenExamplesGenerator = ({
 
   return (
     <div className={hasLineHeight ? 'fontTokenExample_grid' : ''}>
-      {Object.keys(tokens).map((value: string, index: number) => {
+      {Object.keys(tokens).map((_value: string, index: number) => {
         const fontValue = fontTokens[tokens[index]];
         const fontSizeValue = isFontSize
           ? fontValue
@@ -45,7 +45,7 @@ export const FontTokenExamplesGenerator = ({
         const cssRule = `.${fontClassName} { font-size: ${fontSizeValue}; font-weight: ${fontWeightValue}; line-height: ${lineHeightValue}; }`;
 
         return (
-          <Fragment key={index}>
+          <Fragment key={uniqueSuffixName}>
             <style>{cssRule}</style>
             <p
               className={`fontTokenExample ${fontClassName} ${

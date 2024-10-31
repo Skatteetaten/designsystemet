@@ -223,7 +223,6 @@ export const WithoutCloseButton = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
     await userEvent.click(button);
-    // TODO mangler test for WithCloseButton
   },
 } satisfies Story;
 

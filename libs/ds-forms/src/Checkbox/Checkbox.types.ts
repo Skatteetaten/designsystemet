@@ -10,7 +10,9 @@ type RequiredCheckboxHTMLAttributes = Pick<
   | 'form'
   | 'name'
   | 'value'
+  | 'onBlur'
   | 'onChange'
+  | 'onFocus'
 >;
 
 type CheckboxHTMLAttributes = Partial<RequiredCheckboxHTMLAttributes>;

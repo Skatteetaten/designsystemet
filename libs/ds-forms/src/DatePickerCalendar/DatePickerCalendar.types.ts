@@ -8,6 +8,7 @@ export interface GridIdx {
 
 export interface DatePickerCalendarProps extends BaseProps {
   selectedDate?: Date;
+  disabledDates?: Date[];
   minDate?: Date;
   maxDate?: Date;
   onSelectDate: (date: Date) => void;

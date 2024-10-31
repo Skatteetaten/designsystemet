@@ -1,4 +1,4 @@
-import { forwardRef, JSX } from 'react';
+import { forwardRef, JSX, useImperativeHandle, useRef } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Heading } from '@skatteetaten/ds-typography';
@@ -22,6 +22,8 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
+      headingRef,
+      canManuallySetTitleFocus,
       color = getPanelColorDefault(),
       imageSource,
       imageSourceAltText,
@@ -68,7 +70,11 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
     }`.trim();
     const iconClassName = `${renderIcon ? graphicClassName : ''}`.trim();
     const articleClassName = `${styles.panelArticle}`.trim();
-
+    const panelHeadingRef = useRef<HTMLHeadingElement>(null);
+    useImperativeHandle(
+      headingRef,
+      () => panelHeadingRef?.current as HTMLHeadingElement
+    );
     return (
       <div
         ref={ref}
@@ -92,10 +98,12 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
         <div className={articleClassName}>
           {title && (
             <Heading
+              ref={panelHeadingRef}
               as={titleAs}
               level={3}
               className={hideTitle ? styles.srOnly : ''}
               hasSpacing={!subtitle || hideSubtitle}
+              canBeManuallyFocused={canManuallySetTitleFocus}
             >
               {title}
             </Heading>

@@ -118,7 +118,7 @@ export const WithExpandable = {
       dsI18n.t('ds_tables:tablerow.Expandable')
     );
     await expect(iconButton).toHaveAttribute('aria-expanded', 'false');
-    /*TODO etter bytte fra @storybook/jest til @storybook/test må denne testen bruke
+    /* Etter bytte fra @storybook/jest til @storybook/test må denne testen bruke
     fireevent i stedet for UserEvent. Med userEVent gir testen ustabilt resultat.
     I tillegg ser det ut som visningen i interactions fanen i storybook ikke samsvarer med resultatet til testen.
      */

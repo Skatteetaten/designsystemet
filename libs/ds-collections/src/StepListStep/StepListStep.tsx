@@ -1,4 +1,4 @@
-import React, { forwardRef, useId, useRef } from 'react';
+import { forwardRef, useId, useRef, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Button, InlineButton } from '@skatteetaten/ds-buttons';

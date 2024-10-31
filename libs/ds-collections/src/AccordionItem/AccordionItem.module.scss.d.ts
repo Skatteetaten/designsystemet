@@ -3,7 +3,6 @@ declare const classNames: {
   readonly tag: 'tag';
   readonly header: 'header';
   readonly icon: 'icon';
-  readonly chevron: 'chevron';
   readonly chevron_open: 'chevron_open';
   readonly chevron_closed: 'chevron_closed';
   readonly chevron_medium: 'chevron_medium';
@@ -22,6 +21,7 @@ declare const classNames: {
   readonly title_medium: 'title_medium';
   readonly title_large: 'title_large';
   readonly subtitle: 'subtitle';
+  readonly content_collapsed: 'content_collapsed';
   readonly content_smallIndented: 'content_smallIndented';
   readonly content_mediumIndented: 'content_mediumIndented';
   readonly content_largeIndented: 'content_largeIndented';

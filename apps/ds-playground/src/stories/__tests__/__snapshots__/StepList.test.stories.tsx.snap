@@ -130,7 +130,7 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
               <title id="svgtitle-:rt:">
                 Fullført
               </title>
-              <path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z">
+              <path d="M19.94 6.71L19.24 6L9 16.23L5.26 12.5L4.91 12.85L3.5 14.26L9 19.76L21 7.76L19.94 6.71Z">
               </path>
             </svg>
           </span>
@@ -185,7 +185,7 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
               <title id="svgtitle-:rv:">
                 Fullført
               </title>
-              <path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z">
+              <path d="M19.94 6.71L19.24 6L9 16.23L5.26 12.5L4.91 12.85L3.5 14.26L9 19.76L21 7.76L19.94 6.71Z">
               </path>
             </svg>
           </span>
@@ -336,7 +336,7 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
               <title id="svgtitle-:rd:">
                 Fullført
               </title>
-              <path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z">
+              <path d="M19.94 6.71L19.24 6L9 16.23L5.26 12.5L4.91 12.85L3.5 14.26L9 19.76L21 7.76L19.94 6.71Z">
               </path>
             </svg>
           </span>
@@ -391,7 +391,7 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
               <title id="svgtitle-:rf:">
                 Fullført
               </title>
-              <path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z">
+              <path d="M19.94 6.71L19.24 6L9 16.23L5.26 12.5L4.91 12.85L3.5 14.26L9 19.76L21 7.76L19.94 6.71Z">
               </path>
             </svg>
           </span>
@@ -542,7 +542,7 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
               <title id="svgtitle-:rl:">
                 Fullført
               </title>
-              <path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z">
+              <path d="M19.94 6.71L19.24 6L9 16.23L5.26 12.5L4.91 12.85L3.5 14.26L9 19.76L21 7.76L19.94 6.71Z">
               </path>
             </svg>
           </span>
@@ -597,7 +597,7 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
               <title id="svgtitle-:rn:">
                 Fullført
               </title>
-              <path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z">
+              <path d="M19.94 6.71L19.24 6L9 16.23L5.26 12.5L4.91 12.85L3.5 14.26L9 19.76L21 7.76L19.94 6.71Z">
               </path>
             </svg>
           </span>
@@ -732,7 +732,7 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
             <title id="svgtitle-:r1f:">
               Fullført
             </title>
-            <path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z">
+            <path d="M19.94 6.71L19.24 6L9 16.23L5.26 12.5L4.91 12.85L3.5 14.26L9 19.76L21 7.76L19.94 6.71Z">
             </path>
           </svg>
         </span>
@@ -896,7 +896,7 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
               <title id="svgtitle-:r5:">
                 Fullført
               </title>
-              <path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z">
+              <path d="M19.94 6.71L19.24 6L9 16.23L5.26 12.5L4.91 12.85L3.5 14.26L9 19.76L21 7.76L19.94 6.71Z">
               </path>
             </svg>
           </span>
@@ -951,7 +951,7 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
               <title id="svgtitle-:r7:">
                 Fullført
               </title>
-              <path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z">
+              <path d="M19.94 6.71L19.24 6L9 16.23L5.26 12.5L4.91 12.85L3.5 14.26L9 19.76L21 7.76L19.94 6.71Z">
               </path>
             </svg>
           </span>

@@ -1,12 +1,15 @@
+import { useState, FocusEvent, ChangeEvent } from 'react';
+
 import { RadioGroup } from '@skatteetaten/ds-forms';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import {
   loremIpsum,
   loremIpsumWithoutSpaces,
   wrapper,
 } from './testUtils/storybook.testing.utils';
+import { htmlEventDescription } from '../../../.storybook/helpers';
 
 const meta = {
   component: RadioGroup.Radio,
@@ -37,6 +40,10 @@ const meta = {
     ariaDescribedby: {
       table: { disable: true },
     },
+    // Events
+    onBlur: { ...htmlEventDescription, table: { disable: true } },
+    onChange: { ...htmlEventDescription, table: { disable: true } },
+    onFocus: { ...htmlEventDescription, table: { disable: true } },
   },
 } satisfies Meta<typeof RadioGroup.Radio>;
 export default meta;
@@ -221,5 +228,65 @@ export const WithAriaDescribedby = {
     const canvas = within(canvasElement);
     const input = canvas.getByRole('radio');
     await expect(input).toHaveAttribute('aria-describedby', 'htmlId');
+  },
+} satisfies Story;
+
+const EventHandlersTemplate: StoryFn<typeof RadioGroup.Radio> = (args) => {
+  const [labelText, setLabelText] = useState('Radio');
+  return (
+    <RadioGroup legend={'radio example'} hideLegend>
+      <RadioGroup.Radio
+        {...args}
+        onBlur={(event: FocusEvent<HTMLInputElement>): void => {
+          setLabelText('Radio har mistet fokus');
+          args.onBlur && args.onBlur(event);
+        }}
+        onChange={(event: ChangeEvent<HTMLInputElement>): void => {
+          setLabelText('Radio har blitt klikket på');
+          args.onChange && args.onChange(event);
+        }}
+        onFocus={(event: FocusEvent<HTMLInputElement>): void => {
+          setLabelText('Radio har fått fokus');
+          args.onFocus && args.onFocus(event);
+        }}
+      >
+        {`${args.children} ${labelText}`}
+      </RadioGroup.Radio>
+    </RadioGroup>
+  );
+};
+
+export const WithEventHandlers = {
+  render: EventHandlersTemplate,
+  name: 'With EventHandlers',
+  args: {
+    ...defaultArgs,
+    onBlur: fn(),
+    onChange: fn(),
+    onFocus: fn(),
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: async ({ args, canvasElement, step }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputNode = canvas.getByRole('radio');
+
+    await step(
+      'Klikker på radio og sjekker om onChange er kjørt og fokus er satt',
+      async () => {
+        await userEvent.click(inputNode);
+        await waitFor(() => expect(args.onChange).toHaveBeenCalled());
+        await expect(inputNode).toHaveFocus();
+      }
+    );
+    await step(
+      'Fjerner fokus fra radio og sjekker om radio har mistet fokus',
+      async () => {
+        inputNode.blur();
+        await waitFor(() => expect(args.onChange).toHaveBeenCalled());
+        await expect(inputNode).not.toHaveFocus();
+      }
+    );
   },
 } satisfies Story;
