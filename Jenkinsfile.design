@@ -34,7 +34,7 @@ def overrides = [
     sonarQube                    : true,
     npmInstallCommand            : "ci",
     nodeVersion                  : "20",
-    disableAllReports            : false,
+    disableAllReports            : env.BRANCH_NAME.startsWith('disable-reports/'),
     lineCoverageReport           : false,
     publishToNpm                 : true,
     publishToNpmOverride         : publishToNpmOverride,
