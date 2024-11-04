@@ -2,9 +2,14 @@
   "extends": ["./libs/ds-dev-config/config/designsystem-eslintrc.yml"],
   "root": true,
   "ignorePatterns": ["**/*"],
-  "plugins": ["@nx", "eslint-plugin-no-inline-styles"],
+  "plugins": [
+    "@nx",
+    "eslint-plugin-no-inline-styles",
+    "eslint-plugin-react-compiler"
+  ],
   "rules": {
-    "no-inline-styles/no-inline-styles": 2
+    "no-inline-styles/no-inline-styles": 2,
+    "react-compiler/react-compiler": "warn"
   },
   "overrides": [
     {
