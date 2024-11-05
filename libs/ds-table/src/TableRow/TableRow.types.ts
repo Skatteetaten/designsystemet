@@ -9,7 +9,11 @@ export interface TableRowProps extends BaseProps {
   expandButtonTitle?: string;
   /** Posisjonen til ikonet: 'left', 'right'. */
   expandButtonPosition?: ExpandButtonPosition;
-  /**  Innholdet som vises når raden er utvidet  */
+  /**
+   * Innholdet som vises når raden er utvidet
+   * Hvis det ekspanderte innholdet skal være flere tabelrader som skal aligneres med resten av tabellen så må radene
+   * ikke wrappes i React.Fragment. I stedet kan de sendes inn som array.
+   */
   expandableContent?: ReactNode;
   /**
    * Skal settes til radheader sin id dersom rad er ekspanderbar.
