@@ -28,6 +28,7 @@ declare const classNames: {
   readonly panel_spacingXL: 'panel_spacingXL';
   readonly panel_spacingXXL: 'panel_spacingXXL';
   readonly panel_spacingMEGA: 'panel_spacingMEGA';
+  readonly panelResponsive: 'panelResponsive';
   readonly srOnly: 'srOnly';
 };
 export default classNames;

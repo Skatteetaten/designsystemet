@@ -14,6 +14,41 @@ import { DocIntro } from '../utils/DocIntro';
   url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/panel/"
 />
 
+## Beskrivelse av mulige padding varianter
+
+Padding kan settes på to måter:
+
+1. Hvis **padding**-prop er brukt så er denne verdien lik for alle brekkpunkter.
+2. Hvis **hasResponsivePadding** = true OG valgfritt egendefinert stilsett satt i **classNames** så har man mulighet for å definere forskjellig padding for hvert brekkpunkt. Stilene satt i **classNames.padding** er mobile-first, dvs. at variablene settes fra minste bredde til største (min-width). Default-verdiene til **hasResponsivePadding** er --spacing-m i området 0px til alt smalere enn --breakpoint-xs. --spacing-xl gjelder fra --breakpoint-xs til alt som er bredere.
+
+Bruk av **padding** utelukker bruk av **hasResponsivePadding** og omvendt.
+
+### Eksempel
+
+```css
+// Din CSS i fil Panel.scss
+.panel {
+  --panel-padding-xs: var(--spacing-xl);
+  --panel-padding-s: var(--panel-padding-xs);
+  --panel-padding-m: var(--panel-padding-s);
+}
+/* Følgende tre mulige andre CSS-variabler er ikke endret konsumentkoded i dette eksemplet
+--panel-padding-mobile, --panel-padding-l og --panel-padding-xl */
+```
+
+```tsx
+// Din komponent
+import { Panel } from '@skatteetaten/ds-content';
+import styles from './Panel.scss';
+<Panel
+  title={`Med responsive padding `}
+  classNames={styles.panel}
+  hasResponsivePadding
+>
+  <Paragraph>Innhold i Panel</Paragraph>
+</Panel>;
+```
+
 <Primary />
 
 ```tsx

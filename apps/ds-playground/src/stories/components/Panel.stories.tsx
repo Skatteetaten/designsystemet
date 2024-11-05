@@ -44,6 +44,7 @@ const meta = {
       control: 'text',
       table: { category: category.props },
     },
+    classNames: { table: { category: category.props } },
     color: {
       options: panelColorArr,
       control: 'inline-radio',
@@ -52,6 +53,7 @@ const meta = {
         defaultValue: { summary: getPanelColorDefault() },
       },
     },
+    hasResponsivePadding: { table: { category: category.props } },
     headingRef: {
       table: { category: category.props },
       control: { disable: true },
@@ -127,7 +129,6 @@ export const Examples: Story = {
         <Panel
           title={'Når kommer skattepengene'}
           imageSource={farmerIllustration}
-          padding={'mega'}
           spacing={'xxl'}
         >
           <Paragraph hasSpacing>
@@ -182,6 +183,19 @@ export const Examples: Story = {
         >
           {'Sett fokus på Panel Header'}
         </Button>
+
+        <Panel
+          title={`Med responsive padding `}
+          classNames={{
+            padding: 'dummyPanelPaddingResponsive',
+          }}
+          hasResponsivePadding
+        >
+          <Paragraph>{`
+      Her har vi satt hasResponsivePadding:true og endret følgende CSS variabler for responsive visning. 
+      --panel-padding-mobile, --pandel-padding-m og --pandel-padding-l. F.eks er Synlig hvis skjermbredde < 480px og bredde >= 1366px (breakpoint-l)
+      `}</Paragraph>
+        </Panel>
       </>
     );
   },
