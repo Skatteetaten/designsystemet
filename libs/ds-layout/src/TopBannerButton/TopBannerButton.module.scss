@@ -1,4 +1,4 @@
-@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
 .button {
   position: relative;
@@ -67,7 +67,7 @@
     }
   }
 
-  @media (min-width: $breakpoint-s) {
+  @media (min-width: breakpoints.$breakpoint-s) {
     height: fit-content;
     flex-direction: row;
     align-items: center;

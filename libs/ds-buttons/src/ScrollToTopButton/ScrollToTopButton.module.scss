@@ -1,4 +1,4 @@
-@import '~@skatteetaten/ds-core-designtokens/designtokens/breakpoints';
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
 .container {
   display: flex;
@@ -18,7 +18,7 @@
   visibility: hidden;
   will-change: transform;
 
-  @media (min-width: $breakpoint-m) {
+  @media (min-width: breakpoints.$breakpoint-m) {
     position: fixed;
     z-index: 100;
     right: calc(((100vw) - var(--semantic-responsive-container)) / 2);
@@ -29,7 +29,7 @@
     opacity: 1;
     visibility: visible;
 
-    @media (min-width: $breakpoint-m) {
+    @media (min-width: breakpoints.$breakpoint-m) {
       bottom: var(--spacing-xl);
     }
   }
@@ -68,12 +68,12 @@
   }
 
   &:active &IconContainer {
+    border: solid 2px var(--semantic-interactive-foreground);
+    background: transparent;
+
     &Icon {
       fill: var(--semantic-interactive-foreground);
     }
-
-    border: solid 2px var(--semantic-interactive-foreground);
-    background: transparent;
   }
 
   &Label {

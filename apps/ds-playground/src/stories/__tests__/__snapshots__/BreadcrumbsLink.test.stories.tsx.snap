@@ -3,7 +3,7 @@
 exports[`Tester/Breadcrumbs/Link WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <a id="htmlId"
-     class="_link_1qzdp_1  dummyClassname"
+     class="_link_z7jba_1  dummyClassname"
      lang="nb"
      data-testid="123ID"
      href="#storybook-root"
@@ -15,7 +15,7 @@ exports[`Tester/Breadcrumbs/Link WithAttributes play-test 1`] = `
 
 exports[`Tester/Breadcrumbs/Link WithRef play-test 1`] = `
 <div data-test-block="true">
-  <a class="_link_1qzdp_1  "
+  <a class="_link_z7jba_1  "
      href="#storybook-root"
      id="dummyIdForwardedFromRef"
   >

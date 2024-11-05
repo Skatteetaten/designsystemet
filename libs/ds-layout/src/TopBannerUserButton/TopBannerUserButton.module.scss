@@ -1,18 +1,18 @@
-@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
 .username {
   &Button {
     max-width: 4.5rem;
 
-    @media (min-width: $breakpoint-xs) {
+    @media (min-width: breakpoints.$breakpoint-xs) {
       max-width: 6.25rem;
     }
 
-    @media (min-width: $breakpoint-s) {
+    @media (min-width: breakpoints.$breakpoint-s) {
       max-width: 7.5rem;
     }
 
-    @media (min-width: $breakpoint-m) {
+    @media (min-width: breakpoints.$breakpoint-m) {
       max-width: 20rem;
     }
   }

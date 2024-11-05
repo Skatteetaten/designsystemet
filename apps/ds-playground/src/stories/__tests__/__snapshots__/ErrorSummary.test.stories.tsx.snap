@@ -32,7 +32,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithAttributes play-test 1`] = `
         </svg>
       </div>
       <div class="_summaryContainer_e7s87_40">
-        <h2 class="_heading_1okn6_1 _heading_level4_1okn6_43 _heading_hasSpacingSmall_1okn6_54 ">
+        <h2 class="_heading_12p5o_1 _heading_level4_12p5o_43 _heading_hasSpacingSmall_12p5o_54 ">
           For å gå videre må du rette opp 0 feil:
         </h2>
       </div>
@@ -60,7 +60,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildren play-test 1`] = `
         </svg>
       </div>
       <div class="_summaryContainer_e7s87_40">
-        <h2 class="_heading_1okn6_1 _heading_level4_1okn6_43 _heading_hasSpacingSmall_1okn6_54 ">
+        <h2 class="_heading_12p5o_1 _heading_level4_12p5o_43 _heading_hasSpacingSmall_12p5o_54 ">
           For å gå videre må du rette opp 2 feil:
         </h2>
         <ul class="_linkGroup_w23nb_1   ">
@@ -74,7 +74,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildren play-test 1`] = `
               <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
               </path>
             </svg>
-            <a class="_link_1qzdp_1  "
+            <a class="_link_z7jba_1  "
                href="#id_1"
             >
               Husk å fylle ut type varer
@@ -90,7 +90,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildren play-test 1`] = `
               <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
               </path>
             </svg>
-            <a class="_link_1qzdp_1  "
+            <a class="_link_z7jba_1  "
                href="#id_2"
             >
               Selger du varer og tjenester for egen regning?
@@ -122,7 +122,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContent smoke-test 1`] 
         </svg>
       </div>
       <div class="_summaryContainer_e7s87_40">
-        <h2 class="_heading_1okn6_1 _heading_level4_1okn6_43 _heading_hasSpacingSmall_1okn6_54 ">
+        <h2 class="_heading_12p5o_1 _heading_level4_12p5o_43 _heading_hasSpacingSmall_12p5o_54 ">
           For å gå videre må du rette opp 2 feil:
         </h2>
         <ul class="_linkGroup_w23nb_1   ">
@@ -136,7 +136,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContent smoke-test 1`] 
               <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
               </path>
             </svg>
-            <a class="_link_1qzdp_1  "
+            <a class="_link_z7jba_1  "
                href="#id_1"
             >
               Husk å fylle ut type varer
@@ -152,7 +152,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContent smoke-test 1`] 
               <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
               </path>
             </svg>
-            <a class="_link_1qzdp_1  "
+            <a class="_link_z7jba_1  "
                href="#id_2"
             >
               Selger du varer og tjenester for egen regning?
@@ -160,7 +160,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContent smoke-test 1`] 
           </li>
         </ul>
         <div class="_content_e7s87_54 ">
-          <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+          <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
             Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
           </p>
         </div>
@@ -189,7 +189,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentBreakpointXs smo
         </svg>
       </div>
       <div class="_summaryContainer_e7s87_40">
-        <h2 class="_heading_1okn6_1 _heading_level4_1okn6_43 _heading_hasSpacingSmall_1okn6_54 ">
+        <h2 class="_heading_12p5o_1 _heading_level4_12p5o_43 _heading_hasSpacingSmall_12p5o_54 ">
           For å gå videre må du rette opp 2 feil:
         </h2>
         <ul class="_linkGroup_w23nb_1   ">
@@ -203,7 +203,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentBreakpointXs smo
               <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
               </path>
             </svg>
-            <a class="_link_1qzdp_1  "
+            <a class="_link_z7jba_1  "
                href="#id_1"
             >
               Husk å fylle ut type varer
@@ -219,7 +219,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentBreakpointXs smo
               <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
               </path>
             </svg>
-            <a class="_link_1qzdp_1  "
+            <a class="_link_z7jba_1  "
                href="#id_2"
             >
               Selger du varer og tjenester for egen regning?
@@ -227,7 +227,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentBreakpointXs smo
           </li>
         </ul>
         <div class="_content_e7s87_54 ">
-          <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+          <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
             Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
           </p>
         </div>
@@ -256,7 +256,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentMobile smoke-tes
         </svg>
       </div>
       <div class="_summaryContainer_e7s87_40">
-        <h2 class="_heading_1okn6_1 _heading_level4_1okn6_43 _heading_hasSpacingSmall_1okn6_54 ">
+        <h2 class="_heading_12p5o_1 _heading_level4_12p5o_43 _heading_hasSpacingSmall_12p5o_54 ">
           For å gå videre må du rette opp 2 feil:
         </h2>
         <ul class="_linkGroup_w23nb_1   ">
@@ -270,7 +270,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentMobile smoke-tes
               <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
               </path>
             </svg>
-            <a class="_link_1qzdp_1  "
+            <a class="_link_z7jba_1  "
                href="#id_1"
             >
               Husk å fylle ut type varer
@@ -286,7 +286,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentMobile smoke-tes
               <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
               </path>
             </svg>
-            <a class="_link_1qzdp_1  "
+            <a class="_link_z7jba_1  "
                href="#id_2"
             >
               Selger du varer og tjenester for egen regning?
@@ -294,7 +294,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentMobile smoke-tes
           </li>
         </ul>
         <div class="_content_e7s87_54 ">
-          <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+          <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
             Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
           </p>
         </div>
@@ -323,11 +323,11 @@ exports[`Tester/ErrorSummary/ErrorSummary WithContent play-test 1`] = `
         </svg>
       </div>
       <div class="_summaryContainer_e7s87_40">
-        <h2 class="_heading_1okn6_1 _heading_level4_1okn6_43 _heading_hasSpacingSmall_1okn6_54 ">
+        <h2 class="_heading_12p5o_1 _heading_level4_12p5o_43 _heading_hasSpacingSmall_12p5o_54 ">
           Inntektsmottaker inneholder 2 feil:
         </h2>
         <div class="_content_e7s87_54 _contentWithoutChildren_e7s87_57">
-          <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+          <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
             Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
           </p>
         </div>
@@ -391,7 +391,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithInput play-test 1`] = `
         </svg>
       </div>
       <div class="_summaryContainer_e7s87_40">
-        <h2 class="_heading_1okn6_1 _heading_level4_1okn6_43 _heading_hasSpacingSmall_1okn6_54 ">
+        <h2 class="_heading_12p5o_1 _heading_level4_12p5o_43 _heading_hasSpacingSmall_12p5o_54 ">
           For å gå videre må du rette opp 1 feil:
         </h2>
         <ul class="_linkGroup_w23nb_1   ">
@@ -405,7 +405,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithInput play-test 1`] = `
               <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
               </path>
             </svg>
-            <a class="_link_1qzdp_1  "
+            <a class="_link_z7jba_1  "
                href="#input_aar"
             >
               Inntekståret må være etter 2008
@@ -455,7 +455,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithTitleAs play-test 1`] = `
         </svg>
       </div>
       <div class="_summaryContainer_e7s87_40">
-        <h1 class="_heading_1okn6_1 _heading_level4_1okn6_43 _heading_hasSpacingSmall_1okn6_54 ">
+        <h1 class="_heading_12p5o_1 _heading_level4_12p5o_43 _heading_hasSpacingSmall_12p5o_54 ">
           For å gå videre må du rette opp 2 feil:
         </h1>
         <ul class="_linkGroup_w23nb_1   ">
@@ -469,7 +469,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithTitleAs play-test 1`] = `
               <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
               </path>
             </svg>
-            <a class="_link_1qzdp_1  "
+            <a class="_link_z7jba_1  "
                href="#id_1"
             >
               Husk å fylle ut type varer
@@ -485,7 +485,7 @@ exports[`Tester/ErrorSummary/ErrorSummary WithTitleAs play-test 1`] = `
               <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
               </path>
             </svg>
-            <a class="_link_1qzdp_1  "
+            <a class="_link_z7jba_1  "
                href="#id_2"
             >
               Selger du varer og tjenester for egen regning?

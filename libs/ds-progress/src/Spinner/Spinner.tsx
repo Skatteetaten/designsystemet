@@ -1,4 +1,4 @@
-import React, { forwardRef, JSX, useEffect, useState } from 'react';
+import { forwardRef, JSX, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';

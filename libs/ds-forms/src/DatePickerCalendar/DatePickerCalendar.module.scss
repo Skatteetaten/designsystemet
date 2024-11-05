@@ -1,5 +1,5 @@
-@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
-@import 'libs/ds-core-utils/src/styles';
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@use 'libs/ds-core-utils/src/styles';
 
 .calendar {
   display: flex;
@@ -9,7 +9,7 @@
   border: 1px solid var(--palette-graphite-100);
   background-color: var(--palette-graphite-0);
 
-  @media (min-width: $breakpoint-xs) {
+  @media (min-width: breakpoints.$breakpoint-xs) {
     padding: var(--spacing-m);
   }
 
@@ -46,7 +46,7 @@
       }
     }
 
-    @media (min-width: $breakpoint-xs) {
+    @media (min-width: breakpoints.$breakpoint-xs) {
       flex-wrap: nowrap;
       justify-content: center;
       margin-bottom: var(--spacing-m);
@@ -160,7 +160,7 @@
       }
     }
 
-    @media (min-width: $breakpoint-xs) {
+    @media (min-width: breakpoints.$breakpoint-xs) {
       padding-bottom: var(--spacing-s);
       border-spacing: var(--spacing-m) var(--spacing-s);
 
@@ -171,7 +171,7 @@
       }
     }
 
-    @media (min-width: $breakpoint-s) {
+    @media (min-width: breakpoints.$breakpoint-s) {
       &DateButton {
         width: 40px;
 
@@ -188,5 +188,5 @@
 }
 
 .srOnly {
-  @include sr-only;
+  @include styles.sr-only;
 }

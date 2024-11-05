@@ -1,10 +1,10 @@
-@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
 .separator {
   height: 2rem;
   margin-top: var(--spacing-xxl);
 
-  @media (min-width: $breakpoint-s) {
+  @media (min-width: breakpoints.$breakpoint-s) {
     height: 3rem;
   }
 }
@@ -27,14 +27,14 @@
     gap: var(--spacing-xl);
     grid-template-columns: 1fr;
 
-    @media (min-width: $breakpoint-s) {
+    @media (min-width: breakpoints.$breakpoint-s) {
       &Three,
       &Two {
         grid-template-columns: 1fr 1fr;
       }
     }
 
-    @media (min-width: $breakpoint-m) {
+    @media (min-width: breakpoints.$breakpoint-m) {
       margin-bottom: var(--spacing-xl);
       grid-template-columns: 1fr 1fr;
 

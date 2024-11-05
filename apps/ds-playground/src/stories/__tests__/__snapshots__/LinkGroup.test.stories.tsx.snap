@@ -13,7 +13,7 @@ exports[`Tester/LinkGroup Defaults smoke-test 1`] = `
         <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
-      <a class="_link_1qzdp_1  "
+      <a class="_link_z7jba_1  "
          href="#storybook-root"
       >
         Er du pendler?
@@ -29,7 +29,7 @@ exports[`Tester/LinkGroup Defaults smoke-test 1`] = `
         <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
-      <a class="_link_1qzdp_1  "
+      <a class="_link_z7jba_1  "
          href="#storybook-root"
       >
         Pendler du mye?
@@ -45,7 +45,7 @@ exports[`Tester/LinkGroup Defaults smoke-test 1`] = `
         <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
-      <a class="_link_1qzdp_1  "
+      <a class="_link_z7jba_1  "
          href="#storybook-root"
       >
         Pendler du dagen lang?
@@ -68,7 +68,7 @@ exports[`Tester/LinkGroup VariantAnchors smoke-test 1`] = `
         <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
         </path>
       </svg>
-      <a class="_link_1qzdp_1  "
+      <a class="_link_z7jba_1  "
          href="#storybook-root"
       >
         Er du pendler?
@@ -84,7 +84,7 @@ exports[`Tester/LinkGroup VariantAnchors smoke-test 1`] = `
         <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
         </path>
       </svg>
-      <a class="_link_1qzdp_1  "
+      <a class="_link_z7jba_1  "
          href="#storybook-root"
       >
         Pendler du mye?
@@ -100,7 +100,7 @@ exports[`Tester/LinkGroup VariantAnchors smoke-test 1`] = `
         <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
         </path>
       </svg>
-      <a class="_link_1qzdp_1  "
+      <a class="_link_z7jba_1  "
          href="#storybook-root"
       >
         Pendler du dagen lang?
@@ -127,7 +127,7 @@ exports[`Tester/LinkGroup WithAttributes play-test 1`] = `
         <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
-      <a class="_link_1qzdp_1  "
+      <a class="_link_z7jba_1  "
          href="#storybook-root"
       >
         Er du pendler?
@@ -143,7 +143,7 @@ exports[`Tester/LinkGroup WithAttributes play-test 1`] = `
         <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
-      <a class="_link_1qzdp_1  "
+      <a class="_link_z7jba_1  "
          href="#storybook-root"
       >
         Pendler du mye?
@@ -159,7 +159,7 @@ exports[`Tester/LinkGroup WithAttributes play-test 1`] = `
         <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
-      <a class="_link_1qzdp_1  "
+      <a class="_link_z7jba_1  "
          href="#storybook-root"
       >
         Pendler du dagen lang?
@@ -182,7 +182,7 @@ exports[`Tester/LinkGroup WithColor smoke-test 1`] = `
         <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
-      <a class="_link_1qzdp_1 _link_white_1qzdp_1 "
+      <a class="_link_z7jba_1 _link_white_z7jba_1 "
          href="#storybook-root"
       >
         Er du pendler?
@@ -198,7 +198,7 @@ exports[`Tester/LinkGroup WithColor smoke-test 1`] = `
         <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
-      <a class="_link_1qzdp_1 _link_white_1qzdp_1 "
+      <a class="_link_z7jba_1 _link_white_z7jba_1 "
          href="#storybook-root"
       >
         Pendler du mye?
@@ -214,7 +214,7 @@ exports[`Tester/LinkGroup WithColor smoke-test 1`] = `
         <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
-      <a class="_link_1qzdp_1 _link_white_1qzdp_1 "
+      <a class="_link_z7jba_1 _link_white_z7jba_1 "
          href="#storybook-root"
       >
         Pendler du dagen lang?
@@ -237,11 +237,11 @@ exports[`Tester/LinkGroup WithLongTextAndIcons smoke-test 1`] = `
         <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
-      <a class="_link_1qzdp_1  "
+      <a class="_link_z7jba_1  "
          href="#storybook-root"
       >
         Denne lenken har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert uansett om ikon eller ikke og får et hengende innrykk.
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qzdp_35 _icon_isExternal_1qzdp_44"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isExternal_z7jba_44"
              viewbox="0 0 24 24"
              focusable="false"
              aria-label="Til et annet nettsted"
@@ -263,10 +263,10 @@ exports[`Tester/LinkGroup WithLongTextAndIcons smoke-test 1`] = `
         <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
-      <a class="_link_1qzdp_1  "
+      <a class="_link_z7jba_1  "
          href="#storybook-root"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qzdp_35 _icon_isCustom_1qzdp_41"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isCustom_z7jba_41"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -297,7 +297,7 @@ exports[`Tester/LinkGroup WithRef play-test 1`] = `
         <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
-      <a class="_link_1qzdp_1  "
+      <a class="_link_z7jba_1  "
          href="#storybook-root"
       >
         Er du pendler?
@@ -313,7 +313,7 @@ exports[`Tester/LinkGroup WithRef play-test 1`] = `
         <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
-      <a class="_link_1qzdp_1  "
+      <a class="_link_z7jba_1  "
          href="#storybook-root"
       >
         Pendler du mye?
@@ -329,7 +329,7 @@ exports[`Tester/LinkGroup WithRef play-test 1`] = `
         <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
-      <a class="_link_1qzdp_1  "
+      <a class="_link_z7jba_1  "
          href="#storybook-root"
       >
         Pendler du dagen lang?
@@ -352,7 +352,7 @@ exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
         <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
-      <a class="_link_1qzdp_1  "
+      <a class="_link_z7jba_1  "
          href="#storybook-root"
       >
         Er du pendler?
@@ -368,7 +368,7 @@ exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
         <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
-      <a class="_link_1qzdp_1  "
+      <a class="_link_z7jba_1  "
          href="#storybook-root"
       >
         Pendler du mye?
@@ -384,7 +384,7 @@ exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
         <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
-      <a class="_link_1qzdp_1  "
+      <a class="_link_z7jba_1  "
          href="#storybook-root"
       >
         Pendler du dagen lang?
@@ -402,7 +402,7 @@ exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
         <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
-      <a class="_link_1qzdp_1  "
+      <a class="_link_z7jba_1  "
          href="#storybook-root"
       >
         Er du pendler?
@@ -418,7 +418,7 @@ exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
         <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
-      <a class="_link_1qzdp_1  "
+      <a class="_link_z7jba_1  "
          href="#storybook-root"
       >
         Pendler du mye?
@@ -434,7 +434,7 @@ exports[`Tester/LinkGroup WithSpacing smoke-test 1`] = `
         <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
         </path>
       </svg>
-      <a class="_link_1qzdp_1  "
+      <a class="_link_z7jba_1  "
          href="#storybook-root"
       >
         Pendler du dagen lang?

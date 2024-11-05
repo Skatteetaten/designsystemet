@@ -5,6 +5,10 @@
   --spinner-color: var(--semantic-page-foreground);
   --spinner-border-width: 3px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   &_black {
     --spinner-color: var(--palette-graphite-100);
   }
@@ -29,10 +33,6 @@
     --spinner-size: var(--size-medium);
     --spinner-border-width: 5px;
   }
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   &_flexColumn {
     flex-direction: column;

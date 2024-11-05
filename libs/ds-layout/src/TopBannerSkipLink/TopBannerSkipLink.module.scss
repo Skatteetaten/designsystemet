@@ -1,4 +1,4 @@
-@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
 .skipLink {
   position: absolute;
@@ -33,12 +33,12 @@
     margin: var(--skip-link-content-margin);
     gap: var(--spacing-s);
 
-    @media (min-width: $breakpoint-s) {
+    @media (min-width: breakpoints.$breakpoint-s) {
       padding-top: var(--spacing-s);
       padding-bottom: var(--spacing-s);
     }
 
-    @media (min-width: $breakpoint-m) {
+    @media (min-width: breakpoints.$breakpoint-m) {
       justify-content: flex-start;
     }
   }

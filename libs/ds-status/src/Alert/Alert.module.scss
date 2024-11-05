@@ -1,4 +1,4 @@
-@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
 .alert {
   display: flex;
@@ -10,7 +10,7 @@
     padding: var(--spacing-s) var(--spacing-s) var(--spacing-s)
       var(--spacing-xs);
 
-    @media (min-width: $breakpoint-xs) {
+    @media (min-width: breakpoints.$breakpoint-xs) {
       padding: var(--spacing-s) var(--spacing-l) var(--spacing-s)
         var(--spacing-m);
     }
@@ -26,7 +26,7 @@
     overflow-wrap: anywhere;
     word-break: normal;
 
-    @media (min-width: $breakpoint-xs) {
+    @media (min-width: breakpoints.$breakpoint-xs) {
       padding: var(--spacing-s) var(--spacing-s) var(--spacing-s) 0;
     }
   }
@@ -35,7 +35,7 @@
     align-self: start;
     margin: var(--spacing-s) var(--spacing-xs) var(--spacing-s) 0;
 
-    @media (min-width: $breakpoint-xs) {
+    @media (min-width: breakpoints.$breakpoint-xs) {
       margin-right: var(--spacing-s);
     }
 
@@ -81,7 +81,7 @@
       padding: calc(var(--spacing-s) - 2px) var(--spacing-xs);
       background-color: var(--semantic-danger-foreground);
 
-      @media (min-width: $breakpoint-xs) {
+      @media (min-width: breakpoints.$breakpoint-xs) {
         padding: calc(var(--spacing-s) - 2px) var(--spacing-m);
       }
 
@@ -93,7 +93,7 @@
     .content {
       padding: calc(var(--spacing-s) - 2px) var(--spacing-s);
 
-      @media (min-width: $breakpoint-xs) {
+      @media (min-width: breakpoints.$breakpoint-xs) {
         padding: calc(var(--spacing-s) - 2px) var(--spacing-m);
       }
     }
