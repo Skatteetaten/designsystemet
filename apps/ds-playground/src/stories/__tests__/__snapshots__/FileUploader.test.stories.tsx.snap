@@ -327,11 +327,11 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
         <div class="_fileListContainer_10ro3_43">
           <span class="_fileListGrid_10ro3_30">
             <a id=":r20:-file-file.txt"
-               class="_link_1qzdp_1  _fileListText_10ro3_34"
+               class="_link_z7jba_1  _fileListText_10ro3_34"
                href="#"
                download
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qzdp_35 _icon_isCustom_1qzdp_41"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-hidden="true"
@@ -749,11 +749,11 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
         <div class="_fileListContainer_10ro3_43">
           <span class="_fileListGrid_10ro3_30">
             <a id=":r13:-file-dokumentasjon.pdf"
-               class="_link_1qzdp_1  _fileListText_10ro3_34"
+               class="_link_z7jba_1  _fileListText_10ro3_34"
                href="https://www.skatteetaten.no/person/"
                download
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qzdp_35 _icon_isCustom_1qzdp_41"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-hidden="true"
@@ -937,11 +937,11 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
         <div class="_fileListContainer_10ro3_43">
           <span class="_fileListGrid_10ro3_30">
             <a id=":r1e:-file-dokumentasjon.pdf"
-               class="_link_1qzdp_1  _fileListText_10ro3_34"
+               class="_link_z7jba_1  _fileListText_10ro3_34"
                href="https://www.skatteetaten.no/person/"
                download
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qzdp_35 _icon_isCustom_1qzdp_41"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-hidden="true"
@@ -1139,11 +1139,11 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
         <div class="_fileListContainer_10ro3_43">
           <span class="_fileListGrid_10ro3_30">
             <a id=":ra:-file-dokumentasjon.pdf"
-               class="_link_1qzdp_1  _fileListText_10ro3_34"
+               class="_link_z7jba_1  _fileListText_10ro3_34"
                href="https://www.skatteetaten.no/person/"
                download
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qzdp_35 _icon_isCustom_1qzdp_41"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-hidden="true"
@@ -1318,11 +1318,11 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
         <div class="_fileListContainer_10ro3_43">
           <span class="_fileListGrid_10ro3_30">
             <a id=":rm:-file-test.png"
-               class="_link_1qzdp_1  _fileListText_10ro3_34"
+               class="_link_z7jba_1  _fileListText_10ro3_34"
                href="http://localhost:4400/designsystem_illustrasjon.png"
                download
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qzdp_35 _icon_isCustom_1qzdp_41"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isCustom_z7jba_41"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-hidden="true"

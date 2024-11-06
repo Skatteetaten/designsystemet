@@ -1,4 +1,4 @@
-@import 'libs/ds-core-utils/src/styles';
+@use 'libs/ds-core-utils/src/styles';
 
 .wrapper {
   // stylelint-disable-next-line property-no-vendor-prefix
@@ -67,5 +67,5 @@
 }
 
 .hidden {
-  @include sr-only;
+  @include styles.sr-only;
 }

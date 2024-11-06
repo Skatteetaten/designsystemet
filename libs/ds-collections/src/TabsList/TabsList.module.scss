@@ -1,4 +1,4 @@
-@import '~@skatteetaten/ds-core-designtokens/designtokens/breakpoints';
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
 .tabList {
   display: flex;
@@ -9,7 +9,7 @@
     flex-wrap: wrap;
     border-bottom: none;
 
-    @media (min-width: $breakpoint-xs) {
+    @media (min-width: breakpoints.$breakpoint-xs) {
       border-bottom: 1px solid var(--semantic-interactive-main);
     }
   }

@@ -27,7 +27,7 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
           </div>
         </div>
         <h3 id="steptitle-:ro:"
-            class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
         >
           besvart
         </h3>
@@ -67,7 +67,7 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
           </div>
         </div>
         <h3 id="steptitle-:rq:"
-            class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
         >
           besvart 2
         </h3>
@@ -91,7 +91,7 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
           </div>
         </div>
         <h3 id="steptitle-:rr:"
-            class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
         >
           aktivt
         </h3>
@@ -138,30 +138,30 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
           </div>
         </div>
         <h3 id="steptitle-:rs:"
-            class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
         >
           positivt resultat
         </h3>
         <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 _stepContent_positiveResult_14g5z_106 
           ">
           <div>
-            <h3 class="_heading_1okn6_1 _heading_level4_1okn6_43  ">
+            <h3 class="_heading_12p5o_1 _heading_level4_12p5o_43  ">
               Virksomheten skal registreres som særavgiftspliktig.
             </h3>
-            <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               For å bli registrert må du sende en søknad til Skatteetaten.Nedenfor beskriver vi hvordan du går frem og hva du må dokumentere.
             </p>
-            <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               Du må gjøre følgende:
             </p>
             <ol class="_list_1xbs1_1   ">
-              <li class="_element_1wu1m_1 ">
+              <li class="_element_1b7zf_1 ">
                 Du må bestemme hvilken organisasjonsform som passer best.
               </li>
-              <li class="_element_1wu1m_1 ">
+              <li class="_element_1b7zf_1 ">
                 Registrere bedriften i Enhetsregisteret ved å fylle ut Samordnetregistermelding
               </li>
-              <li class="_element_1wu1m_1 ">
+              <li class="_element_1b7zf_1 ">
                 Dersom bedriften din har avgiftspliktig omsetning og/eller uttakoverstiger kr 50 000 i løpet av en 12 måneders periode, må duregistrere virksomheten i Merverdiavgiftsregisteret.
               </li>
             </ol>
@@ -193,13 +193,13 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
           </div>
         </div>
         <h3 id="steptitle-:ru:"
-            class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
         >
           neutralt resultat
         </h3>
         <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112  _resultIntro_14g5z_253">
           <div class="_panelArticle_ymo8g_64">
-            <h3 class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 ">
+            <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
               Intro til steget
             </h3>
             innhold
@@ -233,7 +233,7 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
           </div>
         </div>
         <h3 id="steptitle-:r8:"
-            class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
         >
           besvart
         </h3>
@@ -273,7 +273,7 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
           </div>
         </div>
         <h3 id="steptitle-:ra:"
-            class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
         >
           besvart 2
         </h3>
@@ -297,7 +297,7 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
           </div>
         </div>
         <h3 id="steptitle-:rb:"
-            class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
         >
           aktivt
         </h3>
@@ -344,30 +344,30 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
           </div>
         </div>
         <h3 id="steptitle-:rc:"
-            class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
         >
           positivt resultat
         </h3>
         <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 _stepContent_positiveResult_14g5z_106 
           ">
           <div>
-            <h3 class="_heading_1okn6_1 _heading_level4_1okn6_43  ">
+            <h3 class="_heading_12p5o_1 _heading_level4_12p5o_43  ">
               Virksomheten skal registreres som særavgiftspliktig.
             </h3>
-            <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               For å bli registrert må du sende en søknad til Skatteetaten.Nedenfor beskriver vi hvordan du går frem og hva du må dokumentere.
             </p>
-            <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               Du må gjøre følgende:
             </p>
             <ol class="_list_1xbs1_1   ">
-              <li class="_element_1wu1m_1 ">
+              <li class="_element_1b7zf_1 ">
                 Du må bestemme hvilken organisasjonsform som passer best.
               </li>
-              <li class="_element_1wu1m_1 ">
+              <li class="_element_1b7zf_1 ">
                 Registrere bedriften i Enhetsregisteret ved å fylle ut Samordnetregistermelding
               </li>
-              <li class="_element_1wu1m_1 ">
+              <li class="_element_1b7zf_1 ">
                 Dersom bedriften din har avgiftspliktig omsetning og/eller uttakoverstiger kr 50 000 i løpet av en 12 måneders periode, må duregistrere virksomheten i Merverdiavgiftsregisteret.
               </li>
             </ol>
@@ -399,13 +399,13 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
           </div>
         </div>
         <h3 id="steptitle-:re:"
-            class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
         >
           neutralt resultat
         </h3>
         <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112  _resultIntro_14g5z_253">
           <div class="_panelArticle_ymo8g_64">
-            <h3 class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 ">
+            <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
               Intro til steget
             </h3>
             innhold
@@ -439,7 +439,7 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
           </div>
         </div>
         <h3 id="steptitle-:rg:"
-            class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
         >
           besvart
         </h3>
@@ -479,7 +479,7 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
           </div>
         </div>
         <h3 id="steptitle-:ri:"
-            class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
         >
           besvart 2
         </h3>
@@ -503,7 +503,7 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
           </div>
         </div>
         <h3 id="steptitle-:rj:"
-            class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
         >
           aktivt
         </h3>
@@ -550,30 +550,30 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
           </div>
         </div>
         <h3 id="steptitle-:rk:"
-            class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
         >
           positivt resultat
         </h3>
         <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 _stepContent_positiveResult_14g5z_106 
           ">
           <div>
-            <h3 class="_heading_1okn6_1 _heading_level4_1okn6_43  ">
+            <h3 class="_heading_12p5o_1 _heading_level4_12p5o_43  ">
               Virksomheten skal registreres som særavgiftspliktig.
             </h3>
-            <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               For å bli registrert må du sende en søknad til Skatteetaten.Nedenfor beskriver vi hvordan du går frem og hva du må dokumentere.
             </p>
-            <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               Du må gjøre følgende:
             </p>
             <ol class="_list_1xbs1_1   ">
-              <li class="_element_1wu1m_1 ">
+              <li class="_element_1b7zf_1 ">
                 Du må bestemme hvilken organisasjonsform som passer best.
               </li>
-              <li class="_element_1wu1m_1 ">
+              <li class="_element_1b7zf_1 ">
                 Registrere bedriften i Enhetsregisteret ved å fylle ut Samordnetregistermelding
               </li>
-              <li class="_element_1wu1m_1 ">
+              <li class="_element_1b7zf_1 ">
                 Dersom bedriften din har avgiftspliktig omsetning og/eller uttakoverstiger kr 50 000 i løpet av en 12 måneders periode, må duregistrere virksomheten i Merverdiavgiftsregisteret.
               </li>
             </ol>
@@ -605,13 +605,13 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
           </div>
         </div>
         <h3 id="steptitle-:rm:"
-            class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
         >
           neutralt resultat
         </h3>
         <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112  _resultIntro_14g5z_253">
           <div class="_panelArticle_ymo8g_64">
-            <h3 class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 ">
+            <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
               Intro til steget
             </h3>
             innhold
@@ -647,7 +647,7 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
         </div>
       </div>
       <h3 id="steptitle-:r10:-1"
-          class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+          class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
       >
         Hva holder du på med?
       </h3>
@@ -673,7 +673,7 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
         </div>
       </div>
       <h3 id="steptitle-:r10:-2"
-          class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+          class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
       >
         Hva gjør du?
       </h3>
@@ -699,7 +699,7 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
         </div>
       </div>
       <h3 id="steptitle-:r10:-3"
-          class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+          class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
       >
         Salg av varer og tjenester
       </h3>
@@ -740,16 +740,16 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
         </div>
       </div>
       <h3 id="steptitle-:r10:-4"
-          class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+          class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
       >
         Vårt veiledende svar
       </h3>
       <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_forest_ymo8g_78 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112  _resultIntro_14g5z_253">
         <div class="_panelArticle_ymo8g_64">
-          <h4 class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 ">
+          <h4 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
             Virksomheten skal registreres som særavgiftspliktig.
           </h4>
-          <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+          <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
             brødtekst
           </p>
         </div>
@@ -757,7 +757,7 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
       <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 _stepContent_positiveResult_14g5z_106 
           ">
         <div>
-          <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+          <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
             brødtekst
           </p>
         </div>
@@ -793,7 +793,7 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
           </div>
         </div>
         <h3 id="steptitle-:r0:"
-            class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
         >
           besvart
         </h3>
@@ -833,7 +833,7 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
           </div>
         </div>
         <h3 id="steptitle-:r2:"
-            class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
         >
           besvart 2
         </h3>
@@ -857,7 +857,7 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
           </div>
         </div>
         <h3 id="steptitle-:r3:"
-            class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
         >
           aktivt
         </h3>
@@ -904,30 +904,30 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
           </div>
         </div>
         <h3 id="steptitle-:r4:"
-            class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
         >
           positivt resultat
         </h3>
         <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 _stepContent_positiveResult_14g5z_106 
           ">
           <div>
-            <h3 class="_heading_1okn6_1 _heading_level4_1okn6_43  ">
+            <h3 class="_heading_12p5o_1 _heading_level4_12p5o_43  ">
               Virksomheten skal registreres som særavgiftspliktig.
             </h3>
-            <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               For å bli registrert må du sende en søknad til Skatteetaten.Nedenfor beskriver vi hvordan du går frem og hva du må dokumentere.
             </p>
-            <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               Du må gjøre følgende:
             </p>
             <ol class="_list_1xbs1_1   ">
-              <li class="_element_1wu1m_1 ">
+              <li class="_element_1b7zf_1 ">
                 Du må bestemme hvilken organisasjonsform som passer best.
               </li>
-              <li class="_element_1wu1m_1 ">
+              <li class="_element_1b7zf_1 ">
                 Registrere bedriften i Enhetsregisteret ved å fylle ut Samordnetregistermelding
               </li>
-              <li class="_element_1wu1m_1 ">
+              <li class="_element_1b7zf_1 ">
                 Dersom bedriften din har avgiftspliktig omsetning og/eller uttakoverstiger kr 50 000 i løpet av en 12 måneders periode, må duregistrere virksomheten i Merverdiavgiftsregisteret.
               </li>
             </ol>
@@ -959,13 +959,13 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
           </div>
         </div>
         <h3 id="steptitle-:r6:"
-            class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
         >
           neutralt resultat
         </h3>
         <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112  _resultIntro_14g5z_253">
           <div class="_panelArticle_ymo8g_64">
-            <h3 class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 ">
+            <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
               Intro til steget
             </h3>
             innhold

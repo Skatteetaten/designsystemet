@@ -1,4 +1,4 @@
-@import 'libs/ds-core-utils/src/styles';
+@use 'libs/ds-core-utils/src/styles' as style;
 
 .container {
   min-width: 10rem;
@@ -62,7 +62,7 @@
 }
 
 .srOnly {
-  @include sr-only;
+  @include style.sr-only;
 }
 
 .fileFormatList {

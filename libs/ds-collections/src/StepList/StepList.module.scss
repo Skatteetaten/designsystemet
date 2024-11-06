@@ -1,15 +1,15 @@
-@import '~@skatteetaten/ds-core-designtokens/designtokens/breakpoints';
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
 .stepList {
   padding: 0;
   margin: 0;
   list-style: none;
 
-  @media (min-width: $breakpoint-s) {
+  @media (min-width: breakpoints.$breakpoint-s) {
     margin: 0 -0.75rem;
   }
 
-  @media (min-width: $breakpoint-m) {
+  @media (min-width: breakpoints.$breakpoint-m) {
     margin: 0;
   }
 }

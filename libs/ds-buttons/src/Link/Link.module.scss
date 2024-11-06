@@ -1,7 +1,7 @@
-@import 'libs/ds-core-utils/src/styles';
+@use 'libs/ds-core-utils/src/styles' as styles;
 
 .link {
-  @include link;
+  @include styles.link;
 
   font-size: var(--font-size-m);
   line-height: var(--semantic-line-height-article);
