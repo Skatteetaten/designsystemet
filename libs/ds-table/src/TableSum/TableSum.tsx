@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { Children, forwardRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -42,12 +42,14 @@ export const TableSum = forwardRef<HTMLTableRowElement, TableSumProps>(
           >
             {sumText ?? t('tablesum.Sum')}
           </TableDataCell>
-          <TableDataCell
-            className={concatenatedClassName}
-            alignment={valueAlignment}
-          >
-            {children}
-          </TableDataCell>
+          {Children.map(children, (child) => (
+            <TableDataCell
+              className={concatenatedClassName}
+              alignment={valueAlignment}
+            >
+              {child}
+            </TableDataCell>
+          ))}
         </TableRow>
       </tfoot>
     );
