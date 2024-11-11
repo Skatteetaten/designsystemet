@@ -1,11 +1,9 @@
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   addDays,
-  getWeekOfMonth,
   isAfter,
   isBefore,
   isSameDay,
-  isSunday,
   isToday,
   isValid,
   isWithinInterval,
@@ -219,13 +217,6 @@ export const getNameOfMonthsAndDays = (): {
 
 export function findValidYear(year: string | number): number {
   return year === '' || year === 0 ? new Date().getFullYear() : Number(year);
-}
-
-export function getGridIdxForDate(focusableDate: Date): string {
-  const colIdx = isSunday(focusableDate) ? 6 : focusableDate.getDay() - 1;
-  const rowIdx = getWeekOfMonth(focusableDate, { weekStartsOn: 1 }) - 1;
-
-  return `${rowIdx}${colIdx}`;
 }
 
 export const getFirstFocusableDate = (
