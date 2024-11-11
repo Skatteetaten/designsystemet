@@ -1,6 +1,5 @@
 import {
   ChangeEvent,
-  createRef,
   FocusEvent,
   forwardRef,
   JSX,
@@ -16,13 +15,12 @@ import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { ArrowBackSVGpath, ArrowForwardSVGpath } from '@skatteetaten/ds-icons';
 import { addDays, getWeek, isEqual } from 'date-fns';
 
-import { DatePickerCalendarProps, GridIdx } from './DatePickerCalendar.types';
+import { DatePickerCalendarProps } from './DatePickerCalendar.types';
 import { getDatePickerCalendarSelectedDateDefault } from './defaults';
 import {
   findValidYear,
   getCalendarRows,
   getNameOfMonthsAndDays,
-  getGridIdxForDate,
   getFirstFocusableDate,
   isWithinMinMaxRange,
   findNextAvailableDate,
@@ -54,6 +52,8 @@ export const DatePickerCalendar = forwardRef<
   ): JSX.Element => {
     const { t } = useTranslation('ds_forms', { i18n: dsI18n });
 
+    const calendarRef = useRef<HTMLTableElement>(null);
+
     const disabledDateTimestamps = useMemo(
       () =>
         new Set(
@@ -71,11 +71,6 @@ export const DatePickerCalendar = forwardRef<
       maxDate,
       disabledDateTimestamps
     );
-
-    const focusableDateGridIdxRef = useRef<string>(
-      getGridIdxForDate(firstFocusableDate)
-    );
-    const dateButtonRefs = useRef<GridIdx>({});
 
     const [selectedMonthIndex, setSelectedMonthIndex] = useState(
       firstFocusableDate.getMonth()
@@ -181,12 +176,15 @@ export const DatePickerCalendar = forwardRef<
       }
 
       setTimeout(() => {
-        const gridIdx = getGridIdxForDate(dateToFocus);
-        if (gridIdx) {
-          focusableDateGridIdxRef.current = gridIdx;
-          const btnRef = dateButtonRefs.current[gridIdx].current;
-          btnRef?.focus();
+        if (!calendarRef.current) {
+          return;
         }
+        const buttonToFocus: HTMLButtonElement | null =
+          calendarRef.current.querySelector(
+            `#btn-${dateToFocus.getFullYear()}-${dateToFocus.getMonth()}-${dateToFocus.getDate()}`
+          );
+
+        buttonToFocus?.focus();
       }, 0);
     };
 
@@ -324,7 +322,7 @@ export const DatePickerCalendar = forwardRef<
             onClick={(): void => onNextMonth()}
           />
         </div>
-        <table className={styles.calendarTable}>
+        <table ref={calendarRef} className={styles.calendarTable}>
           <caption
             className={styles.srOnly}
           >{`${monthNames[selectedMonthIndex]} ${selectedYear}`}</caption>
@@ -346,7 +344,7 @@ export const DatePickerCalendar = forwardRef<
                 <tr
                   key={`row-${selectedYear}-${selectedMonthIndex}-${weekIdx}`}
                 >
-                  {cells.map((cell, colIdx) => {
+                  {cells.map((cell) => {
                     const adjancentMonthClassName = cell.isAdjacentMonth
                       ? styles.calendarTableDateButton_adjacentMonth
                       : '';
@@ -369,23 +367,14 @@ export const DatePickerCalendar = forwardRef<
                       ? 'true'
                       : undefined;
 
-                    const gridIdx = `${rowIdx}${colIdx}`;
-
-                    if (!dateButtonRefs.current[gridIdx]) {
-                      dateButtonRefs.current[gridIdx] = createRef();
-                    }
-
-                    const hasFocus =
-                      focusableDateGridIdxRef.current === gridIdx;
-
                     return (
                       <td key={`cell-${cell.date.toLocaleDateString()}`}>
                         <button
-                          ref={dateButtonRefs.current[gridIdx]}
+                          id={`btn-${cell.date.getFullYear()}-${cell.date.getMonth()}-${cell.date.getDate()}`}
                           className={buttonClassName}
                           type={'button'}
                           disabled={cell.disabled}
-                          tabIndex={hasFocus ? 0 : -1}
+                          tabIndex={ariaCurrent === 'true' ? 0 : -1}
                           aria-current={ariaCurrent}
                           aria-label={ariaLabel}
                           onClick={(): void => {
