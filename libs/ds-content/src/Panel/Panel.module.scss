@@ -1,5 +1,5 @@
-@import 'libs/ds-core-utils/src/styles';
-@import '~@skatteetaten/ds-core-designtokens/designtokens/breakpoints';
+@use 'libs/ds-core-utils/src/styles';
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
 $border-outline: 6px;
 
@@ -34,7 +34,7 @@ $border-outline: 6px;
 
   &_graphic {
     &Image {
-      @media (min-width: $breakpoint-s) {
+      @media (min-width: breakpoints.$breakpoint-s) {
         gap: var(--spacing-xxl);
         grid-template: 'graphic article' /1fr 60%;
       }
@@ -51,7 +51,7 @@ $border-outline: 6px;
         row-gap: 0;
       }
 
-      @media (min-width: $breakpoint-m) {
+      @media (min-width: breakpoints.$breakpoint-m) {
         gap: normal var(--spacing-m);
         grid-template:
           'graphic article .' / 1fr minmax(
@@ -72,12 +72,12 @@ $border-outline: 6px;
     &Hide {
       display: none;
 
-      @media (min-width: $breakpoint-s) {
+      @media (min-width: breakpoints.$breakpoint-s) {
         display: block;
       }
     }
 
-    @media (min-width: $breakpoint-m) {
+    @media (min-width: breakpoints.$breakpoint-m) {
       width: auto;
       margin-right: 0;
     }
@@ -202,5 +202,5 @@ $border-outline: 6px;
 }
 
 .srOnly {
-  @include sr-only;
+  @include styles.sr-only;
 }

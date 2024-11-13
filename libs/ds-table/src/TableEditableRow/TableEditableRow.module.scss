@@ -1,4 +1,4 @@
-@import 'libs/ds-core-utils/src/styles';
+@use 'libs/ds-core-utils/src/styles';
 
 .editableRow {
   &_expanded {
@@ -59,5 +59,5 @@
 }
 
 .srOnly {
-  @include sr-only;
+  @include styles.sr-only;
 }

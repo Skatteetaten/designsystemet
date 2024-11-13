@@ -15,8 +15,8 @@ exports[`Tester/StepList/Step NextButtonWithDisabled smoke-test 1`] = `
         <div class="_stepLine_14g5z_1 ">
         </div>
       </div>
-      <h3 id="steptitle-:r9:"
-          class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+      <h3 id="steptitle-:ra:"
+          class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
       >
         tittel
       </h3>
@@ -58,8 +58,8 @@ exports[`Tester/StepList/Step NextButtonWithSpinner smoke-test 1`] = `
         <div class="_stepLine_14g5z_1 ">
         </div>
       </div>
-      <h3 id="steptitle-:r8:"
-          class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+      <h3 id="steptitle-:r9:"
+          class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
       >
         tittel
       </h3>
@@ -115,7 +115,7 @@ exports[`Tester/StepList/Step WithAttributes play-test 1`] = `
         </div>
       </div>
       <h3 id="steptitle-htmlid"
-          class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+          class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
       >
         title
       </h3>
@@ -144,8 +144,8 @@ exports[`Tester/StepList/Step WithEditAccessibleDescription play-test 1`] = `
         <div class="_stepLine_14g5z_1 ">
         </div>
       </div>
-      <h3 id="steptitle-:r6:"
-          class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+      <h3 id="steptitle-:r7:"
+          class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
       >
         tittel
       </h3>
@@ -156,7 +156,7 @@ exports[`Tester/StepList/Step WithEditAccessibleDescription play-test 1`] = `
         </div>
         <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  _stepEditButton_14g5z_46"
                 type="button"
-                aria-describedby="steptitle-:r6:"
+                aria-describedby="steptitle-:r7:"
         >
           <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
                viewbox="0 0 24 24"
@@ -190,11 +190,11 @@ exports[`Tester/StepList/Step WithFullWidthResult smoke-test 1`] = `
           <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_14g5z_241"
                viewbox="0 0 24 24"
                focusable="false"
-               aria-labelledby="svgtitle-:r5:"
+               aria-labelledby="svgtitle-:r6:"
                aria-hidden="false"
                role="img"
           >
-            <title id="svgtitle-:r5:">
+            <title id="svgtitle-:r6:">
               Fullført
             </title>
             <path d="M19.94 6.71L19.24 6L9 16.23L5.26 12.5L4.91 12.85L3.5 14.26L9 19.76L21 7.76L19.94 6.71Z">
@@ -204,8 +204,8 @@ exports[`Tester/StepList/Step WithFullWidthResult smoke-test 1`] = `
         <div class="_stepLine_14g5z_1 _stepLine_neutralResult_14g5z_1">
         </div>
       </div>
-      <h3 id="steptitle-:r4:"
-          class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+      <h3 id="steptitle-:r5:"
+          class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
       >
         jeg er en tittel
       </h3>
@@ -248,7 +248,7 @@ exports[`Tester/StepList/Step WithIconTitleAS play-test 1`] = `
         </div>
       </div>
       <h2 id="steptitle-:r2:"
-          class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+          class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
       >
         jeg er en tittel
       </h2>
@@ -280,7 +280,7 @@ exports[`Tester/StepList/Step WithRef play-test 1`] = `
         </div>
       </div>
       <h3 id="steptitle-:r0:"
-          class="_heading_1okn6_1 _heading_level5_1okn6_47  _stepHeading_14g5z_75"
+          class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
       >
         title
       </h3>

@@ -1,4 +1,4 @@
-@import 'libs/ds-core-utils/src/styles';
+@use 'libs/ds-core-utils/src/styles';
 
 .paragraph {
   margin: 0;
@@ -26,6 +26,6 @@
   }
 
   a {
-    @include link;
+    @include styles.link;
   }
 }

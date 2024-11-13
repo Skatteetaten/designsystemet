@@ -1,5 +1,5 @@
-@import '~@skatteetaten/ds-core-designtokens/designtokens/breakpoints';
-@import 'libs/ds-core-utils/src/styles';
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@use 'libs/ds-core-utils/src/styles';
 
 .pagination {
   display: flex;
@@ -10,7 +10,7 @@
   padding: 0;
   row-gap: var(--spacing-s);
 
-  @media (min-width: $breakpoint-s) {
+  @media (min-width: breakpoints.$breakpoint-s) {
     justify-content: space-between;
     row-gap: initial;
   }
@@ -25,7 +25,7 @@
     column-gap: var(--spacing-xs);
     list-style-type: none;
 
-    @media (min-width: $breakpoint-s) {
+    @media (min-width: breakpoints.$breakpoint-s) {
       flex: 1 1 auto;
       justify-content: end;
 
@@ -36,7 +36,7 @@
   }
 
   &_summaryhide {
-    @include sr-only;
+    @include styles.sr-only;
   }
 
   &Element {

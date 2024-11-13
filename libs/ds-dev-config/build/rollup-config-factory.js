@@ -95,11 +95,17 @@ const createRollupConfig = (
     input: {
       ...dynamicInputs,
     },
-    output: {
-      ...config.output,
-      dir: outputDir,
-      entryFileNames: '[name].esm.js',
-    },
+    output: Array.isArray(config.output)
+      ? config.output.map((configEntry) => ({
+          ...configEntry,
+          dir: outputDir,
+          entryFileNames: '[name].esm.js',
+        }))
+      : {
+          ...config.output,
+          dir: outputDir,
+          entryFileNames: '[name].esm.js',
+        },
     plugins: [
       url({ limit: 20480 }),
       ...postCssPlugins,

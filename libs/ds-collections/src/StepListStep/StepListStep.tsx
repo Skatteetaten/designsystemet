@@ -1,4 +1,4 @@
-import { forwardRef, useId, useRef, JSX } from 'react';
+import { forwardRef, useId, useRef, JSX, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Button, InlineButton } from '@skatteetaten/ds-buttons';
@@ -8,6 +8,7 @@ import { CheckIcon, EditSVGpath, Icon } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
 import {
+  getStepListStepShouldAutoFocusWhenActiveDefault,
   getStepListStepTitleAsDefault,
   getStepListStepVariantDefault,
 } from './defaults';
@@ -38,6 +39,7 @@ export const StepListStep = forwardRef<HTMLLIElement, StepListStepProps>(
       onEdit,
       onNext,
       hasResultContentFullWidth,
+      shouldAutoFocusWhenActive = getStepListStepShouldAutoFocusWhenActiveDefault(),
       children,
     },
     ref
@@ -46,6 +48,16 @@ export const StepListStep = forwardRef<HTMLLIElement, StepListStepProps>(
     const innerRef = useRef<HTMLDivElement>(null);
     const generatedId = useId();
     const titleId = `steptitle-${id ?? generatedId}`;
+
+    useEffect(() => {
+      if (
+        shouldAutoFocusWhenActive &&
+        innerRef.current &&
+        variant === 'active'
+      ) {
+        innerRef.current.focus();
+      }
+    }, [variant, shouldAutoFocusWhenActive]);
 
     const circleClassName = `${styles.stepCircle}
         ${styles[`stepCircle_${variant}`]}`;

@@ -4,7 +4,7 @@ exports[`Tester/List/Element WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <ul>
     <li id="htmlid"
-        class="_element_1wu1m_1 dummyClassname"
+        class="_element_1b7zf_1 dummyClassname"
         lang="nb"
         data-testid="123ID"
     >
@@ -17,7 +17,7 @@ exports[`Tester/List/Element WithAttributes play-test 1`] = `
 exports[`Tester/List/Element WithRef play-test 1`] = `
 <div data-test-block="true">
   <ul>
-    <li class="_element_1wu1m_1 "
+    <li class="_element_1b7zf_1 "
         id="dummyIdForwardedFromRef"
     >
       Kjenner du behovet til brukeren?

@@ -1,11 +1,20 @@
-import { forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
+import {
+  forwardRef,
+  isValidElement,
+  useEffect,
+  useImperativeHandle,
+  useRef,
+} from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 import { ExpandableRowProps } from './TableRowWithIconButton.types';
 import { getIconButtonSize } from './utils';
 import { RowWithExpandButtonHandle } from '../Table/Table.types';
 import { TableDataCell } from '../TableDataCell/TableDataCell';
+import { TableRow } from '../TableRow/TableRow';
 
 import styles from './TableRowWithIconButton.module.scss';
 
@@ -150,12 +159,29 @@ export const RowWithRightSideExpandButton = forwardRef<
       buttonRef,
       rowRef,
     }));
+    const { t } = useTranslation('ds_tables', { i18n: dsI18n });
+
+    const isExpandableContentRows = (): boolean => {
+      if (Array.isArray(expandableContent)) {
+        return !expandableContent?.some(
+          (element) => !isValidElement(element) || element.type !== TableRow
+        );
+      } else {
+        return (
+          isValidElement(expandableContent) &&
+          expandableContent.type === TableRow
+        );
+      }
+    };
+
+    const shouldInsertExpandAreaMarkers = isExpandableContentRows();
+
     return (
       <>
         <tr
           ref={rowRef}
           id={id}
-          className={`${isExpanded ? styles.row_noBorder : ''} ${className}`}
+          className={`${isExpanded && !shouldInsertExpandAreaMarkers ? styles.row_noBorder : ''} ${className}`}
           lang={lang}
           data-testid={dataTestId}
         >
@@ -179,19 +205,29 @@ export const RowWithRightSideExpandButton = forwardRef<
             />
           </TableDataCell>
         </tr>
-        {isExpanded && (
-          <tr
-            id={id}
-            className={`${styles.expandedRowRight} ${className}`}
-            lang={lang}
-            data-testid={dataTestId}
-          >
+        {isExpanded && !shouldInsertExpandAreaMarkers && (
+          <tr className={`${styles.expandedRowRight} ${className}`}>
             <td colSpan={rowRef?.current?.cells.length ?? 999}>
               <div className={classNames?.expandedContent}>
                 {expandableContent}
               </div>
             </td>
           </tr>
+        )}
+        {isExpanded && shouldInsertExpandAreaMarkers && (
+          <>
+            <tr className={styles.srOnly} lang={lang} data-testid={dataTestId}>
+              <td colSpan={rowRef?.current?.cells.length ?? 999}>
+                {t('table.ExpandAreaStart')}
+              </td>
+            </tr>
+            {expandableContent}
+            <tr className={styles.srOnly}>
+              <td colSpan={rowRef?.current?.cells.length ?? 999}>
+                {t('table.ExpandAreaEnd')}
+              </td>
+            </tr>
+          </>
         )}
       </>
     );

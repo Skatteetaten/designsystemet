@@ -1,4 +1,4 @@
-@import 'libs/ds-core-utils/src/styles';
+@use 'libs/ds-core-utils/src/styles' as style;
 
 .container {
   --checkbox-border-color: var(--semantic-page-foreground);
@@ -152,5 +152,5 @@
 }
 
 .srOnly {
-  @include sr-only;
+  @include style.sr-only;
 }

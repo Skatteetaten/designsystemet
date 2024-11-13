@@ -2,7 +2,7 @@
 
 exports[`Tester/Link Defaults play-test 1`] = `
 <div data-test-block="true">
-  <a class="_link_1qzdp_1  "
+  <a class="_link_z7jba_1  "
      href="#storybook-root"
   >
     Er du pendler?
@@ -12,7 +12,7 @@ exports[`Tester/Link Defaults play-test 1`] = `
 
 exports[`Tester/Link WithAriaCurrent play-test 1`] = `
 <div data-test-block="true">
-  <a class="_link_1qzdp_1  "
+  <a class="_link_z7jba_1  "
      href="#storybook-root"
      aria-current="true"
   >
@@ -23,7 +23,7 @@ exports[`Tester/Link WithAriaCurrent play-test 1`] = `
 
 exports[`Tester/Link WithAriaDescribedby play-test 1`] = `
 <div data-test-block="true">
-  <a class="_link_1qzdp_1  "
+  <a class="_link_z7jba_1  "
      href="#storybook-root"
      aria-describedby="htmlId"
   >
@@ -35,7 +35,7 @@ exports[`Tester/Link WithAriaDescribedby play-test 1`] = `
 exports[`Tester/Link WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <a id="htmlId"
-     class="_link_1qzdp_1  dummyClassname"
+     class="_link_z7jba_1  dummyClassname"
      lang="nb"
      data-testid="123ID"
      href="#storybook-root"
@@ -47,10 +47,10 @@ exports[`Tester/Link WithAttributes play-test 1`] = `
 
 exports[`Tester/Link WithColor smoke-test 1`] = `
 <div data-test-block="true">
-  <a class="_link_1qzdp_1 _link_white_1qzdp_1 "
+  <a class="_link_z7jba_1 _link_white_z7jba_1 "
      href="#storybook-root"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qzdp_35 _icon_isCustom_1qzdp_41"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isCustom_z7jba_41"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -60,7 +60,7 @@ exports[`Tester/Link WithColor smoke-test 1`] = `
       </path>
     </svg>
     Er du pendler?
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qzdp_35 _icon_isExternal_1qzdp_44"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isExternal_z7jba_44"
          viewbox="0 0 24 24"
          focusable="false"
          aria-label="Til et annet nettsted"
@@ -76,7 +76,7 @@ exports[`Tester/Link WithColor smoke-test 1`] = `
 
 exports[`Tester/Link WithDownload play-test 1`] = `
 <div data-test-block="true">
-  <a class="_link_1qzdp_1  "
+  <a class="_link_z7jba_1  "
      href="#storybook-root"
      download="testFil.txt"
   >
@@ -87,11 +87,11 @@ exports[`Tester/Link WithDownload play-test 1`] = `
 
 exports[`Tester/Link WithExternalIcon play-test 1`] = `
 <div data-test-block="true">
-  <a class="_link_1qzdp_1  "
+  <a class="_link_z7jba_1  "
      href="#storybook-root"
   >
     Er du pendler?
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qzdp_35 _icon_isExternal_1qzdp_44"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isExternal_z7jba_44"
          viewbox="0 0 24 24"
          focusable="false"
          aria-label="Til et annet nettsted"
@@ -107,10 +107,10 @@ exports[`Tester/Link WithExternalIcon play-test 1`] = `
 
 exports[`Tester/Link WithIcon play-test 1`] = `
 <div data-test-block="true">
-  <a class="_link_1qzdp_1  "
+  <a class="_link_z7jba_1  "
      href="#storybook-root"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qzdp_35 _icon_isCustom_1qzdp_41"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isCustom_z7jba_41"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -126,7 +126,7 @@ exports[`Tester/Link WithIcon play-test 1`] = `
 
 exports[`Tester/Link WithLongText smoke-test 1`] = `
 <div data-test-block="true">
-  <a class="_link_1qzdp_1  "
+  <a class="_link_z7jba_1  "
      href="#storybook-root"
   >
     Denne lenken har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med tekst som alltid er venstrejustert uansett om ikon eller ikke.
@@ -136,10 +136,10 @@ exports[`Tester/Link WithLongText smoke-test 1`] = `
 
 exports[`Tester/Link WithLongTextIconAndExternalIcon smoke-test 1`] = `
 <div data-test-block="true">
-  <a class="_link_1qzdp_1  "
+  <a class="_link_z7jba_1  "
      href="#storybook-root"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qzdp_35 _icon_isCustom_1qzdp_41"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isCustom_z7jba_41"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -149,7 +149,7 @@ exports[`Tester/Link WithLongTextIconAndExternalIcon smoke-test 1`] = `
       </path>
     </svg>
     Denne lenken har en veldig lang tekst med ikon på venstre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er venstrejustert.
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qzdp_35 _icon_isExternal_1qzdp_44"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isExternal_z7jba_44"
          viewbox="0 0 24 24"
          focusable="false"
          aria-label="Til et annet nettsted"
@@ -165,10 +165,10 @@ exports[`Tester/Link WithLongTextIconAndExternalIcon smoke-test 1`] = `
 
 exports[`Tester/Link WithOnClick play-test 1`] = `
 <div data-test-block="true">
-  <a class="_link_1qzdp_1  "
+  <a class="_link_z7jba_1  "
      href="#storybook-root"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qzdp_35 _icon_isCustom_1qzdp_41"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_z7jba_35 _icon_isCustom_z7jba_41"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -184,7 +184,7 @@ exports[`Tester/Link WithOnClick play-test 1`] = `
 
 exports[`Tester/Link WithRef play-test 1`] = `
 <div data-test-block="true">
-  <a class="_link_1qzdp_1  "
+  <a class="_link_z7jba_1  "
      href="#storybook-root"
      id="dummyIdForwardedFromRef"
   >
@@ -195,7 +195,7 @@ exports[`Tester/Link WithRef play-test 1`] = `
 
 exports[`Tester/Link WithTarget play-test 1`] = `
 <div data-test-block="true">
-  <a class="_link_1qzdp_1  "
+  <a class="_link_z7jba_1  "
      href="#storybook-root"
      rel="noreferrer"
      target="_blank"

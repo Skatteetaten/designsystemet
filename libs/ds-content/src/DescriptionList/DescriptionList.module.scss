@@ -1,5 +1,3 @@
-@import '~@skatteetaten/ds-core-designtokens/designtokens/breakpoints';
-
 .spacing {
   padding-bottom: var(--spacing-l);
 }
@@ -9,6 +7,13 @@
   --description-dd-weight: var(--font-weight-regular);
   --description-dt-weight: var(--font-weight-bold);
 
+  display: grid;
+  margin: 0;
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-regular);
+  gap: var(--spacing-s) var(--spacing-m);
+  line-height: var(--semantic-line-height-default);
+
   &DescriptionBold {
     --description-dd-weight: var(--font-weight-bold);
   }
@@ -16,13 +21,6 @@
   &TermRegular {
     --description-dt-weight: var(--font-weight-regular);
   }
-
-  display: grid;
-  margin: 0;
-  font-size: var(--font-size-m);
-  font-weight: var(--font-weight-regular);
-  gap: var(--spacing-s) var(--spacing-m);
-  line-height: var(--semantic-line-height-default);
 
   &_horizontal {
     gap: var(--spacing-m) var(--spacing-l);
