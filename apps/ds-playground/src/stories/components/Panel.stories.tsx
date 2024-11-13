@@ -193,7 +193,8 @@ export const Examples: Story = {
         >
           <Paragraph>{`
       Her har vi satt hasResponsivePadding:true og endret følgende CSS variabler for responsive visning. 
-      --panel-padding-mobile, --pandel-padding-m og --pandel-padding-l. F.eks er Synlig hvis skjermbredde < 480px og bredde >= 1366px (breakpoint-l)
+      --panel-padding-mobile, --pandel-padding-m og --pandel-padding-l.
+      Sammenlign det med normal-padding hvis skjermbredde er smalere enn 480px eller skjermbredde >= 1366px (breakpoint-l)
       `}</Paragraph>
         </Panel>
       </>

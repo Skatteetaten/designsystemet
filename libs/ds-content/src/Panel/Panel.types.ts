@@ -42,11 +42,11 @@ export interface PanelComponentCommonProps extends BaseProps {
    * Brukes sammen med prop 'headingRef' og 'title'
    */
   canManuallySetTitleFocus?: boolean;
-  /** Tekst eller markup for Panel. */
+  /** Ekstra CSS hvor padding-verdien styrer paddingen i responsive padding */
   classNames?: {
     padding?: string;
   };
-
+  /** Innholdet i Panel */
   children: ReactNode;
   /** Farge på border eller bakgrunn for Panel avhengig av variant som er valgt. */
   color?: PanelColor;
@@ -79,15 +79,15 @@ export interface PanelComponentCommonProps extends BaseProps {
 
 export type PanelDiscriminatedPadding =
   | {
-      /** Padding rundt Panel. */
+      /** Padding rundt Panel. Se også hasResponsivePadding */
       padding?: PanelPadding;
-      /** hasRespoinsivePadding legger til media query slik at man kan styre padding per brekkpunkt */
+      /** hasRespoinsivePadding legger til media query slik at man kan styre padding pr brekkpunkt. Se også padding-prop */
       hasResponsivePadding?: never;
     }
   | {
-      /** Padding rundt Panel. */
+      /** Padding rundt Panel. Se også hasResponsivePadding  */
       padding?: never;
-      /** hasRespoinsivePadding legger til media query slik at man kan styre padding per brekkpunkt */
+      /** hasRespoinsivePadding legger til media query slik at man kan styre padding pr brekkpunkt. Se også padding-prop */
       hasResponsivePadding?: boolean;
     };
 
