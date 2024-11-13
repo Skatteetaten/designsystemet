@@ -2,6 +2,7 @@ import {
   StepList,
   getStepListStepTitleAsDefault,
   getStepListStepVariantDefault,
+  getStepListStepShouldAutoFocusWhenActiveDefault,
 } from '@skatteetaten/ds-collections';
 import { getPanelTitleAsDefault } from '@skatteetaten/ds-content';
 import { dsI18n, headingAsArr } from '@skatteetaten/ds-core-utils';
@@ -65,6 +66,14 @@ const meta = {
       table: { category: category.props },
     },
     svgTitle: { table: { category: category.props } },
+    shouldAutoFocusWhenActive: {
+      table: {
+        category: category.props,
+        defaultValue: {
+          summary: getStepListStepShouldAutoFocusWhenActiveDefault().toString(),
+        },
+      },
+    },
     variant: {
       table: {
         category: category.props,
