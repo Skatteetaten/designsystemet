@@ -2,7 +2,7 @@ import { StepList, stepVariantArr } from '@skatteetaten/ds-collections';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TimersandSVGpath } from '@skatteetaten/ds-icons';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, within } from '@storybook/test';
+import { expect, fn, waitFor, within } from '@storybook/test';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 import { category } from '../../../.storybook/helpers';
@@ -31,6 +31,9 @@ const meta = {
     editButtonText: { table: { disable: true, category: category.props } },
     nextButtonText: { table: { disable: true, category: category.props } },
     nextButtonProps: { table: { disable: true, category: category.props } },
+    shouldAutoFocusWhenActive: {
+      table: { disable: true, category: category.props },
+    },
     hasResultContentFullWidth: {
       table: { disable: true, category: category.props },
     },
@@ -143,6 +146,35 @@ export const WithIconTitleAS = {
     await expect(canvas.getByTitle('svg-tittel')).toBeInTheDocument();
     await expect(canvas.getByText(loremIpsum)).toBeInTheDocument();
     await expect(heading.tagName).toBe('H2');
+    const focused = canvasElement.querySelector('[aria-current="step"]');
+    await waitFor(async () => {
+      await expect(focused).toHaveFocus();
+    });
+  },
+} satisfies Story;
+
+export const WithShouldAutoFocusWhenActiveFalse = {
+  render: Template,
+  name: 'With shouldAutoFocusWhenActive False ',
+  args: {
+    variant: 'active',
+    stepNumber: 13,
+    title: 'jeg er en tittel',
+    titleAs: 'h2',
+    children: loremIpsum,
+    shouldAutoFocusWhenActive: false,
+    onEdit: undefined,
+  },
+  argTypes: {
+    shouldAutoFocusWhenActive: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const focused = canvasElement.querySelector('[aria-current="step"]');
+    await expect(focused).not.toHaveFocus();
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+    HTMLSnapshot: { disable: true },
   },
 } satisfies Story;
 
@@ -196,6 +228,7 @@ export const NextButtonWithSpinner = {
     children: loremIpsum,
     nextButtonProps: { hasSpinner: true },
     onNext: (): void => console.log('next'),
+    shouldAutoFocusWhenActive: false,
   },
   argTypes: {
     nextButtonProps: { table: { disable: false } },
@@ -212,6 +245,7 @@ export const NextButtonWithDisabled = {
     children: loremIpsum,
     nextButtonProps: { disabled: true },
     onNext: (): void => console.log('next'),
+    shouldAutoFocusWhenActive: false,
   },
   argTypes: {
     nextButtonProps: { table: { disable: false } },

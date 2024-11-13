@@ -53,6 +53,13 @@ export interface StepListStepProps extends BaseProps {
    er tilgjengelig.
    */
   hasResultContentFullWidth?: boolean;
+
+  /**
+   * Styrer om aktivt steg skal få fokus automatisk. Hvis denne settes til false må man håndtere fokus
+   * selv. Når man bruker id propen så vil komponenten gi elementen som skal få fokus id=`${id}-focus-target` slik at
+   * man kan finne elementet.
+   */
+  shouldAutoFocusWhenActive?: boolean;
   /** Innholdet i steget */
   children: ReactNode;
 }
