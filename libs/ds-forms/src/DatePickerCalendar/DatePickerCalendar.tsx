@@ -85,6 +85,19 @@ export const DatePickerCalendar = forwardRef<
     const [january, december] = [0, 11];
     const { monthNames, dayNames } = getNameOfMonthsAndDays();
 
+    const isFirstFocusableDateInView =
+      firstFocusableDate.getFullYear() === selectedYear &&
+      firstFocusableDate.getMonth() === selectedMonthIndex;
+
+    const cellBtnThatWillReceiveFocus = isFirstFocusableDateInView
+      ? firstFocusableDate
+      : getFirstFocusableDate(
+          new Date(Number(selectedYear), selectedMonthIndex, 1),
+          minDate,
+          maxDate,
+          disabledDateTimestamps
+        );
+
     const isMonthInvalid = (
       monthIndex: number,
       year: number,
@@ -374,7 +387,11 @@ export const DatePickerCalendar = forwardRef<
                           className={buttonClassName}
                           type={'button'}
                           disabled={cell.disabled}
-                          tabIndex={ariaCurrent === 'true' ? 0 : -1}
+                          tabIndex={
+                            isEqual(cell.date, cellBtnThatWillReceiveFocus)
+                              ? 0
+                              : -1
+                          }
                           aria-current={ariaCurrent}
                           aria-label={ariaLabel}
                           onClick={(): void => {
