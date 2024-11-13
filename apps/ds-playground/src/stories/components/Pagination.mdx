@@ -1,7 +1,7 @@
 import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
 import * as PaginationStories from './Pagination.stories';
 import { VersionBadge } from '../utils/VersionBadge';
-import { DocIntro, MoreOf } from '../utils/DocIntro';
+import { DocIntro, Link } from '../utils/DocIntro';
 
 <Meta of={PaginationStories} />
 
@@ -14,10 +14,7 @@ import { DocIntro, MoreOf } from '../utils/DocIntro';
   url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/pagination/"
 />
 
-<MoreOf>
-{/* <!-- prettier-ignore --> */}
-Hvordan bruke <a href="#hvordan-bruke-props-i-kombinasjon-med-andre-props" target="_self">props</a> i komponenten
-</MoreOf>
+Hvordan bruke <Link url="#hvordan-bruke-props-i-kombinasjon-med-andre-props" target="_self">props</Link> i komponenten
 
 <Primary />
 

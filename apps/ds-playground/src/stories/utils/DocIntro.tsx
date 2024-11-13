@@ -19,10 +19,6 @@ export const DocIntro = ({ name, url }: DocIntroProps): ReactNode => {
   );
 };
 
-export const MoreOf = ({ children }: { children?: ReactNode }): ReactNode => {
-  return <Paragraph variant={'ingress'}>{children}</Paragraph>;
-};
-
 export const Link = ({
   url,
   children,
@@ -33,7 +29,7 @@ export const Link = ({
   target?: string;
 }): ReactNode => {
   return (
-    <DSLink href={url} target={target}>
+    <DSLink href={url} target={target} className={'docs'}>
       {children}
     </DSLink>
   );

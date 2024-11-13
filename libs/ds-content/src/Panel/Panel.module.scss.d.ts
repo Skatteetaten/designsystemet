@@ -4,6 +4,7 @@ declare const classNames: {
   readonly panel_filled: 'panel_filled';
   readonly panel_graphicImage: 'panel_graphicImage';
   readonly panelGraphicHide: 'panelGraphicHide';
+  readonly panelResponsive: 'panelResponsive';
   readonly panel_graphicIcon: 'panel_graphicIcon';
   readonly panel_graphicIconHide: 'panel_graphicIconHide';
   readonly panelGraphic: 'panelGraphic';
@@ -28,7 +29,6 @@ declare const classNames: {
   readonly panel_spacingXL: 'panel_spacingXL';
   readonly panel_spacingXXL: 'panel_spacingXXL';
   readonly panel_spacingMEGA: 'panel_spacingMEGA';
-  readonly panelResponsive: 'panelResponsive';
   readonly srOnly: 'srOnly';
 };
 export default classNames;

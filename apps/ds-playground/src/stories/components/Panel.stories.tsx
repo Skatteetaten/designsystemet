@@ -17,7 +17,7 @@ import {
   subheadingAsArr,
 } from '@skatteetaten/ds-core-utils';
 import { CheckIcon } from '@skatteetaten/ds-icons';
-import { Paragraph } from '@skatteetaten/ds-typography';
+import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
@@ -114,6 +114,13 @@ const meta = {
   args: {
     children: loremIpsum,
   },
+  parameters: {
+    tags: ['!autodocs'],
+    metadata: {
+      documentation: 'manel metadata.documentation',
+    },
+  },
+  tags: ['!autodocs'],
 } satisfies Meta<typeof Panel>;
 
 export default meta;
@@ -183,22 +190,69 @@ export const Examples: Story = {
         >
           {'Sett fokus på Panel Header'}
         </Button>
-
-        <Panel
-          title={`Med responsive padding `}
-          classNames={{
-            padding: 'dummyPanelPaddingResponsive',
-          }}
-          hasResponsivePadding
-        >
-          <Paragraph>{`
-      Her har vi satt hasResponsivePadding:true og endret følgende CSS variabler for responsive visning. 
-      --panel-padding-mobile, --pandel-padding-m og --pandel-padding-l.
-      Sammenlign det med normal-padding hvis skjermbredde er smalere enn 480px eller skjermbredde >= 1366px (breakpoint-l)
-      `}</Paragraph>
-        </Panel>
       </>
     );
   },
 } satisfies Story;
+
+export const PanelPadding = {
+  name: 'PanelPadding',
+  args: {
+    hasResponsivePadding: undefined,
+    title: 'Eksempel på padding satt via prop',
+    padding: 'm',
+  },
+  argTypes: {
+    classNames: { control: 'object' },
+  },
+  parameters: {
+    controls: {
+      include: ['hasResponsivePadding', 'classNames', 'renderIcon'],
+    },
+    viewport: {
+      defaultViewport: '--mobile',
+    },
+  },
+  tags: ['!dev'],
+  render: (args): JSX.Element => {
+    return (
+      <>
+        <Heading as={'h1'} level={3}>
+          {'Tekst utenfor Panel'}
+        </Heading>
+        {loremIpsum}
+        <Panel {...args}>{loremIpsum}</Panel>
+      </>
+    );
+  },
+} satisfies Story;
+
+export const PanelPaddingFullWidth = {
+  ...PanelPadding,
+  args: {
+    ...PanelPadding.args,
+    hasResponsivePadding: true,
+    padding: undefined,
+    title: 'Eksempel på padding med CSS variabler',
+    classNames: {
+      padding: 'dummyPanelPaddingResponsiveFullWidth',
+    },
+  },
+  tags: ['!dev'],
+};
+
+export const PanelPaddingNoMargin = {
+  ...PanelPadding,
+  args: {
+    ...PanelPadding.args,
+    hasResponsivePadding: true,
+    padding: undefined,
+    title: 'Innholdsbredde 100%',
+    classNames: {
+      padding: 'dummyPanelPaddingNoMargin',
+    },
+  },
+  tags: ['!dev'],
+};
+
 Examples.parameters = exampleParameters;

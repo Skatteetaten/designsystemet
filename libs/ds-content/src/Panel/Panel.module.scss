@@ -179,23 +179,23 @@ $border-outline: 6px;
   &Responsive {
     --panel-padding: var(--panel-padding-mobile);
 
-    @media (width >= $breakpoint-xs) {
+    @media (min-width: breakpoints.$breakpoint-xs) {
       --panel-padding: var(--panel-padding-xs);
     }
 
-    @media (width >= $breakpoint-s) {
+    @media (min-width: breakpoints.$breakpoint-s) {
       --panel-padding: var(--panel-padding-s);
     }
 
-    @media (width >= $breakpoint-m) {
+    @media (min-width: breakpoints.$breakpoint-m) {
       --panel-padding: var(--panel-padding-m);
     }
 
-    @media (width >= $breakpoint-l) {
+    @media (min-width: breakpoints.$breakpoint-l) {
       --panel-padding: var(--panel-padding-l);
     }
 
-    @media (width >= $breakpoint-xl) {
+    @media (min-width: breakpoints.$breakpoint-xl) {
       --panel-padding: var(--panel-padding-xl);
     }
   }
