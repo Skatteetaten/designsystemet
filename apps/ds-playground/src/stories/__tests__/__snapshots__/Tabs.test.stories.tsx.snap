@@ -46,6 +46,7 @@ exports[`Tester/Tabs/Tabs Defaults play-test 1`] = `
          class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r0:-tab2"
+         hidden
     >
       Tabs.Panel Bedrift
     </div>
@@ -53,6 +54,7 @@ exports[`Tester/Tabs/Tabs Defaults play-test 1`] = `
          class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r0:-tab3"
+         hidden
     >
       Tabs.Panel Organisasjon
     </div>
@@ -106,6 +108,7 @@ exports[`Tester/Tabs/Tabs WithAriaRolesTabindex play-test 1`] = `
          class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r6:-tab2"
+         hidden
     >
       Tabs.Panel Bedrift
     </div>
@@ -113,6 +116,7 @@ exports[`Tester/Tabs/Tabs WithAriaRolesTabindex play-test 1`] = `
          class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r6:-tab3"
+         hidden
     >
       Tabs.Panel Organisasjon
     </div>
@@ -170,6 +174,7 @@ exports[`Tester/Tabs/Tabs WithAttributes play-test 1`] = `
          class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r2:-tab2"
+         hidden
     >
       Tabs.Panel Bedrift
     </div>
@@ -177,6 +182,7 @@ exports[`Tester/Tabs/Tabs WithAttributes play-test 1`] = `
          class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r2:-tab3"
+         hidden
     >
       Tabs.Panel Organisasjon
     </div>
@@ -223,6 +229,7 @@ exports[`Tester/Tabs/Tabs WithDefaultValue play-test 1`] = `
          class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r4:-tab1"
+         hidden
     >
       Tabs.Panel Person
     </div>
@@ -237,6 +244,7 @@ exports[`Tester/Tabs/Tabs WithDefaultValue play-test 1`] = `
          class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r4:-tab3"
+         hidden
     >
       Tabs.Panel Organisasjon
     </div>
@@ -299,6 +307,7 @@ exports[`Tester/Tabs/Tabs WithMultiline smoke-test 1`] = `
          class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r7:-tab2"
+         hidden
     >
       Tabs.Panel - Bedrift
     </div>
@@ -306,6 +315,7 @@ exports[`Tester/Tabs/Tabs WithMultiline smoke-test 1`] = `
          class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r7:-tab3"
+         hidden
     >
       Tabs.Panel - Ubehandlede saker (+99)
     </div>
@@ -313,6 +323,7 @@ exports[`Tester/Tabs/Tabs WithMultiline smoke-test 1`] = `
          class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r7:-tab4"
+         hidden
     >
       Tabs.Panel - Behandlede
     </div>
@@ -368,6 +379,7 @@ exports[`Tester/Tabs/Tabs WithTabClick play-test 1`] = `
          class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r8:-tab1"
+         hidden
     >
       Tabs.Panel Person
     </div>
@@ -382,6 +394,7 @@ exports[`Tester/Tabs/Tabs WithTabClick play-test 1`] = `
          class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r8:-tab3"
+         hidden
     >
       Tabs.Panel Organisasjon
     </div>
@@ -419,6 +432,7 @@ exports[`Tester/Tabs/Tabs WithValue play-test 1`] = `
          class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r5:-tab1"
+         hidden
     >
       Tabs.Panel - Person
     </div>
@@ -486,6 +500,7 @@ exports[`Tester/Tabs/Tabs WithVariantCompact smoke-test 1`] = `
          class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r3:-tab2"
+         hidden
     >
       Tabs.Panel Bedrift
     </div>
@@ -493,6 +508,7 @@ exports[`Tester/Tabs/Tabs WithVariantCompact smoke-test 1`] = `
          class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r3:-tab3"
+         hidden
     >
       Tabs.Panel Organisasjon
     </div>

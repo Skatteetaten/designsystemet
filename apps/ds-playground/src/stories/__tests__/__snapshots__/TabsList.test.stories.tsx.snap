@@ -39,6 +39,7 @@ exports[`Tester/Tabs/List WithAttributes smoke-test 1`] = `
          class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r0:-tab2"
+         hidden
     >
       Tabs.Panel Bedrift
     </div>
