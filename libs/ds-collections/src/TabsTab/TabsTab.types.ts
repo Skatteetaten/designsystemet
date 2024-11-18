@@ -9,4 +9,6 @@ export interface TabsTabProps extends BaseProps {
   svgPath?: ReactElement;
   /** Verdien som lenker sammen Tabs.Tab og Tabs.Panel */
   value: string;
+  /** Callback som kalles ved klikk på Tab. */
+  onClick?: (value: string) => void;
 }

@@ -1,4 +1,4 @@
-import { JSX } from 'react';
+import { JSX, useState } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { Tabs, TabsProps } from '@skatteetaten/ds-collections';
@@ -48,6 +48,33 @@ const TemplateTabs: StoryFn<typeof Tabs> = (args) => {
         <Tabs.Tab value={'tab1'}>{'Person'}</Tabs.Tab>
         <Tabs.Tab value={'tab2'}>{'Bedrift'}</Tabs.Tab>
         <Tabs.Tab value={'tab3'}>{'Organisasjon'}</Tabs.Tab>
+      </Tabs.List>
+      <Tabs.Panel value={'tab1'}>{'Tabs.Panel Person'}</Tabs.Panel>
+      <Tabs.Panel value={'tab2'}>{'Tabs.Panel Bedrift'}</Tabs.Panel>
+      <Tabs.Panel value={'tab3'}>{'Tabs.Panel Organisasjon'}</Tabs.Panel>
+    </Tabs>
+  );
+};
+
+const TemplateTabsWithOnClick: StoryFn<typeof Tabs> = (args) => {
+  const [value, setValue] = useState('tab1');
+
+  const handleOnClick = (v: string): void => {
+    setValue(v);
+  };
+
+  return (
+    <Tabs {...args} value={value}>
+      <Tabs.List>
+        <Tabs.Tab value={'tab1'} onClick={() => handleOnClick('tab1')}>
+          {'Person'}
+        </Tabs.Tab>
+        <Tabs.Tab value={'tab2'} onClick={() => handleOnClick('tab2')}>
+          {'Bedrift'}
+        </Tabs.Tab>
+        <Tabs.Tab value={'tab3'} onClick={() => handleOnClick('tab3')}>
+          {'Organisasjon'}
+        </Tabs.Tab>
       </Tabs.List>
       <Tabs.Panel value={'tab1'}>{'Tabs.Panel Person'}</Tabs.Panel>
       <Tabs.Panel value={'tab2'}>{'Tabs.Panel Bedrift'}</Tabs.Panel>
@@ -325,6 +352,32 @@ export const WithTabClick = {
     });
     await userEvent.click(secondTab);
     await waitFor(() => expect(args.onChange).toHaveBeenCalled());
+    await expect(firstTab).toHaveAttribute('aria-selected', 'false');
+    await expect(firstTab).toHaveAttribute('tabIndex', '-1');
+  },
+} satisfies Story;
+
+export const WithTabOnClickEvent = {
+  name: 'With Tab OnClick Event',
+  render: TemplateTabsWithOnClick,
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const firstTab = canvas.getByRole('tab', {
+      name: 'Person',
+    });
+    await expect(firstTab).toBeInTheDocument();
+    await expect(firstTab).toHaveAttribute('aria-selected', 'true');
+    await expect(firstTab).toHaveAttribute('tabIndex', '0');
+    const secondTab = canvas.getByRole('tab', {
+      name: 'Bedrift',
+    });
+    await userEvent.click(secondTab);
     await expect(firstTab).toHaveAttribute('aria-selected', 'false');
     await expect(firstTab).toHaveAttribute('tabIndex', '-1');
   },
