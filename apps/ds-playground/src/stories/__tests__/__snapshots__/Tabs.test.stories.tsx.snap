@@ -402,6 +402,68 @@ exports[`Tester/Tabs/Tabs WithTabClick play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Tabs/Tabs WithTabOnClickEvent play-test 1`] = `
+<div data-test-block="true">
+  <div class>
+    <div class="_tabList_ibyzk_1  "
+         role="tablist"
+         tabindex="-1"
+    >
+      <button id="ds-tab-id-:r9:-tab1"
+              class="_tab_1dx22_1     "
+              role="tab"
+              tabindex="-1"
+              aria-selected="false"
+              aria-controls="ds-tab-panel-:r9:-tab1"
+      >
+        Person
+      </button>
+      <button id="ds-tab-id-:r9:-tab2"
+              class="_tab_1dx22_1   _tab_active_1dx22_27  "
+              role="tab"
+              tabindex="0"
+              aria-selected="true"
+              aria-controls="ds-tab-panel-:r9:-tab2"
+      >
+        Bedrift
+      </button>
+      <button id="ds-tab-id-:r9:-tab3"
+              class="_tab_1dx22_1     "
+              role="tab"
+              tabindex="-1"
+              aria-selected="false"
+              aria-controls="ds-tab-panel-:r9:-tab3"
+      >
+        Organisasjon
+      </button>
+    </div>
+    <div id="ds-tab-panel-:r9:-tab1"
+         class="_panel_1bj6c_1  "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-:r9:-tab1"
+         hidden
+    >
+      Tabs.Panel Person
+    </div>
+    <div id="ds-tab-panel-:r9:-tab2"
+         class="_panel_1bj6c_1 _panel_active_1bj6c_4 "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-:r9:-tab2"
+    >
+      Tabs.Panel Bedrift
+    </div>
+    <div id="ds-tab-panel-:r9:-tab3"
+         class="_panel_1bj6c_1  "
+         role="tabpanel"
+         aria-labelledby="ds-tab-id-:r9:-tab3"
+         hidden
+    >
+      Tabs.Panel Organisasjon
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Tester/Tabs/Tabs WithValue play-test 1`] = `
 <div data-test-block="true">
   <div class>

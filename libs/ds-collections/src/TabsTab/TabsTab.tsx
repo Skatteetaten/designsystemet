@@ -17,6 +17,7 @@ export const TabsTab = forwardRef<HTMLButtonElement, TabsTabProps>(
       'data-testid': dataTestId,
       svgPath,
       value,
+      onClick,
       children,
     },
     ref
@@ -76,7 +77,11 @@ export const TabsTab = forwardRef<HTMLButtonElement, TabsTabProps>(
         aria-selected={activeTab === value}
         aria-controls={`ds-tab-panel-${baseId}-${value}`}
         onClick={(): void => {
-          setInternalActiveTab(value);
+          if (onClick) {
+            onClick(value);
+          } else {
+            setInternalActiveTab(value);
+          }
         }}
         onKeyDown={(e): void => {
           handleKeyboardNavigation(e);
