@@ -43,6 +43,8 @@ export * from './CircleDown';
 export * from './CircleFilled';
 export * from './CircleRing';
 export * from './CircleUp';
+export * from './Clock';
+export * from './ClockOutline';
 export * from './Cloud';
 export * from './CloudUpload';
 export * from './Code';
