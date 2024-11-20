@@ -5,6 +5,8 @@ import {
   useRef,
   MouseEvent,
   JSX,
+  useState,
+  useEffect,
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -58,9 +60,33 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
     const statusFlagRef = useRef({
       mouseDownCaptured: false,
     });
-
     const modalRef = useRef<HTMLDialogElement>(null);
     useImperativeHandle(ref, () => modalRef?.current as HTMLDialogElement);
+    const [openingNode, setOpeningNode] = useState<boolean>(
+      document.activeElement?.nodeName === 'BODY'
+    );
+
+    useEffect(() => {
+      const dialog = modalRef.current;
+      const handleClose = (): void => {
+        if (openingNode) {
+          setOpeningNode(false);
+          const prevTabIndex = document.body.tabIndex;
+          document.body.tabIndex = -1;
+          document.body.focus();
+          document.body.tabIndex = prevTabIndex;
+        }
+      };
+
+      if (dialog) {
+        dialog.addEventListener('close', handleClose);
+      }
+      return (): void => {
+        if (dialog) {
+          dialog.removeEventListener('close', handleClose);
+        }
+      };
+    }, [openingNode]);
 
     const isClickOutside = (event: MouseEvent): boolean => {
       if (!(event.target instanceof HTMLElement)) {
