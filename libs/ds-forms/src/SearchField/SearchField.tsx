@@ -89,6 +89,13 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
 
     useImperativeHandle(ref, () => inputRef?.current as HTMLInputElement);
 
+    //skjule clearButton dersom value fjernes programatisk fra utenfor komponenten
+    useEffect(() => {
+      if (!value && !defaultValue) {
+        setShowClearButton(false);
+      }
+    }, [value, defaultValue]);
+
     useEffect(() => {
       setShowResults(!!(!disabled && results?.length));
     }, [disabled, results]);
@@ -207,6 +214,7 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
               onBlur={onBlur}
               onChange={(event) => {
                 onChange?.(event);
+                // nødvendig for at clearButton skal vises riktig for uncontrolled komponent
                 if (event.target.value.length) {
                   setShowClearButton(true);
                 } else {
@@ -259,6 +267,7 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
                 title={clearButtonTitle ?? t('searchfield.ClearButtonTitle')}
                 onClick={(event) => {
                   onClear?.(event);
+                  // Nødvendig for å fjerne knappen også i uncontrolled SearchField
                   setShowClearButton(false);
                   if (!value && inputRef.current) {
                     inputRef.current.value = '';
