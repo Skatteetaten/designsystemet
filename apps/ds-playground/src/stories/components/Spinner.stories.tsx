@@ -1,5 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
+import { useEffect, useState, JSX, useRef } from 'react';
 
+import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   Spinner,
@@ -46,6 +48,11 @@ const meta = {
         defaultValue: { summary: getSpinnerColorDefault() },
       },
     },
+    percentComplete: {
+      table: {
+        category: category.props,
+      },
+    },
     hideTitle: { table: { category: category.props } },
   },
 } satisfies Meta<typeof Spinner>;
@@ -56,21 +63,47 @@ type Story = StoryObj<typeof meta>;
 export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
-  render: (_args) => (
-    <>
-      <Spinner
-        className={'bottomSpacingXL'}
-        size={'large'}
-        color={'blue'}
-        titlePosition={'right'}
-      >
-        {'Vent litt mens vi sjekker tidligere innsendte a-meldinger'}
-      </Spinner>
+  render: (_args): JSX.Element => {
+    const [showSpinner, setShowSpinner] = useState(false);
+    const [progress, setProgress] = useState(0);
+    const interval = useRef<ReturnType<typeof setTimeout> | undefined>(
+      undefined
+    );
+    useEffect(() => {
+      if (progress === 100) {
+        clearInterval(interval.current);
+      }
+    }, [progress]);
+    return (
+      <>
+        <Button
+          onClick={() => {
+            setProgress(0);
+            if (interval.current) {
+              clearInterval(interval.current);
+              interval.current = undefined;
+            }
+            interval.current = setInterval(() => {
+              setProgress((prev) => (prev >= 100 ? 0 : prev + 10));
+            }, 1000);
 
-      <Spinner size={'small'} color={'blue'} titlePosition={'right'}>
-        {'Vent litt mens vi sjekker tidligere innsendte a-meldinger'}
-      </Spinner>
-    </>
-  ),
+            setShowSpinner(!showSpinner);
+            setProgress(0);
+          }}
+        >
+          {'toggle spinner'}
+        </Button>
+        {showSpinner && (
+          <Spinner
+            percentComplete={progress}
+            className={'bottomSpacingXL'}
+            size={'large'}
+            color={'blue'}
+            titlePosition={'right'}
+          />
+        )}
+      </>
+    );
+  },
 } satisfies Story;
 Examples.parameters = exampleParameters;

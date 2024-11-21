@@ -8,7 +8,9 @@ exports[`Tester/Spinner Defaults play-test 1`] = `
   >
     <div class="_spinnerAnimation_wnf1f_40 ">
     </div>
-    <span class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 ">
+    <span id="title-:r2:"
+          class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 "
+    >
       Laster inn
     </span>
   </div>
@@ -26,7 +28,9 @@ exports[`Tester/Spinner WithAttributes play-test 1`] = `
   >
     <div class="_spinnerAnimation_wnf1f_40 ">
     </div>
-    <span class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 ">
+    <span id="title-htmlid"
+          class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 "
+    >
       Laster inn
     </span>
   </div>
@@ -41,7 +45,9 @@ exports[`Tester/Spinner WithColorsDarkBackground smoke-test 1`] = `
   >
     <div class="_spinnerAnimation_wnf1f_40 ">
     </div>
-    <span class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 ">
+    <span id="title-:rh:"
+          class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 "
+    >
       Laster inn
     </span>
   </div>
@@ -56,7 +62,9 @@ exports[`Tester/Spinner WithColorsLightBackground smoke-test 1`] = `
   >
     <div class="_spinnerAnimation_wnf1f_40 ">
     </div>
-    <span class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 ">
+    <span id="title-:rf:"
+          class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 "
+    >
       Henter innhold
     </span>
   </div>
@@ -66,7 +74,9 @@ exports[`Tester/Spinner WithColorsLightBackground smoke-test 1`] = `
   >
     <div class="_spinnerAnimation_wnf1f_40 ">
     </div>
-    <span class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 ">
+    <span id="title-:rg:"
+          class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 "
+    >
       Henter innhold
     </span>
   </div>
@@ -81,9 +91,38 @@ exports[`Tester/Spinner WithHideText play-test 1`] = `
   >
     <div class="_spinnerAnimation_wnf1f_40 ">
     </div>
-    <span class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 ">
+    <span id="title-:ri:"
+          class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+    >
       laster data
     </span>
+  </div>
+</div>
+`;
+
+exports[`Tester/Spinner WithPercent play-test 1`] = `
+<div data-test-block="true">
+  <div aria-labelledby="title-:rj:"
+       role="progressbar"
+       aria-valuemin="0"
+       aria-valuemax="100"
+       aria-busy="true"
+       aria-valuenow="50"
+       class="_spinner_wnf1f_5 _spinner_black_wnf1f_13 _spinner_flexColumn_wnf1f_32 _spinner_medium_wnf1f_25  "
+  >
+    <div class="_spinnerAnimation_wnf1f_40 ">
+    </div>
+    <span id="title-:rj:"
+          class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 "
+    >
+      Laster inn (50 %)
+    </span>
+  </div>
+  <div class="_srOnly_wnf1f_70"
+       aria-atomic="true"
+       aria-live="polite"
+  >
+    50 %
   </div>
 </div>
 `;
@@ -97,7 +136,9 @@ exports[`Tester/Spinner WithRef play-test 1`] = `
   >
     <div class="_spinnerAnimation_wnf1f_40 ">
     </div>
-    <span class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 ">
+    <span id="title-:r0:"
+          class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 "
+    >
       Laster inn
     </span>
   </div>
@@ -112,7 +153,9 @@ exports[`Tester/Spinner WithSizeAndPosition smoke-test 1`] = `
   >
     <div class="_spinnerAnimation_wnf1f_40 ">
     </div>
-    <span class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 ">
+    <span id="title-:r3:"
+          class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 "
+    >
       henter innhold
     </span>
   </div>
@@ -122,7 +165,9 @@ exports[`Tester/Spinner WithSizeAndPosition smoke-test 1`] = `
   >
     <div class="_spinnerAnimation_wnf1f_40 ">
     </div>
-    <span class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 ">
+    <span id="title-:r4:"
+          class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 "
+    >
       henter innhold
     </span>
   </div>
@@ -132,7 +177,9 @@ exports[`Tester/Spinner WithSizeAndPosition smoke-test 1`] = `
   >
     <div class="_spinnerAnimation_wnf1f_40 ">
     </div>
-    <span class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 ">
+    <span id="title-:r5:"
+          class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 "
+    >
       henter innhold
     </span>
   </div>
@@ -142,7 +189,9 @@ exports[`Tester/Spinner WithSizeAndPosition smoke-test 1`] = `
   >
     <div class="_spinnerAnimation_wnf1f_40 ">
     </div>
-    <span class="_spinnerTitle_wnf1f_59   ">
+    <span id="title-:r6:"
+          class="_spinnerTitle_wnf1f_59   "
+    >
       henter innhold
     </span>
   </div>
@@ -152,7 +201,9 @@ exports[`Tester/Spinner WithSizeAndPosition smoke-test 1`] = `
   >
     <div class="_spinnerAnimation_wnf1f_40 ">
     </div>
-    <span class="_spinnerTitle_wnf1f_59   ">
+    <span id="title-:r7:"
+          class="_spinnerTitle_wnf1f_59   "
+    >
       henter innhold
     </span>
   </div>
@@ -162,7 +213,9 @@ exports[`Tester/Spinner WithSizeAndPosition smoke-test 1`] = `
   >
     <div class="_spinnerAnimation_wnf1f_40 ">
     </div>
-    <span class="_spinnerTitle_wnf1f_59   ">
+    <span id="title-:r8:"
+          class="_spinnerTitle_wnf1f_59   "
+    >
       henter innhold
     </span>
   </div>
@@ -177,7 +230,9 @@ exports[`Tester/Spinner WithSizeAndPositionLongText smoke-test 1`] = `
   >
     <div class="_spinnerAnimation_wnf1f_40 ">
     </div>
-    <span class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 ">
+    <span id="title-:r9:"
+          class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 "
+    >
       Henter årsmiddelkurs fra valutakurstjenesten
     </span>
   </div>
@@ -187,7 +242,9 @@ exports[`Tester/Spinner WithSizeAndPositionLongText smoke-test 1`] = `
   >
     <div class="_spinnerAnimation_wnf1f_40 ">
     </div>
-    <span class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 ">
+    <span id="title-:ra:"
+          class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 "
+    >
       Henter årsmiddelkurs fra valutakurstjenesten
     </span>
   </div>
@@ -197,7 +254,9 @@ exports[`Tester/Spinner WithSizeAndPositionLongText smoke-test 1`] = `
   >
     <div class="_spinnerAnimation_wnf1f_40 ">
     </div>
-    <span class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 ">
+    <span id="title-:rb:"
+          class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 "
+    >
       Henter årsmiddelkurs fra valutakurstjenesten
     </span>
   </div>
@@ -207,7 +266,9 @@ exports[`Tester/Spinner WithSizeAndPositionLongText smoke-test 1`] = `
   >
     <div class="_spinnerAnimation_wnf1f_40 ">
     </div>
-    <span class="_spinnerTitle_wnf1f_59   ">
+    <span id="title-:rc:"
+          class="_spinnerTitle_wnf1f_59   "
+    >
       Henter årsmiddelkurs fra valutakurstjenesten
     </span>
   </div>
@@ -217,7 +278,9 @@ exports[`Tester/Spinner WithSizeAndPositionLongText smoke-test 1`] = `
   >
     <div class="_spinnerAnimation_wnf1f_40 ">
     </div>
-    <span class="_spinnerTitle_wnf1f_59   ">
+    <span id="title-:rd:"
+          class="_spinnerTitle_wnf1f_59   "
+    >
       Henter årsmiddelkurs fra valutakurstjenesten
     </span>
   </div>
@@ -227,7 +290,9 @@ exports[`Tester/Spinner WithSizeAndPositionLongText smoke-test 1`] = `
   >
     <div class="_spinnerAnimation_wnf1f_40 ">
     </div>
-    <span class="_spinnerTitle_wnf1f_59   ">
+    <span id="title-:re:"
+          class="_spinnerTitle_wnf1f_59   "
+    >
       Henter årsmiddelkurs fra valutakurstjenesten
     </span>
   </div>
