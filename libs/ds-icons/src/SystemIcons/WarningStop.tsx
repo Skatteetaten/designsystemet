@@ -11,6 +11,6 @@ export const WarningStopSVGpath = (
   />
 );
 
-export function WarningIcon(props: IconPropsWithoutSvgPath): JSX.Element {
+export function WarningStopIcon(props: IconPropsWithoutSvgPath): JSX.Element {
   return <Icon {...props} svgPath={WarningStopSVGpath} />;
 }
