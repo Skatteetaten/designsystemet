@@ -44,9 +44,16 @@
     }
   }
 
+  &_light {
+    --semantic-success-background: var(--palette-forest-5);
+    --semantic-warning-background: var(--palette-ochre-5);
+    --semantic-danger-background: var(--palette-burgundy-5);
+  }
+
   &_success {
     border-left: 0.25rem solid var(--semantic-success-foreground);
     background-color: var(--semantic-success-background);
+    outline: 1px solid var(--semantic-success-foreground);
 
     .icon {
       fill: var(--semantic-success-foreground);
@@ -56,6 +63,7 @@
   &_neutral {
     border-left: 0.25rem solid var(--semantic-warning-foreground);
     background-color: var(--semantic-warning-background);
+    outline: 1px solid var(--semantic-warning-foreground);
 
     .icon {
       fill: var(--semantic-warning-foreground);
@@ -65,6 +73,7 @@
   &_warning {
     border-left: 0.25rem solid var(--semantic-danger-foreground);
     background-color: var(--semantic-danger-background);
+    outline: 1px solid var(--semantic-danger-foreground);
 
     .icon {
       fill: var(--semantic-danger-foreground);
