@@ -1,0 +1,10 @@
+.peopleList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+}
+
+.showAllButtonWrapper {
+  margin-top: var(--spacing-xs);
+  text-align: right;
+}

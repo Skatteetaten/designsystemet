@@ -212,6 +212,28 @@ exports[`Tester/Icon Gallery SystemIcons smoke-test 1`] = `
        aria-hidden="true"
        role="img"
   >
+    <path d="M20.89 8.51v9.99c0 .55-.45 1-1 1H4.66c0 1.1.89 1.5 2 1.5h14c.91 0 1.73-.53 1.73-1.5v-9c0-1.02-.51-1.87-1.5-1.99">
+    </path>
+    <path d="M9 1.5h4c1.1 0 2 .9 2 2v2h3c1.1 0 2 .9 2 2v9c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2v-9c0-1.11.89-2 2-2h3v-2c0-1.11.89-2 2-2m4 4v-2H9v2z">
+    </path>
+  </svg>
+  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 "
+       viewbox="0 0 24 24"
+       focusable="false"
+       aria-hidden="true"
+       role="img"
+  >
+    <path d="M21,8.5v9c0,1.1-.9,2-2,2H7.9l12.7-12.2c.3.3.4.7.4,1.2Z">
+    </path>
+    <path d="M21.6,3.7l-.4-.4-1-1-4.2,4v-1.8c0-1.1-.9-2-2-2h-4c-1.1,0-2,.9-2,2v2h-3c-1.1,0-2,.9-2,2v9c0,.4.1.7.3,1l-1.9,1.8,1.4,1.4h0S21.6,3.7,21.6,3.7ZM10,4.5h4v2h-4v-2Z">
+    </path>
+  </svg>
+  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 "
+       viewbox="0 0 24 24"
+       focusable="false"
+       aria-hidden="true"
+       role="img"
+  >
     <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
     </path>
   </svg>
