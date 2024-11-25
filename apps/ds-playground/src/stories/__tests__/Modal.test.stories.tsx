@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -83,6 +83,37 @@ const TemplateModal: StoryFn<typeof Modal> = (args) => {
             {'Avbryt'}
           </Button>
         </div>
+      </Modal>
+    </>
+  );
+};
+
+const TemplateModalWithStateChange: StoryFn<typeof Modal> = (args) => {
+  const ref = useRef<HTMLDialogElement>(null);
+  const [showMessage, setShowMessage] = useState(false);
+
+  return (
+    <>
+      <Button onClick={(): void => ref.current?.showModal()}>
+        {'Åpne modal'}
+      </Button>
+      <Modal {...args} ref={ref}>
+        {showMessage ? (
+          <Paragraph hasSpacing>
+            {
+              'Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?'
+            }
+          </Paragraph>
+        ) : (
+          <div className={'flex'}>
+            <Button
+              className={'marginRightM'}
+              onClick={() => setShowMessage(true)}
+            >
+              {'Erstatt opplysninger'}
+            </Button>
+          </div>
+        )}
       </Modal>
     </>
   );
@@ -407,5 +438,24 @@ export const WithShadowDom = {
       'modal-customelement'
     ) as HTMLElement;
     await expect(customElement).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithStateChangeAndRetainFocus = {
+  render: TemplateModalWithStateChange,
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
+  },
+  name: 'With State Change and Retained Focus',
+  args: {
+    dismissOnEsc: false,
+    dismissOnOutsideClick: false,
+  },
+
+  argTypes: {
+    dismissOnOutsideClick: { table: { disable: false } },
+    dismissOnEsc: { table: { disable: false } },
   },
 } satisfies Story;

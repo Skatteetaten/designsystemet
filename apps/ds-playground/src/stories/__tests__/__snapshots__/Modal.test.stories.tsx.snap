@@ -692,6 +692,59 @@ exports[`Tester/Modal WithShadowDom play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Modal WithStateChangeAndRetainFocus smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+          type="button"
+  >
+    <span class="_buttonText_6ybyo_69">
+      Åpne modal
+    </span>
+  </button>
+  <dialog class="_modal_125nh_5"
+          aria-labelledby="modalHeadingId-:rr:"
+  >
+    <div tabindex="-1"
+         class="_modalContainer_125nh_23"
+    >
+      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+              type="button"
+      >
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:rs:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:rs:">
+            Lukk dialogvindu
+          </title>
+          <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+          </path>
+        </svg>
+      </button>
+      <div class="_modalPaddingL_125nh_51">
+        <h1 id="modalHeadingId-:rr:"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+        >
+          Vil du erstatte nye opplysninger fra fil?
+        </h1>
+        <div class="flex">
+          <button class="_button_6ybyo_1 _button_primary_6ybyo_1   marginRightM"
+                  type="button"
+          >
+            <span class="_buttonText_6ybyo_69">
+              Erstatt opplysninger
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+</div>
+`;
+
 exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
 <div data-test-block="true">
   <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
