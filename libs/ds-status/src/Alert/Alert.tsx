@@ -7,11 +7,13 @@ import {
   CancelSVGpath,
   CompletedSVGpath,
   Icon,
-  InfoSVGpath,
+  InfoSquareSVGpath,
+  WarningStopSVGpath,
   WarningSVGpath,
 } from '@skatteetaten/ds-icons';
 
 import { AlertProps } from './Alert.types';
+import { getAlertBackgroundBrightnessDefault } from './defaults';
 
 import styles from './Alert.module.scss';
 
@@ -22,6 +24,7 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
+      backgroundBrightness = getAlertBackgroundBrightnessDefault(),
       svgPath,
       variant,
       ariaLive,
@@ -40,9 +43,11 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
     } else if (variant === 'success') {
       svg = CompletedSVGpath;
     } else if (variant === 'neutral') {
-      svg = InfoSVGpath;
-    } else {
+      svg = InfoSquareSVGpath;
+    } else if (variant === 'warning') {
       svg = WarningSVGpath;
+    } else {
+      svg = WarningStopSVGpath;
     }
 
     const getAriaLive = (): typeof ariaLive => {
@@ -55,6 +60,9 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
       }
     };
 
+    const concatenatedClassName =
+      `${styles.alert} ${variantClassName} ${backgroundBrightness === 'light' ? styles.alert_light : ''} ${className}`.trim();
+
     return (
       <div
         ref={ref}
@@ -65,7 +73,7 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
         aria-atomic
       >
         {showAlert && children && (
-          <div className={`${styles.alert} ${variantClassName} ${className}`}>
+          <div className={concatenatedClassName}>
             <span className={styles.iconWrapper}>
               <Icon size={'large'} svgPath={svg} className={styles.icon} />
             </span>
@@ -89,3 +97,5 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
 );
 
 Alert.displayName = 'Alert';
+
+export { getAlertBackgroundBrightnessDefault };

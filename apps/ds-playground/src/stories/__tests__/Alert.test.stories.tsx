@@ -27,6 +27,9 @@ const meta = {
       table: { disable: true },
       control: 'text',
     },
+    backgroundBrightness: {
+      table: { disable: true },
+    },
     showAlert: {
       table: { disable: true },
     },
@@ -262,6 +265,26 @@ export const AllVariantsMobile = {
   parameters: {
     viewport: {
       defaultViewport: '--mobile',
+    },
+  },
+} satisfies Story;
+
+export const AllLightVariants = {
+  render: TemplateAllVariants,
+  name: 'All Light Variants',
+  args: {
+    ...defaultArgs,
+    showAlert: true,
+    backgroundBrightness: 'light',
+  },
+  parameters: {
+    backgrounds: {
+      default: 'grey',
+    },
+  },
+  argTypes: {
+    backgroundBrightness: {
+      table: { disable: false },
     },
   },
 } satisfies Story;
