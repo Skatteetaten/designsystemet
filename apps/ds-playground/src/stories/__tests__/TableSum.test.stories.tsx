@@ -1,5 +1,5 @@
 import { Table } from '@skatteetaten/ds-table';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
 
 const meta = {
@@ -21,16 +21,12 @@ const meta = {
     sumText: { table: { disable: true } },
     valueAlignment: { table: { disable: true } },
   },
+  args: { children: '9 000 kr' },
 } satisfies Meta<typeof Table.Sum>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const Template: StoryFn<typeof Table.Sum> = (args) => (
-  <Table.Sum {...args}>{'9 000 kr'}</Table.Sum>
-);
-
 export const WithRef = {
-  render: Template,
   name: 'With Ref (FA1)',
   args: {
     ref: (instance: HTMLTableRowElement | null): void => {
@@ -54,7 +50,6 @@ export const WithRef = {
 } satisfies Story;
 
 export const WithAttributes = {
-  render: Template,
   name: 'With Attributes (FA2-5)',
   args: {
     id: 'htmlId',
@@ -77,5 +72,25 @@ export const WithAttributes = {
     await expect(sum).toHaveClass('dummyClassname');
     await expect(sum).toHaveAttribute('id', 'htmlId');
     await expect(sum).toHaveAttribute('lang', 'nb');
+  },
+} satisfies Story;
+
+export const WithMultipleSums = {
+  name: 'With Multiple Sums',
+  args: {
+    children: ['400 kr', '899 kr', '399 kr'],
+  },
+  argTypes: {
+    children: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+
+    await expect(canvas.getByText('400 kr')).toBeInTheDocument();
+    await expect(canvas.getByText('899 kr')).toBeInTheDocument();
+    await expect(canvas.getByText('399 kr')).toBeInTheDocument();
   },
 } satisfies Story;
