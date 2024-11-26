@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { TextField } from '@skatteetaten/ds-forms';
 import { Modal } from '@skatteetaten/ds-overlays';
 import { Paragraph } from '@skatteetaten/ds-typography';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
@@ -83,37 +84,6 @@ const TemplateModal: StoryFn<typeof Modal> = (args) => {
             {'Avbryt'}
           </Button>
         </div>
-      </Modal>
-    </>
-  );
-};
-
-const TemplateModalWithStateChange: StoryFn<typeof Modal> = (args) => {
-  const ref = useRef<HTMLDialogElement>(null);
-  const [showMessage, setShowMessage] = useState(false);
-
-  return (
-    <>
-      <Button onClick={(): void => ref.current?.showModal()}>
-        {'Åpne modal'}
-      </Button>
-      <Modal {...args} ref={ref}>
-        {showMessage ? (
-          <Paragraph hasSpacing>
-            {
-              'Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?'
-            }
-          </Paragraph>
-        ) : (
-          <div className={'flex'}>
-            <Button
-              className={'marginRightM'}
-              onClick={() => setShowMessage(true)}
-            >
-              {'Erstatt opplysninger'}
-            </Button>
-          </div>
-        )}
       </Modal>
     </>
   );
@@ -441,14 +411,72 @@ export const WithShadowDom = {
   },
 } satisfies Story;
 
-export const WithStateChangeAndRetainFocus = {
+const TemplateModalWithStateChangeAndFocusedInput: StoryFn<typeof Modal> = (
+  args
+) => {
+  const ref = useRef<HTMLDialogElement>(null);
+  const [showInput, setShowInput] = useState(false);
+
+  return (
+    <>
+      <Button onClick={(): void => ref.current?.showModal()}>
+        {'Åpne modal'}
+      </Button>
+      <Modal {...args} ref={ref}>
+        {showInput ? (
+          <TextField
+            ref={(node) => {
+              node?.textboxRef.current?.focus();
+            }}
+            label={'Navn'}
+          />
+        ) : (
+          <Button className={'marginRightM'} onClick={() => setShowInput(true)}>
+            {'Vis og fokuser inputfelt'}
+          </Button>
+        )}
+      </Modal>
+    </>
+  );
+};
+
+const TemplateModalWithStateChange: StoryFn<typeof Modal> = (args) => {
+  const ref = useRef<HTMLDialogElement>(null);
+  const [showMessage, setShowMessage] = useState(false);
+
+  return (
+    <>
+      <Button onClick={(): void => ref.current?.showModal()}>
+        {'Åpne modal'}
+      </Button>
+      <Modal {...args} ref={ref}>
+        {showMessage ? (
+          <Paragraph hasSpacing>
+            {
+              'Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?'
+            }
+          </Paragraph>
+        ) : (
+          <Button
+            className={'marginRightM'}
+            onClick={() => setShowMessage(true)}
+          >
+            {'Erstatt opplysninger'}
+          </Button>
+        )}
+      </Modal>
+    </>
+  );
+};
+
+export const WithStateChangeAndFocus = {
   render: TemplateModalWithStateChange,
   parameters: {
     imageSnapshot: {
       disable: true,
     },
   },
-  name: 'With State Change and Retained Focus',
+  name: 'With State Change and Focus Modal',
   args: {
     dismissOnEsc: false,
     dismissOnOutsideClick: false,
@@ -457,5 +485,45 @@ export const WithStateChangeAndRetainFocus = {
   argTypes: {
     dismissOnOutsideClick: { table: { disable: false } },
     dismissOnEsc: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await userEvent.click(button);
+    const modal = canvas.getByRole('dialog');
+    const innerButton = canvas.getByText('Erstatt opplysninger');
+    await userEvent.click(innerButton);
+    await expect(innerButton).not.toBeInTheDocument();
+    await expect(modal).toHaveFocus();
+  },
+} satisfies Story;
+
+export const WithStateChangeAndTextFieldFocus = {
+  render: TemplateModalWithStateChangeAndFocusedInput,
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
+  },
+  name: 'With State Change and Focus TextField',
+  args: {
+    dismissOnEsc: false,
+    dismissOnOutsideClick: false,
+  },
+
+  argTypes: {
+    dismissOnOutsideClick: { table: { disable: false } },
+    dismissOnEsc: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await userEvent.click(button);
+    const modal = canvas.getByRole('dialog');
+    const innerButton = within(modal).getByText('Vis og fokuser inputfelt');
+    await userEvent.click(innerButton);
+    await expect(innerButton).not.toBeInTheDocument();
+    const textField = canvas.getByRole('textbox');
+    await expect(textField).toHaveFocus();
   },
 } satisfies Story;
