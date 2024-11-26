@@ -27,7 +27,7 @@
     gap: var(--spacing-m) var(--spacing-l);
     grid-template-columns: repeat(
       var(--description-list-columns),
-      minmax(224px, 1fr)
+      minmax(222px, 1fr)
     );
     line-height: var(--semantic-line-height-article);
   }
