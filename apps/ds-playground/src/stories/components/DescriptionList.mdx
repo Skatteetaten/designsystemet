@@ -16,6 +16,9 @@ import { DocIntro } from '../utils/DocIntro';
 
 DescriptionList er i Beta. Det kan komme endringer.
 
+Merk at hvis komponenten mottar tomme elementer i lista med children så vil den tegne opp tomrom. For å unngå dette kan man
+filtrere vekk tomme elementer før de sendes til komponenten.
+
 <Primary />
 
 ```tsx
@@ -27,3 +30,10 @@ import { DescriptionList } from '@skatteetaten/ds-content';
 ## Examples
 
 <Canvas of={DescriptionListSTories.Examples} />
+
+## Example with fixed number of columns
+
+Bruk className og sett --description-list-columns til ønsket antall kolonner. Hvis du skal ha et fast antall kolonner
+må du selv påsse på at det er nok plass til å unngå horisontal scroll.
+
+<Canvas of={DescriptionListSTories.ExampleWithFixedColumns} />
