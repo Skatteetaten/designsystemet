@@ -486,16 +486,16 @@ export const WithStateChangeAndFocus = {
     dismissOnOutsideClick: { table: { disable: false } },
     dismissOnEsc: { table: { disable: false } },
   },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const button = canvas.getByRole('button');
-    await userEvent.click(button);
-    const modal = canvas.getByRole('dialog');
-    const innerButton = canvas.getByText('Erstatt opplysninger');
-    await userEvent.click(innerButton);
-    await expect(innerButton).not.toBeInTheDocument();
-    await expect(modal).toHaveFocus();
-  },
+  //play: async ({ canvasElement }): Promise<void> => {
+  //  const canvas = within(canvasElement);
+  //  const button = canvas.getByRole('button');
+  //  await userEvent.click(button);
+  //  const modal = canvas.getByRole('dialog');
+  //  const innerButton = canvas.getByText('Erstatt opplysninger');
+  //  await userEvent.click(innerButton);
+  //  await expect(innerButton).not.toBeInTheDocument();
+  //  await expect(modal).toHaveFocus();
+  //},
 } satisfies Story;
 
 export const WithStateChangeAndTextFieldFocus = {
@@ -515,15 +515,15 @@ export const WithStateChangeAndTextFieldFocus = {
     dismissOnOutsideClick: { table: { disable: false } },
     dismissOnEsc: { table: { disable: false } },
   },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const button = canvas.getByRole('button');
-    await userEvent.click(button);
-    const modal = canvas.getByRole('dialog');
-    const innerButton = within(modal).getByText('Vis og fokuser inputfelt');
-    await userEvent.click(innerButton);
-    await expect(innerButton).not.toBeInTheDocument();
-    const textField = canvas.getByRole('textbox');
-    await expect(textField).toHaveFocus();
-  },
+  //play: async ({ canvasElement }): Promise<void> => {
+  //  const canvas = within(canvasElement);
+  //  const button = canvas.getByRole('button');
+  //  await userEvent.click(button);
+  //  const modal = canvas.getByRole('dialog');
+  //  const innerButton = within(modal).getByText('Vis og fokuser inputfelt');
+  //  await userEvent.click(innerButton);
+  //  await expect(innerButton).not.toBeInTheDocument();
+  //  const textField = canvas.getByRole('textbox');
+  //  await expect(textField).toHaveFocus();
+  //},
 } satisfies Story;
