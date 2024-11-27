@@ -5,6 +5,7 @@ import {
   useRef,
   MouseEvent,
   JSX,
+  useEffect,
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -62,6 +63,20 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
     const modalRef = useRef<HTMLDialogElement>(null);
     useImperativeHandle(ref, () => modalRef?.current as HTMLDialogElement);
 
+    useEffect(() => {
+      /**
+       * Hvis konsument endrer children i en åpen modal, vil fokus settes til body og dismissOnEsc vil slutte å fungere.
+       * Setter derfor fokus tilbake til modalen.
+       */
+      if (
+        !dismissOnEsc &&
+        modalRef.current?.open &&
+        document.activeElement?.nodeName === 'BODY'
+      ) {
+        modalRef.current.focus();
+      }
+    }, [children, dismissOnEsc]);
+
     const isClickOutside = (event: MouseEvent): boolean => {
       if (!(event.target instanceof HTMLElement)) {
         return true;
@@ -117,7 +132,8 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
         data-testid={dataTestId}
         aria-labelledby={headingId}
         autoFocus
-        /* Merk at onCancel kan ikke brukes til å hindre lukking fordi to trykk på esc lukker allikevel i chrome  */
+        /* Må bruke onCancel i kombinasjon med onKeyDown siden to trykk på esc lukker modalen i chrome (https://issues.chromium.org/issues/41491338) */
+        onCancel={(e) => !dismissOnEsc && e.preventDefault()}
         onKeyDown={(e) => {
           if (e.key === 'Escape') {
             if (dismissOnEsc) {
