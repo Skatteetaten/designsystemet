@@ -692,7 +692,7 @@ exports[`Tester/Modal WithShadowDom play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/Modal WithStateChangeAndFocus smoke-test 1`] = `
+exports[`Tester/Modal WithStateChangeAndFocus play-test 1`] = `
 <div data-test-block="true">
   <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="button"
@@ -703,6 +703,7 @@ exports[`Tester/Modal WithStateChangeAndFocus smoke-test 1`] = `
   </button>
   <dialog class="_modal_125nh_5"
           aria-labelledby="modalHeadingId-:rr:"
+          open
   >
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
@@ -730,20 +731,16 @@ exports[`Tester/Modal WithStateChangeAndFocus smoke-test 1`] = `
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   marginRightM"
-                type="button"
-        >
-          <span class="_buttonText_6ybyo_69">
-            Erstatt opplysninger
-          </span>
-        </button>
+        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+          Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
+        </p>
       </div>
     </div>
   </dialog>
 </div>
 `;
 
-exports[`Tester/Modal WithStateChangeAndTextFieldFocus smoke-test 1`] = `
+exports[`Tester/Modal WithStateChangeAndTextFieldFocus play-test 1`] = `
 <div data-test-block="true">
   <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="button"
@@ -754,6 +751,7 @@ exports[`Tester/Modal WithStateChangeAndTextFieldFocus smoke-test 1`] = `
   </button>
   <dialog class="_modal_125nh_5"
           aria-labelledby="modalHeadingId-:rt:"
+          open
   >
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
@@ -781,13 +779,24 @@ exports[`Tester/Modal WithStateChangeAndTextFieldFocus smoke-test 1`] = `
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
-        <button class="_button_6ybyo_1 _button_primary_6ybyo_1   marginRightM"
-                type="button"
-        >
-          <span class="_buttonText_6ybyo_69">
-            Vis og fokuser inputfelt
-          </span>
-        </button>
+        <div class>
+          <label id="labelId-:r11:"
+                 class="_label_348na_5"
+                 for="textFieldTextboxId-:r10:"
+          >
+            Navn
+          </label>
+          <input id="textFieldTextboxId-:r10:"
+                 class="_textbox_1b2vd_5"
+                 autocomplete="off"
+                 value
+          >
+          <div id="textFieldErrorId-:rv:"
+               aria-live="assertive"
+               aria-atomic="true"
+          >
+          </div>
+        </div>
       </div>
     </div>
   </dialog>
