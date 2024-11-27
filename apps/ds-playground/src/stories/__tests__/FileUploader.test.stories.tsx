@@ -173,7 +173,7 @@ export const WithUploadedFiles: StoryObj<FileUploaderProps> = {
     acceptedFileFormats: ['.pdf', '.jpeg'],
     uploadedFiles: [
       {
-        name: 'dokumentasjon.pdf',
+        name: 'dokumentasjon_rapport_med_langt_filnavn_v2_final.pdf',
         href: 'https://www.skatteetaten.no/person/',
       },
       { name: 'grunnlag.jpg' },
@@ -195,7 +195,9 @@ export const WithUploadedFiles: StoryObj<FileUploaderProps> = {
     ).toBeInTheDocument();
     await expect(canvas.getByText('grunnlag.jpg')).toBeInTheDocument();
     await expect(canvas.getByText('test.png')).toBeInTheDocument();
-    await expect(canvas.getByText('dokumentasjon.pdf')).toBeInTheDocument();
+    await expect(
+      canvas.getByText('dokumentasjon_rapport_med_langt_filnavn_v2_final.pdf')
+    ).toBeInTheDocument();
   },
 
   parameters: {},

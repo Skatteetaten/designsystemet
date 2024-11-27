@@ -39,6 +39,8 @@ export const FileUploaderFile = forwardRef<
     const generatedId = useId();
     const id = externalId ?? generatedId;
 
+    const linkClassName = `${styles.fileListText} ${styles.fileListLink}`;
+
     return (
       <li
         ref={ref}
@@ -55,7 +57,7 @@ export const FileUploaderFile = forwardRef<
                   id={`${id}-file-${children}`}
                   svgPath={FileOutlineSVGpath}
                   href={href}
-                  className={styles.fileListText}
+                  className={linkClassName}
                   download
                   onClick={onClick}
                 >

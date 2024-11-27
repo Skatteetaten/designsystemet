@@ -328,12 +328,12 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
     </div>
     <ul class="_fileList_6otu2_75">
       <li id=":r2a:"
-          class="_fileListItem_10ro3_27 "
+          class="_fileListItem_pqqzl_27 "
       >
-        <div class="_fileListContainer_10ro3_43">
-          <span class="_fileListGrid_10ro3_30">
+        <div class="_fileListContainer_pqqzl_43">
+          <span class="_fileListGrid_pqqzl_30">
             <a id=":r2a:-file-file.txt"
-               class="_link_z7jba_1  _fileListText_10ro3_34"
+               class="_link_z7jba_1  _fileListText_pqqzl_34 _fileListLink_pqqzl_47"
                href="#"
                download
             >
@@ -348,7 +348,7 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
               </svg>
               file.txt
             </a>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_10ro3_1 _successIconLinkMargin_10ro3_5"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1 _successIconLinkMargin_pqqzl_5"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:r2c:"
@@ -363,7 +363,7 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
             </svg>
           </span>
           <span>
-            <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_10ro3_9"
+            <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_pqqzl_9"
                     type="button"
                     aria-describedby=":r2a:-file-file.txt"
             >
@@ -618,12 +618,12 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
     </div>
     <ul class="_fileList_6otu2_75">
       <li id=":r21:"
-          class="_fileListItem_10ro3_27 "
+          class="_fileListItem_pqqzl_27 "
       >
-        <div class="_fileListContainer_10ro3_43">
-          <span class="_fileListGrid_10ro3_30">
-            <span class="_fileListText_10ro3_34">
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _fileListIcon_10ro3_39"
+        <div class="_fileListContainer_pqqzl_43">
+          <span class="_fileListGrid_pqqzl_30">
+            <span class="_fileListText_pqqzl_34">
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _fileListIcon_pqqzl_39"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r22:"
@@ -637,11 +637,11 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
                 </path>
               </svg>
               <span id=":r21:-file-document.pdf"
-                    class="_fileListFile_10ro3_50"
+                    class="_fileListFile_pqqzl_51"
               >
                 document.pdf
               </span>
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_10ro3_1"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r23:"
@@ -657,7 +657,7 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
             </span>
           </span>
           <span>
-            <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_10ro3_9"
+            <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_pqqzl_9"
                     type="button"
                     aria-describedby=":r21:-file-document.pdf"
             >
@@ -755,12 +755,12 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
     </div>
     <ul class="_fileList_6otu2_75">
       <li id=":r1a:"
-          class="_fileListItem_10ro3_27 "
+          class="_fileListItem_pqqzl_27 "
       >
-        <div class="_fileListContainer_10ro3_43">
-          <span class="_fileListGrid_10ro3_30">
+        <div class="_fileListContainer_pqqzl_43">
+          <span class="_fileListGrid_pqqzl_30">
             <a id=":r1a:-file-dokumentasjon.pdf"
-               class="_link_z7jba_1  _fileListText_10ro3_34"
+               class="_link_z7jba_1  _fileListText_pqqzl_34 _fileListLink_pqqzl_47"
                href="https://www.skatteetaten.no/person/"
                download
             >
@@ -775,7 +775,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
               </svg>
               dokumentasjon.pdf
             </a>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_10ro3_1 _successIconLinkMargin_10ro3_5"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1 _successIconLinkMargin_pqqzl_5"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:r1c:"
@@ -790,7 +790,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
             </svg>
           </span>
           <span>
-            <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_10ro3_9"
+            <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_pqqzl_9"
                     type="button"
                     aria-describedby=":r1a:-file-dokumentasjon.pdf"
             >
@@ -812,12 +812,12 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
         </div>
       </li>
       <li id=":r1e:"
-          class="_fileListItem_10ro3_27 "
+          class="_fileListItem_pqqzl_27 "
       >
-        <div class="_fileListContainer_10ro3_43">
-          <span class="_fileListGrid_10ro3_30">
-            <span class="_fileListText_10ro3_34">
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _fileListIcon_10ro3_39"
+        <div class="_fileListContainer_pqqzl_43">
+          <span class="_fileListGrid_pqqzl_30">
+            <span class="_fileListText_pqqzl_34">
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _fileListIcon_pqqzl_39"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1f:"
@@ -831,11 +831,11 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
                 </path>
               </svg>
               <span id=":r1e:-file-grunnlag.jpg"
-                    class="_fileListFile_10ro3_50"
+                    class="_fileListFile_pqqzl_51"
               >
                 grunnlag.jpg
               </span>
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_10ro3_1"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1g:"
@@ -851,7 +851,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
             </span>
           </span>
           <span>
-            <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_10ro3_9"
+            <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_pqqzl_9"
                     type="button"
                     aria-describedby=":r1e:-file-grunnlag.jpg"
             >
@@ -944,12 +944,12 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
     </div>
     <ul class="_fileList_6otu2_75">
       <li id=":r1m:"
-          class="_fileListItem_10ro3_27 "
+          class="_fileListItem_pqqzl_27 "
       >
-        <div class="_fileListContainer_10ro3_43">
-          <span class="_fileListGrid_10ro3_30">
+        <div class="_fileListContainer_pqqzl_43">
+          <span class="_fileListGrid_pqqzl_30">
             <a id=":r1m:-file-dokumentasjon.pdf"
-               class="_link_z7jba_1  _fileListText_10ro3_34"
+               class="_link_z7jba_1  _fileListText_pqqzl_34 _fileListLink_pqqzl_47"
                href="https://www.skatteetaten.no/person/"
                download
             >
@@ -964,7 +964,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
               </svg>
               dokumentasjon.pdf
             </a>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_10ro3_1 _successIconLinkMargin_10ro3_5"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1 _successIconLinkMargin_pqqzl_5"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:r1o:"
@@ -979,7 +979,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
             </svg>
           </span>
           <span>
-            <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_10ro3_9"
+            <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_pqqzl_9"
                     type="button"
                     aria-describedby=":r1m:-file-dokumentasjon.pdf"
             >
@@ -1001,12 +1001,12 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
         </div>
       </li>
       <li id=":r1q:"
-          class="_fileListItem_10ro3_27 "
+          class="_fileListItem_pqqzl_27 "
       >
-        <div class="_fileListContainer_10ro3_43">
-          <span class="_fileListGrid_10ro3_30">
-            <span class="_fileListText_10ro3_34">
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _fileListIcon_10ro3_39"
+        <div class="_fileListContainer_pqqzl_43">
+          <span class="_fileListGrid_pqqzl_30">
+            <span class="_fileListText_pqqzl_34">
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _fileListIcon_pqqzl_39"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1r:"
@@ -1020,11 +1020,11 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
                 </path>
               </svg>
               <span id=":r1q:-file-grunnlag.jpg"
-                    class="_fileListFile_10ro3_50"
+                    class="_fileListFile_pqqzl_51"
               >
                 grunnlag.jpg
               </span>
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_10ro3_1"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:r1s:"
@@ -1040,7 +1040,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
             </span>
           </span>
           <span>
-            <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_10ro3_9"
+            <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_pqqzl_9"
                     type="button"
                     aria-describedby=":r1q:-file-grunnlag.jpg"
             >
@@ -1147,12 +1147,12 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
     </div>
     <ul class="_fileList_6otu2_75">
       <li id=":re:"
-          class="_fileListItem_10ro3_27 "
+          class="_fileListItem_pqqzl_27 "
       >
-        <div class="_fileListContainer_10ro3_43">
-          <span class="_fileListGrid_10ro3_30">
-            <a id=":re:-file-dokumentasjon.pdf"
-               class="_link_z7jba_1  _fileListText_10ro3_34"
+        <div class="_fileListContainer_pqqzl_43">
+          <span class="_fileListGrid_pqqzl_30">
+            <a id=":re:-file-dokumentasjon_rapport_med_langt_filnavn_v2_final.pdf"
+               class="_link_z7jba_1  _fileListText_pqqzl_34 _fileListLink_pqqzl_47"
                href="https://www.skatteetaten.no/person/"
                download
             >
@@ -1165,9 +1165,9 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm4 18H6V4h7v5h5v11Z">
                 </path>
               </svg>
-              dokumentasjon.pdf
+              dokumentasjon_rapport_med_langt_filnavn_v2_final.pdf
             </a>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_10ro3_1 _successIconLinkMargin_10ro3_5"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1 _successIconLinkMargin_pqqzl_5"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:rg:"
@@ -1182,9 +1182,9 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
             </svg>
           </span>
           <span>
-            <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_10ro3_9"
+            <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_pqqzl_9"
                     type="button"
-                    aria-describedby=":re:-file-dokumentasjon.pdf"
+                    aria-describedby=":re:-file-dokumentasjon_rapport_med_langt_filnavn_v2_final.pdf"
             >
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
@@ -1204,12 +1204,12 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
         </div>
       </li>
       <li id=":ri:"
-          class="_fileListItem_10ro3_27 "
+          class="_fileListItem_pqqzl_27 "
       >
-        <div class="_fileListContainer_10ro3_43">
-          <span class="_fileListGrid_10ro3_30">
-            <span class="_fileListText_10ro3_34">
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _fileListIcon_10ro3_39"
+        <div class="_fileListContainer_pqqzl_43">
+          <span class="_fileListGrid_pqqzl_30">
+            <span class="_fileListText_pqqzl_34">
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _fileListIcon_pqqzl_39"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rj:"
@@ -1223,11 +1223,11 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
                 </path>
               </svg>
               <span id=":ri:-file-grunnlag.jpg"
-                    class="_fileListFile_10ro3_50"
+                    class="_fileListFile_pqqzl_51"
               >
                 grunnlag.jpg
               </span>
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_10ro3_1"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rk:"
@@ -1243,7 +1243,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
             </span>
           </span>
           <span>
-            <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_10ro3_9"
+            <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_pqqzl_9"
                     type="button"
                     aria-describedby=":ri:-file-grunnlag.jpg"
             >
@@ -1265,12 +1265,12 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
         </div>
       </li>
       <li id=":rm:"
-          class="_fileListItem_10ro3_27 "
+          class="_fileListItem_pqqzl_27 "
       >
-        <div class="_fileListContainer_10ro3_43">
-          <span class="_fileListGrid_10ro3_30">
-            <span class="_fileListText_10ro3_34">
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _fileListIcon_10ro3_39"
+        <div class="_fileListContainer_pqqzl_43">
+          <span class="_fileListGrid_pqqzl_30">
+            <span class="_fileListText_pqqzl_34">
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _fileListIcon_pqqzl_39"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:rn:"
@@ -1284,11 +1284,11 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
                 </path>
               </svg>
               <span id=":rm:-file-Screen_Shot_2023_08_03_at_14_48_38_PM_111.jpg"
-                    class="_fileListFile_10ro3_50"
+                    class="_fileListFile_pqqzl_51"
               >
                 Screen_Shot_2023_08_03_at_14_48_38_PM_111.jpg
               </span>
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_10ro3_1"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-labelledby="svgtitle-:ro:"
@@ -1304,7 +1304,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
             </span>
           </span>
           <span>
-            <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_10ro3_9"
+            <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_pqqzl_9"
                     type="button"
                     aria-describedby=":rm:-file-Screen_Shot_2023_08_03_at_14_48_38_PM_111.jpg"
             >
@@ -1326,12 +1326,12 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
         </div>
       </li>
       <li id=":rq:"
-          class="_fileListItem_10ro3_27 "
+          class="_fileListItem_pqqzl_27 "
       >
-        <div class="_fileListContainer_10ro3_43">
-          <span class="_fileListGrid_10ro3_30">
+        <div class="_fileListContainer_pqqzl_43">
+          <span class="_fileListGrid_pqqzl_30">
             <a id=":rq:-file-test.png"
-               class="_link_z7jba_1  _fileListText_10ro3_34"
+               class="_link_z7jba_1  _fileListText_pqqzl_34 _fileListLink_pqqzl_47"
                href="http://localhost:4400/designsystem_illustrasjon.png"
                download
             >
@@ -1346,7 +1346,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
               </svg>
               test.png
             </a>
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_10ro3_1 _successIconLinkMargin_10ro3_5"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1 _successIconLinkMargin_pqqzl_5"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:rs:"
@@ -1361,7 +1361,7 @@ exports[`Tester/FileUploader WithUploadedFiles play-test 1`] = `
             </svg>
           </span>
           <span>
-            <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_10ro3_9"
+            <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_pqqzl_9"
                     type="button"
                     aria-describedby=":rq:-file-test.png"
             >
