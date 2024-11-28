@@ -210,10 +210,12 @@ export const PanelPadding = {
   render: (args): JSX.Element => {
     return (
       <>
-        <Heading as={'h1'} level={3}>
-          {'Tekst utenfor Panel'}
-        </Heading>
-        {loremIpsum}
+        <div className={'semantic-article'}>
+          <Heading as={'h1'} level={3}>
+            {'Tekst utenfor Panel'}
+          </Heading>
+          {loremIpsum}
+        </div>
         <Panel {...args}>{loremIpsum}</Panel>
       </>
     );

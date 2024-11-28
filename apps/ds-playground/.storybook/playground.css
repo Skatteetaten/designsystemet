@@ -177,3 +177,8 @@ a.docs {
   font-weight: var(--font-weight-medium);
   text-decoration-line: underline;
 }
+
+.semantic-article {
+  max-width: var(--semantic-responsive-article);
+  margin: auto;
+}
