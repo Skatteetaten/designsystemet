@@ -1,4 +1,4 @@
-import { ReactElement, ReactNode, Ref } from 'react';
+import { CSSProperties, ReactElement, ReactNode, Ref } from 'react';
 
 import {
   BaseProps,
@@ -31,6 +31,10 @@ export const panelSpacingArr = [
 ] as const;
 export type PanelSpacing = (typeof panelSpacingArr)[number];
 
+export type CSSVariables = CSSProperties & {
+  '--panel-padding-x'?: string;
+};
+
 export interface PanelComponentCommonProps extends BaseProps {
   /**
    * Lar heading i komponenten være fokuserbar.
@@ -38,7 +42,11 @@ export interface PanelComponentCommonProps extends BaseProps {
    * Brukes sammen med prop 'headingRef' og 'title'
    */
   canManuallySetTitleFocus?: boolean;
-  /** Tekst eller markup for Panel. */
+  /** Ekstra CSS hvor padding-verdien styrer paddingen i responsive padding */
+  classNames?: {
+    padding?: string;
+  };
+  /** Innholdet i Panel */
   children: ReactNode;
   /** Farge på border eller bakgrunn for Panel avhengig av variant som er valgt. */
   color?: PanelColor;
@@ -48,8 +56,6 @@ export interface PanelComponentCommonProps extends BaseProps {
   hideSubtitle?: boolean;
   /** Skjuler underoverskrift men synlig for skjermleser. */
   hideTitle?: boolean;
-  /** Padding rundt Panel. */
-  padding?: PanelPadding;
   /** Margin under Panel. */
   spacing?: PanelSpacing;
   /** Underoverskrift. */
@@ -71,6 +77,20 @@ export interface PanelComponentCommonProps extends BaseProps {
   headingRef?: Ref<HTMLHeadingElement>;
 }
 
+export type PanelDiscriminatedPadding =
+  | {
+      /** Padding rundt Panel. Se også hasResponsivePadding */
+      padding?: PanelPadding;
+      /** hasRespoinsivePadding legger til media query slik at man kan styre padding pr brekkpunkt. Se også padding-prop */
+      hasResponsivePadding?: never;
+    }
+  | {
+      /** Padding rundt Panel. Se også hasResponsivePadding  */
+      padding?: never;
+      /** hasRespoinsivePadding legger til media query slik at man kan styre padding pr brekkpunkt. Se også padding-prop */
+      hasResponsivePadding?: boolean;
+    };
+
 export type PanelDiscriminatedGraphicProps =
   | {
       /** Source til illustrasjonsbilde */
@@ -90,4 +110,5 @@ export type PanelDiscriminatedGraphicProps =
     };
 
 export type PanelProps = PanelComponentCommonProps &
-  PanelDiscriminatedGraphicProps;
+  PanelDiscriminatedGraphicProps &
+  PanelDiscriminatedPadding;

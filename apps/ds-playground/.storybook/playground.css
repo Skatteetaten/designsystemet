@@ -169,3 +169,16 @@ code {
   justify-content: center;
   align-items: center;
 }
+
+a.docs {
+  color: var(--semantic-interactive-main);
+  text-decoration-color: var(--semantic-interactive-main);
+  padding: var(--spacing-xs) 0;
+  font-weight: var(--font-weight-medium);
+  text-decoration-line: underline;
+}
+
+.semantic-article {
+  max-width: var(--semantic-responsive-article);
+  margin: auto;
+}

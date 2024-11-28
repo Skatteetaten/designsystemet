@@ -7,6 +7,12 @@ $border-outline: 6px;
   --variant-outline-color: var(--palette-ochre-50);
   --variant-filled-color: var(--palette-ochre-10);
   --panel-padding: var(--spacing-xl);
+  --panel-padding-mobile: var(--spacing-m);
+  --panel-padding-xs: var(--spacing-xl);
+  --panel-padding-s: var(--panel-padding-xs);
+  --panel-padding-m: var(--panel-padding-s);
+  --panel-padding-l: var(--panel-padding-m);
+  --panel-padding-xl: var(--panel-padding-l);
 
   display: grid;
   max-width: var(--container-m);
@@ -168,6 +174,30 @@ $border-outline: 6px;
 
   &_spacingMEGA {
     margin-bottom: var(--spacing-mega);
+  }
+
+  &Responsive {
+    --panel-padding: var(--panel-padding-mobile);
+
+    @media (min-width: breakpoints.$breakpoint-xs) {
+      --panel-padding: var(--panel-padding-xs);
+    }
+
+    @media (min-width: breakpoints.$breakpoint-s) {
+      --panel-padding: var(--panel-padding-s);
+    }
+
+    @media (min-width: breakpoints.$breakpoint-m) {
+      --panel-padding: var(--panel-padding-m);
+    }
+
+    @media (min-width: breakpoints.$breakpoint-l) {
+      --panel-padding: var(--panel-padding-l);
+    }
+
+    @media (min-width: breakpoints.$breakpoint-xl) {
+      --panel-padding: var(--panel-padding-xl);
+    }
   }
 }
 
