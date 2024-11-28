@@ -182,3 +182,7 @@ a.docs {
   max-width: var(--semantic-responsive-article);
   margin: auto;
 }
+
+.semantic-article.bottom-spacing {
+  margin-bottom: var(--spacing-l);
+}

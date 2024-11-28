@@ -81,13 +81,13 @@ export type PanelDiscriminatedPadding =
   | {
       /** Padding rundt Panel. Se også hasResponsivePadding */
       padding?: PanelPadding;
-      /** hasRespoinsivePadding legger til media query slik at man kan styre padding pr brekkpunkt. Se også padding-prop */
+      /** Legger til media query slik at man kan styre padding pr brekkpunkt. Se også padding-prop */
       hasResponsivePadding?: never;
     }
   | {
       /** Padding rundt Panel. Se også hasResponsivePadding  */
       padding?: never;
-      /** hasRespoinsivePadding legger til media query slik at man kan styre padding pr brekkpunkt. Se også padding-prop */
+      /** Legger til media query slik at man kan styre padding pr brekkpunkt. Se også padding-prop */
       hasResponsivePadding?: boolean;
     };
 
