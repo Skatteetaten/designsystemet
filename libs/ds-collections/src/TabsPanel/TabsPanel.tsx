@@ -40,6 +40,7 @@ export const TabsPanel = forwardRef<HTMLDivElement, TabsPanelProps>(
         data-testid={dataTestId}
         role={'tabpanel'}
         aria-labelledby={`ds-tab-id-${baseId}-${value}`}
+        hidden={activeTab !== value}
       >
         {children}
       </div>

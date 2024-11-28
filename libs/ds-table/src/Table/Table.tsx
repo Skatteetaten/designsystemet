@@ -54,7 +54,7 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
     const rowInEditModeId = externalRowInEditModeId ?? internalRowInEditModeId;
 
     if (caption === '') {
-      throw new Error('Empty string is not a valid caption.');
+      console.error('Empty string is not a valid caption.');
     }
     const { t } = useTranslation('ds_tables', { i18n: dsI18n });
 

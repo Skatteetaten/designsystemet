@@ -1,0 +1,32 @@
+<svg viewBox="0 0 1654 233" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="panel-padding-prop">
+<title>Panel med luft styrt av padding-prop</title>
+<rect width="1654" height="233" fill="white"/>
+<rect x="24" y="24" width="252" height="185" fill="white" stroke="#F06674" stroke-width="16"/>
+<rect x="359" y="24" width="432" height="185" fill="white" stroke="#F06674" stroke-width="16"/>
+<rect x="886" y="24" width="744" height="185" fill="white" stroke="#F06674" stroke-width="16"/>
+<path d="M334.768 126.768C335.744 125.791 335.744 124.209 334.768 123.232L318.858 107.322C317.882 106.346 316.299 106.346 315.322 107.322C314.346 108.299 314.346 109.882 315.322 110.858L329.464 125L315.322 139.142C314.346 140.118 314.346 141.701 315.322 142.678C316.299 143.654 317.882 143.654 318.858 142.678L334.768 126.768ZM296 127.5H333V122.5H296V127.5Z" fill="#F06674"/>
+<path d="M858.768 126.768C859.744 125.791 859.744 124.209 858.768 123.232L842.858 107.322C841.882 106.346 840.299 106.346 839.322 107.322C838.346 108.299 838.346 109.882 839.322 110.858L853.464 125L839.322 139.142C838.346 140.118 838.346 141.701 839.322 142.678C840.299 143.654 841.882 143.654 842.858 142.678L858.768 126.768ZM820 127.5H857V122.5H820V127.5Z" fill="#F06674"/>
+<line x1="32" y1="51.5" x2="268" y2="51.5" stroke="black" stroke-width="17"/>
+<line x1="32" y1="87" x2="268" y2="87" stroke="black" stroke-width="10"/>
+<line x1="32" y1="111" x2="268" y2="111" stroke="black" stroke-width="10"/>
+<line x1="32" y1="135" x2="268" y2="135" stroke="black" stroke-width="10"/>
+<rect x="34" y="172" width="92" height="28" rx="14" fill="#1362AE" stroke="#1362AE" stroke-width="4"/>
+<rect x="146" y="172" width="92" height="28" rx="14" fill="white" stroke="#1362AE" stroke-width="4"/>
+<line x1="367" y1="51.5" x2="784" y2="51.5" stroke="black" stroke-width="17"/>
+<line x1="367" y1="87" x2="784" y2="87" stroke="black" stroke-width="10"/>
+<line x1="367" y1="111" x2="784" y2="111" stroke="black" stroke-width="10"/>
+<line x1="367" y1="135" x2="680" y2="135" stroke="black" stroke-width="10"/>
+<rect x="369" y="172" width="92" height="28" rx="14" fill="#1362AE" stroke="#1362AE" stroke-width="4"/>
+<rect x="481" y="172" width="92" height="28" rx="14" fill="white" stroke="#1362AE" stroke-width="4"/>
+<line x1="993" y1="51.5" x2="1493" y2="51.5" stroke="black" stroke-width="17"/>
+<line x1="993" y1="87" x2="1250" y2="87" stroke="black" stroke-width="10"/>
+<line x1="1278" y1="87" x2="1522" y2="87" stroke="black" stroke-width="10"/>
+<line x1="993" y1="111" x2="1178" y2="111" stroke="black" stroke-width="10"/>
+<line x1="1201" y1="111" x2="1386" y2="111" stroke="black" stroke-width="10"/>
+<line x1="1414" y1="111" x2="1522" y2="111" stroke="black" stroke-width="10"/>
+<line x1="993" y1="135" x2="1306" y2="135" stroke="black" stroke-width="10"/>
+<rect x="995" y="172" width="92" height="28" rx="14" fill="#1362AE" stroke="#1362AE" stroke-width="4"/>
+<rect x="1107" y="172" width="92" height="28" rx="14" fill="white" stroke="#1362AE" stroke-width="4"/>
+<rect x="894" y="32" width="99" height="169" fill="#F7E2E8"/>
+<rect x="1523" y="32" width="99" height="169" fill="#F7E2E8"/>
+</svg>

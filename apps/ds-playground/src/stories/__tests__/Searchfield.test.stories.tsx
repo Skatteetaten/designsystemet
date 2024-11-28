@@ -594,3 +594,52 @@ export const WithHelpToggleEvent = {
     },
   },
 } satisfies Story;
+
+const ResetButtonTemplate: StoryFn<typeof SearchField> = (args) => {
+  const [value, setValue] = useState<string>('søk');
+  return (
+    <>
+      <SearchField
+        {...args}
+        value={value}
+        onChange={(event: ChangeEvent<HTMLInputElement>): void => {
+          setValue(event.target.value);
+          args.onChange?.(event);
+        }}
+      />
+      <button onClick={() => setValue('')}>{'reset'}</button>
+    </>
+  );
+};
+
+export const WithControlled = {
+  args: {
+    ...defaultArgs,
+    helpText: 'Hjelpetekst',
+    hideLabel: false,
+  },
+  name: 'With Controlled',
+  parameters: {
+    HTMLSnapshot: { disable: true },
+    imageSnapshot: {
+      disable: true,
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const clearButton = canvas.getByText(
+      dsI18n.t('ds_forms:searchfield.ClearButtonTitle')
+    );
+    await expect(clearButton).toBeInTheDocument();
+
+    const resetButton = canvas.getByText('reset');
+    await userEvent.click(resetButton);
+
+    await waitFor(() => {
+      expect(
+        canvas.queryByText(dsI18n.t('ds_forms:searchfield.ClearButtonTitle'))
+      ).not.toBeInTheDocument();
+    });
+  },
+  render: ResetButtonTemplate,
+} satisfies Story;

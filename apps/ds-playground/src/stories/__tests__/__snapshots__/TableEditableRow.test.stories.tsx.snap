@@ -13,7 +13,7 @@ exports[`Tester/Table/EditableRow WithAttributes play-test 1`] = `
             lang="nb"
             data-testid="123ID"
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5  ">
             <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                     type="button"
             >
@@ -58,7 +58,7 @@ exports[`Tester/Table/EditableRow WithRef play-test 1`] = `
         <tr id="dummyIdForwardedFromRef"
             class=" "
         >
-          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1lgas_1  ">
+          <td class="_dataCell_1ot0q_1 _dataCell_standard_1ot0q_1 _dataCell_left_1ot0q_20  _buttonCell_1rqke_5  ">
             <button class="_button_g87u5_1 _button_medium_g87u5_45  "
                     type="button"
             >

@@ -96,6 +96,7 @@ const TemplateExample: StoryFn<StepListProps> = () => {
           title={'aktivt'}
           variant={'active'}
           stepNumber={3}
+          shouldAutoFocusWhenActive={false}
           onNext={(): void => console.log('next')}
         >
           {
@@ -204,11 +205,6 @@ const TemplateMultipleSteps: StoryFn<typeof StepList> = () => {
   const onNext = (): void => {
     const nextStep = activeStep + 1;
     setActiveStep(nextStep);
-    setTimeout((): void => {
-      // eslint-disable-next-line testing-library/no-node-access
-      const el = document.getElementById(`${stepId}-${nextStep}-focus-target`);
-      el?.focus();
-    }, 0);
   };
 
   return (

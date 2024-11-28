@@ -1,10 +1,11 @@
-@import '~@skatteetaten/ds-core-designtokens/designtokens/breakpoints';
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@use 'libs/ds-core-utils/src/styles';
 
 .buttonCell {
   max-width: 2rem;
   padding: var(--spacing-xs);
 
-  @media (min-width: $breakpoint-m) {
+  @media (min-width: breakpoints.$breakpoint-m) {
     max-width: 2.75rem;
   }
 
@@ -38,4 +39,8 @@
 
 .hideIcon {
   visibility: hidden;
+}
+
+.srOnly {
+  @include styles.sr-only;
 }

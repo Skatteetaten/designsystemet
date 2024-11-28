@@ -37,6 +37,7 @@ exports[`Tester/Tabs/Tab Defaults play-test 1`] = `
          class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r0:-tab2"
+         hidden
     >
       Tabs.Panel Bedrift
     </div>
@@ -99,6 +100,7 @@ exports[`Tester/Tabs/Tab WithBorder smoke-test 1`] = `
          class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:ra:-tab2"
+         hidden
     >
       Tabs.Panel Bedrift
     </div>
@@ -179,6 +181,7 @@ exports[`Tester/Tabs/Tab WithIcon play-test 1`] = `
          class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r2:-tab2"
+         hidden
     >
       Tabs.Panel Bedrift
     </div>
@@ -186,6 +189,7 @@ exports[`Tester/Tabs/Tab WithIcon play-test 1`] = `
          class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r2:-tab3"
+         hidden
     >
       Tabs.Panel Astronaut
     </div>
@@ -261,6 +265,7 @@ exports[`Tester/Tabs/Tab WithIcon play-test 1`] = `
          class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r6:-tab2"
+         hidden
     >
       Tabs.Panel Bedrift 2, variant compact
     </div>
@@ -268,6 +273,7 @@ exports[`Tester/Tabs/Tab WithIcon play-test 1`] = `
          class="_panel_1bj6c_1  "
          role="tabpanel"
          aria-labelledby="ds-tab-id-:r6:-tab3"
+         hidden
     >
       Tabs.Panel Astronaut 2, variant compact
     </div>

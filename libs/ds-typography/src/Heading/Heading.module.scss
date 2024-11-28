@@ -1,5 +1,5 @@
-@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
-@import 'libs/ds-core-utils/src/styles';
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@use 'libs/ds-core-utils/src/styles';
 
 .heading {
   margin: 0;
@@ -9,7 +9,7 @@
     font-size: var(--font-size-xxl);
     line-height: var(--semantic-line-height-heading1);
 
-    @media (min-width: $breakpoint-s) {
+    @media (min-width: breakpoints.$breakpoint-s) {
       font-size: var(--font-size-mega);
     }
   }
@@ -18,7 +18,7 @@
     font-size: var(--font-size-xl);
     line-height: var(--semantic-line-height-heading2);
 
-    @media (min-width: $breakpoint-s) {
+    @media (min-width: breakpoints.$breakpoint-s) {
       font-size: var(--font-size-xxl);
     }
   }
@@ -27,7 +27,7 @@
     font-size: var(--font-size-l);
     line-height: var(--semantic-line-height-heading3);
 
-    @media (min-width: $breakpoint-s) {
+    @media (min-width: breakpoints.$breakpoint-s) {
       font-size: var(--font-size-xl);
     }
   }
@@ -57,13 +57,13 @@
   &_hasSpacingSmallMobileMediumOtherwise {
     margin-bottom: var(--spacing-s);
 
-    @media (min-width: $breakpoint-s) {
+    @media (min-width: breakpoints.$breakpoint-s) {
       margin-bottom: var(--spacing-m);
     }
   }
 
   a {
-    @include link;
+    @include styles.link;
 
     font-weight: inherit;
   }

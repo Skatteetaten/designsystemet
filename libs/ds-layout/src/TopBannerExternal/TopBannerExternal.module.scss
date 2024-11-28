@@ -1,4 +1,4 @@
-@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
 .topContainer {
   display: flex;
@@ -9,7 +9,7 @@
   margin: auto;
   gap: var(--spacing-s);
 
-  @media (min-width: $breakpoint-s) {
+  @media (min-width: breakpoints.$breakpoint-s) {
     padding-top: var(--spacing-m);
     padding-bottom: var(--spacing-s);
   }
@@ -74,14 +74,14 @@
     grid-gap: var(--spacing-xl);
     grid-template-columns: 1fr;
 
-    @media (min-width: $breakpoint-s) {
+    @media (min-width: breakpoints.$breakpoint-s) {
       &Three,
       &Two {
         grid-template-columns: 1fr 1fr;
       }
     }
 
-    @media (min-width: $breakpoint-m) {
+    @media (min-width: breakpoints.$breakpoint-m) {
       grid-template-columns: 1fr 1fr;
 
       &Three {

@@ -17,7 +17,7 @@ import {
   subheadingAsArr,
 } from '@skatteetaten/ds-core-utils';
 import { CheckIcon } from '@skatteetaten/ds-icons';
-import { Paragraph } from '@skatteetaten/ds-typography';
+import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
@@ -44,6 +44,7 @@ const meta = {
       control: 'text',
       table: { category: category.props },
     },
+    classNames: { table: { category: category.props } },
     color: {
       options: panelColorArr,
       control: 'inline-radio',
@@ -52,6 +53,7 @@ const meta = {
         defaultValue: { summary: getPanelColorDefault() },
       },
     },
+    hasResponsivePadding: { table: { category: category.props } },
     headingRef: {
       table: { category: category.props },
       control: { disable: true },
@@ -127,7 +129,6 @@ export const Examples: Story = {
         <Panel
           title={'Når kommer skattepengene'}
           imageSource={farmerIllustration}
-          padding={'mega'}
           spacing={'xxl'}
         >
           <Paragraph hasSpacing>
@@ -186,4 +187,67 @@ export const Examples: Story = {
     );
   },
 } satisfies Story;
+
+export const PanelPadding = {
+  name: 'PanelPadding',
+  args: {
+    hasResponsivePadding: undefined,
+    title: 'Eksempel på padding satt via prop',
+    padding: 'm',
+  },
+  argTypes: {
+    classNames: { control: 'object' },
+  },
+  parameters: {
+    controls: {
+      include: ['hasResponsivePadding', 'classNames', 'renderIcon'],
+    },
+    viewport: {
+      defaultViewport: '--mobile',
+    },
+  },
+  tags: ['!dev'],
+  render: (args): JSX.Element => {
+    return (
+      <>
+        <div className={'semantic-article bottom-spacing'}>
+          <Heading as={'h1'} level={3}>
+            {'Tekst utenfor Panel'}
+          </Heading>
+          {loremIpsum}
+        </div>
+        <Panel {...args}>{loremIpsum}</Panel>
+      </>
+    );
+  },
+} satisfies Story;
+
+export const PanelPaddingFullWidth = {
+  ...PanelPadding,
+  args: {
+    ...PanelPadding.args,
+    hasResponsivePadding: true,
+    padding: undefined,
+    title: 'Eksempel på padding med CSS variabler',
+    classNames: {
+      padding: 'dummyPanelPaddingResponsiveFullWidth',
+    },
+  },
+  tags: ['!dev'],
+};
+
+export const PanelPaddingNoMargin = {
+  ...PanelPadding,
+  args: {
+    ...PanelPadding.args,
+    hasResponsivePadding: true,
+    padding: undefined,
+    title: 'Innholdsbredde 100%',
+    classNames: {
+      padding: 'dummyPanelPaddingNoMargin',
+    },
+  },
+  tags: ['!dev'],
+};
+
 Examples.parameters = exampleParameters;

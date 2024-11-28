@@ -1,4 +1,4 @@
-@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
 $border-width: 3px;
 
@@ -10,7 +10,7 @@ $border-width: 3px;
   flex-direction: column;
   border: $border-width solid var(--semantic-danger-foreground);
 
-  @media (min-width: $breakpoint-s) {
+  @media (min-width: breakpoints.$breakpoint-s) {
     flex-direction: row;
   }
 }
@@ -21,12 +21,12 @@ $border-width: 3px;
     calc(var(--spacing-xs) - $border-width) var(--spacing-xs);
   background-color: var(--semantic-danger-foreground);
 
-  @media (min-width: $breakpoint-xs) {
+  @media (min-width: breakpoints.$breakpoint-xs) {
     padding: calc(var(--spacing-s) - $border-width)
       calc(var(--spacing-m) - $border-width) var(--spacing-s);
   }
 
-  @media (min-width: $breakpoint-s) {
+  @media (min-width: breakpoints.$breakpoint-s) {
     padding: calc(var(--spacing-m) - $border-width) var(--spacing-m) 0
       calc(var(--spacing-m) - $border-width);
   }
@@ -35,7 +35,7 @@ $border-width: 3px;
 .icon {
   fill: var(--palette-graphite-0);
 
-  @media (min-width: $breakpoint-s) {
+  @media (min-width: breakpoints.$breakpoint-s) {
     height: calc(var(--font-size-l) * var(--semantic-line-height-heading4));
   }
 }
@@ -44,12 +44,12 @@ $border-width: 3px;
   padding: var(--spacing-xs) calc(var(--spacing-s) - $border-width)
     calc(var(--spacing-m) - $border-width);
 
-  @media (min-width: $breakpoint-xs) {
+  @media (min-width: breakpoints.$breakpoint-xs) {
     padding: var(--spacing-m) calc(var(--spacing-m) - $border-width)
       calc(var(--spacing-m) - $border-width);
   }
 
-  @media (min-width: $breakpoint-s) {
+  @media (min-width: breakpoints.$breakpoint-s) {
     padding: calc(var(--spacing-m) - $border-width)
       calc(var(--spacing-m) - $border-width)
       calc(var(--spacing-xl) - $border-width) var(--spacing-m);

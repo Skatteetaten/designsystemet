@@ -83,10 +83,10 @@ exports[`Tester/Popover/Content WithMarkup smoke-test 1`] = `
   >
     <div class="_popoverContent_12pml_21">
       <div class="_popoverContentWrapper_12pml_26">
-        <h1 class="_heading_1okn6_1 _heading_level4_1okn6_43  ">
+        <h1 class="_heading_12p5o_1 _heading_level4_12p5o_43  ">
           Avvist av kortutsteder
         </h1>
-        <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
           Ta kontakt med kortutsteder for
           <a href="#storybook-root">
             mer informasjon

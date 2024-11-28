@@ -6,6 +6,7 @@ import { StepListComponent, StepListProps } from './StepList.types';
 import {
   getStepListStepTitleAsDefault,
   getStepListStepVariantDefault,
+  getStepListStepShouldAutoFocusWhenActiveDefault,
 } from '../StepListStep/defaults';
 import { StepListStep } from '../StepListStep/StepListStep';
 
@@ -40,4 +41,8 @@ StepList.displayName = 'StepList';
 StepList.Step = StepListStep;
 StepList.Step.displayName = 'StepList.Step';
 
-export { getStepListStepTitleAsDefault, getStepListStepVariantDefault };
+export {
+  getStepListStepTitleAsDefault,
+  getStepListStepVariantDefault,
+  getStepListStepShouldAutoFocusWhenActiveDefault,
+};

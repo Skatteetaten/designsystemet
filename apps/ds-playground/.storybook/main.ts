@@ -53,6 +53,7 @@ const config: StorybookConfig = {
         return true;
       },
       shouldExtractLiteralValuesFromEnum: true,
+      skipChildrenPropWithoutDoc: false,
     },
   },
   framework: {

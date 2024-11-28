@@ -2,9 +2,9 @@
 
 exports[`Tester/Panel Defaults play-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
       <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
@@ -22,8 +22,8 @@ exports[`Tester/Panel Defaults play-test 1`] = `
 exports[`Tester/Panel TextAlignedVertical smoke-test 1`] = `
 <div data-test-block="true">
   <div>
-    <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112 _panel_graphicIcon_ymo8g_31">
-      <div class="_panelGraphic_ymo8g_44">
+    <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicIcon_1h73c_37  undefined">
+      <div class="_panelGraphic_1h73c_50">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_extraLarge_6zbcy_17 "
              viewbox="0 0 24 24"
              focusable="false"
@@ -34,22 +34,22 @@ exports[`Tester/Panel TextAlignedVertical smoke-test 1`] = `
           </path>
         </svg>
       </div>
-      <div class="_panelArticle_ymo8g_64">
-        <h3 class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 ">
+      <div class="_panelArticle_1h73c_70">
+        <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
           En overskrift
         </h3>
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </div>
     </div>
-    <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-      <div class="_panelArticle_ymo8g_64">
+    <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+      <div class="_panelArticle_1h73c_70">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </div>
     </div>
   </div>
   <div>
-    <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112 _panel_graphicIcon_ymo8g_31">
-      <div class="_panelGraphic_ymo8g_44">
+    <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicIcon_1h73c_37  undefined">
+      <div class="_panelGraphic_1h73c_50">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_extraLarge_6zbcy_17 "
              viewbox="0 0 24 24"
              focusable="false"
@@ -60,15 +60,15 @@ exports[`Tester/Panel TextAlignedVertical smoke-test 1`] = `
           </path>
         </svg>
       </div>
-      <div class="_panelArticle_ymo8g_64">
-        <h3 class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 ">
+      <div class="_panelArticle_1h73c_70">
+        <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
           En overskrift
         </h3>
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </div>
     </div>
-    <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-      <div class="_panelArticle_ymo8g_64">
+    <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+      <div class="_panelArticle_1h73c_70">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </div>
     </div>
@@ -78,8 +78,8 @@ exports[`Tester/Panel TextAlignedVertical smoke-test 1`] = `
 
 exports[`Tester/Panel TextShortAndIcon smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112 _panel_graphicIcon_ymo8g_31">
-    <div class="_panelGraphic_ymo8g_44">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicIcon_1h73c_37  undefined">
+    <div class="_panelGraphic_1h73c_50">
       <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 "
            viewbox="0 0 24 24"
            focusable="false"
@@ -90,11 +90,11 @@ exports[`Tester/Panel TextShortAndIcon smoke-test 1`] = `
         </path>
       </svg>
     </div>
-    <div class="_panelArticle_ymo8g_64">
-      <h3 class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 ">
+    <div class="_panelArticle_1h73c_70">
+      <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
         Kort tittel
       </h3>
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Kort test ...
       </p>
     </div>
@@ -104,9 +104,9 @@ exports[`Tester/Panel TextShortAndIcon smoke-test 1`] = `
 
 exports[`Tester/Panel VariantFilled smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
+  <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
       <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
@@ -124,12 +124,12 @@ exports[`Tester/Panel VariantFilled smoke-test 1`] = `
 exports[`Tester/Panel WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <div id="htmlId"
-       class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112  dummyClassname"
+       class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined dummyClassname"
        lang="nb"
        data-testid="123ID"
   >
-    <div class="_panelArticle_ymo8g_64">
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
+    <div class="_panelArticle_1h73c_70">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
       <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
@@ -146,14 +146,14 @@ exports[`Tester/Panel WithAttributes play-test 1`] = `
 
 exports[`Tester/Panel WithCanManuallySetTitleFocus play-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
-      <h3 class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 "
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
+      <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 "
           tabindex="-1"
       >
         Tittel i Panel
       </h3>
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
       <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
@@ -170,9 +170,9 @@ exports[`Tester/Panel WithCanManuallySetTitleFocus play-test 1`] = `
 
 exports[`Tester/Panel WithClassNameOverridesPanelWidthAndPadding smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112  dummyPanelOverridesWidthAndPadding">
-    <div class="_panelArticle_ymo8g_64">
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined dummyPanelOverridesWidthAndPadding">
+    <div class="_panelArticle_1h73c_70">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
       <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
@@ -189,53 +189,53 @@ exports[`Tester/Panel WithClassNameOverridesPanelWidthAndPadding smoke-test 1`] 
 
 exports[`Tester/Panel WithColorAndVariant smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
       color: ochre
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_forest_ymo8g_78 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_forest_1h73c_84 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
       color: forest
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_burgundy_ymo8g_82 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_burgundy_1h73c_88 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
       color: burgundy
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_denim_ymo8g_86 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_denim_1h73c_92 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
       color: denim
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_graphite_ymo8g_90 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_graphite_1h73c_96 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
       color: graphite
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
       color: ochre
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_forest_ymo8g_78 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_forest_1h73c_84 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
       color: forest
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_burgundy_ymo8g_82 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_burgundy_1h73c_88 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
       color: burgundy
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_denim_ymo8g_86 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_denim_1h73c_92 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
       color: denim
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_graphite_ymo8g_90 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_graphite_1h73c_96 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
       color: graphite
     </div>
   </div>
@@ -244,8 +244,8 @@ exports[`Tester/Panel WithColorAndVariant smoke-test 1`] = `
 
 exports[`Tester/Panel WithHideGraphicMobileAndIcon smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112 _panel_graphicIcon_ymo8g_31 _panel_graphicIconHide_ymo8g_35">
-    <div class="_panelGraphic_ymo8g_44 _panelGraphicHide_ymo8g_50">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicIcon_1h73c_37 _panel_graphicIconHide_1h73c_41 undefined">
+    <div class="_panelGraphic_1h73c_50 _panelGraphicHide_1h73c_56">
       <svg class="_systemIcon_6zbcy_2 _systemIcon_extraLarge_6zbcy_17 "
            viewbox="0 0 24 24"
            focusable="false"
@@ -256,14 +256,14 @@ exports[`Tester/Panel WithHideGraphicMobileAndIcon smoke-test 1`] = `
         </path>
       </svg>
     </div>
-    <div class="_panelArticle_ymo8g_64">
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+    <div class="_panelArticle_1h73c_70">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112 _panel_graphicIcon_ymo8g_31 _panel_graphicIconHide_ymo8g_35">
-    <div class="_panelGraphic_ymo8g_44 _panelGraphicHide_ymo8g_50">
+  <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicIcon_1h73c_37 _panel_graphicIconHide_1h73c_41 undefined">
+    <div class="_panelGraphic_1h73c_50 _panelGraphicHide_1h73c_56">
       <svg class="_systemIcon_6zbcy_2 _systemIcon_extraLarge_6zbcy_17 "
            viewbox="0 0 24 24"
            focusable="false"
@@ -274,8 +274,8 @@ exports[`Tester/Panel WithHideGraphicMobileAndIcon smoke-test 1`] = `
         </path>
       </svg>
     </div>
-    <div class="_panelArticle_ymo8g_64">
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+    <div class="_panelArticle_1h73c_70">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
@@ -285,8 +285,8 @@ exports[`Tester/Panel WithHideGraphicMobileAndIcon smoke-test 1`] = `
 
 exports[`Tester/Panel WithHideGraphicMobileAndIconDesktop smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112 _panel_graphicIcon_ymo8g_31 _panel_graphicIconHide_ymo8g_35">
-    <div class="_panelGraphic_ymo8g_44 _panelGraphicHide_ymo8g_50">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicIcon_1h73c_37 _panel_graphicIconHide_1h73c_41 undefined">
+    <div class="_panelGraphic_1h73c_50 _panelGraphicHide_1h73c_56">
       <svg class="_systemIcon_6zbcy_2 _systemIcon_extraLarge_6zbcy_17 "
            viewbox="0 0 24 24"
            focusable="false"
@@ -297,14 +297,14 @@ exports[`Tester/Panel WithHideGraphicMobileAndIconDesktop smoke-test 1`] = `
         </path>
       </svg>
     </div>
-    <div class="_panelArticle_ymo8g_64">
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+    <div class="_panelArticle_1h73c_70">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112 _panel_graphicIcon_ymo8g_31 _panel_graphicIconHide_ymo8g_35">
-    <div class="_panelGraphic_ymo8g_44 _panelGraphicHide_ymo8g_50">
+  <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicIcon_1h73c_37 _panel_graphicIconHide_1h73c_41 undefined">
+    <div class="_panelGraphic_1h73c_50 _panelGraphicHide_1h73c_56">
       <svg class="_systemIcon_6zbcy_2 _systemIcon_extraLarge_6zbcy_17 "
            viewbox="0 0 24 24"
            focusable="false"
@@ -315,8 +315,8 @@ exports[`Tester/Panel WithHideGraphicMobileAndIconDesktop smoke-test 1`] = `
         </path>
       </svg>
     </div>
-    <div class="_panelArticle_ymo8g_64">
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+    <div class="_panelArticle_1h73c_70">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
@@ -326,28 +326,28 @@ exports[`Tester/Panel WithHideGraphicMobileAndIconDesktop smoke-test 1`] = `
 
 exports[`Tester/Panel WithHideGraphicMobileAndImage smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112 _panel_graphicImage_ymo8g_26">
-    <div class="_panelGraphic_ymo8g_44 _panelGraphicHide_ymo8g_50">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicImage_1h73c_32 undefined">
+    <div class="_panelGraphic_1h73c_50 _panelGraphicHide_1h73c_56">
       <img src="[REMOVED]"
            alt
-           class="_panelImage_ymo8g_70"
+           class="_panelImage_1h73c_76"
       >
     </div>
-    <div class="_panelArticle_ymo8g_64">
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+    <div class="_panelArticle_1h73c_70">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112 _panel_graphicImage_ymo8g_26">
-    <div class="_panelGraphic_ymo8g_44 _panelGraphicHide_ymo8g_50">
+  <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicImage_1h73c_32 undefined">
+    <div class="_panelGraphic_1h73c_50 _panelGraphicHide_1h73c_56">
       <img src="[REMOVED]"
            alt
-           class="_panelImage_ymo8g_70"
+           class="_panelImage_1h73c_76"
       >
     </div>
-    <div class="_panelArticle_ymo8g_64">
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+    <div class="_panelArticle_1h73c_70">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
@@ -357,28 +357,28 @@ exports[`Tester/Panel WithHideGraphicMobileAndImage smoke-test 1`] = `
 
 exports[`Tester/Panel WithHideGraphicMobileAndImageDesktop smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112 _panel_graphicImage_ymo8g_26">
-    <div class="_panelGraphic_ymo8g_44 _panelGraphicHide_ymo8g_50">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicImage_1h73c_32 undefined">
+    <div class="_panelGraphic_1h73c_50 _panelGraphicHide_1h73c_56">
       <img src="[REMOVED]"
            alt
-           class="_panelImage_ymo8g_70"
+           class="_panelImage_1h73c_76"
       >
     </div>
-    <div class="_panelArticle_ymo8g_64">
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+    <div class="_panelArticle_1h73c_70">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112 _panel_graphicImage_ymo8g_26">
-    <div class="_panelGraphic_ymo8g_44 _panelGraphicHide_ymo8g_50">
+  <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicImage_1h73c_32 undefined">
+    <div class="_panelGraphic_1h73c_50 _panelGraphicHide_1h73c_56">
       <img src="[REMOVED]"
            alt
-           class="_panelImage_ymo8g_70"
+           class="_panelImage_1h73c_76"
       >
     </div>
-    <div class="_panelArticle_ymo8g_64">
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+    <div class="_panelArticle_1h73c_70">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
@@ -388,12 +388,12 @@ exports[`Tester/Panel WithHideGraphicMobileAndImageDesktop smoke-test 1`] = `
 
 exports[`Tester/Panel WithHideSubtitle play-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
-      <h4 class="_heading_1okn6_1 _heading_level5_1okn6_47 _heading_hasSpacingExtraSmall_1okn6_51 _srOnly_ymo8g_137">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
+      <h4 class="_heading_12p5o_1 _heading_level5_12p5o_47 _heading_hasSpacingExtraSmall_12p5o_51 _srOnly_1h73c_171">
         Det er en undertittel
       </h4>
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
       <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
@@ -410,12 +410,12 @@ exports[`Tester/Panel WithHideSubtitle play-test 1`] = `
 
 exports[`Tester/Panel WithHideTitle play-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
-      <h3 class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 _srOnly_ymo8g_137">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
+      <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _srOnly_1h73c_171">
         Det er en tittel
       </h3>
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
       <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
@@ -432,8 +432,8 @@ exports[`Tester/Panel WithHideTitle play-test 1`] = `
 
 exports[`Tester/Panel WithIcon play-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112 _panel_graphicIcon_ymo8g_31">
-    <div class="_panelGraphic_ymo8g_44">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicIcon_1h73c_37  undefined">
+    <div class="_panelGraphic_1h73c_50">
       <svg class="_systemIcon_6zbcy_2 _systemIcon_extraLarge_6zbcy_17 "
            viewbox="0 0 24 24"
            focusable="false"
@@ -444,14 +444,14 @@ exports[`Tester/Panel WithIcon play-test 1`] = `
         </path>
       </svg>
     </div>
-    <div class="_panelArticle_ymo8g_64">
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+    <div class="_panelArticle_1h73c_70">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112 _panel_graphicIcon_ymo8g_31">
-    <div class="_panelGraphic_ymo8g_44">
+  <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicIcon_1h73c_37  undefined">
+    <div class="_panelGraphic_1h73c_50">
       <svg class="_systemIcon_6zbcy_2 _systemIcon_extraLarge_6zbcy_17 "
            viewbox="0 0 24 24"
            focusable="false"
@@ -462,8 +462,8 @@ exports[`Tester/Panel WithIcon play-test 1`] = `
         </path>
       </svg>
     </div>
-    <div class="_panelArticle_ymo8g_64">
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+    <div class="_panelArticle_1h73c_70">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
@@ -473,8 +473,8 @@ exports[`Tester/Panel WithIcon play-test 1`] = `
 
 exports[`Tester/Panel WithIconMobile smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112 _panel_graphicIcon_ymo8g_31">
-    <div class="_panelGraphic_ymo8g_44">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicIcon_1h73c_37  undefined">
+    <div class="_panelGraphic_1h73c_50">
       <svg class="_systemIcon_6zbcy_2 _systemIcon_extraLarge_6zbcy_17 "
            viewbox="0 0 24 24"
            focusable="false"
@@ -485,14 +485,14 @@ exports[`Tester/Panel WithIconMobile smoke-test 1`] = `
         </path>
       </svg>
     </div>
-    <div class="_panelArticle_ymo8g_64">
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+    <div class="_panelArticle_1h73c_70">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112 _panel_graphicIcon_ymo8g_31">
-    <div class="_panelGraphic_ymo8g_44">
+  <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicIcon_1h73c_37  undefined">
+    <div class="_panelGraphic_1h73c_50">
       <svg class="_systemIcon_6zbcy_2 _systemIcon_extraLarge_6zbcy_17 "
            viewbox="0 0 24 24"
            focusable="false"
@@ -503,8 +503,8 @@ exports[`Tester/Panel WithIconMobile smoke-test 1`] = `
         </path>
       </svg>
     </div>
-    <div class="_panelArticle_ymo8g_64">
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+    <div class="_panelArticle_1h73c_70">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
@@ -514,28 +514,28 @@ exports[`Tester/Panel WithIconMobile smoke-test 1`] = `
 
 exports[`Tester/Panel WithImage play-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112 _panel_graphicImage_ymo8g_26">
-    <div class="_panelGraphic_ymo8g_44">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicImage_1h73c_32 undefined">
+    <div class="_panelGraphic_1h73c_50">
       <img src="[REMOVED]"
            alt
-           class="_panelImage_ymo8g_70"
+           class="_panelImage_1h73c_76"
       >
     </div>
-    <div class="_panelArticle_ymo8g_64">
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+    <div class="_panelArticle_1h73c_70">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112 _panel_graphicImage_ymo8g_26">
-    <div class="_panelGraphic_ymo8g_44">
+  <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicImage_1h73c_32 undefined">
+    <div class="_panelGraphic_1h73c_50">
       <img src="[REMOVED]"
            alt
-           class="_panelImage_ymo8g_70"
+           class="_panelImage_1h73c_76"
       >
     </div>
-    <div class="_panelArticle_ymo8g_64">
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+    <div class="_panelArticle_1h73c_70">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
@@ -545,28 +545,28 @@ exports[`Tester/Panel WithImage play-test 1`] = `
 
 exports[`Tester/Panel WithImageMobile smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112 _panel_graphicImage_ymo8g_26">
-    <div class="_panelGraphic_ymo8g_44">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicImage_1h73c_32 undefined">
+    <div class="_panelGraphic_1h73c_50">
       <img src="[REMOVED]"
            alt
-           class="_panelImage_ymo8g_70"
+           class="_panelImage_1h73c_76"
       >
     </div>
-    <div class="_panelArticle_ymo8g_64">
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+    <div class="_panelArticle_1h73c_70">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112 _panel_graphicImage_ymo8g_26">
-    <div class="_panelGraphic_ymo8g_44">
+  <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicImage_1h73c_32 undefined">
+    <div class="_panelGraphic_1h73c_50">
       <img src="[REMOVED]"
            alt
-           class="_panelImage_ymo8g_70"
+           class="_panelImage_1h73c_76"
       >
     </div>
-    <div class="_panelArticle_ymo8g_64">
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+    <div class="_panelArticle_1h73c_70">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
@@ -576,28 +576,28 @@ exports[`Tester/Panel WithImageMobile smoke-test 1`] = `
 
 exports[`Tester/Panel WithImageSourceAltText play-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112 _panel_graphicImage_ymo8g_26">
-    <div class="_panelGraphic_ymo8g_44">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicImage_1h73c_32 undefined">
+    <div class="_panelGraphic_1h73c_50">
       <img src="[REMOVED]"
            alt="Bonde med ku"
-           class="_panelImage_ymo8g_70"
+           class="_panelImage_1h73c_76"
       >
     </div>
-    <div class="_panelArticle_ymo8g_64">
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+    <div class="_panelArticle_1h73c_70">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112 _panel_graphicImage_ymo8g_26">
-    <div class="_panelGraphic_ymo8g_44">
+  <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118 _panel_graphicImage_1h73c_32 undefined">
+    <div class="_panelGraphic_1h73c_50">
       <img src="[REMOVED]"
            alt="Bonde med ku"
-           class="_panelImage_ymo8g_70"
+           class="_panelImage_1h73c_76"
       >
     </div>
-    <div class="_panelArticle_ymo8g_64">
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+    <div class="_panelArticle_1h73c_70">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
@@ -607,122 +607,122 @@ exports[`Tester/Panel WithImageSourceAltText play-test 1`] = `
 
 exports[`Tester/Panel WithPadding smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingS_ymo8g_94 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingS_1h73c_100  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
       <div>
         padding: s
       </div>
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingS_ymo8g_94 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingS_1h73c_100  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
       <div>
         padding: s
       </div>
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingM_ymo8g_97 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingM_1h73c_103  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
       <div>
         padding: m
       </div>
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingM_ymo8g_97 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingM_1h73c_103  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
       <div>
         padding: m
       </div>
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingL_ymo8g_100 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingL_1h73c_106  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
       <div>
         padding: l
       </div>
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingL_ymo8g_100 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingL_1h73c_106  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
       <div>
         padding: l
       </div>
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
       <div>
         padding: xl
       </div>
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
       <div>
         padding: xl
       </div>
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXXL_ymo8g_106 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXXL_1h73c_112  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
       <div>
         padding: xxl
       </div>
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingXXL_ymo8g_106 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXXL_1h73c_112  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
       <div>
         padding: xxl
       </div>
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingMEGA_ymo8g_109 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingMEGA_1h73c_115  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
       <div>
         padding: mega
       </div>
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingMEGA_ymo8g_109 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingMEGA_1h73c_115  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
       <div>
         padding: mega
       </div>
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
@@ -732,15 +732,15 @@ exports[`Tester/Panel WithPadding smoke-test 1`] = `
 
 exports[`Tester/Panel WithPanelHeadingRef play-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
-      <h3 class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 "
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
+      <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 "
           tabindex="-1"
           id="dummyIdForwardedFromRef"
       >
         Panel Header skal kunne få fokus
       </h3>
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
@@ -757,11 +757,11 @@ exports[`Tester/Panel WithPanelHeadingRef play-test 1`] = `
 
 exports[`Tester/Panel WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112"
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined"
        id="dummyIdForwardedFromRef"
   >
-    <div class="_panelArticle_ymo8g_64">
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
+    <div class="_panelArticle_1h73c_70">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
       <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
@@ -776,45 +776,71 @@ exports[`Tester/Panel WithRef play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/Panel WithResponsivePadding smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109 _panelResponsive_1h73c_142 _panel_spacingXXS_1h73c_118  dummyPanelPaddingResponsive">
+    <div class="_panelArticle_1h73c_70">
+      <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+        Med responsive padding
+      </h3>
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+        Her har vi satt hasResponsivePadding:true og endret følgende tokens for responsive visning. 
+      --pandel-padding-xs, --pandel-padding-m og --pandel-padding-l
+      </p>
+    </div>
+  </div>
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
+      <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
+        Med default padding
+      </h3>
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+        Denne Panel bruker standard 'padding'-prop for å kontrollere padding.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Tester/Panel WithSpacing smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
       spacing: xxs
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXS_ymo8g_115">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXS_1h73c_121  undefined">
+    <div class="_panelArticle_1h73c_70">
       spacing: xs
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingS_ymo8g_118">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingS_1h73c_124  undefined">
+    <div class="_panelArticle_1h73c_70">
       spacing: s
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingM_ymo8g_121">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingM_1h73c_127  undefined">
+    <div class="_panelArticle_1h73c_70">
       spacing: m
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingL_ymo8g_124">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingL_1h73c_130  undefined">
+    <div class="_panelArticle_1h73c_70">
       spacing: l
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXL_ymo8g_127">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXL_1h73c_133  undefined">
+    <div class="_panelArticle_1h73c_70">
       spacing: xl
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXL_ymo8g_130">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXL_1h73c_136  undefined">
+    <div class="_panelArticle_1h73c_70">
       spacing: xxl
     </div>
   </div>
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingMEGA_ymo8g_133">
-    <div class="_panelArticle_ymo8g_64">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingMEGA_1h73c_139  undefined">
+    <div class="_panelArticle_1h73c_70">
       spacing: mega
     </div>
   </div>
@@ -823,12 +849,12 @@ exports[`Tester/Panel WithSpacing smoke-test 1`] = `
 
 exports[`Tester/Panel WithSubtitle play-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
-      <h4 class="_heading_1okn6_1 _heading_level5_1okn6_47 _heading_hasSpacingExtraSmall_1okn6_51 ">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
+      <h4 class="_heading_12p5o_1 _heading_level5_12p5o_47 _heading_hasSpacingExtraSmall_12p5o_51 ">
         Det er en undertittel
       </h4>
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
@@ -838,12 +864,12 @@ exports[`Tester/Panel WithSubtitle play-test 1`] = `
 
 exports[`Tester/Panel WithSubtitleAs play-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
-      <h2 class="_heading_1okn6_1 _heading_level5_1okn6_47 _heading_hasSpacingExtraSmall_1okn6_51 ">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
+      <h2 class="_heading_12p5o_1 _heading_level5_12p5o_47 _heading_hasSpacingExtraSmall_12p5o_51 ">
         Det er en undertittel med valgt heading nivå
       </h2>
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
       <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
@@ -860,12 +886,12 @@ exports[`Tester/Panel WithSubtitleAs play-test 1`] = `
 
 exports[`Tester/Panel WithTitle play-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
-      <h3 class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 ">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
+      <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
         Det er en tittel
       </h3>
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17  ">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
     </div>
@@ -875,12 +901,12 @@ exports[`Tester/Panel WithTitle play-test 1`] = `
 
 exports[`Tester/Panel WithTitleAs play-test 1`] = `
 <div data-test-block="true">
-  <div class="_panel_ymo8g_5 _panel_outline_ymo8g_15 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112">
-    <div class="_panelArticle_ymo8g_64">
-      <h1 class="_heading_1okn6_1 _heading_level3_1okn6_34 _heading_hasSpacingSmall_1okn6_54 ">
+  <div class="_panel_1h73c_5 _panel_outline_1h73c_21 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined">
+    <div class="_panelArticle_1h73c_70">
+      <h1 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
         Det er en tittel
       </h1>
-      <p class="_paragraph_32eqi_1 _paragraph_standard_32eqi_17 _paragraph_hasSpacingLarge_32eqi_23 ">
+      <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
         Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
       </p>
       <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "

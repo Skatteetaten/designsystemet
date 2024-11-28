@@ -1,4 +1,4 @@
-@import 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
 .logoContainer {
   height: var(--size-extra-large);
@@ -26,7 +26,7 @@
     height: 100%;
   }
 
-  @media (min-width: $breakpoint-m) {
+  @media (min-width: breakpoints.$breakpoint-m) {
     &_mobile {
       display: none;
     }

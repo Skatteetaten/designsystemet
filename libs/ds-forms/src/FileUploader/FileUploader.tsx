@@ -73,6 +73,8 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
     >({});
 
     const id = externalId ?? generatedId;
+
+    const errorId = `${useId()}-fileuploader-error`;
     const fileformatsId = `${id}-accepted-formats`;
 
     const acceptedFormatsAsCommaSeparatedString =
@@ -167,6 +169,8 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
       classNames?.container ?? ''
     }`;
 
+    const ariaDescribedBy = `${errorMessage ? errorId : ''} ${acceptedFileFormats ? fileformatsId : ''}`;
+
     return (
       <div
         ref={ref}
@@ -199,7 +203,9 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
             errorMessage ? styles.dropZone_error : ''
           } ${isDragging && !isUploading ? styles.dropZone_dragging : ''}`}
           disabled={isUploading}
-          aria-describedby={acceptedFileFormats ? fileformatsId : undefined}
+          aria-describedby={
+            ariaDescribedBy.trim() !== '' ? ariaDescribedBy : undefined
+          }
           onDragEnter={handleDragEnter}
           onDragLeave={handleDragLeave}
           onDragOver={handleDragOver}
@@ -248,6 +254,7 @@ export const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(
           </span>
         )}
         <ErrorMessage
+          id={errorId}
           className={classNames?.errorMessage}
           showError={!!errorMessage}
         >

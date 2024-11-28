@@ -2,6 +2,8 @@
   "pagination.Back": "Tilbake",
   "pagination.Forward": "Frem",
   "pagination.Title": "Viser {view} av {total}",
+  "table.ExpandAreaEnd": "Slutt på utvidet innhold.",
+  "table.ExpandAreaStart": "Start på utvidet innhold.",
   "table.NotSorted": "Ikke sortert",
   "table.Sortable": "Sorterbar",
   "table.SortedAscending": "Sortert stigende",
