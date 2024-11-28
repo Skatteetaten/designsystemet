@@ -114,13 +114,6 @@ const meta = {
   args: {
     children: loremIpsum,
   },
-  parameters: {
-    tags: ['!autodocs'],
-    metadata: {
-      documentation: 'manel metadata.documentation',
-    },
-  },
-  tags: ['!autodocs'],
 } satisfies Meta<typeof Panel>;
 
 export default meta;

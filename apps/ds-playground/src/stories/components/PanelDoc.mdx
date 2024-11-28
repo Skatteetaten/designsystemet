@@ -1,14 +1,7 @@
-import {
-  Meta,
-  Canvas,
-  Description,
-  Primary,
-  Controls,
-  Story,
-} from '@storybook/blocks';
+import { Meta, Canvas, Description } from '@storybook/blocks';
 import * as PanelStoriesDoc from './Panel.stories';
 import { VersionBadge } from '../utils/VersionBadge';
-import { DocIntro, Link } from '../utils/DocIntro';
+import { Link } from '../utils/DocIntro';
 import { ReactComponent as PanelPaddingIllustration } from '../../assets/panel-padding-prop.svg';
 import { ReactComponent as PanelPaddingResponsiveIllustration } from '../../assets/panel-has-responsive-padding.svg';
 
@@ -23,7 +16,7 @@ import { ReactComponent as PanelPaddingResponsiveIllustration } from '../../asse
 Padding kan settes på to måter:
 
 1. Hvis **padding**-prop er brukt så gjelder denne verdien for alle brekkpunkter.
-2. Hvis **hasResponsivePadding** = true OG valgfritt egendefinert stilsett satt i **classNames** så har man mulighet for å definere forskjellig padding for hvert av <Link url="/?path=/docs/designtokens-breakpoints--docs">Desginsystemet brekkpunkter</Link>. Stilene satt i **classNames.padding** er mobile-first, dvs. at variablene settes fra minste bredde til største (min-width). Default-verdiene ved bruk av **hasResponsivePadding** er --spacing-m i området mellom 0px og --breakpoint-xs. --spacing-xl gjelder fra --breakpoint-xs og alt som er bredere.
+2. Hvis **hasResponsivePadding** = true OG valgfritt egendefinert stilsett satt i **classNames** så har man mulighet for å definere forskjellig padding for hvert av <Link url="/?path=/docs/designtokens-breakpoints--docs">Desginsystemets brekkpunkter</Link>. Stilene satt i **classNames.padding** er mobile-first, dvs. at variablene settes fra minste bredde til største (min-width). Default-verdiene ved bruk av **hasResponsivePadding** er --spacing-m i området mellom 0px og --breakpoint-xs. --spacing-xl gjelder fra --breakpoint-xs og alt som er bredere.
 
 Bruk av **padding** utelukker bruk av **hasResponsivePadding** og omvendt.
 
@@ -36,7 +29,11 @@ Hvis man ikke ønsker å endre padding så vil padding ha denne verdien
 --panel-padding: var(--spacing-xl);
 ```
 
-<div id="panel-padding-prop">### 1. Panel med luft styrt av padding-prop</div>
+<div id="panel-padding-prop">
+
+### 1. Panel med luft styrt av padding-prop
+
+</div>
 
 Her ser vi at luft er lik på alle skjermbredder
 
@@ -140,14 +137,16 @@ Eksempel på CSS som lar innhold få all tilgjengelig plass i Panel hvis verken 
 
 #### Kode - TSX
 
-```
+```tsx
 <Panel
-    classNames={{
-      padding: 'dummyPanelPaddingNoMargin'
-    }}
-    hasResponsivePadding
-    title="Innholdsbredde 100%"
-  >Lorem ipsum dolor sit amet.</Panel>
+  classNames={{
+    padding: 'dummyPanelPaddingNoMargin',
+  }}
+  hasResponsivePadding
+  title="Innholdsbredde 100%"
+>
+  Lorem ipsum dolor sit amet.
+</Panel>
 ```
 
 Resultatet blir da at innholdet i Panel strekker seg 100%. Hvis derimot `renderIcon` eller `imageSource` så må det gjøres endring i CSS-grid. Panel sin grid-template endres med media-query når ikon eller illustrasjon er satt.
