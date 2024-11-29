@@ -16,7 +16,10 @@ import { ReactComponent as PanelPaddingResponsiveIllustration } from '../../asse
 Padding kan settes på to måter:
 
 1. Hvis **padding**-prop er brukt så gjelder denne verdien for alle brekkpunkter.
-2. Hvis **hasResponsivePadding** = true OG valgfritt egendefinert stilsett satt i **classNames** så har man mulighet for å definere forskjellig padding for hvert av <Link url="/?path=/docs/designtokens-breakpoints--docs">Desginsystemets brekkpunkter</Link>. Stilene satt i **classNames.padding** er mobile-first, dvs. at variablene settes fra minste bredde til største (min-width). Default-verdiene ved bruk av **hasResponsivePadding** er --spacing-m i området mellom 0px og --breakpoint-xs. --spacing-xl gjelder fra --breakpoint-xs og alt som er bredere.
+2. Hvis **hasResponsivePadding** = true OG valgfritt egendefinert stilsett satt i **classNames** så kan man definere forskjellig padding for hvert av <Link url="/?path=/docs/designtokens-breakpoints--docs">Desginsystemets brekkpunkter</Link>. Stilene satt i **classNames.padding** er mobile-first, dvs. at variablene settes fra minste bredde til største (min-width). Default-verdiene ved bruk av **hasResponsivePadding** er
+
+- --spacing-m i området mellom 0px og --breakpoint-xs.
+- --spacing-xl gjelder fra --breakpoint-xs og oppover.
 
 Bruk av **padding** utelukker bruk av **hasResponsivePadding** og omvendt.
 
