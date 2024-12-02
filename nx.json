@@ -98,6 +98,5 @@
   },
   "defaultProject": "ds-playground",
   "useInferencePlugins": false,
-  "defaultBase": "origin/master",
-  "useLegacyCache": true
+  "defaultBase": "origin/master"
 }
