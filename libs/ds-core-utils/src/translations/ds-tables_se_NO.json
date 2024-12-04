@@ -2,6 +2,8 @@
   "pagination.Back": "Ruovttuluotta",
   "pagination.Forward": "Ovddas",
   "pagination.Title": "Čájeha {view} oktiibuot {total} bohtosis",
+  "table.ExpandAreaEnd": "Viiddiduvvon sisdoalu loahppa",
+  "table.ExpandAreaStart": "Viiddiduvvon sisdoalu álgu",
   "table.NotSorted": "Ii leat sirrejuvvon",
   "table.Sortable": "Vejolaš sirret",
   "table.SortedAscending": "Sirrejuvvon lassáneamen",
