@@ -3,6 +3,7 @@
 exports[`Tester/Popover/Content VerticalScroll smoke-test 1`] = `
 <div data-test-block="true">
   <div tabindex="-1"
+       data-floating-ui-focusable
        class="_popover_12pml_1 _popover_forest_12pml_9"
        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 0px);"
   >
@@ -39,6 +40,7 @@ exports[`Tester/Popover/Content VerticalScroll smoke-test 1`] = `
 exports[`Tester/Popover/Content WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <div tabindex="-1"
+       data-floating-ui-focusable
        id="htmlId"
        lang="en"
        data-testid="123ID"
@@ -78,6 +80,7 @@ exports[`Tester/Popover/Content WithAttributes play-test 1`] = `
 exports[`Tester/Popover/Content WithMarkup smoke-test 1`] = `
 <div data-test-block="true">
   <div tabindex="-1"
+       data-floating-ui-focusable
        class="_popover_12pml_1 _popover_forest_12pml_9"
        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 0px);"
   >
@@ -122,6 +125,7 @@ exports[`Tester/Popover/Content WithMarkup smoke-test 1`] = `
 exports[`Tester/Popover/Content WithRef play-test 1`] = `
 <div data-test-block="true">
   <div tabindex="-1"
+       data-floating-ui-focusable
        class="_popover_12pml_1 _popover_forest_12pml_9"
        id="dummyIdForwardedFromRef"
        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 0px);"
