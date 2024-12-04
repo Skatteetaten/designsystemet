@@ -8,7 +8,7 @@ const { visualizer } = require('rollup-plugin-visualizer');
 const fs = require('fs');
 const path = require('path');
 
-const addStyleImportPlugin = require('./rollup-plugin-addstyleimport');
+const addStyleImportPlugin = require('./rollup-plugin-addstyleimport.cjs');
 
 // Denne funksjonen looper gjennom undermappene i /src og oppretter en Rollup entry per komponent
 const getRollupInputs = (sourcePath) => {
@@ -21,8 +21,8 @@ const getRollupInputs = (sourcePath) => {
       return !e.includes('.');
     });
 
-    let i = 0,
-      len = srcSubdirectories.length;
+    let i = 0;
+    const len = srcSubdirectories.length;
     while (i < len) {
       const subdirectoryName = srcSubdirectories[i];
       const subEntryPath = `${sourcePath}/${subdirectoryName}/${subdirectoryName}.tsx`;

@@ -15,7 +15,7 @@
         "project": "libs/ds-buttons/package.json",
         "entryFile": "libs/ds-buttons/src/index.ts",
         "external": ["react/jsx-runtime"],
-        "rollupConfig": ["libs/ds-buttons/rollup.config.js"],
+        "rollupConfig": ["libs/ds-buttons/rollup.config.cjs"],
         "compiler": "swc",
         "assets": [
           {
