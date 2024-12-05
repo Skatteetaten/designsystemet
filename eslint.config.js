@@ -8,6 +8,7 @@ export default [
   ...nxPlugin.configs['flat/base'],
   ...nxPlugin.configs['flat/typescript'],
   ...nxPlugin.configs['flat/javascript'],
+  //TODO can jeg fjerne fixup?
   ...fixupConfigRules(devConfig),
   {
     ignores: ['**/.*', '**/node_modules/*'],
@@ -38,7 +39,7 @@ export default [
         'error',
         {
           enforceBuildableLibDependency: true,
-          allow: [],
+          allow: ['^.*/eslint(\\.base)?\\.config\\.[cm]?js$'],
 
           depConstraints: [
             {

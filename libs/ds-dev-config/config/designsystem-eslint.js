@@ -1,14 +1,8 @@
 import eslint from '@eslint/js';
-import nxPlugin from '@nx/eslint-plugin';
-import tseslint from '@typescript-eslint/eslint-plugin';
 import tseslintParser from '@typescript-eslint/parser';
-import importPlugin from 'eslint-plugin-import';
 import jestPlugin from 'eslint-plugin-jest';
 import jestDomPlugin from 'eslint-plugin-jest-dom';
 import jsdocPlugin from 'eslint-plugin-jsdoc';
-import jsxA11y from 'eslint-plugin-jsx-a11y';
-import reactPlugin from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
 import sonarjsPlugin from 'eslint-plugin-sonarjs';
 import testingLibraryPlugin from 'eslint-plugin-testing-library';
 import globals from 'globals';
@@ -22,6 +16,7 @@ const GLOBALS_BROWSER_FIX = {
 delete GLOBALS_BROWSER_FIX['AudioWorkletGlobalScope '];
 
 //TODO rydde vekk alt som ikke er i bruk
+//TODO gå gjennom alle plugins og se om de tilbyr flat config
 export default [
   //...nxPlugin.configs['flat/react'],
   //...nxPlugin.configs['flat/react-typescript'],
@@ -29,16 +24,11 @@ export default [
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     plugins: {
-      //react: reactPlugin,
       jest: jestPlugin,
       'jest-dom': jestDomPlugin,
       'testing-library': testingLibraryPlugin,
-      //sonarjs: sonarjsPlugin,
+      sonarjs: sonarjsPlugin,
       jsdoc: jsdocPlugin,
-      //'@typescript-eslint': tseslint,
-      //import: importPlugin,
-      //'jsx-a11y': jsxA11y,
-      //'react-hooks': reactHooks,
     },
     languageOptions: {
       ecmaVersion: 2021,
@@ -61,7 +51,7 @@ export default [
         version: 'detect',
       },
       jest: {
-        version: 27,
+        version: 29,
       },
     },
 
@@ -127,8 +117,6 @@ export default [
   {
     files: ['**/*.{ts,tsx}'],
     rules: {
-      ...tseslint.configs.recommended.rules,
-      ...nxPlugin.configs['typescript'].rules,
       'jsx-a11y/no-access-key': 'off',
       '@typescript-eslint/no-namespace': 'off',
       '@typescript-eslint/explicit-function-return-type': 'error',
