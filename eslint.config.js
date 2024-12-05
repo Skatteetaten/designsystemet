@@ -77,7 +77,10 @@ export default [
           checkMissingDependencies: true,
           checkObsoleteDependencies: true,
           checkVersionMismatches: true,
-          ignoredDependencies: ['@skatteetaten/ds-dev-config'],
+          ignoredDependencies: [
+            '@skatteetaten/ds-dev-config',
+            '@nx/eslint-plugin',
+          ],
           includeTransitiveDependencies: true,
         },
       ],

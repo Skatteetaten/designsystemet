@@ -17,7 +17,7 @@ swcJestConfig.module.noInterop = false;
 
 export default {
   displayName: 'ds-collections',
-  preset: '../../jest.preset.js',
+  preset: '../../jest.preset.cjs',
   transform: {
     '^.+\\.[tj]sx?$': ['@swc/jest', swcJestConfig],
   },

@@ -17,7 +17,7 @@ swcJestConfig.module.noInterop = false;
 
 export default {
   displayName: 'ds-layout',
-  preset: '../../jest.preset.js',
+  preset: '../../jest.preset.cjs',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   transform: {
     '^.+\\.[tj]sx?$': ['@swc/jest', swcJestConfig],
