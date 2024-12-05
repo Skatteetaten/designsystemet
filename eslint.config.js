@@ -14,16 +14,7 @@ export default [
   },
   {
     plugins: {
-      '@nx': nxPlugin,
       'no-inline-styles': fixupPluginRules(noInlineStyles),
-    },
-  },
-  {
-    files: ['**/*.stories.tsx', '**/test-runner.ts'],
-    rules: {
-      'jest/no-standalone-expect': 'off',
-      //'sonarjs/no-identical-functions': 'off',
-      'react-hooks/rules-of-hooks': 'off',
     },
   },
   {
@@ -35,6 +26,7 @@ export default [
       '**/*.stories.tsx',
     ],
     rules: {
+      //TODO sonarjs
       //'sonarjs/no-duplicate-string': 'off',
     },
   },

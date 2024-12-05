@@ -44,12 +44,12 @@ export default [
       'testing-library/no-await-sync-events': 'off',
     },
   },
-  //TODO hvorfor må jeg ha denne her når den allerede ligger i rotnivå
   {
     files: ['**/*.stories.tsx', '**/test-runner.ts'],
     rules: {
       'jest/no-standalone-expect': 'off',
       //'sonarjs/no-identical-functions': 'off',
+      /* CSF-3 render() funksjoner oppdages ikke som react-komponenter */
       'react-hooks/rules-of-hooks': 'off',
     },
   },

@@ -21,6 +21,7 @@ const GLOBALS_BROWSER_FIX = {
 
 delete GLOBALS_BROWSER_FIX['AudioWorkletGlobalScope '];
 
+//TODO rydde vekk alt som ikke er i bruk
 export default [
   //...nxPlugin.configs['flat/react'],
   //...nxPlugin.configs['flat/react-typescript'],
