@@ -1,22 +1,17 @@
 import nxPlugin from '@nx/eslint-plugin';
-import noInlineStyles from 'eslint-plugin-no-inline-styles';
 import parser from 'jsonc-eslint-parser';
 import devConfig from './libs/ds-dev-config/config/designsystem-eslint.js';
-import { fixupConfigRules, fixupPluginRules } from '@eslint/compat';
 
 export default [
   ...nxPlugin.configs['flat/base'],
   ...nxPlugin.configs['flat/typescript'],
   ...nxPlugin.configs['flat/javascript'],
-  //TODO can jeg fjerne fixup?
-  ...fixupConfigRules(devConfig),
+  ...devConfig,
   {
     ignores: ['**/.*', '**/node_modules/*'],
   },
   {
-    plugins: {
-      'no-inline-styles': fixupPluginRules(noInlineStyles),
-    },
+    plugins: {},
   },
   {
     files: [
@@ -49,7 +44,8 @@ export default [
           ],
         },
       ],
-      'no-inline-styles/no-inline-styles': 2,
+      'react/forbid-component-props': ['error', { forbid: ['style'] }],
+      'react/forbid-dom-props': ['error', { forbid: ['style'] }],
       //'sonarjs/cognitive-complexity': 'off',
       //'sonarjs/jsx-no-constructed-context-values': 'warn',
       //'sonarjs/no-array-index-key': 'warn',

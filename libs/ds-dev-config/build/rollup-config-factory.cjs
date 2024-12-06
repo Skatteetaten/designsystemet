@@ -10,7 +10,7 @@ const path = require('path');
 
 const addStyleImportPlugin = require('./rollup-plugin-addstyleimport.cjs');
 
-// Denne funksjonen looper gjennom undermappene i /src og oppretter en Rollup entry per komponent
+/* Denne funksjonen looper gjennom undermappene i /src og oppretter en Rollup entry per komponent */
 const getRollupInputs = (sourcePath) => {
   const inputNamesAndPaths = {
     [`index`]: `${sourcePath}/index.ts`,

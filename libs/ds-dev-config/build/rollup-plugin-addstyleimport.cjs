@@ -1,3 +1,6 @@
+/**
+ * @returns rollup plugin
+ */
 function addStyleImportPlugin() {
   return {
     name: 'add-style-import',

@@ -2,9 +2,12 @@ import eslint from '@eslint/js';
 import tseslintParser from '@typescript-eslint/parser';
 import jestPlugin from 'eslint-plugin-jest';
 import jestDomPlugin from 'eslint-plugin-jest-dom';
-import jsdocPlugin from 'eslint-plugin-jsdoc';
-import sonarjsPlugin from 'eslint-plugin-sonarjs';
+import jsdoc from 'eslint-plugin-jsdoc';
+//import sonarjsPlugin from 'eslint-plugin-sonarjs';
+import reactPlugin from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
 import testingLibraryPlugin from 'eslint-plugin-testing-library';
+import importPlugin from 'eslint-plugin-import';
 import globals from 'globals';
 
 // nødvendig grunnet denne feilen: https://github.com/sindresorhus/globals/issues/239
@@ -15,20 +18,31 @@ const GLOBALS_BROWSER_FIX = {
 
 delete GLOBALS_BROWSER_FIX['AudioWorkletGlobalScope '];
 
-//TODO rydde vekk alt som ikke er i bruk
-//TODO gå gjennom alle plugins og se om de tilbyr flat config
 export default [
-  //...nxPlugin.configs['flat/react'],
-  //...nxPlugin.configs['flat/react-typescript'],
   eslint.configs.recommended,
+  //sonarjsPlugin.configs.recommended, TODO Denne har nå en del flere regler slått på fra reccomended. Vurdere å droppe denne hvis folk uansett har sonar-plugin i editor
+  jsdoc.configs['flat/recommended-typescript-error'],
+
+  {
+    files: ['__tests__/**/*'],
+    ...jestPlugin.configs['flat/recommended'],
+    ...jestPlugin.configs['flat/style'],
+    ...jestDomPlugin.configs['flat/recommended'],
+    ...testingLibraryPlugin.configs['flat/react'],
+  },
+
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
+    ...reactPlugin.configs.flat.recommended,
+    ...reactPlugin.configs.flat['jsx-runtime'],
     plugins: {
       jest: jestPlugin,
       'jest-dom': jestDomPlugin,
       'testing-library': testingLibraryPlugin,
-      sonarjs: sonarjsPlugin,
-      jsdoc: jsdocPlugin,
+      'react-hooks': reactHooks,
+      react: reactPlugin,
+      import: importPlugin,
+      jsdoc,
     },
     languageOptions: {
       ecmaVersion: 2021,
@@ -54,16 +68,10 @@ export default [
         version: 29,
       },
     },
-
     rules: {
-      //...reactPlugin.configs.recommended.rules,
-      ...jestPlugin.configs.recommended.rules,
-      ...jestPlugin.configs.style.rules,
-      ...jestDomPlugin.configs.recommended.rules,
-      ...testingLibraryPlugin.configs['react'].rules,
-      //...sonarjsPlugin.configs.recommended.rules,
-      ...jsdocPlugin.configs.recommended.rules,
-      //...reactHooks.configs.recommended.rules,
+      //TODO nx setter allerede recommended regler fra reactHooks. burde vi bare arve derfra eller er det ønskelig å sette dette eksplisitt
+      // Det er nok flere ting vi arver fra nx som er litt dobbelt opp, men nx sin config er ikke dokumentert så det er kronglete å lette fram reglene
+      ...reactHooks.configs.recommended.rules,
       'react/jsx-boolean-value': 'error',
       'react/jsx-curly-brace-presence': [
         'error',

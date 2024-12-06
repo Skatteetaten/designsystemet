@@ -135,7 +135,6 @@
     "eslint-plugin-jest-dom": "5.4.0",
     "eslint-plugin-jsdoc": "50.3.1",
     "eslint-plugin-jsx-a11y": "6.10.2",
-    "eslint-plugin-no-inline-styles": "1.0.5",
     "eslint-plugin-react": "7.37.2",
     "eslint-plugin-react-compiler": "19.0.0-beta-df7b47d-20241124",
     "eslint-plugin-react-hooks": "5.0.0",

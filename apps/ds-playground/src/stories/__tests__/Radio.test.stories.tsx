@@ -205,7 +205,7 @@ export const WithValue = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const input = canvas.getByRole('radio');
-    // eslint-disable-next-line jest-dom/prefer-to-have-value
+
     await expect(input).toHaveAttribute('value', 'person');
   },
 } satisfies Story;

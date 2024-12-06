@@ -16,7 +16,6 @@ import { StepListStepProps } from './StepListStep.types';
 
 import styles from './StepListStep.module.scss';
 
-//TODO fjernet sonar disable her
 export const StepListStep = forwardRef<HTMLLIElement, StepListStepProps>(
   (
     {

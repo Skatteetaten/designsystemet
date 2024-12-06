@@ -372,7 +372,6 @@ export const WithCustomClassNames = {
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
-    // eslint-disable-next-line testing-library/no-node-access
     const container = canvasElement.querySelector(`${wrapper} > div`);
     await expect(container).toHaveClass('dummyClassname');
   },
