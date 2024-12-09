@@ -170,7 +170,7 @@ export const WithExternalIcon = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const megaButton = canvas.getByRole('button');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const svg = megaButton.querySelector('svg');
     await expect(svg).toHaveAttribute(
       'aria-label',

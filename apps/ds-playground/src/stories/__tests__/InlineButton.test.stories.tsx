@@ -161,7 +161,7 @@ export const WithIcon = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inlineButton = canvas.getByRole('button');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const svg = inlineButton.querySelector('svg');
     await expect(svg).toHaveAttribute('viewBox', '0 0 24 24');
     await expect(inlineButton).toBeInTheDocument();

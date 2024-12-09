@@ -16,7 +16,6 @@ import { StepListStepProps } from './StepListStep.types';
 
 import styles from './StepListStep.module.scss';
 
-/* eslint-disable sonarjs/no-nested-template-literals */
 export const StepListStep = forwardRef<HTMLLIElement, StepListStepProps>(
   (
     {

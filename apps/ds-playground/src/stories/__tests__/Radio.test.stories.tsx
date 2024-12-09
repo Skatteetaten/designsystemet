@@ -51,7 +51,6 @@ type Story = StoryObj<typeof meta>;
 
 const Template: StoryFn<typeof RadioGroup.Radio> = (args) => (
   <RadioGroup legend={'radio example'} hideLegend>
-    {/* eslint-disable-next-line testing-library/no-node-access */}
     <RadioGroup.Radio {...args}>{args.children}</RadioGroup.Radio>
   </RadioGroup>
 );
@@ -206,7 +205,7 @@ export const WithValue = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const input = canvas.getByRole('radio');
-    // eslint-disable-next-line jest-dom/prefer-to-have-value
+
     await expect(input).toHaveAttribute('value', 'person');
   },
 } satisfies Story;

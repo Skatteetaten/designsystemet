@@ -1,4 +1,3 @@
-/* eslint-disable sonarjs/no-duplicate-string */
 import { JSX, useRef } from 'react';
 
 import { MegaButton, Link, Button } from '@skatteetaten/ds-buttons';

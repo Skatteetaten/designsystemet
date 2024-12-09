@@ -206,7 +206,7 @@ export const WithAriaLabel = {
       'min custom aria-label beskrivelse'
     );
     await expect(icon).not.toHaveAttribute('aria-labelledby');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const title = icon.querySelector('title');
     await expect(title).not.toBeInTheDocument();
   },

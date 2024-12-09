@@ -89,13 +89,11 @@ export interface FileUploaderCommonProps
   shouldNormalizeFileName?: boolean;
   /**
    * Callback som inneholder liste med filer som ble lagt til av bruker.
-   *
    * @param {File[]} Files filene som ble lagt til
    */
   onFileChange?: (files: File[]) => void;
   /**
    * Kalles når fil skal fjernes.
-   *
    * @param {UploadedFile} file filen som skal fjernes
    * @returns {boolean} om DELETE kallet var vellykket
    */
@@ -103,7 +101,6 @@ export interface FileUploaderCommonProps
   /**
    * Kalles når fil skal lastes ned. Brukes om man trenger å overstyre standard oppførsel til
    * lenkene og initiere nedlasting selv.
-   *
    * @param {MouseEvent} event MouseEvent for anchor som ble klikket på
    * @param {UploadedFile} file filen som skal fjernes
    */

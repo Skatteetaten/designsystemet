@@ -219,7 +219,7 @@ export const WithSelectedValue = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const input = canvas.getByRole('radio', { checked: true });
-    // eslint-disable-next-line jest-dom/prefer-to-have-value
+
     await expect(input).toHaveAttribute('value', selectedValue);
   },
 } satisfies Story;
@@ -238,7 +238,7 @@ export const WithDefaultValue = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const input = canvas.getByRole('radio', { checked: true });
-    // eslint-disable-next-line jest-dom/prefer-to-have-value
+
     await expect(input).toHaveAttribute('value', selectedValue);
   },
 } satisfies Story;
@@ -479,7 +479,7 @@ const EventHandlersTemplate: StoryFn<typeof RadioGroup> = (args) => {
 
 const OnBlurHandlerTemplate: StoryFn<typeof RadioGroup> = (args) => {
   const [statusText, setStatusText] = useState('');
-  // eslint-disable-next-line testing-library/no-node-access
+
   const element = document.querySelector('radiogroup-customelement');
   const shadowRoot = element?.shadowRoot;
   return (
@@ -552,15 +552,14 @@ export const WithOnBlurEvent = {
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     await expect(canvas.queryByRole('radio')).not.toBeInTheDocument();
-    // eslint-disable-next-line testing-library/no-node-access
+
     const customElement = canvasElement.querySelector(
       'radiogroup-customelement'
     ) as HTMLElement;
     await expect(customElement).toBeInTheDocument();
     const shadowCanvas = shadowWithin(canvasElement);
-    const radioGroup = await shadowCanvas.findAllByShadowRole<HTMLInputElement>(
-      'radio'
-    );
+    const radioGroup =
+      await shadowCanvas.findAllByShadowRole<HTMLInputElement>('radio');
     const radio = radioGroup?.find((radio) => radio.value === 'voksen');
     if (radio) {
       await userEvent.click(radio);
@@ -615,7 +614,7 @@ export const WithCustomClassNames = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    // eslint-disable-next-line testing-library/no-node-access
+
     const errorMessageContainer = canvasElement.querySelector(
       '[id^= radioErrorId]>div'
     );

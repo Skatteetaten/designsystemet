@@ -3,6 +3,7 @@
   "version": "1.4.0",
   "license": "Apache-2.0",
   "groupId": "no.skatteetaten.aurora",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Skatteetaten/designsystemet.git"

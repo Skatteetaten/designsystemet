@@ -150,7 +150,7 @@ export default async function (
         ...projectConfig?.targets.build,
         options: {
           ...projectConfig?.targets.build.options,
-          rollupConfig: [`libs/${projectName}/rollup.config.js`],
+          rollupConfig: [`libs/${projectName}/rollup.config.cjs`],
           assets: [
             ...projectConfig.targets.build.options.assets,
             {

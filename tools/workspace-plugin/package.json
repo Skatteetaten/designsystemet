@@ -1,7 +1,7 @@
 {
   "name": "@skatteetaten/workspace-plugin",
   "version": "0.0.1",
-  "type": "commonjs",
+  "type": "module",
   "generators": "./generators.json",
   "dependencies": {
     "nx-stylelint": "18.0.0",

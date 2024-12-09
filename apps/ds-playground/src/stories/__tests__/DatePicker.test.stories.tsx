@@ -172,12 +172,12 @@ export const WithCustomClassNames = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    // eslint-disable-next-line testing-library/no-node-access
+
     const container = canvasElement.querySelector(`${wrapper} > div`);
     const label = canvas.getByText(defaultLabelText);
-    // eslint-disable-next-line testing-library/no-node-access
+
     const dateContainer = canvasElement.querySelector(`${wrapper} > div > div`);
-    // eslint-disable-next-line testing-library/no-node-access
+
     const errorMessageContainer = canvasElement.querySelector(
       '[id^=datepickerErrorId]>div'
     );
@@ -224,7 +224,6 @@ export const Defaults = {
     await expect(calendarButton.tagName).toBe('BUTTON');
     await expect(calendarButton).toHaveAttribute('aria-expanded', 'false');
 
-    // eslint-disable-next-line testing-library/no-node-access
     const errorMessageContainer = canvasElement.querySelector(
       '[id^=datepickerErrorId]'
     );
@@ -320,7 +319,7 @@ export const WithoutErrorMessage = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const errorMessageContainer = canvasElement.querySelector(
       '[id^=datepickerErrorId]'
     );

@@ -1,4 +1,3 @@
-/* eslint-disable array-callback-return */
 import { forwardRef, ReactNode, useContext, useMemo, JSX } from 'react';
 
 import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';

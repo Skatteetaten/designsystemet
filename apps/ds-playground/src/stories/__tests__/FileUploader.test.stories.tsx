@@ -2,7 +2,6 @@ import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { FileUploader, FileUploaderProps } from '@skatteetaten/ds-forms';
 import { StoryObj, Meta, StoryFn } from '@storybook/react';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
-//eslint-disable-next-line storybook/use-storybook-testing-library
 import { PointerEventsCheckLevel } from '@testing-library/user-event';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
@@ -373,7 +372,6 @@ export const WithCustomClassNames = {
     },
   },
   play: async ({ canvasElement }): Promise<void> => {
-    // eslint-disable-next-line testing-library/no-node-access
     const container = canvasElement.querySelector(`${wrapper} > div`);
     await expect(container).toHaveClass('dummyClassname');
   },

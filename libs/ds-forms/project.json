@@ -15,7 +15,7 @@
         "project": "libs/ds-forms/package.json",
         "entryFile": "libs/ds-forms/src/index.ts",
         "external": ["react/jsx-runtime"],
-        "rollupConfig": ["libs/ds-forms/rollup.config.js"],
+        "rollupConfig": ["libs/ds-forms/rollup.config.cjs"],
         "compiler": "swc",
         "assets": [
           {

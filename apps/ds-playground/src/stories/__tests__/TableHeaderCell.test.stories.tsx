@@ -34,7 +34,7 @@ const Template: StoryFn<typeof Table.HeaderCell> = (args) => (
   <table>
     <Table.Header>
       <Table.Row>
-        {/* eslint-disable-next-line testing-library/no-node-access */}
+        {}
         <Table.HeaderCell {...args}>{args.children}</Table.HeaderCell>
       </Table.Row>
     </Table.Header>

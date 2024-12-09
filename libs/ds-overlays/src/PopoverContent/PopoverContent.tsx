@@ -14,6 +14,7 @@ import {
 import { PopoverContext } from '../PopoverContext/PopoverContext';
 
 import styles from './PopoverContent.module.scss';
+/* eslint-disable react/forbid-dom-props */
 
 export const PopoverContent = forwardRef<HTMLDivElement, PopoverContentProps>(
   (

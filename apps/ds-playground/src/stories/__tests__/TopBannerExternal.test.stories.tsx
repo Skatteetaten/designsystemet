@@ -124,15 +124,15 @@ export const WithDefaults = {
     const canvas = within(canvasElement);
     const header = canvas.getByRole('banner');
     expect(header.tagName).toBe('HEADER');
-    // eslint-disable-next-line testing-library/no-node-access
+
     expect(header.firstChild).toHaveAttribute('href');
     const skipLink = canvas.getByText(skipLinkText);
     expect(skipLink).toBeInTheDocument();
 
     await expect(canvas.getByText(menuText)).toBeInTheDocument();
-    // eslint-disable-next-line testing-library/no-node-access
+
     await expect(canvas.queryByText(loginText)).not.toBeInTheDocument();
-    // eslint-disable-next-line testing-library/no-node-access
+
     await expect(canvas.queryByText(logoutText)).not.toBeInTheDocument();
   },
 } satisfies Story;

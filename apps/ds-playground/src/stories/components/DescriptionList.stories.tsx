@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 import { InlineButton, IconButton } from '@skatteetaten/ds-buttons';
 import {
   DescriptionList,

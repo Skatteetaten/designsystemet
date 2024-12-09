@@ -2,7 +2,6 @@ import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
 
-// eslint-disable-next-line @nx/enforce-module-boundaries
 import { wrapper } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerLogo } from '../../../../../libs/ds-layout/src/TopBannerLogo/TopBannerLogo';
@@ -139,7 +138,7 @@ export const WithAs = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    // eslint-disable-next-line testing-library/no-node-access
+
     await expect(canvasElement.querySelector('a')).not.toBeInTheDocument();
     const logo = canvas.getByRole('img', {
       name: logoText,
