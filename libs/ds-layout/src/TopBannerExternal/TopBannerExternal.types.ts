@@ -1,6 +1,6 @@
 import { MouseEventHandler, ReactNode, RefObject } from 'react';
 
-import { BaseProps, Languages } from '@skatteetaten/ds-core-utils';
+import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 import { TopBannerLangPickerProps } from '../TopBannerLangPicker/TopBannerLangPicker.types';
 import { TopBannerLogoProps } from '../TopBannerLogo/TopBannerLogo.types';
@@ -24,7 +24,7 @@ type SkipLink = Omit<TopBannerSkipLinkProps, 'children'> & {
 
 export interface TopBannerExternalProps extends BaseProps {
   /** Hvilket språk som skal være forhåndsvalgt i språkvelgeren. */
-  defaultLocale?: Languages;
+  defaultLocale?: TopBannerLangPickerProps['defaultLocale'];
   /** Callback når et språk trykkes på i språkvelgeren. */
   onLanguageClick?: MouseEventHandler<HTMLButtonElement>;
   /** Om samisk språk skal vises eller ikke i språkvelgeren. Samisk er med i listen over språk som default. */

@@ -630,8 +630,9 @@ export const ClickLangPickerOpenAndClose = {
 } satisfies Story;
 
 export const WithExtraLangs = {
-  name: 'Extra Languages in LanguagePicker',
+  name: 'Extra Languages in LanguagePicker and custom defaultLocale ',
   args: {
+    defaultLocale: 'de',
     additionalLanguages: [
       {
         displayName: 'Suomi',
@@ -732,6 +733,7 @@ export const WithExtraLangs = {
   },
   argTypes: {
     additionalLanguages: { table: { disable: false } },
+    defaultLocale: { table: { disable: false } },
   },
   parameters: {
     imageSnapshot: { disable: true },
@@ -739,7 +741,7 @@ export const WithExtraLangs = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const languageButton = canvas.getByRole('button', { name: 'Bokmål Meny' });
+    const languageButton = canvas.getByRole('button', { name: 'Deutsch Meny' });
     await userEvent.click(languageButton);
     const fin = canvas.getByRole('button', { name: 'Suomi' });
     await expect(fin).toBeInTheDocument();

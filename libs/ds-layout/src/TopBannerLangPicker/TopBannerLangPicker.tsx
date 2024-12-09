@@ -24,7 +24,7 @@ import {
   TopBannerLangPickerComponent,
   TopBannerLangPickerProps,
 } from './TopBannerLangPicker.types';
-import { convertLocaleToLang, getCurrentLanguages } from './utils';
+import { convertLocaleToLang, getCurrentLanguages, isLanguages } from './utils';
 import { TopBannerButton } from '../TopBannerButton/TopBannerButton';
 import { TopBannerLangPickerButton } from '../TopBannerLangPickerButton/TopBannerLangPickerButton';
 
@@ -80,7 +80,9 @@ export const TopBannerLangPicker = forwardRef<
       () => menuButtonRefInternal?.current as HTMLButtonElement
     );
     const [selectedLang, setSelectedLang] = useState<string>(
-      convertLocaleToLang(defaultLocale)
+      isLanguages(defaultLocale)
+        ? convertLocaleToLang(defaultLocale)
+        : defaultLocale
     );
     useEffect(() => {
       document.documentElement.lang = selectedLang;
