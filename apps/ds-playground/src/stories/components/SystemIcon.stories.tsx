@@ -1,5 +1,7 @@
 import { JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+
 import { sizeArr } from '@skatteetaten/ds-core-utils';
 import {
   Icon,
@@ -8,7 +10,6 @@ import {
   DeploySVGpath,
   DeployIcon,
 } from '@skatteetaten/ds-icons';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';

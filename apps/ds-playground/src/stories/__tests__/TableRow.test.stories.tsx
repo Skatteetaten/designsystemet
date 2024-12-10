@@ -1,7 +1,8 @@
-import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { Table } from '@skatteetaten/ds-table';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fireEvent, fn, within } from '@storybook/test';
+
+import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { Table } from '@skatteetaten/ds-table';
 
 const meta = {
   component: Table.Row,

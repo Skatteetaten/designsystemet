@@ -1,5 +1,7 @@
 import { useState, JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+
 import { Button } from '@skatteetaten/ds-buttons';
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
 import {
@@ -7,7 +9,6 @@ import {
   TextField,
   getErrorSummaryTitleAsDefault,
 } from '@skatteetaten/ds-forms';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';

@@ -1,11 +1,12 @@
 import { JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+
 import { statusArr } from '@skatteetaten/ds-core-utils';
 import {
   Alert,
   getAlertBackgroundBrightnessDefault,
 } from '@skatteetaten/ds-status';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';

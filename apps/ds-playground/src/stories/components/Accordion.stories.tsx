@@ -1,5 +1,7 @@
 import { JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+
 import {
   Accordion,
   getAccordionBackgroundColorDefault,
@@ -7,7 +9,6 @@ import {
   getAccordionSizeDefault,
 } from '@skatteetaten/ds-collections';
 import { PersonSVGpath, SkattetrekkSVGpath } from '@skatteetaten/ds-icons';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';

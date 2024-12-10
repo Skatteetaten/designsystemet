@@ -1,9 +1,10 @@
 import { JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Fieldset, DatePicker } from '@skatteetaten/ds-forms';
 import { Paragraph } from '@skatteetaten/ds-typography';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';

@@ -1,3 +1,6 @@
+import { Meta, StoryObj } from '@storybook/react';
+import { expect, within } from '@storybook/test';
+
 import { sizeArr } from '@skatteetaten/ds-core-utils';
 import {
   Icon,
@@ -5,8 +8,6 @@ import {
   AccountChildSVGpath,
   AndreForholdSVGpath,
 } from '@skatteetaten/ds-icons';
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { ThemeSVGPaths } from '../utils/icon.themes';

@@ -1,9 +1,10 @@
 import { JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+
 import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { Footer } from '@skatteetaten/ds-layout';
 import { Paragraph, Heading } from '@skatteetaten/ds-typography';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import logo from '../../assets/ske-logo-horizontal-white.png';

@@ -1,6 +1,7 @@
-import { Tabs } from '@skatteetaten/ds-collections';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { within, expect } from '@storybook/test';
+
+import { Tabs } from '@skatteetaten/ds-collections';
 
 const meta = {
   component: Tabs.Panel,

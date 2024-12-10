@@ -1,9 +1,10 @@
+import { Meta, StoryObj } from '@storybook/react';
+
 import {
   Breadcrumbs,
   getBreadcrumbsListShouldCollapseDefault,
   getBreadcrumbsListShowLastItemAsCurrentPageDefault,
 } from '@skatteetaten/ds-navigation';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 

@@ -1,7 +1,8 @@
-import { CheckboxGroup } from '@skatteetaten/ds-forms';
-import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, fireEvent, within } from '@storybook/test';
+
+import { CheckboxGroup } from '@skatteetaten/ds-forms';
+import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
 

@@ -1,3 +1,5 @@
+import { Meta, StoryObj } from '@storybook/react';
+
 import { IconButton, getIconButtonSizeDefault } from '@skatteetaten/ds-buttons';
 import {
   dsI18n,
@@ -5,7 +7,6 @@ import {
   sizeArr,
 } from '@skatteetaten/ds-core-utils';
 import { PrintSVGpath } from '@skatteetaten/ds-icons';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';

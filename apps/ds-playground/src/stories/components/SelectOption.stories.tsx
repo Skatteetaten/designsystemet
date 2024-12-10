@@ -1,5 +1,6 @@
-import { Select } from '@skatteetaten/ds-forms';
 import { Meta, StoryObj } from '@storybook/react';
+
+import { Select } from '@skatteetaten/ds-forms';
 
 import { category } from '../../../.storybook/helpers';
 

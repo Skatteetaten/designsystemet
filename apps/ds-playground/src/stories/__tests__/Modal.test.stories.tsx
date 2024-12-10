@@ -1,12 +1,13 @@
 import { useRef, useState } from 'react';
 
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { expect, userEvent, fireEvent, within } from '@storybook/test';
+
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
 import { Modal } from '@skatteetaten/ds-overlays';
 import { Paragraph } from '@skatteetaten/ds-typography';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, fireEvent, within } from '@storybook/test';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';

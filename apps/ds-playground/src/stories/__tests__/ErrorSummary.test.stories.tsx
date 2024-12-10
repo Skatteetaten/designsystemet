@@ -1,8 +1,9 @@
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { expect, userEvent, waitFor, within } from '@storybook/test';
+
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
 import { ErrorSummary, TextField } from '@skatteetaten/ds-forms';
 import { Paragraph } from '@skatteetaten/ds-typography';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, userEvent, waitFor, within } from '@storybook/test';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';

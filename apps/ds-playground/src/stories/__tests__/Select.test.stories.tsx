@@ -1,7 +1,5 @@
 import { ChangeEvent, FocusEvent, useState } from 'react';
 
-import { dsI18n, formArrSize } from '@skatteetaten/ds-core-utils';
-import { Select } from '@skatteetaten/ds-forms';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import {
   expect,
@@ -11,6 +9,9 @@ import {
   waitFor,
   within,
 } from '@storybook/test';
+
+import { dsI18n, formArrSize } from '@skatteetaten/ds-core-utils';
+import { Select } from '@skatteetaten/ds-forms';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';

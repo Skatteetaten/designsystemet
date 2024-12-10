@@ -1,10 +1,11 @@
 import { JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+
 import {
   Table,
   getTableRowExpandButtonPositionDefault,
 } from '@skatteetaten/ds-table';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 

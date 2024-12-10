@@ -1,3 +1,5 @@
+import { Meta, StoryObj } from '@storybook/react';
+
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   Spinner,
@@ -6,7 +8,6 @@ import {
   getSpinnerTitlePositionDefault,
   spinnerSizeArr,
 } from '@skatteetaten/ds-progress';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';

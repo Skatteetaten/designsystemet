@@ -1,5 +1,6 @@
-import { Table } from '@skatteetaten/ds-table';
 import { Meta, StoryObj } from '@storybook/react';
+
+import { Table } from '@skatteetaten/ds-table';
 
 import { category } from '../../../.storybook/helpers';
 

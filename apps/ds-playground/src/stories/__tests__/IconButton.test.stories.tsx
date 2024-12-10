@@ -1,12 +1,13 @@
 import { FocusEvent, MouseEvent, useState } from 'react';
 
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+
 import { IconButton, IconButtonProps } from '@skatteetaten/ds-buttons';
 import {
   getCommonButtonTypeDefault,
   sizeArr,
 } from '@skatteetaten/ds-core-utils';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';

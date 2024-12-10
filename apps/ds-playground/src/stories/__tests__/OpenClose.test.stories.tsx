@@ -1,9 +1,10 @@
 import { MouseEvent, useState } from 'react';
 
-import { OpenClose, OpenCloseProps } from '@skatteetaten/ds-collections';
-import { densityArr, headingAsArr } from '@skatteetaten/ds-core-utils';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fireEvent, within, waitFor, fn } from '@storybook/test';
+
+import { OpenClose, OpenCloseProps } from '@skatteetaten/ds-collections';
+import { densityArr, headingAsArr } from '@skatteetaten/ds-core-utils';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 

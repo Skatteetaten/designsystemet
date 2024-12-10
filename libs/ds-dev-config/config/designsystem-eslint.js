@@ -1,5 +1,6 @@
 import eslint from '@eslint/js';
 import tseslintParser from '@typescript-eslint/parser';
+import importPlugin from 'eslint-plugin-import';
 import jestPlugin from 'eslint-plugin-jest';
 import jestDomPlugin from 'eslint-plugin-jest-dom';
 import jsdoc from 'eslint-plugin-jsdoc';
@@ -7,7 +8,6 @@ import jsdoc from 'eslint-plugin-jsdoc';
 import reactPlugin from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import testingLibraryPlugin from 'eslint-plugin-testing-library';
-import importPlugin from 'eslint-plugin-import';
 import globals from 'globals';
 
 // nødvendig grunnet denne feilen: https://github.com/sindresorhus/globals/issues/239
@@ -111,7 +111,7 @@ export default [
               group: 'external',
               position: 'before',
             },
-            { pattern: '{@designsystem/**}', group: 'internal' },
+            { pattern: '@skatteetaten/**', group: 'internal' },
             { pattern: './*.scss', group: 'sibling', position: 'after' },
           ],
           pathGroupsExcludedImportTypes: ['react'],

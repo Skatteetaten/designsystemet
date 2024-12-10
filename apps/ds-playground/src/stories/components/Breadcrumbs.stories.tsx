@@ -1,5 +1,6 @@
-import { Breadcrumbs, BreadcrumbsProps } from '@skatteetaten/ds-navigation';
 import { Meta, StoryObj } from '@storybook/react';
+
+import { Breadcrumbs, BreadcrumbsProps } from '@skatteetaten/ds-navigation';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';

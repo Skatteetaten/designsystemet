@@ -1,5 +1,7 @@
 import { ReactNode, useState, JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+
 import { Button, InlineButton } from '@skatteetaten/ds-buttons';
 import { densityArr } from '@skatteetaten/ds-core-utils';
 import { Checkbox } from '@skatteetaten/ds-forms';
@@ -14,7 +16,6 @@ import {
   SortState,
 } from '@skatteetaten/ds-table';
 import { Paragraph } from '@skatteetaten/ds-typography';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';

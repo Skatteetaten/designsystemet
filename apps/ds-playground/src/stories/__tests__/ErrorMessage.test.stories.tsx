@@ -1,6 +1,7 @@
-import { ErrorMessage } from '@skatteetaten/ds-forms';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
+
+import { ErrorMessage } from '@skatteetaten/ds-forms';
 
 const meta = {
   component: ErrorMessage,

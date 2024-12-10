@@ -1,6 +1,7 @@
-import { Select } from '@skatteetaten/ds-forms';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
+
+import { Select } from '@skatteetaten/ds-forms';
 
 const meta = {
   component: Select.Option,

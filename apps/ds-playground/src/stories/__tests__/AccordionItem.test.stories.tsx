@@ -1,9 +1,5 @@
 import { MouseEvent, JSX, useState } from 'react';
 
-import { Accordion, AccordionItemProps } from '@skatteetaten/ds-collections';
-import { headingAsArr } from '@skatteetaten/ds-core-utils';
-import { Checkbox } from '@skatteetaten/ds-forms';
-import { PersonSVGpath } from '@skatteetaten/ds-icons';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import {
   expect,
@@ -13,6 +9,11 @@ import {
   waitFor,
   within,
 } from '@storybook/test';
+
+import { Accordion, AccordionItemProps } from '@skatteetaten/ds-collections';
+import { headingAsArr } from '@skatteetaten/ds-core-utils';
+import { Checkbox } from '@skatteetaten/ds-forms';
+import { PersonSVGpath } from '@skatteetaten/ds-icons';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 

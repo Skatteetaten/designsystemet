@@ -1,5 +1,7 @@
 import { JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+
 import { InlineButton, IconButton } from '@skatteetaten/ds-buttons';
 import {
   DescriptionList,
@@ -15,7 +17,6 @@ import {
 } from '@skatteetaten/ds-icons';
 import { Popover } from '@skatteetaten/ds-overlays';
 import { Tag } from '@skatteetaten/ds-status';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
