@@ -1,6 +1,7 @@
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
+
 import { Tabs } from '@skatteetaten/ds-collections';
 import { BriefcaseSVGpath } from '@skatteetaten/ds-icons';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 

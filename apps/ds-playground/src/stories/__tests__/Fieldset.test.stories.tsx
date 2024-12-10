@@ -1,8 +1,9 @@
+import { Meta, StoryObj } from '@storybook/react';
+import { expect, within } from '@storybook/test';
+
 import { Fieldset, FieldsetProps } from '@skatteetaten/ds-forms';
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
 
 import {
   loremIpsumWithoutSpaces,

@@ -1,5 +1,7 @@
 import { JSX, useRef } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+
 import { MegaButton, Link, Button } from '@skatteetaten/ds-buttons';
 import {
   Panel,
@@ -17,7 +19,6 @@ import {
 } from '@skatteetaten/ds-core-utils';
 import { CheckIcon } from '@skatteetaten/ds-icons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import farmerIllustration from '../../assets/farmer-illustration.svg';

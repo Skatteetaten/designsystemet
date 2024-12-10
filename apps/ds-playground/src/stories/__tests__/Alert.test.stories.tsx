@@ -1,12 +1,13 @@
 import { JSX } from 'react';
 
+import { useArgs } from '@storybook/preview-api';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+
 import { dsI18n, statusArr } from '@skatteetaten/ds-core-utils';
 import { LockSVGpath } from '@skatteetaten/ds-icons';
 import { Alert } from '@skatteetaten/ds-status';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
-import { useArgs } from '@storybook/preview-api';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';

@@ -1,5 +1,7 @@
 import { useRef, useState, ChangeEvent, MouseEvent, JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+
 import { Button, LinkGroup } from '@skatteetaten/ds-buttons';
 import { RadioGroup } from '@skatteetaten/ds-forms';
 import {
@@ -8,7 +10,6 @@ import {
   User,
 } from '@skatteetaten/ds-layout';
 import { Modal } from '@skatteetaten/ds-overlays';
-import { Meta, StoryObj } from '@storybook/react';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { dsI18n, langToLocale } from '../../../../../libs/ds-core-utils/src';

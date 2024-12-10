@@ -1,5 +1,6 @@
-import { Popover } from '@skatteetaten/ds-overlays';
 import { Meta, StoryObj } from '@storybook/react';
+
+import { Popover } from '@skatteetaten/ds-overlays';
 
 import { category } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';

@@ -1,6 +1,7 @@
+import { Meta, StoryObj } from '@storybook/react';
+
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
 import { Heading } from '@skatteetaten/ds-typography';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';

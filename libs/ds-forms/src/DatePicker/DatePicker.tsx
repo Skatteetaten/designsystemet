@@ -11,6 +11,8 @@ import React, {
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { isValid } from 'date-fns';
+
 import {
   dsI18n,
   getCommonAutoCompleteDefault,
@@ -19,7 +21,6 @@ import {
   useValidateFormRequiredProps,
 } from '@skatteetaten/ds-core-utils';
 import { CalendarIcon } from '@skatteetaten/ds-icons';
-import { isValid } from 'date-fns';
 
 import { DatePickerProps } from './DatePicker.types';
 import { getDatePickerDateFormat } from './defaults';

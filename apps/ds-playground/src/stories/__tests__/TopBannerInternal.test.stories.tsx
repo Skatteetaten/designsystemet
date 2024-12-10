@@ -1,11 +1,12 @@
 import { JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+import { expect, fireEvent, fn, within } from '@storybook/test';
+
 import { InlineButton, Link } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { HelpOutlineSVGpath, SettingsSVGpath } from '@skatteetaten/ds-icons';
 import { TopBannerInternal } from '@skatteetaten/ds-layout';
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, fireEvent, fn, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import customLogo from '../../assets/custom-mobile-logo.svg';

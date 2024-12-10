@@ -1,5 +1,6 @@
-import { DescriptionList } from '@skatteetaten/ds-content';
 import { Meta, StoryObj } from '@storybook/react';
+
+import { DescriptionList } from '@skatteetaten/ds-content';
 
 import { category } from '../../../.storybook/helpers';
 

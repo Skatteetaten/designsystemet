@@ -1,6 +1,7 @@
+import { Meta, StoryObj } from '@storybook/react';
+
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { BreadcrumbsLinkProps, Breadcrumbs } from '@skatteetaten/ds-navigation';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';

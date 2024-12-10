@@ -1,11 +1,12 @@
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { expect, within } from '@storybook/test';
+
 import { Tabs } from '@skatteetaten/ds-collections';
 import {
   DeploySVGpath,
   LockSVGpath,
   PersonSVGpath,
 } from '@skatteetaten/ds-icons';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
 
 const meta = {
   component: Tabs.Tab,

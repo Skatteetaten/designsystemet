@@ -1,8 +1,9 @@
 import { JSX } from 'react';
 
-import { Popover } from '@skatteetaten/ds-overlays';
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+
+import { Popover } from '@skatteetaten/ds-overlays';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';

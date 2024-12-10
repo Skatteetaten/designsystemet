@@ -1,10 +1,11 @@
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { expect, within } from '@storybook/test';
+
 import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { GaveArvSVGpath, Icon } from '@skatteetaten/ds-icons';
 import { Footer, FooterProps } from '@skatteetaten/ds-layout';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
 
 import logo from '../../assets/ske-logo-horizontal-white.png';
 

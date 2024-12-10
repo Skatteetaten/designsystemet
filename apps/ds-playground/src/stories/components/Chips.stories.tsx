@@ -1,8 +1,9 @@
 import { useState, JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+
 import { Chips, ChipsProps } from '@skatteetaten/ds-collections';
 import { Heading } from '@skatteetaten/ds-typography';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';

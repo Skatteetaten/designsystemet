@@ -1,15 +1,16 @@
 import { ChangeEvent, FocusEvent, useState } from 'react';
 
+import { useArgs } from '@storybook/preview-api';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import { within as shadowWithin } from 'shadow-dom-testing-library';
+
 import {
   RadioGroup,
   RadioGroupProps,
   radioGroupVariantArr,
 } from '@skatteetaten/ds-forms';
 import { Heading } from '@skatteetaten/ds-typography';
-import { useArgs } from '@storybook/preview-api';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
-import { within as shadowWithin } from 'shadow-dom-testing-library';
 
 import { category } from '../../../.storybook/helpers';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';

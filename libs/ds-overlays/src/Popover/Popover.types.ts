@@ -7,6 +7,7 @@ import {
 } from 'react';
 
 import { UseFloatingReturn, useInteractions } from '@floating-ui/react';
+
 import { colorNamesArr, positionArr } from '@skatteetaten/ds-core-utils';
 
 import { PopoverContent } from '../PopoverContent/PopoverContent';

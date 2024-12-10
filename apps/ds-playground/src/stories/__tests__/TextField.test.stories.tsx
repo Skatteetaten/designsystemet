@@ -1,5 +1,9 @@
 import { FocusEvent, ChangeEvent, useState, useRef, JSX } from 'react';
 
+import { useArgs } from '@storybook/preview-api';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+
 import { Button } from '@skatteetaten/ds-buttons';
 import { formArrSize } from '@skatteetaten/ds-core-utils';
 import {
@@ -8,9 +12,6 @@ import {
   textFieldAsArr,
 } from '@skatteetaten/ds-forms';
 import { Modal } from '@skatteetaten/ds-overlays';
-import { useArgs } from '@storybook/preview-api';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
 import { category } from '../../../.storybook/helpers';

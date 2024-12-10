@@ -1,11 +1,12 @@
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { expect, within } from '@storybook/test';
+
 import {
   List,
   listAsArr,
   ListProps,
   Paragraph,
 } from '@skatteetaten/ds-typography';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 

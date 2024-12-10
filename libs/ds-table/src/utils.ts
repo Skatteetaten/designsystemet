@@ -1,5 +1,6 @@
-import { Density, Size } from '@skatteetaten/ds-core-utils';
 import { TFunction } from 'i18next';
+
+import { Density, Size } from '@skatteetaten/ds-core-utils';
 
 import { SortState } from './Table/Table.types';
 

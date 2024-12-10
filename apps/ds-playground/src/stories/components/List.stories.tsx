@@ -1,5 +1,6 @@
-import { getListAsDefault, List, Paragraph } from '@skatteetaten/ds-typography';
 import { Meta, StoryObj } from '@storybook/react';
+
+import { getListAsDefault, List, Paragraph } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';

@@ -1,8 +1,9 @@
-import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { FileUploader, FileUploaderProps } from '@skatteetaten/ds-forms';
 import { StoryObj, Meta, StoryFn } from '@storybook/react';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 import { PointerEventsCheckLevel } from '@testing-library/user-event';
+
+import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { FileUploader, FileUploaderProps } from '@skatteetaten/ds-forms';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { category } from '../../../.storybook/helpers';

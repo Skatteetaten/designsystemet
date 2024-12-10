@@ -1,5 +1,6 @@
-import { List } from '@skatteetaten/ds-typography';
 import { Meta, StoryObj } from '@storybook/react';
+
+import { List } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
 

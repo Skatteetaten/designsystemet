@@ -6,11 +6,12 @@ import {
   useState,
 } from 'react';
 
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { expect, within } from '@storybook/test';
+
 import { densityArr } from '@skatteetaten/ds-core-utils';
 import { SortState, Table, TableProps } from '@skatteetaten/ds-table';
 import { Heading } from '@skatteetaten/ds-typography';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 

@@ -1,12 +1,5 @@
 import { JSX } from 'react';
 
-import { dsI18n } from '@skatteetaten/ds-core-utils';
-import {
-  Pagination,
-  getDefaultPageSize,
-  getDefaultSibling,
-} from '@skatteetaten/ds-navigation';
-import { List } from '@skatteetaten/ds-typography';
 import { useArgs } from '@storybook/preview-api';
 import { StoryObj, Meta } from '@storybook/react';
 import {
@@ -17,6 +10,14 @@ import {
   within,
   userEvent,
 } from '@storybook/test';
+
+import { dsI18n } from '@skatteetaten/ds-core-utils';
+import {
+  Pagination,
+  getDefaultPageSize,
+  getDefaultSibling,
+} from '@skatteetaten/ds-navigation';
+import { List } from '@skatteetaten/ds-typography';
 
 const meta = {
   component: Pagination,

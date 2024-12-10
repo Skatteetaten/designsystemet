@@ -1,3 +1,6 @@
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { expect, userEvent, within } from '@storybook/test';
+
 import { Link } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
@@ -7,8 +10,6 @@ import {
   TopBannerExternalProps,
   TopBannerExternalHandle,
 } from '@skatteetaten/ds-layout';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, within } from '@storybook/test';
 
 import customLogo from '../../assets/custom-logo.svg';
 import { ReactComponent as FlagFinland } from '../../assets/fi-flag.svg';

@@ -1,8 +1,9 @@
 import { ChangeEvent, FocusEvent, useState } from 'react';
 
-import { Checkbox } from '@skatteetaten/ds-forms';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+
+import { Checkbox } from '@skatteetaten/ds-forms';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 

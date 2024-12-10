@@ -1,5 +1,7 @@
 import { JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+
 import { AccountEnkSVGpath } from '@skatteetaten/ds-icons';
 import {
   NavigationTile,
@@ -8,7 +10,6 @@ import {
   getNavigationTileHideArrowDefault,
   getNavigationTileSizeDefault,
 } from '@skatteetaten/ds-navigation';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';

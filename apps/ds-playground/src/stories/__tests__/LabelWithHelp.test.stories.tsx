@@ -1,6 +1,7 @@
-import { WarningSVGpath } from '@skatteetaten/ds-icons';
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, fireEvent, within } from '@storybook/test';
+
+import { WarningSVGpath } from '@skatteetaten/ds-icons';
 
 import {
   loremIpsumWithoutSpaces,

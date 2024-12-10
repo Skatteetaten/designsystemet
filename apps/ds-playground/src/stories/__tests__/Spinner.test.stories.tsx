@@ -1,13 +1,14 @@
 import { JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+import { expect, within } from '@storybook/test';
+
 import {
   Spinner,
   spinnerColorArr,
   spinnerPositionArr,
   spinnerSizeArr,
 } from '@skatteetaten/ds-progress';
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
 
 const meta = {
   component: Spinner,

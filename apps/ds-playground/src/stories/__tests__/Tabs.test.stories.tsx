@@ -1,10 +1,11 @@
 import { JSX, useState } from 'react';
 
-import { Button } from '@skatteetaten/ds-buttons';
-import { Tabs, TabsProps } from '@skatteetaten/ds-collections';
 import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+
+import { Button } from '@skatteetaten/ds-buttons';
+import { Tabs, TabsProps } from '@skatteetaten/ds-collections';
 
 const meta = {
   component: Tabs,

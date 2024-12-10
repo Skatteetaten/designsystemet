@@ -7,11 +7,6 @@ import {
   JSX,
 } from 'react';
 
-import {
-  dsI18n,
-  getCommonAutoCompleteDefault,
-} from '@skatteetaten/ds-core-utils';
-import { searchArrSize, SearchField } from '@skatteetaten/ds-forms';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import {
   fireEvent,
@@ -21,6 +16,12 @@ import {
   expect,
   fn,
 } from '@storybook/test';
+
+import {
+  dsI18n,
+  getCommonAutoCompleteDefault,
+} from '@skatteetaten/ds-core-utils';
+import { searchArrSize, SearchField } from '@skatteetaten/ds-forms';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { category } from '../../../.storybook/helpers';

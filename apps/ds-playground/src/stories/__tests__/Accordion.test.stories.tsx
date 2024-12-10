@@ -1,6 +1,7 @@
-import { Accordion, AccordionProps } from '@skatteetaten/ds-collections';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
+
+import { Accordion, AccordionProps } from '@skatteetaten/ds-collections';
 
 const elementId = 'htmlId';
 const defaultTitle = 'Meg selv';

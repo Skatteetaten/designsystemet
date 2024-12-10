@@ -1,10 +1,11 @@
+import { Meta, StoryObj } from '@storybook/react';
+
 import {
   Chips,
   getChipsToggleDefaultShowCheckmark,
   getChipsToggleDefaultIsSelected,
   getChipDefaultSize,
 } from '@skatteetaten/ds-collections';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 

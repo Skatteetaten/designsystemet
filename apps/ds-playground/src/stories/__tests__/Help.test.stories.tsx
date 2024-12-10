@@ -1,7 +1,8 @@
-import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { WarningSVGpath } from '@skatteetaten/ds-icons';
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, fireEvent, within } from '@storybook/test';
+
+import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { WarningSVGpath } from '@skatteetaten/ds-icons';
 
 import {
   loremIpsumWithoutSpaces,

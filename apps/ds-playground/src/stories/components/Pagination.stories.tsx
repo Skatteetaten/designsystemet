@@ -1,5 +1,8 @@
 import { useState } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+import { JSX } from 'react/jsx-runtime';
+
 import {
   Pagination,
   getDefaultPageSize,
@@ -8,8 +11,6 @@ import {
   getDefaultHidePrevNextButtonTitle,
 } from '@skatteetaten/ds-navigation';
 import { List } from '@skatteetaten/ds-typography';
-import { Meta, StoryObj } from '@storybook/react';
-import { JSX } from 'react/jsx-runtime';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
