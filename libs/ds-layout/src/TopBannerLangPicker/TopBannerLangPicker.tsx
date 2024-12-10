@@ -181,7 +181,7 @@ export const TopBannerLangPicker = forwardRef<
               className={styles.arrowMobile}
             />
           </span>
-          {languages[selectedLang].displayName}
+          {languages[selectedLang]?.displayName ?? languages['nb'].displayName}
           <span className={styles.srOnly}>{t('topbannerbutton.Menu')}</span>
           <Icon
             svgPath={isMenuOpen ? MenuUpSVGpath : MenuDownSVGpath}

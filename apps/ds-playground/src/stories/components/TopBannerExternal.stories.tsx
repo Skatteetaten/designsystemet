@@ -37,6 +37,7 @@ const meta = {
     },
     defaultLocale: {
       table: {
+        control: 'text',
         category: category.props,
         defaultValue: { summary: getTopBannerLangPickerLocaleDefault() },
       },
