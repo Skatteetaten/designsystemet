@@ -147,6 +147,7 @@ export * from './VerticalDotsCircle';
 export * from './VerticalDotsCircleSolid';
 export * from './WaringOutline';
 export * from './Warning';
+export * from './WarningOutline';
 export * from './WarningStop';
 export * from './WordFile';
 export * from './XMLFile';

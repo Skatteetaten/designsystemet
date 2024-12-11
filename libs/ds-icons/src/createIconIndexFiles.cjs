@@ -2,6 +2,10 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 
+/**
+ *
+ * @param iconSubPath SystemIcons eller ThemeIcons
+ */
 function createIndexFile(iconSubPath) {
   try {
     const endOfLine = os.EOL;
