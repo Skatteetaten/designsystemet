@@ -2,6 +2,8 @@
   "pagination.Back": "Back",
   "pagination.Forward": "Forward",
   "pagination.Title": "Shows {view} of {total}",
+  "table.ExpandAreaEnd": "End of expanded content.",
+  "table.ExpandAreaStart": "Beginning of expanded content.",
   "table.NotSorted": "Not sorted",
   "table.Sortable": "Sortable",
   "table.SortedAscending": "Sorted ascending",
