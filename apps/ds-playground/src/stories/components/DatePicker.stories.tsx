@@ -119,7 +119,7 @@ export const Preview: Story = {
     args.initialPickerDate =
       args.initialPickerDate === undefined
         ? undefined
-        : new Date(args.initialPickerDate as Date);
+        : new Date(args.initialPickerDate);
 
     const handleSelectDate = (date: Date | null): void => {
       args.onSelectDate?.(date);

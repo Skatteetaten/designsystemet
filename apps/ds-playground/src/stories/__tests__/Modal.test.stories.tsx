@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, JSX } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
