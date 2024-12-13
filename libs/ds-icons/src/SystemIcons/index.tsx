@@ -1,5 +1,6 @@
 /* NB! Dette er en autogenerert fil, vennligst ikke gjør manuelle endringer i den.
    Kjør kommandonavn generate:iconIndexFiles for å generere exports. */
+export * from './AccountArrowBack';
 export * from './AccountBox';
 export * from './AccountChild';
 export * from './AccountEnk';

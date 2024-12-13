@@ -8,6 +8,15 @@ exports[`Tester/Icon Gallery SystemIcons smoke-test 1`] = `
        aria-hidden="true"
        role="img"
   >
+    <path d="M17 18h4v-2h-4v-2l-3 3 3 3zM11 4C8.8 4 7 5.8 7 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4m0 10c-4.4 0-8 1.8-8 4v2h9.5c-.3-.8-.5-1.6-.5-2.5 0-1.2.3-2.3.9-3.4-.6 0-1.2-.1-1.9-.1">
+    </path>
+  </svg>
+  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 "
+       viewbox="0 0 24 24"
+       focusable="false"
+       aria-hidden="true"
+       role="img"
+  >
     <path d="M6 17c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1Zm9-8a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM3 5v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2Z">
     </path>
   </svg>
