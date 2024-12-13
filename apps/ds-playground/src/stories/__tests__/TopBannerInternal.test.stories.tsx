@@ -1,11 +1,12 @@
 import { JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+import { expect, fireEvent, fn, within } from '@storybook/test';
+
 import { InlineButton, Link } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { HelpOutlineSVGpath, SettingsSVGpath } from '@skatteetaten/ds-icons';
 import { TopBannerInternal } from '@skatteetaten/ds-layout';
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, fireEvent, fn, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import customLogo from '../../assets/custom-mobile-logo.svg';
@@ -106,7 +107,7 @@ export const WithDefaults = {
     const canvas = within(canvasElement);
     const header = canvas.getByRole('banner');
     await expect(header.tagName).toBe('HEADER');
-    // eslint-disable-next-line testing-library/no-node-access
+
     await expect(header.firstChild).toHaveAttribute('href');
     const skipLink = canvas.getByText(skipLinkText);
     await expect(skipLink).toBeInTheDocument();

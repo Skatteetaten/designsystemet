@@ -1,9 +1,10 @@
 import { useState, JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { CheckboxGroup } from '@skatteetaten/ds-forms';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';

@@ -1,5 +1,8 @@
 import { useState } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+import { JSX } from 'react/jsx-runtime';
+
 import {
   Pagination,
   getDefaultPageSize,
@@ -8,8 +11,6 @@ import {
   getDefaultHidePrevNextButtonTitle,
 } from '@skatteetaten/ds-navigation';
 import { List } from '@skatteetaten/ds-typography';
-import { Meta, StoryObj } from '@storybook/react';
-import { JSX } from 'react/jsx-runtime';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
@@ -257,7 +258,7 @@ const data = [
   },
 ];
 
-type List = typeof data;
+type DataList = typeof data;
 
 const meta = {
   component: Pagination,
@@ -324,7 +325,7 @@ export const Preview: Story = {} satisfies Story;
 
 // Hjelpefunksjon for å vise hvordan pagination påvirker liste utenfor komponent
 const exampleListWithLimit = (
-  data: List,
+  data: DataList,
   start: number,
   pageSize: number
 ): JSX.Element[] => {

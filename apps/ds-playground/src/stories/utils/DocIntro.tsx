@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { Link } from '@skatteetaten/ds-buttons';
+import { Link as DSLink } from '@skatteetaten/ds-buttons';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
 interface DocIntroProps {
@@ -12,9 +12,25 @@ export const DocIntro = ({ name, url }: DocIntroProps): ReactNode => {
   return (
     <Paragraph variant={'ingress'}>
       {`Se `}
-      <Link href={url}>{name}</Link>
+      <DSLink href={url}>{name}</DSLink>
       {` på stil og tone for eksempler og
         retningslinjer for denne komponenten.`}
     </Paragraph>
+  );
+};
+
+export const Link = ({
+  url,
+  children,
+  target,
+}: {
+  url: string;
+  children: string;
+  target?: string;
+}): ReactNode => {
+  return (
+    <DSLink href={url} target={target} className={'docs'}>
+      {children}
+    </DSLink>
   );
 };

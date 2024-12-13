@@ -1,19 +1,30 @@
 import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
 import * as PaginationStories from './Pagination.stories';
 import { VersionBadge } from '../utils/VersionBadge';
-import { DocIntro } from '../utils/DocIntro';
+import { DocIntro, Link } from '../utils/DocIntro';
 
 <Meta of={PaginationStories} />
 
 # Pagination
 
 <VersionBadge packageName={'navigation'} />
+
 <DocIntro
   name="Pagination"
   url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/pagination/"
 />
 
-## Regler for bruk av props i kombinasjon med andre props
+Hvordan bruke <Link url="#hvordan-bruke-props-i-kombinasjon-med-andre-props" target="_self">props</Link> i komponenten
+
+<Primary />
+
+```tsx
+import { Pagination } from '@skatteetaten/ds-navigation';
+```
+
+<Controls />
+
+## Hvordan bruke props i kombinasjon med andre props
 
 Komponenten vil vise summary og lenker i de tilfellene hvor det er mulig å regne ut. Vi har noen regler som må følges for at utregning skal være mulig. Denne listen med regler viser hva som forhindrer komponenten å rendres:
 
@@ -32,14 +43,6 @@ Komponenten skal ikke vises hvis det ikke eksisterer noen sider man kan navigere
 ### pageSize < 1
 
 Paginering skal bare vises hvis man har spesifisert antall sider til å være én eller mer.
-
-<Primary />
-
-```tsx
-import { Pagination } from '@skatteetaten/ds-navigation';
-```
-
-<Controls />
 
 ## Controlled Example
 

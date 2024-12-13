@@ -197,8 +197,8 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
         >
           neutralt resultat
         </h3>
-        <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112  _resultIntro_14g5z_253">
-          <div class="_panelArticle_ymo8g_64">
+        <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined _resultIntro_14g5z_253">
+          <div class="_panelArticle_1h73c_70">
             <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
               Intro til steget
             </h3>
@@ -403,8 +403,8 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
         >
           neutralt resultat
         </h3>
-        <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112  _resultIntro_14g5z_253">
-          <div class="_panelArticle_ymo8g_64">
+        <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined _resultIntro_14g5z_253">
+          <div class="_panelArticle_1h73c_70">
             <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
               Intro til steget
             </h3>
@@ -609,8 +609,8 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
         >
           neutralt resultat
         </h3>
-        <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112  _resultIntro_14g5z_253">
-          <div class="_panelArticle_ymo8g_64">
+        <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined _resultIntro_14g5z_253">
+          <div class="_panelArticle_1h73c_70">
             <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
               Intro til steget
             </h3>
@@ -744,8 +744,8 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
       >
         Vårt veiledende svar
       </h3>
-      <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_forest_ymo8g_78 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112  _resultIntro_14g5z_253">
-        <div class="_panelArticle_ymo8g_64">
+      <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_forest_1h73c_84 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined _resultIntro_14g5z_253">
+        <div class="_panelArticle_1h73c_70">
           <h4 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
             Virksomheten skal registreres som særavgiftspliktig.
           </h4>
@@ -963,8 +963,8 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
         >
           neutralt resultat
         </h3>
-        <div class="_panel_ymo8g_5 _panel_filled_ymo8g_20 _panel_ochre_ymo8g_74 _panel_paddingXL_ymo8g_103 _panel_spacingXXS_ymo8g_112  _resultIntro_14g5z_253">
-          <div class="_panelArticle_ymo8g_64">
+        <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined _resultIntro_14g5z_253">
+          <div class="_panelArticle_1h73c_70">
             <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
               Intro til steget
             </h3>

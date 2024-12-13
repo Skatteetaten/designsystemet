@@ -1,12 +1,13 @@
 import { ChangeEvent, useState, JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+
 import {
   dsI18n,
   formArrSize,
   getCommonFormVariantDefault,
 } from '@skatteetaten/ds-core-utils';
 import { Select } from '@skatteetaten/ds-forms';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';

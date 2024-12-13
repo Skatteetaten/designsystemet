@@ -1,6 +1,7 @@
-import { Chips, ChipsToggleProps } from '@skatteetaten/ds-collections';
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
+
+import { Chips, ChipsToggleProps } from '@skatteetaten/ds-collections';
 
 const elementId = 'htmlId';
 

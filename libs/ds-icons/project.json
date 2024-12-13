@@ -15,7 +15,7 @@
         "project": "libs/ds-icons/package.json",
         "entryFile": "libs/ds-icons/src/index.ts",
         "external": ["react/jsx-runtime"],
-        "rollupConfig": ["libs/ds-icons/rollup.config.js"],
+        "rollupConfig": ["libs/ds-icons/rollup.config.cjs"],
         "compiler": "swc",
         "assets": [
           {

@@ -1,6 +1,7 @@
-import { ErrorMessage } from '@skatteetaten/ds-forms';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
+
+import { ErrorMessage } from '@skatteetaten/ds-forms';
 
 const meta = {
   component: ErrorMessage,
@@ -97,7 +98,7 @@ export const Defaults = {
     await expect(container).toBeInTheDocument();
     await expect(container).toHaveAttribute('aria-live', 'assertive');
     await expect(container).toHaveAttribute('aria-atomic');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const textNode = container.querySelector('p');
     await expect(textNode).not.toBeInTheDocument();
   },

@@ -1,10 +1,11 @@
 import { FocusEvent, MouseEvent, useState } from 'react';
 
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+
 import { InlineButton } from '@skatteetaten/ds-buttons';
 import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath } from '@skatteetaten/ds-icons';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -161,7 +162,7 @@ export const WithIcon = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inlineButton = canvas.getByRole('button');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const svg = inlineButton.querySelector('svg');
     await expect(svg).toHaveAttribute('viewBox', '0 0 24 24');
     await expect(inlineButton).toBeInTheDocument();

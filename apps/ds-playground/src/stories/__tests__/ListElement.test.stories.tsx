@@ -1,6 +1,7 @@
-import { List } from '@skatteetaten/ds-typography';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
+
+import { List } from '@skatteetaten/ds-typography';
 
 const meta = {
   component: List.Element,

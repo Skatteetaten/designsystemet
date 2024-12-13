@@ -3,7 +3,7 @@ import axios from 'axios';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import filterFiles from 'filter-files';
-import * as fse from 'fs-extra';
+import fse from 'fs-extra';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import jsonConcat from 'json-concat';

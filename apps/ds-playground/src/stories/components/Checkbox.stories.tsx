@@ -1,8 +1,9 @@
 import { useState, JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+
 import { Button } from '@skatteetaten/ds-buttons';
 import { Checkbox } from '@skatteetaten/ds-forms';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';

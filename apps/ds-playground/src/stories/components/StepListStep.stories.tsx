@@ -1,3 +1,5 @@
+import { Meta, StoryObj } from '@storybook/react';
+
 import {
   StepList,
   getStepListStepTitleAsDefault,
@@ -6,7 +8,6 @@ import {
 } from '@skatteetaten/ds-collections';
 import { getPanelTitleAsDefault } from '@skatteetaten/ds-content';
 import { dsI18n, headingAsArr } from '@skatteetaten/ds-core-utils';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';

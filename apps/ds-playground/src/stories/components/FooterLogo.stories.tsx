@@ -1,5 +1,6 @@
-import { Footer } from '@skatteetaten/ds-layout';
 import { Meta, StoryObj } from '@storybook/react';
+
+import { Footer } from '@skatteetaten/ds-layout';
 
 import { category } from '../../../.storybook/helpers';
 import logo from '../../assets/ske-logo-horizontal-white.png';

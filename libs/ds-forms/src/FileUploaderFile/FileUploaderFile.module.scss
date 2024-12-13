@@ -51,7 +51,8 @@
   }
 
   &Link {
-    margin-left: auto;
+    white-space: inherit;
+    word-break: break-all;
   }
 
   &File {

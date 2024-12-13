@@ -1,12 +1,13 @@
 import { FocusEvent, MouseEvent, useState } from 'react';
 
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+
 import { IconButton, IconButtonProps } from '@skatteetaten/ds-buttons';
 import {
   getCommonButtonTypeDefault,
   sizeArr,
 } from '@skatteetaten/ds-core-utils';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -141,7 +142,7 @@ export const Defaults = {
     const canvas = within(canvasElement);
     const iconButton = canvas.getByRole('button');
     expect(iconButton).toHaveAttribute('type', getCommonButtonTypeDefault());
-    // eslint-disable-next-line testing-library/no-node-access
+
     const svg = iconButton.querySelector('svg');
     await expect(svg).toHaveAttribute('viewBox', '0 0 24 24');
     await expect(svg).toHaveAttribute('aria-hidden', 'false');

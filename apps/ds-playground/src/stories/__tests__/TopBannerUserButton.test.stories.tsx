@@ -1,6 +1,7 @@
-import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
+
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerUserButton } from '../../../../../libs/ds-layout/src/TopBannerUserButton/TopBannerUserButton';

@@ -19,7 +19,7 @@
         "project": "libs/ds-table/package.json",
         "entryFile": "libs/ds-table/src/index.ts",
         "external": ["react/jsx-runtime"],
-        "rollupConfig": ["libs/ds-table/rollup.config.js"],
+        "rollupConfig": ["libs/ds-table/rollup.config.cjs"],
         "compiler": "swc",
         "assets": [
           {

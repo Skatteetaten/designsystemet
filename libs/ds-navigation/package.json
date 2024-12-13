@@ -1,8 +1,9 @@
 {
   "name": "@skatteetaten/ds-navigation",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "license": "Apache-2.0",
   "groupId": "no.skatteetaten.aurora",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Skatteetaten/designsystemet.git"
@@ -12,12 +13,12 @@
   },
   "peerDependencies": {
     "react": "^18",
-    "react-i18next": "14.1.2",
+    "react-i18next": "14.1.3",
     "i18next": "^23",
-    "@skatteetaten/ds-buttons": "1.3.0",
-    "@skatteetaten/ds-core-utils": "1.3.0",
-    "@skatteetaten/ds-icons": "1.3.0",
-    "@skatteetaten/ds-progress": "1.3.0"
+    "@skatteetaten/ds-buttons": "1.4.0",
+    "@skatteetaten/ds-core-utils": "1.4.0",
+    "@skatteetaten/ds-icons": "1.4.0",
+    "@skatteetaten/ds-progress": "1.4.0"
   },
   "scripts": {},
   "dependencies": {},

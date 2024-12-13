@@ -1,7 +1,8 @@
 import { JSX } from 'react';
 
-import { Blockquote } from '@skatteetaten/ds-typography';
 import { Meta, StoryObj } from '@storybook/react';
+
+import { Blockquote } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';

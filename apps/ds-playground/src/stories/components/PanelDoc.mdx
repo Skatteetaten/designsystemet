@@ -1,0 +1,157 @@
+import { Meta, Canvas, Description } from '@storybook/blocks';
+import * as PanelStoriesDoc from './Panel.stories';
+import { VersionBadge } from '../utils/VersionBadge';
+import { Link } from '../utils/DocIntro';
+import { ReactComponent as PanelPaddingIllustration } from '../../assets/panel-padding-prop.svg';
+import { ReactComponent as PanelPaddingResponsiveIllustration } from '../../assets/panel-has-responsive-padding.svg';
+
+<Meta of={PanelStoriesDoc} name="Docs for Padding" />
+
+# Panel
+
+<VersionBadge packageName={'content'} />
+
+## Hvordan bruke padding
+
+Padding kan settes på to måter:
+
+1. Hvis **padding**-prop er brukt så gjelder denne verdien for alle brekkpunkter.
+2. Hvis **hasResponsivePadding** = true OG valgfritt egendefinert stilsett satt i **classNames** så kan man definere forskjellig padding for hvert av <Link url="/?path=/docs/designtokens-breakpoints--docs">Desginsystemets brekkpunkter</Link>. Stilene satt i **classNames.padding** er mobile-first, dvs. at variablene settes fra minste bredde til største (min-width). Default-verdiene ved bruk av **hasResponsivePadding** er
+
+- --spacing-m i området mellom 0px og --breakpoint-xs.
+- --spacing-xl gjelder fra --breakpoint-xs og oppover.
+
+Bruk av **padding** utelukker bruk av **hasResponsivePadding** og omvendt.
+
+## Standardverdier for padding
+
+Hvis man ikke ønsker å endre padding så vil padding ha denne verdien
+
+```css
+/* --spacing-xl tilsvarer 2rem */
+--panel-padding: var(--spacing-xl);
+```
+
+<div id="panel-padding-prop">
+
+### 1. Panel med luft styrt av padding-prop
+
+</div>
+
+Her ser vi at luft er lik på alle skjermbredder
+
+<PanelPaddingIllustration id="panel-padding-prop" />
+
+#### Kode
+
+```tsx
+import { Panel } from '@skatteetaten/ds-content';
+<Panel title={`Eksempel på padding satt via prop`} padding={'m'}>
+  Lorem ipsum dolor sit amet...
+</Panel>;
+```
+
+#### Visning
+
+<Canvas of={PanelStoriesDoc.PanelPadding} />
+
+<div id="panel-padding-responsive-prop">
+
+### 2. Panel med luft styrt av hasResponsivePadding
+
+</div>
+
+Her ser vi at luft er forskjellig ved de forskjellige skjermbreddene
+
+<PanelPaddingResponsiveIllustration />
+
+Det er mulig å bruke CSS-variabler for å bestemme forskjellig padding på alle designsystemets brekkpunkter med variablene --panel-padding-\* Verdien satt for smalere brekkpunkt arves videre til bredere brekkpunkt. Verdier fra `--panel-padding-mobile` arves ikke.
+
+```css
+/* Standardverdier satt i komponenten */
+/* hvis bredde er mindre enn brekkpunkt-xs så blir padding satt til --spacing-m */
+width < breakpoint-xs:  var(--spacing-m);
+/* Resterende brekkpunkt har like padding-verdier på --spacing-xl */
+width >= breakpoint-xs: var(--spacing-xl);
+width >= breakpoint-s: var(--spacing-xl);
+width >= breakpoint-m: var(--spacing-xl);
+width >= breakpoint-l: var(--spacing-xl);
+width >= breakpoint-xl: var(--spacing-xl);
+```
+
+Man kan bestemme padding-verdier for hver av brekkpunktene vist i psedokode over. "\*" i CSS-variablene `--panel-padding-*` bruker samme verdier vi finner i listen med brekkpunkt `--breakpoint-*`. Dette er `xs, s, m, l og xl` Se designsystemets <Link url="/?path=/docs/designtokens-breakpoints--docs">brekkpunkter</Link> og <Link url="/?path=/docs/designtokens-spacing--docs">spacing</Link>
+
+Illustrert med med CSS kode:
+
+```css
+--panel-padding-mobile: var(--custom-value);
+--panel-padding-xs: var(--another-custom-value);
+--panel-padding-s: var(--panel-padding-xs);
+--panel-padding-m: var(--panel-padding-s);
+--panel-padding-l: var(--panel-padding-m);
+--panel-padding-xl: var(--panel-padding-l);
+```
+
+Hvis vi vil ha minimalt med padding på alle bredder så kan vi gjøre slik:
+
+#### Kode - CSS
+
+```css
+/* CSS stil definert i Panel.css */
+.dummyPanelPaddingResponsiveFullWidth {
+  /* Bestemmer at padding --spacing-xxs skal gjelde for alle skjermbredder opp til --breakpoint-xs */
+  --panel-padding-mobile: var(--spacing-xxs);
+  /* Bestemmer at padding --spacing-xss skal gjelde for alle skjermbredder bredere enn --breakpoint-xs */
+  --panel-padding-xs: var(--spacing-xxs);
+}
+```
+
+#### Kode - JSX
+
+```tsx
+import { Panel } from '@skatteetaten/ds-content';
+import styles from './Panel.css';
+<Panel
+  title={`Eksempel på padding med CSS variabler`}
+  classNames={styles.panel}
+  hasResponsivePadding
+>
+  Lorem ipsum dolor sit amet...
+</Panel>;
+```
+
+#### Visning
+
+<Canvas of={PanelStoriesDoc.PanelPaddingFullWidth} />
+
+## Hvordan bli kvitt luft til venstre og høyre?
+
+Av og til ser vi at man ønsker å fjerne mer luft til høyre og venstre for tekstinnholdet i Panel. Det kontrolleres ikke ved å endre padding-verdier. Hovedinnholdet i Panel har en maks-bredde på `--semantic-responsive-article` (560px) og dette er styrt av Panel-komponentens interne grid-CSS. Det er forskjellig Grid-oppsett hvis Panel bare inneholder tekst, Panel har ikon (prop renderIcon) eller Panel har en illustrasjon (prop imageSource). Les mer om <Link url="https://www.skatteetaten.no/stilogtone/designsystemet/monstre/sideoppsett-publikum/">Sideoppsett Publikumsløsninger på Stil og Tone</Link>
+
+Eksempel på CSS som lar innhold få all tilgjengelig plass i Panel hvis verken `renderIcon` eller `imageSource` er satt
+
+#### Kode - CSS
+
+```css
+.dummyPanelPaddingNoMargin > * {
+  max-width: 100%;
+}
+```
+
+#### Kode - TSX
+
+```tsx
+<Panel
+  classNames={{
+    padding: 'dummyPanelPaddingNoMargin',
+  }}
+  hasResponsivePadding
+  title="Innholdsbredde 100%"
+>
+  Lorem ipsum dolor sit amet.
+</Panel>
+```
+
+Resultatet blir da at innholdet i Panel strekker seg 100%. Hvis derimot `renderIcon` eller `imageSource` er satt så må det gjøres endring i CSS-grid. Panel sin grid-template endres med media-query når ikon eller illustrasjon er satt.
+
+<Canvas of={PanelStoriesDoc.PanelPaddingNoMargin} />

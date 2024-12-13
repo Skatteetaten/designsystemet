@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { readFileSync } from 'fs';
 
 // Reading the SWC compilation config and remove the "exclude"
@@ -18,7 +17,7 @@ swcJestConfig.module.noInterop = false;
 
 export default {
   displayName: 'ds-progress',
-  preset: '../../jest.preset.js',
+  preset: '../../jest.preset.cjs',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   transform: {
     '^.+\\.[tj]sx?$': ['@swc/jest', swcJestConfig],

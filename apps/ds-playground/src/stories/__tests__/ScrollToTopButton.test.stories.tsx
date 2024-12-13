@@ -1,7 +1,8 @@
-import { ScrollToTopButton } from '@skatteetaten/ds-buttons';
-import { ExternalLayout, dsI18n } from '@skatteetaten/ds-core-utils';
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { expect, userEvent, within } from '@storybook/test';
+
+import { ScrollToTopButton } from '@skatteetaten/ds-buttons';
+import { ExternalLayout, dsI18n } from '@skatteetaten/ds-core-utils';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
@@ -101,7 +102,7 @@ export const WithAttributes = {
     await expect(scrollToTopButton).toHaveAttribute('id', 'htmlId');
     await expect(scrollToTopButton).toHaveAttribute('lang', 'nb');
     await expect(scrollToTopButton).toHaveAttribute('data-testid', '123ID');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const container = canvasElement.querySelector(
       `${wrapper} > div > main > div:nth-child(2)`
     );
@@ -129,13 +130,13 @@ export const WithCustomClassNames = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    /* eslint-disable testing-library/no-node-access */
+
     const container = canvasElement.querySelector(
       `${wrapper} > div > main > div:nth-child(2)`
     );
     const button = canvas.getByRole('button');
     const iconContainer = button.querySelector('div');
-    /* eslint-disable testing-library/no-node-access */
+
     const icon = canvas.getByRole('img', { hidden: true });
     const label = canvas.getByText(
       dsI18n.t('ds_buttons:scrolltotopbutton.Title')
@@ -237,7 +238,6 @@ export const WithVisibilityThreshold = {
 } satisfies Story;
 
 const TemplateWithShadowDom: StoryFn<typeof ScrollToTopButton> = (args) => {
-  // eslint-disable-next-line testing-library/no-node-access
   const element = document.querySelector('scrolltotop-customelement');
   const shadowRoot = element?.shadowRoot;
   return (

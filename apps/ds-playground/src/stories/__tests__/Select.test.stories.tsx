@@ -1,7 +1,5 @@
 import { ChangeEvent, FocusEvent, useState } from 'react';
 
-import { dsI18n, formArrSize } from '@skatteetaten/ds-core-utils';
-import { Select } from '@skatteetaten/ds-forms';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import {
   expect,
@@ -11,6 +9,9 @@ import {
   waitFor,
   within,
 } from '@storybook/test';
+
+import { dsI18n, formArrSize } from '@skatteetaten/ds-core-utils';
+import { Select } from '@skatteetaten/ds-forms';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -158,14 +159,14 @@ export const WithCustomClassNames = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    // eslint-disable-next-line testing-library/no-node-access
+
     const container = canvasElement.querySelector(`${wrapper} > div`);
     const label = canvas.getByText(defaultLabelText);
-    // eslint-disable-next-line testing-library/no-node-access
+
     const selectContainer = canvasElement.querySelector(
       `${wrapper} > div > div`
     );
-    // eslint-disable-next-line testing-library/no-node-access
+
     const errorMessageContainer = canvasElement.querySelector(
       '[id^=selectErrorId]>div'
     );
@@ -205,7 +206,7 @@ export const Defaults = {
     await expect(selectNode).not.toBeRequired();
     await expect(selectNode).not.toHaveAttribute('aria-invalid');
     await expect(selectNode).not.toHaveAttribute('aria-describedby');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const errorMessageContainer = canvasElement.querySelector(
       '[id^=selectErrorId]'
     );

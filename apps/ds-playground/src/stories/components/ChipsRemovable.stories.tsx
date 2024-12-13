@@ -1,5 +1,6 @@
-import { Chips, getChipDefaultSize } from '@skatteetaten/ds-collections';
 import { Meta, StoryObj } from '@storybook/react';
+
+import { Chips, getChipDefaultSize } from '@skatteetaten/ds-collections';
 
 import { category } from '../../../.storybook/helpers';
 

@@ -1,6 +1,7 @@
+import { Meta, StoryObj } from '@storybook/react';
+
 import { Accordion } from '@skatteetaten/ds-collections';
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';

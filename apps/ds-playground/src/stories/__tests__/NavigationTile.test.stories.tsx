@@ -1,13 +1,14 @@
 import { useState } from 'react';
 
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+
 import { dsI18n, headingAsArr } from '@skatteetaten/ds-core-utils';
 import { AccountEnkSVGpath, CalendarSVGpath } from '@skatteetaten/ds-icons';
 import {
   NavigationTile,
   NavigationTileProps,
 } from '@skatteetaten/ds-navigation';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -201,7 +202,7 @@ export const WithIcon = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const svg = link.querySelector('svg');
     await expect(svg).toHaveAttribute('aria-hidden', 'true');
     await expect(svg).toHaveAttribute('viewBox', systemIconViewBox);
@@ -222,7 +223,7 @@ export const WithExternalIcon = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const svg = link.querySelector('svg');
     await expect(svg).toHaveAttribute(
       'aria-label',

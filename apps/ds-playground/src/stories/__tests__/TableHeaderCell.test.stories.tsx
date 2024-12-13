@@ -1,6 +1,7 @@
-import { Table } from '@skatteetaten/ds-table';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
+
+import { Table } from '@skatteetaten/ds-table';
 
 const meta = {
   component: Table.HeaderCell,
@@ -34,7 +35,7 @@ const Template: StoryFn<typeof Table.HeaderCell> = (args) => (
   <table>
     <Table.Header>
       <Table.Row>
-        {/* eslint-disable-next-line testing-library/no-node-access */}
+        {}
         <Table.HeaderCell {...args}>{args.children}</Table.HeaderCell>
       </Table.Row>
     </Table.Header>

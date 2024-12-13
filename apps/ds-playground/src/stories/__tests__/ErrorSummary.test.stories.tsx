@@ -1,8 +1,9 @@
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { expect, userEvent, waitFor, within } from '@storybook/test';
+
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
 import { ErrorSummary, TextField } from '@skatteetaten/ds-forms';
 import { Paragraph } from '@skatteetaten/ds-typography';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, userEvent, waitFor, within } from '@storybook/test';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
@@ -113,7 +114,7 @@ export const Defaults = {
     await expect(container).toHaveAttribute('aria-live', 'assertive');
     await expect(container).toHaveAttribute('aria-atomic');
     await expect(container).toHaveAttribute('tabIndex', '-1');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const errorSummary = container.querySelector('div');
     await expect(errorSummary).not.toBeInTheDocument();
   },
@@ -251,7 +252,6 @@ export const WithInput = {
 } satisfies Story;
 
 const TemplateWithShadowRootNode: StoryFn<typeof ErrorSummary> = () => {
-  // eslint-disable-next-line testing-library/no-node-access
   const element = document.querySelector('errorsummary-customelement');
   const shadowRoot = element?.shadowRoot;
   return (
@@ -292,20 +292,18 @@ export const WithShadowRootNode = {
     const canvas = within(canvasElement);
     // errorLink finnes ikke utenfor shadowDom
     await expect(canvas.queryByRole('link')).not.toBeInTheDocument();
-    // eslint-disable-next-line testing-library/no-node-access
+
     const customElement = canvasElement.querySelector(
       `errorsummary-customelement`
     );
     await expect(customElement).toBeInTheDocument();
     const errorLink =
-      // eslint-disable-next-line testing-library/no-node-access
       customElement?.shadowRoot && customElement.shadowRoot.querySelector('a');
     await expect(errorLink).toBeInTheDocument();
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     await userEvent.click(errorLink!);
     const input =
       customElement?.shadowRoot &&
-      // eslint-disable-next-line testing-library/no-node-access
       customElement.shadowRoot.querySelector('input:focus');
     await expect(input).toBeInTheDocument();
   },

@@ -1,10 +1,11 @@
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { expect, within } from '@storybook/test';
+
 import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { GaveArvSVGpath, Icon } from '@skatteetaten/ds-icons';
 import { Footer, FooterProps } from '@skatteetaten/ds-layout';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
 
 import logo from '../../assets/ske-logo-horizontal-white.png';
 
@@ -154,10 +155,10 @@ export const Defaults = {
     const footer = canvas.getByRole('contentinfo');
     await expect(footer).toBeInTheDocument();
     await expect(footer.tagName).toBe('FOOTER');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const linkGroup = footer.querySelector('ul');
     await expect(linkGroup).toBeInTheDocument();
-    // eslint-disable-next-line testing-library/no-node-access
+
     const logo = footer.querySelector('img');
     await expect(logo).toBeInTheDocument();
     await expect(logo).toHaveAttribute(
@@ -216,7 +217,7 @@ export const WithHideLogo = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const footer = canvas.getByRole('contentinfo');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const logo = footer.querySelector('img');
     await expect(logo).not.toBeInTheDocument();
   },
@@ -273,7 +274,7 @@ export const WithLinks = {
     const canvas = within(canvasElement);
     const links = canvas.getAllByRole('link');
     await expect(links[3]).toHaveClass('dummyClassname');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const externalLink = links[4].querySelector('svg');
     await expect(externalLink).toBeInTheDocument();
   },

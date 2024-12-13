@@ -1,9 +1,5 @@
 import { MouseEvent, JSX, useState } from 'react';
 
-import { Accordion, AccordionItemProps } from '@skatteetaten/ds-collections';
-import { headingAsArr } from '@skatteetaten/ds-core-utils';
-import { Checkbox } from '@skatteetaten/ds-forms';
-import { PersonSVGpath } from '@skatteetaten/ds-icons';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import {
   expect,
@@ -13,6 +9,11 @@ import {
   waitFor,
   within,
 } from '@storybook/test';
+
+import { Accordion, AccordionItemProps } from '@skatteetaten/ds-collections';
+import { headingAsArr } from '@skatteetaten/ds-core-utils';
+import { Checkbox } from '@skatteetaten/ds-forms';
+import { PersonSVGpath } from '@skatteetaten/ds-icons';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 
@@ -163,7 +164,7 @@ export const Defaults = {
     await expect(title).toBeInTheDocument();
     const content = canvas.queryByText(defaultContent);
     await expect(content).not.toBeVisible();
-    // eslint-disable-next-line testing-library/no-node-access
+
     const svg = button.querySelector('svg');
     await expect(svg).toBeInTheDocument();
     await expect(svg).toHaveAttribute('aria-hidden', 'true');
@@ -190,7 +191,7 @@ export const WithCustomClassNames = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    // eslint-disable-next-line testing-library/no-node-access
+
     const container = canvas.getByRole('button');
     const title = canvas.getByText(defaultTitle);
     const subtitle = canvas.getByText(defaultSubtitle);

@@ -1,6 +1,6 @@
 const path = require('path');
 
-const createRollupConfig = require('../ds-dev-config/build/rollup-config-factory');
+const createRollupConfig = require('../ds-dev-config/build/rollup-config-factory.cjs');
 
 const srcDir = path.resolve(__dirname, `src`);
 const pathToTsConfig = 'libs/<%= name %>/tsconfig.lib.json';

@@ -1,9 +1,10 @@
 import { useState } from 'react';
 
-import { dsI18n, Languages } from '@skatteetaten/ds-core-utils';
-import { TopBannerMenu } from '@skatteetaten/ds-layout';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, userEvent, within } from '@storybook/test';
+
+import { dsI18n, Languages } from '@skatteetaten/ds-core-utils';
+import { TopBannerMenu } from '@skatteetaten/ds-layout';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerLangPicker } from '../../../../../libs/ds-layout/src/TopBannerLangPicker/TopBannerLangPicker';
@@ -136,7 +137,7 @@ export const Defaults = {
     await expect(englishButton).toHaveAttribute('lang', 'en');
     const samiskButton = canvas.getByRole('button', { name: 'Sámegiella' });
     await expect(samiskButton).toHaveAttribute('lang', 'se');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const html = document.querySelector('html');
     await expect(html).toHaveAttribute('lang', 'nb');
   },
@@ -178,7 +179,7 @@ export const WithLocale = {
     await userEvent.click(menuButton);
     const englishButton = canvas.getByRole('button', { name: englishText });
     await expect(englishButton).toHaveAttribute('aria-current', 'true');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const html = document.querySelector('html');
     await expect(html).toHaveAttribute('lang', 'en');
   },
@@ -225,7 +226,6 @@ export const WithKeyboardNavigation = {
     await userEvent.click(menuButton);
     const listItems = canvas.getAllByRole('listitem');
 
-    /* eslint-disable testing-library/no-node-access */
     await userEvent.keyboard('[ArrowDown]');
     await expect(listItems[0].firstChild).toHaveFocus();
     await userEvent.keyboard('[ArrowDown]');
@@ -234,7 +234,6 @@ export const WithKeyboardNavigation = {
     await expect(listItems[2].firstChild).toHaveFocus();
     await userEvent.keyboard('[ArrowUp]');
     await expect(listItems[1].firstChild).toHaveFocus();
-    /* eslint-enable testing-library/no-node-access */
   },
 
   parameters: {

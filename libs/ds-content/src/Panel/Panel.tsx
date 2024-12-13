@@ -25,8 +25,10 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
       headingRef,
       canManuallySetTitleFocus,
       color = getPanelColorDefault(),
+      classNames,
       imageSource,
       imageSourceAltText,
+      hasResponsivePadding,
       padding = getPanelPaddingDefault(),
       spacing = getPanelSpacingDefault(),
       subtitle,
@@ -62,8 +64,13 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
         hideGraphicMobile ? styles.panel_graphicIconHide : ''
       }`;
     }
+    const panelPaddingResponsiveClassName = hasResponsivePadding
+      ? styles.panelResponsive
+      : '';
+
+    const panelCustomClassNames = classNames?.padding;
     const panelClassName =
-      `${styles.panel} ${panelVariantClassName} ${panelColorClassName} ${panelPaddingClassName} ${panelSpacingClassName} ${panelGraphicClassName} ${className}`.trim();
+      `${styles.panel} ${panelVariantClassName} ${panelColorClassName} ${panelPaddingClassName} ${panelPaddingResponsiveClassName} ${panelSpacingClassName} ${panelGraphicClassName} ${panelCustomClassNames} ${className}`.trim();
 
     const graphicClassName = `${styles.panelGraphic} ${
       hideGraphicMobile ? styles.panelGraphicHide : ''

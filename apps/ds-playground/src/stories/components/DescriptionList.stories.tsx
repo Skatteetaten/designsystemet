@@ -1,3 +1,7 @@
+import { JSX } from 'react';
+
+import { Meta, StoryObj } from '@storybook/react';
+
 import { InlineButton, IconButton } from '@skatteetaten/ds-buttons';
 import {
   DescriptionList,
@@ -13,10 +17,11 @@ import {
 } from '@skatteetaten/ds-icons';
 import { Popover } from '@skatteetaten/ds-overlays';
 import { Tag } from '@skatteetaten/ds-status';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
+
+import styles from './DescriptionListStory.module.scss';
 
 const meta = {
   component: DescriptionList,
@@ -28,8 +33,10 @@ const meta = {
       table: { category: category.props },
     },
     size: {
-      table: { category: category.props },
-      defaultValue: { summary: getDescriptionListSizeDefault() },
+      table: {
+        category: category.props,
+        defaultValue: { summary: getDescriptionListSizeDefault() },
+      },
     },
     variant: {
       table: { category: category.props },
@@ -173,3 +180,44 @@ export const Examples: Story = {
   ),
 } satisfies Story;
 Examples.parameters = exampleParameters;
+
+export const ExampleWithFixedColumns: Story = {
+  /*
+  Innhold i className
+
+  .descriptionListTwoColumns {
+    --description-list-columns: 2;
+  }
+
+  */
+  render: (_args): JSX.Element => (
+    <div>
+      <DescriptionList
+        variant={'horizontal'}
+        descriptionDirection={'vertical'}
+        className={styles.descriptionListTwoColumns}
+        hasSpacing
+      >
+        <DescriptionList.Element term={'Saksbehandler'}>
+          {'Kenneth Performance'}
+        </DescriptionList.Element>
+        <DescriptionList.Element term={'Status'}>
+          {'Under behandling'}
+        </DescriptionList.Element>
+        <DescriptionList.Element term={'Sist endret'}>
+          {'30.12.2013'}
+        </DescriptionList.Element>
+        <DescriptionList.Element term={'Frist'}>
+          {'30.12.2013'}
+        </DescriptionList.Element>
+        <DescriptionList.Element term={'Farge'}>
+          {'Smaragdgrønn'}
+        </DescriptionList.Element>
+        <DescriptionList.Element term={'Først endret'}>
+          {'30.12.2010'}
+        </DescriptionList.Element>
+      </DescriptionList>
+    </div>
+  ),
+} satisfies Story;
+ExampleWithFixedColumns.parameters = exampleParameters;

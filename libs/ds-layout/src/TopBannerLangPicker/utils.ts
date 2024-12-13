@@ -15,6 +15,10 @@ export type LanguageItems = {
   [key: string]: LanguageItem;
 };
 
+export const isLanguages = (value: unknown): value is Languages => {
+  return Object.values(Languages).includes(value as Languages);
+};
+
 export const getCurrentLanguages = (
   includeSami: boolean,
   additionalLanguages: TopBannerLangPickerProps['additionalLanguages'] = []

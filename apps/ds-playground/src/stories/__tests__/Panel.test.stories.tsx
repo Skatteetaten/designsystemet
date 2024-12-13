@@ -1,5 +1,8 @@
 import { Fragment, JSX, useEffect, useRef } from 'react';
 
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { expect, userEvent, within } from '@storybook/test';
+
 import { Button } from '@skatteetaten/ds-buttons';
 import {
   Panel,
@@ -14,8 +17,6 @@ import {
 } from '@skatteetaten/ds-core-utils';
 import { InfoIcon } from '@skatteetaten/ds-icons';
 import { Paragraph } from '@skatteetaten/ds-typography';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, within } from '@storybook/test';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 import farmerIllustration from '../../assets/farmer-illustration.svg';
@@ -52,11 +53,13 @@ const meta = {
       table: { disable: true },
       control: 'text',
     },
+    classNames: { table: { disable: true } },
     color: {
       table: { disable: true },
       options: [...panelColorArr],
       control: 'inline-radio',
     },
+    hasResponsivePadding: { table: { disable: true } },
     headingRef: { table: { disable: true }, control: { disable: true } },
     hideGraphicMobile: { table: { disable: true } },
     hideSubtitle: {
@@ -550,16 +553,16 @@ export const WithSpacing = {
   },
 } satisfies Story;
 
-const TemplateWithAllPaddings: StoryFn<typeof Panel> = (args) => (
+const TemplateWithAllPaddings: StoryFn<typeof Panel> = (_args) => (
   <>
     {panelPaddingArr.map((padding, index) => {
       return (
         <Fragment key={index}>
-          <Panel {...args} padding={padding}>
+          <Panel padding={padding}>
             <div>{`padding: ${padding}`}</div>
             <Paragraph>{loremIpsum}</Paragraph>
           </Panel>
-          <Panel {...args} padding={padding} variant={'filled'}>
+          <Panel padding={padding} variant={'filled'}>
             <div>{`padding: ${padding}`}</div>
             <Paragraph>{loremIpsum}</Paragraph>
           </Panel>
@@ -703,5 +706,48 @@ export const WithPanelHeadingRef: Story = {
     const panelHeading = canvas.getByRole('heading', { level: 3 });
     await expect(panelHeading).toHaveAttribute('id', 'dummyIdForwardedFromRef');
     await expect(panelHeading).toHaveFocus();
+  },
+} satisfies Story;
+
+const TemplateResponsivePadding: StoryFn<typeof Panel> = (args) => (
+  <>
+    <Panel {...args} title={`Med responsive padding `}>
+      <Paragraph>{`
+      Her har vi satt hasResponsivePadding:true og endret følgende tokens for responsive visning. 
+      --pandel-padding-xs, --pandel-padding-m og --pandel-padding-l
+      `}</Paragraph>
+    </Panel>
+    <Panel title={`Med default padding`} padding={args.padding}>
+      <Paragraph>{`Denne Panel bruker standard 'padding'-prop for å kontrollere padding.`}</Paragraph>
+    </Panel>
+  </>
+);
+
+export const WithResponsivePadding = {
+  render: TemplateResponsivePadding,
+  name: 'With Responsive Padding',
+  args: {
+    children: '',
+    hasResponsivePadding: true,
+    classNames: { padding: 'dummyPanelPaddingResponsive' },
+  },
+  argTypes: {
+    hasResponsivePadding: {
+      description: 'lskjf',
+    },
+    padding: {
+      table: { disable: false, readonly: false },
+      control: { disable: false },
+    },
+    classNames: {
+      table: { readonly: true },
+      disable: false,
+      control: { disable: false },
+    },
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: '--mobile',
+    },
   },
 } satisfies Story;

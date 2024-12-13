@@ -1,6 +1,7 @@
+import { Meta, StoryObj } from '@storybook/react';
+
 import { Link, LinkProps } from '@skatteetaten/ds-buttons';
 import { Footer } from '@skatteetaten/ds-layout';
-import { Meta, StoryObj } from '@storybook/react';
 
 import LinkMeta from './Link.stories';
 

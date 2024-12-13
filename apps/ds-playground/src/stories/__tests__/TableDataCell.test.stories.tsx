@@ -1,6 +1,7 @@
-import { Table } from '@skatteetaten/ds-table';
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
+
+import { Table } from '@skatteetaten/ds-table';
 
 const meta = {
   component: Table.DataCell,

@@ -1,8 +1,12 @@
 import { JSX } from 'react';
 
-import { statusArr } from '@skatteetaten/ds-core-utils';
-import { Alert } from '@skatteetaten/ds-status';
 import { Meta, StoryObj } from '@storybook/react';
+
+import { statusArr } from '@skatteetaten/ds-core-utils';
+import {
+  Alert,
+  getAlertBackgroundBrightnessDefault,
+} from '@skatteetaten/ds-status';
 
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -14,6 +18,12 @@ const meta = {
   argTypes: {
     // Props
     children: { control: 'text', table: { category: category.props } },
+    backgroundBrightness: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: getAlertBackgroundBrightnessDefault() },
+      },
+    },
     showAlert: {
       table: { category: category.props },
       control: 'radio',
