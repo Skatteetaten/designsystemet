@@ -15,28 +15,28 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
 <div data-test-block="true">
   <div>
     <ol class="_stepList_bc059_1 ">
-      <li class="_step_14g5z_1 _step_passive_14g5z_55 ">
-        <div class="_stepSideWrapper_14g5z_143 "
+      <li class="_step_t28i0_1 _step_passive_t28i0_55 ">
+        <div class="_stepSideWrapper_t28i0_143 "
              tabindex="-1"
         >
-          <span class="_stepCircle_14g5z_193
-        _stepCircle_passive_14g5z_215">
+          <span class="_stepCircle_t28i0_196
+        _stepCircle_passive_t28i0_218">
             1
           </span>
-          <div class="_stepLine_14g5z_1 ">
+          <div class="_stepLine_t28i0_1 ">
           </div>
         </div>
         <h3 id="steptitle-:ro:"
-            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
         >
           besvart
         </h3>
-        <div class="_stepContent_14g5z_86  
+        <div class="_stepContent_t28i0_86  
           ">
           <div>
             brødtekst
           </div>
-          <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  _stepEditButton_14g5z_46"
+          <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  _stepEditButton_t28i0_46"
                   type="button"
                   aria-describedby="steptitle-:ro:"
           >
@@ -55,55 +55,55 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
           </button>
         </div>
       </li>
-      <li class="_step_14g5z_1 _step_passive_14g5z_55 ">
-        <div class="_stepSideWrapper_14g5z_143 "
+      <li class="_step_t28i0_1 _step_passive_t28i0_55 ">
+        <div class="_stepSideWrapper_t28i0_143 "
              tabindex="-1"
         >
-          <span class="_stepCircle_14g5z_193
-        _stepCircle_passive_14g5z_215">
+          <span class="_stepCircle_t28i0_196
+        _stepCircle_passive_t28i0_218">
             2
           </span>
-          <div class="_stepLine_14g5z_1 ">
+          <div class="_stepLine_t28i0_1 ">
           </div>
         </div>
         <h3 id="steptitle-:rq:"
-            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
         >
           besvart 2
         </h3>
-        <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
           ">
           <div>
             brødtekst
           </div>
         </div>
       </li>
-      <li class="_step_14g5z_1 _step_active_14g5z_50 ">
-        <div class="_stepSideWrapper_14g5z_143 "
+      <li class="_step_t28i0_1 _step_active_t28i0_50 ">
+        <div class="_stepSideWrapper_t28i0_143 "
              tabindex="-1"
              aria-current="step"
         >
-          <span class="_stepCircle_14g5z_193
-        _stepCircle_active_14g5z_218">
+          <span class="_stepCircle_t28i0_196
+        _stepCircle_active_t28i0_221">
             3
           </span>
-          <div class="_stepLine_14g5z_1 ">
+          <div class="_stepLine_t28i0_1 ">
           </div>
         </div>
         <h3 id="steptitle-:rr:"
-            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
         >
           aktivt
         </h3>
-        <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
           ">
           <div>
             brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst
           </div>
         </div>
-        <div class="_nextLine_14g5z_278">
+        <div class="_nextLine_t28i0_281">
         </div>
-        <span class="_buttonWrapper_14g5z_274">
+        <span class="_buttonWrapper_t28i0_277">
           <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
                   type="button"
           >
@@ -113,14 +113,14 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
           </button>
         </span>
       </li>
-      <li class="_step_14g5z_1 _step_positiveResult_14g5z_60 ">
-        <div class="_stepSideWrapper_14g5z_143 _stepSideWrapper_result_14g5z_149"
+      <li class="_step_t28i0_1 _step_positiveResult_t28i0_60 ">
+        <div class="_stepSideWrapper_t28i0_143 _stepSideWrapper_result_t28i0_152"
              tabindex="-1"
              aria-current="step"
         >
-          <span class="_stepCircle_14g5z_193
-        _stepCircle_positiveResult_14g5z_223">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_14g5z_241"
+          <span class="_stepCircle_t28i0_196
+        _stepCircle_positiveResult_t28i0_226">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_t28i0_244"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:rt:"
@@ -134,15 +134,15 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
               </path>
             </svg>
           </span>
-          <div class="_stepLine_14g5z_1 _stepLine_positiveResult_14g5z_1">
+          <div class="_stepLine_t28i0_1 _stepLine_positiveResult_t28i0_1">
           </div>
         </div>
         <h3 id="steptitle-:rs:"
-            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
         >
           positivt resultat
         </h3>
-        <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 _stepContent_positiveResult_14g5z_106 
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_positiveResult_t28i0_106 
           ">
           <div>
             <h3 class="_heading_12p5o_1 _heading_level4_12p5o_43  ">
@@ -168,14 +168,14 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
           </div>
         </div>
       </li>
-      <li class="_step_14g5z_1 _step_neutralResult_14g5z_60 ">
-        <div class="_stepSideWrapper_14g5z_143 _stepSideWrapper_result_14g5z_149"
+      <li class="_step_t28i0_1 _step_neutralResult_t28i0_60 ">
+        <div class="_stepSideWrapper_t28i0_143 _stepSideWrapper_result_t28i0_152"
              tabindex="-1"
              aria-current="step"
         >
-          <span class="_stepCircle_14g5z_193
-        _stepCircle_neutralResult_14g5z_232">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_14g5z_241"
+          <span class="_stepCircle_t28i0_196
+        _stepCircle_neutralResult_t28i0_235">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_t28i0_244"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:rv:"
@@ -189,15 +189,15 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
               </path>
             </svg>
           </span>
-          <div class="_stepLine_14g5z_1 _stepLine_neutralResult_14g5z_1">
+          <div class="_stepLine_t28i0_1 _stepLine_neutralResult_t28i0_1">
           </div>
         </div>
         <h3 id="steptitle-:ru:"
-            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
         >
           neutralt resultat
         </h3>
-        <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined _resultIntro_14g5z_253">
+        <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined _resultIntro_t28i0_256">
           <div class="_panelArticle_1h73c_70">
             <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
               Intro til steget
@@ -205,7 +205,7 @@ exports[`Tester/StepList/StepList WithBreakPointMobile smoke-test 1`] = `
             innhold
           </div>
         </div>
-        <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 _stepContent_neutralResult_14g5z_106 
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_neutralResult_t28i0_106 
           ">
           <div>
             more brødtekst
@@ -221,28 +221,28 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
 <div data-test-block="true">
   <div>
     <ol class="_stepList_bc059_1 ">
-      <li class="_step_14g5z_1 _step_passive_14g5z_55 ">
-        <div class="_stepSideWrapper_14g5z_143 "
+      <li class="_step_t28i0_1 _step_passive_t28i0_55 ">
+        <div class="_stepSideWrapper_t28i0_143 "
              tabindex="-1"
         >
-          <span class="_stepCircle_14g5z_193
-        _stepCircle_passive_14g5z_215">
+          <span class="_stepCircle_t28i0_196
+        _stepCircle_passive_t28i0_218">
             1
           </span>
-          <div class="_stepLine_14g5z_1 ">
+          <div class="_stepLine_t28i0_1 ">
           </div>
         </div>
         <h3 id="steptitle-:r8:"
-            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
         >
           besvart
         </h3>
-        <div class="_stepContent_14g5z_86  
+        <div class="_stepContent_t28i0_86  
           ">
           <div>
             brødtekst
           </div>
-          <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  _stepEditButton_14g5z_46"
+          <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  _stepEditButton_t28i0_46"
                   type="button"
                   aria-describedby="steptitle-:r8:"
           >
@@ -261,55 +261,55 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
           </button>
         </div>
       </li>
-      <li class="_step_14g5z_1 _step_passive_14g5z_55 ">
-        <div class="_stepSideWrapper_14g5z_143 "
+      <li class="_step_t28i0_1 _step_passive_t28i0_55 ">
+        <div class="_stepSideWrapper_t28i0_143 "
              tabindex="-1"
         >
-          <span class="_stepCircle_14g5z_193
-        _stepCircle_passive_14g5z_215">
+          <span class="_stepCircle_t28i0_196
+        _stepCircle_passive_t28i0_218">
             2
           </span>
-          <div class="_stepLine_14g5z_1 ">
+          <div class="_stepLine_t28i0_1 ">
           </div>
         </div>
         <h3 id="steptitle-:ra:"
-            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
         >
           besvart 2
         </h3>
-        <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
           ">
           <div>
             brødtekst
           </div>
         </div>
       </li>
-      <li class="_step_14g5z_1 _step_active_14g5z_50 ">
-        <div class="_stepSideWrapper_14g5z_143 "
+      <li class="_step_t28i0_1 _step_active_t28i0_50 ">
+        <div class="_stepSideWrapper_t28i0_143 "
              tabindex="-1"
              aria-current="step"
         >
-          <span class="_stepCircle_14g5z_193
-        _stepCircle_active_14g5z_218">
+          <span class="_stepCircle_t28i0_196
+        _stepCircle_active_t28i0_221">
             3
           </span>
-          <div class="_stepLine_14g5z_1 ">
+          <div class="_stepLine_t28i0_1 ">
           </div>
         </div>
         <h3 id="steptitle-:rb:"
-            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
         >
           aktivt
         </h3>
-        <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
           ">
           <div>
             brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst
           </div>
         </div>
-        <div class="_nextLine_14g5z_278">
+        <div class="_nextLine_t28i0_281">
         </div>
-        <span class="_buttonWrapper_14g5z_274">
+        <span class="_buttonWrapper_t28i0_277">
           <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
                   type="button"
           >
@@ -319,14 +319,14 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
           </button>
         </span>
       </li>
-      <li class="_step_14g5z_1 _step_positiveResult_14g5z_60 ">
-        <div class="_stepSideWrapper_14g5z_143 _stepSideWrapper_result_14g5z_149"
+      <li class="_step_t28i0_1 _step_positiveResult_t28i0_60 ">
+        <div class="_stepSideWrapper_t28i0_143 _stepSideWrapper_result_t28i0_152"
              tabindex="-1"
              aria-current="step"
         >
-          <span class="_stepCircle_14g5z_193
-        _stepCircle_positiveResult_14g5z_223">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_14g5z_241"
+          <span class="_stepCircle_t28i0_196
+        _stepCircle_positiveResult_t28i0_226">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_t28i0_244"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:rd:"
@@ -340,15 +340,15 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
               </path>
             </svg>
           </span>
-          <div class="_stepLine_14g5z_1 _stepLine_positiveResult_14g5z_1">
+          <div class="_stepLine_t28i0_1 _stepLine_positiveResult_t28i0_1">
           </div>
         </div>
         <h3 id="steptitle-:rc:"
-            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
         >
           positivt resultat
         </h3>
-        <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 _stepContent_positiveResult_14g5z_106 
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_positiveResult_t28i0_106 
           ">
           <div>
             <h3 class="_heading_12p5o_1 _heading_level4_12p5o_43  ">
@@ -374,14 +374,14 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
           </div>
         </div>
       </li>
-      <li class="_step_14g5z_1 _step_neutralResult_14g5z_60 ">
-        <div class="_stepSideWrapper_14g5z_143 _stepSideWrapper_result_14g5z_149"
+      <li class="_step_t28i0_1 _step_neutralResult_t28i0_60 ">
+        <div class="_stepSideWrapper_t28i0_143 _stepSideWrapper_result_t28i0_152"
              tabindex="-1"
              aria-current="step"
         >
-          <span class="_stepCircle_14g5z_193
-        _stepCircle_neutralResult_14g5z_232">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_14g5z_241"
+          <span class="_stepCircle_t28i0_196
+        _stepCircle_neutralResult_t28i0_235">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_t28i0_244"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:rf:"
@@ -395,15 +395,15 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
               </path>
             </svg>
           </span>
-          <div class="_stepLine_14g5z_1 _stepLine_neutralResult_14g5z_1">
+          <div class="_stepLine_t28i0_1 _stepLine_neutralResult_t28i0_1">
           </div>
         </div>
         <h3 id="steptitle-:re:"
-            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
         >
           neutralt resultat
         </h3>
-        <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined _resultIntro_14g5z_253">
+        <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined _resultIntro_t28i0_256">
           <div class="_panelArticle_1h73c_70">
             <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
               Intro til steget
@@ -411,7 +411,7 @@ exports[`Tester/StepList/StepList WithBreakPointS smoke-test 1`] = `
             innhold
           </div>
         </div>
-        <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 _stepContent_neutralResult_14g5z_106 
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_neutralResult_t28i0_106 
           ">
           <div>
             more brødtekst
@@ -427,28 +427,28 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
 <div data-test-block="true">
   <div>
     <ol class="_stepList_bc059_1 ">
-      <li class="_step_14g5z_1 _step_passive_14g5z_55 ">
-        <div class="_stepSideWrapper_14g5z_143 "
+      <li class="_step_t28i0_1 _step_passive_t28i0_55 ">
+        <div class="_stepSideWrapper_t28i0_143 "
              tabindex="-1"
         >
-          <span class="_stepCircle_14g5z_193
-        _stepCircle_passive_14g5z_215">
+          <span class="_stepCircle_t28i0_196
+        _stepCircle_passive_t28i0_218">
             1
           </span>
-          <div class="_stepLine_14g5z_1 ">
+          <div class="_stepLine_t28i0_1 ">
           </div>
         </div>
         <h3 id="steptitle-:rg:"
-            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
         >
           besvart
         </h3>
-        <div class="_stepContent_14g5z_86  
+        <div class="_stepContent_t28i0_86  
           ">
           <div>
             brødtekst
           </div>
-          <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  _stepEditButton_14g5z_46"
+          <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  _stepEditButton_t28i0_46"
                   type="button"
                   aria-describedby="steptitle-:rg:"
           >
@@ -467,55 +467,55 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
           </button>
         </div>
       </li>
-      <li class="_step_14g5z_1 _step_passive_14g5z_55 ">
-        <div class="_stepSideWrapper_14g5z_143 "
+      <li class="_step_t28i0_1 _step_passive_t28i0_55 ">
+        <div class="_stepSideWrapper_t28i0_143 "
              tabindex="-1"
         >
-          <span class="_stepCircle_14g5z_193
-        _stepCircle_passive_14g5z_215">
+          <span class="_stepCircle_t28i0_196
+        _stepCircle_passive_t28i0_218">
             2
           </span>
-          <div class="_stepLine_14g5z_1 ">
+          <div class="_stepLine_t28i0_1 ">
           </div>
         </div>
         <h3 id="steptitle-:ri:"
-            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
         >
           besvart 2
         </h3>
-        <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
           ">
           <div>
             brødtekst
           </div>
         </div>
       </li>
-      <li class="_step_14g5z_1 _step_active_14g5z_50 ">
-        <div class="_stepSideWrapper_14g5z_143 "
+      <li class="_step_t28i0_1 _step_active_t28i0_50 ">
+        <div class="_stepSideWrapper_t28i0_143 "
              tabindex="-1"
              aria-current="step"
         >
-          <span class="_stepCircle_14g5z_193
-        _stepCircle_active_14g5z_218">
+          <span class="_stepCircle_t28i0_196
+        _stepCircle_active_t28i0_221">
             3
           </span>
-          <div class="_stepLine_14g5z_1 ">
+          <div class="_stepLine_t28i0_1 ">
           </div>
         </div>
         <h3 id="steptitle-:rj:"
-            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
         >
           aktivt
         </h3>
-        <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
           ">
           <div>
             brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst
           </div>
         </div>
-        <div class="_nextLine_14g5z_278">
+        <div class="_nextLine_t28i0_281">
         </div>
-        <span class="_buttonWrapper_14g5z_274">
+        <span class="_buttonWrapper_t28i0_277">
           <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
                   type="button"
           >
@@ -525,14 +525,14 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
           </button>
         </span>
       </li>
-      <li class="_step_14g5z_1 _step_positiveResult_14g5z_60 ">
-        <div class="_stepSideWrapper_14g5z_143 _stepSideWrapper_result_14g5z_149"
+      <li class="_step_t28i0_1 _step_positiveResult_t28i0_60 ">
+        <div class="_stepSideWrapper_t28i0_143 _stepSideWrapper_result_t28i0_152"
              tabindex="-1"
              aria-current="step"
         >
-          <span class="_stepCircle_14g5z_193
-        _stepCircle_positiveResult_14g5z_223">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_14g5z_241"
+          <span class="_stepCircle_t28i0_196
+        _stepCircle_positiveResult_t28i0_226">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_t28i0_244"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:rl:"
@@ -546,15 +546,15 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
               </path>
             </svg>
           </span>
-          <div class="_stepLine_14g5z_1 _stepLine_positiveResult_14g5z_1">
+          <div class="_stepLine_t28i0_1 _stepLine_positiveResult_t28i0_1">
           </div>
         </div>
         <h3 id="steptitle-:rk:"
-            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
         >
           positivt resultat
         </h3>
-        <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 _stepContent_positiveResult_14g5z_106 
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_positiveResult_t28i0_106 
           ">
           <div>
             <h3 class="_heading_12p5o_1 _heading_level4_12p5o_43  ">
@@ -580,14 +580,14 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
           </div>
         </div>
       </li>
-      <li class="_step_14g5z_1 _step_neutralResult_14g5z_60 ">
-        <div class="_stepSideWrapper_14g5z_143 _stepSideWrapper_result_14g5z_149"
+      <li class="_step_t28i0_1 _step_neutralResult_t28i0_60 ">
+        <div class="_stepSideWrapper_t28i0_143 _stepSideWrapper_result_t28i0_152"
              tabindex="-1"
              aria-current="step"
         >
-          <span class="_stepCircle_14g5z_193
-        _stepCircle_neutralResult_14g5z_232">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_14g5z_241"
+          <span class="_stepCircle_t28i0_196
+        _stepCircle_neutralResult_t28i0_235">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_t28i0_244"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:rn:"
@@ -601,15 +601,15 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
               </path>
             </svg>
           </span>
-          <div class="_stepLine_14g5z_1 _stepLine_neutralResult_14g5z_1">
+          <div class="_stepLine_t28i0_1 _stepLine_neutralResult_t28i0_1">
           </div>
         </div>
         <h3 id="steptitle-:rm:"
-            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
         >
           neutralt resultat
         </h3>
-        <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined _resultIntro_14g5z_253">
+        <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined _resultIntro_t28i0_256">
           <div class="_panelArticle_1h73c_70">
             <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
               Intro til steget
@@ -617,7 +617,7 @@ exports[`Tester/StepList/StepList WithBreakPointXS smoke-test 1`] = `
             innhold
           </div>
         </div>
-        <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 _stepContent_neutralResult_14g5z_106 
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_neutralResult_t28i0_106 
           ">
           <div>
             more brødtekst
@@ -633,25 +633,25 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
 <div data-test-block="true">
   <ol class="_stepList_bc059_1 ">
     <li id=":r10:-1"
-        class="_step_14g5z_1 _step_passive_14g5z_55 "
+        class="_step_t28i0_1 _step_passive_t28i0_55 "
     >
-      <div class="_stepSideWrapper_14g5z_143 "
+      <div class="_stepSideWrapper_t28i0_143 "
            id=":r10:-1-focus-target"
            tabindex="-1"
       >
-        <span class="_stepCircle_14g5z_193
-        _stepCircle_passive_14g5z_215">
+        <span class="_stepCircle_t28i0_196
+        _stepCircle_passive_t28i0_218">
           1
         </span>
-        <div class="_stepLine_14g5z_1 ">
+        <div class="_stepLine_t28i0_1 ">
         </div>
       </div>
       <h3 id="steptitle-:r10:-1"
-          class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
+          class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
       >
         Hva holder du på med?
       </h3>
-      <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 
+      <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
           ">
         <div>
           Varer og tjenester
@@ -659,25 +659,25 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
       </div>
     </li>
     <li id=":r10:-2"
-        class="_step_14g5z_1 _step_passive_14g5z_55 "
+        class="_step_t28i0_1 _step_passive_t28i0_55 "
     >
-      <div class="_stepSideWrapper_14g5z_143 "
+      <div class="_stepSideWrapper_t28i0_143 "
            id=":r10:-2-focus-target"
            tabindex="-1"
       >
-        <span class="_stepCircle_14g5z_193
-        _stepCircle_passive_14g5z_215">
+        <span class="_stepCircle_t28i0_196
+        _stepCircle_passive_t28i0_218">
           2
         </span>
-        <div class="_stepLine_14g5z_1 ">
+        <div class="_stepLine_t28i0_1 ">
         </div>
       </div>
       <h3 id="steptitle-:r10:-2"
-          class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
+          class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
       >
         Hva gjør du?
       </h3>
-      <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 
+      <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
           ">
         <div>
           Selger
@@ -685,25 +685,25 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
       </div>
     </li>
     <li id=":r10:-3"
-        class="_step_14g5z_1 _step_passive_14g5z_55 "
+        class="_step_t28i0_1 _step_passive_t28i0_55 "
     >
-      <div class="_stepSideWrapper_14g5z_143 "
+      <div class="_stepSideWrapper_t28i0_143 "
            id=":r10:-3-focus-target"
            tabindex="-1"
       >
-        <span class="_stepCircle_14g5z_193
-        _stepCircle_passive_14g5z_215">
+        <span class="_stepCircle_t28i0_196
+        _stepCircle_passive_t28i0_218">
           3
         </span>
-        <div class="_stepLine_14g5z_1 ">
+        <div class="_stepLine_t28i0_1 ">
         </div>
       </div>
       <h3 id="steptitle-:r10:-3"
-          class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
+          class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
       >
         Salg av varer og tjenester
       </h3>
-      <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 
+      <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
           ">
         <div>
           <div>
@@ -713,16 +713,16 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
       </div>
     </li>
     <li id=":r10:-4"
-        class="_step_14g5z_1 _step_positiveResult_14g5z_60 "
+        class="_step_t28i0_1 _step_positiveResult_t28i0_60 "
     >
-      <div class="_stepSideWrapper_14g5z_143 _stepSideWrapper_result_14g5z_149"
+      <div class="_stepSideWrapper_t28i0_143 _stepSideWrapper_result_t28i0_152"
            id=":r10:-4-focus-target"
            tabindex="-1"
            aria-current="step"
       >
-        <span class="_stepCircle_14g5z_193
-        _stepCircle_positiveResult_14g5z_223">
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_14g5z_241"
+        <span class="_stepCircle_t28i0_196
+        _stepCircle_positiveResult_t28i0_226">
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_t28i0_244"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r1f:"
@@ -736,15 +736,15 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
             </path>
           </svg>
         </span>
-        <div class="_stepLine_14g5z_1 _stepLine_positiveResult_14g5z_1">
+        <div class="_stepLine_t28i0_1 _stepLine_positiveResult_t28i0_1">
         </div>
       </div>
       <h3 id="steptitle-:r10:-4"
-          class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
+          class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
       >
         Vårt veiledende svar
       </h3>
-      <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_forest_1h73c_84 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined _resultIntro_14g5z_253">
+      <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_forest_1h73c_84 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined _resultIntro_t28i0_256">
         <div class="_panelArticle_1h73c_70">
           <h4 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
             Virksomheten skal registreres som særavgiftspliktig.
@@ -754,7 +754,7 @@ exports[`Tester/StepList/StepList WithMultipleSteps play-test 1`] = `
           </p>
         </div>
       </div>
-      <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 _stepContent_positiveResult_14g5z_106 
+      <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_positiveResult_t28i0_106 
           ">
         <div>
           <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
@@ -781,28 +781,28 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
 <div data-test-block="true">
   <div>
     <ol class="_stepList_bc059_1 ">
-      <li class="_step_14g5z_1 _step_passive_14g5z_55 ">
-        <div class="_stepSideWrapper_14g5z_143 "
+      <li class="_step_t28i0_1 _step_passive_t28i0_55 ">
+        <div class="_stepSideWrapper_t28i0_143 "
              tabindex="-1"
         >
-          <span class="_stepCircle_14g5z_193
-        _stepCircle_passive_14g5z_215">
+          <span class="_stepCircle_t28i0_196
+        _stepCircle_passive_t28i0_218">
             1
           </span>
-          <div class="_stepLine_14g5z_1 ">
+          <div class="_stepLine_t28i0_1 ">
           </div>
         </div>
         <h3 id="steptitle-:r0:"
-            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
         >
           besvart
         </h3>
-        <div class="_stepContent_14g5z_86  
+        <div class="_stepContent_t28i0_86  
           ">
           <div>
             brødtekst
           </div>
-          <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  _stepEditButton_14g5z_46"
+          <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  _stepEditButton_t28i0_46"
                   type="button"
                   aria-describedby="steptitle-:r0:"
           >
@@ -821,55 +821,55 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
           </button>
         </div>
       </li>
-      <li class="_step_14g5z_1 _step_passive_14g5z_55 ">
-        <div class="_stepSideWrapper_14g5z_143 "
+      <li class="_step_t28i0_1 _step_passive_t28i0_55 ">
+        <div class="_stepSideWrapper_t28i0_143 "
              tabindex="-1"
         >
-          <span class="_stepCircle_14g5z_193
-        _stepCircle_passive_14g5z_215">
+          <span class="_stepCircle_t28i0_196
+        _stepCircle_passive_t28i0_218">
             2
           </span>
-          <div class="_stepLine_14g5z_1 ">
+          <div class="_stepLine_t28i0_1 ">
           </div>
         </div>
         <h3 id="steptitle-:r2:"
-            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
         >
           besvart 2
         </h3>
-        <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
           ">
           <div>
             brødtekst
           </div>
         </div>
       </li>
-      <li class="_step_14g5z_1 _step_active_14g5z_50 ">
-        <div class="_stepSideWrapper_14g5z_143 "
+      <li class="_step_t28i0_1 _step_active_t28i0_50 ">
+        <div class="_stepSideWrapper_t28i0_143 "
              tabindex="-1"
              aria-current="step"
         >
-          <span class="_stepCircle_14g5z_193
-        _stepCircle_active_14g5z_218">
+          <span class="_stepCircle_t28i0_196
+        _stepCircle_active_t28i0_221">
             3
           </span>
-          <div class="_stepLine_14g5z_1 ">
+          <div class="_stepLine_t28i0_1 ">
           </div>
         </div>
         <h3 id="steptitle-:r3:"
-            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
         >
           aktivt
         </h3>
-        <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 
           ">
           <div>
             brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst brødtekst
           </div>
         </div>
-        <div class="_nextLine_14g5z_278">
+        <div class="_nextLine_t28i0_281">
         </div>
-        <span class="_buttonWrapper_14g5z_274">
+        <span class="_buttonWrapper_t28i0_277">
           <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
                   type="button"
           >
@@ -879,14 +879,14 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
           </button>
         </span>
       </li>
-      <li class="_step_14g5z_1 _step_positiveResult_14g5z_60 ">
-        <div class="_stepSideWrapper_14g5z_143 _stepSideWrapper_result_14g5z_149"
+      <li class="_step_t28i0_1 _step_positiveResult_t28i0_60 ">
+        <div class="_stepSideWrapper_t28i0_143 _stepSideWrapper_result_t28i0_152"
              tabindex="-1"
              aria-current="step"
         >
-          <span class="_stepCircle_14g5z_193
-        _stepCircle_positiveResult_14g5z_223">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_14g5z_241"
+          <span class="_stepCircle_t28i0_196
+        _stepCircle_positiveResult_t28i0_226">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_t28i0_244"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:r5:"
@@ -900,15 +900,15 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
               </path>
             </svg>
           </span>
-          <div class="_stepLine_14g5z_1 _stepLine_positiveResult_14g5z_1">
+          <div class="_stepLine_t28i0_1 _stepLine_positiveResult_t28i0_1">
           </div>
         </div>
         <h3 id="steptitle-:r4:"
-            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
         >
           positivt resultat
         </h3>
-        <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 _stepContent_positiveResult_14g5z_106 
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_positiveResult_t28i0_106 
           ">
           <div>
             <h3 class="_heading_12p5o_1 _heading_level4_12p5o_43  ">
@@ -934,14 +934,14 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
           </div>
         </div>
       </li>
-      <li class="_step_14g5z_1 _step_neutralResult_14g5z_60 ">
-        <div class="_stepSideWrapper_14g5z_143 _stepSideWrapper_result_14g5z_149"
+      <li class="_step_t28i0_1 _step_neutralResult_t28i0_60 ">
+        <div class="_stepSideWrapper_t28i0_143 _stepSideWrapper_result_t28i0_152"
              tabindex="-1"
              aria-current="step"
         >
-          <span class="_stepCircle_14g5z_193
-        _stepCircle_neutralResult_14g5z_232">
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_14g5z_241"
+          <span class="_stepCircle_t28i0_196
+        _stepCircle_neutralResult_t28i0_235">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_t28i0_244"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:r7:"
@@ -955,15 +955,15 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
               </path>
             </svg>
           </span>
-          <div class="_stepLine_14g5z_1 _stepLine_neutralResult_14g5z_1">
+          <div class="_stepLine_t28i0_1 _stepLine_neutralResult_t28i0_1">
           </div>
         </div>
         <h3 id="steptitle-:r6:"
-            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_14g5z_75"
+            class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
         >
           neutralt resultat
         </h3>
-        <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined _resultIntro_14g5z_253">
+        <div class="_panel_1h73c_5 _panel_filled_1h73c_26 _panel_ochre_1h73c_80 _panel_paddingXL_1h73c_109  _panel_spacingXXS_1h73c_118  undefined _resultIntro_t28i0_256">
           <div class="_panelArticle_1h73c_70">
             <h3 class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 ">
               Intro til steget
@@ -971,7 +971,7 @@ exports[`Tester/StepList/StepList WithVariants smoke-test 1`] = `
             innhold
           </div>
         </div>
-        <div class="_stepContent_14g5z_86 _stepContent_noButton_14g5z_94 _stepContent_neutralResult_14g5z_106 
+        <div class="_stepContent_t28i0_86 _stepContent_noButton_t28i0_94 _stepContent_neutralResult_t28i0_106 
           ">
           <div>
             more brødtekst
