@@ -1,5 +1,56 @@
 import { t } from 'i18next';
 
+/* 
+Vi tilbyr generisk funksjon som grupperer en rekke typer tall.
+Fødselsnummer, organisasjonsnummer, kontonummer og telefonnummer viser 
+grupperte siffer som skilles med mellomrom. Grupperingen er lik for alle 
+språk. F.eks så grupperes organisasjonsnummer med tre og tre siffer. 123 456 789
+Den generiske funksjonen tar imot alle typer tegn og retunerer siffer
+som er gruppert.
+F.eks "234,456-890" => "123 456 789"
+Fordi formateringsfunksjonen ikke er en controlled component så må vi regne med
+at input til funksjonen alltid kan inneholde alle typer tegn.
+
+Vi tilbyr også en funksjon som formaterer nummer med riktig tusenskilletegn og
+desigmaltegn. Regler for formatering er basert på Intl.NumberFormat og 
+det er språkavhengig. Standardformatet er det samme som norsk format hvor
+tusenskilletegn er mellomrom og desimaltegn er et komma. Engelsk format er
+også utbredt og da er tusenskilletegn et komma mens desimalskilletegn er 
+punktum. Javascript sitt standardformat brukt ved behandling av nummer er 
+det samme som engelsk format. Dvs at desimalskilletegn er punktum og det 
+betyr at vi alltid må konvertere input til engelsk format før vi kan
+la Intl.NumberFormat.format formatere tallet med riktig gruppering.
+
+I tillegg så finnes andre nummerformat hvor man ikke grupperer tall pr tusen.
+Noen format bruker heller ikke komma eller punktum som skilletegn. Øst-Arabisk
+har verken komma eller desimaltegn som tusenskille- eller desimalskilletegn.
+
+Våre formateringsfunksjoner støtter ikke input med øst-arabiske tegn '٫' (U+066B) 
+eller '٬' (U+066C). Vår nummerformat-funksjon og Intl.NumberFormat vil returnere
+øst-arabiske tall korrekt, men det krever at input er på et format hvor 
+desimalskilletegn er med punktum eller komma. Tusenskilletegn må være mellomrom
+eller komma.
+
+Hvordan lage tall av random input-value er: 
+1. Hent desimalskilletegn fra Intl.NumberFormat.formatToParts
+2. Fjern alt fra streng bortsett fra siste desimalskilletegn.
+3. Formater med NumberFormat.format
+
+//TODO Fiks parsing hvis input har komma som tusenskille og format er engelsk. F.eks 
+// 1,234 burde være lov men blir konvertert til '1'
+
+//TODO Det er nå tillatt å ha to punktum i engelsk tall hvis allowDesimalAtEnd er satt:
+// 34.344. er grei. Skulle ikke vært det. Første punktum skulle vært fjernet
+
+//TODO Utfordring. Hvordan sikre at et engelsk halvskrevet tall validere.
+// F.eks tallet "1,23" Her er bruker på vei til å skrive "1,234" ettusentohundreogtrettifire
+// Løsning: Vi forkaster tusenskilletegn skrevet av konsument. Tar kun vare på desimaltegn
+// Derfor: 
+// HVIS engelsk format 
+// OG input er "1,23" 
+// SÅ forkaster vi komma slik at tall blir "123"
+
+*/
 const numberOptions: Intl.NumberFormatOptions = {
   style: 'decimal',
 };
@@ -19,10 +70,19 @@ type Conversion = {
 };
 
 type Formatter = {
+  /* Tallet som er utgangspunkt etter fjerning av ulovlige tegn.
+  Dette tallet er også utgangpunktet for telling av antall siffer */
   parsed?: string;
+  /* Formatert tall som brukes for visning */
   value: string;
+  /* Makslengde begrenser antall siffer for hvert enkelt format. Dette er en prop
+  som ikke MÅ eksponeres ut. Påvirker ikke number-formatet */
   maxLength?: number;
+  /* liste med endringer som formateringsfunkjsonen har gjort med input-tallet  */
   conversions?: Conversion[];
+  /* tillater at et returnert tall skal inneholde desimalskilletegn. Skjer 
+  i de tilfeller hvor formatering har skjedd før bruker er ferdig med å skrive tallet
+  F.eks når bruker vil skrive tallet "300,5" og bare har skrevet "300," */
 };
 
 //TODO formattype amount byttes til 'currency'?
@@ -40,6 +100,7 @@ export type FormatterProps = {
   type: FormatTypes;
   lang?: string;
   isCurrency?: boolean;
+  allowDesimalAtEnd?: boolean;
   //   options?: Intl.NumberFormatOptions;
 };
 
@@ -62,24 +123,29 @@ const cleanInput = ({
   value,
   type,
   decimalSeparator,
+  groupSeparator,
 }: {
   value: string;
   type: FormatTypes;
   decimalSeparator?: string;
+  groupSeparator?: string;
 }): Converted => {
   const conversions: Conversion[] = [];
   if (type === 'number') {
-    /******* Hvis norsk tall *********/
+    console.log(
+      `type er number, deci er ${decimalSeparator} og group er ${groupSeparator}`
+    );
     // Fjern alle space fra input. Space er støy og påvirker aldri verdien av tallet
     // 2 500 -> 2500
     let last: string | number = '';
-    let parsed: string | number = value.replace(/\s/g, '');
+    let parsed: string | number = value.replace(/(\s+)(?!\s$)/, '');
     if (value !== parsed) {
       conversions.push({ message: 'fjernet whitespace', code: 'whitespace' });
     }
     last = parsed;
 
-    // Norsk format
+    /******* Hvis norsk tall *********/
+    // Norsk og hyppig brukte format
     if (decimalSeparator === ',') {
       // Fjern alle komma bortsett fra den siste (vi behandler tall med norskt format i denne rekken med replace)
       // Tall skal aldri ha to eller flere komma i seg. Vi kan ikke fjerne komma hvis det er siste tegn
@@ -97,15 +163,17 @@ const cleanInput = ({
 
       // Hvis norsk tall -> Fjern alle punktum. Punktum skal ikke finnes i tall med norsk format
       // 2.500,50 -> 2500,5
-
-      parsed = parsed.replace(/\./g, '');
-      if (last !== parsed) {
-        conversions.push({
-          message: `fjernet punktum fra norsk tall input: '${last}', parsed: '${parsed}'`,
-          code: 'removedpunktum',
-        });
+      if (groupSeparator === '\u00A0') {
+        // nbsp / mellomrom
+        parsed = parsed.replace(/\./g, '');
+        if (last !== parsed) {
+          conversions.push({
+            message: `fjernet punktum fra norsk tall input: '${last}', parsed: '${parsed}'`,
+            code: 'removedpunktum',
+          });
+        }
+        last = parsed;
       }
-      last = parsed;
 
       // 1,2,345.7
 
@@ -119,10 +187,19 @@ const cleanInput = ({
         });
       }
       last = parsed;
+    } else if (decimalSeparator === '.') {
+      parsed = parsed.replace(/,/g, '');
+      if (last !== parsed) {
+        conversions.push({
+          message: `fjernet komma fra engeske tall input: '${last}', parsed: '${parsed}'`,
+          code: 'removedkommaasthousand',
+        });
+      }
+      last = parsed;
     }
 
     // Nå kan vi behandle tallet med parseFloat
-    // parseFloat bruker fra venstre mot høyre alle tegn som er siffer og returnerer et nummer eller NaN
+    // parseFloat bruker fra venstre mot høyre: alle tegn som er siffer og returnerer et nummer eller NaN
     // Ved første treff på ikke-tall så forkastes resten av strengen
     // "123 3" -> 123, "987G123" -> 987, "123.543-432":string -> 123.543, "2,500." -> 2,500
     // Fjerner også desimaltall hvis disse er null
@@ -146,9 +223,14 @@ const cleanInput = ({
         conversions: conversions,
       };
     } else {
+      // Ukjent. Returner inndata. Kanskje vi skal populere conversions med info om dette
+      const notANumber: Conversion = {
+        message: 'input ble ikke gjenkjent som et tall',
+        code: 'NaN',
+      };
       return {
         value,
-        conversions,
+        conversions: [notANumber],
       };
     }
   } else if (
@@ -159,6 +241,7 @@ const cleanInput = ({
       'telefonnummer',
     ].includes(type)
   ) {
+    /* Seksjon for å håndtere alt annet en number-format */
     let newValue = value.replace(/[\D ]/g, '');
     const val = type as ValidLengths;
     if (val in maxLengths) {
@@ -169,6 +252,7 @@ const cleanInput = ({
       conversions: conversions,
     };
   }
+  /* Ingen kjente format-typer. returnerer input-value */
   return {
     value,
     conversions: [],
@@ -194,12 +278,14 @@ const insertSpaces = ({
 type FormatNumberProps = {
   value: string;
   lang?: string;
+  allowDesimalAtEnd?: boolean;
   options?: Intl.NumberFormatOptions;
 };
 const formatNumber = ({
   value,
   lang,
   options,
+  allowDesimalAtEnd,
 }: FormatNumberProps): Formatter => {
   const formatterUsingLanguage = new Intl.NumberFormat(lang ?? 'no-nb', {
     ...numberOptions,
@@ -211,11 +297,11 @@ const formatNumber = ({
       ...(options ?? {}),
     }
   );
-  console.log('formatter options: ');
+  /*   console.log('formatter options: ');
   console.log({
     ...numberOptions,
     ...(options ?? {}),
-  });
+  }); */
 
   // Det er denne metoden som blir brukt for å returnerer hvilke separatorer og
   // skilletegn som blir brukt med valg språk. Tallet 1111.1 er minste eksempeltall som
@@ -236,18 +322,31 @@ const formatNumber = ({
   const groupSeparator = separators?.find(
     (part) => part.type === 'group'
   )?.value;
-  const converted = cleanInput({ value, type: 'number', decimalSeparator });
+  const converted = cleanInput({
+    value,
+    type: 'number',
+    decimalSeparator,
+    groupSeparator,
+  });
   let anumber = converted.value;
   const parsedInput = parseFloat(anumber);
 
   if (groupSeparator) anumber = anumber.replace(groupSeparator, '');
   if (decimalSeparator) anumber = anumber.replace(decimalSeparator, '.');
   if (Number.isInteger(parsedInput)) {
-    console.log('formatterUsingLanguage');
+    //    console.log('formatterUsingLanguage');
     anumber = formatterUsingLanguage.format(parsedInput);
   } else {
-    console.log('currencyFormatterUsingLanguage');
+    //    console.log('currencyFormatterUsingLanguage');
     anumber = currencyFormatterUsingLanguage.format(parsedInput);
+  }
+  if (
+    allowDesimalAtEnd &&
+    decimalSeparator &&
+    value.length > 0 &&
+    value.slice(-1) === decimalSeparator
+  ) {
+    anumber = `${anumber}${decimalSeparator}`;
   }
   return {
     parsed: parsedInput.toString() ?? '',
@@ -305,6 +404,7 @@ export const formatter = ({
   type,
   lang,
   isCurrency,
+  allowDesimalAtEnd,
 }: FormatterProps): Formatter => {
   if (type === 'number') {
     let options = {};
@@ -312,7 +412,7 @@ export const formatter = ({
       options = { minimumFractionDigits: 2, maximumFractionDigits: 2 };
       console.log(`type er number og isCurrency er satt. value er ${value}`);
     }
-    return formatNumber({ value, lang, options });
+    return formatNumber({ value, lang, allowDesimalAtEnd, options });
   } else if (type === 'personnummer') {
     return formatPersonnummer({ value });
   } else if (type === 'organisasjonsnummer') {

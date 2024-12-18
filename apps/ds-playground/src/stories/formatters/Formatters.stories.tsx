@@ -103,6 +103,20 @@ export const Formatters: StoryObj = {
               </td>
             </tr>
             <tr>
+              <td>{'Nummerformat uncomplete'}</td>
+              <td>
+                {
+                  formatter({
+                    value: value,
+                    type: 'number',
+                    lang: language,
+                    allowDesimalAtEnd: true,
+                  }).value
+                }
+              </td>
+              <td>{'allowDesimalAtEnd'}</td>
+            </tr>
+            <tr>
               <td>{'Nummerformat med isCurrency = true'}</td>
               <td>
                 {
@@ -120,7 +134,7 @@ export const Formatters: StoryObj = {
                 {'Eng 1,234 or 1,234.50'}
               </td>
             </tr>
-            <tr>
+            {/* <tr>
               <td>{'Personnummer'}</td>
               <td>{formatter({ value: value, type: 'personnummer' }).value}</td>
               <td>{'***** ****'}</td>
@@ -143,7 +157,7 @@ export const Formatters: StoryObj = {
                 {formatter({ value: value, type: 'telefonnummer' }).value}
               </td>
               <td>{'** ** ** **'}</td>
-            </tr>
+            </tr> */}
             <tr>
               <td
                 colSpan={3}
@@ -162,7 +176,7 @@ export const Formatters: StoryObj = {
             </tr>
           </tbody>
         </table>
-
+        {/* 
         <TextField
           label={'Personnummer '}
           value={personnummerValue}
@@ -200,7 +214,7 @@ export const Formatters: StoryObj = {
               }).value
             )
           }
-        />
+        /> */}
       </>
     );
   },
