@@ -186,3 +186,11 @@ a.docs {
 .semantic-article.bottom-spacing {
   margin-bottom: var(--spacing-l);
 }
+
+.semantic-internal-aside {
+  width: var(--semantic-responsive-internal-aside);
+}
+
+.backgroundColorGraphite5 {
+  background-color: var(--palette-graphite-5);
+}
