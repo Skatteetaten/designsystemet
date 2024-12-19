@@ -1,7 +1,7 @@
 import { Link } from '@skatteetaten/ds-buttons';
 import { Heading, List, Paragraph } from '@skatteetaten/ds-typography';
 
-import imageUrl from './designsystem_illustrasjon.png';
+import illustration from '../../assets/designsystem_illustrasjon.png';
 
 export const IntroductionGenerator = (): JSX.Element => {
   return (
@@ -18,7 +18,7 @@ export const IntroductionGenerator = (): JSX.Element => {
       </Paragraph>
 
       <div className={'introImageContainer'}>
-        <img alt={''} src={imageUrl} />
+        <img alt={''} src={illustration} />
       </div>
 
       <Paragraph hasSpacing>
