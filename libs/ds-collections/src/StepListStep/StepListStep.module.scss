@@ -160,6 +160,10 @@
     grid-area: 1 / 1 / 3 / 2;
     justify-self: end;
 
+    &:focus-visible {
+      outline: none;
+    }
+
     &_result {
       grid-area: 1 / 1 / 2 / 2;
 
