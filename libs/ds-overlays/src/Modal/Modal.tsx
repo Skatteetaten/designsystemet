@@ -62,15 +62,15 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
     });
     const modalRef = useRef<HTMLDialogElement>(null);
     useImperativeHandle(ref, () => modalRef?.current as HTMLDialogElement);
-    const [openingNode, setOpeningNode] = useState<boolean>(
+    const [isAutoOpened, setIsAutoOpened] = useState<boolean>(
       document.activeElement?.nodeName === 'BODY'
     );
 
     useEffect(() => {
       const dialog = modalRef.current;
       const handleClose = (): void => {
-        if (openingNode) {
-          setOpeningNode(false);
+        if (isAutoOpened) {
+          setIsAutoOpened(false);
           const prevTabIndex = document.body.tabIndex;
           document.body.tabIndex = -1;
           document.body.focus();
@@ -86,7 +86,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
           dialog.removeEventListener('close', handleClose);
         }
       };
-    }, [openingNode]);
+    }, [isAutoOpened]);
 
     useEffect(() => {
       /**
