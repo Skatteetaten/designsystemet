@@ -2,102 +2,158 @@ import { Canvas, Meta } from '@storybook/blocks';
 import * as Formatters from './Formatters.stories';
 
 {/* <Meta title="Utilities/FormattersDoc" /> */}
+
 <Meta of={Formatters} />
 
-# Hvordan bruke hjelpefunksjonen *formatter*
+# Hvordan bruke hjelpefunksjonen _formatter_
 
 Designsystemet tilbyr en funksjon som grupperer en rekke typer tall.
 
+### Organisasjonsnummer
+
 ```tsx
 import { formatter } from '@skatteetaten/ds-core-utils';
-const formatertTall = formatter({
-    value: '12345,7',
-    type: 'number',
-    lang: 'nb-NO',
-    isCurrency: true,
-    allowDesimalAtEnd: true
-  });
 
-console.log(formatertTall);
-// 12.345,70
-
-const formatertOrganisasjonsnummer = formatter({
-    value: '123456789',
-    type: 'organisasjonsnummer',
-  });
-
-console.log(formatertOrganisasjonsnummer);
+const organisationNumber = formatter({
+  value: '123456789',
+  type: 'organisationNumber',
+});
+console.log(organisationNumber.value);
 // 123 456 789
-
 ```
 
-## Grupperingshjelper for flere typer format
-Fødselsnummer, organisasjonsnummer, kontonummer og telefonnummer viser 
-grupperte siffer som skilles med mellomrom. Nevnte grupperingen er lik for alle 
-språk. F.eks så grupperes organisasjonsnummer med tre og tre siffer. 123 456 789
-Den generiske funksjonen tar imot alle typer tegn og retunerer siffer
-som er gruppert.
+### Fødselsnummer / d-nummer
+
+```tsx
+import { formatter } from '@skatteetaten/ds-core-utils';
+const nationalIdentityNumber = formatter({
+  value: '12029412345',
+  type: 'nationalIdentityNumber',
+});
+console.log(nationalIdentityNumber.value);
+// 120294 12345
+```
+
+### Bankkontonummer
+
+```tsx
+import { formatter } from '@skatteetaten/ds-core-utils';
+const bankAccountNumber = formatter({
+  value: '86011117947',
+  type: 'bankAccountNumber',
+});
+
+console.log(bankAccountNumber.value);
+// 8601 11 17947
+```
+
+### Telefonnummer
+
+```tsx
+import { formatter } from '@skatteetaten/ds-core-utils';
+const bankAccountNumber = formatter({
+  value: '11223344',
+  type: 'phoneNumber',
+});
+console.log(phoneNumber.value);
+// 11 22 33 44
+```
+
+## Grupperingshjelper for org.- fødsels-, konto- og telefonnummer
+
+Fødselsnummer, organisasjonsnummer, kontonummer og telefonnummer viser grupperte siffer som skilles med mellomrom. Nevnte grupperingen er lik for alle språk. F.eks så grupperes organisasjonsnummer med tre og tre siffer. 123 456 789 Den generiske funksjonen tar imot alle typer tegn, fjerner alle tegn som ikke er gyldig med valgt type og retunerer siffer som er gruppert.
+
 F.eks "234,456-890" => "123 456 789"
 
-Fordi formateringsfunksjonen ikke er en controlled component så må vi regne med
-at input til funksjonen alltid kan inneholde alle typer tegn.
+Fordi formateringsfunksjonen ikke er en controlled component så må vi regne med at input til funksjonen alltid kan inneholde alle typer tegn. Det vil si at returnert verdi fra formateringsfunksjonen alltid må kunne tolkes korrekt hvis brukt som value prop til formatter-funksjonen en gang til.
+
+### Tall
+
+<details>
+<summary>Tall er ikke med i første versjon (klikk for å se)</summary>
+
+```tsx
+import { formatter } from '@skatteetaten/ds-core-utils';
+
+formatter({ value, type, locale, }: FormatOptions): FormattingResponse
+const formatertTall = formatter({
+    value: '1234,5',
+    type: 'number',
+    locale: 'nb-NO'
+  });
+
+console.log(formatertTall.value);
+// 1 234,5
+
+console.log(formatertTall.valueAsCurrency);
+// 1 234,50
+```
+
+</details>
 
 ## Grupperingshjelper for tall
-Vi tilbyr også en funksjon som formaterer nummer med riktig tusenskilletegn og
-desimaltegn. Regler for formatering er basert på Intl.NumberFormat og 
-det er språkavhengig. Standardformatet er det samme som norsk format hvor
-mellomrom brukes som tusenskilletegn og komma brukes som desimalskilletegn. Hvis ikke locale oppgis
-så brukes standardlocale `nb-NO`. Standardisert format på
-locale i tekslistekatalogen er:
-`to bokstavers språkkode/ISO 639 + _ + ISO 3166-1/to bokstavers territoriekode`.
-F.eks `nb_NO, nn_NO, en_GB, en_IN`
-Teknisk så kan locale `en` oppgis til formatter-metoden, men da er man ikke sikret
-riktig format fordi det er forskjell på gruppering av bl.a `en_GB` og `en_IN`.
 
+<details>
+<summary>Ikke med i første versjon  (klikk for å se)</summary>
+
+Vi tilbyr også en funksjon som formaterer nummer med riktig tusenskilletegn og desimaltegn. Regler for formatering er basert på Intl.NumberFormat og formateringen er språkavhengig. Hvis locale-parameter ikke er satt så settes dette til `nb-NO` internt i komponenten. Med denne locale så brukes mellomrom som tusenskilletegn. Komma brukes som desimalskilletegn. Standardisert format på locale i tekslistekatalogen er: `to bokstavers språkkode/ISO 639 + _ + ISO 3166-1/to bokstavers territoriekode`. F.eks `nb_NO, nn_NO, en_GB, en_IN` Formatter-funksjonen Det kan brukes kortversjonen av locale `en` formatter-metoden, men da er man ikke sikret riktig format fordi det er forskjell på gruppering med `en_GB` og `en_IN`. På sikt kan vi se for oss at også en formatter-funksjonen også kan returnere verdier med riktig valuasymbol (NOK, EUR), volum (lengde, mengde), tidsenhet (dag, måned mm) og areal. Disse enhentsbeskrivelser er innebygget i Intl.Numberformat sin formateringsmetode.
 
 //TODO Fjern lenke før prod
 
 [Bruk av Intl-api til formatering ](https://wiki.sits.no/display/DDS/Bruk+av+Intl-api+til+formatering)
 
-Standardmåte å sette språk i javascript og html er beskrevet i RFC 
-[https://datatracker.ietf.org/doc/html/rfc5646](https://datatracker.ietf.org/doc/html/rfc5646)
+Standardmåte å sette språk i javascript og html er beskrevet i RFC [https://datatracker.ietf.org/doc/html/rfc5646](https://datatracker.ietf.org/doc/html/rfc5646)
 
-## *Interninfo*
-Engelsk format en_GB er standardformat for Engelsk språk i Skatteetaten og da
-er tusenskilletegn et komma og desimalskilletegn er punktum.
-Javascript sitt standardformat brukt ved behandling av nummer er 
-det samme som engelsk format. Dvs at desimalskilletegn er punktum og det 
-betyr at vi alltid må konvertere input til engelsk format før vi kan
-la Intl.NumberFormat.format formatere tallet med riktig gruppering.
+## _Interninfo hvor ikke alt skal ut i Storybook_
 
-I tillegg så finnes andre nummerformat hvor man ikke grupperer tall pr tusen.
-Noen format bruker heller ikke komma eller punktum som skilletegn. Øst-Arabisk
-har verken komma eller desimaltegn som tusenskille- eller desimalskilletegn.
-Det kan være at Skattepatruljen på sikt skal 
-[støtte Øst-Arabisk](https://wiki.sits.no/pages/viewpage.action?pageId=1082425706)
+Engelsk format en_GB er [standardformat](https://www.skatteetaten.no/stilogtone/skrive/engelsk/#standarder-for-engelsk-i-skatteetaten) for Engelsk språk i Skatteetaten og da brukes komma som tusenskilletegn og desimalskilletegn er punktum.
+
+Javascript sitt standardformat brukt ved behandling av nummer er det samme som engelsk format. Dvs at desimalskilletegn er punktum og det betyr at vi alltid må konvertere input til engelsk format før vi kan la Intl.NumberFormat.format formatere tallet med riktig gruppering.
+
+I tillegg så finnes andre nummerformat hvor man ikke grupperer tall pr tusen. Noen format bruker heller ikke komma eller punktum som skilletegn. Øst-Arabisk har verken komma eller desimaltegn som tusenskille- eller desimalskilletegn. Det kan være at Skattepatruljen på sikt skal [støtte Øst-Arabisk](https://wiki.sits.no/pages/viewpage.action?pageId=1082425706)
+
+Vi har noe autokorrigering av tall. F.eks fjerning av desimalskilletegn hvis mer enn ett. Prioritering for formateringen er å alltid beholde siffer samtidig som vi velger å beholde det siste desimalskilletegnet. "8123,345,456" => "8 123 345,456"
+
+Formateringsmetoden vil aldri oversette fra en locale til en annen. Dvs at tegn som ikke er gyldig for gjeldende locale blir forkastet. Kort forklart så vil da alle komma bli forkastet hvis locale er en-GB. Tilsvarende så vil alle punktum bli forkastet hvis locale er satt til norsk hvor man ikke bruker punktum hverken som tusenskilletegn eller desimalskilletegn.
 
 ### Todos
-*Våre formateringsfunksjoner støtter ikke input med øst-arabiske tegn '٫' (U+066B) 
-eller '٬' (U+066C). Vår nummerformat-funksjon og Intl.NumberFormat vil returnere
-øst-arabiske tall korrekt, men det krever at input er på et format hvor 
-desimalskilletegn er med punktum eller komma. Tusenskilletegn må være mellomrom
-eller komma.*
 
-Bruker kan ikke taste inn group-separator (tusenskilletegn). Dvs det er mulig å skrive inn, men 
-det blir ikke tatt hensyn til tegnet ved konvertering fra input-string til tall som skal formateres
-Maksimum 3 desimaler vises
+\*Våre formateringsfunksjoner støtter ikke input med øst-arabiske tegn '٫' (U+066B) eller '٬' (U+066C). Vår nummerformat-funksjon og Intl.NumberFormat vil returnere øst-arabiske tall korrekt, men det krever at input verdi har et format hvor desimalskilletegn er punktum eller komma. Tusenskilletegn må være mellomrom eller komma.
+
+Bruker kan ikke taste inn group-separator (tusenskilletegn). Dvs det er mulig å skrive inn, men det blir ikke tatt hensyn til tegnet ved konvertering fra input-string til tall som skal formateres Maksimum 3 desimaler vises
+
+### Generell informasjon om tallformat på andre språk
+
+Det er viktig å merke seg at tall som registreres i Skatteetatens it-systemer ikke er formatert. Der oppererer man ikke med tusenskilletegn eller f.eks komma som desimalskilletegn. Input som kommer fra backend systemer vil derfor være uproblematiske å formatere.
+
+Intl.NumberFormat og forsåvidt også den lignende fuksjonen toLocale returnerer forskjellig minustegn ved forskjellige locale. Unikoden for minus er altså ikke like for alle språk. Formatter-funksjonen vår konverterer og håndterer alle typer. Vi returnere alltid fortegnet 'minus' som bindestrek. De forskjellige fortegnene kan testes i nettleser-konsollen med kommandoene
+
+```js
+new Intl.NumberFormat('en-GB').format(-2) ===
+  new Intl.NumberFormat('nb-NO').format(-2); // false
+```
+
+eller
+
+```js
+const tre = -3;
+tre.toLocaleString('en-GB') === tre.toLocaleString('nb-NO'); // false
+```
+
+På norsk er det bindestrek som brukes som fortegn for negativt tall. Bindestrek har unikode U+002D (hyphen-minus) Men det finnes også andre måter å skrive minusteng på. Det tegnet som brukes i matematiske sammenheng har Unikode U+2212 (minus sign) og det er dette tegnet som brukes for engelsk locale en-GB. Designsystemets formatter-funksjon håndterer begge versjoner av fortegn brukt på negative tall-lignende input.
+
+</details>
 
 # Bruk
 
 ## Definisjoner
+
 ```tsx
 type FormatTypes =
-  | 'number'
-  | 'amount'
-  | 'personnummer'
-  | 'organisasjonsnummer'
-  | 'kontonummer'
-  | 'telefonnummer';
+  | 'nationalIdentityNumber'
+  | 'organisationNumber'
+  | 'bankAccountNumber'
+  | 'phoneNumber';
 
 const maxLengths = {
   personnummer: 11,
@@ -106,64 +162,37 @@ const maxLengths = {
   telefonnummer: 10,
 };
 
-type FormatterProps = {
-/* Input streng/tall som skal formateres */
+export type FormatOptions = {
+  /* nummberlignende streng som parses av formateringsrutinen etter bestemte regler
+  //TODO Beskriv reglene
+  // */
   value: string;
-  /* Type bestemmer format og maksimumlengede på input-verdi som skal parses */
+  /* bestemmer formatet og noen ganger maksimium-lengden på verdien som returneres */
   type: FormatTypes;
-  /* Språk brukt til parsing og formatering av returnert streng */
-  lang?: string;
-  /* Hvis satt til true så returneres to desimaler hvis input er tall med minst ett desimal
-  F.eks '2500,5' => '2 500,50' */
-  isCurrency?: boolean;
-/* Retunere desimalskilletegn hvis input inneholder desimalskilletegn men ikke inneholder
-desimaler */
-  allowDesimalAtEnd?: boolean;
 };
 
-/*
-//TODO: Fjern isCurrency og allowDesimalAtEnd.
-Kanskje ikke vits i å sette egne props for isCurrency og allowDesimalAtEnd for å 
-styre hvordan value skal returnere. Kanskje vi alltid kan returnere følgende:
-valueAsNumber: string;
-asCurrency: string;
-withDecimalEnd: string
-Verdiene av currency og desimalatend påvirker ikke hverandre
-
-Hvis todo gjennomføres så vil også formatter-funksjonen returnere mer.
-
-*/
-
-type Formatter = {
-  /* Tallet som er utgangspunkt etter fjerning av ulovlige tegn.
-  Dette tallet er også utgangpunktet for telling av antall siffer */
+type FormattingResponse = {
+  /* Tallet som er utgangspunkt etter fjerning av ulovlige tegn hvis type er 'number'.
+  Dette tallet er også utgangspunktet for telling av antall siffer slik at lengde på streng
+  er mindre en maksverdiene satt i maxLengths. */
   parsed?: string;
   /* Formatert tall som brukes for visning.
-  NB. value returnerer bindestrek som minustegn. Ikke unikode \u2212 som 
+  NB. value returnerer bindestrek som minustegn. Ikke unikode \u2212 som
   Intl.NumberFormat returnerer */
   value: string;
   /* Makslengde begrenser antall siffer for hvert enkelt format. Dette er en prop
   som ikke MÅ eksponeres ut. Påvirker ikke number-formatet.
   //TODO Returneres ikke enda. Kanskje ikke bruk for det */
   maxLength?: number;
-  /* liste med endringer som formateringsfunksjonen har gjort med input-tallet.
-  Brukt til debugging. Mulig vi fjerner  */
-  conversions?: Conversion[];
+  /* liste med endringer som formateringsfunkjsonen har gjort med input-tallet.
+  Brukt til debugging. Mulig vi fjerner   */
 };
 
-export const formatter = ({
-  value,
-  type,
-  lang,
-  isCurrency,
-  allowDesimalAtEnd,
-}: FormatterProps): Formatter => {
+export const formatter = ({ value, type, locale }: FormatterProps): FormattingResponse => {
     ...
 }
 ```
 
-## Eksempel
-
-
+## Examples
 
 <Canvas of={Formatters.Formatters} />

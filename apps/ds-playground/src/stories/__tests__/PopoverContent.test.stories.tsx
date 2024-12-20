@@ -114,9 +114,17 @@ export const WithMarkup = {
     },
   },
 } satisfies Story;
+
 export const VerticalScroll = {
   name: 'With Scroll (A7)',
   args: {
     children: loremIpsum.repeat(100),
+  },
+} satisfies Story;
+
+export const WithLongText = {
+  name: 'With Long Text',
+  args: {
+    children: loremIpsum.split(' ').join(''),
   },
 } satisfies Story;
