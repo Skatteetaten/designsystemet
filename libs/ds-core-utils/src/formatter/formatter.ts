@@ -1,5 +1,3 @@
-import { t } from 'i18next';
-
 /* 
 Vi tilbyr generisk funksjon som grupperer en rekke typer tall.
 Fødselsnummer, organisasjonsnummer, kontonummer og telefonnummer viser 
@@ -31,17 +29,24 @@ eller '٬' (U+066C). Vår nummerformat-funksjon og Intl.NumberFormat vil returne
 desimalskilletegn er med punktum eller komma. Tusenskilletegn må være mellomrom
 eller komma.
 
+Bruker kan ikke taste inn group-separator (tusenskilletegn). Dvs det er mulig å skrive inn, men 
+det blir ikke tatt hensyn til tegnet ved konvertering fra input-string til tall som skal formateres
+Maksimum 3 desimaler vises
+
 Hvordan lage tall av random input-value er: 
 1. Hent desimalskilletegn fra Intl.NumberFormat.formatToParts
 2. Fjern alt fra streng bortsett fra siste desimalskilletegn.
 3. Formater med NumberFormat.format
 
+// Fikset:
 //TODO Fiks parsing hvis input har komma som tusenskille og format er engelsk. F.eks 
 // 1,234 burde være lov men blir konvertert til '1'
+
 
 //TODO Det er nå tillatt å ha to punktum i engelsk tall hvis allowDesimalAtEnd er satt:
 // 34.344. er grei. Skulle ikke vært det. Første punktum skulle vært fjernet
 
+// Fikset:
 //TODO Utfordring. Hvordan sikre at et engelsk halvskrevet tall validere.
 // F.eks tallet "1,23" Her er bruker på vei til å skrive "1,234" ettusentohundreogtrettifire
 // Løsning: Vi forkaster tusenskilletegn skrevet av konsument. Tar kun vare på desimaltegn
@@ -119,6 +124,10 @@ type ValidLengths = keyof typeof maxLengths;
 
 type Converted = { value: string; conversions: Conversion[] };
 
+const minusToHyphen = (value: string): string => {
+  return value.replace(/\u2212/g, '-');
+};
+
 const cleanInput = ({
   value,
   type,
@@ -132,15 +141,27 @@ const cleanInput = ({
 }): Converted => {
   const conversions: Conversion[] = [];
   if (type === 'number') {
-    console.log(
-      `type er number, deci er ${decimalSeparator} og group er ${groupSeparator}`
-    );
+    // console.log(
+    //   `type er number, deci er ${decimalSeparator} og group er ${groupSeparator}`
+    // );
     // Fjern alle space fra input. Space er støy og påvirker aldri verdien av tallet
     // 2 500 -> 2500
     let last: string | number = '';
-    let parsed: string | number = value.replace(/(\s+)(?!\s$)/, '');
+    let parsed: string | number = value.replace(/(\s+)(?!\s$)/g, '');
     if (value !== parsed) {
-      conversions.push({ message: 'fjernet whitespace', code: 'whitespace' });
+      conversions.push({
+        message: `fjernet whitespace fra '${value}' til '${parsed}'`,
+        code: 'whitespace',
+      });
+    }
+    last = parsed;
+
+    parsed = minusToHyphen(parsed);
+    if (last !== parsed) {
+      conversions.push({
+        message: `byttet ut unicode minustegn \u2212 med bindestrek: '${last}', parsed: '${parsed}'`,
+        code: 'minustohyphen',
+      });
     }
     last = parsed;
 
@@ -152,7 +173,11 @@ const cleanInput = ({
       // i rekken fordi det kan være at bruker fyller ut og ikke har tastet desimaltegn enda
       // "2,500,500" -> "2500,500", "2500," -> "2500,"
       //TODO Husk å teste denne på Safari < v15.6
-      parsed = parsed.replace(/(,)(?=.*,)/g, '');
+      const regExpRemoveAllButLast = new RegExp(
+        `(${decimalSeparator})(?=.*${decimalSeparator})`,
+        'g'
+      );
+      parsed = parsed.replace(regExpRemoveAllButLast, '');
       if (last !== parsed) {
         conversions.push({
           message: `fjernet for mange komma input: '${last}', parsed: '${parsed}'`,
@@ -163,7 +188,7 @@ const cleanInput = ({
 
       // Hvis norsk tall -> Fjern alle punktum. Punktum skal ikke finnes i tall med norsk format
       // 2.500,50 -> 2500,5
-      if (groupSeparator === '\u00A0') {
+      if (groupSeparator === NON_BREAKING_SPACE) {
         // nbsp / mellomrom
         parsed = parsed.replace(/\./g, '');
         if (last !== parsed) {
@@ -215,22 +240,20 @@ const cleanInput = ({
     // Fordi vi velger å bruke parseFloat som gjør opprensking for oss så behøver vi ikke sjekke om string
     // inneholder andre tegn enn /[\D-+,.]/
 
-    /******* Hvis engelsk tall *********/
-    console.log(conversions);
-    if (parsed) {
-      return {
-        value: parsed.toString(),
-        conversions: conversions,
-      };
-    } else {
-      // Ukjent. Returner inndata. Kanskje vi skal populere conversions med info om dette
+    //    console.log(`parsed er ${parsed}`);
+    if (isNaN(parsed)) {
       const notANumber: Conversion = {
         message: 'input ble ikke gjenkjent som et tall',
         code: 'NaN',
       };
       return {
-        value,
+        value: '',
         conversions: [notANumber],
+      };
+    } else {
+      return {
+        value: parsed.toString(),
+        conversions: conversions,
       };
     }
   } else if (
@@ -251,12 +274,13 @@ const cleanInput = ({
       value: newValue,
       conversions: conversions,
     };
+  } else {
+    /* Ingen kjente format-typer. returnerer input-value */
+    return {
+      value: '1',
+      conversions: [{ message: 'ikke kjent format-type: ' + type }],
+    };
   }
-  /* Ingen kjente format-typer. returnerer input-value */
-  return {
-    value,
-    conversions: [],
-  };
 };
 
 const insertSpaces = ({
@@ -287,16 +311,13 @@ const formatNumber = ({
   options,
   allowDesimalAtEnd,
 }: FormatNumberProps): Formatter => {
-  const formatterUsingLanguage = new Intl.NumberFormat(lang ?? 'no-nb', {
+  const formatterUsingLanguage = new Intl.NumberFormat(lang ?? 'nb', {
     ...numberOptions,
   });
-  const currencyFormatterUsingLanguage = new Intl.NumberFormat(
-    lang ?? 'no-nb',
-    {
-      ...numberOptions,
-      ...(options ?? {}),
-    }
-  );
+  const currencyFormatterUsingLanguage = new Intl.NumberFormat(lang ?? 'nb', {
+    ...numberOptions,
+    ...(options ?? {}),
+  });
   /*   console.log('formatter options: ');
   console.log({
     ...numberOptions,
@@ -306,7 +327,7 @@ const formatNumber = ({
   // Det er denne metoden som blir brukt for å returnerer hvilke separatorer og
   // skilletegn som blir brukt med valg språk. Tallet 1111.1 er minste eksempeltall som
   // brukes for å kunne hente ut group- og decimalverdiene.
-  const separators = formatterUsingLanguage.formatToParts(1111.1);
+  const separators = formatterUsingLanguage.formatToParts(-1111.1);
   // return value:
   /* [
     { type: 'integer', value: '1' },
@@ -322,24 +343,40 @@ const formatNumber = ({
   const groupSeparator = separators?.find(
     (part) => part.type === 'group'
   )?.value;
+  const minusSign = separators?.find(
+    (part) => part.type === 'minusSign'
+  )?.value;
   const converted = cleanInput({
     value,
     type: 'number',
     decimalSeparator,
     groupSeparator,
   });
+  console.log(converted);
   let anumber = converted.value;
+  const isValidNumber = (value: string): boolean => {
+    return !isNaN(parseFloat(value));
+  };
   const parsedInput = parseFloat(anumber);
+  //  console.log(`parsedInput er ${parsedInput}`);
 
-  if (groupSeparator) anumber = anumber.replace(groupSeparator, '');
-  if (decimalSeparator) anumber = anumber.replace(decimalSeparator, '.');
-  if (Number.isInteger(parsedInput)) {
+  // if (groupSeparator) anumber = anumber.replace(groupSeparator, '');
+  // if (decimalSeparator) anumber = anumber.replace(decimalSeparator, '.');
+
+  // Denne avgjør om vi skal formatere med eksakt to desimaler hvis float
+  //  if (Number.isInteger(parsedInput)) {
+  if (!isNaN(parsedInput) && options && !Number.isInteger(parsedInput)) {
+    //    console.log('currencyFormatterUsingLanguage');
+    anumber = currencyFormatterUsingLanguage.format(parsedInput);
+  } else if (isValidNumber(anumber)) {
+    // Utelukker 'NaN'
     //    console.log('formatterUsingLanguage');
     anumber = formatterUsingLanguage.format(parsedInput);
   } else {
-    //    console.log('currencyFormatterUsingLanguage');
-    anumber = currencyFormatterUsingLanguage.format(parsedInput);
+    // NaN
+    anumber = '';
   }
+  anumber = minusToHyphen(anumber);
   if (
     allowDesimalAtEnd &&
     decimalSeparator &&
@@ -348,6 +385,7 @@ const formatNumber = ({
   ) {
     anumber = `${anumber}${decimalSeparator}`;
   }
+  //  console.log(JSON.stringify(converted, null, 2));
   return {
     parsed: parsedInput.toString() ?? '',
     value: anumber ?? '',
@@ -358,7 +396,7 @@ const formatNumber = ({
 const formatPersonnummer = ({ value }: { value: string }): Formatter => {
   let reformatted = value;
   reformatted = cleanInput({ value: reformatted, type: 'personnummer' }).value;
-  reformatted = insertSpaces({ value: reformatted, positions: [5] });
+  reformatted = insertSpaces({ value: reformatted, positions: [6] });
   return {
     parsed: value,
     value: reformatted,
@@ -410,7 +448,6 @@ export const formatter = ({
     let options = {};
     if (isCurrency) {
       options = { minimumFractionDigits: 2, maximumFractionDigits: 2 };
-      console.log(`type er number og isCurrency er satt. value er ${value}`);
     }
     return formatNumber({ value, lang, allowDesimalAtEnd, options });
   } else if (type === 'personnummer') {

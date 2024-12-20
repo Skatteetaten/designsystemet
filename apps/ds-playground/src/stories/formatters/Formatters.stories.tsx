@@ -31,9 +31,9 @@ const locale = {
 
 export const Formatters: StoryObj = {
   argTypes: defaultArgs,
-
   render: () => {
     const [value, setValue] = useState('123456789,5');
+    const [liveChange, setLiveChange] = useState('3');
     const [orgValue, setOrgValue] = useState('1');
     const [personnummerValue, setPersonnummerValue] = useState('');
     const [kontonummerValue, setKontonummerValue] = useState('');
@@ -49,6 +49,18 @@ export const Formatters: StoryObj = {
         formatter({ value: '7694 05 24802', type: 'kontonummer' }).value
       );
     }, []);
+    const formatAndSet = (value: any): void => {
+      console.clear();
+      setLiveChange(
+        formatter({
+          value: value,
+          type: 'number',
+          lang: language,
+          allowDesimalAtEnd: true,
+        }).value
+      );
+    };
+    const enabled = true;
     return (
       <>
         <Select
@@ -67,116 +79,137 @@ export const Formatters: StoryObj = {
           })}
         </Select>
         <TextField
-          label={'Input '}
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
+          label={'Live update'}
+          description={`type:number, lang: ${language}, alloweDeismalAtEnd: true `}
+          value={liveChange}
+          onChange={(e) => formatAndSet(e.target.value)}
         />
-        <table border={1} cellPadding={5}>
-          <thead>
-            <tr>
-              <th>{'Tekst'}</th>
-              <th>{'Verdi'}</th>
-              <th>{'Format'}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{'Input'}</td>
-              <td>{formatter({ value: value, type: 'number' }).parsed}</td>
-              <td>{'Raw'}</td>
-            </tr>
-            <tr>
-              <td>{'Nummerformat'}</td>
-              <td>
-                {
-                  formatter({
-                    value: value,
-                    type: 'number',
-                    lang: language,
-                  }).value
-                }
-              </td>
-              <td>
-                {'Nor 1 234 eller 1 234,5'}
-                <br />
-                {'Eng 1,234 or 1,234.5'}
-              </td>
-            </tr>
-            <tr>
-              <td>{'Nummerformat uncomplete'}</td>
-              <td>
-                {
-                  formatter({
-                    value: value,
-                    type: 'number',
-                    lang: language,
-                    allowDesimalAtEnd: true,
-                  }).value
-                }
-              </td>
-              <td>{'allowDesimalAtEnd'}</td>
-            </tr>
-            <tr>
-              <td>{'Nummerformat med isCurrency = true'}</td>
-              <td>
-                {
-                  formatter({
-                    value: value,
-                    type: 'number',
-                    lang: language,
-                    isCurrency: true,
-                  }).value
-                }
-              </td>
-              <td>
-                {'Nor 1 234 eller 1 234,50'}
-                <br />
-                {'Eng 1,234 or 1,234.50'}
-              </td>
-            </tr>
-            {/* <tr>
-              <td>{'Personnummer'}</td>
-              <td>{formatter({ value: value, type: 'personnummer' }).value}</td>
-              <td>{'***** ****'}</td>
-            </tr>
-            <tr>
-              <td>{'Organisasjonsnummer'}</td>
-              <td>
-                {formatter({ value: value, type: 'organisasjonsnummer' }).value}
-              </td>
-              <td>{'*** *** ***'}</td>
-            </tr>
-            <tr>
-              <td>{'Kontonummer'}</td>
-              <td>{formatter({ value: value, type: 'kontonummer' }).value}</td>
-              <td>{'**** ** *****'}</td>
-            </tr>
-            <tr>
-              <td>{'Telefonnummer (WIP. Mangler støtte for landskode)'}</td>
-              <td>
-                {formatter({ value: value, type: 'telefonnummer' }).value}
-              </td>
-              <td>{'** ** ** **'}</td>
-            </tr> */}
-            <tr>
-              <td
-                colSpan={3}
-              >{`Return status for Numberformat. Språk satt er ${language}`}</td>
-            </tr>
-            <tr>
-              <td colSpan={3}>
-                <pre>
-                  {JSON.stringify(
-                    formatter({ value: value, type: 'number', lang: language }),
-                    null,
-                    2
-                  )}
-                </pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        {/* 
+        {enabled && (
+          <>
+            <TextField
+              label={'Input '}
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
+            />
+            <table border={1} cellPadding={5}>
+              <thead>
+                <tr>
+                  <th>{'Tekst'}</th>
+                  <th>{'Verdi'}</th>
+                  <th>{'Format'}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{'Input'}</td>
+                  <td>{formatter({ value: value, type: 'number' }).parsed}</td>
+                  <td>{'Raw'}</td>
+                </tr>
+                <tr>
+                  <td>{'Nummerformat'}</td>
+                  <td>
+                    {
+                      formatter({
+                        value: value,
+                        type: 'number',
+                        lang: language,
+                      }).value
+                    }
+                  </td>
+                  <td>
+                    {'Nor 1 234 eller 1 234,5'}
+                    <br />
+                    {'Eng 1,234 or 1,234.5'}
+                  </td>
+                </tr>
+                <tr>
+                  <td>{'Nummerformat allowDesimalAtEnd = true'}</td>
+                  <td>
+                    {
+                      formatter({
+                        value: value,
+                        type: 'number',
+                        lang: language,
+                        allowDesimalAtEnd: true,
+                      }).value
+                    }
+                  </td>
+                  <td>{'100, 100,5 eller 100,50'}</td>
+                </tr>
+                <tr>
+                  <td>{'Nummerformat med isCurrency = true'}</td>
+                  <td>
+                    {
+                      formatter({
+                        value: value,
+                        type: 'number',
+                        lang: language,
+                        isCurrency: true,
+                      }).value
+                    }
+                  </td>
+                  <td>
+                    {'Nor 1 234 eller 1 234,50'}
+                    <br />
+                    {'Eng 1,234 or 1,234.50'}
+                  </td>
+                </tr>
+                <tr>
+                  <td>{'Personnummer'}</td>
+                  <td>
+                    {formatter({ value: value, type: 'personnummer' }).value}
+                  </td>
+                  <td>{'***** ****'}</td>
+                </tr>
+                <tr>
+                  <td>{'Organisasjonsnummer'}</td>
+                  <td>
+                    {
+                      formatter({ value: value, type: 'organisasjonsnummer' })
+                        .value
+                    }
+                  </td>
+                  <td>{'*** *** ***'}</td>
+                </tr>
+                <tr>
+                  <td>{'Kontonummer'}</td>
+                  <td>
+                    {formatter({ value: value, type: 'kontonummer' }).value}
+                  </td>
+                  <td>{'**** ** *****'}</td>
+                </tr>
+                <tr>
+                  <td>{'Telefonnummer (WIP. Mangler støtte for landskode)'}</td>
+                  <td>
+                    {formatter({ value: value, type: 'telefonnummer' }).value}
+                  </td>
+                  <td>{'** ** ** **'}</td>
+                </tr>
+                <tr>
+                  <td
+                    colSpan={3}
+                  >{`Return status for Numberformat. Språk satt er ${language}`}</td>
+                </tr>
+                <tr>
+                  <td colSpan={3}>
+                    <pre>
+                      {JSON.stringify(
+                        formatter({
+                          value: value,
+                          type: 'number',
+                          lang: language,
+                        }),
+                        null,
+                        2
+                      )}
+                    </pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </>
+        )}
+
         <TextField
           label={'Personnummer '}
           value={personnummerValue}
@@ -214,7 +247,7 @@ export const Formatters: StoryObj = {
               }).value
             )
           }
-        /> */}
+        />
       </>
     );
   },
