@@ -3,7 +3,6 @@
 exports[`Tester/ErrorSummary/ErrorSummary Defaults play-test 1`] = `
 <div data-test-block="true">
   <div aria-live="assertive"
-       tabindex="-1"
        aria-atomic="true"
   >
   </div>
@@ -16,10 +15,11 @@ exports[`Tester/ErrorSummary/ErrorSummary WithAttributes play-test 1`] = `
        lang="nb"
        data-testid="123ID"
        aria-live="assertive"
-       tabindex="-1"
        aria-atomic="true"
   >
-    <div class="_errorSummary_e7s87_1 dummyClassname">
+    <div tabindex="-1"
+         class="_errorSummary_e7s87_1 dummyClassname"
+    >
       <div class="_iconContainer_e7s87_15">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_e7s87_15"
              viewbox="0 0 24 24"
@@ -44,10 +44,11 @@ exports[`Tester/ErrorSummary/ErrorSummary WithAttributes play-test 1`] = `
 exports[`Tester/ErrorSummary/ErrorSummary WithChildren play-test 1`] = `
 <div data-test-block="true">
   <div aria-live="assertive"
-       tabindex="-1"
        aria-atomic="true"
   >
-    <div class="_errorSummary_e7s87_1 ">
+    <div tabindex="-1"
+         class="_errorSummary_e7s87_1 "
+    >
       <div class="_iconContainer_e7s87_15">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_e7s87_15"
              viewbox="0 0 24 24"
@@ -106,10 +107,11 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildren play-test 1`] = `
 exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContent smoke-test 1`] = `
 <div data-test-block="true">
   <div aria-live="assertive"
-       tabindex="-1"
        aria-atomic="true"
   >
-    <div class="_errorSummary_e7s87_1 ">
+    <div tabindex="-1"
+         class="_errorSummary_e7s87_1 "
+    >
       <div class="_iconContainer_e7s87_15">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_e7s87_15"
              viewbox="0 0 24 24"
@@ -173,10 +175,11 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContent smoke-test 1`] 
 exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentBreakpointXs smoke-test 1`] = `
 <div data-test-block="true">
   <div aria-live="assertive"
-       tabindex="-1"
        aria-atomic="true"
   >
-    <div class="_errorSummary_e7s87_1 ">
+    <div tabindex="-1"
+         class="_errorSummary_e7s87_1 "
+    >
       <div class="_iconContainer_e7s87_15">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_e7s87_15"
              viewbox="0 0 24 24"
@@ -240,10 +243,11 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentBreakpointXs smo
 exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentMobile smoke-test 1`] = `
 <div data-test-block="true">
   <div aria-live="assertive"
-       tabindex="-1"
        aria-atomic="true"
   >
-    <div class="_errorSummary_e7s87_1 ">
+    <div tabindex="-1"
+         class="_errorSummary_e7s87_1 "
+    >
       <div class="_iconContainer_e7s87_15">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_e7s87_15"
              viewbox="0 0 24 24"
@@ -307,10 +311,11 @@ exports[`Tester/ErrorSummary/ErrorSummary WithChildrenAndContentMobile smoke-tes
 exports[`Tester/ErrorSummary/ErrorSummary WithContent play-test 1`] = `
 <div data-test-block="true">
   <div aria-live="assertive"
-       tabindex="-1"
        aria-atomic="true"
   >
-    <div class="_errorSummary_e7s87_1 ">
+    <div tabindex="-1"
+         class="_errorSummary_e7s87_1 "
+    >
       <div class="_iconContainer_e7s87_15">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_e7s87_15"
              viewbox="0 0 24 24"
@@ -375,10 +380,11 @@ exports[`Tester/ErrorSummary/ErrorSummary WithInput play-test 1`] = `
     </div>
   </div>
   <div aria-live="assertive"
-       tabindex="-1"
        aria-atomic="true"
   >
-    <div class="_errorSummary_e7s87_1 ">
+    <div tabindex="-1"
+         class="_errorSummary_e7s87_1 "
+    >
       <div class="_iconContainer_e7s87_15">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_e7s87_15"
              viewbox="0 0 24 24"
@@ -421,7 +427,6 @@ exports[`Tester/ErrorSummary/ErrorSummary WithInput play-test 1`] = `
 exports[`Tester/ErrorSummary/ErrorSummary WithRef play-test 1`] = `
 <div data-test-block="true">
   <div aria-live="assertive"
-       tabindex="-1"
        aria-atomic="true"
        id="dummyIdForwardedFromRef"
   >
@@ -439,10 +444,11 @@ exports[`Tester/ErrorSummary/ErrorSummary WithShadowRootNode play-test 1`] = `
 exports[`Tester/ErrorSummary/ErrorSummary WithTitleAs play-test 1`] = `
 <div data-test-block="true">
   <div aria-live="assertive"
-       tabindex="-1"
        aria-atomic="true"
   >
-    <div class="_errorSummary_e7s87_1 ">
+    <div tabindex="-1"
+         class="_errorSummary_e7s87_1 "
+    >
       <div class="_iconContainer_e7s87_15">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_e7s87_15"
              viewbox="0 0 24 24"

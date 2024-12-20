@@ -1,4 +1,4 @@
-import { Children, forwardRef, JSX } from 'react';
+import { Children, forwardRef, JSX, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
@@ -34,6 +34,14 @@ export const ErrorSummary = forwardRef<HTMLDivElement, ErrorSummaryProps>(
     const contentWithoutChildrenClassName = !children
       ? styles.contentWithoutChildren
       : '';
+
+    const errorSummaryRef = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+      if (showErrorSummary) {
+        errorSummaryRef.current?.focus();
+      }
+    }, [showErrorSummary]);
+
     return (
       <div
         ref={ref}
@@ -41,11 +49,14 @@ export const ErrorSummary = forwardRef<HTMLDivElement, ErrorSummaryProps>(
         lang={lang}
         data-testid={dataTestId}
         aria-live={'assertive'}
-        tabIndex={-1}
         aria-atomic
       >
         {showErrorSummary && (
-          <div className={`${styles.errorSummary} ${className}`}>
+          <div
+            ref={errorSummaryRef}
+            tabIndex={-1}
+            className={`${styles.errorSummary} ${className}`}
+          >
             <div className={styles.iconContainer}>
               <Icon
                 svgPath={WarningSVGpath}

@@ -113,7 +113,6 @@ export const Defaults = {
     await expect(container).toBeInTheDocument();
     await expect(container).toHaveAttribute('aria-live', 'assertive');
     await expect(container).toHaveAttribute('aria-atomic');
-    await expect(container).toHaveAttribute('tabIndex', '-1');
 
     const errorSummary = container.querySelector('div');
     await expect(errorSummary).not.toBeInTheDocument();
