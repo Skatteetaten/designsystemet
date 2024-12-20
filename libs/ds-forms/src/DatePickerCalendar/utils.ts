@@ -1,4 +1,3 @@
-import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   addDays,
   isAfter,
@@ -8,6 +7,8 @@ import {
   isValid,
   isWithinInterval,
 } from 'date-fns';
+
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 const lastValidYear = 9999;
 const sunday = 0;

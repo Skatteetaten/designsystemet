@@ -1,12 +1,13 @@
 import { useRef, useState } from 'react';
 
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { expect, userEvent, fireEvent, within } from '@storybook/test';
+
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
 import { Modal } from '@skatteetaten/ds-overlays';
 import { Paragraph } from '@skatteetaten/ds-typography';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, fireEvent, within } from '@storybook/test';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
@@ -193,7 +194,7 @@ export const WithImage = {
     const button = canvas.getByRole('button');
     await userEvent.click(button);
     const modal = canvas.getByRole('dialog');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const image = modal.querySelector('img');
     await expect(image).toBeInTheDocument();
     await expect(image).toHaveAttribute('alt', 'Image alt tekst');
@@ -359,7 +360,6 @@ export const WithHideTitle = {
 } satisfies Story;
 
 const TemplateWithShadowDom: StoryFn<typeof Modal> = (args) => {
-  // eslint-disable-next-line testing-library/no-node-access
   const element = document.querySelector('modal-customelement');
   const shadowRoot = element?.shadowRoot;
   const ref = useRef<HTMLDialogElement>(null);
@@ -403,7 +403,7 @@ export const WithShadowDom = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     await expect(canvas.queryByRole('dialog')).not.toBeInTheDocument();
-    // eslint-disable-next-line testing-library/no-node-access
+
     const customElement = canvasElement.querySelector(
       'modal-customelement'
     ) as HTMLElement;

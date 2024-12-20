@@ -1,5 +1,6 @@
-import { Icon } from '@skatteetaten/ds-icons';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
+
+import { Icon } from '@skatteetaten/ds-icons';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { ThemeSVGPaths } from '../utils/icon.themes';

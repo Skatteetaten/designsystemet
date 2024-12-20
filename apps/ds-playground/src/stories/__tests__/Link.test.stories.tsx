@@ -1,10 +1,11 @@
 import { useState } from 'react';
 
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+
 import { Link, LinkProps } from '@skatteetaten/ds-buttons';
 import { dsI18n, linkColorArr } from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath, CalendarSVGpath } from '@skatteetaten/ds-icons';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -66,7 +67,7 @@ type Story = StoryObj<typeof meta>;
 
 const Template: StoryFn<typeof Link> = (args) => (
   <Link {...args} onClick={(e): void => e.preventDefault()}>
-    {/* eslint-disable-next-line testing-library/no-node-access */}
+    {}
     {args.children}
   </Link>
 );
@@ -144,7 +145,7 @@ export const Defaults = {
     const link = canvas.getByRole('link');
     await expect(link).not.toHaveAttribute('rel');
     await expect(link).not.toHaveAttribute('target');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const svg = link.querySelector('svg');
     await expect(svg).not.toBeInTheDocument();
     expect(link).toHaveTextContent(defaultLinkText);
@@ -194,7 +195,7 @@ export const WithIcon = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const svg = link.querySelector('svg');
     await expect(svg).toHaveAttribute('aria-hidden', 'true');
     await expect(svg).toHaveAttribute('viewBox', systemIconViewBox);
@@ -214,7 +215,7 @@ export const WithExternalIcon = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const svg = link.querySelector('svg');
     await expect(svg).toHaveAttribute(
       'aria-label',

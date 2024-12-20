@@ -1,7 +1,8 @@
-import { CheckboxGroup } from '@skatteetaten/ds-forms';
-import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, fireEvent, within } from '@storybook/test';
+
+import { CheckboxGroup } from '@skatteetaten/ds-forms';
+import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
 
@@ -358,7 +359,7 @@ export const WithCustomClassNames = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    // eslint-disable-next-line testing-library/no-node-access
+
     const errorMessageContainer = canvasElement.querySelector(
       '[id^=checkboxGroupErrorId]>div'
     );

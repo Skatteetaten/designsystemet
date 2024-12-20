@@ -1,3 +1,6 @@
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { expect, userEvent, within } from '@storybook/test';
+
 import { Link } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
@@ -7,8 +10,6 @@ import {
   TopBannerExternalProps,
   TopBannerExternalHandle,
 } from '@skatteetaten/ds-layout';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, within } from '@storybook/test';
 
 import customLogo from '../../assets/custom-logo.svg';
 import { ReactComponent as FlagFinland } from '../../assets/fi-flag.svg';
@@ -124,15 +125,15 @@ export const WithDefaults = {
     const canvas = within(canvasElement);
     const header = canvas.getByRole('banner');
     expect(header.tagName).toBe('HEADER');
-    // eslint-disable-next-line testing-library/no-node-access
+
     expect(header.firstChild).toHaveAttribute('href');
     const skipLink = canvas.getByText(skipLinkText);
     expect(skipLink).toBeInTheDocument();
 
     await expect(canvas.getByText(menuText)).toBeInTheDocument();
-    // eslint-disable-next-line testing-library/no-node-access
+
     await expect(canvas.queryByText(loginText)).not.toBeInTheDocument();
-    // eslint-disable-next-line testing-library/no-node-access
+
     await expect(canvas.queryByText(logoutText)).not.toBeInTheDocument();
   },
 } satisfies Story;
@@ -630,8 +631,9 @@ export const ClickLangPickerOpenAndClose = {
 } satisfies Story;
 
 export const WithExtraLangs = {
-  name: 'Extra Languages in LanguagePicker',
+  name: 'Extra Languages in LanguagePicker and custom defaultLocale ',
   args: {
+    defaultLocale: 'de',
     additionalLanguages: [
       {
         displayName: 'Suomi',
@@ -732,6 +734,7 @@ export const WithExtraLangs = {
   },
   argTypes: {
     additionalLanguages: { table: { disable: false } },
+    defaultLocale: { table: { disable: false } },
   },
   parameters: {
     imageSnapshot: { disable: true },
@@ -739,7 +742,7 @@ export const WithExtraLangs = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const languageButton = canvas.getByRole('button', { name: 'Bokmål Meny' });
+    const languageButton = canvas.getByRole('button', { name: 'Deutsch Meny' });
     await userEvent.click(languageButton);
     const fin = canvas.getByRole('button', { name: 'Suomi' });
     await expect(fin).toBeInTheDocument();

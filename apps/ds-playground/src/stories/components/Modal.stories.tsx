@@ -1,5 +1,7 @@
 import { useRef, JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+
 import { Button, Link } from '@skatteetaten/ds-buttons';
 import { RadioGroup } from '@skatteetaten/ds-forms';
 import { InfoOutlineSVGpath } from '@skatteetaten/ds-icons';
@@ -11,7 +13,6 @@ import {
   getModalVariantDefault,
 } from '@skatteetaten/ds-overlays';
 import { Paragraph } from '@skatteetaten/ds-typography';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import farmerIllustration from '../../assets/farmer-illustration.svg';

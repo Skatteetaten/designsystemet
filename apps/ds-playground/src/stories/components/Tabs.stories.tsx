@@ -1,5 +1,7 @@
 import { JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+
 import { Tabs, getTabsVariantDefault } from '@skatteetaten/ds-collections';
 import {
   AccountMultipleSVGpath,
@@ -7,7 +9,6 @@ import {
   PersonSVGpath,
 } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';

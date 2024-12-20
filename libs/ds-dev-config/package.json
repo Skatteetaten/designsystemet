@@ -20,5 +20,6 @@
   "dependencies": {
     "@swc/helpers": "~0.5.2"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "type": "module"
 }

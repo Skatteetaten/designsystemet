@@ -1,5 +1,6 @@
-import { Tabs } from '@skatteetaten/ds-collections';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
+
+import { Tabs } from '@skatteetaten/ds-collections';
 
 const meta = {
   component: Tabs.List,

@@ -1,9 +1,10 @@
+import { Meta, StoryObj } from '@storybook/react';
+
 import { MegaButton } from '@skatteetaten/ds-buttons';
 import {
   dsI18n,
   getCommonButtonTypeDefault,
 } from '@skatteetaten/ds-core-utils';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';

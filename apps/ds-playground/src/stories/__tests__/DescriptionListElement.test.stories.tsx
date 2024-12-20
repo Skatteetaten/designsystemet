@@ -1,8 +1,9 @@
 import { JSX } from 'react';
 
-import { DescriptionList } from '@skatteetaten/ds-content';
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
+
+import { DescriptionList } from '@skatteetaten/ds-content';
 
 const meta = {
   component: DescriptionList.Element,

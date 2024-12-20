@@ -144,8 +144,7 @@ export const Formatters: StoryObj = {
                         value: value,
                         type: 'number',
                         lang: language,
-                        isCurrency: true,
-                      }).value
+                      }).valueAsCurrency
                     }
                   </td>
                   <td>

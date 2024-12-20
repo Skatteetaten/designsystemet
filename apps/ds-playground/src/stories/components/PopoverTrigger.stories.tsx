@@ -1,7 +1,8 @@
+import { Meta, StoryObj } from '@storybook/react';
+
 import { getIconButtonSizeDefault } from '@skatteetaten/ds-buttons';
 import { sizeArr } from '@skatteetaten/ds-core-utils';
 import { Popover } from '@skatteetaten/ds-overlays';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';

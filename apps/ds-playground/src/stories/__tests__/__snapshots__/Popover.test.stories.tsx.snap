@@ -22,6 +22,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
       </svg>
     </button>
     <div tabindex="-1"
+         data-floating-ui-focusable
          class="_popover_12pml_1 _popover_forest_12pml_9"
          style="position: absolute; left: 0px; top: 0px; transform: translate(238px, 7px);"
     >
@@ -71,6 +72,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
       </svg>
     </button>
     <div tabindex="-1"
+         data-floating-ui-focusable
          class="_popover_12pml_1 _popover_white_12pml_17"
          style="position: absolute; left: 0px; top: 0px; transform: translate(238px, 197px);"
     >
@@ -120,6 +122,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
       </svg>
     </button>
     <div tabindex="-1"
+         data-floating-ui-focusable
          class="_popover_12pml_1 _popover_ochre_12pml_13"
          style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 2px);"
     >
@@ -169,6 +172,7 @@ exports[`Tester/Popover/Popover AllColors smoke-test 1`] = `
       </svg>
     </button>
     <div tabindex="-1"
+         data-floating-ui-focusable
          class="_popover_12pml_1 _popover_forest_12pml_9"
          style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 206px);"
     >

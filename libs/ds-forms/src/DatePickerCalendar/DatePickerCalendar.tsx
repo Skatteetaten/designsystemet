@@ -10,10 +10,11 @@ import {
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { addDays, getWeek, isEqual } from 'date-fns';
+
 import { IconButton } from '@skatteetaten/ds-buttons';
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { ArrowBackSVGpath, ArrowForwardSVGpath } from '@skatteetaten/ds-icons';
-import { addDays, getWeek, isEqual } from 'date-fns';
 
 import { DatePickerCalendarProps } from './DatePickerCalendar.types';
 import { getDatePickerCalendarSelectedDateDefault } from './defaults';

@@ -18,7 +18,7 @@ type AdditionalLanguages = Array<LanguageItem & { flag: FunctionComponent }>;
 
 export interface TopBannerLangPickerProps extends BaseProps {
   /** Hvilket språk som skal være forhåndsvalgt. */
-  defaultLocale?: Languages;
+  defaultLocale?: Languages | string;
   /** Callback når et språk trykkes på. */
   onLanguageClick?: MouseEventHandler<HTMLButtonElement>;
   /** Om samisk språk skal vises eller ikke. */

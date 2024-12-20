@@ -1,11 +1,12 @@
 import { JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+
 import { Button, getButtonVariantDefault } from '@skatteetaten/ds-buttons';
 import {
   dsI18n,
   getCommonButtonTypeDefault,
 } from '@skatteetaten/ds-core-utils';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';

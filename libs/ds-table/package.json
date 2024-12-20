@@ -4,6 +4,7 @@
   "version": "1.4.0",
   "license": "Apache-2.0",
   "homepage": "https://www.skatteetaten.no/stilogtone/designsystemet/",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Skatteetaten/designsystemet.git"
@@ -15,10 +16,10 @@
     "i18next": "^23",
     "react": "^18",
     "react-i18next": "^14",
-    "@skatteetaten/ds-core-utils": "1.3.0",
-    "@skatteetaten/ds-icons": "1.3.0",
-    "@skatteetaten/ds-buttons": "1.3.0",
-    "@skatteetaten/ds-progress": "1.3.0"
+    "@skatteetaten/ds-core-utils": "1.4.0",
+    "@skatteetaten/ds-icons": "1.4.0",
+    "@skatteetaten/ds-buttons": "1.4.0",
+    "@skatteetaten/ds-progress": "1.4.0"
   },
   "scripts": {},
   "dependencies": {},

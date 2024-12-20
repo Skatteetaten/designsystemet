@@ -19,7 +19,7 @@
         "project": "libs/ds-overlays/package.json",
         "entryFile": "libs/ds-overlays/src/index.ts",
         "external": ["react", "react-dom", "react/jsx-runtime"],
-        "rollupConfig": ["libs/ds-overlays/rollup.config.js"],
+        "rollupConfig": ["libs/ds-overlays/rollup.config.cjs"],
         "compiler": "swc",
         "assets": [
           {

@@ -1,12 +1,13 @@
 import { JSX } from 'react';
 
+import { useArgs } from '@storybook/preview-api';
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+
 import { dsI18n, statusArr } from '@skatteetaten/ds-core-utils';
 import { LockSVGpath } from '@skatteetaten/ds-icons';
 import { Alert } from '@skatteetaten/ds-status';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
-import { useArgs } from '@storybook/preview-api';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -125,7 +126,7 @@ export const Defaults = {
     await expect(container).toBeInTheDocument();
     await expect(container).toHaveAttribute('aria-live', 'polite');
     await expect(container).toHaveAttribute('aria-atomic');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const alertNode = container.querySelector('div');
     await expect(alertNode).not.toBeInTheDocument();
   },
@@ -146,10 +147,10 @@ export const DefaultsWithMessage = {
     const container = canvas.getAllByRole('generic')[1];
     await expect(container).toBeInTheDocument();
     await expect(container).toHaveAttribute('aria-live', 'polite');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const alertNode = container.querySelector('div');
     await expect(alertNode).toBeInTheDocument();
-    // eslint-disable-next-line testing-library/no-node-access
+
     const iconButtonNode = container.querySelector('button');
     await expect(iconButtonNode).not.toBeInTheDocument();
   },

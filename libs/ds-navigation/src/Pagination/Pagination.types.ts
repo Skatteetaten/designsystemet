@@ -1,7 +1,8 @@
 import { ForwardRefExoticComponent, RefAttributes, RefObject } from 'react';
 
-import { BaseProps } from '@skatteetaten/ds-core-utils';
 import { TFunction } from 'i18next';
+
+import { BaseProps } from '@skatteetaten/ds-core-utils';
 
 import { PaginationList } from '../PaginationList/PaginationList';
 

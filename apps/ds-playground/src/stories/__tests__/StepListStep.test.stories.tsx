@@ -1,8 +1,9 @@
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { expect, fn, waitFor, within } from '@storybook/test';
+
 import { StepList, stepVariantArr } from '@skatteetaten/ds-collections';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TimersandSVGpath } from '@skatteetaten/ds-icons';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, waitFor, within } from '@storybook/test';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 import { category } from '../../../.storybook/helpers';

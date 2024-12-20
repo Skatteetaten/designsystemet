@@ -1,9 +1,10 @@
 import { useId, useState, JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+
 import { OpenClose, StepList } from '@skatteetaten/ds-collections';
 import { ErrorSummary, RadioGroup } from '@skatteetaten/ds-forms';
 import { List, Paragraph } from '@skatteetaten/ds-typography';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';

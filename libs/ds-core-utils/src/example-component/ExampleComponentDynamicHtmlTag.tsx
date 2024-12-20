@@ -3,7 +3,7 @@ import { HTMLAttributes, forwardRef, useRef, JSX } from 'react';
 import { BaseProps } from '../base-props.types';
 
 // Her plukker man manuelt hvilke html-attributer skal eksponeres som property.
-// Vi tar utgangspunkt i interfacet HTMLOrSVGElement fordi vi ikke vet hvilket html tag skal outputes
+// Vi tar utgangspunkt i interfacet HTMLOrSVGElement fordi vi ikke vet hvilken html tag som skal outputes
 type ExampleComponentPropsHTMLAttributes = Pick<
   HTMLAttributes<HTMLOrSVGElement>,
   'title' | 'onClick' | 'children'

@@ -55,6 +55,10 @@ Hvordan lage tall av random input-value er:
 // OG input er "1,23" 
 // SÅ forkaster vi komma slik at tall blir "123"
 
+//TODO Endre navn på type lang til locale
+//TODO Fjerne rester av isCurrency. formatter skal alltid returnere .valueAsCurrency
+//TODO Fjerne prop allowDesimalAtEnd og heller alltid returnere .valueWithDesimal el
+
 */
 const numberOptions: Intl.NumberFormatOptions = {
   style: 'decimal',
@@ -76,10 +80,13 @@ type Conversion = {
 
 type Formatter = {
   /* Tallet som er utgangspunkt etter fjerning av ulovlige tegn.
-  Dette tallet er også utgangpunktet for telling av antall siffer */
+  Dette tallet er også utgangspunktet for telling av antall siffer slik at lengde på streng
+  er mindre en maksverdiene satt i maxLengths. */
   parsed?: string;
   /* Formatert tall som brukes for visning */
   value: string;
+  /* Formatert tall som beløp. Dvs aldri ett siffer som desimal. Enten to eller ingen */
+  valueAsCurrency?: string;
   /* Makslengde begrenser antall siffer for hvert enkelt format. Dette er en prop
   som ikke MÅ eksponeres ut. Påvirker ikke number-formatet */
   maxLength?: number;
@@ -277,7 +284,7 @@ const cleanInput = ({
   } else {
     /* Ingen kjente format-typer. returnerer input-value */
     return {
-      value: '1',
+      value: '',
       conversions: [{ message: 'ikke kjent format-type: ' + type }],
     };
   }
@@ -316,7 +323,8 @@ const formatNumber = ({
   });
   const currencyFormatterUsingLanguage = new Intl.NumberFormat(lang ?? 'nb', {
     ...numberOptions,
-    ...(options ?? {}),
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
   });
   /*   console.log('formatter options: ');
   console.log({
@@ -365,10 +373,18 @@ const formatNumber = ({
 
   // Denne avgjør om vi skal formatere med eksakt to desimaler hvis float
   //  if (Number.isInteger(parsedInput)) {
-  if (!isNaN(parsedInput) && options && !Number.isInteger(parsedInput)) {
+  // options har kun verdi hvis isCurrency er satt.
+  // Blokk for alltid håndtere retur av valuta-streng
+  let valueAsCurrency = '';
+  if (!isNaN(parsedInput) && !Number.isInteger(parsedInput)) {
+    valueAsCurrency = currencyFormatterUsingLanguage.format(parsedInput);
+  }
+
+  /* if (!isNaN(parsedInput) && options && !Number.isInteger(parsedInput)) {
     //    console.log('currencyFormatterUsingLanguage');
     anumber = currencyFormatterUsingLanguage.format(parsedInput);
-  } else if (isValidNumber(anumber)) {
+  } else  */
+  if (isValidNumber(anumber)) {
     // Utelukker 'NaN'
     //    console.log('formatterUsingLanguage');
     anumber = formatterUsingLanguage.format(parsedInput);
@@ -377,6 +393,8 @@ const formatNumber = ({
     anumber = '';
   }
   anumber = minusToHyphen(anumber);
+  valueAsCurrency = minusToHyphen(valueAsCurrency);
+
   if (
     allowDesimalAtEnd &&
     decimalSeparator &&
@@ -384,11 +402,13 @@ const formatNumber = ({
     value.slice(-1) === decimalSeparator
   ) {
     anumber = `${anumber}${decimalSeparator}`;
+    valueAsCurrency = `${valueAsCurrency}${decimalSeparator}`;
   }
   //  console.log(JSON.stringify(converted, null, 2));
   return {
     parsed: parsedInput.toString() ?? '',
     value: anumber ?? '',
+    valueAsCurrency,
     conversions: converted.conversions,
   };
 };
@@ -446,10 +466,10 @@ export const formatter = ({
 }: FormatterProps): Formatter => {
   if (type === 'number') {
     let options = {};
-    if (isCurrency) {
-      options = { minimumFractionDigits: 2, maximumFractionDigits: 2 };
-    }
-    return formatNumber({ value, lang, allowDesimalAtEnd, options });
+    //if (isCurrency) {
+    //options = { minimumFractionDigits: 2, maximumFractionDigits: 2 };
+    //}
+    return formatNumber({ value, lang, allowDesimalAtEnd });
   } else if (type === 'personnummer') {
     return formatPersonnummer({ value });
   } else if (type === 'organisasjonsnummer') {

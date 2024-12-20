@@ -23,6 +23,7 @@ export default async function (
 
   await libraryGenerator(tree, {
     name: projectName,
+    directory: `libs/${projectName}`,
     style: 'scss',
     skipTsConfig: false,
     skipFormat: false,
@@ -31,7 +32,7 @@ export default async function (
     publishable: schema.publishable,
     importPath: schema.importPath,
     strict: true,
-    compiler: 'babel',
+    compiler: 'swc',
     bundler: 'rollup',
   });
 
@@ -74,14 +75,6 @@ export default async function (
   };
 
   updateProjectConfiguration(tree, projectName, projectConfig);
-
-  const babelrcPath = joinPathFragments(projectConfig.root, '.babelrc');
-  updateJson(tree, babelrcPath, (babelrc): object => {
-    babelrc.presets = undefined;
-    babelrc.plugins = undefined;
-    babelrc.extends = '../../.babelrc';
-    return babelrc;
-  });
 
   const eslintrcPath = joinPathFragments(projectConfig.root, '.eslintrc.json');
   updateJson(tree, eslintrcPath, (eslintrc): object => {
@@ -130,6 +123,7 @@ export default async function (
   const packageJsonPath = joinPathFragments(projectConfig.root, 'package.json');
   updateJson(tree, packageJsonPath, (packageJson): object => {
     packageJson.groupId = 'no.skatteetaten.aurora';
+    packageJson.license = 'Apache-2.0';
     packageJson.repository = {
       type: 'git',
       url: 'git+https://github.com/Skatteetaten/designsystemet.git',
@@ -156,7 +150,7 @@ export default async function (
         ...projectConfig?.targets.build,
         options: {
           ...projectConfig?.targets.build.options,
-          rollupConfig: [`libs/${projectName}/rollup.config.js`],
+          rollupConfig: [`libs/${projectName}/rollup.config.cjs`],
           assets: [
             ...projectConfig.targets.build.options.assets,
             {

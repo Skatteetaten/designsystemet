@@ -1,5 +1,6 @@
-import { ErrorSummary } from '@skatteetaten/ds-forms';
 import { Meta, StoryObj } from '@storybook/react';
+
+import { ErrorSummary } from '@skatteetaten/ds-forms';
 
 import { category } from '../../../.storybook/helpers';
 

@@ -1,11 +1,12 @@
 import { useState, JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   RadioGroup,
   getRadioGroupVariantDefault,
 } from '@skatteetaten/ds-forms';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';

@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/no-access-key */
 import { forwardRef, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 

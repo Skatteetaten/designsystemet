@@ -1,6 +1,7 @@
-import { WarningSVGpath } from '@skatteetaten/ds-icons';
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, fireEvent, within } from '@storybook/test';
+
+import { WarningSVGpath } from '@skatteetaten/ds-icons';
 
 import {
   loremIpsumWithoutSpaces,
@@ -247,7 +248,7 @@ export const WithCustomClassNames = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    // eslint-disable-next-line testing-library/no-node-access
+
     const label = canvas.getByText(defaultChildrenText);
     await expect(label).toHaveClass('dummyClassname');
     await expect(canvas.getByText('beskrivelse')).toHaveClass('dummyClassname');

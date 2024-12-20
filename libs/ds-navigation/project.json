@@ -19,7 +19,7 @@
         "project": "libs/ds-navigation/package.json",
         "entryFile": "libs/ds-navigation/src/index.ts",
         "external": ["react", "react-dom", "react/jsx-runtime"],
-        "rollupConfig": ["libs/ds-navigation/rollup.config.js"],
+        "rollupConfig": ["libs/ds-navigation/rollup.config.cjs"],
         "compiler": "swc",
         "assets": [
           {

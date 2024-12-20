@@ -1,3 +1,6 @@
+import { Meta, StoryObj } from '@storybook/react';
+import { expect, within } from '@storybook/test';
+
 import { sizeArr } from '@skatteetaten/ds-core-utils';
 import {
   Icon,
@@ -5,8 +8,6 @@ import {
   AccountChildSVGpath,
   AndreForholdSVGpath,
 } from '@skatteetaten/ds-icons';
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { ThemeSVGPaths } from '../utils/icon.themes';
@@ -206,7 +207,7 @@ export const WithAriaLabel = {
       'min custom aria-label beskrivelse'
     );
     await expect(icon).not.toHaveAttribute('aria-labelledby');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const title = icon.querySelector('title');
     await expect(title).not.toBeInTheDocument();
   },

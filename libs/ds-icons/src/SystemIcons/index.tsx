@@ -1,5 +1,6 @@
 /* NB! Dette er en autogenerert fil, vennligst ikke gjør manuelle endringer i den.
    Kjør kommandonavn generate:iconIndexFiles for å generere exports. */
+export * from './AccountArrowBack';
 export * from './AccountBox';
 export * from './AccountChild';
 export * from './AccountEnk';
@@ -147,6 +148,7 @@ export * from './VerticalDotsCircle';
 export * from './VerticalDotsCircleSolid';
 export * from './WaringOutline';
 export * from './Warning';
+export * from './WarningOutline';
 export * from './WarningStop';
 export * from './WordFile';
 export * from './XMLFile';

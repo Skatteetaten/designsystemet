@@ -1,7 +1,8 @@
 import { JSX } from 'react';
 
-import { TopBannerInternal } from '@skatteetaten/ds-layout';
 import { Meta, StoryObj } from '@storybook/react';
+
+import { TopBannerInternal } from '@skatteetaten/ds-layout';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
