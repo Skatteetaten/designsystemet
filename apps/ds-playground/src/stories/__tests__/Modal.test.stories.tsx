@@ -1,7 +1,7 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, JSX, useState } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, fireEvent, within } from '@storybook/test';
+import { expect, userEvent, fireEvent, within, waitFor } from '@storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -526,5 +526,75 @@ export const WithStateChangeAndTextFieldFocus = {
     await expect(innerButton).not.toBeInTheDocument();
     const textField = canvas.getByRole('textbox');
     await expect(textField).toHaveFocus();
+  },
+} satisfies Story;
+
+export const AutoOpen = {
+  decorators: [
+    (Story): JSX.Element => {
+      const body = document.body;
+      body.classList.add('bodyFocus');
+      return <Story />;
+    },
+  ],
+  render: (args): JSX.Element => {
+    const ref = useRef<HTMLDialogElement>(null);
+    useEffect(() => {
+      ref.current?.showModal();
+    }, []);
+    const onCloseOnClickHandler = (): void => {
+      ref.current?.close();
+    };
+    return (
+      <>
+        <Paragraph
+          hasSpacing
+        >{`Denne testen skal sjekke om fokus blir satt på BODY-elementet når modalen lukkes. 
+        Testes ved å reloade siden. Det er ved programatisk åpning av modalen at fokus tidligere ikke har blitt satt korrekt.`}</Paragraph>
+        <Modal {...args} ref={ref}>
+          <Paragraph hasSpacing>
+            {
+              'Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?'
+            }
+          </Paragraph>
+          <div className={'flex'}>
+            <Button className={'marginRightM'}>{'Erstatt opplysninger'}</Button>
+            <Button variant={'tertiary'} onClick={onCloseOnClickHandler}>
+              {'Avbryt'}
+            </Button>
+          </div>
+        </Modal>
+        <Button
+          className={'marginRightM'}
+          onClick={() => ref.current?.showModal()}
+        >
+          {'Åpne modal ref.current.showModal'}
+        </Button>
+      </>
+    );
+  },
+  name: 'With AutoOpen',
+  args: {
+    variant: 'plain',
+  },
+  argTypes: {
+    variant: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const openmodal = await canvas.findByRole('dialog', { hidden: false });
+
+    await expect(openmodal).toBeVisible();
+    const button = within(canvasElement).getByRole('button', {
+      name: 'Avbryt',
+    });
+    const user = userEvent.setup();
+    await user.click(button);
+    const body = document.body;
+    await waitFor(() => {
+      expect(body).toHaveFocus();
+    });
+    const closedmodal = await canvas.findByRole('dialog', { hidden: true });
+    await expect(closedmodal).not.toBeVisible();
   },
 } satisfies Story;
