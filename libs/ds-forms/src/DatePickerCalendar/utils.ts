@@ -138,7 +138,7 @@ function getDatesInMonth(year: number, monthIndex: number): Date[] {
   while (date.getMonth() === month) {
     dates.push(new Date(date));
     date.setDate(date.getDate() + 1);
-    date.setHours(0, 0, 0);
+    date.setHours(0, 0, 0, 0);
   }
   return dates;
 }
@@ -177,7 +177,8 @@ export const isWithinMinMaxRange = (
   lastValidDate.setDate(31);
   lastValidDate.setFullYear(lastValidYear);
 
-  minDate?.setHours(0, 0, 0);
+  minDate?.setHours(0, 0, 0, 0);
+  maxDate?.setHours(0, 0, 0, 0);
 
   const start = minDate && isValid(minDate) ? minDate : firstValidDate;
   const end = maxDate && isValid(maxDate) ? maxDate : lastValidDate;
@@ -227,7 +228,7 @@ export const getFirstFocusableDate = (
   disabledDatesTimestamps?: Set<number>
 ): Date => {
   let focusableDate = selectedDate;
-  focusableDate.setHours(0, 0, 0);
+  focusableDate.setHours(0, 0, 0, 0);
 
   if (maxDate && isAfter(selectedDate, maxDate)) {
     focusableDate = maxDate;
@@ -272,8 +273,8 @@ export const findNextAvailableDate = (
     return addDays(startDate, 1);
   }
 
-  startDate.setHours(0, 0, 0);
-  maxDate?.setHours(0, 0, 0);
+  startDate.setHours(0, 0, 0, 0);
+  maxDate?.setHours(0, 0, 0, 0);
 
   const maxNextDate =
     maxDate && isValid(maxDate)
@@ -302,8 +303,8 @@ export const findPreviousAvailableDate = (
   if (!disabledDatesTimestamps || disabledDatesTimestamps.size === 0) {
     return addDays(startDate, -1);
   }
-  startDate.setHours(0, 0, 0);
-  minDate?.setHours(0, 0, 0);
+  startDate.setHours(0, 0, 0, 0);
+  minDate?.setHours(0, 0, 0, 0);
 
   const minPrevDate =
     minDate && isValid(minDate) ? minDate : new Date('0001-01-01');
