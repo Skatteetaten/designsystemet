@@ -1,0 +1,81 @@
+@use 'libs/ds-core-utils/src/styles';
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
+.card {
+  --card-padding: var(--card-padding-m);
+  --card-padding-mobile: var(--spacing-s);
+  --card-padding-xs: var(--card-padding-mobile);
+  --card-padding-s: var(--card-padding-mobile);
+  --card-padding-m: var(--spacing-m);
+  --card-padding-l: var(--card-padding-m);
+  --card-padding-xl: var(--card-padding-m);
+
+  max-width: var(--container-m);
+  box-sizing: border-box;
+  border: 1px solid var(--variant-outline-color);
+  border-radius: 4px;
+  background-color: var(--variant-filled-color);
+  container-type: inline-size;
+
+  &[data-color='ochre'] {
+    --variant-outline-color: var(--palette-ochre-70);
+    --variant-filled-color: var(--palette-ochre-5);
+  }
+
+  &[data-color='forest'] {
+    --variant-outline-color: var(--palette-forest-70);
+    --variant-filled-color: var(--palette-forest-5);
+  }
+
+  &[data-color='burgundy'] {
+    --variant-outline-color: var(--palette-burgundy-70);
+    --variant-filled-color: var(--palette-burgundy-5);
+  }
+
+  &[data-color='denim'] {
+    --variant-outline-color: var(--palette-denim-70);
+    --variant-filled-color: var(--palette-denim-5);
+  }
+
+  &[data-color='white'] {
+    --variant-outline-color: var(--semantic-divider-100);
+    --variant-filled-color: var(--palette-graphite-0);
+  }
+
+  &[data-color='graphite'] {
+    --variant-outline-color: var(--palette-graphite-50);
+    --variant-filled-color: var(--palette-graphite-5);
+  }
+
+  &[data-spacing='xxs'] {
+    --card-padding: var(--spacing-xxs);
+  }
+
+  &[data-spacing='xs'] {
+    --card-padding: var(--spacing-xs);
+  }
+
+  &[data-spacing='s'] {
+    --card-padding: var(--spacing-s);
+  }
+
+  &[data-spacing='m'] {
+    --card-padding: var(--spacing-m);
+  }
+
+  &[data-spacing='l'] {
+    --card-padding: var(--spacing-l);
+  }
+
+  &[data-spacing='xl'] {
+    --card-padding: var(--spacing-xl);
+  }
+
+  &[data-spacing='xxl'] {
+    --card-padding: var(--spacing-xxl);
+  }
+
+  &[data-spacing='mega'] {
+    --card-padding: var(--spacing-mega);
+  }
+}

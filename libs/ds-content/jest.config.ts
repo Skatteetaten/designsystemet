@@ -22,5 +22,9 @@ export default {
   transform: {
     '^.+\\.[tj]sx?$': ['@swc/jest', swcJestConfig],
   },
+  transformIgnorePatterns: ['node_modules/(?!@skatteetaten/ds-icons)'],
+  moduleNameMapper: {
+    '\\.svg$': '<rootDir>/../../__mocks__/fileMock.js',
+  },
   coverageDirectory: '../../coverage/libs/ds-content',
 };

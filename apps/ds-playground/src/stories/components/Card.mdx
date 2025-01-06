@@ -1,0 +1,27 @@
+import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import * as CardStories from './Card.stories';
+import { VersionBadge } from '../utils/VersionBadge';
+import { DocIntro } from '../utils/DocIntro';
+
+<Meta of={CardStories} />
+
+# Card
+
+<VersionBadge packageName={'content'} />
+
+<DocIntro
+  name="Card"
+  url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/card/"
+/>
+
+<Primary />
+
+```tsx
+import { Card } from '@skatteetaten/ds-content';
+```
+
+<Controls />
+
+## Examples
+
+<Canvas of={CardStories.Examples} />

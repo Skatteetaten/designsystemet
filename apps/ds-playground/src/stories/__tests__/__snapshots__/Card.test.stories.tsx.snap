@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Card/Card AllColors smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="_card_1x4sk_5  bottomSpacingXL"
+       data-color="ochre"
+  >
+    <div class=" _cardContent_1i00x_1">
+      <div>
+        Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+      </div>
+    </div>
+  </div>
+  <div class="_card_1x4sk_5  bottomSpacingXL"
+       data-color="forest"
+  >
+    <div class=" _cardContent_1i00x_1">
+      <div>
+        Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+      </div>
+    </div>
+  </div>
+  <div class="_card_1x4sk_5  bottomSpacingXL"
+       data-color="burgundy"
+  >
+    <div class=" _cardContent_1i00x_1">
+      <div>
+        Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+      </div>
+    </div>
+  </div>
+  <div class="_card_1x4sk_5  bottomSpacingXL"
+       data-color="denim"
+  >
+    <div class=" _cardContent_1i00x_1">
+      <div>
+        Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+      </div>
+    </div>
+  </div>
+  <div class="_card_1x4sk_5  bottomSpacingXL"
+       data-color="graphite"
+  >
+    <div class=" _cardContent_1i00x_1">
+      <div>
+        Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+      </div>
+    </div>
+  </div>
+  <div class="_card_1x4sk_5  bottomSpacingXL"
+       data-color="white"
+  >
+    <div class=" _cardContent_1i00x_1">
+      <div>
+        Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Card/Card Defaults play-test 1`] = `
+<div data-test-block="true">
+  <div class="_card_1x4sk_5"
+       data-color="white"
+  >
+    Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+  </div>
+</div>
+`;
+
+exports[`Tester/Card/Card WithAriaLabelledBy play-test 1`] = `
+<div data-test-block="true">
+  <section class="_card_1x4sk_5"
+           data-color="white"
+           aria-labelledby="dummyId"
+  >
+    Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+  </section>
+</div>
+`;
+
+exports[`Tester/Card/Card WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <div id="htmlId"
+       class="_card_1x4sk_5  dummyClassname"
+       lang="en"
+       data-testid="123ID"
+       data-color="white"
+  >
+    Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+  </div>
+</div>
+`;
+
+exports[`Tester/Card/Card WithRef play-test 1`] = `
+<div data-test-block="true">
+  <div class="_card_1x4sk_5"
+       data-color="white"
+       id="dummyIdForwardedFromRef"
+  >
+    Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+  </div>
+</div>
+`;

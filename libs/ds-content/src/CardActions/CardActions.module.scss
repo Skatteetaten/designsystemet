@@ -1,0 +1,63 @@
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
+.cardActions {
+  display: flex;
+  margin: var(--card-padding);
+  gap: var(--spacing-m);
+
+  &[data-spacing='xxs'] {
+    margin: var(--spacing-xxs);
+  }
+
+  &[data-spacing='xs'] {
+    margin: var(--spacing-xs);
+  }
+
+  &[data-spacing='s'] {
+    margin: var(--spacing-s);
+  }
+
+  &[data-spacing='m'] {
+    margin: var(--spacing-m);
+  }
+
+  &[data-spacing='l'] {
+    margin: var(--spacing-l);
+  }
+
+  &[data-spacing='xl'] {
+    margin: var(--spacing-xl);
+  }
+
+  &[data-spacing='xxl'] {
+    margin: var(--spacing-xxl);
+  }
+
+  &[data-spacing='mega'] {
+    margin: var(--spacing-mega);
+  }
+
+  &[data-spacing='responsive'] {
+    --card-padding: var(--card-padding-mobile);
+
+    @media (min-width: breakpoints.$breakpoint-xs) {
+      --card-padding: var(--card-padding-xs);
+    }
+
+    @media (min-width: breakpoints.$breakpoint-s) {
+      --card-padding: var(--card-padding-s);
+    }
+
+    @media (min-width: breakpoints.$breakpoint-m) {
+      --card-padding: var(--card-padding-m);
+    }
+
+    @media (min-width: breakpoints.$breakpoint-l) {
+      --card-padding: var(--card-padding-l);
+    }
+
+    @media (min-width: breakpoints.$breakpoint-xl) {
+      --card-padding: var(--card-padding-xl);
+    }
+  }
+}

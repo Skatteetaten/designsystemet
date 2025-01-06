@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Card/Actions WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <div id="htmlId"
+       class="dummyClassname _cardActions_oshe8_1"
+       lang="en"
+       data-testid="123ID"
+  >
+    Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+  </div>
+</div>
+`;
+
+exports[`Tester/Card/Actions WithRef play-test 1`] = `
+<div data-test-block="true">
+  <div class=" _cardActions_oshe8_1"
+       id="dummyIdForwardedFromRef"
+  >
+    Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+  </div>
+</div>
+`;

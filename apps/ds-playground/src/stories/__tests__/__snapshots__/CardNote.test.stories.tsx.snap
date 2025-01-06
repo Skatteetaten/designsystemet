@@ -1,0 +1,274 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Card/Note AllVariants smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="_card_1x4sk_5"
+       data-color="white"
+  >
+    <div class="bottomSpacingXL _cardNote_141lg_1"
+         data-variant="neutral"
+    >
+      <div class="_cardNoteHeadingContainer_141lg_51">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _cardNoteIcon_141lg_23"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M13 9h-2V7h2v2Zm0 8h-2v-6h2v6ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+          </path>
+        </svg>
+        <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47  ">
+          Merknad
+        </h3>
+        <button class="_button_g87u5_1 _button_medium_g87u5_45  _cardNoteCloseButton_141lg_47"
+                type="button"
+        >
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-labelledby="svgtitle-:r7:"
+               aria-hidden="false"
+               role="img"
+          >
+            <title id="svgtitle-:r7:">
+              Lukk
+            </title>
+            <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+            </path>
+          </svg>
+        </button>
+      </div>
+      <div class=" _cardContent_1i00x_1">
+        <div>
+          Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+        </div>
+      </div>
+      <div class="_cardNoteArrow_141lg_26">
+      </div>
+    </div>
+    <div class="bottomSpacingXL _cardNote_141lg_1"
+         data-variant="warning"
+    >
+      <div class="_cardNoteHeadingContainer_141lg_51">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _cardNoteIcon_141lg_23"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M13 13h-2V7h2v6Zm0 4h-2v-2h2v2ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+          </path>
+        </svg>
+        <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47  ">
+          Merknad
+        </h3>
+        <button class="_button_g87u5_1 _button_medium_g87u5_45  _cardNoteCloseButton_141lg_47"
+                type="button"
+        >
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-labelledby="svgtitle-:r9:"
+               aria-hidden="false"
+               role="img"
+          >
+            <title id="svgtitle-:r9:">
+              Lukk
+            </title>
+            <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+            </path>
+          </svg>
+        </button>
+      </div>
+      <div class=" _cardContent_1i00x_1">
+        <div>
+          Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+        </div>
+      </div>
+      <div class="_cardNoteArrow_141lg_26">
+      </div>
+    </div>
+    <div class="bottomSpacingXL _cardNote_141lg_1"
+         data-variant="danger"
+    >
+      <div class="_cardNoteHeadingContainer_141lg_51">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _cardNoteIcon_141lg_23"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
+          </path>
+        </svg>
+        <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47  ">
+          Merknad
+        </h3>
+        <button class="_button_g87u5_1 _button_medium_g87u5_45  _cardNoteCloseButton_141lg_47"
+                type="button"
+        >
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-labelledby="svgtitle-:rb:"
+               aria-hidden="false"
+               role="img"
+          >
+            <title id="svgtitle-:rb:">
+              Lukk
+            </title>
+            <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+            </path>
+          </svg>
+        </button>
+      </div>
+      <div class=" _cardContent_1i00x_1">
+        <div>
+          Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+        </div>
+      </div>
+      <div class="_cardNoteArrow_141lg_26">
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Card/Note WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <div id="htmlId"
+       class="dummyClassname _cardNote_141lg_1"
+       lang="en"
+       data-testid="123ID"
+       data-variant="neutral"
+  >
+    <div class="_cardNoteHeadingContainer_141lg_51">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _cardNoteIcon_141lg_23"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M13 9h-2V7h2v2Zm0 8h-2v-6h2v6ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+        </path>
+      </svg>
+      <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47  ">
+        Merknad
+      </h3>
+      <button class="_button_g87u5_1 _button_medium_g87u5_45  _cardNoteCloseButton_141lg_47"
+              type="button"
+      >
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r3:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r3:">
+            Lukk
+          </title>
+          <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+    <div class="_cardNoteArrow_141lg_26">
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Card/Note WithOnClose play-test 1`] = `
+<div data-test-block="true">
+</div>
+`;
+
+exports[`Tester/Card/Note WithRef play-test 1`] = `
+<div data-test-block="true">
+  <div class=" _cardNote_141lg_1"
+       data-variant="neutral"
+       id="dummyIdForwardedFromRef"
+  >
+    <div class="_cardNoteHeadingContainer_141lg_51">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _cardNoteIcon_141lg_23"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M13 9h-2V7h2v2Zm0 8h-2v-6h2v6ZM12 2C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Z">
+        </path>
+      </svg>
+      <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47  ">
+        Merknad
+      </h3>
+      <button class="_button_g87u5_1 _button_medium_g87u5_45  _cardNoteCloseButton_141lg_47"
+              type="button"
+      >
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r1:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r1:">
+            Lukk
+          </title>
+          <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+    <div class="_cardNoteArrow_141lg_26">
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Card/Note WithSvgPath smoke-test 1`] = `
+<div data-test-block="true">
+  <div class=" _cardNote_141lg_1"
+       data-variant="neutral"
+  >
+    <div class="_cardNoteHeadingContainer_141lg_51">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _cardNoteIcon_141lg_23"
+           viewbox="0 0 24 24"
+           focusable="false"
+           aria-hidden="true"
+           role="img"
+      >
+        <path d="M11.52 4.656a7.61 7.61 0 0 1 1.682.18l-2.788 9.301 8.614-3.568c.15.61.223 1.235.22 1.863a7.723 7.723 0 0 1-7.728 7.728c-4.272 0-7.776-3.456-7.776-7.728S7.2 4.656 11.52 4.656Zm4.058-.789-.074-.027c2.01.7 3.623 2.234 4.475 4.17l-6.442 2.669 2.041-6.812Z">
+        </path>
+      </svg>
+      <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47  ">
+        Merknad
+      </h3>
+      <button class="_button_g87u5_1 _button_medium_g87u5_45  _cardNoteCloseButton_141lg_47"
+              type="button"
+      >
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r5:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r5:">
+            Lukk
+          </title>
+          <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+    <div class="_cardNoteArrow_141lg_26">
+    </div>
+  </div>
+</div>
+`;
