@@ -1,4 +1,11 @@
-import { Children, forwardRef, JSX, useEffect, useRef } from 'react';
+import {
+  Children,
+  forwardRef,
+  JSX,
+  useEffect,
+  useImperativeHandle,
+  useRef,
+} from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
@@ -36,6 +43,7 @@ export const ErrorSummary = forwardRef<HTMLDivElement, ErrorSummaryProps>(
       : '';
 
     const errorSummaryRef = useRef<HTMLDivElement>(null);
+    useImperativeHandle(ref, () => errorSummaryRef.current as HTMLDivElement);
     useEffect(() => {
       if (showErrorSummary) {
         errorSummaryRef.current?.focus();
@@ -44,19 +52,17 @@ export const ErrorSummary = forwardRef<HTMLDivElement, ErrorSummaryProps>(
 
     return (
       <div
-        ref={ref}
+        ref={errorSummaryRef}
+        className={styles.wrapper}
         id={id}
         lang={lang}
         data-testid={dataTestId}
         aria-live={'assertive'}
+        tabIndex={-1}
         aria-atomic
       >
         {showErrorSummary && (
-          <div
-            ref={errorSummaryRef}
-            tabIndex={-1}
-            className={`${styles.errorSummary} ${className}`}
-          >
+          <div className={`${styles.errorSummary} ${className}`}>
             <div className={styles.iconContainer}>
               <Icon
                 svgPath={WarningSVGpath}
