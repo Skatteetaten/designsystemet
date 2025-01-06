@@ -8,6 +8,9 @@ import {
   getDescriptionListSizeDefault,
   getDescriptionDirectionDefault,
   getDescriptionListIsVerticalOnMobileDefault,
+  getDescriptionListVariantDefault,
+  getTermWeightDefault,
+  getDescriptionWeightDefault,
 } from '@skatteetaten/ds-content';
 import { ErrorMessage } from '@skatteetaten/ds-forms';
 import {
@@ -39,7 +42,10 @@ const meta = {
       },
     },
     variant: {
-      table: { category: category.props },
+      table: {
+        category: category.props,
+        defaultValue: { summary: getDescriptionListVariantDefault() },
+      },
     },
     hasSpacing: {
       table: {
@@ -65,11 +71,13 @@ const meta = {
     termWeight: {
       table: {
         category: category.props,
+        defaultValue: { summary: getTermWeightDefault() },
       },
     },
     descriptionWeight: {
       table: {
         category: category.props,
+        defaultValue: { summary: getDescriptionWeightDefault() },
       },
     },
   },
