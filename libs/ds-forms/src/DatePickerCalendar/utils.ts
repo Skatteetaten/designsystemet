@@ -178,7 +178,7 @@ export const isWithinMinMaxRange = (
   lastValidDate.setFullYear(lastValidYear);
 
   minDate?.setHours(0, 0, 0, 0);
-  maxDate?.setHours(23, 59, 59, 999);
+  maxDate?.setHours(0, 0, 0, 0);
 
   const start = minDate && isValid(minDate) ? minDate : firstValidDate;
   const end = maxDate && isValid(maxDate) ? maxDate : lastValidDate;
@@ -274,7 +274,7 @@ export const findNextAvailableDate = (
   }
 
   startDate.setHours(0, 0, 0, 0);
-  maxDate?.setHours(23, 59, 59, 999);
+  maxDate?.setHours(0, 0, 0, 0);
 
   const maxNextDate =
     maxDate && isValid(maxDate)
