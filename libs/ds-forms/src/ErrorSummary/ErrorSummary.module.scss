@@ -2,10 +2,13 @@
 
 $border-width: 3px;
 
-.errorSummary {
-  display: flex;
+.wrapper {
   width: 100%;
   max-width: var(--container-s);
+}
+
+.errorSummary {
+  display: flex;
   box-sizing: border-box;
   flex-direction: column;
   border: $border-width solid var(--semantic-danger-foreground);
