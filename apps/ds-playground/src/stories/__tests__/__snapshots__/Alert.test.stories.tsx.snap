@@ -5,9 +5,9 @@ exports[`Tester/Alert AllLightVariants smoke-test 1`] = `
   <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_success_lpz1r_47 _alert_light_lpz1r_42 bottomSpacingXL">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_success_17bwy_47 _alert_light_17bwy_42 bottomSpacingXL">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -17,7 +17,7 @@ exports[`Tester/Alert AllLightVariants smoke-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
     </div>
@@ -25,9 +25,9 @@ exports[`Tester/Alert AllLightVariants smoke-test 1`] = `
   <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_neutral_lpz1r_55 _alert_light_lpz1r_42 bottomSpacingXL">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_neutral_17bwy_56 _alert_light_17bwy_42 bottomSpacingXL">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -37,7 +37,7 @@ exports[`Tester/Alert AllLightVariants smoke-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
     </div>
@@ -45,9 +45,9 @@ exports[`Tester/Alert AllLightVariants smoke-test 1`] = `
   <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_warning_lpz1r_63 _alert_light_lpz1r_42 bottomSpacingXL">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_warning_17bwy_65 _alert_light_17bwy_42 bottomSpacingXL">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -57,7 +57,7 @@ exports[`Tester/Alert AllLightVariants smoke-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
     </div>
@@ -65,9 +65,9 @@ exports[`Tester/Alert AllLightVariants smoke-test 1`] = `
   <div aria-live="assertive"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_danger_lpz1r_71 _alert_light_lpz1r_42 bottomSpacingXL">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_danger_17bwy_74 _alert_light_17bwy_42 bottomSpacingXL">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -77,7 +77,7 @@ exports[`Tester/Alert AllLightVariants smoke-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
     </div>
@@ -90,9 +90,9 @@ exports[`Tester/Alert AllVariants smoke-test 1`] = `
   <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_success_lpz1r_47  bottomSpacingXL">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_success_17bwy_47  bottomSpacingXL">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -102,7 +102,7 @@ exports[`Tester/Alert AllVariants smoke-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
     </div>
@@ -110,9 +110,9 @@ exports[`Tester/Alert AllVariants smoke-test 1`] = `
   <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_neutral_lpz1r_55  bottomSpacingXL">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_neutral_17bwy_56  bottomSpacingXL">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -122,7 +122,7 @@ exports[`Tester/Alert AllVariants smoke-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
     </div>
@@ -130,9 +130,9 @@ exports[`Tester/Alert AllVariants smoke-test 1`] = `
   <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_warning_lpz1r_63  bottomSpacingXL">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_warning_17bwy_65  bottomSpacingXL">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -142,7 +142,7 @@ exports[`Tester/Alert AllVariants smoke-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
     </div>
@@ -150,9 +150,9 @@ exports[`Tester/Alert AllVariants smoke-test 1`] = `
   <div aria-live="assertive"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_danger_lpz1r_71  bottomSpacingXL">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_danger_17bwy_74  bottomSpacingXL">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -162,7 +162,7 @@ exports[`Tester/Alert AllVariants smoke-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
     </div>
@@ -175,9 +175,9 @@ exports[`Tester/Alert AllVariantsMobile smoke-test 1`] = `
   <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_success_lpz1r_47  bottomSpacingXL">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_success_17bwy_47  bottomSpacingXL">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -187,7 +187,7 @@ exports[`Tester/Alert AllVariantsMobile smoke-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
     </div>
@@ -195,9 +195,9 @@ exports[`Tester/Alert AllVariantsMobile smoke-test 1`] = `
   <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_neutral_lpz1r_55  bottomSpacingXL">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_neutral_17bwy_56  bottomSpacingXL">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -207,7 +207,7 @@ exports[`Tester/Alert AllVariantsMobile smoke-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
     </div>
@@ -215,9 +215,9 @@ exports[`Tester/Alert AllVariantsMobile smoke-test 1`] = `
   <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_warning_lpz1r_63  bottomSpacingXL">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_warning_17bwy_65  bottomSpacingXL">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -227,7 +227,7 @@ exports[`Tester/Alert AllVariantsMobile smoke-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
     </div>
@@ -235,9 +235,9 @@ exports[`Tester/Alert AllVariantsMobile smoke-test 1`] = `
   <div aria-live="assertive"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_danger_lpz1r_71  bottomSpacingXL">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_danger_17bwy_74  bottomSpacingXL">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -247,7 +247,7 @@ exports[`Tester/Alert AllVariantsMobile smoke-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
     </div>
@@ -269,9 +269,9 @@ exports[`Tester/Alert DefaultsWithMessage play-test 1`] = `
   <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_neutral_lpz1r_55">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_neutral_17bwy_56">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -281,7 +281,7 @@ exports[`Tester/Alert DefaultsWithMessage play-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
     </div>
@@ -294,9 +294,9 @@ exports[`Tester/Alert VariantDanger play-test 1`] = `
   <div aria-live="assertive"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_danger_lpz1r_71">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_danger_17bwy_74">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -306,7 +306,7 @@ exports[`Tester/Alert VariantDanger play-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
     </div>
@@ -319,9 +319,9 @@ exports[`Tester/Alert VariantNeutral play-test 1`] = `
   <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_neutral_lpz1r_55">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_neutral_17bwy_56">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -331,7 +331,7 @@ exports[`Tester/Alert VariantNeutral play-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
     </div>
@@ -344,9 +344,9 @@ exports[`Tester/Alert VariantSuccess play-test 1`] = `
   <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_success_lpz1r_47">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_success_17bwy_47">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -356,7 +356,7 @@ exports[`Tester/Alert VariantSuccess play-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
     </div>
@@ -369,9 +369,9 @@ exports[`Tester/Alert VariantWarning play-test 1`] = `
   <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_warning_lpz1r_63">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_warning_17bwy_65">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -381,7 +381,7 @@ exports[`Tester/Alert VariantWarning play-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
     </div>
@@ -394,9 +394,9 @@ exports[`Tester/Alert WithAriaLiveOff play-test 1`] = `
   <div aria-live="off"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_neutral_lpz1r_55">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_neutral_17bwy_56">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -406,7 +406,7 @@ exports[`Tester/Alert WithAriaLiveOff play-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
     </div>
@@ -422,9 +422,9 @@ exports[`Tester/Alert WithAttributes play-test 1`] = `
        aria-live="polite"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_neutral_lpz1r_55  dummyClassname">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_neutral_17bwy_56  dummyClassname">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -434,7 +434,7 @@ exports[`Tester/Alert WithAttributes play-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
     </div>
@@ -447,9 +447,9 @@ exports[`Tester/Alert WithCloseButton smoke-test 1`] = `
   <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_neutral_lpz1r_55">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_neutral_17bwy_56">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -459,10 +459,10 @@ exports[`Tester/Alert WithCloseButton smoke-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
-      <button class="_button_g87u5_1 _button_small_g87u5_37  _closeButton_lpz1r_30"
+      <button class="_button_g87u5_1 _button_small_g87u5_37  _closeButton_17bwy_30"
               type="button"
       >
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
@@ -498,9 +498,9 @@ exports[`Tester/Alert WithCustomIcon smoke-test 1`] = `
   <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_neutral_lpz1r_55">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_neutral_17bwy_56">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -510,7 +510,7 @@ exports[`Tester/Alert WithCustomIcon smoke-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
     </div>
@@ -523,9 +523,9 @@ exports[`Tester/Alert WithCustomSVGPath smoke-test 1`] = `
   <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_neutral_lpz1r_55">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_neutral_17bwy_56">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -535,7 +535,7 @@ exports[`Tester/Alert WithCustomSVGPath smoke-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
       </span>
     </div>
@@ -548,9 +548,9 @@ exports[`Tester/Alert WithLongText smoke-test 1`] = `
   <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_neutral_lpz1r_55">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_neutral_17bwy_56">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -560,7 +560,7 @@ exports[`Tester/Alert WithLongText smoke-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon. Dersom teksten går over flere linjer, så vil ikonene beholde plasseringen sin.
       </span>
     </div>
@@ -573,9 +573,9 @@ exports[`Tester/Alert WithLongTextAndBreaking smoke-test 1`] = `
   <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_neutral_lpz1r_55">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_neutral_17bwy_56">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -585,7 +585,7 @@ exports[`Tester/Alert WithLongTextAndBreaking smoke-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         Avvistavkortutsteder.Takontaktmedkortutstederformerinformasjon.Dersomtekstengåroverflerelinjer,såvilikonenebeholdeplasseringensin.
       </span>
     </div>
@@ -598,9 +598,9 @@ exports[`Tester/Alert WithMarkup smoke-test 1`] = `
   <div aria-live="polite"
        aria-atomic="true"
   >
-    <div class="_alert_lpz1r_1 _alert_neutral_lpz1r_55">
-      <span class="_iconWrapper_lpz1r_6">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+    <div class="_alert_17bwy_1 _alert_neutral_17bwy_56">
+      <span class="_iconWrapper_17bwy_6">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -610,7 +610,7 @@ exports[`Tester/Alert WithMarkup smoke-test 1`] = `
           </path>
         </svg>
       </span>
-      <span class="_content_lpz1r_15">
+      <span class="_content_17bwy_15">
         <h1 class="_heading_12p5o_1 _heading_level4_12p5o_43  ">
           Avvist av kortutsteder
         </h1>

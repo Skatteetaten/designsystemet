@@ -736,9 +736,9 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
     <div aria-live="polite"
          aria-atomic="true"
     >
-      <div class="_alert_lpz1r_1 _alert_success_lpz1r_47  _alert_6otu2_85">
-        <span class="_iconWrapper_lpz1r_6">
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+      <div class="_alert_17bwy_1 _alert_success_17bwy_47  _alert_6otu2_85">
+        <span class="_iconWrapper_17bwy_6">
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -748,7 +748,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
             </path>
           </svg>
         </span>
-        <span class="_content_lpz1r_15">
+        <span class="_content_17bwy_15">
           Lastet opp 4 filer
         </span>
       </div>
@@ -925,9 +925,9 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
     <div aria-live="polite"
          aria-atomic="true"
     >
-      <div class="_alert_lpz1r_1 _alert_warning_lpz1r_63  _alert_6otu2_85">
-        <span class="_iconWrapper_lpz1r_6">
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_lpz1r_6"
+      <div class="_alert_17bwy_1 _alert_warning_17bwy_65  _alert_6otu2_85">
+        <span class="_iconWrapper_17bwy_6">
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_17bwy_6"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -937,7 +937,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
             </path>
           </svg>
         </span>
-        <span class="_content_lpz1r_15">
+        <span class="_content_17bwy_15">
           1 av 3 filer ble stoppet av virussjekk.
         </span>
       </div>

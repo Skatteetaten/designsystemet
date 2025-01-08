@@ -51,9 +51,10 @@
   }
 
   &_success {
-    border-left: 0.25rem solid var(--semantic-success-foreground);
+    border-width: 1px 1px 1px 0.25rem;
+    border-style: solid;
+    border-color: var(--semantic-success-foreground);
     background-color: var(--semantic-success-background);
-    outline: 1px solid var(--semantic-success-foreground);
 
     .icon {
       fill: var(--semantic-success-foreground);
@@ -61,9 +62,10 @@
   }
 
   &_neutral {
-    border-left: 0.25rem solid var(--semantic-warning-foreground);
+    border-width: 1px 1px 1px 0.25rem;
+    border-style: solid;
+    border-color: var(--semantic-warning-foreground);
     background-color: var(--semantic-warning-background);
-    outline: 1px solid var(--semantic-warning-foreground);
 
     .icon {
       fill: var(--semantic-warning-foreground);
@@ -71,9 +73,10 @@
   }
 
   &_warning {
-    border-left: 0.25rem solid var(--semantic-danger-foreground);
+    border-width: 1px 1px 1px 0.25rem;
+    border-style: solid;
+    border-color: var(--semantic-danger-foreground);
     background-color: var(--semantic-danger-background);
-    outline: 1px solid var(--semantic-danger-foreground);
 
     .icon {
       fill: var(--semantic-danger-foreground);
