@@ -4,7 +4,11 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { Button, Link } from '@skatteetaten/ds-buttons';
 import { RadioGroup } from '@skatteetaten/ds-forms';
-import { InfoOutlineSVGpath } from '@skatteetaten/ds-icons';
+import {
+  InfoOutlineSVGpath,
+  UpdateSVGpath,
+  WarningOutlineIcon,
+} from '@skatteetaten/ds-icons';
 import {
   Modal,
   getModalDismissOnEscDefault,
@@ -12,7 +16,7 @@ import {
   getModalPaddingDefault,
   getModalVariantDefault,
 } from '@skatteetaten/ds-overlays';
-import { Paragraph } from '@skatteetaten/ds-typography';
+import { List, Paragraph } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
 import farmerIllustration from '../../assets/farmer-illustration.svg';
@@ -61,6 +65,10 @@ const meta = {
         defaultValue: { summary: getModalPaddingDefault() },
       },
     },
+    renderIcon: {
+      control: { disable: true },
+      table: { category: category.props },
+    },
     shadowRootNode: {
       control: false,
       table: { control: false, category: category.props },
@@ -107,8 +115,6 @@ export const Examples: Story = {
   render: (_args): JSX.Element => {
     const refModal = useRef<HTMLDialogElement>(null);
     const refModalRadioGroup = useRef<HTMLDialogElement>(null);
-    const refModalImportant = useRef<HTMLDialogElement>(null);
-    const refModalWait = useRef<HTMLDialogElement>(null);
 
     return (
       <>
@@ -166,7 +172,18 @@ export const Examples: Story = {
             {'Ok'}
           </Button>
         </Modal>
+      </>
+    );
+  },
+} satisfies Story;
+Examples.parameters = exampleParameters;
 
+export const ViktigMelding: Story = {
+  render: (_args): JSX.Element => {
+    const refModalImportant = useRef<HTMLDialogElement>(null);
+
+    return (
+      <>
         <Button
           className={'exampleSpacing'}
           variant={'tertiary'}
@@ -194,7 +211,18 @@ export const Examples: Story = {
             </Link>
           </div>
         </Modal>
+      </>
+    );
+  },
+} satisfies Story;
+ViktigMelding.parameters = exampleParameters;
 
+export const Ventevarsel: Story = {
+  render: (_args): JSX.Element => {
+    const refModalWait = useRef<HTMLDialogElement>(null);
+
+    return (
+      <>
         <Button
           className={'exampleSpacing'}
           variant={'tertiary'}
@@ -227,4 +255,57 @@ export const Examples: Story = {
     );
   },
 } satisfies Story;
-Examples.parameters = exampleParameters;
+Ventevarsel.parameters = exampleParameters;
+
+export const Feilmeldingsmodal: Story = {
+  render: (_args): JSX.Element => {
+    const refModalFeil = useRef<HTMLDialogElement>(null);
+
+    return (
+      <>
+        <Button
+          className={'exampleSpacing'}
+          variant={'danger'}
+          onClick={(): void => refModalFeil.current?.showModal()}
+        >
+          {'Åpne feilmeldingsmodal'}
+        </Button>
+        <Modal
+          ref={refModalFeil}
+          title={'Beklager, noe gikk galt'}
+          padding={'mega'}
+          renderIcon={(): JSX.Element => (
+            <WarningOutlineIcon size={'extraLarge'} />
+          )}
+        >
+          <Paragraph hasSpacing>
+            {'Vi klarte ikke å hente skjemet akkurat nå.'}
+          </Paragraph>
+          <Paragraph className={'bold'}>{'Du kan prøve å'}</Paragraph>
+          <List hasSpacing>
+            <List.Element>
+              {'vente noen minutter og '}
+              <a href={'#link'}>{'laste inn siden på nytt'}</a>
+            </List.Element>
+            <List.Element>
+              <a href={'#link'}>{'gå tilbake til forrige side'}</a>
+            </List.Element>
+          </List>
+          <Paragraph hasSpacing>
+            {'Hvis du fortsatt har problemer kan du '}
+            <a href={'#link'}>{'kontakte oss'}</a>
+          </Paragraph>
+          <Button
+            className={'marginRightM'}
+            svgPath={UpdateSVGpath}
+            onClick={(): void => refModalFeil.current?.close()}
+          >
+            {'Last inn siden på nytt'}
+          </Button>
+          <Button variant={'secondary'}>{'Gå til forsiden'}</Button>
+        </Modal>
+      </>
+    );
+  },
+} satisfies Story;
+Feilmeldingsmodal.parameters = exampleParameters;

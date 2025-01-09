@@ -186,3 +186,7 @@ a.docs {
 .semantic-article.bottom-spacing {
   margin-bottom: var(--spacing-l);
 }
+
+.bold {
+  font-weight: var(--font-weight-bold) !important;
+}

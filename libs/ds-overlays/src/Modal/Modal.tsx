@@ -47,9 +47,9 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
       padding = getModalPaddingDefault(),
       title,
       variant = getModalVariantDefault(),
-
       shadowRootNode,
       onClose,
+      renderIcon,
       children,
     },
     ref
@@ -183,7 +183,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
               }}
             />
           )}
-          {imageSource && (
+          {!renderIcon && imageSource && (
             <img
               src={imageSource}
               alt={imageSourceAltText ?? ''}
@@ -196,6 +196,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
             {variant === 'important' && (
               <SkatteetatenLogo className={styles.modalLogo} />
             )}
+            {!imageSource && renderIcon && <div>{renderIcon?.()}</div>}
             <Heading
               className={`${styles.modalHeading} ${headingNoPaddingClassName} ${hideTitleClassName}`.trim()}
               id={headingId}
