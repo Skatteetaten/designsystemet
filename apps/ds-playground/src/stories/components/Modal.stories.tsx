@@ -1,4 +1,4 @@
-import { useRef, JSX } from 'react';
+import { useRef, JSX, useState, useEffect } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
@@ -110,6 +110,38 @@ export const Examples: Story = {
     const refModalImportant = useRef<HTMLDialogElement>(null);
     const refModalWait = useRef<HTMLDialogElement>(null);
 
+    const twentyMin = 1200;
+    const [time, setTime] = useState(twentyMin);
+
+    useEffect(() => {
+      if (time > 0) {
+        resetTimer();
+      }
+
+      if (time === 0) {
+        refModalWait.current?.showModal();
+      }
+      const intervalId = setInterval(() => {
+        setTime((t) => t - 1);
+      }, 1000);
+      return (): void => clearInterval(intervalId);
+    }, [time]);
+
+    const closeDialog = (): void => {
+      refModalWait.current?.close();
+      setTime(twentyMin);
+      document.querySelector('main')?.focus();
+    };
+
+    const resetTimer = (): void => {
+      document.onmousemove = (): void => setTime(twentyMin);
+      document.onkeydown = (): void => setTime(twentyMin);
+    };
+
+    window.onload = (): void => {
+      resetTimer();
+    };
+
     return (
       <>
         <Button
@@ -195,14 +227,12 @@ export const Examples: Story = {
           </div>
         </Modal>
 
-        <Button
-          className={'exampleSpacing'}
-          variant={'tertiary'}
-          svgPath={InfoOutlineSVGpath}
-          onClick={(): void => refModalWait.current?.showModal()}
-        >
-          {'Vis ventevarsel'}
-        </Button>
+        <Paragraph>{`Vent i ${time} sekunder, så vises ventevarsel.`}</Paragraph>
+        <Paragraph>
+          {
+            'Hver gang du beveger musepekeren eller gjør et tastetrykk, resettes timeren.'
+          }
+        </Paragraph>
         <Modal
           ref={refModalWait}
           title={'Hei, er du fortsatt her?'}
@@ -210,6 +240,7 @@ export const Examples: Story = {
           imageSourceAltText={
             'Illustrasjon av travel person med seks armer, opptatt med kontorarbeid.'
           }
+          onClose={closeDialog}
         >
           <Paragraph hasSpacing>
             {
@@ -218,7 +249,9 @@ export const Examples: Story = {
           </Paragraph>
           <Button
             className={'width100'}
-            onClick={(): void => refModalWait.current?.close()}
+            onClick={(): void => {
+              closeDialog();
+            }}
           >
             {'Ja'}
           </Button>
