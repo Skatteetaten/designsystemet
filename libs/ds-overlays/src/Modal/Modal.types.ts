@@ -30,7 +30,10 @@ interface ModalComponentCommonProps extends BaseProps {
   dismissOnOutsideClick?: boolean;
   /** Om modalen kan lukkes ved Esc-trykk. Modalen lukkes ved Esc-trykk som default. */
   dismissOnEsc?: boolean;
-  /* Modal i shadowndom - Deprecated: Prop skal fjernes ved lansering av neste major versjon  */
+  /**
+   * Modal i shadowndom.
+   * Deprecated: Prop skal fjernes ved lansering av neste major versjon.
+   */
   shadowRootNode?: Document | ShadowRoot;
   /** Callback når modalen lukkes */
   onClose?: () => void;
