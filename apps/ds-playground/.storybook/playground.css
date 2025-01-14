@@ -18,6 +18,11 @@ code {
   height: 100vh;
 }
 
+.scrollToTopMainPusher {
+  height: 200vh;
+  padding-top: 100vh;
+  color: var(--palette-denim-5);
+}
 .width100 {
   width: 100%;
 }

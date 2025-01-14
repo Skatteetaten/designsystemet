@@ -15,6 +15,8 @@ export interface ScrollToTopButtonProps extends BaseProps {
   shadowRootNode?: Document | ShadowRoot;
   /** Antall piksler man må scrolle før knappen synes. 0 gir alltid synlig knapp. */
   visibilityThreshold?: number;
+  /** om det skal scrolles til første main */
+  scrollToMain?: boolean;
   /** Tekst på knapp. */
   children?: string;
 }

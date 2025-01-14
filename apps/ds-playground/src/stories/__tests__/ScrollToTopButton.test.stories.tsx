@@ -24,6 +24,9 @@ const meta = {
     classNames: {
       table: { disable: true },
     },
+    scrollToMain: {
+      table: { disable: true },
+    },
     visibilityThreshold: {
       table: { disable: true },
     },
@@ -283,5 +286,37 @@ export const WithShadowDom = {
       customElement?.shadowRoot &&
       customElement.shadowRoot.querySelector('main:focus');
     await expect(main).toBeInTheDocument();
+  },
+} satisfies Story;
+
+const TemplateMainFarDown: StoryFn<typeof ScrollToTopButton> = (args) => (
+  <div className={'height200vh'}>
+    <div className={'scrollToTopMainPusher'}>{'Mainpusher'}</div>
+    <main className={'scrollToTopContainer'} tabIndex={-1}>
+      <ExternalLayout />
+      <ScrollToTopButton {...args} />
+    </main>
+  </div>
+);
+
+export const WithNotScrollToMain = {
+  render: TemplateMainFarDown,
+  name: 'Not Scroll To Main',
+  args: {
+    ...defaultArgs,
+    scrollToMain: false,
+  },
+  argTypes: {
+    scrollToMain: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const scrollToTopButton = canvas.getByRole('button', {
+      name: defaultButtonText,
+    });
+    await expect(scrollToTopButton).toBeInTheDocument();
+    const user = userEvent.setup();
+    user.click(scrollToTopButton);
+    await expect(canvasElement.querySelector('main')).not.toHaveFocus();
   },
 } satisfies Story;
