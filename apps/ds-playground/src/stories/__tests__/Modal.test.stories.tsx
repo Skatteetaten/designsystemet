@@ -370,6 +370,9 @@ const TemplateWithShadowDom: StoryFn<typeof Modal> = (args) => {
       </Button>
       <Modal ref={ref} {...args} shadowRootNode={shadowRoot ?? undefined}>
         <Paragraph hasSpacing>{loremIpsum}</Paragraph>
+        <div className={'borderLeftBlack'}>
+          {'Klikk til venstre for border skal ikke lukke modal'}
+        </div>
         <div className={'flex'}>
           <Button
             variant={'primary'}

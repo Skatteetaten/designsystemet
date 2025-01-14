@@ -148,7 +148,7 @@ export const Examples: Story = {
           ref={refModalRadioGroup}
           title={'Dette er dine roller'}
           onClose={() => {
-            console.log('lukker mod2');
+            console.log('Kjører onClose på refModalRadioGroup');
           }}
         >
           <RadioGroup legend={'Velge en rolle'}>
