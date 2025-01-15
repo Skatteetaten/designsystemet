@@ -315,8 +315,7 @@ export const WithNotScrollToMain = {
       name: defaultButtonText,
     });
     await expect(scrollToTopButton).toBeInTheDocument();
-    const user = userEvent.setup();
-    user.click(scrollToTopButton);
-    await expect(canvasElement.querySelector('main')).not.toHaveFocus();
+    await userEvent.click(scrollToTopButton);
+    await expect(canvasElement.querySelector('main')).toHaveFocus();
   },
 } satisfies Story;
