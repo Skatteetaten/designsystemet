@@ -70,8 +70,8 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
 exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
 <div data-test-block="true">
   <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
-    Denne testen skal sjekke om fokus blir satt på BODY-elementet når modalen lukkes. 
-        Testes ved å reloade siden. Det er ved programatisk åpning av modalen at fokus tidligere ikke har blitt satt korrekt.
+    Denne testen skal sjekke om fokus blir satt på BODY-elementet når modalen lukkes etter at bruker har trykket på Escape-knappen. 
+        Modalen åpnes ved å laste siden på nytt.
   </p>
   <dialog class="_modal_125nh_5"
           aria-labelledby="modalHeadingId-:r14:"
@@ -103,7 +103,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
           Vil du erstatte nye opplysninger fra fil?
         </h1>
         <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
-          Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
+          Modalinnhold
         </p>
       </div>
     </div>
