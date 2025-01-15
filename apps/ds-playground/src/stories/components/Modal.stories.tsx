@@ -20,6 +20,7 @@ import { List, Paragraph } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
 import farmerIllustration from '../../assets/farmer-illustration.svg';
+import skeLogo from '../../assets/ske-logo.svg';
 import waitIllustration from '../../assets/wait-alert-illustration.png';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import { exampleParameters } from '../utils/stories.utils';
@@ -66,8 +67,16 @@ const meta = {
       },
     },
     renderIcon: {
-      control: { disable: true },
       table: { category: category.props },
+      control: 'select',
+      options: ['None', 'Icon', 'Logo'],
+      mapping: {
+        None: '',
+        Icon: (): JSX.Element => <WarningOutlineIcon size={'extraLarge'} />,
+        Logo: (): JSX.Element => (
+          <img src={skeLogo} alt={'Skatteetaten logo'} />
+        ),
+      },
     },
     shadowRootNode: {
       control: false,
