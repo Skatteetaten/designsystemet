@@ -1,4 +1,4 @@
-import { useEffect, useRef, JSX, useState } from 'react';
+import { useEffect, useRef, JSX, useState, RefAttributes } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, userEvent, fireEvent, within, waitFor } from '@storybook/test';
@@ -6,7 +6,7 @@ import { expect, userEvent, fireEvent, within, waitFor } from '@storybook/test';
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
-import { Modal } from '@skatteetaten/ds-overlays';
+import { Modal, ModalProps } from '@skatteetaten/ds-overlays';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
@@ -532,6 +532,45 @@ export const WithStateChangeAndTextFieldFocus = {
   },
 } satisfies Story;
 
+const WithAutoOpenRender = (
+  args: JSX.IntrinsicAttributes & ModalProps & RefAttributes<HTMLDialogElement>
+): JSX.Element => {
+  const ref = useRef<HTMLDialogElement>(null);
+  useEffect(() => {
+    ref.current?.showModal();
+  }, []);
+  const onCloseOnClickHandler = (): void => {
+    ref.current?.close();
+  };
+  return (
+    <>
+      <Paragraph
+        hasSpacing
+      >{`Denne testen skal sjekke om fokus blir satt på BODY-elementet når modalen lukkes. 
+        Testes ved å reloade siden. Det er ved programatisk åpning av modalen at fokus tidligere ikke har blitt satt korrekt.`}</Paragraph>
+      <Modal {...args} ref={ref}>
+        <Paragraph hasSpacing>
+          {
+            'Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?'
+          }
+        </Paragraph>
+        <div className={'flex'}>
+          <Button className={'marginRightM'}>{'Erstatt opplysninger'}</Button>
+          <Button variant={'tertiary'} onClick={onCloseOnClickHandler}>
+            {'Avbryt'}
+          </Button>
+        </div>
+      </Modal>
+      <Button
+        className={'marginRightM'}
+        onClick={() => ref.current?.showModal()}
+      >
+        {'Åpne modal ref.current.showModal'}
+      </Button>
+    </>
+  );
+};
+
 export const AutoOpen = {
   decorators: [
     (Story): JSX.Element => {
@@ -540,42 +579,7 @@ export const AutoOpen = {
       return <Story />;
     },
   ],
-  render: (args): JSX.Element => {
-    const ref = useRef<HTMLDialogElement>(null);
-    useEffect(() => {
-      ref.current?.showModal();
-    }, []);
-    const onCloseOnClickHandler = (): void => {
-      ref.current?.close();
-    };
-    return (
-      <>
-        <Paragraph
-          hasSpacing
-        >{`Denne testen skal sjekke om fokus blir satt på BODY-elementet når modalen lukkes. 
-        Testes ved å reloade siden. Det er ved programatisk åpning av modalen at fokus tidligere ikke har blitt satt korrekt.`}</Paragraph>
-        <Modal {...args} ref={ref}>
-          <Paragraph hasSpacing>
-            {
-              'Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?'
-            }
-          </Paragraph>
-          <div className={'flex'}>
-            <Button className={'marginRightM'}>{'Erstatt opplysninger'}</Button>
-            <Button variant={'tertiary'} onClick={onCloseOnClickHandler}>
-              {'Avbryt'}
-            </Button>
-          </div>
-        </Modal>
-        <Button
-          className={'marginRightM'}
-          onClick={() => ref.current?.showModal()}
-        >
-          {'Åpne modal ref.current.showModal'}
-        </Button>
-      </>
-    );
-  },
+  render: (args): JSX.Element => <WithAutoOpenRender {...args} />,
   name: 'With AutoOpen',
   args: {
     variant: 'plain',
@@ -601,6 +605,26 @@ export const AutoOpen = {
   },
 } satisfies Story;
 
+const WithAutoOpenAndCloseOnEscapeRender = (
+  args: JSX.IntrinsicAttributes & ModalProps & RefAttributes<HTMLDialogElement>
+): JSX.Element => {
+  const ref = useRef<HTMLDialogElement>(null);
+  useEffect(() => {
+    ref.current?.showModal();
+  }, []);
+  return (
+    <>
+      <Paragraph
+        hasSpacing
+      >{`Denne testen skal sjekke om fokus blir satt på BODY-elementet når modalen lukkes etter at bruker har trykket på Escape-knappen. 
+        Modalen åpnes ved å laste siden på nytt.`}</Paragraph>
+      <Modal {...args} ref={ref}>
+        <Paragraph hasSpacing>{'Modalinnhold'}</Paragraph>
+      </Modal>
+    </>
+  );
+};
+
 export const AutoOpenAndCloseOnEscape = {
   decorators: [
     (Story): JSX.Element => {
@@ -609,26 +633,9 @@ export const AutoOpenAndCloseOnEscape = {
       return <Story />;
     },
   ],
-  render: (args): JSX.Element => {
-    const ref = useRef<HTMLDialogElement>(null);
-    useEffect(() => {
-      ref.current?.showModal();
-    }, []);
-    const onCloseOnClickHandler = (): void => {
-      ref.current?.close();
-    };
-    return (
-      <>
-        <Paragraph
-          hasSpacing
-        >{`Denne testen skal sjekke om fokus blir satt på BODY-elementet når modalen lukkes etter at bruker har trykket på Escape-knappen. 
-        Modalen åpnes ved å laste siden på nytt.`}</Paragraph>
-        <Modal {...args} ref={ref}>
-          <Paragraph hasSpacing>{'Modalinnhold'}</Paragraph>
-        </Modal>
-      </>
-    );
-  },
+  render: (args): JSX.Element => (
+    <WithAutoOpenAndCloseOnEscapeRender {...args} />
+  ),
   name: 'With Auto Open and Close on Escape',
   args: {
     variant: 'outline',
