@@ -163,6 +163,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
           if (e.key === 'Escape') {
             if (dismissOnEsc) {
               onClose?.();
+              modalRef.current?.close();
             } else {
               e.preventDefault();
             }
