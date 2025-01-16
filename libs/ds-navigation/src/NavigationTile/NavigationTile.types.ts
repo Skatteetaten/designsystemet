@@ -41,6 +41,10 @@ export interface NavigationTileComponentCommonProps
   svgPath?: ReactElement;
   /** Skjuler pil-ikonet. Ikonet er alltid skjult dersom 'size' er 'extraLarge' eller dersom 'isExternal' er 'true' */
   hideArrowIcon?: boolean;
+  /** Om NavigationTile skal inneholde spinner. Hvis svgPath også er satt, erstatter spinneren ikonet. */
+  hasSpinner?: boolean;
+  /** Overskriver default tekst som leses opp av skjermleser når Spinner snurrer. */
+  spinnerTitle?: string;
 }
 
 export type NavigationTileProps = NavigationTileComponentCommonProps;
