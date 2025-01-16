@@ -532,9 +532,7 @@ export const WithStateChangeAndTextFieldFocus = {
   },
 } satisfies Story;
 
-const WithAutoOpenRender = (
-  args: JSX.IntrinsicAttributes & ModalProps & RefAttributes<HTMLDialogElement>
-): JSX.Element => {
+const TemplateWithAutoOpen: StoryFn<typeof Modal> = (args) => {
   const ref = useRef<HTMLDialogElement>(null);
   useEffect(() => {
     ref.current?.showModal();
@@ -579,7 +577,7 @@ export const AutoOpen = {
       return <Story />;
     },
   ],
-  render: (args): JSX.Element => <WithAutoOpenRender {...args} />,
+  render: TemplateWithAutoOpen,
   name: 'With AutoOpen',
   args: {
     variant: 'plain',
@@ -605,9 +603,7 @@ export const AutoOpen = {
   },
 } satisfies Story;
 
-const WithAutoOpenAndCloseOnEscapeRender = (
-  args: JSX.IntrinsicAttributes & ModalProps & RefAttributes<HTMLDialogElement>
-): JSX.Element => {
+const TemplateAutoOpenAndCloseOnEscape: StoryFn<typeof Modal> = (args) => {
   const ref = useRef<HTMLDialogElement>(null);
   useEffect(() => {
     ref.current?.showModal();
@@ -633,9 +629,7 @@ export const AutoOpenAndCloseOnEscape = {
       return <Story />;
     },
   ],
-  render: (args): JSX.Element => (
-    <WithAutoOpenAndCloseOnEscapeRender {...args} />
-  ),
+  render: TemplateAutoOpenAndCloseOnEscape,
   name: 'With Auto Open and Close on Escape',
   args: {
     variant: 'outline',
