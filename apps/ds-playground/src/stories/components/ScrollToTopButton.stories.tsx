@@ -3,6 +3,7 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import {
+  getScrollToMainDefault,
   getVisibilityThresholdDefault,
   ScrollToTopButton,
 } from '@skatteetaten/ds-buttons';
@@ -24,6 +25,12 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: String(getVisibilityThresholdDefault()) },
+      },
+    },
+    scrollToMain: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: getScrollToMainDefault().toString() },
       },
     },
     shadowRootNode: {
