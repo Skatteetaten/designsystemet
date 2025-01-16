@@ -3,6 +3,7 @@ import { useRef, JSX, useState, useEffect } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { Button, Link } from '@skatteetaten/ds-buttons';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { RadioGroup } from '@skatteetaten/ds-forms';
 import { InfoOutlineSVGpath } from '@skatteetaten/ds-icons';
 import {
@@ -110,12 +111,13 @@ export const Examples: Story = {
     const refModalImportant = useRef<HTMLDialogElement>(null);
     const refModalWait = useRef<HTMLDialogElement>(null);
 
-    const twentyMin = 1200;
-    const [time, setTime] = useState(twentyMin);
+    const numberOfSecondsToWait = 60;
+    const [time, setTime] = useState(numberOfSecondsToWait);
 
     useEffect(() => {
       if (time > 0) {
-        resetTimer();
+        document.onmousemove = (): void => setTime(numberOfSecondsToWait);
+        document.onkeydown = (): void => setTime(numberOfSecondsToWait);
       }
 
       if (time === 0) {
@@ -129,17 +131,8 @@ export const Examples: Story = {
 
     const closeDialog = (): void => {
       refModalWait.current?.close();
-      setTime(twentyMin);
+      setTime(numberOfSecondsToWait);
       document.querySelector('main')?.focus();
-    };
-
-    const resetTimer = (): void => {
-      document.onmousemove = (): void => setTime(twentyMin);
-      document.onkeydown = (): void => setTime(twentyMin);
-    };
-
-    window.onload = (): void => {
-      resetTimer();
     };
 
     return (
@@ -227,25 +220,32 @@ export const Examples: Story = {
           </div>
         </Modal>
 
-        <Paragraph>{`Vent i ${time} sekunder, så vises ventevarsel.`}</Paragraph>
-        <Paragraph>
-          {
-            'Hver gang du beveger musepekeren eller gjør et tastetrykk, resettes timeren.'
-          }
-        </Paragraph>
+        <main>
+          <Button
+            variant={'tertiary'}
+            svgPath={InfoOutlineSVGpath}
+            onClick={(): void => refModalWait.current?.showModal()}
+          >
+            {'Vis ventevarsel'}
+          </Button>
+          <Paragraph>{`Vent i ${time} sekunder eller trykk på knappen for å se ventevarselet.`}</Paragraph>
+          <Paragraph>
+            {
+              'Hver gang du beveger musepekeren eller gjør et tastetrykk, resettes timeren.'
+            }
+          </Paragraph>
+        </main>
         <Modal
           ref={refModalWait}
-          title={'Hei, er du fortsatt her?'}
+          title={dsI18n.t('ds_overlays:modal.VentevarselTitle')}
           imageSource={waitIllustration}
-          imageSourceAltText={
-            'Illustrasjon av travel person med seks armer, opptatt med kontorarbeid.'
-          }
+          imageSourceAltText={dsI18n.t(
+            'ds_overlays:modal.VentevarselImageAltText'
+          )}
           onClose={closeDialog}
         >
           <Paragraph hasSpacing>
-            {
-              'Vi ser at du ikke har gjort noe på nettsiden på ei stund. Er du fortsatt her?'
-            }
+            {dsI18n.t('ds_overlays:modal.VentevarselParagraph')}
           </Paragraph>
           <Button
             className={'width100'}
@@ -253,7 +253,7 @@ export const Examples: Story = {
               closeDialog();
             }}
           >
-            {'Ja'}
+            {dsI18n.t('Shared:shared.Ja')}
           </Button>
         </Modal>
       </>
