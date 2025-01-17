@@ -27,6 +27,7 @@ export * from './Calculator';
 export * from './Calendar';
 export * from './CalendarClock';
 export * from './Cancel';
+export * from './CarRecycle';
 export * from './CashRefund';
 export * from './ChatBubble';
 export * from './ChatBubbleOutline';

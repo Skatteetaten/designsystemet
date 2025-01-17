@@ -1,7 +1,6 @@
 @use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
 .icon {
-  flex-shrink: 0;
   fill: var(--semantic-interactive-main);
 
   &_large {
@@ -9,6 +8,15 @@
   }
 
   &_extraLarge {
+    padding: var(--spacing-xs);
+  }
+}
+
+.spinner {
+  width: var(--size-large);
+
+  &_extraLarge {
+    height: var(--size-extra-large);
     padding: var(--spacing-xs);
   }
 }
@@ -81,7 +89,10 @@
 
   &:active {
     background-color: var(--semantic-interactive-background);
-    outline: 2px solid var(--semantic-interactive-foreground);
+    box-shadow:
+      inset 0 -2px 0 0 var(--semantic-interactive-foreground),
+      0 0 0 2px var(--palette-graphite-0);
+    outline: 2px solid var(--semantic-interactive-main);
     outline-offset: 2px;
 
     .title {
@@ -90,6 +101,10 @@
 
     .icon {
       fill: var(--semantic-interactive-foreground);
+    }
+
+    .spinner {
+      --spinner-color: var(--semantic-interactive-foreground);
     }
   }
 
@@ -107,24 +122,5 @@
     @media (min-width: breakpoints.$breakpoint-xs) {
       padding: var(--spacing-s) var(--spacing-m);
     }
-  }
-}
-
-.titleWrapper {
-  flex: 1;
-}
-
-.iconWrapper {
-  display: flex;
-  height: calc(var(--font-size-m) * var(--semantic-line-height-default));
-  align-items: center;
-  justify-content: center;
-
-  &_medium {
-    height: calc(var(--font-size-l) * var(--semantic-line-height-default));
-  }
-
-  &_large {
-    height: calc(var(--font-size-xl) * var(--semantic-line-height-default));
   }
 }

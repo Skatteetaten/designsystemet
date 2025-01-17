@@ -18,6 +18,11 @@ code {
   height: 100vh;
 }
 
+.scrollToTopMainPusher {
+  height: 200vh;
+  padding-top: 100vh;
+  color: var(--palette-denim-5);
+}
 .width100 {
   width: 100%;
 }
@@ -187,6 +192,10 @@ a.docs {
   margin-bottom: var(--spacing-l);
 }
 
-.bold {
-  font-weight: var(--font-weight-bold) !important;
+p.bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.borderLeftBlack {
+  border-left: 4px solid var(--palette-graphite-100);
 }

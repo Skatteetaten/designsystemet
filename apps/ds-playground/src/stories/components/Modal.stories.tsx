@@ -3,7 +3,6 @@ import { useRef, JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { Button, Link } from '@skatteetaten/ds-buttons';
-import { RadioGroup } from '@skatteetaten/ds-forms';
 import {
   InfoOutlineSVGpath,
   UpdateSVGpath,
@@ -281,7 +280,9 @@ export const Feilmeldingsmodal: Story = {
           >
             {'Last inn siden på nytt'}
           </Button>
-          <Button variant={'secondary'}>{'Gå til forsiden'}</Button>
+          <Button variant={'secondary'} href={'#'}>
+            {'Gå til forsiden'}
+          </Button>
         </Modal>
       </>
     );
