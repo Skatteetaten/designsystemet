@@ -17,9 +17,10 @@ import {
 } from '@skatteetaten/ds-overlays';
 import { List, Paragraph } from '@skatteetaten/ds-typography';
 
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import skeLogo from '../../../../../libs/ds-core-utils/src/SkatteetatenLogo/SKESquare40.svg';
 import { category } from '../../../.storybook/helpers';
 import farmerIllustration from '../../assets/farmer-illustration.svg';
-import skeLogo from '../../assets/ske-logo.svg';
 import waitIllustration from '../../assets/wait-alert-illustration.png';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 import { exampleParameters } from '../utils/stories.utils';
@@ -70,10 +71,10 @@ const meta = {
       control: 'select',
       options: ['', 'Icon', 'Logo'],
       mapping: {
-        None: '',
+        '': '',
         Icon: (): JSX.Element => <WarningOutlineIcon size={'extraLarge'} />,
         Logo: (): JSX.Element => (
-          <img src={skeLogo} alt={'Skatteetaten logo'} />
+          <img src={skeLogo} alt={'Skatteetaten logo'} className={'logo'} />
         ),
       },
     },
@@ -125,10 +126,7 @@ export const Samtykkemodal: Story = {
 
     return (
       <>
-        <Button
-          className={'exampleSpacing'}
-          onClick={(): void => refModal.current?.showModal()}
-        >
+        <Button onClick={(): void => refModal.current?.showModal()}>
           {'Nye opplysninger'}
         </Button>
         <Modal
@@ -163,7 +161,6 @@ export const ViktigMelding: Story = {
     return (
       <>
         <Button
-          className={'exampleSpacing'}
           variant={'tertiary'}
           svgPath={InfoOutlineSVGpath}
           onClick={(): void => refModalImportant.current?.showModal()}
@@ -202,7 +199,6 @@ export const Ventevarsel: Story = {
     return (
       <>
         <Button
-          className={'exampleSpacing'}
           variant={'tertiary'}
           svgPath={InfoOutlineSVGpath}
           onClick={(): void => refModalWait.current?.showModal()}
@@ -242,7 +238,6 @@ export const Feilmeldingsmodal: Story = {
     return (
       <>
         <Button
-          className={'exampleSpacing'}
           variant={'danger'}
           onClick={(): void => refModalFeil.current?.showModal()}
         >
