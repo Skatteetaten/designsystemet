@@ -69,7 +69,7 @@ const meta = {
     renderIcon: {
       table: { category: category.props },
       control: 'select',
-      options: ['None', 'Icon', 'Logo'],
+      options: ['', 'Icon', 'Logo'],
       mapping: {
         None: '',
         Icon: (): JSX.Element => <WarningOutlineIcon size={'extraLarge'} />,
@@ -120,10 +120,9 @@ export const Preview: Story = {
   },
 } satisfies Story;
 
-export const Examples: Story = {
+export const Samtykkemodal: Story = {
   render: (_args): JSX.Element => {
     const refModal = useRef<HTMLDialogElement>(null);
-    const refModalRadioGroup = useRef<HTMLDialogElement>(null);
 
     return (
       <>
@@ -152,40 +151,11 @@ export const Examples: Story = {
             </Button>
           </div>
         </Modal>
-
-        <Button
-          className={'exampleSpacing'}
-          onClick={(): void => refModalRadioGroup.current?.showModal()}
-        >
-          {'Velg rolle'}
-        </Button>
-        <Modal
-          ref={refModalRadioGroup}
-          title={'Dette er dine roller'}
-          onClose={() => {
-            console.log('lukker mod2');
-          }}
-        >
-          <RadioGroup legend={'Velge en rolle'}>
-            <RadioGroup.Radio value={'meg'}>
-              {'Innlogget som meg selv'}
-            </RadioGroup.Radio>
-            <RadioGroup.Radio value={'andre'}>
-              {'Innlogget som annen person'}
-            </RadioGroup.Radio>
-            <RadioGroup.Radio value={'virksomhet'}>
-              {'Innlogget som virksomhet'}
-            </RadioGroup.Radio>
-          </RadioGroup>
-          <Button onClick={(): void => refModalRadioGroup.current?.close()}>
-            {'Ok'}
-          </Button>
-        </Modal>
       </>
     );
   },
 } satisfies Story;
-Examples.parameters = exampleParameters;
+Samtykkemodal.parameters = exampleParameters;
 
 export const ViktigMelding: Story = {
   render: (_args): JSX.Element => {
