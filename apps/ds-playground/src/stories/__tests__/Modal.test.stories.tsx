@@ -1,4 +1,4 @@
-import { useEffect, useRef, JSX, useState, RefAttributes } from 'react';
+import { useEffect, useRef, JSX, useState } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, userEvent, fireEvent, within, waitFor } from '@storybook/test';
@@ -6,7 +6,8 @@ import { expect, userEvent, fireEvent, within, waitFor } from '@storybook/test';
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
-import { Modal, ModalProps } from '@skatteetaten/ds-overlays';
+import { WarningOutlineIcon } from '@skatteetaten/ds-icons';
+import { Modal } from '@skatteetaten/ds-overlays';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
@@ -44,6 +45,7 @@ const meta = {
     },
     imageSourceAltText: { table: { disable: true } },
     padding: { table: { disable: true } },
+    renderIcon: { table: { disable: true } },
     shadowRootNode: { table: { disable: true } },
     title: { table: { disable: true } },
     variant: {
@@ -198,6 +200,22 @@ export const WithImage = {
     const image = modal.querySelector('img');
     await expect(image).toBeInTheDocument();
     await expect(image).toHaveAttribute('alt', 'Image alt tekst');
+  },
+} satisfies Story;
+
+export const WithIcon = {
+  render: TemplateModal,
+  name: 'With Icon',
+  args: {
+    renderIcon: (): JSX.Element => <WarningOutlineIcon size={'extraLarge'} />,
+  },
+  argTypes: {
+    renderIcon: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await userEvent.click(button);
   },
 } satisfies Story;
 
