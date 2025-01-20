@@ -13,7 +13,7 @@ export interface CardNoteCommonProps extends BaseProps {
   variant?: CardNoteVariant;
   /** HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke. Alternativt kan custom path sendes. */
   svgPath?: ReactElement;
-  /** Innholdet i Komponenten. */
+  /** Innholdet i komponenten. */
   children: ReactNode;
   /** Om innholdet skal vises */
   showNote?: boolean;
