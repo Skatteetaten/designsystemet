@@ -5,7 +5,7 @@ import { BaseProps } from '@skatteetaten/ds-core-utils';
 import { CardSpacing } from '../Card/Card.types';
 
 export interface CardActionsCommonProps extends BaseProps {
-  /** Luft rundt componenten. Hvis den ikke er satt arves verdi fra parent Card. */
+  /** Luft rundt komponenten. Hvis den ikke er satt arves verdi fra parent Card. */
   spacing?: CardSpacing;
   /** Hovedinnholdet. */
   children: ReactNode;
