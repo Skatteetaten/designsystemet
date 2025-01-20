@@ -2,27 +2,32 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
+import { IconButton, Link } from '@skatteetaten/ds-buttons';
 import {
   Accordion,
   getAccordionBackgroundColorDefault,
   getAccordionIconPositionDefault,
   getAccordionSizeDefault,
 } from '@skatteetaten/ds-collections';
+import { DescriptionList } from '@skatteetaten/ds-content';
 import {
   AccountMultipleSVGpath,
+  BriefcaseSVGpath,
   ChatBubbleOutlineSVGpath,
+  CheckSVGpath,
   CompanySVGpath,
+  CopySVGpath,
   DescriptionSVGpath,
   FamilySVGpath,
   PersonSVGpath,
   PhoneSVGpath,
   SkattetrekkSVGpath,
 } from '@skatteetaten/ds-icons';
+import { Tag } from '@skatteetaten/ds-status';
+import { Paragraph } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
-import { DescriptionList } from '@skatteetaten/ds-content';
-import { Link } from '@skatteetaten/ds-buttons';
 
 const defaultContent =
   'Fikk du over 1 000 kroner i restskatt, deles summen opp i 2 fakturaer. Fristen for når du må betale avhenger av når du fikk skatteoppgjøret ditt.';
@@ -77,70 +82,6 @@ export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
   render: (_args): JSX.Element => {
-    const accordionData = [
-      {
-        title: (
-          <>
-            <span>{'987 65 321'}</span>
-            <br />
-            <span>{'Stødig Sjappe 1'}</span>
-          </>
-        ),
-        icon: CompanySVGpath,
-        expanded: true,
-        content: (
-          <>
-            <DescriptionList className={'backgroundColorGraphite5'}>
-              <DescriptionList.Element term={'Virksomhetsnavn'}>
-                {'Stødig Sjappe 1'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Organisasjonsnummer'}>
-                {'999 999 999 copy icon'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Telefonnummer'}>
-                {'+47 99 99 99 99'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Forretningsadresse'}>
-                {'Norges vei 1, 4878 Grimstad'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Status'}>
-                {'Konkurs 27.11.24 color red'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Org.form'}>
-                {'Aksjeselskap'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Næringskode'}>
-                {'65.102'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Virksomhetsnavn'}>
-                {'Stødig Sjappe 1'}
-              </DescriptionList.Element>
-            </DescriptionList>
-            <Link href={'#'}>{'Gå til partsoversikt'}</Link>
-          </>
-        ),
-      },
-      {
-        title: 'Kontakt- og reservasjonsregistret',
-        icon: PhoneSVGpath,
-      },
-      {
-        title: 'Familie',
-        icon: FamilySVGpath,
-      },
-      {
-        title: 'Roller',
-        icon: AccountMultipleSVGpath,
-      },
-      {
-        title: 'Alle dokumenter på part',
-        icon: DescriptionSVGpath,
-      },
-      {
-        title: 'Alle notater på part',
-        icon: ChatBubbleOutlineSVGpath,
-      },
-    ];
     return (
       <>
         <Accordion
@@ -171,17 +112,219 @@ export const Examples: Story = {
             {defaultContent}
           </Accordion.Item>
         </Accordion>
-        <Accordion size={'small'} className={'semantic-internal-aside'}>
-          {accordionData.map((x, i) => (
-            <Accordion.Item
-              key={`a${i}`}
-              title={x.title as string}
-              svgPath={x.icon}
-              isDefaultExpanded={x.expanded}
-            >
-              {x.content}
-            </Accordion.Item>
-          ))}
+
+        <Accordion
+          id={'virksomhet'}
+          size={'small'}
+          className={'container-aside bottomSpacingXL'}
+        >
+          <Accordion.Item
+            title={'987 654 321\nStødig Sjappe 1'}
+            svgPath={CompanySVGpath}
+            isExpanded
+          >
+            <DescriptionList>
+              <DescriptionList.Element term={'Virksomhetsnavn'}>
+                {'Stødig Sjappe 1'}
+              </DescriptionList.Element>
+              <DescriptionList.Element term={'Organisasjonsnummer'}>
+                <span className={'marginRightS'}>{'999 999 999'}</span>
+                <IconButton
+                  svgPath={CopySVGpath}
+                  title={'Kopier organisasjonsnummeret'}
+                  size={'extraSmall'}
+                  onClick={() => {
+                    navigator.clipboard.writeText('999999999');
+                  }}
+                />
+              </DescriptionList.Element>
+              <DescriptionList.Element term={'Telefonnummer'}>
+                {'+47 99 99 99 99'}
+              </DescriptionList.Element>
+              <DescriptionList.Element term={'Forretningsadresse'}>
+                <div>{'Norges vei 1'}</div>
+                <div>{'4878 Grimstad'}</div>
+              </DescriptionList.Element>
+              <DescriptionList.Element term={'Status'}>
+                <Tag color={'burgundy'}>{'Konkurs 27.11.24'}</Tag>
+              </DescriptionList.Element>
+              <DescriptionList.Element term={'Org.form'}>
+                {'Aksjeselskap'}
+              </DescriptionList.Element>
+              <DescriptionList.Element term={'Næringskode'}>
+                {'65.102'}
+              </DescriptionList.Element>
+              <DescriptionList.Element term={'Virksomhetsnavn'}>
+                {'Stødig Sjappe 1'}
+              </DescriptionList.Element>
+              <Link href={'#'}>{'Gå til partssoversikt'}</Link>
+            </DescriptionList>
+          </Accordion.Item>
+          <Accordion.Item
+            title={'Roller'}
+            svgPath={AccountMultipleSVGpath}
+            isExpanded
+          >
+            <DescriptionList>
+              <DescriptionList.Element term={'Eier'}>
+                <Link href={'#eier'}>{'Chad-Henning Krøger'}</Link>
+              </DescriptionList.Element>
+              <DescriptionList.Element term={'Styreleder'}>
+                <Link href={'#'}>{'Fredrik Durst'}</Link>
+              </DescriptionList.Element>
+            </DescriptionList>
+          </Accordion.Item>
+          <Accordion.Item
+            title={'Alle dokumenter på part'}
+            svgPath={DescriptionSVGpath}
+            isExpanded
+          >
+            <em>{'Dokumentasjon og historikk her'}</em>
+          </Accordion.Item>
+          <Accordion.Item
+            title={'Alle notater på part'}
+            svgPath={ChatBubbleOutlineSVGpath}
+            isExpanded
+          >
+            <em>{'Notater fra saksbehandler her'}</em>
+          </Accordion.Item>
+        </Accordion>
+
+        <Accordion id={'eier'} size={'small'} className={'container-aside'}>
+          <Accordion.Item
+            title={'01012001 99999\nChad-Henning Krøger'}
+            svgPath={PersonSVGpath}
+            isExpanded
+          >
+            <DescriptionList>
+              <DescriptionList.Element term={'Fødselsnummer'}>
+                {'01012001 99999'}
+              </DescriptionList.Element>
+              <DescriptionList.Element term={'Etternavn'}>
+                {'Krøger'}
+              </DescriptionList.Element>
+              <DescriptionList.Element term={'Fornavn'}>
+                {'Chad-Henning'}
+              </DescriptionList.Element>
+              <DescriptionList.Element term={'Mellomnavn'}>
+                {null}
+              </DescriptionList.Element>
+              <DescriptionList.Element term={'Status'}>
+                {'Bosatt: Oppegård (1415)'}
+              </DescriptionList.Element>
+              <DescriptionList.Element term={'Kjønn'}>
+                {'Mann'}
+              </DescriptionList.Element>
+              <DescriptionList.Element term={'Fødeland'}>
+                {'Norge'}
+              </DescriptionList.Element>
+              <DescriptionList.Element term={'Sivilstand'}>
+                {'Ugift'}
+              </DescriptionList.Element>
+              <DescriptionList.Element term={'Statsborgerskap'}>
+                {'Norge'}
+              </DescriptionList.Element>
+              <Link href={'#'}>{'Gå til partssoversikt'}</Link>
+            </DescriptionList>
+          </Accordion.Item>
+          <Accordion.Item title={'Familie'} svgPath={FamilySVGpath} isExpanded>
+            <DescriptionList descriptionDirection={'vertical'}>
+              <DescriptionList.Element term={'Barn under 20 år'}>
+                <div className={'marginLeftL'}>
+                  <Link href={'#'}>{'Neue Haas Krøger'}</Link>
+                  <div>{'Født 01.12.2010 (15 år)'}</div>
+                  <Link href={'#'}>{'Old English Krøger'}</Link>
+                  <div>{'Født 01.12.2015 (10 år)'}</div>
+                  <Link href={'#'}>{'Copperplate Gothic Krøger'}</Link>
+                  <div>{'Født 01.12.2020 (5 år)'}</div>
+                </div>
+              </DescriptionList.Element>
+              <DescriptionList.Element term={'Ektefelle'}>
+                <Link href={'#'} className={'marginLeftL'}>
+                  {'Avril Krøger'}
+                </Link>
+              </DescriptionList.Element>
+              <DescriptionList.Element term={'Foreldre'}>
+                <div className={'marginLeftL'}>
+                  <Link href={'#'} className={'block'}>
+                    {'Ringo Hirtshals'}
+                  </Link>
+                  <Link href={'#'} className={'block'}>
+                    {'Bjørg Woodsmith'}
+                  </Link>
+                </div>
+              </DescriptionList.Element>
+            </DescriptionList>
+          </Accordion.Item>
+          <Accordion.Item
+            title={'Roller'}
+            svgPath={AccountMultipleSVGpath}
+            isExpanded
+          >
+            <DescriptionList>
+              <DescriptionList.Element term={'Eier'}>
+                <Link href={'#virksomhet'}>{'Stødig Sjappe 1'}</Link>
+              </DescriptionList.Element>
+              <DescriptionList.Element term={'Eier'}>
+                <Link href={'#'}>{'Stødig Sjappe 2'}</Link>
+              </DescriptionList.Element>
+            </DescriptionList>
+          </Accordion.Item>
+          <Accordion.Item
+            title={'Personens sakshistorikk'}
+            subtitle={'3 saker'}
+            svgPath={BriefcaseSVGpath}
+            isExpanded
+          >
+            <Link href={'#'} className={'block'} svgPath={CheckSVGpath}>
+              {'Endre postadresse'}
+            </Link>
+            <div className={'marginLeftAccordionItem'}>
+              <div>{'FOLK /2323 / 1234'}</div>
+              <div>{'Registrert 01.01.2001'}</div>
+            </div>
+            <Link href={'#'} className={'block'} svgPath={CheckSVGpath}>
+              {'Endre postadresse'}
+            </Link>
+            <div className={'marginLeftAccordionItem'}>
+              <div>{'FOLK /2323 / 1234'}</div>
+              <div>{'Registrert 01.01.2001'}</div>
+            </div>
+            <Link href={'#'} className={'block'} svgPath={CheckSVGpath}>
+              {'Registrere vergemål'}
+            </Link>
+            <div className={'marginLeftAccordionItem'}>
+              <div>{'FOLK /2323 / 1234'}</div>
+              <div>{'Registrert 01.01.2001'}</div>
+            </div>
+          </Accordion.Item>
+          <Accordion.Item
+            title={'Kontakt- og reservasjonsregisteret'}
+            svgPath={PhoneSVGpath}
+            isExpanded
+          >
+            <DescriptionList hasSpacing>
+              <DescriptionList.Element term={'Fasttelefon'}>
+                {'+47 99 99 99 99'}
+              </DescriptionList.Element>
+              <DescriptionList.Element term={'Mobiltelefon'}>
+                {'+47 99 99 99 99'}
+              </DescriptionList.Element>
+              <DescriptionList.Element term={'E-post'}>
+                {'chad@henning.no'}
+              </DescriptionList.Element>
+              <DescriptionList.Element
+                term={'Reservert mot elektronisk kommunikasjon'}
+              >
+                {'Ja'}
+              </DescriptionList.Element>
+            </DescriptionList>
+            <Paragraph>
+              {
+                'Informasjon er hentet fra Kontakt- og reservasjonsregisteret. Aktøren kan endre opplysningene sine på hjemmesiden til registeret.'
+              }
+            </Paragraph>
+          </Accordion.Item>
         </Accordion>
       </>
     );

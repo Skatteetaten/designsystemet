@@ -187,10 +187,18 @@ a.docs {
   margin-bottom: var(--spacing-l);
 }
 
-.semantic-internal-aside {
-  width: var(--semantic-responsive-internal-aside);
+.container-aside {
+  width: var(--container-aside);
 }
 
-.backgroundColorGraphite5 {
-  background-color: var(--palette-graphite-5);
+.marginRightS {
+  margin-right: var(--spacing-s);
+}
+
+.marginLeftL {
+  margin-left: var(--spacing-l);
+}
+
+.marginLeftAccordionItem {
+  margin-left: calc(var(--size-medium) + var(--spacing-s));
 }
