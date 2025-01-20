@@ -7,6 +7,7 @@ import {
   ExternalIcon,
   Icon,
 } from '@skatteetaten/ds-icons';
+import { Spinner } from '@skatteetaten/ds-progress';
 
 import {
   getNavigationTileHeadingAsDefault,
@@ -31,9 +32,11 @@ export const NavigationTile = forwardRef<
       titleAs: TitleTag = getNavigationTileHeadingAsDefault(),
       classNames,
       description,
+      hasSpinner,
       isExternal,
       hideArrowIcon = getNavigationTileHideArrowDefault(),
       size = getNavigationTileSizeDefault(),
+      spinnerTitle,
       svgPath,
       href,
       target,
@@ -48,13 +51,17 @@ export const NavigationTile = forwardRef<
       size !== 'medium' ? styles[`icon_${size}`] : ''
     }`;
 
+    const spinnerClassNames = `${styles.spinner} ${
+      size === 'extraLarge' ? styles[`spinner_${size}`] : ''
+    }`;
+
     const titleClassNames = `${styles.title} ${
       size !== 'medium' ? styles[`title_${size}`] : ''
     } ${classNames?.title}`.trim();
 
     const descriptionClassNames = `${styles.description} ${
       size === 'extraLarge' && styles.description_extraLarge
-    } ${size !== 'extraLarge' && svgPath ? styles.descriptionIndented : ''} ${
+    } ${size !== 'extraLarge' && (svgPath || hasSpinner) ? styles.descriptionIndented : ''} ${
       classNames?.description
     }`.trim();
 
@@ -76,12 +83,22 @@ export const NavigationTile = forwardRef<
         onClick={onClick}
       >
         <div className={styles.header}>
-          {svgPath && (
+          {svgPath && !hasSpinner && (
             <Icon
               size={size === 'extraLarge' ? 'extraLarge' : 'large'}
               svgPath={svgPath}
               className={iconClassNames}
             />
+          )}
+          {hasSpinner && (
+            <Spinner
+              className={spinnerClassNames}
+              color={'blue'}
+              size={size === 'extraLarge' ? 'large' : 'medium'}
+              hideTitle
+            >
+              {spinnerTitle}
+            </Spinner>
           )}
           <TitleTag className={titleClassNames}>{title}</TitleTag>
           {isExternal && size !== 'extraLarge' ? (

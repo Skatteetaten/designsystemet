@@ -75,8 +75,13 @@ const meta = {
       },
     },
     renderIcon: {
-      control: { disable: true },
       table: { category: category.props },
+      control: 'select',
+      options: ['', 'CheckIcon'],
+      mapping: {
+        '': '',
+        CheckIcon: (): JSX.Element => <CheckIcon size={'extraLarge'} />,
+      },
     },
     spacing: {
       control: 'inline-radio',
