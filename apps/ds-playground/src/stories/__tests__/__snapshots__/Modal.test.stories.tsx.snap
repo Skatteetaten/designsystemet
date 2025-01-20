@@ -74,7 +74,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
         Modalen åpnes ved å laste siden på nytt.
   </p>
   <dialog class="_modal_125nh_5"
-          aria-labelledby="modalHeadingId-:r14:"
+          aria-labelledby="modalHeadingId-:r17:"
   >
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
@@ -85,11 +85,11 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r15:"
+             aria-labelledby="svgtitle-:r18:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r15:">
+          <title id="svgtitle-:r18:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -97,7 +97,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:r14:"
+        <h1 id="modalHeadingId-:r17:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
