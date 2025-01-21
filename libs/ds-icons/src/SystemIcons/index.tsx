@@ -51,6 +51,7 @@ export * from './Cloud';
 export * from './CloudUpload';
 export * from './Code';
 export * from './Company';
+export * from './CompanyGroup';
 export * from './Completed';
 export * from './Copy';
 export * from './Delete';
