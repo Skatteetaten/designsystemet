@@ -38,7 +38,7 @@ export function RolePickerRow({
       />
       <Alert
         variant={'neutral'}
-        showAlert={ctx?.error?.entityId === id}
+        showAlert={hasError}
         onClose={() => ctx?.setError(undefined)}
       >
         {ctx?.error?.message}
