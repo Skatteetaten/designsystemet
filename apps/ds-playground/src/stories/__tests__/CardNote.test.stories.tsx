@@ -125,6 +125,7 @@ const TemplateAllVariants: StoryFn<typeof Card> = (args) => (
     {variantsArr.map((variant, index) => {
       return (
         <Card.Note
+          title={defaultArgs.title}
           {...args}
           key={`card_${index}`}
           className={'bottomSpacingXL'}

@@ -3,7 +3,7 @@
 exports[`Tester/Card/Actions WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <div id="htmlId"
-       class="dummyClassname _cardActions_oshe8_1"
+       class="_cardActions_oshe8_1 dummyClassname "
        lang="en"
        data-testid="123ID"
   >
@@ -14,7 +14,7 @@ exports[`Tester/Card/Actions WithAttributes play-test 1`] = `
 
 exports[`Tester/Card/Actions WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class=" _cardActions_oshe8_1"
+  <div class="_cardActions_oshe8_1  "
        id="dummyIdForwardedFromRef"
   >
     Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.

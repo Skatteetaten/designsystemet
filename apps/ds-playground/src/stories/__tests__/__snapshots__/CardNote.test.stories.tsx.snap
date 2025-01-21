@@ -5,11 +5,11 @@ exports[`Tester/Card/Note AllVariants smoke-test 1`] = `
   <div class="_card_1x4sk_5"
        data-color="white"
   >
-    <div class="bottomSpacingXL _cardNote_141lg_1"
+    <div class="_cardNote_95c4s_1 bottomSpacingXL"
          data-variant="neutral"
     >
-      <div class="_cardNoteHeadingContainer_141lg_51">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _cardNoteIcon_141lg_23"
+      <div class="_cardNoteHeadingContainer_95c4s_54">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _cardNoteIcon_95c4s_23"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -21,7 +21,7 @@ exports[`Tester/Card/Note AllVariants smoke-test 1`] = `
         <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47  ">
           Merknad
         </h3>
-        <button class="_button_g87u5_1 _button_medium_g87u5_45  _cardNoteCloseButton_141lg_47"
+        <button class="_button_g87u5_1 _button_medium_g87u5_45  _cardNoteCloseButton_95c4s_50"
                 type="button"
         >
           <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
@@ -39,19 +39,19 @@ exports[`Tester/Card/Note AllVariants smoke-test 1`] = `
           </svg>
         </button>
       </div>
-      <div class=" _cardContent_1i00x_1">
+      <div class="_cardContent_1i00x_1 ">
         <div>
           Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
         </div>
       </div>
-      <div class="_cardNoteArrow_141lg_26">
+      <div class="_cardNoteArrow_95c4s_29">
       </div>
     </div>
-    <div class="bottomSpacingXL _cardNote_141lg_1"
+    <div class="_cardNote_95c4s_1 bottomSpacingXL"
          data-variant="warning"
     >
-      <div class="_cardNoteHeadingContainer_141lg_51">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _cardNoteIcon_141lg_23"
+      <div class="_cardNoteHeadingContainer_95c4s_54">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _cardNoteIcon_95c4s_23"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -63,7 +63,7 @@ exports[`Tester/Card/Note AllVariants smoke-test 1`] = `
         <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47  ">
           Merknad
         </h3>
-        <button class="_button_g87u5_1 _button_medium_g87u5_45  _cardNoteCloseButton_141lg_47"
+        <button class="_button_g87u5_1 _button_medium_g87u5_45  _cardNoteCloseButton_95c4s_50"
                 type="button"
         >
           <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
@@ -81,19 +81,19 @@ exports[`Tester/Card/Note AllVariants smoke-test 1`] = `
           </svg>
         </button>
       </div>
-      <div class=" _cardContent_1i00x_1">
+      <div class="_cardContent_1i00x_1 ">
         <div>
           Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
         </div>
       </div>
-      <div class="_cardNoteArrow_141lg_26">
+      <div class="_cardNoteArrow_95c4s_29">
       </div>
     </div>
-    <div class="bottomSpacingXL _cardNote_141lg_1"
+    <div class="_cardNote_95c4s_1 bottomSpacingXL"
          data-variant="danger"
     >
-      <div class="_cardNoteHeadingContainer_141lg_51">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _cardNoteIcon_141lg_23"
+      <div class="_cardNoteHeadingContainer_95c4s_54">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _cardNoteIcon_95c4s_23"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -105,7 +105,7 @@ exports[`Tester/Card/Note AllVariants smoke-test 1`] = `
         <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47  ">
           Merknad
         </h3>
-        <button class="_button_g87u5_1 _button_medium_g87u5_45  _cardNoteCloseButton_141lg_47"
+        <button class="_button_g87u5_1 _button_medium_g87u5_45  _cardNoteCloseButton_95c4s_50"
                 type="button"
         >
           <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
@@ -123,12 +123,12 @@ exports[`Tester/Card/Note AllVariants smoke-test 1`] = `
           </svg>
         </button>
       </div>
-      <div class=" _cardContent_1i00x_1">
+      <div class="_cardContent_1i00x_1 ">
         <div>
           Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
         </div>
       </div>
-      <div class="_cardNoteArrow_141lg_26">
+      <div class="_cardNoteArrow_95c4s_29">
       </div>
     </div>
   </div>
@@ -138,13 +138,13 @@ exports[`Tester/Card/Note AllVariants smoke-test 1`] = `
 exports[`Tester/Card/Note WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <div id="htmlId"
-       class="dummyClassname _cardNote_141lg_1"
+       class="_cardNote_95c4s_1 dummyClassname"
        lang="en"
        data-testid="123ID"
        data-variant="neutral"
   >
-    <div class="_cardNoteHeadingContainer_141lg_51">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _cardNoteIcon_141lg_23"
+    <div class="_cardNoteHeadingContainer_95c4s_54">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _cardNoteIcon_95c4s_23"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -156,7 +156,7 @@ exports[`Tester/Card/Note WithAttributes play-test 1`] = `
       <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47  ">
         Merknad
       </h3>
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _cardNoteCloseButton_141lg_47"
+      <button class="_button_g87u5_1 _button_medium_g87u5_45  _cardNoteCloseButton_95c4s_50"
               type="button"
       >
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
@@ -175,7 +175,7 @@ exports[`Tester/Card/Note WithAttributes play-test 1`] = `
       </button>
     </div>
     Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
-    <div class="_cardNoteArrow_141lg_26">
+    <div class="_cardNoteArrow_95c4s_29">
     </div>
   </div>
 </div>
@@ -188,12 +188,12 @@ exports[`Tester/Card/Note WithOnClose play-test 1`] = `
 
 exports[`Tester/Card/Note WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class=" _cardNote_141lg_1"
+  <div class="_cardNote_95c4s_1 "
        data-variant="neutral"
        id="dummyIdForwardedFromRef"
   >
-    <div class="_cardNoteHeadingContainer_141lg_51">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _cardNoteIcon_141lg_23"
+    <div class="_cardNoteHeadingContainer_95c4s_54">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _cardNoteIcon_95c4s_23"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -205,7 +205,7 @@ exports[`Tester/Card/Note WithRef play-test 1`] = `
       <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47  ">
         Merknad
       </h3>
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _cardNoteCloseButton_141lg_47"
+      <button class="_button_g87u5_1 _button_medium_g87u5_45  _cardNoteCloseButton_95c4s_50"
               type="button"
       >
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
@@ -224,7 +224,7 @@ exports[`Tester/Card/Note WithRef play-test 1`] = `
       </button>
     </div>
     Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
-    <div class="_cardNoteArrow_141lg_26">
+    <div class="_cardNoteArrow_95c4s_29">
     </div>
   </div>
 </div>
@@ -232,11 +232,11 @@ exports[`Tester/Card/Note WithRef play-test 1`] = `
 
 exports[`Tester/Card/Note WithSvgPath smoke-test 1`] = `
 <div data-test-block="true">
-  <div class=" _cardNote_141lg_1"
+  <div class="_cardNote_95c4s_1 "
        data-variant="neutral"
   >
-    <div class="_cardNoteHeadingContainer_141lg_51">
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _cardNoteIcon_141lg_23"
+    <div class="_cardNoteHeadingContainer_95c4s_54">
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _cardNoteIcon_95c4s_23"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -248,7 +248,7 @@ exports[`Tester/Card/Note WithSvgPath smoke-test 1`] = `
       <h3 class="_heading_12p5o_1 _heading_level5_12p5o_47  ">
         Merknad
       </h3>
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _cardNoteCloseButton_141lg_47"
+      <button class="_button_g87u5_1 _button_medium_g87u5_45  _cardNoteCloseButton_95c4s_50"
               type="button"
       >
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
@@ -267,7 +267,7 @@ exports[`Tester/Card/Note WithSvgPath smoke-test 1`] = `
       </button>
     </div>
     Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
-    <div class="_cardNoteArrow_141lg_26">
+    <div class="_cardNoteArrow_95c4s_29">
     </div>
   </div>
 </div>

@@ -3,7 +3,7 @@
 exports[`Tester/Card/Content WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <div id="htmlId"
-       class="dummyClassname _cardContent_1i00x_1"
+       class="_cardContent_1i00x_1 dummyClassname"
        lang="en"
        data-testid="123ID"
   >
@@ -16,7 +16,7 @@ exports[`Tester/Card/Content WithAttributes play-test 1`] = `
 
 exports[`Tester/Card/Content WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class=" _cardContent_1i00x_1"
+  <div class="_cardContent_1i00x_1 "
        id="dummyIdForwardedFromRef"
   >
     <div>

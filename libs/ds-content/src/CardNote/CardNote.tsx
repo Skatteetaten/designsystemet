@@ -46,7 +46,7 @@ export const CardNote = forwardRef<HTMLDivElement, CardNoteProps>(
       <div
         ref={ref}
         id={id}
-        className={`${className} ${styles.cardNote}`}
+        className={`${styles.cardNote} ${className}`}
         lang={lang}
         data-testid={dataTestId}
         data-variant={variant}

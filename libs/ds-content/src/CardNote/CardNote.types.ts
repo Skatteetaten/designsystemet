@@ -6,7 +6,7 @@ export type CardNoteVariant = Extract<Status, 'neutral' | 'warning' | 'danger'>;
 
 export interface CardNoteCommonProps extends BaseProps {
   /** Overskrift. */
-  title?: string;
+  title: string;
   /** Heading-element h1-h6. */
   titleAs?: HeadingAs;
   /** Definerer stilen til komponenten. */

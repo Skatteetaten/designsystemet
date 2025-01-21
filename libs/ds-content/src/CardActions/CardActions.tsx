@@ -22,7 +22,7 @@ export const CardActions = forwardRef<HTMLDivElement, CardActionsProps>(
       <div
         ref={ref}
         id={id}
-        className={`${className} ${styles.cardActions}`}
+        className={`${styles.cardActions} ${className} `}
         lang={lang}
         data-testid={dataTestId}
         data-spacing={spacing}

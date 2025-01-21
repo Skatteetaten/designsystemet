@@ -31,6 +31,10 @@
     }
   }
 
+  .cardNoteIcon {
+    flex-shrink: 0;
+  }
+
   &Arrow {
     position: absolute;
     bottom: calc(-1 * var(--spacing-m));
@@ -43,7 +47,7 @@
 
     &::after {
       position: relative;
-      top: -4px;
+      top: -3px;
       left: -18px;
       width: 0;
       height: 0;

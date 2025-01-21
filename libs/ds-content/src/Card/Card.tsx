@@ -8,7 +8,11 @@ import { CardActions } from '../CardActions/CardActions';
 import { CardContent } from '../CardContent/CardContent';
 import { CardHeader } from '../CardHeader/CardHeader';
 import { CardNote } from '../CardNote/CardNote';
-import { getCardNoteVariantDefault } from '../CardNote/defaults';
+import {
+  getCardNoteVariantDefault,
+  getCardNoteSvgPathDefault,
+  getCardNoteTitleAsDefault,
+} from '../CardNote/defaults';
 
 import styles from './Card.module.scss';
 
@@ -53,4 +57,9 @@ Card.Actions = CardActions;
 Card.Content = CardContent;
 Card.Header = CardHeader;
 
-export { getCardColorDefault, getCardNoteVariantDefault };
+export {
+  getCardColorDefault,
+  getCardNoteVariantDefault,
+  getCardNoteSvgPathDefault,
+  getCardNoteTitleAsDefault,
+};

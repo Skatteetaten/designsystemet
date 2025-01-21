@@ -6,6 +6,7 @@ import { CardContentProps } from './CardHeader.types';
 
 import styles from './CardHeader.module.scss';
 
+// TODO lege til classNames for å kunne style rightContent eventuelt fjerne wrapper div
 export const CardHeader = forwardRef<HTMLDivElement, CardContentProps>(
   (
     {

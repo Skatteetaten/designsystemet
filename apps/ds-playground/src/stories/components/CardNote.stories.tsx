@@ -1,6 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Card, getCardNoteVariantDefault } from '@skatteetaten/ds-content';
+import {
+  Card,
+  getCardNoteVariantDefault,
+  getCardNoteTitleAsDefault,
+  getCardNoteSvgPathDefault,
+} from '@skatteetaten/ds-content';
 
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -43,12 +48,20 @@ const meta = {
     titleAs: {
       table: {
         category: category.props,
+        defaultValue: { summary: getCardNoteTitleAsDefault() },
       },
     },
     svgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,
-      table: { category: category.props },
+      table: {
+        category: category.props,
+        defaultValue: {
+          summary: getCardNoteSvgPathDefault(
+            getCardNoteVariantDefault()
+          ).toString(),
+        },
+      },
     },
     // Events
     onClose: { control: false, table: { category: category.event } },
