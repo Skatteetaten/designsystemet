@@ -7,7 +7,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
         Testes ved å reloade siden. Det er ved programatisk åpning av modalen at fokus tidligere ikke har blitt satt korrekt.
   </p>
   <dialog class="_modal_125nh_5 _modalNoBorder_125nh_39"
-          aria-labelledby="modalHeadingId-:r12:"
+          aria-labelledby="modalHeadingId-:r15:"
   >
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
@@ -18,11 +18,11 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r13:"
+             aria-labelledby="svgtitle-:r16:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r13:">
+          <title id="svgtitle-:r16:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -30,7 +30,7 @@ exports[`Tester/Modal AutoOpen play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:r12:"
+        <h1 id="modalHeadingId-:r15:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
@@ -74,7 +74,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
         Modalen åpnes ved å laste siden på nytt.
   </p>
   <dialog class="_modal_125nh_5"
-          aria-labelledby="modalHeadingId-:r14:"
+          aria-labelledby="modalHeadingId-:r17:"
   >
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
@@ -85,11 +85,11 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r15:"
+             aria-labelledby="svgtitle-:r18:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r15:">
+          <title id="svgtitle-:r18:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -97,7 +97,7 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:r14:"
+        <h1 id="modalHeadingId-:r17:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
@@ -124,7 +124,7 @@ exports[`Tester/Modal ClickCloseButton play-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5"
-          aria-labelledby="modalHeadingId-:rh:"
+          aria-labelledby="modalHeadingId-:rk:"
   >
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
@@ -135,11 +135,11 @@ exports[`Tester/Modal ClickCloseButton play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:ri:"
+             aria-labelledby="svgtitle-:rl:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:ri:">
+          <title id="svgtitle-:rl:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -147,7 +147,7 @@ exports[`Tester/Modal ClickCloseButton play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:rh:"
+        <h1 id="modalHeadingId-:rk:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
@@ -471,7 +471,7 @@ exports[`Tester/Modal WithAutoClose play-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5"
-          aria-labelledby="modalHeadingId-:rj:"
+          aria-labelledby="modalHeadingId-:rm:"
   >
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
@@ -482,11 +482,11 @@ exports[`Tester/Modal WithAutoClose play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:rk:"
+             aria-labelledby="svgtitle-:rn:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:rk:">
+          <title id="svgtitle-:rn:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -494,7 +494,7 @@ exports[`Tester/Modal WithAutoClose play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:rj:"
+        <h1 id="modalHeadingId-:rm:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
@@ -537,7 +537,7 @@ exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5"
-          aria-labelledby="modalHeadingId-:rl:"
+          aria-labelledby="modalHeadingId-:ro:"
           open
   >
     <div tabindex="-1"
@@ -549,11 +549,11 @@ exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:rm:"
+             aria-labelledby="svgtitle-:rp:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:rm:">
+          <title id="svgtitle-:rp:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -561,7 +561,7 @@ exports[`Tester/Modal WithAutoCloseDisabled play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:rl:"
+        <h1 id="modalHeadingId-:ro:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
@@ -604,7 +604,7 @@ exports[`Tester/Modal WithHideTitle play-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5"
-          aria-labelledby="modalHeadingId-:rn:"
+          aria-labelledby="modalHeadingId-:rq:"
           open
   >
     <div tabindex="-1"
@@ -616,11 +616,11 @@ exports[`Tester/Modal WithHideTitle play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:ro:"
+             aria-labelledby="svgtitle-:rr:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:ro:">
+          <title id="svgtitle-:rr:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -628,8 +628,86 @@ exports[`Tester/Modal WithHideTitle play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:rn:"
+        <h1 id="modalHeadingId-:rq:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29  _srOnly_125nh_71"
+        >
+          Vil du erstatte nye opplysninger fra fil?
+        </h1>
+        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+          Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
+        </p>
+        <div class="flex">
+          <button class="_button_6ybyo_1 _button_primary_6ybyo_1   marginRightM"
+                  type="button"
+          >
+            <span class="_buttonText_6ybyo_69">
+              Erstatt opplysninger
+            </span>
+          </button>
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
+                  type="button"
+          >
+            <span class="_buttonText_6ybyo_69">
+              Avbryt
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+</div>
+`;
+
+exports[`Tester/Modal WithIcon play-test 1`] = `
+<div data-test-block="true">
+  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+    Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+  </p>
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+          type="button"
+  >
+    <span class="_buttonText_6ybyo_69">
+      Åpne modal
+    </span>
+  </button>
+  <dialog class="_modal_125nh_5"
+          aria-labelledby="modalHeadingId-:ra:"
+          open
+  >
+    <div tabindex="-1"
+         class="_modalContainer_125nh_23"
+    >
+      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+              type="button"
+      >
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:rb:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:rb:">
+            Lukk dialogvindu
+          </title>
+          <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+          </path>
+        </svg>
+      </button>
+      <div class="_modalPaddingL_125nh_51">
+        <div>
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_extraLarge_6zbcy_17 "
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-hidden="true"
+               role="img"
+          >
+            <path d="M12 2 1 21h22L12 2Zm0 4 7.53 13H4.47L12 6Zm-1 4v4h2v-4h-2Zm0 6v2h2v-2">
+            </path>
+          </svg>
+        </div>
+        <h1 id="modalHeadingId-:ra:"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
@@ -742,7 +820,7 @@ exports[`Tester/Modal WithPadding play-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5"
-          aria-labelledby="modalHeadingId-:rd:"
+          aria-labelledby="modalHeadingId-:rg:"
           open
   >
     <div tabindex="-1"
@@ -754,11 +832,11 @@ exports[`Tester/Modal WithPadding play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:re:"
+             aria-labelledby="svgtitle-:rh:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:re:">
+          <title id="svgtitle-:rh:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -766,7 +844,7 @@ exports[`Tester/Modal WithPadding play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingNONE_125nh_42">
-        <h1 id="modalHeadingId-:rd:"
+        <h1 id="modalHeadingId-:rg:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
@@ -813,7 +891,7 @@ exports[`Tester/Modal WithStateChangeAndFocus play-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5"
-          aria-labelledby="modalHeadingId-:rr:"
+          aria-labelledby="modalHeadingId-:ru:"
           open
   >
     <div tabindex="-1"
@@ -825,11 +903,11 @@ exports[`Tester/Modal WithStateChangeAndFocus play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:rs:"
+             aria-labelledby="svgtitle-:rv:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:rs:">
+          <title id="svgtitle-:rv:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -837,7 +915,7 @@ exports[`Tester/Modal WithStateChangeAndFocus play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:rr:"
+        <h1 id="modalHeadingId-:ru:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
@@ -861,7 +939,7 @@ exports[`Tester/Modal WithStateChangeAndTextFieldFocus play-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5"
-          aria-labelledby="modalHeadingId-:rt:"
+          aria-labelledby="modalHeadingId-:r10:"
           open
   >
     <div tabindex="-1"
@@ -873,11 +951,11 @@ exports[`Tester/Modal WithStateChangeAndTextFieldFocus play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:ru:"
+             aria-labelledby="svgtitle-:r11:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:ru:">
+          <title id="svgtitle-:r11:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -885,24 +963,24 @@ exports[`Tester/Modal WithStateChangeAndTextFieldFocus play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:rt:"
+        <h1 id="modalHeadingId-:r10:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
         </h1>
         <div class>
-          <label id="labelId-:r11:"
+          <label id="labelId-:r14:"
                  class="_label_348na_5"
-                 for="textFieldTextboxId-:r10:"
+                 for="textFieldTextboxId-:r13:"
           >
             Navn
           </label>
-          <input id="textFieldTextboxId-:r10:"
+          <input id="textFieldTextboxId-:r13:"
                  class="_textbox_1b2vd_5"
                  autocomplete="off"
                  value
           >
-          <div id="textFieldErrorId-:rv:"
+          <div id="textFieldErrorId-:r12:"
                aria-live="assertive"
                aria-atomic="true"
           >
@@ -927,7 +1005,7 @@ exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5"
-          aria-labelledby="modalHeadingId-:ra:"
+          aria-labelledby="modalHeadingId-:rd:"
           open
   >
     <div tabindex="-1"
@@ -939,11 +1017,11 @@ exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:rb:"
+             aria-labelledby="svgtitle-:re:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:rb:">
+          <title id="svgtitle-:re:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -951,7 +1029,7 @@ exports[`Tester/Modal WithTransparentBackground play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:ra:"
+        <h1 id="modalHeadingId-:rd:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
@@ -994,7 +1072,7 @@ exports[`Tester/Modal WithVerticalScrolling play-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5"
-          aria-labelledby="modalHeadingId-:rf:"
+          aria-labelledby="modalHeadingId-:ri:"
           open
   >
     <div tabindex="-1"
@@ -1006,11 +1084,11 @@ exports[`Tester/Modal WithVerticalScrolling play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:rg:"
+             aria-labelledby="svgtitle-:rj:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:rg:">
+          <title id="svgtitle-:rj:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -1018,7 +1096,7 @@ exports[`Tester/Modal WithVerticalScrolling play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:rf:"
+        <h1 id="modalHeadingId-:ri:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?
@@ -1043,14 +1121,14 @@ exports[`Tester/Modal WithoutCloseButton play-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5"
-          aria-labelledby="modalHeadingId-:rc:"
+          aria-labelledby="modalHeadingId-:rf:"
           open
   >
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:rc:"
+        <h1 id="modalHeadingId-:rf:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Vil du erstatte nye opplysninger fra fil?

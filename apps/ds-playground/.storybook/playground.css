@@ -201,8 +201,17 @@ a.docs {
   margin-bottom: var(--spacing-l);
 }
 
+p.bold {
+  font-weight: var(--font-weight-bold);
+}
+
 .borderLeftBlack {
   border-left: 4px solid var(--palette-graphite-100);
+}
+
+.logo {
+  width: 3rem;
+  height: 3rem;
 }
 
 .sucessFill {

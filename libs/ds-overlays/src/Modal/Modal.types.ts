@@ -1,6 +1,7 @@
-import { ReactNode } from 'react';
+import { ReactElement, ReactNode } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
+import { IconProps } from '@skatteetaten/ds-icons';
 
 export const modalPaddingArr = ['none', 's', 'm', 'l', 'mega'] as const;
 export type ModalPadding = (typeof modalPaddingArr)[number];
@@ -33,7 +34,12 @@ export interface ModalProps extends BaseProps {
   imageSource?: string;
   /** Alt tekst til illustrasjonsbilde. Hvis bildet er meningsbærende, legg på alt tekst. */
   imageSourceAltText?: string;
-  /* Modal i shadowndom - Deprecated: Prop skal fjernes ved lansering av neste major versjon  */
+  /** Icon-komponent som en funksjon som vises over overskriften */
+  renderIcon?: () => ReactElement<IconProps>;
+  /**
+   * Modal i shadowndom.
+   * Deprecated: Prop skal fjernes ved lansering av neste major versjon.
+   */
   shadowRootNode?: Document | ShadowRoot;
   /** Callback når modalen lukkes */
   onClose?: () => void;
