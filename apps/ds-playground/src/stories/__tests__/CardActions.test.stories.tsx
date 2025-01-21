@@ -1,7 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
 
+import { InlineButton } from '@skatteetaten/ds-buttons';
 import { Card } from '@skatteetaten/ds-content';
+import { DeleteSVGpath, EditSVGpath } from '@skatteetaten/ds-icons';
 
 const meta = {
   component: Card.Actions,
@@ -79,5 +81,26 @@ export const WithAttributes = {
     await expect(cardNote).toHaveClass('dummyClassname');
     await expect(cardNote).toHaveAttribute('lang', 'en');
     await expect(cardNote).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+export const WithChildren: Story = {
+  name: 'With Children (A6)',
+  render: (args) => (
+    <Card>
+      <Card.Actions {...args} />
+    </Card>
+  ),
+  args: {
+    children: [
+      <InlineButton key={'button1'} svgPath={EditSVGpath}>
+        {'Endre'}
+      </InlineButton>,
+      <InlineButton key={'button2'} svgPath={DeleteSVGpath}>
+        {'Slett'}
+      </InlineButton>,
+    ],
+  },
+  argTypes: {
+    children: { table: { disable: false } },
   },
 } satisfies Story;

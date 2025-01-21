@@ -1,4 +1,4 @@
-import { JSX } from 'react';
+import { JSX, useRef } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
@@ -404,6 +404,42 @@ export const DevExamples: Story = {
           </Card>
         </div>
       </>
+    );
+  },
+} satisfies Story;
+
+export const NoteExample: Story = {
+  render: (_args): JSX.Element => {
+    const headingRef = useRef<HTMLHeadingElement>(null);
+    return (
+      <Card color={'white'}>
+        <Card.Note
+          variant={'warning'}
+          title={'Merknad'}
+          titleAs={'h3'}
+          onClose={(): void => headingRef?.current?.focus()}
+        >
+          {
+            'Nå har vi gjort en endring i et annet kort som påvirker dette kortet.'
+          }
+        </Card.Note>
+        <Card.Header>
+          <Heading ref={headingRef} as={'h3'} level={3} canBeManuallyFocused>
+            {'Andre inntekter'}
+          </Heading>
+        </Card.Header>
+        <Card.Content>
+          <DescriptionList>
+            <DescriptionList.Element term={'Beløp'}>
+              {'1 000 000 kr'}
+            </DescriptionList.Element>
+          </DescriptionList>
+        </Card.Content>
+        <Card.Actions>
+          <InlineButton svgPath={EditSVGpath}>{'Endre'}</InlineButton>
+          <InlineButton svgPath={DeleteSVGpath}>{'Slett'}</InlineButton>
+        </Card.Actions>
+      </Card>
     );
   },
 } satisfies Story;

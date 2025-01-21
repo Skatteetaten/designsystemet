@@ -3,6 +3,9 @@ import { expect, within } from '@storybook/test';
 
 import { Card } from '@skatteetaten/ds-content';
 import { statusArr } from '@skatteetaten/ds-core-utils';
+import { InfoOutlineSVGpath } from '@skatteetaten/ds-icons';
+import { Tag } from '@skatteetaten/ds-status';
+import { List } from '@skatteetaten/ds-typography';
 
 const meta = {
   component: Card.Content,
@@ -86,5 +89,27 @@ export const WithAttributes = {
     await expect(cardNote).toHaveClass('dummyClassname');
     await expect(cardNote).toHaveAttribute('lang', 'en');
     await expect(cardNote).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithChildrenRigthContent: Story = {
+  name: 'With Children RightContent (A5)',
+  render: (args) => (
+    <Card>
+      <Card.Content {...args} />
+    </Card>
+  ),
+  args: {
+    children: (
+      <List>
+        <List.Element>{'første element'}</List.Element>
+        <List.Element>{'andre element'}</List.Element>
+      </List>
+    ),
+    rightContent: <Tag svgPath={InfoOutlineSVGpath}>{'Endret av deg'}</Tag>,
+  },
+  argTypes: {
+    children: { table: { disable: false } },
+    rightContent: { table: { disable: false } },
   },
 } satisfies Story;
