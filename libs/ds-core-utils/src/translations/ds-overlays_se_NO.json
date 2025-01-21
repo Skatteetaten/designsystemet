@@ -25,6 +25,8 @@
   "rolepicker.SearchBusinesses": "(Søk etter virksomhetens navn eller organisasjonsnummer.)",
   "rolepicker.SearchPeople": "(Søk etter personens navn eller fødselsnummer.)",
   "rolepicker.SearchPlaceholder": "(Søk etter person/virksomhet)",
+  "rolepicker.SearchResultDescription": "(Søketreff oppdateres fortløpende mens du skriver)",
+  "rolepicker.SearchResultUpdated": "(Søkeresultat er oppdatert)",
   "rolepicker.ShowAll": "(Vis alle)",
   "rolepicker.ShowInactiveBusinessesHeader": "(Vis avviklede virksomheter)",
   "rolepicker.ShowSubBusinessesHeading": "(Vis underenheter)",

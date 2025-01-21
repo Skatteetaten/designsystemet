@@ -1,4 +1,4 @@
-import { forwardRef, JSX, useEffect, useRef, useState } from 'react';
+import { forwardRef, JSX, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
@@ -13,18 +13,10 @@ export const RolePickerFilterInput = forwardRef<
   HTMLInputElement,
   RolePickerFilterInputProps
 >(({ label, value, onChange, onClear }, ref): JSX.Element => {
-  const { t } = useTranslation('ds_forms', { i18n: dsI18n });
+  const { t: formsT } = useTranslation('ds_forms', { i18n: dsI18n });
+  const { t } = useTranslation('ds_overlays', { i18n: dsI18n });
   const inputRef = useRef<HTMLInputElement>(null);
   const [showClearButton, setShowClearButton] = useState(!!value);
-  const [searchMessage, setSearchMessage] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (value) {
-      setSearchMessage('Søkeresultat er oppdatert');
-    } else {
-      setSearchMessage(null);
-    }
-  }, [value]);
 
   return (
     <div className={styles.topContainer}>
@@ -33,15 +25,18 @@ export const RolePickerFilterInput = forwardRef<
           {label}
         </label>
         <span className={styles.srOnly} id={'liveSearchId'}>
-          {'Søketreff oppdateres fortløpende mens du skriver'}
+          {t('rolepicker.SearchResultDescription')}
         </span>
         <span
           className={styles.srOnly}
           aria-live={'assertive'}
           aria-atomic={'true'}
         >
-          {value ? searchMessage : null}
+          {value ? (
+            <span key={value}>{t('rolepicker.SearchResultUpdated')}</span>
+          ) : null}
         </span>
+
         <div className={styles.inputWrapper}>
           <input
             ref={inputRef}
@@ -66,7 +61,7 @@ export const RolePickerFilterInput = forwardRef<
               className={styles.clearButton}
               size={'extraSmall'}
               svgPath={CancelSVGpath}
-              title={t('searchfield.ClearButtonTitle')}
+              title={formsT('searchfield.ClearButtonTitle')}
               onClick={(event) => {
                 onClear?.(event);
                 setShowClearButton(false);
