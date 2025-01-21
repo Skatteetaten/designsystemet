@@ -70,7 +70,6 @@ export default [
           ignoredDependencies: [
             '@skatteetaten/ds-dev-config',
             '@nx/eslint-plugin',
-            'date-fns',
           ],
           includeTransitiveDependencies: true,
         },
