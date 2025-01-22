@@ -1,7 +1,9 @@
 .businessList {
   display: flex;
   flex-direction: column;
+  padding: 0;
   gap: var(--spacing-s);
+  list-style-type: none;
 }
 
 .checkboxGroup {
@@ -15,13 +17,15 @@
   text-align: right;
 }
 
-.subUnitsWrapper {
+.subUnitsList {
   display: flex;
   flex-direction: column;
+  padding: 0;
   margin-top: var(--spacing-s);
   gap: var(--spacing-s);
+  list-style-type: none;
+}
 
-  & > li {
-    padding-left: var(--spacing-xl);
-  }
+.subUnit {
+  padding-left: var(--spacing-xl);
 }

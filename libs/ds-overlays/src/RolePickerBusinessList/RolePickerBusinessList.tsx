@@ -183,10 +183,13 @@ export const RolePickerBusinessList = ({
                     }}
                   />
 
-                  <ul className={styles.subUnitsWrapper}>
+                  <ul className={styles.subUnitsList}>
                     {subUnits.map((sub) => {
                       return (
-                        <li key={sub.organizationNumber}>
+                        <li
+                          key={sub.organizationNumber}
+                          className={styles.subUnit}
+                        >
                           <RolePickerRow
                             id={sub.organizationNumber}
                             title={`${sub.name} ${sub.unitType}`}

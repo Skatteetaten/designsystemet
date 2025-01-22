@@ -9,7 +9,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_1xpdf_21"
+  <dialog class="_modal_125nh_5  _container_90jan_17"
           aria-labelledby="modalHeadingId-:r0:"
   >
     <div tabindex="-1"
@@ -39,7 +39,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
           Hvem ønsker du å representere?
         </h1>
         <div>
-          <div class="_rolePicker_1xpdf_5">
+          <div class="_rolePicker_90jan_5">
             <div>
               <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                  href="#"
@@ -126,7 +126,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                 Andre personer
               </h2>
               <nav aria-labelledby="otherPeopleHeadingId">
-                <ul class="_peopleList_10zc7_1">
+                <ul class="_peopleList_zlix8_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -288,7 +288,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_uojev_7">
+              <div class="_checkboxGroup_1p8tz_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:rd:"
                          class="_input_1k24j_17"
@@ -342,7 +342,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_uojev_1">
+                <ul class="_businessList_1p8tz_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -385,8 +385,8 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsWrapper_uojev_18">
-                      <li>
+                    <ul class="_subUnitsList_1p8tz_20">
+                      <li class="_subUnit_1p8tz_20">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -583,7 +583,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_uojev_13">
+              <div class="_showAllButtonWrapper_1p8tz_15">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
@@ -594,7 +594,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
               </div>
             </div>
           </div>
-          <div class="_rolePickerFooter_1xpdf_15">
+          <div class="_rolePickerFooter_90jan_11">
             <button class="_button_6ybyo_1 _button_secondary_6ybyo_1 _button_withIcon_6ybyo_47  "
                     type="button"
             >
@@ -637,7 +637,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_1xpdf_21"
+  <dialog class="_modal_125nh_5  _container_90jan_17"
           aria-labelledby="modalHeadingId-:ra1:"
   >
     <div tabindex="-1"
@@ -667,7 +667,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
           Hvem ønsker du å representere?
         </h1>
         <div>
-          <div class="_rolePicker_1xpdf_5">
+          <div class="_rolePicker_90jan_5">
             <div>
               <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                  href="#"
@@ -754,7 +754,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                 Virksomheter
               </h2>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_uojev_1">
+                <ul class="_businessList_1p8tz_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -947,7 +947,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_uojev_13">
+              <div class="_showAllButtonWrapper_1p8tz_15">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
@@ -958,7 +958,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
               </div>
             </div>
           </div>
-          <div class="_rolePickerFooter_1xpdf_15">
+          <div class="_rolePickerFooter_90jan_11">
             <button class="_button_6ybyo_1 _button_secondary_6ybyo_1 _button_withIcon_6ybyo_47  "
                     type="button"
             >
@@ -1002,7 +1002,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
     </span>
   </button>
   <dialog id="htmlId"
-          class="_modal_125nh_5  _container_1xpdf_21 dummyClassname"
+          class="_modal_125nh_5  _container_90jan_17 dummyClassname"
           lang="en"
           data-testid="123ID"
           aria-labelledby="modalHeadingId-:ru:"
@@ -1035,7 +1035,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
           Hvem ønsker du å representere?
         </h1>
         <div>
-          <div class="_rolePicker_1xpdf_5">
+          <div class="_rolePicker_90jan_5">
             <div>
               <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                  href="#"
@@ -1122,7 +1122,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                 Andre personer
               </h2>
               <nav aria-labelledby="otherPeopleHeadingId">
-                <ul class="_peopleList_10zc7_1">
+                <ul class="_peopleList_zlix8_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -1284,7 +1284,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_uojev_7">
+              <div class="_checkboxGroup_1p8tz_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:r1b:"
                          class="_input_1k24j_17"
@@ -1338,7 +1338,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_uojev_1">
+                <ul class="_businessList_1p8tz_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -1381,8 +1381,8 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsWrapper_uojev_18">
-                      <li>
+                    <ul class="_subUnitsList_1p8tz_20">
+                      <li class="_subUnit_1p8tz_20">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -1579,7 +1579,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_uojev_13">
+              <div class="_showAllButtonWrapper_1p8tz_15">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
@@ -1590,7 +1590,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
               </div>
             </div>
           </div>
-          <div class="_rolePickerFooter_1xpdf_15">
+          <div class="_rolePickerFooter_90jan_11">
             <button class="_button_6ybyo_1 _button_secondary_6ybyo_1 _button_withIcon_6ybyo_47  "
                     type="button"
             >
@@ -1633,7 +1633,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_1xpdf_21"
+  <dialog class="_modal_125nh_5  _container_90jan_17"
           aria-labelledby="modalHeadingId-:r5h:"
           open
   >
@@ -1664,7 +1664,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
           Hvem ønsker du å representere?
         </h1>
         <div>
-          <div class="_rolePicker_1xpdf_5">
+          <div class="_rolePicker_90jan_5">
             <div>
               <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                  href="#"
@@ -1750,7 +1750,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_uojev_7">
+              <div class="_checkboxGroup_1p8tz_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:r5m:"
                          class="_input_1k24j_17"
@@ -1804,7 +1804,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_uojev_1">
+                <ul class="_businessList_1p8tz_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -1847,8 +1847,8 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsWrapper_uojev_18">
-                      <li>
+                    <ul class="_subUnitsList_1p8tz_20">
+                      <li class="_subUnit_1p8tz_20">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -2045,7 +2045,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_uojev_13">
+              <div class="_showAllButtonWrapper_1p8tz_15">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
@@ -2059,7 +2059,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
               Children
             </div>
           </div>
-          <div class="_rolePickerFooter_1xpdf_15">
+          <div class="_rolePickerFooter_90jan_11">
             <button class="_button_6ybyo_1 _button_secondary_6ybyo_1 _button_withIcon_6ybyo_47  "
                     type="button"
             >
@@ -2102,7 +2102,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_1xpdf_21"
+  <dialog class="_modal_125nh_5  _container_90jan_17"
           aria-labelledby="modalHeadingId-:r4j:"
           open
   >
@@ -2133,7 +2133,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
           Custom title
         </h1>
         <div>
-          <div class="_rolePicker_1xpdf_5">
+          <div class="_rolePicker_90jan_5">
             <div>
               <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                  href="#"
@@ -2220,7 +2220,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                 Andre personer
               </h2>
               <nav aria-labelledby="otherPeopleHeadingId">
-                <ul class="_peopleList_10zc7_1">
+                <ul class="_peopleList_zlix8_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -2382,7 +2382,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_uojev_7">
+              <div class="_checkboxGroup_1p8tz_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:r50:"
                          class="_input_1k24j_17"
@@ -2436,7 +2436,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_uojev_1">
+                <ul class="_businessList_1p8tz_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -2479,8 +2479,8 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsWrapper_uojev_18">
-                      <li>
+                    <ul class="_subUnitsList_1p8tz_20">
+                      <li class="_subUnit_1p8tz_20">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -2677,7 +2677,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_uojev_13">
+              <div class="_showAllButtonWrapper_1p8tz_15">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
@@ -2688,7 +2688,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
               </div>
             </div>
           </div>
-          <div class="_rolePickerFooter_1xpdf_15">
+          <div class="_rolePickerFooter_90jan_11">
             <button class="_button_6ybyo_1 _button_secondary_6ybyo_1 _button_withIcon_6ybyo_47  "
                     type="button"
             >
@@ -2731,7 +2731,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_1xpdf_21"
+  <dialog class="_modal_125nh_5  _container_90jan_17"
           aria-labelledby="modalHeadingId-:r80:"
           open
   >
@@ -2762,7 +2762,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
           Hvem ønsker du å representere?
         </h1>
         <div>
-          <div class="_rolePicker_1xpdf_5">
+          <div class="_rolePicker_90jan_5">
             <div>
               <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100 _withAlert_1842b_1 undefined"
                  href="#"
@@ -2882,7 +2882,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                 Andre personer
               </h2>
               <nav aria-labelledby="otherPeopleHeadingId">
-                <ul class="_peopleList_10zc7_1">
+                <ul class="_peopleList_zlix8_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -3044,7 +3044,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_uojev_7">
+              <div class="_checkboxGroup_1p8tz_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:r8d:"
                          class="_input_1k24j_17"
@@ -3098,7 +3098,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_uojev_1">
+                <ul class="_businessList_1p8tz_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -3141,8 +3141,8 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsWrapper_uojev_18">
-                      <li>
+                    <ul class="_subUnitsList_1p8tz_20">
+                      <li class="_subUnit_1p8tz_20">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -3339,7 +3339,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_uojev_13">
+              <div class="_showAllButtonWrapper_1p8tz_15">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
@@ -3350,7 +3350,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
               </div>
             </div>
           </div>
-          <div class="_rolePickerFooter_1xpdf_15">
+          <div class="_rolePickerFooter_90jan_11">
             <button class="_button_6ybyo_1 _button_secondary_6ybyo_1 _button_withIcon_6ybyo_47  "
                     type="button"
             >
@@ -3393,7 +3393,7 @@ exports[`Tester/RolePicker WithNoBusinesses play-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_1xpdf_21"
+  <dialog class="_modal_125nh_5  _container_90jan_17"
           aria-labelledby="modalHeadingId-:r91:"
           open
   >
@@ -3424,7 +3424,7 @@ exports[`Tester/RolePicker WithNoBusinesses play-test 1`] = `
           Du kan ikke bruke dette skjemaet
         </h1>
         <div>
-          <div class="_rolePicker_1xpdf_5">
+          <div class="_rolePicker_90jan_5">
             <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               For å bruke skjemaet må du representere en
               <strong>
@@ -3432,7 +3432,7 @@ exports[`Tester/RolePicker WithNoBusinesses play-test 1`] = `
               </strong>
             </p>
           </div>
-          <div class="_rolePickerFooter_1xpdf_15">
+          <div class="_rolePickerFooter_90jan_11">
             <a class="_button_6ybyo_1 _button_primary_6ybyo_1   "
                href="https://skatt.skatteetaten.no/web/minside/person"
                role="button"
@@ -3458,7 +3458,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_1xpdf_21"
+  <dialog class="_modal_125nh_5  _container_90jan_17"
           aria-labelledby="modalHeadingId-:r6l:"
   >
     <div tabindex="-1"
@@ -3488,7 +3488,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
           Hvem ønsker du å representere?
         </h1>
         <div>
-          <div class="_rolePicker_1xpdf_5">
+          <div class="_rolePicker_90jan_5">
             <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               Du kan representere
               <strong>
@@ -3538,7 +3538,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_uojev_7">
+              <div class="_checkboxGroup_1p8tz_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:r6o:"
                          class="_input_1k24j_17"
@@ -3592,7 +3592,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_uojev_1">
+                <ul class="_businessList_1p8tz_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -3635,8 +3635,8 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsWrapper_uojev_18">
-                      <li>
+                    <ul class="_subUnitsList_1p8tz_20">
+                      <li class="_subUnit_1p8tz_20">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -3833,7 +3833,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_uojev_13">
+              <div class="_showAllButtonWrapper_1p8tz_15">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
@@ -3844,7 +3844,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
               </div>
             </div>
           </div>
-          <div class="_rolePickerFooter_1xpdf_15">
+          <div class="_rolePickerFooter_90jan_11">
             <button class="_button_6ybyo_1 _button_secondary_6ybyo_1 _button_withIcon_6ybyo_47  "
                     type="button"
             >
@@ -3887,7 +3887,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_1xpdf_21"
+  <dialog class="_modal_125nh_5  _container_90jan_17"
           aria-labelledby="modalHeadingId-:r67:"
   >
     <div tabindex="-1"
@@ -3917,7 +3917,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
           Hvem ønsker du å representere?
         </h1>
         <div>
-          <div class="_rolePicker_1xpdf_5">
+          <div class="_rolePicker_90jan_5">
             <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               Du kan representere
               <strong>
@@ -3968,7 +3968,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                 Andre personer
               </h2>
               <nav aria-labelledby="otherPeopleHeadingId">
-                <ul class="_peopleList_10zc7_1">
+                <ul class="_peopleList_zlix8_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -4161,7 +4161,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_10zc7_7">
+              <div class="_showAllButtonWrapper_zlix8_9">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
@@ -4172,7 +4172,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
               </div>
             </div>
           </div>
-          <div class="_rolePickerFooter_1xpdf_15">
+          <div class="_rolePickerFooter_90jan_11">
             <button class="_button_6ybyo_1 _button_secondary_6ybyo_1 _button_withIcon_6ybyo_47  "
                     type="button"
             >
@@ -4215,7 +4215,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_1xpdf_21"
+  <dialog class="_modal_125nh_5  _container_90jan_17"
           aria-labelledby="modalHeadingId-:r2k:"
           open
   >
@@ -4246,7 +4246,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
           Hvem ønsker du å representere?
         </h1>
         <div>
-          <div class="_rolePicker_1xpdf_5">
+          <div class="_rolePicker_90jan_5">
             <div>
               <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                  href="#"
@@ -4333,7 +4333,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                 Andre personer
               </h2>
               <nav aria-labelledby="otherPeopleHeadingId">
-                <ul class="_peopleList_10zc7_1">
+                <ul class="_peopleList_zlix8_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -4495,7 +4495,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_uojev_7">
+              <div class="_checkboxGroup_1p8tz_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:r31:"
                          class="_input_1k24j_17"
@@ -4549,7 +4549,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_uojev_1">
+                <ul class="_businessList_1p8tz_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -4592,8 +4592,8 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsWrapper_uojev_18">
-                      <li>
+                    <ul class="_subUnitsList_1p8tz_20">
+                      <li class="_subUnit_1p8tz_20">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -4868,7 +4868,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
               </nav>
             </div>
           </div>
-          <div class="_rolePickerFooter_1xpdf_15">
+          <div class="_rolePickerFooter_90jan_11">
             <button class="_button_6ybyo_1 _button_secondary_6ybyo_1 _button_withIcon_6ybyo_47  "
                     type="button"
             >
@@ -4911,7 +4911,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_1xpdf_21"
+  <dialog class="_modal_125nh_5  _container_90jan_17"
           aria-labelledby="modalHeadingId-:r1s:"
           open
   >
@@ -4942,7 +4942,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
           Hvem ønsker du å representere?
         </h1>
         <div>
-          <div class="_rolePicker_1xpdf_5">
+          <div class="_rolePicker_90jan_5">
             <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               Du kan representere
               <strong>
@@ -4992,7 +4992,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_uojev_7">
+              <div class="_checkboxGroup_1p8tz_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:r1v:"
                          class="_input_1k24j_17"
@@ -5046,7 +5046,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_uojev_1">
+                <ul class="_businessList_1p8tz_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -5359,7 +5359,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
               </nav>
             </div>
           </div>
-          <div class="_rolePickerFooter_1xpdf_15">
+          <div class="_rolePickerFooter_90jan_11">
             <button class="_button_6ybyo_1 _button_secondary_6ybyo_1 _button_withIcon_6ybyo_47  "
                     type="button"
             >
@@ -5402,7 +5402,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_1xpdf_21"
+  <dialog class="_modal_125nh_5  _container_90jan_17"
           aria-labelledby="modalHeadingId-:r93:"
   >
     <div tabindex="-1"
@@ -5432,7 +5432,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
           Hvem ønsker du å representere?
         </h1>
         <div>
-          <div class="_rolePicker_1xpdf_5">
+          <div class="_rolePicker_90jan_5">
             <div>
               <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                  href="#"
@@ -5519,7 +5519,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                 Andre personer
               </h2>
               <nav aria-labelledby="otherPeopleHeadingId">
-                <ul class="_peopleList_10zc7_1">
+                <ul class="_peopleList_zlix8_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -5681,7 +5681,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_uojev_7">
+              <div class="_checkboxGroup_1p8tz_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:r9g:"
                          class="_input_1k24j_17"
@@ -5735,7 +5735,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_uojev_1">
+                <ul class="_businessList_1p8tz_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -5778,8 +5778,8 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsWrapper_uojev_18">
-                      <li>
+                    <ul class="_subUnitsList_1p8tz_20">
+                      <li class="_subUnit_1p8tz_20">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -5976,7 +5976,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_uojev_13">
+              <div class="_showAllButtonWrapper_1p8tz_15">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
@@ -5987,7 +5987,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
               </div>
             </div>
           </div>
-          <div class="_rolePickerFooter_1xpdf_15">
+          <div class="_rolePickerFooter_90jan_11">
             <button class="_button_6ybyo_1 _button_secondary_6ybyo_1 _button_withIcon_6ybyo_47  "
                     type="button"
             >
@@ -6030,7 +6030,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_1xpdf_21"
+  <dialog class="_modal_125nh_5  _container_90jan_17"
           aria-labelledby="modalHeadingId-:r3m:"
           open
   >
@@ -6044,7 +6044,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
           Hvem ønsker du å representere?
         </h1>
         <div>
-          <div class="_rolePicker_1xpdf_5">
+          <div class="_rolePicker_90jan_5">
             <div>
               <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                  href="#"
@@ -6131,7 +6131,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                 Andre personer
               </h2>
               <nav aria-labelledby="otherPeopleHeadingId">
-                <ul class="_peopleList_10zc7_1">
+                <ul class="_peopleList_zlix8_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -6293,7 +6293,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_uojev_7">
+              <div class="_checkboxGroup_1p8tz_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:r42:"
                          class="_input_1k24j_17"
@@ -6347,7 +6347,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_uojev_1">
+                <ul class="_businessList_1p8tz_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -6390,8 +6390,8 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsWrapper_uojev_18">
-                      <li>
+                    <ul class="_subUnitsList_1p8tz_20">
+                      <li class="_subUnit_1p8tz_20">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -6588,7 +6588,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_uojev_13">
+              <div class="_showAllButtonWrapper_1p8tz_15">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
@@ -6599,7 +6599,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
               </div>
             </div>
           </div>
-          <div class="_rolePickerFooter_1xpdf_15">
+          <div class="_rolePickerFooter_90jan_11">
             <button class="_button_6ybyo_1 _button_secondary_6ybyo_1 _button_withIcon_6ybyo_47  "
                     type="button"
             >
@@ -6635,7 +6635,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
       Vis representasjonsvelger
     </span>
   </button>
-  <dialog class="_modal_125nh_5  _container_1xpdf_21"
+  <dialog class="_modal_125nh_5  _container_90jan_17"
           aria-labelledby="modalHeadingId-:r79:"
           open
   >
@@ -6666,7 +6666,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
           Hvem ønsker du å representere?
         </h1>
         <div>
-          <div class="_rolePicker_1xpdf_5">
+          <div class="_rolePicker_90jan_5">
             <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               Du kan representere
               <strong>
@@ -6680,7 +6680,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                 Andre personer
               </h2>
               <nav aria-labelledby="otherPeopleHeadingId">
-                <ul class="_peopleList_10zc7_1">
+                <ul class="_peopleList_zlix8_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -6842,7 +6842,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_uojev_7">
+              <div class="_checkboxGroup_1p8tz_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:r7j:"
                          class="_input_1k24j_17"
@@ -6895,7 +6895,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_uojev_1">
+                <ul class="_businessList_1p8tz_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -7054,7 +7054,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
               </nav>
             </div>
           </div>
-          <div class="_rolePickerFooter_1xpdf_15">
+          <div class="_rolePickerFooter_90jan_11">
             <button class="_button_6ybyo_1 _button_secondary_6ybyo_1 _button_withIcon_6ybyo_47  "
                     type="button"
             >
