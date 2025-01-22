@@ -1,4 +1,4 @@
-import { useRef, JSX, useState, useEffect } from 'react';
+import { useRef, JSX, useEffect } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
@@ -197,28 +197,41 @@ export const Ventevarsel: Story = {
   render: (_args): JSX.Element => {
     const refModalWait = useRef<HTMLDialogElement>(null);
 
-    const numberOfSecondsToWait = 60;
-    const [time, setTime] = useState(numberOfSecondsToWait);
+    const lastActivity = useRef(new Date().getTime());
 
     useEffect(() => {
-      if (time > 0) {
-        document.onmousemove = (): void => setTime(numberOfSecondsToWait);
-        document.onkeydown = (): void => setTime(numberOfSecondsToWait);
-      }
+      const checkExpiredTime = (): void => {
+        const timePassed = new Date().getTime() - lastActivity.current;
 
-      if (time === 0) {
-        refModalWait.current?.showModal();
-      }
-      const intervalId = setInterval(() => {
-        setTime((t) => t - 1);
-      }, 1000);
+        if (timePassed >= 5000) {
+          refModalWait.current?.showModal();
+        }
+      };
+      const intervalId = setInterval(checkExpiredTime, 1000);
       return (): void => clearInterval(intervalId);
-    }, [time]);
+    }, []);
+
+    useEffect(() => {
+      const { signal, abort } = new AbortController();
+
+      window.addEventListener('keydown', resetTimer, { signal });
+      window.addEventListener('mousemove', resetTimer, { signal });
+      window.addEventListener('scroll', resetTimer, { signal });
+      window.addEventListener('resize', resetTimer, { signal });
+
+      return (): void => {
+        abort();
+      };
+    }, []);
+
+    const resetTimer = (): void => {
+      lastActivity.current = new Date().getTime();
+    };
 
     const closeDialog = (): void => {
       refModalWait.current?.close();
-      setTime(numberOfSecondsToWait);
       document.querySelector('main')?.focus();
+      resetTimer();
     };
 
     return (
@@ -231,10 +244,10 @@ export const Ventevarsel: Story = {
           >
             {'Vis ventevarsel'}
           </Button>
-          <Paragraph>{`Vent i ${time} sekunder eller trykk på knappen for å se ventevarselet.`}</Paragraph>
+          <Paragraph>{`Vent i fem sekunder eller trykk på knappen for å se ventevarselet.`}</Paragraph>
           <Paragraph>
             {
-              'Hver gang du beveger musepekeren eller gjør et tastetrykk, resettes timeren.'
+              'Hver gang du beveger musepekeren, scroller eller gjør et tastetrykk, resettes timeren.'
             }
           </Paragraph>
         </main>
