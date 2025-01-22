@@ -62,14 +62,14 @@ export const NavigationTile = forwardRef<
         }
       };
 
-      if (href !== '' && !onClick) return;
+      if (!onClick) return;
 
       navTile.addEventListener('keydown', handleKeyDown);
 
       return (): void => {
         navTile.removeEventListener('keydown', handleKeyDown);
       };
-    }, [href, onClick]);
+    }, [onClick]);
 
     const iconClassNames = `${styles.icon} ${
       size !== 'medium' ? styles[`icon_${size}`] : ''
