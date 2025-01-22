@@ -1,9 +1,10 @@
-import { useRef, JSX, useEffect } from 'react';
+import { useRef, JSX, useEffect, useState } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
 import { Button, Link } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { RadioGroup } from '@skatteetaten/ds-forms';
 import {
   InfoOutlineSVGpath,
   UpdateSVGpath,
@@ -196,20 +197,20 @@ ViktigMelding.parameters = exampleParameters;
 export const Ventevarsel: Story = {
   render: (_args): JSX.Element => {
     const refModalWait = useRef<HTMLDialogElement>(null);
-
+    const [time, setTime] = useState<number>(1200000);
     const lastActivity = useRef(new Date().getTime());
 
     useEffect(() => {
       const checkExpiredTime = (): void => {
         const timePassed = new Date().getTime() - lastActivity.current;
 
-        if (timePassed >= 5000) {
+        if (timePassed >= time) {
           refModalWait.current?.showModal();
         }
       };
       const intervalId = setInterval(checkExpiredTime, 1000);
       return (): void => clearInterval(intervalId);
-    }, []);
+    }, [time]);
 
     useEffect(() => {
       const { signal, abort } = new AbortController();
@@ -230,27 +231,31 @@ export const Ventevarsel: Story = {
 
     const closeDialog = (): void => {
       refModalWait.current?.close();
-      document.querySelector('main')?.focus();
       resetTimer();
     };
 
     return (
       <>
-        <main>
-          <Button
-            variant={'tertiary'}
-            svgPath={InfoOutlineSVGpath}
-            onClick={(): void => refModalWait.current?.showModal()}
-          >
-            {'Vis ventevarsel'}
-          </Button>
-          <Paragraph>{`Vent i fem sekunder eller trykk på knappen for å se ventevarselet.`}</Paragraph>
-          <Paragraph>
-            {
-              'Hver gang du beveger musepekeren, scroller eller gjør et tastetrykk, resettes timeren.'
-            }
-          </Paragraph>
-        </main>
+        <Button
+          variant={'secondary'}
+          className={'bottomSpacingXL'}
+          onClick={(): void => refModalWait.current?.showModal()}
+        >
+          {'Vis ventevarsel'}
+        </Button>
+        <RadioGroup
+          legend={'Ventevarseleksempel åpnes automatisk etter'}
+          helpText={
+            'Hver gang du beveger musepekeren, scroller eller gjør et tastetrykk, resettes timeren.'
+          }
+          selectedValue={time}
+          onChange={(e): void => setTime(Number(e.target.value))}
+        >
+          <RadioGroup.Radio value={1200000}>
+            {'20 minutter (anbefalt i løsninger)'}
+          </RadioGroup.Radio>
+          <RadioGroup.Radio value={5000}>{'5 sekunder'}</RadioGroup.Radio>
+        </RadioGroup>
         <Modal
           ref={refModalWait}
           title={dsI18n.t('ds_overlays:modal.VentevarselTitle')}
