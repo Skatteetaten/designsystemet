@@ -35,6 +35,7 @@ const meta = {
       },
     },
     description: { control: 'text', table: { category: category.props } },
+    hasSpinner: { table: { category: category.props } },
     isExternal: { table: { category: category.props } },
     hideArrowIcon: {
       table: {
@@ -51,6 +52,7 @@ const meta = {
         defaultValue: { summary: getNavigationTileSizeDefault() },
       },
     },
+    spinnerTitle: { table: { category: category.props } },
     svgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,

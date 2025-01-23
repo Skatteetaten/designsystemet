@@ -1,6 +1,9 @@
+import { useState } from 'react';
+
 import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { expect, userEvent, waitFor, within } from '@storybook/test';
 
+import { Button } from '@skatteetaten/ds-buttons';
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
 import { ErrorSummary, TextField } from '@skatteetaten/ds-forms';
 import { Paragraph } from '@skatteetaten/ds-typography';
@@ -306,5 +309,51 @@ export const WithShadowRootNode = {
       customElement?.shadowRoot &&
       customElement.shadowRoot.querySelector('input:focus');
     await expect(input).toBeInTheDocument();
+  },
+} satisfies Story;
+
+const TemplateWithFocus: StoryFn<typeof ErrorSummary> = () => {
+  const [state, setState] = useState({
+    hasError: false,
+  });
+  return (
+    <>
+      <TextField
+        id={'input_aar'}
+        label={'År'}
+        value={1009}
+        errorMessage={'Inntekståret må være etter 2008'}
+        required
+      />
+      <ErrorSummary id={'errorSummary1'} showErrorSummary={state.hasError}>
+        <ErrorSummary.Error referenceId={'input_aar'}>
+          {'Inntekståret må være etter 2008'}
+        </ErrorSummary.Error>
+      </ErrorSummary>
+      <Button
+        className={'topSpacingXL'}
+        onClick={(): void => {
+          setState({ hasError: !state.hasError });
+          setTimeout((): void => {
+            const el = document.getElementById('errorSummary1');
+            el?.focus();
+          }, 0);
+        }}
+      >
+        {'Send'}
+      </Button>
+    </>
+  );
+};
+
+export const WithFocus = {
+  render: TemplateWithFocus,
+  name: 'With Focus',
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await userEvent.click(button);
+    const errorSummary = canvas.getAllByRole('generic')[4];
+    await waitFor(() => expect(errorSummary).toHaveFocus());
   },
 } satisfies Story;

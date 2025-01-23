@@ -8,14 +8,20 @@ import {
   getCommonButtonTypeDefault,
   sizeArr,
 } from '@skatteetaten/ds-core-utils';
+import {
+  AttachFileSVGpath,
+  BellOutlineSVGpath,
+  CircleDownSVGpath,
+  DeleteSVGpath,
+} from '@skatteetaten/ds-icons';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
-const defaultSVGPath = Object.values(SystemSVGPaths)[14];
-const alternativeSVGPathFocus = Object.values(SystemSVGPaths)[40];
-const alternativeSVGPathBlur = Object.values(SystemSVGPaths)[15];
-const alternativeSVGPathClick = Object.values(SystemSVGPaths)[52];
+const defaultSVGPath = AttachFileSVGpath;
+const alternativeSVGPathFocus = CircleDownSVGpath;
+const alternativeSVGPathBlur = BellOutlineSVGpath;
+const alternativeSVGPathClick = DeleteSVGpath;
 
 const verifyAttribute =
   (attribute: string, expectedValue: string) =>

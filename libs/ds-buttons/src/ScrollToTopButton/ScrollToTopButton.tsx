@@ -4,7 +4,10 @@ import { useTranslation } from 'react-i18next';
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { MoveUpIcon } from '@skatteetaten/ds-icons';
 
-import { getVisibilityThresholdDefault } from './defaults';
+import {
+  getScrollToMainDefault,
+  getVisibilityThresholdDefault,
+} from './defaults';
 import { ScrollToTopButtonProps } from './ScrollToTopButton.types';
 
 import styles from './ScrollToTopButton.module.scss';
@@ -22,6 +25,7 @@ export const ScrollToTopButton = forwardRef<
       'data-testid': dataTestId,
       shadowRootNode,
       visibilityThreshold = getVisibilityThresholdDefault(),
+      scrollToMain = getScrollToMainDefault(),
       children,
     },
     ref
@@ -60,7 +64,7 @@ export const ScrollToTopButton = forwardRef<
             const main = shadowRootNode
               ? shadowRootNode.querySelector('main')
               : document.querySelector('main');
-            main?.focus();
+            main?.focus({ preventScroll: !scrollToMain });
           }}
         >
           <div
@@ -89,4 +93,4 @@ export const ScrollToTopButton = forwardRef<
 );
 ScrollToTopButton.displayName = 'ScrollToTopButton';
 
-export { getVisibilityThresholdDefault };
+export { getVisibilityThresholdDefault, getScrollToMainDefault };

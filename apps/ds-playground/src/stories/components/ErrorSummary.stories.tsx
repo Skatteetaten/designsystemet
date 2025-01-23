@@ -103,10 +103,6 @@ export const Examples: Story = {
           className={'topSpacingXL'}
           onClick={(): void => {
             setState({ hasError: !state.hasError });
-            setTimeout((): void => {
-              const el = document.getElementById('errorSummary1');
-              el?.focus();
-            }, 0);
           }}
         >
           {'Send'}

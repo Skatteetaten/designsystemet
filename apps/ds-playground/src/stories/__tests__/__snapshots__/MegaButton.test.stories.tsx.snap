@@ -232,7 +232,9 @@ exports[`Tester/MegaButton WithSpinner smoke-test 1`] = `
     >
       <div class="_spinnerAnimation_wnf1f_40 ">
       </div>
-      <span class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 ">
+      <span id="title-:r3:"
+            class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+      >
         Laster inn
       </span>
     </div>

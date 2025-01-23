@@ -2,6 +2,8 @@ declare const classNames: {
   readonly icon: 'icon';
   readonly icon_large: 'icon_large';
   readonly icon_extraLarge: 'icon_extraLarge';
+  readonly spinner: 'spinner';
+  readonly spinner_extraLarge: 'spinner_extraLarge';
   readonly header: 'header';
   readonly title: 'title';
   readonly title_large: 'title_large';
@@ -13,9 +15,5 @@ declare const classNames: {
   readonly navigationTile_extraLarge: 'navigationTile_extraLarge';
   readonly navigationTile_medium: 'navigationTile_medium';
   readonly navigationTile_large: 'navigationTile_large';
-  readonly titleWrapper: 'titleWrapper';
-  readonly iconWrapper: 'iconWrapper';
-  readonly iconWrapper_medium: 'iconWrapper_medium';
-  readonly iconWrapper_large: 'iconWrapper_large';
 };
 export default classNames;

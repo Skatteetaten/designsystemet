@@ -1,4 +1,11 @@
-import { Children, forwardRef, JSX } from 'react';
+import {
+  Children,
+  forwardRef,
+  JSX,
+  useEffect,
+  useImperativeHandle,
+  useRef,
+} from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { LinkGroup } from '@skatteetaten/ds-buttons';
@@ -34,9 +41,19 @@ export const ErrorSummary = forwardRef<HTMLDivElement, ErrorSummaryProps>(
     const contentWithoutChildrenClassName = !children
       ? styles.contentWithoutChildren
       : '';
+
+    const errorSummaryRef = useRef<HTMLDivElement>(null);
+    useImperativeHandle(ref, () => errorSummaryRef.current as HTMLDivElement);
+    useEffect(() => {
+      if (showErrorSummary) {
+        errorSummaryRef.current?.focus();
+      }
+    }, [showErrorSummary]);
+
     return (
       <div
-        ref={ref}
+        ref={errorSummaryRef}
+        className={styles.wrapper}
         id={id}
         lang={lang}
         data-testid={dataTestId}

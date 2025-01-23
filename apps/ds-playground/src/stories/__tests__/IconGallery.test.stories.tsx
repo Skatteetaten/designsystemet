@@ -34,7 +34,7 @@ type Story = StoryObj<typeof meta>;
 const TemplateSystemIcons: StoryFn<typeof Icon> = () => (
   <>
     {Object.entries(SystemSVGPaths).map(([svgPathName, svgPath]) => (
-      <Icon key={svgPathName} svgPath={svgPath} />
+      <Icon key={svgPathName} svgPath={svgPath} size={'large'} />
     ))}
   </>
 );

@@ -5,6 +5,7 @@ import {
   useRef,
   MouseEvent,
   JSX,
+  useState,
   useEffect,
 } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -46,9 +47,9 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
       padding = getModalPaddingDefault(),
       title,
       variant = getModalVariantDefault(),
-
       shadowRootNode,
       onClose,
+      renderIcon,
       children,
     },
     ref
@@ -59,9 +60,33 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
     const statusFlagRef = useRef({
       mouseDownCaptured: false,
     });
-
     const modalRef = useRef<HTMLDialogElement>(null);
     useImperativeHandle(ref, () => modalRef?.current as HTMLDialogElement);
+    const [isAutoOpened, setIsAutoOpened] = useState<boolean>(
+      document.activeElement?.nodeName === 'BODY'
+    );
+
+    useEffect(() => {
+      const dialog = modalRef.current;
+      const handleClose = (): void => {
+        if (isAutoOpened) {
+          setIsAutoOpened(false);
+          const prevTabIndex = document.body.tabIndex;
+          document.body.tabIndex = -1;
+          document.body.focus();
+          document.body.tabIndex = prevTabIndex;
+        }
+      };
+
+      if (dialog) {
+        dialog.addEventListener('close', handleClose);
+      }
+      return (): void => {
+        if (dialog) {
+          dialog.removeEventListener('close', handleClose);
+        }
+      };
+    }, [isAutoOpened]);
 
     useEffect(() => {
       /**
@@ -78,10 +103,10 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
     }, [children, dismissOnEsc]);
 
     const isClickOutside = (event: MouseEvent): boolean => {
-      if (!(event.target instanceof HTMLElement)) {
+      if (!(event.currentTarget instanceof HTMLElement)) {
         return true;
       }
-      const rect = event.target.getBoundingClientRect();
+      const rect = event.currentTarget.getBoundingClientRect();
       return (
         rect.left > event.clientX ||
         rect.right < event.clientX ||
@@ -138,6 +163,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
           if (e.key === 'Escape') {
             if (dismissOnEsc) {
               onClose?.();
+              modalRef.current?.close();
             } else {
               e.preventDefault();
             }
@@ -171,6 +197,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
             {variant === 'important' && (
               <SkatteetatenLogo className={styles.modalLogo} />
             )}
+            {renderIcon && <div>{renderIcon?.()}</div>}
             <Heading
               className={`${styles.modalHeading} ${headingNoPaddingClassName} ${hideTitleClassName}`.trim()}
               id={headingId}
