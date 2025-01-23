@@ -2,7 +2,7 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import { IconButton, Link } from '@skatteetaten/ds-buttons';
+import { Button, IconButton, Link } from '@skatteetaten/ds-buttons';
 import {
   Accordion,
   getAccordionBackgroundColorDefault,
@@ -10,6 +10,7 @@ import {
   getAccordionSizeDefault,
 } from '@skatteetaten/ds-collections';
 import { DescriptionList } from '@skatteetaten/ds-content';
+import { RadioGroup } from '@skatteetaten/ds-forms';
 import {
   AccountMultipleSVGpath,
   BriefcaseSVGpath,
@@ -21,10 +22,10 @@ import {
   FamilySVGpath,
   PersonSVGpath,
   PhoneSVGpath,
-  SkattetrekkSVGpath,
 } from '@skatteetaten/ds-icons';
 import { Tag } from '@skatteetaten/ds-status';
-import { Paragraph } from '@skatteetaten/ds-typography';
+import { Table } from '@skatteetaten/ds-table';
+import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
@@ -80,54 +81,25 @@ type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {} satisfies Story;
 
-export const Examples: Story = {
+export const LeftMenu: Story = {
+  name: 'I venstremeny',
   render: (_args): JSX.Element => {
     return (
-      <>
-        <Accordion
-          color={'graphite'}
-          size={'small'}
-          className={'bottomSpacingXL'}
-        >
-          <Accordion.Item
-            key={'a1'}
-            title={'Meg selv'}
-            subtitle={
-              'Skattekort, frikort, forskuddsskatt, skatte-melding (selvangivelse)'
-            }
-            svgPath={PersonSVGpath}
-          >
-            {
-              'Du må betale restskatten selv om du har endret etter fristen for skattemeldingen eller klaget. Hvis du ikke betaler restskatten i tide, løper det forsinkelsesrenter ved forfall frem til du betaler.'
-            }
-          </Accordion.Item>
-          <Accordion.Item
-            key={'a3'}
-            title={'Skatt'}
-            subtitle={
-              'Skattekort, frikort, forskuddsskatt, skattemelding (selvangivelse)'
-            }
-            svgPath={SkattetrekkSVGpath}
-          >
-            {defaultContent}
-          </Accordion.Item>
-        </Accordion>
-
+      <div className={'flex'}>
         <Accordion
           id={'virksomhet'}
           size={'small'}
-          className={'container-aside bottomSpacingXL'}
+          className={'container-aside marginRightM'}
         >
           <Accordion.Item
             title={'987 654 321\nStødig Sjappe 1'}
             svgPath={CompanySVGpath}
-            isExpanded
           >
-            <DescriptionList>
+            <DescriptionList className={'gridEqualColumns'}>
               <DescriptionList.Element term={'Virksomhetsnavn'}>
                 {'Stødig Sjappe 1'}
               </DescriptionList.Element>
-              <DescriptionList.Element term={'Organisasjonsnummer'}>
+              <DescriptionList.Element term={'Organisasjons-\nnummer'}>
                 <span className={'marginRightS'}>{'999 999 999'}</span>
                 <IconButton
                   svgPath={CopySVGpath}
@@ -160,12 +132,8 @@ export const Examples: Story = {
               <Link href={'#'}>{'Gå til partssoversikt'}</Link>
             </DescriptionList>
           </Accordion.Item>
-          <Accordion.Item
-            title={'Roller'}
-            svgPath={AccountMultipleSVGpath}
-            isExpanded
-          >
-            <DescriptionList>
+          <Accordion.Item title={'Roller'} svgPath={AccountMultipleSVGpath}>
+            <DescriptionList className={'gridEqualColumns'}>
               <DescriptionList.Element term={'Eier'}>
                 <Link href={'#eier'}>{'Chad-Henning Krøger'}</Link>
               </DescriptionList.Element>
@@ -177,26 +145,27 @@ export const Examples: Story = {
           <Accordion.Item
             title={'Alle dokumenter på part'}
             svgPath={DescriptionSVGpath}
-            isExpanded
           >
             <em>{'Dokumentasjon og historikk her'}</em>
           </Accordion.Item>
           <Accordion.Item
             title={'Alle notater på part'}
             svgPath={ChatBubbleOutlineSVGpath}
-            isExpanded
           >
             <em>{'Notater fra saksbehandler her'}</em>
           </Accordion.Item>
         </Accordion>
 
-        <Accordion id={'eier'} size={'small'} className={'container-aside'}>
+        <Accordion
+          id={'eier'}
+          size={'small'}
+          className={'container-aside bottomSpacingXL'}
+        >
           <Accordion.Item
             title={'01012001 99999\nChad-Henning Krøger'}
             svgPath={PersonSVGpath}
-            isExpanded
           >
-            <DescriptionList>
+            <DescriptionList className={'gridEqualColumns'}>
               <DescriptionList.Element term={'Fødselsnummer'}>
                 {'01012001 99999'}
               </DescriptionList.Element>
@@ -227,8 +196,11 @@ export const Examples: Story = {
               <Link href={'#'}>{'Gå til partssoversikt'}</Link>
             </DescriptionList>
           </Accordion.Item>
-          <Accordion.Item title={'Familie'} svgPath={FamilySVGpath} isExpanded>
-            <DescriptionList descriptionDirection={'vertical'}>
+          <Accordion.Item title={'Familie'} svgPath={FamilySVGpath}>
+            <DescriptionList
+              className={'gridEqualColumns'}
+              descriptionDirection={'vertical'}
+            >
               <DescriptionList.Element term={'Barn under 20 år'}>
                 <div className={'marginLeftL'}>
                   <Link href={'#'}>{'Neue Haas Krøger'}</Link>
@@ -256,12 +228,8 @@ export const Examples: Story = {
               </DescriptionList.Element>
             </DescriptionList>
           </Accordion.Item>
-          <Accordion.Item
-            title={'Roller'}
-            svgPath={AccountMultipleSVGpath}
-            isExpanded
-          >
-            <DescriptionList>
+          <Accordion.Item title={'Roller'} svgPath={AccountMultipleSVGpath}>
+            <DescriptionList className={'gridEqualColumns'}>
               <DescriptionList.Element term={'Eier'}>
                 <Link href={'#virksomhet'}>{'Stødig Sjappe 1'}</Link>
               </DescriptionList.Element>
@@ -274,7 +242,6 @@ export const Examples: Story = {
             title={'Personens sakshistorikk'}
             subtitle={'3 saker'}
             svgPath={BriefcaseSVGpath}
-            isExpanded
           >
             <Link href={'#'} className={'block'} svgPath={CheckSVGpath}>
               {'Endre postadresse'}
@@ -301,9 +268,8 @@ export const Examples: Story = {
           <Accordion.Item
             title={'Kontakt- og reservasjonsregisteret'}
             svgPath={PhoneSVGpath}
-            isExpanded
           >
-            <DescriptionList hasSpacing>
+            <DescriptionList className={'gridEqualColumns'} hasSpacing>
               <DescriptionList.Element term={'Fasttelefon'}>
                 {'+47 99 99 99 99'}
               </DescriptionList.Element>
@@ -326,8 +292,113 @@ export const Examples: Story = {
             </Paragraph>
           </Accordion.Item>
         </Accordion>
-      </>
+      </div>
     );
   },
 } satisfies Story;
-Examples.parameters = exampleParameters;
+LeftMenu.parameters = exampleParameters;
+
+export const WorkTask: Story = {
+  name: 'I arbeidsoppgave',
+  render: (_args): JSX.Element => {
+    return (
+      <div className={'accordionWorkTaskExample'}>
+        <Heading as={'h1'} level={2} hasSpacing>
+          {'Navn på arbeidsoppgave'}
+        </Heading>
+        <DescriptionList
+          variant={'horizontal'}
+          descriptionDirection={'vertical'}
+          hasSpacing
+        >
+          <DescriptionList.Element term={'Frist for å løse'}>
+            {'27.11.2024'}
+          </DescriptionList.Element>
+          <DescriptionList.Element term={'Saksbehandler'}>
+            {'Siri Saksbehandler'}
+          </DescriptionList.Element>
+          <DescriptionList.Element term={'Status'}>
+            {'Under arbeid'}
+          </DescriptionList.Element>
+        </DescriptionList>
+        <Accordion iconPosition={'left'} className={'bottomSpacingXL'}>
+          <Accordion.Item title={'Informasjon fra skattemeldingen'}>
+            <Table
+              caption={'Informasjon fra skattemeldingen'}
+              variant={'compact'}
+            >
+              <Table.Header>
+                <Table.Row>
+                  <Table.HeaderCell scope={'col'}>
+                    {'Kontonummer'}
+                  </Table.HeaderCell>
+                  <Table.HeaderCell scope={'col'}>
+                    {'Innestående'}
+                  </Table.HeaderCell>
+                  <Table.HeaderCell scope={'col'}>
+                    {'Opptjente renter'}
+                  </Table.HeaderCell>
+                  <Table.HeaderCell scope={'col'}>
+                    {'Kontotype'}
+                  </Table.HeaderCell>
+                  <Table.HeaderCell scope={'col'}>{'Bank'}</Table.HeaderCell>
+                  <Table.HeaderCell scope={'col'}>{'Org.nr.'}</Table.HeaderCell>
+                </Table.Row>
+              </Table.Header>
+              <Table.Body>
+                <Table.Row>
+                  <Table.DataCell>{'0000 00 0000'}</Table.DataCell>
+                  <Table.DataCell>{'10 000,00'}</Table.DataCell>
+                  <Table.DataCell>{'500,00'}</Table.DataCell>
+                  <Table.DataCell>{'Brukskonto'}</Table.DataCell>
+                  <Table.DataCell>{'DnB'}</Table.DataCell>
+                  <Table.DataCell>{'999 999 999'}</Table.DataCell>
+                </Table.Row>
+                <Table.Row>
+                  <Table.DataCell>{'0000 00 0000'}</Table.DataCell>
+                  <Table.DataCell>{'10 000,00'}</Table.DataCell>
+                  <Table.DataCell>{'500,00'}</Table.DataCell>
+                  <Table.DataCell>{'BSU'}</Table.DataCell>
+                  <Table.DataCell>{'DnB'}</Table.DataCell>
+                  <Table.DataCell>{'999 999 998'}</Table.DataCell>
+                </Table.Row>
+                <Table.Row>
+                  <Table.DataCell>{'0000 00 0000'}</Table.DataCell>
+                  <Table.DataCell>{'10 000,00'}</Table.DataCell>
+                  <Table.DataCell>{'500,00'}</Table.DataCell>
+                  <Table.DataCell>{'Aksjer'}</Table.DataCell>
+                  <Table.DataCell>{'Nordea'}</Table.DataCell>
+                  <Table.DataCell>{'999 999 997'}</Table.DataCell>
+                </Table.Row>
+              </Table.Body>
+            </Table>
+          </Accordion.Item>
+          <Accordion.Item title={'Heftelser'}>
+            <em>
+              {
+                'Her vil det være oversikt over heftelser på parten. Det kan være vist som f.eks. en tabell eller DescriptionList.'
+              }
+            </em>
+          </Accordion.Item>
+          <Accordion.Item title={'Pågående saker'}>
+            <em>
+              {
+                'Pågående saker kan vises som kort eller tabeller, litt avhengig av kompleksitet og antall.'
+              }
+            </em>
+          </Accordion.Item>
+          <Accordion.Item title={'Valg for saken'}>
+            <RadioGroup legend={'valg for saken'} hideLegend>
+              <RadioGroup.Radio>{'Mangler dokumentasjon'}</RadioGroup.Radio>
+              <RadioGroup.Radio>{'Opprett nytt krav'}</RadioGroup.Radio>
+              <RadioGroup.Radio>{'Godta krav'}</RadioGroup.Radio>
+            </RadioGroup>
+          </Accordion.Item>
+        </Accordion>
+        <Button className={'marginRightM'}>{'Bekreft og fortsett'}</Button>
+        <Button variant={'secondary'}>{'Avbryt'}</Button>
+      </div>
+    );
+  },
+} satisfies Story;
+WorkTask.parameters = exampleParameters;
