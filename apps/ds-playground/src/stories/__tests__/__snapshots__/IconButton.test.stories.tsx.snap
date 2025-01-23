@@ -465,7 +465,9 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
       >
         <div class="_spinnerAnimation_wnf1f_40 ">
         </div>
-        <span class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 ">
+        <span id="title-:rm:"
+              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+        >
           Laster inn
         </span>
       </div>
@@ -479,7 +481,9 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
       >
         <div class="_spinnerAnimation_wnf1f_40 ">
         </div>
-        <span class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 ">
+        <span id="title-:rn:"
+              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+        >
           Laster inn
         </span>
       </div>
@@ -493,7 +497,9 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
       >
         <div class="_spinnerAnimation_wnf1f_40 ">
         </div>
-        <span class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 ">
+        <span id="title-:ro:"
+              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+        >
           Laster inn
         </span>
       </div>
@@ -507,7 +513,9 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
       >
         <div class="_spinnerAnimation_wnf1f_40 ">
         </div>
-        <span class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 ">
+        <span id="title-:rp:"
+              class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+        >
           Laster inn
         </span>
       </div>
@@ -520,11 +528,11 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
            viewbox="0 0 24 24"
            focusable="false"
-           aria-labelledby="svgtitle-:rm:"
+           aria-labelledby="svgtitle-:rq:"
            aria-hidden="false"
            role="img"
       >
-        <title id="svgtitle-:rm:">
+        <title id="svgtitle-:rq:">
           dummy tekst accessible name
         </title>
         <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
@@ -537,11 +545,11 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
            viewbox="0 0 24 24"
            focusable="false"
-           aria-labelledby="svgtitle-:rn:"
+           aria-labelledby="svgtitle-:rr:"
            aria-hidden="false"
            role="img"
       >
-        <title id="svgtitle-:rn:">
+        <title id="svgtitle-:rr:">
           dummy tekst accessible name
         </title>
         <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
@@ -554,11 +562,11 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
            viewbox="0 0 24 24"
            focusable="false"
-           aria-labelledby="svgtitle-:ro:"
+           aria-labelledby="svgtitle-:rs:"
            aria-hidden="false"
            role="img"
       >
-        <title id="svgtitle-:ro:">
+        <title id="svgtitle-:rs:">
           dummy tekst accessible name
         </title>
         <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
@@ -571,11 +579,11 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
            viewbox="0 0 24 24"
            focusable="false"
-           aria-labelledby="svgtitle-:rp:"
+           aria-labelledby="svgtitle-:rt:"
            aria-hidden="false"
            role="img"
       >
-        <title id="svgtitle-:rp:">
+        <title id="svgtitle-:rt:">
           dummy tekst accessible name
         </title>
         <path d="M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 1 1 5 0v10.5a1 1 0 0 1-2 0V6H10v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 1 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6h-1.5Z">
@@ -592,7 +600,9 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
     >
       <div class="_spinnerAnimation_wnf1f_40 ">
       </div>
-      <span class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 ">
+      <span id="title-:ru:"
+            class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+      >
         Laster inn
       </span>
     </div>
@@ -606,7 +616,9 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
     >
       <div class="_spinnerAnimation_wnf1f_40 ">
       </div>
-      <span class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 ">
+      <span id="title-:rv:"
+            class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+      >
         Laster inn
       </span>
     </div>
@@ -620,7 +632,9 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
     >
       <div class="_spinnerAnimation_wnf1f_40 ">
       </div>
-      <span class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 ">
+      <span id="title-:r10:"
+            class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+      >
         Laster inn
       </span>
     </div>
@@ -634,7 +648,9 @@ exports[`Tester/IconButton WithSpinner smoke-test 1`] = `
     >
       <div class="_spinnerAnimation_wnf1f_40 ">
       </div>
-      <span class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 ">
+      <span id="title-:r11:"
+            class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+      >
         Laster inn
       </span>
     </div>

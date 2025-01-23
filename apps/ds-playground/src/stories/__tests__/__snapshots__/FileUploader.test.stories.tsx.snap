@@ -105,9 +105,9 @@ exports[`Tester/FileUploader WithCustomClassNames play-test 1`] = `
     <div tabindex="-1">
     </div>
     <button type="button"
-            id=":r2j:"
+            id=":r2k:"
             class="_dropZone_6otu2_14 _dropZone_error_6otu2_29 "
-            aria-describedby=":r2k:-fileuploader-error "
+            aria-describedby=":r2l:-fileuploader-error "
     >
       <div class="_removePointerEvents_6otu2_81">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_6otu2_10"
@@ -120,7 +120,7 @@ exports[`Tester/FileUploader WithCustomClassNames play-test 1`] = `
           </path>
         </svg>
         <label class="_innerLabel_6otu2_95"
-               for=":r2j:"
+               for=":r2k:"
         >
           Legg til fil
         </label>
@@ -130,7 +130,7 @@ exports[`Tester/FileUploader WithCustomClassNames play-test 1`] = `
         >
       </div>
     </button>
-    <div id=":r2k:-fileuploader-error"
+    <div id=":r2l:-fileuploader-error"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -165,25 +165,25 @@ exports[`Tester/FileUploader WithCustomClassNames play-test 1`] = `
 exports[`Tester/FileUploader WithError play-test 1`] = `
 <div data-test-block="true">
   <div class="_container_6otu2_5  ">
-    <label id="labelId-:r12:"
+    <label id="labelId-:r13:"
            class="_label_348na_5"
-           for=":r10:"
+           for=":r11:"
     >
       Hemmelig kode
     </label>
     <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
             type="button"
-            aria-describedby="labelId-:r12:"
+            aria-describedby="labelId-:r13:"
             aria-expanded="false"
     >
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
            viewbox="0 0 24 24"
            focusable="false"
-           aria-labelledby="svgtitle-:r13:"
+           aria-labelledby="svgtitle-:r14:"
            aria-hidden="false"
            role="img"
       >
-        <title id="svgtitle-:r13:">
+        <title id="svgtitle-:r14:">
           Hjelp
         </title>
         <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
@@ -193,9 +193,9 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
     <div tabindex="-1">
     </div>
     <button type="button"
-            id=":r10:"
+            id=":r11:"
             class="_dropZone_6otu2_14 _dropZone_error_6otu2_29 "
-            aria-describedby=":r11:-fileuploader-error :r10:-accepted-formats"
+            aria-describedby=":r12:-fileuploader-error :r11:-accepted-formats"
     >
       <div class="_removePointerEvents_6otu2_81">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_6otu2_10"
@@ -208,7 +208,7 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
           </path>
         </svg>
         <label class="_innerLabel_6otu2_95"
-               for=":r10:"
+               for=":r11:"
         >
           Legg til fil(er)
         </label>
@@ -220,7 +220,7 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
         >
       </div>
     </button>
-    <span id=":r10:-accepted-formats"
+    <span id=":r11:-accepted-formats"
           class="_fileInfo_6otu2_54"
     >
       Filer du kan laste opp:
@@ -228,7 +228,7 @@ exports[`Tester/FileUploader WithError play-test 1`] = `
         .java, .cpp, .py
       </span>
     </span>
-    <div id=":r11:-fileuploader-error"
+    <div id=":r12:-fileuploader-error"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -265,25 +265,25 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
   <div class="_container_6otu2_5  "
        data-testid="testid123"
   >
-    <label id="labelId-:r27:"
+    <label id="labelId-:r28:"
            class="_label_348na_5"
-           for=":r25:"
+           for=":r26:"
     >
       Dokumentasjon og grunnlag
     </label>
     <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
             type="button"
-            aria-describedby="labelId-:r27:"
+            aria-describedby="labelId-:r28:"
             aria-expanded="false"
     >
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
            viewbox="0 0 24 24"
            focusable="false"
-           aria-labelledby="svgtitle-:r28:"
+           aria-labelledby="svgtitle-:r29:"
            aria-hidden="false"
            role="img"
       >
-        <title id="svgtitle-:r28:">
+        <title id="svgtitle-:r29:">
           Hjelp
         </title>
         <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
@@ -293,7 +293,7 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
     <div tabindex="-1">
     </div>
     <button type="button"
-            id=":r25:"
+            id=":r26:"
             class="_dropZone_6otu2_14  "
     >
       <div class="_removePointerEvents_6otu2_81">
@@ -307,7 +307,7 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
           </path>
         </svg>
         <label class="_innerLabel_6otu2_95"
-               for=":r25:"
+               for=":r26:"
         >
           Legg til fil
         </label>
@@ -317,7 +317,7 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
         >
       </div>
     </button>
-    <div id=":r26:-fileuploader-error"
+    <div id=":r27:-fileuploader-error"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -327,12 +327,12 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
     >
     </div>
     <ul class="_fileList_6otu2_75">
-      <li id=":r2a:"
+      <li id=":r2b:"
           class="_fileListItem_pqqzl_27 "
       >
         <div class="_fileListContainer_pqqzl_43">
           <span class="_fileListGrid_pqqzl_30">
-            <a id=":r2a:-file-file.txt"
+            <a id=":r2b:-file-file.txt"
                class="_link_z7jba_1  _fileListText_pqqzl_34 _fileListLink_pqqzl_47"
                href="#"
                download
@@ -351,11 +351,11 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
             <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1 _successIconLinkMargin_pqqzl_5"
                  viewbox="0 0 24 24"
                  focusable="false"
-                 aria-labelledby="svgtitle-:r2c:"
+                 aria-labelledby="svgtitle-:r2d:"
                  aria-hidden="false"
                  role="img"
             >
-              <title id="svgtitle-:r2c:">
+              <title id="svgtitle-:r2d:">
                 Fullført
               </title>
               <path d="M19.94 6.71L19.24 6L9 16.23L5.26 12.5L4.91 12.85L3.5 14.26L9 19.76L21 7.76L19.94 6.71Z">
@@ -365,16 +365,16 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
           <span>
             <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_pqqzl_9"
                     type="button"
-                    aria-describedby=":r2a:-file-file.txt"
+                    aria-describedby=":r2b:-file-file.txt"
             >
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r2d:"
+                   aria-labelledby="svgtitle-:r2e:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r2d:">
+                <title id="svgtitle-:r2e:">
                   Fjern fil
                 </title>
                 <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -398,25 +398,25 @@ exports[`Tester/FileUploader WithFileChange play-test 1`] = `
 exports[`Tester/FileUploader WithHelpToggleEvent smoke-test 1`] = `
 <div data-test-block="true">
   <div class="_container_6otu2_5  ">
-    <label id="labelId-:r2g:"
+    <label id="labelId-:r2h:"
            class="_label_348na_5"
-           for=":r2e:"
+           for=":r2f:"
     >
       Last opp filer
     </label>
     <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
             type="button"
-            aria-describedby="labelId-:r2g:"
+            aria-describedby="labelId-:r2h:"
             aria-expanded="false"
     >
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
            viewbox="0 0 24 24"
            focusable="false"
-           aria-labelledby="svgtitle-:r2h:"
+           aria-labelledby="svgtitle-:r2i:"
            aria-hidden="false"
            role="img"
       >
-        <title id="svgtitle-:r2h:">
+        <title id="svgtitle-:r2i:">
           Hjelp
         </title>
         <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
@@ -426,7 +426,7 @@ exports[`Tester/FileUploader WithHelpToggleEvent smoke-test 1`] = `
     <div tabindex="-1">
     </div>
     <button type="button"
-            id=":r2e:"
+            id=":r2f:"
             class="_dropZone_6otu2_14  "
     >
       <div class="_removePointerEvents_6otu2_81">
@@ -440,7 +440,7 @@ exports[`Tester/FileUploader WithHelpToggleEvent smoke-test 1`] = `
           </path>
         </svg>
         <label class="_innerLabel_6otu2_95"
-               for=":r2e:"
+               for=":r2f:"
         >
           Legg til fil
         </label>
@@ -450,7 +450,7 @@ exports[`Tester/FileUploader WithHelpToggleEvent smoke-test 1`] = `
         >
       </div>
     </button>
-    <div id=":r2f:-fileuploader-error"
+    <div id=":r2g:-fileuploader-error"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -485,7 +485,9 @@ exports[`Tester/FileUploader WithIsUploading smoke-test 1`] = `
         >
           <div class="_spinnerAnimation_wnf1f_40 ">
           </div>
-          <span class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 _spinner_6otu2_89">
+          <span id="title-:r10:"
+                class="_spinnerTitle_wnf1f_59  _spinnerTitle_centerText_wnf1f_66 _spinner_6otu2_89"
+          >
             Opplasting pågår
           </span>
         </div>
@@ -573,9 +575,9 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
     <div tabindex="-1">
     </div>
     <button type="button"
-            id=":r1u:"
+            id=":r1v:"
             class="_dropZone_6otu2_14  "
-            aria-describedby=" :r1u:-accepted-formats"
+            aria-describedby=" :r1v:-accepted-formats"
     >
       <div class="_removePointerEvents_6otu2_81">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_6otu2_10"
@@ -588,7 +590,7 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
           </path>
         </svg>
         <label class="_innerLabel_6otu2_95"
-               for=":r1u:"
+               for=":r1v:"
         >
           Trykk eller dra og slipp filer her
         </label>
@@ -599,7 +601,7 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
         >
       </div>
     </button>
-    <span id=":r1u:-accepted-formats"
+    <span id=":r1v:-accepted-formats"
           class="_fileInfo_6otu2_54"
     >
       Tillatte filformater:_
@@ -607,7 +609,7 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
         bilder og dokumenter
       </span>
     </span>
-    <div id=":r1v:-fileuploader-error"
+    <div id=":r20:-fileuploader-error"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -617,7 +619,7 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
     >
     </div>
     <ul class="_fileList_6otu2_75">
-      <li id=":r21:"
+      <li id=":r22:"
           class="_fileListItem_pqqzl_27 "
       >
         <div class="_fileListContainer_pqqzl_43">
@@ -626,17 +628,17 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _fileListIcon_pqqzl_39"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r22:"
+                   aria-labelledby="svgtitle-:r23:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r22:">
+                <title id="svgtitle-:r23:">
                   Fil
                 </title>
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm4 18H6V4h7v5h5v11Z">
                 </path>
               </svg>
-              <span id=":r21:-file-document.pdf"
+              <span id=":r22:-file-document.pdf"
                     class="_fileListFile_pqqzl_51"
               >
                 document.pdf
@@ -644,11 +646,11 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r23:"
+                   aria-labelledby="svgtitle-:r24:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r23:">
+                <title id="svgtitle-:r24:">
                   lastet opp
                 </title>
                 <path d="M19.94 6.71L19.24 6L9 16.23L5.26 12.5L4.91 12.85L3.5 14.26L9 19.76L21 7.76L19.94 6.71Z">
@@ -659,16 +661,16 @@ exports[`Tester/FileUploader WithTextOverrides play-test 1`] = `
           <span>
             <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_pqqzl_9"
                     type="button"
-                    aria-describedby=":r21:-file-document.pdf"
+                    aria-describedby=":r22:-file-document.pdf"
             >
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r24:"
+                   aria-labelledby="svgtitle-:r25:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r24:">
+                <title id="svgtitle-:r25:">
                   Fjern fil
                 </title>
                 <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -694,9 +696,9 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
     <div tabindex="-1">
     </div>
     <button type="button"
-            id=":r16:"
+            id=":r17:"
             class="_dropZone_6otu2_14  "
-            aria-describedby=" :r16:-accepted-formats"
+            aria-describedby=" :r17:-accepted-formats"
     >
       <div class="_removePointerEvents_6otu2_81">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_6otu2_10"
@@ -709,7 +711,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
           </path>
         </svg>
         <label class="_innerLabel_6otu2_95"
-               for=":r16:"
+               for=":r17:"
         >
           Legg til fil
         </label>
@@ -720,7 +722,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
         >
       </div>
     </button>
-    <span id=":r16:-accepted-formats"
+    <span id=":r17:-accepted-formats"
           class="_fileInfo_6otu2_54"
     >
       Filer du kan laste opp:
@@ -728,7 +730,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
         .java, .cpp, .py
       </span>
     </span>
-    <div id=":r17:-fileuploader-error"
+    <div id=":r18:-fileuploader-error"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -754,12 +756,12 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
       </div>
     </div>
     <ul class="_fileList_6otu2_75">
-      <li id=":r1a:"
+      <li id=":r1b:"
           class="_fileListItem_pqqzl_27 "
       >
         <div class="_fileListContainer_pqqzl_43">
           <span class="_fileListGrid_pqqzl_30">
-            <a id=":r1a:-file-dokumentasjon.pdf"
+            <a id=":r1b:-file-dokumentasjon.pdf"
                class="_link_z7jba_1  _fileListText_pqqzl_34 _fileListLink_pqqzl_47"
                href="https://www.skatteetaten.no/person/"
                download
@@ -778,11 +780,11 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
             <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1 _successIconLinkMargin_pqqzl_5"
                  viewbox="0 0 24 24"
                  focusable="false"
-                 aria-labelledby="svgtitle-:r1c:"
+                 aria-labelledby="svgtitle-:r1d:"
                  aria-hidden="false"
                  role="img"
             >
-              <title id="svgtitle-:r1c:">
+              <title id="svgtitle-:r1d:">
                 Fullført
               </title>
               <path d="M19.94 6.71L19.24 6L9 16.23L5.26 12.5L4.91 12.85L3.5 14.26L9 19.76L21 7.76L19.94 6.71Z">
@@ -792,16 +794,16 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
           <span>
             <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_pqqzl_9"
                     type="button"
-                    aria-describedby=":r1a:-file-dokumentasjon.pdf"
+                    aria-describedby=":r1b:-file-dokumentasjon.pdf"
             >
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1d:"
+                   aria-labelledby="svgtitle-:r1e:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1d:">
+                <title id="svgtitle-:r1e:">
                   Fjern fil
                 </title>
                 <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -811,7 +813,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
           </span>
         </div>
       </li>
-      <li id=":r1e:"
+      <li id=":r1f:"
           class="_fileListItem_pqqzl_27 "
       >
         <div class="_fileListContainer_pqqzl_43">
@@ -820,17 +822,17 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _fileListIcon_pqqzl_39"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1f:"
+                   aria-labelledby="svgtitle-:r1g:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1f:">
+                <title id="svgtitle-:r1g:">
                   Fil
                 </title>
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm4 18H6V4h7v5h5v11Z">
                 </path>
               </svg>
-              <span id=":r1e:-file-grunnlag.jpg"
+              <span id=":r1f:-file-grunnlag.jpg"
                     class="_fileListFile_pqqzl_51"
               >
                 grunnlag.jpg
@@ -838,11 +840,11 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1g:"
+                   aria-labelledby="svgtitle-:r1h:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1g:">
+                <title id="svgtitle-:r1h:">
                   Fullført
                 </title>
                 <path d="M19.94 6.71L19.24 6L9 16.23L5.26 12.5L4.91 12.85L3.5 14.26L9 19.76L21 7.76L19.94 6.71Z">
@@ -853,16 +855,16 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
           <span>
             <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_pqqzl_9"
                     type="button"
-                    aria-describedby=":r1e:-file-grunnlag.jpg"
+                    aria-describedby=":r1f:-file-grunnlag.jpg"
             >
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1h:"
+                   aria-labelledby="svgtitle-:r1i:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1h:">
+                <title id="svgtitle-:r1i:">
                   Fjern fil
                 </title>
                 <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -883,9 +885,9 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
     <div tabindex="-1">
     </div>
     <button type="button"
-            id=":r1i:"
+            id=":r1j:"
             class="_dropZone_6otu2_14  "
-            aria-describedby=" :r1i:-accepted-formats"
+            aria-describedby=" :r1j:-accepted-formats"
     >
       <div class="_removePointerEvents_6otu2_81">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_6otu2_10"
@@ -898,7 +900,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
           </path>
         </svg>
         <label class="_innerLabel_6otu2_95"
-               for=":r1i:"
+               for=":r1j:"
         >
           Legg til fil
         </label>
@@ -909,7 +911,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
         >
       </div>
     </button>
-    <span id=":r1i:-accepted-formats"
+    <span id=":r1j:-accepted-formats"
           class="_fileInfo_6otu2_54"
     >
       Filer du kan laste opp:
@@ -917,7 +919,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
         .java, .cpp, .py
       </span>
     </span>
-    <div id=":r1j:-fileuploader-error"
+    <div id=":r1k:-fileuploader-error"
          aria-live="assertive"
          aria-atomic="true"
     >
@@ -943,12 +945,12 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
       </div>
     </div>
     <ul class="_fileList_6otu2_75">
-      <li id=":r1m:"
+      <li id=":r1n:"
           class="_fileListItem_pqqzl_27 "
       >
         <div class="_fileListContainer_pqqzl_43">
           <span class="_fileListGrid_pqqzl_30">
-            <a id=":r1m:-file-dokumentasjon.pdf"
+            <a id=":r1n:-file-dokumentasjon.pdf"
                class="_link_z7jba_1  _fileListText_pqqzl_34 _fileListLink_pqqzl_47"
                href="https://www.skatteetaten.no/person/"
                download
@@ -967,11 +969,11 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
             <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1 _successIconLinkMargin_pqqzl_5"
                  viewbox="0 0 24 24"
                  focusable="false"
-                 aria-labelledby="svgtitle-:r1o:"
+                 aria-labelledby="svgtitle-:r1p:"
                  aria-hidden="false"
                  role="img"
             >
-              <title id="svgtitle-:r1o:">
+              <title id="svgtitle-:r1p:">
                 Fullført
               </title>
               <path d="M19.94 6.71L19.24 6L9 16.23L5.26 12.5L4.91 12.85L3.5 14.26L9 19.76L21 7.76L19.94 6.71Z">
@@ -981,16 +983,16 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
           <span>
             <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_pqqzl_9"
                     type="button"
-                    aria-describedby=":r1m:-file-dokumentasjon.pdf"
+                    aria-describedby=":r1n:-file-dokumentasjon.pdf"
             >
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1p:"
+                   aria-labelledby="svgtitle-:r1q:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1p:">
+                <title id="svgtitle-:r1q:">
                   Fjern fil
                 </title>
                 <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -1000,7 +1002,7 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
           </span>
         </div>
       </li>
-      <li id=":r1q:"
+      <li id=":r1r:"
           class="_fileListItem_pqqzl_27 "
       >
         <div class="_fileListContainer_pqqzl_43">
@@ -1009,17 +1011,17 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _fileListIcon_pqqzl_39"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1r:"
+                   aria-labelledby="svgtitle-:r1s:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1r:">
+                <title id="svgtitle-:r1s:">
                   Fil
                 </title>
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm4 18H6V4h7v5h5v11Z">
                 </path>
               </svg>
-              <span id=":r1q:-file-grunnlag.jpg"
+              <span id=":r1r:-file-grunnlag.jpg"
                     class="_fileListFile_pqqzl_51"
               >
                 grunnlag.jpg
@@ -1027,11 +1029,11 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _successIcon_pqqzl_1"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1s:"
+                   aria-labelledby="svgtitle-:r1t:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1s:">
+                <title id="svgtitle-:r1t:">
                   Fullført
                 </title>
                 <path d="M19.94 6.71L19.24 6L9 16.23L5.26 12.5L4.91 12.85L3.5 14.26L9 19.76L21 7.76L19.94 6.71Z">
@@ -1042,16 +1044,16 @@ exports[`Tester/FileUploader WithUploadResult smoke-test 1`] = `
           <span>
             <button class="_button_g87u5_1 _button_medium_g87u5_45  _cancelIcon_pqqzl_9"
                     type="button"
-                    aria-describedby=":r1q:-file-grunnlag.jpg"
+                    aria-describedby=":r1r:-file-grunnlag.jpg"
             >
               <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                    viewbox="0 0 24 24"
                    focusable="false"
-                   aria-labelledby="svgtitle-:r1t:"
+                   aria-labelledby="svgtitle-:r1u:"
                    aria-hidden="false"
                    role="img"
               >
-                <title id="svgtitle-:r1t:">
+                <title id="svgtitle-:r1u:">
                   Fjern fil
                 </title>
                 <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
