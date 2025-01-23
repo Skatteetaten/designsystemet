@@ -79,6 +79,7 @@ export const Examples: Story = {
         <Button
           onClick={() => {
             setProgress(0);
+            setShowSpinner(!showSpinner);
             if (interval.current) {
               clearInterval(interval.current);
               interval.current = undefined;
@@ -86,9 +87,6 @@ export const Examples: Story = {
             interval.current = setInterval(() => {
               setProgress((prev) => (prev >= 100 ? 0 : prev + 10));
             }, 1000);
-
-            setShowSpinner(!showSpinner);
-            setProgress(0);
           }}
         >
           {'toggle spinner'}
