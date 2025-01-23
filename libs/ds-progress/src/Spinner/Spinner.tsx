@@ -28,7 +28,7 @@ export const Spinner = forwardRef<HTMLDivElement, SpinnerProps>(
     },
     ref
   ): JSX.Element => {
-    const { t } = useTranslation('ds_status', { i18n: dsI18n });
+    const { t } = useTranslation('ds_progress', { i18n: dsI18n });
     const [isRendered, setIsRendered] = useState<boolean>(false);
 
     /**

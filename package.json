@@ -58,7 +58,7 @@
     "docker:start": "docker run -d --rm --name snapshotscontainer -p 3000:3000 -e 'CONNECTION_TIMEOUT=600000' -v $(pwd)/dist/storybook/ds-playground:/opt/ds-playground -e ALLOW_FILE_PROTOCOL=true browserless/chrome:1.59.0-puppeteer-20.2.1",
     "docker:start:linux": "docker run -d --rm --name snapshotscontainer -e 'CONNECTION_TIMEOUT=600000' -v $(pwd)/dist/storybook/ds-playground:/opt/ds-playground -e ALLOW_FILE_PROTOCOL=true --net=host browserless/chrome:1.59.0-chrome-stable",
     "docker:stop": "docker stop snapshotscontainer",
-    "downloadTranslations": "TEKSTLISTEKATALOG=designsystemet TEKSTLISTER='Shared,ds-alerts,ds-buttons,ds-forms,ds-navigation,ds-layout,ds-tables,ds-status,ds-collections,ds-overlays' TRANSLATIONS_FOLDER='./libs/ds-core-utils/src/translations' node --no-warnings=ExperimentalWarning --loader ts-node/esm ./libs/ds-dev-config/src/scripts/downloadTranslations.ts"
+    "downloadTranslations": "TEKSTLISTEKATALOG=designsystemet TEKSTLISTER='Shared,ds-buttons,ds-forms,ds-navigation,ds-layout,ds-tables,ds-status,ds-collections,ds-overlays,ds-progress' TRANSLATIONS_FOLDER='./libs/ds-core-utils/src/translations' node --no-warnings=ExperimentalWarning --loader ts-node/esm ./libs/ds-dev-config/src/scripts/downloadTranslations.ts"
   },
   "dependencies": {
     "@floating-ui/react": "0.26.28",

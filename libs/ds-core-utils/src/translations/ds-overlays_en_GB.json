@@ -1,8 +1,8 @@
 {
   "modal.CloseModal": "Close dialogue window",
-  "modal.VentevarselImageAltText": "Illustration of a busy person with six arms, occupied with office work.",
-  "modal.VentevarselParagraph": "You have been inactive for a while, are you still here?",
-  "modal.VentevarselTitle": "Hello, are you still here?",
+  "modal.WaitNoticeImageAltText": "Illustration of a busy person with six arms, occupied with office work.",
+  "modal.WaitNoticeParagraph": "You have been inactive for a while, are you still here?",
+  "modal.WaitNoticeTitle": "Hello, are you still here?",
   "rolepicker.And": "and",
   "rolepicker.Business": "(business)",
   "rolepicker.BusinessCount": "({{antall}} virksomheter.)",

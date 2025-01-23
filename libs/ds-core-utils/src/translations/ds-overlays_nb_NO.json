@@ -1,8 +1,8 @@
 {
   "modal.CloseModal": "Lukk dialogvindu",
-  "modal.VentevarselImageAltText": "Illustrasjon av travel person med seks armer, opptatt med kontorarbeid.",
-  "modal.VentevarselParagraph": "Vi ser at du ikke har gjort noe på nettsiden på ei stund. Er du fortsatt her?",
-  "modal.VentevarselTitle": "Hei, er du fortsatt her?",
+  "modal.WaitNoticeImageAltText": "Illustrasjon av travel person med seks armer, opptatt med kontorarbeid.",
+  "modal.WaitNoticeParagraph": "Vi ser at du ikke har gjort noe på nettsiden på ei stund. Er du fortsatt her?",
+  "modal.WaitNoticeTitle": "Hei, er du fortsatt her?",
   "rolepicker.And": "og",
   "rolepicker.Business": "virksomhet",
   "rolepicker.BusinessCount": "{{antall}} virksomheter.",
