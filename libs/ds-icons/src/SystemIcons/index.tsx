@@ -23,6 +23,8 @@ export * from './BookOpenOutline';
 export * from './Bookmark';
 export * from './BookmarkOutline';
 export * from './Briefcase';
+export * from './BriefcaseMultiple';
+export * from './BriefcaseOff';
 export * from './Calculator';
 export * from './Calendar';
 export * from './CalendarClock';
