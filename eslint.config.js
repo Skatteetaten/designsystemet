@@ -1,5 +1,6 @@
 import nxPlugin from '@nx/eslint-plugin';
 import parser from 'jsonc-eslint-parser';
+
 import devConfig from './libs/ds-dev-config/config/designsystem-eslint.js';
 
 export default [

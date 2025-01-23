@@ -2,10 +2,6 @@ import { initReactI18next } from 'react-i18next';
 
 import i18n from 'i18next';
 
-import ds_alerts_en_GB from './translations/ds-alerts_en_GB.json';
-import ds_alerts_nb_NO from './translations/ds-alerts_nb_NO.json';
-import ds_alerts_nn_NO from './translations/ds-alerts_nn_NO.json';
-import ds_alerts_se_NO from './translations/ds-alerts_se_NO.json';
 import ds_buttons_en_GB from './translations/ds-buttons_en_GB.json';
 import ds_buttons_nb_NO from './translations/ds-buttons_nb_NO.json';
 import ds_buttons_nn_NO from './translations/ds-buttons_nn_NO.json';
@@ -30,6 +26,10 @@ import ds_overlays_en_GB from './translations/ds-overlays_en_GB.json';
 import ds_overlays_nb_NO from './translations/ds-overlays_nb_NO.json';
 import ds_overlays_nn_NO from './translations/ds-overlays_nn_NO.json';
 import ds_overlays_se_NO from './translations/ds-overlays_se_NO.json';
+import ds_progress_en_GB from './translations/ds-progress_en_GB.json';
+import ds_progress_nb_NO from './translations/ds-progress_nb_NO.json';
+import ds_progress_nn_NO from './translations/ds-progress_nn_NO.json';
+import ds_progress_se_NO from './translations/ds-progress_se_NO.json';
 import ds_status_en_GB from './translations/ds-status_en_GB.json';
 import ds_status_nb_NO from './translations/ds-status_nb_NO.json';
 import ds_status_nn_NO from './translations/ds-status_nn_NO.json';
@@ -60,49 +60,49 @@ export const langToLocale: { [key: string]: Languages } = {
 export const resources = {
   en_GB: {
     Shared: Shared_en_GB,
-    ds_alerts: ds_alerts_en_GB,
     ds_buttons: ds_buttons_en_GB,
     ds_collections: ds_collections_en_GB,
     ds_forms: ds_forms_en_GB,
     ds_layout: ds_layout_en_GB,
     ds_navigation: ds_navigation_en_GB,
     ds_overlays: ds_overlays_en_GB,
+    ds_progress: ds_progress_en_GB,
     ds_status: ds_status_en_GB,
     ds_tables: ds_tables_en_GB,
   },
   nb_NO: {
     Shared: Shared_nb_NO,
-    ds_alerts: ds_alerts_nb_NO,
     ds_buttons: ds_buttons_nb_NO,
     ds_collections: ds_collections_nb_NO,
     ds_forms: ds_forms_nb_NO,
     ds_layout: ds_layout_nb_NO,
     ds_navigation: ds_navigation_nb_NO,
     ds_overlays: ds_overlays_nb_NO,
+    ds_progress: ds_progress_nb_NO,
     ds_status: ds_status_nb_NO,
     ds_tables: ds_tables_nb_NO,
   },
   nn_NO: {
     Shared: Shared_nn_NO,
-    ds_alerts: ds_alerts_nn_NO,
     ds_buttons: ds_buttons_nn_NO,
     ds_collections: ds_collections_nn_NO,
     ds_forms: ds_forms_nn_NO,
     ds_layout: ds_layout_nn_NO,
     ds_navigation: ds_navigation_nn_NO,
     ds_overlays: ds_overlays_nn_NO,
+    ds_progress: ds_progress_nn_NO,
     ds_status: ds_status_nn_NO,
     ds_tables: ds_tables_nn_NO,
   },
   se_NO: {
     Shared: Shared_se_NO,
-    ds_alerts: ds_alerts_se_NO,
     ds_buttons: ds_buttons_se_NO,
     ds_collections: ds_collections_se_NO,
     ds_forms: ds_forms_se_NO,
     ds_layout: ds_layout_se_NO,
     ds_navigation: ds_navigation_se_NO,
     ds_overlays: ds_overlays_se_NO,
+    ds_progress: ds_progress_se_NO,
     ds_status: ds_status_se_NO,
     ds_tables: ds_tables_se_NO,
   },

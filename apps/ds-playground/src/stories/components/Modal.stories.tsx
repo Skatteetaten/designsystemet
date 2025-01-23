@@ -258,15 +258,15 @@ export const Ventevarsel: Story = {
         </RadioGroup>
         <Modal
           ref={refModalWait}
-          title={dsI18n.t('ds_overlays:modal.VentevarselTitle')}
+          title={dsI18n.t('ds_overlays:modal.WaitNoticeTitle')}
           imageSource={waitIllustration}
           imageSourceAltText={dsI18n.t(
-            'ds_overlays:modal.VentevarselImageAltText'
+            'ds_overlays:modal.WaitNoticeImageAltText'
           )}
           onClose={closeDialog}
         >
           <Paragraph hasSpacing>
-            {dsI18n.t('ds_overlays:modal.VentevarselParagraph')}
+            {dsI18n.t('ds_overlays:modal.WaitNoticeParagraph')}
           </Paragraph>
           <Button
             className={'width100'}
@@ -274,7 +274,7 @@ export const Ventevarsel: Story = {
               closeDialog();
             }}
           >
-            {dsI18n.t('Shared:shared.Ja')}
+            {dsI18n.t('Shared:shared.Yes')}
           </Button>
         </Modal>
       </>
