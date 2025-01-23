@@ -1,8 +1,10 @@
-import { useRef, JSX } from 'react';
+import { useRef, JSX, useEffect, useState } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
 import { Button, Link } from '@skatteetaten/ds-buttons';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { RadioGroup } from '@skatteetaten/ds-forms';
 import {
   InfoOutlineSVGpath,
   UpdateSVGpath,
@@ -195,34 +197,84 @@ ViktigMelding.parameters = exampleParameters;
 export const Ventevarsel: Story = {
   render: (_args): JSX.Element => {
     const refModalWait = useRef<HTMLDialogElement>(null);
+    const [time, setTime] = useState<number>(1200000);
+    const lastActivity = useRef(new Date().getTime());
+
+    useEffect(() => {
+      const checkExpiredTime = (): void => {
+        const timePassed = new Date().getTime() - lastActivity.current;
+
+        if (timePassed >= time) {
+          refModalWait.current?.showModal();
+        }
+      };
+      const intervalId = setInterval(checkExpiredTime, 1000);
+      return (): void => clearInterval(intervalId);
+    }, [time]);
+
+    useEffect(() => {
+      const { signal, abort } = new AbortController();
+
+      window.addEventListener('keydown', resetTimer, { signal });
+      window.addEventListener('mousemove', resetTimer, { signal });
+      window.addEventListener('scroll', resetTimer, { signal });
+      window.addEventListener('resize', resetTimer, { signal });
+
+      return (): void => {
+        abort();
+      };
+    }, []);
+
+    const resetTimer = (): void => {
+      lastActivity.current = new Date().getTime();
+    };
+
+    const closeDialog = (): void => {
+      refModalWait.current?.close();
+      resetTimer();
+    };
 
     return (
       <>
         <Button
-          variant={'tertiary'}
-          svgPath={InfoOutlineSVGpath}
+          variant={'secondary'}
+          className={'bottomSpacingXL'}
           onClick={(): void => refModalWait.current?.showModal()}
         >
           {'Vis ventevarsel'}
         </Button>
+        <RadioGroup
+          legend={'Ventevarseleksempel åpnes automatisk etter'}
+          helpText={
+            'Hver gang du beveger musepekeren, scroller eller gjør et tastetrykk, resettes timeren.'
+          }
+          selectedValue={time}
+          onChange={(e): void => setTime(Number(e.target.value))}
+        >
+          <RadioGroup.Radio value={1200000}>
+            {'20 minutter (anbefalt i løsninger)'}
+          </RadioGroup.Radio>
+          <RadioGroup.Radio value={5000}>{'5 sekunder'}</RadioGroup.Radio>
+        </RadioGroup>
         <Modal
           ref={refModalWait}
-          title={'Hei, er du fortsatt her?'}
+          title={dsI18n.t('ds_overlays:modal.WaitNoticeTitle')}
           imageSource={waitIllustration}
-          imageSourceAltText={
-            'Illustrasjon av travel person med seks armer, opptatt med kontorarbeid.'
-          }
+          imageSourceAltText={dsI18n.t(
+            'ds_overlays:modal.WaitNoticeImageAltText'
+          )}
+          onClose={closeDialog}
         >
           <Paragraph hasSpacing>
-            {
-              'Vi ser at du ikke har gjort noe på nettsiden på ei stund. Er du fortsatt her?'
-            }
+            {dsI18n.t('ds_overlays:modal.WaitNoticeParagraph')}
           </Paragraph>
           <Button
             className={'width100'}
-            onClick={(): void => refModalWait.current?.close()}
+            onClick={(): void => {
+              closeDialog();
+            }}
           >
-            {'Ja'}
+            {dsI18n.t('Shared:shared.Yes')}
           </Button>
         </Modal>
       </>

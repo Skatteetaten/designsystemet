@@ -1,0 +1,31 @@
+.businessList {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: var(--spacing-s);
+  list-style-type: none;
+}
+
+.checkboxGroup {
+  display: flex;
+  margin: var(--spacing-s) 0;
+  gap: var(--spacing-s);
+}
+
+.showAllButtonWrapper {
+  margin-top: var(--spacing-xs);
+  text-align: right;
+}
+
+.subUnitsList {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-top: var(--spacing-s);
+  gap: var(--spacing-s);
+  list-style-type: none;
+}
+
+.subUnit {
+  padding-left: var(--spacing-xl);
+}

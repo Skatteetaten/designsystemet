@@ -1,4 +1,4 @@
-import { JSX, forwardRef } from 'react';
+import { JSX, forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
@@ -47,6 +47,30 @@ export const NavigationTile = forwardRef<
   ): JSX.Element => {
     const { t } = useTranslation('ds_buttons', { i18n: dsI18n });
 
+    const navTileRef = useRef<HTMLAnchorElement>(null);
+
+    useImperativeHandle(ref, () => navTileRef.current as HTMLAnchorElement);
+
+    useEffect(() => {
+      const navTile = navTileRef.current;
+      if (!navTile) return;
+      // hvis konsument sender inn onClick, men ikke href, har NavigationTile samme oppførsel som en knapp, og bør kunne trigges med tastatur.
+      const handleKeyDown = (event: KeyboardEvent): void => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          navTile.click();
+        }
+      };
+
+      if (!onClick) return;
+
+      navTile.addEventListener('keydown', handleKeyDown);
+
+      return (): void => {
+        navTile.removeEventListener('keydown', handleKeyDown);
+      };
+    }, [onClick]);
+
     const iconClassNames = `${styles.icon} ${
       size !== 'medium' ? styles[`icon_${size}`] : ''
     }`;
@@ -71,7 +95,7 @@ export const NavigationTile = forwardRef<
 
     return (
       <a
-        ref={ref}
+        ref={navTileRef}
         id={id}
         className={concatenatedClassName}
         lang={lang}

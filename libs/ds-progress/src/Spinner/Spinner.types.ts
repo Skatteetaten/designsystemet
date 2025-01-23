@@ -24,4 +24,6 @@ export interface SpinnerProps extends BaseProps {
     animation?: string;
     title?: string;
   };
+  /** Spinner med prosent. 0-100 */
+  percentComplete?: number;
 }
