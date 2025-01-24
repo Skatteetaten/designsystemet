@@ -192,6 +192,32 @@ a.docs {
   margin-bottom: var(--spacing-l);
 }
 
+.container-aside {
+  width: var(--container-aside);
+}
+
+.marginRightS {
+  margin-right: var(--spacing-s);
+}
+
+.marginLeftL {
+  margin-left: var(--spacing-l);
+}
+
+.marginLeftAccordionItem {
+  margin-left: calc(var(--size-medium) + var(--spacing-s));
+}
+
+.accordionWorkTaskExample {
+  max-width: var(--semantic-responsive-wide-content);
+  padding: var(--spacing-xl);
+  background-color: var(--palette-graphite-5);
+}
+
+dl.gridEqualColumns {
+  grid-template-columns: 1fr 1fr;
+}
+
 p.bold {
   font-weight: var(--font-weight-bold);
 }
