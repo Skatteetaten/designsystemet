@@ -15,7 +15,7 @@ exports[`Tester/StepList/Step NextButtonWithDisabled smoke-test 1`] = `
         <div class="_stepLine_t28i0_1 ">
         </div>
       </div>
-      <h3 id="steptitle-:ra:"
+      <h3 id="steptitle-:rb:"
           class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
       >
         tittel
@@ -84,7 +84,9 @@ exports[`Tester/StepList/Step NextButtonWithSpinner smoke-test 1`] = `
           >
             <div class="_spinnerAnimation_wnf1f_40 ">
             </div>
-            <span class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 ">
+            <span id="title-:ra:"
+                  class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
+            >
               Laster inn
             </span>
           </div>

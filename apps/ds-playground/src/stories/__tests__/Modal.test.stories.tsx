@@ -1,11 +1,12 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, JSX, useState } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, fireEvent, within } from '@storybook/test';
+import { expect, userEvent, fireEvent, within, waitFor } from '@storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
+import { WarningOutlineIcon } from '@skatteetaten/ds-icons';
 import { Modal } from '@skatteetaten/ds-overlays';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
@@ -44,6 +45,7 @@ const meta = {
     },
     imageSourceAltText: { table: { disable: true } },
     padding: { table: { disable: true } },
+    renderIcon: { table: { disable: true } },
     shadowRootNode: { table: { disable: true } },
     title: { table: { disable: true } },
     variant: {
@@ -198,6 +200,22 @@ export const WithImage = {
     const image = modal.querySelector('img');
     await expect(image).toBeInTheDocument();
     await expect(image).toHaveAttribute('alt', 'Image alt tekst');
+  },
+} satisfies Story;
+
+export const WithIcon = {
+  render: TemplateModal,
+  name: 'With Icon',
+  args: {
+    renderIcon: (): JSX.Element => <WarningOutlineIcon size={'extraLarge'} />,
+  },
+  argTypes: {
+    renderIcon: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await userEvent.click(button);
   },
 } satisfies Story;
 
@@ -370,6 +388,9 @@ const TemplateWithShadowDom: StoryFn<typeof Modal> = (args) => {
       </Button>
       <Modal ref={ref} {...args} shadowRootNode={shadowRoot ?? undefined}>
         <Paragraph hasSpacing>{loremIpsum}</Paragraph>
+        <div className={'borderLeftBlack'}>
+          {'Klikk til venstre for border skal ikke lukke modal'}
+        </div>
         <div className={'flex'}>
           <Button
             variant={'primary'}
@@ -526,5 +547,121 @@ export const WithStateChangeAndTextFieldFocus = {
     await expect(innerButton).not.toBeInTheDocument();
     const textField = canvas.getByRole('textbox');
     await expect(textField).toHaveFocus();
+  },
+} satisfies Story;
+
+const TemplateWithAutoOpen: StoryFn<typeof Modal> = (args) => {
+  const ref = useRef<HTMLDialogElement>(null);
+  useEffect(() => {
+    ref.current?.showModal();
+  }, []);
+  const onCloseOnClickHandler = (): void => {
+    ref.current?.close();
+  };
+  return (
+    <>
+      <Paragraph
+        hasSpacing
+      >{`Denne testen skal sjekke om fokus blir satt på BODY-elementet når modalen lukkes. 
+        Testes ved å reloade siden. Det er ved programatisk åpning av modalen at fokus tidligere ikke har blitt satt korrekt.`}</Paragraph>
+      <Modal {...args} ref={ref}>
+        <Paragraph hasSpacing>
+          {
+            'Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?'
+          }
+        </Paragraph>
+        <div className={'flex'}>
+          <Button className={'marginRightM'}>{'Erstatt opplysninger'}</Button>
+          <Button variant={'tertiary'} onClick={onCloseOnClickHandler}>
+            {'Avbryt'}
+          </Button>
+        </div>
+      </Modal>
+      <Button
+        className={'marginRightM'}
+        onClick={() => ref.current?.showModal()}
+      >
+        {'Åpne modal ref.current.showModal'}
+      </Button>
+    </>
+  );
+};
+
+export const AutoOpen = {
+  decorators: [
+    (Story): JSX.Element => {
+      const body = document.body;
+      body.classList.add('bodyFocus');
+      return <Story />;
+    },
+  ],
+  render: TemplateWithAutoOpen,
+  name: 'With AutoOpen',
+  args: {
+    variant: 'plain',
+  },
+  argTypes: {
+    variant: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const openmodal = await canvas.findByRole('dialog', { hidden: false });
+
+    await expect(openmodal).toBeVisible();
+    const button = within(canvasElement).getByRole('button', {
+      name: 'Avbryt',
+    });
+    await userEvent.click(button);
+    const body = document.body;
+    await waitFor(() => {
+      expect(body).toHaveFocus();
+    });
+    const closedmodal = await canvas.findByRole('dialog', { hidden: true });
+    await expect(closedmodal).not.toBeVisible();
+  },
+} satisfies Story;
+
+const TemplateAutoOpenAndCloseOnEscape: StoryFn<typeof Modal> = (args) => {
+  const ref = useRef<HTMLDialogElement>(null);
+  useEffect(() => {
+    ref.current?.showModal();
+  }, []);
+  return (
+    <>
+      <Paragraph
+        hasSpacing
+      >{`Denne testen skal sjekke om fokus blir satt på BODY-elementet når modalen lukkes etter at bruker har trykket på Escape-knappen. 
+        Modalen åpnes ved å laste siden på nytt.`}</Paragraph>
+      <Modal {...args} ref={ref}>
+        <Paragraph hasSpacing>{'Modalinnhold'}</Paragraph>
+      </Modal>
+    </>
+  );
+};
+
+export const AutoOpenAndCloseOnEscape = {
+  decorators: [
+    (Story): JSX.Element => {
+      const body = document.body;
+      body.classList.add('bodyFocus');
+      return <Story />;
+    },
+  ],
+  render: TemplateAutoOpenAndCloseOnEscape,
+  name: 'With Auto Open and Close on Escape',
+  args: {
+    variant: 'outline',
+    dismissOnEsc: true,
+  },
+  argTypes: {
+    variant: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const openmodal = await canvas.findByRole('dialog', { hidden: false });
+    await expect(openmodal).toBeVisible();
+    await userEvent.keyboard('{Escape}');
+    const closedmodal = await canvas.findByRole('dialog', { hidden: true });
+    await expect(closedmodal).not.toBeVisible();
   },
 } satisfies Story;

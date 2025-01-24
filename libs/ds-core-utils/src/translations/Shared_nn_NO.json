@@ -9,5 +9,6 @@
   "shared.RequiredField": "Må fyllast ut  ",
   "shared.SecurityAndPrivacy": "Sikkerheit og personvern",
   "shared.SecurityAndPrivacyURL": "https://www.skatteetaten.no/nn/om-skatteetaten/tryggleik-og-personvern/",
-  "shared.SkeLogoImageText": "Skatteetaten logo"
+  "shared.SkeLogoImageText": "Skatteetaten logo",
+  "shared.Yes": "Ja"
 }

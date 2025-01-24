@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tester/Card/Actions WithAttributes play-test 1`] = `
+<div data-test-block="true">
+  <div id="htmlId"
+       class="_cardActions_3k813_1 dummyClassname "
+       lang="en"
+       data-testid="123ID"
+  >
+    Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+  </div>
+</div>
+`;
+
+exports[`Tester/Card/Actions WithChildren smoke-test 1`] = `
+<div data-test-block="true">
+  <div class="_card_nrlm6_5"
+       data-color="white"
+  >
+    <div class="_cardActions_3k813_1  ">
+      <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  "
+              type="button"
+      >
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75 1.84-1.83ZM3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z">
+          </path>
+        </svg>
+        <span class>
+          Endre
+        </span>
+      </button>
+      <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  "
+              type="button"
+      >
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9ZM7 6h10v13H7V6Zm2 2v9h2V8H9Zm4 0v9h2V8h-2Z">
+          </path>
+        </svg>
+        <span class>
+          Slett
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/Card/Actions WithRef play-test 1`] = `
+<div data-test-block="true">
+  <div class="_cardActions_3k813_1  "
+       id="dummyIdForwardedFromRef"
+  >
+    Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+  </div>
+</div>
+`;

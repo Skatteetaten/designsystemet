@@ -19,7 +19,7 @@ const meta = {
     spinnerTitle: {
       table: {
         category: category.props,
-        defaultValue: { summary: dsI18n.t('ds_status:spinner.LoadingLabel') },
+        defaultValue: { summary: dsI18n.t('ds_progress:spinner.LoadingLabel') },
       },
     },
     isExternal: { table: { category: category.props } },

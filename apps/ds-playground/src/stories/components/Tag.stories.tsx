@@ -8,13 +8,14 @@ import {
   Tag,
   getTagColorDefault,
   getTagSizeDefault,
+  TagColor,
 } from '@skatteetaten/ds-status';
 
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { exampleParameters } from '../utils/stories.utils';
 
-const tagColors = [
+const tagColors: TagColor[] = [
   colorNamesArr[0],
   colorNamesArr[1],
   colorNamesArr[2],

@@ -65,6 +65,18 @@ export type Density = (typeof densityArr)[number];
 export const weightArr = ['regular', 'medium', 'bold'] as const;
 export type Weight = (typeof weightArr)[number];
 
+export const spacingArr = [
+  'xxs',
+  'xs',
+  's',
+  'm',
+  'l',
+  'xl',
+  'xxl',
+  'mega',
+] as const;
+export type Spacing = (typeof spacingArr)[number];
+
 export interface FormRequiredProps {
   required?: boolean;
   /** Om obligatorisk skjemafelt skal markeres med stjerne. Forutsetter at required er tatt i bruk. */

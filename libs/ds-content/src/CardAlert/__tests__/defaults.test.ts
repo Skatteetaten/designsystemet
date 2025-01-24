@@ -1,0 +1,44 @@
+import {
+  ErrorSVGpath,
+  InfoSVGpath,
+  WarningSVGpath,
+} from '@skatteetaten/ds-icons';
+
+import { CardAlertVariant } from '../CardAlert.types';
+import {
+  getCardAlertVariantDefault,
+  getCardAlertSvgPathDefault,
+  getCardAlertTitleAsDefault,
+} from '../defaults';
+
+describe('CardAlert defaults', () => {
+  it('Når getCardAlertVariantDefault kalles, så returnerer den riktig verdi', () => {
+    const renderDefault = getCardAlertVariantDefault();
+    expect(renderDefault).toBe('warning');
+  });
+
+  it('Når getCardAlertSvgPathDefault kalles med "neutral", så returnerer den InfoSVGpath', () => {
+    const svgPath = getCardAlertSvgPathDefault('neutral');
+    expect(svgPath).toBe(InfoSVGpath);
+  });
+
+  it('Når getCardAlertSvgPathDefault kalles med "warning", så returnerer den ErrorSVGpath', () => {
+    const svgPath = getCardAlertSvgPathDefault('warning');
+    expect(svgPath).toBe(ErrorSVGpath);
+  });
+
+  it('Når getCardAlertSvgPathDefault kalles med "danger", så returnerer den WarningSVGpath', () => {
+    const svgPath = getCardAlertSvgPathDefault('danger');
+    expect(svgPath).toBe(WarningSVGpath);
+  });
+
+  it('Når getCardAlertSvgPathDefault kalles med en ugyldig variant, så returnerer den InfoSVGpath', () => {
+    const svgPath = getCardAlertSvgPathDefault('invalid' as CardAlertVariant);
+    expect(svgPath).toBe(InfoSVGpath);
+  });
+
+  it('Når getCardAlertTitleAsDefault kalles, så returnerer riktig verdi', () => {
+    const result = getCardAlertTitleAsDefault();
+    expect(result).toBe('h3');
+  });
+});

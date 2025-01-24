@@ -194,11 +194,14 @@ export const WithSelectedDate = {
   },
 } satisfies Story;
 
+const minDate = new Date('2024-01-15');
+minDate.setHours(1, 1, 1, 1);
+
 export const WithMinDate = {
   name: 'With MinDate (A3 delvis)',
   args: {
     ...defaultArgs,
-    minDate: new Date('2024-01-15'),
+    minDate,
   },
   argTypes: {
     minDate: { table: { disable: false } },
@@ -212,11 +215,14 @@ export const WithMinDate = {
   },
 } satisfies Story;
 
+const maxDate = new Date('2024-01-15');
+maxDate.setHours(1, 1, 1, 1);
+
 export const WithMaxDate = {
   name: 'With MaxDate (A3 delvis)',
   args: {
     ...defaultArgs,
-    maxDate: new Date('2024-01-15'),
+    maxDate,
   },
   argTypes: {
     maxDate: { table: { disable: false } },

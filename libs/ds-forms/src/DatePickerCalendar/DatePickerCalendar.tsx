@@ -59,7 +59,7 @@ export const DatePickerCalendar = forwardRef<
       () =>
         new Set(
           disabledDates?.map((date) => {
-            date.setHours(0, 0, 0);
+            date.setHours(0, 0, 0, 0);
             return date.getTime();
           })
         ),

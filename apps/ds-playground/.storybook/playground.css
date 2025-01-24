@@ -18,6 +18,11 @@ code {
   height: 100vh;
 }
 
+.scrollToTopMainPusher {
+  height: 200vh;
+  padding-top: 100vh;
+  color: var(--palette-denim-5);
+}
 .width100 {
   width: 100%;
 }
@@ -41,6 +46,10 @@ code {
 
 .block {
   display: block;
+}
+.centerMargin {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .introImageContainer {
@@ -183,6 +192,58 @@ a.docs {
   margin: auto;
 }
 
+.containerS {
+  max-width: var(--container-s);
+  margin: auto;
+}
+
 .semantic-article.bottom-spacing {
   margin-bottom: var(--spacing-l);
+}
+
+.container-aside {
+  width: var(--container-aside);
+}
+
+.marginRightS {
+  margin-right: var(--spacing-s);
+}
+
+.marginLeftL {
+  margin-left: var(--spacing-l);
+}
+
+.marginLeftAccordionItem {
+  margin-left: calc(var(--size-medium) + var(--spacing-s));
+}
+
+.accordionWorkTaskExample {
+  max-width: var(--semantic-responsive-wide-content);
+  padding: var(--spacing-xl);
+  background-color: var(--palette-graphite-5);
+}
+
+dl.gridEqualColumns {
+  grid-template-columns: 1fr 1fr;
+}
+
+p.bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.borderLeftBlack {
+  border-left: 4px solid var(--palette-graphite-100);
+}
+
+.logo {
+  width: 3rem;
+  height: 3rem;
+}
+
+.sucessFill {
+  fill: var(--semantic-success-foreground) !important;
+}
+
+.width400 {
+  max-width: 400px;
 }

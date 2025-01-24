@@ -3,10 +3,15 @@
     "target": "es2021",
     "parser": {
       "syntax": "typescript",
+      "tsx": true,
       "decorators": true,
       "dynamicImport": true
     },
     "transform": {
+      "react": {
+        "runtime": "automatic",
+        "importSource": "react"
+      },
       "decoratorMetadata": true,
       "legacyDecorator": true
     },

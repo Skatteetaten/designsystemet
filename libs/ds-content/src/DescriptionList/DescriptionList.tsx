@@ -9,6 +9,9 @@ import {
   getDescriptionDirectionDefault,
   getDescriptionListIsVerticalOnMobileDefault,
   getDescriptionListSizeDefault,
+  getDescriptionListVariantDefault,
+  getDescriptionWeightDefault,
+  getTermWeightDefault,
 } from './defaults';
 import {
   DescriptionListComponent,
@@ -29,10 +32,10 @@ export const DescriptionList = forwardRef<
       lang,
       'data-testid': dataTestId,
       size = getDescriptionListSizeDefault(),
-      variant,
+      variant = getDescriptionListVariantDefault(),
       descriptionDirection = getDescriptionDirectionDefault(),
-      descriptionWeight,
-      termWeight,
+      descriptionWeight = getDescriptionWeightDefault(),
+      termWeight = getTermWeightDefault(),
       hasSpacing,
       isVerticalOnMobile = getDescriptionListIsVerticalOnMobileDefault(),
       children,
@@ -97,4 +100,7 @@ export {
   getDescriptionListSizeDefault,
   getDescriptionDirectionDefault,
   getDescriptionListIsVerticalOnMobileDefault,
+  getDescriptionWeightDefault,
+  getTermWeightDefault,
+  getDescriptionListVariantDefault,
 };

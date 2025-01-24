@@ -1,0 +1,74 @@
+.cardAlert {
+  --card-note-color: var(--palette-graphite-70);
+  --card-note-border: var(--palette-graphite-70);
+
+  position: relative;
+  padding: var(--spacing-s-plus) var(--spacing-m) var(--spacing-m)
+    var(--spacing-m);
+  border-radius: 4px 4px 0 0;
+  border-bottom: 1px solid var(--card-note-border);
+  margin-bottom: var(--spacing-m);
+  background-color: var(--card-note-color);
+
+  &[data-variant='neutral'] {
+    --card-note-color: var(--palette-denim-5);
+    --card-note-border: var(--palette-denim-70);
+  }
+
+  &[data-variant='warning'] {
+    --card-note-color: var(--semantic-warning-background);
+    --card-note-border: var(--semantic-warning-foreground);
+  }
+
+  &[data-variant='danger'] {
+    --card-note-color: var(--semantic-danger-background);
+    --card-note-border: var(--semantic-danger-foreground);
+  }
+
+  :where(&[data-variant='warning'], &[data-variant='danger']) {
+    .cardAlertIcon {
+      --semantic-page-foreground: var(--semantic-danger-foreground);
+    }
+  }
+
+  .cardAlertIcon {
+    height: calc(var(--font-size-m) * var(--semantic-line-height-article));
+    flex-shrink: 0;
+  }
+
+  &Arrow {
+    position: absolute;
+    bottom: calc(-1 * var(--spacing-m));
+    left: var(--spacing-m);
+    width: 0;
+    height: 0;
+    border-top: 16px solid var(--card-note-border);
+    border-right: 16px solid transparent;
+    border-left: 16px solid transparent;
+
+    &::after {
+      position: relative;
+      top: -3px;
+      left: -18px;
+      width: 0;
+      height: 0;
+      border-top: 18px solid var(--card-note-color);
+      border-right: 18px solid transparent;
+      border-left: 18px solid transparent;
+      content: '';
+    }
+  }
+
+  &CloseButton {
+    --semantic-interactive-main: var(--palette-graphite-100);
+
+    margin-top: calc(var(--spacing-xs) * -1);
+    margin-left: auto;
+  }
+
+  &HeadingContainer {
+    display: flex;
+    margin-bottom: var(--spacing-xs);
+    gap: 10px;
+  }
+}
