@@ -1,5 +1,6 @@
 {
   "modal.CloseModal": "Close dialogue window",
+  "modal.StayLoggedIn": "(Yes, stay logged in)",
   "modal.WaitNoticeImageAltText": "Illustration of a busy person with six arms, occupied with office work.",
   "modal.WaitNoticeParagraph": "You have been inactive for a while, are you still here?",
   "modal.WaitNoticeTitle": "Hello, are you still here?",
@@ -24,7 +25,7 @@
   "rolepicker.PeopleDescriptionPrefix": "(Fødsels-/D-nummer)",
   "rolepicker.PeopleHeading": "(Andre personer)",
   "rolepicker.PeopleHits": "(treff i andre personer)",
-  "rolepicker.SearchAll": "(Søk etter personens navn eller fødselsnummer, virksomhetens navn eller organisasjonsnummer)",
+  "rolepicker.SearchAll": "(Søk etter personens navn eller fødselsnummer, virksomhetens navn eller organisasjonsnummer.)",
   "rolepicker.SearchBusinesses": "(Søk etter virksomhetens navn eller organisasjonsnummer.)",
   "rolepicker.SearchPeople": "(Søk etter personens navn eller fødselsnummer.)",
   "rolepicker.SearchPlaceholder": "(Søk etter person/virksomhet)",
