@@ -96,6 +96,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                 </span>
                 <span class="_srOnly_1egyv_82"
                       aria-live="assertive"
+                      aria-atomic="true"
                 >
                 </span>
                 <div class="_inputWrapper_1egyv_41">
@@ -721,6 +722,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                 </span>
                 <span class="_srOnly_1egyv_82"
                       aria-live="assertive"
+                      aria-atomic="true"
                 >
                 </span>
                 <div class="_inputWrapper_1egyv_41">
@@ -1088,6 +1090,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                 </span>
                 <span class="_srOnly_1egyv_82"
                       aria-live="assertive"
+                      aria-atomic="true"
                 >
                 </span>
                 <div class="_inputWrapper_1egyv_41">
@@ -1714,6 +1717,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                 </span>
                 <span class="_srOnly_1egyv_82"
                       aria-live="assertive"
+                      aria-atomic="true"
                 >
                 </span>
                 <div class="_inputWrapper_1egyv_41">
@@ -2180,6 +2184,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                 </span>
                 <span class="_srOnly_1egyv_82"
                       aria-live="assertive"
+                      aria-atomic="true"
                 >
                 </span>
                 <div class="_inputWrapper_1egyv_41">
@@ -2839,6 +2844,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                 </span>
                 <span class="_srOnly_1egyv_82"
                       aria-live="assertive"
+                      aria-atomic="true"
                 >
                 </span>
                 <div class="_inputWrapper_1egyv_41">
@@ -3493,6 +3499,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                 </span>
                 <span class="_srOnly_1egyv_82"
                       aria-live="assertive"
+                      aria-atomic="true"
                 >
                 </span>
                 <div class="_inputWrapper_1egyv_41">
@@ -3919,6 +3926,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                 </span>
                 <span class="_srOnly_1egyv_82"
                       aria-live="assertive"
+                      aria-atomic="true"
                 >
                 </span>
                 <div class="_inputWrapper_1egyv_41">
@@ -4283,6 +4291,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                 </span>
                 <span class="_srOnly_1egyv_82"
                       aria-live="assertive"
+                      aria-atomic="true"
                 >
                 </span>
                 <div class="_inputWrapper_1egyv_41">
@@ -4940,6 +4949,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                 </span>
                 <span class="_srOnly_1egyv_82"
                       aria-live="assertive"
+                      aria-atomic="true"
                 >
                 </span>
                 <div class="_inputWrapper_1egyv_41">
@@ -5461,6 +5471,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                 </span>
                 <span class="_srOnly_1egyv_82"
                       aria-live="assertive"
+                      aria-atomic="true"
                 >
                 </span>
                 <div class="_inputWrapper_1egyv_41">
@@ -6070,6 +6081,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                 </span>
                 <span class="_srOnly_1egyv_82"
                       aria-live="assertive"
+                      aria-atomic="true"
                 >
                 </span>
                 <div class="_inputWrapper_1egyv_41">

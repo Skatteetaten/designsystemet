@@ -20,11 +20,11 @@ export const RolePickerFilterInput = forwardRef<
   const [showClearButton, setShowClearButton] = useState(!!value);
 
   useEffect(() => {
-    // Temporarily clear the content to force re-announcement
+    // Midlertidig tøm innholdet for å tvinge ny kunngjøring
     setLiveRegionContent('');
     const timeoutId = setTimeout(() => {
       setLiveRegionContent(t('rolepicker.SearchResultUpdated'));
-    }, 100); // Short delay to ensure the screen reader detects the change
+    }, 100); // Kort forsinkelse for å sikre at skjermleseren oppdager endringen
 
     return (): void => clearTimeout(timeoutId);
   }, [value, t]);
@@ -43,9 +43,7 @@ export const RolePickerFilterInput = forwardRef<
           aria-live={'assertive'}
           aria-atomic={'true'}
         >
-          {value ? (
-            <span key={value}>{t('rolepicker.SearchResultUpdated')}</span>
-          ) : null}
+          {value ? <span>{liveRegionContent}</span> : null}
         </span>
 
         <div className={styles.inputWrapper}>
