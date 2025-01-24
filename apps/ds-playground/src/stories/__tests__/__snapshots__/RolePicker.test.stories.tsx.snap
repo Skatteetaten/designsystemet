@@ -96,7 +96,6 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                 </span>
                 <span class="_srOnly_1egyv_82"
                       aria-live="assertive"
-                      aria-atomic="true"
                 >
                 </span>
                 <div class="_inputWrapper_1egyv_41">
@@ -399,9 +398,9 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                                 <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
                                 </path>
                               </svg>
-                              <h3 class="_title_1xek8_24  undefined">
+                              <h4 class="_title_1xek8_24  undefined">
                                 Google AS
-                              </h3>
+                              </h4>
                               <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
                                    viewbox="0 0 24 24"
                                    focusable="false"
@@ -722,7 +721,6 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                 </span>
                 <span class="_srOnly_1egyv_82"
                       aria-live="assertive"
-                      aria-atomic="true"
                 >
                 </span>
                 <div class="_inputWrapper_1egyv_41">
@@ -1090,7 +1088,6 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                 </span>
                 <span class="_srOnly_1egyv_82"
                       aria-live="assertive"
-                      aria-atomic="true"
                 >
                 </span>
                 <div class="_inputWrapper_1egyv_41">
@@ -1393,9 +1390,9 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                                 <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
                                 </path>
                               </svg>
-                              <h3 class="_title_1xek8_24  undefined">
+                              <h4 class="_title_1xek8_24  undefined">
                                 Google AS
-                              </h3>
+                              </h4>
                               <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
                                    viewbox="0 0 24 24"
                                    focusable="false"
@@ -1717,7 +1714,6 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                 </span>
                 <span class="_srOnly_1egyv_82"
                       aria-live="assertive"
-                      aria-atomic="true"
                 >
                 </span>
                 <div class="_inputWrapper_1egyv_41">
@@ -1857,9 +1853,9 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                                 <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
                                 </path>
                               </svg>
-                              <h3 class="_title_1xek8_24  undefined">
+                              <h4 class="_title_1xek8_24  undefined">
                                 Google AS
-                              </h3>
+                              </h4>
                               <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
                                    viewbox="0 0 24 24"
                                    focusable="false"
@@ -2184,7 +2180,6 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                 </span>
                 <span class="_srOnly_1egyv_82"
                       aria-live="assertive"
-                      aria-atomic="true"
                 >
                 </span>
                 <div class="_inputWrapper_1egyv_41">
@@ -2487,9 +2482,9 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                                 <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
                                 </path>
                               </svg>
-                              <h3 class="_title_1xek8_24  undefined">
+                              <h4 class="_title_1xek8_24  undefined">
                                 Google AS
-                              </h3>
+                              </h4>
                               <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
                                    viewbox="0 0 24 24"
                                    focusable="false"
@@ -2844,7 +2839,6 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                 </span>
                 <span class="_srOnly_1egyv_82"
                       aria-live="assertive"
-                      aria-atomic="true"
                 >
                 </span>
                 <div class="_inputWrapper_1egyv_41">
@@ -3147,9 +3141,9 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                                 <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
                                 </path>
                               </svg>
-                              <h3 class="_title_1xek8_24  undefined">
+                              <h4 class="_title_1xek8_24  undefined">
                                 Google AS
-                              </h3>
+                              </h4>
                               <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
                                    viewbox="0 0 24 24"
                                    focusable="false"
@@ -3499,7 +3493,6 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                 </span>
                 <span class="_srOnly_1egyv_82"
                       aria-live="assertive"
-                      aria-atomic="true"
                 >
                 </span>
                 <div class="_inputWrapper_1egyv_41">
@@ -3639,9 +3632,9 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                                 <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
                                 </path>
                               </svg>
-                              <h3 class="_title_1xek8_24  undefined">
+                              <h4 class="_title_1xek8_24  undefined">
                                 Google AS
-                              </h3>
+                              </h4>
                               <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
                                    viewbox="0 0 24 24"
                                    focusable="false"
@@ -3926,7 +3919,6 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                 </span>
                 <span class="_srOnly_1egyv_82"
                       aria-live="assertive"
-                      aria-atomic="true"
                 >
                 </span>
                 <div class="_inputWrapper_1egyv_41">
@@ -4291,7 +4283,6 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                 </span>
                 <span class="_srOnly_1egyv_82"
                       aria-live="assertive"
-                      aria-atomic="true"
                 >
                 </span>
                 <div class="_inputWrapper_1egyv_41">
@@ -4594,9 +4585,9 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                                 <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
                                 </path>
                               </svg>
-                              <h3 class="_title_1xek8_24  undefined">
+                              <h4 class="_title_1xek8_24  undefined">
                                 Google AS
-                              </h3>
+                              </h4>
                               <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
                                    viewbox="0 0 24 24"
                                    focusable="false"
@@ -4949,7 +4940,6 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                 </span>
                 <span class="_srOnly_1egyv_82"
                       aria-live="assertive"
-                      aria-atomic="true"
                 >
                 </span>
                 <div class="_inputWrapper_1egyv_41">
@@ -5471,7 +5461,6 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                 </span>
                 <span class="_srOnly_1egyv_82"
                       aria-live="assertive"
-                      aria-atomic="true"
                 >
                 </span>
                 <div class="_inputWrapper_1egyv_41">
@@ -5774,9 +5763,9 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                                 <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
                                 </path>
                               </svg>
-                              <h3 class="_title_1xek8_24  undefined">
+                              <h4 class="_title_1xek8_24  undefined">
                                 Google AS
-                              </h3>
+                              </h4>
                               <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
                                    viewbox="0 0 24 24"
                                    focusable="false"
@@ -6081,7 +6070,6 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                 </span>
                 <span class="_srOnly_1egyv_82"
                       aria-live="assertive"
-                      aria-atomic="true"
                 >
                 </span>
                 <div class="_inputWrapper_1egyv_41">
@@ -6384,9 +6372,9 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                                 <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
                                 </path>
                               </svg>
-                              <h3 class="_title_1xek8_24  undefined">
+                              <h4 class="_title_1xek8_24  undefined">
                                 Google AS
-                              </h3>
+                              </h4>
                               <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
                                    viewbox="0 0 24 24"
                                    focusable="false"

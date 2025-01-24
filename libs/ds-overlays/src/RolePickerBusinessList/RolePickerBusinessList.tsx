@@ -161,7 +161,7 @@ export const RolePickerBusinessList = ({
                 <li key={item.organizationNumber}>
                   <RolePickerRow
                     id={item.organizationNumber}
-                    title={`${item.name} ${item.unitType}`}
+                    title={`${item.name} ${item.unitType} ${item.isDeleted ? `(${t('rolepicker.Deleted')})` : ''}`}
                     description={
                       <>
                         {t('rolepicker.BusinessDescriptionPrefix')}{' '}
@@ -192,7 +192,8 @@ export const RolePickerBusinessList = ({
                         >
                           <RolePickerRow
                             id={sub.organizationNumber}
-                            title={`${sub.name} ${sub.unitType}`}
+                            title={`${sub.name} ${sub.unitType} ${sub.isDeleted ? `(${t('rolepicker.Deleted')})` : ''}`}
+                            titleAs={'h4'}
                             description={
                               <>
                                 {t('rolepicker.BusinessDescriptionPrefix')}{' '}
