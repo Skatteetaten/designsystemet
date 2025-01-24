@@ -114,7 +114,7 @@ export const Examples: Story = {
             >
               <ArbeidTrygdPensjonIcon size={'extraLarge'} />
               <Heading as={'h3'} level={3}>
-                {'Andre inntekter'}
+                {'Andre inntekter'.repeat(5)}
               </Heading>
             </Card.Header>
             <Card.Content>
@@ -201,13 +201,13 @@ export const Examples: Story = {
                 <IconButton title={'Lukk'} svgPath={CancelSVGpath} />
               }
             >
-              {'carlos-santana_smooth-featuring-rob-thomas.exe.mp3'}
+              {'carlos-santana_smooth-featuring-rob-thomas.mp3'}
             </Card.Content>
           </Card>
 
           <Card color={'burgundy'}>
             <Card.Actions spacing={'xs'}>
-              {'carlos-santana_smooth-featuring-rob-thomas.exe.mp3'}
+              {'carlos-santana_smooth-featuring-rob-thomas.mp3'}
               <IconButton title={'Lukk'} svgPath={CancelSVGpath} />
             </Card.Actions>
           </Card>
@@ -221,7 +221,7 @@ export const DevExamples: Story = {
   render: (_args): JSX.Element => {
     return (
       <>
-        <Card color={'white'}>
+        <Card spacing={'responsive'} color={'white'}>
           <Card.Note variant={'warning'} title={'Merknad'}>
             {
               'Nå har vi gjort en endring i et annet kort som påvirker dette kortet.'

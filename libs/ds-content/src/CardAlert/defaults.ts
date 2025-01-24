@@ -7,11 +7,11 @@ import {
   WarningSVGpath,
 } from '@skatteetaten/ds-icons';
 
-import { CardNoteVariant } from './CardNote.types';
+import { CardAlertVariant } from './CardAlert.types';
 
-export const getCardNoteVariantDefault = (): CardNoteVariant => 'warning';
-export const getCardNoteSvgPathDefault = (
-  variant: CardNoteVariant
+export const getCardAlertVariantDefault = (): CardAlertVariant => 'warning';
+export const getCardAlertSvgPathDefault = (
+  variant: CardAlertVariant
 ): ReactElement => {
   switch (variant) {
     case 'warning':
@@ -24,4 +24,4 @@ export const getCardNoteSvgPathDefault = (
   }
 };
 
-export const getCardNoteTitleAsDefault = (): HeadingAs => 'h3';
+export const getCardAlertTitleAsDefault = (): HeadingAs => 'h3';

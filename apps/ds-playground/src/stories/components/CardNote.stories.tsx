@@ -2,9 +2,9 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import {
   Card,
-  getCardNoteVariantDefault,
-  getCardNoteTitleAsDefault,
-  getCardNoteSvgPathDefault,
+  getCardAlertVariantDefault,
+  getCardAlertTitleAsDefault,
+  getCardAlertSvgPathDefault,
 } from '@skatteetaten/ds-content';
 
 import { category } from '../../../.storybook/helpers';
@@ -32,7 +32,7 @@ const meta = {
     variant: {
       table: {
         category: category.props,
-        defaultValue: { summary: getCardNoteVariantDefault() },
+        defaultValue: { summary: getCardAlertVariantDefault() },
       },
     },
     showNote: {
@@ -48,7 +48,7 @@ const meta = {
     titleAs: {
       table: {
         category: category.props,
-        defaultValue: { summary: getCardNoteTitleAsDefault() },
+        defaultValue: { summary: getCardAlertTitleAsDefault() },
       },
     },
     svgPath: {
@@ -57,8 +57,8 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: {
-          summary: getCardNoteSvgPathDefault(
-            getCardNoteVariantDefault()
+          summary: getCardAlertSvgPathDefault(
+            getCardAlertVariantDefault()
           ).toString(),
         },
       },

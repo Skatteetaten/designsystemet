@@ -6,16 +6,16 @@ import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath, Icon } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
-import { CardNoteProps } from './CardNote.types';
+import { CardAlertProps } from './CardAlert.types';
 import {
-  getCardNoteSvgPathDefault,
-  getCardNoteTitleAsDefault,
-  getCardNoteVariantDefault,
+  getCardAlertSvgPathDefault,
+  getCardAlertTitleAsDefault,
+  getCardAlertVariantDefault,
 } from './defaults';
 
-import styles from './CardNote.module.scss';
+import styles from './CardAlert.module.scss';
 
-export const CardNote = forwardRef<HTMLDivElement, CardNoteProps>(
+export const CardAlert = forwardRef<HTMLDivElement, CardAlertProps>(
   (
     {
       id,
@@ -23,22 +23,22 @@ export const CardNote = forwardRef<HTMLDivElement, CardNoteProps>(
       lang,
       'data-testid': dataTestId,
       title,
-      titleAs = getCardNoteTitleAsDefault(),
-      variant = getCardNoteVariantDefault(),
-      svgPath = getCardNoteSvgPathDefault(variant),
-      showNote: showNoteExternal,
+      titleAs = getCardAlertTitleAsDefault(),
+      variant = getCardAlertVariantDefault(),
+      svgPath = getCardAlertSvgPathDefault(variant),
+      showAlert: showAlertExternal,
       onClose,
       children,
     },
     ref
   ): JSX.Element => {
     const { t } = useTranslation('Shared', { i18n: dsI18n });
-    const [showNoteInternal, setShowNoteInternal] = useState<boolean>(true);
+    const [showAlertInternal, setShowAlertInternal] = useState<boolean>(true);
 
-    const showNote =
-      showNoteExternal !== undefined ? showNoteExternal : showNoteInternal;
+    const showAlert =
+      showAlertExternal !== undefined ? showAlertExternal : showAlertInternal;
 
-    if (!showNote) {
+    if (!showAlert) {
       return <> </>;
     }
 
@@ -46,28 +46,28 @@ export const CardNote = forwardRef<HTMLDivElement, CardNoteProps>(
       <div
         ref={ref}
         id={id}
-        className={`${styles.cardNote} ${className}`}
+        className={`${styles.cardAlert} ${className}`}
         lang={lang}
         data-testid={dataTestId}
         data-variant={variant}
       >
-        <div className={styles.cardNoteHeadingContainer}>
-          <Icon className={styles.cardNoteIcon} svgPath={svgPath} />
+        <div className={styles.cardAlertHeadingContainer}>
+          <Icon className={styles.cardAlertIcon} svgPath={svgPath} />
           <Heading level={5} as={titleAs}>
             {title}
           </Heading>
           <IconButton
-            className={styles.cardNoteCloseButton}
+            className={styles.cardAlertCloseButton}
             svgPath={CancelSVGpath}
             title={t('shared.Close')}
             onClick={() => {
-              setShowNoteInternal(false);
+              setShowAlertInternal(false);
               onClose?.();
             }}
           />
         </div>
         {children}
-        <div className={styles.cardNoteArrow}></div>
+        <div className={styles.cardAlertArrow}></div>
       </div>
     );
   }

@@ -5,14 +5,14 @@ import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { CardProps, CardComponent } from './Card.types';
 import { getCardColorDefault } from './defaults';
 import { CardActions } from '../CardActions/CardActions';
+import { CardAlert } from '../CardAlert/CardAlert';
+import {
+  getCardAlertVariantDefault,
+  getCardAlertSvgPathDefault,
+  getCardAlertTitleAsDefault,
+} from '../CardAlert/defaults';
 import { CardContent } from '../CardContent/CardContent';
 import { CardHeader } from '../CardHeader/CardHeader';
-import { CardNote } from '../CardNote/CardNote';
-import {
-  getCardNoteVariantDefault,
-  getCardNoteSvgPathDefault,
-  getCardNoteTitleAsDefault,
-} from '../CardNote/defaults';
 
 import styles from './Card.module.scss';
 
@@ -52,14 +52,14 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
 
 Card.displayName = 'Card';
 
-Card.Note = CardNote;
+Card.Alert = CardAlert;
 Card.Actions = CardActions;
 Card.Content = CardContent;
 Card.Header = CardHeader;
 
 export {
   getCardColorDefault,
-  getCardNoteVariantDefault,
-  getCardNoteSvgPathDefault,
-  getCardNoteTitleAsDefault,
+  getCardAlertVariantDefault,
+  getCardAlertSvgPathDefault,
+  getCardAlertTitleAsDefault,
 };

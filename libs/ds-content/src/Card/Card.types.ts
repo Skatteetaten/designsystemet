@@ -8,9 +8,9 @@ import {
 import { BaseProps, colorNamesArr, Spacing } from '@skatteetaten/ds-core-utils';
 
 import { CardActions } from '../CardActions/CardActions';
+import { CardAlert } from '../CardAlert/CardAlert';
 import { CardContent } from '../CardContent/CardContent';
 import { CardHeader } from '../CardHeader/CardHeader';
-import { CardNote } from '../CardNote/CardNote';
 
 export type CardColor = Extract<
   (typeof colorNamesArr)[number],
@@ -44,7 +44,7 @@ export type CardProps = CardComponentCommonProps;
 
 export interface CardComponent
   extends ForwardRefExoticComponent<CardProps & RefAttributes<HTMLDivElement>> {
-  Note: typeof CardNote;
+  Alert: typeof CardAlert;
   Actions: typeof CardActions;
   Content: typeof CardContent;
   Header: typeof CardHeader;

@@ -1,4 +1,4 @@
-.cardNote {
+.cardAlert {
   --card-note-color: var(--palette-graphite-70);
   --card-note-border: var(--palette-graphite-70);
 
@@ -26,12 +26,12 @@
   }
 
   :where(&[data-variant='warning'], &[data-variant='danger']) {
-    .cardNoteIcon {
+    .cardAlertIcon {
       --semantic-page-foreground: var(--semantic-danger-foreground);
     }
   }
 
-  .cardNoteIcon {
+  .cardAlertIcon {
     flex-shrink: 0;
   }
 
@@ -66,7 +66,6 @@
 
   &HeadingContainer {
     display: flex;
-    align-items: center;
     margin-bottom: var(--spacing-xs);
     gap: 10px;
   }

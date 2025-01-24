@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, userEvent, waitFor, within } from '@storybook/test';
 
-import { Card, CardNoteVariant } from '@skatteetaten/ds-content';
+import { Card, CardAlertVariant } from '@skatteetaten/ds-content';
 import { statusArr } from '@skatteetaten/ds-core-utils';
 import { SkattetrekkSVGpath } from '@skatteetaten/ds-icons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
@@ -119,7 +119,7 @@ export const WithSvgPath = {
   },
 } satisfies Story;
 
-const variantsArr: CardNoteVariant[] = ['neutral', 'warning', 'danger'];
+const variantsArr: CardAlertVariant[] = ['neutral', 'warning', 'danger'];
 const TemplateAllVariants: StoryFn<typeof Card> = (args) => (
   <Card>
     {variantsArr.map((variant, index) => {
