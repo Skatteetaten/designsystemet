@@ -4,7 +4,6 @@ import {
   FormatOptions,
   ValidData,
   Converted,
-  FormatPicks,
 } from './formatter.types';
 
 /* 
@@ -95,7 +94,7 @@ const cleanInput = ({
     ].includes(type)
   ) {
     /* Seksjon for å håndtere alt annet en number-format */
-    let newValue = value.replace(/[\D ]/g, '');
+    let newValue = value.replace(/[^\d]/g, '');
     if (type in maxLengths) {
       newValue = newValue.substring(0, maxLengths[type]);
     }
@@ -132,7 +131,7 @@ const formatGeneric = ({
   positions,
 }: {
   value: string;
-  type: FormatPicks;
+  type: FormatTypes;
   positions: number[];
 }): FormattingResponse => {
   let reformatted = value;
