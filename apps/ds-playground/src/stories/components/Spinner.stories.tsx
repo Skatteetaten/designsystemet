@@ -1,5 +1,6 @@
-import { Meta, StoryObj } from '@storybook/react';
 import { useEffect, useState, JSX, useRef } from 'react';
+
+import { Meta, StoryObj } from '@storybook/react';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';

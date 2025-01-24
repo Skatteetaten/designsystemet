@@ -47,6 +47,10 @@ code {
 .block {
   display: block;
 }
+.centerMargin {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .introImageContainer {
   margin-bottom: var(--spacing-xl) !important;
@@ -188,6 +192,11 @@ a.docs {
   margin: auto;
 }
 
+.containerS {
+  max-width: var(--container-s);
+  margin: auto;
+}
+
 .semantic-article.bottom-spacing {
   margin-bottom: var(--spacing-l);
 }
@@ -229,4 +238,12 @@ p.bold {
 .logo {
   width: 3rem;
   height: 3rem;
+}
+
+.sucessFill {
+  fill: var(--semantic-success-foreground) !important;
+}
+
+.width400 {
+  max-width: 400px;
 }

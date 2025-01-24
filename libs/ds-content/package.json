@@ -18,7 +18,9 @@
     "@skatteetaten/ds-typography": "1.4.0",
     "@skatteetaten/ds-icons": "1.4.0",
     "react-i18next": "^14",
-    "i18next": "^23"
+    "i18next": "^23",
+    "@skatteetaten/ds-buttons": "1.4.0",
+    "@skatteetaten/ds-progress": "1.4.0"
   },
   "scripts": {},
   "dependencies": {},
