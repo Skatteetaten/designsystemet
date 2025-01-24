@@ -3,7 +3,7 @@
 exports[`Tester/Card/Actions WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <div id="htmlId"
-       class="_cardActions_oshe8_1 dummyClassname "
+       class="_cardActions_3k813_1 dummyClassname "
        lang="en"
        data-testid="123ID"
   >
@@ -14,10 +14,10 @@ exports[`Tester/Card/Actions WithAttributes play-test 1`] = `
 
 exports[`Tester/Card/Actions WithChildren smoke-test 1`] = `
 <div data-test-block="true">
-  <div class="_card_1x4sk_5"
+  <div class="_card_nrlm6_5"
        data-color="white"
   >
-    <div class="_cardActions_oshe8_1  ">
+    <div class="_cardActions_3k813_1  ">
       <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  "
               type="button"
       >
@@ -57,7 +57,7 @@ exports[`Tester/Card/Actions WithChildren smoke-test 1`] = `
 
 exports[`Tester/Card/Actions WithRef play-test 1`] = `
 <div data-test-block="true">
-  <div class="_cardActions_oshe8_1  "
+  <div class="_cardActions_3k813_1  "
        id="dummyIdForwardedFromRef"
   >
     Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.

@@ -21,7 +21,7 @@ const meta = {
       table: { disable: true },
       control: 'text',
     },
-    spacing: {
+    spacingVertical: {
       table: { disable: true },
     },
   },

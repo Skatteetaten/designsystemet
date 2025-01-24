@@ -10,7 +10,7 @@ import {
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
-Card.Note.displayName = 'Card.Note';
+Card.Alert.displayName = 'Card.Alert';
 
 const defaultText =
   'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.';
@@ -21,8 +21,8 @@ const defaultArgs = {
 };
 
 const meta = {
-  component: Card.Note,
-  title: 'Komponenter/Card/Note',
+  component: Card.Alert,
+  title: 'Komponenter/Card/Alert',
   argTypes: {
     // Props
     children: {
@@ -35,7 +35,7 @@ const meta = {
         defaultValue: { summary: getCardAlertVariantDefault() },
       },
     },
-    showNote: {
+    showAlert: {
       table: {
         category: category.props,
       },
@@ -70,14 +70,14 @@ const meta = {
     ...defaultArgs,
     title: 'Merknad',
   },
-} satisfies Meta<typeof Card.Note>;
+} satisfies Meta<typeof Card.Alert>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {
   render: (args) => (
     <Card>
-      <Card.Note {...args} />
+      <Card.Alert {...args} />
     </Card>
   ),
 } satisfies Story;

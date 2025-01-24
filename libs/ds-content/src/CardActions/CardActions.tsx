@@ -13,7 +13,7 @@ export const CardActions = forwardRef<HTMLDivElement, CardActionsProps>(
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
-      spacing,
+      spacingVertical,
       children,
     },
     ref
@@ -25,7 +25,7 @@ export const CardActions = forwardRef<HTMLDivElement, CardActionsProps>(
         className={`${styles.cardActions} ${className} `}
         lang={lang}
         data-testid={dataTestId}
-        data-spacing={spacing}
+        data-spacing={spacingVertical}
       >
         {children}
       </div>

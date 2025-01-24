@@ -9,8 +9,8 @@ import { SkattetrekkSVGpath } from '@skatteetaten/ds-icons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 const meta = {
-  component: Card.Note,
-  title: 'Tester/Card/Note',
+  component: Card.Alert,
+  title: 'Tester/Card/Alert',
   argTypes: {
     // Baseprops
     key: { table: { disable: true } },
@@ -35,7 +35,7 @@ const meta = {
     titleAs: {
       table: { disable: true },
     },
-    showNote: {
+    showAlert: {
       table: { disable: true },
       control: 'text',
     },
@@ -47,7 +47,7 @@ const meta = {
       table: { disable: true },
     },
   },
-} satisfies Meta<typeof Card.Note>;
+} satisfies Meta<typeof Card.Alert>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
@@ -124,7 +124,7 @@ const TemplateAllVariants: StoryFn<typeof Card> = (args) => (
   <Card>
     {variantsArr.map((variant, index) => {
       return (
-        <Card.Note
+        <Card.Alert
           title={defaultArgs.title}
           {...args}
           key={`card_${index}`}
@@ -132,7 +132,7 @@ const TemplateAllVariants: StoryFn<typeof Card> = (args) => (
           variant={variant}
         >
           <Card.Content>{args.children}</Card.Content>
-        </Card.Note>
+        </Card.Alert>
       );
     })}
   </Card>
@@ -146,22 +146,22 @@ export const AllVariants = {
   },
 } satisfies Story;
 
-const TemplateOnClose: StoryFn<typeof Card.Note> = (args) => {
+const TemplateOnClose: StoryFn<typeof Card.Alert> = (args) => {
   const [show, setShow] = useState(true);
   return (
     <Card>
       {variantsArr.map((variant, index) => {
         return (
-          <Card.Note
+          <Card.Alert
             {...args}
             key={`card_${index}`}
             className={'bottomSpacingXL'}
             variant={variant}
-            showNote={show}
+            showAlert={show}
             onClose={(): void => setShow(false)}
           >
             {args.children}
-          </Card.Note>
+          </Card.Alert>
         );
       })}
     </Card>

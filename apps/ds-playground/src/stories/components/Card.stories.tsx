@@ -2,12 +2,7 @@ import { JSX, useRef } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import {
-  Button,
-  IconButton,
-  InlineButton,
-  Link,
-} from '@skatteetaten/ds-buttons';
+import { IconButton, InlineButton, Link } from '@skatteetaten/ds-buttons';
 import {
   Card,
   DescriptionList,
@@ -17,7 +12,6 @@ import {
   ArbeidTrygdPensjonIcon,
   CancelSVGpath,
   CheckSVGpath,
-  CompletedIcon,
   DeleteSVGpath,
   EditSVGpath,
   FileSVGpath,
@@ -76,8 +70,9 @@ export const Examples: Story = {
     return (
       <>
         <div className={'containerS flex flexColumn gapS'}>
-          <Card color={'graphite'}>
+          <Card spacing={'xxl'} color={'graphite'}>
             <Card.Header
+              spacingVertical={'xs'}
               rightContent={
                 <Tag svgPath={InfoOutlineSVGpath}>{'Endret av deg'}</Tag>
               }
@@ -86,7 +81,7 @@ export const Examples: Story = {
                 {'Andre inntekter'}
               </Heading>
             </Card.Header>
-            <Card.Content>
+            <Card.Content spacingVertical={'xl'}>
               <DescriptionList>
                 <DescriptionList.Element term={'Beløp'}>
                   {'654 321'}
@@ -99,7 +94,7 @@ export const Examples: Story = {
                 </DescriptionList.Element>
               </DescriptionList>
             </Card.Content>
-            <Card.Actions>
+            <Card.Actions spacingVertical={'l'}>
               <InlineButton svgPath={EditSVGpath}>{'Endre'}</InlineButton>
             </Card.Actions>
           </Card>
@@ -163,7 +158,7 @@ export const Examples: Story = {
         >
           <Card color={'denim'}>
             <Card.Content
-              spacing={'xs'}
+              spacingVertical={'xs'}
               rightContent={
                 <IconButton title={'Lukk'} svgPath={CancelSVGpath} />
               }
@@ -175,7 +170,7 @@ export const Examples: Story = {
           </Card>
 
           <Card color={'denim'}>
-            <Card.Actions spacing={'xs'}>
+            <Card.Actions spacingVertical={'xs'}>
               <Link svgPath={FileSVGpath} href={'#'}>
                 {'mine-hus-og-hoteller.zip'}
               </Link>
@@ -185,7 +180,7 @@ export const Examples: Story = {
 
           <Card color={'denim'}>
             <Card.Content
-              spacing={'xs'}
+              spacingVertical={'xs'}
               rightContent={
                 <IconButton title={'Lukk'} svgPath={CancelSVGpath} />
               }
@@ -196,7 +191,7 @@ export const Examples: Story = {
 
           <Card color={'burgundy'}>
             <Card.Content
-              spacing={'xs'}
+              spacingVertical={'xs'}
               rightContent={
                 <IconButton title={'Lukk'} svgPath={CancelSVGpath} />
               }
@@ -206,7 +201,7 @@ export const Examples: Story = {
           </Card>
 
           <Card color={'burgundy'}>
-            <Card.Actions spacing={'xs'}>
+            <Card.Actions spacingVertical={'xs'}>
               {'carlos-santana_smooth-featuring-rob-thomas.mp3'}
               <IconButton title={'Lukk'} svgPath={CancelSVGpath} />
             </Card.Actions>
@@ -217,203 +212,12 @@ export const Examples: Story = {
   },
 } satisfies Story;
 
-export const DevExamples: Story = {
-  render: (_args): JSX.Element => {
-    return (
-      <>
-        <Card spacing={'responsive'} color={'white'}>
-          <Card.Note variant={'warning'} title={'Merknad'}>
-            {
-              'Nå har vi gjort en endring i et annet kort som påvirker dette kortet.'
-            }
-          </Card.Note>
-          <Card.Note variant={'neutral'} title={'Merknad'}>
-            {
-              'Nå har vi gjort en endring i et annet kort som påvirker dette kortet.'
-            }
-          </Card.Note>
-          <Card.Note variant={'danger'} title={'Merknad'}>
-            {
-              'Nå har vi gjort en endring i et annet kort som påvirker dette kortet.'
-            }
-          </Card.Note>
-          <Card.Content>
-            <Heading as={'h2'} level={3} hasSpacing>
-              {'Andre inntekter'}
-            </Heading>
-          </Card.Content>
-          <Card.Content>
-            <DescriptionList>
-              <DescriptionList.Element term={'Beløp'}>
-                {'1 000 000 kr'}
-              </DescriptionList.Element>
-            </DescriptionList>
-          </Card.Content>
-          <Card.Actions>
-            <InlineButton svgPath={EditSVGpath}>{'Endre'}</InlineButton>
-            <InlineButton svgPath={DeleteSVGpath}>{'Slett'}</InlineButton>
-          </Card.Actions>
-        </Card>
-
-        <Card color={'graphite'}>
-          <Card.Content
-            //spacing={'responsive'}
-            rightContent={
-              <Tag svgPath={InfoOutlineSVGpath} color={'forest'}>
-                {'Ny'}
-              </Tag>
-            }
-          >
-            <Heading as={'h2'} level={3}>
-              {'Lån'}
-            </Heading>
-          </Card.Content>
-
-          <Card.Content>
-            <DescriptionList>
-              <DescriptionList.Element term={'Sparebank Nord'}>
-                {'1 000 000 kr'}
-              </DescriptionList.Element>
-              <DescriptionList.Element term={'Sparebank Sør'}>
-                {'1 000 000 kr'}
-              </DescriptionList.Element>
-            </DescriptionList>
-          </Card.Content>
-
-          <Card.Actions>
-            <InlineButton svgPath={EditSVGpath}>{'Endre'}</InlineButton>
-            <InlineButton svgPath={DeleteSVGpath}>{'Slett'}</InlineButton>
-          </Card.Actions>
-        </Card>
-        <Card color={'denim'}>
-          <Card.Content
-            //spacing={'xxs'}
-            rightContent={
-              <IconButton
-                className={'cardClose'}
-                title={'Lukk'}
-                svgPath={CancelSVGpath}
-              />
-            }
-          >
-            {'test.png'}
-          </Card.Content>
-        </Card>
-        <Card color={'denim'}>
-          <Card.Content
-            rightContent={
-              <IconButton
-                className={'cardClose'}
-                title={'Lukk'}
-                svgPath={CancelSVGpath}
-              />
-            }
-          >
-            <Link svgPath={FileSVGpath} href={'#'}>
-              {'mine-hus-og-hoteller.zip'}
-            </Link>
-          </Card.Content>
-        </Card>
-        <div className={'containerS'}>
-          <Card>
-            <Card.Header
-              rightContent={
-                <Paragraph>
-                  <strong>{'1 953 kroner'} </strong>
-                </Paragraph>
-              }
-            >
-              <Heading as={'h2'} level={4}>
-                {'Merverdiavgift - klimalovens foooasd'}
-              </Heading>
-              <CompletedIcon className={'sucessFill'} size={'extraLarge'} />
-            </Card.Header>
-            <Card.Content
-              rightContent={<Button variant={'secondary'}>{'Endre'}</Button>}
-            >
-              <Tag color={'burgundy'}>{'Forfalt'}</Tag>
-            </Card.Content>
-            <Card.Content>
-              <DescriptionList>
-                <DescriptionList.Element term={'Opprinnelig beløp'}>
-                  {'1 753 kroner'}
-                </DescriptionList.Element>
-                <DescriptionList.Element term={'Forsinkelsesrenter'}>
-                  {'200 kroner'}
-                </DescriptionList.Element>
-                <DescriptionList.Element term={'Betaligsfrist'}>
-                  {'09.10.2024'}
-                </DescriptionList.Element>
-              </DescriptionList>
-            </Card.Content>
-          </Card>
-          <Card color={'graphite'}>
-            <Card.Content
-              rightContent={
-                <Tag svgPath={InfoOutlineSVGpath}>{'Endret av deg'}</Tag>
-              }
-            >
-              <Heading as={'h2'} level={4}>
-                {'Andre inntekter'}
-              </Heading>
-            </Card.Content>
-            <Card.Content>
-              <DescriptionList>
-                <DescriptionList.Element term={'Beløp'}>
-                  {'1 000 000 kr'}
-                </DescriptionList.Element>
-                <DescriptionList.Element term={'Fradrag'}>
-                  {'1 000 000 kr'}
-                </DescriptionList.Element>
-                <DescriptionList.Element term={'Ytelser'}>
-                  {'1 000 000 kr'}
-                </DescriptionList.Element>
-              </DescriptionList>
-            </Card.Content>
-            <Card.Actions>
-              <InlineButton svgPath={EditSVGpath}>{'Endre'}</InlineButton>
-            </Card.Actions>
-          </Card>
-
-          <Card color={'graphite'}>
-            <Card.Content
-              rightContent={
-                <InlineButton svgPath={DeleteSVGpath}>{'Fjern'}</InlineButton>
-              }
-            >
-              <Heading as={'h2'} level={4}>
-                {'Andre inntekter'}
-              </Heading>
-            </Card.Content>
-            <Card.Content>
-              <DescriptionList>
-                <DescriptionList.Element term={'Beløp'}>
-                  {'1 000 000 kr'}
-                </DescriptionList.Element>
-                <DescriptionList.Element term={'Fradrag'}>
-                  {'1 000 000 kr'}
-                </DescriptionList.Element>
-                <DescriptionList.Element term={'Ytelser'}>
-                  {'1 000 000 kr'}
-                </DescriptionList.Element>
-              </DescriptionList>
-            </Card.Content>
-            <Card.Actions>
-              <InlineButton svgPath={EditSVGpath}>{'Endre'}</InlineButton>
-            </Card.Actions>
-          </Card>
-        </div>
-      </>
-    );
-  },
-} satisfies Story;
-
-export const NoteExample: Story = {
+export const AlertExample: Story = {
   render: (_args): JSX.Element => {
     const headingRef = useRef<HTMLHeadingElement>(null);
     return (
       <Card color={'white'}>
-        <Card.Note
+        <Card.Alert
           variant={'warning'}
           title={'Merknad'}
           titleAs={'h3'}
@@ -422,7 +226,7 @@ export const NoteExample: Story = {
           {
             'Nå har vi gjort en endring i et annet kort som påvirker dette kortet.'
           }
-        </Card.Note>
+        </Card.Alert>
         <Card.Header>
           <Heading ref={headingRef} as={'h3'} level={3} canBeManuallyFocused>
             {'Andre inntekter'}

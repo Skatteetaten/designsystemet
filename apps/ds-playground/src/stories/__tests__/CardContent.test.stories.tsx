@@ -27,7 +27,10 @@ const meta = {
       table: { disable: true },
       control: 'text',
     },
-    spacing: {
+    spacingVertical: {
+      table: { disable: true },
+    },
+    classNames: {
       table: { disable: true },
     },
   },
@@ -111,5 +114,30 @@ export const WithChildrenRigthContent: Story = {
   argTypes: {
     children: { table: { disable: false } },
     rightContent: { table: { disable: false } },
+  },
+} satisfies Story;
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames',
+  args: {
+    ...defaultArgs,
+    rightContent: 'høyrejustert innhold',
+    classNames: {
+      rightContent: 'dummyClassname',
+      children: 'dummyClassname',
+    },
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+
+    const content = canvas.getByText(defaultArgs.children);
+    const rightContent = canvas.getByText('høyrejustert innhold');
+
+    await expect(content).toHaveClass('dummyClassname');
+    await expect(rightContent).toHaveClass('dummyClassname');
   },
 } satisfies Story;

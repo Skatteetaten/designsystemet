@@ -6,7 +6,6 @@ import { CardContentProps } from './CardHeader.types';
 
 import styles from './CardHeader.module.scss';
 
-// TODO lege til classNames for å kunne style rightContent eventuelt fjerne wrapper div
 export const CardHeader = forwardRef<HTMLDivElement, CardContentProps>(
   (
     {
@@ -15,7 +14,8 @@ export const CardHeader = forwardRef<HTMLDivElement, CardContentProps>(
       lang,
       'data-testid': dataTestId,
       rightContent,
-      spacing,
+      spacingVertical,
+      classNames,
       children,
     },
     ref
@@ -27,11 +27,13 @@ export const CardHeader = forwardRef<HTMLDivElement, CardContentProps>(
         className={`${className} ${styles.cardHeader}`}
         lang={lang}
         data-testid={dataTestId}
-        data-spacing={spacing}
+        data-spacing={spacingVertical}
       >
         {children}
         {rightContent && (
-          <div className={styles.rightContent}>{rightContent}</div>
+          <div className={`${styles.rightContent} ${classNames?.rightContent}`}>
+            {rightContent}
+          </div>
         )}
       </div>
     );

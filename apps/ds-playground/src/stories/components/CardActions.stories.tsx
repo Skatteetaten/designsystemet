@@ -22,7 +22,7 @@ const meta = {
       control: 'text',
       table: { category: category.props },
     },
-    spacing: {
+    spacingVertical: {
       table: { category: category.props },
     },
   },

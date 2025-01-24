@@ -2,13 +2,14 @@ import { ReactNode } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-import { CardSpacing } from '../Card/Card.types';
+import { CardSpacingVertical } from '../Card/Card.types';
 
 export interface CardContentCommonProps extends BaseProps {
   /** Ekstra innhold som skal vises til høyre for hovedinnholdet. */
   rightContent?: ReactNode;
-  /** Luft rundt komponenten. Hvis den ikke er satt arves verdi fra parent Card. */
-  spacing?: CardSpacing;
+  /** Luft over og under komponenten. Hvis den ikke er satt arves verdi fra parent Card. */
+  spacingVertical?: CardSpacingVertical;
+  classNames?: { rightContent?: string; children?: string };
   /** Hovedinnholdet. */
   children: ReactNode;
 }

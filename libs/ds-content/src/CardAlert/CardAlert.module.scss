@@ -32,6 +32,7 @@
   }
 
   .cardAlertIcon {
+    height: calc(var(--font-size-m) * var(--semantic-line-height-article));
     flex-shrink: 0;
   }
 
@@ -61,6 +62,7 @@
   &CloseButton {
     --semantic-interactive-main: var(--palette-graphite-100);
 
+    margin-top: calc(var(--spacing-xs) * -1);
     margin-left: auto;
   }
 
