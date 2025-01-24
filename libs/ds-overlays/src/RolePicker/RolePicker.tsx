@@ -84,7 +84,7 @@ export const RolePicker = forwardRef<HTMLDialogElement, RolePickerProps>(
           <Paragraph>
             {t('rolepicker.YouCanRepresent')}
             <strong>
-              {` ${people.total} ${t('rolepicker.People')} ${t('rolepicker.And')} ${businesses.total} ${t('rolepicker.Businesses')}`}
+              {` ${people.total} ${t('rolepicker.People')} ${t('rolepicker.And')} ${businesses.total} ${t('rolepicker.Businesses')}.`}
             </strong>
           </Paragraph>
         );
