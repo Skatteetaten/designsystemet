@@ -269,12 +269,11 @@ export const Ventevarsel: Story = {
             {dsI18n.t('ds_overlays:modal.WaitNoticeParagraph')}
           </Paragraph>
           <Button
-            className={'width100'}
             onClick={(): void => {
               closeDialog();
             }}
           >
-            {dsI18n.t('Shared:shared.Yes')}
+            {dsI18n.t('ds_overlays:modal.StayLoggedIn')}
           </Button>
         </Modal>
       </>
