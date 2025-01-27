@@ -24,6 +24,7 @@
   "rolepicker.PeopleDescriptionPrefix": "Fødsels-/D-nummer",
   "rolepicker.PeopleHeading": "Andre personer",
   "rolepicker.PeopleHits": "treff i andre personer",
+  "rolepicker.Person": "person",
   "rolepicker.SearchAll": "Søk etter personens navn eller fødselsnummer, virksomhetens navn eller organisasjonsnummer.",
   "rolepicker.SearchBusinesses": "Søk etter virksomhetens navn eller organisasjonsnummer.",
   "rolepicker.SearchPeople": "Søk etter personens navn eller fødselsnummer.",

@@ -76,7 +76,6 @@ const businesses: Paginated<Business> = {
       type: 'Organization',
       unitType: 'AS',
     },
-
     {
       name: 'Toshiba',
       organizationNumber: '312643218',
@@ -84,7 +83,6 @@ const businesses: Paginated<Business> = {
       type: 'Organization',
       unitType: 'AS',
     },
-
     {
       name: 'Hitachi',
       organizationNumber: '312743218',
@@ -92,7 +90,6 @@ const businesses: Paginated<Business> = {
       type: 'Organization',
       unitType: 'AS',
     },
-
     {
       name: 'Vanguard',
       organizationNumber: '332843218',
@@ -100,7 +97,6 @@ const businesses: Paginated<Business> = {
       type: 'Organization',
       unitType: 'AS',
     },
-
     {
       name: 'Amazon',
       organizationNumber: '112843218',
@@ -179,6 +175,12 @@ const people: Paginated<Person> = {
 const people11: Paginated<Person> = {
   total: 11,
   list: [
+    {
+      name: 'Frisk Elefant',
+      personId: '100908 12345',
+      type: 'Person',
+      isDeleted: false,
+    },
     {
       name: 'Melankolsk Aldrende Ape',
       personId: '138899 99726',
@@ -745,5 +747,106 @@ export const With10000Businesses = {
     imageSnapshot: {
       disable: true,
     },
+  },
+} satisfies Story;
+
+export const WithNoDeletedBusinesses = {
+  name: 'With No Deleted Businesses',
+  args: {
+    ...defaultArgs,
+    businesses: {
+      total: 3,
+      list: [
+        {
+          name: 'Samsung',
+          organizationNumber: '312943218',
+          isDeleted: false,
+          type: 'Organization',
+          unitType: 'AS',
+          subunits: [
+            {
+              name: 'Snapchat',
+              organizationNumber: '123456623',
+              isDeleted: false,
+              type: 'Organization',
+              unitType: 'AS',
+            },
+            {
+              name: 'Statoil',
+              organizationNumber: '312849218',
+              isDeleted: false,
+              type: 'Organization',
+              unitType: 'AS',
+            },
+          ],
+        },
+      ],
+    },
+    people: undefined,
+  },
+  render: DefaultTemplate,
+  argTypes: {
+    me: { table: { disable: false } },
+    people: { table: { disable: false } },
+    businesses: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const openButton = canvas.getByRole('button');
+    await userEvent.click(openButton);
+
+    const modal = await canvas.findByRole('dialog');
+
+    const checkBox = within(modal).queryByRole('checkbox', {
+      name: dsI18n.t('ds_overlays:rolepicker.ShowInactiveBusinessesHeader'),
+    });
+
+    expect(checkBox).not.toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithNoSubunits = {
+  name: 'With No SubUnits',
+  args: {
+    ...defaultArgs,
+    businesses: {
+      total: 2,
+      list: [
+        {
+          name: 'Samsung',
+          organizationNumber: '312943218',
+          isDeleted: false,
+          type: 'Organization',
+          unitType: 'AS',
+        },
+        {
+          name: 'Vanguard',
+          organizationNumber: '332843218',
+          isDeleted: true,
+          type: 'Organization',
+          unitType: 'AS',
+        },
+      ],
+    },
+    people: undefined,
+  },
+  render: DefaultTemplate,
+  argTypes: {
+    me: { table: { disable: false } },
+    people: { table: { disable: false } },
+    businesses: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const openButton = canvas.getByRole('button');
+    await userEvent.click(openButton);
+
+    const modal = await canvas.findByRole('dialog');
+
+    const checkBox = within(modal).queryByRole('checkbox', {
+      name: dsI18n.t('ds_overlays:rolepicker.ShowSubBusinessesHeading'),
+    });
+
+    expect(checkBox).not.toBeInTheDocument();
   },
 } satisfies Story;

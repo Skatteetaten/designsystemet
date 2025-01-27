@@ -84,7 +84,7 @@ export const RolePicker = forwardRef<HTMLDialogElement, RolePickerProps>(
           <Paragraph>
             {t('rolepicker.YouCanRepresent')}
             <strong>
-              {` ${people.total} ${t('rolepicker.People')} ${t('rolepicker.And')} ${businesses.total} ${t('rolepicker.Businesses')}.`}
+              {` ${people.total} ${people.total > 1 ? t('rolepicker.People') : t('rolepicker.Person')} ${t('rolepicker.And')} ${businesses.total} ${businesses.total > 1 ? t('rolepicker.Businesses') : t('rolepicker.Business')}.`}
             </strong>
           </Paragraph>
         );
@@ -92,14 +92,14 @@ export const RolePicker = forwardRef<HTMLDialogElement, RolePickerProps>(
         return (
           <Paragraph>
             {t('rolepicker.YouCanRepresent')}
-            <strong>{` ${people.total} ${t('rolepicker.People')}.`}</strong>
+            <strong>{` ${people.total} ${people.total > 1 ? t('rolepicker.People') : t('rolepicker.Person')}.`}</strong>
           </Paragraph>
         );
       } else if (businesses && businesses.total > 0) {
         return (
           <Paragraph>
             {t('rolepicker.YouCanRepresent')}
-            <strong>{` ${businesses.total} ${t('rolepicker.Businesses')}.`}</strong>
+            <strong>{` ${businesses.total} ${businesses.total > 1 ? t('rolepicker.Businesses') : t('rolepicker.Business')}.`}</strong>
           </Paragraph>
         );
       } else {
