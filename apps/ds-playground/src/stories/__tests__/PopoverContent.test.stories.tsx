@@ -121,10 +121,3 @@ export const VerticalScroll = {
     children: loremIpsum.repeat(100),
   },
 } satisfies Story;
-
-export const WithLongText = {
-  name: 'With Long Text',
-  args: {
-    children: loremIpsum.split(' ').join(''),
-  },
-} satisfies Story;
