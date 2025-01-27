@@ -21,7 +21,7 @@ const me: Person = {
 };
 
 const businesses: Paginated<Business> = {
-  total: 12,
+  total: 16,
   list: [
     {
       name: 'Costco',
@@ -111,6 +111,34 @@ const businesses: Paginated<Business> = {
     {
       name: 'Meta',
       organizationNumber: '212843218',
+      isDeleted: false,
+      type: 'Organization',
+      unitType: 'AS',
+    },
+    {
+      name: 'Apple',
+      organizationNumber: '412843218',
+      isDeleted: false,
+      type: 'Organization',
+      unitType: 'AS',
+    },
+    {
+      name: 'Microsoft',
+      organizationNumber: '512843218',
+      isDeleted: false,
+      type: 'Organization',
+      unitType: 'AS',
+    },
+    {
+      name: 'Netflix',
+      organizationNumber: '612843218',
+      isDeleted: false,
+      type: 'Organization',
+      unitType: 'AS',
+    },
+    {
+      name: 'Tesla',
+      organizationNumber: '712843218',
       isDeleted: false,
       type: 'Organization',
       unitType: 'AS',
@@ -542,7 +570,6 @@ export const WithOnlyPeopleSearch = {
   name: 'With Only People Search (A6, A7)',
   args: {
     ...defaultArgs,
-    me: undefined,
     businesses: undefined,
     people: people11,
   },
@@ -563,7 +590,6 @@ export const WithOnlyBusinessSearch = {
   name: 'With Only Business Search (A6, A7)',
   args: {
     ...defaultArgs,
-    me: undefined,
     people: undefined,
   },
   render: DefaultTemplate,

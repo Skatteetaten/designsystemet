@@ -129,7 +129,8 @@ export const RolePickerBusinessList = ({
       return businesses.list
         .filter((item) => !item.isDeleted)
         .reduce((total, curr) => {
-          const subUnitsCount = curr.subunits?.length ?? 0;
+          const subUnitsCount =
+            curr.subunits?.filter((sub) => !sub.isDeleted).length ?? 0;
           return total + 1 + subUnitsCount;
         }, 0);
     }
@@ -251,7 +252,7 @@ export const RolePickerBusinessList = ({
                 <li key={item.organizationNumber}>
                   <RolePickerRow
                     id={item.organizationNumber}
-                    title={`${item.name} ${item.unitType}`}
+                    title={`${item.name} ${item.unitType} ${item.isDeleted ? `(${t('rolepicker.Deleted')})` : ''}`}
                     description={`${t('rolepicker.BusinessDescriptionPrefix')} ${item.organizationNumber}`}
                     svgPath={item.isDeleted ? BriefcaseOffSVGpath : svgPath}
                     onClick={() => {

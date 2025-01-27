@@ -2,13 +2,9 @@ import { JSX, useRef, useState, MouseEvent } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Button, LinkGroup } from '@skatteetaten/ds-buttons';
+import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n, langToLocale } from '@skatteetaten/ds-core-utils';
-import {
-  User,
-  TopBannerExternal,
-  TopBannerExternalHandle,
-} from '@skatteetaten/ds-layout';
+import { User, TopBannerExternal } from '@skatteetaten/ds-layout';
 import {
   Business,
   Entity,
@@ -273,7 +269,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {} satisfies Story;
 
-export const Examples: Story = {
+export const WithExternalTopBanner: Story = {
   render: (_args): JSX.Element => {
     const modalRef = useRef<HTMLDialogElement>(null);
     const [user, setUser] = useState<User>();
@@ -327,4 +323,4 @@ export const Examples: Story = {
   },
 } satisfies Story;
 
-Examples.parameters = exampleParameters;
+WithExternalTopBanner.parameters = exampleParameters;
