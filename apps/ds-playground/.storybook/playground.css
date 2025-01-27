@@ -252,10 +252,6 @@ svg.dangerIcon {
   fill: var(--semantic-danger-foreground);
 }
 
-svg.blueIcon {
-  fill: var(--semantic-interactive-main);
-}
-
 .paddingTopXXS {
   padding-top: var(--spacing-xxs);
 }
