@@ -247,3 +247,27 @@ p.bold {
 .width400 {
   max-width: 400px;
 }
+
+svg.dangerIcon {
+  fill: var(--semantic-danger-foreground);
+}
+
+svg.blueIcon {
+  fill: var(--semantic-interactive-main);
+}
+
+.paddingTopXXS {
+  padding-top: var(--spacing-xxs);
+}
+
+.flexShrinkZero {
+  flex-shrink: 0;
+}
+
+.cardWidth {
+  width: 254px;
+}
+
+.marginLeftS {
+  margin-left: var(--spacing-s);
+}
