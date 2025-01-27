@@ -3,10 +3,12 @@ import { useEffect, useRef, JSX, useState } from 'react';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, userEvent, fireEvent, within, waitFor } from '@storybook/test';
 
+
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
 import { WarningOutlineIcon } from '@skatteetaten/ds-icons';
+import { TopBannerExternal } from '@skatteetaten/ds-layout';
 import { Modal } from '@skatteetaten/ds-overlays';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
@@ -560,9 +562,10 @@ const TemplateWithAutoOpen: StoryFn<typeof Modal> = (args) => {
   };
   return (
     <>
+      <TopBannerExternal id={'toppbannner-with-skip-link'} />
       <Paragraph
         hasSpacing
-      >{`Denne testen skal sjekke om fokus blir satt på BODY-elementet når modalen lukkes. 
+      >{`Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes. 
         Testes ved å reloade siden. Det er ved programatisk åpning av modalen at fokus tidligere ikke har blitt satt korrekt.`}</Paragraph>
       <Modal {...args} ref={ref}>
         <Paragraph hasSpacing>
@@ -612,9 +615,11 @@ export const AutoOpen = {
       name: 'Avbryt',
     });
     await userEvent.click(button);
-    const body = document.body;
+    const skiplink = document.querySelector(
+      'header#toppbannner-with-skip-link > a'
+    );
     await waitFor(() => {
-      expect(body).toHaveFocus();
+      expect(skiplink).toHaveFocus();
     });
     const closedmodal = await canvas.findByRole('dialog', { hidden: true });
     await expect(closedmodal).not.toBeVisible();
