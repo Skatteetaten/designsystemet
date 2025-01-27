@@ -114,8 +114,10 @@ export const RolePickerBusinessList = ({
   ]);
 
   const hasInactiveItems = businesses.list.some(
-    (business) => business.isDeleted
+    (business) =>
+      business.isDeleted || business.subunits?.some((sub) => sub.isDeleted)
   );
+
   const hasItemsWithSubOranizations = businesses.list.some(
     (business) => business.subunits
   );
