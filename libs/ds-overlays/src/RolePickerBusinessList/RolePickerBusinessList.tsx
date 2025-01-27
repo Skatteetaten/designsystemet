@@ -74,8 +74,10 @@ export const RolePickerBusinessList = ({
             filterQuery.toLowerCase()
           ) ||
           (showSubUnits &&
-            business.subunits?.some((sub) =>
-              sub.name.toLowerCase().includes(filterQuery.toLowerCase())
+            business.subunits?.some(
+              (sub) =>
+                sub.name.toLowerCase().includes(filterQuery.toLowerCase()) &&
+                (showInactiveBusinesses || !sub.isDeleted)
             ))
       );
     } else {
