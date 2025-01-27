@@ -57,29 +57,50 @@ export const RolePickerBusinessList = ({
   };
 
   const visibleItems = useMemo(() => {
-    let items = businesses.list;
+    // lager en dyp kopiering av business-listen for å unngå mutasjon
+    let items: Business[] = JSON.parse(JSON.stringify(businesses.list));
 
     items = !showInactiveBusinesses ? items.filter((p) => !p.isDeleted) : items;
 
     if (filterQuery) {
       // Filteret sjekker om `filterQuery` er til stede i organisasjonens navn, enhetstype eller organisasjonsnummer.
       // Hvis `showSubUnits` er sann, sjekker det også om noen av underenhetenes navn inkluderer `filterQuery`.
-      items = items.filter(
-        (business) =>
+      items = items.filter((business) => {
+        const mainMatch =
           (business.name + business.unitType)
             .toLowerCase()
             .includes(filterQuery.toLowerCase()) ||
           business.organizationNumber.includes(filterQuery.toLowerCase()) ||
-          business.mainOrganizationNumber?.includes(
-            filterQuery.toLowerCase()
-          ) ||
-          (showSubUnits &&
-            business.subunits?.some(
-              (sub) =>
-                sub.name.toLowerCase().includes(filterQuery.toLowerCase()) &&
-                (showInactiveBusinesses || !sub.isDeleted)
-            ))
-      );
+          business.mainOrganizationNumber?.includes(filterQuery.toLowerCase());
+
+        const subunitMatch =
+          showSubUnits &&
+          business.subunits?.some(
+            (sub) =>
+              (sub.name.toLowerCase() + sub.unitType.toLowerCase()).includes(
+                filterQuery.toLowerCase()
+              ) &&
+              (showInactiveBusinesses || !sub.isDeleted)
+          );
+
+        if (mainMatch) {
+          return true;
+        }
+
+        if (subunitMatch) {
+          const filteredSubunits = business.subunits?.filter(
+            (sub) =>
+              (sub.name.toLowerCase() + sub.unitType.toLowerCase()).includes(
+                filterQuery.toLowerCase()
+              ) &&
+              (showInactiveBusinesses || !sub.isDeleted)
+          );
+          business.subunits = filteredSubunits;
+          return true;
+        }
+
+        return false;
+      });
     } else {
       items = showAll ? items : items.slice(0, MAX_INITIAL_ITEMS);
     }
