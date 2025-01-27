@@ -2,7 +2,6 @@ import { StoryFn, Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
 
 import { Card, cardColorArr } from '@skatteetaten/ds-content';
-import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 const meta = {
   component: Card,

@@ -60,10 +60,12 @@
   }
 
   &CloseButton {
-    --semantic-interactive-main: var(--palette-graphite-100);
-
     margin-top: calc(var(--spacing-xs) * -1);
     margin-left: auto;
+
+    &:not(:active) > svg {
+      fill: var(--palette-graphite-100);
+    }
   }
 
   &HeadingContainer {

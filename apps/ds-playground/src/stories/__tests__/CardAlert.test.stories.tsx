@@ -146,28 +146,6 @@ export const AllVariants = {
   },
 } satisfies Story;
 
-const TemplateOnClose: StoryFn<typeof Card.Alert> = (args) => {
-  const [show, setShow] = useState(true);
-  return (
-    <Card>
-      {variantsArr.map((variant, index) => {
-        return (
-          <Card.Alert
-            {...args}
-            key={`card_${index}`}
-            className={'bottomSpacingXL'}
-            variant={variant}
-            showAlert={show}
-            onClose={(): void => setShow(false)}
-          >
-            {args.children}
-          </Card.Alert>
-        );
-      })}
-    </Card>
-  );
-};
-
 export const WithOnClose = {
   name: 'With OnClose',
   args: {
