@@ -277,7 +277,7 @@ export const LeftMenu: Story = {
                 {'+47 99 99 99 99'}
               </DescriptionList.Element>
               <DescriptionList.Element term={'E-post'}>
-                {'chad@henning.no'}
+                {'epost@adresse.no'}
               </DescriptionList.Element>
               <DescriptionList.Element
                 term={'Reservert mot elektronisk kommunikasjon'}
@@ -395,7 +395,7 @@ export const WorkTask: Story = {
             </RadioGroup>
           </Accordion.Item>
         </Accordion>
-        <Button className={'marginRightM'}>{'Bekreft og fortsett'}</Button>
+        <Button className={'exampleSpacing'}>{'Bekreft og fortsett'}</Button>
         <Button variant={'secondary'}>{'Avbryt'}</Button>
       </div>
     );

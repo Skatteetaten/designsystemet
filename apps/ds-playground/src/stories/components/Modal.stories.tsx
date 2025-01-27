@@ -3,7 +3,7 @@ import { useRef, JSX, useEffect, useState } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { Button, Link } from '@skatteetaten/ds-buttons';
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { dsI18n, useMediaQuery } from '@skatteetaten/ds-core-utils';
 import { RadioGroup } from '@skatteetaten/ds-forms';
 import {
   InfoOutlineSVGpath,
@@ -285,6 +285,7 @@ Ventevarsel.parameters = exampleParameters;
 export const Feilmeldingsmodal: Story = {
   render: (_args): JSX.Element => {
     const refModalFeil = useRef<HTMLDialogElement>(null);
+    const isBigScreen = useMediaQuery('(min-width: 640px)');
 
     return (
       <>
@@ -297,7 +298,7 @@ export const Feilmeldingsmodal: Story = {
         <Modal
           ref={refModalFeil}
           title={'Beklager, noe gikk galt'}
-          padding={'mega'}
+          padding={isBigScreen ? 'mega' : 'm'}
           renderIcon={(): JSX.Element => (
             <WarningOutlineIcon size={'extraLarge'} />
           )}
@@ -320,7 +321,7 @@ export const Feilmeldingsmodal: Story = {
             <a href={'#link'}>{'kontakte oss'}</a>
           </Paragraph>
           <Button
-            className={'marginRightM'}
+            className={'exampleSpacing'}
             svgPath={UpdateSVGpath}
             onClick={(): void => refModalFeil.current?.close()}
           >
