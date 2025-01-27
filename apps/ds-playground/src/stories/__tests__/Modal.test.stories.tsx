@@ -3,7 +3,6 @@ import { useEffect, useRef, JSX, useState } from 'react';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, userEvent, fireEvent, within, waitFor } from '@storybook/test';
 
-
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
@@ -562,7 +561,7 @@ const TemplateWithAutoOpen: StoryFn<typeof Modal> = (args) => {
   };
   return (
     <>
-      <TopBannerExternal id={'toppbannner-with-skip-link'} />
+      <TopBannerExternal />
       <Paragraph
         hasSpacing
       >{`Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes. 
@@ -599,12 +598,9 @@ export const AutoOpen = {
     },
   ],
   render: TemplateWithAutoOpen,
-  name: 'With AutoOpen',
+  name: 'With Auto Ope Close ',
   args: {
     variant: 'plain',
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -615,9 +611,7 @@ export const AutoOpen = {
       name: 'Avbryt',
     });
     await userEvent.click(button);
-    const skiplink = document.querySelector(
-      'header#toppbannner-with-skip-link > a'
-    );
+    const skiplink = document.querySelector('a[data-skip-link]');
     await waitFor(() => {
       expect(skiplink).toHaveFocus();
     });
@@ -633,9 +627,10 @@ const TemplateAutoOpenAndCloseOnEscape: StoryFn<typeof Modal> = (args) => {
   }, []);
   return (
     <>
+      <TopBannerExternal />
       <Paragraph
         hasSpacing
-      >{`Denne testen skal sjekke om fokus blir satt på BODY-elementet når modalen lukkes etter at bruker har trykket på Escape-knappen. 
+      >{`Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes etter at bruker har trykket på Escape-knappen. 
         Modalen åpnes ved å laste siden på nytt.`}</Paragraph>
       <Modal {...args} ref={ref}>
         <Paragraph hasSpacing>{'Modalinnhold'}</Paragraph>
@@ -645,13 +640,6 @@ const TemplateAutoOpenAndCloseOnEscape: StoryFn<typeof Modal> = (args) => {
 };
 
 export const AutoOpenAndCloseOnEscape = {
-  decorators: [
-    (Story): JSX.Element => {
-      const body = document.body;
-      body.classList.add('bodyFocus');
-      return <Story />;
-    },
-  ],
   render: TemplateAutoOpenAndCloseOnEscape,
   name: 'With Auto Open and Close on Escape',
   args: {
@@ -659,7 +647,7 @@ export const AutoOpenAndCloseOnEscape = {
     dismissOnEsc: true,
   },
   argTypes: {
-    variant: { table: { disable: false } },
+    dismissOnEsc: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -670,3 +658,91 @@ export const AutoOpenAndCloseOnEscape = {
     await expect(closedmodal).not.toBeVisible();
   },
 } satisfies Story;
+
+/*
+// Kode for å teste skiplink som eksisterer i en shadowDom.
+const WithShadowRootDecorator = (Story: StoryFn): JSX.Element => {
+  const shadowHostRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (shadowHostRef.current) {
+      const shadowRoot = shadowHostRef.current.attachShadow({ mode: 'open' });
+      const container = document.createElement('div');
+      if (import.meta.env.MODE === 'development') {
+        for (const tag of document.head.querySelectorAll('style')) {
+          const clone = tag.cloneNode(true);
+          shadowRoot.appendChild(clone);
+        }
+      } else {
+        for (const tag of document.head.querySelectorAll('link')) {
+          if (tag.rel === 'stylesheet') {
+            const clone = tag.cloneNode(true);
+            shadowRoot.appendChild(clone);
+          }
+        }
+      }
+      shadowRoot.appendChild(container);
+      const skipLink = {
+        shadowRootNode: shadowRoot,
+        text: 'Til hovedinnhold',
+      };
+      const root = createRoot(container);
+      root.render(<TopBannerExternal skipLink={skipLink} />);
+    }
+  }, []);
+
+  return (
+    <>
+      <div ref={shadowHostRef}></div>
+      <Story />
+    </>
+  );
+};
+
+const TemplateWithSkiplinkInShadowDom: StoryFn<typeof Modal> = (args) => {
+  const ref = useRef<HTMLDialogElement>(null);
+  useEffect(() => {
+    ref.current?.showModal();
+  }, []);
+  return (
+    <>
+      <main>{'Hovedinnholdet på siden'}</main>
+      <Paragraph
+        hasSpacing
+      >{`Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes etter at bruker har trykket på Escape-knappen. 
+        Modalen åpnes ved å laste siden på nytt.`}</Paragraph>
+      <Modal {...args} ref={ref}>
+        <Paragraph hasSpacing>{'Modalinnhold'}</Paragraph>
+      </Modal>
+    </>
+  );
+};
+
+export const WithSkipLinkInShadowDom = {
+  render: TemplateWithSkiplinkInShadowDom,
+  name: 'With Skip Link in ShadowDom',
+  decorators: [WithShadowRootDecorator],
+  args: {
+    dismissOnEsc: true,
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
+    customElementName: 'skiplink-customelement',
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const openmodal = await canvas.findByRole('dialog', { hidden: false });
+    await expect(openmodal).toBeVisible();
+    await userEvent.keyboard('{Escape}');
+    const hostElement: Element | undefined = [
+      ...canvasElement.querySelectorAll('*'),
+    ].find((el) => !!el.shadowRoot);
+    const shadowRoot = hostElement?.shadowRoot;
+    const skipLink = shadowRoot?.querySelector('a[data-skip-link]');
+    await waitFor(() => {
+      expect(skipLink).toHaveFocus();
+    });
+  },
+} satisfies Story;
+ */

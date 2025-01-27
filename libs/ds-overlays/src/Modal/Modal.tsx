@@ -71,19 +71,17 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
       const handleClose = (): void => {
         if (isAutoOpened) {
           setIsAutoOpened(false);
-          const allLinks: HTMLAnchorElement[] = Array.from(
-            document.querySelectorAll('header > a')
-          );
-          console.log(allLinks);
-          const skiplink = allLinks?.find(
-            (e) => e.href === 'main' || e.href === '#main'
-          );
-          const test = allLinks?.find((e) => console.log(e.href));
-          if (skiplink) {
-            skiplink?.focus();
-            console.log('Skiplink found');
+          //TODO skiplink kan ligge i shadowDom. Da kan vi ikke finne den med querySelector
+          // Denne modalen kan også eksistere i en shadowDom. ;-)
+          const skipLink: HTMLAnchorElement | null =
+            document.querySelector('a[data-skip-link]');
+          if (skipLink) {
+            skipLink?.focus();
           } else {
-            console.log('No skiplink found');
+            const prevTabIndex = document.body.tabIndex;
+            document.body.tabIndex = -1;
+            document.body.focus();
+            document.body.tabIndex = prevTabIndex;
           }
         }
       };

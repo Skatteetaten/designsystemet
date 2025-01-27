@@ -4,6 +4,7 @@ exports[`Tester/TopBanner/TopBannerSkipLink (intern) ClickSkipLink play-test 1`]
 <div data-test-block="true">
   <a href="main"
      class="_skipLink_1qmlj_1"
+     data-skip-link="ds-skip-link"
   >
     <span class="_skipLinkContent_1qmlj_21">
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
@@ -30,6 +31,7 @@ exports[`Tester/TopBanner/TopBannerSkipLink (intern) Defaults play-test 1`] = `
 <div data-test-block="true">
   <a href="main"
      class="_skipLink_1qmlj_1"
+     data-skip-link="ds-skip-link"
   >
     <span class="_skipLinkContent_1qmlj_21">
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
@@ -54,6 +56,7 @@ exports[`Tester/TopBanner/TopBannerSkipLink (intern) WithAttributes play-test 1`
      class="_skipLink_1qmlj_1 dummyClassname"
      lang="nb"
      data-testid="123ID"
+     data-skip-link="ds-skip-link"
   >
     <span class="_skipLinkContent_1qmlj_21">
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
@@ -75,6 +78,7 @@ exports[`Tester/TopBanner/TopBannerSkipLink (intern) WithRef play-test 1`] = `
 <div data-test-block="true">
   <a href="main"
      class="_skipLink_1qmlj_1"
+     data-skip-link="ds-skip-link"
      id="dummyIdForwardedFromRef"
   >
     <span class="_skipLinkContent_1qmlj_21">
@@ -104,6 +108,7 @@ exports[`Tester/TopBanner/TopBannerSkipLink (intern) WithTargetAndChildren play-
 <div data-test-block="true">
   <a href="#hovedinnhold"
      class="_skipLink_1qmlj_1"
+     data-skip-link="ds-skip-link"
   >
     <span class="_skipLinkContent_1qmlj_21">
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
