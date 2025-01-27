@@ -1,16 +1,8 @@
 export type FormattingResponse = {
-  /* Tallet som er utgangspunkt etter fjerning av ulovlige tegn.
-  Dette tallet er også utgangspunktet for telling av antall siffer slik at lengde på streng
-  er mindre en maksverdiene satt i maxLengths. */
-  parsed?: string;
   /* Formatert tall som brukes for visning.
   NB. value returnerer bindestrek som minustegn. Ikke unikode \u2212 som 
   Intl.NumberFormat returnerer */
   value: string;
-  /* Makslengde begrenser antall siffer for hvert enkelt format. Dette er en prop
-  som ikke MÅ eksponeres ut. Påvirker ikke number-formatet.
-  //TODO Returneres ikke enda. Kanskje ikke bruk for det */
-  maxLength?: number;
 };
 
 export type FormatTypes =
