@@ -7,7 +7,7 @@ exports[`Tester/Card/Card AllColors smoke-test 1`] = `
   >
     <div class="_cardContent_48t19_1 ">
       <div>
-        Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+        Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
       </div>
     </div>
   </div>
@@ -16,7 +16,7 @@ exports[`Tester/Card/Card AllColors smoke-test 1`] = `
   >
     <div class="_cardContent_48t19_1 ">
       <div>
-        Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+        Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
       </div>
     </div>
   </div>
@@ -25,7 +25,7 @@ exports[`Tester/Card/Card AllColors smoke-test 1`] = `
   >
     <div class="_cardContent_48t19_1 ">
       <div>
-        Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+        Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
       </div>
     </div>
   </div>
@@ -34,7 +34,7 @@ exports[`Tester/Card/Card AllColors smoke-test 1`] = `
   >
     <div class="_cardContent_48t19_1 ">
       <div>
-        Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+        Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
       </div>
     </div>
   </div>
@@ -43,7 +43,7 @@ exports[`Tester/Card/Card AllColors smoke-test 1`] = `
   >
     <div class="_cardContent_48t19_1 ">
       <div>
-        Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+        Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
       </div>
     </div>
   </div>
@@ -52,7 +52,7 @@ exports[`Tester/Card/Card AllColors smoke-test 1`] = `
   >
     <div class="_cardContent_48t19_1 ">
       <div>
-        Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+        Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
       </div>
     </div>
   </div>
@@ -64,7 +64,7 @@ exports[`Tester/Card/Card Defaults play-test 1`] = `
   <div class="_card_nrlm6_5"
        data-color="white"
   >
-    Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+    Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
   </div>
 </div>
 `;
@@ -75,7 +75,7 @@ exports[`Tester/Card/Card WithAriaLabelledBy play-test 1`] = `
            data-color="white"
            aria-labelledby="dummyId"
   >
-    Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+    Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
   </section>
 </div>
 `;
@@ -88,7 +88,7 @@ exports[`Tester/Card/Card WithAttributes play-test 1`] = `
        data-testid="123ID"
        data-color="white"
   >
-    Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+    Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
   </div>
 </div>
 `;
@@ -99,7 +99,7 @@ exports[`Tester/Card/Card WithRef play-test 1`] = `
        data-color="white"
        id="dummyIdForwardedFromRef"
   >
-    Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+    Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
   </div>
 </div>
 `;
