@@ -5,6 +5,7 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedBreakpointL play-test
   <header class="_topBanner_192u7_57 ">
     <a href="main"
        class="_skipLink_1qmlj_1 _skipLink_192u7_159"
+       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1qmlj_21">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
@@ -42,6 +43,7 @@ exports[`Tester/TopBanner/TopBannerInternal SkipLinkFocusedMobileScreen play-tes
   <header class="_topBanner_192u7_57 ">
     <a href="main"
        class="_skipLink_1qmlj_1 _skipLink_192u7_159"
+       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1qmlj_21">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
@@ -83,6 +85,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithAttributes play-test 1`] = `
   >
     <a href="main"
        class="_skipLink_1qmlj_1 _skipLink_192u7_159"
+       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1qmlj_21">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
@@ -120,6 +123,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
   <header class="_topBanner_192u7_57 ">
     <a href="main"
        class="_skipLink_1qmlj_1 _skipLink_192u7_159"
+       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1qmlj_21">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
@@ -229,6 +233,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomLogo smoke-test 1`] = `
   <header class="_topBanner_192u7_57 ">
     <a href="main"
        class="_skipLink_1qmlj_1 _skipLink_192u7_159"
+       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1qmlj_21">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
@@ -266,6 +271,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithCustomTheme smoke-test 1`] = `
   <header class="_topBanner_192u7_57 dummyCustomTheme">
     <a href="main"
        class="_skipLink_1qmlj_1 _skipLink_192u7_159"
+       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1qmlj_21">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
@@ -303,6 +309,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithDefaults play-test 1`] = `
   <header class="_topBanner_192u7_57 ">
     <a href="main"
        class="_skipLink_1qmlj_1 _skipLink_192u7_159"
+       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1qmlj_21">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
@@ -340,6 +347,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithDemoMode play-test 1`] = `
   <header class="_topBanner_192u7_57 ">
     <a href="main"
        class="_skipLink_1qmlj_1 _skipLink_192u7_159"
+       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1qmlj_21">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
@@ -382,6 +390,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLogoClick play-test 1`] = `
   <header class="_topBanner_192u7_57 ">
     <a href="main"
        class="_skipLink_1qmlj_1 _skipLink_192u7_159"
+       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1qmlj_21">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
@@ -419,6 +428,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleDescriptionMobile smoke
   <header class="_topBanner_192u7_57 ">
     <a href="main"
        class="_skipLink_1qmlj_1 _skipLink_192u7_159"
+       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1qmlj_21">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
@@ -480,6 +490,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithRef play-test 1`] = `
   >
     <a href="main"
        class="_skipLink_1qmlj_1 _skipLink_192u7_159"
+       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1qmlj_21">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
@@ -517,6 +528,7 @@ exports[`Tester/TopBanner/TopBannerInternal WithTitleDescriptionUser play-test 1
   <header class="_topBanner_192u7_57 ">
     <a href="main"
        class="_skipLink_1qmlj_1 _skipLink_192u7_159"
+       data-skip-link="ds-skip-link"
     >
       <span class="_skipLinkContent_1qmlj_21">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
