@@ -288,7 +288,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_1p8tz_9">
+              <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:rd:"
                          class="_input_1k24j_17"
@@ -342,7 +342,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -383,8 +383,8 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsList_1p8tz_20">
-                      <li class="_subUnit_1p8tz_20">
+                    <ul class="_subUnitsList_3mzou_26">
+                      <li class="_subUnit_3mzou_26">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -581,7 +581,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_1p8tz_15">
+              <div class="_showAllButtonWrapper_3mzou_21">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
@@ -752,7 +752,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                 Virksomheter
               </h2>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -945,7 +945,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_1p8tz_15">
+              <div class="_showAllButtonWrapper_3mzou_21">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
@@ -1282,7 +1282,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_1p8tz_9">
+              <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:r1b:"
                          class="_input_1k24j_17"
@@ -1336,7 +1336,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -1377,8 +1377,8 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsList_1p8tz_20">
-                      <li class="_subUnit_1p8tz_20">
+                    <ul class="_subUnitsList_3mzou_26">
+                      <li class="_subUnit_3mzou_26">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -1575,7 +1575,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_1p8tz_15">
+              <div class="_showAllButtonWrapper_3mzou_21">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
@@ -1746,7 +1746,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_1p8tz_9">
+              <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:r66:"
                          class="_input_1k24j_17"
@@ -1800,7 +1800,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -1841,8 +1841,8 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsList_1p8tz_20">
-                      <li class="_subUnit_1p8tz_20">
+                    <ul class="_subUnitsList_3mzou_26">
+                      <li class="_subUnit_3mzou_26">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -2039,7 +2039,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_1p8tz_15">
+              <div class="_showAllButtonWrapper_3mzou_21">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
@@ -2376,7 +2376,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_1p8tz_9">
+              <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:r5g:"
                          class="_input_1k24j_17"
@@ -2430,7 +2430,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -2471,8 +2471,8 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsList_1p8tz_20">
-                      <li class="_subUnit_1p8tz_20">
+                    <ul class="_subUnitsList_3mzou_26">
+                      <li class="_subUnit_3mzou_26">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -2669,7 +2669,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_1p8tz_15">
+              <div class="_showAllButtonWrapper_3mzou_21">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
@@ -3036,7 +3036,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_1p8tz_9">
+              <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:r91:"
                          class="_input_1k24j_17"
@@ -3090,7 +3090,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -3131,8 +3131,8 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsList_1p8tz_20">
-                      <li class="_subUnit_1p8tz_20">
+                    <ul class="_subUnitsList_3mzou_26">
+                      <li class="_subUnit_3mzou_26">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -3329,7 +3329,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_1p8tz_15">
+              <div class="_showAllButtonWrapper_3mzou_21">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
@@ -3528,7 +3528,7 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_1p8tz_9">
+              <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:rba:"
                          class="_input_1k24j_17"
@@ -3557,7 +3557,7 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -3598,8 +3598,8 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsList_1p8tz_20">
-                      <li class="_subUnit_1p8tz_20">
+                    <ul class="_subUnitsList_3mzou_26">
+                      <li class="_subUnit_3mzou_26">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -3640,7 +3640,7 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
                           </div>
                         </div>
                       </li>
-                      <li class="_subUnit_1p8tz_20">
+                      <li class="_subUnit_3mzou_26">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -3810,7 +3810,7 @@ exports[`Tester/RolePicker WithNoSubunits play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_1p8tz_9">
+              <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:rbn:"
                          class="_input_1k24j_17"
@@ -3838,7 +3838,7 @@ exports[`Tester/RolePicker WithNoSubunits play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -4040,7 +4040,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_1p8tz_9">
+              <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:r7c:"
                          class="_input_1k24j_17"
@@ -4094,7 +4094,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -4135,8 +4135,8 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsList_1p8tz_20">
-                      <li class="_subUnit_1p8tz_20">
+                    <ul class="_subUnitsList_3mzou_26">
+                      <li class="_subUnit_3mzou_26">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -4333,7 +4333,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_1p8tz_15">
+              <div class="_showAllButtonWrapper_3mzou_21">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
@@ -5031,7 +5031,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_1p8tz_9">
+              <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:r39:"
                          class="_input_1k24j_17"
@@ -5085,7 +5085,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -5126,8 +5126,8 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsList_1p8tz_20">
-                      <li class="_subUnit_1p8tz_20">
+                    <ul class="_subUnitsList_3mzou_26">
+                      <li class="_subUnit_3mzou_26">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -5678,7 +5678,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_1p8tz_9">
+              <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:r1v:"
                          class="_input_1k24j_17"
@@ -5732,7 +5732,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -6515,7 +6515,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_1p8tz_9">
+              <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:ra5:"
                          class="_input_1k24j_17"
@@ -6569,7 +6569,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -6610,8 +6610,8 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsList_1p8tz_20">
-                      <li class="_subUnit_1p8tz_20">
+                    <ul class="_subUnitsList_3mzou_26">
+                      <li class="_subUnit_3mzou_26">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -6808,7 +6808,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_1p8tz_15">
+              <div class="_showAllButtonWrapper_3mzou_21">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
@@ -7125,7 +7125,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_1p8tz_9">
+              <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:r4i:"
                          class="_input_1k24j_17"
@@ -7179,7 +7179,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -7220,8 +7220,8 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsList_1p8tz_20">
-                      <li class="_subUnit_1p8tz_20">
+                    <ul class="_subUnitsList_3mzou_26">
+                      <li class="_subUnit_3mzou_26">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -7418,7 +7418,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_1p8tz_15">
+              <div class="_showAllButtonWrapper_3mzou_21">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
@@ -7672,7 +7672,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_1p8tz_9">
+              <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:r87:"
                          class="_input_1k24j_17"
@@ -7725,7 +7725,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
