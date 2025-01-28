@@ -7,6 +7,7 @@ import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
 import { WarningOutlineIcon } from '@skatteetaten/ds-icons';
+import { TopBannerExternal } from '@skatteetaten/ds-layout';
 import { Modal } from '@skatteetaten/ds-overlays';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
@@ -560,9 +561,10 @@ const TemplateWithAutoOpen: StoryFn<typeof Modal> = (args) => {
   };
   return (
     <>
+      <TopBannerExternal />
       <Paragraph
         hasSpacing
-      >{`Denne testen skal sjekke om fokus blir satt på BODY-elementet når modalen lukkes. 
+      >{`Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes. 
         Testes ved å reloade siden. Det er ved programatisk åpning av modalen at fokus tidligere ikke har blitt satt korrekt.`}</Paragraph>
       <Modal {...args} ref={ref}>
         <Paragraph hasSpacing>
@@ -596,12 +598,9 @@ export const AutoOpen = {
     },
   ],
   render: TemplateWithAutoOpen,
-  name: 'With AutoOpen',
+  name: 'With Auto Open Close ',
   args: {
     variant: 'plain',
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -612,9 +611,9 @@ export const AutoOpen = {
       name: 'Avbryt',
     });
     await userEvent.click(button);
-    const body = document.body;
+    const skiplink = document.querySelector('a[data-skip-link]');
     await waitFor(() => {
-      expect(body).toHaveFocus();
+      expect(skiplink).toHaveFocus();
     });
     const closedmodal = await canvas.findByRole('dialog', { hidden: true });
     await expect(closedmodal).not.toBeVisible();
@@ -628,10 +627,11 @@ const TemplateAutoOpenAndCloseOnEscape: StoryFn<typeof Modal> = (args) => {
   }, []);
   return (
     <>
+      <TopBannerExternal />
       <Paragraph
         hasSpacing
-      >{`Denne testen skal sjekke om fokus blir satt på BODY-elementet når modalen lukkes etter at bruker har trykket på Escape-knappen. 
-        Modalen åpnes ved å laste siden på nytt.`}</Paragraph>
+      >{`Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes etter at bruker har trykket på Escape-knappen. 
+        Modalen åpnes ved å laste siden på nytt. `}</Paragraph>
       <Modal {...args} ref={ref}>
         <Paragraph hasSpacing>{'Modalinnhold'}</Paragraph>
       </Modal>
@@ -640,13 +640,6 @@ const TemplateAutoOpenAndCloseOnEscape: StoryFn<typeof Modal> = (args) => {
 };
 
 export const AutoOpenAndCloseOnEscape = {
-  decorators: [
-    (Story): JSX.Element => {
-      const body = document.body;
-      body.classList.add('bodyFocus');
-      return <Story />;
-    },
-  ],
   render: TemplateAutoOpenAndCloseOnEscape,
   name: 'With Auto Open and Close on Escape',
   args: {
@@ -654,7 +647,7 @@ export const AutoOpenAndCloseOnEscape = {
     dismissOnEsc: true,
   },
   argTypes: {
-    variant: { table: { disable: false } },
+    dismissOnEsc: { table: { disable: false } },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
