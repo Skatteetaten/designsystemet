@@ -44,7 +44,7 @@ export const Formatters: StoryObj = {
     return (
       <>
         <TextField
-          label={'Fødselsnummer (nationalIdentityNumber)'}
+          label={'Fødselsnummer (11 siffer)'}
           value={nationalidentitynumberValue}
           className={'textField300'}
           onChange={(e) =>
@@ -58,7 +58,7 @@ export const Formatters: StoryObj = {
         />
 
         <TextField
-          label={'Organisasjonsnummer (organisationNumber)'}
+          label={'Organisasjonsnummer (9 siffer)'}
           value={organisationNumberValue}
           className={'textField300'}
           onChange={(e) =>
@@ -72,7 +72,7 @@ export const Formatters: StoryObj = {
         />
 
         <TextField
-          label={'Kontonummer (bankAccountNumber)'}
+          label={'Kontonummer'}
           value={bankAccountNumberValue}
           className={'textField300'}
           onChange={(e) =>
