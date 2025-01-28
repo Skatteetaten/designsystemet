@@ -79,7 +79,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
             <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               Du kan representere
               <strong>
-                4 personer og 12 virksomheter
+                4 personer og 16 virksomheter.
               </strong>
             </p>
             <div class="_topContainer_1egyv_12">
@@ -288,7 +288,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_1p8tz_9">
+              <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:rd:"
                          class="_input_1k24j_17"
@@ -342,7 +342,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -383,8 +383,8 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsList_1p8tz_20">
-                      <li class="_subUnit_1p8tz_20">
+                    <ul class="_subUnitsList_3mzou_26">
+                      <li class="_subUnit_3mzou_26">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -399,9 +399,9 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                                 <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
                                 </path>
                               </svg>
-                              <h3 class="_title_1xek8_24  undefined">
+                              <h4 class="_title_1xek8_24  undefined">
                                 Google AS
-                              </h3>
+                              </h4>
                               <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
                                    viewbox="0 0 24 24"
                                    focusable="false"
@@ -581,12 +581,12 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_1p8tz_15">
+              <div class="_showAllButtonWrapper_3mzou_21">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
                   <span class="_buttonText_6ybyo_69">
-                    Vis alle virksomheter (9)
+                    Vis alle virksomheter (12)
                   </span>
                 </button>
               </div>
@@ -636,7 +636,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5  _container_90jan_17"
-          aria-labelledby="modalHeadingId-:ra2:"
+          aria-labelledby="modalHeadingId-:rai:"
   >
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
@@ -647,11 +647,11 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:ra3:"
+             aria-labelledby="svgtitle-:raj:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:ra3:">
+          <title id="svgtitle-:raj:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -659,7 +659,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:ra2:"
+        <h1 id="modalHeadingId-:rai:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Hvem ønsker du å representere?
@@ -752,7 +752,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                 Virksomheter
               </h2>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -945,7 +945,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_1p8tz_15">
+              <div class="_showAllButtonWrapper_3mzou_21">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
@@ -1073,7 +1073,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
             <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               Du kan representere
               <strong>
-                4 personer og 12 virksomheter
+                4 personer og 16 virksomheter.
               </strong>
             </p>
             <div class="_topContainer_1egyv_12">
@@ -1282,7 +1282,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_1p8tz_9">
+              <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:r1b:"
                          class="_input_1k24j_17"
@@ -1336,7 +1336,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -1377,8 +1377,8 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsList_1p8tz_20">
-                      <li class="_subUnit_1p8tz_20">
+                    <ul class="_subUnitsList_3mzou_26">
+                      <li class="_subUnit_3mzou_26">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -1393,9 +1393,9 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                                 <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
                                 </path>
                               </svg>
-                              <h3 class="_title_1xek8_24  undefined">
+                              <h4 class="_title_1xek8_24  undefined">
                                 Google AS
-                              </h3>
+                              </h4>
                               <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
                                    viewbox="0 0 24 24"
                                    focusable="false"
@@ -1575,12 +1575,12 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_1p8tz_15">
+              <div class="_showAllButtonWrapper_3mzou_21">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
                   <span class="_buttonText_6ybyo_69">
-                    Vis alle virksomheter (9)
+                    Vis alle virksomheter (12)
                   </span>
                 </button>
               </div>
@@ -1630,7 +1630,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5  _container_90jan_17"
-          aria-labelledby="modalHeadingId-:r5h:"
+          aria-labelledby="modalHeadingId-:r61:"
           open
   >
     <div tabindex="-1"
@@ -1642,11 +1642,11 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r5i:"
+             aria-labelledby="svgtitle-:r62:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r5i:">
+          <title id="svgtitle-:r62:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -1654,7 +1654,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:r5h:"
+        <h1 id="modalHeadingId-:r61:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Hvem ønsker du å representere?
@@ -1700,7 +1700,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
             <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               Du kan representere
               <strong>
-                12 virksomheter.
+                16 virksomheter.
               </strong>
             </p>
             <div class="_topContainer_1egyv_12">
@@ -1746,14 +1746,14 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_1p8tz_9">
+              <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
-                  <input id="checkboxInputId-:r5m:"
+                  <input id="checkboxInputId-:r66:"
                          class="_input_1k24j_17"
                          type="checkbox"
                          value
                   >
-                  <label for="checkboxInputId-:r5m:"
+                  <label for="checkboxInputId-:r66:"
                          class="_label_1k24j_29  "
                   >
                     <span class="_labelCheckbox_1k24j_40 ">
@@ -1766,20 +1766,20 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                       </span>
                     </span>
                   </label>
-                  <div id="checkboxErrorId-:r5n:"
+                  <div id="checkboxErrorId-:r67:"
                        aria-live="assertive"
                        aria-atomic="true"
                   >
                   </div>
                 </div>
                 <div class="_container_1k24j_5  ">
-                  <input id="checkboxInputId-:r5o:"
+                  <input id="checkboxInputId-:r68:"
                          class="_input_1k24j_17"
                          type="checkbox"
                          value
                          checked
                   >
-                  <label for="checkboxInputId-:r5o:"
+                  <label for="checkboxInputId-:r68:"
                          class="_label_1k24j_29  "
                   >
                     <span class="_labelCheckbox_1k24j_40 ">
@@ -1792,7 +1792,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                       </span>
                     </span>
                   </label>
-                  <div id="checkboxErrorId-:r5p:"
+                  <div id="checkboxErrorId-:r69:"
                        aria-live="assertive"
                        aria-atomic="true"
                   >
@@ -1800,7 +1800,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -1841,8 +1841,8 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsList_1p8tz_20">
-                      <li class="_subUnit_1p8tz_20">
+                    <ul class="_subUnitsList_3mzou_26">
+                      <li class="_subUnit_3mzou_26">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -1857,9 +1857,9 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                                 <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
                                 </path>
                               </svg>
-                              <h3 class="_title_1xek8_24  undefined">
+                              <h4 class="_title_1xek8_24  undefined">
                                 Google AS
-                              </h3>
+                              </h4>
                               <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
                                    viewbox="0 0 24 24"
                                    focusable="false"
@@ -2039,12 +2039,12 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_1p8tz_15">
+              <div class="_showAllButtonWrapper_3mzou_21">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
                   <span class="_buttonText_6ybyo_69">
-                    Vis alle virksomheter (9)
+                    Vis alle virksomheter (12)
                   </span>
                 </button>
               </div>
@@ -2097,7 +2097,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5  _container_90jan_17"
-          aria-labelledby="modalHeadingId-:r4j:"
+          aria-labelledby="modalHeadingId-:r53:"
           open
   >
     <div tabindex="-1"
@@ -2109,11 +2109,11 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r4k:"
+             aria-labelledby="svgtitle-:r54:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r4k:">
+          <title id="svgtitle-:r54:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -2121,7 +2121,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:r4j:"
+        <h1 id="modalHeadingId-:r53:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Custom title
@@ -2167,7 +2167,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
             <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               Du kan representere
               <strong>
-                4 personer og 12 virksomheter
+                4 personer og 16 virksomheter.
               </strong>
             </p>
             <div class="_topContainer_1egyv_12">
@@ -2376,14 +2376,14 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_1p8tz_9">
+              <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
-                  <input id="checkboxInputId-:r50:"
+                  <input id="checkboxInputId-:r5g:"
                          class="_input_1k24j_17"
                          type="checkbox"
                          value
                   >
-                  <label for="checkboxInputId-:r50:"
+                  <label for="checkboxInputId-:r5g:"
                          class="_label_1k24j_29  "
                   >
                     <span class="_labelCheckbox_1k24j_40 ">
@@ -2396,20 +2396,20 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                       </span>
                     </span>
                   </label>
-                  <div id="checkboxErrorId-:r51:"
+                  <div id="checkboxErrorId-:r5h:"
                        aria-live="assertive"
                        aria-atomic="true"
                   >
                   </div>
                 </div>
                 <div class="_container_1k24j_5  ">
-                  <input id="checkboxInputId-:r52:"
+                  <input id="checkboxInputId-:r5i:"
                          class="_input_1k24j_17"
                          type="checkbox"
                          value
                          checked
                   >
-                  <label for="checkboxInputId-:r52:"
+                  <label for="checkboxInputId-:r5i:"
                          class="_label_1k24j_29  "
                   >
                     <span class="_labelCheckbox_1k24j_40 ">
@@ -2422,7 +2422,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                       </span>
                     </span>
                   </label>
-                  <div id="checkboxErrorId-:r53:"
+                  <div id="checkboxErrorId-:r5j:"
                        aria-live="assertive"
                        aria-atomic="true"
                   >
@@ -2430,7 +2430,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -2471,8 +2471,8 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsList_1p8tz_20">
-                      <li class="_subUnit_1p8tz_20">
+                    <ul class="_subUnitsList_3mzou_26">
+                      <li class="_subUnit_3mzou_26">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -2487,9 +2487,9 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                                 <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
                                 </path>
                               </svg>
-                              <h3 class="_title_1xek8_24  undefined">
+                              <h4 class="_title_1xek8_24  undefined">
                                 Google AS
-                              </h3>
+                              </h4>
                               <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
                                    viewbox="0 0 24 24"
                                    focusable="false"
@@ -2669,12 +2669,12 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_1p8tz_15">
+              <div class="_showAllButtonWrapper_3mzou_21">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
                   <span class="_buttonText_6ybyo_69">
-                    Vis alle virksomheter (9)
+                    Vis alle virksomheter (12)
                   </span>
                 </button>
               </div>
@@ -2724,7 +2724,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5  _container_90jan_17"
-          aria-labelledby="modalHeadingId-:r80:"
+          aria-labelledby="modalHeadingId-:r8g:"
           open
   >
     <div tabindex="-1"
@@ -2736,11 +2736,11 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r81:"
+             aria-labelledby="svgtitle-:r8h:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r81:">
+          <title id="svgtitle-:r8h:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -2748,7 +2748,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:r80:"
+        <h1 id="modalHeadingId-:r8g:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Hvem ønsker du å representere?
@@ -2810,11 +2810,11 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                     <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                          viewbox="0 0 24 24"
                          focusable="false"
-                         aria-labelledby="svgtitle-:r91:"
+                         aria-labelledby="svgtitle-:r9h:"
                          aria-hidden="false"
                          role="img"
                     >
-                      <title id="svgtitle-:r91:">
+                      <title id="svgtitle-:r9h:">
                         Lukk melding
                       </title>
                       <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -2827,7 +2827,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
             <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               Du kan representere
               <strong>
-                4 personer og 12 virksomheter
+                4 personer og 16 virksomheter.
               </strong>
             </p>
             <div class="_topContainer_1egyv_12">
@@ -3036,14 +3036,14 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_1p8tz_9">
+              <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
-                  <input id="checkboxInputId-:r8d:"
+                  <input id="checkboxInputId-:r8t:"
                          class="_input_1k24j_17"
                          type="checkbox"
                          value
                   >
-                  <label for="checkboxInputId-:r8d:"
+                  <label for="checkboxInputId-:r8t:"
                          class="_label_1k24j_29  "
                   >
                     <span class="_labelCheckbox_1k24j_40 ">
@@ -3056,20 +3056,20 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                       </span>
                     </span>
                   </label>
-                  <div id="checkboxErrorId-:r8e:"
+                  <div id="checkboxErrorId-:r8u:"
                        aria-live="assertive"
                        aria-atomic="true"
                   >
                   </div>
                 </div>
                 <div class="_container_1k24j_5  ">
-                  <input id="checkboxInputId-:r8f:"
+                  <input id="checkboxInputId-:r8v:"
                          class="_input_1k24j_17"
                          type="checkbox"
                          value
                          checked
                   >
-                  <label for="checkboxInputId-:r8f:"
+                  <label for="checkboxInputId-:r8v:"
                          class="_label_1k24j_29  "
                   >
                     <span class="_labelCheckbox_1k24j_40 ">
@@ -3082,7 +3082,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                       </span>
                     </span>
                   </label>
-                  <div id="checkboxErrorId-:r8g:"
+                  <div id="checkboxErrorId-:r90:"
                        aria-live="assertive"
                        aria-atomic="true"
                   >
@@ -3090,7 +3090,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -3131,8 +3131,8 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsList_1p8tz_20">
-                      <li class="_subUnit_1p8tz_20">
+                    <ul class="_subUnitsList_3mzou_26">
+                      <li class="_subUnit_3mzou_26">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -3147,9 +3147,9 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                                 <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
                                 </path>
                               </svg>
-                              <h3 class="_title_1xek8_24  undefined">
+                              <h4 class="_title_1xek8_24  undefined">
                                 Google AS
-                              </h3>
+                              </h4>
                               <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
                                    viewbox="0 0 24 24"
                                    focusable="false"
@@ -3329,12 +3329,12 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_1p8tz_15">
+              <div class="_showAllButtonWrapper_3mzou_21">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
                   <span class="_buttonText_6ybyo_69">
-                    Vis alle virksomheter (9)
+                    Vis alle virksomheter (12)
                   </span>
                 </button>
               </div>
@@ -3384,7 +3384,7 @@ exports[`Tester/RolePicker WithNoBusinesses play-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5  _container_90jan_17"
-          aria-labelledby="modalHeadingId-:r92:"
+          aria-labelledby="modalHeadingId-:r9i:"
           open
   >
     <div tabindex="-1"
@@ -3396,11 +3396,11 @@ exports[`Tester/RolePicker WithNoBusinesses play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r93:"
+             aria-labelledby="svgtitle-:r9j:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r93:">
+          <title id="svgtitle-:r9j:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -3408,7 +3408,7 @@ exports[`Tester/RolePicker WithNoBusinesses play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:r92:"
+        <h1 id="modalHeadingId-:r9i:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Du kan ikke bruke dette skjemaet
@@ -3439,7 +3439,7 @@ exports[`Tester/RolePicker WithNoBusinesses play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
+exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
 <div data-test-block="true">
   <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
           type="button"
@@ -3449,7 +3449,8 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5  _container_90jan_17"
-          aria-labelledby="modalHeadingId-:r6l:"
+          aria-labelledby="modalHeadingId-:rb2:"
+          open
   >
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
@@ -3460,11 +3461,11 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r6m:"
+             aria-labelledby="svgtitle-:rb3:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r6m:">
+          <title id="svgtitle-:rb3:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -3472,17 +3473,528 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:r6l:"
+        <h1 id="modalHeadingId-:rb2:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Hvem ønsker du å representere?
         </h1>
         <div>
           <div class="_rolePicker_90jan_5">
+            <div>
+              <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
+                 href="#"
+              >
+                <div class="_header_1xek8_19">
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35Z">
+                    </path>
+                  </svg>
+                  <h2 class="_title_1xek8_24  undefined">
+                    Meg selv
+                  </h2>
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
+                  101010 12345
+                </div>
+              </a>
+              <div aria-live="polite"
+                   aria-atomic="true"
+              >
+              </div>
+            </div>
             <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               Du kan representere
               <strong>
-                12 virksomheter.
+                3 virksomheter.
+              </strong>
+            </p>
+            <div>
+              <h2 id="businessesHeadingId"
+                  class="_heading_12p5o_1 _heading_level3_12p5o_34  "
+              >
+                Virksomheter
+              </h2>
+              <div class="_checkboxGroup_3mzou_9">
+                <div class="_container_1k24j_5  ">
+                  <input id="checkboxInputId-:rb6:"
+                         class="_input_1k24j_17"
+                         type="checkbox"
+                         value
+                         checked
+                  >
+                  <label for="checkboxInputId-:rb6:"
+                         class="_label_1k24j_29  "
+                  >
+                    <span class="_labelCheckbox_1k24j_40 ">
+                      <span class="_labelCheckboxCheck_1k24j_50">
+                      </span>
+                    </span>
+                    <span class="_labelContent_1k24j_63 ">
+                      <span class>
+                        Vis underenheter
+                      </span>
+                    </span>
+                  </label>
+                  <div id="checkboxErrorId-:rb7:"
+                       aria-live="assertive"
+                       aria-atomic="true"
+                  >
+                  </div>
+                </div>
+              </div>
+              <nav aria-labelledby="businessesHeadingId">
+                <ul class="_businessList_3mzou_1">
+                  <li>
+                    <div>
+                      <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
+                         href="#"
+                      >
+                        <div class="_header_1xek8_19">
+                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M20.89 8.51v9.99c0 .55-.45 1-1 1H4.66c0 1.1.89 1.5 2 1.5h14c.91 0 1.73-.53 1.73-1.5v-9c0-1.02-.51-1.87-1.5-1.99 M9 1.5h4c1.1 0 2 .9 2 2v2h3c1.1 0 2 .9 2 2v9c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2v-9c0-1.11.89-2 2-2h3v-2c0-1.11.89-2 2-2m4 4v-2H9v2z">
+                            </path>
+                          </svg>
+                          <h3 class="_title_1xek8_24  undefined">
+                            Samsung AS
+                          </h3>
+                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
+                          Org. nr: 312943218
+                          <em>
+                            (Hovedenhet)
+                          </em>
+                        </div>
+                      </a>
+                      <div aria-live="polite"
+                           aria-atomic="true"
+                      >
+                      </div>
+                    </div>
+                    <ul class="_subUnitsList_3mzou_26">
+                      <li class="_subUnit_3mzou_26">
+                        <div>
+                          <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
+                             href="#"
+                          >
+                            <div class="_header_1xek8_19">
+                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                                   viewbox="0 0 24 24"
+                                   focusable="false"
+                                   aria-hidden="true"
+                                   role="img"
+                              >
+                                <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+                                </path>
+                              </svg>
+                              <h4 class="_title_1xek8_24  undefined">
+                                Snapchat AS
+                              </h4>
+                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                                   viewbox="0 0 24 24"
+                                   focusable="false"
+                                   aria-hidden="true"
+                                   role="img"
+                              >
+                                <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                                </path>
+                              </svg>
+                            </div>
+                            <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
+                              Org. nr: 123456623
+                              <em>
+                                (Underenhet)
+                              </em>
+                            </div>
+                          </a>
+                          <div aria-live="polite"
+                               aria-atomic="true"
+                          >
+                          </div>
+                        </div>
+                      </li>
+                      <li class="_subUnit_3mzou_26">
+                        <div>
+                          <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
+                             href="#"
+                          >
+                            <div class="_header_1xek8_19">
+                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                                   viewbox="0 0 24 24"
+                                   focusable="false"
+                                   aria-hidden="true"
+                                   role="img"
+                              >
+                                <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+                                </path>
+                              </svg>
+                              <h4 class="_title_1xek8_24  undefined">
+                                Statoil AS
+                              </h4>
+                              <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                                   viewbox="0 0 24 24"
+                                   focusable="false"
+                                   aria-hidden="true"
+                                   role="img"
+                              >
+                                <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                                </path>
+                              </svg>
+                            </div>
+                            <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
+                              Org. nr: 312849218
+                              <em>
+                                (Underenhet)
+                              </em>
+                            </div>
+                          </a>
+                          <div aria-live="polite"
+                               aria-atomic="true"
+                          >
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="_rolePickerFooter_90jan_11">
+            <button class="_button_6ybyo_1 _button_secondary_6ybyo_1 _button_withIcon_6ybyo_47  "
+                    type="button"
+            >
+              <span class="_iconWrapper_6ybyo_25">
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="M14.08 15.59L16.67 13H7V11H16.67L14.08 8.41L15.5 7L20.5 12L15.5 17L14.08 15.59ZM19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V9.67L19 7.67V5H5V19H19V16.33L21 14.33V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C3.89 21 3 20.1 3 19V5C3 3.89 3.89 3 5 3H19Z">
+                  </path>
+                </svg>
+              </span>
+              <span class="_buttonText_6ybyo_69">
+                Logg ut
+              </span>
+            </button>
+            <button class="_button_6ybyo_1 _button_secondary_6ybyo_1   "
+                    type="button"
+            >
+              <span class="_buttonText_6ybyo_69">
+                Avbryt
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+</div>
+`;
+
+exports[`Tester/RolePicker WithNoSubunits play-test 1`] = `
+<div data-test-block="true">
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+          type="button"
+  >
+    <span class="_buttonText_6ybyo_69">
+      Vis representasjonsvelger
+    </span>
+  </button>
+  <dialog class="_modal_125nh_5  _container_90jan_17"
+          aria-labelledby="modalHeadingId-:rbf:"
+          open
+  >
+    <div tabindex="-1"
+         class="_modalContainer_125nh_23"
+    >
+      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+              type="button"
+      >
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:rbg:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:rbg:">
+            Lukk dialogvindu
+          </title>
+          <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+          </path>
+        </svg>
+      </button>
+      <div class="_modalPaddingL_125nh_51">
+        <h1 id="modalHeadingId-:rbf:"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+        >
+          Hvem ønsker du å representere?
+        </h1>
+        <div>
+          <div class="_rolePicker_90jan_5">
+            <div>
+              <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
+                 href="#"
+              >
+                <div class="_header_1xek8_19">
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35Z">
+                    </path>
+                  </svg>
+                  <h2 class="_title_1xek8_24  undefined">
+                    Meg selv
+                  </h2>
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
+                  101010 12345
+                </div>
+              </a>
+              <div aria-live="polite"
+                   aria-atomic="true"
+              >
+              </div>
+            </div>
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+              Du kan representere
+              <strong>
+                2 virksomheter.
+              </strong>
+            </p>
+            <div>
+              <h2 id="businessesHeadingId"
+                  class="_heading_12p5o_1 _heading_level3_12p5o_34  "
+              >
+                Virksomheter
+              </h2>
+              <div class="_checkboxGroup_3mzou_9">
+                <div class="_container_1k24j_5  ">
+                  <input id="checkboxInputId-:rbj:"
+                         class="_input_1k24j_17"
+                         type="checkbox"
+                         value
+                  >
+                  <label for="checkboxInputId-:rbj:"
+                         class="_label_1k24j_29  "
+                  >
+                    <span class="_labelCheckbox_1k24j_40 ">
+                      <span class="_labelCheckboxCheck_1k24j_50">
+                      </span>
+                    </span>
+                    <span class="_labelContent_1k24j_63 ">
+                      <span class>
+                        Vis avviklede virksomheter
+                      </span>
+                    </span>
+                  </label>
+                  <div id="checkboxErrorId-:rbk:"
+                       aria-live="assertive"
+                       aria-atomic="true"
+                  >
+                  </div>
+                </div>
+              </div>
+              <nav aria-labelledby="businessesHeadingId">
+                <ul class="_businessList_3mzou_1">
+                  <li>
+                    <div>
+                      <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
+                         href="#"
+                      >
+                        <div class="_header_1xek8_19">
+                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+                            </path>
+                          </svg>
+                          <h3 class="_title_1xek8_24  undefined">
+                            Samsung AS
+                          </h3>
+                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
+                          Org. nr: 312943218
+                        </div>
+                      </a>
+                      <div aria-live="polite"
+                           aria-atomic="true"
+                      >
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="_rolePickerFooter_90jan_11">
+            <button class="_button_6ybyo_1 _button_secondary_6ybyo_1 _button_withIcon_6ybyo_47  "
+                    type="button"
+            >
+              <span class="_iconWrapper_6ybyo_25">
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_6ybyo_25"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="M14.08 15.59L16.67 13H7V11H16.67L14.08 8.41L15.5 7L20.5 12L15.5 17L14.08 15.59ZM19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V9.67L19 7.67V5H5V19H19V16.33L21 14.33V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C3.89 21 3 20.1 3 19V5C3 3.89 3.89 3 5 3H19Z">
+                  </path>
+                </svg>
+              </span>
+              <span class="_buttonText_6ybyo_69">
+                Logg ut
+              </span>
+            </button>
+            <button class="_button_6ybyo_1 _button_secondary_6ybyo_1   "
+                    type="button"
+            >
+              <span class="_buttonText_6ybyo_69">
+                Avbryt
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+</div>
+`;
+
+exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   "
+          type="button"
+  >
+    <span class="_buttonText_6ybyo_69">
+      Vis representasjonsvelger
+    </span>
+  </button>
+  <dialog class="_modal_125nh_5  _container_90jan_17"
+          aria-labelledby="modalHeadingId-:r77:"
+  >
+    <div tabindex="-1"
+         class="_modalContainer_125nh_23"
+    >
+      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+              type="button"
+      >
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r78:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r78:">
+            Lukk dialogvindu
+          </title>
+          <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+          </path>
+        </svg>
+      </button>
+      <div class="_modalPaddingL_125nh_51">
+        <h1 id="modalHeadingId-:r77:"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+        >
+          Hvem ønsker du å representere?
+        </h1>
+        <div>
+          <div class="_rolePicker_90jan_5">
+            <div>
+              <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
+                 href="#"
+              >
+                <div class="_header_1xek8_19">
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35Z">
+                    </path>
+                  </svg>
+                  <h2 class="_title_1xek8_24  undefined">
+                    Meg selv
+                  </h2>
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
+                  101010 12345
+                </div>
+              </a>
+              <div aria-live="polite"
+                   aria-atomic="true"
+              >
+              </div>
+            </div>
+            <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
+              Du kan representere
+              <strong>
+                16 virksomheter.
               </strong>
             </p>
             <div class="_topContainer_1egyv_12">
@@ -3528,14 +4040,14 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_1p8tz_9">
+              <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
-                  <input id="checkboxInputId-:r6o:"
+                  <input id="checkboxInputId-:r7c:"
                          class="_input_1k24j_17"
                          type="checkbox"
                          value
                   >
-                  <label for="checkboxInputId-:r6o:"
+                  <label for="checkboxInputId-:r7c:"
                          class="_label_1k24j_29  "
                   >
                     <span class="_labelCheckbox_1k24j_40 ">
@@ -3548,20 +4060,20 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                       </span>
                     </span>
                   </label>
-                  <div id="checkboxErrorId-:r6p:"
+                  <div id="checkboxErrorId-:r7d:"
                        aria-live="assertive"
                        aria-atomic="true"
                   >
                   </div>
                 </div>
                 <div class="_container_1k24j_5  ">
-                  <input id="checkboxInputId-:r6q:"
+                  <input id="checkboxInputId-:r7e:"
                          class="_input_1k24j_17"
                          type="checkbox"
                          value
                          checked
                   >
-                  <label for="checkboxInputId-:r6q:"
+                  <label for="checkboxInputId-:r7e:"
                          class="_label_1k24j_29  "
                   >
                     <span class="_labelCheckbox_1k24j_40 ">
@@ -3574,7 +4086,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                       </span>
                     </span>
                   </label>
-                  <div id="checkboxErrorId-:r6r:"
+                  <div id="checkboxErrorId-:r7f:"
                        aria-live="assertive"
                        aria-atomic="true"
                   >
@@ -3582,7 +4094,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -3623,8 +4135,8 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsList_1p8tz_20">
-                      <li class="_subUnit_1p8tz_20">
+                    <ul class="_subUnitsList_3mzou_26">
+                      <li class="_subUnit_3mzou_26">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -3639,9 +4151,9 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                                 <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
                                 </path>
                               </svg>
-                              <h3 class="_title_1xek8_24  undefined">
+                              <h4 class="_title_1xek8_24  undefined">
                                 Google AS
-                              </h3>
+                              </h4>
                               <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
                                    viewbox="0 0 24 24"
                                    focusable="false"
@@ -3821,12 +4333,12 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_1p8tz_15">
+              <div class="_showAllButtonWrapper_3mzou_21">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
                   <span class="_buttonText_6ybyo_69">
-                    Vis alle virksomheter (9)
+                    Vis alle virksomheter (12)
                   </span>
                 </button>
               </div>
@@ -3876,7 +4388,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5  _container_90jan_17"
-          aria-labelledby="modalHeadingId-:r67:"
+          aria-labelledby="modalHeadingId-:r6n:"
   >
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
@@ -3887,11 +4399,11 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r68:"
+             aria-labelledby="svgtitle-:r6o:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r68:">
+          <title id="svgtitle-:r6o:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -3899,13 +4411,49 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:r67:"
+        <h1 id="modalHeadingId-:r6n:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Hvem ønsker du å representere?
         </h1>
         <div>
           <div class="_rolePicker_90jan_5">
+            <div>
+              <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
+                 href="#"
+              >
+                <div class="_header_1xek8_19">
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35Z">
+                    </path>
+                  </svg>
+                  <h2 class="_title_1xek8_24  undefined">
+                    Meg selv
+                  </h2>
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
+                  101010 12345
+                </div>
+              </a>
+              <div aria-live="polite"
+                   aria-atomic="true"
+              >
+              </div>
+            </div>
             <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               Du kan representere
               <strong>
@@ -3957,6 +4505,44 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
               </h2>
               <nav aria-labelledby="otherPeopleHeadingId">
                 <ul class="_peopleList_zlix8_1">
+                  <li>
+                    <div>
+                      <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
+                         href="#"
+                      >
+                        <div class="_header_1xek8_19">
+                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
+                            </path>
+                          </svg>
+                          <h3 class="_title_1xek8_24  undefined">
+                            Frisk Elefant
+                          </h3>
+                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
+                          Fødsels-/D-nummer 100908 12345
+                        </div>
+                      </a>
+                      <div aria-live="polite"
+                           aria-atomic="true"
+                      >
+                      </div>
+                    </div>
+                  </li>
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -4109,44 +4695,6 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                       </div>
                     </div>
                   </li>
-                  <li>
-                    <div>
-                      <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
-                         href="#"
-                      >
-                        <div class="_header_1xek8_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
-                               viewbox="0 0 24 24"
-                               focusable="false"
-                               aria-hidden="true"
-                               role="img"
-                          >
-                            <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">
-                            </path>
-                          </svg>
-                          <h3 class="_title_1xek8_24  undefined">
-                            Kari Nordmann
-                          </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
-                               viewbox="0 0 24 24"
-                               focusable="false"
-                               aria-hidden="true"
-                               role="img"
-                          >
-                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
-                            </path>
-                          </svg>
-                        </div>
-                        <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
-                          Fødsels-/D-nummer 101010 54321
-                        </div>
-                      </a>
-                      <div aria-live="polite"
-                           aria-atomic="true"
-                      >
-                      </div>
-                    </div>
-                  </li>
                 </ul>
               </nav>
               <div class="_showAllButtonWrapper_zlix8_9">
@@ -4204,7 +4752,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5  _container_90jan_17"
-          aria-labelledby="modalHeadingId-:r2k:"
+          aria-labelledby="modalHeadingId-:r2s:"
           open
   >
     <div tabindex="-1"
@@ -4216,11 +4764,11 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r2l:"
+             aria-labelledby="svgtitle-:r2t:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r2l:">
+          <title id="svgtitle-:r2t:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -4228,7 +4776,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:r2k:"
+        <h1 id="modalHeadingId-:r2s:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Hvem ønsker du å representere?
@@ -4274,7 +4822,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
             <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               Du kan representere
               <strong>
-                4 personer og 12 virksomheter
+                4 personer og 16 virksomheter.
               </strong>
             </p>
             <div class="_topContainer_1egyv_12">
@@ -4483,14 +5031,14 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_1p8tz_9">
+              <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
-                  <input id="checkboxInputId-:r31:"
+                  <input id="checkboxInputId-:r39:"
                          class="_input_1k24j_17"
                          type="checkbox"
                          value
                   >
-                  <label for="checkboxInputId-:r31:"
+                  <label for="checkboxInputId-:r39:"
                          class="_label_1k24j_29  "
                   >
                     <span class="_labelCheckbox_1k24j_40 ">
@@ -4503,20 +5051,20 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                       </span>
                     </span>
                   </label>
-                  <div id="checkboxErrorId-:r32:"
+                  <div id="checkboxErrorId-:r3a:"
                        aria-live="assertive"
                        aria-atomic="true"
                   >
                   </div>
                 </div>
                 <div class="_container_1k24j_5  ">
-                  <input id="checkboxInputId-:r33:"
+                  <input id="checkboxInputId-:r3b:"
                          class="_input_1k24j_17"
                          type="checkbox"
                          value
                          checked
                   >
-                  <label for="checkboxInputId-:r33:"
+                  <label for="checkboxInputId-:r3b:"
                          class="_label_1k24j_29  "
                   >
                     <span class="_labelCheckbox_1k24j_40 ">
@@ -4529,7 +5077,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                       </span>
                     </span>
                   </label>
-                  <div id="checkboxErrorId-:r34:"
+                  <div id="checkboxErrorId-:r3c:"
                        aria-live="assertive"
                        aria-atomic="true"
                   >
@@ -4537,7 +5085,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -4578,8 +5126,8 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsList_1p8tz_20">
-                      <li class="_subUnit_1p8tz_20">
+                    <ul class="_subUnitsList_3mzou_26">
+                      <li class="_subUnit_3mzou_26">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -4594,9 +5142,9 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                                 <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
                                 </path>
                               </svg>
-                              <h3 class="_title_1xek8_24  undefined">
+                              <h4 class="_title_1xek8_24  undefined">
                                 Google AS
-                              </h3>
+                              </h4>
                               <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
                                    viewbox="0 0 24 24"
                                    focusable="false"
@@ -4850,6 +5398,158 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                       </div>
                     </div>
                   </li>
+                  <li>
+                    <div>
+                      <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
+                         href="#"
+                      >
+                        <div class="_header_1xek8_19">
+                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+                            </path>
+                          </svg>
+                          <h3 class="_title_1xek8_24  undefined">
+                            Apple AS
+                          </h3>
+                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
+                          Org. nr: 412843218
+                        </div>
+                      </a>
+                      <div aria-live="polite"
+                           aria-atomic="true"
+                      >
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
+                         href="#"
+                      >
+                        <div class="_header_1xek8_19">
+                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+                            </path>
+                          </svg>
+                          <h3 class="_title_1xek8_24  undefined">
+                            Microsoft AS
+                          </h3>
+                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
+                          Org. nr: 512843218
+                        </div>
+                      </a>
+                      <div aria-live="polite"
+                           aria-atomic="true"
+                      >
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
+                         href="#"
+                      >
+                        <div class="_header_1xek8_19">
+                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+                            </path>
+                          </svg>
+                          <h3 class="_title_1xek8_24  undefined">
+                            Netflix AS
+                          </h3>
+                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
+                          Org. nr: 612843218
+                        </div>
+                      </a>
+                      <div aria-live="polite"
+                           aria-atomic="true"
+                      >
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
+                         href="#"
+                      >
+                        <div class="_header_1xek8_19">
+                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+                            </path>
+                          </svg>
+                          <h3 class="_title_1xek8_24  undefined">
+                            Tesla AS
+                          </h3>
+                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
+                          Org. nr: 712843218
+                        </div>
+                      </a>
+                      <div aria-live="polite"
+                           aria-atomic="true"
+                      >
+                      </div>
+                    </div>
+                  </li>
                 </ul>
               </nav>
             </div>
@@ -4932,7 +5632,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
             <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               Du kan representere
               <strong>
-                12 virksomheter.
+                16 virksomheter.
               </strong>
             </p>
             <div class="_topContainer_1egyv_12">
@@ -4978,7 +5678,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_1p8tz_9">
+              <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:r1v:"
                          class="_input_1k24j_17"
@@ -5032,7 +5732,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -5087,7 +5787,7 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                             </path>
                           </svg>
                           <h3 class="_title_1xek8_24  undefined">
-                            Instagram AS
+                            Instagram AS (Avviklet)
                           </h3>
                           <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
                                viewbox="0 0 24 24"
@@ -5337,6 +6037,158 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                       </div>
                     </div>
                   </li>
+                  <li>
+                    <div>
+                      <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
+                         href="#"
+                      >
+                        <div class="_header_1xek8_19">
+                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+                            </path>
+                          </svg>
+                          <h3 class="_title_1xek8_24  undefined">
+                            Apple AS
+                          </h3>
+                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
+                          Org. nr: 412843218
+                        </div>
+                      </a>
+                      <div aria-live="polite"
+                           aria-atomic="true"
+                      >
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
+                         href="#"
+                      >
+                        <div class="_header_1xek8_19">
+                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+                            </path>
+                          </svg>
+                          <h3 class="_title_1xek8_24  undefined">
+                            Microsoft AS
+                          </h3>
+                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
+                          Org. nr: 512843218
+                        </div>
+                      </a>
+                      <div aria-live="polite"
+                           aria-atomic="true"
+                      >
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
+                         href="#"
+                      >
+                        <div class="_header_1xek8_19">
+                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+                            </path>
+                          </svg>
+                          <h3 class="_title_1xek8_24  undefined">
+                            Netflix AS
+                          </h3>
+                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
+                          Org. nr: 612843218
+                        </div>
+                      </a>
+                      <div aria-live="polite"
+                           aria-atomic="true"
+                      >
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
+                         href="#"
+                      >
+                        <div class="_header_1xek8_19">
+                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
+                            </path>
+                          </svg>
+                          <h3 class="_title_1xek8_24  undefined">
+                            Tesla AS
+                          </h3>
+                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                               viewbox="0 0 24 24"
+                               focusable="false"
+                               aria-hidden="true"
+                               role="img"
+                          >
+                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
+                          Org. nr: 712843218
+                        </div>
+                      </a>
+                      <div aria-live="polite"
+                           aria-atomic="true"
+                      >
+                      </div>
+                    </div>
+                  </li>
                 </ul>
               </nav>
             </div>
@@ -5385,7 +6237,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5  _container_90jan_17"
-          aria-labelledby="modalHeadingId-:r94:"
+          aria-labelledby="modalHeadingId-:r9k:"
   >
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
@@ -5396,11 +6248,11 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r95:"
+             aria-labelledby="svgtitle-:r9l:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r95:">
+          <title id="svgtitle-:r9l:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -5408,7 +6260,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:r94:"
+        <h1 id="modalHeadingId-:r9k:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Hvem ønsker du å representere?
@@ -5454,7 +6306,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
             <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               Du kan representere
               <strong>
-                4 personer og 12 virksomheter
+                4 personer og 16 virksomheter.
               </strong>
             </p>
             <div class="_topContainer_1egyv_12">
@@ -5663,14 +6515,14 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_1p8tz_9">
+              <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
-                  <input id="checkboxInputId-:r9h:"
+                  <input id="checkboxInputId-:ra1:"
                          class="_input_1k24j_17"
                          type="checkbox"
                          value
                   >
-                  <label for="checkboxInputId-:r9h:"
+                  <label for="checkboxInputId-:ra1:"
                          class="_label_1k24j_29  "
                   >
                     <span class="_labelCheckbox_1k24j_40 ">
@@ -5683,20 +6535,20 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                       </span>
                     </span>
                   </label>
-                  <div id="checkboxErrorId-:r9i:"
+                  <div id="checkboxErrorId-:ra2:"
                        aria-live="assertive"
                        aria-atomic="true"
                   >
                   </div>
                 </div>
                 <div class="_container_1k24j_5  ">
-                  <input id="checkboxInputId-:r9j:"
+                  <input id="checkboxInputId-:ra3:"
                          class="_input_1k24j_17"
                          type="checkbox"
                          value
                          checked
                   >
-                  <label for="checkboxInputId-:r9j:"
+                  <label for="checkboxInputId-:ra3:"
                          class="_label_1k24j_29  "
                   >
                     <span class="_labelCheckbox_1k24j_40 ">
@@ -5709,7 +6561,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                       </span>
                     </span>
                   </label>
-                  <div id="checkboxErrorId-:r9k:"
+                  <div id="checkboxErrorId-:ra4:"
                        aria-live="assertive"
                        aria-atomic="true"
                   >
@@ -5717,7 +6569,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -5758,8 +6610,8 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsList_1p8tz_20">
-                      <li class="_subUnit_1p8tz_20">
+                    <ul class="_subUnitsList_3mzou_26">
+                      <li class="_subUnit_3mzou_26">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -5774,9 +6626,9 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                                 <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
                                 </path>
                               </svg>
-                              <h3 class="_title_1xek8_24  undefined">
+                              <h4 class="_title_1xek8_24  undefined">
                                 Google AS
-                              </h3>
+                              </h4>
                               <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
                                    viewbox="0 0 24 24"
                                    focusable="false"
@@ -5956,12 +6808,12 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_1p8tz_15">
+              <div class="_showAllButtonWrapper_3mzou_21">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
                   <span class="_buttonText_6ybyo_69">
-                    Vis alle virksomheter (9)
+                    Vis alle virksomheter (12)
                   </span>
                 </button>
               </div>
@@ -6011,14 +6863,14 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5  _container_90jan_17"
-          aria-labelledby="modalHeadingId-:r3m:"
+          aria-labelledby="modalHeadingId-:r46:"
           open
   >
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:r3m:"
+        <h1 id="modalHeadingId-:r46:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Hvem ønsker du å representere?
@@ -6064,7 +6916,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
             <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               Du kan representere
               <strong>
-                4 personer og 12 virksomheter
+                4 personer og 16 virksomheter.
               </strong>
             </p>
             <div class="_topContainer_1egyv_12">
@@ -6273,14 +7125,14 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_1p8tz_9">
+              <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
-                  <input id="checkboxInputId-:r42:"
+                  <input id="checkboxInputId-:r4i:"
                          class="_input_1k24j_17"
                          type="checkbox"
                          value
                   >
-                  <label for="checkboxInputId-:r42:"
+                  <label for="checkboxInputId-:r4i:"
                          class="_label_1k24j_29  "
                   >
                     <span class="_labelCheckbox_1k24j_40 ">
@@ -6293,20 +7145,20 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                       </span>
                     </span>
                   </label>
-                  <div id="checkboxErrorId-:r43:"
+                  <div id="checkboxErrorId-:r4j:"
                        aria-live="assertive"
                        aria-atomic="true"
                   >
                   </div>
                 </div>
                 <div class="_container_1k24j_5  ">
-                  <input id="checkboxInputId-:r44:"
+                  <input id="checkboxInputId-:r4k:"
                          class="_input_1k24j_17"
                          type="checkbox"
                          value
                          checked
                   >
-                  <label for="checkboxInputId-:r44:"
+                  <label for="checkboxInputId-:r4k:"
                          class="_label_1k24j_29  "
                   >
                     <span class="_labelCheckbox_1k24j_40 ">
@@ -6319,7 +7171,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                       </span>
                     </span>
                   </label>
-                  <div id="checkboxErrorId-:r45:"
+                  <div id="checkboxErrorId-:r4l:"
                        aria-live="assertive"
                        aria-atomic="true"
                   >
@@ -6327,7 +7179,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -6368,8 +7220,8 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                       >
                       </div>
                     </div>
-                    <ul class="_subUnitsList_1p8tz_20">
-                      <li class="_subUnit_1p8tz_20">
+                    <ul class="_subUnitsList_3mzou_26">
+                      <li class="_subUnit_3mzou_26">
                         <div>
                           <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
                              href="#"
@@ -6384,9 +7236,9 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                                 <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
                                 </path>
                               </svg>
-                              <h3 class="_title_1xek8_24  undefined">
+                              <h4 class="_title_1xek8_24  undefined">
                                 Google AS
-                              </h3>
+                              </h4>
                               <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
                                    viewbox="0 0 24 24"
                                    focusable="false"
@@ -6566,12 +7418,12 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_1p8tz_15">
+              <div class="_showAllButtonWrapper_3mzou_21">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
                   <span class="_buttonText_6ybyo_69">
-                    Vis alle virksomheter (9)
+                    Vis alle virksomheter (12)
                   </span>
                 </button>
               </div>
@@ -6614,7 +7466,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5  _container_90jan_17"
-          aria-labelledby="modalHeadingId-:r79:"
+          aria-labelledby="modalHeadingId-:r7t:"
           open
   >
     <div tabindex="-1"
@@ -6626,11 +7478,11 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r7a:"
+             aria-labelledby="svgtitle-:r7u:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r7a:">
+          <title id="svgtitle-:r7u:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -6638,17 +7490,53 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:r79:"
+        <h1 id="modalHeadingId-:r7t:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Hvem ønsker du å representere?
         </h1>
         <div>
           <div class="_rolePicker_90jan_5">
+            <div>
+              <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
+                 href="#"
+              >
+                <div class="_header_1xek8_19">
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35Z">
+                    </path>
+                  </svg>
+                  <h2 class="_title_1xek8_24  undefined">
+                    Meg selv
+                  </h2>
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
+                  101010 12345
+                </div>
+              </a>
+              <div aria-live="polite"
+                   aria-atomic="true"
+              >
+              </div>
+            </div>
             <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               Du kan representere
               <strong>
-                4 personer og 5 virksomheter
+                4 personer og 4 virksomheter.
               </strong>
             </p>
             <div>
@@ -6820,14 +7708,14 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
               >
                 Virksomheter
               </h2>
-              <div class="_checkboxGroup_1p8tz_9">
+              <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
-                  <input id="checkboxInputId-:r7j:"
+                  <input id="checkboxInputId-:r89:"
                          class="_input_1k24j_17"
                          type="checkbox"
                          value
                   >
-                  <label for="checkboxInputId-:r7j:"
+                  <label for="checkboxInputId-:r89:"
                          class="_label_1k24j_29  "
                   >
                     <span class="_labelCheckbox_1k24j_40 ">
@@ -6840,19 +7728,19 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                       </span>
                     </span>
                   </label>
-                  <div id="checkboxErrorId-:r7k:"
+                  <div id="checkboxErrorId-:r8a:"
                        aria-live="assertive"
                        aria-atomic="true"
                   >
                   </div>
                 </div>
                 <div class="_container_1k24j_5  ">
-                  <input id="checkboxInputId-:r7l:"
+                  <input id="checkboxInputId-:r8b:"
                          class="_input_1k24j_17"
                          type="checkbox"
                          value
                   >
-                  <label for="checkboxInputId-:r7l:"
+                  <label for="checkboxInputId-:r8b:"
                          class="_label_1k24j_29  "
                   >
                     <span class="_labelCheckbox_1k24j_40 ">
@@ -6865,7 +7753,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                       </span>
                     </span>
                   </label>
-                  <div id="checkboxErrorId-:r7m:"
+                  <div id="checkboxErrorId-:r8c:"
                        aria-live="assertive"
                        aria-atomic="true"
                   >
@@ -6873,45 +7761,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
-                <ul class="_businessList_1p8tz_1">
-                  <li>
-                    <div>
-                      <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
-                         href="#"
-                      >
-                        <div class="_header_1xek8_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
-                               viewbox="0 0 24 24"
-                               focusable="false"
-                               aria-hidden="true"
-                               role="img"
-                          >
-                            <path d="M20.89 8.51v9.99c0 .55-.45 1-1 1H4.66c0 1.1.89 1.5 2 1.5h14c.91 0 1.73-.53 1.73-1.5v-9c0-1.02-.51-1.87-1.5-1.99 M9 1.5h4c1.1 0 2 .9 2 2v2h3c1.1 0 2 .9 2 2v9c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2v-9c0-1.11.89-2 2-2h3v-2c0-1.11.89-2 2-2m4 4v-2H9v2z">
-                            </path>
-                          </svg>
-                          <h3 class="_title_1xek8_24  undefined">
-                            Costco AS
-                          </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
-                               viewbox="0 0 24 24"
-                               focusable="false"
-                               aria-hidden="true"
-                               role="img"
-                          >
-                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
-                            </path>
-                          </svg>
-                        </div>
-                        <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
-                          Org. nr: 123456777
-                        </div>
-                      </a>
-                      <div aria-live="polite"
-                           aria-atomic="true"
-                      >
-                      </div>
-                    </div>
-                  </li>
+                <ul class="_businessList_3mzou_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -6942,82 +7792,6 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                         </div>
                         <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
                           Org. nr: 312943218
-                        </div>
-                      </a>
-                      <div aria-live="polite"
-                           aria-atomic="true"
-                      >
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
-                         href="#"
-                      >
-                        <div class="_header_1xek8_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
-                               viewbox="0 0 24 24"
-                               focusable="false"
-                               aria-hidden="true"
-                               role="img"
-                          >
-                            <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
-                            </path>
-                          </svg>
-                          <h3 class="_title_1xek8_24  undefined">
-                            Toshiba AS
-                          </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
-                               viewbox="0 0 24 24"
-                               focusable="false"
-                               aria-hidden="true"
-                               role="img"
-                          >
-                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
-                            </path>
-                          </svg>
-                        </div>
-                        <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
-                          Org. nr: 312643218
-                        </div>
-                      </a>
-                      <div aria-live="polite"
-                           aria-atomic="true"
-                      >
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
-                         href="#"
-                      >
-                        <div class="_header_1xek8_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
-                               viewbox="0 0 24 24"
-                               focusable="false"
-                               aria-hidden="true"
-                               role="img"
-                          >
-                            <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
-                            </path>
-                          </svg>
-                          <h3 class="_title_1xek8_24  undefined">
-                            Hitachi AS
-                          </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
-                               viewbox="0 0 24 24"
-                               focusable="false"
-                               aria-hidden="true"
-                               role="img"
-                          >
-                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
-                            </path>
-                          </svg>
-                        </div>
-                        <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
-                          Org. nr: 312743218
                         </div>
                       </a>
                       <div aria-live="polite"

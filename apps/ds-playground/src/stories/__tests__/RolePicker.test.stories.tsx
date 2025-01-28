@@ -21,7 +21,7 @@ const me: Person = {
 };
 
 const businesses: Paginated<Business> = {
-  total: 12,
+  total: 16,
   list: [
     {
       name: 'Costco',
@@ -76,7 +76,6 @@ const businesses: Paginated<Business> = {
       type: 'Organization',
       unitType: 'AS',
     },
-
     {
       name: 'Toshiba',
       organizationNumber: '312643218',
@@ -84,7 +83,6 @@ const businesses: Paginated<Business> = {
       type: 'Organization',
       unitType: 'AS',
     },
-
     {
       name: 'Hitachi',
       organizationNumber: '312743218',
@@ -92,7 +90,6 @@ const businesses: Paginated<Business> = {
       type: 'Organization',
       unitType: 'AS',
     },
-
     {
       name: 'Vanguard',
       organizationNumber: '332843218',
@@ -100,7 +97,6 @@ const businesses: Paginated<Business> = {
       type: 'Organization',
       unitType: 'AS',
     },
-
     {
       name: 'Amazon',
       organizationNumber: '112843218',
@@ -111,6 +107,34 @@ const businesses: Paginated<Business> = {
     {
       name: 'Meta',
       organizationNumber: '212843218',
+      isDeleted: false,
+      type: 'Organization',
+      unitType: 'AS',
+    },
+    {
+      name: 'Apple',
+      organizationNumber: '412843218',
+      isDeleted: false,
+      type: 'Organization',
+      unitType: 'AS',
+    },
+    {
+      name: 'Microsoft',
+      organizationNumber: '512843218',
+      isDeleted: false,
+      type: 'Organization',
+      unitType: 'AS',
+    },
+    {
+      name: 'Netflix',
+      organizationNumber: '612843218',
+      isDeleted: false,
+      type: 'Organization',
+      unitType: 'AS',
+    },
+    {
+      name: 'Tesla',
+      organizationNumber: '712843218',
       isDeleted: false,
       type: 'Organization',
       unitType: 'AS',
@@ -151,6 +175,12 @@ const people: Paginated<Person> = {
 const people11: Paginated<Person> = {
   total: 11,
   list: [
+    {
+      name: 'Frisk Elefant',
+      personId: '100908 12345',
+      type: 'Person',
+      isDeleted: false,
+    },
     {
       name: 'Melankolsk Aldrende Ape',
       personId: '138899 99726',
@@ -542,7 +572,6 @@ export const WithOnlyPeopleSearch = {
   name: 'With Only People Search (A6, A7)',
   args: {
     ...defaultArgs,
-    me: undefined,
     businesses: undefined,
     people: people11,
   },
@@ -563,7 +592,6 @@ export const WithOnlyBusinessSearch = {
   name: 'With Only Business Search (A6, A7)',
   args: {
     ...defaultArgs,
-    me: undefined,
     people: undefined,
   },
   render: DefaultTemplate,
@@ -583,8 +611,7 @@ export const WithoutSearch = {
   name: 'Without Search (A6)',
   args: {
     ...defaultArgs,
-    me: undefined,
-    businesses: { total: 5, list: businesses.list.slice(0, 5) },
+    businesses: { total: 4, list: businesses.list.slice(1, 3) },
     showSubunits: false,
   },
   render: DefaultTemplate,
@@ -719,5 +746,106 @@ export const With10000Businesses = {
     imageSnapshot: {
       disable: true,
     },
+  },
+} satisfies Story;
+
+export const WithNoDeletedBusinesses = {
+  name: 'With No Deleted Businesses',
+  args: {
+    ...defaultArgs,
+    businesses: {
+      total: 3,
+      list: [
+        {
+          name: 'Samsung',
+          organizationNumber: '312943218',
+          isDeleted: false,
+          type: 'Organization',
+          unitType: 'AS',
+          subunits: [
+            {
+              name: 'Snapchat',
+              organizationNumber: '123456623',
+              isDeleted: false,
+              type: 'Organization',
+              unitType: 'AS',
+            },
+            {
+              name: 'Statoil',
+              organizationNumber: '312849218',
+              isDeleted: false,
+              type: 'Organization',
+              unitType: 'AS',
+            },
+          ],
+        },
+      ],
+    },
+    people: undefined,
+  },
+  render: DefaultTemplate,
+  argTypes: {
+    me: { table: { disable: false } },
+    people: { table: { disable: false } },
+    businesses: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const openButton = canvas.getByRole('button');
+    await userEvent.click(openButton);
+
+    const modal = await canvas.findByRole('dialog');
+
+    const checkBox = within(modal).queryByRole('checkbox', {
+      name: dsI18n.t('ds_overlays:rolepicker.ShowInactiveBusinessesHeader'),
+    });
+
+    expect(checkBox).not.toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithNoSubunits = {
+  name: 'With No SubUnits',
+  args: {
+    ...defaultArgs,
+    businesses: {
+      total: 2,
+      list: [
+        {
+          name: 'Samsung',
+          organizationNumber: '312943218',
+          isDeleted: false,
+          type: 'Organization',
+          unitType: 'AS',
+        },
+        {
+          name: 'Vanguard',
+          organizationNumber: '332843218',
+          isDeleted: true,
+          type: 'Organization',
+          unitType: 'AS',
+        },
+      ],
+    },
+    people: undefined,
+  },
+  render: DefaultTemplate,
+  argTypes: {
+    me: { table: { disable: false } },
+    people: { table: { disable: false } },
+    businesses: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const openButton = canvas.getByRole('button');
+    await userEvent.click(openButton);
+
+    const modal = await canvas.findByRole('dialog');
+
+    const checkBox = within(modal).queryByRole('checkbox', {
+      name: dsI18n.t('ds_overlays:rolepicker.ShowSubBusinessesHeading'),
+    });
+
+    expect(checkBox).not.toBeInTheDocument();
   },
 } satisfies Story;
