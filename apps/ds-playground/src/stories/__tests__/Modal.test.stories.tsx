@@ -631,7 +631,7 @@ const TemplateAutoOpenAndCloseOnEscape: StoryFn<typeof Modal> = (args) => {
       <Paragraph
         hasSpacing
       >{`Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes etter at bruker har trykket på Escape-knappen. 
-        Modalen åpnes ved å laste siden på nytt.`}</Paragraph>
+        Modalen åpnes ved å laste siden på nytt. `}</Paragraph>
       <Modal {...args} ref={ref}>
         <Paragraph hasSpacing>{'Modalinnhold'}</Paragraph>
       </Modal>
