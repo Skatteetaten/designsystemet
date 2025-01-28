@@ -611,8 +611,7 @@ export const WithoutSearch = {
   name: 'Without Search (A6)',
   args: {
     ...defaultArgs,
-    me: undefined,
-    businesses: { total: 5, list: businesses.list.slice(0, 5) },
+    businesses: { total: 4, list: businesses.list.slice(1, 3) },
     showSubunits: false,
   },
   render: DefaultTemplate,

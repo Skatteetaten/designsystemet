@@ -636,7 +636,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5  _container_90jan_17"
-          aria-labelledby="modalHeadingId-:ram:"
+          aria-labelledby="modalHeadingId-:rai:"
   >
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
@@ -647,11 +647,11 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:ran:"
+             aria-labelledby="svgtitle-:raj:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:ran:">
+          <title id="svgtitle-:raj:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -659,7 +659,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:ram:"
+        <h1 id="modalHeadingId-:rai:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Hvem ønsker du å representere?
@@ -2724,7 +2724,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5  _container_90jan_17"
-          aria-labelledby="modalHeadingId-:r8k:"
+          aria-labelledby="modalHeadingId-:r8g:"
           open
   >
     <div tabindex="-1"
@@ -2736,11 +2736,11 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r8l:"
+             aria-labelledby="svgtitle-:r8h:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r8l:">
+          <title id="svgtitle-:r8h:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -2748,7 +2748,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:r8k:"
+        <h1 id="modalHeadingId-:r8g:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Hvem ønsker du å representere?
@@ -2810,11 +2810,11 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                     <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                          viewbox="0 0 24 24"
                          focusable="false"
-                         aria-labelledby="svgtitle-:r9l:"
+                         aria-labelledby="svgtitle-:r9h:"
                          aria-hidden="false"
                          role="img"
                     >
-                      <title id="svgtitle-:r9l:">
+                      <title id="svgtitle-:r9h:">
                         Lukk melding
                       </title>
                       <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -3038,12 +3038,12 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
               </h2>
               <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
-                  <input id="checkboxInputId-:r91:"
+                  <input id="checkboxInputId-:r8t:"
                          class="_input_1k24j_17"
                          type="checkbox"
                          value
                   >
-                  <label for="checkboxInputId-:r91:"
+                  <label for="checkboxInputId-:r8t:"
                          class="_label_1k24j_29  "
                   >
                     <span class="_labelCheckbox_1k24j_40 ">
@@ -3056,20 +3056,20 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                       </span>
                     </span>
                   </label>
-                  <div id="checkboxErrorId-:r92:"
+                  <div id="checkboxErrorId-:r8u:"
                        aria-live="assertive"
                        aria-atomic="true"
                   >
                   </div>
                 </div>
                 <div class="_container_1k24j_5  ">
-                  <input id="checkboxInputId-:r93:"
+                  <input id="checkboxInputId-:r8v:"
                          class="_input_1k24j_17"
                          type="checkbox"
                          value
                          checked
                   >
-                  <label for="checkboxInputId-:r93:"
+                  <label for="checkboxInputId-:r8v:"
                          class="_label_1k24j_29  "
                   >
                     <span class="_labelCheckbox_1k24j_40 ">
@@ -3082,7 +3082,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                       </span>
                     </span>
                   </label>
-                  <div id="checkboxErrorId-:r94:"
+                  <div id="checkboxErrorId-:r90:"
                        aria-live="assertive"
                        aria-atomic="true"
                   >
@@ -3384,7 +3384,7 @@ exports[`Tester/RolePicker WithNoBusinesses play-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5  _container_90jan_17"
-          aria-labelledby="modalHeadingId-:r9m:"
+          aria-labelledby="modalHeadingId-:r9i:"
           open
   >
     <div tabindex="-1"
@@ -3396,11 +3396,11 @@ exports[`Tester/RolePicker WithNoBusinesses play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r9n:"
+             aria-labelledby="svgtitle-:r9j:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r9n:">
+          <title id="svgtitle-:r9j:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -3408,7 +3408,7 @@ exports[`Tester/RolePicker WithNoBusinesses play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:r9m:"
+        <h1 id="modalHeadingId-:r9i:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Du kan ikke bruke dette skjemaet
@@ -3449,7 +3449,7 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5  _container_90jan_17"
-          aria-labelledby="modalHeadingId-:rb6:"
+          aria-labelledby="modalHeadingId-:rb2:"
           open
   >
     <div tabindex="-1"
@@ -3461,11 +3461,11 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:rb7:"
+             aria-labelledby="svgtitle-:rb3:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:rb7:">
+          <title id="svgtitle-:rb3:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -3473,7 +3473,7 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:rb6:"
+        <h1 id="modalHeadingId-:rb2:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Hvem ønsker du å representere?
@@ -3530,13 +3530,13 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
               </h2>
               <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
-                  <input id="checkboxInputId-:rba:"
+                  <input id="checkboxInputId-:rb6:"
                          class="_input_1k24j_17"
                          type="checkbox"
                          value
                          checked
                   >
-                  <label for="checkboxInputId-:rba:"
+                  <label for="checkboxInputId-:rb6:"
                          class="_label_1k24j_29  "
                   >
                     <span class="_labelCheckbox_1k24j_40 ">
@@ -3549,7 +3549,7 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
                       </span>
                     </span>
                   </label>
-                  <div id="checkboxErrorId-:rbb:"
+                  <div id="checkboxErrorId-:rb7:"
                        aria-live="assertive"
                        aria-atomic="true"
                   >
@@ -3731,7 +3731,7 @@ exports[`Tester/RolePicker WithNoSubunits play-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5  _container_90jan_17"
-          aria-labelledby="modalHeadingId-:rbj:"
+          aria-labelledby="modalHeadingId-:rbf:"
           open
   >
     <div tabindex="-1"
@@ -3743,11 +3743,11 @@ exports[`Tester/RolePicker WithNoSubunits play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:rbk:"
+             aria-labelledby="svgtitle-:rbg:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:rbk:">
+          <title id="svgtitle-:rbg:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -3755,7 +3755,7 @@ exports[`Tester/RolePicker WithNoSubunits play-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:rbj:"
+        <h1 id="modalHeadingId-:rbf:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Hvem ønsker du å representere?
@@ -3812,12 +3812,12 @@ exports[`Tester/RolePicker WithNoSubunits play-test 1`] = `
               </h2>
               <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
-                  <input id="checkboxInputId-:rbn:"
+                  <input id="checkboxInputId-:rbj:"
                          class="_input_1k24j_17"
                          type="checkbox"
                          value
                   >
-                  <label for="checkboxInputId-:rbn:"
+                  <label for="checkboxInputId-:rbj:"
                          class="_label_1k24j_29  "
                   >
                     <span class="_labelCheckbox_1k24j_40 ">
@@ -3830,7 +3830,7 @@ exports[`Tester/RolePicker WithNoSubunits play-test 1`] = `
                       </span>
                     </span>
                   </label>
-                  <div id="checkboxErrorId-:rbo:"
+                  <div id="checkboxErrorId-:rbk:"
                        aria-live="assertive"
                        aria-atomic="true"
                   >
@@ -6237,7 +6237,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
     </span>
   </button>
   <dialog class="_modal_125nh_5  _container_90jan_17"
-          aria-labelledby="modalHeadingId-:r9o:"
+          aria-labelledby="modalHeadingId-:r9k:"
   >
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
@@ -6248,11 +6248,11 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r9p:"
+             aria-labelledby="svgtitle-:r9l:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r9p:">
+          <title id="svgtitle-:r9l:">
             Lukk dialogvindu
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -6260,7 +6260,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
         </svg>
       </button>
       <div class="_modalPaddingL_125nh_51">
-        <h1 id="modalHeadingId-:r9o:"
+        <h1 id="modalHeadingId-:r9k:"
             class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
         >
           Hvem ønsker du å representere?
@@ -6517,12 +6517,12 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
               </h2>
               <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
-                  <input id="checkboxInputId-:ra5:"
+                  <input id="checkboxInputId-:ra1:"
                          class="_input_1k24j_17"
                          type="checkbox"
                          value
                   >
-                  <label for="checkboxInputId-:ra5:"
+                  <label for="checkboxInputId-:ra1:"
                          class="_label_1k24j_29  "
                   >
                     <span class="_labelCheckbox_1k24j_40 ">
@@ -6535,20 +6535,20 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                       </span>
                     </span>
                   </label>
-                  <div id="checkboxErrorId-:ra6:"
+                  <div id="checkboxErrorId-:ra2:"
                        aria-live="assertive"
                        aria-atomic="true"
                   >
                   </div>
                 </div>
                 <div class="_container_1k24j_5  ">
-                  <input id="checkboxInputId-:ra7:"
+                  <input id="checkboxInputId-:ra3:"
                          class="_input_1k24j_17"
                          type="checkbox"
                          value
                          checked
                   >
-                  <label for="checkboxInputId-:ra7:"
+                  <label for="checkboxInputId-:ra3:"
                          class="_label_1k24j_29  "
                   >
                     <span class="_labelCheckbox_1k24j_40 ">
@@ -6561,7 +6561,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                       </span>
                     </span>
                   </label>
-                  <div id="checkboxErrorId-:ra8:"
+                  <div id="checkboxErrorId-:ra4:"
                        aria-live="assertive"
                        aria-atomic="true"
                   >
@@ -7497,10 +7497,46 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
         </h1>
         <div>
           <div class="_rolePicker_90jan_5">
+            <div>
+              <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
+                 href="#"
+              >
+                <div class="_header_1xek8_19">
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35Z">
+                    </path>
+                  </svg>
+                  <h2 class="_title_1xek8_24  undefined">
+                    Meg selv
+                  </h2>
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
+                  101010 12345
+                </div>
+              </a>
+              <div aria-live="polite"
+                   aria-atomic="true"
+              >
+              </div>
+            </div>
             <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17  ">
               Du kan representere
               <strong>
-                4 personer og 5 virksomheter.
+                4 personer og 4 virksomheter.
               </strong>
             </p>
             <div>
@@ -7674,31 +7710,6 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
               </h2>
               <div class="_checkboxGroup_3mzou_9">
                 <div class="_container_1k24j_5  ">
-                  <input id="checkboxInputId-:r87:"
-                         class="_input_1k24j_17"
-                         type="checkbox"
-                         value
-                  >
-                  <label for="checkboxInputId-:r87:"
-                         class="_label_1k24j_29  "
-                  >
-                    <span class="_labelCheckbox_1k24j_40 ">
-                      <span class="_labelCheckboxCheck_1k24j_50">
-                      </span>
-                    </span>
-                    <span class="_labelContent_1k24j_63 ">
-                      <span class>
-                        Vis avviklede virksomheter
-                      </span>
-                    </span>
-                  </label>
-                  <div id="checkboxErrorId-:r88:"
-                       aria-live="assertive"
-                       aria-atomic="true"
-                  >
-                  </div>
-                </div>
-                <div class="_container_1k24j_5  ">
                   <input id="checkboxInputId-:r89:"
                          class="_input_1k24j_17"
                          type="checkbox"
@@ -7713,7 +7724,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                     </span>
                     <span class="_labelContent_1k24j_63 ">
                       <span class>
-                        Vis underenheter
+                        Vis avviklede virksomheter
                       </span>
                     </span>
                   </label>
@@ -7723,47 +7734,34 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                   >
                   </div>
                 </div>
+                <div class="_container_1k24j_5  ">
+                  <input id="checkboxInputId-:r8b:"
+                         class="_input_1k24j_17"
+                         type="checkbox"
+                         value
+                  >
+                  <label for="checkboxInputId-:r8b:"
+                         class="_label_1k24j_29  "
+                  >
+                    <span class="_labelCheckbox_1k24j_40 ">
+                      <span class="_labelCheckboxCheck_1k24j_50">
+                      </span>
+                    </span>
+                    <span class="_labelContent_1k24j_63 ">
+                      <span class>
+                        Vis underenheter
+                      </span>
+                    </span>
+                  </label>
+                  <div id="checkboxErrorId-:r8c:"
+                       aria-live="assertive"
+                       aria-atomic="true"
+                  >
+                  </div>
+                </div>
               </div>
               <nav aria-labelledby="businessesHeadingId">
                 <ul class="_businessList_3mzou_1">
-                  <li>
-                    <div>
-                      <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
-                         href="#"
-                      >
-                        <div class="_header_1xek8_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
-                               viewbox="0 0 24 24"
-                               focusable="false"
-                               aria-hidden="true"
-                               role="img"
-                          >
-                            <path d="M20.89 8.51v9.99c0 .55-.45 1-1 1H4.66c0 1.1.89 1.5 2 1.5h14c.91 0 1.73-.53 1.73-1.5v-9c0-1.02-.51-1.87-1.5-1.99 M9 1.5h4c1.1 0 2 .9 2 2v2h3c1.1 0 2 .9 2 2v9c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2v-9c0-1.11.89-2 2-2h3v-2c0-1.11.89-2 2-2m4 4v-2H9v2z">
-                            </path>
-                          </svg>
-                          <h3 class="_title_1xek8_24  undefined">
-                            Costco AS
-                          </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
-                               viewbox="0 0 24 24"
-                               focusable="false"
-                               aria-hidden="true"
-                               role="img"
-                          >
-                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
-                            </path>
-                          </svg>
-                        </div>
-                        <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
-                          Org. nr: 123456777
-                        </div>
-                      </a>
-                      <div aria-live="polite"
-                           aria-atomic="true"
-                      >
-                      </div>
-                    </div>
-                  </li>
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -7794,82 +7792,6 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                         </div>
                         <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
                           Org. nr: 312943218
-                        </div>
-                      </a>
-                      <div aria-live="polite"
-                           aria-atomic="true"
-                      >
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
-                         href="#"
-                      >
-                        <div class="_header_1xek8_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
-                               viewbox="0 0 24 24"
-                               focusable="false"
-                               aria-hidden="true"
-                               role="img"
-                          >
-                            <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
-                            </path>
-                          </svg>
-                          <h3 class="_title_1xek8_24  undefined">
-                            Toshiba AS
-                          </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
-                               viewbox="0 0 24 24"
-                               focusable="false"
-                               aria-hidden="true"
-                               role="img"
-                          >
-                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
-                            </path>
-                          </svg>
-                        </div>
-                        <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
-                          Org. nr: 312643218
-                        </div>
-                      </a>
-                      <div aria-live="polite"
-                           aria-atomic="true"
-                      >
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
-                         href="#"
-                      >
-                        <div class="_header_1xek8_19">
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
-                               viewbox="0 0 24 24"
-                               focusable="false"
-                               aria-hidden="true"
-                               role="img"
-                          >
-                            <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-1.11.89-2 2-2h4V4c0-1.11.89-2 2-2Zm4 4V4h-4v2h4Z">
-                            </path>
-                          </svg>
-                          <h3 class="_title_1xek8_24  undefined">
-                            Hitachi AS
-                          </h3>
-                          <svg class="_systemIcon_6zbcy_2 _systemIcon_large_6zbcy_13 _icon_1xek8_1 "
-                               viewbox="0 0 24 24"
-                               focusable="false"
-                               aria-hidden="true"
-                               role="img"
-                          >
-                            <path d="M14.14 20.5L21 12.5L14.14 4.5L12.2 6.17L16.55 11.25L3 11.25V13.75L16.55 13.75L12.2 18.83L14.14 20.5Z">
-                            </path>
-                          </svg>
-                        </div>
-                        <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
-                          Org. nr: 312743218
                         </div>
                       </a>
                       <div aria-live="polite"
