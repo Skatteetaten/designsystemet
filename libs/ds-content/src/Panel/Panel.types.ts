@@ -4,6 +4,7 @@ import {
   BaseProps,
   HeadingAs,
   SubheadingAs,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   colorNamesArr,
 } from '@skatteetaten/ds-core-utils';
 import { IconProps } from '@skatteetaten/ds-icons';
