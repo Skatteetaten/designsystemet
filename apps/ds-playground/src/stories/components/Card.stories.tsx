@@ -15,7 +15,6 @@ import {
   DeleteSVGpath,
   EditSVGpath,
   FileIcon,
-  FileSVGpath,
   InfoOutlineSVGpath,
   WarningIcon,
 } from '@skatteetaten/ds-icons';
@@ -137,7 +136,7 @@ export const Examples: Story = {
         </Card>
 
         <Card>
-          <Card.Content
+          <Card.Header
             rightContent={
               <Tag color={'forest'} svgPath={CheckSVGpath}>
                 {'OK til innsending'}
@@ -147,6 +146,8 @@ export const Examples: Story = {
             <Heading as={'h3'} level={3} hasSpacing>
               {'Andre inntekter'}
             </Heading>
+          </Card.Header>
+          <Card.Content>
             <DescriptionList>
               <DescriptionList.Element term={'Beløp'}>
                 {'1 000 000 kr'}
@@ -161,6 +162,7 @@ export const Examples: Story = {
     );
   },
 } satisfies Story;
+Examples.parameters = exampleParameters;
 
 export const FileListExample: Story = {
   name: 'Liste med filer',
@@ -171,20 +173,24 @@ export const FileListExample: Story = {
       >
         <Card spacing={'xxs'} color={'denim'}>
           <Card.Content
-            classNames={{ children: 'flex marginLeftS' }}
+            classNames={{ children: 'flex' }}
             rightContent={<IconButton title={'Lukk'} svgPath={CancelSVGpath} />}
           >
-            <FileIcon className={'flexShrinkZero paddingTopXXS marginRightS'} />
+            <FileIcon className={'flexShrinkZero paddingXS'} size={'small'} />
             {'mine-hus-og-hoteller.zip'}
           </Card.Content>
         </Card>
 
         <Card spacing={'xxs'} color={'denim'}>
           <Card.Content
-            classNames={{ children: 'flex marginLeftS' }}
+            classNames={{ children: 'flex' }}
             rightContent={<IconButton title={'Lukk'} svgPath={CancelSVGpath} />}
           >
-            <Link svgPath={FileSVGpath} href={'#'}>
+            <FileIcon
+              className={'blueIcon flexShrinkZero paddingXS'}
+              size={'small'}
+            />
+            <Link className={'resetLinkStyling'} href={'#'}>
               {'mine-hus-og-hoteller.zip'}
             </Link>
           </Card.Content>
@@ -192,11 +198,12 @@ export const FileListExample: Story = {
 
         <Card spacing={'xxs'} color={'burgundy'}>
           <Card.Content
-            classNames={{ children: 'flex marginLeftS' }}
+            classNames={{ children: 'flex' }}
             rightContent={<IconButton title={'Lukk'} svgPath={CancelSVGpath} />}
           >
             <WarningIcon
-              className={'dangerIcon flexShrinkZero paddingTopXXS marginRightS'}
+              className={'dangerIcon flexShrinkZero paddingXS'}
+              size={'small'}
             />
             {'carlos-santana_smooth-featuring-rob-thomas.mp3'}
           </Card.Content>
@@ -205,13 +212,15 @@ export const FileListExample: Story = {
     );
   },
 } satisfies Story;
+FileListExample.parameters = exampleParameters;
 
 export const AlertExample: Story = {
   name: 'Card med merknad',
   render: (_args): JSX.Element => {
     const headingRef = useRef<HTMLHeadingElement>(null);
+
     return (
-      <div className={'flex gapS'}>
+      <div className={'flex flexWrap gapS'}>
         <Card className={'cardWidth'}>
           <Card.Alert
             variant={'neutral'}
@@ -306,5 +315,4 @@ export const AlertExample: Story = {
     );
   },
 } satisfies Story;
-
-Examples.parameters = exampleParameters;
+AlertExample.parameters = exampleParameters;
