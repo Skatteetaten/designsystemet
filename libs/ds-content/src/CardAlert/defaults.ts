@@ -3,7 +3,7 @@ import { ReactElement } from 'react';
 import { HeadingAs } from '@skatteetaten/ds-core-utils';
 import {
   ErrorSVGpath,
-  InfoSVGpath,
+  InfoSquareSVGpath,
   WarningSVGpath,
 } from '@skatteetaten/ds-icons';
 
@@ -20,7 +20,7 @@ export const getCardAlertSvgPathDefault = (
       return WarningSVGpath;
     case 'neutral':
     default:
-      return InfoSVGpath;
+      return InfoSquareSVGpath;
   }
 };
 

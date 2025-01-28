@@ -13,7 +13,7 @@ import { SystemSVGPaths } from '../utils/icon.systems';
 Card.Alert.displayName = 'Card.Alert';
 
 const defaultText =
-  'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.';
+  'Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.';
 
 const defaultArgs = {
   children: defaultText,

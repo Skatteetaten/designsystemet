@@ -7,7 +7,7 @@ exports[`Tester/Card/Header WithAttributes play-test 1`] = `
        lang="en"
        data-testid="123ID"
   >
-    Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+    Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
   </div>
 </div>
 `;
@@ -54,7 +54,7 @@ exports[`Tester/Card/Header WithRef play-test 1`] = `
   <div class=" _cardHeader_ddyt8_1"
        id="dummyIdForwardedFromRef"
   >
-    Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+    Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
   </div>
 </div>
 `;

@@ -8,7 +8,7 @@ exports[`Tester/Card/Content WithAttributes play-test 1`] = `
        data-testid="123ID"
   >
     <div>
-      Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+      Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
     </div>
   </div>
 </div>
@@ -57,7 +57,7 @@ exports[`Tester/Card/Content WithCustomClassNames play-test 1`] = `
 <div data-test-block="true">
   <div class="_cardContent_48t19_1 ">
     <div class="dummyClassname">
-      Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+      Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
     </div>
     <div class="_rightContent_48t19_51 dummyClassname">
       høyrejustert innhold
@@ -72,7 +72,7 @@ exports[`Tester/Card/Content WithRef play-test 1`] = `
        id="dummyIdForwardedFromRef"
   >
     <div>
-      Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.
+      Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.
     </div>
   </div>
 </div>

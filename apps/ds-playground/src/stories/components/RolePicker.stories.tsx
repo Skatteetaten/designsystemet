@@ -1,9 +1,10 @@
-import { JSX, useRef, useState } from 'react';
+import { JSX, useRef, useState, MouseEvent } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { User } from '@skatteetaten/ds-layout';
+import { dsI18n, langToLocale } from '@skatteetaten/ds-core-utils';
+import { User, TopBannerExternal } from '@skatteetaten/ds-layout';
 import {
   Business,
   Entity,
@@ -268,50 +269,58 @@ type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {} satisfies Story;
 
-export const Examples: Story = {
+export const WithExternalTopBanner: Story = {
   render: (_args): JSX.Element => {
+    const modalRef = useRef<HTMLDialogElement>(null);
     const [user, setUser] = useState<User>();
-    const rolePickerRef = useRef<HTMLDialogElement>(null);
 
-    const handleEntitySelect: OnEntitySelectHandler = async (
-      entity: Entity
-    ) => {
-      let role: User['role'];
-      if (entity.name === me.name) {
-        role = 'meg';
-      } else if (entity.type === 'Organization') {
-        role = 'virksomhet';
-      } else {
-        role = 'andre';
-      }
+    const handleLanguageClick = (e: MouseEvent<HTMLButtonElement>): void => {
+      const lang = e.currentTarget.lang;
+      dsI18n.changeLanguage(langToLocale[lang]);
+    };
 
-      setUser({
-        role: role,
-        name: entity.name,
-      });
+    const handleLogOut = (): void => {
+      setUser(undefined);
+    };
 
-      return rolePickerRef.current?.close();
+    const handleLogIn = (): void => {
+      modalRef.current?.showModal();
     };
 
     return (
       <>
-        <div className={'flex flexColumn gapXl'}>
-          <Button onClick={() => rolePickerRef.current?.showModal()}>
-            {user?.role === 'meg'
-              ? 'Meg selv'
-              : (user?.name ?? 'Åpne representasjonsvelger')}
-          </Button>
-        </div>
+        <TopBannerExternal
+          user={user}
+          onLanguageClick={handleLanguageClick}
+          onLogInClick={handleLogIn}
+          onLogOutClick={handleLogOut}
+          onUserClick={(): void => modalRef.current?.showModal()}
+        />
         <RolePicker
-          ref={rolePickerRef}
+          ref={modalRef}
           me={me}
           businesses={businesses}
           people={people}
-          onEntitySelect={handleEntitySelect}
-        ></RolePicker>
+          onEntitySelect={async (entity) => {
+            let role: User['role'];
+            if (entity.name === me.name) {
+              role = 'meg';
+            } else if (entity.type === 'Organization') {
+              role = 'virksomhet';
+            } else {
+              role = 'andre';
+            }
+
+            setUser({
+              role: role,
+              name: entity.name,
+            });
+            modalRef.current?.close();
+          }}
+        />
       </>
     );
   },
 } satisfies Story;
 
-Examples.parameters = exampleParameters;
+WithExternalTopBanner.parameters = exampleParameters;

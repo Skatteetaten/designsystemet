@@ -1,4 +1,4 @@
-import { forwardRef, JSX, useRef, useState } from 'react';
+import { forwardRef, JSX, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
@@ -16,7 +16,18 @@ export const RolePickerFilterInput = forwardRef<
   const { t: formsT } = useTranslation('ds_forms', { i18n: dsI18n });
   const { t } = useTranslation('ds_overlays', { i18n: dsI18n });
   const inputRef = useRef<HTMLInputElement>(null);
+  const [liveRegionContent, setLiveRegionContent] = useState('');
   const [showClearButton, setShowClearButton] = useState(!!value);
+
+  useEffect(() => {
+    // Midlertidig tøm innholdet for å tvinge ny kunngjøring
+    setLiveRegionContent('');
+    const timeoutId = setTimeout(() => {
+      setLiveRegionContent(t('rolepicker.SearchResultUpdated'));
+    }, 100); // Kort forsinkelse for å sikre at skjermleseren oppdager endringen
+
+    return (): void => clearTimeout(timeoutId);
+  }, [value, t]);
 
   return (
     <div className={styles.topContainer}>
@@ -32,9 +43,7 @@ export const RolePickerFilterInput = forwardRef<
           aria-live={'assertive'}
           aria-atomic={'true'}
         >
-          {value ? (
-            <span key={value}>{t('rolepicker.SearchResultUpdated')}</span>
-          ) : null}
+          {value ? <span>{liveRegionContent}</span> : null}
         </span>
 
         <div className={styles.inputWrapper}>

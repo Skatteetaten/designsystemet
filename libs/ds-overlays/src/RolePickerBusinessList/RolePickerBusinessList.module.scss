@@ -1,3 +1,5 @@
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
 .businessList {
   display: flex;
   flex-direction: column;
@@ -8,8 +10,13 @@
 
 .checkboxGroup {
   display: flex;
+  flex-direction: column;
   margin: var(--spacing-s) 0;
   gap: var(--spacing-s);
+
+  @media (min-width: breakpoints.$breakpoint-xs) {
+    flex-direction: row;
+  }
 }
 
 .showAllButtonWrapper {
