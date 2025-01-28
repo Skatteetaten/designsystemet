@@ -598,7 +598,7 @@ export const AutoOpen = {
     },
   ],
   render: TemplateWithAutoOpen,
-  name: 'With Auto Ope Close ',
+  name: 'With Auto Open Close ',
   args: {
     variant: 'plain',
   },
