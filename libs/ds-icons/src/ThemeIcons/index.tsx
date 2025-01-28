@@ -4,6 +4,7 @@ export * from './AndreForhold';
 export * from './ArbeidTrygdPensjon';
 export * from './BankLaanForsikring';
 export * from './BoligEiendeler';
+export * from './CarRecycle';
 export * from './ChatbotDetailed';
 export * from './Driftsmidler';
 export * from './DrosjeServering';
