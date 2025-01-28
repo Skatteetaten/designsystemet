@@ -240,10 +240,40 @@ p.bold {
   height: 3rem;
 }
 
-.sucessFill {
-  fill: var(--semantic-success-foreground) !important;
-}
-
 .width400 {
   max-width: 400px;
+}
+
+svg.dangerIcon {
+  fill: var(--semantic-danger-foreground);
+}
+
+svg.blueIcon {
+  fill: var(--semantic-interactive-main);
+}
+
+.paddingXS {
+  padding: var(--spacing-xs);
+}
+
+.flexShrinkZero {
+  flex-shrink: 0;
+}
+
+.cardWidth {
+  width: 254px;
+  min-width: 254px;
+}
+
+.marginLeftS {
+  margin-left: var(--spacing-s);
+}
+
+a.resetLinkStyling {
+  padding: 0;
+  line-height: var(--semantic-line-height-default);
+}
+
+.flexWrap {
+  flex-wrap: wrap;
 }

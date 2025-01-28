@@ -7,7 +7,7 @@ import { category } from '../../../.storybook/helpers';
 Card.Content.displayName = 'Card.Content';
 
 const defaultText =
-  'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.';
+  'Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.';
 
 const defaultArgs = {
   children: defaultText,

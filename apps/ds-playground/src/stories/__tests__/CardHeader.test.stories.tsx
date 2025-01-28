@@ -39,7 +39,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const defaultText =
-  'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.';
+  'Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.';
 
 const defaultArgs = {
   children: defaultText,

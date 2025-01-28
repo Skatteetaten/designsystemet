@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, userEvent, waitFor, within } from '@storybook/test';
 
@@ -52,7 +50,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const defaultText =
-  'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.';
+  'Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.';
 
 const defaultArgs = {
   children: defaultText,
@@ -145,28 +143,6 @@ export const AllVariants = {
     ...defaultArgs,
   },
 } satisfies Story;
-
-const TemplateOnClose: StoryFn<typeof Card.Alert> = (args) => {
-  const [show, setShow] = useState(true);
-  return (
-    <Card>
-      {variantsArr.map((variant, index) => {
-        return (
-          <Card.Alert
-            {...args}
-            key={`card_${index}`}
-            className={'bottomSpacingXL'}
-            variant={variant}
-            showAlert={show}
-            onClose={(): void => setShow(false)}
-          >
-            {args.children}
-          </Card.Alert>
-        );
-      })}
-    </Card>
-  );
-};
 
 export const WithOnClose = {
   name: 'With OnClose',
