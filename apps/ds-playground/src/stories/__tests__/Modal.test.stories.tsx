@@ -1,13 +1,12 @@
-import { useEffect, useRef, JSX, useState } from 'react';
+import { useRef, JSX, useState } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, fireEvent, within, waitFor } from '@storybook/test';
+import { expect, userEvent, fireEvent, within } from '@storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
 import { WarningOutlineIcon } from '@skatteetaten/ds-icons';
-import { TopBannerExternal } from '@skatteetaten/ds-layout';
 import { Modal } from '@skatteetaten/ds-overlays';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
