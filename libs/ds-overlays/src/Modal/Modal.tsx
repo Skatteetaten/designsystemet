@@ -5,7 +5,6 @@ import {
   useRef,
   MouseEvent,
   JSX,
-  useState,
   useEffect,
 } from 'react';
 import { useTranslation } from 'react-i18next';
