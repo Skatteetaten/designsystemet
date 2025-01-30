@@ -189,7 +189,6 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
         }}
         onMouseUp={handleMouseEvent}
         onMouseDown={handleMouseEvent}
-        onClose={() => console.log(`lukker modal`)}
       >
         <div tabIndex={-1} className={styles.modalContainer}>
           {!hideCloseButton && (
