@@ -5,7 +5,6 @@ import {
   useRef,
   MouseEvent,
   JSX,
-  useState,
   useEffect,
 } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -62,39 +61,6 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
     });
     const modalRef = useRef<HTMLDialogElement>(null);
     useImperativeHandle(ref, () => modalRef?.current as HTMLDialogElement);
-    const [isAutoOpened, setIsAutoOpened] = useState<boolean>(
-      document.activeElement?.nodeName === 'BODY'
-    );
-
-    useEffect(() => {
-      const dialog = modalRef.current;
-      const handleClose = (): void => {
-        if (isAutoOpened) {
-          setIsAutoOpened(false);
-          //TODO skiplink kan ligge i shadowDom. Da kan vi ikke finne den med querySelector
-          // Denne modalen kan også eksistere i en shadowDom. ;-)
-          const skipLink: HTMLAnchorElement | null =
-            document.querySelector('a[data-skip-link]');
-          if (skipLink) {
-            skipLink?.focus();
-          } else {
-            const prevTabIndex = document.body.tabIndex;
-            document.body.tabIndex = -1;
-            document.body.focus();
-            document.body.tabIndex = prevTabIndex;
-          }
-        }
-      };
-
-      if (dialog) {
-        dialog.addEventListener('close', handleClose);
-      }
-      return (): void => {
-        if (dialog) {
-          dialog.removeEventListener('close', handleClose);
-        }
-      };
-    }, [isAutoOpened]);
 
     useEffect(() => {
       /**
