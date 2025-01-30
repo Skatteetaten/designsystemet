@@ -1,13 +1,14 @@
 import { useState } from 'react';
 
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+
 import { dsI18n, headingAsArr } from '@skatteetaten/ds-core-utils';
 import { AccountEnkSVGpath, CalendarSVGpath } from '@skatteetaten/ds-icons';
 import {
   NavigationTile,
   NavigationTileProps,
 } from '@skatteetaten/ds-navigation';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -44,9 +45,11 @@ const meta = {
     title: { control: 'text', table: { disable: true } },
     titleAs: { table: { disable: true } },
     description: { control: 'text', table: { disable: true } },
+    hasSpinner: { table: { disable: true } },
     isExternal: { table: { disable: true } },
     hideArrowIcon: { table: { disable: true } },
     size: { table: { disable: true } },
+    spinnerTitle: { table: { disable: true } },
     svgPath: {
       table: { disable: true },
       options: Object.keys(SystemSVGPaths),
@@ -201,7 +204,7 @@ export const WithIcon = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const svg = link.querySelector('svg');
     await expect(svg).toHaveAttribute('aria-hidden', 'true');
     await expect(svg).toHaveAttribute('viewBox', systemIconViewBox);
@@ -222,7 +225,7 @@ export const WithExternalIcon = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const svg = link.querySelector('svg');
     await expect(svg).toHaveAttribute(
       'aria-label',
@@ -402,5 +405,49 @@ export const WithCustomClassNames = {
     await expect(container).toHaveClass('dummyClassname');
     await expect(title).toHaveClass('dummyClassname');
     await expect(description).toHaveClass('dummyClassname');
+  },
+} satisfies Story;
+
+const TemplateWithSpinner: StoryFn<typeof NavigationTile> = (args) => (
+  <>
+    <NavigationTile
+      {...args}
+      className={'bottomSpacingXL'}
+      size={'extraLarge'}
+      onClick={(e): void => e.preventDefault()}
+    />
+    <NavigationTile
+      {...args}
+      className={'bottomSpacingXL'}
+      onClick={(e): void => e.preventDefault()}
+    />
+    <NavigationTile
+      {...args}
+      size={'medium'}
+      onClick={(e): void => e.preventDefault()}
+    />
+  </>
+);
+
+export const WithSpinner = {
+  render: TemplateWithSpinner,
+  name: 'With Spinner',
+  args: {
+    ...defaultArgs,
+    hasSpinner: true,
+    description: 'Eksempel på undertittel. Denne kan være litt lengre.',
+  },
+  argTypes: {
+    hasSpinner: { table: { disable: false } },
+    spinnerTitle: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: {
+      focus: `${wrapper} > a:first-child`,
+      click: `${wrapper} > a:first-child`,
+    },
+    viewport: {
+      defaultViewport: '--mobile',
+    },
   },
 } satisfies Story;

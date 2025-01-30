@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { readFileSync } from 'fs';
 
 // Reading the SWC compilation config and remove the "exclude"
@@ -18,10 +17,14 @@ swcJestConfig.module.noInterop = false;
 
 export default {
   displayName: 'ds-content',
-  preset: '../../jest.preset.js',
+  preset: '../../jest.preset.cjs',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   transform: {
     '^.+\\.[tj]sx?$': ['@swc/jest', swcJestConfig],
+  },
+  transformIgnorePatterns: ['node_modules/(?!@skatteetaten/ds-icons)'],
+  moduleNameMapper: {
+    '\\.svg$': '<rootDir>/../../__mocks__/fileMock.js',
   },
   coverageDirectory: '../../coverage/libs/ds-content',
 };

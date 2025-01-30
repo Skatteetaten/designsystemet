@@ -1,5 +1,6 @@
-import { Tabs } from '@skatteetaten/ds-collections';
 import { Meta, StoryObj } from '@storybook/react';
+
+import { Tabs } from '@skatteetaten/ds-collections';
 
 import { category } from '../../../.storybook/helpers';
 

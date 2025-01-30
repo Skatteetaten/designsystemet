@@ -1,5 +1,6 @@
-import { Icon } from '@skatteetaten/ds-icons';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
+
+import { Icon } from '@skatteetaten/ds-icons';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { ThemeSVGPaths } from '../utils/icon.themes';
@@ -33,7 +34,7 @@ type Story = StoryObj<typeof meta>;
 const TemplateSystemIcons: StoryFn<typeof Icon> = () => (
   <>
     {Object.entries(SystemSVGPaths).map(([svgPathName, svgPath]) => (
-      <Icon key={svgPathName} svgPath={svgPath} />
+      <Icon key={svgPathName} svgPath={svgPath} size={'large'} />
     ))}
   </>
 );

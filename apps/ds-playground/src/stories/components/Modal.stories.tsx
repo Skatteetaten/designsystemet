@@ -1,8 +1,15 @@
-import { useRef, JSX } from 'react';
+import { useRef, JSX, useEffect, useState } from 'react';
+
+import { Meta, StoryObj } from '@storybook/react';
 
 import { Button, Link } from '@skatteetaten/ds-buttons';
+import { dsI18n, useMediaQuery } from '@skatteetaten/ds-core-utils';
 import { RadioGroup } from '@skatteetaten/ds-forms';
-import { InfoOutlineSVGpath } from '@skatteetaten/ds-icons';
+import {
+  InfoOutlineSVGpath,
+  UpdateSVGpath,
+  WarningOutlineIcon,
+} from '@skatteetaten/ds-icons';
 import {
   Modal,
   getModalDismissOnEscDefault,
@@ -10,9 +17,10 @@ import {
   getModalPaddingDefault,
   getModalVariantDefault,
 } from '@skatteetaten/ds-overlays';
-import { Paragraph } from '@skatteetaten/ds-typography';
-import { Meta, StoryObj } from '@storybook/react';
+import { List, Paragraph } from '@skatteetaten/ds-typography';
 
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import skeLogo from '../../../../../libs/ds-core-utils/src/SkatteetatenLogo/SKESquare40.svg';
 import { category } from '../../../.storybook/helpers';
 import farmerIllustration from '../../assets/farmer-illustration.svg';
 import waitIllustration from '../../assets/wait-alert-illustration.png';
@@ -60,6 +68,18 @@ const meta = {
         defaultValue: { summary: getModalPaddingDefault() },
       },
     },
+    renderIcon: {
+      table: { category: category.props },
+      control: 'select',
+      options: ['', 'Icon', 'Logo'],
+      mapping: {
+        '': '',
+        Icon: (): JSX.Element => <WarningOutlineIcon size={'extraLarge'} />,
+        Logo: (): JSX.Element => (
+          <img src={skeLogo} alt={'Skatteetaten logo'} className={'logo'} />
+        ),
+      },
+    },
     shadowRootNode: {
       control: false,
       table: { control: false, category: category.props },
@@ -102,19 +122,13 @@ export const Preview: Story = {
   },
 } satisfies Story;
 
-export const Examples: Story = {
+export const Samtykkemodal: Story = {
   render: (_args): JSX.Element => {
     const refModal = useRef<HTMLDialogElement>(null);
-    const refModalRadioGroup = useRef<HTMLDialogElement>(null);
-    const refModalImportant = useRef<HTMLDialogElement>(null);
-    const refModalWait = useRef<HTMLDialogElement>(null);
 
     return (
       <>
-        <Button
-          className={'exampleSpacing'}
-          onClick={(): void => refModal.current?.showModal()}
-        >
+        <Button onClick={(): void => refModal.current?.showModal()}>
           {'Nye opplysninger'}
         </Button>
         <Modal
@@ -136,38 +150,19 @@ export const Examples: Story = {
             </Button>
           </div>
         </Modal>
+      </>
+    );
+  },
+} satisfies Story;
+Samtykkemodal.parameters = exampleParameters;
 
-        <Button
-          className={'exampleSpacing'}
-          onClick={(): void => refModalRadioGroup.current?.showModal()}
-        >
-          {'Velg rolle'}
-        </Button>
-        <Modal
-          ref={refModalRadioGroup}
-          title={'Dette er dine roller'}
-          onClose={() => {
-            console.log('lukker mod2');
-          }}
-        >
-          <RadioGroup legend={'Velge en rolle'}>
-            <RadioGroup.Radio value={'meg'}>
-              {'Innlogget som meg selv'}
-            </RadioGroup.Radio>
-            <RadioGroup.Radio value={'andre'}>
-              {'Innlogget som annen person'}
-            </RadioGroup.Radio>
-            <RadioGroup.Radio value={'virksomhet'}>
-              {'Innlogget som virksomhet'}
-            </RadioGroup.Radio>
-          </RadioGroup>
-          <Button onClick={(): void => refModalRadioGroup.current?.close()}>
-            {'Ok'}
-          </Button>
-        </Modal>
+export const ViktigMelding: Story = {
+  render: (_args): JSX.Element => {
+    const refModalImportant = useRef<HTMLDialogElement>(null);
 
+    return (
+      <>
         <Button
-          className={'exampleSpacing'}
           variant={'tertiary'}
           svgPath={InfoOutlineSVGpath}
           onClick={(): void => refModalImportant.current?.showModal()}
@@ -193,37 +188,151 @@ export const Examples: Story = {
             </Link>
           </div>
         </Modal>
+      </>
+    );
+  },
+} satisfies Story;
+ViktigMelding.parameters = exampleParameters;
 
+export const Ventevarsel: Story = {
+  render: (_args): JSX.Element => {
+    const refModalWait = useRef<HTMLDialogElement>(null);
+    const [time, setTime] = useState<number>(1200000);
+    const lastActivity = useRef(new Date().getTime());
+
+    useEffect(() => {
+      const checkExpiredTime = (): void => {
+        const timePassed = new Date().getTime() - lastActivity.current;
+
+        if (timePassed >= time) {
+          refModalWait.current?.showModal();
+        }
+      };
+      const intervalId = setInterval(checkExpiredTime, 1000);
+      return (): void => clearInterval(intervalId);
+    }, [time]);
+
+    useEffect(() => {
+      const { signal, abort } = new AbortController();
+
+      window.addEventListener('keydown', resetTimer, { signal });
+      window.addEventListener('mousemove', resetTimer, { signal });
+      window.addEventListener('scroll', resetTimer, { signal });
+      window.addEventListener('resize', resetTimer, { signal });
+
+      return (): void => {
+        abort();
+      };
+    }, []);
+
+    const resetTimer = (): void => {
+      lastActivity.current = new Date().getTime();
+    };
+
+    const closeDialog = (): void => {
+      refModalWait.current?.close();
+      resetTimer();
+    };
+
+    return (
+      <>
         <Button
-          className={'exampleSpacing'}
-          variant={'tertiary'}
-          svgPath={InfoOutlineSVGpath}
+          variant={'secondary'}
+          className={'bottomSpacingXL'}
           onClick={(): void => refModalWait.current?.showModal()}
         >
           {'Vis ventevarsel'}
         </Button>
+        <RadioGroup
+          legend={'Ventevarseleksempel åpnes automatisk etter'}
+          helpText={
+            'Hver gang du beveger musepekeren, scroller eller gjør et tastetrykk, resettes timeren.'
+          }
+          selectedValue={time}
+          onChange={(e): void => setTime(Number(e.target.value))}
+        >
+          <RadioGroup.Radio value={1200000}>
+            {'20 minutter (anbefalt i løsninger)'}
+          </RadioGroup.Radio>
+          <RadioGroup.Radio value={5000}>{'5 sekunder'}</RadioGroup.Radio>
+        </RadioGroup>
         <Modal
           ref={refModalWait}
-          title={'Hei, er du fortsatt her?'}
+          title={dsI18n.t('ds_overlays:modal.WaitNoticeTitle')}
           imageSource={waitIllustration}
-          imageSourceAltText={
-            'Illustrasjon av travel person med seks armer, opptatt med kontorarbeid.'
-          }
+          imageSourceAltText={dsI18n.t(
+            'ds_overlays:modal.WaitNoticeImageAltText'
+          )}
+          onClose={closeDialog}
         >
           <Paragraph hasSpacing>
-            {
-              'Vi ser at du ikke har gjort noe på nettsiden på ei stund. Er du fortsatt her?'
-            }
+            {dsI18n.t('ds_overlays:modal.WaitNoticeParagraph')}
           </Paragraph>
           <Button
-            className={'width100'}
-            onClick={(): void => refModalWait.current?.close()}
+            onClick={(): void => {
+              closeDialog();
+            }}
           >
-            {'Ja'}
+            {dsI18n.t('ds_overlays:modal.StayLoggedIn')}
           </Button>
         </Modal>
       </>
     );
   },
 } satisfies Story;
-Examples.parameters = exampleParameters;
+Ventevarsel.parameters = exampleParameters;
+
+export const Feilmeldingsmodal: Story = {
+  render: (_args): JSX.Element => {
+    const refModalFeil = useRef<HTMLDialogElement>(null);
+    const isBigScreen = useMediaQuery('(min-width: 640px)');
+
+    return (
+      <>
+        <Button
+          variant={'danger'}
+          onClick={(): void => refModalFeil.current?.showModal()}
+        >
+          {'Åpne feilmeldingsmodal'}
+        </Button>
+        <Modal
+          ref={refModalFeil}
+          title={'Beklager, noe gikk galt'}
+          padding={isBigScreen ? 'mega' : 'm'}
+          renderIcon={(): JSX.Element => (
+            <WarningOutlineIcon size={'extraLarge'} />
+          )}
+        >
+          <Paragraph hasSpacing>
+            {'Vi klarte ikke å hente skjemet akkurat nå.'}
+          </Paragraph>
+          <Paragraph className={'bold'}>{'Du kan prøve å'}</Paragraph>
+          <List hasSpacing>
+            <List.Element>
+              {'vente noen minutter og '}
+              <a href={'#link'}>{'laste inn siden på nytt'}</a>
+            </List.Element>
+            <List.Element>
+              <a href={'#link'}>{'gå tilbake til forrige side'}</a>
+            </List.Element>
+          </List>
+          <Paragraph hasSpacing>
+            {'Hvis du fortsatt har problemer kan du '}
+            <a href={'#link'}>{'kontakte oss'}</a>
+          </Paragraph>
+          <Button
+            className={'exampleSpacing'}
+            svgPath={UpdateSVGpath}
+            onClick={(): void => refModalFeil.current?.close()}
+          >
+            {'Last inn siden på nytt'}
+          </Button>
+          <Button variant={'secondary'} href={'#'}>
+            {'Gå til forsiden'}
+          </Button>
+        </Modal>
+      </>
+    );
+  },
+} satisfies Story;
+Feilmeldingsmodal.parameters = exampleParameters;

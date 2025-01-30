@@ -1,5 +1,9 @@
 import { useState, JSX } from 'react';
 
+import { useArgs } from '@storybook/preview-api';
+import { Meta, StoryObj } from '@storybook/react';
+import { isWithinInterval, format } from 'date-fns';
+
 import {
   dsI18n,
   formArrSize,
@@ -12,9 +16,6 @@ import {
   getDatePickerDateFormat,
   TextField,
 } from '@skatteetaten/ds-forms';
-import { useArgs } from '@storybook/preview-api';
-import { Meta, StoryObj } from '@storybook/react';
-import { isWithinInterval, format } from 'date-fns';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -119,7 +120,7 @@ export const Preview: Story = {
     args.initialPickerDate =
       args.initialPickerDate === undefined
         ? undefined
-        : new Date(args.initialPickerDate as Date);
+        : new Date(args.initialPickerDate);
 
     const handleSelectDate = (date: Date | null): void => {
       args.onSelectDate?.(date);

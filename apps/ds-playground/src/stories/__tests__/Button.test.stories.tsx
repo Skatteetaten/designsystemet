@@ -1,13 +1,14 @@
 import { FocusEvent, MouseEvent, useState } from 'react';
 
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+
 import { Button, buttonVariantArr } from '@skatteetaten/ds-buttons';
 import {
   dsI18n,
   getCommonButtonTypeDefault,
 } from '@skatteetaten/ds-core-utils';
 import { SendSVGpath } from '@skatteetaten/ds-icons';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -229,7 +230,7 @@ export const WithIcon = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const svg = button.querySelector('svg');
     await expect(svg).toHaveAttribute('viewBox', '0 0 24 24');
     await expect(svg).toHaveAttribute('aria-hidden', 'true');
@@ -493,7 +494,7 @@ export const WithExternalIcon = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const megaButton = canvas.getByRole('button');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const svg = megaButton.querySelector('svg');
     await expect(svg).toHaveAttribute(
       'aria-label',

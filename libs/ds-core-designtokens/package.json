@@ -1,9 +1,10 @@
 {
   "name": "@skatteetaten/ds-core-designtokens",
   "groupId": "no.skatteetaten.aurora",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "license": "Apache-2.0",
   "homepage": "https://www.skatteetaten.no/stilogtone/designsystemet/",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Skatteetaten/designsystemet.git"
@@ -12,7 +13,8 @@
     "registry": "https://nexus.sits.no/repository/npm-internal/"
   },
   "devDependencies": {
-    "postcss": "^8"
+    "postcss": "^8",
+    "postcss-js": "^4"
   },
   "scripts": {},
   "dependencies": {}

@@ -1,5 +1,8 @@
 import { Fragment, JSX, useEffect, useRef } from 'react';
 
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { expect, userEvent, within } from '@storybook/test';
+
 import { Button } from '@skatteetaten/ds-buttons';
 import {
   Panel,
@@ -14,8 +17,6 @@ import {
 } from '@skatteetaten/ds-core-utils';
 import { InfoIcon } from '@skatteetaten/ds-icons';
 import { Paragraph } from '@skatteetaten/ds-typography';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, userEvent, within } from '@storybook/test';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 import farmerIllustration from '../../assets/farmer-illustration.svg';

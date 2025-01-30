@@ -1,13 +1,14 @@
 import { JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+import { expect, within } from '@storybook/test';
+
 import {
   Spinner,
   spinnerColorArr,
   spinnerPositionArr,
   spinnerSizeArr,
 } from '@skatteetaten/ds-progress';
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
 
 const meta = {
   component: Spinner,
@@ -40,6 +41,8 @@ const meta = {
       control: 'inline-radio',
       options: [...spinnerColorArr],
     },
+    classNames: { table: { disable: true } },
+    percentComplete: { table: { disable: true } },
     hideTitle: {
       control: 'boolean',
       table: { disable: true },
@@ -212,5 +215,26 @@ export const WithHideText = {
     // vi må bruke findBy i stedet for getBY her siden det er en liten delay før teksten rendres
     const spinnerTitleElement = await canvas.findByText(spinnerTitle);
     await expect(spinnerTitleElement).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithPercent = {
+  name: 'With PercentComplete (B3)',
+  args: {
+    percentComplete: 50,
+    children: spinnerTitle,
+  },
+  argTypes: {
+    percentComplete: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const spinner = canvas.getByRole('progressbar');
+    await expect(canvas.getByText('50 %')).toBeInTheDocument();
+    await expect(spinner).toHaveAttribute('aria-busy', 'true');
+    await expect(spinner).toHaveAttribute('aria-valuenow', '50');
+    await expect(spinner).toHaveAttribute('aria-valuemin', '0');
+    await expect(spinner).toHaveAttribute('aria-valuemax', '100');
+    await expect(spinner).toBeInTheDocument();
   },
 } satisfies Story;

@@ -15,7 +15,7 @@
         "project": "libs/ds-typography/package.json",
         "entryFile": "libs/ds-typography/src/index.ts",
         "external": ["react/jsx-runtime"],
-        "rollupConfig": ["libs/ds-typography/rollup.config.js"],
+        "rollupConfig": ["libs/ds-typography/rollup.config.cjs"],
         "compiler": "swc",
         "assets": [
           {

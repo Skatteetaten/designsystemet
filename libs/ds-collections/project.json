@@ -19,7 +19,7 @@
         "project": "libs/ds-collections/package.json",
         "entryFile": "libs/ds-collections/src/index.ts",
         "external": ["react/jsx-runtime"],
-        "rollupConfig": ["libs/ds-collections/rollup.config.js"],
+        "rollupConfig": ["libs/ds-collections/rollup.config.cjs"],
         "compiler": "swc",
         "assets": [
           {

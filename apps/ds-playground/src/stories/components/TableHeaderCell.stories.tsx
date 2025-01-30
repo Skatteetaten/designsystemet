@@ -1,9 +1,10 @@
+import { Meta, StoryObj } from '@storybook/react';
+
 import {
   getHeaderCellAsDefault,
   getTableCellAlignmentDefault,
   Table,
 } from '@skatteetaten/ds-table';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 

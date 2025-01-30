@@ -1,5 +1,6 @@
-import { RadioGroup } from '@skatteetaten/ds-forms';
 import { Meta, StoryObj } from '@storybook/react';
+
+import { RadioGroup } from '@skatteetaten/ds-forms';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 

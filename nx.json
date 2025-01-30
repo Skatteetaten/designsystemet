@@ -10,15 +10,15 @@
     "sharedGlobals": [
       "{workspaceRoot}/babel.config.json",
       "{workspaceRoot}/.stylelintrc.json",
-      "{workspaceRoot}/libs/ds-dev-config/build/rollup-config-factory.js",
-      "{workspaceRoot}/libs/ds-dev-config/config/designsystem-prettierrc.json"
+      "{workspaceRoot}/libs/ds-dev-config/build/rollup-config-factory.cjs",
+      "{workspaceRoot}/libs/ds-dev-config/config/**/*"
     ],
     "production": [
       "default",
       "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
       "!{projectRoot}/tsconfig.spec.json",
       "!{projectRoot}/jest.config.[jt]s",
-      "!{projectRoot}/.eslintrc.json",
+      "!{projectRoot}/eslint.config.js",
       "!{projectRoot}/.storybook/**/*",
       "!{projectRoot}/**/*.stories.@(js|jsx|ts|tsx|mdx)",
       "!{projectRoot}/.stylelintrc(.(json|yml|yaml|js))?",
@@ -34,7 +34,7 @@
       "cache": true
     },
     "test": {
-      "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"],
+      "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.cjs"],
       "cache": true
     },
     "stylelint": {
@@ -48,7 +48,7 @@
       "cache": true
     },
     "@nx/jest:jest": {
-      "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"],
+      "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.cjs"],
       "cache": true,
       "options": {
         "passWithNoTests": true
@@ -61,7 +61,7 @@
       }
     },
     "@nx/eslint:lint": {
-      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
+      "inputs": ["default", "{workspaceRoot}/eslint.config.js"],
       "cache": true
     },
     "@nx/rollup:rollup": {

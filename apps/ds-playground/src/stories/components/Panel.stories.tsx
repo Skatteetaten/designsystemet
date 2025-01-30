@@ -1,5 +1,6 @@
-/* eslint-disable sonarjs/no-duplicate-string */
 import { JSX, useRef } from 'react';
+
+import { Meta, StoryObj } from '@storybook/react';
 
 import { MegaButton, Link, Button } from '@skatteetaten/ds-buttons';
 import {
@@ -18,7 +19,6 @@ import {
 } from '@skatteetaten/ds-core-utils';
 import { CheckIcon } from '@skatteetaten/ds-icons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import farmerIllustration from '../../assets/farmer-illustration.svg';
@@ -75,8 +75,13 @@ const meta = {
       },
     },
     renderIcon: {
-      control: { disable: true },
       table: { category: category.props },
+      control: 'select',
+      options: ['', 'CheckIcon'],
+      mapping: {
+        '': '',
+        CheckIcon: (): JSX.Element => <CheckIcon size={'extraLarge'} />,
+      },
     },
     spacing: {
       control: 'inline-radio',

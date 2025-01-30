@@ -1,8 +1,9 @@
 import { JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Table, getTableSumAlignmentDefault } from '@skatteetaten/ds-table';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 

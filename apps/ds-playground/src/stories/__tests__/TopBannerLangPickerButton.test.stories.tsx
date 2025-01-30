@@ -108,7 +108,7 @@ export const Defaults = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button', { name: buttonText });
     await expect(button).toBeInTheDocument();
-    // eslint-disable-next-line testing-library/no-node-access
+
     const flagSvg = button.querySelector('svg');
     await expect(flagSvg).toBeInTheDocument();
     await expect(flagSvg).toHaveAttribute('aria-hidden', 'true');
@@ -128,7 +128,7 @@ export const WithAriaCurrent = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button', { name: buttonText });
     await expect(button).toHaveAttribute('aria-current', 'true');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const checkSvg = button.querySelectorAll('svg')[1];
     await expect(checkSvg).toBeInTheDocument();
     await expect(checkSvg).toHaveAttribute('aria-hidden', 'true');

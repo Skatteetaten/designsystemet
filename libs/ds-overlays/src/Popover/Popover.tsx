@@ -11,6 +11,7 @@ import {
   UseFloatingReturn,
   useInteractions,
 } from '@floating-ui/react';
+
 import { useMediaQuery } from '@skatteetaten/ds-core-utils';
 
 import {

@@ -1,5 +1,9 @@
 import { FocusEvent, ChangeEvent, useState, useRef, JSX } from 'react';
 
+import { useArgs } from '@storybook/preview-api';
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+
 import { Button } from '@skatteetaten/ds-buttons';
 import { formArrSize } from '@skatteetaten/ds-core-utils';
 import {
@@ -8,9 +12,6 @@ import {
   textFieldAsArr,
 } from '@skatteetaten/ds-forms';
 import { Modal } from '@skatteetaten/ds-overlays';
-import { useArgs } from '@storybook/preview-api';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
 
 import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
 import { category } from '../../../.storybook/helpers';
@@ -177,10 +178,10 @@ export const WithCustomClassNames = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    // eslint-disable-next-line testing-library/no-node-access
+
     const container = canvasElement.querySelector(`${wrapper} > div`);
     const label = canvas.getByText(defaultLabelText);
-    // eslint-disable-next-line testing-library/no-node-access
+
     const errorMessageContainer = canvasElement.querySelector(
       '[id^=textFieldErrorId]>div'
     );
@@ -216,7 +217,7 @@ export const Defaults = {
     await expect(textbox).not.toBeRequired();
     await expect(textbox).not.toHaveAttribute('aria-invalid');
     await expect(textbox).not.toHaveAttribute('aria-describedby');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const errorMessageContainer = canvasElement.querySelector(
       '[id^=textFieldErrorId]'
     );
@@ -497,7 +498,7 @@ export const WithoutError = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const textbox = canvas.getByRole('textbox');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const errorMessageContainer = canvasElement.querySelector(
       '[id^=textFieldErrorId]'
     );

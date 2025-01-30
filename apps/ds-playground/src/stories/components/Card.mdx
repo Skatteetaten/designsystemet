@@ -1,0 +1,39 @@
+import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import * as CardStories from './Card.stories';
+import { VersionBadge } from '../utils/VersionBadge';
+import { DocIntro } from '../utils/DocIntro';
+
+<Meta of={CardStories} />
+
+# Card (beta)
+
+<VersionBadge packageName={'content'} />
+
+<DocIntro
+  name="Card"
+  url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/card/"
+/>
+
+Card er i Beta. Det kan komme endringer.
+
+<Primary />
+
+```tsx
+import { Card } from '@skatteetaten/ds-content';
+```
+
+<Controls />
+
+## Skjemakort
+
+<Canvas of={CardStories.Examples} />
+
+## Liste med filer
+
+<Canvas of={CardStories.FileListExample} />
+
+## Hvordan bruke Card.Alert
+
+Pass på å sette riktig heading-nivå i Card.Alert. Vanligvis vil dette være samme nivå som hovedheading i Card. Når Card.Alert lukkes må man huske å sette fokus. Vanligvis kan fokus settes til hovedheading i Card.
+
+<Canvas of={CardStories.AlertExample} />

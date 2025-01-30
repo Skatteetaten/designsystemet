@@ -1,8 +1,12 @@
+import { useState } from 'react';
+
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { expect, userEvent, waitFor, within } from '@storybook/test';
+
+import { Button } from '@skatteetaten/ds-buttons';
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
 import { ErrorSummary, TextField } from '@skatteetaten/ds-forms';
 import { Paragraph } from '@skatteetaten/ds-typography';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, userEvent, waitFor, within } from '@storybook/test';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
@@ -113,7 +117,7 @@ export const Defaults = {
     await expect(container).toHaveAttribute('aria-live', 'assertive');
     await expect(container).toHaveAttribute('aria-atomic');
     await expect(container).toHaveAttribute('tabIndex', '-1');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const errorSummary = container.querySelector('div');
     await expect(errorSummary).not.toBeInTheDocument();
   },
@@ -251,7 +255,6 @@ export const WithInput = {
 } satisfies Story;
 
 const TemplateWithShadowRootNode: StoryFn<typeof ErrorSummary> = () => {
-  // eslint-disable-next-line testing-library/no-node-access
   const element = document.querySelector('errorsummary-customelement');
   const shadowRoot = element?.shadowRoot;
   return (
@@ -292,21 +295,65 @@ export const WithShadowRootNode = {
     const canvas = within(canvasElement);
     // errorLink finnes ikke utenfor shadowDom
     await expect(canvas.queryByRole('link')).not.toBeInTheDocument();
-    // eslint-disable-next-line testing-library/no-node-access
+
     const customElement = canvasElement.querySelector(
       `errorsummary-customelement`
     );
     await expect(customElement).toBeInTheDocument();
     const errorLink =
-      // eslint-disable-next-line testing-library/no-node-access
       customElement?.shadowRoot && customElement.shadowRoot.querySelector('a');
     await expect(errorLink).toBeInTheDocument();
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     await userEvent.click(errorLink!);
     const input =
       customElement?.shadowRoot &&
-      // eslint-disable-next-line testing-library/no-node-access
       customElement.shadowRoot.querySelector('input:focus');
     await expect(input).toBeInTheDocument();
+  },
+} satisfies Story;
+
+const TemplateWithFocus: StoryFn<typeof ErrorSummary> = () => {
+  const [state, setState] = useState({
+    hasError: false,
+  });
+  return (
+    <>
+      <TextField
+        id={'input_aar'}
+        label={'År'}
+        value={1009}
+        errorMessage={'Inntekståret må være etter 2008'}
+        required
+      />
+      <ErrorSummary id={'errorSummary1'} showErrorSummary={state.hasError}>
+        <ErrorSummary.Error referenceId={'input_aar'}>
+          {'Inntekståret må være etter 2008'}
+        </ErrorSummary.Error>
+      </ErrorSummary>
+      <Button
+        className={'topSpacingXL'}
+        onClick={(): void => {
+          setState({ hasError: !state.hasError });
+          setTimeout((): void => {
+            const el = document.getElementById('errorSummary1');
+            el?.focus();
+          }, 0);
+        }}
+      >
+        {'Send'}
+      </Button>
+    </>
+  );
+};
+
+export const WithFocus = {
+  render: TemplateWithFocus,
+  name: 'With Focus',
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await userEvent.click(button);
+    const errorSummary = canvas.getAllByRole('generic')[4];
+    await waitFor(() => expect(errorSummary).toHaveFocus());
   },
 } satisfies Story;

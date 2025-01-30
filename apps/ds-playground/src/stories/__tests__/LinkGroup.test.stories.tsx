@@ -1,3 +1,6 @@
+import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { expect, within } from '@storybook/test';
+
 import {
   LinkGroup,
   LinkGroupProps,
@@ -5,8 +8,6 @@ import {
 } from '@skatteetaten/ds-buttons';
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { CalendarSVGpath } from '@skatteetaten/ds-icons';
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 

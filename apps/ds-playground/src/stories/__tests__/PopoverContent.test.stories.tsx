@@ -1,9 +1,10 @@
 import { JSX } from 'react';
 
-import { Popover } from '@skatteetaten/ds-overlays';
-import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
+
+import { Popover } from '@skatteetaten/ds-overlays';
+import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 
@@ -113,6 +114,7 @@ export const WithMarkup = {
     },
   },
 } satisfies Story;
+
 export const VerticalScroll = {
   name: 'With Scroll (A7)',
   args: {

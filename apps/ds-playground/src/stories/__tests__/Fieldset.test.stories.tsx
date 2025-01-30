@@ -1,8 +1,9 @@
+import { Meta, StoryObj } from '@storybook/react';
+import { expect, within } from '@storybook/test';
+
 import { Fieldset, FieldsetProps } from '@skatteetaten/ds-forms';
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
-import { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
 
 import {
   loremIpsumWithoutSpaces,
@@ -119,7 +120,7 @@ export const Defaults = {
     const canvas = within(canvasElement);
     const fieldset = canvas.getByRole('group');
     await expect(fieldset.tagName).toBe('FIELDSET');
-    // eslint-disable-next-line testing-library/no-node-access
+
     await expect(fieldset.firstElementChild?.tagName).toBe('LEGEND');
   },
 } satisfies Story;

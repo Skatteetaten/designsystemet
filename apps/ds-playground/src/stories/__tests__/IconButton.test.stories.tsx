@@ -1,20 +1,27 @@
 import { FocusEvent, MouseEvent, useState } from 'react';
 
+import { StoryFn, Meta, StoryObj } from '@storybook/react';
+import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+
 import { IconButton, IconButtonProps } from '@skatteetaten/ds-buttons';
 import {
   getCommonButtonTypeDefault,
   sizeArr,
 } from '@skatteetaten/ds-core-utils';
-import { StoryFn, Meta, StoryObj } from '@storybook/react';
-import { expect, fn, userEvent, waitFor, within } from '@storybook/test';
+import {
+  AttachFileSVGpath,
+  BellOutlineSVGpath,
+  CircleDownSVGpath,
+  DeleteSVGpath,
+} from '@skatteetaten/ds-icons';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
-const defaultSVGPath = Object.values(SystemSVGPaths)[14];
-const alternativeSVGPathFocus = Object.values(SystemSVGPaths)[40];
-const alternativeSVGPathBlur = Object.values(SystemSVGPaths)[15];
-const alternativeSVGPathClick = Object.values(SystemSVGPaths)[52];
+const defaultSVGPath = AttachFileSVGpath;
+const alternativeSVGPathFocus = CircleDownSVGpath;
+const alternativeSVGPathBlur = BellOutlineSVGpath;
+const alternativeSVGPathClick = DeleteSVGpath;
 
 const verifyAttribute =
   (attribute: string, expectedValue: string) =>
@@ -141,7 +148,7 @@ export const Defaults = {
     const canvas = within(canvasElement);
     const iconButton = canvas.getByRole('button');
     expect(iconButton).toHaveAttribute('type', getCommonButtonTypeDefault());
-    // eslint-disable-next-line testing-library/no-node-access
+
     const svg = iconButton.querySelector('svg');
     await expect(svg).toHaveAttribute('viewBox', '0 0 24 24');
     await expect(svg).toHaveAttribute('aria-hidden', 'false');

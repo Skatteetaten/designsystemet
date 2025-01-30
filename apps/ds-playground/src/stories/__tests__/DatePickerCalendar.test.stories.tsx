@@ -1,8 +1,9 @@
 import React from 'react';
 
-import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fireEvent, within } from '@storybook/test';
+
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { DatePickerCalendar } from '../../../../../libs/ds-forms/src/DatePickerCalendar/DatePickerCalendar';
@@ -148,13 +149,13 @@ export const Defaults = {
     ).toBeInTheDocument();
 
     const calendarTable = canvas.getByRole('table');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const caption = calendarTable.querySelector('caption');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const cells = calendarTable.querySelectorAll('td');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const buttons = calendarTable.querySelectorAll('button');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const focusableButtons = calendarTable.querySelectorAll(
       'button[tabindex="0"]'
     );
@@ -193,11 +194,14 @@ export const WithSelectedDate = {
   },
 } satisfies Story;
 
+const minDate = new Date('2024-01-15');
+minDate.setHours(1, 1, 1, 1);
+
 export const WithMinDate = {
   name: 'With MinDate (A3 delvis)',
   args: {
     ...defaultArgs,
-    minDate: new Date('2024-01-15'),
+    minDate,
   },
   argTypes: {
     minDate: { table: { disable: false } },
@@ -205,17 +209,20 @@ export const WithMinDate = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const calendarTable = canvas.getByRole('table');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const disabledButtons = calendarTable.querySelectorAll('button:disabled');
     await expect(disabledButtons.length).toBe(14);
   },
 } satisfies Story;
 
+const maxDate = new Date('2024-01-15');
+maxDate.setHours(1, 1, 1, 1);
+
 export const WithMaxDate = {
   name: 'With MaxDate (A3 delvis)',
   args: {
     ...defaultArgs,
-    maxDate: new Date('2024-01-15'),
+    maxDate,
   },
   argTypes: {
     maxDate: { table: { disable: false } },
@@ -223,7 +230,7 @@ export const WithMaxDate = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const calendarTable = canvas.getByRole('table');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const disabledButtons = calendarTable.querySelectorAll('button:disabled');
     await expect(disabledButtons.length).toBe(20);
   },
@@ -334,7 +341,7 @@ export const WithDisabledDates = {
   play: async ({ args, canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const calendarTable = canvas.getByRole('table');
-    // eslint-disable-next-line testing-library/no-node-access
+
     const disabledButtons = calendarTable.querySelectorAll('button:disabled');
     await expect(disabledButtons.length).toBe(args.disabledDates?.length);
   },

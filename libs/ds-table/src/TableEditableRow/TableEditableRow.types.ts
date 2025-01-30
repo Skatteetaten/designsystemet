@@ -16,7 +16,6 @@ export interface TableEditableRowProps extends BaseProps {
   editableContentRef?: Ref<ElementRef<'span'>>;
   /**
    * rendrer innholdet i redigeringsmodus
-   *
    * @param closeEditing kalles for å lukke raden som redigeres
    */
   editableContent?: (closeEditing: () => void) => ReactNode;

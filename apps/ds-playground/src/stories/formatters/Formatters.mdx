@@ -1,0 +1,111 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as Formatters from './Formatters.stories';
+
+{/* <Meta title="Utilities/FormattersDoc" /> */}
+
+<Meta of={Formatters} />
+
+# Hvordan bruke hjelpefunksjonen _formatter_
+
+Designsystemet tilbyr en funksjon som grupperer en rekke typer tall.
+
+### Organisasjonsnummer
+
+```tsx
+import { formatter } from '@skatteetaten/ds-core-utils';
+
+const organisationNumber = formatter({
+  value: '123456789',
+  type: 'organisationNumber',
+});
+console.log(organisationNumber.value);
+// 123 456 789
+```
+
+### Fødselsnummer / d-nummer
+
+```tsx
+import { formatter } from '@skatteetaten/ds-core-utils';
+const nationalIdentityNumber = formatter({
+  value: '12029412345',
+  type: 'nationalIdentityNumber',
+});
+console.log(nationalIdentityNumber.value);
+// 120294 12345
+```
+
+### Bankkontonummer
+
+```tsx
+import { formatter } from '@skatteetaten/ds-core-utils';
+const bankAccountNumber = formatter({
+  value: '86011117947',
+  type: 'bankAccountNumber',
+});
+
+console.log(bankAccountNumber.value);
+// 8601 11 17947
+```
+
+### Telefonnummer
+
+```tsx
+import { formatter } from '@skatteetaten/ds-core-utils';
+const phoneNumber = formatter({
+  value: '11223344',
+  type: 'phoneNumber',
+});
+console.log(phoneNumber.value);
+// 11 22 33 44
+```
+
+## Grupperingshjelper for org.- fødsels-, konto- og telefonnummer
+
+Fødselsnummer, organisasjonsnummer, kontonummer og telefonnummer viser grupperte siffer som skilles med mellomrom. Nevnte grupperingen er lik for alle språk. F.eks så grupperes organisasjonsnummer med tre og tre siffer. 123 456 789 Den generiske funksjonen tar imot alle typer tegn, fjerner alle tegn som ikke er gyldig med valgt type og retunerer siffer som er gruppert.
+
+F.eks "234,456-890" => "123 456 789"
+
+Fordi formateringsfunksjonen ikke er en controlled component så må vi regne med at input til funksjonen alltid kan inneholde alle typer tegn. Det vil si at returnert verdi fra formateringsfunksjonen alltid må kunne tolkes korrekt hvis brukt som value prop til formatter-funksjonen en gang til.
+
+# Bruk
+
+## Definisjoner
+
+```tsx
+type FormatTypes =
+  | 'nationalIdentityNumber'
+  | 'organisationNumber'
+  | 'bankAccountNumber'
+  | 'phoneNumber';
+
+const maxLengths = {
+  nationalIdentityNumber: 11,
+  organisationNumber: 9,
+  bankAccountNumber: 11,
+  phoneNumber: 10,
+};
+
+export type FormatOptions = {
+  /* nummberlignende streng som parses av formateringsrutinen etter bestemte regler
+  //TODO Beskriv reglene
+  // */
+  value: string;
+  /* bestemmer formatet og noen ganger maksimium-lengden på verdien som returneres */
+  type: FormatTypes;
+};
+
+type FormattingResponse = {
+  /* Formatert tall som brukes for visning.
+  NB. value returnerer bindestrek som minustegn. Ikke unikode \u2212 som
+  Intl.NumberFormat returnerer */
+  value: string;
+};
+
+export const formatter = ({ value, type, locale }: FormatterProps): FormattingResponse => {
+    ...
+}
+```
+
+## Examples
+
+<Canvas of={Formatters.Formatters} />

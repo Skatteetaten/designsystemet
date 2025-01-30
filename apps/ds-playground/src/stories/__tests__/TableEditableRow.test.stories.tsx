@@ -1,6 +1,7 @@
-import { Table } from '@skatteetaten/ds-table';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fireEvent, within } from '@storybook/test';
+
+import { Table } from '@skatteetaten/ds-table';
 
 const meta = {
   component: Table.EditableRow,

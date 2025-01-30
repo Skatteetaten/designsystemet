@@ -1,14 +1,19 @@
-import { useRef, useState, ChangeEvent, MouseEvent, JSX } from 'react';
+import { useRef, useState, MouseEvent, JSX } from 'react';
 
-import { Button, LinkGroup } from '@skatteetaten/ds-buttons';
-import { RadioGroup } from '@skatteetaten/ds-forms';
+import { Meta, StoryObj } from '@storybook/react';
+
+import { LinkGroup } from '@skatteetaten/ds-buttons';
 import {
   TopBannerExternal,
   TopBannerExternalHandle,
   User,
 } from '@skatteetaten/ds-layout';
-import { Modal } from '@skatteetaten/ds-overlays';
-import { Meta, StoryObj } from '@storybook/react';
+import {
+  Business,
+  Paginated,
+  Person,
+  RolePicker,
+} from '@skatteetaten/ds-overlays';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { dsI18n, langToLocale } from '../../../../../libs/ds-core-utils/src';
@@ -17,11 +22,144 @@ import {
   getTopBannerLangPickerLocaleDefault,
   getTopBannerLangPickerShowSamiDefault,
 } from '../../../../../libs/ds-layout/src/TopBannerLangPicker/defaults';
-// eslint-disable-next-line @nx/enforce-module-boundaries
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import customLogo from '../../assets/custom-logo.svg';
 import skeLogo from '../../assets/ske-logo.svg';
 import { exampleParameters } from '../utils/stories.utils';
+
+const me: Person = {
+  name: 'Ola Nordmann',
+  personId: '101010 12345',
+  type: 'Person',
+};
+
+const businesses: Paginated<Business> = {
+  total: 12,
+  list: [
+    {
+      name: 'Costco',
+      organizationNumber: '123456777',
+      isDeleted: false,
+      unitType: 'AS',
+      type: 'Organization',
+      subunits: [
+        {
+          name: 'Google',
+          organizationNumber: '123456789',
+          isDeleted: false,
+          type: 'Organization',
+          unitType: 'AS',
+        },
+        {
+          name: 'Facebook',
+          organizationNumber: '123456790',
+          isDeleted: true,
+          type: 'Organization',
+          unitType: 'AS',
+        },
+      ],
+    },
+    {
+      name: 'Instagram',
+      organizationNumber: '312843211',
+      isDeleted: true,
+      unitType: 'AS',
+      type: 'Organization',
+      subunits: [
+        {
+          name: 'Snapchat',
+          organizationNumber: '123456623',
+          isDeleted: true,
+          type: 'Organization',
+          unitType: 'AS',
+        },
+        {
+          name: 'Statoil',
+          organizationNumber: '312849218',
+          isDeleted: false,
+          type: 'Organization',
+          unitType: 'AS',
+        },
+      ],
+    },
+    {
+      name: 'Samsung',
+      organizationNumber: '312943218',
+      isDeleted: false,
+      type: 'Organization',
+      unitType: 'AS',
+    },
+
+    {
+      name: 'Toshiba',
+      organizationNumber: '312643218',
+      isDeleted: false,
+      type: 'Organization',
+      unitType: 'AS',
+    },
+
+    {
+      name: 'Hitachi',
+      organizationNumber: '312743218',
+      isDeleted: false,
+      type: 'Organization',
+      unitType: 'AS',
+    },
+
+    {
+      name: 'Vanguard',
+      organizationNumber: '332843218',
+      isDeleted: false,
+      type: 'Organization',
+      unitType: 'AS',
+    },
+
+    {
+      name: 'Amazon',
+      organizationNumber: '112843218',
+      isDeleted: false,
+      type: 'Organization',
+      unitType: 'AS',
+    },
+    {
+      name: 'Meta',
+      organizationNumber: '212843218',
+      isDeleted: false,
+      type: 'Organization',
+      unitType: 'AS',
+    },
+  ],
+};
+
+const people: Paginated<Person> = {
+  total: 4,
+  list: [
+    {
+      name: 'Antikvitet presis',
+      personId: '138899 99726',
+      type: 'Person',
+      isDeleted: false,
+    },
+    {
+      name: 'Bønne elegant',
+      personId: '188495 74503',
+      type: 'Person',
+      isDeleted: false,
+    },
+    {
+      name: 'Lomme filosofisk',
+      personId: '088896 74513',
+      type: 'Person',
+      isDeleted: false,
+    },
+    {
+      name: 'Adelsmann varm',
+      personId: '148924 49911',
+      type: 'Person',
+      isDeleted: false,
+    },
+  ],
+};
 
 const meta = {
   component: TopBannerExternal,
@@ -38,6 +176,7 @@ const meta = {
     },
     defaultLocale: {
       table: {
+        control: 'text',
         category: category.props,
         defaultValue: { summary: getTopBannerLangPickerLocaleDefault() },
       },
@@ -105,19 +244,6 @@ export const Examples: Story = {
       modalRef.current?.showModal();
     };
 
-    const handleChangeRole = (e: ChangeEvent<HTMLInputElement>): void => {
-      setIsLoggedIn(true);
-      const role = e.target.value as User['role'];
-      if (role === 'meg') {
-        setUser({ role });
-      } else {
-        setUser({
-          role,
-          name: 'Knotten, Gudleik',
-        });
-      }
-    };
-
     const links = [
       { href: '#storybook-root', text: 'Skatt' },
       { href: '#storybook-root', text: 'Avgift' },
@@ -152,26 +278,28 @@ export const Examples: Story = {
           onLogOutClick={handleLogOut}
           onUserClick={(): void => modalRef.current?.showModal()}
         />
-        <Modal ref={modalRef} title={'Dette er dine roller'}>
-          <RadioGroup
-            legend={'Velge en rolle'}
-            selectedValue={user?.role ?? ''}
-            onChange={handleChangeRole}
-          >
-            <RadioGroup.Radio value={'meg'}>
-              {'Innlogget som meg selv'}
-            </RadioGroup.Radio>
-            <RadioGroup.Radio value={'andre'}>
-              {'Innlogget som annen person'}
-            </RadioGroup.Radio>
-            <RadioGroup.Radio value={'virksomhet'}>
-              {'Innlogget som virksomhet'}
-            </RadioGroup.Radio>
-          </RadioGroup>
-          <Button onClick={(): void => modalRef.current?.close()}>
-            {'Ok'}
-          </Button>
-        </Modal>
+        <RolePicker
+          ref={modalRef}
+          me={me}
+          businesses={businesses}
+          people={people}
+          onEntitySelect={async (entity) => {
+            let role: User['role'];
+            if (entity.name === me.name) {
+              role = 'meg';
+            } else if (entity.type === 'Organization') {
+              role = 'virksomhet';
+            } else {
+              role = 'andre';
+            }
+
+            setUser({
+              role: role,
+              name: entity.name,
+            });
+            modalRef.current?.close();
+          }}
+        />
       </>
     );
   },

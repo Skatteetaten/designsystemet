@@ -22,6 +22,28 @@ import { Accordion } from '@skatteetaten/ds-collections';
 
 <Controls />
 
-## Examples
+## Lazy loading av innhold
 
-<Canvas of={AccordionStories.Examples} />
+Standard oppførsel er at alt innhold i Accordion.Item-komponenten rendres i dom, men skjules med display: none dersom den er lukket. Hvis man ønsker at innholdet ikke rendres før elementet har blitt åpnet, kan man for eksempel bruke følgende wrapper:
+
+```tsx
+const LazyAccordionItem = ({
+  children,
+  ...rest
+}: AccordionItemProps): JSX.Element => {
+  const [opened, setOpened] = useState(false);
+  return (
+    <Accordion.Item {...rest} onClick={() => !opened && setOpened(true)}>
+      {opened ? children : null}
+    </Accordion.Item>
+  );
+};
+```
+
+## I venstremeny
+
+<Canvas of={AccordionStories.LeftMenu} />
+
+## I arbeidsoppgave
+
+<Canvas of={AccordionStories.WorkTask} />

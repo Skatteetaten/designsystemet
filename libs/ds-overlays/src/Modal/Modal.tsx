@@ -46,9 +46,9 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
       padding = getModalPaddingDefault(),
       title,
       variant = getModalVariantDefault(),
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       shadowRootNode,
       onClose,
+      renderIcon,
       children,
     },
     ref
@@ -59,7 +59,6 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
     const statusFlagRef = useRef({
       mouseDownCaptured: false,
     });
-
     const modalRef = useRef<HTMLDialogElement>(null);
     useImperativeHandle(ref, () => modalRef?.current as HTMLDialogElement);
 
@@ -78,10 +77,10 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
     }, [children, dismissOnEsc]);
 
     const isClickOutside = (event: MouseEvent): boolean => {
-      if (!(event.target instanceof HTMLElement)) {
+      if (!(event.currentTarget instanceof HTMLElement)) {
         return true;
       }
-      const rect = event.target.getBoundingClientRect();
+      const rect = event.currentTarget.getBoundingClientRect();
       return (
         rect.left > event.clientX ||
         rect.right < event.clientX ||
@@ -138,6 +137,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
           if (e.key === 'Escape') {
             if (dismissOnEsc) {
               onClose?.();
+              modalRef.current?.close();
             } else {
               e.preventDefault();
             }
@@ -171,6 +171,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
             {variant === 'important' && (
               <SkatteetatenLogo className={styles.modalLogo} />
             )}
+            {renderIcon && <div>{renderIcon?.()}</div>}
             <Heading
               className={`${styles.modalHeading} ${headingNoPaddingClassName} ${hideTitleClassName}`.trim()}
               id={headingId}

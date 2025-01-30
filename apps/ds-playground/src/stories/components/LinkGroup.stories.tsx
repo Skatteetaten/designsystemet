@@ -1,9 +1,10 @@
+import { Meta, StoryObj } from '@storybook/react';
+
 import {
   LinkGroup,
   getLinkGroupVariantDefault,
 } from '@skatteetaten/ds-buttons';
 import { linkColorArr } from '@skatteetaten/ds-core-utils';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';

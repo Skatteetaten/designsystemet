@@ -8,6 +8,7 @@
   "shared.Help": "Hjelp",
   "shared.RequiredField": "Må fyllast ut  ",
   "shared.SecurityAndPrivacy": "Sikkerheit og personvern",
-  "shared.SecurityAndPrivacyURL": "https://www.skatteetaten.no/nn/om-skatteetaten/sikkerhet/",
-  "shared.SkeLogoImageText": "Skatteetaten logo"
+  "shared.SecurityAndPrivacyURL": "https://www.skatteetaten.no/nn/om-skatteetaten/tryggleik-og-personvern/",
+  "shared.SkeLogoImageText": "Skatteetaten logo",
+  "shared.Yes": "Ja"
 }

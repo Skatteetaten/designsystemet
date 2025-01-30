@@ -1,9 +1,10 @@
 import { MouseEvent, useState } from 'react';
 
-import { OpenClose, OpenCloseProps } from '@skatteetaten/ds-collections';
-import { densityArr, headingAsArr } from '@skatteetaten/ds-core-utils';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { expect, fireEvent, within, waitFor, fn } from '@storybook/test';
+
+import { OpenClose, OpenCloseProps } from '@skatteetaten/ds-collections';
+import { densityArr, headingAsArr } from '@skatteetaten/ds-core-utils';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 
@@ -60,7 +61,7 @@ const TemplateWithOnClick: StoryFn<typeof OpenClose> = (args) => {
         args.onClick?.(e);
       }}
     >
-      {/* eslint-disable-next-line testing-library/no-node-access */}
+      {}
       {args.children}
     </OpenClose>
   );
@@ -76,7 +77,7 @@ const TemplateWithChangingTitle: StoryFn<typeof OpenClose> = (args) => {
         setTitle(changedTitle);
       }}
     >
-      {/* eslint-disable-next-line testing-library/no-node-access */}
+      {}
       {args.children}
     </OpenClose>
   );
@@ -92,7 +93,7 @@ const TemplateWithAllHeadings: StoryFn<typeof OpenClose> = (args) => (
           titleAs={headingLevel}
           title={`Heading ${headingLevel}`}
         >
-          {/* eslint-disable-next-line testing-library/no-node-access */}
+          {}
           {args.children}
         </OpenClose>
       );
@@ -181,7 +182,7 @@ export const Defaults = {
     await expect(title).toBeInTheDocument();
     const content = canvas.queryByText(defaultContent);
     await expect(content).not.toBeInTheDocument();
-    // eslint-disable-next-line testing-library/no-node-access
+
     const svg = button.querySelector('svg');
     await expect(svg).toBeInTheDocument();
     await expect(svg).toHaveAttribute('aria-hidden', 'true');
@@ -207,7 +208,7 @@ const TemplateWithContext: StoryFn<typeof OpenClose> = (args) => (
         'har for å besøke hjemmet ditt, ikke for familie som kommer på besøk til din pendlerbolig.'}
     </div>
     <OpenClose {...args}>
-      {/* eslint-disable-next-line testing-library/no-node-access */}
+      {}
       {args.children}
     </OpenClose>
   </>

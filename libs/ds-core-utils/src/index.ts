@@ -6,3 +6,4 @@ export * from './InternalLayout/InternalLayout';
 export * from './i18n';
 export * from './Separator/Separator';
 export * from './hooks/hooks';
+export * from './formatter/formatter';

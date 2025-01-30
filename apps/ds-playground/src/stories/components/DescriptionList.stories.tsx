@@ -1,9 +1,16 @@
+import { JSX } from 'react';
+
+import { Meta, StoryObj } from '@storybook/react';
+
 import { InlineButton, IconButton } from '@skatteetaten/ds-buttons';
 import {
   DescriptionList,
   getDescriptionListSizeDefault,
   getDescriptionDirectionDefault,
   getDescriptionListIsVerticalOnMobileDefault,
+  getDescriptionListVariantDefault,
+  getTermWeightDefault,
+  getDescriptionWeightDefault,
 } from '@skatteetaten/ds-content';
 import { ErrorMessage } from '@skatteetaten/ds-forms';
 import {
@@ -13,7 +20,6 @@ import {
 } from '@skatteetaten/ds-icons';
 import { Popover } from '@skatteetaten/ds-overlays';
 import { Tag } from '@skatteetaten/ds-status';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
@@ -36,7 +42,10 @@ const meta = {
       },
     },
     variant: {
-      table: { category: category.props },
+      table: {
+        category: category.props,
+        defaultValue: { summary: getDescriptionListVariantDefault() },
+      },
     },
     hasSpacing: {
       table: {
@@ -62,11 +71,13 @@ const meta = {
     termWeight: {
       table: {
         category: category.props,
+        defaultValue: { summary: getTermWeightDefault() },
       },
     },
     descriptionWeight: {
       table: {
         category: category.props,
+        defaultValue: { summary: getDescriptionWeightDefault() },
       },
     },
   },

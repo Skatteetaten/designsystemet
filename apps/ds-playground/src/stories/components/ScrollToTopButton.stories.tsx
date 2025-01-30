@@ -1,11 +1,13 @@
 import { JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+
 import {
+  getScrollToMainDefault,
   getVisibilityThresholdDefault,
   ScrollToTopButton,
 } from '@skatteetaten/ds-buttons';
 import { ExternalLayout } from '@skatteetaten/ds-core-utils';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
@@ -23,6 +25,12 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: String(getVisibilityThresholdDefault()) },
+      },
+    },
+    scrollToMain: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: getScrollToMainDefault().toString() },
       },
     },
     shadowRootNode: {

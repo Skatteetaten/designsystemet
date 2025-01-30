@@ -1,3 +1,5 @@
+import { Meta, StoryObj } from '@storybook/react';
+
 import {
   InlineButton,
   getInlineButtonPositionDefault,
@@ -7,7 +9,6 @@ import {
   getCommonButtonTypeDefault,
 } from '@skatteetaten/ds-core-utils';
 import { AddOutlineSVGpath, CancelSVGpath } from '@skatteetaten/ds-icons';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -23,7 +24,7 @@ const meta = {
     spinnerTitle: {
       table: {
         category: category.props,
-        defaultValue: { summary: dsI18n.t('ds_status:spinner.LoadingLabel') },
+        defaultValue: { summary: dsI18n.t('ds_progress:spinner.LoadingLabel') },
       },
     },
     iconPosition: {

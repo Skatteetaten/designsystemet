@@ -1,5 +1,7 @@
 import { JSX } from 'react';
 
+import { Meta, StoryObj } from '@storybook/react';
+
 import { AccountEnkSVGpath } from '@skatteetaten/ds-icons';
 import {
   NavigationTile,
@@ -8,7 +10,6 @@ import {
   getNavigationTileHideArrowDefault,
   getNavigationTileSizeDefault,
 } from '@skatteetaten/ds-navigation';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -34,6 +35,7 @@ const meta = {
       },
     },
     description: { control: 'text', table: { category: category.props } },
+    hasSpinner: { table: { category: category.props } },
     isExternal: { table: { category: category.props } },
     hideArrowIcon: {
       table: {
@@ -50,6 +52,7 @@ const meta = {
         defaultValue: { summary: getNavigationTileSizeDefault() },
       },
     },
+    spinnerTitle: { table: { category: category.props } },
     svgPath: {
       options: Object.keys(SystemSVGPaths),
       mapping: SystemSVGPaths,

@@ -1,4 +1,5 @@
 declare const classNames: {
+  readonly wrapper: 'wrapper';
   readonly errorSummary: 'errorSummary';
   readonly iconContainer: 'iconContainer';
   readonly icon: 'icon';

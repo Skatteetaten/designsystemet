@@ -1,0 +1,91 @@
+@use 'libs/ds-core-utils/src/styles';
+
+.searchContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+}
+
+.topContainer {
+  // Calc = størrelse på knapp (+2px border) + spacing på begge sider
+  --input-padding: var(--spacing-xs)
+    calc(2 * var(--spacing-m) + var(--size-medium) + 2px) var(--spacing-xs)
+    var(--spacing-s);
+}
+
+.label {
+  color: var(--palette-graphite-100);
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--semantic-line-height-input);
+  overflow-wrap: anywhere;
+}
+
+.clearButton {
+  position: absolute;
+  z-index: 10;
+  top: 5px;
+  right: var(--spacing-xl);
+}
+
+.filterIcon {
+  position: absolute;
+  z-index: 10;
+  top: 5px;
+  right: var(--spacing-s);
+  fill: var(--palette-graphite-50);
+}
+
+.inputWrapper {
+  position: relative;
+  flex-grow: 1;
+}
+
+.input {
+  &::-webkit-search-cancel-button {
+    appearance: none;
+  }
+
+  position: relative;
+  width: 100%;
+  padding: var(--input-padding);
+  border: none;
+  border-radius: 0;
+  // stylelint-disable-next-line property-no-vendor-prefix
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--semantic-page-background);
+  box-shadow: inset 0 0 0 1px var(--palette-graphite-100);
+  color: var(--semantic-page-foreground);
+  font-size: var(--font-size-m);
+  line-height: var(--semantic-line-height-input);
+  outline: none;
+  outline-offset: 0;
+
+  &::placeholder {
+    color: var(--palette-graphite-50);
+  }
+
+  &:hover {
+    z-index: 1;
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+    outline: 2px solid var(--semantic-interactive-background);
+  }
+
+  &:has(~ div :focus-within),
+  &:enabled:focus,
+  &:enabled:active {
+    z-index: 1;
+    box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+    outline: 1px solid var(--semantic-interactive-main);
+
+    &::selection {
+      background: var(--semantic-interactive-background);
+    }
+  }
+}
+
+.srOnly {
+  @include styles.sr-only;
+}

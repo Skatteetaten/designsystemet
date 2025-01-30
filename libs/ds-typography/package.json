@@ -1,9 +1,10 @@
 {
   "name": "@skatteetaten/ds-typography",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "groupId": "no.skatteetaten.aurora",
   "homepage": "https://www.skatteetaten.no/stilogtone/designsystemet/",
   "license": "Apache-2.0",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Skatteetaten/designsystemet.git"
@@ -15,7 +16,7 @@
     "i18next": "^23",
     "react": "^18",
     "react-i18next": "^14",
-    "@skatteetaten/ds-core-utils": "1.4.0"
+    "@skatteetaten/ds-core-utils": "1.5.0"
   },
   "scripts": {},
   "dependencies": {},

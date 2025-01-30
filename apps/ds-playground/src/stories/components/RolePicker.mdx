@@ -1,0 +1,27 @@
+import { Meta, Canvas, Primary, Controls } from '@storybook/blocks';
+import * as RolePickerStories from './RolePicker.stories';
+import { VersionBadge } from '../utils/VersionBadge';
+import { DocIntro } from '../utils/DocIntro';
+
+<Meta of={RolePickerStories} />
+
+# RolePicker (Beta)
+
+<VersionBadge packageName={'overlays'} />
+
+<DocIntro
+  name="RolePicker"
+  url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/rolepicker/"
+/>
+
+<Primary />
+
+```tsx
+import { RolePicker } from '@skatteetaten/ds-overlays';
+```
+
+<Controls />
+
+## Examples
+
+<Canvas of={RolePickerStories.WithExternalTopBanner} />
