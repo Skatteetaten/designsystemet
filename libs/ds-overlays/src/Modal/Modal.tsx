@@ -62,9 +62,19 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
     });
     const modalRef = useRef<HTMLDialogElement>(null);
     useImperativeHandle(ref, () => modalRef?.current as HTMLDialogElement);
-    const [isAutoOpened, setIsAutoOpened] = useState<boolean>(
-      document.activeElement?.nodeName === 'BODY'
-    );
+
+    const [isAutoOpened, setIsAutoOpened] = useState<boolean>();
+
+    useEffect(() => {
+      const dialog = modalRef.current;
+      if (dialog) {
+        const originalMethod = dialog.showModal;
+        dialog.showModal = function showModal(...args): void {
+          setIsAutoOpened(document.activeElement?.nodeName === 'BODY');
+          originalMethod.apply(dialog, args);
+        };
+      }
+    }, []);
 
     useEffect(() => {
       const dialog = modalRef.current;
@@ -179,6 +189,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
         }}
         onMouseUp={handleMouseEvent}
         onMouseDown={handleMouseEvent}
+        onClose={() => console.log(`lukker modal`)}
       >
         <div tabIndex={-1} className={styles.modalContainer}>
           {!hideCloseButton && (
