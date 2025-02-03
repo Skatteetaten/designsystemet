@@ -149,7 +149,7 @@ export const RolePicker = forwardRef<HTMLDialogElement, RolePickerProps>(
                 <RolePickerRow
                   id={me.personId}
                   title={t('rolepicker.MeHeading')}
-                  description={me.personId}
+                  description={`${t('rolepicker.PeopleDescriptionPrefix')} ${me.personId}`}
                   svgPath={FavoriteSVGpath}
                   titleAs={'h2'}
                   onClick={() => {

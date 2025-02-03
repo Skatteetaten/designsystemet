@@ -68,7 +68,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                   </svg>
                 </div>
                 <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
-                  101010 12345
+                  Fødsels-/D-nummer 101010 12345
                 </div>
               </a>
               <div aria-live="polite"
@@ -694,7 +694,7 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                   </svg>
                 </div>
                 <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
-                  101010 12345
+                  Fødsels-/D-nummer 101010 12345
                 </div>
               </a>
               <div aria-live="polite"
@@ -1062,7 +1062,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                   </svg>
                 </div>
                 <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
-                  101010 12345
+                  Fødsels-/D-nummer 101010 12345
                 </div>
               </a>
               <div aria-live="polite"
@@ -1689,7 +1689,7 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                   </svg>
                 </div>
                 <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
-                  101010 12345
+                  Fødsels-/D-nummer 101010 12345
                 </div>
               </a>
               <div aria-live="polite"
@@ -2156,7 +2156,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                   </svg>
                 </div>
                 <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
-                  101010 12345
+                  Fødsels-/D-nummer 101010 12345
                 </div>
               </a>
               <div aria-live="polite"
@@ -2783,7 +2783,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                   </svg>
                 </div>
                 <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
-                  101010 12345
+                  Fødsels-/D-nummer 101010 12345
                 </div>
               </a>
               <div aria-live="polite"
@@ -3508,7 +3508,7 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
                   </svg>
                 </div>
                 <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
-                  101010 12345
+                  Fødsels-/D-nummer 101010 12345
                 </div>
               </a>
               <div aria-live="polite"
@@ -3790,7 +3790,7 @@ exports[`Tester/RolePicker WithNoSubunits play-test 1`] = `
                   </svg>
                 </div>
                 <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
-                  101010 12345
+                  Fødsels-/D-nummer 101010 12345
                 </div>
               </a>
               <div aria-live="polite"
@@ -3983,7 +3983,7 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                   </svg>
                 </div>
                 <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
-                  101010 12345
+                  Fødsels-/D-nummer 101010 12345
                 </div>
               </a>
               <div aria-live="polite"
@@ -4446,7 +4446,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                   </svg>
                 </div>
                 <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
-                  101010 12345
+                  Fødsels-/D-nummer 101010 12345
                 </div>
               </a>
               <div aria-live="polite"
@@ -4811,7 +4811,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                   </svg>
                 </div>
                 <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
-                  101010 12345
+                  Fødsels-/D-nummer 101010 12345
                 </div>
               </a>
               <div aria-live="polite"
@@ -6295,7 +6295,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                   </svg>
                 </div>
                 <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
-                  101010 12345
+                  Fødsels-/D-nummer 101010 12345
                 </div>
               </a>
               <div aria-live="polite"
@@ -6905,7 +6905,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                   </svg>
                 </div>
                 <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
-                  101010 12345
+                  Fødsels-/D-nummer 101010 12345
                 </div>
               </a>
               <div aria-live="polite"
@@ -7525,7 +7525,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                   </svg>
                 </div>
                 <div class="_description_1xek8_41 false _descriptionIndented_1xek8_53 undefined">
-                  101010 12345
+                  Fødsels-/D-nummer 101010 12345
                 </div>
               </a>
               <div aria-live="polite"
