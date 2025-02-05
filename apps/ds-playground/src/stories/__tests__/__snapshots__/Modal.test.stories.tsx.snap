@@ -1,5 +1,318 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Tester/Modal AutoOpen play-test 1`] = `
+<div data-test-block="true">
+  <header class>
+    <a href="main"
+       class="_skipLink_1qmlj_1"
+       data-skip-link="ds-skip-link"
+    >
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
+          </path>
+        </svg>
+        Hopp til hovedinnhold
+      </span>
+    </a>
+    <div class="_containerForMainMenu_18mb7_51">
+      <div class="_topContainer_18mb7_2">
+        <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
+           href="https://www.skatteetaten.no/"
+        >
+          <img class="_logo_mobile_1tdet_16"
+               alt="Forside Skatteetaten"
+               src="[REMOVED]"
+          >
+          <img class="_logo_desktop_1tdet_19"
+               alt="Forside Skatteetaten"
+               src="[REMOVED]"
+          >
+        </a>
+        <div class="_contentContainer_18mb7_17">
+          <div class="_content_18mb7_17">
+            <div class=" _container_azp4i_5">
+              <div class>
+              </div>
+              <button class="_button_197zg_1  _menuButton_azp4i_17"
+                      lang="nb"
+                      aria-expanded="false"
+                      type="button"
+              >
+                <span class="_iconWrapper_azp4i_20">
+                  <span class="_flagIcon_azp4i_25">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         aria-hidden="true"
+                         viewbox="0 0 1100 800"
+                         class="_flagIconSvg_azp4i_30"
+                    >
+                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                            style="fill: rgb(255, 255, 255);"
+                      >
+                      </path>
+                      <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </path>
+                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                            style="fill: rgb(0, 40, 104);"
+                      >
+                      </path>
+                    </svg>
+                  </span>
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m7 10 5 5 5-5H7Z">
+                    </path>
+                  </svg>
+                </span>
+                Bokmål
+                <span class="_srOnly_azp4i_133">
+                  Meny
+                </span>
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="m7 10 5 5 5-5H7Z">
+                  </path>
+                </svg>
+              </button>
+              <div class="_menuArrow_azp4i_67">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_separator_18mb7_28">
+        <div class="_separatorRight_18mb7_41">
+        </div>
+        <div class="_separatorLeft_18mb7_33">
+        </div>
+      </div>
+    </div>
+  </header>
+  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+    Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes. 
+        Testes ved å reloade siden. Det er ved programatisk åpning av modalen at fokus tidligere ikke har blitt satt korrekt.
+  </p>
+  <dialog class="_modal_125nh_5 _modalNoBorder_125nh_39"
+          aria-labelledby="modalHeadingId-:r18:"
+  >
+    <div tabindex="-1"
+         class="_modalContainer_125nh_23"
+    >
+      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+              type="button"
+      >
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r19:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r19:">
+            Lukk dialogvindu
+          </title>
+          <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+          </path>
+        </svg>
+      </button>
+      <div class="_modalPaddingL_125nh_51">
+        <h1 id="modalHeadingId-:r18:"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+        >
+          Vil du erstatte nye opplysninger fra fil?
+        </h1>
+        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+          Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?
+        </p>
+        <div class="flex">
+          <button class="_button_6ybyo_1 _button_primary_6ybyo_1   marginRightM"
+                  type="button"
+          >
+            <span class="_buttonText_6ybyo_69">
+              Erstatt opplysninger
+            </span>
+          </button>
+          <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
+                  type="button"
+          >
+            <span class="_buttonText_6ybyo_69">
+              Avbryt
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   marginRightM"
+          type="button"
+  >
+    <span class="_buttonText_6ybyo_69">
+      Åpne modal ref.current.showModal
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
+<div data-test-block="true">
+  <header class>
+    <a href="main"
+       class="_skipLink_1qmlj_1"
+       data-skip-link="ds-skip-link"
+    >
+      <span class="_skipLinkContent_1qmlj_21">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1qmlj_44"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-hidden="true"
+             role="img"
+        >
+          <path d="M4 14.64L12 21.5L20 14.64L18.33 12.7L13.25 17.05L13.25 3.5H10.75L10.75 17.05L5.67 12.7L4 14.64Z">
+          </path>
+        </svg>
+        Hopp til hovedinnhold
+      </span>
+    </a>
+    <div class="_containerForMainMenu_18mb7_51">
+      <div class="_topContainer_18mb7_2">
+        <a class="_logoContainer_1tdet_1 _logoAsLink_1tdet_7"
+           href="https://www.skatteetaten.no/"
+        >
+          <img class="_logo_mobile_1tdet_16"
+               alt="Forside Skatteetaten"
+               src="[REMOVED]"
+          >
+          <img class="_logo_desktop_1tdet_19"
+               alt="Forside Skatteetaten"
+               src="[REMOVED]"
+          >
+        </a>
+        <div class="_contentContainer_18mb7_17">
+          <div class="_content_18mb7_17">
+            <div class=" _container_azp4i_5">
+              <div class>
+              </div>
+              <button class="_button_197zg_1  _menuButton_azp4i_17"
+                      lang="nb"
+                      aria-expanded="false"
+                      type="button"
+              >
+                <span class="_iconWrapper_azp4i_20">
+                  <span class="_flagIcon_azp4i_25">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         aria-hidden="true"
+                         viewbox="0 0 1100 800"
+                         class="_flagIconSvg_azp4i_30"
+                    >
+                      <path d="M500 0h-50v350h650v-50H500zM450 450v350h50V500h600v-50zM350 450H0v50h300v300h50zM350 350V0h-50v300H0v50z"
+                            style="fill: rgb(255, 255, 255);"
+                      >
+                      </path>
+                      <path d="M0 0h300v300H0zM500 0h600v300H500zM0 500h300v300H0zM500 500h600v300H500z"
+                            style="fill: rgb(239, 43, 45);"
+                      >
+                      </path>
+                      <path d="M450 350V0H350v350H0v100h350v350h100V450h650V350z"
+                            style="fill: rgb(0, 40, 104);"
+                      >
+                      </path>
+                    </svg>
+                  </span>
+                  <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowMobile_azp4i_33"
+                       viewbox="0 0 24 24"
+                       focusable="false"
+                       aria-hidden="true"
+                       role="img"
+                  >
+                    <path d="m7 10 5 5 5-5H7Z">
+                    </path>
+                  </svg>
+                </span>
+                Bokmål
+                <span class="_srOnly_azp4i_133">
+                  Meny
+                </span>
+                <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
+                     viewbox="0 0 24 24"
+                     focusable="false"
+                     aria-hidden="true"
+                     role="img"
+                >
+                  <path d="m7 10 5 5 5-5H7Z">
+                  </path>
+                </svg>
+              </button>
+              <div class="_menuArrow_azp4i_67">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_separator_18mb7_28">
+        <div class="_separatorRight_18mb7_41">
+        </div>
+        <div class="_separatorLeft_18mb7_33">
+        </div>
+      </div>
+    </div>
+  </header>
+  <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+    Denne testen skal sjekke om fokus blir satt på skiplink a-elementet når modalen lukkes etter at bruker har trykket på Escape-knappen. 
+        Modalen åpnes ved å laste siden på nytt.
+  </p>
+  <dialog class="_modal_125nh_5"
+          aria-labelledby="modalHeadingId-:r1d:"
+  >
+    <div tabindex="-1"
+         class="_modalContainer_125nh_23"
+    >
+      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+              type="button"
+      >
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r1e:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r1e:">
+            Lukk dialogvindu
+          </title>
+          <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+          </path>
+        </svg>
+      </button>
+      <div class="_modalPaddingL_125nh_51">
+        <h1 id="modalHeadingId-:r1d:"
+            class="_heading_12p5o_1 _heading_level3_12p5o_34 _heading_hasSpacingSmall_12p5o_54 _modalHeading_125nh_29"
+        >
+          Vil du erstatte nye opplysninger fra fil?
+        </h1>
+        <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
+          Modalinnhold
+        </p>
+      </div>
+    </div>
+  </dialog>
+</div>
+`;
+
 exports[`Tester/Modal ClickCloseButton play-test 1`] = `
 <div data-test-block="true">
   <p class="_paragraph_1kzt5_1 _paragraph_standard_1kzt5_17 _paragraph_hasSpacingLarge_1kzt5_23 ">
