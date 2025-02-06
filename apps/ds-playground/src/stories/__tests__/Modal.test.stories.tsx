@@ -664,6 +664,12 @@ const TemplateAutoOpenAndCloseOnEscape: StoryFn<typeof Modal> = (args) => {
       <Modal {...args} ref={ref}>
         <Paragraph hasSpacing>{'Modalinnhold'}</Paragraph>
       </Modal>
+      <Button
+        className={'marginRightM'}
+        onClick={() => ref.current?.showModal()}
+      >
+        {'Åpne med klikk'}
+      </Button>
     </>
   );
 };
