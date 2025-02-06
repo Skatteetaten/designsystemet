@@ -4,6 +4,7 @@ import {
   useEffect,
   useImperativeHandle,
   useRef,
+  useState,
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -160,6 +161,7 @@ export const RowWithRightSideExpandButton = forwardRef<
       rowRef,
     }));
     const { t } = useTranslation('ds_tables', { i18n: dsI18n });
+    const [rowLength, setRowLength] = useState<number>(999);
 
     const isExpandableContentRows = (): boolean => {
       if (Array.isArray(expandableContent)) {
@@ -172,6 +174,11 @@ export const RowWithRightSideExpandButton = forwardRef<
           expandableContent.type === TableRow
         );
       }
+    };
+
+    const handleClick = (): void => {
+      setRowLength(rowRef?.current?.cells.length ?? 999);
+      onExpandClick();
     };
 
     const shouldInsertExpandAreaMarkers = isExpandableContentRows();
@@ -201,13 +208,13 @@ export const RowWithRightSideExpandButton = forwardRef<
               ariaDescribedby={expandButtonAriaDescribedby}
               ariaExpanded={isExpanded}
               disabled={isExpandButtonDisabled}
-              onClick={onExpandClick}
+              onClick={handleClick}
             />
           </TableDataCell>
         </tr>
         {isExpanded && !shouldInsertExpandAreaMarkers && (
           <tr className={`${styles.expandedRowRight} ${className}`}>
-            <td colSpan={rowRef?.current?.cells.length ?? 999}>
+            <td colSpan={rowLength}>
               <div className={classNames?.expandedContent}>
                 {expandableContent}
               </div>
@@ -217,15 +224,11 @@ export const RowWithRightSideExpandButton = forwardRef<
         {isExpanded && shouldInsertExpandAreaMarkers && (
           <>
             <tr className={styles.srOnly} lang={lang} data-testid={dataTestId}>
-              <td colSpan={rowRef?.current?.cells.length ?? 999}>
-                {t('table.ExpandAreaStart')}
-              </td>
+              <td colSpan={rowLength}>{t('table.ExpandAreaStart')}</td>
             </tr>
             {expandableContent}
             <tr className={styles.srOnly}>
-              <td colSpan={rowRef?.current?.cells.length ?? 999}>
-                {t('table.ExpandAreaEnd')}
-              </td>
+              <td colSpan={rowLength}>{t('table.ExpandAreaEnd')}</td>
             </tr>
           </>
         )}

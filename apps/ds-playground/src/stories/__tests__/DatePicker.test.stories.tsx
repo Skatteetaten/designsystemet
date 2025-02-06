@@ -501,8 +501,12 @@ const DatesTemplate: StoryFn<typeof DatePicker> = (args) => {
   /* Fordi date control konverterer datoen til et UNIX-tidsstempel når verdien endres,
     må den konverteres til et date objekt. Dette er en kjent begrensing som vil bli fikset
     en gang i fremtiden står det i Storybook sin dokumentasjon over Controls. */
-  args.initialPickerDate = new Date(args.initialPickerDate as Date);
-  return <DatePicker {...args} initialPickerDate={args.initialPickerDate} />;
+  return (
+    <DatePicker
+      {...args}
+      initialPickerDate={new Date(args.initialPickerDate as Date)}
+    />
+  );
 };
 
 export const WithInitialPickerDate = {

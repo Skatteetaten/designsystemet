@@ -14,15 +14,12 @@ const DatesTemplate: StoryFn<typeof DatePickerCalendar> = (args) => {
   /* Fordi date control konverterer datoen til et UNIX-tidsstempel når verdien endres,
     må den konverteres til et date objekt. Dette er en kjent begrensing som vil bli fikset
     en gang i fremtiden står det i Storybook sin dokumentasjon over Controls. */
-  args.selectedDate = new Date(args.selectedDate as Date);
-  args.minDate = new Date(args.minDate as Date);
-  args.maxDate = new Date(args.maxDate as Date);
   return (
     <DatePickerCalendar
       {...args}
-      selectedDate={args.selectedDate}
-      minDate={args.minDate}
-      maxDate={args.maxDate}
+      selectedDate={new Date(args.selectedDate as Date)}
+      minDate={new Date(args.minDate as Date)}
+      maxDate={new Date(args.maxDate as Date)}
     />
   );
 };
