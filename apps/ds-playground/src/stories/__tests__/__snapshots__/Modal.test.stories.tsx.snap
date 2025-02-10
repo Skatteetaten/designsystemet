@@ -310,6 +310,13 @@ exports[`Tester/Modal AutoOpenAndCloseOnEscape play-test 1`] = `
       </div>
     </div>
   </dialog>
+  <button class="_button_6ybyo_1 _button_primary_6ybyo_1   marginRightM"
+          type="button"
+  >
+    <span class="_buttonText_6ybyo_69">
+      Åpne med klikk
+    </span>
+  </button>
 </div>
 `;
 
