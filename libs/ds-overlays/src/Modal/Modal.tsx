@@ -70,13 +70,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(
       if (dialog) {
         const originalMethod = dialog.showModal;
         dialog.showModal = function showModal(...args): void {
-          console.log(
-            `showModal kjøres og document.activeElement?.nodeName === 'BODY' er ${document.activeElement?.nodeName === 'BODY'}`
-          );
           setIsAutoOpened(document.activeElement?.nodeName === 'BODY');
-          // if (document.activeElement?.nodeName === 'BODY') {
-          //   setIsAutoOpened(true);
-          // }
           originalMethod.apply(dialog, args);
         };
       }
