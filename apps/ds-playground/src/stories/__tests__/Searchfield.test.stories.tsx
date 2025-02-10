@@ -51,6 +51,7 @@ const meta = {
     classNames: { table: { disable: true } },
     defaultValue: { table: { disable: true } },
     description: { table: { disable: true } },
+    errorMessage: { table: { disable: true } },
     label: { table: { disable: true } },
     helpSvgPath: {
       table: { disable: true },
@@ -63,6 +64,7 @@ const meta = {
     results: { table: { disable: true } },
     helpText: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
+    showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     variant: {
       table: { disable: true },
@@ -84,6 +86,7 @@ const meta = {
     name: { table: { disable: true, category: category.htmlAttribute } },
     placeholder: { table: { disable: true, category: category.htmlAttribute } },
     readOnly: { table: { disable: true, category: category.htmlAttribute } },
+    required: { table: { disable: true, category: category.htmlAttribute } },
     value: { table: { disable: true, category: category.htmlAttribute } },
     // Events
     onBlur: { table: { disable: true } },
@@ -642,4 +645,37 @@ export const WithControlled = {
     });
   },
   render: ResetButtonTemplate,
+} satisfies Story;
+
+export const WithRequired = {
+  name: 'With Required',
+  args: {
+    ...defaultArgs,
+    required: true,
+  },
+  argTypes: {
+    required: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disable: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('searchbox');
+    await expect(textbox).toBeRequired();
+  },
+} satisfies Story;
+
+export const WithRequiredAndMark = {
+  name: 'With Required And Mark',
+  args: {
+    ...defaultArgs,
+    required: true,
+    hideLabel: false,
+    showRequiredMark: true,
+  },
+  argTypes: {
+    required: { table: { disable: false } },
+    showRequiredMark: { table: { disable: false } },
+  },
 } satisfies Story;

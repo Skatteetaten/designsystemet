@@ -38,6 +38,7 @@ const meta = {
     },
     defaultValue: { table: { category: category.props } },
     description: { table: { category: category.props } },
+    errorMessage: { table: { category: category.props } },
     label: { table: { category: category.props } },
     helpSvgPath: {
       options: Object.keys(SystemSVGPaths),
@@ -49,6 +50,7 @@ const meta = {
     },
     helpText: { table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
+    showRequiredMark: { table: { category: category.props } },
     titleHelpSvg: {
       table: {
         category: category.props,
@@ -83,6 +85,7 @@ const meta = {
       table: { category: category.htmlAttribute },
     },
     readOnly: { table: { category: category.htmlAttribute } },
+    required: { table: { category: category.htmlAttribute } },
     value: {
       control: 'text',
       table: { category: category.htmlAttribute },

@@ -25,6 +25,7 @@ import {
 } from './defaults';
 import { SearchFieldComponent, SearchFieldProps } from './SearchField.types';
 import { searchInList } from './utils';
+import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 import SearchFieldResult from '../SearchFieldResult/SearchFieldResult';
 
@@ -41,6 +42,7 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
       clearButtonTitle,
       defaultValue,
       description,
+      errorMessage,
       helpSvgPath,
       helpText,
       label,
@@ -54,6 +56,8 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
       name,
       placeholder,
       readOnly,
+      required,
+      showRequiredMark,
       value,
       hasSearchButtonIcon = getSearchFieldHasSearchButtonIconDefault(),
       hideLabel = getSearchFieldHideLabelDefault(),
@@ -76,6 +80,7 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
 
     const generatedId = useId();
     const searchFieldId = externalId ?? `searchField-${generatedId}`;
+    const errorId = `searchFieldErrorId-${useId()}`;
     const inputId = `${searchFieldId}-input`;
     const resultsId = `${searchFieldId}-results`;
     const srFocusId = `${searchFieldId}-srFocus`;
@@ -176,6 +181,7 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
           helpSvgPath={helpSvgPath}
           helpText={helpText}
           titleHelpSvg={titleHelpSvg}
+          showRequiredMark={showRequiredMark}
           onHelpToggle={onHelpToggle}
         >
           {label}
@@ -203,6 +209,7 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
               readOnly={readOnly}
               value={value}
               autoComplete={autoComplete}
+              required={required}
               aria-describedby={srFocusId}
               aria-owns={shouldShowResults ? resultsId : undefined}
               type={'search'}
@@ -223,6 +230,13 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
               }}
               onFocus={onFocus}
             />
+            <ErrorMessage
+              id={errorId}
+              showError={!!errorMessage}
+              className={classNames?.errorMessage}
+            >
+              {errorMessage}
+            </ErrorMessage>
             <span aria-live={'assertive'} className={styles.srOnly}>
               {shouldShowResults &&
                 t('searchfield.NumberOfResults', {

@@ -2,29 +2,34 @@
 
 exports[`Tester/SearchField Defaults play-test 1`] = `
 <div data-test-block="true">
-  <div id="searchField-:rd:"
+  <div id="searchField-:rh:"
        class="_topContainer_hryzl_11"
   >
-    <label id="searchField-:rd:-label"
+    <label id="searchField-:rh:-label"
            class="_label_348na_5  _srOnly_348na_18"
-           for="searchField-:rd:-input"
+           for="searchField-:rh:-input"
     >
       Hva leter du etter?
     </label>
     <div class="_searchContainer_hryzl_5 ">
       <div class="_inputWrapper_hryzl_42">
-        <span id="searchField-:rd:-srFocus"
+        <span id="searchField-:rh:-srFocus"
               class="_srOnly_hryzl_180"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
-        <input id="searchField-:rd:-input"
+        <input id="searchField-:rh:-input"
                class="_input_hryzl_42"
                autocomplete="off"
-               aria-describedby="searchField-:rd:-srFocus"
+               aria-describedby="searchField-:rh:-srFocus"
                type="search"
                value
         >
+        <div id="searchFieldErrorId-:ri:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
         <span aria-live="assertive"
               class="_srOnly_hryzl_180"
         >
@@ -34,11 +39,11 @@ exports[`Tester/SearchField Defaults play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:rf:"
+             aria-labelledby="svgtitle-:rk:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:rf:">
+          <title id="svgtitle-:rk:">
             Søk
           </title>
           <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
@@ -52,30 +57,35 @@ exports[`Tester/SearchField Defaults play-test 1`] = `
 
 exports[`Tester/SearchField WithAccesskey play-test 1`] = `
 <div data-test-block="true">
-  <div id="searchField-:r26:"
+  <div id="searchField-:r2s:"
        class="_topContainer_hryzl_11"
   >
-    <label id="searchField-:r26:-label"
+    <label id="searchField-:r2s:-label"
            class="_label_348na_5  _srOnly_348na_18"
-           for="searchField-:r26:-input"
+           for="searchField-:r2s:-input"
     >
       Hva leter du etter?
     </label>
     <div class="_searchContainer_hryzl_5 ">
       <div class="_inputWrapper_hryzl_42">
-        <span id="searchField-:r26:-srFocus"
+        <span id="searchField-:r2s:-srFocus"
               class="_srOnly_hryzl_180"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
-        <input id="searchField-:r26:-input"
+        <input id="searchField-:r2s:-input"
                class="_input_hryzl_42"
                accesskey="j"
                autocomplete="off"
-               aria-describedby="searchField-:r26:-srFocus"
+               aria-describedby="searchField-:r2s:-srFocus"
                type="search"
                value
         >
+        <div id="searchFieldErrorId-:r2t:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
         <span aria-live="assertive"
               class="_srOnly_hryzl_180"
         >
@@ -85,11 +95,11 @@ exports[`Tester/SearchField WithAccesskey play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r28:"
+             aria-labelledby="svgtitle-:r2v:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r28:">
+          <title id="svgtitle-:r2v:">
             Søk
           </title>
           <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
@@ -103,40 +113,45 @@ exports[`Tester/SearchField WithAccesskey play-test 1`] = `
 
 exports[`Tester/SearchField WithArrowKeyNavigation play-test 1`] = `
 <div data-test-block="true">
-  <div id="searchField-:r23:"
+  <div id="searchField-:r2o:"
        class="_topContainer_hryzl_11"
   >
-    <label id="searchField-:r23:-label"
+    <label id="searchField-:r2o:-label"
            class="_label_348na_5  _srOnly_348na_18"
-           for="searchField-:r23:-input"
+           for="searchField-:r2o:-input"
     >
       Hva leter du etter?
     </label>
     <div class="_searchContainer_hryzl_5 ">
       <div class="_inputWrapper_hryzl_42">
-        <span id="searchField-:r23:-srFocus"
+        <span id="searchField-:r2o:-srFocus"
               class="_srOnly_hryzl_180"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
-        <input id="searchField-:r23:-input"
+        <input id="searchField-:r2o:-input"
                class="_input_hryzl_42"
                autocomplete="off"
-               aria-describedby="searchField-:r23:-srFocus"
+               aria-describedby="searchField-:r2o:-srFocus"
                type="search"
                value
-               aria-owns="searchField-:r23:-results"
+               aria-owns="searchField-:r2o:-results"
         >
+        <div id="searchFieldErrorId-:r2p:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
         <span aria-live="assertive"
               class="_srOnly_hryzl_180"
         >
           5 forslag vises.
         </span>
         <div>
-          <ul id="searchField-:r23:-results"
+          <ul id="searchField-:r2o:-results"
               class="_searchResultContainer_hryzl_167"
               role="listbox"
-              aria-labelledby="searchField-:r23:-label"
+              aria-labelledby="searchField-:r2o:-label"
           >
             <li class="_searchResult_1ae64_1"
                 tabindex="-1"
@@ -190,11 +205,11 @@ exports[`Tester/SearchField WithArrowKeyNavigation play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r25:"
+             aria-labelledby="svgtitle-:r2r:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r25:">
+          <title id="svgtitle-:r2r:">
             Søk
           </title>
           <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
@@ -234,6 +249,11 @@ exports[`Tester/SearchField WithAttributes play-test 1`] = `
                type="search"
                value
         >
+        <div id="searchFieldErrorId-:r5:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
         <span aria-live="assertive"
               class="_srOnly_hryzl_180"
         >
@@ -243,11 +263,11 @@ exports[`Tester/SearchField WithAttributes play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r5:"
+             aria-labelledby="svgtitle-:r7:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r5:">
+          <title id="svgtitle-:r7:">
             Søk
           </title>
           <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
@@ -261,29 +281,34 @@ exports[`Tester/SearchField WithAttributes play-test 1`] = `
 
 exports[`Tester/SearchField WithCustomButtonTitleText play-test 1`] = `
 <div data-test-block="true">
-  <div id="searchField-:r1t:"
+  <div id="searchField-:r2g:"
        class="_topContainer_hryzl_11"
   >
-    <label id="searchField-:r1t:-label"
+    <label id="searchField-:r2g:-label"
            class="_label_348na_5  _srOnly_348na_18"
-           for="searchField-:r1t:-input"
+           for="searchField-:r2g:-input"
     >
       Hva leter du etter?
     </label>
     <div class="_searchContainer_hryzl_5 ">
       <div class="_inputWrapper_hryzl_42">
-        <span id="searchField-:r1t:-srFocus"
+        <span id="searchField-:r2g:-srFocus"
               class="_srOnly_hryzl_180"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
-        <input id="searchField-:r1t:-input"
+        <input id="searchField-:r2g:-input"
                class="_input_hryzl_42"
                autocomplete="off"
-               aria-describedby="searchField-:r1t:-srFocus"
+               aria-describedby="searchField-:r2g:-srFocus"
                type="search"
                value
         >
+        <div id="searchFieldErrorId-:r2h:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
         <span aria-live="assertive"
               class="_srOnly_hryzl_180"
         >
@@ -299,29 +324,161 @@ exports[`Tester/SearchField WithCustomButtonTitleText play-test 1`] = `
 
 exports[`Tester/SearchField WithCustomButtonTitles play-test 1`] = `
 <div data-test-block="true">
-  <div id="searchField-:r1p:"
+  <div id="searchField-:r2b:"
        class="_topContainer_hryzl_11"
   >
-    <label id="searchField-:r1p:-label"
+    <label id="searchField-:r2b:-label"
            class="_label_348na_5  _srOnly_348na_18"
-           for="searchField-:r1p:-input"
+           for="searchField-:r2b:-input"
     >
       Hva leter du etter?
     </label>
     <div class="_searchContainer_hryzl_5 ">
       <div class="_inputWrapper_hryzl_42">
-        <span id="searchField-:r1p:-srFocus"
+        <span id="searchField-:r2b:-srFocus"
               class="_srOnly_hryzl_180"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
-        <input id="searchField-:r1p:-input"
+        <input id="searchField-:r2b:-input"
                class="_input_hryzl_42"
                autocomplete="off"
-               aria-describedby="searchField-:r1p:-srFocus"
+               aria-describedby="searchField-:r2b:-srFocus"
                type="search"
                value="skattekort"
         >
+        <div id="searchFieldErrorId-:r2c:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
+        <span aria-live="assertive"
+              class="_srOnly_hryzl_180"
+        >
+        </span>
+        <button class="_button_g87u5_1 _button_extraSmall_g87u5_29  _clearButton_hryzl_35"
+                type="reset"
+        >
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+               viewbox="0 0 24 24"
+               focusable="false"
+               aria-labelledby="svgtitle-:r2e:"
+               aria-hidden="false"
+               role="img"
+          >
+            <title id="svgtitle-:r2e:">
+              clear test
+            </title>
+            <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
+            </path>
+          </svg>
+        </button>
+      </div>
+      <button class="_searchButton_hryzl_95">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r2f:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r2f:">
+            search test
+          </title>
+          <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/SearchField WithCustomClassNames play-test 1`] = `
+<div data-test-block="true">
+  <div id="searchField-:r8:"
+       class="_topContainer_hryzl_11    dummyClassname"
+  >
+    <label id="searchField-:r8:-label"
+           class="_label_348na_5    dummyClassname"
+           for="searchField-:r8:-input"
+    >
+      Leter du etter en LAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANG gjenstand?
+    </label>
+    <div class="_searchContainer_hryzl_5 dummyClassnameFormContainer">
+      <div class="_inputWrapper_hryzl_42">
+        <span id="searchField-:r8:-srFocus"
+              class="_srOnly_hryzl_180"
+        >
+          Bruk piltaster ned/opp for å velge forslag når de vises
+        </span>
+        <input id="searchField-:r8:-input"
+               class="_input_hryzl_42"
+               autocomplete="off"
+               aria-describedby="searchField-:r8:-srFocus"
+               type="search"
+               value
+        >
+        <div id="searchFieldErrorId-:r9:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
+        <span aria-live="assertive"
+              class="_srOnly_hryzl_180"
+        >
+        </span>
+      </div>
+      <button class="_searchButton_hryzl_95">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:rb:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:rb:">
+            Søk
+          </title>
+          <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/SearchField WithDefaultValue play-test 1`] = `
+<div data-test-block="true">
+  <div id="searchField-:r1o:"
+       class="_topContainer_hryzl_11"
+  >
+    <label id="searchField-:r1o:-label"
+           class="_label_348na_5  _srOnly_348na_18"
+           for="searchField-:r1o:-input"
+    >
+      Hva leter du etter?
+    </label>
+    <div class="_searchContainer_hryzl_5 ">
+      <div class="_inputWrapper_hryzl_42">
+        <span id="searchField-:r1o:-srFocus"
+              class="_srOnly_hryzl_180"
+        >
+          Bruk piltaster ned/opp for å velge forslag når de vises
+        </span>
+        <input id="searchField-:r1o:-input"
+               class="_input_hryzl_42"
+               autocomplete="off"
+               aria-describedby="searchField-:r1o:-srFocus"
+               type="search"
+               value="skattekort"
+        >
+        <div id="searchFieldErrorId-:r1p:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
         <span aria-live="assertive"
               class="_srOnly_hryzl_180"
         >
@@ -337,7 +494,7 @@ exports[`Tester/SearchField WithCustomButtonTitles play-test 1`] = `
                role="img"
           >
             <title id="svgtitle-:r1r:">
-              clear test
+              Nullstill
             </title>
             <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
             </path>
@@ -353,123 +510,6 @@ exports[`Tester/SearchField WithCustomButtonTitles play-test 1`] = `
              role="img"
         >
           <title id="svgtitle-:r1s:">
-            search test
-          </title>
-          <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
-          </path>
-        </svg>
-      </button>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Tester/SearchField WithCustomClassNames play-test 1`] = `
-<div data-test-block="true">
-  <div id="searchField-:r6:"
-       class="_topContainer_hryzl_11    dummyClassname"
-  >
-    <label id="searchField-:r6:-label"
-           class="_label_348na_5    dummyClassname"
-           for="searchField-:r6:-input"
-    >
-      Leter du etter en LAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANG gjenstand?
-    </label>
-    <div class="_searchContainer_hryzl_5 dummyClassnameFormContainer">
-      <div class="_inputWrapper_hryzl_42">
-        <span id="searchField-:r6:-srFocus"
-              class="_srOnly_hryzl_180"
-        >
-          Bruk piltaster ned/opp for å velge forslag når de vises
-        </span>
-        <input id="searchField-:r6:-input"
-               class="_input_hryzl_42"
-               autocomplete="off"
-               aria-describedby="searchField-:r6:-srFocus"
-               type="search"
-               value
-        >
-        <span aria-live="assertive"
-              class="_srOnly_hryzl_180"
-        >
-        </span>
-      </div>
-      <button class="_searchButton_hryzl_95">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-labelledby="svgtitle-:r8:"
-             aria-hidden="false"
-             role="img"
-        >
-          <title id="svgtitle-:r8:">
-            Søk
-          </title>
-          <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
-          </path>
-        </svg>
-      </button>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Tester/SearchField WithDefaultValue play-test 1`] = `
-<div data-test-block="true">
-  <div id="searchField-:r1a:"
-       class="_topContainer_hryzl_11"
-  >
-    <label id="searchField-:r1a:-label"
-           class="_label_348na_5  _srOnly_348na_18"
-           for="searchField-:r1a:-input"
-    >
-      Hva leter du etter?
-    </label>
-    <div class="_searchContainer_hryzl_5 ">
-      <div class="_inputWrapper_hryzl_42">
-        <span id="searchField-:r1a:-srFocus"
-              class="_srOnly_hryzl_180"
-        >
-          Bruk piltaster ned/opp for å velge forslag når de vises
-        </span>
-        <input id="searchField-:r1a:-input"
-               class="_input_hryzl_42"
-               autocomplete="off"
-               aria-describedby="searchField-:r1a:-srFocus"
-               type="search"
-               value="skattekort"
-        >
-        <span aria-live="assertive"
-              class="_srOnly_hryzl_180"
-        >
-        </span>
-        <button class="_button_g87u5_1 _button_extraSmall_g87u5_29  _clearButton_hryzl_35"
-                type="reset"
-        >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
-               viewbox="0 0 24 24"
-               focusable="false"
-               aria-labelledby="svgtitle-:r1c:"
-               aria-hidden="false"
-               role="img"
-          >
-            <title id="svgtitle-:r1c:">
-              Nullstill
-            </title>
-            <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
-            </path>
-          </svg>
-        </button>
-      </div>
-      <button class="_searchButton_hryzl_95">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-labelledby="svgtitle-:r1d:"
-             aria-hidden="false"
-             role="img"
-        >
-          <title id="svgtitle-:r1d:">
             Søk
           </title>
           <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
@@ -483,12 +523,12 @@ exports[`Tester/SearchField WithDefaultValue play-test 1`] = `
 
 exports[`Tester/SearchField WithDescription play-test 1`] = `
 <div data-test-block="true">
-  <div id="searchField-:r1e:"
+  <div id="searchField-:r1t:"
        class="_topContainer_hryzl_11"
   >
-    <label id="searchField-:r1e:-label"
+    <label id="searchField-:r1t:-label"
            class="_label_348na_5"
-           for="searchField-:r1e:-input"
+           for="searchField-:r1t:-input"
     >
       Hva leter du etter?
     </label>
@@ -497,18 +537,23 @@ exports[`Tester/SearchField WithDescription play-test 1`] = `
     </div>
     <div class="_searchContainer_hryzl_5 ">
       <div class="_inputWrapper_hryzl_42">
-        <span id="searchField-:r1e:-srFocus"
+        <span id="searchField-:r1t:-srFocus"
               class="_srOnly_hryzl_180"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
-        <input id="searchField-:r1e:-input"
+        <input id="searchField-:r1t:-input"
                class="_input_hryzl_42"
                autocomplete="off"
-               aria-describedby="searchField-:r1e:-srFocus"
+               aria-describedby="searchField-:r1t:-srFocus"
                type="search"
                value
         >
+        <div id="searchFieldErrorId-:r1u:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
         <span aria-live="assertive"
               class="_srOnly_hryzl_180"
         >
@@ -518,11 +563,11 @@ exports[`Tester/SearchField WithDescription play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r1g:"
+             aria-labelledby="svgtitle-:r20:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r1g:">
+          <title id="svgtitle-:r20:">
             Søk
           </title>
           <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
@@ -536,30 +581,35 @@ exports[`Tester/SearchField WithDescription play-test 1`] = `
 
 exports[`Tester/SearchField WithDisabled play-test 1`] = `
 <div data-test-block="true">
-  <div id="searchField-:r13:"
+  <div id="searchField-:r1f:"
        class="_topContainer_hryzl_11"
   >
-    <label id="searchField-:r13:-label"
+    <label id="searchField-:r1f:-label"
            class="_label_348na_5  _srOnly_348na_18"
-           for="searchField-:r13:-input"
+           for="searchField-:r1f:-input"
     >
       Hva leter du etter?
     </label>
     <div class="_searchContainer_hryzl_5 ">
       <div class="_inputWrapper_hryzl_42">
-        <span id="searchField-:r13:-srFocus"
+        <span id="searchField-:r1f:-srFocus"
               class="_srOnly_hryzl_180"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
-        <input id="searchField-:r13:-input"
+        <input id="searchField-:r1f:-input"
                class="_input_hryzl_42"
                disabled
                autocomplete="off"
-               aria-describedby="searchField-:r13:-srFocus"
+               aria-describedby="searchField-:r1f:-srFocus"
                type="search"
                value="skattekort"
         >
+        <div id="searchFieldErrorId-:r1g:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
         <span aria-live="assertive"
               class="_srOnly_hryzl_180"
         >
@@ -571,11 +621,11 @@ exports[`Tester/SearchField WithDisabled play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r15:"
+             aria-labelledby="svgtitle-:r1i:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r15:">
+          <title id="svgtitle-:r1i:">
             Søk
           </title>
           <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
@@ -589,29 +639,34 @@ exports[`Tester/SearchField WithDisabled play-test 1`] = `
 
 exports[`Tester/SearchField WithEventHandlers play-test 1`] = `
 <div data-test-block="true">
-  <div id="searchField-:r1v:"
+  <div id="searchField-:r2j:"
        class="_topContainer_hryzl_11"
   >
-    <label id="searchField-:r1v:-label"
+    <label id="searchField-:r2j:-label"
            class="_label_348na_5  _srOnly_348na_18"
-           for="searchField-:r1v:-input"
+           for="searchField-:r2j:-input"
     >
       Søk har blitt aktivert med enter
     </label>
     <div class="_searchContainer_hryzl_5 ">
       <div class="_inputWrapper_hryzl_42">
-        <span id="searchField-:r1v:-srFocus"
+        <span id="searchField-:r2j:-srFocus"
               class="_srOnly_hryzl_180"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
-        <input id="searchField-:r1v:-input"
+        <input id="searchField-:r2j:-input"
                class="_input_hryzl_42"
                autocomplete="off"
-               aria-describedby="searchField-:r1v:-srFocus"
+               aria-describedby="searchField-:r2j:-srFocus"
                type="search"
                value
         >
+        <div id="searchFieldErrorId-:r2k:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
         <span aria-live="assertive"
               class="_srOnly_hryzl_180"
         >
@@ -621,11 +676,11 @@ exports[`Tester/SearchField WithEventHandlers play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r21:"
+             aria-labelledby="svgtitle-:r2m:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r21:">
+          <title id="svgtitle-:r2m:">
             Søk
           </title>
           <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
@@ -639,28 +694,28 @@ exports[`Tester/SearchField WithEventHandlers play-test 1`] = `
 
 exports[`Tester/SearchField WithHelpText play-test 1`] = `
 <div data-test-block="true">
-  <div id="searchField-:r1h:"
+  <div id="searchField-:r21:"
        class="_topContainer_hryzl_11"
   >
-    <label id="searchField-:r1h:-label"
+    <label id="searchField-:r21:-label"
            class="_label_348na_5"
-           for="searchField-:r1h:-input"
+           for="searchField-:r21:-input"
     >
       Hva leter du etter?
     </label>
     <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
             type="button"
-            aria-describedby="searchField-:r1h:-label"
+            aria-describedby="searchField-:r21:-label"
             aria-expanded="true"
     >
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
            viewbox="0 0 24 24"
            focusable="false"
-           aria-labelledby="svgtitle-:r1j:"
+           aria-labelledby="svgtitle-:r24:"
            aria-hidden="false"
            role="img"
       >
-        <title id="svgtitle-:r1j:">
+        <title id="svgtitle-:r24:">
           Hjelp
         </title>
         <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
@@ -677,11 +732,11 @@ exports[`Tester/SearchField WithHelpText play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r1l:"
+             aria-labelledby="svgtitle-:r26:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r1l:">
+          <title id="svgtitle-:r26:">
             Lukk
           </title>
           <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -691,18 +746,23 @@ exports[`Tester/SearchField WithHelpText play-test 1`] = `
     </div>
     <div class="_searchContainer_hryzl_5 ">
       <div class="_inputWrapper_hryzl_42">
-        <span id="searchField-:r1h:-srFocus"
+        <span id="searchField-:r21:-srFocus"
               class="_srOnly_hryzl_180"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
-        <input id="searchField-:r1h:-input"
+        <input id="searchField-:r21:-input"
                class="_input_hryzl_42"
                autocomplete="off"
-               aria-describedby="searchField-:r1h:-srFocus"
+               aria-describedby="searchField-:r21:-srFocus"
                type="search"
                value
         >
+        <div id="searchFieldErrorId-:r22:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
         <span aria-live="assertive"
               class="_srOnly_hryzl_180"
         >
@@ -712,11 +772,11 @@ exports[`Tester/SearchField WithHelpText play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r1k:"
+             aria-labelledby="svgtitle-:r25:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r1k:">
+          <title id="svgtitle-:r25:">
             Søk
           </title>
           <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
@@ -730,28 +790,28 @@ exports[`Tester/SearchField WithHelpText play-test 1`] = `
 
 exports[`Tester/SearchField WithHelpToggleEvent smoke-test 1`] = `
 <div data-test-block="true">
-  <div id="searchField-:r29:"
+  <div id="searchField-:r30:"
        class="_topContainer_hryzl_11"
   >
-    <label id="searchField-:r29:-label"
+    <label id="searchField-:r30:-label"
            class="_label_348na_5"
-           for="searchField-:r29:-input"
+           for="searchField-:r30:-input"
     >
       Hva leter du etter?
     </label>
     <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
             type="button"
-            aria-describedby="searchField-:r29:-label"
+            aria-describedby="searchField-:r30:-label"
             aria-expanded="false"
     >
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
            viewbox="0 0 24 24"
            focusable="false"
-           aria-labelledby="svgtitle-:r2b:"
+           aria-labelledby="svgtitle-:r33:"
            aria-hidden="false"
            role="img"
       >
-        <title id="svgtitle-:r2b:">
+        <title id="svgtitle-:r33:">
           Hjelp
         </title>
         <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
@@ -760,18 +820,23 @@ exports[`Tester/SearchField WithHelpToggleEvent smoke-test 1`] = `
     </button>
     <div class="_searchContainer_hryzl_5 ">
       <div class="_inputWrapper_hryzl_42">
-        <span id="searchField-:r29:-srFocus"
+        <span id="searchField-:r30:-srFocus"
               class="_srOnly_hryzl_180"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
-        <input id="searchField-:r29:-input"
+        <input id="searchField-:r30:-input"
                class="_input_hryzl_42"
                autocomplete="off"
-               aria-describedby="searchField-:r29:-srFocus"
+               aria-describedby="searchField-:r30:-srFocus"
                type="search"
                value
         >
+        <div id="searchFieldErrorId-:r31:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
         <span aria-live="assertive"
               class="_srOnly_hryzl_180"
         >
@@ -781,11 +846,11 @@ exports[`Tester/SearchField WithHelpToggleEvent smoke-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r2c:"
+             aria-labelledby="svgtitle-:r34:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r2c:">
+          <title id="svgtitle-:r34:">
             Søk
           </title>
           <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
@@ -799,28 +864,28 @@ exports[`Tester/SearchField WithHelpToggleEvent smoke-test 1`] = `
 
 exports[`Tester/SearchField WithLongLabel smoke-test 1`] = `
 <div data-test-block="true">
-  <div id="searchField-:r9:"
+  <div id="searchField-:rc:"
        class="_topContainer_hryzl_11"
   >
-    <label id="searchField-:r9:-label"
+    <label id="searchField-:rc:-label"
            class="_label_348na_5"
-           for="searchField-:r9:-input"
+           for="searchField-:rc:-input"
     >
       Leter du etter en LAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANG gjenstand?
     </label>
     <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
             type="button"
-            aria-describedby="searchField-:r9:-label"
+            aria-describedby="searchField-:rc:-label"
             aria-expanded="false"
     >
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
            viewbox="0 0 24 24"
            focusable="false"
-           aria-labelledby="svgtitle-:rb:"
+           aria-labelledby="svgtitle-:rf:"
            aria-hidden="false"
            role="img"
       >
-        <title id="svgtitle-:rb:">
+        <title id="svgtitle-:rf:">
           Hjelp
         </title>
         <path d="M10 19h3v3h-3v-3Zm2-17c5.35.22 7.68 5.62 4.5 9.67-.83 1-2.17 1.66-2.83 2.5C13 15 13 16 13 17h-3c0-1.67 0-3.08.67-4.08.66-1 2-1.59 2.83-2.25C15.92 8.43 15.32 5.26 12 5a3 3 0 0 0-3 3H6a6 6 0 0 1 6-6Z">
@@ -832,18 +897,23 @@ exports[`Tester/SearchField WithLongLabel smoke-test 1`] = `
     </div>
     <div class="_searchContainer_hryzl_5 ">
       <div class="_inputWrapper_hryzl_42">
-        <span id="searchField-:r9:-srFocus"
+        <span id="searchField-:rc:-srFocus"
               class="_srOnly_hryzl_180"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
-        <input id="searchField-:r9:-input"
+        <input id="searchField-:rc:-input"
                class="_input_hryzl_42"
                autocomplete="off"
-               aria-describedby="searchField-:r9:-srFocus"
+               aria-describedby="searchField-:rc:-srFocus"
                type="search"
                value
         >
+        <div id="searchFieldErrorId-:rd:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
         <span aria-live="assertive"
               class="_srOnly_hryzl_180"
         >
@@ -853,11 +923,11 @@ exports[`Tester/SearchField WithLongLabel smoke-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:rc:"
+             aria-labelledby="svgtitle-:rg:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:rc:">
+          <title id="svgtitle-:rg:">
             Søk
           </title>
           <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
@@ -871,31 +941,36 @@ exports[`Tester/SearchField WithLongLabel smoke-test 1`] = `
 
 exports[`Tester/SearchField WithNameAndPlaceholder play-test 1`] = `
 <div data-test-block="true">
-  <div id="searchField-:r1m:"
+  <div id="searchField-:r27:"
        class="_topContainer_hryzl_11"
   >
-    <label id="searchField-:r1m:-label"
+    <label id="searchField-:r27:-label"
            class="_label_348na_5  _srOnly_348na_18"
-           for="searchField-:r1m:-input"
+           for="searchField-:r27:-input"
     >
       Hva leter du etter?
     </label>
     <div class="_searchContainer_hryzl_5 ">
       <div class="_inputWrapper_hryzl_42">
-        <span id="searchField-:r1m:-srFocus"
+        <span id="searchField-:r27:-srFocus"
               class="_srOnly_hryzl_180"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
-        <input id="searchField-:r1m:-input"
+        <input id="searchField-:r27:-input"
                class="_input_hryzl_42"
                name="test_name"
                placeholder="skattekort"
                autocomplete="off"
-               aria-describedby="searchField-:r1m:-srFocus"
+               aria-describedby="searchField-:r27:-srFocus"
                type="search"
                value
         >
+        <div id="searchFieldErrorId-:r28:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
         <span aria-live="assertive"
               class="_srOnly_hryzl_180"
         >
@@ -905,11 +980,11 @@ exports[`Tester/SearchField WithNameAndPlaceholder play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r1o:"
+             aria-labelledby="svgtitle-:r2a:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r1o:">
+          <title id="svgtitle-:r2a:">
             Søk
           </title>
           <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
@@ -947,6 +1022,11 @@ exports[`Tester/SearchField WithRef play-test 1`] = `
                value
                name="dummyNameForwardedFromRef"
         >
+        <div id="searchFieldErrorId-:r1:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
         <span aria-live="assertive"
               class="_srOnly_hryzl_180"
         >
@@ -956,11 +1036,123 @@ exports[`Tester/SearchField WithRef play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r2:"
+             aria-labelledby="svgtitle-:r3:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r2:">
+          <title id="svgtitle-:r3:">
+            Søk
+          </title>
+          <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/SearchField WithRequired play-test 1`] = `
+<div data-test-block="true">
+  <div id="searchField-:r3b:"
+       class="_topContainer_hryzl_11"
+  >
+    <label id="searchField-:r3b:-label"
+           class="_label_348na_5  _srOnly_348na_18"
+           for="searchField-:r3b:-input"
+    >
+      Hva leter du etter?
+    </label>
+    <div class="_searchContainer_hryzl_5 ">
+      <div class="_inputWrapper_hryzl_42">
+        <span id="searchField-:r3b:-srFocus"
+              class="_srOnly_hryzl_180"
+        >
+          Bruk piltaster ned/opp for å velge forslag når de vises
+        </span>
+        <input id="searchField-:r3b:-input"
+               class="_input_hryzl_42"
+               autocomplete="off"
+               required
+               aria-describedby="searchField-:r3b:-srFocus"
+               type="search"
+               value
+        >
+        <div id="searchFieldErrorId-:r3c:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
+        <span aria-live="assertive"
+              class="_srOnly_hryzl_180"
+        >
+        </span>
+      </div>
+      <button class="_searchButton_hryzl_95">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r3e:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r3e:">
+            Søk
+          </title>
+          <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/SearchField WithRequiredAndMark smoke-test 1`] = `
+<div data-test-block="true">
+  <div id="searchField-:r3f:"
+       class="_topContainer_hryzl_11"
+  >
+    <label id="searchField-:r3f:-label"
+           class="_label_348na_5 _label_required_348na_12"
+           for="searchField-:r3f:-input"
+    >
+      Hva leter du etter?
+    </label>
+    <div class="_searchContainer_hryzl_5 ">
+      <div class="_inputWrapper_hryzl_42">
+        <span id="searchField-:r3f:-srFocus"
+              class="_srOnly_hryzl_180"
+        >
+          Bruk piltaster ned/opp for å velge forslag når de vises
+        </span>
+        <input id="searchField-:r3f:-input"
+               class="_input_hryzl_42"
+               autocomplete="off"
+               required
+               aria-describedby="searchField-:r3f:-srFocus"
+               type="search"
+               value
+        >
+        <div id="searchFieldErrorId-:r3g:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
+        <span aria-live="assertive"
+              class="_srOnly_hryzl_180"
+        >
+        </span>
+      </div>
+      <button class="_searchButton_hryzl_95">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r3i:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r3i:">
             Søk
           </title>
           <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
@@ -974,29 +1166,34 @@ exports[`Tester/SearchField WithRef play-test 1`] = `
 
 exports[`Tester/SearchField WithValue play-test 1`] = `
 <div data-test-block="true">
-  <div id="searchField-:r16:"
+  <div id="searchField-:r1j:"
        class="_topContainer_hryzl_11"
   >
-    <label id="searchField-:r16:-label"
+    <label id="searchField-:r1j:-label"
            class="_label_348na_5  _srOnly_348na_18"
-           for="searchField-:r16:-input"
+           for="searchField-:r1j:-input"
     >
       Hva leter du etter?
     </label>
     <div class="_searchContainer_hryzl_5 ">
       <div class="_inputWrapper_hryzl_42">
-        <span id="searchField-:r16:-srFocus"
+        <span id="searchField-:r1j:-srFocus"
               class="_srOnly_hryzl_180"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
-        <input id="searchField-:r16:-input"
+        <input id="searchField-:r1j:-input"
                class="_input_hryzl_42"
                autocomplete="off"
-               aria-describedby="searchField-:r16:-srFocus"
+               aria-describedby="searchField-:r1j:-srFocus"
                type="search"
                value="skattekort"
         >
+        <div id="searchFieldErrorId-:r1k:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
         <span aria-live="assertive"
               class="_srOnly_hryzl_180"
         >
@@ -1007,11 +1204,11 @@ exports[`Tester/SearchField WithValue play-test 1`] = `
           <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                viewbox="0 0 24 24"
                focusable="false"
-               aria-labelledby="svgtitle-:r18:"
+               aria-labelledby="svgtitle-:r1m:"
                aria-hidden="false"
                role="img"
           >
-            <title id="svgtitle-:r18:">
+            <title id="svgtitle-:r1m:">
               Nullstill
             </title>
             <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -1023,11 +1220,11 @@ exports[`Tester/SearchField WithValue play-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r19:"
+             aria-labelledby="svgtitle-:r1n:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r19:">
+          <title id="svgtitle-:r1n:">
             Søk
           </title>
           <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
@@ -1041,29 +1238,34 @@ exports[`Tester/SearchField WithValue play-test 1`] = `
 
 exports[`Tester/SearchField WithVariantLargeAndLongText smoke-test 1`] = `
 <div data-test-block="true">
-  <div id="searchField-:rv:"
+  <div id="searchField-:r1a:"
        class="_topContainer_hryzl_11 _topContainer_large_hryzl_20"
   >
-    <label id="searchField-:rv:-label"
+    <label id="searchField-:r1a:-label"
            class="_label_348na_5  _srOnly_348na_18"
-           for="searchField-:rv:-input"
+           for="searchField-:r1a:-input"
     >
       Hva leter du etter?
     </label>
     <div class="_searchContainer_hryzl_5 ">
       <div class="_inputWrapper_hryzl_42">
-        <span id="searchField-:rv:-srFocus"
+        <span id="searchField-:r1a:-srFocus"
               class="_srOnly_hryzl_180"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
-        <input id="searchField-:rv:-input"
+        <input id="searchField-:r1a:-input"
                class="_input_hryzl_42"
                autocomplete="off"
-               aria-describedby="searchField-:rv:-srFocus"
+               aria-describedby="searchField-:r1a:-srFocus"
                type="search"
                value="En lang tekst som ikke skal synes bak reset-ikonet"
         >
+        <div id="searchFieldErrorId-:r1b:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
         <span aria-live="assertive"
               class="_srOnly_hryzl_180"
         >
@@ -1074,11 +1276,11 @@ exports[`Tester/SearchField WithVariantLargeAndLongText smoke-test 1`] = `
           <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                viewbox="0 0 24 24"
                focusable="false"
-               aria-labelledby="svgtitle-:r11:"
+               aria-labelledby="svgtitle-:r1d:"
                aria-hidden="false"
                role="img"
           >
-            <title id="svgtitle-:r11:">
+            <title id="svgtitle-:r1d:">
               Nullstill
             </title>
             <path d="M19 17.61L13.89 12.5L19 7.39L17.11 5.5L12 10.61L6.89 5.5L5 7.39L10.11 12.5L5 17.61L6.89 19.5L12 14.39L17.11 19.5L19 17.61Z">
@@ -1090,11 +1292,11 @@ exports[`Tester/SearchField WithVariantLargeAndLongText smoke-test 1`] = `
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
              viewbox="0 0 24 24"
              focusable="false"
-             aria-labelledby="svgtitle-:r12:"
+             aria-labelledby="svgtitle-:r1e:"
              aria-hidden="false"
              role="img"
         >
-          <title id="svgtitle-:r12:">
+          <title id="svgtitle-:r1e:">
             Søk
           </title>
           <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
@@ -1108,125 +1310,40 @@ exports[`Tester/SearchField WithVariantLargeAndLongText smoke-test 1`] = `
 
 exports[`Tester/SearchField WithVariants smoke-test 1`] = `
 <div data-test-block="true">
-  <div id="searchField-:rg:"
+  <div id="searchField-:rl:"
        class="_topContainer_hryzl_11"
   >
-    <label id="searchField-:rg:-label"
+    <label id="searchField-:rl:-label"
            class="_label_348na_5"
-           for="searchField-:rg:-input"
+           for="searchField-:rl:-input"
     >
       Hva leter du etter?
     </label>
     <div class="_searchContainer_hryzl_5 ">
       <div class="_inputWrapper_hryzl_42">
-        <span id="searchField-:rg:-srFocus"
+        <span id="searchField-:rl:-srFocus"
               class="_srOnly_hryzl_180"
         >
           Bruk piltaster ned/opp for å velge forslag når de vises
         </span>
-        <input id="searchField-:rg:-input"
+        <input id="searchField-:rl:-input"
                class="_input_hryzl_42"
                autocomplete="off"
-               aria-describedby="searchField-:rg:-srFocus"
+               aria-describedby="searchField-:rl:-srFocus"
                type="search"
                value
         >
+        <div id="searchFieldErrorId-:rm:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
         <span aria-live="assertive"
               class="_srOnly_hryzl_180"
         >
         </span>
       </div>
       <button class="_searchButton_hryzl_95">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-labelledby="svgtitle-:ri:"
-             aria-hidden="false"
-             role="img"
-        >
-          <title id="svgtitle-:ri:">
-            Søk
-          </title>
-          <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
-          </path>
-        </svg>
-      </button>
-    </div>
-  </div>
-  <div id="searchField-:rj:"
-       class="_topContainer_hryzl_11 _topContainer_large_hryzl_20"
-  >
-    <label id="searchField-:rj:-label"
-           class="_label_348na_5"
-           for="searchField-:rj:-input"
-    >
-      Hva leter du etter?
-    </label>
-    <div class="_searchContainer_hryzl_5 ">
-      <div class="_inputWrapper_hryzl_42">
-        <span id="searchField-:rj:-srFocus"
-              class="_srOnly_hryzl_180"
-        >
-          Bruk piltaster ned/opp for å velge forslag når de vises
-        </span>
-        <input id="searchField-:rj:-input"
-               class="_input_hryzl_42"
-               autocomplete="off"
-               aria-describedby="searchField-:rj:-srFocus"
-               type="search"
-               value
-        >
-        <span aria-live="assertive"
-              class="_srOnly_hryzl_180"
-        >
-        </span>
-      </div>
-      <button class="_searchButton_hryzl_95 _searchButton_large_hryzl_118">
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
-             viewbox="0 0 24 24"
-             focusable="false"
-             aria-labelledby="svgtitle-:rl:"
-             aria-hidden="false"
-             role="img"
-        >
-          <title id="svgtitle-:rl:">
-            Søk
-          </title>
-          <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
-          </path>
-        </svg>
-      </button>
-    </div>
-  </div>
-  <div id="searchField-:rm:"
-       class="_topContainer_hryzl_11  _topContainer_extraLarge_hryzl_26"
-  >
-    <label id="searchField-:rm:-label"
-           class="_label_348na_5"
-           for="searchField-:rm:-input"
-    >
-      Hva leter du etter?
-    </label>
-    <div class="_searchContainer_hryzl_5 ">
-      <div class="_inputWrapper_hryzl_42">
-        <span id="searchField-:rm:-srFocus"
-              class="_srOnly_hryzl_180"
-        >
-          Bruk piltaster ned/opp for å velge forslag når de vises
-        </span>
-        <input id="searchField-:rm:-input"
-               class="_input_hryzl_42"
-               autocomplete="off"
-               aria-describedby="searchField-:rm:-srFocus"
-               type="search"
-               value
-        >
-        <span aria-live="assertive"
-              class="_srOnly_hryzl_180"
-        >
-        </span>
-      </div>
-      <button class="_searchButton_hryzl_95  _searchButton_extraLarge_hryzl_126">
         <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
              viewbox="0 0 24 24"
              focusable="false"
@@ -1243,16 +1360,11 @@ exports[`Tester/SearchField WithVariants smoke-test 1`] = `
       </button>
     </div>
   </div>
-</div>
-`;
-
-exports[`Tester/SearchField WithVariantsNoIcon smoke-test 1`] = `
-<div data-test-block="true">
   <div id="searchField-:rp:"
-       class="_topContainer_hryzl_11"
+       class="_topContainer_hryzl_11 _topContainer_large_hryzl_20"
   >
     <label id="searchField-:rp:-label"
-           class="_label_348na_5  _srOnly_348na_18"
+           class="_label_348na_5"
            for="searchField-:rp:-input"
     >
       Hva leter du etter?
@@ -1271,46 +1383,30 @@ exports[`Tester/SearchField WithVariantsNoIcon smoke-test 1`] = `
                type="search"
                value
         >
-        <span aria-live="assertive"
-              class="_srOnly_hryzl_180"
+        <div id="searchFieldErrorId-:rq:"
+             aria-live="assertive"
+             aria-atomic="true"
         >
-        </span>
-      </div>
-      <button class="_searchButton_hryzl_95">
-        Søk
-      </button>
-    </div>
-  </div>
-  <div id="searchField-:rr:"
-       class="_topContainer_hryzl_11 _topContainer_large_hryzl_20"
-  >
-    <label id="searchField-:rr:-label"
-           class="_label_348na_5  _srOnly_348na_18"
-           for="searchField-:rr:-input"
-    >
-      Hva leter du etter?
-    </label>
-    <div class="_searchContainer_hryzl_5 ">
-      <div class="_inputWrapper_hryzl_42">
-        <span id="searchField-:rr:-srFocus"
-              class="_srOnly_hryzl_180"
-        >
-          Bruk piltaster ned/opp for å velge forslag når de vises
-        </span>
-        <input id="searchField-:rr:-input"
-               class="_input_hryzl_42"
-               autocomplete="off"
-               aria-describedby="searchField-:rr:-srFocus"
-               type="search"
-               value
-        >
+        </div>
         <span aria-live="assertive"
               class="_srOnly_hryzl_180"
         >
         </span>
       </div>
       <button class="_searchButton_hryzl_95 _searchButton_large_hryzl_118">
-        Søk
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:rs:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:rs:">
+            Søk
+          </title>
+          <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
+          </path>
+        </svg>
       </button>
     </div>
   </div>
@@ -1318,7 +1414,7 @@ exports[`Tester/SearchField WithVariantsNoIcon smoke-test 1`] = `
        class="_topContainer_hryzl_11  _topContainer_extraLarge_hryzl_26"
   >
     <label id="searchField-:rt:-label"
-           class="_label_348na_5  _srOnly_348na_18"
+           class="_label_348na_5"
            for="searchField-:rt:-input"
     >
       Hva leter du etter?
@@ -1337,6 +1433,142 @@ exports[`Tester/SearchField WithVariantsNoIcon smoke-test 1`] = `
                type="search"
                value
         >
+        <div id="searchFieldErrorId-:ru:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
+        <span aria-live="assertive"
+              class="_srOnly_hryzl_180"
+        >
+        </span>
+      </div>
+      <button class="_searchButton_hryzl_95  _searchButton_extraLarge_hryzl_126">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r10:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r10:">
+            Søk
+          </title>
+          <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tester/SearchField WithVariantsNoIcon smoke-test 1`] = `
+<div data-test-block="true">
+  <div id="searchField-:r11:"
+       class="_topContainer_hryzl_11"
+  >
+    <label id="searchField-:r11:-label"
+           class="_label_348na_5  _srOnly_348na_18"
+           for="searchField-:r11:-input"
+    >
+      Hva leter du etter?
+    </label>
+    <div class="_searchContainer_hryzl_5 ">
+      <div class="_inputWrapper_hryzl_42">
+        <span id="searchField-:r11:-srFocus"
+              class="_srOnly_hryzl_180"
+        >
+          Bruk piltaster ned/opp for å velge forslag når de vises
+        </span>
+        <input id="searchField-:r11:-input"
+               class="_input_hryzl_42"
+               autocomplete="off"
+               aria-describedby="searchField-:r11:-srFocus"
+               type="search"
+               value
+        >
+        <div id="searchFieldErrorId-:r12:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
+        <span aria-live="assertive"
+              class="_srOnly_hryzl_180"
+        >
+        </span>
+      </div>
+      <button class="_searchButton_hryzl_95">
+        Søk
+      </button>
+    </div>
+  </div>
+  <div id="searchField-:r14:"
+       class="_topContainer_hryzl_11 _topContainer_large_hryzl_20"
+  >
+    <label id="searchField-:r14:-label"
+           class="_label_348na_5  _srOnly_348na_18"
+           for="searchField-:r14:-input"
+    >
+      Hva leter du etter?
+    </label>
+    <div class="_searchContainer_hryzl_5 ">
+      <div class="_inputWrapper_hryzl_42">
+        <span id="searchField-:r14:-srFocus"
+              class="_srOnly_hryzl_180"
+        >
+          Bruk piltaster ned/opp for å velge forslag når de vises
+        </span>
+        <input id="searchField-:r14:-input"
+               class="_input_hryzl_42"
+               autocomplete="off"
+               aria-describedby="searchField-:r14:-srFocus"
+               type="search"
+               value
+        >
+        <div id="searchFieldErrorId-:r15:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
+        <span aria-live="assertive"
+              class="_srOnly_hryzl_180"
+        >
+        </span>
+      </div>
+      <button class="_searchButton_hryzl_95 _searchButton_large_hryzl_118">
+        Søk
+      </button>
+    </div>
+  </div>
+  <div id="searchField-:r17:"
+       class="_topContainer_hryzl_11  _topContainer_extraLarge_hryzl_26"
+  >
+    <label id="searchField-:r17:-label"
+           class="_label_348na_5  _srOnly_348na_18"
+           for="searchField-:r17:-input"
+    >
+      Hva leter du etter?
+    </label>
+    <div class="_searchContainer_hryzl_5 ">
+      <div class="_inputWrapper_hryzl_42">
+        <span id="searchField-:r17:-srFocus"
+              class="_srOnly_hryzl_180"
+        >
+          Bruk piltaster ned/opp for å velge forslag når de vises
+        </span>
+        <input id="searchField-:r17:-input"
+               class="_input_hryzl_42"
+               autocomplete="off"
+               aria-describedby="searchField-:r17:-srFocus"
+               type="search"
+               value
+        >
+        <div id="searchFieldErrorId-:r18:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+        </div>
         <span aria-live="assertive"
               class="_srOnly_hryzl_180"
         >
