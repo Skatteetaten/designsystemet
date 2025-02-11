@@ -1,0 +1,6 @@
+import{j as t}from"./jsx-runtime-CfatFE5O.js";import{C as e}from"./index-B1fqGhxG.js";import{c as o}from"./helpers-Dccz2jQ-.js";import"./index-ClcD9ViR.js";import"./_commonjsHelpers-Cpj98o6Y.js";import"./index-qxaMszO_.js";import"./index-CT5qi75N.js";import"./index-BYj_oXFq.js";import"./index-DVxy_Kbo.js";import"./index-DdP4wgFW.js";e.Actions.displayName="Card.Actions";const p="Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.",c={children:p},j={component:e.Actions,title:"Komponenter/Card/Actions",argTypes:{children:{control:"text",table:{category:o.props}},spacingVertical:{table:{category:o.props}}},args:{...c}},r={render:i=>t.jsx(e,{children:t.jsx(e.Actions,{...i})})};var s,a,n;r.parameters={...r.parameters,docs:{...(s=r.parameters)==null?void 0:s.docs,source:{originalSource:`{
+  render: args => <Card>
+      <Card.Actions {...args} />
+    </Card>
+} satisfies Story`,...(n=(a=r.parameters)==null?void 0:a.docs)==null?void 0:n.source}}};const h=["Preview"];export{r as Preview,h as __namedExportsOrder,j as default};
+//# sourceMappingURL=CardActions.stories-y7T1u3Nr.js.map
