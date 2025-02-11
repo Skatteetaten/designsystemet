@@ -195,10 +195,19 @@ export const ViktigMelding: Story = {
 ViktigMelding.parameters = exampleParameters;
 
 export const Ventevarsel: Story = {
-  render: (_args): JSX.Element => {
+  render: function Render(_args): JSX.Element {
     const refModalWait = useRef<HTMLDialogElement>(null);
     const [time, setTime] = useState<number>(1200000);
     const lastActivity = useRef(new Date().getTime());
+
+    const resetTimer = (): void => {
+      lastActivity.current = new Date().getTime();
+    };
+
+    const closeDialog = (): void => {
+      refModalWait.current?.close();
+      resetTimer();
+    };
 
     useEffect(() => {
       const checkExpiredTime = (): void => {
@@ -213,7 +222,8 @@ export const Ventevarsel: Story = {
     }, [time]);
 
     useEffect(() => {
-      const { signal, abort } = new AbortController();
+      const abortController = new AbortController();
+      const { signal } = abortController;
 
       window.addEventListener('keydown', resetTimer, { signal });
       window.addEventListener('mousemove', resetTimer, { signal });
@@ -221,18 +231,9 @@ export const Ventevarsel: Story = {
       window.addEventListener('resize', resetTimer, { signal });
 
       return (): void => {
-        abort();
+        abortController.abort();
       };
     }, []);
-
-    const resetTimer = (): void => {
-      lastActivity.current = new Date().getTime();
-    };
-
-    const closeDialog = (): void => {
-      refModalWait.current?.close();
-      resetTimer();
-    };
 
     return (
       <>
@@ -283,7 +284,7 @@ export const Ventevarsel: Story = {
 Ventevarsel.parameters = exampleParameters;
 
 export const Feilmeldingsmodal: Story = {
-  render: (_args): JSX.Element => {
+  render: function Render(_args): JSX.Element {
     const refModalFeil = useRef<HTMLDialogElement>(null);
     const isBigScreen = useMediaQuery('(min-width: 640px)');
 

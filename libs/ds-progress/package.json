@@ -1,6 +1,6 @@
 {
   "name": "@skatteetaten/ds-progress",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "license": "Apache-2.0",
   "groupId": "no.skatteetaten.aurora",
   "type": "module",
@@ -11,7 +11,7 @@
     "i18next": "^23",
     "react": "^18",
     "react-i18next": "^14",
-    "@skatteetaten/ds-core-utils": "1.5.0"
+    "@skatteetaten/ds-core-utils": "1.5.1"
   },
   "scripts": {},
   "dependencies": {},
