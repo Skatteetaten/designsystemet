@@ -15,7 +15,7 @@ exports[`Tester/StepList/Step NextButtonWithDisabled smoke-test 1`] = `
         <div class="_stepLine_t28i0_1 ">
         </div>
       </div>
-      <h3 id="steptitle-:rb:"
+      <h3 id="steptitle-:rn:"
           class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
       >
         tittel
@@ -58,7 +58,7 @@ exports[`Tester/StepList/Step NextButtonWithSpinner smoke-test 1`] = `
         <div class="_stepLine_t28i0_1 ">
         </div>
       </div>
-      <h3 id="steptitle-:r9:"
+      <h3 id="steptitle-:rj:"
           class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
       >
         tittel
@@ -84,7 +84,7 @@ exports[`Tester/StepList/Step NextButtonWithSpinner smoke-test 1`] = `
           >
             <div class="_spinnerAnimation_wnf1f_40 ">
             </div>
-            <span id="title-:ra:"
+            <span id="title-:rl:"
                   class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
             >
               Laster inn
@@ -146,7 +146,7 @@ exports[`Tester/StepList/Step WithEditAccessibleDescription play-test 1`] = `
         <div class="_stepLine_t28i0_1 ">
         </div>
       </div>
-      <h3 id="steptitle-:r7:"
+      <h3 id="steptitle-:rf:"
           class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
       >
         tittel
@@ -156,11 +156,12 @@ exports[`Tester/StepList/Step WithEditAccessibleDescription play-test 1`] = `
         <div>
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
         </div>
-        <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  _stepEditButton_t28i0_46"
+        <button class="_button_151en_1 _button_withIconLeft_151en_8  _stepEditButton_t28i0_46"
+                data-brightness="default"
                 type="button"
-                aria-describedby="steptitle-:r7:"
+                aria-describedby="steptitle-:rf:"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -192,11 +193,11 @@ exports[`Tester/StepList/Step WithFullWidthResult smoke-test 1`] = `
           <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_t28i0_244"
                viewbox="0 0 24 24"
                focusable="false"
-               aria-labelledby="svgtitle-:r6:"
+               aria-labelledby="svgtitle-:rd:"
                aria-hidden="false"
                role="img"
           >
-            <title id="svgtitle-:r6:">
+            <title id="svgtitle-:rd:">
               Fullført
             </title>
             <path d="M19.94 6.71L19.24 6L9 16.23L5.26 12.5L4.91 12.85L3.5 14.26L9 19.76L21 7.76L19.94 6.71Z">
@@ -206,7 +207,7 @@ exports[`Tester/StepList/Step WithFullWidthResult smoke-test 1`] = `
         <div class="_stepLine_t28i0_1 _stepLine_neutralResult_t28i0_1">
         </div>
       </div>
-      <h3 id="steptitle-:r5:"
+      <h3 id="steptitle-:rb:"
           class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
       >
         jeg er en tittel
@@ -235,11 +236,11 @@ exports[`Tester/StepList/Step WithIconTitleAS play-test 1`] = `
           <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _stepCircleIcon_t28i0_244"
                viewbox="0 0 24 24"
                focusable="false"
-               aria-labelledby="svgtitle-:r3:"
+               aria-labelledby="svgtitle-:r7:"
                aria-hidden="false"
                role="img"
           >
-            <title id="svgtitle-:r3:">
+            <title id="svgtitle-:r7:">
               svg-tittel
             </title>
             <path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4V2Zm10 14.5-4-4-4 4V20h8v-3.5Zm-4-5 4-4V4H8v3.5l4 4ZM10 6h4v.75l-2 2-2-2V6Z">
@@ -249,7 +250,7 @@ exports[`Tester/StepList/Step WithIconTitleAS play-test 1`] = `
         <div class="_stepLine_t28i0_1 ">
         </div>
       </div>
-      <h2 id="steptitle-:r2:"
+      <h2 id="steptitle-:r5:"
           class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
       >
         jeg er en tittel
@@ -281,7 +282,7 @@ exports[`Tester/StepList/Step WithRef play-test 1`] = `
         <div class="_stepLine_t28i0_1 ">
         </div>
       </div>
-      <h3 id="steptitle-:r0:"
+      <h3 id="steptitle-:r1:"
           class="_heading_12p5o_1 _heading_level5_12p5o_47  _stepHeading_t28i0_75"
       >
         title

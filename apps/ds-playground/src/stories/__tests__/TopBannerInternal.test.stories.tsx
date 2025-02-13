@@ -127,10 +127,18 @@ export const WithChildren = {
         >
           {'Hjelp'}
         </Link>
-        <InlineButton className={'marginL'} svgPath={SettingsSVGpath}>
+        <InlineButton
+          className={'marginL'}
+          svgPath={SettingsSVGpath}
+          brightness={'light'}
+        >
           {'Tilpass løsningen'}
         </InlineButton>
-        <InlineButton className={'marginL'} svgPath={SettingsSVGpath}>
+        <InlineButton
+          className={'marginL'}
+          svgPath={SettingsSVGpath}
+          brightness={'light'}
+        >
           {'Meld feil'}
         </InlineButton>
       </>

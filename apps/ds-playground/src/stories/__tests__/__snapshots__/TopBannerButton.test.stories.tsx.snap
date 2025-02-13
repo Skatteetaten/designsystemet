@@ -319,11 +319,11 @@ exports[`Tester/TopBanner/TopBannerButton (intern) WithTitle play-test 1`] = `
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_197zg_18"
            viewbox="0 0 24 24"
            focusable="false"
-           aria-labelledby="svgtitle-:r6:"
+           aria-labelledby="svgtitle-:rd:"
            aria-hidden="false"
            role="img"
       >
-        <title id="svgtitle-:r6:">
+        <title id="svgtitle-:rd:">
           Title
         </title>
         <path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z">

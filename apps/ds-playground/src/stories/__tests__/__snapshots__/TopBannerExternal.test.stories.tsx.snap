@@ -801,19 +801,19 @@ exports[`Tester/TopBanner/TopBannerExternal WithChildren play-test 1`] = `
         </a>
         <div class="_contentContainer_18mb7_17">
           <div class>
-            <label id="labelId-:rc:"
+            <label id="labelId-:rp:"
                    class="_label_348na_5  _srOnly_348na_18"
-                   for="textFieldTextboxId-:rb:"
+                   for="textFieldTextboxId-:rn:"
             >
               Søk
             </label>
-            <input id="textFieldTextboxId-:rb:"
+            <input id="textFieldTextboxId-:rn:"
                    class="_textbox_1b2vd_5"
                    autocomplete="off"
                    placeholder="Søk"
                    value
             >
-            <div id="textFieldErrorId-:ra:"
+            <div id="textFieldErrorId-:rm:"
                  aria-live="assertive"
                  aria-atomic="true"
             >
