@@ -20,6 +20,7 @@ export const TopBannerInternal = forwardRef<
     {
       id,
       className = getCommonClassNameDefault(),
+      classNames,
       lang,
       'data-testid': dataTestId,
       logo,
@@ -78,7 +79,9 @@ export const TopBannerInternal = forwardRef<
             {description && <span>{description}</span>}
           </div>
           {showChildrenAndUserContainer && (
-            <div className={styles.childrenAndUserContainer}>
+            <div
+              className={`${styles.childrenAndUserContainer} ${classNames?.childrenContainer}`}
+            >
               {children}
               {user && (
                 <div className={styles.userContainer}>

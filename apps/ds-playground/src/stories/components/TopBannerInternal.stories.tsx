@@ -2,6 +2,15 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
+import { IconButton, InlineButton } from '@skatteetaten/ds-buttons';
+import { SearchField } from '@skatteetaten/ds-forms';
+import {
+  EditSVGpath,
+  FileSVGpath,
+  HelpFilledSVGpath,
+  MenuSVGpath,
+  PersonSVGpath,
+} from '@skatteetaten/ds-icons';
 import { TopBannerInternal } from '@skatteetaten/ds-layout';
 
 import { category } from '../../../.storybook/helpers';
@@ -42,13 +51,60 @@ export const Preview: Story = {} satisfies Story;
 export const Examples: Story = {
   render: (_args): JSX.Element => {
     return (
-      <TopBannerInternal
-        title={'Kakeportalen'}
-        description={'Kaka er en løgn'}
-        logoAltText={'Forside kakeportalen.'}
-        logoHref={'/home'}
-        user={'Sturle "Stuten" Trestubbe, Team Rocket'}
-      ></TopBannerInternal>
+      <>
+        <TopBannerInternal
+          className={'bottomSpacingXL'}
+          title={'MVA'}
+          description={'Arbeidsliste'}
+          logoAltText={'Forside MVA'}
+          logoHref={'/home'}
+          user={'Etternavnesen Fornavn'}
+          children={
+            <>
+              <InlineButton svgPath={HelpFilledSVGpath} brightness={'light'}>
+                {'Hjelp'}
+              </InlineButton>
+              <InlineButton svgPath={FileSVGpath} brightness={'light'}>
+                {'Dokumentasjon'}
+              </InlineButton>
+              <InlineButton svgPath={EditSVGpath} brightness={'light'}>
+                {'Opprett RF-Ørtiatten'}
+              </InlineButton>
+            </>
+          }
+        ></TopBannerInternal>
+        <TopBannerInternal
+          classNames={{ childrenContainer: 'maxWidthInFlexbox' }}
+          title={'Global Skatt'}
+          logoAltText={'Forside Global Skatt'}
+          logoHref={'/home'}
+          children={
+            <>
+              <SearchField
+                className={'maxWidthInFlexbox'}
+                classNames={{ searchContainer: 'noMargin' }}
+                label={'Søk etter sak, virksomhet, dokument'}
+                placeholder={'Søk etter sak, virksomhet, dokument...'}
+              />
+              <IconButton
+                className={'whiteIcon'}
+                svgPath={HelpFilledSVGpath}
+                title={'Hjelp'}
+              />
+              <IconButton
+                className={'whiteIcon'}
+                svgPath={PersonSVGpath}
+                title={'Bruker'}
+              />
+              <IconButton
+                className={'whiteIcon'}
+                svgPath={MenuSVGpath}
+                title={'Meny'}
+              />
+            </>
+          }
+        ></TopBannerInternal>
+      </>
     );
   },
 } satisfies Story;

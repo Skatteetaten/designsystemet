@@ -1,16 +1,13 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { expect, fireEvent, fn, within } from '@storybook/test';
 
-import { IconButton, InlineButton, Link } from '@skatteetaten/ds-buttons';
+import { InlineButton, Link } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { SearchField } from '@skatteetaten/ds-forms';
 import {
   EditSVGpath,
   FileSVGpath,
   HelpFilledSVGpath,
   HelpOutlineSVGpath,
-  MenuSVGpath,
-  PersonSVGpath,
   SettingsSVGpath,
 } from '@skatteetaten/ds-icons';
 import { TopBannerInternal } from '@skatteetaten/ds-layout';
@@ -47,6 +44,7 @@ const meta = {
     onLogoClick: { table: { disable: true } },
   },
   args: {
+    title: 'MVA',
     logoHref: '#',
     logoAltText: 'til startsiden kakeportalen',
   },
@@ -58,6 +56,19 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const skipLinkText = dsI18n.t('ds_layout:topbanner.SkipLinkText');
+const defaultChildren = (
+  <>
+    <InlineButton svgPath={HelpFilledSVGpath} brightness={'light'}>
+      {'Hjelp'}
+    </InlineButton>
+    <InlineButton svgPath={FileSVGpath} brightness={'light'}>
+      {'Dokumentasjon'}
+    </InlineButton>
+    <InlineButton svgPath={EditSVGpath} brightness={'light'}>
+      {'Opprett RF-Ørtiatten'}
+    </InlineButton>
+  </>
+);
 
 export const WithRef = {
   name: 'With Ref (FA1)',
@@ -144,9 +155,6 @@ export const WithChildren = {
   argTypes: {
     children: { table: { disable: false } },
   },
-  parameters: {
-    a11y: { disable: true },
-  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const label = canvas.getByText('Hjelp');
@@ -187,7 +195,7 @@ export const SkipLinkFocusedBreakpointL = {
 } satisfies Story;
 
 export const WithTitleDescriptionUser = {
-  name: 'With Title description (A4)',
+  name: 'With Title And Description And User (A4)',
   args: {
     title: 'kakeportalen',
     description: 'kaka er en løgn',
@@ -216,7 +224,7 @@ export const WithTitleDescriptionUser = {
 } satisfies Story;
 
 export const WithLongTitleDescriptionMobile = {
-  name: 'With Long Title description Username (A2, A4, A7)',
+  name: 'With Long Title And Long Description Mobile (A2, A4, A7)',
   argTypes: {
     title: { table: { disable: false } },
     description: { table: { disable: false } },
@@ -274,7 +282,7 @@ export const WithLongConstructionText = {
 } satisfies Story;
 
 export const WithLogoClick = {
-  name: 'With onClickLogo LogoAltText LogoHref (A6)',
+  name: 'With onLogoClick (A6)',
   argTypes: {
     isUnderConstruction: { table: { disable: false } },
     constructionBandTitle: { table: { disable: false } },
@@ -287,10 +295,10 @@ export const WithLogoClick = {
   },
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
-    const logo = canvas.getByAltText('til startsiden kakeportalen');
-    await fireEvent.click(logo);
+    const link = canvas.getByText('MVA');
+    await fireEvent.click(link);
 
-    await expect(logo).toBeInTheDocument();
+    await expect(link).toBeInTheDocument();
     await expect(args.onLogoClick).toHaveBeenCalledOnce();
   },
 } satisfies Story;
@@ -308,146 +316,15 @@ export const WithCustomTheme = {
   },
 } satisfies Story;
 
-export const WithShortTitleAndShortDescriptionMobile = {
-  args: {
-    title: 'MVA',
-    description: 'Arbeidsliste',
-    user: 'Etternavnesen Fornavn',
-  },
-  argTypes: {
-    title: {
-      table: { disable: false },
-    },
-    description: {
-      table: { disable: false },
-    },
-    user: {
-      table: { disable: false },
-    },
-  },
-  parameters: {
-    viewport: {
-      defaultViewport: '--mobile',
-    },
-    imageSnapshot: {
-      focus: `${wrapper} a[href="/start]`,
-      click: `${wrapper} a[href="/start]`,
-    },
-  },
-} satisfies Story;
-
-export const WithShortTitleAndShortDescriptionDesktop = {
-  args: {
-    title: 'MVA',
-    description: 'Arbeidsliste',
-    user: 'Etternavnesen Fornavn',
-  },
-  argTypes: {
-    title: {
-      table: { disable: false },
-    },
-    description: {
-      table: { disable: false },
-    },
-    user: {
-      table: { disable: false },
-    },
-  },
-  parameters: {
-    viewport: {
-      defaultViewport: '--breakpoint-m',
-    },
-  },
-} satisfies Story;
-
-export const WithLongTitleAndLongDescriptionMobile = {
-  args: {
-    title: 'Oppdragsregister saksbehandling',
-    description: 'Registrering av innrapporterte pepperkaker og lussekatter',
-    user: 'Bob Mould',
-  },
-  argTypes: {
-    title: {
-      table: { disable: false },
-    },
-    description: {
-      table: { disable: false },
-    },
-    user: {
-      table: { disable: false },
-    },
-  },
-  parameters: {
-    viewport: {
-      defaultViewport: '--mobile',
-    },
-  },
-} satisfies Story;
-
-export const WithLongTitleAndLongDescriptionDesktop = {
-  args: {
-    title: 'Oppdragsregister saksbehandling',
-    description: 'Registrering av innrapporterte pepperkaker og lussekatter',
-    user: 'Bob Mould',
-  },
-  argTypes: {
-    title: {
-      table: { disable: false },
-    },
-    description: {
-      table: { disable: false },
-    },
-    user: {
-      table: { disable: false },
-    },
-  },
-  parameters: {
-    viewport: {
-      defaultViewport: '--breakpoint-m',
-    },
-  },
-} satisfies Story;
-
 export const WithOneChildMobile = {
   args: {
     title: 'MVA',
     description: 'Arbeidsliste',
     user: 'Etternavnesen Fornavn',
     children: (
-      <InlineButton svgPath={HelpFilledSVGpath}>{'Hjelp'}</InlineButton>
-    ),
-  },
-  argTypes: {
-    title: {
-      table: { disable: false },
-    },
-    description: {
-      table: { disable: false },
-    },
-    user: {
-      table: { disable: false },
-    },
-  },
-  parameters: {
-    viewport: {
-      defaultViewport: '--mobile',
-    },
-  },
-} satisfies Story;
-
-export const WithThreeChildrenMobile = {
-  args: {
-    title: 'MVA',
-    description: 'Arbeidsliste',
-    user: 'Etternavnesen Fornavn',
-    children: (
-      <>
-        <InlineButton svgPath={HelpFilledSVGpath}>{'Hjelp'}</InlineButton>
-        <InlineButton svgPath={FileSVGpath}>{'Dokumentasjon'}</InlineButton>
-        <InlineButton svgPath={EditSVGpath}>
-          {'Opprett RF-Ørtiatten'}
-        </InlineButton>
-      </>
+      <InlineButton svgPath={HelpFilledSVGpath} brightness={'light'}>
+        {'Hjelp'}
+      </InlineButton>
     ),
   },
   argTypes: {
@@ -473,15 +350,7 @@ export const WithLongDescriptionAndThreeChildrenMobile = {
     title: 'MVA',
     description: 'FOLK OG TRUBADURSERVICE WOODIE GUTHRIE 999 999 999',
     user: 'Etternavnesen Fornavn',
-    children: (
-      <>
-        <InlineButton svgPath={HelpFilledSVGpath}>{'Hjelp'}</InlineButton>
-        <InlineButton svgPath={FileSVGpath}>{'Dokumentasjon'}</InlineButton>
-        <InlineButton svgPath={EditSVGpath}>
-          {'Opprett RF-Ørtiatten'}
-        </InlineButton>
-      </>
-    ),
+    children: defaultChildren,
   },
   argTypes: {
     title: {
@@ -501,53 +370,12 @@ export const WithLongDescriptionAndThreeChildrenMobile = {
   },
 } satisfies Story;
 
-export const WithThreeChildrenBreakpointXS = {
-  args: {
-    title: 'MVA',
-    description: 'Arbeidsliste',
-    user: 'Etternavnesen Fornavn',
-    children: (
-      <>
-        <InlineButton svgPath={HelpFilledSVGpath}>{'Hjelp'}</InlineButton>
-        <InlineButton svgPath={FileSVGpath}>{'Dokumentasjon'}</InlineButton>
-        <InlineButton svgPath={EditSVGpath}>
-          {'Opprett RF-Ørtiatten'}
-        </InlineButton>
-      </>
-    ),
-  },
-  argTypes: {
-    title: {
-      table: { disable: false },
-    },
-    description: {
-      table: { disable: false },
-    },
-    user: {
-      table: { disable: false },
-    },
-  },
-  parameters: {
-    viewport: {
-      defaultViewport: '--breakpoint-xs',
-    },
-  },
-} satisfies Story;
-
 export const WithThreeChildrenBreakpointS = {
   args: {
     title: 'MVA',
     description: 'Arbeidsliste',
     user: 'Etternavnesen Fornavn',
-    children: (
-      <>
-        <InlineButton svgPath={HelpFilledSVGpath}>{'Hjelp'}</InlineButton>
-        <InlineButton svgPath={FileSVGpath}>{'Dokumentasjon'}</InlineButton>
-        <InlineButton svgPath={EditSVGpath}>
-          {'Opprett RF-Ørtiatten'}
-        </InlineButton>
-      </>
-    ),
+    children: defaultChildren,
   },
   argTypes: {
     title: {
@@ -572,15 +400,7 @@ export const WithThreeChildrenBreakpointM = {
     title: 'MVA',
     description: 'Arbeidsliste',
     user: 'Etternavnesen Fornavn',
-    children: (
-      <>
-        <InlineButton svgPath={HelpFilledSVGpath}>{'Hjelp'}</InlineButton>
-        <InlineButton svgPath={FileSVGpath}>{'Dokumentasjon'}</InlineButton>
-        <InlineButton svgPath={EditSVGpath}>
-          {'Opprett RF-Ørtiatten'}
-        </InlineButton>
-      </>
-    ),
+    children: defaultChildren,
   },
   argTypes: {
     title: {
@@ -605,50 +425,7 @@ export const WithLongTitleAndLongDescriptionAndThreeChildrenBreakpointM = {
     title: 'Oppdragsregister saksbehandling',
     description: 'Arbeidsliste for ulike scenarier som er lange',
     user: 'Winnifred-Jonathan Hastings',
-    children: (
-      <>
-        <InlineButton svgPath={HelpFilledSVGpath}>{'Hjelp'}</InlineButton>
-        <InlineButton svgPath={FileSVGpath}>{'Dokumentasjon'}</InlineButton>
-        <InlineButton svgPath={EditSVGpath}>
-          {'Opprett RF-Ørtiatten'}
-        </InlineButton>
-      </>
-    ),
-  },
-  argTypes: {
-    title: {
-      table: { disable: false },
-    },
-    description: {
-      table: { disable: false },
-    },
-    user: {
-      table: { disable: false },
-    },
-  },
-  parameters: {
-    viewport: {
-      defaultViewport: '--breakpoint-m',
-    },
-  },
-} satisfies Story;
-
-export const GlobalSkattExample = {
-  args: {
-    title: 'Global skatt',
-    children: (
-      <>
-        <SearchField
-          className={'widthSearchField'}
-          classNames={{ searchContainer: 'noMargin' }}
-          label={'Søk etter sak, virksomhet, dokument'}
-          placeholder={'Søk etter sak, virksomhet, dokument...'}
-        />
-        <IconButton svgPath={HelpFilledSVGpath} title={'Hjelp'} />
-        <IconButton svgPath={PersonSVGpath} title={'Bruker'} />
-        <IconButton svgPath={MenuSVGpath} title={'Meny'} />
-      </>
-    ),
+    children: defaultChildren,
   },
   argTypes: {
     title: {

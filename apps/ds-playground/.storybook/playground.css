@@ -278,11 +278,15 @@ a.resetLinkStyling {
   flex-wrap: wrap;
 }
 
-.widthSearchField {
+.maxWidthInFlexbox {
   flex-grow: 1;
   max-width: 100% !important;
 }
 
 .noMargin {
   margin: 0 !important;
+}
+
+.whiteIcon:not(:hover) {
+  --semantic-interactive-main: var(--palette-graphite-0);
 }

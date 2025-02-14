@@ -46,8 +46,6 @@
 
 .titleAndDescriptionContainer {
   display: flex;
-
-  // flex-grow: 10000000000;
   flex-wrap: wrap;
   align-items: center;
   gap: var(--spacing-xs);
