@@ -39,6 +39,9 @@ const meta = {
     iconPosition: {
       table: { disable: true },
     },
+    brightness: {
+      table: { disable: true },
+    },
     svgPath: {
       table: { disable: true },
       options: Object.keys(SystemSVGPaths),
@@ -241,6 +244,26 @@ export const WithDisabledAndIcon = {
   },
 } satisfies Story;
 
+export const WithDisabledAndBrightness = {
+  name: 'With Disabled And Icon And Brightness (B5)',
+  args: {
+    ...defaultArgs,
+    svgPath: AddOutlineSVGpath,
+    disabled: true,
+    brightness: 'light',
+  },
+  argTypes: {
+    disabled: { table: { disable: false } },
+    svgPath: { table: { disable: false } },
+    brightness: { table: { disable: false } },
+  },
+  parameters: {
+    backgrounds: {
+      default: 'themePrimary',
+    },
+  },
+} satisfies Story;
+
 export const WithType = {
   name: 'With Type (B1)',
   args: {
@@ -376,5 +399,28 @@ export const WithSpinner = {
   },
   argTypes: {
     hasSpinner: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithBrightness = {
+  name: 'With Brightness (A8)',
+  args: {
+    ...defaultArgs,
+    brightness: 'light',
+    svgPath: AddOutlineSVGpath,
+  },
+  argTypes: {
+    brightness: { table: { disable: false } },
+  },
+
+  parameters: {
+    backgrounds: {
+      default: 'themePrimary',
+    },
+    imageSnapshot: {
+      hover: `${wrapper} > button`,
+      focus: `${wrapper} > button`,
+      click: `${wrapper} > button`,
+    },
   },
 } satisfies Story;

@@ -3,6 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import {
   InlineButton,
   getInlineButtonPositionDefault,
+  getInlineButtonBrightnessDefault,
 } from '@skatteetaten/ds-buttons';
 import {
   dsI18n,
@@ -32,6 +33,13 @@ const meta = {
       table: {
         category: category.props,
         defaultValue: { summary: getInlineButtonPositionDefault() },
+      },
+    },
+    brightness: {
+      control: 'radio',
+      table: {
+        category: category.props,
+        defaultValue: { summary: getInlineButtonBrightnessDefault() },
       },
     },
     svgPath: {
