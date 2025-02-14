@@ -30,7 +30,10 @@ export interface TopBannerInternalProps extends BaseProps {
   skipLink?: SkipLink;
   /** Url på logo. Skal settes til hjem-siden/arbeidslisten i løsningen.  */
   logoHref: string;
-  /** Alt-text på logo. Skal gi beskjed om hvor lenken sender deg. F.eks Forside [navn på løsning] */
+  /**
+   * Alt-text på logo. Skal gi beskjed om hvor lenken sender deg. F.eks Forside [navn på løsning].
+   * Deprecated: Prop skal fjernes ved lansering av neste major versjon.
+   */
   logoAltText: string;
   /** Overskriver default logo. */
   logo?: string;

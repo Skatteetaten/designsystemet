@@ -277,3 +277,12 @@ a.resetLinkStyling {
 .flexWrap {
   flex-wrap: wrap;
 }
+
+.widthSearchField {
+  flex-grow: 1;
+  max-width: 100% !important;
+}
+
+.noMargin {
+  margin: 0 !important;
+}

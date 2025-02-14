@@ -1,45 +1,20 @@
 @use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 
-.childrenContainer {
-  grid-area: children;
-}
-
-.alignRight {
-  width: fit-content;
-  margin-left: auto;
-}
-
-.titleWrapper {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: var(--font-size-l);
-  grid-area: title;
-  line-height: var(--semantic-line-height-article);
-
-  @media (min-width: breakpoints.$breakpoint-m) {
-    margin: var(--spacing-s) 0;
-  }
-
-  :first-child {
-    margin-right: var(--spacing-s);
-    font-weight: var(--font-weight-bold);
-  }
-}
-
 .constructionBand {
   --construction-yellow: #fafd8a;
 
-  height: var(--spacing-m);
   background: repeating-linear-gradient(
     135deg,
     var(--construction-yellow),
-    var(--construction-yellow) 16px,
-    var(--palette-graphite-100) 16px,
-    var(--palette-graphite-100) 32px
+    var(--construction-yellow) 1rem,
+    var(--palette-graphite-100) 1rem,
+    var(--palette-graphite-100) 2rem
   );
 
   &Title {
     width: fit-content;
+    max-width: calc(100% - 6rem);
+    box-sizing: border-box;
     padding: var(--spacing-xxs) var(--spacing-m);
     margin: 0 auto;
     background: var(--palette-graphite-100);
@@ -47,133 +22,91 @@
     font-size: var(--font-size-xs);
     font-weight: var(--font-weight-bold);
     line-height: 1;
+    overflow-wrap: anywhere;
     text-transform: uppercase;
-  }
-}
-
-[data-scroll] {
-  animation: scroll 60s linear infinite;
-  background-size: 200% 100%;
-
-  @keyframes scroll {
-    0% {
-      background-position: 0 0;
-    }
-
-    100% {
-      background-position: 100% 0;
-    }
-  }
-}
-
-.topBanner {
-  background-color: var(--theme-primary);
-  color: var(--palette-graphite-0);
-}
-
-.link {
-  line-height: 0;
-}
-
-.logo {
-  padding: var(--spacing-xs) 0;
-  grid-area: logo;
-
-  &:focus {
-    outline: none;
-  }
-
-  &Image {
-    display: block;
-    width: 2rem;
-    height: 2rem;
-    object-fit: contain;
-
-    @media (min-width: breakpoints.$breakpoint-m) {
-      width: 2.5rem;
-      height: 2.5rem;
-    }
-  }
-
-  &:focus &Image {
-    outline: var(--palette-azure-30) 2px solid;
-    outline-offset: 2px;
-  }
-}
-
-.topContainer {
-  padding: var(--spacing-s) var(--spacing-m);
-
-  @media (min-width: breakpoints.$breakpoint-m) {
-    padding: var(--spacing-s) var(--spacing-xl);
-  }
-
-  .contentContainer {
-    display: grid;
-    width: 100%;
-    gap: var(--spacing-xs) var(--spacing-m);
-    grid-template-areas:
-      'logo children name'
-      'title title title';
-    grid-template-columns: 32px 1fr fit-content(9.5rem);
-
-    @media (min-width: breakpoints.$breakpoint-m) {
-      grid-template-areas: 'logo title name';
-      grid-template-columns: 40px 1fr fit-content(15.75rem);
-    }
-
-    @media (min-width: breakpoints.$breakpoint-l) {
-      grid-template-columns: 40px 1fr fit-content(var(--container-s));
-    }
-
-    &_withChildren {
-      @media (min-width: breakpoints.$breakpoint-m) {
-        grid-template-areas: 'logo title children name';
-        grid-template-columns: 40px 1fr 1fr fit-content(15.75rem);
-      }
-
-      @media (min-width: breakpoints.$breakpoint-l) {
-        grid-template-columns: 40px 1fr 1fr fit-content(var(--container-s));
-      }
-    }
-  }
-}
-
-.nameContainer {
-  display: flex;
-  min-width: 0;
-  max-width: 9.5rem;
-  margin-top: var(--spacing-s);
-  grid-area: name;
-  line-height: var(--semantic-line-height-article);
-
-  @media (min-width: breakpoints.$breakpoint-m) {
-    max-width: 15.75rem;
-    padding-top: var(--spacing-xxs);
-  }
-
-  @media (min-width: breakpoints.$breakpoint-l) {
-    max-width: var(--container-s);
-  }
-
-  &Name {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  &Icon {
-    height: calc(
-      var(--font-size-reference) * var(--semantic-line-height-article)
-    );
-    margin-right: var(--spacing-xxs);
-    fill: var(--palette-graphite-0);
   }
 }
 
 .skipLink {
   @media (min-width: breakpoints.$breakpoint-m) {
     --skip-link-content-max-width: none;
-    --skip-link-content-margin: 0 var(--spacing-xl);
+    --skip-link-content-margin: 0 var(--spacing-m);
+  }
+}
+
+.topBanner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: var(--spacing-s) var(--spacing-m);
+  background-color: var(--theme-primary);
+  color: var(--palette-graphite-0);
+  gap: var(--spacing-m);
+}
+
+.titleAndDescriptionContainer {
+  display: flex;
+
+  // flex-grow: 10000000000;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.logoAndTitleLink {
+  display: flex;
+  align-items: center;
+  color: var(--palette-graphite-0);
+  font-weight: var(--font-weight-bold);
+  gap: var(--spacing-s);
+  text-decoration: none;
+
+  &:focus {
+    outline: 2px var(--palette-azure-30) solid;
+    outline-offset: 2px;
+  }
+}
+
+.logoImage {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+
+  @media (min-width: breakpoints.$breakpoint-m) {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+.childrenAndUserContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-xs) var(--spacing-m);
+}
+
+.userContainer {
+  display: none;
+
+  @media (min-width: breakpoints.$breakpoint-m) {
+    display: flex;
+    max-width: 15.75rem;
+    align-items: center;
+    gap: var(--spacing-xxs);
+  }
+
+  @media (min-width: breakpoints.$breakpoint-l) {
+    max-width: var(--container-s);
+  }
+
+  &Icon {
+    flex-shrink: 0;
+    fill: var(--palette-graphite-0);
+  }
+
+  &Name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }

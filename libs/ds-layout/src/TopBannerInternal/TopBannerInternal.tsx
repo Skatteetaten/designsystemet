@@ -1,6 +1,9 @@
 import { forwardRef, JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import {
+  getCommonClassNameDefault,
+  useMediaQuery,
+} from '@skatteetaten/ds-core-utils';
 import { PersonIcon } from '@skatteetaten/ds-icons';
 
 import defaultLogo from './logo-sak.svg';
@@ -33,13 +36,15 @@ export const TopBannerInternal = forwardRef<
     },
     ref
   ): JSX.Element => {
+    const isDesktop = useMediaQuery('(min-width: 1024px)');
+    const showChildrenAndUserContainer = children || (user && isDesktop);
     return (
       <header
         ref={ref}
         id={id}
         lang={lang}
         data-testid={dataTestId}
-        className={`${styles.topBanner} ${className}`}
+        className={className}
       >
         <TopBannerSkipLink
           className={styles.skipLink}
@@ -55,37 +60,34 @@ export const TopBannerInternal = forwardRef<
             </div>
           </div>
         )}
-        <div className={styles.topContainer}>
-          <div
-            className={`${styles.contentContainer} ${
-              children ? styles.contentContainer_withChildren : ''
-            }`}
-          >
-            <a className={styles.logo} href={logoHref} onClick={onLogoClick}>
+        <div className={styles.topBanner}>
+          <div className={styles.titleAndDescriptionContainer}>
+            <a
+              className={styles.logoAndTitleLink}
+              href={logoHref}
+              onClick={onLogoClick}
+            >
               <img
                 className={styles.logoImage}
                 src={logo ?? defaultLogo}
-                alt={logoAltText}
+                alt={''}
+                aria-hidden
               />
-            </a>
-            <span className={styles.titleWrapper}>
               {title && <span>{title}</span>}
-              {description && <span>{description}</span>}
-            </span>
-            {children && (
-              <div className={styles.childrenContainer}>
-                {<div className={styles.alignRight}>{children}</div>}
-              </div>
-            )}
-            {user && (
-              <div className={styles.nameContainer}>
-                <div>
-                  <PersonIcon className={styles.nameContainerIcon} />
-                </div>
-                <span className={styles.nameContainerName}>{user}</span>
-              </div>
-            )}
+            </a>
+            {description && <span>{description}</span>}
           </div>
+          {showChildrenAndUserContainer && (
+            <div className={styles.childrenAndUserContainer}>
+              {children}
+              {user && (
+                <div className={styles.userContainer}>
+                  <PersonIcon className={styles.userContainerIcon} />
+                  <span className={styles.userContainerName}>{user}</span>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </header>
     );
