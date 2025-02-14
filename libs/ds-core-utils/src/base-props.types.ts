@@ -13,6 +13,9 @@ export interface BaseProps extends BasePropsHTMLAttributes {
   'data-testid'?: string;
 }
 
+export const brightnessNamesArr = ['light', 'default'] as const;
+export type Brightness = (typeof brightnessNamesArr)[number];
+
 export const colorNamesArr = [
   'ochre',
   'forest',

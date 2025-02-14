@@ -1,5 +1,8 @@
 %focus {
-  outline: var(--semantic-interactive-main) solid 2px;
+  --inline-button-background-color: var(--semantic-interactive-main);
+  --inline-button-foreground-color: var(--palette-graphite-0);
+
+  outline: var(--inline-button-background-color) solid 2px;
   outline-offset: 2px;
 }
 %with-icon {
@@ -7,12 +10,21 @@
   gap: var(--spacing-s);
 }
 
+.spinner {
+  position: absolute;
+  top: calc(50% - 0.5 * var(--size-extra-small));
+  left: calc(50% - 0.5 * var(--size-extra-small));
+}
+
 .button {
+  --inline-button-background-color: transparent;
+  --inline-button-foreground-color: var(--semantic-interactive-main);
+
   position: relative;
   padding: 0;
   border: none;
-  background-color: transparent;
-  color: var(--semantic-interactive-main);
+  background-color: var(--inline-button-background-color);
+  color: var(--inline-button-foreground-color);
   cursor: pointer;
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-medium);
@@ -37,11 +49,16 @@
   & .icon {
     height: calc(var(--font-size-m) * var(--semantic-line-height-buttons));
     flex-shrink: 0;
-    fill: var(--semantic-interactive-main);
+    fill: var(--inline-button-foreground-color);
+  }
+
+  .spinner {
+    --spinner-color: var(--inline-button-foreground-color);
   }
 
   &:hover {
-    background-color: var(--semantic-interactive-background);
+    --inline-button-background-color: var(--semantic-interactive-background);
+    --inline-button-foreground-color: var(--semantic-interactive-main);
   }
 
   &:focus {
@@ -51,37 +68,56 @@
   &:active {
     @extend %focus;
 
-    background-color: var(--semantic-interactive-background);
-    color: var(--semantic-interactive-foreground);
+    --inline-button-foreground-color: var(--palette-graphite-0);
+    --inline-button-background-color: var(--semantic-interactive-foreground);
+
     transform: translateY(2px);
     transition: 0.15s;
-
-    & .icon {
-      fill: var(--semantic-interactive-foreground);
-    }
   }
 
   &:disabled,
   &:disabled:hover,
   &:disabled:active {
-    background-color: transparent;
-    color: var(--semantic-disabled-foreground);
+    --inline-button-background-color: transparent;
+    --inline-button-foreground-color: var(--semantic-disabled-foreground);
+
     cursor: not-allowed;
     outline: none;
     transform: none;
+  }
 
-    & .icon {
-      fill: var(--semantic-disabled-foreground);
+  &[data-brightness='light'] {
+    --inline-button-foreground-color: var(--semantic-interactive-background);
+    --inline-button-background-color: transparent;
+
+    &:hover {
+      --inline-button-foreground-color: var(--semantic-interactive-main);
+      --inline-button-background-color: var(--palette-graphite-0);
+    }
+
+    &:focus {
+      --inline-button-foreground-color: var(--semantic-interactive-main);
+      --inline-button-background-color: var(--palette-graphite-0);
+    }
+
+    &:active {
+      --inline-button-foreground-color: var(--semantic-interactive-foreground);
+      --inline-button-background-color: var(--palette-graphite-0);
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &:disabled:active {
+      --inline-button-background-color: transparent;
+      --inline-button-foreground-color: var(--palette-graphite-30);
+
+      cursor: not-allowed;
+      outline: none;
+      transform: none;
     }
   }
 }
 
 .hide {
   visibility: hidden;
-}
-
-.spinner {
-  position: absolute;
-  top: calc(50% - 0.5 * var(--size-extra-small));
-  left: calc(50% - 0.5 * var(--size-extra-small));
 }

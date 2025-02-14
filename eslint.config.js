@@ -1,4 +1,5 @@
 import nxPlugin from '@nx/eslint-plugin';
+import reactCompiler from 'eslint-plugin-react-compiler';
 import parser from 'jsonc-eslint-parser';
 
 import devConfig from './libs/ds-dev-config/config/designsystem-eslint.js';
@@ -7,6 +8,7 @@ export default [
   ...nxPlugin.configs['flat/base'],
   ...nxPlugin.configs['flat/typescript'],
   ...nxPlugin.configs['flat/javascript'],
+  reactCompiler.configs.recommended,
   ...devConfig,
   {
     ignores: ['**/.*', '**/node_modules/*'],

@@ -2,7 +2,8 @@
 
 exports[`Tester/InlineButton Defaults play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1dutd_1   "
+  <button class="_button_151en_1   "
+          data-brightness="default"
           type="button"
   >
     <span class>
@@ -14,7 +15,8 @@ exports[`Tester/InlineButton Defaults play-test 1`] = `
 
 exports[`Tester/InlineButton WithAccesskey play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1dutd_1   "
+  <button class="_button_151en_1   "
+          data-brightness="default"
           accesskey="j"
           type="button"
   >
@@ -27,7 +29,8 @@ exports[`Tester/InlineButton WithAccesskey play-test 1`] = `
 
 exports[`Tester/InlineButton WithAriaDescribedby play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1dutd_1   "
+  <button class="_button_151en_1   "
+          data-brightness="default"
           type="button"
           aria-describedby="testid1234"
   >
@@ -41,9 +44,10 @@ exports[`Tester/InlineButton WithAriaDescribedby play-test 1`] = `
 exports[`Tester/InlineButton WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <button id="htmlId"
-          class="_button_1dutd_1   dummyClassname"
+          class="_button_151en_1   dummyClassname"
           lang="nb"
           data-testid="123ID"
+          data-brightness="default"
           form="formid123"
           type="button"
   >
@@ -54,12 +58,35 @@ exports[`Tester/InlineButton WithAttributes play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/InlineButton WithCustomIcon smoke-test 1`] = `
+exports[`Tester/InlineButton WithBrightness smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  "
+  <button class="_button_151en_1 _button_withIconLeft_151en_8  "
+          data-brightness="light"
           type="button"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
+      </path>
+    </svg>
+    <span class>
+      Legg til rapport
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/InlineButton WithCustomIcon smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="_button_151en_1 _button_withIconLeft_151en_8  "
+          data-brightness="default"
+          type="button"
+  >
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -77,7 +104,8 @@ exports[`Tester/InlineButton WithCustomIcon smoke-test 1`] = `
 
 exports[`Tester/InlineButton WithDisabled play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1dutd_1   "
+  <button class="_button_151en_1   "
+          data-brightness="default"
           disabled
           type="button"
   >
@@ -88,13 +116,37 @@ exports[`Tester/InlineButton WithDisabled play-test 1`] = `
 </div>
 `;
 
-exports[`Tester/InlineButton WithDisabledAndIcon smoke-test 1`] = `
+exports[`Tester/InlineButton WithDisabledAndBrightness smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  "
+  <button class="_button_151en_1 _button_withIconLeft_151en_8  "
+          data-brightness="light"
           disabled
           type="button"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
+         viewbox="0 0 24 24"
+         focusable="false"
+         aria-hidden="true"
+         role="img"
+    >
+      <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
+      </path>
+    </svg>
+    <span class>
+      Legg til rapport
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Tester/InlineButton WithDisabledAndIcon smoke-test 1`] = `
+<div data-test-block="true">
+  <button class="_button_151en_1 _button_withIconLeft_151en_8  "
+          data-brightness="default"
+          disabled
+          type="button"
+  >
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -112,7 +164,8 @@ exports[`Tester/InlineButton WithDisabledAndIcon smoke-test 1`] = `
 
 exports[`Tester/InlineButton WithEventHandlers play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1dutd_1   "
+  <button class="_button_151en_1   "
+          data-brightness="default"
           type="button"
   >
     <span class>
@@ -124,10 +177,11 @@ exports[`Tester/InlineButton WithEventHandlers play-test 1`] = `
 
 exports[`Tester/InlineButton WithIcon play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  "
+  <button class="_button_151en_1 _button_withIconLeft_151en_8  "
+          data-brightness="default"
           type="button"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -145,13 +199,14 @@ exports[`Tester/InlineButton WithIcon play-test 1`] = `
 
 exports[`Tester/InlineButton WithIconRight smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1dutd_1  _button_withIconRight_1dutd_6 "
+  <button class="_button_151en_1  _button_withIconRight_151en_8 "
+          data-brightness="default"
           type="button"
   >
     <span class>
       Legg til rapport
     </span>
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -166,7 +221,8 @@ exports[`Tester/InlineButton WithIconRight smoke-test 1`] = `
 
 exports[`Tester/InlineButton WithLongText smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1dutd_1   "
+  <button class="_button_151en_1   "
+          data-brightness="default"
           type="button"
   >
     <span class>
@@ -178,13 +234,14 @@ exports[`Tester/InlineButton WithLongText smoke-test 1`] = `
 
 exports[`Tester/InlineButton WithLongTextAndIcon smoke-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1dutd_1  _button_withIconRight_1dutd_6 "
+  <button class="_button_151en_1  _button_withIconRight_151en_8 "
+          data-brightness="default"
           type="button"
   >
     <span class>
       Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert. Denne knappen har en veldig lang tekst med ikon på høyre side. Så lang at den lange teksten tvinger fram linjeskift hvor tekst er høyrejustert.
     </span>
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -199,7 +256,8 @@ exports[`Tester/InlineButton WithLongTextAndIcon smoke-test 1`] = `
 
 exports[`Tester/InlineButton WithRef play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1dutd_1   "
+  <button class="_button_151en_1   "
+          data-brightness="default"
           type="button"
           id="dummyIdForwardedFromRef"
   >
@@ -213,17 +271,19 @@ exports[`Tester/InlineButton WithRef play-test 1`] = `
 exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
 <div data-test-block="true">
   <div class="flex bottomSpacingXL">
-    <button class="_button_1dutd_1   marginRightM"
+    <button class="_button_151en_1   marginRightM"
+            data-brightness="default"
             type="button"
     >
       <span class>
         Legg til rapport
       </span>
     </button>
-    <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  marginRightM"
+    <button class="_button_151en_1 _button_withIconLeft_151en_8  marginRightM"
+            data-brightness="default"
             type="button"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -236,13 +296,14 @@ exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
         Legg til rapport
       </span>
     </button>
-    <button class="_button_1dutd_1  _button_withIconRight_1dutd_6 "
+    <button class="_button_151en_1  _button_withIconRight_151en_8 "
+            data-brightness="default"
             type="button"
     >
       <span class>
         Legg til rapport
       </span>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -254,29 +315,31 @@ exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
     </button>
   </div>
   <div class="flex">
-    <button class="_button_1dutd_1   marginRightM"
+    <button class="_button_151en_1   marginRightM"
+            data-brightness="default"
             type="button"
     >
-      <span class="_hide_1dutd_60">
+      <span class="_hide_151en_91">
         Legg til rapport
       </span>
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_1dutd_64 "
+           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_151en_13 "
       >
         <div class="_spinnerAnimation_wnf1f_40 ">
         </div>
-        <span id="title-:r7:"
+        <span id="title-:r8:"
               class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
         >
           Laster inn
         </span>
       </div>
     </button>
-    <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  marginRightM"
+    <button class="_button_151en_1 _button_withIconLeft_151en_8  marginRightM"
+            data-brightness="default"
             type="button"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32 _hide_1dutd_60"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42 _hide_151en_91"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -285,29 +348,30 @@ exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
         <path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18C6.477 2 2 6.477 2 12A10 10 0 1 0 12 2Zm1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z">
         </path>
       </svg>
-      <span class="_hide_1dutd_60">
+      <span class="_hide_151en_91">
         Legg til rapport
       </span>
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_1dutd_64 "
+           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_151en_13 "
       >
         <div class="_spinnerAnimation_wnf1f_40 ">
         </div>
-        <span id="title-:r9:"
+        <span id="title-:ra:"
               class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
         >
           Laster inn
         </span>
       </div>
     </button>
-    <button class="_button_1dutd_1  _button_withIconRight_1dutd_6 "
+    <button class="_button_151en_1  _button_withIconRight_151en_8 "
+            data-brightness="default"
             type="button"
     >
-      <span class="_hide_1dutd_60">
+      <span class="_hide_151en_91">
         Legg til rapport
       </span>
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32 _hide_1dutd_60"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42 _hide_151en_91"
            viewbox="0 0 24 24"
            focusable="false"
            aria-hidden="true"
@@ -318,11 +382,11 @@ exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
       </svg>
       <div aria-live="polite"
            aria-atomic="true"
-           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_1dutd_64 "
+           class="_spinner_wnf1f_5 _spinner_blue_wnf1f_16 _spinner_flexColumn_wnf1f_32 _spinner_small_wnf1f_22 _spinner_151en_13 "
       >
         <div class="_spinnerAnimation_wnf1f_40 ">
         </div>
-        <span id="title-:rb:"
+        <span id="title-:rc:"
               class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
         >
           Laster inn
@@ -335,7 +399,8 @@ exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
 
 exports[`Tester/InlineButton WithType play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_1dutd_1   "
+  <button class="_button_151en_1   "
+          data-brightness="default"
           type="submit"
   >
     <span class>

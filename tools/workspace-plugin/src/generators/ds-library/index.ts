@@ -50,6 +50,12 @@ export default async function (
     options: {
       tsConfig: ['tsconfig.lib.json', 'tsconfig.spec.json'],
     },
+    dependsOn: [
+      {
+        projects: 'ds-core-designtokens',
+        target: 'build',
+      },
+    ],
   };
 
   const version: TargetConfiguration = {
@@ -75,12 +81,6 @@ export default async function (
   };
 
   updateProjectConfiguration(tree, projectName, projectConfig);
-
-  const eslintrcPath = joinPathFragments(projectConfig.root, '.eslintrc.json');
-  updateJson(tree, eslintrcPath, (eslintrc): object => {
-    eslintrc.extends = ['../../.eslintrc.json'];
-    return eslintrc;
-  });
 
   const tsconfig = joinPathFragments(projectConfig.root, 'tsconfig.json');
   updateJson(tree, tsconfig, (tsconfig): object => {
@@ -139,7 +139,6 @@ export default async function (
     return packageJson;
   });
 
-  const lint = projectConfig?.targets?.lint;
   const stylelint = projectConfig?.targets?.stylelint;
   const projectConfigWithRollupOptions = {
     ...projectConfig,
@@ -159,12 +158,6 @@ export default async function (
               output: '.',
             },
           ],
-        },
-      },
-      lint: {
-        ...lint,
-        options: {
-          ...lint.options,
         },
       },
       stylelint: {

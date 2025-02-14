@@ -44,6 +44,7 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
     ref
   ): JSX.Element => {
     const wrapperRef = useRef<HTMLDivElement>(null);
+    const srTimeoutId = useRef<NodeJS.Timeout>();
 
     const [isTableScrollable, setIsTableScrollable] = useState<boolean>(false);
     const [shouldShowSRText, setShouldShowSRText] = useState<boolean>(false);
@@ -118,19 +119,15 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
     }, []);
 
     useEffect(() => {
-      //Sjekker først verdien slik at vi ikke starter flere timere samtidig
-      if (!shouldShowSRText) {
-        setShouldShowSRText(true);
-
-        setTimeout(() => {
-          setShouldShowSRText(false);
-        }, 3000);
+      if (srTimeoutId.current) {
+        clearTimeout(srTimeoutId.current);
       }
-      /*
-        I dette tilfellet blir det feil å legge til shouldShowSRText i
-       dependency Array. Det ville skap en evig løkke
-       */
-      // eslint-disable-next-line react-hooks/exhaustive-deps
+      setShouldShowSRText(true);
+
+      srTimeoutId.current = setTimeout(() => {
+        setShouldShowSRText(false);
+        srTimeoutId.current = undefined;
+      }, 3000);
     }, [sortState]);
 
     return (

@@ -129,10 +129,12 @@ export const WithChildren = {
         <Link svgPath={HelpOutlineSVGpath} href={'/hjelp'} color={'white'}>
           {'Hjelp'}
         </Link>
-        <InlineButton svgPath={SettingsSVGpath}>
+        <InlineButton svgPath={SettingsSVGpath} brightness={'light'}>
           {'Tilpass løsningen'}
         </InlineButton>
-        <InlineButton svgPath={SettingsSVGpath}>{'Meld feil'}</InlineButton>
+        <InlineButton svgPath={SettingsSVGpath} brightness={'light'}>
+          {'Meld feil'}
+        </InlineButton>
       </>
     ),
     user: 'Johansen, Krystall Pepsi',

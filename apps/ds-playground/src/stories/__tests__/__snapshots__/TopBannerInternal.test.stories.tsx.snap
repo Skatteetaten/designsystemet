@@ -172,10 +172,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
               </svg>
               Hjelp
             </a>
-            <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  marginL"
+            <button class="_button_151en_1 _button_withIconLeft_151en_8  marginL"
+                    data-brightness="light"
                     type="button"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-hidden="true"
@@ -188,10 +189,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
                 Tilpass løsningen
               </span>
             </button>
-            <button class="_button_1dutd_1 _button_withIconLeft_1dutd_6  marginL"
+            <button class="_button_151en_1 _button_withIconLeft_151en_8  marginL"
+                    data-brightness="light"
                     type="button"
             >
-              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1dutd_32"
+              <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
                    viewbox="0 0 24 24"
                    focusable="false"
                    aria-hidden="true"
