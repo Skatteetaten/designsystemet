@@ -1,15 +1,20 @@
-import { JSX } from 'react';
+import { JSX, useRef } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import { TopBannerInternal } from '@skatteetaten/ds-layout';
+import { InlineButton, LinkGroup } from '@skatteetaten/ds-buttons';
+import { AddSVGpath } from '@skatteetaten/ds-icons';
+import {
+  TopBannerInternal,
+  ActionMenuImperativeActions,
+} from '@skatteetaten/ds-layout';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
   component: TopBannerInternal,
-  title: 'Komponenter/TopBannerInternal',
+  title: 'Komponenter/TopBannerInternal/TopBannerInternal',
   argTypes: {
     // Props
     children: { control: 'text', table: { category: category.props } },
@@ -41,6 +46,8 @@ export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
   render: (_args): JSX.Element => {
+    const menuRef = useRef<ActionMenuImperativeActions>(null);
+
     return (
       <TopBannerInternal
         title={'Kakeportalen'}
@@ -48,7 +55,42 @@ export const Examples: Story = {
         logoAltText={'Forside kakeportalen.'}
         logoHref={'/home'}
         user={'Sturle "Stuten" Trestubbe, Team Rocket'}
-      ></TopBannerInternal>
+      >
+        <TopBannerInternal.ActionMenu imperativeActions={menuRef}>
+          <InlineButton
+            className={'bottomSpacingXS'}
+            svgPath={AddSVGpath}
+            onClick={() => {
+              menuRef?.current?.close?.();
+            }}
+          >
+            {'Legg til RF-skjema ørtifemten'}
+          </InlineButton>
+          <LinkGroup>
+            <LinkGroup.Link
+              href={'#'}
+              isExternal
+              onClick={() => menuRef?.current?.close?.()}
+            >
+              {'Denne tingen her'}
+            </LinkGroup.Link>
+            <LinkGroup.Link
+              href={'#'}
+              isExternal
+              onClick={() => menuRef?.current?.close?.()}
+            >
+              {'En annen ting'}
+            </LinkGroup.Link>
+            <LinkGroup.Link
+              href={'#'}
+              isExternal
+              onClick={() => menuRef?.current?.close?.()}
+            >
+              {'Den tredje tingen'}
+            </LinkGroup.Link>
+          </LinkGroup>
+        </TopBannerInternal.ActionMenu>
+      </TopBannerInternal>
     );
   },
 } satisfies Story;
