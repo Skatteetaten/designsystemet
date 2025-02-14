@@ -403,7 +403,6 @@ export const WithSpinner = {
 } satisfies Story;
 
 export const WithBrightness = {
-  //render: TemplateWithSpinner,
   name: 'With Brightness (A8)',
   args: {
     ...defaultArgs,
