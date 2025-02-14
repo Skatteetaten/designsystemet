@@ -328,7 +328,7 @@ exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
       >
         <div class="_spinnerAnimation_wnf1f_40 ">
         </div>
-        <span id="title-:rh:"
+        <span id="title-:r8:"
               class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
         >
           Laster inn
@@ -357,7 +357,7 @@ exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
       >
         <div class="_spinnerAnimation_wnf1f_40 ">
         </div>
-        <span id="title-:rl:"
+        <span id="title-:ra:"
               class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
         >
           Laster inn
@@ -386,7 +386,7 @@ exports[`Tester/InlineButton WithSpinner smoke-test 1`] = `
       >
         <div class="_spinnerAnimation_wnf1f_40 ">
         </div>
-        <span id="title-:rp:"
+        <span id="title-:rc:"
               class="_spinnerTitle_wnf1f_59 _srOnly_wnf1f_70 _spinnerTitle_centerText_wnf1f_66 "
         >
           Laster inn

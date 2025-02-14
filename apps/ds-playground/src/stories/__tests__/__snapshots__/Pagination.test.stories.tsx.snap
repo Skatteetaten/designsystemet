@@ -127,11 +127,11 @@ exports[`Tester/Pagination HidePrevNextButtonTitle smoke-test 1`] = `
           <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
                viewbox="0 0 24 24"
                focusable="false"
-               aria-labelledby="svgtitle-:r7:"
+               aria-labelledby="svgtitle-:r3:"
                aria-hidden="false"
                role="img"
           >
-            <title id="svgtitle-:r7:">
+            <title id="svgtitle-:r3:">
               Neste
             </title>
             <path d="M8.10001 5.80002L14.2 11.9L8.10001 18L10 19.9L18 11.9L10 3.90002L8.10001 5.80002Z">
