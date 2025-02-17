@@ -292,6 +292,11 @@ const meta = {
       table: { disable: true },
       control: 'boolean',
     },
+    showDeceasedPeople: {
+      table: { disable: true },
+      control: 'boolean',
+    },
+
     onClose: {
       table: { disable: true },
     },
@@ -847,5 +852,56 @@ export const WithNoSubunits = {
     });
 
     expect(checkBox).not.toBeInTheDocument();
+  },
+} satisfies Story;
+
+const peopleWithDeceased = {
+  ...people11,
+  list: people11.list.map((person, index) => ({
+    ...person,
+    isDeleted: index % 2 === 0,
+  })),
+};
+
+export const WithDeceasedPeople = {
+  name: 'With Deceased People',
+  args: {
+    ...defaultArgs,
+    businesses: undefined,
+    me: undefined,
+    people: peopleWithDeceased,
+    showDeceasedPeople: true,
+  },
+  render: DefaultTemplate,
+  argTypes: {
+    me: { table: { disable: false } },
+    people: { table: { disable: false } },
+    businesses: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: {
+      disable: true,
+    },
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const openButton = canvas.getByRole('button');
+    await userEvent.click(openButton);
+
+    const modal = await canvas.findByRole('dialog');
+    const checkBox = await within(modal).findByRole('checkbox', {
+      name: dsI18n.t('ds_overlays:rolepicker.ShowDeceasedPersons'),
+    });
+
+    expect(checkBox).toBeChecked();
+
+    const button = await within(modal).findByRole('button', {
+      name: /vis alle/i,
+    });
+
+    await fireEvent.click(button);
+
+    const links = await within(modal).findAllByRole('link');
+    expect(links.length).toEqual(people11?.list.length);
   },
 } satisfies Story;

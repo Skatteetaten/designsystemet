@@ -17,6 +17,7 @@ import {
   OnEntitySelectHandler,
   getRolePickerShowInactiveBusinessesDefault,
   getRolePickerShowSubunitsDefault,
+  getRolePickerShowDeceasedPeopleDefault,
 } from '@skatteetaten/ds-overlays';
 
 import { category } from '../../../.storybook/helpers';
@@ -244,6 +245,14 @@ const meta = {
         category: category.props,
         defaultValue: {
           summary: getRolePickerShowSubunitsDefault().toString(),
+        },
+      },
+    },
+    showDeceasedPeople: {
+      table: {
+        category: category.props,
+        defaultValue: {
+          summary: getRolePickerShowDeceasedPeopleDefault().toString(),
         },
       },
     },

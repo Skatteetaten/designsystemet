@@ -50,6 +50,8 @@ export interface RolePickerProps
   showInactiveBusinesses?: boolean;
   /** Om underenheter av virksomheter skal vises. */
   showSubunits?: boolean;
+  /** Om avdøde personer skal vises. */
+  showDeceasedPeople?: boolean;
   /** Tilbakekallingsfunksjon for å håndtere valg av virksomhet/person. */
   onEntitySelect?: OnEntitySelectHandler;
   /** Tilbakekallingsfunksjon for å håndtere utlogging. */
