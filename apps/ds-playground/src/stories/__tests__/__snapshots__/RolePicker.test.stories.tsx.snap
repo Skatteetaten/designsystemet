@@ -126,7 +126,7 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                 Andre personer
               </h2>
               <nav aria-labelledby="otherPeopleHeadingId">
-                <ul class="_peopleList_zlix8_1">
+                <ul class="_peopleList_10bzt_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -1120,7 +1120,7 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                 Andre personer
               </h2>
               <nav aria-labelledby="otherPeopleHeadingId">
-                <ul class="_peopleList_zlix8_1">
+                <ul class="_peopleList_10bzt_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -2214,7 +2214,7 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                 Andre personer
               </h2>
               <nav aria-labelledby="otherPeopleHeadingId">
-                <ul class="_peopleList_zlix8_1">
+                <ul class="_peopleList_10bzt_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -2804,7 +2804,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
               >
                 Andre personer
               </h2>
-              <div class="_container_1k24j_5  ">
+              <div class="_container_1k24j_5  _showDeceasedChecbox_10bzt_9">
                 <input id="checkboxInputId-:rbr:"
                        class="_input_1k24j_17"
                        type="checkbox"
@@ -2831,7 +2831,7 @@ exports[`Tester/RolePicker WithDeceasedPeople play-test 1`] = `
                 </div>
               </div>
               <nav aria-labelledby="otherPeopleHeadingId">
-                <ul class="_peopleList_zlix8_1">
+                <ul class="_peopleList_10bzt_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -3448,7 +3448,7 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                 Andre personer
               </h2>
               <nav aria-labelledby="otherPeopleHeadingId">
-                <ul class="_peopleList_zlix8_1">
+                <ul class="_peopleList_10bzt_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -5078,7 +5078,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                 Andre personer
               </h2>
               <nav aria-labelledby="otherPeopleHeadingId">
-                <ul class="_peopleList_zlix8_1">
+                <ul class="_peopleList_10bzt_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -5271,7 +5271,7 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                   </li>
                 </ul>
               </nav>
-              <div class="_showAllButtonWrapper_zlix8_9">
+              <div class="_showAllButtonWrapper_10bzt_13">
                 <button class="_button_6ybyo_1 _button_tertiary_6ybyo_1   "
                         type="button"
                 >
@@ -5443,7 +5443,7 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                 Andre personer
               </h2>
               <nav aria-labelledby="otherPeopleHeadingId">
-                <ul class="_peopleList_zlix8_1">
+                <ul class="_peopleList_10bzt_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -6927,7 +6927,7 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                 Andre personer
               </h2>
               <nav aria-labelledby="otherPeopleHeadingId">
-                <ul class="_peopleList_zlix8_1">
+                <ul class="_peopleList_10bzt_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -7537,7 +7537,7 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                 Andre personer
               </h2>
               <nav aria-labelledby="otherPeopleHeadingId">
-                <ul class="_peopleList_zlix8_1">
+                <ul class="_peopleList_10bzt_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"
@@ -8120,7 +8120,7 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
                 Andre personer
               </h2>
               <nav aria-labelledby="otherPeopleHeadingId">
-                <ul class="_peopleList_zlix8_1">
+                <ul class="_peopleList_10bzt_1">
                   <li>
                     <div>
                       <a class="_navigationTile_1xek8_57 _navigationTile_medium_1xek8_100  undefined"

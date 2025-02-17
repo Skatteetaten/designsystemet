@@ -84,6 +84,7 @@ export const RolePickerPeopleList = ({
       </Heading>
       {people.list.some((person) => person.isDeleted) ? (
         <Checkbox
+          className={styles.showDeceasedChecbox}
           checked={showDeceasedPeople}
           onChange={(e) => setShowDeceasedPeople(e.target.checked)}
         >
