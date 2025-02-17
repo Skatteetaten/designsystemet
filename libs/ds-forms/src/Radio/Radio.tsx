@@ -85,7 +85,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
         <label className={styles.radioLabel} htmlFor={inputId} tabIndex={-1}>
           {children}
           {description && (
-            <span className={styles.radioLabelDescription}>{description}</span>
+            <div className={styles.radioLabelDescription}>{description}</div>
           )}
         </label>
       </div>
