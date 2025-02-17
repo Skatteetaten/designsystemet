@@ -637,6 +637,76 @@ exports[`Tester/SearchField WithDisabled play-test 1`] = `
 </div>
 `;
 
+exports[`Tester/SearchField WithErrorMessage play-test 1`] = `
+<div data-test-block="true">
+  <div id="searchField-:r3j:"
+       class="_topContainer_hryzl_11"
+  >
+    <label id="searchField-:r3j:-label"
+           class="_label_348na_5  _srOnly_348na_18"
+           for="searchField-:r3j:-input"
+    >
+      Hva leter du etter?
+    </label>
+    <div class="_searchContainer_hryzl_5 ">
+      <div class="_inputWrapper_hryzl_42">
+        <span id="searchField-:r3j:-srFocus"
+              class="_srOnly_hryzl_180"
+        >
+          Bruk piltaster ned/opp for å velge forslag når de vises
+        </span>
+        <input id="searchField-:r3j:-input"
+               class="_input_hryzl_42"
+               autocomplete="off"
+               aria-describedby="searchFieldErrorId-:r3k: searchField-:r3j:-srFocus"
+               aria-invalid="true"
+               type="search"
+               value
+        >
+        <div id="searchFieldErrorId-:r3k:"
+             aria-live="assertive"
+             aria-atomic="true"
+        >
+          <div class="_errorMessage_1kdf4_15 ">
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_small_6zbcy_5 _errorMessageIcon_1kdf4_25"
+                 viewbox="0 0 24 24"
+                 focusable="false"
+                 aria-hidden="true"
+                 role="img"
+            >
+              <path d="M13 14h-2v-4h2v4Zm0 4h-2v-2h2v2ZM1 21h22L12 2 1 21Z">
+              </path>
+            </svg>
+            <p class="_errorMessageText_1kdf4_30">
+              Søkefeltet er obligatorisk
+            </p>
+          </div>
+        </div>
+        <span aria-live="assertive"
+              class="_srOnly_hryzl_180"
+        >
+        </span>
+      </div>
+      <button class="_searchButton_hryzl_95">
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_hryzl_114"
+             viewbox="0 0 24 24"
+             focusable="false"
+             aria-labelledby="svgtitle-:r3n:"
+             aria-hidden="false"
+             role="img"
+        >
+          <title id="svgtitle-:r3n:">
+            Søk
+          </title>
+          <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13Zm0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Tester/SearchField WithEventHandlers play-test 1`] = `
 <div data-test-block="true">
   <div id="searchField-:r2j:"

@@ -679,3 +679,24 @@ export const WithRequiredAndMark = {
     showRequiredMark: { table: { disable: false } },
   },
 } satisfies Story;
+
+const errorMessageText = 'Søkefeltet er obligatorisk';
+
+export const WithErrorMessage = {
+  name: 'With ErrorMessage',
+  args: {
+    ...defaultArgs,
+    errorMessage: errorMessageText,
+  },
+  argTypes: {
+    errorMessage: { table: { disable: false } },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('searchbox');
+    const errorMessageContainer = canvas.getAllByRole('generic')[3];
+    await expect(errorMessageContainer).toBeInTheDocument();
+    await expect(textbox).toHaveAttribute('aria-invalid', 'true');
+    await expect(textbox).toHaveAttribute('aria-describedby');
+  },
+} satisfies Story;

@@ -210,7 +210,8 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
               value={value}
               autoComplete={autoComplete}
               required={required}
-              aria-describedby={srFocusId}
+              aria-describedby={`${errorMessage ? `${errorId} ` : ''}${srFocusId}`}
+              aria-invalid={!!errorMessage || undefined}
               aria-owns={shouldShowResults ? resultsId : undefined}
               type={'search'}
               onKeyDown={(event) => {
