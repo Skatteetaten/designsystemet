@@ -874,9 +874,7 @@ export const WithDeceasedPeople = {
   },
   render: DefaultTemplate,
   argTypes: {
-    me: { table: { disable: false } },
-    people: { table: { disable: false } },
-    businesses: { table: { disable: false } },
+    showDeceasedPeople: { table: { disable: false } },
   },
   parameters: {
     imageSnapshot: {
