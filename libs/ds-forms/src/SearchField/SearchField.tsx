@@ -222,7 +222,7 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
               onBlur={onBlur}
               onChange={(event) => {
                 onChange?.(event);
-                // nødvendig for at clearButton skal vises riktig for uncontrolled komponent
+                // Nødvendig for at clearButton skal vises riktig for uncontrolled komponent
                 if (event.target.value.length) {
                   setShowClearButton(true);
                 } else {
