@@ -140,13 +140,13 @@ const people: Paginated<Person> = {
       name: 'Bønne elegant',
       personId: '188495 74503',
       type: 'Person',
-      isDeleted: false,
+      isDeleted: true,
     },
     {
       name: 'Lomme filosofisk',
       personId: '088896 74513',
       type: 'Person',
-      isDeleted: false,
+      isDeleted: true,
     },
     {
       name: 'Adelsmann varm',
