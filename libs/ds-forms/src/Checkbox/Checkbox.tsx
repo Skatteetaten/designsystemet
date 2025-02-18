@@ -98,11 +98,14 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
             <span className={styles.labelCheckboxCheck}></span>
           </span>
           <span className={`${styles.labelContent} ${hideLabelClassName}`}>
-            <span className={labelRequiredClassName}>{children}</span>
+            <span className={labelRequiredClassName}>
+              {children}
+              {description && <>&nbsp;</>}
+            </span>
             {description && (
-              <div className={styles.labelContentDescription}>
+              <span className={styles.labelContentDescription}>
                 {description}
-              </div>
+              </span>
             )}
           </span>
         </label>
