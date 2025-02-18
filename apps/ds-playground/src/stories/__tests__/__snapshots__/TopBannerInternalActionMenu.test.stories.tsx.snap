@@ -3,14 +3,14 @@
 exports[`Tester/TopBanner/TopBannerInternalActionMenu WithAttributes play-test 1`] = `
 <div data-test-block="true">
   <button id="actionMenuId"
-          class="_button_151en_1 _button_withIconLeft_151en_8  actionMenuClassname"
+          class="_button_12a0b_1 _button_withIconLeft_12a0b_8  actionMenuClassname"
           lang="en"
           data-testid="actionMenuTestId"
           data-brightness="light"
           type="button"
           aria-expanded="false"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -28,12 +28,12 @@ exports[`Tester/TopBanner/TopBannerInternalActionMenu WithAttributes play-test 1
 
 exports[`Tester/TopBanner/TopBannerInternalActionMenu WithImperativeActions play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_151en_1 _button_withIconLeft_151en_8  "
+  <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
           data-brightness="light"
           type="button"
           aria-expanded="false"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
@@ -46,7 +46,7 @@ exports[`Tester/TopBanner/TopBannerInternalActionMenu WithImperativeActions play
       Meny
     </span>
   </button>
-  <button class="_button_151en_1   marginLeftL"
+  <button class="_button_12a0b_1   marginLeftL"
           data-brightness="light"
           type="button"
   >
@@ -59,13 +59,13 @@ exports[`Tester/TopBanner/TopBannerInternalActionMenu WithImperativeActions play
 
 exports[`Tester/TopBanner/TopBannerInternalActionMenu WithRef play-test 1`] = `
 <div data-test-block="true">
-  <button class="_button_151en_1 _button_withIconLeft_151en_8  "
+  <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
           data-brightness="light"
           type="button"
           id="dummyIdForwardedFromRef"
           aria-expanded="false"
   >
-    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
+    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
          viewbox="0 0 24 24"
          focusable="false"
          aria-hidden="true"
