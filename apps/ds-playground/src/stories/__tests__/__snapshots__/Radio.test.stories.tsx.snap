@@ -151,7 +151,7 @@ exports[`Tester/RadioGroup/Radio WithDescription play-test 1`] = `
                  for="radioInputId-:rf:"
                  tabindex="-1"
           >
-            Enkeltpersonsforetak
+            Enkeltpersonsforetak&nbsp;
             <span class="_radioLabelDescription_1ybg2_100">
               En liten beskrivelse tekst
             </span>
@@ -234,7 +234,7 @@ exports[`Tester/RadioGroup/Radio WithLongText smoke-test 1`] = `
                  for="radioInputId-:rj:"
                  tabindex="-1"
           >
-            Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
+            Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.&nbsp;
             <span class="_radioLabelDescription_1ybg2_100">
               Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
             </span>
@@ -277,7 +277,7 @@ exports[`Tester/RadioGroup/Radio WithLongTextAndBreaking smoke-test 1`] = `
                  for="radioInputId-:rn:"
                  tabindex="-1"
           >
-            Loremipsumdolorsitamet.Allesomharlagetennettside,trengtlittfylltekstellerbaresurfetrundtpånettetharantageligvissettdisseordene,etterfulgtaventilsynelatendeeviglangtekstfyltmedlatinskeliksomsetninger.
+            Loremipsumdolorsitamet.Allesomharlagetennettside,trengtlittfylltekstellerbaresurfetrundtpånettetharantageligvissettdisseordene,etterfulgtaventilsynelatendeeviglangtekstfyltmedlatinskeliksomsetninger.&nbsp;
             <span class="_radioLabelDescription_1ybg2_100">
               Loremipsumdolorsitamet.Allesomharlagetennettside,trengtlittfylltekstellerbaresurfetrundtpånettetharantageligvissettdisseordene,etterfulgtaventilsynelatendeeviglangtekstfyltmedlatinskeliksomsetninger.
             </span>

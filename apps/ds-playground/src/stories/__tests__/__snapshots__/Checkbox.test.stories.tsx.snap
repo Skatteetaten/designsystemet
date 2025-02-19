@@ -251,7 +251,7 @@ exports[`Tester/Checkbox WithDescription play-test 1`] = `
       </span>
       <span class="_labelContent_1k24j_63 ">
         <span class>
-          Checkbox
+          Checkbox&nbsp;
         </span>
         <span class="_labelContentDescription_1k24j_76">
           En beskrivelse av punktet
@@ -285,7 +285,7 @@ exports[`Tester/Checkbox WithDescriptionAndDisabled smoke-test 1`] = `
       </span>
       <span class="_labelContent_1k24j_63 ">
         <span class>
-          Checkbox
+          Checkbox&nbsp;
         </span>
         <span class="_labelContentDescription_1k24j_76">
           En beskrivelse av punktet
@@ -318,7 +318,7 @@ exports[`Tester/Checkbox WithDescriptionAndLongText smoke-test 1`] = `
       </span>
       <span class="_labelContent_1k24j_63 ">
         <span class>
-          Får ekstra lang reisevei til jobb på grunn av levering til barnehage eller skolefritidsordning eller annen fritidsordning
+          Får ekstra lang reisevei til jobb på grunn av levering til barnehage eller skolefritidsordning eller annen fritidsordning&nbsp;
         </span>
         <span class="_labelContentDescription_1k24j_76">
           Litt rart å ha en beskrivende tekst rett under en lang tekst, men sånn har det blitt

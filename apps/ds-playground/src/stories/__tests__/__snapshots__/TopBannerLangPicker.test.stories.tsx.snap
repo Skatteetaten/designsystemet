@@ -51,7 +51,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) CloseMenuWhenClickOnLangB
       </span>
       English
       <span class="_srOnly_azp4i_133">
-        Meny
+        &nbsp;Meny
       </span>
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
            viewbox="0 0 24 24"
@@ -112,7 +112,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) Defaults play-test 1`] = 
       </span>
       Bokmål
       <span class="_srOnly_azp4i_133">
-        Meny
+        &nbsp;Meny
       </span>
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
            viewbox="0 0 24 24"
@@ -338,7 +338,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithAttributes play-test 
       </span>
       Bokmål
       <span class="_srOnly_azp4i_133">
-        Meny
+        &nbsp;Meny
       </span>
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
            viewbox="0 0 24 24"
@@ -407,7 +407,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithLocale play-test 1`] 
       </span>
       English
       <span class="_srOnly_azp4i_133">
-        Meny
+        &nbsp;Meny
       </span>
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
            viewbox="0 0 24 24"
@@ -631,7 +631,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithRef play-test 1`] = `
       </span>
       Bokmål
       <span class="_srOnly_azp4i_133">
-        Meny
+        &nbsp;Meny
       </span>
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
            viewbox="0 0 24 24"
@@ -692,7 +692,7 @@ exports[`Tester/TopBanner/TopBannerLangPicker (intern) WithoutSami play-test 1`]
       </span>
       Bokmål
       <span class="_srOnly_azp4i_133">
-        Meny
+        &nbsp;Meny
       </span>
       <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _arrowDesktop_azp4i_41"
            viewbox="0 0 24 24"
