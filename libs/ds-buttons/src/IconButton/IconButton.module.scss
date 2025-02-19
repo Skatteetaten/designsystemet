@@ -3,7 +3,7 @@
 
   &::before {
     position: absolute;
-    border: 2px solid var(--semantic-interactive-main);
+    border: 2px solid var(--icon-button-outline-color);
     border-radius: 12rem;
     content: '';
     inset: -5px;
@@ -11,18 +11,23 @@
 }
 
 .button {
+  --icon-button-icon-color: var(--semantic-interactive-main);
+  --icon-button-background-color: transparent;
+  --icon-button-border-color: transparent;
+  --icon-button-outline-color: var(--semantic-interactive-main);
+
   position: relative;
   height: fit-content;
   box-sizing: content-box;
-  border: 2px solid transparent;
+  border: 2px solid var(--icon-button-border-color);
   border-radius: 50%;
-  background-color: transparent;
+  background-color: var(--icon-button-background-color);
   cursor: pointer;
   will-change: transform;
 
   & .icon {
     display: block;
-    fill: var(--semantic-interactive-main);
+    fill: var(--icon-button-icon-color);
   }
 
   & .spinner {
@@ -56,6 +61,11 @@
       width: var(--size-medium);
       height: var(--size-medium);
     }
+
+    &:focus::before,
+    &:active::before {
+      inset: -6px;
+    }
   }
 
   &_large {
@@ -65,76 +75,110 @@
       width: var(--size-large);
       height: var(--size-large);
     }
+
+    &:focus::before,
+    &:active::before {
+      inset: -6px;
+    }
   }
 
   &:hover {
-    border-color: var(--semantic-interactive-background);
-    background-color: var(--semantic-interactive-background);
+    --icon-button-border-color: var(--semantic-interactive-background);
+    --icon-button-background-color: var(--semantic-interactive-background);
   }
 
   &:focus {
     @extend %focus;
 
-    border-color: transparent;
-    background-color: transparent;
+    --icon-button-border-color: transparent;
   }
 
   &:active {
     @extend %focus;
 
-    border-color: var(--semantic-interactive-background);
-    background-color: var(--semantic-interactive-background);
+    --icon-button-icon-color: var(--semantic-interactive-foreground);
+    --icon-button-border-color: var(--semantic-interactive-background);
+    --icon-button-background-color: var(--semantic-interactive-background);
+
     transform: translateY(2px);
     transition: 0.15s;
 
-    & .icon {
-      fill: var(--semantic-interactive-foreground);
-    }
-
     & .spinner {
-      --spinner-color: var(--semantic-interactive-foreground);
+      --spinner-color: var(--icon-button-icon-color);
     }
   }
 
   &:disabled,
   &:disabled:hover,
   &:disabled:active {
-    border-color: transparent;
-    background-color: transparent;
+    --icon-button-border-color: transparent;
+    --icon-button-icon-color: var(--semantic-disabled-foreground);
+
     cursor: not-allowed;
     transform: none;
-
-    & .icon {
-      fill: var(--semantic-disabled-foreground);
-    }
 
     &::before {
       border: none;
     }
   }
 
-  &_outlined {
-    border-color: var(--semantic-interactive-main);
+  &[data-brightness='light'] {
+    --icon-button-icon-color: var(--semantic-interactive-background);
+    --icon-button-background-color: transparent;
+    --icon-button-border-color: transparent;
+    --icon-button-outline-color: var(--palette-graphite-0);
 
-    &:hover {
-      border-color: var(--semantic-interactive-main);
-    }
-
+    &:hover,
     &:focus {
-      border-color: var(--semantic-interactive-main);
+      --icon-button-icon-color: var(--semantic-interactive-main);
+      --icon-button-background-color: var(--palette-graphite-0);
+      --icon-button-border-color: var(--palette-graphite-0);
     }
 
     &:active {
-      border-color: var(--semantic-interactive-foreground);
+      --icon-button-icon-color: var(--semantic-interactive-foreground);
+      --icon-button-background-color: var(--palette-graphite-0);
+      --icon-button-border-color: var(--palette-graphite-0);
     }
 
     &:disabled,
     &:disabled:hover,
     &:disabled:active {
-      border-color: var(--semantic-disabled-foreground);
+      --icon-button-icon-color: var(--palette-graphite-30);
+      --icon-button-background-color: transparent;
+      --icon-button-border-color: transparent;
+    }
+  }
+
+  &_outlined {
+    --icon-button-border-color: var(--semantic-interactive-main);
+
+    &:hover,
+    &:focus {
+      --icon-button-border-color: var(--semantic-interactive-main);
+    }
+
+    &:active {
+      --icon-button-border-color: var(--semantic-interactive-foreground);
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &:disabled:active {
+      --icon-button-border-color: var(--semantic-disabled-foreground);
 
       &::before {
         border: none;
+      }
+    }
+
+    &[data-brightness='light'] {
+      --icon-button-border-color: var(--semantic-interactive-background);
+
+      &:disabled,
+      &:disabled:hover,
+      &:disabled:active {
+        --icon-button-border-color: var(--palette-graphite-30);
       }
     }
   }

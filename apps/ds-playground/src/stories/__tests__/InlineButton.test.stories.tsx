@@ -403,7 +403,7 @@ export const WithSpinner = {
 } satisfies Story;
 
 export const WithBrightness = {
-  name: 'With Brightness (A8)',
+  name: 'With Brightness (A9)',
   args: {
     ...defaultArgs,
     brightness: 'light',
@@ -412,7 +412,6 @@ export const WithBrightness = {
   argTypes: {
     brightness: { table: { disable: false } },
   },
-
   parameters: {
     backgrounds: {
       default: 'themePrimary',
