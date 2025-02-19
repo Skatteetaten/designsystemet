@@ -7,7 +7,10 @@ import {
 import { Icon } from '@skatteetaten/ds-icons';
 import { Spinner } from '@skatteetaten/ds-progress';
 
-import { getIconButtonSizeDefault } from './defaults';
+import {
+  getIconButtonBrightnessDefault,
+  getIconButtonSizeDefault,
+} from './defaults';
 import { IconButtonProps } from './IconButton.types';
 
 import styles from './IconButton.module.scss';
@@ -19,6 +22,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
+      brightness = getIconButtonBrightnessDefault(),
       size = getIconButtonSizeDefault(),
       spinnerTitle,
       svgPath,
@@ -45,6 +49,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
         className={`${styles.button} ${sizeClassName} ${outlineClassName} ${className}`}
         lang={lang}
         data-testid={dataTestId}
+        data-brightness={brightness}
         disabled={disabled}
         accessKey={accessKey}
         type={type}
@@ -74,4 +79,4 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
 
 IconButton.displayName = 'IconButton';
 
-export { getIconButtonSizeDefault };
+export { getIconButtonSizeDefault, getIconButtonBrightnessDefault };

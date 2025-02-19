@@ -1,6 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import { IconButton, getIconButtonSizeDefault } from '@skatteetaten/ds-buttons';
+import {
+  IconButton,
+  getIconButtonBrightnessDefault,
+  getIconButtonSizeDefault,
+} from '@skatteetaten/ds-buttons';
 import {
   dsI18n,
   getCommonButtonTypeDefault,
@@ -19,6 +23,13 @@ const meta = {
   title: 'Komponenter/IconButton',
   argTypes: {
     // Props
+    brightness: {
+      control: 'radio',
+      table: {
+        category: category.props,
+        defaultValue: { summary: getIconButtonBrightnessDefault() },
+      },
+    },
     hasSpinner: { table: { category: category.props } },
     spinnerTitle: {
       table: {

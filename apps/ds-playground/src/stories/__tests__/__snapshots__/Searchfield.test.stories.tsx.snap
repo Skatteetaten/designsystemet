@@ -356,10 +356,11 @@ exports[`Tester/SearchField WithCustomButtonTitles play-test 1`] = `
               class="_srOnly_hryzl_180"
         >
         </span>
-        <button class="_button_g87u5_1 _button_extraSmall_g87u5_29  _clearButton_hryzl_35"
+        <button class="_button_1vm3o_1 _button_extraSmall_1vm3o_33  _clearButton_hryzl_35"
+                data-brightness="default"
                 type="reset"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r2e:"
@@ -483,10 +484,11 @@ exports[`Tester/SearchField WithDefaultValue play-test 1`] = `
               class="_srOnly_hryzl_180"
         >
         </span>
-        <button class="_button_g87u5_1 _button_extraSmall_g87u5_29  _clearButton_hryzl_35"
+        <button class="_button_1vm3o_1 _button_extraSmall_1vm3o_33  _clearButton_hryzl_35"
+                data-brightness="default"
                 type="reset"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r1r:"
@@ -773,12 +775,13 @@ exports[`Tester/SearchField WithHelpText play-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
+    <button class="_button_1vm3o_1 _button_extraSmall_1vm3o_33 _button_outlined_1vm3o_116 _helpButton_10ldw_27"
+            data-brightness="default"
             type="button"
             aria-describedby="searchField-:r21:-label"
             aria-expanded="true"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r24:"
@@ -796,10 +799,11 @@ exports[`Tester/SearchField WithHelpText play-test 1`] = `
       <span class="_helpBoxText_10ldw_44">
         Hjelpetekst
       </span>
-      <button class="_button_g87u5_1 _button_small_g87u5_37  _helpBoxCloseButton_10ldw_51"
+      <button class="_button_1vm3o_1 _button_small_1vm3o_41  _helpBoxCloseButton_10ldw_51"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r26:"
@@ -869,12 +873,13 @@ exports[`Tester/SearchField WithHelpToggleEvent smoke-test 1`] = `
     >
       Hva leter du etter?
     </label>
-    <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
+    <button class="_button_1vm3o_1 _button_extraSmall_1vm3o_33 _button_outlined_1vm3o_116 _helpButton_10ldw_27"
+            data-brightness="default"
             type="button"
             aria-describedby="searchField-:r30:-label"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r33:"
@@ -943,12 +948,13 @@ exports[`Tester/SearchField WithLongLabel smoke-test 1`] = `
     >
       Leter du etter en LAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANG gjenstand?
     </label>
-    <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
+    <button class="_button_1vm3o_1 _button_extraSmall_1vm3o_33 _button_outlined_1vm3o_116 _helpButton_10ldw_27"
+            data-brightness="default"
             type="button"
             aria-describedby="searchField-:rc:-label"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:rf:"
@@ -1268,10 +1274,11 @@ exports[`Tester/SearchField WithValue play-test 1`] = `
               class="_srOnly_hryzl_180"
         >
         </span>
-        <button class="_button_g87u5_1 _button_extraSmall_g87u5_29  _clearButton_hryzl_35"
+        <button class="_button_1vm3o_1 _button_extraSmall_1vm3o_33  _clearButton_hryzl_35"
+                data-brightness="default"
                 type="reset"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r1m:"
@@ -1340,10 +1347,11 @@ exports[`Tester/SearchField WithVariantLargeAndLongText smoke-test 1`] = `
               class="_srOnly_hryzl_180"
         >
         </span>
-        <button class="_button_g87u5_1 _button_small_g87u5_37  _clearButton_hryzl_35"
+        <button class="_button_1vm3o_1 _button_small_1vm3o_41  _clearButton_hryzl_35"
+                data-brightness="default"
                 type="reset"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
                viewbox="0 0 24 24"
                focusable="false"
                aria-labelledby="svgtitle-:r1d:"
