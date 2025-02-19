@@ -69,6 +69,10 @@ code {
   margin-bottom: var(--spacing-xl);
 }
 
+.bottomSpacingXS {
+  margin-bottom: var(--spacing-xs);
+}
+
 .errorMessageContainer {
   border: 2px solid var(--palette-forest-50);
   width: 250px;

@@ -156,12 +156,12 @@ exports[`Tester/StepList/Step WithEditAccessibleDescription play-test 1`] = `
         <div>
           Lorem ipsum dolor sit amet. Alle som har laget en nettside, trengt litt fylltekst eller bare surfet rundt på nettet har antageligvis sett disse ordene, etterfulgt av en tilsynelatende eviglang tekst fylt med latinske liksomsetninger.
         </div>
-        <button class="_button_151en_1 _button_withIconLeft_151en_8  _stepEditButton_t28i0_46"
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  _stepEditButton_t28i0_46"
                 data-brightness="default"
                 type="button"
                 aria-describedby="steptitle-:r7:"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"

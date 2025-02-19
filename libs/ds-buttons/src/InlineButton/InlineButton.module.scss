@@ -63,6 +63,10 @@
 
   &:focus {
     @extend %focus;
+
+    &[data-brightness='default']:hover:not(:active) {
+      outline: var(--inline-button-foreground-color) solid 2px;
+    }
   }
 
   &:active {

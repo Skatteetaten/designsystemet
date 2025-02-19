@@ -1,7 +1,13 @@
-import { MouseEventHandler, ReactNode } from 'react';
+import {
+  ForwardRefExoticComponent,
+  MouseEventHandler,
+  ReactNode,
+  RefAttributes,
+} from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
+import { TopBannerInternalActionMenu } from '../TopBannerInternalActionMenu/TopBannerInternalActionMenu';
 import { TopBannerSkipLinkProps } from '../TopBannerSkipLink/TopBannerSkipLink.types';
 
 type SkipLink = Omit<TopBannerSkipLinkProps, 'children'> & {
@@ -36,4 +42,11 @@ export interface TopBannerInternalProps extends BaseProps {
   logo?: string;
   /** Kalles ved klikk på logo */
   onLogoClick?: MouseEventHandler<HTMLAnchorElement>;
+}
+
+export interface TopBannerInternalComponent
+  extends ForwardRefExoticComponent<
+    TopBannerInternalProps & RefAttributes<HTMLElement>
+  > {
+  ActionMenu: typeof TopBannerInternalActionMenu;
 }
