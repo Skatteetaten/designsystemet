@@ -8,7 +8,7 @@ export interface ActionMenuActionsRef {
 }
 
 export interface TopBannerInternalActionMenuProps extends BaseProps {
-  /** Ref som eksponerer funksjoner får å åpne/lukke menyen. */
+  /** Ref som eksponerer funksjoner for å åpne/lukke menyen. */
   menuActionsRef?: Ref<ActionMenuActionsRef>;
   /** Innhold i komponenten */
   children: ReactNode;
