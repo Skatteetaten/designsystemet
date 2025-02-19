@@ -153,49 +153,49 @@ exports[`Tester/SearchField WithArrowKeyNavigation play-test 1`] = `
               role="listbox"
               aria-labelledby="searchField-:r2o:-label"
           >
-            <li class="_searchResult_1ae64_1"
+            <li class="_searchResult_17xft_1"
                 tabindex="-1"
                 role="option"
                 aria-selected="false"
             >
-              <span class="_searchResultTitle_1ae64_28">
-              </span>
+              <div class="_searchResultTitle_17xft_28">
+              </div>
               Hydrogen
             </li>
-            <li class="_searchResult_1ae64_1"
+            <li class="_searchResult_17xft_1"
                 tabindex="-1"
                 role="option"
                 aria-selected="false"
             >
-              <span class="_searchResultTitle_1ae64_28">
-              </span>
+              <div class="_searchResultTitle_17xft_28">
+              </div>
               Helium
             </li>
-            <li class="_searchResult_1ae64_1"
+            <li class="_searchResult_17xft_1"
                 tabindex="-1"
                 role="option"
                 aria-selected="false"
             >
-              <span class="_searchResultTitle_1ae64_28">
-              </span>
+              <div class="_searchResultTitle_17xft_28">
+              </div>
               Litium
             </li>
-            <li class="_searchResult_1ae64_1"
+            <li class="_searchResult_17xft_1"
                 tabindex="-1"
                 role="option"
                 aria-selected="false"
             >
-              <span class="_searchResultTitle_1ae64_28">
-              </span>
+              <div class="_searchResultTitle_17xft_28">
+              </div>
               Beryllium
             </li>
-            <li class="_searchResult_1ae64_1"
+            <li class="_searchResult_17xft_1"
                 tabindex="0"
                 role="option"
                 aria-selected="true"
             >
-              <span class="_searchResultTitle_1ae64_28">
-              </span>
+              <div class="_searchResultTitle_17xft_28">
+              </div>
               Bor
             </li>
           </ul>
