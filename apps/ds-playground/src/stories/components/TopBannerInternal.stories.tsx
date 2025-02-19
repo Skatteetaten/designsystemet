@@ -6,7 +6,7 @@ import { InlineButton, LinkGroup } from '@skatteetaten/ds-buttons';
 import { AddSVGpath } from '@skatteetaten/ds-icons';
 import {
   TopBannerInternal,
-  ActionMenuImperativeActions,
+  ActionMenuActionsRef,
 } from '@skatteetaten/ds-layout';
 
 import { category } from '../../../.storybook/helpers';
@@ -46,7 +46,7 @@ export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
   render: (_args): JSX.Element => {
-    const menuRef = useRef<ActionMenuImperativeActions>(null);
+    const menuRef = useRef<ActionMenuActionsRef>(null);
 
     return (
       <TopBannerInternal
@@ -56,7 +56,7 @@ export const Examples: Story = {
         logoHref={'/home'}
         user={'Sturle "Stuten" Trestubbe, Team Rocket'}
       >
-        <TopBannerInternal.ActionMenu imperativeActions={menuRef}>
+        <TopBannerInternal.ActionMenu menuActionsRef={menuRef}>
           <InlineButton
             className={'bottomSpacingXS'}
             svgPath={AddSVGpath}

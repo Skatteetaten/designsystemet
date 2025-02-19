@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { expect, fireEvent, userEvent, waitFor, within } from '@storybook/test';
 
 import {
-  ActionMenuImperativeActions,
+  ActionMenuActionsRef,
   TopBannerInternal,
 } from '@skatteetaten/ds-layout';
 import { useRef } from 'react';
@@ -19,7 +19,7 @@ const meta = {
     className: { table: { disable: true } },
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
-    imperativeActions: { table: { disable: true } },
+    menuActionsRef: { table: { disable: true } },
   },
   args: {
     children: 'Menu Content',
@@ -74,10 +74,10 @@ export const WithRef = {
 export const WithImperativeActions = {
   name: 'With Imperative Actions (A2, A3, A5, A6, B1, C2)',
   render: (_args): JSX.Element => {
-    const actionsRef = useRef<ActionMenuImperativeActions>(null);
+    const actionsRef = useRef<ActionMenuActionsRef>(null);
     return (
       <>
-        <TopBannerInternal.ActionMenu imperativeActions={actionsRef}>
+        <TopBannerInternal.ActionMenu menuActionsRef={actionsRef}>
           {'Menu Content'}
           <InlineButton onClick={() => actionsRef?.current?.close?.()}>
             {'Lukk'}

@@ -14,7 +14,7 @@ const meta = {
     className: { table: { category: category.props } },
     lang: { table: { category: category.props } },
     'data-testid': { table: { category: category.props } },
-    imperativeActions: { table: { category: category.props } },
+    menuActionsRef: { table: { category: category.props } },
   },
   args: {
     children: 'Menu Content',

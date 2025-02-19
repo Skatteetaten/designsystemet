@@ -41,7 +41,7 @@ export const TopBannerInternalActionMenu = forwardRef<
       className = getCommonClassNameDefault(),
       lang,
       'data-testid': dataTestId,
-      imperativeActions,
+      menuActionsRef,
       children,
     },
     ref
@@ -80,7 +80,7 @@ export const TopBannerInternalActionMenu = forwardRef<
     const buttonRef = useRef<HTMLButtonElement>(null);
     const mergedButtonRef = useMergeRefs([refs.setReference, buttonRef, ref]);
 
-    useImperativeHandle(imperativeActions, () => ({
+    useImperativeHandle(menuActionsRef, () => ({
       open: (): void => setOpen(true),
       close: (): void => setOpen(false),
     }));
