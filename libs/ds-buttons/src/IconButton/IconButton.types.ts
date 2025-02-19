@@ -5,7 +5,7 @@ import {
   ReactElement,
 } from 'react';
 
-import { BaseProps, Size } from '@skatteetaten/ds-core-utils';
+import { BaseProps, Brightness, Size } from '@skatteetaten/ds-core-utils';
 
 type RequiredIconButtonHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'button'>,
@@ -22,6 +22,8 @@ interface IconButtonPropsHTMLAttributes extends IconButtonHTMLAttributes {
   onFocus?: FocusEventHandler<HTMLButtonElement>;
 }
 
+export type IconButtonBrightness = Extract<Brightness, 'light' | 'default'>;
+
 export interface IconButtonProps
   extends IconButtonPropsHTMLAttributes,
     BaseProps {
@@ -35,4 +37,6 @@ export interface IconButtonProps
   hasSpinner?: boolean;
   /** Overskriver default tekst som leses opp av skjermleser når Spinner snurrer i knappen. */
   spinnerTitle?: string;
+  /** Justerer farge slik at komponenten kan brukes på mørk bakgrunn. */
+  brightness?: IconButtonBrightness;
 }

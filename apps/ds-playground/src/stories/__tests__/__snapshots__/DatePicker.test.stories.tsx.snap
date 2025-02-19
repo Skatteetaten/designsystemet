@@ -402,12 +402,13 @@ exports[`Tester/DatePicker/DatePicker WithHelpText play-test 1`] = `
     >
       Fødselsdato
     </label>
-    <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
+    <button class="_button_1vm3o_1 _button_extraSmall_1vm3o_33 _button_outlined_1vm3o_116 _helpButton_10ldw_27"
+            data-brightness="default"
             type="button"
             aria-describedby="labelId-:r1k:"
             aria-expanded="true"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r1l:"
@@ -425,10 +426,11 @@ exports[`Tester/DatePicker/DatePicker WithHelpText play-test 1`] = `
       <span class="_helpBoxText_10ldw_44">
         Hjelpetekst
       </span>
-      <button class="_button_g87u5_1 _button_small_g87u5_37  _helpBoxCloseButton_10ldw_51"
+      <button class="_button_1vm3o_1 _button_small_1vm3o_41  _helpBoxCloseButton_10ldw_51"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1n:"
@@ -487,12 +489,13 @@ exports[`Tester/DatePicker/DatePicker WithHelpToggleEvent smoke-test 1`] = `
     >
       Fødselsdato
     </label>
-    <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
+    <button class="_button_1vm3o_1 _button_extraSmall_1vm3o_33 _button_outlined_1vm3o_116 _helpButton_10ldw_27"
+            data-brightness="default"
             type="button"
             aria-describedby="labelId-:r65:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r66:"
@@ -628,10 +631,11 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
     <div class="_calendarContainer_13xkq_130">
       <div class="_calendar_feosd_5 ">
         <div class="_calendarNavigation_feosd_18">
-          <button class="_button_g87u5_1 _button_medium_g87u5_45  _calendarNavigationArrowIcon_feosd_33"
+          <button class="_button_1vm3o_1 _button_medium_1vm3o_49  _calendarNavigationArrowIcon_feosd_33"
+                  data-brightness="default"
                   type="button"
           >
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:r2o:"
@@ -754,10 +758,11 @@ exports[`Tester/DatePicker/DatePicker WithInitialPickerDate play-test 1`] = `
               </div>
             </div>
           </div>
-          <button class="_button_g87u5_1 _button_medium_g87u5_45  _calendarNavigationArrowIcon_feosd_33"
+          <button class="_button_1vm3o_1 _button_medium_1vm3o_49  _calendarNavigationArrowIcon_feosd_33"
+                  data-brightness="default"
                   type="button"
           >
-            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+            <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
                  viewbox="0 0 24 24"
                  focusable="false"
                  aria-labelledby="svgtitle-:r30:"

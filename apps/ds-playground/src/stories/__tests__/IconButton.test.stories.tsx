@@ -45,6 +45,7 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     // Props
+    brightness: { table: { disable: true } },
     hasSpinner: { table: { disable: true } },
     spinnerTitle: { table: { disable: true } },
     isOutlined: { table: { disable: true } },
@@ -477,5 +478,69 @@ export const WithSpinner = {
   },
   argTypes: {
     hasSpinner: { table: { disable: false } },
+  },
+} satisfies Story;
+
+export const WithBrightness = {
+  name: 'With Brightness (A5)',
+  args: {
+    ...defaultArgs,
+    brightness: 'light',
+  },
+  argTypes: {
+    brightness: { table: { disable: false } },
+  },
+  parameters: {
+    backgrounds: {
+      default: 'themePrimary',
+    },
+    imageSnapshot: {
+      hover: `${wrapper} > button`,
+      focus: `${wrapper} > button`,
+      click: `${wrapper} > button`,
+    },
+  },
+} satisfies Story;
+
+export const WithBrightnessAndOutline = {
+  name: 'With Brightness And Outline (A5)',
+  args: {
+    ...defaultArgs,
+    brightness: 'light',
+    isOutlined: true,
+  },
+  argTypes: {
+    brightness: { table: { disable: false } },
+    isOutlined: { table: { disable: false } },
+  },
+  parameters: {
+    backgrounds: {
+      default: 'themePrimary',
+    },
+    imageSnapshot: {
+      hover: `${wrapper} > button`,
+      focus: `${wrapper} > button`,
+      click: `${wrapper} > button`,
+    },
+  },
+} satisfies Story;
+
+export const WithBrightnessAndDisabled = {
+  name: 'With Brightness And Disabled (A5)',
+  args: {
+    ...defaultArgs,
+    brightness: 'light',
+    isOutlined: true,
+    disabled: true,
+  },
+  argTypes: {
+    brightness: { table: { disable: false } },
+    isOutlined: { table: { disable: false } },
+    disabled: { table: { disable: false } },
+  },
+  parameters: {
+    backgrounds: {
+      default: 'themePrimary',
+    },
   },
 } satisfies Story;

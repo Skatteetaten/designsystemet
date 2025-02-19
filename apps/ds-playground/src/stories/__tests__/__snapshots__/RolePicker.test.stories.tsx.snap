@@ -15,10 +15,11 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1vm3o_1 _button_medium_1vm3o_49  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1:"
@@ -89,16 +90,16 @@ exports[`Tester/RolePicker Defaults smoke-test 1`] = `
                 >
                   Søk etter personens navn eller fødselsnummer, virksomhetens navn eller organisasjonsnummer.
                 </label>
-                <span class="_srOnly_1egyv_82"
-                      id="liveSearchId"
+                <div class="_srOnly_1egyv_82"
+                     id="liveSearchId"
                 >
                   Søketreff oppdateres fortløpende mens du skriver
-                </span>
-                <span class="_srOnly_1egyv_82"
-                      aria-live="assertive"
-                      aria-atomic="true"
+                </div>
+                <div class="_srOnly_1egyv_82"
+                     aria-live="assertive"
+                     aria-atomic="true"
                 >
-                </span>
+                </div>
                 <div class="_inputWrapper_1egyv_41">
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
@@ -641,10 +642,11 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1vm3o_1 _button_medium_1vm3o_49  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:raj:"
@@ -715,16 +717,16 @@ exports[`Tester/RolePicker With10000Businesses smoke-test 1`] = `
                 >
                   Søk etter virksomhetens navn eller organisasjonsnummer.
                 </label>
-                <span class="_srOnly_1egyv_82"
-                      id="liveSearchId"
+                <div class="_srOnly_1egyv_82"
+                     id="liveSearchId"
                 >
                   Søketreff oppdateres fortløpende mens du skriver
-                </span>
-                <span class="_srOnly_1egyv_82"
-                      aria-live="assertive"
-                      aria-atomic="true"
+                </div>
+                <div class="_srOnly_1egyv_82"
+                     aria-live="assertive"
+                     aria-atomic="true"
                 >
-                </span>
+                </div>
                 <div class="_inputWrapper_1egyv_41">
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
@@ -1009,10 +1011,11 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1vm3o_1 _button_medium_1vm3o_49  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rv:"
@@ -1083,16 +1086,16 @@ exports[`Tester/RolePicker WithAttributes play-test 1`] = `
                 >
                   Søk etter personens navn eller fødselsnummer, virksomhetens navn eller organisasjonsnummer.
                 </label>
-                <span class="_srOnly_1egyv_82"
-                      id="liveSearchId"
+                <div class="_srOnly_1egyv_82"
+                     id="liveSearchId"
                 >
                   Søketreff oppdateres fortløpende mens du skriver
-                </span>
-                <span class="_srOnly_1egyv_82"
-                      aria-live="assertive"
-                      aria-atomic="true"
+                </div>
+                <div class="_srOnly_1egyv_82"
+                     aria-live="assertive"
+                     aria-atomic="true"
                 >
-                </span>
+                </div>
                 <div class="_inputWrapper_1egyv_41">
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
@@ -1636,10 +1639,11 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1vm3o_1 _button_medium_1vm3o_49  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r62:"
@@ -1710,16 +1714,16 @@ exports[`Tester/RolePicker WithChildren play-test 1`] = `
                 >
                   Søk etter virksomhetens navn eller organisasjonsnummer.
                 </label>
-                <span class="_srOnly_1egyv_82"
-                      id="liveSearchId"
+                <div class="_srOnly_1egyv_82"
+                     id="liveSearchId"
                 >
                   Søketreff oppdateres fortløpende mens du skriver
-                </span>
-                <span class="_srOnly_1egyv_82"
-                      aria-live="assertive"
-                      aria-atomic="true"
+                </div>
+                <div class="_srOnly_1egyv_82"
+                     aria-live="assertive"
+                     aria-atomic="true"
                 >
-                </span>
+                </div>
                 <div class="_inputWrapper_1egyv_41">
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
@@ -2103,10 +2107,11 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1vm3o_1 _button_medium_1vm3o_49  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r54:"
@@ -2177,16 +2182,16 @@ exports[`Tester/RolePicker WithCustomTitle play-test 1`] = `
                 >
                   Søk etter personens navn eller fødselsnummer, virksomhetens navn eller organisasjonsnummer.
                 </label>
-                <span class="_srOnly_1egyv_82"
-                      id="liveSearchId"
+                <div class="_srOnly_1egyv_82"
+                     id="liveSearchId"
                 >
                   Søketreff oppdateres fortløpende mens du skriver
-                </span>
-                <span class="_srOnly_1egyv_82"
-                      aria-live="assertive"
-                      aria-atomic="true"
+                </div>
+                <div class="_srOnly_1egyv_82"
+                     aria-live="assertive"
+                     aria-atomic="true"
                 >
-                </span>
+                </div>
                 <div class="_inputWrapper_1egyv_41">
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
@@ -3304,10 +3309,11 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1vm3o_1 _button_medium_1vm3o_49  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r8h:"
@@ -3378,10 +3384,11 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                   <span class="_content_1npdh_17">
                     Du har ikke tilgang til skjemaet på vegne av denne personen. Kontakt personen hvis du trenger tilgang.
                   </span>
-                  <button class="_button_g87u5_1 _button_small_g87u5_37  _closeButton_1npdh_31"
+                  <button class="_button_1vm3o_1 _button_small_1vm3o_41  _closeButton_1npdh_31"
+                          data-brightness="default"
                           type="button"
                   >
-                    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+                    <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
                          viewbox="0 0 24 24"
                          focusable="false"
                          aria-labelledby="svgtitle-:r9h:"
@@ -3411,16 +3418,16 @@ exports[`Tester/RolePicker WithError play-test 1`] = `
                 >
                   Søk etter personens navn eller fødselsnummer, virksomhetens navn eller organisasjonsnummer.
                 </label>
-                <span class="_srOnly_1egyv_82"
-                      id="liveSearchId"
+                <div class="_srOnly_1egyv_82"
+                     id="liveSearchId"
                 >
                   Søketreff oppdateres fortløpende mens du skriver
-                </span>
-                <span class="_srOnly_1egyv_82"
-                      aria-live="assertive"
-                      aria-atomic="true"
+                </div>
+                <div class="_srOnly_1egyv_82"
+                     aria-live="assertive"
+                     aria-atomic="true"
                 >
-                </span>
+                </div>
                 <div class="_inputWrapper_1egyv_41">
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
@@ -3964,10 +3971,11 @@ exports[`Tester/RolePicker WithNoBusinesses play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1vm3o_1 _button_medium_1vm3o_49  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r9j:"
@@ -4029,10 +4037,11 @@ exports[`Tester/RolePicker WithNoDeletedBusinesses play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1vm3o_1 _button_medium_1vm3o_49  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rb3:"
@@ -4311,10 +4320,11 @@ exports[`Tester/RolePicker WithNoSubunits play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1vm3o_1 _button_medium_1vm3o_49  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:rbg:"
@@ -4504,10 +4514,11 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1vm3o_1 _button_medium_1vm3o_49  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r78:"
@@ -4578,16 +4589,16 @@ exports[`Tester/RolePicker WithOnlyBusinessSearch smoke-test 1`] = `
                 >
                   Søk etter virksomhetens navn eller organisasjonsnummer.
                 </label>
-                <span class="_srOnly_1egyv_82"
-                      id="liveSearchId"
+                <div class="_srOnly_1egyv_82"
+                     id="liveSearchId"
                 >
                   Søketreff oppdateres fortløpende mens du skriver
-                </span>
-                <span class="_srOnly_1egyv_82"
-                      aria-live="assertive"
-                      aria-atomic="true"
+                </div>
+                <div class="_srOnly_1egyv_82"
+                     aria-live="assertive"
+                     aria-atomic="true"
                 >
-                </span>
+                </div>
                 <div class="_inputWrapper_1egyv_41">
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
@@ -4967,10 +4978,11 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1vm3o_1 _button_medium_1vm3o_49  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r6o:"
@@ -5041,16 +5053,16 @@ exports[`Tester/RolePicker WithOnlyPeopleSearch smoke-test 1`] = `
                 >
                   Søk etter personens navn eller fødselsnummer.
                 </label>
-                <span class="_srOnly_1egyv_82"
-                      id="liveSearchId"
+                <div class="_srOnly_1egyv_82"
+                     id="liveSearchId"
                 >
                   Søketreff oppdateres fortløpende mens du skriver
-                </span>
-                <span class="_srOnly_1egyv_82"
-                      aria-live="assertive"
-                      aria-atomic="true"
+                </div>
+                <div class="_srOnly_1egyv_82"
+                     aria-live="assertive"
+                     aria-atomic="true"
                 >
-                </span>
+                </div>
                 <div class="_inputWrapper_1egyv_41">
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
@@ -5332,10 +5344,11 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1vm3o_1 _button_medium_1vm3o_49  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2t:"
@@ -5406,16 +5419,16 @@ exports[`Tester/RolePicker WithShowAllClicked play-test 1`] = `
                 >
                   Søk etter personens navn eller fødselsnummer, virksomhetens navn eller organisasjonsnummer.
                 </label>
-                <span class="_srOnly_1egyv_82"
-                      id="liveSearchId"
+                <div class="_srOnly_1egyv_82"
+                     id="liveSearchId"
                 >
                   Søketreff oppdateres fortløpende mens du skriver
-                </span>
-                <span class="_srOnly_1egyv_82"
-                      aria-live="assertive"
-                      aria-atomic="true"
+                </div>
+                <div class="_srOnly_1egyv_82"
+                     aria-live="assertive"
+                     aria-atomic="true"
                 >
-                </span>
+                </div>
                 <div class="_inputWrapper_1egyv_41">
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
@@ -6178,10 +6191,11 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1vm3o_1 _button_medium_1vm3o_49  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r1t:"
@@ -6216,16 +6230,16 @@ exports[`Tester/RolePicker WithShowInactiveOrganizations play-test 1`] = `
                 >
                   Søk etter virksomhetens navn eller organisasjonsnummer.
                 </label>
-                <span class="_srOnly_1egyv_82"
-                      id="liveSearchId"
+                <div class="_srOnly_1egyv_82"
+                     id="liveSearchId"
                 >
                   Søketreff oppdateres fortløpende mens du skriver
-                </span>
-                <span class="_srOnly_1egyv_82"
-                      aria-live="assertive"
-                      aria-atomic="true"
+                </div>
+                <div class="_srOnly_1egyv_82"
+                     aria-live="assertive"
+                     aria-atomic="true"
                 >
-                </span>
+                </div>
                 <div class="_inputWrapper_1egyv_41">
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
@@ -6816,10 +6830,11 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1vm3o_1 _button_medium_1vm3o_49  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r9l:"
@@ -6890,16 +6905,16 @@ exports[`Tester/RolePicker WithSpinner smoke-test 1`] = `
                 >
                   Søk etter personens navn eller fødselsnummer, virksomhetens navn eller organisasjonsnummer.
                 </label>
-                <span class="_srOnly_1egyv_82"
-                      id="liveSearchId"
+                <div class="_srOnly_1egyv_82"
+                     id="liveSearchId"
                 >
                   Søketreff oppdateres fortløpende mens du skriver
-                </span>
-                <span class="_srOnly_1egyv_82"
-                      aria-live="assertive"
-                      aria-atomic="true"
+                </div>
+                <div class="_srOnly_1egyv_82"
+                     aria-live="assertive"
+                     aria-atomic="true"
                 >
-                </span>
+                </div>
                 <div class="_inputWrapper_1egyv_41">
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
@@ -7500,16 +7515,16 @@ exports[`Tester/RolePicker WithoutHideCloseIcon play-test 1`] = `
                 >
                   Søk etter personens navn eller fødselsnummer, virksomhetens navn eller organisasjonsnummer.
                 </label>
-                <span class="_srOnly_1egyv_82"
-                      id="liveSearchId"
+                <div class="_srOnly_1egyv_82"
+                     id="liveSearchId"
                 >
                   Søketreff oppdateres fortløpende mens du skriver
-                </span>
-                <span class="_srOnly_1egyv_82"
-                      aria-live="assertive"
-                      aria-atomic="true"
+                </div>
+                <div class="_srOnly_1egyv_82"
+                     aria-live="assertive"
+                     aria-atomic="true"
                 >
-                </span>
+                </div>
                 <div class="_inputWrapper_1egyv_41">
                   <input id="filterInputId"
                          aria-describedby="liveSearchId"
@@ -8046,10 +8061,11 @@ exports[`Tester/RolePicker WithoutSearch play-test 1`] = `
     <div tabindex="-1"
          class="_modalContainer_125nh_23"
     >
-      <button class="_button_g87u5_1 _button_medium_g87u5_45  _closeButton_125nh_61"
+      <button class="_button_1vm3o_1 _button_medium_1vm3o_49  _closeButton_125nh_61"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r7u:"

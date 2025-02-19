@@ -382,12 +382,13 @@ exports[`Tester/CheckboxGroup WithCustomClassNames play-test 1`] = `
     >
       Velg det som passer deg
     </div>
-    <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
+    <button class="_button_1vm3o_1 _button_extraSmall_1vm3o_33 _button_outlined_1vm3o_116 _helpButton_10ldw_27"
+            data-brightness="default"
             type="button"
             aria-describedby="legendId-:r3d:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r3e:"
@@ -872,12 +873,13 @@ exports[`Tester/CheckboxGroup WithHelpToggleEvent smoke-test 1`] = `
     >
       Velg det som passer deg
     </div>
-    <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
+    <button class="_button_1vm3o_1 _button_extraSmall_1vm3o_33 _button_outlined_1vm3o_116 _helpButton_10ldw_27"
+            data-brightness="default"
             type="button"
             aria-describedby="legendId-:r34:"
             aria-expanded="false"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r35:"
@@ -975,12 +977,13 @@ exports[`Tester/CheckboxGroup WithHelptext play-test 1`] = `
     >
       Velg det som passer deg
     </div>
-    <button class="_button_g87u5_1 _button_extraSmall_g87u5_29 _button_outlined_g87u5_91 _helpButton_10ldw_27"
+    <button class="_button_1vm3o_1 _button_extraSmall_1vm3o_33 _button_outlined_1vm3o_116 _helpButton_10ldw_27"
+            data-brightness="default"
             type="button"
             aria-describedby="legendId-:r2i:"
             aria-expanded="true"
     >
-      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+      <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
            viewbox="0 0 24 24"
            focusable="false"
            aria-labelledby="svgtitle-:r2j:"
@@ -998,10 +1001,11 @@ exports[`Tester/CheckboxGroup WithHelptext play-test 1`] = `
       <span class="_helpBoxText_10ldw_44">
         Vi trenger å vite om du har barn.
       </span>
-      <button class="_button_g87u5_1 _button_small_g87u5_37  _helpBoxCloseButton_10ldw_51"
+      <button class="_button_1vm3o_1 _button_small_1vm3o_41  _helpBoxCloseButton_10ldw_51"
+              data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_g87u5_22"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_1vm3o_26"
              viewbox="0 0 24 24"
              focusable="false"
              aria-labelledby="svgtitle-:r2q:"
