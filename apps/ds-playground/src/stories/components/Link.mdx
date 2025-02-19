@@ -25,3 +25,62 @@ import { Link } from '@skatteetaten/ds-buttons';
 ## Examples
 
 <Canvas of={LinkStories.Examples} />
+
+## Bruk sammen med Link-komponenten i react-router
+
+Koden under viser hvordan man kan kombinere `Link`-komponenten fra `react-router` med `Link`-komponenten fra `@skatteetaten/ds-buttons`. Ved å kombinere disse kan man oppnå både korrekt navigasjonslogikk og ønsket design. Les mer i dokumentasjonen til `react-router`: [https://reactrouter.com/6.28.0/upgrading/v5#remove-link-component-prop](https://reactrouter.com/6.28.0/upgrading/v5#remove-link-component-prop)
+
+```tsx
+import {
+  useHref,
+  useLinkClickHandler,
+  type LinkProps as RouterLinkProps,
+} from 'react-router';
+import {
+  Link as DSLink,
+  type LinkProps as DSLinkProps,
+} from '@skatteetaten/ds-buttons';
+
+type CombinedLinkProps = RouterLinkProps & Omit<DSLinkProps, 'href'>;
+
+export const Link = ({
+  children,
+  onClick,
+  replace = false,
+  state,
+  target,
+  to,
+  ...rest
+}: CombinedLinkProps) => {
+  let href = useHref(to);
+  let handleClick = useLinkClickHandler(to, {
+    replace,
+    state,
+    target,
+  });
+
+  return (
+    <DSLink
+      {...rest}
+      href={href}
+      onClick={(event) => {
+        onClick?.(event);
+        if (!event.defaultPrevented) {
+          handleClick(event);
+        }
+      }}
+      target={target}
+    >
+      {children}
+    </DSLink>
+  );
+};
+```
+
+```tsx
+import { Link } from './CustomLink';
+
+<Link to="/" color="white">
+  Hjem
+</Link>;
+```
