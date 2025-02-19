@@ -177,11 +177,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
           </svg>
           Hjelp
         </a>
-        <button class="_button_151en_1 _button_withIconLeft_151en_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -194,11 +194,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithChildren play-test 1`] = `
             Tilpass løsningen
           </span>
         </button>
-        <button class="_button_151en_1 _button_withIconLeft_151en_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -520,11 +520,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongDescriptionAndThreeChildrenM
         </span>
       </div>
       <div class="_childrenAndUserContainer_14456_69 undefined">
-        <button class="_button_151en_1 _button_withIconLeft_151en_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -537,11 +537,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongDescriptionAndThreeChildrenM
             Hjelp
           </span>
         </button>
-        <button class="_button_151en_1 _button_withIconLeft_151en_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -554,11 +554,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongDescriptionAndThreeChildrenM
             Dokumentasjon
           </span>
         </button>
-        <button class="_button_151en_1 _button_withIconLeft_151en_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -630,11 +630,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleAndLongDescriptionAndTh
         </span>
       </div>
       <div class="_childrenAndUserContainer_14456_69 undefined">
-        <button class="_button_151en_1 _button_withIconLeft_151en_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -647,11 +647,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleAndLongDescriptionAndTh
             Hjelp
           </span>
         </button>
-        <button class="_button_151en_1 _button_withIconLeft_151en_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -664,11 +664,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithLongTitleAndLongDescriptionAndTh
             Dokumentasjon
           </span>
         </button>
-        <button class="_button_151en_1 _button_withIconLeft_151en_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -783,11 +783,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithOneChildMobile smoke-test 1`] = 
         </span>
       </div>
       <div class="_childrenAndUserContainer_14456_69 undefined">
-        <button class="_button_151en_1 _button_withIconLeft_151en_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -901,11 +901,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointM smoke-t
         </span>
       </div>
       <div class="_childrenAndUserContainer_14456_69 undefined">
-        <button class="_button_151en_1 _button_withIconLeft_151en_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -918,11 +918,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointM smoke-t
             Hjelp
           </span>
         </button>
-        <button class="_button_151en_1 _button_withIconLeft_151en_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -935,11 +935,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointM smoke-t
             Dokumentasjon
           </span>
         </button>
-        <button class="_button_151en_1 _button_withIconLeft_151en_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1011,11 +1011,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointS smoke-t
         </span>
       </div>
       <div class="_childrenAndUserContainer_14456_69 undefined">
-        <button class="_button_151en_1 _button_withIconLeft_151en_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1028,11 +1028,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointS smoke-t
             Hjelp
           </span>
         </button>
-        <button class="_button_151en_1 _button_withIconLeft_151en_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"
@@ -1045,11 +1045,11 @@ exports[`Tester/TopBanner/TopBannerInternal WithThreeChildrenBreakpointS smoke-t
             Dokumentasjon
           </span>
         </button>
-        <button class="_button_151en_1 _button_withIconLeft_151en_8  "
+        <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
                 data-brightness="light"
                 type="button"
         >
-          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
+          <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
                viewbox="0 0 24 24"
                focusable="false"
                aria-hidden="true"

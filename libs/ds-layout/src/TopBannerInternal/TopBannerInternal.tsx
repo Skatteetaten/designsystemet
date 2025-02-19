@@ -7,7 +7,11 @@ import {
 import { PersonIcon } from '@skatteetaten/ds-icons';
 
 import defaultLogo from './logo-sak.svg';
-import { TopBannerInternalProps } from './TopBannerInternal.types';
+import {
+  TopBannerInternalComponent,
+  TopBannerInternalProps,
+} from './TopBannerInternal.types';
+import { TopBannerInternalActionMenu } from '../TopBannerInternalActionMenu/TopBannerInternalActionMenu';
 import { TopBannerSkipLink } from '../TopBannerSkipLink/TopBannerSkipLink';
 
 import styles from './TopBannerInternal.module.scss';
@@ -95,6 +99,8 @@ export const TopBannerInternal = forwardRef<
       </header>
     );
   }
-);
+) as TopBannerInternalComponent;
 
 TopBannerInternal.displayName = 'TopBannerInternal';
+TopBannerInternal.ActionMenu = TopBannerInternalActionMenu;
+TopBannerInternal.ActionMenu.displayName = 'TopBannerInternal.ActionMenu';

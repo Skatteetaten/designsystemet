@@ -1,9 +1,10 @@
-import { JSX } from 'react';
+import { JSX, useRef } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import { IconButton, InlineButton } from '@skatteetaten/ds-buttons';
+import { IconButton, InlineButton, LinkGroup } from '@skatteetaten/ds-buttons';
 import { SearchField } from '@skatteetaten/ds-forms';
+import { AddSVGpath } from '@skatteetaten/ds-icons';
 import {
   EditSVGpath,
   FileSVGpath,
@@ -11,14 +12,17 @@ import {
   MenuSVGpath,
   PersonSVGpath,
 } from '@skatteetaten/ds-icons';
-import { TopBannerInternal } from '@skatteetaten/ds-layout';
+import {
+  TopBannerInternal,
+  ActionMenuActionsRef,
+} from '@skatteetaten/ds-layout';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
   component: TopBannerInternal,
-  title: 'Komponenter/TopBannerInternal',
+  title: 'Komponenter/TopBannerInternal/TopBannerInternal',
   argTypes: {
     // Props
     children: { control: 'text', table: { category: category.props } },
@@ -50,6 +54,8 @@ export const Preview: Story = {} satisfies Story;
 
 export const Examples: Story = {
   render: (_args): JSX.Element => {
+    const menuRef = useRef<ActionMenuActionsRef>(null);
+
     return (
       <>
         <TopBannerInternal
@@ -59,20 +65,51 @@ export const Examples: Story = {
           logoAltText={'Forside MVA'}
           logoHref={'/home'}
           user={'Etternavnesen Fornavn'}
-          children={
-            <>
-              <InlineButton svgPath={HelpFilledSVGpath} brightness={'light'}>
-                {'Hjelp'}
-              </InlineButton>
-              <InlineButton svgPath={FileSVGpath} brightness={'light'}>
-                {'Dokumentasjon'}
-              </InlineButton>
-              <InlineButton svgPath={EditSVGpath} brightness={'light'}>
-                {'Opprett RF-Ørtiatten'}
-              </InlineButton>
-            </>
-          }
-        ></TopBannerInternal>
+        >
+          <InlineButton svgPath={HelpFilledSVGpath} brightness={'light'}>
+            {'Hjelp'}
+          </InlineButton>
+          <InlineButton svgPath={FileSVGpath} brightness={'light'}>
+            {'Dokumentasjon'}
+          </InlineButton>
+          <InlineButton svgPath={EditSVGpath} brightness={'light'}>
+            {'Opprett RF-Ørtiatten'}
+          </InlineButton>
+          <TopBannerInternal.ActionMenu menuActionsRef={menuRef}>
+            <InlineButton
+              className={'bottomSpacingXS'}
+              svgPath={AddSVGpath}
+              onClick={() => {
+                menuRef?.current?.close?.();
+              }}
+            >
+              {'Legg til RF-skjema ørtifemten'}
+            </InlineButton>
+            <LinkGroup>
+              <LinkGroup.Link
+                href={'#'}
+                isExternal
+                onClick={() => menuRef?.current?.close?.()}
+              >
+                {'Denne tingen her'}
+              </LinkGroup.Link>
+              <LinkGroup.Link
+                href={'#'}
+                isExternal
+                onClick={() => menuRef?.current?.close?.()}
+              >
+                {'En annen ting'}
+              </LinkGroup.Link>
+              <LinkGroup.Link
+                href={'#'}
+                isExternal
+                onClick={() => menuRef?.current?.close?.()}
+              >
+                {'Den tredje tingen'}
+              </LinkGroup.Link>
+            </LinkGroup>
+          </TopBannerInternal.ActionMenu>
+        </TopBannerInternal>
         <TopBannerInternal
           classNames={{ childrenContainer: 'maxWidthInFlexbox' }}
           title={'Global Skatt'}

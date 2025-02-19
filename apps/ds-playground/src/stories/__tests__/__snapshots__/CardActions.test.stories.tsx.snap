@@ -18,11 +18,11 @@ exports[`Tester/Card/Actions WithChildren smoke-test 1`] = `
        data-color="white"
   >
     <div class="_cardActions_3k813_1  ">
-      <button class="_button_151en_1 _button_withIconLeft_151en_8  "
+      <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"
@@ -35,11 +35,11 @@ exports[`Tester/Card/Actions WithChildren smoke-test 1`] = `
           Endre
         </span>
       </button>
-      <button class="_button_151en_1 _button_withIconLeft_151en_8  "
+      <button class="_button_12a0b_1 _button_withIconLeft_12a0b_8  "
               data-brightness="default"
               type="button"
       >
-        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_151en_42"
+        <svg class="_systemIcon_6zbcy_2 _systemIcon_medium_6zbcy_9 _icon_12a0b_42"
              viewbox="0 0 24 24"
              focusable="false"
              aria-hidden="true"

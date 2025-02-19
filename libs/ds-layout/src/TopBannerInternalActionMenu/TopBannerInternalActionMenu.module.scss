@@ -1,0 +1,20 @@
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
+.arrow {
+  position: absolute;
+  z-index: -1;
+  width: var(--size-large);
+  height: var(--size-large);
+  border: 1px solid var(--palette-graphite-70);
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  background-color: var(--palette-graphite-0);
+  transform: rotate(45deg);
+}
+
+.menu {
+  padding: var(--spacing-s);
+  border: 1px solid var(--palette-graphite-70);
+  background-color: var(--palette-graphite-0);
+  color: var(--palette-graphite-100);
+}

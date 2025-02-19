@@ -1,8 +1,9 @@
-import { useContext, useMemo, useRef, useState } from 'react';
+import { useCallback, useContext, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { Checkbox } from '@skatteetaten/ds-forms';
 import { PersonSVGpath } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
@@ -18,9 +19,13 @@ const MAX_INIITAL_ITEMS = 5;
 export const RolePickerPeopleList = ({
   people,
   filterQuery,
+  showDeceasedPeople: showDeceasedPeopleExternal,
 }: RolePickerPeopleListProps): JSX.Element | null => {
   const { t } = useTranslation('ds_overlays', { i18n: dsI18n });
   const [showAll, setShowAll] = useState(false);
+  const [showDeceasedPeople, setShowDeceasedPeople] = useState(
+    showDeceasedPeopleExternal
+  );
   const ctx = useContext(RolePickerContext);
   const navRef = useRef<HTMLElement>(null);
 
@@ -43,18 +48,29 @@ export const RolePickerPeopleList = ({
   };
 
   const visibleItems = useMemo(() => {
+    // lager en dyp kopiering av person-listen for å unngå mutasjon
+    let items: Person[] = JSON.parse(JSON.stringify(people.list));
+
+    items = !showDeceasedPeople ? items.filter((p) => !p.isDeleted) : items;
+
     if (filterQuery) {
-      return people.list.filter(
+      return items.filter(
         (f) =>
           f.name.toLowerCase().includes(filterQuery.toLowerCase()) ||
           f.personId.includes(filterQuery.toLowerCase())
       );
     }
     if (showAll) {
-      return people.list;
+      return items;
     }
-    return people.list.slice(0, MAX_INIITAL_ITEMS);
-  }, [filterQuery, showAll, people.list]);
+    return items.slice(0, MAX_INIITAL_ITEMS);
+  }, [people.list, showDeceasedPeople, filterQuery, showAll]);
+
+  const getShowAllCount = useCallback((): number => {
+    return showDeceasedPeople
+      ? people.total
+      : people.list.filter((p) => !p.isDeleted).length;
+  }, [people.list, people.total, showDeceasedPeople]);
 
   const displayShowAllButton =
     !showAll && !filterQuery && people.total > MAX_INIITAL_ITEMS;
@@ -66,6 +82,16 @@ export const RolePickerPeopleList = ({
           ? `${visibleItems.length} ${t('rolepicker.PeopleHits')}`
           : t('rolepicker.PeopleHeading')}
       </Heading>
+      {people.list.some((person) => person.isDeleted) ? (
+        <Checkbox
+          className={styles.showDeceasedChecbox}
+          checked={showDeceasedPeople}
+          onChange={(e) => setShowDeceasedPeople(e.target.checked)}
+        >
+          {t('rolepicker.ShowDeceasedPersons')}
+        </Checkbox>
+      ) : null}
+
       <nav ref={navRef} aria-labelledby={'otherPeopleHeadingId'}>
         <ul className={styles.peopleList}>
           {visibleItems.map((item) => {
@@ -73,7 +99,7 @@ export const RolePickerPeopleList = ({
               <li key={item.personId}>
                 <RolePickerRow
                   id={item.personId}
-                  title={item.name}
+                  title={`${item.name}${item.isDeleted ? ` (${t('rolepicker.Deceased')})` : ''}`}
                   description={`${t('rolepicker.PeopleDescriptionPrefix')} ${item.personId}`}
                   svgPath={PersonSVGpath}
                   onClick={() => handleEntityClicked(item)}
@@ -88,7 +114,7 @@ export const RolePickerPeopleList = ({
           <Button
             variant={'tertiary'}
             onClick={handleShowAll}
-          >{`${t('rolepicker.ShowAll')} ${t('rolepicker.People')} (${people.total})`}</Button>
+          >{`${t('rolepicker.ShowAll')} ${t('rolepicker.People')} (${getShowAllCount()})`}</Button>
         </div>
       ) : null}
     </div>
